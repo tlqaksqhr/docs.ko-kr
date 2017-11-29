@@ -1,35 +1,38 @@
 ---
-title: "503 - ServiceHostFactoryCreationStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 503 - ServiceHostFactoryCreationStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6ae63a4e-a4dd-44de-881f-95b50f983ef5
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 688cded8becc0f5eb5f4aedded2639cdd206a7b3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 503 - ServiceHostFactoryCreationStart
-## 속성  
+# <a name="503---servicehostfactorycreationstart"></a><span data-ttu-id="5688b-102">503 - ServiceHostFactoryCreationStart</span><span class="sxs-lookup"><span data-stu-id="5688b-102">503 - ServiceHostFactoryCreationStart</span></span>
+## <a name="properties"></a><span data-ttu-id="5688b-103">속성</span><span class="sxs-lookup"><span data-stu-id="5688b-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|503|  
-|키워드가|WebHost|  
-|수준|정보|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/디버그|  
+|<span data-ttu-id="5688b-104">ID</span><span class="sxs-lookup"><span data-stu-id="5688b-104">ID</span></span>|<span data-ttu-id="5688b-105">503</span><span class="sxs-lookup"><span data-stu-id="5688b-105">503</span></span>|  
+|<span data-ttu-id="5688b-106">키워드가</span><span class="sxs-lookup"><span data-stu-id="5688b-106">Keywords</span></span>|<span data-ttu-id="5688b-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="5688b-107">WebHost</span></span>|  
+|<span data-ttu-id="5688b-108">수준</span><span class="sxs-lookup"><span data-stu-id="5688b-108">Level</span></span>|<span data-ttu-id="5688b-109">정보</span><span class="sxs-lookup"><span data-stu-id="5688b-109">Information</span></span>|  
+|<span data-ttu-id="5688b-110">채널</span><span class="sxs-lookup"><span data-stu-id="5688b-110">Channel</span></span>|<span data-ttu-id="5688b-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="5688b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 설명  
- 이 이벤트는 ServiceHostFactory 만들기가 시작될 때 내보내집니다.  
+## <a name="description"></a><span data-ttu-id="5688b-112">설명</span><span class="sxs-lookup"><span data-stu-id="5688b-112">Description</span></span>  
+ <span data-ttu-id="5688b-113">이 이벤트는 ServiceHostFactory 만들기가 시작될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="5688b-113">This event is emitted when the ServiceHostFactory creation begins.</span></span>  
   
-## 메시지  
- ServiceHostFactory 만들기를 시작합니다.  
+## <a name="message"></a><span data-ttu-id="5688b-114">메시지</span><span class="sxs-lookup"><span data-stu-id="5688b-114">Message</span></span>  
+ <span data-ttu-id="5688b-115">ServiceHostFactory 만들기를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="5688b-115">ServiceHostFactory begin creation.</span></span>  
   
-## 세부 정보
+## <a name="details"></a><span data-ttu-id="5688b-116">세부 정보</span><span class="sxs-lookup"><span data-stu-id="5688b-116">Details</span></span>

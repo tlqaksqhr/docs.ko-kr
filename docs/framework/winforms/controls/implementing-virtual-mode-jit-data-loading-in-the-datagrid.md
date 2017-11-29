@@ -1,86 +1,90 @@
 ---
-title: "Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "데이터[Windows Forms], 큰 데이터 집합 관리"
-  - "DataGridView 컨트롤[Windows Forms], 큰 데이터 집합"
-  - "DataGridView 컨트롤[Windows Forms], 가상 모드"
-  - "예제[Windows Forms], just-in-time 데이터 로드"
-  - "just-in-time 데이터 로드"
-  - "가상 모드, just-in-time 데이터 로드"
+title: "Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- examples [Windows Forms], just-in-time data loading
+- data [Windows Forms], managing large data sets
+- DataGridView control [Windows Forms], virtual mode
+- just-in-time data loading
+- DataGridView control [Windows Forms], large data sets
+- virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0bddac01a0d85ae985b54587619bcac6de5f966f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현
-<xref:System.Windows.Forms.DataGridView> 컨트롤에서 가상 모드를 구현하는 이유 중 하나는 필요한 경우에만 데이터를 검색하기 위해서입니다.  이를  *Just\-In\-Time 데이터 로드*라고 합니다.  
+# <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="8cae2-102">Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현</span><span class="sxs-lookup"><span data-stu-id="8cae2-102">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="8cae2-103">가상 모드 구현 하는 한 가지 이유는 <xref:System.Windows.Forms.DataGridView> 컨트롤 필요할 때에 데이터를 검색 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-103">One reason to implement virtual mode in the <xref:System.Windows.Forms.DataGridView> control is to retrieve data only as it is needed.</span></span> <span data-ttu-id="8cae2-104">이 라고 *-just-in-time 데이터 로드*합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-104">This is called *just-in-time data loading*.</span></span>  
   
- 예를 들어, 원격 데이터베이스에서 매우 큰 테이블을 사용하는 경우 표시할 데이터만 검색하고 사용자가 새 행을 뷰로 스크롤할 때만 데이터를 추가로 검색하여 시작이 지연되지 않게 할 수 있습니다.  응용 프로그램을 실행하는 클라이언트 컴퓨터의 데이터 저장 메모리 양이 제한된 경우 데이터베이스에서 새 값을 검색할 때 사용되지 않는 데이터를 삭제할 수도 있습니다.  
+ <span data-ttu-id="8cae2-105">원격 데이터베이스에서 매우 큰 테이블을 사용 하는 경우 표시 하기 위해 필요한 데이터만 검색 하 고 사용자는 새 행을 뷰로 스크롤합니다 하는 경우에 추가 데이터를 검색 하 여 시작이 지연 되지 않도록 하려는 예를 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-105">If you are working with a very large table in a remote database, for example, you might want to avoid startup delays by retrieving only the data that is necessary for display and retrieving additional data only when the user scrolls new rows into view.</span></span> <span data-ttu-id="8cae2-106">응용 프로그램을 실행 하는 클라이언트 컴퓨터 데이터를 저장 하는 데 사용할 수 있는 메모리 양이 제한 되어 있으면 데이터베이스에서 새 값을 검색할 때 사용 되지 않는 데이터를 삭제할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-106">If the client computers running your application have a limited amount of memory available for storing data, you might also want to discard unused data when retrieving new values from the database.</span></span>  
   
- 다음 단원에서는 Just\-In\-Time 캐시로 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용하는 방법에 대해 설명합니다.  
+ <span data-ttu-id="8cae2-107">다음 섹션에서는 사용 하는 방법에 설명 된 <xref:System.Windows.Forms.DataGridView> 적시에 캐시 된 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-107">The following sections describe how to use a <xref:System.Windows.Forms.DataGridView> control with a just-in-time cache.</span></span>  
   
- 이 항목의 코드를 단일 목록으로 복사하려면 [방법: Windows Forms DataGridView 컨트롤에서 Just\-In\-Time 데이터 로드를 사용하여 가상 모드 구현](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)을 참조하십시오.  
+ <span data-ttu-id="8cae2-108">단일 목록으로이 항목의 코드를 복사 하려면 참조 [하는 방법: Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드와 가상 모드 구현](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-108">To copy the code in this topic as a single listing, see [How to: Implement Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).</span></span>  
   
-## 폼  
- 다음 코드 예제에서는 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 이벤트 처리기를 통해 `Cache` 개체와 상호 작용하는 읽기 전용 <xref:System.Windows.Forms.DataGridView> 컨트롤을 포함하는 폼을 정의합니다.  `Cache` 개체는 로컬로 저장된 값을 관리하고 `DataRetriever` 개체를 사용하여 샘플 Northwind 데이터베이스의 Orders 테이블에서 값을 검색합니다.  `Cache` 클래스에 필요한 `IDataPageRetriever` 인터페이스를 구현하는 `DataRetriever` 개체는 <xref:System.Windows.Forms.DataGridView> 컨트롤 행 및 열을 초기화하는 데에도 사용됩니다.  
+## <a name="the-form"></a><span data-ttu-id="8cae2-109">폼</span><span class="sxs-lookup"><span data-stu-id="8cae2-109">The Form</span></span>  
+ <span data-ttu-id="8cae2-110">다음 코드 예제에서는 읽기 전용를 포함 하는 폼 정의 <xref:System.Windows.Forms.DataGridView> 제어와 상호 작용 하는 `Cache` 개체를 통해는 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-110">The following code example defines a form containing a read-only <xref:System.Windows.Forms.DataGridView> control that interacts with a `Cache` object through a <xref:System.Windows.Forms.DataGridView.CellValueNeeded> event handler.</span></span> <span data-ttu-id="8cae2-111">`Cache` 개체는 로컬에 저장 된 값을 관리 하 고 사용 하 여 한 `DataRetriever` Northwind 샘플 데이터베이스의 Orders 테이블에서 값을 검색 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-111">The `Cache` object manages the locally stored values and uses a `DataRetriever` object to retrieve values from the Orders table of the sample Northwind database.</span></span> <span data-ttu-id="8cae2-112">`DataRetriever` 구현 하는 개체는 `IDataPageRetriever` 에 필요한 인터페이스는 `Cache` 클래스를 초기화 하는 데도 사용는 <xref:System.Windows.Forms.DataGridView> 행과 열을 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-112">The `DataRetriever` object, which implements the `IDataPageRetriever` interface required by the `Cache` class, is also used to initialize the <xref:System.Windows.Forms.DataGridView> control rows and columns.</span></span>  
   
- `IDataPageRetriever`, `DataRetriever` 및 `Cache` 형식에 대한 설명은 이 항목의 뒷부분을 참조하십시오.  
+ <span data-ttu-id="8cae2-113">`IDataPageRetriever`, `DataRetriever`, 및 `Cache` 형식은이 항목의 뒷부분에 설명 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-113">The `IDataPageRetriever`, `DataRetriever`, and `Cache` types are described later in this topic.</span></span>  
   
 > [!NOTE]
->  연결 문자열에 중요한 정보\(예: 암호\)를 저장하면 응용 프로그램 보안 문제가 발생할 수 있습니다.  데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다.  자세한 내용은 [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)을 참조하십시오.  
+>  <span data-ttu-id="8cae2-114">암호와 같은 중요한 정보를 연결 문자열 내에 저장하면 응용 프로그램 보안 문제가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-114">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="8cae2-115">데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-115">Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database.</span></span> <span data-ttu-id="8cae2-116">자세한 내용은 [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8cae2-116">For more information, see [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
   
-## IDataPageRetriever 인터페이스  
- 다음 코드 예제에서는 `DataRetriever` 클래스에서 구현하는 `IDataPageRetriever` 인터페이스를 정의합니다.  이 인터페이스에 선언된 유일한 메서드는 `SupplyPageOfData` 메서드이며 이 메서드에는 데이터의 단일 페이지에 있는 초기 행 인덱스 및 행 수가 필요합니다.  이러한 값은 데이터 소스에서 데이터 하위 집합을 검색하기 위해 구현자에서 사용됩니다.  
+## <a name="the-idatapageretriever-interface"></a><span data-ttu-id="8cae2-117">IDataPageRetriever 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8cae2-117">The IDataPageRetriever Interface</span></span>  
+ <span data-ttu-id="8cae2-118">다음 코드 예제에서는 정의 `IDataPageRetriever` 에서 구현 하는 인터페이스는 `DataRetriever` 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-118">The following code example defines the `IDataPageRetriever` interface, which is implemented by the `DataRetriever` class.</span></span> <span data-ttu-id="8cae2-119">이 인터페이스에 선언 된 유일한 방법은 `SupplyPageOfData` 초기 행 인덱스 및 데이터의 단일 페이지의 행 수의 수가 시켜야 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-119">The only method declared in this interface is the `SupplyPageOfData` method, which requires an initial row index and a count of the number of rows in a single page of data.</span></span> <span data-ttu-id="8cae2-120">이러한 값은 데이터 원본에서 데이터 하위 집합을 검색 하려면 구현 자가 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-120">These values are used by the implementer to retrieve a subset of data from a data source.</span></span>  
   
- `Cache` 개체는 데이터의 두 초기 페이지를 로드하기 위해 생성하는 동안 이 인터페이스 구현을 사용합니다.  캐시되지 않은 값이 필요할 때마다 캐시는 이러한 페이지 중 하나를 삭제하고 `IDataPageRetriever`의 값을 포함하는 새 페이지를 요청합니다.  
+ <span data-ttu-id="8cae2-121">A `Cache` 개체는 생성 되는 동안이 인터페이스의 구현을 로드할 데이터의 초기 두 페이지를 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-121">A `Cache` object uses an implementation of this interface during construction to load two initial pages of data.</span></span> <span data-ttu-id="8cae2-122">캐시 되지 않은 값 필요할 때마다 캐시 이러한 페이지 중 하나를 삭제 하 고 요청에서 값이 포함 된 새 페이지는 `IDataPageRetriever`합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-122">Whenever an uncached value is needed, the cache discards one of these pages and requests a new page containing the value from the `IDataPageRetriever`.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
   
-## DataRetriever 클래스  
- 다음 코드 예제에서는 서버에서 데이터 페이지를 검색할 수 있는 `IDataPageRetriever` 인터페이스를 구현하는 `DataRetriever` 클래스를 정의합니다.  또한 `DataRetriever` 클래스는 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 필요한 열을 만들고 적절한 개수의 빈 행을 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션에 추가하는 데 사용되는 `Columns` 및 `RowCount` 속성을 제공합니다.  컨트롤이 테이블의 모든 데이터를 포함하는 것처럼 동작하도록 빈 행을 추가해야 합니다.  즉, 스크롤 막대의 스크롤 상자에 적절한 크기가 지정되며 사용자가 테이블의 모든 행에 액세스할 수 있어야 합니다.  행을 뷰로 스크롤할 때만 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 이벤트 처리기에 의해 행이 채워집니다.  
+## <a name="the-dataretriever-class"></a><span data-ttu-id="8cae2-123">DataRetriever 클래스</span><span class="sxs-lookup"><span data-stu-id="8cae2-123">The DataRetriever Class</span></span>  
+ <span data-ttu-id="8cae2-124">다음 코드 예제에서는 정의 `DataRetriever` 클래스를 구현 하는 `IDataPageRetriever` 는 서버에서 데이터 페이지를 검색 하는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-124">The following code example defines the `DataRetriever` class, which implements the `IDataPageRetriever` interface to retrieve pages of data from a server.</span></span> <span data-ttu-id="8cae2-125">`DataRetriever` 클래스 제공 `Columns` 및 `RowCount` 속성을 하는 <xref:System.Windows.Forms.DataGridView> 필요한 열을 만들고 적절 한 개수의에 빈 행을 추가 하려면 컨트롤에 사용 하 여는 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-125">The `DataRetriever` class also provides `Columns` and `RowCount` properties, which the <xref:System.Windows.Forms.DataGridView> control uses to create the necessary columns and to add the appropriate number of empty rows to the <xref:System.Windows.Forms.DataGridView.Rows%2A> collection.</span></span> <span data-ttu-id="8cae2-126">빈 행을 추가 하는 데 필요 컨트롤은 테이블의 모든 데이터를 포함 하는 것 처럼 동작 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-126">Adding the empty rows is necessary so that the control will behave as though it contains all the data in the table.</span></span> <span data-ttu-id="8cae2-127">즉, 스크롤 막대의 스크롤 상자 적절 한 크기를 가집니다 하며 사용자는 테이블의 모든 행에 액세스할 수 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-127">This means that the scroll box in the scroll bar will have the appropriate size, and the user will be able to access any row in the table.</span></span> <span data-ttu-id="8cae2-128">행으로 채워집니다.는 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 뷰로 스크롤할 경우에 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-128">The rows are filled by the <xref:System.Windows.Forms.DataGridView.CellValueNeeded> event handler only when they are scrolled into view.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
   
-## Cache 클래스  
- 다음 코드 예제에서는 `IDataPageRetriever` 구현을 통해 채워지는 데이터의 두 페이지를 관리하는 `Cache` 클래스를 정의합니다.  `Cache` 클래스는 단일 캐시 페이지에 값을 저장하는 <xref:System.Data.DataTable>을 포함하고 페이지의 상한 및 하한을 나타내는 행 인덱스를 계산하는 내부 `DataPage` 구조체를 정의합니다.  
+## <a name="the-cache-class"></a><span data-ttu-id="8cae2-129">캐시 클래스</span><span class="sxs-lookup"><span data-stu-id="8cae2-129">The Cache Class</span></span>  
+ <span data-ttu-id="8cae2-130">다음 코드 예제에서는 정의 `Cache` 통해 채워지는 데이터의 두 페이지를 관리 하는 클래스는 `IDataPageRetriever` 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-130">The following code example defines the `Cache` class, which manages two pages of data populated through an `IDataPageRetriever` implementation.</span></span> <span data-ttu-id="8cae2-131">`Cache` 클래스 정의 내부 조인 `DataPage` 포함 된 구조는 <xref:System.Data.DataTable> 페이지와 행 인덱스를 계산 하 나타내는 페이지의 위쪽과 아래쪽 경계는 단일 캐시에는 값을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-131">The `Cache` class defines an inner `DataPage` structure, which contains a <xref:System.Data.DataTable> to store the values in a single cache page and which calculates the row indexes that represent the upper and lower boundaries of the page.</span></span>  
   
- `Cache` 클래스는 생성 시 데이터의 두 페이지를 로드합니다.  <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 이벤트에서 값을 요청할 때마다 `Cache` 개체는 두 페이지 중 하나에서 해당 값을 사용할 수 있는지를 확인하고 사용 가능한 경우 해당 값을 반환합니다.  값을 로컬에서 사용할 수 없으면 `Cache` 개체는 두 페이지 중 현재 표시된 행에서 좀 더 멀리 떨어진 페이지를 확인하여 요청된 값을 포함하는 새 페이지로 바꾸고 기존 페이지를 반환합니다.  
+ <span data-ttu-id="8cae2-132">`Cache` 클래스 생성 시 데이터의 두 페이지를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-132">The `Cache` class loads two pages of data at construction time.</span></span> <span data-ttu-id="8cae2-133">때마다는 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 값을 요청 하는 이벤트는 `Cache` 값에서 사용할 수 있는 경우 두 중 페이지 하 고,이 경우 반환 개체를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-133">Whenever the <xref:System.Windows.Forms.DataGridView.CellValueNeeded> event requests a value, the `Cache` object determines if the value is available in one of its two pages and, if so, returns it.</span></span> <span data-ttu-id="8cae2-134">값을 로컬로 사용할 수 없는 경우는 `Cache` 페이지 그런 다음 반환 되는 요청 된 값을 포함 하는 새 항목으로 대체와 현재 표시 된 행에서 가장 먼 두 페이지는 개체를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-134">If the value is not available locally, the `Cache` object determines which of its two pages is farthest from the currently displayed rows and replaces the page with a new one containing the requested value, which it then returns.</span></span>  
   
- 데이터 페이지의 행 수가 화면에 한 번에 표시할 수 있는 행 수와 같다고 가정하면 사용자는 이 모델을 사용하여 테이블 단위로 페이지를 탐색하여 최근에 본 페이지로 효율적으로 되돌아갈 수 있습니다.  
+ <span data-ttu-id="8cae2-135">이라고 가정 하면 데이터 페이지의 행 수가 한 번에 화면에 표시 될 수 있는 행의 수와 동일 하 게,이 모델에서는 가장 최근에 본된 페이지를 효율적으로 돌아가려면 사용자는 테이블을 통해 페이징 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-135">Assuming that the number of rows in a data page is the same as the number of rows that can be displayed on screen at once, this model allows users paging through the table to efficiently return to the most recently viewed page.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
-## 추가 고려 사항  
- 위의 코드 예제는 Just\-In\-Time 데이터 로드를 설명하기 위해 제공된 것입니다.  효율성을 극대화하려면 이 코드를 사용자의 요구에 맞게 수정해야 합니다.  적어도 캐시의 데이터 페이지 당 행 수에 대해 적절한 값을 선택해야 합니다.  이 값은 `Cache` 생성자에 전달됩니다.  페이지 당 행 수는 <xref:System.Windows.Forms.DataGridView> 컨트롤에 동시에 표시할 수 있는 행 수와 같아야 합니다.  
+## <a name="additional-considerations"></a><span data-ttu-id="8cae2-136">추가 고려 사항</span><span class="sxs-lookup"><span data-stu-id="8cae2-136">Additional Considerations</span></span>  
+ <span data-ttu-id="8cae2-137">이전 코드 예제에서는-just-in-time 데이터 로드 데모로 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-137">The previous code examples are provided as a demonstration of just-in-time data loading.</span></span> <span data-ttu-id="8cae2-138">효율성을 극대화 하기 위해 고유한 요구 사항에 대 한 코드를 수정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-138">You will need to modify the code for your own needs to achieve maximum efficiency.</span></span> <span data-ttu-id="8cae2-139">최소한 캐시에 데이터의 페이지당 행 수에 대 한 적절 한 값을 선택 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-139">At minimum, you will need to choose an appropriate value for the number of rows per page of data in the cache.</span></span> <span data-ttu-id="8cae2-140">이 값에 전달 되는 `Cache` 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-140">This value is passed into the `Cache` constructor.</span></span> <span data-ttu-id="8cae2-141">페이지당 행 수를 동시에 표시 될 수 있는 행 개수 보다 더 작은 프로그램 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-141">The number of rows per page should be no less than the number of rows that can be displayed simultaneously in your <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
- 최상의 결과를 얻으려면 성능 테스트 및 기능성 테스트를 수행하여 시스템과 사용자의 요구 사항을 확인해야 합니다.  응용 프로그램을 실행하는 클라이언트 컴퓨터의 메모리 양, 네트워크 연결의 사용 가능한 대역폭, 서버의 대기 시간 등 몇 가지 요소를 고려해야 합니다.  대역폭 및 대기 시간은 사용량이 가장 많은 시간에 확인해야 합니다.  
+ <span data-ttu-id="8cae2-142">최상의 결과 위해 성능 테스트 및 유용성 시스템 및 사용자의 요구 사항을 결정 하는 테스트를 수행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-142">For best results, you will need to conduct performance testing and usability testing to determine the requirements of your system and your users.</span></span> <span data-ttu-id="8cae2-143">고려해 야 할 여러 가지 요소는 응용 프로그램, 네트워크 연결을 사용 하는 사용 가능한 대역폭 및 사용 되는 서버의 대기 시간을 실행 하는 클라이언트 컴퓨터에 메모리의 양을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-143">Several factors that you will need to take into consideration include the amount of memory in the client machines running your application, the available bandwidth of the network connection used, and the latency of the server used.</span></span> <span data-ttu-id="8cae2-144">대역폭 및 대기 시간의 최대 사용량 시간에 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-144">The bandwidth and latency should be determined at times of peak usage.</span></span>  
   
- 응용 프로그램의 스크롤 성능을 향상시키려면 로컬로 저장된 데이터의 양을 늘립니다.  시작 시간을 향상시키려면 처음에 너무 많은 데이터를 로드하지 말아야 합니다.  `Cache` 클래스를 수정하여 저장할 수 있는 데이터 페이지 수를 늘릴 수도 있습니다.  많은 수의 데이터 페이지를 사용하면 스크롤의 효율성을 향상시킬 수 있지만 사용 가능한 대역폭 및 서버 대기 시간에 따라 데이터 페이지에 가장 적절한 행의 수를 결정해야 합니다.  적은 수의 페이지를 사용하면 서버가 더 자주 액세스되지만 요청된 데이터를 반환하는 데 시간이 적게 걸립니다.  대역폭보다 대기 시간에 중점을 두는 경우 보다 큰 데이터 페이지를 사용할 수도 있습니다.  
+ <span data-ttu-id="8cae2-145">응용 프로그램의 스크롤 성능을 향상 시키기 위해 로컬로 저장 된 데이터의 크기를 늘릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-145">To improve the scrolling performance of your application, you can increase the amount of data stored locally.</span></span> <span data-ttu-id="8cae2-146">그러나 시작 시간을 향상 시키려면 하지 않도록 해야 처음에 너무 많은 데이터를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-146">To improve startup time, however, you must avoid loading too much data initially.</span></span> <span data-ttu-id="8cae2-147">수정 하려는 경우는 `Cache` 저장할 수 있는 데이터 페이지 수를 늘리려면 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-147">You may want to modify the `Cache` class to increase the number of data pages it can store.</span></span> <span data-ttu-id="8cae2-148">더 많은 데이터 페이지를 사용 하 여 스크롤의 효율성을 향상 시킬 수 있지만 사용 가능한 대역폭 및 서버 대기 시간에 따라 데이터 페이지에 있는 행의 이상적인 수를 결정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-148">Using more data pages can improve scrolling efficiency, but you will need to determine the ideal number of rows in a data page, depending on the available bandwidth and the server latency.</span></span> <span data-ttu-id="8cae2-149">적은 수의 페이지, 서버를 보다 자주 액세스할 수 있지만 요청한 데이터를 반환할 더 적은 시간이 걸립니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-149">With smaller pages, the server will be accessed more frequently, but will take less time to return the requested data.</span></span> <span data-ttu-id="8cae2-150">대기 시간은 대역폭 보다 문제, 경우에 더 큰 데이터 페이지를 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="8cae2-150">If latency is more of an issue than bandwidth, you may want to use larger data pages.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>   
- [Windows Forms DataGridView 컨트롤의 성능 조정](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)   
- [Windows Forms DataGridView 컨트롤의 가상 모드](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)   
- [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)   
- [방법: Windows Forms DataGridView 컨트롤에서 Just\-In\-Time 데이터 로드를 사용하여 가상 모드 구현](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+## <a name="see-also"></a><span data-ttu-id="8cae2-151">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8cae2-151">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
+ [<span data-ttu-id="8cae2-152">Windows Forms DataGridView 컨트롤의 성능 조정</span><span class="sxs-lookup"><span data-stu-id="8cae2-152">Performance Tuning in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="8cae2-153">Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법</span><span class="sxs-lookup"><span data-stu-id="8cae2-153">Best Practices for Scaling the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="8cae2-154">Windows Forms DataGridView 컨트롤의 가상 모드</span><span class="sxs-lookup"><span data-stu-id="8cae2-154">Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="8cae2-155">연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현</span><span class="sxs-lookup"><span data-stu-id="8cae2-155">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ [<span data-ttu-id="8cae2-156">방법: Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현</span><span class="sxs-lookup"><span data-stu-id="8cae2-156">How to: Implement Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

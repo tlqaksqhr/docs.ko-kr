@@ -1,154 +1,160 @@
 ---
-title: "시각적 계층에서 적중 테스트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "적중 테스트 기능"
-  - "시각적 계층, 적중 테스트 기능"
+title: "시각적 계층에서 적중 테스트"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hit testing functionality [WPF]
+- visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: 42
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 41
+caps.latest.revision: "42"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 49fbb0c71b13ee7d7ca04e0d40c1f9e32230d805
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 시각적 계층에서 적중 테스트
-이 항목에서는 시각적 계층에서 제공하는 적중 테스트 기능에 대해 간략하게 설명합니다.  적중 테스트를 사용하면 기하 도형 또는 점의 값이 <xref:System.Windows.Media.Visual>의 렌더링된 콘텐츠 내에 있는지 확인할 수 있습니다. 이 기능은 여러 개체를 선택하는 선택 영역과 같은 사용자 인터페이스 동작을 구현할 때 유용합니다.  
+# <a name="hit-testing-in-the-visual-layer"></a><span data-ttu-id="d2417-102">시각적 계층에서 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="d2417-102">Hit Testing in the Visual Layer</span></span>
+<span data-ttu-id="d2417-103">이 항목에서는 시각적 계층에서 제공하는 적중 테스트 기능의 개요를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-103">This topic provides an overview of hit testing functionality provided by the visual layer.</span></span> <span data-ttu-id="d2417-104">적중 횟수 테스트 지원 기 하 도형 또는 포인트 값이의 렌더링된 콘텐츠 내에 있는지 확인할 수 있습니다는 <xref:System.Windows.Media.Visual>, 여러 개체를 선택할 선택 영역 직사각형 같은 사용자 인터페이스 동작을 구현할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-104">Hit testing support allows you to determine whether a geometry or point value falls within the rendered content of a <xref:System.Windows.Media.Visual>, allowing you to implement user interface behavior such as a selection rectangle to select multiple objects.</span></span>  
   
-   
+ 
   
 <a name="hit_testing_scenarios"></a>   
-## 적중 테스트 시나리오  
- <xref:System.Windows.UIElement> 클래스는 지정한 좌표 값을 사용하여 요소에 대해 적중 테스트를 수행할 수 있는 <xref:System.Windows.UIElement.InputHitTest%2A> 메서드를 제공합니다.  대부분의 경우 <xref:System.Windows.UIElement.InputHitTest%2A> 메서드를 통해 요소에 대한 적중 테스트를 구현할 수 있지만  다음과 같이 시각적 계층에서 적중 테스트를 구현해야 하는 경우도 있습니다.  
+## <a name="hit-testing-scenarios"></a><span data-ttu-id="d2417-105">적중 테스트 시나리오</span><span class="sxs-lookup"><span data-stu-id="d2417-105">Hit Testing Scenarios</span></span>  
+ <span data-ttu-id="d2417-106"><xref:System.Windows.UIElement> 클래스를 제공는 <xref:System.Windows.UIElement.InputHitTest%2A> 적중 지정된 된 좌표 값을 사용 하 여 테스트를 수행할 수 있는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-106">The <xref:System.Windows.UIElement> class provides the <xref:System.Windows.UIElement.InputHitTest%2A> method, which allows you to hit test against an element using a given coordinate value.</span></span> <span data-ttu-id="d2417-107">대부분의 경우에서는 <xref:System.Windows.UIElement.InputHitTest%2A> 메서드에서 구현 적중 요소 테스트에 대 한 원하는 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-107">In many cases, the <xref:System.Windows.UIElement.InputHitTest%2A> method provides the desired functionality for implementing hit testing of elements.</span></span> <span data-ttu-id="d2417-108">그러나 시각적 계층에서 적중 테스트를 구현해야 하는 몇 가지 시나리오가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-108">However, there are several scenarios in which you may need to implement hit testing at the visual layer.</span></span>  
   
--   <xref:System.Windows.UIElement>가 아닌 개체에 대해 적중 테스트를 수행하는 경우. <xref:System.Windows.Media.DrawingVisual> 또는 그래픽 개체와 같이 <xref:System.Windows.UIElement>가 아닌 개체에 대해 적중 테스트를 수행하는 경우가 여기에 해당합니다.  
+-   <span data-ttu-id="d2417-109">비-에 대해 적중 테스트<xref:System.Windows.UIElement> 개체: 테스트 비-적중 하는 경우이 적용 됩니다<xref:System.Windows.UIElement> 와 같은 개체 <xref:System.Windows.Media.DrawingVisual> 또는 그래픽 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-109">Hit testing against non-<xref:System.Windows.UIElement> objects: This applies if you are hit testing non-<xref:System.Windows.UIElement> objects, such as <xref:System.Windows.Media.DrawingVisual> or graphics objects.</span></span>  
   
--   기하 도형을 사용하여 적중 테스트를 수행하는 경우. 점의 좌표 값이 아니라 기하 도형 개체를 사용하여 적중 테스트를 수행해야 하는 경우가 여기에 해당합니다.  
+-   <span data-ttu-id="d2417-110">기하 도형을 사용하는 적중 테스트: 점의 좌표 값이 아닌 기하 도형 개체를 사용하여 적중 테스트를 수행해야 하는 경우에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-110">Hit testing using a geometry: This applies if you need to hit test using a geometry object rather than the coordinate value of a point.</span></span>  
   
--   여러 개체에 대해 적중 테스트를 수행하는 경우. 서로 겹쳐진 개체와 같이 여러 개체에 대해 적중 테스트를 수행해야 하는 경우가 여기에 해당합니다.  이때 첫 번째 요소뿐만 아니라 기하 도형이나 점을 교차하는 모든 시각적 요소에 대해 결과를 얻을 수 있습니다.  
+-   <span data-ttu-id="d2417-111">여러 개체에 대한 적중 테스트: 겹치는 개체와 같은 여러 개체에 대해 적중 테스트를 수행해야 하는 경우에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-111">Hit testing against multiple objects: This applies when you need to hit test against multiple objects, such as overlapping objects.</span></span> <span data-ttu-id="d2417-112">단지 첫 번째 개체만이 아니라 기하 도형 또는 점을 교차하는 모든 시각적 개체에 대한 결과를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-112">You can get results for all visuals intersecting a geometry or point, not just the first one.</span></span>  
   
--   <xref:System.Windows.UIElement> 적중 테스트 정책을 무시하는 경우. 요소가 비활성화되었는지, 보이지 않게 설정되었는지 등의 요인을 고려하는 <xref:System.Windows.UIElement> 적중 테스트 정책을 무시해야 하는 경우가 여기에 해당합니다.  
+-   <span data-ttu-id="d2417-113">무시 하 고 <xref:System.Windows.UIElement> 적중 테스트 정책을: 무시 해야 하는 경우에 적용 됩니다는 <xref:System.Windows.UIElement> 적중 요소가 사용 되지 않는지 여부 또는 보이지 않는 같은 요소 고려 하는 정책을 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-113">Ignoring <xref:System.Windows.UIElement> hit testing policy: This applies when you need to ignore the <xref:System.Windows.UIElement> hit testing policy, which takes into consideration such factors as whether an element is disabled or invisible.</span></span>  
   
 > [!NOTE]
->  시각적 계층에서의 적중 테스트를 보여 주는 전체 코드 샘플은 [Hit Test Using DrawingVisuals 샘플](http://go.microsoft.com/fwlink/?LinkID=159994) 및 [Hit Test with Win32 Interoperation 샘플](http://go.microsoft.com/fwlink/?LinkID=159995)을 참조하십시오.  
+>  <span data-ttu-id="d2417-114">시각적 계층의 적중 테스트를 보여 주는 전체 코드 샘플에 대해서는 [DrawingVisuals를 사용하는 적중 테스트 샘플](http://go.microsoft.com/fwlink/?LinkID=159994) 및 [Win32 상호 운용성을 사용하는 적중 테스트 샘플](http://go.microsoft.com/fwlink/?LinkID=159995)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d2417-114">For a complete code sample illustrating hit testing at the visual layer, see [Hit Test Using DrawingVisuals Sample](http://go.microsoft.com/fwlink/?LinkID=159994) and [Hit Test with Win32 Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=159995).</span></span>  
   
 <a name="hit_testing_support"></a>   
-## 적중 테스트 지원  
- <xref:System.Windows.Media.VisualTreeHelper> 클래스의 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드를 사용하여 기하 도형 또는 점 좌표 값이 컨트롤 또는 그래픽 요소와 같은 지정된 개체의 렌더링된 콘텐츠 내에 있는지 여부를 확인할 수 있습니다.  예를 들어 적중 테스트를 사용하면 개체의 경계 사각형 내에서 클릭한 마우스 인스턴스가 원 기하 도형 내에 포함되는지 여부를 확인할 수 있습니다.  또한 적중 테스트의 기본 구현을 재정의하여 고유한 사용자 지정 적중 테스트 계산을 수행할 수도 있습니다.  
+## <a name="hit-testing-support"></a><span data-ttu-id="d2417-115">적중 테스트 지원</span><span class="sxs-lookup"><span data-stu-id="d2417-115">Hit Testing Support</span></span>  
+ <span data-ttu-id="d2417-116">용도 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 의 메서드는 <xref:System.Windows.Media.VisualTreeHelper> 클래스 기 하 도형 또는 점 좌표 값 컨트롤, 그래픽 요소 등의 지정된 된 개체의 렌더링 된 콘텐츠에 이내 인지 여부를 결정 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-116">The purpose of the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> methods in the <xref:System.Windows.Media.VisualTreeHelper> class is to determine whether a geometry or point coordinate value is within the rendered content of a given object, such as a control or graphic element.</span></span> <span data-ttu-id="d2417-117">예를 들어 적중 테스트를 사용하여 개체의 경계 사각형 내부를 마우스로 클릭할 경우 기하 도형 원 내에 포함되는지 여부를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-117">For example, you could use hit testing to determine whether a mouse click within the bounding rectangle of an object falls within the geometry of a circle.</span></span> <span data-ttu-id="d2417-118">또한 적중 테스트의 기본 구현을 재정의하여 사용자 고유의 적중 테스트 계산을 사용자 지정하도록 선택할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-118">You can also choose to override the default implementation of hit testing to perform your own custom hit test calculations.</span></span>  
   
- 다음 그림에서는 사각형이 아닌 개체의 영역과 해당 경계 사각형 사이의 관계를 보여 줍니다.  
+ <span data-ttu-id="d2417-119">다음 그림은 사각형이 아닌 개체의 영역 및 해당 경계 사각형 간 관계를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-119">The following illustration shows the relationship between a non-rectangular object's region and its bounding rectangle.</span></span>  
   
- ![유효한 적정 테스트 영역의 다이어그램](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-1.png "wcpsdk\_mmgraphics\_visuals\_hittest\_1")  
-올바른 적중 테스트 영역을 보여 주는 다이어그램  
+ <span data-ttu-id="d2417-120">![유효한 적중 횟수 테스트 영역의 다이어그램](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-1.png "wcpsdk_mmgraphics_visuals_hittest_1")</span><span class="sxs-lookup"><span data-stu-id="d2417-120">![Diagram of valid hit test region](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-1.png "wcpsdk_mmgraphics_visuals_hittest_1")</span></span>  
+<span data-ttu-id="d2417-121">유효한 적정 테스트 영역의 다이어그램</span><span class="sxs-lookup"><span data-stu-id="d2417-121">Diagram of valid hit test region</span></span>  
   
 <a name="hit_testing_and_z-order"></a>   
-## 적중 테스트와 Z 순서  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 시각적 계층에서는 맨 위에 있는 개체뿐만 아니라 점이나 기하 도형 아래의 모든 개체에 대해서도 적중 테스트를 수행할 수 있습니다.  적중 테스트 결과는 [Z 순서](GTMT)로 반환됩니다.  그러나 적중 테스트할 [시각적 트리](GTMT)의 대상 영역은 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드에 매개 변수로 전달하는 시각적 개체에 따라 결정됩니다.  시각적 트리 전체를 적중 테스트하거나 그 중 일부만 적중 테스트할 수 있습니다.  
+## <a name="hit-testing-and-z-order"></a><span data-ttu-id="d2417-122">적중 테스트 및 Z 순서</span><span class="sxs-lookup"><span data-stu-id="d2417-122">Hit Testing and Z-Order</span></span>  
+ <span data-ttu-id="d2417-123">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 시각적 계층은 단지 최상위 개체만이 아니라 점 또는 기하 도형 아래의 모든 개체에 대한 적중 테스트를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-123">The [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] visual layer supports hit testing against all objects under a point or geometry, not just the top-most object.</span></span> <span data-ttu-id="d2417-124">결과는 Z 순서대로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-124">Results are returned in z-order.</span></span> <span data-ttu-id="d2417-125">그러나에 대 한 매개 변수로 전달 하는 시각적 개체는 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드는 부분을 결정 테스트의 시각적 트리 적중 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-125">However, the visual object that you pass as the parameter to the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method determines which portion of the visual tree that will be hit test.</span></span> <span data-ttu-id="d2417-126">시각적 트리 전체 또는 일부에 대해 적중 테스트를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-126">You can hit test against the entire visual tree, or any portion of it.</span></span>  
   
- 다음 그림에서 원 개체는 사각형 개체와 삼각형 개체보다 위에 있습니다.  [Z 순서](GTMT) 값이 맨 위인 시각적 개체만 적중 테스트하려면 첫 번째 항목 이후에 <xref:System.Windows.Media.HitTestResultCallback>에서 <xref:System.Windows.Media.HitTestResultBehavior>을 반환하여 적중 테스트 순회를 중지하도록 시각적 개체에 대한 적중 테스트 열거형을 설정할 수 있습니다.  
+ <span data-ttu-id="d2417-127">다음 그림에서 원 개체는 사각형 및 삼각형 개체 위에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-127">In the following illustration, the circle object is on top of both the square and triangle objects.</span></span> <span data-ttu-id="d2417-128">적중 횟수 테스트의 z 좌표 값은 최상위 시각적 개체에에서만 관심이, 반환할 시각적 적중 횟수 테스트 열거형을 설정할 수 있습니다 <xref:System.Windows.Media.HitTestResultBehavior.Stop> 에서 <xref:System.Windows.Media.HitTestResultCallback> 적중 횟수 테스트 통과 첫 번째 항목 후 중지 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-128">If you are only interested in hit testing the visual object whose z-order value is top-most, you can set the visual hit test enumeration to return <xref:System.Windows.Media.HitTestResultBehavior.Stop> from the <xref:System.Windows.Media.HitTestResultCallback> to stop the hit test traversal after the first item.</span></span>  
   
- ![시각적 트리의 z 순서 다이어그램](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk\_mmgraphics\_visuals\_hittest\_2")  
-시각적 트리의 Z 순서를 보여 주는 다이어그램  
+ <span data-ttu-id="d2417-129">![Z &#45;다이어그램; 시각적 트리의 순서](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")</span><span class="sxs-lookup"><span data-stu-id="d2417-129">![Diagram of the z&#45;order of a visual tree](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")</span></span>  
+<span data-ttu-id="d2417-130">시각적 트리의 z 순서 다이어그램</span><span class="sxs-lookup"><span data-stu-id="d2417-130">Diagram of the z-order of a visual tree</span></span>  
   
- 특정 점이나 기하 도형 아래의 모든 시각적 개체를 열거하려면 <xref:System.Windows.Media.HitTestResultCallback>에서 <xref:System.Windows.Media.HitTestResultBehavior>를 반환합니다.  이렇게 하면 전체가 가려진 개체를 포함하여 다른 개체 아래에 있는 모든 시각적 개체에 대해 적중 테스트를 수행할 수 있습니다.  자세한 내용은 "적중 테스트 결과 콜백 사용" 단원의 샘플 코드를 참조하십시오.  
+ <span data-ttu-id="d2417-131">특정 데이터 요소 또는 기 하 도형에서 모든 시각적 개체를 열거 하려면 반환 <xref:System.Windows.Media.HitTestResultBehavior.Continue> 에서 <xref:System.Windows.Media.HitTestResultCallback>합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-131">If you want to enumerate all visual objects under a specific point or geometry, return <xref:System.Windows.Media.HitTestResultBehavior.Continue> from the <xref:System.Windows.Media.HitTestResultCallback>.</span></span> <span data-ttu-id="d2417-132">즉 전체가 가려진 경우에도 다른 개체 아래에 있는 시각적 개체에 대한 적중 테스트를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-132">This means you can hit test for visual objects that are beneath other objects, even if they are wholly obscured.</span></span> <span data-ttu-id="d2417-133">자세한 내용은 "적중 테스트 결과 콜백 사용" 섹션의 샘플 코드를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d2417-133">See the sample code in the section "Using a Hit Test Results Callback" for more information.</span></span>  
   
 > [!NOTE]
->  투명한 시각적 개체도 적중 테스트할 수 있습니다.  
+>  <span data-ttu-id="d2417-134">투명한 시각적 개체에 대해서도 적중 테스트를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-134">A visual object that is transparent can also be hit test.</span></span>  
   
 <a name="using_default_hit_testing"></a>   
-## 기본 적중 테스트 사용  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드를 사용하여 시각적 개체와 테스트할 점의 좌표 값을 지정하면 해당 점이 시각적 개체의 기하 도형 내에 있는지 여부를 확인할 수 있습니다.  시각적 개체 매개 변수는 시각적 트리에서 적중 테스트 검색의 시작 지점을 나타냅니다.  해당 기하 도형에 좌표가 있는 시각적 트리에 시각적 개체가 있으면 <xref:System.Windows.Media.HitTestResult> 개체의 <xref:System.Windows.Media.HitTestResult.VisualHit%2A> 속성에 이 시각적 개체가 설정됩니다.  그런 후 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드에서 <xref:System.Windows.Media.HitTestResult>가 반환됩니다.  적중 테스트하는 시각적 하위 트리에 점이 포함되어 있지 않으면 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>가 `null`을 반환합니다.  
+## <a name="using-default-hit-testing"></a><span data-ttu-id="d2417-135">기본 적중 테스트 사용</span><span class="sxs-lookup"><span data-stu-id="d2417-135">Using Default Hit Testing</span></span>  
+ <span data-ttu-id="d2417-136">점을 사용 하 여 시각적 개체의 기 하 도형을 내인지 여부를 확인할 수는 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드를 시각적 개체 및 지점이 좌표 테스트 기준으로 값을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-136">You can identify whether a point is within the geometry of a visual object, by using the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method to specify a visual object and a point coordinate value to test against.</span></span> <span data-ttu-id="d2417-137">시각적 개체 매개 변수는 시각적 트리에서 적중 테스트 검색의 시작점을 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-137">The visual object parameter identifies the starting point in the visual tree for the hit test search.</span></span> <span data-ttu-id="d2417-138">시각적 개체 시각적 트리의 기 하 도형 좌표가 포함 된 경우 설정 됩니다는 <xref:System.Windows.Media.HitTestResult.VisualHit%2A> 의 속성을 <xref:System.Windows.Media.HitTestResult> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-138">If a visual object is found in the visual tree whose geometry contains the coordinate, it is set to the <xref:System.Windows.Media.HitTestResult.VisualHit%2A> property of a <xref:System.Windows.Media.HitTestResult> object.</span></span> <span data-ttu-id="d2417-139"><xref:System.Windows.Media.HitTestResult> 다음에서 반환 되는 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="d2417-139">The <xref:System.Windows.Media.HitTestResult> is then returned from the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method.</span></span> <span data-ttu-id="d2417-140">지점은 적중 테스트, 시각적 하위 트리의와 포함 되지 않은 경우 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 반환 `null`합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-140">If the point is not contained with the visual sub-tree you are hit testing, <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> returns `null`.</span></span>  
   
 > [!NOTE]
->  기본 적중 테스트는 [Z 순서](GTMT)에서 맨 위에 있는 개체를 항상 반환합니다.  일부 또는 전체가 가려진 시각적 개체를 포함하여 모든 시각적 개체를 확인하려면 적중 테스트 결과 콜백을 사용해야 합니다.  
+>  <span data-ttu-id="d2417-141">기본 적중 테스트는 항상 z 순서로 최상위 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-141">Default hit testing always returns the top-most object in the z-order.</span></span> <span data-ttu-id="d2417-142">부분적으로 또는 완전히 가려져 있더라도 모든 시각적 개체를 식별하려면 적중 테스트 결과 콜백을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-142">In order to identify all visual objects, even those that may be partly or wholly obscured, use a hit test result callback.</span></span>  
   
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드에 점 매개 변수로 전달하는 좌표 값은 적중 테스트하는 대상 시각적 개체의 좌표 공간을 기준으로 상대적으로 지정해야 합니다.  예를 들어 부모 좌표 공간에서 \(100, 100\) 지점에 중첩된 시각적 개체를 정의한 경우, \(0, 0\) 지점에 있는 자식 시각적 개체를 적중 테스트하면 부모 좌표 공간의 \(100, 100\) 지점에서 적중 테스트를 수행하는 것과 동일합니다.  
+ <span data-ttu-id="d2417-143">에 대 한 지점 매개 변수로 전달 하는 좌표 값은 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드에 적중에 대 한 테스트는 시각적 개체의 좌표 공간을 기준으로 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-143">The coordinate value you pass as the point parameter for the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method has to be relative to the coordinate space of the visual object you are hit testing against.</span></span> <span data-ttu-id="d2417-144">예를 들어 중첩된 시각적 개체가 부모 좌표 공간에서 (100, 100)에 정의된 경우 (0, 0)의 자식 시각적 개체에 대해 적중 테스트를 수행하는 것은 부모 좌표 공간의 (100, 100)에서 적중 테스트를 수행하는 것과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-144">For example, if you have nested visual objects defined at (100, 100) in the parent's coordinate space, then hit testing a child visual at (0, 0) is equivalent to hit testing at (100, 100) in the parent's coordinate space.</span></span>  
   
- 다음 코드에서는 적중 테스트에 사용되는 이벤트를 캡처하는 <xref:System.Windows.UIElement> 개체에 대해 마우스 이벤트 처리기를 설정하는 방법을 보여 줍니다.  
+ <span data-ttu-id="d2417-145">다음 코드에 대 한 마우스 이벤트 처리기를 설정 하는 방법을 보여 줍니다는 <xref:System.Windows.UIElement> 개체에 사용 되는 이벤트를 캡처해야 하는 데 사용 되는 적중 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-145">The following code shows how to set up mouse event handlers for a <xref:System.Windows.UIElement> object that is used to capture events used for hit testing.</span></span>  
   
  [!code-csharp[HitTestingOverview#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#100)]
  [!code-vb[HitTestingOverview#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#100)]  
   
-### 시각적 트리가 적중 테스트에 미치는 영향  
- 시각적 트리의 시작 지점은 개체의 적중 테스트를 열거할 때 반환되는 개체를 결정합니다.  적중 테스트할 개체가 여러 개인 경우, 시각적 트리에서 시작 지점으로 사용하는 시각적 개체는 테스트할 모든 개체의 공통 상위 항목이어야 합니다.  예를 들어 다음 다이어그램에서 단추 요소와 그리기 시각적 요소를 모두 적중 테스트하려면 시각적 트리에서 두 요소의 공통 상위 항목, 즉  이 경우에는 캔버스 요소를 시작 지점으로 설정해야 합니다.  
+### <a name="how-the-visual-tree-affects-hit-testing"></a><span data-ttu-id="d2417-146">시각적 트리가 적중 테스트에 미치는 영향</span><span class="sxs-lookup"><span data-stu-id="d2417-146">How the Visual Tree Affects Hit Testing</span></span>  
+ <span data-ttu-id="d2417-147">시각적 트리의 시작점은 개체의 적중 테스트 열거 동안 반환되는 개체를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-147">The starting point in the visual tree determines which objects are returned during the hit test enumeration of objects.</span></span> <span data-ttu-id="d2417-148">여러 개체에 대해 적중 테스트를 수행하려는 경우 시각적 트리에서 시작점으로 사용되는 시각적 개체는 관심 있는 모든 개체의 공통 상위 항목이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-148">If you have multiple objects you want to hit test, the visual object used as the starting point in the visual tree must be the common ancestor of all objects of interest.</span></span> <span data-ttu-id="d2417-149">예를 들어 다음 다이어그램에서 button 요소 및 drawing visual 요소 둘 다에 대해 적중 테스트를 수행하려는 경우 시각적 트리의 시작점을 두 요소의 공통 상위 항목으로 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-149">For example, if you were interested in hit testing both the button element and drawing visual in the following diagram, you would have to set the starting point in the visual tree to the common ancestor of both.</span></span> <span data-ttu-id="d2417-150">이 경우 canvas 요소는 button 요소 및 drawing visual의 공통 상위 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-150">In this case, the canvas element is the common ancestor of both the button element and the drawing visual.</span></span>  
   
- ![시각적 트리 계층 구조의 다이어그램](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-overview-01.png "wcpsdk\_mmgraphics\_visuals\_overview\_01")  
-시각적 트리 계층 구조를 보여 주는 다이어그램  
+ <span data-ttu-id="d2417-151">![시각적 트리 계층 구조의 다이어그램](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")</span><span class="sxs-lookup"><span data-stu-id="d2417-151">![Diagram of a visual tree hierarchy](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-overview-01.gif "wcpsdk_mmgraphics_visuals_overview_01")</span></span>  
+<span data-ttu-id="d2417-152">시각적 트리 계층 구조의 다이어그램</span><span class="sxs-lookup"><span data-stu-id="d2417-152">Diagram of a visual tree hierarchy</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.UIElement.IsHitTestVisible%2A> 속성은 <xref:System.Windows.UIElement>에서 파생된 개체를 렌더링된 해당 콘텐츠의 일부에서 적중 테스트 결과로 반환할 수 있는지 여부를 선언하는 값을 가져오거나 설정합니다.  이렇게 하면 시각적 트리를 선택적으로 변경하여 적중 테스트와 관련된 시각적 개체를 확인할 수 있습니다.  
+>  <span data-ttu-id="d2417-153"><xref:System.Windows.UIElement.IsHitTestVisible%2A> 속성 선언 하는 값을 가져오거나 여부는 <xref:System.Windows.UIElement>-파생 된 개체 반환 될 수는 적중 횟수 테스트 결과로 렌더링 된 콘텐츠의 일부에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-153">The <xref:System.Windows.UIElement.IsHitTestVisible%2A> property gets or sets a value that declares whether a <xref:System.Windows.UIElement>-derived object can possibly be returned as a hit test result from some portion of its rendered content.</span></span> <span data-ttu-id="d2417-154">또한 적중 테스트와 관련된 시각적 개체를 확인하도록 시각적 트리를 선택적으로 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-154">This allows you to selectively alter the visual tree to determine which visual objects are involved in a hit test.</span></span>  
   
 <a name="using_a_hit_test_result_callback"></a>   
-## 적중 테스트 결과 콜백 사용  
- 기하 도형에 지정한 좌표 값이 있는 시각적 트리의 모든 시각적 개체를 열거할 수 있습니다.  이렇게 하면 전체 또는 일부가 다른 시각적 개체에 가려진 시각적 개체를 포함하여 모든 시각적 개체를 확인할 수 있습니다.  시각적 트리에 있는 시각적 개체를 열거하려면 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드와 함께 적중 테스트 콜백 함수를 사용합니다.  지정한 좌표 값이 시각적 개체 내에 있으면 시스템에서 적중 테스트 콜백 함수를 호출합니다.  
+## <a name="using-a-hit-test-result-callback"></a><span data-ttu-id="d2417-155">적중 테스트 결과 콜백 사용</span><span class="sxs-lookup"><span data-stu-id="d2417-155">Using a Hit Test Result Callback</span></span>  
+ <span data-ttu-id="d2417-156">해당 기하 도형이 지정된 좌표 값을 포함하는 시각적 트리의 모든 시각적 개체를 열거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-156">You can enumerate all visual objects in a visual tree whose geometry contains a specified coordinate value.</span></span> <span data-ttu-id="d2417-157">또한 부분적으로 또는 완전히 가려져 있더라도 모든 시각적 개체를 식별할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-157">This allows you to identify all visual objects, even those that may be partly or wholly obscured by other visual objects.</span></span> <span data-ttu-id="d2417-158">시각적 트리를 사용 하는 시각적 개체를 열거 하는 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 적중된 테스트 콜백 함수를 사용 하 여 메서드.</span><span class="sxs-lookup"><span data-stu-id="d2417-158">To enumerate visual objects in a visual tree use the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method with a hit test callback function.</span></span> <span data-ttu-id="d2417-159">적중 테스트 콜백 함수는 지정한 좌표 값이 시각적 개체에 포함된 경우 시스템에 의해 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-159">The hit test callback function is called by the system when the coordinate value you specify is contained in a visual object.</span></span>  
   
- 적중 테스트 결과를 열거하는 동안에는 시각적 트리를 수정하는 다른 작업을 수행하면 안 됩니다.  시각적 트리에 대해 작업이 수행되는 동안 시각적 트리에서 개체를 추가하거나 제거하면 예기치 않은 동작이 발생할 수 있습니다.  <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드가 반환된 후에는 시각적 트리를 안심하고 수정할 수 있습니다.  적중 테스트 결과를 열거하는 동안 값을 저장할 수 있도록 <xref:System.Collections.ArrayList> 같은 데이터 구조를 제공할 수도 있습니다.  
+ <span data-ttu-id="d2417-160">적중 테스트 결과 열거 동안에는 해당 시각적 트리를 수정하는 어떤 작업도 수행하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-160">During the hit test results enumeration, you should not perform any operation that modifies the visual tree.</span></span> <span data-ttu-id="d2417-161">개체가 트래버스되는 동안 시각적 트리에 추가 또는 제거하면 예기치 않은 동작이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-161">Adding or removing an object from the visual tree while it is being traversed can result in unpredictable behavior.</span></span> <span data-ttu-id="d2417-162">후의 표시 트리를 안전 하 게 수정할 수 있습니다는 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-162">You can safely modify the visual tree after the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method returns.</span></span> <span data-ttu-id="d2417-163">와 같은 데이터 구조를 제공 하려는 경우는 <xref:System.Collections.ArrayList>, 적중 횟수 테스트 결과 열거 하는 동안 값을 저장 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-163">You may want to provide a data structure, such as an <xref:System.Collections.ArrayList>, to store values during the hit test results enumeration.</span></span>  
   
  [!code-csharp[HitTestingOverview#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#101)]
  [!code-vb[HitTestingOverview#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#101)]  
   
- 적중 테스트 콜백 메서드는 시각적 트리에서 특정 시각적 개체에 대한 적중 테스트가 식별될 때 수행할 작업을 정의합니다.  작업을 수행한 후에는 다른 시각적 개체의 열거를 계속할지 여부를 결정하는 <xref:System.Windows.Media.HitTestResultBehavior> 값을 반환합니다.  
+ <span data-ttu-id="d2417-164">적중 테스트 콜백 메서드는 시각적 트리의 특정 시각적 개체에서 적중 테스트가 식별될 때 수행하는 작업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-164">The hit test callback method defines the actions you perform when a hit test is identified on a particular visual object in the visual tree.</span></span> <span data-ttu-id="d2417-165">반환 된 작업을 수행한 후는 <xref:System.Windows.Media.HitTestResultBehavior> 다른 시각적 개체의 열거를 계속할지 여부를 여부를 결정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-165">After you perform the actions, you return a <xref:System.Windows.Media.HitTestResultBehavior> value that determines whether to continue the enumeration of any other visual objects or not.</span></span>  
   
  [!code-csharp[HitTestingOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[HitTestingOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
   
 > [!NOTE]
->  적중된 시각적 개체의 열거 순서는 [Z 순서](GTMT)를 따릅니다.  즉, [Z 순서](GTMT)가 맨 위인 시각적 개체가 가장 먼저 열거되고  나머지 시각적 개체는 [Z 순서](GTMT)에 따라 내림차순으로 열거됩니다.  이 열거 순서는 시각적 요소의 렌더링 순서와 같습니다.  
+>  <span data-ttu-id="d2417-166">적중 시각적 개체의 열거 순서는 z 순서는 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-166">The order of enumeration of hit visual objects is by z-order.</span></span> <span data-ttu-id="d2417-167">최상위 z 순서 수준의 시각적 개체는 첫 번째로 열거되는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-167">The visual object at the top-most z-order level is the first object enumerated.</span></span> <span data-ttu-id="d2417-168">열거되는 다른 시각적 개체는 z 순서의 내림차순으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-168">Any other visual objects enumerated are at decreasing z-order level.</span></span> <span data-ttu-id="d2417-169">이 열거 순서는 시각적 개체의 렌더링 순서에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-169">This order of enumeration corresponds to the rendering order of the visuals.</span></span>  
   
- 적중 테스트 콜백 함수에서 <xref:System.Windows.Media.HitTestResultBehavior>을 반환하여 시각적 개체의 열거를 언제든지 중지할 수 있습니다.  
+ <span data-ttu-id="d2417-170">반환 하 여 언제 든 지 적중 횟수 테스트 콜백 함수에서 시각적 개체의 열거를 중지할 수 있습니다 <xref:System.Windows.Media.HitTestResultBehavior.Stop>합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-170">You can stop the enumeration of visual objects at any time in the hit test callback function by returning <xref:System.Windows.Media.HitTestResultBehavior.Stop>.</span></span>  
   
  [!code-csharp[HitTestingOverview#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#103)]
  [!code-vb[HitTestingOverview#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#103)]  
   
 <a name="using_a_hit_test_filter_callback"></a>   
-## 적중 테스트 필터 콜백 사용  
- 선택적 요소인 적중 테스트 필터를 사용하여 적중 테스트 결과에 전달되는 개체를 제한할 수 있습니다.  이 필터를 사용하면 적중 테스트 결과에서 처리하지 않을 시각적 트리의 특정 부분을 무시할 수 있습니다.  적중 테스트 필터를 구현하려면 적중 테스트 필터 콜백 함수를 정의한 후 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드를 호출할 때 매개 변수 값으로 전달합니다.  
+## <a name="using-a-hit-test-filter-callback"></a><span data-ttu-id="d2417-171">적중 테스트 필터 콜백 사용</span><span class="sxs-lookup"><span data-stu-id="d2417-171">Using a Hit Test Filter Callback</span></span>  
+ <span data-ttu-id="d2417-172">선택적 적중 테스트 필터를 사용하여 적중 테스트 결과로 전달되는 개체를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-172">You can use an optional hit test filter to restrict the objects that are passed on to the hit test results.</span></span> <span data-ttu-id="d2417-173">이를 통해 적중 횟수 테스트 결과 처리 중 시각적 트리에서 관련이 없는 파트를 무시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-173">This allows you to ignore parts of the visual tree that you are not interested in processing in your hit test results.</span></span> <span data-ttu-id="d2417-174">적중 횟수 테스트 필터를 구현 하려면 적중 횟수 테스트 필터 콜백 함수를 정의 하 고이 호출할 때 매개 변수 값으로 전달 된 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="d2417-174">To implement a hit test filter, you define a hit test filter callback function and pass it as a parameter value when you call the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method.</span></span>  
   
  [!code-csharp[HitTestingOverview#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#104)]
  [!code-vb[HitTestingOverview#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#104)]  
   
- 선택적 요소인 적중 테스트 필터 콜백 함수를 제공하지 않으려면 `null` 값을 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드의 매개 변수로 전달합니다.  
+ <span data-ttu-id="d2417-175">선택적 적중 횟수 테스트 필터 콜백 함수를 제공 하지 않을 경우 전달 된 `null` 값에 대 한 매개 변수로 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="d2417-175">If you do not want to supply the optional hit test filter callback function, pass a `null` value as its parameter for the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method.</span></span>  
   
  [!code-csharp[HitTestingOverview#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#105)]
  [!code-vb[HitTestingOverview#105](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#105)]  
   
- ![적중 테스트 필터를 사용하여 시각적 트리 정리](../../../../docs/framework/wpf/graphics-multimedia/media/filteredvisualtree-01.png "FilteredVisualTree\_01")  
-표시 트리 잘라내기  
+ <span data-ttu-id="d2417-176">![적중된 테스트 필터를 사용 하 여 시각적 트리 정리](../../../../docs/framework/wpf/graphics-multimedia/media/filteredvisualtree-01.png "FilteredVisualTree_01")</span><span class="sxs-lookup"><span data-stu-id="d2417-176">![Pruning a visual tree using a hit test filter](../../../../docs/framework/wpf/graphics-multimedia/media/filteredvisualtree-01.png "FilteredVisualTree_01")</span></span>  
+<span data-ttu-id="d2417-177">시각적 트리 정리</span><span class="sxs-lookup"><span data-stu-id="d2417-177">Pruning a visual tree</span></span>  
   
- 적중 테스트 필터 콜백 함수를 사용하면 지정한 좌표가 렌더링된 콘텐츠 내에 있는 모든 시각적 요소를 열거할 수 있습니다.  그러나 적중 테스트 결과 콜백 함수에서 처리하지 않으려는 시각적 트리의 특정 분기를 무시할 수도 있습니다.  적중 테스트 필터 콜백 함수의 반환 값에 따라 표시 개체의 열거형에서 수행해야 하는 작업 유형이 결정됩니다.  예를 들어 반환 값이 <xref:System.Windows.Media.HitTestFilterBehavior>이면 적중 테스트 결과 열거형에서 현재 시각적 개체와 해당 자식을 제거할 수 있습니다.  이렇게 하면 적중 테스트 결과 콜백 함수가 해당 열거형에서 이러한 개체를 볼 수 없습니다.  개체의 시각적 트리를 잘라내면 적중 테스트 결과 열거형을 수행하는 동안 처리해야 하는 작업 양이 감소합니다.  다음 코드 예제에서는 필터가 레이블과 해당 하위 항목을 생략하고 나머지 모든 항목에 대해 적중 테스트를 수행합니다.  
+ <span data-ttu-id="d2417-178">적중 테스트 필터 콜백 함수를 사용하면 해당 렌더링된 콘텐츠가 지정한 좌표를 포함하는 모든 시각적 개체를 열거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-178">The hit test filter callback function allows you to enumerate through all the visuals whose rendered content contains the coordinates you specify.</span></span> <span data-ttu-id="d2417-179">그렇지만 적중 테스트 결과 콜백 함수에서 처리하지 않으려는 시각적 트리의 특정 분기를 무시하고 싶을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-179">However, you may want to ignore certain branches of the visual tree that you are not interested in processing in your hit test results callback function.</span></span> <span data-ttu-id="d2417-180">적중 테스트 필터 콜백 함수의 반환 값은 수행해야 하는 시각적 개체의 열거 작업 유형을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-180">The return value of the hit test filter callback function determines what type of action the enumeration of the visual objects should take.</span></span> <span data-ttu-id="d2417-181">예를 들어, 값을 반환 하는 경우 <xref:System.Windows.Media.HitTestFilterBehavior.ContinueSkipSelfAndChildren>, 적중 횟수 테스트 결과 열거형에서 현재 시각적 개체 및 자식 함수를 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-181">For example, if you return the value, <xref:System.Windows.Media.HitTestFilterBehavior.ContinueSkipSelfAndChildren>, you can remove the current visual object and its children from the hit test results enumeration.</span></span> <span data-ttu-id="d2417-182">즉, 적중 테스트 결과 콜백 함수를 사용하면 열거에 이러한 개체가 표시되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-182">This means that the hit test results callback function will not see these objects in its enumeration.</span></span> <span data-ttu-id="d2417-183">개체의 시각적 트리를 정리하면 적중 테스트 결과 열거 패스 동안 처리 양이 감소합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-183">Pruning the visual tree of objects decreases the amount of processing during the hit test results enumeration pass.</span></span> <span data-ttu-id="d2417-184">다음 코드 예제에서 필터는 레이블 및 해당 하위 항목을 건너뛰고 다른 모든 항목에 대해 적중 테스트를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-184">In the following code example, the filter skips labels and their descendants and hit tests everything else.</span></span>  
   
  [!code-csharp[HitTestingOverview#106](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#106)]
  [!code-vb[HitTestingOverview#106](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#106)]  
   
 > [!NOTE]
->  적중 테스트 결과 콜백이 호출되지 않은 상태에서 적중 테스트 필터 콜백이 호출되는 경우도 있습니다.  
+>  <span data-ttu-id="d2417-185">적중 테스트 결과 콜백이 호출되지 않는 경우에 적중 테스트 필터 콜백이 호출되는 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-185">The hit test filter callback will sometimes be called in cases where the hit test results callback is not called.</span></span>  
   
 <a name="overriding_default_hit_testing"></a>   
-## 기본 적중 테스트 재정의  
- <xref:System.Windows.Media.Visual.HitTestCore%2A> 메서드를 재정의하여 시각적 개체의 기본 적중 테스트 기능을 재정의할 수 있습니다.  이렇게 할 경우 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드를 호출하면 재정의된 <xref:System.Windows.Media.Visual.HitTestCore%2A> 구현이 호출됩니다.  재정의된 메서드는 좌표가 시각적 개체의 렌더링된 콘텐츠 밖에 있더라도 적중 테스트가 시각적 개체의 경계 사각형 내에만 포함되면 호출됩니다.  
+## <a name="overriding-default-hit-testing"></a><span data-ttu-id="d2417-186">기본 적중 테스트 재정의</span><span class="sxs-lookup"><span data-stu-id="d2417-186">Overriding Default Hit Testing</span></span>  
+ <span data-ttu-id="d2417-187">시각적 개체의 기본 적중 테스트 지원을 재정의 하 여 재정의할 수 있습니다는 <xref:System.Windows.Media.Visual.HitTestCore%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="d2417-187">You can override a visual object’s default hit testing support by overriding the <xref:System.Windows.Media.Visual.HitTestCore%2A> method.</span></span> <span data-ttu-id="d2417-188">즉, 호출 하는 경우는 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드를 재정의 된 구현 <xref:System.Windows.Media.Visual.HitTestCore%2A> 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-188">This means that when you invoke the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method, your overridden implementation of <xref:System.Windows.Media.Visual.HitTestCore%2A> is called.</span></span> <span data-ttu-id="d2417-189">재정의된 메서드는 좌표가 시각적 개체의 렌더링된 콘텐츠 밖에 있는 경우에도 적중 테스트가 시각적 개체의 경계 사각형 내에 적용되면 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-189">Your overridden method is called when a hit test falls within the bounding rectangle of the visual object, even if the coordinate falls outside the rendered content of the visual object.</span></span>  
   
  [!code-csharp[HitTestingOverview#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#107)]
  [!code-vb[HitTestingOverview#107](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#107)]  
   
- 시각적 개체의 렌더링된 콘텐츠와 경계 사각형 모두에 대해 적중 테스트를 수행해야 하는 경우도 있는데,  재정의된 <xref:System.Windows.Media.Visual.HitTestCore%2A> 메서드의 `PointHitTestParameters` 매개 변수 값을 기본 메서드 <xref:System.Windows.Media.Visual.HitTestCore%2A>의 매개 변수로 사용하면 시각적 개체의 경계 사각형에 대한 적중 테스트를 기반으로 작업을 수행한 후 시각적 개체의 렌더링된 콘텐츠에 대해 두 번째 적중 테스트를 수행할 수 있습니다.  
+ <span data-ttu-id="d2417-190">시각적 개체의 경계 사각형과 렌더링된 콘텐츠 둘 다에 대해 적중 테스트를 수행하려는 경우가 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-190">There may be times when you want to hit test against both the bounding rectangle and the rendered content of a visual object.</span></span> <span data-ttu-id="d2417-191">사용 하 여는 `PointHitTestParameters` 매개 변수 값의 재정의 된 <xref:System.Windows.Media.Visual.HitTestCore%2A> 기본 메서드를 매개 변수로 <xref:System.Windows.Media.Visual.HitTestCore%2A>, 시각적 개체의 경계 사각형의 적중 횟수에 따라 작업을 수행 하 고 다음에 대 한 두 번째 적중 횟수 테스트를 수행할 수 있습니다는 시각적 개체의 콘텐츠를 렌더링 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2417-191">By using the `PointHitTestParameters` parameter value in your overridden <xref:System.Windows.Media.Visual.HitTestCore%2A> method as the parameter to the base method <xref:System.Windows.Media.Visual.HitTestCore%2A>, you can perform actions based on a hit of the bounding rectangle of a visual object, and then perform a second hit test against the rendered content of the visual object.</span></span>  
   
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## 참고 항목  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>   
- <xref:System.Windows.Media.HitTestResult>   
- <xref:System.Windows.Media.HitTestResultCallback>   
- <xref:System.Windows.Media.HitTestFilterCallback>   
- <xref:System.Windows.UIElement.IsHitTestVisible%2A>   
- [Hit Test Using DrawingVisuals 샘플](http://go.microsoft.com/fwlink/?LinkID=159994)   
- [Hit Test with Win32 Interoperation 샘플](http://go.microsoft.com/fwlink/?LinkID=159995)   
- [시각적 요소의 기하 도형 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)   
- [Win32 호스트 컨테이너를 사용하여 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+## <a name="see-also"></a><span data-ttu-id="d2417-192">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d2417-192">See Also</span></span>  
+ <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
+ <xref:System.Windows.Media.HitTestResult>  
+ <xref:System.Windows.Media.HitTestResultCallback>  
+ <xref:System.Windows.Media.HitTestFilterCallback>  
+ <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
+ [<span data-ttu-id="d2417-193">적중 횟수 테스트 DrawingVisuals 샘플을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="d2417-193">Hit Test Using DrawingVisuals Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159994)  
+ [<span data-ttu-id="d2417-194">적중 횟수 테스트와 Win32 상호 운용성 샘플</span><span class="sxs-lookup"><span data-stu-id="d2417-194">Hit Test with Win32 Interoperation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159995)  
+ [<span data-ttu-id="d2417-195">시각적 요소의 기하 도형 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="d2417-195">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="d2417-196">Win32 호스트 컨테이너를 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="d2417-196">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

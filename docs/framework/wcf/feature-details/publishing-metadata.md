@@ -1,47 +1,49 @@
 ---
-title: "메타데이터 게시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "메타데이터 [WCF], 게시"
+title: "메타데이터 게시"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1e0cf48d429282c692557fd66bc6ef1295e6a531
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 메타데이터 게시
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스는 하나 이상의 메타데이터 끝점을 게시하여 메타데이터를 게시합니다.서비스 메타데이터를 게시하면 WS\-MetadataExchange\(MEX\) 및 HTTP\/GET 요청과 같이 표준화된 프로토콜을 통해 메타데이터를 사용할 수 있습니다.메타데이터 끝점은 주소, 바인딩 및 계약에 포함된 다른 서비스 끝점과 유사하며 구성 또는 명령 코드를 통해 서비스 호스트에 추가할 수 있습니다.  
+# <a name="publishing-metadata"></a><span data-ttu-id="00e92-102">메타데이터 게시</span><span class="sxs-lookup"><span data-stu-id="00e92-102">Publishing Metadata</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="00e92-103"> 서비스는 하나 이상의 메타데이터 끝점을 게시하여 메타데이터를 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-103"> services publish metadata by publishing one or more metadata endpoints.</span></span> <span data-ttu-id="00e92-104">서비스 메타데이터를 게시하면 WS-MetadataExchange(MEX) 및 HTTP/GET 요청과 같이 표준화된 프로토콜을 통해 메타데이터를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-104">Publishing service metadata makes the metadata available using standardized protocols, such as WS-MetadataExchange (MEX) and HTTP/GET requests.</span></span> <span data-ttu-id="00e92-105">메타데이터 끝점은 주소, 바인딩 및 계약에 포함된 다른 서비스 끝점과 유사하며 구성 또는 명령 코드를 통해 서비스 호스트에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-105">Metadata endpoints are similar to other service endpoints in that they have an address, a binding, and a contract, and they can be added to a service host through configuration or imperative code.</span></span>  
   
-## 메타데이터 끝점 게시  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 메타데이터 끝점을 게시하려면 먼저 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 서비스 동작을 해당 서비스에 추가해야 합니다.<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 인스턴스를 추가하면 서비스가 메타데이터 끝점을 노출할 수 있습니다.<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 서비스 동작을 추가하면 MEX 프로토콜을 지원하거나 HTTP\/GET 요청에 응답하는 메타데이터 끝점을 노출할 수 있습니다.  
+## <a name="publishing-metadata-endpoints"></a><span data-ttu-id="00e92-106">메타데이터 끝점 게시</span><span class="sxs-lookup"><span data-stu-id="00e92-106">Publishing Metadata Endpoints</span></span>  
+ <span data-ttu-id="00e92-107">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 메타데이터 끝점을 게시하려면 먼저 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 서비스 동작을 해당 서비스에 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-107">To publish metadata endpoints for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, you first must add the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> service behavior to the service.</span></span> <span data-ttu-id="00e92-108"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 인스턴스를 추가하면 서비스가 메타데이터 끝점을 노출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-108">Adding a <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> instance allows your service to expose metadata endpoints.</span></span> <span data-ttu-id="00e92-109"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 서비스 동작을 추가하면 MEX 프로토콜을 지원하거나 HTTP/GET 요청에 응답하는 메타데이터 끝점을 노출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-109">Once you add the <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> service behavior, you can then expose metadata endpoints that support the MEX protocol or that respond to HTTP/GET requests.</span></span>  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName>는 <xref:System.ServiceModel.Description.WsdlExporter>를 사용하여 서비스의 모든 서비스 끝점에 대한 메타데이터를 내보냅니다.서비스에서 메타데이터를 내보내는 방법에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]를 보려면 [메타데이터 내보내기 및 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)를 참조하십시오.  
+ <span data-ttu-id="00e92-110"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>는 <xref:System.ServiceModel.Description.WsdlExporter>를 사용하여 서비스의 모든 서비스 끝점에 대한 메타데이터를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-110">The <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> uses a <xref:System.ServiceModel.Description.WsdlExporter> to export metadata for all service endpoints in your service.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="00e92-111">참조는 서비스에서 메타 데이터 내보내기 [내보내기 및 가져오기는 메타 데이터](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-111"> exporting metadata from a service, see [Exporting and Importing Metadata](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).</span></span>  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> A <xref:System.ServiceModel.Description.ServiceMetadataExtension> 인스턴스를 서비스 호스트에 대한 확장으로 추가합니다.<xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=fullName>은 메타데이터 게시 프로토콜에 대한 구현을 제공합니다.또한 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=fullName>을 통해 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=fullName> 속성에 액세스하여 서비스 메타데이터를 런타임에 가져올 수 있습니다.  
+ <span data-ttu-id="00e92-112"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>  A <xref:System.ServiceModel.Description.ServiceMetadataExtension> 인스턴스를 서비스 호스트에 대한 확장으로 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-112">The <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> adds a <xref:System.ServiceModel.Description.ServiceMetadataExtension> instance as an extension to your service host.</span></span> <span data-ttu-id="00e92-113"><xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType>은 메타데이터 게시 프로토콜에 대한 구현을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-113">The <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> provides the implementation for the metadata publishing protocols.</span></span> <span data-ttu-id="00e92-114">또한 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType>을 통해 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType> 속성에 액세스하여 서비스 메타데이터를 런타임에 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-114">You can also use the <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> to get the service's metadata at runtime by accessing the <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType> property.</span></span>  
   
-### MEX 메타데이터 끝점  
- MEX 프로토콜을 사용하는 메타데이터 끝점을 추가하려면 `IMetadataExchange` 서비스 계약을 사용하는 서비스 호스트에 서비스 끝점을 추가하십시오.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 프로그래밍 모델의 일부로 사용할 수 있는 이 서비스 계약 이름을 가진 <xref:System.ServiceModel.Description.IMetadataExchange> 인터페이스가 포함되어 있습니다.WS\-MetadataExchange 끝점 또는 MEX 끝점은 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 클래스에서 정적 팩터리 메서드가 노출하는 4개의 기본 바인딩 중 하나를 사용하여 Svcutil.exe와 같이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 도구에서 사용하는 기본 바인딩과 일치시킬 수 있습니다.또한 사용자 지정 바인딩을 사용하여 MEX 메타데이터 끝점을 구성할 수도 있습니다.  
+### <a name="mex-metadata-endpoints"></a><span data-ttu-id="00e92-115">MEX 메타데이터 끝점</span><span class="sxs-lookup"><span data-stu-id="00e92-115">MEX Metadata Endpoints</span></span>  
+ <span data-ttu-id="00e92-116">MEX 프로토콜을 사용하는 메타데이터 끝점을 추가하려면 `IMetadataExchange` 서비스 계약을 사용하는 서비스 호스트에 서비스 끝점을 추가하십시오.</span><span class="sxs-lookup"><span data-stu-id="00e92-116">To add metadata endpoints that use the MEX protocol, add service endpoints to your service host that use the `IMetadataExchange` service contract.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="00e92-117">에는 <xref:System.ServiceModel.Description.IMetadataExchange> 프로그래밍 모델의 일부로 사용할 수 있는 이 서비스 계약 이름을 가진 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인터페이스가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-117"> includes an <xref:System.ServiceModel.Description.IMetadataExchange> interface with this service contract name that you can use as part of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programming model.</span></span> <span data-ttu-id="00e92-118">WS-MetadataExchange 끝점 또는 MEX 끝점은 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 클래스에서 정적 팩터리 메서드가 노출하는 4개의 기본 바인딩 중 하나를 사용하여 Svcutil.exe와 같이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 도구에서 사용하는 기본 바인딩과 일치시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-118">WS-MetadataExchange endpoints, or MEX endpoints, can use one of the four default bindings that the static factory methods expose on the <xref:System.ServiceModel.Description.MetadataExchangeBindings> class to match the default bindings used by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tools such as Svcutil.exe.</span></span> <span data-ttu-id="00e92-119">또한 사용자 지정 바인딩을 사용하여 MEX 메타데이터 끝점을 구성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-119">You can also configure MEX metadata endpoints using your own custom binding.</span></span>  
   
-### HTTP GET 메타데이터 끝점  
- HTTP\/GET 요청에 응답하는 서비스에 메타데이터 끝점을 추가하려면 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName>의 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 속성을 `true`로 설정합니다.또한 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName>의 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 속성을 `true`로 설정하여 HTTPS를 사용하는 메타데이터 끝점을 구성할 수도 있습니다.  
+### <a name="http-get-metadata-endpoints"></a><span data-ttu-id="00e92-120">HTTP GET 메타데이터 끝점</span><span class="sxs-lookup"><span data-stu-id="00e92-120">HTTP GET Metadata Endpoints</span></span>  
+ <span data-ttu-id="00e92-121">HTTP/GET 요청에 응답하는 서비스에 메타데이터 끝점을 추가하려면 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>의 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 속성을 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-121">To add a metadata endpoint to your service that responds to HTTP/GET requests, set the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> property on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> to `true`.</span></span> <span data-ttu-id="00e92-122">또한 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>의 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 속성을 `true`로 설정하여 HTTPS를 사용하는 메타데이터 끝점을 구성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-122">You can also configure a metadata endpoint that uses HTTPS by setting the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> property on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> to `true`.</span></span>  
   
-## 단원 내용  
- [방법: 구성 파일을 사용하여 서비스의 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 메타데이터를 게시하여 클라이언트가 WS\-MetadataExchange를 사용하는 메타데이터 또는 `?wsdl` 쿼리 문자열을 사용하는 HTTP\/GET 요청을 검색할 수 있도록 구성하는 방법을 보여 줍니다.  
+## <a name="in-this-section"></a><span data-ttu-id="00e92-123">단원 내용</span><span class="sxs-lookup"><span data-stu-id="00e92-123">In This Section</span></span>  
+ [<span data-ttu-id="00e92-124">방법: 구성 파일을 사용 하 여 서비스에 대 한 메타 데이터를 게시 합니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-124">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ <span data-ttu-id="00e92-125">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 메타데이터를 게시하여 클라이언트가 WS-MetadataExchange를 사용하는 메타데이터 또는 `?wsdl` 쿼리 문자열을 사용하는 HTTP/GET 요청을 검색할 수 있도록 구성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-125">Demonstrates how to configure a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service to publish metadata so that clients can retrieve the metadata using a WS-MetadataExchange or an HTTP/GET request using the `?wsdl` query string.</span></span>  
   
- [방법: 코드를 사용하여 서비스에 대한 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
- 클라이언트가 WS\-MetadataExchange를 사용하는 메타데이터 또는 `?wsdl` 쿼리 문자열을 사용하는 HTTP\/GET 요청을 검색할 수 있도록 메타데이터가 코드에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 게시할 수 있는 방법을 보여 줍니다.  
+ [<span data-ttu-id="00e92-126">방법: 코드를 사용 하 여 서비스에 대 한 메타 데이터를 게시 합니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-126">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ <span data-ttu-id="00e92-127">클라이언트가 WS-MetadataExchange를 사용하는 메타데이터 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 쿼리 문자열을 사용하는 HTTP/GET 요청을 검색할 수 있도록 메타데이터가 코드에서 `?wsdl` 서비스를 게시할 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="00e92-127">Demonstrates how to enable metadata publishing for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service in code so that clients can retrieve the metadata using a WS-MetadataExchange or an HTTP/GET request using the `?wsdl` query string.</span></span>  
   
-## 참조  
+## <a name="reference"></a><span data-ttu-id="00e92-128">참조</span><span class="sxs-lookup"><span data-stu-id="00e92-128">Reference</span></span>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
   
  <xref:System.ServiceModel.Description.IMetadataExchange>  
@@ -50,5 +52,5 @@ caps.handback.revision: 10
   
  <xref:System.ServiceModel.Description.MetadataExchangeBindings>  
   
-## 참고 항목  
- [메타데이터 내보내기 및 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="00e92-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="00e92-129">See Also</span></span>  
+ [<span data-ttu-id="00e92-130">내보내기 및 메타 데이터 가져오기</span><span class="sxs-lookup"><span data-stu-id="00e92-130">Exporting and Importing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

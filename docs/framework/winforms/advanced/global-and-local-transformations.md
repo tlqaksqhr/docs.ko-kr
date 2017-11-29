@@ -1,71 +1,75 @@
 ---
-title: "전역 및 지역 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "매트릭스, 변환 사용"
-  - "변환, global"
-  - "변환, 로컬"
+title: "전역 및 지역 변형"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- matrices [Windows Forms], using transformations
+- transformations [Windows Forms], global
+- transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 432402fefc6c958fbab0b1450a429d9b130b8239
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 전역 및 지역 변환
-전역 변환은 지정된 <xref:System.Drawing.Graphics> 개체에서 그리는 모든 항목에 적용되는 변환을 말하고  지역 변환은 그리려는 특정 항목에만 적용되는 변환을 말합니다.  
+# <a name="global-and-local-transformations"></a><span data-ttu-id="75e13-102">전역 및 지역 변형</span><span class="sxs-lookup"><span data-stu-id="75e13-102">Global and Local Transformations</span></span>
+<span data-ttu-id="75e13-103">전역 변환은 그려진 모든 항목에 적용 되는 변환을 주어진 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-103">A global transformation is a transformation that applies to every item drawn by a given <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="75e13-104">반면, 로컬 변환을를 그릴 수 있는 특정 항목에 적용 하는 변환이입니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-104">In contrast, a local transformation is a transformation that applies to a specific item to be drawn.</span></span>  
   
-## 전역 변환  
- 전역 변환을 만들려면 <xref:System.Drawing.Graphics> 개체를 만든 다음 이 개체의 <xref:System.Drawing.Graphics.Transform%2A> 속성을 조작합니다.  <xref:System.Drawing.Graphics.Transform%2A> 속성은 <xref:System.Drawing.Drawing2D.Matrix> 개체이므로 일련의 상관 변환을 포함할 수 있습니다.  <xref:System.Drawing.Graphics.Transform%2A> 속성에 저장된 변환을 전역 변환이라고 합니다.  <xref:System.Drawing.Graphics> 클래스는 복합 전역 변환을 작성할 수 있도록 <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A> 및 <xref:System.Drawing.Graphics.TranslateTransform%2A> 메서드를 제공합니다.  다음 예제는 전역 변환을 만들기 전과 만든 후에 각각 한 번씩 타원을 그립니다.  이 변환에서는 y축 방향으로 0.5의 비율로 크기를 조정하고, x축 방향으로 50단위를 이동한 다음, 30도를 회전합니다.  
+## <a name="global-transformations"></a><span data-ttu-id="75e13-105">전역 변환</span><span class="sxs-lookup"><span data-stu-id="75e13-105">Global Transformations</span></span>  
+ <span data-ttu-id="75e13-106">전역 변환 생성, 구성는 <xref:System.Drawing.Graphics> 개체를 조작 다음 해당 <xref:System.Drawing.Graphics.Transform%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-106">To create a global transformation, construct a <xref:System.Drawing.Graphics> object, and then manipulate its <xref:System.Drawing.Graphics.Transform%2A> property.</span></span> <span data-ttu-id="75e13-107"><xref:System.Drawing.Graphics.Transform%2A> 속성은 한 <xref:System.Drawing.Drawing2D.Matrix> 관계 변환의 모든 시퀀스를 보유할 수 있는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-107">The <xref:System.Drawing.Graphics.Transform%2A> property is a <xref:System.Drawing.Drawing2D.Matrix> object, so it can hold any sequence of affine transformations.</span></span> <span data-ttu-id="75e13-108">에 저장 된 변환은 <xref:System.Drawing.Graphics.Transform%2A> 속성은 전역 변환 이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-108">The transformation stored in the <xref:System.Drawing.Graphics.Transform%2A> property is called the world transformation.</span></span> <span data-ttu-id="75e13-109"><xref:System.Drawing.Graphics> 클래스에서는 복합 전역 변환을를 구축 하기 위한 여러 가지 방법: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, 및 <xref:System.Drawing.Graphics.TranslateTransform%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-109">The <xref:System.Drawing.Graphics> class provides several methods for building up a composite world transformation: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, and <xref:System.Drawing.Graphics.TranslateTransform%2A>.</span></span> <span data-ttu-id="75e13-110">다음 예제에서는 타원을 그립니다: 월드 변환과 후를 만들기 전에 한 번입니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-110">The following example draws an ellipse twice: once before creating a world transformation and once after.</span></span> <span data-ttu-id="75e13-111">변환을 y 방향의 0.5의 비율로 크기를 조정 다음 x 방향의 50 명의 단위 변환한 30도 회전 합니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-111">The transformation first scales by a factor of 0.5 in the y direction, then translates 50 units in the x direction, and then rotates 30 degrees.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- 다음 그림은 변환과 관련된 매트릭스를 나타냅니다.  
+ <span data-ttu-id="75e13-112">다음 그림은 변환과 관련 된 매트릭스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-112">The following illustration shows the matrices involved in the transformation.</span></span>  
   
- ![변환](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05\_art14")  
+ <span data-ttu-id="75e13-113">![변환](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")</span><span class="sxs-lookup"><span data-stu-id="75e13-113">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")</span></span>  
   
 > [!NOTE]
->  위의 예제에서는 클라이언트 영역의 왼쪽 위에 있는 좌표계 원점을 중심으로 타원이 회전합니다.  이 경우 타원이 자체의 축을 중심으로 회전할 때와 다른 결과가 발생합니다.  
+>  <span data-ttu-id="75e13-114">앞의 예제에서 클라이언트 영역의 왼쪽 위 모퉁이에 있는 좌표계의 원점을 타원이 회전 합니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-114">In the preceding example, the ellipse is rotated about the origin of the coordinate system, which is at the upper-left corner of the client area.</span></span> <span data-ttu-id="75e13-115">회전 중심을 관통 자체에 대 한 타원 결과 서로 다르게 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-115">This produces a different result than rotating the ellipse about its own center.</span></span>  
   
-## 지역 변환  
- 지역 변환은 그리려는 특정 항목에만 적용됩니다.  예를 들어 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체에는 해당 경로의 데이터 요소를 변환할 수 있는 <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> 메서드가 있습니다.  다음 예제는 변환이 사용되지 않은 사각형과 회전 변환이 사용된 경로를 그립니다.  전역 변환은 사용되지 않는다고 가정합니다.  
+## <a name="local-transformations"></a><span data-ttu-id="75e13-116">로컬 변환</span><span class="sxs-lookup"><span data-stu-id="75e13-116">Local Transformations</span></span>  
+ <span data-ttu-id="75e13-117">로컬 변환을를 그릴 수 있는 특정 항목에 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-117">A local transformation applies to a specific item to be drawn.</span></span> <span data-ttu-id="75e13-118">예를 들어 한 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체에는 <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> 메서드를 해당 경로 대 한 데이터 요소를 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-118">For example, a <xref:System.Drawing.Drawing2D.GraphicsPath> object has a <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> method that allows you to transform the data points of that path.</span></span> <span data-ttu-id="75e13-119">다음 예제에서는 변환이 사용 되지 않은 사각형 및 회전 변환 사용 하 여 경로 그립니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-119">The following example draws a rectangle with no transformation and a path with a rotation transformation.</span></span> <span data-ttu-id="75e13-120">(세계 변환이 라고 가정 합니다.)</span><span class="sxs-lookup"><span data-stu-id="75e13-120">(Assume that there is no world transformation.)</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- 전역 변환과 지역 변환을 함께 사용하면 다양한 효과를 낼 수 있습니다.  예를 들어, 전역 변환을 사용하여 좌표계를 새로 수정할 수 있으며, 지역 변환을 사용하여 새 좌표에 그려진 개체를 회전시키고 개체의 크기를 조정할 수 있습니다.  
+ <span data-ttu-id="75e13-121">다양 한 결과 달성 하기 위해 로컬 변형과 월드 변환을 결합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-121">You can combine the world transformation with local transformations to achieve a variety of results.</span></span> <span data-ttu-id="75e13-122">예를 들어 좌표 시스템을 수정 하 고 지역 변환을 사용 하 여 회전 하 고 새 좌표계에 나타나는 개체의 크기를 조정 하 월드 변환을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-122">For example, you can use the world transformation to revise the coordinate system and use local transformations to rotate and scale objects drawn on the new coordinate system.</span></span>  
   
- 예를 들어, 클라이언트 공간의 왼쪽 가장자리에서 200픽셀, 클라이언트 공간의 위에서 150픽셀 떨어진 위치에 원점이 존재하는 좌표계를 만들려고 합니다.  또한, 측정 단위를 픽셀로 설정하고, x축이 오른쪽을 향하고 y축이 위쪽을 향하도록 설정하려고 합니다.  기본 좌표계에서는 y축이 아래쪽을 향하고 있으므로 가로축을 기준으로 반사를 수행해야 합니다.  다음 그림은 이러한 반사 매트릭스를 나타냅니다.  
+ <span data-ttu-id="75e13-123">클라이언트 영역의 왼쪽된 가장자리에서 원본 200 픽셀 및 클라이언트 영역의 위쪽에서 150 픽셀 위치를 포함 하는 좌표계를 한다고 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-123">Suppose you want a coordinate system that has its origin 200 pixels from the left edge of the client area and 150 pixels from the top of the client area.</span></span> <span data-ttu-id="75e13-124">또한 x 축이 오른쪽 및 위쪽을 가리키는 y 축에는 픽셀 수를 측정 단위를 지정 하는 것으로 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-124">Furthermore, assume that you want the unit of measure to be the pixel, with the x-axis pointing to the right and the y-axis pointing up.</span></span> <span data-ttu-id="75e13-125">기본 좌표 시스템 가로 축을 따라 반사를 수행 해야 하므로 y 축은, 아래쪽에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-125">The default coordinate system has the y-axis pointing down, so you need to perform a reflection across the horizontal axis.</span></span> <span data-ttu-id="75e13-126">다음 그림은 이러한 반사의 매트릭스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-126">The following illustration shows the matrix of such a reflection.</span></span>  
   
- ![변환](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.png "AboutGdip05\_art15")  
+ <span data-ttu-id="75e13-127">![변환](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")</span><span class="sxs-lookup"><span data-stu-id="75e13-127">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")</span></span>  
   
- 이번에는 오른쪽으로 200단위를 이동하고 아래로 150단위를 이동하려고 합니다.  
+ <span data-ttu-id="75e13-128">다음으로, 오른쪽에 200 단위를 이동 및 아래로 150 단위를 수행 해야 할 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-128">Next, assume you need to perform a translation 200 units to the right and 150 units down.</span></span>  
   
- 다음 예제에서는 <xref:System.Drawing.Graphics> 개체의 전역 변환을 설정하여 방금 설명한 좌표계를 구성합니다.  
+ <span data-ttu-id="75e13-129">다음 예에서는 설정의 월드 변형과 설정 하 여 방금 설명한 좌표계는 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-129">The following example establishes the coordinate system just described by setting the world transformation of a <xref:System.Drawing.Graphics> object.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- 위 예제의 끝에 나오는 다음 코드는 단일 사각형으로 구성된 경로를 만드는데, 이 사각형의 왼쪽 아래 모퉁이는 새 좌표계의 원점에 존재합니다.  이 사각형은 한 번은 지역 변환을 사용하여 채워지고 다른 한 번은 지역 변환을 사용하지 않고 채워집니다.  이 지역 변환은 2의 비율로 가로 크기를 조정한 다음 30도를 회전시키는 변환으로 구성됩니다.  
+ <span data-ttu-id="75e13-130">다음 코드 (위 예의 끝에 위치)와 왼쪽 아래 모퉁이가 새 좌표계의 원점 단일 사각형으로 구성 된 경로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-130">The following code (placed at the end of the preceding example) creates a path that consists of a single rectangle with its lower-left corner at the origin of the new coordinate system.</span></span> <span data-ttu-id="75e13-131">사각형은 변환이 사용 되지 않은 로컬 한 번은 로컬 변환을 두 번 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-131">The rectangle is filled once with no local transformation and once with a local transformation.</span></span> <span data-ttu-id="75e13-132">가로 배율 2 30도 회전 하 여 로컬 변환으로 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-132">The local transformation consists of a horizontal scaling by a factor of 2 followed by a 30-degree rotation.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  
   
- 다음 그림은 새 좌표계와 두 개의 사각형을 나타냅니다.  
+ <span data-ttu-id="75e13-133">다음은 새 좌표계와 두 개의 사각형입니다.</span><span class="sxs-lookup"><span data-stu-id="75e13-133">The following illustration shows the new coordinate system and the two rectangles.</span></span>  
   
- ![변환](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.png "AboutGdip05\_art16")  
+ <span data-ttu-id="75e13-134">![변환](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")</span><span class="sxs-lookup"><span data-stu-id="75e13-134">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")</span></span>  
   
-## 참고 항목  
- [좌표계 및 변환](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [관리 GDI\+에서 변환 사용](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="75e13-135">참고 항목</span><span class="sxs-lookup"><span data-stu-id="75e13-135">See Also</span></span>  
+ [<span data-ttu-id="75e13-136">좌표계 및 변형</span><span class="sxs-lookup"><span data-stu-id="75e13-136">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="75e13-137">관리 GDI+에서 변형 사용</span><span class="sxs-lookup"><span data-stu-id="75e13-137">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

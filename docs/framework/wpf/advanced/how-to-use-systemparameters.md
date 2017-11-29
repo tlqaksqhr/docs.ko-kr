@@ -1,44 +1,48 @@
 ---
-title: "방법: SystemParameters 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클래스, SystemParameters"
-  - "SystemParameters 클래스"
+title: "방법: SystemParameters 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f4b2ee3956017e10da8adda52fa9a0ec31cb19ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: SystemParameters 사용
-이 예제에서는 <xref:System.Windows.SystemParameters>의 속성에 액세스한 후 이를 사용하여 단추에 스타일을 지정하거나 단추를 사용자 지정하는 방법을 보여 줍니다.  
+# <a name="how-to-use-systemparameters"></a><span data-ttu-id="1a66a-102">방법: SystemParameters 사용</span><span class="sxs-lookup"><span data-stu-id="1a66a-102">How to: Use SystemParameters</span></span>
+<span data-ttu-id="1a66a-103">이 예제에 액세스 하 고 속성을 사용 하는 방법을 보여 줍니다 <xref:System.Windows.SystemParameters> 스타일 하거나 단추를 사용자 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-103">This example shows how to access and use the properties of <xref:System.Windows.SystemParameters> in order to style or customize a button.</span></span>  
   
-## 예제  
- 시스템 리소스는 시스템 설정과 일관된 시각적 효과를 만들 수 있도록 몇 가지 시스템 기반 설정을 리소스로 노출합니다.  <xref:System.Windows.SystemParameters>는 시스템 매개 변수 값 속성과, 이러한 값에 바인딩되는 리소스 키를 포함하는 클래스입니다.  예를 들어 <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A>는 <xref:System.Windows.SystemParameters> 속성 값이고 <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>는 해당하는 리소스 키입니다.  
+## <a name="example"></a><span data-ttu-id="1a66a-104">예제</span><span class="sxs-lookup"><span data-stu-id="1a66a-104">Example</span></span>  
+ <span data-ttu-id="1a66a-105">시스템 리소스는 시스템 설정과 일관된 시각적 효과를 만들 수 있도록 몇 가지 시스템 기반 설정을 리소스로 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-105">System resources expose several system based settings as resources in order to help you create visuals that are consistent with system settings.</span></span> <span data-ttu-id="1a66a-106"><xref:System.Windows.SystemParameters>시스템 매개 변수 값 속성 및 값에 바인딩되는 시스템 리소스 키를 모두 포함 하는 클래스가입니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-106"><xref:System.Windows.SystemParameters> is a class that contains both system parameter value properties, and resource keys that bind to the values.</span></span> <span data-ttu-id="1a66a-107">예를 들어 <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> 는 <xref:System.Windows.SystemParameters> 속성 값 및 <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> 해당 리소스 키입니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-107">For example, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> is a <xref:System.Windows.SystemParameters> property value and <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> is the corresponding resource key.</span></span>  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 <xref:System.Windows.SystemParameters>의 멤버를 정적 속성이나 동적 리소스 참조\(정적 속성 값을 키로 사용\)로 사용할 수 있습니다.  응용 프로그램이 실행되는 동안 시스템 기반 값을 자동으로 업데이트하려면 동적 리소스 참조를 사용하고, 그렇지 않은 경우에는 정적 참조를 사용하십시오.  리소스 키의 경우 속성 이름 뒤에 `Key`라는 접미사가 붙습니다.  
+ <span data-ttu-id="1a66a-108">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 멤버를 사용할 수 <xref:System.Windows.SystemParameters> 는 정적 속성 사용 또는 동적 리소스 참조 (정적 속성 값을 키로).</span><span class="sxs-lookup"><span data-stu-id="1a66a-108">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can use the members of <xref:System.Windows.SystemParameters> as either a static property usage, or a dynamic resource references (with the static property value as the key).</span></span> <span data-ttu-id="1a66a-109">응용 프로그램이 실행되는 동안 시스템 기반 값을 자동으로 업데이트하려면 동적 리소스 참조를 사용하고 자동으로 업데이트하지 않으려면 정적 참조를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-109">Use a dynamic resource reference if you want the system based value to update automatically while the application runs; otherwise, use a static reference.</span></span> <span data-ttu-id="1a66a-110">리소스 키 접미사가 `Key` 속성 이름에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-110">Resource keys have the suffix `Key` appended to the property name.</span></span>  
   
- 다음 예제에서는 <xref:System.Windows.SystemParameters>에 액세스한 후 해당 정적 값을 사용하여 단추에 스타일을 지정하거나 단추를 사용자 지정하는 방법을 보여 줍니다.  이 태그 예제에서는 단추에 <xref:System.Windows.SystemParameters> 값을 적용하여 단추의 크기를 지정합니다.  
+ <span data-ttu-id="1a66a-111">다음 예제에서는 액세스 하 고 정적 값을 사용 하는 방법을 보여 줍니다 <xref:System.Windows.SystemParameters> 에 스타일을 하거나 단추를 사용자 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-111">The following example shows how to access and use the static values of <xref:System.Windows.SystemParameters> to style or customize a button.</span></span> <span data-ttu-id="1a66a-112">이 태그 예제 적용 하 여 단추의 크기 <xref:System.Windows.SystemParameters> 를 단추에는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-112">This markup example sizes a button by applying <xref:System.Windows.SystemParameters> values to a button.</span></span>  
   
- [!code-xml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
+ [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
- 코드에서 <xref:System.Windows.SystemParameters> 값을 사용하는 경우 정적 참조나 동적 리소스 참조를 사용할 필요가 없습니다.  대신 <xref:System.Windows.SystemParameters> 클래스의 값을 사용해야 합니다.  키가 아닌 속성은 명백하게 정적 속성으로 정의되지만, 시스템에서 호스팅될 때 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 런타임에 속성을 실시간으로 다시 평가하여 사용자가 시스템 값을 변경한 내용을 적절하게 고려합니다. 다음 예제에서는 <xref:System.Windows.SystemParameters> 값을 사용하여 단추의 너비와 높이를 설정하는 방법을 보여 줍니다.  
+ <span data-ttu-id="1a66a-113">값을 사용 하려면 <xref:System.Windows.SystemParameters> 코드에서 않아도 정적 참조 또는 동적 리소스 참조를 사용 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-113">To use the values of <xref:System.Windows.SystemParameters> in code, you do not have to use either static references or dynamic resource references.</span></span> <span data-ttu-id="1a66a-114">값을 사용 하는 대신는 <xref:System.Windows.SystemParameters> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-114">Instead, use the values of the <xref:System.Windows.SystemParameters> class.</span></span> <span data-ttu-id="1a66a-115">키가 아닌 속성이 분명히 정적 속성의 런타임 동작으로 정의 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시스템에서 호스팅될 때 실시간으로 속성을 다시 평가 하 고 적절 하 게 시스템 값을 사용자가 수행한 변경 작업에 대 한 고려 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-115">Although the non-key properties are apparently defined as static properties, the runtime behavior of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] as hosted by the system will reevaluate the properties in realtime, and will properly account for user-driven changes to system values.</span></span> <span data-ttu-id="1a66a-116">다음 예제를 사용 하 여 단추의 높이 너비를 설정 하는 방법을 보여 줍니다 <xref:System.Windows.SystemParameters> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="1a66a-116">The following example shows how to set the width and height of a button by using <xref:System.Windows.SystemParameters> values.</span></span>  
   
  [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
  [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
-## 참고 항목  
- <xref:System.Windows.SystemParameters>   
- [시스템 브러시로 영역 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)   
- [SystemFonts 사용](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)   
- [시스템 매개 변수 키 사용](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)   
- [방법 항목](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="1a66a-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1a66a-117">See Also</span></span>  
+ <xref:System.Windows.SystemParameters>  
+ [<span data-ttu-id="1a66a-118">시스템 브러시로 영역 그리기</span><span class="sxs-lookup"><span data-stu-id="1a66a-118">Paint an Area with a System Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [<span data-ttu-id="1a66a-119">SystemFonts 사용</span><span class="sxs-lookup"><span data-stu-id="1a66a-119">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [<span data-ttu-id="1a66a-120">시스템 매개 변수 키 사용</span><span class="sxs-lookup"><span data-stu-id="1a66a-120">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [<span data-ttu-id="1a66a-121">방법 항목</span><span class="sxs-lookup"><span data-stu-id="1a66a-121">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

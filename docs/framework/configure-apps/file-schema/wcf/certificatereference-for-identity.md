@@ -1,28 +1,33 @@
 ---
-title: "&lt;certificateReference&gt;의 &lt;ID&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;certificateReference&gt;의 &lt;ID&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 883ae318e32493013f009f3580ef102e4d39b3e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;certificateReference&gt;의 &lt;ID&gt;
-X.509 인증서 유효성 검사의 설정을 지정합니다.  이 ID를 가진 끝점과 연결되는 보안 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 클라이언트는 서버가 나타내는 클레임이 이 ID를 생성하는 데 사용된 ID 클레임을 포함함을 확인합니다.  
+# <a name="ltcertificatereferencegt-for-ltidentitygt"></a><span data-ttu-id="c1a3e-102">&lt;certificateReference&gt;의 &lt;ID&gt;</span><span class="sxs-lookup"><span data-stu-id="c1a3e-102">&lt;certificateReference&gt; for &lt;identity&gt;</span></span>
+<span data-ttu-id="c1a3e-103">X.509 인증서 유효성 검사의 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-103">Specifies settings for X.509 certificate validation.</span></span> <span data-ttu-id="c1a3e-104">이 ID를 가진 끝점과 연결되는 보안 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 클라이언트는 서버가 나타내는 클레임이 이 ID를 생성하는 데 사용된 ID 클레임을 포함함을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-104">A secure [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] client that connects to an endpoint with this identity verifies that the claims presented by the server contain the identity claim used to construct this identity.</span></span>  
   
-## 구문  
+ <span data-ttu-id="c1a3e-105">\<identity ></span><span class="sxs-lookup"><span data-stu-id="c1a3e-105">\<identity></span></span>  
+<span data-ttu-id="c1a3e-106">\<certificateReference ></span><span class="sxs-lookup"><span data-stu-id="c1a3e-106">\<certificateReference></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c1a3e-107">구문</span><span class="sxs-lookup"><span data-stu-id="c1a3e-107">Syntax</span></span>  
   
+```xml  
 <certificateReference   
         findValue="String"   
     isChainIncluded="Boolean"  
@@ -34,30 +39,30 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 </certificateReference>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c1a3e-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="c1a3e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="c1a3e-109">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="c1a3e-110">특성</span><span class="sxs-lookup"><span data-stu-id="c1a3e-110">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|findValue|X.509 인증서 저장소에서 검색할 값을 지정합니다.  이 특성에 포함된 형식은 지정된 `X509FindType` 값의 요구 사항을 충족해야 합니다.  기본값은 빈 문자열입니다.|  
-|isChainIncluded|유효성 검사에서 인증서 체인을 사용하는지 여부를 지정하는 부울 값입니다.|  
-|storeLocation|클라이언트가 서버 인증서의 유효성을 검사하는 데 사용할 수 있는 인증서 저장소 위치를 지정합니다.<br /><br /> 유효한 값은 다음과 같습니다.<br /><br /> -   LocalMachine: 로컬 컴퓨터에 할당된 인증서 저장소입니다.<br />-   CurrentUser: 현재 사용자에게 할당된 인증서 저장소입니다.<br /><br /> 기본값은 LocalMachine입니다.<br /><br /> 이 특성은 <xref:System.Security.Cryptography.X509Certificates.StoreLocation> 형식입니다.|  
-|storeName|열려는 X.509 인증서 저장소의 이름을 지정합니다.<br /><br /> 유효한 값은 다음과 같습니다.<br /><br /> -   AddressBook: 다른 사용자용 인증서 저장소입니다.<br />-   AuthRoot: 제3의 CA\(인증 기관\)용 인증서 저장소입니다.<br />-   CertificateAuthority: 중개 CA\(인증 기관\)용 인증서 저장소입니다.<br />-   Disallowed: 해지된 인증서용 인증서 저장소입니다.<br />-   My: 개인 인증서용 인증서 저장소입니다.<br />-   Root: 신뢰할 수 있는 루트 CA\(인증 기관\)용 인증서 저장소입니다.<br />-   TrustedPeople: 직접 신뢰할 수 있는 사람 및 리소스용 인증서 저장소입니다.<br />-   TrustedPublisher: 직접 신뢰할 수 있는 게시자용 인증서 저장소입니다.<br /><br /> 기본값은 My입니다.<br /><br /> 이 특성은 <xref:System.Security.Cryptography.X509Certificates.StoreName> 형식입니다.|  
-|X509FindType|실행할 X.509 검색의 유형을 지정합니다.  `findValue` 특성에 포함된 형식은 지정된 X509FindType에 대한 요구 사항을 충족해야 합니다.<br /><br /> 유효한 값은 다음과 같습니다.<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> 기본값은 FindBySubjectDistinguishedName입니다.<br /><br /> 이 특성은 <xref:System.Security.Cryptography.X509Certificates.X509FindType> 형식입니다.|  
+|<span data-ttu-id="c1a3e-111">특성</span><span class="sxs-lookup"><span data-stu-id="c1a3e-111">Attribute</span></span>|<span data-ttu-id="c1a3e-112">설명</span><span class="sxs-lookup"><span data-stu-id="c1a3e-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="c1a3e-113">findValue</span><span class="sxs-lookup"><span data-stu-id="c1a3e-113">findValue</span></span>|<span data-ttu-id="c1a3e-114">X.509 인증서 저장소에서 검색할 값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-114">Specifies the value to search for in the X.509 certificate store.</span></span> <span data-ttu-id="c1a3e-115">이 특성에 포함된 형식은 지정된 `X509FindType` 값의 요구 사항을 충족해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-115">The type contained in this attribute must satisfy the requirements of the specified `X509FindType` value.</span></span> <span data-ttu-id="c1a3e-116">기본값은 빈 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-116">The default is an empty string.</span></span>|  
+|<span data-ttu-id="c1a3e-117">isChainIncluded</span><span class="sxs-lookup"><span data-stu-id="c1a3e-117">isChainIncluded</span></span>|<span data-ttu-id="c1a3e-118">유효성 검사에서 인증서 체인을 사용하는지 여부를 지정하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-118">A Boolean value that specifies if the validation is done using a certificate chain.</span></span>|  
+|<span data-ttu-id="c1a3e-119">storeLocation</span><span class="sxs-lookup"><span data-stu-id="c1a3e-119">storeLocation</span></span>|<span data-ttu-id="c1a3e-120">클라이언트가 서버 인증서의 유효성을 검사하는 데 사용할 수 있는 인증서 저장소 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-120">Specifies the location of the certificate store that the client can use to validate the server’s certificate.</span></span><br /><br /> <span data-ttu-id="c1a3e-121">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-121">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="c1a3e-122">-LocalMachine: 로컬 컴퓨터에 할당 된 인증서 저장소입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-122">-   LocalMachine: The cert store assigned to the local machine.</span></span><br /><span data-ttu-id="c1a3e-123">-CurrentUser: 현재 사용자에 게 할당 된 인증서 저장소입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-123">-   CurrentUser: The cert store assigned to the current user.</span></span><br /><br /> <span data-ttu-id="c1a3e-124">기본값은 LocalMachine입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-124">The default value is LocalMachine.</span></span><br /><br /> <span data-ttu-id="c1a3e-125">이 특성은 <xref:System.Security.Cryptography.X509Certificates.StoreLocation> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-125">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span></span>|  
+|<span data-ttu-id="c1a3e-126">storeName</span><span class="sxs-lookup"><span data-stu-id="c1a3e-126">storeName</span></span>|<span data-ttu-id="c1a3e-127">열려는 X.509 인증서 저장소의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-127">Specifies the name of the X.509 certificate store to open.</span></span><br /><br /> <span data-ttu-id="c1a3e-128">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-128">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="c1a3e-129">-AddressBook: 다른 사용자에 대 한 인증서 저장소입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-129">-   AddressBook: Certificate store for other users.</span></span><br /><span data-ttu-id="c1a3e-130">-AuthRoot: 인증서 저장소 공급 업체 Ca (인증 기관)입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-130">-   AuthRoot: Certificate store for third-party certification authorities (CAs).</span></span><br /><span data-ttu-id="c1a3e-131">-CertificateAuthority: 중개 Ca에 대 한 인증서 저장소입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-131">-   CertificateAuthority: Certificate store for intermediate CAs.</span></span><br /><span data-ttu-id="c1a3e-132">-Disallowed: 해지 된 인증서에 대 한 저장소 인증서.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-132">-   Disallowed: Certificate store for revoked certificates.</span></span><br /><span data-ttu-id="c1a3e-133">-인증서 저장소 my: 개인 인증서입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-133">-   My: Certificate store for personal certificates.</span></span><br /><span data-ttu-id="c1a3e-134">-Root: 신뢰할 수 있는 루트 Ca에 대 한 인증서 저장소입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-134">-   Root: Certificate store for trusted root CAs.</span></span><br /><span data-ttu-id="c1a3e-135">-TrustedPeople: 직접 신뢰할 수 있는 사용자 및 리소스에 대 한 인증서 저장소입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-135">-   TrustedPeople: Certificate store for directly trusted people and resources.</span></span><br /><span data-ttu-id="c1a3e-136">-TrustedPublisher: 직접 신뢰할 수 있는 게시자에 대 한 인증서 저장소입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-136">-   TrustedPublisher: Certificate store for directly trusted publishers.</span></span><br /><br /> <span data-ttu-id="c1a3e-137">기본값은 My입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-137">The default value is My.</span></span><br /><br /> <span data-ttu-id="c1a3e-138">이 특성은 <xref:System.Security.Cryptography.X509Certificates.StoreName> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-138">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreName>.</span></span>|  
+|<span data-ttu-id="c1a3e-139">X509FindType</span><span class="sxs-lookup"><span data-stu-id="c1a3e-139">X509FindType</span></span>|<span data-ttu-id="c1a3e-140">실행할 X.509 검색의 유형을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-140">Specifies the type of X.509 search to be executed.</span></span> <span data-ttu-id="c1a3e-141">`findValue` 특성에 포함된 형식은 지정된 X509FindType에 대한 요구 사항을 충족해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-141">The type contained in the `findValue` attribute must satisfy the requirements of the specified X509FindType.</span></span><br /><br /> <span data-ttu-id="c1a3e-142">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-142">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="c1a3e-143">-FindByThumbPrint</span><span class="sxs-lookup"><span data-stu-id="c1a3e-143">-   FindByThumbPrint</span></span><br /><span data-ttu-id="c1a3e-144">-FindBySubjectName</span><span class="sxs-lookup"><span data-stu-id="c1a3e-144">-   FindBySubjectName</span></span><br /><span data-ttu-id="c1a3e-145">-FindBySubjectDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="c1a3e-145">-   FindBySubjectDistinguishedName</span></span><br /><span data-ttu-id="c1a3e-146">-FindByIssuerName</span><span class="sxs-lookup"><span data-stu-id="c1a3e-146">-   FindByIssuerName</span></span><br /><span data-ttu-id="c1a3e-147">-FindByIssuerDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="c1a3e-147">-   FindByIssuerDistinguishedName</span></span><br /><span data-ttu-id="c1a3e-148">-FindBySerialNumber</span><span class="sxs-lookup"><span data-stu-id="c1a3e-148">-   FindBySerialNumber</span></span><br /><span data-ttu-id="c1a3e-149">-FindByTimeValid</span><span class="sxs-lookup"><span data-stu-id="c1a3e-149">-   FindByTimeValid</span></span><br /><span data-ttu-id="c1a3e-150">-FindByTimeNotYetValid</span><span class="sxs-lookup"><span data-stu-id="c1a3e-150">-   FindByTimeNotYetValid</span></span><br /><span data-ttu-id="c1a3e-151">-FindByTemplateName</span><span class="sxs-lookup"><span data-stu-id="c1a3e-151">-   FindByTemplateName</span></span><br /><span data-ttu-id="c1a3e-152">-FindByApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="c1a3e-152">-   FindByApplicationPolicy</span></span><br /><span data-ttu-id="c1a3e-153">-FindByCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="c1a3e-153">-   FindByCertificatePolicy</span></span><br /><span data-ttu-id="c1a3e-154">-FindByExtension</span><span class="sxs-lookup"><span data-stu-id="c1a3e-154">-   FindByExtension</span></span><br /><span data-ttu-id="c1a3e-155">-FindByKeyUsage</span><span class="sxs-lookup"><span data-stu-id="c1a3e-155">-   FindByKeyUsage</span></span><br /><span data-ttu-id="c1a3e-156">-Findbysubjectkeyidentifier가</span><span class="sxs-lookup"><span data-stu-id="c1a3e-156">-   FindBySubjectKeyIdentifier</span></span><br /><br /> <span data-ttu-id="c1a3e-157">기본값은 FindBySubjectDistinguishedName입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-157">The default value is FindBySubjectDistinguishedName.</span></span><br /><br /> <span data-ttu-id="c1a3e-158">이 특성은 <xref:System.Security.Cryptography.X509Certificates.X509FindType> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-158">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.X509FindType>.</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="c1a3e-159">자식 요소</span><span class="sxs-lookup"><span data-stu-id="c1a3e-159">Child Elements</span></span>  
+ <span data-ttu-id="c1a3e-160">없음</span><span class="sxs-lookup"><span data-stu-id="c1a3e-160">None.</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="c1a3e-161">부모 요소</span><span class="sxs-lookup"><span data-stu-id="c1a3e-161">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<identity\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|한 끝점에서 다른 끝점과 메시지를 교환할 때 상대 끝점을 인증할 수 있도록 하는 설정을 지정합니다.|  
+|<span data-ttu-id="c1a3e-162">요소</span><span class="sxs-lookup"><span data-stu-id="c1a3e-162">Element</span></span>|<span data-ttu-id="c1a3e-163">설명</span><span class="sxs-lookup"><span data-stu-id="c1a3e-163">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c1a3e-164">\<identity ></span><span class="sxs-lookup"><span data-stu-id="c1a3e-164">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="c1a3e-165">한 끝점에서 다른 끝점과 메시지를 교환할 때 상대 끝점을 인증할 수 있도록 하는 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c1a3e-165">Specifies settings that enable the authentication of an endpoint by other endpoints exchanging messages with it.</span></span>|  
   
-## 참고 항목  
- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>   
- <xref:System.ServiceModel.Configuration.IdentityElement>   
- <xref:System.ServiceModel.EndpointAddress>   
+## <a name="see-also"></a><span data-ttu-id="c1a3e-166">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c1a3e-166">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.CertificateReferenceElement>  
+ <xref:System.ServiceModel.Configuration.IdentityElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>

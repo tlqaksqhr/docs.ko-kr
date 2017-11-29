@@ -1,30 +1,33 @@
 ---
-title: "부동 소수점 숫자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "부동 소수점 숫자"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c3e8ac8b5a97c62bb173fba57ac8aeb26a1dad42
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 부동 소수점 숫자
-이 항목에서는 개발자가 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 부동 소수점 숫자로 작업할 때 자주 발생하는 몇 가지 문제에 대해 설명합니다.  이러한 문제는 컴퓨터가 부동 소수점 숫자를 저장하는 방식 때문에 발생하며 <xref:System.Data.SqlClient> 또는 <xref:System.Data.OracleClient>와 같은 특정 공급자에 한정된 문제가 아닙니다.  
+# <a name="floating-point-numbers"></a><span data-ttu-id="e7620-102">부동 소수점 숫자</span><span class="sxs-lookup"><span data-stu-id="e7620-102">Floating-Point Numbers</span></span>
+<span data-ttu-id="e7620-103">이 항목에서는 개발자가 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 부동 소수점 숫자로 작업할 때 자주 발생하는 몇 가지 문제에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-103">This topic describes some of the issues that developers frequently encounter when they work with floating-point numbers in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span> <span data-ttu-id="e7620-104">이러한 문제는 컴퓨터가 부동 소수점 숫자를 저장하는 방식 때문에 발생하며 <xref:System.Data.SqlClient> 또는 <xref:System.Data.OracleClient>와 같은 특정 공급자에 한정된 문제가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-104">These issues are caused by the way that computers store floating-point numbers, and are not specific to a particular provider such as <xref:System.Data.SqlClient> or <xref:System.Data.OracleClient>.</span></span>  
   
- 일반적으로 부동 소수점 숫자에는 정확히 일치하는 이진 표현이 없기 때문에  컴퓨터는 해당 숫자의 근사값을 저장합니다.  즉, 계산 시점에 따라 동일한 숫자를 나타내는 데 서로 다른 이진수가 사용될 수 있습니다.  이것은 부동 소수점 숫자가 한 표현에서 다른 표현으로 변환될 때 숫자의 최하위 유효 자릿수가 조금씩 달라질 수 있기 때문입니다.  이러한 변환은 대개 숫자가 한 형식에서 다른 형식으로 캐스팅될 때 발생합니다.  또한 변환이 데이터베이스 내에서 발생하는지, 데이터베이스 값을 나타내는 형식 간에서 발생하는지, 형식 간에서 발생하는지에 따라 약간씩 달라집니다.  이러한 차이로 인해 논리적으로 같은 숫자의 최하위 유효 자릿수가 달라져 서로 다른 값이 될 수 있습니다.  또한, 숫자의 전체 자릿수가 예상보다 작거나 클 수 있습니다.  따라서 문자열로 서식이 지정된 숫자는 예상과 다른 값으로 표시될 수 있습니다.  
+ <span data-ttu-id="e7620-105">일반적으로 부동 소수점 숫자에는 정확히 일치하는 이진 표현이 없기 때문에</span><span class="sxs-lookup"><span data-stu-id="e7620-105">Floating-point numbers generally do not have an exact binary representation.</span></span> <span data-ttu-id="e7620-106">컴퓨터는 해당 숫자의 근사값을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-106">Instead, the computer stores an approximation of the number.</span></span> <span data-ttu-id="e7620-107">즉, 계산 시점에 따라 동일한 숫자를 나타내는 데 서로 다른 이진수가 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-107">At different times, different numbers of binary digits may be used to represent the number.</span></span> <span data-ttu-id="e7620-108">이것은 부동 소수점 숫자가 한 표현에서 다른 표현으로 변환될 때 숫자의 최하위 유효 자릿수가 조금씩 달라질 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-108">When a floating point number is converted from one representation to another representation, the least significant digits of that number may vary slightly.</span></span> <span data-ttu-id="e7620-109">이러한 변환은 대개 숫자가 한 형식에서 다른 형식으로 캐스팅될 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-109">Conversion typically occurs when the number is cast from one type to another type.</span></span> <span data-ttu-id="e7620-110">또한 변환이 데이터베이스 내에서 발생하는지, 데이터베이스 값을 나타내는 형식 간에서 발생하는지, 형식 간에서 발생하는지에 따라 약간씩 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-110">The variation occurs whether the conversion occurs within a database, between types that represent database values, or between types.</span></span> <span data-ttu-id="e7620-111">이러한 차이로 인해 논리적으로 같은 숫자의 최하위 유효 자릿수가 달라져 서로 다른 값이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-111">Because of these changes, numbers that would logically be equal may have changes in their least-significant digits that cause them to have different values.</span></span> <span data-ttu-id="e7620-112">또한, 숫자의 전체 자릿수가 예상보다 작거나 클 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-112">The number of digits of precision in the number may be larger or smaller than expected.</span></span> <span data-ttu-id="e7620-113">따라서 문자열로 서식이 지정된 숫자는 예상과 다른 값으로 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-113">When formatted as a string, the number may not show the expected value.</span></span>  
   
- 이러한 문제를 최소화하려면 사용할 수 있는 숫자 형식 중에서 가장 일치하는 숫자 형식을 사용해야 합니다.  예를 들어 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로 작업하는 경우 실수 형식의 Transact\-SQL 값을 float 형식의 값으로 변환하면 정확한 숫자 값이 달라질 수 있습니다.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 <xref:System.Single>을 <xref:System.Double>로 변환하는 경우에도 예기치 않은 결과가 발생할 수 있습니다.  이 두 경우 모두 응용 프로그램의 모든 값이 동일한 숫자 형식을 사용하도록 하는 것이 좋습니다.  또한 고정 정밀도 decimal 형식을 사용하거나 작업 전에 부동 소수점 숫자를 고정 정밀도의 decimal 형식으로 캐스팅할 수도 있습니다.  
+ <span data-ttu-id="e7620-114">이러한 문제를 최소화하려면 사용할 수 있는 숫자 형식 중에서 가장 일치하는 숫자 형식을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-114">To minimize these effects, you should use the closest match between numeric types that is available to you.</span></span> <span data-ttu-id="e7620-115">예를 들어 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로 작업하는 경우 실수 형식의 Transact-SQL 값을 float 형식의 값으로 변환하면 정확한 숫자 값이 달라질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-115">For example, if you are working with [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], the exact numeric value may change if you convert a Transact-SQL value of real type to a value of float type.</span></span> <span data-ttu-id="e7620-116">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 <xref:System.Single>을 <xref:System.Double>로 변환하는 경우에도 예기치 않은 결과가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-116">In the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], converting a <xref:System.Single> to a <xref:System.Double> may also produce unexpected results.</span></span> <span data-ttu-id="e7620-117">이 두 경우 모두 응용 프로그램의 모든 값이 동일한 숫자 형식을 사용하도록 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-117">In both of these cases, a good strategy is to make all the values in the application use the same numeric type.</span></span> <span data-ttu-id="e7620-118">또한 고정 정밀도 decimal 형식을 사용하거나 작업 전에 부동 소수점 숫자를 고정 정밀도의 decimal 형식으로 캐스팅할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-118">You can also use a fixed-precision decimal type, or cast floating-point numbers to a fixed-precision decimal type before you work with them.</span></span>  
   
- 같은 값인지 비교할 때 발생하는 문제를 해결하려면 최하위 유효 자릿수의 변화를 무시할 수 있는 방식으로 응용 프로그램의 코드를 작성하는 것이 좋습니다.  예를 들어 두 숫자가 같은지 확인하기 위해 비교를 사용하는 대신 한 숫자에서 다른 숫자를 뺀 다음  그 차이가 허용 가능한 반올림 오차 내에 있는 경우 두 수가 같은 것으로 처리할 수 있습니다.  
+ <span data-ttu-id="e7620-119">같은 값인지 비교할 때 발생하는 문제를 해결하려면 최하위 유효 자릿수의 변화를 무시할 수 있는 방식으로 응용 프로그램의 코드를 작성하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-119">To work around problems with equality comparison, consider coding your application so that variations in the least significant digits are ignored.</span></span> <span data-ttu-id="e7620-120">예를 들어 두 숫자가 같은지 확인하기 위해 비교를 사용하는 대신 한 숫자에서 다른 숫자를 뺀 다음</span><span class="sxs-lookup"><span data-stu-id="e7620-120">For example, instead of comparing to see whether two numbers are equal, subtract one number from the other number.</span></span> <span data-ttu-id="e7620-121">그 차이가 허용 가능한 반올림 오차 내에 있는 경우 두 수가 같은 것으로 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7620-121">If the difference is within an acceptable margin of rounding, your application can treat the numbers as if they are the same.</span></span>  
   
-## 참고 항목  
- [부동 소수점 숫자의 정밀도가 떨어지는 이유](../Topic/Why%20Floating-Point%20Numbers%20May%20Lose%20Precision.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e7620-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e7620-122">See Also</span></span>  
+ [<span data-ttu-id="e7620-123">부동 소수점 숫자의 정밀도가 떨어지는 이유</span><span class="sxs-lookup"><span data-stu-id="e7620-123">Why Floating-Point Numbers May Lose Precision</span></span>](http://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)  
+ [<span data-ttu-id="e7620-124">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="e7620-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

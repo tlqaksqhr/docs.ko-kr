@@ -1,89 +1,86 @@
 ---
-title: "WCF 서비스 게시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 서비스 게시"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1dd63ca472ef5ee9211a8a9a1fd19d983694b43f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 서비스 게시
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 게시는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 제공하는 초기 개발 환경에서부터 테스트 목적으로 프로덕션 환경에 응용 프로그램을 실제로 배포하는 것에 이르기까지 프로세스를 진행하도록 도와 줍니다.  최종 배포 계획에 커밋하기 전에 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 게시를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스가 올바르게 수행되고 게시할 준비가 되었는지 확인할 수 있습니다.  또한 테스트 목적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리를 여러 대상 위치에 배포할 수도 있습니다.  
+# <a name="wcf-service-publishing"></a><span data-ttu-id="b011b-102">WCF 서비스 게시</span><span class="sxs-lookup"><span data-stu-id="b011b-102">WCF Service Publishing</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="b011b-103"> 서비스 게시는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 제공하는 초기 개발 환경에서부터 테스트 목적으로 프로덕션 환경에 응용 프로그램을 실제로 배포하는 것에 이르기까지 프로세스를 진행하도록 도와 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-103"> Service Publishing assists you in progressing from the early development environment provided by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Host and [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client to actually deploying the application to a production environment for testing purposes.</span></span> <span data-ttu-id="b011b-104">최종 배포 계획에 커밋하기 전에 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 게시를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스가 올바르게 수행되고 게시할 준비가 되었는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-104">Before you commit to a final deployment plan, you can use [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Publishing to verify that your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service performs correctly and is ready to be published.</span></span> <span data-ttu-id="b011b-105">또한 테스트 목적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리를 여러 대상 위치에 배포할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-105">You can also choose to deploy your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service libraries to various target locations for testing.</span></span>  
   
-## 지원되는 서비스 및 대상 위치  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 게시에서는 다음과 같은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리 템플릿 집합과 해당하는 항목 템플릿에서 만든 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 게시할 수 있습니다.  
+## <a name="supported-services-and-target-locations"></a><span data-ttu-id="b011b-106">지원되는 서비스 및 대상 위치</span><span class="sxs-lookup"><span data-stu-id="b011b-106">Supported Services and Target Locations</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="b011b-107"> 서비스 게시에서는 다음과 같은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리 템플릿 집합과 해당하는 항목 템플릿에서 만든 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 게시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-107"> Service Publishing supports publishing [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services created from the set of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library templates, and their corresponding item templates, which include the following:</span></span>  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리 템플릿과 항목 템플릿  
+-   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="b011b-108"> 서비스 라이브러리 템플릿과 항목 템플릿</span><span class="sxs-lookup"><span data-stu-id="b011b-108"> Service Library template with item template.</span></span>  
   
--   순차 워크플로 서비스 라이브러리 템플릿과 항목 템플릿  
+-   <span data-ttu-id="b011b-109">배포 서비스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="b011b-109">Syndication Service Library.</span></span>  
   
--   상태 시스템 워크플로 서비스 라이브러리 템플릿과 항목 템플릿  
+ <span data-ttu-id="b011b-110">이러한 서비스 템플릿을 선택 하 여 찾을 수 있습니다 **파일** -> **새 프로젝트** -> **Visual Basic** 또는 **Visual C#**  ->  **WCF**합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-110">You can find these service templates by choosing **File** -> **New Project** -> **Visual Basic** or **Visual C#** -> **WCF**.</span></span> <span data-ttu-id="b011b-111">사용 하 여 게시할 수 있습니다 (WCF 워크플로 서비스 응용 프로그램 및 WCF 서비스 응용 프로그램 포함)이이 위치에서 다른 WCF 템플릿을 [One-click 웹 응용 프로그램에 대 한 게시](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx)합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-111">For other WCF templates in this location (including WCF Workflow Service Application and WCF Service Application) you can publish using [One-Click publishing for web applications](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx).</span></span>  
   
--   배포 서비스 라이브러리  
+ <span data-ttu-id="b011b-112">다음과 같은 대상 위치에 서비스를 게시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-112">The service can be published to the following target locations.</span></span>  
   
- **파일** \-\> **새 프로젝트** \-\> **Visual Basic** 또는 **Visual C\#** \-\> **WCF**를 선택하여 이러한 서비스 템플릿을 찾을 수 있습니다.  
+-   <span data-ttu-id="b011b-113">로컬 IIS</span><span class="sxs-lookup"><span data-stu-id="b011b-113">Local IIS.</span></span>  
   
- 다음과 같은 대상 위치에 서비스를 게시할 수 있습니다.  
+-   <span data-ttu-id="b011b-114">파일 시스템</span><span class="sxs-lookup"><span data-stu-id="b011b-114">File System.</span></span>  
   
--   로컬 IIS  
+-   <span data-ttu-id="b011b-115">FTP 사이트</span><span class="sxs-lookup"><span data-stu-id="b011b-115">FTP Site.</span></span>  
   
--   파일 시스템  
+## <a name="using-wcf-service-publishing"></a><span data-ttu-id="b011b-116">WCF 서비스 게시 사용</span><span class="sxs-lookup"><span data-stu-id="b011b-116">Using WCF Service Publishing</span></span>  
+ <span data-ttu-id="b011b-117">서비스 구현을 배포하려면 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-117">Perform the following steps to deploy a service implementation:</span></span>  
   
--   FTP 사이트  
+1.  <span data-ttu-id="b011b-118">상승 된 권한으로 Visual Studio를 엽니다 (실행 파일을 마우스 오른쪽 단추로 클릭 하 고 유틸리티를 실행 하려면 "관리자 권한으로 실행"을 사용 하 여).</span><span class="sxs-lookup"><span data-stu-id="b011b-118">Open Visual Studio with elevated privilege ( right-click the executable and use "Run as Administrator" to launch it).</span></span>  <span data-ttu-id="b011b-119">이상 버전에서는 사용 하 여 "IIS 메타 베이스 및 iis 6 구성 호환성" 구성 요소를 설치 했는지를 확인 또는 IIS 7.0을 사용 하는 경우 "' Windows 기능 사용 설정 하거나 해제" 제어판에서.</span><span class="sxs-lookup"><span data-stu-id="b011b-119">If you are using IIS 7.0 or later, ensure that you have installed the "IIS Metabase and IIS6 Configuration Compatibility" component using "'Turn Windows features on or off" in Control Panel.</span></span>  
   
--   원격 사이트  
+2.  <span data-ttu-id="b011b-120">서비스 프로젝트를 열고, 선택 **빌드**->**게시 \<프로젝트 이름 >** 주 메뉴에서에서 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 **솔루션 탐색기**클릭 **게시**합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-120">Open a service project, select **Build**->**Publish \<Project Name>** from the main menu, or right-click the project in **Solution Explorer** and click **Publish**.</span></span>  
   
-## WCF 서비스 게시 사용  
- 서비스 구현을 배포하려면 다음 단계를 수행합니다.  
+3.  <span data-ttu-id="b011b-121">**게시** 창이 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-121">The **Publish** window appears.</span></span> <span data-ttu-id="b011b-122">클릭는 **...** .</span><span class="sxs-lookup"><span data-stu-id="b011b-122">Click the **…**.</span></span> <span data-ttu-id="b011b-123">단추를 클릭하여 서비스를 배포할 대상 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-123">button to specify the target location that the service should be deployed to.</span></span> <span data-ttu-id="b011b-124">로컬 IIS, 파일 시스템 또는 FTP 사이트에 응용 프로그램을 배포 하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-124">You can select to deploy the application to local IIS, File System, or FTP Site.</span></span> <span data-ttu-id="b011b-125">로컬 IIS에 응용 프로그램을 배포할 경우 웹 사이트를 선택 하 고, 대상 웹 응용 프로그램을 클릭 하 여 만들 수는 **새 웹 응용 프로그램 만들기** 오른쪽 위 모퉁이에서 아이콘입니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-125">If deploying the application to local IIS, you can select your website and create your web application under it, by clicking the **Create New Web Application** icon at the top right corner.</span></span>  
   
-1.  높은 권한으로 Visual Studio를 엽니다. 즉, 실행 파일을 마우스 오른쪽 단추로 클릭하고 "관리자 권한으로 실행"을 사용하여 실행합니다.  IIS 7.0 이상을 사용하는 경우 제어판에서 "Windows 기능 사용\/사용 안 함"을 사용하여 "IIS 메타베이스 및 IIS 6 구성 호환성" 구성 요소를 설치했는지 확인합니다.  
+4.  <span data-ttu-id="b011b-126">클릭 한 후 **게시** 주 창에서 Visual Studio 응용 프로그램을 지정한 대상 위치에 배포 및 대상 디렉터리에 Web.config,.svc 및 어셈블리 파일을 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-126">After you click **Publish** in the main window, Visual Studio deploys the application to the specified target location and copies the Web.config, .svc, and assembly files to the target directory.</span></span> <span data-ttu-id="b011b-127">입니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-127">.</span></span> <span data-ttu-id="b011b-128">.Svc의 이름은 됩니다 "projectname.servicename.svc"입니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-128">The name of .svc will be "ProjectName.ServiceName.svc".</span></span> <span data-ttu-id="b011b-129">서비스를 성공적으로 게시 된 후에 Visual Studio 출력 창의 "연결 하는 하이퍼링크"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName..."와 비슷합니다는 옥을 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-129">After the service is published successfully, you can find a hotlink in the Visual Studio Output window, which looks similar to "Connecting to  HYPERLINK "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...".</span></span> <span data-ttu-id="b011b-130">Ctrl 키를 누르고 링크를 클릭하여 Visual Studio 내에서 브라우저 페이지를 열고 서비스 디렉터리 구조를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-130">You can press CTRL and click the link to open a browser page inside Visual Studio to view the service directory structure.</span></span>  
   
-2.  서비스 프로젝트를 열고 주 메뉴에서 **빌드**\-\>**\<프로젝트 이름\> 게시**를 선택하거나 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 클릭합니다.  
+     <span data-ttu-id="b011b-131">사이트를 찾을 수 없으면 IIS에서 디렉터리 브라우저를 사용하도록 설정되지 않았을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-131">If you cannot browse to the site, it may because directory browser is not enabled in IIS.</span></span> <span data-ttu-id="b011b-132">사용 하도록 설정 하려면 "가능한 해결 방법" 섹션의 팁을 따르십시오.</span><span class="sxs-lookup"><span data-stu-id="b011b-132">Please follow the tips in the "Things you can try" section to enable it.</span></span> <span data-ttu-id="b011b-133">하이퍼링크 "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc 또는 있습니다 직접 입력할 수"" 서비스 페이지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-133">Alternatively, you can directly type" HYPERLINK "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" to view your service page.</span></span>  
   
-3.  **게시** 창이 나타납니다.  **…** 단추를 클릭하여 서비스를 배포할 대상 위치를 지정합니다.  로컬 IIS, 파일 시스템, FTP 사이트 또는 원격 사이트에 응용 프로그램을 배포할 수 있습니다.  응용 프로그램을 로컬 IIS에 배포하는 경우 오른쪽 위 모퉁이에서 **새 웹 응용 프로그램 만들기** 아이콘을 클릭하여 웹 사이트를 선택하고 그 아래에 웹 응용 프로그램을 만들 수 있습니다.  
+ <span data-ttu-id="b011b-134">사용할 수 있습니다 **게시** 을 어셈블리, 구성 및 대상 위치에 프로젝트에 정의 된 모든 서비스에 대 한.svc 파일을 복사 하려면 지정한 대상에 기존 파일을 덮어씁니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-134">You can use **Publish** to specify if you want to copy the assembly, configuration, and .svc file for all services defined in the project to the target location, and overwrite existing files at the destination.</span></span>  
   
-4.  주 창에서 **게시**를 클릭하면 응용 프로그램이 지정된 대상 위치에 배포되고 Web.config, .svc 및 어셈블리 파일이 대상 디렉터리에 복사됩니다.  .  .svc의 이름은 “ProjectName.ServiceName.svc”가 됩니다.  서비스가 성공적으로 게시된 후 Visual Studio 출력 창에서 “http:\/\/localhost\/WebApplicationFolderName에 연결하는 중...”과 유사한 핫링크를 찾을 수 있습니다.  Ctrl 키를 누르고 링크를 클릭하여 Visual Studio 내에서 브라우저 페이지를 열고 서비스 디렉터리 구조를 볼 수 있습니다.  
+ <span data-ttu-id="b011b-135">응용 프로그램을 로컬 IIS에 배포하도록 선택하면 IIS 설치와 관련된 오류가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-135">If you choose to deploy your application to local IIS, you may encounter errors related to IIS setup.</span></span> <span data-ttu-id="b011b-136">IIS가 제대로 설치되었는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="b011b-136">Please ensure that IIS is installed properly.</span></span> <span data-ttu-id="b011b-137">브라우저에서 "하이퍼링크"http://localhost"http://localhost"를 입력 하 고 IIS 기본 페이지가 표시 되는지 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-137">You can type " HYPERLINK "http://localhost" http://localhost" in your browser and check whether the IIS default page is showing up.</span></span>  <span data-ttu-id="b011b-138">경우에 따라 IIS에서 ASP.NET 또는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 잘못된 등록 때문에 문제가 발생할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-138">In some cases, the issues may also be caused by ASP.NET or [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] improper registration in IIS.</span></span> <span data-ttu-id="b011b-139">Visual Studio 명령 프롬프트를 열고 및 ASP.NET 등록 문제를 해결 하는 명령 "aspnet_regiis.exe-ir"를 실행 하거나 "ServiceModelReg.exe – ia" 명령을 실행 하는 WCF 등록 문제를 해결 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-139">You can open the Visual Studio Command Prompt and run the command "aspnet_regiis.exe -ir" to fix ASP.NET registration issues, or run command "ServiceModelReg.exe –ia" to fix WCF registration issues.</span></span>  
   
-     사이트를 찾을 수 없으면 IIS에서 디렉터리 브라우저를 사용하도록 설정되지 않았을 수 있습니다.  "가능한 해결 방법" 단원의 팁에 따라 디렉터리 브라우저를 사용하도록 설정하세요.  또는 “http:\/\/localhost\/WebApplicationFolderName\/ProjectName.ServiceName.svc”를 직접 입력하여 서비스 페이지를 볼 수 있습니다.  
+## <a name="files-generated-for-publishing"></a><span data-ttu-id="b011b-140">게시를 위해 생성되는 파일</span><span class="sxs-lookup"><span data-stu-id="b011b-140">Files Generated for Publishing</span></span>  
+ <span data-ttu-id="b011b-141">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리가 웹 호스트되기 전에 도구에서 어셈블리 파일, Web.config 파일 및 .svc 파일이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-141">Before a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library can be Web-hosted, the following files are generated by the tool: assembly files, Web.config file, and .svc file.</span></span> <span data-ttu-id="b011b-142">이러한 파일이 모두 대상 위치에 복사된 후에</span><span class="sxs-lookup"><span data-stu-id="b011b-142">All the files are copied to the target location.</span></span> <span data-ttu-id="b011b-143">서비스가 게시됩니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-143">The service is then published.</span></span>  
   
- **게시**를 사용하여 프로젝트에 정의된 모든 서비스의 어셈블리, 구성 및 .svc 파일을 대상 위치에 복사하고 대상의 기존 파일을 덮어쓸 수 있습니다.  
+### <a name="assembly-files"></a><span data-ttu-id="b011b-144">어셈블리 파일</span><span class="sxs-lookup"><span data-stu-id="b011b-144">Assembly files</span></span>  
+ <span data-ttu-id="b011b-145">이 도구를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 게시하면 먼저 서비스가 자동으로 빌드되고 빌드 후에 서비스 프로젝트에서 어셈블리 파일이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-145">When you publish a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service using this tool, the service is automatically built first and the assembly files are generated in the service project after building.</span></span>  
   
- 응용 프로그램을 로컬 IIS에 배포하도록 선택하면 IIS 설치와 관련된 오류가 발생할 수 있습니다.  IIS가 제대로 설치되었는지 확인하세요.  브라우저에 “http:\/\/localhost”를 입력하고 IIS 기본 페이지가 나타나는지 확인할 수 있습니다.  경우에 따라 IIS에서 ASP.NET 또는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 잘못된 등록 때문에 문제가 발생할 수도 있습니다.  Visual Studio 명령 프롬프트를 열고 “aspnet\_regiis.exe \-ir” 명령을 실행하여 ASP.NET 등록 문제를 해결하거나 “ServiceModelReg.exe –ia” 명령을 실행하여 WCF 등록 문제를 해결할 수 있습니다.  
+### <a name="svc-file"></a><span data-ttu-id="b011b-146">.SVC 파일</span><span class="sxs-lookup"><span data-stu-id="b011b-146">.SVC File</span></span>  
+ <span data-ttu-id="b011b-147">게시 작업에서는 각 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 대해 버전 유효성 확인을 위해 *.svc 파일이 기존에 있는지 여부와 관계없이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-147">The publishing operation generates a *.svc file for each [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service, whether the file exists or not, to ensure version validity.</span></span> <span data-ttu-id="b011b-148">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리 및 배포 서비스 라이브러리용과 순차 및 상태 시스템 워크플로 서비스 라이브러리용의 서로 다른 두 가지 svc 파일이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-148">There are two different kinds of svc files: one for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library and Syndication Service Library, and another one for Sequential and State Machine Workflow Service Library.</span></span> <span data-ttu-id="b011b-149">생성 된 \*.svc 파일은 대상 위치의 루트 폴더로 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-149">The generated \*.svc file is copied to the root folder in the target location.</span></span>  
   
-## 게시를 위해 생성되는 파일  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리가 웹 호스트되기 전에 도구에서 어셈블리 파일, Web.config 파일 및 .svc 파일이 생성됩니다.  이러한 파일이 모두 대상 위치에 복사된 후에  서비스가 게시됩니다.  
+### <a name="webconfig-file"></a><span data-ttu-id="b011b-150">Web.config 파일</span><span class="sxs-lookup"><span data-stu-id="b011b-150">Web.config File</span></span>  
+ <span data-ttu-id="b011b-151">서비스 프로젝트를 특정 대상 위치에 게시할 때마다 Web.config 파일이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-151">Each time a service project is published to a specific target location, a Web.config file is created.</span></span>  
   
-### 어셈블리 파일  
- 이 도구를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 게시하면 먼저 서비스가 자동으로 빌드되고 빌드 후에 서비스 프로젝트에서 어셈블리 파일이 생성됩니다.  
+ <span data-ttu-id="b011b-152">생성된 Web.config 파일에는 웹 호스팅에 사용되는 웹 섹션 및 다음과 같은 변경 내용과 함께 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리에 대한 App.config의 내용이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-152">The generated Web.config file includes Web sections that are useful for Web hosting, and the content of App.config for the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library with the following changes:</span></span>  
   
-### .SVC 파일  
- 게시 작업에서는 각 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 대해 버전 유효성 확인을 위해 \*.svc 파일이 기존에 있는지 여부와 관계없이 생성됩니다.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리 및 배포 서비스 라이브러리용과 순차 및 상태 시스템 워크플로 서비스 라이브러리용의 서로 다른 두 가지 svc 파일이 있습니다.  생성된 \*.svc 파일은 대상 위치의 루트 폴더에 복사됩니다.  
+-   <span data-ttu-id="b011b-153">기본 주소는 제외됩니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-153">The base address is excluded.</span></span>  
   
-### Web.config 파일  
- 서비스 프로젝트를 특정 대상 위치에 게시할 때마다 Web.config 파일이 만들어집니다.  
+-   <span data-ttu-id="b011b-154">`<diagnostics>` 요소의 설정은 대상 플랫폼의 추적 설정을 유지하기 위해 제외됩니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-154">Settings in the `<diagnostics>` element are excluded to preserve the tracing settings of the target platform.</span></span>  
   
- 생성된 Web.config 파일에는 웹 호스팅에 사용되는 웹 섹션 및 다음과 같은 변경 내용과 함께 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 라이브러리에 대한 App.config의 내용이 포함됩니다.  
+## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a><span data-ttu-id="b011b-155">HTTP가 아닌 바인딩을 사용하여 WCF 서비스를 IIS에 게시</span><span class="sxs-lookup"><span data-stu-id="b011b-155">Publishing WCF services with non-HTTP Bindings to IIS</span></span>  
+ <span data-ttu-id="b011b-156">IIS 7.0 이상을 사용하는 경우 HTTP가 아닌 바인딩을 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 IIS에 게시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-156">If you are using IIS7.0 or later, you can publish [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services with non-HTTP bindings to IIS.</span></span> <span data-ttu-id="b011b-157">몇 가지 사전 구성 작업을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-157">You need to do some pre-configurations.</span></span> <span data-ttu-id="b011b-158">자세한 내용은 항목을 참조 하십시오 [Windows Process Activation Service에서의 호스팅](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-158">For more information, please see the topics at  [Hosting in Windows Process Activation Service](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).</span></span>  
   
--   기본 주소는 제외됩니다.  
+## <a name="security"></a><span data-ttu-id="b011b-159">보안</span><span class="sxs-lookup"><span data-stu-id="b011b-159">Security</span></span>  
+ <span data-ttu-id="b011b-160">IIS는 관리자 계정으로 실행해야 하므로 로컬 IIS에 게시하려면 관리자 권한이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-160">Publishing to local IIS requires administrator privilege, because IIS requires running in Administrator account.</span></span> <span data-ttu-id="b011b-161">관리자 권한이 없는 사용자가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 게시를 여는 경우 IIS를 대상 위치로 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-161">If a user without administrator privilege opens [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Publishing, IIS is not available as a target location.</span></span> <span data-ttu-id="b011b-162">파일 시스템 또는 FTP 사이트에 게시 하는 관리자 권한 없이 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="b011b-162">Publishing to File System, or FTP Site works without administrator privilege.</span></span>  
   
--   `<diagnostics>` 요소의 설정은 대상 플랫폼의 추적 설정을 유지하기 위해 제외됩니다.  
-  
-## HTTP가 아닌 바인딩을 사용하여 WCF 서비스를 IIS에 게시  
- IIS 7.0 이상을 사용하는 경우 HTTP가 아닌 바인딩을 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 IIS에 게시할 수 있습니다.  몇 가지 사전 구성 작업을 수행해야 합니다.  자세한 내용은 [Windows Process Activation Service에서의 호스팅](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)의 항목을 참조하세요.  
-  
-## 보안  
- IIS는 관리자 계정으로 실행해야 하므로 로컬 IIS에 게시하려면 관리자 권한이 필요합니다.  관리자 권한이 없는 사용자가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 게시를 여는 경우 IIS를 대상 위치로 사용할 수 없습니다.  파일 시스템, FTP 사이트 또는 원격 사이트에는 관리자 권한 없이도 게시할 수 있습니다.  
-  
-## 참고 항목  
- [WCF Visual Studio 템플릿](../../../docs/framework/wcf/wcf-vs-templates.md)   
- [WCF 서비스 호스트\(WcfSvcHost.exe\)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)   
- [WCF 테스트 클라이언트\(WcfTestClient.exe\)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a><span data-ttu-id="b011b-163">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b011b-163">See Also</span></span>  
+ [<span data-ttu-id="b011b-164">WCF Visual Studio 템플릿</span><span class="sxs-lookup"><span data-stu-id="b011b-164">WCF Visual Studio Templates</span></span>](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [<span data-ttu-id="b011b-165">WCF 서비스 호스트(WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="b011b-165">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [<span data-ttu-id="b011b-166">WCF 테스트 클라이언트(WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="b011b-166">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

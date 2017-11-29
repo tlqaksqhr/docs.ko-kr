@@ -1,188 +1,191 @@
 ---
-title: "ID 모델을 사용하여 클레임 및 권한 부여 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "권한 부여 [WCF]"
-  - "권한 부여 [WCF], ID 모델을 사용하여 관리"
-  - "클레임 [WCF]"
-  - "클레임 [WCF], ID 모델을 사용하여 관리"
-  - "WCF 보안"
+title: "ID 모델을 사용하여 클레임 및 권한 부여 관리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- authorization [WCF]
+- WCF security
+- claims [WCF], managing with the Identity Model
+- claims [WCF]
+- authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a5734065a82c6b45b837c9cb5a74ba6e46207fb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ID 모델을 사용하여 클레임 및 권한 부여 관리
-권한 부여는 컴퓨터 리소스를 변경하거나 보거나 컴퓨터 리소스에 액세스할 수 있는 사용 권한이 있는 엔터티를 확인하는 프로세스입니다.예를 들어 비즈니스에서 관리자만 직원 파일에 액세스할 수 있습니다.[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 권한 부여 처리를 수행하기 위한 두 가지 메커니즘을 지원합니다.첫 번째 메커니즘을 사용하면 기존의 CLR\(공용 언어 런타임\) 구문을 사용하여 권한 부여를 제어할 수 있습니다.두 번째 메커니즘은 *ID 모델*이라고 하는 클레임 기반 모델입니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 ID 모델을 사용하여 들어오는 메시지에서 클레임을 만듭니다. ID 모델 클래스는 사용자 지정 권한 부여 체계의 새 클레임 형식을 지원하도록 확장할 수 있습니다.이 항목에서는 ID 모델 기능의 주요 프로그래밍 개념에 대한 개요와 이 기능에서 사용되는 매우 중요한 클래스의 목록을 제공합니다.  
+# <a name="managing-claims-and-authorization-with-the-identity-model"></a><span data-ttu-id="166d8-102">ID 모델을 사용하여 클레임 및 권한 부여 관리</span><span class="sxs-lookup"><span data-stu-id="166d8-102">Managing Claims and Authorization with the Identity Model</span></span>
+<span data-ttu-id="166d8-103">권한 부여는 컴퓨터 리소스를 변경하거나 보거나 컴퓨터 리소스에 액세스할 수 있는 사용 권한이 있는 엔터티를 확인하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-103">Authorization is the process of determining which entities have permission to change, view, or otherwise access a computer resource.</span></span> <span data-ttu-id="166d8-104">예를 들어 비즈니스에서 관리자만 직원 파일에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-104">For example, in a business, only managers may be allowed to access the files of their employees.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="166d8-105">는 권한 부여 처리를 수행하기 위한 두 가지 메커니즘을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-105"> supports two mechanisms for performing authorization processing.</span></span> <span data-ttu-id="166d8-106">첫 번째 메커니즘을 사용하면 기존의 CLR(공용 언어 런타임) 구문을 사용하여 권한 부여를 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-106">The first mechanism enables you to control authorization using existing common language runtime (CLR) constructs.</span></span> <span data-ttu-id="166d8-107">두 번째는 이라는 클레임 기반 모델은 *Id 모델*합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-107">The second is a claims-based model known as the *Identity Model*.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="166d8-108">에서는 ID 모델을 사용하여 들어오는 메시지에서 클레임을 만듭니다. ID 모델 클래스는 사용자 지정 권한 부여 체계의 새 클레임 형식을 지원하도록 확장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-108"> uses the Identity Model to create claims from incoming messages; Identity Model classes can be extended to support new claim types for custom authorization schemes.</span></span> <span data-ttu-id="166d8-109">이 항목에서는 ID 모델 기능의 주요 프로그래밍 개념에 대한 개요와 이 기능에서 사용되는 매우 중요한 클래스의 목록을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-109">This topic presents an overview of the major programming concepts of the Identity Model feature, as well as a listing of the most important classes the feature uses.</span></span>  
   
-## ID 모델 시나리오  
- 다음 시나리오에는 ID 모델 사용이 예시되어 있습니다.  
+## <a name="identity-model-scenarios"></a><span data-ttu-id="166d8-110">ID 모델 시나리오</span><span class="sxs-lookup"><span data-stu-id="166d8-110">Identity Model Scenarios</span></span>  
+ <span data-ttu-id="166d8-111">다음 시나리오에는 ID 모델 사용이 예시되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-111">The following scenarios represent Identity Model use.</span></span>  
   
-### 시나리오 1: ID, 역할 및 그룹 클레임 지원  
- 사용자가 메시지를 웹 서비스에 보냅니다.웹 서비스에 대한 액세스 제어 요구 사항에는 ID, 역할 또는 그룹이 사용됩니다.메시지 발신자가 역할 또는 그룹 집합으로 매핑됩니다.역할 또는 그룹 정보는 액세스 확인을 수행하는 데 사용됩니다.  
+### <a name="scenario-1-supporting-identity-role-and-group-claims"></a><span data-ttu-id="166d8-112">시나리오 1: ID, 역할 및 그룹 클레임 지원</span><span class="sxs-lookup"><span data-stu-id="166d8-112">Scenario 1: Supporting Identity, Role, and Group Claims</span></span>  
+ <span data-ttu-id="166d8-113">사용자가 메시지를 웹 서비스에 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-113">Users send messages to a Web service.</span></span> <span data-ttu-id="166d8-114">웹 서비스에 대한 액세스 제어 요구 사항에는 ID, 역할 또는 그룹이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-114">The access control requirements of the Web service use identity, roles, or groups.</span></span> <span data-ttu-id="166d8-115">메시지 발신자가 역할 또는 그룹 집합으로 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-115">The message sender is mapped to a set of roles or groups.</span></span> <span data-ttu-id="166d8-116">역할 또는 그룹 정보는 액세스 확인을 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-116">Role or group information is used to perform access checks.</span></span>  
   
-### 시나리오 2: 다양한 클레임 지원  
- 사용자가 메시지를 웹 서비스에 보냅니다.웹 서비스에 대한 액세스 제어 요구 사항에는 ID, 역할 또는 그룹보다 더 다양한 모델이 필요합니다.웹 서비스는 지정된 사용자가 다양한 클레임 기반 모델을 사용하여 보호된 특정 리소스에 액세스할 수 있는지 확인합니다.예를 들어 어떤 사용자는 급여 정보와 같이 다른 사용자에게 허용되지 않는 특정한 정보를 읽을 수 있습니다.  
+### <a name="scenario-2-supporting-rich-claims"></a><span data-ttu-id="166d8-117">시나리오 2: 다양한 클레임 지원</span><span class="sxs-lookup"><span data-stu-id="166d8-117">Scenario 2: Supporting Rich Claims</span></span>  
+ <span data-ttu-id="166d8-118">사용자가 메시지를 웹 서비스에 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-118">Users send messages to a Web service.</span></span> <span data-ttu-id="166d8-119">웹 서비스에 대한 액세스 제어 요구 사항에는 ID, 역할 또는 그룹보다 더 다양한 모델이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-119">The access control requirements of the Web service require a richer model than identity, roles, or groups.</span></span> <span data-ttu-id="166d8-120">웹 서비스는 지정된 사용자가 다양한 클레임 기반 모델을 사용하여 보호된 특정 리소스에 액세스할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-120">The Web service determines whether a given user has access to a particular protected resource using the rich claims-based model.</span></span> <span data-ttu-id="166d8-121">예를 들어 어떤 사용자는 급여 정보와 같이 다른 사용자에게 허용되지 않는 특정한 정보를 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-121">For example, one user may be able to read particular information, such as salary information, that other users do not have access to.</span></span>  
   
-### 시나리오 3: 서로 다른 클레임 매핑  
- 사용자가 메시지를 웹 서비스에 보냅니다.사용자는 X.509 인증서, 사용자 이름 토큰 또는 Kerberos 토큰 등 여러 가지 방식으로 자격 증명을 지정할 수 있습니다.웹 서비스에서는 사용자 자격 증명 형식에 관계없이 동일한 방식으로 액세스 제어를 확인해야 합니다.이후에 또 다른 자격 증명 형식이 지원되면 시스템도 그에 맞게 향상되어야 합니다.  
+### <a name="scenario-3-mapping-disparate-claims"></a><span data-ttu-id="166d8-122">시나리오 3: 서로 다른 클레임 매핑</span><span class="sxs-lookup"><span data-stu-id="166d8-122">Scenario 3: Mapping Disparate Claims</span></span>  
+ <span data-ttu-id="166d8-123">사용자가 메시지를 웹 서비스에 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-123">A user sends a message to a Web service.</span></span> <span data-ttu-id="166d8-124">사용자는 X.509 인증서, 사용자 이름 토큰 또는 Kerberos 토큰 등 여러 가지 방식으로 자격 증명을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-124">The user may specify their credentials in a number of different ways: X.509 certificate, user name token, or Kerberos token.</span></span> <span data-ttu-id="166d8-125">웹 서비스에서는 사용자 자격 증명 형식에 관계없이 동일한 방식으로 액세스 제어를 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-125">The Web service is required to perform access control checks in the same way, regardless of the user credential type.</span></span> <span data-ttu-id="166d8-126">이후에 또 다른 자격 증명 형식이 지원되면 시스템도 그에 맞게 향상되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-126">If additional credential types are supported over time, the system should evolve accordingly.</span></span>  
   
-### 시나리오 4: 여러 리소스에 대한 액세스 확인  
- 웹 서비스에서 여러 리소스에 액세스하려고 합니다.이 경우 서비스는 사용자와 관련된 클레임과 리소스에 액세스하는 데 필요한 클레임을 비교하여 지정된 사용자가 액세스할 수 있는 보호된 리소스를 확인합니다.  
+### <a name="scenario-4-determining-access-to-multiple-resources"></a><span data-ttu-id="166d8-127">시나리오 4: 여러 리소스에 대한 액세스 확인</span><span class="sxs-lookup"><span data-stu-id="166d8-127">Scenario 4: Determining Access to Multiple Resources</span></span>  
+ <span data-ttu-id="166d8-128">웹 서비스에서 여러 리소스에 액세스하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-128">A Web service attempts to access multiple resources.</span></span> <span data-ttu-id="166d8-129">이 경우 서비스는 사용자와 관련된 클레임과 리소스에 액세스하는 데 필요한 클레임을 비교하여 지정된 사용자가 액세스할 수 있는 보호된 리소스를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-129">The service determines which protected resources a given user has access to by comparing the claims associated with the user with the claims required to access the resource.</span></span>  
   
-## ID 모델 용어  
- 다음은 ID 모델의 개념을 설명하는 데 사용되는 주요 용어를 정의한 목록입니다.  
+## <a name="identity-model-terms"></a><span data-ttu-id="166d8-130">ID 모델 용어</span><span class="sxs-lookup"><span data-stu-id="166d8-130">Identity Model Terms</span></span>  
+ <span data-ttu-id="166d8-131">다음은 ID 모델의 개념을 설명하는 데 사용되는 주요 용어를 정의한 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-131">The following list defines key terms used to describe Identity Model concepts.</span></span>  
   
- 권한 부여 정책  
- 입력 클레임 집합을 출력 클레임 집합으로 매핑하기 위한 규칙 집합입니다.권한 부여 정책의 평가를 통해 클레임 집합이 평가 컨텍스트에 추가되고 이후에 권한 부여 컨텍스트에 추가됩니다.  
+ <span data-ttu-id="166d8-132">권한 부여 정책</span><span class="sxs-lookup"><span data-stu-id="166d8-132">Authorization policy</span></span>  
+ <span data-ttu-id="166d8-133">입력 클레임 집합을 출력 클레임 집합으로 매핑하기 위한 규칙 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-133">A set of rules for mapping a set of input claims to a set of output claims.</span></span> <span data-ttu-id="166d8-134">권한 부여 정책의 평가를 통해 클레임 집합이 평가 컨텍스트에 추가되고 이후에 권한 부여 컨텍스트에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-134">Evaluating authorization policy results in claim sets being added to an evaluation context and subsequently an authorization context.</span></span>  
   
- 권한 부여 컨텍스트  
- 클레임 집합과 하나 이상의 속성 집합\(또는 속성 없이\)이며,하나 이상의 권한 부여 정책을 평가한 결과입니다.  
+ <span data-ttu-id="166d8-135">권한 부여 컨텍스트</span><span class="sxs-lookup"><span data-stu-id="166d8-135">Authorization context</span></span>  
+ <span data-ttu-id="166d8-136">클레임 집합과 하나 이상의 속성 집합(또는 속성 없이)이며,</span><span class="sxs-lookup"><span data-stu-id="166d8-136">A set of claim sets and zero or more properties.</span></span> <span data-ttu-id="166d8-137">하나 이상의 권한 부여 정책을 평가한 결과입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-137">The result of evaluating one or more authorization policies.</span></span>  
   
- 클레임  
- 클레임 형식, 권한 및 값의 조합입니다.  
+ <span data-ttu-id="166d8-138">클레임</span><span class="sxs-lookup"><span data-stu-id="166d8-138">Claim</span></span>  
+ <span data-ttu-id="166d8-139">클레임 형식, 권한 및 값의 조합입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-139">A combination of a claim type, right, and a value.</span></span>  
   
- 클레임 집합  
- 특정 발급자가 발급한 클레임 집합입니다.  
+ <span data-ttu-id="166d8-140">클레임 집합</span><span class="sxs-lookup"><span data-stu-id="166d8-140">Claim set</span></span>  
+ <span data-ttu-id="166d8-141">특정 발급자가 발급한 클레임 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-141">A set of claims issued by a particular issuer.</span></span>  
   
- 클레임 형식  
- 클레임의 종류입니다.ID 모델 API로 정의한 클레임은 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 클래스의 속성입니다.시스템에서 제공하는 클레임 형식에는 <xref:System.IdentityModel.Claims.ClaimTypes.Dns%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Email%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Hash%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Sid%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Spn%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.System%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Uri%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName%2A> 등이 있습니다.  
+ <span data-ttu-id="166d8-142">클레임 형식</span><span class="sxs-lookup"><span data-stu-id="166d8-142">Claim type</span></span>  
+ <span data-ttu-id="166d8-143">클레임의 종류입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-143">A kind of claim.</span></span> <span data-ttu-id="166d8-144">ID 모델 API로 정의한 클레임은 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 클래스의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-144">Claims defined by the Identity Model API are properties of the <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> class.</span></span> <span data-ttu-id="166d8-145">시스템에서 제공하는 클레임 형식에는 <xref:System.IdentityModel.Claims.ClaimTypes.Dns%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Email%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Hash%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Sid%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Spn%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.System%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Uri%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName%2A> 등이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-145">Examples of system-provided claim types are <xref:System.IdentityModel.Claims.ClaimTypes.Dns%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Email%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Hash%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Sid%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Spn%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.System%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Uri%2A>, and <xref:System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName%2A>.</span></span>  
   
- 평가 컨텍스트  
- 권한 부여 정책이 평가되는 컨텍스트로,속성 및 클레임 집합을 포함합니다.평가 완료 후에는 권한 부여 컨텍스트의 기반으로 사용됩니다.  
+ <span data-ttu-id="166d8-146">평가 컨텍스트</span><span class="sxs-lookup"><span data-stu-id="166d8-146">Evaluation context</span></span>  
+ <span data-ttu-id="166d8-147">권한 부여 정책이 평가되는 컨텍스트로,</span><span class="sxs-lookup"><span data-stu-id="166d8-147">A context in which an authorization policy is evaluated.</span></span> <span data-ttu-id="166d8-148">속성 및 클레임 집합을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-148">Contains properties and claim sets.</span></span> <span data-ttu-id="166d8-149">평가 완료 후에는 권한 부여 컨텍스트의 기반으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-149">Becomes the basis of an authorization context once evaluation is complete.</span></span>  
   
- ID 클레임  
- 권한이 ID인 클레임입니다.  
+ <span data-ttu-id="166d8-150">ID 클레임</span><span class="sxs-lookup"><span data-stu-id="166d8-150">Identity claim</span></span>  
+ <span data-ttu-id="166d8-151">권한이 ID인 클레임입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-151">A claim whose right is identity.</span></span>  
   
- 발급자  
- ID 클레임이 하나 이상 있으며 다른 클레임 집합을 발급한 것으로 간주되는 클레임 집합입니다.  
+ <span data-ttu-id="166d8-152">발급자</span><span class="sxs-lookup"><span data-stu-id="166d8-152">Issuer</span></span>  
+ <span data-ttu-id="166d8-153">ID 클레임이 하나 이상 있으며 다른 클레임 집합을 발급한 것으로 간주되는 클레임 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-153">A claim set that contains at least one identity claim and is considered to have issued another claim set.</span></span>  
   
- 속성  
- 평가 컨텍스트 또는 권한 부여 컨텍스트와 관련된 정보 집합입니다.  
+ <span data-ttu-id="166d8-154">속성</span><span class="sxs-lookup"><span data-stu-id="166d8-154">Properties</span></span>  
+ <span data-ttu-id="166d8-155">평가 컨텍스트 또는 권한 부여 컨텍스트와 관련된 정보 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-155">A set of information associated with an evaluation context or authorization context.</span></span>  
   
- 보호된 리소스  
- 우선 특정 요구 사항에 부합되는 경우에만 사용, 액세스 또는 조작할 수 있는 시스템 리소스입니다.  
+ <span data-ttu-id="166d8-156">보호된 리소스</span><span class="sxs-lookup"><span data-stu-id="166d8-156">Protected resource</span></span>  
+ <span data-ttu-id="166d8-157">우선 특정 요구 사항에 부합되는 경우에만 사용, 액세스 또는 조작할 수 있는 시스템 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-157">Something in the system that can only be used, accessed, or otherwise manipulated if certain requirements are first met.</span></span>  
   
- 권한  
- 리소스에 대한 자격으로,ID 모델 API로 정의한 권한은 <xref:System.IdentityModel.Claims.Rights> 클래스의 속성입니다.시스템에서 제공하는 권한은 <xref:System.IdentityModel.Claims.Rights.Identity%2A>, <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 등입니다.  
+ <span data-ttu-id="166d8-158">오른쪽</span><span class="sxs-lookup"><span data-stu-id="166d8-158">Right</span></span>  
+ <span data-ttu-id="166d8-159">리소스에 대한 자격으로,</span><span class="sxs-lookup"><span data-stu-id="166d8-159">A capability over a resource.</span></span> <span data-ttu-id="166d8-160">ID 모델 API로 정의한 권한은 <xref:System.IdentityModel.Claims.Rights> 클래스의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-160">Rights defined by the Identity Model API are properties of the <xref:System.IdentityModel.Claims.Rights> class.</span></span> <span data-ttu-id="166d8-161">시스템에서 제공하는 권한은 <xref:System.IdentityModel.Claims.Rights.Identity%2A>, <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 등입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-161">Examples of system-provided rights are <xref:System.IdentityModel.Claims.Rights.Identity%2A> and <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.</span></span>  
   
- 값  
- 권한이 요구되는 대상입니다.  
+ <span data-ttu-id="166d8-162">값</span><span class="sxs-lookup"><span data-stu-id="166d8-162">Value</span></span>  
+ <span data-ttu-id="166d8-163">권한이 요구되는 대상입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-163">Something over which a right is claimed.</span></span>  
   
-## 클레임  
- ID 모델은 클레임을 기반으로 하는 시스템입니다.클레임은 시스템의 엔터티\(주로 사용자\)와 관련된 권한을 나타냅니다.특정 엔터티와 관련된 클레임 집합은 열쇠와 같은 개념으로 생각할 수 있으며,특정 클레임은 이와 같은 열쇠의 모양을 정의합니다.클레임은 리소스에 대한 액세스 권한을 얻는 데 사용됩니다.보호된 리소스에 대한 액세스 권한은 해당 리소스에 액세스하는 데 필요한 클레임과 액세스를 시도하는 엔터티와 관련된 클레임을 비교하여 확인됩니다.  
+## <a name="claims"></a><span data-ttu-id="166d8-164">클레임</span><span class="sxs-lookup"><span data-stu-id="166d8-164">Claims</span></span>  
+ <span data-ttu-id="166d8-165">ID 모델은 클레임을 기반으로 하는 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-165">The Identity Model is a claims-based system.</span></span> <span data-ttu-id="166d8-166">클레임은 시스템의 엔터티(주로 사용자)와 관련된 권한을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-166">Claims describe the capabilities associated with some entity in the system, often a user of that system.</span></span> <span data-ttu-id="166d8-167">특정 엔터티와 관련된 클레임 집합은 열쇠와 같은 개념으로 생각할 수 있으며,</span><span class="sxs-lookup"><span data-stu-id="166d8-167">The set of claims associated with a given entity can be thought of as a key.</span></span> <span data-ttu-id="166d8-168">특정 클레임은 이와 같은 열쇠의 모양을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-168">The particular claims define the shape of that key, similar to a physical key used to open a lock in a door.</span></span> <span data-ttu-id="166d8-169">클레임은 리소스에 대한 액세스 권한을 얻는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-169">Claims are used to gain access to resources.</span></span> <span data-ttu-id="166d8-170">보호된 리소스에 대한 액세스 권한은 해당 리소스에 액세스하는 데 필요한 클레임과 액세스를 시도하는 엔터티와 관련된 클레임을 비교하여 확인됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-170">Access to a given protected resource is determined by comparing the claims needed to access that resource with the claims associated with the entity attempting access.</span></span>  
   
- 클레임은 특정 값에 대한 권한을 나타낸 것입니다."Read", "Write" 또는 "Execute" 등이 권한에 해당하며 데이터베이스, 파일, 사서함 또는 속성이 값에 해당합니다.또한 클레임에는 클레임 형식이 있으며,클레임 형식과 권한을 조합하면 값에 대한 자격을 지정하는 메커니즘이 제공됩니다.예를 들어 "Biography.doc" 값에 대해 "Read" 권한을 가진 "File" 형식의 클레임은 이러한 클레임과 관련되는 엔터티에 Biography.doc 파일에 대한 읽기 권한이 있음을 나타냅니다.또한 "Martin" 값에 대해 "PossessProperty" 권한이 있는 "Name" 형식의 클레임은 이러한 클레임과 관련되는 엔터티에 값이 "Martin"인 Name 속성이 있음을 나타냅니다.  
+ <span data-ttu-id="166d8-171">클레임은 특정 값에 대한 권한을 나타낸 것입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-171">A claim is the expression of a right with respect to a particular value.</span></span> <span data-ttu-id="166d8-172">"Read", "Write" 또는 "Execute" 등이 권한에 해당하며</span><span class="sxs-lookup"><span data-stu-id="166d8-172">A right could be something like "Read", "Write", or "Execute."</span></span> <span data-ttu-id="166d8-173">데이터베이스, 파일, 사서함 또는 속성이 값에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-173">A value could be a database, a file, a mailbox, or a property.</span></span> <span data-ttu-id="166d8-174">또한 클레임에는 클레임 형식이 있으며,</span><span class="sxs-lookup"><span data-stu-id="166d8-174">Claims also have a claim type.</span></span> <span data-ttu-id="166d8-175">클레임 형식과 권한을 조합하면 값에 대한 자격을 지정하는 메커니즘이 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-175">The combination of claim type and right provides the mechanism for specifying capabilities with respect to the value.</span></span> <span data-ttu-id="166d8-176">예를 들어 "Biography.doc" 값에 대해 "Read" 권한을 가진 "File" 형식의 클레임은 이러한 클레임과 관련되는 엔터티에 Biography.doc 파일에 대한 읽기 권한이 있음을 나타냅니다. 또한 "Martin" 값에 대해 "PossessProperty" 권한이 있는 "Name" 형식의 클레임은 이러한 클레임과 관련되는 엔터티에 값이 "Martin"인 Name 속성이 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-176">For example, a claim of type "File", with right "Read" over the value "Biography.doc", indicates that the entity with which such a claim is associated has read access to the file Biography.doc. A claim of type "Name", with right "PossessProperty" over the value "Martin", indicates that the entity with which such a claim is associated possesses a Name property with the value "Martin".</span></span>  
   
- 여러 가지 클레임 형식과 권한이 ID 모델의 일부로 정의되어 있어도, 시스템은 확장 가능하기 때문에 ID 모델 인프라의 맨 위에 빌드되는 다양한 시스템에서 필요에 따라 추가 클레임 형식과 권한을 정의할 수 있습니다.  
+ <span data-ttu-id="166d8-177">여러 가지 클레임 형식과 권한이 ID 모델의 일부로 정의되어 있어도, 시스템은 확장 가능하기 때문에 ID 모델 인프라의 맨 위에 빌드되는 다양한 시스템에서 필요에 따라 추가 클레임 형식과 권한을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-177">Although various claim types and rights are defined as part of the Identity Model, the system is extensible, allowing the various systems, building on top of the Identity Model infrastructure, to define additional claim types and rights as required.</span></span>  
   
-### ID 클레임  
- ID를 특정 권한으로 갖는 클레임입니다.이 권한을 가진 클레임은 엔터티의 ID에 대한 문을 만듭니다.예를 들어 값이 "someone@example.com"이며 권한이 ID인 " UPN\(User Principal Name\)" 형식의 클레임은 특정 도메인의 특정 ID를 나타냅니다.  
+### <a name="identity-claims"></a><span data-ttu-id="166d8-178">ID 클레임</span><span class="sxs-lookup"><span data-stu-id="166d8-178">Identity Claims</span></span>  
+ <span data-ttu-id="166d8-179">ID를 특정 권한으로 갖는 클레임입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-179">One particular right is that of identity.</span></span> <span data-ttu-id="166d8-180">이 권한을 가진 클레임은 엔터티의 ID에 대한 문을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-180">Claims that possess this right make a statement about the identity of the entity.</span></span> <span data-ttu-id="166d8-181">예를 들어, "사용자 계정 이름" 형식의 클레임 (UPN) 값이 "someone@example.com" 권한이 Id 특정 도메인의 특정 id를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-181">For example, a claim of type "user principal name" (UPN) with a value of "someone@example.com" and a right of Identity indicates a particular identity in a particular domain.</span></span>  
   
-#### System ID 클레임  
- ID 모델은 System이라는 하나의 ID 클레임을 정의합니다.System ID 클레임은 엔터티가 현재 응용 프로그램 또는 시스템임을 나타냅니다.  
+#### <a name="system-identity-claim"></a><span data-ttu-id="166d8-182">System ID 클레임</span><span class="sxs-lookup"><span data-stu-id="166d8-182">System Identity Claim</span></span>  
+ <span data-ttu-id="166d8-183">ID 모델은 System이라는 하나의 ID 클레임을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-183">The Identity Model defines one identity claim: System.</span></span> <span data-ttu-id="166d8-184">System ID 클레임은 엔터티가 현재 응용 프로그램 또는 시스템임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-184">The System identity claim indicates that an entity is the current application or system.</span></span>  
   
-### 클레임 집합  
- 엔터티의 개념이 결국에는 그 "자신"이 되더라도 클레임은 시스템의 일부 엔터티에 의해 항상 발급되므로, ID를 나타내는 클레임의 모델은 중요합니다.클레임은 하나의 집합으로 서로 그룹화되며 각 집합에는 발급자가 있습니다.발급자도 클레임 집합입니다.이러한 재귀 관계는 결국 클레임 집합이 자신의 발급자가 되는 것으로 끝납니다.  
+### <a name="sets-of-claims"></a><span data-ttu-id="166d8-185">클레임 집합</span><span class="sxs-lookup"><span data-stu-id="166d8-185">Sets of Claims</span></span>  
+ <span data-ttu-id="166d8-186">엔터티의 개념이 결국에는 그 "자신"이 되더라도 클레임은 시스템의 일부 엔터티에 의해 항상 발급되므로, ID를 나타내는 클레임의 모델은 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-186">The model of claims that represent identity is important because claims are always issued by some entity in the system, even if that entity is ultimately some concept of "self".</span></span> <span data-ttu-id="166d8-187">클레임은 하나의 집합으로 서로 그룹화되며 각 집합에는 발급자가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-187">Claims are grouped together as a set and each set has an issuer.</span></span> <span data-ttu-id="166d8-188">발급자도 클레임 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-188">An issuer is just a set of claims.</span></span> <span data-ttu-id="166d8-189">이러한 재귀 관계는 결국 클레임 집합이 자신의 발급자가 되는 것으로 끝납니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-189">Such a recursive relationship must eventually end and any claim set can be its own issuer.</span></span>  
   
- 다음 그림에 있는 세 개의 클레임 집합 예제는 한 클레임 집합이 다른 클레임 집합을 자신의 발급자로 사용하다가 결국에는 System 클레임 집합이 자신의 발급자가 되는 관계를 보여 줍니다.따라서 클레임 집합의 계층 구조는 얼마든지 깊어질 수 있습니다.  
+ <span data-ttu-id="166d8-190">다음 그림에 있는 세 개의 클레임 집합 예제는 한 클레임 집합이 다른 클레임 집합을 자신의 발급자로 사용하다가 결국에는 System 클레임 집합이 자신의 발급자가 되는 관계를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-190">The following figure shows an example of three sets of claims where one set of claims has, as its issuer, another set of claims, which in turn has the System claim set as its issuer.</span></span> <span data-ttu-id="166d8-191">따라서 클레임 집합의 계층 구조는 얼마든지 깊어질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-191">Therefore, sets of claims form a hierarchy that may be arbitrarily deep.</span></span>  
   
- ![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ <span data-ttu-id="166d8-192">![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")</span><span class="sxs-lookup"><span data-stu-id="166d8-192">![Managing claims and authorization](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")</span></span>  
   
- 다음 그림과 같이, 여러 개의 클레임 집합에서 같은 발급 클레임 집합을 사용할 수도 있습니다.  
+ <span data-ttu-id="166d8-193">다음 그림과 같이, 여러 개의 클레임 집합에서 같은 발급 클레임 집합을 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-193">Multiple sets of claims may have the same issuing claim set, as illustrated in the following figure.</span></span>  
   
- ![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ <span data-ttu-id="166d8-194">![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")</span><span class="sxs-lookup"><span data-stu-id="166d8-194">![Managing claims and authorization](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")</span></span>  
   
- 자기 자신을 발급자로 사용하는 클레임 집합 이외에는 ID 모델에서 클레임 집합이 순환 관계를 형성할 수 없습니다.따라서 A 클레임 집합이 B 클레임 집합에 의해 발급되며 B 클레임 집합이 A 클레임 집합에 의해 발급되는 상황은 발생하지 않습니다.또한 ID 모델에서는 클레임 집합에 여러 발급자가 있을 수도 없습니다.지정된 클레임 집합을 둘 이상의 발급자가 발급해야 하는 경우에는, 동일한 클레임이 포함되어 있지만 발급자가 각기 다른 여러 클레임 집합을 사용해야 합니다.  
+ <span data-ttu-id="166d8-195">자기 자신을 발급자로 사용하는 클레임 집합 이외에는 ID 모델에서 클레임 집합이 순환 관계를 형성할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-195">With the exception of a claim set that is its own issuer, the Identity Model does not provide any support for claim sets to form a loop.</span></span> <span data-ttu-id="166d8-196">따라서 A 클레임 집합이 B 클레임 집합에 의해 발급되며 B 클레임 집합이 A 클레임 집합에 의해 발급되는 상황은 발생하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-196">Thus a situation where claim set A is issued by claim set B, which is itself issued by claim set A, can never arise.</span></span> <span data-ttu-id="166d8-197">또한 ID 모델에서는 클레임 집합에 여러 발급자가 있을 수도 없습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-197">Also, the Identity Model does not provide any support for claim sets to have multiple issuers.</span></span> <span data-ttu-id="166d8-198">지정된 클레임 집합을 둘 이상의 발급자가 발급해야 하는 경우에는, 동일한 클레임이 포함되어 있지만 발급자가 각기 다른 여러 클레임 집합을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-198">If two or more issuers must issue a given set of claims, then you must use multiple claim sets, each containing the same claims, but having different issuers.</span></span>  
   
-### 클레임의 발단  
- 클레임은 여러 가지 소스로부터 만들어질 수 있습니다.그 중 일반적인 한 가지 예로, 사용자가 웹 서비스에 보낸 메시지의 일부로 제공한 자격 증명을 들 수 있습니다.이러한 클레임은 시스템에서 유효성 검사를 거친 후 해당 사용자와 관련된 클레임 집합의 일부가 됩니다.운영 체제, 네트워크 스택, 런타임 환경 또는 응용 프로그램 등의 기타 시스템 구성 요소도 클레임의 소스가 될 수 있습니다.그 밖에 원격 서비스도 클레임의 소스가 될 수 있습니다.  
+### <a name="the-origin-of-claims"></a><span data-ttu-id="166d8-199">클레임의 발단</span><span class="sxs-lookup"><span data-stu-id="166d8-199">The Origin of Claims</span></span>  
+ <span data-ttu-id="166d8-200">클레임은 여러 가지 소스로부터 만들어질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-200">Claims can come from a variety of sources.</span></span> <span data-ttu-id="166d8-201">그 중 일반적인 한 가지 예로, 사용자가 웹 서비스에 보낸 메시지의 일부로 제공한 자격 증명을 들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-201">One common source of claims is credentials presented by a user, for example as part of a message sent to a Web service.</span></span> <span data-ttu-id="166d8-202">이러한 클레임은 시스템에서 유효성 검사를 거친 후 해당 사용자와 관련된 클레임 집합의 일부가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-202">The system validates such claims, and they become part of a set of claims associated with the user.</span></span> <span data-ttu-id="166d8-203">운영 체제, 네트워크 스택, 런타임 환경 또는 응용 프로그램 등의 기타 시스템 구성 요소도 클레임의 소스가 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-203">Other system components may also be sources of claims, including, but not limited to, the operating system, the network stack, the run-time environment, or the application.</span></span> <span data-ttu-id="166d8-204">그 밖에 원격 서비스도 클레임의 소스가 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-204">In addition, remote services may also be a source of claims.</span></span>  
   
-### 권한 부여 정책  
- ID 모델에서 클레임은 권한 부여 정책 평가 프로세스의 일부로 생성됩니다.권한 부여 정책에서는 대개 비어 있는 기존 클레임 집합을 조사하고, 기존의 클레임을 근거로 추가 클레임과 추가 정보를 임의로 추가하도록 선택할 수 있습니다.또한 클레임 간의 매핑을 위한 기반을 제공합니다.시스템 내 클레임이 존재하는지 유무는 다른 클레임의 추가 여부와 관련해 권한 부여 정책의 동작에 영향을 줍니다.  
+### <a name="authorization-policies"></a><span data-ttu-id="166d8-205">권한 부여 정책</span><span class="sxs-lookup"><span data-stu-id="166d8-205">Authorization Policies</span></span>  
+ <span data-ttu-id="166d8-206">ID 모델에서 클레임은 권한 부여 정책 평가 프로세스의 일부로 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-206">In the Identity Model, claims are generated as part of the process of evaluating the authorization policy.</span></span> <span data-ttu-id="166d8-207">권한 부여 정책에서는 대개 비어 있는 기존 클레임 집합을 조사하고, 기존의 클레임을 근거로 추가 클레임과 추가 정보를 임의로 추가하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-207">An authorization policy examines the (possibly empty) set of existing claims and may choose to add additional claims based on the claims already present and additional information at its disposal.</span></span> <span data-ttu-id="166d8-208">또한 클레임 간의 매핑을 위한 기반을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-208">This provides the basis of mapping between claims.</span></span> <span data-ttu-id="166d8-209">시스템 내 클레임이 존재하는지 유무는 다른 클레임의 추가 여부와 관련해 권한 부여 정책의 동작에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-209">The presence or absence of claims in the system influences the behavior of an authorization policy with respect to whether it adds additional claims.</span></span>  
   
- 예를 들어 권한 부여 정책을 통해, 시스템을 사용하는 여러 엔터티의 생일을 포함하는 데이터베이스에 액세스할 수 있습니다.이 경우 권한 부여 정책은 이러한 정보를 사용하여 "Over18" 클레임을 컨텍스트에 추가합니다.이 Over18 클레임은 18세 이상이라는 정보 이외의 다른 엔터티 정보는 노출하지 않습니다.'Over18' 클레임에 대한 해석은 해당 클레임의 의미 체계에 대한 파악에 따라 다릅니다.해당 클레임을 추가한 권한 부여 정책에는 그 의미 체계가 일정 수준에서 파악되어 있습니다.그리고 이후에 정책 평가의 결과로 발생한 클레임을 조사하는 코드에도 해당 의미 체계에 대한 정보가 제공됩니다.  
+ <span data-ttu-id="166d8-210">예를 들어 권한 부여 정책을 통해, 시스템을 사용하는 여러 엔터티의 생일을 포함하는 데이터베이스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-210">For example, the authorization policy has access to a database that includes the birthdates of the various entities using the system.</span></span> <span data-ttu-id="166d8-211">이 경우 권한 부여 정책은 이러한 정보를 사용하여 "Over18" 클레임을 컨텍스트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-211">The authorization policy uses that information to add an "Over18" claim to the context.</span></span> <span data-ttu-id="166d8-212">이 Over18 클레임은 18세 이상이라는 정보 이외의 다른 엔터티 정보는 노출하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-212">Note that this Over18 claim does not disclose any information about the entity other than the fact that it is over 18 years of age.</span></span> <span data-ttu-id="166d8-213">'Over18' 클레임에 대한 해석은 해당 클레임의 의미 체계에 대한 파악에 따라 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-213">Note that interpretation of the 'Over18' claim depends on understanding the semantics of that claim.</span></span> <span data-ttu-id="166d8-214">해당 클레임을 추가한 권한 부여 정책에는 그 의미 체계가 일정 수준에서 파악되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-214">The authorization policy that added the claim understands those semantics at some level.</span></span> <span data-ttu-id="166d8-215">그리고 이후에 정책 평가의 결과로 발생한 클레임을 조사하는 코드에도 해당 의미 체계에 대한 정보가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-215">Code that subsequently examines the claims that result from policy evaluation also be informed of those semantics.</span></span>  
   
- 지정된 권한 부여 정책에서 여러 번의 정책 평가를 요구할 수 있습니다. 그 이유는 다른 권한 부여 정책이 클레임을 추가하는 것처럼, 해당 권한 부여 정책이 훨씬 더 많은 클레임을 추가할 수 있기 때문입니다.ID 모델은 적용되는 권한 부여 정책에 의해 컨텍스트에 추가될 클레임이 더 이상 없을 때까지 평가를 계속하도록 디자인되었습니다.이렇게 이어지는 권한 부여 정책 평가를 통해 권한 부여 정책을 특정 순서로 평가하도록 하는 요구 사항을 방지할 수 있으며, 따라서 정책을 임의의 순서로 평가할 수 있습니다.예를 들어, A 정책이 B 클레임을 추가한 상황에서 X 정책이 Z 클레임만 추가하는 경우, X를 먼저 평가하면 처음에는 Z 클레임을 추가하지 않습니다.그 이후에, A가 평가되고 B 클레임을 추가합니다.그런 다음 X를 다시 평가하여 이번에 Z 클레임을 추가합니다.  
+ <span data-ttu-id="166d8-216">지정된 권한 부여 정책에서 여러 번의 정책 평가를 요구할 수 있습니다. 그 이유는 다른 권한 부여 정책이 클레임을 추가하는 것처럼, 해당 권한 부여 정책이 훨씬 더 많은 클레임을 추가할 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-216">A given authorization policy may require that it be evaluated multiple times because, as other authorization policies add claims, that authorization policy might add yet more claims.</span></span> <span data-ttu-id="166d8-217">ID 모델은 적용되는 권한 부여 정책에 의해 컨텍스트에 추가될 클레임이 더 이상 없을 때까지 평가를 계속하도록 디자인되었습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-217">Identity Model is designed to continue evaluation until no more claims are added to the context by any of the authorization policies in force.</span></span> <span data-ttu-id="166d8-218">이렇게 이어지는 권한 부여 정책 평가를 통해 권한 부여 정책을 특정 순서로 평가하도록 하는 요구 사항을 방지할 수 있으며, 따라서 정책을 임의의 순서로 평가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-218">This continued evaluation of authorization policies prevents the requirement to enforce any specific evaluation order with respect to authorization policies; they can be evaluated in any order.</span></span> <span data-ttu-id="166d8-219">예를 들어, A 정책이 B 클레임을 추가한 상황에서 X 정책이 Z 클레임만 추가하는 경우, X를 먼저 평가하면 처음에는 Z 클레임을 추가하지 않습니다. 그 이후에, A가 평가되고 B 클레임을 추가합니다. 그런 다음 X를 다시 평가하여 이번에 Z 클레임을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-219">For example, if policy X only adds Claim Z if policy A has added Claim B, then if X is evaluated first, it initially does not add the Claim Z. Subsequently, A is evaluated and adds Claim B. X is then evaluated a second time, and this time it adds Claim Z.</span></span>  
   
- 지정된 시스템에는 적용되는 권한 부여 정책이 여러 개 있을 수 있습니다.  
+ <span data-ttu-id="166d8-220">지정된 시스템에는 적용되는 권한 부여 정책이 여러 개 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-220">A given system may have many authorization policies in force.</span></span>  
   
-### 열쇠 제작 기계  
- 관련된 여러 권한 부여 정책을 평가하는 것은 열쇠를 제작하는 기계를 사용하는 것과 비슷합니다.각각의 권한 부여 정책을 평가하면 클레임 집합이 생성되어 열쇠의 모양을 갖추게 됩니다.열쇠의 모양이 완성되면 이를 사용하여 잠금이 열리는지 확인해 볼 수 있습니다.열쇠의 모양은 권한 부여 관리자가 만든 "권한 부여 컨텍스트"에 저장됩니다.  
+### <a name="a-key-making-machine"></a><span data-ttu-id="166d8-221">열쇠 제작 기계</span><span class="sxs-lookup"><span data-stu-id="166d8-221">A Key-Making Machine</span></span>  
+ <span data-ttu-id="166d8-222">관련된 여러 권한 부여 정책을 평가하는 것은 열쇠를 제작하는 기계를 사용하는 것과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-222">Evaluating a group of associated authorization policies is like using a machine that makes keys.</span></span> <span data-ttu-id="166d8-223">각각의 권한 부여 정책을 평가하면 클레임 집합이 생성되어 열쇠의 모양을 갖추게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-223">The authorization policies are each evaluated and sets of claims are generated, building up the shape of the key.</span></span> <span data-ttu-id="166d8-224">열쇠의 모양이 완성되면 이를 사용하여 잠금이 열리는지 확인해 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-224">Once the shape of the key is completed, it can be used to try to open some locks.</span></span> <span data-ttu-id="166d8-225">열쇠의 모양은 권한 부여 관리자가 만든 "권한 부여 컨텍스트"에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-225">The shape of the key is stored in an "authorization context," which is created by an authorization manager.</span></span>  
   
-### 권한 부여 컨텍스트  
- 권한 부여 관리자는 이전 설명과 같이 여러 가지 권한 부여 정책을 평가하며, 그 결과는 클레임 집합과 일부 관련된 속성 집합으로 이루어진 권한 부여 컨텍스트가 됩니다.이러한 권한 부여 컨텍스트를 조사하면 해당 컨텍스트에 있는 클레임에 대해 그리고 발급 클레임 집합과 같은 여러 클레임 간의 관계에 대해 확인할 수 있으며, 궁극적으로는 이러한 내용을 리소스에 액세스하기 위해 부합해야 하는 일부 요구 사항과 비교할 수 있습니다.  
+### <a name="authorization-context"></a><span data-ttu-id="166d8-226">권한 부여 컨텍스트</span><span class="sxs-lookup"><span data-stu-id="166d8-226">Authorization Context</span></span>  
+ <span data-ttu-id="166d8-227">권한 부여 관리자는 이전 설명과 같이 여러 가지 권한 부여 정책을 평가하며, 그 결과는 클레임 집합과 일부 관련된 속성 집합으로 이루어진 권한 부여 컨텍스트가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-227">An authorization manager evaluates the various authorization policies as described, and the result is an authorization context (a set of claim sets and some associated properties).</span></span> <span data-ttu-id="166d8-228">이러한 권한 부여 컨텍스트를 조사하면 해당 컨텍스트에 있는 클레임에 대해 그리고 발급 클레임 집합과 같은 여러 클레임 간의 관계에 대해 확인할 수 있으며, 궁극적으로는 이러한 내용을 리소스에 액세스하기 위해 부합해야 하는 일부 요구 사항과 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-228">The authorization context can be examined to determine what claims are present in that context, the relationships between those various claims (for example, the issuing claim set), and ultimately compare them against some requirements they must meet to access a resource.</span></span>  
   
-### 잠금  
- 권한 부여 컨텍스트\(클레임 집합\)가 열쇠라면, 그 열쇠가 들어맞는 자물쇠는 특정한 보호된 리소스에 대한 액세스 권한을 부여 받기 위해 충족되어야 하는 요구 사항들로 구성됩니다.ID 모델에서는 이러한 요구 사항의 표현 방식을 형식화하지 않지만, 시스템의 클레임 기반 특성을 고려하여 권한 부여 컨텍스트의 클레임과 일부 요구된 클레임 집합을 비교하는 방식을 형식화합니다.  
+### <a name="locks"></a><span data-ttu-id="166d8-229">잠금</span><span class="sxs-lookup"><span data-stu-id="166d8-229">Locks</span></span>  
+ <span data-ttu-id="166d8-230">권한 부여 컨텍스트(클레임 집합)가 열쇠라면, 그 열쇠가 들어맞는 자물쇠는 특정한 보호된 리소스에 대한 액세스 권한을 부여 받기 위해 충족되어야 하는 요구 사항들로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-230">If an authorization context (a set of claims) is a key, then the requirements that must be satisfied to grant access to a particular protected resource constitute the lock that the key must fit.</span></span> <span data-ttu-id="166d8-231">ID 모델에서는 이러한 요구 사항의 표현 방식을 형식화하지 않지만, 시스템의 클레임 기반 특성을 고려하여 권한 부여 컨텍스트의 클레임과 일부 요구된 클레임 집합을 비교하는 방식을 형식화합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-231">Identity Model does not formalize how such requirements are expressed but they do, given the claim-based nature of the system, involve comparing the claims in the authorization context against some set of required claims.</span></span>  
   
-### 반복  
- ID 모델은 클레임 개념을 바탕으로 합니다.클레임은 집합으로 그룹화되며 권한 부여 컨텍스트에서 집계됩니다.클레임 집합을 포함하는 권한 부여 컨텍스트는 권한 부여 관리자와 관련된 여러 가지 권한 부여 정책을 평가한 결과입니다.이러한 클레임 집합을 조사하면 액세스 요구 사항이 부합되었는지 확인할 수 있습니다.다음 그림에서는 이런 다양한 ID 모델 개념 간의 관계를 보여 줍니다.  
+### <a name="a-recap"></a><span data-ttu-id="166d8-232">반복</span><span class="sxs-lookup"><span data-stu-id="166d8-232">A Recap</span></span>  
+ <span data-ttu-id="166d8-233">ID 모델은 클레임 개념을 바탕으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-233">Identity Model is based around the concept of claims.</span></span> <span data-ttu-id="166d8-234">클레임은 집합으로 그룹화되며 권한 부여 컨텍스트에서 집계됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-234">Claims are grouped into sets and aggregated in an authorization context.</span></span> <span data-ttu-id="166d8-235">클레임 집합을 포함하는 권한 부여 컨텍스트는 권한 부여 관리자와 관련된 여러 가지 권한 부여 정책을 평가한 결과입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-235">An authorization context contains a set of claims and is the result of evaluating one or more authorization policies associated with an authorization manager.</span></span> <span data-ttu-id="166d8-236">이러한 클레임 집합을 조사하면 액세스 요구 사항이 부합되었는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-236">These claim sets can be examined to determine if access requirements have been met.</span></span> <span data-ttu-id="166d8-237">다음 그림에서는 이런 다양한 ID 모델 개념 간의 관계를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-237">The following figure shows the relationships between these various Identity Model concepts.</span></span>  
   
- ![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi\_recap")  
+ <span data-ttu-id="166d8-238">![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")</span><span class="sxs-lookup"><span data-stu-id="166d8-238">![Managing claims and authorization](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")</span></span>  
   
-## WCF 및 ID 모델  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 ID 모델 인프라를 권한 부여를 위한 기반으로 사용합니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 클래스를 사용하면 *권한 부여* 정책을 서비스의 일부로 지정할 수 있습니다.이러한 권한 부여 정책은 *외부 권한 부여 정책*이라고 하며, 로컬 정책을 바탕으로 또는 원격 서비스와의 상호 작용을 통해 클레임 처리를 수행할 수 있습니다.<xref:System.ServiceModel.ServiceAuthorizationManager> 클래스로 표시되는 권한 부여 관리자는 여러 가지 자격 증명 형식\(토큰\)을 인식하는 권한 부여 정책과 함께 외부 권한 부여 정책을 평가하고, 들어오는 메시지에 적합한 클레임으로 *권한 부여 컨텍스트*를 채웁니다.권한 부여 컨텍스트는<xref:System.IdentityModel.Policy.AuthorizationContext> 클래스로 표시됩니다.  
+## <a name="wcf-and-identity-model"></a><span data-ttu-id="166d8-239">WCF 및 ID 모델</span><span class="sxs-lookup"><span data-stu-id="166d8-239">WCF and Identity Model</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="166d8-240">에서는 ID 모델 인프라를 권한 부여를 위한 기반으로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-240"> uses the Identity Model infrastructure as the basis for performing authorization.</span></span> <span data-ttu-id="166d8-241">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 클래스 지정할 수 있습니다. *권한 부여* 서비스의 일부로 정책입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-241">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], the <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> class allows you to specify *authorization* policies as part of a service.</span></span> <span data-ttu-id="166d8-242">이러한 권한 부여 정책은 라고 *외부 권한 부여 정책을*, 및 원격 서비스와 상호 작용 하 여 또는 로컬 정책에 따라 클레임 처리를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-242">Such authorization policies are known as *external authorization policies*, and they can perform claim processing based on local policy or by interaction with a remote service.</span></span> <span data-ttu-id="166d8-243">가 나타내는 권한 부여 관리자는 <xref:System.ServiceModel.ServiceAuthorizationManager> 클래스는 다양 한 자격 증명 형식 (토큰)를 인식 하는 권한 부여 정책과 함께 외부 권한 부여 정책을 평가 하 고 채웁니다는  *권한 부여 컨텍스트* 들어오는 메시지에 적절 한 클레임입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-243">The authorization manager, represented by the <xref:System.ServiceModel.ServiceAuthorizationManager> class evaluates external authorization policies together with authorization policies that recognize the various credential types (tokens) and populates what is called an *authorization context* with the claims appropriate to an incoming message.</span></span> <span data-ttu-id="166d8-244">권한 부여 컨텍스트는<xref:System.IdentityModel.Policy.AuthorizationContext> 클래스로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-244">The authorization context is represented by the <xref:System.IdentityModel.Policy.AuthorizationContext> class.</span></span>  
   
-## ID 모델 프로그래밍  
- 다음 표에서는 ID 모델 확장을 프로그래밍하기 위해 사용되는 개체 모델에 대해 설명합니다.이러한 클래스는 모두 <xref:System.IdentityModel.Policy> 또는 <xref:System.IdentityModel.Claims> 네임스페이스에 있습니다.  
+## <a name="identity-model-programming"></a><span data-ttu-id="166d8-245">ID 모델 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="166d8-245">Identity Model Programming</span></span>  
+ <span data-ttu-id="166d8-246">다음 표에서는 ID 모델 확장을 프로그래밍하기 위해 사용되는 개체 모델에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-246">The following table describes the object model used to program Identity Model extensions.</span></span> <span data-ttu-id="166d8-247">이러한 클래스는 모두 <xref:System.IdentityModel.Policy> 또는 <xref:System.IdentityModel.Claims> 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-247">These classes all exist in either the <xref:System.IdentityModel.Policy> or the <xref:System.IdentityModel.Claims> namespaces.</span></span>  
   
-|클래스|설명|  
-|---------|--------|  
-|권한 부여 구성 요소|<xref:System.IdentityModel.Policy.IAuthorizationComponent> 인터페이스를 구현하는 ID 모델 클래스입니다.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|하나의 읽기 전용 문자열 속성인 Id를 제공하는 인터페이스입니다.이 속성 값은 이 인터페이스를 구현하는 시스템의 각 인스턴스에 대해 고유합니다.|  
-|<xref:System.IdentityModel.Policy.AuthorizationContext>|`ClaimSet` 인스턴스 집합과 0개 이상의 속성을 포함하는 *권한 부여 구성 요소*로서, 하나 이상의 권한 부여 정책을 평가한 결과입니다.|  
-|<xref:System.IdentityModel.Claims.Claim>|클레임 형식, 권한 및 값의 조합입니다.권한과 값 일부는 클레임 형식의 제약을 받습니다.|  
-|<xref:System.IdentityModel.Claims.ClaimSet>|추상 기본 클래스로,`Claim` 인스턴스의 컬렉션입니다.|  
-|<xref:System.IdentityModel.Claims.DefaultClaimSet>|봉인 클래스로,`ClaimSet` 클래스의 구현입니다.|  
-|<xref:System.IdentityModel.Policy.EvaluationContext>|추상 기본 클래스로,정책 평가 시 권한 부여 정책에 전달됩니다.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|`IAuthorizationComponent`에서 파생된 인터페이스로, 권한 부여 정책 클래스에 의해 구현됩니다.|  
-|<xref:System.IdentityModel.Claims.Rights>|미리 정의된 권한 값을 포함하는 정적 클래스입니다.|  
+|<span data-ttu-id="166d8-248">클래스</span><span class="sxs-lookup"><span data-stu-id="166d8-248">Class</span></span>|<span data-ttu-id="166d8-249">설명</span><span class="sxs-lookup"><span data-stu-id="166d8-249">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="166d8-250">권한 부여 구성 요소</span><span class="sxs-lookup"><span data-stu-id="166d8-250">Authorization Component</span></span>|<span data-ttu-id="166d8-251"><xref:System.IdentityModel.Policy.IAuthorizationComponent> 인터페이스를 구현하는 ID 모델 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-251">An Identity Model class that implements the <xref:System.IdentityModel.Policy.IAuthorizationComponent> interface.</span></span>|  
+|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|<span data-ttu-id="166d8-252">하나의 읽기 전용 문자열 속성인 Id를 제공하는 인터페이스입니다. 이 속성 값은 이 인터페이스를 구현하는 시스템의 각 인스턴스에 대해 고유합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-252">An interface that provides a single read-only string property: Id. The value of this property is unique for each instance in the system that implements this interface.</span></span>|  
+|<xref:System.IdentityModel.Policy.AuthorizationContext>|<span data-ttu-id="166d8-253">*권한 부여 구성 요소* 의 집합이 포함 된 `ClaimSet` 0 개 이상의 속성을 사용 하 여 인스턴스, 하나 이상의 권한 부여 정책을 평가한 결과입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-253">An *authorization component* that contains a set of `ClaimSet` instances with zero or more properties; the result of evaluating one or more Authorization Policies.</span></span>|  
+|<xref:System.IdentityModel.Claims.Claim>|<span data-ttu-id="166d8-254">클레임 형식, 권한 및 값의 조합입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-254">A combination of a claim type, right, and value.</span></span> <span data-ttu-id="166d8-255">권한과 값 일부는 클레임 형식의 제약을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-255">The right and value parts are constrained by the claim type.</span></span>|  
+|<xref:System.IdentityModel.Claims.ClaimSet>|<span data-ttu-id="166d8-256">추상 기본 클래스로,</span><span class="sxs-lookup"><span data-stu-id="166d8-256">An abstract base class.</span></span> <span data-ttu-id="166d8-257">`Claim` 인스턴스의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-257">A collection of `Claim` instances.</span></span>|  
+|<xref:System.IdentityModel.Claims.DefaultClaimSet>|<span data-ttu-id="166d8-258">봉인 클래스로,</span><span class="sxs-lookup"><span data-stu-id="166d8-258">A sealed class.</span></span> <span data-ttu-id="166d8-259">`ClaimSet` 클래스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-259">An implementation of the `ClaimSet` class.</span></span>|  
+|<xref:System.IdentityModel.Policy.EvaluationContext>|<span data-ttu-id="166d8-260">추상 기본 클래스로,</span><span class="sxs-lookup"><span data-stu-id="166d8-260">An abstract base class.</span></span> <span data-ttu-id="166d8-261">정책 평가 시 권한 부여 정책에 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-261">Passed to an authorization policy during policy evaluation.</span></span>|  
+|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|<span data-ttu-id="166d8-262">파생 된 인터페이스로 `IAuthorizationComponent` 권한 부여 정책 클래스에 의해 구현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-262">An interface derived from `IAuthorizationComponent` and implemented by authorization policy classes.</span></span>|  
+|<xref:System.IdentityModel.Claims.Rights>|<span data-ttu-id="166d8-263">미리 정의된 권한 값을 포함하는 정적 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-263">A static class that contains predefined right values.</span></span>|  
   
- 다음 클래스는 ID 모델 프로그래밍에도 사용되지만, <xref:System.IdentityModel.Policy> 또는 <xref:System.IdentityModel.Claims> 네임스페이스에는 없는 클래스입니다.  
+ <span data-ttu-id="166d8-264">다음 클래스는 ID 모델 프로그래밍에도 사용되지만, <xref:System.IdentityModel.Policy> 또는 <xref:System.IdentityModel.Claims> 네임스페이스에는 없는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-264">The following classes are also used for Identity Model programming, but are not found in the <xref:System.IdentityModel.Policy> or <xref:System.IdentityModel.Claims> namespaces.</span></span>  
   
-|클래스|설명|  
-|---------|--------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager>|서비스에서의 각 작업에 대해 클레임 기반의 권한 부여를 확인하기 위한 메서드\(<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>\)를 제공하는 클래스입니다.이 클래스에서 파생시키고 이 메서드를 재정의해야 합니다.|  
-|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>|권한 부여와 연관이 있을 때 서비스의 동작과 관련된 여러 가지 속성을 제공하는 봉인 클래스입니다.|  
-|<xref:System.ServiceModel.ServiceSecurityContext>|현재 실행 중이거나 실행될 작업에 대해 권한 부여 컨텍스트를 비롯한 보안 컨텍스트를 제공하는 클래스입니다.이 클래스의 인스턴스는 <xref:System.ServiceModel.OperationContext>의 일부입니다.|  
+|<span data-ttu-id="166d8-265">클래스</span><span class="sxs-lookup"><span data-stu-id="166d8-265">Class</span></span>|<span data-ttu-id="166d8-266">설명</span><span class="sxs-lookup"><span data-stu-id="166d8-266">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager>|<span data-ttu-id="166d8-267">서비스에서의 각 작업에 대해 클레임 기반의 권한 부여를 확인하기 위한 메서드(<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>)를 제공하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-267">A class that provides a method— <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>—to perform claim-based authorization checks for each operation in a service.</span></span> <span data-ttu-id="166d8-268">이 클래스에서 파생시키고 이 메서드를 재정의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-268">You must derive from the class and override the method.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>|<span data-ttu-id="166d8-269">권한 부여와 연관이 있을 때 서비스의 동작과 관련된 여러 가지 속성을 제공하는 봉인 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-269">A sealed class that provides various properties related to the behavior of a service as it pertains to authorization.</span></span>|  
+|<xref:System.ServiceModel.ServiceSecurityContext>|<span data-ttu-id="166d8-270">현재 실행 중이거나 실행될 작업에 대해 권한 부여 컨텍스트를 비롯한 보안 컨텍스트를 제공하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-270">A class that provides security context, including authorization context, for the currently running (or about to be run) operation.</span></span> <span data-ttu-id="166d8-271">이 클래스의 인스턴스는 <xref:System.ServiceModel.OperationContext>의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-271">An instance of this class is part of the <xref:System.ServiceModel.OperationContext>.</span></span>|  
   
-### 핵심 멤버  
- 다음 멤버는 새 클레임 형식을 만드는 데 흔히 사용됩니다.  
+### <a name="significant-members"></a><span data-ttu-id="166d8-272">핵심 멤버</span><span class="sxs-lookup"><span data-stu-id="166d8-272">Significant Members</span></span>  
+ <span data-ttu-id="166d8-273">다음 멤버는 새 클레임 형식을 만드는 데 흔히 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-273">The following members are commonly used to create new claim types.</span></span>  
   
-|멤버|설명|  
-|--------|--------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|이 메서드는 서비스에서 작업을 실행하기 전에 클레임 기반의 액세스 확인을 수행하기 위해 파생 클래스에서 구현됩니다.제공된 <xref:System.ServiceModel.OperationContext> 또는 기타 위치에 있는 모든 정보는 액세스 확인 결정을 할 때 조사할 수 있습니다.<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>에서 `true`를 반환하면 액세스 권한이 부여되어 작업을 실행할 수 있으며,`CheckAccessCore`에서 `false`를 반환하면 액세스가 거부되어 작업을 실행할 수 없습니다.예제를 보려면 [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)를 참조하십시오.|  
-|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|서비스에 대해 <xref:System.ServiceModel.ServiceAuthorizationManager>를 반환합니다.<xref:System.ServiceModel.ServiceAuthorizationManager>는 권한 부여에 대한 결정을 합니다.|  
-|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|서비스에 대해 지정된 사용자 지정 권한 부여 정책의 컬렉션입니다.들어오는 메시지의 자격 증명과 관련된 정책 외에도 이러한 정책도 평가됩니다.|  
+|<span data-ttu-id="166d8-274">멤버</span><span class="sxs-lookup"><span data-stu-id="166d8-274">Member</span></span>|<span data-ttu-id="166d8-275">설명</span><span class="sxs-lookup"><span data-stu-id="166d8-275">Description</span></span>|  
+|------------|-----------------|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|<span data-ttu-id="166d8-276">이 메서드는 서비스에서 작업을 실행하기 전에 클레임 기반의 액세스 확인을 수행하기 위해 파생 클래스에서 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-276">Derived classes implement this method to perform claim-based access checks prior to running operations in a service.</span></span> <span data-ttu-id="166d8-277">제공된 <xref:System.ServiceModel.OperationContext> 또는 기타 위치에 있는 모든 정보는 액세스 확인 결정을 할 때 조사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-277">Any and all information in the supplied <xref:System.ServiceModel.OperationContext>, or elsewhere, can be examined when making the access check decision.</span></span> <span data-ttu-id="166d8-278"><xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>에서 `true`를 반환하면 액세스 권한이 부여되어 작업을 실행할 수 있으며,</span><span class="sxs-lookup"><span data-stu-id="166d8-278">If <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> returns `true`, then access is granted and the operation is allowed to run.</span></span> <span data-ttu-id="166d8-279">`CheckAccessCore`에서 `false`를 반환하면 액세스가 거부되어 작업을 실행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-279">If `CheckAccessCore` returns `false`, then access is denied and the operation does not run.</span></span> <span data-ttu-id="166d8-280">예를 들어 참조 [하는 방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-280">For an example, see [How to: Create a Custom Authorization Manager for a Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|<span data-ttu-id="166d8-281">서비스에 대해 <xref:System.ServiceModel.ServiceAuthorizationManager>를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-281">Returns the <xref:System.ServiceModel.ServiceAuthorizationManager> for the service.</span></span> <span data-ttu-id="166d8-282"><xref:System.ServiceModel.ServiceAuthorizationManager>는 권한 부여에 대한 결정을 합니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-282">The <xref:System.ServiceModel.ServiceAuthorizationManager> is responsible for making authorization decisions.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|<span data-ttu-id="166d8-283">서비스에 대해 지정된 사용자 지정 권한 부여 정책의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-283">The collection of custom authorization policies specified for the service.</span></span> <span data-ttu-id="166d8-284">들어오는 메시지의 자격 증명과 관련된 정책 외에도 이러한 정책도 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="166d8-284">These policies are evaluated in addition to those policies associated with credentials in incoming messages.</span></span>|  
   
-## 참고 항목  
- <xref:System.IdentityModel.Policy.AuthorizationContext>   
- <xref:System.IdentityModel.Claims.Claim>   
- <xref:System.IdentityModel.Policy.EvaluationContext>   
- <xref:System.IdentityModel.Policy.IAuthorizationComponent>   
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>   
- <xref:System.IdentityModel.Claims.Rights>   
- <xref:System.IdentityModel.Claims>   
- <xref:System.IdentityModel.Policy>   
- <xref:System.IdentityModel.Tokens>   
- <xref:System.IdentityModel.Selectors>   
- [클레임 및 토큰](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)   
- [클레임 및 리소스 액세스 거부](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)   
- [클레임 만들기 및 리소스 값](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)   
- [방법: 사용자 지정 클레임 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)   
- [방법: 클레임 비교](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)   
- [방법: 사용자 지정 권한 부여 정책 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)   
- [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)   
- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="166d8-285">참고 항목</span><span class="sxs-lookup"><span data-stu-id="166d8-285">See Also</span></span>  
+ <xref:System.IdentityModel.Policy.AuthorizationContext>  
+ <xref:System.IdentityModel.Claims.Claim>  
+ <xref:System.IdentityModel.Policy.EvaluationContext>  
+ <xref:System.IdentityModel.Policy.IAuthorizationComponent>  
+ <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
+ <xref:System.IdentityModel.Claims.Rights>  
+ <xref:System.IdentityModel.Claims>  
+ <xref:System.IdentityModel.Policy>  
+ <xref:System.IdentityModel.Tokens>  
+ <xref:System.IdentityModel.Selectors>  
+ [<span data-ttu-id="166d8-286">클레임 및 토큰</span><span class="sxs-lookup"><span data-stu-id="166d8-286">Claims and Tokens</span></span>](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
+ [<span data-ttu-id="166d8-287">클레임 및 리소스에 대 한 액세스 거부</span><span class="sxs-lookup"><span data-stu-id="166d8-287">Claims and Denying Access to Resources</span></span>](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
+ [<span data-ttu-id="166d8-288">클레임 만들기 및 리소스 값</span><span class="sxs-lookup"><span data-stu-id="166d8-288">Claim Creation and Resource Values</span></span>](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
+ [<span data-ttu-id="166d8-289">방법: 사용자 지정 클레임 만들기</span><span class="sxs-lookup"><span data-stu-id="166d8-289">How to: Create a Custom Claim</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [<span data-ttu-id="166d8-290">방법: 클레임 비교</span><span class="sxs-lookup"><span data-stu-id="166d8-290">How to: Compare Claims</span></span>](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [<span data-ttu-id="166d8-291">방법: 사용자 지정 권한 부여 정책 만들기</span><span class="sxs-lookup"><span data-stu-id="166d8-291">How to: Create a Custom Authorization Policy</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [<span data-ttu-id="166d8-292">방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기</span><span class="sxs-lookup"><span data-stu-id="166d8-292">How to: Create a Custom Authorization Manager for a Service</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [<span data-ttu-id="166d8-293">보안 개요</span><span class="sxs-lookup"><span data-stu-id="166d8-293">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="166d8-294">권한 부여</span><span class="sxs-lookup"><span data-stu-id="166d8-294">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

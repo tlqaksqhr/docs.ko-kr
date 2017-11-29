@@ -1,46 +1,51 @@
 ---
-title: "방법: TreeView 노드에 바로 가기 메뉴 연결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "바로 가기 메뉴, TreeView 컨트롤에 추가"
-  - "TreeView 컨트롤의 트리 노드, 바로 가기 메뉴"
-  - "TreeView 컨트롤[Windows Forms], 바로 가기 메뉴 추가"
+title: "방법: TreeView 노드에 바로 가기 메뉴 연결"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- shortcut menus [Windows Forms], adding to TreeView controls
+- TreeView control [Windows Forms], adding shortcut menus
+- tree nodes in TreeView control [Windows Forms], shortcut menus
 ms.assetid: a23c6752-fd8f-44ad-b781-bab37962fc7c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d3814e95ad2d91157181682984fc9b53254ba813
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: TreeView 노드에 바로 가기 메뉴 연결
-Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤은 Windows 탐색기의 왼쪽 창에 파일과 폴더가 표시되는 방식과 비슷한 방식으로 노드의 계층 구조를 표시하는 데 사용됩니다.  <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> 속성을 설정하면 사용자가 <xref:System.Windows.Forms.TreeView> 컨트롤을 마우스 오른쪽 단추로 클릭할 경우 상황에 맞는 작업을 제공할 수 있습니다.  <xref:System.Windows.Forms.ContextMenuStrip> 구성 요소를 개별 <xref:System.Windows.Forms.TreeNode> 항목과 연결하면 <xref:System.Windows.Forms.TreeView> 컨트롤에 사용자 지정된 수준의 바로 가기 메뉴 기능을 추가할 수 있습니다.  
+# <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a><span data-ttu-id="d2601-102">방법: TreeView 노드에 바로 가기 메뉴 연결</span><span class="sxs-lookup"><span data-stu-id="d2601-102">How to: Attach a ShortCut Menu to a TreeView Node</span></span>
+<span data-ttu-id="d2601-103">Windows Forms <xref:System.Windows.Forms.TreeView> 제어에서 파일을 Windows 탐색기의 왼쪽된 창에 표시 되는 폴더 비슷한 노드 계층 구조를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-103">The Windows Forms <xref:System.Windows.Forms.TreeView> control displays a hierarchy of nodes, similar to the files and folders displayed in the left pane of Windows Explorer.</span></span> <span data-ttu-id="d2601-104">설정 하 여는 <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> 속성을 제공할 수 있습니다 상황에 맞는 작업 사용자에 게 마우스 오른쪽 단추로 클릭 하 고 <xref:System.Windows.Forms.TreeView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-104">By setting the <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> property, you can provide context-sensitive operations to the user when they right-click the <xref:System.Windows.Forms.TreeView> control.</span></span> <span data-ttu-id="d2601-105">연결 하 여 한 <xref:System.Windows.Forms.ContextMenuStrip> 구성 요소를 개별 <xref:System.Windows.Forms.TreeNode> 항목, 사용자 지정 된 수준의 바로 가기 메뉴 기능을 추가할 수 있습니다 프로그램 <xref:System.Windows.Forms.TreeView> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-105">By associating a <xref:System.Windows.Forms.ContextMenuStrip> component with individual <xref:System.Windows.Forms.TreeNode> items, you can add a customized level of shortcut menu functionality to your <xref:System.Windows.Forms.TreeView> controls.</span></span>  
   
-### 바로 가기 메뉴를 TreeNode와 프로그래밍 방식으로 연결하려면  
+### <a name="to-associate-a-shortcut-menu-with-a-treenode-programmatically"></a><span data-ttu-id="d2601-106">TreeNode를 바로 가기 메뉴를 프로그래밍 방식으로 연결 하려면</span><span class="sxs-lookup"><span data-stu-id="d2601-106">To associate a shortcut menu with a TreeNode programmatically</span></span>  
   
-1.  적절한 속성 설정을 사용하여 <xref:System.Windows.Forms.TreeView> 컨트롤을 인스턴스화하고 루트 <xref:System.Windows.Forms.TreeNode>를 만든 다음 하위 노드를 추가합니다.  
+1.  <span data-ttu-id="d2601-107">인스턴스화하는 <xref:System.Windows.Forms.TreeView> 적절 한 속성 설정을 사용 하 여 제어 하 고, 루트 만들기 <xref:System.Windows.Forms.TreeNode>, 다음 하위 노드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-107">Instantiate a <xref:System.Windows.Forms.TreeView> control with the appropriate property settings, create a root <xref:System.Windows.Forms.TreeNode>, and then add subnodes.</span></span>  
   
-2.  <xref:System.Windows.Forms.ContextMenuStrip> 구성 요소를 인스턴스화한 다음, 런타임에 사용할 수 있도록 할 각 작업에 대한 <xref:System.Windows.Forms.ToolStripMenuItem>을 추가합니다.  
+2.  <span data-ttu-id="d2601-108">인스턴스화하는 <xref:System.Windows.Forms.ContextMenuStrip> 구성 요소를 한 다음 추가 <xref:System.Windows.Forms.ToolStripMenuItem> 실행 시 사용할 수 있도록 설정할 각 작업에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-108">Instantiate a <xref:System.Windows.Forms.ContextMenuStrip> component, and then add a <xref:System.Windows.Forms.ToolStripMenuItem> for each operation you want to make available at run time.</span></span>  
   
-3.  적절한 <xref:System.Windows.Forms.TreeNode>의 <xref:System.Windows.Forms.TreeNode.ContextMenuStrip%2A> 속성을 해당 바로 가기 메뉴로 설정합니다.  
+3.  <span data-ttu-id="d2601-109">설정의 <xref:System.Windows.Forms.TreeNode.ContextMenuStrip%2A> 적절 한 속성 <xref:System.Windows.Forms.TreeNode> 만들면 바로 가기 메뉴에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-109">Set the <xref:System.Windows.Forms.TreeNode.ContextMenuStrip%2A> property of the appropriate <xref:System.Windows.Forms.TreeNode> to the shortcut menu you create.</span></span>  
   
-4.  이 속성이 설정되어 있을 때 노드를 마우스 오른쪽 단추로 클릭하면 바로 가기 메뉴가 표시됩니다.  
+4.  <span data-ttu-id="d2601-110">이 속성이 설정 된 경우 바로 가기 메뉴에서 노드를 마우스 오른쪽 단추로 클릭할 때 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-110">When this property is set, the shortcut menu will be displayed when you right-click the node.</span></span>  
   
- 다음 코드 예제에서는 <xref:System.Windows.Forms.TreeView>의 루트 <xref:System.Windows.Forms.TreeNode>와 연결된 기본 <xref:System.Windows.Forms.TreeView> 및 <xref:System.Windows.Forms.ContextMenuStrip>을 만듭니다.  개발 중인 <xref:System.Windows.Forms.TreeView>에 맞게 메뉴 선택을 사용자 지정해야 합니다.  또한 해당 메뉴 항목에 대한 <xref:System.Windows.Forms.ToolStripItem.Click> 이벤트를 처리하는 코드를 작성할 수 있습니다.  
+ <span data-ttu-id="d2601-111">다음 코드 예제에서는 기본 <xref:System.Windows.Forms.TreeView> 및 <xref:System.Windows.Forms.ContextMenuStrip> 루트와 연결 된 <xref:System.Windows.Forms.TreeNode> 의 <xref:System.Windows.Forms.TreeView>합니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-111">The following code example creates a basic <xref:System.Windows.Forms.TreeView> and <xref:System.Windows.Forms.ContextMenuStrip> associated with the root <xref:System.Windows.Forms.TreeNode> of the <xref:System.Windows.Forms.TreeView>.</span></span> <span data-ttu-id="d2601-112">메뉴 선택 맞게 사용자 지정 해야 합니다는 <xref:System.Windows.Forms.TreeView> 개발 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-112">You will need to customize the menu choices to those that fit the <xref:System.Windows.Forms.TreeView> you are developing.</span></span> <span data-ttu-id="d2601-113">또한 처리 하는 코드를 작성 하려면 됩니다는 <xref:System.Windows.Forms.ToolStripItem.Click> 이러한 새 메뉴 항목에 대 한 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="d2601-113">Additionally, you will want to write code to handle the <xref:System.Windows.Forms.ToolStripItem.Click> events for these menu items.</span></span>  
   
  [!code-cpp[System.Windows.Forms.TreeNodeContextMenuStrip#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/cpp/Form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.TreeNodeContextMenuStrip#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.TreeNodeContextMenuStrip#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/VB/Form1.vb#1)]  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ContextMenuStrip>   
- [TreeView 컨트롤](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="d2601-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d2601-114">See Also</span></span>  
+ <xref:System.Windows.Forms.ContextMenuStrip>  
+ [<span data-ttu-id="d2601-115">TreeView 컨트롤</span><span class="sxs-lookup"><span data-stu-id="d2601-115">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)

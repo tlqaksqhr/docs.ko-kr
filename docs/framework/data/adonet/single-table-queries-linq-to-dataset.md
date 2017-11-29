@@ -1,40 +1,46 @@
 ---
-title: "단일 테이블 쿼리(LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "단일 클래스 쿼리(LINQ to DataSet)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f157bb172d173872aa7b792035b653976a9c1c0c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 단일 테이블 쿼리(LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 쿼리는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Query.IQueryable%601> 인터페이스를 구현하는 데이터 소스에서 작동합니다.  <xref:System.Data.DataTable> 클래스에는 두 인터페이스가 구현되어 있지 않으므로 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 쿼리의 `From` 절에서 <xref:System.Data.DataTable>을 소스로 사용하려면 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 메서드를 호출해야 합니다.  
+# <a name="single-table-queries-linq-to-dataset"></a><span data-ttu-id="a322b-102">단일 클래스 쿼리(LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="a322b-102">Single-Table Queries (LINQ to DataSet)</span></span>
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]<span data-ttu-id="a322b-103">쿼리 작업을 구현 하는 데이터 원본에는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-103"> queries work on data sources that implement the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="a322b-104"><xref:System.Data.DataTable> 클래스에는 두 인터페이스가 구현되어 있지 않으므로 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 쿼리의 <xref:System.Data.DataTable> 절에서 `From`을 소스로 사용하려면 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 메서드를 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-104">The <xref:System.Data.DataTable> class does not implement either interface, so you must call the <xref:System.Data.DataTableExtensions.AsEnumerable%2A> method if you want to use the <xref:System.Data.DataTable> as a source in the `From` clause of a [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] query.</span></span>  
   
- 다음 예제에서는 SalesOrderHeader 테이블에서 모든 온라인 주문을 가져와서 주문 ID, 주문 날짜 및 주문 번호를 콘솔에 출력합니다.  
+ <span data-ttu-id="a322b-105">다음 예제에서는 SalesOrderHeader 테이블에서 모든 온라인 주문을 가져와서 주문 ID, 주문 날짜 및 주문 번호를 콘솔에 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-105">The following example gets all the online orders from the SalesOrderHeader table and outputs the order ID, order date, and order number to the console.</span></span>  
   
- [!code-csharp[dp linq to dataset examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]
- [!code-vb[dp linq to dataset examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)]  
+ [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
+ [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- 지역 변수 쿼리는 표준 쿼리 연산자 또는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 경우 <xref:System.Data.DataSet> 클래스 관련 연산자에서 하나 이상의 쿼리 연산자를 적용하여 하나 이상의 정보 소스에 대해 작동하는 쿼리 식으로 초기화됩니다.  이전 예제의 쿼리 식에서는 두 개의 표준 쿼리 연산자인 `Where`와 `Select`를 사용합니다.  
+ <span data-ttu-id="a322b-106">지역 변수 쿼리는 표준 쿼리 연산자 또는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 경우 <xref:System.Data.DataSet> 클래스 관련 연산자에서 하나 이상의 쿼리 연산자를 적용하여 하나 이상의 정보 소스에 대해 작동하는 쿼리 식으로 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-106">The local variable query is initialized with a query expression, which operates on one or more information sources by applying one or more query operators from either the standard query operators or, in the case of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], operators specific to the <xref:System.Data.DataSet> class.</span></span> <span data-ttu-id="a322b-107">이전 예제의 쿼리 식에서는 두 개의 표준 쿼리 연산자인 `Where`와 `Select`를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-107">The query expression in the previous example uses two of the standard query operators: `Where` and `Select`.</span></span>  
   
- `Where` 절에서는 조건을 기준으로 시퀀스를 필터링하며, 이 경우에는 `OnlineOrderFlag`가 `true`로 설정됩니다.  `Select` 연산자는 연산자로 전달된 인수를 캡처하는 열거 가능한 개체를 할당하고 반환합니다.  위 예제에서는 세 개의 `SalesOrderID`, `OrderDate` 및 `SalesOrderNumber` 속성을 가진 익명 형식이 만들어집니다.  이러한 세 속성의 값은 `SalesOrderHeader` 테이블에 있는 `SalesOrderID`, `OrderDate` 및 `SalesOrderNumber` 열의 값으로 설정됩니다.  
+ <span data-ttu-id="a322b-108">`Where` 절에서는 조건을 기준으로 시퀀스를 필터링하며, 이 경우에는 `OnlineOrderFlag`가 `true`로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-108">The `Where` clause filters the sequence based on a condition, in this case that the `OnlineOrderFlag` is set to `true`.</span></span> <span data-ttu-id="a322b-109">`Select` 연산자는 연산자로 전달된 인수를 캡처하는 열거 가능한 개체를 할당하고 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-109">The `Select` operator allocates and returns an enumerable object that captures the arguments passed to the operator.</span></span> <span data-ttu-id="a322b-110">위 예제에서는 세 개의 `SalesOrderID`, `OrderDate` 및 `SalesOrderNumber` 속성을 가진 익명 형식이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-110">In this above example, an anonymous type is created with three properties: `SalesOrderID`, `OrderDate`, and `SalesOrderNumber`.</span></span> <span data-ttu-id="a322b-111">이러한 세 속성의 값은 `SalesOrderID` 테이블에 있는 `OrderDate`, `SalesOrderNumber` 및 `SalesOrderHeader` 열의 값으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-111">The values of these three properties are set to the values of the `SalesOrderID`, `OrderDate`, and `SalesOrderNumber` columns from the `SalesOrderHeader` table.</span></span>  
   
- 그런 다음 `foreach` 루프에서는 `Select`에서 반환된 열거 가능한 개체를 열거하고 쿼리 결과를 생성합니다.  쿼리는 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 <xref:System.Linq.Enumerable> 형식이므로 `foreach` 루프를 사용하는 동안 쿼리 변수가 반복될 때까지 쿼리에 대한 계산이 지연됩니다.  쿼리 계산이 지연되면 여러 차례 계산할 수 있으면서 계산할 때마다 다른 결과가 나올 수 있는 값으로 쿼리를 유지할 수 있습니다.  
+ <span data-ttu-id="a322b-112">그런 다음 `foreach` 루프에서는 `Select`에서 반환된 열거 가능한 개체를 열거하고 쿼리 결과를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-112">The `foreach` loop then enumerates the enumerable object returned by `Select` and yields the query results.</span></span> <span data-ttu-id="a322b-113">쿼리는 <xref:System.Linq.Enumerable>을 구현하는 <xref:System.Collections.Generic.IEnumerable%601> 형식이므로 `foreach` 루프를 사용하는 동안 쿼리 변수가 반복될 때까지 쿼리에 대한 계산이 지연됩니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-113">Because query is an <xref:System.Linq.Enumerable> type, which implements <xref:System.Collections.Generic.IEnumerable%601>, the evaluation of the query is deferred until the query variable is iterated over using the `foreach` loop.</span></span> <span data-ttu-id="a322b-114">쿼리 계산이 지연되면 여러 차례 계산할 수 있으면서 계산할 때마다 다른 결과가 나올 수 있는 값으로 쿼리를 유지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-114">Deferred query evaluation allows queries to be kept as values that can be evaluated multiple times, each time yielding potentially different results.</span></span>  
   
- <xref:System.Data.DataRowExtensions.Field%2A> 메서드는 <xref:System.Data.DataRow>의 열 값에 대한 액세스를 제공하며 이전 예제에서 나오지 않은 <xref:System.Data.DataRowExtensions.SetField%2A>는 <xref:System.Data.DataRow>의 열 값을 설정합니다.  <xref:System.Data.DataRowExtensions.Field%2A> 메서드와 <xref:System.Data.DataRowExtensions.SetField%2A> 메서드에서는 nullable 형식이 처리되므로 명시적으로 null 값을 검사하지 않아도 됩니다.  또한 두 메서드 모두 제네릭 메서드이므로 반환 형식을 캐스팅하지 않아도 됩니다.  <xref:System.Data.DataRow>의 기존 열 접근자\(예: `o["OrderDate"]`\)를 사용할 수도 있지만 그렇게 하려면 반환 개체를 적절한 형식으로 캐스팅해야 합니다.  열이 nullable인 경우에는 <xref:System.Data.DataRow.IsNull%2A> 메서드를 사용하여 값이 null인지 확인해야 합니다.  자세한 내용은 [제네릭 필드 및 SetField 메서드](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)을 참조하세요.  
+ <span data-ttu-id="a322b-115"><xref:System.Data.DataRowExtensions.Field%2A> 메서드는 <xref:System.Data.DataRow>의 열 값에 대한 액세스를 제공하며 이전 예제에서 나오지 않은 <xref:System.Data.DataRowExtensions.SetField%2A>는 <xref:System.Data.DataRow>의 열 값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-115">The <xref:System.Data.DataRowExtensions.Field%2A> method provides access to the column values of a <xref:System.Data.DataRow> and the <xref:System.Data.DataRowExtensions.SetField%2A> (not shown in the previous example) sets column values in a <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="a322b-116"><xref:System.Data.DataRowExtensions.Field%2A> 메서드와 <xref:System.Data.DataRowExtensions.SetField%2A> 메서드에서는 nullable 형식이 처리되므로 명시적으로 null 값을 검사하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-116">Both the <xref:System.Data.DataRowExtensions.Field%2A> method and <xref:System.Data.DataRowExtensions.SetField%2A> method handle nullable types, so you do not have to explicitly check for null values.</span></span> <span data-ttu-id="a322b-117">또한 두 메서드 모두 제네릭 메서드이므로 반환 형식을 캐스팅하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-117">Both methods are generic methods, also, which means you do not have to cast the return type.</span></span> <span data-ttu-id="a322b-118"><xref:System.Data.DataRow>의 기존 열 접근자(예: `o["OrderDate"]`)를 사용할 수도 있지만 그렇게 하려면 반환 개체를 적절한 형식으로 캐스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-118">You could use the pre-existing column accessor in <xref:System.Data.DataRow> (for example, `o["OrderDate"]`), but doing so would require you to cast the return object to the appropriate type.</span></span>  <span data-ttu-id="a322b-119">열이 nullable인 경우에는 <xref:System.Data.DataRow.IsNull%2A> 메서드를 사용하여 값이 null인지 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-119">If the column is nullable you have to check if the value is null by using the <xref:System.Data.DataRow.IsNull%2A> method.</span></span> <span data-ttu-id="a322b-120">자세한 내용은 참조 [제네릭 Field 및 SetField 메서드](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-120">For more information, see [Generic Field and SetField Methods](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md).</span></span>  
   
- <xref:System.Data.DataRowExtensions.Field%2A> 메서드 및 <xref:System.Data.DataRowExtensions.SetField%2A> 메서드의 제네릭 매개 변수 `T`에 지정된 데이터 형식은 내부 값의 형식과 일치해야 하며, 그렇지 않으면 <xref:System.InvalidCastException>이 throw됩니다.  지정된 열 이름도 <xref:System.Data.DataSet>의 열 이름과 일치해야 하며, 그렇지 않으면 <xref:System.ArgumentException>이 throw됩니다.  두 경우 모두 쿼리가 실행되는 런타임에 데이터 열거형에서 예외가 throw됩니다.  
+ <span data-ttu-id="a322b-121">`T` 메서드 및 <xref:System.Data.DataRowExtensions.Field%2A> 메서드의 제네릭 매개 변수 <xref:System.Data.DataRowExtensions.SetField%2A>에 지정된 데이터 형식은 내부 값의 형식과 일치해야 하며, 그렇지 않으면 <xref:System.InvalidCastException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-121">Note that the data type specified in the generic parameter `T` of the <xref:System.Data.DataRowExtensions.Field%2A> method and <xref:System.Data.DataRowExtensions.SetField%2A> method must match the type of the underlying value or an <xref:System.InvalidCastException> will be thrown.</span></span> <span data-ttu-id="a322b-122">지정된 열 이름도 <xref:System.Data.DataSet>의 열 이름과 일치해야 하며, 그렇지 않으면 <xref:System.ArgumentException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-122">The specified column name must also match the name of a column in the <xref:System.Data.DataSet> or an <xref:System.ArgumentException> will be thrown.</span></span> <span data-ttu-id="a322b-123">두 경우 모두 쿼리가 실행되는 런타임에 데이터 열거형에서 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="a322b-123">In both cases, the exception is thrown at run time data enumeration when the query is executed.</span></span>  
   
-## 참고 항목  
- [크로스 테이블 쿼리](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)   
- [형식화된 데이터 집합 쿼리](../../../../docs/framework/data/adonet/querying-typed-datasets.md)   
- [제네릭 필드 및 SetField 메서드](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="a322b-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a322b-124">See Also</span></span>  
+ [<span data-ttu-id="a322b-125">크로스 테이블 쿼리</span><span class="sxs-lookup"><span data-stu-id="a322b-125">Cross-Table Queries</span></span>](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
+ [<span data-ttu-id="a322b-126">형식화 된 데이터 집합 쿼리</span><span class="sxs-lookup"><span data-stu-id="a322b-126">Querying Typed DataSets</span></span>](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [<span data-ttu-id="a322b-127">제네릭 Field 및 SetField 메서드</span><span class="sxs-lookup"><span data-stu-id="a322b-127">Generic Field and SetField Methods</span></span>](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

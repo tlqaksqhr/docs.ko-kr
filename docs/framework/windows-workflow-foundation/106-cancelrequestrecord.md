@@ -1,51 +1,55 @@
 ---
-title: "106 - CancelRequestRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 106 - CancelRequestRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f72a59aa-8093-4a8e-94df-40acaffb1ffb
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36de6eabb247cb59e8759032e5cd6d6996b52d45
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 106 - CancelRequestRecord
-## 속성  
+# <a name="106---cancelrequestrecord"></a><span data-ttu-id="dde20-102">106 - CancelRequestRecord</span><span class="sxs-lookup"><span data-stu-id="dde20-102">106 - CancelRequestRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="dde20-103">속성</span><span class="sxs-lookup"><span data-stu-id="dde20-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id|106|  
-|키워드|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
-|수준|정보|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/분석|  
+|<span data-ttu-id="dde20-104">Id</span><span class="sxs-lookup"><span data-stu-id="dde20-104">Id</span></span>|<span data-ttu-id="dde20-105">106</span><span class="sxs-lookup"><span data-stu-id="dde20-105">106</span></span>|  
+|<span data-ttu-id="dde20-106">키워드</span><span class="sxs-lookup"><span data-stu-id="dde20-106">Keywords</span></span>|<span data-ttu-id="dde20-107">EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="dde20-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="dde20-108">수준</span><span class="sxs-lookup"><span data-stu-id="dde20-108">Level</span></span>|<span data-ttu-id="dde20-109">정보</span><span class="sxs-lookup"><span data-stu-id="dde20-109">Information</span></span>|  
+|<span data-ttu-id="dde20-110">채널</span><span class="sxs-lookup"><span data-stu-id="dde20-110">Channel</span></span>|<span data-ttu-id="dde20-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석</span><span class="sxs-lookup"><span data-stu-id="dde20-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 설명  
- 워크플로 인스턴스 내의 활동이 cancelrequestedrecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  
+## <a name="description"></a><span data-ttu-id="dde20-112">설명</span><span class="sxs-lookup"><span data-stu-id="dde20-112">Description</span></span>  
+ <span data-ttu-id="dde20-113">워크플로 인스턴스 내의 활동이 cancelrequestedrecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="dde20-113">This event is emitted by the ETW tracking participant when a activity within a workflow instance emits cancelrequestedrecord.</span></span>  
   
-## 메시지  
- TrackRecord \= CancelRequestedRecord, InstanceID\=%1, RecordNumber\=%2, EventTime\=%3, Name\=%4, ActivityId\=%5, ActivityInstanceId\=%6, ActivityTypeName \= %7, ChildActivityName \= %8, ChildActivityId \= %9, ChildActivityInstanceId \= %10, ChildActivityTypeName \=%11, Annotations\=%12, ProfileName \= %13  
+## <a name="message"></a><span data-ttu-id="dde20-114">메시지</span><span class="sxs-lookup"><span data-stu-id="dde20-114">Message</span></span>  
+ <span data-ttu-id="dde20-115">TrackRecord = CancelRequestedRecord, InstanceID=%1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityId=%5, ActivityInstanceId=%6, ActivityTypeName = %7, ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = %10, ChildActivityTypeName =%11, Annotations=%12, ProfileName = %13</span><span class="sxs-lookup"><span data-stu-id="dde20-115">TrackRecord = CancelRequestedRecord, InstanceID=%1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityId=%5, ActivityInstanceId=%6, ActivityTypeName = %7, ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = %10, ChildActivityTypeName =%11, Annotations=%12, ProfileName = %13</span></span>  
   
-## 세부 사항  
+## <a name="details"></a><span data-ttu-id="dde20-116">설명</span><span class="sxs-lookup"><span data-stu-id="dde20-116">Details</span></span>  
   
-|데이터 항목 이름|데이터 항목 형식|설명|  
-|---------------|---------------|--------|  
-|InstanceId|xs:GUID|워크플로의 인스턴스 ID|  
-|RecordNumber|xs:long|내보낸 레코드의 시퀀스 번호|  
-|EventTime|xs:dateTime|이벤트를 내보낸 시간\(UTC\)|  
-|이름|xs:string|취소 작업을 요청한 활동의 이름|  
-|ActivityId|xs:string|취소 작업을 요청한 활동의 ID|  
-|ActivityInstanceId|xs:string|취소 작업을 요청한 활동의 인스턴스 ID|  
-|ActivityTypeName|xs:string|취소 작업을 요청한 활동의 형식|  
-|ChildActivityName|xs:string|취소되는 활동의 이름|  
-|ChildActivityId|xs:string|취소되는 활동의 ID|  
-|ChildActivityInstanceId|xs:string|취소되는 활동의 활동 인스턴스 ID|  
-|ChildActivityTypeName|xs:string|취소할 활동의 형식|  
-|주석|xs:string|이 이벤트에 추가된 주석입니다.값은 xml 요소에 \<items\>\<\> item  name \= "annotationName" type\="System.String"\<annotationValue\>\<\/item\>\/items 형식으로 저장됩니다.주석을 지정하지 않으면 문자열에 \<items\/\>가 포함됩니다.ETW 이벤트 크기는 ETW 버퍼 크기 또는 ETW 이벤트의 최대 페이로드에 따라 제한됩니다.이벤트 크기가 ETW 제한을 초과하면 주석을 삭제하고 주석 값을 \<items\>...\<\/items\>로 대체하여 이벤트를 자릅니다.|  
-|ProfileName|xs:string|이 이벤트를 내보낸 이름 또는 추적 프로필|  
-|HostReference|xs:string|웹 호스팅 서비스의 경우 이 필드는 웹 계층의 서비스를 고유하게 식별합니다.이 서비스의 형식은 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'\(예: 'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'\)으로 정의됩니다.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|
+|<span data-ttu-id="dde20-117">데이터 항목 이름</span><span class="sxs-lookup"><span data-stu-id="dde20-117">Data Item Name</span></span>|<span data-ttu-id="dde20-118">데이터 항목 형식</span><span class="sxs-lookup"><span data-stu-id="dde20-118">Data Item Type</span></span>|<span data-ttu-id="dde20-119">설명</span><span class="sxs-lookup"><span data-stu-id="dde20-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="dde20-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="dde20-120">InstanceId</span></span>|<span data-ttu-id="dde20-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="dde20-121">xs:GUID</span></span>|<span data-ttu-id="dde20-122">워크플로의 인스턴스 ID</span><span class="sxs-lookup"><span data-stu-id="dde20-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="dde20-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="dde20-123">RecordNumber</span></span>|<span data-ttu-id="dde20-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="dde20-124">xs:long</span></span>|<span data-ttu-id="dde20-125">내보낸 레코드의 시퀀스 번호</span><span class="sxs-lookup"><span data-stu-id="dde20-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="dde20-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="dde20-126">EventTime</span></span>|<span data-ttu-id="dde20-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="dde20-127">xs:dateTime</span></span>|<span data-ttu-id="dde20-128">이벤트를 내보낸 시간(UTC)</span><span class="sxs-lookup"><span data-stu-id="dde20-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="dde20-129">이름</span><span class="sxs-lookup"><span data-stu-id="dde20-129">Name</span></span>|<span data-ttu-id="dde20-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-130">xs:string</span></span>|<span data-ttu-id="dde20-131">취소 작업을 요청한 활동의 이름</span><span class="sxs-lookup"><span data-stu-id="dde20-131">The name of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="dde20-132">ActivityId</span><span class="sxs-lookup"><span data-stu-id="dde20-132">ActivityId</span></span>|<span data-ttu-id="dde20-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-133">xs:string</span></span>|<span data-ttu-id="dde20-134">취소 작업을 요청한 활동의 ID</span><span class="sxs-lookup"><span data-stu-id="dde20-134">The id of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="dde20-135">ActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="dde20-135">ActivityInstanceId</span></span>|<span data-ttu-id="dde20-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-136">xs:string</span></span>|<span data-ttu-id="dde20-137">취소 작업을 요청한 활동의 인스턴스 ID</span><span class="sxs-lookup"><span data-stu-id="dde20-137">The instance id of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="dde20-138">ActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="dde20-138">ActivityTypeName</span></span>|<span data-ttu-id="dde20-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-139">xs:string</span></span>|<span data-ttu-id="dde20-140">취소 작업을 요청한 활동의 형식</span><span class="sxs-lookup"><span data-stu-id="dde20-140">The type of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="dde20-141">ChildActivityName</span><span class="sxs-lookup"><span data-stu-id="dde20-141">ChildActivityName</span></span>|<span data-ttu-id="dde20-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-142">xs:string</span></span>|<span data-ttu-id="dde20-143">취소되는 활동의 이름</span><span class="sxs-lookup"><span data-stu-id="dde20-143">The name of the activity being canceled</span></span>|  
+|<span data-ttu-id="dde20-144">ChildActivityId</span><span class="sxs-lookup"><span data-stu-id="dde20-144">ChildActivityId</span></span>|<span data-ttu-id="dde20-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-145">xs:string</span></span>|<span data-ttu-id="dde20-146">취소되는 활동의 ID</span><span class="sxs-lookup"><span data-stu-id="dde20-146">The id of the activity being canceled</span></span>|  
+|<span data-ttu-id="dde20-147">ChildActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="dde20-147">ChildActivityInstanceId</span></span>|<span data-ttu-id="dde20-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-148">xs:string</span></span>|<span data-ttu-id="dde20-149">취소되는 활동의 활동 인스턴스 ID</span><span class="sxs-lookup"><span data-stu-id="dde20-149">The instance id of the activity being canceled</span></span>|  
+|<span data-ttu-id="dde20-150">ChildActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="dde20-150">ChildActivityTypeName</span></span>|<span data-ttu-id="dde20-151">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-151">xs:string</span></span>|<span data-ttu-id="dde20-152">취소할 활동의 형식</span><span class="sxs-lookup"><span data-stu-id="dde20-152">The type of the activity being canceled</span></span>|  
+|<span data-ttu-id="dde20-153">주석</span><span class="sxs-lookup"><span data-stu-id="dde20-153">Annotations</span></span>|<span data-ttu-id="dde20-154">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-154">xs:string</span></span>|<span data-ttu-id="dde20-155">이 이벤트에 추가된 주석입니다.</span><span class="sxs-lookup"><span data-stu-id="dde20-155">The annotations that were added to this event.</span></span>  <span data-ttu-id="dde20-156">값 형식으로 xml 요소에 저장 됩니다 \<항목 >\< 항목 이름 = "annotationName" type = "> annotationValue\<항목/>\<항목/>입니다.</span><span class="sxs-lookup"><span data-stu-id="dde20-156">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="dde20-157">주석을 지정 하지 않으면 문자열을 포함 하는 경우 \<항목 / >입니다.</span><span class="sxs-lookup"><span data-stu-id="dde20-157">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="dde20-158">ETW 이벤트 크기는 ETW 버퍼 크기 또는 ETW 이벤트의 최대 페이로드에 따라 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="dde20-158">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="dde20-159">이벤트 크기가 ETW 제한을 초과 하면 주석을 삭제 하 고 주석 값으로 바꿔 이벤트 잘립니다 경우 \<항목 >... \<항목/>입니다.</span><span class="sxs-lookup"><span data-stu-id="dde20-159">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="dde20-160">ProfileName</span><span class="sxs-lookup"><span data-stu-id="dde20-160">ProfileName</span></span>|<span data-ttu-id="dde20-161">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-161">xs:string</span></span>|<span data-ttu-id="dde20-162">이 이벤트를 내보낸 이름 또는 추적 프로필</span><span class="sxs-lookup"><span data-stu-id="dde20-162">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="dde20-163">HostReference</span><span class="sxs-lookup"><span data-stu-id="dde20-163">HostReference</span></span>|<span data-ttu-id="dde20-164">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-164">xs:string</span></span>|<span data-ttu-id="dde20-165">웹 호스팅 서비스의 경우 이 필드는 웹 계층의 서비스를 고유하게 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="dde20-165">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="dde20-166">해당 형식으로 정의 됩니다 ' 웹 Site Name Application Virtual Path &#124; 서비스의 가상 경로 &#124; ServiceName' 예: ' 기본 웹 사이트/CalculatorApplication #124;/CalculatorService.svc &#124; CalculatorService'</span><span class="sxs-lookup"><span data-stu-id="dde20-166">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="dde20-167">AppDomain</span><span class="sxs-lookup"><span data-stu-id="dde20-167">AppDomain</span></span>|<span data-ttu-id="dde20-168">xs:string</span><span class="sxs-lookup"><span data-stu-id="dde20-168">xs:string</span></span>|<span data-ttu-id="dde20-169">AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="dde20-169">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

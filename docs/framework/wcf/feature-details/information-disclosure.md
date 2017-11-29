@@ -1,72 +1,75 @@
 ---
-title: "정보 공개 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "정보 공개"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1169aae0a2d2db6d020e87b1430e2dbdc1596117
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 정보 공개
-정보 공개를 사용하여 공격자가 시스템에 대해 유용한 정보를 얻을 수 있습니다.따라서 항상 노출하려는 정보의 내용과 악의가 있는 사용자가 사용해도 되는지 여부를 고려합니다.다음은 가능한 정보 공개 공격을 나열하고 각 공격에 대한 완화 방안을 제공합니다.  
+# <a name="information-disclosure"></a><span data-ttu-id="c53b7-102">정보 공개</span><span class="sxs-lookup"><span data-stu-id="c53b7-102">Information Disclosure</span></span>
+<span data-ttu-id="c53b7-103">정보 공개를 사용하여 공격자가 시스템에 대해 유용한 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-103">Information disclosure enables an attacker to gain valuable information about a system.</span></span> <span data-ttu-id="c53b7-104">따라서 항상 노출하려는 정보의 내용과 악의가 있는 사용자가 사용해도 되는지 여부를 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-104">Therefore, always consider what information you are revealing and whether it can be used by a malicious user.</span></span> <span data-ttu-id="c53b7-105">다음은 가능한 정보 공개 공격을 나열하고 각 공격에 대한 완화 방안을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-105">The following lists possible information disclosure attacks and provides mitigations for each.</span></span>  
   
-## 메시지 보안 및 HTTP  
- HTTP 전송 계층을 통해 메시지 수준 보안을 사용하는 경우 메시지 수준 보안이 HTTP 헤더를 보호하지 않습니다.HTTP 헤더를 보호하기 위한 유일한 방법은 HTTP 대신 HTTPS 전송을 사용하는 것입니다.HTTPS 전송은 HTTP 헤더를 포함한 전체 메시지를 SSL\(Secure Sockets Layer\) 프로토콜을 사용하여 암호화합니다.  
+## <a name="message-security-and-http"></a><span data-ttu-id="c53b7-106">메시지 보안 및 HTTP</span><span class="sxs-lookup"><span data-stu-id="c53b7-106">Message Security and HTTP</span></span>  
+ <span data-ttu-id="c53b7-107">HTTP 전송 계층을 통해 메시지 수준 보안을 사용하는 경우 메시지 수준 보안이 HTTP 헤더를 보호하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-107">If you are using message-level security over an HTTP transport layer, be aware that message-level security does not protect HTTP headers.</span></span> <span data-ttu-id="c53b7-108">HTTP 헤더를 보호하기 위한 유일한 방법은 HTTP 대신 HTTPS 전송을 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-108">The only way to protect HTTP headers is to use HTTPS transport instead of HTTP.</span></span> <span data-ttu-id="c53b7-109">HTTPS 전송은 HTTP 헤더를 포함한 전체 메시지를 SSL(Secure Sockets Layer) 프로토콜을 사용하여 암호화합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-109">HTTPS transport causes the entire message, including the HTTP headers, to be encrypted using the Secure Sockets Layer (SSL) protocol.</span></span>  
   
-## 정책 정보  
- 민감한 발급된 토큰 요구 사항 또는 토큰 발급자 정보가 정책에 노출되는 페더레이션 시나리오의 경우 특히 정책 보안 유지가 중요합니다.이러한 경우 페더레이션 서비스 정책 끝점의 보안을 유지하여 발급된 토큰에 삽입할 클레임 형식 또는 악의적인 토큰 발급자에게 클라이언트 리디렉션과 같이 공격자가 서비스에 대한 정보를 가져오지 못하도록 하는 것이 좋습니다.예를 들어, 공격자가 메시지 가로채기\(man\-in\-the\-middle\) 공격을 실행한 발급자로 끝나도록 페더레이션 신뢰 체인을 다시 구성하여 사용자 이름\/암호 쌍을 검색할 수 있습니다.또한 정책 검색을 통해 바인딩을 가져오는 페더레이션 클라이언트가 가져온 페더레이션 신뢰 체인의 발급자를 신뢰하는지 확인하는 것이 좋습니다.페더레이션 시나리오에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)을 참조하십시오.  
+## <a name="policy-information"></a><span data-ttu-id="c53b7-110">정책 정보</span><span class="sxs-lookup"><span data-stu-id="c53b7-110">Policy Information</span></span>  
+ <span data-ttu-id="c53b7-111">민감한 발급된 토큰 요구 사항 또는 토큰 발급자 정보가 정책에 노출되는 페더레이션 시나리오의 경우 특히 정책 보안 유지가 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-111">Keeping policy secure is important, especially in federation scenarios where sensitive issued-token requirements or token-issuer information is exposed in policy.</span></span> <span data-ttu-id="c53b7-112">이러한 경우 페더레이션 서비스 정책 끝점의 보안을 유지하여 발급된 토큰에 삽입할 클레임 형식 또는 악의적인 토큰 발급자에게 클라이언트 리디렉션과 같이 공격자가 서비스에 대한 정보를 가져오지 못하도록 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-112">In these cases, the recommendation is to secure the federated service's policy endpoint to prevent attackers from obtaining information about the service, such as the type of claims to put in the issued token, or redirecting clients to malicious token issuers.</span></span> <span data-ttu-id="c53b7-113">예를 들어, 공격자가 메시지 가로채기(man-in-the-middle) 공격을 실행한 발급자로 끝나도록 페더레이션 신뢰 체인을 다시 구성하여 사용자 이름/암호 쌍을 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-113">For example, an attacker could discover user name/password pairs by reconfiguring the federated trust chain to terminate in an issuer that executed a man-in-the-middle attack.</span></span> <span data-ttu-id="c53b7-114">또한 정책 검색을 통해 바인딩을 가져오는 페더레이션 클라이언트가 가져온 페더레이션 신뢰 체인의 발급자를 신뢰하는지 확인하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-114">It is also recommended that federated clients who obtain their bindings through policy retrieval verify that they trust the issuers in the obtained federated trust chain.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c53b7-115">페더레이션 시나리오 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-115"> federation scenarios, see [Federation](../../../../docs/framework/wcf/feature-details/federation.md).</span></span>  
   
-## 메모리 덤프가 클레임 정보를 노출할 수 있음  
- 응용 프로그램이 실패할 경우 예를 들어 Dr. Watson씨가 작성한 파일과 같이로그 파일에 클레임 정보를 포함할 수 있습니다.이 정보는 지원 팀과 같은 다른 엔터티에 내보내지 않아야 합니다. 그렇지 않을 경우 개인 데이터가 포함된 클레임 정보도 내보내집니다.로그 파일을 알 수 없는 엔터티에 보내지 않으면 이러한 문제를 줄일 수 있습니다.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)을 참조하십시오.  
+## <a name="memory-dumps-can-reveal-claim-information"></a><span data-ttu-id="c53b7-116">메모리 덤프가 클레임 정보를 노출할 수 있음</span><span class="sxs-lookup"><span data-stu-id="c53b7-116">Memory Dumps Can Reveal Claim Information</span></span>  
+ <span data-ttu-id="c53b7-117">응용 프로그램이 실패할 경우 예를 들어 Dr. Watson씨가 작성한 파일과 같이 로그 파일에 클레임 정보를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-117">When an application fails, log files, such as those produced by Dr. Watson, can contain the claim information.</span></span> <span data-ttu-id="c53b7-118">이 정보는 지원 팀과 같은 다른 엔터티에 내보내지 않아야 합니다. 그렇지 않을 경우 개인 데이터가 포함된 클레임 정보도 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-118">This information should not be exported to other entities, such as support teams; otherwise, the claim information that contains private data is also exported.</span></span> <span data-ttu-id="c53b7-119">로그 파일을 알 수 없는 엔터티에 보내지 않으면 이러한 문제를 줄일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-119">You can mitigate this by not sending the log files to unknown entities.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c53b7-120">[Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-120"> [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).</span></span>  
   
-## 끝점 주소  
- 끝점 주소에는 끝점과 통신하는 데 필요한 정보가 포함되어 있습니다.SOAP 보안에서는 클라이언트와 서버 간의 대칭 키를 협상하기 위해 교환되는 보안 협상 메시지에 전체 주소가 포함되어 있어야 합니다.보안 협상은 부트스트랩 프로세스이기 때문에 이 프로세스 동안 주소 헤더를 암호화할 수 없습니다.따라서 주소에 어떠한 기밀 데이터도 포함하지 않아야 합니다. 포함할 경우 정보 공개 공격을 받을 수 있습니다.  
+## <a name="endpoint-addresses"></a><span data-ttu-id="c53b7-121">끝점 주소</span><span class="sxs-lookup"><span data-stu-id="c53b7-121">Endpoint Addresses</span></span>  
+ <span data-ttu-id="c53b7-122">끝점 주소에는 끝점과 통신하는 데 필요한 정보가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-122">An endpoint address contains the information needed to communicate with an endpoint.</span></span> <span data-ttu-id="c53b7-123">SOAP 보안에서는 클라이언트와 서버 간의 대칭 키를 협상하기 위해 교환되는 보안 협상 메시지에 전체 주소가 포함되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-123">SOAP security must include the address in full in the security negotiation messages that are exchanged in order to negotiate a symmetric key between a client and a server.</span></span> <span data-ttu-id="c53b7-124">보안 협상은 부트스트랩 프로세스이기 때문에 이 프로세스 동안 주소 헤더를 암호화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-124">Because security negotiation is a bootstrap process, the address headers cannot be encrypted during this process.</span></span> <span data-ttu-id="c53b7-125">따라서 주소에 어떠한 기밀 데이터도 포함하지 않아야 합니다. 포함할 경우 정보 공개 공격을 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-125">Therefore, the address should not contain any confidential data; otherwise, it leads to information disclosure attacks.</span></span>  
   
-## 암호화되지 않은 상태로 전송된 인증서  
- X.509 인증서를 사용하여 클라이언트를 인증하는 경우 인증서는 SOAP 헤더 내에서 보안되지 않은 상태로 전송됩니다.이것은 잠재적인 PII\(개인적으로 식별할 수 있는 정보\) 공개로 고려해야 합니다.이는 전체 메시지가 전송 수준 보안으로 암호화되는 `TransportWithMessageCredential` 모드에는 적용되지 않습니다.  
+## <a name="certificates-transferred-unencrypted"></a><span data-ttu-id="c53b7-126">암호화되지 않은 상태로 전송된 인증서</span><span class="sxs-lookup"><span data-stu-id="c53b7-126">Certificates Transferred Unencrypted</span></span>  
+ <span data-ttu-id="c53b7-127">X.509 인증서를 사용하여 클라이언트를 인증하는 경우 인증서는 SOAP 헤더 내에서 보안되지 않은 상태로 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-127">When you use an X.509 certificate to authenticate a client, the certificate is transferred in the clear, inside the SOAP header.</span></span> <span data-ttu-id="c53b7-128">이것은 잠재적인 PII(개인적으로 식별할 수 있는 정보) 공개로 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-128">Be aware of this as a potential personally identifiable information (PII) disclosure.</span></span> <span data-ttu-id="c53b7-129">이는 전체 메시지가 전송 수준 보안으로 암호화되는 `TransportWithMessageCredential` 모드에는 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-129">This is not an issue for `TransportWithMessageCredential` mode, where the entire message is encrypted with transport-level security.</span></span>  
   
-## 서비스 참조  
- 서비스 참조는 다른 서비스에 대한 참조입니다.예를 들어, 서비스가 작업 과정에서 서비스 참조를 클라이언트에 전달할 수 있습니다.또한 서비스 참조는 응용 프로그램 데이터 또는 대상에 대한 자격 증명과 같은 정보를 공개하기 전에 대상 주체의 ID를 확인하는 내부 구성 요소인 *트러스트 ID 검증 도구*에서도 사용됩니다.원격 트러스트 ID를 검증할 수 없거나 잘못된 경우 보낸 사람이 데이터 자체, 응용 프로그램 또는 사용자를 손상시킬 수 있는 공개된 데이터가 없는지 확인해야 합니다.  
+## <a name="service-references"></a><span data-ttu-id="c53b7-130">서비스 참조</span><span class="sxs-lookup"><span data-stu-id="c53b7-130">Service References</span></span>  
+ <span data-ttu-id="c53b7-131">서비스 참조는 다른 서비스에 대한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-131">A service reference is a reference to another service.</span></span> <span data-ttu-id="c53b7-132">예를 들어, 서비스가 작업 과정에서 서비스 참조를 클라이언트에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-132">For example, a service may pass a service reference to a client in the course of an operation.</span></span> <span data-ttu-id="c53b7-133">서비스 참조는도 함께 사용 되는 *트러스트 id 검증 도구*, 응용 프로그램 데이터 또는 대상에 대 한 자격 증명 등의 정보를 공개 하기 전에 대상 주체의 id를 보장 하는 내부 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-133">The service reference is also used with a *trust identity verifier*, an internal component that ensures the identity of the target principal before disclosing information such as application data or credentials to the target.</span></span> <span data-ttu-id="c53b7-134">원격 트러스트 ID를 검증할 수 없거나 잘못된 경우 보낸 사람이 데이터 자체, 응용 프로그램 또는 사용자를 손상시킬 수 있는 공개된 데이터가 없는지 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-134">If the remote trust identity cannot be verified or is incorrect, the sender should ensure that no data was disclosed that could compromise itself, the application, or the user.</span></span>  
   
- 완화 방안에는 다음이 포함됩니다.  
+ <span data-ttu-id="c53b7-135">완화 방안에는 다음이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-135">Mitigations include the following:</span></span>  
   
--   서비스 참조는 신뢰할 수 있는 것으로 간주합니다.서비스 참조 인스턴스를 전송할 때마다 손상되지 않았는지 확인해야 합니다.  
+-   <span data-ttu-id="c53b7-136">서비스 참조는 신뢰할 수 있는 것으로 간주합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-136">Service references are assumed to be trustworthy.</span></span> <span data-ttu-id="c53b7-137">서비스 참조 인스턴스를 전송할 때마다 손상되지 않았는지 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-137">Take care whenever transferring service reference instances to ensure that they have not been tampered with.</span></span>  
   
--   일부 응용 프로그램에서 서비스 참조의 데이터 및 원격 호스트에서 제공하는 신뢰 데이터를 기반으로 신뢰를 대화형으로 구축하는 사용자 경험을 제공할 수 있습니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 이러한 기능에 대한 확장성 지점을 제공하지만 사용자는 이러한 지점을 구현해야 합니다.  
+-   <span data-ttu-id="c53b7-138">일부 응용 프로그램에서 서비스 참조의 데이터 및 원격 호스트에서 제공하는 신뢰 데이터를 기반으로 신뢰를 대화형으로 구축하는 사용자 경험을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-138">Some applications can present a user experience that allows interactive establishment of trust based on data in the service reference and trust data proven by the remote host.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="c53b7-139">에서는 이러한 기능에 대한 확장성 지점을 제공하지만 사용자는 이러한 지점을 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-139"> provides extensibility points for such a facility, but the user must implemented them.</span></span>  
   
-## NTLM  
- 기본적으로 Windows 도메인 환경의 경우 Windows 인증은 Kerberos 프로토콜을 사용하여 사용자를 인증하고 권한을 부여합니다.일부 이유로 인해 Kerberos 프로토콜을 사용할 수 없는 경우 NTLM\(NT LAN Manager\)을 대신 사용합니다.<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성을 `false`로 설정하면 이 동작을 비활성화할 수 있습니다.NTLM을 사용하는 경우 고려해야 할 문제는 다음과 같습니다.  
+## <a name="ntlm"></a><span data-ttu-id="c53b7-140">NTLM</span><span class="sxs-lookup"><span data-stu-id="c53b7-140">NTLM</span></span>  
+ <span data-ttu-id="c53b7-141">기본적으로 Windows 도메인 환경의 경우 Windows 인증은 Kerberos 프로토콜을 사용하여 사용자를 인증하고 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-141">By default, in the Windows domain environment, Windows authentication uses the Kerberos protocol to authenticate and authorize users.</span></span> <span data-ttu-id="c53b7-142">일부 이유로 인해 Kerberos 프로토콜을 사용할 수 없는 경우 NTLM(NT LAN Manager)을 대신 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-142">If the Kerberos protocol cannot be used for some reason, NT LAN Manager (NTLM) is used as a fallback.</span></span> <span data-ttu-id="c53b7-143"><xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성을 `false`로 설정하면 이 동작을 비활성화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-143">You can disable this behavior by setting the <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> property to `false`.</span></span> <span data-ttu-id="c53b7-144">NTLM을 사용하는 경우 고려해야 할 문제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-144">Issues to be aware of when allowing NTLM include:</span></span>  
   
--   NTLM은 클라이언트 사용자 이름을 노출합니다.사용자 이름을 기밀로 유지해야 하는 경우 바인딩의 `AllowNTLM` 속성을 `false`로 설정합니다.  
+-   <span data-ttu-id="c53b7-145">NTLM은 클라이언트 사용자 이름을 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-145">NTLM exposes the client user name.</span></span> <span data-ttu-id="c53b7-146">사용자 이름을 기밀로 유지해야 하는 경우 바인딩의 `AllowNTLM` 속성을 `false`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-146">If the user name needs to be kept confidential, then set the `AllowNTLM` property on the binding to `false`.</span></span>  
   
--   NTLM은 서버 인증을 제공하지 않습니다.따라서 NTLM을 인증 프로토콜로 사용하는 경우 클라이언트가 올바른 서비스와 통신하는지 확인할 수 없습니다.  
+-   <span data-ttu-id="c53b7-147">NTLM은 서버 인증을 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-147">NTLM does not provide server authentication.</span></span> <span data-ttu-id="c53b7-148">따라서 NTLM을 인증 프로토콜로 사용하는 경우 클라이언트가 올바른 서비스와 통신하는지 확인할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-148">Therefore, the client cannot ensure that it is communicating with the right service when you use NTLM as an authentication protocol.</span></span>  
   
-### 클라이언트 자격 증명 또는 잘못된 ID를 지정하면 강제로 NTLM 사용  
- 클라이언트를 만들 때 도메인 이름 없이 클라이언트 자격 증명을 지정하거나 잘못된 서버 ID를 지정하면 NTLM이 Kerberos 프로토콜 대신 사용됩니다\(`AlllowNtlm` 속성을 `true`로 설정한 경우\).NTLM이 서버 인증을 수행하지 않기 때문에 정보가 잠재적으로 공개될 수 있습니다.  
+### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a><span data-ttu-id="c53b7-149">클라이언트 자격 증명 또는 잘못된 ID를 지정하면 강제로 NTLM 사용</span><span class="sxs-lookup"><span data-stu-id="c53b7-149">Specifying Client Credentials or Invalid Identity Forces NTLM Usage</span></span>  
+ <span data-ttu-id="c53b7-150">클라이언트를 만들 때 도메인 이름 없이 클라이언트 자격 증명을 지정하거나 잘못된 서버 ID를 지정하면 NTLM이 Kerberos 프로토콜 대신 사용됩니다(`AlllowNtlm` 속성을 `true`로 설정한 경우).</span><span class="sxs-lookup"><span data-stu-id="c53b7-150">When creating a client, specifying client credentials without a domain name, or specifying an invalid server identity, causes NTLM to be used instead of the Kerberos protocol (if the `AlllowNtlm` property is set to `true`).</span></span> <span data-ttu-id="c53b7-151">NTLM이 서버 인증을 수행하지 않기 때문에 정보가 잠재적으로 공개될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-151">Because  NTLM does not do server authentication, information can potentially be disclosed.</span></span>  
   
- 예를 들어, 다음 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 코드에 표시된 것처럼 도메인 이름 없이 Windows 클라이언트 자격 증명을 지정할 수 있습니다.  
+ <span data-ttu-id="c53b7-152">예를 들어, 다음 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 코드에 표시된 것처럼 도메인 이름 없이 Windows 클라이언트 자격 증명을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-152">For example, it is possible to specify Windows client credentials without a domain name, as shown in the following [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] code.</span></span>  
   
 ```  
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");  
 ```  
   
- 코드가 도메인 이름을 지정하지 않기 때문에 NTLM이 사용됩니다.  
+ <span data-ttu-id="c53b7-153">코드가 도메인 이름을 지정하지 않기 때문에 NTLM이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-153">The code does not specify a domain name, and therefore NTLM will be used.</span></span>  
   
- 도메인을 지정했지만 끝점 ID 기능을 사용하여 잘못된 서비스 사용자 이름을 지정하는 경우 NTLM이 사용됩니다.끝점을 지정하는 방식에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)을 참조하십시오.  
+ <span data-ttu-id="c53b7-154">도메인을 지정했지만 끝점 ID 기능을 사용하여 잘못된 서비스 사용자 이름을 지정하는 경우 NTLM이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-154">If the domain is specified, but an invalid service principal name is specified using the endpoint identity feature, then NTLM is used.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c53b7-155">끝점 id를 지정 하는 방법 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c53b7-155"> how endpoint identity is specified, see [Service Identity and Authentication](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
-## 참고 항목  
- [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)   
- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)   
- [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)   
- [변조](../../../../docs/framework/wcf/feature-details/tampering.md)   
- [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)   
- [재생 공격](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a><span data-ttu-id="c53b7-156">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c53b7-156">See Also</span></span>  
+ [<span data-ttu-id="c53b7-157">보안 고려 사항</span><span class="sxs-lookup"><span data-stu-id="c53b7-157">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [<span data-ttu-id="c53b7-158">권한 상승 문제점</span><span class="sxs-lookup"><span data-stu-id="c53b7-158">Elevation of Privilege</span></span>](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [<span data-ttu-id="c53b7-159">서비스 거부</span><span class="sxs-lookup"><span data-stu-id="c53b7-159">Denial of Service</span></span>](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [<span data-ttu-id="c53b7-160">변조</span><span class="sxs-lookup"><span data-stu-id="c53b7-160">Tampering</span></span>](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [<span data-ttu-id="c53b7-161">지원 되지 않는 시나리오</span><span class="sxs-lookup"><span data-stu-id="c53b7-161">Unsupported Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
+ [<span data-ttu-id="c53b7-162">재생 공격</span><span class="sxs-lookup"><span data-stu-id="c53b7-162">Replay Attacks</span></span>](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

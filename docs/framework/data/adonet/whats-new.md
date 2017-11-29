@@ -1,65 +1,68 @@
 ---
-title: "ADO.NET의 새로운 기능 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "기능 &#39; ADO.NET의 새로운 s"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9c0c9eb02cb95522d04765f454cd870f01a633f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ADO.NET의 새로운 기능
-다음은 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 새로운 기능입니다.  
+# <a name="what39s-new-in-adonet"></a><span data-ttu-id="1aa3a-102">기능 &#39; ADO.NET의 새로운 s</span><span class="sxs-lookup"><span data-stu-id="1aa3a-102">What&#39;s New in ADO.NET</span></span>
+<span data-ttu-id="1aa3a-103">다음은 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]의 새로운 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-103">The following features are new in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
-## SqlClient Data Provider  
- 다음은 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]의 새로운 기능입니다.  
+## <a name="sqlclient-data-provider"></a><span data-ttu-id="1aa3a-104">SqlClient Data Provider</span><span class="sxs-lookup"><span data-stu-id="1aa3a-104">SqlClient Data Provider</span></span>  
+ <span data-ttu-id="1aa3a-105">다음은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Data Provider for [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]의 새로운 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-105">The following features are new in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:</span></span>  
   
--   ConnectRetryCount 및 ConnectRetryInterval 연결 문자열 키워드\(<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>\)를 사용하면 유휴 연결 복원 기능을 제어할 수 있습니다.  
+-   <span data-ttu-id="1aa3a-106">ConnectRetryCount 및 ConnectRetryInterval 연결 문자열 키워드(<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>)를 사용하면 유휴 연결 복원 기능을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-106">The ConnectRetryCount and ConnectRetryInterval connection string keywords (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) let you control the idle connection resiliency feature.</span></span>  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 응용 프로그램으로의 스트리밍 지원은 서버의 데이터가 구조화되지 않는 시나리오를 지원합니다.  자세한 내용은 [SqlClient 스트리밍 지원](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)를 참조하세요.  
+-   <span data-ttu-id="1aa3a-107">[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 응용 프로그램으로의 스트리밍 지원은 서버의 데이터가 구조화되지 않는 시나리오를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-107">Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to an application supports scenarios where data on the server is unstructured.</span></span>  <span data-ttu-id="1aa3a-108">참조 [SqlClient 스트리밍 지원](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) 자세한 정보에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-108">See [SqlClient Streaming Support](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) for more information.</span></span>  
   
--   비동기 프로그래밍에 대한 지원이 추가되었습니다.  자세한 내용은 [비동기 프로그래밍](../../../../docs/framework/data/adonet/asynchronous-programming.md)를 참조하세요.  
+-   <span data-ttu-id="1aa3a-109">비동기 프로그래밍에 대한 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-109">Support has been added for asynchronous programming.</span></span>  <span data-ttu-id="1aa3a-110">참조 [비동기 프로그래밍](../../../../docs/framework/data/adonet/asynchronous-programming.md) 자세한 정보에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-110">See [Asynchronous Programming](../../../../docs/framework/data/adonet/asynchronous-programming.md) for more information.</span></span>  
   
--   이제 연결 실패가 확장 이벤트 로그에 기록됩니다.  자세한 내용은 [ADO.NET의 데이터 추적](../../../../docs/framework/data/adonet/data-tracing.md)을 참조하세요.  
+-   <span data-ttu-id="1aa3a-111">이제 연결 실패가 확장 이벤트 로그에 기록됩니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-111">Connection failures will now be logged in the extended events log.</span></span> <span data-ttu-id="1aa3a-112">자세한 내용은 [ADO.NET의 데이터 추적](../../../../docs/framework/data/adonet/data-tracing.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-112">For more information, see [Data Tracing in ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).</span></span>  
   
--   이제 SqlClient에 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]의 고가용성, 재해 복구 기능, AlwaysOn에 대한 지원이 포함되어 있습니다.  자세한 내용은 [고가용성 및 재해 복구에 대한 SqlClient 지원](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
+-   <span data-ttu-id="1aa3a-113">이제 SqlClient에 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]의 고가용성, 재해 복구 기능, AlwaysOn에 대한 지원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-113">SqlClient now has support for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]'s high availability, disaster recovery feature, AlwaysOn.</span></span> <span data-ttu-id="1aa3a-114">자세한 내용은 참조 [고가용성, 재해 복구에 대 한 SqlClient 지원](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-114">For more information, see [SqlClient Support for High Availability, Disaster Recovery](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).</span></span>  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 인증을 사용할 때 암호를 <xref:System.Security.SecureString>으로 전달할 수 있습니다.  자세한 내용은 <xref:System.Data.SqlClient.SqlCredential>를 참조하세요.  
+-   <span data-ttu-id="1aa3a-115"><xref:System.Security.SecureString> 인증을 사용할 때 암호를 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]으로 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-115">A password can be passed as a <xref:System.Security.SecureString> when using [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Authentication.</span></span> <span data-ttu-id="1aa3a-116">자세한 내용은 <xref:System.Data.SqlClient.SqlCredential>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-116">See <xref:System.Data.SqlClient.SqlCredential> for more information.</span></span>  
   
--   `TrustServerCertificate`가 false이고 `Encrypt`가 true인 경우 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL 인증서의 서버 이름 또는 IP 주소는 연결 문자열에 지정된 서버 이름 또는 IP 주소와 정확하게 일치해야 합니다.  그렇지 않으면 연결을 시도할 경우 실패합니다.  자세한 내용은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>의 `Encrypt` 연결 옵션에 대한 설명을 참조하세요.  
+-   <span data-ttu-id="1aa3a-117">`TrustServerCertificate`가 false이고 `Encrypt`가 true인 경우 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL 인증서의 서버 이름 또는 IP 주소는 연결 문자열에 지정된 서버 이름 또는 IP 주소와 정확하게 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-117">When `TrustServerCertificate` is false and `Encrypt` is true, the server name (or IP address) in a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL certificate must exactly match the server name (or IP address) specified in the connection string.</span></span> <span data-ttu-id="1aa3a-118">그렇지 않으면 연결을 시도할 경우 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-118">Otherwise, the connection attempt will fail.</span></span> <span data-ttu-id="1aa3a-119">자세한 내용은 `Encrypt`의 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 연결 옵션에 대한 설명을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-119">For more information, see the description of the `Encrypt` connection option in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.</span></span>  
   
-     이러한 변경으로 인해 기존 응용 프로그램이 더 이상 연결되지 않는 경우 다음 중 하나를 사용하여 응용 프로그램을 수정하면 됩니다.  
+     <span data-ttu-id="1aa3a-120">이러한 변경으로 인해 기존 응용 프로그램이 더 이상 연결되지 않는 경우 다음 중 하나를 사용하여 응용 프로그램을 수정하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-120">If this change causes an existing application to no longer connect, you can fix the application using one of the following:</span></span>  
   
-    -   CN\(일반 이름\) 또는 SAN\(주체 대체 이름\) 필드에 약식 이름을 지정하는 인증서를 발급합니다.  이 방법은 데이터베이스 미러링에 적용됩니다.  
+    -   <span data-ttu-id="1aa3a-121">CN(일반 이름) 또는 SAN(주체 대체 이름) 필드에 약식 이름을 지정하는 인증서를 발급합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-121">Issue a certificate that specifies the short name in the Common Name (CN) or Subject Alternative Name (SAN) field.</span></span> <span data-ttu-id="1aa3a-122">이 방법은 데이터베이스 미러링에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-122">This solution will work for database mirroring.</span></span>  
   
-    -   정규화된 도메인 이름에 약식 이름을 매핑하는 별칭을 추가합니다.  
+    -   <span data-ttu-id="1aa3a-123">정규화된 도메인 이름에 약식 이름을 매핑하는 별칭을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-123">Add an alias that maps the short name to the fully-qualified domain name.</span></span>  
   
-    -   연결 문자열에서 정규화된 도메인 이름을 사용합니다.  
+    -   <span data-ttu-id="1aa3a-124">연결 문자열에서 정규화된 도메인 이름을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-124">Use the fully-qualified domain name in the connection string.</span></span>  
   
--   SqlClient는 확장된 보호를 지원합니다.  확장된 보호에 대한 자세한 내용은 [확장된 보호를 사용하여 데이터베이스 엔진에 연결](http://go.microsoft.com/fwlink/?LinkId=219978)을 참조하세요.  
+-   <span data-ttu-id="1aa3a-125">SqlClient는 확장된 보호를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-125">SqlClient supports Extended Protection.</span></span> <span data-ttu-id="1aa3a-126">확장 된 보호에 대 한 자세한 내용은 참조 [는 데이터베이스를 사용 하 여 확장 된 보호 엔진에 연결](http://go.microsoft.com/fwlink/?LinkId=219978)합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-126">For more information about Extended Protection, see [Connecting to the Database Engine Using Extended Protection](http://go.microsoft.com/fwlink/?LinkId=219978).</span></span>  
   
--   SqlClient는 LocalDB 데이터베이스에 대한 연결을 지원합니다.  자세한 내용은 [LocalDB에 대한 SqlClient 지원](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)을 참조하세요.  
+-   <span data-ttu-id="1aa3a-127">SqlClient는 LocalDB 데이터베이스에 대한 연결을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-127">SqlClient supports connections to LocalDB databases.</span></span> <span data-ttu-id="1aa3a-128">자세한 내용은 참조 [LocalDB에 대 한 SqlClient 지원](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-128">For more information, see [SqlClient Support for LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).</span></span>  
   
--   `Type System Version=SQL Server 2012;`는 `Type System Version` 연결 속성에 전달되는 새로운 값입니다.  `Type System Version=Latest;` 값은 더 이상 사용되지 않으며 `Type System Version=SQL Server 2008;`과 동일해졌습니다.  자세한 내용은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>을 참조하세요.  
+-   <span data-ttu-id="1aa3a-129">`Type System Version=SQL Server 2012;`는 `Type System Version` 연결 속성에 전달되는 새로운 값입니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-129">`Type System Version=SQL Server 2012;` is new value to pass to the `Type System Version` connection property.</span></span> <span data-ttu-id="1aa3a-130">`Type System Version=Latest;` 값은 더 이상 사용되지 않으며 `Type System Version=SQL Server 2008;`과 동일해졌습니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-130">The `Type System Version=Latest;` value is now obsolete and has been made equivalent to `Type System Version=SQL Server 2008;`.</span></span> <span data-ttu-id="1aa3a-131">자세한 내용은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-131">For more information, see <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.</span></span>  
   
--   SqlClient에서는 SQL Server 2008에 추가된 기능인 스파스 열에 대한 추가 지원을 제공합니다.  응용 프로그램이 이미 스파스 열을 사용하는 테이블의 데이터에 액세스하는 경우 성능이 향상됩니다.  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>의 IsColumnSet 열은 해당 열이 열 집합의 멤버인 스파스 열인지 여부를 나타냅니다.  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>는 해당 열이 스파스 열인지 여부를 나타냅니다. 자세한 내용은 [SQL Server 스키마 컬렉션](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)을 참조하세요.  스파스 열에 대한 자세한 내용은 [스파스 열 사용](http://go.microsoft.com/fwlink/?LinkId=224244)을 참조하세요.  
+-   <span data-ttu-id="1aa3a-132">SqlClient에서는 SQL Server 2008에 추가된 기능인 스파스 열에 대한 추가 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-132">SqlClient provides additional support for sparse columns, a feature that was added in SQL Server 2008.</span></span> <span data-ttu-id="1aa3a-133">응용 프로그램이 이미 스파스 열을 사용하는 테이블의 데이터에 액세스하는 경우 성능이 향상됩니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-133">If your application already accesses data in a table that uses sparse columns, you should see an increase in performance.</span></span> <span data-ttu-id="1aa3a-134"><xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>의 IsColumnSet 열은 해당 열이 열 집합의 멤버인 스파스 열인지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-134">The IsColumnSet column of <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indicates if a column is a sparse column that is a member of a column set.</span></span> <span data-ttu-id="1aa3a-135"><xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>열이 스파스 열인지 여부를 나타냅니다 (참조 [SQL Server 스키마 컬렉션](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) 자세한 정보에 대 한).</span><span class="sxs-lookup"><span data-stu-id="1aa3a-135"><xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indicates if a column is a sparse column (see [SQL Server Schema Collections](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) for more information).</span></span> <span data-ttu-id="1aa3a-136">스파스 열에 대 한 자세한 내용은 참조 [스파스 열 사용](http://go.microsoft.com/fwlink/?LinkId=224244)합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-136">For more information about sparse columns, see [Using Sparse Columns](http://go.microsoft.com/fwlink/?LinkId=224244).</span></span>  
   
--   공간 데이터 형식이 포함되어 있는 Microsoft.SqlServer.Types.dll 어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다.  이 어셈블리를 참조하는 응용 프로그램은 제대로 실행되지 않을 수 있습니다.  자세한 내용은 [데이터베이스 엔진 기능의 주요 변경](http://go.microsoft.com/fwlink/?LinkId=224367)을 참조하세요.  
+-   <span data-ttu-id="1aa3a-137">공간 데이터 형식이 포함되어 있는 Microsoft.SqlServer.Types.dll 어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-137">The assembly Microsoft.SqlServer.Types.dll, which contains the spatial data types, has been upgraded from version 10.0 to version 11.0.</span></span> <span data-ttu-id="1aa3a-138">이 어셈블리를 참조하는 응용 프로그램은 제대로 실행되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-138">Applications that reference this assembly may fail.</span></span> <span data-ttu-id="1aa3a-139">자세한 내용은 참조 [데이터베이스 엔진 기능의 주요 변경 내용](http://go.microsoft.com/fwlink/?LinkId=224367)합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-139">For more information, see [Breaking Changes to Database Engine Features](http://go.microsoft.com/fwlink/?LinkId=224367).</span></span>  
   
-## ADO.NET Entity Framework  
- [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에는 Entity Framework 5.0을 사용할 경우 새로운 시나리오를 사용할 수 있게 하는 API가 추가되었습니다.  Entity Framework 5.0에 추가된 기능과 개선 사항에 대한 자세한 내용은 [새로운 기능](http://go.microsoft.com/fwlink/?LinkID=251106) 및 [Entity Framework 릴리스 및 버전 관리](http://go.microsoft.com/fwlink/?LinkId=234899) 항목을 참조하세요.  
+## <a name="adonet-entity-framework"></a><span data-ttu-id="1aa3a-140">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="1aa3a-140">ADO.NET Entity Framework</span></span>  
+ <span data-ttu-id="1aa3a-141">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에는 Entity Framework 5.0을 사용할 경우 새로운 시나리오를 사용할 수 있게 하는 API가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-141">The [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] adds APIs that enable new scenarios when working with the Entity Framework 5.0.</span></span> <span data-ttu-id="1aa3a-142">Entity Framework 5.0에 추가 된 기능과 개선 사항에 대 한 자세한 내용은 다음 항목을 참조 하십시오.: [새로운](http://go.microsoft.com/fwlink/?LinkID=251106) 및 [Entity Framework 릴리스 및 버전 관리](http://go.microsoft.com/fwlink/?LinkId=234899)합니다.</span><span class="sxs-lookup"><span data-stu-id="1aa3a-142">For more information about improvements and features that were added to the Entity Framework 5.0, see the following topics: [What’s New](http://go.microsoft.com/fwlink/?LinkID=251106) and [Entity Framework Releases and Versioning](http://go.microsoft.com/fwlink/?LinkId=234899).</span></span>  
   
-## 참고 항목  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)   
- [ADO.NET 개요](../../../../docs/framework/data/adonet/ado-net-overview.md)   
- [SQL Server 및 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)   
- [What's New in WCF Data Services](http://msdn.microsoft.com/ko-kr/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="1aa3a-143">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1aa3a-143">See Also</span></span>  
+ [<span data-ttu-id="1aa3a-144">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="1aa3a-144">ADO.NET</span></span>](../../../../docs/framework/data/adonet/index.md)  
+ [<span data-ttu-id="1aa3a-145">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="1aa3a-145">ADO.NET Overview</span></span>](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [<span data-ttu-id="1aa3a-146">SQL Server 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="1aa3a-146">SQL Server and ADO.NET</span></span>](../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="1aa3a-147">WCF Data Services의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="1aa3a-147">What's New in WCF Data Services</span></span>](http://msdn.microsoft.com/en-us/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
+ [<span data-ttu-id="1aa3a-148">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="1aa3a-148">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

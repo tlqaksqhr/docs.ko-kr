@@ -1,36 +1,37 @@
 ---
-title: "방법: Windows Forms MonthCalendar 컨트롤의 모양 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "예제[Windows Forms], calendar 컨트롤"
-  - "MonthBackColor 속성"
-  - "MonthCalendar 컨트롤[Windows Forms], 표시 형식 지정"
-  - "TitleBackColor 속성"
-  - "TitleForeColor 속성"
-  - "TrailingForeColor 속성"
+title: "방법: Windows Forms MonthCalendar 컨트롤 &#39; 변경 s 모양"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], calendar controls
+- MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38cddb4222077c21d72828371a8fe025184c4f75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms MonthCalendar 컨트롤의 모양 변경
-Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용하여 달력 모양을 다양한 방식으로 사용자 지정할 수 있습니다.  예를 들어 색 구성표를 설정하고 주 번호 및 현재 날짜를 표시하거나 숨기도록 선택할 수 있습니다.  
+# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a><span data-ttu-id="7c978-102">방법: Windows Forms MonthCalendar 컨트롤 &#39; 변경 s 모양</span><span class="sxs-lookup"><span data-stu-id="7c978-102">How to: Change the Windows Forms MonthCalendar Control&#39;s Appearance</span></span>
+<span data-ttu-id="7c978-103">Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용 하면 여러 가지 방법으로 달력의 모양을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-103">The Windows Forms <xref:System.Windows.Forms.MonthCalendar> control allows you to customize the calendar's appearance in many ways.</span></span> <span data-ttu-id="7c978-104">예를 들어 색 구성표를 설정할 수 있으며 주 번호 및 현재 날짜를 표시 하거나 숨기려면 선택.</span><span class="sxs-lookup"><span data-stu-id="7c978-104">For example, you can set the color scheme and choose to display or hide week numbers and the current date.</span></span>  
   
-### 달력의 색 구성표를 변경하려면  
+### <a name="to-change-the-month-calendars-color-scheme"></a><span data-ttu-id="7c978-105">월 달력 색 구성표를 변경 하려면</span><span class="sxs-lookup"><span data-stu-id="7c978-105">To change the month calendar's color scheme</span></span>  
   
--   <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> 및 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 같은 속성을 설정합니다.  또한 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> 속성은 요일의 글꼴 색을 결정하고  <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 속성은 표시된 월의 이전 및 이후 월의 날짜 색을 결정합니다.  
+-   <span data-ttu-id="7c978-106">와 같은 속성을 설정 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> 및 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-106">Set properties such as <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> and <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>.</span></span> <span data-ttu-id="7c978-107"><xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> 도 속성은 요일에 대 한 글꼴 색을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-107">The <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> property also determines the font color for the days of the week.</span></span> <span data-ttu-id="7c978-108"><xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 속성 앞과 뒤 표시 된 월 또는 개월 하는 날짜의 색을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-108">The <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> property determines the color of the dates that precede and follow the displayed month or months.</span></span>  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -51,11 +52,11 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용하�
     ```  
   
     > [!NOTE]
-    >  Windows Vista부터는 테마에 따라 일부 속성을 설정해도 달력의 모양이 변경되지 않을 수 있습니다.  예를 들어 Windows가 Aero 테마를 사용하도록 설정된 경우에는 <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> 또는 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 속성을 설정해도 아무 효과가 없습니다.  그 이유는 업데이트된 달력 버전이 현재 운영 체제 테마에서 런타임에 파생되는 모양을 사용하여 렌더링되기 때문입니다.  이러한 속성을 사용하고 이전 버전의 달력을 사용하도록 설정하려면 응용 프로그램의 비주얼 스타일을 사용하지 않도록 설정해야 합니다.  비주얼 스타일을 사용하지 않도록 설정하면 응용 프로그램에서 다른 컨트롤의 모양과 동작에 영향을 줄 수 있습니다.  Visual Basic에서 비주얼 스타일을 사용하지 않도록 설정하려면 프로젝트 디자이너를 열고 **XP 비주얼 스타일 사용** 확인란을 선택 취소합니다.  C\#에서 비주얼 스타일을 사용하지 않도록 설정하려면 Program.cs를 열고 `Application.EnableVisualStyles();`를 주석 처리합니다.  비주얼 스타일에 대한 자세한 내용은 [How to: Enable Windows XP Visual Styles](http://msdn.microsoft.com/ko-kr/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)을 참조하십시오.  
+    >  <span data-ttu-id="7c978-109">Windows vista 및 테마에 따라 부터는 일부 속성을 설정 변경 되지 않는 달력 모양을 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-109">Starting with Windows Vista and depending on the theme, setting some properties might not change the appearance of the calendar.</span></span> <span data-ttu-id="7c978-110">예를 들어 Windows Aero 테마를 사용 하도록 설정 되어, 설정 된 <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, 또는 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 속성의 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-110">For example, if Windows is set to use the Aero theme, setting the <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, or <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> properties has no effect.</span></span> <span data-ttu-id="7c978-111">즉, 달력의 업데이트 된 버전 실행 시 현재 운영 체제 테마에서 파생 된 모양으로 렌더링 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-111">This is because an updated version of the calendar is rendered with an appearance that is derived at run time from the current operating system theme.</span></span> <span data-ttu-id="7c978-112">이러한 속성을 사용 하 고 이전 버전의 달력을 사용 하도록 설정 하려는 경우에 응용 프로그램에 대 한 비주얼 스타일을 비활성화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-112">If you want to use these properties and enable the earlier version of the calendar, you can disable visual styles for your application.</span></span> <span data-ttu-id="7c978-113">비주얼 스타일을 사용 하지 않도록 설정 하면 모양 및 동작의 응용 프로그램의 다른 컨트롤과 달라질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-113">Disabling visual styles might affect the appearance and behavior of other controls in your application.</span></span> <span data-ttu-id="7c978-114">Visual Basic의 비주얼 스타일을 사용 하지 않으려면 프로젝트 디자이너를 열고 및 선택 취소 된 **XP 시각적 스타일 사용** 확인란 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-114">To disable visual styles in Visual Basic, open the Project Designer and uncheck the **Enable XP visual styles** check box.</span></span> <span data-ttu-id="7c978-115">C#에서 비주얼 스타일을 사용 하지 않으려면 Program.cs를 열고 주석으로 처리 `Application.EnableVisualStyles();`합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-115">To disable visual styles in C#, open Program.cs and comment out `Application.EnableVisualStyles();`.</span></span> <span data-ttu-id="7c978-116">비주얼 스타일에 대 한 자세한 내용은 참조 [하는 방법: Windows XP 시각적 스타일 사용](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-116">For more information about visual styles, see [How to: Enable Windows XP Visual Styles](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).</span></span>  
   
-### 컨트롤의 아래쪽에 현재 날짜를 표시하려면  
+### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a><span data-ttu-id="7c978-117">컨트롤의 맨 아래에 현재 날짜를 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="7c978-117">To display the current date at the bottom of the control</span></span>  
   
--   <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 속성을 `true`으로 설정합니다.  아래 예제에서는 폼을 두 번 클릭할 때마다 오늘 날짜의 표시\/생략 상태를 전환합니다.  
+-   <span data-ttu-id="7c978-118"><xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 속성을 `true`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-118">Set the <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> property to `true`.</span></span> <span data-ttu-id="7c978-119">다음 예제에서는 표시 하 고 폼을 두 번 클릭할 때 오늘 날짜를 생략 하는 것 사이 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-119">The example below toggles between displaying and omitting today's date when the form is double-clicked.</span></span>  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -83,7 +84,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용하�
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 폼의 생성자에 다음 코드를 배치하여 이벤트 처리기를 등록합니다.  
+     <span data-ttu-id="7c978-120">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-120">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
@@ -94,11 +95,11 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용하�
        &Form1::Form1_DoubleClick);  
     ```  
   
-### 주 번호를 표시하려면  
+### <a name="to-display-week-numbers"></a><span data-ttu-id="7c978-121">주 번호를 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="7c978-121">To display week numbers</span></span>  
   
--   <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 속성을 `true`으로 설정합니다.  속성 창을 사용하거나 코드를 통해 이 속성을 설정할 수 있습니다.  
+-   <span data-ttu-id="7c978-122"><xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 속성을 `true`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-122">Set the <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> property to `true`.</span></span> <span data-ttu-id="7c978-123">코드 또는 속성 창에서이 속성을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-123">You can set this property either in code or in the Properties window.</span></span>  
   
-     주 번호는 각 주의 첫째 요일 왼쪽에서 별도의 열에 표시됩니다.  
+     <span data-ttu-id="7c978-124">주 번호는 해당 주의 첫 번째 날의 왼쪽에 별도 열에 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c978-124">Week numbers appear in a separate column to the left of the first day of the week.</span></span>  
   
     ```vb  
     MonthCalendar1.ShowWeekNumbers = True  
@@ -112,8 +113,8 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용하�
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## 참고 항목  
- [MonthCalendar 컨트롤](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)   
- [방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)   
- [방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)   
- [방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a><span data-ttu-id="7c978-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7c978-125">See Also</span></span>  
+ [<span data-ttu-id="7c978-126">MonthCalendar 컨트롤</span><span class="sxs-lookup"><span data-stu-id="7c978-126">MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [<span data-ttu-id="7c978-127">방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택</span><span class="sxs-lookup"><span data-stu-id="7c978-127">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
+ [<span data-ttu-id="7c978-128">방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시</span><span class="sxs-lookup"><span data-stu-id="7c978-128">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
+ [<span data-ttu-id="7c978-129">방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시</span><span class="sxs-lookup"><span data-stu-id="7c978-129">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

@@ -1,65 +1,68 @@
 ---
-title: "Transport: WSE 3.0 TCP Interoperability | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Transport: WSE 3.0 TCP Interoperability'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d758abf6dbf5d8a5992a7c033e2ea1526762766d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Transport: WSE 3.0 TCP Interoperability
-WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사용자 지정 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송으로 구현하는 방법을 보여 줍니다.또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다.다음 단계에서는 이 사용자 지정 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송을 빌드하는 방법을 설명합니다.  
+# <a name="transport-wse-30-tcp-interoperability"></a><span data-ttu-id="3a951-102">Transport: WSE 3.0 TCP Interoperability</span><span class="sxs-lookup"><span data-stu-id="3a951-102">Transport: WSE 3.0 TCP Interoperability</span></span>
+<span data-ttu-id="3a951-103">WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사용자 지정 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송으로 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-103">The WSE 3.0 TCP Interoperability Transport sample demonstrates how to implement a TCP duplex session as a custom [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transport.</span></span> <span data-ttu-id="3a951-104">또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-104">It also demonstrates how you can use the extensibility of the channel layer to interface over the wire with existing deployed systems.</span></span> <span data-ttu-id="3a951-105">다음 단계에서는 이 사용자 지정 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송을 빌드하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-105">The following steps show how to build this custom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transport:</span></span>  
   
-1.  TCP 소켓에서 시작하여 DIME 프레이밍을 사용하여 메시지 경계를 나타내는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>의 클라이언트 및 서버 구현을 만듭니다.  
+1.  <span data-ttu-id="3a951-106">TCP 소켓에서 시작하여 DIME 프레이밍을 사용하여 메시지 경계를 나타내는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>의 클라이언트 및 서버 구현을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-106">Starting with a TCP socket, create client and server implementations of <xref:System.ServiceModel.Channels.IDuplexSessionChannel> that use DIME Framing to delineate message boundaries.</span></span>  
   
-2.  WSE TCP 서비스에 연결되고 클라이언트 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>을 통해 프레임 메시지를 보내는 채널 팩터리를 만듭니다.  
+2.  <span data-ttu-id="3a951-107">WSE TCP 서비스에 연결되고 클라이언트 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>을 통해 프레임 메시지를 보내는 채널 팩터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-107">Create a channel factory that connects to a WSE TCP service and sends framed messages over the client <xref:System.ServiceModel.Channels.IDuplexSessionChannel>s.</span></span>  
   
-3.  들어오는 TCP 연결을 수락하고 해당하는 채널을 생성하도록 채널 수신기를 만듭니다.  
+3.  <span data-ttu-id="3a951-108">들어오는 TCP 연결을 수락하고 해당하는 채널을 생성하도록 채널 수신기를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-108">Create a channel listener to accept incoming TCP connections and produce corresponding channels.</span></span>  
   
-4.  네트워크 관련 예외가 <xref:System.ServiceModel.CommunicationException>의 적절한 파생 클래스로 정규화되는지 확인합니다.  
+4.  <span data-ttu-id="3a951-109">네트워크 관련 예외가 <xref:System.ServiceModel.CommunicationException>의 적절한 파생 클래스로 정규화되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-109">Ensure that any network-specific exceptions are normalized to the appropriate derived class of <xref:System.ServiceModel.CommunicationException>.</span></span>  
   
-5.  사용자 지정 전송을 채널 스택에 추가하는 바인딩 요소를 추가합니다.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][바인딩 요소 추가](#AddingABindingElement).  
+5.  <span data-ttu-id="3a951-110">사용자 지정 전송을 채널 스택에 추가하는 바인딩 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-110">Add a binding element that adds the custom transport to a channel stack.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3a951-111">[바인딩 요소 추가].</span><span class="sxs-lookup"><span data-stu-id="3a951-111"> [Adding a Binding Element].</span></span>  
   
-## IDuplexSessionChannel 만들기  
- WSE 3.0 TCP 상호 운용성 전송을 작성하는 첫 번째 단계는 <xref:System.Net.Sockets.Socket> 위에 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>의 구현을 만드는 것입니다.`WseTcpDuplexSessionChannel`은 <xref:System.ServiceModel.Channels.ChannelBase>에서 파생됩니다.메시지를 보내는 논리는 \(1\) 메시지를 바이트로 인코딩한 다음 \(2\) 이러한 바이트를 프레이밍하여 연결을 통해 보내는 두 가지 주요 작업으로 구성됩니다.  
+## <a name="creating-iduplexsessionchannel"></a><span data-ttu-id="3a951-112">IDuplexSessionChannel 만들기</span><span class="sxs-lookup"><span data-stu-id="3a951-112">Creating IDuplexSessionChannel</span></span>  
+ <span data-ttu-id="3a951-113">WSE 3.0 TCP 상호 운용성 전송을 작성하는 첫 번째 단계는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 위에 <xref:System.Net.Sockets.Socket>의 구현을 만드는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-113">The first step in writing the WSE 3.0 TCP Interoperability Transport is to create an implementation of <xref:System.ServiceModel.Channels.IDuplexSessionChannel> on top of a <xref:System.Net.Sockets.Socket>.</span></span> <span data-ttu-id="3a951-114">`WseTcpDuplexSessionChannel`은 <xref:System.ServiceModel.Channels.ChannelBase>로부터 파생됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-114">`WseTcpDuplexSessionChannel` derives from <xref:System.ServiceModel.Channels.ChannelBase>.</span></span> <span data-ttu-id="3a951-115">메시지를 보내는 논리는 (1) 메시지를 바이트로 인코딩한 다음 (2) 이러한 바이트를 프레이밍하여 연결을 통해 보내는 두 가지 주요 작업으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-115">The logic of sending a message consists of two main pieces: (1) Encoding the message into bytes, and (2) framing those bytes and sending them on the wire.</span></span>  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
  `WriteData(encodedBytes);`  
   
- 또한 Send\(\) 호출이 IDuplexSessionChannel을 순서대로 유지하고 기본 소켓에 대한 호출이 올바르게 동기화되도록 잠금을 설정합니다.  
+ <span data-ttu-id="3a951-116">또한 Send() 호출이 IDuplexSessionChannel을 순서대로 유지하고 기본 소켓에 대한 호출이 올바르게 동기화되도록 잠금을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-116">In addition, a lock is taken so that the Send() calls preserve the IDuplexSessionChannel in-order guarantee, and so that calls to the underlying socket are synchronized correctly.</span></span>  
   
- `WseTcpDuplexSessionChannel`은 <xref:System.ServiceModel.Channels.Message>와 byte\[\] 간의 변환에 <xref:System.ServiceModel.Channels.MessageEncoder>를 사용합니다.이는 전송이기 때문에 `WseTcpDuplexSessionChannel`은 채널이 구성된 원격 주소를 적용하는 작업도 담당합니다.`EncodeMessage`는 이 변환을 위한 논리를 캡슐화합니다.  
+ <span data-ttu-id="3a951-117">`WseTcpDuplexSessionChannel`은 <xref:System.ServiceModel.Channels.MessageEncoder>와 byte[] 간의 변환에 <xref:System.ServiceModel.Channels.Message>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-117">`WseTcpDuplexSessionChannel` uses a <xref:System.ServiceModel.Channels.MessageEncoder> for translating a <xref:System.ServiceModel.Channels.Message> to and from byte[].</span></span> <span data-ttu-id="3a951-118">이는 전송이기 때문에 `WseTcpDuplexSessionChannel`은 채널이 구성된 원격 주소를 적용하는 작업도 담당합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-118">Because it is a transport, `WseTcpDuplexSessionChannel` is also responsible for applying the remote address that the channel was configured with.</span></span> <span data-ttu-id="3a951-119">`EncodeMessage`는 이 변환을 위한 논리를 캡슐화합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-119">`EncodeMessage` encapsulates the logic for this conversion.</span></span>  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- <xref:System.ServiceModel.Channels.Message>를 바이트로 인코딩한 다음에는 연결을 통해 전송해야 합니다.이렇게 하려면 메시지 경계를 정의하기 위한 시스템이 필요합니다.WSE 3.0은 프레이밍 프로토콜로 [DIME](http://go.microsoft.com/fwlink/?LinkId=94999)\(영문 페이지일 수 있음\) 버전을 사용합니다.`WriteData`는 프레이밍 논리를 캡슐화하여 byte\[\]를 DIME 레코드의 집합으로 래핑합니다.  
+ <span data-ttu-id="3a951-120"><xref:System.ServiceModel.Channels.Message>를 바이트로 인코딩한 다음에는 연결을 통해 전송해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-120">Once the <xref:System.ServiceModel.Channels.Message> is encoded into bytes, it must be transmitted on the wire.</span></span> <span data-ttu-id="3a951-121">이렇게 하려면 메시지 경계를 정의하기 위한 시스템이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-121">This requires a system for defining message boundaries.</span></span> <span data-ttu-id="3a951-122">WSE 3.0의 버전을 사용 하 여 [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) 를 프레이밍 프로토콜로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-122">WSE 3.0 uses a version of [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) as its framing protocol.</span></span> <span data-ttu-id="3a951-123">`WriteData`는 프레이밍 논리를 캡슐화하여 byte[]를 DIME 레코드의 집합으로 래핑합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-123">`WriteData` encapsulates the framing logic to wrap a byte[] into a set of DIME records.</span></span>  
   
- 메시지를 수신하는 논리도 매우 유사합니다.한 가지 복잡한 문제는 소켓 읽기가 요청된 것보다 적은 수의 바이트를 반환할 수 있다는 사실을 다루는 것입니다.메시지를 수신하기 위해 `WseTcpDuplexSessionChannel`은 연결이 끊긴 상태에서 바이트를 읽고 DIME 프레이밍을 디코딩한 다음 byte\[\]를 <xref:System.ServiceModel.Channels.Message>로 변환하는 데 <xref:System.ServiceModel.Channels.MessageEncoder>를 사용합니다.  
+ <span data-ttu-id="3a951-124">메시지를 수신하는 논리도 매우 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-124">The logic for receiving messages is very similar.</span></span> <span data-ttu-id="3a951-125">한 가지 복잡한 문제는 소켓 읽기가 요청된 것보다 적은 수의 바이트를 반환할 수 있다는 사실을 다루는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-125">The main complexity is handling the fact that a socket read can return less bytes than were requested.</span></span> <span data-ttu-id="3a951-126">메시지를 수신하기 위해 `WseTcpDuplexSessionChannel`은 연결이 끊긴 상태에서 바이트를 읽고 DIME 프레이밍을 디코딩한 다음 byte[]를 <xref:System.ServiceModel.Channels.MessageEncoder>로 변환하는 데 <xref:System.ServiceModel.Channels.Message>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-126">To receive a message, `WseTcpDuplexSessionChannel` reads bytes off the wire, decodes the DIME framing, and then uses the <xref:System.ServiceModel.Channels.MessageEncoder> for turning the byte[] into a <xref:System.ServiceModel.Channels.Message>.</span></span>  
   
- 기본 `WseTcpDuplexSessionChannel`은 연결된 소켓을 수신하는 것으로 가정합니다.기본 클래스는 소켓 종료를 처리합니다.소켓 닫기를 처리하는 세 위치는 다음과 같습니다.  
+ <span data-ttu-id="3a951-127">기본 `WseTcpDuplexSessionChannel`은 연결된 소켓을 수신하는 것으로 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-127">The base `WseTcpDuplexSessionChannel` assumes that it receives a connected socket.</span></span> <span data-ttu-id="3a951-128">기본 클래스는 소켓 종료를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-128">The base class handles socket shutdown.</span></span> <span data-ttu-id="3a951-129">소켓 닫기를 처리하는 세 위치는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-129">There are three places that interface with socket closure:</span></span>  
   
--   OnAbort \-\- 소켓을 강제로 닫습니다\(강제 닫기\).  
+-   <span data-ttu-id="3a951-130">OnAbort -- 소켓을 강제로 닫습니다(강제 닫기).</span><span class="sxs-lookup"><span data-stu-id="3a951-130">OnAbort -- close the socket ungracefully (hard close).</span></span>  
   
--   On\[Begin\]Close \-\- 소켓을 정상적으로 닫습니다\(정상 닫기\).  
+-   <span data-ttu-id="3a951-131">On[Begin]Close -- 소켓을 정상적으로 닫습니다(정상 닫기).</span><span class="sxs-lookup"><span data-stu-id="3a951-131">On[Begin]Close -- close the socket gracefully (soft close).</span></span>  
   
--   session.CloseOutputSession \-\- 아웃바운드 데이터 스트림을 종료합니다\(절반 닫기\).  
+-   <span data-ttu-id="3a951-132">session.CloseOutputSession -- 아웃바운드 데이터 스트림을 종료합니다(절반 닫기).</span><span class="sxs-lookup"><span data-stu-id="3a951-132">session.CloseOutputSession -- shutdown the outbound data stream (half close).</span></span>  
   
-## 채널 팩터리  
- TCP 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory>의 구현을 만드는 것입니다.  
+## <a name="channel-factory"></a><span data-ttu-id="3a951-133">채널 팩터리</span><span class="sxs-lookup"><span data-stu-id="3a951-133">Channel Factory</span></span>  
+ <span data-ttu-id="3a951-134">TCP 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory>의 구현을 만드는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-134">The next step in writing the TCP transport is to create an implementation of <xref:System.ServiceModel.Channels.IChannelFactory> for client channels.</span></span>  
   
--   `WseTcpChannelFactory`는 <xref:System.ServiceModel.Channels.ChannelFactoryBase>\<IDuplexSessionChannel\>에서 파생됩니다.이는 `OnCreateChannel`을 재정의하여 클라이언트 채널을 생성하는 팩터리입니다.  
+-   <span data-ttu-id="3a951-135">`WseTcpChannelFactory`파생 <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel > 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-135">`WseTcpChannelFactory` derives from <xref:System.ServiceModel.Channels.ChannelFactoryBase>\<IDuplexSessionChannel>.</span></span> <span data-ttu-id="3a951-136">이는 `OnCreateChannel`을 재정의하여 클라이언트 채널을 생성하는 팩터리입니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-136">It is a factory that overrides `OnCreateChannel` to produce client channels.</span></span>  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -69,11 +72,11 @@ WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사�
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel`은 기본 `WseTcpDuplexSessionChannel`에 논리를 추가하여 `channel.Open` 시에 TCP 서버에 연결합니다.다음 코드에 나온 것처럼 먼저 호스트 이름이 IP 주소로 확인됩니다.  
+-   <span data-ttu-id="3a951-137">`ClientWseTcpDuplexSessionChannel`논리 정보를 추가 `WseTcpDuplexSessionChannel` 에 TCP 서버에 연결할 `channel.Open` 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-137">`ClientWseTcpDuplexSessionChannel` adds logic to the base `WseTcpDuplexSessionChannel` to connect to a TCP server at `channel.Open` time.</span></span> <span data-ttu-id="3a951-138">다음 코드에 나온 것처럼 먼저 호스트 이름이 IP 주소로 확인됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-138">First the hostname is resolved to an IP address, as shown in the following code.</span></span>  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   그런 다음에는 다음 코드에 나온 것처럼 호스트 이름이 루프의 사용 가능한 첫 번째 IP 주소에 연결됩니다.  
+-   <span data-ttu-id="3a951-139">그런 다음에는 다음 코드에 나온 것처럼 호스트 이름이 루프의 사용 가능한 첫 번째 IP 주소에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-139">Then the hostname is connected to the first available IP address in a loop, as shown in the following code.</span></span>  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -81,12 +84,12 @@ WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사�
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   채널 계약의 일부로 도메인 관련 예외를 래핑합니다\(예: <xref:System.ServiceModel.CommunicationException>의 `SocketException`\).  
+-   <span data-ttu-id="3a951-140">채널 계약의 일부로 도메인 관련 예외를 래핑합니다(예: `SocketException`의 <xref:System.ServiceModel.CommunicationException>).</span><span class="sxs-lookup"><span data-stu-id="3a951-140">As part of the channel contract, any domain-specific exceptions are wrapped, such as `SocketException` in <xref:System.ServiceModel.CommunicationException>.</span></span>  
   
-## 채널 수신기  
- TCP 전송을 작성하는 다음 단계는 서버 채널을 수락하기 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다.  
+## <a name="channel-listener"></a><span data-ttu-id="3a951-141">채널 수신기</span><span class="sxs-lookup"><span data-stu-id="3a951-141">Channel Listener</span></span>  
+ <span data-ttu-id="3a951-142">TCP 전송을 작성하는 다음 단계는 서버 채널을 수락하기 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-142">The next step in writing the TCP transport is to create an implementation of <xref:System.ServiceModel.Channels.IChannelListener> for accepting server channels.</span></span>  
   
--   `WseTcpChannelListener`는 <xref:System.ServiceModel.Channels.ChannelListenerBase>\<IDuplexSessionChannel\>에서 파생되고 On\[Begin\]Open 및 On\[Begin\]Close를 재정의하여 수신 소켓의 수명을 제어합니다.OnOpen에서는 IP\_ANY를 수신 대기하는 소켓이 만들어집니다.더 고급 구현에서는 IPv6을 수신 대기하는 두 번째 소켓도 만들 수 있습니다.또한 호스트 이름에 IP 주소를 지정할 수도 있습니다.  
+-   <span data-ttu-id="3a951-143">`WseTcpChannelListener`파생 <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 하며 재정의에 [Begin] Open 및 On [Begin]는에 근접 하 여 수신 소켓의 수명을 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-143">`WseTcpChannelListener` derives from <xref:System.ServiceModel.Channels.ChannelListenerBase>\<IDuplexSessionChannel> and overrides On[Begin]Open and On[Begin]Close to control the lifetime of its listen socket.</span></span> <span data-ttu-id="3a951-144">OnOpen에서는 IP_ANY를 수신 대기하는 소켓이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-144">In OnOpen, a socket is created to listen on IP_ANY.</span></span> <span data-ttu-id="3a951-145">더 고급 구현에서는 IPv6을 수신 대기하는 두 번째 소켓도 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-145">More advanced implementations can create a second socket to listen on IPv6 as well.</span></span> <span data-ttu-id="3a951-146">또한 호스트 이름에 IP 주소를 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-146">They can also allow the IP address to be specified in the hostname.</span></span>  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -96,12 +99,12 @@ WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사�
   
  `this.listenSocket.Listen(10);`  
   
- 새 소켓을 수락하면 이 소켓으로 서버 채널이 초기화됩니다.모든 입력 및 출력은 기본 클래스에서 이미 구현되었으므로 이 채널은 소켓의 초기화를 담당합니다.  
+ <span data-ttu-id="3a951-147">새 소켓을 수락하면 이 소켓으로 서버 채널이 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-147">When a new socket is accepted, a server channel is initialized with this socket.</span></span> <span data-ttu-id="3a951-148">모든 입력 및 출력은 기본 클래스에서 이미 구현되었으므로 이 채널은 소켓의 초기화를 담당합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-148">All the input and output is already implemented in the base class, so this channel is responsible for initializing the socket.</span></span>  
   
-## 바인딩 요소 추가  
- 팩터리와 채널이 빌드되었으므로 이제 바인딩을 통해 ServiceModel 런타임에 노출해야 합니다.바인딩은 서비스 주소와 연결된 통신 스택을 나타내는 바인딩 요소의 컬렉션입니다.스택의 각 요소는 바인딩 요소로 표현됩니다.  
+## <a name="adding-a-binding-element"></a><span data-ttu-id="3a951-149">바인딩 요소 추가</span><span class="sxs-lookup"><span data-stu-id="3a951-149">Adding a Binding Element</span></span>  
+ <span data-ttu-id="3a951-150">팩터리와 채널이 빌드되었으므로 이제 바인딩을 통해 ServiceModel 런타임에 노출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-150">Now that the factories and channels are built, they must be exposed to the ServiceModel runtime through a binding.</span></span> <span data-ttu-id="3a951-151">바인딩은 서비스 주소와 연결된 통신 스택을 나타내는 바인딩 요소의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-151">A binding is a collection of binding elements that represents the communication stack associated with a service address.</span></span> <span data-ttu-id="3a951-152">스택의 각 요소는 바인딩 요소로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-152">Each element in the stack is represented by a binding element.</span></span>  
   
- 이 샘플에서 바인딩 요소는 <xref:System.ServiceModel.Channels.TransportBindingElement>에서 파생된 `WseTcpTransportBindingElement`로,<xref:System.ServiceModel.Channels.IDuplexSessionChannel>을 지원하고 다음 메서드를 재정의하여 바인딩과 연결된 팩터리를 빌드합니다.  
+ <span data-ttu-id="3a951-153">이 샘플에서 바인딩 요소는 `WseTcpTransportBindingElement`에서 파생된 <xref:System.ServiceModel.Channels.TransportBindingElement>로,</span><span class="sxs-lookup"><span data-stu-id="3a951-153">In the sample, the binding element is `WseTcpTransportBindingElement`, which derives from <xref:System.ServiceModel.Channels.TransportBindingElement>.</span></span> <span data-ttu-id="3a951-154"><xref:System.ServiceModel.Channels.IDuplexSessionChannel>을 지원하고 다음 메서드를 재정의하여 바인딩과 연결된 팩터리를 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-154">It supports <xref:System.ServiceModel.Channels.IDuplexSessionChannel> and overrides the following methods to build the factories associated with our binding.</span></span>  
   
  `public IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)`  
   
@@ -119,12 +122,12 @@ WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사�
   
  `}`  
   
- 또한 `BindingElement`를 복제하고 체계\(wse.tcp\)를 반환하기 위한 멤버를 포함합니다.  
+ <span data-ttu-id="3a951-155">또한 `BindingElement`를 복제하고 체계(wse.tcp)를 반환하기 위한 멤버를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-155">It also contains members for cloning the `BindingElement` and returning our scheme (wse.tcp).</span></span>  
   
-## WSE TCP 테스트 콘솔  
- 이 샘플 전송을 사용하기 위한 테스트 코드는 TestCode.cs에서 제공합니다.다음 지침은 WSE `TcpSyncStockService` 샘플을 설치하는 방법을 보여 줍니다.  
+## <a name="the-wse-tcp-test-console"></a><span data-ttu-id="3a951-156">WSE TCP 테스트 콘솔</span><span class="sxs-lookup"><span data-stu-id="3a951-156">The WSE TCP Test Console</span></span>  
+ <span data-ttu-id="3a951-157">이 샘플 전송을 사용하기 위한 테스트 코드는 TestCode.cs에서 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-157">Test code for using this sample transport is available in TestCode.cs.</span></span> <span data-ttu-id="3a951-158">다음 지침은 WSE `TcpSyncStockService` 샘플을 설치하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-158">The following instructions show how to set up the WSE `TcpSyncStockService` sample.</span></span>  
   
- 이 테스트 코드는 인코딩으로 MTOM을 사용하고 전송으로 `WseTcpTransport`를 사용하는 사용자 지정 바인딩을 만듭니다.또한 다음 코드에 나온 것처럼 WSE 3.0을 준수하도록 AddressingVersion을 설정합니다.  
+ <span data-ttu-id="3a951-159">이 테스트 코드는 인코딩으로 MTOM을 사용하고 전송으로 `WseTcpTransport`를 사용하는 사용자 지정 바인딩을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-159">The test code creates a custom binding that uses MTOM as the encoding and `WseTcpTransport` as the transport.</span></span> <span data-ttu-id="3a951-160">또한 다음 코드에 나온 것처럼 WSE 3.0을 준수하도록 AddressingVersion을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-160">It also sets up the AddressingVersion to be conformant with WSE 3.0, as shown in the following code.</span></span>  
   
  `CustomBinding binding = new CustomBinding();`  
   
@@ -136,22 +139,22 @@ WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사�
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- 이 테스트 코드는 두 개의 테스트로 구성됩니다. 첫 번째 테스트에서는 WSE 3.0 WSDL에서 생성된 코드를 사용하여 형식화된 클라이언트를 설정합니다.두 번째 테스트에서는 채널 API 위에서 바로 메시지를 보냄으로써 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 클라이언트와 서버로 모두 사용합니다.  
+ <span data-ttu-id="3a951-161">이 테스트 코드는 두 개의 테스트로 구성됩니다. 첫 번째 테스트에서는 WSE 3.0 WSDL에서 생성된 코드를 사용하여 형식화된 클라이언트를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-161">It consists of two tests—one test sets up a typed client using code generated from the WSE 3.0 WSDL.</span></span> <span data-ttu-id="3a951-162">두 번째 테스트에서는 채널 API 위에서 바로 메시지를 보냄으로써 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 클라이언트와 서버로 모두 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-162">The second test uses [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] as both the client and the server by sending messages directly on top of the channel APIs.</span></span>  
   
- 샘플을 실행할 경우의 예상 출력은 다음과 같습니다.  
+ <span data-ttu-id="3a951-163">샘플을 실행할 경우의 예상 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-163">When running the sample, the following output is expected.</span></span>  
   
- 클라이언트  
+ <span data-ttu-id="3a951-164">클라이언트</span><span class="sxs-lookup"><span data-stu-id="3a951-164">Client:</span></span>  
   
 ```  
 Calling soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
   
 Symbol: FABRIKAM  
-        Name: Fabrikam, Inc.  
-        Last Price: 120  
+        Name: Fabrikam, Inc.  
+        Last Price: 120  
   
 Symbol: CONTOSO  
-        Name: Contoso Corp.  
-        Last Price: 50.07  
+        Name: Contoso Corp.  
+        Last Price: 50.07  
 Press enter.  
   
 Received Action: http://SayHello  
@@ -164,7 +167,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- 서버  
+ <span data-ttu-id="3a951-165">서버:</span><span class="sxs-lookup"><span data-stu-id="3a951-165">Server:</span></span>  
   
 ```  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -173,33 +176,33 @@ Press any key to exit when done...
   
 Request received.  
 Symbols:  
-        FABRIKAM  
-        CONTOSO  
+        FABRIKAM  
+        CONTOSO  
 ```  
   
-#### 샘플을 설치, 빌드 및 실행하려면  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="3a951-166">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="3a951-166">To set up, build, and run the sample</span></span>  
   
-1.  이 샘플을 실행하려면 WSE 3.0과 WSE `TcpSyncStockService` 샘플이 설치되어 있어야 합니다.[WSE 3.0은 MSDN](http://go.microsoft.com/fwlink/?LinkId=95000)에서 다운로드할 수 있습니다.  
+1.  <span data-ttu-id="3a951-167">이 샘플을 실행하려면 WSE 3.0과 WSE `TcpSyncStockService` 샘플이 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-167">To run this sample, you must have WSE 3.0 and the WSE `TcpSyncStockService` sample installed.</span></span> <span data-ttu-id="3a951-168">다운로드할 수 있습니다 [MSDN에서 WSE 3.0](http://go.microsoft.com/fwlink/?LinkId=95000)합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-168">You can download [WSE 3.0 from MSDN](http://go.microsoft.com/fwlink/?LinkId=95000).</span></span>  
   
 > [!NOTE]
->  WSE 3.0은 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]에서는 지원되지 않으므로 이 운영 체제에서는 `TcpSyncStockService` 샘플을 설치하거나 실행할 수 없습니다.  
+>  <span data-ttu-id="3a951-169">WSE 3.0은 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]에서는 지원되지 않으므로 이 운영 체제에서는 `TcpSyncStockService` 샘플을 설치하거나 실행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-169">Because WSE 3.0 is not supported on [!INCLUDE[lserver](../../../../includes/lserver-md.md)], you cannot install or run the `TcpSyncStockService` sample on that operating system.</span></span>  
   
-1.  `TcpSyncStockService` 샘플을 설치했으면 다음 작업을 수행합니다.  
+1.  <span data-ttu-id="3a951-170">`TcpSyncStockService` 샘플을 설치했으면 다음 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-170">Once you install the `TcpSyncStockService` sample, do the following:</span></span>  
   
-    1.  Visual Studio에서 `TcpSyncStockService`를 엽니다. TcpSyncStockService 샘플은 WSE 3.0과 함께 설치되며이 샘플 코드에 포함되어 있지 않습니다.  
+    1.  <span data-ttu-id="3a951-171">Visual Studio에서 `TcpSyncStockService`를 엽니다. TcpSyncStockService 샘플은 WSE 3.0과 함께 설치되며</span><span class="sxs-lookup"><span data-stu-id="3a951-171">Open the `TcpSyncStockService` in Visual Studio (Note that the TcpSyncStockService sample is installed with WSE 3.0.</span></span> <span data-ttu-id="3a951-172">이 샘플 코드에 포함되어 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-172">It is not part of this sample's code).</span></span>  
   
-    2.  StockService 프로젝트를 시작 프로젝트로 설정합니다.  
+    2.  <span data-ttu-id="3a951-173">StockService 프로젝트를 시작 프로젝트로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-173">Set the StockService project as the start up project.</span></span>  
   
-    3.  StockService 프로젝트에서 StockService.cs를 열고 `StockService` 클래스의 \[Policy\] 특성을 주석으로 처리합니다.이렇게 하면 샘플에서 보안을 사용하지 않습니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WSE 3.0 보안 끝점과 상호 운용할 수 있지만 여기서는 이 샘플이 사용자 지정 TCP 전송 위주로 작동하도록 보안을 사용하지 않습니다.  
+    3.  <span data-ttu-id="3a951-174">StockService 프로젝트에서 StockService.cs를 열고 `StockService` 클래스의 [Policy] 특성을 주석으로 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-174">Open StockService.cs in the StockService project and comment out the [Policy] attribute on the `StockService` class.</span></span> <span data-ttu-id="3a951-175">이렇게 하면 샘플에서 보안을 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-175">This disables security from the sample.</span></span> <span data-ttu-id="3a951-176">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WSE 3.0 보안 끝점과 상호 운용할 수 있지만 여기서는 이 샘플이 사용자 지정 TCP 전송 위주로 작동하도록 보안을 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-176">While [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] can interoperate with WSE 3.0 secure endpoints, security is disabled to keep this sample focused on the custom TCP transport.</span></span>  
   
-    4.  F5 키를 눌러 `TcpSyncStockService`를 시작합니다.새 콘솔 창에서 서비스가 시작됩니다.  
+    4.  <span data-ttu-id="3a951-177">F5 키를 눌러 `TcpSyncStockService`를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-177">Press F5 to start the `TcpSyncStockService`.</span></span> <span data-ttu-id="3a951-178">새 콘솔 창에서 서비스가 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-178">The service starts in a new console window.</span></span>  
   
-    5.  Visual Studio에서 이 TCP 전송 샘플을 엽니다.  
+    5.  <span data-ttu-id="3a951-179">Visual Studio에서 이 TCP 전송 샘플을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-179">Open this TCP transport sample in Visual Studio.</span></span>  
   
-    6.  `TcpSyncStockService`를 실행하는 컴퓨터 이름과 일치하도록 TestCode.cs의 "hostname" 변수를 업데이트합니다.  
+    6.  <span data-ttu-id="3a951-180">`TcpSyncStockService`를 실행하는 컴퓨터 이름과 일치하도록 TestCode.cs의 "hostname" 변수를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-180">Update the "hostname" variable in TestCode.cs to match the machine name running the `TcpSyncStockService`.</span></span>  
   
-    7.  F5 키를 눌러 TCP 전송 샘플을 시작합니다.  
+    7.  <span data-ttu-id="3a951-181">F5 키를 눌러 TCP 전송 샘플을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-181">Press F5 to start the TCP transport sample.</span></span>  
   
-    8.  TCP 전송 테스트 클라이언트가 새 콘솔에서 시작됩니다.클라이언트는 서비스에서 스톡 할당량을 요청한 다음 콘솔 창에 결과를 표시합니다.  
+    8.  <span data-ttu-id="3a951-182">TCP 전송 테스트 클라이언트가 새 콘솔에서 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-182">The TCP transport test client starts in a new console.</span></span> <span data-ttu-id="3a951-183">클라이언트는 서비스에서 스톡 할당량을 요청한 다음 콘솔 창에 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="3a951-183">The client requests stock quotes from the service and then displays the results in its console window.</span></span>  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="3a951-184">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3a951-184">See Also</span></span>

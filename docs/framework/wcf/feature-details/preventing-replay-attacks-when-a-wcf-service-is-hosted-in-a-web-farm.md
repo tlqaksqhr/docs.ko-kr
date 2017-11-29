@@ -1,27 +1,30 @@
 ---
-title: "WCF 서비스가 웹 팜에서 호스팅될 경우 재생 공격 방지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 서비스가 웹 팜에서 호스트될 경우 재생 공격 방지"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ecf37ffb87ddfdd483cebcac3f5892bab43dcd6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 서비스가 웹 팜에서 호스팅될 경우 재생 공격 방지
-메시지 보안 WCF를 사용할 경우 WCF는 들어오는 메시지에서 NONCE를 만들고 내부 `InMemoryNonceCache`에 생성된 NONCE가 있는지를 확인하여 반복 공격을 방지합니다.그럴 경우 메시지를 반복으로 삭제합니다.WCF 서비스가 웹 팜에 호스팅된 경우 `InMemoryNonceCache`가 웹 팜의 노드에서 공유되지 않으므로 서비스가 반복 공격에 취약합니다.이 시나리오를 완화하기 위해 WCF 4.5는 추상 클래스 <xref:System.ServiceModel.Security.NoneCache>에서 클래스를 파생하여 자체 공유 NONCE 캐시를 구현할 수 있도록 하는 확장성 지점을 제공합니다.  
+# <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a><span data-ttu-id="3796e-102">WCF 서비스가 웹 팜에서 호스트될 경우 재생 공격 방지</span><span class="sxs-lookup"><span data-stu-id="3796e-102">Preventing Replay Attacks When a WCF Service is Hosted in a Web Farm</span></span>
+<span data-ttu-id="3796e-103">메시지 보안 WCF를 사용할 경우 WCF는 들어오는 메시지에서 NONCE를 만들고 내부 `InMemoryNonceCache`에 생성된 NONCE가 있는지를 확인하여 반복 공격을 방지합니다.</span><span class="sxs-lookup"><span data-stu-id="3796e-103">When using message security WCF prevents replay attacks by creating a NONCE out of the incoming message and checking the internal `InMemoryNonceCache` to see if the generated NONCE is present.</span></span> <span data-ttu-id="3796e-104">그럴 경우 메시지를 반복으로 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="3796e-104">If it is, the message is discarded as a replay.</span></span> <span data-ttu-id="3796e-105">WCF 서비스가 웹 팜에 호스팅된 경우 `InMemoryNonceCache`가 웹 팜의 노드에서 공유되지 않으므로 서비스가 반복 공격에 취약합니다.</span><span class="sxs-lookup"><span data-stu-id="3796e-105">When a WCF service is hosted in a web farm, since the `InMemoryNonceCache` is not shared across the nodes in the web farm, the service is vulnerable to replay attacks.</span></span>  <span data-ttu-id="3796e-106">이 시나리오를 완화하기 위해 WCF 4.5는 추상 클래스 <xref:System.ServiceModel.Security.NonceCache>에서 클래스를 파생하여 자체 공유 NONCE 캐시를 구현할 수 있도록 하는 확장성 지점을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3796e-106">To mitigate this scenario WCF 4.5 provides an extensibility point that allows you to implement your own shared NONCE cache by deriving a class from the abstract class <xref:System.ServiceModel.Security.NonceCache>.</span></span>  
   
-## NoneCache 구현  
- 자체 공유 NONCE 캐시를 구현하려면 <xref:System.ServiceModel.Security.NoneCache>에서 클래스를 파생하고 [M:System.ServiceModel.Security.NoneCache.CheckNonce\(System.Byte\<xref:System.ServiceModel.Security.NoneCache.CheckNonce%2A> 및 [M:System.ServiceModel.Security.NoneCache.TryAddNonce\(System.Byte\<xref:System.ServiceModel.Security.NoneCache.TryAddNonce%2A> 메서드를 재정의합니다.[M:System.ServiceModel.Security.NoneCache.CheckNonce\(System.Byte\<xref:System.ServiceModel.Security.NoneCache.CheckNonce%2A>는 캐시에 지정된 NONCE가 있는지 여부를 확인합니다.[M:System.ServiceModel.Security.NoneCache.TryAddNonce\(System.Byte\<xref:System.ServiceModel.Security.NoneCache.TryAddNonce%2A>는 NONCE를 캐시에 추가하려고 합니다.클래스가 구현되면 인스턴스를 인스턴스화한 다음 클라이언트 측 재생 검색을 위해 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSecuritySettings.NonceCache%2A>에 할당하고 서버 측 재생 검색을 위해 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSecuritySettings.NonceCache%2A>에 할당하여 연결합니다.이 기능에 대해서는 즉시 구성이 지원되지 않습니다.  
+## <a name="noncecache-implementation"></a><span data-ttu-id="3796e-107">NonceCache 구현</span><span class="sxs-lookup"><span data-stu-id="3796e-107">NonceCache Implementation</span></span>  
+ <span data-ttu-id="3796e-108">자체 공유 NONCE 캐시를 구현하려면 <xref:System.ServiceModel.Security.NonceCache>에서 클래스를 파생하고 <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> 및 <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="3796e-108">To implement your own shared NONCE cache, derive a class from <xref:System.ServiceModel.Security.NonceCache> and override the <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> and <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> methods.</span></span> <span data-ttu-id="3796e-109"><xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A>는 캐시에 지정된 NONCE가 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3796e-109"><xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> will check to see if the specified NONCE exists in the cache.</span></span> <span data-ttu-id="3796e-110"><xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A>는 NONCE를 캐시에 추가하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="3796e-110"><xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> will attempt to add a NONCE to the cache.</span></span> <span data-ttu-id="3796e-111">클래스가 구현되면 인스턴스를 인스턴스화한 다음 클라이언트 측 재생 검색을 위해 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A>에 할당하고 서버 측 재생 검색을 위해 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A>에 할당하여 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="3796e-111">Once the class is implemented, you hook it up by instantiating an instance and assigning it to <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A> for client-side replay detection and <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A> for server-side replay detection.</span></span> <span data-ttu-id="3796e-112">이 기능에 대해서는 즉시 구성이 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3796e-112">There is no out of the box configuration support for this feature.</span></span>  
   
-## 참고 항목  
- [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)   
- [SymmetricSecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)
+## <a name="see-also"></a><span data-ttu-id="3796e-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3796e-113">See Also</span></span>  
+ [<span data-ttu-id="3796e-114">메시지 보안</span><span class="sxs-lookup"><span data-stu-id="3796e-114">Message Security</span></span>](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [<span data-ttu-id="3796e-115">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="3796e-115">SymmetricSecurityBindingElement</span></span>](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)

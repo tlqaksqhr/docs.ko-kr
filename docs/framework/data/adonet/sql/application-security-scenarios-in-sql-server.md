@@ -1,70 +1,73 @@
 ---
-title: "SQL Server의 응용 프로그램 보안 시나리오 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server의 응용 프로그램 보안 시나리오"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# SQL Server의 응용 프로그램 보안 시나리오
-안전한 SQL Server 클라이언트 응용 프로그램을 만드는 방법이 정확하게 한 가지만 존재하지는 않습니다.  모든 응용 프로그램은 요구 사항, 배포 환경 및 사용자 집단에 따라 고유합니다.  초기에 배포했을 때에는 비교적 안전했던 응용 프로그램도 시간이 지남에 따라 안전하지 못할 수 있습니다.  앞으로 생길 수 있는 위협을 정확히 예측하는 것은 불가능합니다.  
+# <a name="application-security-scenarios-in-sql-server"></a><span data-ttu-id="54edc-102">SQL Server의 응용 프로그램 보안 시나리오</span><span class="sxs-lookup"><span data-stu-id="54edc-102">Application Security Scenarios in SQL Server</span></span>
+<span data-ttu-id="54edc-103">안전한 SQL Server 클라이언트 응용 프로그램을 만드는 방법이 정확하게 한 가지만 존재하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-103">There is no single correct way to create a secure SQL Server client application.</span></span> <span data-ttu-id="54edc-104">모든 응용 프로그램은 요구 사항, 배포 환경 및 사용자 집단에 따라 고유합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-104">Every application is unique in its requirements, deployment environment, and user population.</span></span> <span data-ttu-id="54edc-105">초기에 배포했을 때에는 비교적 안전했던 응용 프로그램도 시간이 지남에 따라 안전하지 못할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-105">An application that is reasonably secure when it is initially deployed can become less secure over time.</span></span> <span data-ttu-id="54edc-106">앞으로 생길 수 있는 위협을 정확히 예측하는 것은 불가능합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-106">It is impossible to predict with any accuracy what threats may emerge in the future.</span></span>  
   
- SQL Server 제품은 개발자가 안전한 데이터베이스 응용 프로그램을 만들 수 있도록 최신의 보안 기능을 통합한 여러 버전으로 발전하고 있습니다.  그러나 보안을 한 번에 해결할 수는 없으며 계속적으로 모니터링하고 업데이트해야 합니다.  
+ <span data-ttu-id="54edc-107">SQL Server 제품은 개발자가 안전한 데이터베이스 응용 프로그램을 만들 수 있도록 최신의 보안 기능을 통합한 여러 버전으로 발전하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-107">SQL Server, as a product, has evolved over many versions to incorporate the latest security features that enable developers to create secure database applications.</span></span> <span data-ttu-id="54edc-108">그러나 보안을 한 번에 해결할 수는 없으며 계속적으로 모니터링하고 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-108">However, security doesn't come in the box; it requires continual monitoring and updating.</span></span>  
   
-## 일반적인 위협  
- 개발자는 보안 위협, 이에 직면하기 위해 제공하는 도구 및 자초한 보안 허점을 피하는 방법을 이해해야 합니다.  한 연결 부분이 손상되면 전체 강도에 영향을 미친다는 점에서 보안은 체인에 비유할 수 있습니다.  다음 표에는 일반적인 보안 위협이 들어 있으며 이 단원의 항목에서 보다 상세히 설명됩니다.  
+## <a name="common-threats"></a><span data-ttu-id="54edc-109">일반적인 위협</span><span class="sxs-lookup"><span data-stu-id="54edc-109">Common Threats</span></span>  
+ <span data-ttu-id="54edc-110">개발자는 보안 위협, 이에 직면하기 위해 제공하는 도구 및 자초한 보안 허점을 피하는 방법을 이해해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-110">Developers need to understand security threats, the tools provided to counter them, and how to avoid self-inflicted security holes.</span></span> <span data-ttu-id="54edc-111">한 연결 부분이 손상되면 전체 강도에 영향을 미친다는 점에서 보안은 체인에 비유할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-111">Security can best be thought of as a chain, where a break in any one link compromises the strength of the whole.</span></span> <span data-ttu-id="54edc-112">다음 표에는 일반적인 보안 위협이 들어 있으며 이 단원의 항목에서 보다 상세히 설명됩니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-112">The following list includes some common security threats that are discussed in more detail in the topics in this section.</span></span>  
   
-### SQL 삽입  
- SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact\-SQL 문을 입력하는 데 사용하는 프로세스입니다.  입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 우연히 응용 프로그램에서 삽입된 코드를 실행하면 공격으로 인해 데이터가 손상되거나 파괴될 수 있습니다.   저장 프로시저와 매개 변수화된 명령을 사용하면 동적 SQL을 방지하고 모든 사용자에 대한 권한을 제한하므로 SQL Server 삽입 공격을 막을 수 있습니다.  
+### <a name="sql-injection"></a><span data-ttu-id="54edc-113">SQL 삽입</span><span class="sxs-lookup"><span data-stu-id="54edc-113">SQL Injection</span></span>  
+ <span data-ttu-id="54edc-114">SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-114">SQL Injection is the process by which a malicious user enters Transact-SQL statements instead of valid input.</span></span> <span data-ttu-id="54edc-115">입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 우연히 응용 프로그램에서 삽입된 코드를 실행하면 공격으로 인해 데이터가 손상되거나 파괴될 수 있습니다. </span><span class="sxs-lookup"><span data-stu-id="54edc-115">If the input is passed directly to the server without being validated and if the application inadvertently executes the injected code, then the attack has the potential to damage or destroy data.</span></span> <span data-ttu-id="54edc-116">저장 프로시저와 매개 변수화된 명령을 사용하면 동적 SQL을 방지하고 모든 사용자에 대한 권한을 제한하므로 SQL Server 삽입 공격을 막을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-116">You can thwart SQL Server injection attacks by using stored procedures and parameterized commands, avoiding dynamic SQL, and restricting permissions on all users.</span></span>  
   
-### 권한 높이기  
- 권한 높이기 공격은 사용자가 소유자 또는 관리자와 같이 신뢰할 수 있는 계정 권한이 있는 것처럼 가정할 때 발생합니다.  항상 최소 권한 사용자 계정에서 실행해야 하고 반드시 필요한 권한만 할당하세요.  실행 코드에 대해서는 관리자 또는 소유자 계정을 사용하지 마세요.  그러면 공격이 성공하더라도 발생할 수 있는 손상 정도가 제한됩니다.  추가 권한이 필요한 작업을 수행하는 경우 작업 기간 동안에만 프로시저 서명 또는 가장을 사용하세요.  인증서를 사용하여 저장 프로시저에 서명하거나 가장을 사용하여 임시로 권한을 할당할 수 있습니다.  
+### <a name="elevation-of-privilege"></a><span data-ttu-id="54edc-117">권한 높이기</span><span class="sxs-lookup"><span data-stu-id="54edc-117">Elevation of Privilege</span></span>  
+ <span data-ttu-id="54edc-118">권한 높이기 공격은 사용자가 소유자 또는 관리자와 같이 신뢰할 수 있는 계정 권한이 있는 것처럼 가정할 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-118">Elevation of privilege attacks occur when a user is able to assume the privileges of a trusted account, such as an owner or administrator.</span></span> <span data-ttu-id="54edc-119">항상 최소 권한 사용자 계정에서 실행해야 하고 반드시 필요한 권한만 할당하세요.</span><span class="sxs-lookup"><span data-stu-id="54edc-119">Always run under least-privileged user accounts and assign only needed permissions.</span></span> <span data-ttu-id="54edc-120">실행 코드에 대해서는 관리자 또는 소유자 계정을 사용하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="54edc-120">Avoid using administrative or owner accounts for executing code.</span></span> <span data-ttu-id="54edc-121">그러면 공격이 성공하더라도 발생할 수 있는 손상 정도가 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-121">This limits the amount of damage that can occur if an attack succeeds.</span></span> <span data-ttu-id="54edc-122">추가 권한이 필요한 작업을 수행하는 경우 작업 기간 동안에만 프로시저 서명 또는 가장을 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="54edc-122">When performing tasks that require additional permissions, use procedure signing or impersonation only for the duration of the task.</span></span> <span data-ttu-id="54edc-123">인증서를 사용하여 저장 프로시저에 서명하거나 가장을 사용하여 임시로 권한을 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-123">You can sign stored procedures with certificates or use impersonation to temporarily assign permissions.</span></span>  
   
-### 검색 및 지능형 관찰  
- 검색 공격에서는 보안 취약성을 찾기 위해 응용 프로그램에서 생성되는 오류 메시지를 사용할 수 있습니다.  SQL Server 오류 정보가 최종 사용자에게 반환되지 않도록 하기 위해 모든 절차의 코드에서 오류 처리를 구현합니다.  
+### <a name="probing-and-intelligent-observation"></a><span data-ttu-id="54edc-124">검색 및 지능형 관찰</span><span class="sxs-lookup"><span data-stu-id="54edc-124">Probing and Intelligent Observation</span></span>  
+ <span data-ttu-id="54edc-125">검색 공격에서는 보안 취약성을 찾기 위해 응용 프로그램에서 생성되는 오류 메시지를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-125">A probing attack can use error messages generated by an application to search for security vulnerabilities.</span></span> <span data-ttu-id="54edc-126">SQL Server 오류 정보가 최종 사용자에게 반환되지 않도록 하기 위해 모든 절차의 코드에서 오류 처리를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-126">Implement error handling in all procedural code to prevent SQL Server error information from being returned to the end user.</span></span>  
   
-### 인증  
- SQL Server 로그인을 사용할 때 사용자 입력 기반의 연결 문자열이 런타임에 생성되는 경우 연결 문자열 삽입 공격이 발생할 수 있습니다.  유효한 키워드 쌍에 대해 연결 문자열을 확인하지 않는 경우 공격자는 추가 문자를 삽입하여 서버의 중요 데이터 또는 기타 리소스에 액세스할 수도 있습니다.  가능한 경우 Windows 인증을 사용합니다.  SQL Server 로그인을 사용해야 하는 경우 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>를 사용하여 런타임에 연결 문자열을 만들고 유효성을 확인합니다.  
+### <a name="authentication"></a><span data-ttu-id="54edc-127">인증</span><span class="sxs-lookup"><span data-stu-id="54edc-127">Authentication</span></span>  
+ <span data-ttu-id="54edc-128">SQL Server 로그인을 사용할 때 사용자 입력 기반의 연결 문자열이 런타임에 생성되는 경우 연결 문자열 삽입 공격이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-128">A connection string injection attack can occur when using SQL Server logins if a connection string based on user input is constructed at run time.</span></span> <span data-ttu-id="54edc-129">유효한 키워드 쌍에 대해 연결 문자열을 확인하지 않는 경우 공격자는 추가 문자를 삽입하여 서버의 중요 데이터 또는 기타 리소스에 액세스할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-129">If the connection string is not checked for valid keyword pairs, an attacker can insert extra characters, potentially accessing sensitive data or other resources on the server.</span></span> <span data-ttu-id="54edc-130">가능한 경우 Windows 인증을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-130">Use Windows authentication wherever possible.</span></span> <span data-ttu-id="54edc-131">SQL Server 로그인을 사용해야 하는 경우 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>를 사용하여 런타임에 연결 문자열을 만들고 유효성을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-131">If you must use SQL Server logins, use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> to create and validate connection strings at run time.</span></span>  
   
-### 암호  
- 공격자는 권한 있는 사용자의 암호를 가져오거나 추측할 수 있으므로 많은 공격에서 성공합니다.  암호는 공격자에 대한 첫 번째 방어선이므로 강력한 암호 설정은 시스템 보안의 필수적인 조건입니다.  혼합 모드 인증에 대한 암호 정책을 만들고 적용하세요.  
+### <a name="passwords"></a><span data-ttu-id="54edc-132">암호</span><span class="sxs-lookup"><span data-stu-id="54edc-132">Passwords</span></span>  
+ <span data-ttu-id="54edc-133">공격자는 권한 있는 사용자의 암호를 가져오거나 추측할 수 있으므로 많은 공격에서 성공합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-133">Many attacks succeed because an intruder was able to obtain or guess a password for a privileged user.</span></span> <span data-ttu-id="54edc-134">암호는 공격자에 대한 첫 번째 방어선이므로 강력한 암호 설정은 시스템 보안의 필수적인 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-134">Passwords are your first line of defense against intruders, so setting strong passwords is essential to the security of your system.</span></span> <span data-ttu-id="54edc-135">혼합 모드 인증에 대한 암호 정책을 만들고 적용하세요.</span><span class="sxs-lookup"><span data-stu-id="54edc-135">Create and enforce password policies for mixed mode authentication.</span></span>  
   
- Windows 인증을 사용하는 경우에도 항상 `sa` 계정에 대해 강력한 암호를 할당하세요.  
+ <span data-ttu-id="54edc-136">Windows 인증을 사용하는 경우에도 항상 `sa` 계정에 대해 강력한 암호를 할당하세요.</span><span class="sxs-lookup"><span data-stu-id="54edc-136">Always assign a strong password to the `sa` account, even when using Windows Authentication.</span></span>  
   
-## 단원 내용  
- [SQL Server에서 저장 프로시저로 권한 관리](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- 저장 프로시저를 사용하여 권한을 관리하고 데이터 액세스를 제어하는 방법에 대해 설명합니다.  저장 프로시저 사용은 여러 보안 위협에 대응하는 효율적인 방법입니다.  
+## <a name="in-this-section"></a><span data-ttu-id="54edc-137">단원 내용</span><span class="sxs-lookup"><span data-stu-id="54edc-137">In This Section</span></span>  
+ [<span data-ttu-id="54edc-138">SQL Server에서 저장된 프로시저와 함께 권한 관리</span><span class="sxs-lookup"><span data-stu-id="54edc-138">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ <span data-ttu-id="54edc-139">저장 프로시저를 사용하여 권한을 관리하고 데이터 액세스를 제어하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-139">Describes how to use stored procedures to manage permissions and control data access.</span></span> <span data-ttu-id="54edc-140">저장 프로시저 사용은 여러 보안 위협에 대응하는 효율적인 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-140">Using stored procedures is an effective way to respond to many security threats.</span></span>  
   
- [SQL Server에서 보안 동적 SQL 작성](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- 저장 프로시저를 사용하여 안전한 동적 SQL을 작성하는 기술에 대해 설명합니다.  
+ [<span data-ttu-id="54edc-141">보안 SQL Server에서 동적 SQL 작성</span><span class="sxs-lookup"><span data-stu-id="54edc-141">Writing Secure Dynamic SQL in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ <span data-ttu-id="54edc-142">저장 프로시저를 사용하여 안전한 동적 SQL을 작성하는 기술에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-142">Describes techniques for writing secure dynamic SQL using stored procedures.</span></span>  
   
- [SQL Server에서 저장 프로시저 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- 사용자가 직접 액세스할 수 없는 데이터를 사용할 수 있도록 인증서를 사용하여 저장 프로시저에 서명하는 방법에 대해 설명합니다.  호출자가 직접 수행할 권한이 없는 작업을 저장 프로시저에서 수행할 수 있습니다.  
+ [<span data-ttu-id="54edc-143">SQL Server에서 저장된 프로시저에 서명</span><span class="sxs-lookup"><span data-stu-id="54edc-143">Signing Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ <span data-ttu-id="54edc-144">사용자가 직접 액세스할 수 없는 데이터를 사용할 수 있도록 인증서를 사용하여 저장 프로시저에 서명하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-144">Describes how to sign a stored procedure with a certificate to enable users to work with data they do not have direct access to.</span></span> <span data-ttu-id="54edc-145">호출자가 직접 수행할 권한이 없는 작업을 저장 프로시저에서 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-145">This enables stored procedures to perform operations that the caller does not have permissions to perform directly.</span></span>  
   
- [SQL Server에서 가장을 사용하여 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- EXECUTE AS 절을 사용하여 다른 사용자를 가장하는 방법에 대해 설명합니다.  가장은 실행 컨텍스트를 호출자에서 지정된 사용자로 전환합니다.  
+ [<span data-ttu-id="54edc-146">SQL Server에서 가장으로 권한 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="54edc-146">Customizing Permissions with Impersonation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ <span data-ttu-id="54edc-147">EXECUTE AS 절을 사용하여 다른 사용자를 가장하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-147">Describes how to use the EXECUTE AS clause to impersonate another user.</span></span> <span data-ttu-id="54edc-148">가장은 실행 컨텍스트를 호출자에서 지정된 사용자로 전환합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-148">Impersonation switches the execution context from the caller to the specified user.</span></span>  
   
- [SQL Server에서 행 수준의 권한 부여](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
- 데이터 액세스를 제한하는 낮은 수준의 권한을 구현하는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="54edc-149">SQL Server에서 행 수준 권한 부여</span><span class="sxs-lookup"><span data-stu-id="54edc-149">Granting Row-Level Permissions in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
+ <span data-ttu-id="54edc-150">데이터 액세스를 제한하는 낮은 수준의 권한을 구현하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-150">Describes how to implement row-level permissions to restrict data access.</span></span>  
   
- [SQL Server에서 응용 프로그램 역할 만들기](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
- 응용 프로그램 역할의 특성과 기능에 대해 설명합니다.  
+ [<span data-ttu-id="54edc-151">SQL Server에서 응용 프로그램 역할 만들기</span><span class="sxs-lookup"><span data-stu-id="54edc-151">Creating Application Roles in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
+ <span data-ttu-id="54edc-152">응용 프로그램 역할의 특성과 기능에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-152">Describes features and functionality of application roles.</span></span>  
   
- [SQL Server에서 데이터베이스 간 액세스 활성화](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
- 보안을 위협하지 않고 데이터베이스 간 액세스를 허용하는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="54edc-153">SQL Server에서 데이터베이스 간 액세스를 사용 하도록 설정</span><span class="sxs-lookup"><span data-stu-id="54edc-153">Enabling Cross-Database Access in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ <span data-ttu-id="54edc-154">보안을 위협하지 않고 데이터베이스 간 액세스를 허용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="54edc-154">Describes how to enable cross-database access without jeopardizing security.</span></span>  
   
-## 참고 항목  
- [SQL Server 보안](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)   
- [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)   
- [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="54edc-155">참고 항목</span><span class="sxs-lookup"><span data-stu-id="54edc-155">See Also</span></span>  
+ [<span data-ttu-id="54edc-156">SQL Server 보안</span><span class="sxs-lookup"><span data-stu-id="54edc-156">SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [<span data-ttu-id="54edc-157">SQL Server 보안 개요</span><span class="sxs-lookup"><span data-stu-id="54edc-157">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [<span data-ttu-id="54edc-158">ADO.NET 응용 프로그램 보안</span><span class="sxs-lookup"><span data-stu-id="54edc-158">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="54edc-159">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="54edc-159">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

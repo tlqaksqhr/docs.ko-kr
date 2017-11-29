@@ -1,124 +1,127 @@
 ---
-title: "ServiceModel 특성 및 ServiceDescription 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ServiceModel 특성 및 ServiceDescription 참조"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ba41bd63f1dc23441cc7f265a8b1339d0b1194d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceModel 특성 및 ServiceDescription 참조
-*설명 트리*는 모든 측면의 서비스를 함께 설명하는 형식의 계층 구조\(<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=fullName> 클래스로 시작\)입니다.[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 설명 트리를 사용하여 유효한 서비스 런타임 빌드하고, WSDL\(Web Services Description Language\), XSD\(XML 스키마 정의 언어\) 및 클라이언트가 서비스에 연결하고 사용하는 데 사용할 수 있는 서비스에 대한 정책 어설션\(메타데이터\)을 게시하거나 다양한 코드 및 설명 트리 값에 대한 구성 파일 표현을 생성합니다.  
+# <a name="servicemodel-attributes-and-servicedescription-reference"></a><span data-ttu-id="034e7-102">ServiceModel 특성 및 ServiceDescription 참조</span><span class="sxs-lookup"><span data-stu-id="034e7-102">ServiceModel Attributes and ServiceDescription Reference</span></span>
+<span data-ttu-id="034e7-103">*설명 트리에* 형식의 계층 구조는 (부터는 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> 클래스) 함께 서비스의 모든 측면을 설명 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-103">The *description tree* is the hierarchy of types (starting with the <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> class) that together describe every aspect of a service.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="034e7-104">는 설명 트리를 사용하여 유효한 서비스 런타임 빌드하고, WSDL(Web Services Description Language), XSD(XML 스키마 정의 언어) 및 클라이언트가 서비스에 연결하고 사용하는 데 사용할 수 있는 서비스에 대한 정책 어설션(메타데이터)을 게시하거나 다양한 코드 및 설명 트리 값에 대한 구성 파일 표현을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-104"> uses a description tree to build a valid service runtime, to publish Web Services Description Language (WSDL), XML Schema definition language (XSD), and policy assertions (metadata) about the service that clients can use to connect to and use the service, and to generate various code and configuration file representations of the description tree values.</span></span>  
   
- 이 항목에서는 계약 관련 속성을 서비스 계약에서 가져오는 방법 및 이러한 속성이 구현되고 해당 설명 트리에 추가되는 방법에 대해 설명합니다.일부 경우 특성 값이 동작 속성으로 변환된 다음 동작이 설명 트리에 삽입됩니다.설명 트리 값이 메타데이터로 변환되는 방법[!INCLUDE[crabout](../../../../includes/crabout-md.md)][ServiceDescription 및 WSDL 참조](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)를 참조하십시오.  
+ <span data-ttu-id="034e7-105">이 항목에서는 계약 관련 속성을 서비스 계약에서 가져오는 방법 및 이러한 속성이 구현되고 해당 설명 트리에 추가되는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-105">This topic describes how contract-related properties are obtained from the service contract, and how they are implemented and added to the description tree.</span></span> <span data-ttu-id="034e7-106">일부 경우 특성 값이 동작 속성으로 변환된 다음 동작이 설명 트리에 삽입됩니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-106">In some cases, attribute values are converted into behavior properties and behavior is then inserted into the description tree.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="034e7-107">설명 트리 값은 메타 데이터로 변환 되 참조 [ServiceDescription 및 WSDL 참조](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-107"> how the description tree values are converted into metadata, see [ServiceDescription and WSDL Reference](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).</span></span>  
   
-## 작업을 설명 트리에 매핑  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램의 경우 서비스 계약은 인터페이스 또는 클래스 및 해당 메서드를 작업 그룹으로 표시하기 위해 특성을 사용하는 인터페이스\(또는 클래스\)에 의해 모델링됩니다.<xref:System.ServiceModel.ServiceHost> 클래스가 열리면 서비스 계약 및 구현이 반영되고 구성 정보와 함께 설명 트리에 병합됩니다.  
+## <a name="mapping-operations-to-the-description-tree"></a><span data-ttu-id="034e7-108">작업을 설명 트리에 매핑</span><span class="sxs-lookup"><span data-stu-id="034e7-108">Mapping Operations to the Description Tree</span></span>  
+ <span data-ttu-id="034e7-109">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램의 경우 서비스 계약은 인터페이스 또는 클래스 및 해당 메서드를 작업 그룹으로 표시하기 위해 특성을 사용하는 인터페이스(또는 클래스)에 의해 모델링됩니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-109">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications, service contracts are modeled by interfaces (or classes) that use attributes to mark the interface or class and its methods as a grouping of operations.</span></span> <span data-ttu-id="034e7-110"><xref:System.ServiceModel.ServiceHost> 클래스가 열리면 서비스 계약 및 구현이 반영되고 구성 정보와 함께 설명 트리에 병합됩니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-110">When a <xref:System.ServiceModel.ServiceHost> class is opened, any service contracts and implementations are reflected over and merged with configuration information into a description tree.</span></span>  
   
- 작업 모델에는 *매개 변수* 모델 및 *메시지 계약* 모델이 있습니다.매개 변수 모델은 매개 변수가 없거나 <xref:System.ServiceModel.MessageContractAttribute?displayProperty=fullName> 클래스에 의해 표시된 값 형식을 반환하는 관리된 메서드를 사용합니다.이 모델에서 개발자는 매개 변수의 serialization을 제어하고 값을 반환하지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 서비스 및 계약에 대한 설명 트리를 채우는 데 사용되는 값을 생성합니다.  
+ <span data-ttu-id="034e7-111">작업 모델에 두 가지:는 *매개 변수* 모델 및 *메시지 계약* 모델입니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-111">There are two types of operation models: the *parameter* model and the *message contract* model.</span></span> <span data-ttu-id="034e7-112">매개 변수 모델은 매개 변수가 없거나 <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> 클래스에 의해 표시된 값 형식을 반환하는 관리된 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-112">The parameter model uses managed methods that do not have a parameter or return value type that is marked by the <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="034e7-113">이 모델에서 개발자는 매개 변수의 serialization을 제어하고 값을 반환하지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 서비스 및 계약에 대한 설명 트리를 채우는 데 사용되는 값을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-113">In this model, developers control the serialization of parameters and return values, but [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generates the values that are used to populate the description tree for the service and its contract.</span></span>  
   
- 구성 파일에서 지정된 바인딩이 직접 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=fullName> 속성으로 로드됩니다.  
+ <span data-ttu-id="034e7-114">구성 파일에서 지정된 바인딩이 직접 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> 속성으로 로드됩니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-114">Bindings specified in configuration files are loaded directly into the <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> property.</span></span>  
   
-|ServiceBehaviorAttribute 속성|영향을 받은 설명 트리 값|  
-|---------------------------------|--------------------|  
-|Name|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
-|ConfigurationName|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
-|IgnoreExtensionDataObject|모든 작업에 대해 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> 속성을 설정합니다.|  
-|MaxItemsInObjectGraph|모든 작업에 대해 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph%2A> 속성을 설정합니다.|  
+|<span data-ttu-id="034e7-115">ServiceBehaviorAttribute 속성</span><span class="sxs-lookup"><span data-stu-id="034e7-115">ServiceBehaviorAttribute Property</span></span>|<span data-ttu-id="034e7-116">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-116">Description Tree Value Affected</span></span>|  
+|---------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-117">이름</span><span class="sxs-lookup"><span data-stu-id="034e7-117">Name</span></span>|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
+|<span data-ttu-id="034e7-118">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="034e7-118">Namespace</span></span>|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
+|<span data-ttu-id="034e7-119">ConfigurationName</span><span class="sxs-lookup"><span data-stu-id="034e7-119">ConfigurationName</span></span>|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
+|<span data-ttu-id="034e7-120">IgnoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="034e7-120">IgnoreExtensionDataObject</span></span>|<span data-ttu-id="034e7-121">모든 작업에 대해 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-121">Sets the <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> property for all operations.</span></span>|  
+|<span data-ttu-id="034e7-122">MaxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="034e7-122">MaxItemsInObjectGraph</span></span>|<span data-ttu-id="034e7-123">모든 작업에 대해 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-123">Sets the <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph%2A> property for all operations.</span></span>|  
   
-|ServiceContractAttribute 속성|영향을 받은 설명 트리 값|  
-|---------------------------------|--------------------|  
-|CallbackContract|모든 작업 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>에 추가된 <xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription>입니다.|  
-|ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 및 가능한 자식 보호 수준입니다.보호 계층 수준에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [보호 수준 이해](../../../../docs/framework/wcf/understanding-protection-level.md)를 참조하십시오.|  
-|SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
+|<span data-ttu-id="034e7-124">ServiceContractAttribute 속성</span><span class="sxs-lookup"><span data-stu-id="034e7-124">ServiceContractAttribute Property</span></span>|<span data-ttu-id="034e7-125">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-125">Description Tree Value Affected</span></span>|  
+|---------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-126">CallbackContract</span><span class="sxs-lookup"><span data-stu-id="034e7-126">CallbackContract</span></span>|<span data-ttu-id="034e7-127">모든 작업 <xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>에 추가된 <xref:System.ServiceModel.Description.MessageDescription>, <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>입니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-127"><xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> added to all operations <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.</span></span>|  
+|<span data-ttu-id="034e7-128">ConfigurationName</span><span class="sxs-lookup"><span data-stu-id="034e7-128">ConfigurationName</span></span>|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
+|<span data-ttu-id="034e7-129">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="034e7-129">ProtectionLevel</span></span>|<span data-ttu-id="034e7-130"><xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 및 가능한 자식 보호 수준입니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-130"><xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> and possibly child protection levels.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="034e7-131">보호 수준 계층 참조 [보호 수준 이해](../../../../docs/framework/wcf/understanding-protection-level.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-131"> the protection-level hierarchy, see [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).</span></span>|  
+|<span data-ttu-id="034e7-132">SessionMode</span><span class="sxs-lookup"><span data-stu-id="034e7-132">SessionMode</span></span>|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
-|ServiceKnownTypesAttribute 값|영향을 받은 설명 트리 값|  
-|----------------------------------|--------------------|  
-|MethodName|<xref:System.ServiceModel.Description.OperationDescription.KnownTypes%2A>|  
+|<span data-ttu-id="034e7-133">ServiceKnownTypesAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-133">ServiceKnownTypesAttribute Value</span></span>|<span data-ttu-id="034e7-134">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-134">Description Tree Value Affected</span></span>|  
+|--------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-135">MethodName</span><span class="sxs-lookup"><span data-stu-id="034e7-135">MethodName</span></span>|<xref:System.ServiceModel.Description.OperationDescription.KnownTypes%2A>|  
   
-|OperationContractAttribute 값|영향을 받은 설명 트리 값|  
-|----------------------------------|--------------------|  
-|Action|계약\/콜백 계약에 따른 출력 메시지 또는 입력 메시지에 대한 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>입니다.|  
-|AsyncPattern|true이면 <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> 및 <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>입니다.|  
-|IsOneWay|<xref:System.ServiceModel.Description.OperationDescription.Messages%2A>에서 단일 <xref:System.ServiceModel.Description.MessageDescription>으로 매핑됩니다.|  
-|IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
-|IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|이름|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 및 가능한 자식 보호 수준입니다.보호 계층 수준에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [보호 수준 이해](../../../../docs/framework/wcf/understanding-protection-level.md)를 참조하십시오.|  
-|ReplyAction|계약\/콜백 계약에 따른 출력 메시지 또는 입력 메시지에 대한 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>입니다.|  
+|<span data-ttu-id="034e7-136">OperationContractAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-136">OperationContractAttribute Value</span></span>|<span data-ttu-id="034e7-137">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-137">Description Tree Value Affected</span></span>|  
+|--------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-138">작업</span><span class="sxs-lookup"><span data-stu-id="034e7-138">Action</span></span>|<span data-ttu-id="034e7-139">계약/콜백 계약에 따른 출력 메시지 또는 입력 메시지에 대한 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>입니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-139"><xref:System.ServiceModel.Description.MessageDescription.Action%2A> for the output message or input message, depending upon contract/callback contract.</span></span>|  
+|<span data-ttu-id="034e7-140">AsyncPattern</span><span class="sxs-lookup"><span data-stu-id="034e7-140">AsyncPattern</span></span>|<span data-ttu-id="034e7-141">true이면 <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> 및 <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>입니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-141">If true, <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> and <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A></span></span>|  
+|<span data-ttu-id="034e7-142">IsOneWay</span><span class="sxs-lookup"><span data-stu-id="034e7-142">IsOneWay</span></span>|<span data-ttu-id="034e7-143"><xref:System.ServiceModel.Description.MessageDescription>에서 단일 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>으로 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-143">Maps to a single <xref:System.ServiceModel.Description.MessageDescription> in <xref:System.ServiceModel.Description.OperationDescription.Messages%2A></span></span>|  
+|<span data-ttu-id="034e7-144">IsInitiating</span><span class="sxs-lookup"><span data-stu-id="034e7-144">IsInitiating</span></span>|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
+|<span data-ttu-id="034e7-145">IsTerminating</span><span class="sxs-lookup"><span data-stu-id="034e7-145">IsTerminating</span></span>|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
+|<span data-ttu-id="034e7-146">이름</span><span class="sxs-lookup"><span data-stu-id="034e7-146">Name</span></span>|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|<span data-ttu-id="034e7-147">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="034e7-147">ProtectionLevel</span></span>|<span data-ttu-id="034e7-148"><xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 및 가능한 자식 보호 수준입니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-148"><xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> and possibly child protection levels.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="034e7-149">보호 수준 계층 참조 [보호 수준 이해](../../../../docs/framework/wcf/understanding-protection-level.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-149"> the protection-level hierarchy, see [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).</span></span>|  
+|<span data-ttu-id="034e7-150">ReplyAction</span><span class="sxs-lookup"><span data-stu-id="034e7-150">ReplyAction</span></span>|<span data-ttu-id="034e7-151">계약/콜백 계약에 따른 출력 메시지 또는 입력 메시지에 대한 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>입니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-151"><xref:System.ServiceModel.Description.MessageDescription.Action%2A> for the output message or input message, depending upon contract/callback contract.</span></span>|  
   
-|FaultContractAttribute 값|영향을 받은 설명 트리 값|  
-|------------------------------|--------------------|  
-|Action|계약\/콜백 계약에 따른 <xref:System.ServiceModel.Description.FaultDescription.Action%2A>입니다.|  
-|DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
-|이름|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
+|<span data-ttu-id="034e7-152">FaultContractAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-152">FaultContractAttribute Value</span></span>|<span data-ttu-id="034e7-153">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-153">Description Tree Value Affected</span></span>|  
+|----------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-154">작업</span><span class="sxs-lookup"><span data-stu-id="034e7-154">Action</span></span>|<span data-ttu-id="034e7-155">계약/콜백 계약에 따른 <xref:System.ServiceModel.Description.FaultDescription.Action%2A>입니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-155"><xref:System.ServiceModel.Description.FaultDescription.Action%2A> depending upon contract/callback contract.</span></span>|  
+|<span data-ttu-id="034e7-156">DetailType</span><span class="sxs-lookup"><span data-stu-id="034e7-156">DetailType</span></span>|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
+|<span data-ttu-id="034e7-157">이름</span><span class="sxs-lookup"><span data-stu-id="034e7-157">Name</span></span>|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
+|<span data-ttu-id="034e7-158">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="034e7-158">Namespace</span></span>|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
+|<span data-ttu-id="034e7-159">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="034e7-159">ProtectionLevel</span></span>|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
   
-|DataContractFormatAttribute 값|영향을 받은 설명 트리 값|  
-|-----------------------------------|--------------------|  
-|Use|<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 값이 작업의 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>에서 설정됩니다.|  
+|<span data-ttu-id="034e7-160">DataContractFormatAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-160">DataContractFormatAttribute Value</span></span>|<span data-ttu-id="034e7-161">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-161">Description Tree Value Affected</span></span>|  
+|---------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-162">기능</span><span class="sxs-lookup"><span data-stu-id="034e7-162">Use</span></span>|<span data-ttu-id="034e7-163"><xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 값이 작업의 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>에서 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-163">The <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> value is set on the <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> for the operation.</span></span>|  
   
-|XmlSerializerFormatAttribute 값|영향을 받은 설명 트리 값|  
-|------------------------------------|--------------------|  
-|Style|이 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 속성이 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.|  
-|Use|<xref:System.ServiceModel.XmlSerializerFormatAttribute>가 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.|  
+|<span data-ttu-id="034e7-164">XmlSerializerFormatAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-164">XmlSerializerFormatAttribute Value</span></span>|<span data-ttu-id="034e7-165">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-165">Description Tree Value Affected</span></span>|  
+|----------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-166">스타일</span><span class="sxs-lookup"><span data-stu-id="034e7-166">Style</span></span>|<span data-ttu-id="034e7-167">이 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 속성이 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-167">This <xref:System.ServiceModel.XmlSerializerFormatAttribute> property is set on the <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> for the operation.</span></span>|  
+|<span data-ttu-id="034e7-168">기능</span><span class="sxs-lookup"><span data-stu-id="034e7-168">Use</span></span>|<span data-ttu-id="034e7-169"><xref:System.ServiceModel.XmlSerializerFormatAttribute>가 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-169">The <xref:System.ServiceModel.XmlSerializerFormatAttribute> is set on the <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> for the operation.</span></span>|  
   
-|TransactionFlowAttribute 값|영향을 받은 설명 트리 값|  
-|--------------------------------|--------------------|  
-|TransactionFlowOption|<xref:System.ServiceModel.TransactionFlowAttribute>가 작업 동작으로 <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A> 속성에 추가됩니다.|  
+|<span data-ttu-id="034e7-170">TransactionFlowAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-170">TransactionFlowAttribute Value</span></span>|<span data-ttu-id="034e7-171">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-171">Description Tree Value Affected</span></span>|  
+|------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-172">TransactionFlowOption</span><span class="sxs-lookup"><span data-stu-id="034e7-172">TransactionFlowOption</span></span>|<span data-ttu-id="034e7-173"><xref:System.ServiceModel.TransactionFlowAttribute>가 작업 동작으로 <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A> 속성에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-173">The <xref:System.ServiceModel.TransactionFlowAttribute> is added as an operation behavior to the <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A> property.</span></span>|  
   
-|MessageContractAttribute 값|영향을 받은 설명 트리 값|  
-|--------------------------------|--------------------|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessageDescription.ProtectionLevel%2A>|  
-|WrapperName|<xref:System.ServiceModel.Description.MessageBodyDescription.WrapperName%2A>|  
-|WrapperNamespace|<xref:System.ServiceModel.Description.MessageBodyDescription.WrapperNamespace%2A>|  
+|<span data-ttu-id="034e7-174">MessageContractAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-174">MessageContractAttribute Value</span></span>|<span data-ttu-id="034e7-175">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-175">Description Tree Value Affected</span></span>|  
+|------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-176">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="034e7-176">ProtectionLevel</span></span>|<xref:System.ServiceModel.Description.MessageDescription.ProtectionLevel%2A>|  
+|<span data-ttu-id="034e7-177">WrapperName</span><span class="sxs-lookup"><span data-stu-id="034e7-177">WrapperName</span></span>|<xref:System.ServiceModel.Description.MessageBodyDescription.WrapperName%2A>|  
+|<span data-ttu-id="034e7-178">WrapperNamespace</span><span class="sxs-lookup"><span data-stu-id="034e7-178">WrapperNamespace</span></span>|<xref:System.ServiceModel.Description.MessageBodyDescription.WrapperNamespace%2A>|  
   
-|MessageHeaderAttribute 값|영향을 받은 설명 트리 값|  
-|------------------------------|--------------------|  
-|Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> 의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|<span data-ttu-id="034e7-179">MessageHeaderAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-179">MessageHeaderAttribute Value</span></span>|<span data-ttu-id="034e7-180">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-180">Description Tree Value Affected</span></span>|  
+|----------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-181">Actor</span><span class="sxs-lookup"><span data-stu-id="034e7-181">Actor</span></span>|<span data-ttu-id="034e7-182"><xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-182"><xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="034e7-183">MustUnderstand</span><span class="sxs-lookup"><span data-stu-id="034e7-183">MustUnderstand</span></span>|<span data-ttu-id="034e7-184"><xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-184"><xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="034e7-185">이름</span><span class="sxs-lookup"><span data-stu-id="034e7-185">Name</span></span>|<span data-ttu-id="034e7-186"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-186"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="034e7-187">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="034e7-187">Namespace</span></span>|<span data-ttu-id="034e7-188"><xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-188"><xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="034e7-189">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="034e7-189">ProtectionLevel</span></span>|<span data-ttu-id="034e7-190"><xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-190"><xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="034e7-191">Relay</span><span class="sxs-lookup"><span data-stu-id="034e7-191">Relay</span></span>|<span data-ttu-id="034e7-192"><xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-192"><xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
   
-|MessageBodyMemberAttribute 값|영향을 받은 설명 트리 값|  
-|----------------------------------|--------------------|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Order|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|<span data-ttu-id="034e7-193">MessageBodyMemberAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-193">MessageBodyMemberAttribute Value</span></span>|<span data-ttu-id="034e7-194">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-194">Description Tree Value Affected</span></span>|  
+|--------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-195">이름</span><span class="sxs-lookup"><span data-stu-id="034e7-195">Name</span></span>|<span data-ttu-id="034e7-196"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-196"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
+|<span data-ttu-id="034e7-197">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="034e7-197">Namespace</span></span>|<span data-ttu-id="034e7-198"><xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-198"><xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
+|<span data-ttu-id="034e7-199">순서</span><span class="sxs-lookup"><span data-stu-id="034e7-199">Order</span></span>|<span data-ttu-id="034e7-200"><xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-200"><xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
+|<span data-ttu-id="034e7-201">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="034e7-201">ProtectionLevel</span></span>|<span data-ttu-id="034e7-202"><xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-202"><xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
   
-|MessageHeaderArrayAttribute 값|영향을 받은 설명 트리 값|  
-|-----------------------------------|--------------------|  
-|Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
-|네임스페이스|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
+|<span data-ttu-id="034e7-203">MessageHeaderArrayAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-203">MessageHeaderArrayAttribute Value</span></span>|<span data-ttu-id="034e7-204">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-204">Description Tree Value Affected</span></span>|  
+|---------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-205">행위자</span><span class="sxs-lookup"><span data-stu-id="034e7-205">Actor</span></span>|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
+|<span data-ttu-id="034e7-206">MustUnderstand</span><span class="sxs-lookup"><span data-stu-id="034e7-206">MustUnderstand</span></span>|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
+|<span data-ttu-id="034e7-207">이름</span><span class="sxs-lookup"><span data-stu-id="034e7-207">Name</span></span>|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|<span data-ttu-id="034e7-208">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="034e7-208">Namespace</span></span>|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
+|<span data-ttu-id="034e7-209">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="034e7-209">ProtectionLevel</span></span>|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
+|<span data-ttu-id="034e7-210">Relay</span><span class="sxs-lookup"><span data-stu-id="034e7-210">Relay</span></span>|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
   
-|MessagePropertyAttribute 값|영향을 받은 설명 트리 값|  
-|--------------------------------|--------------------|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|<span data-ttu-id="034e7-211">MessagePropertyAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-211">MessagePropertyAttribute Value</span></span>|<span data-ttu-id="034e7-212">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-212">Description Tree Value Affected</span></span>|  
+|------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-213">이름</span><span class="sxs-lookup"><span data-stu-id="034e7-213">Name</span></span>|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
-|MessageParameterAttribute 값|영향을 받은 설명 트리 값|  
-|---------------------------------|--------------------|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.name%2A> 의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|<span data-ttu-id="034e7-214">MessageParameterAttribute 값</span><span class="sxs-lookup"><span data-stu-id="034e7-214">MessageParameterAttribute Value</span></span>|<span data-ttu-id="034e7-215">영향을 받은 설명 트리 값</span><span class="sxs-lookup"><span data-stu-id="034e7-215">Description Tree Value Affected</span></span>|  
+|-------------------------------------|-------------------------------------|  
+|<span data-ttu-id="034e7-216">이름</span><span class="sxs-lookup"><span data-stu-id="034e7-216">Name</span></span>|<span data-ttu-id="034e7-217"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="034e7-217"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
   
- 설명 트리 값이 메타데이터로 변환되는 방법[!INCLUDE[crabout](../../../../includes/crabout-md.md)][ServiceDescription 및 WSDL 참조](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)를 참조하십시오.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="034e7-218">설명 트리 값은 메타 데이터로 변환 되 참조 [ServiceDescription 및 WSDL 참조](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="034e7-218"> how the description tree values are converted into metadata, see [ServiceDescription and WSDL Reference](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).</span></span>  
   
-## 참고 항목  
- [ServiceDescription 및 WSDL 참조](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+## <a name="see-also"></a><span data-ttu-id="034e7-219">참고 항목</span><span class="sxs-lookup"><span data-stu-id="034e7-219">See Also</span></span>  
+ [<span data-ttu-id="034e7-220">ServiceDescription 및 WSDL 참조</span><span class="sxs-lookup"><span data-stu-id="034e7-220">ServiceDescription and WSDL Reference</span></span>](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

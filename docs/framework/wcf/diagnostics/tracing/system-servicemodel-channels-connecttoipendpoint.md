@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.ConnectToIPEndpoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.ConnectToIPEndpoint
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e55f12ac-882e-4b46-9401-91e1263f68e4
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 38d98f79b342f7cb38bbbd7fd04f6e249676f1a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.ConnectToIPEndpoint
-System.ServiceModel.Channels.ConnectToIPEndpoint  
+# <a name="systemservicemodelchannelsconnecttoipendpoint"></a><span data-ttu-id="8bead-102">System.ServiceModel.Channels.ConnectToIPEndpoint</span><span class="sxs-lookup"><span data-stu-id="8bead-102">System.ServiceModel.Channels.ConnectToIPEndpoint</span></span>
+<span data-ttu-id="8bead-103">System.ServiceModel.Channels.ConnectToIPEndpoint</span><span class="sxs-lookup"><span data-stu-id="8bead-103">System.ServiceModel.Channels.ConnectToIPEndpoint</span></span>  
   
-## 설명  
- 연결 정보  
+## <a name="description"></a><span data-ttu-id="8bead-104">설명</span><span class="sxs-lookup"><span data-stu-id="8bead-104">Description</span></span>  
+ <span data-ttu-id="8bead-105">연결 정보</span><span class="sxs-lookup"><span data-stu-id="8bead-105">Connection information.</span></span>  
   
-## 참고 항목  
- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8bead-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8bead-106">See Also</span></span>  
+ [<span data-ttu-id="8bead-107">추적</span><span class="sxs-lookup"><span data-stu-id="8bead-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="8bead-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="8bead-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="8bead-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="8bead-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

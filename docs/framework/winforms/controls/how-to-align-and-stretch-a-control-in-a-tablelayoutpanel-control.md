@@ -1,52 +1,52 @@
 ---
-title: "방법: TableLayoutPanel 컨트롤의 컨트롤 맞춤 및 늘이기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "컨트롤[Windows Forms], 맞추기"
-  - "컨트롤[Windows Forms], 늘이기"
-  - "TableLayoutPanel 컨트롤[Windows Forms], 컨트롤 늘이기"
+title: "방법: TableLayoutPanel 컨트롤의 컨트롤 맞춤 및 늘이기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl
+helpviewer_keywords:
+- TableLayoutPanel control [Windows Forms], stretching controls
+- controls [Windows Forms], stretching
+- controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 043adb68b88ab031cea3de1206d1f2c4252b75d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: TableLayoutPanel 컨트롤의 컨트롤 맞춤 및 늘이기
-<xref:System.Windows.Forms.TableLayoutPanel>에서 <xref:System.Windows.Forms.Control.Anchor%2A> 및 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 사용하여 컨트롤을 맞추고 늘일 수 있습니다.  
+# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a><span data-ttu-id="7f23d-102">방법: TableLayoutPanel 컨트롤의 컨트롤 맞춤 및 늘이기</span><span class="sxs-lookup"><span data-stu-id="7f23d-102">How to: Align and Stretch a Control in a TableLayoutPanel Control</span></span>
+<span data-ttu-id="7f23d-103">맞추고에서 컨트롤을 늘일 수는 <xref:System.Windows.Forms.TableLayoutPanel> 와 <xref:System.Windows.Forms.Control.Anchor%2A> 및 <xref:System.Windows.Forms.Control.Dock%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-103">You can align and stretch controls in a <xref:System.Windows.Forms.TableLayoutPanel> with the <xref:System.Windows.Forms.Control.Anchor%2A> and <xref:System.Windows.Forms.Control.Dock%2A> properties.</span></span>  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  <span data-ttu-id="7f23d-104">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="7f23d-105">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="7f23d-106">자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7f23d-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 컨트롤을 맞추고 늘이려면  
+### <a name="to-align-and-stretch-a-control"></a><span data-ttu-id="7f23d-107">맞춤 및 늘이기 컨트롤을</span><span class="sxs-lookup"><span data-stu-id="7f23d-107">To align and stretch a control</span></span>  
   
-1.  **도구 상자**의 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 폼으로 끌어 옵니다.  
+1.  <span data-ttu-id="7f23d-108">끌어서는 <xref:System.Windows.Forms.TableLayoutPanel> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-108">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
   
-2.  **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 왼쪽 위 셀로 끌어 옵니다.  <xref:System.Windows.Forms.Button> 컨트롤이 셀 가운데에 맞춰집니다.  
+2.  <span data-ttu-id="7f23d-109">끌어서는 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 의 왼쪽 위 셀으로는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-109">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the upper-left cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="7f23d-110"><xref:System.Windows.Forms.Button> 컨트롤의 셀에 가운데 맞춤 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-110">The <xref:System.Windows.Forms.Button> control is centered in the cell.</span></span>  
   
-3.  <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성 값을 `Left, Right`로 설정합니다.  <xref:System.Windows.Forms.Button> 컨트롤이 셀 너비에 맞도록 늘어납니다.  
+3.  <span data-ttu-id="7f23d-111">값으로 설정 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 `Left,Right`합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-111">Set the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Left,Right`.</span></span> <span data-ttu-id="7f23d-112"><xref:System.Windows.Forms.Button> 컨트롤이 있는 셀의 너비에 맞게 늘어납니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-112">The <xref:System.Windows.Forms.Button> control stretches to match the width of the cell.</span></span>  
   
-4.  <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성 값을 `Top, Bottom`으로 설정합니다.  <xref:System.Windows.Forms.Button> 컨트롤이 셀 높이에 맞도록 늘어납니다.  
+4.  <span data-ttu-id="7f23d-113">값으로 설정 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 `Top,Bottom`합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-113">Set the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top,Bottom`.</span></span> <span data-ttu-id="7f23d-114"><xref:System.Windows.Forms.Button> 컨트롤이 있는 셀의 높이 맞게 늘어납니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-114">The <xref:System.Windows.Forms.Button> control stretches to match the height of the cell.</span></span>  
   
-5.  <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성 값을 <xref:System.Windows.Forms.DockStyle>로 설정합니다.  <xref:System.Windows.Forms.Button> 컨트롤이 셀을 채우도록 확장됩니다.  
+5.  <span data-ttu-id="7f23d-115">값으로 설정 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-115">Set the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="7f23d-116"><xref:System.Windows.Forms.Button> 컨트롤이 확장 되어 셀을 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-116">The <xref:System.Windows.Forms.Button> control expands to fill the cell.</span></span>  
   
-6.  <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성 값을 <xref:System.Windows.Forms.DockStyle>으로 설정합니다.  <xref:System.Windows.Forms.Button> 컨트롤이 원래 크기로 돌아오고 셀의 왼쪽 위 모퉁이로 이동합니다.  **Windows Forms 디자이너**의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성은 `Top, Left`로 설정되어 있습니다.  
+6.  <span data-ttu-id="7f23d-117">값으로 설정 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.None>합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-117">Set the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.None>.</span></span> <span data-ttu-id="7f23d-118"><xref:System.Windows.Forms.Button> 컨트롤 원래 크기를 반환 하 고 셀의 왼쪽 위 모퉁이로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-118">The <xref:System.Windows.Forms.Button> control returns to its original size and moves to the upper-left corner of the cell.</span></span> <span data-ttu-id="7f23d-119">**Windows Forms 디자이너** 가 설정 된 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 `Top, Left`합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-119">The **Windows Forms Designer** has set the <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Left`.</span></span>  
   
-7.  <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성 값을 `Bottom, Right`로 설정합니다.  <xref:System.Windows.Forms.Button> 컨트롤이 셀의 오른쪽 아래 모퉁이로 이동합니다.  
+7.  <span data-ttu-id="7f23d-120">값으로 설정 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 `Bottom,Right`합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-120">Set the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Bottom,Right`.</span></span> <span data-ttu-id="7f23d-121"><xref:System.Windows.Forms.Button> 컨트롤이 있는 셀의 오른쪽 아래 모서리에 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-121">The <xref:System.Windows.Forms.Button> control moves to the lower-right corner of the cell.</span></span>  
   
-8.  <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성 값을 <xref:System.Windows.Forms.AnchorStyles>으로 설정합니다.  <xref:System.Windows.Forms.Button> 컨트롤이 셀 가운데로 이동합니다.  
+8.  <span data-ttu-id="7f23d-122">값으로 설정 된 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 <xref:System.Windows.Forms.AnchorStyles.None>합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-122">Set the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to <xref:System.Windows.Forms.AnchorStyles.None>.</span></span> <span data-ttu-id="7f23d-123"><xref:System.Windows.Forms.Button> 컨트롤이 셀의 중앙으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f23d-123">The <xref:System.Windows.Forms.Button> control moves to the center of the cell.</span></span>  
   
-## 참고 항목  
- [TableLayoutPanel 컨트롤](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="7f23d-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7f23d-124">See Also</span></span>  
+ [<span data-ttu-id="7f23d-125">TableLayoutPanel 컨트롤</span><span class="sxs-lookup"><span data-stu-id="7f23d-125">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

@@ -1,71 +1,72 @@
 ---
-title: "방법: 워크플로 및 워크플로 서비스에 지속성 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 워크플로 및 워크플로 서비스에 지속성 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: eb380b8fdfb6b293cfcd02f056895109bf221d83
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: 워크플로 및 워크플로 서비스에 지속성 사용
-이 항목에서는 워크플로 및 워크플로 서비스에 대해 지속성을 사용하도록 설정하는 방법에 대해 설명합니다.  
+# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a><span data-ttu-id="3189d-102">방법: 워크플로 및 워크플로 서비스에 지속성 사용</span><span class="sxs-lookup"><span data-stu-id="3189d-102">How to: Enable Persistence for Workflows and Workflow Services</span></span>
+<span data-ttu-id="3189d-103">이 항목에서는 워크플로 및 워크플로 서비스에 대해 지속성을 사용하도록 설정하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-103">This topic describes how to enable persistence for workflows and workflow services.</span></span>  
   
-## 워크플로에 대해 지속성 사용  
- <xref:System.Activities.WorkflowApplication> 클래스의 <xref:System.Activities.WorkflowApplication.InstanceStore%2A> 속성을 사용하여 인스턴스 저장소를 **WorkflowApplication**에 연결할 수 있습니다.<xref:System.Activities.WorkflowApplication.Persist%2A> 메서드는 응용 프로그램에 연결된 인스턴스 저장소에 워크플로를 저장하거나 유지합니다.<xref:System.Activities.WorkflowApplication.Unload%2A> 메서드는 인스턴스 저장소에 워크플로를 유지한 다음 메모리에서 인스턴스를 언로드합니다.**Load** 메서드는 인스턴스 지속성 저장소에 저장된 워크플로 데이터를 사용하여 워크플로를 메모리로 로드합니다.  
+## <a name="enable-persistence-for-workflows"></a><span data-ttu-id="3189d-104">워크플로에 대해 지속성 사용</span><span class="sxs-lookup"><span data-stu-id="3189d-104">Enable Persistence for Workflows</span></span>  
+ <span data-ttu-id="3189d-105">와 인스턴스 저장소에 연결할 수 있습니다는 **WorkflowApplication** 를 사용 하 여는 <xref:System.Activities.WorkflowApplication.InstanceStore%2A> 의 속성은 <xref:System.Activities.WorkflowApplication> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-105">You can associate an instance store with a **WorkflowApplication** by using the <xref:System.Activities.WorkflowApplication.InstanceStore%2A> property of the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="3189d-106"><xref:System.Activities.WorkflowApplication.Persist%2A> 메서드는 응용 프로그램에 연결된 인스턴스 저장소에 워크플로를 저장하거나 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-106">The <xref:System.Activities.WorkflowApplication.Persist%2A> method saves or persists a workflow into the instance store associated with the application.</span></span> <span data-ttu-id="3189d-107"><xref:System.Activities.WorkflowApplication.Unload%2A> 메서드는 인스턴스 저장소에 워크플로를 유지한 다음 메모리에서 인스턴스를 언로드합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-107">The <xref:System.Activities.WorkflowApplication.Unload%2A> method persists a workflow into the instance store and then unloads the instance from the memory.</span></span> <span data-ttu-id="3189d-108">**부하** 메서드는 워크플로 인스턴스 지 속성 저장소에 저장 된 워크플로 데이터를 사용 하 여 메모리에 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-108">The **Load** method loads a workflow into memory using the workflow data stored in the instance persistence store.</span></span>  
   
- **Persist** 메서드는 다음 단계를 수행합니다.  
+ <span data-ttu-id="3189d-109">**Persist** 메서드는 다음 단계를 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-109">The **Persist** method performs the following steps:</span></span>  
   
-1.  워크플로 스케줄러를 일시 중지하고 워크플로가 유휴 상태로 전환될 때까지 기다립니다.  
+1.  <span data-ttu-id="3189d-110">워크플로 스케줄러를 일시 중지하고 워크플로가 유휴 상태로 전환될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-110">Pauses the workflow scheduler and waits until the workflow enters the idle state.</span></span>  
   
-2.  워크플로를 지속성 저장소에 유지하거나 저장합니다.  
+2.  <span data-ttu-id="3189d-111">워크플로를 지속성 저장소에 유지하거나 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-111">Persists or saves the workflow into the persistence store.</span></span>  
   
-3.  워크플로 스케줄러를 다시 시작합니다.  
+3.  <span data-ttu-id="3189d-112">워크플로 스케줄러를 다시 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-112">Resumes the workflow scheduler.</span></span>  
   
- **Unload** 메서드는 다음 단계를 수행합니다.  
+ <span data-ttu-id="3189d-113">**언로드** 메서드는 다음 단계를 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-113">The **Unload** method performs the following steps:</span></span>  
   
-1.  워크플로 스케줄러를 일시 중지하고 워크플로가 유휴 상태로 전환될 때까지 기다립니다.  
+1.  <span data-ttu-id="3189d-114">워크플로 스케줄러를 일시 중지하고 워크플로가 유휴 상태로 전환될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-114">Pauses the workflow scheduler and waits until the workflow enters the idle state.</span></span>  
   
-2.  워크플로를 지속성 저장소에 유지하거나 저장합니다.  
+2.  <span data-ttu-id="3189d-115">워크플로를 지속성 저장소에 유지하거나 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-115">Persists or saves the workflow into the persistence store.</span></span>  
   
-3.  워크플로 인스턴스를 메모리에서 삭제합니다.  
+3.  <span data-ttu-id="3189d-116">워크플로 인스턴스를 메모리에서 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-116">Disposes the workflow instance in the memory.</span></span>  
   
- 워크플로가 비지속성 영역에 있는 경우에는 워크플로가 비지속성 영역을 종료할 때까지 **Persist** 메서드와 **Unload** 메서드가 모두 차단됩니다.비지속성 영역이 완료되면 메서드에서 지속 또는 언로드 작업을 계속합니다.제한 시간이 경과할 때까지 비지속성 영역이 완료되지 않거나 지속성 프로세스가 너무 오래 걸릴 경우 TimeoutException이 throw됩니다.  
+ <span data-ttu-id="3189d-117">두는 **Persist** 및 **언로드** 메서드는 워크플로가 비지 속성 영역이 종료 될 때까지 워크플로가 비지 속성 영역에는 차단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-117">Both the **Persist** and **Unload** methods will block while a workflow is in a no-persist zone until the workflow exits the no-persist zone.</span></span> <span data-ttu-id="3189d-118">비지속성 영역이 완료되면 메서드에서 지속 또는 언로드 작업을 계속합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-118">The method continues with the persist or unload operation after the no-persist zone completes.</span></span> <span data-ttu-id="3189d-119">제한 시간이 경과할 때까지 비지속성 영역이 완료되지 않거나 지속성 프로세스가 너무 오래 걸릴 경우 TimeoutException이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-119">If the no-persist zone does not complete before the time-out elapses, or if the persistence process takes too long, a TimeoutException will be thrown.</span></span>  
   
-## 코드에서 워크플로 서비스에 대해 지속성 사용  
- <xref:System.ServiceModel.WorkflowServiceHost> 클래스의 **DurableInstancingOptions** 멤버는 인스턴스 저장소를 **WorkflowServiceHost**에 연결하는 데 사용할 수 있는 **InstanceStore** 속성이 있습니다.  
+## <a name="enable-persistence-for-workflow-services-in-code"></a><span data-ttu-id="3189d-120">코드에서 워크플로 서비스에 대해 지속성 사용</span><span class="sxs-lookup"><span data-stu-id="3189d-120">Enable Persistence for Workflow Services in Code</span></span>  
+ <span data-ttu-id="3189d-121">**DurableInstancingOptions** 의 멤버는 <xref:System.ServiceModel.WorkflowServiceHost> 클래스 라는 속성이 **InstanceStore** 와 인스턴스 저장소에 연결 하는 데 사용할 수 있는 **WorkflowServiceHost** .</span><span class="sxs-lookup"><span data-stu-id="3189d-121">The **DurableInstancingOptions** member of the <xref:System.ServiceModel.WorkflowServiceHost> class has a property named **InstanceStore** that you can use to associate an instance store with the **WorkflowServiceHost**.</span></span>  
   
 ```  
-  
 // wsh is an instance of WorkflowServiceHost class  
 wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();  
-  
 ```  
   
- **WorkflowServiceHost**를 열 때 **DurableInstancingOptions.InstanceStore**가 null이 아니면 지속성이 자동으로 설정됩니다.  
+ <span data-ttu-id="3189d-122">경우는 **WorkflowServiceHost** 은 열, 지 속성은 자동으로 경우 사용할 수는 **DurableInstancingOptions.InstanceStore** null이 아닌 합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-122">When the **WorkflowServiceHost** is opened, persistence is automatically enabled if the **DurableInstancingOptions.InstanceStore** is not null.</span></span>  
   
- 일반적으로 서비스 동작은 **InstanceStore** 속성을 사용하여 워크플로 서비스 호스트에 사용할 구체적인 인스턴스 저장소를 제공합니다.예를 들어 SqlWorkflowInstanceStoreBehavior는 **SqlWorkflowInstanceStore** 인스턴스를 만들고 구성한 다음 **DurableInstancingOptions.InstanceStore**에 할당합니다.  
+ <span data-ttu-id="3189d-123">서비스 동작을 사용 하 여 워크플로 서비스 호스트에 사용할 구체적인 인스턴스 저장소를 제공 하는 일반적으로 **InstanceStore** 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-123">Typically, a service behavior provides the concrete instance store to be used with a workflow service host by using the **InstanceStore** property.</span></span> <span data-ttu-id="3189d-124">인스턴스를 sqlworkflowinstancestorebehavior 예를 들어는 **SqlWorkflowInstanceStore**, 구성, 및에 할당 된 **DurableInstancingOptions.InstanceStore**합니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-124">For example, the SqlWorkflowInstanceStoreBehavior creates an instance of the **SqlWorkflowInstanceStore**, configures it, and assigns it to the **DurableInstancingOptions.InstanceStore**.</span></span>  
   
-## 응용 프로그램 구성 파일을 사용하여 워크플로 서비스에 지속성 허용  
- 다음 코드를 app.config 또는 web.config 파일에 추가하여 응용 프로그램 구성 파일을 통해 지속성을 사용하도록 설정할 수 있습니다.  
+## <a name="enable-persistence-for-workflow-services-using-an-application-configuration-file"></a><span data-ttu-id="3189d-125">응용 프로그램 구성 파일을 사용하여 워크플로 서비스에 지속성 허용</span><span class="sxs-lookup"><span data-stu-id="3189d-125">Enable Persistence for Workflow Services Using an Application Configuration File</span></span>  
+ <span data-ttu-id="3189d-126">다음 코드를 app.config 또는 web.config 파일에 추가하여 응용 프로그램 구성 파일을 통해 지속성을 사용하도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3189d-126">Persistence can be enabled using an application configuration file by adding the following code to your app.config or web.config file:</span></span>  
   
 ```xml  
 <configuration>  
   <system.serviceModel>  
     <behaviors>  
       <serviceBehaviors>  
-        <behavior name=”myBehavior”>  
-          <SqlWorkflowInstanceStore connectionString=”Data Source=myDatatbaseServer;Initial Catalog=myPersistenceDatabase”>  
+        <behavior name="myBehavior">  
+          <SqlWorkflowInstanceStore connectionString="Data Source=myDatatbaseServer;Initial Catalog=myPersistenceDatabase">  
         </behavior>  
       </serviceBehaviors>  
     <behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```

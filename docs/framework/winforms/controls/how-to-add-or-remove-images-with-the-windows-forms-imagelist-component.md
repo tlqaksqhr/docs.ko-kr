@@ -1,41 +1,46 @@
 ---
-title: "방법: Windows Forms ImageList 구성 요소를 사용하여 이미지 추가 또는 제거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ImageList 구성 요소[Windows Forms], 이미지 추가"
-  - "ImageList 구성 요소[Windows Forms], 이미지 제거"
-  - "이미지[Windows Forms], ImageList 구성 요소에 추가"
-  - "이미지[Windows Forms], 컨트롤을 사용하여 표시"
-  - "이미지[Windows Forms], ImageList 구성 요소에서 제거"
-  - "이미지[Windows Forms], 컨트롤에 대해 저장"
+title: "방법: Windows Forms ImageList 구성 요소를 사용하여 이미지 추가 또는 제거"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- images [Windows Forms], removing from ImageList component
+- images [Windows Forms], storing for controls
+- ImageList component [Windows Forms], adding images
+- ImageList component [Windows Forms], removing images
+- images [Windows Forms], adding to ImageList component
+- images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ce13ba3413c13ced7ff9a967e23d87622309feb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms ImageList 구성 요소를 사용하여 이미지 추가 또는 제거
-Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소는 일반적으로 컨트롤과 연결하기 전에 이미지로 채워집니다.  그러나 이미지 목록을 컨트롤과 연결한 후에도 이미지를 추가하거나 제거할 수 있습니다.  
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a><span data-ttu-id="23778-102">방법: Windows Forms ImageList 구성 요소를 사용하여 이미지 추가 또는 제거</span><span class="sxs-lookup"><span data-stu-id="23778-102">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>
+<span data-ttu-id="23778-103">Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소가 일반적으로 이미지 되기 전에 채워집니다 컨트롤에 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="23778-103">The Windows Forms <xref:System.Windows.Forms.ImageList> component is typically populated with images before it is associated with a control.</span></span> <span data-ttu-id="23778-104">그러나 추가 하 고는 컨트롤과 함께 이미지 목록을 연결한 후 이미지를 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="23778-104">However, you can add and remove images after associating the image list with a control.</span></span>  
   
 > [!NOTE]
->  컨트롤에서 이미지를 제거하는 경우에는 연결된 컨트롤의 <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> 속성이 계속 유효한지 확인합니다.  
+>  <span data-ttu-id="23778-105">이미지를 제거 하면 확인 하 고 <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> 연결 된 컨트롤의 속성은 여전히 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="23778-105">When you remove images, verify that the <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> property of any associated controls is still valid.</span></span>  
   
-### 프로그래밍 방식으로 이미지를 추가하려면  
+### <a name="to-add-images-programmatically"></a><span data-ttu-id="23778-106">이미지를 추가 하려면 프로그래밍 방식으로</span><span class="sxs-lookup"><span data-stu-id="23778-106">To add images programmatically</span></span>  
   
--   이미지 목록에 있는 <xref:System.Windows.Forms.ImageList.Images%2A> 속성의 <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> 메서드를 사용합니다.  
+-   <span data-ttu-id="23778-107">사용 하 여는 <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> 이미지 목록의 메서드 <xref:System.Windows.Forms.ImageList.Images%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="23778-107">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> method of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property.</span></span>  
   
-     다음 코드 예제에서 이미지의 위치로 설정된 경로는 **내 문서** 폴더입니다.  Windows 운영 체제가 실행되는 대부분의 컴퓨터에는 내 문서 폴더가 포함되어 있으므로 이 위치를 사용합니다.  또한 내 문서 폴더를 선택하면 사용자는 최소한의 시스템 액세스 수준을 갖고 응용 프로그램을 안전하게 실행할 수 있습니다.  다음 코드 예제를 실행하려면 <xref:System.Windows.Forms.ImageList> 컨트롤이 추가된 폼이 이미 있어야 합니다.  
+     <span data-ttu-id="23778-108">다음 코드 예제에서는 이미지의 위치 설정 된 경로 **내 문서** 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="23778-108">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="23778-109">Windows 운영 체제를 실행 하는 대부분의 컴퓨터에이 폴더 포함 됩니다는 알 수 없으므로이 위치가 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="23778-109">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="23778-110">이 위치를 선택에 사용자를 게 최소한의 시스템 액세스 수준이 더 안전 하 게 응용 프로그램을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="23778-110">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="23778-111">다음 코드 예제에서는 포함 하는 폼이 있어야는 <xref:System.Windows.Forms.ImageList> 컨트롤이 이미 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="23778-111">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
   
     ```vb  
     Public Sub LoadImage()  
@@ -46,7 +51,6 @@ Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소는 일반적�
        & "\Image.gif")  
        ImageList1.Images.Add(myImage)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -61,7 +65,6 @@ Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소는 일반적�
        + @"\Image.gif");  
        imageList1.Images.Add(myImage);  
     }  
-  
     ```  
   
     ```cpp  
@@ -81,11 +84,11 @@ Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소는 일반적�
        }  
     ```  
   
-### 키 값으로 이미지를 추가하려면  
+### <a name="to-add-images-with-a-key-value"></a><span data-ttu-id="23778-112">키 값을 사용 하 여 이미지를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="23778-112">To add images with a key value.</span></span>  
   
--   키 값을 받는 이미지 목록의 <xref:System.Windows.Forms.ImageList.Images%2A> 속성의 <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> 메서드 중 하나를 사용합니다.  
+-   <span data-ttu-id="23778-113">중 하나를 사용 하 여는 <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> 이미지 목록의 메서드 <xref:System.Windows.Forms.ImageList.Images%2A> 키 값을 사용 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="23778-113">Use one of the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> methods of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property that takes a key value.</span></span>  
   
-     다음 코드 예제에서 이미지의 위치로 설정된 경로는 **내 문서** 폴더입니다.  Windows 운영 체제가 실행되는 대부분의 컴퓨터에는 내 문서 폴더가 포함되어 있으므로 이 위치를 사용합니다.  또한 내 문서 폴더를 선택하면 사용자는 최소한의 시스템 액세스 수준을 갖고 응용 프로그램을 안전하게 실행할 수 있습니다.  다음 코드 예제를 실행하려면 <xref:System.Windows.Forms.ImageList> 컨트롤이 추가된 폼이 이미 있어야 합니다.  
+     <span data-ttu-id="23778-114">다음 코드 예제에서는 이미지의 위치 설정 된 경로 **내 문서** 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="23778-114">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="23778-115">Windows 운영 체제를 실행 하는 대부분의 컴퓨터에이 폴더 포함 됩니다는 알 수 없으므로이 위치가 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="23778-115">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="23778-116">이 위치를 선택에 사용자를 게 최소한의 시스템 액세스 수준이 더 안전 하 게 응용 프로그램을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="23778-116">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="23778-117">다음 코드 예제에서는 포함 하는 폼이 있어야는 <xref:System.Windows.Forms.ImageList> 컨트롤이 이미 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="23778-117">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
   
     ```vb  
     Public Sub LoadImage()  
@@ -96,7 +99,6 @@ Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소는 일반적�
        & "\Image.gif")  
        ImageList1.Images.Add("myPhoto", myImage)  
     End Sub  
-  
     ```  
   
 ```csharp  
@@ -111,23 +113,23 @@ public void addImage()
    + @"\Image.gif");  
    imageList1.Images.Add("myPhoto", myImage);  
 }  
-  
 ```  
   
-### 프로그래밍 방식으로 모든 이미지를 제거하려면  
+1.  
   
--   단일 이미지를 제거하려면 <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> 메서드를 사용합니다.  
+### <a name="to-remove-all-images-programmatically"></a><span data-ttu-id="23778-118">모든 이미지를 프로그래밍 방식으로 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="23778-118">To remove all images programmatically</span></span>  
   
-     \-또는\-  
+-   <span data-ttu-id="23778-119">사용 하 여 <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> 단일 이미지를 제거 하려면 메서드</span><span class="sxs-lookup"><span data-stu-id="23778-119">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> method to remove a single image</span></span>  
   
-     이미지 목록의 모든 이미지를 지우려면 <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> 메서드를 사용합니다.  
+     <span data-ttu-id="23778-120">-또는-</span><span class="sxs-lookup"><span data-stu-id="23778-120">,-or-</span></span>  
+  
+     <span data-ttu-id="23778-121">사용 하 여는 <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> 메서드는 이미지 목록에서 모든 이미지를 선택 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="23778-121">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> method to clear all images in the image list.</span></span>  
   
     ```vb  
     ' Removes the first image in the image list  
     ImageList1.Images.Remove(myImage)  
     ' Clears all images in the image list  
     ImageList1.Images.Clear()  
-  
     ```  
   
 ```csharp  
@@ -135,26 +137,23 @@ public void addImage()
 imageList1.Images.Remove(myImage);  
 // Clears all images in the image list.  
 imageList1.Images.Clear();  
-  
 ```  
   
-### 키로 이미지를 제거하려면  
+### <a name="to-remove-images-by-key"></a><span data-ttu-id="23778-122">키로 이미지를 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="23778-122">To remove images by key</span></span>  
   
--   키로 단일 이미지를 제거하려면 <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> 메서드를 사용합니다.  
+-   <span data-ttu-id="23778-123">사용 된 <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> 메서드를 해당 키로 단일 이미지를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="23778-123">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> method to remove a single image by its key.</span></span>  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
     ImageList1.Images.RemoveByKey("myPhoto")  
-  
     ```  
   
 ```csharp  
 // Removes the image named "myPhoto" from the list.  
 imageList1.Images.RemoveByKey("myPhoto");  
-  
 ```  
   
-## 참고 항목  
- [ImageList 구성 요소](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)   
- [ImageList 구성 요소 개요](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)   
- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="23778-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="23778-124">See Also</span></span>  
+ [<span data-ttu-id="23778-125">ImageList 구성 요소</span><span class="sxs-lookup"><span data-stu-id="23778-125">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ [<span data-ttu-id="23778-126">ImageList 구성 요소 개요</span><span class="sxs-lookup"><span data-stu-id="23778-126">ImageList Component Overview</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
+ [<span data-ttu-id="23778-127">이미지, 비트맵 및 메타파일</span><span class="sxs-lookup"><span data-stu-id="23778-127">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

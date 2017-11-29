@@ -1,31 +1,35 @@
 ---
-title: "방법: IListSource 인터페이스 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "데이터 바인딩, 구현"
-  - "IListSource 인터페이스"
+title: "방법: IListSource 인터페이스 구현"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data binding [Windows Forms], implementing
+- IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 149b6a421100d2b6f678e89f6b3ebf6b276dc4a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: IListSource 인터페이스 구현
-<xref:System.ComponentModel.IListSource> 인터페이스를 구현하면 <xref:System.Collections.IList>를 구현하지는 않지만 대신 다른 위치의 목록을 제공하는 바인딩 가능한 클래스를 만들 수 있습니다.  
+# <a name="how-to-implement-the-ilistsource-interface"></a><span data-ttu-id="4d71f-102">방법: IListSource 인터페이스 구현</span><span class="sxs-lookup"><span data-stu-id="4d71f-102">How to: Implement the IListSource Interface</span></span>
+<span data-ttu-id="4d71f-103">구현 된 <xref:System.ComponentModel.IListSource> 인터페이스를 구현 하지 않는 바인딩 가능한 클래스를 만드는 <xref:System.Collections.IList> 않지만 다른 위치에서 목록을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4d71f-103">Implement the <xref:System.ComponentModel.IListSource> interface to create a bindable class that does not implement <xref:System.Collections.IList> but instead provides a list from another location.</span></span>  
   
-## 예제  
- 다음 코드 예제에서는 <xref:System.ComponentModel.IListSource> 인터페이스를 구현하는 방법을 보여 줍니다.  `EmployeeListSource` 구성 요소는 <xref:System.ComponentModel.IListSource.GetList%2A> 메서드를 구현하여 데이터를 바인딩하기 위한 <xref:System.Collections.IList>를 노출합니다.  
+## <a name="example"></a><span data-ttu-id="4d71f-104">예제</span><span class="sxs-lookup"><span data-stu-id="4d71f-104">Example</span></span>  
+ <span data-ttu-id="4d71f-105">다음 코드 예제에서는 구현 하는 방법을 보여 줍니다.는 <xref:System.ComponentModel.IListSource> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="4d71f-105">The following code example demonstrates how to implement the <xref:System.ComponentModel.IListSource> interface.</span></span> <span data-ttu-id="4d71f-106">라는 구성 요소가 `EmployeeListSource` 노출는 <xref:System.Collections.IList> 구현 하 여 데이터 바인딩에 <xref:System.ComponentModel.IListSource.GetList%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="4d71f-106">A component named `EmployeeListSource` exposes an <xref:System.Collections.IList> for data binding by implementing the <xref:System.ComponentModel.IListSource.GetList%2A> method.</span></span>  
   
  [!code-csharp[System.ComponentModel.IListSource#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IListSource/CS/EmployeeListSource.cs#1)]
  [!code-vb[System.ComponentModel.IListSource#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IListSource/VB/EmployeeListSource.vb#1)]  
@@ -39,14 +43,14 @@ caps.handback.revision: 6
  [!code-csharp[System.ComponentModel.IListSource#1000](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IListSource/CS/Form1.cs#1000)]
  [!code-vb[System.ComponentModel.IListSource#1000](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IListSource/VB/Form1.vb#1000)]  
   
-## 코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="4d71f-107">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="4d71f-107">Compiling the Code</span></span>  
+ <span data-ttu-id="4d71f-108">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="4d71f-108">This example requires:</span></span>  
   
--   System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
+-   <span data-ttu-id="4d71f-109">System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="4d71f-109">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
-## 참고 항목  
- <xref:System.ComponentModel.IListSource>   
- <xref:System.ComponentModel.ITypedList>   
- <xref:System.ComponentModel.BindingList%601>   
- <xref:System.ComponentModel.IBindingList>   
- [데이터 바인딩 및 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="4d71f-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4d71f-110">See Also</span></span>  
+ <xref:System.ComponentModel.IListSource>  
+ <xref:System.ComponentModel.ITypedList>  
+ <xref:System.ComponentModel.BindingList%601>  
+ <xref:System.ComponentModel.IBindingList>  
+ [<span data-ttu-id="4d71f-111">데이터 바인딩 및 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d71f-111">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

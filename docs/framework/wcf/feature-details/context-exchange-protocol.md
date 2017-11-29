@@ -1,52 +1,55 @@
 ---
-title: "컨텍스트 교환 프로토콜 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "컨텍스트 교환 프로토콜"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 582ff24f9f7935f6bbb143685826fc10df1ab432
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 컨텍스트 교환 프로토콜
-이 단원에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 릴리스에서 도입된 컨텍스트 교환 프로토콜에 대해 설명합니다.클라이언트 채널에서는 이 프로토콜을 사용하여 서비스에서 제공되는 컨텍스트를 수락하고, 동일한 클라이언트 채널 인스턴스를 통해 보내는 해당 서비스에 대한 모든 후속 요청에 이 컨텍스트를 적용합니다.컨텍스트 교환 프로토콜의 구현에서는 HTTP 쿠키 또는 SOAP 헤더 메커니즘 중 하나를 사용하여 서버와 클라이언트 간에 컨텍스트를 전파할 수 있습니다.  
+# <a name="context-exchange-protocol"></a><span data-ttu-id="dbea2-102">컨텍스트 교환 프로토콜</span><span class="sxs-lookup"><span data-stu-id="dbea2-102">Context Exchange Protocol</span></span>
+<span data-ttu-id="dbea2-103">이 단원에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 릴리스에서 도입된 컨텍스트 교환 프로토콜에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-103">This section describes the context exchange protocol introduced in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] release.</span></span> <span data-ttu-id="dbea2-104">클라이언트 채널에서는 이 프로토콜을 사용하여 서비스에서 제공되는 컨텍스트를 수락하고, 동일한 클라이언트 채널 인스턴스를 통해 보내는 해당 서비스에 대한 모든 후속 요청에 이 컨텍스트를 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-104">This protocol allows the client channel to accept a context supplied by a service and apply it to all subsequent requests to that service sent over the same client channel instance.</span></span> <span data-ttu-id="dbea2-105">컨텍스트 교환 프로토콜의 구현에서는 HTTP 쿠키 또는 SOAP 헤더 메커니즘 중 하나를 사용하여 서버와 클라이언트 간에 컨텍스트를 전파할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-105">The implementation of the context exchange protocol can use one of the following two mechanisms to propagate the context between the server and the client: HTTP cookies or a SOAP header.</span></span>  
   
- 컨텍스트 교환 프로토콜은 사용자 지정 채널 계층에서 구현됩니다.채널은 <xref:System.ServiceModel.Channels.ContextMessageProperty> 속성을 사용하여 응용 프로그램 계층 간에 컨텍스트를 전달합니다.끝점 간 전송을 위해 컨텍스트 값은 채널 계층에서 SOAP 헤더로 serialize되거나 HTTP 요청 및 응답을 나타내는 메시지 속성 간에 변환됩니다.후자의 경우, 기존 채널 계층 중 하나가 HTTP 요청 및 응답 메시지 속성을 HTTP 쿠키로 변환하거나 HTTP 쿠키를 HTTP 요청 및 응답 메시지 속성으로 변환합니다.컨텍스트 교환에 사용하는 메커니즘은 <xref:System.ServiceModel.Channels.ContextBindingElement>에서 <xref:System.ServiceModel.Channels.ContextExchangeMechanism> 속성을 사용하여 선택합니다.유효한 값은 `HttpCookie` 또는 `SoapHeader`입니다.  
+ <span data-ttu-id="dbea2-106">컨텍스트 교환 프로토콜은 사용자 지정 채널 계층에서 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-106">The context exchange protocol is implemented in a custom channel layer.</span></span> <span data-ttu-id="dbea2-107">채널은 <xref:System.ServiceModel.Channels.ContextMessageProperty> 속성을 사용하여 응용 프로그램 계층 간에 컨텍스트를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-107">The channel communicates the context to and from the application layer using a <xref:System.ServiceModel.Channels.ContextMessageProperty> property.</span></span> <span data-ttu-id="dbea2-108">끝점 간 전송을 위해 컨텍스트 값은 채널 계층에서 SOAP 헤더로 serialize되거나 HTTP 요청 및 응답을 나타내는 메시지 속성 간에 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-108">For transmission between endpoints, the value of the context is either serialized as a SOAP header at the channel layer, or converted to or from the message properties that represent a HTTP request and response.</span></span> <span data-ttu-id="dbea2-109">후자의 경우, 기존 채널 계층 중 하나가 HTTP 요청 및 응답 메시지 속성을 HTTP 쿠키로 변환하거나 HTTP 쿠키를 HTTP 요청 및 응답 메시지 속성으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-109">In the latter case, it is expected that one of the underlying channel layers converts the HTTP request and response message properties to and from HTTP cookies, respectively.</span></span> <span data-ttu-id="dbea2-110">컨텍스트 교환에 사용하는 메커니즘은 <xref:System.ServiceModel.Channels.ContextExchangeMechanism>에서 <xref:System.ServiceModel.Channels.ContextBindingElement> 속성을 사용하여 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-110">The choice of the mechanism used to exchange the context is done using the <xref:System.ServiceModel.Channels.ContextExchangeMechanism> property on the <xref:System.ServiceModel.Channels.ContextBindingElement>.</span></span> <span data-ttu-id="dbea2-111">유효한 값은 `HttpCookie` 또는 `SoapHeader`입니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-111">Valid values are `HttpCookie` or `SoapHeader`.</span></span>  
   
- 클라이언트에서 채널의 인스턴스는 채널 속성 <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>의 설정에 따라 두 가지 모드에서 작동할 수 있습니다.  
+ <span data-ttu-id="dbea2-112">클라이언트에서 채널의 인스턴스는 채널 속성 <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>의 설정에 따라 두 가지 모드에서 작동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-112">On the client, an instance of a channel can operate in two modes based on the settings on the channel property, <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>.</span></span>  
   
-## 모드 1: 채널 컨텍스트 관리  
- <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>가 `true`로 설정된 경우 이 모드가 기본 모드입니다.이 모드에서 컨텍스트 채널은 컨텍스트를 관리하고 수명 중에 컨텍스트를 캐시합니다.`GetContext` 메서드를 호출하여 채널 속성 `IContextManager`를 통해 채널에서 컨텍스트를 검색할 수 있습니다.채널 속성에서 `SetContext` 메서드를 호출하여 채널을 열기 전에 특정 컨텍스트로 채널을 미리 초기화할 수도 있습니다.컨텍스트를 사용하여 초기화된 채널은 다시 설정할 수 없습니다.  
+## <a name="mode-1-channel-context-management"></a><span data-ttu-id="dbea2-113">모드 1: 채널 컨텍스트 관리</span><span class="sxs-lookup"><span data-stu-id="dbea2-113">Mode 1: Channel Context Management</span></span>  
+ <span data-ttu-id="dbea2-114"><xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>가 `true`로 설정된 경우 이 모드가 기본 모드입니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-114">This is the default mode where <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> is set to `true`.</span></span> <span data-ttu-id="dbea2-115">이 모드에서 컨텍스트 채널은 컨텍스트를 관리하고 수명 중에 컨텍스트를 캐시합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-115">In this mode the context channel manages the context and caches the context during its lifetime.</span></span> <span data-ttu-id="dbea2-116">`IContextManager` 메서드를 호출하여 채널 속성 `GetContext`를 통해 채널에서 컨텍스트를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-116">Context can be retrieved from the channel through channel property `IContextManager` by calling the `GetContext` method.</span></span> <span data-ttu-id="dbea2-117">채널 속성에서 `SetContext` 메서드를 호출하여 채널을 열기 전에 특정 컨텍스트로 채널을 미리 초기화할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-117">The channel can also be pre-initialized with specific context before being opened by calling the `SetContext` method on the channel property.</span></span> <span data-ttu-id="dbea2-118">컨텍스트를 사용하여 초기화된 채널은 다시 설정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-118">Once the channel is initialized with context it cannot be reset.</span></span>  
   
- 다음은 이 모드의 고정 조건 목록입니다.  
+ <span data-ttu-id="dbea2-119">다음은 이 모드의 고정 조건 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-119">The following is a list of invariants in this mode:</span></span>  
   
--   채널이 열린 후에 `SetContext`를 사용하여 컨텍스트를 다시 설정하려고 하면 <xref:System.InvalidOperationException>이 throw됩니다.  
+-   <span data-ttu-id="dbea2-120">채널이 열린 후에 `SetContext`를 사용하여 컨텍스트를 다시 설정하려고 하면 <xref:System.InvalidOperationException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-120">Any attempt to reset the context using `SetContext` after the channel has been opened throws an <xref:System.InvalidOperationException>.</span></span>  
   
--   보내는 메시지에 <xref:System.ServiceModel.Channels.ContextMessageProperty>를 사용하여 컨텍스트를 보내려고 하면 <xref:System.InvalidOperationException>이 throw됩니다.  
+-   <span data-ttu-id="dbea2-121">보내는 메시지에 <xref:System.ServiceModel.Channels.ContextMessageProperty>를 사용하여 컨텍스트를 보내려고 하면 <xref:System.InvalidOperationException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-121">Any attempt to send context by using the <xref:System.ServiceModel.Channels.ContextMessageProperty> in an outgoing message throws an <xref:System.InvalidOperationException>.</span></span>  
   
--   특정 컨텍스트를 사용하여 서버에서 메시지를 받은 경우 채널이 이미 특정 컨텍스트로 초기화되었으면 <xref:System.ServiceModel.ProtocolException>이 생성됩니다.  
+-   <span data-ttu-id="dbea2-122">특정 컨텍스트를 사용하여 서버에서 메시지를 받은 경우 채널이 이미 특정 컨텍스트로 초기화되었으면 <xref:System.ServiceModel.ProtocolException>이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-122">If a message is received from server with a specific context, when the channel has already been initialized with a specific context, this results in a <xref:System.ServiceModel.ProtocolException>.</span></span>  
   
     > [!NOTE]
-    >  채널이 컨텍스트 집합 없이 명시적으로 열린 경우에만 서버에서 초기 컨텍스트를 받을 수 있습니다.  
+    >  <span data-ttu-id="dbea2-123">채널이 컨텍스트 집합 없이 명시적으로 열린 경우에만 서버에서 초기 컨텍스트를 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-123">It is appropriate to receive an initial context from the server only if the channel is opened without any context set explicitly.</span></span>  
   
--   들어오는 메시지의 <xref:System.ServiceModel.Channels.ContextMessageProperty>는 항상 null입니다.  
+-   <span data-ttu-id="dbea2-124">들어오는 메시지의 <xref:System.ServiceModel.Channels.ContextMessageProperty>는 항상 null입니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-124">The <xref:System.ServiceModel.Channels.ContextMessageProperty> on incoming message is always null.</span></span>  
   
-## 모드 2: 응용 프로그램 컨텍스트 관리  
- <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>가 `false`로 설정된 경우의 모드입니다.이 모드에서 컨텍스트 채널은 컨텍스트를 관리하지 않습니다.<xref:System.ServiceModel.Channels.ContextMessageProperty>를 사용하여 컨텍스트를 검색, 관리 및 적용하는 것은 응용 프로그램의 역할입니다.`GetContext` 또는 `SetContext`를 호출하려고 하면 <xref:System.InvalidOperationException>이 발생합니다.  
+## <a name="mode-2-application-context-management"></a><span data-ttu-id="dbea2-125">모드 2: 응용 프로그램 컨텍스트 관리</span><span class="sxs-lookup"><span data-stu-id="dbea2-125">Mode 2: Application Context Management</span></span>  
+ <span data-ttu-id="dbea2-126"><xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>가 `false`로 설정된 경우의 모드입니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-126">This is the mode when <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> is set to `false`.</span></span> <span data-ttu-id="dbea2-127">이 모드에서 컨텍스트 채널은 컨텍스트를 관리하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-127">In this mode the context channel does not manage context.</span></span> <span data-ttu-id="dbea2-128"><xref:System.ServiceModel.Channels.ContextMessageProperty>를 사용하여 컨텍스트를 검색, 관리 및 적용하는 것은 응용 프로그램의 역할입니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-128">It is the application's responsibility to retrieve, manage and apply context by using the <xref:System.ServiceModel.Channels.ContextMessageProperty>.</span></span> <span data-ttu-id="dbea2-129">`GetContext` 또는 `SetContext`를 호출하려고 하면 <xref:System.InvalidOperationException>이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-129">Any attempt to call `GetContext` or `SetContext` results in an <xref:System.InvalidOperationException>.</span></span>  
   
- 선택한 모드에 관계없이 클라이언트 채널 팩토리는 <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel> 및 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 메시지 교환 패턴을 지원합니다.  
+ <span data-ttu-id="dbea2-130">선택한 모드에 관계없이 클라이언트 채널 팩토리는 <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel> 및 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 메시지 교환 패턴을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-130">No matter which mode is chosen the client channel factory supports <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel>, and <xref:System.ServiceModel.Channels.IDuplexSessionChannel> message exchange patterns.</span></span>  
   
- 서비스에서 채널의 인스턴스는 들어오는 메시지에서 클라이언트가 제공한 컨텍스트를 <xref:System.ServiceModel.Channels.ContextMessageProperty>로 변환합니다.응용 프로그램 계층 또는 호출 스택의 위쪽에 있는 다른 채널에서 메시지 속성에 액세스할 수 있습니다.서비스 채널을 사용하면 응용 프로그램 계층에서도 응답 메시지에 <xref:System.ServiceModel.Channels.ContextMessageProperty>를 첨부하여 클라이언트에 다시 전파할 새 컨텍스트 값을 지정할 수 있습니다.이 속성은 바인딩 구성에 따라 달라지는 컨텍스트가 포함된 SOAP 헤더 또는 HTTP 쿠키로 변환됩니다.서비스 채널 수신기는 <xref:System.ServiceModel.Channels.IReplyChannel>, <xref:System.ServiceModel.Channels.IReplySessionChannel> 및 <xref:System.ServiceModel.Channels.IReplySessionChannel> 메시지 교환 패턴을 지원합니다.  
+ <span data-ttu-id="dbea2-131">서비스에서 채널의 인스턴스는 들어오는 메시지에서 클라이언트가 제공한 컨텍스트를 <xref:System.ServiceModel.Channels.ContextMessageProperty>로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-131">On the service, an instance of the channel is responsible for converting the context supplied by the client on incoming messages to the <xref:System.ServiceModel.Channels.ContextMessageProperty>.</span></span> <span data-ttu-id="dbea2-132">응용 프로그램 계층 또는 호출 스택의 위쪽에 있는 다른 채널에서 메시지 속성에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-132">The message property can then be accessed by the application layer or other channels further up in the call stack.</span></span> <span data-ttu-id="dbea2-133">서비스 채널을 사용하면 응용 프로그램 계층에서도 응답 메시지에 <xref:System.ServiceModel.Channels.ContextMessageProperty>를 첨부하여 클라이언트에 다시 전파할 새 컨텍스트 값을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-133">The service channels also allow the application layer to specify a new context value to be propagated back to the client by attaching a <xref:System.ServiceModel.Channels.ContextMessageProperty> to the response message.</span></span> <span data-ttu-id="dbea2-134">이 속성은 바인딩 구성에 따라 달라지는 컨텍스트가 포함된 SOAP 헤더 또는 HTTP 쿠키로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-134">This property is converted to the SOAP header or HTTP cookie that contains the context, which depends on the configuration of the binding.</span></span> <span data-ttu-id="dbea2-135">서비스 채널 수신기는 <xref:System.ServiceModel.Channels.IReplyChannel>, <xref:System.ServiceModel.Channels.IReplySessionChannel> 및 <xref:System.ServiceModel.Channels.IReplySessionChannel> 메시지 교환 패턴을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-135">The service channel listener supports <xref:System.ServiceModel.Channels.IReplyChannel>, <xref:System.ServiceModel.Channels.IReplySessionChannel>, and <xref:System.ServiceModel.Channels.IReplySessionChannel> message exchange patterns.</span></span>  
   
- 컨텍스트 교환 프로토콜은 컨텍스트를 전파할 때 HTTP 쿠키를 사용하지 않는 경우에 컨텍스트 정보를 나타낼 새 `wsc:Context` SOAP 헤더를 도입했습니다.컨텍스트 헤더 스키마는 각각 문자열 키와 문자열 내용이 포함된 임의의 수의 자식 요소를 허용합니다.다음은 컨텍스트 헤더의 예제입니다.  
+ <span data-ttu-id="dbea2-136">컨텍스트 교환 프로토콜은 컨텍스트를 전파할 때 HTTP 쿠키를 사용하지 않는 경우에 컨텍스트 정보를 나타낼 새 `wsc:Context` SOAP 헤더를 도입했습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-136">The context exchange protocol introduces a new `wsc:Context` SOAP header to represent the context information when HTTP cookies are not used to propagate the context.</span></span> <span data-ttu-id="dbea2-137">컨텍스트 헤더 스키마는 각각 문자열 키와 문자열 내용이 포함된 임의의 수의 자식 요소를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-137">The context header schema allows for any number of child elements, each with a string key and string content.</span></span> <span data-ttu-id="dbea2-138">다음은 컨텍스트 헤더의 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-138">The following is an example of a context header.</span></span>  
   
  `<Context xmlns="http://schemas.microsoft.com/ws/2006/05/context">`  
   
@@ -54,25 +57,25 @@ caps.handback.revision: 6
   
  `</Context>`  
   
- `HttpCookie` 모드에서는 `SetCookie` 헤더를 사용하여 쿠키가 설정됩니다.쿠키 이름은 `WscContext`입니다.쿠키 값은 `wsc:Context` 헤더의 Base64 인코딩입니다.이 값은 따옴표로 묶여집니다.  
+ <span data-ttu-id="dbea2-139">`HttpCookie` 모드에서는 `SetCookie` 헤더를 사용하여 쿠키가 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-139">When in `HttpCookie` mode, cookies are set using the `SetCookie` header.</span></span> <span data-ttu-id="dbea2-140">쿠키 이름은 `WscContext`입니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-140">The cookie name is `WscContext`.</span></span> <span data-ttu-id="dbea2-141">쿠키 값은 `wsc:Context` 헤더의 Base64 인코딩입니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-141">The value of the cookie is the Base64 encoding of the `wsc:Context` header.</span></span> <span data-ttu-id="dbea2-142">이 값은 따옴표로 묶여집니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-142">This value is enclosed in quotes.</span></span>  
   
- WS\-Addressing 헤더는 서비스에서 요청을 디스패치할 위치를 결정하는 데 사용되기 때문에 보호되어야 하며, 이와 동일한 이유로 컨텍스트 값도 전송 중에 수정되지 않도록 보호되어야 합니다.따라서 `wsc:Context` 헤더는 바인딩이 메시지 보호 기능을 제공하는 경우 SOAP 또는 전송 수준에서 디지털 서명되거나 서명 후에 암호화되어야 합니다.컨텍스트를 전파하는 데 사용되는 HTTP 쿠키는 전송 보안을 사용하여 보호해야 합니다.  
+ <span data-ttu-id="dbea2-143">WS-Addressing 헤더는 서비스에서 요청을 디스패치할 위치를 결정하는 데 사용되기 때문에 보호되어야 하며, 이와 동일한 이유로 컨텍스트 값도 전송 중에 수정되지 않도록 보호되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-143">The value of the context must be protected from modification while in transit for the same reason WS-Addressing headers are protected – the header is used to determine where to dispatch the request to on the service.</span></span> <span data-ttu-id="dbea2-144">따라서 `wsc:Context` 헤더는 바인딩이 메시지 보호 기능을 제공하는 경우 SOAP 또는 전송 수준에서 디지털 서명되거나 서명 후에 암호화되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-144">The `wsc:Context` header is therefore required to be digitally signed or signed and encrypted at either the SOAP or transport level when the binding offers message protection capability.</span></span> <span data-ttu-id="dbea2-145">컨텍스트를 전파하는 데 사용되는 HTTP 쿠키는 전송 보안을 사용하여 보호해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-145">When HTTP cookies are used to propagate context, they should be protected using transport security.</span></span>  
   
- 컨텍스트 교환 프로토콜을 지원해야 하는 서비스 끝점에서는 이를 게시된 정책에 명시할 수 있습니다.클라이언트가 SOAP 수준에서 컨텍스트 교환 프로토콜을 지원하기 위한 요구 사항 또는 클라이언트가 HTTP 쿠키 지원을 사용하기 위한 요구 사항을 나타내기 위해 두 개의 새로운 정책 어설션이 도입되었습니다.서비스 측의 정책에 대한 이러한 어설션의 생성은 다음과 같이 <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> 속성의 값으로 제어됩니다.  
+ <span data-ttu-id="dbea2-146">컨텍스트 교환 프로토콜을 지원해야 하는 서비스 끝점에서는 이를 게시된 정책에 명시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-146">Service endpoints that require support for the context exchange protocol can make it explicit in the published policy.</span></span> <span data-ttu-id="dbea2-147">클라이언트가 SOAP 수준에서 컨텍스트 교환 프로토콜을 지원하기 위한 요구 사항 또는 클라이언트가 HTTP 쿠키 지원을 사용하기 위한 요구 사항을 나타내기 위해 두 개의 새로운 정책 어설션이 도입되었습니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-147">Two new policy assertions have been introduced to represent the requirement for the client to support the context exchange protocol at the SOAP level or to enable HTTP cookie support.</span></span> <span data-ttu-id="dbea2-148">서비스 측의 정책에 대한 이러한 어설션의 생성은 다음과 같이 <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> 속성의 값으로 제어됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-148">Generation of these assertions into the policy on the service is controlled by the value of the <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> property as follows:</span></span>  
   
--   <xref:System.ServiceModel.Channels.ContextExchangeMechanism>의 경우 다음 어설션이 생성됩니다.  
+-   <span data-ttu-id="dbea2-149"><xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>의 경우 다음 어설션이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-149">For <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, the following assertion is generated:</span></span>  
   
-    ```  
+    ```xml  
     <IncludeContext   
     xmlns="http://schemas.microsoft.com/ws/2006/05/context"  
     protectionLevel="Sign" />  
     ```  
   
--   <xref:System.ServiceModel.Channels.ContextExchangeMechanism>의 경우 다음 어설션이 생성됩니다.  
+-   <span data-ttu-id="dbea2-150"><xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>의 경우 다음 어설션이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="dbea2-150">For <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, the following assertion is generated:</span></span>  
   
-    ```  
+    ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
     ```  
   
-## 참고 항목  
- [웹 서비스 프로토콜 상호 운용성 가이드](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+## <a name="see-also"></a><span data-ttu-id="dbea2-151">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dbea2-151">See Also</span></span>  
+ [<span data-ttu-id="dbea2-152">웹 서비스 프로토콜 상호 운용성 가이드</span><span class="sxs-lookup"><span data-stu-id="dbea2-152">Web Services Protocols Interoperability Guide</span></span>](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

@@ -1,46 +1,49 @@
 ---
-title: "중간 계층 클라이언트 응용 프로그램 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "중간 계층 클라이언트 응용 프로그램"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 893fa027d2f1eb4fa3782b9119f6ae2d4a78d700
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 중간 계층 클라이언트 응용 프로그램
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하는 중간 계층 클라이언트 응용 프로그램과 관련된 다양한 문제에 대해 설명합니다.  
+# <a name="middle-tier-client-applications"></a><span data-ttu-id="1c09b-102">중간 계층 클라이언트 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="1c09b-102">Middle-Tier Client Applications</span></span>
+<span data-ttu-id="1c09b-103">이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하는 중간 계층 클라이언트 응용 프로그램과 관련된 다양한 문제에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-103">This topic discusses various issues specific to middle-tier client applications that use [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-## 중간 계층 클라이언트 성능 향상  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]을 사용하는 웹 서비스와 같은 이전 통신 기술과 비교하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 풍부한 기능으로 인해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 인스턴스를 만들기가 더 복잡할 수 있습니다.  예를 들어, <xref:System.ServiceModel.ChannelFactory%601> 개체가 열릴 때 클라이언트 인스턴스에 대한 시작 시간을 늘리는 절차인 서비스를 사용하여 보안 세션을 설정할 수 있습니다.  일반적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트는 여러 개의 호출을 만들었다가 닫기 때문에 이러한 추가 기능이 클라이언트 응용 프로그램에 큰 영향을 주지는 않습니다.  
+## <a name="increasing-middle-tier-client-performance"></a><span data-ttu-id="1c09b-104">중간 계층 클라이언트 성능 향상</span><span class="sxs-lookup"><span data-stu-id="1c09b-104">Increasing Middle-Tier Client Performance</span></span>  
+ <span data-ttu-id="1c09b-105">[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]을 사용하는 웹 서비스와 같은 이전 통신 기술과 비교하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 풍부한 기능으로 인해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 인스턴스를 만들기가 더 복잡할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-105">Compared to previous communications technologies, such as Web services using [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], the creation of a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client instance can be more complex due to the rich feature set of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="1c09b-106">예를 들어, <xref:System.ServiceModel.ChannelFactory%601> 개체가 열릴 때 클라이언트 인스턴스에 대한 시작 시간을 늘리는 절차인 서비스를 사용하여 보안 세션을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-106">For example, when a <xref:System.ServiceModel.ChannelFactory%601> object is opened it can establish a secure session with the service, a procedure that increases the startup time for the client instance.</span></span> <span data-ttu-id="1c09b-107">일반적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트는 여러 개의 호출을 만들었다가 닫기 때문에 이러한 추가 기능이 클라이언트 응용 프로그램에 큰 영향을 주지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-107">Typically, these additional feature capabilities do not affect client applications greatly since the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client makes several calls, and then closes.</span></span>  
   
- 그러나 중간 계층 클라이언트 응용 프로그램은 많은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체를 빠르게 만들 수 있으므로, 초기화 요구 사항이 향상됩니다.  서비스를 호출할 때 중간 계층 응용 프로그램의 성능을 향상시키는 두 가지 기본적인 방법이 있습니다.  
+ <span data-ttu-id="1c09b-108">그러나 중간 계층 클라이언트 응용 프로그램은 많은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체를 빠르게 만들 수 있으므로, 초기화 요구 사항이 향상됩니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-108">Middle-tier client applications, however, can create many [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client objects quickly and, as a result, experience increased initialization requirements.</span></span> <span data-ttu-id="1c09b-109">서비스를 호출할 때 중간 계층 응용 프로그램의 성능을 향상시키는 두 가지 기본적인 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-109">There are two main approaches to increasing the performance of middle-tier applications when calling services:</span></span>  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체를 캐시한 다음 이후의 호출에서 다시 사용합니다\(가능한 경우\).  
+-   <span data-ttu-id="1c09b-110">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체를 캐시한 다음 이후의 호출에서 다시 사용합니다(가능한 경우).</span><span class="sxs-lookup"><span data-stu-id="1c09b-110">Cache the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client object and reuse it for subsequent calls where possible.</span></span>  
   
--   <xref:System.ServiceModel.ChannelFactory%601> 개체를 만든 다음 호출할 때마다 해당 개체를 사용하여 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 채널 개체를 만듭니다.  
+-   <span data-ttu-id="1c09b-111"><xref:System.ServiceModel.ChannelFactory%601> 개체를 만든 다음 호출할 때마다 해당 개체를 사용하여 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 채널 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-111">Create a <xref:System.ServiceModel.ChannelFactory%601> object and then use that object to create new [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client channel objects for each call.</span></span>  
   
- 이러한 방법을 사용할 때 고려해야 할 문제는 다음과 같습니다.  
+ <span data-ttu-id="1c09b-112">이러한 방법을 사용할 때 고려해야 할 문제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-112">Issues to consider when using these approaches include:</span></span>  
   
--   서비스에서 세션을 사용하여 클라이언트별 상태를 유지할 경우 서비스의 상태가 중간 계층 클라이언트의 상태에 연결되기 때문에 다중 클라이언트 계층 요청에서 중간 계층 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 다시 사용할 수 없습니다.  
+-   <span data-ttu-id="1c09b-113">서비스에서 세션을 사용하여 클라이언트별 상태를 유지할 경우 서비스의 상태가 중간 계층 클라이언트의 상태에 연결되기 때문에 다중 클라이언트 계층 요청에서 중간 계층 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 다시 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-113">If the service is maintaining a client-specific state by using a session, then you cannot reuse the middle-tier [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client with multiple-client tier requests because the service's state is tied to that of the middle-tier client.</span></span>  
   
--   서비스에서 클라이언트 단위로 인증을 수행해야 하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 <xref:System.ServiceModel.ChannelFactory%601>를 만든 이후에는 중간 계층의 클라이언트 자격 증명을 수정할 수 없기 때문에 중간 계층 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 채널 개체를 다시 사용하지 않고 중간 계층에 들어오는 요청마다 새로운 클라이언트를 만들어야 합니다.  
+-   <span data-ttu-id="1c09b-114">서비스에서 클라이언트 단위로 인증을 수행해야 하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 만든 이후에는 중간 계층의 클라이언트 자격 증명을 수정할 수 없기 때문에 중간 계층 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 <xref:System.ServiceModel.ChannelFactory%601> 클라이언트 채널 개체를 다시 사용하지 않고 중간 계층에 들어오는 요청마다 새로운 클라이언트를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-114">If the service must perform authentication on a per-client basis, you must create a new client for each incoming request on the middle tier instead of reusing the middle-tier [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client (or [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client channel object) because the client credentials of the middle tier cannot be modified after the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client (or <xref:System.ServiceModel.ChannelFactory%601>) has been created.</span></span>  
   
--   채널과 채널에서 만든 클라이언트는 스레드로부터 안전하므로 네트워크에서 동시에 여러 메시지 쓰기를 지원하지 않을 수 있습니다.  큰 메시지를 보낼 경우, 특히 스트리밍할 경우에는 다른 보내기 작업이 완료되는 동안 보내기 작업이 차단될 수 있습니다.  따라서 채널을 재사용하여 제어의 흐름이 서비스로 반환될 경우 즉, 코드 경로에서 공유 클라이언트에 대한 콜백을 생성하는 서비스를 공유 클라이언트가 호출할 경우 동시성 결여 및 교착 상태의 두 가지 문제가 발생할 수 있습니다.  이는 재사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트의 형식에 관계없이 적용됩니다.  
+-   <span data-ttu-id="1c09b-115">채널과 채널에서 만든 클라이언트는 스레드로부터 안전하므로 네트워크에서 동시에 여러 메시지 쓰기를 지원하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-115">While channels and clients created by the channels are thread-safe, they might not support writing more than one message to the wire concurrently.</span></span> <span data-ttu-id="1c09b-116">큰 메시지를 보낼 경우, 특히 스트리밍할 경우에는 다른 보내기 작업이 완료되는 동안 보내기 작업이 차단될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-116">If you are sending large messages, particularly if streaming, the send operation might block waiting for another send to complete.</span></span> <span data-ttu-id="1c09b-117">따라서 채널을 재사용하여 제어의 흐름이 서비스로 반환될 경우 즉, 코드 경로에서 공유 클라이언트에 대한 콜백을 생성하는 서비스를 공유 클라이언트가 호출할 경우 동시성 결여 및 교착 상태의 두 가지 문제가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-117">This causes two sorts of problems: a lack of concurrency and the possibility of deadlock if the flow of control returns to the service reusing the channel (that is, the shared client calls a service whose code path results in a callback to the shared client).</span></span> <span data-ttu-id="1c09b-118">이는 재사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트의 형식에 관계없이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-118">This is true regardless of the type of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client you reuse.</span></span>  
   
--   채널을 공유하는지 여부에 관계없이 오류가 발생한 채널을 처리해야 합니다.  그러나 채널을 다시 사용할 경우 오류 채널에서 대기 중인 여러 요청 또는 보내기를 종료할 수 있습니다.  
+-   <span data-ttu-id="1c09b-119">채널을 공유하는지 여부에 관계없이 오류가 발생한 채널을 처리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-119">You must handle faulted channels regardless of whether you share the channel.</span></span> <span data-ttu-id="1c09b-120">그러나 채널을 다시 사용할 경우 오류 채널에서 대기 중인 여러 요청 또는 보내기를 종료할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-120">When channels are reused, however, a faulting channel can take down more than one pending request or send.</span></span>  
   
- 여러 요청에 대해 클라이언트를 재사용하는 최선의 방법을 설명하는 예제를 보려면 [ASP.NET 클라이언트에서 데이터 바인딩](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)을 참조하세요.  
+ <span data-ttu-id="1c09b-121">여러 개의 요청에 대 한 클라이언트를 다시 사용에 대 한 모범 사례를 보여 주는 예제를 보려면 [ASP.NET 클라이언트에서 데이터 바인딩](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-121">For an example that demonstrates best practices for reusing a client for multiple requests, see [Data Binding in an ASP.NET Client](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md).</span></span>  
   
- 또한 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize할 수 있는 데이터 형식을 사용하는 클라이언트가 런타임에 해당 데이터 형식에 대한 serialization 코드를 생성하고 컴파일할 때 시작 성능이 저하될 수 있습니다. 이 시작 성능을 향상시킬 수 있습니다.  [ServiceModel Metadata 유틸리티 도구\(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용하면 응용 프로그램에 대해 컴파일된 어셈블리로부터 필요한 serialization 코드를 생성하여 이러한 응용 프로그램의 시작 성능을 향상시킬 수 있습니다.  자세한 내용은 [방법: XmlSerializer를 사용하여 WCF 클라이언트 응용 프로그램의 시작 시간 개선](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)을 참조하세요.  
+ <span data-ttu-id="1c09b-122">또한 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize할 수 있는 데이터 형식을 사용하는 클라이언트가 런타임에 해당 데이터 형식에 대한 serialization 코드를 생성하고 컴파일할 때 시작 성능이 저하될 수 있습니다. 이 시작 성능을 향상시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-122">In addition, you can increase the startup performance for those clients that use data types that are serializable using the <xref:System.Xml.Serialization.XmlSerializer> generate and compile serialization code for those data types at runtime, which can result in slow start-up performance.</span></span> <span data-ttu-id="1c09b-123">[ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 응용 프로그램에 대해 컴파일된 어셈블리에서 필요한 serialization 코드를 생성 하 여 이러한 응용 프로그램의 시작 성능을 향상 시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-123">The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) can improve start-up performance for these applications by generating the necessary serialization code from the compiled assemblies for the application.</span></span> <span data-ttu-id="1c09b-124">자세한 내용은 참조 [하는 방법: 시작 시간의 WCF 클라이언트 응용 프로그램 XmlSerializer를 사용 하 여 개선](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1c09b-124">For more information, see [How to: Improve the Startup Time of WCF Client Applications using the XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).</span></span>  
   
-## 참고 항목  
- [WCF 클라이언트를 사용하여 서비스 액세스](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)
+## <a name="see-also"></a><span data-ttu-id="1c09b-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1c09b-125">See Also</span></span>  
+ [<span data-ttu-id="1c09b-126">WCF 클라이언트를 사용하여 서비스 액세스</span><span class="sxs-lookup"><span data-stu-id="1c09b-126">Accessing Services Using a WCF Client</span></span>](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)

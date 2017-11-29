@@ -1,26 +1,29 @@
 ---
-title: "Discovery 클라이언트 채널을 통해 사용자 지정 바인딩 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Discovery 클라이언트 채널을 통해 사용자 지정 바인딩 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 716dc09d38c778c49a1e2e5fa094ef1bf004eb46
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Discovery 클라이언트 채널을 통해 사용자 지정 바인딩 사용
-<xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>와 함께 사용자 지정 바인딩을 사용하는 경우 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 인스턴스를 만드는 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>를 정의해야 합니다.  
+# <a name="using-a-custom-binding-with-the-discovery-client-channel"></a><span data-ttu-id="520af-102">Discovery 클라이언트 채널을 통해 사용자 지정 바인딩 사용</span><span class="sxs-lookup"><span data-stu-id="520af-102">Using a Custom Binding with the Discovery Client Channel</span></span>
+<span data-ttu-id="520af-103"><xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>와 함께 사용자 지정 바인딩을 사용하는 경우 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 인스턴스를 만드는 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>를 정의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="520af-103">When using a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, you must define a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> that creates <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances.</span></span>  
   
-## DiscoveryEndpointProvider 만들기  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>는 필요 시 [T:System:ServiceModel.Discovery.DiscoveryEndpoints](assetId:///T:System:ServiceModel.Discovery.DiscoveryEndpoints?qualifyHint=False&amp;autoUpgrade=True)를 만듭니다.검색 끝점 공급자를 정의하려면 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>에서 클래스를 파생시키고 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 메서드를 재정의한 다음 새 검색 끝점을 반환합니다.다음 예제에서는 검색 끝점 공급자를 만드는 방법을 보여 줍니다.  
+## <a name="creating-a-discoveryendpointprovider"></a><span data-ttu-id="520af-104">DiscoveryEndpointProvider 만들기</span><span class="sxs-lookup"><span data-stu-id="520af-104">Creating a DiscoveryEndpointProvider</span></span>  
+ <span data-ttu-id="520af-105"><xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 만드는 책임이 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 필요에 따라 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="520af-105">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> is responsible for creating <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances on demand.</span></span> <span data-ttu-id="520af-106">검색 끝점 공급자를 정의하려면 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>에서 클래스를 파생시키고 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 메서드를 재정의한 다음 새 검색 끝점을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="520af-106">To define a discovery endpoint provider, derive a class from <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> and override the <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> method and return a new discovery endpoint.</span></span> <span data-ttu-id="520af-107">다음 예제에서는 검색 끝점 공급자를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="520af-107">The following example shows how to create a discovery endpoint provider.</span></span>  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -35,7 +38,7 @@ public class UdpDiscoveryEndpointProvider : DiscoveryEndpointProvider
 }  
 ```  
   
- 검색 끝점 공급자를 정의한 후에는 다음 예제와 같이 사용자 지정 바인딩을 만들고 검색 끝점 공급자를 참조하는 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>를 추가할 수 있습니다.  
+ <span data-ttu-id="520af-108">검색 끝점 공급자를 정의한 후에는 다음 예제와 같이 사용자 지정 바인딩을 만들고 검색 끝점 공급자를 참조하는 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="520af-108">Once you have defined the discovery endpoint provider you can create a custom binding and add the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, which references the discovery endpoint provider as shown in the following example.</span></span>  
   
 ```  
 DiscoveryClientBindingElement discoveryBindingElement = new DiscoveryClientBindingElement();  
@@ -50,9 +53,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- Discovery 클라이언트 채널 사용[!INCLUDE[crabout](../../../../includes/crabout-md.md)][Discovery 클라이언트 채널 사용](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)을 참조하십시오.전체 코드 예제를 보려면 [Discovery Binding Element 샘플](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)를 참조하십시오.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="520af-109">discovery 클라이언트 채널을 사용 하 여 참조 [Discovery 클라이언트 채널을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="520af-109"> using the discovery client channel, see [Using the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md).</span></span> <span data-ttu-id="520af-110">전체 코드 예제를 보려면 [Discovery 바인딩 Element 샘플](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)</span><span class="sxs-lookup"><span data-stu-id="520af-110">For a complete code example, see [Discovery Binding Element Sample](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)</span></span>  
   
-## 참고 항목  
- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [Discovery 클라이언트 채널 사용](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)   
- [Discovery Binding Element 샘플](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)
+## <a name="see-also"></a><span data-ttu-id="520af-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="520af-111">See Also</span></span>  
+ [<span data-ttu-id="520af-112">WCF Discovery 개요</span><span class="sxs-lookup"><span data-stu-id="520af-112">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="520af-113">Discovery 클라이언트 채널을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="520af-113">Using the Discovery Client Channel</span></span>](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [<span data-ttu-id="520af-114">Discovery 바인딩 Element 샘플</span><span class="sxs-lookup"><span data-stu-id="520af-114">Discovery Binding Element Sample</span></span>](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)

@@ -1,45 +1,45 @@
 ---
-title: "Windows Forms 응용 프로그램의 사용자 입력 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, 사용자 입력"
+title: "Windows Forms 응용 프로그램의 사용자 입력"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb6f832b77404b57ab22e4ac472e7707f0e10dd5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms 응용 프로그램의 사용자 입력
-Windows Forms에서 사용자 입력은 Windows 메시지 형식으로 응용 프로그램에 전송됩니다.  재정의 가능한 일련의 메서드는 응용 프로그램, 폼 및 컨트롤 수준에서 이러한 메시지를 처리합니다.  이러한 메서드가 마우스 및 키보드 메시지를 수신하면 해당 마우스 또는 키보드 입력에 대한 정보를 얻기 위해 처리할 수 있는 이벤트를 발생시킵니다.  많은 경우 Windows Forms 응용 프로그램에서는 이러한 이벤트를 처리하여 모든 사용자 입력을 간단히 처리할 수 있습니다.  그렇지 않은 경우 응용 프로그램에서는 응용 프로그램, 폼 또는 컨트롤이 특정 메시지를 수신하기 전에 이러한 메시지를 차단하기 위해 메시지를 처리하는 메서드 중 하나를 재정의해야 할 수 있습니다.  
+# <a name="user-input-in-a-windows-forms-application"></a><span data-ttu-id="2980b-102">Windows Forms 응용 프로그램의 사용자 입력</span><span class="sxs-lookup"><span data-stu-id="2980b-102">User Input in a Windows Forms Application</span></span>
+<span data-ttu-id="2980b-103">Windows Forms에서 사용자 입력 Windows 메시지 형식으로의 응용 프로그램에 전송 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-103">In Windows Forms, user input is sent to applications in the form of Windows messages.</span></span> <span data-ttu-id="2980b-104">응용 프로그램 폼에서 이러한 메시지를 처리 하 고 수준을 제어 하는 일련의 재정의 가능한 메서드 합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-104">A series of overridable methods process these messages at the application, form, and control level.</span></span> <span data-ttu-id="2980b-105">이러한 메서드는 마우스 및 키보드 메시지를 수신 하는 경우 마우스에 대 한 정보를 얻거나 키보드 입력을 처리할 수 있는 이벤트를 발생 시킵니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-105">When these methods receive mouse and keyboard messages, they raise events that can be handled to get information about the mouse or keyboard input.</span></span> <span data-ttu-id="2980b-106">대부분의 경우에서 Windows Forms 응용 프로그램은 이러한 이벤트를 처리 하 여 모든 사용자 입력을 처리 수입니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-106">In many cases, Windows Forms applications will be able to process all user input simply by handling these events.</span></span> <span data-ttu-id="2980b-107">다른 경우에 응용 프로그램은 응용 프로그램, 폼 또는 컨트롤에서 수신 하기 전에 특정 메시지를 차단 하기 위해 메시지를 처리 하는 메서드 중 하나를 재정의 해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-107">In other cases, an application may need to override one of the methods that process messages in order to intercept a particular message before it is received by the application, form, or control.</span></span>  
   
-## 마우스 및 키보드 이벤트  
- 모든 Windows Forms 컨트롤은 마우스 및 키보드 입력과 관련된 이벤트 집합을 상속합니다.  예를 들어, 컨트롤은 <xref:System.Windows.Forms.Control.KeyPress> 이벤트를 처리하여 눌린 키의 문자 코드를 확인하거나 <xref:System.Windows.Forms.Control.MouseClick> 이벤트를 처리하여 마우스 클릭의 위치를 확인할 수 있습니다.  마우스 및 키보드 이벤트에 대한 자세한 내용은 [키보드 이벤트 사용](../../../docs/framework/winforms/using-keyboard-events.md) 및 [Windows Forms의 마우스 이벤트](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)를 참조하십시오.  
+## <a name="mouse-and-keyboard-events"></a><span data-ttu-id="2980b-108">마우스 및 키보드 이벤트</span><span class="sxs-lookup"><span data-stu-id="2980b-108">Mouse and Keyboard Events</span></span>  
+ <span data-ttu-id="2980b-109">모든 Windows Forms 컨트롤의 마우스 및 키보드 입력와 관련 된 이벤트 집합을 상속 합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-109">All Windows Forms controls inherit a set of events related to mouse and keyboard input.</span></span> <span data-ttu-id="2980b-110">예를 들어 한 컨트롤에서 처리할 수는 <xref:System.Windows.Forms.Control.KeyPress> 는 눌린 키의 문자 코드를 확인 하는 이벤트 또는 컨트롤을 처리할 수는 <xref:System.Windows.Forms.Control.MouseClick> 클릭 마우스의 위치를 결정 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-110">For example, a control can handle the <xref:System.Windows.Forms.Control.KeyPress> event to determine the character code of a key that was pressed, or a control can handle the <xref:System.Windows.Forms.Control.MouseClick> event to determine the location of a mouse click.</span></span> <span data-ttu-id="2980b-111">마우스 및 키보드 이벤트에 대 한 자세한 내용은 참조 하십시오. [키보드 이벤트를 사용 하 여](../../../docs/framework/winforms/using-keyboard-events.md) 및 [Windows Forms의 마우스 이벤트](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-111">For more information on the mouse and keyboard events, see [Using Keyboard Events](../../../docs/framework/winforms/using-keyboard-events.md) and [Mouse Events in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).</span></span>  
   
-## 사용자 입력 메시지를 처리하는 메서드  
- 폼과 컨트롤은 메시지 큐의 서로 다른 지점에서 Windows 메시지를 처리하는 <xref:System.Windows.Forms.IMessageFilter> 인터페이스 및 재정의 가능한 일련의 메서드에 액세스할 수 있습니다.  이러한 메서드에는 모두 Windows 메시지의 하위 수준 세부 정보를 캡슐화하는 <xref:System.Windows.Forms.Message> 매개 변수가 포함되어 있습니다.  이러한 메서드를 구현하거나 재정의하여 메시지를 검사한 다음에는 메시지를 사용하거나 메시지 큐의 다음 사용자에게 전달합니다.  다음 표에서는 Windows Forms의 모든 Windows 메시지를 처리하는 메서드를 보여 줍니다.  
+## <a name="methods-that-process-user-input-messages"></a><span data-ttu-id="2980b-112">사용자 입력된 메시지를 처리 하는 메서드</span><span class="sxs-lookup"><span data-stu-id="2980b-112">Methods that Process User Input Messages</span></span>  
+ <span data-ttu-id="2980b-113">폼 및 컨트롤에 대 한 액세스 권한이 <xref:System.Windows.Forms.IMessageFilter> 인터페이스 및 메시지 큐의 여러 지점에서 Windows 메시지를 처리 하는 재정의 가능한 메서드 집합이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-113">Forms and controls have access to the <xref:System.Windows.Forms.IMessageFilter> interface and a set of overridable methods that process Windows messages at different points in the message queue.</span></span> <span data-ttu-id="2980b-114">모든는 이러한 메서드는 <xref:System.Windows.Forms.Message> Windows 메시지의 하위 수준 세부 정보를 캡슐화 하는 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-114">These methods all have a <xref:System.Windows.Forms.Message> parameter, which encapsulates the low-level details of Windows messages.</span></span> <span data-ttu-id="2980b-115">구현 하거나 메시지에서 확인 된 메시지를 사용 하거나 메시지 큐에서 다음 소비자에 전달 하도록 이러한 메서드를 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-115">You can implement or override these methods to examine the message and then either consume the message or pass it on to the next consumer in the message queue.</span></span> <span data-ttu-id="2980b-116">다음 표에서 Windows Forms에서 모든 Windows 메시지를 처리 하는 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-116">The following table presents the methods that process all Windows messages in Windows Forms.</span></span>  
   
-|메서드|참고|  
-|---------|--------|  
-|<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|이 메서드는 응용 프로그램 수준에서 대기 중인\(게시된\) Windows 메시지를 차단합니다.|  
-|<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|이 메서드는 Windows 메시지가 처리되기 전에 폼 수준과 컨트롤 수준에서 해당 메시지를 차단합니다.|  
-|<xref:System.Windows.Forms.Control.WndProc%2A>|이 메서드는 폼 수준과 컨트롤 수준에서 Windows 메시지를 처리합니다.|  
-|<xref:System.Windows.Forms.Control.DefWndProc%2A>|이 메서드는 폼 수준과 컨트롤 수준에서 Windows 메시지에 대해 기본 처리를 수행하며  창의 최소 기능을 제공합니다.|  
-|<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|이 메서드는 메시지가 처리된 다음에 폼 수준과 컨트롤 수준에서 해당 메시지를 차단합니다.  이 메서드를 호출하려면 <xref:System.Windows.Forms.ControlStyles> 스타일 비트를 설정해야 합니다.|  
+|<span data-ttu-id="2980b-117">메서드</span><span class="sxs-lookup"><span data-stu-id="2980b-117">Method</span></span>|<span data-ttu-id="2980b-118">참고</span><span class="sxs-lookup"><span data-stu-id="2980b-118">Notes</span></span>|  
+|------------|-----------|  
+|<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|<span data-ttu-id="2980b-119">이 메서드는 응용 프로그램 수준에서 대기 중인된 (게시 라고도 함) Windows 메시지를 차단합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-119">This method intercepts queued (also known as posted) Windows messages at the application level.</span></span>|  
+|<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|<span data-ttu-id="2980b-120">이 메서드는 처리 전에 폼과 컨트롤 수준에서 Windows 메시지를 차단 합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-120">This method intercepts Windows messages at the form and control level before they have been processed.</span></span>|  
+|<xref:System.Windows.Forms.Control.WndProc%2A>|<span data-ttu-id="2980b-121">이 메서드는 폼과 컨트롤 수준에서 Windows 메시지를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-121">This method processes Windows messages at the form and control level.</span></span>|  
+|<xref:System.Windows.Forms.Control.DefWndProc%2A>|<span data-ttu-id="2980b-122">이 메서드는 폼과 컨트롤 수준에서 Windows 메시지의 기본 처리를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-122">This method performs the default processing of Windows messages at the form and control level.</span></span> <span data-ttu-id="2980b-123">창의 최소 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-123">This provides the minimal functionality of a window.</span></span>|  
+|<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|<span data-ttu-id="2980b-124">처리 된 후이 메서드는 폼과 컨트롤 수준에서 메시지를 차단 합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-124">This method intercepts messages at the form and control level, after they have been processed.</span></span> <span data-ttu-id="2980b-125"><xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage> 이 메서드를 호출할 수에 대 한 스타일 비트를 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-125">The <xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage> style bit must be set for this method to be called.</span></span>|  
   
- 키보드 및 마우스 메시지는 이러한 메시지 형식과 관련된 재정의 가능한 추가 메서드 집합으로 처리할 수도 있습니다.  자세한 내용은 [키보드 입력 작동 방식](../../../docs/framework/winforms/how-keyboard-input-works.md) 및 [Windows Forms에서 마우스 입력이 작동하는 방식](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)을 참조하십시오.  
+ <span data-ttu-id="2980b-126">키보드 및 마우스 메시지의 해당 유형의 메시지에만 적용 되는 재정의 가능한 메서드가 추가 집합으로 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-126">Keyboard and mouse messages are also processed by an additional set of overridable methods that are specific to those types of messages.</span></span> <span data-ttu-id="2980b-127">자세한 내용은 참조 [키보드 입력 작동 방식](../../../docs/framework/winforms/how-keyboard-input-works.md) 및 [Windows Forms의 마우스 입력 방법](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2980b-127">For more information, see [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md) and [How Mouse Input Works in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).</span></span>  
   
-## 참고 항목  
- [Windows Forms에 사용자 입력](../../../docs/framework/winforms/user-input-in-windows-forms.md)   
- [Windows Forms 응용 프로그램의 키보드 입력](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)   
- [Windows Forms 응용 프로그램의 마우스 입력](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a><span data-ttu-id="2980b-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2980b-128">See Also</span></span>  
+ [<span data-ttu-id="2980b-129">Windows Forms에 사용자 입력</span><span class="sxs-lookup"><span data-stu-id="2980b-129">User Input in Windows Forms</span></span>](../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [<span data-ttu-id="2980b-130">Windows Forms 응용 프로그램의 키보드 입력</span><span class="sxs-lookup"><span data-stu-id="2980b-130">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="2980b-131">Windows Forms 응용 프로그램의 마우스 입력</span><span class="sxs-lookup"><span data-stu-id="2980b-131">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

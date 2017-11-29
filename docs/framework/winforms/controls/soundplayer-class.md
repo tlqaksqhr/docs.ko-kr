@@ -1,64 +1,62 @@
 ---
-title: "SoundPlayer 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SoundPlayer"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "SoundPlayer 클래스"
-  - "소리, 재생"
+title: "SoundPlayer 클래스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SoundPlayer
+helpviewer_keywords: sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6fccf64215c38a3aee0b367866dd2371b483b0a7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# SoundPlayer 클래스
-`SoundPlayer` 클래스를 사용하여 응용 프로그램에 소리를 쉽게 포함할 수 있습니다.  
+# <a name="soundplayer-class"></a><span data-ttu-id="d8251-102">SoundPlayer 클래스</span><span class="sxs-lookup"><span data-stu-id="d8251-102">SoundPlayer Class</span></span>
+<span data-ttu-id="d8251-103">`SoundPlayer` 클래스를 사용하여 응용 프로그램에 소리를 쉽게 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-103">The `SoundPlayer` class enables you to easily include sounds in your applications.</span></span>  
   
- <xref:System.Media.SystemSounds> 클래스를 사용하여 경고음을 포함한 일반적인 시스템 소리를 재생할 수 있습니다.  
+ <span data-ttu-id="d8251-104"><xref:System.Media.SystemSounds> 클래스를 사용하여 경고음을 포함한 일반적인 시스템 소리를 재생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-104">You can also use the <xref:System.Media.SystemSounds> class to play common system sounds, including a beep.</span></span>  
   
-## 단원 내용  
- [SoundPlayer 클래스 개요](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
- 클래스 및 일반적으로 사용되는 해당 속성, 메서드 및 이벤트를 소개합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="d8251-105">단원 내용</span><span class="sxs-lookup"><span data-stu-id="d8251-105">In This Section</span></span>  
+ [<span data-ttu-id="d8251-106">SoundPlayer 클래스 개요</span><span class="sxs-lookup"><span data-stu-id="d8251-106">SoundPlayer Class Overview</span></span>](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
+ <span data-ttu-id="d8251-107">클래스 및 일반적으로 사용되는 해당 속성, 메서드 및 이벤트를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-107">Introduces the class and its commonly used properties, methods, and events.</span></span>  
   
- [방법: Windows Form에서 소리 재생](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- 파일 경로, UNC 경로 또는 HTTP 경로를 통해 지정된 소리를 재생하는 코드를 제공합니다.  
+ [<span data-ttu-id="d8251-108">방법: Windows Form에서 소리 재생</span><span class="sxs-lookup"><span data-stu-id="d8251-108">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ <span data-ttu-id="d8251-109">파일 경로, UNC 경로 또는 HTTP 경로를 통해 지정된 소리를 재생하는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-109">Provides code to play a sound specified via a file path, UNC path, or HTTP path.</span></span>  
   
- [방법: Windows Form에서 경고음 재생](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
- 컴퓨터 경고음을 재생하는 코드를 제공합니다.  
+ [<span data-ttu-id="d8251-110">방법: Windows Form에서 경고음 재생</span><span class="sxs-lookup"><span data-stu-id="d8251-110">How to: Play a Beep from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
+ <span data-ttu-id="d8251-111">컴퓨터 경고음을 재생하는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-111">Provides code to play the computer's beep sound.</span></span>  
   
- [방법: Windows Form에서 리소스에 포함된 소리 재생](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
- 리소스에서 소리를 재생하는 코드를 제공합니다.  
+ [<span data-ttu-id="d8251-112">방법: Windows Form에서 리소스에 포함된 소리 재생</span><span class="sxs-lookup"><span data-stu-id="d8251-112">How to: Play a Sound Embedded in a Resource from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
+ <span data-ttu-id="d8251-113">리소스에서 소리를 재생하는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-113">Provides code to play a sound from a resource.</span></span>  
   
- [방법: Windows Form에서 시스템 소리 재생](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
- 시스템 소리의 하나를 재생하는 코드를 제공합니다.  
+ [<span data-ttu-id="d8251-114">방법: Windows Form에서 시스템 소리 재생</span><span class="sxs-lookup"><span data-stu-id="d8251-114">How to: Play a System Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
+ <span data-ttu-id="d8251-115">시스템 소리의 하나를 재생하는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-115">Provides code to play the one of the system sounds.</span></span>  
   
- [방법: Windows Form에서 비동기적으로 소리 로드](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- URL에서 비동기적으로 소리를 로드하고 재생하는 코드를 제공합니다.  
+ [<span data-ttu-id="d8251-116">방법: Windows Form에서 비동기적으로 소리 로드</span><span class="sxs-lookup"><span data-stu-id="d8251-116">How to: Load a Sound Asynchronously within a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
+ <span data-ttu-id="d8251-117">URL에서 비동기적으로 소리를 로드하고 재생하는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-117">Provides code to load a sound asynchronously from a URL and play it.</span></span>  
   
- [방법: Windows Form에서 소리 재생 반복](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
- 소리를 반복해서 재생하는 코드를 제공합니다.  
+ [<span data-ttu-id="d8251-118">방법: Windows Form에서 소리 재생 반복</span><span class="sxs-lookup"><span data-stu-id="d8251-118">How to: Loop a Sound Playing on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
+ <span data-ttu-id="d8251-119">소리를 반복해서 재생하는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-119">Provides code that plays a sound repeatedly.</span></span>  
   
-## 참조  
+## <a name="reference"></a><span data-ttu-id="d8251-120">참조</span><span class="sxs-lookup"><span data-stu-id="d8251-120">Reference</span></span>  
  <xref:System.Media.SoundPlayer>  
- 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
+ <span data-ttu-id="d8251-121">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-121">Describes this class and has links to all its members.</span></span>  
   
-## 관련 단원  
- [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)  
- Windows Forms에서 작동하도록 특별히 설계된 컨트롤에 대한 항목의 링크를 제공합니다.  
+## <a name="related-sections"></a><span data-ttu-id="d8251-122">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d8251-122">Related Sections</span></span>  
+ [<span data-ttu-id="d8251-123">Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="d8251-123">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="d8251-124">Windows Forms에서 작동하도록 특별히 설계된 컨트롤에 대한 항목의 링크를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-124">Provides links to topics about the controls designed specifically to work with Windows Forms.</span></span>  
   
- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  
+ [<span data-ttu-id="d8251-125">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="d8251-125">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="d8251-126">사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-126">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [My.Computer 개체](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) 또는 [My.Computer 개체](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\))를 참조하세요.
+ <span data-ttu-id="d8251-127">또한 참조 [하이퍼링크 "http://msdn.microsoft.com/library/11bxex12 (v = vs.110)" My.Computer 개체](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) 또는 [My.Computer 개체](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\))합니다.</span><span class="sxs-lookup"><span data-stu-id="d8251-127">Also see [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer Object](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) or [My.Computer Object](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).</span></span>

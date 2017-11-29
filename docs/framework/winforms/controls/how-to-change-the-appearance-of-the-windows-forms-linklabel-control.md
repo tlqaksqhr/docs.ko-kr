@@ -1,44 +1,48 @@
 ---
-title: "방법: Windows Forms LinkLabel 컨트롤의 모양 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "예제[Windows Forms], LinkLabel 컨트롤"
-  - "LinkLabel 컨트롤[Windows Forms], 링크 모양 변경"
-  - "LinkLabel 컨트롤[Windows Forms], 예제"
-  - "LinkLabel 속성"
-  - "링크, 모양 변경"
+title: "방법: Windows Forms LinkLabel 컨트롤의 모양 변경"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- LinkLabel properties
+- LinkLabel control [Windows Forms], changing appearance of links
+- links [Windows Forms], changing appearance
+- examples [Windows Forms], LinkLabel control
+- LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42aaef183178e7170d3046b4c5daefc8647f7cc1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms LinkLabel 컨트롤의 모양 변경
-<xref:System.Windows.Forms.LinkLabel> 컨트롤에 표시되는 텍스트를 목적에 맞게 변경할 수 있습니다.  예를 들어, 텍스트가 밑줄이 그어진 상태의 특정 색으로 표시되도록 설정하여 클릭할 수 있음을 나타내는 경우가 일반적입니다.  사용자가 이 텍스트를 클릭한 후에는 다른 색으로 변경됩니다.  이 동작을 제어하려면 5개의 서로 다른 속성 <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> 및 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 설정합니다.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a><span data-ttu-id="5fe74-102">방법: Windows Forms LinkLabel 컨트롤의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="5fe74-102">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>
+<span data-ttu-id="5fe74-103">표시 되는 텍스트를 변경할 수는 <xref:System.Windows.Forms.LinkLabel> 다양 한 목적에 맞게 컨트롤을 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-103">You can change the text displayed by the <xref:System.Windows.Forms.LinkLabel> control to suit a variety of purposes.</span></span> <span data-ttu-id="5fe74-104">예를 들어 것이 일반적 텍스트에 밑줄 특정 색에 표시할 텍스트를 설정 하 여 클릭 수 있는 사용자에 게 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-104">For example, it is common practice to indicate to the user that text can be clicked by setting the text to appear in a specific color with an underline.</span></span> <span data-ttu-id="5fe74-105">텍스트를 클릭 한 후 다른 색으로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-105">After the user clicks the text, the color changes to a different color.</span></span> <span data-ttu-id="5fe74-106">이러한 동작을 제어 하려면 5 개의 서로 다른 속성을 설정할 수 있습니다:는 <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, 및 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-106">To control this behavior, you can set five different properties: the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, and <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> properties.</span></span>  
   
-### LinkLabel 컨트롤의 모양을 변경하려면  
+### <a name="to-change-the-appearance-of-a-linklabel-control"></a><span data-ttu-id="5fe74-107">LinkLabel 컨트롤의 모양을 변경 하려면</span><span class="sxs-lookup"><span data-stu-id="5fe74-107">To change the appearance of a LinkLabel control</span></span>  
   
-1.  <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> 및 <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> 속성을 원하는 색으로 설정합니다.  
+1.  <span data-ttu-id="5fe74-108">설정의 <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> 및 <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> 속성을 원하는 색입니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-108">Set the <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> and <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> properties to the colors you want.</span></span>  
   
-     이 작업은 프로그래밍 방식으로 수행하거나 디자인 타임에 **속성** 창에서 수행할 수 있습니다.  
+     <span data-ttu-id="5fe74-109">이렇게 중 하나에서 프로그래밍 방식으로 또는 디자인 타임에는 **속성** 창.</span><span class="sxs-lookup"><span data-stu-id="5fe74-109">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
   
     ```vb  
     ' You can set the color using decimal values for red, green, and blue  
     LinkLabel1.LinkColor = Color.FromArgb(0, 0, 255)  
     ' Or you can set the color using defined constants  
     LinkLabel1.VisitedLinkColor = Color.Purple  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ caps.handback.revision: 11
     linkLabel1.LinkColor = Color.FromArgb(0, 0, 255);  
     // Or you can set the color using defined constants  
     linkLabel1.VisitedLinkColor = Color.Purple;  
-  
     ```  
   
     ```cpp  
@@ -56,49 +59,45 @@ caps.handback.revision: 11
     linkLabel1->VisitedLinkColor = Color::Purple;  
     ```  
   
-2.  <xref:System.Windows.Forms.LinkLabel.Text%2A> 속성을 적절한 캡션으로 설정합니다.  
+2.  <span data-ttu-id="5fe74-110">설정의 <xref:System.Windows.Forms.LinkLabel.Text%2A> 속성을 적절 한 캡션입니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-110">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
   
-     이 작업은 프로그래밍 방식으로 수행하거나 디자인 타임에 **속성** 창에서 수행할 수 있습니다.  
+     <span data-ttu-id="5fe74-111">이렇게 중 하나에서 프로그래밍 방식으로 또는 디자인 타임에는 **속성** 창.</span><span class="sxs-lookup"><span data-stu-id="5fe74-111">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
   
     ```vb  
     LinkLabel1.Text = "Click here to see more."  
-  
     ```  
   
     ```csharp  
     linkLabel1.Text = "Click here to see more.";  
-  
     ```  
   
     ```cpp  
     linkLabel1->Text = "Click here to see more.";  
     ```  
   
-3.  캡션에서 링크로 나타낼 부분을 결정하는 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 설정합니다.  
+3.  <span data-ttu-id="5fe74-112">설정의 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 어느 부분이 캡션 링크로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-112">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span>  
   
-     <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 값은 문자 시작 위치와 문자의 개수를 나타내는 2개의 숫자로 구성된 <xref:System.Windows.Forms.LinkArea>로 표시됩니다.  이 작업은 프로그래밍 방식으로 수행하거나 디자인 타임에 **속성** 창에서 수행할 수 있습니다.  
+     <span data-ttu-id="5fe74-113"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 표시는 <xref:System.Windows.Forms.LinkArea> 두 개의 번호, 시작 문자 위치 및 문자 수를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-113">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> value is represented with a <xref:System.Windows.Forms.LinkArea> containing two numbers, the starting character position and the number of characters.</span></span> <span data-ttu-id="5fe74-114">이렇게 중 하나에서 프로그래밍 방식으로 또는 디자인 타임에는 **속성** 창.</span><span class="sxs-lookup"><span data-stu-id="5fe74-114">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
   
     ```vb  
     LinkLabel1.LinkArea = new LinkArea(6,4)  
-  
     ```  
   
     ```csharp  
     linkLabel1.LinkArea = new LinkArea(6,4);  
-  
     ```  
   
     ```cpp  
     linkLabel1->LinkArea = LinkArea(6,4);  
     ```  
   
-4.  <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> 속성을 <xref:System.Windows.Forms.LinkBehavior>, <xref:System.Windows.Forms.LinkBehavior> 또는 <xref:System.Windows.Forms.LinkBehavior>으로 설정합니다.  
+4.  <span data-ttu-id="5fe74-115">설정의 <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> 속성을 <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, 또는 <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>합니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-115">Set the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> property to <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, or <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.</span></span>  
   
-     <xref:System.Windows.Forms.LinkBehavior>으로 속성을 설정한 경우 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>에 의해 지정된 캡션 부분은 이 위치로 포인터를 가져갈 때만 밑줄이 표시됩니다.  
+     <span data-ttu-id="5fe74-116">로 설정 되어 있으면 <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, 부분에 의해 결정 캡션 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 포인터 위에 있을 때만 밑줄이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-116">If it is set to <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, the part of the caption determined by <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> will only be underlined when the pointer rests on it.</span></span>  
   
-5.  <xref:System.Windows.Forms.LinkLabel.LinkClicked> 이벤트 처리기에서 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true`로 설정합니다.  
+5.  <span data-ttu-id="5fe74-117">에 <xref:System.Windows.Forms.LinkLabel.LinkClicked> 설정 하는 이벤트 처리기는 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-117">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, set the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true`.</span></span>  
   
-     그러면 링크를 방문했을 때 링크의 모양이 변경됩니다\(일반적으로 색이 변경됨\).  텍스트는 <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> 속성에 지정된 색으로 변경됩니다.  
+     <span data-ttu-id="5fe74-118">링크를 방문 했을 때 어떤 방식으로든에서 모양을 일반적으로 색으로 변경 하려면 일반적으로 되었기입니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-118">When a link has been visited, it is common practice to change its appearance in some way, usually by color.</span></span> <span data-ttu-id="5fe74-119">텍스트로 지정 된 색으로 변경 됩니다는 <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5fe74-119">The text will change to the color specified by the <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> property.</span></span>  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked (ByVal sender As Object, _  
@@ -108,7 +107,6 @@ caps.handback.revision: 11
        LinkLabel1.LinkVisited = True  
        ' Then do whatever other action is appropriate  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -119,7 +117,6 @@ caps.handback.revision: 11
        linkLabel1.LinkVisited = true;  
        // Then do whatever other action is appropriate  
     }  
-  
     ```  
   
     ```cpp  
@@ -134,11 +131,11 @@ caps.handback.revision: 11
        }  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>   
- <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>   
- <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>   
- <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>   
- [LinkLabel 컨트롤 개요](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)   
- [방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)   
- [LinkLabel 컨트롤](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="5fe74-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5fe74-120">See Also</span></span>  
+ <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>  
+ <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>  
+ <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>  
+ <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>  
+ [<span data-ttu-id="5fe74-121">LinkLabel 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="5fe74-121">LinkLabel Control Overview</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="5fe74-122">방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결</span><span class="sxs-lookup"><span data-stu-id="5fe74-122">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
+ [<span data-ttu-id="5fe74-123">LinkLabel 컨트롤</span><span class="sxs-lookup"><span data-stu-id="5fe74-123">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

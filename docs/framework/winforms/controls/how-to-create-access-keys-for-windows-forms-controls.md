@@ -1,54 +1,57 @@
 ---
-title: "방법: Windows Forms 컨트롤에 대한 선택키 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "선택키, 컨트롤 만들기"
-  - "선택키, Windows Forms"
-  - "Alt 키"
-  - "바로 가기 키의 앰퍼샌드 문자"
-  - "Button 컨트롤[Windows Forms], 선택키"
-  - "컨트롤[Windows Forms], 선택키"
-  - "대화 상자 컨트롤, 니모닉"
-  - "예제[Windows Forms], 컨트롤"
-  - "바로 가기 키, 컨트롤 만들기"
-  - "니모닉"
-  - "니모닉, 대화 상자 컨트롤에 추가"
-  - "Text 속성, 컨트롤 선택키 지정"
-  - "Windows Forms 컨트롤, 선택키"
+title: "방법: Windows Forms 컨트롤에 대한 선택키 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- controls [Windows Forms], access keys
+- Button control [Windows Forms], access keys
+- dialog box controls [Windows Forms], mnemonics
+- access keys [Windows Forms], creating for controls
+- mnemonics [Windows Forms], adding to dialog box controls
+- mnemonics
+- ampersand character in shortcut key
+- Windows Forms controls, access keys
+- examples [Windows Forms], controls
+- Text property [Windows Forms], specifying access keys for controls
+- keyboard shortcuts [Windows Forms], creating for controls
+- access keys [Windows Forms], Windows Forms
+- ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: af4cbcc5dacc4f9a0b5312b67838479bf6817228
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms 컨트롤에 대한 선택키 만들기
-*선택키*는 메뉴, 메뉴 항목 또는 단추와 같은 컨트롤의 레이블에 있는 텍스트에서 밑줄이 그어진 문자를 말합니다.  미리 정의된 선택키와 Alt 키를 함께 누르면 사용자가 단추를 "클릭"한 경우와 같은 효과가 나타납니다.  예를 들어, 어떤 단추가 폼을 인쇄하는 프로시저를 실행하기 때문에 `Text` 속성이 "Print"로 설정된 경우 "P" 문자 앞에 앰퍼샌드\(&\)를 추가하면 런타임에 이 단추 텍스트의 "P" 문자에는 밑줄이 그어집니다.  사용자는 Alt\+P를 눌러 해당 단추와 관련된 명령을 실행할 수 있습니다.  포커스를 받을 수 없는 컨트롤에는 선택키를 사용할 수 없습니다.  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="ec264-102">방법: Windows Forms 컨트롤에 대한 선택키 만들기</span><span class="sxs-lookup"><span data-stu-id="ec264-102">How to: Create Access Keys for Windows Forms Controls</span></span>
+<span data-ttu-id="ec264-103">*선택 키* 은 메뉴, 메뉴 항목 또는 예: 단추 컨트롤의 레이블 텍스트에 밑줄이 그어진된 문자.</span><span class="sxs-lookup"><span data-stu-id="ec264-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="ec264-104">액세스 키가 있는 사용자 "" 단추를 클릭 수 미리 정의 된 선택 키와 함께에서 ALT 키를 눌러 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec264-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="ec264-105">예를 들어, 단추는 폼을 인쇄 하는 프로시저를 실행 하는 경우 일부 이므로 해당 `Text` 속성이 "Print"로 설정 된 "p" 하면 "P" 단추 텍스트에는 런타임 시 밑줄이 그어집니다 전에 앰퍼샌드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec264-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="ec264-106">사용자는 ALT + P를 눌러 단추와 연결 된 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ec264-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="ec264-107">포커스를 받을 수 없는 컨트롤에 대 한 선택 키를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ec264-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
   
-### 컨트롤의 선택키를 만들려면  
+### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="ec264-108">컨트롤에 대 한 선택 키를 만들려면</span><span class="sxs-lookup"><span data-stu-id="ec264-108">To create an access key for a control</span></span>  
   
-1.  바로 가기로 사용할 문자 앞에 앰퍼샌드가 포함된 문자열로 `Text` 속성을 설정합니다.  
+1.  <span data-ttu-id="ec264-109">설정의 `Text` 앰퍼샌드가 포함 하는 문자열 (&) 문자 바로 가기로 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="ec264-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
   
     ```vb  
     ' Set the letter "P" as an access key.  
     Button1.Text = "&Print"  
-  
     ```  
   
     ```csharp  
     // Set the letter "P" as an access key.  
     button1.Text = "&Print";  
-  
     ```  
   
     ```cpp  
@@ -57,10 +60,10 @@ caps.handback.revision: 13
     ```  
   
     > [!NOTE]
-    >  선택키를 만들지 않고 캡션에 앰퍼샌드를 포함하려면 앰퍼샌드 두 개\(&&\)를 포함해야 합니다.  그러면 캡션에는 앰퍼샌드 하나가 표시되고 문자에는 밑줄이 그어지지 않습니다.  
+    >  <span data-ttu-id="ec264-110">앰퍼샌드 캡션에 해지지 않도록 선택 키를 포함 하려면 앰퍼샌드를 두 번 포함 (& &).</span><span class="sxs-lookup"><span data-stu-id="ec264-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="ec264-111">앰퍼샌드 캡션에 나타나고 문자를 사용 하지는 밑줄이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ec264-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.Button>   
- [방법: Windows Forms 단추 클릭에 응답](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a><span data-ttu-id="ec264-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ec264-112">See Also</span></span>  
+ <xref:System.Windows.Forms.Button>  
+ [<span data-ttu-id="ec264-113">방법: Windows Forms 단추 클릭에 응답</span><span class="sxs-lookup"><span data-stu-id="ec264-113">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="ec264-114">방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정</span><span class="sxs-lookup"><span data-stu-id="ec264-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="ec264-115">개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공</span><span class="sxs-lookup"><span data-stu-id="ec264-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
