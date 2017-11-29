@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0bb682c6eaebf7e1a0c2c2de5b584c28e4c192c5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 22c2272118c8f8a42523d9bc8ceaa2007c0b7b57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wif-and-web-farms"></a>WIF 및 웹 팜
 WIF(Windows Identity Foundation)를 사용하여 웹 팜에 배포된 RP(신뢰 당사자) 응용 프로그램의 리소스를 보호하는 경우 특정 단계를 수행하여 WIF가 팜의 여러 컴퓨터에서 실행되는 RP 응용 프로그램 인스턴스의 토큰을 처리할 수 있도록 해야 합니다. 이 처리에는 세션 토큰 시그니처의 유효성 검사, 세션 토큰 암호화 및 암호 해독, 세션 토큰 캐싱 및 재생된 보안 토큰 검색이 포함됩니다.  
@@ -51,7 +49,7 @@ WIF(Windows Identity Foundation)를 사용하여 웹 팜에 배포된 RP(신뢰 
     </securityTokenHandlers>  
     ```  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>에서 파생하고 분산 캐싱, 즉 RP를 실행할 수 있는 팜의 모든 컴퓨터에서 액세스할 수 있는 캐시를 구현합니다. 구성 파일에 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 요소를 지정하여 분산 캐시를 사용하도록 RP를 구성합니다. 파생 클래스의 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=fullName> 메서드를 재정의하여 필요한 경우 `<sessionSecurityTokenCache>` 요소의 자식 요소를 구현할 수 있습니다.  
+-   <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>에서 파생하고 분산 캐싱, 즉 RP를 실행할 수 있는 팜의 모든 컴퓨터에서 액세스할 수 있는 캐시를 구현합니다. 구성 파일에 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 요소를 지정하여 분산 캐시를 사용하도록 RP를 구성합니다. 파생 클래스의 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 메서드를 재정의하여 필요한 경우 `<sessionSecurityTokenCache>` 요소의 자식 요소를 구현할 수 있습니다.  
   
     ```xml  
     <caches>  
@@ -262,8 +260,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>   
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>   
- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>   
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>  
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+ <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  
  [WIF 세션 관리](../../../docs/framework/security/wif-session-management.md)
-

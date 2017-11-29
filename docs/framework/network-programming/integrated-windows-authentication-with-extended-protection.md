@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d5e4c5984054ab54e0a6f33c2e1e17b89ca366f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a32019a99421cdb2b581f1196a0e477c8e5d30a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>확장된 보호를 사용하는 Windows 통합 인증
 <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, 그리고 <xref:System.Net> 및 관련 네임스페이스의 관련 클래스에 의해 Windows 통합 인증이 처리되는 방식에 영향을 미치는 기능이 향상되었습니다. 보안을 강화하기 위한 확장된 보호에 대한 지원이 추가되었습니다.  
@@ -124,7 +118,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="extended-protection-for-client-applications"></a>클라이언트 응용 프로그램에 대한 확장된 보호  
  대부분의 클라이언트 응용 프로그램에 대한 확장된 보호는 자동으로 지원됩니다. Windows의 기본 버전이 확장된 보호를 지원하면 <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.Mail.SmtpClient> 클래스는 항상 확장된 보호를 지원합니다. <xref:System.Net.HttpWebRequest> 인스턴스는 <xref:System.Uri>에서 생성된 SPN을 보냅니다. 기본적으로 <xref:System.Net.Mail.SmtpClient> 인스턴스는 SMTP 메일 서버의 호스트 이름에서 생성된 SPN을 보냅니다.  
   
- 사용자 지정 인증의 경우 클라이언트 응용 프로그램은 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드를 통해 <xref:System.Net.TransportContext> 및 CBT를 검색할 수 있는 <xref:System.Net.HttpWebRequest> 클래스의 <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=fullName> 또는 <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=fullName> 메서드를 사용할 수 있습니다.  
+ 사용자 지정 인증의 경우 클라이언트 응용 프로그램은 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드를 통해 <xref:System.Net.TransportContext> 및 CBT를 검색할 수 있는 <xref:System.Net.HttpWebRequest> 클래스의 <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> 또는 <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> 메서드를 사용할 수 있습니다.  
   
  <xref:System.Net.HttpWebRequest> 인스턴스를 통해 지정된 서비스에 전송되는 Windows 통합 인증에 사용할 SPN은 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> 속성을 설정하여 재정의할 수 있습니다.  
   
@@ -133,7 +127,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="extended-protection-for-server-applications"></a>서버 응용 프로그램에 대한 확장된 보호  
  <xref:System.Net.HttpListener>는 HTTP 인증을 수행할 때 서비스 바인딩의 유효성을 검사하기 위한 메커니즘을 자동으로 제공합니다.  
   
- 가장 안전한 시나리오는 HTTPS:// 접두사에 대한 확장된 보호를 사용하는 것입니다. 이 경우 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement>를 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 또는 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>로 설정하고 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario>를 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>로 설정하여 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=fullName>를 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>로 설정합니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 값은 <xref:System.Net.HttpListener>를 부분 강화 모드로 전환하지만 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>는 완전 강화 모드에 해당합니다.  
+ 가장 안전한 시나리오는 HTTPS:// 접두사에 대한 확장된 보호를 사용하는 것입니다. 이 경우 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement>를 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 또는 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>로 설정하고 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario>를 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>로 설정하여 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType>를 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>로 설정합니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 값은 <xref:System.Net.HttpListener>를 부분 강화 모드로 전환하지만 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>는 완전 강화 모드에 해당합니다.  
   
  이 구성에서 외부 보안 채널을 통해 서버에 대한 요청을 만들 경우 외부 채널이 쿼리되어 채널 바인딩이 있는지 확인됩니다. 이 채널 바인딩이 인증 SSPI 호출에 전달됩니다. 이 호출은 인증 Blob의 채널 바인딩이 일치하는지 검사합니다. 세 가지 가능한 결과는 다음과 같습니다.  
   
@@ -145,7 +139,7 @@ ms.lasthandoff: 08/21/2017
   
  응용 프로그램이 HTTP 요청 본문 내에서 앞뒤로 전달되는 Blob을 기반으로 인증을 수행하도록 자체 SSPI를 호출하고 채널 바인딩을 지원하려고 할 경우 응용 프로그램은 <xref:System.Net.HttpListener>를 통해 외부 보안 채널에서 예상 채널 바인딩을 검색하여 네이티브 Win32 [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) 함수에 전달해야 합니다. 이렇게 하려면 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 속성을 사용하여 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드를 호출하여 CBT를 검색합니다. 끝점 바인딩만 지원됩니다. <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> 이외의 다른 항목이 지정되면 <xref:System.NotSupportedException>이 throw됩니다. 기본 운영 체제가 채널 바인딩을 지원하면 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드는 `pInput` 매개 변수에 전달되는 SecBuffer 구조체의 pvBuffer 멤버로 [AcceptSecurityContext](http://go.microsoft.com/fwlink/?LinkId=147021) 함수에 전달하기에 적합한 채널 바인딩에 대한 포인터를 래핑하는 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle>을 반환합니다. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 속성에는 채널 바인딩의 길이(바이트)가 포함됩니다. 기본 운영 체제가 채널 바인딩을 지원하지 않으면 이 함수는 `null`을 반환합니다.  
   
- 또 다른 가능한 시나리오는 프록시가 사용되지 않을 경우 HTTP:// 접두사에 대한 확장된 보호를 사용하는 것입니다. 이 경우 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement>를 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 또는 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>로 설정하고 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario>를 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>로 설정하여 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=fullName>를 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>로 설정합니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 값은 <xref:System.Net.HttpListener>를 부분 강화 모드로 전환하지만 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>는 완전 강화 모드에 해당합니다.  
+ 또 다른 가능한 시나리오는 프록시가 사용되지 않을 경우 HTTP:// 접두사에 대한 확장된 보호를 사용하는 것입니다. 이 경우 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement>를 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 또는 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>로 설정하고 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario>를 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>로 설정하여 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType>를 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>로 설정합니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 값은 <xref:System.Net.HttpListener>를 부분 강화 모드로 전환하지만 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>는 완전 강화 모드에 해당합니다.  
   
  허용되는 서비스 이름의 기본 목록은 <xref:System.Net.HttpListener>를 사용하여 등록된 접두사를 기반으로 만들어집니다. 이 기본 목록은 <xref:System.Net.HttpListener.DefaultServiceNames%2A> 속성을 통해 검사할 수 있습니다. 이것은 포괄적인 목록이 아니므로 응용 프로그램은 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 클래스에 대한 생성자에서 기본 서비스 이름 목록 대신 사용할 사용자 지정 서비스 이름 컬렉션을 지정할 수 있습니다.  
   
@@ -164,6 +158,5 @@ ms.lasthandoff: 08/21/2017
  이러한 확장된 보호 기능은 다른 요청 형식을 사용하여 인증할 경우 및 신뢰할 수 있는 프록시가 사용될 경우 서버 응용 프로그램에서 인증에 사용될 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Security.Authentication.ExtendedProtection>   
+ <xref:System.Security.Authentication.ExtendedProtection>  
  <xref:System.Security.Authentication.ExtendedProtection.Configuration>
-

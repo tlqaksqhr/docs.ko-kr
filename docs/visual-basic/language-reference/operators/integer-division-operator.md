@@ -1,87 +1,85 @@
 ---
-title: "\ Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.\"
-  - "\"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "division operator, integer"
-  - "integer division operator"
-  - "zero, division by zero"
-  - "arithmetic operators, division"
-  - "division, by zero"
-  - "backslash (\) [Visual Basic]"
-  - "\ operator [Visual Basic]"
-  - "integer quotient"
-  - "math operators"
-  - "quotients, integer"
-  - "truncation, integer division"
+title: "\\ 연산자(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.\
+- '\'
+helpviewer_keywords:
+- division operator [Visual Basic], integer
+- integer division operator [Visual Basic]
+- zero, division by zero
+- arithmetic operators [Visual Basic], division
+- division [Visual Basic], by zero
+- backslash (\) [Visual Basic]
+- '\ operator [Visual Basic]'
+- integer quotient
+- math operators [Visual Basic]
+- quotients, integer
+- truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 38718b109b4b3865238267039908ea1d51d06229
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# \ Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-두 숫자를 나누고 정수 결과를 반환합니다.  
+# <a name="-operator-visual-basic"></a>\ 연산자(Visual Basic)
+두 숫자를 나누고 정수 결과 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
 expression1 \ expression2  
 ```  
   
-## 요소  
+## <a name="parts"></a>요소  
  `expression1`  
- 필수 요소.  임의의 숫자 식입니다.  
+ 필수 요소. 임의의 숫자 식입니다.  
   
  `expression2`  
- 필수 요소.  임의의 숫자 식입니다.  
+ 필수 요소. 임의의 숫자 식입니다.  
   
-## 지원 형식  
- 부호 없는 형식, 부동 소수점 형식 및 `Decimal`을 비롯한 모든 숫자 형식입니다.  
+## <a name="supported-types"></a>지원 형식  
+ 부호 없는 및 부동 소수점 형식을 포함 한 모든 숫자 형식 및 `Decimal`합니다.  
   
-## 결과  
- 결과는 `expression1`을 `expression2`로 나눠 나머지는 버리고 정수 부분만 남긴 몫입니다.  이를 *잘림*이라고 합니다.  
+## <a name="result"></a>결과  
+ 결과의 정수 몫은 `expression1` 나눈 `expression2`, 나머지는 버리고 정수 부분만 유지 합니다. 로 알려져 *잘림*합니다.  
   
- 결과 데이터 형식은 `expression1`과 `expression2`의 데이터 형식에 적합한 숫자 형식입니다.  [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)에서 "정수 연산" 표를 참조하십시오.  
+ 결과 데이터 형식이 데이터 형식에 대 한 적합 한 숫자 형식 `expression1` 및 `expression2`합니다. "정수 연산" 표를 참조 하십시오. [연산자 결과의 데이터 형식을](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)합니다.  
   
- [\/ Operator](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)는 나머지를 소수 부분으로 유지하여 전체 몫을 반환합니다.  
+ [/ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) 소수 부분에 있는 나머지를 유지 하면서 전체 몫을 반환 합니다.  
   
-## 설명  
- Visual Basic에서는 나누기 연산을 수행하기 전에 부동 소수점 숫자 식을 `Long`으로 변환합니다.  `Option Strict`가 `On`이면 컴파일러 오류가 발생합니다.  `Option Strict`가 `Off`이면 값이 [Long Data Type](../../../visual-basic/language-reference/data-types/long-data-type.md) 범위를 벗어날 경우 <xref:System.OverflowException>이 발생할 수 있습니다.  `Long`으로 변환할 때는 *은행원 반올림*도 적용됩니다.  자세한 내용은 [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)에서 "소수 부분"을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 나누기를 수행 하기 전에 Visual Basic에 임의의 부동 소수점 숫자 식으로 변환 하려고 `Long`합니다. 경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다. 경우 `Option Strict` 은 `Off`, <xref:System.OverflowException> 값의 범위를 벗어납니다.이 경우에 [Long 데이터 형식](../../../visual-basic/language-reference/data-types/long-data-type.md)합니다. 변환할 `Long` 를 일으키는 이기도 *banker rounding*합니다. 자세한 내용은의 "소수 부분이" 참조 [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)합니다.  
   
- `expression1` 또는 `expression2`가 [Nothing](../../../visual-basic/language-reference/nothing.md)이면 0으로 처리됩니다.  
+ 경우 `expression1` 또는 `expression2` 계산 [Nothing](../../../visual-basic/language-reference/nothing.md), 0으로 간주 됩니다.  
   
-## 0으로 나누기 수행  
- `expression2`가 0이면 `\` 연산자는 <xref:System.DivideByZeroException> 예외를 throw합니다.  모든 숫자 데이터 형식의 피연산자도 마찬가지입니다.  
+## <a name="attempted-division-by-zero"></a>0으로 나누기  
+ 경우 `expression2` 가 0 이면는 `\` 연산자를 throw 한 <xref:System.DivideByZeroException> 예외입니다. 이 피연산자의 모든 숫자 데이터 형식에 적용 됩니다.  
   
 > [!NOTE]
->  `\` 연산자는 필요에 따라 *오버로드*할 수 있습니다. 즉, 피연산자의 형식이 특정 클래스 또는 구조체인 경우 해당 클래스나 구조체에서 이 연산자의 동작을 다시 정의할 수 있습니다.  코드에서 이러한 클래스나 구조체에 대해 이 연산자를 사용할 때는 다시 정의된 동작을 알고 있어야 합니다.  자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)를 참조하십시오.  
+>  `\` 연산자 될 수 있습니다 *오버 로드 된*, 클래스 또는 구조체 수 할의 동작에 해당 클래스 또는 구조체의 형식입니다. 이 연산자를 사용 하 여 이러한 클래스나 구조체에는 코드를 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 참조 [연산자 프로시저](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)합니다.  
   
-## 예제  
- 다음 예제에서는 `\` 연산자를 사용하여 정수 나누기 연산을 수행합니다.  결과는 두 피연산자의 정수 몫을 나타내는 정수입니다. 이때 나머지는 버립니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `\` 정수 나누기를 수행 하는 연산자입니다. 결과 나머지 삭제는 두 피연산자의 몫을 나타내는 정수입니다.  
   
  [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
- 위 예제의 식에서는 2, 3, 33, \-22 값이 각각 반환됩니다.  
+ 앞의 예제에 있는 식은 각각 2, 3, 33,-22의 값을 반환합니다.  
   
-## 참고 항목  
- [\\\= Operator](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)   
- [\/ Operator](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)   
- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>참고 항목  
+ [\\= 연산자](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [/ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
+ [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

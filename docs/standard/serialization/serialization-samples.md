@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: 866294ebef7d16848f4fde28c05c6b3455969893
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>.NET Framework에 대한 serialization 샘플
 이 단원에서는 .NET Framework에서 개체를 serialize하는 방법을 보여 줍니다.  
@@ -43,4 +42,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="related-sections"></a>관련 단원  
  [serialization](../../../docs/standard/serialization/index.md)
-

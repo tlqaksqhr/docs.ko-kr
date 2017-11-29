@@ -1,29 +1,32 @@
 ---
-title: "WCF 웹 HTTP 프로그래밍 모델 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "POX"
-  - "REST"
-  - "웹 서비스 프로그래밍 모델 [WCF]"
+title: "WCF 웹 HTTP 프로그래밍 모델"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- web services programming model [WCF]
+- POX
+- REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f51ad4a228de0a4a2fae0fb325d045bb09263b3d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# WCF 웹 HTTP 프로그래밍 모델
-개발자는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델을 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 작업을 비 SOAP 끝점에 노출시킬 수 있습니다.이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  
+# <a name="wcf-web-http-programming-model"></a>WCF 웹 HTTP 프로그래밍 모델
+개발자는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델을 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 작업을 비 SOAP 끝점에 노출시킬 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델에 대해 간략하게 설명합니다.  
   
@@ -39,7 +42,7 @@ caps.handback.revision: 17
  [UriTemplate 및 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
  <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>을 사용하여 URI를 제어하는 방법에 대해 설명합니다.  
   
- [WCF 웹 HTTP 서비스에 대한 캐싱 지원](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
+ [WCF 웹 HTTP 서비스에 대 한 캐싱 지원](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
  WCF 웹 HTTP 서비스의 캐시 동작을 지정하는 방법에 대해 설명합니다.  
   
  [WCF 웹 HTTP 형식 지정](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  

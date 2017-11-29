@@ -1,24 +1,26 @@
 ---
-title: "&#39;&lt;processname&gt;&#39; 프로세스를 찾을 수 없습니다. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrProcessNotFound"
+title: "프로세스 &#39; &lt;processname&gt;&#39; 찾을 수 없습니다"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrProcessNotFound
 ms.assetid: d6095a7f-6168-4b00-8639-11fb64dd2ebe
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 564a8c0f41924d67d0a8aaeb833718817687d6ae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# &#39;&lt;processname&gt;&#39; 프로세스를 찾을 수 없습니다.
+# <a name="process-39ltprocessnamegt39-was-not-found"></a>프로세스 &#39; &lt;processname&gt;&#39; 찾을 수 없습니다
 지정한 프로세스를 찾을 수 없습니다.  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
 1.  올바른 프로세스 이름을 지정했는지 확인합니다.  
   
-## 참고 항목  
- [Managing Processes](http://msdn.microsoft.com/ko-kr/ef2f9767-330b-49f3-aa33-8574c241b9d2)
+## <a name="see-also"></a>참고 항목  
+ [프로세스 관리](http://msdn.microsoft.com/en-us/ef2f9767-330b-49f3-aa33-8574c241b9d2)

@@ -1,40 +1,44 @@
 ---
-title: "방법: 활성 MDI 자식으로 데이터 전송 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "자식 폼"
-  - "클립보드, 데이터 가져오기"
-  - "클립보드, 붙여넣기"
-  - "MDI, 폼으로 데이터 보내기"
+title: "방법: 활성 MDI 자식으로 데이터 전송"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- child forms
+- MDI [Windows Forms], sending data to forms
+- Clipboard [Windows Forms], pasting
+- Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b7f505d68bfd6d8c65104244f9583fd3cf975dd6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 활성 MDI 자식으로 데이터 전송
-[MDI 응용 프로그램](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md) 컨텍스트 내에서는 사용자가 클립보드의 데이터를 MDI 응용 프로그램에 붙여넣는 것처럼 데이터를 활성 자식 창으로 전송해야 할 경우가 종종 있습니다.  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>방법: 활성 MDI 자식으로 데이터 전송
+컨텍스트 내에서 종종 [다중 문서 MDI (인터페이스) 응용 프로그램](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), 데이터를 활성 자식 창 사용자 클립보드의에서 데이터는 MDI 응용 프로그램에 붙여 넣는 것 처럼 전송 해야 합니다.  
   
 > [!NOTE]
->  포커스가 있는 자식 창을 확인하고 해당 창의 내용을 클립보드로 보내는 데 대한 내용은 [활성 MDI 자식 확인](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)을 참조하십시오.  
+>  자식 창에 포커스를 확인 하 고 내용을 클립보드에 보내는 방법은 참조 [활성 MDI 자식 확인](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)합니다.  
   
-### 클립보드의 데이터를 활성 MDI 자식 창으로 보내려면  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>데이터를 보내는 활성 MDI 자식 창으로 클립보드  
   
-1.  메서드에서 클립보드에 있는 텍스트를 활성 자식 폼의 활성 컨트롤에 복사합니다.  
+1.  메서드를 클립보드에 텍스트 활성 자식 폼의 활성 컨트롤을 복사 합니다.  
   
     > [!NOTE]
-    >  이 예제에서는 <xref:System.Windows.Forms.RichTextBox> 컨트롤이 포함된 MDI 자식 창을 하나 이상 가진 MDI 부모 폼\(`Form1`\)이 있는 경우를 가정합니다.  자세한 내용은 [MDI 부모 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)를 참조하십시오.  
+    >  이 예제에서는 MDI 부모 폼이 가정 (`Form1`)가 하나 이상의 MDI 자식 창을 포함 하는 <xref:System.Windows.Forms.RichTextBox> 제어 합니다. 자세한 내용은 참조 [MDI 부모 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)합니다.  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -62,7 +66,6 @@ caps.handback.revision: 12
           End Try  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -96,12 +99,11 @@ caps.handback.revision: 12
           }  
        }  
     }  
-  
     ```  
   
-## 참고 항목  
- [MDI 응용 프로그램](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)   
- [방법: MDI 상위 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [방법: MDI 자식 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [방법: 활성 MDI 자식 확인](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)   
- [방법: MDI 자식 폼 정렬](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a>참고 항목  
+ [MDI(다중 문서 인터페이스) 응용 프로그램](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [방법: MDI 상위 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [방법: MDI 자식 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [방법: 활성 MDI 자식 확인](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
+ [방법: MDI 자식 양식 정렬](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

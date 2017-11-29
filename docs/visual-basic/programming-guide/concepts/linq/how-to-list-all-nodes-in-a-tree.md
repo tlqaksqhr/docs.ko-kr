@@ -1,31 +1,27 @@
 ---
-title: "방법: (Visual Basic) 트리의 모든 노드 나열 | Microsoft 문서"
+title: "방법: (Visual Basic) 트리의 모든 노드 나열"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e3aa8df843b8b601b2724f6de48d66d1a806db4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 988c531451162560cac99d8b8e1c25861ef82ae5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>방법: (Visual Basic) 트리의 모든 노드 나열
 경우에 따라 트리의 모든 노드를 나열하는 것이 유용합니다. 이것은 메서드나 속성이 트리에 미치는 영향을 정확히 확인할 때 유용할 수 있습니다. 텍스트 형식으로 모든 노드를 나열하는 한 가지 방법은 트리의 노드를 정확하고 특정하게 식별하는 XPath 식을 생성하는 것입니다.  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]을 사용하여 XPath 식을 실행하는 것은 특히 유용하지 않습니다. XPath 식은 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리보다 성능이 낮으며 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리가 훨씬 더 강력합니다. 그러나 XML 트리의 노드를 식별하는 방법으로 XPath는 효과적으로 작동합니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 XPath 식을 실행하는 것은 특히 유용하지 않습니다. XPath 식은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리보다 성능이 낮으며 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리가 훨씬 더 강력합니다. 그러나 XML 트리의 노드를 식별하는 방법으로 XPath는 효과적으로 작동합니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 XML 트리의 노드에 대한 특정 XPath 식을 생성하는 `GetXPath`라는 함수를 보여 줍니다. 이 함수는 노드가 네임스페이스에 있는 경우에도 적절한 XPath 식을 생성합니다. XPath 식은 네임스페이스 접두사를 사용하여 생성됩니다.  
@@ -245,7 +241,7 @@ End Module
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

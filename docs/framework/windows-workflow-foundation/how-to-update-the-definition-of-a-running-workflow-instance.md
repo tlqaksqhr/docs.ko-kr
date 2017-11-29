@@ -1,71 +1,78 @@
 ---
-title: "방법: 실행 중인 워크플로 인스턴스의 정의 업데이트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 실행 중인 워크플로 인스턴스의 정의 업데이트"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 73b36ca4dfd5ba61e99531df53a0e71dd4d32551
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 실행 중인 워크플로 인스턴스의 정의 업데이트
-동적 업데이트는 워크플로 응용 프로그램 개발자가 지속형 워크플로 인스턴스의 워크플로 정의를 업데이트하기 위한 메커니즘을 제공합니다.필요한 변경을 통해 버그 수정 또는 새 요구 사항을 구현하거나 예기치 않은 변경 내용을 수용할 수 있습니다.자습서의 이 단계에서는 [방법: 여러 버전의 워크플로를 함께 호스팅](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)에서 소개한 새 기능과 일치하도록 동적 업데이트를 사용하여 `v1` 숫자 추측 워크플로의 지속형 인스턴스를 수정하는 방법을 보여 줍니다.  
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>방법: 실행 중인 워크플로 인스턴스의 정의 업데이트
+동적 업데이트는 워크플로 응용 프로그램 개발자가 지속형 워크플로 인스턴스의 워크플로 정의를 업데이트하기 위한 메커니즘을 제공합니다. 필요한 변경을 통해 버그 수정 또는 새 요구 사항을 구현하거나 예기치 않은 변경 내용을 수용할 수 있습니다. 이 자습서의이 단계에서는 동적 업데이트의 지속형된 인스턴스가 수정를 사용 하는 방법을 보여 줍니다는 `v1` 숫자 추측 워크플로에 도입 된 새 기능에 맞게 [하는 방법: 호스트는 워크플로-Side-by-side의 여러 버전 ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
 > [!NOTE]
->  자습서의 전체 버전을 다운로드하거나 비디오 연습을 보려면 [Windows Workflow Foundation\(WF45\) \- 초보자를 위한 자습서](http://go.microsoft.com/fwlink/?LinkID=248976)를 참조하십시오.  
+>  를 전체 버전을 다운로드 하거나이 자습서의 비디오 연습을 보려면 참조 [Windows Workflow Foundation (WF45)-초보자를 위한 자습서](http://go.microsoft.com/fwlink/?LinkID=248976)합니다.  
   
-## 항목 내용  
+## <a name="in-this-topic"></a>항목 내용  
   
--   [CreateUpdateMaps 프로젝트를 만들려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
+-   [CreateUpdateMaps 프로젝트를 만들려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
   
--   [StateMachineNumberGuessWorkflow를 업데이트하려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
+-   [StateMachineNumberGuessWorkflow를 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
   
--   [FlowchartNumberGuessWorkflow를 업데이트하려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
+-   [FlowchartNumberGuessWorkflow를 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
   
--   [SequentialNumberGuessWorkflow를 업데이트하려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
+-   [SequentialNumberGuessWorkflow를 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
   
--   [CreateUpdateMaps 응용 프로그램을 빌드하고 실행하려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
+-   [빌드하고 CreateUpdateMaps 응용 프로그램을 실행 하려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
   
--   [업데이트된 워크플로 어셈블리를 빌드하려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
+-   [업데이트 된 워크플로 어셈블리를 빌드](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
   
--   [WorkflowVersionMap을 새 버전으로 업데이트하려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
+-   [WorkflowVersionMap을 새 버전으로 업데이트 하려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [동적 업데이트를 적용하려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
+-   [동적 업데이트를 적용 하려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
   
--   [업데이트된 워크플로로 응용 프로그램을 실행하려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
+-   [업데이트 된 워크플로로 응용 프로그램을 실행 하려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
   
--   [이전 버전의 워크플로를 시작하도록 설정하려면](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
+-   [이전 버전의 워크플로 시작 하도록 설정 하려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a> CreateUpdateMaps 프로젝트를 만들려면  
+###  <a name="BKMK_CreateProject"></a>CreateUpdateMaps 프로젝트를 만들려면  
   
-1.  **솔루션 탐색기**에서 **WF45GettingStartedTutorial**을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 프로젝트**를 차례로 선택합니다.  
+1.  마우스 오른쪽 단추로 클릭 **WF45GettingStartedTutorial** 에 **솔루션 탐색기** 선택 **추가**, **새 프로젝트**합니다.  
   
-2.  **설치됨** 노드에서 **Visual C\#**, **Windows**\(또는 **Visual Basic**, **Windows**\)를 차례로 선택합니다.  
+2.  에 **설치 됨** 노드를 **Visual C#**, **Windows** (또는 **Visual Basic**, **Windows**).  
   
     > [!NOTE]
-    >  **설치됨** 노드의 **다른 언어** 노드 아래에는 Visual Studio에서 기본 언어로 구성된 프로그래밍 언어에 따라 **Visual C\#** 또는 **Visual Basic** 노드가 표시될 수 있습니다.  
+    >  **설치됨** 노드의 **다른 언어** 노드 아래에는 Visual Studio에서 기본 언어로 구성된 프로그래밍 언어에 따라 **Visual C#** 또는 **Visual Basic** 노드가 표시될 수 있습니다.  
   
-     .NET Framework 버전 드롭다운 목록에서 **.NET Framework 4.5**가 선택되어 있는지 확인합니다.**Windows** 목록에서 **콘솔 응용 프로그램**을 선택합니다.**이름** 상자에 **CreateUpdateMaps**를 입력하고 **확인**을 클릭합니다.  
+     .NET Framework 버전 드롭다운 목록에서 **.NET Framework 4.5** 가 선택되어 있는지 확인합니다. 선택 **콘솔 응용 프로그램** 에서 **Windows** 목록입니다. 형식 **CreateUpdateMaps** 에 **이름** 상자 한 클릭 **확인**합니다.  
   
-3.  **솔루션 탐색기**에서 **CreateUpdateMaps**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.  
+3.  마우스 오른쪽 단추로 클릭 **CreateUpdateMaps** 에 **솔루션 탐색기** 선택 **참조 추가**합니다.  
   
-4.  **참조 추가** 목록의 **어셈블리** 노드에서 **프레임워크**를 선택합니다.**어셈블리 검색** 상자에 **System.Activities**를 입력하여 어셈블리를 필터링하면 원하는 참조를 손쉽게 선택할 수 있습니다.  
+4.  선택 **프레임 워크** 에서 **어셈블리** 에서 노드는 **참조 추가** 목록입니다. 형식 **System.Activities** 에 **어셈블리 검색** 상자 어셈블리를 필터링 하 고 원하는 참조를 보다 손쉽게 선택할 수 있습니다.  
   
-5.  **검색 결과** 목록에서 **System.Activities** 옆의 확인란을 선택합니다.  
+5.  옆의 확인란 **System.Activities** 에서 **검색 결과** 목록입니다.  
   
-6.  **어셈블리 검색** 상자에 **Serialization**을 입력하고 **검색 결과** 목록에서 **System.Runtime.Serialization** 옆의 확인란을 선택합니다.  
+6.  형식 **Serialization** 에 **어셈블리 검색** 고 옆의 확인란 **System.Runtime.Serialization** 에서 **검색 결과**  목록입니다.  
   
-7.  **어셈블리 검색** 상자에 **System.Xaml**을 입력하고 **검색 결과** 목록에서 **System.Xaml** 옆의 확인란을 선택합니다.  
+7.  형식 **System.Xaml** 에 **어셈블리 검색** 고 옆의 확인란 **System.Xaml** 에서 **검색 결과** 목록입니다.  
   
-8.  **확인**을 클릭하여 **참조 관리자**를 닫고 참조를 추가합니다.  
+8.  클릭 **확인** 를 닫으려면 **참조 관리자** 참조를 추가 합니다.  
   
-9. 다음 `using`\(또는 `Imports`\) 문을 파일의 맨 위에 다른 `using`\(또는 `Imports`\) 문과 함께 추가합니다.  
+9. 다음 `using`(또는 `Imports`) 문을 파일의 맨 위에 다른 `using`(또는 `Imports`) 문과 함께 추가합니다.  
   
     ```vb  
     Imports System.Activities  
@@ -91,7 +98,7 @@ caps.handback.revision: 6
     using Microsoft.CSharp.Activities;  
     ```  
   
-10. `Program`\(또는 `Module1`\) 클래스에 다음 두 개의 문자열 멤버를 추가합니다.  
+10. `Program`(또는 `Module1`) 클래스에 다음 두 개의 문자열 멤버를 추가합니다.  
   
     ```vb  
     Const mapPath = "..\..\..\PreviousVersions"  
@@ -103,7 +110,7 @@ caps.handback.revision: 6
     const string definitionPath = @"..\..\..\NumberGuessWorkflowActivities_du";  
     ```  
   
-11. `Program`\(또는 `Module1`\) 클래스에 다음 `StartUpdate` 메서드를 추가합니다.이 메서드는 지정된 xaml 워크플로 정의를 `ActivityBuilder`에 로드한 다음 `DynamicUpdate.PrepareForUpdate`를 호출합니다.`PrepareForUpdate`는 `ActivityBuilder` 내에 워크플로 정의의 복사본을 만듭니다.워크플로 정의가 수정되면 이 복사본이 수정된 워크플로 정의와 함께 사용되어 업데이트 맵을 만듭니다.  
+11. `StartUpdate`(또는 `Program`) 클래스에 다음 `Module1` 메서드를 추가합니다. 이 메서드는 지정된 xaml 워크플로 정의를 `ActivityBuilder`에 로드한 다음 `DynamicUpdate.PrepareForUpdate`를 호출합니다. `PrepareForUpdate`는 `ActivityBuilder` 내에 워크플로 정의의 복사본을 만듭니다. 워크플로 정의가 수정되면 이 복사본이 수정된 워크플로 정의와 함께 사용되어 업데이트 맵을 만듭니다.  
   
     ```vb  
     Private Function StartUpdate(name As String) As ActivityBuilder  
@@ -167,7 +174,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-12. 다음에는 `Program`\(또는 `Module1`\) 클래스에 다음 `CreateUpdateMethod`를 추가합니다.그러면 DynamicUpdateServices.CreateUpdateMap을 호출하여 동적 업데이트 맵이 만들어지고 지정된 이름을 사용하여 업데이트 맵이 저장됩니다.이 업데이트 맵에는 `ActivityBuilder`에 포함된 원래 워크플로 정의를 사용하여 시작된 지속형 워크플로 인스턴스가 업데이트된 워크플로 정의를 사용하여 완료될 수 있도록 워크플로 런타임이 이 인스턴스를 업데이트하는 데 필요한 정보가 포함되어 있습니다.  
+12. 다음에는 `CreateUpdateMethod`(또는 `Program`) 클래스에 다음 `Module1`를 추가합니다. 그러면 DynamicUpdateServices.CreateUpdateMap을 호출하여 동적 업데이트 맵이 만들어지고 지정된 이름을 사용하여 업데이트 맵이 저장됩니다. 이 업데이트 맵에는 `ActivityBuilder`에 포함된 원래 워크플로 정의를 사용하여 시작된 지속형 워크플로 인스턴스가 업데이트된 워크플로 정의를 사용하여 완료될 수 있도록 워크플로 런타임이 이 인스턴스를 업데이트하는 데 필요한 정보가 포함되어 있습니다.  
   
     ```vb  
     Private Sub CreateUpdateMaps(wf As ActivityBuilder, name As String)  
@@ -201,7 +208,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-13. `Program`\(또는 `Module1`\) 클래스에 다음 `SaveUpdatedDefinition` 메서드를 추가합니다.이 메서드는 업데이트 맵이 만들어진 후 업데이트된 워크플로 정의를 저장합니다.  
+13. `SaveUpdatedDefinition`(또는 `Program`) 클래스에 다음 `Module1` 메서드를 추가합니다. 이 메서드는 업데이트 맵이 만들어진 후 업데이트된 워크플로 정의를 저장합니다.  
   
     ```vb  
     Private Sub SaveUpdatedDefinition(wf As ActivityBuilder, name As String)  
@@ -226,9 +233,9 @@ caps.handback.revision: 6
     }  
     ```  
   
-###  <a name="BKMK_StateMachine"></a> StateMachineNumberGuessWorkflow를 업데이트하려면  
+###  <a name="BKMK_StateMachine"></a>StateMachineNumberGuessWorkflow를 업데이트  
   
-1.  `Program`\(또는 `Module1`\) 클래스에 `CreateStateMachineUpdateMap`을 추가합니다.  
+1.  `CreateStateMachineUpdateMap`(또는 `Program`) 클래스에 `Module1`을 추가합니다.  
   
     ```vb  
     Private Sub CreateStateMachineUpdateMap()  
@@ -258,7 +265,7 @@ caps.handback.revision: 6
     StateMachine sm = wf.Implementation as StateMachine;  
     ```  
   
-3.  그런 다음 사용자의 추측 값이 너무 높은지 또는 너무 낮은지를 표시하는 두 `WriteLine` 활동의 식을 [방법: 여러 버전의 워크플로를 함께 호스팅](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)에서 업데이트한 내용과 일치하도록 업데이트합니다.  
+3.  두 식을 다음으로 업데이트 하 여 `WriteLine` 에 수행 된 업데이트를 나타내도록 너무 높거나 너무 낮은 사용자의 추측 인지 여부를 표시 하는 활동 [하는 방법: 호스트는 워크플로-Side-by-side의 여러 버전](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.  
   
     ```vb  
     'Update the Text of the two WriteLine activities that write the  
@@ -319,7 +326,7 @@ caps.handback.revision: 6
     sm.States[1].Transitions[0].Action = wl;  
     ```  
   
-5.  워크플로가 업데이트된 후 `CreateUpdateMaps` 및 `SaveUpdatedDefinition`을 호출합니다.`CreateUpdateMaps`는 `DynamicUpdateMap`을 만들고 저장하며, `SaveUpdatedDefinition`은 업데이트된 워크플로 정의를 저장합니다.  
+5.  워크플로가 업데이트된 후 `CreateUpdateMaps` 및 `SaveUpdatedDefinition`을 호출합니다. `CreateUpdateMaps`는 `DynamicUpdateMap`을 만들고 저장하며, `SaveUpdatedDefinition`은 업데이트된 워크플로 정의를 저장합니다.  
   
     ```vb  
     'Create the update map.  
@@ -419,9 +426,9 @@ caps.handback.revision: 6
     }  
     ```  
   
-###  <a name="BKMK_Flowchart"></a> FlowchartNumberGuessWorkflow를 업데이트하려면  
+###  <a name="BKMK_Flowchart"></a>FlowchartNumberGuessWorkflow를 업데이트  
   
-1.  `Program`\(또는 `Module1`\) 클래스에 다음 `CreateFlowchartUpdateMethod`를 추가합니다.이 메서드는 `CreateStateMachineUpdateMap`과 비슷합니다.이 메서드는 먼저 `StartUpdate`를 호출하고 순서도 워크플로 정의를 업데이트한 다음 업데이트 맵과 업데이트된 워크플로 정의를 저장하는 것으로 작업을 완료합니다.  
+1.  `CreateFlowchartUpdateMethod`(또는 `Program`) 클래스에 다음 `Module1`를 추가합니다. 이 메서드는 `CreateStateMachineUpdateMap`과 비슷합니다. 이 메서드는 먼저 `StartUpdate`를 호출하고 순서도 워크플로 정의를 업데이트한 다음 업데이트 맵과 업데이트된 워크플로 정의를 저장하는 것으로 작업을 완료합니다.  
   
     ```vb  
     Private Sub CreateFlowchartUpdateMap()  
@@ -533,9 +540,9 @@ caps.handback.revision: 6
     }  
     ```  
   
-###  <a name="BKMK_Sequential"></a> SequentialNumberGuessWorkflow를 업데이트하려면  
+###  <a name="BKMK_Sequential"></a>SequentialNumberGuessWorkflow를 업데이트  
   
-1.  `Program`\(또는 `Module1`\) 클래스에 다음 `CreateSequentialUpdateMethod`를 추가합니다.이 메서드는 다른 두 개의 메서드와 비슷합니다.이 메서드는 먼저 `StartUpdate`를 호출하고 순차 워크플로 정의를 업데이트한 다음 업데이트 맵과 업데이트된 워크플로 정의를 저장하는 것으로 작업을 완료합니다.  
+1.  `CreateSequentialUpdateMethod`(또는 `Program`) 클래스에 다음 `Module1`를 추가합니다. 이 메서드는 다른 두 개의 메서드와 비슷합니다. 이 메서드는 먼저 `StartUpdate`를 호출하고 순차 워크플로 정의를 업데이트한 다음 업데이트 맵과 업데이트된 워크플로 정의를 저장하는 것으로 작업을 완료합니다.  
   
     ```vb  
     Private Sub CreateSequentialUpdateMap()  
@@ -613,9 +620,9 @@ caps.handback.revision: 6
     }  
     ```  
   
-###  <a name="BKMK_CreateUpdateMaps"></a> CreateUpdateMaps 응용 프로그램을 빌드하고 실행하려면  
+###  <a name="BKMK_CreateUpdateMaps"></a>빌드하고 CreateUpdateMaps 응용 프로그램을 실행 하려면  
   
-1.  `Main` 메서드를 업데이트하고 다음 세 개의 메서드 호출을 추가합니다.이러한 메서드는 다음 단원에서 추가됩니다.각 메서드는 해당 숫자 추측 워크플로를 업데이트하고 업데이트를 설명하는 `DynamicUpdateMap`을 만듭니다.  
+1.  `Main` 메서드를 업데이트하고 다음 세 개의 메서드 호출을 추가합니다. 이러한 메서드는 다음 단원에서 추가됩니다. 각 메서드는 해당 숫자 추측 워크플로를 업데이트하고 업데이트를 설명하는 `DynamicUpdateMap`을 만듭니다.  
   
     ```vb  
     Sub Main()  
@@ -638,53 +645,53 @@ caps.handback.revision: 6
     }  
     ```  
   
-2.  **솔루션 탐색기**에서 **CreateUpdateMaps**를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.  
+2.  마우스 오른쪽 단추로 클릭 **CreateUpdateMaps** 에 **솔루션 탐색기** 선택 **시작 프로젝트로 설정**합니다.  
   
-3.  Ctrl\+Shift\+B를 눌러 솔루션을 빌드하고 Ctrl\+F5를 눌러 `CreateUpdateMaps` 응용 프로그램을 실행합니다.  
+3.  Ctrl+Shift+B를 눌러 솔루션을 빌드하고 Ctrl+F5를 눌러 `CreateUpdateMaps` 응용 프로그램을 실행합니다.  
   
     > [!NOTE]
-    >  `CreateUpdateMaps` 응용 프로그램에서는 실행 중인 동안 어떠한 상태 정보도 표시하지 않지만 **NumberGuessWorkflowActivities\_du** 폴더와 **PreviousVersions** 폴더를 확인하면 업데이트된 워크플로 정의 파일과 업데이트 맵을 볼 수 있습니다.  
+    >  `CreateUpdateMaps` 응용 확인 하면 하지만 실행 하는 동안 어떠한 상태 정보도 표시 되지 않으면는 **NumberGuessWorkflowActivities_du** 폴더 및 **PreviousVersions** 나타납니다 폴더 업데이트 된 워크플로 정의 파일 및 맵을 업데이트 합니다.  
   
      업데이트 맵이 만들어지고 워크플로 정의가 업데이트된 후 다음 단계는 업데이트된 정의를 포함하는 업데이트된 워크플로 어셈블리를 빌드하는 것입니다.  
   
-###  <a name="BKMK_BuildAssembly"></a> 업데이트된 워크플로 어셈블리를 빌드하려면  
+###  <a name="BKMK_BuildAssembly"></a>업데이트 된 워크플로 어셈블리를 빌드  
   
 1.  [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]의 두 번째 인스턴스를 엽니다.  
   
-2.  **파일** 메뉴에서 **열기**, **프로젝트\/솔루션**을 차례로 선택합니다.  
+2.  선택 **열려**, **프로젝트/솔루션** 에서 **파일** 메뉴.  
   
-3.  [방법: 여러 버전의 워크플로를 함께 호스팅](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)에서 만든 **NumberGuessWorkflowActivities\_du** 폴더로 이동하고 **NumberGuessWorkflowActivities.csproj**\(또는 **vbproj**\)를 선택한 다음 **열기**를 클릭합니다.  
+3.  로 이동 된 **NumberGuessWorkflowActivities_du** 에서 만든 폴더 [하는 방법: 호스트는 워크플로-Side-by-side의 여러 버전](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)선택, **NumberGuessWorkflowActivities.csproj**  (또는 **vbproj**)를 클릭 하 고 **열려**합니다.  
   
-4.  **솔루션 탐색기**에서 **SequentialNumberGuessWorkflow.xaml**을 마우스 오른쪽 단추로 클릭하고 **프로젝트에서 제외**를 선택합니다.**FlowchartNumberGuessWorkflow.xaml** 및 **StateMachineNumberGuessWorkflow.xaml**에 대해 동일한 작업을 수행합니다.이 단계에서는 프로젝트에서 이전 버전의 워크플로 정의를 제거합니다.  
+4.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **SequentialNumberGuessWorkflow.xaml** 선택 **프로젝트에서 제외**합니다. 에 대 한 동일한 작업을 수행 **FlowchartNumberGuessWorkflow.xaml** 및 **StateMachineNumberGuessWorkflow.xaml**합니다. 이 단계에서는 프로젝트에서 이전 버전의 워크플로 정의를 제거합니다.  
   
-5.  **프로젝트** 메뉴에서 **기존 항목 추가**를 선택합니다.  
+5.  선택 **기존 항목 추가** 에서 **프로젝트** 메뉴.  
   
-6.  [방법: 여러 버전의 워크플로를 함께 호스팅](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)에서 만든 **NumberGuessWorkflowActivities\_du** 폴더로 이동합니다.  
+6.  로 이동 된 **NumberGuessWorkflowActivities_du** 에서 만든 폴더 [하는 방법: 호스트는 워크플로-Side-by-side의 여러 버전](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.  
   
-7.  **파일 형식** 드롭다운 목록에서 **XAML 파일 \(\*.xaml;\*.xoml\)**을 선택합니다.  
+7.  선택 **XAML 파일 (\*.xaml;\*합니다. xoml)** 에서 **파일 형식** 드롭 다운 목록입니다.  
   
-8.  **SequentialNumberGuessWorkflow\_du.xaml**, **FlowchartNumberGuessWorkflow\_du.xaml** 및 **StateMachineNumberGuessWorkflow\_du.xaml**을 선택하고 **추가**를 클릭합니다.  
+8.  선택 **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, 및 **StateMachineNumberGuessWorkflow_du.xaml** 클릭 **추가**합니다.  
   
     > [!NOTE]
-    >  한 번에 여러 개의 항목을 선택하려면 Ctrl 키를 누른 상태로 클릭하십시오.  
+    >  한 번에 여러 개의 항목을 선택하려면 Ctrl 키를 누른 상태로 클릭하세요.  
   
      이 단계에서는 프로젝트에 업데이트된 버전의 워크플로 정의를 추가합니다.  
   
-9. Ctrl\+Shift\+B를 눌러 프로젝트를 빌드합니다.  
+9. Ctrl+Shift+B를 눌러 프로젝트를 빌드합니다.  
   
-10. **파일** 메뉴에서 **솔루션 닫기**를 선택합니다.프로젝트의 솔루션 파일은 필요하지 않으므로 **아니요**를 클릭하여 솔루션 파일을 저장하지 않고 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]를 닫습니다.**파일** 메뉴에서 **끝내기**를 선택하여 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]를 닫습니다.  
+10. 선택 **솔루션 닫기** 에서 **파일** 메뉴. 솔루션 파일 클릭에 대 한 프로젝트는 필요 하지 않으므로 **아니요** 를 닫으려면 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 솔루션 파일을 저장 하지 않고 있습니다. 선택 **종료** 에서 **파일** 메뉴를 닫습니다 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]합니다.  
   
-11. Windows 탐색기를 열고 **NumberGuessWorkflowActivities\_du\\bin\\Debug** 폴더\(또는 프로젝트 설정에 따라 **bin\\Release**\)로 이동합니다.  
+11. Windows 탐색기를 열고 탐색 하 고 **NumberGuessWorkflowActivities_du\bin\Debug** 폴더 (또는 **bin\Release** 프로젝트 설정에 따라).  
   
-12. **NumberGuessWorkflowActivities.dll**의 이름을 **NumberGuessWorkflowActivities\_v15.dll**로 바꾼 후 이 파일을 [방법: 여러 버전의 워크플로를 함께 호스팅](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)에서 만든 **PreviousVersions** 폴더에 복사합니다.  
+12. 이름 바꾸기 **NumberGuessWorkflowActivities.dll** 를 **NumberGuessWorkflowActivities_v15.dll**, 복사는 **PreviousVersions** 에서만든폴더를[하는 방법: 여러 버전의 워크플로-여-를 함께 호스트](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> WorkflowVersionMap을 새 버전으로 업데이트하려면  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a>WorkflowVersionMap을 새 버전으로 업데이트 하려면  
   
 1.  다시 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]의 초기 인스턴스로 전환합니다.  
   
-2.  **NumberGuessWorkflowHost** 프로젝트 아래의 **WorkflowVersionMap.cs**\(또는 **WorkflowVersionMap.vb**\)를 두 번 클릭하여 엽니다.  
+2.  두 번 클릭 **WorkflowVersionMap.cs** (또는 **WorkflowVersionMap.vb**)에서 고 **NumberGuessWorkflowHost** 프로젝트를 엽니다.  
   
-3.  여섯 개의 기존 워크플로 ID 선언 바로 아래에 세 개의 새 워크플로 ID를 추가합니다.이 자습서에서는 `1.5.0.0`이 동적 업데이트 ID의 `WorkflowIdentity.Version`으로 사용됩니다.이러한 새 `v15` 워크플로 ID는 동적으로 업데이트된 지속형 워크플로 인스턴스에 대한 올바른 워크플로 정의를 제공하는 데 사용됩니다.  
+3.  여섯 개의 기존 워크플로 ID 선언 바로 아래에 세 개의 새 워크플로 ID를 추가합니다. 이 자습서에서는 `1.5.0.0`이 동적 업데이트 ID의 `WorkflowIdentity.Version`으로 사용됩니다. 이러한 새 `v15` 워크플로 ID는 동적으로 업데이트된 지속형 워크플로 인스턴스에 대한 올바른 워크플로 정의를 제공하는 데 사용됩니다.  
   
     ```vb  
     'Current version identities.  
@@ -720,7 +727,7 @@ caps.handback.revision: 6
     static public WorkflowIdentity SequentialNumberGuessIdentity_v15;  
     ```  
   
-4.  생성자의 끝에 다음 코드를 추가합니다.이 코드는 동적 업데이트 워크플로 ID를 초기화하고 해당 워크플로 정의를 로드한 후 워크플로 버전 사전에 추가합니다.  
+4.  생성자의 끝에 다음 코드를 추가합니다. 이 코드는 동적 업데이트 워크플로 ID를 초기화하고 해당 워크플로 정의를 로드한 후 워크플로 버전 사전에 추가합니다.  
   
     ```vb  
     'Initialize the dynamic update workflow identities.  
@@ -796,7 +803,6 @@ caps.handback.revision: 6
   
     map.Add(FlowchartNumberGuessIdentity_v15,  
         v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
-  
     ```  
   
      다음 예제는 전체 `WorkflowVersionMap` 클래스입니다.  
@@ -1064,36 +1070,36 @@ caps.handback.revision: 6
     }  
     ```  
   
-5.  Ctrl\+Shift\+B를 눌러 프로젝트를 빌드합니다.  
+5.  Ctrl+Shift+B를 눌러 프로젝트를 빌드합니다.  
   
-###  <a name="BKMK_ApplyUpdate"></a> 동적 업데이트를 적용하려면  
+###  <a name="BKMK_ApplyUpdate"></a>동적 업데이트를 적용 하려면  
   
-1.  **솔루션 탐색기**에서 **WF45GettingStartedTutorial**을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 프로젝트**를 차례로 선택합니다.  
+1.  마우스 오른쪽 단추로 클릭 **WF45GettingStartedTutorial** 에 **솔루션 탐색기** 선택 **추가**, **새 프로젝트**합니다.  
   
-2.  **설치됨** 노드에서 **Visual C\#**, **Windows**\(또는 **Visual Basic**, **Windows**\)를 차례로 선택합니다.  
+2.  에 **설치 됨** 노드를 **Visual C#**, **Windows** (또는 **Visual Basic**, **Windows**).  
   
     > [!NOTE]
-    >  **설치됨** 노드의 **다른 언어** 노드 아래에는 Visual Studio에서 기본 언어로 구성된 프로그래밍 언어에 따라 **Visual C\#** 또는 **Visual Basic** 노드가 표시될 수 있습니다.  
+    >  **설치됨** 노드의 **다른 언어** 노드 아래에는 Visual Studio에서 기본 언어로 구성된 프로그래밍 언어에 따라 **Visual C#** 또는 **Visual Basic** 노드가 표시될 수 있습니다.  
   
-     .NET Framework 버전 드롭다운 목록에서 **.NET Framework 4.5**가 선택되어 있는지 확인합니다.**Windows** 목록에서 **콘솔 응용 프로그램**을 선택합니다.**이름** 상자에 **ApplyDynamicUpdate**를 입력하고 **확인**을 클릭합니다.  
+     .NET Framework 버전 드롭다운 목록에서 **.NET Framework 4.5** 가 선택되어 있는지 확인합니다. 선택 **콘솔 응용 프로그램** 에서 **Windows** 목록입니다. 형식 **ApplyDynamicUpdate** 에 **이름** 상자 한 클릭 **확인**합니다.  
   
-3.  **솔루션 탐색기**에서 **ApplyDynamicUpdate**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.  
+3.  마우스 오른쪽 단추로 클릭 **ApplyDynamicUpdate** 에 **솔루션 탐색기** 선택 **참조 추가**합니다.  
   
-4.  **솔루션**을 클릭하고 **NumberGuessWorkflowHost** 옆에 있는 상자를 선택합니다.이 참조는 `ApplyDynamicUpdate`에서 `NumberGuessWorkflowHost.WorkflowVersionMap` 클래스를 사용하는 데 필요합니다.  
+4.  클릭 **솔루션** 옆에 있는 확인란 **NumberGuessWorkflowHost**합니다. 이 참조는 `ApplyDynamicUpdate`에서 `NumberGuessWorkflowHost.WorkflowVersionMap` 클래스를 사용하는 데 필요합니다.  
   
-5.  **참조 추가** 목록의 **어셈블리** 노드에서 **프레임워크**를 선택합니다.**어셈블리 검색** 상자에 **System.Activities**를 입력합니다.그러면 어셈블리가 필터링되므로 원하는 참조를 손쉽게 선택할 수 있습니다.  
+5.  선택 **프레임 워크** 에서 **어셈블리** 에서 노드는 **참조 추가** 목록입니다. 형식 **System.Activities** 에 **어셈블리 검색** 상자입니다. 그러면 어셈블리가 필터링되므로 원하는 참조를 손쉽게 선택할 수 있습니다.  
   
-6.  **검색 결과** 목록에서 **System.Activities** 옆의 확인란을 선택합니다.  
+6.  옆의 확인란 **System.Activities** 에서 **검색 결과** 목록입니다.  
   
-7.  **어셈블리 검색** 상자에 **Serialization**을 입력하고 **검색 결과** 목록에서 **System.Runtime.Serialization** 옆의 확인란을 선택합니다.  
+7.  형식 **Serialization** 에 **어셈블리 검색** 고 옆의 확인란 **System.Runtime.Serialization** 에서 **검색 결과**  목록입니다.  
   
-8.  **어셈블리 검색** 상자에 **DurableInstancing**을 입력하고 **검색 결과** 목록에서 **System.Activities.DurableInstancing** 및 **System.Runtime.DurableInstancing** 옆의 확인란을 선택합니다.  
+8.  형식 **DurableInstancing** 에 **어셈블리 검색** 고 옆의 확인란 **검색 결과** 및  **System.Runtime.DurableInstancing** 에서 **검색 결과** 목록입니다.  
   
-9. **확인**을 클릭하여 **참조 관리자**를 닫고 참조를 추가합니다.  
+9. 클릭 **확인** 를 닫으려면 **참조 관리자** 참조를 추가 합니다.  
   
-10. 솔루션 탐색기에서 **ApplyDynamicUpdate**를 마우스 오른쪽 단추로 클릭하고 **추가**, **클래스**를 차례로 선택합니다.**이름** 상자에 `DynamicUpdateInfo`를 입력하고 **추가**를 클릭합니다.  
+10. 마우스 오른쪽 단추로 클릭 **ApplyDynamicUpdate** 솔루션 탐색기에서 선택 하 고 **추가**, **클래스**합니다. 형식 `DynamicUpdateInfo` 에 **이름** 상자 한 클릭 **추가**합니다.  
   
-11. `DynamicUpdateInfo` 클래스에 다음 두 개의 멤버를 추가합니다.다음 예제는 전체 `DynamicUpdateInfo` 클래스입니다.이 클래스에는 워크플로 인스턴스가 업데이트될 때 사용되는 업데이트 맵 및 새 워크플로 ID에 대한 정보가 포함되어 있습니다.  
+11. `DynamicUpdateInfo` 클래스에 다음 두 개의 멤버를 추가합니다. 다음 예제는 전체 `DynamicUpdateInfo` 클래스입니다. 이 클래스에는 워크플로 인스턴스가 업데이트될 때 사용되는 업데이트 맵 및 새 워크플로 ID에 대한 정보가 포함되어 있습니다.  
   
     ```vb  
     Public Class DynamicUpdateInfo  
@@ -1110,7 +1116,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-12. 다음 `using`\(또는 `Imports`\) 문을 파일의 맨 위에 다른 `using`\(또는 `Imports`\) 문과 함께 추가합니다.  
+12. 다음 `using`(또는 `Imports`) 문을 파일의 맨 위에 다른 `using`(또는 `Imports`) 문과 함께 추가합니다.  
   
     ```vb  
     Imports System.Activities  
@@ -1122,9 +1128,9 @@ caps.handback.revision: 6
     using System.Activities.DynamicUpdate;  
     ```  
   
-13. 솔루션 탐색기에서 **Program.cs**\(또는 **Module1.vb**\)를 두 번 클릭합니다.  
+13. 두 번 클릭 **Program.cs** (또는 **Module1.vb**) 솔루션 탐색기에서 합니다.  
   
-14. 다음 `using`\(또는 `Imports`\) 문을 파일의 맨 위에 다른 `using`\(또는 `Imports`\) 문과 함께 추가합니다.  
+14. 다음 `using`(또는 `Imports`) 문을 파일의 맨 위에 다른 `using`(또는 `Imports`) 문과 함께 추가합니다.  
   
     ```vb  
     Imports NumberGuessWorkflowHost  
@@ -1147,7 +1153,7 @@ caps.handback.revision: 6
     using System.Activities.DurableInstancing;  
     ```  
   
-15. `Program`\(또는 `Module1`\) 클래스에 다음 연결 문자열 멤버를 추가합니다.  
+15. `Program`(또는 `Module1`) 클래스에 다음 연결 문자열 멤버를 추가합니다.  
   
     ```vb  
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"  
@@ -1160,7 +1166,7 @@ caps.handback.revision: 6
     > [!NOTE]
     >  SQL Server 에디션에 따라 연결 문자열 서버 이름이 다를 수 있습니다.  
   
-16. `Program`\(또는 `Module1`\) 클래스에 다음 `GetIDs` 메서드를 추가합니다.이 메서드는 지속형 워크플로 인스턴스 ID의 목록을 반환합니다.  
+16. `GetIDs`(또는 `Program`) 클래스에 다음 `Module1` 메서드를 추가합니다. 이 메서드는 지속형 워크플로 인스턴스 ID의 목록을 반환합니다.  
   
     ```vb  
     Function GetIds() As IList(Of Guid)  
@@ -1213,7 +1219,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-17. `Program`\(또는 `Module1`\) 클래스에 다음 `LoadMap` 메서드를 추가합니다.이 메서드는 `v1` 워크플로 ID를 해당 지속형 워크플로 인스턴스를 업데이트하는 데 사용되는 업데이트 맵과 새 워크플로 ID에 매핑하는 사전을 만듭니다.  
+17. `LoadMap`(또는 `Program`) 클래스에 다음 `Module1` 메서드를 추가합니다. 이 메서드는 `v1` 워크플로 ID를 해당 지속형 워크플로 인스턴스를 업데이트하는 데 사용되는 업데이트 맵과 새 워크플로 ID에 매핑하는 사전을 만듭니다.  
   
     ```vb  
     Function LoadMap(mapName As String) As DynamicUpdateMap  
@@ -1256,7 +1262,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-18. `Program`\(또는 `Module1`\) 클래스에 다음 `LoadMaps` 메서드를 추가합니다.이 메서드는 세 개의 업데이트 맵을 로드하고 `v1` 워크플로 ID를 업데이트 맵에 매핑하는 사전을 만듭니다.  
+18. `LoadMaps`(또는 `Program`) 클래스에 다음 `Module1` 메서드를 추가합니다. 이 메서드는 세 개의 업데이트 맵을 로드하고 `v1` 워크플로 ID를 업데이트 맵에 매핑하는 사전을 만듭니다.  
   
     ```vb  
     Function LoadMaps() As IDictionary(Of WorkflowIdentity, DynamicUpdateInfo)  
@@ -1328,7 +1334,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-19. 다음 코드를 `Main`에 추가합니다.이 코드는 지속형 워크플로 인스턴스를 반복하고 각 `WorkflowIdentity`를 검사합니다.`WorkflowIdentity`가 `v1` 워크플로 인스턴스에 매핑되면 업데이트된 워크플로 정의와 업데이트된 워크플로 ID로 `WorkflowApplication`이 구성됩니다.그런 다음 해당 인스턴스와 업데이트 맵을 사용하여 `WorkflowApplication.Load`가 호출되고 동적 업데이트 맵이 적용됩니다.업데이트가 적용된 후 업데이트된 인스턴스는 `Unload`에 대한 호출을 통해 지속됩니다.  
+19. 다음 코드를 `Main`에 추가합니다. 이 코드는 지속형 워크플로 인스턴스를 반복하고 각 `WorkflowIdentity`를 검사합니다. `WorkflowIdentity`가 `v1` 워크플로 인스턴스에 매핑되면 업데이트된 워크플로 정의와 업데이트된 워크플로 ID로 `WorkflowApplication`이 구성됩니다. 그런 다음 해당 인스턴스와 업데이트 맵을 사용하여 `WorkflowApplication.Load`가 호출되고 동적 업데이트 맵이 적용됩니다. 업데이트가 적용된 후 업데이트된 인스턴스는 `Unload`에 대한 호출을 통해 지속됩니다.  
   
     ```vb  
     Dim store = New SqlWorkflowInstanceStore(connectionString)  
@@ -1366,7 +1372,6 @@ caps.handback.revision: 6
             instance.Abandon()  
         End If  
     Next  
-  
     ```  
   
     ```csharp  
@@ -1412,81 +1417,81 @@ caps.handback.revision: 6
     }  
     ```  
   
-20. **솔루션 탐색기**에서 **ApplyDynamicUpdate**를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.  
+20. 마우스 오른쪽 단추로 클릭 **ApplyDynamicUpdate** 에 **솔루션 탐색기** 선택 **시작 프로젝트로 설정**합니다.  
   
-21. Ctrl\+Shift\+B를 눌러 솔루션을 빌드하고 Ctrl\+F5를 눌러 `ApplyDynamicUpdate` 응용 프로그램을 실행한 다음 지속형 워크플로 인스턴스를 업데이트합니다.다음과 유사한 출력이 표시됩니다.버전 1.0.0.0 워크플로는 버전 1.5.0.0으로 업데이트되는 반면에 버전 2.0.0.0 워크플로는 업데이트되지 않습니다.  
+21. Ctrl+Shift+B를 눌러 솔루션을 빌드하고 Ctrl+F5를 눌러 `ApplyDynamicUpdate` 응용 프로그램을 실행한 다음 지속형 워크플로 인스턴스를 업데이트합니다. 다음과 유사한 출력이 표시됩니다. 버전 1.0.0.0 워크플로는 버전 1.5.0.0으로 업데이트되는 반면에 버전 2.0.0.0 워크플로는 업데이트되지 않습니다.  
   
- **Inspecting: StateMachineNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: StateMachineNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: StateMachineNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: StateMachineNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: FlowchartNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: FlowchartNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: SequentialNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: SequentialNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: SequentialNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: StateMachineNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: StateMachineNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: FlowchartNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: StateMachineNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: StateMachineNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=2.0.0.0**   
-**Press any key to continue ...**  
+ **검사: StateMachineNumberGuessWorkflow; 버전 1.0.0.0 =**  
+**에 업데이트 된: StateMachineNumberGuessWorkflow; 버전 1.5.0.0 =**   
+**검사: StateMachineNumberGuessWorkflow; 버전 1.0.0.0 =**   
+**에 업데이트 된: StateMachineNumberGuessWorkflow; 버전 1.5.0.0 =**   
+**검사: FlowchartNumberGuessWorkflow; 버전 1.0.0.0 =**   
+**에 업데이트 된: FlowchartNumberGuessWorkflow; 버전 1.5.0.0 =**   
+**검사: FlowchartNumberGuessWorkflow; 버전 1.0.0.0 =**   
+**에 업데이트 된: FlowchartNumberGuessWorkflow; 버전 1.5.0.0 =**   
+**검사: SequentialNumberGuessWorkflow; 버전 1.0.0.0 =**   
+**에 업데이트 된: SequentialNumberGuessWorkflow; 버전 1.5.0.0 =**   
+**검사: SequentialNumberGuessWorkflow; 버전 1.0.0.0 =**   
+**에 업데이트 된: SequentialNumberGuessWorkflow; 버전 1.5.0.0 =**   
+**검사: SequentialNumberGuessWorkflow; 버전 1.0.0.0 =**   
+**에 업데이트 된: SequentialNumberGuessWorkflow; 버전 1.5.0.0 =**   
+**검사: StateMachineNumberGuessWorkflow; 버전 1.0.0.0 =**   
+**에 업데이트 된: StateMachineNumberGuessWorkflow; 버전 1.5.0.0 =**   
+**검사: FlowchartNumberGuessWorkflow; 버전 1.0.0.0 =**   
+**에 업데이트 된: FlowchartNumberGuessWorkflow; 버전 1.5.0.0 =**   
+**검사: StateMachineNumberGuessWorkflow; 버전 2.0.0.0 =**   
+**검사: StateMachineNumberGuessWorkflow; 버전 2.0.0.0 =**   
+**검사: FlowchartNumberGuessWorkflow; 버전 2.0.0.0 =**   
+**검사: FlowchartNumberGuessWorkflow; 버전 2.0.0.0 =**   
+**검사: SequentialNumberGuessWorkflow; 버전 2.0.0.0 =**   
+**검사: SequentialNumberGuessWorkflow; 버전 2.0.0.0 =**   
+**계속 하려면 아무 키나를 누르십시오...**  
   
-###  <a name="BKMK_BuildAndRun"></a> 업데이트된 워크플로로 응용 프로그램을 실행하려면  
+###  <a name="BKMK_BuildAndRun"></a>업데이트 된 워크플로로 응용 프로그램을 실행 하려면  
   
-1.  **솔루션 탐색기**에서 **NumberGuessWorkflowHost**를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.  
+1.  마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 에 **솔루션 탐색기** 선택 **시작 프로젝트로 설정**합니다.  
   
-2.  Ctrl\+F5를 눌러 응용 프로그램을 실행합니다.  
+2.  Ctrl+F5를 눌러 응용 프로그램을 실행합니다.  
   
-3.  **New Game**을 클릭하여 새 워크플로를 시작하고 상태 창 아래에서 해당 워크플로가 `v2` 워크플로임을 나타내는 버전 정보를 확인합니다.  
+3.  클릭 **새 게임** 새 워크플로 시작 하 고 워크플로 나타내는 상태 창에는 버전 정보 아래를 확인 하는 `v2` 워크플로 합니다.  
   
-4.  [방법: 여러 버전의 워크플로를 함께 호스팅](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md) 항목의 처음 부분에서 시작한 `v1` 워크플로 중 하나를 선택합니다.상태 창 아래에서 해당 워크플로가 버전 **1.5.0.0** 워크플로임을 나타내는 버전 정보를 확인합니다.추측 값이 너무 높거나 너무 낮은지 여부 외에도 이전 추측 값에 대해 표시된 정보가 없는지 확인합니다.  
+4.  중 하나를 선택는 `v1` 의 시작 부분에서 시작 하는 워크플로 [하는 방법: 호스트는 워크플로-Side-by-side의 여러 버전](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) 항목입니다. 워크플로 버전 나타내는 상태 창에 버전 정보 참고 **1.5.0.0** 워크플로 합니다. 추측 값이 너무 높거나 너무 낮은지 여부 외에도 이전 추측 값에 대해 표시된 정보가 없는지 확인합니다.  
   
- **Please enter a number between 1 and 10**   
-**Your guess is too low.**  
+ **1과 10 사이의 숫자를 입력 하십시오.**  
+**예상이 너무 낮습니다.**  
   
-5.  `InstanceId`를 적어 두고 워크플로가 완료될 때까지 추측 값을 입력합니다.`WriteLine` 활동은 동적 업데이트에 의해 업데이트되었으므로 상태 창에는 추측 내용에 대한 정보가 표시됩니다.  
+5.  `InstanceId`를 적어 두고 워크플로가 완료될 때까지 추측 값을 입력합니다. `WriteLine` 활동은 동적 업데이트에 의해 업데이트되었으므로 상태 창에는 추측 내용에 대한 정보가 표시됩니다.  
   
- **Please enter a number between 1 and 10**   
-**Your guess is too low.**   
-**Please enter a number between 1 and 10**   
-**5 is too low.**   
-**Please enter a number between 1 and 10**   
-**7 is too high.**   
-**Please enter a number between 1 and 10**   
-**Congratulations, you guessed the number in 4 turns.**  
+ **1과 10 사이의 숫자를 입력 하십시오.**  
+**예상이 너무 낮습니다.**   
+**1과 10 사이의 숫자를 입력 하십시오.**   
+**5 너무 낮습니다.**   
+**1과 10 사이의 숫자를 입력 하십시오.**   
+**7 너무 높습니다.**   
+**1과 10 사이의 숫자를 입력 하십시오.**   
+**축, 4 결과적으로 숫자를 추측 했습니다.**  
   
-6.  Windows 탐색기를 열고 **NumberGuessWorkflowHost\\bin\\debug** 폴더\(또는 프로젝트 설정에 따라 **bin\\release**\)로 이동한 다음 메모장을 사용하여 완료된 워크플로에 해당하는 추적 파일을 엽니다.`InstanceId`를 적어 두지 않은 경우 Windows 탐색기에서 **수정한 날짜** 정보를 사용하여 올바른 추적 파일을 식별할 수 있습니다.추적 정보의 마지막 줄에는 새로 추가된 `WriteLine` 활동의 출력이 포함됩니다.  
+6.  Windows 탐색기를 열고 탐색 하 고 **NumberGuessWorkflowHost\bin\debug** 폴더 (또는 **bin\release** 프로젝트 설정에 따라) 해당 하는 메모장을 사용 하 여 추적 파일을 열면 완료 된 워크플로에 합니다. 메모를 수행 하지 않은 경우 하는 경우는 `InstanceId` 사용 하 여 올바른 추적 파일을 식별할 수 있습니다는 **수정한 날짜** Windows 탐색기에서 정보입니다. 추적 정보의 마지막 줄에는 새로 추가된 `WriteLine` 활동의 출력이 포함됩니다.  
   
- **Please enter a number between 1 and 10**   
-**Your guess is too low.**   
-**Please enter a number between 1 and 10**   
-**5 is too low.**   
-**Please enter a number between 1 and 10**   
-**7 is too high.**   
-**Please enter a number between 1 and 10**   
-**6 is correct.You guessed it in 4 turns.**  
+ **1과 10 사이의 숫자를 입력 하십시오.**  
+**예상이 너무 낮습니다.**   
+**1과 10 사이의 숫자를 입력 하십시오.**   
+**5 너무 낮습니다.**   
+**1과 10 사이의 숫자를 입력 하십시오.**   
+**7 너무 높습니다.**   
+**1과 10 사이의 숫자를 입력 하십시오.**   
+**6이 올바릅니다. 4 결과적으로 맞습니다.**  
   
-###  <a name="BKMK_StartPreviousVersions"></a> 이전 버전의 워크플로를 시작하도록 설정하려면  
+###  <a name="BKMK_StartPreviousVersions"></a>이전 버전의 워크플로 시작 하도록 설정 하려면  
  업데이트할 워크플로가 모두 실행된 경우 이전 버전의 워크플로를 시작하도록 `NumberGuessWorkflowHost` 응용 프로그램을 수정할 수 있습니다.  
   
-1.  **솔루션 탐색기**에서 **WorkflowHostForm**을 두 번 클릭하고 **WorkflowType** 콤보 상자를 선택합니다.  
+1.  두 번 클릭 **WorkflowHostForm** 에 **솔루션 탐색기**, 선택는 **WorkflowType** 콤보 상자입니다.  
   
-2.  **속성** 창에서 **항목** 속성을 선택하고 줄임표 단추를 클릭하여 **항목** 컬렉션을 편집합니다.  
+2.  에 **속성** 창에서는 **항목** 속성 편집 하려면 줄임표 단추를 클릭 하 고는 **항목** 컬렉션입니다.  
   
 3.  이 컬렉션에 다음 세 가지 항목을 추가합니다.  
   
-    ```vb-c#  
+    ```
     StateMachineNumberGuessWorkflow v1  
     FlowchartNumberGuessWorkflow v1  
     SequentialNumberGuessWorkflow v1  
@@ -1494,7 +1499,7 @@ caps.handback.revision: 6
   
      완료된 `Items` 컬렉션에는 여섯 개의 항목이 포함됩니다.  
   
-    ```vb-c#  
+    ```
     StateMachineNumberGuessWorkflow  
     FlowchartNumberGuessWorkflow  
     SequentialNumberGuessWorkflow  
@@ -1503,9 +1508,9 @@ caps.handback.revision: 6
     SequentialNumberGuessWorkflow v1  
     ```  
   
-4.  **솔루션 탐색기**에서 **WorkflowHostForm**을 두 번 클릭하고 **코드 보기**를 선택합니다.  
+4.  두 번 클릭 **WorkflowHostForm** 에 **솔루션 탐색기**를 선택 하 고 **코드 보기**합니다.  
   
-5.  `NewGame_Click` 처리기의 `switch`\(또는 `Select Case`\) 문에 세 개의 새 클래스를 추가하여 **WorkflowType** 콤보 상자의 새 항목을 일치하는 워크플로 ID에 매핑합니다.  
+5.  3 개의 새 사례를 추가할는 `switch` (또는 `Select Case`)의 문에서 `NewGame_Click` 처리기에 새 항목을 매핑할 수는 **WorkflowType** 콤보 상자는 일치 하는 워크플로 id 합니다.  
   
     ```vb  
     Case "SequentialNumberGuessWorkflow v1"  
@@ -1532,7 +1537,7 @@ caps.handback.revision: 6
         break;  
     ```  
   
-     다음 예제에는 전체 `switch`\(또는 `Select Case`\) 문이 포함되어 있습니다.  
+     다음 예제에는 전체 `switch`(또는 `Select Case`) 문이 포함되어 있습니다.  
   
     ```vb  
     Select Case WorkflowType.SelectedItem.ToString()  
@@ -1585,4 +1590,4 @@ caps.handback.revision: 6
     };  
     ```  
   
-6.  Ctrl\+F5를 눌러 응용 프로그램을 빌드하고 실행합니다.이제 현재 버전뿐 아니라 `v1` 버전의 워크플로도 시작할 수 있습니다.이러한 새 인스턴스를 동적으로 업데이트하려면 **ApplyDynamicUpdate** 응용 프로그램을 실행합니다.
+6.  Ctrl+F5를 눌러 응용 프로그램을 빌드하고 실행합니다. 이제 현재 버전뿐 아니라 `v1` 버전의 워크플로도 시작할 수 있습니다. 이러한 새 인스턴스를 동적으로 업데이트 하려면 실행는 **ApplyDynamicUpdate** 응용 프로그램입니다.

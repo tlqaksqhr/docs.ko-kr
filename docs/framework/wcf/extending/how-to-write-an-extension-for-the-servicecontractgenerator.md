@@ -1,29 +1,32 @@
 ---
-title: "방법: ServiceContractGenerator에 대한 확장 쓰기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: ServiceContractGenerator에 대한 확장명 쓰기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 39fb7fde2d293ae96e11b7c77b4a16d18ee3cac9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: ServiceContractGenerator에 대한 확장 쓰기
-이 항목에서는 <xref:System.ServiceModel.Description.ServiceContractGenerator>에 대한 확장을 쓰는 방법에 대해 설명합니다.이 작업을 수행하려면 작업 동작에 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> 인터페이스를 구현하거나 계약 동작에 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현합니다.다음 항목에서는 계약 동작에서 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현하는 방법을 보여 줍니다.  
+# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>방법: ServiceContractGenerator에 대한 확장명 쓰기
+이 항목에서는 <xref:System.ServiceModel.Description.ServiceContractGenerator>에 대한 확장을 쓰는 방법에 대해 설명합니다. 이 작업을 수행하려면 작업 동작에 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> 인터페이스를 구현하거나 계약 동작에 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현합니다. 다음 항목에서는 계약 동작에서 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현하는 방법을 보여 줍니다.  
   
- <xref:System.ServiceModel.Description.ServiceContractGenerator>는 <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> 및 <xref:System.ServiceModel.Channels.Binding> 인스턴스에서 서비스 계약, 클라이언트 형식 및 클라이언트 구성을 생성합니다.일반적으로 서비스 메타데이터에서 <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> 및 <xref:System.ServiceModel.Channels.Binding> 인스턴스를 가져온 다음 이러한 인스턴스를 사용하여 서비스를 호출할 코드를 생성합니다.이 예제에서 <xref:System.ServiceModel.Description.IWsdlImportExtension> 구현은 생성된 코드에 주석을 생성하기 위해 WSDL 주석을 처리한 다음 가져온 계약에 코드 생성 확장을 추가하는 데 사용됩니다.  
+ <xref:System.ServiceModel.Description.ServiceContractGenerator>는 <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> 및 <xref:System.ServiceModel.Channels.Binding> 인스턴스에서 서비스 계약, 클라이언트 형식 및 클라이언트 구성을 생성합니다. 일반적으로 서비스 메타데이터에서 <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> 및 <xref:System.ServiceModel.Channels.Binding> 인스턴스를 가져온 다음 이러한 인스턴스를 사용하여 서비스를 호출할 코드를 생성합니다. 이 예제에서 <xref:System.ServiceModel.Description.IWsdlImportExtension> 구현은 생성된 코드에 주석을 생성하기 위해 WSDL 주석을 처리한 다음 가져온 계약에 코드 생성 확장을 추가하는 데 사용됩니다.  
   
-### ServiceContractGenerator에 대한 확장을 쓰려면  
+### <a name="to-write-an-extension-for-the-servicecontractgenerator"></a>ServiceContractGenerator에 대한 확장을 쓰려면  
   
-1.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>을 구현합니다.생성된 서비스 계약을 수정하려면 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 메서드로 전달된 <xref:System.ServiceModel.Description.ServiceContractGenerationContext> 인스턴스를 사용합니다.  
+1.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>를 구현해야 합니다. 생성된 서비스 계약을 수정하려면 <xref:System.ServiceModel.Description.ServiceContractGenerationContext> 메서드로 전달된 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 인스턴스를 사용합니다.  
   
     ```  
     public void GenerateContract(ServiceContractGenerationContext context)  
@@ -33,7 +36,7 @@ caps.handback.revision: 13
     }  
     ```  
   
-2.  같은 클래스에서 <xref:System.ServiceModel.Description.IWsdlImportExtension>을 구현합니다.<xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 메서드는 가져온 <xref:System.ServiceModel.Description.ContractDescription> 인스턴스에 코드 생성 확장을 추가하여 특정 WSDL 확장\(이 경우 WSDL 주석\)을 처리할 수 있습니다.  
+2.  같은 클래스에서 <xref:System.ServiceModel.Description.IWsdlImportExtension>을 구현합니다. <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 메서드는 가져온 <xref:System.ServiceModel.Description.ContractDescription> 인스턴스에 코드 생성 확장을 추가하여 특정 WSDL 확장(이 경우 WSDL 주석)을 처리할 수 있습니다.  
   
     ```  
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -69,7 +72,7 @@ caps.handback.revision: 13
   
 3.  클라이언트 구성에 WSDL 가져오기를 추가합니다.  
   
-    ```  
+    ```xml  
     <metadata>  
       <wsdlImporters>  
         <extension type="Microsoft.WCF.Documentation.WsdlDocumentationImporter, WsdlDocumentation" />  
@@ -103,8 +106,8 @@ caps.handback.revision: 13
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>는 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>을 구현하는 제공된 계약에서 각 계약 동작에 대해 자동으로 호출됩니다.그런 다음 이 메서드는 전달된 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>를 수정할 수 있습니다.이 예제에서는 주석이 추가되었습니다.  
+7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>는 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>을 구현하는 제공된 계약에서 각 계약 동작에 대해 자동으로 호출됩니다. 그런 다음 이 메서드는 전달된 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>를 수정할 수 있습니다. 이 예제에서는 주석이 추가되었습니다.  
   
-## 참고 항목  
- [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)   
+## <a name="see-also"></a>참고 항목  
+ [메타 데이터](../../../../docs/framework/wcf/feature-details/metadata.md)  
  [방법: 사용자 지정 WSDL 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

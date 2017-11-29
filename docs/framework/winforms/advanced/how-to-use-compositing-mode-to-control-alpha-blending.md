@@ -1,67 +1,71 @@
 ---
-title: "방법: 합성 모드를 사용하여 알파 혼합 조절 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "알파 혼합, 합성"
-  - "색, 혼합"
-  - "색, 투명도 조정"
+title: "방법: 합성 모드를 사용하여 알파 혼합 조절"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- alpha blending [Windows Forms], compositing
+- colors [Windows Forms], blending
+- colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 564d46cb2d72ac63962657b39146489aaafd6a5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 합성 모드를 사용하여 알파 혼합 조절
-다음과 같은 특징이 있는 오프 스크린 비트맵을 만드는 경우가 있습니다.  
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>방법: 합성 모드를 사용하여 알파 혼합 조절
+다음과 같은 특성을 가진 오프 스크린 비트맵을 만들려고 하는 경우가 있을 수 있습니다.  
   
--   색의 알파 값이 255보다 작습니다.  
+-   색 한 알파 값으로 255 보다 작아야 합니다.  
   
--   비트맵을 만들 때 색 상호 간에 알파 혼합이 발생하지 않습니다.  
+-   색은 알파 혼합 비트맵을 만들면 됩니다.  
   
--   완성한 비트맵을 표시할 때 비트맵에 있는 색이 디스플레이 장치의 배경색과 알파 혼합됩니다.  
+-   완성된 한 비트맵을 표시 하면 비트맵 색이 알파 혼합 디스플레이 장치에서 배경 색입니다.  
   
- 이러한 비트맵을 만들려면 빈 <xref:System.Drawing.Bitmap> 개체를 만든 다음 이 비트맵을 기반으로 <xref:System.Drawing.Graphics> 개체를 만들고  <xref:System.Drawing.Graphics> 개체의 합성 모드를 <xref:System.Drawing.Drawing2D.CompositingMode?displayProperty=fullName>로 설정합니다.  
+ 이러한 비트맵을 만들려면 빈 생성 <xref:System.Drawing.Bitmap> 개체를 생성 한 다음는 <xref:System.Drawing.Graphics> 해당 비트맵을 기반으로 하는 개체입니다. 합성 모드 설정에서 <xref:System.Drawing.Graphics> 개체 <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>합니다.  
   
-## 예제  
- 다음 예제에서는 <xref:System.Drawing.Bitmap> 개체를 기반으로 <xref:System.Drawing.Graphics> 개체를 만듭니다.  이 코드에서는 두 개의 반투명 브러시\(알파 \= 160\)와 함께 <xref:System.Drawing.Graphics> 개체를 사용하여 비트맵에서 그리고  반투명 브러시를 사용하여 빨강 타원과 녹색 타원을 채웁니다.  녹색 타원은 빨강 타원과 겹치지만 <xref:System.Drawing.Graphics> 개체의 합성 모드가 <xref:System.Drawing.Drawing2D.CompositingMode>로 설정되어 있으므로 빨강과 혼합되지는 않습니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 한 <xref:System.Drawing.Graphics> 기반 개체는 <xref:System.Drawing.Bitmap> 개체입니다. 코드를 사용 하 여는 <xref:System.Drawing.Graphics> 개체와 두 개의 반투명 브러시 (알파 160 =) 페인트 하는 비트맵을 합니다. 코드에는 빨간색 타원과 반투명 브러시를 사용 하 여 녹색 타원을 채웁니다. 녹색 타원 겹치는 빨간색 타원 하지만 때문에 녹색에서 빨간색 혼합 되지는 않습니다의 합성 모드는 <xref:System.Drawing.Graphics> 개체로 설정 되어 <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>합니다.  
   
- 이 코드에서는 화면에 비트맵을 두 번 그립니다. 한 번은 흰색 배경 위에 비트맵을 그리고 또 한 번은 여러 색으로 된 배경 위에 그립니다.  두 타원의 일부에 속하는 비트맵에 있는 픽셀의 알파 구성 요소는 160이므로 타원이 화면의 배경색과 혼합됩니다.  
+ 코드는 화면에 두 번 비트맵을 그립니다: 한 번 흰색 배경 기반 및 컬러 배경에 한 번입니다. 두 타원의 일부인 경우 비트맵의 픽셀 160, 알파 구성 요소가 없으므로 줄임표는 화면의 배경색 배경색과 혼합 됩니다.  
   
- 다음 그림에서는 코드 예제를 실행한 결과를 보여 줍니다.  이 그림에서 타원은 배경색과 혼합되지만 타원 서로 간에는 혼합되지 않음을 알 수 있습니다.  
+ 다음 그림에서는 코드 예제의 출력을 보여 줍니다. Note 줄임표, 배경색과 혼합 됩니다 하지만 서로 혼합 된 되지 않습니다.  
   
- ![소스 복사본](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
+ ![복사 원본](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
   
- 코드 예제에는 다음 문이 포함되어 있습니다.  
+ 코드 예제에서는이 문이 포함 되어 있습니다.  
   
  [!code-csharp[System.Drawing.AlphaBlending#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.AlphaBlending#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
   
- 타원이 배경색과 혼합될 뿐만 아니라 타원 서로 간에도 혼합되게 하려면 이 문을 다음과 같이 변경합니다.  
+ 백그라운드 뿐 아니라 서로 혼합 타원을 하려는 경우 해당 문을 다음과 변경 됩니다.  
   
  [!code-csharp[System.Drawing.AlphaBlending#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.AlphaBlending#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
   
- 아래 그림에서는 수정한 코드를 실행한 결과를 보여 줍니다.  
+ 다음 그림에서는 수정 된 코드의 출력을 보여 줍니다.  
   
- ![소스 위에 있음](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
+ ![통해 소스](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 `e`<xref:System.Windows.Forms.PaintEventHandler>가 필요합니다.  
   
-## 참고 항목  
- <xref:System.Drawing.Color.FromArgb%2A>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Drawing.Color.FromArgb%2A>  
  [선 및 채우기 알파 혼합](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)

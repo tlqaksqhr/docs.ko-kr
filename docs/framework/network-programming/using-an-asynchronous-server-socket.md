@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5c696e04b940923d53eb79c055330a91734e1a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-server-socket"></a>비동기 서버 소켓 사용
 비동기 서버 소켓은 .NET Framework 비동기 프로그래밍 모델을 사용하여 네트워크 서비스 요청을 처리합니다. <xref:System.Net.Sockets.Socket> 클래스는 표준 .NET Framework 비동기 명명 패턴을 따릅니다. 예를 들어 동기 <xref:System.Net.Sockets.Socket.Accept%2A> 메서드는 비동기 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 및 <xref:System.Net.Sockets.Socket.EndAccept%2A> 메서드에 해당합니다.  
@@ -69,7 +66,7 @@ listener.BeginAccept(
     listener);  
 ```  
   
- 비동기 소켓은 시스템 스레드 풀의 스레드를 사용하여 들어오는 연결을 처리합니다. 한 스레드는 연결을 허용하고, 다른 스레드는 들어오는 각 연결을 처리하는 데 사용되고, 마지막 스레드는 연결에서 데이터를 받습니다. 스레드 풀에서 할당된 스레드에 따라 세 스레드는 동일한 스레드일 수 있습니다. 다음 예제에서 <xref:System.Threading.ManualResetEvent?displayProperty=fullName> 클래스는 주 스레드의 실행을 일시 중단하고 실행을 계속할 수 있으면 알려줍니다.  
+ 비동기 소켓은 시스템 스레드 풀의 스레드를 사용하여 들어오는 연결을 처리합니다. 한 스레드는 연결을 허용하고, 다른 스레드는 들어오는 각 연결을 처리하는 데 사용되고, 마지막 스레드는 연결에서 데이터를 받습니다. 스레드 풀에서 할당된 스레드에 따라 세 스레드는 동일한 스레드일 수 있습니다. 다음 예제에서 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 클래스는 주 스레드의 실행을 일시 중단하고 실행을 계속할 수 있으면 알려줍니다.  
   
  다음 예제에서는 로컬 컴퓨터에 비동기 TCP/IP 소켓을 만들고 연결 허용을 시작하는 비동기 메서드를 보여 줍니다. `allDone`이라는 전역 **ManualResetEvent**가 있고, 메서드는 `SocketListener`라는 클래스의 멤버이고, `acceptCallback`이라는 콜백 메서드가 정의되어 있다고 가정합니다.  
   
@@ -274,8 +271,7 @@ public static void readCallback(IAsyncResult ar) {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동기 서버 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [비동기 서버 소켓 예제](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [스레딩](../../../docs/standard/threading/index.md)   
+ [동기 서버 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [비동기 서버 소켓 예제](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [스레딩](../../../docs/standard/threading/index.md)  
  [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)
-

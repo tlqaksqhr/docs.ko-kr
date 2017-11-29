@@ -1,27 +1,30 @@
 ---
-title: "Control Pattern Mapping for UI Automation Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, for UI Automation clients"
-  - "UI Automation, clients, control patterns for"
+title: "UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, for UI Automation clients
+- UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-caps.latest.revision: 18
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Control Pattern Mapping for UI Automation Clients
+# <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
   
  이 항목에서는 컨트롤 형식 및 이 형식과 연결된 컨트롤 패턴을 나열하여 보여줍니다.  
   
@@ -34,16 +37,16 @@ caps.handback.revision: 18
 -   지원되지 않습니다. 컨트롤은 이 컨트롤 패턴을 지원하지 않습니다. 사용자 지정 컨트롤이 이 컨트롤 패턴을 지원할 수 있습니다.  
   
 > [!NOTE]
->  일부 컨트롤은 컨트롤 기능에 따라 몇몇 컨트롤 패턴을 조건부로 지원합니다. 예를 들어, 메뉴 항목 컨트롤은 메뉴 컨트롤의 기능에 따라 <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern> 또는 <xref:System.Windows.Automation.SelectionItemPattern> 컨트롤 패턴을 조건부로 지원합니다.  
+>  일부 컨트롤은 컨트롤 기능에 따라 몇몇 컨트롤 패턴을 조건부로 지원합니다. 예를 들어, 메뉴 항목 컨트롤은 메뉴 컨트롤의 기능에 따라 <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>또는 <xref:System.Windows.Automation.SelectionItemPattern> 컨트롤 패턴을 조건부로 지원합니다.  
   
 <a name="control_mapping_clients"></a>   
-## 클라이언트용 UI 자동화 컨트롤 패턴  
+## <a name="ui-automation-control-patterns-for-clients"></a>클라이언트용 UI 자동화 컨트롤 패턴  
   
 |컨트롤 종류|지원함|조건부 지원|지원되지 않음|  
-|------------|---------|------------|-------------|  
+|------------------|---------------|-------------------------|-------------------|  
 |단추|없음|Invoke, Toggle, Expand Collapse|없음|  
 |일정|Grid, Table|Selection, Scroll|값|  
-|확인란|설정\/해제|없음|없음|  
+|확인란|설정/해제|없음|없음|  
 |Combo Box|확장 축소|선택, 값|Scroll|  
 |Data Grid|표|Scroll, Selection, Table|없음|  
 |Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|없음|  
@@ -61,7 +64,7 @@ caps.handback.revision: 18
 |메뉴 항목|없음|Expand Collapse, Invoke, Selection Item, Toggle|없음|  
 |창|없음|Dock. Scroll, Transform|창|  
 |Progress Bar|없음|Range Value, Value|없음|  
-|Radio Button|Selection Item|없음|설정\/해제|  
+|Radio Button|Selection Item|없음|설정/해제|  
 |Scroll Bar|없음|Range Value|Scroll|  
 |구분 기호|없음|없음|없음|  
 |슬라이더|없음|Range Value, Selection, Value|없음|  
@@ -83,5 +86,5 @@ caps.handback.revision: 18
 > [!NOTE]
 >  컨트롤 형식에 지원되는 컨트롤 패턴이 없지만 조건부로 지원되는 하나 이상의 컨트롤 패턴이 있는 경우, 조건부 컨트롤 패턴 중 하나는 항상 지원됩니다.  
   
-## 참고 항목  
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>참고 항목  
+ [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)

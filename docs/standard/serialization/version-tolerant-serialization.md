@@ -4,8 +4,8 @@ ms.date: 08/08/2017
 ms.prod: .net
 ms.topic: article
 dev_langs:
-- CSharp
-- VB
+- csharp
+- vb
 helpviewer_keywords:
 - version tolerant serialization
 - serialization, custom serialization
@@ -15,16 +15,15 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 6d21687a7147c7f3f0419c2f63030cc9d43d9c05
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90f2b1e73a24b0f732eaba4422faa9a1dcc15135
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="version-tolerant-serialization"></a>버전 독립적 Serialization
 .NET Framework의 버전 1.0과 1.1에서는 버전이 다른 응용 프로그램에서 재사용할 수 있는 serialize 가능한 형식을 만드는 작업에 문제가 있었습니다. 추가 필드를 추가하여 형식을 수정하면 다음 문제가 발생합니다.  
@@ -263,7 +262,7 @@ End Class
 ```  
   
 ## <a name="serializationbinder"></a>SerializationBinder  
- 서버와 클라이언트에서 서로 다른 버전의 클래스를 필요로 하므로 일부 사용자는 serialize 및 deserialize할 클래스를 제어해야 할 수 있습니다. <xref:System.Runtime.Serialization.SerializationBinder>는 serialization 및 deserialization 중에 사용되는 실제 형식을 제어하는 데 사용되는 추상 클래스입니다.  이 클래스를 사용하려면 <xref:System.Runtime.Serialization.SerializationBinder>에서 클래스를 파생시키고 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 및 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 메서드를 재정의합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][SerializationBinder를 사용하여 serialization 및 deserialization 제어](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)  
+ 서버와 클라이언트에서 서로 다른 버전의 클래스를 필요로 하므로 일부 사용자는 serialize 및 deserialize할 클래스를 제어해야 할 수 있습니다. <xref:System.Runtime.Serialization.SerializationBinder>는 serialization 및 deserialization 중에 사용되는 실제 형식을 제어하는 데 사용되는 추상 클래스입니다.  이 클래스를 사용하려면 <xref:System.Runtime.Serialization.SerializationBinder>에서 클래스를 파생시키고 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 및 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 메서드를 재정의합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Serialization 및 Deserialization serializationbinder 제어](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)합니다.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
  적절한 버전 관리 동작을 구현하려면 버전 간에 형식을 수정할 때 다음과 같은 규칙을 따릅니다.  
@@ -287,16 +286,15 @@ End Class
 -   버전 관리 침해 방지  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.SerializableAttribute>   
- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>   
- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>   
- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>   
- <xref:System.Runtime.Serialization.OptionalFieldAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializedAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>   
- <xref:System.Runtime.Serialization.OnSerializedAttribute>   
- <xref:System.Runtime.Serialization.StreamingContext>   
- <xref:System.NonSerializedAttribute>   
+ <xref:System.SerializableAttribute>  
+ <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+ <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
+ <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
+ <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+ <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+ <xref:System.Runtime.Serialization.StreamingContext>  
+ <xref:System.NonSerializedAttribute>  
  [이진 serialization](binary-serialization.md)
-

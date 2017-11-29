@@ -1,35 +1,33 @@
 ---
-title: "&#39;&lt;typename&gt;&#39; is a type and cannot be used as an expression | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30108"
-  - "vbc30108"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30108"
+title: "&#39; &lt;typename&gt;&#39; 형식 이므로 식으로 사용할 수 없습니다"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30108
+- vbc30108
+helpviewer_keywords: BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2cffc528055b78fccb9953ee781dbec0af416002
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# &#39;&lt;typename&gt;&#39; is a type and cannot be used as an expression
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-식이 필요한 곳에 형식 이름을 사용했습니다.  식은 변수, 상수, 리터럴, 속성 및 `Function` 프로시저 호출로 구성되어야 합니다.  
+# <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a>&#39; &lt;typename&gt;&#39; 형식 이므로 식으로 사용할 수 없습니다
+형식 이름은 식이 필요한 경우 발생합니다. 식은 변수, 상수, 리터럴, 속성 및 `Function` 프로시저 호출의 조합으로 구성되어야 합니다.  
   
  **오류 ID:** BC30108  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   형식 이름을 제거한 다음 올바른 요소를 사용하여 식을 생성합니다.  
+-   형식 이름을 제거하고 유효한 요소를 사용하여 식을 생성합니다.  
   
-## 참고 항목  
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>참고 항목  
+ [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

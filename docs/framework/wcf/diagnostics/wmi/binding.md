@@ -1,25 +1,28 @@
 ---
-title: "바인딩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Binding2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6505fa08ca43e64df224b75500aacbc903783398
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 바인딩
+# <a name="binding"></a>바인딩
 wmi 바인딩  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class Binding  
@@ -35,73 +38,73 @@ class Binding
 };  
 ```  
   
-## 메서드  
+## <a name="methods"></a>메서드  
  Binding 클래스는 메서드를 정의하지 않습니다.  
   
-## 속성  
+## <a name="properties"></a>속성  
  Binding 클래스에는 다음과 같은 속성이 있습니다.  
   
-### BindingElements  
+### <a name="bindingelements"></a>BindingElements  
  데이터 형식: BindingElement array  
   
  액세스 형식: 읽기 전용  
   
  바인딩이 구현한 바인딩 요소의 컬렉션입니다.  
   
-### CloseTimeout  
+### <a name="closetimeout"></a>CloseTimeout  
  데이터 형식: datetime  
   
  액세스 형식: 읽기 전용  
   
  닫기 작업을 완료하기 위해 제공된 시간 간격입니다.  
   
-### Name  
+### <a name="name"></a>이름  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  
   
  바인딩 이름입니다.  
   
-### 네임스페이스  
+### <a name="namespace"></a>네임스페이스  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  
   
  바인딩의 XML 네임스페이스입니다.  
   
-### OpenTimeout  
+### <a name="opentimeout"></a>OpenTimeout  
  데이터 형식: datetime  
   
  액세스 형식: 읽기 전용  
   
  열기 작업을 완료하기 위해 제공된 시간 간격입니다.  
   
-### ReceiveTimeout  
+### <a name="receivetimeout"></a>ReceiveTimeout  
  데이터 형식: datetime  
   
  액세스 형식: 읽기 전용  
   
  받기 작업을 완료하기 위해 제공된 시간 간격입니다.  
   
-### Scheme  
+### <a name="scheme"></a>Scheme  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  
   
  바인딩이 빌드한 채널 및 수신기 팩터리에서 사용하는 URI 전송 체계입니다.  
   
-### SendTimeout  
+### <a name="sendtimeout"></a>SendTimeout  
  데이터 형식: datetime  
   
  액세스 형식: 읽기 전용  
   
  보내기 작업을 완료하기 위해 제공된 시간 간격입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |MOF|Servicemodel.mof에 선언되어 있습니다.|  
-|---------|----------------------------------|  
-|네임스페이스|root\\ServiceModel에 정의되어 있습니다.|  
+|---------|-----------------------------------|  
+|네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Channels.Binding>

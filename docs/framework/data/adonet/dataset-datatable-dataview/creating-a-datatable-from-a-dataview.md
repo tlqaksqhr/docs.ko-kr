@@ -1,30 +1,36 @@
 ---
-title: "DataView에서 DataTable 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataView에서 DataTable 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e51188f550b7d910cb278165776133d6f4c03eb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataView에서 DataTable 만들기
-데이터 소스에서 데이터를 검색하여 이 데이터로 <xref:System.Data.DataTable>을 채웠으면 해당 데이터를 다시 검색하지 않고 반환된 데이터를 정렬하고 필터링하거나 제한할 수 있습니다.  이러한 작업은 <xref:System.Data.DataView> 클래스를 사용하여 수행할 수 있습니다.  또한 <xref:System.Data.DataView>에서 새 <xref:System.Data.DataTable>을 만들어야 하는 경우 <xref:System.Data.DataView.ToTable%2A> 메서드를 사용하여 새 <xref:System.Data.DataTable>에 모든 행과 열 또는 데이터의 하위 집합을 복사할 수 있습니다.  <xref:System.Data.DataView.ToTable%2A> 메서드는 다음 작업을 위한 오버로드를 제공합니다.  
+# <a name="creating-a-datatable-from-a-dataview"></a>DataView에서 DataTable 만들기
+데이터 소스에서 데이터를 검색하여 이 데이터로 <xref:System.Data.DataTable>을 채웠으면 해당 데이터를 다시 검색하지 않고 반환된 데이터를 정렬하고 필터링하거나 제한할 수 있습니다. 이러한 작업은 <xref:System.Data.DataView> 클래스를 사용하여 수행할 수 있습니다. 또한 새 만들어야 할 경우 <xref:System.Data.DataTable> 에서 <xref:System.Data.DataView>를 사용할 수 있습니다는 <xref:System.Data.DataView.ToTable%2A> 형식의 새 파일에 있는 모든 행과 열 또는 데이터의 하위 집합을 복사 하려면 <xref:System.Data.DataTable>합니다. <xref:System.Data.DataView.ToTable%2A> 메서드는 다음 작업을 위한 오버로드를 제공합니다.  
   
--   <xref:System.Data.DataView>에 있는 열의 하위 집합인 열이 포함된 <xref:System.Data.DataTable>을 만듭니다.  
+-   <xref:System.Data.DataTable>에 있는 열의 하위 집합인 열이 포함된 <xref:System.Data.DataView>을 만듭니다.  
   
--   Transact\-SQL의 DISTINCT 키워드와 유사하게 <xref:System.Data.DataView>와는 다른 행만 포함하는 <xref:System.Data.DataTable>을 만듭니다.  
+-   만들기는 <xref:System.Data.DataTable> 에서 고유 행만 포함 하는 <xref:System.Data.DataView>, TRANSACT-SQL의 DISTINCT 키워드와 유사 하 게 합니다.  
   
-## 예제  
- 다음 콘솔 응용 프로그램 예제에서는 **AdventureWorks** 샘플 데이터베이스에 있는 **Person.Contact** 테이블의 데이터를 포함하는 <xref:System.Data.DataTable>을 만듭니다.  그런 다음 <xref:System.Data.DataTable>에 따라 정렬 및 필터링된 <xref:System.Data.DataView>를 만듭니다.  또한 이 예제에서는 <xref:System.Data.DataTable> 및 <xref:System.Data.DataView>의 내용을 표시한 후 <xref:System.Data.DataView.ToTable%2A> 메서드를 호출하고 사용 가능한 열의 일부만 선택하여 <xref:System.Data.DataView>에서 새 <xref:System.Data.DataTable>을 만듭니다.  마지막으로 이 예제에서는 새 <xref:System.Data.DataTable>의 내용을 표시합니다.  
+## <a name="example"></a>예제  
+ 다음 콘솔 응용 프로그램 예제에서는 한 <xref:System.Data.DataTable> 에서 데이터를 포함 하는 **Person.Contact** 테이블에 **AdventureWorks** 예제 데이터베이스. 다음으로,이 예에서는 만듭니다 정렬 및 필터링 된 <xref:System.Data.DataView> 에 따라는 <xref:System.Data.DataTable>합니다. 내용을 표시 한 후는 <xref:System.Data.DataTable> 및 <xref:System.Data.DataView>,이 예제에서는 새 <xref:System.Data.DataTable> 에서 <xref:System.Data.DataView> 호출 하 여는 <xref:System.Data.DataView.ToTable%2A> 메서드를 사용 가능한 열 하위 집합을 선택 합니다. 마지막으로 이 예제에서는 새 <xref:System.Data.DataTable>의 내용을 표시합니다.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -209,7 +215,7 @@ Console.WriteLine();
   
  }  
   
-## 참고 항목  
- <xref:System.Data.DataView.ToTable%2A>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Data.DataView.ToTable%2A>  
+ [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

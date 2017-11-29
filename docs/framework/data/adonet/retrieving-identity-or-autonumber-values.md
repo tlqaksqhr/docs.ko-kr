@@ -1,43 +1,49 @@
 ---
-title: "ID 또는 Autonumber 값 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ID 또는 일련 번호 값 검색"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1a689bb22fc5bb553084b9d1b1dc60e74e47970c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ID 또는 Autonumber 값 검색
-관계형 데이터베이스에서 기본 키는 항상 고유한 값이 들어 있는 열 또는 열의 조합입니다.  기본 키 값을 알면 해당 값이 있는 행을 찾을 수 있습니다.  SQL Server, Oracle 및 Microsoft Access\/Jet 등과 같은 관계형 데이터베이스 엔진은 기본 키로 지정할 수 있는 자동 증분 열의 작성을 지원합니다.  이러한 값은 서버에 의해 행으로 생성되어 테이블에 추가됩니다.  이를 위해서는 SQL Server에서는 열의 identity 속성을 설정하고, Oracle에서는 시퀀스를 만들고, Microsoft Access에서는 AutoNumber 열을 만듭니다.  
+# <a name="retrieving-identity-or-autonumber-values"></a>ID 또는 일련 번호 값 검색
+관계형 데이터베이스에서 기본 키는 항상 고유한 값이 들어 있는 열 또는 열의 조합입니다. 기본 키 값을 알면 해당 값이 있는 행을 찾을 수 있습니다. SQL Server, Oracle 및 Microsoft Access/Jet 등과 같은 관계형 데이터베이스 엔진은 기본 키로 지정할 수 있는 자동 증분 열의 작성을 지원합니다. 이러한 값은 서버에 의해 행으로 생성되어 테이블에 추가됩니다. 이를 위해서는 SQL Server에서는 열의 identity 속성을 설정하고, Oracle에서는 시퀀스를 만들고, Microsoft Access에서는 AutoNumber 열을 만듭니다.  
   
- 또한 <xref:System.Data.DataColumn>을 사용하고 <xref:System.Data.DataColumn.AutoIncrement%2A> 속성을 true로 설정하면 자동으로 증분하는 값을 생성할 수도 있습니다.  하지만 여러 클라이언트 응용 프로그램이 개별적으로 자동 증분 값을 생성하면 <xref:System.Data.DataTable>의 개별 인스턴스에서 중복되는 값이 생길 수 있습니다.  따라서 서버가 자동 증분 값을 생성하도록 하면 삽입된 각 행에 대해 생성되는 값을 각 사용자가 검색할 수 있도록 할 때 발생할 수 있는 충돌을 방지할 수 있습니다.  
+ 또한 <xref:System.Data.DataColumn>을 사용하고 <xref:System.Data.DataColumn.AutoIncrement%2A> 속성을 true로 설정하면 자동으로 증분하는 값을 생성할 수도 있습니다. 하지만 여러 클라이언트 응용 프로그램이 개별적으로 자동 증분 값을 생성하면 <xref:System.Data.DataTable>의 개별 인스턴스에서 중복되는 값이 생길 수 있습니다. 따라서 서버가 자동 증분 값을 생성하도록 하면 삽입된 각 행에 대해 생성되는 값을 각 사용자가 검색할 수 있도록 할 때 발생할 수 있는 충돌을 방지할 수 있습니다.  
   
- `DataAdapter`의 `Update` 메서드 호출 도중 데이터베이스는 데이터를 출력 매개 변수로, 또는 INSERT 문과 동일한 배치에서 실행되는 SELECT 문의 결과 집합 중 첫 번째 반환되는 레코드로 ADO.NET 응용 프로그램에 다시 보낼 수 있습니다.  ADO.NET에서는 이러한 값을 검색하여 업데이트되는 <xref:System.Data.DataRow>의 해당 열을 업데이트할 수 있습니다.  
+ `Update`의 `DataAdapter` 메서드 호출 도중 데이터베이스는 데이터를 출력 매개 변수로, 또는 INSERT 문과 동일한 배치에서 실행되는 SELECT 문의 결과 집합 중 첫 번째 반환되는 레코드로 ADO.NET 응용 프로그램에 다시 보낼 수 있습니다. ADO.NET에서는 이러한 값을 검색하여 업데이트되는 <xref:System.Data.DataRow>의 해당 열을 업데이트할 수 있습니다.  
   
- Microsoft Access Jet 데이터베이스 엔진과 같은 일부 데이터베이스에서는 출력 매개 변수를 지원하지 않으며 하나의 배치에서 여러 문을 처리할 수 없습니다.  Jet 데이터베이스 엔진으로 작업하는 경우 `DataAdapter`의 `RowUpdated` 이벤트에 대한 이벤트 처리기에서 별도의 SELECT 명령을 실행하여 삽입된 행에 대해 생성되는 새 AutoNumber 값을 검색할 수 있습니다.  
+ Microsoft Access Jet 데이터베이스 엔진과 같은 일부 데이터베이스에서는 출력 매개 변수를 지원하지 않으며 하나의 배치에서 여러 문을 처리할 수 없습니다. Jet 데이터베이스 엔진으로 작업하는 경우 `RowUpdated`의 `DataAdapter` 이벤트에 대한 이벤트 처리기에서 별도의 SELECT 명령을 실행하여 삽입된 행에 대해 생성되는 새 AutoNumber 값을 검색할 수 있습니다.  
   
 > [!NOTE]
->  자동 증분 값 대신 사용할 수 있는 방법은 <xref:System.Guid> 개체의 <xref:System.Guid.NewGuid%2A> 메서드를 사용하여 새로운 행이 삽입될 때마다 서버로 복사될 수 있는 GUID\(Globally Unique Identifier\)를 클라이언트 컴퓨터에 생성하는 것입니다.  `NewGuid` 메서드는 값이 복제되지 않을 확률이 높은 알고리즘을 사용하여 16바이트 이진 값을 생성합니다.  SQL Server 데이터베이스에서 GUID는 SQL Server가 Transact\-SQL `NEWID()` 함수를 사용하여 자동으로 생성할 수 있는 `uniqueidentifier` 열에 저장됩니다.  GUID를 기본 키로 사용하면 성능에 부정적 영향을 미칠 수 있습니다.  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서는 전역적으로 고유하지 않을 수도 있지만 더 효율적으로 인덱싱할 수 있는 순차적 GUID를 생성하는 `NEWSEQUENTIALID()` 함수에 대한 지원을 제공합니다.  
+>  자동 증분 값 대신 사용할 수 있는 방법은 <xref:System.Guid.NewGuid%2A> 개체의 <xref:System.Guid> 메서드를 사용하여 새로운 행이 삽입될 때마다 서버로 복사될 수 있는 GUID(Globally Unique Identifier)를 클라이언트 컴퓨터에 생성하는 것입니다. `NewGuid` 메서드는 값이 복제되지 않을 확률이 높은 알고리즘을 사용하여 16바이트 이진 값을 생성합니다. SQL Server 데이터베이스에서 GUID는 SQL Server가 Transact-SQL `uniqueidentifier` 함수를 사용하여 자동으로 생성할 수 있는 `NEWID()` 열에 저장됩니다. GUID를 기본 키로 사용하면 성능에 부정적 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서는 전역적으로 고유하지 않을 수도 있지만 더 효율적으로 인덱싱할 수 있는 순차적 GUID를 생성하는 `NEWSEQUENTIALID()` 함수에 대한 지원을 제공합니다.  
   
-## SQL Server ID 열 값 검색  
- Microsoft SQL Server로 작업하는 경우에는 출력 매개 변수를 사용하는 저장 프로시저를 만들어서 삽입된 행에 대한 ID 값을 반환할 수 있습니다.  다음 테이블에서는 ID 열 값을 검색하는 데 사용할 수 있는 SQL Server의 세 가지 Transact\-SQL 함수를 설명합니다.  
+## <a name="retrieving-sql-server-identity-column-values"></a>SQL Server ID 열 값 검색  
+ Microsoft SQL Server로 작업하는 경우에는 출력 매개 변수를 사용하는 저장 프로시저를 만들어서 삽입된 행에 대한 ID 값을 반환할 수 있습니다. 다음 테이블에서는 ID 열 값을 검색하는 데 사용할 수 있는 SQL Server의 세 가지 Transact-SQL 함수를 설명합니다.  
   
 |함수|설명|  
-|--------|--------|  
-|SCOPE\_IDENTITY|현재 실행 범위 내의 마지막 ID 값을 반환합니다.  SCOPE\_IDENTITY는 대부분의 시나리오에 권장됩니다.|  
-|@@IDENTITY|현재 세션의 모든 테이블에서 생성된 마지막 ID 값을 포함합니다.  @@IDENTITY는 트리거의 영향을 받을 수 있으며 예상한 ID 값을 반환하지 않을 수도 있습니다.|  
-|IDENT\_CURRENT|모든 세션 및 모든 범위의 특정 테이블에 대해 생성된 마지막 ID 값을 반환합니다.|  
+|--------------|-----------------|  
+|SCOPE_IDENTITY|현재 실행 범위 내의 마지막 ID 값을 반환합니다. SCOPE_IDENTITY는 대부분의 시나리오에 권장됩니다.|  
+|@@IDENTITY|현재 세션의 모든 테이블에서 생성된 마지막 ID 값을 포함합니다. @@IDENTITY 트리거에 의해 영향을 받을 수 및 예상 되는 id 값을 반환 하지 않을 수 있습니다.|  
+|IDENT_CURRENT|모든 세션 및 모든 범위의 특정 테이블에 대해 생성된 마지막 ID 값을 반환합니다.|  
   
- 다음 저장 프로시저는 **Categories** 테이블에 행을 삽입하고 출력 매개 변수를 사용하여 Transact\-SQL SCOPE\_IDENTITY\(\) 함수에서 생성된 새 ID 값을 반환하는 방법을 보여 줍니다.  
+ 에 행을 삽입 하는 방법은 다음 저장된 프로시저는 **범주** 테이블을 출력 매개 변수를 사용 하 여 TRANSACT-SQL scope_identity () 함수에서 생성 된 새 id 값을 반환 합니다.  
   
 ```  
 CREATE PROCEDURE dbo.InsertCategory  
@@ -48,37 +54,37 @@ INSERT INTO Categories (CategoryName) VALUES(@CategoryName)
 SET @Identity = SCOPE_IDENTITY()  
 ```  
   
- 그런 다음 저장 프로시저를 <xref:System.Data.SqlClient.SqlDataAdapter> 개체의 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>의 소스로 지정할 수 있습니다.  <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>의 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 속성은 <xref:System.Data.CommandType>로 설정해야 합니다.  ID 출력은 <xref:System.Data.ParameterDirection>이 <xref:System.Data.ParameterDirection>인 <xref:System.Data.SqlClient.SqlParameter>를 만들어서 검색합니다.  `InsertCommand`가 처리될 때 자동 증분된 ID 값이 반환되고, 삽입 명령의 <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> 속성을 `UpdateRowSource.OutputParameters` 또는 `UpdateRowSource.Both`로 설정한 경우 이 값이 현재 행의 **CategoryID** 열에 추가됩니다.  
+ 그런 다음 저장 프로시저를 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 개체의 <xref:System.Data.SqlClient.SqlDataAdapter>의 소스로 지정할 수 있습니다. <xref:System.Data.SqlClient.SqlCommand.CommandType%2A>의 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 속성은 <xref:System.Data.CommandType.StoredProcedure>로 설정해야 합니다. ID 출력은 <xref:System.Data.SqlClient.SqlParameter>이 <xref:System.Data.ParameterDirection>인 <xref:System.Data.ParameterDirection.Output>를 만들어서 검색합니다. 때는 `InsertCommand` 은 처리, 자동 증분 id 값을 반환 하 고에 배치는 **CategoryID** 설정 하는 경우 현재 행의 열에서 <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> 속성에는 삽입 명령의 `UpdateRowSource.OutputParameters` 또는 `UpdateRowSource.Both`.  
   
  삽입 명령이 새 ID 값을 반환하는 INSERT 문과 SELECT 문이 모두 포함된 배치를 실행하는 경우에는 삽입 명령의 `UpdatedRowSource` 속성을 `UpdateRowSource.FirstReturnedRecord`로 설정하여 새 값을 검색할 수 있습니다.  
   
  [!code-csharp[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/VB/source.vb#1)]  
   
-## 새 ID 값 병합  
- 일반적인 시나리오는 `DataTable`의 `GetChanges` 메서드를 호출하여 변경된 행만 포함된 사본을 만들고 `DataAdapter`의 `Update` 메서드를 호출할 때 새 사본을 사용하는 것입니다.  이 방법은 변경된 행을 업데이트를 수행하는 별도의 구성 요소로 마샬링해야 할 때 특히 유용합니다.  업데이트 후 사본에는 원래 `DataTable`로 다시 병합되어야 하는 새 ID 값이 포함될 수 있습니다.  새 ID 값은 `DataTable`의 원래 값과 다를 가능성이 큽니다.  병합을 수행하려면 사본에 **AutoIncrement** 열의 원래 값이 유지되어야 합니다. 그래야 새 ID 값이 포함된 새 행을 추가하지 않고 원래 `DataTable`의 기존 행을 찾아 업데이트할 수 있습니다.  하지만 `AcceptChanges`는 업데이트된 각 `DataRow`에 대해 암시적으로 호출되기 때문에 기본적으로 원래 값은 `DataAdapter`의 `Update` 메서드에 대한 호출 후에 손실됩니다.  
+## <a name="merging-new-identity-values"></a>새 ID 값 병합  
+ 일반적인 시나리오는 `GetChanges`의 `DataTable` 메서드를 호출하여 변경된 행만 포함된 사본을 만들고 `Update`의 `DataAdapter` 메서드를 호출할 때 새 사본을 사용하는 것입니다. 이 방법은 변경된 행을 업데이트를 수행하는 별도의 구성 요소로 마샬링해야 할 때 특히 유용합니다. 업데이트 후 사본에는 원래 `DataTable`로 다시 병합되어야 하는 새 ID 값이 포함될 수 있습니다. 새 ID 값은 `DataTable`의 원래 값과 다를 가능성이 큽니다. 원래 값 병합을 수행 하는 **AutoIncrement** 복사본에 있는 열이 유지 되어야 합니다을 찾아 원래의 기존 행을 업데이트할 수 있도록 `DataTable`, 포함 된 새 행을 추가 하지 않고 새 id 값입니다. 하지만 `Update`는 업데이트된 각 `DataAdapter`에 대해 암시적으로 호출되기 때문에 기본적으로 원래 값은 `AcceptChanges`의 `DataRow` 메서드에 대한 호출 후에 손실됩니다.  
   
- `DataAdapter` 업데이트 동안 `DataRow`에서 `DataColumn`의 원래 값을 유지하는 방법에는 두 가지가 있습니다.  
+ `DataColumn` 업데이트 동안 `DataRow`에서 `DataAdapter`의 원래 값을 유지하는 방법에는 두 가지가 있습니다.  
   
--   원래 값을 유지하는 첫 번째 방법은 `DataAdapter`의 `AcceptChangesDuringUpdate` 속성을 `false`로 설정하는 것입니다.  이 설정은 업데이트되는 `DataTable`의 모든 `DataRow`에 영향을 줍니다.  자세한 내용과 코드 예제는 <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>를 참조하세요.  
+-   원래 값을 유지하는 첫 번째 방법은 `AcceptChangesDuringUpdate`의 `DataAdapter` 속성을 `false`로 설정하는 것입니다. 이 설정은 업데이트되는 `DataRow`의 모든 `DataTable`에 영향을 줍니다. 자세한 내용과 코드 예제는 <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>를 참조하세요.  
   
--   두 번째 방법은 `DataAdapter`의 `RowUpdated` 이벤트 처리기에서 코드를 작성하여 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>를 <xref:System.Data.UpdateStatus>로 설정하는 것입니다.  `DataRow`가 업데이트되지만 각 `DataColumn`의 원래 값은 유지됩니다.  이 방법을 사용하면 원하는 행의 원래 값만 유지할 수 있습니다.  예를 들어 <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A>을 검사한 다음 `StatementType`이 `Insert`인 행의 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>만 <xref:System.Data.UpdateStatus>로 설정하여 추가된 행의 원래 값은 유지하고 편집 또는 삭제된 행은 원래 값을 유지하지 않도록 코드를 작성할 수 있습니다.  
+-   두 번째 방법은 `RowUpdated`의 `DataAdapter` 이벤트 처리기에서 코드를 작성하여 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>를 <xref:System.Data.UpdateStatus.SkipCurrentRow>로 설정하는 것입니다. `DataRow`가 업데이트되지만 각 `DataColumn`의 원래 값은 유지됩니다. 이 방법을 사용하면 원하는 행의 원래 값만 유지할 수 있습니다. 예를 들어 <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A>을 검사한 다음 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>이 <xref:System.Data.UpdateStatus.SkipCurrentRow>인 행의 `StatementType`만 `Insert`로 설정하여 추가된 행의 원래 값은 유지하고 편집 또는 삭제된 행은 원래 값을 유지하지 않도록 코드를 작성할 수 있습니다.  
   
- 이 방법 중 하나를 사용하여 `DataAdapter` 업데이트 동안 `DataRow`의 원래 값을 유지하는 경우, ADO.NET에서는 각 `DataColumn`의 원래 값을 유지하면서 `DataRow`의 현재 값을 출력 매개 변수 또는 결과 집합의 첫 번째 반환 행을 통해 반환되는 새 값으로 설정하기 위한 일련의 작업을 수행합니다.  먼저 현재 값을 원래 값으로 유지하기 위해 `DataRow`의 `AcceptChanges` 메서드를 호출한 다음 새 값을 할당합니다.  그런 다음 <xref:System.Data.DataRow.RowState%2A> 속성이 <xref:System.Data.DataRowState>로 설정된 `DataRows`의 `RowState` 속성을 <xref:System.Data.DataRowState>로 설정합니다. 이는 예상하지 않은 동작일 수 있습니다.  
+ 이 방법 중 하나를 사용하여 `DataRow` 업데이트 동안 `DataAdapter`의 원래 값을 유지하는 경우, ADO.NET에서는 각 `DataRow`의 원래 값을 유지하면서 `DataColumn`의 현재 값을 출력 매개 변수 또는 결과 집합의 첫 번째 반환 행을 통해 반환되는 새 값으로 설정하기 위한 일련의 작업을 수행합니다. 먼저 현재 값을 원래 값으로 유지하기 위해 `AcceptChanges`의 `DataRow` 메서드를 호출한 다음 새 값을 할당합니다. 그런 다음 `DataRows` 속성이 <xref:System.Data.DataRow.RowState%2A>로 설정된 <xref:System.Data.DataRowState.Added>의 `RowState` 속성을 <xref:System.Data.DataRowState.Modified>로 설정합니다. 이는 예상하지 않은 동작일 수 있습니다.  
   
- 업데이트되는 각 <xref:System.Data.DataRow>에 명령 결과가 적용되는 방법은 각 <xref:System.Data.Common.DbCommand>의 <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> 속성에 따라 결정됩니다.  이 속성은 `UpdateRowSource` 열거형의 값으로 설정됩니다.  
+ 업데이트되는 각 <xref:System.Data.DataRow>에 명령 결과가 적용되는 방법은 각 <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A>의 <xref:System.Data.Common.DbCommand> 속성에 따라 결정됩니다. 이 속성은 `UpdateRowSource` 열거형의 값으로 설정됩니다.  
   
  다음 테이블에서는 `UpdateRowSource` 열거형 값이 업데이트된 행의 <xref:System.Data.DataRow.RowState%2A> 속성에 영향을 주는 방식을 설명합니다.  
   
 |멤버 이름|설명|  
-|-----------|--------|  
-|<xref:System.Data.UpdateRowSource>|`AcceptChanges`가 호출되고 출력 매개 변수 값 또는 반환된 결과 집합 중 첫 번째 행의 값이 업데이트되는 `DataRow`에 추가됩니다.  적용할 값이 없으면 `RowState`는 <xref:System.Data.DataRowState>가 됩니다.|  
-|<xref:System.Data.UpdateRowSource>|행이 반환되면 `AcceptChanges`가 호출되고 행이 `DataTable`의 변경된 행으로 매핑되어 `RowState`가 `Modified`로 설정됩니다.  행이 반환되지 않으면 `AcceptChanges`가 호출되지 않고 `RowState`는 `Added`로 유지됩니다.|  
-|<xref:System.Data.UpdateRowSource>|반환된 매개 변수 또는 행이 무시됩니다.  `AcceptChanges`가 호출되지 않고 `RowState`는 `Added`로 유지됩니다.|  
-|<xref:System.Data.UpdateRowSource>|`AcceptChanges`가 호출되고 모든 출력 매개 변수가 `DataTable`에서 변경된 행으로 매핑되어 `RowState`가 `Modified`로 설정됩니다.  출력 매개 변수가 없으면 `RowState`는 `Unchanged`가 됩니다.|  
+|-----------------|-----------------|  
+|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges`가 호출되고 출력 매개 변수 값 또는 반환된 결과 집합 중 첫 번째 행의 값이 업데이트되는 `DataRow`에 추가됩니다. 적용할 값이 없으면 `RowState`는 <xref:System.Data.DataRowState.Unchanged>가 됩니다.|  
+|<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|행이 반환되면 `AcceptChanges`가 호출되고 행이 `DataTable`의 변경된 행으로 매핑되어 `RowState`가 `Modified`로 설정됩니다. 행이 반환되지 않으면 `AcceptChanges`가 호출되지 않고 `RowState`는 `Added`로 유지됩니다.|  
+|<xref:System.Data.UpdateRowSource.None>|반환된 매개 변수 또는 행이 무시됩니다. `AcceptChanges`가 호출되지 않고 `RowState`는 `Added`로 유지됩니다.|  
+|<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges`가 호출되고 모든 출력 매개 변수가 `DataTable`에서 변경된 행으로 매핑되어 `RowState`가 `Modified`로 설정됩니다. 출력 매개 변수가 없으면 `RowState`는 `Unchanged`가 됩니다.|  
   
-### 예제  
- 이 예제에서는 `DataTable`에서 변경된 행을 추출하고 <xref:System.Data.SqlClient.SqlDataAdapter>를 사용하여 데이터 소스를 업데이트하고 새 ID 열 값을 검색하는 방법을 보여 줍니다.  <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>는 두 개의 Transact\-SQL 문을 실행합니다. 첫 번째는 INSERT 문이고, 두 번째는 SCOPE\_IDENTITY 함수를 사용하여 ID 값을 검색하는 SELECT 문입니다.  
+### <a name="example"></a>예제  
+ 이 예제에서는 `DataTable`에서 변경된 행을 추출하고 <xref:System.Data.SqlClient.SqlDataAdapter>를 사용하여 데이터 소스를 업데이트하고 새 ID 열 값을 검색하는 방법을 보여 줍니다. <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>는 두 개의 Transact-SQL 문을 실행합니다. 첫 번째는 INSERT 문이고, 두 번째는 SCOPE_IDENTITY 함수를 사용하여 ID 값을 검색하는 SELECT 문입니다.  
   
 ```  
 INSERT INTO dbo.Shippers (CompanyName)   
@@ -87,32 +93,32 @@ SELECT ShipperID, CompanyName FROM dbo.Shippers
 WHERE ShipperID = SCOPE_IDENTITY();  
 ```  
   
- 삽입 명령의 `UpdatedRowSource` 속성은 `UpdateRowSource.FirstReturnedRow`로 설정되고 `DataAdapter`의 <xref:System.Data.MissingSchemaAction> 속성은 `MissingSchemaAction.AddWithKey`로 설정됩니다.  `DataTable`이 채워지고 코드는 `DataTable`에 새 행을 추가합니다.  그런 다음 변경된 행이 새 `DataTable`로 추출되고, DataTable이 `DataAdapter`로 전달되고 나면 DataAdapter에서 서버를 업데이트합니다.  
+ 삽입 명령의 `UpdatedRowSource` 속성은 `UpdateRowSource.FirstReturnedRow`로 설정되고 <xref:System.Data.MissingSchemaAction>의 `DataAdapter` 속성은 `MissingSchemaAction.AddWithKey`로 설정됩니다. `DataTable`이 채워지고 코드는 `DataTable`에 새 행을 추가합니다. 그런 다음 변경된 행이 새 `DataTable`로 추출되고, DataTable이 `DataAdapter`로 전달되고 나면 DataAdapter에서 서버를 업데이트합니다.  
   
  [!code-csharp[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#1)]  
   
- `OnRowUpdated` 이벤트 처리기는 <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs>의 <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A>을 검사하여 행이 삽입된 행인지 확인합니다.  행이 삽입된 행인 경우에는 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> 속성이 <xref:System.Data.UpdateStatus>로 설정됩니다.  행이 업데이트되지만 행의 원래 데이터는 유지됩니다.  프로시저의 본문에서 <xref:System.Data.DataSet.Merge%2A> 메서드가 호출되어 새 ID 값을 원래 `DataTable`로 병합하고, 마지막으로 `AcceptChanges`가 호출됩니다.  
+ `OnRowUpdated` 이벤트 처리기는 <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A>의 <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs>을 검사하여 행이 삽입된 행인지 확인합니다. 행이 삽입된 행인 경우에는 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> 속성이 <xref:System.Data.UpdateStatus.SkipCurrentRow>로 설정됩니다. 행이 업데이트되지만 행의 원래 데이터는 유지됩니다. 프로시저의 본문에서 <xref:System.Data.DataSet.Merge%2A> 메서드가 호출되어 새 ID 값을 원래 `DataTable`로 병합하고, 마지막으로 `AcceptChanges`가 호출됩니다.  
   
  [!code-csharp[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#2)]
  [!code-vb[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#2)]  
   
-## Microsoft Access Autonumber 값 검색  
- 이 단원에는 Jet 4.0 데이터베이스에서 `Autonumber` 값을 검색하는 방법을 보여 주는 샘플이 있습니다.  Jet 데이터베이스 엔진은 출력 매개 변수를 사용하거나 배치로 여러 개의 문을 실행하는 것을 지원하지 않으므로, 위에 설명한 기술을 사용하여 삽입된 행에 할당된 새 `Autonumber` 값을 반환할 수 없습니다.  그러나 별도의 SELECT @@IDENTITY 문을 실행하여 새 `Autonumber` 값을 검색하는 `RowUpdated` 이벤트 처리기에 코드를 추가할 수 있습니다.  
+## <a name="retrieving-microsoft-access-autonumber-values"></a>Microsoft Access Autonumber 값 검색  
+ 이 단원에는 Jet 4.0 데이터베이스에서 `Autonumber` 값을 검색하는 방법을 보여 주는 샘플이 있습니다. Jet 데이터베이스 엔진은 출력 매개 변수를 사용하거나 배치로 여러 개의 문을 실행하는 것을 지원하지 않으므로, 위에 설명한 기술을 사용하여 삽입된 행에 할당된 새 `Autonumber` 값을 반환할 수 없습니다. 그러나 코드를 추가할 수 있습니다는 `RowUpdated` @ 별도 SELECT를 실행 하는 이벤트 처리기@IDENTITY 새 검색 하는 문을 `Autonumber` 값입니다.  
   
-### 예제  
- 이 예제에서는 `MissingSchemaAction.AddWithKey`를 사용하여 스키마 정보를 추가하는 대신 먼저 `DataTable`을 올바른 스키마로 구성한 다음 <xref:System.Data.OleDb.OleDbDataAdapter>를 호출하여 `DataTable`을 채웁니다.  이 경우 <xref:System.Data.DataColumn.AutoIncrement%2A>를 `true`로, <xref:System.Data.DataColumn.AutoIncrementSeed%2A>를 0으로, 그리고 <xref:System.Data.DataColumn.AutoIncrementStep%2A>을 \-1로 설정하여 삽입된 각 행에 할당되는 값이 0부터 시작하여 감소되도록 **CategoryID** 열을 구성합니다.  그런 다음 코드에서 두 개의 새 행을 추가하고 `GetChanges`를 사용하여 변경된 행을 `Update` 메서드로 전달된 새 `DataTable`에 추가합니다.  
+### <a name="example"></a>예제  
+ 이 예제에서는 `MissingSchemaAction.AddWithKey`를 사용하여 스키마 정보를 추가하는 대신 먼저 `DataTable`을 올바른 스키마로 구성한 다음 <xref:System.Data.OleDb.OleDbDataAdapter>를 호출하여 `DataTable`을 채웁니다. 이 경우는 **CategoryID** 열을 설정 하 여 0부터 시작 하는 삽입 된 각 행에 할당 된 값을 감소 시키기 위해 구성 된 <xref:System.Data.DataColumn.AutoIncrement%2A> 를 `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 0으로 및 <xref:System.Data.DataColumn.AutoIncrementStep%2A> 를-1입니다. 그런 다음 코드에서 두 개의 새 행을 추가하고 `GetChanges`를 사용하여 변경된 행을 `DataTable` 메서드로 전달된 새 `Update`에 추가합니다.  
   
  [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
  [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]  
   
- `RowUpdated` 이벤트 처리기에서는 동일한 열려 있는 <xref:System.Data.OleDb.OleDbConnection>을 `OleDbDataAdapter`의 `Update` 문으로 사용합니다.  또한, 삽입된 행에 대한 <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs>의 `StatementType`을 검사합니다.  삽입된 각 행에 대해 새 <xref:System.Data.OleDb.OleDbCommand>가 생성되어 연결에 대해 SELECT @@IDENTITY 문을 실행하고 새 `Autonumber` 값을 반환합니다. 이 값은 `DataRow`의 **CategoryID** 열에 추가됩니다.  그런 다음 `AcceptChanges`에 대한 숨겨진 호출을 방지하기 위해 `Status` 속성이 `UpdateStatus.SkipCurrentRow`로 설정됩니다.  프로시저의 본문에서 `Merge` 메서드가 호출되어 두 `DataTable` 개체를 병합하고, 마지막으로 `AcceptChanges`가 호출됩니다.  
+ `RowUpdated` 이벤트 처리기에서는 동일한 열려 있는 <xref:System.Data.OleDb.OleDbConnection>을 `Update`의 `OleDbDataAdapter` 문으로 사용합니다. 또한, 삽입된 행에 대한 `StatementType`의 <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs>을 검사합니다. 각 삽입에 대 한 새 행 <xref:System.Data.OleDb.OleDbCommand> @ 선택 해 서 실행 하기 위해 만들어지는@IDENTITY 반환 새 연결에서 문을 `Autonumber` 에 배치 되는 값으로는 **CategoryID** 의 열은 `DataRow`합니다. 그런 다음 `Status`에 대한 숨겨진 호출을 방지하기 위해 `UpdateStatus.SkipCurrentRow` 속성이 `AcceptChanges`로 설정됩니다. 프로시저의 본문에서 `Merge` 메서드가 호출되어 두 `DataTable` 개체를 병합하고, 마지막으로 `AcceptChanges`가 호출됩니다.  
   
  [!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
  [!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]  
   
-### ID 값 검색  
- 열의 값이 고유해야 하는 경우에는 열을 ID로 설정하는 경우가 많습니다.  새 데이터의 ID 값이 필요한 경우도 있습니다.  이 샘플에서는 ID 값을 검색하는 방법을 보여 줍니다.  
+### <a name="retrieving-identity-values"></a>ID 값 검색  
+ 열의 값이 고유해야 하는 경우에는 열을 ID로 설정하는 경우가 많습니다. 새 데이터의 ID 값이 필요한 경우도 있습니다. 이 샘플에서는 ID 값을 검색하는 방법을 보여 줍니다.  
   
 -   데이터를 삽입하고 ID 값을 반환하는 저장 프로시저를 만듭니다.  
   
@@ -226,7 +232,7 @@ CREATE TABLE [dbo].[Course]([CourseID] [nvarchar](10) NOT NULL,
 [Title] [nvarchar](100) NOT NULL,  
 [Credits] [int] NOT NULL,  
 [DepartmentID] [int] NOT NULL,  
- CONSTRAINT [PK_Course] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_Course] PRIMARY KEY CLUSTERED  
 (  
 [CourseID] ASC,  
 [Year] ASC  
@@ -243,7 +249,7 @@ CREATE TABLE [dbo].[Department]([DepartmentID] [int] IDENTITY(1,1) NOT NULL,
 [Budget] [money] NOT NULL,  
 [StartDate] [datetime] NOT NULL,  
 [Administrator] [int] NULL,  
- CONSTRAINT [PK_Department] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_Department] PRIMARY KEY CLUSTERED  
 (  
 [DepartmentID] ASC  
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]) ON [PRIMARY]  
@@ -262,7 +268,7 @@ CREATE TABLE [dbo].[Person]([PersonID] [int] IDENTITY(1,1) NOT NULL,
 [HireDate] [datetime] NULL,  
 [EnrollmentDate] [datetime] NULL,  
 [Picture] [varbinary](max) NULL,  
- CONSTRAINT [PK_School.Student] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_School.Student] PRIMARY KEY CLUSTERED  
 (  
 [PersonID] ASC  
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]  
@@ -277,7 +283,7 @@ CREATE TABLE [dbo].[StudentGrade]([EnrollmentID] [int] IDENTITY(1,1) NOT NULL,
 [CourseID] [nvarchar](10) NOT NULL,  
 [StudentID] [int] NOT NULL,  
 [Grade] [decimal](3, 2) NOT NULL,  
- CONSTRAINT [PK_StudentGrade] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_StudentGrade] PRIMARY KEY CLUSTERED  
 (  
 [EnrollmentID] ASC  
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]) ON [PRIMARY]  
@@ -351,7 +357,7 @@ GO
  코드 목록은 다음과 같습니다.  
   
 > [!IMPORTANT]
->  코드 목록은 Access 데이터베이스 파일 MySchool.mdb를 참조합니다.  전체 C\# 또는 Visual Basic 샘플 프로젝트에 포함된 MySchool.mdb는 [Visual Studio 2012 샘플](http://code.msdn.microsoft.com/How-to-retrieve-the-95b4ee43) 또는 [Visual Studio 2013 샘플](http://code.msdn.microsoft.com/How-to-Retrieve-the-511acece)에서 다운로드할 수 있습니다.  
+>  코드 목록은 Access 데이터베이스 파일 MySchool.mdb를 참조합니다. 포함 된 MySchool.mdb (전체 C# 또는 Visual Basic 샘플 프로젝트의 일부로) 중 하나에서 다운로드할 수 있습니다는 [Visual Studio 2012 샘플](http://code.msdn.microsoft.com/How-to-retrieve-the-95b4ee43) 또는 [Visual Studio 2013 샘플](http://code.msdn.microsoft.com/How-to-Retrieve-the-511acece)합니다.  
   
 ```  
 using System;  
@@ -533,11 +539,11 @@ class Program {
 }  
 ```  
   
-## 참고 항목  
- [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [행 상태 및 행 버전](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)   
- [AcceptChanges 및 RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)   
- [DataSet 내용 병합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)   
- [DataAdapters를 사용하여 데이터 소스 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
+## <a name="see-also"></a>참고 항목  
+ [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Dataadapter 및 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [행 상태 및 행 버전](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [AcceptChanges 및 RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
+ [데이터 집합 콘텐츠 병합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
+ [DataAdapter로 데이터 원본 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,6 +1,6 @@
 ---
 title: "F# 언어 참조"
-description: "F# 언어 참조"
+description: "언어 토큰, 개념, 형식, 식 및 구문 컴파일러 지원 항목에 대 한이 참조에서 F # 언어 기능 정보를 찾습니다."
 keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: b1707be1-7b7c-4fdd-a717-d9c190bc5fb5
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: e0b7058513b0487902b2a57b889e77df1abfef98
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 0d26d5a6f47ce8a92aefe338ea8c39295d042794
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="f-language-reference"></a>F# 언어 참조
 
-이 섹션에서는 .NET 플랫폼을 대상으로 하는 다중 패러다임 프로그래밍 언어인 F# 언어를 다룹니다. F# 언어는 함수형, 개체 지향 그리고 명령형의 프로그래밍 모델을 지원합니다.
+이 섹션은 F # 언어,.NET을 대상으로 하는 다중 패러다임 프로그래밍 언어에 대 한 참조입니다. F# 언어는 함수형, 개체 지향 그리고 명령형의 프로그래밍 모델을 지원합니다.
 
 
 ## <a name="f-tokens"></a>F# 토큰

@@ -1,37 +1,40 @@
 ---
-title: "주석 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "문서, 주석"
-  - "강조 표시"
-  - "스티커 메모"
+title: "주석"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- highlights [WPF]
+- documents [WPF], annotations
+- sticky notes [WPF]
 ms.assetid: 232ad0d7-2264-4bed-aae3-10dfde116a9c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ad5825c63672f0cadd30b7a57d81427407e5097e
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 주석
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 문서 콘텐츠에 주석을 지정할 수 있는 문서 보기 컨트롤을 제공합니다.  
+# <a name="annotations"></a>주석
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]문서 주석을 달도 록 문서 콘텐츠를 지 원하는 컨트롤을 보기를 제공 합니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [주석 개요](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
- [주석 스키마](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
+  [주석 스키마](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Annotations.Annotation>  
- <xref:System.Windows.Annotations.AnnotationService>  
- <xref:System.Windows.Controls.DocumentViewer>  
+  <xref:System.Windows.Annotations.AnnotationService>  
+  <xref:System.Windows.Controls.DocumentViewer>  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+  [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

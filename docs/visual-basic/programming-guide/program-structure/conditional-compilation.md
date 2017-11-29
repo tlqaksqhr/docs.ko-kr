@@ -1,83 +1,77 @@
 ---
-title: "Conditional Compilation in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "conditional compilation, about conditional compilation"
-  - "compilation, conditional"
+title: "Visual Basic의 조건부 컴파일"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- conditional compilation [Visual Basic], about conditional compilation
+- compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# Conditional Compilation in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-*조건부 컴파일*에서는 프로그램의 특정 코드 블록이 선택적으로 컴파일되고 나머지 코드 부분은 무시됩니다.  
+# <a name="conditional-compilation-in-visual-basic"></a>Visual Basic의 조건부 컴파일
+*조건부 컴파일*, 특정 코드 블록을 프로그램에서 선택적으로 컴파일되고 다른 특성을 무시 됩니다.  
   
- 예를 들어 동일한 프로그래밍 작업을 서로 다른 방식으로 수행하여 각각의 속도를 비교하는 디버깅 문을 작성하는 경우, 또는 특정 응용 프로그램을 여러 언어로 지역화하는 경우가 있습니다.  조건부 컴파일 문은 런타임에서가 아니라 컴파일 타임에 실행되도록 만들어졌습니다.  
+ 작성 하려는 하는 예를 들어 여러 언어에 대 한 응용 프로그램을 지역화 하는 경우가 동일한 프로그래밍 작업에 다양 한 접근 방법의 속도 비교 하는 문을 디버깅 합니다. 조건부 컴파일 문은 실행된 시간 아닌 컴파일 타임 중에 실행 하도록 설계 되었습니다.  
   
- `#If...Then...#Else` 지시문을 사용하여 조건부로 컴파일할 코드 블록을 나타냅니다.  예를 들어, 동일한 소스 코드를 사용하여 프랑스어 및 독일어 버전의 동일한 응용 프로그램을 만들려면 미리 정의된 상수 `FrenchVersion`과 `GermanVersion`을 사용하여 플랫폼별 코드 세그먼트를 `#If...Then` 문에 포함합니다.  다음 예제는 그 방법을 보여 줍니다.  
+ 조건에 따라 사용 하 여 컴파일할 코드 블록을 나타내는 `#If...Then...#Else` 지시문입니다. 예를 들어 프랑스어, 독일어 언어를 만들려는 버전 같은 동일한 응용 프로그램의 소스 코드를 플랫폼 특정 코드 세그먼트를 포함 하면 `#If...Then` 미리 정의 된 상수를 사용 하 여 문을 `FrenchVersion` 및 `GermanVersion`합니다. 다음 예제에서는 방법을:  
   
  [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/conditional-compilation_1.vb)]  
   
- 컴파일 타임에 `FrenchVersion` 조건부 컴파일 상수 값을 `True`로 설정하면 프랑스어 버전의 조건부 코드가 컴파일되고  `GermanVersion` 상수 값을 `True`로 설정하면 독일어 버전이 컴파일됩니다.  `True`로 설정된 상수 값이 없으면 마지막 `Else` 블록의 코드가 실행됩니다.  
+ 값을 설정 하는 경우는 `FrenchVersion` 조건부 컴파일 상수를 `True` 프랑스어 버전에 대 한 조건부 코드 컴파일 타임에 컴파일됩니다. 값을 설정 하는 경우는 `GermanVersion` 를 상수 `True`, 컴파일러는 독일어 버전을 사용 합니다. 설정 하지 않으면 `True`, 지난에서 코드 `Else` 블록이 실행 합니다.  
   
 > [!NOTE]
->  코드가 현재 분기의 일부가 아닌 경우에는 코드를 편집하고 조건부 컴파일 지시문을 사용할 때 자동 완성이 작동하지 않습니다.  
+>  자동 완성 코드를 편집 하는 경우 not 함수 및 코드의 현재 분기의 일부가 아닌 경우 조건부 컴파일 지시문을 사용 하 여 됩니다.  
   
-## 조건부 컴파일 상수 선언  
- 조건부 컴파일 상수는 다음 세 가지 방법을 사용하여 설정할 수 있습니다.  
+## <a name="declaring-conditional-compilation-constants"></a>조건부 컴파일 상수 선언  
+ 다음 세 가지 방법 중 하나에서 조건부 컴파일 상수를 설정할 수 있습니다.  
   
--   **프로젝트 디자이너**에서 설정  
+-   에 **프로젝트 디자이너**  
   
--   명령줄 컴파일러를 사용하는 경우 명령줄에서 설정  
+-   명령줄 컴파일러를 사용 하는 경우 명령줄에서  
   
--   코드에서 설정  
+-   코드에서  
   
- 조건부 컴파일 상수는 특별한 범위를 가지며 일반 코드로는 액세스할 수 없습니다.  조건부 컴파일 상수는 설정 방법에 따라 범위가 달라집니다.  다음 표에서는 위의 세 가지 방법을 사용하여 선언한 상수의 범위를 설명합니다.  
+ 조건부 컴파일 상수는 특별 한 범위가 있으며 표준 코드에서 액세스할 수 없습니다. 조건부 컴파일 상수 범위 설정 방법에 따라 달라 집니다. 다음 표에서 각 위에서 언급 한 세 가지 방법으로 사용 하 여 선언 된 상수 변수의 범위를 나열 합니다.  
   
-|||  
-|-|-|  
 |상수 설정 방법|상수의 범위|  
-|**프로젝트 디자이너**|프로젝트의 모든 파일에서 사용할 수 있습니다.|  
-|명령줄|명령줄 컴파일러로 전달된 모든 파일에서 사용할 수 있습니다.|  
-|`#Const` 문\(코드\)|문이 선언된 파일에서만 사용할 수 있습니다.|  
+|---|---|  
+|**프로젝트 디자이너**|프로젝트의 모든 파일|  
+|명령줄|명령줄 컴파일러에 전달 하는 모든 파일|  
+|`#Const`코드에서 문|이전에 선언 된 파일의 전용|  
   
-||  
-|-|  
-|프로젝트 디자이너에서 상수를 설정하려면|  
-|-   실행 파일을 만들기 전에 [방법: 프로젝트 속성 및 구성 설정 수정](http://msdn.microsoft.com/ko-kr/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)에서 설명하는 단계에 따라 **프로젝트 디자이너**에서 상수를 설정합니다.|  
+|프로젝트 디자이너의 상수를 설정 하려면|  
+|---|  
+|-실행 파일을 만들기 전에 다음을 수행 합니다 상수에서 설정 된 **프로젝트 디자이너** 에 제공 된 단계를 수행 하 여 [프로젝트 관리 및 솔루션 속성](/visualstudio/ide/managing-project-and-solution-properties)합니다.|  
   
-||  
-|-|  
-|명령줄에서 상수를 설정하려면|  
-|-   다음 예제와 같이 **\/d** 스위치를 사용하여 조건부 컴파일 상수를 입력합니다.<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **\/d** 스위치와 첫 번째 상수 사이에는 공백을 두지 않습니다.  자세한 내용은 [\/define](../../../visual-basic/reference/command-line-compiler/define.md)을 참조하십시오.<br />     명령줄 선언은 **프로젝트 디자이너**에 입력된 선언을 재정의하지만 해당 선언을 지우지는 않습니다.  **프로젝트 디자이너**에 설정된 인수는 다음에 컴파일할 때도 유효합니다.<br />     코드에 상수를 쓰는 경우 상수를 선언한 전체 모듈이 범위가 되므로 위치에 대해서는 엄격한 규칙이 없습니다.|  
+|명령줄에서 상수를 설정 하려면|  
+|---|  
+|-사용는 **/d** 스위치 조건부 컴파일 상수를 다음 예제와 같이 입력 합니다.<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     공간은 간의 필요 하지 않습니다는 **/d** 스위치와 첫 번째 상수입니다. 자세한 내용은 참조 [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)합니다.<br />     명령줄 선언에 입력 된 선언을 재정의 **프로젝트 디자이너**, 있지만 삭제 하지는 않습니다. 인수에 설정 **프로젝트 디자이너** 다음에 컴파일할 계속 적용 됩니다.<br />     코드 자체 상수를 작성할 때 규칙이 없습니다 엄격한 해당 배치에 대 한 범위가 선언 된 전체 모듈 되므로 합니다.|  
   
-||  
-|-|  
-|코드에서 상수를 설정하려면|  
-|-   상수가 사용되는 모듈의 선언 블록에 상수를 놓습니다.  이렇게 하면 코드가 정리되어 이해하기 쉬워집니다.|  
+|코드에서 상수를 설정 하려면|  
+|---|  
+|-사용 되는 모듈의 선언 블록에 상수를 놓습니다. 이렇게 하면 코드가 구성 하 고 쉽게 읽을 수 있습니다.|  
   
-## 관련 항목  
+## <a name="related-topics"></a>관련 항목  
   
-|||  
-|-|-|  
 |제목|설명|  
-|[프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|쉽게 이해하고 관리할 수 있는 코드를 작성하는 방법에 대해 설명합니다.|  
+|---|---|  
+|[프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|코드를 더 쉽게 읽고 유지 관리를 제안 합니다.|  
   
-## 참조  
- [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md)  
+## <a name="reference"></a>참조  
+ [#Const 지시문](../../../visual-basic/language-reference/directives/const-directive.md)  
   
- [\#If...Then...\#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then...#Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [\/define](../../../visual-basic/reference/command-line-compiler/define.md)
+ [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

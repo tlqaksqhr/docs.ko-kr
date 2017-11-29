@@ -1,36 +1,32 @@
 ---
-title: "방법: Namespace (XPath 및 LINQ to XML)에서 요소 찾기 (Visual Basic) | Microsoft 문서"
+title: "방법: Namespace (XPath 및 LINQ to XML)에서 요소 찾기 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d665ddc1e7ad7340b05c97e790195abbc53e4f95
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 257d4c37f849bbc50aac6b9cb4531d1084163db2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>방법: Namespace (XPath 및 LINQ to XML)에서 요소 찾기 (Visual Basic)
-XPath 식은 특정 네임스페이스에서 노드를 찾을 수 있습니다. XPath 식은 네임스페이스를 지정하는 데 네임스페이스 접두사를 사용합니다. 네임 스페이스 접두사를 포함 하는 XPath 식을 구문 분석에 <xref:System.Xml.IXmlNamespaceResolver>.</xref:System.Xml.IXmlNamespaceResolver> 를 구현 하는 XPath 메서드에 개체를 전달 해야 이 예제에서는 <xref:System.Xml.XmlNamespaceManager>.</xref:System.Xml.XmlNamespaceManager> 사용  
+XPath 식은 특정 네임스페이스에서 노드를 찾을 수 있습니다. XPath 식은 네임스페이스를 지정하는 데 네임스페이스 접두사를 사용합니다. 네임스페이스 접두사가 포함된 XPath 식의 구문을 분석하려면 <xref:System.Xml.IXmlNamespaceResolver>를 구현하는 XPath 메서드에 개체를 전달해야 합니다. 이 예제에서는 <xref:System.Xml.XmlNamespaceManager>를 사용합니다.  
   
  XPath 식은 다음과 같습니다.  
   
  `./aw:*`  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 두 네임스페이스가 포함된 XML 트리를 읽습니다. 사용 하 여는 <xref:System.Xml.XmlReader>XML 문서를 읽고.</xref:System.Xml.XmlReader> 그런 다음 가져옵니다는 <xref:System.Xml.XmlNameTable>에서 <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlNamespaceManager> <xref:System.Xml.XmlNameTable>.</xref:System.Xml.XmlNameTable> </xref:System.Xml.XmlNamespaceManager> </xref:System.Xml.XmlReader> </xref:System.Xml.XmlNameTable> 사용 하 여는 <xref:System.Xml.XmlNamespaceManager>요소를 선택할 때.</xref:System.Xml.XmlNamespaceManager>  
+ 다음 예제에서는 두 네임스페이스가 포함된 XML 트리를 읽습니다. 여기에서는 <xref:System.Xml.XmlReader>를 사용하여 XML 문서를 읽습니다. 그런 다음 <xref:System.Xml.XmlNameTable>에서 <xref:System.Xml.XmlReader>을 가져오고 <xref:System.Xml.XmlNamespaceManager>에서 <xref:System.Xml.XmlNameTable>를 가져옵니다. 또한 요소를 선택할 때 <xref:System.Xml.XmlNamespaceManager>를 사용합니다.  
   
 ```vb  
 Dim reader As XmlReader = _  

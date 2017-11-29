@@ -1,42 +1,24 @@
 ---
 title: "이벤트(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 84f8385e1b2f16c4bcfa53ef2c77e1f0cf61e5e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 프로젝트를 시퀀스로 실행되는 프로시저 시리즈로 시각화할 수 있지만 실제로 대부분의 프로그램은 이벤트 구동 방식을 따릅니다. 즉, 실행 흐름은 *이벤트*라는 외부 발생 요인에 의해 결정됩니다.  
@@ -81,7 +63,7 @@ ms.lasthandoff: 07/28/2017
   
 -   `WithEvents` 변수를 개체 변수로 사용할 수 없습니다. 즉, `Object`로 선언할 수 없습니다. 따라서 변수를 선언할 때는 클래스 이름을 지정해야 합니다.  
   
--   공유 이벤트는 클래스 인스턴스에 연결되어 있지 않으므로 `WithEvents`를 사용하여 공유 이벤트를 선언적으로 처리할 수 없습니다. 마찬가지로 `WithEvents` 또는 `Handles`를 사용하여 `Structure`의 이벤트를 처리할 수 없습니다. 두 경우 모두 `AddHandler` 문을 사용해서 해당 이벤트를 처리할 수 있습니다.  
+-   공유 이벤트 클래스 인스턴스에 연결 되지 않습니다, 때문에 사용할 수 없습니다 `WithEvents` 선언적으로 이벤트를 처리 하려면 공유 합니다. 마찬가지로 `WithEvents` 또는 `Handles`를 사용하여 `Structure`의 이벤트를 처리할 수 없습니다. 두 경우 모두 `AddHandler` 문을 사용해서 해당 이벤트를 처리할 수 있습니다.  
   
 -   `WithEvents` 변수 배열을 만들 수 없습니다.  
   
@@ -133,4 +115,3 @@ ms.lasthandoff: 07/28/2017
 |[이벤트](../../../../standard/events/index.md)|[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 이벤트 모델 개요를 제공합니다.|  
 |[Windows Forms에서 이벤트 처리기 만들기](https://msdn.microsoft.com/library/dacysss4.aspx)|Windows Forms 개체와 관련된 이벤트로 작업하는 방법을 설명합니다.|  
 |[대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Visual Basic의 대리자에 대해 간략하게 설명합니다.|
-

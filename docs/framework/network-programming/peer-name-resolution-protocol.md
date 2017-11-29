@@ -7,24 +7,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0deccc8be5616c76f4c447c50f22544fe0fabe47
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 피어 이름 확인 프로토콜
+# <a name="peer-name-resolution-protocol"></a>피어 이름 확인 프로토콜
 피어 투 피어 환경에서 각 피어는 이름 또는 기타 유형의 식별자로 서로의 네트워크 위치(주소, 프로토콜 및 포트)를 확인하기 위해 고유한 이름 확인 시스템을 사용합니다. 과거에는 기본적으로 일시적이었던 연결과 DNS(Domain Name System)의 다른 단점으로 인해 피어 이름 확인이 복잡했습니다.  
   
  Microsoft® Windows® 피어 투 피어 네트워킹 플랫폼은 안전하고 확장 가능한 동적 이름 등록 및 이름 확인 프로토콜인 PNRP(피어 이름 확인 프로토콜)를 사용하여 이러한 이름 확인 문제를 해결합니다. Windows XP용으로 처음 개발되어 Windows Vista™에서 업그레이드된 PNRP는 기존의 이름 확인 시스템과는 전혀 다른 작동 방식으로 응용 프로그램 개발자에게 새로운 가능성을 열어 주고 있습니다.  
@@ -45,7 +39,7 @@ ms.lasthandoff: 08/21/2017
   
 -  
   
-## System.Net.PeerToPeer 네임스페이스  
+## <a name="the-systemnetpeertopeer-namespace"></a>System.Net.PeerToPeer 네임스페이스  
   
 -   PNRP 기능은 .NET Framework 버전 3.5에 있는 <xref:System.Net.PeerToPeer> 네임스페이스를 통해 정의됩니다. 사용 가능한 PNRP 서비스로 피어 이름을 등록하고 확인하는 데 사용할 수 있는 형식 집합을 제공합니다.  
   
@@ -73,9 +67,8 @@ ms.lasthandoff: 08/21/2017
   
 -  
   
-## 참고 항목  
- <xref:System.ServiceModel.PeerResolvers>   
- <xref:System.Net.PeerToPeer>   
- [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.ServiceModel.PeerResolvers>  
+ <xref:System.Net.PeerToPeer>  
+ [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)  
  [PeerToPeer 기술 샘플](http://go.microsoft.com/fwlink/?LinkID=179571)
-

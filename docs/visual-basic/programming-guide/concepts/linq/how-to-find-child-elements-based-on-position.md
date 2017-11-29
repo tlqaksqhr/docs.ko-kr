@@ -1,27 +1,22 @@
 ---
-title: "방법: 위치 (XPath 및 LINQ to XML)에 따라 자식 요소 찾기 (Visual Basic) | Microsoft 문서"
+title: "방법: 위치 (XPath 및 LINQ to XML)에 따라 자식 요소 찾기 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c1ef9db560de02efa20dbe88ff0e73ffd9e7fff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: fcd7cc8d68e6eccd00abeacf3c5817d3625b8891
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>방법: 위치 (XPath 및 LINQ to XML)에 따라 자식 요소 찾기 (Visual Basic)
 위치에 따라 요소를 찾으려는 경우가 있습니다. 두 번째 요소를 찾으려고 하거나 세 번째 요소부터 다섯 번째 요소까지 찾으려고 할 수도 있습니다.  
@@ -30,12 +25,12 @@ ms.lasthandoff: 03/13/2017
   
  `Test[position() >= 2 and position() <= 4]`  
   
- 지연 방식으로 이 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리를 작성하는 두 가지 방법이 있습니다. 사용할 수는 <xref:System.Linq.Enumerable.Skip%2A>및 <xref:System.Linq.Enumerable.Take%2A>연산자 하거나 사용할 수 있습니다는 <xref:System.Linq.Enumerable.Where%2A>인덱스를 사용 하는 오버 로드.</xref:System.Linq.Enumerable.Where%2A> </xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A> 사용 하는 경우는 <xref:System.Linq.Enumerable.Where%2A>오버 로드는 두 개의 인수를 사용 하는 람다 식을 사용 합니다.</xref:System.Linq.Enumerable.Where%2A> 다음 예제에서는 위치에 따라 선택하는 두 메서드를 보여 줍니다.  
+ 지연 방식으로 이 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리를 작성하는 두 가지 방법이 있습니다. <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Take%2A> 연산자를 사용하거나, 인덱스를 사용하는 <xref:System.Linq.Enumerable.Where%2A> 오버로드를 사용할 수 있습니다. <xref:System.Linq.Enumerable.Where%2A> 오버로드를 사용할 때 두 인수를 사용하는 람다 식을 사용합니다. 다음 예제에서는 위치에 따라 선택하는 두 메서드를 보여 줍니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 두 번째 `Test` 요소부터 네 번째 요소까지 찾습니다. 결과는 요소의 컬렉션입니다.  
   
- 이 예제에서는 다음 XML 문서: [샘플 XML 파일: 테스트 구성 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)합니다.  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: 테스트 구성(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)을 사용합니다.  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -94,4 +89,3 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML에 대 한 XPath 사용자 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

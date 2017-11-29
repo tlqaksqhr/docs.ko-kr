@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 695c6626c997fd8d1f034b700f4a4918eddf7db6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6c12c583d6c2040a093fb769803b79a6d88459ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 네이티브 리플렉션 API 참조
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 에는 새 예외 형식인 [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)및 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)이 포함됩니다. 세 가지 예외 형식 모두에 대해 다음 사항을 확인하세요.  
@@ -57,8 +55,7 @@ ms.lasthandoff: 08/21/2017
  이 네임스페이스의 다른 형식에 대한 설명서는 .NET Framework 설명서 집합에서 <xref:System.Runtime.CompilerServices> 를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [MissingInteropDataException 클래스](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)   
- [MissingMetadataException 클래스](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)   
- [MissingRuntimeArtifactException 클래스](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)   
+ [MissingInteropDataException 클래스](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
+ [MissingMetadataException 클래스](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
+ [MissingRuntimeArtifactException 클래스](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
  [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)
-

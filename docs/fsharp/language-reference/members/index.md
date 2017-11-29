@@ -1,6 +1,6 @@
 ---
 title: "멤버(F#)"
-description: "멤버(F#)"
+description: "F # 프로그래밍 언어의 개체 멤버에 알아봅니다."
 keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: e472f50a-4939-4e62-abbc-471f8f265790
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: fe14657b25d122296a6826daba37ea99b6ee64b4
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: ca34c8d073594791ec268a85ad56f50cc6d9e435
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="members"></a>멤버
 
 이 섹션에서는 F# 개체 형식의 멤버에 대해 설명합니다.
@@ -44,4 +43,3 @@ Private 필드 및 `do` 바인딩(클래스에만 사용됨)은 특정 형식의
 |[연산자 오버로드](../operator-overloading.md)|형식에 대한 사용자 지정된 연산자 정의에 대해 설명합니다.|
 |[이벤트](events.md)|F#의 이벤트 및 이벤트 처리 지원에 대한 정의에 대해 설명합니다.|
 |[명시적 필드: `val` 키워드](explicit-fields-the-val-keyword.md)|특정 형식의 초기화되지 않은 필드에 대한 정의에 대해 설명합니다.|
-

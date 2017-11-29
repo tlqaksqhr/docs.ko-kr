@@ -1,45 +1,49 @@
 ---
-title: "Windows Forms 컨트롤 렌더링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "사용자 지정 컨트롤[Windows Forms], 그래픽 리소스"
-  - "사용자 지정 컨트롤[Windows Forms], 무효화 및 그리기"
-  - "사용자 지정 컨트롤[Windows Forms], 렌더링"
-  - "OnPaintBackground 메서드, Windows Forms 사용자 지정 컨트롤에서 호출"
+title: "Windows Forms 컨트롤 렌더링"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], rendering
+- OnPaintBackground method [Windows Forms], invoking in Windows Forms custom controls
+- custom controls [Windows Forms], graphics resources
+- custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 07e75bd44ab960744224c2d2d2cf2e53c42860fa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# Windows Forms 컨트롤 렌더링
-렌더링은 사용자의 화면에 시각적 표현을 만드는 과정을 말합니다.  Windows Forms에서는 렌더링을 위해 새로운 Windows 그래픽 라이브러리인 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]를 사용합니다.  [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]에 대한 액세스를 제공하는 관리되는 클래스는 <xref:System.Drawing?displayProperty=fullName> 네임스페이스 및 해당 하위 네임스페이스에 있습니다.  
+# <a name="rendering-a-windows-forms-control"></a>Windows Forms 컨트롤 렌더링
+렌더링은 사용자의 화면에 시각적 표시를 만드는 프로세스를 말합니다. Windows Forms를 사용 하 여 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (새 Windows 그래픽 라이브러리) 렌더링 합니다. 에 대 한 액세스를 제공 하는 관리 되는 클래스 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 에 <xref:System.Drawing?displayProperty=nameWithType> 네임 스페이스 및 그 하위 네임 스페이스입니다.  
   
- 컨트롤 렌더링에는 다음 요소가 포함됩니다.  
+ 다음 요소가 컨트롤 렌더링에 포함 됩니다.  
   
--   기본 클래스 <xref:System.Windows.Forms.Control?displayProperty=fullName>에서 제공하는 그리기 기능  
+-   기본 클래스에서 제공 하는 그리기 기능 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다.  
   
--   [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 그래픽 라이브러리의 필수 요소  
+-   필수 요소는 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 그래픽 라이브러리입니다.  
   
--   그리기 영역의 기하 도형  
+-   그리기 영역의 기 하 도형을 합니다.  
   
--   그래픽 리소스를 해제하기 위한 절차  
+-   그래픽 리소스를 해제 하기 위한 절차입니다.  
   
-## 컨트롤에서 제공하는 그리기 기능  
- 기본 클래스 <xref:System.Windows.Forms.Control>에서는 해당 <xref:System.Windows.Forms.Control.Paint> 이벤트를 통해 그리기 기능을 제공합니다.  컨트롤에서 표시를 업데이트해야 할 때마다 <xref:System.Windows.Forms.Control.Paint> 이벤트를 발생시킵니다.  .NET Framework의 이벤트에 대한 자세한 내용은 [이벤트 처리 및 발생](../../../../docs/standard/events/index.md)을 참조하십시오.  
+## <a name="drawing-functionality-provided-by-control"></a>그리기 컨트롤에서 제공 하는 기능  
+ 기본 클래스 <xref:System.Windows.Forms.Control> 통해 그리기 기능을 제공 해당 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 컨트롤에서 발생 된 <xref:System.Windows.Forms.Control.Paint> 표시를 업데이트 해야 할 때마다 이벤트입니다. .NET Framework의 이벤트에 대 한 자세한 내용은 참조 [이벤트 처리 및 발생](../../../../docs/standard/events/index.md)합니다.  
   
- <xref:System.Windows.Forms.Control.Paint> 이벤트의 이벤트 데이터 클래스인 <xref:System.Windows.Forms.PaintEventArgs>에는 그릴 영역을 나타내는 사각형 개체와 그래픽 개체에 대한 핸들과 같은 컨트롤을 그리는 데 필요한 데이터가 저장되어 있습니다.  이러한 개체는 다음 코드 조각에서 굵게 표시되어 있습니다.  
+ 이벤트 데이터에 대 한 클래스는 <xref:System.Windows.Forms.Control.Paint> 이벤트 <xref:System.Windows.Forms.PaintEventArgs>, 컨트롤을 그리는 데 필요한 데이터를 보유-graphics 개체 및 그릴 영역을 나타내는 사각형 개체에 대 한 핸들입니다. 이러한 개체에 표시 되는 다음 코드 조각에서 굵게 표시 합니다.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -67,9 +71,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics>는 이 항목 후반의 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]에 대한 설명에서 볼 수 있는 것처럼 그리기 기능을 캡슐화하는 관리되는 클래스입니다.  <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>은 <xref:System.Drawing.Rectangle> 구조체 인스턴스이며 컨트롤이 그릴 수 있는 사용 가능한 영역을 정의합니다.  이 항목 후반의 기하에 대한 설명에서 볼 수 있는 것처럼 컨트롤 개발자는 컨트롤의 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 속성을 사용하여 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>을 계산할 수 있습니다.  
+ <xref:System.Drawing.Graphics>그리기 기능을 캡슐화 하는 관리 되는 클래스에 대 한 설명에 설명 된 대로 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 이 항목의 뒷부분에 나오는 합니다. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 의 인스턴스가 <xref:System.Drawing.Rectangle> 구조체이 고 컨트롤을 그릴 수 있는 사용 가능한 영역을 정의 합니다. 컨트롤 개발자를 계산할 수는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 를 사용 하는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 이 항목의 뒷부분에 나오는 기 하 도형에 대 한 설명에 설명 된 대로 컨트롤의 속성입니다.  
   
- 컨트롤은 <xref:System.Windows.Forms.Control>에서 상속된 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 재정의하여 렌더링 논리를 제공해야 합니다.  <xref:System.Windows.Forms.Control.OnPaint%2A>는 전달받은 <xref:System.Windows.Forms.PaintEventArgs> 인스턴스의 <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> 및 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 속성을 통해 그릴 그래픽 개체와 사각형에 액세스합니다.  
+ 재정의 하 여 컨트롤 렌더링 논리를 제공 해야는 <xref:System.Windows.Forms.Control.OnPaint%2A> 에서 상속 된 메서드 <xref:System.Windows.Forms.Control>합니다. <xref:System.Windows.Forms.Control.OnPaint%2A>그래픽 개체 및 통해 그릴 사각형에 대 한 액세스를 가져옵니다는 <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> 및 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 의 속성은 <xref:System.Windows.Forms.PaintEventArgs> 인스턴스가 전달 합니다.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -79,12 +83,12 @@ Protected Overridable Sub OnPaint(pe As PaintEventArgs)
 protected virtual void OnPaint(PaintEventArgs pe);  
 ```  
   
- 기본 <xref:System.Windows.Forms.Control> 클래스의 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드에서는 그리기 기능을 구현하지 않고 <xref:System.Windows.Forms.Control.Paint> 이벤트에 등록된 이벤트 대리자만 호출합니다.  <xref:System.Windows.Forms.Control.OnPaint%2A>를 재정의할 경우 대개 기본 클래스의 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 호출하여 등록된 대리자가 <xref:System.Windows.Forms.Control.Paint> 이벤트를 받도록 해야 합니다.  그러나 전체 화면을 그리는 컨트롤은 깜빡임이 생기기 때문에 기본 클래스의 <xref:System.Windows.Forms.Control.OnPaint%2A>를 호출하지 않아야 합니다.  <xref:System.Windows.Forms.Control.OnPaint%2A> 이벤트 재정의에 대한 예를 보려면 [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)를 참조하십시오.  
+ <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드는 기본 <xref:System.Windows.Forms.Control> 클래스는 그리기 기능을 구현 하지 않는 있지만에 등록 된 이벤트 대리자를 호출는 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 재정의 하는 경우 <xref:System.Windows.Forms.Control.OnPaint%2A>, 일반적으로 호출 해야 합니다는 <xref:System.Windows.Forms.Control.OnPaint%2A> 수신 하는 등록 된 대리자에는 기본 클래스의 메서드는 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 하지만 전체 화면을 그리는 컨트롤의 기본 클래스를 호출 하지 않아야 <xref:System.Windows.Forms.Control.OnPaint%2A>마찬가지로 깜빡임을 소개 합니다. 재정의에 대 한 예제는 <xref:System.Windows.Forms.Control.OnPaint%2A> 이벤트 참조는 [하는 방법: Windows Forms 컨트롤을 표시 진행률 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)합니다.  
   
 > [!NOTE]
->  컨트롤에서 바로 <xref:System.Windows.Forms.Control.OnPaint%2A>를 호출하지 마십시오. 대신 <xref:System.Windows.Forms.Control>에서 상속된 <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드나 <xref:System.Windows.Forms.Control.Invalidate%2A>를 호출하는 다른 메서드를 호출하십시오.  그러면 <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드에서 <xref:System.Windows.Forms.Control.OnPaint%2A>를 호출합니다.  <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드가 오버로드되고, <xref:System.Windows.Forms.Control.Invalidate%2A> `e`에 제공된 인수에 따라 컨트롤에서 화면 영역의 일부 또는 전체를 다시 그립니다.  
+>  호출 하지 말고 <xref:System.Windows.Forms.Control.OnPaint%2A> 직접 제어;에서 대신 호출할는 <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드 (에서 상속 되며, <xref:System.Windows.Forms.Control>) 또는 일부 다른 메서드를 호출 하는 <xref:System.Windows.Forms.Control.Invalidate%2A>합니다. <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드 호출 <xref:System.Windows.Forms.Control.OnPaint%2A>합니다. <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드는 오버 로드 하 고 제공 된 인수에 따라 <xref:System.Windows.Forms.Control.Invalidate%2A> `e`, 일부 또는 전체 화면 영역의 컨트롤을 다시 그립니다.  
   
- 기본 <xref:System.Windows.Forms.Control> 클래스는 그리기에 유용한 다른 메서드, 즉 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 메서드를 정의합니다.  
+ 기본 <xref:System.Windows.Forms.Control> 그리기에 사용 되는 다른 메서드를 정의 하는 클래스-는 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 메서드.  
   
 ```vb  
 Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)  
@@ -94,25 +98,25 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>는 창의 배경과 모양을 그리며 속도가 빠릅니다. 반면 <xref:System.Windows.Forms.Control.OnPaint%2A>는 세부 내용을 그리며 다시 그려야 하는 모든 영역을 다루는 하나의 <xref:System.Windows.Forms.Control.Paint> 이벤트로 개별 그리기 요청이 결합되기 때문에 속도가 느릴 수 있습니다.  예를 들어, 컨트롤에 대해 그라데이션 색의 배경을 그리려면 <xref:System.Windows.Forms.Control.OnPaintBackground%2A>를 호출합니다.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A>배경을 칠하는 (있고, 따라서 셰이프) 창 동안 빠른 되도록 보장 하 고 <xref:System.Windows.Forms.Control.OnPaint%2A> 세부 정보를 그리는 및 개별 그리기 요청은 하나에 결합 되므로 느릴 수 <xref:System.Windows.Forms.Control.Paint> 되어야 하는 모든 영역을 검사 하는 이벤트 다시 그려집니다. 호출 하려는 경우는 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 예를 들어, 컨트롤에 대 한 그라데이션 색 배경을 그리는 하려는 경우.  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>는 명칭이 이벤트 같고 `OnPaint` 메서드와 동일한 인수를 사용하는 반면 <xref:System.Windows.Forms.Control.OnPaintBackground%2A>는 진정한 이벤트 메서드가 아닙니다.  `PaintBackground` 이벤트는 없으며 <xref:System.Windows.Forms.Control.OnPaintBackground%2A>는 이벤트 대리자를 호출하지 않습니다.  <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 메서드를 재정의할 때는 파생 클래스 없이도 기본 클래스의 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 메서드를 호출할 수 있습니다.  
+ 반면 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 이벤트와 비슷한 명명법 개이고으로 동일한 인수를 사용는 `OnPaint` 메서드를 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> true 이벤트 메서드가 아닙니다. 없는 `PaintBackground` 이벤트 및 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 이벤트 대리자를 호출 하지 않습니다. 재정의 하는 경우는 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 메서드, 파생된 클래스를 호출 하는 데 필요 하지 않습니다.는 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> 기본 클래스의 메서드.  
   
-## GDI\+ 기본  
- <xref:System.Drawing.Graphics> 클래스는 텍스트를 표시하는 메서드뿐만 아니라 원, 삼각형, 원호, 타원과 같은 다양한 모양을 그릴 수 있는 메서드를 제공합니다.  <xref:System.Drawing?displayProperty=fullName> 네임스페이스 및 해당 하위 네임스페이스에는 모양\(원, 사각형, 원호 등\), 색, 글꼴, 브러시 등과 같은 그래픽 요소를 캡슐화하는 클래스가 포함되어 있습니다.  [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]에 대한 자세한 내용은 [관리되는 그래픽 클래스 사용](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)을 참조하십시오.  [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]에 대한 주요 내용은 [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)에도 설명되어 있습니다.  
+## <a name="gdi-basics"></a>GDI + 기본 사항  
+ <xref:System.Drawing.Graphics> 클래스는 텍스트를 표시 하기 위한 메서드 뿐 아니라 원, 삼각형, 호 및 타원, 같은 다양 한 셰이프를 그리기 위한 메서드를 제공 합니다. <xref:System.Drawing?displayProperty=nameWithType> 네임 스페이스 및 그 하위 네임 스페이스 셰이프 (원, 사각형, 타원, 및 기타), 색, 글꼴, 브러시, 등과 같은 그래픽 요소를 캡슐화 하는 클래스가 포함 되어 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], 참조 [관리 되는 그래픽 클래스를 사용 하 여](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)합니다. 필수 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 에 나와 [하는 방법: Windows Forms 컨트롤을 표시 진행률 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)합니다.  
   
-## 그리기 영역의 기하 도형  
- 컨트롤의 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성은 사용자 화면에서 컨트롤을 사용할 수 있는 사각형 영역을 지정하고 <xref:System.Windows.Forms.PaintEventArgs>의 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 속성은 실제로 그릴 영역을 지정합니다.  <xref:System.Windows.Forms.PaintEventArgs> 인스턴스를 인수로 사용하는 <xref:System.Windows.Forms.Control.Paint> 이벤트 메서드에서 그리기가 수행됩니다.  컨트롤의 표시 일부가 변경되는 경우처럼 컨트롤에서 사용 가능한 영역의 일부만 그려야 할 수도 있습니다.  이러한 경우 컨트롤 개발자는 그릴 실제 사각형을 계산하여 <xref:System.Windows.Forms.Control.Invalidate%2A>에게 전달해야 합니다.  <xref:System.Drawing.Rectangle> 또는 <xref:System.Drawing.Region>을 인수로 사용하는 <xref:System.Windows.Forms.Control.Invalidate%2A>의 오버로드된 버전에서는 이러한 인수를 사용하여 <xref:System.Windows.Forms.PaintEventArgs>의 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 속성을 생성합니다.  
+## <a name="geometry-of-the-drawing-region"></a>기 하 도형 그리기 영역의  
+ <xref:System.Windows.Forms.Control.ClientRectangle%2A> 사용자의 화면에 컨트롤에 사용할 수 있는 사각형 영역을 지정 하는 컨트롤의 속성 동안는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 속성 <xref:System.Windows.Forms.PaintEventArgs> 그리고 실제로 있는 영역을 지정 합니다. (기억 그리기가 수행 됩니다는 <xref:System.Windows.Forms.Control.Paint> 사용 이벤트 메서드를 한 <xref:System.Windows.Forms.PaintEventArgs> 인스턴스). 컨트롤의 표시 변경의 경우 작은 섹션의 경우 처럼 컨트롤에서 사용 가능한 영역의 부분만 그릴 해야 합니다. 컨트롤 개발자 이런 경우, 그리고 전달 하는 실제 사각형을 계산 해야 <xref:System.Windows.Forms.Control.Invalidate%2A>합니다. 오버 로드 된 버전의 <xref:System.Windows.Forms.Control.Invalidate%2A> 사용 하는 <xref:System.Drawing.Rectangle> 또는 <xref:System.Drawing.Region> 인수를 사용 하 여 인수에 지정 된 생성의 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 속성 <xref:System.Windows.Forms.PaintEventArgs>합니다.  
   
- 다음 코드 조각에서는 `FlashTrackBar` 사용자 지정 컨트롤에서 그릴 사각형 영역을 계산하는 방법을 보여 줍니다.  `client` 변수는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 속성을 나타냅니다.  완전한 샘플은 [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)를 참조하십시오.  
+ 다음 코드 조각 표시 방법을 `FlashTrackBar` 사용자 지정 컨트롤에 그릴 사각형 영역을 계산 합니다. `client` 변수 나타냅니다는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 속성입니다. 전체 샘플을 참조 하십시오. [하는 방법: Windows Forms 컨트롤을 표시 진행률 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)합니다.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#6)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#6)]  
   
-## 그래픽 리소스 해제  
- 그래픽 개체는 시스템 리소스를 사용하기 때문에 부담이 큽니다.  이러한 개체에는 <xref:System.Drawing.Brush?displayProperty=fullName>, <xref:System.Drawing.Pen?displayProperty=fullName> 및 기타 그래픽 클래스의 인스턴스뿐만 아니라 <xref:System.Drawing.Graphics?displayProperty=fullName> 클래스의 인스턴스도 포함되어 있습니다.  그러므로 필요할 때만 그래픽 리소스를 만들고 사용이 끝나면 바로 해제해야 합니다.  <xref:System.IDisposable> 인터페이스를 구현하는 형식을 만든 경우 사용이 끝났으면 해당 <xref:System.IDisposable.Dispose%2A> 메서드를 호출하여 리소스를 해제합니다.  
+## <a name="freeing-graphics-resources"></a>그래픽 리소스를 해제  
+ 그래픽 개체는 시스템 리소스를 사용 하기 때문에 비용이 많이 드는입니다. 인스턴스를 포함 하는 이러한 개체는 <xref:System.Drawing.Graphics?displayProperty=nameWithType> 클래스의 인스턴스 뿐만 아니라 <xref:System.Drawing.Brush?displayProperty=nameWithType>, <xref:System.Drawing.Pen?displayProperty=nameWithType>, 및 기타 그래픽 클래스입니다. 에 필요 하 고 해제 하는 경우에 그래픽 리소스를 만드는 것이 중요 하기를 사용 하 여 작업을 마치는 곧 합니다. 구현 하는 형식을 만드는 경우는 <xref:System.IDisposable> 인터페이스를 호출 해당 <xref:System.IDisposable.Dispose%2A> 메서드 했으면 된 리소스를 해제 합니다.  
   
- 다음 코드 조각에서는 `FlashTrackBar` 사용자 지정 컨트롤에서 <xref:System.Drawing.Brush> 리소스를 만들고 해제하는 방법을 보여 줍니다.  전체 소스 코드를 보려면 [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)를 참조하십시오.  
+ 다음 코드 조각 표시 방법을 `FlashTrackBar` 사용자 지정 컨트롤을 만들고 해제는 <xref:System.Drawing.Brush> 리소스입니다. 전체 소스 코드에 대 한 참조 [하는 방법: Windows Forms 컨트롤을 표시 진행률 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)합니다.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#5)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#5)]  
@@ -123,5 +127,5 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  [!code-csharp[System.Windows.Forms.FlashTrackBar#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#3)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#3)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)
