@@ -1,35 +1,38 @@
 ---
-title: "5601 - FederationMessageProcessingSuccess | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 5601 - FederationMessageProcessingSuccess
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 767591c3-2674-4d7e-a61b-e76da3b159ae
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a77e3b8c58208c9597860f9ae7d2c7fa386a5617
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 5601 - FederationMessageProcessingSuccess
-## 속성  
+# <a name="5601---federationmessageprocessingsuccess"></a><span data-ttu-id="05009-102">5601 - FederationMessageProcessingSuccess</span><span class="sxs-lookup"><span data-stu-id="05009-102">5601 - FederationMessageProcessingSuccess</span></span>
+## <a name="properties"></a><span data-ttu-id="05009-103">속성</span><span class="sxs-lookup"><span data-stu-id="05009-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|5601|  
-|키워드가|보안|  
-|수준|Verbose|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/디버그|  
+|<span data-ttu-id="05009-104">ID</span><span class="sxs-lookup"><span data-stu-id="05009-104">ID</span></span>|<span data-ttu-id="05009-105">5601</span><span class="sxs-lookup"><span data-stu-id="05009-105">5601</span></span>|  
+|<span data-ttu-id="05009-106">키워드가</span><span class="sxs-lookup"><span data-stu-id="05009-106">Keywords</span></span>|<span data-ttu-id="05009-107">보안</span><span class="sxs-lookup"><span data-stu-id="05009-107">Security</span></span>|  
+|<span data-ttu-id="05009-108">수준</span><span class="sxs-lookup"><span data-stu-id="05009-108">Level</span></span>|<span data-ttu-id="05009-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="05009-109">Verbose</span></span>|  
+|<span data-ttu-id="05009-110">채널</span><span class="sxs-lookup"><span data-stu-id="05009-110">Channel</span></span>|<span data-ttu-id="05009-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="05009-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 설명  
- 이 이벤트는 페더레이션 메시지 처리가 성공한 경우에 내보내집니다.  
+## <a name="description"></a><span data-ttu-id="05009-112">설명</span><span class="sxs-lookup"><span data-stu-id="05009-112">Description</span></span>  
+ <span data-ttu-id="05009-113">이 이벤트는 페더레이션 메시지 처리가 성공한 경우에 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="05009-113">This event is emitted when the federation message processing succeeded.</span></span>  
   
-## 메시지  
- 페더레이션 메시지 처리에 성공했습니다.  
+## <a name="message"></a><span data-ttu-id="05009-114">메시지</span><span class="sxs-lookup"><span data-stu-id="05009-114">Message</span></span>  
+ <span data-ttu-id="05009-115">페더레이션 메시지 처리에 성공했습니다.</span><span class="sxs-lookup"><span data-stu-id="05009-115">Federation message processing succeeded.</span></span>  
   
-## 세부 정보
+## <a name="details"></a><span data-ttu-id="05009-116">세부 정보</span><span class="sxs-lookup"><span data-stu-id="05009-116">Details</span></span>

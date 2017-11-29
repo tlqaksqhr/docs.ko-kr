@@ -1,33 +1,32 @@
 ---
-title: "쿼리 식(Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "쿼리 식(Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8b30deea78efe275ccaf6beabafb16a84357ba26
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 쿼리 식(Entity SQL)
-쿼리 식은 다양한 쿼리 연산자를 단일 구문에 결합합니다.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 [리터럴](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [매개 변수](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [변수](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), 연산자, [함수](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), 집합 연산자 등을 포함하여 다양한 종류의 식을 제공합니다.  자세한 내용은 [Entity SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)을 참조하세요.  
+# <a name="query-expressions-entity-sql"></a><span data-ttu-id="6c8ec-102">쿼리 식(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="6c8ec-102">Query Expressions (Entity SQL)</span></span>
+<span data-ttu-id="6c8ec-103">쿼리 식은 다양한 쿼리 연산자를 단일 구문에 결합합니다.</span><span class="sxs-lookup"><span data-stu-id="6c8ec-103">A query expression combines many different query operators into a single syntax.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="6c8ec-104">다양 한 종류의 다음을 포함 한 식 제공: [리터럴](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [매개 변수](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [변수](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), 연산자, [함수](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), 연산자, 설정 및 등입니다.</span><span class="sxs-lookup"><span data-stu-id="6c8ec-104"> provides various kinds of expressions, including the following: [literals](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [parameters](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [variables](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), operators, [functions](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), set operators, and so on.</span></span> <span data-ttu-id="6c8ec-105">자세한 내용은 참조 [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6c8ec-105">For more information, see [Entity SQL Reference](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).</span></span>  
   
-## 절  
- 쿼리 식은 개체 컬렉션에 연속적인 연산을 적용하는 일련의 절로 구성되어 있으며,  표준 SQL SELECT 문에 있는 것과 동일한 절\([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) 및 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)\)을 기반으로 합니다.  
+## <a name="clauses"></a><span data-ttu-id="6c8ec-106">절</span><span class="sxs-lookup"><span data-stu-id="6c8ec-106">Clauses</span></span>  
+ <span data-ttu-id="6c8ec-107">쿼리 식은 개체 컬렉션에 연속적인 연산을 적용하는 일련의 절로 구성되어 있으며,</span><span class="sxs-lookup"><span data-stu-id="6c8ec-107">A query expression is composed of a series of clauses that apply successive operations to a collection of objects.</span></span> <span data-ttu-id="6c8ec-108">표준 SQL select 문에 있는 동일한 절에 기반 하는: [선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [여기서](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [필요](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md), 및 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6c8ec-108">They are based on the same clauses found in standard a SQL select statement: [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md), and [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md).</span></span>  
   
-## 범위  
- FROM 절에 정의된 이름이 나타나는 순서대로 왼쪽에서 오른쪽 순으로 FROM 범위에 제공됩니다.  JOIN 목록에서 식은 목록에서 앞쪽에 정의된 이름을 참조할 수 있습니다.  FROM 절에서 식별된 요소의 공용 속성은 FROM 범위에 추가되지 않으며 항상 정규화된 별칭 이름을 통해 참조해야 합니다.  일반적으로 select 식의 모든 부분은 FROM 범위 내에 있는 것으로 간주됩니다.  
+## <a name="scope"></a><span data-ttu-id="6c8ec-109">범위</span><span class="sxs-lookup"><span data-stu-id="6c8ec-109">Scope</span></span>  
+ <span data-ttu-id="6c8ec-110">FROM 절에 정의된 이름이 나타나는 순서대로 왼쪽에서 오른쪽 순으로 FROM 범위에 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="6c8ec-110">Names defined in the FROM clause are introduced into the FROM scope in order of appearance, left to right.</span></span> <span data-ttu-id="6c8ec-111">JOIN 목록에서 식은 목록에서 앞쪽에 정의된 이름을 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c8ec-111">In the JOIN list, expressions can refer to names defined earlier in the list.</span></span> <span data-ttu-id="6c8ec-112">FROM 절에서 식별된 요소의 공용 속성은 FROM 범위에 추가되지 않으며 항상 정규화된 별칭 이름을 통해 참조해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6c8ec-112">Public properties of elements identified in the FROM clause are not added to the FROM scope: They must be always referenced through the alias-qualified name.</span></span> <span data-ttu-id="6c8ec-113">일반적으로 select 식의 모든 부분은 FROM 범위 내에 있는 것으로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="6c8ec-113">Normally, all parts of the select expression are considered within the FROM scope.</span></span>  
   
-## 참고 항목  
- [Entity SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="6c8ec-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6c8ec-114">See Also</span></span>  
+ [<span data-ttu-id="6c8ec-115">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="6c8ec-115">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

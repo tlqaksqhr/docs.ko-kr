@@ -1,84 +1,91 @@
 ---
-title: "&lt;federationConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;federationConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
-caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9abe07c065dbea67c5ebc4a4490d9f88258130c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;federationConfiguration&gt;
-구성의 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\)와 <xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\)를 사용 하는 경우 페더레이션 WS\-페더레이션 프로토콜을 통해 인증 합니다.  구성의 <xref:System.Security.Claims.ClaimsAuthorizationManager> 사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클레임 기반 액세스 제어를 제공 하는 클래스입니다.  
+# <a name="ltfederationconfigurationgt"></a><span data-ttu-id="63d06-102">&lt;federationConfiguration&gt;</span><span class="sxs-lookup"><span data-stu-id="63d06-102">&lt;federationConfiguration&gt;</span></span>
+<span data-ttu-id="63d06-103">구성에서 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)를 사용 하 여 Ws-federation 프로토콜을 통해 인증을 페더레이션 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-103">Configures the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) and the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) when using federated authentication through the WS-Federation protocol.</span></span> <span data-ttu-id="63d06-104">구성에서 <xref:System.Security.Claims.ClaimsAuthorizationManager> 사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클레임 기반 액세스 제어를 제공 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-104">Configures the <xref:System.Security.Claims.ClaimsAuthorizationManager> when using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control.</span></span>  
   
-## 구문  
+ <span data-ttu-id="63d06-105">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="63d06-105">\<system.identityModel.services></span></span>  
+<span data-ttu-id="63d06-106">\<federationConfiguration ></span><span class="sxs-lookup"><span data-stu-id="63d06-106">\<federationConfiguration></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="63d06-107">구문</span><span class="sxs-lookup"><span data-stu-id="63d06-107">Syntax</span></span>  
+  
+```xml  
 <system.identityModel.services>  
-  <federationConfiguration name=xs:string identityConfigurationName=xs:string>  
-  </federationConfiguration>  
+  <federationConfiguration name=xs:string identityConfigurationName=xs:string>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="63d06-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="63d06-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="63d06-109">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="63d06-110">특성</span><span class="sxs-lookup"><span data-stu-id="63d06-110">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|name|이 페더레이션 구성 요소의 이름입니다.  이 특성은 주로 위한 확장성 지점을 향후 프로토콜을 제공합니다.  선택적 요소.|  
-|identityConfigurationName|Identity 구성 섹션에 지정 된 대로 이름을 [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소를 사용 합니다.  이 특성을 지정 하지 않으면 기본 identity 구성 섹션이 사용 됩니다.  선택적 요소.|  
+|<span data-ttu-id="63d06-111">특성</span><span class="sxs-lookup"><span data-stu-id="63d06-111">Attribute</span></span>|<span data-ttu-id="63d06-112">설명</span><span class="sxs-lookup"><span data-stu-id="63d06-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="63d06-113">name</span><span class="sxs-lookup"><span data-stu-id="63d06-113">name</span></span>|<span data-ttu-id="63d06-114">페더레이션이 구성 요소의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-114">The name of this federation configuration element.</span></span> <span data-ttu-id="63d06-115">이 특성은 주로 이후 프로토콜에 대 한 확장성 지점을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-115">This attribute primarily provides an extensibility point for future protocols.</span></span> <span data-ttu-id="63d06-116">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-116">Optional.</span></span>|  
+|<span data-ttu-id="63d06-117">identityConfigurationName</span><span class="sxs-lookup"><span data-stu-id="63d06-117">identityConfigurationName</span></span>|<span data-ttu-id="63d06-118">에 지정 된 id 구성 섹션 이름은 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-118">The name of the identity configuration section as specified in an [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element to use.</span></span> <span data-ttu-id="63d06-119">이 특성을 지정 하지 않으면 기본 id 구성 섹션에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-119">If this attribute is not specified, the default identity configuration section is used.</span></span> <span data-ttu-id="63d06-120">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-120">Optional.</span></span>|  
   
-### 자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="63d06-121">자식 요소</span><span class="sxs-lookup"><span data-stu-id="63d06-121">Child Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<cookieHandler\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|사용 하 여 SAM 쿠키 처리기를 구성 합니다.  선택적 요소.|  
-|[\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|암호화 하 고 토큰을 해독 하는 데 사용 되는 인증서를 구성 합니다.  선택적 요소.|  
-|[\<wsFederation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|WS\-페더레이션 인증 모듈 \(WSFAM\)를 구성합니다.  선택적 요소.|  
+|<span data-ttu-id="63d06-122">요소</span><span class="sxs-lookup"><span data-stu-id="63d06-122">Element</span></span>|<span data-ttu-id="63d06-123">설명</span><span class="sxs-lookup"><span data-stu-id="63d06-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="63d06-124">\<cookieHandler ></span><span class="sxs-lookup"><span data-stu-id="63d06-124">\<cookieHandler></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|<span data-ttu-id="63d06-125">SAM에서 사용 하는 쿠키 처리기를 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-125">Configures the cookie handler used by the SAM.</span></span> <span data-ttu-id="63d06-126">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-126">Optional.</span></span>|  
+|[<span data-ttu-id="63d06-127">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="63d06-127">\<serviceCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|<span data-ttu-id="63d06-128">암호화 및 토큰 암호 해독 하는 데 사용 되는 인증서를 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-128">Configures the certificate that is used to encrypt and decrypt tokens.</span></span> <span data-ttu-id="63d06-129">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-129">Optional.</span></span>|  
+|[<span data-ttu-id="63d06-130">\<wsFederation ></span><span class="sxs-lookup"><span data-stu-id="63d06-130">\<wsFederation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|<span data-ttu-id="63d06-131">WS-페더레이션 인증 모듈 (WSFAM)를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-131">Configures the WS-Federation Authentication Module (WSFAM).</span></span> <span data-ttu-id="63d06-132">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-132">Optional.</span></span>|  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="63d06-133">부모 요소</span><span class="sxs-lookup"><span data-stu-id="63d06-133">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<system.identityModel.services\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)|WS\-페더레이션 프로토콜을 사용 하 여 인증을 위해 구성 섹션입니다.|  
+|<span data-ttu-id="63d06-134">요소</span><span class="sxs-lookup"><span data-stu-id="63d06-134">Element</span></span>|<span data-ttu-id="63d06-135">설명</span><span class="sxs-lookup"><span data-stu-id="63d06-135">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="63d06-136">\<system.identityModel.services></span><span class="sxs-lookup"><span data-stu-id="63d06-136">\<system.identityModel.services></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)|<span data-ttu-id="63d06-137">Ws-federation 프로토콜을 사용 하 여 인증에 대 한 구성 섹션입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-137">Configuration section for authentication using the WS-Federation protocol.</span></span>|  
   
-## 설명  
- \<federationConfiguration\> 요소 설정에는 두 가지 시나리오를 제공합니다.  
+## <a name="remarks"></a><span data-ttu-id="63d06-138">설명</span><span class="sxs-lookup"><span data-stu-id="63d06-138">Remarks</span></span>  
+ <span data-ttu-id="63d06-139">\<federationConfiguration > 요소는 두 가지 시나리오에서 설정을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-139">The \<federationConfiguration> element provides settings in two different scenarios:</span></span>  
   
--   WS\-페더레이션 수동 웹 응용 프로그램에서 사용 하는 경우 요소는 구성 설정을 포함의 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\)와 <xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\).  또한 보안 토큰 처리기 및 인증서 및 클레임 권한 부여 관리자 및 클레임 인증 관리자 구성 요소를 구성 하는 데는 identity 구성을 참조 합니다.  
+-   <span data-ttu-id="63d06-140">요소를 구성 하는 설정이 포함 되어 WS-페더레이션 수동 웹 응용 프로그램에서을 사용할 경우의 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).</span><span class="sxs-lookup"><span data-stu-id="63d06-140">When using WS-Federation in a passive Web application, the element contains settings that configure the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) and the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).</span></span> <span data-ttu-id="63d06-141">또한 보안 토큰 처리기 및 인증서 및 클레임 권한 부여 관리자와 클레임 인증 관리자와 같은 구성 요소를 구성 하는 데 사용할 id 구성을 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-141">It also references the identity configuration to be used to configure security token handlers and certificates, and components like the claims authorization manager and the claims authentication manager.</span></span>  
   
--   사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 코드에서 클레임 기반 액세스 제어를 제공 하는 클래스, 클레임 권한 부여 관리자와 권한 부여 결정을 만드는 데 사용 하는 정책을 구성 하는 identity 구성 요소를 참조 합니다.  수동 웹 시나리오 없는 경우에도 마찬가지입니다. 예를 들어, Windows 통신 Foundation \(WCF\) 응용 프로그램 또는 웹 기반 된 응용 프로그램입니다.  응용 프로그램이 수동 웹 응용 프로그램이 없는 경우는 [\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) 요소와 해당 자식 정책 요소에 있는 경우 identity 구성 참조는 `<federationConfiguration>` 요소에만 설정이 적용 됩니다.  다른 멤버는 모두 무시됩니다.  
+-   <span data-ttu-id="63d06-142">사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 의 요소는 클레임 권한 부여 관리자 및 권한 부여를 확인 하는 데 사용 되는 정책을 구성 하는 id 구성을 참조, 코드에서 클레임 기반 액세스 제어를 제공 하는 클래스 의사 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-142">When using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control in your code, the element references the identity configuration that configures the claims authorization manager and policy that is used to make authorization decisions.</span></span> <span data-ttu-id="63d06-143">이 수동 웹 시나리오; 하지 않은 시나리오에도 적용 예를 들어 Windows Communication Foundation (WCF) 응용 프로그램 또는 웹 기반 하지 않는 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-143">This is true, even in scenarios that are not passive Web scenarios; for example, Windows Communication Foundation (WCF) applications or an application that is not Web-based.</span></span> <span data-ttu-id="63d06-144">응용 프로그램 수동 웹 응용 프로그램이 아닌 경우는 [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) 요소 (및 해당 자식 정책 요소에 있는 경우)에서 참조 하는 id 구성을의 `<federationConfiguration>` 요소 설정만 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-144">If the application is not a passive Web application, the [\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) element (and its child policy elements, if present) of the identity configuration referenced by the `<federationConfiguration>` element are the only settings applied.</span></span> <span data-ttu-id="63d06-145">다른 특성은 모두 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-145">All others are ignored.</span></span>  
   
- 시나리오에 관계 없이 런타임에서 기본 페더레이션 구성을 로드합니다.  동작은 다음과 같이 정의 됩니다.  
+ <span data-ttu-id="63d06-146">시나리오에 관계 없이 런타임에서 기본 페더레이션 구성을 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-146">Regardless of the scenario, the runtime loads the default federation configuration.</span></span> <span data-ttu-id="63d06-147">동작은 다음과 같이 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-147">The behavior is defined as follows:</span></span>  
   
-1.  있으면 없음 `<federationConfiguration>` 요소가 존재, 런타임에서 페더레이션 구성을 만들고 기본 값을 채웁니다.  이 기본 페더레이션 구성 기본 identity 구성을 참조 합니다.  
+1.  <span data-ttu-id="63d06-148">없는 경우 없는 `<federationConfiguration>` 있는 요소를 런타임 페더레이션 구성을 만들고 기본 값으로 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-148">If there is no `<federationConfiguration>` element present, the runtime creates a federation configuration and populates it with default values.</span></span> <span data-ttu-id="63d06-149">이 기본 페더레이션 구성은 기본 id 구성을 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-149">This default federation configuration will reference the default identity configuration.</span></span>  
   
-2.  단일 경우 `<federationConfiguration>` 요소 존재, 그 이라는 또는 명명 되지 않은 있는지 여부에 관계 없이 기본 페더레이션 구성 됩니다.  경우 해당 `identityConfiguration` 특성을 지정한 경우 명명 된 identity 구성 참조 됩니다. 그렇지 않으면 기본 identity 구성 참조 됩니다.  
+2.  <span data-ttu-id="63d06-150">경우는 단일 `<federationConfiguration>` 요소가 있는지,이 요소는 명명 된 또는 명명 되지 않은 여부에 관계 없이 기본 페더레이션 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-150">If a single `<federationConfiguration>` element is present, it is the default federation configuration regardless of whether it is named or unnamed.</span></span> <span data-ttu-id="63d06-151">하는 경우 해당 `identityConfiguration` 에 명명 된 identity 구성이 참조 되는 특성 지정 됩니다. 기본 id 구성을 참조 되는 그렇지 않은 경우.</span><span class="sxs-lookup"><span data-stu-id="63d06-151">If its `identityConfiguration` attribute is specified, the named identity configuration is referenced; otherwise, the default identity configuration is referenced.</span></span>  
   
-3.  이름 없는 경우 `<federationConfiguration>` 요소가 존재,이 기본 페더레이션 구성 됩니다.  경우 해당 `identityConfiguration` 특성을 지정한 경우 명명 된 identity 구성 참조 됩니다. 그렇지 않으면 기본 identity 구성 참조 됩니다.  
+3.  <span data-ttu-id="63d06-152">명명 되지 않은 경우 `<federationConfiguration>` 요소가 있는지,이 요소는 기본 페더레이션 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-152">If an unnamed `<federationConfiguration>` element is present, it is the default federation configuration.</span></span> <span data-ttu-id="63d06-153">하는 경우 해당 `identityConfiguration` 에 명명 된 identity 구성이 참조 되는 특성 지정 됩니다. 기본 id 구성을 참조 되는 그렇지 않은 경우.</span><span class="sxs-lookup"><span data-stu-id="63d06-153">If its `identityConfiguration` attribute is specified, the named identity configuration is referenced; otherwise, the default identity configuration is referenced.</span></span>  
   
-4.  여러 명명 된 경우 `<federationConfiguration>` 요소가 존재 하 고 더 명명 되지 않은 `<federationConfiguration>` 요소가 존재 이므로 예외가 throw 됩니다.  
+4.  <span data-ttu-id="63d06-154">여러 명명 된 `<federationConfiguration>` 요소가 존재 하 고 명명 되지 `<federationConfiguration>` 요소, 예외가 throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-154">If multiple named `<federationConfiguration>` elements are present and no unnamed `<federationConfiguration>` element is present, an exception is thrown.</span></span>  
   
- 일반적으로 한 번만 `<federationConfiguration>` 단면을 정의 합니다.  이 섹션에서는 기본 페더레이션 구성입니다.  여러 개의 고유한 이름의 지정 될 수 있습니다 `<federationConfiguration>` 요소입니다. 그러나 명명 되지 않은 다른 페더레이션 구성을 로드 하려는 경우이 경우 처리기를 제공 해야를 합니다.  <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>이벤트 및 집합은 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=fullName> 속성 처리기에 내는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 개체의 적절 한 값으로 초기화 `<federationConfiguration>` 구성 파일의 요소.  
+ <span data-ttu-id="63d06-155">일반적으로 단일 `<federationConfiguration>` 섹션에서 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-155">Typically, only a single `<federationConfiguration>` section is defined.</span></span> <span data-ttu-id="63d06-156">이 섹션에는 기본 페더레이션 구성입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-156">This section is the default federation configuration.</span></span> <span data-ttu-id="63d06-157">고유 하 게 명명 된 여러를 지정할 수 있습니다 `<federationConfiguration>` 요소; 그러나이 경우 이름 없는 것과 다른 페더레이션 구성을 로드 하려는 경우 제공 해야에 대 한 처리기는 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-157">You may specify multiple, uniquely-named `<federationConfiguration>` elements; however, in this case, if you want to load a federation configuration other than the unnamed one, you must provide a handler for the.</span></span> <span data-ttu-id="63d06-158"><xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>이벤트 집합과 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 속성 처리기를 내는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 적절 한 값으로 초기화 된 개체 `<federationConfiguration>` 구성 파일의 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-158"><xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> event and set the <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> property inside the handler to a <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> object initialized with values from the appropriate `<federationConfiguration>` element in the configuration file.</span></span>  
   
- `<federationConfiguration>` 요소가 표시 되는 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> 클래스입니다.  구성 개체가 표시 되는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 클래스입니다.  단일 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 인스턴스 설정의 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName> 속성 및 응용 프로그램에 대 한 페더레이션된 구성을 제공 합니다.  
+ <span data-ttu-id="63d06-159">`<federationConfiguration>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-159">The `<federationConfiguration>` element is represented by the <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> class.</span></span> <span data-ttu-id="63d06-160">자체 구성 개체도 표시 됩니다는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-160">The configuration object itself is represented by the <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> class.</span></span> <span data-ttu-id="63d06-161">단일 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 에 설정 된 인스턴스는 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 속성 하 고 응용 프로그램에 대 한 페더레이션된 구성을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-161">A single <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> instance is set on the <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> property and provides federated configuration for the application.</span></span>  
   
-## 예제  
- 다음 XML 표시는 `<federationConfiguration>` 는 WSFAM에 대 한 설정을 지정 하 고 지정 하는 요소 쿠키 기본 처리기 \(의 인스턴스는 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스\) SAM에서 사용.  
+## <a name="example"></a><span data-ttu-id="63d06-162">예제</span><span class="sxs-lookup"><span data-stu-id="63d06-162">Example</span></span>  
+ <span data-ttu-id="63d06-163">에서는 다음 XML는 `<federationConfiguration>` 요소는 WSFAM에 대 한 설정을 지정 하 고 지정 하는 기본 쿠키 처리기 (의 인스턴스는 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스) SAM에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-163">The following XML shows a `<federationConfiguration>` element that specifies settings for the WSFAM and specifies that the default cookie handler (an instance of the <xref:System.IdentityModel.Services.ChunkedCookieHandler> class) be used by the SAM.</span></span>  
   
 > [!WARNING]
->  이 예제에서는 쿠키 처리기 아니고 WSFAM 하는 데 필요한 HTTPS를 사용 합니다.  되므로 이런는 `requireHttps` 특성에 `<wsFederation>` 요소와 `requireSsl` 특성에 `<cookieHandlerElement>` 는 `false`.  이러한 보안 위험이 존재할 수 있습니다 대로 이러한 설정은 대부분의 프로덕션 환경에 권장 되지 않습니다.  
+>  <span data-ttu-id="63d06-164">이 예제에서는 쿠키 처리기 아니고 WSFAM 해야 HTTPS를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-164">In this example, neither the cookie handler nor WSFAM are required to use HTTPS.</span></span> <span data-ttu-id="63d06-165">¿¡´는 `requireHttps` 특성에 `<wsFederation>` 요소 및 `requireSsl` 특성에 `<cookieHandlerElement>` 는 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-165">This is because the `requireHttps` attribute on the `<wsFederation>` element and the `requireSsl` attribute on the `<cookieHandlerElement>` are `false`.</span></span> <span data-ttu-id="63d06-166">이러한 설정은 보안상 위험 해질 수 있습니다 때 대부분의 프로덕션 환경에 권장 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="63d06-166">These settings are not recommended for most production environments as they may present a security risk.</span></span>  
   
-```  
+```xml  
 <system.identityModel.services>  
   <federationConfiguration>  
     <wsFederation passiveRedirectEnabled="true"   
@@ -93,8 +100,8 @@ caps.handback.revision: 9
 </system.identityModel.services>  
 ```  
   
-## 참고 항목  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>   
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>   
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>   
- [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)
+## <a name="see-also"></a><span data-ttu-id="63d06-167">참고 항목</span><span class="sxs-lookup"><span data-stu-id="63d06-167">See Also</span></span>  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
+ <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
+ <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="63d06-168">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="63d06-168">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)

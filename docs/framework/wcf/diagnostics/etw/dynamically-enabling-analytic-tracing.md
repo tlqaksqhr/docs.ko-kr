@@ -1,51 +1,54 @@
 ---
-title: "동적으로 분석 추적을 사용하도록 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "동적으로 분석 추적을 사용하도록 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d86186d3f979d4ec02cb728befb7127edfd07aaf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 동적으로 분석 추적을 사용하도록 설정
-Windows 운영 체제에 포함된 도구와 함께 ETW\(Event Tracing for Windows\)를 사용하여 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 모든 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스의 경우 응용 프로그램의 Web.config 파일을 수정하거나 서비스를 다시 시작하지 않고도 분석 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 그러면 응용 프로그램을 중지하지 않고도 추적 이벤트를 내보낼 수 있습니다.  
+# <a name="dynamically-enabling-analytic-tracing"></a><span data-ttu-id="4998d-102">동적으로 분석 추적을 사용하도록 설정</span><span class="sxs-lookup"><span data-stu-id="4998d-102">Dynamically Enabling Analytic Tracing</span></span>
+<span data-ttu-id="4998d-103">Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Windows)를 사용하여 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-103">Using tools that ship with the Windows operating system, you can enable or disable tracing dynamically using Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="4998d-104">모든 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스의 경우 응용 프로그램의 Web.config 파일을 수정하거나 서비스를 다시 시작하지 않고도 분석 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-104">For all [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services, analytic tracing can be enabled and disabled dynamically without modifying the application’s Web.config file or restarting the service.</span></span> <span data-ttu-id="4998d-105">그러면 응용 프로그램을 중지하지 않고도 추적 이벤트를 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-105">This allows the application that emits the trace events to remain undisturbed.</span></span>  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 추적 옵션도 이와 비슷한 방식으로 구성할 수 있습니다. 예를 들어 응용 프로그램을 중지하지 않고도 심각도 수준을 **Error**에서 **Information**으로 변경할 수 있습니다. 이 작업은 다음과 같은 도구를 사용하여 수행할 수 있습니다.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="4998d-106"> 추적 옵션도 이와 비슷한 방식으로 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-106"> tracing options can be configured in a similar way.</span></span> <span data-ttu-id="4998d-107">예를 들어 응용 프로그램을 중지하지 않고도 심각도 수준을 **Error** 에서 **Information** 으로 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-107">For example, you can change the severity level from **Error** to **Information** without disturbing the application.</span></span> <span data-ttu-id="4998d-108">이 작업은 다음과 같은 도구를 사용하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-108">This can be done using the following tools:</span></span>  
   
--   **Logman** – 추적 데이터를 구성, 제어 및 쿼리하기 위한 명령줄 도구입니다.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]은 [Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) 및 [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427)를 참조하십시오.  
+-   <span data-ttu-id="4998d-109">**Logman** – 추적 데이터를 구성, 제어 및 쿼리하기 위한 명령줄 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-109">**Logman** – A command line tool for configuring, controlling, and querying tracing data.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="4998d-110">[Logman 추적을 만들](http://go.microsoft.com/fwlink/?LinkId=165426) 및 [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427)합니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-110"> [Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) and [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).</span></span>  
   
--   **EventViewer** \- 추적 결과를 보기 위한 Windows 그래픽 관리 도구입니다.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]은 [Windows용 WCF 서비스 및 이벤트 추척](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) 및 [이벤트 뷰어](http://go.microsoft.com/fwlink/?LinkId=165428)를 참조하십시오.  
+-   <span data-ttu-id="4998d-111">**EventViewer** - 추적 결과를 보기 위한 Windows 그래픽 관리 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-111">**EventViewer** - Windows graphical management tool for viewing the results of tracing.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="4998d-112">[WCF 서비스와 Windows 용 이벤트 추적](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) 및 [이벤트 뷰어](http://go.microsoft.com/fwlink/?LinkId=165428)합니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-112"> [WCF Services and Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) and [Event Viewer](http://go.microsoft.com/fwlink/?LinkId=165428).</span></span>  
   
--   **Perfmon** – 카운터를 사용하여 추적이 시스템 성능에 미치는 영향과 추적 카운터를 모니터링하는 Windows 그래픽 관리 도구입니다.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]은 [수동으로 데이터 수집기 집합 만들기](http://go.microsoft.com/fwlink/?LinkId=165429)를 참조하십시오.  
+-   <span data-ttu-id="4998d-113">**Perfmon** – 카운터를 사용하여 추적이 시스템 성능에 미치는 영향과 추적 카운터를 모니터링하는 Windows 그래픽 관리 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-113">**Perfmon** – Windows graphical management tool that uses counters to monitor tracing counters and the effects of tracing on performance.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="4998d-114">[수동으로 데이터 수집기 집합 만들기](http://go.microsoft.com/fwlink/?LinkId=165429)합니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-114"> [Create a Data Collector Set Manually](http://go.microsoft.com/fwlink/?LinkId=165429).</span></span>  
   
-### 키워드가  
- 일반적으로 <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> 클래스를 사용하는 경우 .NET Framework 추적 메시지가 심각도 수준\(예: Error, Warning 및 Information\)을 기준으로 필터링됩니다. ETW는 이러한 심각도 수준 개념을 지원할 뿐 아니라 키워드를 사용하는 새롭고 유연한 필터 메커니즘도 지원합니다. 키워드는 추적 이벤트를 통해 각 이벤트가 무엇을 의미하는지에 대한 추가 컨텍스트를 제공하는 데 사용할 수 있는 임의의 텍스트 값입니다.  
+### <a name="keywords"></a><span data-ttu-id="4998d-115">키워드</span><span class="sxs-lookup"><span data-stu-id="4998d-115">Keywords</span></span>  
+ <span data-ttu-id="4998d-116">일반적으로 <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> 클래스를 사용하는 경우 .NET Framework 추적 메시지가 심각도 수준(예: Error, Warning 및 Information)을 기준으로 필터링됩니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-116">When using the <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> class, .NET Framework trace messages are generally filtered by the severity level (for example, Error, Warning, and Information).</span></span> <span data-ttu-id="4998d-117">ETW는 이러한 심각도 수준 개념을 지원할 뿐 아니라 키워드를 사용하는 새롭고 유연한 필터 메커니즘도 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-117">ETW supports the severity level concept, but introduces a new, flexible filter mechanism using keywords.</span></span> <span data-ttu-id="4998d-118">키워드는 추적 이벤트를 통해 각 이벤트가 무엇을 의미하는지에 대한 추가 컨텍스트를 제공하는 데 사용할 수 있는 임의의 텍스트 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-118">Keywords are arbitrary textual values that let tracing events provide additional context about what that event means.</span></span>  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 분석 추적의 경우 각 추적 이벤트에 두 가지 유형의 키워드가 있습니다. 첫 번째는 각 이벤트에 하나 이상 있는 시나리오 키워드입니다. 이러한 키워드는 각 이벤트가 지원하는 시나리오를 나타냅니다. 시나리오 키워드는 세 가지가 있는데, 각 키워드는 다음 표와 같이 고유한 용도로 설계되었습니다. 키워드를 사용하는 필터링은 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스를 중지하지 않고도 동적으로 변경할 수 있습니다. 즉, 현재 추적 시나리오와 수집되는 추적 정보의 양을 동적으로 변경할 수 있습니다. 예를 들어 `HealthMonitoring`을 `Troubleshooting`으로 변경하고 추적 이벤트 세분성을 높일 수 있습니다.  
+ <span data-ttu-id="4998d-119">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 분석 추적의 경우 각 추적 이벤트에 두 가지 유형의 키워드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-119">For [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analytic tracing, each trace event has two types of keywords.</span></span> <span data-ttu-id="4998d-120">첫 번째는 각 이벤트에 하나 이상 있는 시나리오 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-120">First, each event has one or more scenario keywords.</span></span> <span data-ttu-id="4998d-121">이러한 키워드는 각 이벤트가 지원하는 시나리오를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-121">These keywords denote the scenarios that this event is intended to support.</span></span> <span data-ttu-id="4998d-122">시나리오 키워드는 세 가지가 있는데, 각 키워드는 다음 표와 같이 고유한 용도로 설계되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-122">There are three scenario keywords, each designed for a specific purpose as shown in the following table.</span></span> <span data-ttu-id="4998d-123">키워드를 사용하는 필터링은 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스를 중지하지 않고도 동적으로 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-123">Filtering using keywords can be changed dynamically without disturbing the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="4998d-124">즉, 현재 추적 시나리오와 수집되는 추적 정보의 양을 동적으로 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-124">That means that you can dynamically change your current tracing scenario and the amount of tracing information you gather.</span></span> <span data-ttu-id="4998d-125">예를 들어 `HealthMonitoring` 을 `Troubleshooting` 으로 변경하고 추적 이벤트 세분성을 높일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-125">For example, you can change `HealthMonitoring` to `Troubleshooting` and increase Tracing Event granularity.</span></span>  
   
-|키워드|설명|  
-|---------|--------|  
-|`HealthMonitoring`|서비스의 작업을 모니터링할 수 있는 매우 간단한 최소한의 추적입니다.|  
-|`EndToEndMonitoring`|메시지 흐름 추적을 지원하는 데 사용되는 이벤트입니다.|  
-|`Troubleshooting`|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]의 확장성 지점에 있는 보다 세부적인 이벤트입니다.|  
+|<span data-ttu-id="4998d-126">키워드</span><span class="sxs-lookup"><span data-stu-id="4998d-126">Keyword</span></span>|<span data-ttu-id="4998d-127">설명</span><span class="sxs-lookup"><span data-stu-id="4998d-127">Description</span></span>|  
+|-------------|-----------------|  
+|`HealthMonitoring`|<span data-ttu-id="4998d-128">서비스의 작업을 모니터링할 수 있는 매우 간단한 최소한의 추적입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-128">Very lightweight, minimal tracing that lets you monitor your service’s activity.</span></span>|  
+|`EndToEndMonitoring`|<span data-ttu-id="4998d-129">메시지 흐름 추적을 지원하는 데 사용되는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-129">Events used to support message flow tracing.</span></span>|  
+|`Troubleshooting`|<span data-ttu-id="4998d-130">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]의 확장성 지점에 있는 보다 세부적인 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-130">More granular events around the extensibility points of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span></span>|  
   
- 키워드의 두 번째 그룹은 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]의 구성 요소 중 이벤트를 내보내는 구성 요소를 정의합니다.  
+ <span data-ttu-id="4998d-131">키워드의 두 번째 그룹은 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 의 구성 요소 중 이벤트를 내보내는 구성 요소를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-131">The second group of keywords define which component of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitted the event.</span></span>  
   
-|키워드|설명|  
-|---------|--------|  
-|`UserEvents`|[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]가 아닌 사용자 코드에서 내보내는 이벤트입니다.|  
-|`ServiceModel`|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 런타임에서 내보내는 이벤트입니다.|  
-|`ServiceHost`|서비스 호스트에서 내보내는 이벤트입니다.|  
-|`WCFMessageLogging`|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 메시지 로깅 이벤트입니다.|  
+|<span data-ttu-id="4998d-132">키워드</span><span class="sxs-lookup"><span data-stu-id="4998d-132">Keyword</span></span>|<span data-ttu-id="4998d-133">설명</span><span class="sxs-lookup"><span data-stu-id="4998d-133">Description</span></span>|  
+|-------------|-----------------|  
+|`UserEvents`|<span data-ttu-id="4998d-134">[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]가 아닌 사용자 코드에서 내보내는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-134">Events emitted by the user code and not the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|`ServiceModel`|<span data-ttu-id="4998d-135">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 런타임에서 내보내는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-135">Events emitted by the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] runtime.</span></span>|  
+|`ServiceHost`|<span data-ttu-id="4998d-136">서비스 호스트에서 내보내는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-136">Events emitted by the service host.</span></span>|  
+|`WCFMessageLogging`|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="4998d-137"> 메시지 로깅 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="4998d-137"> message logging events.</span></span>|  
   
-## 참고 항목  
- [Windows용 WCF 서비스 및 이벤트 추척](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+## <a name="see-also"></a><span data-ttu-id="4998d-138">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4998d-138">See Also</span></span>  
+ [<span data-ttu-id="4998d-139">WCF Services and Event Tracing for Windows</span><span class="sxs-lookup"><span data-stu-id="4998d-139">WCF Services and Event Tracing for Windows</span></span>](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

@@ -1,69 +1,71 @@
 ---
-title: "&lt;Thread_UseAllCpuGroups&gt; 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;Thread_UseAllCpuGroups&gt; 요소"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 187e391acf3b80a5ae2dfe795c4a3b397af815ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;Thread_UseAllCpuGroups&gt; 요소
-런타임이 모든 CPU 그룹에서 관리되는 스레드를 분포하는지 여부를 지정합니다.  
+# <a name="ltthreaduseallcpugroupsgt-element"></a><span data-ttu-id="e0fc4-102">&lt;Thread_UseAllCpuGroups&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="e0fc4-102">&lt;Thread_UseAllCpuGroups&gt; Element</span></span>
+<span data-ttu-id="e0fc4-103">런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-103">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>  
   
-## 구문  
+ <span data-ttu-id="e0fc4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e0fc4-104">\<configuration></span></span>  
+<span data-ttu-id="e0fc4-105">\<런타임 ></span><span class="sxs-lookup"><span data-stu-id="e0fc4-105">\<runtime></span></span>  
+<span data-ttu-id="e0fc4-106">< Thread_UseAllCpuGroups ></span><span class="sxs-lookup"><span data-stu-id="e0fc4-106"><Thread_UseAllCpuGroups></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="e0fc4-107">구문</span><span class="sxs-lookup"><span data-stu-id="e0fc4-107">Syntax</span></span>  
+  
+```xml
 <Thread_UseAllCpuGroups    
    enabled="true|false"/>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e0fc4-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="e0fc4-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e0fc4-109">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="e0fc4-110">특성</span><span class="sxs-lookup"><span data-stu-id="e0fc4-110">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|`enabled`|필수 특성입니다.<br /><br /> 런타임이 모든 CPU 그룹에서 관리되는 스레드를 분포하는지 여부를 지정합니다.|  
+|<span data-ttu-id="e0fc4-111">특성</span><span class="sxs-lookup"><span data-stu-id="e0fc4-111">Attribute</span></span>|<span data-ttu-id="e0fc4-112">설명</span><span class="sxs-lookup"><span data-stu-id="e0fc4-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="e0fc4-113">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="e0fc4-114">런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-114">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>|  
   
-## enabled 특성  
+## <a name="enabled-attribute"></a><span data-ttu-id="e0fc4-115">enabled 특성</span><span class="sxs-lookup"><span data-stu-id="e0fc4-115">enabled Attribute</span></span>  
   
-|값|설명|  
-|-------|--------|  
-|`false`|런타임은 여러 CPU 그룹에 관리되는 스레드를 분포하지 않습니다.  이 값이 기본값입니다.|  
-|`true`|컴퓨터에 여러 CPU 그룹과 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소가 사용되는 경우 런타임은 여러 CPU 그룹에 관리되는 스레드를 배포합니다.|  
+|<span data-ttu-id="e0fc4-116">값</span><span class="sxs-lookup"><span data-stu-id="e0fc4-116">Value</span></span>|<span data-ttu-id="e0fc4-117">설명</span><span class="sxs-lookup"><span data-stu-id="e0fc4-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="e0fc4-118">런타임에에서는 여러 CPU 그룹에 걸쳐 관리 되는 스레드를 배포 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-118">The runtime does not distribute managed threads across multiple CPU groups.</span></span> <span data-ttu-id="e0fc4-119">이 값이 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="e0fc4-120">런타임 컴퓨터에 있는 경우 여러 CPU 그룹 여러 CPU 그룹에 걸쳐 관리 되는 스레드를 배포 및 [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-120">The runtime distributes managed threads across multiple CPU groups, if the computer has multiple CPU groups and the [\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element is enabled.</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="e0fc4-121">자식 요소</span><span class="sxs-lookup"><span data-stu-id="e0fc4-121">Child Elements</span></span>  
+ <span data-ttu-id="e0fc4-122">없음</span><span class="sxs-lookup"><span data-stu-id="e0fc4-122">None.</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="e0fc4-123">부모 요소</span><span class="sxs-lookup"><span data-stu-id="e0fc4-123">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`runtime`|어셈블리 바인딩 및 가비지 수집에 대한 정보를 포함합니다.|  
+|<span data-ttu-id="e0fc4-124">요소</span><span class="sxs-lookup"><span data-stu-id="e0fc4-124">Element</span></span>|<span data-ttu-id="e0fc4-125">설명</span><span class="sxs-lookup"><span data-stu-id="e0fc4-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="e0fc4-126">공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="e0fc4-127">어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 설명  
- 컴퓨터에 여러 CPU 그룹이 있을 경우 이 요소를 사용하면 런타임에 모든 CPU 그룹에 관리되는 스레드를 배포합니다.  이 기능을 사용하려면 가비지 수집을 모든 CPU 그룹으로 확장하고 힙을 만들고 균형 조정할 때 모든 코어를 계정으로 가져오는 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소도 활성화해야 합니다.  [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소를 사용하려면 [\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 요소를 사용할 수 있어야 합니다.  이러한 요소를 사용할 수 없으면 `<Thread_UseAllCpuGroups>` 요소를 사용해도 효과가 없습니다.  
+## <a name="remarks"></a><span data-ttu-id="e0fc4-128">설명</span><span class="sxs-lookup"><span data-stu-id="e0fc4-128">Remarks</span></span>  
+ <span data-ttu-id="e0fc4-129">컴퓨터에 여러 CPU 그룹을이 요소를 사용 하도록 설정 하면 모든 CPU 그룹에서 관리 되는 스레드를 배포할 runtime 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-129">When a computer has multiple CPU groups, enabling this element causes the runtime to distribute managed threads across all CPU groups.</span></span> <span data-ttu-id="e0fc4-130">이 기능을 사용 하려면도 설정 해야는 [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 모든 CPU 그룹에 가비지 컬렉션을 확장 하 고 모든 코어는 만들고 힙을 분산 때 고려 하는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-130">To use this feature, you must also enable the [\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element, which extends garbage collection to all CPU groups and takes all cores into account when creating and balancing heaps.</span></span> <span data-ttu-id="e0fc4-131">사용 하도록 설정 된 [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소 사용 하도록 설정 해야는 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-131">Enabling the [\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element requires enabling the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element.</span></span> <span data-ttu-id="e0fc4-132">이러한 요소가 활성화 되지 않은 경우 사용 하도록 설정 된 `<Thread_UseAllCpuGroups>` 요소에 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-132">If these elements are not enabled, enabling the `<Thread_UseAllCpuGroups>` element has no effect.</span></span>  
   
-## 예제  
- 다음 예제에서는 복수 CPU 그룹에 지원을 설정하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="e0fc4-133">예제</span><span class="sxs-lookup"><span data-stu-id="e0fc4-133">Example</span></span>  
+ <span data-ttu-id="e0fc4-134">다음 예제에서는 여러 CPU 그룹에 대 한 지원을 사용 하도록 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0fc4-134">The following example shows how to enable support for multiple CPU groups.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <Thread_UseAllCpuGroups enabled="true"/>  
@@ -73,7 +75,7 @@ caps.handback.revision: 6
 </configuration>  
 ```  
   
-## 참고 항목  
- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<GCCpuGroup\> 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+## <a name="see-also"></a><span data-ttu-id="e0fc4-135">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e0fc4-135">See Also</span></span>  
+ [<span data-ttu-id="e0fc4-136">런타임 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="e0fc4-136">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="e0fc4-137">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="e0fc4-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="e0fc4-138">\<GCCpuGroup > 요소</span><span class="sxs-lookup"><span data-stu-id="e0fc4-138">\<GCCpuGroup> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

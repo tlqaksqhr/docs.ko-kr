@@ -1,44 +1,47 @@
 ---
-title: "채널 개발 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "채널 개발"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dd33f987ab28b42c16aa4798c59675225dcaf520
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 채널 개발
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램 계층과 함께 사용할 수 있는 프로토콜 또는 전송 채널을 개발하려면 몇 가지 단계를 거쳐야 합니다.이 항목에서는 이러한 단계에 대해 설명하고 자세한 내용을 참조할 수 있는 구체적인 항목을 알려 줍니다.이 항목에 설명된 채널 모델 및 다양한 형식에 대해 알아보려면 [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md)를 참조하십시오.완전한 전송 채널 샘플에 대해서는 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)를 참조하십시오.  
+# <a name="developing-channels"></a><span data-ttu-id="6ea77-102">채널 개발</span><span class="sxs-lookup"><span data-stu-id="6ea77-102">Developing Channels</span></span>
+<span data-ttu-id="6ea77-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램 계층과 함께 사용할 수 있는 프로토콜 또는 전송 채널을 개발하려면 몇 가지 단계를 거쳐야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-103">To develop a protocol or transport channel that can be used with the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application layer requires several steps.</span></span> <span data-ttu-id="6ea77-104">이 항목에서는 이러한 단계에 대해 설명하고 자세한 내용을 참조할 수 있는 구체적인 항목을 알려 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-104">This topic describes those steps and points you to specific topics for more information.</span></span> <span data-ttu-id="6ea77-105">이 항목에서 설명 하는 다양 한 형식과 채널 모델을 이해 하려면 참조 [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-105">To understand the channel model and the various types that are mentioned in this topic, see [Channel Model Overview](../../../../docs/framework/wcf/extending/channel-model-overview.md).</span></span> <span data-ttu-id="6ea77-106">전체 전송 채널 샘플을 보려면 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-106">For a complete transport channel sample, see [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).</span></span>  
   
-## 채널 개발 작업 목록  
- 사용자 정의 채널을 만드는 단계는 다음과 같습니다.모든 채널에 대해 다음을 수행해야 합니다.  
+## <a name="the-channel-development-task-list"></a><span data-ttu-id="6ea77-107">채널 개발 작업 목록</span><span class="sxs-lookup"><span data-stu-id="6ea77-107">The Channel Development Task List</span></span>  
+ <span data-ttu-id="6ea77-108">사용자 정의 채널을 만드는 단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-108">The steps to create a user-defined channel are as follows.</span></span> <span data-ttu-id="6ea77-109">모든 채널에 대해 다음을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-109">All channels must:</span></span>  
   
-1.  <xref:System.ServiceModel.Channels.IChannelFactory> 및 <xref:System.ServiceModel.Channels.IChannelListener>에서 지원할 채널 메시지 교환 패턴\(<xref:System.ServiceModel.Channels.IOutputChannel>, <xref:System.ServiceModel.Channels.IInputChannel>, <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> 또는 <xref:System.ServiceModel.Channels.IReplyChannel>\)과 이러한 인터페이스의 세션 변형에 대한 지원 여부를 결정합니다.자세한 내용은 [메시지 교환 패턴 선택](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)을 참조하십시오.  
+1.  <span data-ttu-id="6ea77-110"><xref:System.ServiceModel.Channels.IOutputChannel> 및 <xref:System.ServiceModel.Channels.IInputChannel>에서 지원할 채널 메시지 교환 패턴(<xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IReplyChannel>, <xref:System.ServiceModel.Channels.IChannelFactory> 또는 <xref:System.ServiceModel.Channels.IChannelListener>)과 이러한 인터페이스의 세션 변형에 대한 지원 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-110">Decide which of the channel Message Exchange Patterns (<xref:System.ServiceModel.Channels.IOutputChannel>, <xref:System.ServiceModel.Channels.IInputChannel>, <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IRequestChannel>, or <xref:System.ServiceModel.Channels.IReplyChannel>) your <xref:System.ServiceModel.Channels.IChannelFactory> and <xref:System.ServiceModel.Channels.IChannelListener> will support, as well as whether it will support the sessionful variations of these interfaces.</span></span> <span data-ttu-id="6ea77-111">자세한 내용은 참조 [메시지 교환 패턴 선택](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-111">For details, see [Choosing a Message Exchange Pattern](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md).</span></span>  
   
-2.  메시지 교환 패턴을 지원하는 채널 팩터리와 수신기\(<xref:System.ServiceModel.Channels.IChannelFactory> 및 <xref:System.ServiceModel.Channels.IChannelListener>\)를 만듭니다.팩터리 개발에 대한 자세한 내용은 [클라이언트: 채널 팩터리 및 채널](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)을 참조하십시오.수신기 개발에 대한 자세한 내용은 [서비스: 채널 수신기 및 채널](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)을 참조하십시오.  
+2.  <span data-ttu-id="6ea77-112">메시지 교환 패턴을 지원하는 채널 팩터리와 수신기(<xref:System.ServiceModel.Channels.IChannelFactory> 및 <xref:System.ServiceModel.Channels.IChannelListener>)를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-112">Create a channel factory and listener (<xref:System.ServiceModel.Channels.IChannelFactory> and <xref:System.ServiceModel.Channels.IChannelListener>) that support your message exchange pattern.</span></span> <span data-ttu-id="6ea77-113">팩터리를 개발 하는 방법에 대 한 세부 정보를 참조 하십시오. [클라이언트: 채널 팩터리 및 채널](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-113">For details about developing factories, see [Client: Channel Factories and Channels](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md).</span></span> <span data-ttu-id="6ea77-114">수신기를 개발 하는 방법에 대 한 세부 정보를 참조 하십시오. [서비스: 채널 수신기 및 채널](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-114">For details about developing listeners, see [Service: Channel Listeners and Channels](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md).</span></span>  
   
-3.  네트워크 관련 예외가 <xref:System.TimeoutException?displayProperty=fullName> 또는 <xref:System.ServiceModel.CommunicationException>의 올바른 파생 클래스로 정규화되는지 확인합니다.자세한 내용은 [예외 및 오류 처리](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)를 참조하십시오.  
+3.  <span data-ttu-id="6ea77-115">네트워크 관련 예외가 <xref:System.TimeoutException?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.CommunicationException>의 올바른 파생 클래스로 정규화되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-115">Ensure that any network-specific exceptions are normalized to either <xref:System.TimeoutException?displayProperty=nameWithType> or the appropriate derived class of <xref:System.ServiceModel.CommunicationException>.</span></span> <span data-ttu-id="6ea77-116">자세한 내용은 참조 [예외 처리 및 오류](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-116">For details, see [Handling Exceptions and Faults](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).</span></span>  
   
-4.  응용 프로그램 계층에서 사용할 수 있도록 하려면 사용자 지정 채널을 채널 스택에 추가하는 <xref:System.ServiceModel.Channels.BindingElement>를 추가합니다.자세한 내용은 [BindingElement 만들기](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)를 참조하십시오.  
+4.  <span data-ttu-id="6ea77-117">응용 프로그램 계층에서 사용할 수 있도록 하려면 사용자 지정 채널을 채널 스택에 추가하는 <xref:System.ServiceModel.Channels.BindingElement>를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-117">To enable use from the application layer, add a <xref:System.ServiceModel.Channels.BindingElement> that adds the custom channel to a channel stack.</span></span> <span data-ttu-id="6ea77-118">자세한 내용은 참조 [BindingElement 만들기](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-118">For more information, see [Creating a BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md).</span></span>  
   
- 응용 프로그램 계층에서 좀 더 완벽한 지원이 가능하게 하려면 다음의 단계를 추가로 수행해야 합니다.  
+ <span data-ttu-id="6ea77-119">응용 프로그램 계층에서 좀 더 완벽한 지원이 가능하게 하려면 다음의 단계를 추가로 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-119">The following additional steps are required to enable more complete support at the application layer:</span></span>  
   
-1.  새 바인딩 요소가 구성 시스템에 노출되도록 바인딩 요소 확장 섹션을 추가합니다.자세한 내용은 [구성 및 메타데이터 지원](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)을 참조하십시오.  
+1.  <span data-ttu-id="6ea77-120">새 바인딩 요소가 구성 시스템에 노출되도록 바인딩 요소 확장명 섹션을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-120">Add a binding element extension section to expose the new binding element to the configuration system.</span></span> <span data-ttu-id="6ea77-121">자세한 내용은 참조 [구성 및 메타 데이터 지원을](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-121">For more information, see [Configuration and Metadata Support](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).</span></span>  
   
-2.  기능을 다른 끝점에 전달하도록 메타데이터 확장을 추가합니다.자세한 내용은 [구성 및 메타데이터 지원](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)을 참조하십시오.  
+2.  <span data-ttu-id="6ea77-122">기능을 다른 끝점에 전달하도록 메타데이터 확장을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-122">Add metadata extensions to communicate capabilities to other endpoints.</span></span> <span data-ttu-id="6ea77-123">자세한 내용은 참조 [구성 및 메타 데이터 지원을](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-123">For more information, see [Configuration and Metadata Support](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).</span></span>  
   
-3.  올바르게 정의된 프로필에 따라 바인딩 요소 스택을 미리 구성하는 바인딩을 추가합니다.자세한 내용은 [사용자 정의 바인딩 만들기](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)를 참조하십시오.  
+3.  <span data-ttu-id="6ea77-124">올바르게 정의된 프로필에 따라 바인딩 요소 스택을 미리 구성하는 바인딩을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-124">Add a binding that pre-configures a stack of binding elements according to a well-defined profile.</span></span> <span data-ttu-id="6ea77-125">자세한 내용은 참조 [Creating User-Defined 바인딩](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-125">For more information, see [Creating User-Defined Bindings](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).</span></span>  
   
-4.  바인딩이 구성 시스템에 노출되도록 바인딩 섹션 및 바인딩 구성 요소를 추가합니다.자세한 내용은 [구성 및 메타데이터 지원](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)을 참조하십시오.  
+4.  <span data-ttu-id="6ea77-126">바인딩이 구성 시스템에 노출되도록 바인딩 섹션 및 바인딩 구성 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-126">Add a binding section and binding configuration element to expose the binding to the configuration system.</span></span> <span data-ttu-id="6ea77-127">자세한 내용은 참조 [구성 및 메타 데이터 지원을](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea77-127">For more information, see [Configuration and Metadata Support](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).</span></span>  
   
-## 참고 항목  
- [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="6ea77-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6ea77-128">See Also</span></span>  
+ [<span data-ttu-id="6ea77-129">바인딩 확장</span><span class="sxs-lookup"><span data-stu-id="6ea77-129">Extending Bindings</span></span>](../../../../docs/framework/wcf/extending/extending-bindings.md)

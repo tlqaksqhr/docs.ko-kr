@@ -1,123 +1,122 @@
 ---
-title: "개념적 모델 정식에서 SQL Server 함수로의 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "개념적 모델 정식 함수와 SQL Server 함수 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a186c37506441dde814ca52970c60f0f816ba53e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 개념적 모델 정식에서 SQL Server 함수로의 매핑
-이 항목에서는 개념적 모델 정식 함수가 해당 SQL Server 함수에 매핑되는 방법에 대해 설명합니다.  
+# <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a><span data-ttu-id="eaf22-102">개념적 모델 정식 함수와 SQL Server 함수 매핑</span><span class="sxs-lookup"><span data-stu-id="eaf22-102">Conceptual Model Canonical to SQL Server Functions Mapping</span></span>
+<span data-ttu-id="eaf22-103">이 항목에서는 개념적 모델 정식 함수가 해당 SQL Server 함수에 매핑되는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-103">This topic describes how conceptual model canonical functions map to the corresponding SQL Server functions.</span></span>  
   
-## 날짜 및 시간 함수  
- 다음 표에서는 날짜 및 시간 함수 매핑에 대해 설명합니다.  
+## <a name="date-and-time-functions"></a><span data-ttu-id="eaf22-104">날짜 및 시간 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-104">Date and Time Functions</span></span>  
+ <span data-ttu-id="eaf22-105">다음 표에서는 날짜 및 시간 함수 매핑에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-105">The following table describes the date and time functions mapping:</span></span>  
   
-|정식 함수|SQL Server 함수|  
-|-----------|-------------------|  
-|[AddDays\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(day, number, date)`|  
-|[AddHours\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(hour, number, date)`|  
-|[AddMicroseconds\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(microsecond, number, date)`|  
-|[AddMilliseconds\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(millisecond, number, date)`|  
-|[AddMinutes\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(minute, number, date)`|  
-|[AddMonths\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(month, number, date)`|  
-|[AddNanoseconds\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(nanosecond, number, date)`|  
-|[AddSeconds\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(second, number, date)`|  
-|[AddYears\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(year, number, date)`|  
-|[CreateDateTime\(year, month, day, hour, minute, second\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|SQL Server 2000 및 SQL Server 2005의 경우 `datetime` 형식이 지정된 값이 서버에 만들어집니다.  SQL Server 2008 및 이후 버전의 경우 `datetime2` 값이 서버에 만들어집니다.|  
-|[CreateDateTimeOffset\(year, month, day, hour, minute, second, tzoffset\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`datetimeoffset` 형식이 지정된 값이 서버에 만들어집니다.<br /><br /> SQL Server 2000 또는 SQL Server 2005에서는 지원되지 않습니다.|  
-|[CreateTime\(hour, minute, second\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`time` 형식이 지정된 값이 서버에 만들어집니다.<br /><br /> SQL Server 2000 또는 SQL Server 2005에서는 지원되지 않습니다.|  
-|[CurrentDateTime\(\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|SQL Server 2008의 `SysDateTime()`.<br /><br /> SQLServer 2000 및 SQLServer 2005의 `GetDate()`|  
-|[CurrentDateTimeOffset\(\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|SQL Server 2008의 `SysDateTimeOffset()`<br /><br /> SQL Server 2000 또는 SQL Server 2005에서는 지원되지 않습니다.|  
-|[CurrentUtcDateTime\(\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|SQL Server 2008의 `SysUtcDateTime()`.  SQL Server 2000 및 SQL Server 2005의 `GetUtcDate()`|  
-|[DayOfYear\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(dayofyear, expression)`|  
-|[Day\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(day, expression)`|  
-|[DiffDays\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(day, startdate, enddate)`|  
-|[DiffHours\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(hour, startdate, enddate)`|  
-|[DiffMicroseconds\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(microsecond, startdate, enddate)`|  
-|[DiffMilliseconds\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(millisecond, startdate, enddate)`|  
-|[DiffMinutes\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(minute, startdate, enddate)`|  
-|[DiffNanoseconds\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(nanosecond, startdate, enddate)`|  
-|[DiffSeconds\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(second, startdate, enddate)`|  
-|[DiffYears\(startExpression, endExpression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(year, startdate, enddate)`|  
-|[GetTotalOffsetMinutes\(DateTimeOffset\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(tzoffset, expression)`|  
-|[Hour\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(hour, expression)`|  
-|[Millisecond\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(millisecond, expression)`|  
-|[Minute\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(minute, expression)`|  
-|[Month\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(month, expression)`|  
-|[Second\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(second, expression)`|  
-|[Truncate\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|SQL Server 2000 및 SQL Server 2005의 경우 잘라진 `datetime` 형식이 지정된 값이 서버에 만들어집니다.  SQL Server 2008 및 이후 버전의 경우 잘라진  `` `datetime2` 또는  `` `datetimeoffset` 값이 서버에 만들어집니다.|  
-|[Year\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(YEAR, expression)`|  
+|<span data-ttu-id="eaf22-106">정식 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-106">Canonical functions</span></span>|<span data-ttu-id="eaf22-107">SQL Server 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-107">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="eaf22-108">AddDays(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-108">AddDays(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(day, number, date)`|  
+|[<span data-ttu-id="eaf22-109">AddHours(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-109">AddHours(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(hour, number, date)`|  
+|[<span data-ttu-id="eaf22-110">AddMicroseconds(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-110">AddMicroseconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(microsecond, number, date)`|  
+|[<span data-ttu-id="eaf22-111">AddMilliseconds(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-111">AddMilliseconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(millisecond, number, date)`|  
+|[<span data-ttu-id="eaf22-112">AddMinutes(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-112">AddMinutes(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(minute, number, date)`|  
+|[<span data-ttu-id="eaf22-113">AddMonths(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-113">AddMonths(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(month, number, date)`|  
+|[<span data-ttu-id="eaf22-114">AddNanoseconds(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-114">AddNanoseconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(nanosecond, number, date)`|  
+|[<span data-ttu-id="eaf22-115">AddSeconds(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-115">AddSeconds(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(second, number, date)`|  
+|[<span data-ttu-id="eaf22-116">AddYears(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-116">AddYears(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEADD(year, number, date)`|  
+|[<span data-ttu-id="eaf22-117">CreateDateTime (연도, 월, 일, 시, 분, 초)</span><span class="sxs-lookup"><span data-stu-id="eaf22-117">CreateDateTime(year, month, day, hour, minute, second)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="eaf22-118">SQL Server 2000 및 SQL Server 2005의 경우 `datetime` 형식이 지정된 값이 서버에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-118">For SQL Server 2000 and SQL Server 2005, a `datetime` formatted value is created on the server.</span></span> <span data-ttu-id="eaf22-119">SQL Server 2008 및 이후 버전의 경우 `datetime2` 값이 서버에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-119">For SQL Server 2008 and later versions, a `datetime2` value is created on the server.</span></span>|  
+|[<span data-ttu-id="eaf22-120">CreateDateTimeOffset (연도, 월, 일, 시, 분, 초, tzoffset)</span><span class="sxs-lookup"><span data-stu-id="eaf22-120">CreateDateTimeOffset(year, month, day, hour, minute, second, tzoffset)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="eaf22-121">`datetimeoffset` 형식이 지정된 값이 서버에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-121">A `datetimeoffset` formatted value is created on the server.</span></span><br /><br /> <span data-ttu-id="eaf22-122">SQL Server 2000 또는 SQL Server 2005에서는 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-122">Not supported in SQL Server 2000 or SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="eaf22-123">(1 시간, 분, 초)에 있는</span><span class="sxs-lookup"><span data-stu-id="eaf22-123">CreateTime(hour, minute, second)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="eaf22-124">`time` 형식이 지정된 값이 서버에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-124">A `time` formatted value is created on the server.</span></span><br /><br /> <span data-ttu-id="eaf22-125">SQL Server 2000 또는 SQL Server 2005에서는 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-125">Not supported in SQL Server 2000 or SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="eaf22-126">CurrentDateTime()</span><span class="sxs-lookup"><span data-stu-id="eaf22-126">CurrentDateTime()</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="eaf22-127">SQL Server 2008의 `SysDateTime()`.</span><span class="sxs-lookup"><span data-stu-id="eaf22-127">`SysDateTime()` in SQLServer 2008.</span></span><br /><br /> <span data-ttu-id="eaf22-128">SQLServer 2000 및 SQLServer 2005의 `GetDate()`</span><span class="sxs-lookup"><span data-stu-id="eaf22-128">`GetDate()` in SQLServer 2000 and SQLServer 2005.</span></span>|  
+|[<span data-ttu-id="eaf22-129">CurrentDateTimeOffset()</span><span class="sxs-lookup"><span data-stu-id="eaf22-129">CurrentDateTimeOffset()</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="eaf22-130">SQL Server 2008의 `SysDateTimeOffset()`</span><span class="sxs-lookup"><span data-stu-id="eaf22-130">`SysDateTimeOffset()` in SQL Server 2008.</span></span><br /><br /> <span data-ttu-id="eaf22-131">SQL Server 2000 또는 SQL Server 2005에서는 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-131">Not supported in SQL Server 2000 or SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="eaf22-132">CurrentUtcDateTime()</span><span class="sxs-lookup"><span data-stu-id="eaf22-132">CurrentUtcDateTime()</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="eaf22-133">SQL Server 2008의 `SysUtcDateTime()`.</span><span class="sxs-lookup"><span data-stu-id="eaf22-133">`SysUtcDateTime()` in SQLServer 2008.</span></span> <span data-ttu-id="eaf22-134">SQL Server 2000 및 SQL Server 2005의 `GetUtcDate()`</span><span class="sxs-lookup"><span data-stu-id="eaf22-134">`GetUtcDate()` in SQL Server 2000 and SQL Server 2005.</span></span>|  
+|[<span data-ttu-id="eaf22-135">DayOfYear(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-135">DayOfYear(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(dayofyear, expression)`|  
+|[<span data-ttu-id="eaf22-136">Day(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-136">Day(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(day, expression)`|  
+|[<span data-ttu-id="eaf22-137">DiffDays (startExpression, endExpression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-137">DiffDays(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(day, startdate, enddate)`|  
+|[<span data-ttu-id="eaf22-138">DiffHours (startExpression, endExpression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-138">DiffHours(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(hour, startdate, enddate)`|  
+|[<span data-ttu-id="eaf22-139">DiffMicroseconds (startExpression, endExpression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-139">DiffMicroseconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(microsecond, startdate, enddate)`|  
+|[<span data-ttu-id="eaf22-140">DiffMilliseconds (startExpression, endExpression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-140">DiffMilliseconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(millisecond, startdate, enddate)`|  
+|[<span data-ttu-id="eaf22-141">DiffMinutes (startExpression, endExpression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-141">DiffMinutes(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(minute, startdate, enddate)`|  
+|[<span data-ttu-id="eaf22-142">DiffNanoseconds (startExpression, endExpression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-142">DiffNanoseconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(nanosecond, startdate, enddate)`|  
+|[<span data-ttu-id="eaf22-143">DiffSeconds (startExpression, endExpression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-143">DiffSeconds(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(second, startdate, enddate)`|  
+|[<span data-ttu-id="eaf22-144">DiffYears (startExpression, endExpression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-144">DiffYears(startExpression, endExpression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(year, startdate, enddate)`|  
+|[<span data-ttu-id="eaf22-145">GetTotalOffsetMinutes(DateTimeOffset)</span><span class="sxs-lookup"><span data-stu-id="eaf22-145">GetTotalOffsetMinutes(DateTimeOffset)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(tzoffset, expression)`|  
+|[<span data-ttu-id="eaf22-146">Hour(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-146">Hour(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(hour, expression)`|  
+|[<span data-ttu-id="eaf22-147">Millisecond(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-147">Millisecond(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(millisecond, expression)`|  
+|[<span data-ttu-id="eaf22-148">Minute(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-148">Minute(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(minute, expression)`|  
+|[<span data-ttu-id="eaf22-149">Month(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-149">Month(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(month, expression)`|  
+|[<span data-ttu-id="eaf22-150">Second(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-150">Second(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(second, expression)`|  
+|[<span data-ttu-id="eaf22-151">Truncate(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-151">Truncate(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="eaf22-152">SQL Server 2000 및 SQL Server 2005를 잘라 진된 `datetime` 서식이 지정 된 값이 서버에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-152">For SQL Server 2000 and SQL Server 2005, a truncated `datetime` formatted value is created on the server.</span></span> <span data-ttu-id="eaf22-153">SQL Server 2008 및 이후 버전에서는 잘라 진된 `datetime2` 또는 `datetimeoffset` 값이 서버에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-153">For SQL Server 2008 and later versions, a truncated `datetime2` or `datetimeoffset` value is created on the server.</span></span>|  
+|[<span data-ttu-id="eaf22-154">Year(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-154">Year(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|`DatePart(YEAR, expression)`|  
   
-## 집계 함수  
- 다음 표에서는 집계 함수 매핑에 대해 설명합니다.  
+## <a name="aggregate-functions"></a><span data-ttu-id="eaf22-155">집계 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-155">Aggregate Functions</span></span>  
+ <span data-ttu-id="eaf22-156">다음 표에서는 집계 함수 매핑에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-156">The following table describes the aggregate functions mapping:</span></span>  
   
-|정식 함수|SQL Server 함수|  
-|-----------|-------------------|  
-|[Avg\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`AVG(expression)`|  
-|[BigCount\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`BIGCOUNT(expression)`|  
-|[Count\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`COUNT(expression)`|  
-|[Min\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MIN(expression)`|  
-|[Max\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MAX(expression)`|  
-|[StDev\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEV(expression)`|  
-|[StDevP\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEVP(expression)`|  
-|[Sum\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`SUM(expression)`|  
-|[Var\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VAR(expression)`|  
-|[VarP\(expression\)](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VARP(expression)`|  
+|<span data-ttu-id="eaf22-157">정식 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-157">Canonical functions</span></span>|<span data-ttu-id="eaf22-158">SQL Server 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-158">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="eaf22-159">Avg(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-159">Avg(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`AVG(expression)`|  
+|[<span data-ttu-id="eaf22-160">BigCount(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-160">BigCount(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`BIGCOUNT(expression)`|  
+|[<span data-ttu-id="eaf22-161">Count(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-161">Count(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`COUNT(expression)`|  
+|[<span data-ttu-id="eaf22-162">Min(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-162">Min(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MIN(expression)`|  
+|[<span data-ttu-id="eaf22-163">Max(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-163">Max(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`MAX(expression)`|  
+|[<span data-ttu-id="eaf22-164">StDev(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-164">StDev(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEV(expression)`|  
+|[<span data-ttu-id="eaf22-165">StDevP(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-165">StDevP(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`STDEVP(expression)`|  
+|[<span data-ttu-id="eaf22-166">Sum(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-166">Sum(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`SUM(expression)`|  
+|[<span data-ttu-id="eaf22-167">Var(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-167">Var(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VAR(expression)`|  
+|[<span data-ttu-id="eaf22-168">VarP(expression)</span><span class="sxs-lookup"><span data-stu-id="eaf22-168">VarP(expression)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|`VARP(expression)`|  
   
-## Math 함수  
- 다음 표에서는 수치 연산 함수 매핑에 대해 설명합니다.  
+## <a name="math-functions"></a><span data-ttu-id="eaf22-169">Math 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-169">Math functions</span></span>  
+ <span data-ttu-id="eaf22-170">다음 표에서는 수치 연산 함수 매핑에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-170">The following table describes the math functions mapping:</span></span>  
   
-|정식 함수|SQL Server 함수|  
-|-----------|-------------------|  
-|[Abs\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ABS(value)`|  
-|[Ceiling\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`CEILING(value)`|  
-|[Floor\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
-|[Power\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
-|[Round\(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
-|[Truncate](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
+|<span data-ttu-id="eaf22-171">정식 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-171">Canonical functions</span></span>|<span data-ttu-id="eaf22-172">SQL Server 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-172">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="eaf22-173">Abs(value)</span><span class="sxs-lookup"><span data-stu-id="eaf22-173">Abs(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ABS(value)`|  
+|[<span data-ttu-id="eaf22-174">Ceiling(value)</span><span class="sxs-lookup"><span data-stu-id="eaf22-174">Ceiling(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`CEILING(value)`|  
+|[<span data-ttu-id="eaf22-175">Floor(value)</span><span class="sxs-lookup"><span data-stu-id="eaf22-175">Floor(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
+|[<span data-ttu-id="eaf22-176">Power(value)</span><span class="sxs-lookup"><span data-stu-id="eaf22-176">Power(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
+|[<span data-ttu-id="eaf22-177">Round(value)</span><span class="sxs-lookup"><span data-stu-id="eaf22-177">Round(value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
+|[<span data-ttu-id="eaf22-178">Truncate</span><span class="sxs-lookup"><span data-stu-id="eaf22-178">Truncate</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
   
-## 문자열 함수  
- 다음 표에서는 문자열 함수 매핑에 대해 설명합니다.  
+## <a name="string-functions"></a><span data-ttu-id="eaf22-179">문자열 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-179">String Functions</span></span>  
+ <span data-ttu-id="eaf22-180">다음 표에서는 문자열 함수 매핑에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-180">The following table describes the string functions mapping:</span></span>  
   
-|정식 함수|SQL Server 함수|  
-|-----------|-------------------|  
-|[Contains\(string, target\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
-|[Concat\(string1, string2\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|string1 \+ string2|  
-|[EndsWith\(string, target\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> **참고** `string`이 고정 길이 문자열 열에 저장되어 있고 `target`이 상수인 경우 `CHARINDEX` 함수에서는 `false`를 반환합니다.  이 경우 뒤쪽 채움 공백을 포함하여 전체 문자열이 검색됩니다.  `EndsWith(TRIM(string), target)` 예제에 나와 있는 대로 `EndsWith` 함수에 문자열을 전달하기 전에 고정 길이 문자열의 데이터를 잘라내면 문제를 해결할 수 있습니다.|  
-|[IndexOf\(target, string2\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string2)`|  
-|[Left \(string1, length\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEFT(string1, length)`|  
-|[Length \(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEN(string)`|  
-|[LTrim\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(string)`|  
-|[Right \(string1, length\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RIGHT (string1, length)`|  
-|[Trim\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(RTRIM(string))`|  
-|[Replace \(string1, string2, string3\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REPLACE(string1, string2, string3)`|  
-|[Reverse \(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REVERSE (string)`|  
-|[RTrim\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RTRIM(string)`|  
-|[StartsWith\(string, target\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
-|[Substring\(string, start, length\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`SUBSTRING(string, start, length)`|  
-|[ToLower\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LOWER(string)`|  
-|[ToUpper\(string\)](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`UPPER(string)`|  
+|<span data-ttu-id="eaf22-181">정식 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-181">Canonical functions</span></span>|<span data-ttu-id="eaf22-182">SQL Server 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-182">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="eaf22-183">Contains(string, target)</span><span class="sxs-lookup"><span data-stu-id="eaf22-183">Contains(string, target)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
+|[<span data-ttu-id="eaf22-184">Concat (string1, string2)</span><span class="sxs-lookup"><span data-stu-id="eaf22-184">Concat(string1, string2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|<span data-ttu-id="eaf22-185">string1 + string2</span><span class="sxs-lookup"><span data-stu-id="eaf22-185">string1 + string2</span></span>|  
+|[<span data-ttu-id="eaf22-186">EndsWith (string, 대상)</span><span class="sxs-lookup"><span data-stu-id="eaf22-186">EndsWith(string, target)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> <span data-ttu-id="eaf22-187">**참고** 는 `CHARINDEX` 함수에서 반환 `false` 경우는 `string` 고정된 길이 문자열 열에 저장 됩니다 및 `target` 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-187">**Note** The `CHARINDEX` function returns `false` if the `string` is stored in a fixed length string column and `target` is a constant.</span></span> <span data-ttu-id="eaf22-188">이 경우 뒤쪽 채움 공백을 포함하여 전체 문자열이 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-188">In this case, the entire string is searched, including any padding trailing spaces.</span></span> <span data-ttu-id="eaf22-189">`EndsWith` 예제에 나와 있는 대로 `EndsWith(TRIM(string), target)` 함수에 문자열을 전달하기 전에 고정 길이 문자열의 데이터를 잘라내면 문제를 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-189">A possible workaround is to trim the data in the fixed length string before passing the string to the `EndsWith` function, as in the following example: `EndsWith(TRIM(string), target)`</span></span>|  
+|[<span data-ttu-id="eaf22-190">IndexOf (대상, string2)</span><span class="sxs-lookup"><span data-stu-id="eaf22-190">IndexOf(target, string2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string2)`|  
+|[<span data-ttu-id="eaf22-191">왼쪽 (string1, 길이)</span><span class="sxs-lookup"><span data-stu-id="eaf22-191">Left (string1, length)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEFT(string1, length)`|  
+|[<span data-ttu-id="eaf22-192">길이 (string)</span><span class="sxs-lookup"><span data-stu-id="eaf22-192">Length (string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LEN(string)`|  
+|[<span data-ttu-id="eaf22-193">LTrim(string)</span><span class="sxs-lookup"><span data-stu-id="eaf22-193">LTrim(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(string)`|  
+|[<span data-ttu-id="eaf22-194">오른쪽 (string1, 길이)</span><span class="sxs-lookup"><span data-stu-id="eaf22-194">Right (string1, length)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RIGHT (string1, length)`|  
+|[<span data-ttu-id="eaf22-195">Trim(string)</span><span class="sxs-lookup"><span data-stu-id="eaf22-195">Trim(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LTRIM(RTRIM(string))`|  
+|[<span data-ttu-id="eaf22-196">Replace (string1, string2 string3)</span><span class="sxs-lookup"><span data-stu-id="eaf22-196">Replace (string1, string2, string3)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REPLACE(string1, string2, string3)`|  
+|[<span data-ttu-id="eaf22-197">Reverse (string)</span><span class="sxs-lookup"><span data-stu-id="eaf22-197">Reverse (string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`REVERSE (string)`|  
+|[<span data-ttu-id="eaf22-198">RTrim(string)</span><span class="sxs-lookup"><span data-stu-id="eaf22-198">RTrim(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`RTRIM(string)`|  
+|[<span data-ttu-id="eaf22-199">StartsWith (string, 대상)</span><span class="sxs-lookup"><span data-stu-id="eaf22-199">StartsWith(string, target)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
+|[<span data-ttu-id="eaf22-200">부분 문자열 (문자열, 시작, 길이)</span><span class="sxs-lookup"><span data-stu-id="eaf22-200">Substring(string, start, length)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`SUBSTRING(string, start, length)`|  
+|[<span data-ttu-id="eaf22-201">ToLower(string)</span><span class="sxs-lookup"><span data-stu-id="eaf22-201">ToLower(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`LOWER(string)`|  
+|[<span data-ttu-id="eaf22-202">ToUpper(string)</span><span class="sxs-lookup"><span data-stu-id="eaf22-202">ToUpper(string)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|`UPPER(string)`|  
   
-## 비트 함수  
- 다음 표에서는 비트 함수 매핑에 대해 설명합니다.  
+## <a name="bitwise-functions"></a><span data-ttu-id="eaf22-203">비트 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-203">Bitwise Functions</span></span>  
+ <span data-ttu-id="eaf22-204">다음 표에서는 비트 함수 매핑에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eaf22-204">The following table describes the bitwise functions mapping:</span></span>  
   
-|정식 함수|SQL Server 함수|  
-|-----------|-------------------|  
-|[BitWiseAnd \(value1, value2\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|value1 & value2|  
-|[BitWiseNot \(value\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|~value|  
-|[BitWiseOr \(value1, value2\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|value1 &#124; value2|  
-|[BitWiseXor \(value1, value2\)](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|value1 ^ value2|
+|<span data-ttu-id="eaf22-205">정식 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-205">Canonical functions</span></span>|<span data-ttu-id="eaf22-206">SQL Server 함수</span><span class="sxs-lookup"><span data-stu-id="eaf22-206">SQL Server functions</span></span>|  
+|-------------------------|--------------------------|  
+|[<span data-ttu-id="eaf22-207">BitWiseAnd (value1, value2)</span><span class="sxs-lookup"><span data-stu-id="eaf22-207">BitWiseAnd (value1, value2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="eaf22-208">value1 & value2</span><span class="sxs-lookup"><span data-stu-id="eaf22-208">value1 & value2</span></span>|  
+|[<span data-ttu-id="eaf22-209">BitWiseNot (값)</span><span class="sxs-lookup"><span data-stu-id="eaf22-209">BitWiseNot (value)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="eaf22-210">~value</span><span class="sxs-lookup"><span data-stu-id="eaf22-210">~value</span></span>|  
+|[<span data-ttu-id="eaf22-211">BitWiseOr (value1, value2)</span><span class="sxs-lookup"><span data-stu-id="eaf22-211">BitWiseOr (value1, value2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="eaf22-212">value1 &#124; value2</span><span class="sxs-lookup"><span data-stu-id="eaf22-212">value1 &#124; value2</span></span>|  
+|[<span data-ttu-id="eaf22-213">BitWiseXor (value1, value2)</span><span class="sxs-lookup"><span data-stu-id="eaf22-213">BitWiseXor (value1, value2)</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="eaf22-214">value1 ^ value2</span><span class="sxs-lookup"><span data-stu-id="eaf22-214">value1 ^ value2</span></span>|

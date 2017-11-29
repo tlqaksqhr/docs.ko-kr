@@ -1,42 +1,45 @@
 ---
-title: "비동기 작업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "비동기 작업"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b616a6cf08dd47a9e46e8e887efbc88469dedfd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 비동기 작업
-명령 실행 등의 일부 데이터베이스 작업은 완료하는 데 시간이 오래 걸릴 수 있습니다.  이 경우 단일 스레드 응용 프로그램에서는 다른 작업을 차단하고 명령이 종료되기를 기다린 다음 자신의 작업을 계속 수행할 수 있습니다.  그러나 장기 실행 작업을 배경 스레드에 할당할 수 있으면 작업을 수행하는 동안 전경 스레드를 계속 활성화된 상태로 유지할 수 있습니다.  예를 들어, Windows 응용 프로그램에서 장기 실행 작업을 배경 스레드에 위임하면 작업을 실행하면서 사용자 인터페이스 스레드가 응답을 유지할 수 있습니다.  
+# <a name="asynchronous-operations"></a><span data-ttu-id="ff832-102">비동기 작업</span><span class="sxs-lookup"><span data-stu-id="ff832-102">Asynchronous Operations</span></span>
+<span data-ttu-id="ff832-103">명령 실행 등의 일부 데이터베이스 작업은 완료하는 데 시간이 오래 걸릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-103">Some database operations, such as command executions, can take significant time to complete.</span></span> <span data-ttu-id="ff832-104">이 경우 단일 스레드 응용 프로그램에서는 다른 작업을 차단하고 명령이 종료되기를 기다린 다음 자신의 작업을 계속 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-104">In such a case, single-threaded applications must block other operations and wait for the command to finish before they can continue their own operations.</span></span> <span data-ttu-id="ff832-105">그러나 장기 실행 작업을 배경 스레드에 할당할 수 있으면 작업을 수행하는 동안 전경 스레드를 계속 활성화된 상태로 유지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-105">In contrast, being able to assign the long-running operation to a background thread allows the foreground thread to remain active throughout the operation.</span></span> <span data-ttu-id="ff832-106">예를 들어, Windows 응용 프로그램에서 장기 실행 작업을 배경 스레드에 위임하면 작업을 실행하면서 사용자 인터페이스 스레드가 응답을 유지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-106">In a Windows application, for example, delegating the long-running operation to a background thread allows the user interface thread to remain responsive while the operation is executing.</span></span>  
   
- .NET Framework에서는 여러 가지 표준 비동기 디자인 패턴을 제공합니다. 이를 사용하여 개발자가 배경 스레드를 활용하는 것은 물론 사용자 인터페이스나 우선 순위가 높은 스레드에서 얼마든지 다른 작업을 완료할 수 있습니다.  ADO.NET은 해당 <xref:System.Data.SqlClient.SqlCommand> 클래스에서 이와 동일한 디자인 패턴을 지원합니다.  특히, <xref:System.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 및 <xref:System.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> 메서드와 쌍을 이루는 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 및 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 메서드에서 이와 같은 비동기 작업을 지원합니다.  
+ <span data-ttu-id="ff832-107">.NET Framework에서는 여러 가지 표준 비동기 디자인 패턴을 제공합니다. 이를 사용하여 개발자가 배경 스레드를 활용하는 것은 물론 사용자 인터페이스나 우선 순위가 높은 스레드에서 얼마든지 다른 작업을 완료할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-107">The .NET Framework provides several standard asynchronous design patterns that developers can use to take advantage of background threads and free the user interface or high-priority threads to complete other operations.</span></span> <span data-ttu-id="ff832-108">ADO.NET은 해당 <xref:System.Data.SqlClient.SqlCommand> 클래스에서 이와 동일한 디자인 패턴을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-108">ADO.NET supports these same design patterns in its <xref:System.Data.SqlClient.SqlCommand> class.</span></span> <span data-ttu-id="ff832-109">특히, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 및 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 메서드와 쌍을 이루는 <xref:System.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 및 <xref:System.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> 메서드에서 이와 같은 비동기 작업을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-109">Specifically, the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, and <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> methods, paired with the <xref:System.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A>, and <xref:System.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> methods, provide the asynchronous support.</span></span>  
   
 > [!NOTE]
->  비동기 프로그래밍은 .NET Framework의 핵심 기능이며 ADO.NET에서는 표준 디자인 패턴을 최대한 활용합니다.  개발자가 사용할 수 있는 다양한 비동기 기법에 대한 자세한 내용은 [Calling Synchronous Methods Asynchronously](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)를 참조하세요.  
+>  <span data-ttu-id="ff832-110">비동기 프로그래밍은 .NET Framework의 핵심 기능이며 ADO.NET에서는 표준 디자인 패턴을 최대한 활용합니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-110">Asynchronous programming is a core feature of the .NET Framework, and ADO.NET takes full advantage of the standard design patterns.</span></span> <span data-ttu-id="ff832-111">개발자에 게 사용할 수 있는 서로 다른 비동기 기법에 대 한 자세한 내용은 참조 [대](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-111">For more information about the different asynchronous techniques available to developers, see [Calling Synchronous Methods Asynchronously](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).</span></span>  
   
- 비동기 기법을 ADO.NET 기능과 함께 사용하더라도 특별히 고려해야 할 사항은 없지만 앞으로 .NET Framework의 다른 영역보다 ADO.NET의 비동기 기능을 사용하는 개발자의 수가 점차 늘어날 것으로 보입니다.  따라서 다중 스레드 응용 프로그램을 만드는 데 대한 이점과 문제점을 반드시 알아두어야 합니다.  이 단원의 뒷부분에 나오는 예제에서는 개발자가 다중 스레드 기능이 통합된 응용 프로그램을 빌드할 때 고려해야 할 몇 가지 중요한 문제에 대해 살펴 봅니다.  
+ <span data-ttu-id="ff832-112">비동기 기법을 ADO.NET 기능과 함께 사용하더라도 특별히 고려해야 할 사항은 없지만 앞으로 .NET Framework의 다른 영역보다 ADO.NET의 비동기 기능을 사용하는 개발자의 수가 점차 늘어날 것으로 보입니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-112">Although using asynchronous techniques with ADO.NET features does not add any special considerations, it is likely that more developers will use asynchronous features in ADO.NET than in other areas of the .NET Framework.</span></span> <span data-ttu-id="ff832-113">따라서 다중 스레드 응용 프로그램을 만드는 데 대한 이점과 문제점을 반드시 알아두어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-113">It is important to be aware of the benefits and pitfalls of creating multithreaded applications.</span></span> <span data-ttu-id="ff832-114">이 단원의 뒷부분에 나오는 예제에서는 개발자가 다중 스레드 기능이 통합된 응용 프로그램을 빌드할 때 고려해야 할 몇 가지 중요한 문제에 대해 살펴 봅니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-114">The examples that follow in this section point out several important issues that developers will need to take into account when building applications that incorporate multithreaded functionality.</span></span>  
   
-## 단원 내용  
- [콜백을 사용하는 Windows 응용 프로그램](../../../../../docs/framework/data/adonet/sql/windows-applications-using-callbacks.md)  
- 비동기 명령을 안전하게 실행하여 별도의 스레드에서 폼 및 해당 내용과의 상호 작용을 올바르게 처리하는 방법을 보여 주는 예제를 제공합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="ff832-115">단원 내용</span><span class="sxs-lookup"><span data-stu-id="ff832-115">In This Section</span></span>  
+ [<span data-ttu-id="ff832-116">콜백을 사용 하는 Windows 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="ff832-116">Windows Applications Using Callbacks</span></span>](../../../../../docs/framework/data/adonet/sql/windows-applications-using-callbacks.md)  
+ <span data-ttu-id="ff832-117">비동기 명령을 안전하게 실행하여 별도의 스레드에서 폼 및 해당 내용과의 상호 작용을 올바르게 처리하는 방법을 보여 주는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-117">Provides an example demonstrating how to execute an asynchronous command safely, correctly handling interaction with a form and its contents from a separate thread.</span></span>  
   
- [대기 핸들을 사용한 ASP.NET 응용 프로그램](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  
- ASP.NET 페이지에서 여러 동시 명령을 실행하고 대기 핸들을 사용하여 모든 명령이 완료될 때 작업을 관리하는 방법을 보여 주는 예제를 제공합니다.  
+ [<span data-ttu-id="ff832-118">대기 핸들을 사용 하 여 ASP.NET 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="ff832-118">ASP.NET Applications Using Wait Handles</span></span>](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  
+ <span data-ttu-id="ff832-119">ASP.NET 페이지에서 여러 동시 명령을 실행하고 대기 핸들을 사용하여 모든 명령이 완료될 때 작업을 관리하는 방법을 보여 주는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-119">Provides an example demonstrating how to execute multiple concurrent commands from an ASP.NET page, using Wait handles to manage the operation at completion of all the commands.</span></span>  
   
- [콘솔 응용 프로그램의 폴링](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
- 폴링을 사용하여 콘솔 응용 프로그램에서 비동기 명령 실행이 완료되기를 기다리는 방법을 보여 주는 예제를 제공합니다.  이 기법은 클래스 라이브러리나 사용자 인터페이스가 없는 다른 응용 프로그램에도 사용할 수 있습니다.  
+ [<span data-ttu-id="ff832-120">콘솔 응용 프로그램에서 폴링</span><span class="sxs-lookup"><span data-stu-id="ff832-120">Polling in Console Applications</span></span>](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
+ <span data-ttu-id="ff832-121">폴링을 사용하여 콘솔 응용 프로그램에서 비동기 명령 실행이 완료되기를 기다리는 방법을 보여 주는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-121">Provides an example demonstrating the use of polling to wait for the completion of an asynchronous command execution from a console application.</span></span> <span data-ttu-id="ff832-122">이 기법은 클래스 라이브러리나 사용자 인터페이스가 없는 다른 응용 프로그램에도 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff832-122">This technique is also valid in a class library or other application without a user interface.</span></span>  
   
-## 참고 항목  
- [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)   
- [Calling Synchronous Methods Asynchronously](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="ff832-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ff832-123">See Also</span></span>  
+ [<span data-ttu-id="ff832-124">SQL Server 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="ff832-124">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="ff832-125">동기 메서드를 비동기 방식으로 호출</span><span class="sxs-lookup"><span data-stu-id="ff832-125">Calling Synchronous Methods Asynchronously</span></span>](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+ [<span data-ttu-id="ff832-126">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="ff832-126">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

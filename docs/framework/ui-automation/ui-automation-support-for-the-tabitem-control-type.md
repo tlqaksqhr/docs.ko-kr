@@ -1,85 +1,87 @@
 ---
-title: "UI Automation Support for the TabItem Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Tab Item control type"
-  - "control types, Tab Item"
-  - "UI Automation, Tab Item control type"
+title: "TabItem 컨트롤 형식에 대한 UI 자동화 지원"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Tab Item control type
+- control types, Tab Item
+- UI Automation, Tab Item control type
 ms.assetid: 9b21160d-e1c2-468b-9275-26e4369ae40d
-caps.latest.revision: 22
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 0968118fa2c9c755ad88627a8ee09bed6eb3d19b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the TabItem Control Type
+# <a name="ui-automation-support-for-the-tabitem-control-type"></a><span data-ttu-id="1aec0-102">TabItem 컨트롤 형식에 대한 UI 자동화 지원</span><span class="sxs-lookup"><span data-stu-id="1aec0-102">UI Automation Support for the TabItem Control Type</span></span>
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  <span data-ttu-id="1aec0-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="1aec0-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aec0-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 이 항목에서는 TabItem 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
+ <span data-ttu-id="1aec0-105">이 항목에서는 TabItem 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the TabItem control type.</span></span> <span data-ttu-id="1aec0-106">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="1aec0-107">이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 탭 항목 컨트롤은 탭 컨트롤 내에서 창에 표시되는 특정 페이지를 선택하는 컨트롤로 사용됩니다.  
+ <span data-ttu-id="1aec0-108">탭 항목 컨트롤은 탭 컨트롤 내에서 창에 표시되는 특정 페이지를 선택하는 컨트롤로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-108">A tab item control is used as the control within a tab control that selects a specific page to be shown in a window.</span></span>  
   
- 다음 섹션에서는 TabItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 탭 항목 컨트롤에 적용됩니다.  
+ <span data-ttu-id="1aec0-109">다음 섹션에서는 TabItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the TabItem control type.</span></span> <span data-ttu-id="1aec0-110">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 탭 항목 컨트롤에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all tab item controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 필요한 UI 자동화 트리 구조  
- 다음 표는 탭 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대한 자세한 내용은 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="1aec0-111">필요한 UI 자동화 트리 구조</span><span class="sxs-lookup"><span data-stu-id="1aec0-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="1aec0-112">다음 표는 탭 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to tab item controls and describes what can be contained in each view.</span></span> <span data-ttu-id="1aec0-113">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리, 참조 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|컨트롤 뷰|콘텐츠 뷰|  
-|-----------|-----------|  
-|TabItem<br /><br /> <ul><li>Image\(0 또는 1개\)</li><li>텍스트</li><li>창<br /><br /> <ul><li>다양한 컨트롤\(0개 이상\)</li></ul></li></ul>|TabItem<br /><br /> <ul><li>창<br /><br /> <ul><li>다양한 컨트롤\(0개 이상\)</li></ul></li></ul>|  
+|<span data-ttu-id="1aec0-114">컨트롤 뷰</span><span class="sxs-lookup"><span data-stu-id="1aec0-114">Control View</span></span>|<span data-ttu-id="1aec0-115">콘텐츠 뷰</span><span class="sxs-lookup"><span data-stu-id="1aec0-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="1aec0-116">TabItem</span><span class="sxs-lookup"><span data-stu-id="1aec0-116">TabItem</span></span><br /><br /> <ul><li><span data-ttu-id="1aec0-117">Image(0 또는 1개)</span><span class="sxs-lookup"><span data-stu-id="1aec0-117">Image (0 or 1)</span></span></li><li><span data-ttu-id="1aec0-118">텍스트</span><span class="sxs-lookup"><span data-stu-id="1aec0-118">Text</span></span></li><li><span data-ttu-id="1aec0-119">창</span><span class="sxs-lookup"><span data-stu-id="1aec0-119">Pane</span></span><br /><br /> <ul><li><span data-ttu-id="1aec0-120">다양한 컨트롤(0개 이상)</span><span class="sxs-lookup"><span data-stu-id="1aec0-120">Various controls (0 or more)</span></span></li></ul></li></ul>|<span data-ttu-id="1aec0-121">TabItem</span><span class="sxs-lookup"><span data-stu-id="1aec0-121">TabItem</span></span><br /><br /> <ul><li><span data-ttu-id="1aec0-122">창</span><span class="sxs-lookup"><span data-stu-id="1aec0-122">Pane</span></span><br /><br /> <ul><li><span data-ttu-id="1aec0-123">다양한 컨트롤(0개 이상)</span><span class="sxs-lookup"><span data-stu-id="1aec0-123">Various controls (0 or more)</span></span></li></ul></li></ul>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 탭 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대한 자세한 내용은 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)를 참조하세요.  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="1aec0-124">필요한 UI 자동화 속성</span><span class="sxs-lookup"><span data-stu-id="1aec0-124">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="1aec0-125">다음 표에서는 값 또는 정의가 탭 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-125">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to tab item controls.</span></span> <span data-ttu-id="1aec0-126">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 참조 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-126">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|탭 항목 컨트롤에는 항목이 선택되도록 하는 클릭 가능한 지점이 있어야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|탭 항목 컨트롤은 레이블을 자체적으로 지정합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|탭 항목 컨트롤에는 정적 텍스트 레이블이 없습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|TabItem|이 값은 모든 UI 프레임워크에 대해 동일합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"tab item"|이 컨트롤 형식에 해당하는 지역화된 문자열입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|탭 항목 컨트롤이 항상 콘텐츠여야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|탭 항목 컨트롤이 항상 컨트롤이어야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControllerForProperty>|메모를 참조하세요.|이 속성은 연관된 탭 창에 대한 포인터로 사용할 수 있습니다. 이 기능은 창을 탭 항목 개체의 자식으로 호스트할 수 없는 경우에 유용합니다.|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="1aec0-127"> 속성</span><span class="sxs-lookup"><span data-stu-id="1aec0-127"> Property</span></span>|<span data-ttu-id="1aec0-128">값</span><span class="sxs-lookup"><span data-stu-id="1aec0-128">Value</span></span>|<span data-ttu-id="1aec0-129">노트</span><span class="sxs-lookup"><span data-stu-id="1aec0-129">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="1aec0-130">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aec0-130">See notes.</span></span>|<span data-ttu-id="1aec0-131">이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-131">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="1aec0-132">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aec0-132">See notes.</span></span>|<span data-ttu-id="1aec0-133">전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-133">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="1aec0-134">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aec0-134">See notes.</span></span>|<span data-ttu-id="1aec0-135">탭 항목 컨트롤에는 항목이 선택되도록 하는 클릭 가능한 지점이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-135">The tab item control must have a clickable point that causes the item to become selected.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="1aec0-136">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aec0-136">See notes.</span></span>|<span data-ttu-id="1aec0-137">컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-137">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="1aec0-138">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aec0-138">See notes.</span></span>|<span data-ttu-id="1aec0-139">탭 항목 컨트롤은 레이블을 자체적으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-139">The tab item control is self-labeled.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="1aec0-140">탭 항목 컨트롤에는 정적 텍스트 레이블이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-140">The tab item control does not have a static text label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="1aec0-141">TabItem</span><span class="sxs-lookup"><span data-stu-id="1aec0-141">TabItem</span></span>|<span data-ttu-id="1aec0-142">이 값은 모든 UI 프레임워크에 대해 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-142">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="1aec0-143">"tab item"</span><span class="sxs-lookup"><span data-stu-id="1aec0-143">"tab item"</span></span>|<span data-ttu-id="1aec0-144">이 컨트롤 형식에 해당하는 지역화된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-144">Localized string corresponding to this control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="1aec0-145">True</span><span class="sxs-lookup"><span data-stu-id="1aec0-145">True</span></span>|<span data-ttu-id="1aec0-146">탭 항목 컨트롤이 항상 콘텐츠여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-146">The tab item control must always be content.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="1aec0-147">True</span><span class="sxs-lookup"><span data-stu-id="1aec0-147">True</span></span>|<span data-ttu-id="1aec0-148">탭 항목 컨트롤이 항상 컨트롤이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-148">The tab item control must always be a control.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 필요한 UI 자동화 컨트롤 패턴  
- 다음 표에서는 탭 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="1aec0-149">필요한 UI 자동화 컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="1aec0-149">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="1aec0-150">다음 표에서는 탭 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-150">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by tab item controls.</span></span> <span data-ttu-id="1aec0-151">컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aec0-151">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|컨트롤 패턴|지원|노트|  
-|------------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|예|탭 항목 컨트롤은 SelectionItemPattern을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|아니요|탭 항목 컨트롤이 InvokePattern을 지원하지 않습니다.|  
+|<span data-ttu-id="1aec0-152">컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="1aec0-152">Control Pattern</span></span>|<span data-ttu-id="1aec0-153">지원</span><span class="sxs-lookup"><span data-stu-id="1aec0-153">Support</span></span>|<span data-ttu-id="1aec0-154">노트</span><span class="sxs-lookup"><span data-stu-id="1aec0-154">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|<span data-ttu-id="1aec0-155">예</span><span class="sxs-lookup"><span data-stu-id="1aec0-155">Yes</span></span>|<span data-ttu-id="1aec0-156">탭 항목 컨트롤은 SelectionItemPattern을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-156">The tab item control must support SelectionItemPattern.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|<span data-ttu-id="1aec0-157">아니요</span><span class="sxs-lookup"><span data-stu-id="1aec0-157">No</span></span>|<span data-ttu-id="1aec0-158">탭 항목 컨트롤이 InvokePattern을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-158">The tab item control never supports InvokePattern.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 필요한 UI 자동화 이벤트  
- 다음 표에서는 모든 탭 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="1aec0-159">필요한 UI 자동화 이벤트</span><span class="sxs-lookup"><span data-stu-id="1aec0-159">Required UI Automation Events</span></span>  
+ <span data-ttu-id="1aec0-160">다음 표에서는 모든 탭 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="1aec0-160">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all tab item controls.</span></span> <span data-ttu-id="1aec0-161">이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1aec0-161">For more information about events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
-|-------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="1aec0-162"> 이벤트</span><span class="sxs-lookup"><span data-stu-id="1aec0-162"> Event</span></span>|<span data-ttu-id="1aec0-163">지원</span><span class="sxs-lookup"><span data-stu-id="1aec0-163">Support</span></span>|<span data-ttu-id="1aec0-164">노트</span><span class="sxs-lookup"><span data-stu-id="1aec0-164">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<span data-ttu-id="1aec0-165"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="1aec0-165"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="1aec0-166">필수</span><span class="sxs-lookup"><span data-stu-id="1aec0-166">Required</span></span>|<span data-ttu-id="1aec0-167">없음</span><span class="sxs-lookup"><span data-stu-id="1aec0-167">None</span></span>|  
+|<span data-ttu-id="1aec0-168"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="1aec0-168"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="1aec0-169">필수</span><span class="sxs-lookup"><span data-stu-id="1aec0-169">Required</span></span>|<span data-ttu-id="1aec0-170">없음</span><span class="sxs-lookup"><span data-stu-id="1aec0-170">None</span></span>|  
+|<span data-ttu-id="1aec0-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="1aec0-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="1aec0-172">필수</span><span class="sxs-lookup"><span data-stu-id="1aec0-172">Required</span></span>|<span data-ttu-id="1aec0-173">없음</span><span class="sxs-lookup"><span data-stu-id="1aec0-173">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="1aec0-174">필수</span><span class="sxs-lookup"><span data-stu-id="1aec0-174">Required</span></span>|<span data-ttu-id="1aec0-175">없음</span><span class="sxs-lookup"><span data-stu-id="1aec0-175">None</span></span>|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|<span data-ttu-id="1aec0-176">필수</span><span class="sxs-lookup"><span data-stu-id="1aec0-176">Required</span></span>|<span data-ttu-id="1aec0-177">없음</span><span class="sxs-lookup"><span data-stu-id="1aec0-177">None</span></span>|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|<span data-ttu-id="1aec0-178">필수</span><span class="sxs-lookup"><span data-stu-id="1aec0-178">Required</span></span>|<span data-ttu-id="1aec0-179">없음</span><span class="sxs-lookup"><span data-stu-id="1aec0-179">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="1aec0-180">필수</span><span class="sxs-lookup"><span data-stu-id="1aec0-180">Required</span></span>|<span data-ttu-id="1aec0-181">없음</span><span class="sxs-lookup"><span data-stu-id="1aec0-181">None</span></span>|  
   
-## 참고 항목  
- <xref:System.Windows.Automation.ControlType.TabItem>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1aec0-182">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1aec0-182">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.TabItem>  
+ [<span data-ttu-id="1aec0-183">UI 자동화 컨트롤 형식 개요</span><span class="sxs-lookup"><span data-stu-id="1aec0-183">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="1aec0-184">UI 자동화 개요</span><span class="sxs-lookup"><span data-stu-id="1aec0-184">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)
