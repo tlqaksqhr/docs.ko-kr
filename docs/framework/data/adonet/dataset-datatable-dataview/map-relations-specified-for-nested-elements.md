@@ -1,27 +1,30 @@
 ---
-title: "중첩된 요소에 지정된 관계 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "중첩된 요소에 지정된 관계 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9866b556f2ba09cef7616fea4a2a6d8135e6b8e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 중첩된 요소에 지정된 관계 매핑
-두 요소 간의 매핑을 명시적으로 지정하기 위해 스키마에 **msdata:Relationship** 주석이 포함될 수 있습니다.  **msdata:Relationship**에 지정된 두 요소는 스키마에서 중첩될 수 있으나 반드시 중첩되어야 하는 것은 아닙니다.  매핑 프로세스에서는 스키마의 **msdata:Relationship**을 사용하여 두 열 간에 기본 키\/외래 키 관계를 생성합니다.  
+# <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="211b0-102">중첩된 요소에 지정된 관계 매핑</span><span class="sxs-lookup"><span data-stu-id="211b0-102">Map Relations Specified for Nested Elements</span></span>
+<span data-ttu-id="211b0-103">스키마를 포함할 수 있습니다는 **msdata: relationship** 주석을 명시적으로 스키마의 두 요소 간의 매핑을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="211b0-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="211b0-104">에 지정 된 두 요소가 **msdata: relationship** 스키마에서 중첩 될 수 있지만 될 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="211b0-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="211b0-105">매핑 프로세스를 사용 하 여 **msdata: relationship** 두 열 간의 기본 키/외래 키 관계를 생성 하는 스키마에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="211b0-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  
   
- 다음 예제에서는 **OrderDetail** 요소가 **Order**의 자식 요소인 XML 스키마를 보여 줍니다.  **msdata:Relationship**에서는 이러한 부모\-자식 관계를 식별하여, 결과 **Order** 테이블의 **OrderNumber** 열이 결과 **OrderDetail** 테이블의 **OrderNo** 열과 연관된다고 지정합니다.  
+ <span data-ttu-id="211b0-106">다음 예제는 XML 스키마를 보여 줍니다.는 **OrderDetail** 의 자식 요소 **순서**합니다.</span><span class="sxs-lookup"><span data-stu-id="211b0-106">The following example shows an XML Schema in which the **OrderDetail** element is a child element of **Order**.</span></span> <span data-ttu-id="211b0-107">**msdata: relationship** 이 부모-자식 관계를 식별 하 고 지정 하는 **OrderNumber** 열이 결과 **순서** 테이블이 관련 되어는 **OrderNo** 열이 결과 **OrderDetail** 테이블입니다.</span><span class="sxs-lookup"><span data-stu-id="211b0-107">The **msdata:Relationship** identifies this parent-child relationship and specifies that the **OrderNumber** column of the resulting **Order** table is related to the **OrderNo** column of the resulting **OrderDetail** table.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -59,16 +62,16 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- XML 스키마 매핑 프로세스에서는 <xref:System.Data.DataSet>에 다음 항목을 만듭니다.  
+ <span data-ttu-id="211b0-108">XML 스키마 매핑 프로세스에서는 <xref:System.Data.DataSet>에 다음 항목을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="211b0-108">The XML Schema mapping process creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   **Order** 및 **OrderDetail** 테이블을 만듭니다.  
+-   <span data-ttu-id="211b0-109">**순서** 및 **OrderDetail** 테이블입니다.</span><span class="sxs-lookup"><span data-stu-id="211b0-109">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   **Order** 및 **OrderDetail** 테이블 간의 관계를 만듭니다.  스키마에서 **Order** 및 **OrderDetail** 요소가 중첩되었기 때문에 이 관계의 **Nested** 속성은 **True**로 설정됩니다.  
+-   <span data-ttu-id="211b0-110">간의 관계는 **순서** 및 **OrderDetail** 테이블입니다.</span><span class="sxs-lookup"><span data-stu-id="211b0-110">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="211b0-111">**Nested** 이 관계에 대 한 속성이로 설정 되어 **True** 때문에 **순서** 및 **OrderDetail** 스키마에서 요소가 중첩 .</span><span class="sxs-lookup"><span data-stu-id="211b0-111">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -79,9 +82,9 @@ caps.handback.revision: 4
     Nested: True  
     ```  
   
- 매핑 프로세스에서는 어떠한 제약 조건도 만들지 않습니다.  
+ <span data-ttu-id="211b0-112">매핑 프로세스에서는 어떠한 제약 조건도 만들지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="211b0-112">The mapping process does not create any constraints.</span></span>  
   
-## 참고 항목  
- [XSD\(XML 스키마\)에서 DataSet 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [DataSet 제약 조건에 XSD\(XML 스키마\) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="211b0-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="211b0-113">See Also</span></span>  
+ [<span data-ttu-id="211b0-114">XML 스키마 (XSD)에서 데이터 집합 관계 생성</span><span class="sxs-lookup"><span data-stu-id="211b0-114">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="211b0-115">데이터 집합 제약 조건에 XML 스키마 (XSD) 제약 조건 매핑</span><span class="sxs-lookup"><span data-stu-id="211b0-115">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="211b0-116">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="211b0-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,71 +1,69 @@
 ---
-title: "방법: Windows Communication Foundation 클라이언트 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "클라이언트 [WCF], 실행"
-  - "WCF 클라이언트 [WCF], 실행"
+title: "방법: Windows Communication Foundation 클라이언트 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clients [WCF], running
+- WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: 64
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 64
+caps.latest.revision: "64"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0d207a067fe6d654fdd8384f1955a25c69185320
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Communication Foundation 클라이언트 만들기
-이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 필요한 6가지 작업 중 네 번째 작업입니다.6가지 작업의 개요를 모두 보려면 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목을 참조하십시오.  
+# <a name="how-to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="4b733-102">방법: Windows Communication Foundation 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="4b733-102">How to: Create a Windows Communication Foundation Client</span></span>
+<span data-ttu-id="4b733-103">이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 필요한 6가지 작업 중 네 번째 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-103">This is the fourth of six tasks required to create a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="4b733-104">모든 6 가지 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- 이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 메타데이터를 검색하고 이를 사용하여 서비스에 액세스할 수 있는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 프록시를 만드는 방법에 대해 설명합니다.이 작업은 Visual Studio에서 제공하는 서비스 참조 추가 기능을 사용하여 완료합니다.이 도구는 서비스의 MEX 끝점에서 메타데이터를 가져와 사용자가 선택한 언어를 사용하여 클라이언트 프록시에 대한 관리되는 소스 코드 파일을 생성합니다\(기본적으로 C\#\).클라이언트 프록시를 만드는 것 이외에 해당 도구는 클라이언트에 대한 구성 파일도 만들거나 업데이트합니다. 이 구성 파일을 사용하여 클라이언트 응용 프로그램에서 해당 끝점 중 하나의 서비스에 연결할 수 있습니다.  
+ <span data-ttu-id="4b733-105">이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 메타데이터를 검색하고 이를 사용하여 서비스에 액세스할 수 있는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 프록시를 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-105">This topic describes how to retrieve metadata from a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service and use it to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy that can access the service.</span></span> <span data-ttu-id="4b733-106">이 작업은 Visual Studio에서 제공하는 서비스 참조 추가 기능을 사용하여 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-106">This task is completed by using the Add Service Reference functionality provided by Visual Studio .</span></span> <span data-ttu-id="4b733-107">이 도구는 서비스의 MEX 끝점에서 메타데이터를 가져와 사용자가 선택한 언어를 사용하여 클라이언트 프록시에 대한 관리되는 소스 코드 파일을 생성합니다(기본적으로 C#).</span><span class="sxs-lookup"><span data-stu-id="4b733-107">This tool obtains the metadata from the service’s MEX endpoint and generates a managed source code file for a client proxy in the language you have chosen (C# by default).</span></span> <span data-ttu-id="4b733-108">클라이언트 프록시를 만드는 것 이외에 해당 도구는 클라이언트에 대한 구성 파일도 만들거나 업데이트합니다. 이 구성 파일을 사용하여 클라이언트 응용 프로그램에서 해당 끝점 중 하나의 서비스에 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-108">In addition to creating the client proxy, the tool also creates or updates the client configuration file which enables the client application to connect to the service at one of its endpoints.</span></span>  
   
 > [!NOTE]
->  또한 Visual Studio 내의 서비스 참조 추가를 사용하는 대신 [ServiceModel Metadata 유틸리티 도구\(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 사용하여 프록시 클래스와 구성을 만들 수 있습니다.  
+>  <span data-ttu-id="4b733-109">사용할 수도 있습니다는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 프록시 클래스와 Visual Studio 내에서 서비스 참조 추가 사용 하는 대신 구성을 생성 하는 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-109">You can also use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool to generate the proxy class and configuration instead of using Add Service Reference inside of Visual Studio.</span></span>  
   
 > [!WARNING]
->  [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]에서 클래스 라이브러리 프로젝트의 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 호출할 경우 서비스 참조 추가 기능을 사용하면 프록시 및 연결된 구성 파일을 자동으로 생성할 수 있습니다.이 구성 파일은 클래스 라이브러리 프로젝트에서는 사용되지 않습니다.생성된 구성 파일의 설정을 클래스 라이브러리를 호출하는 실행 파일의 app.config 파일에 추가해야 합니다.  
+>  <span data-ttu-id="4b733-110">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 클래스 라이브러리 프로젝트의 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 서비스를 호출할 경우 서비스 참조 추가 기능을 사용하면 프록시 및 연결된 구성 파일을 자동으로 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-110">When calling a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service from a class library project in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] you can use the Add Service Reference feature to automatically generate a proxy and associated configuration file.</span></span>  <span data-ttu-id="4b733-111">이 구성 파일은 클래스 라이브러리 프로젝트에서는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-111">The configuration file will not be used by the class library project.</span></span> <span data-ttu-id="4b733-112">생성된 구성 파일의 설정을 클래스 라이브러리를 호출하는 실행 파일의 app.config 파일에 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-112">You will need to add the settings in the generated configuration file to the app.config file for the executable that will call the class library.</span></span>  
   
- 클라이언트 응용 프로그램은 생성된 프록시 클래스를 사용하여 서비스와 통신합니다.이 절차에 대해서는 [방법: 클라이언트 사용](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)에서 설명합니다.  
+ <span data-ttu-id="4b733-113">클라이언트 응용 프로그램은 생성된 프록시 클래스를 사용하여 서비스와 통신합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-113">The client application uses the generated proxy class to communicate with the service.</span></span> <span data-ttu-id="4b733-114">이 절차에 설명 되어 [하는 방법: 클라이언트를 사용 하 여](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-114">This procedure is described in [How to: Use a Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).</span></span>  
   
-### Windows Communication Foundation 클라이언트를 만들려면  
+### <a name="to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="4b733-115">Windows Communication Foundation 클라이언트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="4b733-115">To create a Windows Communication Foundation client</span></span>  
   
-1.  Getting Started 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 프로젝트**를 차례로 선택하여 새 콘솔 응용 프로그램 프로젝트를 만듭니다.대화 상자의 왼쪽에 있는 **새 프로젝트 추가** 대화 상자에서 **C\#** 또는 **VB** 아래의 **Windows**를 선택합니다.대화 상자 가운데에서 **콘솔 응용 프로그램**을 선택합니다.프로젝트 이름을 `GettingStartedClient`로 지정합니다.  
+1.  <span data-ttu-id="4b733-116">선택 하면, Getting Started 솔루션을 마우스 오른쪽 단추로 클릭 하 여 새 콘솔 응용 프로그램 프로젝트를 만들 **추가**, **새 프로젝트**합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-116">Create a new console application project by right-clicking on the Getting Started solution, selecting, **Add**, **New Project**.</span></span> <span data-ttu-id="4b733-117">에 **새 프로젝트 추가** 대화에서 대화 선택의 왼쪽 **Windows** 아래 **C#** 또는 **VB**합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-117">In the **Add New Project** dialog on the left hand side of the dialog select **Windows** under **C#** or **VB**.</span></span> <span data-ttu-id="4b733-118">선택 대화 상자 가운데에서 **콘솔 응용 프로그램**합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-118">In the center section of the dialog select **Console Application**.</span></span> <span data-ttu-id="4b733-119">프로젝트 이름을 `GettingStartedClient`로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-119">Name the project `GettingStartedClient`.</span></span>  
   
-2.  솔루션 탐색기에서 **GettingStartedClient**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하여 GettingStartedClient 프로젝트의 대상 프레임워크로 .NET Framework 4.5를 설정합니다.**대상 프레임워크** 드롭다운 목록에서 **.NET Framework 4.5**를 선택합니다.VB 프로젝트의 대상 프레임워크를 설정하는 방법은 약간 다릅니다. GettingStartedClient 프로젝트 속성 대화 상자에서 화면 왼쪽의 **컴파일** 탭을 클릭한 다음 대화 상자의 왼쪽 아래 모퉁이에 있는 **고급 컴파일 옵션** 단추를 클릭하십시오.그런 다음 **대상 프레임워크** 드롭다운 상자에서 **.NET Framework 4.5**를 선택합니다.  
+2.  <span data-ttu-id="4b733-120">마우스 오른쪽 단추로 클릭 하 여 GettingStartedClient 프로젝트의 대상 프레임 워크로.NET Framework 4.5로 설정 **GettingStartedClient** 솔루션 탐색기에서 선택 하 고 **속성**합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-120">Set the target framework of the GettingStartedClient project to .NET Framework 4.5 by right clicking on **GettingStartedClient** in the Solution Explorer and selecting **Properties**.</span></span> <span data-ttu-id="4b733-121">드롭다운 목록에서 레이블이 **대상 프레임 워크** 선택 **.NET Framework 4.5**합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-121">In the dropdown box labeled **Target Framework** select **.NET Framework 4.5**.</span></span> <span data-ttu-id="4b733-122">VB 프로젝트는 약간 다릅니다. GettingStartedClient 프로젝트 속성 대화 상자에서 대상 프레임 워크를 설정를 클릭 하 고 **컴파일** 화면 왼쪽에 탭을 클릭 한 다음는 **고급 컴파일 옵션** 대화 상자의 왼쪽 아래 모퉁이에 있는 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-122">Setting the target framework for a VB project is a little different, in the GettingStartedClient project properties dialog, click the **Compile** tab on the left-hand side of the screen, and then click the **Advanced Compile Options** button at the lower left-hand corner of the dialog.</span></span> <span data-ttu-id="4b733-123">그런 다음 선택 **.NET Framework 4.5** 드롭다운 상자에서 **대상 프레임 워크**합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-123">Then select **.NET Framework 4.5** in the dropdown box labeled **Target Framework**.</span></span>  
   
-     대상 프레임워크를 설정하면 Visual Studio 2011에서 솔루션을 다시 로드합니다. 메시지가 나타나면 **확인**을 누르십시오.  
+     <span data-ttu-id="4b733-124">솔루션을 다시 로드 하려면 Visual Studio 2011의 대상 프레임 워크를 설정 하면 키를 눌러 **확인** 대화 상자가 나타나면 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-124">Setting the target framework will cause Visual Studio 2011 to reload the solution, press **OK** when prompted.</span></span>  
   
-3.  솔루션 탐색기에서 GettingStartedClient 프로젝트의 **References** 폴더를 마우스 오른쪽 단추로 클릭하여 System.ServiceModel에 대한 참조를 GettingStartedClient에 추가하고 **참조 추가**를 선택합니다.**참조 추가** 대화 상자에서 대화 상자 왼쪽의 **프레임워크**를 선택합니다.검색 어셈블리 텍스트 상자에 `System.ServiceModel`을 입력합니다.대화 상자 가운데에서 **System.ServiceModel**을 선택하고 **추가** 단추를 클릭한 다음 **닫기** 단추를 클릭합니다.주 메뉴에서 **모두 저장** 단추를 클릭하여 솔루션을 저장합니다.  
+3.  <span data-ttu-id="4b733-125">GettingStartedClient 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 System.ServiceModel에 대 한 참조를 추가 **참조** 선택 하 고 솔루션 탐색기에서 GettingStartedClient 프로젝트 아래의 폴더 **추가** 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-125">Add a reference to System.ServiceModel to the GettingStartedClient project by right-clicking the **Reference** folder under the GettingStartedClient project in Solution Explorer and select **Add** Reference.</span></span> <span data-ttu-id="4b733-126">에 **참조 추가** 대화 선택 **프레임 워크** 대화 상자의 왼쪽에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-126">In the **Add Reference** dialog select **Framework** on the left-hand side of the dialog.</span></span> <span data-ttu-id="4b733-127">검색 어셈블리 텍스트 상자에 `System.ServiceModel`을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-127">In the Search Assemblies textbox, type in `System.ServiceModel`.</span></span> <span data-ttu-id="4b733-128">선택 대화 상자 가운데에서 **System.ServiceModel**, 클릭는 **추가** 단추를 클릭 하 고는 **닫기** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-128">In the center section of the dialog select **System.ServiceModel**, click the **Add** button, and click the **Close** button.</span></span> <span data-ttu-id="4b733-129">클릭 하 여 솔루션을 저장 된 **모두 저장** 주 메뉴 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-129">Save the solution by clicking the **Save All** button below the main menu.</span></span>  
   
-4.  그런 다음 계산기 서비스에 대한 서비스 참조를 추가합니다.그렇게 하기 전에 GettingStartedHost 콘솔 응용 프로그램을 실행해야 합니다.호스트가 실행되면 솔루션 탐색기의 GettingStartedClient 프로젝트에서 References 폴더를 마우스 오른쪽 단추로 클릭하고 서비스 참조 추가를 선택한 다음 서비스 참조 추가 대화 상자의 주소 상자에 URL\(http:\/\/localhost:8000\/ServiceModelSamples\/Service\)을 입력하고 **이동** 단추를 클릭합니다.서비스 목록 상자에 CalculatorService가 표시됩니다. CalculatorService를 두 번 클릭하면 확장되면서 서비스에서 구현한 서비스 계약이 표시됩니다.기본 네임스페이스를 그대로 두고 **확인** 단추를 클릭합니다.  
+4.  <span data-ttu-id="4b733-130">그런 다음 계산기 서비스에 대한 서비스 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-130">Next you wlll add a service reference to the Calculator Service.</span></span> <span data-ttu-id="4b733-131">그렇게 하기 전에 GettingStartedHost 콘솔 응용 프로그램을 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-131">Before you can do that, you must start up the GettingStartedHost console application.</span></span> <span data-ttu-id="4b733-132">솔루션 탐색기에서 GettingStartedClient 프로젝트에서 References 폴더를 마우스 오른쪽 단추로 클릭 하 고 서비스 참조 추가 대화 상자의 주소 상자에 다음 URL에서 서비스 참조 추가 및 형식을 선택할 수 호스트가 실행 되 면: "http:/ 하이퍼링크 / localhost:8000/ServiceModelSamples/Service "을 클릭 하 고: //localhost: 8000/ServiceModelSamples/Service는 **이동** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-132">Once the host is running you can right click the References folder under the GettingStartedClient project in the Solution Explorer and select Add Service Reference and type in the following URL in the address box of the Add Service Reference dialog:  HYPERLINK "http://localhost:8000/ServiceModelSamples/Service" http://localhost:8000/ServiceModelSamples/Service and   click the **Go** button.</span></span> <span data-ttu-id="4b733-133">서비스 목록 상자에 CalculatorService가 표시됩니다. CalculatorService를 두 번 클릭하면 확장되면서 서비스에서 구현한 서비스 계약이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-133">The CalculatorService should then be displayed in the Services list box, Double click CalculatorService and it will expand and show the service contracts implemented by the service.</span></span> <span data-ttu-id="4b733-134">클릭 하 고 기본 네임 스페이스를 그대로 둡니다는 **확인** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-134">Leave the default namespace as is and click the **OK** button.</span></span>  
   
-     Visual Studio를 사용하여 서비스에 대한 참조를 추가하면 솔루션 탐색기에서 GettingStartedClient 프로젝트 아래의 Service References 폴더에 새 항목이 나타납니다.[ServiceModel Metadata 유틸리티 도구\(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 사용하면 소스 코드 파일과 app.config 파일이 생성됩니다.  
+     <span data-ttu-id="4b733-135">Visual Studio를 사용하여 서비스에 대한 참조를 추가하면 솔루션 탐색기에서 GettingStartedClient 프로젝트 아래의 Service References 폴더에 새 항목이 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-135">When you add a reference to a service using Visual Studio a new item will appear in the Solution Explorer under the Service References folder under the GettingStartedClient project.</span></span>  <span data-ttu-id="4b733-136">사용 하는 경우는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구는 소스 코드 파일 및 app.config 파일이 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-136">If you use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool a source code file and app.config file will be generated.</span></span>  
   
-     또한 적절한 스위치로 명령줄 도구 [ServiceModel Metadata 유틸리티 도구\(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용하여 클라이언트 코드를 만들 수도 있습니다.다음 예제에서는 서비스에 대해 코드 파일 및 구성 파일을 생성합니다.첫 번째 예제는 VB에서 프록시를 생성하는 방법을 보여 주고 두 번째 예제는 C\#에서 프록시를 생성하는 방법을 보여 줍니다.  
+     <span data-ttu-id="4b733-137">명령줄 도구를 사용할 수도 있습니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 에 적절 한 스위치는 클라이언트 코드를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-137">You can also use the command-line tool [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) with the appropriate switches to create the client code.</span></span> <span data-ttu-id="4b733-138">다음 예제에서는 서비스에 대해 코드 파일 및 구성 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-138">The following example generates a code file and a configuration file for the service.</span></span> <span data-ttu-id="4b733-139">첫 번째 예제는 VB에서 프록시를 생성하는 방법을 보여 주고 두 번째 예제는 C#에서 프록시를 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-139">The first example shows how to generate the proxy in VB and the second shows how to generated the proxy in C#:</span></span>  
   
     ```  
     svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/ServiceModelSamples/service  
-  
     ```  
   
     ```csharp  
     svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/ServiceModelSamples/service  
-  
     ```  
   
- 클라이언트 응용 프로그램이 계산기 서비스를 호출하기 위해 사용할 프록시가 만들어졌습니다.일련의 항목 중 다음 항목을 계속 하십시오.[방법: 클라이언트 구성](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
+ <span data-ttu-id="4b733-140">클라이언트 응용 프로그램이 계산기 서비스를 호출하기 위해 사용할 프록시가 만들어졌습니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-140">You have now created the proxy that the client application will use to call the calculator service.</span></span> <span data-ttu-id="4b733-141">시리즈의 다음 항목으로 이동: [하는 방법: 클라이언트 구성](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)</span><span class="sxs-lookup"><span data-stu-id="4b733-141">Proceed to the next topic in the series: [How to: Configure a Client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)</span></span>  
   
-## 참고 항목  
- [ServiceModel Metadata 유틸리티 도구\(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [시작](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [자체 호스팅](../../../docs/framework/wcf/samples/self-host.md)   
- [방법: 구성 파일을 사용하여 서비스의 메타데이터 게시](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)   
- [방법: Svcutil.exe를 사용하여 메타데이터 문서 다운로드](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+## <a name="see-also"></a><span data-ttu-id="4b733-142">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4b733-142">See Also</span></span>  
+ [<span data-ttu-id="4b733-143">ServiceModel Metadata 유틸리티 도구(Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="4b733-143">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="4b733-144">시작</span><span class="sxs-lookup"><span data-stu-id="4b733-144">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="4b733-145">자체 호스팅</span><span class="sxs-lookup"><span data-stu-id="4b733-145">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)  
+ [<span data-ttu-id="4b733-146">방법: 구성 파일을 사용 하 여 서비스에 대 한 메타 데이터를 게시 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b733-146">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [<span data-ttu-id="4b733-147">방법: Svcutil.exe를 사용 하 여 메타 데이터 문서를 다운로드 하려면</span><span class="sxs-lookup"><span data-stu-id="4b733-147">How to: Use Svcutil.exe to Download Metadata Documents</span></span>](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)

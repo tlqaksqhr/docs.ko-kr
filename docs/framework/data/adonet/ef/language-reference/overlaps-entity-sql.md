@@ -1,57 +1,55 @@
 ---
-title: "OVERLAPS(Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: OVERLAPS(Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b3544eac58fe168c5f2e6a355e8cf97b4598bb76
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# OVERLAPS(Entity SQL)
-두 컬렉션에 공통 요소가 있는지 여부를 확인합니다.  
+# <a name="overlaps-entity-sql"></a><span data-ttu-id="5fa78-102">OVERLAPS(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="5fa78-102">OVERLAPS (Entity SQL)</span></span>
+<span data-ttu-id="5fa78-103">두 컬렉션에 공통 요소가 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-103">Determines whether two collections have common elements.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="5fa78-104">구문</span><span class="sxs-lookup"><span data-stu-id="5fa78-104">Syntax</span></span>  
   
 ```  
-  
 expression OVERLAPS expression  
 ```  
   
-## 인수  
+## <a name="arguments"></a><span data-ttu-id="5fa78-105">인수</span><span class="sxs-lookup"><span data-stu-id="5fa78-105">Arguments</span></span>  
  `expression`  
- 다른 쿼리 식에서 반환된 컬렉션과 비교할 컬렉션을 반환하는 모든 유효한 쿼리 식입니다. 모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `expression`이어야 합니다.  
+ <span data-ttu-id="5fa78-106">다른 쿼리 식에서 반환된 컬렉션과 비교할 컬렉션을 반환하는 모든 유효한 쿼리 식입니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-106">Any valid query expression that returns a collection to compare with the collection returned from another query expression.</span></span> <span data-ttu-id="5fa78-107">모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `expression`이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-107">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
   
-## 반환 값  
- 두 컬렉션에 공통 요소가 있으면 `true`이고, 그렇지 않으면 `false`입니다.  
+## <a name="return-value"></a><span data-ttu-id="5fa78-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="5fa78-108">Return Value</span></span>  
+ <span data-ttu-id="5fa78-109">두 컬렉션에 공통 요소가 있으면`true` 이고, 그렇지 않으면 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-109">`true` if the two collections have common elements; otherwise, `false`.</span></span>  
   
-## 설명  
- OVERLAPS는 다음 식과 동일한 기능을 제공합니다``.  
+## <a name="remarks"></a><span data-ttu-id="5fa78-110">설명</span><span class="sxs-lookup"><span data-stu-id="5fa78-110">Remarks</span></span>  
+ <span data-ttu-id="5fa78-111">OVERLAPS 제공 기능적으로 다음에 해당을 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-111">OVERLAPS provides functionally equivalent tothe following:</span></span>  
   
  `EXISTS ( expression INTERSECT expression )`  
   
- OVERLAPS는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자 중 하나입니다. 모든 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자는 왼쪽에서 오른쪽으로 계산됩니다.[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자의 우선 순위에 대한 자세한 내용은 [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) 항목을 참조하세요.  
+ <span data-ttu-id="5fa78-112">OVERLAPS는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-112">OVERLAPS is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="5fa78-113">모든 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자는 왼쪽에서 오른쪽으로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-113">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="5fa78-114">우선 순위에 대 한 정보는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자, 참조 [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-114">For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span></span>  
   
-## 예제  
- 다음 Entity SQL 쿼리에서는 OVERLAPS 연산자를 사용하여 두 컬렉션에 공통 값이 있는지 여부를 결정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
+## <a name="example"></a><span data-ttu-id="5fa78-115">예제</span><span class="sxs-lookup"><span data-stu-id="5fa78-115">Example</span></span>  
+ <span data-ttu-id="5fa78-116">다음 Entity SQL 쿼리에서는 OVERLAPS 연산자를 사용하여 두 컬렉션에 공통 값이 있는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-116">The following Entity SQL query uses the OVERLAPS operator to determines whether two collections have a common value.</span></span> <span data-ttu-id="5fa78-117">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-117">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="5fa78-118">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="5fa78-118">To compile and run this, follow these steps:</span></span>  
   
-1.  [방법: StructuralType 결과를 반환하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
+1.  <span data-ttu-id="5fa78-119">[How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-119">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
+2.  <span data-ttu-id="5fa78-120">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa78-120">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   
-## 참고 항목  
- [Entity SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="5fa78-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5fa78-121">See Also</span></span>  
+ [<span data-ttu-id="5fa78-122">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="5fa78-122">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

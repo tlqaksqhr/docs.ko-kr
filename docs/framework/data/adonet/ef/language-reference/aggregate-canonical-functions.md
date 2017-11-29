@@ -1,89 +1,82 @@
 ---
-title: "집계 정식 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "집계 정식 함수"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5a5aea48b1c70c550641f3450dff16e57dd4f62b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 집계 정식 함수
-집계는 일련의 입력 값을 단일 값으로 줄이는 식입니다.  집계는 일반적으로 SELECT 식의 GROUP BY 절과 함께 사용되며 사용할 수 있는 위치에 대한 제약 조건이 있습니다.  
-  
- 다음 표에서는 집계 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수를 보여 줍니다.  
-  
-|함수|설명|  
-|--------|--------|  
-|`Avg(` `expression` `)`|null이 아닌 값의 평균을 반환합니다.<br /><br /> **인수**<br /><br /> `Int32`,  `Int64`, `Double` 및 `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `expression`의 형식입니다.  모든 입력 값이 `null` 값인 경우 `Null`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
- [!code-sql[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]|  
-|`BigCount(` `expression` `)`|null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.<br /><br /> **인수**<br /><br /> 모든 형식입니다.<br /><br /> **반환 값**<br /><br /> `Int64`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
- [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]|  
-|`Count(` `expression` `)`|null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.<br /><br /> **인수**<br /><br /> 모든 형식입니다.<br /><br /> **반환 값**<br /><br /> `Int32`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)]
- [!code-sql[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)]|  
-|`Max(` `expression` `)`|null이 아닌 값의 최대값을 반환합니다.<br /><br /> **인수**<br /><br /> `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.<br /><br /> **반환 값**<br /><br /> `expression`의 형식입니다.  모든 입력 값이 `null` 값인 경우 `Null`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)]
- [!code-sql[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)]|  
-|`Min(` `expression` `)`|null이 아닌 값의 최소값을 반환합니다.<br /><br /> **인수**<br /><br /> `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.<br /><br /> **반환 값**<br /><br /> `expression`의 형식입니다.  모든 입력 값이 `null` 값인 경우 `Null`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)]
- [!code-sql[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)]|  
-|`StDev(` `expression` `)`|null이 아닌 값의 표준 편차를 반환합니다.<br /><br /> **인수**<br /><br /> `Int32`, `Int64`, `Double`, `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `Double` 모든 입력 값이 `null` 값인 경우 `Null`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)]
- [!code-sql[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)]|  
-|`StDevP(` `expression` `)`|모든 값의 모집단에 대한 표준 편차를 반환합니다.<br /><br /> **인수**<br /><br /> `Int32`, `Int64`, `Double`, `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `Double` 모든 입력 값이 `null` 값인 경우 `Null`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)]
- [!code-sql[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)]|  
-|`Sum(` `expression` `)`|null이 아닌 값의 합계를 반환합니다.<br /><br /> **인수**<br /><br /> `Int32`, `Int64`, `Double`, `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `Double` 모든 입력 값이 `null` 값인 경우 `Null`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)]
- [!code-sql[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)]|  
-|`Var(` `expression` `)`|null이 아닌 모든 값의 분산을 반환합니다.<br /><br /> **인수**<br /><br /> `Int32`, `Int64`, `Double`, `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `Double` 모든 입력 값이 `null` 값인 경우 `Null`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)]
- [!code-sql[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)]|  
-|`VarP(` `expression` `)`|null이 아닌 모든 값의 모집단에 대한 분산을 반환합니다.<br /><br /> **인수**<br /><br /> `Int32`, `Int64`, `Double`, `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `Double` 모든 입력 값이 `null` 값인 경우 `Null`입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
- [!code-sql[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]|  
-  
- 동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다.  자세한 내용은 [Entity Framework 함수용 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)을 참조하세요.  
-  
-## 컬렉션 기반 집계  
- 컬렉션 기반 집계\(컬렉션 함수\)는 컬렉션에 대해 작업을 수행하고 값을 반환합니다.  예를 들어, ORDERS가 모든 주문의 컬렉션인 경우 다음 식을 사용하여 가장 빠른 운송 날짜를 계산할 수 있습니다.  
-  
-```  
-min(select value o.ShipDate from LOB.Orders as o)  
-```  
-  
- 컬렉션 기반 집계 내의 식은 현재 앰비언트 이름 확인 범위 내에서 계산됩니다.  
-  
-## 그룹 기반 집계  
- 그룹 기반 집계는 GROUP BY 절에 정의된 대로 그룹에 대해 계산됩니다.  결과의 각 그룹별로 각 그룹의 요소를 집계 계산에 대한 입력으로 사용하여 개별 집계가 계산됩니다.  SELECT 식에 GROUP BY 절이 사용되는 경우에는 식 이름, 집계 또는 상수를 그룹화하는 식만 프로젝션 또는 ORDER BY 절에 있을 수 있습니다.  
-  
- 다음 예제에서는 각 제품에 대해 주문된 평균 수량을 계산합니다.  
-  
-```  
-select p, avg(ol.Quantity) from LOB.OrderLines as ol  
-  group by ol.Product as p  
-```  
-  
- SELECT 식에서 GROUP BY 절을 명시적으로 사용하지 않고 그룹 기반 집계를 사용할 수도 있습니다.  이 경우에는 모든 요소가 단일 그룹으로 간주됩니다.  이는 상수를 기준으로 그룹화를 지정하는 것과 같습니다.  예를 들어, 다음 식을 살펴보겠습니다.  
-  
-```  
-select avg(ol.Quantity) from LOB.OrderLines as ol  
-```  
-  
- 이 식은 다음 식과 같습니다.  
-  
-```  
-select avg(ol.Quantity) from LOB.OrderLines as ol group by 1  
-```  
-  
- 그룹 기반 집계 내의 식은 WHERE 절 식에 표시되는 이름 확인 범위 내에서 계산됩니다.  
-  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]과 마찬가지로 그룹 기반 집계도 ALL 또는 DISTINCT 한정자를 지정할 수 있습니다.  DISTINCT 한정자를 지정하면 집계가 계산되기 전에 집계 입력 컬렉션에서 중복 항목이 제거됩니다.  ALL 한정자를 지정하거나 어떠한 한정자도 지정하지 않으면 중복 항목이 제거되지 않습니다.  
-  
-## 참고 항목  
- [정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+# <a name="aggregate-canonical-functions"></a><span data-ttu-id="8bbea-102">집계 정식 함수</span><span class="sxs-lookup"><span data-stu-id="8bbea-102">Aggregate Canonical Functions</span></span>
+
+<span data-ttu-id="8bbea-103">집계는 일련의 입력 값을 단일 값으로 줄이는 식입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-103">Aggregates are expressions that reduce a series of input values into, for example, a single value.</span></span> <span data-ttu-id="8bbea-104">집계는 일반적으로 SELECT 식의 GROUP BY 절과 함께 사용되며 사용할 수 있는 위치에 대한 제약 조건이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-104">Aggregates are normally used in conjunction with the GROUP BY clause of the SELECT expression, and there are constraints on where they can be used.</span></span>
+
+<span data-ttu-id="8bbea-105">다음 표에서는 집계 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-105">The following table shows the aggregate [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>
+
+| <span data-ttu-id="8bbea-106">함수</span><span class="sxs-lookup"><span data-stu-id="8bbea-106">Function</span></span> | <span data-ttu-id="8bbea-107">설명</span><span class="sxs-lookup"><span data-stu-id="8bbea-107">Description</span></span> |
+| -------- | ----------- |
+| `Avg(expression)` | <span data-ttu-id="8bbea-108">null이 아닌 값의 평균을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-108">Returns the average of the non-null values.</span></span><br><br><span data-ttu-id="8bbea-109">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-109">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-110">`Int32`, `Int64`, `Double` 및 `Decimal`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-110">An `Int32`, `Int64`, `Double`, and `Decimal`.</span></span><br><br><span data-ttu-id="8bbea-111">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-111">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-112">`expression`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-112">The type of `expression`.</span></span> <span data-ttu-id="8bbea-113">모든 입력 값이 `Null` 값인 경우 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-113">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="8bbea-114">**예제** [!code-csharp [DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)][!code-sql[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-114">**Example**[!code-csharp[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] [!code-sql[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]</span></span> |
+| `BigCount(expression)` | <span data-ttu-id="8bbea-115">null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-115">Returns the size of the aggregate including null and duplicate values.</span></span><br><br><span data-ttu-id="8bbea-116">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-116">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-117">모든 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-117">Any type.</span></span><br><br><span data-ttu-id="8bbea-118">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-118">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-119">`Int64`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-119">An `Int64`.</span></span><br><br><span data-ttu-id="8bbea-120">**예제** [!code-csharp [DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)][!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-120">**Example**[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]</span></span> |
+| `Count(expression)` | <span data-ttu-id="8bbea-121">null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-121">Returns the size of the aggregate including null and duplicate values.</span></span><br><br><span data-ttu-id="8bbea-122">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-122">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-123">모든 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-123">Any type.</span></span><br><br><span data-ttu-id="8bbea-124">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-124">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-125">`Int32`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-125">An `Int32`.</span></span><br><br><span data-ttu-id="8bbea-126">**예제** [!code-csharp [DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)][!code-sql[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-126">**Example**[!code-csharp[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)] [!code-sql[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)]</span></span> |
+| `Max(expression)` | <span data-ttu-id="8bbea-127">null이 아닌 값의 최대값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-127">Returns the maximum of the non-null values.</span></span><br><br><span data-ttu-id="8bbea-128">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-128">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-129">`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-129">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span></span><br><br><span data-ttu-id="8bbea-130">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-130">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-131">`expression`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-131">The type of `expression`.</span></span> <span data-ttu-id="8bbea-132">모든 입력 값이 `Null` 값인 경우 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-132">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="8bbea-133">**예제** [!code-csharp [DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)][!code-sql[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-133">**Example**[!code-csharp[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)] [!code-sql[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)]</span></span> |
+| `Min(expression)` | <span data-ttu-id="8bbea-134">null이 아닌 값의 최소값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-134">Returns the minimum of the non-null values.</span></span><br><br><span data-ttu-id="8bbea-135">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-135">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-136">`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-136">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span></span><br><br><span data-ttu-id="8bbea-137">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-137">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-138">`expression`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-138">The type of `expression`.</span></span> <span data-ttu-id="8bbea-139">모든 입력 값이 `Null` 값인 경우 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-139">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="8bbea-140">**예제** [!code-csharp [DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)][!code-sql[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-140">**Example**[!code-csharp[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)] [!code-sql[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)]</span></span> |
+| `StDev(expression)` | <span data-ttu-id="8bbea-141">null이 아닌 값의 표준 편차를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-141">Returns the standard deviation of the non-null values.</span></span><br><br><span data-ttu-id="8bbea-142">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-142">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-143">`Int32`, `Int64`, `Double`, `Decimal`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-143">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="8bbea-144">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-144">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-145">`Double`</span><span class="sxs-lookup"><span data-stu-id="8bbea-145">A `Double`.</span></span> <span data-ttu-id="8bbea-146">모든 입력 값이 `Null` 값인 경우 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-146">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="8bbea-147">**예제** [!code-csharp [DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)][!code-sql[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-147">**Example**[!code-csharp[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)] [!code-sql[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)]</span></span> |
+| `StDevP(expression)` | <span data-ttu-id="8bbea-148">모든 값의 모집단에 대한 표준 편차를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-148">Returns the standard deviation for the population of all values.</span></span><br><br><span data-ttu-id="8bbea-149">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-149">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-150">`Int32`, `Int64`, `Double`, `Decimal`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-150">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="8bbea-151">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-151">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-152">`Double`</span><span class="sxs-lookup"><span data-stu-id="8bbea-152">A `Double`.</span></span> <span data-ttu-id="8bbea-153">모든 입력 값이 `Null` 값인 경우 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-153">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="8bbea-154">**예제** [!code-csharp [DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)][!code-sql[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-154">**Example**[!code-csharp[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)] [!code-sql[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)]</span></span> |
+| `Sum(expression)` | <span data-ttu-id="8bbea-155">null이 아닌 값의 합계를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-155">Returns the sum of the non-null values.</span></span><br><br><span data-ttu-id="8bbea-156">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-156">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-157">`Int32`, `Int64`, `Double`, `Decimal`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-157">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="8bbea-158">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-158">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-159">`Double`</span><span class="sxs-lookup"><span data-stu-id="8bbea-159">A `Double`.</span></span> <span data-ttu-id="8bbea-160">모든 입력 값이 `Null` 값인 경우 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-160">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="8bbea-161">**예제** [!code-csharp [DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)][!code-sql[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-161">**Example**[!code-csharp[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)] [!code-sql[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)]</span></span> |
+| `Var(expression)` | <span data-ttu-id="8bbea-162">null이 아닌 모든 값의 분산을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-162">Returns the variance of all non-null values.</span></span><br><br><span data-ttu-id="8bbea-163">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-163">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-164">`Int32`, `Int64`, `Double`, `Decimal`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-164">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="8bbea-165">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-165">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-166">`Double`</span><span class="sxs-lookup"><span data-stu-id="8bbea-166">A `Double`.</span></span> <span data-ttu-id="8bbea-167">모든 입력 값이 `Null` 값인 경우 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-167">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="8bbea-168">**예제** [!code-csharp [DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)][!code-sql[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-168">**Example**[!code-csharp[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)] [!code-sql[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)]</span></span> |
+| `VarP(expression)` | <span data-ttu-id="8bbea-169">null이 아닌 모든 값의 모집단에 대한 분산을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-169">Returns the variance for the population of all non-null values.</span></span><br><br><span data-ttu-id="8bbea-170">**인수**</span><span class="sxs-lookup"><span data-stu-id="8bbea-170">**Arguments**</span></span><br><br><span data-ttu-id="8bbea-171">`Int32`, `Int64`, `Double`, `Decimal`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-171">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="8bbea-172">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="8bbea-172">**Return Value**</span></span><br><br><span data-ttu-id="8bbea-173">`Double`</span><span class="sxs-lookup"><span data-stu-id="8bbea-173">A `Double`.</span></span> <span data-ttu-id="8bbea-174">모든 입력 값이 `Null` 값인 경우 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-174">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="8bbea-175">**예제** [!code-csharp [DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)][!code-sql[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]</span><span class="sxs-lookup"><span data-stu-id="8bbea-175">**Example**[!code-csharp[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)] [!code-sql[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]</span></span> |
+
+<span data-ttu-id="8bbea-176">동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-176">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="8bbea-177">자세한 내용은 참조 [엔터티 프레임 워크 함수에 대 한 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-177">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>
+
+## <a name="collection-based-aggregates"></a><span data-ttu-id="8bbea-178">컬렉션 기반 집계</span><span class="sxs-lookup"><span data-stu-id="8bbea-178">Collection-based aggregates</span></span>
+
+<span data-ttu-id="8bbea-179">컬렉션 기반 집계(컬렉션 함수)는 컬렉션에 대해 작업을 수행하고 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-179">Collection-based aggregates (collection functions) operate on collections and return a value.</span></span> <span data-ttu-id="8bbea-180">예를 들어 ORDERS가 모든 주문의 컬렉션인, 다음 식 사용 하 여 가장 빠른 운송 날짜를 계산할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-180">For example if ORDERS is a collection of all orders, you can calculate the earliest ship date with the following expression:</span></span>
+
+```sql
+min(select value o.ShipDate from LOB.Orders as o)
+```
+
+<span data-ttu-id="8bbea-181">컬렉션 기반 집계 내의 식은 현재 앰비언트 이름 결정 범위 내에서 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-181">Expressions inside collection-based aggregates are evaluated within the current ambient name-resolution scope.</span></span>
+
+## <a name="group-based-aggregates"></a><span data-ttu-id="8bbea-182">그룹 기반 집계</span><span class="sxs-lookup"><span data-stu-id="8bbea-182">Group-based aggregates</span></span>
+
+<span data-ttu-id="8bbea-183">그룹 기반 집계는 GROUP BY 절에 정의된 대로 그룹에 대해 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-183">Group-based aggregates are calculated over a group as defined by the GROUP BY clause.</span></span> <span data-ttu-id="8bbea-184">결과의 각 그룹별로 각 그룹의 요소를 집계 계산에 대한 입력으로 사용하여 개별 집계가 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-184">For each group in the result, a separate aggregate is calculated by using the elements in each group as input to the aggregate calculation.</span></span> <span data-ttu-id="8bbea-185">SELECT 식에 GROUP BY 절이 사용되는 경우에는 식 이름, 집계 또는 상수를 그룹화하는 식만 프로젝션 또는 ORDER BY 절에 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-185">When a group-by clause is used in a select expression, only grouping expression names, aggregates, or constant expressions can be present in the projection or order-by clause.</span></span>
+
+<span data-ttu-id="8bbea-186">다음 예제에서는 각 제품에 대해 주문된 평균 수량을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-186">The following example calculates the average quantity ordered for each product:</span></span>
+
+```sql
+select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+  group by ol.Product as p
+```
+
+<span data-ttu-id="8bbea-187">SELECT 식에 명시적 group by 절이 없는 그룹 기반 집계를 사용 하도록 것 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-187">It's possible to have a group-based aggregate without an explicit group-by clause in the SELECT expression.</span></span> <span data-ttu-id="8bbea-188">이 경우 모든 요소가 단일 그룹으로 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-188">In this case, all elements are treated as a single group.</span></span> <span data-ttu-id="8bbea-189">상수를 기준으로 그룹화를 지정 하는 것과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-189">This is equivalent of specifying a grouping based on a constant.</span></span> <span data-ttu-id="8bbea-190">예를 들어, 다음 식을 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-190">Take, for example, the following expression:</span></span>
+
+```sql
+select avg(ol.Quantity) from LOB.OrderLines as ol
+```
+
+<span data-ttu-id="8bbea-191">이 식은 다음 식과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-191">This is equivalent to the following:</span></span>
+
+```sql
+select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
+```
+
+<span data-ttu-id="8bbea-192">그룹 기반 집계 내의 식은 WHERE 절 식에 표시되는 이름 결정 범위 내에서 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-192">Expressions inside the group-based aggregate are evaluated within the name-resolution scope that would be visible to the WHERE clause expression.</span></span>
+
+<span data-ttu-id="8bbea-193">와 같이 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], 그룹 기반 집계는 모두 지정할 수도 한정자 나 DISTINCT 한정자입니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-193">As in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], group-based aggregates can also specify an ALL or DISTINCT modifier.</span></span> <span data-ttu-id="8bbea-194">DISTINCT 한정자를 지정하면 집계가 계산되기 전에 집계 입력 컬렉션에서 중복 항목이 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-194">If the DISTINCT modifier is specified, duplicates are eliminated from the aggregate input collection, before the aggregate is computed.</span></span> <span data-ttu-id="8bbea-195">ALL 한정자를 지정하거나 어떠한 한정자도 지정하지 않으면 중복 항목이 제거되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8bbea-195">If the ALL modifier is specified (or if no modifier is specified), no duplicate elimination is performed.</span></span>  
+
+## <a name="see-also"></a><span data-ttu-id="8bbea-196">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8bbea-196">See also</span></span>
+
+[<span data-ttu-id="8bbea-197">정식 함수</span><span class="sxs-lookup"><span data-stu-id="8bbea-197">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

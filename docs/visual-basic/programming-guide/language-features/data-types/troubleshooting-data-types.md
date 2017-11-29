@@ -1,147 +1,130 @@
 ---
-title: "데이터 형식 (Visual Basic) 문제 해결 | Microsoft 문서"
+title: "데이터 형식 문제 해결(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- Char data type, converting
-- Decimal data type, conversions
+- Char data type [Visual Basic], converting
+- Decimal data type [Visual Basic], conversions
 - data types [Visual Basic], troubleshooting
-- literals, default types
-- type characters, literal
+- literals [Visual Basic], default types
+- type characters [Visual Basic], literal
 - Mod operator [Visual Basic], in floating-point operations
 - troubleshooting Visual Basic, data types
-- troubleshooting data types
-- floating-point numbers, precision
-- Boolean data type, converting
-- literal types
-- literal type characters
-- floating-point numbers, imprecision
-- String data type, converting
-- floating-point numbers, comparison
+- troubleshooting data types [Visual Basic]
+- floating-point numbers [Visual Basic], precision
+- Boolean data type [Visual Basic], converting
+- literal types [Visual Basic]
+- literal type characters [Visual Basic]
+- floating-point numbers [Visual Basic], imprecision
+- String data type [Visual Basic], converting
+- floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cfb8fc77d3e0d85ef795a94fc95ab61a8f68ff39
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4d2fb1cd1be9c88ad0dd413eedb8a226fe59f41e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="troubleshooting-data-types-visual-basic"></a>데이터 형식 문제 해결(Visual Basic)
-이 페이지는 내장 데이터 형식에 대 한 작업을 수행할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
+# <a name="troubleshooting-data-types-visual-basic"></a><span data-ttu-id="3f692-102">데이터 형식 문제 해결(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f692-102">Troubleshooting Data Types (Visual Basic)</span></span>
+<span data-ttu-id="3f692-103">이 페이지는 내장 데이터 형식에 대 한 작업을 수행할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-103">This page lists some common problems that can occur when you perform operations on intrinsic data types.</span></span>  
   
-## <a name="floating-point-expressions-do-not-compare-as-equal"></a>부동 소수점 식 동일한 것으로 비교 하지 않습니다.  
- 부동 소수점 숫자를 작업 하는 경우 ([단일 데이터 형식](../../../../visual-basic/language-reference/data-types/single-data-type.md) 및 [Double 데이터 형식](../../../../visual-basic/language-reference/data-types/double-data-type.md)), 이진 소수로 저장 해야 합니다. 즉, 이진 소수 없는 수량 정확 하 게 나타내지는 저장할 수 없습니다 (형식 k / (2 ^ n) k 및 n은 정수). 예를 들어 0.5 (= 1/2)와 0.3125 (= 5/16) 이지만 (= 1/5) 0.2 및 0.3 (3/10 =) 정확한 값으로 유지 수 있습니다.  
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a><span data-ttu-id="3f692-104">부동 소수점 식을 동일한 것으로 비교 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-104">Floating-Point Expressions Do Not Compare as Equal</span></span>  
+ <span data-ttu-id="3f692-105">부동 소수점 숫자를 작업할 때 ([단일 데이터 형식](../../../../visual-basic/language-reference/data-types/single-data-type.md) 및 [Double 데이터 형식의](../../../../visual-basic/language-reference/data-types/double-data-type.md)), 이진 소수로 저장 되도록 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-105">When you work with floating-point numbers ([Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md)), remember that they are stored as binary fractions.</span></span> <span data-ttu-id="3f692-106">즉, 이진 소수 되지 않은 수량 정확한 숫자를 포함할 수 없습니다 (형식 k / (2 ^ n) k 및 n은 정수).</span><span class="sxs-lookup"><span data-stu-id="3f692-106">This means they cannot hold an exact representation of any quantity that is not a binary fraction (of the form k / (2 ^ n) where k and n are integers).</span></span> <span data-ttu-id="3f692-107">예를 들어 0.5 (1/2 =) 및 (= 5/16) 0.3125 반면 0.2 (1/5 =) 및 (3/10 =) 0.3 정확한 값으로 보유할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-107">For example, 0.5 (= 1/2) and 0.3125 (= 5/16) can be held as precise values, whereas 0.2 (= 1/5) and 0.3 (= 3/10) can be only approximations.</span></span>  
   
- 이 때문에 부정확성으로 사용할 수 없게 정확한 결과를 부동 소수점 값에 작동 하는 경우. 특히, 이론적으로 동일한 두 값에는 약간 다르게 표시 될 수 있습니다.  
+ <span data-ttu-id="3f692-108">이 때문에 부정확성으로 사용할 수 없게 정확한 결과를 부동 소수점 값에 작동 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="3f692-108">Because of this imprecision, you cannot rely on exact results when you operate on floating-point values.</span></span> <span data-ttu-id="3f692-109">특히, 이론적으로 동일한 두 개의 값 약간 다르게 표시 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-109">In particular, two values that are theoretically equal might have slightly different representations.</span></span>  
   
-| 부동 소수점 수량을 비교 하려면 | 
+| <span data-ttu-id="3f692-110">부동 소수점 수량을 비교 하려면</span><span class="sxs-lookup"><span data-stu-id="3f692-110">To compare floating-point quantities</span></span> | 
 |---| 
-|1.  사용 하 여 해당 차이의 절대값을 계산할는 <xref:System.Math.Abs%2A>의 메서드는 <xref:System.Math>클래스에 <xref:System>네임 스페이스.</xref:System> </xref:System.Math> </xref:System.Math.Abs%2A><br />2.  같아야 실무 점 간의 차이 크지 않은 경우 두 개의 수량을 고려할 수 있도록 허용 가능한 최대 차이 결정 합니다.<br />3.  허용 오차에 대 한 차이의 절대값을 비교 합니다.|  
+|<span data-ttu-id="3f692-111">1.  사용 하 여 해당 차이의 절대값을 계산할는 <xref:System.Math.Abs%2A> 의 메서드는 <xref:System.Math> 클래스에 <xref:System> 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-111">1.  Calculate the absolute value of their difference by using the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class in the <xref:System> namespace.</span></span><br /><span data-ttu-id="3f692-112">2.  차이가 크지 해당 하는 경우 실제로 동일한 것으로 두 개의 수량을 고려할 수 있도록 허용 가능한 최대 차이 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-112">2.  Determine an acceptable maximum difference, such that you can consider the two quantities to be equal for practical purposes if their difference is no larger.</span></span><br /><span data-ttu-id="3f692-113">3.  차이 허용 오차를 절대 값을 비교 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-113">3.  Compare the absolute value of the difference to the acceptable difference.</span></span>|  
   
- 다음 예제에서는 두 개의 잘못 된 방법과 올바른 비교 `Double` 값입니다.  
+ <span data-ttu-id="3f692-114">다음 예제에서는 두 개의 잘못 된 방법과 올바른 비교 `Double` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-114">The following example demonstrates both incorrect and correct comparison of two `Double` values.</span></span>  
   
- [!code-vb[VbVbalrDataTypes #&10;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
   
- 앞의 예제에서는 <xref:System.Double.ToString%2A>의 메서드는 <xref:System.Double>보다 더 정확한을 지정할 수 있도록 구조는 `CStr` 키워드를 사용 합니다.</xref:System.Double> </xref:System.Double.ToString%2A> 기본값은 15 자리인 하지만 "G17" 형식 17 자리를 확장 합니다.  
+ <span data-ttu-id="3f692-115">사용 하 여 이전 예제는 <xref:System.Double.ToString%2A> 의 메서드는 <xref:System.Double> 보다 더 정확한을 지정할 수 있도록 구조는 `CStr` 키워드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-115">The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better  precision than the `CStr` keyword uses.</span></span> <span data-ttu-id="3f692-116">기본값은 15 자리 하지만 "G17" 형식 17 자리를 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-116">The default is 15 digits, but the "G17" format extends it to 17 digits.</span></span>  
   
-## <a name="mod-operator-does-not-return-accurate-result"></a>Mod 연산자 정확한 결과 반환 하지 않습니다.  
- 부동 소수점 저장의 부정확성으로 인해는 [Mod 연산자](../../../../visual-basic/language-reference/operators/mod-operator.md) 피연산자 중 하나는 부동 소수점 예기치 않은 결과 반환할 수 있습니다.  
+## <a name="mod-operator-does-not-return-accurate-result"></a><span data-ttu-id="3f692-117">Mod 연산자 정확한 결과 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-117">Mod Operator Does Not Return Accurate Result</span></span>  
+ <span data-ttu-id="3f692-118">부동 소수점 저장소 부정확성으로 인해는 [Mod 연산자](../../../../visual-basic/language-reference/operators/mod-operator.md) 피연산자 중 하나 이상에 부동 소수점 경우 예기치 않은 결과 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-118">Because of the imprecision of floating-point storage, the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md) can return an unexpected result when at least one of the operands is floating-point.</span></span>  
   
- [Decimal 데이터 형식](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) 부동 소수점 표시를 사용 하지 않습니다. 에서는 정확 하지 않은 숫자 `Single` 및 `Double` 에서는 정확 하 `Decimal` (예: 0.2 및 0.3). 산술에서 느린 `Decimal` 보다 부동 소수점 수도 성능 저하를 감내할 가치가 있습니다.  
+ <span data-ttu-id="3f692-119">[Decimal 데이터 형식](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) 부동 소수점 표시를 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-119">The [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) does not use floating-point representation.</span></span> <span data-ttu-id="3f692-120">정확 하지 않은 많은 숫자 `Single` 및 `Double` 에서는 정확 하 `Decimal` (예: 0.2 및 0.3).</span><span class="sxs-lookup"><span data-stu-id="3f692-120">Many numbers that are inexact in `Single` and `Double` are exact in `Decimal` (for example 0.2 and 0.3).</span></span> <span data-ttu-id="3f692-121">산술에 느린 `Decimal` 보다에 부동 소수점, 두면 유용할 수 성능 저하를 감내할 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-121">Although arithmetic is slower in `Decimal` than in floating-point, it might be worth the performance decrease to achieve better precision.</span></span>  
   
-|부동 소수점 수량의 정수 나머지를 찾을 수|  
+|<span data-ttu-id="3f692-122">부동 소수점 수량이의 정수 나머지를 구하려는 수</span><span class="sxs-lookup"><span data-stu-id="3f692-122">To find the integer remainder of floating-point quantities</span></span>|  
 |---|  
-|1.  변수를 선언 `Decimal`합니다.<br />2.  리터럴 형식 문자를 사용 하 여 `D` 에 리터럴을 적용 `Decimal`해당 값이에 비해 너무 큰 경우에 `Long` 데이터 형식입니다.|  
+|<span data-ttu-id="3f692-123">1.  변수를 선언 `Decimal`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-123">1.  Declare variables as `Decimal`.</span></span><br /><span data-ttu-id="3f692-124">2.  리터럴 형식 문자를 사용 하 여 `D` 에 리터럴을 적용 `Decimal`리터럴 값이 너무 커서에 대 한 경우, 고 `Long` 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-124">2.  Use the literal type character `D` to force literals to `Decimal`, in case their values are too large for the `Long` data type.</span></span>|  
   
- 다음 예제에서는 부동 소수점 피연산자의 잠재적 부정확성을 보여 줍니다.  
+ <span data-ttu-id="3f692-125">다음 예제에서는 부동 소수점 피연산자의 잠재적 부정확성 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-125">The following example demonstrates the potential imprecision of floating-point operands.</span></span>  
   
- [!code-vb[VbVbalrDataTypes #&11;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
   
- 앞의 예제에서는 <xref:System.Double.ToString%2A>의 메서드는 <xref:System.Double>보다 더 정확한을 지정할 수 있도록 구조는 `CStr` 키워드를 사용 합니다.</xref:System.Double> </xref:System.Double.ToString%2A> 기본값은 15 자리인 하지만 "G17" 형식 17 자리를 확장 합니다.  
+ <span data-ttu-id="3f692-126">사용 하 여 이전 예제는 <xref:System.Double.ToString%2A> 의 메서드는 <xref:System.Double> 보다 더 정확한을 지정할 수 있도록 구조는 `CStr` 키워드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-126">The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better precision than the `CStr` keyword uses.</span></span> <span data-ttu-id="3f692-127">기본값은 15 자리 하지만 "G17" 형식 17 자리를 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-127">The default is 15 digits, but the "G17" format extends it to 17 digits.</span></span>  
   
- 때문에 `zeroPointTwo` 는 `Double`, 0.2에 대 한 값이 저장 된 값이 0.20000000000000001 인 무한 반복 되는 이진 소수입니다. 이 수량 2.0 나누어 9.9999999999999995 0.19999999999999991의 나머지를 구합니다.  
+ <span data-ttu-id="3f692-128">때문에 `zeroPointTwo` 은 `Double`, 0.2에 대 한 해당 값이 저장 된 값이 0.20000000000000001 인 무한 반복 되는 이진 소수입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-128">Because `zeroPointTwo` is `Double`, its value for 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001.</span></span> <span data-ttu-id="3f692-129">2.0이이 수량으로 나누는 9.9999999999999995 0.19999999999999991의 나머지를 구합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-129">Dividing 2.0 by this quantity yields 9.9999999999999995 with a remainder of 0.19999999999999991.</span></span>  
   
- 에 대 한 식에서 `decimalRemainder`, 리터럴 형식 문자 `D` 두 피연산자 모두 강제로 `Decimal`, 0.2에 정확한 표시 합니다. 따라서는 `Mod` 연산자 0.0 예상된 나머지를 구합니다.  
+ <span data-ttu-id="3f692-130">에 대 한 식에서 `decimalRemainder`, 리터럴 형식 문자 `D` 두 피연산자 모두 강제로 `Decimal`, 0.2에 정확한 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-130">In the expression for `decimalRemainder`, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.</span></span> <span data-ttu-id="3f692-131">따라서는 `Mod` 연산자 0.0 예상된 나머지를 구합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-131">Therefore the `Mod` operator yields the expected remainder of 0.0.</span></span>  
   
- 선언 하는 데 충분 하지는 `decimalRemainder` 으로 `Decimal`합니다. 리터럴의 강제로 해야 `Decimal`, 사용 하 여 `Double` 기본적으로 및 `decimalRemainder` 같은 부정확 한 값을 받는 `doubleRemainder`합니다.  
+ <span data-ttu-id="3f692-132">선언 하는 데 충분 하지 않습니다 `decimalRemainder` 으로 `Decimal`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-132">Note that it is not sufficient to declare `decimalRemainder` as `Decimal`.</span></span> <span data-ttu-id="3f692-133">리터럴을 강제 해야 `Decimal`를 사용 하 여 `Double` 기본적으로 및 `decimalRemainder` 같은 부정확 한 값을 받는 `doubleRemainder`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-133">You must also force the literals to `Decimal`, or they use `Double` by default and `decimalRemainder` receives the same inaccurate value as `doubleRemainder`.</span></span>  
   
-## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>부울 형식 숫자 형식으로 정확 하 게 변환 되지 않습니다.  
- [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 값은 숫자로 저장 되지 않으며 저장 된 값은 숫자에 해당 되지 않습니다. 이전 버전과 호환성에 대 한 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 변환 키워드를 제공 ([CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`등) 사이 변환할 `Boolean` 및 숫자 형식입니다. 그러나 다른 언어 때로는 이러한 변환을 수행할 마찬가지로 다르게는 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 메서드.  
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a><span data-ttu-id="3f692-134">Boolean 형식의 숫자 형식으로 정확 하 게 변환 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-134">Boolean Type Does Not Convert to Numeric Type Accurately</span></span>  
+ <span data-ttu-id="3f692-135">[Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 숫자로 값은 저장 되지 않으며 숫자에 해당 되는 저장 된 값은 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-135">[Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) values are not stored as numbers, and the stored values are not intended to be equivalent to numbers.</span></span> <span data-ttu-id="3f692-136">이전 버전과 호환성을 위해 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 변환 키워드를 제공 합니다. ([CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`등) 사이 변환할 `Boolean` 및 숫자 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-136">For compatibility with earlier versions, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] provides conversion keywords ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, and so on) to convert between `Boolean` and numeric types.</span></span> <span data-ttu-id="3f692-137">하지만 다른 언어 때로는 이러한 변환을 수행 같이 다르게는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드.</span><span class="sxs-lookup"><span data-stu-id="3f692-137">However, other languages sometimes perform these conversions differently, as do the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] methods.</span></span>  
   
- 해당 하는 숫자 값을 사용 하는 코드를 작성 하지 마십시오 `True` 및 `False`합니다. 사용을 제한 해야 가능 하다 면 `Boolean` 하도록 디자인 된 논리 값으로 변수입니다. 혼합 해야 하는 경우 `Boolean` 숫자 값을 선택 하는 변환 메서드를 알고 있는지 확인 합니다.  
+ <span data-ttu-id="3f692-138">해당 하는 숫자 값을 사용 하는 코드를 작성 하지 마십시오 `True` 및 `False`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-138">You should never write code that relies on equivalent numeric values for `True` and `False`.</span></span> <span data-ttu-id="3f692-139">용도 제한 해야 가능 하면 항상 `Boolean` 변수도 설계 된 논리 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-139">Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.</span></span> <span data-ttu-id="3f692-140">혼합 해야 `Boolean` 숫자 값을 선택 하는 변환 메서드를 알고 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-140">If you must mix `Boolean` and numeric values, make sure that you understand the conversion method that you select.</span></span>  
   
-### <a name="conversion-in-visual-basic"></a>Visual Basic의 변환  
- 사용 하는 경우는 `CType` 또는 `CBool` 변환 키워드를 숫자 데이터 형식을 변환 하려면 `Boolean`, 0은 `False` 고 다른 모든 값은 `True`합니다. 변환 하는 경우 `Boolean` 값을 변환 키워드를 사용 하 여 숫자 형식 `False` 0이 되 고 `True` 는-1입니다.  
+### <a name="conversion-in-visual-basic"></a><span data-ttu-id="3f692-141">Visual Basic의 변환</span><span class="sxs-lookup"><span data-stu-id="3f692-141">Conversion in Visual Basic</span></span>  
+ <span data-ttu-id="3f692-142">사용 하는 경우는 `CType` 또는 `CBool` 변환 키워드를 숫자 데이터 형식을 변환 하려면 `Boolean`, 0은 `False` 고 다른 모든 값은 `True`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-142">When you use the `CType` or `CBool` conversion keywords to convert numeric data types to `Boolean`, 0 becomes `False` and all other values become `True`.</span></span> <span data-ttu-id="3f692-143">변환 하는 경우 `Boolean` 값을 변환 키워드를 사용 하 여 숫자 형식 `False` 0이 되 고 `True` 는-1입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-143">When you convert `Boolean` values to numeric types by using the conversion keywords, `False` becomes 0 and `True` becomes -1.</span></span>  
   
-### <a name="conversion-in-the-framework"></a>Framework의 변환  
- <xref:System.Convert.ToInt32%2A>의 메서드는 <xref:System.Convert>클래스에 <xref:System>네임 스페이스 변환 `True` 를 +&1;.</xref:System> </xref:System.Convert> </xref:System.Convert.ToInt32%2A>  
+### <a name="conversion-in-the-framework"></a><span data-ttu-id="3f692-144">Framework의 변환</span><span class="sxs-lookup"><span data-stu-id="3f692-144">Conversion in the Framework</span></span>  
+ <span data-ttu-id="3f692-145"><xref:System.Convert.ToInt32%2A> 의 메서드는 <xref:System.Convert> 클래스에 <xref:System> 네임 스페이스 변환 `True` 에서 + 1입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-145">The <xref:System.Convert.ToInt32%2A> method of the <xref:System.Convert> class in the <xref:System> namespace converts `True` to +1.</span></span>  
   
- 변환 해야 하는 경우는 `Boolean` 숫자 데이터 형식으로 값을 주의 해야 변환 메서드를 사용 합니다.  
+ <span data-ttu-id="3f692-146">변환 해야 하는 경우는 `Boolean` 숫자 데이터 형식으로 값을 주의 변환 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-146">If you must convert a `Boolean` value to a numeric data type, be careful about which conversion method you use.</span></span>  
   
-## <a name="character-literal-generates-compiler-error"></a>컴파일러 오류를 생성 하는 문자 리터럴  
- 형식 문자가 없을 경우 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 에서는 기본 리터럴에 대 한 데이터 형식을 사용 합니다. 리터럴 문자에 대 한 기본 형식-따옴표로 묶인 (`" "`)-은 `String`합니다.  
+## <a name="character-literal-generates-compiler-error"></a><span data-ttu-id="3f692-147">문자 리터럴은 컴파일러 오류를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-147">Character Literal Generates Compiler Error</span></span>  
+ <span data-ttu-id="3f692-148">형식 문자가 없을 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 에서는 기본 리터럴에 대 한 데이터 형식을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-148">In the absence of any type characters, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] assumes default data types for literals.</span></span> <span data-ttu-id="3f692-149">리터럴 문자에 대 한 기본 형식-따옴표로 묶인 (`" "`)-은 `String`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-149">The default type for a character literal — enclosed in quotation marks (`" "`) — is `String`.</span></span>  
   
- `String` 데이터 형식에 확대 변환 되지 않으면는 [Char 데이터 형식을](../../../../visual-basic/language-reference/data-types/char-data-type.md)합니다. 즉 리터럴을 할당 하려는 경우는 `Char` 변수인 축소 변환을 하거나 리터럴을에 `Char` 유형입니다.  
+ <span data-ttu-id="3f692-150">`String` 데이터 형식으로 확대 되지 않습니다는 [Char 데이터 형식을](../../../../visual-basic/language-reference/data-types/char-data-type.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-150">The `String` data type does not widen to the [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md).</span></span> <span data-ttu-id="3f692-151">즉 리터럴을 할당 하려는 경우는 `Char` 변수인 축소 변환을 하거나에 리터럴을 `Char` 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-151">This means that if you want to assign a literal to a `Char` variable, you must either make a narrowing conversion or force the literal to the `Char` type.</span></span>  
 
-|Char 변수 또는 상수에 할당 하려면 리터럴 만들려면|
+|<span data-ttu-id="3f692-152">변수 또는 상수에 할당할 리터럴 Char를 만들려면</span><span class="sxs-lookup"><span data-stu-id="3f692-152">To create a Char literal to assign to a variable or constant</span></span>|
 |---|  
-|1.  변수 또는으로 상수 선언 `Char`합니다.<br />2.  문자 값을 따옴표로 묶습니다 (`" "`).<br />3.  닫는 큰따옴표와 리터럴 형식 문자에 따라 `C` 에 리터럴을 강제로 `Char`합니다. 이 경우 형식 검사 스위치 필요 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))은 `On`는 것이 좋습니다 어떤 경우 든 합니다.|  
+|<span data-ttu-id="3f692-153">1.  변수 또는으로 상수 선언 `Char`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-153">1.  Declare the variable or constant as `Char`.</span></span><br /><span data-ttu-id="3f692-154">2.  문자 값을 따옴표로 묶습니다 (`" "`).</span><span class="sxs-lookup"><span data-stu-id="3f692-154">2.  Enclose the character value in quotation marks (`" "`).</span></span><br /><span data-ttu-id="3f692-155">3.  닫는 큰따옴표와 리터럴 형식 문자에 따라 `C` 에 리터럴을 강제로 `Char`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-155">3.  Follow the closing double quotation mark with the literal type character `C` to force the literal to `Char`.</span></span> <span data-ttu-id="3f692-156">이 형식 검사 스위치 경우 필요 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))은 `On`, 것이 바람직합니다 어떤 경우에 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-156">This is necessary if the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, and it is desirable in any case.</span></span>|  
   
- 다음 예제에서는 리터럴을 실패 하 여 성공적으로 할당 한 `Char` 변수입니다.  
+ <span data-ttu-id="3f692-157">다음 예제에서는 리터럴을 실패 및 성공한 할당 한 `Char` 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-157">The following example demonstrates both unsuccessful and successful assignments of a literal to a `Char` variable.</span></span>  
   
- [!code-vb[VbVbalrDataTypes #&12;](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
   
- 항상 위험을 사용 하는 축소 변환을 런타임에 실패할 수 있기 때문입니다. 예를 들어 변환 `String` 를 `Char` 경우 실패할 수 있습니다는 `String` 개 이상의 문자를 포함 하는 값입니다. 따라서 사용 하 여 더 프로그래밍이 `C` 문자를 입력 합니다.  
+ <span data-ttu-id="3f692-158">항상 위험이 있습니다 축소 변환을 사용 하 여 런타임 시 실패할 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-158">There is always a risk in using narrowing conversions, because they can fail at run time.</span></span> <span data-ttu-id="3f692-159">변환 예를 들어 `String` 를 `Char` 에 실패할 수 있습니다는 `String` 값 둘 이상의 문자가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-159">For example, a conversion from `String` to `Char` can fail if the `String` value contains more than one character.</span></span> <span data-ttu-id="3f692-160">사용 하 여 더 잘 프로그래밍 따라서는 `C` 문자를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-160">Therefore, it is better programming to use the `C` type character.</span></span>  
   
-## <a name="string-conversion-fails-at-run-time"></a>런타임에 문자열 변환 실패  
- [문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md) 거의 확대 변환에 참여 합니다. `String`자체에 확장 및 `Object`만 `Char` 및 `Char()` (한 `Char` 배열)로 확대 변환 `String`합니다. 즉, `String` 변수 및 상수에 다른 데이터 형식을 포함할 수 없는 값을 포함할 수 있습니다.  
+## <a name="string-conversion-fails-at-run-time"></a><span data-ttu-id="3f692-161">런타임 시 문자열 변환이 실패</span><span class="sxs-lookup"><span data-stu-id="3f692-161">String Conversion Fails at Run Time</span></span>  
+ <span data-ttu-id="3f692-162">[문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md) 매우 적은 확대 변환에 참여 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-162">The [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) participates in very few widening conversions.</span></span> <span data-ttu-id="3f692-163">`String`자체에 확장 및 `Object`만 `Char` 및 `Char()` (한 `Char` 배열)으로 확장 `String`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-163">`String` widens only to itself and `Object`, and only `Char` and `Char()` (a `Char` array) widen to `String`.</span></span> <span data-ttu-id="3f692-164">즉, `String` 변수 및 상수를 포함할 수 없는 다른 데이터 형식 값을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-164">This is because `String` variables and constants can contain values that other data types cannot contain.</span></span>  
   
- 형식 검사 스위치 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))은 `On`, 컴파일러가 모든 암시적 축소 변환을 허용 하지 않습니다. 여기에 포함 됩니다 관련 `String`합니다. 코드 변환 키워드와 같은 사용할 여전히 수 `CStr` 및 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md)를 지시할은 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 변환 하려고 합니다.  
+ <span data-ttu-id="3f692-165">형식 검사 스위치 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))은 `On`, 컴파일러에 모든 암시적 축소 변환을 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-165">When the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, the compiler disallows all implicit narrowing conversions.</span></span> <span data-ttu-id="3f692-166">여기에 관련 된 `String`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-166">This includes those involving `String`.</span></span> <span data-ttu-id="3f692-167">코드 여전히 צ ְ ײ 변환 키워드와 같은 `CStr` 및 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md)를 지시할은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 변환 하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-167">Your code can still use conversion keywords such as `CStr` and [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), which direct the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] to attempt the conversion.</span></span>  
   
 > [!NOTE]
->  축소 변환 오류에 있는 요소에서 변환에 대해 무시 됩니다는 `For Each…Next` 루프 제어 변수 컬렉션입니다. 자세한 내용과 예제는 "축소 변환" 섹션을 참조 [각각에 대해... 다음 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)합니다.  
+>  <span data-ttu-id="3f692-168">요소에서 변환에 축소 변환 오류가 기록 됩니다는 `For Each…Next` 루프 제어 변수 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-168">The narrowing-conversion error is suppressed for conversions from the elements in a `For Each…Next` collection to the loop control variable.</span></span> <span data-ttu-id="3f692-169">자세한 내용과 예제는 "축소 변환" 섹션을 참조 [각각에 대해... 다음 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-169">For more information and examples, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).</span></span>  
   
-### <a name="narrowing-conversion-protection"></a>축소 변환 보호  
- 축소 변환의 단점은 런타임에 실패할 수 있습니다. 예를 들어 하는 경우는 `String` 변수에 포함 된 모든 항목 "True" 또는 "False"로 변환할 수 없는 이외의 `Boolean`합니다. 문장 부호 문자를 포함 하는 경우 모든 숫자 형식 변환이 실패 합니다. 알 수 없다면 사용자 `String` 변수는 항상 대상 유형에 사용할 수 있는 값을 가집니다, 변환을 시도 하지 마십시오.  
+### <a name="narrowing-conversion-protection"></a><span data-ttu-id="3f692-170">축소 변환 보호</span><span class="sxs-lookup"><span data-stu-id="3f692-170">Narrowing Conversion Protection</span></span>  
+ <span data-ttu-id="3f692-171">축소 변환의 단점은 런타임 시 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-171">The disadvantage of narrowing conversions is that they can fail at run time.</span></span> <span data-ttu-id="3f692-172">예를 들어 경우는 `String` 변수 항목이 들어 있는 "True" 또는 "False"로 변환할 수 없는 것과 다른 `Boolean`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-172">For example, if a `String` variable contains anything other than "True" or "False," it cannot be converted to `Boolean`.</span></span> <span data-ttu-id="3f692-173">문장 부호 문자를 포함 하는 경우는 숫자 형식으로 변환에 실패 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-173">If it contains punctuation characters, conversion to any numeric type fails.</span></span> <span data-ttu-id="3f692-174">알 수 없다면 프로그램 `String` 항상 변수에 대상 유형에 사용할 수 있는 값, 변환을 시도 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="3f692-174">Unless you know that your `String` variable always holds values that the destination type can accept, you should not try a conversion.</span></span>  
   
- 변환 해야 하는 경우 `String` 가장 안전한 절차는 다른 데이터 형식에서 시도 된 변환은 묶으면는 [시도 중... Catch... Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)합니다. 이 런타임 오류를 다룰 수 있습니다.  
+ <span data-ttu-id="3f692-175">변환 해야 하는 경우 `String` 가장 안전한 절차는 다른 데이터 형식에서 시도 된 변환은 묶습니다 하는 [시도 중... Catch 하는 중... Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-175">If you must convert from `String` to another data type, the safest procedure is to enclose the attempted conversion in the [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span> <span data-ttu-id="3f692-176">이렇게 하면 런타임에 오류와 함께 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-176">This lets you deal with a run-time failure.</span></span>  
   
-### <a name="character-arrays"></a>문자 배열  
- 단일 `Char` 배열 및 `Char` 요소 둘 다로 확대 변환 `String`합니다. 그러나 `String` 를 확대 변환 되지 않으면 `Char()`합니다. 변환 하는 `String` 값을 한 `Char` 배열에는 <xref:System.String.ToCharArray%2A> <xref:System.String?displayProperty=fullName>클래스</xref:System.String?displayProperty=fullName> 의 메서드</xref:System.String.ToCharArray%2A> 를 사용할 수 있습니다  
+### <a name="character-arrays"></a><span data-ttu-id="3f692-177">문자 배열</span><span class="sxs-lookup"><span data-stu-id="3f692-177">Character Arrays</span></span>  
+ <span data-ttu-id="3f692-178">단일 `Char` 배열을 `Char` 요소 둘 다로 확대 변환 `String`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-178">A single `Char` and an array of `Char` elements both widen to `String`.</span></span> <span data-ttu-id="3f692-179">그러나 `String` 으로 확대 되지 않는 `Char()`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-179">However, `String` does not widen to `Char()`.</span></span> <span data-ttu-id="3f692-180">변환 하는 `String` 값을 한 `Char` 사용할 수 있습니다 배열에는 <xref:System.String.ToCharArray%2A> 의 메서드는 <xref:System.String?displayProperty=nameWithType> 클래스.</span><span class="sxs-lookup"><span data-stu-id="3f692-180">To convert a `String` value to a `Char` array, you can use the <xref:System.String.ToCharArray%2A> method of the <xref:System.String?displayProperty=nameWithType> class.</span></span>  
   
-### <a name="meaningless-values"></a>의미 없는 값  
- 일반적으로 `String` 값이 다른 데이터 형식에서는 의미가 및 변환이 매우 부적절 하며 위험 합니다. 사용을 제한 해야 가능 하다 면 `String` 변수 하도록 디자인 된 문자 시퀀스를 합니다. 다른 형식에 해당 하는 값을 사용 하는 코드를 작성 하지 마십시오.  
+### <a name="meaningless-values"></a><span data-ttu-id="3f692-181">의미 없는 값</span><span class="sxs-lookup"><span data-stu-id="3f692-181">Meaningless Values</span></span>  
+ <span data-ttu-id="3f692-182">일반적으로 `String` 값이 다른 데이터 형식에서는 의미가 및 변환이 매우 부적절 하며 위험 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-182">In general, `String` values are not meaningful in other data types, and conversion is highly artificial and dangerous.</span></span> <span data-ttu-id="3f692-183">용도 제한 해야 가능 하면 항상 `String` 변수도 설계 된 문자 시퀀스를 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f692-183">Whenever possible, you should restrict usage of `String` variables to the character sequences for which they are designed.</span></span> <span data-ttu-id="3f692-184">다른 형식에 해당 하는 값을 사용 하는 코드를 작성 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="3f692-184">You should never write code that relies on equivalent values in other types.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [형식 변환 함수](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [데이터 형식의 효율적 사용](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="3f692-185">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3f692-185">See Also</span></span>  
+ [<span data-ttu-id="3f692-186">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="3f692-186">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="3f692-187">형식 문자</span><span class="sxs-lookup"><span data-stu-id="3f692-187">Type Characters</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="3f692-188">값 형식과 참조 형식</span><span class="sxs-lookup"><span data-stu-id="3f692-188">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="3f692-189">Visual Basic의 형식 변환</span><span class="sxs-lookup"><span data-stu-id="3f692-189">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="3f692-190">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="3f692-190">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="3f692-191">형식 변환 함수</span><span class="sxs-lookup"><span data-stu-id="3f692-191">Type Conversion Functions</span></span>](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="3f692-192">데이터 형식의 효율적 사용</span><span class="sxs-lookup"><span data-stu-id="3f692-192">Efficient Use of Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

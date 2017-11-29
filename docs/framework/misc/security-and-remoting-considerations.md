@@ -1,51 +1,49 @@
 ---
-title: "보안 및 원격 서비스 고려 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "코드 보안, 원격 서비스"
-  - "원격 서비스, 보안"
-  - "보안 코딩, 원격 서비스"
-  - "보안[.NET Framework], 원격 서비스"
+title: "보안 및 원격 서비스 고려 사항"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- code security, remoting
+- remoting, security
+- security [.NET Framework], remoting
+- secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 94942360aaa91a39c8f46414807490bcb6e0b093
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 보안 및 원격 서비스 고려 사항
-원격 기능을 사용하면 응용 프로그램 도메인, 프로세스 또는 컴퓨터 간에 투명한 호출을 설정할 수 있습니다.  그러나 코드 액세스 보안 스택 워크는 프로세스 또는 시스템 경계를 넘어갈 수 없습니다\(동일한 프로세스의 응용 프로그램 도메인 간에 적용됨\).  
+# <a name="security-and-remoting-considerations"></a><span data-ttu-id="3cdd4-102">보안 및 원격 서비스 고려 사항</span><span class="sxs-lookup"><span data-stu-id="3cdd4-102">Security and Remoting Considerations</span></span>
+<span data-ttu-id="3cdd4-103">원격 기능을 사용하면 응용 프로그램 도메인, 프로세스 또는 컴퓨터 간에 투명한 호출을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-103">Remoting allows you to set up transparent calling between application domains, processes, or computers.</span></span> <span data-ttu-id="3cdd4-104">그러나 코드 액세스 보안 스택 워크는 프로세스 또는 시스템 경계를 넘어갈 수 없습니다(동일한 프로세스의 응용 프로그램 도메인 간에 적용됨).</span><span class="sxs-lookup"><span data-stu-id="3cdd4-104">However, the code access security stack walk cannot cross process or machine boundaries (it does apply between application domains of the same process).</span></span>  
   
- 원격으로 사용 가능한\(<xref:System.MarshalByRefObject> 클래스에서 파생된\) 모든 클래스는 보안을 책임져야 합니다.  호출하는 코드를 암시적으로 신뢰할 수 있는 폐쇄된 환경에서만 코드를 사용해야 하거나, 악의적으로 사용될 수 있는 외부 입력이 보호된 코드에 적용되지 않도록 원격 호출을 설계해야 합니다.  
+ <span data-ttu-id="3cdd4-105">원격으로 사용 가능한(<xref:System.MarshalByRefObject> 클래스에서 파생된) 모든 클래스는 보안을 책임져야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-105">Any class that is remotable (derived from a <xref:System.MarshalByRefObject> class) needs to take responsibility for security.</span></span> <span data-ttu-id="3cdd4-106">호출하는 코드를 암시적으로 신뢰할 수 있는 폐쇄된 환경에서만 코드를 사용해야 하거나, 악의적으로 사용될 수 있는 외부 입력이 보호된 코드에 적용되지 않도록 원격 호출을 설계해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-106">Either the code should be used only in closed environments where the calling code can be implicitly trusted, or remoting calls should be designed so that they do not subject protected code to outside entry that could be used maliciously.</span></span>  
   
- 일반적으로 선언적 [LinkDemand](../../../docs/framework/misc/link-demands.md) 및 <xref:System.Security.Permissions.SecurityAction> 보안 검사에 의해 보호되는 메서드, 속성 또는 이벤트는 노출하면 안 됩니다.  원격 기능에서는 이러한 검사가 적용되지 않습니다.  <xref:System.Security.Permissions.SecurityAction>, [Assert](../../../docs/framework/misc/using-the-assert-method.md) 등의 다른 보안 검사는 프로세스 내의 응용 프로그램 도메인 간에는 작동하지만 크로스 프로세스 또는 크로스 시스템 시나리오에서는 작동하지 않습니다.  
+ <span data-ttu-id="3cdd4-107">일반적으로 노출 하면 메서드, 속성 또는 선언적으로 보호 되는 이벤트 [LinkDemand](../../../docs/framework/misc/link-demands.md) 및 <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> 보안 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-107">Generally, you should never expose methods, properties, or events that are protected by declarative [LinkDemand](../../../docs/framework/misc/link-demands.md) and <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> security checks.</span></span> <span data-ttu-id="3cdd4-108">원격 기능에서는 이러한 검사가 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-108">With remoting, these checks are not enforced.</span></span> <span data-ttu-id="3cdd4-109">와 같은 다른 보안 검사 <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](../../../docs/framework/misc/using-the-assert-method.md), 등의 프로세스 내의 응용 프로그램 도메인 간에 작동 하지만 크로스 프로세스 또는 크로스 시스템 시나리오에서는 작동 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-109">Other security checks, such as <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](../../../docs/framework/misc/using-the-assert-method.md), and so on, work between application domains within a process but do not work in cross-process or cross-machine scenarios.</span></span>  
   
-## 보호되는 개체  
- 일부 개체는 그 자체에 보안 상태를 포함합니다.  고유한 권한 이상의 보안 권한이 부여되지 않도록 신뢰할 수 없는 코드에는 이러한 개체를 전달하면 안 됩니다.  
+## <a name="protected-objects"></a><span data-ttu-id="3cdd4-110">보호되는 개체</span><span class="sxs-lookup"><span data-stu-id="3cdd4-110">Protected objects</span></span>  
+ <span data-ttu-id="3cdd4-111">일부 개체는 그 자체에 보안 상태를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-111">Some objects hold security state in themselves.</span></span> <span data-ttu-id="3cdd4-112">고유한 권한 이상의 보안 권한이 부여되지 않도록 신뢰할 수 없는 코드에는 이러한 개체를 전달하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-112">These objects should not be passed to untrusted code, which would then acquire security authorization beyond its own permissions.</span></span>  
   
- 한 가지 예로 <xref:System.IO.FileStream> 개체 만들기가 있습니다.  생성 시 <xref:System.Security.Permissions.FileIOPermission>이 요구되며, 성공하면 파일 개체가 반환됩니다.  그러나 이 개체 참조가 파일 권한이 없는 코드에 전달되면 개체가 이 특정 파일을 읽고 쓸 수 있습니다.  
+ <span data-ttu-id="3cdd4-113">한 가지 예로 <xref:System.IO.FileStream> 개체 만들기가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-113">One example is creating a <xref:System.IO.FileStream> object.</span></span> <span data-ttu-id="3cdd4-114">생성 시 <xref:System.Security.Permissions.FileIOPermission>이 요구되며, 성공하면 파일 개체가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-114">The <xref:System.Security.Permissions.FileIOPermission> is demanded at the time of creation and, if it succeeds, the file object is returned.</span></span> <span data-ttu-id="3cdd4-115">그러나 이 개체 참조가 파일 권한이 없는 코드에 전달되면 개체가 이 특정 파일을 읽고 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-115">However, if this object reference is passed to code without file permissions, the object will be able to read and write to this particular file.</span></span>  
   
- 이러한 개체에 대한 가장 간단한 방어는 공용 API 요소를 통해 개체 참조를 가져오려는 모든 코드에 대해 동일한 **FileIOPermission**을 요구하는 것입니다.  
+ <span data-ttu-id="3cdd4-116">이러한 개체에 대 한 가장 간단한 방어 동일한를 요구 하는 것 **FileIOPermission** 공용 API 요소를 통해 개체 참조를 가져오려는 모든 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-116">The simplest defense for such an object is to demand the same **FileIOPermission** of any code that seeks to get the object reference through a public API element.</span></span>  
   
-## 응용 프로그램 도메인을 넘을 때의 문제  
- 관리되는 호스팅 환경에서 코드를 격리하려면 다양한 어셈블리에 대한 권한 수준을 축소하는 명시적 정책을 사용하여 여러 자식 응용 프로그램 도메인을 생성하는 것이 일반적입니다.  그러나 해당 어셈블리에 대한 정책은 기본 응용 프로그램 도메인에 변경되지 않고 유지됩니다.  자식 응용 프로그램 도메인 중 하나가 기본 응용 프로그램 도메인에서 어셈블리를 로드하도록 강제할 수 있는 경우 코드 격리 효과가 손실되며 강제로 로드된 어셈블리의 형식이 상위 신뢰 수준으로 코드를 실행할 수 있습니다.  
+## <a name="application-domain-crossing-issues"></a><span data-ttu-id="3cdd4-117">응용 프로그램 도메인을 넘을 때의 문제</span><span class="sxs-lookup"><span data-stu-id="3cdd4-117">Application domain crossing issues</span></span>  
+ <span data-ttu-id="3cdd4-118">관리되는 호스팅 환경에서 코드를 격리하려면 다양한 어셈블리에 대한 권한 수준을 축소하는 명시적 정책을 사용하여 여러 자식 응용 프로그램 도메인을 생성하는 것이 일반적입니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-118">To isolate code in managed hosting environments, it is common to generate multiple child application domains with explicit policy reducing the permission levels for various assemblies.</span></span> <span data-ttu-id="3cdd4-119">그러나 해당 어셈블리에 대한 정책은 기본 응용 프로그램 도메인에 변경되지 않고 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-119">However, the policy for those assemblies remains unchanged in the default application domain.</span></span> <span data-ttu-id="3cdd4-120">자식 응용 프로그램 도메인 중 하나가 기본 응용 프로그램 도메인에서 어셈블리를 로드하도록 강제할 수 있는 경우 코드 격리 효과가 손실되며 강제로 로드된 어셈블리의 형식이 상위 신뢰 수준으로 코드를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-120">If one of the child application domains can force the default application domain to load an assembly, the effect of code isolation is lost and types in the forcibly loaded assembly will be able to run code at a higher level of trust.</span></span>  
   
- 응용 프로그램 도메인은 다른 응용 프로그램 도메인에서 어셈블리를 로드하도록 강제하고 다른 응용 프로그램 도메인에 호스트된 개체에 대한 프록시를 호출하여 포함된 코드를 실행할 수 있습니다.  응용 프로그램 도메인 간 프록시를 가져오려면 개체를 호스트하는 응용 프로그램 도메인이 메서드 호출 매개 변수나 반환 값을 통해 프록시를 배포해야 합니다.  또는 응용 프로그램 도메인이 방금 만들어진 경우 기본적으로 작성자에게 <xref:System.AppDomain> 개체에 대한 프록시가 있습니다.  따라서 코드 격리 손상을 방지하려면 상위 신뢰 수준의 응용 프로그램 도메인이 해당 도메인의 참조 방식 마샬링 개체에 대한 참조\(<xref:System.MarshalByRefObject>에서 파생된 클래스 인스턴스\)를 하위 신뢰 수준의 응용 프로그램 도메인에 배포하면 안 됩니다.  
+ <span data-ttu-id="3cdd4-121">응용 프로그램 도메인은 다른 응용 프로그램 도메인에서 어셈블리를 로드하도록 강제하고 다른 응용 프로그램 도메인에 호스트된 개체에 대한 프록시를 호출하여 포함된 코드를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-121">An application domain can force another application domain to load an assembly and run code contained therein by calling a proxy to an object hosted in the other application domain.</span></span> <span data-ttu-id="3cdd4-122">응용 프로그램 도메인 간 프록시를 가져오려면 개체를 호스트하는 응용 프로그램 도메인이 메서드 호출 매개 변수나 반환 값을 통해 프록시를 배포해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-122">To obtain a cross-application-domain proxy, the application domain hosting the object must distribute one through a method call parameter or return value.</span></span> <span data-ttu-id="3cdd4-123">또는 응용 프로그램 도메인이 방금 만들어진 경우 기본적으로 작성자에게 <xref:System.AppDomain> 개체에 대한 프록시가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-123">Or, if the application domain was just created, the creator has a proxy to the <xref:System.AppDomain> object by default.</span></span> <span data-ttu-id="3cdd4-124">따라서 코드 격리 손상을 방지하려면 상위 신뢰 수준의 응용 프로그램 도메인이 해당 도메인의 참조 방식 마샬링 개체에 대한 참조(<xref:System.MarshalByRefObject>에서 파생된 클래스 인스턴스)를 하위 신뢰 수준의 응용 프로그램 도메인에 배포하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-124">Thus, to avoid breaking code isolation, an application domain with a higher level of trust should not distribute references to marshaled-by-reference objects (instances of classes derived from <xref:System.MarshalByRefObject>) in its domain to application domains with lower levels of trust.</span></span>  
   
- 일반적으로 기본 응용 프로그램 도메인은 각각 컨트롤 개체가 있는 자식 응용 프로그램 도메인을 만듭니다.  컨트롤 개체는 새 응용 프로그램 도메인을 관리하고 때때로 기본 응용 프로그램 도메인에서 주문을 받지만 실제로 도메인에 직접 연결할 수 없습니다.  때로는 기본 응용 프로그램 도메인이 컨트롤 개체에 대한 프록시를 호출합니다.  그러나 컨트롤 개체가 기본 응용 프로그램 도메인을 다시 호출해야 하는 경우도 있을 수 있습니다.  이러한 경우 기본 응용 프로그램 도메인은 참조 방식 마샬링 콜백 개체를 컨트롤 개체의 생성자에 전달합니다.  이 프록시를 보호하는 것은 컨트롤 개체의 책임입니다.  컨트롤 개체가 공용 클래스의 public 정적 필드에 프록시를 배치하거나 달리 프록시를 공개적으로 노출하는 경우 다른 코드가 기본 응용 프로그램 도메인에 콜백하는 위험한 메커니즘이 개방됩니다.  이런 이유로, 컨트롤 개체는 프록시를 비공개로 유지하기 위해 항상 암시적으로 신뢰됩니다.  
+ <span data-ttu-id="3cdd4-125">일반적으로 기본 응용 프로그램 도메인은 각각 컨트롤 개체가 있는 자식 응용 프로그램 도메인을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-125">Usually, the default application domain creates the child application domains with a control object in each one.</span></span> <span data-ttu-id="3cdd4-126">컨트롤 개체는 새 응용 프로그램 도메인을 관리하고 때때로 기본 응용 프로그램 도메인에서 주문을 받지만 실제로 도메인에 직접 연결할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-126">The control object manages the new application domain and occasionally takes orders from the default application domain, but it cannot actually contact the domain directly.</span></span> <span data-ttu-id="3cdd4-127">때로는 기본 응용 프로그램 도메인이 컨트롤 개체에 대한 프록시를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-127">Occasionally, the default application domain calls its proxy to the control object.</span></span> <span data-ttu-id="3cdd4-128">그러나 컨트롤 개체가 기본 응용 프로그램 도메인을 다시 호출해야 하는 경우도 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-128">However, there might be cases in which it is necessary for the control object to call back to the default application domain.</span></span> <span data-ttu-id="3cdd4-129">이러한 경우 기본 응용 프로그램 도메인은 참조 방식 마샬링 콜백 개체를 컨트롤 개체의 생성자에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-129">In these cases, the default application domain passes a marshal-by-reference callback object to the constructor of the control object.</span></span> <span data-ttu-id="3cdd4-130">이 프록시를 보호하는 것은 컨트롤 개체의 책임입니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-130">It is the responsibility of the control object to protect this proxy.</span></span> <span data-ttu-id="3cdd4-131">컨트롤 개체가 공용 클래스의 public 정적 필드에 프록시를 배치하거나 달리 프록시를 공개적으로 노출하는 경우 다른 코드가 기본 응용 프로그램 도메인에 콜백하는 위험한 메커니즘이 개방됩니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-131">If the control object were to place the proxy on a public static field of a public class, or otherwise publicly expose the proxy, this would open up a dangerous mechanism for other code to call back into the default application domain.</span></span> <span data-ttu-id="3cdd4-132">이런 이유로, 컨트롤 개체는 프록시를 비공개로 유지하기 위해 항상 암시적으로 신뢰됩니다.</span><span class="sxs-lookup"><span data-stu-id="3cdd4-132">For this reason, control objects are always implicitly trusted to keep the proxy private.</span></span>  
   
-## 참고 항목  
- [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="3cdd4-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3cdd4-133">See Also</span></span>  
+ [<span data-ttu-id="3cdd4-134">보안 코딩 지침</span><span class="sxs-lookup"><span data-stu-id="3cdd4-134">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

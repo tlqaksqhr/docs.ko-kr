@@ -1,57 +1,61 @@
 ---
-title: "방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "이미지[Windows Forms], 품질 관리"
-  - "이미지[Windows Forms], 배율"
-  - "보간 모드, 이미지 품질 관리"
+title: "방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- interpolation mode [Windows Forms], controlling image quality
+- images [Windows Forms], scaling
+- images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10a0ef4e7fd8514245a7659dd515d8f363a716ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리
-<xref:System.Drawing.Graphics> 개체의 보간 모드는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에서 이미지의 배율을 조정\(늘임 및 줄임\)하는 데 영향을 줍니다.  <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형에서는 몇 가지의 보간 모드를 정의하며 다음 목록에 그 중 일부가 나와 있습니다.  
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a><span data-ttu-id="02291-102">방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리</span><span class="sxs-lookup"><span data-stu-id="02291-102">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>
+<span data-ttu-id="02291-103">보간 모드는 <xref:System.Drawing.Graphics> 방식에 영향을 미칩니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 이미지 크기를 조절 (까지 확장 및 축소) 합니다.</span><span class="sxs-lookup"><span data-stu-id="02291-103">The interpolation mode of a <xref:System.Drawing.Graphics> object influences the way [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] scales (stretches and shrinks) images.</span></span> <span data-ttu-id="02291-104"><xref:System.Drawing.Drawing2D.InterpolationMode> 열거형 다음 목록에 표시 되는 다음과 같은 몇 가지 보간 모드를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="02291-104">The <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration defines several interpolation modes, some of which are shown in the following list:</span></span>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
- 이미지를 확대하려면 원래 이미지에 있는 각 픽셀을 큰 이미지에 있는 픽셀의 그룹으로 매핑해야 합니다.  이미지를 축소하려면 원래 이미지에 있는 픽셀의 그룹을 작은 이미지에 있는 단일 픽셀로 매핑해야 합니다.  이러한 매핑을 수행하는 알고리즘이 효율적인지에 따라 배율을 조정한 이미지의 품질이 결정됩니다.  품질이 더 나은 배율 조정된 이미지를 만드는 알고리즘일수록 처리 시간은 더 오래 걸립니다.  위 목록에서 <xref:System.Drawing.Drawing2D.InterpolationMode>는 가장 품질이 낮은 모드이고 <xref:System.Drawing.Drawing2D.InterpolationMode>는 가장 품질이 우수한 모드입니다.  
+ <span data-ttu-id="02291-105">이미지를 확대 하려면 원본 이미지의 각 픽셀의 더 큰 이미지 픽셀 그룹에 매핑해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="02291-105">To stretch an image, each pixel in the original image must be mapped to a group of pixels in the larger image.</span></span> <span data-ttu-id="02291-106">이미지를 축소 하려면 원본 이미지의 픽셀의 그룹을 더 작은 이미지에 단일 픽셀에 매핑해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="02291-106">To shrink an image, groups of pixels in the original image must be mapped to single pixels in the smaller image.</span></span> <span data-ttu-id="02291-107">이러한 매핑을 수행 하는 알고리즘의 효율성 크기 조정 된 이미지의 품질을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="02291-107">The effectiveness of the algorithms that perform these mappings determines the quality of a scaled image.</span></span> <span data-ttu-id="02291-108">더 높은 품질의 크기 조정 된 이미지를 생성 하는 알고리즘은 처리 시간이 더 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="02291-108">Algorithms that produce higher-quality scaled images tend to require more processing time.</span></span> <span data-ttu-id="02291-109">앞의 목록에 <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> 는 가장 낮은 수준의 모드 및 <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> 최고 품질 모드입니다.</span><span class="sxs-lookup"><span data-stu-id="02291-109">In the preceding list, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> is the lowest-quality mode and <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> is the highest-quality mode.</span></span>  
   
- 보간 모드를 설정하려면 <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형의 멤버 중 하나를 <xref:System.Drawing.Graphics> 개체의 <xref:System.Drawing.Graphics.InterpolationMode%2A> 속성에 지정합니다.  
+ <span data-ttu-id="02291-110">보간 모드를 설정 하려면의 멤버 중 하나를 할당 된 <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형을는 <xref:System.Drawing.Graphics.InterpolationMode%2A> 속성의는 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="02291-110">To set the interpolation mode, assign one of the members of the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to the <xref:System.Drawing.Graphics.InterpolationMode%2A> property of a <xref:System.Drawing.Graphics> object.</span></span>  
   
-## 예제  
- 아래 예제에서는 이미지를 그린 다음 세 가지의 보간 모드를 사용하여 이미지를 축소합니다.  
+## <a name="example"></a><span data-ttu-id="02291-111">예제</span><span class="sxs-lookup"><span data-stu-id="02291-111">Example</span></span>  
+ <span data-ttu-id="02291-112">다음 예제에서는 이미지를 그립니다 하 고 세 가지 서로 다른 보간 모드를 사용 하 여 이미지를 감소 합니다.</span><span class="sxs-lookup"><span data-stu-id="02291-112">The following example draws an image and then shrinks the image with three different interpolation modes.</span></span>  
   
- 아래 그림에서는 원래 이미지 및 세 종류의 작은 이미지를 보여 줍니다.  
+ <span data-ttu-id="02291-113">다음 그림에서는 원본 이미지와 세 개의 더 작은 이미지를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="02291-113">The following illustration shows the original image and the three smaller images.</span></span>  
   
- ![다양한 보간 설정의 이미지](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")  
+ <span data-ttu-id="02291-114">![다양 한 보간 설정 이미지](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span><span class="sxs-lookup"><span data-stu-id="02291-114">![Image with Varied Interpolation Settings](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#81)]
  [!code-vb[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#81)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="02291-115">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="02291-115">Compiling the Code</span></span>  
+ <span data-ttu-id="02291-116">앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="02291-116">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## 참고 항목  
- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [이미지, 비트맵, 아이콘 및 메타파일 사용](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="02291-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="02291-117">See Also</span></span>  
+ [<span data-ttu-id="02291-118">이미지, 비트맵 및 메타파일</span><span class="sxs-lookup"><span data-stu-id="02291-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="02291-119">이미지, 비트맵, 아이콘 및 메타파일 사용</span><span class="sxs-lookup"><span data-stu-id="02291-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,46 +1,47 @@
 ---
-title: "방법: MDI 응용 프로그램의 자동 메뉴 병합 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MenuStrip, 병합"
-  - "병합, 자동 메뉴"
+title: "방법: MDI 응용 프로그램의 자동 메뉴 병합 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MenuStrip [Windows Forms], merging
+- Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e99aed38ed6c3af3424c264631f0eaf27e46af7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: MDI 응용 프로그램의 자동 메뉴 병합 설정
-다음 절차에서는 <xref:System.Windows.Forms.MenuStrip>을 사용하여 MDI\(다중 문서 인터페이스\) 응용 프로그램의 자동 병합을 설정하기 위한 기본 단계를 제공합니다.  
+# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a><span data-ttu-id="b6e68-102">방법: MDI 응용 프로그램의 자동 메뉴 병합 설정</span><span class="sxs-lookup"><span data-stu-id="b6e68-102">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>
+<span data-ttu-id="b6e68-103">(Mdi 다중) 다중 문서 인터페이스 응용 프로그램에서 자동 병합을 설정 하기 위한 기본 단계를 제공 하는 다음 절차 <xref:System.Windows.Forms.MenuStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="b6e68-103">The following procedure gives the basic steps for setting up automatic merging in a multiple-document interface (MDI) application with <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-### 자동 메뉴 병합을 설정하려면  
+### <a name="to-set-up-automatic-menu-merging"></a><span data-ttu-id="b6e68-104">자동 메뉴 병합 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="b6e68-104">To set up automatic menu merging</span></span>  
   
-1.  <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`로 설정하여 MDI 부모 폼을 만듭니다.  
+1.  <span data-ttu-id="b6e68-105">설정 하 여 MDI 부모 폼을 만듭니다는 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="b6e68-105">Create the MDI parent form by setting its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
   
-2.  MDI 부모에 <xref:System.Windows.Forms.MenuStrip>을 추가하고 이 컨트롤의 <xref:System.Windows.Forms.Form.MainMenuStrip%2A> 속성을 해당 <xref:System.Windows.Forms.MenuStrip>으로 설정합니다.  
+2.  <span data-ttu-id="b6e68-106">추가 <xref:System.Windows.Forms.MenuStrip> 설정 MDI 부모에 해당 <xref:System.Windows.Forms.Form.MainMenuStrip%2A> 속성 <xref:System.Windows.Forms.MenuStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="b6e68-106">Add a <xref:System.Windows.Forms.MenuStrip> to the MDI parent, setting its <xref:System.Windows.Forms.Form.MainMenuStrip%2A> property to that <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-3.  MDI 자식 폼을 만들고 해당 <xref:System.Windows.Forms.Form.MdiParent%2A> 속성을 부모 폼의 이름으로 설정합니다.  
+3.  <span data-ttu-id="b6e68-107">MDI 자식 폼을 만들고 설정 해당 <xref:System.Windows.Forms.Form.MdiParent%2A> 속성을 부모 폼의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="b6e68-107">Create an MDI child form, and set its <xref:System.Windows.Forms.Form.MdiParent%2A> property to the name of the parent form.</span></span>  
   
-4.  MDI 자식 폼에 <xref:System.Windows.Forms.MenuStrip>을 추가합니다.  
+4.  <span data-ttu-id="b6e68-108">추가 <xref:System.Windows.Forms.MenuStrip> MDI 자식 폼입니다.</span><span class="sxs-lookup"><span data-stu-id="b6e68-108">Add a <xref:System.Windows.Forms.MenuStrip> to the MDI child form.</span></span>  
   
-5.  자식 폼에서 <xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 속성을 `false`로 설정합니다.  
+5.  <span data-ttu-id="b6e68-109">자식 폼에서 설정 된 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 의 속성은 <xref:System.Windows.Forms.MenuStrip> 를 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="b6e68-109">On the child form, set the <xref:System.Windows.Forms.ToolStripItem.Visible%2A> property of the <xref:System.Windows.Forms.MenuStrip> to `false`.</span></span>  
   
-6.  자식 폼이 활성화될 때 상위 폼의 <xref:System.Windows.Forms.MenuStrip>으로 병합하려는 자식 폼의 <xref:System.Windows.Forms.MenuStrip>에 메뉴 항목을 추가합니다.  
+6.  <span data-ttu-id="b6e68-110">자식 폼의에 메뉴 항목 추가 <xref:System.Windows.Forms.MenuStrip> 부모 폼에 병합 하려는 <xref:System.Windows.Forms.MenuStrip> 자식 폼이 활성화 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="b6e68-110">Add menu items to the child form's <xref:System.Windows.Forms.MenuStrip> that you want to merge into the parent form's <xref:System.Windows.Forms.MenuStrip> when the child form is activated.</span></span>  
   
-7.  자식 폼의 <xref:System.Windows.Forms.MenuStrip>의 메뉴 항목에 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 속성을 사용하여 메뉴 항목이 자식 폼에 병합되는 방식을 제어합니다.  
+7.  <span data-ttu-id="b6e68-111">사용 하 여는 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 자식 폼의 속성 메뉴 항목 <xref:System.Windows.Forms.MenuStrip> 부모 폼에 병합 되는 방식을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b6e68-111">Use the <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> property on the menu items in the child form's <xref:System.Windows.Forms.MenuStrip> to control how they merge into the parent form.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [MenuStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b6e68-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b6e68-112">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [<span data-ttu-id="b6e68-113">MenuStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="b6e68-113">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

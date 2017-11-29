@@ -1,51 +1,52 @@
 ---
-title: "이중 버퍼링 그래픽 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "이중 버퍼링"
-  - "예제[Windows Forms], 이중 버퍼링된 그래픽"
-  - "깜빡임, 이중 버퍼링으로 줄이기"
-  - "그래픽, 이중 버퍼링"
+title: "이중 버퍼링 그래픽"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- double buffering
+- graphics [Windows Forms], double-buffered
+- flicker [Windows Forms], reducing with double buffering
+- examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89413e0958366dd39c62bfaedb7e36471123bc22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 이중 버퍼링 그래픽
-깜빡임은 그래픽을 프로그래밍할 때 일반적으로 발생하는 문제입니다.  여러 복잡한 그리기 작업이 필요한 그래픽 작업에서는 렌더링된 이미지에 깜빡임 현상이 발생하거나 의도하지 않은 모양이 나타날 수 있습니다.  이 문제를 해결하기 위해 .NET Framework에서는 이중 버퍼링에 대한 액세스를 제공합니다.  
+# <a name="double-buffered-graphics"></a><span data-ttu-id="22a39-102">이중 버퍼링 그래픽</span><span class="sxs-lookup"><span data-stu-id="22a39-102">Double Buffered Graphics</span></span>
+<span data-ttu-id="22a39-103">깜박임은 그래픽을 프로그래밍할 때 일반적으로 발생하는 문제입니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-103">Flicker is a common problem when programming graphics.</span></span> <span data-ttu-id="22a39-104">여러 개의 복잡한 그리기 작업이 필요한 그래픽 작업에서 렌더링된 이미지가 깜박이거나 그렇지 않고 의도하지 않은 모양이 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-104">Graphics operations that require multiple complex painting operations can cause the rendered images to appear to flicker or have an otherwise unacceptable appearance.</span></span> <span data-ttu-id="22a39-105">이러한 문제를 해결하기 위해 .NET Framework에서 이중 버퍼링에 대한 액세스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-105">To address these problems, the .NET Framework provides access to double buffering.</span></span>  
   
- 이중 버퍼링에서는 메모리 버퍼를 사용하여 다중 그리기 작업과 관련된 깜빡임 문제를 해결합니다.  이중 버퍼링을 사용하는 경우 모든 그리기 작업은 그리기 화면 대신 메모리 버퍼에 먼저 렌더링됩니다.  모든 그리기 작업이 완료되면 연결된 그리기 화면에 메모리 버퍼가 직접 복사됩니다.  그래픽 작업이 화면에서 하나만 수행되기 때문에 복잡한 그리기 작업과 관련된 이미지 깜빡임이 제거됩니다.  
+ <span data-ttu-id="22a39-106">이중 버퍼링은 메모리 버퍼를 사용하여 여러 그리기 작업과 관련된 깜박임 문제를 해결합니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-106">Double buffering uses a memory buffer to address the flicker problems associated with multiple paint operations.</span></span> <span data-ttu-id="22a39-107">이중 버퍼링을 사용하면 모든 그리기 작업이 그리기 화면 대신 메모리 버퍼에 먼저 렌더링됩니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-107">When double buffering is enabled, all paint operations are first rendered to a memory buffer instead of the drawing surface on the screen.</span></span> <span data-ttu-id="22a39-108">모든 그리기 작업이 완료되면 메모리 버퍼가 연결된 그리기 화면에 직접 복사됩니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-108">After all paint operations are completed, the memory buffer is copied directly to the drawing surface associated with it.</span></span> <span data-ttu-id="22a39-109">하나의 그래픽 작업만 화면에서 수행되기 때문에 복잡한 그리기 작업과 관련된 이미지 깜빡임이 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-109">Because only one graphics operation is performed on the screen, the image flickering associated with complex painting operations is eliminated.</span></span>  
   
-## 기본 이중 버퍼링  
- 응용 프로그램에서 이중 버퍼링을 사용하는 가장 쉬운 방법은 .NET Framework에 제공되는 폼 및 컨트롤에 대한 기본 이중 버퍼링을 사용하는 것입니다.  <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 속성을 `true`로 설정하거나 <xref:System.Windows.Forms.Control.SetStyle%2A> 메서드를 사용하여 Windows Forms 및 작성된 Windows 컨트롤에 대한 기본 이중 버퍼링을 사용할 수 있습니다.  자세한 내용은 [방법: 폼과 컨트롤에 이중 버퍼링을 사용하여 그래픽 깜빡임 줄이기](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)를 참조하십시오.  
+## <a name="default-double-buffering"></a><span data-ttu-id="22a39-110">기본 이중 버퍼링</span><span class="sxs-lookup"><span data-stu-id="22a39-110">Default Double Buffering</span></span>  
+ <span data-ttu-id="22a39-111">응용 프로그램에서 이중 버퍼링을 사용하는 가장 쉬운 방법은 .NET Framework에서 제공하는 양식과 컨트롤에 기본 이중 버퍼링을 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-111">The easiest way to use double buffering in your applications is to use the default double buffering for forms and controls that is provided by the .NET Framework.</span></span> <span data-ttu-id="22a39-112">이중 버퍼링 Windows Forms에 대 한 기본 사용 하도록 설정할 수 있습니다 및을 설정 하 여 작성 된 Windows 컨트롤의 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 속성을 `true` 또는 사용 하 여는 <xref:System.Windows.Forms.Control.SetStyle%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="22a39-112">You can enable default double buffering for your Windows Forms and authored Windows controls by setting the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true` or by using the <xref:System.Windows.Forms.Control.SetStyle%2A> method.</span></span> <span data-ttu-id="22a39-113">자세한 내용은 [방법: 양식과 컨트롤에 이중 버퍼링을 사용하여 그래픽 깜빡임 줄이기](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="22a39-113">For more information, see [How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md).</span></span>  
   
-## 버퍼링된 그래픽 수동 관리  
- 애니메이션 또는 고급 메모리 관리와 같은 고급 이중 버퍼링 시나리오에서는 .NET Framework 클래스를 사용하여 사용자의 이중 버퍼링 논리를 구현할 수 있습니다.  개별 그래픽 버퍼를 할당 및 관리하는 클래스는 <xref:System.Drawing.BufferedGraphicsContext> 클래스입니다.  모든 응용 프로그램 도메인에는 해당 응용 프로그램에 대한 모든 기본 이중 버퍼링을 관리하는 자체의 기본 <xref:System.Drawing.BufferedGraphicsContext> 인스턴스가 있습니다.  대부분의 경우 응용 프로그램 당 응용 프로그램 도메인이 하나만 있으므로 응용 프로그램 당 하나의 기본 <xref:System.Drawing.BufferedGraphicsContext>가 있습니다.  기본 <xref:System.Drawing.BufferedGraphicsContext> 인스턴스는 <xref:System.Drawing.BufferedGraphicsManager> 클래스에서 관리합니다.  [BufferedGraphicsManager.Current 속성](frlrfSystemDrawingBufferedGraphicsManagerClassCurrentTopic)을 호출하여 기본 <xref:System.Drawing.BufferedGraphicsContext> 인스턴스에 대한 참조를 검색할 수 있습니다.  전용 <xref:System.Drawing.BufferedGraphicsContext> 인스턴스를 만들어 그래픽 위주 응용 프로그램의 성능을 향상시킬 수도 있습니다.  <xref:System.Drawing.BufferedGraphicsContext> 인스턴스를 만드는 방법에 대한 자세한 내용은 [방법: 버퍼링된 그래픽 수동 관리](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)를 참조하십시오.  
+## <a name="manually-managing-buffered-graphics"></a><span data-ttu-id="22a39-114">버퍼링된 그래픽 수동 관리</span><span class="sxs-lookup"><span data-stu-id="22a39-114">Manually Managing Buffered Graphics</span></span>  
+ <span data-ttu-id="22a39-115">애니메이션 또는 고급 메모리 관리와 같은 고급 이중 버퍼링 시나리오에서는 .NET Framework 클래스를 사용하여 사용자 고유의 이중 버퍼링 논리를 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-115">For more advanced double buffering scenarios, such as animation or advanced memory management, you can use the .NET Framework classes to implement your own double-buffering logic.</span></span> <span data-ttu-id="22a39-116">할당 및 개별 그래픽 버퍼를 관리 하는 일을 담당 하는 클래스는 <xref:System.Drawing.BufferedGraphicsContext> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-116">The class responsible for allocating and managing individual graphics buffers is the <xref:System.Drawing.BufferedGraphicsContext> class.</span></span> <span data-ttu-id="22a39-117">모든 응용 프로그램 도메인에는 자체 기본 <xref:System.Drawing.BufferedGraphicsContext> 기본 이중 버퍼링 해당 응용 프로그램의 모든 관리 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-117">Every application domain has its own default <xref:System.Drawing.BufferedGraphicsContext> instance that manages all of the default double buffering for that application.</span></span> <span data-ttu-id="22a39-118">대부분의 경우에서 있을 응용 프로그램 마다 하나의 응용 프로그램 도메인 이므로 일반적으로 하나의 기본 <xref:System.Drawing.BufferedGraphicsContext> 응용 프로그램당 합니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-118">In most cases there will be only one application domain per application, so there is generally one default <xref:System.Drawing.BufferedGraphicsContext> per application.</span></span> <span data-ttu-id="22a39-119">기본 <xref:System.Drawing.BufferedGraphicsContext> 의해 관리 되는 인스턴스는 <xref:System.Drawing.BufferedGraphicsManager> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-119">Default <xref:System.Drawing.BufferedGraphicsContext> instances are managed by the <xref:System.Drawing.BufferedGraphicsManager> class.</span></span> <span data-ttu-id="22a39-120">기본값에 대 한 참조를 검색할 수 있습니다 <xref:System.Drawing.BufferedGraphicsContext> 호출 하 여 인스턴스는 <xref:System.Drawing.BufferedGraphicsManager.Current%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-120">You can retrieve a reference to the default <xref:System.Drawing.BufferedGraphicsContext> instance by calling the <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.</span></span> <span data-ttu-id="22a39-121">전용 만들 수 <xref:System.Drawing.BufferedGraphicsContext> 인스턴스 그래픽 위주의 응용 프로그램의 성능을 향상 시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-121">You can also create a dedicated <xref:System.Drawing.BufferedGraphicsContext> instance, which can improve performance for graphically intensive applications.</span></span> <span data-ttu-id="22a39-122">만드는 방법에 대 한 내용은 <xref:System.Drawing.BufferedGraphicsContext> 인스턴스를 참조 [하는 방법: 버퍼링 된 그래픽 수동 관리](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-122">For information on how to create a <xref:System.Drawing.BufferedGraphicsContext> instance, see [How to: Manually Manage Buffered Graphics](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).</span></span>  
   
-## 버퍼링된 그래픽 수동 표시  
- <xref:System.Drawing.BufferedGraphics> 클래스의 인스턴스를 반환하는 [BufferedGraphicsContext.Allocate 메서드](frlrfSystemDrawingBufferedGraphicsContextClassAllocateTopic)를 호출함으로써 <xref:System.Drawing.BufferedGraphicsContext> 클래스의 인스턴스를 사용하여 그래픽 버퍼를 만들 수 있습니다.  <xref:System.Drawing.BufferedGraphics> 개체는 폼 또는 컨트롤과 같은 렌더링 화면에 연결되는 메모리 버퍼를 관리합니다.  
+## <a name="manually-displaying-buffered-graphics"></a><span data-ttu-id="22a39-123">버퍼링된 그래픽 수동 표시</span><span class="sxs-lookup"><span data-stu-id="22a39-123">Manually Displaying Buffered Graphics</span></span>  
+ <span data-ttu-id="22a39-124">인스턴스를 사용할 수는 <xref:System.Drawing.BufferedGraphicsContext> 를 호출 하 여 그래픽 버퍼를 만들 클래스의 <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A?displayProperty=nameWithType>의 인스턴스를 반환 하는 <xref:System.Drawing.BufferedGraphics> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-124">You can use an instance of the <xref:System.Drawing.BufferedGraphicsContext> class to create graphics buffers by calling the <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A?displayProperty=nameWithType>, which returns an instance of the <xref:System.Drawing.BufferedGraphics> class.</span></span> <span data-ttu-id="22a39-125">A <xref:System.Drawing.BufferedGraphics> 개체 표면 렌더링, 폼 또는 컨트롤과 같은 연관 된 메모리 버퍼를 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-125">A <xref:System.Drawing.BufferedGraphics> object manages a memory buffer that is associated with a rendering surface, such as a form or control.</span></span>  
   
- 인스턴스화된 후 <xref:System.Drawing.BufferedGraphics> 클래스는 메모리 내 그래픽 버퍼에 대한 렌더링을 관리합니다.  [BufferedGraphics.Graphics 속성](frlrfSystemDrawingBufferedGraphicsClassGraphicsTopic)을 통해 그래픽을 메모리 버퍼에 렌더링할 수 있습니다. 이 속성은 메모리 버퍼를 직접 나타내는 <xref:System.Drawing.Graphics> 개체를 노출합니다.  그리기 화면을 표시하는 <xref:System.Drawing.Graphics> 개체에서와 마찬가지로 이 <xref:System.Drawing.Graphics> 개체에 그릴 수 있습니다.  모든 그래픽이 버퍼에 그려지면 [BufferedGraphics.Render 메서드](frlrfSystemDrawingBufferedGraphicsClassRenderTopic)를 사용하여 버퍼 내용을 그리기 화면에 복사할 수 있습니다.  
+ <span data-ttu-id="22a39-126">인스턴스화된 후의 <xref:System.Drawing.BufferedGraphics> 클래스 관리 메모리 그래픽 버퍼를 렌더링 합니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-126">After it is instantiated, the <xref:System.Drawing.BufferedGraphics> class manages rendering to an in-memory graphics buffer.</span></span> <span data-ttu-id="22a39-127">통해 메모리 버퍼에 그래픽을 렌더링할 수는 <xref:System.Drawing.BufferedGraphics.Graphics%2A>를 노출 하는 <xref:System.Drawing.Graphics> 직접 메모리 버퍼를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-127">You can render graphics to the memory buffer through the <xref:System.Drawing.BufferedGraphics.Graphics%2A>, which exposes a <xref:System.Drawing.Graphics> object that directly represents the memory buffer.</span></span> <span data-ttu-id="22a39-128">이에 그릴 수 <xref:System.Drawing.Graphics> 하는 것 처럼 개체는 <xref:System.Drawing.Graphics> 그리기 화면을 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-128">You can paint to this <xref:System.Drawing.Graphics> object just as you would to a <xref:System.Drawing.Graphics> object that represents a drawing surface.</span></span> <span data-ttu-id="22a39-129">버퍼에 그려진 모든 그래픽 후 사용할 수 있습니다는 <xref:System.Drawing.BufferedGraphics.Render%2A?displayProperty=nameWithType> 화면의 그리기 화면 버퍼의 내용을 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-129">After all the graphics have been drawn to the buffer, you can use the <xref:System.Drawing.BufferedGraphics.Render%2A?displayProperty=nameWithType> to copy the contents of the buffer to the drawing surface on the screen.</span></span>  
   
- <xref:System.Drawing.BufferedGraphics> 클래스 사용에 대한 자세한 내용은 [버퍼링된 그래픽 수동 렌더링](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)을 참조하십시오.  그래픽 렌더링에 대한 자세한 내용은 [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)를 참조하십시오.  
+ <span data-ttu-id="22a39-130">사용 하 여 대 한 자세한 내용은 <xref:System.Drawing.BufferedGraphics> 클래스를 참조 하십시오. [버퍼링 된 그래픽 수동 렌더링](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="22a39-130">For more information on using the <xref:System.Drawing.BufferedGraphics> class, see [Manually Rendering Buffered Graphics](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md).</span></span> <span data-ttu-id="22a39-131">그래픽 렌더링에 대한 자세한 내용은 [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="22a39-131">For more information on rendering graphics, see [Graphics and Drawing in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)</span></span>  
   
-## 참고 항목  
- <xref:System.Drawing.BufferedGraphics>   
- <xref:System.Drawing.BufferedGraphicsContext>   
- <xref:System.Drawing.BufferedGraphicsManager>   
- [방법: 버퍼링된 그래픽 수동 렌더링](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)   
- [방법: 폼과 컨트롤에 이중 버퍼링을 사용하여 그래픽 깜빡임 줄이기](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)   
- [방법: 버퍼링된 그래픽 수동 관리](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)   
- [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="22a39-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="22a39-132">See Also</span></span>  
+ <xref:System.Drawing.BufferedGraphics>  
+ <xref:System.Drawing.BufferedGraphicsContext>  
+ <xref:System.Drawing.BufferedGraphicsManager>  
+ [<span data-ttu-id="22a39-133">방법: 버퍼링된 그래픽 수동 렌더링</span><span class="sxs-lookup"><span data-stu-id="22a39-133">How to: Manually Render Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
+ [<span data-ttu-id="22a39-134">방법: 양식과 컨트롤에 이중 버퍼링을 사용하여 그래픽 깜빡임 줄이기</span><span class="sxs-lookup"><span data-stu-id="22a39-134">How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls</span></span>](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ [<span data-ttu-id="22a39-135">방법: 버퍼링된 그래픽 수동 관리</span><span class="sxs-lookup"><span data-stu-id="22a39-135">How to: Manually Manage Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
+ [<span data-ttu-id="22a39-136">Windows Forms의 그래픽 및 그리기</span><span class="sxs-lookup"><span data-stu-id="22a39-136">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

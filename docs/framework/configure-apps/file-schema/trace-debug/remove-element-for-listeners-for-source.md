@@ -1,73 +1,77 @@
 ---
-title: "&lt;source&gt;의 &lt;listeners&gt;에 대한 &lt;remove&gt; 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source>의 <listeners>에 대한 <remove> 요소"
-  - "<source>의 <listeners>에 대한 remove 요소"
+title: "&lt;제거&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;소스&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
+helpviewer_keywords:
+- remove element for <listeners> for <source>
+- <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6170c02296859d9c47e5288f287a4371d7cb0c56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;source&gt;의 &lt;listeners&gt;에 대한 &lt;remove&gt; 요소
-추적 소스에 대한 `Listeners` 컬렉션에서 수신기를 제거합니다.  
+# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="8ce85-102">&lt;제거&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;소스&gt;</span><span class="sxs-lookup"><span data-stu-id="8ce85-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
+<span data-ttu-id="8ce85-103">추적 소스의 `Listeners` 컬렉션에서 수신기를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-103">Removes a listener from the `Listeners` collection for a trace source.</span></span>  
   
-## 구문  
+ <span data-ttu-id="8ce85-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8ce85-104">\<configuration></span></span>  
+<span data-ttu-id="8ce85-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="8ce85-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="8ce85-106">\<소스 ></span><span class="sxs-lookup"><span data-stu-id="8ce85-106">\<sources></span></span>  
+<span data-ttu-id="8ce85-107">\<소스 ></span><span class="sxs-lookup"><span data-stu-id="8ce85-107">\<source></span></span>  
+<span data-ttu-id="8ce85-108">\<수신기 ></span><span class="sxs-lookup"><span data-stu-id="8ce85-108">\<listeners></span></span>  
+<span data-ttu-id="8ce85-109">\<제거 ></span><span class="sxs-lookup"><span data-stu-id="8ce85-109">\<remove></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="8ce85-110">구문</span><span class="sxs-lookup"><span data-stu-id="8ce85-110">Syntax</span></span>  
+  
+```xml  
 <remove name="listenerName" />  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8ce85-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="8ce85-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="8ce85-112">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="8ce85-113">특성</span><span class="sxs-lookup"><span data-stu-id="8ce85-113">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|`name`|필수 특성입니다.<br /><br /> `Listeners` 컬렉션에서 제거할 수신기 이름입니다.|  
+|<span data-ttu-id="8ce85-114">특성</span><span class="sxs-lookup"><span data-stu-id="8ce85-114">Attribute</span></span>|<span data-ttu-id="8ce85-115">설명</span><span class="sxs-lookup"><span data-stu-id="8ce85-115">Description</span></span>|  
+|---------------|-----------------|  
+|`name`|<span data-ttu-id="8ce85-116">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="8ce85-117">제거할 수신기의 이름에서 `Listeners` 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-117">The name of the listener to remove from the `Listeners` collection.</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="8ce85-118">자식 요소</span><span class="sxs-lookup"><span data-stu-id="8ce85-118">Child Elements</span></span>  
+ <span data-ttu-id="8ce85-119">없음</span><span class="sxs-lookup"><span data-stu-id="8ce85-119">None.</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="8ce85-120">부모 요소</span><span class="sxs-lookup"><span data-stu-id="8ce85-120">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`system.diagnostics`|메시지를 수집하여 저장하고 라우트하는 추적 수신기와 추적 스위치를 설정할 수준을 지정합니다.|  
-|`sources`|추적 메시지를 발생시키는 추적 소스를 포함합니다.|  
-|`source`|추적 메시지를 발생시키는 추적 소스를 지정합니다.|  
-|`listeners`|메시지를 수집하여 저장하고 라우팅하는 수신기를 지정합니다.|  
+|<span data-ttu-id="8ce85-121">요소</span><span class="sxs-lookup"><span data-stu-id="8ce85-121">Element</span></span>|<span data-ttu-id="8ce85-122">설명</span><span class="sxs-lookup"><span data-stu-id="8ce85-122">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="8ce85-123">공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="8ce85-124">메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-124">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="8ce85-125">추적 메시지를 시작하는 추적 소스가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-125">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="8ce85-126">추적 메시지를 시작하는 추적 소스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-126">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="8ce85-127">수집, 저장 하 고 메시지를 라우팅하는 수신기를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-127">Specifies listeners that collect, store, and route messages.</span></span>|  
   
-## 설명  
- `<remove>` 요소는 추적 소스에 대한 `Listeners` 컬렉션에서 지정한 수신기를 제거합니다.  
+## <a name="remarks"></a><span data-ttu-id="8ce85-128">설명</span><span class="sxs-lookup"><span data-stu-id="8ce85-128">Remarks</span></span>  
+ <span data-ttu-id="8ce85-129">`<remove>` 에서 지정 된 수신기를 제거 하는 요소는 `Listeners` 추적 소스에 대 한 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-129">The `<remove>` element removes a specified listener from the `Listeners` collection for a trace source.</span></span>  
   
- <xref:System.Diagnostics.TraceSource> 인스턴스의 <xref:System.Diagnostics.TraceSource.Listeners%2A> 속성에서 <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> 메서드를 호출하여 추적 소스에 대한 `Listeners` 컬렉션에서 요소를 프로그래밍 방식으로 제거할 수 있습니다.  
+ <span data-ttu-id="8ce85-130">요소를 제거할 수 있습니다는 `Listeners` 호출 하 여 프로그래밍 방식으로 추적 소스에 대 한 컬렉션은 <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> 에서 메서드는 <xref:System.Diagnostics.TraceSource.Listeners%2A> 속성의는 <xref:System.Diagnostics.TraceSource> 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="8ce85-130">You can remove an element from the `Listeners` collection for a trace source programmatically by calling the <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> method on the <xref:System.Diagnostics.TraceSource.Listeners%2A> property of the <xref:System.Diagnostics.TraceSource> instance.</span></span>  
   
- 이 요소는 컴퓨터 구성 파일\(Machine.config\) 및 응용 프로그램 구성 파일에 사용할 수 있습니다.  
+ <span data-ttu-id="8ce85-131">이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-131">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## 예제  
- 다음 예제에서는 `<add>` 요소를 사용하기 전에 `<remove>` 요소를 사용하여 `console` 수신기를 추적 소스 `TraceSourceApp`에 대한 `Listeners` 컬렉션에 추가하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="8ce85-132">예제</span><span class="sxs-lookup"><span data-stu-id="8ce85-132">Example</span></span>  
+ <span data-ttu-id="8ce85-133">사용 하는 방법을 보여 주는 다음 예제는 `<remove>` 요소를 사용 하기 전에 `<add>` 수신기에 추가할 요소의 `console` 에 `Listeners` 추적 소스에 대 한 컬렉션 `TraceSourceApp`합니다.</span><span class="sxs-lookup"><span data-stu-id="8ce85-133">The following example shows how to use the `<remove>` element before using the `<add>` element to add the listener `console` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -84,9 +88,9 @@ caps.handback.revision: 6
 </configuration>   
 ```  
   
-## 참고 항목  
- <xref:System.Diagnostics.TraceSource.Listeners%2A>   
- <xref:System.Diagnostics.TraceSource>   
- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [\<clear\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a><span data-ttu-id="8ce85-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8ce85-134">See Also</span></span>  
+ <xref:System.Diagnostics.TraceSource.Listeners%2A>  
+ <xref:System.Diagnostics.TraceSource>  
+ [<span data-ttu-id="8ce85-135">추적 및 디버그 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="8ce85-135">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="8ce85-136">\<clear></span><span class="sxs-lookup"><span data-stu-id="8ce85-136">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
+ [<span data-ttu-id="8ce85-137">추적 수신기</span><span class="sxs-lookup"><span data-stu-id="8ce85-137">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

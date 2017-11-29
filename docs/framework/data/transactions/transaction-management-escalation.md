@@ -1,43 +1,47 @@
 ---
-title: "트랜잭션 관리 에스컬레이션  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "트랜잭션 관리 에스컬레이션"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0ac45390d78f4fbce15c8910fcdcc95713c5898a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 트랜잭션 관리 에스컬레이션 
-Windows는 트랜잭션 관리자를 구성하는 서비스 및 모듈 집합을 호스팅합니다.트랜잭션 관리 에스컬레이션은 트랜잭션 관리자의 구성 요소 중 하나에서 다른 구성 요소로 트랜잭션을 마이그레이션하는 프로세스에 대해 설명합니다.  
+# <a name="transaction-management-escalation"></a><span data-ttu-id="474a9-102">트랜잭션 관리 에스컬레이션</span><span class="sxs-lookup"><span data-stu-id="474a9-102">Transaction Management Escalation</span></span>
+<span data-ttu-id="474a9-103">Windows는 트랜잭션 관리자를 구성하는 서비스 및 모듈 집합을 호스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-103">Windows hosts a set of services and modules that together constitute a transaction manager.</span></span> <span data-ttu-id="474a9-104">트랜잭션 관리 에스컬레이션은 트랜잭션 관리자의 구성 요소 중 하나에서 다른 구성 요소로 트랜잭션을 마이그레이션하는 프로세스에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-104">Transaction management escalation describes the process of migrating a transaction from one of the transaction manager's components to another.</span></span>  
   
- <xref:System.Transactions>에는 하나 이하의 지속적인 리소스나 여러 개의 일시적인 리소스와 관련된 트랜잭션을 조정하는 트랜잭션 관리자 구성 요소가 있습니다.트랜잭션 관리자는 워크플로 인스턴스 간 도메인 호출만 사용하므로 최상의 성능을 제공합니다.개발자가 직접 트랜잭션 관리자와 상호 작용할 필요는 없습니다.대신 인터페이스, 일반 동작 및 도우미 클래스를 정의하는 공통 인프라가 <xref:System.Transactions> 네임스페이스에 의해 제공됩니다.  
+ <span data-ttu-id="474a9-105"><xref:System.Transactions>에는 하나 이하의 지속적인 리소스나 여러 개의 일시적인 리소스와 관련된 트랜잭션을 조정하는 트랜잭션 관리자 구성 요소가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-105"><xref:System.Transactions> includes a transaction manager component that coordinates a transaction involving at most, a single durable resource or multiple volatile resources.</span></span> <span data-ttu-id="474a9-106">트랜잭션 관리자는 워크플로 인스턴스 간 도메인 호출만 사용하므로 최상의 성능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-106">Because the transaction manager uses only intra-application domain calls, it yields the best performance.</span></span> <span data-ttu-id="474a9-107">개발자가 직접 트랜잭션 관리자와 상호 작용할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-107">Developers need not interact with the transaction manager directly.</span></span> <span data-ttu-id="474a9-108">대신 인터페이스, 일반 동작 및 도우미 클래스를 정의하는 공통 인프라가 <xref:System.Transactions> 네임스페이스에 의해 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-108">Instead, a common infrastructure that defines interfaces, common behavior, and helper classes is provided by the <xref:System.Transactions> namespace.</span></span>  
   
- 동일한 컴퓨터에서 다른 응용 프로그램 도메인의 다른 개체\(프로세스 및 컴퓨터 경계를 넘는 경우 포함\)에 트랜잭션을 제공하려는 경우 <xref:System.Transactions> 인프라가 자동으로 MSDTC\(Microsoft Distributed Transaction Coordinator\)에서 관리할 트랜잭션을 에스컬레이션합니다.다른 지속적인 리소스 관리자를 참여시키는 경우에도 에스컬레이션이 발생합니다.에스컬레이션되면 트랜잭션이 완료될 때까지 높은 권한 상태에서 관리됩니다.  
+ <span data-ttu-id="474a9-109">동일한 컴퓨터에서 트랜잭션 (프로세스 및 컴퓨터 경계를 넘어 포함) 다른 응용 프로그램 도메인에 있는 개체를 제공 하려는 경우는 <xref:System.Transactions> 인프라에는 자동으로 Microsoft에서 관리 되는 트랜잭션 에스컬레이션 Distributed Transaction Coordinator (MSDTC).</span><span class="sxs-lookup"><span data-stu-id="474a9-109">When you want to provide the transaction to an object in another application domain (including across process and machine boundaries) on the same computer, the <xref:System.Transactions> infrastructure automatically escalates the transaction to be managed by the Microsoft Distributed Transaction Coordinator (MSDTC).</span></span> <span data-ttu-id="474a9-110">다른 지속적인 리소스 관리자를 참여시키는 경우에도 에스컬레이션이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-110">The escalation also occurs if you enlist another durable resource manager.</span></span> <span data-ttu-id="474a9-111">에스컬레이션되면 트랜잭션이 완료될 때까지 높은 권한 상태에서 관리됩니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-111">When escalated, the transaction remains managed in its elevated state until its completion.</span></span>  
   
- <xref:System.Transactions> 트랜잭션과 MSDTC 트랜잭션 사이에는 PSPE\(승격 가능한 단일 단계 인리스트먼트\)를 통해 사용할 수 있는 중간 형식의 트랜잭션이 있습니다.PSPE는 성능을 최적화하기 위한 <xref:System.Transactions>의 다른 중요한 메커니즘입니다.PSPE를 사용하면 다른 응용 프로그램 도메인, 프로세스 또는 컴퓨터에 있는 지속적인 원격 리소스가 MSDTC 트랜잭션으로 에스컬레이션되지 않고도 <xref:System.Transactions> 트랜잭션에 참여할 수 있습니다.PSPE에 대한 자세한 내용은 [리소스를 트랜잭션에 참가 요소로 등록 ](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)을 참조하십시오.  
+ <span data-ttu-id="474a9-112"><xref:System.Transactions> 트랜잭션과 MSDTC 트랜잭션 사이에는 PSPE(승격 가능한 단일 단계 인리스트먼트)를 통해 사용할 수 있는 중간 형식의 트랜잭션이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-112">Between the <xref:System.Transactions> transaction and MSDTC transaction, there is an intermediary type of transaction that is made available through the Promotable Single Phase Enlistment (PSPE).</span></span> <span data-ttu-id="474a9-113">PSPE는 성능을 최적화하기 위한 <xref:System.Transactions>의 다른 중요한 메커니즘입니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-113">PSPE is another important mechanism in <xref:System.Transactions> for performance optimization.</span></span> <span data-ttu-id="474a9-114">PSPE를 사용하면 다른 응용 프로그램 도메인, 프로세스 또는 컴퓨터에 있는 지속적인 원격 리소스가 MSDTC 트랜잭션으로 에스컬레이션되지 않고도 <xref:System.Transactions> 트랜잭션에 참여할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-114">It allows a remote durable resource, located in a different application domain, process or computer, to participate in a <xref:System.Transactions> transaction without causing it to be escalated to an MSDTC transaction.</span></span> <span data-ttu-id="474a9-115">PSPE에 대 한 자세한 내용은 참조 [트랜잭션에서 참가자 인 리스트 먼 트 리소스](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-115">For more information about PSPE, see [Enlisting Resources as Participants in a Transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md).</span></span>  
   
-## 에스컬레이션 시작 방법  
- MSDTC는 별도 프로세스에 있고 트랜잭션을 MSDTC로 에스컬레이션하는 경우 메시지가 프로세스 간에 전송되므로 트랜잭션 에스컬레이션을 사용하면 성능이 저하됩니다.성능을 향상시키려면 MSDTC로의 에스컬레이션을 지연시키거나 방지해야 합니다. 따라서 에스컬레이션 시작 방법과 시기를 알아야 합니다.  
+## <a name="how-escalation-is-initiated"></a><span data-ttu-id="474a9-116">에스컬레이션 시작 방법</span><span class="sxs-lookup"><span data-stu-id="474a9-116">How Escalation is Initiated</span></span>  
+ <span data-ttu-id="474a9-117">MSDTC는 별도 프로세스에 있고 트랜잭션을 MSDTC로 에스컬레이션하는 경우 메시지가 프로세스 간에 전송되므로 트랜잭션 에스컬레이션을 사용하면 성능이 저하됩니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-117">Transaction escalation reduces performance because the MSDTC resides in a separate process, and escalating a transaction to the MSDTC results in messages being sent across process.</span></span> <span data-ttu-id="474a9-118">성능을 개선 하기 위해 지연 하거나 에스컬레이션 MSDTC;을 방지 해야 따라서 에스컬레이션 시작 되는 방법과 시기에 대해 알아야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-118">To improve performance, you should delay or avoid escalation to MSDTC; thus, you need to know how and when the escalation is initiated.</span></span>  
   
- <xref:System.Transactions> 인프라에서 임시적인 리소스와 단일 단계 알림을 지원하는 하나 이하의 지속적인 리소스를 처리하는 한 트랜잭션은 <xref:System.Transactions> 인프라의 소유로 유지됩니다.트랜잭션 관리자는 동일한 응용 프로그램 도메인에 있고 로깅\(트랜잭션 출력을 디스크에 쓰는 작업\)이 필요하지 않은 리소스에만 사용할 수 있습니다.<xref:System.Transactions> 인프라가 트랜잭션 소유권을 MSDTC로 넘기게 되는 에스컬레이션은 다음과 같은 경우에 발생합니다.  
+ <span data-ttu-id="474a9-119"><xref:System.Transactions> 인프라에서 임시적인 리소스와 단일 단계 알림을 지원하는 하나 이하의 지속적인 리소스를 처리하는 한 트랜잭션은 <xref:System.Transactions> 인프라의 소유로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-119">As long as the <xref:System.Transactions> infrastructure handles volatile resources and at most one durable resource that supports single-phase notifications, the transaction remains in the ownership of the <xref:System.Transactions> infrastructure.</span></span> <span data-ttu-id="474a9-120">트랜잭션 관리자는 동일한 응용 프로그램 도메인에 있고 로깅(트랜잭션 출력을 디스크에 쓰는 작업)이 필요하지 않은 리소스에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-120">The transaction manager avails itself only to those resources that live in the same application domain and for which logging (writing the transaction outcome to disk) is not required.</span></span> <span data-ttu-id="474a9-121"><xref:System.Transactions> 인프라가 트랜잭션 소유권을 MSDTC로 넘기게 되는 에스컬레이션은 다음과 같은 경우에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-121">An escalation that results in the <xref:System.Transactions> infrastructure transferring the ownership of the transaction to MSDTC happens when:</span></span>  
   
--   단일 단계 알림을 지원하지 않는 지속적인 리소스가 하나 이상 트랜잭션에 참여하는 경우  
+-   <span data-ttu-id="474a9-122">단일 단계 알림을 지원하지 않는 지속적인 리소스가 하나 이상 트랜잭션에 참여하는 경우</span><span class="sxs-lookup"><span data-stu-id="474a9-122">At least one durable resource that does not support single-phase notifications is enlisted in the transaction.</span></span>  
   
--   단일 단계 알림을 지원하는 지속적인 리소스가 두 개 이상 트랜잭션에 참여하는 경우.예를 들어 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)]와의 단일 연결을 참여시키면 트랜잭션이 승격되지 않습니다.그러나 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 데이터베이스에 대한 두 번째 연결을 열어 데이터베이스에서 참여시킬 때마다 <xref:System.Transactions> 인프라는 이를 트랜잭션의 두 번째 지속적인 리소스로 감지하고 MSDTC 트랜잭션으로 에스컬레이션합니다.  
+-   <span data-ttu-id="474a9-123">단일 단계 알림을 지원하는 지속적인 리소스가 두 개 이상 트랜잭션에 참여하는 경우.</span><span class="sxs-lookup"><span data-stu-id="474a9-123">At least two durable resources that support single-phase notifications are enlisted in the transaction.</span></span> <span data-ttu-id="474a9-124">예를 들어 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)]와의 단일 연결을 참여시키면 트랜잭션이 승격되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-124">For example, enlisting a single connection with [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] does not cause a transaction to be promoted.</span></span> <span data-ttu-id="474a9-125">그러나 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 데이터베이스에 대한 두 번째 연결을 열어 데이터베이스에서 참여시킬 때마다 <xref:System.Transactions> 인프라는 이를 트랜잭션의 두 번째 지속적인 리소스로 감지하고 MSDTC 트랜잭션으로 에스컬레이션합니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-125">However, whenever you open a second connection to a [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] database causing the database to enlist, the <xref:System.Transactions> infrastructure detects that it is the second durable resource in the transaction, and escalates it to an MSDTC transaction.</span></span>  
   
--   트랜잭션을 다른 응용 프로그램 도메인이나 다른 프로세스로 "마샬링"하는 요청이 호출됩니다.예를 들어 응용 프로그램 도메인 경계를 넘어 트랜잭션 개체가 serialize됩니다.트랜잭션 개체는 값으로 마샬링되므로 동일한 프로세스인 경우에도 응용 프로그램 도메인 경계를 넘어 전달하려고 하면 트랜잭션 개체의 serialization이 발생합니다.<xref:System.Transactions.Transaction>을 매개 변수로 사용하는 원격 메서드를 호출하여 트랜잭션 개체를 전달하거나 트랜잭션에서 처리된 구성 요소에 액세스할 수 있습니다.이 경우 트랜잭션 개체가 serialize되어 트랜잭션이 응용 프로그램 도메인에서 serialize될 때와 마찬가지로 에스컬레이션이 발생합니다.트랜잭션 개체가 분산되어 로컬 트랜잭션 관리자가 더 이상 적합하지 않습니다.  
+-   <span data-ttu-id="474a9-126">트랜잭션을 다른 응용 프로그램 도메인이나 다른 프로세스로 "마샬링"하는 요청이 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-126">A request to "marshal" the transaction to a different application domain or different process is invoked.</span></span> <span data-ttu-id="474a9-127">예를 들어 응용 프로그램 도메인 경계를 넘어 트랜잭션 개체가 serialize됩니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-127">For example, the serialization of the transaction object across an application domain boundary.</span></span> <span data-ttu-id="474a9-128">트랜잭션 개체는 값으로 마샬링되므로 동일한 프로세스인 경우에도 응용 프로그램 도메인 경계를 넘어 전달하려고 하면 트랜잭션 개체의 serialization이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-128">The transaction object is marshaled-by-value, meaning that any attempt to pass it across an application domain boundary (even in the same process) results in serialization of the transaction object.</span></span> <span data-ttu-id="474a9-129"><xref:System.Transactions.Transaction>을 매개 변수로 사용하는 원격 메서드를 호출하여 트랜잭션 개체를 전달하거나 트랜잭션에서 처리된 구성 요소에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-129">You can pass the transaction objects by making a call on a remote method that takes a <xref:System.Transactions.Transaction> as a parameter or you can try to access a remote transactional-serviced component.</span></span> <span data-ttu-id="474a9-130">이 경우 트랜잭션 개체가 serialize되어 트랜잭션이 응용 프로그램 도메인에서 serialize될 때와 마찬가지로 에스컬레이션이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-130">This serializes the transaction object and results in an escalation, as when a transaction is serialized across an application domain.</span></span> <span data-ttu-id="474a9-131">트랜잭션 개체가 분산되어 로컬 트랜잭션 관리자가 더 이상 적합하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-131">It is being distributed and the local transaction manager is no longer adequate.</span></span>  
   
- 다음 표에서는 에스컬레이션 중에 throw될 수 있는 모든 가능한 예외를 보여 줍니다.  
+ <span data-ttu-id="474a9-132">다음 표에서는 에스컬레이션 중에 throw될 수 있는 모든 가능한 예외를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-132">The following table lists all the possible exceptions that can be thrown during escalation.</span></span>  
   
-|예외 형식|조건|  
-|-----------|--------|  
-|<xref:System.InvalidOperationException>|<xref:System.Transactions.IsolationLevel>과 동일한 격리 수준으로 트랜잭션을 에스컬레이션하려는 경우입니다.|  
-|<xref:System.Transactions.TransactionAbortedException>|트랜잭션 관리자가 다운된 경우입니다.|  
-|<xref:System.Transactions.TransactionException>|에스컬레이션이 실패하고 응용 프로그램이 중단된 경우입니다.|
+|<span data-ttu-id="474a9-133">예외 형식</span><span class="sxs-lookup"><span data-stu-id="474a9-133">Exception type</span></span>|<span data-ttu-id="474a9-134">조건</span><span class="sxs-lookup"><span data-stu-id="474a9-134">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<span data-ttu-id="474a9-135"><xref:System.Transactions.IsolationLevel.Snapshot>과 동일한 격리 수준으로 트랜잭션을 에스컬레이션하려는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-135">An attempt to escalate a transaction with isolation level equal to <xref:System.Transactions.IsolationLevel.Snapshot>.</span></span>|  
+|<xref:System.Transactions.TransactionAbortedException>|<span data-ttu-id="474a9-136">트랜잭션 관리자가 다운된 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-136">The transaction manager is down.</span></span>|  
+|<xref:System.Transactions.TransactionException>|<span data-ttu-id="474a9-137">에스컬레이션이 실패하고 응용 프로그램이 중단된 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="474a9-137">The escalation fails and the application is aborted.</span></span>|

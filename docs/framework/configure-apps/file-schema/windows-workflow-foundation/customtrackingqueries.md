@@ -1,61 +1,69 @@
 ---
-title: "&lt;customTrackingQueries&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;customTrackingQueries&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 4e9e732d-911d-45a3-a569-4b5e9cd1ffbe
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 19a4a58a15db72129f17655e7043f2ee3ae7ffa2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;customTrackingQueries&gt;
-코드 활동에서 정의하는 이벤트를 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.  추적 참가자가 사용자 지정 추적 레코드를 구독하려면 쿼리가 필요합니다.  
+# <a name="ltcustomtrackingqueriesgt"></a><span data-ttu-id="bd826-102">&lt;customTrackingQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="bd826-102">&lt;customTrackingQueries&gt;</span></span>
+<span data-ttu-id="bd826-103">코드 활동에서 정의하는 이벤트를 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="bd826-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="bd826-104">추적 참가자가 사용자 지정 추적 레코드를 구독하려면 쿼리가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="bd826-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  
   
- 추적 프로필 쿼리에 대한 자세한 내용은 [추적 프로필](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)을 참조하세요.  
+ <span data-ttu-id="bd826-105">추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="bd826-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-## 구문  
+<span data-ttu-id="bd826-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="bd826-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="bd826-107">\<추적 ></span><span class="sxs-lookup"><span data-stu-id="bd826-107">\<tracking></span></span>  
+<span data-ttu-id="bd826-108">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="bd826-108">\<trackingProfile></span></span>  
+<span data-ttu-id="bd826-109">\<워크플로 ></span><span class="sxs-lookup"><span data-stu-id="bd826-109">\<workflow></span></span>  
+<span data-ttu-id="bd826-110">\<customTrackingQueries ></span><span class="sxs-lookup"><span data-stu-id="bd826-110">\<customTrackingQueries></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="bd826-111">구문</span><span class="sxs-lookup"><span data-stu-id="bd826-111">Syntax</span></span>  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <customTrackingQueries>  
-             <customTrackingQuery activityName="String"  
-                 name="String"/>  
-          </customTrackingQueries>  
-       </workflow>  
-   </trackingProfile>  
+```xml  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <customTrackingQueries>
+        <customTrackingQuery activityName="String" 
+                             name="String" />
+      </customTrackingQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bd826-112">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="bd826-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="bd826-113">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="bd826-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
- 없음  
+### <a name="attributes"></a><span data-ttu-id="bd826-114">특성</span><span class="sxs-lookup"><span data-stu-id="bd826-114">Attributes</span></span>  
+ <span data-ttu-id="bd826-115">없음</span><span class="sxs-lookup"><span data-stu-id="bd826-115">None.</span></span>  
   
-### 자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="bd826-116">자식 요소</span><span class="sxs-lookup"><span data-stu-id="bd826-116">Child Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<customTrackingQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|코드 활동에서 정의하는 이벤트를 추적하기 위해 사용되는 쿼리입니다.|  
+|<span data-ttu-id="bd826-117">요소</span><span class="sxs-lookup"><span data-stu-id="bd826-117">Element</span></span>|<span data-ttu-id="bd826-118">설명</span><span class="sxs-lookup"><span data-stu-id="bd826-118">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="bd826-119">\<customTrackingQuery ></span><span class="sxs-lookup"><span data-stu-id="bd826-119">\<customTrackingQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|<span data-ttu-id="bd826-120">코드 활동에서 정의하는 이벤트를 추적하기 위해 사용되는 쿼리입니다.</span><span class="sxs-lookup"><span data-stu-id="bd826-120">A query that is used to track events that you define in your code activities.</span></span>|  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="bd826-121">부모 요소</span><span class="sxs-lookup"><span data-stu-id="bd826-121">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<workflow\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|**activityDefinitionId** 속성에 의해 식별되는 특정 워크플로에 대한 모든 쿼리를 포함하는 구성 요소입니다.|  
+|<span data-ttu-id="bd826-122">요소</span><span class="sxs-lookup"><span data-stu-id="bd826-122">Element</span></span>|<span data-ttu-id="bd826-123">설명</span><span class="sxs-lookup"><span data-stu-id="bd826-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="bd826-124">\<워크플로 ></span><span class="sxs-lookup"><span data-stu-id="bd826-124">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="bd826-125">로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소는 **activityDefinitionId** 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="bd826-125">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
   
-## 참고 항목  
- [System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.CustomTrackingQuery](assetId:///System.Activities.Tracking.CustomTrackingQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [추적 프로필](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="bd826-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bd826-126">See Also</span></span>  
+ <span data-ttu-id="bd826-127"><xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="bd826-127"><xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="bd826-128"><xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="bd826-128"><xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="bd826-129">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="bd826-129">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="bd826-130">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="bd826-130">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

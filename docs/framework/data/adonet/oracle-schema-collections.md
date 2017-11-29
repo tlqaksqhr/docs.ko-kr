@@ -1,390 +1,393 @@
 ---
-title: "Oracle 스키마 컬렉션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Oracle 스키마 컬렉션"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 828e5ae0a9db2542debf8e09e5d8875fcea0ba23
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Oracle 스키마 컬렉션
-Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬렉션을 비롯하여 다음과 같은 특정 스키마 컬렉션을 지원합니다.  
+# <a name="oracle-schema-collections"></a><span data-ttu-id="fb8c3-102">Oracle 스키마 컬렉션</span><span class="sxs-lookup"><span data-stu-id="fb8c3-102">Oracle Schema Collections</span></span>
+<span data-ttu-id="fb8c3-103">Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬렉션을 비롯하여 다음과 같은 특정 스키마 컬렉션을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-103">The Microsoft .NET Framework Data Provider for Oracle supports the following specific schema collections in addition to the common schema collections:</span></span>  
   
--   Columns  
+-   <span data-ttu-id="fb8c3-104">Columns</span><span class="sxs-lookup"><span data-stu-id="fb8c3-104">Columns</span></span>  
   
--   Indexes  
+-   <span data-ttu-id="fb8c3-105">Indexes</span><span class="sxs-lookup"><span data-stu-id="fb8c3-105">Indexes</span></span>  
   
--   IndexColumns  
+-   <span data-ttu-id="fb8c3-106">IndexColumns</span><span class="sxs-lookup"><span data-stu-id="fb8c3-106">IndexColumns</span></span>  
   
--   절차  
+-   <span data-ttu-id="fb8c3-107">절차</span><span class="sxs-lookup"><span data-stu-id="fb8c3-107">Procedures</span></span>  
   
--   시퀀스  
+-   <span data-ttu-id="fb8c3-108">시퀀스</span><span class="sxs-lookup"><span data-stu-id="fb8c3-108">Sequences</span></span>  
   
--   동의어  
+-   <span data-ttu-id="fb8c3-109">동의어</span><span class="sxs-lookup"><span data-stu-id="fb8c3-109">Synonyms</span></span>  
   
--   Tables  
+-   <span data-ttu-id="fb8c3-110">Tables</span><span class="sxs-lookup"><span data-stu-id="fb8c3-110">Tables</span></span>  
   
--   Users  
+-   <span data-ttu-id="fb8c3-111">Users</span><span class="sxs-lookup"><span data-stu-id="fb8c3-111">Users</span></span>  
   
--   뷰  
+-   <span data-ttu-id="fb8c3-112">뷰</span><span class="sxs-lookup"><span data-stu-id="fb8c3-112">Views</span></span>  
   
--   함수  
+-   <span data-ttu-id="fb8c3-113">함수</span><span class="sxs-lookup"><span data-stu-id="fb8c3-113">Functions</span></span>  
   
--   패키지  
+-   <span data-ttu-id="fb8c3-114">패키지</span><span class="sxs-lookup"><span data-stu-id="fb8c3-114">Packages</span></span>  
   
--   PackageBodies  
+-   <span data-ttu-id="fb8c3-115">PackageBodies</span><span class="sxs-lookup"><span data-stu-id="fb8c3-115">PackageBodies</span></span>  
   
--   인수  
+-   <span data-ttu-id="fb8c3-116">인수</span><span class="sxs-lookup"><span data-stu-id="fb8c3-116">Arguments</span></span>  
   
--   UniqueKeys  
+-   <span data-ttu-id="fb8c3-117">UniqueKeys</span><span class="sxs-lookup"><span data-stu-id="fb8c3-117">UniqueKeys</span></span>  
   
--   PrimaryKeys  
+-   <span data-ttu-id="fb8c3-118">PrimaryKeys</span><span class="sxs-lookup"><span data-stu-id="fb8c3-118">PrimaryKeys</span></span>  
   
--   ForeignKeys  
+-   <span data-ttu-id="fb8c3-119">ForeignKeys</span><span class="sxs-lookup"><span data-stu-id="fb8c3-119">ForeignKeys</span></span>  
   
--   ForeignKeyColumns  
+-   <span data-ttu-id="fb8c3-120">ForeignKeyColumns</span><span class="sxs-lookup"><span data-stu-id="fb8c3-120">ForeignKeyColumns</span></span>  
   
--   ProcedureParameters  
+-   <span data-ttu-id="fb8c3-121">ProcedureParameters</span><span class="sxs-lookup"><span data-stu-id="fb8c3-121">ProcedureParameters</span></span>  
   
-## Columns  
+## <a name="columns"></a><span data-ttu-id="fb8c3-122">Columns</span><span class="sxs-lookup"><span data-stu-id="fb8c3-122">Columns</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|테이블, 뷰 또는 클러스터의 소유자입니다.|  
-|TABLE\_NAME|문자열|테이블, 뷰 또는 클러스터 이름입니다.|  
-|COLUMN\_NAME|문자열|열 이름입니다.|  
-|ID|Decimal|만들어진 열의 시퀀스 번호입니다.|  
-|DATATYPE|문자열|열의 데이터 형식입니다.|  
-|LENGTH|Decimal|열 길이\(바이트\)입니다.|  
-|PRECISION|Decimal|NUMBER 데이터 형식인 경우는 십진수 정밀도이고 FLOAT 데이터 형식인 경우는 이진 정밀도이며 다른 모든 데이터 형식인 경우는 null입니다.|  
-|SCALE|Decimal|소수점 오른쪽의 숫자 자릿수입니다.|  
-|NULLABLE|문자열|열에서 NULL을 허용하는지 여부를 지정합니다.  열에 NOT NULL 제약 조건이 없거나 열이 PRIMARY KEY의 일부인 경우 값은 N입니다.|  
+|<span data-ttu-id="fb8c3-123">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-123">ColumnName</span></span>|<span data-ttu-id="fb8c3-124">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-124">DataType</span></span>|<span data-ttu-id="fb8c3-125">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-125">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-126">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-126">OWNER</span></span>|<span data-ttu-id="fb8c3-127">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-127">String</span></span>|<span data-ttu-id="fb8c3-128">테이블, 뷰 또는 클러스터의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-128">Owner of the table, view or cluster.</span></span>|  
+|<span data-ttu-id="fb8c3-129">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-129">TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-130">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-130">String</span></span>|<span data-ttu-id="fb8c3-131">테이블, 뷰 또는 클러스터 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-131">Table, view, or cluster name.</span></span>|  
+|<span data-ttu-id="fb8c3-132">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-132">COLUMN_NAME</span></span>|<span data-ttu-id="fb8c3-133">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-133">String</span></span>|<span data-ttu-id="fb8c3-134">열 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-134">Column name.</span></span>|  
+|<span data-ttu-id="fb8c3-135">ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-135">ID</span></span>|<span data-ttu-id="fb8c3-136">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-136">Decimal</span></span>|<span data-ttu-id="fb8c3-137">만들어진 열의 시퀀스 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-137">Sequence number of the column as created.</span></span>|  
+|<span data-ttu-id="fb8c3-138">DATATYPE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-138">DATATYPE</span></span>|<span data-ttu-id="fb8c3-139">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-139">String</span></span>|<span data-ttu-id="fb8c3-140">열의 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-140">Datatype of the column.</span></span>|  
+|<span data-ttu-id="fb8c3-141">LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-141">LENGTH</span></span>|<span data-ttu-id="fb8c3-142">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-142">Decimal</span></span>|<span data-ttu-id="fb8c3-143">열 길이(바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-143">Length of the column in bytes.</span></span>|  
+|<span data-ttu-id="fb8c3-144">PRECISION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-144">PRECISION</span></span>|<span data-ttu-id="fb8c3-145">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-145">Decimal</span></span>|<span data-ttu-id="fb8c3-146">NUMBER 데이터 형식인 경우는 십진수 정밀도이고 FLOAT 데이터 형식인 경우는 이진 정밀도이며 다른 모든 데이터 형식인 경우는 null입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-146">Decimal precision for NUMBER datatype; binary precision for FLOAT datatype, null for all other datatypes.</span></span>|  
+|<span data-ttu-id="fb8c3-147">SCALE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-147">SCALE</span></span>|<span data-ttu-id="fb8c3-148">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-148">Decimal</span></span>|<span data-ttu-id="fb8c3-149">소수점 오른쪽의 숫자 자릿수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-149">Digits to right of decimal point in a number.</span></span>|  
+|<span data-ttu-id="fb8c3-150">NULLABLE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-150">NULLABLE</span></span>|<span data-ttu-id="fb8c3-151">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-151">String</span></span>|<span data-ttu-id="fb8c3-152">열에서 NULL을 허용하는지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-152">Specifies whether a column allows NULLs.</span></span> <span data-ttu-id="fb8c3-153">열에 NOT NULL 제약 조건이 없거나 열이 PRIMARY KEY의 일부인 경우 값은 N입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-153">Value is N if there is a NOT NULL constraint on the column or if the column is part of a PRIMARY KEY.</span></span>|  
   
-## Indexes  
+## <a name="indexes"></a><span data-ttu-id="fb8c3-154">Indexes</span><span class="sxs-lookup"><span data-stu-id="fb8c3-154">Indexes</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|인덱스의 소유자입니다.|  
-|INDEX\_NAME|문자열|인덱스의 이름입니다.|  
-|INDEX\_TYPE|문자열|인덱스의 형식입니다\(NORMAL, BITMAP, FUNCTION\-BASED NORMAL, FUNCTION\-BASED BITMAP 또는 DOMAIN\).|  
-|TABLE\_OWNER|문자열|인덱싱된 개체의 소유자입니다.|  
-|TABLE\_NAME|문자열|인덱싱된 개체의 이름입니다.|  
-|TABLE\_TYPE|문자열|인덱싱된 개체의 형식입니다\(예: TABLE, CLUSTER\).|  
-|UNIQUENESS|문자열|인덱스가 UNIQUE인지 또는 NONUNIQUE인지 여부입니다.|  
-|COMPRESSION|문자열|인덱스가 ENABLED인지 또는 DISABLED인지 여부입니다.|  
-|PREFIX\_LENGTH|Decimal|압축 키 접두사의 열 수입니다.|  
-|TABLESPACE\_NAME|문자열|인덱스를 포함하는 테이블스페이스 이름입니다.|  
-|INI\_TRANS|Decimal|초기 트랜잭션 수입니다.|  
-|MAX\_TRANS|Decimal|최대 트랜잭션 수입니다.|  
-|INITIAL\_EXTENT|Decimal|초기 익스텐트 크기입니다.|  
-|NEXT\_EXTENT|Decimal|보조 익스텐트 크기입니다.|  
-|MIN\_EXTENTS|Decimal|세그먼트에 허용된 최소 익스텐트 수입니다.|  
-|MAX\_EXTENTS|Decimal|세그먼트에 허용된 최대 익스텐트 수입니다.|  
-|PCT\_INCREASE|Decimal|익스텐트 크기의 증가율입니다.|  
-|PCT\_THRESHOLD|Decimal|인덱스 엔트리당 허용된 블록 공간의 임계값 백분율입니다.|  
-|INCLUDE\_COLUMN|Decimal|인덱스 구성 테이블 기본 키\(비 오버플로\) 인덱스에 마지막으로 포함될 열의 열 ID입니다.  이 열은 \*\_TAB\_COLUMNS 데이터 사전 뷰의 COLUMN\_ID 열에 매핑됩니다.|  
-|FREELISTS|Decimal|이 세그먼트에 할당된 프로세스 freelist 수입니다.|  
-|FREELIST\_GROUPS|Decimal|이 세그먼트에 할당된 freelist 그룹 수입니다.|  
-|PCT\_FREE|Decimal|블록의 최소 여유 공간 비율입니다.|  
-|LOGGING|문자열|로깅 정보입니다.|  
-|BLEVEL|Decimal|B\*\-트리 수준: 루트 블록에서 리프 블록까지의 인덱스 깊이입니다.  깊이가 0이면 루트 블록과 리프 블록이 같음을 나타냅니다.|  
-|LEAF\_BLOCKS|Decimal|인덱스의 리프 블록 수입니다.|  
-|DISTINCT\_KEYS|Decimal|인덱싱된 고유한 값의 수입니다.  UNIQUE 및 PRIMARY KEY 제약 조건이 적용되는 인덱스의 경우 이 값은 테이블의 행 수와 같습니다\(USER\_TABLES.NUM\_ROWS\).|  
-|AVG\_LEAF\_BLOCKS\_PER\_KEY|Decimal|각각의 고유한 값이 가장 가까운 정수로 올림되어 나타나는 리프 블록의 평균 개수입니다.  UNIQUE 및 PRIMARY KEY 제약 조건을 적용하는 인덱스의 경우 이 값은 항상 1입니다.|  
-|AVG\_DATA\_BLOCKS\_PER\_KEY|Decimal|인덱스의 고유한 값이 가장 가까운 정수로 올림되도록 나타내는 테이블의 평균 데이터 블록 수입니다.  이 통계는 인덱싱된 열에 대해 지정된 값이 들어 있는 행을 포함하는 데이터 블록의 평균 개수입니다.|  
-|CLUSTERING\_FACTOR|Decimal|인덱스 값에 따른 테이블의 행 주문량을 나타냅니다.|  
-|STATUS|문자열|파티션되지 않은 인덱스가 VALID인지 또는 UNUSABLE인지 여부입니다.|  
-|NUM\_ROWS|Decimal|인덱스의 행 수입니다.|  
-|SAMPLE\_SIZE|Decimal|인덱스 분석에 사용할 샘플의 크기입니다.|  
-|LAST\_ANALYZED|DateTime|이 인덱스를 가장 최근에 분석한 날짜입니다.|  
-|DEGREE|문자열|인덱스를 스캔할 인스턴스당 스레드 수입니다.|  
-|INSTANCES|문자열|인덱스를 스캔할 인스턴스의 수입니다.|  
-|PARTITIONED|문자열|인덱스가 구분되었는지 여부입니다\(YES &#124; NO\).|  
-|TEMPORARY|문자열|인덱스가 임시 테이블에 있는지 여부입니다.|  
-|GENERATED|문자열|인덱스 이름이 시스템에서 생성되었는지 여부입니다\(Y&#124;N\).|  
-|SECONDARY|문자열|인덱스가 Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체인지 여부입니다\(Y&#124;N\).|  
-|BUFFER\_POOL|문자열|인덱스 블록에 사용할 기본 버퍼 풀의 이름입니다.|  
-|USER\_STATS|문자열|사용자가 직접 통계를 입력했는지 여부입니다.|  
-|DURATION|문자열|임시 테이블의 지속 시간을 나타냅니다. 1\)SYS$SESSION: 세션 지속 시간 동안 행이 유지됩니다. 2\) SYS$TRANSACTION: COMMIT 이후에 행이 삭제됩니다. 3\) 영구 테이블인 경우 Null입니다.|  
-|PCT\_DIRECT\_ACCESS|Decimal|인덱스 구성 테이블의 보조 인덱스인 경우 VALID 추측을 사용한 행의 백분율입니다.|  
-|ITYP\_OWNER|문자열|도메인 인덱스인 경우 인덱스 형식 소유자입니다.|  
-|ITYP\_NAME|문자열|도메인 인덱스인 경우 인덱스 형식 이름입니다.|  
-|PARAMETERS|문자열|도메인 인덱스인 경우 매개 변수 문자열입니다.|  
-|GLOBAL\_STATS|문자열|구분된 인덱스인 경우 통계를 인덱스를 전체적으로 분석하여 수집했는지\(YES\) 또는 기본 인덱스 파티션 및 하위 파티션의 통계에서 추측했는지\(NO\) 여부를 나타냅니다.|  
-|DOMIDX\_STATUS|문자열|도메인 인덱스의 상태를 나타냅니다.  NULL: 지정한 인덱스는 도메인 인덱스가 아닙니다.  VALID: 올바른 도메인 인덱스입니다.  IDXTYP\_INVLD: 이 도메인 인덱스의 인덱스 형식이 올바르지 않습니다.|  
-|DOMIDX\_OPSTATUS|문자열|도메인 인덱스에서 수행한 작업의 상태를 나타냅니다. NULL: 지정한 인덱스는 도메인 인덱스가 아닙니다.  VALID: 작업이 오류 없이 수행되었습니다.  FAILED: 오류가 발생하여 작업을 수행하지 못했습니다.|  
-|FUNCIDX\_STATUS|문자열|함수 기반 인덱스의 상태를 나타냅니다. NULL: 함수 기반 인덱스가 아닙니다. ENABLED: 함수 기반 인덱스가 활성화되었습니다. DISABLED: 함수 기반 인덱스가 비활성화되었습니다.|  
-|JOIN\_INDEX|문자열|조인 인덱스인지 여부를 나타냅니다.|  
+|<span data-ttu-id="fb8c3-155">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-155">ColumnName</span></span>|<span data-ttu-id="fb8c3-156">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-156">DataType</span></span>|<span data-ttu-id="fb8c3-157">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-157">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-158">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-158">OWNER</span></span>|<span data-ttu-id="fb8c3-159">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-159">String</span></span>|<span data-ttu-id="fb8c3-160">인덱스의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-160">Owner of the index</span></span>|  
+|<span data-ttu-id="fb8c3-161">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-161">INDEX_NAME</span></span>|<span data-ttu-id="fb8c3-162">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-162">String</span></span>|<span data-ttu-id="fb8c3-163">인덱스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-163">Name of the index.</span></span>|  
+|<span data-ttu-id="fb8c3-164">INDEX_TYPE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-164">INDEX_TYPE</span></span>|<span data-ttu-id="fb8c3-165">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-165">String</span></span>|<span data-ttu-id="fb8c3-166">인덱스의 형식입니다(NORMAL, BITMAP, FUNCTION-BASED NORMAL, FUNCTION-BASED BITMAP 또는 DOMAIN).</span><span class="sxs-lookup"><span data-stu-id="fb8c3-166">Type of index (NORMAL, BITMAP, FUNCTION-BASED NORMAL, FUNCTION-BASED BITMAP, or DOMAIN).</span></span>|  
+|<span data-ttu-id="fb8c3-167">TABLE_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-167">TABLE_OWNER</span></span>|<span data-ttu-id="fb8c3-168">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-168">String</span></span>|<span data-ttu-id="fb8c3-169">인덱싱된 개체의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-169">Owner of the indexed object.</span></span>|  
+|<span data-ttu-id="fb8c3-170">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-170">TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-171">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-171">String</span></span>|<span data-ttu-id="fb8c3-172">인덱싱된 개체의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-172">Name of the indexed object.</span></span>|  
+|<span data-ttu-id="fb8c3-173">TABLE_TYPE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-173">TABLE_TYPE</span></span>|<span data-ttu-id="fb8c3-174">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-174">String</span></span>|<span data-ttu-id="fb8c3-175">인덱싱된 개체의 형식입니다(예: TABLE, CLUSTER).</span><span class="sxs-lookup"><span data-stu-id="fb8c3-175">Type of the indexed object (for example, TABLE, CLUSTER).</span></span>|  
+|<span data-ttu-id="fb8c3-176">UNIQUENESS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-176">UNIQUENESS</span></span>|<span data-ttu-id="fb8c3-177">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-177">String</span></span>|<span data-ttu-id="fb8c3-178">인덱스가 UNIQUE인지 또는 NONUNIQUE인지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-178">Whether the index is UNIQUE or NONUNIQUE.</span></span>|  
+|<span data-ttu-id="fb8c3-179">COMPRESSION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-179">COMPRESSION</span></span>|<span data-ttu-id="fb8c3-180">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-180">String</span></span>|<span data-ttu-id="fb8c3-181">인덱스가 ENABLED인지 또는 DISABLED인지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-181">Whether the index is ENABLED or DISABLED.</span></span>|  
+|<span data-ttu-id="fb8c3-182">PREFIX_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-182">PREFIX_LENGTH</span></span>|<span data-ttu-id="fb8c3-183">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-183">Decimal</span></span>|<span data-ttu-id="fb8c3-184">압축 키 접두사의 열 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-184">Number of columns in the prefix of the compression key.</span></span>|  
+|<span data-ttu-id="fb8c3-185">TABLESPACE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-185">TABLESPACE_NAME</span></span>|<span data-ttu-id="fb8c3-186">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-186">String</span></span>|<span data-ttu-id="fb8c3-187">인덱스를 포함하는 테이블스페이스 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-187">Name of the tablespace containing the index.</span></span>|  
+|<span data-ttu-id="fb8c3-188">INI_TRANS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-188">INI_TRANS</span></span>|<span data-ttu-id="fb8c3-189">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-189">Decimal</span></span>|<span data-ttu-id="fb8c3-190">초기 트랜잭션 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-190">Initial number of transactions.</span></span>|  
+|<span data-ttu-id="fb8c3-191">MAX_TRANS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-191">MAX_TRANS</span></span>|<span data-ttu-id="fb8c3-192">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-192">Decimal</span></span>|<span data-ttu-id="fb8c3-193">최대 트랜잭션 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-193">Maximum number of transactions.</span></span>|  
+|<span data-ttu-id="fb8c3-194">INITIAL_EXTENT</span><span class="sxs-lookup"><span data-stu-id="fb8c3-194">INITIAL_EXTENT</span></span>|<span data-ttu-id="fb8c3-195">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-195">Decimal</span></span>|<span data-ttu-id="fb8c3-196">초기 익스텐트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-196">Size of the initial extent.</span></span>|  
+|<span data-ttu-id="fb8c3-197">NEXT_EXTENT</span><span class="sxs-lookup"><span data-stu-id="fb8c3-197">NEXT_EXTENT</span></span>|<span data-ttu-id="fb8c3-198">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-198">Decimal</span></span>|<span data-ttu-id="fb8c3-199">보조 익스텐트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-199">Size of secondary extents.</span></span>|  
+|<span data-ttu-id="fb8c3-200">MIN_EXTENTS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-200">MIN_EXTENTS</span></span>|<span data-ttu-id="fb8c3-201">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-201">Decimal</span></span>|<span data-ttu-id="fb8c3-202">세그먼트에 허용된 최소 익스텐트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-202">Minimum number of extents allowed in the segment.</span></span>|  
+|<span data-ttu-id="fb8c3-203">MAX_EXTENTS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-203">MAX_EXTENTS</span></span>|<span data-ttu-id="fb8c3-204">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-204">Decimal</span></span>|<span data-ttu-id="fb8c3-205">세그먼트에 허용된 최대 익스텐트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-205">Maximum number of extents allowed in the segment.</span></span>|  
+|<span data-ttu-id="fb8c3-206">PCT_INCREASE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-206">PCT_INCREASE</span></span>|<span data-ttu-id="fb8c3-207">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-207">Decimal</span></span>|<span data-ttu-id="fb8c3-208">익스텐트 크기의 증가율입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-208">Percentage increase in extent size.</span></span>|  
+|<span data-ttu-id="fb8c3-209">PCT_THRESHOLD</span><span class="sxs-lookup"><span data-stu-id="fb8c3-209">PCT_THRESHOLD</span></span>|<span data-ttu-id="fb8c3-210">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-210">Decimal</span></span>|<span data-ttu-id="fb8c3-211">인덱스 엔트리당 허용된 블록 공간의 임계값 백분율입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-211">Threshold percentage of block space allowed per index entry.</span></span>|  
+|<span data-ttu-id="fb8c3-212">INCLUDE_COLUMN</span><span class="sxs-lookup"><span data-stu-id="fb8c3-212">INCLUDE_COLUMN</span></span>|<span data-ttu-id="fb8c3-213">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-213">Decimal</span></span>|<span data-ttu-id="fb8c3-214">인덱스 구성 테이블 기본 키(비 오버플로) 인덱스에 마지막으로 포함될 열의 열 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-214">Column ID of the last column to be included in index-organized table primary key (non-overflow) index.</span></span> <span data-ttu-id="fb8c3-215">이 열은 *_TAB_COLUMNS 데이터 사전 뷰의 COLUMN_ID 열에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-215">This column maps to the COLUMN_ID column of the *_TAB_COLUMNS data dictionary views.</span></span>|  
+|<span data-ttu-id="fb8c3-216">FREELISTS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-216">FREELISTS</span></span>|<span data-ttu-id="fb8c3-217">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-217">Decimal</span></span>|<span data-ttu-id="fb8c3-218">이 세그먼트에 할당된 프로세스 freelist 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-218">Number of process freelists allocated to this segment.</span></span>|  
+|<span data-ttu-id="fb8c3-219">FREELIST_GROUPS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-219">FREELIST_GROUPS</span></span>|<span data-ttu-id="fb8c3-220">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-220">Decimal</span></span>|<span data-ttu-id="fb8c3-221">이 세그먼트에 할당된 freelist 그룹 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-221">Number of freelist groups allocated to this segment.</span></span>|  
+|<span data-ttu-id="fb8c3-222">PCT_FREE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-222">PCT_FREE</span></span>|<span data-ttu-id="fb8c3-223">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-223">Decimal</span></span>|<span data-ttu-id="fb8c3-224">블록의 최소 여유 공간 비율입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-224">Minimum percentage of free space in a block.</span></span>|  
+|<span data-ttu-id="fb8c3-225">LOGGING</span><span class="sxs-lookup"><span data-stu-id="fb8c3-225">LOGGING</span></span>|<span data-ttu-id="fb8c3-226">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-226">String</span></span>|<span data-ttu-id="fb8c3-227">로깅 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-227">Logging information.</span></span>|  
+|<span data-ttu-id="fb8c3-228">BLEVEL</span><span class="sxs-lookup"><span data-stu-id="fb8c3-228">BLEVEL</span></span>|<span data-ttu-id="fb8c3-229">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-229">Decimal</span></span>|<span data-ttu-id="fb8c3-230">B*-트리 수준: 루트 블록에서 리프 블록까지의 인덱스 깊이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-230">B*-Tree level: depth of the index from its root block to its leaf blocks.</span></span> <span data-ttu-id="fb8c3-231">깊이가 0이면 루트 블록과 리프 블록이 같음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-231">A depth of 0 indicates that the root block and leaf block are the same.</span></span>|  
+|<span data-ttu-id="fb8c3-232">LEAF_BLOCKS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-232">LEAF_BLOCKS</span></span>|<span data-ttu-id="fb8c3-233">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-233">Decimal</span></span>|<span data-ttu-id="fb8c3-234">인덱스의 리프 블록 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-234">Number of leaf blocks in the index</span></span>|  
+|<span data-ttu-id="fb8c3-235">DISTINCT_KEYS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-235">DISTINCT_KEYS</span></span>|<span data-ttu-id="fb8c3-236">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-236">Decimal</span></span>|<span data-ttu-id="fb8c3-237">인덱싱된 고유한 값의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-237">Number of distinct indexed values.</span></span> <span data-ttu-id="fb8c3-238">UNIQUE 및 PRIMARY KEY 제약 조건이 적용되는 인덱스의 경우 이 값은 테이블의 행 수와 같습니다(USER_TABLES.NUM_ROWS).</span><span class="sxs-lookup"><span data-stu-id="fb8c3-238">For indexes that enforce UNIQUE and PRIMARY KEY constraints, this value is the same as the number of rows in the table (USER_TABLES.NUM_ROWS).</span></span>|  
+|<span data-ttu-id="fb8c3-239">AVG_LEAF_BLOCKS_PER_KEY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-239">AVG_LEAF_BLOCKS_PER_KEY</span></span>|<span data-ttu-id="fb8c3-240">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-240">Decimal</span></span>|<span data-ttu-id="fb8c3-241">각각의 고유한 값이 가장 가까운 정수로 올림되어 나타나는 리프 블록의 평균 개수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-241">Average number of leaf blocks in which each distinct value in the index appears rounded to the nearest integer.</span></span> <span data-ttu-id="fb8c3-242">UNIQUE 및 PRIMARY KEY 제약 조건을 적용하는 인덱스의 경우 이 값은 항상 1입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-242">For indexes that enforce UNIQUE and PRIMARY KEY constraints, this value is always 1.</span></span>|  
+|<span data-ttu-id="fb8c3-243">AVG_DATA_BLOCKS_PER_KEY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-243">AVG_DATA_BLOCKS_PER_KEY</span></span>|<span data-ttu-id="fb8c3-244">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-244">Decimal</span></span>|<span data-ttu-id="fb8c3-245">인덱스의 고유한 값이 가장 가까운 정수로 올림되도록 나타내는 테이블의 평균 데이터 블록 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-245">Average number of data blocks in the table that are pointed to by a distinct value in the index rounded to the nearest integer.</span></span> <span data-ttu-id="fb8c3-246">이 통계는 인덱싱된 열에 대해 지정된 값이 들어 있는 행을 포함하는 데이터 블록의 평균 개수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-246">This statistic is the average number of data blocks that contain rows that contain a given value for the indexed columns.</span></span>|  
+|<span data-ttu-id="fb8c3-247">CLUSTERING_FACTOR</span><span class="sxs-lookup"><span data-stu-id="fb8c3-247">CLUSTERING_FACTOR</span></span>|<span data-ttu-id="fb8c3-248">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-248">Decimal</span></span>|<span data-ttu-id="fb8c3-249">인덱스 값에 따른 테이블의 행 주문량을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-249">Indicates the amount of order of the rows in the table based on the values of the index.</span></span>|  
+|<span data-ttu-id="fb8c3-250">STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-250">STATUS</span></span>|<span data-ttu-id="fb8c3-251">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-251">String</span></span>|<span data-ttu-id="fb8c3-252">파티션되지 않은 인덱스가 VALID인지 또는 UNUSABLE인지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-252">Whether a nonpartitioned index is VALID or UNUSABLE.</span></span>|  
+|<span data-ttu-id="fb8c3-253">NUM_ROWS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-253">NUM_ROWS</span></span>|<span data-ttu-id="fb8c3-254">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-254">Decimal</span></span>|<span data-ttu-id="fb8c3-255">인덱스의 행 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-255">Number of rows in the index.</span></span>|  
+|<span data-ttu-id="fb8c3-256">SAMPLE_SIZE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-256">SAMPLE_SIZE</span></span>|<span data-ttu-id="fb8c3-257">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-257">Decimal</span></span>|<span data-ttu-id="fb8c3-258">인덱스 분석에 사용할 샘플의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-258">Size of the sample used to analyze the index.</span></span>|  
+|<span data-ttu-id="fb8c3-259">LAST_ANALYZED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-259">LAST_ANALYZED</span></span>|<span data-ttu-id="fb8c3-260">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-260">DateTime</span></span>|<span data-ttu-id="fb8c3-261">이 인덱스를 가장 최근에 분석한 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-261">Date on which this index was most recently analyzed.</span></span>|  
+|<span data-ttu-id="fb8c3-262">DEGREE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-262">DEGREE</span></span>|<span data-ttu-id="fb8c3-263">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-263">String</span></span>|<span data-ttu-id="fb8c3-264">인덱스를 스캔할 인스턴스당 스레드 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-264">Number of threads per instance for scanning the index.</span></span>|  
+|<span data-ttu-id="fb8c3-265">INSTANCES</span><span class="sxs-lookup"><span data-stu-id="fb8c3-265">INSTANCES</span></span>|<span data-ttu-id="fb8c3-266">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-266">String</span></span>|<span data-ttu-id="fb8c3-267">인덱스를 스캔할 인스턴스의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-267">Number of instances across which the indexes to be scanned.</span></span>|  
+|<span data-ttu-id="fb8c3-268">PARTITIONED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-268">PARTITIONED</span></span>|<span data-ttu-id="fb8c3-269">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-269">String</span></span>|<span data-ttu-id="fb8c3-270">이 인덱스가 구분 되었는지 여부입니다 (예 &#124; 아니요)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-270">Whether this index is partitioned (YES &#124; NO).</span></span>|  
+|<span data-ttu-id="fb8c3-271">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-271">TEMPORARY</span></span>|<span data-ttu-id="fb8c3-272">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-272">String</span></span>|<span data-ttu-id="fb8c3-273">인덱스가 임시 테이블에 있는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-273">Whether the index is on a temporary table.</span></span>|  
+|<span data-ttu-id="fb8c3-274">GENERATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-274">GENERATED</span></span>|<span data-ttu-id="fb8c3-275">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-275">String</span></span>|<span data-ttu-id="fb8c3-276">(Y &#124; 생성 된 인덱스의 이름이 시스템 인지 여부를 N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-276">Whether the name of the index is system generated (Y&#124;N).</span></span>|  
+|<span data-ttu-id="fb8c3-277">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-277">SECONDARY</span></span>|<span data-ttu-id="fb8c3-278">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-278">String</span></span>|<span data-ttu-id="fb8c3-279">Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부 (Y &#124; N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-279">Whether the index is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y&#124;N).</span></span>|  
+|<span data-ttu-id="fb8c3-280">BUFFER_POOL</span><span class="sxs-lookup"><span data-stu-id="fb8c3-280">BUFFER_POOL</span></span>|<span data-ttu-id="fb8c3-281">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-281">String</span></span>|<span data-ttu-id="fb8c3-282">인덱스 블록에 사용할 기본 버퍼 풀의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-282">Name of the default buffer pool to be used for the index blocks.</span></span>|  
+|<span data-ttu-id="fb8c3-283">USER_STATS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-283">USER_STATS</span></span>|<span data-ttu-id="fb8c3-284">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-284">String</span></span>|<span data-ttu-id="fb8c3-285">사용자가 직접 통계를 입력했는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-285">Whether the statistics were entered directly by the user.</span></span>|  
+|<span data-ttu-id="fb8c3-286">DURATION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-286">DURATION</span></span>|<span data-ttu-id="fb8c3-287">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-287">String</span></span>|<span data-ttu-id="fb8c3-288">임시 테이블의 지속 시간을 나타냅니다. 1)SYS$SESSION: 세션 지속 시간 동안 행이 유지됩니다. 2) SYS$TRANSACTION: COMMIT 이후에 행이 삭제됩니다. 3) 영구 테이블인 경우 Null입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-288">Indicates the duration of a temporary table: 1)SYS$SESSION: the rows are preserved for the duration of the session, 2) SYS$TRANSACTION: the rows are deleted after COMMIT, 3) Null for permanent Table.</span></span>|  
+|<span data-ttu-id="fb8c3-289">PCT_DIRECT_ACCESS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-289">PCT_DIRECT_ACCESS</span></span>|<span data-ttu-id="fb8c3-290">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-290">Decimal</span></span>|<span data-ttu-id="fb8c3-291">인덱스 구성 테이블의 보조 인덱스인 경우 VALID 추측을 사용한 행의 백분율입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-291">For a secondary index on an index-organized table, the percentage of rows with VALID guess</span></span>|  
+|<span data-ttu-id="fb8c3-292">ITYP_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-292">ITYP_OWNER</span></span>|<span data-ttu-id="fb8c3-293">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-293">String</span></span>|<span data-ttu-id="fb8c3-294">도메인 인덱스인 경우 인덱스 형식 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-294">For a domain index, the owner of the indextype.</span></span>|  
+|<span data-ttu-id="fb8c3-295">ITYP_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-295">ITYP_NAME</span></span>|<span data-ttu-id="fb8c3-296">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-296">String</span></span>|<span data-ttu-id="fb8c3-297">도메인 인덱스인 경우 인덱스 형식 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-297">For a domain index, the name of the indextype.</span></span>|  
+|<span data-ttu-id="fb8c3-298">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-298">PARAMETERS</span></span>|<span data-ttu-id="fb8c3-299">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-299">String</span></span>|<span data-ttu-id="fb8c3-300">도메인 인덱스인 경우 매개 변수 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-300">For a domain index, the parameter string.</span></span>|  
+|<span data-ttu-id="fb8c3-301">GLOBAL_STATS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-301">GLOBAL_STATS</span></span>|<span data-ttu-id="fb8c3-302">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-302">String</span></span>|<span data-ttu-id="fb8c3-303">구분된 인덱스인 경우 통계를 인덱스를 전체적으로 분석하여 수집했는지(YES) 또는 기본 인덱스 파티션 및 하위 파티션의 통계에서 추측했는지(NO) 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-303">For partitioned indexes, indicates whether statistics were collected by analyzing index as a whole (YES) or were estimated from statistics on underlying index partitions and subpartitions (NO).</span></span>|  
+|<span data-ttu-id="fb8c3-304">DOMIDX_STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-304">DOMIDX_STATUS</span></span>|<span data-ttu-id="fb8c3-305">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-305">String</span></span>|<span data-ttu-id="fb8c3-306">도메인 인덱스의 상태를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-306">Reflects the status of the domain index.</span></span> <span data-ttu-id="fb8c3-307">NULL: 지정한 인덱스는 도메인 인덱스가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-307">NULL: the specified index is not a domain index.</span></span> <span data-ttu-id="fb8c3-308">VALID: 올바른 도메인 인덱스입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-308">VALID: the index is a valid domain index.</span></span> <span data-ttu-id="fb8c3-309">IDXTYP_INVLD: 이 도메인 인덱스의 인덱스 형식이 올바르지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-309">IDXTYP_INVLD: the index type of this domain index is invalid.</span></span>|  
+|<span data-ttu-id="fb8c3-310">DOMIDX_OPSTATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-310">DOMIDX_OPSTATUS</span></span>|<span data-ttu-id="fb8c3-311">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-311">String</span></span>|<span data-ttu-id="fb8c3-312">도메인 인덱스에서 수행한 작업의 상태를 나타냅니다. NULL: 지정한 인덱스는 도메인 인덱스가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-312">Reflects the status of an operation that was performed on a domain index: NULL: the specified index is not a domain index.</span></span> <span data-ttu-id="fb8c3-313">VALID: 작업이 오류 없이 수행되었습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-313">VALID: the operation performed without errors.</span></span> <span data-ttu-id="fb8c3-314">FAILED: 오류가 발생하여 작업을 수행하지 못했습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-314">FAILED: the operation failed with an error.</span></span>|  
+|<span data-ttu-id="fb8c3-315">FUNCIDX_STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-315">FUNCIDX_STATUS</span></span>|<span data-ttu-id="fb8c3-316">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-316">String</span></span>|<span data-ttu-id="fb8c3-317">함수 기반 인덱스의 상태를 나타냅니다. NULL: 함수 기반 인덱스가 아닙니다. ENABLED: 함수 기반 인덱스가 활성화되었습니다. DISABLED: 함수 기반 인덱스가 비활성화되었습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-317">Indicates the status of a function-based index: NULL: this is not a function-based index, ENABLED: the function-based index is enabled, DISABLED: the function-based index is disabled.</span></span>|  
+|<span data-ttu-id="fb8c3-318">JOIN_INDEX</span><span class="sxs-lookup"><span data-stu-id="fb8c3-318">JOIN_INDEX</span></span>|<span data-ttu-id="fb8c3-319">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-319">String</span></span>|<span data-ttu-id="fb8c3-320">조인 인덱스인지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-320">Indicates whether this is a join index or not.</span></span>|  
   
-## IndexColumns  
+## <a name="indexcolumns"></a><span data-ttu-id="fb8c3-321">IndexColumns</span><span class="sxs-lookup"><span data-stu-id="fb8c3-321">IndexColumns</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|INDEX\_OWNER|문자열|인덱스의 소유자입니다.|  
-|INDEX\_NAME|문자열|인덱스의 이름입니다.|  
-|TABLE\_OWNER|문자열|테이블 또는 클러스터의 소유자입니다.|  
-|TABLE\_NAME|문자열|테이블 또는 클러스터의 이름입니다.|  
-|COLUMN\_NAME|문자열|개체 유형 열의 열 이름 또는 특성입니다.|  
-|COLUMN\_POSITION|Decimal|인덱스 내의 열 또는 특성 위치입니다.|  
-|COLUMN\_LENGTH|Decimal|열의 인덱싱된 길이입니다.|  
-|CHAR\_LENGTH|Decimal|열의 최대 코드 포인트 길이입니다.|  
-|DESCEND|문자열|열이 내림차순으로 정렬되어 있는지 여부입니다.|  
+|<span data-ttu-id="fb8c3-322">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-322">ColumnName</span></span>|<span data-ttu-id="fb8c3-323">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-323">DataType</span></span>|<span data-ttu-id="fb8c3-324">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-324">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-325">INDEX_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-325">INDEX_OWNER</span></span>|<span data-ttu-id="fb8c3-326">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-326">String</span></span>|<span data-ttu-id="fb8c3-327">인덱스의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-327">Owner of the index.</span></span>|  
+|<span data-ttu-id="fb8c3-328">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-328">INDEX_NAME</span></span>|<span data-ttu-id="fb8c3-329">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-329">String</span></span>|<span data-ttu-id="fb8c3-330">인덱스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-330">Name of the index.</span></span>|  
+|<span data-ttu-id="fb8c3-331">TABLE_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-331">TABLE_OWNER</span></span>|<span data-ttu-id="fb8c3-332">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-332">String</span></span>|<span data-ttu-id="fb8c3-333">테이블 또는 클러스터의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-333">Owner of the table or cluster.</span></span>|  
+|<span data-ttu-id="fb8c3-334">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-334">TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-335">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-335">String</span></span>|<span data-ttu-id="fb8c3-336">테이블 또는 클러스터의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-336">Name of the table or cluster.</span></span>|  
+|<span data-ttu-id="fb8c3-337">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-337">COLUMN_NAME</span></span>|<span data-ttu-id="fb8c3-338">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-338">String</span></span>|<span data-ttu-id="fb8c3-339">개체 유형 열의 열 이름 또는 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-339">Column name or attribute of object type column.</span></span>|  
+|<span data-ttu-id="fb8c3-340">COLUMN_POSITION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-340">COLUMN_POSITION</span></span>|<span data-ttu-id="fb8c3-341">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-341">Decimal</span></span>|<span data-ttu-id="fb8c3-342">인덱스 내의 열 또는 특성 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-342">Position of column or attribute within the index.</span></span>|  
+|<span data-ttu-id="fb8c3-343">COLUMN_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-343">COLUMN_LENGTH</span></span>|<span data-ttu-id="fb8c3-344">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-344">Decimal</span></span>|<span data-ttu-id="fb8c3-345">열의 인덱싱된 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-345">Indexed length of the column.</span></span>|  
+|<span data-ttu-id="fb8c3-346">CHAR_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-346">CHAR_LENGTH</span></span>|<span data-ttu-id="fb8c3-347">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-347">Decimal</span></span>|<span data-ttu-id="fb8c3-348">열의 최대 코드 포인트 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-348">Maximum codepoint length of the column.</span></span>|  
+|<span data-ttu-id="fb8c3-349">DESCEND</span><span class="sxs-lookup"><span data-stu-id="fb8c3-349">DESCEND</span></span>|<span data-ttu-id="fb8c3-350">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-350">String</span></span>|<span data-ttu-id="fb8c3-351">열이 내림차순으로 정렬되어 있는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-351">Whether the column is sorted in descending order.</span></span>|  
   
-## 절차  
+## <a name="procedures"></a><span data-ttu-id="fb8c3-352">절차</span><span class="sxs-lookup"><span data-stu-id="fb8c3-352">Procedures</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|개체의 소유자입니다.|  
-|OBJECT\_NAME|문자열|개체의 이름입니다.|  
-|SUBOBJECT\_NAME|문자열|하위 개체\(예: 파티션\)의 이름입니다.|  
-|OBJECT\_ID|Decimal|개체의 사전순 개체 번호입니다.|  
-|DATA\_OBJECT\_ID|Decimal|개체를 포함하는 세그먼트의 사전순 개체 번호입니다.|  
-|LAST\_DDL\_TIME|DateTime|부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.|  
-|TIMESTAMP|문자열|개체\(문자 데이터\)의 사양에 대한 타임스탬프입니다.|  
-|STATUS|문자열|개체의 상태\(VALID, INVALID 또는 N\/A\)입니다.|  
-|TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|  
-|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까?  \(Y &#124; N\).|  
-|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체인지 여부입니다\(Y &#124; N\).|  
-|CREATED|DateTime|개체가 만들어진 날짜입니다.|  
+|<span data-ttu-id="fb8c3-353">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-353">ColumnName</span></span>|<span data-ttu-id="fb8c3-354">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-354">DataType</span></span>|<span data-ttu-id="fb8c3-355">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-355">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-356">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-356">OWNER</span></span>|<span data-ttu-id="fb8c3-357">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-357">String</span></span>|<span data-ttu-id="fb8c3-358">개체의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-358">Owner of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-359">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-359">OBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-360">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-360">String</span></span>|<span data-ttu-id="fb8c3-361">개체의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-361">Name of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-362">SUBOBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-362">SUBOBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-363">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-363">String</span></span>|<span data-ttu-id="fb8c3-364">하위 개체(예: 파티션)의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-364">Name of the subobject (for example, partition).</span></span>|  
+|<span data-ttu-id="fb8c3-365">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-365">OBJECT_ID</span></span>|<span data-ttu-id="fb8c3-366">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-366">Decimal</span></span>|<span data-ttu-id="fb8c3-367">개체의 사전순 개체 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-367">Dictionary object number of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-368">DATA_OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-368">DATA_OBJECT_ID</span></span>|<span data-ttu-id="fb8c3-369">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-369">Decimal</span></span>|<span data-ttu-id="fb8c3-370">개체를 포함하는 세그먼트의 사전순 개체 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-370">Dictionary object number of the segment that contains the object.</span></span>|  
+|<span data-ttu-id="fb8c3-371">LAST_DDL_TIME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-371">LAST_DDL_TIME</span></span>|<span data-ttu-id="fb8c3-372">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-372">DateTime</span></span>|<span data-ttu-id="fb8c3-373">부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-373">Timestamp for the last modification of the object resulting from a DDL command (including grants and revokes).</span></span>|  
+|<span data-ttu-id="fb8c3-374">TIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="fb8c3-374">TIMESTAMP</span></span>|<span data-ttu-id="fb8c3-375">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-375">String</span></span>|<span data-ttu-id="fb8c3-376">개체(문자 데이터)의 사양에 대한 타임스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-376">Timestamp for the specification of the object (character data).</span></span>|  
+|<span data-ttu-id="fb8c3-377">STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-377">STATUS</span></span>|<span data-ttu-id="fb8c3-378">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-378">String</span></span>|<span data-ttu-id="fb8c3-379">개체의 상태(VALID, INVALID 또는 N/A)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-379">Status of the object (VALID, INVALID, or N/A).</span></span>|  
+|<span data-ttu-id="fb8c3-380">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-380">TEMPORARY</span></span>|<span data-ttu-id="fb8c3-381">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-381">String</span></span>|<span data-ttu-id="fb8c3-382">임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-382">Whether the object is temporary (the current session can see only data that it placed in this object itself).</span></span>|  
+|<span data-ttu-id="fb8c3-383">GENERATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-383">GENERATED</span></span>|<span data-ttu-id="fb8c3-384">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-384">String</span></span>|<span data-ttu-id="fb8c3-385">이 개체 시스템의 이름이 생성되었습니까?</span><span class="sxs-lookup"><span data-stu-id="fb8c3-385">Was the name of this object system generated?</span></span> <span data-ttu-id="fb8c3-386">(Y &#124; N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-386">(Y &#124; N).</span></span>|  
+|<span data-ttu-id="fb8c3-387">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-387">SECONDARY</span></span>|<span data-ttu-id="fb8c3-388">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-388">String</span></span>|<span data-ttu-id="fb8c3-389">Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-389">Whether this is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y &#124; N).</span></span>|  
+|<span data-ttu-id="fb8c3-390">CREATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-390">CREATED</span></span>|<span data-ttu-id="fb8c3-391">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-391">DateTime</span></span>|<span data-ttu-id="fb8c3-392">개체가 만들어진 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-392">The date the object was created.</span></span>|  
   
-## 시퀀스  
+## <a name="sequences"></a><span data-ttu-id="fb8c3-393">시퀀스</span><span class="sxs-lookup"><span data-stu-id="fb8c3-393">Sequences</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|SEQUENCE\_OWNER|문자열|시퀀스 소유자의 이름입니다.|  
-|SEQUENCE\_NAME|문자열|시퀀스 이름입니다.|  
-|MIN\_VALUE|Decimal|시퀀스의 최소값입니다.|  
-|MAX\_VALUE|Decimal|시퀀스의 최대값입니다.|  
-|INCREMENT\_BY|Decimal|시퀀스가 증가하는 값입니다.|  
-|CYCLE\_FLAG|문자열|제한에 도달하면 시퀀스가 래핑을 수행합니까?|  
-|ORDER\_FLAG|문자열|시퀀스 번호가 순서대로 생성되었습니까?|  
-|CACHE\_SIZE|Decimal|캐시할 시퀀스 번호의 개수입니다.|  
-|LAST\_NUMBER|Decimal|디스크에 기록할 마지막 시퀀스 번호입니다.  시퀀스에서 캐싱을 사용하는 경우 디스크에 기록된 번호는 시퀀스 캐시에 마지막으로 들어갈 번호입니다.  이 번호는 마지막으로 사용한 시퀀스 번호보다 클 수 있습니다.|  
+|<span data-ttu-id="fb8c3-394">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-394">ColumnName</span></span>|<span data-ttu-id="fb8c3-395">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-395">DataType</span></span>|<span data-ttu-id="fb8c3-396">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-396">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-397">SEQUENCE_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-397">SEQUENCE_OWNER</span></span>|<span data-ttu-id="fb8c3-398">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-398">String</span></span>|<span data-ttu-id="fb8c3-399">시퀀스 소유자의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-399">Name of the owner of the sequence.</span></span>|  
+|<span data-ttu-id="fb8c3-400">SEQUENCE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-400">SEQUENCE_NAME</span></span>|<span data-ttu-id="fb8c3-401">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-401">String</span></span>|<span data-ttu-id="fb8c3-402">시퀀스 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-402">Sequence name.</span></span>|  
+|<span data-ttu-id="fb8c3-403">MIN_VALUE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-403">MIN_VALUE</span></span>|<span data-ttu-id="fb8c3-404">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-404">Decimal</span></span>|<span data-ttu-id="fb8c3-405">시퀀스의 최소값입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-405">Minimum value of the sequence.</span></span>|  
+|<span data-ttu-id="fb8c3-406">MAX_VALUE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-406">MAX_VALUE</span></span>|<span data-ttu-id="fb8c3-407">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-407">Decimal</span></span>|<span data-ttu-id="fb8c3-408">시퀀스의 최대값입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-408">Maximum value of the sequence.</span></span>|  
+|<span data-ttu-id="fb8c3-409">INCREMENT_BY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-409">INCREMENT_BY</span></span>|<span data-ttu-id="fb8c3-410">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-410">Decimal</span></span>|<span data-ttu-id="fb8c3-411">시퀀스가 증가하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-411">Value by which sequence is incremented.</span></span>|  
+|<span data-ttu-id="fb8c3-412">CYCLE_FLAG</span><span class="sxs-lookup"><span data-stu-id="fb8c3-412">CYCLE_FLAG</span></span>|<span data-ttu-id="fb8c3-413">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-413">String</span></span>|<span data-ttu-id="fb8c3-414">제한에 도달하면 시퀀스가 래핑을 수행합니까?</span><span class="sxs-lookup"><span data-stu-id="fb8c3-414">Does sequence wrap around on reaching limit.</span></span>|  
+|<span data-ttu-id="fb8c3-415">ORDER_FLAG</span><span class="sxs-lookup"><span data-stu-id="fb8c3-415">ORDER_FLAG</span></span>|<span data-ttu-id="fb8c3-416">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-416">String</span></span>|<span data-ttu-id="fb8c3-417">시퀀스 번호가 순서대로 생성되었습니까?</span><span class="sxs-lookup"><span data-stu-id="fb8c3-417">Are sequence numbers generated in order.</span></span>|  
+|<span data-ttu-id="fb8c3-418">CACHE_SIZE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-418">CACHE_SIZE</span></span>|<span data-ttu-id="fb8c3-419">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-419">Decimal</span></span>|<span data-ttu-id="fb8c3-420">캐시할 시퀀스 번호의 개수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-420">Number of sequence numbers to cache.</span></span>|  
+|<span data-ttu-id="fb8c3-421">LAST_NUMBER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-421">LAST_NUMBER</span></span>|<span data-ttu-id="fb8c3-422">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-422">Decimal</span></span>|<span data-ttu-id="fb8c3-423">디스크에 기록할 마지막 시퀀스 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-423">Last sequence number written to disk.</span></span> <span data-ttu-id="fb8c3-424">시퀀스에서 캐싱을 사용하는 경우 디스크에 기록된 번호는 시퀀스 캐시에 마지막으로 들어갈 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-424">If a sequence uses caching, the number written to disk is the last number placed in the sequence cache.</span></span> <span data-ttu-id="fb8c3-425">이 번호는 마지막으로 사용한 시퀀스 번호보다 클 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-425">This number is likely to be greater than the last sequence number that was used.</span></span>|  
   
-## 동의어  
+## <a name="synonyms"></a><span data-ttu-id="fb8c3-426">동의어</span><span class="sxs-lookup"><span data-stu-id="fb8c3-426">Synonyms</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|동의어의 소유자입니다.|  
-|SYNONYM\_NAME|문자열|동의어의 이름입니다.|  
-|TABLE\_OWNER|문자열|동의어로 참조한 개체의 소유자입니다.|  
-|TABLE\_NAME|문자열|동의어로 참조한 개체의 이름입니다.|  
-|DB\_LINK|문자열|참조된 데이터베이스 링크 이름입니다\(있는 경우\).|  
+|<span data-ttu-id="fb8c3-427">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-427">ColumnName</span></span>|<span data-ttu-id="fb8c3-428">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-428">DataType</span></span>|<span data-ttu-id="fb8c3-429">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-429">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-430">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-430">OWNER</span></span>|<span data-ttu-id="fb8c3-431">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-431">String</span></span>|<span data-ttu-id="fb8c3-432">동의어의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-432">Owner of the synonym.</span></span>|  
+|<span data-ttu-id="fb8c3-433">SYNONYM_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-433">SYNONYM_NAME</span></span>|<span data-ttu-id="fb8c3-434">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-434">String</span></span>|<span data-ttu-id="fb8c3-435">동의어의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-435">Name of the synonym.</span></span>|  
+|<span data-ttu-id="fb8c3-436">TABLE_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-436">TABLE_OWNER</span></span>|<span data-ttu-id="fb8c3-437">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-437">String</span></span>|<span data-ttu-id="fb8c3-438">동의어로 참조한 개체의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-438">Owner of the object referenced by the synonym.</span></span>|  
+|<span data-ttu-id="fb8c3-439">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-439">TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-440">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-440">String</span></span>|<span data-ttu-id="fb8c3-441">동의어로 참조한 개체의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-441">Name of the object referenced by the synonym.</span></span>|  
+|<span data-ttu-id="fb8c3-442">DB_LINK</span><span class="sxs-lookup"><span data-stu-id="fb8c3-442">DB_LINK</span></span>|<span data-ttu-id="fb8c3-443">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-443">String</span></span>|<span data-ttu-id="fb8c3-444">참조된 데이터베이스 링크 이름입니다(있는 경우).</span><span class="sxs-lookup"><span data-stu-id="fb8c3-444">Name of the database link referenced, if any.</span></span>|  
   
-## Tables  
+## <a name="tables"></a><span data-ttu-id="fb8c3-445">Tables</span><span class="sxs-lookup"><span data-stu-id="fb8c3-445">Tables</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|테이블의 소유자입니다.|  
-|TABLE\_NAME|문자열|테이블의 이름입니다.|  
-|TYPE|문자열|테이블 형식입니다.|  
+|<span data-ttu-id="fb8c3-446">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-446">ColumnName</span></span>|<span data-ttu-id="fb8c3-447">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-447">DataType</span></span>|<span data-ttu-id="fb8c3-448">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-448">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-449">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-449">OWNER</span></span>|<span data-ttu-id="fb8c3-450">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-450">String</span></span>|<span data-ttu-id="fb8c3-451">테이블의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-451">Owner of the table.</span></span>|  
+|<span data-ttu-id="fb8c3-452">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-452">TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-453">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-453">String</span></span>|<span data-ttu-id="fb8c3-454">테이블의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-454">Name of the table.</span></span>|  
+|<span data-ttu-id="fb8c3-455">TYPE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-455">TYPE</span></span>|<span data-ttu-id="fb8c3-456">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-456">String</span></span>|<span data-ttu-id="fb8c3-457">테이블 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-457">Type of table.</span></span>|  
   
-## Users  
+## <a name="users"></a><span data-ttu-id="fb8c3-458">Users</span><span class="sxs-lookup"><span data-stu-id="fb8c3-458">Users</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|NAME|문자열|사용자 이름입니다.|  
-|ID|Decimal|사용자의 ID 번호입니다.|  
-|CREATEDATE|DateTime|사용자가 만든 날짜입니다.|  
+|<span data-ttu-id="fb8c3-459">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-459">ColumnName</span></span>|<span data-ttu-id="fb8c3-460">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-460">DataType</span></span>|<span data-ttu-id="fb8c3-461">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-461">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-462">NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-462">NAME</span></span>|<span data-ttu-id="fb8c3-463">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-463">String</span></span>|<span data-ttu-id="fb8c3-464">사용자 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-464">Name of the user.</span></span>|  
+|<span data-ttu-id="fb8c3-465">ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-465">ID</span></span>|<span data-ttu-id="fb8c3-466">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-466">Decimal</span></span>|<span data-ttu-id="fb8c3-467">사용자의 ID 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-467">ID number of the user.</span></span>|  
+|<span data-ttu-id="fb8c3-468">CREATEDATE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-468">CREATEDATE</span></span>|<span data-ttu-id="fb8c3-469">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-469">DateTime</span></span>|<span data-ttu-id="fb8c3-470">사용자가 만든 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-470">User creation date.</span></span>|  
   
-## 뷰  
+## <a name="views"></a><span data-ttu-id="fb8c3-471">뷰</span><span class="sxs-lookup"><span data-stu-id="fb8c3-471">Views</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|뷰의 소유자입니다.|  
-|VIEW\_NAME|문자열|뷰의 이름입니다.|  
-|TEXT\_LENGTH|Decimal|뷰 텍스트의 길이입니다.|  
-|TEXT|문자열|뷰 텍스트입니다.|  
-|TYPE\_TEXT\_LENGTH|Decimal|형식화된 뷰의 type 절 길이입니다.|  
-|TYPE\_TEXT|문자열|형식화된 뷰의 type 절입니다.|  
-|OID\_TEXT\_LENGTH|Decimal|형식화된 뷰의 WITH OID 절 길이입니다.|  
-|OID\_TEXT|문자열|형식화된 뷰의 WITH OID 절입니다.|  
-|VIEW\_TYPE\_OWNER|문자열|뷰가 형식화된 뷰인 경우 뷰 형식의 소유자입니다.|  
-|VIEW\_TYPE|문자열|뷰가 형식화된 뷰인 경우 뷰 형식입니다.|  
-|SUPERVIEW\_NAME|문자열|슈퍼 뷰의 이름입니다.|  
+|<span data-ttu-id="fb8c3-472">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-472">ColumnName</span></span>|<span data-ttu-id="fb8c3-473">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-473">DataType</span></span>|<span data-ttu-id="fb8c3-474">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-474">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-475">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-475">OWNER</span></span>|<span data-ttu-id="fb8c3-476">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-476">String</span></span>|<span data-ttu-id="fb8c3-477">뷰의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-477">Owner of the view.</span></span>|  
+|<span data-ttu-id="fb8c3-478">VIEW_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-478">VIEW_NAME</span></span>|<span data-ttu-id="fb8c3-479">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-479">String</span></span>|<span data-ttu-id="fb8c3-480">뷰의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-480">Name of the view.</span></span>|  
+|<span data-ttu-id="fb8c3-481">TEXT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-481">TEXT_LENGTH</span></span>|<span data-ttu-id="fb8c3-482">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-482">Decimal</span></span>|<span data-ttu-id="fb8c3-483">뷰 텍스트의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-483">Length of the view text.</span></span>|  
+|<span data-ttu-id="fb8c3-484">TEXT</span><span class="sxs-lookup"><span data-stu-id="fb8c3-484">TEXT</span></span>|<span data-ttu-id="fb8c3-485">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-485">String</span></span>|<span data-ttu-id="fb8c3-486">뷰 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-486">View text.</span></span>|  
+|<span data-ttu-id="fb8c3-487">TYPE_TEXT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-487">TYPE_TEXT_LENGTH</span></span>|<span data-ttu-id="fb8c3-488">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-488">Decimal</span></span>|<span data-ttu-id="fb8c3-489">형식화된 뷰의 type 절 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-489">Length of the type clause of the typed view.</span></span>|  
+|<span data-ttu-id="fb8c3-490">TYPE_TEXT</span><span class="sxs-lookup"><span data-stu-id="fb8c3-490">TYPE_TEXT</span></span>|<span data-ttu-id="fb8c3-491">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-491">String</span></span>|<span data-ttu-id="fb8c3-492">형식화된 뷰의 type 절입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-492">Type clause of the typed view.</span></span>|  
+|<span data-ttu-id="fb8c3-493">OID_TEXT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-493">OID_TEXT_LENGTH</span></span>|<span data-ttu-id="fb8c3-494">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-494">Decimal</span></span>|<span data-ttu-id="fb8c3-495">형식화된 뷰의 WITH OID 절 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-495">Length of the WITH OID clause of the typed view.</span></span>|  
+|<span data-ttu-id="fb8c3-496">OID_TEXT</span><span class="sxs-lookup"><span data-stu-id="fb8c3-496">OID_TEXT</span></span>|<span data-ttu-id="fb8c3-497">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-497">String</span></span>|<span data-ttu-id="fb8c3-498">형식화된 뷰의 WITH OID 절입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-498">WITH OID clause of the typed view.</span></span>|  
+|<span data-ttu-id="fb8c3-499">VIEW_TYPE_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-499">VIEW_TYPE_OWNER</span></span>|<span data-ttu-id="fb8c3-500">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-500">String</span></span>|<span data-ttu-id="fb8c3-501">뷰가 형식화된 뷰인 경우 뷰 형식의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-501">Owner of the type of the view if the view is a typed view.</span></span>|  
+|<span data-ttu-id="fb8c3-502">VIEW_TYPE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-502">VIEW_TYPE</span></span>|<span data-ttu-id="fb8c3-503">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-503">String</span></span>|<span data-ttu-id="fb8c3-504">뷰가 형식화된 뷰인 경우 뷰 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-504">Type of the view if the view is a typed view.</span></span>|  
+|<span data-ttu-id="fb8c3-505">SUPERVIEW_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-505">SUPERVIEW_NAME</span></span>|<span data-ttu-id="fb8c3-506">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-506">String</span></span>|<span data-ttu-id="fb8c3-507">슈퍼 뷰의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-507">Name of the superview.</span></span>|  
   
-## 함수  
+## <a name="functions"></a><span data-ttu-id="fb8c3-508">함수</span><span class="sxs-lookup"><span data-stu-id="fb8c3-508">Functions</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|개체의 소유자입니다.|  
-|OBJECT\_NAME|문자열|개체의 이름입니다.|  
-|SUBOBJECT\_NAME|문자열|하위 개체\(예: 파티션\)의 이름입니다.|  
-|OBJECT\_ID|Decimal|개체의 사전순 개체 번호입니다.|  
-|DATA\_OBJECT\_ID|Decimal|개체를 포함하는 세그먼트의 사전순 개체 번호입니다.|  
-|OBJECT\_TYPE|문자열|개체의 형식입니다.|  
-|CREATED|DateTime|개체가 만들어진 날짜입니다.|  
-|LAST\_DDL\_TIME|DateTime|부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.|  
-|TIMESTAMP|문자열|개체\(문자 데이터\)의 사양에 대한 타임스탬프입니다.|  
-|STATUS|문자열|개체의 상태\(VALID, INVALID 또는 N\/A\)입니다.|  
-|TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|  
-|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까?  \(Y &#124; N\).|  
-|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체인지 여부입니다\(Y &#124; N\).|  
+|<span data-ttu-id="fb8c3-509">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-509">ColumnName</span></span>|<span data-ttu-id="fb8c3-510">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-510">DataType</span></span>|<span data-ttu-id="fb8c3-511">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-511">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-512">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-512">OWNER</span></span>|<span data-ttu-id="fb8c3-513">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-513">String</span></span>|<span data-ttu-id="fb8c3-514">개체의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-514">Owner of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-515">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-515">OBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-516">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-516">String</span></span>|<span data-ttu-id="fb8c3-517">개체의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-517">Name of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-518">SUBOBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-518">SUBOBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-519">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-519">String</span></span>|<span data-ttu-id="fb8c3-520">하위 개체(예: 파티션)의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-520">Name of the subobject (for example, partition).</span></span>|  
+|<span data-ttu-id="fb8c3-521">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-521">OBJECT_ID</span></span>|<span data-ttu-id="fb8c3-522">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-522">Decimal</span></span>|<span data-ttu-id="fb8c3-523">개체의 사전순 개체 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-523">Dictionary object number of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-524">DATA_OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-524">DATA_OBJECT_ID</span></span>|<span data-ttu-id="fb8c3-525">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-525">Decimal</span></span>|<span data-ttu-id="fb8c3-526">개체를 포함하는 세그먼트의 사전순 개체 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-526">Dictionary object number of the segment that contains the object.</span></span>|  
+|<span data-ttu-id="fb8c3-527">OBJECT_TYPE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-527">OBJECT_TYPE</span></span>|<span data-ttu-id="fb8c3-528">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-528">String</span></span>|<span data-ttu-id="fb8c3-529">개체의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-529">Type of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-530">CREATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-530">CREATED</span></span>|<span data-ttu-id="fb8c3-531">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-531">DateTime</span></span>|<span data-ttu-id="fb8c3-532">개체가 만들어진 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-532">The date the object was created.</span></span>|  
+|<span data-ttu-id="fb8c3-533">LAST_DDL_TIME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-533">LAST_DDL_TIME</span></span>|<span data-ttu-id="fb8c3-534">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-534">DateTime</span></span>|<span data-ttu-id="fb8c3-535">부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-535">Timestamp for the last modification of the object resulting from a DDL command (including grants and revokes).</span></span>|  
+|<span data-ttu-id="fb8c3-536">TIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="fb8c3-536">TIMESTAMP</span></span>|<span data-ttu-id="fb8c3-537">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-537">String</span></span>|<span data-ttu-id="fb8c3-538">개체(문자 데이터)의 사양에 대한 타임스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-538">Timestamp for the specification of the object (character data)</span></span>|  
+|<span data-ttu-id="fb8c3-539">STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-539">STATUS</span></span>|<span data-ttu-id="fb8c3-540">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-540">String</span></span>|<span data-ttu-id="fb8c3-541">개체의 상태(VALID, INVALID 또는 N/A)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-541">Status of the object (VALID, INVALID, or N/A).</span></span>|  
+|<span data-ttu-id="fb8c3-542">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-542">TEMPORARY</span></span>|<span data-ttu-id="fb8c3-543">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-543">String</span></span>|<span data-ttu-id="fb8c3-544">임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-544">Whether the object is temporary (the current session can see only data that it placed in this object itself).</span></span>|  
+|<span data-ttu-id="fb8c3-545">GENERATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-545">GENERATED</span></span>|<span data-ttu-id="fb8c3-546">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-546">String</span></span>|<span data-ttu-id="fb8c3-547">이 개체 시스템의 이름이 생성되었습니까?</span><span class="sxs-lookup"><span data-stu-id="fb8c3-547">Was the name of this object system generated?</span></span> <span data-ttu-id="fb8c3-548">(Y &#124; N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-548">(Y &#124; N).</span></span>|  
+|<span data-ttu-id="fb8c3-549">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-549">SECONDARY</span></span>|<span data-ttu-id="fb8c3-550">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-550">String</span></span>|<span data-ttu-id="fb8c3-551">Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-551">Whether this is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y &#124; N).</span></span>|  
   
-## 패키지  
+## <a name="packages"></a><span data-ttu-id="fb8c3-552">패키지</span><span class="sxs-lookup"><span data-stu-id="fb8c3-552">Packages</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|개체의 소유자입니다.|  
-|OBJECT\_NAME|문자열|개체의 이름입니다.|  
-|SUBOBJECT\_NAME|문자열|하위 개체\(예: 파티션\)의 이름입니다.|  
-|OBJECT\_ID|Decimal|개체의 사전순 개체 번호입니다.|  
-|DATA\_OBJECT\_ID|Decimal|개체를 포함하는 세그먼트의 사전순 개체 번호입니다.|  
-|LAST\_DDL\_TIME|DateTime|부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.|  
-|TIMESTAMP|문자열|개체\(문자 데이터\)의 사양에 대한 타임스탬프입니다.|  
-|STATUS|문자열|개체의 상태\(VALID, INVALID 또는 N\/A\)입니다.|  
-|TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|  
-|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까?  \(Y &#124; N\).|  
-|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체인지 여부입니다\(Y &#124; N\).|  
-|CREATED|DateTime|개체가 만들어진 날짜입니다.|  
+|<span data-ttu-id="fb8c3-553">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-553">ColumnName</span></span>|<span data-ttu-id="fb8c3-554">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-554">DataType</span></span>|<span data-ttu-id="fb8c3-555">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-555">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-556">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-556">OWNER</span></span>|<span data-ttu-id="fb8c3-557">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-557">String</span></span>|<span data-ttu-id="fb8c3-558">개체의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-558">Owner of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-559">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-559">OBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-560">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-560">String</span></span>|<span data-ttu-id="fb8c3-561">개체의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-561">Name of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-562">SUBOBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-562">SUBOBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-563">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-563">String</span></span>|<span data-ttu-id="fb8c3-564">하위 개체(예: 파티션)의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-564">Name of the subobject (for example, partition).</span></span>|  
+|<span data-ttu-id="fb8c3-565">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-565">OBJECT_ID</span></span>|<span data-ttu-id="fb8c3-566">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-566">Decimal</span></span>|<span data-ttu-id="fb8c3-567">개체의 사전순 개체 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-567">Dictionary object number of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-568">DATA_OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-568">DATA_OBJECT_ID</span></span>|<span data-ttu-id="fb8c3-569">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-569">Decimal</span></span>|<span data-ttu-id="fb8c3-570">개체를 포함하는 세그먼트의 사전순 개체 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-570">Dictionary object number of the segment that contains the object.</span></span>|  
+|<span data-ttu-id="fb8c3-571">LAST_DDL_TIME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-571">LAST_DDL_TIME</span></span>|<span data-ttu-id="fb8c3-572">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-572">DateTime</span></span>|<span data-ttu-id="fb8c3-573">부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-573">Timestamp for the last modification of the object resulting from a DDL command (including grants and revokes).</span></span>|  
+|<span data-ttu-id="fb8c3-574">TIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="fb8c3-574">TIMESTAMP</span></span>|<span data-ttu-id="fb8c3-575">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-575">String</span></span>|<span data-ttu-id="fb8c3-576">개체(문자 데이터)의 사양에 대한 타임스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-576">Timestamp for the specification of the object (character data).</span></span>|  
+|<span data-ttu-id="fb8c3-577">STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-577">STATUS</span></span>|<span data-ttu-id="fb8c3-578">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-578">String</span></span>|<span data-ttu-id="fb8c3-579">개체의 상태(VALID, INVALID 또는 N/A)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-579">Status of the object (VALID, INVALID, or N/A).</span></span>|  
+|<span data-ttu-id="fb8c3-580">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-580">TEMPORARY</span></span>|<span data-ttu-id="fb8c3-581">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-581">String</span></span>|<span data-ttu-id="fb8c3-582">임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-582">Whether the object is temporary (the current session can see only data that it placed in this object itself).</span></span>|  
+|<span data-ttu-id="fb8c3-583">GENERATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-583">GENERATED</span></span>|<span data-ttu-id="fb8c3-584">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-584">String</span></span>|<span data-ttu-id="fb8c3-585">이 개체 시스템의 이름이 생성되었습니까?</span><span class="sxs-lookup"><span data-stu-id="fb8c3-585">Was the name of this object system generated?</span></span> <span data-ttu-id="fb8c3-586">(Y &#124; N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-586">(Y &#124; N).</span></span>|  
+|<span data-ttu-id="fb8c3-587">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-587">SECONDARY</span></span>|<span data-ttu-id="fb8c3-588">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-588">String</span></span>|<span data-ttu-id="fb8c3-589">Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-589">Whether this is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y &#124; N).</span></span>|  
+|<span data-ttu-id="fb8c3-590">CREATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-590">CREATED</span></span>|<span data-ttu-id="fb8c3-591">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-591">DateTime</span></span>|<span data-ttu-id="fb8c3-592">개체가 만들어진 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-592">The date the object was created.</span></span>|  
   
-## PackageBodies  
+## <a name="packagebodies"></a><span data-ttu-id="fb8c3-593">PackageBodies</span><span class="sxs-lookup"><span data-stu-id="fb8c3-593">PackageBodies</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|개체의 소유자입니다.|  
-|OBJECT\_NAME|문자열|개체의 이름입니다.|  
-|SUBOBJECT\_NAME|문자열|하위 개체\(예: 파티션\)의 이름입니다.|  
-|OBJECT\_ID|Decimal|개체의 사전순 개체 번호입니다.|  
-|DATA\_OBJECT\_ID|Decimal|개체를 포함하는 세그먼트의 사전순 개체 번호입니다.|  
-|LAST\_DDL\_TIME|DateTime|부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.|  
-|TIMESTAMP|문자열|개체\(문자 데이터\)의 사양에 대한 타임스탬프입니다.|  
-|STATUS|문자열|개체의 상태\(VALID, INVALID 또는 N\/A\)입니다.|  
-|TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|  
-|GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까?  \(Y &#124; N\).|  
-|SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체인지 여부입니다\(Y &#124; N\).|  
-|CREATED|DateTime|개체가 만들어진 날짜입니다.|  
+|<span data-ttu-id="fb8c3-594">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-594">ColumnName</span></span>|<span data-ttu-id="fb8c3-595">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-595">DataType</span></span>|<span data-ttu-id="fb8c3-596">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-596">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-597">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-597">OWNER</span></span>|<span data-ttu-id="fb8c3-598">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-598">String</span></span>|<span data-ttu-id="fb8c3-599">개체의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-599">Owner of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-600">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-600">OBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-601">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-601">String</span></span>|<span data-ttu-id="fb8c3-602">개체의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-602">Name of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-603">SUBOBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-603">SUBOBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-604">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-604">String</span></span>|<span data-ttu-id="fb8c3-605">하위 개체(예: 파티션)의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-605">Name of the subobject (for example, partition).</span></span>|  
+|<span data-ttu-id="fb8c3-606">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-606">OBJECT_ID</span></span>|<span data-ttu-id="fb8c3-607">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-607">Decimal</span></span>|<span data-ttu-id="fb8c3-608">개체의 사전순 개체 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-608">Dictionary object number of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-609">DATA_OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-609">DATA_OBJECT_ID</span></span>|<span data-ttu-id="fb8c3-610">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-610">Decimal</span></span>|<span data-ttu-id="fb8c3-611">개체를 포함하는 세그먼트의 사전순 개체 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-611">Dictionary object number of the segment that contains the object.</span></span>|  
+|<span data-ttu-id="fb8c3-612">LAST_DDL_TIME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-612">LAST_DDL_TIME</span></span>|<span data-ttu-id="fb8c3-613">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-613">DateTime</span></span>|<span data-ttu-id="fb8c3-614">부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-614">Timestamp for the last modification of the object resulting from a DDL command (including grants and revokes).</span></span>|  
+|<span data-ttu-id="fb8c3-615">TIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="fb8c3-615">TIMESTAMP</span></span>|<span data-ttu-id="fb8c3-616">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-616">String</span></span>|<span data-ttu-id="fb8c3-617">개체(문자 데이터)의 사양에 대한 타임스탬프입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-617">Timestamp for the specification of the object (character data).</span></span>|  
+|<span data-ttu-id="fb8c3-618">STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-618">STATUS</span></span>|<span data-ttu-id="fb8c3-619">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-619">String</span></span>|<span data-ttu-id="fb8c3-620">개체의 상태(VALID, INVALID 또는 N/A)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-620">Status of the object (VALID, INVALID, or N/A).</span></span>|  
+|<span data-ttu-id="fb8c3-621">TEMPORARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-621">TEMPORARY</span></span>|<span data-ttu-id="fb8c3-622">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-622">String</span></span>|<span data-ttu-id="fb8c3-623">임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-623">Whether the object is temporary (the current session can see only data that it placed in this object itself).</span></span>|  
+|<span data-ttu-id="fb8c3-624">GENERATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-624">GENERATED</span></span>|<span data-ttu-id="fb8c3-625">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-625">String</span></span>|<span data-ttu-id="fb8c3-626">이 개체 시스템의 이름이 생성되었습니까?</span><span class="sxs-lookup"><span data-stu-id="fb8c3-626">Was the name of this object system generated?</span></span> <span data-ttu-id="fb8c3-627">(Y &#124; N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-627">(Y &#124; N).</span></span>|  
+|<span data-ttu-id="fb8c3-628">SECONDARY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-628">SECONDARY</span></span>|<span data-ttu-id="fb8c3-629">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-629">String</span></span>|<span data-ttu-id="fb8c3-630">Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-630">Whether this is a secondary object created by the ODCIIndexCreate method of the Oracle9i Data Cartridge (Y &#124; N).</span></span>|  
+|<span data-ttu-id="fb8c3-631">CREATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-631">CREATED</span></span>|<span data-ttu-id="fb8c3-632">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-632">DateTime</span></span>|<span data-ttu-id="fb8c3-633">개체가 만들어진 날짜입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-633">The date the object was created.</span></span>|  
   
-## 인수  
+## <a name="arguments"></a><span data-ttu-id="fb8c3-634">인수</span><span class="sxs-lookup"><span data-stu-id="fb8c3-634">Arguments</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|개체 소유자의 이름입니다.|  
-|PACKAGE\_NAME|문자열|패키지 이름입니다.|  
-|OBJECT\_NAME|문자열|프로시저 또는 함수의 이름입니다.|  
-|ARGUMENT\_NAME|문자열|인수의 이름입니다.|  
-|POSITION|Decimal|인수 목록의 위치이거나 함수 반환 값인 경우 NULL입니다.|  
-|SEQUENCE|Decimal|모든 중첩 수준을 포함하는 인수 시퀀스입니다.|  
-|DEFAULT\_VALUE|문자열|인수의 기본값입니다.|  
-|DEFAULT\_LENGTH|Decimal|인수의 기본값 길이입니다.|  
-|IN\_OUT|문자열|인수의 방향입니다\(IN, OUT 또는 IN\/OUT\).|  
-|DATA\_LENGTH|Decimal|열 길이\(바이트\)입니다.|  
-|DATA\_PRECISION|Decimal|십진수\(NUMBER\) 또는 이진수\(FLOAT\)의 길이입니다.|  
-|DATA\_SCALE|Decimal|소수점 오른쪽의 숫자 자릿수입니다.|  
-|DATA\_TYPE|문자열|인수의 데이터 형식입니다.|  
+|<span data-ttu-id="fb8c3-635">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-635">ColumnName</span></span>|<span data-ttu-id="fb8c3-636">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-636">DataType</span></span>|<span data-ttu-id="fb8c3-637">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-637">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-638">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-638">OWNER</span></span>|<span data-ttu-id="fb8c3-639">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-639">String</span></span>|<span data-ttu-id="fb8c3-640">개체 소유자의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-640">Name of the owner of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-641">PACKAGE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-641">PACKAGE_NAME</span></span>|<span data-ttu-id="fb8c3-642">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-642">String</span></span>|<span data-ttu-id="fb8c3-643">패키지 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-643">Package name.</span></span>|  
+|<span data-ttu-id="fb8c3-644">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-644">OBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-645">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-645">String</span></span>|<span data-ttu-id="fb8c3-646">프로시저 또는 함수의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-646">Name of the procedure or function.</span></span>|  
+|<span data-ttu-id="fb8c3-647">ARGUMENT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-647">ARGUMENT_NAME</span></span>|<span data-ttu-id="fb8c3-648">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-648">String</span></span>|<span data-ttu-id="fb8c3-649">인수의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-649">Name of the argument.</span></span>|  
+|<span data-ttu-id="fb8c3-650">POSITION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-650">POSITION</span></span>|<span data-ttu-id="fb8c3-651">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-651">Decimal</span></span>|<span data-ttu-id="fb8c3-652">인수 목록의 위치이거나 함수 반환 값인 경우 NULL입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-652">Position in argument list, or NULL for function return value.</span></span>|  
+|<span data-ttu-id="fb8c3-653">SEQUENCE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-653">SEQUENCE</span></span>|<span data-ttu-id="fb8c3-654">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-654">Decimal</span></span>|<span data-ttu-id="fb8c3-655">모든 중첩 수준을 포함하는 인수 시퀀스입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-655">Argument sequence, including all nesting levels.</span></span>|  
+|<span data-ttu-id="fb8c3-656">DEFAULT_VALUE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-656">DEFAULT_VALUE</span></span>|<span data-ttu-id="fb8c3-657">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-657">String</span></span>|<span data-ttu-id="fb8c3-658">인수의 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-658">Default value for the argument.</span></span>|  
+|<span data-ttu-id="fb8c3-659">DEFAULT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-659">DEFAULT_LENGTH</span></span>|<span data-ttu-id="fb8c3-660">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-660">Decimal</span></span>|<span data-ttu-id="fb8c3-661">인수의 기본값 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-661">Length of default value for the argument.</span></span>|  
+|<span data-ttu-id="fb8c3-662">IN_OUT</span><span class="sxs-lookup"><span data-stu-id="fb8c3-662">IN_OUT</span></span>|<span data-ttu-id="fb8c3-663">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-663">String</span></span>|<span data-ttu-id="fb8c3-664">인수의 방향입니다(IN, OUT 또는 IN/OUT).</span><span class="sxs-lookup"><span data-stu-id="fb8c3-664">Argument direction (IN, OUT, or IN/OUT).</span></span>|  
+|<span data-ttu-id="fb8c3-665">DATA_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-665">DATA_LENGTH</span></span>|<span data-ttu-id="fb8c3-666">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-666">Decimal</span></span>|<span data-ttu-id="fb8c3-667">열 길이(바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-667">Length of the column in bytes.</span></span>|  
+|<span data-ttu-id="fb8c3-668">DATA_PRECISION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-668">DATA_PRECISION</span></span>|<span data-ttu-id="fb8c3-669">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-669">Decimal</span></span>|<span data-ttu-id="fb8c3-670">십진수(NUMBER) 또는 이진수(FLOAT)의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-670">Length in decimal digits (NUMBER) or binary digits (FLOAT).</span></span>|  
+|<span data-ttu-id="fb8c3-671">DATA_SCALE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-671">DATA_SCALE</span></span>|<span data-ttu-id="fb8c3-672">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-672">Decimal</span></span>|<span data-ttu-id="fb8c3-673">소수점 오른쪽의 숫자 자릿수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-673">Digits to right of decimal point in a number.</span></span>|  
+|<span data-ttu-id="fb8c3-674">DATA_TYPE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-674">DATA_TYPE</span></span>|<span data-ttu-id="fb8c3-675">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-675">String</span></span>|<span data-ttu-id="fb8c3-676">인수의 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-676">Data type of the argument.</span></span>|  
   
-## UniqueKeys  
+## <a name="uniquekeys"></a><span data-ttu-id="fb8c3-677">UniqueKeys</span><span class="sxs-lookup"><span data-stu-id="fb8c3-677">UniqueKeys</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|제약 조건 정의의 소유자입니다.|  
-|CONSTRAINT\_NAME|문자열|제약 조건 정의의 이름입니다.|  
-|TABLE\_NAME|문자열|제약 조건 정의가 포함된 테이블\(또는 뷰\)과 연결된 이름입니다.|  
-|SEARCH\_CONDITION|문자열|CHECK 제약 조건에 대한 검색 조건의 텍스트입니다.|  
-|R\_OWNER|문자열|참조 제약 조건에서 참조된 테이블의 소유자입니다.|  
-|R\_CONSTRAINT\_NAME|문자열|참조된 테이블에 대한 UNIQUE 제약 조건 정의의 이름입니다.|  
-|DELETE\_RULE|문자열|참조 제약 조건에 대한 규칙\(CASCADE 또는 NO ACTION\)을 삭제합니다.|  
-|STATUS|문자열|제약 조건의 상태\(ENABLED 또는 DISABLED\)를 적용합니다.|  
-|DEFERRABLE|문자열|제약 조건의 지연 가능 여부입니다.|  
-|VALIDATED|문자열|모든 데이터가 제약 조건\(VALIDATED 또는 NOT VALIDATED\)을 따르는지 여부입니다.|  
-|GENERATED|문자열|제약 조건의 이름이 사용자인지 또는 시스템 생성인지 여부입니다.|  
-|BAD|문자열|YES 값은 이 제약 조건의 세기 지정 방식이 모호함을 나타냅니다.  이 모호성으로 인한 오류가 발생하지 않도록 하려면 TO\_DATE 네 자릿수 연도와 함께 사용하여 제약 조건을 다시 작성합니다.|  
-|RELY|문자열|활성화된 제약 조건이 적용되는지 또는 적용되지 않는지 여부입니다.|  
-|LAST\_CHANGE|DateTime|제약 조건이 마지막으로 활성화되거나 비활성화된 시간입니다.|  
-|INDEX\_OWNER|문자열|인덱스를 소유하는 사용자의 이름입니다.|  
-|INDEX\_NAME|문자열|인덱스의 이름입니다.|  
+|<span data-ttu-id="fb8c3-678">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-678">ColumnName</span></span>|<span data-ttu-id="fb8c3-679">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-679">DataType</span></span>|<span data-ttu-id="fb8c3-680">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-680">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-681">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-681">OWNER</span></span>|<span data-ttu-id="fb8c3-682">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-682">String</span></span>|<span data-ttu-id="fb8c3-683">제약 조건 정의의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-683">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-684">CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-684">CONSTRAINT_NAME</span></span>|<span data-ttu-id="fb8c3-685">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-685">String</span></span>|<span data-ttu-id="fb8c3-686">제약 조건 정의의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-686">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-687">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-687">TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-688">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-688">String</span></span>|<span data-ttu-id="fb8c3-689">제약 조건 정의가 포함된 테이블(또는 뷰)과 연결된 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-689">Name associated with the table (or view) with constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-690">SEARCH_CONDITION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-690">SEARCH_CONDITION</span></span>|<span data-ttu-id="fb8c3-691">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-691">String</span></span>|<span data-ttu-id="fb8c3-692">CHECK 제약 조건에 대한 검색 조건의 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-692">Text of search condition for a check constraint.</span></span>|  
+|<span data-ttu-id="fb8c3-693">R_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-693">R_OWNER</span></span>|<span data-ttu-id="fb8c3-694">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-694">String</span></span>|<span data-ttu-id="fb8c3-695">참조 제약 조건에서 참조된 테이블의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-695">Owner of table referred to in a referential constraint.</span></span>|  
+|<span data-ttu-id="fb8c3-696">R_CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-696">R_CONSTRAINT_NAME</span></span>|<span data-ttu-id="fb8c3-697">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-697">String</span></span>|<span data-ttu-id="fb8c3-698">참조된 테이블에 대한 UNIQUE 제약 조건 정의의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-698">Name of the unique constraint definition for referenced table.</span></span>|  
+|<span data-ttu-id="fb8c3-699">DELETE_RULE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-699">DELETE_RULE</span></span>|<span data-ttu-id="fb8c3-700">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-700">String</span></span>|<span data-ttu-id="fb8c3-701">참조 제약 조건에 대한 규칙(CASCADE 또는 NO ACTION)을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-701">Delete rule for a referential constraint (CASCADE or NO ACTION).</span></span>|  
+|<span data-ttu-id="fb8c3-702">STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-702">STATUS</span></span>|<span data-ttu-id="fb8c3-703">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-703">String</span></span>|<span data-ttu-id="fb8c3-704">제약 조건의 상태(ENABLED 또는 DISABLED)를 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-704">Enforcement status of constraint (ENABLED or DISABLED).</span></span>|  
+|<span data-ttu-id="fb8c3-705">DEFERRABLE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-705">DEFERRABLE</span></span>|<span data-ttu-id="fb8c3-706">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-706">String</span></span>|<span data-ttu-id="fb8c3-707">제약 조건의 지연 가능 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-707">Whether the constraint is deferrable.</span></span>|  
+|<span data-ttu-id="fb8c3-708">VALIDATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-708">VALIDATED</span></span>|<span data-ttu-id="fb8c3-709">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-709">String</span></span>|<span data-ttu-id="fb8c3-710">모든 데이터가 제약 조건(VALIDATED 또는 NOT VALIDATED)을 따르는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-710">Whether all data obeys the constraint (VALIDATED or NOT VALIDATED).</span></span>|  
+|<span data-ttu-id="fb8c3-711">GENERATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-711">GENERATED</span></span>|<span data-ttu-id="fb8c3-712">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-712">String</span></span>|<span data-ttu-id="fb8c3-713">제약 조건의 이름이 사용자인지 또는 시스템 생성인지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-713">Whether the name of the constraint is user or system generated.</span></span>|  
+|<span data-ttu-id="fb8c3-714">BAD</span><span class="sxs-lookup"><span data-stu-id="fb8c3-714">BAD</span></span>|<span data-ttu-id="fb8c3-715">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-715">String</span></span>|<span data-ttu-id="fb8c3-716">YES 값은 이 제약 조건의 세기 지정 방식이 모호함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-716">A YES value indicates that this constraint specifies a century in an ambiguous manner.</span></span> <span data-ttu-id="fb8c3-717">이 모호성으로 인한 오류가 발생하지 않도록 하려면 TO_DATE 네 자릿수 연도와 함께 사용하여 제약 조건을 다시 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-717">To avoid errors resulting from this ambiguity, rewrite the constraint using the TO_DATE function with a four-digit year.</span></span>|  
+|<span data-ttu-id="fb8c3-718">RELY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-718">RELY</span></span>|<span data-ttu-id="fb8c3-719">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-719">String</span></span>|<span data-ttu-id="fb8c3-720">활성화된 제약 조건이 적용되는지 또는 적용되지 않는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-720">Whether an enabled constraint is enforced or unenforced.</span></span>|  
+|<span data-ttu-id="fb8c3-721">LAST_CHANGE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-721">LAST_CHANGE</span></span>|<span data-ttu-id="fb8c3-722">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-722">DateTime</span></span>|<span data-ttu-id="fb8c3-723">제약 조건이 마지막으로 활성화되거나 비활성화된 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-723">When the constraint was last enabled or disabled</span></span>|  
+|<span data-ttu-id="fb8c3-724">INDEX_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-724">INDEX_OWNER</span></span>|<span data-ttu-id="fb8c3-725">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-725">String</span></span>|<span data-ttu-id="fb8c3-726">인덱스를 소유하는 사용자의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-726">Name of the user owning the index</span></span>|  
+|<span data-ttu-id="fb8c3-727">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-727">INDEX_NAME</span></span>|<span data-ttu-id="fb8c3-728">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-728">String</span></span>|<span data-ttu-id="fb8c3-729">인덱스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-729">Name of the index</span></span>|  
   
-## PrimaryKeys  
+## <a name="primarykeys"></a><span data-ttu-id="fb8c3-730">PrimaryKeys</span><span class="sxs-lookup"><span data-stu-id="fb8c3-730">PrimaryKeys</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|제약 조건 정의의 소유자입니다.|  
-|CONSTRAINT\_NAME|문자열|제약 조건 정의의 이름입니다.|  
-|TABLE\_NAME|문자열|제약 조건 정의가 포함된 테이블\(또는 뷰\)과 연결된 이름입니다.|  
-|SEARCH\_CONDITION|문자열|CHECK 제약 조건에 대한 검색 조건의 텍스트입니다.|  
-|R\_OWNER|문자열|참조 제약 조건에서 참조된 테이블의 소유자입니다.|  
-|R\_CONSTRAINT\_NAME|문자열|참조된 테이블에 대한 UNIQUE 제약 조건 정의의 이름입니다.|  
-|DELETE\_RULE|문자열|참조 제약 조건에 대한 규칙\(CASCADE 또는 NO ACTION\)을 삭제합니다.|  
-|STATUS|문자열|제약 조건의 상태\(ENABLED 또는 DISABLED\)를 적용합니다.|  
-|DEFERRABLE|문자열|제약 조건의 지연 가능 여부입니다.|  
-|VALIDATED|문자열|모든 데이터가 제약 조건\(VALIDATED 또는 NOT VALIDATED\)을 따르는지 여부입니다.|  
-|GENERATED|문자열|제약 조건의 이름이 사용자인지 또는 시스템 생성인지 여부입니다.|  
-|BAD|문자열|YES 값은 이 제약 조건의 세기 지정 방식이 모호함을 나타냅니다.  이 모호성으로 인한 오류가 발생하지 않도록 하려면 TO\_DATE 네 자릿수 연도와 함께 사용하여 제약 조건을 다시 작성합니다.|  
-|RELY|문자열|활성화된 제약 조건이 적용되는지 또는 적용되지 않는지 여부입니다.|  
-|LAST\_CHANGE|DateTime|제약 조건이 마지막으로 활성화되거나 비활성화된 시간입니다.|  
-|INDEX\_OWNER|문자열|인덱스를 소유하는 사용자의 이름입니다.|  
-|INDEX\_NAME|문자열|인덱스의 이름입니다.|  
+|<span data-ttu-id="fb8c3-731">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-731">ColumnName</span></span>|<span data-ttu-id="fb8c3-732">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-732">DataType</span></span>|<span data-ttu-id="fb8c3-733">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-733">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-734">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-734">OWNER</span></span>|<span data-ttu-id="fb8c3-735">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-735">String</span></span>|<span data-ttu-id="fb8c3-736">제약 조건 정의의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-736">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-737">CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-737">CONSTRAINT_NAME</span></span>|<span data-ttu-id="fb8c3-738">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-738">String</span></span>|<span data-ttu-id="fb8c3-739">제약 조건 정의의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-739">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-740">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-740">TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-741">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-741">String</span></span>|<span data-ttu-id="fb8c3-742">제약 조건 정의가 포함된 테이블(또는 뷰)과 연결된 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-742">Name associated with the table (or view) with constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-743">SEARCH_CONDITION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-743">SEARCH_CONDITION</span></span>|<span data-ttu-id="fb8c3-744">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-744">String</span></span>|<span data-ttu-id="fb8c3-745">CHECK 제약 조건에 대한 검색 조건의 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-745">Text of search condition for a check constraint.</span></span>|  
+|<span data-ttu-id="fb8c3-746">R_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-746">R_OWNER</span></span>|<span data-ttu-id="fb8c3-747">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-747">String</span></span>|<span data-ttu-id="fb8c3-748">참조 제약 조건에서 참조된 테이블의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-748">Owner of table referred to in a referential constraint.</span></span>|  
+|<span data-ttu-id="fb8c3-749">R_CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-749">R_CONSTRAINT_NAME</span></span>|<span data-ttu-id="fb8c3-750">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-750">String</span></span>|<span data-ttu-id="fb8c3-751">참조된 테이블에 대한 UNIQUE 제약 조건 정의의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-751">Name of the unique constraint definition for referenced table.</span></span>|  
+|<span data-ttu-id="fb8c3-752">DELETE_RULE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-752">DELETE_RULE</span></span>|<span data-ttu-id="fb8c3-753">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-753">String</span></span>|<span data-ttu-id="fb8c3-754">참조 제약 조건에 대한 규칙(CASCADE 또는 NO ACTION)을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-754">Delete rule for a referential constraint (CASCADE or NO ACTION).</span></span>|  
+|<span data-ttu-id="fb8c3-755">STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-755">STATUS</span></span>|<span data-ttu-id="fb8c3-756">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-756">String</span></span>|<span data-ttu-id="fb8c3-757">제약 조건의 상태(ENABLED 또는 DISABLED)를 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-757">Enforcement status of constraint (ENABLED or DISABLED).</span></span>|  
+|<span data-ttu-id="fb8c3-758">DEFERRABLE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-758">DEFERRABLE</span></span>|<span data-ttu-id="fb8c3-759">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-759">String</span></span>|<span data-ttu-id="fb8c3-760">제약 조건의 지연 가능 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-760">Whether the constraint is deferrable.</span></span>|  
+|<span data-ttu-id="fb8c3-761">VALIDATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-761">VALIDATED</span></span>|<span data-ttu-id="fb8c3-762">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-762">String</span></span>|<span data-ttu-id="fb8c3-763">모든 데이터가 제약 조건(VALIDATED 또는 NOT VALIDATED)을 따르는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-763">Whether all data obeys the constraint (VALIDATED or NOT VALIDATED).</span></span>|  
+|<span data-ttu-id="fb8c3-764">GENERATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-764">GENERATED</span></span>|<span data-ttu-id="fb8c3-765">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-765">String</span></span>|<span data-ttu-id="fb8c3-766">제약 조건의 이름이 사용자인지 또는 시스템 생성인지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-766">Whether the name of the constraint is user or system generated.</span></span>|  
+|<span data-ttu-id="fb8c3-767">BAD</span><span class="sxs-lookup"><span data-stu-id="fb8c3-767">BAD</span></span>|<span data-ttu-id="fb8c3-768">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-768">String</span></span>|<span data-ttu-id="fb8c3-769">YES 값은 이 제약 조건의 세기 지정 방식이 모호함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-769">A YES value indicates that this constraint specifies a century in an ambiguous manner.</span></span> <span data-ttu-id="fb8c3-770">이 모호성으로 인한 오류가 발생하지 않도록 하려면 TO_DATE 네 자릿수 연도와 함께 사용하여 제약 조건을 다시 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-770">To avoid errors resulting from this ambiguity, rewrite the constraint using the TO_DATE function with a four-digit year.</span></span>|  
+|<span data-ttu-id="fb8c3-771">RELY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-771">RELY</span></span>|<span data-ttu-id="fb8c3-772">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-772">String</span></span>|<span data-ttu-id="fb8c3-773">활성화된 제약 조건이 적용되는지 또는 적용되지 않는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-773">Whether an enabled constraint is enforced or unenforced.</span></span>|  
+|<span data-ttu-id="fb8c3-774">LAST_CHANGE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-774">LAST_CHANGE</span></span>|<span data-ttu-id="fb8c3-775">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-775">DateTime</span></span>|<span data-ttu-id="fb8c3-776">제약 조건이 마지막으로 활성화되거나 비활성화된 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-776">When the constraint was last enabled or disabled.</span></span>|  
+|<span data-ttu-id="fb8c3-777">INDEX_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-777">INDEX_OWNER</span></span>|<span data-ttu-id="fb8c3-778">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-778">String</span></span>|<span data-ttu-id="fb8c3-779">인덱스를 소유하는 사용자의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-779">Name of the user owning the index.</span></span>|  
+|<span data-ttu-id="fb8c3-780">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-780">INDEX_NAME</span></span>|<span data-ttu-id="fb8c3-781">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-781">String</span></span>|<span data-ttu-id="fb8c3-782">인덱스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-782">Name of the index.</span></span>|  
   
-## ForeignKeys  
+## <a name="foreignkeys"></a><span data-ttu-id="fb8c3-783">ForeignKeys</span><span class="sxs-lookup"><span data-stu-id="fb8c3-783">ForeignKeys</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|PRIMARY\_KEY\_CONSTRAINT\_NAME|문자열|제약 조건 정의의 이름입니다.|  
-|PRIMARY\_KEY\_OWNER|문자열|제약 조건 정의의 소유자입니다.|  
-|PRIMARY\_KEY\_TABLE\_NAME|문자열|제약 조건 정의가 포함된 테이블\(또는 뷰\)과 연결된 이름입니다.|  
-|FOREIGN\_KEY\_OWNER|문자열|제약 조건 정의의 소유자입니다.|  
-|FOREIGN\_KEY\_CONSTRIANT\_NAME|문자열|제약 조건 정의의 이름입니다.|  
-|FOREIGN\_KEY\_TABLE\_NAME|문자열|제약 조건 정의가 포함된 테이블\(또는 뷰\)과 연결된 이름입니다.|  
-|SEARCH\_CONDITION|문자열|CHECK 제약 조건에 대한 검색 조건의 텍스트입니다.|  
-|R\_OWNER|문자열|참조 제약 조건에서 참조된 테이블의 소유자입니다.|  
-|R\_CONSTRAINT\_NAME|문자열|참조된 테이블에 대한 UNIQUE 제약 조건 정의의 이름입니다.|  
-|DELETE\_RULE|문자열|참조 제약 조건에 대한 규칙\(CASCADE 또는 NO ACTION\)을 삭제합니다.|  
-|STATUS|문자열|제약 조건의 상태\(ENABLED 또는 DISABLED\)를 적용합니다.|  
-|VALIDATED|문자열|모든 데이터가 제약 조건\(VALIDATED 또는 NOT VALIDATED\)을 따르는지 여부입니다.|  
-|GENERATED|문자열|제약 조건의 이름이 사용자인지 또는 시스템 생성인지 여부입니다.|  
-|RELY|문자열|활성화된 제약 조건이 적용되는지 또는 적용되지 않는지 여부입니다.|  
-|LAST\_CHANGE|DateTime|제약 조건이 마지막으로 활성화되거나 비활성화된 시간입니다.|  
-|INDEX\_OWNER|문자열|인덱스를 소유하는 사용자의 이름입니다.|  
-|INDEX\_NAME|문자열|인덱스의 이름입니다.|  
+|<span data-ttu-id="fb8c3-784">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-784">ColumnName</span></span>|<span data-ttu-id="fb8c3-785">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-785">DataType</span></span>|<span data-ttu-id="fb8c3-786">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-786">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-787">PRIMARY_KEY_CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-787">PRIMARY_KEY_CONSTRAINT_NAME</span></span>|<span data-ttu-id="fb8c3-788">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-788">String</span></span>|<span data-ttu-id="fb8c3-789">제약 조건 정의의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-789">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-790">PRIMARY_KEY_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-790">PRIMARY_KEY_OWNER</span></span>|<span data-ttu-id="fb8c3-791">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-791">String</span></span>|<span data-ttu-id="fb8c3-792">제약 조건 정의의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-792">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-793">PRIMARY_KEY_TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-793">PRIMARY_KEY_TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-794">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-794">String</span></span>|<span data-ttu-id="fb8c3-795">제약 조건 정의가 포함된 테이블(또는 뷰)과 연결된 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-795">Name associated with the table (or view) with constraint definition</span></span>|  
+|<span data-ttu-id="fb8c3-796">FOREIGN_KEY_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-796">FOREIGN_KEY_OWNER</span></span>|<span data-ttu-id="fb8c3-797">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-797">String</span></span>|<span data-ttu-id="fb8c3-798">제약 조건 정의의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-798">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-799">FOREIGN_KEY_CONSTRIANT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-799">FOREIGN_KEY_CONSTRIANT_NAME</span></span>|<span data-ttu-id="fb8c3-800">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-800">String</span></span>|<span data-ttu-id="fb8c3-801">제약 조건 정의의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-801">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-802">FOREIGN_KEY_TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-802">FOREIGN_KEY_TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-803">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-803">String</span></span>|<span data-ttu-id="fb8c3-804">제약 조건 정의가 포함된 테이블(또는 뷰)과 연결된 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-804">Name associated with the table (or view) with constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-805">SEARCH_CONDITION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-805">SEARCH_CONDITION</span></span>|<span data-ttu-id="fb8c3-806">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-806">String</span></span>|<span data-ttu-id="fb8c3-807">CHECK 제약 조건에 대한 검색 조건의 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-807">Text of search condition for a check constraint</span></span>|  
+|<span data-ttu-id="fb8c3-808">R_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-808">R_OWNER</span></span>|<span data-ttu-id="fb8c3-809">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-809">String</span></span>|<span data-ttu-id="fb8c3-810">참조 제약 조건에서 참조된 테이블의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-810">Owner of table referred to in a referential constraint.</span></span>|  
+|<span data-ttu-id="fb8c3-811">R_CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-811">R_CONSTRAINT_NAME</span></span>|<span data-ttu-id="fb8c3-812">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-812">String</span></span>|<span data-ttu-id="fb8c3-813">참조된 테이블에 대한 UNIQUE 제약 조건 정의의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-813">Name of the unique constraint definition for referenced table.</span></span>|  
+|<span data-ttu-id="fb8c3-814">DELETE_RULE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-814">DELETE_RULE</span></span>|<span data-ttu-id="fb8c3-815">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-815">String</span></span>|<span data-ttu-id="fb8c3-816">참조 제약 조건에 대한 규칙(CASCADE 또는 NO ACTION)을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-816">Delete rule for a referential constraint (CASCADE or NO ACTION).</span></span>|  
+|<span data-ttu-id="fb8c3-817">STATUS</span><span class="sxs-lookup"><span data-stu-id="fb8c3-817">STATUS</span></span>|<span data-ttu-id="fb8c3-818">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-818">String</span></span>|<span data-ttu-id="fb8c3-819">제약 조건의 상태(ENABLED 또는 DISABLED)를 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-819">Enforcement status of constraint (ENABLED or DISABLED).</span></span>|  
+|<span data-ttu-id="fb8c3-820">VALIDATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-820">VALIDATED</span></span>|<span data-ttu-id="fb8c3-821">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-821">String</span></span>|<span data-ttu-id="fb8c3-822">모든 데이터가 제약 조건(VALIDATED 또는 NOT VALIDATED)을 따르는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-822">Whether all data obeys the constraint (VALIDATED or NOT VALIDATED).</span></span>|  
+|<span data-ttu-id="fb8c3-823">GENERATED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-823">GENERATED</span></span>|<span data-ttu-id="fb8c3-824">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-824">String</span></span>|<span data-ttu-id="fb8c3-825">제약 조건의 이름이 사용자인지 또는 시스템 생성인지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-825">Whether the name of the constraint is user or system generated.</span></span>|  
+|<span data-ttu-id="fb8c3-826">RELY</span><span class="sxs-lookup"><span data-stu-id="fb8c3-826">RELY</span></span>|<span data-ttu-id="fb8c3-827">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-827">String</span></span>|<span data-ttu-id="fb8c3-828">활성화된 제약 조건이 적용되는지 또는 적용되지 않는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-828">Whether an enabled constraint is enforced or unenforced.</span></span>|  
+|<span data-ttu-id="fb8c3-829">LAST_CHANGE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-829">LAST_CHANGE</span></span>|<span data-ttu-id="fb8c3-830">DateTime</span><span class="sxs-lookup"><span data-stu-id="fb8c3-830">DateTime</span></span>|<span data-ttu-id="fb8c3-831">제약 조건이 마지막으로 활성화되거나 비활성화된 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-831">When the constraint was last enabled or disabled.</span></span>|  
+|<span data-ttu-id="fb8c3-832">INDEX_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-832">INDEX_OWNER</span></span>|<span data-ttu-id="fb8c3-833">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-833">String</span></span>|<span data-ttu-id="fb8c3-834">인덱스를 소유하는 사용자의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-834">Name of the user owning the index.</span></span>|  
+|<span data-ttu-id="fb8c3-835">INDEX_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-835">INDEX_NAME</span></span>|<span data-ttu-id="fb8c3-836">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-836">String</span></span>|<span data-ttu-id="fb8c3-837">인덱스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-837">Name of the index.</span></span>|  
   
-## ForeignKeyColumns  
+## <a name="foreignkeycolumns"></a><span data-ttu-id="fb8c3-838">ForeignKeyColumns</span><span class="sxs-lookup"><span data-stu-id="fb8c3-838">ForeignKeyColumns</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|제약 조건 정의의 소유자입니다.|  
-|CONSTRAINT\_NAME|문자열|제약 조건 정의의 이름입니다.|  
-|TABLE\_NAME|문자열|제약 조건 정의가 들어 있는 테이블 이름입니다.|  
-|COLUMN\_NAME|문자열|제약 조건 정의에 지정된 개체 유형 열의 열 또는 특성 이름입니다.|  
-|POSITION|Decimal|개체 정의에서 열 또는 특성의 원래 위치입니다.|  
+|<span data-ttu-id="fb8c3-839">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-839">ColumnName</span></span>|<span data-ttu-id="fb8c3-840">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-840">DataType</span></span>|<span data-ttu-id="fb8c3-841">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-841">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-842">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-842">OWNER</span></span>|<span data-ttu-id="fb8c3-843">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-843">String</span></span>|<span data-ttu-id="fb8c3-844">제약 조건 정의의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-844">Owner of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-845">CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-845">CONSTRAINT_NAME</span></span>|<span data-ttu-id="fb8c3-846">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-846">String</span></span>|<span data-ttu-id="fb8c3-847">제약 조건 정의의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-847">Name of the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-848">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-848">TABLE_NAME</span></span>|<span data-ttu-id="fb8c3-849">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-849">String</span></span>|<span data-ttu-id="fb8c3-850">제약 조건 정의가 들어 있는 테이블 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-850">Name of the table with constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-851">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-851">COLUMN_NAME</span></span>|<span data-ttu-id="fb8c3-852">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-852">String</span></span>|<span data-ttu-id="fb8c3-853">제약 조건 정의에 지정된 개체 유형 열의 열 또는 특성 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-853">Name of the column or attribute of the object type column specified in the constraint definition.</span></span>|  
+|<span data-ttu-id="fb8c3-854">POSITION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-854">POSITION</span></span>|<span data-ttu-id="fb8c3-855">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-855">Decimal</span></span>|<span data-ttu-id="fb8c3-856">개체 정의에서 열 또는 특성의 원래 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-856">Original position of column or attribute in the definition of the object.</span></span>|  
   
-## ProcedureParameters  
+## <a name="procedureparameters"></a><span data-ttu-id="fb8c3-857">ProcedureParameters</span><span class="sxs-lookup"><span data-stu-id="fb8c3-857">ProcedureParameters</span></span>  
   
-|열 이름|데이터 형식|설명|  
-|----------|------------|--------|  
-|OWNER|문자열|개체의 소유자입니다.|  
-|OBJECT\_NAME|문자열|프로시저 또는 함수의 이름입니다.|  
-|PACKAGE\_NAME|문자열|프로시저 또는 함수의 이름입니다.|  
-|OBJECT\_ID|Decimal|개체의 개체 번호입니다.|  
-|OVERLOAD|문자열|고유 식별자를 오버로드합니다.|  
-|ARGUMENT\_NAME|문자열|인수의 이름입니다.|  
-|POSITION|Decimal|인수 목록의 위치이거나 함수 반환 값인 경우 null입니다.|  
-|SEQUENCE|Decimal|모든 중첩 수준을 포함하는 인수 시퀀스입니다.|  
-|DATA\_LEVEL|Decimal|복합 형식에 대한 인수의 중첩 한도입니다.|  
-|DATA\_TYPE|문자열|인수의 데이터 형식입니다.|  
-|DEFAULT\_VALUE|문자열|인수의 기본값입니다.|  
-|DEFAULT\_LENGTH|Decimal|인수의 기본값 길이입니다.|  
-|IN\_OUT|문자열|인수의 방향입니다\(IN, OUT 또는 IN\/OUT\).|  
-|DATA\_LENGTH|Decimal|열 길이\(바이트\)입니다.|  
-|DATA\_PRECISION|Decimal|십진수\(NUMBER\) 또는 이진수\(FLOAT\)의 길이입니다.|  
-|DATA\_SCALE|Decimal|소수점 오른쪽의 숫자 자릿수입니다.|  
-|RADIX|Decimal|숫자의 인수 기수입니다.|  
-|CHARACTER\_SET\_NAME|문자열|인수의 문자 집합 이름입니다.|  
-|TYPE\_OWNER|문자열|인수 형식의 소유자입니다.|  
-|TYPE\_NAME|문자열|인수 형식의 이름입니다.  형식이 패키지 사양에서 선언되는 패키지 로컬 형식인 경우 이 열에는 패키지의 이름이 표시됩니다.|  
-|TYPE\_SUBNAME|문자열|패키지 로컬 형식에 대해서만 관련이 있습니다.  TYPE\_NAME 열에서 식별되는 패키지에 선언된 형식의 이름이 표시됩니다.|  
-|TYPE\_LINK|문자열|TYPE\_NAME 열에서 식별된 패키지가 원격 패키지인 경우의 패키지 로컬 형식에 대해서만 관련이 있습니다.  이 열에는 원격 패키지를 참조하는 데 사용되는 데이터베이스 링크가 표시됩니다.|  
-|PLS\_TYPE|문자열|숫자 인수인 경우 PL\/SQL 형식의 인수 이름입니다.  그렇지 않으면 Null입니다.|  
-|CHAR\_LENGTH|Decimal|문자열 데이터 형식의 문자 제한입니다.|  
-|CHAR\_USED|문자열|문자열에 공식적으로 사용되는 것이 바이트 제한\(B\)인지 또는 문자열 제한\(C\)인지 여부를 나타냅니다.|  
+|<span data-ttu-id="fb8c3-858">열 이름</span><span class="sxs-lookup"><span data-stu-id="fb8c3-858">ColumnName</span></span>|<span data-ttu-id="fb8c3-859">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="fb8c3-859">DataType</span></span>|<span data-ttu-id="fb8c3-860">설명</span><span class="sxs-lookup"><span data-stu-id="fb8c3-860">Description</span></span>|  
+|----------------|--------------|-----------------|  
+|<span data-ttu-id="fb8c3-861">OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-861">OWNER</span></span>|<span data-ttu-id="fb8c3-862">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-862">String</span></span>|<span data-ttu-id="fb8c3-863">개체의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-863">Owner of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-864">OBJECT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-864">OBJECT_NAME</span></span>|<span data-ttu-id="fb8c3-865">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-865">String</span></span>|<span data-ttu-id="fb8c3-866">프로시저 또는 함수의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-866">Name of the procedure or function.</span></span>|  
+|<span data-ttu-id="fb8c3-867">PACKAGE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-867">PACKAGE_NAME</span></span>|<span data-ttu-id="fb8c3-868">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-868">String</span></span>|<span data-ttu-id="fb8c3-869">프로시저 또는 함수의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-869">Name of the procedure or function.</span></span>|  
+|<span data-ttu-id="fb8c3-870">OBJECT_ID</span><span class="sxs-lookup"><span data-stu-id="fb8c3-870">OBJECT_ID</span></span>|<span data-ttu-id="fb8c3-871">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-871">Decimal</span></span>|<span data-ttu-id="fb8c3-872">개체의 개체 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-872">Object number of the object.</span></span>|  
+|<span data-ttu-id="fb8c3-873">OVERLOAD</span><span class="sxs-lookup"><span data-stu-id="fb8c3-873">OVERLOAD</span></span>|<span data-ttu-id="fb8c3-874">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-874">String</span></span>|<span data-ttu-id="fb8c3-875">고유 식별자를 오버로드합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-875">Overload unique identifier.</span></span>|  
+|<span data-ttu-id="fb8c3-876">ARGUMENT_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-876">ARGUMENT_NAME</span></span>|<span data-ttu-id="fb8c3-877">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-877">String</span></span>|<span data-ttu-id="fb8c3-878">인수의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-878">Name of the argument.</span></span>|  
+|<span data-ttu-id="fb8c3-879">POSITION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-879">POSITION</span></span>|<span data-ttu-id="fb8c3-880">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-880">Decimal</span></span>|<span data-ttu-id="fb8c3-881">인수 목록의 위치이거나 함수 반환 값인 경우 null입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-881">Position in the argument list, or null for a function return value.</span></span>|  
+|<span data-ttu-id="fb8c3-882">SEQUENCE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-882">SEQUENCE</span></span>|<span data-ttu-id="fb8c3-883">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-883">Decimal</span></span>|<span data-ttu-id="fb8c3-884">모든 중첩 수준을 포함하는 인수 시퀀스입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-884">Argument sequence, including all nesting levels.</span></span>|  
+|<span data-ttu-id="fb8c3-885">DATA_LEVEL</span><span class="sxs-lookup"><span data-stu-id="fb8c3-885">DATA_LEVEL</span></span>|<span data-ttu-id="fb8c3-886">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-886">Decimal</span></span>|<span data-ttu-id="fb8c3-887">복합 형식에 대한 인수의 중첩 한도입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-887">Nesting depth of the argument for composite types.</span></span>|  
+|<span data-ttu-id="fb8c3-888">DATA_TYPE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-888">DATA_TYPE</span></span>|<span data-ttu-id="fb8c3-889">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-889">String</span></span>|<span data-ttu-id="fb8c3-890">인수의 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-890">Data type of the argument.</span></span>|  
+|<span data-ttu-id="fb8c3-891">DEFAULT_VALUE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-891">DEFAULT_VALUE</span></span>|<span data-ttu-id="fb8c3-892">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-892">String</span></span>|<span data-ttu-id="fb8c3-893">인수의 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-893">Default value for the argument.</span></span>|  
+|<span data-ttu-id="fb8c3-894">DEFAULT_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-894">DEFAULT_LENGTH</span></span>|<span data-ttu-id="fb8c3-895">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-895">Decimal</span></span>|<span data-ttu-id="fb8c3-896">인수의 기본값 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-896">Length of the default value for the argument.</span></span>|  
+|<span data-ttu-id="fb8c3-897">IN_OUT</span><span class="sxs-lookup"><span data-stu-id="fb8c3-897">IN_OUT</span></span>|<span data-ttu-id="fb8c3-898">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-898">String</span></span>|<span data-ttu-id="fb8c3-899">인수의 방향입니다(IN, OUT 또는 IN/OUT).</span><span class="sxs-lookup"><span data-stu-id="fb8c3-899">Argument Direction (IN, OUT, or IN/OUT).</span></span>|  
+|<span data-ttu-id="fb8c3-900">DATA_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-900">DATA_LENGTH</span></span>|<span data-ttu-id="fb8c3-901">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-901">Decimal</span></span>|<span data-ttu-id="fb8c3-902">열 길이(바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-902">Length of the column (in bytes).</span></span>|  
+|<span data-ttu-id="fb8c3-903">DATA_PRECISION</span><span class="sxs-lookup"><span data-stu-id="fb8c3-903">DATA_PRECISION</span></span>|<span data-ttu-id="fb8c3-904">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-904">Decimal</span></span>|<span data-ttu-id="fb8c3-905">십진수(NUMBER) 또는 이진수(FLOAT)의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-905">Length in decimal digits (NUMBER) or binary digits (FLOAT).</span></span>|  
+|<span data-ttu-id="fb8c3-906">DATA_SCALE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-906">DATA_SCALE</span></span>|<span data-ttu-id="fb8c3-907">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-907">Decimal</span></span>|<span data-ttu-id="fb8c3-908">소수점 오른쪽의 숫자 자릿수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-908">Digits to the right of the decimal point in a number.</span></span>|  
+|<span data-ttu-id="fb8c3-909">RADIX</span><span class="sxs-lookup"><span data-stu-id="fb8c3-909">RADIX</span></span>|<span data-ttu-id="fb8c3-910">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-910">Decimal</span></span>|<span data-ttu-id="fb8c3-911">숫자의 인수 기수입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-911">Argument radix for a number.</span></span>|  
+|<span data-ttu-id="fb8c3-912">CHARACTER_SET_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-912">CHARACTER_SET_NAME</span></span>|<span data-ttu-id="fb8c3-913">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-913">String</span></span>|<span data-ttu-id="fb8c3-914">인수의 문자 집합 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-914">Character set name for the argument.</span></span>|  
+|<span data-ttu-id="fb8c3-915">TYPE_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb8c3-915">TYPE_OWNER</span></span>|<span data-ttu-id="fb8c3-916">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-916">String</span></span>|<span data-ttu-id="fb8c3-917">인수 형식의 소유자입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-917">Owner of the type of the argument.</span></span>|  
+|<span data-ttu-id="fb8c3-918">TYPE_NAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-918">TYPE_NAME</span></span>|<span data-ttu-id="fb8c3-919">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-919">String</span></span>|<span data-ttu-id="fb8c3-920">인수 형식의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-920">Name of the type of the argument.</span></span> <span data-ttu-id="fb8c3-921">형식이 패키지 사양에서 선언되는 패키지 로컬 형식인 경우 이 열에는 패키지의 이름이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-921">If the type is a package local type (that is, it is declared in a package specification), then this column displays the name of the package.</span></span>|  
+|<span data-ttu-id="fb8c3-922">TYPE_SUBNAME</span><span class="sxs-lookup"><span data-stu-id="fb8c3-922">TYPE_SUBNAME</span></span>|<span data-ttu-id="fb8c3-923">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-923">String</span></span>|<span data-ttu-id="fb8c3-924">패키지 로컬 형식에 대해서만 관련이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-924">Relevant only for package local types.</span></span> <span data-ttu-id="fb8c3-925">TYPE_NAME 열에서 식별되는 패키지에 선언된 형식의 이름이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-925">Displays the name of the type declared in the package identified in the TYPE_NAME column.</span></span>|  
+|<span data-ttu-id="fb8c3-926">TYPE_LINK</span><span class="sxs-lookup"><span data-stu-id="fb8c3-926">TYPE_LINK</span></span>|<span data-ttu-id="fb8c3-927">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-927">String</span></span>|<span data-ttu-id="fb8c3-928">TYPE_NAME 열에서 식별된 패키지가 원격 패키지인 경우의 패키지 로컬 형식에 대해서만 관련이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-928">Relevant only for package local types when the package identified in the TYPE_NAME column is a remote package.</span></span> <span data-ttu-id="fb8c3-929">이 열에는 원격 패키지를 참조하는 데 사용되는 데이터베이스 링크가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-929">This column displays the database link used to refer to the remote package.</span></span>|  
+|<span data-ttu-id="fb8c3-930">PLS_TYPE</span><span class="sxs-lookup"><span data-stu-id="fb8c3-930">PLS_TYPE</span></span>|<span data-ttu-id="fb8c3-931">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-931">String</span></span>|<span data-ttu-id="fb8c3-932">숫자 인수인 경우 PL/SQL 형식의 인수 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-932">For numeric arguments, the name of the PL/SQL type of the argument.</span></span> <span data-ttu-id="fb8c3-933">그렇지 않으면 Null입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-933">Null otherwise.</span></span>|  
+|<span data-ttu-id="fb8c3-934">CHAR_LENGTH</span><span class="sxs-lookup"><span data-stu-id="fb8c3-934">CHAR_LENGTH</span></span>|<span data-ttu-id="fb8c3-935">Decimal</span><span class="sxs-lookup"><span data-stu-id="fb8c3-935">Decimal</span></span>|<span data-ttu-id="fb8c3-936">문자열 데이터 형식의 문자 제한입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-936">Character limit for string data types.</span></span>|  
+|<span data-ttu-id="fb8c3-937">CHAR_USED</span><span class="sxs-lookup"><span data-stu-id="fb8c3-937">CHAR_USED</span></span>|<span data-ttu-id="fb8c3-938">문자열</span><span class="sxs-lookup"><span data-stu-id="fb8c3-938">String</span></span>|<span data-ttu-id="fb8c3-939">문자열에 공식적으로 사용되는 것이 바이트 제한(B)인지 또는 문자열 제한(C)인지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fb8c3-939">Indicates whether the byte limit (B) or char limit (C) is official for the string.</span></span>|  
   
-## 참고 항목  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="fb8c3-940">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fb8c3-940">See Also</span></span>  
+ [<span data-ttu-id="fb8c3-941">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="fb8c3-941">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

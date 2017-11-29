@@ -1,66 +1,61 @@
 ---
-title: "WCF의 &lt;workflowInstanceQueries&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF의 &lt;workflowInstanceQueries&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6ca8104ba2470593e07e03a7fe0bc80c9cd2f6a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WCF의 &lt;workflowInstanceQueries&gt;
-시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 구성 요소의 컬렉션을 나타냅니다.  
+# <a name="ltworkflowinstancequeriesgt-of-wcf"></a><span data-ttu-id="4fead-102">WCF의 &lt;workflowInstanceQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="4fead-102">&lt;workflowInstanceQueries&gt; of WCF</span></span>
+<span data-ttu-id="4fead-103">시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 구성 요소의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4fead-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  
   
- 추적 프로필 쿼리에 대한 자세한 내용은 [추적 프로필](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)을 참조하세요.  
+ <span data-ttu-id="4fead-104">추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="4fead-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-## 구문  
+ <span data-ttu-id="4fead-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="4fead-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="4fead-106">\<추적 ></span><span class="sxs-lookup"><span data-stu-id="4fead-106">\<tracking></span></span>  
+<span data-ttu-id="4fead-107">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="4fead-107">\<trackingProfile></span></span>  
+<span data-ttu-id="4fead-108">\<워크플로 ></span><span class="sxs-lookup"><span data-stu-id="4fead-108">\<workflow></span></span>  
+<span data-ttu-id="4fead-109">\<workflowInstanceQueries ></span><span class="sxs-lookup"><span data-stu-id="4fead-109">\<workflowInstanceQueries></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="4fead-110">구문</span><span class="sxs-lookup"><span data-stu-id="4fead-110">Syntax</span></span>  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <workflowInstanceQueries>  
-             <workflowInstanceQuery>  
-                <states>  
-                   <state name="Name"/>  
-                </states>  
-            </workflowInstanceQuery>  
-         </workflowInstanceQueries>  
-       </workflow>  
-   </trackingProfile>  
-</tracking>  
+```xml
+<tracking>   <trackingProfile name="Name">       <workflow>          <workflowInstanceQueries>             <workflowInstanceQuery>                <states>                   <state name="Name"/>                </states>            </workflowInstanceQuery>         </workflowInstanceQueries>       </workflow>   </trackingProfile></tracking>  
+```
   
-```  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4fead-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="4fead-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="4fead-112">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4fead-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+### <a name="attributes"></a><span data-ttu-id="4fead-113">특성</span><span class="sxs-lookup"><span data-stu-id="4fead-113">Attributes</span></span>  
+ <span data-ttu-id="4fead-114">없음</span><span class="sxs-lookup"><span data-stu-id="4fead-114">None.</span></span>  
   
-### 특성  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="4fead-115">자식 요소</span><span class="sxs-lookup"><span data-stu-id="4fead-115">Child Elements</span></span>  
   
-### 자식 요소  
+|<span data-ttu-id="4fead-116">요소</span><span class="sxs-lookup"><span data-stu-id="4fead-116">Element</span></span>|<span data-ttu-id="4fead-117">설명</span><span class="sxs-lookup"><span data-stu-id="4fead-117">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4fead-118">\<workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="4fead-118">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="4fead-119">워크플로 인스턴스 수명 주기 변경 내용을 추적하는 데 사용되는 쿼리입니다.</span><span class="sxs-lookup"><span data-stu-id="4fead-119">A query that is used to track workflow instance life cycle changes.</span></span>|  
   
-|요소|설명|  
-|--------|--------|  
-|[\<workflowInstanceQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|워크플로 인스턴스 수명 주기 변경 내용을 추적하는 데 사용되는 쿼리입니다.|  
+### <a name="parent-elements"></a><span data-ttu-id="4fead-120">부모 요소</span><span class="sxs-lookup"><span data-stu-id="4fead-120">Parent Elements</span></span>  
   
-### 부모 요소  
+|<span data-ttu-id="4fead-121">요소</span><span class="sxs-lookup"><span data-stu-id="4fead-121">Element</span></span>|<span data-ttu-id="4fead-122">설명</span><span class="sxs-lookup"><span data-stu-id="4fead-122">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4fead-123">\<워크플로 ></span><span class="sxs-lookup"><span data-stu-id="4fead-123">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="4fead-124">로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소는 [activityDefinitionId](http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="4fead-124">A configuration element that contains all queries for a specific workflow identified by the [activityDefinitionId](http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) property.</span></span>|  
   
-|요소|설명|  
-|--------|--------|  
-|[\<workflow\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|`activityDefinitionId` 속성에 의해 식별되는 특정 워크플로에 대한 모든 쿼리를 포함하는 구성 요소입니다.|  
-  
-## 설명  
- <xref:System.Activities.Tracking.WorkflowInstanceQuery>는 다음 <xref:System.Activities.Tracking.TrackingRecord> 개체를 구독하는 데 사용됩니다.  
+## <a name="remarks"></a><span data-ttu-id="4fead-125">설명</span><span class="sxs-lookup"><span data-stu-id="4fead-125">Remarks</span></span>  
+ <span data-ttu-id="4fead-126"><xref:System.Activities.Tracking.WorkflowInstanceQuery>는 다음 <xref:System.Activities.Tracking.TrackingRecord> 개체를 구독하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fead-126">The <xref:System.Activities.Tracking.WorkflowInstanceQuery> is used to subscribe to the following <xref:System.Activities.Tracking.TrackingRecord> objects:</span></span>  
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
@@ -72,11 +67,10 @@ caps.handback.revision: 3
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
-## 예제  
- 다음 구성은 이 쿼리를 사용하여 `Started` 인스턴스 상태에 대한 워크플로 인스턴스 수준 추적 레코드를 구독합니다.  
+## <a name="example"></a><span data-ttu-id="4fead-127">예제</span><span class="sxs-lookup"><span data-stu-id="4fead-127">Example</span></span>  
+ <span data-ttu-id="4fead-128">다음 구성은 이 쿼리를 사용하여 `Started` 인스턴스 상태에 대한 워크플로 인스턴스 수준 추적 레코드를 구독합니다.</span><span class="sxs-lookup"><span data-stu-id="4fead-128">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
   
-```  
-  
+```xml  
 <workflowInstanceQueries>  
     <workflowInstanceQuery>  
       <states>  
@@ -84,11 +78,10 @@ caps.handback.revision: 3
       </states>  
     </workflowInstanceQuery>  
 </workflowInstanceQueries>  
-  
 ```  
   
-## 참고 항목  
- [System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.WorkflowInstanceQuery](assetId:///System.Activities.Tracking.WorkflowInstanceQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [추적 프로필](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="4fead-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4fead-129">See Also</span></span>  
+ <span data-ttu-id="4fead-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="4fead-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="4fead-131"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="4fead-131"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="4fead-132">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="4fead-132">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="4fead-133">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="4fead-133">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

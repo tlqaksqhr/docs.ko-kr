@@ -1,55 +1,61 @@
 ---
-title: "방법: 데이터 서비스 쿼리 실행(WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 서비스 쿼리 [WCF Data Services]"
-  - "WCF Data Services, 데이터 액세스"
-  - "WCF Data Services, 쿼리"
+title: "방법: 데이터 서비스 쿼리 실행(WCF Data Services)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- querying the data service [WCF Data Services]
+- WCF Data Services, querying
+- WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 67d08f630f983298df3a395944ec09fb26efc94b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: 데이터 서비스 쿼리 실행(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 생성된 클라이언트 데이터 서비스 클래스를 통해 .NET Framework 기반 클라이언트 응용 프로그램에서 데이터 서비스를 쿼리할 수 있습니다.  다음 방법 중 하나를 사용하여 쿼리를 실행할 수 있습니다.  
+# <a name="how-to-execute-data-service-queries-wcf-data-services"></a><span data-ttu-id="9fbea-102">방법: 데이터 서비스 쿼리 실행(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="9fbea-102">How to: Execute Data Service Queries (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="9fbea-103">를 사용하면 생성된 클라이언트 데이터 서비스 클래스를 통해 .NET Framework 기반 클라이언트 응용 프로그램에서 데이터 서비스를 쿼리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-103"> enables you to query a data service from a .NET Framework-based client application by using the generated client data service classes.</span></span> <span data-ttu-id="9fbea-104">다음 방법 중 하나를 사용하여 쿼리를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-104">You can execute queries by using one of these methods:</span></span>  
   
--   `Add Data Service Reference` 도구가 생성하는 <xref:System.Data.Services.Client.DataServiceContext>에서 가져온 명명된 <xref:System.Data.Services.Client.DataServiceQuery%601>에 대해 LINQ 쿼리 실행  
+-   <span data-ttu-id="9fbea-105"><xref:System.Data.Services.Client.DataServiceQuery%601> 도구가 생성하는 <xref:System.Data.Services.Client.DataServiceContext>에서 가져온 명명된 `Add Data Service Reference`에 대해 LINQ 쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="9fbea-105">Executing a LINQ query against the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
   
--   `Add Data Service Reference` 도구가 생성하는 <xref:System.Data.Services.Client.DataServiceContext>에서 가져온 명명된 <xref:System.Data.Services.Client.DataServiceQuery%601>를 열거하여 암시적으로  
+-   <span data-ttu-id="9fbea-106"><xref:System.Data.Services.Client.DataServiceQuery%601> 도구가 생성하는 <xref:System.Data.Services.Client.DataServiceContext>에서 가져온 명명된 `Add Data Service Reference`를 열거하여 암시적으로</span><span class="sxs-lookup"><span data-stu-id="9fbea-106">Implicitly, by enumerating over the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
   
--   <xref:System.Data.Services.Client.DataServiceQuery%601>의 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 메서드를 호출하거나 비동기 실행의 경우 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 메서드를 호출하여 명시적으로  
+-   <span data-ttu-id="9fbea-107"><xref:System.Data.Services.Client.DataServiceContext.Execute%2A>의 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출하거나 비동기 실행의 경우 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 메서드를 호출하여 명시적으로</span><span class="sxs-lookup"><span data-stu-id="9fbea-107">Explicitly, by calling the <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> method on the <xref:System.Data.Services.Client.DataServiceQuery%601>, or the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method for asynchronous execution.</span></span>  
   
- 자세한 내용은 [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)을 참조하세요.  
+ <span data-ttu-id="9fbea-108">자세한 내용은 참조 [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-108">For more information, see [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).</span></span>  
   
- 이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다.  이 서비스 및 클라이언트 데이터 클래스는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)를 완료하면 만들어집니다.  
+ <span data-ttu-id="9fbea-109">이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="9fbea-110">완료 하면이 서비스 및 클라이언트 데이터 클래스 생성 됩니다는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-## 예제  
- 다음 예제에서는 Northwind 데이터 서비스에 대해 모든 `Customers`를 반환하는 LINQ 쿼리를 정의하고 실행하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="9fbea-111">예제</span><span class="sxs-lookup"><span data-stu-id="9fbea-111">Example</span></span>  
+ <span data-ttu-id="9fbea-112">다음 예제에서는 Northwind 데이터 서비스에 대해 모든 `Customers`를 반환하는 LINQ 쿼리를 정의하고 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-112">The following example shows how to define and execute a LINQ query that returns all `Customers` against the Northwind data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomerslinq)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomerslinq)]  
   
-## 예제  
- 다음 예제에서는 `Add Data Service Reference` 도구가 생성하는 컨텍스트를 사용하여 Northwind 데이터 서비스에 대해 모든 `Customers`를 반환하는 쿼리를 암시적으로 실행하는 방법을 보여 줍니다.  요청한 `Customers` 엔터티 집합의 URI는 컨텍스트에 의해 자동으로 결정됩니다.  열거가 수행될 때 암시적으로 쿼리가 실행됩니다.  
+## <a name="example"></a><span data-ttu-id="9fbea-113">예제</span><span class="sxs-lookup"><span data-stu-id="9fbea-113">Example</span></span>  
+ <span data-ttu-id="9fbea-114">다음 예제에서는 `Add Data Service Reference` 도구가 생성하는 컨텍스트를 사용하여 Northwind 데이터 서비스에 대해 모든 `Customers`를 반환하는 쿼리를 암시적으로 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-114">The following example shows how to use the context that the `Add Data Service Reference` tool generates to implicitly execute a query that returns all `Customers` against the Northwind data service.</span></span> <span data-ttu-id="9fbea-115">요청한 `Customers` 엔터티 집합의 URI는 컨텍스트에 의해 자동으로 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-115">The URI of the requested `Customers` entity set is determined automatically by the context.</span></span> <span data-ttu-id="9fbea-116">열거가 수행될 때 암시적으로 쿼리가 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-116">The query is executed implicitly when the enumeration occurs.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomers)]
  [!code-vb[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomers)]  
   
-## 예제  
- 다음 예제에서는 <xref:System.Data.Services.Client.DataServiceContext>를 사용하여 Northwind 데이터 서비스에 대해 모든 `Customers`를 반환하는 쿼리를 명시적으로 실행하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="9fbea-117">예제</span><span class="sxs-lookup"><span data-stu-id="9fbea-117">Example</span></span>  
+ <span data-ttu-id="9fbea-118">다음 예제에서는 <xref:System.Data.Services.Client.DataServiceContext>를 사용하여 Northwind 데이터 서비스에 대해 모든 `Customers`를 반환하는 쿼리를 명시적으로 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9fbea-118">The following example shows how to use the <xref:System.Data.Services.Client.DataServiceContext> to explicitly execute a query that returns all `Customers` against the Northwind data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomersexplicit)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersexplicit)]  
   
-## 참고 항목  
- [방법: 데이터 서비스 쿼리에 쿼리 옵션 추가](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="9fbea-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9fbea-119">See Also</span></span>  
+ [<span data-ttu-id="9fbea-120">방법: 데이터 서비스 쿼리를 쿼리 옵션 추가</span><span class="sxs-lookup"><span data-stu-id="9fbea-120">How to: Add Query Options to a Data Service Query</span></span>](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

@@ -5,139 +5,131 @@ ms.date: 03/30/2017
 ms.prod: .net-framework-oob
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- HTML
-- VB
-- CSharp
-- C++
 helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b491d644112137cb24e847439aa133691e5261d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: d1ef95ac84872b2cc39ec3a93abab10c39cd7738
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="wcf-data-services-45"></a>WCF Data Services 4.5
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)](이전의 “ADO.NET Data Services”)는 [REST(Representational State Transfer)](http://go.microsoft.com/fwlink/?LinkId=113919)의 의미 체계를 사용하여 웹 또는 인트라넷을 통해 데이터를 노출하고 사용하기 위해 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]을 사용하는 서비스를 만들 수 있도록 하는 .NET Framework의 구성 요소입니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 데이터는 표준 HTTP 동사인 GET, PUT, POST 및 DELETE를 사용하여 액세스되고 변경됩니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)의 엔터티-관계 규칙을 사용하여 리소스를 연결로 관련된 엔터티 집합으로 노출합니다.  
+# <a name="wcf-data-services-45"></a><span data-ttu-id="fd5a0-102">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="fd5a0-102">WCF Data Services 4.5</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="fd5a0-103">(이전의 “ADO.NET Data Services”)는 [REST(Representational State Transfer)](http://go.microsoft.com/fwlink/?LinkId=113919)의 의미 체계를 사용하여 웹 또는 인트라넷을 통해 데이터를 노출하고 사용하기 위해 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]을 사용하는 서비스를 만들 수 있도록 하는 .NET Framework의 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-103"> (formerly known as "ADO.NET Data Services") is a component of the .NET Framework that enables you to create services that use the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] to expose and consume data over the Web or intranet by using the semantics of [representational state transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919).</span></span> [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]<span data-ttu-id="fd5a0-104">는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-104"> exposes data as resources that are addressable by URIs.</span></span> <span data-ttu-id="fd5a0-105">데이터는 표준 HTTP 동사인 GET, PUT, POST 및 DELETE를 사용하여 액세스되고 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-105">Data is accessed and changed by using standard HTTP verbs of GET, PUT, POST, and DELETE.</span></span> [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]<span data-ttu-id="fd5a0-106">는 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)의 엔터티-관계 규칙을 사용하여 리소스를 연결로 관련된 엔터티 집합으로 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-106"> uses the entity-relationship conventions of the [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) to expose resources as sets of entities that are related by associations.</span></span>  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 리소스 주소 지정 및 업데이트를 위해 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜을 사용합니다. 이를 통해 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]를 지원하는 모든 클라이언트에서 이러한 서비스에 액세스할 수 있습니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]를 사용하면 XML로 데이터를 교환 및 업데이트하기 위한 표준 집합인 Atom, AJAX 응용 프로그램에서 광범위하게 사용되는 텍스트 기반 데이터 교환 형식인 JSON(JavaScript Object Notation) 등 잘 알려진 전송 형식을 사용하여 리소스를 요청하고 리소스에 데이터를 쓸 수 있습니다.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="fd5a0-107">는 리소스 주소 지정 및 업데이트를 위해 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-107"> uses the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocol for addressing and updating resources.</span></span> <span data-ttu-id="fd5a0-108">이를 통해 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]를 지원하는 모든 클라이언트에서 이러한 서비스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-108">In this way, you can access these services from any client that supports [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].</span></span> [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]<span data-ttu-id="fd5a0-109">를 사용하면 XML로 데이터를 교환 및 업데이트하기 위한 표준 집합인 Atom, AJAX 응용 프로그램에서 광범위하게 사용되는 텍스트 기반 데이터 교환 형식인 JSON(JavaScript Object Notation) 등 잘 알려진 전송 형식을 사용하여 리소스를 요청하고 리소스에 데이터를 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-109"> enables you to request and write data to resources by using well-known transfer formats: Atom, a set of standards for exchanging and updating data as XML, and JavaScript Object Notation (JSON), a text-based data exchange format used extensively in AJAX application.</span></span>  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서는 다양한 원본에서 제공되는 데이터를 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드로 노출할 수 있습니다. Visual Studio 도구를 사용하면 ADO.NET Entity Framework 데이터 모델을 사용하여 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기반 서비스를 보다 쉽게 만들 수 있습니다. 또한 CLR(공용 언어 런타임) 클래스와 런타임에 바인딩된 데이터나 형식화되지 않은 데이터를 기반으로 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 만들 수 있습니다.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="fd5a0-110">에서는 다양한 원본에서 제공되는 데이터를 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드로 노출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-110"> can expose data that originates from various sources as [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds.</span></span> <span data-ttu-id="fd5a0-111">Visual Studio 도구를 사용하면 ADO.NET Entity Framework 데이터 모델을 사용하여 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기반 서비스를 보다 쉽게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-111">Visual Studio tools make it easier for you to create an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-based service by using an ADO.NET Entity Framework data model.</span></span> <span data-ttu-id="fd5a0-112">또한 CLR(공용 언어 런타임) 클래스와 런타임에 바인딩된 데이터나 형식화되지 않은 데이터를 기반으로 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-112">You can also create [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds based on common language runtime (CLR) classes and even late-bound or un-typed data.</span></span>  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에는 일반 .NET Framework 클라이언트 응용 프로그램용 라이브러리와 Silverlight 기반 응용 프로그램용 라이브러리 등 클라이언트 라이브러리 집합도 포함되어 있습니다. 이러한 클라이언트 라이브러리는 .NET Framework 및 Silverlight와 같은 환경에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 액세스할 때 개체 기반 프로그래밍 모델을 제공합니다.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="fd5a0-113">에는 일반 .NET Framework 클라이언트 응용 프로그램용 라이브러리와 Silverlight 기반 응용 프로그램용 라이브러리 등 클라이언트 라이브러리 집합도 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-113"> also includes a set of client libraries, one for general .NET Framework client applications and another specifically for Silverlight-based applications.</span></span> <span data-ttu-id="fd5a0-114">이러한 클라이언트 라이브러리는 .NET Framework 및 Silverlight와 같은 환경에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 액세스할 때 개체 기반 프로그래밍 모델을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-114">These client libraries provide an object-based programming model when you access an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed from environments such as the .NET Framework and Silverlight.</span></span>  
   
-## <a name="where-should-i-start"></a>시작 지점  
- 가장 관심이 있는 항목에 따라 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에 대한 다음 항목 중 하나에서 시작하는 것이 좋습니다.  
+## <a name="where-should-i-start"></a><span data-ttu-id="fd5a0-115">시작 지점</span><span class="sxs-lookup"><span data-stu-id="fd5a0-115">Where Should I Start?</span></span>  
+ <span data-ttu-id="fd5a0-116">가장 관심이 있는 항목에 따라 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에 대한 다음 항목 중 하나에서 시작하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-116">Depending on your interests, consider getting started with [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] in one of the following topics.</span></span>  
   
- 바로 시작  
- -   [빠른 시작](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ <span data-ttu-id="fd5a0-117">바로 시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-117">I want to jump right in…</span></span>  
+ -   [<span data-ttu-id="fd5a0-118">빠른 시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-118">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
--   [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
+-   [<span data-ttu-id="fd5a0-119">시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-119">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
   
--   [Silverlight 빠른 시작](http://go.microsoft.com/fwlink/?LinkID=192782)  
+-   [<span data-ttu-id="fd5a0-120">Silverlight 빠른 시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-120">Silverlight Quickstart</span></span>](http://go.microsoft.com/fwlink/?LinkID=192782)  
   
--   [Windows Phone 개발을 위한 Silverlight 빠른 시작](http://go.microsoft.com/fwlink/?LinkID=214535)  
+-   [<span data-ttu-id="fd5a0-121">Windows Phone 개발을 위한 Silverlight 빠른 시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-121">Silverlight Quickstart for Windows Phone Development</span></span>](http://go.microsoft.com/fwlink/?LinkID=214535)  
   
- 코드 보기  
- -   [빠른 시작](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ <span data-ttu-id="fd5a0-122">코드 보기</span><span class="sxs-lookup"><span data-stu-id="fd5a0-122">Just show me some code…</span></span>  
+ -   [<span data-ttu-id="fd5a0-123">빠른 시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-123">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
--   [방법: 데이터 서비스 쿼리 실행](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
+-   [<span data-ttu-id="fd5a0-124">방법: 데이터 서비스 쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="fd5a0-124">How to: Execute Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
--   [방법: Windows Presentation Foundation 요소에 데이터 바인딩](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
+-   [<span data-ttu-id="fd5a0-125">방법: Windows Presentation Foundation 요소에 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="fd5a0-125">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에 대한 자세한 정보  
- -   [백서: OData 소개](http://go.microsoft.com/fwlink/?LinkId=220867)  
+ <span data-ttu-id="fd5a0-126">[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에 대한 자세한 정보</span><span class="sxs-lookup"><span data-stu-id="fd5a0-126">I want to know more about [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]…</span></span>  
+ -   [<span data-ttu-id="fd5a0-127">백서: OData 소개</span><span class="sxs-lookup"><span data-stu-id="fd5a0-127">Whitepaper: Introducing OData</span></span>](http://go.microsoft.com/fwlink/?LinkId=220867)  
   
--   [Open Data Protocol 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=184554)  
+-   [<span data-ttu-id="fd5a0-128">Open Data Protocol 웹 사이트</span><span class="sxs-lookup"><span data-stu-id="fd5a0-128">Open Data Protocol Web site</span></span>](http://go.microsoft.com/fwlink/?LinkID=184554)  
   
--   [OData: SDK](http://go.microsoft.com/fwlink/?LinkID=185248)  
+-   [<span data-ttu-id="fd5a0-129">OData: SDK</span><span class="sxs-lookup"><span data-stu-id="fd5a0-129">OData: SDK</span></span>](http://go.microsoft.com/fwlink/?LinkID=185248)  
   
--   [OData: 질문과 대답](http://go.microsoft.com/fwlink/?LinkId=185867)  
+-   [<span data-ttu-id="fd5a0-130">OData: 질문과 대답</span><span class="sxs-lookup"><span data-stu-id="fd5a0-130">OData: Frequently Asked Questions</span></span>](http://go.microsoft.com/fwlink/?LinkId=185867)  
   
- 비디오 보기  
- -   [WCF Data Services 초보자 가이드](http://go.microsoft.com/fwlink/?LinkId=220864)  
+ <span data-ttu-id="fd5a0-131">비디오 보기</span><span class="sxs-lookup"><span data-stu-id="fd5a0-131">I want to watch some videos…</span></span>  
+ -   [<span data-ttu-id="fd5a0-132">WCF Data Services 초보자 가이드</span><span class="sxs-lookup"><span data-stu-id="fd5a0-132">Beginner's Guide to WCF Data Services</span></span>](http://go.microsoft.com/fwlink/?LinkId=220864)  
   
--   [WCF Data Services 개발자 비디오](http://go.microsoft.com/fwlink/?LinkId=220861)  
+-   [<span data-ttu-id="fd5a0-133">WCF Data Services 개발자 비디오</span><span class="sxs-lookup"><span data-stu-id="fd5a0-133">WCF Data Services Developer Videos</span></span>](http://go.microsoft.com/fwlink/?LinkId=220861)  
   
--   [OData: 개발자 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=185866)  
+-   [<span data-ttu-id="fd5a0-134">OData: 개발자 웹 사이트</span><span class="sxs-lookup"><span data-stu-id="fd5a0-134">OData: Developers Web site</span></span>](http://go.microsoft.com/fwlink/?LinkId=185866)  
   
- 종단 간 샘플  
- -   [MSDN 샘플 갤러리의 WCF Data Services 설명서 샘플](http://go.microsoft.com/fwlink/?LinkID=220865)  
+ <span data-ttu-id="fd5a0-135">종단 간 샘플</span><span class="sxs-lookup"><span data-stu-id="fd5a0-135">I want to see end-to-end samples</span></span>  
+ -   [<span data-ttu-id="fd5a0-136">MSDN 샘플 갤러리의 WCF Data Services 설명서 샘플</span><span class="sxs-lookup"><span data-stu-id="fd5a0-136">WCF Data Services Documentation Samples on MSDN Samples Gallery</span></span>](http://go.microsoft.com/fwlink/?LinkID=220865)  
   
--   [MSDN 샘플 갤러리의 기타 WCF Data Services 샘플](http://go.microsoft.com/fwlink/?LinkId=220866)  
+-   [<span data-ttu-id="fd5a0-137">MSDN 샘플 갤러리의 기타 WCF Data Services 샘플</span><span class="sxs-lookup"><span data-stu-id="fd5a0-137">Other WCF Data Services Samples on MSDN Samples Gallery</span></span>](http://go.microsoft.com/fwlink/?LinkId=220866)  
   
--   [OData: SDK](http://go.microsoft.com/fwlink/?LinkID=185248)  
+-   [<span data-ttu-id="fd5a0-138">OData: SDK</span><span class="sxs-lookup"><span data-stu-id="fd5a0-138">OData: SDK</span></span>](http://go.microsoft.com/fwlink/?LinkID=185248)  
   
- Visual Studio와의 통합 방식  
- -   [데이터 서비스 클라이언트 라이브러리 생성](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
+ <span data-ttu-id="fd5a0-139">Visual Studio와의 통합 방식</span><span class="sxs-lookup"><span data-stu-id="fd5a0-139">How does it integrate with Visual Studio?</span></span>  
+ -   [<span data-ttu-id="fd5a0-140">데이터 서비스 클라이언트 라이브러리 생성</span><span class="sxs-lookup"><span data-stu-id="fd5a0-140">Generating the Data Service Client Library</span></span>](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
   
--   [데이터 서비스 만들기](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
+-   [<span data-ttu-id="fd5a0-141">데이터 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="fd5a0-141">Creating the Data Service</span></span>](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
   
--   [Entity Framework 공급자](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
+-   [<span data-ttu-id="fd5a0-142">Entity Framework 공급자</span><span class="sxs-lookup"><span data-stu-id="fd5a0-142">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
   
- 수행 가능 작업  
- -   [개요](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
+ <span data-ttu-id="fd5a0-143">수행 가능 작업</span><span class="sxs-lookup"><span data-stu-id="fd5a0-143">What can I do with it?</span></span>  
+ -   [<span data-ttu-id="fd5a0-144">개요</span><span class="sxs-lookup"><span data-stu-id="fd5a0-144">Overview</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
   
--   [백서: OData 소개](http://go.microsoft.com/fwlink/?LinkId=220867)  
+-   [<span data-ttu-id="fd5a0-145">백서: OData 소개</span><span class="sxs-lookup"><span data-stu-id="fd5a0-145">Whitepaper: Introducing OData</span></span>](http://go.microsoft.com/fwlink/?LinkId=220867)  
   
--   [응용 프로그램 시나리오](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
+-   [<span data-ttu-id="fd5a0-146">응용 프로그램 시나리오</span><span class="sxs-lookup"><span data-stu-id="fd5a0-146">Application Scenarios</span></span>](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
   
- Silverlight 사용  
- -   [Silverlight 빠른 시작](http://go.microsoft.com/fwlink/?LinkID=192782)  
+ <span data-ttu-id="fd5a0-147">Silverlight 사용</span><span class="sxs-lookup"><span data-stu-id="fd5a0-147">I want to use Silverlight…</span></span>  
+ -   [<span data-ttu-id="fd5a0-148">Silverlight 빠른 시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-148">Silverlight Quickstart</span></span>](http://go.microsoft.com/fwlink/?LinkID=192782)  
   
--   [WCF Data Services(Silverlight)](http://go.microsoft.com/fwlink/?LinkID=143149)  
+-   [<span data-ttu-id="fd5a0-149">WCF Data Services(Silverlight)</span><span class="sxs-lookup"><span data-stu-id="fd5a0-149">WCF Data Services (Silverlight)</span></span>](http://go.microsoft.com/fwlink/?LinkID=143149)  
   
--   [Silverlight 시작](http://go.microsoft.com/fwlink/?LinkId=148366)  
+-   [<span data-ttu-id="fd5a0-150">Silverlight 시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-150">Getting Started with Silverlight</span></span>](http://go.microsoft.com/fwlink/?LinkId=148366)  
   
- Windows Phone 응용 프로그램 만들기  
- -   [Windows Phone 개발을 위한 Silverlight 빠른 시작](http://go.microsoft.com/fwlink/?LinkID=214535)  
+ <span data-ttu-id="fd5a0-151">Windows Phone 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="fd5a0-151">I want to create a Windows Phone application…</span></span>  
+ -   [<span data-ttu-id="fd5a0-152">Windows Phone 개발을 위한 Silverlight 빠른 시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-152">Silverlight Quickstart for Windows Phone Development</span></span>](http://go.microsoft.com/fwlink/?LinkID=214535)  
   
--   [Windows Phone용 OData(Open Data Protocol) 클라이언트](http://go.microsoft.com/fwlink/?LinkID=208749)  
+-   [<span data-ttu-id="fd5a0-153">Windows Phone용 OData(Open Data Protocol) 클라이언트</span><span class="sxs-lookup"><span data-stu-id="fd5a0-153">Open Data Protocol (OData) Client for Windows Phone</span></span>](http://go.microsoft.com/fwlink/?LinkID=208749)  
   
- LINQ 사용  
- -   [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
+ <span data-ttu-id="fd5a0-154">LINQ 사용</span><span class="sxs-lookup"><span data-stu-id="fd5a0-154">I want to use LINQ…</span></span>  
+ -   [<span data-ttu-id="fd5a0-155">데이터 서비스 쿼리</span><span class="sxs-lookup"><span data-stu-id="fd5a0-155">Querying the Data Service</span></span>](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
   
--   [LINQ 고려 사항](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)  
+-   [<span data-ttu-id="fd5a0-156">LINQ 고려 사항</span><span class="sxs-lookup"><span data-stu-id="fd5a0-156">LINQ Considerations</span></span>](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)  
   
--   [방법: 데이터 서비스 쿼리 실행](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
+-   [<span data-ttu-id="fd5a0-157">방법: 데이터 서비스 쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="fd5a0-157">How to: Execute Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
- 추가 정보  
- -   [WCF Data Services 팀 블로그](http://go.microsoft.com/fwlink/?LinkID=150511)  
+ <span data-ttu-id="fd5a0-158">추가 정보</span><span class="sxs-lookup"><span data-stu-id="fd5a0-158">I still need some more information…</span></span>  
+ -   [<span data-ttu-id="fd5a0-159">WCF Data Services 팀 블로그</span><span class="sxs-lookup"><span data-stu-id="fd5a0-159">WCF Data Services Team Blog</span></span>](http://go.microsoft.com/fwlink/?LinkID=150511)  
   
--   [리소스](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
+-   [<span data-ttu-id="fd5a0-160">리소스</span><span class="sxs-lookup"><span data-stu-id="fd5a0-160">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
   
--   [WCF Data Services 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=220868)  
+-   [<span data-ttu-id="fd5a0-161">WCF Data Services 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="fd5a0-161">WCF Data Services Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=220868)  
   
--   [Open Data Protocol 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=184554)  
+-   [<span data-ttu-id="fd5a0-162">Open Data Protocol 웹 사이트</span><span class="sxs-lookup"><span data-stu-id="fd5a0-162">Open Data Protocol Web site</span></span>](http://go.microsoft.com/fwlink/?LinkID=184554)  
   
-## <a name="in-this-section"></a>단원 내용  
- [개요](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 사용할 수 있는 기능에 대한 개요를 제공합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="fd5a0-163">단원 내용</span><span class="sxs-lookup"><span data-stu-id="fd5a0-163">In This Section</span></span>  
+ [<span data-ttu-id="fd5a0-164">개요</span><span class="sxs-lookup"><span data-stu-id="fd5a0-164">Overview</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
+ <span data-ttu-id="fd5a0-165">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 사용할 수 있는 기능에 대한 개요를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-165">Provides an overview of the features and functionality available in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span>  
   
- [WCF Data Services의 새로운 기능](http://msdn.microsoft.com/en-us/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 새로운 기능과 새로운 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기능의 지원에 대해 설명합니다.  
+ [<span data-ttu-id="fd5a0-166">WCF Data Services의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="fd5a0-166">What's New in WCF Data Services</span></span>](http://msdn.microsoft.com/en-us/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
+ <span data-ttu-id="fd5a0-167">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 새로운 기능과 새로운 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기능의 지원에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-167">Describes new functionality in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and support for new [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] features.</span></span>  
   
- [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]를 사용하여 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 피드를 노출하고 사용하는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="fd5a0-168">시작</span><span class="sxs-lookup"><span data-stu-id="fd5a0-168">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
+ <span data-ttu-id="fd5a0-169">[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]를 사용하여 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 피드를 노출하고 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-169">Describes how to expose and consume [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds by using [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span>  
   
- [WCF Data Services 정의](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 노출하는 데이터 서비스를 만들고 구성하는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="fd5a0-170">WCF Data Services 정의</span><span class="sxs-lookup"><span data-stu-id="fd5a0-170">Defining WCF Data Services</span></span>](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ <span data-ttu-id="fd5a0-171">[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 노출하는 데이터 서비스를 만들고 구성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-171">Describes how to create and configure a data service that exposes [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds.</span></span>  
   
- [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- 클라이언트 라이브러리를 통해 .NET Framework 클라이언트 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용하는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="fd5a0-172">WCF Data Services 클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="fd5a0-172">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ <span data-ttu-id="fd5a0-173">클라이언트 라이브러리를 통해 .NET Framework 클라이언트 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fd5a0-173">Describes how to use client libraries to consume [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds from a .NET Framework client application.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [REST(Representational State Transfer)](http://go.microsoft.com/fwlink/?LinkId=113919)
-
+## <a name="see-also"></a><span data-ttu-id="fd5a0-174">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fd5a0-174">See Also</span></span>  
+ [<span data-ttu-id="fd5a0-175">REST(Representational State Transfer)</span><span class="sxs-lookup"><span data-stu-id="fd5a0-175">Representational State Transfer (REST)</span></span>](http://go.microsoft.com/fwlink/?LinkId=113919)

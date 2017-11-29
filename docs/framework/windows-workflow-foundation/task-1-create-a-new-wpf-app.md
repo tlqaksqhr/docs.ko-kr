@@ -1,52 +1,56 @@
 ---
-title: "태스크 1: 새 Windows Presentation Foundation 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bfebf11d66ded668d7c0892d11adde76e0a42c01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 태스크 1: 새 Windows Presentation Foundation 응용 프로그램 만들기
-이 태스크에서는 WPF 응용 프로그램 Visual Studio 템플릿을 사용하여 빈 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 응용 프로그램을 만들고 해당 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 어셈블리에 대한 참조를 추가합니다.  
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a><span data-ttu-id="16404-102">작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="16404-102">Task 1: Create a New Windows Presentation Foundation Application</span></span>
+<span data-ttu-id="16404-103">이 태스크에서는 WPF 응용 프로그램 Visual Studio 템플릿을 사용하여 빈 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 응용 프로그램을 만들고 해당 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="16404-103">In this task, you will create an empty [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] application by using the WPF Application Visual Studio template and add references to the appropriate [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow assemblies.</span></span>  
   
-### WPF 응용 프로그램 프로젝트를 만들려면  
+### <a name="to-create-the-wpf-application-project"></a><span data-ttu-id="16404-104">WPF 응용 프로그램 프로젝트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="16404-104">To create the WPF Application project</span></span>  
   
-1.  [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]을 열고 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+1.  <span data-ttu-id="16404-105">열기 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 및는 **파일** 메뉴에서 **새로**, 클릭 하 고 **프로젝트**합니다.</span><span class="sxs-lookup"><span data-stu-id="16404-105">Open [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] and on the **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-2.  **새 프로젝트** 대화 상자의 왼쪽에 있는 **설치된 템플릿** 창에서 **Visual C\#** 또는 **Visual Basic**을 선택합니다.선택한 언어가 표시되지 않으면 **다른 언어**에서 찾아봅니다.  
+2.  <span data-ttu-id="16404-106">에 **새 프로젝트** 대화 상자를 선택 **Visual C#** 또는 **Visual Basic** 에서 **설치 된 템플릿** 의 왼쪽 창 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="16404-106">In the **New Project** dialog box, select either **Visual C#** or **Visual Basic** from the **Installed Templates** pane on the left side of the box.</span></span> <span data-ttu-id="16404-107">선택한 언어가 표시 되지 않으면에서 찾아봅니다 **다른 언어**합니다.</span><span class="sxs-lookup"><span data-stu-id="16404-107">If the language of your choice does not appear, look under **Other Languages**.</span></span>  
   
-3.  **설치된 템플릿** 창에서 **Windows**를 선택합니다.  
+3.  <span data-ttu-id="16404-108">선택 **Windows** 에 **설치 된 템플릿** 창.</span><span class="sxs-lookup"><span data-stu-id="16404-108">Select **Windows** in the **Installed Templates** pane.</span></span>  
   
-4.  위쪽 창의 드롭다운 목록 상자에서 **.NET Framework 4**\(기본값\)이 선택되어 있는지 확인한 다음 **WPF 응용 프로그램**을 선택합니다.  
+4.  <span data-ttu-id="16404-109">위쪽 창에 있는지를 확인 (기본값) **.NET Framework 4** 선택 하 여 드롭다운 목록 상자에서 선택한 **WPF 응용 프로그램**합니다.</span><span class="sxs-lookup"><span data-stu-id="16404-109">In the top pane, confirm that (the default value) **.NET Framework 4** has been selected in the drop-down list box, and then select **WPF Application**.</span></span>  
   
-5.  창의 아래쪽에서 프로젝트 이름을 **HostingApplication**으로 설정합니다.  
+5.  <span data-ttu-id="16404-110">프로젝트의 이름을 설정 **HostingApplication** 창의 맨 아래에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16404-110">Set the name of the project to **HostingApplication** at the bottom of the window.</span></span>  
   
-6.  솔루션의 이름을 **RehostingTheDesigner**로 설정합니다.  
+6.  <span data-ttu-id="16404-111">솔루션 이름으로 설정 **RehostingTheDesigner**합니다.</span><span class="sxs-lookup"><span data-stu-id="16404-111">Set the solution name to **RehostingTheDesigner**.</span></span>  
   
-7.  **확인**을 클릭하여 응용 프로그램 프로젝트를 만듭니다.[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]에서 응용 프로그램에 대한 기본 WPF UI를 만들고 해당 XAML 및 코드 숨김 파일을 포함합니다.  
+7.  <span data-ttu-id="16404-112">클릭 **확인** 응용 프로그램 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="16404-112">Click **OK** to create the application project.</span></span> [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]<span data-ttu-id="16404-113">에서 응용 프로그램에 대한 기본 WPF UI를 만들고 해당 XAML 및 코드 숨김 파일을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="16404-113"> creates a basic WPF UI for your application and includes the appropriate XAML and code-behind files.</span></span>  
   
-8.  **WorkflowModel** 어셈블리에 대한 참조를 추가합니다.이렇게 하려면 **솔루션 탐색기**에서 **HostingApplication** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.  
+8.  <span data-ttu-id="16404-114">에 대 한 참조를 추가 **WorkflowModel** 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="16404-114">Add references to **WorkflowModel** assemblies.</span></span> <span data-ttu-id="16404-115">이 수행 하려면 **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **HostingApplication** 프로젝트를 마우스 선택 **참조 추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="16404-115">To do this, in **Solution Explorer**, right-click the **HostingApplication** project and select **Add Reference**.</span></span>  
   
-9. **참조 추가** 대화 상자에서 **.NET** 탭을 클릭하고 Ctrl 키를 누른 상태로 다음 어셈블리를 선택한 다음 **확인**을 클릭합니다.  
+9. <span data-ttu-id="16404-116">에 **참조 추가** 대화 상자를 클릭는 **.NET** 탭에서 CTRL 키를 누른 다음 어셈블리를 선택한 다음를 클릭 **확인**:</span><span class="sxs-lookup"><span data-stu-id="16404-116">In the **Add Reference** dialog box, click the **.NET** tab, hold down the CTRL key, select the following assemblies, and then click **OK**:</span></span>  
   
-    -   System.Activities  
+    -   <span data-ttu-id="16404-117">System.Activities</span><span class="sxs-lookup"><span data-stu-id="16404-117">System.Activities</span></span>  
   
-    -   System.Activities.Presentation  
+    -   <span data-ttu-id="16404-118">System.Activities.Presentation</span><span class="sxs-lookup"><span data-stu-id="16404-118">System.Activities.Presentation</span></span>  
   
-    -   System.Activities.Core.Presentation  
+    -   <span data-ttu-id="16404-119">System.Activities.Core.Presentation</span><span class="sxs-lookup"><span data-stu-id="16404-119">System.Activities.Core.Presentation</span></span>  
   
-10. **확인**을 클릭합니다.  
+10. <span data-ttu-id="16404-120">**확인**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="16404-120">Click **OK**.</span></span>  
   
-11. Workflow Designer 디자인 캔버스를 호스팅하는 방법은 [태스크 2: Workflow Designer 호스팅](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md)을 참조하십시오.  
+11. <span data-ttu-id="16404-121">참조 [작업 2: 워크플로 디자이너 호스트](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) 워크플로 디자이너 디자인 캔버스를 호스트 하는 방법을 배울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16404-121">See [Task 2: Host the Workflow Designer](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) to learn how to host the workflow designer design canvas.</span></span>  
   
-## 참고 항목  
- [Workflow Designer 재호스팅](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [태스크 2: Workflow Designer 호스팅](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a><span data-ttu-id="16404-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="16404-122">See Also</span></span>  
+ [<span data-ttu-id="16404-123">워크플로 디자이너 재호스트</span><span class="sxs-lookup"><span data-stu-id="16404-123">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [<span data-ttu-id="16404-124">작업 2: 워크플로 디자이너 호스트</span><span class="sxs-lookup"><span data-stu-id="16404-124">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

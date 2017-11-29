@@ -5,108 +5,105 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2486aa4daa5682f09b9cd5da8eac4b9071671a3c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="measuring-startup-improvement-with-net-native"></a>.NET 네이티브로 시작 속도 개선 측정
-[!INCLUDE[net_native](../../../includes/net-native-md.md)]를 사용하는 경우 앱 시작 시간이 크게 단축됩니다. 이러한 속도 개선은 휴대용 저전력 장치와 복잡한 앱에서 특히 두드러지게 나타납니다. 이 항목에서는 이러한 시작 속도 개선을 측정하는 데 필요한 기본적인 계측을 시작하는 방법을 설명합니다.  
+# <a name="measuring-startup-improvement-with-net-native"></a><span data-ttu-id="431dc-102">.NET 네이티브로 시작 속도 개선 측정</span><span class="sxs-lookup"><span data-stu-id="431dc-102">Measuring Startup Improvement with .NET Native</span></span>
+[!INCLUDE[net_native](../../../includes/net-native-md.md)]<span data-ttu-id="431dc-103">를 사용하는 경우 앱 시작 시간이 크게 단축됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-103"> significantly improves the launch time of apps.</span></span> <span data-ttu-id="431dc-104">이러한 속도 개선은 휴대용 저전력 장치와 복잡한 앱에서 특히 두드러지게 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-104">This improvement is particularly noticeable on portable, low-powered devices and with complex apps.</span></span> <span data-ttu-id="431dc-105">이 항목에서는 이러한 시작 속도 개선을 측정하는 데 필요한 기본적인 계측을 시작하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-105">This topic helps you get started with the basic instrumentation needed to measure this startup improvement.</span></span>  
   
- 성능을 쉽게 조사할 수 있도록 .NET Framework 및 Windows에서는 이벤트 발생 시 앱이 도구에 이벤트를 알릴 수 있도록 하는 ETW(Windows용 이벤트 추적)라는 이벤트 프레임워크를 사용합니다. ETW 이벤트 알림을 받으면 PerfView라는 도구를 사용하여 해당 이벤트를 쉽게 확인하고 분석할 수 있습니다. 이 항목에서는 다음 작업을 수행하는 방법을 설명합니다.  
+ <span data-ttu-id="431dc-106">성능을 쉽게 조사할 수 있도록 .NET Framework 및 Windows에서는 이벤트 발생 시 앱이 도구에 이벤트를 알릴 수 있도록 하는 ETW(Windows용 이벤트 추적)라는 이벤트 프레임워크를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-106">To facilitate performance investigations, the .NET Framework and Windows use an event framework called Event Tracing for Windows (ETW) that allows your app to notify tooling when events happen.</span></span> <span data-ttu-id="431dc-107">ETW 이벤트 알림을 받으면 PerfView라는 도구를 사용하여 해당 이벤트를 쉽게 확인하고 분석할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-107">You can then use a tool called PerfView to easily view and analyze of ETW events.</span></span> <span data-ttu-id="431dc-108">이 항목에서는 다음 작업을 수행하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-108">This topic explains how to:</span></span>  
   
--   <xref:System.Diagnostics.Tracing.EventSource> 클래스를 사용하여 이벤트를 내보냅니다.  
+-   <span data-ttu-id="431dc-109"><xref:System.Diagnostics.Tracing.EventSource> 클래스를 사용하여 이벤트를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-109">Use the <xref:System.Diagnostics.Tracing.EventSource> class to emit events.</span></span>  
   
--   PerfView를 사용하여 이러한 이벤트를 수집합니다.  
+-   <span data-ttu-id="431dc-110">PerfView를 사용하여 이러한 이벤트를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-110">Use PerfView to gather those events.</span></span>  
   
--   PerfView를 사용하여 이러한 이벤트를 표시합니다.  
+-   <span data-ttu-id="431dc-111">PerfView를 사용하여 이러한 이벤트를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-111">Use PerfView to display those events.</span></span>  
   
-## <a name="using-eventsource-to-emit-events"></a>EventSource를 사용하여 이벤트 내보내기  
- <xref:System.Diagnostics.Tracing.EventSource>는 사용자 지정 이벤트 공급자를 만드는 데 사용할 수 있는 기본 클래스를 제공합니다. 일반적으로는 <xref:System.Diagnostics.Tracing.EventSource>의 하위 클래스를 만든 다음 `Write*` 메서드를 고유한 이벤트 메서드로 래핑합니다. 각 <xref:System.Diagnostics.Tracing.EventSource>에는 보통 singleton 패턴이 사용됩니다.  
+## <a name="using-eventsource-to-emit-events"></a><span data-ttu-id="431dc-112">EventSource를 사용하여 이벤트 내보내기</span><span class="sxs-lookup"><span data-stu-id="431dc-112">Using EventSource to emit events</span></span>  
+ <span data-ttu-id="431dc-113"><xref:System.Diagnostics.Tracing.EventSource>는 사용자 지정 이벤트 공급자를 만드는 데 사용할 수 있는 기본 클래스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-113"><xref:System.Diagnostics.Tracing.EventSource> provides a base class from which to create a custom event provider.</span></span> <span data-ttu-id="431dc-114">일반적으로는 <xref:System.Diagnostics.Tracing.EventSource>의 하위 클래스를 만든 다음 `Write*` 메서드를 고유한 이벤트 메서드로 래핑합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-114">Generally, you create a subclass of <xref:System.Diagnostics.Tracing.EventSource> and wrap the `Write*` methods with your own event methods.</span></span> <span data-ttu-id="431dc-115">각 <xref:System.Diagnostics.Tracing.EventSource>에는 보통 singleton 패턴이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-115">A singleton pattern is generally used for each <xref:System.Diagnostics.Tracing.EventSource>.</span></span>  
   
- 예를 들어 다음 예제의 클래스를 사용하면 두 가지 성능 특성을 측정할 수 있습니다.  
+ <span data-ttu-id="431dc-116">예를 들어 다음 예제의 클래스를 사용하면 두 가지 성능 특성을 측정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-116">For example, the class in the following example can be used to measure two performance characteristics:</span></span>  
   
--   `App` 클래스 생성자가 호출될 때까지의 시간  
+-   <span data-ttu-id="431dc-117">`App` 클래스 생성자가 호출될 때까지의 시간</span><span class="sxs-lookup"><span data-stu-id="431dc-117">The time until the `App` class constructor was called.</span></span>  
   
--   `MainPage` 생성자가 호출될 때까지의 시간  
+-   <span data-ttu-id="431dc-118">`MainPage` 생성자가 호출될 때까지의 시간</span><span class="sxs-lookup"><span data-stu-id="431dc-118">The time until the `MainPage` constructor was called.</span></span>  
   
  [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
- 위의 코드에서 몇 가지 사항을 살펴보고 넘어가겠습니다. 먼저, singleton은 `AppEventSource.Log`에서 작성됩니다. 이 인스턴스가 모든 로깅에 사용됩니다. 둘째로, 각 이벤트 메서드에는 <xref:System.Diagnostics.Tracing.EventAttribute>가 있습니다. 따라서 도구가 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 메서드의 인덱스를 인덱스 `AppEventSource`에서 호출된 메서드에 연결할 수 있습니다.  
+ <span data-ttu-id="431dc-119">위의 코드에서 몇 가지 사항을 살펴보고 넘어가겠습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-119">There are a few things to notice here.</span></span> <span data-ttu-id="431dc-120">먼저, singleton은 `AppEventSource.Log`에서 작성됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-120">First, a singleton is created in `AppEventSource.Log`.</span></span> <span data-ttu-id="431dc-121">이 인스턴스가 모든 로깅에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-121">That instance will be used for all logging.</span></span> <span data-ttu-id="431dc-122">둘째로, 각 이벤트 메서드에는 <xref:System.Diagnostics.Tracing.EventAttribute>가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-122">Second, each event method has an <xref:System.Diagnostics.Tracing.EventAttribute>.</span></span> <span data-ttu-id="431dc-123">따라서 도구가 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 메서드의 인덱스를 인덱스 `AppEventSource`에서 호출된 메서드에 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-123">This helps tooling associate the index of the <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method with the method that was called on `AppEventSource`.</span></span>  
   
- 이러한 이벤트는 전적으로 설명을 위해 제공되는 것이며, 대부분의 앱 코드는 이러한 이벤트가 발생한 후에 실행됩니다. 코드에서 사용자 상호 작용에 해당하는 이벤트를 파악하고 측정한 다음 해당 벤치마크를 개선해야 합니다. 또한 이벤트 자체는 한 번에 하나의 인스턴스만 기록합니다. 그러나 모든 작업에서는 시작 이벤트와 중지 이벤트가 쌍으로 발생하면 유용한 경우가 많습니다. 앱 시작을 검사할 때 시작 이벤트는 대개 운영 체제에서 내보내는 “Process/Start” 이벤트입니다.  
+ <span data-ttu-id="431dc-124">이러한 이벤트는 전적으로 설명을 위해 제공되는 것이며,</span><span class="sxs-lookup"><span data-stu-id="431dc-124">Note that these events are purely illustrative.</span></span> <span data-ttu-id="431dc-125">대부분의 앱 코드는 이러한 이벤트가 발생한 후에 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-125">Most app code will run after these events.</span></span> <span data-ttu-id="431dc-126">코드에서 사용자 상호 작용에 해당하는 이벤트를 파악하고 측정한 다음 해당 벤치마크를 개선해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-126">You should understand which events in code correspond to user interactions, measure those, and improve those benchmarks.</span></span> <span data-ttu-id="431dc-127">또한 이벤트 자체는 한 번에 하나의 인스턴스만 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-127">Also, the events themselves log only a single instance in time.</span></span> <span data-ttu-id="431dc-128">그러나 모든 작업에서는 시작 이벤트와 중지 이벤트가 쌍으로 발생하면 유용한 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-128">It’s often useful to have paired start and stop events for every operation.</span></span> <span data-ttu-id="431dc-129">앱 시작을 검사할 때 시작 이벤트는 대개 운영 체제에서 내보내는 “Process/Start” 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-129">When examining app startup, the start event is generally the "Process/Start" event that the operating system emits.</span></span>  
   
- RSS 판독기를 만드는 경우를 예로 들어 보겠습니다. 이벤트가 기록되는 몇 가지 주요 시기는 다음과 같습니다.  
+ <span data-ttu-id="431dc-130">RSS 판독기를 만드는 경우를 예로 들어 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-130">For example, suppose you are creating an RSS reader.</span></span> <span data-ttu-id="431dc-131">이벤트가 기록되는 몇 가지 주요 시기는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-131">A few interesting locations to log an event are:</span></span>  
   
--   기본 페이지를 처음 렌더링할 때  
+-   <span data-ttu-id="431dc-132">기본 페이지를 처음 렌더링할 때</span><span class="sxs-lookup"><span data-stu-id="431dc-132">When the main page is first rendered.</span></span>  
   
--   이전 RSS 스토리를 로컬 저장소에서 deserialize할 때  
+-   <span data-ttu-id="431dc-133">이전 RSS 스토리를 로컬 저장소에서 deserialize할 때</span><span class="sxs-lookup"><span data-stu-id="431dc-133">When old RSS stories are deserialized from local storage.</span></span>  
   
--   앱이 새 스토리 동기화를 시작할 때  
+-   <span data-ttu-id="431dc-134">앱이 새 스토리 동기화를 시작할 때</span><span class="sxs-lookup"><span data-stu-id="431dc-134">When your app begins syncing new stories.</span></span>  
   
--   앱이 새 스토리 동기화를 완료할 때  
+-   <span data-ttu-id="431dc-135">앱이 새 스토리 동기화를 완료할 때</span><span class="sxs-lookup"><span data-stu-id="431dc-135">When your app has finished syncing new stories.</span></span>  
   
- 앱은 파생 클래스에 대해 적절한 메서드를 호출하는 것만으로 간편하게 계측할 수 있습니다. 이전 예제에서는 `AppEventSource`를 사용하면 다음과 같이 앱을 계측할 수 있습니다.  
+ <span data-ttu-id="431dc-136">앱은 파생 클래스에 대해 적절한 메서드를 호출하는 것만으로 간편하게 계측할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-136">Instrumenting an app is straightforward: Just call the appropriate method on the derived class.</span></span> <span data-ttu-id="431dc-137">이전 예제에서는 `AppEventSource`를 사용하면 다음과 같이 앱을 계측할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-137">Using `AppEventSource` from the previous example, you can instrument an app as follows:</span></span>  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
- 앱이 계측되고 나면 이벤트를 수집할 수 있습니다.  
+ <span data-ttu-id="431dc-138">앱이 계측되고 나면 이벤트를 수집할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-138">When the app is instrumented, you’re ready to gather events.</span></span>  
   
-## <a name="gathering-events-with-perfview"></a>PerfView를 사용하여 이벤트 수집  
- PerfView는 앱에서 모든 종류의 성능 조사를 수행할 수 있도록 ETW 이벤트를 활용합니다. 또한 다양한 이벤트 유형에 대한 로깅을 설정하거나 해제할 수 있도록 구성 GUI도 포함되어 있습니다. PerfView는 무료 도구이며 [Microsoft 다운로드 센터](http://www.microsoft.com/download/details.aspx?id=28567)에서 다운로드할 수 있습니다. 자세한 내용은 [PerfView 자습서 비디오](http://channel9.msdn.com/Series/PerfView-Tutorial)를 보세요.  
+## <a name="gathering-events-with-perfview"></a><span data-ttu-id="431dc-139">PerfView를 사용하여 이벤트 수집</span><span class="sxs-lookup"><span data-stu-id="431dc-139">Gathering events with PerfView</span></span>  
+ <span data-ttu-id="431dc-140">PerfView는 앱에서 모든 종류의 성능 조사를 수행할 수 있도록 ETW 이벤트를 활용합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-140">PerfView uses ETW events to help you do all sorts of performance investigations on your app.</span></span> <span data-ttu-id="431dc-141">또한 다양한 이벤트 유형에 대한 로깅을 설정하거나 해제할 수 있도록 구성 GUI도 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-141">It also includes a configuration GUI that lets you turn logging for different types of events on or off.</span></span> <span data-ttu-id="431dc-142">PerfView는 무료 도구이며 [Microsoft 다운로드 센터](http://www.microsoft.com/download/details.aspx?id=28567)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-142">PerfView is a free tool and can be downloaded from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=28567).</span></span> <span data-ttu-id="431dc-143">자세한 내용은 [PerfView 자습서 비디오](http://channel9.msdn.com/Series/PerfView-Tutorial)를 보세요.</span><span class="sxs-lookup"><span data-stu-id="431dc-143">For more information, watch the [PerfView tutorial videos](http://channel9.msdn.com/Series/PerfView-Tutorial).</span></span>  
   
 > [!NOTE]
->  PerfView를 사용하여 ARM 시스템에 대한 이벤트를 수집할 수는 없습니다. ARM 시스템에 대한 이벤트를 수집하려면 WPR(Windows Performance Recorder)를 사용합니다. 자세한 내용은 [Vance Morrison의 블로그 게시물](http://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx)을 참조하세요.  
+>  <span data-ttu-id="431dc-144">PerfView를 사용하여 ARM 시스템에 대한 이벤트를 수집할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-144">PerfView cannot be used to collect events on ARM systems.</span></span> <span data-ttu-id="431dc-145">ARM 시스템에 대한 이벤트를 수집하려면 WPR(Windows Performance Recorder)를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-145">To collect events on ARM systems, use Windows Performance Recorder (WPR).</span></span> <span data-ttu-id="431dc-146">자세한 내용은 [Vance Morrison의 블로그 게시물](http://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="431dc-146">For more information, see [Vance Morrison's blog post](http://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).</span></span>  
   
- 명령줄에서 PerfView를 호출할 수도 있습니다. 공급자의 이벤트만 기록하려면 명령 프롬프트 창을 열고 다음 명령을 입력합니다.  
+ <span data-ttu-id="431dc-147">명령줄에서 PerfView를 호출할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-147">You can also invoke PerfView from the command line.</span></span> <span data-ttu-id="431dc-148">공급자의 이벤트만 기록하려면 명령 프롬프트 창을 열고 다음 명령을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-148">To log only the events from your provider, open the Command Prompt window and enter the command:</span></span>  
   
 ```  
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
 ```  
   
- 다음은 각 문자에 대한 설명입니다.  
+ <span data-ttu-id="431dc-149">다음은 각 문자에 대한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-149">where:</span></span>  
   
  `-KernelEvents:Process`  
- 프로세스가 시작 및 중지되는 시기를 확인할 것임을 나타냅니다. 이 경우 다른 이벤트 시간에서 앱의 Process/Start 이벤트 시간을 빼야 하므로 해당 이벤트를 확인해야 합니다.  
+ <span data-ttu-id="431dc-150">프로세스가 시작 및 중지되는 시기를 확인할 것임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-150">Indicates that you want to know when the process starts and stops.</span></span> <span data-ttu-id="431dc-151">이 경우 다른 이벤트 시간에서 앱의 Process/Start 이벤트 시간을 빼야 하므로 해당 이벤트를 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-151">You need the Process/Start event for your app so it can be subtracted from other event times.</span></span>  
   
  `-OnlyProviders:*MyCompany-MyApp`  
- PerfView가 기본적으로 설정하는 기타 공급자를 해제하고 MyCompany-MyApp 공급자를 설정합니다.  별표는 이 공급자가 <xref:System.Diagnostics.Tracing.EventSource>임을 나타냅니다.  
+ <span data-ttu-id="431dc-152">PerfView가 기본적으로 설정하는 기타 공급자를 해제하고 MyCompany-MyApp 공급자를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-152">Turns off other providers that PerfView turns on by default, and turns on the MyCompany-MyApp provider.</span></span>  <span data-ttu-id="431dc-153">별표는 이 공급자가 <xref:System.Diagnostics.Tracing.EventSource>임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-153">(The asterisk indicates that it is an <xref:System.Diagnostics.Tracing.EventSource>.)</span></span>  
   
  `collect outputFile`  
- 수집을 시작하고 데이터를 outputFile.etl.zip에 저장할 것임을 나타냅니다.  
+ <span data-ttu-id="431dc-154">수집을 시작하고 데이터를 outputFile.etl.zip에 저장할 것임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-154">Indicates that you want to start collection and save the data to outputFile.etl.zip.</span></span>  
   
- PerfView를 시작한 후 앱을 실행 합니다. 앱을 실행할 때는 다음과 같은 사항에 유념해야 합니다.  
+ <span data-ttu-id="431dc-155">PerfView를 시작한 후 앱을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-155">Run your app after starting PerfView.</span></span> <span data-ttu-id="431dc-156">앱을 실행할 때는 다음과 같은 사항에 유념해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-156">There are a few things to remember when running your app:</span></span>  
   
--   디버그 빌드가 아닌 릴리스 빌드를 사용합니다. 디버그 빌드에는 오류 검사 및 오류 처리 코드가 추가로 포함되어 있는 경우가 많아 앱 실행 속도가 예상보다 느릴 수 있습니다.  
+-   <span data-ttu-id="431dc-157">디버그 빌드가 아닌 릴리스 빌드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-157">Use a release build, not a debug build.</span></span> <span data-ttu-id="431dc-158">디버그 빌드에는 오류 검사 및 오류 처리 코드가 추가로 포함되어 있는 경우가 많아 앱 실행 속도가 예상보다 느릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-158">Debug builds often contain extra error checking and error handling code that can cause your app to run slower than expected.</span></span>  
   
--   디버거를 연결하여 앱을 실행하면 앱 성능이 저하됩니다.  
+-   <span data-ttu-id="431dc-159">디버거를 연결하여 앱을 실행하면 앱 성능이 저하됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-159">Running your app with a debugger attached affects the performance of your app.</span></span>  
   
--   Windows에서는 앱 시작 시간을 단축하기 위해 여러 가지 캐싱 전략을 사용합니다. 현재 메모리에 캐시되어 있어 디스크에서 로드할 필요가 없는 앱은 빠르게 시작됩니다. 일관성을 유지하려면 시작 시간을 측정하기 전에 앱을 몇 번 시작했다가 닫으세요.  
+-   <span data-ttu-id="431dc-160">Windows에서는 앱 시작 시간을 단축하기 위해 여러 가지 캐싱 전략을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-160">Windows uses multiple caching strategies to speed up app launch times.</span></span> <span data-ttu-id="431dc-161">현재 메모리에 캐시되어 있어 디스크에서 로드할 필요가 없는 앱은 빠르게 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-161">If your app is currently cached in memory and doesn't have to be loaded from disk, it will start faster.</span></span> <span data-ttu-id="431dc-162">일관성을 유지하려면 시작 시간을 측정하기 전에 앱을 몇 번 시작했다가 닫으세요.</span><span class="sxs-lookup"><span data-stu-id="431dc-162">To ensure consistency, start and close your app a few times before measuring it.</span></span>  
   
- PerfView가 내보내기된 이벤트를 수집할 수 있도록 앱을 실행했으면 **수집 중지** 단추를 선택합니다. 일반적으로는 불필요한 이벤트가 수집되지 않도록 앱을 닫기 전에 컬렉션을 중지해야 합니다. 그러나 종료 또는 일시 중단 성능을 측정하는 경우에는 수집을 계속해도 됩니다.  
+ <span data-ttu-id="431dc-163">PerfView가 내보내기된 이벤트를 수집할 수 있도록 앱을 실행했으면 **수집 중지** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-163">When you’ve run your app so that PerfView can collect emitted events, choose the **Stop Collection** button.</span></span> <span data-ttu-id="431dc-164">일반적으로는 불필요한 이벤트가 수집되지 않도록 앱을 닫기 전에 컬렉션을 중지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-164">Generally, you should stop collection before closing your app so you don’t get extraneous events.</span></span> <span data-ttu-id="431dc-165">그러나 종료 또는 일시 중단 성능을 측정하는 경우에는 수집을 계속해도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-165">However, if you’re measuring shutdown or suspension performance, you’ll want to continue collection.</span></span>  
   
-## <a name="displaying-the-events"></a>이벤트 표시  
- 이미 수집된 이벤트를 보려면 PerfView를 사용하여 작성한 .etl 또는 .etl.zip 파일을 열고 **이벤트**를 선택합니다. ETW는 다른 프로세스의 이벤트를 비롯하여 많은 이벤트에 대한 정보를 수집합니다. 특정 이벤트만 중점적으로 조사하려면 이벤트 뷰에서 다음 텍스트 상자에 정보를 입력합니다.  
+## <a name="displaying-the-events"></a><span data-ttu-id="431dc-166">이벤트 표시</span><span class="sxs-lookup"><span data-stu-id="431dc-166">Displaying the events</span></span>  
+ <span data-ttu-id="431dc-167">이미 수집된 이벤트를 보려면 PerfView를 사용하여 작성한 .etl 또는 .etl.zip 파일을 열고 **이벤트**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-167">To view the events that have already been collected, use PerfView to open the .etl or .etl.zip file you created and choose **Events**.</span></span> <span data-ttu-id="431dc-168">ETW는 다른 프로세스의 이벤트를 비롯하여 많은 이벤트에 대한 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-168">ETW will have collected information about a large number of events, including events from other processes.</span></span> <span data-ttu-id="431dc-169">특정 이벤트만 중점적으로 조사하려면 이벤트 뷰에서 다음 텍스트 상자에 정보를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-169">To focus your investigation, complete the following text boxes in the events view:</span></span>  
   
--   **프로세스 필터** 상자에 “.exe”를 제외한 앱 이름을 지정합니다.  
+-   <span data-ttu-id="431dc-170">**프로세스 필터** 상자에 “.exe”를 제외한 앱 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-170">In the **Process Filter** box, specify your app name (without ".exe").</span></span>  
   
--   **이벤트 형식 필터** 상자에 `Process/Start | MyCompany-MyApp`를 지정합니다. 그러면 MyCompany-MyApp의 이벤트와 Windows Kernel/Process/Start 이벤트에 대한 필터가 설정됩니다.  
+-   <span data-ttu-id="431dc-171">**이벤트 형식 필터** 상자에 `Process/Start | MyCompany-MyApp`를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-171">In the **Event Types Filter** box, specify `Process/Start | MyCompany-MyApp`.</span></span> <span data-ttu-id="431dc-172">그러면 MyCompany-MyApp의 이벤트와 Windows Kernel/Process/Start 이벤트에 대한 필터가 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-172">This sets a filter for events from MyCompany-MyApp and the Windows Kernel/Process/Start event.</span></span>  
   
- Ctrl+A를 눌러 왼쪽 창에 나열된 모든 이벤트를 선택하고 **Enter** 키를 누릅니다. 이제 각 이벤트에서 타임스탬프를 확인할 수 있습니다. 이러한 타임스탬프는 추적 시작 시간을 기준으로 하므로 프로세스 시작 시간에서 각 이벤트의 시간을 빼서 시작 이후 경과된 시간을 확인해야 합니다. Ctrl 키를 누른 상태로 두 타임스탬프를 클릭하여 선택하면 해당 타임스탬프 간의 차이가 페이지 아래쪽 상태 표시줄에 표시됩니다. 따라서 표시된 두 이벤트(프로세스 시작 포함) 간에 경과된 시간을 쉽게 확인할 수 있습니다. 뷰의 바로 가기 메뉴를 열고 CSV 파일로 내보내기, Microsoft Excel을 열어 데이터 저장/처리 등의 여러 유용한 옵션 중에서 원하는 항목을 선택할 수 있습니다.  
+ <span data-ttu-id="431dc-173">Ctrl+A를 눌러 왼쪽 창에 나열된 모든 이벤트를 선택하고 **Enter** 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-173">Select all the events listed in the left pane (Ctrl-A) and choose the **Enter** key.</span></span> <span data-ttu-id="431dc-174">이제 각 이벤트에서 타임스탬프를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-174">Now, you should be able to see the timestamps from each event.</span></span> <span data-ttu-id="431dc-175">이러한 타임스탬프는 추적 시작 시간을 기준으로 하므로 프로세스 시작 시간에서 각 이벤트의 시간을 빼서 시작 이후 경과된 시간을 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-175">These timestamps are relative to the start of the trace, so you have to subtract the time of each event from the start time of the process to identify the elapsed time since startup.</span></span> <span data-ttu-id="431dc-176">Ctrl 키를 누른 상태로 두 타임스탬프를 클릭하여 선택하면 해당 타임스탬프 간의 차이가 페이지 아래쪽 상태 표시줄에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-176">If you use Ctrl+Click to select two timestamps, you'll see the difference between them displayed in the status bar at the bottom of the page.</span></span> <span data-ttu-id="431dc-177">따라서 표시된 두 이벤트(프로세스 시작 포함) 간에 경과된 시간을 쉽게 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-177">This makes it easy to see the elapsed time between any two events in the display (including process start).</span></span> <span data-ttu-id="431dc-178">뷰의 바로 가기 메뉴를 열고 CSV 파일로 내보내기, Microsoft Excel을 열어 데이터 저장/처리 등의 여러 유용한 옵션 중에서 원하는 항목을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-178">You can open the shortcut menu for the view and select from a number of useful options, like exporting to CSV files or opening Microsoft Excel to save or process the data.</span></span>  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인을 사용하여 원래 앱과 직접 빌드한 버전 둘 다에 대해 이 절차를 반복하면 성능 차이를 비교할 수 있습니다.   일반적으로는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 앱의 시작 속도가 [!INCLUDE[net_native](../../../includes/net-native-md.md)]가 아닌 앱에 비해 빠릅니다. 관련 정보를 보다 자세하게 파악하려는 경우 PerfView를 통해 시간이 가장 많이 걸리는 코드 부분도 확인할 수 있습니다. 자세한 내용은 [PerfView 자습서](http://channel9.msdn.com/Series/PerfView-Tutorial)를 보거나 [Vance Morrison의 블로그 게시물](http://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)을 읽으세요.  
+ <span data-ttu-id="431dc-179">[!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인을 사용하여 원래 앱과 직접 빌드한 버전 둘 다에 대해 이 절차를 반복하면 성능 차이를 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-179">By repeating the procedure for both your original app and the version you built by using the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain, you can compare the difference in performance.</span></span>   <span data-ttu-id="431dc-180">일반적으로는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 앱의 시작 속도가 [!INCLUDE[net_native](../../../includes/net-native-md.md)]가 아닌 앱에 비해 빠릅니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-180">[!INCLUDE[net_native](../../../includes/net-native-md.md)] apps generally start faster than non-[!INCLUDE[net_native](../../../includes/net-native-md.md)] apps.</span></span> <span data-ttu-id="431dc-181">관련 정보를 보다 자세하게 파악하려는 경우 PerfView를 통해 시간이 가장 많이 걸리는 코드 부분도 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="431dc-181">If you’re interested in digging deeper, PerfView can also identify the parts of your code that are taking the most time.</span></span> <span data-ttu-id="431dc-182">자세한 내용은 [PerfView 자습서](http://channel9.msdn.com/Series/PerfView-Tutorial)를 보거나 [Vance Morrison의 블로그 게시물](http://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)을 읽으세요.</span><span class="sxs-lookup"><span data-stu-id="431dc-182">For more information, watch the [PerfView tutorials](http://channel9.msdn.com/Series/PerfView-Tutorial) or read [Vance Morrison’s blog entry](http://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).</span></span>  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a><span data-ttu-id="431dc-183">참고 항목</span><span class="sxs-lookup"><span data-stu-id="431dc-183">See Also</span></span>  
  <xref:System.Diagnostics.Tracing.EventSource>
-
