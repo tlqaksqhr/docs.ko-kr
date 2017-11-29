@@ -1,35 +1,38 @@
 ---
-title: "4014 - MessageQueueRegisterFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4014 - MessageQueueRegisterFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8aa80ea-e251-4b54-ade7-bfbd6670a6ef
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d2f2b8ab2c1f986ce5b247beeef1b9430372562c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 4014 - MessageQueueRegisterFailed
-## 속성  
+# <a name="4014---messagequeueregisterfailed"></a><span data-ttu-id="bcef2-102">4014 - MessageQueueRegisterFailed</span><span class="sxs-lookup"><span data-stu-id="bcef2-102">4014 - MessageQueueRegisterFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="bcef2-103">속성</span><span class="sxs-lookup"><span data-stu-id="bcef2-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|4014|  
-|키워드|ActivationServices|  
-|수준|오류|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/분석|  
+|<span data-ttu-id="bcef2-104">ID</span><span class="sxs-lookup"><span data-stu-id="bcef2-104">ID</span></span>|<span data-ttu-id="bcef2-105">4014</span><span class="sxs-lookup"><span data-stu-id="bcef2-105">4014</span></span>|  
+|<span data-ttu-id="bcef2-106">키워드</span><span class="sxs-lookup"><span data-stu-id="bcef2-106">Keywords</span></span>|<span data-ttu-id="bcef2-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="bcef2-107">ActivationServices</span></span>|  
+|<span data-ttu-id="bcef2-108">수준</span><span class="sxs-lookup"><span data-stu-id="bcef2-108">Level</span></span>|<span data-ttu-id="bcef2-109">오류</span><span class="sxs-lookup"><span data-stu-id="bcef2-109">Error</span></span>|  
+|<span data-ttu-id="bcef2-110">채널</span><span class="sxs-lookup"><span data-stu-id="bcef2-110">Channel</span></span>|<span data-ttu-id="bcef2-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석</span><span class="sxs-lookup"><span data-stu-id="bcef2-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 설명  
- 이 이벤트는 메시지 큐 등록에 실패할 경우 내보내집니다.  
+## <a name="description"></a><span data-ttu-id="bcef2-112">설명</span><span class="sxs-lookup"><span data-stu-id="bcef2-112">Description</span></span>  
+ <span data-ttu-id="bcef2-113">이 이벤트는 메시지 큐 등록에 실패할 경우 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="bcef2-113">This event is emitted when the message queue registration has failed.</span></span>  
   
-## 메시지  
- URI '%1'에 대한 메시지 큐를 등록하지 못했습니다. 상태: '%2'.  
+## <a name="message"></a><span data-ttu-id="bcef2-114">메시지</span><span class="sxs-lookup"><span data-stu-id="bcef2-114">Message</span></span>  
+ <span data-ttu-id="bcef2-115">URI '%1'에 대한 메시지 큐를 등록하지 못했습니다. 상태: '%2'.</span><span class="sxs-lookup"><span data-stu-id="bcef2-115">Message queue registration for uri:'%1' failed with status:'%2'.</span></span>  
   
-## 설명
+## <a name="details"></a><span data-ttu-id="bcef2-116">설명</span><span class="sxs-lookup"><span data-stu-id="bcef2-116">Details</span></span>

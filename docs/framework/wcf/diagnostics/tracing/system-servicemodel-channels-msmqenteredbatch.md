@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.MsmqEnteredBatch | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MsmqEnteredBatch
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b787c18-1962-4083-93d1-adb680295189
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5e716dc5c648d2c987aff256e65acfd14d6178df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MsmqEnteredBatch
-System.ServiceModel.Channels.MsmqEnteredBatch  
+# <a name="systemservicemodelchannelsmsmqenteredbatch"></a><span data-ttu-id="e8175-102">System.ServiceModel.Channels.MsmqEnteredBatch</span><span class="sxs-lookup"><span data-stu-id="e8175-102">System.ServiceModel.Channels.MsmqEnteredBatch</span></span>
+<span data-ttu-id="e8175-103">System.ServiceModel.Channels.MsmqEnteredBatch</span><span class="sxs-lookup"><span data-stu-id="e8175-103">System.ServiceModel.Channels.MsmqEnteredBatch</span></span>  
   
-## 설명  
- MSMQ가 일괄 처리 모드로 설정되었습니다.  
+## <a name="description"></a><span data-ttu-id="e8175-104">설명</span><span class="sxs-lookup"><span data-stu-id="e8175-104">Description</span></span>  
+ <span data-ttu-id="e8175-105">MSMQ가 일괄 처리 모드로 설정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e8175-105">MSMQ has entered batching mode.</span></span>  
   
-## 참고 항목  
- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e8175-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e8175-106">See Also</span></span>  
+ [<span data-ttu-id="e8175-107">추적</span><span class="sxs-lookup"><span data-stu-id="e8175-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e8175-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="e8175-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e8175-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="e8175-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

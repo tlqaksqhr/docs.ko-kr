@@ -1,54 +1,57 @@
 ---
-title: "WCF 확장에 대한 사용자 지정 메타데이터 내보내기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 확장에 대한 사용자 지정 메타데이터 내보내기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7615da8e718d75ba7d90e181ab756b3128bc82d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 확장에 대한 사용자 지정 메타데이터 내보내기
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메타데이터 내보내기는 서비스 끝점을 설명하여 클라이언트에서 서비스 사용 방법을 이해할 수 있도록 병렬의 표준화된 표현으로 나타내는 프로세스입니다.사용자 지정 메타데이터는 시스템에서 제공한 메타데이터 내보내기에서 내보낼 수 없는 XML 요소로 구성됩니다.일반적으로 여기에는 사용자 정의 동작 및 바인딩 요소에 대한 사용자 지정 WSDL 요소를 비롯하여 바인딩 및 계약의 기능과 요구 사항에 대한 정책 어설션이 포함됩니다.  
+# <a name="exporting-custom-metadata-for-a-wcf-extension"></a><span data-ttu-id="c4035-102">WCF 확장에 대한 사용자 지정 메타데이터 내보내기</span><span class="sxs-lookup"><span data-stu-id="c4035-102">Exporting Custom Metadata for a WCF Extension</span></span>
+<span data-ttu-id="c4035-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메타데이터 내보내기는 서비스 끝점을 설명하여 클라이언트에서 서비스 사용 방법을 이해할 수 있도록 병렬의 표준화된 표현으로 나타내는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-103">In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], metadata export is the process of describing service endpoints and projecting them into a parallel, standardized representation that clients can use to understand how to use the service.</span></span> <span data-ttu-id="c4035-104">사용자 지정 메타데이터는 시스템에서 제공한 메타데이터 내보내기에서 내보낼 수 없는 XML 요소로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-104">Custom metadata consists of XML elements that the system-provided metadata exporters cannot export.</span></span> <span data-ttu-id="c4035-105">일반적으로 여기에는 사용자 정의 동작 및 바인딩 요소에 대한 사용자 지정 WSDL 요소를 비롯하여 바인딩 및 계약의 기능과 요구 사항에 대한 정책 어설션이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-105">Typically, this includes custom WSDL elements for user-defined behaviors and binding elements and policy assertions about the capabilities and requirements of bindings and contracts.</span></span>  
   
- 이 단원에서는 사용자 지정 WSDL 또는 정책 어설션 내보내기에 대해 설명하지만 내보내기 프로세스 자체를 중점적으로 설명하지는 않습니다.메타데이터가 사용자 지정이든 시스템에서 구성되었든 관계없이 메타데이터를 내보내고 가져오는 형식을 사용하는 방법에 대한 자세한 내용은 [메타데이터 내보내기 및 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)를 참조하십시오.  
+ <span data-ttu-id="c4035-106">이 단원에서는 사용자 지정 WSDL 또는 정책 어설션 내보내기에 대해 설명하지만 내보내기 프로세스 자체를 중점적으로 설명하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-106">This section describes exporting custom WSDL or policy assertions, and does not focus on the exporting process itself.</span></span> <span data-ttu-id="c4035-107">내보내기 및 가져오기는 메타 데이터 사용자 지정 또는 시스템 생성 인지에 관계 없이 메타 데이터 형식을 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [내보내기 및 가져오기는 메타 데이터](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-107">For more information about how to use the types that export and import metadata regardless of whether the metadata is custom or system-constructed, see [Exporting and Importing Metadata](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).</span></span>  
   
-## 개요  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName>를 사용하여 메타데이터를 게시할 경우 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=fullName>을 검사하고 시스템에 제공된 특성과 바인딩을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원 가능한 모든 계약 및 바인딩에 대한 XSD 및 WSDL\(정책 어설션 포함\)을 생성합니다.그러나 메타데이터를 올바르게 내보내려면 먼저 사용자 지정 동작 특성 또는 바인딩 요소가 지원되어야 합니다.  
+## <a name="overview"></a><span data-ttu-id="c4035-108">개요</span><span class="sxs-lookup"><span data-stu-id="c4035-108">Overview</span></span>  
+ <span data-ttu-id="c4035-109"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>를 사용하여 메타데이터를 게시할 경우 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>을 검사하고 시스템에 제공된 특성과 바인딩을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원 가능한 모든 계약 및 바인딩에 대한 XSD 및 WSDL(정책 어설션 포함)을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-109">When metadata is published using the <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, the <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> is examined and XSD and WSDL -- including policy assertions -- are generated for all contracts and bindings that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] can support using system-provided attributes and bindings.</span></span> <span data-ttu-id="c4035-110">그러나 메타데이터를 올바르게 내보내려면 먼저 사용자 지정 동작 특성 또는 바인딩 요소가 지원되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-110">However, custom behavior attributes or binding elements require support before they can be exported properly.</span></span>  
   
- 이 단원의 내용은 다음과 같습니다.  
+ <span data-ttu-id="c4035-111">이 단원의 내용은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-111">This section describes:</span></span>  
   
-1.  WSDL을 게시하기 전에 WSDL 생성 데이터를 공개하는 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=fullName> 인터페이스를 구현하고 사용하는 방법  
+1.  <span data-ttu-id="c4035-112">WSDL을 게시하기 전에 WSDL 생성 데이터를 공개하는 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="c4035-112">How to implement and use the <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interface, which exposes the WSDL generation data to you prior to publishing the WSDL.</span></span>  
   
-2.  WSDL 데이터에서 정책 어설션을 내보내기 전에 정책 데이터를 공개하는 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=fullName> 인터페이스를 구현하고 사용하는 방법  
+2.  <span data-ttu-id="c4035-113">WSDL 데이터에서 정책 어설션을 내보내기 전에 정책 데이터를 공개하는 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="c4035-113">How to implement and use the <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface, which exposes the policy data to you prior to exporting the policy assertions in WSDL data.</span></span>  
   
- 사용자 지정 WSDL 및 정책 어설션을 가져오는 방법에 대한 자세한 내용은 [WCF 확장에 대한 사용자 지정 메타데이터 가져오기](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)를 참조하십시오.  
+ <span data-ttu-id="c4035-114">사용자 지정 WSDL 및 정책 어설션 가져오기에 대 한 자세한 내용은 참조 [WCF 확장에 대 한 메타 데이터 사용자 지정 가져오기](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-114">For more information about importing custom WSDL and policy assertions, see [Importing Custom Metadata for a WCF Extension](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md).</span></span>  
   
-## 사용자 지정 WSDL 요소 내보내기  
- 작업 동작, 계약 동작, 끝점 동작 또는 바인딩 요소\(각각 <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, <xref:System.ServiceModel.Description.IEndpointBehavior>, <xref:System.ServiceModel.Channels.BindingElement?displayProperty=fullName>\)에서 <xref:System.ServiceModel.Description.IWsdlExportExtension>을 구현하고, 내보낼 서비스에 대한 설명에 동작 또는 바인딩 요소를 삽입합니다.동작 삽입에 대한 자세한 내용은 [동작을 사용하여 런타임 구성 및 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)을 참조하십시오.각 끝점에 대해 <xref:System.ServiceModel.Description.IWsdlExportExtension>이 호출되고 각 끝점에서 계약을 먼저 내보냅니다\(아직 내보내지 않은 경우\).필요에 따라 내보내기 프로세스에 참여할 수 있습니다.  
+## <a name="exporting-custom-wsdl-elements"></a><span data-ttu-id="c4035-115">사용자 지정 WSDL 요소 내보내기</span><span class="sxs-lookup"><span data-stu-id="c4035-115">Exporting Custom WSDL Elements</span></span>  
+ <span data-ttu-id="c4035-116">작업 동작, 계약 동작, 끝점 동작 또는 바인딩 요소(각각 <xref:System.ServiceModel.Description.IWsdlExportExtension>, <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, <xref:System.ServiceModel.Description.IEndpointBehavior>)에서 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>을 구현하고, 내보낼 서비스에 대한 설명에 동작 또는 바인딩 요소를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-116">Implement the <xref:System.ServiceModel.Description.IWsdlExportExtension> on an operation behavior, contract behavior, endpoint behavior or binding element (<xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, <xref:System.ServiceModel.Description.IEndpointBehavior>, or <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> respectively) and insert the behaviors or binding elements into the description of the service that you are trying to export.</span></span> <span data-ttu-id="c4035-117">(동작을 삽입 하는 방법에 대 한 자세한 내용은 참조 [구성 하 고 런타임 동작을 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)).</span><span class="sxs-lookup"><span data-stu-id="c4035-117">(For more information about inserting behaviors, see [Configuring and Extending the Runtime with Behaviors](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)).</span></span> <span data-ttu-id="c4035-118">각 끝점에 대해 <xref:System.ServiceModel.Description.IWsdlExportExtension>이 호출되고 각 끝점에서 계약을 먼저 내보냅니다(아직 내보내지 않은 경우).</span><span class="sxs-lookup"><span data-stu-id="c4035-118">The <xref:System.ServiceModel.Description.IWsdlExportExtension> is called for each endpoint and each endpoint exports the contract first if it has not already been exported.</span></span> <span data-ttu-id="c4035-119">필요에 따라 내보내기 프로세스에 참여할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-119">You can participate in either export process, depending upon your needs:</span></span>  
   
--   <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> 메서드에서 내보낸 메타데이터를 수정하려면 <xref:System.ServiceModel.Description.WsdlContractConversionContext>를 사용합니다.  
+-   <span data-ttu-id="c4035-120"><xref:System.ServiceModel.Description.WsdlContractConversionContext> 메서드에서 내보낸 메타데이터를 수정하려면 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-120">Use the <xref:System.ServiceModel.Description.WsdlContractConversionContext> to modify the exported metadata in the <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> method.</span></span>  
   
--   <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 메서드에서 끝점에 대해 내보낸 메타데이터를 수정하려면 <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>를 사용합니다.  
+-   <span data-ttu-id="c4035-121"><xref:System.ServiceModel.Description.WsdlEndpointConversionContext> 메서드에서 끝점에 대해 내보낸 메타데이터를 수정하려면 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-121">Use the <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> to modify the exported metadata for the endpoint in the <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> method.</span></span>  
   
- <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> 메서드는 내보낼 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=fullName> 인스턴스 내의 모든 <xref:System.ServiceModel.Description.IWsdlExportExtension> 구현에 대해 호출됩니다.<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 메서드는 내보낼 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=fullName> 인스턴스가 있는 모든 <xref:System.ServiceModel.Description.IWsdlExportExtension> 구현에 대해 호출됩니다.  
+ <span data-ttu-id="c4035-122"><xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> 메서드는 내보낼 <xref:System.ServiceModel.Description.IWsdlExportExtension> 인스턴스 내의 모든 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 구현에 대해 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-122">The <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> method is called on all <xref:System.ServiceModel.Description.IWsdlExportExtension> implementations within the <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> instance that is being exported.</span></span>  <span data-ttu-id="c4035-123"><xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 메서드는 내보낼 <xref:System.ServiceModel.Description.IWsdlExportExtension> 인스턴스가 있는 모든 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 구현에 대해 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-123">The <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> method is called on all <xref:System.ServiceModel.Description.IWsdlExportExtension> implementations with the <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> instance that is being exported.</span></span>  
   
- 자세한 내용은 [방법: 사용자 지정 WSDL 내보내기](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md) 및 예제 [사용자 지정 WSDL 게시](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)을\(를\) 참조하십시오.  
+ <span data-ttu-id="c4035-124">자세한 내용은 참조 [하는 방법: 사용자 지정 WSDL 내보내기](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md) 및 샘플 [사용자 지정 WSDL 게시](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-124">For more information, see [How to: Export Custom WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md) and the sample [Custom WSDL Publication](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md).</span></span>  
   
-## 사용자 지정 정책 어설션 내보내기  
- <xref:System.ServiceModel.Channels.BindingElement>에서 <xref:System.ServiceModel.Description.IPolicyExportExtension>을 구현하고 바인딩에 바인딩 요소를 추가하여 바인딩 지원 및 계약 기능에 대한 사용자 지정 정책 어설션을 WSDL로 작성합니다.<xref:System.ServiceModel.Description.IPolicyExportExtension>은 바인딩에서 구현된 바인딩 요소를 내보낼 때 호출되어 <xref:System.ServiceModel.Description.PolicyConversionContext>를 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> 메서드에 전달합니다.<xref:System.ServiceModel.Description.PolicyConversionContext> 인스턴스의 메서드를 사용하여 메시지, 작업 또는 끝점 주체에서 WSDL 바인딩에 연결된 정책 어설션에 추가할 수 있습니다.  
+## <a name="exporting-custom-policy-assertions"></a><span data-ttu-id="c4035-125">사용자 지정 정책 어설션 내보내기</span><span class="sxs-lookup"><span data-stu-id="c4035-125">Exporting Custom Policy Assertions</span></span>  
+ <span data-ttu-id="c4035-126"><xref:System.ServiceModel.Description.IPolicyExportExtension>에서 <xref:System.ServiceModel.Channels.BindingElement>을 구현하고 바인딩에 바인딩 요소를 추가하여 바인딩 지원 및 계약 기능에 대한 사용자 지정 정책 어설션을 WSDL로 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-126">Implement the <xref:System.ServiceModel.Description.IPolicyExportExtension> on a <xref:System.ServiceModel.Channels.BindingElement> and add the binding element to the binding to write custom policy assertions about binding support and contract capabilities into the WSDL.</span></span> <span data-ttu-id="c4035-127"><xref:System.ServiceModel.Description.IPolicyExportExtension>은 바인딩에서 구현된 바인딩 요소를 내보낼 때 호출되어 <xref:System.ServiceModel.Description.PolicyConversionContext>를 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> 메서드에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-127">The <xref:System.ServiceModel.Description.IPolicyExportExtension> is called once when exporting the implemented binding element in a binding and passes the <xref:System.ServiceModel.Description.PolicyConversionContext> to the <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> method.</span></span> <span data-ttu-id="c4035-128"><xref:System.ServiceModel.Description.PolicyConversionContext> 인스턴스의 메서드를 사용하여 메시지, 작업 또는 끝점 주체에서 WSDL 바인딩에 연결된 정책 어설션에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-128">You can use the methods on the <xref:System.ServiceModel.Description.PolicyConversionContext> instance to add to the policy assertions attached to the WSDL binding at the message, operation or endpoint subjects.</span></span>  
   
- 자세한 내용은 [방법: 사용자 지정 정책 어설션 내보내기](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)를 참조하십시오.  
+ <span data-ttu-id="c4035-129">자세한 내용은 참조 [하는 방법: 사용자 지정 정책 어설션을 내보낼](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c4035-129">For more information, see [How to: Export Custom Policy Assertions](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md).</span></span>  
   
-## 참고 항목  
- [방법: 사용자 지정 WSDL 내보내기](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)   
- [방법: 사용자 지정 정책 어설션 내보내기](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)   
- [WCF 확장에 대한 사용자 지정 메타데이터 가져오기](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+## <a name="see-also"></a><span data-ttu-id="c4035-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c4035-130">See Also</span></span>  
+ [<span data-ttu-id="c4035-131">방법: 사용자 지정 WSDL 내보내기</span><span class="sxs-lookup"><span data-stu-id="c4035-131">How to: Export Custom WSDL</span></span>](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [<span data-ttu-id="c4035-132">방법: 사용자 지정 정책 어설션을 내보내려면</span><span class="sxs-lookup"><span data-stu-id="c4035-132">How to: Export Custom Policy Assertions</span></span>](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
+ [<span data-ttu-id="c4035-133">WCF 확장에 대 한 사용자 지정 메타 데이터 가져오기</span><span class="sxs-lookup"><span data-stu-id="c4035-133">Importing Custom Metadata for a WCF Extension</span></span>](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

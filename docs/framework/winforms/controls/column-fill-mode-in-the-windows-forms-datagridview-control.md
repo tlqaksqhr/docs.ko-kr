@@ -1,85 +1,89 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 열 채우기 모드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "데이터 표, 자동으로 열 크기 조정"
-  - "데이터 표, 열 채우기 모드"
-  - "DataGridView 컨트롤[Windows Forms], 열 채우기 모드"
+title: "Windows Forms DataGridView 컨트롤의 열 채우기 모드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data grids [Windows Forms], automatically resizing columns
+- DataGridView control [Windows Forms], column fill mode
+- data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6a15f5a95510e7a1ffc4dfcdce00243f205c03eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms DataGridView 컨트롤의 열 채우기 모드
-열 채우기 모드에는 <xref:System.Windows.Forms.DataGridView> 컨트롤이 사용 가능한 표시 영역의 너비를 채우도록 열 크기를 자동으로 조정합니다.  각 열의 너비를 해당 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 속성 값과 같거나 더 크게 유지해야 하는 경우 컨트롤이 가로 스크롤 막대를 표시하지 않습니다.  
+# <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="f224f-102">Windows Forms DataGridView 컨트롤의 열 채우기 모드</span><span class="sxs-lookup"><span data-stu-id="f224f-102">Column Fill Mode in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="f224f-103">열 채우기 모드에는 <xref:System.Windows.Forms.DataGridView> 컨트롤이 사용 가능한 표시 영역의 너비를 채우도록 열 크기를 자동으로 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-103">In column fill mode, the <xref:System.Windows.Forms.DataGridView> control resizes its columns automatically so that they fill the width of the available display area.</span></span> <span data-ttu-id="f224f-104">각 열의 너비를 해당 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 속성 값과 같거나 더 크게 유지해야 하는 경우 컨트롤이 가로 스크롤 막대를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-104">The control does not display the horizontal scroll bar except when it is necessary to keep the width of every column equal to or greater than its <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> property value.</span></span>  
   
- 각 열의 크기 조정 동작은 해당 <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> 속성에 따라 달라집니다.  이 속성의 값은 컨트롤의 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 속성 또는 열 값이 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>\(기본값\)인 경우 컨트롤의 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성에서 상속됩니다.  
+ <span data-ttu-id="f224f-105">각 열의 크기 조정 동작은 해당 <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> 속성에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-105">The sizing behavior of each column depends on its <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> property.</span></span> <span data-ttu-id="f224f-106">이 속성의 값은 컨트롤의 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 속성 또는 열 값이 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>(기본값)인 경우 컨트롤의 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-106">The value of this property is inherited from the column's <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> property or the control's <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> property if the column value is <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet> (the default value).</span></span>  
   
- 각 열에서 서로 다른 크기 모드를 사용할 수 있지만 크기 모드가 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>인 열은 다른 열에서 사용되지 않는 표시 영역 너비를 공유합니다.  이 너비는 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 속성 값에 비례하여 채우기 모드 열 간에 나눠집니다.  예를 들어 두 열의 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 각각 100과 200인 경우 첫 번째 열은 두 번째 열 너비의 절반입니다.  
+ <span data-ttu-id="f224f-107">각 열에서 서로 다른 크기 모드를 사용할 수 있지만 크기 모드가 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>인 열은 다른 열에서 사용되지 않는 표시 영역 너비를 공유합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-107">Each column can have a different size mode, but any columns with a size mode of <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> will share the display-area width that is not used by the other columns.</span></span> <span data-ttu-id="f224f-108">이 너비는 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 속성 값에 비례하여 채우기 모드 열 간에 나눠집니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-108">This width is divided among the fill-mode columns in proportions relative to their <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> property values.</span></span> <span data-ttu-id="f224f-109">예를 들어 두 열의 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 각각 100과 200인 경우 첫 번째 열은 두 번째 열 너비의 절반입니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-109">For example, if two columns have <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> values of 100 and 200, the first column will be half as wide as the second column.</span></span>  
   
-## 채우기 모드에서 사용자 크기 조정  
- 셀 내용에 따라 크기를 조정하는 크기 조정 모드와 달리, 채우기 모드에서는 <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> 속성 값이 `true`인 열의 크기를 사용자가 조정할 수 있습니다.  사용자가 채우기 모드 열의 크기를 조정하는 경우 크기가 조정된 열 뒤의 모든 채우기 모드 열\(<xref:System.Windows.Forms.Control.RightToLeft%2A>가 `false`이면 오른쪽에 있는 열, 그러지 않으면 왼쪽에 있는 열\)도 사용 가능한 너비 변경을 보정하기 위해 크기가 조정됩니다.  크기가 조정된 열 뒤에 채우기 모드 열이 없는 경우 보정을 위해 컨트롤의 다른 모든 채우기 모드 열의 크기가 조정됩니다.  컨트롤에 다른 채우기 모드 열이 없는 경우 크기 조정이 무시됩니다.  채우기 모드가 아닌 열의 크기를 조정하는 경우 보정을 위해 컨트롤의 모든 채우기 모드 열의 크기가 변경됩니다.  
+## <a name="user-resizing-in-fill-mode"></a><span data-ttu-id="f224f-110">채우기 모드에서 사용자 크기 조정</span><span class="sxs-lookup"><span data-stu-id="f224f-110">User Resizing in Fill Mode</span></span>  
+ <span data-ttu-id="f224f-111">셀 내용에 따라 크기를 조정하는 크기 조정 모드와 달리, 채우기 모드에서는 <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> 속성 값이 `true`인 열의 크기를 사용자가 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-111">Unlike sizing modes that resize based on cell contents, fill mode does not prevent users from resizing columns that have <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> property values of `true`.</span></span> <span data-ttu-id="f224f-112">사용자가 채우기 모드 열의 크기를 조정하는 경우 크기가 조정된 열 뒤의 모든 채우기 모드 열(<xref:System.Windows.Forms.Control.RightToLeft%2A>가 `false`이면 오른쪽에 있는 열, 그러지 않으면 왼쪽에 있는 열)도 사용 가능한 너비 변경을 보정하기 위해 크기가 조정됩니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-112">When a user resizes a fill-mode column, any fill-mode columns after the resized column (to the right if <xref:System.Windows.Forms.Control.RightToLeft%2A> is `false`; otherwise, to the left) are also resized to compensate for the change in the available width.</span></span> <span data-ttu-id="f224f-113">크기가 조정된 열 뒤에 채우기 모드 열이 없는 경우 보정을 위해 컨트롤의 다른 모든 채우기 모드 열의 크기가 조정됩니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-113">If there are no fill-mode columns after the resized column, then all other fill-mode columns in the control are resized to compensate.</span></span> <span data-ttu-id="f224f-114">컨트롤에 다른 채우기 모드 열이 없는 경우 크기 조정이 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-114">If there are no other fill-mode columns in the control, the resize is ignored.</span></span> <span data-ttu-id="f224f-115">채우기 모드가 아닌 열의 크기를 조정하는 경우 보정을 위해 컨트롤의 모든 채우기 모드 열의 크기가 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-115">If a column that is not in fill mode is resized, all fill-mode columns in the control change sizes to compensate.</span></span>  
   
- 채우기 모드 열의 크기를 조정한 후 변경된 모든 열의 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 비례해서 조정됩니다.  예를 들어 채우기 모드 열 4개의 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 100인 경우 두 번째 열의 크기를 원래 너비의 절반으로 조정하면 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값은 100, 50, 125, 125가 됩니다.  채우기 모드가 아닌 열의 크기를 조정하는 경우 채우기 모드 열이 동일한 비율을 유지하면서 크기가 조정되어 보정하기 때문에 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 변경되지 않습니다.  
+ <span data-ttu-id="f224f-116">채우기 모드 열의 크기를 조정한 후 변경된 모든 열의 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 비례해서 조정됩니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-116">After resizing a fill-mode column, the <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> values for all columns that changed are adjusted proportionally.</span></span> <span data-ttu-id="f224f-117">예를 들어 채우기 모드 열 4개의 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 100인 경우 두 번째 열의 크기를 원래 너비의 절반으로 조정하면 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값은 100, 50, 125, 125가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-117">For example, if four fill-mode columns have <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> values of 100, resizing the second column to half its original width will result in <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> values of 100, 50, 125, and 125.</span></span> <span data-ttu-id="f224f-118">채우기 모드가 아닌 열의 크기를 조정하는 경우 채우기 모드 열이 동일한 비율을 유지하면서 크기가 조정되어 보정하기 때문에 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 변경되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-118">Resizing a column that is not in fill mode will not change any <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> values because the fill-mode columns will simply resize to compensate while retaining the same proportions.</span></span>  
   
-## 콘텐츠 기반 FillWeight 조정  
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 메서드와 같은 <xref:System.Windows.Forms.DataGridView> 자동 크기 조정 메서드를 사용하여 채우기 모드 열에 대한 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값을 초기화할 수 있습니다.  이 메서드는 먼저 열에서 콘텐츠를 표시하는 데 필요한 너비를 계산합니다.  그런 다음 비율이 계산된 너비의 비율과 일치하도록 컨트롤이 모든 채우기 모드 열의 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값을 조정합니다.  끝으로, 컨트롤의 모든 열이 사용 가능한 가로 공간을 채우도록 컨트롤이 새로운 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 비율을 사용하여 채우기 모드 열의 크기를 조정합니다.  
+## <a name="content-based-fillweight-adjustment"></a><span data-ttu-id="f224f-119">콘텐츠 기반 FillWeight 조정</span><span class="sxs-lookup"><span data-stu-id="f224f-119">Content-Based FillWeight Adjustment</span></span>  
+ <span data-ttu-id="f224f-120"><xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 메서드와 같은 <xref:System.Windows.Forms.DataGridView> 자동 크기 조정 메서드를 사용하여 채우기 모드 열에 대한 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값을 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-120">You can initialize <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> values for fill-mode columns by using the <xref:System.Windows.Forms.DataGridView> automatic resizing methods, such as the <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> method.</span></span> <span data-ttu-id="f224f-121">이 메서드는 먼저 열에서 콘텐츠를 표시하는 데 필요한 너비를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-121">This method first calculates the widths required by columns to display their contents.</span></span> <span data-ttu-id="f224f-122">그런 다음 비율이 계산된 너비의 비율과 일치하도록 컨트롤이 모든 채우기 모드 열의 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값을 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-122">Next, the control adjusts the <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> values for all fill-mode columns so that their proportions match the proportions of the calculated widths.</span></span> <span data-ttu-id="f224f-123">끝으로, 컨트롤의 모든 열이 사용 가능한 가로 공간을 채우도록 컨트롤이 새로운 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 비율을 사용하여 채우기 모드 열의 크기를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-123">Finally, the control resizes the fill-mode columns using the new <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> proportions so that all columns in the control fill the available horizontal space.</span></span>  
   
-## 예제  
+## <a name="example"></a><span data-ttu-id="f224f-124">예제</span><span class="sxs-lookup"><span data-stu-id="f224f-124">Example</span></span>  
   
-### 설명  
- <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 및 <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> 속성에 적합한 값을 사용하여 다양한 시나리오에 대한 열 크기 조정 동작을 사용자 지정할 수 있습니다.  
+### <a name="description"></a><span data-ttu-id="f224f-125">설명</span><span class="sxs-lookup"><span data-stu-id="f224f-125">Description</span></span>  
+ <span data-ttu-id="f224f-126"><xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 및 <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> 속성에 적합한 값을 사용하여 다양한 시나리오에 대한 열 크기 조정 동작을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-126">By using appropriate values for the <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, and <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> properties, you can customize the column-sizing behaviors for many different scenarios.</span></span>  
   
- 다음 데모 코드를 통해 다양한 열의 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 및 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 속성에 대해 다른 값을 실험할 수 있습니다.  이 예제에서 <xref:System.Windows.Forms.DataGridView> 컨트롤은 고유한 <xref:System.Windows.Forms.DataGridView.Columns%2A> 컬렉션에 바인딩되고 <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 및 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 속성에 각각 하나의 열이 바인딩됩니다.  또한 각 열은 컨트롤에서 하나의 행으로 표시되고, 행의 값을 변경하면 해당 열의 속성이 업데이트되므로 값이 상호 작용하는 방식을 확인할 수 있습니다.  
+ <span data-ttu-id="f224f-127">다음 데모 코드를 통해 다양한 열의 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 및 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 속성에 대해 다른 값을 실험할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-127">The following demonstration code enables you to experiment with different values for the <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, and <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> properties of different columns.</span></span> <span data-ttu-id="f224f-128">이 예제에서 <xref:System.Windows.Forms.DataGridView> 컨트롤은 고유한 <xref:System.Windows.Forms.DataGridView.Columns%2A> 컬렉션에 바인딩되고 <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 및 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 속성에 각각 하나의 열이 바인딩됩니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-128">In this example, a <xref:System.Windows.Forms.DataGridView> control is bound to its own <xref:System.Windows.Forms.DataGridView.Columns%2A> collection, and one column is bound to each of the <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, and <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> properties.</span></span> <span data-ttu-id="f224f-129">또한 각 열은 컨트롤에서 하나의 행으로 표시되고, 행의 값을 변경하면 해당 열의 속성이 업데이트되므로 값이 상호 작용하는 방식을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-129">Each of the columns is also represented by a row in the control, and changing values in a row will update the properties of the corresponding column so that you can see how the values interact.</span></span>  
   
-### 코드  
+### <a name="code"></a><span data-ttu-id="f224f-130">코드</span><span class="sxs-lookup"><span data-stu-id="f224f-130">Code</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
   
-### 설명  
- 이 데모 응용 프로그램을 사용하려면 다음을 수행합니다.  
+### <a name="comments"></a><span data-ttu-id="f224f-131">설명</span><span class="sxs-lookup"><span data-stu-id="f224f-131">Comments</span></span>  
+ <span data-ttu-id="f224f-132">이 데모 응용 프로그램을 사용하려면 다음을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-132">To use this demonstration application:</span></span>  
   
--   폼 크기를 변경합니다.  <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 속성 값으로 지정된 비율을 유지하면서 열의 너비가 어떻게 변경되는지 관찰합니다.  
+-   <span data-ttu-id="f224f-133">폼 크기를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-133">Change the size of the form.</span></span> <span data-ttu-id="f224f-134"><xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 속성 값으로 지정된 비율을 유지하면서 열의 너비가 어떻게 변경되는지 관찰합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-134">Observe how columns change their widths while retaining the proportions indicated by the <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> property values.</span></span>  
   
--   마우스로 열 구분선을 끌어서 열 크기를 변경합니다.  <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 어떻게 변경되는지 관찰합니다.  
+-   <span data-ttu-id="f224f-135">마우스로 열 구분선을 끌어서 열 크기를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-135">Change the column sizes by dragging the column dividers with the mouse.</span></span> <span data-ttu-id="f224f-136"><xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값이 어떻게 변경되는지 관찰합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-136">Observe how the <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> values change.</span></span>  
   
--   한 열의 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 값을 변경한 다음 폼을 끌어서 크기를 조정합니다.  폼을 충분히 작게 만들 때 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 값이 어떻게 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 값 아래로 내려가지 않는지 관찰합니다.  
+-   <span data-ttu-id="f224f-137">한 열의 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 값을 변경한 다음 폼을 끌어서 크기를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-137">Change the <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> value for one column, then drag to resize the form.</span></span> <span data-ttu-id="f224f-138">폼을 충분히 작게 만들 때 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 값이 어떻게 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 값 아래로 내려가지 않는지 관찰합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-138">Observe how, when you make the form small enough, the <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> values do not go below the <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> values.</span></span>  
   
--   더한 값이 컨트롤의 너비를 초과하도록 모든 열의 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 값을 큰 숫자로 변경합니다.  가로 스크롤 막대가 어떻게 나타나는지 관찰합니다.  
+-   <span data-ttu-id="f224f-139">더한 값이 컨트롤의 너비를 초과하도록 모든 열의 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 값을 큰 숫자로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-139">Change the <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> values for all columns to large numbers so that the combined values exceed the width of the control.</span></span> <span data-ttu-id="f224f-140">가로 스크롤 막대가 어떻게 나타나는지 관찰합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-140">Observe how the horizontal scroll bar appears.</span></span>  
   
--   일부 열의 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 값을 변경합니다.  열이나 폼의 크기를 조정할 때의 효과를 관찰합니다.  
+-   <span data-ttu-id="f224f-141">일부 열의 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 값을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-141">Change the <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> values for some columns.</span></span> <span data-ttu-id="f224f-142">열이나 폼의 크기를 조정할 때의 효과를 관찰합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-142">Observe the effect when you resize columns or the form.</span></span>  
   
-## 코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="f224f-143">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="f224f-143">Compiling the Code</span></span>  
+ <span data-ttu-id="f224f-144">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-144">This example requires:</span></span>  
   
--   System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
+-   <span data-ttu-id="f224f-145">System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="f224f-145">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- 명령줄에서 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]용으로 이 예제를 빌드하는 방법에 대한 자세한 내용은 [명령줄에서 빌드](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) 또는 [csc.exe를 사용한 명령줄 빌드](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.  [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.  [방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.  
+ <span data-ttu-id="f224f-146">[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 또는 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]의 명령줄에서 이 예제를 빌드하는 방법에 대한 자세한 내용은 [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f224f-146">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="f224f-147">[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 코드를 새 프로젝트에 붙여넣어 이 예제를 빌드할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f224f-147">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="f224f-148">[방법: Visual Studio를 사용하여 전체 Windows Forms 코드 예제 컴파일 및 실행](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f224f-148">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>   
- <xref:System.Windows.Forms.DataGridViewColumn>   
- <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>   
- <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName>   
- [Windows Forms DataGridView 컨트롤의 열 및 행 크기 조정](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="f224f-149">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f224f-149">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>  
+ <xref:System.Windows.Forms.DataGridViewColumn>  
+ <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>  
+ <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="f224f-150">Windows Forms DataGridView 컨트롤의 열 및 행 크기 조정</span><span class="sxs-lookup"><span data-stu-id="f224f-150">Resizing Columns and Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)

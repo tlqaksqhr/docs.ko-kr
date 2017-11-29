@@ -1,62 +1,65 @@
 ---
-title: "워크플로 제어 끝점 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "워크플로 제어 끝점"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9b3a4c1cbfd2ca95d3fc4d674fa6566e09fd9682
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 워크플로 제어 끝점
-개발자는 워크플로 제어 끝점을 사용하여 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하여 호스팅되는 워크플로 인스턴스를 원격으로 제어할 수 있는 제어 작업을 호출할 수 있습니다.이 기능은 일시 중단, 다시 시작 및 종료 같은 제어 작업을 프로그래밍 방식으로 수행하는 데 사용될 수 있습니다.  
+# <a name="workflow-control-endpoint"></a><span data-ttu-id="9c5ab-102">워크플로 제어 끝점</span><span class="sxs-lookup"><span data-stu-id="9c5ab-102">Workflow Control Endpoint</span></span>
+<span data-ttu-id="9c5ab-103">개발자는 워크플로 제어 끝점을 사용하여 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하여 호스팅되는 워크플로 인스턴스를 원격으로 제어할 수 있는 제어 작업을 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-103">The workflow control endpoint allows developers to call control operations to remotely control workflow instances hosted using <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="9c5ab-104">이 기능은 일시 중단, 다시 시작 및 종료 같은 제어 작업을 프로그래밍 방식으로 수행하는 데 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-104">This feature can be used to programmatically perform control operations like suspend, resume, and terminate.</span></span>  
   
 > [!WARNING]
->  트랜잭션 내에서 워크플로 제어 끝점을 사용하고 제어되는 워크플로에 <xref:System.Activities.Statements.Persist> 활동이 포함된 경우 트랜잭션 제한 시간이 초과될 때까지 워크플로 인스턴스가 중단됩니다.  
+>  <span data-ttu-id="9c5ab-105">트랜잭션 내에서 워크플로 제어 끝점을 사용하고 제어되는 워크플로에 <xref:System.Activities.Statements.Persist> 활동이 포함된 경우 트랜잭션 제한 시간이 초과될 때까지 워크플로 인스턴스가 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-105">If using the workflow control endpoint within a transaction and the workflow being controlled contains a <xref:System.Activities.Statements.Persist> activity, the workflow instance will hang until the transaction times out.</span></span>  
   
-## 워크플로 인스턴스 관리  
- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>라는 새 계약을 정의합니다.이 계약은 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에서 호스팅하는 워크플로 인스턴스를 원격으로 제어할 수 있도록 하는 일련의 제어 작업을 정의합니다.<xref:System.ServiceModel.Activities.WorkflowControlEndpoint>는 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 계약의 구현을 제공하는 표준 끝점입니다.<xref:System.ServiceModel.Activities.WorkflowControlClient>는 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>에 제어 작업을 보내는 데 사용하는 클래스입니다.  
+## <a name="workflow-instance-management"></a><span data-ttu-id="9c5ab-106">워크플로 인스턴스 관리</span><span class="sxs-lookup"><span data-stu-id="9c5ab-106">Workflow Instance Management</span></span>  
+ [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="9c5ab-107">에서는 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>라는 새 계약을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-107"> defines a new contract called <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>.</span></span> <span data-ttu-id="9c5ab-108">이 계약은 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에서 호스팅하는 워크플로 인스턴스를 원격으로 제어할 수 있도록 하는 일련의 제어 작업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-108">This contract defines a series of control operations that allow you remotely control workflow instances hosted by <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="9c5ab-109"><xref:System.ServiceModel.Activities.WorkflowControlEndpoint>는 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 계약의 구현을 제공하는 표준 끝점입니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-109"><xref:System.ServiceModel.Activities.WorkflowControlEndpoint> is a standard endpoint that provides an implementation of the <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> contract.</span></span> <span data-ttu-id="9c5ab-110"><xref:System.ServiceModel.Activities.WorkflowControlClient>는 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>에 제어 작업을 보내는 데 사용하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-110"><xref:System.ServiceModel.Activities.WorkflowControlClient> is a class that is used to send the control operations to the <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>.</span></span>  
   
- 워크플로 인스턴스의 상태는 다음 중 하나일 수 있습니다.  
+ <span data-ttu-id="9c5ab-111">워크플로 인스턴스의 상태는 다음 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-111">Workflow instances can be in one of the following states:</span></span>  
   
- 활성  
- 워크플로 인스턴스가 완료됨 상태에 도달하기 전이고 일시 중단됨 상태에 있지 않는 상태입니다.이 상태 동안에는 워크플로 인스턴스가 실행되어 응용 프로그램 메시지를 처리합니다.  
+ <span data-ttu-id="9c5ab-112">활성</span><span class="sxs-lookup"><span data-stu-id="9c5ab-112">Active</span></span>  
+ <span data-ttu-id="9c5ab-113">워크플로 인스턴스가 완료됨 상태에 도달하기 전이고 일시 중단됨 상태에 있지 않는 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-113">The state of a workflow instance before it reaches the completed state and when it is not in the suspended state.</span></span> <span data-ttu-id="9c5ab-114">이 상태 동안에는 워크플로 인스턴스가 실행되어 응용 프로그램 메시지를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-114">While in this state, the workflow instance runs and processes application messages.</span></span>  
   
- 일시 중단됨  
- 이 상태 동안에는 실행이 시작되지 않았거나 부분적으로 실행된 동작이 있는 경우에도 워크플로 인스턴스가 실행되지 않습니다.  
+ <span data-ttu-id="9c5ab-115">Suspended</span><span class="sxs-lookup"><span data-stu-id="9c5ab-115">Suspended</span></span>  
+ <span data-ttu-id="9c5ab-116">이 상태 동안에는 실행이 시작되지 않았거나 부분적으로 실행된 동작이 있는 경우에도 워크플로 인스턴스가 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-116">While in this state, the workflow instance does not run even if there are activities that have not started running or have partially run.</span></span>  
   
- 완료됨  
- 워크플로 인스턴스의 최종 상태입니다.완료됨 상태에 도달한 후에는 워크플로 인스턴스를 실행할 수 없습니다.  
+ <span data-ttu-id="9c5ab-117">완료</span><span class="sxs-lookup"><span data-stu-id="9c5ab-117">Completed</span></span>  
+ <span data-ttu-id="9c5ab-118">워크플로 인스턴스의 최종 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-118">The final state of a workflow instance.</span></span> <span data-ttu-id="9c5ab-119">완료됨 상태에 도달한 후에는 워크플로 인스턴스를 실행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-119">The workflow instance cannot run after reaching the completed state.</span></span>  
   
-## IWorkflowInstanceManagement  
- <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 인터페이스는 동기 및 비동기 버전이 있는 일련의 제어 작업을 정의합니다.트랜잭트 버전에서는 트랜잭션 인식 바인딩을 사용해야 합니다.다음 표에서는 지원되는 제어 작업을 보여 줍니다.  
+## <a name="iworkflowinstancemanagement"></a><span data-ttu-id="9c5ab-120">IWorkflowInstanceManagement</span><span class="sxs-lookup"><span data-stu-id="9c5ab-120">IWorkflowInstanceManagement</span></span>  
+ <span data-ttu-id="9c5ab-121"><xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 인터페이스는 동기 및 비동기 버전이 있는 일련의 제어 작업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-121">The <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> interface defines a set of control operations with synchronous and asynchronous versions.</span></span> <span data-ttu-id="9c5ab-122">트랜잭트 버전에서는 트랜잭션 인식 바인딩을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-122">The transacted versions require use of a transaction-aware binding.</span></span> <span data-ttu-id="9c5ab-123">다음 표에서는 지원되는 제어 작업을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-123">The following table lists the control operations supported.</span></span>  
   
-|제어 작업|설명|  
-|-----------|--------|  
-|중단|워크플로 인스턴스의 실행을 강제로 중지합니다.|  
-|취소|워크플로 인스턴스를 활성 또는 일시 중단됨 상태에서 완료됨 상태로 전환합니다.|  
-|실행|워크플로 인스턴스를 실행할 수 있는 기회를 제공합니다.|  
-|일시 중단|워크플로 인스턴스를 활성 상태에서 일시 중단됨 상태로 전환합니다.|  
-|종료|워크플로 인스턴스를 활성 또는 일시 중단됨 상태에서 완료됨 상태로 전환합니다.|  
-|일시 중단 해제|워크플로 인스턴스를 일시 중단됨 상태에서 활성 상태로 전환합니다.|  
-|TransactedCancel|클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 취소 작업을 수행합니다.시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.|  
-|TransactedRun|클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 실행 작업을 수행합니다.시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.|  
-|TransactedSuspend|클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 일시 중단 작업을 수행합니다.시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.|  
-|TransactedTerminate|클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 종료 작업을 수행합니다.시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.|  
-|TransactedUnsuspend|클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 일시 중단 해제 작업을 수행합니다.시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.|  
+|<span data-ttu-id="9c5ab-124">제어 작업</span><span class="sxs-lookup"><span data-stu-id="9c5ab-124">Control Operation</span></span>|<span data-ttu-id="9c5ab-125">설명</span><span class="sxs-lookup"><span data-stu-id="9c5ab-125">Description</span></span>|  
+|-----------------------|-----------------|  
+|<span data-ttu-id="9c5ab-126">중단</span><span class="sxs-lookup"><span data-stu-id="9c5ab-126">Abort</span></span>|<span data-ttu-id="9c5ab-127">워크플로 인스턴스의 실행을 강제로 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-127">Forcefully stops the execution of the workflow instance.</span></span>|  
+|<span data-ttu-id="9c5ab-128">취소</span><span class="sxs-lookup"><span data-stu-id="9c5ab-128">Cancel</span></span>|<span data-ttu-id="9c5ab-129">워크플로 인스턴스를 활성 또는 일시 중단됨 상태에서 완료됨 상태로 전환합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-129">Transitions a workflow instance from the active or suspended state to the completed state.</span></span>|  
+|<span data-ttu-id="9c5ab-130">실행</span><span class="sxs-lookup"><span data-stu-id="9c5ab-130">Run</span></span>|<span data-ttu-id="9c5ab-131">워크플로 인스턴스를 실행할 수 있는 기회를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-131">Provides a workflow instance the opportunity to execute.</span></span>|  
+|<span data-ttu-id="9c5ab-132">일시 중단</span><span class="sxs-lookup"><span data-stu-id="9c5ab-132">Suspend</span></span>|<span data-ttu-id="9c5ab-133">워크플로 인스턴스를 활성 상태에서 일시 중단됨 상태로 전환합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-133">Transitions a workflow instance from the active state to the suspended state.</span></span>|  
+|<span data-ttu-id="9c5ab-134">종료</span><span class="sxs-lookup"><span data-stu-id="9c5ab-134">Terminate</span></span>|<span data-ttu-id="9c5ab-135">워크플로 인스턴스를 활성 또는 일시 중단됨 상태에서 완료됨 상태로 전환합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-135">Transitions a workflow instance from the active or suspended state to the completed state.</span></span>|  
+|<span data-ttu-id="9c5ab-136">일시 중단 해제</span><span class="sxs-lookup"><span data-stu-id="9c5ab-136">Unsuspend</span></span>|<span data-ttu-id="9c5ab-137">워크플로 인스턴스를 일시 중단됨 상태에서 활성 상태로 전환합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-137">Transitions a workflow instance from the suspended state to the active state.</span></span>|  
+|<span data-ttu-id="9c5ab-138">TransactedCancel</span><span class="sxs-lookup"><span data-stu-id="9c5ab-138">TransactedCancel</span></span>|<span data-ttu-id="9c5ab-139">클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 취소 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-139">Performs the Cancel operation under a transaction (flowed in from the client or created locally).</span></span> <span data-ttu-id="9c5ab-140">시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-140">If the system maintains the durable state of the workflow instance, the workflow instance must be persisted during execution of this operation.</span></span>|  
+|<span data-ttu-id="9c5ab-141">TransactedRun</span><span class="sxs-lookup"><span data-stu-id="9c5ab-141">TransactedRun</span></span>|<span data-ttu-id="9c5ab-142">클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 실행 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-142">Performs the Run operation under a transaction (flowed in from the client or created locally).</span></span> <span data-ttu-id="9c5ab-143">시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-143">If the system maintains the durable state of the workflow instance, the workflow instance must be persisted during execution of this operation.</span></span>|  
+|<span data-ttu-id="9c5ab-144">TransactedSuspend</span><span class="sxs-lookup"><span data-stu-id="9c5ab-144">TransactedSuspend</span></span>|<span data-ttu-id="9c5ab-145">클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 일시 중단 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-145">Performs the Suspend operation under a transaction (flowed in from the client or created locally).</span></span> <span data-ttu-id="9c5ab-146">시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-146">If the system maintains the durable state of the workflow instance, the workflow instance must be persisted during execution of this operation.</span></span>|  
+|<span data-ttu-id="9c5ab-147">TransactedTerminate</span><span class="sxs-lookup"><span data-stu-id="9c5ab-147">TransactedTerminate</span></span>|<span data-ttu-id="9c5ab-148">클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 종료 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-148">Performs the Terminate operation under a transaction (flowed in from the client or created locally).</span></span> <span data-ttu-id="9c5ab-149">시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-149">If the system maintains the durable state of the workflow instance, the workflow instance must be persisted during execution of this operation.</span></span>|  
+|<span data-ttu-id="9c5ab-150">TransactedUnsuspend</span><span class="sxs-lookup"><span data-stu-id="9c5ab-150">TransactedUnsuspend</span></span>|<span data-ttu-id="9c5ab-151">클라이언트로부터 이동해 왔거나 로컬로 만들어진 트랜잭션에서 일시 중단 해제 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-151">Performs the Unsuspend operation under a transaction (flowed in from the client or created locally).</span></span> <span data-ttu-id="9c5ab-152">시스템에서 워크플로 인스턴스의 지속적 상태를 유지하는 경우 이 작업이 실행되는 동안 워크플로 인스턴스를 유지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-152">If the system maintains the durable state of the workflow instance, the workflow instance must be persisted during execution of this operation.</span></span>|  
   
- <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 계약은 새 워크플로 인스턴스를 만들 수 없고 기존 워크플로 인스턴스를 관리할 수만 있습니다.새 워크플로 인스턴스를 원격으로 만드는 방법에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [워크플로 서비스 호스트 확장](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)을 참조하십시오.  
+ <span data-ttu-id="9c5ab-153"><xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 계약은 새 워크플로 인스턴스를 만들 수 없고 기존 워크플로 인스턴스를 관리할 수만 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-153">The <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> contract does not provide a means to create a new workflow instance, only to manage existing workflow instances.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="9c5ab-154">새 워크플로 인스턴스를 원격으로 만드는 참조 [워크플로 서비스 호스트 확장명](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-154"> remotely creating a new workflow instance, see [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).</span></span>  
   
-## WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>는 고정된 계약인 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>가 있는 표준 끝점입니다.이 끝점을 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 인스턴스에 추가할 경우 이 끝점을 사용하여 호스트 인스턴스가 호스팅하는 모든 워크플로 인스턴스에 명령 작업을 보낼 수 있습니다.표준 끝점에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [표준 끝점](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)을 참조하십시오.  
+## <a name="workflowcontrolendpoint"></a><span data-ttu-id="9c5ab-155">WorkflowControlEndpoint</span><span class="sxs-lookup"><span data-stu-id="9c5ab-155">WorkflowControlEndpoint</span></span>  
+ <span data-ttu-id="9c5ab-156"><xref:System.ServiceModel.Activities.WorkflowControlEndpoint>는 고정된 계약인 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>가 있는 표준 끝점입니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-156"><xref:System.ServiceModel.Activities.WorkflowControlEndpoint> is a standard endpoint with a fixed contract, <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>.</span></span> <span data-ttu-id="9c5ab-157">이 끝점을 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 인스턴스에 추가할 경우 이 끝점을 사용하여 호스트 인스턴스가 호스팅하는 모든 워크플로 인스턴스에 명령 작업을 보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-157">When added to a <xref:System.ServiceModel.Activities.WorkflowServiceHost> instance, this endpoint can then be used to send command operations to any workflow instance hosted by the host instance.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="9c5ab-158">표준 끝점 참조 [표준 끝점](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-158"> standard endpoints, see [Standard Endpoints](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).</span></span>  
   
-## WorkflowControlClient  
- <xref:System.ServiceModel.Activities.WorkflowControlClient>는 <xref:System.ServiceModel.Activities.WorkflowServiceHost>의 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>에 제어 메시지를 보낼 수 있는 클래스입니다.트랜잭션 작업을 제외하고 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 계약에서 지원하는 각 작업에 대한 메서드가 포함되어 있습니다.<xref:System.ServiceModel.Activities.WorkflowControlClient>는 앰비언트 트랜잭션을 사용하여 트랜잭션 작업을 사용해야 하는지 여부를 결정합니다.
+## <a name="workflowcontrolclient"></a><span data-ttu-id="9c5ab-159">WorkflowControlClient</span><span class="sxs-lookup"><span data-stu-id="9c5ab-159">WorkflowControlClient</span></span>  
+ <span data-ttu-id="9c5ab-160"><xref:System.ServiceModel.Activities.WorkflowControlClient>는 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>의 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에 제어 메시지를 보낼 수 있는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-160"><xref:System.ServiceModel.Activities.WorkflowControlClient> is a class that allows you to send control messages to a <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> on a <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="9c5ab-161">트랜잭션 작업을 제외하고 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 계약에서 지원하는 각 작업에 대한 메서드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-161">It contains a method for each of the operations supported by the <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> contract except for the transacted operations.</span></span> <span data-ttu-id="9c5ab-162"><xref:System.ServiceModel.Activities.WorkflowControlClient>는 앰비언트 트랜잭션을 사용하여 트랜잭션 작업을 사용해야 하는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5ab-162"><xref:System.ServiceModel.Activities.WorkflowControlClient> uses the ambient transaction to determine whether a transacted operation should be used.</span></span>

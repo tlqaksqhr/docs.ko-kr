@@ -1,92 +1,74 @@
 ---
-title: "어떻게 내 프로젝트 형식 (Visual Basic)에 따라 달라 집니다. | Microsoft 문서"
-ms.date: 2015-07-20
+title: "My가 프로젝트 형식에 의존하는 방식(Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- _MYTYPE
+helpviewer_keywords: _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d193dade94980f04b31605ea6fa968f9fa7d0ad6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-my-depends-on-project-type-visual-basic"></a>My가 프로젝트 형식에 의존하는 방식(Visual Basic)
-`My`특정 프로젝트 형식에 필요한 개체만 표시 합니다. 예를 들어는 `My.Forms` 개체는 Windows Forms 응용 프로그램에서 사용할 수 있지만 콘솔 응용 프로그램에서 사용할 수 없습니다. 이 항목을 설명 하는 `My` 개체를 여러 프로젝트 형식에서 사용할 수 있습니다.  
+# <a name="how-my-depends-on-project-type-visual-basic"></a><span data-ttu-id="c7bd8-102">My가 프로젝트 형식에 의존하는 방식(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7bd8-102">How My Depends on Project Type (Visual Basic)</span></span>
+<span data-ttu-id="c7bd8-103">`My`특정 프로젝트 형식에 필요한 개체만 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-103">`My` exposes only those objects required by a particular project type.</span></span> <span data-ttu-id="c7bd8-104">예를 들어는 `My.Forms` 개체는 Windows Forms 응용 프로그램에서 사용할 수 있지만 콘솔 응용 프로그램에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-104">For example, the `My.Forms` object is available in a Windows Forms application but not available in a console application.</span></span> <span data-ttu-id="c7bd8-105">이 항목을 설명 하는 `My` 다양 한 프로젝트 형식에 사용할 수 있는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-105">This topic describes which `My` objects are available in different project types.</span></span>  
   
-## <a name="my-in-windows-applications-and-web-sites"></a>내에서 Windows 응용 프로그램 및 웹 사이트  
- `My`현재 프로젝트 형식;에 유용한 개체에만 노출 적용할 수 없는 개체를 표시 되지 않습니다. 예를 들어 다음 그림에서는 `My` Windows Forms 프로젝트의 개체 모델입니다.  
+## <a name="my-in-windows-applications-and-web-sites"></a><span data-ttu-id="c7bd8-106">내에서 Windows 응용 프로그램 및 웹 사이트</span><span class="sxs-lookup"><span data-stu-id="c7bd8-106">My in Windows Applications and Web Sites</span></span>  
+ <span data-ttu-id="c7bd8-107">`My`현재 프로젝트 형식;에 사용 되는 개체에 대해서만 표시 적용할 수 없는 개체를 표시 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-107">`My` exposes only objects that are useful in the current project type; it suppresses objects that are not applicable.</span></span> <span data-ttu-id="c7bd8-108">예를 들어 다음 그림에서는 `My` Windows Forms 프로젝트의 개체 모델입니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-108">For example, the following image shows the `My` object model in a Windows Forms project.</span></span>  
   
- ![모양의 내 Windows Forms 응용 프로그램에서](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ <span data-ttu-id="c7bd8-109">![모양을 내 Windows Forms 응용 프로그램에서](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")</span><span class="sxs-lookup"><span data-stu-id="c7bd8-109">![Shape of My in a Windows Forms application](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")</span></span>  
   
- 웹 사이트 프로젝트에서는 `My` 웹 개발자에 게 관련 된 개체를 노출 (같은 `My.Request` 및 `My.Response` 개체) 개체는 관련 없는 노출 (와 같은 `My.Forms` 개체). 다음 그림에서는 `My` 웹 사이트 프로젝트의 개체 모델:  
+ <span data-ttu-id="c7bd8-110">웹 사이트 프로젝트에서 `My` 웹 개발자에 게 관련 된 개체를 노출 (같은 `My.Request` 및 `My.Response` 개체)와 관련 되지 않은 개체 노출 하지 않습니다 (와 같은 `My.Forms` 개체).</span><span class="sxs-lookup"><span data-stu-id="c7bd8-110">In a Web site project, `My` exposes objects that are relevant to a Web developer (such as the `My.Request` and `My.Response` objects) while suppressing objects that are not relevant (such as the `My.Forms` object).</span></span> <span data-ttu-id="c7bd8-111">다음 그림에서는 `My` 웹 사이트 프로젝트의 개체 모델:</span><span class="sxs-lookup"><span data-stu-id="c7bd8-111">The following image shows the `My` object model in a Web site project:</span></span>  
   
- ![모양의 내 웹 응용 프로그램에서](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ <span data-ttu-id="c7bd8-112">![모양을 내 웹 응용 프로그램에서](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")</span><span class="sxs-lookup"><span data-stu-id="c7bd8-112">![Shape of My in a Web application](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")</span></span>  
   
-## <a name="project-details"></a>프로젝트 세부 정보  
- 다음 표에 나와 있는 `My`&8; 프로젝트 형식에 대 한 개체는 기본적으로 활성화 되어 있습니다: Windows 응용 프로그램 클래스 라이브러리, 콘솔 응용 프로그램, Windows 컨트롤 라이브러리, 웹 컨트롤 라이브러리, Windows 서비스, 빈 웹 사이트, 및입니다.  
+## <a name="project-details"></a><span data-ttu-id="c7bd8-113">프로젝트 세부 정보</span><span class="sxs-lookup"><span data-stu-id="c7bd8-113">Project Details</span></span>  
+ <span data-ttu-id="c7bd8-114">다음 표에 나와 있는 `My` 8 프로젝트 형식에 대 한 개체는 기본적으로 활성화 되어: Windows 응용 프로그램, 클래스 라이브러리, 콘솔 응용 프로그램, Windows 컨트롤 라이브러리, 웹 컨트롤 라이브러리, Windows 서비스, empty 및 웹 사이트입니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-114">The following table shows which `My` objects are enabled by default for eight project types: Windows application, class Library, console application, Windows control library, Web control library, Windows service, empty, and Web site.</span></span>  
   
- 다음 세 가지 버전의는 `My.Application` 개체, 두 가지 버전의는 `My.Computer` 개체 및 두 가지 버전의 `My.User` 그렇지 이러한 버전에 대 한 세부 정보는 표 뒤 각주에 제공 됩니다.  
+ <span data-ttu-id="c7bd8-115">세 가지 버전의는 `My.Application` 개체, 두 가지 버전의는 `My.Computer` 개체 및 두 가지 버전의 `My.User` 개체; 테이블 뒤에 이러한 버전에 대 한 세부 정보 각주에서 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-115">There are three versions of the `My.Application` object, two versions of the `My.Computer` object, and two versions of `My.User` object; details about these versions are given in the footnotes after the table.</span></span>  
   
-|My 개체|Windows 응용 프로그램|클래스 라이브러리|콘솔 응용 프로그램|Windows 컨트롤 라이브러리|웹 컨트롤 라이브러리|Windows 서비스|Empty|웹 사이트|  
+|<span data-ttu-id="c7bd8-116">My 개체</span><span class="sxs-lookup"><span data-stu-id="c7bd8-116">My Object</span></span>|<span data-ttu-id="c7bd8-117">Windows 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="c7bd8-117">Windows Application</span></span>|<span data-ttu-id="c7bd8-118">클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="c7bd8-118">Class Library</span></span>|<span data-ttu-id="c7bd8-119">콘솔 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="c7bd8-119">Console Application</span></span>|<span data-ttu-id="c7bd8-120">Windows 컨트롤 라이브러리</span><span class="sxs-lookup"><span data-stu-id="c7bd8-120">Windows Control Library</span></span>|<span data-ttu-id="c7bd8-121">웹 컨트롤 라이브러리</span><span class="sxs-lookup"><span data-stu-id="c7bd8-121">Web Control Library</span></span>|<span data-ttu-id="c7bd8-122">Windows 서비스</span><span class="sxs-lookup"><span data-stu-id="c7bd8-122">Windows Service</span></span>|<span data-ttu-id="c7bd8-123">Empty</span><span class="sxs-lookup"><span data-stu-id="c7bd8-123">Empty</span></span>|<span data-ttu-id="c7bd8-124">웹 사이트</span><span class="sxs-lookup"><span data-stu-id="c7bd8-124">Web Site</span></span>|  
 |---|---|---|---|---|---|---|---|---|  
-|`My.Application`|**Yes** <sup>1</sup>|**Yes** <sup>2</sup>|**Yes** <sup>3</sup>|**Yes** <sup>2</sup>|아니요|**Yes** <sup>3</sup>|아니요|아니요|  
-|`My.Computer`|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>5</sup>|**Yes** <sup>4</sup>|아니요|**Yes** <sup>5</sup>|  
-|`My.Forms`|**예**|아니요|아니요|**예**|아니요|아니요|아니요|아니요|  
-|`My.Log`|아니요|아니요|아니요|아니요|아니요|아니요|아니요|**예**|  
-|`My.Request`|아니요|아니요|아니요|아니요|아니요|아니요|아니요|**예**|  
-|`My.Resources`|**예**|**예**|**예**|**예**|**예**|**예**|아니요|아니요|  
-|`My.Response`|아니요|아니요|아니요|아니요|아니요|아니요|아니요|**예**|  
-|`My.Settings`|**예**|**예**|**예**|**예**|**예**|**예**|아니요|아니요|  
-|`My.User`|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>7</sup>|**Yes** <sup>6</sup>|아니요|**Yes** <sup>7</sup>|  
-|`My.WebServices`|**예**|**예**|**예**|**예**|**예**|**예**|아니요|아니요|  
+|`My.Application`|<span data-ttu-id="c7bd8-125">**예** <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-125">**Yes** <sup>1</sup></span></span>|<span data-ttu-id="c7bd8-126">**예** <sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-126">**Yes** <sup>2</sup></span></span>|<span data-ttu-id="c7bd8-127">**예** <sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-127">**Yes** <sup>3</sup></span></span>|<span data-ttu-id="c7bd8-128">**예** <sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-128">**Yes** <sup>2</sup></span></span>|<span data-ttu-id="c7bd8-129">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-129">No</span></span>|<span data-ttu-id="c7bd8-130">**예** <sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-130">**Yes** <sup>3</sup></span></span>|<span data-ttu-id="c7bd8-131">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-131">No</span></span>|<span data-ttu-id="c7bd8-132">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-132">No</span></span>|  
+|`My.Computer`|<span data-ttu-id="c7bd8-133">**예** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-133">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="c7bd8-134">**예** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-134">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="c7bd8-135">**예** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-135">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="c7bd8-136">**예** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-136">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="c7bd8-137">**예** <sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-137">**Yes** <sup>5</sup></span></span>|<span data-ttu-id="c7bd8-138">**예** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-138">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="c7bd8-139">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-139">No</span></span>|<span data-ttu-id="c7bd8-140">**예** <sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-140">**Yes** <sup>5</sup></span></span>|  
+|`My.Forms`|<span data-ttu-id="c7bd8-141">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-141">**Yes**</span></span>|<span data-ttu-id="c7bd8-142">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-142">No</span></span>|<span data-ttu-id="c7bd8-143">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-143">No</span></span>|<span data-ttu-id="c7bd8-144">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-144">**Yes**</span></span>|<span data-ttu-id="c7bd8-145">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-145">No</span></span>|<span data-ttu-id="c7bd8-146">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-146">No</span></span>|<span data-ttu-id="c7bd8-147">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-147">No</span></span>|<span data-ttu-id="c7bd8-148">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-148">No</span></span>|  
+|`My.Log`|<span data-ttu-id="c7bd8-149">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-149">No</span></span>|<span data-ttu-id="c7bd8-150">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-150">No</span></span>|<span data-ttu-id="c7bd8-151">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-151">No</span></span>|<span data-ttu-id="c7bd8-152">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-152">No</span></span>|<span data-ttu-id="c7bd8-153">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-153">No</span></span>|<span data-ttu-id="c7bd8-154">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-154">No</span></span>|<span data-ttu-id="c7bd8-155">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-155">No</span></span>|<span data-ttu-id="c7bd8-156">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-156">**Yes**</span></span>|  
+|`My.Request`|<span data-ttu-id="c7bd8-157">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-157">No</span></span>|<span data-ttu-id="c7bd8-158">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-158">No</span></span>|<span data-ttu-id="c7bd8-159">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-159">No</span></span>|<span data-ttu-id="c7bd8-160">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-160">No</span></span>|<span data-ttu-id="c7bd8-161">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-161">No</span></span>|<span data-ttu-id="c7bd8-162">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-162">No</span></span>|<span data-ttu-id="c7bd8-163">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-163">No</span></span>|<span data-ttu-id="c7bd8-164">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-164">**Yes**</span></span>|  
+|`My.Resources`|<span data-ttu-id="c7bd8-165">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-165">**Yes**</span></span>|<span data-ttu-id="c7bd8-166">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-166">**Yes**</span></span>|<span data-ttu-id="c7bd8-167">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-167">**Yes**</span></span>|<span data-ttu-id="c7bd8-168">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-168">**Yes**</span></span>|<span data-ttu-id="c7bd8-169">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-169">**Yes**</span></span>|<span data-ttu-id="c7bd8-170">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-170">**Yes**</span></span>|<span data-ttu-id="c7bd8-171">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-171">No</span></span>|<span data-ttu-id="c7bd8-172">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-172">No</span></span>|  
+|`My.Response`|<span data-ttu-id="c7bd8-173">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-173">No</span></span>|<span data-ttu-id="c7bd8-174">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-174">No</span></span>|<span data-ttu-id="c7bd8-175">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-175">No</span></span>|<span data-ttu-id="c7bd8-176">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-176">No</span></span>|<span data-ttu-id="c7bd8-177">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-177">No</span></span>|<span data-ttu-id="c7bd8-178">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-178">No</span></span>|<span data-ttu-id="c7bd8-179">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-179">No</span></span>|<span data-ttu-id="c7bd8-180">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-180">**Yes**</span></span>|  
+|`My.Settings`|<span data-ttu-id="c7bd8-181">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-181">**Yes**</span></span>|<span data-ttu-id="c7bd8-182">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-182">**Yes**</span></span>|<span data-ttu-id="c7bd8-183">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-183">**Yes**</span></span>|<span data-ttu-id="c7bd8-184">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-184">**Yes**</span></span>|<span data-ttu-id="c7bd8-185">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-185">**Yes**</span></span>|<span data-ttu-id="c7bd8-186">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-186">**Yes**</span></span>|<span data-ttu-id="c7bd8-187">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-187">No</span></span>|<span data-ttu-id="c7bd8-188">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-188">No</span></span>|  
+|`My.User`|<span data-ttu-id="c7bd8-189">**예** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-189">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="c7bd8-190">**예** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-190">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="c7bd8-191">**예** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-191">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="c7bd8-192">**예** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-192">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="c7bd8-193">**예** <sup>7</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-193">**Yes** <sup>7</sup></span></span>|<span data-ttu-id="c7bd8-194">**예** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-194">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="c7bd8-195">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-195">No</span></span>|<span data-ttu-id="c7bd8-196">**예** <sup>7</sup></span><span class="sxs-lookup"><span data-stu-id="c7bd8-196">**Yes** <sup>7</sup></span></span>|  
+|`My.WebServices`|<span data-ttu-id="c7bd8-197">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-197">**Yes**</span></span>|<span data-ttu-id="c7bd8-198">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-198">**Yes**</span></span>|<span data-ttu-id="c7bd8-199">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-199">**Yes**</span></span>|<span data-ttu-id="c7bd8-200">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-200">**Yes**</span></span>|<span data-ttu-id="c7bd8-201">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-201">**Yes**</span></span>|<span data-ttu-id="c7bd8-202">**예**</span><span class="sxs-lookup"><span data-stu-id="c7bd8-202">**Yes**</span></span>|<span data-ttu-id="c7bd8-203">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-203">No</span></span>|<span data-ttu-id="c7bd8-204">아니요</span><span class="sxs-lookup"><span data-stu-id="c7bd8-204">No</span></span>|  
   
- <sup>1</sup> Windows Forms 버전의 `My.Application`합니다. 콘솔 버전에서 파생 되며 (참고 3 참조). 응용 프로그램의 windows와 상호 작용에 대 한 지원을 추가 하 고 제공 된 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 응용 프로그램 모델입니다.  
+ <span data-ttu-id="c7bd8-205"><sup>1</sup> 버전의 Windows Forms `My.Application`합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-205"><sup>1</sup> Windows Forms version of `My.Application`.</span></span> <span data-ttu-id="c7bd8-206">콘솔 버전에서 파생 됩니다 (참고 3 참조). 응용 프로그램의 windows와 상호 작용에 대 한 지원을 추가 하 고 제공 된 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 응용 프로그램 모델입니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-206">Derives from the console version (see Note 3); adds support for interacting with the application's windows and provides the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Application model.</span></span>  
   
- <sup>2</sup> library의 `My.Application`합니다. 응용 프로그램에 필요한 기본 기능을 제공 합니다: 응용 프로그램 로그에 작성 하 고 응용 프로그램 정보에 액세스 하기 위한 멤버를 제공 합니다.  
+ <span data-ttu-id="c7bd8-207"><sup>2</sup> library의 `My.Application`합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-207"><sup>2</sup> Library version of `My.Application`.</span></span> <span data-ttu-id="c7bd8-208">응용 프로그램에 필요한 기본 기능을 제공: 응용 프로그램 로그에 작성 하 고 응용 프로그램 정보에 액세스 하기 위한 멤버를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-208">Provides the basic functionality needed by an application: provides members for writing to the application log and accessing application information.</span></span>  
   
- <sup>3</sup> 콘솔 버전의 `My.Application`합니다. 라이브러리 버전에서 파생 되며 (참고 2 참조) 하 고 응용 프로그램의 명령줄 인수 및 ClickOnce 배포 정보에 액세스 하기 위한 추가 멤버를 추가 합니다.  
+ <span data-ttu-id="c7bd8-209"><sup>3</sup> 콘솔 버전의 `My.Application`합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-209"><sup>3</sup> Console version of `My.Application`.</span></span> <span data-ttu-id="c7bd8-210">라이브러리 버전에서 파생 됩니다 (참고 2 참조) 응용 프로그램의 명령줄 인수 및 ClickOnce 배포 정보에 액세스 하기 위한 추가 멤버를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-210">Derives from the library version (see Note 2), and adds additional members for accessing the application's command-line arguments and ClickOnce deployment information.</span></span>  
   
- <sup>4</sup> Windows 버전의 `My.Computer`합니다. 서버 버전에서 파생 되며 (참고 5 참조)는 클라이언트 컴퓨터에서와 같은 키보드, 화면 및 마우스 유용한 개체에 대 한 액세스를 제공 합니다.  
+ <span data-ttu-id="c7bd8-211"><sup>4</sup> Windows 버전의 `My.Computer`합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-211"><sup>4</sup> Windows version of `My.Computer`.</span></span> <span data-ttu-id="c7bd8-212">서버 버전에서 파생 됩니다 (참고 5 참조)는 클라이언트 컴퓨터에서와 같은 키보드, 화면 및 마우스 유용한 개체에 대 한 액세스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-212">Derives from the Server version (see Note 5), and provides access to useful objects on a client machine, such as the keyboard, screen, and mouse.</span></span>  
   
- <sup>5</sup> 의 서버 버전 `My.Computer`합니다. 이름, 클록 등에 대 한 액세스를 같은 컴퓨터에 대 한 기본 정보를 제공합니다.  
+ <span data-ttu-id="c7bd8-213"><sup>5</sup> 의 서버 버전 `My.Computer`합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-213"><sup>5</sup> Server version of `My.Computer`.</span></span> <span data-ttu-id="c7bd8-214">이름, 클록 등에 대 한 액세스를 같은 컴퓨터에 대 한 기본 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-214">Provides basic information about the computer, such as the name, access to the clock, and so on.</span></span>  
   
- <sup>6</sup> Windows 버전의 `My.User`합니다. 이 개체는 스레드의 현재 id와 연결 됩니다.  
+ <span data-ttu-id="c7bd8-215"><sup>6</sup> Windows 버전의 `My.User`합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-215"><sup>6</sup> Windows version of `My.User`.</span></span> <span data-ttu-id="c7bd8-216">이 개체는 스레드의 현재 id와 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-216">This object is associated with the thread's current identity.</span></span>  
   
- <sup>7</sup> 웹 버전의 `My.User`합니다. 이 개체의 현재 HTTP 요청을 응용 프로그램의 사용자 id와 연결 됩니다.  
+ <span data-ttu-id="c7bd8-217"><sup>7</sup> 웹 버전의 `My.User`합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-217"><sup>7</sup> Web version of `My.User`.</span></span> <span data-ttu-id="c7bd8-218">이 개체의 현재 HTTP 요청을 응용 프로그램의 사용자 id와 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7bd8-218">This object is associated with the user identity of the application's current HTTP request.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer></xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.Logging.Log></xref:Microsoft.VisualBasic.Logging.Log>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User></xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [사용자 지정 하는 개체는 지원 되는 내](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)   
- [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)   
- [My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [My.Request 개체](../../../visual-basic/language-reference/objects/my-request-object.md)   
- [My.Response 개체](../../../visual-basic/language-reference/objects/my-response-object.md)   
- [My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="c7bd8-219">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c7bd8-219">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.Logging.Log>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.User>  
+ [<span data-ttu-id="c7bd8-220">My에 사용할 수 있는 개체 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="c7bd8-220">Customizing Which Objects are Available in My</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ [<span data-ttu-id="c7bd8-221">조건부 컴파일</span><span class="sxs-lookup"><span data-stu-id="c7bd8-221">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [<span data-ttu-id="c7bd8-222">/define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7bd8-222">/define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)  
+ [<span data-ttu-id="c7bd8-223">My.Forms 개체</span><span class="sxs-lookup"><span data-stu-id="c7bd8-223">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [<span data-ttu-id="c7bd8-224">My.Request 개체</span><span class="sxs-lookup"><span data-stu-id="c7bd8-224">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)  
+ [<span data-ttu-id="c7bd8-225">My.Response 개체</span><span class="sxs-lookup"><span data-stu-id="c7bd8-225">My.Response Object</span></span>](../../../visual-basic/language-reference/objects/my-response-object.md)  
+ [<span data-ttu-id="c7bd8-226">My.WebServices 개체</span><span class="sxs-lookup"><span data-stu-id="c7bd8-226">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)

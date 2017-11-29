@@ -1,53 +1,57 @@
 ---
-title: "XAML의 WPF 및 WF 통합 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XAML의 WPF 및 WF 통합"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f2fc2399dc1c98ad8890034ca3a9915d4ce86162
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# XAML의 WPF 및 WF 통합
-이 샘플에서는 단일 XAML 문서에 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 및 [!INCLUDE[wf](../../../../includes/wf-md.md)] 기능을 사용하는 응용 프로그램을 만드는 방법을 보여 줍니다.이를 수행하기 위해 이 샘플에는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 및 XAML 확장성이 사용됩니다.  
+# <a name="wpf-and-wf-integration-in-xaml"></a><span data-ttu-id="6a5c1-102">XAML의 WPF 및 WF 통합</span><span class="sxs-lookup"><span data-stu-id="6a5c1-102">WPF and WF Integration in XAML</span></span>
+<span data-ttu-id="6a5c1-103">이 샘플에서는 단일 XAML 문서에 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 및 [!INCLUDE[wf](../../../../includes/wf-md.md)] 기능을 사용하는 응용 프로그램을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-103">This sample demonstrates how to create an application that uses [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] and [!INCLUDE[wf](../../../../includes/wf-md.md)] features in a single XAML document.</span></span> <span data-ttu-id="6a5c1-104">이를 수행하기 위해 이 샘플에는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 및 XAML 확장성이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-104">To accomplish this, the sample uses [!INCLUDE[wf](../../../../includes/wf-md.md)] and XAML extensibility.</span></span>  
   
-## 샘플 세부 정보  
- `ShowWindow` 및 `WriteLine`이라는 활동 시퀀스를 통해 조작되는 문자열 변수 두 개를 사용하여 ShowWindow.xaml 파일을 <xref:System.Activities.Statements.Sequence> 활동으로 deserialize합니다.<xref:System.Activities.Statements.WriteLine> 활동은 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성에 할당되는 식을 콘솔 창에 출력합니다.`ShowWindow` 활동은 해당 실행 논리의 일부로 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 창을 표시합니다.이 창의 <xref:System.Activities.ActivityContext.DataContext%2A>에는 시퀀스에서 선언한 변수가 포함됩니다.`ShowWindow` 활동에 선언된 창의 컨트롤에서 데이터 바인딩을 사용하여 해당 변수를 조작합니다.마지막으로, 창에 단추 컨트롤이 포함됩니다.단추에 대한 `Click` 이벤트는 이름이 `MarkupExtension`인 `CloseWindow` 활동이 포함된 <xref:System.Activities.ActivityDelegate>에서 처리됩니다.`MarkUpExtension`은 포함된 활동을 호출하고, 이 활동은 컨텍스트에 따라 `x:Name`으로 식별되는 개체 및 해당 활동을 포함하는 창의 <xref:System.Activities.ActivityContext.DataContext%2A>를 제공합니다.따라서 창의 이름을 참조하는 식을 사용하여 `CloseWindow.InArgument<Window>`를 바인딩할 수 있습니다.  
+## <a name="sample-details"></a><span data-ttu-id="6a5c1-105">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="6a5c1-105">Sample Details</span></span>  
+ <span data-ttu-id="6a5c1-106"><xref:System.Activities.Statements.Sequence> 및 `ShowWindow`이라는 활동 시퀀스를 통해 조작되는 문자열 변수 두 개를 사용하여 ShowWindow.xaml 파일을 `WriteLine` 활동으로 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-106">The ShowWindow.xaml file deserializes into a <xref:System.Activities.Statements.Sequence> activity with two string variables that are manipulated by the sequence’s activities: `ShowWindow` and `WriteLine`.</span></span> <span data-ttu-id="6a5c1-107"><xref:System.Activities.Statements.WriteLine> 활동은 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성에 할당되는 식을 콘솔 창에 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-107">The <xref:System.Activities.Statements.WriteLine> activity outputs to the console window the expression that it assigns to the <xref:System.Activities.Statements.WriteLine.Text%2A> property.</span></span> <span data-ttu-id="6a5c1-108">`ShowWindow` 활동은 해당 실행 논리의 일부로 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 창을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-108">The `ShowWindow` activity displays a [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] window as part of its execution logic.</span></span> <span data-ttu-id="6a5c1-109">이 창의 <xref:System.Activities.ActivityContext.DataContext%2A>에는 시퀀스에서 선언한 변수가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-109">The <xref:System.Activities.ActivityContext.DataContext%2A> of the window includes the variables declared in the sequence.</span></span> <span data-ttu-id="6a5c1-110">`ShowWindow` 활동에 선언된 창의 컨트롤에서 데이터 바인딩을 사용하여 해당 변수를 조작합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-110">The controls of the window declared in the `ShowWindow` activity use data binding to manipulate those variables.</span></span> <span data-ttu-id="6a5c1-111">마지막으로, 창에 단추 컨트롤이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-111">Finally, the window contains a button control.</span></span> <span data-ttu-id="6a5c1-112">단추에 대한 `Click` 이벤트는 이름이 <xref:System.Activities.ActivityDelegate>인 `MarkupExtension` 활동이 포함된 `CloseWindow`에서 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-112">The `Click` event for the button is handled by a <xref:System.Activities.ActivityDelegate> named `MarkupExtension` that contains a `CloseWindow` activity.</span></span> <span data-ttu-id="6a5c1-113">`MarkUpExtension`은 포함된 활동을 호출하고, 이 활동은 컨텍스트에 따라 `x:Name`으로 식별되는 개체 및 해당 활동을 포함하는 창의 <xref:System.Activities.ActivityContext.DataContext%2A>를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-113">`MarkUpExtension` invokes the contained activity that provides, as context, any objects identified by an `x:Name`, as well as the <xref:System.Activities.ActivityContext.DataContext%2A> of the containing window.</span></span> <span data-ttu-id="6a5c1-114">따라서 창의 이름을 참조하는 식을 사용하여 `CloseWindow.InArgument<Window>`를 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-114">Thus, the `CloseWindow.InArgument<Window>` can be bound using an expression that references the window’s name.</span></span>  
   
- `ShowWindow` 활동은 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 창을 표시하기 위해 <xref:System.Activities.AsyncCodeActivity%601> 클래스에서 파생되며, 창을 닫을 때 활동이 완료됩니다.`Window` 속성은 활동을 실행할 때마다 요청 시 창을 만들도록 허용하는 `Func<Window>` 형식입니다.이와 같은 지연된 계산 모델을 위해 <xref:System.Xaml.XamlDeferringLoader>가 `Window` 속성에 사용됩니다.`FuncFactoryDeferringLoader`는 serialization 과정에서 `XamlReader`를 캡처한 다음 활동을 실행하는 동안 이를 읽을 수 있도록 합니다.  
+ <span data-ttu-id="6a5c1-115">`ShowWindow` 활동은 <xref:System.Activities.AsyncCodeActivity%601> 창을 표시하기 위해 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 클래스에서 파생되며, 창을 닫을 때 활동이 완료됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-115">The `ShowWindow` activity derives from the <xref:System.Activities.AsyncCodeActivity%601> class to display a [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] window and completes when the window is closed.</span></span> <span data-ttu-id="6a5c1-116">`Window` 속성은 활동을 실행할 때마다 요청 시 창을 만들도록 허용하는 `Func<Window>` 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-116">The `Window` property is of type `Func<Window>` that allows the window to be created on demand for each execution of the activity.</span></span> <span data-ttu-id="6a5c1-117">이와 같은 지연된 계산 모델을 위해 `Window`가 <xref:System.Xaml.XamlDeferringLoader> 속성에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-117">The `Window` property uses a <xref:System.Xaml.XamlDeferringLoader> to enable this deferred evaluation model.</span></span> <span data-ttu-id="6a5c1-118">`FuncFactoryDeferringLoader`는 serialization 과정에서 `XamlReader`를 캡처한 다음 활동을 실행하는 동안 이를 읽을 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-118">The `FuncFactoryDeferringLoader` allows a `XamlReader` to be captured during serialization and then read during activity execution.</span></span>  
   
- 활동을 제대로 작성하면 스케줄러 스레드가 차단되지 않습니다.그러나 표시되어 있는 창을 닫지 않으면 `ShowWindow` 활동이 완료되지 않습니다.`ShowWindow` 활동에서는 이와 같은 동작을 달성하기 위해 <xref:System.Activities.AsyncCodeActivity>로부터 파생하고 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 메서드에 <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> 메서드를 호출하고, 창을 모달로 표시합니다.대리자는 WPF <xref:System.ServiceModel.InstanceContext.SynchronizationContext%2A>를 통해 호출됩니다.`ShowWindow` 활동에서는 범위 내의 변수에 대한 데이터 바인딩된 컨트롤 액세스를 제공하기 위해 <xref:System.Activities.ActivityContext.DataContext%2A> 속성을 `Window.DataContext` 속성에 할당합니다.  
+ <span data-ttu-id="6a5c1-119">활동을 제대로 작성하면 스케줄러 스레드가 차단되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-119">A well-written activity never blocks the scheduler thread.</span></span> <span data-ttu-id="6a5c1-120">그러나 표시되어 있는 창을 닫지 않으면 `ShowWindow` 활동이 완료되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-120">However, the `ShowWindow` activity cannot complete until the window it is displaying is closed.</span></span> <span data-ttu-id="6a5c1-121">`ShowWindow` 활동에서는 이와 같은 동작을 달성하기 위해 <xref:System.Activities.AsyncCodeActivity>로부터 파생하고 <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> 메서드에 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 메서드를 호출하고, 창을 모달로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-121">The `ShowWindow` activity achieves this behavior by deriving from <xref:System.Activities.AsyncCodeActivity>, calling the <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> method in the <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> method, and showing the window modally.</span></span> <span data-ttu-id="6a5c1-122">대리자는 WPF <xref:System.ServiceModel.InstanceContext.SynchronizationContext%2A>를 통해 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-122">The delegate is invoked through the WPF <xref:System.ServiceModel.InstanceContext.SynchronizationContext%2A>.</span></span> <span data-ttu-id="6a5c1-123">`ShowWindow` 활동에서는 범위 내의 변수에 대한 데이터 바인딩된 컨트롤 액세스를 제공하기 위해 <xref:System.Activities.ActivityContext.DataContext%2A> 속성을 `Window.DataContext` 속성에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-123">The `ShowWindow` activity assigns the <xref:System.Activities.ActivityContext.DataContext%2A> property to the `Window.DataContext` property to provide any data bound controls access to the in-scope variables.</span></span>  
   
- 이 샘플에서 마지막으로 주목해야 할 부분은 `DelegateActivityExtension`이라는 <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>입니다.이 태그 확장의 `ProvideValue` 메서드는 포함된 활동을 호출하는 대리자를 반환합니다.이 활동은 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 데이터 컨텍스트 및 범위 내의 모든 `x:Name` 값을 포함하는 환경에서 실행됩니다.`GenericInvoke` 메서드에서 이 환경은 <xref:System.Activities.Hosting.SymbolResolver> 확장을 통해 환경에 제공됩니다.이 확장은 <xref:System.Activities.WorkflowInvoker>에 추가되고, 이 호출자는 태그 확장의 대리자를 호출할 때마다 포함된 활동을 호출하는 데 사용됩니다.  
+ <span data-ttu-id="6a5c1-124">이 샘플에서 마지막으로 주목해야 할 부분은 <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>이라는 `DelegateActivityExtension`입니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-124">The last point of interest in this sample is a <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension> called `DelegateActivityExtension`.</span></span> <span data-ttu-id="6a5c1-125">이 태그 확장의 `ProvideValue` 메서드는 포함된 활동을 호출하는 대리자를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-125">The `ProvideValue` method of this markup extension returns a delegate that invokes an embedded activity.</span></span> <span data-ttu-id="6a5c1-126">이 활동은 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 데이터 컨텍스트 및 범위 내의 모든 `x:Name` 값을 포함하는 환경에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-126">This activity runs in an environment that includes the [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] data context and any `x:Name` values in scope.</span></span> <span data-ttu-id="6a5c1-127">`GenericInvoke` 메서드에서 이 환경은 <xref:System.Activities.Hosting.SymbolResolver> 확장을 통해 환경에 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-127">In the `GenericInvoke` method, this environment is provided to the activity through a <xref:System.Activities.Hosting.SymbolResolver> extension.</span></span> <span data-ttu-id="6a5c1-128">이 확장은 <xref:System.Activities.WorkflowInvoker>에 추가되고, 이 호출자는 태그 확장의 대리자를 호출할 때마다 포함된 활동을 호출하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-128">This extension is added to a <xref:System.Activities.WorkflowInvoker> that is then used to invoke the embedded activity whenever the markup extension’s delegate is invoked.</span></span>  
   
 > [!NOTE]
->  기본 디자이너에서는 ShowWindow 활동을 지원하지 않으므로 ShowWindow.Xaml 파일이 디자이너에 올바르게 표시되지 않습니다.  
+>  <span data-ttu-id="6a5c1-129">기본 디자이너에서는 ShowWindow 활동을 지원하지 않으므로 ShowWindow.Xaml 파일이 디자이너에 올바르게 표시되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-129">The default designer does not support the ShowWindow activity; as such, the ShowWindow.Xaml file does not display correctly in the designer.</span></span>  
   
-#### 이 샘플을 사용하려면  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="6a5c1-130">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="6a5c1-130">To use this sample</span></span>  
   
-1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 WPFWFIntegration.sln 솔루션 파일을 엽니다.  
+1.  <span data-ttu-id="6a5c1-131">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 WPFWFIntegration.sln 솔루션 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-131">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the WPFWFIntegration.sln solution file.</span></span>  
   
-2.  Ctrl\+Shift\+B를 눌러 솔루션을 빌드합니다.  
+2.  <span data-ttu-id="6a5c1-132">Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-132">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  F5 키를 눌러 솔루션을 실행합니다.  
+3.  <span data-ttu-id="6a5c1-133">F5 키를 눌러 솔루션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-133">To run the solution, press F5.</span></span>  
   
-4.  대화 상자에 이름과 성을 입력합니다.  
+4.  <span data-ttu-id="6a5c1-134">대화 상자에 이름과 성을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-134">Type your first and last name into the dialog.</span></span>  
   
-5.  대화 상자를 닫으면 콘솔에 사용자의 이름이 표시됩니다.  
+5.  <span data-ttu-id="6a5c1-135">대화 상자를 닫으면 콘솔에 사용자의 이름이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-135">Close the dialog and the console echoes your name.</span></span>  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.계속하기 전에 다음\(기본\) 디렉터리를 확인하십시오.  
+>  <span data-ttu-id="6a5c1-136">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-136">The samples may already be installed on your machine.</span></span> <span data-ttu-id="6a5c1-137">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-137">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하십시오.이 샘플은 다음 디렉터리에 있습니다.  
+>  <span data-ttu-id="6a5c1-138">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-138">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6a5c1-139">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a5c1-139">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="6a5c1-140">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6a5c1-140">See Also</span></span>

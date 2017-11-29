@@ -1,159 +1,154 @@
 ---
-title: "연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "컬렉션, serialize"
-  - "컬렉션, 표준 형식"
-  - "DesiginerSerializationVisibilityAttribute 클래스"
-  - "serialization, 컬렉션"
-  - "표준 형식, 컬렉션"
+title: "연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- serialization [Windows Forms], collections
+- standard types [Windows Forms], collections
+- collections [Windows Forms], serializing
+- collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9efad2da27f4003632b643b9f5f0602be0d55480
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize
-사용자 지정 컨트롤에서 컬렉션을 속성으로 노출하는 경우도 있습니다.  이 연습에서는 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> 클래스를 사용하여 디자인 타임에 컬렉션이 serialize되는 방법을 제어하는 방법에 대해 설명합니다.  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 값을 컬렉션 속성에 적용하면 속성이 serialize됩니다.  
+# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a><span data-ttu-id="feb58-102">연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize</span><span class="sxs-lookup"><span data-stu-id="feb58-102">Walkthrough: Serializing Collections of Standard Types with the DesignerSerializationVisibilityAttribute</span></span>
+<span data-ttu-id="feb58-103">사용자 지정 컨트롤 노출 하는 속성으로 컬렉션 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-103">Your custom controls will sometimes expose a collection as a property.</span></span> <span data-ttu-id="feb58-104">이 연습에서는 사용 하는 방법을 보여 줍니다.는 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> 디자인 타임에 컬렉션을 serialize 하는 방법을 제어 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-104">This walkthrough demonstrates how to use the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> class to control how a collection is serialized at design time.</span></span> <span data-ttu-id="feb58-105">적용 된 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 컬렉션 속성에 값을 입력 하면 속성을 serialize 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-105">Applying the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> value to your collection property ensures that the property will be serialized.</span></span>  
   
- 이 항목의 코드를 단일 목록으로 복사하려면 [How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute](../Topic/How%20to:%20Serialize%20Collections%20of%20Standard%20Types%20with%20the%20DesignerSerializationVisibilityAttribute.md)를 참조하십시오.  
+ <span data-ttu-id="feb58-106">단일 목록으로이 항목의 코드를 복사 하려면 참조 [하는 방법: serialize 할 컬렉션의 표준 형식과 DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-106">To copy the code in this topic as a single listing, see [How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).</span></span>  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  <span data-ttu-id="feb58-107">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="feb58-108">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="feb58-109">자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="feb58-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음과 같은 요건이 필요합니다.  
+## <a name="prerequisites"></a><span data-ttu-id="feb58-110">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="feb58-110">Prerequisites</span></span>  
+ <span data-ttu-id="feb58-111">이 연습을 완료하려면 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-111">In order to complete this walkthrough, you will need:</span></span>  
   
--   Visual Studio가 설치된 컴퓨터에서 Windows Forms 응용 프로그램 프로젝트를 만들고 실행할 수 있는 권한  
+-   <span data-ttu-id="feb58-112">충분 한 권한이을 만들고 Visual Studio가 설치 된 컴퓨터에서 Windows Forms 응용 프로그램 프로젝트를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-112">Sufficient permissions to be able to create and run Windows Forms application projects on the computer where Visual Studio is installed.</span></span>  
   
-## Serializable 컬렉션이 있는 컨트롤 만들기  
- 첫 번째 단계는 serializable 컬렉션을 속성으로 갖는 컨트롤을 만드는 것입니다.  **속성** 창에서 액세스할 수 있는 **컬렉션 편집기**를 사용하여 이 컬렉션의 내용을 편집할 수 있습니다.  
+## <a name="creating-a-control-that-has-a-serializable-collection"></a><span data-ttu-id="feb58-113">직렬화 가능 컬렉션을 포함 하는 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="feb58-113">Creating a Control That Has a Serializable Collection</span></span>  
+ <span data-ttu-id="feb58-114">첫 번째 단계는 컨트롤을 속성으로 직렬화 가능 컬렉션을 만드는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-114">The first step is to create a control that has a serializable collection as a property.</span></span> <span data-ttu-id="feb58-115">사용 하 여이 컬렉션의 내용을 편집할 수는 **컬렉션 편집기**에서 액세스할 수 있는 **속성** 창.</span><span class="sxs-lookup"><span data-stu-id="feb58-115">You can edit the contents of this collection using the **Collection Editor**, which you can access from the **Properties** window.</span></span>  
   
-#### serializable 컬렉션이 있는 컨트롤을 만들려면  
+#### <a name="to-create-a-control-with-a-serializable-collection"></a><span data-ttu-id="feb58-116">직렬화 가능 컬렉션을 사용 하 여 컨트롤을 만들려면</span><span class="sxs-lookup"><span data-stu-id="feb58-116">To create a control with a serializable collection</span></span>  
   
-1.  `SerializationDemoControlLib`라는 Windows 컨트롤 라이브러리 프로젝트를 만듭니다.  자세한 내용은 [Windows Control Library Template](http://msdn.microsoft.com/ko-kr/722f4e2d-1310-4ed5-8f33-593337ab66b4)을 참조하십시오.  
+1.  <span data-ttu-id="feb58-117">라는 Windows 컨트롤 라이브러리 프로젝트 만들기 `SerializationDemoControlLib`합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-117">Create a Windows Control Library project called `SerializationDemoControlLib`.</span></span> <span data-ttu-id="feb58-118">자세한 내용은 참조 [Windows 컨트롤 라이브러리 템플릿](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4)합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-118">For more information, see [Windows Control Library Template](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).</span></span>  
   
-2.  `UserControl1`의 이름을 `SerializationDemoControl`로 변경합니다.  자세한 내용은 [How to: Rename Identifiers](http://msdn.microsoft.com/ko-kr/2430f732-2b70-4516-8cf6-a7bb71cc9724)를 참조하십시오.  
+2.  <span data-ttu-id="feb58-119">이름 바꾸기 `UserControl1` 를 `SerializationDemoControl`합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-119">Rename `UserControl1` to `SerializationDemoControl`.</span></span> <span data-ttu-id="feb58-120">자세한 내용은 참조 [하는 방법: 식별자 이름 바꾸기](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724)합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-120">For more information, see [How to: Rename Identifiers](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724).</span></span>  
   
-3.  **속성** 창에서 <xref:System.Windows.Forms.Padding.All%2A?displayProperty=fullName> 속성 값을 `10`으로 설정합니다.  
+3.  <span data-ttu-id="feb58-121">에 **속성** 창의 설정의 값은 <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> 속성을 `10`합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-121">In the **Properties** window, set the value of the <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> property to `10`.</span></span>  
   
-4.  <xref:System.Windows.Forms.TextBox> 컨트롤을 `SerializationDemoControl`에 배치합니다.  
+4.  <span data-ttu-id="feb58-122">위치는 <xref:System.Windows.Forms.TextBox> 컨트롤에 `SerializationDemoControl`합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-122">Place a <xref:System.Windows.Forms.TextBox> control in the `SerializationDemoControl`.</span></span>  
   
-5.  <xref:System.Windows.Forms.TextBox> 컨트롤을 선택합니다.  **속성** 창에서 다음 속성을 설정합니다.  
+5.  <span data-ttu-id="feb58-123"><xref:System.Windows.Forms.TextBox> 컨트롤을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-123">Select the <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="feb58-124">에 **속성** 창에서 다음 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-124">In the **Properties** window, set the following properties.</span></span>  
   
-    |Property|다음으로 변경|  
-    |--------------|-------------|  
-    |**Multiline**|`true`|  
-    |**Dock**|<xref:System.Windows.Forms.DockStyle>|  
-    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars>|  
-    |**ReadOnly**|`true`|  
+    |<span data-ttu-id="feb58-125">속성</span><span class="sxs-lookup"><span data-stu-id="feb58-125">Property</span></span>|<span data-ttu-id="feb58-126">다음으로 변경</span><span class="sxs-lookup"><span data-stu-id="feb58-126">Change to</span></span>|  
+    |--------------|---------------|  
+    |<span data-ttu-id="feb58-127">**Multiline**</span><span class="sxs-lookup"><span data-stu-id="feb58-127">**Multiline**</span></span>|`true`|  
+    |<span data-ttu-id="feb58-128">**도킹**</span><span class="sxs-lookup"><span data-stu-id="feb58-128">**Dock**</span></span>|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |<span data-ttu-id="feb58-129">**스크롤 막대**</span><span class="sxs-lookup"><span data-stu-id="feb58-129">**ScrollBars**</span></span>|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |<span data-ttu-id="feb58-130">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="feb58-130">**ReadOnly**</span></span>|`true`|  
   
-6.  **코드 편집기**에서 `stringsValue`라는 문자열 배열 필드를 `SerializationDemoControl`에 선언합니다.  
+6.  <span data-ttu-id="feb58-131">에 **코드 편집기**, 라는 문자열 배열 필드를 선언 `stringsValue` 에서 `SerializationDemoControl`합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-131">In the **Code Editor**, declare a string array field named `stringsValue` in `SerializationDemoControl`.</span></span>  
   
      [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
      [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
      [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
   
-7.  `SerializationDemoControl`에서 `Strings` 속성을 정의합니다.  
+7.  <span data-ttu-id="feb58-132">정의 `Strings` 속성에는 `SerializationDemoControl`합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-132">Define the `Strings` property on the `SerializationDemoControl`.</span></span>  
   
 > [!NOTE]
->  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 값은 컬렉션의 serialization을 활성화하는 데 사용됩니다.  
+>  <span data-ttu-id="feb58-133"><xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 값 컬렉션의 serialization을 사용 하도록 설정 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-133">The <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> value is used to enable serialization of the collection.</span></span>  
   
  [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
  [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
  [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
   
-1.  F5 키를 눌러 프로젝트를 빌드하고 **UserControl Test Container**에서 컨트롤을 실행합니다.  
+1.  <span data-ttu-id="feb58-134">F5 키를 눌러 프로젝트를 빌드하고 **UserControl 테스트 컨테이너**에서 컨트롤을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-134">Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span>  
   
-2.  **UserControl Test Container**의 <xref:System.Windows.Forms.PropertyGrid>에서 `Strings` 속성을 찾습니다.  `Strings` 속성을 클릭한 다음 줄임표\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) 단추를 클릭하여 **문자열 컬렉션 편집기**를 엽니다.  
+2.  <span data-ttu-id="feb58-135">찾을 `Strings` 속성에는 <xref:System.Windows.Forms.PropertyGrid> 의 **UserControl Test Container**합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-135">Find the `Strings` property in the <xref:System.Windows.Forms.PropertyGrid> of the **UserControl Test Container**.</span></span> <span data-ttu-id="feb58-136">클릭는 `Strings` 속성을 다음 줄임표 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 버튼을 클릭은 **문자열컬렉션편집기**.</span><span class="sxs-lookup"><span data-stu-id="feb58-136">Click the `Strings` property, then click the ellipsis (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button to open the **String Collection Editor**.</span></span>  
   
-3.  **문자열 컬렉션 편집기**에서 여러 문자열을 입력합니다.  각 문자열의 끝에서 Enter 키를 눌러 문자열을 구분합니다.  문자열 입력이 완료되면 **확인**을 클릭합니다.  
-  
-> [!NOTE]
->  입력한 문자열이 `SerializationDemoControl`의 <xref:System.Windows.Forms.TextBox>에 표시됩니다.  
-  
-## 컬렉션 속성 Serialize  
- 컨트롤의 serialization 동작을 테스트하려면 해당 컬렉션을 폼에 배치하고 **컬렉션 편집기**를 사용하여 컬렉션의 내용을 변경합니다.  **Windows Forms 디자이너**에서 코드를 생성하는 특수 디자이너 파일을 조사하여 serialize된 컬렉션의 상태를 확인할 수 있습니다.  
-  
-#### 컬렉션을 serialize하려면  
-  
-1.  솔루션에 Windows 응용 프로그램 프로젝트를 추가합니다.  프로젝트 이름을 `SerializationDemoControlTest`로 지정합니다.  
-  
-2.  **도구 상자**에서 **SerializationDemoControlLib 구성 요소**라는 탭을 찾습니다.  이 탭에서 `SerializationDemoControl`을 찾습니다.  자세한 내용은 [연습: 도구 상자에 자동으로 사용자 지정 구성 요소 채우기](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)를 참조하십시오.  
-  
-3.  `SerializationDemoControl`을 폼에 배치합니다.  
-  
-4.  **속성** 창에서 `Strings` 속성을 찾습니다.  `Strings` 속성을 클릭한 다음 줄임표\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) 단추를 클릭하여 **문자열 컬렉션 편집기**를 엽니다.  
-  
-5.  **문자열 컬렉션 편집기**에서 여러 문자열을 입력합니다.  각 문자열의 끝에서 Enter 키를 눌러 문자열을 구분합니다.  문자열 입력이 완료되면 **확인**을 클릭합니다.  
+3.  <span data-ttu-id="feb58-137">여러 문자열을 입력에서 **문자열 컬렉션 편집기**합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-137">Enter several strings in the **String Collection Editor**.</span></span> <span data-ttu-id="feb58-138">각 문자열의 끝에서 ENTER 키를 눌러 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-138">Separate them by pressing the ENTER key at the end of each string.</span></span> <span data-ttu-id="feb58-139">클릭 **확인** 문자열 입력 했으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-139">Click **OK** when you are finished entering strings.</span></span>  
   
 > [!NOTE]
->  입력한 문자열이 `SerializationDemoControl`의 <xref:System.Windows.Forms.TextBox>에 표시됩니다.  
+>  <span data-ttu-id="feb58-140">입력 문자열에 표시 된 <xref:System.Windows.Forms.TextBox> 의 `SerializationDemoControl`합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-140">The strings you typed appear in the <xref:System.Windows.Forms.TextBox> of the `SerializationDemoControl`.</span></span>  
   
-1.  **솔루션 탐색기**에서 **모든 파일 표시** 단추를 클릭합니다.  
+## <a name="serializing-a-collection-property"></a><span data-ttu-id="feb58-141">컬렉션 속성을 직렬화합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-141">Serializing a Collection Property</span></span>  
+ <span data-ttu-id="feb58-142">컨트롤의 serialization 동작을 테스트 하려면 폼에 배치를 사용 하 여 컬렉션의 내용을 변경 하는 **컬렉션 편집기**합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-142">To test the serialization behavior of your control, you will place it on a form and change the contents of the collection with the **Collection Editor**.</span></span> <span data-ttu-id="feb58-143">특별 한 디자이너 파일을 확인 하 여 직렬화 된 컬렉션 상태를 볼 수는 **Windows Forms 디자이너** 에서 코드를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-143">You can see the serialized collection state by looking at a special designer file, into which the **Windows Forms Designer** emits code.</span></span>  
   
-2.  **Form1** 노드를 엽니다.  이 노드 아래에 **Form1.Designer.cs** 또는 **Form1.Designer.vb**라는 파일이 있습니다.  이 파일은 **Windows Forms 디자이너**에서 폼과 해당 자식 컨트롤의 디자인 타임 상태를 나타내는 코드를 생성하는 파일입니다.  **코드 편집기**에서 이 파일을 엽니다.  
+#### <a name="to-serialize-a-collection"></a><span data-ttu-id="feb58-144">컬렉션을 serialize 하는 데</span><span class="sxs-lookup"><span data-stu-id="feb58-144">To serialize a collection</span></span>  
   
-3.  **Windows Form 디자이너에서 생성한 코드**라는 영역을 열고 **serializationDemoControl1**이라는 레이블이 지정된 섹션을 찾습니다.  이 레이블 아래에는 컨트롤의 serialize된 상태를 나타내는 코드가 있습니다.  5단계에서 입력한 문자열이 `Strings` 속성에 대한 할당으로 표시됩니다.  다음 코드 예제에서는 "red", "orange" 및 "yellow"라는 문자열을 입력한 경우 표시되는 코드와 비슷한 코드를 보여 줍니다.  
+1.  <span data-ttu-id="feb58-145">Windows 응용 프로그램 프로젝트를 솔루션에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-145">Add a Windows Application project to the solution.</span></span> <span data-ttu-id="feb58-146">프로젝트 이름을 `SerializationDemoControlTest`로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-146">Name the project `SerializationDemoControlTest`.</span></span>  
   
-4.  \[Visual Basic\]  
+2.  <span data-ttu-id="feb58-147">에 **도구 상자**, 이라는 탭 찾을 **SerializationDemoControlLib 구성 요소**합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-147">In the **Toolbox**, find the tab named **SerializationDemoControlLib Components**.</span></span> <span data-ttu-id="feb58-148">이 탭에서 찾을 수 있습니다는 `SerializationDemoControl`합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-148">In this tab, you will find the `SerializationDemoControl`.</span></span> <span data-ttu-id="feb58-149">자세한 내용은 [연습: 도구 상자에 자동으로 사용자 지정 구성 요소 채우기](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="feb58-149">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>  
   
-    ```  
-    Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}  
-    ```  
+3.  <span data-ttu-id="feb58-150">위치는 `SerializationDemoControl` 폼에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-150">Place a `SerializationDemoControl` on your form.</span></span>  
   
-5.  \[C\#\]  
+4.  <span data-ttu-id="feb58-151">찾을 `Strings` 속성에는 **속성** 창.</span><span class="sxs-lookup"><span data-stu-id="feb58-151">Find the `Strings` property in the **Properties** window.</span></span> <span data-ttu-id="feb58-152">클릭는 `Strings` 속성을 다음 줄임표 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 버튼을 클릭은 **문자열컬렉션편집기**.</span><span class="sxs-lookup"><span data-stu-id="feb58-152">Click the `Strings` property, then click the ellipsis (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button to open the **String Collection Editor**.</span></span>  
   
-    ```  
+5.  <span data-ttu-id="feb58-153">여러 문자열을 입력에서 **문자열 컬렉션 편집기**합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-153">Type several strings in the **String Collection Editor**.</span></span> <span data-ttu-id="feb58-154">각 문자열의 끝에서 ENTER 키를 눌러 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-154">Separate them by pressing the ENTER key at the end of each string.</span></span> <span data-ttu-id="feb58-155">클릭 **확인** 문자열 입력 했으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-155">Click **OK** when you are finished entering strings.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="feb58-156">입력 문자열에 표시 된 <xref:System.Windows.Forms.TextBox> 의 `SerializationDemoControl`합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-156">The strings you typed appear in the <xref:System.Windows.Forms.TextBox> of the `SerializationDemoControl`.</span></span>  
+  
+1.  <span data-ttu-id="feb58-157">**솔루션 탐색기**에서 **모든 파일 표시** 단추를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-157">In **Solution Explorer**, click the **Show All Files** button.</span></span>  
+  
+2.  <span data-ttu-id="feb58-158">열기는 **Form1** 노드.</span><span class="sxs-lookup"><span data-stu-id="feb58-158">Open the **Form1** node.</span></span> <span data-ttu-id="feb58-159">아래에 라는 파일을은 **form1. designer.cs** 또는 **Form1.Designer.vb**합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-159">Beneath it is a file called **Form1.Designer.cs** or **Form1.Designer.vb**.</span></span> <span data-ttu-id="feb58-160">이 파일을는 **Windows Forms 디자이너** 에서 폼과 해당 자식 컨트롤의 디자인 타임 상태를 나타내는 코드를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-160">This is the file into which the **Windows Forms Designer** emits code representing the design-time state of your form and its child controls.</span></span> <span data-ttu-id="feb58-161">**코드 편집기**에서 이 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-161">Open this file in the **Code Editor**.</span></span>  
+  
+3.  <span data-ttu-id="feb58-162">라는 영역을 열고 **Windows Form 디자이너에서 생성 한 코드** 라는 섹션을 찾아서 **serializationDemoControl1**합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-162">Open the region called **Windows Form Designer generated code** and find the section labeled **serializationDemoControl1**.</span></span> <span data-ttu-id="feb58-163">이 레이블은 아래에 컨트롤의 serialize 된 상태를 나타내는 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-163">Beneath this label is the code representing the serialized state of your control.</span></span> <span data-ttu-id="feb58-164">5 단계에서 입력 문자열에 대 한 할당에 표시 된 `Strings` 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-164">The strings you typed in step 5 appear in an assignment to the `Strings` property.</span></span> <span data-ttu-id="feb58-165">C# 및 Visual Basic의 경우 다음 코드 예제에서는 표시 되는 내용 문자열 "red", "주황색" 및 "노란색"를 입력 한 경우 유사한 코드를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-165">The following code examples in C# and Visual Basic, show code similar to what you will see if you typed the strings "red", "orange", and "yellow".</span></span>  
+  
+    ```csharp  
     this.serializationDemoControl1.Strings = new string[] {  
             "red",  
             "orange",  
             "yellow"};  
     ```  
+    
+    ```vb  
+    Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}  
+    ```
   
-6.  **코드 편집기**에서 `Strings` 속성의 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> 값을 <xref:System.ComponentModel.DesignerSerializationVisibility>으로 변경합니다.  
+4.  <span data-ttu-id="feb58-166">에 **코드 편집기**의 값을 변경는 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> 에 `Strings` 속성을 <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-166">In the **Code Editor**, change the value of the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> on the `Strings` property to <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.</span></span>  
   
-7.  \[Visual Basic\]  
-  
+    ```csharp  
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]  
     ```  
+    ```vb  
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)> _  
     ```  
   
-8.  \[C\#\]  
-  
-    ```  
-    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]  
-    ```  
-  
-9. 솔루션을 다시 빌드하고 4\-8단계를 반복합니다.  
+5. <span data-ttu-id="feb58-167">솔루션 및 3 및 4 단계를 반복 하 여 다시 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-167">Rebuild the solution and repeat steps 3 and 4.</span></span>  
   
 > [!NOTE]
->  이 경우 **Windows Forms 디자이너**는 `Strings` 속성에 아무 것도 할당하지 않습니다.  
+>  <span data-ttu-id="feb58-168">이 경우에 **Windows Forms 디자이너** 에 대 한 할당을 내보내는 `Strings` 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-168">In this case, the **Windows Forms Designer** emits no assignment to the `Strings` property.</span></span>  
   
-## 다음 단계  
- 표준 형식 컬렉션을 serialize하는 방법을 알고 있는 경우 사용자 지정 컨트롤을 디자인 타임 환경에 보다 세부적으로 통합해 보십시오.  다음 항목에서는 사용자 지정 컨트롤의 디자인 타임 통합을 향상시키는 방법에 대해 설명합니다.  
+## <a name="next-steps"></a><span data-ttu-id="feb58-169">다음 단계</span><span class="sxs-lookup"><span data-stu-id="feb58-169">Next Steps</span></span>  
+ <span data-ttu-id="feb58-170">표준 형식의 컬렉션을 serialize 하는 방법을 알게 되 면 디자인 타임 환경에 사용자 지정 컨트롤을 보다 강력 하 게 통합 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-170">Once you know how to serialize a collection of standard types, consider integrating your custom controls more deeply into the design-time environment.</span></span> <span data-ttu-id="feb58-171">다음 항목에는 사용자 지정 컨트롤의 디자인 타임 통합 향상 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="feb58-171">The following topics describe how to enhance the design-time integration of your custom controls:</span></span>  
   
--   [Design\-Time Architecture](../Topic/Design-Time%20Architecture.md)  
+-   [<span data-ttu-id="feb58-172">디자인 타임 아키텍처</span><span class="sxs-lookup"><span data-stu-id="feb58-172">Design-Time Architecture</span></span>](http://msdn.microsoft.com/library/4881917b-628f-4689-b872-472e4f8a4e3a)  
   
--   [Windows Forms 컨트롤의 특성](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+-   [<span data-ttu-id="feb58-173">Windows Forms 컨트롤의 특성</span><span class="sxs-lookup"><span data-stu-id="feb58-173">Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
   
--   [Designer Serialization Overview](../Topic/Designer%20Serialization%20Overview.md)  
+-   [<span data-ttu-id="feb58-174">Serialization 디자이너 개요</span><span class="sxs-lookup"><span data-stu-id="feb58-174">Designer Serialization Overview</span></span>](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
   
--   [연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [<span data-ttu-id="feb58-175">연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="feb58-175">Walkthrough: Creating a Windows Forms Control That Takes Advantage of Visual Studio Design-Time Features</span></span>](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## 참고 항목  
- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>   
- [Designer Serialization Overview](../Topic/Designer%20Serialization%20Overview.md)   
- [How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute](../Topic/How%20to:%20Serialize%20Collections%20of%20Standard%20Types%20with%20the%20DesignerSerializationVisibilityAttribute.md)   
- [연습: 도구 상자에 자동으로 사용자 지정 구성 요소 채우기](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+## <a name="see-also"></a><span data-ttu-id="feb58-176">참고 항목</span><span class="sxs-lookup"><span data-stu-id="feb58-176">See Also</span></span>  
+ <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
+ [<span data-ttu-id="feb58-177">Serialization 디자이너 개요</span><span class="sxs-lookup"><span data-stu-id="feb58-177">Designer Serialization Overview</span></span>](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
+ [<span data-ttu-id="feb58-178">방법: designerserializationvisibilityattribute를 사용 하 여 표준 형식의 컬렉션 Serialize</span><span class="sxs-lookup"><span data-stu-id="feb58-178">How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute</span></span>](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
+ [<span data-ttu-id="feb58-179">연습: 도구 상자에 자동으로 사용자 지정 구성 요소 채우기</span><span class="sxs-lookup"><span data-stu-id="feb58-179">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

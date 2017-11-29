@@ -1,67 +1,71 @@
 ---
-title: "방법: 합성 모드를 사용하여 알파 혼합 조절 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "알파 혼합, 합성"
-  - "색, 혼합"
-  - "색, 투명도 조정"
+title: "방법: 합성 모드를 사용하여 알파 혼합 조절"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- alpha blending [Windows Forms], compositing
+- colors [Windows Forms], blending
+- colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 564d46cb2d72ac63962657b39146489aaafd6a5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 합성 모드를 사용하여 알파 혼합 조절
-다음과 같은 특징이 있는 오프 스크린 비트맵을 만드는 경우가 있습니다.  
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a><span data-ttu-id="abff7-102">방법: 합성 모드를 사용하여 알파 혼합 조절</span><span class="sxs-lookup"><span data-stu-id="abff7-102">How to: Use Compositing Mode to Control Alpha Blending</span></span>
+<span data-ttu-id="abff7-103">다음과 같은 특성을 가진 오프 스크린 비트맵을 만들려고 하는 경우가 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-103">There may be times when you want to create an off-screen bitmap that has the following characteristics:</span></span>  
   
--   색의 알파 값이 255보다 작습니다.  
+-   <span data-ttu-id="abff7-104">색 한 알파 값으로 255 보다 작아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-104">Colors have alpha values that are less than 255.</span></span>  
   
--   비트맵을 만들 때 색 상호 간에 알파 혼합이 발생하지 않습니다.  
+-   <span data-ttu-id="abff7-105">색은 알파 혼합 비트맵을 만들면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-105">Colors are not alpha blended with each other as you create the bitmap.</span></span>  
   
--   완성한 비트맵을 표시할 때 비트맵에 있는 색이 디스플레이 장치의 배경색과 알파 혼합됩니다.  
+-   <span data-ttu-id="abff7-106">완성된 한 비트맵을 표시 하면 비트맵 색이 알파 혼합 디스플레이 장치에서 배경 색입니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-106">When you display the finished bitmap, colors in the bitmap are alpha blended with the background colors on the display device.</span></span>  
   
- 이러한 비트맵을 만들려면 빈 <xref:System.Drawing.Bitmap> 개체를 만든 다음 이 비트맵을 기반으로 <xref:System.Drawing.Graphics> 개체를 만들고  <xref:System.Drawing.Graphics> 개체의 합성 모드를 <xref:System.Drawing.Drawing2D.CompositingMode?displayProperty=fullName>로 설정합니다.  
+ <span data-ttu-id="abff7-107">이러한 비트맵을 만들려면 빈 생성 <xref:System.Drawing.Bitmap> 개체를 생성 한 다음는 <xref:System.Drawing.Graphics> 해당 비트맵을 기반으로 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-107">To create such a bitmap, construct a blank <xref:System.Drawing.Bitmap> object, and then construct a <xref:System.Drawing.Graphics> object based on that bitmap.</span></span> <span data-ttu-id="abff7-108">합성 모드 설정에서 <xref:System.Drawing.Graphics> 개체 <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-108">Set the compositing mode of the <xref:System.Drawing.Graphics> object to <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.</span></span>  
   
-## 예제  
- 다음 예제에서는 <xref:System.Drawing.Bitmap> 개체를 기반으로 <xref:System.Drawing.Graphics> 개체를 만듭니다.  이 코드에서는 두 개의 반투명 브러시\(알파 \= 160\)와 함께 <xref:System.Drawing.Graphics> 개체를 사용하여 비트맵에서 그리고  반투명 브러시를 사용하여 빨강 타원과 녹색 타원을 채웁니다.  녹색 타원은 빨강 타원과 겹치지만 <xref:System.Drawing.Graphics> 개체의 합성 모드가 <xref:System.Drawing.Drawing2D.CompositingMode>로 설정되어 있으므로 빨강과 혼합되지는 않습니다.  
+## <a name="example"></a><span data-ttu-id="abff7-109">예제</span><span class="sxs-lookup"><span data-stu-id="abff7-109">Example</span></span>  
+ <span data-ttu-id="abff7-110">다음 예제에서는 한 <xref:System.Drawing.Graphics> 기반 개체는 <xref:System.Drawing.Bitmap> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-110">The following example creates a <xref:System.Drawing.Graphics> object based on a <xref:System.Drawing.Bitmap> object.</span></span> <span data-ttu-id="abff7-111">코드를 사용 하 여는 <xref:System.Drawing.Graphics> 개체와 두 개의 반투명 브러시 (알파 160 =) 페인트 하는 비트맵을 합니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-111">The code uses the <xref:System.Drawing.Graphics> object along with two semitransparent brushes (alpha = 160) to paint on the bitmap.</span></span> <span data-ttu-id="abff7-112">코드에는 빨간색 타원과 반투명 브러시를 사용 하 여 녹색 타원을 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-112">The code fills a red ellipse and a green ellipse using the semitransparent brushes.</span></span> <span data-ttu-id="abff7-113">녹색 타원 겹치는 빨간색 타원 하지만 때문에 녹색에서 빨간색 혼합 되지는 않습니다의 합성 모드는 <xref:System.Drawing.Graphics> 개체로 설정 되어 <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>합니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-113">The green ellipse overlaps the red ellipse, but the green is not blended with the red because the compositing mode of the <xref:System.Drawing.Graphics> object is set to <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>.</span></span>  
   
- 이 코드에서는 화면에 비트맵을 두 번 그립니다. 한 번은 흰색 배경 위에 비트맵을 그리고 또 한 번은 여러 색으로 된 배경 위에 그립니다.  두 타원의 일부에 속하는 비트맵에 있는 픽셀의 알파 구성 요소는 160이므로 타원이 화면의 배경색과 혼합됩니다.  
+ <span data-ttu-id="abff7-114">코드는 화면에 두 번 비트맵을 그립니다: 한 번 흰색 배경 기반 및 컬러 배경에 한 번입니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-114">The code draws the bitmap on the screen twice: once on a white background and once on a multicolored background.</span></span> <span data-ttu-id="abff7-115">두 타원의 일부인 경우 비트맵의 픽셀 160, 알파 구성 요소가 없으므로 줄임표는 화면의 배경색 배경색과 혼합 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-115">The pixels in the bitmap that are part of the two ellipses have an alpha component of 160, so the ellipses are blended with the background colors on the screen.</span></span>  
   
- 다음 그림에서는 코드 예제를 실행한 결과를 보여 줍니다.  이 그림에서 타원은 배경색과 혼합되지만 타원 서로 간에는 혼합되지 않음을 알 수 있습니다.  
+ <span data-ttu-id="abff7-116">다음 그림에서는 코드 예제의 출력을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-116">The following illustration shows the output of the code example.</span></span> <span data-ttu-id="abff7-117">Note 줄임표, 배경색과 혼합 됩니다 하지만 서로 혼합 된 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-117">Note that the ellipses are blended with the background, but they are not blended with each other.</span></span>  
   
- ![소스 복사본](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
+ <span data-ttu-id="abff7-118">![복사 원본](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")</span><span class="sxs-lookup"><span data-stu-id="abff7-118">![Source Copy](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")</span></span>  
   
- 코드 예제에는 다음 문이 포함되어 있습니다.  
+ <span data-ttu-id="abff7-119">코드 예제에서는이 문이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-119">The code example contains this statement:</span></span>  
   
  [!code-csharp[System.Drawing.AlphaBlending#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.AlphaBlending#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
   
- 타원이 배경색과 혼합될 뿐만 아니라 타원 서로 간에도 혼합되게 하려면 이 문을 다음과 같이 변경합니다.  
+ <span data-ttu-id="abff7-120">백그라운드 뿐 아니라 서로 혼합 타원을 하려는 경우 해당 문을 다음과 변경 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-120">If you want the ellipses to be blended with each other as well as with the background, change that statement to the following:</span></span>  
   
  [!code-csharp[System.Drawing.AlphaBlending#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.AlphaBlending#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
   
- 아래 그림에서는 수정한 코드를 실행한 결과를 보여 줍니다.  
+ <span data-ttu-id="abff7-121">다음 그림에서는 수정 된 코드의 출력을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-121">The following illustration shows the output of the revised code.</span></span>  
   
- ![소스 위에 있음](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
+ <span data-ttu-id="abff7-122">![통해 소스](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")</span><span class="sxs-lookup"><span data-stu-id="abff7-122">![Source Over](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")</span></span>  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="abff7-123">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="abff7-123">Compiling the Code</span></span>  
+ <span data-ttu-id="abff7-124">앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 `e`<xref:System.Windows.Forms.PaintEventHandler>가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="abff7-124">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## 참고 항목  
- <xref:System.Drawing.Color.FromArgb%2A>   
- [선 및 채우기 알파 혼합](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+## <a name="see-also"></a><span data-ttu-id="abff7-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="abff7-125">See Also</span></span>  
+ <xref:System.Drawing.Color.FromArgb%2A>  
+ [<span data-ttu-id="abff7-126">선 및 채우기 알파 혼합</span><span class="sxs-lookup"><span data-stu-id="abff7-126">Alpha Blending Lines and Fills</span></span>](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)

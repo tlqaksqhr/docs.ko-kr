@@ -1,65 +1,68 @@
 ---
-title: "Discovery Proxy 샘플 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Discovery Proxy 샘플"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f16cf2ffc9e03308ce3b8a5e967c29e624ffd1af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Discovery Proxy 샘플
-이 샘플에서는 검색 프록시를 구현하여 기존 서비스에 대한 정보를 저장하는 방법과 클라이언트가 해당 프록시에서 정보를 쿼리하는 방법을 보여 줍니다.이 샘플은 다음의 세 프로젝트로 구성되어 있습니다.  
+# <a name="discovery-proxy-sample"></a><span data-ttu-id="b5344-102">Discovery Proxy 샘플</span><span class="sxs-lookup"><span data-stu-id="b5344-102">Discovery Proxy Sample</span></span>
+<span data-ttu-id="b5344-103">이 샘플에서는 검색 프록시를 구현하여 기존 서비스에 대한 정보를 저장하는 방법과 클라이언트가 해당 프록시에서 정보를 쿼리하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-103">This sample shows how to create an implementation of a Discovery proxy to store information about existing services and how clients can query that proxy for information.</span></span> <span data-ttu-id="b5344-104">이 샘플은 다음의 세 프로젝트로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-104">This sample consists of three projects:</span></span>  
   
--   **Service**: 검색 프록시에 자동으로 등록되는 간단한 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 계산기 서비스입니다.  
+-   <span data-ttu-id="b5344-105">**서비스**: 단순 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 검색 프록시에 자체 등록 하는 계산기 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-105">**Service**: A simple [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] calculator service that registers itself with the discovery proxy.</span></span>  
   
--   **Discovery Proxy**: 검색 프록시 서비스의 구현입니다.  
+-   <span data-ttu-id="b5344-106">**검색 프록시**: 검색 프록시 서비스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-106">**Discovery Proxy**: The implementation of a discovery proxy service.</span></span>  
   
--   **Client**: 검색 프록시를 호출하여 서비스를 검색하는 WCF 클라이언트 응용 프로그램입니다.  
+-   <span data-ttu-id="b5344-107">**클라이언트**: 서비스에 대 한 검색 하려면 검색 프록시를 호출 하는 WCF 클라이언트 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-107">**Client**: A WCF client application that calls the discovery proxy to search for services.</span></span>  
   
-## 세부 항목  
- 검색 프록시 구현  
+## <a name="demonstrates"></a><span data-ttu-id="b5344-108">세부 항목</span><span class="sxs-lookup"><span data-stu-id="b5344-108">Demonstrates</span></span>  
+ <span data-ttu-id="b5344-109">검색 프록시 구현</span><span class="sxs-lookup"><span data-stu-id="b5344-109">Discovery proxy implementation</span></span>  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.계속하기 전에 다음\(기본\) 디렉터리를 확인하십시오.  
+>  <span data-ttu-id="b5344-110">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b5344-111">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="b5344-111">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하십시오.이 샘플은 다음 디렉터리에 있습니다.  
+>  <span data-ttu-id="b5344-112">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="b5344-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b5344-113">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-113">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   
-## DiscoveryProxy  
- Program.cs 파일의 `Main` 메서드에서 이 샘플은 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 형식의 서비스가 호스팅되는 방식을 보여 줍니다.이 샘플에서는 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 형식과 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 형식의 두 끝점을 노출합니다.두 끝점 모두 전송에 TCP를 사용합니다.<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>는 `probeEndpointAddress` 매개 변수로 지정된 URI에서 수신 대기합니다. 클라이언트는 이 URI에서 프로브 메시지를 보내 프록시에서 데이터를 쿼리할 수 있습니다.<xref:System.ServiceModel.Discovery.AnnouncementEndpoint>는 `announcementEndpointAddress` 매개 변수로 지정된 URI에서 수신 대기합니다.프록시는 이 URI에서 알림을 수신 대기합니다.온라인 알림을 받은 경우 프록시는 캐시에 서비스를 추가하고 오프라인 알림을 받은 경우에는 캐시에서 서비스를 제거합니다.  
+## <a name="discoveryproxy"></a><span data-ttu-id="b5344-114">DiscoveryProxy</span><span class="sxs-lookup"><span data-stu-id="b5344-114">DiscoveryProxy</span></span>  
+ <span data-ttu-id="b5344-115">Program.cs 파일의 `Main` 메서드에서 이 샘플은 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 형식의 서비스가 호스팅되는 방식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-115">In the `Main` method of the Program.cs file, the sample shows how a service of type <xref:System.ServiceModel.Discovery.DiscoveryProxy> is hosted.</span></span> <span data-ttu-id="b5344-116">이 샘플에서는 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 형식과 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 형식의 두 끝점을 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-116">It exposes two endpoints, one of type <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> and another of type <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>.</span></span> <span data-ttu-id="b5344-117">두 끝점 모두 전송에 TCP를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-117">Both of the endpoints use TCP as a transport.</span></span> <span data-ttu-id="b5344-118"><xref:System.ServiceModel.Discovery.DiscoveryEndpoint>는 `probeEndpointAddress` 매개 변수로 지정된 URI에서 수신 대기합니다. 클라이언트는 이 URI에서 프로브 메시지를 보내 프록시에서 데이터를 쿼리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-118">The <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> is listening at the URI specified by the `probeEndpointAddress` parameter, this is where clients can send probe messages to query the proxy for its data.</span></span> <span data-ttu-id="b5344-119"><xref:System.ServiceModel.Discovery.AnnouncementEndpoint>는 `announcementEndpointAddress` 매개 변수로 지정된 URI에서 수신 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-119">The <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> is listening at the URI specified by the `announcementEndpointAddress` parameter.</span></span> <span data-ttu-id="b5344-120">프록시는 이 URI에서 알림을 수신 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-120">This is where the proxy listens to for announcements.</span></span> <span data-ttu-id="b5344-121">온라인 알림을 받은 경우 프록시는 캐시에 서비스를 추가하고 오프라인 알림을 받은 경우에는 캐시에서 서비스를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-121">When an online announcement is received, the proxy adds the service to its cache and when an offline announcement is received it removes the service from its cache.</span></span>  
   
- DiscoveryProxy.cs에는 <xref:System.ServiceModel.Discovery.DiscoveryProxy>의 구현이 포함되어 있습니다.프록시는 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase> 클래스에서 상속해야 하며 <xref:System.Runtime.Remoting.Messaging.AsyncResult>의 구현을 필요로 합니다.인스턴스화 시 프록시는 새 <xref:Systems.Collections.Generic.Dictionary%601>를 만들어 알려진 요소를 저장하는 데 사용합니다.  
+ <span data-ttu-id="b5344-122">DiscoveryProxy.cs에는 <xref:System.ServiceModel.Discovery.DiscoveryProxy>의 구현이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-122">The DiscoveryProxy.cs contains the implementation of the <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="b5344-123">프록시는 <xref:System.Object> 클래스에서 상속해야 하며 <xref:System.Runtime.Remoting.Messaging.AsyncResult>의 구현을 필요로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-123">The Proxy must inherit from the <xref:System.Object> class and requires an implementation of <xref:System.Runtime.Remoting.Messaging.AsyncResult>.</span></span> <span data-ttu-id="b5344-124">인스턴스화 시 프록시는 새 <xref:System.Collections.Generic.Dictionary%602>를 만들어 알려진 요소를 저장하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-124">At instantiation, the Proxy creates a new <xref:System.Collections.Generic.Dictionary%602>, which it uses to store elements it knows about.</span></span>  
   
- 파일은 프록시 캐시 메서드와 검색 프록시 구현의 두 영역으로 나뉘어 있습니다.프록시 캐시 메서드 영역에는 <xref:Systems.Collections.Generic.Dictionary%601>를 업데이트하고, <xref:Systems.Collections.Generic.Dictionary%601>에 대한 쿼리를 수행하고, 사용자에게 데이터를 출력하는 데 사용되는 메서드가 포함되어 있습니다.검색 프록시 구현 영역에는 알림 및 프로브 기능에 필요한 재정의된 메서드가 포함되어 있습니다.이러한 메서드는 온라인 알림, 오프라인 알림 또는 프로브 메시지를 받은 후 프록시에서 수행하는 작업을 정의합니다.  
+ <span data-ttu-id="b5344-125">파일은 프록시 캐시 메서드와 검색 프록시 구현의 두 영역으로 나뉘어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-125">The file is divided into two regions, Proxy Cache Methods and Discovery Proxy Implementation.</span></span> <span data-ttu-id="b5344-126">프록시 캐시 메서드 영역에는 <xref:System.Collections.Generic.Dictionary%602>를 업데이트하고, <xref:System.Collections.Generic.Dictionary%602>에 대한 쿼리를 수행하고, 사용자에게 데이터를 출력하는 데 사용되는 메서드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-126">The Proxy Cache Methods region contains methods used to update the <xref:System.Collections.Generic.Dictionary%602>, perform queries against the <xref:System.Collections.Generic.Dictionary%602>, and print the data for users.</span></span> <span data-ttu-id="b5344-127">검색 프록시 구현 영역에는 알림 및 프로브 기능에 필요한 재정의된 메서드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-127">The Discovery Proxy Implementation region contains the overridden methods required for the Announcement and Probe functionality.</span></span> <span data-ttu-id="b5344-128">이러한 메서드는 온라인 알림, 오프라인 알림 또는 프로브 메시지를 받은 후 프록시에서 수행하는 작업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-128">They define the actions taken by a proxy after receiving an Online Announcement, an Offline Announcement, or a Probe message.</span></span>  
   
-## Service  
- Service 프로젝트의 Program.cs 파일에서는 검색 프록시와 동일한 URI가 알림 끝점에 사용됩니다.서비스에서는 알림을 보내는 데 끝점을 사용하는 반면 프록시에서는 알림을 받는 데 끝점을 사용하기 때문입니다.서비스에서는 <xref:System.ServiceModel.Discovery.DiscoveryBehavior>를 사용하고 여기에 알림 끝점을 추가합니다.  
+## <a name="service"></a><span data-ttu-id="b5344-129">서비스</span><span class="sxs-lookup"><span data-stu-id="b5344-129">Service</span></span>  
+ <span data-ttu-id="b5344-130">Service 프로젝트의 Program.cs 파일에서는 검색 프록시와 동일한 URI가 알림 끝점에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-130">In the Program.cs file in the Service project, the same URI is used for its announcement endpoint as the discovery proxy.</span></span> <span data-ttu-id="b5344-131">서비스에서는 알림을 보내는 데 끝점을 사용하는 반면 프록시에서는 알림을 받는 데 끝점을 사용하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-131">This is because service uses the endpoint for sending the announcements, while the proxy uses it for receiving them.</span></span> <span data-ttu-id="b5344-132">서비스에서는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>를 사용하고 여기에 알림 끝점을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-132">The service uses the <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> and adds an announcement endpoint to it.</span></span>  
   
-## Client  
- Client 프로젝트에서는 프록시와 동일한 URI를 프로브 끝점에 사용합니다.이 시나리오의 프로브는 프록시에서 사용할 수 있는 끝점에 대한 유니캐스트가 되기도 하기 때문입니다.클라이언트는 이 잘 알려진 주소에 연결한 다음 이 주소에서 서비스를 쿼리하고,서비스를 찾은 후에는 해당 서비스에 연결합니다.  
+## <a name="client"></a><span data-ttu-id="b5344-133">클라이언트</span><span class="sxs-lookup"><span data-stu-id="b5344-133">Client</span></span>  
+ <span data-ttu-id="b5344-134">Client 프로젝트에서는 프록시와 동일한 URI를 프로브 끝점에 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-134">The Client project uses the same URI for its probe endpoint as the Proxy.</span></span> <span data-ttu-id="b5344-135">이 시나리오의 프로브는 프록시에서 사용할 수 있는 끝점에 대한 유니캐스트가 되기도 하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-135">This is because the probes in this scenario are also being unicast specifically to the endpoint available on the proxy.</span></span> <span data-ttu-id="b5344-136">클라이언트는 이 잘 알려진 주소에 연결한 다음 이 주소에서 서비스를 쿼리하고,</span><span class="sxs-lookup"><span data-stu-id="b5344-136">The Client connects to this well-known address and then queries it for the service.</span></span> <span data-ttu-id="b5344-137">서비스를 찾은 후에는 해당 서비스에 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-137">Once it has found the service it connects to it.</span></span>  
   
-#### 이 샘플을 사용하려면  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="b5344-138">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="b5344-138">To use this sample</span></span>  
   
-1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]에 프로젝트 솔루션을 로드하고 프로젝트를 빌드합니다.  
+1.  <span data-ttu-id="b5344-139">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]에 프로젝트 솔루션을 로드하고 프로젝트를 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-139">Load the project solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and build the project.</span></span>  
   
-2.  먼저 \[solution base directory\]\\DiscoveryProxy\\bin\\debug에 생성된 Discovery Proxy 응용 프로그램을 실행합니다.서비스에서 알림을 보내기 위해서는 TCP 알림 끝점이 작동 상태여야 하므로 Discovery Proxy를 먼저 실행해야 합니다.  
+2.  <span data-ttu-id="b5344-140">먼저 [solution base directory]\DiscoveryProxy\bin\debug에 생성된 Discovery Proxy 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-140">First run the Discovery Proxy application, generated in [solution base directory]\DiscoveryProxy\bin\debug.</span></span> <span data-ttu-id="b5344-141">서비스에서 알림을 보내기 위해서는 TCP 알림 끝점이 작동 상태여야 하므로 Discovery Proxy를 먼저 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-141">The Discovery Proxy must run first because TCP announcement endpoints must be up for the service to send its announcements.</span></span>  
   
-3.  그 다음 \[solution base directory\]\\Service\\bin\\debug에 생성된 서비스 응용 프로그램을 실행합니다.시작 시 이 서비스는 검색 프록시의 알림 끝점에 알림을 보내며 프록시의 캐시에 등록됩니다.  
+3.  <span data-ttu-id="b5344-142">그 다음 [solution base directory]\Service\bin\debug에 생성된 서비스 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-142">Second, run the service application generated in [solution base directory]\Service\bin\debug.</span></span> <span data-ttu-id="b5344-143">시작 시 이 서비스는 검색 프록시의 알림 끝점에 알림을 보내며 프록시의 캐시에 등록됩니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-143">At start-up, the service sends an announcement to the announcement endpoint of the discovery proxy and is registered in the proxy’s cache.</span></span>  
   
-4.  그 다음 \[solution base directory\]\\Client\\bin\\debug에 생성된 클라이언트 응용 프로그램을 실행합니다.클라이언트는 프록시를 쿼리하고 서비스 주소를 가져온 다음 서비스에 연결합니다.  
+4.  <span data-ttu-id="b5344-144">그 다음 [solution base directory]\Client\bin\debug에 생성된 클라이언트 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-144">Next, run the client application, generated in [solution base directory]\Client\bin\debug.</span></span> <span data-ttu-id="b5344-145">클라이언트는 프록시를 쿼리하고 서비스 주소를 가져온 다음 서비스에 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-145">The client queries the proxy, gets the service address and then connects to the service.</span></span>  
   
-5.  마지막으로, 클라이언트, 서비스 및 프록시를 차례로 종료합니다.프록시에서 서비스의 오프라인 알림을 받으려면 프록시가 실행되고 있어야 합니다.  
+5.  <span data-ttu-id="b5344-146">마지막으로, 클라이언트, 서비스 및 프록시를 차례로 종료합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-146">Lastly, terminate the client, service and then the proxy.</span></span> <span data-ttu-id="b5344-147">프록시에서 서비스의 오프라인 알림을 받으려면 프록시가 실행되고 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b5344-147">The proxy must be running for it to receive the service's offline announcement.</span></span>  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="b5344-148">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b5344-148">See Also</span></span>

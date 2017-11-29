@@ -1,24 +1,28 @@
 ---
-title: "상태 시스템 워크플로 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "상태 시스템 워크플로"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 23f903af1bfb63ac5d0b800656e7264d0f9d8b9b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 상태 시스템 워크플로
-순서도는 잘 알려진 프로그램 개발용 패러다임입니다.<xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> 및 기타 활동과 함께 <xref:System.Activities.Statements.StateMachine> 활동은 상태 시스템 워크플로 프로그램을 빌드하는 데 사용할 수 있습니다.이 항목에서는 상태 시스템 워크플로를 만드는 방법에 대해 간략하게 설명합니다.  
+# <a name="state-machine-workflows"></a><span data-ttu-id="fba26-102">상태 시스템 워크플로</span><span class="sxs-lookup"><span data-stu-id="fba26-102">State Machine Workflows</span></span>
+<span data-ttu-id="fba26-103">상태 시스템은 잘 알려진 프로그램 개발용 패러다임입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-103">A state machine is a well-known paradigm for developing programs.</span></span> <span data-ttu-id="fba26-104"><xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 기타 작업과 함께 <xref:System.Activities.Statements.Transition> 활동은 상태 시스템 워크플로 프로그램을 빌드하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-104">The <xref:System.Activities.Statements.StateMachine> activity, along with <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, and other activities can be used to build state machine workflow programs.</span></span> <span data-ttu-id="fba26-105">이 항목에서는 상태 시스템 워크플로를 만드는 방법에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-105">This topic provides an overview of creating state machine workflows.</span></span>  
   
-## 상태 시스템 워크플로 서비스 개요  
- 상태 시스템 워크플로는 이벤트 구동 방식으로 워크플로를 모델링할 수 있는 모델링 스타일을 제공합니다.<xref:System.Activities.Statements.StateMachine> 활동에는 상태 시스템의 논리를 구성하는 상태 및 전환이 포함되어 있으므로 활동을 사용할 수 있는 모든 위치에서 사용할 수 있습니다.상태 시스템 런타임에는 다음과 같은 클래스가 있습니다.  
+## <a name="state-machine-workflow-overview"></a><span data-ttu-id="fba26-106">상태 시스템 워크플로 서비스 개요</span><span class="sxs-lookup"><span data-stu-id="fba26-106">State Machine Workflow Overview</span></span>  
+ <span data-ttu-id="fba26-107">상태 시스템 워크플로는 이벤트 구동 방식으로 워크플로를 모델링할 수 있는 모델링 스타일을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-107">State machine workflows provide a modeling style with which you can model your workflow in an event-driven manner.</span></span> <span data-ttu-id="fba26-108"><xref:System.Activities.Statements.StateMachine> 활동에는 상태 시스템의 논리를 구성하는 상태 및 전환이 포함되어 있으므로 활동을 사용할 수 있는 모든 위치에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-108">A <xref:System.Activities.Statements.StateMachine> activity contains the states and transitions that make up the logic of the state machine, and can be used anywhere an activity can be used.</span></span> <span data-ttu-id="fba26-109">상태 시스템 런타임에는 다음과 같은 클래스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-109">There are several classes in the state machine runtime:</span></span>  
   
 -   <xref:System.Activities.Statements.StateMachine>  
   
@@ -26,88 +30,88 @@ caps.handback.revision: 16
   
 -   <xref:System.Activities.Statements.Transition>  
   
- 상태 시스템 워크플로를 만들기 위해 상태가 <xref:System.Activities.Statements.StateMachine> 활동에 추가되고 상태 간 흐름을 제어하기 위해 전환이 사용됩니다.[초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)의 단계 [방법: 상태 시스템 워크플로 만들기](../../../docs/framework/windows-workflow-foundation//how-to-create-a-state-machine-workflow.md)에서의 다음 스크린 샷은 세 가지 상태 및 세 가지 전환을 사용하는 상태 시스템 워크플로를 보여 줍니다.**Initialize Target**은 초기 상태로 워크플로에서 첫 번째 상태를 나타냅니다.이 상태는 **시작** 노드에서 해당 상태로 이끄는 선으로 지정됩니다.워크플로의 최종 상태는 **FinalState**라고 하며 워크플로가 완료되는 지점을 나타냅니다.  
+ <span data-ttu-id="fba26-110">상태 시스템 워크플로를 만들기 위해 상태가 <xref:System.Activities.Statements.StateMachine> 활동에 추가되고 상태 간 흐름을 제어하기 위해 전환이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-110">To create a state machine workflow, states are added to a <xref:System.Activities.Statements.StateMachine> activity, and transitions are used control the flow between states.</span></span> <span data-ttu-id="fba26-111">다음 스크린 샷에서에서 [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) 단계 [하는 방법: 상태 시스템 워크플로 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), 세 가지 상태와 세 개의 전환 상태 시스템 워크플로 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-111">The following screenshot, from the [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) step [How to: Create a State Machine Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), shows a state machine workflow with three states and three transitions.</span></span> <span data-ttu-id="fba26-112">**Initialize Target** 워크플로의 첫 번째 상태를 나타내고 초기 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-112">**Initialize Target** is the initial state and represents the first state in the workflow.</span></span> <span data-ttu-id="fba26-113">상태로 이끄는 선으로 지정 된이 **시작** 노드.</span><span class="sxs-lookup"><span data-stu-id="fba26-113">This is designated by the line leading to it from the **Start** node.</span></span> <span data-ttu-id="fba26-114">워크플로에 최종 상태 라고 **FinalState**, 워크플로가 완료 되는 지점을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-114">The final state in the workflow is named **FinalState**, and represents the point at which the workflow is completed.</span></span>  
   
- ![완료된 상태 시스템 워크플로](../../../docs/framework/windows-workflow-foundation//media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ <span data-ttu-id="fba26-115">![완료 된 상태 시스템 워크플로](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")</span><span class="sxs-lookup"><span data-stu-id="fba26-115">![Completed State Machine Workflow](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")</span></span>  
   
- 상태 시스템 워크플로에는 하나의 초기 상태만 있어야 하며 하나 이상의 최종 상태가 있어야 합니다.최종 상태가 아닌 각 상태에는 적어도 하나 이상의 전환이 있어야 합니다.다음 단원에는 상태 및 전환을 만들고 구성하는 방법에 대해 설명합니다.  
+ <span data-ttu-id="fba26-116">상태 시스템 워크플로에는 하나의 초기 상태만 있어야 하며 하나 이상의 최종 상태가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-116">A state machine workflow must have one and only one initial state, and at least one final state.</span></span> <span data-ttu-id="fba26-117">최종 상태가 아닌 각 상태에는 적어도 하나 이상의 전환이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-117">Each state that is not a final state must have at least one transition.</span></span> <span data-ttu-id="fba26-118">다음 단원에는 상태 및 전환을 만들고 구성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-118">The following sections cover creating and configuring states and transitions.</span></span>  
   
-## 상태 만들기 및 구성  
- <xref:System.Activities.Statements.State>는 상태 시스템이 처할 수 있는 상태를 나타냅니다.<xref:System.Activities.Statements.State>를 워크플로에 추가하려면 **도구 상자**의 **시스템 상태** 섹션에서 **State** 활동 디자이너를 끌어 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 화면의 <xref:System.Activities.Statements.StateMachine> 활동에 놓습니다.  
+## <a name="creating-and-configuring-states"></a><span data-ttu-id="fba26-119">상태 만들기 및 구성</span><span class="sxs-lookup"><span data-stu-id="fba26-119">Creating and Configuring States</span></span>  
+ <span data-ttu-id="fba26-120"><xref:System.Activities.Statements.State>는 상태 시스템이 가질 수 있는 상태를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-120">A <xref:System.Activities.Statements.State> represents a state in which a state machine can be in.</span></span> <span data-ttu-id="fba26-121">추가 하는 <xref:System.Activities.Statements.State> 워크플로로 드래그는 **상태** 활동 디자이너를는 **상태 시스템** 의 섹션은 **도구 상자** 놓습니다는 <xref:System.Activities.Statements.StateMachine> 활동에는 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 화면입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-121">To add a <xref:System.Activities.Statements.State> to a workflow, drag the **State** activity designer from the **State Machine** section of the **Toolbox** and drop it onto a <xref:System.Activities.Statements.StateMachine> activity on the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] surface.</span></span>  
   
- ![WF4 정적 컴퓨터 활동](../../../docs/framework/windows-workflow-foundation//media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ <span data-ttu-id="fba26-122">![WF4 상태 시스템 활동](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")</span><span class="sxs-lookup"><span data-stu-id="fba26-122">![WF4 State Machine Activities](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")</span></span>  
   
- 상태를 **초기 상태**로 구성하려면 상태를 마우스 오른쪽 단추로 클릭하고 **초기 상태로 설정**을 선택합니다.또한 현재 초기 상태가 없을 경우 워크플로의 맨 위에 있는 **시작** 노드에서 원하는 상태로 선을 끌어 지정할 수 있습니다.<xref:System.Activities.Statements.StateMachine> 활동을 Workflow Designer에 놓으면 **State1**이라는 초기 상태로 사전 구성됩니다.상태 시스템 워크플로에는 하나의 초기 상태만 있어야 합니다.  
+ <span data-ttu-id="fba26-123">상태를 구성 하는 **초기 상태**상태를 마우스 오른쪽 단추로 클릭 하 고 선택 **초기 상태로 설정**합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-123">To configure a state as the **Initial State**, right-click the state and select **Set as Initial State**.</span></span> <span data-ttu-id="fba26-124">또한 현재 초기 상태가 없는 경우 초기 상태로 지정할 수 있습니다 선을 끌어는 **시작** 원하는 상태로 워크플로 맨 위에 있는 노드.</span><span class="sxs-lookup"><span data-stu-id="fba26-124">Additionally, if there is no current initial state, the initial state can be designated by dragging a line from the **Start** node at the top of the workflow to the desired state.</span></span> <span data-ttu-id="fba26-125">경우는 <xref:System.Activities.Statements.StateMachine> 이라는 초기 상태로 사전 구성 됩니다, 활동을 워크플로 디자이너에 끌어 **State1**합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-125">When a <xref:System.Activities.Statements.StateMachine> activity is dropped onto the workflow designer, it is pre-configured with an initial state named **State1**.</span></span> <span data-ttu-id="fba26-126">상태 시스템 워크플로에는 하나의 초기 상태만 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-126">A state machine workflow must have one and only one initial state.</span></span>  
   
- 상태 시스템에서 종료 상태를 나타내는 상태를 최종 상태라고 합니다.최종 상태는 <xref:System.Activities.Statements.State.IsFinal%2A> 속성이 `true`로 설정되어 있고, <xref:System.Activities.Statements.State.Exit%2A> 활동이 없으며, 활동에서 발생되는 전환이 없는 상태입니다.워크플로에 최종 상태를 추가하려면 **도구 상자**의 **상태 시스템** 섹션에서 **FinalState** 활동 디자이너를 끌어 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 화면의 <xref:System.Activities.Statements.StateMachine> 활동에 놓습니다.상태 시스템 워크플로에는 하나 이상의 최종 상태가 있어야 합니다.  
+ <span data-ttu-id="fba26-127">상태 시스템에서 종료 상태를 나타내는 상태를 최종 상태라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-127">A state that represents a terminating state in a state machine is called a final state.</span></span> <span data-ttu-id="fba26-128">최종 상태는 <xref:System.Activities.Statements.State.IsFinal%2A> 속성이 `true`로 설정되어 있고, <xref:System.Activities.Statements.State.Exit%2A> 활동이 없으며, 작업에서 발생되는 전환이 없는 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-128">A final state is a state that has its <xref:System.Activities.Statements.State.IsFinal%2A> property set to `true`, has no <xref:System.Activities.Statements.State.Exit%2A> activity, and no transitions originating from it.</span></span> <span data-ttu-id="fba26-129">워크플로에 최종 상태를 추가 하려면 끌어는 **FinalState** 활동 디자이너를는 **상태 시스템** 의 섹션은 **도구 상자** 놓습니다는 <xref:System.Activities.Statements.StateMachine> 활동에 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 화면입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-129">To add a final state to a workflow, drag a **FinalState** activity designer from the **State Machine** section of the **Toolbox** and drop it onto a <xref:System.Activities.Statements.StateMachine> activity on the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] surface.</span></span> <span data-ttu-id="fba26-130">상태 시스템 워크플로에는 하나 이상의 최종 상태가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-130">A state machine workflow must have at least one final state.</span></span>  
   
-### Entry 및 Exit 작업 구성  
- 상태에는 <xref:System.Activities.Statements.State.Entry%2A> 및 <xref:System.Activities.Statements.State.Exit%2A> 작업을 사용할 수 있습니다.최종 상태로 구성된 상태에는 진입 작업만 있어야 합니다.워크플로 인스턴스가 특정 상태에 들어가면 진입 작업의 모든 활동이 실행됩니다.진입 작업이 완료되면 상태의 전환에 대한 트리거가 예정됩니다.다른 상태로의 전환이 확정되면 상태가 동일한 상태로 다시 전환되어도 종료 작업의 활동이 실행됩니다.종료 작업이 완료된 후 전환 작업의 활동이 실행된 후 새로운 상태가 전환되고, 해당 진입 작업이 예정됩니다.  
-  
-> [!NOTE]
->  상태 시스템 워크플로를 디버깅하면 중단점을 루트 상태 시스템 활동 및 상태 시스템 워크플로 내의 상태에 배치할 수 있습니다.중단점은 전환에 직접 배치할 수는 없지만 상태 및 전환 내에 포함된 모든 활동에 배치할 수 있습니다.  
-  
-## 전환 만들기 및 구성  
- 전환이 없을지도 모르는 최종 상태를 제외하고 모든 상태에는 하나 이상의 전환이 있어야 합니다.상태를 상태 시스템 워크플로에 추가한 후에 전환이 추가되거나 상태를 놓을 때 전환이 만들어질 수 있습니다.  
-  
- 한번에 <xref:System.Activities.Statements.State>를 추가하고 전환을 만들려면 **도구 상자**의 **상태 시스템** 섹션에서 **State** 활동을 끌어 Workflow Designer의 다른 상태 위로 가져갑니다.끌어 온 <xref:System.Activities.Statements.State>를 다른 <xref:System.Activities.Statements.State> 위로 가져가면 <xref:System.Activities.Statements.State> 주위에 삼각형 4개가 표시됩니다.<xref:System.Activities.Statements.State>를 삼각형 4개 중 하나에 놓으면 상태 시스템에 추가되고, 소스 <xref:System.Activities.Statements.State>에서 놓은 대상 <xref:System.Activities.Statements.State>로의 전환이 만들어집니다. 자세한 내용은 [전환 활동 디자이너](../Topic/Transition%20Activity%20Designer.md)를 참조하십시오.  
-  
- 상태를 추가한 후에 전환을 만들려면 다음과 같은 두 가지 옵션이 있습니다.첫 번째 옵션은 Workflow Designer 화면에서 상태를 끌어 기존 상태 위로 가져간 다음 놓기 지점 중 하나에 놓는 것입니다.이 옵션은 이전 단원에서 설명한 메서드와 매우 비슷합니다.마우스를 원하는 소스 상태 위로 가져가 원하는 대상 상태로 선을 끌 수도 있습니다.  
+### <a name="configuring-entry-and-exit-actions"></a><span data-ttu-id="fba26-131">Entry 및 Exit 작업 구성</span><span class="sxs-lookup"><span data-stu-id="fba26-131">Configuring Entry and Exit Actions</span></span>  
+ <span data-ttu-id="fba26-132">상태에는 <xref:System.Activities.Statements.State.Entry%2A> 및 <xref:System.Activities.Statements.State.Exit%2A> 작업을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-132">A state can have an <xref:System.Activities.Statements.State.Entry%2A> and an <xref:System.Activities.Statements.State.Exit%2A> action.</span></span> <span data-ttu-id="fba26-133">최종 상태로 구성된 상태에는 진입 작업만 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-133">(A state configured as a final state may have only an entry action).</span></span> <span data-ttu-id="fba26-134">워크플로 인스턴스가 특정 상태에 들어가면 진입 작업의 모든 활동이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-134">When a workflow instance enters a state, any activities in the entry action execute.</span></span> <span data-ttu-id="fba26-135">진입 작업이 완료되면 상태의 전환에 대한 트리거가 예정됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-135">When the entry action is complete, the triggers for the state’s transitions are scheduled.</span></span> <span data-ttu-id="fba26-136">다른 상태로의 전환이 확정되면 상태가 동일한 상태로 다시 전환되어도 종료 작업의 활동이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-136">When a transition to another state is confirmed, the activities in the exit action are executed, even if the state transitions back to the same state.</span></span> <span data-ttu-id="fba26-137">종료 작업이 완료된 후 전환 작업의 활동이 실행된 후 새로운 상태가 전환되고, 해당 진입 작업이 예정됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-137">After the exit action completes, the activities in the transition’s action execute, and then the new state is transitioned to, and its entry actions are scheduled.</span></span>  
   
 > [!NOTE]
->  상태 시스템에서 하나의 상태는 Workflow Designer를 사용하여 만들어지는 전환을 76개까지 사용할 수 있습니다.디자이너 밖에서 만들어지는 워크플로 상태의 전환에 대한 제한은 시스템 리소스로만 제한됩니다.  
+>  <span data-ttu-id="fba26-138">상태 시스템 워크플로를 디버깅하면 중단점을 루트 상태 시스템 활동 및 상태 시스템 워크플로 내의 상태에 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-138">When debugging a state machine workflow, breakpoints can be placed on the root state machine activity and states within the state machine workflow.</span></span> <span data-ttu-id="fba26-139">중단점은 전환에 직접 배치할 수는 없지만 상태 및 전환 내에 포함된 모든 활동에 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-139">Breakpoints may not be placed directly on the transitions, but they may be placed on any activities contained within the states and transitions.</span></span>  
   
- 전환에는 <xref:System.Activities.Statements.Transition.Trigger%2A>, <xref:System.Activities.Statements.Transition.Condition%2A> 및 <xref:System.Activities.Statements.Transition.Action%2A>이 포함될 수 있습니다.전환의 소스 상태의 <xref:System.Activities.Statements.State.Entry%2A> 작업이 완료되면 전환의 <xref:System.Activities.Statements.Transition.Trigger%2A>가 예정됩니다.일반적으로 <xref:System.Activities.Statements.Transition.Trigger%2A>는 다른 형식의 이벤트가 발생할 때까지 대기하는 활동이지만, 어떤 활동이 될 수도 있고, 아무 활동도 아닐 수도 있습니다.<xref:System.Activities.Statements.Transition.Trigger%2A> 활동이 완료되면 <xref:System.Activities.Statements.Transition.Condition%2A>이 있을 경우 확인합니다.<xref:System.Activities.Statements.Transition.Trigger%2A> 활동이 없을 경우 <xref:System.Activities.Statements.Transition.Condition%2A>을 바로 확인합니다.조건이 `false`로 확인되면 전환이 취소되고, 해당 상태로부터의 모든 전환에 대해<xref:System.Activities.Statements.Transition.Trigger%2A> 활동이 다시 예정됩니다.현재 전환과 동일한 소스 상태를 공유하는 다른 전환이 있을 경우 해당 <xref:System.Activities.Statements.Transition.Trigger%2A> 작업이 취소되고 다시 예정됩니다.<xref:System.Activities.Statements.Transition.Condition%2A>이 `true`로 확인되거나 조건이 없을 경우 소스 상태의 <xref:System.Activities.Statements.State.Exit%2A> 작업이 실행된 다음 전환의 <xref:System.Activities.Statements.Transition.Action%2A>이 실행됩니다.<xref:System.Activities.Statements.Transition.Action%2A>이 완료되면 제어는 **대상** 상태로 넘어갑니다.  
+## <a name="creating-and-configuring-transitions"></a><span data-ttu-id="fba26-140">전환 만들기 및 구성</span><span class="sxs-lookup"><span data-stu-id="fba26-140">Creating and Configuring Transitions</span></span>  
+ <span data-ttu-id="fba26-141">전환이 없을지도 모르는 최종 상태를 제외하고 모든 상태에는 하나 이상의 전환이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-141">All states must have at least one transition, except for a final state which may not have any transitions.</span></span> <span data-ttu-id="fba26-142">상태를 상태 시스템 워크플로에 추가한 후에 전환이 추가되거나 상태를 놓을 때 전환이 만들어질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-142">Transitions may be added after a state is added to a state machine workflow, or they can be created as the state is dropped.</span></span>  
   
- 공용 트리거를 공유하는 전환을 공유 트리거 전환이라고 합니다.공유 트리거 전환 그룹의 각 전환에는 동일한 트리거를 사용하지만 고유한 <xref:System.Activities.Statements.Transition.Condition%2A> 및 Action을 사용합니다.전환에 추가 작업을 추가하고 공유 전환을 만들려면 원하는 전환의 시작을 나타내는 원을 클릭하고 원하는 상태로 끕니다.새 전환은 초기 전환과 동일한 트리거를 공유하지만 고유한 조건과 작업을 사용합니다.공유 전환은 전환 디자이너의 아래쪽에서 **공유 트리거 전환 추가**를 클릭한 다음 **연결할 사용 가능한 상태** 드롭다운에서 원하는 대상 상태를 선택하여 전환 디자이너에서도 만들 수 있습니다.  
+ <span data-ttu-id="fba26-143">추가 하는 <xref:System.Activities.Statements.State> 한꺼번에 끌어서 전환을 만들려면는 **상태** 활동을는 **상태 시스템** 섹션은 **도구 상자** 의 다른 상태 위로 가져갑니다 워크플로 디자이너입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-143">To add a <xref:System.Activities.Statements.State> and create a transition in one step, drag a **State** activity from the **State Machine** section of the **Toolbox** and hover it over another state in the workflow designer.</span></span> <span data-ttu-id="fba26-144">끌어 온 <xref:System.Activities.Statements.State>를 다른 <xref:System.Activities.Statements.State> 위로 가져가면 <xref:System.Activities.Statements.State> 주위에 삼각형 4개가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-144">When the dragged <xref:System.Activities.Statements.State> is over another <xref:System.Activities.Statements.State>, four triangles will appear around the other <xref:System.Activities.Statements.State>.</span></span> <span data-ttu-id="fba26-145"><xref:System.Activities.Statements.State>를 삼각형 4개 중 하나에 놓으면 상태 시스템에 추가되고, 소스 <xref:System.Activities.Statements.State>에서 놓은 대상 <xref:System.Activities.Statements.State>로의 전환이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-145">If the <xref:System.Activities.Statements.State> is dropped onto one of the four triangles, it is added to the state machine and a transition is created from the source <xref:System.Activities.Statements.State> to the dropped destination <xref:System.Activities.Statements.State>.</span></span> <span data-ttu-id="fba26-146">자세한 내용은 참조 [전환 활동 디자이너](/visualstudio/workflow-designer/transition-activity-designer)합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-146">For more information, see [Transition Activity Designer](/visualstudio/workflow-designer/transition-activity-designer).</span></span>  
+  
+ <span data-ttu-id="fba26-147">상태를 추가한 후에 전환을 만들려면 다음과 같은 두 가지 옵션이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-147">To create a transition after a state is added, there are two options.</span></span> <span data-ttu-id="fba26-148">첫 번째 옵션은 Workflow Designer 화면에서 상태를 끌어 기존 상태 위로 가져간 다음 놓기 지점 중 하나에 놓는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-148">The first option is to drag the state from the workflow designer surface and hover it over an existing state and drop it on one of the drop points.</span></span> <span data-ttu-id="fba26-149">이 옵션은 이전 단원에서 설명한 메서드와 매우 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-149">This is very similar to the method described in the previous section.</span></span> <span data-ttu-id="fba26-150">마우스를 원하는 소스 상태 위로 가져가 원하는 대상 상태로 선을 끌 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-150">You can also hover the mouse over the desired source state, and drag a line to the desired destination state.</span></span>  
   
 > [!NOTE]
->  전환의 <xref:System.Activities.Statements.Transition.Condition%2A>가 `False`가 되거나 모든 공유 트리거 전환 조건이 `False`가 되는 경우, 전환이 일어나지 않으며 해당 상태로부터의 모든 전환에 대한 모든 트리거가 다시 예정됩니다.  
+>  <span data-ttu-id="fba26-151">상태 시스템에서 하나의 상태는 Workflow Designer를 사용하여 만들어지는 전환을 76개까지 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-151">A single state in a state machine can have up to 76 transitions created using the workflow designer.</span></span> <span data-ttu-id="fba26-152">디자이너 밖에서 만들어지는 워크플로 상태의 전환에 대한 제한은 시스템 리소스로만 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-152">The limit on transitions for a state for workflows created outside the designer is limited only by system resources.</span></span>  
   
- 상태 시스템 워크플로에 대한 자세한 내용은 [방법: 상태 시스템 워크플로 만들기](../../../docs/framework/windows-workflow-foundation//how-to-create-a-state-machine-workflow.md), [StateMachine 활동 디자이너](../Topic/StateMachine%20Activity%20Designer.md), [상태 활동 디자이너](../Topic/State%20Activity%20Designer.md), [FinalState 활동 디자이너](../Topic/FinalState%20Activity%20Designer.md) 및 [전환 활동 디자이너](../Topic/Transition%20Activity%20Designer.md)를 참조하십시오.  
+ <span data-ttu-id="fba26-153">전환에는 <xref:System.Activities.Statements.Transition.Trigger%2A>, <xref:System.Activities.Statements.Transition.Condition%2A> 및 <xref:System.Activities.Statements.Transition.Action%2A>이 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-153">A transition may have a <xref:System.Activities.Statements.Transition.Trigger%2A>, a <xref:System.Activities.Statements.Transition.Condition%2A>, and an <xref:System.Activities.Statements.Transition.Action%2A>.</span></span> <span data-ttu-id="fba26-154">전환의 소스 상태의 <xref:System.Activities.Statements.Transition.Trigger%2A> 작업이 완료되면 전환의 <xref:System.Activities.Statements.State.Entry%2A>가 예정됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-154">A transition’s <xref:System.Activities.Statements.Transition.Trigger%2A> is scheduled when the transition’s source state’s <xref:System.Activities.Statements.State.Entry%2A> action is complete.</span></span> <span data-ttu-id="fba26-155">일반적으로 <xref:System.Activities.Statements.Transition.Trigger%2A>는 다른 형식의 이벤트가 발생할 때까지 대기하는 활동이지만, 어떤 활동이 될 수도 있고, 아무 활동도 아닐 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-155">Typically the <xref:System.Activities.Statements.Transition.Trigger%2A> is an activity that waits for some type of event to occur, but it can be any activity, or no activity at all.</span></span> <span data-ttu-id="fba26-156"><xref:System.Activities.Statements.Transition.Trigger%2A> 활동이 완료되면 <xref:System.Activities.Statements.Transition.Condition%2A>이 있을 경우 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-156">Once the <xref:System.Activities.Statements.Transition.Trigger%2A> activity is complete, the <xref:System.Activities.Statements.Transition.Condition%2A>, if present, is evaluated.</span></span> <span data-ttu-id="fba26-157"><xref:System.Activities.Statements.Transition.Trigger%2A> 활동이 없을 경우 <xref:System.Activities.Statements.Transition.Condition%2A>을 바로 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-157">If there is no <xref:System.Activities.Statements.Transition.Trigger%2A> activity then the <xref:System.Activities.Statements.Transition.Condition%2A> is immediately evaluated.</span></span> <span data-ttu-id="fba26-158">조건이 `false`로 확인되면 전환이 취소되고, 해당 상태로부터의 모든 전환에 대해<xref:System.Activities.Statements.Transition.Trigger%2A> 활동이 다시 예정됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-158">If the condition evaluates to `false`, the transition is cancelled, and the <xref:System.Activities.Statements.Transition.Trigger%2A> activity for all transitions from the state are rescheduled.</span></span> <span data-ttu-id="fba26-159">현재 전환과 동일한 소스 상태를 공유하는 다른 전환이 있을 경우 해당 <xref:System.Activities.Statements.Transition.Trigger%2A> 작업이 취소되고 다시 예정됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-159">If there are other transitions that share the same source state as the current transition, those <xref:System.Activities.Statements.Transition.Trigger%2A> actions are cancelled and rescheduled as well.</span></span> <span data-ttu-id="fba26-160"><xref:System.Activities.Statements.Transition.Condition%2A>이 `true`로 확인되거나 조건이 없을 경우 소스 상태의 <xref:System.Activities.Statements.State.Exit%2A> 작업이 실행된 다음 전환의 <xref:System.Activities.Statements.Transition.Action%2A>이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-160">If the <xref:System.Activities.Statements.Transition.Condition%2A> evaluates to `true`, or there is no condition, then the <xref:System.Activities.Statements.State.Exit%2A> action of the source state is executed, and then the <xref:System.Activities.Statements.Transition.Action%2A> of the transition is executed.</span></span> <span data-ttu-id="fba26-161">경우는 <xref:System.Activities.Statements.Transition.Action%2A> 완료 되 면 제어가 전달는 **대상** 상태</span><span class="sxs-lookup"><span data-stu-id="fba26-161">When the <xref:System.Activities.Statements.Transition.Action%2A> completes, control passes to the **Target** state</span></span>  
   
-## 상태 시스템 용어  
- 이 단원에서는 이 항목의 전체에서 사용되는 상태 시스템 어휘를 정의합니다.  
+ <span data-ttu-id="fba26-162">공용 트리거를 공유하는 전환을 공유 트리거 전환이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-162">Transitions that share a common trigger are known as shared trigger transitions.</span></span> <span data-ttu-id="fba26-163">공유 트리거 전환 그룹의 각 전환에는 동일한 트리거를 사용하지만 고유한 <xref:System.Activities.Statements.Transition.Condition%2A> 및 Action을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-163">Each transition in a group of shared trigger transitions has the same trigger, but a unique <xref:System.Activities.Statements.Transition.Condition%2A> and Action.</span></span> <span data-ttu-id="fba26-164">전환에 추가 작업을 추가하고 공유 전환을 만들려면 원하는 전환의 시작을 나타내는 원을 클릭하고 원하는 상태로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-164">To add additional actions to a transition and create a shared transition, click the circle that indicates the start of the desired transition and drag it to the desired state.</span></span> <span data-ttu-id="fba26-165">새 전환은 초기 전환과 동일한 트리거를 공유하지만 고유한 조건과 작업을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-165">The new transition will share a same trigger as the initial transition, but it will have a unique condition and action.</span></span> <span data-ttu-id="fba26-166">공유 전환을 만들 수도 있습니다에서 전환 디자이너 내에서 클릭 하 여 **공유 트리거 전환 추가** 전환 디자이너 한 다음 원하는 대상 상태를 선택 하 고 맨 아래에  **연결에 사용할 상태** 드롭 다운 합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-166">Shared transitions can also be created from within the transition designer by clicking **Add shared trigger transition** at the bottom of the transition designer, and then selecting the desired target state from the **Available states to connect** drop-down.</span></span>  
   
- 상태  
- 상태 시스템을 구성하는 기본 단위입니다.상태 시스템은 특정 시간에 한 상태로 있을 수 있습니다.  
+> [!NOTE]
+>  <span data-ttu-id="fba26-167">전환의 <xref:System.Activities.Statements.Transition.Condition%2A>이 `False`가 되거나 모든 공유 트리거 전환 조건이 `False`가 되는 경우에는 전환이 일어나지 않으며 해당 상태로부터의 모든 전환에 대한 모든 트리거가 다시 예약됩니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-167">Note that if the <xref:System.Activities.Statements.Transition.Condition%2A> of a transition evaluates to `False` (or all of the conditions of a shared trigger transition evaluate to `False`), the transition will not occur and all triggers for all the transitions from the state will be rescheduled.</span></span>  
   
- 진입 작업  
- 상태로 들어갈 때 실행되는 활동입니다.  
+ <span data-ttu-id="fba26-168">상태 시스템 워크플로 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 상태 시스템 워크플로 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), [StateMachine 활동 디자이너](/visualstudio/workflow-designer/statemachine-activity-designer), [상태 활동 디자이너](/visualstudio/workflow-designer/state-activity-designer), [FinalState 활동 디자이너](/visualstudio/workflow-designer/finalstate-activity-designer), 및 [활동 디자이너를 전환](/visualstudio/workflow-designer/transition-activity-designer)합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-168">For more information on creating state machine workflows, see [How to: Create a State Machine Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), [StateMachine Activity Designer](/visualstudio/workflow-designer/statemachine-activity-designer), [State Activity Designer](/visualstudio/workflow-designer/state-activity-designer), [FinalState Activity Designer](/visualstudio/workflow-designer/finalstate-activity-designer), and [Transition Activity Designer](/visualstudio/workflow-designer/transition-activity-designer).</span></span>  
   
- 종료 작업  
- 상태를 나갈 때 실행되는 활동입니다.  
+## <a name="state-machine-terminology"></a><span data-ttu-id="fba26-169">상태 시스템 용어</span><span class="sxs-lookup"><span data-stu-id="fba26-169">State Machine Terminology</span></span>  
+ <span data-ttu-id="fba26-170">이 단원에서는 이 항목의 전체에서 사용되는 상태 시스템 용어 모음을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-170">This section defines the state machine vocabulary used throughout this topic.</span></span>  
   
- 전환  
- 두 상태 사이의 리디렉션된 관계로, 특정 형식의 이벤트 발생에 대한 상태 시스템의 전체 응답을 나타냅니다.  
+ <span data-ttu-id="fba26-171">상태</span><span class="sxs-lookup"><span data-stu-id="fba26-171">State</span></span>  
+ <span data-ttu-id="fba26-172">상태 시스템을 구성하는 기본 단위입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-172">The basic unit that composes a state machine.</span></span> <span data-ttu-id="fba26-173">상태 시스템은 특정 시간에 한 상태로 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-173">A state machine can be in one state at any particular time.</span></span>  
   
- 공유 전환  
- 소스 상태와 하나 이상의 전환이 있는 트리거를 공유하는 전환이지만, 고유한 조건과 작업을 사용합니다.  
+ <span data-ttu-id="fba26-174">진입 작업</span><span class="sxs-lookup"><span data-stu-id="fba26-174">Entry Action</span></span>  
+ <span data-ttu-id="fba26-175">상태로 들어갈 때 실행되는 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-175">An activity executed when entering the state</span></span>  
   
- 트리거  
- 전환을 발생시키는 트리거 활동입니다.  
+ <span data-ttu-id="fba26-176">종료 작업</span><span class="sxs-lookup"><span data-stu-id="fba26-176">Exit Action</span></span>  
+ <span data-ttu-id="fba26-177">상태를 나갈 때 실행되는 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-177">An activity executed when exiting the state</span></span>  
   
- 조건  
- 전환을 완료하기 위해 트리거가 발생한 후에 `true`로 확인되어야 하는 제한 조건입니다.  
+ <span data-ttu-id="fba26-178">전환</span><span class="sxs-lookup"><span data-stu-id="fba26-178">Transition</span></span>  
+ <span data-ttu-id="fba26-179">두 상태 사이의 리디렉션된 관계로, 특정 형식의 이벤트 발생에 대한 상태 시스템의 전체 응답을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-179">A directed relationship between two states which represents the complete response of a state machine to an occurrence of an event of a particular type.</span></span>  
   
- 전환 작업  
- 특정 전환을 수행할 때 실행되는 활동입니다.  
+ <span data-ttu-id="fba26-180">공유 전환</span><span class="sxs-lookup"><span data-stu-id="fba26-180">Shared Transition</span></span>  
+ <span data-ttu-id="fba26-181">소스 상태와 하나 이상의 전환이 있는 트리거를 공유하는 전환이지만, 고유한 조건과 작업을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-181">A transition that shares a source state and trigger with one or more transitions, but has a unique condition and action.</span></span>  
   
- 조건부 전환  
- 명시적 조건을 가진 전환입니다.  
+ <span data-ttu-id="fba26-182">트리거</span><span class="sxs-lookup"><span data-stu-id="fba26-182">Trigger</span></span>  
+ <span data-ttu-id="fba26-183">전환을 발생시키는 트리거 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-183">A triggering activity that causes a transition to occur.</span></span>  
   
- 자체 전환  
- 한 상태에서 자신으로 전환하는 전환입니다.  
+ <span data-ttu-id="fba26-184">조건</span><span class="sxs-lookup"><span data-stu-id="fba26-184">Condition</span></span>  
+ <span data-ttu-id="fba26-185">전환을 완료하기 위해 트리거가 발생한 후에 `true`로 확인되어야 하는 제한 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-185">A constraint which must evaluate to `true` after the trigger occurs in order for the transition to complete.</span></span>  
   
- 초기 상태  
- 상태 시스템의 시작점을 나타내는 상태입니다.  
+ <span data-ttu-id="fba26-186">전환 작업</span><span class="sxs-lookup"><span data-stu-id="fba26-186">Transition Action</span></span>  
+ <span data-ttu-id="fba26-187">특정 전환을 수행할 때 실행되는 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-187">An activity which is executed when performing a certain transition.</span></span>  
   
- 최종 상태  
- 상태 시스템의 완료를 나타내는 상태입니다.  
+ <span data-ttu-id="fba26-188">조건부 전환</span><span class="sxs-lookup"><span data-stu-id="fba26-188">Conditional Transition</span></span>  
+ <span data-ttu-id="fba26-189">명시적 조건을 가진 전환입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-189">A transition with an explicit condition.</span></span>  
   
-## 참고 항목  
- [방법: 상태 시스템 워크플로 만들기](../../../docs/framework/windows-workflow-foundation//how-to-create-a-state-machine-workflow.md)   
- [StateMachine 활동 디자이너](../Topic/StateMachine%20Activity%20Designer.md)   
- [상태 활동 디자이너](../Topic/State%20Activity%20Designer.md)   
- [FinalState 활동 디자이너](../Topic/FinalState%20Activity%20Designer.md)   
- [전환 활동 디자이너](../Topic/Transition%20Activity%20Designer.md)
+ <span data-ttu-id="fba26-190">자체 전환</span><span class="sxs-lookup"><span data-stu-id="fba26-190">Self-transition</span></span>  
+ <span data-ttu-id="fba26-191">한 상태에서 자신으로 전환하는 전환입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-191">A transition which transits from a state to itself.</span></span>  
+  
+ <span data-ttu-id="fba26-192">초기 상태</span><span class="sxs-lookup"><span data-stu-id="fba26-192">Initial State</span></span>  
+ <span data-ttu-id="fba26-193">상태 시스템의 시작점을 나타내는 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-193">A state which represents the starting point of the state machine.</span></span>  
+  
+ <span data-ttu-id="fba26-194">최종 상태</span><span class="sxs-lookup"><span data-stu-id="fba26-194">Final State</span></span>  
+ <span data-ttu-id="fba26-195">상태 시스템의 완료를 나타내는 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="fba26-195">A state which represents the completion of the state machine.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="fba26-196">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fba26-196">See Also</span></span>  
+ [<span data-ttu-id="fba26-197">방법: 상태 시스템 워크플로 만들기</span><span class="sxs-lookup"><span data-stu-id="fba26-197">How to: Create a State Machine Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
+ [<span data-ttu-id="fba26-198">StateMachine 활동 디자이너</span><span class="sxs-lookup"><span data-stu-id="fba26-198">StateMachine Activity Designer</span></span>](/visualstudio/workflow-designer/statemachine-activity-designer)  
+ [<span data-ttu-id="fba26-199">State 활동 디자이너</span><span class="sxs-lookup"><span data-stu-id="fba26-199">State Activity Designer</span></span>](/visualstudio/workflow-designer/state-activity-designer)  
+ [<span data-ttu-id="fba26-200">FinalState 활동 디자이너</span><span class="sxs-lookup"><span data-stu-id="fba26-200">FinalState Activity Designer</span></span>](/visualstudio/workflow-designer/finalstate-activity-designer)  
+ [<span data-ttu-id="fba26-201">Transition 활동 디자이너</span><span class="sxs-lookup"><span data-stu-id="fba26-201">Transition Activity Designer</span></span>](/visualstudio/workflow-designer/transition-activity-designer)

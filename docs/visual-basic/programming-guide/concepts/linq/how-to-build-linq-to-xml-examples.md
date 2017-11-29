@@ -1,36 +1,28 @@
 ---
-title: "방법: LINQ to XML 예제 (Visual Basic) 빌드 | Microsoft 문서"
+title: "방법: LINQ to XML 예제 (Visual Basic) 빌드"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 565bca7a-ac8b-497f-8d8d-3323b3d7799e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6f1d67ad5dd0a8c6b1500ea9b0b953b70251b93
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 544aa67497bbcb8b7ed508cc7fa2c1d5210123ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>방법: LINQ to XML 예제 (Visual Basic) 빌드
-이 설명서의 다양한 코드 조각과 예제에서는 여러 가지 네임스페이스의 클래스와 형식을 사용합니다. Visual Basic 코드를 컴파일하는 경우에는 적절한 `Imports` 문을 제공해야 합니다.  
+# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a><span data-ttu-id="25096-102">방법: LINQ to XML 예제 (Visual Basic) 빌드</span><span class="sxs-lookup"><span data-stu-id="25096-102">How to: Build LINQ to XML Examples (Visual Basic)</span></span>
+<span data-ttu-id="25096-103">이 설명서의 다양한 코드 조각과 예제에서는 여러 가지 네임스페이스의 클래스와 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="25096-103">The various snippets and examples in this documentation use classes and types from a variety of namespaces.</span></span> <span data-ttu-id="25096-104">Visual Basic 코드를 컴파일하는 경우에는 적절한 `Imports` 문을 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="25096-104">When compiling Visual Basic code, you need to supply appropriate `Imports` statements.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 코드에는 Visual Basic 예제에서 빌드하고 실행해야 하는 `Imports` 문이 포함되어 있습니다. 모든 `Imports` 문이 모든 예제에 필요한 것은 아닙니다.  
+## <a name="example"></a><span data-ttu-id="25096-105">예제</span><span class="sxs-lookup"><span data-stu-id="25096-105">Example</span></span>  
+ <span data-ttu-id="25096-106">다음 코드에는 Visual Basic 예제에서 빌드하고 실행해야 하는 `Imports` 문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25096-106">The following code contains the `Imports` statements that the Visual Basic examples require to build and run.</span></span> <span data-ttu-id="25096-107">모든 `Imports` 문이 모든 예제에 필요한 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="25096-107">Not all `Imports` statements are required for every example.</span></span>  
   
 ```vb  
 Imports System  
@@ -51,5 +43,5 @@ Imports System.Reflection
 Imports System.IO.Packaging  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ to XML 프로그래밍 개요 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="25096-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="25096-108">See Also</span></span>  
+ [<span data-ttu-id="25096-109">LINQ to XML 프로그래밍 개요 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25096-109">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

@@ -1,52 +1,55 @@
 ---
-title: "XAML Security Considerations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "security [XAML Services], .NET XAML services"
-  - "XAML security [XAML Services]"
+title: "XAML 보안 고려 사항"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [XAML Services], .NET XAML services
+- XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 59d0b835a0de3e84e2cb6e77ed368511bfe21b19
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# XAML Security Considerations
-이 항목에서는 XAML 및 .NET Framework XAML 서비스 API를 사용할 때 응용 프로그램의 보안에 대한 최선의 구현 방법에 대해 설명합니다.  
+# <a name="xaml-security-considerations"></a><span data-ttu-id="c4b12-102">XAML 보안 고려 사항</span><span class="sxs-lookup"><span data-stu-id="c4b12-102">XAML Security Considerations</span></span>
+<span data-ttu-id="c4b12-103">이 항목에서는 XAML 및.NET Framework XAML 서비스 API를 사용 하는 경우 응용 프로그램의 보안에 대 한 모범 사례를 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-103">This topic describes best practices for security in applications when you use XAML and .NET Framework XAML Services API.</span></span>  
   
-## 응용 프로그램의 신뢰할 수 없는 XAML  
- 가장 일반적인 측면에서 보면 신뢰할 수 없는 XAML은 응용 프로그램에서 특별히 포함하거나 내보내지 않은 임의의 XAML 소스입니다.  
+## <a name="untrusted-xaml-in-applications"></a><span data-ttu-id="c4b12-104">응용 프로그램에서 신뢰할 수 없는 XAML</span><span class="sxs-lookup"><span data-stu-id="c4b12-104">Untrusted XAML in Applications</span></span>  
+ <span data-ttu-id="c4b12-105">가장 일반적인 의미에서 신뢰할 수 없는 XAML은 응용 프로그램 포함 또는 생성 되지 않은 모든 XAML 소스입니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-105">In the most general sense, untrusted XAML is any XAML source that your application did not specifically include or emit.</span></span>  
   
- 신뢰할 수 있는 서명된 어셈블리 내의 `resx` 형식 리소스로 컴파일 또는 저장되는 XAML은 기본적으로 신뢰할 수 있습니다.  어셈블리를 전체적으로 신뢰할 수 있는 만큼 XAML을 신뢰할 수 있습니다.  대개의 경우 스트림 또는 다른 IO에서 로드한 XAML 소스인 느슨한 XAML의 신뢰 여부만 고려하면 됩니다.  느슨한 XAML은 배포 및 패키징 인프라가 있는 응용 프로그램 모델의 특정 구성 요소 또는 기능이 아닙니다.  그러나 어셈블리에서는 느슨한 XAML 로드를 수반하는 동작을 구현할 수도 있습니다.  
+ <span data-ttu-id="c4b12-106">컴파일 또는으로 저장 하는 XAML을 `resx`-신뢰할 수 있는 서명된 된 어셈블리 내의 형식 리소스를 기본적으로 신뢰할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-106">XAML that is compiled into or stored as a `resx`-type resource within a trusted and signed assembly is not inherently untrusted.</span></span> <span data-ttu-id="c4b12-107">어셈블리를 전체적으로 신뢰할 수 만큼 XAML 신뢰할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-107">You can trust the XAML as much as you trust the assembly as a whole.</span></span> <span data-ttu-id="c4b12-108">대부분의 경우에서 관심이 스트림 또는 다른 IO에서 로드 하는 XAML 소스는 느슨한 XAML의 신뢰 측면에.</span><span class="sxs-lookup"><span data-stu-id="c4b12-108">In most cases, you are only concerned with the trust aspects of loose XAML, which is a XAML source that you load from a stream or other IO.</span></span> <span data-ttu-id="c4b12-109">느슨한 XAML는 특정 구성 요소 또는 응용 프로그램 모델을 배포 및 패키징 인프라의 기능 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-109">Loose XAML is not a specific component or feature of an application model with a deployment and packaging infrastructure.</span></span> <span data-ttu-id="c4b12-110">그러나 어셈블리는 느슨한 XAML을 로드 하는 동작을 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-110">However, an assembly might implement a behavior that involves loading loose XAML.</span></span>  
   
- 신뢰할 수 없는 XAML의 경우 일반적으로 신뢰할 수 없는 코드의 경우와 동일하게 처리해야 합니다.  잠재적으로 신뢰할 수 없는 XAML이 신뢰할 수 있는 코드에 액세스하는 것을 방지하기 위해 샌드박스를 적용하거나 비유를 사용합니다.  
+ <span data-ttu-id="c4b12-111">신뢰할 수 없는 XAML에 대 한 이지만 간주 해야 일반적으로 동일한을 마치 신뢰할 수 없는 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-111">For untrusted XAML, you should treat it generally the same as if it were untrusted code.</span></span> <span data-ttu-id="c4b12-112">샌드박스를 적용 하거나 다른 기능을 사용 하 여 신뢰할 수 없는 XAML 신뢰할 수 있는 코드에 액세스 하지 않도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-112">Use sandboxing or other metaphors to prevent possibly untrusted XAML from accessing your trusted code.</span></span>  
   
- 기본적으로 XAML 기능은 개체를 생성하고 해당 속성을 설정할 수 있는 권한을 XAML에 제공합니다.  또한 이러한 기능에는 형식 변환기에 액세스하거나 응용 프로그램 도메인에서 어셈블리를 매핑 및 액세스하거나 태그 확장, `x:Code` 블록 등을 사용하는 것이 포함됩니다.  
+ <span data-ttu-id="c4b12-113">XAML 개체를 생성 하 고 해당 속성을 설정 하는 권한을 부여 하는 XAML 기능의 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-113">The nature of XAML capabilities gives the XAML the right to construct objects and set their properties.</span></span> <span data-ttu-id="c4b12-114">이러한 기능에도 형식 변환기, 매핑 및 태그 확장을 사용 하 여 응용 프로그램 도메인에서 어셈블리를 액세스 하거나 액세스 하는 `x:Code` 블록 및 등입니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-114">These capabilities also include accessing type converters, mapping and accessing assemblies in the application domain, using markup extensions, `x:Code` blocks, and so on.</span></span>  
   
- 언어 수준 기능 외에도 XAML은 대부분의 기술에서 UI 정의에 사용됩니다.  신뢰할 수 없는 XAML을 로드하면 악의적인 스푸핑 UI가 로드될 수도 있습니다.  
+ <span data-ttu-id="c4b12-115">해당 언어 수준 기능 외에 XAML에서 많은 기술 UI 정의에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-115">In addition to its language-level capabilities, XAML is used for UI definition in many technologies.</span></span> <span data-ttu-id="c4b12-116">신뢰할 수 없는 xaml 악의적인 스푸핑 UI를 로드 될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-116">Loading untrusted XAML might mean loading a malicious spoofing UI.</span></span>  
   
-## 판독기 및 작성기 간에 컨텍스트 공유  
- XAML 판독기 및 XAML 작성기에 대한 .NET Framework XAML 서비스 아키텍처에서는 대개 XAML 작성기에 대한 XAML 판독기 공유나 공유된 XAML 스키마 컨텍스트가 필요합니다.  XAML 노드 루프 논리를 기록하거나 사용자 지정 저장 경로를 제공할 경우 개체 또는 컨텍스트 공유가 필요할 수 있습니다.  신뢰할 수 있는 코드와 신뢰할 수 없는 코드 간에 XAML 판독기 인스턴스, 기본값이 아닌 XAML 스키마 컨텍스트 또는 XAML 판독기\/작성기 클래스에 대한 설정을 공유하면 안 됩니다.  
+## <a name="sharing-context-between-readers-and-writers"></a><span data-ttu-id="c4b12-117">판독기 및 작성기 간에 컨텍스트를 공유합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-117">Sharing Context Between Readers and Writers</span></span>  
+ <span data-ttu-id="c4b12-118">XAML 판독기 및 XAML 작성기에 대 한.NET Framework XAML 서비스 아키텍처 종종 공유 해야 하는 XAML 판독기는 XAML 작성기 또는 XAML 스키마 컨텍스트를 공유 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-118">The .NET Framework XAML Services architecture for XAML readers and XAML writers often requires sharing a XAML reader to a XAML writer, or a shared XAML schema context.</span></span> <span data-ttu-id="c4b12-119">XAML 노드 루프 논리를 작성 하는 또는 경로 저장 하는 사용자 지정을 제공 하는 경우 개체 또는 컨텍스트를 공유 해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-119">Sharing objects or contexts might be required if you are writing XAML node loop logic, or providing a custom save path.</span></span> <span data-ttu-id="c4b12-120">XAML 판독기 인스턴스, 기본이 아닌 XAML 스키마 컨텍스트 또는 신뢰할 수 있는 항목과 신뢰할 수 없는 코드 사이의 XAML 판독기/작성기 클래스에 대 한 설정을 공유 하지 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-120">You should not share XAML reader instances, nondefault XAML schema context, or settings for XAML reader/writer classes between trusted and untrusted code.</span></span>  
   
- CLR 기반 형식 지원에 대한 XAML 개체 쓰기를 포함하는 대부분의 시나리오 및 작업은 기본 XAML 스키마 컨텍스트만 사용할 수 있습니다.  기본 XAML 스키마 컨텍스트는 완전 신뢰를 손상시킬 수 있는 설정을 명시적으로 포함하지 않습니다.  따라서 신뢰할 수 있는 XAML 판독기\/작성기 구성 요소와 신뢰할 수 없는 XAML 판독기\/작성기 구성 요소 간에 컨텍스트를 공유하는 것이 안전합니다.  그러나 이렇게 할 경우 이러한 판독기 및 작성기를 별개의 <xref:System.AppDomain> 범위에 유지하면서 이 중 하나를 특히 부분 신뢰를 위해 사용\/샌드박스를 적용하는 것이 여전히 최선의 구현 방법입니다.  
+ <span data-ttu-id="c4b12-121">대부분의 시나리오 및 XAML 개체는 CLR 기반 형식 지원에 대 한 쓰기와 관련 된 작업에는 기본 XAML 스키마 컨텍스트를 사용할 것 수입니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-121">Most scenarios and operations involving XAML object writing for a CLR-based type backing can just use default XAML schema context.</span></span> <span data-ttu-id="c4b12-122">기본 XAML 스키마 컨텍스트 완전 신뢰를 손상 시킬 수 있는 설정이 명시적으로 포함 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-122">The default XAML schema context does not explicitly include settings that could compromise full trust.</span></span> <span data-ttu-id="c4b12-123">따라서 신뢰할 수 있는 항목과 신뢰할 수 없는 XAML 판독기/기록기 구성 요소 간에 컨텍스트를 공유 하 안전 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-123">It is thus safe to share context between trusted and untrusted XAML reader/writer components.</span></span> <span data-ttu-id="c4b12-124">그러나이 작업을 수행 하는 경우이 여전히 별도의 이러한 판독기와 작성기를 유지 하는 것이 좋습니다 <xref:System.AppDomain> 특히/샌드박스를 적용 부분 신뢰에 대 한 그 중 하나가 지정 된 범위입니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-124">However, if you do this, it is still a best practice to keep such readers and writers in separate <xref:System.AppDomain> scopes, with one of them specifically intended/sandboxed for partial trust.</span></span>  
   
-## XAML 네임스페이스 및 어셈블리 신뢰  
- 어셈블리에 대한 사용자 지정 XAML 네임스페이스 매핑을 XAML에서 해석하는 방법에 대한 비정규화된 기본 구문 및 정의에서는 응용 프로그램 도메인에 로드될 때 신뢰할 수 있는 어셈블리와 신뢰할 수 없는 어셈블리를 구별하지 않습니다.  따라서 신뢰할 수 없는 어셈블리가 신뢰할 수 있는 어셈블리의 원하는 XAML 네임스페이스 매핑을 스푸핑하고 XAML 소스의 선언된 개체 및 속성 정보를 캡처하는 것이 기술적으로 가능합니다.  이 상황을 방지해야 하는 보안 요구 사항이 있는 경우 다음 기술 중 하나를 사용하여 필요한 XAML 네임스페이스 매핑을 만들어야 합니다.  
+## <a name="xaml-namespaces-and-assembly-trust"></a><span data-ttu-id="c4b12-125">XAML 네임 스페이스 및 어셈블리 신뢰</span><span class="sxs-lookup"><span data-stu-id="c4b12-125">XAML Namespaces and Assembly Trust</span></span>  
+ <span data-ttu-id="c4b12-126">기본 정규화 되지 않은 구문 및 XAML에서 어셈블리에는 사용자 지정 XAML 네임 스페이스 매핑을 해석 하는 방법에 대 한 정의로 응용 프로그램 도메인에 로드 된 신뢰할 수 있는 항목과 신뢰할 수 없는 어셈블리를 구분 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-126">The basic unqualified syntax and definition for how XAML interprets a custom XAML namespace mapping to an assembly does not distinguish between a trusted and untrusted assembly as loaded into the application domain.</span></span> <span data-ttu-id="c4b12-127">따라서는 신뢰할 수 있는 어셈블리의 의도 된 XAML 네임 스페이스 매핑을 스푸핑 및 XAML 소스의 선언 된 개체 및 속성 정보를 캡처하기 위해 신뢰할 수 없는 어셈블리에 대 한 기술적으로 가능 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-127">Thus, it is technically possible for an untrusted assembly to spoof a trusted assembly's intended XAML namespace mapping and capture a XAML source's declared object and property information.</span></span> <span data-ttu-id="c4b12-128">이 상황을 방지 하려면 보안 요구 사항을 설정한 경우 의도 한 XAML 네임 스페이스 매핑을 만들어야 다음 방법 중 하나를 사용 하 여:</span><span class="sxs-lookup"><span data-stu-id="c4b12-128">If you have security requirements to avoid this situation, your intended XAML namespace mapping should be made using one of the following techniques:</span></span>  
   
--   응용 프로그램의 XAML에 의해 작성된 모든 XAML 네임스페이스 매핑에서 강력한 이름과 함께 정규화된 어셈블리 이름을 사용합니다.  
+-   <span data-ttu-id="c4b12-129">응용 프로그램의 XAML 수행한 모든 XAML 네임 스페이스 매핑에 대 한 강력한 이름으로 정규화 된 어셈블리 이름을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-129">Use a fully qualified assembly name with strong name in any XAML namespace mapping made by your application's XAML.</span></span>  
   
--   XAML 판독기 및 XAML 개체 작성기에 대한 특정 <xref:System.Xaml.XamlSchemaContext>를 생성하여 어셈블리 매핑을 고정된 참조 어셈블리 집합으로 제한합니다.  <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>를 참조하십시오.  
+-   <span data-ttu-id="c4b12-130">어셈블리의 참조 어셈블리가 고정된 된 집합으로 특정 구성 하 여 매핑을 제한 <xref:System.Xaml.XamlSchemaContext> XAML 판독기 및 XAML 개체 작성기입니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-130">Restrict assembly mapping to a fixed set of reference assemblies, by constructing a specific <xref:System.Xaml.XamlSchemaContext> for your XAML readers and XAML object writers.</span></span> <span data-ttu-id="c4b12-131"><xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c4b12-131">See <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.</span></span>  
   
-## XAML 형식 매핑 및 형식 시스템 액세스  
- XAML은 고유한 형식 시스템을 지원하며 이는 여러 측면에서 CLR이 기본 CLR 형식 시스템을 구현하는 방법과 유사합니다.  하지만 형식 정보에 기초하여 형식에 대한 신뢰를 결정하는 형식 인식의 특정 측면에서는 CLR 지원 형식의 형식 정보를 따라야 합니다.  이는 XAML 형식 시스템의 특정 보고 기능 중 일부가 가상 메서드로 열려 있어서 원래 .NET Framework XAML 서비스 구현에 의해 완전히 제어되지 않기 때문입니다.  이러한 확장성 지점은 XAML 형식 시스템이 확장 가능하기 때문에 존재하며, XAML 자체의 확장성 및 XAML의 가능한 대체 형식 매핑 전략을 기본 CLR 기반 구현 및 기본 XAML 스키마 컨텍스트와 조화시키기 위한 것입니다.  자세한 내용은 <xref:System.Xaml.XamlType> 및 <xref:System.Xaml.XamlMember>의 여러 속성에 대한 구체적인 설명을 참조하십시오.  
+## <a name="xaml-type-mapping-and-type-system-access"></a><span data-ttu-id="c4b12-132">XAML 형식 매핑 및 형식 시스템 액세스</span><span class="sxs-lookup"><span data-stu-id="c4b12-132">XAML Type Mapping and Type System Access</span></span>  
+ <span data-ttu-id="c4b12-133">XAML은 CLR 기본 CLR 형식 시스템을 구현 하는 방법의 피어 여러 가지 방법으로 자체 형식 시스템을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-133">XAML supports its own type system, which in many ways is a peer to how CLR implements the basic CLR type system.</span></span> <span data-ttu-id="c4b12-134">그러나 특정 측면의 형식 정보에 따라 형식에 대 한 신뢰 결정을 내려야 할 위치 형식 인식의 지원 형식을 CLR 형식 정보를 연기 해야 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-134">However, for certain aspects of type awareness where you are making trust decisions about a type based on its type information, you should defer to the type information in the CLR backing types.</span></span> <span data-ttu-id="c4b12-135">이 XAML 형식 시스템의 특정 기능 중 일부 가상 메서드로 열린 채로 남아 있는 고 없기 때문에 따라서 완전히 원래.NET Framework XAML 서비스 구현에서 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-135">This is because some of the specific reporting capabilities of the XAML type system are left open as virtual methods and are therefore, not fully under the control of the original .NET Framework XAML Services implementations.</span></span> <span data-ttu-id="c4b12-136">이러한 확장 지점을 XAML 형식 시스템은 해당 가능한 대체 형식 매핑 전략과 기본 CLR 기반 구현 및 기본 XAML 스키마 컨텍스트 및 XAML 자체의 확장성에 맞게 확장 가능 하기 때문에 존재 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-136">These extensibility points exist because the XAML type system is extensible, to match the extensibility of XAML itself and its possible alternative type-mapping strategies versus the default CLR-backed implementation and default XAML schema context.</span></span> <span data-ttu-id="c4b12-137">자세한 내용은 특정 정보를 여러의 속성에 참조 <xref:System.Xaml.XamlType> 및 <xref:System.Xaml.XamlMember>합니다.</span><span class="sxs-lookup"><span data-stu-id="c4b12-137">For more information, see the specific notes on several of the properties of <xref:System.Xaml.XamlType> and <xref:System.Xaml.XamlMember>.</span></span>  
   
-## 참고 항목  
+## <a name="see-also"></a><span data-ttu-id="c4b12-138">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c4b12-138">See Also</span></span>  
  <xref:System.Xaml.Permissions.XamlAccessLevel>

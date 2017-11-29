@@ -1,50 +1,53 @@
 ---
-title: "자동 포맷 선택 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "자동 포맷 선택"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5c3465611fcf418e194c44815c765f8823d8ad83
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 자동 포맷 선택
-이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 사용하여 선택 영역 자동 서식 지정\(XML 또는 JSON\)을 사용하도록 설정하는 방법과 작업 코드에서 형식을 명시적으로 설정하는 방법을 보여 줍니다.  
+# <a name="automatic-format-selection"></a><span data-ttu-id="6ffbb-102">자동 포맷 선택</span><span class="sxs-lookup"><span data-stu-id="6ffbb-102">Automatic Format Selection</span></span>
+<span data-ttu-id="6ffbb-103">이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 사용하여 선택 영역 자동 서식 지정(XML 또는 JSON)을 사용하도록 설정하는 방법과 작업 코드에서 형식을 명시적으로 설정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-103">This sample demonstrates how to enable automatic format selection (XML or JSON) with the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST programming model, as well as how to explicitly set the format in the operation code.</span></span>  
   
-## 샘플 세부 정보  
- 이 샘플은 서비스와 서비스로 요청을 보내는 클라이언트 코드로 구성되어 있습니다.  서비스에서는 단일 HTTP `GET` 작업\(`EchoWithGet`\) 및 단일 HTTP `POST` 작업\(`EchoWithPost`\)을 지원합니다.  두 작업은 모두 문자열을 필요로 하며 응답에서도 문자열을 반환합니다.  `GET` 작업을 사용할 경우 문자열은 URI 쿼리 문자열 매개 변수에서 제공됩니다.  `POST` 작업을 사용할 경우 문자열은 요청의 본문에서 XML로 serialize되어 제공됩니다.  서비스에서는 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]의 새로운 기능인 선택 영역 자동 서식 지정 및 선택 영역 명령적 서식 지정 기능을 사용하여 응답을 XML이나 JSON으로 반환할 수 있습니다.  
+## <a name="sample-details"></a><span data-ttu-id="6ffbb-104">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="6ffbb-104">Sample Details</span></span>  
+ <span data-ttu-id="6ffbb-105">이 샘플은 서비스와 서비스로 요청을 보내는 클라이언트 코드로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-105">The sample consists of a service along with client code that makes requests to the service.</span></span> <span data-ttu-id="6ffbb-106">서비스에서는 단일 HTTP `GET` 작업(`EchoWithGet`) 및 단일 HTTP `POST` 작업(`EchoWithPost`)을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-106">The service supports a single HTTP `GET` operation (`EchoWithGet`) and a single HTTP `POST` operation (`EchoWithPost`).</span></span> <span data-ttu-id="6ffbb-107">두 작업은 모두 문자열을 필요로 하며 응답에서도 문자열을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-107">Both operations expect a string and then return the string in the response.</span></span> <span data-ttu-id="6ffbb-108">`GET` 작업을 사용할 경우 문자열은 URI 쿼리 문자열 매개 변수에서 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-108">With the `GET` operation, the string is provided in a URI query-string parameter.</span></span> <span data-ttu-id="6ffbb-109">`POST` 작업을 사용할 경우 문자열은 요청의 본문에서 XML로 serialize되어 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-109">With the `POST` operation, the string is provided in the body of the request, serialized in XML.</span></span> <span data-ttu-id="6ffbb-110">서비스에서는 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]의 새로운 기능인 선택 영역 자동 서식 지정 및 선택 영역 명령적 서식 지정 기능을 사용하여 응답을 XML이나 JSON으로 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-110">The service is able to return responses in either XML or JSON, utilizing the new automatic format selection and imperative format selection features in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].</span></span>  
   
- 이 샘플에서는 App.config 파일을 사용하여 선택 영역 자동 서식 지정 기능을 사용하도록 설정합니다.  기본 웹 HTTP 끝점에서 `automaticFormatSelectionEnabled` 특성에는 `true` 값이 지정됩니다.  선택 영역 자동 서식 지정 기능을 사용할 수 있는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라에서는 요청의 HTTP Accept 또는 Content\-Type 헤더를 확인하여 가장 적절한 응답 형식\(XML 또는 JSON\)을 선택합니다.  개발자는 `automaticFormatSelectionEnabled` 특성을 `true`로 설정하여 이 새 기능을 사용할 수 있으며 그 외에는 추가 코드나 구성을 제공할 필요가 없습니다.  Program.cs의 클라이언트 코드에서 요청은 HTTP Accept 헤더가 “application\/xml” 또는 “application\/json”으로 지정된 서비스의 `GET` 및 `POST` 작업 모두로 보내지며, 서비스에서는 해당하는 각 형식으로 응답을 반환합니다.  
+ <span data-ttu-id="6ffbb-111">이 샘플에서는 App.config 파일을 사용하여 선택 영역 자동 서식 지정 기능을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-111">In the sample, automatic format selection is enabled using the App.config file.</span></span> <span data-ttu-id="6ffbb-112">기본 웹 HTTP 끝점에서 `automaticFormatSelectionEnabled` 특성에는 `true` 값이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-112">On the default Web HTTP endpoint, the `automaticFormatSelectionEnabled` attribute has been given a value of `true`.</span></span> <span data-ttu-id="6ffbb-113">선택 영역 자동 서식 지정 기능을 사용할 수 있는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라에서는 요청의 HTTP Accept 또는 Content-Type 헤더를 확인하여 가장 적절한 응답 형식(XML 또는 JSON)을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-113">With automatic format selection enabled, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure selects the most appropriate response format (XML or JSON) given the HTTP Accept or Content-Type headers of the request.</span></span> <span data-ttu-id="6ffbb-114">개발자는 `automaticFormatSelectionEnabled` 특성을 `true`로 설정하여 이 새 기능을 사용할 수 있으며 그 외에는 추가 코드나 구성을 제공할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-114">The developer is not required to provide any additional code or configuration other than setting the `automaticFormatSelectionEnabled` attribute to `true` to use this new feature.</span></span> <span data-ttu-id="6ffbb-115">Program.cs에서 클라이언트 코드에서 요청을 보냅니다 모두에 `GET` 및 `POST` 있는 응답을 반환 하는 중 "응용 프로그램/xml" 또는 "application/json"로 지정 된 HTTP Accept 헤더가 포함 된 서비스 및 서비스의 작업 해당 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-115">In the client code in Program.cs, requests are sent to both the `GET` and `POST` operations of the service with the HTTP Accept header specified as either "application/xml" or "application/json" and the service returns a response in that respective format.</span></span>  
   
- 또한 `GET` 작업에서는 선택 영역 명령적 서식 지정 기능이 사용됩니다.  `GET` 작업에서는 선택적 `format` 쿼리 문자열 매개 변수를 검사하고, 이 매개 변수가 있으면 <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> 속성에서 응답 형식을 설정합니다.  이와 같이 응답 형식을 명령적으로 설정하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라에서 수행한 선택 영역 자동 서식 지정이 재정의됩니다.  
+ <span data-ttu-id="6ffbb-116">또한 `GET` 작업에서는 선택 영역 명령적 서식 지정 기능이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-116">Also in the `GET` operation, imperative format selection is used.</span></span> <span data-ttu-id="6ffbb-117">`GET` 작업에서는 선택적 `format` 쿼리 문자열 매개 변수를 검사하고, 이 매개 변수가 있으면 <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> 속성에서 응답 형식을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-117">The `GET` operation checks for an optional `format` query-string parameter and if present, sets the response format on the <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> property.</span></span> <span data-ttu-id="6ffbb-118">이와 같이 응답 형식을 명령적으로 설정하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라에서 수행한 선택 영역 자동 서식 지정이 재정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-118">Imperatively setting the response format in this way overrides the automatic format selection done by the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure.</span></span>  
   
- 이 샘플은 자체 호스팅 서비스와 콘솔 응용 프로그램 내에서 실행되는 클라이언트로 구성되어 있습니다.  콘솔 응용 프로그램이 실행되면 클라이언트에서는 서비스로 요청을 보내고 응답의 관련 정보를 콘솔 창에 씁니다.  
+ <span data-ttu-id="6ffbb-119">이 샘플은 자체 호스팅 서비스와 콘솔 응용 프로그램 내에서 실행되는 클라이언트로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-119">The sample consists of a self-hosted service and a client that runs within a console application.</span></span> <span data-ttu-id="6ffbb-120">콘솔 응용 프로그램이 실행되면 클라이언트에서는 서비스로 요청을 보내고 응답의 관련 정보를 콘솔 창에 씁니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-120">As the console application runs, the client makes requests to the service and writes the pertinent information from the responses to the console window.</span></span>  
   
-#### 이 샘플을 사용하려면  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="6ffbb-121">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="6ffbb-121">To use this sample</span></span>  
   
-1.  Automatic Format Selection 샘플의 솔루션을 엽니다.  관리자 권한으로 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 시작해야 샘플이 제대로 실행됩니다.  이렇게 하려면 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 아이콘을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **관리자 권한으로 실행**을 선택합니다.  
+1.  <span data-ttu-id="6ffbb-122">Automatic Format Selection 샘플의 솔루션을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-122">Open the solution for the Automatic Format Selection Sample.</span></span> <span data-ttu-id="6ffbb-123">관리자 권한으로 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 시작해야 샘플이 제대로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-123">When launching [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], you must run as an administrator for the sample to execute successfully.</span></span> <span data-ttu-id="6ffbb-124">마우스 오른쪽 단추로 클릭 하 여이 작업을 수행는 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 아이콘과 선택 **관리자 권한으로 실행** 상황에 맞는 메뉴입니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-124">Do this by right-clicking the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icon and select **Run as Administrator** from the context menu.</span></span>  
   
-2.  Ctrl\+Shift\+B를 눌러 솔루션을 빌드한 다음 Ctrl\+F5를 눌러 콘솔 응용 프로그램 AutomaticFormatSelection 프로젝트를 실행합니다.  콘솔 창이 나타나고 실행 중인 서비스의 URI와 실행 중인 서비스에 대한 HTML 도움말 페이지의 URI가 제공됩니다.  
+2.  <span data-ttu-id="6ffbb-125">Ctrl+Shift+B를 눌러 솔루션을 빌드한 다음 Ctrl+F5를 눌러 콘솔 응용 프로그램 AutomaticFormatSelection 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-125">Press CTRL+SHIFT+B to build the solution and then press Ctrl+F5 to run the console application AutomaticFormatSelection project.</span></span> <span data-ttu-id="6ffbb-126">콘솔 창이 나타나고 실행 중인 서비스의 URI와 실행 중인 서비스에 대한 HTML 도움말 페이지의 URI가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-126">The console window appears and provides the URI of the running service and the URI of the HTML help page for the running service.</span></span>  
   
-3.  샘플이 실행되면 클라이언트에서는 서비스로 요청을 보내고 콘솔 창에 응답을 씁니다.  응답 형식은 XML과 JSON의 두 가지로 나타납니다.  
+3.  <span data-ttu-id="6ffbb-127">샘플이 실행되면 클라이언트에서는 서비스로 요청을 보내고 콘솔 창에 응답을 씁니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-127">As the sample runs, the client sends requests to the service and writes the responses to the console window.</span></span> <span data-ttu-id="6ffbb-128">응답 형식은 XML과 JSON의 두 가지로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-128">Notice the different formats of the responses in XML and JSON.</span></span>  
   
-4.  아무 키나 눌러 샘플을 종료합니다.  
+4.  <span data-ttu-id="6ffbb-129">아무 키나 눌러 샘플을 종료합니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-129">Press any key to terminate the sample.</span></span>  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.  계속하기 전에 다음\(기본\) 디렉터리를 확인하세요.  
+>  <span data-ttu-id="6ffbb-130">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-130">The samples may already be installed on your machine.</span></span> <span data-ttu-id="6ffbb-131">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-131">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [.NET Framework 4용 WCF\(Windows Communication Foundation\) 및 Windows WF\(Workflow Foundation\) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780)\(영문\)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.  이 샘플은 다음 디렉터리에 있습니다.  
+>  <span data-ttu-id="6ffbb-132">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-132">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6ffbb-133">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ffbb-133">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="6ffbb-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6ffbb-134">See Also</span></span>

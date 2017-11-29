@@ -1,97 +1,100 @@
 ---
-title: "UI Automation Support for the Spinner Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, Spinner control type"
-  - "Spinner control type"
-  - "control types, Spinner"
+title: "Spinner 컨트롤 형식에 대한 UI 자동화 지원"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Spinner control type
+- Spinner control type
+- control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
-caps.latest.revision: 21
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 3014b6ecdff8252ae30cd9ca630d081c5952043f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Spinner Control Type
+# <a name="ui-automation-support-for-the-spinner-control-type"></a><span data-ttu-id="ffb7d-102">Spinner 컨트롤 형식에 대한 UI 자동화 지원</span><span class="sxs-lookup"><span data-stu-id="ffb7d-102">UI Automation Support for the Spinner Control Type</span></span>
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  <span data-ttu-id="ffb7d-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="ffb7d-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 이 항목에서는 Spinner 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
+ <span data-ttu-id="ffb7d-105">이 항목에서는 Spinner 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Spinner control type.</span></span> <span data-ttu-id="ffb7d-106">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="ffb7d-107">이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- Spinner 컨트롤은 항목의 도메인 또는 숫자 범위에서 선택하는 데 사용됩니다.  
+ <span data-ttu-id="ffb7d-108">Spinner 컨트롤은 항목의 도메인 또는 숫자 범위에서 선택하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-108">Spinner controls are used to select from a domain of items or a range of numbers.</span></span>  
   
- 다음 섹션에서는 Spinner 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 회전자 컨트롤에 적용됩니다.  
+ <span data-ttu-id="ffb7d-109">다음 섹션에서는 Spinner 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Spinner control type.</span></span> <span data-ttu-id="ffb7d-110">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 회전자 컨트롤에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all spinner controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 필요한 UI 자동화 트리 구조  
- 다음 표는 회전자 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고\(범위 값, 값, 선택 컨트롤 패턴을 지원하는 경우\) 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대한 자세한 내용은 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="ffb7d-111">필요한 UI 자동화 트리 구조</span><span class="sxs-lookup"><span data-stu-id="ffb7d-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="ffb7d-112">다음 표는 회전자 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고(범위 값, 값, 선택 컨트롤 패턴을 지원하는 경우) 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertain to spinner controls when they support the Range Value, Value, and Selection control patterns and describes what can be contained in each view.</span></span> <span data-ttu-id="ffb7d-113">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리, 참조 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
- **Range Value 또는 Value 컨트롤 패턴**  
+ <span data-ttu-id="ffb7d-114">**Range Value 또는 Value 컨트롤 패턴**</span><span class="sxs-lookup"><span data-stu-id="ffb7d-114">**Range Value or Value control pattern**</span></span>  
   
-|컨트롤 뷰|콘텐츠 뷰|  
-|-----------|-----------|  
-|Spinner<br /><br /> -   Edit\(0 또는 1개\)<br />-   Button\(2개\)|Spinner|  
+|<span data-ttu-id="ffb7d-115">컨트롤 뷰</span><span class="sxs-lookup"><span data-stu-id="ffb7d-115">Control View</span></span>|<span data-ttu-id="ffb7d-116">콘텐츠 뷰</span><span class="sxs-lookup"><span data-stu-id="ffb7d-116">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="ffb7d-117">Spinner</span><span class="sxs-lookup"><span data-stu-id="ffb7d-117">Spinner</span></span><br /><br /> <span data-ttu-id="ffb7d-118">-Edit (0 또는 1)</span><span class="sxs-lookup"><span data-stu-id="ffb7d-118">-   Edit (0 or 1)</span></span><br /><span data-ttu-id="ffb7d-119">-단추 (2)</span><span class="sxs-lookup"><span data-stu-id="ffb7d-119">-   Button (2)</span></span>|<span data-ttu-id="ffb7d-120">Spinner</span><span class="sxs-lookup"><span data-stu-id="ffb7d-120">Spinner</span></span>|  
   
- **Selection 컨트롤 패턴**  
+ <span data-ttu-id="ffb7d-121">**Selection 컨트롤 패턴**</span><span class="sxs-lookup"><span data-stu-id="ffb7d-121">**Selection control pattern**</span></span>  
   
-|컨트롤 뷰|콘텐츠 뷰|  
-|-----------|-----------|  
-|Spinner<br /><br /> -   Edit\(0 또는 1개\)<br />-   Button\(2개\)<br />-   List Item\(0개 이상\)|Spinner<br /><br /> -   ListItem\(0개 이상\)|  
+|<span data-ttu-id="ffb7d-122">컨트롤 뷰</span><span class="sxs-lookup"><span data-stu-id="ffb7d-122">Control View</span></span>|<span data-ttu-id="ffb7d-123">콘텐츠 뷰</span><span class="sxs-lookup"><span data-stu-id="ffb7d-123">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="ffb7d-124">Spinner</span><span class="sxs-lookup"><span data-stu-id="ffb7d-124">Spinner</span></span><br /><br /> <span data-ttu-id="ffb7d-125">-Edit (0 또는 1)</span><span class="sxs-lookup"><span data-stu-id="ffb7d-125">-   Edit (0 or 1)</span></span><br /><span data-ttu-id="ffb7d-126">-단추 (2)</span><span class="sxs-lookup"><span data-stu-id="ffb7d-126">-   Button (2)</span></span><br /><span data-ttu-id="ffb7d-127">-List Item (0 개 이상)</span><span class="sxs-lookup"><span data-stu-id="ffb7d-127">-   List Item (0 or more)</span></span>|<span data-ttu-id="ffb7d-128">Spinner</span><span class="sxs-lookup"><span data-stu-id="ffb7d-128">Spinner</span></span><br /><br /> <span data-ttu-id="ffb7d-129">-ListItem (0 개 이상)</span><span class="sxs-lookup"><span data-stu-id="ffb7d-129">-   ListItem (0 or more)</span></span>|  
   
- 컨트롤 뷰 하위 트리에서 두 개의 단추를 자동화된 테스트 도구로 구분하려면 `SmallIncrement` 또는 `SmallDecrement` `AutomationId`를 할당합니다. 일부 구현의 경우, 연결된 편집 컨트롤이 회전자 컨트롤의 피어일 수 있습니다.  
+ <span data-ttu-id="ffb7d-130">컨트롤 뷰 하위 트리에서 두 개의 단추를 자동화된 테스트 도구로 구분하려면 `SmallIncrement` 또는 `SmallDecrement``AutomationId` 를 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-130">To ensure that the two buttons in the control view subtree can be distinguished by automated test tools, assign the `SmallIncrement` or `SmallDecrement``AutomationId` as appropriate.</span></span> <span data-ttu-id="ffb7d-131">일부 구현의 경우, 연결된 편집 컨트롤이 회전자 컨트롤의 피어일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-131">For some implementations, the associated Edit control may be a peer of the Spinner control.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 회전자 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대한 자세한 내용은 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)를 참조하세요.  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="ffb7d-132">필요한 UI 자동화 속성</span><span class="sxs-lookup"><span data-stu-id="ffb7d-132">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="ffb7d-133">다음 표에서는 값 또는 정의가 회전자 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-133">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to spinner controls.</span></span> <span data-ttu-id="ffb7d-134">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 참조 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-134">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|회전자 컨트롤의 클릭 가능한 지점은 컨트롤의 편집 부분에 포커스를 부여합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|회전자 컨트롤은 일반적으로 정적 텍스트 레이블에서 이름을 가져옵니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|메모를 참조하세요.|회전자 컨트롤에 정적 텍스트 레이블이 있습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Spinner|이 값은 모든 UI 프레임워크에 대해 동일합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"spinner"|Spinner 컨트롤 형식에 해당하는 지역화된 문자열입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|회전자 컨트롤이 항상 콘텐츠여야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|회전자 컨트롤이 항상 컨트롤이어야 합니다.|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="ffb7d-135"> 속성</span><span class="sxs-lookup"><span data-stu-id="ffb7d-135"> Property</span></span>|<span data-ttu-id="ffb7d-136">값</span><span class="sxs-lookup"><span data-stu-id="ffb7d-136">Value</span></span>|<span data-ttu-id="ffb7d-137">노트</span><span class="sxs-lookup"><span data-stu-id="ffb7d-137">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="ffb7d-138">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-138">See notes.</span></span>|<span data-ttu-id="ffb7d-139">이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-139">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="ffb7d-140">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-140">See notes.</span></span>|<span data-ttu-id="ffb7d-141">전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-141">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="ffb7d-142">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-142">See notes.</span></span>|<span data-ttu-id="ffb7d-143">회전자 컨트롤의 클릭 가능한 지점은 컨트롤의 편집 부분에 포커스를 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-143">The spinner control's clickable point gives focus to the edit portion of the control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="ffb7d-144">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-144">See notes.</span></span>|<span data-ttu-id="ffb7d-145">컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-145">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="ffb7d-146">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-146">See notes.</span></span>|<span data-ttu-id="ffb7d-147">회전자 컨트롤은 일반적으로 정적 텍스트 레이블에서 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-147">The spinner control typically gets its name from a static text label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="ffb7d-148">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-148">See notes.</span></span>|<span data-ttu-id="ffb7d-149">회전자 컨트롤에 정적 텍스트 레이블이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-149">Spinner controls have a static text label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="ffb7d-150">Spinner</span><span class="sxs-lookup"><span data-stu-id="ffb7d-150">Spinner</span></span>|<span data-ttu-id="ffb7d-151">이 값은 모든 UI 프레임워크에 대해 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-151">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="ffb7d-152">"spinner"</span><span class="sxs-lookup"><span data-stu-id="ffb7d-152">"spinner"</span></span>|<span data-ttu-id="ffb7d-153">Spinner 컨트롤 형식에 해당하는 지역화된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-153">Localized string corresponding to the Spinner control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="ffb7d-154">True</span><span class="sxs-lookup"><span data-stu-id="ffb7d-154">True</span></span>|<span data-ttu-id="ffb7d-155">회전자 컨트롤이 항상 콘텐츠여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-155">The spinner control must always be content.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="ffb7d-156">True</span><span class="sxs-lookup"><span data-stu-id="ffb7d-156">True</span></span>|<span data-ttu-id="ffb7d-157">회전자 컨트롤이 항상 컨트롤이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-157">The Spinner control must always be a control.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
-## 필요한 UI 자동화 컨트롤 패턴 및 속성  
- 다음 표에서는 회전자 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-control-patterns-and-properties"></a><span data-ttu-id="ffb7d-158">필요한 UI 자동화 컨트롤 패턴 및 속성</span><span class="sxs-lookup"><span data-stu-id="ffb7d-158">Required UI Automation Control Patterns and Properties</span></span>  
+ <span data-ttu-id="ffb7d-159">다음 표에서는 회전자 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-159">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by spinner controls.</span></span> <span data-ttu-id="ffb7d-160">컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-160">For more information about control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|컨트롤 패턴\/패턴 속성|지원\/값|노트|  
-|-------------------|-----------|--------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|종속|선택할 항목 목록이 있는 회전자 컨트롤은 이 패턴을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|회전자 컨트롤은 항상 단일 선택 컨테이너입니다.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|종속|숫자 범위에 걸친 회전자 컨트롤은 이 패턴을 지원할 수 있습니다.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|종속|옵션 또는 숫자의 불연속 집합에 걸친 회전자 컨트롤은 이 패턴을 지원할 수 있습니다.|  
+|<span data-ttu-id="ffb7d-161">컨트롤 패턴/패턴 속성</span><span class="sxs-lookup"><span data-stu-id="ffb7d-161">Control Pattern/Pattern Property</span></span>|<span data-ttu-id="ffb7d-162">지원/값</span><span class="sxs-lookup"><span data-stu-id="ffb7d-162">Support/Value</span></span>|<span data-ttu-id="ffb7d-163">노트</span><span class="sxs-lookup"><span data-stu-id="ffb7d-163">Notes</span></span>|  
+|---------------------------------------|--------------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|<span data-ttu-id="ffb7d-164">종속</span><span class="sxs-lookup"><span data-stu-id="ffb7d-164">Depends</span></span>|<span data-ttu-id="ffb7d-165">선택할 항목 목록이 있는 회전자 컨트롤은 이 패턴을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-165">Spinner controls that have a list of items to be selected must support this pattern.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|<span data-ttu-id="ffb7d-166">False</span><span class="sxs-lookup"><span data-stu-id="ffb7d-166">False</span></span>|<span data-ttu-id="ffb7d-167">회전자 컨트롤은 항상 단일 선택 컨테이너입니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-167">Spinner controls are always single selection containers.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|<span data-ttu-id="ffb7d-168">종속</span><span class="sxs-lookup"><span data-stu-id="ffb7d-168">Depends</span></span>|<span data-ttu-id="ffb7d-169">숫자 범위에 걸친 회전자 컨트롤은 이 패턴을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-169">Spinner controls that span a numeric range can support this pattern.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|<span data-ttu-id="ffb7d-170">종속</span><span class="sxs-lookup"><span data-stu-id="ffb7d-170">Depends</span></span>|<span data-ttu-id="ffb7d-171">옵션 또는 숫자의 불연속 집합에 걸친 회전자 컨트롤은 이 패턴을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-171">Spinner controls that span a discrete set of options or numbers can support this pattern.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 필요한 UI 자동화 이벤트  
- 다음 표에서는 모든 회전자 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="ffb7d-172">필요한 UI 자동화 이벤트</span><span class="sxs-lookup"><span data-stu-id="ffb7d-172">Required UI Automation Events</span></span>  
+ <span data-ttu-id="ffb7d-173">다음 표에서는 모든 회전자 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-173">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all spinner controls.</span></span> <span data-ttu-id="ffb7d-174">이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-174">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
-|-------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|종속|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|종속|없음|  
-|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|종속|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="ffb7d-175"> 이벤트</span><span class="sxs-lookup"><span data-stu-id="ffb7d-175"> Event</span></span>|<span data-ttu-id="ffb7d-176">지원</span><span class="sxs-lookup"><span data-stu-id="ffb7d-176">Support</span></span>|<span data-ttu-id="ffb7d-177">노트</span><span class="sxs-lookup"><span data-stu-id="ffb7d-177">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|<span data-ttu-id="ffb7d-178">종속</span><span class="sxs-lookup"><span data-stu-id="ffb7d-178">Depends</span></span>|<span data-ttu-id="ffb7d-179">없음</span><span class="sxs-lookup"><span data-stu-id="ffb7d-179">None</span></span>|  
+|<span data-ttu-id="ffb7d-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-180"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="ffb7d-181">필수</span><span class="sxs-lookup"><span data-stu-id="ffb7d-181">Required</span></span>|<span data-ttu-id="ffb7d-182">없음</span><span class="sxs-lookup"><span data-stu-id="ffb7d-182">None</span></span>|  
+|<span data-ttu-id="ffb7d-183"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-183"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="ffb7d-184">필수</span><span class="sxs-lookup"><span data-stu-id="ffb7d-184">Required</span></span>|<span data-ttu-id="ffb7d-185">없음</span><span class="sxs-lookup"><span data-stu-id="ffb7d-185">None</span></span>|  
+|<span data-ttu-id="ffb7d-186"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-186"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="ffb7d-187">필수</span><span class="sxs-lookup"><span data-stu-id="ffb7d-187">Required</span></span>|<span data-ttu-id="ffb7d-188">없음</span><span class="sxs-lookup"><span data-stu-id="ffb7d-188">None</span></span>|  
+|<span data-ttu-id="ffb7d-189"><xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-189"><xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> property-changed event.</span></span>|<span data-ttu-id="ffb7d-190">종속</span><span class="sxs-lookup"><span data-stu-id="ffb7d-190">Depends</span></span>|<span data-ttu-id="ffb7d-191">없음</span><span class="sxs-lookup"><span data-stu-id="ffb7d-191">None</span></span>|  
+|<span data-ttu-id="ffb7d-192"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="ffb7d-192"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> property-changed event.</span></span>|<span data-ttu-id="ffb7d-193">종속</span><span class="sxs-lookup"><span data-stu-id="ffb7d-193">Depends</span></span>|<span data-ttu-id="ffb7d-194">없음</span><span class="sxs-lookup"><span data-stu-id="ffb7d-194">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="ffb7d-195">필수</span><span class="sxs-lookup"><span data-stu-id="ffb7d-195">Required</span></span>|<span data-ttu-id="ffb7d-196">없음</span><span class="sxs-lookup"><span data-stu-id="ffb7d-196">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="ffb7d-197">필수</span><span class="sxs-lookup"><span data-stu-id="ffb7d-197">Required</span></span>|<span data-ttu-id="ffb7d-198">없음</span><span class="sxs-lookup"><span data-stu-id="ffb7d-198">None</span></span>|  
   
-## 참고 항목  
- <xref:System.Windows.Automation.ControlType.Spinner>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="ffb7d-199">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ffb7d-199">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Spinner>  
+ [<span data-ttu-id="ffb7d-200">UI 자동화 컨트롤 형식 개요</span><span class="sxs-lookup"><span data-stu-id="ffb7d-200">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="ffb7d-201">UI 자동화 개요</span><span class="sxs-lookup"><span data-stu-id="ffb7d-201">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

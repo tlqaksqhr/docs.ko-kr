@@ -1,145 +1,148 @@
 ---
-title: "Windows Forms 및 WPF 상호 운용성 입력 아키텍처 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ElementHost 키보드 및 메시지"
-  - "입력 아키텍처[WPF 상호 운용성]"
-  - "상호 운용성[WPF], Windows Forms"
-  - "키보드 상호 운용[WPF]"
-  - "메시지[WPF]"
-  - "모덜리스 대화 상자[WPF]"
-  - "모덜리스 폼"
-  - "Windows Forms[WPF], 상호 운용성"
-  - "Windows Forms, WPF 상호 운용"
-  - "WindowsFormsHost 키보드 및 메시지"
+title: "Windows Forms 및 WPF 상호 운용성 입력 아키텍처"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input architecture [WPF interoperability]
+- messages [WPF]
+- Windows Forms [WPF], interoperability with
+- Windows Forms [WPF], WPF interoperation
+- interoperability [WPF], Windows Forms
+- modeless forms [WPF]
+- ElementHost keyboard and messages [WPF]
+- keyboard interoperation [WPF]
+- WindowsFormsHost keyboard and messages [WPF]
+- modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b48b5d78ce3136146f7ad17f859a489b5556a000
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms 및 WPF 상호 운용성 입력 아키텍처
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 간의 상호 운용성을 위해서는 두 기술 모두에서 키보드 입력을 적절하게 처리해야 합니다.  이 항목에서는 이러한 기술에서 키보드 및 메시지 처리를 구현하여 혼합 응용 프로그램에서 원활하게 상호 운용할 수 있도록 하는 방법을 설명합니다.  
+# <a name="windows-forms-and-wpf-interoperability-input-architecture"></a><span data-ttu-id="b13b2-102">Windows Forms 및 WPF 상호 운용성 입력 아키텍처</span><span class="sxs-lookup"><span data-stu-id="b13b2-102">Windows Forms and WPF Interoperability Input Architecture</span></span>
+<span data-ttu-id="b13b2-103">간의 상호 운용성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 두 기술 모두에서 해당 하는 키보드 입력된 처리 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-103">Interoperation between the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] requires that both technologies have the appropriate keyboard input processing.</span></span> <span data-ttu-id="b13b2-104">이 항목에서는 이러한 기술을 키보드와 매끄럽게 상호 운용 혼합 응용 프로그램에서 사용 하도록 설정 하기 위해 메시지 처리를 구현 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-104">This topic describes how these technologies implement keyboard and message processing to enable smooth interoperation in hybrid applications.</span></span>  
   
- 이 항목에는 다음과 같은 하위 단원이 포함되어 있습니다.  
+ <span data-ttu-id="b13b2-105">이 항목에는 다음과 같은 하위 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-105">This topic contains the following subsections:</span></span>  
   
--   모덜리스 폼 및 대화 상자  
+-   <span data-ttu-id="b13b2-106">모덜리스 양식과 대화 상자</span><span class="sxs-lookup"><span data-stu-id="b13b2-106">Modeless Forms and Dialog Boxes</span></span>  
   
--   WindowsFormsHost 키보드 및 메시지 처리  
+-   <span data-ttu-id="b13b2-107">WindowsFormsHost 키보드 및 메시지 처리</span><span class="sxs-lookup"><span data-stu-id="b13b2-107">WindowsFormsHost Keyboard and Message Processing</span></span>  
   
--   ElementHost 키보드 및 메시지 처리  
+-   <span data-ttu-id="b13b2-108">ElementHost 키보드 및 메시지 처리</span><span class="sxs-lookup"><span data-stu-id="b13b2-108">ElementHost Keyboard and Message Processing</span></span>  
   
-## 모덜리스 폼 및 대화 상자  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기반 응용 프로그램에서 모덜리스 폼 또는 대화 상자를 열려면 <xref:System.Windows.Forms.Integration.WindowsFormsHost>의 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> 메서드를 호출합니다.  
+## <a name="modeless-forms-and-dialog-boxes"></a><span data-ttu-id="b13b2-109">모덜리스 양식과 대화 상자</span><span class="sxs-lookup"><span data-stu-id="b13b2-109">Modeless Forms and Dialog Boxes</span></span>  
+ <span data-ttu-id="b13b2-110">호출는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> 에서 메서드는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 에서 모덜리스 양식 또는 대화 상자를 열려면 요소는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-110">Call the <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> method on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element to open a modeless form or dialog box from a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  
   
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기반 응용 프로그램에서 모덜리스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지를 열려면 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤의 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 메서드를 호출합니다.  
+ <span data-ttu-id="b13b2-111">호출는 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 에서 메서드는 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 열어는 모덜리스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지에 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-기반 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-111">Call the <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control to open a modeless [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page in a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-based application.</span></span>  
   
-## WindowsFormsHost 키보드 및 메시지 처리  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기반 응용 프로그램에서 호스팅할 경우 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 키보드 및 메시지 처리는 다음으로 이루어집니다.  
+## <a name="windowsformshost-keyboard-and-message-processing"></a><span data-ttu-id="b13b2-112">WindowsFormsHost 키보드 및 메시지 처리</span><span class="sxs-lookup"><span data-stu-id="b13b2-112">WindowsFormsHost Keyboard and Message Processing</span></span>  
+ <span data-ttu-id="b13b2-113">호스팅되는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 키보드 및 메시지 처리는 다음으로 이루어집니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-113">When hosted by a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] keyboard and message processing consists of the following:</span></span>  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스는 <xref:System.Windows.Interop.ComponentDispatcher> 클래스에서 구현하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 메시지 루프에서 메시지를 가져옵니다.  
+-   <span data-ttu-id="b13b2-114"><xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스는 메시지를 가져옵니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 구현 하는 메시지 루프는 <xref:System.Windows.Interop.ComponentDispatcher> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-114">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> class acquires messages from the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] message loop, which is implemented by the <xref:System.Windows.Interop.ComponentDispatcher> class.</span></span>  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스는 일반적인 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 키보드 처리가 발생할 수 있도록 서로게이트 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 메시지 루프를 만듭니다.  
+-   <span data-ttu-id="b13b2-115"><xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스 만듭니다 서로게이트 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 일반적인 되도록 메시지 루프 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 키보드 처리가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-115">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> class creates a surrogate [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] message loop to ensure that ordinary [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] keyboard processing occurs.</span></span>  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스는 <xref:System.Windows.Interop.IKeyboardInputSink> 인터페이스를 구현하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 포커스 관리를 조정합니다.  
+-   <span data-ttu-id="b13b2-116"><xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스가 구현 하는 <xref:System.Windows.Interop.IKeyboardInputSink> 인터페이스를 사용 하 여 포커스 관리 조정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-116">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> class implements the <xref:System.Windows.Interop.IKeyboardInputSink> interface to coordinate focus management with [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤은 자신을 등록하고 해당 메시지 루프를 시작합니다.  
+-   <span data-ttu-id="b13b2-117"><xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤 등록 되며 메시지 루프를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-117">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> controls register themselves and start their message loops.</span></span>  
   
- 다음 단원에서는 이러한 프로세스 부분에 대해 자세히 설명합니다.  
+ <span data-ttu-id="b13b2-118">다음 섹션에서는 이러한 부분은 과정을 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-118">The following sections describe these parts of the process in more detail.</span></span>  
   
-### WPF 메시지 루프에서 메시지 가져오기  
- <xref:System.Windows.Interop.ComponentDispatcher> 클래스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 메시지 루프 관리자를 구현합니다.  <xref:System.Windows.Interop.ComponentDispatcher> 클래스는 외부 클라이언트가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 메시지를 처리하기 전에 메시지를 필터링할 수 있도록 후크를 제공합니다.  
+### <a name="acquiring-messages-from-the-wpf-message-loop"></a><span data-ttu-id="b13b2-119">WPF 메시지 루프에서 메시지를 획득합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-119">Acquiring Messages from the WPF Message Loop</span></span>  
+ <span data-ttu-id="b13b2-120"><xref:System.Windows.Interop.ComponentDispatcher> 클래스 구현에 대 한 메시지 루프 관리자 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-120">The <xref:System.Windows.Interop.ComponentDispatcher> class implements the message loop manager for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="b13b2-121"><xref:System.Windows.Interop.ComponentDispatcher> 외부 클라이언트 하기 전에 메시지를 필터링 하는 후크를 제공 하는 클래스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-121">The <xref:System.Windows.Interop.ComponentDispatcher> class provides hooks to enable external clients to filter messages before [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] processes them.</span></span>  
   
- 상호 운용성 구현에서는 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 이벤트를 처리하여 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤보다 먼저 메시지를 처리할 수 있게 합니다.  
+ <span data-ttu-id="b13b2-122">상호 운용성 구현 핸들의 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> 매핑함으로써 이벤트 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 하기 전에 메시지를 처리 하는 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-122">The interoperation implementation handles the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> event, which enables [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls to process messages before [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controls.</span></span>  
   
-### 서로게이트 Windows Forms 메시지 루프  
- 기본적으로 <xref:System.Windows.Forms.Application?displayProperty=fullName> 클래스에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램에 대한 기본 메시지 루프가 포함됩니다.  상호 운용될 때 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 메시지 루프에서는 메시지를 처리하지 않습니다.  따라서 이 논리를 재현해야 합니다.  <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 이벤트의 처리기는 다음과 같은 단계를 수행합니다.  
+### <a name="surrogate-windows-forms-message-loop"></a><span data-ttu-id="b13b2-123">서로게이트 Windows Forms 메시지 루프</span><span class="sxs-lookup"><span data-stu-id="b13b2-123">Surrogate Windows Forms Message Loop</span></span>  
+ <span data-ttu-id="b13b2-124">기본적으로는 <xref:System.Windows.Forms.Application?displayProperty=nameWithType> 에 대 한 기본 메시지 루프를 포함 하는 클래스 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-124">By default, the <xref:System.Windows.Forms.Application?displayProperty=nameWithType> class contains the primary message loop for [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] applications.</span></span> <span data-ttu-id="b13b2-125">의 상호 운용 하는 동안는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 메시지 루프는 메시지를 처리 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-125">During interoperation, the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] message loop does not process messages.</span></span> <span data-ttu-id="b13b2-126">따라서이 논리를 재현해 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-126">Therefore, this logic must be reproduced.</span></span> <span data-ttu-id="b13b2-127">에 대 한 처리기는 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> 이벤트는 다음 단계를 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-127">The handler for the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> event performs the following steps:</span></span>  
   
-1.  <xref:System.Windows.Forms.IMessageFilter> 인터페이스를 사용하여 메시지를 필터링합니다.  
+1.  <span data-ttu-id="b13b2-128">사용 하 여 메시지 필터는 <xref:System.Windows.Forms.IMessageFilter> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-128">Filters the message using the <xref:System.Windows.Forms.IMessageFilter> interface.</span></span>  
   
-2.  <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName> 메서드를 호출합니다.  
+2.  <span data-ttu-id="b13b2-129">호출 된 <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> 메서드.</span><span class="sxs-lookup"><span data-stu-id="b13b2-129">Calls the <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> method.</span></span>  
   
-3.  필요한 경우 메시지를 변환하고 디스패치합니다.  
+3.  <span data-ttu-id="b13b2-130">변환 하 고 필요한 경우에 메시지를 디스패치합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-130">Translates and dispatches the message, if it is required.</span></span>  
   
-4.  다른 컨트롤에서 메시지를 처리하지 않는 경우 메시지를 호스팅 컨트롤에 전달합니다.  
+4.  <span data-ttu-id="b13b2-131">다른 컨트롤이 없는 메시지를 처리 하는 경우에 호스팅 컨트롤에 메시지를 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-131">Passes the message to the hosting control, if no other controls process the message.</span></span>  
   
-### IKeyboardInputSink 구현  
- 서로게이트 메시지 루트에서 키보드 관리를 처리합니다.  따라서 <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName> 메서드는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스에서 구현해야 하는 유일한 <xref:System.Windows.Interop.IKeyboardInputSink> 멤버입니다.  
+### <a name="ikeyboardinputsink-implementation"></a><span data-ttu-id="b13b2-132">IKeyboardInputSink 구현</span><span class="sxs-lookup"><span data-stu-id="b13b2-132">IKeyboardInputSink Implementation</span></span>  
+ <span data-ttu-id="b13b2-133">서로게이트 메시지 루프 키보드 관리를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-133">The surrogate message loop handles keyboard management.</span></span> <span data-ttu-id="b13b2-134">따라서는 <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> 메서드는 유일한 <xref:System.Windows.Interop.IKeyboardInputSink> 멤버의 구현이 필요로 하는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-134">Therefore, the <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> method is the only <xref:System.Windows.Interop.IKeyboardInputSink> member that requires an implementation in the <xref:System.Windows.Forms.Integration.WindowsFormsHost> class.</span></span>  
   
- 기본적으로 <xref:System.Windows.Interop.HwndHost> 클래스는 <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> 구현에 대해 `false`를 반환합니다.  따라서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에서 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤로 이동할 수 없습니다.  
+ <span data-ttu-id="b13b2-135">기본적으로는 <xref:System.Windows.Interop.HwndHost> 반환 클래스 `false` 에 대 한 해당 <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-135">By default, the <xref:System.Windows.Interop.HwndHost> class returns `false` for its <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> implementation.</span></span> <span data-ttu-id="b13b2-136">이렇게에서 탭을 사용 하면 한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-136">This prevents tabbing from a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] control to a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
   
- <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName> 메서드의 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 구현에서는 다음 단계를 수행합니다.  
+ <span data-ttu-id="b13b2-137"><xref:System.Windows.Forms.Integration.WindowsFormsHost> 구현의 <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> 메서드는 다음 단계를 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-137">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> implementation of the <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> method performs the following steps:</span></span>  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤에 포함되어 있고 포커스를 수신할 수 있는 첫 번째 또는 마지막 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 찾습니다.  통과 정보에 따라 컨트롤 선택이 달라집니다.  
+1.  <span data-ttu-id="b13b2-138">찾은 첫 번째 또는 마지막 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 포함 된는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤이 포커스를 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-138">Finds the first or last [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control that is contained by the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control and that can receive focus.</span></span> <span data-ttu-id="b13b2-139">컨트롤 선택 통과 정보에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-139">The control choice depends on traversal information.</span></span>  
   
-2.  포커스를 컨트롤로 설정하고 `true`를 반환합니다.  
+2.  <span data-ttu-id="b13b2-140">컨트롤에 포커스를 설정 하 고 반환 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-140">Sets focus to the control and returns `true`.</span></span>  
   
-3.  컨트롤에서 포커스를 수신할 수 없으면 `false`를 반환합니다.  
+3.  <span data-ttu-id="b13b2-141">컨트롤이 포커스를 받을 수 있으면 반환 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-141">If no control can receive focus, returns `false`.</span></span>  
   
-### WindowsFormsHost 등록  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤의 창 핸들이 만들어지면 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤에서는 메시지 루프에 자신을 등록하는 internal static 메서드를 호출합니다.  
+### <a name="windowsformshost-registration"></a><span data-ttu-id="b13b2-142">WindowsFormsHost 등록</span><span class="sxs-lookup"><span data-stu-id="b13b2-142">WindowsFormsHost Registration</span></span>  
+ <span data-ttu-id="b13b2-143">에 대 한 창 핸들을 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤을 만든는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 메시지 루프에 대 한 존재를 등록 하는 내부 정적 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-143">When the window handle to a <xref:System.Windows.Forms.Integration.WindowsFormsHost> control is created, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control calls an internal static method that registers its presence for the message loop.</span></span>  
   
- 등록하는 동안 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤은 메시지 루프를 검사합니다.  메시지 루프가 시작되지 않은 경우 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 이벤트 처리기가 만들어집니다.  <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 이벤트 처리기가 연결되어 있으면 메시지 루프가 실행되고 있는 것으로 간주됩니다.  
+ <span data-ttu-id="b13b2-144">등록 하는 동안는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 메시지 루프를 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-144">During registration, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control examines the message loop.</span></span> <span data-ttu-id="b13b2-145">메시지 루프가 시작 되지 않은 경우는 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> 이벤트 처리기가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-145">If the message loop has not been started, the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> event handler is created.</span></span> <span data-ttu-id="b13b2-146">메시지 루프 때 실행 되 고으로 간주 되는 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> 이벤트 처리기가 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-146">The message loop is considered to be running when the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> event handler is attached.</span></span>  
   
- 창 핸들이 삭제되면 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤은 등록에서 자신을 제거합니다.  
+ <span data-ttu-id="b13b2-147">창 핸들이 소멸 될 때는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤 등록에서 자신을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-147">When the window handle is destroyed, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control removes itself from registration.</span></span>  
   
-## ElementHost 키보드 및 메시지 처리  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기반 응용 프로그램에서 호스팅할 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 및 메시지 처리는 다음으로 이루어집니다.  
+## <a name="elementhost-keyboard-and-message-processing"></a><span data-ttu-id="b13b2-148">ElementHost 키보드 및 메시지 처리</span><span class="sxs-lookup"><span data-stu-id="b13b2-148">ElementHost Keyboard and Message Processing</span></span>  
+ <span data-ttu-id="b13b2-149">호스팅되는 경우는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 및 메시지 처리는 다음으로 이루어집니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-149">When hosted by a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] keyboard and message processing consists of the following:</span></span>  
   
--   <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink> 및 <xref:System.Windows.Interop.IKeyboardInputSite> 인터페이스 구현  
+-   <span data-ttu-id="b13b2-150"><xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.IKeyboardInputSink>, 및 <xref:System.Windows.Interop.IKeyboardInputSite> 인터페이스 구현.</span><span class="sxs-lookup"><span data-stu-id="b13b2-150"><xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, and <xref:System.Windows.Interop.IKeyboardInputSite> interface implementations.</span></span>  
   
--   탭 이동 및 화살표 키  
+-   <span data-ttu-id="b13b2-151">탭 이동 하 고 화살표 키입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-151">Tabbing and arrow keys.</span></span>  
   
--   명령 키 및 대화 상자 키  
+-   <span data-ttu-id="b13b2-152">명령 키 및 대화 상자 키를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-152">Command keys and dialog box keys.</span></span>  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 액셀레이터 키 처리  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<span data-ttu-id="b13b2-153">액셀러레이터 키를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-153"> accelerator processing.</span></span>  
   
- 다음 단원에서는 이러한 부분에 대해 자세히 설명합니다.  
+ <span data-ttu-id="b13b2-154">다음 섹션에서는 이러한 부분에서 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-154">The following sections describe these parts in more detail.</span></span>  
   
-### 인터페이스 구현  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서 키보드 메시지는 포커스가 있는 컨트를의 창 핸들로 라우트됩니다.  <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 이러한 메시지는 호스팅된 요소로 라우트됩니다.  이를 위해 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서는 <xref:System.Windows.Interop.HwndSource> 인스턴스를 제공합니다.  <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에 포커스가 있는 경우 <xref:System.Windows.Interop.HwndSource> 인스턴스는 대부분의 키보드 입력을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 클래스에서 처리할 수 있도록 라우트합니다.  
+### <a name="interface-implementations"></a><span data-ttu-id="b13b2-155">인터페이스 구현</span><span class="sxs-lookup"><span data-stu-id="b13b2-155">Interface Implementations</span></span>  
+ <span data-ttu-id="b13b2-156">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], 키보드 메시지가 라우트되는 포커스가 있는 컨트롤의 창 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-156">In [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], keyboard messages are routed to the window handle of the control that has focus.</span></span> <span data-ttu-id="b13b2-157">에 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 이러한 메시지는 호스팅된 요소에 라우팅됩니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-157">In the <xref:System.Windows.Forms.Integration.ElementHost> control, these messages are routed to the hosted element.</span></span> <span data-ttu-id="b13b2-158">이를 위해는 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤은 제공 된 <xref:System.Windows.Interop.HwndSource> 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="b13b2-158">To accomplish this, the <xref:System.Windows.Forms.Integration.ElementHost> control provides an <xref:System.Windows.Interop.HwndSource> instance.</span></span> <span data-ttu-id="b13b2-159">경우는 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에 포커스가 <xref:System.Windows.Interop.HwndSource> 인스턴스가 대부분의 키보드 입력에서 처리할 수 있도록 경로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-159">If the <xref:System.Windows.Forms.Integration.ElementHost> control has focus, the <xref:System.Windows.Interop.HwndSource> instance routes most keyboard input so that it can be processed by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> class.</span></span>  
   
- <xref:System.Windows.Interop.HwndSource> 클래스는 <xref:System.Windows.Interop.IKeyboardInputSink> 및 <xref:System.Windows.Interop.IKeyboardInputSite> 인터페이스를 구현합니다.  
+ <span data-ttu-id="b13b2-160"><xref:System.Windows.Interop.HwndSource> 클래스가 구현 하는 <xref:System.Windows.Interop.IKeyboardInputSink> 및 <xref:System.Windows.Interop.IKeyboardInputSite> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-160">The <xref:System.Windows.Interop.HwndSource> class implements the <xref:System.Windows.Interop.IKeyboardInputSink> and <xref:System.Windows.Interop.IKeyboardInputSite> interfaces.</span></span>  
   
- 키보드 상호 운용에서는 <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> 메서드를 구현하여 호스트된 요소 밖으로 포커스를 이동하는 Tab 키 및 화살표 키 입력을 처리합니다.  
+ <span data-ttu-id="b13b2-161">구현에 따라 달라 키보드 상호 운용은 <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> 메서드 핸들 TAB 키와 화살표 키 호스트 된 요소에서 포커스를 이동 하는 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-161">Keyboard interoperation relies on implementing the <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> method to handle TAB key and arrow key input that moves focus out of hosted elements.</span></span>  
   
-### 탭 이동 및 화살표 키  
- Tab 및 화살표 키 탐색을 구현하기 위해 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 선택 논리가 <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> 및 <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> 메서드에 매핑됩니다.  <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> 메서드를 재정의하여 이러한 매핑을 수행할 수 있습니다.  
+### <a name="tabbing-and-arrow-keys"></a><span data-ttu-id="b13b2-162">Tabbing 키와 화살표 키</span><span class="sxs-lookup"><span data-stu-id="b13b2-162">Tabbing and Arrow Keys</span></span>  
+ <span data-ttu-id="b13b2-163">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 선택 논리에 매핑되어는 <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> 및 <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> 키를 누른 후 화살표를 구현 하는 메서드를 탐색 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-163">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] selection logic is mapped to the <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> and <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> methods to implement TAB and arrow key navigation.</span></span> <span data-ttu-id="b13b2-164">재정의 <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> 메서드가이 매핑을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-164">Overriding the <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> method accomplishes this mapping.</span></span>  
   
-### 명령 키 및 대화 상자 키  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 맨 처음에 명령 키 및 대화 상자 키를 처리할 수 있게 하려면 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 명령 전처리를 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> 메서드에 연결합니다.  <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=fullName> 메서드를 재정의하면 두 기술이 연결됩니다.  
+### <a name="command-keys-and-dialog-box-keys"></a><span data-ttu-id="b13b2-165">명령 키 및 대화 상자 키</span><span class="sxs-lookup"><span data-stu-id="b13b2-165">Command Keys and Dialog Box Keys</span></span>  
+ <span data-ttu-id="b13b2-166">부여할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 명령 키 및 대화 상자 키를 처리 하는 첫 번째 기회 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 에 연결 된 명령 전처리는 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="b13b2-166">To give [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] the first opportunity to process command keys and dialog keys, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] command preprocessing is connected to the <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> method.</span></span> <span data-ttu-id="b13b2-167">재정의 <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=nameWithType> 두 기술은 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-167">Overriding the <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=nameWithType> method connects the two technologies.</span></span>  
   
- <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> 메서드를 사용하면 호스트된 요소에서 Tab, Enter, Esc와 같은 명령 키와 화살표 키를 포함하여 WM\_KEYDOWN, WM\_KEYUP, WM\_SYSKEYDOWN, WM\_SYSKEYUP 등의 키 메시지를 처리할 수 있습니다.  키 메시지가 처리되지 않으면 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 상위 계층 구조로 보내 처리하게 합니다.  
+ <span data-ttu-id="b13b2-168">와 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> 메서드를 호스트 된 요소 WM_KEYDOWN, WM_KEYUP, WM_SYSKEYDOWN, 탭, ENTER, ESC, 및 화살표 키 등의 명령 키를 포함 하 여 WM_SYSKEYUP 등 모든 주요 메시지를 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-168">With the <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> method, the hosted elements can handle any key message, such as WM_KEYDOWN, WM_KEYUP, WM_SYSKEYDOWN, or WM_SYSKEYUP, including command keys, such as TAB, ENTER, ESC, and arrow keys.</span></span> <span data-ttu-id="b13b2-169">키 메시지 처리 되지 않은 경우 보내는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 처리에 대 한 상위 계층입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-169">If a key message is not handled, it is sent up the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ancestor hierarchy for handling.</span></span>  
   
-### 액셀레이터 키 처리  
- 액셀러레이터 키를 올바로 처리하려면 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 액셀러레이터 처리가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 클래스에 연결되어 있어야 합니다.  또한 모든 WM\_CHAR 메시지가 호스트된 요소로 올바로 라우트되어야 합니다.  
+### <a name="accelerator-processing"></a><span data-ttu-id="b13b2-170">액셀러레이터 키 처리</span><span class="sxs-lookup"><span data-stu-id="b13b2-170">Accelerator Processing</span></span>  
+ <span data-ttu-id="b13b2-171">정상적으로 처리 액셀러레이터 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 액셀러레이터 처리에 연결 되어야 합니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-171">To process accelerators correctly, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] accelerator processing must be connected to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> class.</span></span> <span data-ttu-id="b13b2-172">또한 요소를 호스트에 모든 WM_CHAR 메시지를 올바르게 라우팅하려면 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-172">Additionally, all WM_CHAR messages must be correctly routed to hosted elements.</span></span>  
   
- <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> 메서드의 기본 <xref:System.Windows.Interop.HwndSource> 구현에서는 `false`를 반환하므로 WM\_CHAR 메시지는 다음 논리를 사용하여 처리됩니다.  
+ <span data-ttu-id="b13b2-173">때문에 기본 <xref:System.Windows.Interop.HwndSource> 구현의 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> 메서드가 반환 되 `false`, WM_CHAR 메시지는 다음과 같은 논리를 사용 하 여 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-173">Because the default <xref:System.Windows.Interop.HwndSource> implementation of the <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> method returns `false`, WM_CHAR messages are processed using the following logic:</span></span>  
   
--   모든 WM\_CHAR 메시지가 호스트된 요소에 전달되도록 <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=fullName> 메서드를 재정의합니다.  
+-   <span data-ttu-id="b13b2-174"><xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> 메서드는 모든 WM_CHAR 메시지는 호스트 된 요소에 전달 되도록 보장 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-174">The <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> method is overridden to ensure that all WM_CHAR messages are forwarded to hosted elements.</span></span>  
   
--   Alt 키를 누르면 메시지는 WM\_SYSCHAR이 됩니다.  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서는 이 메시지를 <xref:System.Windows.Forms.Control.IsInputChar%2A> 메서드를 통해 처리하지 않습니다.  따라서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager>를 쿼리하여 등록된 액셀러레이터 키가 있는지 확인하도록 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> 메서드를 재정의합니다.  등록된 액셀레이터 키가 있으면 <xref:System.Windows.Input.AccessKeyManager>에서 이 키를 처리합니다.  
+-   <span data-ttu-id="b13b2-175">메시지 ALT 키를 누를 경우 wm_syschar입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-175">If the ALT key is pressed, the message is WM_SYSCHAR.</span></span> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<span data-ttu-id="b13b2-176">통해이 메시지를 전처리 하지 않고 않습니다는 <xref:System.Windows.Forms.Control.IsInputChar%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="b13b2-176"> does not preprocess this message through the <xref:System.Windows.Forms.Control.IsInputChar%2A> method.</span></span> <span data-ttu-id="b13b2-177">따라서는 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> 메서드는 쿼리에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 등록 된 액셀러레이터 키입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-177">Therefore, the <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> method is overridden to query the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> for a registered accelerator.</span></span> <span data-ttu-id="b13b2-178">등록된 된 액셀러레이터 키가 있으면 <xref:System.Windows.Input.AccessKeyManager> 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-178">If a registered accelerator is found, <xref:System.Windows.Input.AccessKeyManager> processes it.</span></span>  
   
--   Alt 키를 누르지 않으면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 클래스에서 처리되지 않은 입력을 처리합니다.  입력이 액셀레이터 키인 경우 <xref:System.Windows.Input.AccessKeyManager>에서 처리합니다.  처리되지 않은 WM\_CHAR 메시지의 경우 <xref:System.Windows.Input.InputManager.PostProcessInput> 이벤트가 처리됩니다.  
+-   <span data-ttu-id="b13b2-179">ALT 키를 누르지 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 처리 되지 않은 입력을 처리 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-179">If the ALT key is not pressed, the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> class processes the unhandled input.</span></span> <span data-ttu-id="b13b2-180">입력이 액셀러레이터의 <xref:System.Windows.Input.AccessKeyManager> 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-180">If the input is an accelerator, the <xref:System.Windows.Input.AccessKeyManager> processes it.</span></span> <span data-ttu-id="b13b2-181"><xref:System.Windows.Input.InputManager.PostProcessInput> 처리 되지 않은 WM_CHAR 메시지에 대 한 이벤트를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-181">The <xref:System.Windows.Input.InputManager.PostProcessInput> event is handled for WM_CHAR messages that were not processed.</span></span>  
   
- 사용자가 Alt 키를 누르면 전체 폼에 액셀레이터 키의 시각적 힌트가 표시됩니다.  이 동작을 지원하기 위해 어떤 컨트롤에 포커스가 있는지에 관계없이 활성 폼의 모든 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 WM\_SYSKEYDOWN 메시지를 수신합니다.  
+ <span data-ttu-id="b13b2-182">사용자가 ALT 키를 누르면 가속기 시각 신호 전체 폼에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-182">When the user presses the ALT key, accelerator visual cues are shown on the whole form.</span></span> <span data-ttu-id="b13b2-183">이 동작을 지원 하기 위해 모든 <xref:System.Windows.Forms.Integration.ElementHost> 현재 폼에 컨트롤에 관계 없이 컨트롤에 포커스가 WM_SYSKEYDOWN 메시지를 수신 합니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-183">To support this behavior, all <xref:System.Windows.Forms.Integration.ElementHost> controls on the active form receive WM_SYSKEYDOWN messages, regardless of which control has focus.</span></span>  
   
- 메시지는 활성 폼의 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤로만 전송됩니다.  
+ <span data-ttu-id="b13b2-184">메시지에만 보내집니다 <xref:System.Windows.Forms.Integration.ElementHost> 현재 폼에서 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="b13b2-184">Messages are sent only to <xref:System.Windows.Forms.Integration.ElementHost> controls in the active form.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)   
- [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+## <a name="see-also"></a><span data-ttu-id="b13b2-185">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b13b2-185">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="b13b2-186">연습: WPF에서 Windows Forms 복합 컨트롤 호스팅</span><span class="sxs-lookup"><span data-stu-id="b13b2-186">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="b13b2-187">연습: Windows Forms에서 WPF 복합 컨트롤 호스팅</span><span class="sxs-lookup"><span data-stu-id="b13b2-187">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
+ [<span data-ttu-id="b13b2-188">WPF 및 Win32 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="b13b2-188">WPF and Win32 Interoperation</span></span>](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

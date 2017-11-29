@@ -1,29 +1,35 @@
 ---
-title: "DataRelations 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataRelation 추가"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 31494ee9ac6fc8efc9a041f5d56dbba4a4bddad1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataRelations 추가
-여러 <xref:System.Data.DataTable> 개체가 포함된 <xref:System.Data.DataSet>에서는 <xref:System.Data.DataRelation> 개체를 사용하여 하나의 테이블을 다른 테이블에 연관시키거나, 테이블 사이를 탐색하거나, 연관된 테이블의 자식 또는 부모 행을 반환할 수 있습니다.  
+# <a name="adding-datarelations"></a><span data-ttu-id="efbdd-102">DataRelation 추가</span><span class="sxs-lookup"><span data-stu-id="efbdd-102">Adding DataRelations</span></span>
+<span data-ttu-id="efbdd-103">여러 <xref:System.Data.DataSet> 개체가 포함된 <xref:System.Data.DataTable>에서는 <xref:System.Data.DataRelation> 개체를 사용하여 하나의 테이블을 다른 테이블에 연관시키거나, 테이블 사이를 탐색하거나, 연관된 테이블의 자식 또는 부모 행을 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-103">In a <xref:System.Data.DataSet> with multiple <xref:System.Data.DataTable> objects, you can use <xref:System.Data.DataRelation> objects to relate one table to another, to navigate through the tables, and to return child or parent rows from a related table.</span></span>  
   
- **DataRelation**을 만드는 데 필요한 인수로는 만들어지는 **DataRelation**의 이름과 관계에서 부모 및 자식 열로 작동하는 열을 참조하는 하나 이상의 <xref:System.Data.DataColumn>으로 이루어진 배열이 있습니다.  **DataRelation**을 만든 후에는 이를 사용하여 테이블 사이를 탐색하거나 값을 검색할 수 있습니다.  
+ <span data-ttu-id="efbdd-104">만드는 데 필요한 인수로 **DataRelation** 됩니다에 대 한 이름을 **DataRelation** 만들고 하나 이상의 배열 <xref:System.Data.DataColumn> 부모 및 자식으로 사용 되는 열에 대 한 참조 관계의 열입니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-104">The arguments required to create a **DataRelation** are a name for the **DataRelation** being created, and an array of one or more <xref:System.Data.DataColumn> references to the columns that serve as the parent and child columns in the relationship.</span></span> <span data-ttu-id="efbdd-105">만든 후는 **DataRelation**, 테이블 간의 탐색 하 고 값을 검색 하려면 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-105">After you have created a **DataRelation**, you can use it to navigate between tables and to retrieve values.</span></span>  
   
- **DataRelation**을 <xref:System.Data.DataSet>에 추가하면 기본적으로 부모 테이블에는 <xref:System.Data.UniqueConstraint>가, 자식 테이블에는 <xref:System.Data.ForeignKeyConstraint>가 추가됩니다.  이러한 기본 제약 조건에 대한 자세한 내용은 [DataTable 제약 조건](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)를 참조하세요.  
+ <span data-ttu-id="efbdd-106">추가 **DataRelation** 에 <xref:System.Data.DataSet> 기본적으로 추가 <xref:System.Data.UniqueConstraint> 부모 테이블에 및 <xref:System.Data.ForeignKeyConstraint> 자식 테이블에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-106">Adding a **DataRelation** to a <xref:System.Data.DataSet> adds, by default, a <xref:System.Data.UniqueConstraint> to the parent table and a <xref:System.Data.ForeignKeyConstraint> to the child table.</span></span> <span data-ttu-id="efbdd-107">이러한 기본 제약 조건에 대 한 자세한 내용은 참조 [DataTable 제약 조건](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-107">For more information about these default constraints, see [DataTable Constraints](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).</span></span>  
   
- 다음 코드 예제에서는 <xref:System.Data.DataSet>의 두 <xref:System.Data.DataTable> 개체를 사용하여 **DataRelation**을 만듭니다.  각 <xref:System.Data.DataTable>에는 두 <xref:System.Data.DataTable> 개체 사이의 링크로 작동하는 **CustID**라는 열이 있습니다.  이 예제에서는 **DataRelation** 하나가 <xref:System.Data.DataSet>의 **Relations** 컬렉션에 추가됩니다.  이 예제에서 첫 번째 인수는 만들어지는 **DataRelation**의 이름을 지정합니다.  두 번째 인수는 부모 **DataColumn**을 설정하고, 세 번째 인수는 자식 **DataColumn**을 설정합니다.  
+ <span data-ttu-id="efbdd-108">다음 코드 예제에서는 한 **DataRelation** 두 개를 사용 하 여 <xref:System.Data.DataTable> 개체에 <xref:System.Data.DataSet>합니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-108">The following code example creates a **DataRelation** using two <xref:System.Data.DataTable> objects in a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="efbdd-109">각 <xref:System.Data.DataTable> 라는 열이 포함 되어 **CustID**, 둘 사이의 링크로 제공 되 <xref:System.Data.DataTable> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-109">Each <xref:System.Data.DataTable> contains a column named **CustID**, which serves as a link between the two <xref:System.Data.DataTable> objects.</span></span> <span data-ttu-id="efbdd-110">예제에서는 추가 하는 단일 **DataRelation** 에 **관계** 의 컬렉션은 <xref:System.Data.DataSet>합니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-110">The example adds a single **DataRelation** to the **Relations** collection of the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="efbdd-111">예제에서 첫 번째 인수의 이름을 지정 하는 **DataRelation** 만들려는 합니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-111">The first argument in the example specifies the name of the **DataRelation** being created.</span></span> <span data-ttu-id="efbdd-112">부모를 설정 하는 두 번째 인수 **DataColumn** 자식을 설정 하는 세 번째 인수 및 **DataColumn**합니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-112">The second argument sets the parent **DataColumn** and the third argument sets the child **DataColumn**.</span></span>  
   
 ```vb  
 customerOrders.Relations.Add("CustOrders", _  
@@ -37,8 +43,8 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- **DataRelation**에는 **Nested** 속성도 있습니다. 이 속성을 **true**로 설정할 설정하면 자식 테이블의 행은 <xref:System.Data.DataSet.WriteXml%2A>을 사용하여 XML 요소로 작성할 경우 부모 테이블의 관련 행 내에 중첩됩니다.  자세한 내용은 [DataSet에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)을 참조하세요.  
+ <span data-ttu-id="efbdd-113">A **DataRelation** 역시는 **Nested** 속성을로 설정 된 경우 **true**, 부모 테이블의 관련된 행 내에 중첩 될 자식 테이블의 행을 하면 사용 하 여 XML 요소로 작성할 때 <xref:System.Data.DataSet.WriteXml%2A> 합니다.</span><span class="sxs-lookup"><span data-stu-id="efbdd-113">A **DataRelation** also has a **Nested** property which, when set to **true**, causes the rows from the child table to be nested within the associated row from the parent table when written as XML elements using <xref:System.Data.DataSet.WriteXml%2A> .</span></span> <span data-ttu-id="efbdd-114">자세한 내용은 [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="efbdd-114">For more information, see [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).</span></span>  
   
-## 참고 항목  
- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="efbdd-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="efbdd-115">See Also</span></span>  
+ [<span data-ttu-id="efbdd-116">DataSet, DataTable 및 DataView</span><span class="sxs-lookup"><span data-stu-id="efbdd-116">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="efbdd-117">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="efbdd-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,83 +1,86 @@
 ---
-title: "UI Automation Support for the Thumb Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Thumb"
-  - "UI Automation, Thumb control type"
-  - "Thumb control type"
+title: "Thumb 컨트롤 형식에 대한 UI 자동화 지원"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Thumb
+- UI Automation, Thumb control type
+- Thumb control type
 ms.assetid: 13636338-e320-4355-b071-ede20a3fb1de
-caps.latest.revision: 20
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 80de9fc87acb514bb8bf149d9930217173811012
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Thumb Control Type
+# <a name="ui-automation-support-for-the-thumb-control-type"></a><span data-ttu-id="eb315-102">Thumb 컨트롤 형식에 대한 UI 자동화 지원</span><span class="sxs-lookup"><span data-stu-id="eb315-102">UI Automation Support for the Thumb Control Type</span></span>
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  <span data-ttu-id="eb315-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="eb315-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eb315-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 이 항목에서는 Thumb 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
+ <span data-ttu-id="eb315-105">이 항목에서는 Thumb 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Thumb control type.</span></span> <span data-ttu-id="eb315-106">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="eb315-107">이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values, and control patterns.</span></span>  
   
- Thumb 컨트롤은 컨트롤을 이동 또는 끌거나\(예: 스크롤 막대 단추\) 크기를 조정할 수 있는\(예: 창 크기 조정 위젯\) 기능을 제공합니다. 또한 Thumb 컨트롤은 이동 가능한 창 테두리로 구현할 수 있습니다. 끌어서 놓기 기능은 제공하지 않습니다. Thumb 컨트롤은 마우스 포커스를 받을 수 있지만 일반적으로 키보드 포커스는 받을 수 없습니다. 컨트롤 개발자는 컨트롤이 적절하게 작동\(끌거나 크기 조정 가능\)되도록 구현해야 합니다.  
+ <span data-ttu-id="eb315-108">Thumb 컨트롤은 컨트롤을 이동 또는 끌거나(예: 스크롤 막대 단추) 크기를 조정할 수 있는(예: 창 크기 조정 위젯) 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-108">Thumb controls provide the functionality that enables a control to be moved (or dragged), such as a scroll bar button, or resized, such as a window resizing widget.</span></span> <span data-ttu-id="eb315-109">또한 Thumb 컨트롤은 이동 가능한 창 테두리로 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-109">Thumb controls can also be implemented as movable borders of panes.</span></span> <span data-ttu-id="eb315-110">끌어서 놓기 기능은 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-110">Note that it does not provide drag-and-drop functionality.</span></span> <span data-ttu-id="eb315-111">Thumb 컨트롤은 마우스 포커스를 받을 수 있지만 일반적으로 키보드 포커스는 받을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-111">Thumb controls can receive mouse focus but usually not keyboard focus.</span></span> <span data-ttu-id="eb315-112">컨트롤 개발자는 컨트롤이 적절하게 작동(끌거나 크기 조정 가능)되도록 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-112">The control developer must implement the control so that it acts appropriately (can be dragged or resized).</span></span>  
   
- 다음 섹션에서는 Thumb 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 Thumb 컨트롤에 적용됩니다.  
+ <span data-ttu-id="eb315-113">다음 섹션에서는 Thumb 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-113">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Thumb control type.</span></span> <span data-ttu-id="eb315-114">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 Thumb 컨트롤에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-114">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all thumb controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 필요한 UI 자동화 트리 구조  
- 다음 표는 Thumb 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대한 자세한 내용은 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="eb315-115">필요한 UI 자동화 트리 구조</span><span class="sxs-lookup"><span data-stu-id="eb315-115">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="eb315-116">다음 표는 Thumb 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-116">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to thumb controls and describes what can be contained in each view.</span></span> <span data-ttu-id="eb315-117">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리, 참조 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-117">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|컨트롤 뷰|콘텐츠 뷰|  
-|-----------|-----------|  
-|Thumb|-   해당 없음|  
+|<span data-ttu-id="eb315-118">컨트롤 뷰</span><span class="sxs-lookup"><span data-stu-id="eb315-118">Control View</span></span>|<span data-ttu-id="eb315-119">콘텐츠 뷰</span><span class="sxs-lookup"><span data-stu-id="eb315-119">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="eb315-120">Thumb</span><span class="sxs-lookup"><span data-stu-id="eb315-120">Thumb</span></span>|<span data-ttu-id="eb315-121">-해당 사항 없음</span><span class="sxs-lookup"><span data-stu-id="eb315-121">-   Not applicable</span></span>|  
   
- Thumb 컨트롤은 마우스로만 조작할 수 있기 때문에 콘텐츠 뷰에는 표시되지 않습니다. 이 컨트롤의 기능은 Scroll 패턴, Transform 패턴 또는 RangeValue 패턴 등의 Thumb 컨테이너에서 지원되는 다른 컨트롤 패턴을 통해 노출됩니다.  
+ <span data-ttu-id="eb315-122">Thumb 컨트롤은 마우스로만 조작할 수 있기 때문에 콘텐츠 뷰에는 표시되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-122">Thumb controls never appear in Content View because they only exist for being manipulated with a mouse.</span></span> <span data-ttu-id="eb315-123">이 컨트롤의 기능은 Scroll 패턴, Transform 패턴 또는 RangeValue 패턴 등의 Thumb 컨테이너에서 지원되는 다른 컨트롤 패턴을 통해 노출됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-123">Their functionality is exposed though another control pattern, such as Scroll Pattern, Transform Pattern, or RangeValue Pattern, being supported on the Thumb container.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 Thumb 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대한 자세한 내용은 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)를 참조하세요.  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="eb315-124">필요한 UI 자동화 속성</span><span class="sxs-lookup"><span data-stu-id="eb315-124">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="eb315-125">다음 표에서는 값 또는 정의가 Thumb 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-125">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to thumb controls.</span></span> <span data-ttu-id="eb315-126">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 참조 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-126">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|Thumb 컨트롤의 표시되는 클라이언트 영역 내에 있는 모든 지점입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|`Null`|Thumb 컨트롤은 UI 자동화 트리의 콘텐츠 보기에서 사용할 수 없기 때문에 이름이 필요하지 않습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Thumb 컨트롤에는 레이블이 없습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Thumb|이 값은 모든 UI 프레임워크에 대해 동일합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"thumb"|Thumb 컨트롤 형식에 해당하는 지역화된 문자열입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Thumb 컨트롤 컨트롤은 콘텐츠가 아닙니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Thumb 컨트롤은 항상 컨트롤이어야 합니다.|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="eb315-127"> 속성</span><span class="sxs-lookup"><span data-stu-id="eb315-127"> Property</span></span>|<span data-ttu-id="eb315-128">값</span><span class="sxs-lookup"><span data-stu-id="eb315-128">Value</span></span>|<span data-ttu-id="eb315-129">노트</span><span class="sxs-lookup"><span data-stu-id="eb315-129">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="eb315-130">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eb315-130">See notes.</span></span>|<span data-ttu-id="eb315-131">이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-131">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="eb315-132">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eb315-132">See notes.</span></span>|<span data-ttu-id="eb315-133">전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-133">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="eb315-134">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eb315-134">See notes.</span></span>|<span data-ttu-id="eb315-135">Thumb 컨트롤의 표시되는 클라이언트 영역 내에 있는 모든 지점입니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-135">Any point within the visible client area of the Thumb control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="eb315-136">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eb315-136">See notes.</span></span>|<span data-ttu-id="eb315-137">컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-137">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|`Null`|<span data-ttu-id="eb315-138">Thumb 컨트롤은 UI 자동화 트리의 콘텐츠 보기에서 사용할 수 없기 때문에 이름이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-138">The Thumb control is not available in the Content View of the UI Automation tree so it does not require a name.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="eb315-139">Thumb 컨트롤에는 레이블이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-139">Thumb controls never have a label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="eb315-140">Thumb</span><span class="sxs-lookup"><span data-stu-id="eb315-140">Thumb</span></span>|<span data-ttu-id="eb315-141">이 값은 모든 UI 프레임워크에 대해 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-141">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="eb315-142">"thumb"</span><span class="sxs-lookup"><span data-stu-id="eb315-142">"thumb"</span></span>|<span data-ttu-id="eb315-143">Thumb 컨트롤 형식에 해당하는 지역화된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-143">Localized string corresponding to the Thumb control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="eb315-144">False</span><span class="sxs-lookup"><span data-stu-id="eb315-144">False</span></span>|<span data-ttu-id="eb315-145">Thumb 컨트롤 컨트롤은 콘텐츠가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-145">The Thumb control is never content.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="eb315-146">True</span><span class="sxs-lookup"><span data-stu-id="eb315-146">True</span></span>|<span data-ttu-id="eb315-147">Thumb 컨트롤은 항상 컨트롤이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-147">The Thumb control must always be a control.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 필요한 UI 자동화 컨트롤 패턴  
- 다음 표에서는 Thumb 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="eb315-148">필요한 UI 자동화 컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="eb315-148">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="eb315-149">다음 표에서는 Thumb 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-149">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by thumb controls.</span></span> <span data-ttu-id="eb315-150">컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eb315-150">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|컨트롤 패턴\/패턴 속성|지원\/값|노트|  
-|-------------------|-----------|--------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider>|필수|Thumb 컨트롤을 화면에 이동할 수 있습니다.|  
+|<span data-ttu-id="eb315-151">컨트롤 패턴/패턴 속성</span><span class="sxs-lookup"><span data-stu-id="eb315-151">Control Pattern/Pattern Property</span></span>|<span data-ttu-id="eb315-152">지원/값</span><span class="sxs-lookup"><span data-stu-id="eb315-152">Support/Value</span></span>|<span data-ttu-id="eb315-153">노트</span><span class="sxs-lookup"><span data-stu-id="eb315-153">Notes</span></span>|  
+|---------------------------------------|--------------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider>|<span data-ttu-id="eb315-154">필수</span><span class="sxs-lookup"><span data-stu-id="eb315-154">Required</span></span>|<span data-ttu-id="eb315-155">Thumb 컨트롤을 화면에 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-155">Enables the thumb control to be moved on the screen.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 필요한 UI 자동화 이벤트  
- 다음 표에서는 모든 Thumb 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="eb315-156">필요한 UI 자동화 이벤트</span><span class="sxs-lookup"><span data-stu-id="eb315-156">Required UI Automation Events</span></span>  
+ <span data-ttu-id="eb315-157">다음 표에서는 모든 Thumb 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="eb315-157">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all thumb controls.</span></span> <span data-ttu-id="eb315-158">이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eb315-158">For more information about events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
-|-------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="eb315-159"> 이벤트</span><span class="sxs-lookup"><span data-stu-id="eb315-159"> Event</span></span>|<span data-ttu-id="eb315-160">지원</span><span class="sxs-lookup"><span data-stu-id="eb315-160">Support</span></span>|<span data-ttu-id="eb315-161">노트</span><span class="sxs-lookup"><span data-stu-id="eb315-161">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<span data-ttu-id="eb315-162"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="eb315-162"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="eb315-163">필수</span><span class="sxs-lookup"><span data-stu-id="eb315-163">Required</span></span>|<span data-ttu-id="eb315-164">없음</span><span class="sxs-lookup"><span data-stu-id="eb315-164">None</span></span>|  
+|<span data-ttu-id="eb315-165"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="eb315-165"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="eb315-166">필수</span><span class="sxs-lookup"><span data-stu-id="eb315-166">Required</span></span>|<span data-ttu-id="eb315-167">없음</span><span class="sxs-lookup"><span data-stu-id="eb315-167">None</span></span>|  
+|<span data-ttu-id="eb315-168"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="eb315-168"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="eb315-169">필수</span><span class="sxs-lookup"><span data-stu-id="eb315-169">Required</span></span>|<span data-ttu-id="eb315-170">없음</span><span class="sxs-lookup"><span data-stu-id="eb315-170">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="eb315-171">필수</span><span class="sxs-lookup"><span data-stu-id="eb315-171">Required</span></span>|<span data-ttu-id="eb315-172">없음</span><span class="sxs-lookup"><span data-stu-id="eb315-172">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="eb315-173">필수</span><span class="sxs-lookup"><span data-stu-id="eb315-173">Required</span></span>|<span data-ttu-id="eb315-174">없음</span><span class="sxs-lookup"><span data-stu-id="eb315-174">None</span></span>|  
   
-## 참고 항목  
- <xref:System.Windows.Automation.ControlType.Thumb>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="eb315-175">참고 항목</span><span class="sxs-lookup"><span data-stu-id="eb315-175">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Thumb>  
+ [<span data-ttu-id="eb315-176">UI 자동화 컨트롤 형식 개요</span><span class="sxs-lookup"><span data-stu-id="eb315-176">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="eb315-177">UI 자동화 개요</span><span class="sxs-lookup"><span data-stu-id="eb315-177">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

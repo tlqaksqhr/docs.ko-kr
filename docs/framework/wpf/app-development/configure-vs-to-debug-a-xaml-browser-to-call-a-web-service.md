@@ -1,73 +1,76 @@
 ---
-title: "방법: Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Visual Studio를 구성하여 XAML 브라우저 응용 프로그램 디버깅[WPF]"
-  - "Visual Studio를 구성하여 XBAP 디버깅[WPF]"
-  - "XBAP에 대한 보안 예외 디버깅[WPF]"
-  - "웹 서비스를 호출하는 XBAP 디버깅[WPF]"
-  - "XBAP에 대한 보안 예외[WPF], 디버깅"
+title: "방법: Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- debugging XBAPs that call a Web service [WPF]
+- debugging security exceptions for XBAPs [WPF]
+- security exception for XBAPs [WPF], debugging
+- configuring Visual Studio to debug XAML browser applications [WPF]
+- configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5db89cf6220f086d2d71b99f3e6440e584d6a5d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]는 인터넷 영역 권한 집합으로 제한되는 부분 신뢰 보안 샌드박스에서 실행됩니다.  이 권한 집합은 웹 서비스 호출을 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 응용 프로그램의 원래 위치에 있는 웹 서비스로만 제한합니다.  하지만 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]에서 디버깅하는 경우 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]는 자신이 참조하는 웹 서비스와 동일한 원래 위치에 있는 것으로 간주되지 않습니다.  이 때문에 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 웹 서비스를 호출하려고 하면 보안 예외가 발생합니다.  하지만 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] 프로젝트의 경우 디버깅하는 동안 프로젝트 위치가 프로젝트가 호출하는 웹 서비스의 원래 위치와 동일하게 되도록 구성할 수 있습니다.  이렇게 하면 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 보안 예외를 발생시키지 않고 안전하게 웹 서비스를 호출할 수 있습니다.  
+# <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a><span data-ttu-id="ac64a-102">방법: Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅</span><span class="sxs-lookup"><span data-stu-id="ac64a-102">How to: Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]<span data-ttu-id="ac64a-103">사용 권한 인터넷 영역 집합으로 제한 되는 부분 신뢰 보안 샌드박스에서 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-103"> run within a partial-trust security sandbox that is restricted to the Internet zone set of permissions.</span></span> <span data-ttu-id="ac64a-104">이 권한 집합에는 웹 서비스 호출에 나와 있는 웹 서비스로을 제한 된 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 응용 프로그램의 원본 사이트입니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-104">This permission set restricts Web service calls to only Web services that are located at the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] application's site of origin.</span></span> <span data-ttu-id="ac64a-105">경우는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 에서 디버깅 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]경우 동일한 원본 사이트의 웹 서비스 참조 하도록 간주 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-105">When an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is debugged from [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)], though, it is not considered to have the same site of origin as the Web service it references.</span></span> <span data-ttu-id="ac64a-106">이 원인 보안 예외가 발생할 때에 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 웹 서비스를 호출 하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-106">This causes security exceptions to be raised when the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] attempts to call the Web service.</span></span> <span data-ttu-id="ac64a-107">그러나 한 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] 디버깅 하는 동안 호출 웹 서비스와 동일한 원본 사이트를 시뮬레이션할 하도록 프로젝트를 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-107">However, a [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] project can be configured to simulate having the same site of origin as the Web service it calls while debugging.</span></span> <span data-ttu-id="ac64a-108">이 통해는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 를 안전 하 게 보안 예외가 발생 하지 않고 웹 서비스를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-108">This allows the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] to safely call the Web service without causing security exceptions.</span></span>  
   
-## Visual Studio 구성  
- 웹 서비스를 호출하는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]를 디버깅하도록 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]를 구성하려면  
+## <a name="configuring-visual-studio"></a><span data-ttu-id="ac64a-109">Visual Studio 구성</span><span class="sxs-lookup"><span data-stu-id="ac64a-109">Configuring Visual Studio</span></span>  
+ <span data-ttu-id="ac64a-110">구성 하려면 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] 디버깅 하는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 웹 서비스를 호출 하는:</span><span class="sxs-lookup"><span data-stu-id="ac64a-110">To configure [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] to debug an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] that calls a Web service:</span></span>  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1.  <span data-ttu-id="ac64a-111">**솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-111">With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.</span></span>  
   
-2.  **프로젝트 디자이너**에서 **디버그** 탭을 클릭합니다.  
+2.  <span data-ttu-id="ac64a-112">에 **프로젝트 디자이너**, 클릭는 **디버그** 탭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-112">In the **Project Designer**, click the **Debug** tab.</span></span>  
   
-3.  **시작 작업** 섹션에서 **시작 외부 프로그램**을 선택하고 다음을 입력합니다.  
+3.  <span data-ttu-id="ac64a-113">에 **시작 작업** 섹션에서 **시작 외부 프로그램** 여 다음을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-113">In the **Start Action** section, select **Start external program** and enter the following:</span></span>  
   
      `C:\WINDOWS\System32\PresentationHost.exe`  
   
-4.  **시작 옵션** 섹션에서 **명령줄 인수** 텍스트 상자에 다음을 입력합니다.  
+4.  <span data-ttu-id="ac64a-114">에 **시작 옵션** 섹션에서 다음을 입력 하는 **명령줄 인수** 텍스트 상자:</span><span class="sxs-lookup"><span data-stu-id="ac64a-114">In the **Start Options** section, enter the following into the **Command line arguments** text box:</span></span>  
   
-     `-debug`  *filename*  
+     <span data-ttu-id="ac64a-115">`-debug`  *파일 이름*</span><span class="sxs-lookup"><span data-stu-id="ac64a-115">`-debug`  *filename*</span></span>  
   
-     **\-debug** 매개 변수에 대한 *filename* 값은 .xbap 파일 이름입니다. 예를 들면 다음과 같습니다.  
+     <span data-ttu-id="ac64a-116">*filename* 에 대 한 값의 **-디버그** 매개 변수는.xbap 파일 이름 예:</span><span class="sxs-lookup"><span data-stu-id="ac64a-116">The *filename* value for the **-debug** parameter is the .xbap filename; for example:</span></span>  
   
      `-debug c:\example.xbap`  
   
 > [!NOTE]
->  이는 [!INCLUDE[TLA2#tla_visualstu2005](../../../../includes/tla2sharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] 프로젝트 템플릿을 사용하여 만든 솔루션에 대한 기본 구성입니다.  
+>  <span data-ttu-id="ac64a-117">이 기본 구성이 사용 하 여 만든 솔루션에 대 한는 [!INCLUDE[TLA2#tla_visualstu2005](../../../../includes/tla2sharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] 서식 파일 프로젝트.</span><span class="sxs-lookup"><span data-stu-id="ac64a-117">This is the default configuration for solutions that are created with the [!INCLUDE[TLA2#tla_visualstu2005](../../../../includes/tla2sharptla-visualstu2005-md.md)] [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] project template.</span></span>  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1.  <span data-ttu-id="ac64a-118">**솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-118">With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.</span></span>  
   
-2.  **프로젝트 디자이너**에서 **디버그** 탭을 클릭합니다.  
+2.  <span data-ttu-id="ac64a-119">에 **프로젝트 디자이너**, 클릭는 **디버그** 탭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-119">In the **Project Designer**, click the **Debug** tab.</span></span>  
   
-3.  **시작 옵션** 섹션에서 **명령줄 인수** 텍스트 상자에 다음 명령줄 매개 변수를 추가합니다.  
+3.  <span data-ttu-id="ac64a-120">에 **시작 옵션** 섹션을 추가 하려면 다음 명령줄 매개 변수는 **명령줄 인수** 텍스트 상자:</span><span class="sxs-lookup"><span data-stu-id="ac64a-120">In the **Start Options** section, add the following command-line parameter to the **Command line arguments** text box:</span></span>  
   
-     `-debugSecurityZoneURL`  *URL*  
+     <span data-ttu-id="ac64a-121">`-debugSecurityZoneURL`  *URL*</span><span class="sxs-lookup"><span data-stu-id="ac64a-121">`-debugSecurityZoneURL`  *URL*</span></span>  
   
-     **\-debugSecurityZoneURL** 매개 변수의 *URL* 값은 응용 프로그램의 원래 위치로 시뮬레이션할 위치에 대한 [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)]입니다.  
+     <span data-ttu-id="ac64a-122">*URL* 에 대 한 값은 **-debugSecurityZoneURL** 매개 변수는는 [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] 시뮬레이션할 응용 프로그램의 원본 사이트를 원하는 위치에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac64a-122">The *URL* value for the **-debugSecurityZoneURL** parameter is the [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] for the location that you want to simulate as being the site of origin of your application.</span></span>  
   
- [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]의 웹 서비스를 사용하는 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]를 예로 들 수 있습니다.  
+ <span data-ttu-id="ac64a-123">예를 들어 고려는 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 다음 웹 서비스를 사용 하는 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="ac64a-123">As an example, consider a [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] that uses a Web service with the following [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:</span></span>  
   
  `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`  
   
- 이 웹 서비스의 원래 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 위치는 다음과 같습니다.  
+ <span data-ttu-id="ac64a-124">원본 사이트의 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 이 웹 서비스는:</span><span class="sxs-lookup"><span data-stu-id="ac64a-124">The site of origin [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] for this Web service is:</span></span>  
   
  `http://services.msdn.microsoft.com`  
   
- 따라서 전체 **\-debugSecurityZoneURL** 명령줄 매개 변수와 값은 다음과 같습니다.  
+ <span data-ttu-id="ac64a-125">따라서 전체 **-debugSecurityZoneURL** 명령줄 매개 변수 및 값은:</span><span class="sxs-lookup"><span data-stu-id="ac64a-125">Consequently, the complete **-debugSecurityZoneURL** command-line parameter and value is:</span></span>  
   
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`  
   
-## 참고 항목  
- [WPF 호스트\(PresentationHost.exe\)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)
+## <a name="see-also"></a><span data-ttu-id="ac64a-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ac64a-126">See Also</span></span>  
+ [<span data-ttu-id="ac64a-127">WPF 호스트(PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="ac64a-127">WPF Host (PresentationHost.exe)</span></span>](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)

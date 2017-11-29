@@ -1,34 +1,38 @@
 ---
-title: "While 활동의 열거 중단 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "While 활동의 열거 중단"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4417f4225200f01f23d753f6b7aa52ebc69cab4a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# While 활동의 열거 중단
-이 샘플에서는 <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> 및 <xref:System.Activities.Statements.ParallelForEach%601> 활동의 루프 메커니즘을 중단하는 방법을 보여 줍니다.  
+# <a name="emulating-breaking-in-a-while-activity"></a><span data-ttu-id="20c98-102">While 활동의 열거 중단</span><span class="sxs-lookup"><span data-stu-id="20c98-102">Emulating breaking in a While activity</span></span>
+<span data-ttu-id="20c98-103">이 샘플에서는 <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> 및 <xref:System.Activities.Statements.ParallelForEach%601> 활동의 루프 메커니즘을 중단하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-103">This sample demonstrates how to break the looping mechanism of the following activities: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, and <xref:System.Activities.Statements.ParallelForEach%601>.</span></span>  
   
- [!INCLUDE[wf](../../../../includes/wf-md.md)]에는 이러한 루프의 실행을 중단하는 활동이 전혀 포함되어 있지 않으므로 이와 같은 방법이 유용할 수 있습니다.  
+ <span data-ttu-id="20c98-104">[!INCLUDE[wf](../../../../includes/wf-md.md)]에는 이러한 루프의 실행을 중단하는 활동이 전혀 포함되어 있지 않으므로 이와 같은 방법이 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-104">This is useful because [!INCLUDE[wf](../../../../includes/wf-md.md)] does not include any activity to break the execution of these loops.</span></span>  
   
-## 시나리오  
- 이 샘플에서는 `Vendor` 클래스의 인스턴스인 공급업체 목록 중 신뢰할 수 있는 첫째 공급업체를 찾습니다.각 공급업체에는 `ID`와 `Name` 및 공급업체의 신뢰도를 나타내는 숫자 값이 있습니다.이 샘플에서는 공급업체 목록과 최소 신뢰도 값을 나타내는 입력 매개 변수 두 개를 받고 목록 중 지정된 조건에 일치하는 첫째 공급업체를 반환하는 `FindReliableVendor`라는 사용자 지정 활동을 만듭니다.  
+## <a name="scenario"></a><span data-ttu-id="20c98-105">시나리오</span><span class="sxs-lookup"><span data-stu-id="20c98-105">Scenario</span></span>  
+ <span data-ttu-id="20c98-106">이 샘플에서는 `Vendor` 클래스의 인스턴스인 공급업체 목록 중 신뢰할 수 있는 첫째 공급업체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-106">The sample finds the first reliable vendor from a list of vendors (instances of the `Vendor` class).</span></span> <span data-ttu-id="20c98-107">각 공급업체에는 `ID`와 `Name` 및 공급업체의 신뢰도를 나타내는 숫자 값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-107">Each vendor has an `ID`, a `Name` and a numeric reliability value that determines how dependable the vendor is.</span></span> <span data-ttu-id="20c98-108">이 샘플에서는 공급업체 목록과 최소 신뢰도 값을 나타내는 입력 매개 변수 두 개를 받고 목록 중 지정된 조건에 일치하는 첫째 공급업체를 반환하는 `FindReliableVendor`라는 사용자 지정 활동을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-108">The sample creates a custom activity called `FindReliableVendor` that receives two input parameters (a list of vendors and a minimum reliability value) and returns the first vendor of the list that matches the supplied criteria.</span></span>  
   
-## 루프 중단  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]에는 루프를 중단하는 활동이 포함되어 있지 않습니다.이 코드 샘플에서는 <xref:System.Activities.Statements.If> 활동과 여러 가지 변수를 사용하여 루프를 중단합니다.이 샘플에서 `reliableVendor` 변수에 `null`이 아닌 다른 값이 할당되면 <xref:System.Activities.Statements.While> 활동이 중단됩니다.  
+## <a name="breaking-a-loop"></a><span data-ttu-id="20c98-109">루프 중단</span><span class="sxs-lookup"><span data-stu-id="20c98-109">Breaking a Loop</span></span>  
+ [!INCLUDE[wf](../../../../includes/wf-md.md)]<span data-ttu-id="20c98-110">에는 루프를 중단하는 활동이 포함되어 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-110"> does not include an activity to break a loop.</span></span> <span data-ttu-id="20c98-111">이 코드 샘플에서는 <xref:System.Activities.Statements.If> 활동과 여러 가지 변수를 사용하여 루프를 중단합니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-111">The code sample accomplishes breaking a loop by using an <xref:System.Activities.Statements.If> activity and several variables.</span></span> <span data-ttu-id="20c98-112">이 샘플에서 <xref:System.Activities.Statements.While> 변수에 `reliableVendor`이 아닌 다른 값이 할당되면 `null` 활동이 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-112">In the sample, the <xref:System.Activities.Statements.While> activity is broken once the `reliableVendor` variable is assigned a value other than `null`.</span></span>  
   
- 다음 코드 예제에서는 이 샘플을 통해 while 루프가 어떻게 중단되는지 보여 줍니다.  
+ <span data-ttu-id="20c98-113">다음 코드 예제에서는 이 샘플을 통해 while 루프가 어떻게 중단되는지 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-113">The following code example demonstrates how the sample breaks a while loop.</span></span>  
   
 ```csharp  
-// Iterates while the “i” variable is lower than the size of the list   
+// Iterates while the "i" variable is lower than the size of the list   
 // and any reliable Vendor is found.        
 new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(env) == null)  
 {  
@@ -67,24 +71,23 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
         }  
     }  
 }  
-  
 ```  
   
-#### 이 샘플을 사용하려면  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="20c98-114">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="20c98-114">To use this sample</span></span>  
   
-1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 EmulatingBreakInWhile.sln 솔루션 파일을 엽니다.  
+1.  <span data-ttu-id="20c98-115">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 EmulatingBreakInWhile.sln 솔루션 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-115">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the EmulatingBreakInWhile.sln solution file.</span></span>  
   
-2.  Ctrl\+Shift\+B를 눌러 솔루션을 빌드합니다.  
+2.  <span data-ttu-id="20c98-116">Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-116">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Ctrl\+F5를 눌러 솔루션을 실행합니다.  
+3.  <span data-ttu-id="20c98-117">Ctrl+F5를 눌러 솔루션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-117">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.계속하기 전에 다음\(기본\) 디렉터리를 확인하십시오.  
+>  <span data-ttu-id="20c98-118">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="20c98-119">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="20c98-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하십시오.이 샘플은 다음 디렉터리에 있습니다.  
+>  <span data-ttu-id="20c98-120">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="20c98-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="20c98-121">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20c98-121">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="20c98-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="20c98-122">See Also</span></span>

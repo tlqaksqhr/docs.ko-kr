@@ -1,41 +1,44 @@
 ---
-title: "사용자 지정 바인딩을 통해 메타데이터 게시 및 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "사용자 지정 바인딩을 통해 메타데이터 게시 및 검색"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 83aba5cc938b926285f78efd1ab8d62493ad59d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
-<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName>에서는 메타데이터 끝점을 서비스에 추가할 수 있도록 지원합니다.이러한 메타데이터 끝점은 `?wsdl` 쿼리 문자열이 있는 URL에 있는 HTTP GET 요청 및 WS\-MEX\(WS\-MetadataExchange\) 사양에 정의한 WS\-Transfer GET 요청에 응답할 수 있습니다.MEX 끝점은 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=fullName> 계약을 구현합니다.  
+# <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a><span data-ttu-id="30666-102">사용자 지정 바인딩을 통해 메타데이터 게시 및 검색</span><span class="sxs-lookup"><span data-stu-id="30666-102">Publishing and Retrieving Metadata Over a Custom Binding</span></span>
+<span data-ttu-id="30666-103"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>에서는 메타데이터 끝점을 서비스에 추가할 수 있도록 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="30666-103">The <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> provides support for adding metadata endpoint to a service.</span></span> <span data-ttu-id="30666-104">이러한 메타 데이터 끝점에서 URL HTTP GET 요청에 응답할 수는 `?wsdl` querystring 및 Ws-metadataexchange (MEX) 사양에 정의 된 대로 Ws-transfer GET 요청을 합니다.</span><span class="sxs-lookup"><span data-stu-id="30666-104">These metadata endpoints can respond to HTTP GET requests at a URL that has a `?wsdl` querystring and to WS-Transfer GET requests as defined in the WS-MetadataExchange (MEX) specification.</span></span> <span data-ttu-id="30666-105">MEX 끝점은 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="30666-105">MEX endpoints implement the <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> contract.</span></span>  
   
-## 사용자 지정 바인딩을 통해 메타데이터 게시  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=fullName> 또는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=fullName> 속성을 `true`로 설정하여 HTTP GET 메타데이터 끝점 및 HTTPS GET 메타데이터 끝점을 사용할 수 있습니다.이러한 끝점에 대한 바인딩은 구성할 수 없습니다.  
+## <a name="publishing-metadata-over-a-custom-binding"></a><span data-ttu-id="30666-106">사용자 지정 바인딩을 통해 메타데이터 게시</span><span class="sxs-lookup"><span data-stu-id="30666-106">Publishing Metadata Over a Custom Binding</span></span>  
+ <span data-ttu-id="30666-107"><xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> 속성을 `true`로 설정하여 HTTP GET 메타데이터 끝점 및 HTTPS GET 메타데이터 끝점을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="30666-107">The HTTP GET metadata endpoints and HTTPS GET metadata endpoints are enabled by setting the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> properties to `true`.</span></span> <span data-ttu-id="30666-108">이러한 끝점에 대한 바인딩은 구성할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="30666-108">The bindings for these endpoints cannot be configured.</span></span>  
   
- 그러나 <xref:System.ServiceModel.Description.IMetadataExchange> 끝점이 다른 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 끝점과 동일하기 때문에 <xref:System.ServiceModel.Description.IMetadataExchange> 계약을 사용자 지정 바인딩을 사용하는 끝점을 비롯하여 모든 끝점과 함께 사용할 수 있습니다.시스템 제공 바인딩의 구성을 수정하는 방법을 알고 있거나 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=fullName>을 구성하는 방법을 알고 있는 경우 <xref:System.ServiceModel.Description.IMetadataExchange> 끝점에 사용할 바인딩을 구성할 수 있습니다.  
+ <span data-ttu-id="30666-109">그러나 <xref:System.ServiceModel.Description.IMetadataExchange> 끝점이 다른 <xref:System.ServiceModel.Description.IMetadataExchange> 서비스 끝점과 동일하기 때문에 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 계약을 사용자 지정 바인딩을 사용하는 끝점을 비롯하여 모든 끝점과 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="30666-109">The <xref:System.ServiceModel.Description.IMetadataExchange> contract, however, can be used with any endpoint, including those that use custom bindings, because <xref:System.ServiceModel.Description.IMetadataExchange> endpoints are identical to any other [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service endpoint.</span></span> <span data-ttu-id="30666-110">시스템 제공 바인딩의 구성을 수정하는 방법을 알고 있거나 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>을 구성하는 방법을 알고 있는 경우 <xref:System.ServiceModel.Description.IMetadataExchange> 끝점에 사용할 바인딩을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="30666-110">If you know how to modify the configuration of a system-provided binding, or you know how to configure a <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, then you can configure a binding for use with an <xref:System.ServiceModel.Description.IMetadataExchange> endpoint.</span></span>  
   
-## 사용자 지정 바인딩을 통해 메타데이터 검색  
- 표준 HTTP 또는 HTTPS GET 요청을 사용하여 HTTP Get 및 HTTPS Get 메타데이터 끝점에서 메타데이터를 검색할 수 있습니다.  
+## <a name="retrieving-metadata-over-a-custom-binding"></a><span data-ttu-id="30666-111">사용자 지정 바인딩을 통해 메타데이터 검색</span><span class="sxs-lookup"><span data-stu-id="30666-111">Retrieving Metadata Over a Custom Binding</span></span>  
+ <span data-ttu-id="30666-112">표준 HTTP 또는 HTTPS GET 요청을 사용하여 HTTP Get 및 HTTPS Get 메타데이터 끝점에서 메타데이터를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="30666-112">Metadata can be retrieved from HTTP Get and HTTPS Get metadata endpoints using standard HTTP or HTTPS GET requests.</span></span>  
   
- MEX 메타데이터 끝점에서 메타데이터를 검색하기 위해 일반적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 표준 MEX 바인딩 중 하나를 사용할 수 있습니다.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=fullName>.<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> 형식 및 Svcutil.exe 도구에서는 지정된 메타데이터 끝점의 주소에 따라 이러한 표준 MEX 바인딩 중 하나를 자동으로 선택합니다.  
+ <span data-ttu-id="30666-113">MEX 메타데이터 끝점에서 메타데이터를 검색하기 위해 일반적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 표준 MEX 바인딩 중 하나를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="30666-113">To retrieve metadata from a MEX metadata endpoint you can generally use one of the standard MEX bindings supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="30666-114"> <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="30666-114"> <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>.</span></span> <span data-ttu-id="30666-115"><xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 형식 및 Svcutil.exe 도구에서는 지정된 메타데이터 끝점의 주소에 따라 이러한 표준 MEX 바인딩 중 하나를 자동으로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="30666-115">The <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> type and the Svcutil.exe tool automatically select one of these standard MEX bindings based on the address of the specified metadata endpoint.</span></span>  
   
- MEX 메타데이터 끝점에서 표준 MEX 바인딩과 다른 바인딩을 사용하는 경우 코드를 사용하거나 <xref:System.ServiceModel.Description.IMetadataExchange> 클라이언트 끝점 구성을 제공하여 <xref:System.ServiceModel.Description.MetadataExchangeClient>에서 사용하는 바인딩을 구성할 수 있습니다.Svcutil.exe 도구는 메타데이터 끝점 주소의 URI 스키마와 이름이 같은 <xref:System.ServiceModel.Description.IMetadataExchange> 클라이언트 끝점 구성을 구성 파일에서 자동으로 로드합니다.  
+ <span data-ttu-id="30666-116">MEX 메타데이터 끝점에서 표준 MEX 바인딩과 다른 바인딩을 사용하는 경우 코드를 사용하거나 <xref:System.ServiceModel.Description.MetadataExchangeClient> 클라이언트 끝점 구성을 제공하여 <xref:System.ServiceModel.Description.IMetadataExchange>에서 사용하는 바인딩을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="30666-116">If a MEX metadata endpoint uses a different binding than one of the standard MEX bindings, you can configure the binding used by the <xref:System.ServiceModel.Description.MetadataExchangeClient> using code or by providing an <xref:System.ServiceModel.Description.IMetadataExchange> client endpoint configuration.</span></span> <span data-ttu-id="30666-117">Svcutil.exe 도구는 메타데이터 끝점 주소의 URI 스키마와 이름이 같은 <xref:System.ServiceModel.Description.IMetadataExchange> 클라이언트 끝점 구성을 구성 파일에서 자동으로 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="30666-117">The Svcutil.exe tool automatically loads from its configuration file an <xref:System.ServiceModel.Description.IMetadataExchange> client endpoint configuration that has the same name as the URI scheme for the metadata endpoint address.</span></span>  
   
-## 보안  
- 사용자 지정 바인딩을 통해 메타데이터를 게시하는 경우 바인딩에서 메타데이터가 필요로 하는 보안 지원을 제공하는지 확인합니다.예를 들어, 정보 공개를 방지하고 클라이언트에 메타데이터를 가져올 권한이 있는지 확인하려면 인증 및 암호화가 필요한 <xref:System.ServiceModel.Description.IMetadataExchange> 끝점을 구성하여 메타데이터 및 응용 프로그램의 보안을 더욱 향상시킬 수 있습니다.샘플 [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)에서는 이러한 경우를 보여 줍니다.  
+## <a name="security"></a><span data-ttu-id="30666-118">보안</span><span class="sxs-lookup"><span data-stu-id="30666-118">Security</span></span>  
+ <span data-ttu-id="30666-119">사용자 지정 바인딩을 통해 메타데이터를 게시하는 경우 바인딩에서 메타데이터가 필요로 하는 보안 지원을 제공하는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="30666-119">When publishing metadata over a custom binding, ensure that the binding provides the security support that your metadata requires.</span></span> <span data-ttu-id="30666-120">예를 들어, 정보 공개를 방지하고 클라이언트에 메타데이터를 가져올 권한이 있는지 확인하려면 인증 및 암호화가 필요한 <xref:System.ServiceModel.Description.IMetadataExchange> 끝점을 구성하여 메타데이터 및 응용 프로그램의 보안을 더욱 향상시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="30666-120">For example, to prevent information disclosure and ensure your client has the right to obtain the metadata, you can make your metadata and your application more secure by configuring your <xref:System.ServiceModel.Description.IMetadataExchange> endpoint to require authentication and encryption.</span></span> <span data-ttu-id="30666-121">샘플 [메타 데이터 끝점을 보호 하는 사용자 지정](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 이 시나리오를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="30666-121">The sample [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) demonstrates this scenario.</span></span>  
   
-## 참고 항목  
- [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)   
- [WS\-MetadataExchange 바인딩](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)   
- [방법: 사용자 지정 WS\-Metadata Exchange 바인딩 구성](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)   
- [방법: MEX가 아닌 바인딩을 통해 메타데이터 검색](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+## <a name="see-also"></a><span data-ttu-id="30666-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="30666-122">See Also</span></span>  
+ [<span data-ttu-id="30666-123">서비스에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="30666-123">Securing Services</span></span>](../../../../docs/framework/wcf/securing-services.md)  
+ [<span data-ttu-id="30666-124">Ws-metadataexchange 바인딩</span><span class="sxs-lookup"><span data-stu-id="30666-124">WS-MetadataExchange Bindings</span></span>](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
+ [<span data-ttu-id="30666-125">방법: 구성 사용자 지정 Ws-metadata 교환 바인딩을</span><span class="sxs-lookup"><span data-stu-id="30666-125">How to: Configure a Custom WS-Metadata Exchange Binding</span></span>](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
+ [<span data-ttu-id="30666-126">방법: 검색이 아닌 MEX 바인딩을 통해 메타 데이터</span><span class="sxs-lookup"><span data-stu-id="30666-126">How to: Retrieve Metadata Over a non-MEX Binding</span></span>](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

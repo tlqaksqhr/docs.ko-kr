@@ -1,84 +1,87 @@
 ---
-title: "SQL Server에서 보안 동적 SQL 작성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server에서 동적 보안 SQL 작성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 926794f4bb603548b74dd95fd9040d9471d70a35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# SQL Server에서 보안 동적 SQL 작성
-SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact\-SQL 문을 입력하는 데 사용하는 프로세스입니다.  이러한 공격으로 인해 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 응용 프로그램이 삽입된 코드를 실행하면 데이터가 손상되거나 파괴될 수 있습니다.  
+# <a name="writing-secure-dynamic-sql-in-sql-server"></a><span data-ttu-id="e60d0-102">SQL Server에서 동적 보안 SQL 작성</span><span class="sxs-lookup"><span data-stu-id="e60d0-102">Writing Secure Dynamic SQL in SQL Server</span></span>
+<span data-ttu-id="e60d0-103">SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-103">SQL Injection is the process by which a malicious user enters Transact-SQL statements instead of valid input.</span></span> <span data-ttu-id="e60d0-104">이러한 공격으로 인해 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 응용 프로그램이 삽입된 코드를 실행하면 데이터가 손상되거나 파괴될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-104">If the input is passed directly to the server without being validated and if the application inadvertently executes the injected code, the attack has the potential to damage or destroy data.</span></span>  
   
- SQL Server는 구문상 유효한 쿼리가 수신되면 모두 실행하기 때문에 SQL 문을 생성하는 모든 프로시저에 삽입 취약성이 있는지 검토해야 합니다.  매개 변수화된 데이터인 경우에도 숙련된 공격자에 의해 조작될 가능성이 있습니다.  동적 SQL을 사용하는 경우 쿼리 문자열에는 매개 변수 값을 직접 포함하지 않도록 하고 명령은 매개 변수화해야 합니다.  
+ <span data-ttu-id="e60d0-105">SQL Server는 구문상 유효한 쿼리가 수신되면 모두 실행하기 때문에 SQL 문을 생성하는 모든 프로시저에 삽입 취약성이 있는지 검토해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-105">Any procedure that constructs SQL statements should be reviewed for injection vulnerabilities because SQL Server will execute all syntactically valid queries that it receives.</span></span> <span data-ttu-id="e60d0-106">매개 변수화된 데이터인 경우에도 숙련된 공격자에 의해 조작될 가능성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-106">Even parameterized data can be manipulated by a skilled and determined attacker.</span></span> <span data-ttu-id="e60d0-107">동적 SQL을 사용하는 경우 쿼리 문자열에는 매개 변수 값을 직접 포함하지 않도록 하고 명령은 매개 변수화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-107">If you use dynamic SQL, be sure to parameterize your commands, and never include parameter values directly into the query string.</span></span>  
   
-## SQL 삽입 공격 분석  
- 삽입 프로세스는 텍스트 문자열을 중간에 종료하고 새 명령을 추가하는 방식으로 작동합니다.  삽입된 명령에는 실행되기 전에 추가된 문자열이 있을 수 있으므로 공격자는 주석 표시\("\-\-"\)를 사용하여 삽입된 문자열을 종료합니다.  이후 텍스트는 실행 시 무시됩니다.  세미콜론\(;\) 구분 기호를 사용하여 여러 명령을 삽입할 수 있습니다.  
+## <a name="anatomy-of-a-sql-injection-attack"></a><span data-ttu-id="e60d0-108">SQL 삽입 공격 분석</span><span class="sxs-lookup"><span data-stu-id="e60d0-108">Anatomy of a SQL Injection Attack</span></span>  
+ <span data-ttu-id="e60d0-109">삽입 프로세스는 텍스트 문자열을 중간에 종료하고 새 명령을 추가하는 방식으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-109">The injection process works by prematurely terminating a text string and appending a new command.</span></span> <span data-ttu-id="e60d0-110">삽입된 명령에는 실행되기 전에 추가된 문자열이 있을 수 있으므로 공격자는 주석 표시("--")를 사용하여 삽입된 문자열을 종료합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-110">Because the inserted command may have additional strings appended to it before it is executed, the malefactor terminates the injected string with a comment mark "--".</span></span> <span data-ttu-id="e60d0-111">이후 텍스트는 실행 시 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-111">Subsequent text is ignored at execution time.</span></span> <span data-ttu-id="e60d0-112">세미콜론(;) 구분 기호를 사용하여 여러 명령을 삽입할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-112">Multiple commands can be inserted using a semicolon (;) delimiter.</span></span>  
   
- 삽입된 SQL 코드가 구문상 올바른 경우 프로그래밍 방식으로는 훼손 여부를 찾아낼 수 없습니다.  따라서 모든 사용자 입력의 유효성을 검사하고 생성된 SQL 명령을 현재 사용 중인 서버에서 실행하는 코드를 신중하게 검토해야 합니다.  유효성을 검사하지 않은 사용자 입력은 연결하지 마세요.  문자열 연결은 스크립트 삽입 공격의 기본적인 대상이 됩니다.  
+ <span data-ttu-id="e60d0-113">삽입된 SQL 코드가 구문상 올바른 경우 프로그래밍 방식으로는 훼손 여부를 찾아낼 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-113">As long as injected SQL code is syntactically correct, tampering cannot be detected programmatically.</span></span> <span data-ttu-id="e60d0-114">따라서 모든 사용자 입력의 유효성을 검사하고 생성된 SQL 명령을 현재 사용 중인 서버에서 실행하는 코드를 신중하게 검토해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-114">Therefore, you must validate all user input and carefully review code that executes constructed SQL commands in the server that you are using.</span></span> <span data-ttu-id="e60d0-115">유효성을 검사하지 않은 사용자 입력은 연결하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="e60d0-115">Never concatenate user input that is not validated.</span></span> <span data-ttu-id="e60d0-116">문자열 연결은 스크립트 삽입 공격의 기본적인 대상이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-116">String concatenation is the primary point of entry for script injection.</span></span>  
   
- 다음은 몇 가지 유용한 지침입니다.  
+ <span data-ttu-id="e60d0-117">다음은 몇 가지 유용한 지침입니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-117">Here are some helpful guidelines:</span></span>  
   
--   Transact\-SQL 문을 사용자 입력에서 직접 빌드하지 않고 저장 프로시저를 사용하여 사용자 입력의 유효성을 검사합니다.  
+-   <span data-ttu-id="e60d0-118">Transact-SQL 문을 사용자 입력에서 직접 빌드하지 않고 저장 프로시저를 사용하여 사용자 입력의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-118">Never build Transact-SQL statements directly from user input; use stored procedures to validate user input.</span></span>  
   
--   유형, 길이, 형식 및 범위를 테스트하여 사용자 입력의 유효성을 검사합니다.  Transact\-SQL QUOTENAME\(\) 함수를 사용하여 시스템 이름을 이스케이프하거나 REPLACE\(\) 함수를 사용하여 문자열의 모든 문자를 이스케이프합니다.  
+-   <span data-ttu-id="e60d0-119">유형, 길이, 형식 및 범위를 테스트하여 사용자 입력의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-119">Validate user input by testing type, length, format, and range.</span></span> <span data-ttu-id="e60d0-120">Transact-SQL QUOTENAME() 함수를 사용하여 시스템 이름을 이스케이프하거나 REPLACE() 함수를 사용하여 문자열의 모든 문자를 이스케이프합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-120">Use the Transact-SQL QUOTENAME() function to escape system names or the REPLACE() function to escape any character in a string.</span></span>  
   
--   응용 프로그램의 각 계층에서 여러 단계의 유효성 검사를 구현합니다.  
+-   <span data-ttu-id="e60d0-121">응용 프로그램의 각 계층에서 여러 단계의 유효성 검사를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-121">Implement multiple layers of validation in each tier of your application.</span></span>  
   
--   입력의 크기와 데이터 형식을 테스트하고 적절한 제한을 적용합니다.  이렇게 하면 의도적인 버퍼 오버런을 방지할 수 있습니다.  
+-   <span data-ttu-id="e60d0-122">입력의 크기와 데이터 형식을 테스트하고 적절한 제한을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-122">Test the size and data type of input and enforce appropriate limits.</span></span> <span data-ttu-id="e60d0-123">이렇게 하면 의도적인 버퍼 오버런을 방지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-123">This can help prevent deliberate buffer overruns.</span></span>  
   
--   문자열 변수의 내용을 테스트하고 예상된 값만 허용합니다.  이진 데이터, 이스케이프 시퀀스 및 주석 문자가 있는 항목은 거부합니다.  
+-   <span data-ttu-id="e60d0-124">문자열 변수의 내용을 테스트하고 예상된 값만 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-124">Test the content of string variables and accept only expected values.</span></span> <span data-ttu-id="e60d0-125">이진 데이터, 이스케이프 시퀀스 및 주석 문자가 있는 항목은 거부합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-125">Reject entries that contain binary data, escape sequences, and comment characters.</span></span>  
   
--   XML 문서를 사용할 때는 입력되는 모든 데이터를 스키마와 비교하여 유효성을 검사합니다.  
+-   <span data-ttu-id="e60d0-126">XML 문서를 사용할 때는 입력되는 모든 데이터를 스키마와 비교하여 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-126">When you are working with XML documents, validate all data against its schema as it is entered.</span></span>  
   
--   다중 계층 환경에서는 신뢰할 수 있는 영역으로 들어가는 모든 데이터의 유효성을 검사해야 합니다.  
+-   <span data-ttu-id="e60d0-127">다중 계층 환경에서는 신뢰할 수 있는 영역으로 들어가는 모든 데이터의 유효성을 검사해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-127">In multi-tiered environments, all data should be validated before admission to the trusted zone.</span></span>  
   
--   파일 이름이 구성될 수 있는 필드에 AUX, CLOCK$, COM1\-COM8, CON, CONFIG$, LPT1\-LPT8, NUL 및 PRN 문자열을 허용하지 않습니다.  
+-   <span data-ttu-id="e60d0-128">파일 이름이 구성될 수 있는 필드에 AUX, CLOCK$, COM1-COM8, CON, CONFIG$, LPT1-LPT8, NUL 및 PRN 문자열을 허용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-128">Do not accept the following strings in fields from which file names can be constructed: AUX, CLOCK$, COM1 through COM8, CON, CONFIG$, LPT1 through LPT8, NUL, and PRN.</span></span>  
   
--   <xref:System.Data.SqlClient.SqlParameter> 개체를 저장 프로시저 및 명령과 함께 사용하여 형식 검사와 길이 유효성 검사를 제공합니다.  
+-   <span data-ttu-id="e60d0-129"><xref:System.Data.SqlClient.SqlParameter> 개체를 저장 프로시저 및 명령과 함께 사용하여 형식 검사와 길이 유효성 검사를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-129">Use <xref:System.Data.SqlClient.SqlParameter> objects with stored procedures and commands to provide type checking and length validation.</span></span>  
   
--   클라이언트 코드에 <xref:System.Text.RegularExpressions.Regex> 식을 사용하여 유효하지 않은 문자를 필터링합니다.  
+-   <span data-ttu-id="e60d0-130">클라이언트 코드에 <xref:System.Text.RegularExpressions.Regex> 식을 사용하여 유효하지 않은 문자를 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-130">Use <xref:System.Text.RegularExpressions.Regex> expressions in client code to filter invalid characters.</span></span>  
   
-## 동적 SQL 전략  
- 동적으로 생성된 SQL 문을 절차적 코드에서 실행하면 소유권 체인이 끊어져서 SQL Server는 동적 SQL에서 액세스하는 개체에 대해 호출자의 권한을 확인합니다.  
+## <a name="dynamic-sql-strategies"></a><span data-ttu-id="e60d0-131">동적 SQL 전략</span><span class="sxs-lookup"><span data-stu-id="e60d0-131">Dynamic SQL Strategies</span></span>  
+ <span data-ttu-id="e60d0-132">동적으로 생성된 SQL 문을 절차적 코드에서 실행하면 소유권 체인이 끊어져서 SQL Server는 동적 SQL에서 액세스하는 개체에 대해 호출자의 권한을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-132">Executing dynamically created SQL statements in your procedural code breaks the ownership chain, causing SQL Server to check the permissions of the caller against the objects being accessed by the dynamic SQL.</span></span>  
   
- SQL Server에서는 동적 SQL을 실행하는 사용자 정의 함수 및 저장 프로시저를 사용하여 사용자에게 데이터에 대한 액세스 권한을 부여하는 방법이 도입되었습니다.  
+ <span data-ttu-id="e60d0-133">SQL Server에서는 동적 SQL을 실행하는 사용자 정의 함수 및 저장 프로시저를 사용하여 사용자에게 데이터에 대한 액세스 권한을 부여하는 방법이 도입되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-133">SQL Server has methods for granting users access to data using stored procedures and user-defined functions that execute dynamic SQL.</span></span>  
   
--   [SQL Server에서 가장을 사용하여 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)에서 설명하는 것처럼 Transact\-SQL EXECUTE AS 절을 통한 가장 사용  
+-   <span data-ttu-id="e60d0-134">가장을 사용 하 여 TRANSACT-SQL EXECUTE AS와 절에 설명 된 대로 [SQL Server에서 가장으로 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-134">Using impersonation with the Transact-SQL EXECUTE AS clause, as described in [Customizing Permissions with Impersonation in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).</span></span>  
   
--   [SQL Server에서 저장 프로시저 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)에서 설명하는 것처럼 인증서로 저장 프로시저 서명  
+-   <span data-ttu-id="e60d0-135">에 설명 된 대로 인증서를 사용 하는 저장된 프로시저에 서명 [SQL Server에서 저장 프로시저 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-135">Signing stored procedures with certificates, as described in [Signing Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).</span></span>  
   
-### EXECUTE AS  
- EXECUTE AS 절은 호출자의 권한을 EXECUTE AS 절에 지정된 사용자의 권한으로 바꿉니다.  중첩된 저장 프로시저 또는 트리거는 프록시 사용자의 보안 컨텍스트에서 실행됩니다.  이로 인해 행 수준 보안을 사용하거나 감사가 필요한 응용 프로그램이 중단될 수 있습니다.  사용자의 ID를 반환하는 일부 함수는 원래 호출자가 아니라 EXECUTE AS 절에 지정된 사용자를 반환합니다.  실행 컨텍스트는 프로시저 실행 후 또는 REVERT 문이 실행될 때만 원래 호출자로 되돌아갑니다.  
+### <a name="execute-as"></a><span data-ttu-id="e60d0-136">EXECUTE AS</span><span class="sxs-lookup"><span data-stu-id="e60d0-136">EXECUTE AS</span></span>  
+ <span data-ttu-id="e60d0-137">EXECUTE AS 절은 호출자의 권한을 EXECUTE AS 절에 지정된 사용자의 권한으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-137">The EXECUTE AS clause replaces the permissions of the caller with that of the user specified in the EXECUTE AS clause.</span></span> <span data-ttu-id="e60d0-138">중첩된 저장 프로시저 또는 트리거는 프록시 사용자의 보안 컨텍스트에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-138">Nested stored procedures or triggers execute under the security context of the proxy user.</span></span> <span data-ttu-id="e60d0-139">이로 인해 행 수준 보안을 사용하거나 감사가 필요한 응용 프로그램이 중단될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-139">This can break applications that rely on row-level security or require auditing.</span></span> <span data-ttu-id="e60d0-140">사용자의 ID를 반환하는 일부 함수는 원래 호출자가 아니라 EXECUTE AS 절에 지정된 사용자를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-140">Some functions that return the identity of the user return the user specified in the EXECUTE AS clause, not the original caller.</span></span> <span data-ttu-id="e60d0-141">실행 컨텍스트는 프로시저 실행 후 또는 REVERT 문이 실행될 때만 원래 호출자로 되돌아갑니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-141">Execution context is reverted to the original caller only after execution of the procedure or when a REVERT statement is issued.</span></span>  
   
-### 인증서 서명  
- 인증서로 서명된 저장 프로시저가 실행될 때는 인증서 사용자에게 부여된 권한이 호출자의 권한과 병합됩니다.  실행 컨텍스트는 동일하게 유지되고 인증서 사용자는 호출자를 가장하지 않습니다.  저장 프로시저에 서명하려면 몇 가지 단계를 구현해야 합니다.  프로시저가 수정될 때마다 다시 서명해야 합니다.  
+### <a name="certificate-signing"></a><span data-ttu-id="e60d0-142">인증서 서명</span><span class="sxs-lookup"><span data-stu-id="e60d0-142">Certificate Signing</span></span>  
+ <span data-ttu-id="e60d0-143">인증서로 서명된 저장 프로시저가 실행될 때는 인증서 사용자에게 부여된 권한이 호출자의 권한과 병합됩니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-143">When a stored procedure that has been signed with a certificate executes, the permissions granted to the certificate user are merged with those of the caller.</span></span> <span data-ttu-id="e60d0-144">실행 컨텍스트는 동일하게 유지되고 인증서 사용자는 호출자를 가장하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-144">The execution context remains the same; the certificate user does not impersonate the caller.</span></span> <span data-ttu-id="e60d0-145">저장 프로시저에 서명하려면 몇 가지 단계를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-145">Signing stored procedures requires several steps to implement.</span></span> <span data-ttu-id="e60d0-146">프로시저가 수정될 때마다 다시 서명해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-146">Each time the procedure is modified, it must be re-signed.</span></span>  
   
-### 데이터베이스 간 액세스  
- 동적으로 생성된 SQL 문이 실행되는 경우에는 데이터베이스 간 소유권 체인이 작동하지 않습니다.  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서는 다른 데이터베이스의 데이터에 액세스하는 저장 프로시저를 만들고 두 데이터베이스 모두에 존재하는 인증서로 프로시저에 서명하여 이 문제를 해결할 수 있습니다.  이렇게 하면 사용자에게 데이터베이스 액세스 또는 권한을 부여하지 않고 프로시저에서 사용되는 데이터베이스 리소스에 사용자가 액세스하도록 할 수 있습니다.  
+### <a name="cross-database-access"></a><span data-ttu-id="e60d0-147">데이터베이스 간 액세스</span><span class="sxs-lookup"><span data-stu-id="e60d0-147">Cross Database Access</span></span>  
+ <span data-ttu-id="e60d0-148">동적으로 생성된 SQL 문이 실행되는 경우에는 데이터베이스 간 소유권 체인이 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-148">Cross-database ownership chaining does not work in cases where dynamically created SQL statements are executed.</span></span> <span data-ttu-id="e60d0-149">[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서는 다른 데이터베이스의 데이터에 액세스하는 저장 프로시저를 만들고 두 데이터베이스 모두에 존재하는 인증서로 프로시저에 서명하여 이 문제를 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-149">You can work around this in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] by creating a stored procedure that accesses data in another database and signing the procedure with a certificate that exists in both databases.</span></span> <span data-ttu-id="e60d0-150">이렇게 하면 사용자에게 데이터베이스 액세스 또는 권한을 부여하지 않고 프로시저에서 사용되는 데이터베이스 리소스에 사용자가 액세스하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-150">This gives users access to the database resources used by the procedure without granting them database access or permissions.</span></span>  
   
-## 외부 리소스  
- 자세한 내용은 다음 리소스를 참조하세요.  
+## <a name="external-resources"></a><span data-ttu-id="e60d0-151">외부 리소스</span><span class="sxs-lookup"><span data-stu-id="e60d0-151">External Resources</span></span>  
+ <span data-ttu-id="e60d0-152">자세한 내용은 다음 리소스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e60d0-152">For more information, see the following resources.</span></span>  
   
-|리소스|설명|  
-|---------|--------|  
-|SQL Server 온라인 설명서의 [저장 프로시저](http://go.microsoft.com/fwlink/?LinkId=98233) 및 [SQL 삽입](http://go.microsoft.com/fwlink/?LinkId=98234)|저장 프로시저를 만드는 방법과 SQL 삽입이 작동하는 방식을 설명하는 항목입니다.|  
-|MSDN Magazine의 [새로운 SQL 잘라내기 공격 및 대처 방법](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/)|문자 및 문자열, SQL 삽입, 자르기 공격에 의한 수정을 차단하는 방법을 설명합니다.|  
+|<span data-ttu-id="e60d0-153">리소스</span><span class="sxs-lookup"><span data-stu-id="e60d0-153">Resource</span></span>|<span data-ttu-id="e60d0-154">설명</span><span class="sxs-lookup"><span data-stu-id="e60d0-154">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="e60d0-155">[저장 프로시저](http://go.microsoft.com/fwlink/?LinkId=98233) 및 [SQL 주입](http://go.microsoft.com/fwlink/?LinkId=98234) SQL Server 온라인 설명서의</span><span class="sxs-lookup"><span data-stu-id="e60d0-155">[Stored Procedures](http://go.microsoft.com/fwlink/?LinkId=98233) and [SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) in SQL Server Books Online</span></span>|<span data-ttu-id="e60d0-156">저장 프로시저를 만드는 방법과 SQL 삽입이 작동하는 방식을 설명하는 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-156">Topics describe how to create stored procedures and how SQL Injection works.</span></span>|  
+|<span data-ttu-id="e60d0-157">[새로운 SQL 잘라내기 공격 및 대처 방법](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) MSDN Magazine의 합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-157">[New SQL Truncation Attacks And How To Avoid Them](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) in MSDN Magazine.</span></span>|<span data-ttu-id="e60d0-158">문자 및 문자열, SQL 삽입, 자르기 공격에 의한 수정을 차단하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e60d0-158">Describes how to delimit characters and strings, SQL injection, and modification by  truncation attacks.</span></span>|  
   
-## 참고 항목  
- [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)   
- [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [SQL Server에서 저장 프로시저로 권한 관리](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)   
- [SQL Server에서 저장 프로시저 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)   
- [SQL Server에서 가장을 사용하여 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e60d0-159">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e60d0-159">See Also</span></span>  
+ [<span data-ttu-id="e60d0-160">ADO.NET 응용 프로그램 보안</span><span class="sxs-lookup"><span data-stu-id="e60d0-160">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="e60d0-161">SQL Server 보안 개요</span><span class="sxs-lookup"><span data-stu-id="e60d0-161">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [<span data-ttu-id="e60d0-162">SQL Server의 응용 프로그램 보안 시나리오</span><span class="sxs-lookup"><span data-stu-id="e60d0-162">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="e60d0-163">SQL Server에서 저장된 프로시저와 함께 권한 관리</span><span class="sxs-lookup"><span data-stu-id="e60d0-163">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="e60d0-164">SQL Server에서 저장된 프로시저에 서명</span><span class="sxs-lookup"><span data-stu-id="e60d0-164">Signing Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="e60d0-165">SQL Server에서 가장으로 권한 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="e60d0-165">Customizing Permissions with Impersonation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [<span data-ttu-id="e60d0-166">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="e60d0-166">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

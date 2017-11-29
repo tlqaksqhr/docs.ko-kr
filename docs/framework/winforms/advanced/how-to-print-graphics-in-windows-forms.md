@@ -1,42 +1,46 @@
 ---
-title: "방법: Windows Forms의 그래픽 인쇄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "그래픽, 인쇄"
-  - "인쇄[Windows Forms], 그래픽"
+title: "방법: Windows Forms의 그래픽 인쇄"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- graphics [Windows Forms], printing
+- printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5f495135b3210f430c887451844bec8b154db33c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms의 그래픽 인쇄
-Windows 기반 응용 프로그램에서는 종종 그래픽을 인쇄하게 됩니다.  <xref:System.Drawing.Graphics> 클래스는 화면 또는 프린터와 같은 장치에 개체를 그릴 수 있는 방법을 제공합니다.  
+# <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="d21c0-102">방법: Windows Forms의 그래픽 인쇄</span><span class="sxs-lookup"><span data-stu-id="d21c0-102">How to: Print Graphics in Windows Forms</span></span>
+<span data-ttu-id="d21c0-103">대부분의 경우 Windows 기반 응용 프로그램의 그래픽 인쇄 합니다.</span><span class="sxs-lookup"><span data-stu-id="d21c0-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="d21c0-104"><xref:System.Drawing.Graphics> 클래스는 화면이 나 프린터와 같은 장치에 개체를 그리기 위한 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d21c0-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  
   
-### 그래픽을 인쇄하려면  
+### <a name="to-print-graphics"></a><span data-ttu-id="d21c0-105">그래픽을 인쇄 하려면</span><span class="sxs-lookup"><span data-stu-id="d21c0-105">To print graphics</span></span>  
   
-1.  폼에 <xref:System.Drawing.Printing.PrintDocument> 구성 요소를 추가합니다.  
+1.  <span data-ttu-id="d21c0-106">추가 <xref:System.Drawing.Printing.PrintDocument> 폼 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="d21c0-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2.  <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 처리기에서 <xref:System.Drawing.Printing.PrintPageEventArgs> 클래스의 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 속성을 사용하여 인쇄할 그래픽 종류에 관한 내용을 프린터에 알립니다.  
+2.  <span data-ttu-id="d21c0-107">에 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 처리기를 사용 하 여는 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 속성은 <xref:System.Drawing.Printing.PrintPageEventArgs> 프린터에 인쇄 하는 그래픽 종류에 지시 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="d21c0-107">In the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler, use the <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> property of the <xref:System.Drawing.Printing.PrintPageEventArgs> class to instruct the printer on what kind of graphics to print.</span></span>  
   
-     다음 코드 예제에서는 이벤트 처리기를 사용하여 경계 사각형 내에 파란 타원을 만드는 것을 보여 줍니다.  해당 사각형은 100, 150 위치에서 시작되며 너비 250, 높이 250입니다.  
+     <span data-ttu-id="d21c0-108">다음 코드 예제를 경계 사각형 내의 파란색 타원을 만드는 데 사용 하는 이벤트 처리기를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d21c0-108">The following code example shows an event handler used to create a blue ellipse within a bounding rectangle.</span></span> <span data-ttu-id="d21c0-109">사각형에는 다음 위치 차원을: 100부터 250의 너비와 높이 250 150입니다.</span><span class="sxs-lookup"><span data-stu-id="d21c0-109">The rectangle has the following location and dimensions: beginning at 100, 150 with a width of 250 and a height of 250.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
        e.Graphics.FillEllipse(Brushes.Blue, New Rectangle(100, 150, 250, 250))  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ Windows 기반 응용 프로그램에서는 종종 그래픽을 인쇄하게 됩
        e.Graphics.FillRectangle(Brushes.Blue,   
          new Rectangle(100, 150, 250, 250));  
     }  
-  
     ```  
   
     ```cpp  
@@ -59,13 +62,12 @@ Windows 기반 응용 프로그램에서는 종종 그래픽을 인쇄하게 됩
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 폼의 생성자에 다음 코드를 배치하여 이벤트 처리기를 등록합니다.  
+     <span data-ttu-id="d21c0-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="d21c0-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
        System.Drawing.Printing.PrintPageEventHandler  
        (this.printDocument1_PrintPage);  
-  
     ```  
   
     ```cpp  
@@ -74,7 +76,7 @@ Windows 기반 응용 프로그램에서는 종종 그래픽을 인쇄하게 됩
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## 참고 항목  
- <xref:System.Drawing.Graphics>   
- <xref:System.Drawing.Brush>   
- [Windows Forms 인쇄 지원](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a><span data-ttu-id="d21c0-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d21c0-111">See Also</span></span>  
+ <xref:System.Drawing.Graphics>  
+ <xref:System.Drawing.Brush>  
+ [<span data-ttu-id="d21c0-112">Windows Forms 인쇄 지원</span><span class="sxs-lookup"><span data-stu-id="d21c0-112">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

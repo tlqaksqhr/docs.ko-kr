@@ -1,45 +1,48 @@
 ---
-title: "LINQ to SQL 쿼리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LINQ to SQL 쿼리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a080dd13f4e9950c9e65b8031ffc77ddf18eaf9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to SQL 쿼리
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 동일한 구문을 사용하여  [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 쿼리를 정의합니다.  유일한 차이점은 쿼리에서 참조된 개체가 데이터베이스의 요소에 매핑된다는 것입니다.  자세한 내용은 [Introduction to LINQ Queries \(C\#\)](../Topic/Introduction%20to%20LINQ%20Queries%20\(C%23\).md)를 참조하세요.  
+# <a name="linq-to-sql-queries"></a><span data-ttu-id="ef8ea-102">LINQ to SQL 쿼리</span><span class="sxs-lookup"><span data-stu-id="ef8ea-102">LINQ to SQL Queries</span></span>
+<span data-ttu-id="ef8ea-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 동일한 구문을 사용하여  [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 쿼리를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-103">You define [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries by using the same syntax as you would in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].</span></span> <span data-ttu-id="ef8ea-104">유일한 차이점은 쿼리에서 참조된 개체가 데이터베이스의 요소에 매핑된다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-104">The only difference is that the objects referenced in your queries are mapped to elements in a database.</span></span> <span data-ttu-id="ef8ea-105">자세한 내용은 [LINQ 쿼리 소개(C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-105">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 작성한 쿼리를 해당 SQL 쿼리로 변환하고 SQL Server에 전달하여 처리합니다. 다시 말해서 응용 프로그램에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] API를 사용하여 쿼리 실행을 요청합니다.  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 공급자는 쿼리를 SQL 텍스트로 변환하고 ADO 공급자에게 실행을 위임합니다. ADO 공급자는 `DataReader`의 결과로 쿼리를 반환합니다.  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 공급자는 ADO 결과를 사용자 개체의 <xref:System.Linq.IQueryable> 컬렉션으로 변환합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="ef8ea-106">에서는 작성한 쿼리를 해당 SQL 쿼리로 변환하고 SQL Server에 전달하여 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-106"> translates the queries you write into equivalent SQL queries and sends them to the server for processing.</span></span> <span data-ttu-id="ef8ea-107">다시 말해서 응용 프로그램에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] API를 사용하여 쿼리 실행을 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-107">More specifically, your application uses the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] API to request query execution.</span></span> <span data-ttu-id="ef8ea-108">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 공급자는 쿼리를 SQL 텍스트로 변환하고 ADO 공급자에게 실행을 위임합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-108">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provider then transforms the query into SQL text and delegates execution to the ADO provider.</span></span> <span data-ttu-id="ef8ea-109">ADO 공급자는 `DataReader`의 결과로 쿼리를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-109">The ADO provider returns query results as a `DataReader`.</span></span> <span data-ttu-id="ef8ea-110">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 공급자는 ADO 결과를 사용자 개체의 <xref:System.Linq.IQueryable> 컬렉션으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-110">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provider translates the ADO results to an <xref:System.Linq.IQueryable> collection of user objects.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 기본 제공 형식에서 대부분의 메서드와 연산자는 SQL로 직접 변환됩니다.  [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]에서 변환할 수 없는 일부는 런타임 예외를 발생시킵니다.  자세한 내용은 [SQL\-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)를 참조하세요.  
+>  <span data-ttu-id="ef8ea-111">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 기본 제공 형식에서 대부분의 메서드와 연산자는 SQL로 직접 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-111">Most methods and operators on [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] built-in types have direct translations to SQL.</span></span> <span data-ttu-id="ef8ea-112">[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]에서 변환할 수 없는 일부는 런타임 예외를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-112">Those that [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] cannot translate generate run-time exceptions.</span></span> <span data-ttu-id="ef8ea-113">자세한 내용은 참조 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-113">For more information, see [SQL-CLR Type Mapping](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).</span></span>  
   
- 다음 테이블에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]와 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 항목의 유사점과 차이점에 대해 설명합니다.  
+ <span data-ttu-id="ef8ea-114">다음 테이블에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]와 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 항목의 유사점과 차이점에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-114">The following table shows the similarities and differences between [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] and [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query items.</span></span>  
   
-|항목|LINQ 쿼리|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리|  
-|--------|-------------|-------------------------------------------------------------------|  
-|시퀀스를 반환하는 쿼리에 대한 쿼리를 보관하는 지역 변수의 반환 형식|제네릭 `IEnumerable`|제네릭 `IQueryable`|  
-|데이터 소스 지정|`From` \([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]\) 또는 `from`\(C\#\) 절을 사용합니다.|왼쪽과 같음|  
-|필터링|`Where`\/`where` 절을 사용합니다.|왼쪽과 같음|  
-|그룹화|`Group…By`\/`groupby` 절을 사용합니다.|왼쪽과 같음|  
-|선택\(프로젝팅\)|`Select`\/`select` 절을 사용합니다.|왼쪽과 같음|  
-|지연된 실행과 즉시 실행 비교|[Introduction to LINQ Queries \(C\#\)](../Topic/Introduction%20to%20LINQ%20Queries%20\(C%23\).md)를 참조하세요.|왼쪽과 같음|  
-|조인 구현|`Join`\/`join` 절을 사용합니다.|`Join`\/`join` 절을 사용할 수 있으나 <xref:System.Data.Linq.Mapping.AssociationAttribute> 속성이 보다 효율적으로 사용됩니다.  자세한 내용은 [관계 간 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)를 참조하세요.|  
-|원격 실행과 로컬 실행 비교||자세한 내용은 [원격 실행과 로컬 실행 비교](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)를 참조하세요.|  
-|스트리밍 쿼리와 캐시된 쿼리 비교|지역 메모리 시나리오에서는 사용할 수 없습니다.||  
+|<span data-ttu-id="ef8ea-115">항목</span><span class="sxs-lookup"><span data-stu-id="ef8ea-115">Item</span></span>|<span data-ttu-id="ef8ea-116">LINQ 쿼리</span><span class="sxs-lookup"><span data-stu-id="ef8ea-116">LINQ Query</span></span>|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="ef8ea-117"> 쿼리</span><span class="sxs-lookup"><span data-stu-id="ef8ea-117"> Query</span></span>|  
+|----------|----------------|----------------------------------------------------------------------|  
+|<span data-ttu-id="ef8ea-118">시퀀스를 반환하는 쿼리에 대한 쿼리를 보관하는 지역 변수의 반환 형식</span><span class="sxs-lookup"><span data-stu-id="ef8ea-118">Return type of the local variable that holds the query (for queries that return sequences)</span></span>|<span data-ttu-id="ef8ea-119">제네릭 `IEnumerable`</span><span class="sxs-lookup"><span data-stu-id="ef8ea-119">Generic `IEnumerable`</span></span>|<span data-ttu-id="ef8ea-120">제네릭 `IQueryable`</span><span class="sxs-lookup"><span data-stu-id="ef8ea-120">Generic `IQueryable`</span></span>|  
+|<span data-ttu-id="ef8ea-121">데이터 소스 지정</span><span class="sxs-lookup"><span data-stu-id="ef8ea-121">Specifying the data source</span></span>|<span data-ttu-id="ef8ea-122">`From` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) 또는 `from`(C#) 절을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-122">Uses the `From` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) or `from` (C#) clause</span></span>|<span data-ttu-id="ef8ea-123">왼쪽과 같음</span><span class="sxs-lookup"><span data-stu-id="ef8ea-123">Same</span></span>|  
+|<span data-ttu-id="ef8ea-124">필터링</span><span class="sxs-lookup"><span data-stu-id="ef8ea-124">Filtering</span></span>|<span data-ttu-id="ef8ea-125">사용 하 여는 `Where` / `where` 절</span><span class="sxs-lookup"><span data-stu-id="ef8ea-125">Uses the `Where`/`where` clause</span></span>|<span data-ttu-id="ef8ea-126">왼쪽과 같음</span><span class="sxs-lookup"><span data-stu-id="ef8ea-126">Same</span></span>|  
+|<span data-ttu-id="ef8ea-127">그룹화</span><span class="sxs-lookup"><span data-stu-id="ef8ea-127">Grouping</span></span>|<span data-ttu-id="ef8ea-128">사용 하 여는 `Group…By` / `groupby` 절</span><span class="sxs-lookup"><span data-stu-id="ef8ea-128">Uses the `Group…By`/`groupby` clause</span></span>|<span data-ttu-id="ef8ea-129">왼쪽과 같음</span><span class="sxs-lookup"><span data-stu-id="ef8ea-129">Same</span></span>|  
+|<span data-ttu-id="ef8ea-130">선택(프로젝팅)</span><span class="sxs-lookup"><span data-stu-id="ef8ea-130">Selecting (Projecting)</span></span>|<span data-ttu-id="ef8ea-131">사용 하 여는 `Select` / `select` 절</span><span class="sxs-lookup"><span data-stu-id="ef8ea-131">Uses the `Select`/`select` clause</span></span>|<span data-ttu-id="ef8ea-132">왼쪽과 같음</span><span class="sxs-lookup"><span data-stu-id="ef8ea-132">Same</span></span>|  
+|<span data-ttu-id="ef8ea-133">지연된 실행과 즉시 실행 비교</span><span class="sxs-lookup"><span data-stu-id="ef8ea-133">Deferred versus immediate execution</span></span>|<span data-ttu-id="ef8ea-134">참조 [LINQ 쿼리 (C#) 소개](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)</span><span class="sxs-lookup"><span data-stu-id="ef8ea-134">See [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)</span></span>|<span data-ttu-id="ef8ea-135">왼쪽과 같음</span><span class="sxs-lookup"><span data-stu-id="ef8ea-135">Same</span></span>|  
+|<span data-ttu-id="ef8ea-136">조인 구현</span><span class="sxs-lookup"><span data-stu-id="ef8ea-136">Implementing joins</span></span>|<span data-ttu-id="ef8ea-137">사용 하 여는 `Join` / `join` 절</span><span class="sxs-lookup"><span data-stu-id="ef8ea-137">Uses the `Join`/`join` clause</span></span>|<span data-ttu-id="ef8ea-138">사용할 수는 `Join` / `join` 절 하지만 보다 효과적으로 사용 하 여는 <xref:System.Data.Linq.Mapping.AssociationAttribute> 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-138">Can use the `Join`/`join` clause, but more effectively uses the <xref:System.Data.Linq.Mapping.AssociationAttribute> attribute.</span></span> <span data-ttu-id="ef8ea-139">자세한 내용은 참조 [관계 간 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-139">For more information, see [Querying Across Relationships](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).</span></span>|  
+|<span data-ttu-id="ef8ea-140">원격 실행과 로컬 실행 비교</span><span class="sxs-lookup"><span data-stu-id="ef8ea-140">Remote versus local execution</span></span>||<span data-ttu-id="ef8ea-141">자세한 내용은 참조 [원격 vs. 로컬 실행](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-141">For more information, see [Remote vs. Local Execution](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md).</span></span>|  
+|<span data-ttu-id="ef8ea-142">스트리밍 쿼리와 캐시된 쿼리 비교</span><span class="sxs-lookup"><span data-stu-id="ef8ea-142">Streaming versus cached querying</span></span>|<span data-ttu-id="ef8ea-143">지역 메모리 시나리오에서는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ef8ea-143">Not applicable in a local memory scenario</span></span>||  
   
-## 참고 항목  
- [Introduction to LINQ Queries \(C\#\)](../Topic/Introduction%20to%20LINQ%20Queries%20\(C%23\).md)   
- [Basic LINQ Query Operations](../Topic/Basic%20LINQ%20Query%20Operations%20\(C%23\).md)   
- [Type Relationships in LINQ Query Operations](../Topic/Type%20Relationships%20in%20LINQ%20Query%20Operations%20\(C%23\).md)   
- [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="ef8ea-144">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ef8ea-144">See Also</span></span>  
+ [<span data-ttu-id="ef8ea-145">LINQ 쿼리 소개(C#)</span><span class="sxs-lookup"><span data-stu-id="ef8ea-145">Introduction to LINQ Queries (C#)</span></span>](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [<span data-ttu-id="ef8ea-146">기본 LINQ 쿼리 작업</span><span class="sxs-lookup"><span data-stu-id="ef8ea-146">Basic LINQ Query Operations</span></span>](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
+ [<span data-ttu-id="ef8ea-147">LINQ 쿼리 작업의 형식 관계</span><span class="sxs-lookup"><span data-stu-id="ef8ea-147">Type Relationships in LINQ Query Operations</span></span>](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
+ [<span data-ttu-id="ef8ea-148">쿼리 개념</span><span class="sxs-lookup"><span data-stu-id="ef8ea-148">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

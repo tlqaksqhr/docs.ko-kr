@@ -5,172 +5,169 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="method-etw-events"></a>메서드 ETW 이벤트
-<a name="top"></a> 이들 이벤트는 메서드와 관련된 정보를 수집합니다. 이들 이벤트의 페이로드는 기호 확인을 위해 필요합니다. 또한 이들 이벤트는 메서드를 호출한 횟수와 같은 유용한 정보를 제공합니다.  
+# <a name="method-etw-events"></a><span data-ttu-id="ebcc4-102">메서드 ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-102">Method ETW Events</span></span>
+<span data-ttu-id="ebcc4-103"><a name="top"></a> 이들 이벤트는 메서드와 관련된 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-103"><a name="top"></a> These events collect information that is specific to methods.</span></span> <span data-ttu-id="ebcc4-104">이들 이벤트의 페이로드는 기호 확인을 위해 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-104">The payload of these events is required for symbol resolution.</span></span> <span data-ttu-id="ebcc4-105">또한 이들 이벤트는 메서드를 호출한 횟수와 같은 유용한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-105">In addition, these events provide helpful information such as the number of times a method was called.</span></span>  
   
- 모든 메서드 이벤트에는 "정보 제공(4)" 수준이 있습니다. 모든 메서드 자세한 정보 표시 이벤트에는 "자세한 정보 표시(5)" 수준이 있습니다.  
+ <span data-ttu-id="ebcc4-106">모든 메서드 이벤트에는 "정보 제공(4)" 수준이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-106">All method events have a level of "Informational (4)".</span></span> <span data-ttu-id="ebcc4-107">모든 메서드 자세한 정보 표시 이벤트에는 "자세한 정보 표시(5)" 수준이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-107">All method verbose events have a level of "Verbose (5)".</span></span>  
   
- 모든 메서드 이벤트는 런타임 공급자에서 `JITKeyword` (0x10) 키워드 또는 `NGenKeyword` (0x20) 키워드에 의해 발생하거나 런다운 공급자에서 `JitRundownKeyword` (0x10) 또는 `NGENRundownKeyword` (0x20)에 의해 발생합니다.  
+ <span data-ttu-id="ebcc4-108">모든 메서드 이벤트는 런타임 공급자에서 `JITKeyword` (0x10) 키워드 또는 `NGenKeyword` (0x20) 키워드에 의해 발생하거나 런다운 공급자에서 `JitRundownKeyword` (0x10) 또는 `NGENRundownKeyword` (0x20)에 의해 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-108">All method events are raised by the `JITKeyword` (0x10) keyword or the `NGenKeyword` (0x20) keyword under the runtime provider, or `JitRundownKeyword` (0x10) or `NGENRundownKeyword` (0x20) under the rundown provider.</span></span>  
   
- CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.  
+ <span data-ttu-id="ebcc4-109">CLR 메서드 이벤트는 추가로 다음과 같이 구분됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-109">CLR method events are further subdivided into the following:</span></span>  
   
--   [CLR 메서드 이벤트](#clr_method_events)  
+-   [<span data-ttu-id="ebcc4-110">CLR 메서드 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-110">CLR Method Events</span></span>](#clr_method_events)  
   
--   [CLR 메서드 표식 이벤트](#clr_method_marker_events)  
+-   [<span data-ttu-id="ebcc4-111">CLR 메서드 표식 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-111">CLR Method Marker Events</span></span>](#clr_method_marker_events)  
   
--   [CLR 메서드 자세한 정보 표시 이벤트](#clr_method_verbose_events)  
+-   [<span data-ttu-id="ebcc4-112">CLR 메서드 자세한 정보 표시 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-112">CLR Method Verbose Events</span></span>](#clr_method_verbose_events)  
   
--   [MethodJittingStarted 이벤트](#methodjittingstarted_event)  
+-   [<span data-ttu-id="ebcc4-113">MethodJittingStarted 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-113">MethodJittingStarted Event</span></span>](#methodjittingstarted_event)  
   
 <a name="clr_method_events"></a>   
-## <a name="clr-method-events"></a>CLR 메서드 이벤트  
- 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.  
+## <a name="clr-method-events"></a><span data-ttu-id="ebcc4-114">CLR 메서드 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-114">CLR Method Events</span></span>  
+ <span data-ttu-id="ebcc4-115">다음 표에서는 키워드와 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-115">The following table shows the keyword and level.</span></span> <span data-ttu-id="ebcc4-116">자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-116">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|<span data-ttu-id="ebcc4-117">이벤트를 발생시키기 위한 키워드</span><span class="sxs-lookup"><span data-stu-id="ebcc4-117">Keyword for raising the event</span></span>|<span data-ttu-id="ebcc4-118">수준</span><span class="sxs-lookup"><span data-stu-id="ebcc4-118">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10) 런타임 공급자|정보(4)|  
-|`NGenKeyword` (0x20) 런타임 공급자|정보(4)|  
-|`JitRundownKeyword` (0x10) 런다운 공급자|정보(4)|  
-|`NGENRundownKeyword` (0x20) 런다운 공급자|정보(4)|  
+|<span data-ttu-id="ebcc4-119">`JITKeyword` (0x10) 런타임 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-119">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="ebcc4-120">정보(4)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-120">Informational (4)</span></span>|  
+|<span data-ttu-id="ebcc4-121">`NGenKeyword` (0x20) 런타임 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-121">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="ebcc4-122">정보(4)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-122">Informational (4)</span></span>|  
+|<span data-ttu-id="ebcc4-123">`JitRundownKeyword` (0x10) 런다운 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-123">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="ebcc4-124">정보(4)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-124">Informational (4)</span></span>|  
+|<span data-ttu-id="ebcc4-125">`NGENRundownKeyword` (0x20) 런다운 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-125">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="ebcc4-126">정보(4)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-126">Informational (4)</span></span>|  
   
- 다음 표에서는 이벤트 정보를 보여 줍니다.  
+ <span data-ttu-id="ebcc4-127">다음 표에서는 이벤트 정보를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-127">The following table shows the event information.</span></span>  
   
-|이벤트|이벤트 ID|설명|  
+|<span data-ttu-id="ebcc4-128">이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-128">Event</span></span>|<span data-ttu-id="ebcc4-129">이벤트 ID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-129">Event ID</span></span>|<span data-ttu-id="ebcc4-130">설명</span><span class="sxs-lookup"><span data-stu-id="ebcc4-130">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodLoad_V1`|136|메서드가 JIT(Just-In-Time) 로드되거나 NGEN 이미지가 로드될 때 발생합니다. 동적 및 제네릭 메서드는 메서드 로드에 대해 이 버전을 사용하지 않습니다. JIT 도우미는 이 버전을 사용하지 않습니다.|  
-|`MethodUnLoad_V1`|137|모듈이 언로드되거나 응용 프로그램 도메인이 삭제될 때 발생합니다. 동적 메서드는 메서드 언로드에 대해 이 버전을 사용하지 않습니다.|  
-|`MethodDCStart_V1`|137|시작 런다운 중에 메서드를 열거합니다.|  
-|`MethodDCEnd_V1`|138|끝 런다운 중에 메서드를 열거합니다.|  
+|`MethodLoad_V1`|<span data-ttu-id="ebcc4-131">136</span><span class="sxs-lookup"><span data-stu-id="ebcc4-131">136</span></span>|<span data-ttu-id="ebcc4-132">메서드가 JIT(Just-In-Time) 로드되거나 NGEN 이미지가 로드될 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-132">Raised when a method is just-in-time loaded (JIT-loaded) or an NGEN image is loaded.</span></span> <span data-ttu-id="ebcc4-133">동적 및 제네릭 메서드는 메서드 로드에 대해 이 버전을 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-133">Dynamic and generic methods do not use this version for method loads.</span></span> <span data-ttu-id="ebcc4-134">JIT 도우미는 이 버전을 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-134">JIT helpers never use this version.</span></span>|  
+|`MethodUnLoad_V1`|<span data-ttu-id="ebcc4-135">137</span><span class="sxs-lookup"><span data-stu-id="ebcc4-135">137</span></span>|<span data-ttu-id="ebcc4-136">모듈이 언로드되거나 응용 프로그램 도메인이 삭제될 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-136">Raised when a module is unloaded, or an application domain is destroyed.</span></span> <span data-ttu-id="ebcc4-137">동적 메서드는 메서드 언로드에 대해 이 버전을 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-137">Dynamic methods never use this version for method unloads.</span></span>|  
+|`MethodDCStart_V1`|<span data-ttu-id="ebcc4-138">137</span><span class="sxs-lookup"><span data-stu-id="ebcc4-138">137</span></span>|<span data-ttu-id="ebcc4-139">시작 런다운 중에 메서드를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-139">Enumerates methods during a start rundown.</span></span>|  
+|`MethodDCEnd_V1`|<span data-ttu-id="ebcc4-140">138</span><span class="sxs-lookup"><span data-stu-id="ebcc4-140">138</span></span>|<span data-ttu-id="ebcc4-141">끝 런다운 중에 메서드를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-141">Enumerates methods during an end rundown.</span></span>|  
   
- 다음 표에서는 이벤트 데이터를 보여 줍니다.  
+ <span data-ttu-id="ebcc4-142">다음 표에서는 이벤트 데이터를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-142">The following table shows the event data.</span></span>  
   
-|필드 이름|데이터 형식|설명|  
+|<span data-ttu-id="ebcc4-143">필드 이름</span><span class="sxs-lookup"><span data-stu-id="ebcc4-143">Field name</span></span>|<span data-ttu-id="ebcc4-144">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="ebcc4-144">Data type</span></span>|<span data-ttu-id="ebcc4-145">설명</span><span class="sxs-lookup"><span data-stu-id="ebcc4-145">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|메서드의 고유 식별자입니다. JIT 도우미 메서드에 대한 이 필드는 메서드의 시작 주소로 설정됩니다.|  
-|ModuleID|win:UInt64|이 메서드가 속한 모듈의 식별자입니다(JIT 도우미의 경우 0).|  
-|MethodStartAddress|win:UInt64|메서드의 시작 주소입니다.|  
-|MethodSize|win:UInt32|메서드의 크기입니다.|  
-|MethodToken|win:UInt32|동적 메서드 및 JIT 도우미의 경우 0입니다.|  
-|MethodFlags|win:UInt32|0x1: 동적 메서드.<br /><br /> 0x2: 제네릭 메서드.<br /><br /> 0x4: JIT 컴파일된 코드 메서드(이외의 경우 NGEN 네이티브 이미지 코드).<br /><br /> 0x8: 도우미 메서드.|  
-|ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
+|<span data-ttu-id="ebcc4-146">MethodID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-146">MethodID</span></span>|<span data-ttu-id="ebcc4-147">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ebcc4-147">win:UInt64</span></span>|<span data-ttu-id="ebcc4-148">메서드의 고유 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-148">Unique identifier of a method.</span></span> <span data-ttu-id="ebcc4-149">JIT 도우미 메서드에 대한 이 필드는 메서드의 시작 주소로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-149">For JIT helper methods, this is set to the start address of the method.</span></span>|  
+|<span data-ttu-id="ebcc4-150">ModuleID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-150">ModuleID</span></span>|<span data-ttu-id="ebcc4-151">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ebcc4-151">win:UInt64</span></span>|<span data-ttu-id="ebcc4-152">이 메서드가 속한 모듈의 식별자입니다(JIT 도우미의 경우 0).</span><span class="sxs-lookup"><span data-stu-id="ebcc4-152">Identifier of the module to which this method belongs (0 for JIT helpers).</span></span>|  
+|<span data-ttu-id="ebcc4-153">MethodStartAddress</span><span class="sxs-lookup"><span data-stu-id="ebcc4-153">MethodStartAddress</span></span>|<span data-ttu-id="ebcc4-154">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ebcc4-154">win:UInt64</span></span>|<span data-ttu-id="ebcc4-155">메서드의 시작 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-155">Start address of the method.</span></span>|  
+|<span data-ttu-id="ebcc4-156">MethodSize</span><span class="sxs-lookup"><span data-stu-id="ebcc4-156">MethodSize</span></span>|<span data-ttu-id="ebcc4-157">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ebcc4-157">win:UInt32</span></span>|<span data-ttu-id="ebcc4-158">메서드의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-158">Size of the method.</span></span>|  
+|<span data-ttu-id="ebcc4-159">MethodToken</span><span class="sxs-lookup"><span data-stu-id="ebcc4-159">MethodToken</span></span>|<span data-ttu-id="ebcc4-160">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ebcc4-160">win:UInt32</span></span>|<span data-ttu-id="ebcc4-161">동적 메서드 및 JIT 도우미의 경우 0입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-161">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="ebcc4-162">MethodFlags</span><span class="sxs-lookup"><span data-stu-id="ebcc4-162">MethodFlags</span></span>|<span data-ttu-id="ebcc4-163">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ebcc4-163">win:UInt32</span></span>|<span data-ttu-id="ebcc4-164">0x1: 동적 메서드.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-164">0x1: Dynamic method.</span></span><br /><br /> <span data-ttu-id="ebcc4-165">0x2: 제네릭 메서드.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-165">0x2: Generic method.</span></span><br /><br /> <span data-ttu-id="ebcc4-166">0x4: JIT 컴파일된 코드 메서드(이외의 경우 NGEN 네이티브 이미지 코드).</span><span class="sxs-lookup"><span data-stu-id="ebcc4-166">0x4: JIT-compiled code method (otherwise NGEN native image code).</span></span><br /><br /> <span data-ttu-id="ebcc4-167">0x8: 도우미 메서드.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-167">0x8: Helper method.</span></span>|  
+|<span data-ttu-id="ebcc4-168">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-168">ClrInstanceID</span></span>|<span data-ttu-id="ebcc4-169">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="ebcc4-169">win:UInt16</span></span>|<span data-ttu-id="ebcc4-170">CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-170">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [맨 위로 이동](#top)  
+ [<span data-ttu-id="ebcc4-171">맨 위로 이동</span><span class="sxs-lookup"><span data-stu-id="ebcc4-171">Back to top</span></span>](#top)  
   
 <a name="clr_method_marker_events"></a>   
-## <a name="clr-method-marker-events"></a>CLR 메서드 표식 이벤트  
- 이들 이벤트는 런다운 공급자에서만 발생하고 시작 또는 끝 런다운 중에 메서드 열거형의 끝을 나타냅니다. 즉, 이들 이벤트는 `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`또는 `AppDomainResourceManagementRundownKeyword` 키워드가 사용될 때 발생합니다.  
+## <a name="clr-method-marker-events"></a><span data-ttu-id="ebcc4-172">CLR 메서드 표식 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-172">CLR Method Marker Events</span></span>  
+ <span data-ttu-id="ebcc4-173">이들 이벤트는 런다운 공급자에서만 발생하고</span><span class="sxs-lookup"><span data-stu-id="ebcc4-173">These events are raised only under the rundown provider.</span></span> <span data-ttu-id="ebcc4-174">시작 또는 끝 런다운 중에 메서드 열거형의 끝을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-174">They signify the end of method enumeration during a start or end rundown.</span></span> <span data-ttu-id="ebcc4-175">즉, 이들 이벤트는 `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`또는 `AppDomainResourceManagementRundownKeyword` 키워드가 사용될 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-175">(That is, they are raised when the `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`, or `AppDomainResourceManagementRundownKeyword` keyword is enabled.)</span></span>  
   
- 다음 표에서는 키워드와 수준을 보여 줍니다.  
+ <span data-ttu-id="ebcc4-176">다음 표에서는 키워드와 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-176">The following table shows the keyword and level.</span></span>  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|<span data-ttu-id="ebcc4-177">이벤트를 발생시키기 위한 키워드</span><span class="sxs-lookup"><span data-stu-id="ebcc4-177">Keyword for raising the event</span></span>|<span data-ttu-id="ebcc4-178">수준</span><span class="sxs-lookup"><span data-stu-id="ebcc4-178">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`AppDomainResourceManagementRundownKeyword` (0x800) 런다운 공급자|정보(4)|  
-|`JitRundownKeyword` (0x10) 런다운 공급자|정보(4)|  
-|`NGENRundownKeyword` (0x20) 런다운 공급자|정보(4)|  
+|<span data-ttu-id="ebcc4-179">`AppDomainResourceManagementRundownKeyword` (0x800) 런다운 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-179">`AppDomainResourceManagementRundownKeyword` (0x800) rundown provider</span></span>|<span data-ttu-id="ebcc4-180">정보(4)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-180">Informational (4)</span></span>|  
+|<span data-ttu-id="ebcc4-181">`JitRundownKeyword` (0x10) 런다운 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-181">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="ebcc4-182">정보(4)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-182">Informational (4)</span></span>|  
+|<span data-ttu-id="ebcc4-183">`NGENRundownKeyword` (0x20) 런다운 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-183">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="ebcc4-184">정보(4)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-184">Informational (4)</span></span>|  
   
- 다음 표에서는 이벤트 정보를 보여 줍니다.  
+ <span data-ttu-id="ebcc4-185">다음 표에서는 이벤트 정보를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-185">The following table shows the event information.</span></span>  
   
-|이벤트|이벤트 ID|설명|  
+|<span data-ttu-id="ebcc4-186">이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-186">Event</span></span>|<span data-ttu-id="ebcc4-187">이벤트 ID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-187">Event ID</span></span>|<span data-ttu-id="ebcc4-188">설명</span><span class="sxs-lookup"><span data-stu-id="ebcc4-188">Desciption</span></span>|  
 |-----------|--------------|----------------|  
-|`DCStartInit_V1`|147|시작 런다운 중에 열거가 시작하기 전에 전송됩니다.|  
-|`DCStartComplete_V1`|145|시작 런다운 중에 열거가 끝날 때 전송됩니다.|  
-|`DCEndInit_V1`|148|끝 런다운 중에 열거가 시작하기 전에 전송됩니다.|  
-|`DCEndComplete_V1`|146|끝 런다운 중에 열거가 끝날 때 전송됩니다.|  
+|`DCStartInit_V1`|<span data-ttu-id="ebcc4-189">147</span><span class="sxs-lookup"><span data-stu-id="ebcc4-189">147</span></span>|<span data-ttu-id="ebcc4-190">시작 런다운 중에 열거가 시작하기 전에 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-190">Sent before the start of the enumeration during a start rundown.</span></span>|  
+|`DCStartComplete_V1`|<span data-ttu-id="ebcc4-191">145</span><span class="sxs-lookup"><span data-stu-id="ebcc4-191">145</span></span>|<span data-ttu-id="ebcc4-192">시작 런다운 중에 열거가 끝날 때 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-192">Sent at the end of the enumeration during a start rundown.</span></span>|  
+|`DCEndInit_V1`|<span data-ttu-id="ebcc4-193">148</span><span class="sxs-lookup"><span data-stu-id="ebcc4-193">148</span></span>|<span data-ttu-id="ebcc4-194">끝 런다운 중에 열거가 시작하기 전에 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-194">Sent before the start of the enumeration during an end rundown.</span></span>|  
+|`DCEndComplete_V1`|<span data-ttu-id="ebcc4-195">146</span><span class="sxs-lookup"><span data-stu-id="ebcc4-195">146</span></span>|<span data-ttu-id="ebcc4-196">끝 런다운 중에 열거가 끝날 때 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-196">Sent at the end of the enumeration during an end rundown.</span></span>|  
   
- 다음 표에서는 이벤트 데이터를 보여 줍니다.  
+ <span data-ttu-id="ebcc4-197">다음 표에서는 이벤트 데이터를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-197">The following table shows the event data.</span></span>  
   
-|필드 이름|데이터 형식|설명|  
+|<span data-ttu-id="ebcc4-198">필드 이름</span><span class="sxs-lookup"><span data-stu-id="ebcc4-198">Field name</span></span>|<span data-ttu-id="ebcc4-199">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="ebcc4-199">Data type</span></span>|<span data-ttu-id="ebcc4-200">설명</span><span class="sxs-lookup"><span data-stu-id="ebcc4-200">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
+|<span data-ttu-id="ebcc4-201">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-201">ClrInstanceID</span></span>|<span data-ttu-id="ebcc4-202">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="ebcc4-202">win:UInt16</span></span>|<span data-ttu-id="ebcc4-203">CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-203">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [맨 위로 이동](#top)  
+ [<span data-ttu-id="ebcc4-204">맨 위로 이동</span><span class="sxs-lookup"><span data-stu-id="ebcc4-204">Back to top</span></span>](#top)  
   
 <a name="clr_method_verbose_events"></a>   
-## <a name="clr-method-verbose-events"></a>CLR 메서드 자세한 정보 표시 이벤트  
- 다음 표에서는 키워드와 수준을 보여 줍니다.  
+## <a name="clr-method-verbose-events"></a><span data-ttu-id="ebcc4-205">CLR 메서드 자세한 정보 표시 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-205">CLR Method Verbose Events</span></span>  
+ <span data-ttu-id="ebcc4-206">다음 표에서는 키워드와 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-206">The following table shows the keyword and level.</span></span>  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|<span data-ttu-id="ebcc4-207">이벤트를 발생시키기 위한 키워드</span><span class="sxs-lookup"><span data-stu-id="ebcc4-207">Keyword for raising the event</span></span>|<span data-ttu-id="ebcc4-208">수준</span><span class="sxs-lookup"><span data-stu-id="ebcc4-208">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10) 런타임 공급자|자세한 정보 표시(5)|  
-|`NGenKeyword` (0x20) 런타임 공급자|자세한 정보 표시(5)|  
-|`JitRundownKeyword` (0x10) 런다운 공급자|자세한 정보 표시(5)|  
-|`NGENRundownKeyword` (0x20) 런다운 공급자|자세한 정보 표시(5)|  
+|<span data-ttu-id="ebcc4-209">`JITKeyword` (0x10) 런타임 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-209">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="ebcc4-210">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-210">Verbose (5)</span></span>|  
+|<span data-ttu-id="ebcc4-211">`NGenKeyword` (0x20) 런타임 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-211">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="ebcc4-212">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-212">Verbose (5)</span></span>|  
+|<span data-ttu-id="ebcc4-213">`JitRundownKeyword` (0x10) 런다운 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-213">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="ebcc4-214">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-214">Verbose (5)</span></span>|  
+|<span data-ttu-id="ebcc4-215">`NGENRundownKeyword` (0x20) 런다운 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-215">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="ebcc4-216">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-216">Verbose (5)</span></span>|  
   
- 다음 표에서는 이벤트 정보를 보여 줍니다.  
+ <span data-ttu-id="ebcc4-217">다음 표에서는 이벤트 정보를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-217">The following table shows the event information.</span></span>  
   
-|이벤트|이벤트 ID|설명|  
+|<span data-ttu-id="ebcc4-218">이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-218">Event</span></span>|<span data-ttu-id="ebcc4-219">이벤트 ID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-219">Event ID</span></span>|<span data-ttu-id="ebcc4-220">설명</span><span class="sxs-lookup"><span data-stu-id="ebcc4-220">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodLoadVerbose_V1`|143|메서드가 JIT 로드되거나 NGEN 이미지가 로드될 때 발생합니다. 동적 및 제네릭 메서드는 항상 메서드 로드에 대해 이 버전을 사용합니다. JIT 도우미는 항상 이 버전을 사용합니다.|  
-|`MethodUnLoadVerbose_V1`|144|동적 메서드가 삭제되거나, 모듈이 언로드되거나, 응용 프로그램 도메인이 삭제될 때 발생합니다. 동적 메서드는 항상 메서드 언로드에 대해 이 버전을 사용합니다.|  
-|`MethodDCStartVerbose_V1`|141|시작 런다운 중에 메서드를 열거합니다.|  
-|`MethodDCEndVerbose_V1`|142|끝 런다운 중에 메서드를 열거합니다.|  
+|`MethodLoadVerbose_V1`|<span data-ttu-id="ebcc4-221">143</span><span class="sxs-lookup"><span data-stu-id="ebcc4-221">143</span></span>|<span data-ttu-id="ebcc4-222">메서드가 JIT 로드되거나 NGEN 이미지가 로드될 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-222">Raised when a method is JIT-loaded or an NGEN image is loaded.</span></span> <span data-ttu-id="ebcc4-223">동적 및 제네릭 메서드는 항상 메서드 로드에 대해 이 버전을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-223">Dynamic and generic methods always use this version for method loads.</span></span> <span data-ttu-id="ebcc4-224">JIT 도우미는 항상 이 버전을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-224">JIT helpers always use this version.</span></span>|  
+|`MethodUnLoadVerbose_V1`|<span data-ttu-id="ebcc4-225">144</span><span class="sxs-lookup"><span data-stu-id="ebcc4-225">144</span></span>|<span data-ttu-id="ebcc4-226">동적 메서드가 삭제되거나, 모듈이 언로드되거나, 응용 프로그램 도메인이 삭제될 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-226">Raised when a dynamic method is destroyed, a module is unloaded, or an application domain is destroyed.</span></span> <span data-ttu-id="ebcc4-227">동적 메서드는 항상 메서드 언로드에 대해 이 버전을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-227">Dynamic methods always use this version for method unloads.</span></span>|  
+|`MethodDCStartVerbose_V1`|<span data-ttu-id="ebcc4-228">141</span><span class="sxs-lookup"><span data-stu-id="ebcc4-228">141</span></span>|<span data-ttu-id="ebcc4-229">시작 런다운 중에 메서드를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-229">Enumerates methods during a start rundown.</span></span>|  
+|`MethodDCEndVerbose_V1`|<span data-ttu-id="ebcc4-230">142</span><span class="sxs-lookup"><span data-stu-id="ebcc4-230">142</span></span>|<span data-ttu-id="ebcc4-231">끝 런다운 중에 메서드를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-231">Enumerates methods during an end rundown.</span></span>|  
   
- 다음 표에서는 이벤트 데이터를 보여 줍니다.  
+ <span data-ttu-id="ebcc4-232">다음 표에서는 이벤트 데이터를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-232">The following table shows the event data.</span></span>  
   
-|필드 이름|데이터 형식|설명|  
+|<span data-ttu-id="ebcc4-233">필드 이름</span><span class="sxs-lookup"><span data-stu-id="ebcc4-233">Field name</span></span>|<span data-ttu-id="ebcc4-234">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="ebcc4-234">Data type</span></span>|<span data-ttu-id="ebcc4-235">설명</span><span class="sxs-lookup"><span data-stu-id="ebcc4-235">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|메서드의 고유 식별자입니다. JIT 도우미 메서드의 경우 메서드의 시작 주소로 설정합니다.|  
-|ModuleID|win:UInt64|이 메서드가 속한 모듈의 식별자입니다(JIT 도우미의 경우 0).|  
-|MethodStartAddress|win:UInt64|시작 주소입니다.|  
-|MethodSize|win:UInt32|메서드 길이입니다.|  
-|MethodToken|win:UInt32|동적 메서드 및 JIT 도우미의 경우 0입니다.|  
-|MethodFlags|win:UInt32|0x1: 동적 메서드.<br /><br /> 0x2: 제네릭 메서드.<br /><br /> 0x4: JIT 컴파일된 메서드(이외의 경우 NGen.exe에서 생성됨)<br /><br /> 0x8: 도우미 메서드.|  
-|MethodNameSpace|win:UnicodeString|메서드와 연결된 전체 네임스페이스 이름입니다.|  
-|MethodName|win:UnicodeString|메서드와 연결된 전체 클래스 이름입니다.|  
-|MethodSignature|win:UnicodeString|메서드의 서명입니다(쉼표로 구분된 형식 이름 목록).|  
-|ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
+|<span data-ttu-id="ebcc4-236">MethodID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-236">MethodID</span></span>|<span data-ttu-id="ebcc4-237">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ebcc4-237">win:UInt64</span></span>|<span data-ttu-id="ebcc4-238">메서드의 고유 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-238">Unique identifier of the method.</span></span> <span data-ttu-id="ebcc4-239">JIT 도우미 메서드의 경우 메서드의 시작 주소로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-239">For JIT helper methods, set to the start address of the method.</span></span>|  
+|<span data-ttu-id="ebcc4-240">ModuleID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-240">ModuleID</span></span>|<span data-ttu-id="ebcc4-241">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ebcc4-241">win:UInt64</span></span>|<span data-ttu-id="ebcc4-242">이 메서드가 속한 모듈의 식별자입니다(JIT 도우미의 경우 0).</span><span class="sxs-lookup"><span data-stu-id="ebcc4-242">Identifier of the module to which this method belongs (0 for JIT helpers).</span></span>|  
+|<span data-ttu-id="ebcc4-243">MethodStartAddress</span><span class="sxs-lookup"><span data-stu-id="ebcc4-243">MethodStartAddress</span></span>|<span data-ttu-id="ebcc4-244">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ebcc4-244">win:UInt64</span></span>|<span data-ttu-id="ebcc4-245">시작 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-245">Start address.</span></span>|  
+|<span data-ttu-id="ebcc4-246">MethodSize</span><span class="sxs-lookup"><span data-stu-id="ebcc4-246">MethodSize</span></span>|<span data-ttu-id="ebcc4-247">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ebcc4-247">win:UInt32</span></span>|<span data-ttu-id="ebcc4-248">메서드 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-248">Method length.</span></span>|  
+|<span data-ttu-id="ebcc4-249">MethodToken</span><span class="sxs-lookup"><span data-stu-id="ebcc4-249">MethodToken</span></span>|<span data-ttu-id="ebcc4-250">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ebcc4-250">win:UInt32</span></span>|<span data-ttu-id="ebcc4-251">동적 메서드 및 JIT 도우미의 경우 0입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-251">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="ebcc4-252">MethodFlags</span><span class="sxs-lookup"><span data-stu-id="ebcc4-252">MethodFlags</span></span>|<span data-ttu-id="ebcc4-253">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ebcc4-253">win:UInt32</span></span>|<span data-ttu-id="ebcc4-254">0x1: 동적 메서드.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-254">0x1: Dynamic method.</span></span><br /><br /> <span data-ttu-id="ebcc4-255">0x2: 제네릭 메서드.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-255">0x2: Generic method.</span></span><br /><br /> <span data-ttu-id="ebcc4-256">0x4: JIT 컴파일된 메서드(이외의 경우 NGen.exe에서 생성됨)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-256">0x4: JIT-compiled method (otherwise, generated by NGen.exe)</span></span><br /><br /> <span data-ttu-id="ebcc4-257">0x8: 도우미 메서드.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-257">0x8: Helper method.</span></span>|  
+|<span data-ttu-id="ebcc4-258">MethodNameSpace</span><span class="sxs-lookup"><span data-stu-id="ebcc4-258">MethodNameSpace</span></span>|<span data-ttu-id="ebcc4-259">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ebcc4-259">win:UnicodeString</span></span>|<span data-ttu-id="ebcc4-260">메서드와 연결된 전체 네임스페이스 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-260">Full namespace name associated with the method.</span></span>|  
+|<span data-ttu-id="ebcc4-261">MethodName</span><span class="sxs-lookup"><span data-stu-id="ebcc4-261">MethodName</span></span>|<span data-ttu-id="ebcc4-262">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ebcc4-262">win:UnicodeString</span></span>|<span data-ttu-id="ebcc4-263">메서드와 연결된 전체 클래스 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-263">Full class name associated with the method.</span></span>|  
+|<span data-ttu-id="ebcc4-264">MethodSignature</span><span class="sxs-lookup"><span data-stu-id="ebcc4-264">MethodSignature</span></span>|<span data-ttu-id="ebcc4-265">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ebcc4-265">win:UnicodeString</span></span>|<span data-ttu-id="ebcc4-266">메서드의 서명입니다(쉼표로 구분된 형식 이름 목록).</span><span class="sxs-lookup"><span data-stu-id="ebcc4-266">Signature of the method (comma-separated list of type names).</span></span>|  
+|<span data-ttu-id="ebcc4-267">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-267">ClrInstanceID</span></span>|<span data-ttu-id="ebcc4-268">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="ebcc4-268">win:UInt16</span></span>|<span data-ttu-id="ebcc4-269">CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-269">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [맨 위로 이동](#top)  
+ [<span data-ttu-id="ebcc4-270">맨 위로 이동</span><span class="sxs-lookup"><span data-stu-id="ebcc4-270">Back to top</span></span>](#top)  
   
 <a name="methodjittingstarted_event"></a>   
-## <a name="methodjittingstarted-event"></a>MethodJittingStarted 이벤트  
- 다음 표에서는 키워드와 수준을 보여 줍니다.  
+## <a name="methodjittingstarted-event"></a><span data-ttu-id="ebcc4-271">MethodJittingStarted 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-271">MethodJittingStarted Event</span></span>  
+ <span data-ttu-id="ebcc4-272">다음 표에서는 키워드와 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-272">The following table shows the keyword and level.</span></span>  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|<span data-ttu-id="ebcc4-273">이벤트를 발생시키기 위한 키워드</span><span class="sxs-lookup"><span data-stu-id="ebcc4-273">Keyword for raising the event</span></span>|<span data-ttu-id="ebcc4-274">수준</span><span class="sxs-lookup"><span data-stu-id="ebcc4-274">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10) 런타임 공급자|자세한 정보 표시(5)|  
-|`NGenKeyword` (0x20) 런타임 공급자|자세한 정보 표시(5)|  
-|`JitRundownKeyword` (0x10) 런다운 공급자|자세한 정보 표시(5)|  
-|`NGENRundownKeyword` (0x20) 런다운 공급자|자세한 정보 표시(5)|  
+|<span data-ttu-id="ebcc4-275">`JITKeyword` (0x10) 런타임 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-275">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="ebcc4-276">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-276">Verbose (5)</span></span>|  
+|<span data-ttu-id="ebcc4-277">`NGenKeyword` (0x20) 런타임 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-277">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="ebcc4-278">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-278">Verbose (5)</span></span>|  
+|<span data-ttu-id="ebcc4-279">`JitRundownKeyword` (0x10) 런다운 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-279">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="ebcc4-280">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-280">Verbose (5)</span></span>|  
+|<span data-ttu-id="ebcc4-281">`NGENRundownKeyword` (0x20) 런다운 공급자</span><span class="sxs-lookup"><span data-stu-id="ebcc4-281">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="ebcc4-282">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="ebcc4-282">Verbose (5)</span></span>|  
   
- 다음 표에서는 이벤트 정보를 보여 줍니다.  
+ <span data-ttu-id="ebcc4-283">다음 표에서는 이벤트 정보를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-283">The following table shows the event information.</span></span>  
   
-|이벤트|이벤트 ID|설명|  
+|<span data-ttu-id="ebcc4-284">이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-284">Event</span></span>|<span data-ttu-id="ebcc4-285">이벤트 ID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-285">Event ID</span></span>|<span data-ttu-id="ebcc4-286">설명</span><span class="sxs-lookup"><span data-stu-id="ebcc4-286">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJittingStarted`|145|메서드가 JIT로 컴파일되는 동안 발생합니다.|  
+|`MethodJittingStarted`|<span data-ttu-id="ebcc4-287">145</span><span class="sxs-lookup"><span data-stu-id="ebcc4-287">145</span></span>|<span data-ttu-id="ebcc4-288">메서드가 JIT로 컴파일되는 동안 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-288">Raised when a method is being JIT-compiled.</span></span>|  
   
- 다음 표에서는 이벤트 데이터를 보여 줍니다.  
+ <span data-ttu-id="ebcc4-289">다음 표에서는 이벤트 데이터를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-289">The following table shows the event data.</span></span>  
   
-|필드 이름|데이터 형식|설명|  
+|<span data-ttu-id="ebcc4-290">필드 이름</span><span class="sxs-lookup"><span data-stu-id="ebcc4-290">Field name</span></span>|<span data-ttu-id="ebcc4-291">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="ebcc4-291">Data type</span></span>|<span data-ttu-id="ebcc4-292">설명</span><span class="sxs-lookup"><span data-stu-id="ebcc4-292">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|메서드의 고유 식별자입니다.|  
-|ModuleID|win:UInt64|이 메서드가 속한 모듈의 식별자입니다.|  
-|MethodToken|win:UInt32|동적 메서드 및 JIT 도우미의 경우 0입니다.|  
-|MethodILSize|win:UInt32|JIT로 컴파일되는 메서드에 대한 MSIL(Microsoft Intermediate Language)의 크기입니다.|  
-|MethodNameSpace|win:UnicodeString|메서드와 연결된 전체 클래스 이름입니다.|  
-|MethodName|win:UnicodeString|메서드의 이름입니다.|  
-|MethodSignature|win:UnicodeString|메서드의 서명입니다(쉼표로 구분된 형식 이름 목록).|  
-|ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
+|<span data-ttu-id="ebcc4-293">MethodID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-293">MethodID</span></span>|<span data-ttu-id="ebcc4-294">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ebcc4-294">win:UInt64</span></span>|<span data-ttu-id="ebcc4-295">메서드의 고유 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-295">Unique identifier of the method.</span></span>|  
+|<span data-ttu-id="ebcc4-296">ModuleID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-296">ModuleID</span></span>|<span data-ttu-id="ebcc4-297">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="ebcc4-297">win:UInt64</span></span>|<span data-ttu-id="ebcc4-298">이 메서드가 속한 모듈의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-298">Identifier of the module to which this method belongs.</span></span>|  
+|<span data-ttu-id="ebcc4-299">MethodToken</span><span class="sxs-lookup"><span data-stu-id="ebcc4-299">MethodToken</span></span>|<span data-ttu-id="ebcc4-300">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ebcc4-300">win:UInt32</span></span>|<span data-ttu-id="ebcc4-301">동적 메서드 및 JIT 도우미의 경우 0입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-301">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="ebcc4-302">MethodILSize</span><span class="sxs-lookup"><span data-stu-id="ebcc4-302">MethodILSize</span></span>|<span data-ttu-id="ebcc4-303">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ebcc4-303">win:UInt32</span></span>|<span data-ttu-id="ebcc4-304">JIT로 컴파일되는 메서드에 대한 MSIL(Microsoft Intermediate Language)의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-304">The size of the Microsoft intermediate language (MSIL) for the method that is being JIT-compiled.</span></span>|  
+|<span data-ttu-id="ebcc4-305">MethodNameSpace</span><span class="sxs-lookup"><span data-stu-id="ebcc4-305">MethodNameSpace</span></span>|<span data-ttu-id="ebcc4-306">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ebcc4-306">win:UnicodeString</span></span>|<span data-ttu-id="ebcc4-307">메서드와 연결된 전체 클래스 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-307">Full class name associated with the method.</span></span>|  
+|<span data-ttu-id="ebcc4-308">MethodName</span><span class="sxs-lookup"><span data-stu-id="ebcc4-308">MethodName</span></span>|<span data-ttu-id="ebcc4-309">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ebcc4-309">win:UnicodeString</span></span>|<span data-ttu-id="ebcc4-310">메서드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-310">Name of the method.</span></span>|  
+|<span data-ttu-id="ebcc4-311">MethodSignature</span><span class="sxs-lookup"><span data-stu-id="ebcc4-311">MethodSignature</span></span>|<span data-ttu-id="ebcc4-312">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="ebcc4-312">win:UnicodeString</span></span>|<span data-ttu-id="ebcc4-313">메서드의 서명입니다(쉼표로 구분된 형식 이름 목록).</span><span class="sxs-lookup"><span data-stu-id="ebcc4-313">Signature of the method (comma-separated list of type names).</span></span>|  
+|<span data-ttu-id="ebcc4-314">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ebcc4-314">ClrInstanceID</span></span>|<span data-ttu-id="ebcc4-315">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="ebcc4-315">win:UInt16</span></span>|<span data-ttu-id="ebcc4-316">CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ebcc4-316">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="ebcc4-317">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ebcc4-317">See Also</span></span>  
+ [<span data-ttu-id="ebcc4-318">CLR ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="ebcc4-318">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

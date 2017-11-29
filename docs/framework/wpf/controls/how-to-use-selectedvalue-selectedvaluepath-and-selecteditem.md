@@ -1,51 +1,54 @@
 ---
-title: "방법: SelectedValue, SelectedValuePath 및 SelectedItem 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Control 클래스, SelectedItem 속성"
-  - "Control 클래스, SelectedValue 속성"
-  - "Control 클래스, SelectedValuePath 속성"
-  - "Control 클래스, TreeView 속성"
-  - "SelectedValue, SelectedItem 속성"
-  - "SelectedValue, SelectedValuePath 속성"
-  - "TreeView 컨트롤, SelectedItem 속성"
-  - "TreeView 컨트롤, SelectedValue 속성"
-  - "TreeView 컨트롤, SelectedValuePath 속성"
+title: "방법: SelectedValue, SelectedValuePath 및 SelectedItem 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TreeView control [WPF], SelectedValue properties
+- Control class [WPF], SelectedItem properties
+- Control class [WPF], TreeView properties
+- Control class [WPF], SelectedValue properties
+- TreeView control [WPF], SelectedItem properties
+- SelectedValue [WPF], SelectedValuePath properties
+- TreeView control [WPF], SelectedValuePath properties
+- Control class [WPF], SelectedValuePath properties
+- SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fdc478d62ca97f8f61c26fbbf1ee6c3ea8b4e189
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: SelectedValue, SelectedValuePath 및 SelectedItem 사용
-이 예제에서는 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 및 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 속성을 사용하여 <xref:System.Windows.Controls.TreeView>의 <xref:System.Windows.Controls.TreeView.SelectedItem%2A>에 대한 값을 지정하는 방법을 보여 줍니다.  
+# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a><span data-ttu-id="2c716-102">방법: SelectedValue, SelectedValuePath 및 SelectedItem 사용</span><span class="sxs-lookup"><span data-stu-id="2c716-102">How to: Use SelectedValue, SelectedValuePath, and SelectedItem</span></span>
+<span data-ttu-id="2c716-103">사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 및 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 속성에 대 한 값을 지정 하는 <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 의 <xref:System.Windows.Controls.TreeView>합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-103">This example shows how to use the <xref:System.Windows.Controls.TreeView.SelectedValue%2A> and <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> properties to specify a value for the <xref:System.Windows.Controls.TreeView.SelectedItem%2A> of a <xref:System.Windows.Controls.TreeView>.</span></span>  
   
-## 예제  
- <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 속성은 <xref:System.Windows.Controls.TreeView>의 <xref:System.Windows.Controls.TreeView.SelectedItem%2A>에 대해 <xref:System.Windows.Controls.TreeView.SelectedValue%2A>를 지정하는 방법을 제공합니다.  <xref:System.Windows.Controls.TreeView.SelectedItem%2A>은 <xref:System.Windows.Controls.ItemsControl.Items%2A> 컬렉션의 개체를 나타내며 <xref:System.Windows.Controls.TreeView>는 선택한 항목의 단일 속성에 대한 값을 표시합니다.  <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 속성은 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 속성의 값을 확인하는 데 사용되는 속성에 대한 경로를 지정합니다.  이 항목의 예제에서는 이 개념을 설명합니다.  
+## <a name="example"></a><span data-ttu-id="2c716-104">예제</span><span class="sxs-lookup"><span data-stu-id="2c716-104">Example</span></span>  
+ <span data-ttu-id="2c716-105"><xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 속성을 지정 하는 방법을 제공는 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 에 대 한는 <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 에 <xref:System.Windows.Controls.TreeView>합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-105">The <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> property provides a way to specify a <xref:System.Windows.Controls.TreeView.SelectedValue%2A> for the <xref:System.Windows.Controls.TreeView.SelectedItem%2A> in a <xref:System.Windows.Controls.TreeView>.</span></span> <span data-ttu-id="2c716-106"><xref:System.Windows.Controls.TreeView.SelectedItem%2A> 의 개체를 나타내며는 <xref:System.Windows.Controls.ItemsControl.Items%2A> 컬렉션 및 <xref:System.Windows.Controls.TreeView> 선택한 항목의 단일 속성의 값을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-106">The <xref:System.Windows.Controls.TreeView.SelectedItem%2A> represents an object in the <xref:System.Windows.Controls.ItemsControl.Items%2A> collection and the <xref:System.Windows.Controls.TreeView> displays the value of a single property of the selected item.</span></span> <span data-ttu-id="2c716-107"><xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 속성의 값을 확인 하는 데 사용 되는 속성에 대 한 경로 지정 된 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-107">The <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> property specifies the path to the property that is used to determine the value of the <xref:System.Windows.Controls.TreeView.SelectedValue%2A> property.</span></span> <span data-ttu-id="2c716-108">이 항목의 예제에서는이 개념을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-108">The examples in this topic illustrate this concept.</span></span>  
   
- 다음 예제에서는 직원 정보가 포함된 <xref:System.Windows.Data.XmlDataProvider>를 보여 줍니다.  
+ <span data-ttu-id="2c716-109">다음 예제와 <xref:System.Windows.Data.XmlDataProvider> 직원 정보를 포함 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-109">The following example shows an <xref:System.Windows.Data.XmlDataProvider> that contains employee information.</span></span>  
   
- [!code-xml[TreeViewSelectedValue#XMLDataProvider](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#xmldataprovider)]  
+ [!code-xaml[TreeViewSelectedValue#XMLDataProvider](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#xmldataprovider)]  
   
- 다음 예제에서는 `Employee`의 `EmployeeName` 및 `EmployeeWorkDay`를 표시하는 <xref:System.Windows.HierarchicalDataTemplate>을 정의합니다.  <xref:System.Windows.HierarchicalDataTemplate>은 `EmployeeNumber`를 템플릿의 일부로 지정하지 않습니다.  
+ <span data-ttu-id="2c716-110">다음 예제에서는 정의 <xref:System.Windows.HierarchicalDataTemplate> 표시 하는 `EmployeeName` 및 `EmployeeWorkDay` 의 `Employee`합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-110">The following example defines a <xref:System.Windows.HierarchicalDataTemplate> that displays the `EmployeeName` and `EmployeeWorkDay` of the `Employee`.</span></span> <span data-ttu-id="2c716-111"><xref:System.Windows.HierarchicalDataTemplate> 지정 하지 않습니다는 `EmployeeNumber` 서식 파일의 일부로 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-111">Note that the <xref:System.Windows.HierarchicalDataTemplate> does not specify the `EmployeeNumber` as part of the template.</span></span>  
   
- [!code-xml[TreeViewSelectedValue#HierarchicalDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#hierarchicaldatatemplate)]  
+ [!code-xaml[TreeViewSelectedValue#HierarchicalDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#hierarchicaldatatemplate)]  
   
- 다음 예제에서는 이전에 정의된 <xref:System.Windows.HierarchicalDataTemplate>을 사용하고 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 속성을 `EmployeeNumber`로 설정하는 <xref:System.Windows.Controls.TreeView>를 보여 줍니다.  <xref:System.Windows.Controls.TreeView>에서 `EmployeeName`을 선택하면 선택한 `EmployeeName`에 해당하는 `EmployeeInfo` 데이터 항목을 <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 속성에서 반환합니다.  그러나 이 <xref:System.Windows.Controls.TreeView>의 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>가 `EmployeeNumber`로 설정되어 있기 때문에 <xref:System.Windows.Controls.TreeView.SelectedValue%2A>가 `EmployeeNumber`로 설정됩니다.  
+ <span data-ttu-id="2c716-112">다음 예제에서는 한 <xref:System.Windows.Controls.TreeView> 사용 하 여 이전에 정의 된 <xref:System.Windows.HierarchicalDataTemplate> 로 설정 하 고는 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 속성을는 `EmployeeNumber`합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-112">The following example shows a <xref:System.Windows.Controls.TreeView> that uses the previously defined <xref:System.Windows.HierarchicalDataTemplate> and that sets the <xref:System.Windows.Controls.TreeView.SelectedValue%2A> property to the `EmployeeNumber`.</span></span> <span data-ttu-id="2c716-113">선택 하는 경우는 `EmployeeName` 에 <xref:System.Windows.Controls.TreeView>, <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 속성에서 반환 된 `EmployeeInfo` 선택한에 해당 하는 데이터 항목 `EmployeeName`합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-113">When you select an `EmployeeName` in the <xref:System.Windows.Controls.TreeView>, the <xref:System.Windows.Controls.TreeView.SelectedItem%2A> property returns the `EmployeeInfo` data item that corresponds to the selected `EmployeeName`.</span></span> <span data-ttu-id="2c716-114">그러나 때문에 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 이 <xref:System.Windows.Controls.TreeView> 로 설정 된 `EmployeeNumber`, <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 로 설정 되는 `EmployeeNumber`합니다.</span><span class="sxs-lookup"><span data-stu-id="2c716-114">However, because the <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> of this <xref:System.Windows.Controls.TreeView> is set to `EmployeeNumber`, the <xref:System.Windows.Controls.TreeView.SelectedValue%2A> is set to the `EmployeeNumber`.</span></span>  
   
- [!code-xml[TreeViewSelectedValue#SelectedValuePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#selectedvaluepath)]  
+ [!code-xaml[TreeViewSelectedValue#SelectedValuePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#selectedvaluepath)]  
   
-## 참고 항목  
- <xref:System.Windows.Controls.TreeView>   
- <xref:System.Windows.Controls.TreeViewItem>   
- [TreeView 개요](../../../../docs/framework/wpf/controls/treeview-overview.md)   
- [방법 항목](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="2c716-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2c716-115">See Also</span></span>  
+ <xref:System.Windows.Controls.TreeView>  
+ <xref:System.Windows.Controls.TreeViewItem>  
+ [<span data-ttu-id="2c716-116">TreeView 개요</span><span class="sxs-lookup"><span data-stu-id="2c716-116">TreeView Overview</span></span>](../../../../docs/framework/wpf/controls/treeview-overview.md)  
+ [<span data-ttu-id="2c716-117">방법 항목</span><span class="sxs-lookup"><span data-stu-id="2c716-117">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)

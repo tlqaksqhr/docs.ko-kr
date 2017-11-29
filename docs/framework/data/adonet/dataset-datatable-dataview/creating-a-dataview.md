@@ -1,36 +1,41 @@
 ---
-title: "DataView 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataView 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 28a2f6f299d2f904dc3f842c0c778f30081240b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataView 만들기
-<xref:System.Data.DataView>를 만드는 방법은 두 가지입니다.  하나는 **DataView** 생성자를 사용하는 방법이고 다른 하나는 <xref:System.Data.DataTable>의 <xref:System.Data.DataTable.DefaultView%2A> 속성에 대한 참조를 만드는 방법입니다.  **DataView** 생성자는 비어 있을 수 있고, **DataTable**을 단일 인수로 사용하거나 **DataTable**을 필터 조건, 정렬 조건 및 행 상태 필터와 함께 사용할 수도 있습니다.  **DataView**에 사용할 수 있는 추가 인수에 대한 자세한 내용은 [데이터 정렬 및 필터링](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)을 참조하세요.  
+# <a name="creating-a-dataview"></a><span data-ttu-id="05322-102">DataView 만들기</span><span class="sxs-lookup"><span data-stu-id="05322-102">Creating a DataView</span></span>
+<span data-ttu-id="05322-103"><xref:System.Data.DataView>를 만드는 방법은 두 가지입니다.</span><span class="sxs-lookup"><span data-stu-id="05322-103">There are two ways to create a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="05322-104">사용할 수 있습니다는 **DataView** 생성자를 만들 수 있습니다에 대 한 참조는 <xref:System.Data.DataTable.DefaultView%2A> 의 속성은 <xref:System.Data.DataTable>합니다.</span><span class="sxs-lookup"><span data-stu-id="05322-104">You can use the **DataView** constructor, or you can create a reference to the <xref:System.Data.DataTable.DefaultView%2A> property of the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="05322-105">**DataView** 생성자는 비어 있을 수 있습니다 또는 하나를 사용할 수는 **DataTable** 단일 인수로 또는 **DataTable** 필터 조건, 정렬 조건 및 행과 함께 상태 필터입니다.</span><span class="sxs-lookup"><span data-stu-id="05322-105">The **DataView** constructor can be empty, or it can take either a **DataTable** as a single argument, or a **DataTable** along with filter criteria, sort criteria, and a row state filter.</span></span> <span data-ttu-id="05322-106">에 사용할 수 있는 추가 인수에 대 한 자세한 내용은 **DataView**, 참조 [정렬 및 필터링 데이터](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="05322-106">For more information about the additional arguments available for use with the **DataView**, see [Sorting and Filtering Data](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).</span></span>  
   
- **DataView**의 인덱스는 **DataView**를 만들 때는 물론 **Sort**, **RowFilter** 또는 **RowStateFilter** 속성을 수정할 때도 빌드되기 때문에 **DataView**를 만들 때 초기 정렬 순서나 필터링 조건을 생성자 인수로 지정하면 최적의 성능을 얻을 수 있습니다.  정렬 조건이나 필터 조건을 지정하지 않고 **DataView**를 만든 다음 **Sort**, **RowFilter** 또는 **RowStateFilter** 속성을 나중에 설정하면 **DataView**를 만들 때와 정렬 또는 필터 속성을 수정할 때를 포함하여 인덱스가 최소한 두 번 이상 빌드됩니다.  
+ <span data-ttu-id="05322-107">때문에 대 한 인덱스는 **DataView** 때 작성 됩니다는 **DataView** 만들어지면와 같은 경우에 **정렬**, **RowFilter**, 또는  **RowStateFilter** 속성이 수정, 초기 정렬 순서를 제공 하거나 만들 때 조건을 생성자 인수로 필터링 하 여 최상의 성능을 얻으려면는 **DataView**합니다.</span><span class="sxs-lookup"><span data-stu-id="05322-107">Because the index for a **DataView** is built both when the **DataView** is created, and when any of the **Sort**, **RowFilter**, or **RowStateFilter** properties are modified, you achieve best performance by supplying any initial sort order or filtering criteria as constructor arguments when you create the **DataView**.</span></span> <span data-ttu-id="05322-108">만들기는 **DataView** 정렬 또는 필터 조건을 지정 하 고 다음을 설정 하지 않고는 **정렬**, **RowFilter**, 또는 **RowStateFilter** 속성에는 나중에 인덱스를 두 번 이상 구축할 수로 인해: 되 면 때는 **DataView** 만들어지면 및 다시 정렬 또는 필터 속성은 수정한 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="05322-108">Creating a **DataView** without specifying sort or filter criteria and then setting the **Sort**, **RowFilter**, or **RowStateFilter** properties later causes the index to be built at least twice: once when the **DataView** is created, and again when any of the sort or filter properties are modified.</span></span>  
   
- 인수를 사용하지 않는 생성자를 통해 **DataView**를 만드는 경우에는 **Table** 속성을 설정해야만 **DataView**를 사용할 수 있습니다.  
+ <span data-ttu-id="05322-109">만들 경우에 **DataView** 인수를 사용 하지 않는 생성자를 사용 하 여, 됩니다 사용할 수는 **DataView** 설정 하기 전에 **테이블** 속성 .</span><span class="sxs-lookup"><span data-stu-id="05322-109">Note that if you create a **DataView** using the constructor that does not take any arguments, you will not be able to use the **DataView** until you have set the **Table** property.</span></span>  
   
- 다음 코드 예제에서는 **DataView** 생성자를 사용하여 **DataView**를 만드는 방법을 보여 줍니다.  **RowFilter**, **Sort** 열 및 **DataViewRowState**는 **DataTable**과 함께 제공됩니다.  
+ <span data-ttu-id="05322-110">다음 코드 예제에서는 만드는 방법을 보여 줍니다.는 **DataView** 를 사용 하는 **DataView** 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="05322-110">The following code example demonstrates how to create a **DataView** using the **DataView** constructor.</span></span> <span data-ttu-id="05322-111">A **RowFilter**, **정렬** 열 및 **DataViewRowState** 와 함께 제공 되는 **DataTable**합니다.</span><span class="sxs-lookup"><span data-stu-id="05322-111">A **RowFilter**, **Sort** column, and **DataViewRowState** are supplied along with the **DataTable**.</span></span>  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
     "Country = 'USA'", _  
     "ContactName", _  
     DataViewRowState.CurrentRows)  
-  
 ```  
   
 ```csharp  
@@ -40,21 +45,20 @@ DataView custDV = new DataView(custDS.Tables["Customers"],
     DataViewRowState.CurrentRows);  
 ```  
   
- 다음 코드 예제에서는 테이블의 **DefaultView** 속성을 사용하여 **DataTable**의 기본 **DataView**에 대한 참조를 가져오는 방법을 보여 줍니다.  
+ <span data-ttu-id="05322-112">다음 코드 예제를 기본에 대 한 참조를 가져오는 방법을 보여 줍니다 **DataView** 의 **DataTable** 를 사용 하는 **DefaultView** 테이블의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="05322-112">The following code example demonstrates how to obtain a reference to the default **DataView** of a **DataTable** using the **DefaultView** property of the table.</span></span>  
   
 ```vb  
 Dim custDV As DataView = custDS.Tables("Customers").DefaultView  
-  
 ```  
   
 ```csharp  
 DataView custDV = custDS.Tables["Customers"].DefaultView;  
 ```  
   
-## 참고 항목  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [데이터 정렬 및 필터링](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="05322-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="05322-113">See Also</span></span>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ [<span data-ttu-id="05322-114">DataView</span><span class="sxs-lookup"><span data-stu-id="05322-114">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="05322-115">데이터 정렬 및 필터링</span><span class="sxs-lookup"><span data-stu-id="05322-115">Sorting and Filtering Data</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
+ [<span data-ttu-id="05322-116">DataTable</span><span class="sxs-lookup"><span data-stu-id="05322-116">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [<span data-ttu-id="05322-117">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="05322-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

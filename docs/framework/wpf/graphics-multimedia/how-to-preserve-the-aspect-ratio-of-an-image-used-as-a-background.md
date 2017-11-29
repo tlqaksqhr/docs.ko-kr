@@ -1,51 +1,54 @@
 ---
-title: "방법: 배경으로 사용된 이미지의 가로 세로 비율 유지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "배경 이미지의 가로 세로 비율, 유지"
-  - "배경 이미지, 가로 세로 비율 유지"
-  - "브러시, 배경 이미지의 가로 세로 비율 유지"
+title: "방법: 배경으로 사용된 이미지의 가로 세로 비율 유지"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aspect ratios of background images [WPF], preserving
+- brushes [WPF], preserving aspect ratios of background images
+- background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a34377403a55ba42d9d3f2946ef26ea48982f5d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 배경으로 사용된 이미지의 가로 세로 비율 유지
-이 예제에서는 <xref:System.Windows.Media.ImageBrush>의 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 사용하여 이미지의 [가로 세로 비율](GTMT)을 유지하는 방법을 보여 줍니다.  
+# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a><span data-ttu-id="10d28-102">방법: 배경으로 사용된 이미지의 가로 세로 비율 유지</span><span class="sxs-lookup"><span data-stu-id="10d28-102">How to: Preserve the Aspect Ratio of an Image Used as a Background</span></span>
+<span data-ttu-id="10d28-103">사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.ImageBrush> 이미지의 가로 세로 비율을 유지 하기 위해 합니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-103">This example shows how to use the <xref:System.Windows.Media.TileBrush.Stretch%2A> property of an <xref:System.Windows.Media.ImageBrush> in order to preserve the aspect ratio of the image.</span></span>  
   
- 기본적으로 <xref:System.Windows.Media.ImageBrush>를 사용하여 영역을 그리는 경우 출력 영역을 완전히 채우도록 영역의 내용이 늘어납니다.  출력 영역과 이미지의 [가로 세로 비율](GTMT)이 다르면 이러한 늘이기로 인해 이미지가 왜곡됩니다.  
+ <span data-ttu-id="10d28-104">기본적으로 사용 하는 경우는 <xref:System.Windows.Media.ImageBrush> 영역을 그리는, 해당 콘텐츠를 늘이는을 출력 영역을 완전히 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-104">By default, when you use an <xref:System.Windows.Media.ImageBrush> to paint an area, its content stretches to completely fill the output area.</span></span> <span data-ttu-id="10d28-105">출력 영역과 이미지의 가로 세로 비율이 다르면 이미지가 확장되면서 왜곡됩니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-105">When the output area and the image have different aspect ratios, the image is distorted by this stretching.</span></span>  
   
- <xref:System.Windows.Media.ImageBrush>가 이미지의 가로 세로 비율을 유지하도록 하려면 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 <xref:System.Windows.Media.Stretch> 또는 <xref:System.Windows.Media.Stretch>로 설정합니다.  
+ <span data-ttu-id="10d28-106">있도록는 <xref:System.Windows.Media.ImageBrush> 해당 이미지의 가로 세로 비율 유지, 설정 된 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 <xref:System.Windows.Media.Stretch.Uniform> 또는 <xref:System.Windows.Media.Stretch.UniformToFill>합니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-106">To make an <xref:System.Windows.Media.ImageBrush> preserve the aspect ratio of its image, set the <xref:System.Windows.Media.TileBrush.Stretch%2A> property to <xref:System.Windows.Media.Stretch.Uniform> or <xref:System.Windows.Media.Stretch.UniformToFill>.</span></span>  
   
-## 예제  
- 다음 예제에서는 두 개의 <xref:System.Windows.Media.ImageBrush> 개체를 사용하여 두 개의 사각형을 그립니다.  각 사각형의 너비와 높이는 300 x 150[픽셀](GTMT)이고 각 사각형 안에는 300 x 300픽셀의 이미지가 포함됩니다.  첫 번째 브러시의 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.Stretch>으로 설정되어 있고 두 번째 브러시의 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.Stretch>로 설정되어 있습니다.  
+## <a name="example"></a><span data-ttu-id="10d28-107">예제</span><span class="sxs-lookup"><span data-stu-id="10d28-107">Example</span></span>  
+ <span data-ttu-id="10d28-108">다음 예제에서는 두 개의 <xref:System.Windows.Media.ImageBrush> 두 개의 사각형을 그리는 데 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-108">The following example uses two <xref:System.Windows.Media.ImageBrush> objects to paint two rectangles.</span></span> <span data-ttu-id="10d28-109">각 사각형은 300 × 150픽셀 크기이며 각각 300 x 300픽셀 이미지를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-109">Each rectangle is 300 by 150 pixels and each contains a 300 by 300 pixel image.</span></span> <span data-ttu-id="10d28-110"><xref:System.Windows.Media.TileBrush.Stretch%2A> 첫 번째는 브러시 속성 <xref:System.Windows.Media.Stretch.Uniform>, 및 <xref:System.Windows.Media.TileBrush.Stretch%2A> 두 번째는 브러시 속성 <xref:System.Windows.Media.Stretch.UniformToFill>합니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-110">The <xref:System.Windows.Media.TileBrush.Stretch%2A> property of the first brush is set to <xref:System.Windows.Media.Stretch.Uniform>, and the <xref:System.Windows.Media.TileBrush.Stretch%2A> property of the second brush is set to <xref:System.Windows.Media.Stretch.UniformToFill>.</span></span>  
   
  [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  
   
- 다음 그림에서는 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정이 <xref:System.Windows.Media.Stretch>인 첫 번째 브러시의 출력을 보여 줍니다.  
+ <span data-ttu-id="10d28-111">다음 그림에 나와 있는 첫 번째 브러시를 출력 한 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정인 <xref:System.Windows.Media.Stretch.Uniform>합니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-111">The following illustration shows the output of the first brush, which has a <xref:System.Windows.Media.TileBrush.Stretch%2A> setting of <xref:System.Windows.Media.Stretch.Uniform>.</span></span>  
   
- ![Uniform 늘이기를 사용한 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.png "graphicsmm\_ImageBrushUniformStretch")  
+ <span data-ttu-id="10d28-112">![Uniform 늘이기를 사용한 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")</span><span class="sxs-lookup"><span data-stu-id="10d28-112">![ImageBrush with Uniform stretching](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")</span></span>  
   
- 다음 그림에서는 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정이 <xref:System.Windows.Media.Stretch>인 두 번째 브러시의 출력을 보여 줍니다.  
+ <span data-ttu-id="10d28-113">다음 그림에서는 두 번째 브러시를 출력 한 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정인 <xref:System.Windows.Media.Stretch.UniformToFill>합니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-113">The next illustration shows the output of the second brush, which has a <xref:System.Windows.Media.TileBrush.Stretch%2A> setting of <xref:System.Windows.Media.Stretch.UniformToFill>.</span></span>  
   
- ![UniformToFill 늘이기를 사용한 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.png "graphicsmm\_ImageBrushUniformToFillStretch")  
+ <span data-ttu-id="10d28-114">![UniformToFill 늘이기를 사용한 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")</span><span class="sxs-lookup"><span data-stu-id="10d28-114">![ImageBrush with UniformToFill stretching](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")</span></span>  
   
- <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.DrawingBrush> 및 <xref:System.Windows.Media.VisualBrush> 등 다른 <xref:System.Windows.Media.TileBrush> 개체에 대해서도 동일하게 작동합니다.  <xref:System.Windows.Media.ImageBrush> 및 다른 <xref:System.Windows.Media.TileBrush> 개체에 대한 자세한 내용은 [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)를 참조하십시오.  
+ <span data-ttu-id="10d28-115"><xref:System.Windows.Media.TileBrush.Stretch%2A> 속성 다른 동일 하 게 작동 <xref:System.Windows.Media.TileBrush> 개체, 즉,에 대 한 <xref:System.Windows.Media.DrawingBrush> 및 <xref:System.Windows.Media.VisualBrush>합니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-115">Note that the <xref:System.Windows.Media.TileBrush.Stretch%2A> property behaves identically for the other <xref:System.Windows.Media.TileBrush> objects, that is, for <xref:System.Windows.Media.DrawingBrush> and <xref:System.Windows.Media.VisualBrush>.</span></span> <span data-ttu-id="10d28-116">에 대 한 자세한 내용은 <xref:System.Windows.Media.ImageBrush> 및 다른 <xref:System.Windows.Media.TileBrush> 개체 참조 [이미지, 그리기, 및 시각적 개체를 사용 하 여 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-116">For more information about <xref:System.Windows.Media.ImageBrush> and the other <xref:System.Windows.Media.TileBrush> objects, see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
- 또한 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성이 <xref:System.Windows.Media.TileBrush>의 내용을 해당 출력 영역에 맞게 늘리는 방법을 지정하는 것처럼 보이지만 실제로는 <xref:System.Windows.Media.TileBrush>가 해당 기본 바둑판식 배열에 맞게 내용을 늘리는 방법을 지정합니다.  자세한 내용은 <xref:System.Windows.Media.TileBrush>를 참조하십시오.  
+ <span data-ttu-id="10d28-117">또한 있는지 확인 하지만 <xref:System.Windows.Media.TileBrush.Stretch%2A> 지정 나타나며 방법을 <xref:System.Windows.Media.TileBrush> 콘텐츠를 출력 영역에 맞게 늘리면 실제로 지정 방법을 <xref:System.Windows.Media.TileBrush> 콘텐츠 기본 타일에 맞게 늘어납니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-117">Note also that, although the <xref:System.Windows.Media.TileBrush.Stretch%2A> property appears to specify how the <xref:System.Windows.Media.TileBrush> content stretches to fit its output area, it actually specifies how the <xref:System.Windows.Media.TileBrush> content stretches to fill its base tile.</span></span> <span data-ttu-id="10d28-118">자세한 내용은 <xref:System.Windows.Media.TileBrush>을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="10d28-118">For more information, see <xref:System.Windows.Media.TileBrush>.</span></span>  
   
- 이 코드 예제는 <xref:System.Windows.Media.ImageBrush> 클래스에 대해 제공되는 보다 큰 예제의 일부입니다.  전체 샘플을 보려면 [ImageBrush 샘플](http://go.microsoft.com/fwlink/?LinkID=160005)을 참조하십시오.  
+ <span data-ttu-id="10d28-119">이 코드 예제는 제공 된 큰 예제의 일부는 <xref:System.Windows.Media.ImageBrush> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-119">This code example is part of a larger example that is provided for the <xref:System.Windows.Media.ImageBrush> class.</span></span> <span data-ttu-id="10d28-120">전체 샘플을 참조 하십시오. [ImageBrush 샘플](http://go.microsoft.com/fwlink/?LinkID=160005)합니다.</span><span class="sxs-lookup"><span data-stu-id="10d28-120">For the complete sample, see [ImageBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160005).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Media.TileBrush>   
- [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a><span data-ttu-id="10d28-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="10d28-121">See Also</span></span>  
+ <xref:System.Windows.Media.TileBrush>  
+ [<span data-ttu-id="10d28-122">이미지, 그림 및 시각적 표시로 그리기</span><span class="sxs-lookup"><span data-stu-id="10d28-122">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

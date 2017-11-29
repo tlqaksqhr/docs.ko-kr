@@ -5,125 +5,122 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 81de172df01879af97aa66b0892a97505178c93c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="constrained-execution-regions"></a>제약이 있는 실행 영역
-CER(제약이 있는 실행 영역)은 신뢰할 수 있는 관리 코드를 작성하기 위한 메커니즘에 포함됩니다. CER은 CLR(공용 언어 런타임 지원)이 영역의 전체 코드가 실행되지 않도록 하는 대역 외 예외를 throw하지 못하도록 제한되는 영역을 정의합니다. 해당 영역 내에서 사용자 코드는 대역 외 예외 throw를 초래하는 실행이 제한됩니다. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 메서드는 `try` 블록 바로 앞에 와야 하고 `catch`, `finally` 및 `fault` 블록을 제약이 있는 실행 영역으로 표시합니다. 제약이 있는 영역으로 표시된 후 코드는 강한 안정성 계약을 사용하여 다른 코드를 호출해야 하고 코드는 실패를 처리할 준비가 된 경우에만 준비되지 않거나 신뢰할 수 없는 메서드에 대한 가상 호출을 할당하거나 수행할 수 있습니다. CLR은 CER에서 실행되는 코드의 스레드 중단을 지연합니다.  
+# <a name="constrained-execution-regions"></a><span data-ttu-id="1fa90-102">제약이 있는 실행 영역</span><span class="sxs-lookup"><span data-stu-id="1fa90-102">Constrained Execution Regions</span></span>
+<span data-ttu-id="1fa90-103">CER(제약이 있는 실행 영역)은 신뢰할 수 있는 관리 코드를 작성하기 위한 메커니즘에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-103">A constrained execution region (CER) is part of a mechanism for authoring reliable managed code.</span></span> <span data-ttu-id="1fa90-104">CER은 CLR(공용 언어 런타임 지원)이 영역의 전체 코드가 실행되지 않도록 하는 대역 외 예외를 throw하지 못하도록 제한되는 영역을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-104">A CER defines an area in which the common language runtime (CLR) is constrained from throwing out-of-band exceptions that would prevent the code in the area from executing in its entirety.</span></span> <span data-ttu-id="1fa90-105">해당 영역 내에서 사용자 코드는 대역 외 예외 throw를 초래하는 실행이 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-105">Within that region, user code is constrained from executing code that would result in the throwing of out-of-band exceptions.</span></span> <span data-ttu-id="1fa90-106"><xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 메서드는 `try` 블록 바로 앞에 와야 하고 `catch`, `finally` 및 `fault` 블록을 제약이 있는 실행 영역으로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-106">The <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method must immediately precede a `try` block and marks `catch`, `finally`, and `fault` blocks as constrained execution regions.</span></span> <span data-ttu-id="1fa90-107">제약이 있는 영역으로 표시된 후 코드는 강한 안정성 계약을 사용하여 다른 코드를 호출해야 하고 코드는 실패를 처리할 준비가 된 경우에만 준비되지 않거나 신뢰할 수 없는 메서드에 대한 가상 호출을 할당하거나 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-107">Once marked as a constrained region, code must only call other code with strong reliability contracts, and code should not allocate or make virtual calls to unprepared or unreliable methods unless the code is prepared to handle failures.</span></span> <span data-ttu-id="1fa90-108">CLR은 CER에서 실행되는 코드의 스레드 중단을 지연합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-108">The CLR delays thread aborts for code that is executing in a CER.</span></span>  
   
- 제약이 있는 실행 영역은 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 메서드를 사용하여 실행된 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 클래스 및 코드에서 파생된 클래스에서 실행되는 특히 중요한 종료자인 주석이 달린 `try` 블록 이외에 CLR의 다양한 형식으로 사용됩니다.  
+ <span data-ttu-id="1fa90-109">제약이 있는 실행 영역은 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 메서드를 사용하여 실행된 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 클래스 및 코드에서 파생된 클래스에서 실행되는 특히 중요한 종료자인 주석이 달린 `try` 블록 이외에 CLR의 다양한 형식으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-109">Constrained execution regions are used in different forms in the CLR in addition to an annotated `try` block, notably critical finalizers executing in classes derived from the <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> class and code executed using the <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> method.</span></span>  
   
-## <a name="cer-advance-preparation"></a>CER 사전 준비  
- CLR은 메모리 부족 조건을 피하기 위해 사전에 CER을 준비합니다. CLR이 Just-In-Time 컴파일 또는 형식 로딩 중에 메모리 부족 조건을 초래하지 않으려면 사전 준비가 필요합니다.  
+## <a name="cer-advance-preparation"></a><span data-ttu-id="1fa90-110">CER 사전 준비</span><span class="sxs-lookup"><span data-stu-id="1fa90-110">CER Advance Preparation</span></span>  
+ <span data-ttu-id="1fa90-111">CLR은 메모리 부족 조건을 피하기 위해 사전에 CER을 준비합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-111">The CLR prepares CERs in advance to avoid out-of-memory conditions.</span></span> <span data-ttu-id="1fa90-112">CLR이 Just-In-Time 컴파일 또는 형식 로딩 중에 메모리 부족 조건을 초래하지 않으려면 사전 준비가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-112">Advance preparation is required so the CLR does not cause an out of memory condition during just-in-time compilation or type loading.</span></span>  
   
- 개발자는 코드 영역이 CER임을 나타내야 합니다.  
+ <span data-ttu-id="1fa90-113">개발자는 코드 영역이 CER임을 나타내야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-113">The developer is required to indicate that a code region is a CER:</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 특성이 적용된 전체 호출 그래프의 최상위 CER 영역 및 메서드는 사전에 준비됩니다. <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute>는 <xref:System.Runtime.ConstrainedExecution.Cer.Success> 또는 <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>의 보장만 명시할 수 있습니다.  
+-   <span data-ttu-id="1fa90-114"><xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 특성이 적용된 전체 호출 그래프의 최상위 CER 영역 및 메서드는 사전에 준비됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-114">The top level CER region and methods in the full call graph that have the <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> attribute applied are prepared in advance.</span></span> <span data-ttu-id="1fa90-115"><xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute>는 <xref:System.Runtime.ConstrainedExecution.Cer.Success> 또는 <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>의 보장만 명시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-115">The <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> can only state guarantees of <xref:System.Runtime.ConstrainedExecution.Cer.Success> or <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.</span></span>  
   
--   가상 디스패치와 같이 정적으로 결정될 수 없는 호출의 경우 사전 준비를 수행할 수 없습니다. 이 경우 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 메서드를 사용합니다. <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 메서드를 사용할 경우 <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> 특성을 정리 코드에 적용해야 합니다.  
+-   <span data-ttu-id="1fa90-116">가상 디스패치와 같이 정적으로 결정될 수 없는 호출의 경우 사전 준비를 수행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-116">Advance preparation cannot be performed for calls that cannot be statically determined, such as virtual dispatch.</span></span> <span data-ttu-id="1fa90-117">이 경우 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-117">Use the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> method in these cases.</span></span> <span data-ttu-id="1fa90-118"><xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 메서드를 사용할 경우 <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> 특성을 정리 코드에 적용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-118">When using the <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> method, the <xref:System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute> attribute should be applied to the clean up code.</span></span>  
   
-## <a name="constraints"></a>제약 조건  
- 사용자는 CER에서 작성할 수 있는 코드 형식이 제한됩니다. 코드는 다음 작업에서 발생할 수 있는 것과 같은 대역 외 예외를 초래할 수 없습니다.  
+## <a name="constraints"></a><span data-ttu-id="1fa90-119">제약 조건</span><span class="sxs-lookup"><span data-stu-id="1fa90-119">Constraints</span></span>  
+ <span data-ttu-id="1fa90-120">사용자는 CER에서 작성할 수 있는 코드 형식이 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-120">Users are constrained in the type of code they can write in a CER.</span></span> <span data-ttu-id="1fa90-121">코드는 다음 작업에서 발생할 수 있는 것과 같은 대역 외 예외를 초래할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-121">The code cannot cause an out-of-band exception, such as might result from the following operations:</span></span>  
   
--   명시적 할당  
+-   <span data-ttu-id="1fa90-122">명시적 할당</span><span class="sxs-lookup"><span data-stu-id="1fa90-122">Explicit allocation.</span></span>  
   
--   Boxing  
+-   <span data-ttu-id="1fa90-123">Boxing</span><span class="sxs-lookup"><span data-stu-id="1fa90-123">Boxing.</span></span>  
   
--   잠금 획득  
+-   <span data-ttu-id="1fa90-124">잠금 획득</span><span class="sxs-lookup"><span data-stu-id="1fa90-124">Acquiring a lock.</span></span>  
   
--   가상으로 준비되지 않은 메서드 호출  
+-   <span data-ttu-id="1fa90-125">가상으로 준비되지 않은 메서드 호출</span><span class="sxs-lookup"><span data-stu-id="1fa90-125">Calling unprepared methods virtually.</span></span>  
   
--   약하거나 존재하지 않는 안전성 계약을 사용하여 메서드 호출  
+-   <span data-ttu-id="1fa90-126">약하거나 존재하지 않는 안전성 계약을 사용하여 메서드 호출</span><span class="sxs-lookup"><span data-stu-id="1fa90-126">Calling methods with a weak or nonexistent reliability contract.</span></span>  
   
- .NET Framework 버전 2.0에서 이러한 제약 조건은 지침입니다. 진단은 코드 분석 도구를 통해 제공됩니다.  
+ <span data-ttu-id="1fa90-127">.NET Framework 버전 2.0에서 이러한 제약 조건은 지침입니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-127">In the .NET Framework version 2.0, these constraints are guidelines.</span></span> <span data-ttu-id="1fa90-128">진단은 코드 분석 도구를 통해 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-128">Diagnostics are provided through code analysis tools.</span></span>  
   
-## <a name="reliability-contracts"></a>안정성 계약  
- <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute>는 특정 메서드의 안전성 보장 및 손상 상태를 설명하는 사용자 지정 특성입니다.  
+## <a name="reliability-contracts"></a><span data-ttu-id="1fa90-129">안정성 계약</span><span class="sxs-lookup"><span data-stu-id="1fa90-129">Reliability Contracts</span></span>  
+ <span data-ttu-id="1fa90-130"><xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute>는 특정 메서드의 안전성 보장 및 손상 상태를 설명하는 사용자 지정 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-130">The <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> is a custom attribute that documents the reliability guarantees and the corruption state of a given method.</span></span>  
   
-### <a name="reliability-guarantees"></a>안전성 보장  
- <xref:System.Runtime.ConstrainedExecution.Cer> 열거 값을 통해 표현되는 안전성 보장은 특정 메서드의 안정성 정도를 나타냅니다.  
+### <a name="reliability-guarantees"></a><span data-ttu-id="1fa90-131">안전성 보장</span><span class="sxs-lookup"><span data-stu-id="1fa90-131">Reliability Guarantees</span></span>  
+ <span data-ttu-id="1fa90-132"><xref:System.Runtime.ConstrainedExecution.Cer> 열거 값을 통해 표현되는 안전성 보장은 특정 메서드의 안정성 정도를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-132">Reliability guarantees, represented by <xref:System.Runtime.ConstrainedExecution.Cer> enumeration values, indicate the degree of reliability of a given method:</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. 예외 조건에서 메서드가 실패할 수 있습니다. 이 경우 메서드는 성공 여부를 호출 메서드에 다시 보고합니다. 반환 값을 보고할 수 있으려면 메서드가 CER에 포함되어야 합니다.  
+-   <span data-ttu-id="1fa90-133"><xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.</span><span class="sxs-lookup"><span data-stu-id="1fa90-133"><xref:System.Runtime.ConstrainedExecution.Cer.MayFail>.</span></span> <span data-ttu-id="1fa90-134">예외 조건에서 메서드가 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-134">Under exceptional conditions, the method might fail.</span></span> <span data-ttu-id="1fa90-135">이 경우 메서드는 성공 여부를 호출 메서드에 다시 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-135">In this case, the method reports back to the calling method whether it succeeded or failed.</span></span> <span data-ttu-id="1fa90-136">반환 값을 보고할 수 있으려면 메서드가 CER에 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-136">The method must be contained in a CER to ensure that it can report the return value.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.None>. 메서드, 형식 또는 어셈블리에는 CER 개념이 없으며 상태 손상으로 인한 큰 완화 없이 CER 내에서 호출하기에 안전하지 않을 수 있습니다. CER 보장의 장점을 활용하지 못합니다. 이것은 다음을 의미합니다.  
+-   <span data-ttu-id="1fa90-137"><xref:System.Runtime.ConstrainedExecution.Cer.None>.</span><span class="sxs-lookup"><span data-stu-id="1fa90-137"><xref:System.Runtime.ConstrainedExecution.Cer.None>.</span></span> <span data-ttu-id="1fa90-138">메서드, 형식 또는 어셈블리에는 CER 개념이 없으며 상태 손상으로 인한 큰 완화 없이 CER 내에서 호출하기에 안전하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-138">The method, type, or assembly has no concept of a CER and is most likely not safe to call within a CER without substantial mitigation from state corruption.</span></span> <span data-ttu-id="1fa90-139">CER 보장의 장점을 활용하지 못합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-139">It does not take advantage of CER guarantees.</span></span> <span data-ttu-id="1fa90-140">이것은 다음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-140">This implies the following:</span></span>  
   
-    1.  예외 조건에서 메서드가 실패할 수 있습니다.  
+    1.  <span data-ttu-id="1fa90-141">예외 조건에서 메서드가 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-141">Under exceptional conditions the method might fail.</span></span>  
   
-    2.  메서드는 실패 사실을 보고할 수도 있고 보고하지 않을 수도 있습니다.  
+    2.  <span data-ttu-id="1fa90-142">메서드는 실패 사실을 보고할 수도 있고 보고하지 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-142">The method might or might not report that it failed.</span></span>  
   
-    3.  메서드는 CER을 사용하도록 작성되지 않을 가능성이 큽니다.  
+    3.  <span data-ttu-id="1fa90-143">메서드는 CER을 사용하도록 작성되지 않을 가능성이 큽니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-143">The method is not written to use a CER, the most likely scenario.</span></span>  
   
-    4.  메서드, 형식 또는 어셈블리가 성공한 것으로 명시적으로 식별되지 않으면 암시적으로 <xref:System.Runtime.ConstrainedExecution.Cer.None>으로 식별됩니다.  
+    4.  <span data-ttu-id="1fa90-144">메서드, 형식 또는 어셈블리가 성공한 것으로 명시적으로 식별되지 않으면 암시적으로 <xref:System.Runtime.ConstrainedExecution.Cer.None>으로 식별됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-144">If a method, type, or assembly is not explicitly identified to succeed, it is implicitly identified as <xref:System.Runtime.ConstrainedExecution.Cer.None>.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.Success>. 예외 조건에서 메서드가 성공하도록 보장됩니다. 이 안전성 수준을 획득하려면 CER이 아닌 영역 내에서 호출되는 경우에도 항상 호출되는 메서드 주위에 CER을 생성해야 합니다. 성공을 주관적으로 볼 수 있더라도 메서드가 의도된 작업을 수행하면 성공한 것입니다. 예를 들어 `ReliabilityContractAttribute(Cer.Success)`를 사용하여 Count를 표시하는 것은 CER에서 실행되는 경우 항상 <xref:System.Collections.ArrayList>에 있는 요소 수를 반환하고 내부 필드를 결정되지 않은 상태로 남겨 두지 않음을 의미합니다.  그러나 성공의 경우 값이 경합 상태로 인해 새 값으로 대체될 수 없음을 의미할 수도 있다는 것을 이해하면 <xref:System.Threading.Interlocked.CompareExchange%2A> 메서드가 성공으로도 표시됩니다.  핵심 포인트는 메서드가 설명된 방식대로 동작하고 CER 코드가 올바르지만 신뢰할 수 없는 코드가 어떻게 보이는지에 관계없이 비정상적인 동작을 예상하도록 작성될 필요가 없다는 것입니다.  
+-   <span data-ttu-id="1fa90-145"><xref:System.Runtime.ConstrainedExecution.Cer.Success>.</span><span class="sxs-lookup"><span data-stu-id="1fa90-145"><xref:System.Runtime.ConstrainedExecution.Cer.Success>.</span></span> <span data-ttu-id="1fa90-146">예외 조건에서 메서드가 성공하도록 보장됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-146">Under exceptional conditions, the method is guaranteed to succeed.</span></span> <span data-ttu-id="1fa90-147">이 안전성 수준을 획득하려면 CER이 아닌 영역 내에서 호출되는 경우에도 항상 호출되는 메서드 주위에 CER을 생성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-147">To achieve this level of reliability you should always construct a CER around the method that is called, even when it is called from within a non-CER region.</span></span> <span data-ttu-id="1fa90-148">성공을 주관적으로 볼 수 있더라도 메서드가 의도된 작업을 수행하면 성공한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-148">A method is successful if it accomplishes what is intended, although success can be viewed subjectively.</span></span> <span data-ttu-id="1fa90-149">예를 들어 `ReliabilityContractAttribute(Cer.Success)`를 사용하여 Count를 표시하는 것은 CER에서 실행되는 경우 항상 <xref:System.Collections.ArrayList>에 있는 요소 수를 반환하고 내부 필드를 결정되지 않은 상태로 남겨 두지 않음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-149">For example, marking Count with `ReliabilityContractAttribute(Cer.Success)` implies that when it is run under a CER, it always returns a count of the number of elements in the <xref:System.Collections.ArrayList> and it can never leave the internal fields in an undetermined state.</span></span>  <span data-ttu-id="1fa90-150">그러나 성공의 경우 값이 경합 상태로 인해 새 값으로 대체될 수 없음을 의미할 수도 있다는 것을 이해하면 <xref:System.Threading.Interlocked.CompareExchange%2A> 메서드가 성공으로도 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-150">However, the <xref:System.Threading.Interlocked.CompareExchange%2A> method is marked as success as well, with the understanding that success may mean the value could not be replaced with a new value due to a race condition.</span></span>  <span data-ttu-id="1fa90-151">핵심 포인트는 메서드가 설명된 방식대로 동작하고 CER 코드가 올바르지만 신뢰할 수 없는 코드가 어떻게 보이는지에 관계없이 비정상적인 동작을 예상하도록 작성될 필요가 없다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-151">The key point is that the method behaves in the way it is documented to behave, and CER code does not need to be written to expect any unusual behavior beyond what correct but unreliable code would look like.</span></span>  
   
-### <a name="corruption-levels"></a>손상 수준  
- <xref:System.Runtime.ConstrainedExecution.Consistency> 열거 값을 통해 표현되는 손상 수준은 상태가 특정 환경에서 손상될 수 있는 정도를 나타냅니다.  
+### <a name="corruption-levels"></a><span data-ttu-id="1fa90-152">손상 수준</span><span class="sxs-lookup"><span data-stu-id="1fa90-152">Corruption levels</span></span>  
+ <span data-ttu-id="1fa90-153"><xref:System.Runtime.ConstrainedExecution.Consistency> 열거 값을 통해 표현되는 손상 수준은 상태가 특정 환경에서 손상될 수 있는 정도를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-153">Corruption levels, represented by <xref:System.Runtime.ConstrainedExecution.Consistency> enumeration values, indicate how much state may be corrupted in a given environment:</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. 예외 조건에서 CLR(공용 언어 런타임)이 현재 응용 프로그램 도메인에서 상태 일관성에 관한 보장을 하지 않습니다.  
+-   <span data-ttu-id="1fa90-154"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>.</span><span class="sxs-lookup"><span data-stu-id="1fa90-154"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>.</span></span> <span data-ttu-id="1fa90-155">예외 조건에서 CLR(공용 언어 런타임)이 현재 응용 프로그램 도메인에서 상태 일관성에 관한 보장을 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-155">Under exceptional conditions, the common language runtime (CLR) makes no guarantees regarding state consistency in the current application domain.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. 예외 조건에서 메서드가 상태 손상을 현재 인스턴스로 제한하도록 보장합니다.  
+-   <span data-ttu-id="1fa90-156"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>.</span><span class="sxs-lookup"><span data-stu-id="1fa90-156"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>.</span></span> <span data-ttu-id="1fa90-157">예외 조건에서 메서드가 상태 손상을 현재 인스턴스로 제한하도록 보장합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-157">Under exceptional conditions, the method is guaranteed to limit state corruption to the current instance.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. 예외 조건에서 CLR은 상태 일관성에 관한 보장을 하지 않습니다. 즉, 조건이 프로세스를 손상시킬 수 있습니다.  
+-   <span data-ttu-id="1fa90-158"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. 예외 조건에서 CLR은 상태 일관성에 관한 보장을 하지 않습니다. 즉, 조건이 프로세스를 손상시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-158"><xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, Under exceptional conditions, the CLR makes no guarantees regarding state consistency; that is, the condition might corrupt the process.</span></span>  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. 예외 조건에서 메서드가 상태를 손상시키지 않도록 보장합니다.  
+-   <span data-ttu-id="1fa90-159"><xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>.</span><span class="sxs-lookup"><span data-stu-id="1fa90-159"><xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>.</span></span> <span data-ttu-id="1fa90-160">예외 조건에서 메서드가 상태를 손상시키지 않도록 보장합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-160">Under exceptional conditions, the method is guaranteed not to corrupt state.</span></span>  
   
-## <a name="reliability-trycatchfinally"></a>안전성 try/catch/finally  
- 안전성 `try/catch/finally`는 관리되지 않는 버전과 동일한 수준의 예측 가능성 보장을 사용하는 예외 처리 메커니즘입니다. `catch/finally` 블록은 CER입니다. 블록에 있는 메서드의 경우 사전 준비가 필요하고 중단할 수 없어야 합니다.  
+## <a name="reliability-trycatchfinally"></a><span data-ttu-id="1fa90-161">안전성 try/catch/finally</span><span class="sxs-lookup"><span data-stu-id="1fa90-161">Reliability try/catch/finally</span></span>  
+ <span data-ttu-id="1fa90-162">안전성 `try/catch/finally`는 관리되지 않는 버전과 동일한 수준의 예측 가능성 보장을 사용하는 예외 처리 메커니즘입니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-162">The reliability `try/catch/finally` is an exception handling mechanism with the same level of predictability guarantees as the unmanaged version.</span></span> <span data-ttu-id="1fa90-163">`catch/finally` 블록은 CER입니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-163">The `catch/finally` block is the CER.</span></span> <span data-ttu-id="1fa90-164">블록에 있는 메서드의 경우 사전 준비가 필요하고 중단할 수 없어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-164">Methods in the block require advance preparation and must be noninterruptible.</span></span>  
   
- .NET Framework 버전 2.0에서 코드는 try 블록 바로 전에 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>를 호출하여 try를 신뢰할 수 있음을 런타임에 알립니다. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>는 컴파일러 지원 클래스인 <xref:System.Runtime.CompilerServices.RuntimeHelpers>의 멤버입니다. 컴파일러를 통해 가성을 보류하여 직접 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>를 호출합니다.  
+ <span data-ttu-id="1fa90-165">.NET Framework 버전 2.0에서 코드는 try 블록 바로 전에 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>를 호출하여 try를 신뢰할 수 있음을 런타임에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-165">In the .NET Framework version 2.0, code informs the runtime that a try is reliable by calling <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> immediately preceding a try block.</span></span> <span data-ttu-id="1fa90-166"><xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>는 컴파일러 지원 클래스인 <xref:System.Runtime.CompilerServices.RuntimeHelpers>의 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-166"><xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> is a member of <xref:System.Runtime.CompilerServices.RuntimeHelpers>, a compiler support class.</span></span> <span data-ttu-id="1fa90-167">컴파일러를 통해 가성을 보류하여 직접 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-167">Call <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> directly pending its availability through compilers.</span></span>  
   
-## <a name="noninterruptible-regions"></a>중단할 수 없는 영역  
- 중단할 수 없는 영역은 명령 집합을 CER로 그룹화합니다.  
+## <a name="noninterruptible-regions"></a><span data-ttu-id="1fa90-168">중단할 수 없는 영역</span><span class="sxs-lookup"><span data-stu-id="1fa90-168">Noninterruptible Regions</span></span>  
+ <span data-ttu-id="1fa90-169">중단할 수 없는 영역은 명령 집합을 CER로 그룹화합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-169">A noninterruptible region groups a set of instructions into a CER.</span></span>  
   
- .NET Framework 버전 2.0에서 컴파일러 지원을 통해 가용성을 보류하면 사용자 코드는 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 메서드 호출 뒤에 빈 try/catch가 포함된 신뢰할 수 있는 try/catch/finally를 사용하여 중단할 수 없는 영역을 만듭니다.  
+ <span data-ttu-id="1fa90-170">.NET Framework 버전 2.0에서 컴파일러 지원을 통해 가용성을 보류하면 사용자 코드는 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 메서드 호출 뒤에 빈 try/catch가 포함된 신뢰할 수 있는 try/catch/finally를 사용하여 중단할 수 없는 영역을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-170">In .NET Framework version 2.0, pending availability through compiler support, user code creates non-interruptible regions with a reliable try/catch/finally that contains an empty try/catch block preceded by a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method call.</span></span>  
   
-## <a name="critical-finalizer-object"></a>중요 종료자 개체  
- <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>는 가비지 수집이 종료자를 실행하도록 보장합니다. 할당 시 종료자 및 해당 호출 그래프는 사전에 준비됩니다. 종료자 메서드는 CER에서 실행되고 CER 및 종료자에 대한 모든 제약 조건을 따라야 합니다.  
+## <a name="critical-finalizer-object"></a><span data-ttu-id="1fa90-171">중요 종료자 개체</span><span class="sxs-lookup"><span data-stu-id="1fa90-171">Critical Finalizer Object</span></span>  
+ <span data-ttu-id="1fa90-172"><xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>는 가비지 수집이 종료자를 실행하도록 보장합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-172">A <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> guarantees that garbage collection will execute the finalizer.</span></span> <span data-ttu-id="1fa90-173">할당 시 종료자 및 해당 호출 그래프는 사전에 준비됩니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-173">Upon allocation, the finalizer and its call graph are prepared in advance.</span></span> <span data-ttu-id="1fa90-174">종료자 메서드는 CER에서 실행되고 CER 및 종료자에 대한 모든 제약 조건을 따라야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-174">The finalizer method executes in a CER, and must obey all the constraints on CERs and finalizers.</span></span>  
   
- <xref:System.Runtime.InteropServices.SafeHandle> 및 <xref:System.Runtime.InteropServices.CriticalHandle>에서 상속되는 모든 형식은 CER 내에 종료자 실행이 포함되도록 보장합니다. 핸들을 해제하는 데 필요한 코드를 실행하도록 <xref:System.Runtime.InteropServices.SafeHandle> 파생 클래스에서 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>을 구현합니다.  
+ <span data-ttu-id="1fa90-175"><xref:System.Runtime.InteropServices.SafeHandle> 및 <xref:System.Runtime.InteropServices.CriticalHandle>에서 상속되는 모든 형식은 CER 내에 종료자 실행이 포함되도록 보장합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-175">Any types inheriting from <xref:System.Runtime.InteropServices.SafeHandle> and <xref:System.Runtime.InteropServices.CriticalHandle> are guaranteed to have their finalizer execute within a CER.</span></span> <span data-ttu-id="1fa90-176">핸들을 해제하는 데 필요한 코드를 실행하도록 <xref:System.Runtime.InteropServices.SafeHandle> 파생 클래스에서 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-176">Implement <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> in <xref:System.Runtime.InteropServices.SafeHandle> derived classes to execute any code that is required to free the handle.</span></span>  
   
-## <a name="code-not-permitted-in-cers"></a>CER에서 허용되지 않는 코드  
- 다음 작업은 CER에서 허용되지 않습니다.  
+## <a name="code-not-permitted-in-cers"></a><span data-ttu-id="1fa90-177">CER에서 허용되지 않는 코드</span><span class="sxs-lookup"><span data-stu-id="1fa90-177">Code Not Permitted in CERs</span></span>  
+ <span data-ttu-id="1fa90-178">다음 작업은 CER에서 허용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-178">The following operations are not permitted in CERs:</span></span>  
   
--   명시적 할당.  
+-   <span data-ttu-id="1fa90-179">명시적 할당.</span><span class="sxs-lookup"><span data-stu-id="1fa90-179">Explicit allocations.</span></span>  
   
--   잠금 획득  
+-   <span data-ttu-id="1fa90-180">잠금 획득</span><span class="sxs-lookup"><span data-stu-id="1fa90-180">Acquiring a lock.</span></span>  
   
--   Boxing  
+-   <span data-ttu-id="1fa90-181">Boxing</span><span class="sxs-lookup"><span data-stu-id="1fa90-181">Boxing.</span></span>  
   
--   다차원 배열 액세스.  
+-   <span data-ttu-id="1fa90-182">다차원 배열 액세스.</span><span class="sxs-lookup"><span data-stu-id="1fa90-182">Multidimensional array access.</span></span>  
   
--   리플렉션을 통한 메서드 호출.  
+-   <span data-ttu-id="1fa90-183">리플렉션을 통한 메서드 호출.</span><span class="sxs-lookup"><span data-stu-id="1fa90-183">Method calls through reflection.</span></span>  
   
--   <xref:System.Threading.Monitor.Enter%2A> 또는 <xref:System.IO.FileStream.Lock%2A>  
+-   <span data-ttu-id="1fa90-184"><xref:System.Threading.Monitor.Enter%2A> 또는 <xref:System.IO.FileStream.Lock%2A></span><span class="sxs-lookup"><span data-stu-id="1fa90-184"><xref:System.Threading.Monitor.Enter%2A> or <xref:System.IO.FileStream.Lock%2A>.</span></span>  
   
--   보안 검사. 링크 요청만 수행하지 않습니다.  
+-   <span data-ttu-id="1fa90-185">보안 검사.</span><span class="sxs-lookup"><span data-stu-id="1fa90-185">Security checks.</span></span> <span data-ttu-id="1fa90-186">링크 요청만 수행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1fa90-186">Do not perform demands, only link demands.</span></span>  
   
--   COM 개체 및 프록시에 대한 <xref:System.Reflection.Emit.OpCodes.Isinst> 및 <xref:System.Reflection.Emit.OpCodes.Castclass>  
+-   <span data-ttu-id="1fa90-187">COM 개체 및 프록시에 대한 <xref:System.Reflection.Emit.OpCodes.Isinst> 및 <xref:System.Reflection.Emit.OpCodes.Castclass></span><span class="sxs-lookup"><span data-stu-id="1fa90-187"><xref:System.Reflection.Emit.OpCodes.Isinst> and <xref:System.Reflection.Emit.OpCodes.Castclass> for COM objects and proxies</span></span>  
   
--   투명 프록시에 대한 필드 가져오기 또는 설정.  
+-   <span data-ttu-id="1fa90-188">투명 프록시에 대한 필드 가져오기 또는 설정.</span><span class="sxs-lookup"><span data-stu-id="1fa90-188">Getting or setting fields on a transparent proxy.</span></span>  
   
--   serialization.  
+-   <span data-ttu-id="1fa90-189">serialization.</span><span class="sxs-lookup"><span data-stu-id="1fa90-189">Serialization.</span></span>  
   
--   함수 포인터 및 대리자.  
+-   <span data-ttu-id="1fa90-190">함수 포인터 및 대리자.</span><span class="sxs-lookup"><span data-stu-id="1fa90-190">Function pointers and delegates.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [안전성 모범 사례](../../../docs/framework/performance/reliability-best-practices.md)
-
+## <a name="see-also"></a><span data-ttu-id="1fa90-191">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1fa90-191">See Also</span></span>  
+ [<span data-ttu-id="1fa90-192">안전성 모범 사례</span><span class="sxs-lookup"><span data-stu-id="1fa90-192">Reliability Best Practices</span></span>](../../../docs/framework/performance/reliability-best-practices.md)

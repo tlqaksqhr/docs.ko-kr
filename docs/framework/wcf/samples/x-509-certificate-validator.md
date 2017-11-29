@@ -1,37 +1,40 @@
 ---
-title: "X.509 인증서 유효성 검사기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: X.509 Certificate Validator
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 623bc36743bd63ccb452d2a65e85301b4a0cb117
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# X.509 인증서 유효성 검사기
-이 샘플에서는 사용자 지정 X.509 인증서 유효성 검사기를 구현하는 방법을 보여 줍니다.이 방법은 기본 제공되는 X.509 인증서 유효성 검사기 중에서 응용 프로그램의 요구 사항에 적절한 것이 없는 경우에 유용합니다.이 샘플에서는 자체 발급된 인증서를 승인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다.그런 인증서를 사용하여 클라이언트가 서비스에 인증합니다.  
+# <a name="x509-certificate-validator"></a><span data-ttu-id="8a56a-102">X.509 Certificate Validator</span><span class="sxs-lookup"><span data-stu-id="8a56a-102">X.509 Certificate Validator</span></span>
+<span data-ttu-id="8a56a-103">이 샘플에서는 사용자 지정 X.509 인증서 유효성 검사기를 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-103">This sample demonstrates how to implement a custom X.509 Certificate Validator.</span></span> <span data-ttu-id="8a56a-104">이 방법은 기본 제공되는 X.509 인증서 유효성 검사기 중에서 응용 프로그램의 요구 사항에 적절한 것이 없는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-104">This is useful in cases where none of the built-in X.509 Certificate Validation modes is appropriate for the requirements of the application.</span></span> <span data-ttu-id="8a56a-105">이 샘플에서는 자체 발급된 인증서를 승인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-105">This sample shows a service that has a custom validator that accepts self-issued certificates.</span></span> <span data-ttu-id="8a56a-106">그런 인증서를 사용하여 클라이언트가 서비스에 인증합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-106">The client uses such a certificate to authenticate to the service.</span></span>  
   
- 참고: 자체 발급된 인증서는 누구나 작성할 수 있기 때문에 서비스에서 사용되는 사용자 지정 유효성 검사기는 ChainTrust X509CertificateValidationMode에서 제공되는 기본 동작보다 안전성이 떨어집니다.이 경우 프로덕션 코드에서 이 유효성 검사 논리를 사용하기 전에 보안 상의 영향을 세심하게 고려해야 합니다.  
+ <span data-ttu-id="8a56a-107">참고: 자체 발급된 인증서는 누구나 작성할 수 있기 때문에 서비스에서 사용되는 사용자 지정 유효성 검사기는 ChainTrust X509CertificateValidationMode에서 제공되는 기본 동작보다 안전성이 떨어집니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-107">Note: As anyone can construct a self-issued certificate the custom validator used by the service is less secure than the default behavior provided by the ChainTrust X509CertificateValidationMode.</span></span> <span data-ttu-id="8a56a-108">이 경우 프로덕션 코드에서 이 유효성 검사 논리를 사용하기 전에 보안 상의 영향을 세심하게 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-108">The security implications of this should be carefully considered before using this validation logic in production code.</span></span>  
   
- 요약하면, 이 샘플에서는 다음 방법을 보여 줍니다.  
+ <span data-ttu-id="8a56a-109">요약하면, 이 샘플에서는 다음 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-109">In summary this sample demonstrates how:</span></span>  
   
--   X.509 인증서를 사용하여 클라이언트를 인증하는 방법.  
+-   <span data-ttu-id="8a56a-110">X.509 인증서를 사용하여 클라이언트를 인증하는 방법.</span><span class="sxs-lookup"><span data-stu-id="8a56a-110">The client can be authenticated using an X.509 certificate.</span></span>  
   
--   서버에서 사용자 지정 X509CertificateValidator를 기준으로 클라이언트의 유효성을 검증하는 방법.  
+-   <span data-ttu-id="8a56a-111">서버에서 사용자 지정 X509CertificateValidator를 기준으로 클라이언트의 유효성을 검증하는 방법.</span><span class="sxs-lookup"><span data-stu-id="8a56a-111">The server validates the client credentials against a custom X509CertificateValidator.</span></span>  
   
--   서버의 X.509 인증서를 사용하여 서버를 인증하는 방법.  
+-   <span data-ttu-id="8a56a-112">서버의 X.509 인증서를 사용하여 서버를 인증하는 방법</span><span class="sxs-lookup"><span data-stu-id="8a56a-112">The server is authenticated using the server's X.509 certificate.</span></span>  
   
- 서비스에서는 서비스와의 통신에 사용할 수 있는 단일 끝점을 노출하며, 이 끝점은 App.config 구성 파일을 사용하여 정의합니다.끝점은 하나의 주소, 바인딩 및 계약으로 구성됩니다.바인딩을 표준 `wsHttpBinding`을 사용하여 구성하며 기본적으로 `WSSecurity` 및 클라이언트 인증서 인증을 사용합니다.서비스 동작에서는 클라이언트 X.509 인증서의 유효성을 검사하기 위한 사용자 지정 모드와 유효성 검사기 클래스의 형식을 지정합니다.동작에서는 serviceCertificate 요소를 사용하여 서버 인증서도 지정합니다.서버 인증서의 `SubjectName`에는 [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)에 있는 `findValue`와 같은 값이 포함되어 있어야 합니다.  
+ <span data-ttu-id="8a56a-113">서비스에서는 서비스와의 통신에 사용할 수 있는 단일 끝점을 노출하며, 이 끝점은 App.config 구성 파일을 사용하여 정의합니다. 끝점은 하나의 주소, 바인딩 및 계약으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-113">The service exposes a single endpoint for communicating with the service, defined using the configuration file App.config. The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="8a56a-114">표준 바인딩이 구성 된 `wsHttpBinding` 사용 하 여 기본적으로 `WSSecurity` 및 클라이언트 인증서 인증 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-114">The binding is configured with a standard `wsHttpBinding` that defaults to using `WSSecurity` and client certificate authentication.</span></span> <span data-ttu-id="8a56a-115">서비스 동작에서는 클라이언트 X.509 인증서의 유효성을 검사하기 위한 사용자 지정 모드와 유효성 검사기 클래스의 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-115">The service behavior specifies the Custom mode for validating client X.509 certificates along with the type of the validator class.</span></span> <span data-ttu-id="8a56a-116">동작에서는 serviceCertificate 요소를 사용하여 서버 인증서도 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-116">The behavior also specifies the server certificate using the serviceCertificate element.</span></span> <span data-ttu-id="8a56a-117">서버 인증서에 동일한 값을 포함 하는 `SubjectName` 로 `findValue` 에 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-117">The server certificate has to contain the same value for the `SubjectName` as the `findValue` in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).</span></span>  
   
-```  
+```xml  
   <system.serviceModel>  
     <services>  
       <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -99,12 +102,11 @@ caps.handback.revision: 21
       </serviceBehaviors>  
     </behaviors>  
       </system.serviceModel>  
-  
 ```  
   
- 클라이언트 끝점 구성은 구성 이름, 서비스 끝점의 절대 주소, 바인딩 및 계약으로 구성됩니다.클라이언트 바인딩에는 적절한 모드 및 메시지 `clientCredentialType`이 구성됩니다.  
+ <span data-ttu-id="8a56a-118">클라이언트 끝점 구성은 구성 이름, 서비스 끝점의 절대 주소, 바인딩 및 계약으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-118">The client endpoint configuration consists of a configuration name, an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="8a56a-119">클라이언트 바인딩에는 적절한 모드 및 메시지 `clientCredentialType`이 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-119">The client binding is configured with the appropriate mode and message `clientCredentialType`.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <client>  
       <!-- X509 certificate based endpoint -->  
@@ -153,10 +155,9 @@ caps.handback.revision: 21
       </endpointBehaviors>  
     </behaviors>  
   </system.serviceModel>  
-  
 ```  
   
- 클라이언트 구현에서는 사용할 클라이언트 인증서를 설정합니다.  
+ <span data-ttu-id="8a56a-120">클라이언트 구현에서는 사용할 클라이언트 인증서를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-120">The client implementation sets the client certificate to use.</span></span>  
   
 ```  
 // Create a client with Certificate endpoint configuration  
@@ -207,7 +208,7 @@ catch (Exception e)
 }  
 ```  
   
- 이 샘플에서는 사용자 지정 X509CertificateValidator를 사용하여 인증서의 유효성을 검사합니다.샘플에서는 <xref:System.IdentityModel.Selectors.X509CertificateValidator>로부터 파생된 CustomX509CertificateValidator를 구현합니다.자세한 내용은 <xref:System.IdentityModel.Selectors.X509CertificateValidator>에 대한 설명서를 참조하십시오.이 특정 사용자 지정 유효성 검사기 샘플에서는 다음 코드에 표시된 것과 같이 자체 발급된 모든 X.509 인증서를 승인하는 Validate 메서드를 구현합니다.  
+ <span data-ttu-id="8a56a-121">이 샘플에서는 사용자 지정 X509CertificateValidator를 사용하여 인증서의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-121">This sample uses a custom X509CertificateValidator to validate certificates.</span></span> <span data-ttu-id="8a56a-122">샘플에서는 <xref:System.IdentityModel.Selectors.X509CertificateValidator>로부터 파생된 CustomX509CertificateValidator를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-122">The sample implements CustomX509CertificateValidator, derived from <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span></span> <span data-ttu-id="8a56a-123">자세한 내용은 <xref:System.IdentityModel.Selectors.X509CertificateValidator>에 대한 설명서를 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8a56a-123">See documentation about <xref:System.IdentityModel.Selectors.X509CertificateValidator> for more information.</span></span> <span data-ttu-id="8a56a-124">이 특정 사용자 지정 유효성 검사기 샘플에서는 다음 코드에 표시된 것과 같이 자체 발급된 모든 X.509 인증서를 승인하는 Validate 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-124">This particular custom validator sample implements the Validate method to accept any X.509 certificate that is self-issued as shown in the following code.</span></span>  
   
 ```  
 public class CustomX509CertificateValidator : X509CertificateValidator  
@@ -219,19 +220,18 @@ public class CustomX509CertificateValidator : X509CertificateValidator
      throw new Exception("Certificate is not self-issued");  
    }  
 }  
-  
 ```  
   
- 서비스 코드에 유효성 검사기를 구현하고 나면 사용할 유효성 검사기 인스턴스에 대한 정보를 서비스 호스트에 알려야 합니다.이것은 다음 코드를 사용하여 실행됩니다.  
+ <span data-ttu-id="8a56a-125">서비스 코드에 유효성 검사기를 구현하고 나면 사용할 유효성 검사기 인스턴스에 대한 정보를 서비스 호스트에 알려야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-125">Once the validator is implemented in service code, the service host must be informed about the validator instance to use.</span></span> <span data-ttu-id="8a56a-126">이것은 다음 코드를 사용하여 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-126">This is done using the following code.</span></span>  
   
 ```  
 serviceHost.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.Custom;  
 serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValidator = new CustomX509CertificateValidator();  
 ```  
   
- 또는 다음과 같이 구성에서도 같은 작업을 수행할 수 있습니다.  
+ <span data-ttu-id="8a56a-127">또는 다음과 같이 구성에서도 같은 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-127">Or you can do the same thing in configuration as follows.</span></span>  
   
-```  
+```xml  
 <behaviors>  
     <serviceBehaviors>  
      <behavior name="CalculatorServiceBehavior">  
@@ -255,19 +255,18 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   </behavior>  
  </serviceBehaviors>  
 </behaviors>  
-  
 ```  
   
- 샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다.클라이언트에서 모든 메서드를 성공적으로 호출할 수 있어야 합니다.클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.  
+ <span data-ttu-id="8a56a-128">샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-128">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="8a56a-129">클라이언트에서 모든 메서드를 성공적으로 호출할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-129">The client should successfully call all the methods.</span></span> <span data-ttu-id="8a56a-130">클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-130">Press ENTER in the client window to shut down the client.</span></span>  
   
-## 설치 배치 파일  
- 이 샘플에 포함된 Setup.bat 배치 파일을 사용하면 서버 인증서 기반 보안이 필요한 자체 호스팅 응용 프로그램을 실행하도록 관련 인증서가 있는 서버를 구성할 수 있습니다.다중 컴퓨터 구성이나 호스팅되지 않는 환경에서 이 배치 파일을 사용하려면 배치 파일을 수정해야 합니다.  
+## <a name="setup-batch-file"></a><span data-ttu-id="8a56a-131">설치 배치 파일</span><span class="sxs-lookup"><span data-stu-id="8a56a-131">Setup Batch File</span></span>  
+ <span data-ttu-id="8a56a-132">이 샘플에 포함된 Setup.bat 배치 파일을 사용하면 서버 인증서 기반 보안이 필요한 자체 호스팅 응용 프로그램을 실행하도록 관련 인증서가 있는 서버를 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-132">The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run a self-hosted application that requires server certificate-based security.</span></span> <span data-ttu-id="8a56a-133">다중 컴퓨터 구성이나 호스트되지 않는 환경에서 이 배치 파일을 사용하려면 배치 파일을 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-133">This batch file must be modified to work across computers or to work in a non-hosted case.</span></span>  
   
- 다음 부분에는 적절한 구성으로 실행되게 수정할 수 있도록 배치 파일의 다양한 섹션에 대한 간략한 개요가 소개되어 있습니다.  
+ <span data-ttu-id="8a56a-134">다음 부분에는 적절한 구성으로 실행되게 수정할 수 있도록 배치 파일의 다양한 섹션에 대한 간략한 개요가 소개되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-134">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in the appropriate configuration:</span></span>  
   
--   서버 인증서 만들기:  
+-   <span data-ttu-id="8a56a-135">서버 인증서 만들기</span><span class="sxs-lookup"><span data-stu-id="8a56a-135">Creating the server certificate:</span></span>  
   
-     Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다.%SERVER\_NAME% 변수는 서버 이름을 지정합니다.이 변수를 변경하여 고유의 서버 이름을 지정합니다.기본값은 localhost입니다.  
+     <span data-ttu-id="8a56a-136">Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-136">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span> <span data-ttu-id="8a56a-137">%SERVER_NAME% 변수는 서버 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-137">The %SERVER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="8a56a-138">이 변수를 변경하여 고유의 서버 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-138">Change this variable to specify your own server name.</span></span> <span data-ttu-id="8a56a-139">기본값은 localhost입니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-139">The default value is localhost.</span></span>  
   
     ```  
     echo ************  
@@ -277,22 +276,21 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:  
+-   <span data-ttu-id="8a56a-140">클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:</span><span class="sxs-lookup"><span data-stu-id="8a56a-140">Installing the server certificate into client's trusted certificate store:</span></span>  
   
-     Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다.이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다.Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.  
+     <span data-ttu-id="8a56a-141">Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-141">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="8a56a-142">이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-142">This step is required since certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="8a56a-143">Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-143">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   클라이언트 인증서 만들기:  
+-   <span data-ttu-id="8a56a-144">클라이언트 인증서 만들기:</span><span class="sxs-lookup"><span data-stu-id="8a56a-144">Creating the client certificate:</span></span>  
   
-     Setup.bat 배치 파일에서 다음 줄은 사용할 클라이언트 인증서를 만듭니다.%USER\_NAME% 변수는 클라이언트 이름을 지정합니다.이 값은 클라이언트 코드에서 찾는 이름이기 때문에 "test1"으로 설정됩니다.%USER\_NAME% 값을 변경한 경우에는 Client.cs 소스 파일에서 해당 값을 변경하고 클라이언트를 다시 빌드해야 합니다.  
+     <span data-ttu-id="8a56a-145">Setup.bat 배치 파일에서 다음 줄은 사용할 클라이언트 인증서를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-145">The following lines from the Setup.bat batch file create the client certificate to be used.</span></span> <span data-ttu-id="8a56a-146">%USER_NAME% 변수는 클라이언트 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-146">The %USER_NAME% variable specifies the client name.</span></span> <span data-ttu-id="8a56a-147">이 값은 클라이언트 코드에서 찾는 이름이기 때문에 "test1"으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-147">This value is set to "test1" because this is the name the client code looks for.</span></span> <span data-ttu-id="8a56a-148">%USER_NAME% 값을 변경한 경우에는 Client.cs 소스 파일에서 해당 값을 변경하고 클라이언트를 다시 빌드해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-148">If you change the value of %USER_NAME% you must change the corresponding value in the Client.cs source file and rebuild the client.</span></span>  
   
-     인증서는 CurrentUser 저장소 위치에 있는 My \(Personal\) 저장소에 저장됩니다.  
+     <span data-ttu-id="8a56a-149">인증서는 CurrentUser 저장소 위치에 있는 My (Personal) 저장소에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-149">The certificate is stored in My (Personal) store under the CurrentUser store location.</span></span>  
   
     ```  
     echo ************  
@@ -302,71 +300,70 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     echo making client cert  
     echo ************  
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%USER_NAME% -sky exchange -pe  
-  
     ```  
   
--   서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치:  
+-   <span data-ttu-id="8a56a-150">서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치:</span><span class="sxs-lookup"><span data-stu-id="8a56a-150">Installing the client certificate into server's trusted certificate store:</span></span>  
   
-     Setup.bat 배치 파일에서 다음 줄은 신뢰할 수 있는 사용자 저장소로 클라이언트 인증서를 복사합니다.이 단계는 Makecert.exe에서 생성한 인증서를 서버 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다.Microsoft에서 발급한 인증서와 같이 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 서버 인증서 저장소를 클라이언트 인증서로 채우는 이 단계는 필요하지 않습니다.  
+     <span data-ttu-id="8a56a-151">Setup.bat 배치 파일에서 다음 줄은 신뢰할 수 있는 사용자 저장소로 클라이언트 인증서를 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-151">The following lines in the Setup.bat batch file copy the client certificate into the trusted people store.</span></span> <span data-ttu-id="8a56a-152">이 단계는 Makecert.exe에서 생성한 인증서를 서버 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-152">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the server system.</span></span> <span data-ttu-id="8a56a-153">Microsoft에서 발급한 인증서와 같이 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 서버 인증서 저장소를 클라이언트 인증서로 채우는 이 단계는 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-153">If you already have a certificate that is rooted in a trusted root certificate—for example, a Microsoft issued certificate—this step of populating the server certificate store with the client certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
-#### 샘플을 설치하고 빌드하려면  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="8a56a-154">샘플을 설치하고 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="8a56a-154">To set up and build the sample</span></span>  
   
-1.  솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+1.  <span data-ttu-id="8a56a-155">지침에 따라 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-155">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2.  단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 다음 지침을 사용합니다.  
+2.  <span data-ttu-id="8a56a-156">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 다음 지침을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-156">To run the sample in a single- or cross-computerconfiguration, use the following instructions.</span></span>  
   
-#### 단일 컴퓨터 구성에서 샘플을 실행하려면  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="8a56a-157">단일 컴퓨터 구성에서 샘플을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="8a56a-157">To run the sample on the same computer</span></span>  
   
-1.  관리자 권한으로 연 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 명령 프롬프트에서 샘플 설치 폴더의 Setup.bat를 실행합니다.이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.  
+1.  <span data-ttu-id="8a56a-158">관리자 권한으로 연 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 명령 프롬프트에서 샘플 설치 폴더의 Setup.bat를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-158">Run Setup.bat from the sample install folder inside a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt opened with administrator privileges.</span></span> <span data-ttu-id="8a56a-159">이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-159">This installs all the certificates required for running the sample.</span></span>  
   
     > [!IMPORTANT]
-    >  Setup.bat 배치 파일은 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 명령 프롬프트에서 실행되도록 디자인되었습니다.[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 명령 프롬프트에서 설정된 PATH 환경 변수는 Setup.bat 스크립트에 필요한 실행 파일이 포함된 디렉터리를 가리킵니다.  
+    >  <span data-ttu-id="8a56a-160">Setup.bat 배치 파일은 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 명령 프롬프트에서 실행되도록 디자인되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-160">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="8a56a-161">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 명령 프롬프트에서 설정된 PATH 환경 변수는 Setup.bat 스크립트에 필요한 실행 파일이 포함된 디렉터리를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-161">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span>  
   
-2.  service\\bin에서 Service.exe를 실행합니다.  
+2.  <span data-ttu-id="8a56a-162">service\bin에서 Service.exe를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-162">Launch Service.exe from service\bin.</span></span>  
   
-3.  \\client\\bin에서 Client.exe를 실행합니다.클라이언트 콘솔 응용 프로그램에 클라이언트 동작이 표시됩니다.  
+3.  <span data-ttu-id="8a56a-163">\client\bin에서 Client.exe를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-163">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="8a56a-164">클라이언트 콘솔 응용 프로그램에 클라이언트 동작이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-164">Client activity is displayed on the client console application.</span></span>  
   
-4.  클라이언트와 서비스가 통신할 수 없는 경우 [Troubleshooting Tips](http://msdn.microsoft.com/ko-kr/8787c877-5e96-42da-8214-fa737a38f10b)을 참조하십시오.  
+4.  <span data-ttu-id="8a56a-165">클라이언트와 서비스가 통신할 수 없는 경우 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8a56a-165">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### 다중 컴퓨터 구성에서 샘플을 실행하려면  
+#### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="8a56a-166">다중 컴퓨터 구성에서 샘플을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="8a56a-166">To run the sample across computers</span></span>  
   
-1.  서비스 컴퓨터에 디렉터리를 만듭니다.  
+1.  <span data-ttu-id="8a56a-167">서비스 컴퓨터에 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-167">Create a directory on the service computer.</span></span>  
   
-2.  \\service\\bin에서 서비스 컴퓨터의 가상 디렉터리로 서비스 프로그램 파일을 복사합니다.Setup.bat, Cleanup.bat, GetComputerName.vbs 및 ImportClientCert.bat 파일도 서비스 컴퓨터에 복사합니다.  
+2.  <span data-ttu-id="8a56a-168">\service\bin에서 서비스 컴퓨터의 가상 디렉터리로 서비스 프로그램 파일을 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-168">Copy the service program files from \service\bin to the virtual directory on the service computer.</span></span> <span data-ttu-id="8a56a-169">Setup.bat, Cleanup.bat, GetComputerName.vbs 및 ImportClientCert.bat 파일도 서비스 컴퓨터에 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-169">Also copy the Setup.bat, Cleanup.bat, GetComputerName.vbs and ImportClientCert.bat files to the service computer.</span></span>  
   
-3.  클라이언트 컴퓨터에 클라이언트 이진 파일용 디렉터리를 만듭니다.  
+3.  <span data-ttu-id="8a56a-170">클라이언트 컴퓨터에 클라이언트 이진 파일용 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-170">Create a directory on the client computerfor the client binaries.</span></span>  
   
-4.  클라이언트 프로그램 파일을 클라이언트 컴퓨터의 클라이언트 디렉터리로 복사합니다.Setup.bat, Cleanup.bat 및 ImportServiceCert.bat 파일도 클라이언트로 복사합니다.  
+4.  <span data-ttu-id="8a56a-171">클라이언트 프로그램 파일을 클라이언트 컴퓨터의 클라이언트 디렉터리로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-171">Copy the client program files to the client directory on the client computer.</span></span> <span data-ttu-id="8a56a-172">Setup.bat, Cleanup.bat 및 ImportServiceCert.bat 파일도 클라이언트로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-172">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
   
-5.  서버에서 관리자 권한으로 Visual Studio 명령 프롬프트를 열고 `setup.bat service`를 실행합니다.`service` 인수를 사용하여 `setup.bat`를 실행하면 컴퓨터의 정규화된 도메인 이름이 지정된 서비스 인증서가 생성되어 Service.cer이라는 파일로 내보내집니다.  
+5.  <span data-ttu-id="8a56a-173">서버에서 관리자 권한으로 Visual Studio 명령 프롬프트를 열고 `setup.bat service`를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-173">On the server, run `setup.bat service` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="8a56a-174">실행 `setup.bat` 와 `service` 인수 서비스 인증서를 만듭니다 computerand 내보내기의 정규화 된 도메인 이름 서비스 인증서를 Service.cer 이라는 파일로 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-174">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the computerand exports the service certificate to a file named Service.cer.</span></span>  
   
-6.  컴퓨터의 정규화된 도메인 이름과 같은 새 인증서 이름\([\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)의 `findValue` 특성에 있음\)이 반영되도록 Service.exe.config를 편집합니다.또한 \<service\>\/\<baseAddresses\> 요소의 컴퓨터 이름을 localhost에서 서비스 컴퓨터의 정규화된 이름으로 변경합니다.  
+6.  <span data-ttu-id="8a56a-175">새 인증서 이름을 반영 하도록 Service.exe.config 편집 (에 `findValue` 특성에 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 컴퓨터의 정규화 된 도메인 이름과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-175">Edit Service.exe.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) which is the same as the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="8a56a-176">컴퓨터 이름을 변경할 수도 \<서비스 > /\<baseAddresses > localhost에서 서비스 컴퓨터의 정규화 된 이름에 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-176">Also change the computer name in the \<service>/\<baseAddresses> element from localhost to fully qualified name of your service computer.</span></span>  
   
-7.  서비스 디렉터리에서 클라이언트 컴퓨터의 클라이언트 디렉터리로 Service.cer 파일을 복사합니다.  
+7.  <span data-ttu-id="8a56a-177">서비스 디렉터리에서 클라이언트 컴퓨터의 클라이언트 디렉터리로 Service.cer 파일을 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-177">Copy the Service.cer file from the service directory to the client directory on the client computer.</span></span>  
   
-8.  클라이언트에서 관리자 권한으로 Visual Studio 명령 프롬프트를 열고 `setup.bat client`를 실행합니다.`client` 인수를 사용하여 `setup.bat`를 실행하면 client.com이라는 클라이언트 인증서가 생성되어 Client.cer이라는 파일로 내보내집니다.  
+8.  <span data-ttu-id="8a56a-178">클라이언트에서 관리자 권한으로 Visual Studio 명령 프롬프트를 열고 `setup.bat client`를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-178">On the client, run `setup.bat client` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="8a56a-179">`setup.bat` 인수를 사용하여 `client`를 실행하면 client.com이라는 클라이언트 인증서가 생성되어 Client.cer이라는 파일로 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-179">Running `setup.bat` with the `client` argument creates a client certificate named client.com and exports the client certificate to a file named Client.cer.</span></span>  
   
-9. 클라이언트 컴퓨터의 Client.exe.config 파일에서 끝점의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.이렇게 하려면 localhost를 서버의 정규화된 도메인 이름으로 바꿉니다.  
+9. <span data-ttu-id="8a56a-180">클라이언트 컴퓨터의 Client.exe.config 파일에서 끝점의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-180">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="8a56a-181">이렇게 하려면 localhost를 서버의 정규화된 도메인 이름으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-181">Do this by replacing localhost with the fully-qualified domain name of the server.</span></span>  
   
-10. 클라이언트 디렉터리에서 서버의 서비스 디렉터리로 Client.cer 파일을 복사합니다.  
+10. <span data-ttu-id="8a56a-182">클라이언트 디렉터리에서 서버의 서비스 디렉터리로 Client.cer 파일을 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-182">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
   
-11. 클라이언트에서 관리자 권한으로 Visual Studio 명령 프롬프트를 열고 ImportServiceCert.bat를 실행합니다.이 작업은 Service.cer 파일의 서비스 인증서를 CurrentUser \- TrustedPeople 저장소로 가져옵니다.  
+11. <span data-ttu-id="8a56a-183">클라이언트에서 관리자 권한으로 Visual Studio 명령 프롬프트를 열고 ImportServiceCert.bat를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-183">On the client, run ImportServiceCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="8a56a-184">이 작업은 Service.cer 파일의 서비스 인증서를 CurrentUser - TrustedPeople 저장소로 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-184">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-12. 서버에서 관리자 권한으로 Visual Studio 명령 프롬프트를 열고 ImportClientCert.bat를 실행합니다.이 작업은 Client.cer 파일의 클라이언트 인증서를 LocalMachine \- TrustedPeople 저장소로 가져옵니다.  
+12. <span data-ttu-id="8a56a-185">서버에서 관리자 권한으로 Visual Studio 명령 프롬프트를 열고 ImportClientCert.bat를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-185">On the server, run ImportClientCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="8a56a-186">이 작업은 Client.cer 파일의 클라이언트 인증서를 LocalMachine - TrustedPeople 저장소로 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-186">This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
   
-13. 서버 컴퓨터의 명령 프롬프트 창에서 Service.exe를 실행합니다.  
+13. <span data-ttu-id="8a56a-187">서버 컴퓨터의 명령 프롬프트 창에서 Service.exe를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-187">On the server computer, launch Service.exe from the command prompt window.</span></span>  
   
-14. 클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다.클라이언트와 서비스가 통신할 수 없는 경우 [Troubleshooting Tips](http://msdn.microsoft.com/ko-kr/8787c877-5e96-42da-8214-fa737a38f10b)을 참조하십시오.  
+14. <span data-ttu-id="8a56a-188">클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-188">On the client computer, launch Client.exe from a command prompt window.</span></span> <span data-ttu-id="8a56a-189">클라이언트와 서비스가 통신할 수 없는 경우 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8a56a-189">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### 샘플 실행 후 정리를 수행하려면  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="8a56a-190">샘플 실행 후 정리를 수행하려면</span><span class="sxs-lookup"><span data-stu-id="8a56a-190">To clean up after the sample</span></span>  
   
-1.  샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.그러면 인증서 저장소에서 서버 및 클라이언트 인증서가 제거됩니다.  
+1.  <span data-ttu-id="8a56a-191">샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-191">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span> <span data-ttu-id="8a56a-192">그러면 인증서 저장소에서 서버 및 클라이언트 인증서가 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-192">This removes the server and client certificates from the certificate store.</span></span>  
   
 > [!NOTE]
->  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다.다중 컴퓨터 구성의 인증서를 사용하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플을 실행한 경우 CurrentUser \- TrustedPeople 저장소에 설치된 서비스 인증서를 지워야 합니다.이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다\(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`\).  
+>  <span data-ttu-id="8a56a-193">다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-193">This script does not remove service certificates on a client when running this sample across computers.</span></span> <span data-ttu-id="8a56a-194">다중 컴퓨터 구성의 인증서를 사용하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플을 실행한 경우 CurrentUser - TrustedPeople 저장소에 설치된 서비스 인증서를 지워야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a56a-194">If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="8a56a-195">이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).</span><span class="sxs-lookup"><span data-stu-id="8a56a-195">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="8a56a-196">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8a56a-196">See Also</span></span>

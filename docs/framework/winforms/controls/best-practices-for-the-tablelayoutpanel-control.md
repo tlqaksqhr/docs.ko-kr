@@ -1,69 +1,70 @@
 ---
-title: "TableLayoutPanel 컨트롤에 대한 유용한 정보 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "자동 크기 조정"
-  - "AutoSize 속성, TableLayoutPanel 컨트롤"
-  - "유용한 정보, TableLayoutPanel 컨트롤"
-  - "컨트롤[Windows Forms], 크기 조정"
-  - "폼, 유용한 정보"
-  - "레이아웃[Windows Forms]"
-  - "레이아웃[Windows Forms], 유용한 정보"
-  - "레이아웃[Windows Forms], AutoSize"
-  - "크기 조정, 자동"
-  - "TableLayoutPanel 컨트롤[Windows Forms], 유용한 정보"
-  - "TableLayoutPanel 컨트롤[Windows Forms], AutoSize 동작"
+title: "TableLayoutPanel 컨트롤에 대한 유용한 정보"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- layout [Windows Forms]
+- TableLayoutPanel control [Windows Forms], best practices
+- forms [Windows Forms], best practices
+- AutoSize property [Windows Forms], tableLayoutPanel control
+- controls [Windows Forms], sizing
+- TableLayoutPanel control [Windows Forms], AutoSize behavior
+- layout [Windows Forms], AutoSize
+- layout [Windows Forms], best practices
+- best practices [Windows Forms], tableLayoutPanel control
+- sizing [Windows Forms], automatic
+- automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 802cc501b695f6c5cfe990bf72a4d9d2af68ba2b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# TableLayoutPanel 컨트롤에 대한 유용한 정보
-<xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 통해 Windows Forms에서 사용하기 전에 신중하게 고려해야 할 강력한 레이아웃 기능을 사용할 수 있습니다.  
+# <a name="best-practices-for-the-tablelayoutpanel-control"></a><span data-ttu-id="7c35a-102">TableLayoutPanel 컨트롤에 대한 유용한 정보</span><span class="sxs-lookup"><span data-stu-id="7c35a-102">Best Practices for the TableLayoutPanel Control</span></span>
+<span data-ttu-id="7c35a-103"><xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 Windows Forms에서 사용 하기 전에 신중 하 게 고려해 야 하는 강력한 레이아웃 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-103">The <xref:System.Windows.Forms.TableLayoutPanel> control provides powerful layout features that you should consider carefully before using on your Windows Forms.</span></span>  
   
-## 권장 사항  
- 다음 권장 사항은 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 최대한 효율적으로 사용하는 데 도움이 됩니다.  
+## <a name="recommendations"></a><span data-ttu-id="7c35a-104">권장 사항</span><span class="sxs-lookup"><span data-stu-id="7c35a-104">Recommendations</span></span>  
+ <span data-ttu-id="7c35a-105">다음 권장 사항을 사용 하는 데 도움이 됩니다는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 해당 최대한 활용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-105">The following recommendations will help you use the <xref:System.Windows.Forms.TableLayoutPanel> control to its best advantage.</span></span>  
   
-### 사용 대상  
- <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 꼭 필요한 경우에만 사용해야 하며  레이아웃의 크기를 조정해야 하는 아무 상황에서나 사용하면 안 됩니다.  다음 목록에서는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용하여 큰 효과를 볼 수 있는 레이아웃에 대해 설명합니다.  
+### <a name="targeted-use"></a><span data-ttu-id="7c35a-106">사용 대상된</span><span class="sxs-lookup"><span data-stu-id="7c35a-106">Targeted Use</span></span>  
+ <span data-ttu-id="7c35a-107">사용 된 <xref:System.Windows.Forms.TableLayoutPanel> 제한적으로 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-107">Use the <xref:System.Windows.Forms.TableLayoutPanel> control sparingly.</span></span> <span data-ttu-id="7c35a-108">하지 크기 조정 가능한 레이아웃을 필요로 하는 모든 상황에서 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-108">You should not use it in all situations that require a resizable layout.</span></span> <span data-ttu-id="7c35a-109">다음 목록에는 설명의 사용에서 가장 많이 향상 되는 레이아웃은 <xref:System.Windows.Forms.TableLayoutPanel> 제어:</span><span class="sxs-lookup"><span data-stu-id="7c35a-109">The following list describes layouts that benefit most from the use of the <xref:System.Windows.Forms.TableLayoutPanel> control:</span></span>  
   
--   여러 부분으로 구성되어 이러한 부분이 비례적으로 크기가 조정되는 폼의 레이아웃  
+-   <span data-ttu-id="7c35a-110">서로 비례적으로 크기를 조정 하는 폼의 여러 부분이 있고 있는 레이아웃입니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-110">Layouts in which there are multiple parts of the form that resize proportionally to each other.</span></span>  
   
--   기본 설정에 따라 추가되거나 삭제된 사용자 지정 가능한 필드가 포함된 데이터 입력 폼과 같이 런타임에 동적으로 수정되거나 생성될 레이아웃  
+-   <span data-ttu-id="7c35a-111">추가 되거나 삭제 된 사용자 지정 가능한 필드가 있는 데이터 항목 형식과 같은 런타임에 동적으로 생성 되거나 수정 될 레이아웃 기본 설정을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-111">Layouts that will be modified or generated dynamically at run time, such as data entry forms that have user-customizable fields added or subtracted based on preferences.</span></span>  
   
--   전체 고정 크기로 유지되어야 하는 레이아웃.  예를 들어, 대화 상자를 800 x 600보다 작게 유지해야 하지만 지역화된 문자열을 지원해야 하는 경우를 들 수 있습니다.  
+-   <span data-ttu-id="7c35a-112">전반적인 고정 크기로 유지 해야 하는 레이아웃입니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-112">Layouts that should remain at an overall fixed size.</span></span> <span data-ttu-id="7c35a-113">예를 들어 800 x 600 보다 작게 유지 해야 하는 대화 상자를 할 수 있습니다 하지만 지역화 된 문자열을 지원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-113">For example, you may have a dialog box that should remain smaller than 800 x 600, but you need to support localized strings.</span></span>  
   
- 다음 목록에서는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용해도 큰 효과를 보지 못하는 레이아웃에 대해 설명합니다.  
+ <span data-ttu-id="7c35a-114">다음 목록은 레이아웃을 사용 하 여 상당히 유용 하지 않습니다는 <xref:System.Windows.Forms.TableLayoutPanel> 제어:</span><span class="sxs-lookup"><span data-stu-id="7c35a-114">The following list describes layouts that do not benefit greatly from using the <xref:System.Windows.Forms.TableLayoutPanel> control:</span></span>  
   
--   단일 레이블 열 및 단일 텍스트 입력 영역 열이 포함된 간단한 데이터 입력 폼  
+-   <span data-ttu-id="7c35a-115">간단한 데이터 입력 폼 단일 열과 레이블 및 텍스트 입력 영역으로 이루어진 단일 열입니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-115">Simple data entry forms with a single column of labels and a single column of text-entry areas.</span></span>  
   
--   크기를 조정하면 사용 가능한 모든 공간을 채워야 하는 큰 단일 표시 영역이 포함된 폼.  단일 <xref:System.Windows.Forms.PropertyGrid> 컨트롤을 표시하는 폼을 예로 들 수 있습니다.  이 경우 폼의 크기를 조정할 때 다른 영역은 확장되지 않아야 하므로 앵커를 사용합니다.  
+-   <span data-ttu-id="7c35a-116">큰 단일 폼 크기를 조정 하면 사용 가능한 모든 공간을 채워야 하는 영역을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-116">Forms with a single large display area that should fill all the available space when a resize occurs.</span></span> <span data-ttu-id="7c35a-117">이 예는 단일 표시 하는 폼 <xref:System.Windows.Forms.PropertyGrid> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-117">An example of this is a form that displays a single <xref:System.Windows.Forms.PropertyGrid> control.</span></span> <span data-ttu-id="7c35a-118">이 경우 폼의 크기를 조정할 때 확장 해야만 수행 되기 때문에 앵커를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-118">In this case, use anchoring, because nothing else should expand when the form is resized.</span></span>  
   
- <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에 필요한 컨트롤을 주의해서 선택합니다.  앵커를 사용하여 30%씩 늘릴 수 있는 텍스트 공간이 있는 경우에는 <xref:System.Windows.Forms.Control.Anchor%2A> 속성만 사용하는 것이 좋습니다.  레이아웃에 필요한 공간을 추정할 수 있는 경우 <xref:System.Windows.Forms.Control.Dock%2A> 및 <xref:System.Windows.Forms.Control.Anchor%2A>를 사용하는 것이 나머지 공간과 <xref:System.Windows.Forms.Control.AutoSize%2A> 동작을 세부적으로 추정하는 것보다 쉽습니다.  
+ <span data-ttu-id="7c35a-119">선택 신중 하 게 제어 하에 있이 필요는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-119">Choose carefully which controls need to be in a <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="7c35a-120">앵커를 사용 하 여 30% 증가 하려고 텍스트 공간이 있는 경우 사용 하 여 고려는 <xref:System.Windows.Forms.Control.Anchor%2A> 속성에만 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-120">If you have room for your text to grow by 30% using anchoring, consider using the <xref:System.Windows.Forms.Control.Anchor%2A> property only.</span></span> <span data-ttu-id="7c35a-121">레이아웃에 필요한 공간을 예측할 수 경우 활용 <xref:System.Windows.Forms.Control.Dock%2A> 및 <xref:System.Windows.Forms.Control.Anchor%2A> 남아 있는 공간에 대 한 세부 정보를 예측 하는 것 보다 쉽습니다 및 <xref:System.Windows.Forms.Control.AutoSize%2A> 동작 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-121">If you can estimate the space required by your layout, use of <xref:System.Windows.Forms.Control.Dock%2A> and <xref:System.Windows.Forms.Control.Anchor%2A> is easier than estimating the details of remaining space and <xref:System.Windows.Forms.Control.AutoSize%2A> behavior.</span></span>  
   
- 일반적으로 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용하여 레이아웃을 디자인할 때는 디자인을 가능한 한 단순하게 해야 합니다.  
+ <span data-ttu-id="7c35a-122">일반적으로 사용 하 여 레이아웃을 디자인 하는 경우는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 디자인을 가능한 한 단순하게 유지 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-122">In general, when designing your layout with the <xref:System.Windows.Forms.TableLayoutPanel> control, keep the design as simple as possible.</span></span>  
   
-### 문서 개요 창 사용  
- 문서 개요 창에는 레이아웃의 트리 뷰가 표시되므로 이를 사용하여 컨트롤의 z 순서와 부모\/자식 관계를 조작할 수 있습니다.  **보기** 메뉴에서 **다른 창**, **문서 개요**를 차례로 선택합니다.  
+### <a name="use-the-document-outline-window"></a><span data-ttu-id="7c35a-123">문서 개요 창을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="7c35a-123">Use the Document Outline Window</span></span>  
+ <span data-ttu-id="7c35a-124">문서 개요 창 컨트롤의 z 순서와 부모-자식 관계를 조작 하는 데 사용할 수 있는 레이아웃의 트리 보기를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-124">The Document Outline window gives you a tree view of your layout, which you can use to manipulate the z-order and parent-child relationships of your controls.</span></span> <span data-ttu-id="7c35a-125">**보기 메뉴**선택, **다른 창**을 선택한 후 **문서 개요**합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-125">From the **View menu**, select **Other Windows**, then select **Document Outline**.</span></span>  
   
-### 중첩 사용하지 않기  
- <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 내에 다른 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 중첩하지 마십시오.  중첩된 레이아웃은 디버깅하기가 어렵습니다.  
+### <a name="avoid-nesting"></a><span data-ttu-id="7c35a-126">중첩을 하지 마십시오</span><span class="sxs-lookup"><span data-stu-id="7c35a-126">Avoid Nesting</span></span>  
+ <span data-ttu-id="7c35a-127">다른 중첩 하지 마십시오 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 내에 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-127">Avoid nesting other <xref:System.Windows.Forms.TableLayoutPanel> controls within a <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="7c35a-128">중첩 된 레이아웃을 디버깅 하는 것은 어려울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-128">Debugging nested layouts can be difficult.</span></span>  
   
-### 시각적 상속 사용하지 않기  
- <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 Windows Forms 디자이너에서 시각적 상속을 지원하지 않습니다.  파생 클래스의 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 디자인 타임에 "잠금" 상태로 나타납니다.  
+### <a name="avoid-visual-inheritance"></a><span data-ttu-id="7c35a-129">시각적 상속을 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="7c35a-129">Avoid Visual Inheritance</span></span>  
+ <span data-ttu-id="7c35a-130"><xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 Windows Forms 디자이너에서 시각적 상속을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-130">The <xref:System.Windows.Forms.TableLayoutPanel> control does not support visual inheritance in the Windows Forms Designer.</span></span> <span data-ttu-id="7c35a-131">A <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 파생된 클래스에서 "잠겨 있음" 디자인 타임에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="7c35a-131">A <xref:System.Windows.Forms.TableLayoutPanel> control in a derived class appears as "locked" at design time.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.TableLayoutPanel>   
+## <a name="see-also"></a><span data-ttu-id="7c35a-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7c35a-132">See Also</span></span>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
  <xref:System.Windows.Forms.FlowLayoutPanel>

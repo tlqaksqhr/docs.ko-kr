@@ -1,50 +1,54 @@
 ---
-title: "Windows Workflow 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Windows Workflow 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f60d5a7fb0bcc1f38fda470e5f44938fc0fa011f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Workflow 개요
-워크플로는 실세계 프로세스를 설명하는 모델로 저장되는 *활동*이라는 요소 단위의 집합입니다.워크플로를 통해 단기 실행 작업과 장기 실행 작업의 실행 순서와 종속 관계를 설명할 수 있습니다.이 워크플로는 모델의 처음부터 끝까지 이어지며 활동은 사용자가 실행하거나 시스템 함수로 실행될 수 있습니다.  
+# <a name="windows-workflow-overview"></a><span data-ttu-id="af884-102">Windows Workflow 개요</span><span class="sxs-lookup"><span data-stu-id="af884-102">Windows Workflow Overview</span></span>
+<span data-ttu-id="af884-103">워크플로 이라는 요소 단위의 집합 *활동* 실제 프로세스를 설명 하는 모델로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="af884-103">A workflow is a set of elemental units called *activities* that are stored as a model that describes a real-world process.</span></span> <span data-ttu-id="af884-104">워크플로를 통해 단기 실행 작업과 장기 실행 작업의 실행 순서와 종속 관계를 설명할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af884-104">Workflows provide a way of describing the order of execution and dependent relationships between pieces of short- or long-running work.</span></span> <span data-ttu-id="af884-105">이 작업은 모델을 시작부터 끝까지 통과하며 활동은 사람이 실행하거나 시스템 함수로 실행될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af884-105">This work passes through the model from start to finish, and activities might be executed by people or by system functions.</span></span>  
   
-## 워크플로 런타임 엔진  
- 실행 중인 모든 워크플로 인스턴스는 다음 중 하나를 통해 호스트 프로세스와 상호 작용하는 in\-process 런타임 엔진에서 만들고 유지합니다.  
+## <a name="workflow-run-time-engine"></a><span data-ttu-id="af884-106">워크플로 런타임 엔진</span><span class="sxs-lookup"><span data-stu-id="af884-106">Workflow Run-time Engine</span></span>  
+ <span data-ttu-id="af884-107">실행 중인 모든 워크플로 인스턴스는 다음 중 하나를 통해 호스트 프로세스와 상호 작용하는 in-process 런타임 엔진에서 만들고 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="af884-107">Every running workflow instance is created and maintained by an in-process run-time engine that the host process interacts with through one of the following:</span></span>  
   
--   메서드와 같이 워크플로를 호출하는 <xref:System.Activities.WorkflowInvoker>  
+-   <span data-ttu-id="af884-108">메서드와 같이 워크플로를 호출하는 <xref:System.Activities.WorkflowInvoker></span><span class="sxs-lookup"><span data-stu-id="af884-108">A <xref:System.Activities.WorkflowInvoker>, which invokes the workflow like a method.</span></span>  
   
--   단일 워크플로 인스턴스의 실행을 명시적으로 제어하기 위한 <xref:System.Activities.WorkflowApplication>  
+-   <span data-ttu-id="af884-109">단일 워크플로 인스턴스의 실행을 명시적으로 제어하기 위한 <xref:System.Activities.WorkflowApplication></span><span class="sxs-lookup"><span data-stu-id="af884-109">A <xref:System.Activities.WorkflowApplication> for explicit control over the execution of a single workflow instance.</span></span>  
   
--   다중 인스턴스 시나리오에서 메시지 기반 상호 작용에 사용하는 <xref:System.ServiceModel.WorkflowServiceHost>  
+-   <span data-ttu-id="af884-110">다중 인스턴스 시나리오에서 메시지 기반 상호 작용에 사용하는 <xref:System.ServiceModel.WorkflowServiceHost></span><span class="sxs-lookup"><span data-stu-id="af884-110">A <xref:System.ServiceModel.WorkflowServiceHost> for message-based interactions in multi-instance scenarios.</span></span>  
   
- 이 클래스는 각각 활동 실행을 담당하는 <xref:System.Activities.ActivityInstance>로 표현되는 코어 활동 런타임을 래핑합니다.응용 프로그램 도메인 내에는 동시에 실행되는 여러 <xref:System.Activities.ActivityInstance> 개체가 있을 수 있습니다.  
+ <span data-ttu-id="af884-111">이 클래스는 각각 활동 실행을 담당하는 <xref:System.Activities.ActivityInstance>로 표현되는 코어 활동 런타임을 래핑합니다.</span><span class="sxs-lookup"><span data-stu-id="af884-111">Each of these classes wraps the core activity runtime represented as a <xref:System.Activities.ActivityInstance> responsible for activity execution.</span></span> <span data-ttu-id="af884-112">응용 프로그램 도메인 내에는 동시에 실행되는 여러 <xref:System.Activities.ActivityInstance> 개체가 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af884-112">There can be several <xref:System.Activities.ActivityInstance> objects within an application domain running concurrently.</span></span>  
   
- 위의 세 가지 호스트 상호 작용 개체는 각각 워크플로 프로그램이라는 활동 트리에서 만들어집니다.이 형식을 사용하거나 <xref:System.Activities.ActivityInstance>를 래핑하는 사용자 지정 호스트를 사용하면 콘솔 응용 프로그램, 폼 기반 응용 프로그램, Windows 서비스, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 사이트 및 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 포함한 모든 Windows 프로세스 내부에서 워크플로를 실행할 수 있습니다.  
+ <span data-ttu-id="af884-113">위의 세 가지 호스트 상호 작용 개체는 각각 워크플로 프로그램이라는 활동 트리에서 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="af884-113">Each of the preceding three host interaction objects is created from a tree of activities referred to as a workflow program.</span></span> <span data-ttu-id="af884-114">이 형식을 사용하거나 <xref:System.Activities.ActivityInstance>를 래핑하는 사용자 지정 호스트를 사용하면 콘솔 응용 프로그램, 폼 기반 응용 프로그램, Windows 서비스, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 사이트 및 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 포함한 모든 Windows 프로세스 내부에서 워크플로를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af884-114">Using these types or a custom host that wraps <xref:System.Activities.ActivityInstance>, workflows can be executed inside any Windows process including console applications, forms-based applications, Windows Services, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web sites, and [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]services.</span></span>  
   
- ![호스트 프로세스의 워크플로 구성 요소](../../../docs/framework/windows-workflow-foundation//media/44c79d1d-178b-4487-87ed-3e33015a3842.png "44c79d1d\-178b\-4487\-87ed\-3e33015a3842")  
-호스트 프로세스의 워크플로 구성 요소  
+ <span data-ttu-id="af884-115">![호스트 프로세스의 워크플로 구성 요소](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")</span><span class="sxs-lookup"><span data-stu-id="af884-115">![Workflow components in the host process](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")</span></span>  
+<span data-ttu-id="af884-116">호스트 프로세스의 워크플로 구성 요소</span><span class="sxs-lookup"><span data-stu-id="af884-116">Workflow components in the host process</span></span>  
   
-## 워크플로 구성 요소 간의 상호 작용  
- 다음 다이어그램에서는 워크플로 구성 요소가 서로 상호 작용하는 방법을 보여 줍니다.  
+## <a name="interaction-between-workflow-components"></a><span data-ttu-id="af884-117">워크플로 구성 요소 간의 상호 작용</span><span class="sxs-lookup"><span data-stu-id="af884-117">Interaction between Workflow Components</span></span>  
+ <span data-ttu-id="af884-118">다음 다이어그램에서는 워크플로 구성 요소가 서로 상호 작용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="af884-118">The following diagram demonstrates how workflow components interact with one another.</span></span>  
   
- ![워크플로 상호 작용](../../../docs/framework/windows-workflow-foundation//media/workflowinteraction.gif "WorkflowInteraction")  
+ <span data-ttu-id="af884-119">![워크플로 상호 작용](../../../docs/framework/windows-workflow-foundation/media/workflowinteraction.gif "WorkflowInteraction")</span><span class="sxs-lookup"><span data-stu-id="af884-119">![Workflow interaction](../../../docs/framework/windows-workflow-foundation/media/workflowinteraction.gif "WorkflowInteraction")</span></span>  
   
- 위의 다이어그램에서는 <xref:System.Activities.WorkflowInvoker> 클래스의 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 메서드를 사용하여 여러 워크플로 인스턴스를 호출합니다.<xref:System.Activities.WorkflowInvoker>는 호스트에서 관리할 필요 없는 간단한 워크플로에 사용되며, 호스트에서 관리해야 하는 워크플로\(예: <xref:System.Activities.Bookmark> 다시 시작\)는 그 대신 <xref:System.Activities.WorkflowApplication.Run%2A>을 사용하여 실행해야 합니다.한 워크플로 인스턴스가 완료될 때까지 기다렸다가 다른 워크플로 인스턴스를 호출할 필요는 없습니다. 런타임 엔진은 여러 워크플로 인스턴스의 동시 실행을 지원합니다.호출된 워크플로는 다음과 같습니다.  
+ <span data-ttu-id="af884-120">위의 다이어그램에서는 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 클래스의 <xref:System.Activities.WorkflowInvoker> 메서드를 사용하여 여러 워크플로 인스턴스를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="af884-120">In the preceding diagram, the <xref:System.Activities.WorkflowInvoker.Invoke%2A> method of the <xref:System.Activities.WorkflowInvoker> class is used to invoke several workflow instances.</span></span> <span data-ttu-id="af884-121"><xref:System.Activities.WorkflowInvoker>는 호스트에서 관리할 필요 없는 간단한 워크플로에 사용되며, 호스트에서 관리해야 하는 워크플로(예: <xref:System.Activities.Bookmark> 다시 시작)는 그 대신 <xref:System.Activities.WorkflowApplication.Run%2A>을 사용하여 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="af884-121"><xref:System.Activities.WorkflowInvoker> is used for lightweight workflows that do not need management from the host; workflows that need management from the host (such as <xref:System.Activities.Bookmark> resumption) must be executed using <xref:System.Activities.WorkflowApplication.Run%2A> instead.</span></span> <span data-ttu-id="af884-122">한 워크플로 인스턴스가 완료될 때까지 기다렸다가 다른 워크플로 인스턴스를 호출할 필요는 없습니다. 런타임 엔진은 여러 워크플로 인스턴스의 동시 실행을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="af884-122">It isn’t required to wait for one workflow instance to complete before invoking another; the runtime engine supports running multiple workflow instances simultaneously.</span></span>  <span data-ttu-id="af884-123">호출된 워크플로는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="af884-123">The workflows invoked are as follows:</span></span>  
   
--   <xref:System.Activities.Statements.WriteLine> 자식 활동을 포함하는 <xref:System.Activities.Statements.Sequence> 활동입니다.부모 활동의 <xref:System.Activities.Variable>은 자식 활동의 <xref:System.Activities.InArgument>에 바인딩됩니다.변수, 인수 및 바인딩 [!INCLUDE[crabout](../../../includes/crabout-md.md)][변수 및 인수](../../../docs/framework/windows-workflow-foundation//variables-and-arguments.md)를 참조하십시오.  
+-   <span data-ttu-id="af884-124"><xref:System.Activities.Statements.Sequence> 자식 활동을 포함하는 <xref:System.Activities.Statements.WriteLine> 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="af884-124">A <xref:System.Activities.Statements.Sequence> activity that contains a <xref:System.Activities.Statements.WriteLine> child activity.</span></span> <span data-ttu-id="af884-125">부모 활동의 <xref:System.Activities.Variable>은 자식 활동의 <xref:System.Activities.InArgument>에 바인딩됩니다.</span><span class="sxs-lookup"><span data-stu-id="af884-125">A <xref:System.Activities.Variable> of the parent activity is bound to an <xref:System.Activities.InArgument> of the child activity.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="af884-126">참조 변수, 인수 및 바인딩에 [변수 및 인수](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="af884-126"> on variables, arguments, and binding, see [Variables and Arguments](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).</span></span>  
   
--   `ReadLine`이라는 사용자 지정 활동입니다.`ReadLine` 활동의 <xref:System.Activities.OutArgument>가 호출 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 메서드에 반환됩니다.  
+-   <span data-ttu-id="af884-127">`ReadLine`이라는 사용자 지정 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="af884-127">A custom activity called `ReadLine`.</span></span> <span data-ttu-id="af884-128"><xref:System.Activities.OutArgument> 활동의 `ReadLine`가 호출 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 메서드에 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="af884-128">An <xref:System.Activities.OutArgument> of the `ReadLine` activity is returned to the calling <xref:System.Activities.WorkflowInvoker.Invoke%2A> method.</span></span>  
   
--   <xref:System.Activities.CodeActivity> 추상 클래스에서 파생되는 사용자 지정 활동입니다.<xref:System.Activities.CodeActivity>는 <xref:System.Activities.CodeActivity.Execute%2A> 메서드의 매개 변수로 사용되는 <xref:System.Activities.CodeActivityContext>를 사용하여 런타임 기능\(예: 추적 및 속성\)에 액세스할 수 있습니다.이 런타임 기능은 [!INCLUDE[crabout](../../../includes/crabout-md.md)][워크플로 추적](../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md) 및 [워크플로 실행 속성](../../../docs/framework/windows-workflow-foundation//workflow-execution-properties.md)를 참조하십시오.  
+-   <span data-ttu-id="af884-129"><xref:System.Activities.CodeActivity> 추상 클래스에서 파생되는 사용자 지정 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="af884-129">A custom activity that derives from the <xref:System.Activities.CodeActivity> abstract class.</span></span> <span data-ttu-id="af884-130"><xref:System.Activities.CodeActivity>는 <xref:System.Activities.CodeActivityContext> 메서드의 매개 변수로 사용되는 <xref:System.Activities.CodeActivity.Execute%2A>를 사용하여 런타임 기능(예: 추적 및 속성)에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af884-130">The <xref:System.Activities.CodeActivity> can access run-time features (such as tracking and properties) using the <xref:System.Activities.CodeActivityContext> that is available as a parameter of the <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="af884-131">이러한 런타임 기능 참조 [워크플로 추적 및 트레이싱](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) 및 [워크플로 실행 속성](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="af884-131"> these run-time features, see [Workflow Tracking and Tracing](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Workflow Execution Properties](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).</span></span>  
   
-## 참고 항목  
- [BizTalk Server 2006과 WF 프로젝트에 적합한 워크플로 도구 선택](http://go.microsoft.com/fwlink/?LinkId=154901)
+## <a name="see-also"></a><span data-ttu-id="af884-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="af884-132">See Also</span></span>  
+ [<span data-ttu-id="af884-133">BizTalk Server 2006과 WF 프로젝트에 대 한 적절 한 워크플로 도구 선택</span><span class="sxs-lookup"><span data-stu-id="af884-133">BizTalk Server 2006 or WF? Choosing the Right Workflow Tool for Your Project</span></span>](http://go.microsoft.com/fwlink/?LinkId=154901)

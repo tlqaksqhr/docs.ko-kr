@@ -1,87 +1,90 @@
 ---
-title: "Control Pattern Mapping for UI Automation Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, for UI Automation clients"
-  - "UI Automation, clients, control patterns for"
+title: "UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, for UI Automation clients
+- UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-caps.latest.revision: 18
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Control Pattern Mapping for UI Automation Clients
+# <a name="control-pattern-mapping-for-ui-automation-clients"></a><span data-ttu-id="33ceb-102">UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑</span><span class="sxs-lookup"><span data-stu-id="33ceb-102">Control Pattern Mapping for UI Automation Clients</span></span>
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  <span data-ttu-id="33ceb-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="33ceb-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="33ceb-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 이 항목에서는 컨트롤 형식 및 이 형식과 연결된 컨트롤 패턴을 나열하여 보여줍니다.  
+ <span data-ttu-id="33ceb-105">이 항목에서는 컨트롤 형식 및 이 형식과 연결된 컨트롤 패턴을 나열하여 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-105">This topic lists control types and their associated control patterns.</span></span>  
   
- 다음 표는 컨트롤 패턴을 다음과 같은 범주로 정리하여 보여줍니다.  
+ <span data-ttu-id="33ceb-106">다음 표는 컨트롤 패턴을 다음과 같은 범주로 정리하여 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-106">The following table organizes the control patterns into the following categories:</span></span>  
   
--   지원됩니다. 컨트롤은 이 컨트롤 패턴을 지원해야 합니다.  
+-   <span data-ttu-id="33ceb-107">지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-107">Supported.</span></span> <span data-ttu-id="33ceb-108">컨트롤은 이 컨트롤 패턴을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-108">The control must support this control pattern.</span></span>  
   
--   조건부 지원입니다. 컨트롤은 컨트롤의 상태에 따라 이 컨트롤 패턴을 지원할 수 있습니다.  
+-   <span data-ttu-id="33ceb-109">조건부 지원입니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-109">Conditional support.</span></span> <span data-ttu-id="33ceb-110">컨트롤은 컨트롤의 상태에 따라 이 컨트롤 패턴을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-110">The control may support this control pattern depending on the state of the control.</span></span>  
   
--   지원되지 않습니다. 컨트롤은 이 컨트롤 패턴을 지원하지 않습니다. 사용자 지정 컨트롤이 이 컨트롤 패턴을 지원할 수 있습니다.  
+-   <span data-ttu-id="33ceb-111">지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-111">Not supported.</span></span> <span data-ttu-id="33ceb-112">컨트롤은 이 컨트롤 패턴을 지원하지 않습니다. 사용자 지정 컨트롤이 이 컨트롤 패턴을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-112">The control does not support this control pattern; custom controls may support this control pattern.</span></span>  
   
 > [!NOTE]
->  일부 컨트롤은 컨트롤 기능에 따라 몇몇 컨트롤 패턴을 조건부로 지원합니다. 예를 들어, 메뉴 항목 컨트롤은 메뉴 컨트롤의 기능에 따라 <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern> 또는 <xref:System.Windows.Automation.SelectionItemPattern> 컨트롤 패턴을 조건부로 지원합니다.  
+>  <span data-ttu-id="33ceb-113">일부 컨트롤은 컨트롤 기능에 따라 몇몇 컨트롤 패턴을 조건부로 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-113">Some controls have conditional support for several control patterns depending on the functionality of the control.</span></span> <span data-ttu-id="33ceb-114">예를 들어, 메뉴 항목 컨트롤은 메뉴 컨트롤의 기능에 따라 <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>또는 <xref:System.Windows.Automation.SelectionItemPattern> 컨트롤 패턴을 조건부로 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-114">For example, the menu item control has conditional support for the <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, or <xref:System.Windows.Automation.SelectionItemPattern> control pattern, depending on its function in the menu control.</span></span>  
   
 <a name="control_mapping_clients"></a>   
-## 클라이언트용 UI 자동화 컨트롤 패턴  
+## <a name="ui-automation-control-patterns-for-clients"></a><span data-ttu-id="33ceb-115">클라이언트용 UI 자동화 컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="33ceb-115">UI Automation Control Patterns for Clients</span></span>  
   
-|컨트롤 종류|지원함|조건부 지원|지원되지 않음|  
-|------------|---------|------------|-------------|  
-|단추|없음|Invoke, Toggle, Expand Collapse|없음|  
-|일정|Grid, Table|Selection, Scroll|값|  
-|확인란|설정\/해제|없음|없음|  
-|Combo Box|확장 축소|선택, 값|Scroll|  
-|Data Grid|표|Scroll, Selection, Table|없음|  
-|Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|없음|  
-|문서|텍스트|Scroll, Value|없음|  
-|편집|없음|Text, Range Value, Value|없음|  
-|그룹화|없음|확장 축소|없음|  
-|머리글|없음|변형|없음|  
-|Header Item|없음|Transform, Invoke|없음|  
-|하이퍼링크|호출|값|없음|  
-|이미지|없음|Grid Item, Table Item|Invoke, Selection Item|  
-|목록|없음|Grid, Multiple View, Scroll, Selection|표|  
-|List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|없음|  
-|메뉴|없음|없음|없음|  
-|메뉴 모음|없음|Expand Collapse, Dock, Transform|없음|  
-|메뉴 항목|없음|Expand Collapse, Invoke, Selection Item, Toggle|없음|  
-|창|없음|Dock. Scroll, Transform|창|  
-|Progress Bar|없음|Range Value, Value|없음|  
-|Radio Button|Selection Item|없음|설정\/해제|  
-|Scroll Bar|없음|Range Value|Scroll|  
-|구분 기호|없음|없음|없음|  
-|슬라이더|없음|Range Value, Selection, Value|없음|  
-|Spinner|없음|Range Value, Selection, Value|없음|  
-|분할 단추|Invoke, Expand Collapse|없음|없음|  
-|상태 표시줄|없음|표|없음|  
-|탭|선택|Scroll|없음|  
-|Tab Item|Selection Item|없음|호출|  
-|표|Grid, Grid Item, Table, Table Item|없음|없음|  
-|텍스트|없음|Grid Item, Table Item, Text|값|  
-|Thumb|변형|없음|없음|  
-|제목 표시줄|없음|없음|없음|  
-|Tool Bar|없음|Dock, Expand Collapse, Transform|없음|  
-|Tool Tip|없음|Text, Window|없음|  
-|Tree|없음|Scroll, Selection|없음|  
-|Tree Item|확장 축소|Invoke, Scroll Item, Selection Item, Toggle|없음|  
-|창|Transform, Window|도킹|없음|  
+|<span data-ttu-id="33ceb-116">컨트롤 종류</span><span class="sxs-lookup"><span data-stu-id="33ceb-116">Control Type</span></span>|<span data-ttu-id="33ceb-117">지원함</span><span class="sxs-lookup"><span data-stu-id="33ceb-117">Supported</span></span>|<span data-ttu-id="33ceb-118">조건부 지원</span><span class="sxs-lookup"><span data-stu-id="33ceb-118">Conditional Support</span></span>|<span data-ttu-id="33ceb-119">지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="33ceb-119">Not Supported</span></span>|  
+|------------------|---------------|-------------------------|-------------------|  
+|<span data-ttu-id="33ceb-120">단추</span><span class="sxs-lookup"><span data-stu-id="33ceb-120">Button</span></span>|<span data-ttu-id="33ceb-121">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-121">None</span></span>|<span data-ttu-id="33ceb-122">Invoke, Toggle, Expand Collapse</span><span class="sxs-lookup"><span data-stu-id="33ceb-122">Invoke, Toggle, Expand Collapse</span></span>|<span data-ttu-id="33ceb-123">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-123">None</span></span>|  
+|<span data-ttu-id="33ceb-124">일정</span><span class="sxs-lookup"><span data-stu-id="33ceb-124">Calendar</span></span>|<span data-ttu-id="33ceb-125">Grid, Table</span><span class="sxs-lookup"><span data-stu-id="33ceb-125">Grid, Table</span></span>|<span data-ttu-id="33ceb-126">Selection, Scroll</span><span class="sxs-lookup"><span data-stu-id="33ceb-126">Selection, Scroll</span></span>|<span data-ttu-id="33ceb-127">값</span><span class="sxs-lookup"><span data-stu-id="33ceb-127">Value</span></span>|  
+|<span data-ttu-id="33ceb-128">확인란</span><span class="sxs-lookup"><span data-stu-id="33ceb-128">Check Box</span></span>|<span data-ttu-id="33ceb-129">설정/해제</span><span class="sxs-lookup"><span data-stu-id="33ceb-129">Toggle</span></span>|<span data-ttu-id="33ceb-130">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-130">None</span></span>|<span data-ttu-id="33ceb-131">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-131">None</span></span>|  
+|<span data-ttu-id="33ceb-132">Combo Box</span><span class="sxs-lookup"><span data-stu-id="33ceb-132">Combo Box</span></span>|<span data-ttu-id="33ceb-133">확장 축소</span><span class="sxs-lookup"><span data-stu-id="33ceb-133">Expand Collapse</span></span>|<span data-ttu-id="33ceb-134">선택, 값</span><span class="sxs-lookup"><span data-stu-id="33ceb-134">Selection, Value</span></span>|<span data-ttu-id="33ceb-135">Scroll</span><span class="sxs-lookup"><span data-stu-id="33ceb-135">Scroll</span></span>|  
+|<span data-ttu-id="33ceb-136">Data Grid</span><span class="sxs-lookup"><span data-stu-id="33ceb-136">Data Grid</span></span>|<span data-ttu-id="33ceb-137">표</span><span class="sxs-lookup"><span data-stu-id="33ceb-137">Grid</span></span>|<span data-ttu-id="33ceb-138">Scroll, Selection, Table</span><span class="sxs-lookup"><span data-stu-id="33ceb-138">Scroll, Selection, Table</span></span>|<span data-ttu-id="33ceb-139">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-139">None</span></span>|  
+|<span data-ttu-id="33ceb-140">Data Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-140">Data Item</span></span>|<span data-ttu-id="33ceb-141">Selection Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-141">Selection Item</span></span>|<span data-ttu-id="33ceb-142">Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value</span><span class="sxs-lookup"><span data-stu-id="33ceb-142">Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value</span></span>|<span data-ttu-id="33ceb-143">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-143">None</span></span>|  
+|<span data-ttu-id="33ceb-144">문서</span><span class="sxs-lookup"><span data-stu-id="33ceb-144">Document</span></span>|<span data-ttu-id="33ceb-145">텍스트</span><span class="sxs-lookup"><span data-stu-id="33ceb-145">Text</span></span>|<span data-ttu-id="33ceb-146">Scroll, Value</span><span class="sxs-lookup"><span data-stu-id="33ceb-146">Scroll, Value</span></span>|<span data-ttu-id="33ceb-147">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-147">None</span></span>|  
+|<span data-ttu-id="33ceb-148">편집</span><span class="sxs-lookup"><span data-stu-id="33ceb-148">Edit</span></span>|<span data-ttu-id="33ceb-149">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-149">None</span></span>|<span data-ttu-id="33ceb-150">Text, Range Value, Value</span><span class="sxs-lookup"><span data-stu-id="33ceb-150">Text, Range Value, Value</span></span>|<span data-ttu-id="33ceb-151">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-151">None</span></span>|  
+|<span data-ttu-id="33ceb-152">그룹화</span><span class="sxs-lookup"><span data-stu-id="33ceb-152">Group</span></span>|<span data-ttu-id="33ceb-153">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-153">None</span></span>|<span data-ttu-id="33ceb-154">확장 축소</span><span class="sxs-lookup"><span data-stu-id="33ceb-154">Expand Collapse</span></span>|<span data-ttu-id="33ceb-155">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-155">None</span></span>|  
+|<span data-ttu-id="33ceb-156">머리글</span><span class="sxs-lookup"><span data-stu-id="33ceb-156">Header</span></span>|<span data-ttu-id="33ceb-157">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-157">None</span></span>|<span data-ttu-id="33ceb-158">변형</span><span class="sxs-lookup"><span data-stu-id="33ceb-158">Transform</span></span>|<span data-ttu-id="33ceb-159">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-159">None</span></span>|  
+|<span data-ttu-id="33ceb-160">Header Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-160">Header Item</span></span>|<span data-ttu-id="33ceb-161">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-161">None</span></span>|<span data-ttu-id="33ceb-162">Transform, Invoke</span><span class="sxs-lookup"><span data-stu-id="33ceb-162">Transform, Invoke</span></span>|<span data-ttu-id="33ceb-163">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-163">None</span></span>|  
+|<span data-ttu-id="33ceb-164">하이퍼링크</span><span class="sxs-lookup"><span data-stu-id="33ceb-164">Hyperlink</span></span>|<span data-ttu-id="33ceb-165">호출</span><span class="sxs-lookup"><span data-stu-id="33ceb-165">Invoke</span></span>|<span data-ttu-id="33ceb-166">값</span><span class="sxs-lookup"><span data-stu-id="33ceb-166">Value</span></span>|<span data-ttu-id="33ceb-167">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-167">None</span></span>|  
+|<span data-ttu-id="33ceb-168">이미지</span><span class="sxs-lookup"><span data-stu-id="33ceb-168">Image</span></span>|<span data-ttu-id="33ceb-169">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-169">None</span></span>|<span data-ttu-id="33ceb-170">Grid Item, Table Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-170">Grid Item, Table Item</span></span>|<span data-ttu-id="33ceb-171">Invoke, Selection Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-171">Invoke, Selection Item</span></span>|  
+|<span data-ttu-id="33ceb-172">목록</span><span class="sxs-lookup"><span data-stu-id="33ceb-172">List</span></span>|<span data-ttu-id="33ceb-173">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-173">None</span></span>|<span data-ttu-id="33ceb-174">Grid, Multiple View, Scroll, Selection</span><span class="sxs-lookup"><span data-stu-id="33ceb-174">Grid, Multiple View, Scroll, Selection</span></span>|<span data-ttu-id="33ceb-175">표</span><span class="sxs-lookup"><span data-stu-id="33ceb-175">Table</span></span>|  
+|<span data-ttu-id="33ceb-176">List Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-176">List Item</span></span>|<span data-ttu-id="33ceb-177">Selection Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-177">Selection Item</span></span>|<span data-ttu-id="33ceb-178">Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value</span><span class="sxs-lookup"><span data-stu-id="33ceb-178">Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value</span></span>|<span data-ttu-id="33ceb-179">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-179">None</span></span>|  
+|<span data-ttu-id="33ceb-180">메뉴</span><span class="sxs-lookup"><span data-stu-id="33ceb-180">Menu</span></span>|<span data-ttu-id="33ceb-181">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-181">None</span></span>|<span data-ttu-id="33ceb-182">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-182">None</span></span>|<span data-ttu-id="33ceb-183">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-183">None</span></span>|  
+|<span data-ttu-id="33ceb-184">메뉴 모음</span><span class="sxs-lookup"><span data-stu-id="33ceb-184">Menu Bar</span></span>|<span data-ttu-id="33ceb-185">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-185">None</span></span>|<span data-ttu-id="33ceb-186">Expand Collapse, Dock, Transform</span><span class="sxs-lookup"><span data-stu-id="33ceb-186">Expand Collapse, Dock, Transform</span></span>|<span data-ttu-id="33ceb-187">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-187">None</span></span>|  
+|<span data-ttu-id="33ceb-188">메뉴 항목</span><span class="sxs-lookup"><span data-stu-id="33ceb-188">Menu Item</span></span>|<span data-ttu-id="33ceb-189">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-189">None</span></span>|<span data-ttu-id="33ceb-190">Expand Collapse, Invoke, Selection Item, Toggle</span><span class="sxs-lookup"><span data-stu-id="33ceb-190">Expand Collapse, Invoke, Selection Item, Toggle</span></span>|<span data-ttu-id="33ceb-191">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-191">None</span></span>|  
+|<span data-ttu-id="33ceb-192">창</span><span class="sxs-lookup"><span data-stu-id="33ceb-192">Pane</span></span>|<span data-ttu-id="33ceb-193">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-193">None</span></span>|<span data-ttu-id="33ceb-194">Dock.</span><span class="sxs-lookup"><span data-stu-id="33ceb-194">Dock.</span></span> <span data-ttu-id="33ceb-195">Scroll, Transform</span><span class="sxs-lookup"><span data-stu-id="33ceb-195">Scroll, Transform</span></span>|<span data-ttu-id="33ceb-196">창</span><span class="sxs-lookup"><span data-stu-id="33ceb-196">Window</span></span>|  
+|<span data-ttu-id="33ceb-197">Progress Bar</span><span class="sxs-lookup"><span data-stu-id="33ceb-197">Progress Bar</span></span>|<span data-ttu-id="33ceb-198">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-198">None</span></span>|<span data-ttu-id="33ceb-199">Range Value, Value</span><span class="sxs-lookup"><span data-stu-id="33ceb-199">Range Value, Value</span></span>|<span data-ttu-id="33ceb-200">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-200">None</span></span>|  
+|<span data-ttu-id="33ceb-201">Radio Button</span><span class="sxs-lookup"><span data-stu-id="33ceb-201">Radio Button</span></span>|<span data-ttu-id="33ceb-202">Selection Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-202">Selection Item</span></span>|<span data-ttu-id="33ceb-203">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-203">None</span></span>|<span data-ttu-id="33ceb-204">설정/해제</span><span class="sxs-lookup"><span data-stu-id="33ceb-204">Toggle</span></span>|  
+|<span data-ttu-id="33ceb-205">Scroll Bar</span><span class="sxs-lookup"><span data-stu-id="33ceb-205">Scroll Bar</span></span>|<span data-ttu-id="33ceb-206">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-206">None</span></span>|<span data-ttu-id="33ceb-207">Range Value</span><span class="sxs-lookup"><span data-stu-id="33ceb-207">Range Value</span></span>|<span data-ttu-id="33ceb-208">Scroll</span><span class="sxs-lookup"><span data-stu-id="33ceb-208">Scroll</span></span>|  
+|<span data-ttu-id="33ceb-209">구분 기호</span><span class="sxs-lookup"><span data-stu-id="33ceb-209">Separator</span></span>|<span data-ttu-id="33ceb-210">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-210">None</span></span>|<span data-ttu-id="33ceb-211">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-211">None</span></span>|<span data-ttu-id="33ceb-212">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-212">None</span></span>|  
+|<span data-ttu-id="33ceb-213">슬라이더</span><span class="sxs-lookup"><span data-stu-id="33ceb-213">Slider</span></span>|<span data-ttu-id="33ceb-214">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-214">None</span></span>|<span data-ttu-id="33ceb-215">Range Value, Selection, Value</span><span class="sxs-lookup"><span data-stu-id="33ceb-215">Range Value, Selection, Value</span></span>|<span data-ttu-id="33ceb-216">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-216">None</span></span>|  
+|<span data-ttu-id="33ceb-217">Spinner</span><span class="sxs-lookup"><span data-stu-id="33ceb-217">Spinner</span></span>|<span data-ttu-id="33ceb-218">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-218">None</span></span>|<span data-ttu-id="33ceb-219">Range Value, Selection, Value</span><span class="sxs-lookup"><span data-stu-id="33ceb-219">Range Value, Selection, Value</span></span>|<span data-ttu-id="33ceb-220">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-220">None</span></span>|  
+|<span data-ttu-id="33ceb-221">분할 단추</span><span class="sxs-lookup"><span data-stu-id="33ceb-221">Split Button</span></span>|<span data-ttu-id="33ceb-222">Invoke, Expand Collapse</span><span class="sxs-lookup"><span data-stu-id="33ceb-222">Invoke, Expand Collapse</span></span>|<span data-ttu-id="33ceb-223">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-223">None</span></span>|<span data-ttu-id="33ceb-224">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-224">None</span></span>|  
+|<span data-ttu-id="33ceb-225">상태 표시줄</span><span class="sxs-lookup"><span data-stu-id="33ceb-225">Status Bar</span></span>|<span data-ttu-id="33ceb-226">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-226">None</span></span>|<span data-ttu-id="33ceb-227">표</span><span class="sxs-lookup"><span data-stu-id="33ceb-227">Grid</span></span>|<span data-ttu-id="33ceb-228">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-228">None</span></span>|  
+|<span data-ttu-id="33ceb-229">탭</span><span class="sxs-lookup"><span data-stu-id="33ceb-229">Tab</span></span>|<span data-ttu-id="33ceb-230">선택</span><span class="sxs-lookup"><span data-stu-id="33ceb-230">Selection</span></span>|<span data-ttu-id="33ceb-231">Scroll</span><span class="sxs-lookup"><span data-stu-id="33ceb-231">Scroll</span></span>|<span data-ttu-id="33ceb-232">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-232">None</span></span>|  
+|<span data-ttu-id="33ceb-233">Tab Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-233">Tab Item</span></span>|<span data-ttu-id="33ceb-234">Selection Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-234">Selection Item</span></span>|<span data-ttu-id="33ceb-235">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-235">None</span></span>|<span data-ttu-id="33ceb-236">호출</span><span class="sxs-lookup"><span data-stu-id="33ceb-236">Invoke</span></span>|  
+|<span data-ttu-id="33ceb-237">표</span><span class="sxs-lookup"><span data-stu-id="33ceb-237">Table</span></span>|<span data-ttu-id="33ceb-238">Grid, Grid Item, Table, Table Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-238">Grid, Grid Item, Table, Table Item</span></span>|<span data-ttu-id="33ceb-239">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-239">None</span></span>|<span data-ttu-id="33ceb-240">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-240">None</span></span>|  
+|<span data-ttu-id="33ceb-241">텍스트</span><span class="sxs-lookup"><span data-stu-id="33ceb-241">Text</span></span>|<span data-ttu-id="33ceb-242">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-242">None</span></span>|<span data-ttu-id="33ceb-243">Grid Item, Table Item, Text</span><span class="sxs-lookup"><span data-stu-id="33ceb-243">Grid Item, Table Item, Text</span></span>|<span data-ttu-id="33ceb-244">값</span><span class="sxs-lookup"><span data-stu-id="33ceb-244">Value</span></span>|  
+|<span data-ttu-id="33ceb-245">Thumb</span><span class="sxs-lookup"><span data-stu-id="33ceb-245">Thumb</span></span>|<span data-ttu-id="33ceb-246">변형</span><span class="sxs-lookup"><span data-stu-id="33ceb-246">Transform</span></span>|<span data-ttu-id="33ceb-247">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-247">None</span></span>|<span data-ttu-id="33ceb-248">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-248">None</span></span>|  
+|<span data-ttu-id="33ceb-249">제목 표시줄</span><span class="sxs-lookup"><span data-stu-id="33ceb-249">Title Bar</span></span>|<span data-ttu-id="33ceb-250">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-250">None</span></span>|<span data-ttu-id="33ceb-251">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-251">None</span></span>|<span data-ttu-id="33ceb-252">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-252">None</span></span>|  
+|<span data-ttu-id="33ceb-253">Tool Bar</span><span class="sxs-lookup"><span data-stu-id="33ceb-253">Tool Bar</span></span>|<span data-ttu-id="33ceb-254">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-254">None</span></span>|<span data-ttu-id="33ceb-255">Dock, Expand Collapse, Transform</span><span class="sxs-lookup"><span data-stu-id="33ceb-255">Dock, Expand Collapse, Transform</span></span>|<span data-ttu-id="33ceb-256">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-256">None</span></span>|  
+|<span data-ttu-id="33ceb-257">Tool Tip</span><span class="sxs-lookup"><span data-stu-id="33ceb-257">Tool Tip</span></span>|<span data-ttu-id="33ceb-258">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-258">None</span></span>|<span data-ttu-id="33ceb-259">Text, Window</span><span class="sxs-lookup"><span data-stu-id="33ceb-259">Text, Window</span></span>|<span data-ttu-id="33ceb-260">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-260">None</span></span>|  
+|<span data-ttu-id="33ceb-261">Tree</span><span class="sxs-lookup"><span data-stu-id="33ceb-261">Tree</span></span>|<span data-ttu-id="33ceb-262">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-262">None</span></span>|<span data-ttu-id="33ceb-263">Scroll, Selection</span><span class="sxs-lookup"><span data-stu-id="33ceb-263">Scroll, Selection</span></span>|<span data-ttu-id="33ceb-264">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-264">None</span></span>|  
+|<span data-ttu-id="33ceb-265">Tree Item</span><span class="sxs-lookup"><span data-stu-id="33ceb-265">Tree Item</span></span>|<span data-ttu-id="33ceb-266">확장 축소</span><span class="sxs-lookup"><span data-stu-id="33ceb-266">Expand Collapse</span></span>|<span data-ttu-id="33ceb-267">Invoke, Scroll Item, Selection Item, Toggle</span><span class="sxs-lookup"><span data-stu-id="33ceb-267">Invoke, Scroll Item, Selection Item, Toggle</span></span>|<span data-ttu-id="33ceb-268">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-268">None</span></span>|  
+|<span data-ttu-id="33ceb-269">창</span><span class="sxs-lookup"><span data-stu-id="33ceb-269">Window</span></span>|<span data-ttu-id="33ceb-270">Transform, Window</span><span class="sxs-lookup"><span data-stu-id="33ceb-270">Transform, Window</span></span>|<span data-ttu-id="33ceb-271">도킹</span><span class="sxs-lookup"><span data-stu-id="33ceb-271">Dock</span></span>|<span data-ttu-id="33ceb-272">없음</span><span class="sxs-lookup"><span data-stu-id="33ceb-272">None</span></span>|  
   
 > [!NOTE]
->  컨트롤 형식에 지원되는 컨트롤 패턴이 없지만 조건부로 지원되는 하나 이상의 컨트롤 패턴이 있는 경우, 조건부 컨트롤 패턴 중 하나는 항상 지원됩니다.  
+>  <span data-ttu-id="33ceb-273">컨트롤 형식에 지원되는 컨트롤 패턴이 없지만 조건부로 지원되는 하나 이상의 컨트롤 패턴이 있는 경우, 조건부 컨트롤 패턴 중 하나는 항상 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="33ceb-273">If a control type has no supported control patterns listed but has one or more conditionally-supported control patterns, then one of those conditional control patterns will be supported at all times.</span></span>  
   
-## 참고 항목  
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="33ceb-274">참고 항목</span><span class="sxs-lookup"><span data-stu-id="33ceb-274">See Also</span></span>  
+ [<span data-ttu-id="33ceb-275">UI 자동화 개요</span><span class="sxs-lookup"><span data-stu-id="33ceb-275">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

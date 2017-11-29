@@ -1,49 +1,50 @@
 ---
-title: "그라데이션 브러시를 사용하여 도형 채우기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "브러시, 그라데이션 브러시"
-  - "예제[Windows Forms], 그라데이션 브러시"
-  - "그라데이션 브러시"
+title: "그라데이션 브러시를 사용하여 도형 채우기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- brushes [Windows Forms], gradient brushes
+- gradient brushes
+- examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 그라데이션 브러시를 사용하여 도형 채우기
-그라데이션 브러시를 사용하면 점진적으로 변하는 색으로 도형을 채울 수 있습니다.  예를 들어, 가로 그라데이션을 사용하면 도형의 왼쪽 가장자리에서 오른쪽 가장자리로 가면서 점차 변하는 색으로 도형을 채울 수 있습니다.  왼쪽 가장자리는 검정\(빨강, 녹색, 파랑 구성 요소가 각각 0, 0, 0\)이고 오른쪽 가장자리는 빨강\(255, 0, 0\)인 사각형의 경우,  사각형의 너비가 256픽셀이면 각 픽셀의 빨강 구성 요소는 왼쪽에 있는 픽셀의 빨강 구성 요소보다 1씩 증가합니다.  따라서 행에서 가장 왼쪽 픽셀의 색 구성 요소는 \(0, 0, 0\)이고, 두 번째 픽셀은 \(1, 0, 0\), 세 번째 픽셀은 \(2, 0, 0\)이 되는 방식으로 빨강 구성 요소의 값이 1씩 증가하여 가장 오른쪽 픽셀의 색 구성 요소는 \(255, 0, 0\)이 됩니다.  이러한 방식으로 색 값을 삽입하여 색 그라데이션을 구성합니다.  
+# <a name="using-a-gradient-brush-to-fill-shapes"></a><span data-ttu-id="c9f4f-102">그라데이션 브러시를 사용하여 도형 채우기</span><span class="sxs-lookup"><span data-stu-id="c9f4f-102">Using a Gradient Brush to Fill Shapes</span></span>
+<span data-ttu-id="c9f4f-103">셰이프를 채우는 효과와 그라데이션 브러시를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-103">You can use a gradient brush to fill a shape with a gradually changing color.</span></span> <span data-ttu-id="c9f4f-104">예를 들어는 가로 그라데이션을 셰이프를 채우는 모양의 왼쪽된 가장자리에서 맨 오른쪽으로 이동 하면 점진적으로 변경 하는 색으로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-104">For example, you can use a horizontal gradient to fill a shape with color that changes gradually as you move from the left edge of the shape to the right edge.</span></span> <span data-ttu-id="c9f4f-105">검정 왼쪽된 가장자리에 사각형을 가정해 보세요 (0, 0, 0 빨강, 녹색 및 파랑 구성 요소에 의해 표현 됨)는 오른쪽 가장자리 빨강 (255, 0, 0)는 및입니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-105">Imagine a rectangle with a left edge that is black (represented by red, green, and blue components 0, 0, 0) and a right edge that is red (represented by 255, 0, 0).</span></span> <span data-ttu-id="c9f4f-106">사각형이 256 픽셀 너비 경우 각된 픽셀의 빨간색 구성 요소는 왼쪽에 픽셀의 빨간색 구성 요소 보다 1 큽니다 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-106">If the rectangle is 256 pixels wide, the red component of a given pixel will be one greater than the red component of the pixel to its left.</span></span> <span data-ttu-id="c9f4f-107">행에서 가장 왼쪽에 있는 픽셀의 색 구성 요소 (0, 0, 0), 두 번째 픽셀은 (1, 0, 0), 세 번째 픽셀에는 (2, 0, 0)은, 및 기타 등등을 오른쪽에 있는 픽셀의 색 구성 요소 (255, 0, 0)에 도달할 때까지 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-107">The leftmost pixel in a row has color components (0, 0, 0), the second pixel has (1, 0, 0), the third pixel has (2, 0, 0), and so on, until you get to the rightmost pixel, which has color components (255, 0, 0).</span></span> <span data-ttu-id="c9f4f-108">이러한 방식된으로 색 값 색 그라데이션의 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-108">These interpolated color values make up the color gradient.</span></span>  
   
- 선형 그라데이션에서는 가로 방향, 세로 방향 또는 지정한 사선 방향을 따라 색이 점진적으로 변합니다.  경로 그라데이션에서는 경로의 내부 및 경계 주변에서 따라 점진적으로 색이 변합니다.  경로 그라데이션을 사용자 지정하여 다양한 효과를 얻을 수 있습니다.  
+ <span data-ttu-id="c9f4f-109">가로, 세로 이동 하거나 지정된 된 기울어진된 줄으로 병렬 선형 그라데이션 색을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-109">A linear gradient changes color as you move horizontally, vertically, or parallel to a specified slanted line.</span></span> <span data-ttu-id="c9f4f-110">내부 및 경로의 경계에 대 한 이동 하면 경로 그라데이션 색을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-110">A path gradient changes color as you move about the interior and boundary of a path.</span></span> <span data-ttu-id="c9f4f-111">경로 그라데이션 다양 한 효과 달성 하기 위해 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-111">You can customize path gradients to achieve a wide variety of effects.</span></span>  
   
- 아래 그림에 선형 그라데이션 브러시로 채운 사각형과 경로 그라데이션 브러시로 채운 타원이 나와 있습니다.  
+ <span data-ttu-id="c9f4f-112">다음 그림에서는 선형 그라데이션 브러시 채워진 사각형 및 타원 경로 그라데이션 브러시 채워진 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-112">The following illustration shows a rectangle filled with a linear gradient brush and an ellipse filled with a path gradient brush.</span></span>  
   
- ![그라데이션](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
+ <span data-ttu-id="c9f4f-113">![그라데이션](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")</span><span class="sxs-lookup"><span data-stu-id="c9f4f-113">![Gradient](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")</span></span>  
   
-## 단원 내용  
- [방법: 선형 그라데이션 만들기](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush> 클래스를 사용하여 선형 그라데이션을 만드는 방법을 보여 줍니다.  
+## <a name="in-this-section"></a><span data-ttu-id="c9f4f-114">단원 내용</span><span class="sxs-lookup"><span data-stu-id="c9f4f-114">In This Section</span></span>  
+ [<span data-ttu-id="c9f4f-115">방법: 선형 그라데이션 만들기</span><span class="sxs-lookup"><span data-stu-id="c9f4f-115">How to: Create a Linear Gradient</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
+ <span data-ttu-id="c9f4f-116">사용 하 여 선형 그라데이션 만드는 방법을 보여 줍니다.는 <xref:System.Drawing.Drawing2D.LinearGradientBrush> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-116">Shows how to create a linear gradient using the <xref:System.Drawing.Drawing2D.LinearGradientBrush> class.</span></span>  
   
- [방법: 경로 그라데이션 만들기](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
- <xref:System.Drawing.Drawing2D.PathGradientBrush> 클래스를 사용하여 경로 그라데이션을 만드는 방법을 보여 줍니다.  
+ [<span data-ttu-id="c9f4f-117">방법: 경로 그라데이션 만들기</span><span class="sxs-lookup"><span data-stu-id="c9f4f-117">How to: Create a Path Gradient</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
+ <span data-ttu-id="c9f4f-118">사용 하는 경로 그라데이션를 만드는 방법에 설명 된 <xref:System.Drawing.Drawing2D.PathGradientBrush> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-118">Describes how to create a path gradient using the <xref:System.Drawing.Drawing2D.PathGradientBrush> class.</span></span>  
   
- [방법: 그라데이션에 감마 보정 적용](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
- 그라데이션 브러시로 감마 보정을 사용하는 방법을 보여 줍니다.  
+ [<span data-ttu-id="c9f4f-119">방법: 그라데이션에 감마 보정 적용</span><span class="sxs-lookup"><span data-stu-id="c9f4f-119">How to: Apply Gamma Correction to a Gradient</span></span>](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
+ <span data-ttu-id="c9f4f-120">그라데이션 브러시로 감마 보정을 사용 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-120">Explains how to use gamma correction with a gradient brush.</span></span>  
   
-## 참조  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=fullName>  
- 이 클래스를 설명하며 이 클래스의 모든 멤버에 대한 링크를 포함합니다.  
+## <a name="reference"></a><span data-ttu-id="c9f4f-121">참조</span><span class="sxs-lookup"><span data-stu-id="c9f4f-121">Reference</span></span>  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
+ <span data-ttu-id="c9f4f-122">이 클래스에 대 한 설명을 포함 하 고 모든 해당 멤버의 링크를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-122">Contains a description of this class and has links to all of its members.</span></span>  
   
- <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=fullName>  
- 이 클래스를 설명하며 이 클래스의 모든 멤버에 대한 링크를 포함합니다.
+ <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=nameWithType>  
+ <span data-ttu-id="c9f4f-123">이 클래스에 대 한 설명을 포함 하 고 모든 해당 멤버의 링크를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9f4f-123">Contains a description of this class and has links to all of its members.</span></span>

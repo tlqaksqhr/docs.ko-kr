@@ -1,87 +1,89 @@
 ---
-title: "&lt;bypassTrustedAppStrongNames&gt; 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypassTrustedAppStrongNames> 요소"
-  - "bypassTrustedAppStrongNames 요소"
-  - "강력한 이름 건너뛰기 기능"
-  - "강력한 이름의 어셈블리, 신뢰할 수 있는 응용 프로그램 도메인으로 로드"
+title: "&lt;bypassTrustedAppStrongNames&gt; 요소"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strong-name bypass feature
+- bypassTrustedAppStrongNames element
+- strong-named assemblies, loading into trusted application domains
+- <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2b3e1cb839e9e7fd81a5452c0e034c3552b230cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;bypassTrustedAppStrongNames&gt; 요소
-완전 신뢰 <xref:System.AppDomain>에 로드된 완전 신뢰 어셈블리에 대해 강력한 이름 유효성 검사를 건너뛸지 여부를 지정합니다.  
+# <a name="ltbypasstrustedappstrongnamesgt-element"></a><span data-ttu-id="ae80b-102">&lt;bypassTrustedAppStrongNames&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="ae80b-102">&lt;bypassTrustedAppStrongNames&gt; Element</span></span>
+<span data-ttu-id="ae80b-103">완전 신뢰에 로드 되는 완전 신뢰 어셈블리에 강력한 이름 유효성 검사를 무시할 것인지 지정 <xref:System.AppDomain>합니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-103">Specifies whether to bypass the validation of strong names on full-trust assemblies that are loaded into a full-trust <xref:System.AppDomain>.</span></span>  
   
-## 구문  
+ <span data-ttu-id="ae80b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ae80b-104">\<configuration></span></span>  
+<span data-ttu-id="ae80b-105">\<런타임 ></span><span class="sxs-lookup"><span data-stu-id="ae80b-105">\<runtime></span></span>  
+<span data-ttu-id="ae80b-106">\<bypassTrustedAppStrongNames ></span><span class="sxs-lookup"><span data-stu-id="ae80b-106">\<bypassTrustedAppStrongNames></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ae80b-107">구문</span><span class="sxs-lookup"><span data-stu-id="ae80b-107">Syntax</span></span>  
+  
+```xml  
 <bypassTrustedAppStrongNames    
    enabled="true|false"/>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ae80b-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="ae80b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ae80b-109">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="ae80b-110">특성</span><span class="sxs-lookup"><span data-stu-id="ae80b-110">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|`enabled`|필수 특성입니다.<br /><br /> 완전 신뢰 어셈블리에 대해 강력한 이름 유효성 검사를 건너뛰는 기능을 사용할지 여부를 지정합니다.  이 기능을 사용하면 어셈블리를 로드할 때 강력한 이름의 유효성이 검사되지 않습니다.  기본값은 `true`입니다.|  
+|<span data-ttu-id="ae80b-111">특성</span><span class="sxs-lookup"><span data-stu-id="ae80b-111">Attribute</span></span>|<span data-ttu-id="ae80b-112">설명</span><span class="sxs-lookup"><span data-stu-id="ae80b-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="ae80b-113">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="ae80b-114">완전 신뢰 어셈블리에 대 한 강력한 이름 유효성 검사를 건너뛰는 기능을 사용할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-114">Specifies whether the bypass feature that avoids validating strong names for full-trust assemblies is enabled.</span></span> <span data-ttu-id="ae80b-115">이 기능을 사용 하는 경우 강력한 이름은 유효성이 검사 되지 않습니다 정확성에 대 한 어셈블리가 로드 되는 경우.</span><span class="sxs-lookup"><span data-stu-id="ae80b-115">When this feature is enabled, strong names are not validated for correctness when the assembly is loaded.</span></span> <span data-ttu-id="ae80b-116">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-116">The default is `true`.</span></span>|  
   
-## enabled 특성  
+## <a name="enabled-attribute"></a><span data-ttu-id="ae80b-117">enabled 특성</span><span class="sxs-lookup"><span data-stu-id="ae80b-117">enabled Attribute</span></span>  
   
-|값|설명|  
-|-------|--------|  
-|`true`|완전 신뢰 <xref:System.AppDomain>에 어셈블리를 로드할 때 완전 신뢰 어셈블리에 대해 강력한 이름 서명의 유효성이 검사되지 않습니다.  이 값이 기본값입니다.|  
-|`false`|완전 신뢰 <xref:System.AppDomain>에 어셈블리를 로드할 때 완전 신뢰 어셈블리에 대해 강력한 이름 서명의 유효성이 검사됩니다.  강력한 이름 서명이 정확한지 여부만 검사되고 다른 강력한 이름과 일치하는지 여부는 비교되지 않습니다.|  
+|<span data-ttu-id="ae80b-118">값</span><span class="sxs-lookup"><span data-stu-id="ae80b-118">Value</span></span>|<span data-ttu-id="ae80b-119">설명</span><span class="sxs-lookup"><span data-stu-id="ae80b-119">Description</span></span>|  
+|-----------|-----------------|  
+|`true`|<span data-ttu-id="ae80b-120">완전 신뢰 어셈블리에 강력한 이름 서명의 완전 신뢰에는 어셈블리를 로드할 때 유효성이 검사 되지 않습니다 <xref:System.AppDomain>합니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-120">Strong-name signatures on full-trust assemblies are not validated when the assemblies are loaded into a full-trust <xref:System.AppDomain>.</span></span> <span data-ttu-id="ae80b-121">이 값이 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-121">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="ae80b-122">완전 신뢰 어셈블리에 강력한 이름 서명의 유효성을 검사 완전 신뢰에는 어셈블리를 로드할 때 <xref:System.AppDomain>합니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-122">Strong-name signatures on full-trust assemblies are validated when the assemblies are loaded into a full-trust <xref:System.AppDomain>.</span></span> <span data-ttu-id="ae80b-123">강력한 이름 서명은 서명 정확성;에 대 한 검사 일치 하는 다른 강력한 이름에는 비교 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-123">The strong-name signature is checked only for signature correctness; it is not compared to another strong name for a match.</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="ae80b-124">자식 요소</span><span class="sxs-lookup"><span data-stu-id="ae80b-124">Child Elements</span></span>  
+ <span data-ttu-id="ae80b-125">없음</span><span class="sxs-lookup"><span data-stu-id="ae80b-125">None.</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="ae80b-126">부모 요소</span><span class="sxs-lookup"><span data-stu-id="ae80b-126">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`runtime`|어셈블리 바인딩 및 가비지 수집에 대한 정보를 포함합니다.|  
+|<span data-ttu-id="ae80b-127">요소</span><span class="sxs-lookup"><span data-stu-id="ae80b-127">Element</span></span>|<span data-ttu-id="ae80b-128">설명</span><span class="sxs-lookup"><span data-stu-id="ae80b-128">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="ae80b-129">공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-129">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="ae80b-130">어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-130">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 설명  
- 강력한 이름 건너뛰기 기능을 사용하면 완전 신뢰 어셈블리의 강력한 이름 서명을 확인하는 데 따르는 오버헤드가 발생하지 않습니다.  
+## <a name="remarks"></a><span data-ttu-id="ae80b-131">설명</span><span class="sxs-lookup"><span data-stu-id="ae80b-131">Remarks</span></span>  
+ <span data-ttu-id="ae80b-132">강력한 이름 건너뛰기 기능 완전 신뢰 어셈블리의 강력한 이름 서명 확인 하는 오버 헤드를 방지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-132">The strong-name bypass feature avoids the overhead of strong-name signature verification of full-trust assemblies.</span></span>  
   
- 건너뛰기 기능은 강력한 이름으로 서명되었으며 다음과 같은 특징이 있는 모든 어셈블리에 적용됩니다.  
+ <span data-ttu-id="ae80b-133">건너뛰기 기능은 강력한 이름으로 서명되었으며 다음과 같은 특징이 있는 모든 어셈블리에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-133">The bypass feature applies to any assembly that is signed with a strong name and that has the following characteristics:</span></span>  
   
--   <xref:System.Security.Policy.StrongName> 증명 정보 없이 완전 신뢰 가능\(예: `MyComputer` 영역 증명 정보 보유\)  
+-   <span data-ttu-id="ae80b-134">없이 완전 신뢰는 <xref:System.Security.Policy.StrongName> 증명 정보 (예를 들어, `MyComputer` 영역 증명 정보).</span><span class="sxs-lookup"><span data-stu-id="ae80b-134">Fully trusted without the <xref:System.Security.Policy.StrongName> evidence (for example, has `MyComputer` zone evidence).</span></span>  
   
--   완전 신뢰 <xref:System.AppDomain>에 로드  
+-   <span data-ttu-id="ae80b-135">완전히 신뢰할 수 있는 <xref:System.AppDomain>에 로드됨</span><span class="sxs-lookup"><span data-stu-id="ae80b-135">Loaded into a fully trusted <xref:System.AppDomain>.</span></span>  
   
--   해당 <xref:System.AppDomain>의 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성 아래에 있는 위치에서 로드  
+-   <span data-ttu-id="ae80b-136">해당 <xref:System.AppDomain>의 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성 아래에 있는 위치에서 로드됨</span><span class="sxs-lookup"><span data-stu-id="ae80b-136">Loaded from a location under the <xref:System.AppDomainSetup.ApplicationBase%2A> property of that <xref:System.AppDomain>.</span></span>  
   
--   서명이 연기되지 않음  
+-   <span data-ttu-id="ae80b-137">서명이 연기되지 않음</span><span class="sxs-lookup"><span data-stu-id="ae80b-137">Not delay-signed.</span></span>  
   
 > [!NOTE]
->  레지스트리 키를 사용하여 컴퓨터의 모든 응용 프로그램에 대해 건너뛰기 기능을 해제하면 이 구성 파일 설정이 적용되지 않습니다.  자세한 내용은 [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)을 참조하십시오.  
+>  <span data-ttu-id="ae80b-138">건너뛰기 기능은 해제 되었습니다 컴퓨터의 모든 응용 프로그램에 대 한 레지스트리 키를 사용 하 여,이 구성 파일 설정은 효과가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-138">If the bypass feature has been turned off for all applications on the computer by using a registry key, this configuration file setting has no effect.</span></span> <span data-ttu-id="ae80b-139">자세한 내용은 참조 [하는 방법: 강력한 이름 건너뛰기 기능 비활성화](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-139">For more information, see [How to: Disable the Strong-Name Bypass Feature](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).</span></span>  
   
-## 예제  
- 다음 예제에서는 완전 신뢰 어셈블리에 대해 강력한 이름 서명의 유효성을 검사하는 동작을 지정하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="ae80b-140">예제</span><span class="sxs-lookup"><span data-stu-id="ae80b-140">Example</span></span>  
+ <span data-ttu-id="ae80b-141">다음 예제에는 완전 신뢰 어셈블리에 강력한 이름 서명의 유효성을 검사 하는 동작을 지정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ae80b-141">The following example shows how to specify the behavior that validates the strong-name signature on full-trust assemblies.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <bypassTrustedAppStrongNames enabled="false"/>  
@@ -89,7 +91,7 @@ caps.handback.revision: 18
 </configuration>  
 ```  
   
-## 참고 항목  
- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+## <a name="see-also"></a><span data-ttu-id="ae80b-142">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ae80b-142">See Also</span></span>  
+ [<span data-ttu-id="ae80b-143">런타임 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="ae80b-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="ae80b-144">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="ae80b-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="ae80b-145">방법: 강력한 이름 건너뛰기 기능 비활성화</span><span class="sxs-lookup"><span data-stu-id="ae80b-145">How to: Disable the Strong-Name Bypass Feature</span></span>](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

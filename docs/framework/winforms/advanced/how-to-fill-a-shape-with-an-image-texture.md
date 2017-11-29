@@ -1,43 +1,47 @@
 ---
-title: "방법: 이미지 질감으로 도형 채우기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "비트맵[Windows Forms], 질감 사용"
-  - "이미지[Windows Forms], 브러시에 사용"
-  - "도형, 이미지로 채우기"
+title: "방법: 이미지 질감으로 도형 채우기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], using with brushes
+- bitmaps [Windows Forms], using texture
+- shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c20562cade6917a3426fe04861a05c4b6b0bd543
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 이미지 질감으로 도형 채우기
-<xref:System.Drawing.Image> 클래스와 <xref:System.Drawing.TextureBrush> 클래스를 사용하면 닫힌 도형을 질감으로 채울 수 있습니다.  
+# <a name="how-to-fill-a-shape-with-an-image-texture"></a><span data-ttu-id="dfd8b-102">방법: 이미지 질감으로 도형 채우기</span><span class="sxs-lookup"><span data-stu-id="dfd8b-102">How to: Fill a Shape with an Image Texture</span></span>
+<span data-ttu-id="dfd8b-103">사용 하 여 질감으로 닫힌된 셰이프를 채울 수 있습니다는 <xref:System.Drawing.Image> 클래스 및 <xref:System.Drawing.TextureBrush> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-103">You can fill a closed shape with a texture by using the <xref:System.Drawing.Image> class and the <xref:System.Drawing.TextureBrush> class.</span></span>  
   
-## 예제  
- 아래 예제에서는 타원에 이미지를 채웁니다.  이 코드에서는 <xref:System.Drawing.Image> 개체를 만들어 해당 <xref:System.Drawing.Image> 개체의 주소를 <xref:System.Drawing.TextureBrush.%23ctor%2A> 생성자에 인수로 전달합니다.  세 번째 문에서는 이미지의 배율을 조정하고 네 번째 문에서는 배율 조정된 이미지의 복사본을 반복적으로 사용하여 타원을 채웁니다.  
+## <a name="example"></a><span data-ttu-id="dfd8b-104">예제</span><span class="sxs-lookup"><span data-stu-id="dfd8b-104">Example</span></span>  
+ <span data-ttu-id="dfd8b-105">다음 예제에서는 이미지와 함께 타원을 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-105">The following example fills an ellipse with an image.</span></span> <span data-ttu-id="dfd8b-106">코드를 생성 한 <xref:System.Drawing.Image> 개체를 다음의 주소를 전달 <xref:System.Drawing.Image> 개체에 대 한 인수로 <xref:System.Drawing.TextureBrush.%23ctor%2A> 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-106">The code constructs an <xref:System.Drawing.Image> object, and then passes the address of that <xref:System.Drawing.Image> object as an argument to a <xref:System.Drawing.TextureBrush.%23ctor%2A> constructor.</span></span> <span data-ttu-id="dfd8b-107">세 번째 문은 이미지, 크기를 조정 하 고 네 번째 문에서 조정 된 이미지의 반복된 복사본을 사용 하 여 타원을 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-107">The third statement scales the image, and the fourth statement fills the ellipse with repeated copies of the scaled image.</span></span>  
   
- 다음 코드에서 <xref:System.Drawing.TextureBrush.Transform%2A> 속성에는 이미지를 그리기 전에 이미지에 적용되는 변환이 지정되어 있습니다.  원래 이미지의 너비는 640 픽셀이고 높이는 480 픽셀이라고 가정합니다.  변환에서는 가로 및 세로 배율 조정 값을 설정하여 이미지 크기를 75×75로 줄입니다.  
+ <span data-ttu-id="dfd8b-108">다음 코드에서는 <xref:System.Drawing.TextureBrush.Transform%2A> 속성을 그리기 전에 이미지에 적용 하는 변환에 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-108">In the following code, the <xref:System.Drawing.TextureBrush.Transform%2A> property contains the transformation that is applied to the image before it is drawn.</span></span> <span data-ttu-id="dfd8b-109">원본 이미지에는의 640 픽셀 너비와 높이는 480 픽셀을 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-109">Assume that the original image has a width of 640 pixels and a height of 480 pixels.</span></span> <span data-ttu-id="dfd8b-110">이미지를 75 × 75 가로 및 세로 크기 조정 값을 설정 하 여 축소 하는 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-110">The transform shrinks the image to 75×75 by setting the horizontal and vertical scaling values.</span></span>  
   
 > [!NOTE]
->  다음 예제에서는 이미지 크기가 75×75이고 타원 크기는 150×250입니다.  채울 타원보다 이미지 크기가 작기 때문에 이미지가 타원에서 바둑판식으로 배열됩니다.  바둑판식으로 채울 때는 도형의 경계 부분에 이를 때까지 이미지가 가로 및 세로로 반복하여 배열됩니다.  바둑판식 배열에 대한 자세한 내용은 [방법: 도형에 이미지를 바둑판식으로 배열](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)을 참조하십시오.  
+>  <span data-ttu-id="dfd8b-111">다음 예제에서는 이미지 크기 × 75, 75 이며 타원 크기는 150 × 250 합니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-111">In the following example, the image size is 75×75, and the ellipse size is 150×250.</span></span> <span data-ttu-id="dfd8b-112">채울 타원 보다 작은 이미지 이므로 타원 이미지와 바둑판식으로 배열 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-112">Because the image is smaller than the ellipse it is filling, the ellipse is tiled with the image.</span></span> <span data-ttu-id="dfd8b-113">이미지 가로 및 세로로 도형의 경계까지 반복 되도록 의미를 바둑판식으로 배열에 도달 했습니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-113">Tiling means that the image is repeated horizontally and vertically until the boundary of the shape is reached.</span></span> <span data-ttu-id="dfd8b-114">바둑판식 배열에 대 한 자세한 내용은 참조 [하는 방법: 도형에 이미지를 바둑판식으로 배열](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-114">For more information about tiling, see [How to: Tile a Shape with an Image](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md).</span></span>  
   
  [!code-csharp[System.Drawing.UsingABrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.UsingABrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="dfd8b-115">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="dfd8b-115">Compiling the Code</span></span>  
+ <span data-ttu-id="dfd8b-116">앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="dfd8b-116">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## 참고 항목  
- [브러시를 사용하여 도형 채우기](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="dfd8b-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dfd8b-117">See Also</span></span>  
+ [<span data-ttu-id="dfd8b-118">브러시를 사용하여 도형 채우기</span><span class="sxs-lookup"><span data-stu-id="dfd8b-118">Using a Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

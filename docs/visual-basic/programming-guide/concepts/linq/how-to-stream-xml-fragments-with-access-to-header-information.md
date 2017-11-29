@@ -1,43 +1,34 @@
 ---
-title: "방법: 헤더 정보 (Visual Basic)에 액세스할 수 있는 XML 조각 스트림 | Microsoft 문서"
+title: "방법: 헤더 정보 (Visual Basic)에 액세스할 수 있는 XML 조각 스트리밍"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>방법: 헤더 정보 (Visual Basic)에 액세스할 수 있는 XML 조각 스트리밍
-예상할 수 없는 큰 크기의 XML 파일을 읽고 응용 프로그램의 메모리 사용 공간이 예상 가능하도록 응용 프로그램을 작성해야 하는 경우가 있습니다. XML 트리를 큰 XML 파일로 채우려는 경우 파일 크기에 비례하여 메모리가 사용되므로 메모리 사용량이 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a><span data-ttu-id="1f47d-102">방법: 헤더 정보 (Visual Basic)에 액세스할 수 있는 XML 조각 스트리밍</span><span class="sxs-lookup"><span data-stu-id="1f47d-102">How to: Stream XML Fragments with Access to Header Information (Visual Basic)</span></span>
+<span data-ttu-id="1f47d-103">예상할 수 없는 큰 크기의 XML 파일을 읽고 응용 프로그램의 메모리 사용 공간이 예상 가능하도록 응용 프로그램을 작성해야 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-103">Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="1f47d-104">XML 트리를 큰 XML 파일로 채우려는 경우 파일 크기에 비례하여 메모리가 사용되므로 메모리 사용량이 지나치게 증가하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-104">If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive.</span></span> <span data-ttu-id="1f47d-105">따라서 스트리밍 기법을 대신 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-105">Therefore, you should use a streaming technique instead.</span></span>  
   
- <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> 를 사용 하 여 응용 프로그램을 작성 하는 한 가지 방법은 그러나 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]를 사용하여 XML 트리를 쿼리할 수도 있습니다. 이 경우에는 사용자 지정 축 메서드를 직접 작성할 수 있습니다. 자세한 내용은 참조 [하는 방법: LINQ to XML 축 메서드 (Visual Basic) 작성](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)합니다.  
+ <span data-ttu-id="1f47d-106">한 가지 방법은 <xref:System.Xml.XmlReader>를 사용하여 응용 프로그램을 작성하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-106">One option is to write your application using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="1f47d-107">그러나 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]를 사용하여 XML 트리를 쿼리할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-107">However, you might want to use [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to query the XML tree.</span></span> <span data-ttu-id="1f47d-108">이 경우에는 사용자 지정 축 메서드를 직접 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-108">If this is the case, you can write your own custom axis method.</span></span> <span data-ttu-id="1f47d-109">자세한 내용은 참조 [하는 방법: LINQ to XML 축 메서드 (Visual Basic) 작성](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-109">For more information, see [How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).</span></span>  
   
- 사용 하는 작은 메서드를 작성 자신의 축 메서드를 작성 하는 <xref:System.Xml.XmlReader>관심이 있는 노드 중 하나에 도달할 때까지 노드를 읽을 수 있습니다.</xref:System.Xml.XmlReader> 메서드를 호출 <xref:System.Xml.Linq.XNode.ReadFrom%2A>에서 읽는 <xref:System.Xml.XmlReader>XML 조각을 인스턴스화하 및.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> 그런 다음 사용자 지정 축 메서드에 대한 LINQ 쿼리를 작성할 수 있습니다.  
+ <span data-ttu-id="1f47d-110">축 메서드를 직접 작성하려면 <xref:System.Xml.XmlReader>를 사용하여 관심이 있는 노드 중 하나에 도달할 때까지 노드를 읽는 작은 메서드를 작성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-110">To write your own axis method, you write a small method that uses the <xref:System.Xml.XmlReader> to read nodes until it reaches one of the nodes in which you are interested.</span></span> <span data-ttu-id="1f47d-111">이 메서드는 <xref:System.Xml.Linq.XNode.ReadFrom%2A>에서 읽고 XML 조각을 인스턴스화하는 <xref:System.Xml.XmlReader>을 호출한 후</span><span class="sxs-lookup"><span data-stu-id="1f47d-111">The method then calls <xref:System.Xml.Linq.XNode.ReadFrom%2A>, which reads from the <xref:System.Xml.XmlReader> and instantiates an XML fragment.</span></span> <span data-ttu-id="1f47d-112">그런 다음 사용자 지정 축 메서드에 대한 LINQ 쿼리를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-112">You can then write LINQ queries on your custom axis method.</span></span>  
   
- 스트리밍 기법은 소스 문서를 한 번만 처리해야 하고 문서 순서의 요소를 처리할 수 있는 경우에 가장 효과적으로 적용됩니다. 특정 표준 쿼리 연산자와 같은 <xref:System.Linq.Enumerable.OrderBy%2A>, 자신의 소스를 반복, 모든 데이터를 수집, 정렬 및 다음 시퀀스의 첫 번째 항목을 최종적으로 생성 합니다.</xref:System.Linq.Enumerable.OrderBy%2A> 첫 번째 항목을 생성하기 전에 소스를 유형화하는 쿼리 연산자를 사용하는 경우 작은 메모리 사용 공간이 유지되지 않습니다.  
+ <span data-ttu-id="1f47d-113">스트리밍 기법은 소스 문서를 한 번만 처리해야 하고 문서 순서의 요소를 처리할 수 있는 경우에 가장 효과적으로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-113">Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order.</span></span> <span data-ttu-id="1f47d-114"><xref:System.Linq.Enumerable.OrderBy%2A>와 같은 특정 표준 쿼리 연산자는 자신의 소스를 반복하고 모든 데이터를 수집하여 정렬한 다음 시퀀스의 첫 번째 항목을 최종적으로 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-114">Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence.</span></span> <span data-ttu-id="1f47d-115">첫 번째 항목을 생성하기 전에 소스를 유형화하는 쿼리 연산자를 사용하는 경우 작은 메모리 사용 공간이 유지되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-115">Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint.</span></span>  
   
-## <a name="example"></a>예제  
- 좀 더 흥미로운 문제가 발생하는 경우도 있습니다. 다음 XML 문서에서 사용자 지정 축 메서드의 소비자는 각 항목을 소유하는 고객의 이름도 알아야 합니다.  
+## <a name="example"></a><span data-ttu-id="1f47d-116">예제</span><span class="sxs-lookup"><span data-stu-id="1f47d-116">Example</span></span>  
+ <span data-ttu-id="1f47d-117">좀 더 흥미로운 문제가 발생하는 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-117">Sometimes the problem gets just a little more interesting.</span></span> <span data-ttu-id="1f47d-118">다음 XML 문서에서 사용자 지정 축 메서드의 소비자는 각 항목을 소유하는 고객의 이름도 알아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-118">In the following XML document, the consumer of your custom axis method also has to know the name of the customer that each item belongs to.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -84,11 +75,11 @@ ms.lasthandoff: 03/13/2017
 </Root>  
 ```  
   
- 이 예제에서 사용하는 방법은 이 헤더 정보를 확인하고 저장한 다음 헤더 정보와 열거하고 있는 세부 정보를 모두 포함하는 작은 XML 트리를 빌드하는 것입니다. 축 메서드는 이 새로운 작은 XML 트리를 생성합니다. 이 경우 쿼리는 세부 정보뿐만 아니라 헤더 정보에도 액세스할 수 있습니다.  
+ <span data-ttu-id="1f47d-119">이 예제에서 사용하는 방법은 이 헤더 정보를 확인하고 저장한 다음 헤더 정보와 열거하고 있는 세부 정보를 모두 포함하는 작은 XML 트리를 빌드하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-119">The approach that this example takes is to also watch for this header information, save the header information, and then build a small XML tree that contains both the header information and the detail that you are enumerating.</span></span> <span data-ttu-id="1f47d-120">축 메서드는 이 새로운 작은 XML 트리를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-120">The axis method then yields this new, small XML tree.</span></span> <span data-ttu-id="1f47d-121">이 경우 쿼리는 세부 정보뿐만 아니라 헤더 정보에도 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-121">The query then has access to the header information as well as the detail information.</span></span>  
   
- 이 방법에서는 작은 메모리 공간이 사용됩니다. 각 세부 XML 조각이 생성될 때 이전 조각에 대한 참조는 유지되지 않으며 가비지 수집에 사용할 수 있습니다. 이 기법을 사용하면 힙에 수명이 짧은 개체가 많이 만들어집니다.  
+ <span data-ttu-id="1f47d-122">이 방법에서는 작은 메모리 공간이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-122">This approach has a small memory footprint.</span></span> <span data-ttu-id="1f47d-123">각 세부 XML 조각이 생성될 때 이전 조각에 대한 참조는 유지되지 않으며 가비지 수집에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-123">As each detail XML fragment is yielded, no references are kept to the previous fragment, and it is available for garbage collection.</span></span> <span data-ttu-id="1f47d-124">이 기법을 사용하면 힙에 수명이 짧은 개체가 많이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-124">Note that this technique creates many short lived objects on the heap.</span></span>  
   
- 다음 예제에서는 URI로 지정된 파일에서 XML 조각을 스트림하는 사용자 지정 축 메서드를 구현하고 사용하는 방법을 보여 줍니다. 이 사용자 지정 축은 문서에 `Customer`, `Name` 및 `Item` 요소가 있고 이러한 요소가 위에 있는 `Source.xml` 문서의 경우와 마찬가지로 정렬되어 있다고 가정하고 작성된 것입니다. 이것은 매우 단순화된 구현입니다. 더욱 강력한 구현은 잘못된 문서의 구문을 분석할 준비가 되어 있습니다.  
+ <span data-ttu-id="1f47d-125">다음 예제에서는 URI로 지정된 파일에서 XML 조각을 스트림하는 사용자 지정 축 메서드를 구현하고 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-125">The following example shows how to implement and use a custom axis method that streams XML fragments from the file specified by the URI.</span></span> <span data-ttu-id="1f47d-126">이 사용자 지정 축은 문서에 `Customer`, `Name` 및 `Item` 요소가 있고 이러한 요소가 위에 있는 `Source.xml` 문서의 경우와 마찬가지로 정렬되어 있다고 가정하고 작성된 것입니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-126">This custom axis is specifically written such that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the above `Source.xml` document.</span></span> <span data-ttu-id="1f47d-127">이것은 매우 단순화된 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-127">It is a simplistic implementation.</span></span> <span data-ttu-id="1f47d-128">더욱 강력한 구현은 잘못된 문서의 구문을 분석할 준비가 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-128">A more robust implementation would be prepared to parse an invalid document.</span></span>  
   
 ```vb  
 Module Module1  
@@ -221,7 +212,7 @@ Public Class StreamCustomerItemEnumerator
 End Class  
 ```  
   
- 이 코드의 결과는 다음과 같습니다.  
+ <span data-ttu-id="1f47d-129">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="1f47d-129">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -248,6 +239,5 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+## <a name="see-also"></a><span data-ttu-id="1f47d-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1f47d-130">See Also</span></span>  
+ [<span data-ttu-id="1f47d-131">고급 LINQ to XML 프로그래밍 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f47d-131">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

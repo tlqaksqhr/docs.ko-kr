@@ -1,101 +1,107 @@
 ---
-title: "DataView로 필터링(LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataView로 필터링(LINQ to DataSet)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 29e2be39c32673202e93bb2f1bfdf09ec68384cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataView로 필터링(LINQ to DataSet)
-특정 조건을 사용하여 데이터를 필터링한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다.  <xref:System.Data.DataView>에서는 데이터를 필터링하여 특정 필터 조건을 충족하는 데이터 행의 하위 집합을 반환하는 여러 가지 방법을 제공합니다.  <xref:System.Data.DataView>에는 문자열 기반 필터링 기능뿐만 아니라 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 식을 필터링 조건으로 사용할 수 있는 기능도 있습니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 식을 사용하면 문자열 기반 필터링에 비해 더 복잡하고 강력한 필터링 작업을 수행할 수 있습니다.  
+# <a name="filtering-with-dataview-linq-to-dataset"></a><span data-ttu-id="12e6e-102">DataView로 필터링(LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="12e6e-102">Filtering with DataView (LINQ to DataSet)</span></span>
+<span data-ttu-id="12e6e-103">특정 조건을 사용하여 데이터를 필터링한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-103">The ability to filter data using specific criteria and then present the data to a client through a UI control is an important aspect of data binding.</span></span> <span data-ttu-id="12e6e-104"><xref:System.Data.DataView>에서는 데이터를 필터링하여 특정 필터 조건을 충족하는 데이터 행의 하위 집합을 반환하는 여러 가지 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-104"><xref:System.Data.DataView> provides several ways to filter data and return subsets of data rows meeting specific filter criteria.</span></span> <span data-ttu-id="12e6e-105">문자열 기반 하는 것 외에도 필터링 기능 <xref:System.Data.DataView> 사용 하는 기능도 제공 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 필터링 조건에 대 한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-105">In addition to the string-based filtering capabilities <xref:System.Data.DataView> also provides the ability to use [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressions for the filtering criteria.</span></span> [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]<span data-ttu-id="12e6e-106">문자열 기반 필터링 보다 훨씬 더 복잡 하 고 강력한 필터링 작업에 대 한 식을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-106"> expressions allow for much more complex and powerful filtering operations than the string-based filtering.</span></span>  
   
- <xref:System.Data.DataView>를 사용하여 데이터를 필터링하는 방법에는 두 가지가 있습니다.  
+ <span data-ttu-id="12e6e-107"><xref:System.Data.DataView>를 사용하여 데이터를 필터링하는 방법에는 두 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-107">There are two ways to filter data using a <xref:System.Data.DataView>:</span></span>  
   
--   Where 절이 있는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서 <xref:System.Data.DataView>를 만듭니다.  
+-   <span data-ttu-id="12e6e-108">Where 절이 있는 <xref:System.Data.DataView> 쿼리에서 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-108">Create a <xref:System.Data.DataView> from a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query with a Where clause.</span></span>  
   
--   <xref:System.Data.DataView>의 기존 문자열 기반 필터링 기능을 사용합니다.  
+-   <span data-ttu-id="12e6e-109"><xref:System.Data.DataView>의 기존 문자열 기반 필터링 기능을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-109">Use the existing, string-based filtering capabilities of <xref:System.Data.DataView>.</span></span>  
   
-## 필터링 정보가 있는 쿼리에서 DataView 만들기  
- <xref:System.Data.DataView> 개체는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서 만들 수 있습니다.  해당 쿼리에 `Where` 절이 있으면 쿼리의 필터링 정보를 사용하여 <xref:System.Data.DataView>를 만듭니다.  `Where` 절의 식은 <xref:System.Data.DataView>에 포함되는 데이터 행을 확인하는 데 사용되며 필터의 기본 요소입니다.  
+## <a name="creating-dataview-from-a-query-with-filtering-information"></a><span data-ttu-id="12e6e-110">필터링 정보가 있는 쿼리에서 DataView 만들기</span><span class="sxs-lookup"><span data-stu-id="12e6e-110">Creating DataView from a Query with Filtering Information</span></span>  
+ <span data-ttu-id="12e6e-111"><xref:System.Data.DataView> 개체는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-111">A <xref:System.Data.DataView> object can be created from a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query.</span></span> <span data-ttu-id="12e6e-112">해당 쿼리에 `Where` 절이 있으면 쿼리의 필터링 정보를 사용하여 <xref:System.Data.DataView>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-112">If that query contains a `Where` clause, the <xref:System.Data.DataView> is created with the filtering information from the query.</span></span> <span data-ttu-id="12e6e-113">`Where` 절의 식은 <xref:System.Data.DataView>에 포함되는 데이터 행을 확인하는 데 사용되며 필터의 기본 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-113">The expression in the `Where` clause is used to determine which data rows will be included in the <xref:System.Data.DataView>, and is the basis for the filter.</span></span>  
   
- 식 기반 필터는 간단한 문자열 기반 필터에 비해 강력하고 복잡한 필터링 기능을 제공합니다.  문자열 기반 필터와 식 기반 필터는 함께 사용할 수 없습니다.  <xref:System.Data.DataView>를 쿼리에서 만든 후에 문자열 기반 <xref:System.Data.DataView.RowFilter%2A>를 설정하면 쿼리에서 유추된 식 기반 필터가 지워집니다.  
+ <span data-ttu-id="12e6e-114">식 기반 필터는 간단한 문자열 기반 필터에 비해 강력하고 복잡한 필터링 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-114">Expression-based filters offer more powerful and complex filtering than the simpler string-based filters.</span></span> <span data-ttu-id="12e6e-115">문자열 기반 필터와 식 기반 필터는 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-115">The string-based and expression-based filters are mutually exclusive.</span></span> <span data-ttu-id="12e6e-116"><xref:System.Data.DataView.RowFilter%2A>를 쿼리에서 만든 후에 문자열 기반 <xref:System.Data.DataView>를 설정하면 쿼리에서 유추된 식 기반 필터가 지워집니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-116">When the string-based <xref:System.Data.DataView.RowFilter%2A> is set after a <xref:System.Data.DataView> is created from a query, the expression based filter inferred from the query is cleared.</span></span>  
   
 > [!NOTE]
->  대부분의 경우 필터링에 사용되는 식은 파생 작용이 없어야 하고 명확해야 합니다.  또한 필터링 작업이 여러 번 실행될 수 있으므로 식에는 실행 집합 번호에 따라 달라지는 논리가 없어야 합니다.  
+>  <span data-ttu-id="12e6e-117">대부분의 경우 필터링에 사용되는 식은 파생 작용이 없어야 하고 명확해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-117">In most cases, the expressions used for filtering should not have side effects and must be deterministic.</span></span> <span data-ttu-id="12e6e-118">또한 필터링 작업이 여러 번 실행될 수 있으므로 식에는 실행 집합 번호에 따라 달라지는 논리가 없어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-118">Also, the expressions should not contain any logic that depends on a set number of executions, because the filtering operations might be executed any number of times.</span></span>  
   
-### 예제  
- 다음 예제에서는 SalesOrderDetail 테이블에 대해 수량이 2보다 크고 6보다 작은 주문을 쿼리한 다음 해당 쿼리에서 <xref:System.Data.DataView>를 만들고 <xref:System.Data.DataView>를 <xref:System.Windows.Forms.BindingSource>에 바인딩합니다.  
+### <a name="example"></a><span data-ttu-id="12e6e-119">예제</span><span class="sxs-lookup"><span data-stu-id="12e6e-119">Example</span></span>  
+ <span data-ttu-id="12e6e-120">다음 예제에서는 SalesOrderDetail 테이블에 대해 수량이 2보다 크고 6보다 작은 주문을 쿼리한 다음 해당 쿼리에서 <xref:System.Data.DataView>를 만들고 <xref:System.Data.DataView>를 <xref:System.Windows.Forms.BindingSource>에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-120">The following example queries the SalesOrderDetail table for orders with a quantity greater than 2 and less than 6; creates a <xref:System.Data.DataView> from that query; and binds the <xref:System.Data.DataView> to a <xref:System.Windows.Forms.BindingSource>:</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhere](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywhere)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhere](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywhere)]  
   
-### 예제  
- 다음 예제에서는 2001년 6월 6일 이후 주문에 대한 쿼리에서 <xref:System.Data.DataView>를 만듭니다.  
+### <a name="example"></a><span data-ttu-id="12e6e-121">예제</span><span class="sxs-lookup"><span data-stu-id="12e6e-121">Example</span></span>  
+ <span data-ttu-id="12e6e-122">다음 예제에서는 2001년 6월 6일 이후 주문에 대한 쿼리에서 <xref:System.Data.DataView>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-122">The following example creates a <xref:System.Data.DataView> from a query for orders placed after June 6, 2001:</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhere3](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywhere3)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhere3](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywhere3)]  
   
-### 예제  
- 필터링을 정렬과 결합할 수도 있습니다.  다음 예제에서는 성이 "S"로 시작하는 연락처를 성과 이름순으로 정렬하는 쿼리에서 <xref:System.Data.DataView>를 만듭니다.  
+### <a name="example"></a><span data-ttu-id="12e6e-123">예제</span><span class="sxs-lookup"><span data-stu-id="12e6e-123">Example</span></span>  
+ <span data-ttu-id="12e6e-124">필터링을 정렬과 결합할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-124">Filtering can also be combined with sorting.</span></span> <span data-ttu-id="12e6e-125">다음 예제에서는 성이 "S"로 시작하는 연락처를 성과 이름순으로 정렬하는 쿼리에서 <xref:System.Data.DataView>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-125">The following example creates a <xref:System.Data.DataView> from a query for contacts whose last name start with "S" and sorted by last name, then first name:</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereOrderByThenBy](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywhereorderbythenby)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereOrderByThenBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywhereorderbythenby)]  
   
-### 예제  
- 다음 예제에서는 SoundEx 알고리즘을 사용하여 성이 "Zhu"와 비슷한 연락처를 찾습니다.  SoundEx 알고리즘은 SoundEx 메서드에서 구현됩니다.  
+### <a name="example"></a><span data-ttu-id="12e6e-126">예제</span><span class="sxs-lookup"><span data-stu-id="12e6e-126">Example</span></span>  
+ <span data-ttu-id="12e6e-127">다음 예제에서는 SoundEx 알고리즘을 사용하여 성이 "Zhu"와 비슷한 연락처를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-127">The following example uses the SoundEx algorithm to find contacts whose last name is similar to "Zhu".</span></span> <span data-ttu-id="12e6e-128">SoundEx 알고리즘은 SoundEx 메서드에서 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-128">The SoundEx algorithm is implemented in the SoundEx method.</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvsoundexfilter)]
  [!code-vb[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvsoundexfilter)]  
   
- U.S. Census Bureau에서 개발한 SoundEx는 영어 발음의 소리를 기준으로 이름을 인덱싱하는 데 사용되는 음성  Census Bureau의 요금 청구 없이 사용할 수 있습니다.  SoundEx 메서드는 하나의 영어 문자 뒤에 숫자 3개가 있는 형식으로 구성된 이름에 대한 4문자 코드를 반환합니다.  영어 문자는 이름의 첫 번째 문자이고 숫자는 이름의 나머지 자음을 인코딩합니다.  발음이 비슷한 이름은 같은 SoundEx 코드를 공유합니다.  이전 예제의 SoundEx 메서드에 사용된 SoundEx 구현은 다음과 같습니다.  
+ <span data-ttu-id="12e6e-129">U.S. Census Bureau에서 개발한 SoundEx는 영어 발음의 소리를 기준으로 이름을 인덱싱하는 데 사용되는 음성 Census Bureau의 요금 청구 없이 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-129">SoundEx is a phonetic algorithm used for indexing names by sound, as they are pronounced in English, originally developed by the U.S. Census Bureau.</span></span> <span data-ttu-id="12e6e-130">SoundEx 메서드는 하나의 영어 문자 뒤에 숫자 3개가 있는 형식으로 구성된 이름에 대한 4문자 코드를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-130">The SoundEx method returns a four character code for a name consisting of an English letter followed by three numbers.</span></span> <span data-ttu-id="12e6e-131">영어 문자는 이름의 첫 번째 문자이고 숫자는 이름의 나머지 자음을 인코딩합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-131">The letter is the first letter of the name and the numbers encode the remaining consonants in the name.</span></span> <span data-ttu-id="12e6e-132">발음이 비슷한 이름은 같은 SoundEx 코드를 공유합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-132">Similar sounding names share the same SoundEx code.</span></span> <span data-ttu-id="12e6e-133">이전 예제의 SoundEx 메서드에 사용된 SoundEx 구현은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-133">The SoundEx implementation used in the SoundEx method of the previous example is shown here:</span></span>  
   
  [!code-csharp[DP DataView Samples#SoundEx](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#soundex)]
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
-## RowFilter 속성 사용  
- <xref:System.Data.DataView>의 기존 문자열 기반 필터링 기능은 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 컨텍스트에서 계속 사용할 수 있습니다.  문자열 기반 <xref:System.Data.DataView.RowFilter%2A> 필터링에 대한 자세한 내용은 [데이터 정렬 및 필터링](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)\(을\)를 참조하세요.  
+## <a name="using-the-rowfilter-property"></a><span data-ttu-id="12e6e-134">RowFilter 속성 사용</span><span class="sxs-lookup"><span data-stu-id="12e6e-134">Using the RowFilter Property</span></span>  
+ <span data-ttu-id="12e6e-135"><xref:System.Data.DataView>의 기존 문자열 기반 필터링 기능은 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 컨텍스트에서 계속 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-135">The existing string-based filtering functionality of <xref:System.Data.DataView> still works in the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] context.</span></span> <span data-ttu-id="12e6e-136">문자열 기반 하는 방법에 대 한 자세한 내용은 <xref:System.Data.DataView.RowFilter%2A> 참조 필터링 [정렬 및 필터링 데이터](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-136">For more information about string-based <xref:System.Data.DataView.RowFilter%2A> filtering, see [Sorting and Filtering Data](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).</span></span>  
   
- 다음 예제에서는 Contact 테이블에서 <xref:System.Data.DataView>를 만든 다음 연락처의 성이 "Zhu"인 행을 반환하도록 <xref:System.Data.DataView.RowFilter%2A> 속성을 설정합니다.  
+ <span data-ttu-id="12e6e-137">다음 예제에서는 Contact 테이블에서 <xref:System.Data.DataView>를 만든 다음 연락처의 성이 "Zhu"인 행을 반환하도록 <xref:System.Data.DataView.RowFilter%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-137">The following example creates a <xref:System.Data.DataView> from the Contact table and then sets the <xref:System.Data.DataView.RowFilter%2A> property to return rows where the contact's last name is "Zhu":</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- <xref:System.Data.DataTable> 또는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서 <xref:System.Data.DataView>를 만든 다음 <xref:System.Data.DataView.RowFilter%2A> 속성을 사용하여 열 값을 기준으로 행의 하위 집합을 지정할 수 있습니다.  문자열 기반 필터와 식 기반 필터는 함께 사용할 수 없습니다.  <xref:System.Data.DataView.RowFilter%2A> 속성을 설정하면 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서 유추된 필터 식이 지워지며, 이 필터 식은 재설정할 수 없습니다.  
+ <span data-ttu-id="12e6e-138"><xref:System.Data.DataView> 또는 <xref:System.Data.DataTable> 쿼리에서 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만든 다음 <xref:System.Data.DataView.RowFilter%2A> 속성을 사용하여 열 값을 기준으로 행의 하위 집합을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-138">After a <xref:System.Data.DataView> has been created from a <xref:System.Data.DataTable> or [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query, you can use the <xref:System.Data.DataView.RowFilter%2A> property to specify subsets of rows based on their column values.</span></span> <span data-ttu-id="12e6e-139">문자열 기반 필터와 식 기반 필터는 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-139">The string-based and expression-based filters are mutually exclusive.</span></span> <span data-ttu-id="12e6e-140"><xref:System.Data.DataView.RowFilter%2A> 속성을 설정하면 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서 유추된 필터 식이 지워지며, 이 필터 식은 재설정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-140">Setting the <xref:System.Data.DataView.RowFilter%2A> property will clear the filter expression inferred from the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query, and the filter expression cannot be reset.</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  
   
- 데이터의 하위 집합에 대한 동적 뷰를 제공하는 것과는 반대로 데이터에 대한 특정 쿼리 결과를 반환하려는 경우 <xref:System.Data.DataView.RowFilter%2A> 속성을 설정하는 대신 <xref:System.Data.DataView>의 <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A> 메서드를 사용할 수 있습니다.  <xref:System.Data.DataView.RowFilter%2A> 속성은 바인딩된 컨트롤이 필터링된 결과를 표시하는 데이터 바인딩된 응용 프로그램에 가장 적합합니다.  <xref:System.Data.DataView.RowFilter%2A> 속성을 설정하면 데이터의 인덱스가 다시 작성되므로 응용 프로그램에 오버헤드가 발생하여 성능이 저하됩니다.  <xref:System.Data.DataView.Find%2A> 및 <xref:System.Data.DataView.FindRows%2A> 메서드는 인덱스를 다시 작성하지 않고 현재 인덱스를 사용합니다.  <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A>를 한 번만 호출할 경우에는 기존 <xref:System.Data.DataView>를 사용해야 합니다.  <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A>를 여러 번 호출할 경우에는 새 <xref:System.Data.DataView>를 만들어서 검색하려는 열의 인덱스를 다시 작성한 다음 <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A> 메서드를 호출해야 합니다.  <xref:System.Data.DataView.Find%2A> 및 <xref:System.Data.DataView.FindRows%2A> 메서드에 대한 자세한 내용은 [행 찾기](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md) 및 [DataView 성능](../../../../docs/framework/data/adonet/dataview-performance.md)을 참조하세요.  
+ <span data-ttu-id="12e6e-141">데이터의 하위 집합에 대한 동적 뷰를 제공하는 것과는 반대로 데이터에 대한 특정 쿼리 결과를 반환하려는 경우 <xref:System.Data.DataView.Find%2A> 속성을 설정하는 대신 <xref:System.Data.DataView.FindRows%2A>의 <xref:System.Data.DataView> 또는 <xref:System.Data.DataView.RowFilter%2A> 메서드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-141">If you want to return the results of a particular query on the data, as opposed to providing a dynamic view of a subset of the data, you can use the <xref:System.Data.DataView.Find%2A> or <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView>, rather than setting the <xref:System.Data.DataView.RowFilter%2A> property.</span></span> <span data-ttu-id="12e6e-142"><xref:System.Data.DataView.RowFilter%2A> 속성은 바인딩된 컨트롤이 필터링된 결과를 표시하는 데이터 바인딩된 응용 프로그램에 가장 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-142">The <xref:System.Data.DataView.RowFilter%2A> property is best used in a data-bound application where a bound control displays filtered results.</span></span> <span data-ttu-id="12e6e-143"><xref:System.Data.DataView.RowFilter%2A> 속성을 설정하면 데이터의 인덱스가 다시 작성되므로 응용 프로그램에 오버헤드가 발생하여 성능이 저하됩니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-143">Setting the <xref:System.Data.DataView.RowFilter%2A> property rebuilds the index for the data, adding overhead to your application and decreasing performance.</span></span> <span data-ttu-id="12e6e-144"><xref:System.Data.DataView.Find%2A> 및 <xref:System.Data.DataView.FindRows%2A> 메서드는 인덱스를 다시 작성하지 않고 현재 인덱스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-144">The <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods use the current index without requiring the index to be rebuilt.</span></span> <span data-ttu-id="12e6e-145"><xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A>를 한 번만 호출할 경우에는 기존 <xref:System.Data.DataView>를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-145">If you are going to call <xref:System.Data.DataView.Find%2A> or <xref:System.Data.DataView.FindRows%2A> only once, then you should use the existing <xref:System.Data.DataView>.</span></span> <span data-ttu-id="12e6e-146"><xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A>를 여러 번 호출할 경우에는 새 <xref:System.Data.DataView>를 만들어서 검색하려는 열의 인덱스를 다시 작성한 다음 <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A> 메서드를 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-146">If you are going to call <xref:System.Data.DataView.Find%2A> or <xref:System.Data.DataView.FindRows%2A> multiple times, you should create a new <xref:System.Data.DataView> to rebuild the index on the column you want to search on, and then call the <xref:System.Data.DataView.Find%2A> or <xref:System.Data.DataView.FindRows%2A> methods.</span></span> <span data-ttu-id="12e6e-147">에 대 한 자세한 내용은 <xref:System.Data.DataView.Find%2A> 및 <xref:System.Data.DataView.FindRows%2A> 메서드 참조 [행 찾기](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md) 및 [DataView 성능](../../../../docs/framework/data/adonet/dataview-performance.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-147">For more information about the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods see [Finding Rows](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md) and [DataView Performance](../../../../docs/framework/data/adonet/dataview-performance.md).</span></span>  
   
-## 필터 지우기  
- 필터링이 설정된 후 <xref:System.Data.DataView.RowFilter%2A> 속성을 사용하여 <xref:System.Data.DataView>의 필터를 지울 수 있습니다.  <xref:System.Data.DataView>의 필터는 두 가지 방법으로 지울 수 있습니다.  
+## <a name="clearing-the-filter"></a><span data-ttu-id="12e6e-148">필터 지우기</span><span class="sxs-lookup"><span data-stu-id="12e6e-148">Clearing the Filter</span></span>  
+ <span data-ttu-id="12e6e-149">필터링이 설정된 후 <xref:System.Data.DataView> 속성을 사용하여 <xref:System.Data.DataView.RowFilter%2A>의 필터를 지울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-149">The filter on a <xref:System.Data.DataView> can be cleared after filtering has been set using the <xref:System.Data.DataView.RowFilter%2A> property.</span></span> <span data-ttu-id="12e6e-150"><xref:System.Data.DataView>의 필터는 두 가지 방법으로 지울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-150">The filter on a <xref:System.Data.DataView> can be cleared in two different ways:</span></span>  
   
--   <xref:System.Data.DataView.RowFilter%2A> 속성을 `null`으로 설정합니다.  
+-   <span data-ttu-id="12e6e-151"><xref:System.Data.DataView.RowFilter%2A> 속성을 `null`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-151">Set the <xref:System.Data.DataView.RowFilter%2A> property to `null`.</span></span>  
   
--   <xref:System.Data.DataView.RowFilter%2A> 속성을 빈 문자열로 설정합니다.  
+-   <span data-ttu-id="12e6e-152"><xref:System.Data.DataView.RowFilter%2A> 속성을 빈 문자열로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-152">Set the <xref:System.Data.DataView.RowFilter%2A> property to an empty string.</span></span>  
   
-### 예제  
- 다음 예제에서는 쿼리에서 <xref:System.Data.DataView>를 만든 다음 <xref:System.Data.DataView.RowFilter%2A> 속성을 `null`로 설정하여 필터를 지웁니다.  
+### <a name="example"></a><span data-ttu-id="12e6e-153">예제</span><span class="sxs-lookup"><span data-stu-id="12e6e-153">Example</span></span>  
+ <span data-ttu-id="12e6e-154">다음 예제에서는 쿼리에서 <xref:System.Data.DataView>를 만든 다음 <xref:System.Data.DataView.RowFilter%2A> 속성을 `null`로 설정하여 필터를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-154">The following example creates a <xref:System.Data.DataView> from a query and then clears the filter by setting <xref:System.Data.DataView.RowFilter%2A> property to `null`:</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVClearRowFilter2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearrowfilter2)]
  [!code-vb[DP DataView Samples#LDVClearRowFilter2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter2)]  
   
-### 예제  
- 다음 예제에서는 테이블에서 <xref:System.Data.DataView>를 만들고, <xref:System.Data.DataView.RowFilter%2A> 속성을 설정한 다음 <xref:System.Data.DataView.RowFilter%2A> 속성을 빈 문자열로 설정하여 필터를 지웁니다.  
+### <a name="example"></a><span data-ttu-id="12e6e-155">예제</span><span class="sxs-lookup"><span data-stu-id="12e6e-155">Example</span></span>  
+ <span data-ttu-id="12e6e-156">다음 예제에서는 테이블에서 <xref:System.Data.DataView>를 만들고, <xref:System.Data.DataView.RowFilter%2A> 속성을 설정한 다음 <xref:System.Data.DataView.RowFilter%2A> 속성을 빈 문자열로 설정하여 필터를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="12e6e-156">The following example creates a <xref:System.Data.DataView> from a table sets the <xref:System.Data.DataView.RowFilter%2A> property, and then clears the filter by setting the <xref:System.Data.DataView.RowFilter%2A> property to an empty string:</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearrowfilter)]
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
-## 참고 항목  
- [데이터 바인딩 및 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)   
- [DataView로 정렬](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="12e6e-157">참고 항목</span><span class="sxs-lookup"><span data-stu-id="12e6e-157">See Also</span></span>  
+ [<span data-ttu-id="12e6e-158">데이터 바인딩 및 LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="12e6e-158">Data Binding and LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
+ [<span data-ttu-id="12e6e-159">DataView로 정렬</span><span class="sxs-lookup"><span data-stu-id="12e6e-159">Sorting with DataView</span></span>](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

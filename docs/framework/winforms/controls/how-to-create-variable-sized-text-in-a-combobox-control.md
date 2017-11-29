@@ -1,33 +1,35 @@
 ---
-title: "방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "콤보 상자, 텍스트 그리기"
-  - "ComboBox 컨트롤[Windows Forms], 사용자 지정 텍스트 그리기"
-  - "ComboBox 컨트롤[Windows Forms], 예제[C#]"
-  - "예제[Windows Forms], ComboBox 컨트롤"
-  - "텍스트, 콤보 상자에 그리기"
+title: "방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+helpviewer_keywords:
+- text [Windows Forms], drawing in combo boxes
+- examples [Windows Forms], ComboBox control
+- combo boxes [Windows Forms], drawing text
+- ComboBox control [Windows Forms], examples [C#]
+- ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f0dcfd24414ef868a1a5414af4fcde1b9a14ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기
-이 예제에서는 <xref:System.Windows.Forms.ComboBox> 컨트롤에서 사용자 지정으로 텍스트를 그리는 것을 보여 줍니다.  항목이 특정 조건을 만족하면 이 항목은 더 큰 글꼴로 그려지고 빨강으로 바뀝니다.  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="7c35e-102">방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기</span><span class="sxs-lookup"><span data-stu-id="7c35e-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
+<span data-ttu-id="7c35e-103">이 예제에서는 텍스트에 대 한 사용자 지정 그리기를 <xref:System.Windows.Forms.ComboBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35e-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="7c35e-104">항목이 특정 조건에 부합 하는 경우 더 큰 글꼴로 그려집니다 이며 빨간색으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35e-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  
   
-## 예제  
+## <a name="example"></a><span data-ttu-id="7c35e-105">예제</span><span class="sxs-lookup"><span data-stu-id="7c35e-105">Example</span></span>  
   
 ```vb  
 Private Sub ComboBox1_MeasureItem(ByVal sender As Object, ByVal e As _  
@@ -62,22 +64,22 @@ e.Bounds.X, e.Bounds.Y)
 End Sub  
 ```  
   
-## 코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="7c35e-106">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="7c35e-106">Compiling the Code</span></span>  
+ <span data-ttu-id="7c35e-107">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35e-107">This example requires:</span></span>  
   
--   Windows 폼  
+-   <span data-ttu-id="7c35e-108">Windows form입니다.</span><span class="sxs-lookup"><span data-stu-id="7c35e-108">A Windows form.</span></span>  
   
--   <xref:System.Windows.Forms.ComboBox.Items%2A> 속성에 세 항목을 포함하는 `ListBox1`이라는 <xref:System.Windows.Forms.ComboBox> 컨트롤.  이 예제에서 세 항목의 이름은 `"One", Two", and Three"`입니다.   `ComboBox1`의 <xref:System.Windows.Forms.ComboBox.DrawMode%2A> 속성은 <xref:System.Windows.Forms.DrawMode>로 설정해야 합니다.  
+-   <span data-ttu-id="7c35e-109">A <xref:System.Windows.Forms.ComboBox> 라는 컨트롤 `ListBox1` 의 세 가지 항목으로는 <xref:System.Windows.Forms.ComboBox.Items%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="7c35e-109">A <xref:System.Windows.Forms.ComboBox> control named `ListBox1` with three items in the <xref:System.Windows.Forms.ComboBox.Items%2A> property.</span></span> <span data-ttu-id="7c35e-110">이 예제에서 세 가지 항목 이름은 `"One", Two", and Three"`합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35e-110">In this example, the three items are named `"One", Two", and Three"`.</span></span> <span data-ttu-id="7c35e-111"><xref:System.Windows.Forms.ComboBox.DrawMode%2A> 속성 `ComboBox1` 로 설정 해야 <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35e-111">The <xref:System.Windows.Forms.ComboBox.DrawMode%2A> property of `ComboBox1` must be set to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span></span>  
   
     > [!NOTE]
-    >  이 기술은 <xref:System.Windows.Forms.ListBox> 컨트롤에도 적용할 수도 있습니다. 즉, <xref:System.Windows.Forms.ListBox>를 <xref:System.Windows.Forms.ComboBox> 대신 사용할 수 있습니다.  
+    >  <span data-ttu-id="7c35e-112">이 기술은에 적용 됩니다는 <xref:System.Windows.Forms.ListBox> 컨트롤-대신 사용할 수 있습니다는 <xref:System.Windows.Forms.ListBox> 에 대 한는 <xref:System.Windows.Forms.ComboBox>합니다.</span><span class="sxs-lookup"><span data-stu-id="7c35e-112">This technique is also applicable to the <xref:System.Windows.Forms.ListBox> control — you can substitute a <xref:System.Windows.Forms.ListBox> for the <xref:System.Windows.Forms.ComboBox>.</span></span>  
   
--   <xref:System.Windows.Forms?displayProperty=fullName> 및 <xref:System.Drawing?displayProperty=fullName> 네임스페이스에 대한 참조  
+-   <span data-ttu-id="7c35e-113"><xref:System.Windows.Forms?displayProperty=nameWithType> 및 <xref:System.Drawing?displayProperty=nameWithType> 네임스페이스에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="7c35e-113">References to the <xref:System.Windows.Forms?displayProperty=nameWithType> and <xref:System.Drawing?displayProperty=nameWithType> namespaces.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ComboBox.DrawItem>   
- <xref:System.Windows.Forms.DrawItemEventArgs>   
- <xref:System.Windows.Forms.ComboBox.MeasureItem>   
- [소유자가 그린 기본 제공 컨트롤 지원](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)   
- [ListBox 컨트롤](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)   
- [ComboBox 컨트롤](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="7c35e-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7c35e-114">See Also</span></span>  
+ <xref:System.Windows.Forms.ComboBox.DrawItem>  
+ <xref:System.Windows.Forms.DrawItemEventArgs>  
+ <xref:System.Windows.Forms.ComboBox.MeasureItem>  
+ [<span data-ttu-id="7c35e-115">소유자 그리기 지원이 기본 제공되는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="7c35e-115">Controls with Built-In Owner-Drawing Support</span></span>](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [<span data-ttu-id="7c35e-116">ListBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="7c35e-116">ListBox Control</span></span>](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ [<span data-ttu-id="7c35e-117">ComboBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="7c35e-117">ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)

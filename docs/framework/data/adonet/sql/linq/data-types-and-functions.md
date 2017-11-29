@@ -1,44 +1,47 @@
 ---
-title: "데이터 형식 및 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터 형식 및 함수"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 809fc9290070deb304c44018102874d6a56fdd11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 데이터 형식 및 함수
-다음 표에 나열된 항목에서는 CLR\(공용 언어 런타임\)의 멤버, 구문 및 캐스트에 대한 LINQ to SQL의 지원 정보를 설명합니다.  지원되는 멤버와 구문은 LINQ to SQL 쿼리에 사용할 수 있습니다.  
+# <a name="data-types-and-functions"></a><span data-ttu-id="caf7b-102">데이터 형식 및 함수</span><span class="sxs-lookup"><span data-stu-id="caf7b-102">Data Types and Functions</span></span>
+<span data-ttu-id="caf7b-103">다음 표에 나열된 항목에서는 CLR(공용 언어 런타임)의 멤버, 구문 및 캐스트에 대한 LINQ to SQL의 지원 정보를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-103">The topics listed in the following table describe LINQ to SQL support for members, constructs, and casts of the common language runtime (CLR).</span></span> <span data-ttu-id="caf7b-104">지원되는 멤버와 구문은 LINQ to SQL 쿼리에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-104">Supported members and constructs are available to use in your LINQ to SQL queries.</span></span>  
   
- 표에 나와 있는 지원되지 않는 항목은 LINQ to SQL에서 해당 CLR 멤버, 구문 또는 캐스트를 SQL Server에서 실행하기 위해 변환할 수 없다는 것을 의미합니다.  이러한 항목은 코드에 사용할 수 있지만 쿼리를 Transact\-SQL로 변환하기 전이나 데이터베이스에서 결과가 검색된 후에 반드시 평가해야 합니다.  
+ <span data-ttu-id="caf7b-105">표에 나와 있는 지원되지 않는 항목은 LINQ to SQL에서 해당 CLR 멤버, 구문 또는 캐스트를 SQL Server에서 실행하기 위해 변환할 수 없다는 것을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-105">An unsupported item in the table means that LINQ to SQL cannot translate the CLR member, construct, or cast for execution on the SQL Server.</span></span> <span data-ttu-id="caf7b-106">이러한 항목은 코드에 사용할 수 있지만 쿼리를 Transact-SQL로 변환하기 전이나 데이터베이스에서 결과가 검색된 후에 반드시 평가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-106">You may still be able to use them in your code, but they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
   
-|항목|설명|  
-|--------|--------|  
-|[SQL\-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|CLR 형식 및 SQL Server 형식 간의 매핑에 대한 자세한 매트릭스를 제공합니다.|  
-|[기본 데이터 형식](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
-|[부울 데이터 형식](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
-|[Null 의미 체계](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|null 및 nullable 문제를 설명하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 항목에 대한 링크를 제공합니다.|  
-|[숫자 및 비교 연산자](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
-|[시퀀스 연산자](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
-|[System.Convert 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
-|[System.DateTime 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|<xref:System.DateTime?displayProperty=fullName> 구조체의 멤버에 대한 LINQ to SQL의 지원 정보를 설명합니다.|  
-|[System.DateTimeOffset 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|<xref:System.DateTimeOffset?displayProperty=fullName> 구조체의 멤버에 대한 LINQ to SQL의 지원 정보를 설명합니다.|  
-|[System.Math 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
-|[System.Object 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
-|[System.String 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
-|[System.TimeSpan 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|<xref:System.TimeSpan?displayProperty=fullName> 구조체의 멤버에 대한 LINQ to SQL의 지원 정보를 설명합니다.|  
-|[지원되지 않는 기능](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 지원하지 않는 기능에 대해 설명합니다.|  
+|<span data-ttu-id="caf7b-107">항목</span><span class="sxs-lookup"><span data-stu-id="caf7b-107">Topic</span></span>|<span data-ttu-id="caf7b-108">설명</span><span class="sxs-lookup"><span data-stu-id="caf7b-108">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="caf7b-109">SQL-CLR 형식 매핑</span><span class="sxs-lookup"><span data-stu-id="caf7b-109">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|<span data-ttu-id="caf7b-110">CLR 형식 및 SQL Server 형식 간의 매핑에 대한 자세한 매트릭스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-110">Provides a detailed matrix of mappings between CLR types and SQL Server types.</span></span>|  
+|[<span data-ttu-id="caf7b-111">기본 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="caf7b-111">Basic Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|<span data-ttu-id="caf7b-112">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-112">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="caf7b-113">부울 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="caf7b-113">Boolean Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|<span data-ttu-id="caf7b-114">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-114">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="caf7b-115">Null 의미 체계</span><span class="sxs-lookup"><span data-stu-id="caf7b-115">Null Semantics</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|<span data-ttu-id="caf7b-116">null 및 nullable 문제를 설명하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 항목에 대한 링크를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-116">Provides links to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] topics that discuss null and nullable issues.</span></span>|  
+|[<span data-ttu-id="caf7b-117">숫자 및 비교 연산자</span><span class="sxs-lookup"><span data-stu-id="caf7b-117">Numeric and Comparison Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|<span data-ttu-id="caf7b-118">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-118">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="caf7b-119">시퀀스 연산자</span><span class="sxs-lookup"><span data-stu-id="caf7b-119">Sequence Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|<span data-ttu-id="caf7b-120">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-120">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="caf7b-121">System.Convert 메서드</span><span class="sxs-lookup"><span data-stu-id="caf7b-121">System.Convert Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|<span data-ttu-id="caf7b-122">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-122">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="caf7b-123">System.DateTime 메서드</span><span class="sxs-lookup"><span data-stu-id="caf7b-123">System.DateTime Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|<span data-ttu-id="caf7b-124"><xref:System.DateTime?displayProperty=nameWithType> 구조체의 멤버에 대한 LINQ to SQL의 지원 정보를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-124">Describes LINQ to SQL support for members of the <xref:System.DateTime?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="caf7b-125">System.DateTimeOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="caf7b-125">System.DateTimeOffset Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|<span data-ttu-id="caf7b-126"><xref:System.DateTimeOffset?displayProperty=nameWithType> 구조체의 멤버에 대한 LINQ to SQL의 지원 정보를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-126">Describes LINQ to SQL support for members of the <xref:System.DateTimeOffset?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="caf7b-127">System.Math 메서드</span><span class="sxs-lookup"><span data-stu-id="caf7b-127">System.Math Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|<span data-ttu-id="caf7b-128">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-128">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="caf7b-129">System.Object 메서드</span><span class="sxs-lookup"><span data-stu-id="caf7b-129">System.Object Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|<span data-ttu-id="caf7b-130">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-130">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="caf7b-131">System.String 메서드</span><span class="sxs-lookup"><span data-stu-id="caf7b-131">System.String Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|<span data-ttu-id="caf7b-132">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-132">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="caf7b-133">System.TimeSpan 메서드</span><span class="sxs-lookup"><span data-stu-id="caf7b-133">System.TimeSpan Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|<span data-ttu-id="caf7b-134"><xref:System.TimeSpan?displayProperty=nameWithType> 구조체의 멤버에 대한 LINQ to SQL의 지원 정보를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-134">Describes LINQ to SQL support for members of the <xref:System.TimeSpan?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="caf7b-135">지원 되지 않는 기능</span><span class="sxs-lookup"><span data-stu-id="caf7b-135">Unsupported Functionality</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|<span data-ttu-id="caf7b-136">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 지원하지 않는 기능에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="caf7b-136">Describes functionality that is not supported in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>|  
   
-## 참고 항목  
- [SQL\-CLR 형식 불일치](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)   
- [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [.NET Framework Class Library in Visual Studio](http://msdn.microsoft.com/ko-kr/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a><span data-ttu-id="caf7b-137">참고 항목</span><span class="sxs-lookup"><span data-stu-id="caf7b-137">See Also</span></span>  
+ [<span data-ttu-id="caf7b-138">SQL-CLR 형식 불일치</span><span class="sxs-lookup"><span data-stu-id="caf7b-138">SQL-CLR Type Mismatches</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
+ [<span data-ttu-id="caf7b-139">참조</span><span class="sxs-lookup"><span data-stu-id="caf7b-139">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [<span data-ttu-id="caf7b-140">Visual Studio에서.NET framework 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="caf7b-140">.NET Framework Class Library in Visual Studio</span></span>](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)

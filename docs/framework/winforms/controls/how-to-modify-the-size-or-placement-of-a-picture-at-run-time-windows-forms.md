@@ -1,46 +1,51 @@
 ---
-title: "방법: 런타임에 그림의 크기 또는 위치 수정(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "예제[Windows Forms], PictureBox 컨트롤"
-  - "이미지[Windows Forms], PictureBox 컨트롤에서 위치 제어[Windows Forms]"
-  - "PictureBox 컨트롤[Windows Forms], 그림 크기 및 정렬"
-  - "그림, PictureBox 컨트롤에서 위치 제어[Windows Forms]"
+title: "방법: 런타임에 그림의 크기 또는 위치 수정(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- images [Windows Forms], controlling placement in PictureBox control [Windows Forms]
+- examples [Windows Forms], PictureBox control
+- PictureBox control [Windows Forms], picture size and alignment
+- pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df67871b0b133297a6f53ff9e4a42c7630a5f56d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 런타임에 그림의 크기 또는 위치 수정(Windows Forms)
-폼에서 Windows Forms <xref:System.Windows.Forms.PictureBox> 컨트롤을 사용하는 경우 컨트롤에 대해 다음과 같은 작업이 수행되도록 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 속성을 설정할 수 있습니다.  
+# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a><span data-ttu-id="8d3bd-102">방법: 런타임에 그림의 크기 또는 위치 수정(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="8d3bd-102">How to: Modify the Size or Placement of a Picture at Run Time (Windows Forms)</span></span>
+<span data-ttu-id="8d3bd-103">Windows Forms를 사용 하는 경우 <xref:System.Windows.Forms.PictureBox> 컨트롤을 폼에 설정할 수 있습니다는 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 시키기 위해 속성:</span><span class="sxs-lookup"><span data-stu-id="8d3bd-103">If you use the Windows Forms <xref:System.Windows.Forms.PictureBox> control on a form, you can set the <xref:System.Windows.Forms.PictureBox.SizeMode%2A> property on it to:</span></span>  
   
--   그림의 상단 왼쪽 모퉁이를 컨트롤의 상단 왼쪽 모퉁이와 일치하게 배치합니다.  
+-   <span data-ttu-id="8d3bd-104">그림의 왼쪽된 위 모퉁이와 컨트롤의 왼쪽된 위 모퉁이 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-104">Align the picture's upper left corner with the control's upper left corner</span></span>  
   
--   그림을 컨트롤 가운데에 배치합니다.  
+-   <span data-ttu-id="8d3bd-105">컨트롤 내에서 가운데</span><span class="sxs-lookup"><span data-stu-id="8d3bd-105">Center the picture within the control</span></span>  
   
--   컨트롤에 표시된 그림과 일치하도록 컨트롤의 크기를 조정합니다.  
+-   <span data-ttu-id="8d3bd-106">그림 표시에 맞게 컨트롤 크기 조정</span><span class="sxs-lookup"><span data-stu-id="8d3bd-106">Adjust the size of the control to fit the picture it displays</span></span>  
   
--   표시된 그림을 컨트롤에 맞게 확장합니다.  
+-   <span data-ttu-id="8d3bd-107">컨트롤에 맞게 표시 사진을 늘이기</span><span class="sxs-lookup"><span data-stu-id="8d3bd-107">Stretch any picture it displays to fit the control</span></span>  
   
- 그림 특히 비트맵 형식의 그림을 확장하면 이미지 품질이 손상될 수도 있습니다.  메타파일은 런타임의 이미지 그리기에 대한 그래픽 지침 목록이며 비트맵보다 확장에 더욱 적합합니다.  
+ <span data-ttu-id="8d3bd-108">그림 (특히 비트맵 형식으로 하나) 스트레치할 이미지 품질에서 손실이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-108">Stretching a picture (especially one in bitmap format) can produce a loss in image quality.</span></span> <span data-ttu-id="8d3bd-109">메타 파일은 실행 시 이미지를 그리기 위한 그래픽 지침 목록이는 비트맵 보다 스트레치에 적합 한 더 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-109">Metafiles, which are lists of graphics instructions for drawing images at run time, are better suited for stretching than bitmaps are.</span></span>  
   
-### 런타임에 SizeMode 속성을 설정하려면  
+### <a name="to-set-the-sizemode-property-at-run-time"></a><span data-ttu-id="8d3bd-110">런타임 시 SizeMode 속성을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="8d3bd-110">To set the SizeMode property at run time</span></span>  
   
-1.  <xref:System.Windows.Forms.PictureBox.SizeMode%2A>를 <xref:System.Windows.Forms.PictureBoxSizeMode>\(기본값\), <xref:System.Windows.Forms.PictureBoxSizeMode>, <xref:System.Windows.Forms.PictureBoxSizeMode> 또는 <xref:System.Windows.Forms.PictureBoxSizeMode>로 설정합니다.  <xref:System.Windows.Forms.PictureBoxSizeMode>로 설정하면 이미지가 컨트롤의 왼쪽 위 모퉁이에 배치됩니다. 이미지가 컨트롤보다 크면 이미지의 아래쪽과 오른쪽 모퉁이가 잘립니다.  <xref:System.Windows.Forms.PictureBoxSizeMode>로 설정하면 이미지가 컨트롤의 가운데에 배치됩니다. 이미지가 컨트롤보다 크면 이미지의 외곽이 잘립니다.  <xref:System.Windows.Forms.PictureBoxSizeMode>로 설정하면 컨트롤 크기가 이미지 크기에 맞게 조정됩니다.  이와 반대로 <xref:System.Windows.Forms.PictureBoxSizeMode>로 설정하면 이미지 크기가 컨트롤 크기에 맞게 조정됩니다.  
+1.  <span data-ttu-id="8d3bd-111">설정 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 를 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (기본값) 이면 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, 또는 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>합니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-111">Set <xref:System.Windows.Forms.PictureBox.SizeMode%2A> to <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (the default), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, or <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>.</span></span> <span data-ttu-id="8d3bd-112"><xref:System.Windows.Forms.PictureBoxSizeMode.Normal>컨트롤의 왼쪽 위 구석에;에 이미지를 배치 하는 방법 이미지 컨트롤 보다 큰 경우 아래쪽과 오른쪽 가장자리 잘립니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-112"><xref:System.Windows.Forms.PictureBoxSizeMode.Normal> means that the image is placed in the control's upper-left corner; if the image is larger than the control, its lower and right edges are clipped.</span></span> <span data-ttu-id="8d3bd-113"><xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>이미지 컨트롤에서 가운데 정렬 되어 있음을 의미 합니다. 이미지 컨트롤 보다 큰 경우 그림의 바깥쪽 가장자리 잘립니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-113"><xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> means that the image is centered within the control; if the image is larger than the control, the picture's outside edges are clipped.</span></span> <span data-ttu-id="8d3bd-114"><xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>컨트롤의 크기를 이미지의 크기를 조정할 수 있다는 것을 의미 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-114"><xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> means that the size of the control is adjusted to the size of the image.</span></span> <span data-ttu-id="8d3bd-115"><xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>와 반대 및 이미지의 크기를 컨트롤의 크기를 조정할 수 있다는 것을 의미 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-115"><xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> is the reverse, and means that the size of the image is adjusted to the size of the control.</span></span>  
   
-     다음 예제에서 이미지의 위치로 설정된 경로는 내 문서 폴더입니다.  Windows 운영 체제가 실행되는 대부분의 컴퓨터에는 내 문서 폴더가 포함되어 있으므로 이 위치를 사용합니다.  또한 이 위치를 선택하면 사용자는 최소한의 시스템 액세스 수준으로 응용 프로그램을 안전하게 실행할 수 있습니다.  아래 예제에서는 <xref:System.Windows.Forms.PictureBox> 컨트롤이 포함된 폼을 이미 추가한 것으로 가정합니다.  
+     <span data-ttu-id="8d3bd-116">아래 예제에서는 내 문서 폴더는 이미지의 위치에 대 한 설정 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-116">In the example below, the path set for the location of the image is the My Documents folder.</span></span> <span data-ttu-id="8d3bd-117">이 도구를 실행 하므로 대부분의 Windows 운영 체제 실행 컴퓨터는이 디렉터리를 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-117">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="8d3bd-118">또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 응용 프로그램을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-118">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="8d3bd-119">다음 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.PictureBox> 컨트롤이 이미 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d3bd-119">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
   
     ```vb  
     Private Sub StretchPic()  
@@ -54,7 +59,6 @@ caps.handback.revision: 12
        (System.Environment.SpecialFolder.Personal) _  
        & "\Image.gif")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +74,6 @@ caps.handback.revision: 12
        (System.Environment.SpecialFolder.Personal) _  
        + @"\Image.gif")  
     }  
-  
     ```  
   
     ```cpp  
@@ -89,9 +92,9 @@ caps.handback.revision: 12
        }  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.PictureBox>   
- [How to: Load a Picture Using the Designer](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)   
- [PictureBox 컨트롤 개요](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)   
- [방법: 런타임에 그림 설정](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)   
- [PictureBox 컨트롤](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8d3bd-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8d3bd-120">See Also</span></span>  
+ <xref:System.Windows.Forms.PictureBox>  
+ [<span data-ttu-id="8d3bd-121">방법: 디자이너를 사용하여 그림 로드</span><span class="sxs-lookup"><span data-stu-id="8d3bd-121">How to: Load a Picture Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [<span data-ttu-id="8d3bd-122">PictureBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="8d3bd-122">PictureBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="8d3bd-123">방법: 런타임에 그림 설정</span><span class="sxs-lookup"><span data-stu-id="8d3bd-123">How to: Set Pictures at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
+ [<span data-ttu-id="8d3bd-124">PictureBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="8d3bd-124">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

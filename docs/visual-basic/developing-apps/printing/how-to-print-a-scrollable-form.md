@@ -1,49 +1,48 @@
 ---
-title: "방법: 스크롤 가능 폼 인쇄(Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "전체 폼, 인쇄"
-  - "스크롤 가능 폼, 인쇄"
+title: "방법: 스크롤 가능 폼 인쇄(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- entire form [Visual Basic], printing
+- scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 380e0f833dc69718142809c99ed7615256dd2e73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 스크롤 가능 폼 인쇄(Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소를 사용하면 <xref:System.Drawing.Printing.PrintDocument> 구성 요소를 사용하지 않고 폼 이미지를 빠르게 인쇄할 수 있습니다. 기본적으로 폼의 현재 표시되는 부분만 인쇄되고, 사용자가 런타임에 폼 크기를 변경하면 이미지가 의도대로 인쇄되지 않을 수 있습니다. 다음 절차에서는 폼 크기가 조정되었더라도 스크롤 가능한 폼의 전체 클라이언트 영역을 인쇄하는 방법을 보여 줍니다.  
+# <a name="how-to-print-a-scrollable-form-visual-basic"></a><span data-ttu-id="55aad-102">방법: 스크롤 가능 폼 인쇄(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55aad-102">How to: Print a Scrollable Form (Visual Basic)</span></span>
+<span data-ttu-id="55aad-103"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소를 사용하면 <xref:System.Drawing.Printing.PrintDocument> 구성 요소를 사용하지 않고 폼 이미지를 빠르게 인쇄할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-103">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component enables you to quickly print an image of a form without using a <xref:System.Drawing.Printing.PrintDocument> component.</span></span> <span data-ttu-id="55aad-104">기본적으로 폼의 현재 표시되는 부분만 인쇄되고, 사용자가 런타임에 폼 크기를 변경하면 이미지가 의도대로 인쇄되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-104">By default, only the currently visible part of the form is printed; if a user has resized the form at run time, the image may not print as intended.</span></span> <span data-ttu-id="55aad-105">다음 절차에서는 폼 크기가 조정되었더라도 스크롤 가능한 폼의 전체 클라이언트 영역을 인쇄하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-105">The following procedure shows how to print the complete client area of a scrollable form, even if the form has been resized.</span></span>  
   
- PowerPack 컨트롤은 Visual Studio에 더 포함되지 않지만 [다운로드 센터](http://www.microsoft.com/en-us/download/details.aspx?id=25169)에서 다운로드할 수 있습니다.  
+ <span data-ttu-id="55aad-106">PowerPack 컨트롤은 Visual Studio에 더 포함되지 않지만 [다운로드 센터](http://www.microsoft.com/en-us/download/details.aspx?id=25169)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-106">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
   
-### 스크롤 가능한 폼의 전체 클라이언트 영역을 인쇄하려면  
+### <a name="to-print-the-complete-client-area-of-a-scrollable-form"></a><span data-ttu-id="55aad-107">스크롤 가능한 폼의 전체 클라이언트 영역을 인쇄하려면</span><span class="sxs-lookup"><span data-stu-id="55aad-107">To print the complete client area of a scrollable form</span></span>  
   
-1.  **도구 상자**에서 **Visual Basic PowerPacks** 탭을 클릭하고 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소를 폼으로 끕니다.  
+1.  <span data-ttu-id="55aad-108">**도구 상자**에서 **Visual Basic PowerPacks** 탭을 클릭하고 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소를 폼으로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-108">In the **Toolbox**, click the **Visual Basic PowerPacks** tab and then drag the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component onto the form.</span></span>  
   
-     <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소가 구성 요소 트레이에 추가됩니다.  
+     <span data-ttu-id="55aad-109"><xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 구성 요소가 구성 요소 트레이에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-109">The <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component will be added to the component tray.</span></span>  
   
-2.  **속성** 창에서 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> 속성을 <xref:System.Drawing.Printing.PrintAction>로 설정합니다.  
+2.  <span data-ttu-id="55aad-110">**속성** 창에서 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> 속성을 <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-110">In the **Properties** window, set the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> property to <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>.</span></span>  
   
-3.  **인쇄** `Button`용 `Click` 이벤트 처리기와 같은 적절한 이벤트 처리기에 다음 코드를 추가합니다.  
+3.  <span data-ttu-id="55aad-111">`Click` 인쇄 **용**`Button`이벤트 처리기와 같은 적절한 이벤트 처리기에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-111">Add the following code in the appropriate event handler (for example, in the `Click` event handler for a **Print**`Button`).</span></span>  
   
     ```  
     PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption.Scrollable)  
     ```  
   
     > [!NOTE]
-    >  일부 운영 체제에서는 <xref:System.Drawing.Graphics> 메서드로 그려진 텍스트나 그래픽이 제대로 인쇄되지 않을 수 있습니다. 이 경우 `Scrollable` 매개 변수를 사용해서 인쇄할 수 없습니다.  
+    >  <span data-ttu-id="55aad-112">일부 운영 체제에서는 <xref:System.Drawing.Graphics> 메서드로 그려진 텍스트나 그래픽이 제대로 인쇄되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-112">On some operating systems, text or graphics drawn by <xref:System.Drawing.Graphics> methods may not print correctly.</span></span> <span data-ttu-id="55aad-113">이 경우 `Scrollable` 매개 변수를 사용해서 인쇄할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="55aad-113">In this case, you will not be able to print with the `Scrollable` parameter.</span></span>  
   
-## 참고 항목  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>   
- [PrintForm Component](../../../visual-basic/developing-apps/printing/printform-component.md)   
- [방법: 폼의 클라이언트 영역 인쇄](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)   
- [방법: 폼의 클라이언트 영역 및 비클라이언트 영역 인쇄](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+## <a name="see-also"></a><span data-ttu-id="55aad-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="55aad-114">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
+ [<span data-ttu-id="55aad-115">PrintForm 구성 요소</span><span class="sxs-lookup"><span data-stu-id="55aad-115">PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/printform-component.md)  
+ [<span data-ttu-id="55aad-116">방법: 폼의 클라이언트 영역 인쇄</span><span class="sxs-lookup"><span data-stu-id="55aad-116">How to: Print the Client Area of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
+ [<span data-ttu-id="55aad-117">방법: 폼의 클라이언트 영역 및 비클라이언트 영역 인쇄</span><span class="sxs-lookup"><span data-stu-id="55aad-117">How to: Print Client and Non-Client Areas of a Form</span></span>](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)

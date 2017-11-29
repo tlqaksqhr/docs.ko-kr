@@ -1,94 +1,101 @@
 ---
-title: "방법: 인쇄 작업 문제 진단 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인쇄 작업, 문제 진단"
-  - "인쇄 작업, 문제 해결"
-  - "인쇄 작업 문제 해결"
+title: "방법: 인쇄 작업 문제 진단"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- troubleshooting print job problems [WPF]
+- print jobs [WPF], troubleshooting
+- print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: acc757d899da3ff737b2884131b77135265fd197
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 인쇄 작업 문제 진단
-인쇄되지 않거나 느리게 인쇄되는 인쇄 작업과 관련된 사용자의 불만을 네트워크 관리자가 해결하는 경우가 흔히 있습니다.  [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]의 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]에 노출된 다양한 인쇄 작업 속성 집합은 인쇄 작업을 원격에서 빠르게 진단할 수 있는 방법을 제공합니다.  
+# <a name="how-to-diagnose-problematic-print-job"></a><span data-ttu-id="f5b99-102">방법: 인쇄 작업 문제 진단</span><span class="sxs-lookup"><span data-stu-id="f5b99-102">How to: Diagnose Problematic Print Job</span></span>
+<span data-ttu-id="f5b99-103">네트워크 관리자는 사용자로부터 인쇄 작업이 인쇄되지 않거나 느리게 인쇄되는 문제에 대한 불만을 흔히 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-103">Network administrators often field complaints from users about print jobs that do not print or print slowly.</span></span> <span data-ttu-id="f5b99-104">[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]의 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]에 노출된 다양한 인쇄 작업 속성은 인쇄 작업의 신속한 원격 진단을 수행하기 위한 수단을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-104">The rich set of print job properties exposed in the [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] of [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] provide a means for performing a rapid remote diagnosis of print jobs.</span></span>  
   
-## 예제  
- 이러한 종류의 유틸리티를 만드는 주요 단계는 다음과 같습니다.  
+## <a name="example"></a><span data-ttu-id="f5b99-105">예제</span><span class="sxs-lookup"><span data-stu-id="f5b99-105">Example</span></span>  
+ <span data-ttu-id="f5b99-106">이러한 종류의 유틸리티를 만드는 주요 단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-106">The major steps for creating this kind of utility are as follows.</span></span>  
   
-1.  사용자가 불만족을 표시하는 인쇄 작업을 식별합니다.  사용자는 이 작업을 정확하게 수행할 수 없는 경우가 많습니다.  사용자는 인쇄 서버나 프린터의 이름을 모를 수 있습니다.  또한 해당 <xref:System.Printing.PrintQueue.Location%2A> 속성을 설정할 때 사용한 것과 다른 용어로 프린터 위치를 설명할 수 있습니다.  따라서 사용자가 현재 제출한 작업의 목록을 생성하는 것이 좋습니다.  둘 이상의 작업이 있는 경우 사용자와 인쇄 시스템 관리자 간의 통신으로 문제가 있는 작업을 찾을 수 있습니다.  하위 단계는 다음과 같습니다.  
+1.  <span data-ttu-id="f5b99-107">사용자가 불만족하는 인쇄 작업을 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-107">Identify the print job that the user is complaining about.</span></span> <span data-ttu-id="f5b99-108">사용자는 흔히 이런 작업을 정확하게 수행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-108">Users often cannot do this precisely.</span></span> <span data-ttu-id="f5b99-109">인쇄 서버 또는 프린터의 이름을 모를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-109">They may not know the names of the print servers or printers.</span></span> <span data-ttu-id="f5b99-110">설정에 사용한 것과 다른 용어로 프린터의 위치를 설명할 수 있습니다는 <xref:System.Printing.PrintQueue.Location%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-110">They may describe the location of the printer in different terminology than was used in setting its <xref:System.Printing.PrintQueue.Location%2A> property.</span></span> <span data-ttu-id="f5b99-111">따라서 사용자가 현재 제출한 작업 목록을 생성하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-111">Accordingly, it is a good idea to generate a list of the user's currently submitted jobs.</span></span> <span data-ttu-id="f5b99-112">둘 이상인 경우 사용자와 인쇄 시스템 관리자 간의 통신을 사용하여 문제가 있는 작업을 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-112">If there is more than one, then communication between the user and the print system administrator can be used to pinpoint the job that is having problems.</span></span> <span data-ttu-id="f5b99-113">하위단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-113">The substeps are as follows.</span></span>  
   
-    1.  모든 인쇄 서버의 목록을 가져옵니다.  
+    1.  <span data-ttu-id="f5b99-114">모든 인쇄 서버 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-114">Obtain a list of all print servers.</span></span>  
   
-    2.  서버를 순환 검색하여 해당 인쇄 큐를 쿼리합니다.  
+    2.  <span data-ttu-id="f5b99-115">서버를 반복하여 해당 인쇄 큐를 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-115">Loop through the servers to query their print queues.</span></span>  
   
-    3.  서버 루프의 각 처리 내에서 모든 서버 큐를 순환하며 해당 작업을 쿼리합니다  
+    3.  <span data-ttu-id="f5b99-116">서버 루프의 각 단계 내에서 해당 작업을 쿼리하는 모든 서버의 큐를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-116">Within each pass of the server loop, loop through all the server's queues to query their jobs</span></span>  
   
-    4.  큐 루프의 각 처리 내에서 해당 작업을 순환하며 불평하는 사용자가 제출한 작업에 대한 식별 정보를 수집합니다.  
+    4.  <span data-ttu-id="f5b99-117">큐 루프의 각 단계 내에서 해당 작업을 반복하고 불만이 있는 사용자가 제출한 작업에 대한 식별 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-117">Within each pass of the queue loop, loop through its jobs and gather identifying information about those that were submitted by the complaining user.</span></span>  
   
-2.  문제가 있는 인쇄 작업을 식별했으면 관련 속성을 검사하여 문제를 확인합니다.  예를 들어 작업이 오류 상태이거나 작업이 인쇄되기 전에 큐를 처리하는 프린터가 오프라인으로 전환되었는지 확인합니다.  
+2.  <span data-ttu-id="f5b99-118">인쇄 작업 문제를 식별하는 경우 관련 속성을 검사하여 문제가 무엇인지를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-118">When the problematic print job has been identified, examine relevant properties to see what might be the problem.</span></span> <span data-ttu-id="f5b99-119">예를 들어 작업이 오류 상태이거나 작업이 인쇄되기 전에 큐를 제공하는 프린터가 오프라인으로 전환되었는지와 같은 문제입니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-119">For example, is job in an error state or did the printer servicing the queue go offline before the job could print?</span></span>  
   
- 아래의 코드는 일련의 코드 예제입니다.  첫 번째 코드 예제에는 인쇄 큐 순환이 포함되어 있습니다\(위의  단계 1c 참조\). `myPrintQueues` 변수는 현재 인쇄 서버의 <xref:System.Printing.PrintQueueCollection> 개체입니다.  
+ <span data-ttu-id="f5b99-120">아래 코드는 일련의 코드 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-120">The code below is series of code examples.</span></span> <span data-ttu-id="f5b99-121">첫 번째 코드 예제는 인쇄 대기열을 통한 루프를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-121">The first code example contains the loop through the print queues.</span></span> <span data-ttu-id="f5b99-122">(위의 1c 단계.) 변수 `myPrintQueues` 는 <xref:System.Printing.PrintQueueCollection> 현재 인쇄 서버에 대 한 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-122">(Step 1c above.) The variable `myPrintQueues` is the <xref:System.Printing.PrintQueueCollection> object for the current print server.</span></span>  
   
- 이 코드 예제에서는 먼저 <xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=fullName>를 사용하여 현재 인쇄 큐를 새로 고칩니다.  그러면 개체의 속성이 해당하는 실제 프린터의 상태가 정확하게 나타나게 됩니다.  그런 다음 응용 프로그램에서는 <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>을 사용하여 현재 인쇄 큐에 있는 인쇄 작업을 컬렉션을 가져옵니다.  
+ <span data-ttu-id="f5b99-123">현재 인쇄 큐 개체와 새로 고쳐서 코드 예제에서는 먼저 <xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-123">The code example begins by refreshing the current print queue object with <xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f5b99-124">이렇게 하면 개체의 속성이 나타내는 실제 프린터의 상태를 정확하게 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-124">This ensures that the object's properties accurately represent the state of the physical printer that it represents.</span></span> <span data-ttu-id="f5b99-125">응용 프로그램의에서 컬렉션을 가져옵니다 인쇄 작업의 현재 인쇄 큐를 사용 하 여 다음 <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-125">Then the application gets the collection of print jobs currently in the print queue by using <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>.</span></span>  
   
- 다음으로 응용 프로그램에서는 <xref:System.Printing.PrintSystemJobInfo> 컬렉션을 순환하며 각 <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> 속성과 불평하는 사용자의 별칭을 비교합니다.  이 둘이 일치하면 응용 프로그램에서는 작업에 대한 식별 정보를 표시할 문자열에 추가합니다.  `userName` 및 `jobList` 변수는 응용 프로그램에서 이전에 초기화했습니다.  
+ <span data-ttu-id="f5b99-126">응용 프로그램을 반복 하는 다음의 <xref:System.Printing.PrintSystemJobInfo> 컬렉션 및 비교 하 여 각 <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> 불평 하는 사용자의 별칭을 사용 하 여 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-126">Next the application loops through the <xref:System.Printing.PrintSystemJobInfo> collection and compares each <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> property with the alias of the complaining user.</span></span> <span data-ttu-id="f5b99-127">일치하는 경우 응용 프로그램은 표시될 문자열 작업에 대한 식별 정보를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-127">If they match, the application adds identifying information about the job to the string that will be presented.</span></span> <span data-ttu-id="f5b99-128">(`userName` 및 `jobList` 변수는 응용 프로그램의 앞부분에서 초기화됩니다.)</span><span class="sxs-lookup"><span data-stu-id="f5b99-128">(The `userName` and `jobList` variables are initialized earlier in the application.)</span></span>  
   
  [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
  [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
  [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
   
- 다음 코드 예제에서는 2단계의 응용 프로그램을  선택합니다\(앞 부분 참조\). 문제 있는 작업을 식별하고 나면 응용 프로그램에 문제를 식별할 정보를 입력하라는 메시지가 표시됩니다.  이 정보를 사용하여 <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 개체를 만듭니다.  
+ <span data-ttu-id="f5b99-129">다음 코드 예제에서는 2단계의 응용 프로그램을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-129">The next code example picks up the application at Step 2.</span></span> <span data-ttu-id="f5b99-130">(위를 참조) 문제가 있는 작업이 식별되고 응용 프로그램이 식별되는 정보를 묻는 메시지를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-130">(See above.) The problematic job has been identified and the application prompts for the information that will identify it.</span></span> <span data-ttu-id="f5b99-131">이 정보 만듭니다 <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, 및 <xref:System.Printing.PrintSystemJobInfo> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-131">From this information it creates <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, and <xref:System.Printing.PrintSystemJobInfo> objects.</span></span>  
   
- 이제 응용 프로그램에는 인쇄 작업의 상태를 확인하는 두 가지 방법에 해당하는 분기 구조가 있습니다.  
+ <span data-ttu-id="f5b99-132">이 시점에서 응용 프로그램에는 인쇄 작업의 상태를 검사하는 두 가지 방법에 해당하는 분기 구조가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-132">At this point the application contains a branching structure corresponding to the two ways of checking a print job's status:</span></span>  
   
--   형식이 <xref:System.Printing.PrintJobStatus>인 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 속성의 플래그를 읽을 수 있습니다.  
+-   <span data-ttu-id="f5b99-133">플래그를 읽을 수는 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 형식인 속성 <xref:System.Printing.PrintJobStatus>합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-133">You can read the flags of the <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> property which is of type <xref:System.Printing.PrintJobStatus>.</span></span>  
   
--   <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> 및 <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>와 같은 관련된 각 속성을 읽을 수 있습니다.  
+-   <span data-ttu-id="f5b99-134">와 같은 관련 된 각 속성을 읽을 수 있습니다 <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> 및 <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-134">You can read each relevant property such as <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> and <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.</span></span>  
   
- 이 예제에서는 두 메서드를 모두 보여 줍니다. 따라서 사용자는 이전에 사용할 메서드를 묻는 메시지가 표시될 때 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 속성의 플래그를 사용하려는 경우 "Y"로 대답했을 것입니다.  두 메서드의 세부 사항은 아래를 참조하십시오.  마지막으로 응용 프로그램에서는 **ReportQueueAndJobAvailability**라는 메서드를 사용하여 작업을 현재 인쇄할 수 있는지 여부를 보고합니다.  이 메서드에 대해서는 [인쇄 작업을 현재 인쇄할 수 있는지 확인](../../../../docs/framework/wpf/advanced/how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)에서 설명합니다.  
+ <span data-ttu-id="f5b99-135">사용자가 이전에 사용할 방법에 대 한 메시지가 표시 되 고의 플래그를 사용 하려는 경우 "y" 응답 두 메서드를 보여 주는이 예제는 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-135">This example demonstrates both methods, so the user was previously prompted as to which method to use and responded with "Y" if he or she wanted to use the flags of the <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> property.</span></span> <span data-ttu-id="f5b99-136">두 가지 방법에 대한 자세한 내용은 아래를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f5b99-136">See below for the details of the two methods.</span></span> <span data-ttu-id="f5b99-137">마지막으로 응용 프로그램이 **ReportQueueAndJobAvailability**라는 메서드를 사용하여 이 시간에 작업을 인쇄할 수 있는지 여부를 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-137">Finally, the application uses a method called **ReportQueueAndJobAvailability** to report on whether the job can be printed at this time of day.</span></span> <span data-ttu-id="f5b99-138">[인쇄 작업을 현재 인쇄할 수 있는지 확인](../../../../docs/framework/wpf/advanced/how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)에서 이 메서드를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-138">This method is discussed in [Discover Whether a Print Job Can Be Printed At This Time of Day](../../../../docs/framework/wpf/advanced/how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).</span></span>  
   
  [!code-cpp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#identifyanddiagnoseproblematicjob)]
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 속성의 플래그를 사용하여 인쇄 작업 상태를 검사하려면 관련된 각 플래그를 검사하여 설정되어 있는지 확인합니다.  한 비트가 비트 플래그 집합에 설정되어 있는지 알아볼 수 있는 표준 방법은 플래그 집합을 한 피연산자로 사용하고 플래그 자체를 다른 피연산자로 사용하여 논리 AND 연산을 수행하는 것입니다.  플래그 자체는 한 비트만 설정되므로 논리 AND의 결과는 기껏해야 같은 비트를 설정하는 것입니다.  해당 비트가 설정되어 있는지 확인하려면 논리 AND의 결과를 플래그 자체와 비교하면 됩니다.  자세한 내용은 <xref:System.Printing.PrintJobStatus>, [& 연산자\(C\# 참조\)](../Topic/&%20Operator%20\(C%23%20Reference\).md) 및 <xref:System.FlagsAttribute>를 참조하십시오.  
+ <span data-ttu-id="f5b99-139">플래그를 사용 하 여 인쇄 작업 상태를 확인 하 고 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 각 관련 플래그를 설정 하는 경우 참조 확인 속성을 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-139">To check print job status using the flags of the <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> property, you check each relevant flag to see if it is set.</span></span> <span data-ttu-id="f5b99-140">일련의 비트 플래그에 하나의 비트가 설정되었는지 확인하는 표준 방법은 일련의 플래그가 있는 논리적 AND 연산을 하나의 피연산자로 수행하고 플래그 자체를 다른 피연산자로 수행하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-140">The standard way to see if one bit is set in a set of bit flags is to perform a logical AND operation with the set of flags as one operand and the flag itself as the other.</span></span> <span data-ttu-id="f5b99-141">플래그 자체가 하나의 비트만 설정하므로 논리적 AND의 결과는 비트가 설정되는 것과 거의 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-141">Since the flag itself has only one bit set, the result of the logical AND is that, at most, that same bit is set.</span></span> <span data-ttu-id="f5b99-142">여부를 확인하려면 플래그 자체와 논리적 AND의 결과를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-142">To find out whether it is or not, just compare the result of the logical AND with the flag itself.</span></span> <span data-ttu-id="f5b99-143">자세한 내용은 참조 <xref:System.Printing.PrintJobStatus>, [& 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/and-operator.md), 및 <xref:System.FlagsAttribute>합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-143">For more information, see <xref:System.Printing.PrintJobStatus>, the [& Operator (C# Reference)](~/docs/csharp/language-reference/operators/and-operator.md), and <xref:System.FlagsAttribute>.</span></span>  
   
- 비트가 설정된 각 특성에 대해 코드에서는 이를 콘솔 화면에 보고하고 경우에 따라 응답 방법을 제안합니다.  작업 또는 큐가 일시 중지하는 경우 호출하는 **HandlePausedJob** 메서드에 대해서는 아래에서 설명합니다.  
+ <span data-ttu-id="f5b99-144">비트가 설정된 각 특성의 경우 코드는 콘솔 화면에 이를 보고하고 경우에 따라 응답하는 방법을 제안합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-144">For each attribute whose bit is set, the code reports this to the console screen and sometimes suggests a way to respond.</span></span> <span data-ttu-id="f5b99-145">작업 또는 큐가 일시 중지되는 경우 호출되는 **HandlePausedJob** 메서드는 아래에 설명됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-145">(The **HandlePausedJob** method that is called if the job or queue is paused is discussed below.)</span></span>  
   
  [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobattributes)]
  [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobattributes)]
  [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobattributes)]  
   
- 별도의 속성을 사용하여 인쇄 작업 상태를 검사하려면 각 속성을 읽고 속성이 `true`인 경우 콘솔 화면에 보고하고 가능한 경우 응답 방법을 제안하면 됩니다.  작업 또는 큐가 일시 중지하는 경우 호출하는 **HandlePausedJob** 메서드에 대해서는 아래에서 설명합니다.  
+ <span data-ttu-id="f5b99-146">별도 속성을 사용하여 인쇄 작업 상태를 확인하려면 단순히 각 속성을 읽고 속성이 `true`인 경우 콘솔 화면에 보고하고 응답하는 방법을 제안할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-146">To check print job status using separate properties, you simply read each property and, if the property is `true`, report to the console screen and possibly suggest a way to respond.</span></span> <span data-ttu-id="f5b99-147">작업 또는 큐가 일시 중지되는 경우 호출되는 **HandlePausedJob** 메서드는 아래에 설명됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-147">(The **HandlePausedJob** method that is called if the job or queue is paused is discussed below.)</span></span>  
   
  [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
  [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
  [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
   
- **HandlePausedJob** 메서드를 사용하면 응용 프로그램의 사용자가 일시 중지된 작업을 원격으로 다시 시작할 수 있습니다.  인쇄 큐가 일시 중지된 이유가 있을 것이므로 메서드에서는 먼저 작업을 다시 시작할지 여부에 대한 사용자의 결정을 묻는 메시지를 표시합니다.  "Y"로 대답하면 <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=fullName> 메서드를 호출합니다.  
+ <span data-ttu-id="f5b99-148">**HandlePausedJob** 메서드를 사용하면 응용 프로그램의 사용자가 원격으로 일시 중지된 작업을 다시 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-148">The **HandlePausedJob** method enables the application's user to remotely resume paused jobs.</span></span> <span data-ttu-id="f5b99-149">인쇄 대기열이 일시 중지된 이유가 있을 수 있기 때문에 다시 시작할지 여부에 대한 사용자 결정을 묻는 메시지를 표시하여 메서드를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-149">Because there might be a good reason why the print queue was paused, the method begins by prompting for a user decision about whether to resume it.</span></span> <span data-ttu-id="f5b99-150">"Y" 대답 한 경우 하면 <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType> 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-150">If the answer is "Y", then the <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType> method is called.</span></span>  
   
- 그런 다음, 작업이 인쇄 큐와 별개로 일시 중지된 경우에 한해 작업 자체를 다시 시작할지 여부를 결정하라는 메시지를 표시합니다.  <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=fullName>와 <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=fullName>를 비교해 보십시오. "Y"로 대답하면 <xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=fullName> 메서드를 호출하고 그렇지 않으면 <xref:System.Printing.PrintSystemJobInfo.Cancel%2A> 메서드를 호출합니다.  
+ <span data-ttu-id="f5b99-151">다음으로 작업이 인쇄 대기열에서 독립적으로 일시 중지된 경우 사용자에게 작업 자체를 다시 시작할지를 결정하라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-151">Next the user is prompted to decide if the job itself should be resumed, just in case it is paused independently of the print queue.</span></span> <span data-ttu-id="f5b99-152">(비교 <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType> 및 <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>.) 대답이 "Y" 하면 <xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType> 호출 되지 않았으면 <xref:System.Printing.PrintSystemJobInfo.Cancel%2A> 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5b99-152">(Compare <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType> and <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>.) If the answer is "Y", then <xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType> is called; otherwise <xref:System.Printing.PrintSystemJobInfo.Cancel%2A> is called.</span></span>  
   
  [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
  [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
  [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
-## 참고 항목  
- <xref:System.Printing.PrintJobStatus>   
- <xref:System.Printing.PrintSystemJobInfo>   
- <xref:System.FlagsAttribute>   
- <xref:System.Printing.PrintQueue>   
- [& 연산자\(C\# 참조\)](../Topic/&%20Operator%20\(C%23%20Reference\).md)   
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [인쇄 개요](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f5b99-153">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f5b99-153">See Also</span></span>  
+ <xref:System.Printing.PrintJobStatus>  
+ <xref:System.Printing.PrintSystemJobInfo>  
+ <xref:System.FlagsAttribute>  
+ <xref:System.Printing.PrintQueue>  
+ [<span data-ttu-id="f5b99-154">& 연산자 (C# 참조)</span><span class="sxs-lookup"><span data-stu-id="f5b99-154">& Operator (C# Reference)</span></span>](~/docs/csharp/language-reference/operators/and-operator.md)  
+ [<span data-ttu-id="f5b99-155">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="f5b99-155">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="f5b99-156">인쇄 개요</span><span class="sxs-lookup"><span data-stu-id="f5b99-156">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)

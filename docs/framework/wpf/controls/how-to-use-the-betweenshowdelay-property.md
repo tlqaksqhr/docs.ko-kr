@@ -1,41 +1,44 @@
 ---
-title: "방법: BetweenShowDelay 속성 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BetweenShowDelay 시간 속성"
-  - "ToolTip 컨트롤, BetweenShowDelay 시간 속성"
+title: "방법: BetweenShowDelay 속성 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolTip control [WPF], BetweenShowDelay time property
+- BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dca6dc7c6238ef4accc921818090237d17ce1cbd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: BetweenShowDelay 속성 사용
-이 예제에서는 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> 시간 속성을 사용하여 사용자가 한 도구 설명에서 다른 도구 설명으로 마우스 포인터를 이동할 때 지연 없이 도구 설명이 빠르게 나타나도록 설정하는 방법을 보여 줍니다.  
+# <a name="how-to-use-the-betweenshowdelay-property"></a><span data-ttu-id="5a351-102">방법: BetweenShowDelay 속성 사용</span><span class="sxs-lookup"><span data-stu-id="5a351-102">How to: Use the BetweenShowDelay Property</span></span>
+<span data-ttu-id="5a351-103">사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> 도구 설명 신속 하 게 표시 되도록 시간 속성-거의 없거나 전혀 없이 지연 되어 — 사용자로 이동 하면 마우스 포인터 한 도구 설명에서 직접 다른 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a351-103">This example shows how to use the <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> time property so that tooltips appear quickly—with little or no delay—when a user moves the mouse pointer from one tooltip directly to another.</span></span>  
   
-## 예제  
- 다음 예제에서는 두 <xref:System.Windows.Shapes.Ellipse> 컨트롤의 도구 설명 모두에 대해 <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> 속성은 1초\(1000밀리초\)로 설정하고 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>는 2초\(2000밀리초\)로 설정합니다.  Ellipse 중 하나에 대한 도구 설명을 표시한 다음 2초 내에 마우스 포인터를 다른 Ellipse로 이동하여 그 위에 계속 두면 두 번째 Ellipse의 도구 설명이 즉시 표시됩니다.  
+## <a name="example"></a><span data-ttu-id="5a351-104">예제</span><span class="sxs-lookup"><span data-stu-id="5a351-104">Example</span></span>  
+ <span data-ttu-id="5a351-105">다음 예제에서는 <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> 속성이 1 초인 (1000 밀리초)로 설정 되어 및 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> 모두의 도구 설명에 대 한 2 초 (2000 밀리초)로 설정 된 <xref:System.Windows.Shapes.Ellipse> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="5a351-105">In the following example, the <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> property is set to one second (1000 milliseconds) and the <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> is set to two seconds (2000 milliseconds) for the tooltips of both <xref:System.Windows.Shapes.Ellipse> controls.</span></span> <span data-ttu-id="5a351-106">타원 중 하나에 대 한 도구 설명을 표시 하 고 다음 마우스 포인터를 이동 다른 타원에 일시 중지 하 고 2 초 내에 두 번째 타원의 도구 설명 바로 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a351-106">If you display the tooltip for one of the ellipses and then move the mouse pointer to another ellipse within two seconds and pause on it, the tooltip of the second ellipse displays immediately.</span></span>  
   
- 다음과 같은 시나리오 중 하나에서 <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>를 적용하면 두 번째 Ellipse의 도구 설명이 1초 후에 나타납니다.  
+ <span data-ttu-id="5a351-107">다음 시나리오 중 하나에서 <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> 적용 되 고 표시 될 때까지 1 초에 두 번째 타원은 도구 설명에 이르게:</span><span class="sxs-lookup"><span data-stu-id="5a351-107">In either of the following scenarios, the <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> applies, which causes the tooltip for the second ellipse to wait one second before it appears:</span></span>  
   
--   두 번째 단추로 이동하는 데 걸린 시간이 2초 이상인 경우  
+-   <span data-ttu-id="5a351-108">두 번째 단추는 시간을 이동 하는 데 걸리는 경우 2 초 이상.</span><span class="sxs-lookup"><span data-stu-id="5a351-108">If the time it takes to move to the second button is more than two seconds.</span></span>  
   
--   첫 번째 Ellipse에 대한 시간 간격의 시작 부분에서 도구 설명이 표시되지 않는 경우  
+-   <span data-ttu-id="5a351-109">도구 설명은 첫 번째 타원은 시간 간격의 시작 부분에 표시 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5a351-109">If the tooltip is not visible at the beginning of the time interval for the first ellipse.</span></span>  
   
- [!code-xml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
-[!code-xml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+[!code-xaml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
-## 참고 항목  
- <xref:System.Windows.Controls.ToolTip>   
- <xref:System.Windows.Controls.ToolTipService>   
- [방법 항목](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)   
- [도구 설명 개요](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+## <a name="see-also"></a><span data-ttu-id="5a351-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5a351-110">See Also</span></span>  
+ <xref:System.Windows.Controls.ToolTip>  
+ <xref:System.Windows.Controls.ToolTipService>  
+ [<span data-ttu-id="5a351-111">방법 항목</span><span class="sxs-lookup"><span data-stu-id="5a351-111">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [<span data-ttu-id="5a351-112">도구 설명 개요</span><span class="sxs-lookup"><span data-stu-id="5a351-112">ToolTip Overview</span></span>](../../../../docs/framework/wpf/controls/tooltip-overview.md)

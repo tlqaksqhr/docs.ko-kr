@@ -1,61 +1,64 @@
 ---
-title: "OLE DB 데이터 형식 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "OLE DB 데이터 형식 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 350364c92d6159313d8fae6d6f9986a5e581d89c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# OLE DB 데이터 형식 매핑
-다음 표에서는 .NET Framework Data Provider ADO 및 OLE DB\(<xref:System.Data.OleDb>\)의 데이터 형식에 대해 유추된 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식을 보여 줍니다.  또한 이 표에는 <xref:System.Data.OleDb.OleDbDataReader>의 형식화된 접근자 메서드도 나열되어 있습니다.  
+# <a name="ole-db-data-type-mappings"></a><span data-ttu-id="2233d-102">OLE DB 데이터 형식 매핑</span><span class="sxs-lookup"><span data-stu-id="2233d-102">OLE DB Data Type Mappings</span></span>
+<span data-ttu-id="2233d-103">다음 표에서는 .NET Framework Data Provider ADO 및 OLE DB([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)])의 데이터 형식에 대해 유추된 <xref:System.Data.OleDb> 형식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2233d-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ADO and OLE DB (<xref:System.Data.OleDb>).</span></span> <span data-ttu-id="2233d-104">또한 이 표에는 <xref:System.Data.OleDb.OleDbDataReader>의 형식화된 접근자 메서드도 나열되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2233d-104">The typed accessor methods for the <xref:System.Data.OleDb.OleDbDataReader> are also listed.</span></span>  
   
-|ADO 형식|OLE DB 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 형식화된 접근자|  
-|------------|---------------|--------------------------------------------------------------------|---------------------------------------------------------------------------|  
-|adBigInt|DBTYPE\_I8|Int64|GetInt64\(\)|  
-|adBinary|DBTYPE\_BYTES|Byte\[\]|GetBytes\(\)|  
-|adBoolean|DBTYPE\_BOOL|Boolean|GetBoolean\(\)|  
-|adBSTR|DBTYPE\_BSTR|문자열|GetString\(\)|  
-|adChapter|DBTYPE\_HCHAPTER|`DataReader`를 통해 지원됩니다.  [DataReader를 사용하여 데이터 검색](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)을 참조하세요.|GetValue\(\)|  
-|adChar|DBTYPE\_STR|문자열|GetString\(\)|  
-|adCurrency|DBTYPE\_CY|Decimal|GetDecimal\(\)|  
-|adDate|DBTYPE\_DATE|DateTime|GetDateTime\(\)|  
-|adDBDate|DBTYPE\_DBDATE|DateTime|GetDateTime\(\)|  
-|adDBTime|DBTYPE\_DBTIME|DateTime|GetDateTime\(\)|  
-|adDBTimeStamp|DBTYPE\_DBTIMESTAMP|DateTime|GetDateTime\(\)|  
-|adDecimal|DBTYPE\_DECIMAL|Decimal|GetDecimal\(\)|  
-|adDouble|DBTYPE\_R8|Double|GetDouble\(\)|  
-|adError|DBTYPE\_ERROR|ExternalException|GetValue\(\)|  
-|adFileTime|DBTYPE\_FILETIME|DateTime|GetDateTime\(\)|  
-|adGUID|DBTYPE\_GUID|Guid|GetGuid\(\)|  
-|adIDispatch|DBTYPE\_IDISPATCH \*|개체|GetValue\(\)|  
-|adInteger|DBTYPE\_I4|Int32|GetInt32\(\)|  
-|adIUnknown|DBTYPE\_IUNKNOWN \*|개체|GetValue\(\)|  
-|adNumeric|DBTYPE\_NUMERIC|Decimal|GetDecimal\(\)|  
-|adPropVariant|DBTYPE\_PROPVARIANT|개체|GetValue\(\)|  
-|adSingle|DBTYPE\_R4|Single|GetFloat\(\)|  
-|adSmallInt|DBTYPE\_I2|Int16|GetInt16\(\)|  
-|adTinyInt|DBTYPE\_I1|Byte|GetByte\(\)|  
-|adUnsignedBigInt|DBTYPE\_UI8|UInt64|GetValue\(\)|  
-|adUnsignedInt|DBTYPE\_UI4|UInt32|GetValue\(\)|  
-|adUnsignedSmallInt|DBTYPE\_UI2|UInt16|GetValue\(\)|  
-|adUnsignedTinyInt|DBTYPE\_UI1|Byte|GetByte\(\)|  
-|adVariant|DBTYPE\_VARIANT|개체|GetValue\(\)|  
-|adWChar|DBTYPE\_WSTR|문자열|GetString\(\)|  
-|adUserDefined|DBTYPE\_UDT|지원되지 않음||  
-|adVarNumeric|DBTYPE\_VARNUMERIC|지원되지 않음||  
+|<span data-ttu-id="2233d-105">ADO 형식</span><span class="sxs-lookup"><span data-stu-id="2233d-105">ADO type</span></span>|<span data-ttu-id="2233d-106">OLE DB 형식</span><span class="sxs-lookup"><span data-stu-id="2233d-106">OLE DB type</span></span>|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]<span data-ttu-id="2233d-107"> 형식</span><span class="sxs-lookup"><span data-stu-id="2233d-107"> type</span></span>|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]<span data-ttu-id="2233d-108">의 형식화된 접근자</span><span class="sxs-lookup"><span data-stu-id="2233d-108"> typed accessor</span></span>|  
+|--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
+|<span data-ttu-id="2233d-109">adBigInt</span><span class="sxs-lookup"><span data-stu-id="2233d-109">adBigInt</span></span>|<span data-ttu-id="2233d-110">DBTYPE_I8</span><span class="sxs-lookup"><span data-stu-id="2233d-110">DBTYPE_I8</span></span>|<span data-ttu-id="2233d-111">Int64</span><span class="sxs-lookup"><span data-stu-id="2233d-111">Int64</span></span>|<span data-ttu-id="2233d-112">GetInt64()</span><span class="sxs-lookup"><span data-stu-id="2233d-112">GetInt64()</span></span>|  
+|<span data-ttu-id="2233d-113">adBinary</span><span class="sxs-lookup"><span data-stu-id="2233d-113">adBinary</span></span>|<span data-ttu-id="2233d-114">DBTYPE_BYTES</span><span class="sxs-lookup"><span data-stu-id="2233d-114">DBTYPE_BYTES</span></span>|<span data-ttu-id="2233d-115">Byte[]</span><span class="sxs-lookup"><span data-stu-id="2233d-115">Byte[]</span></span>|<span data-ttu-id="2233d-116">GetBytes()</span><span class="sxs-lookup"><span data-stu-id="2233d-116">GetBytes()</span></span>|  
+|<span data-ttu-id="2233d-117">adBoolean</span><span class="sxs-lookup"><span data-stu-id="2233d-117">adBoolean</span></span>|<span data-ttu-id="2233d-118">DBTYPE_BOOL</span><span class="sxs-lookup"><span data-stu-id="2233d-118">DBTYPE_BOOL</span></span>|<span data-ttu-id="2233d-119">Boolean</span><span class="sxs-lookup"><span data-stu-id="2233d-119">Boolean</span></span>|<span data-ttu-id="2233d-120">GetBoolean()</span><span class="sxs-lookup"><span data-stu-id="2233d-120">GetBoolean()</span></span>|  
+|<span data-ttu-id="2233d-121">adBSTR</span><span class="sxs-lookup"><span data-stu-id="2233d-121">adBSTR</span></span>|<span data-ttu-id="2233d-122">DBTYPE_BSTR</span><span class="sxs-lookup"><span data-stu-id="2233d-122">DBTYPE_BSTR</span></span>|<span data-ttu-id="2233d-123">문자열</span><span class="sxs-lookup"><span data-stu-id="2233d-123">String</span></span>|<span data-ttu-id="2233d-124">GetString()</span><span class="sxs-lookup"><span data-stu-id="2233d-124">GetString()</span></span>|  
+|<span data-ttu-id="2233d-125">adChapter</span><span class="sxs-lookup"><span data-stu-id="2233d-125">adChapter</span></span>|<span data-ttu-id="2233d-126">DBTYPE_HCHAPTER</span><span class="sxs-lookup"><span data-stu-id="2233d-126">DBTYPE_HCHAPTER</span></span>|<span data-ttu-id="2233d-127">`DataReader`를 통해 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="2233d-127">Supported through the `DataReader`.</span></span> <span data-ttu-id="2233d-128">참조 [DataReader를 사용 하 여 데이터를 검색](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2233d-128">See [Retrieving Data Using a DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).</span></span>|<span data-ttu-id="2233d-129">GetValue()</span><span class="sxs-lookup"><span data-stu-id="2233d-129">GetValue()</span></span>|  
+|<span data-ttu-id="2233d-130">adChar</span><span class="sxs-lookup"><span data-stu-id="2233d-130">adChar</span></span>|<span data-ttu-id="2233d-131">DBTYPE_STR</span><span class="sxs-lookup"><span data-stu-id="2233d-131">DBTYPE_STR</span></span>|<span data-ttu-id="2233d-132">문자열</span><span class="sxs-lookup"><span data-stu-id="2233d-132">String</span></span>|<span data-ttu-id="2233d-133">GetString()</span><span class="sxs-lookup"><span data-stu-id="2233d-133">GetString()</span></span>|  
+|<span data-ttu-id="2233d-134">adCurrency</span><span class="sxs-lookup"><span data-stu-id="2233d-134">adCurrency</span></span>|<span data-ttu-id="2233d-135">DBTYPE_CY</span><span class="sxs-lookup"><span data-stu-id="2233d-135">DBTYPE_CY</span></span>|<span data-ttu-id="2233d-136">Decimal</span><span class="sxs-lookup"><span data-stu-id="2233d-136">Decimal</span></span>|<span data-ttu-id="2233d-137">GetDecimal()</span><span class="sxs-lookup"><span data-stu-id="2233d-137">GetDecimal()</span></span>|  
+|<span data-ttu-id="2233d-138">adDate</span><span class="sxs-lookup"><span data-stu-id="2233d-138">adDate</span></span>|<span data-ttu-id="2233d-139">DBTYPE_DATE</span><span class="sxs-lookup"><span data-stu-id="2233d-139">DBTYPE_DATE</span></span>|<span data-ttu-id="2233d-140">DateTime</span><span class="sxs-lookup"><span data-stu-id="2233d-140">DateTime</span></span>|<span data-ttu-id="2233d-141">GetDateTime()</span><span class="sxs-lookup"><span data-stu-id="2233d-141">GetDateTime()</span></span>|  
+|<span data-ttu-id="2233d-142">adDBDate</span><span class="sxs-lookup"><span data-stu-id="2233d-142">adDBDate</span></span>|<span data-ttu-id="2233d-143">DBTYPE_DBDATE</span><span class="sxs-lookup"><span data-stu-id="2233d-143">DBTYPE_DBDATE</span></span>|<span data-ttu-id="2233d-144">DateTime</span><span class="sxs-lookup"><span data-stu-id="2233d-144">DateTime</span></span>|<span data-ttu-id="2233d-145">GetDateTime()</span><span class="sxs-lookup"><span data-stu-id="2233d-145">GetDateTime()</span></span>|  
+|<span data-ttu-id="2233d-146">adDBTime</span><span class="sxs-lookup"><span data-stu-id="2233d-146">adDBTime</span></span>|<span data-ttu-id="2233d-147">DBTYPE_DBTIME</span><span class="sxs-lookup"><span data-stu-id="2233d-147">DBTYPE_DBTIME</span></span>|<span data-ttu-id="2233d-148">DateTime</span><span class="sxs-lookup"><span data-stu-id="2233d-148">DateTime</span></span>|<span data-ttu-id="2233d-149">GetDateTime()</span><span class="sxs-lookup"><span data-stu-id="2233d-149">GetDateTime()</span></span>|  
+|<span data-ttu-id="2233d-150">adDBTimeStamp</span><span class="sxs-lookup"><span data-stu-id="2233d-150">adDBTimeStamp</span></span>|<span data-ttu-id="2233d-151">DBTYPE_DBTIMESTAMP</span><span class="sxs-lookup"><span data-stu-id="2233d-151">DBTYPE_DBTIMESTAMP</span></span>|<span data-ttu-id="2233d-152">DateTime</span><span class="sxs-lookup"><span data-stu-id="2233d-152">DateTime</span></span>|<span data-ttu-id="2233d-153">GetDateTime()</span><span class="sxs-lookup"><span data-stu-id="2233d-153">GetDateTime()</span></span>|  
+|<span data-ttu-id="2233d-154">adDecimal</span><span class="sxs-lookup"><span data-stu-id="2233d-154">adDecimal</span></span>|<span data-ttu-id="2233d-155">DBTYPE_DECIMAL</span><span class="sxs-lookup"><span data-stu-id="2233d-155">DBTYPE_DECIMAL</span></span>|<span data-ttu-id="2233d-156">Decimal</span><span class="sxs-lookup"><span data-stu-id="2233d-156">Decimal</span></span>|<span data-ttu-id="2233d-157">GetDecimal()</span><span class="sxs-lookup"><span data-stu-id="2233d-157">GetDecimal()</span></span>|  
+|<span data-ttu-id="2233d-158">adDouble</span><span class="sxs-lookup"><span data-stu-id="2233d-158">adDouble</span></span>|<span data-ttu-id="2233d-159">DBTYPE_R8</span><span class="sxs-lookup"><span data-stu-id="2233d-159">DBTYPE_R8</span></span>|<span data-ttu-id="2233d-160">Double</span><span class="sxs-lookup"><span data-stu-id="2233d-160">Double</span></span>|<span data-ttu-id="2233d-161">GetDouble()</span><span class="sxs-lookup"><span data-stu-id="2233d-161">GetDouble()</span></span>|  
+|<span data-ttu-id="2233d-162">adError</span><span class="sxs-lookup"><span data-stu-id="2233d-162">adError</span></span>|<span data-ttu-id="2233d-163">DBTYPE_ERROR</span><span class="sxs-lookup"><span data-stu-id="2233d-163">DBTYPE_ERROR</span></span>|<span data-ttu-id="2233d-164">ExternalException</span><span class="sxs-lookup"><span data-stu-id="2233d-164">ExternalException</span></span>|<span data-ttu-id="2233d-165">GetValue()</span><span class="sxs-lookup"><span data-stu-id="2233d-165">GetValue()</span></span>|  
+|<span data-ttu-id="2233d-166">adFileTime</span><span class="sxs-lookup"><span data-stu-id="2233d-166">adFileTime</span></span>|<span data-ttu-id="2233d-167">DBTYPE_FILETIME</span><span class="sxs-lookup"><span data-stu-id="2233d-167">DBTYPE_FILETIME</span></span>|<span data-ttu-id="2233d-168">DateTime</span><span class="sxs-lookup"><span data-stu-id="2233d-168">DateTime</span></span>|<span data-ttu-id="2233d-169">GetDateTime()</span><span class="sxs-lookup"><span data-stu-id="2233d-169">GetDateTime()</span></span>|  
+|<span data-ttu-id="2233d-170">adGUID</span><span class="sxs-lookup"><span data-stu-id="2233d-170">adGUID</span></span>|<span data-ttu-id="2233d-171">DBTYPE_GUID</span><span class="sxs-lookup"><span data-stu-id="2233d-171">DBTYPE_GUID</span></span>|<span data-ttu-id="2233d-172">Guid</span><span class="sxs-lookup"><span data-stu-id="2233d-172">Guid</span></span>|<span data-ttu-id="2233d-173">GetGuid()</span><span class="sxs-lookup"><span data-stu-id="2233d-173">GetGuid()</span></span>|  
+|<span data-ttu-id="2233d-174">adIDispatch</span><span class="sxs-lookup"><span data-stu-id="2233d-174">adIDispatch</span></span>|<span data-ttu-id="2233d-175">DBTYPE_IDISPATCH *</span><span class="sxs-lookup"><span data-stu-id="2233d-175">DBTYPE_IDISPATCH *</span></span>|<span data-ttu-id="2233d-176">개체</span><span class="sxs-lookup"><span data-stu-id="2233d-176">Object</span></span>|<span data-ttu-id="2233d-177">GetValue()</span><span class="sxs-lookup"><span data-stu-id="2233d-177">GetValue()</span></span>|  
+|<span data-ttu-id="2233d-178">adInteger</span><span class="sxs-lookup"><span data-stu-id="2233d-178">adInteger</span></span>|<span data-ttu-id="2233d-179">DBTYPE_I4</span><span class="sxs-lookup"><span data-stu-id="2233d-179">DBTYPE_I4</span></span>|<span data-ttu-id="2233d-180">Int32</span><span class="sxs-lookup"><span data-stu-id="2233d-180">Int32</span></span>|<span data-ttu-id="2233d-181">GetInt32()</span><span class="sxs-lookup"><span data-stu-id="2233d-181">GetInt32()</span></span>|  
+|<span data-ttu-id="2233d-182">adIUnknown</span><span class="sxs-lookup"><span data-stu-id="2233d-182">adIUnknown</span></span>|<span data-ttu-id="2233d-183">DBTYPE_IUNKNOWN *</span><span class="sxs-lookup"><span data-stu-id="2233d-183">DBTYPE_IUNKNOWN *</span></span>|<span data-ttu-id="2233d-184">개체</span><span class="sxs-lookup"><span data-stu-id="2233d-184">Object</span></span>|<span data-ttu-id="2233d-185">GetValue()</span><span class="sxs-lookup"><span data-stu-id="2233d-185">GetValue()</span></span>|  
+|<span data-ttu-id="2233d-186">adNumeric</span><span class="sxs-lookup"><span data-stu-id="2233d-186">adNumeric</span></span>|<span data-ttu-id="2233d-187">DBTYPE_NUMERIC</span><span class="sxs-lookup"><span data-stu-id="2233d-187">DBTYPE_NUMERIC</span></span>|<span data-ttu-id="2233d-188">Decimal</span><span class="sxs-lookup"><span data-stu-id="2233d-188">Decimal</span></span>|<span data-ttu-id="2233d-189">GetDecimal()</span><span class="sxs-lookup"><span data-stu-id="2233d-189">GetDecimal()</span></span>|  
+|<span data-ttu-id="2233d-190">adPropVariant</span><span class="sxs-lookup"><span data-stu-id="2233d-190">adPropVariant</span></span>|<span data-ttu-id="2233d-191">DBTYPE_PROPVARIANT</span><span class="sxs-lookup"><span data-stu-id="2233d-191">DBTYPE_PROPVARIANT</span></span>|<span data-ttu-id="2233d-192">개체</span><span class="sxs-lookup"><span data-stu-id="2233d-192">Object</span></span>|<span data-ttu-id="2233d-193">GetValue()</span><span class="sxs-lookup"><span data-stu-id="2233d-193">GetValue()</span></span>|  
+|<span data-ttu-id="2233d-194">adSingle</span><span class="sxs-lookup"><span data-stu-id="2233d-194">adSingle</span></span>|<span data-ttu-id="2233d-195">DBTYPE_R4</span><span class="sxs-lookup"><span data-stu-id="2233d-195">DBTYPE_R4</span></span>|<span data-ttu-id="2233d-196">Single</span><span class="sxs-lookup"><span data-stu-id="2233d-196">Single</span></span>|<span data-ttu-id="2233d-197">GetFloat()</span><span class="sxs-lookup"><span data-stu-id="2233d-197">GetFloat()</span></span>|  
+|<span data-ttu-id="2233d-198">adSmallInt</span><span class="sxs-lookup"><span data-stu-id="2233d-198">adSmallInt</span></span>|<span data-ttu-id="2233d-199">DBTYPE_I2</span><span class="sxs-lookup"><span data-stu-id="2233d-199">DBTYPE_I2</span></span>|<span data-ttu-id="2233d-200">Int16</span><span class="sxs-lookup"><span data-stu-id="2233d-200">Int16</span></span>|<span data-ttu-id="2233d-201">GetInt16()</span><span class="sxs-lookup"><span data-stu-id="2233d-201">GetInt16()</span></span>|  
+|<span data-ttu-id="2233d-202">adTinyInt</span><span class="sxs-lookup"><span data-stu-id="2233d-202">adTinyInt</span></span>|<span data-ttu-id="2233d-203">DBTYPE_I1</span><span class="sxs-lookup"><span data-stu-id="2233d-203">DBTYPE_I1</span></span>|<span data-ttu-id="2233d-204">Byte</span><span class="sxs-lookup"><span data-stu-id="2233d-204">Byte</span></span>|<span data-ttu-id="2233d-205">GetByte()</span><span class="sxs-lookup"><span data-stu-id="2233d-205">GetByte()</span></span>|  
+|<span data-ttu-id="2233d-206">adUnsignedBigInt</span><span class="sxs-lookup"><span data-stu-id="2233d-206">adUnsignedBigInt</span></span>|<span data-ttu-id="2233d-207">DBTYPE_UI8</span><span class="sxs-lookup"><span data-stu-id="2233d-207">DBTYPE_UI8</span></span>|<span data-ttu-id="2233d-208">UInt64</span><span class="sxs-lookup"><span data-stu-id="2233d-208">UInt64</span></span>|<span data-ttu-id="2233d-209">GetValue()</span><span class="sxs-lookup"><span data-stu-id="2233d-209">GetValue()</span></span>|  
+|<span data-ttu-id="2233d-210">adUnsignedInt</span><span class="sxs-lookup"><span data-stu-id="2233d-210">adUnsignedInt</span></span>|<span data-ttu-id="2233d-211">DBTYPE_UI4</span><span class="sxs-lookup"><span data-stu-id="2233d-211">DBTYPE_UI4</span></span>|<span data-ttu-id="2233d-212">UInt32</span><span class="sxs-lookup"><span data-stu-id="2233d-212">UInt32</span></span>|<span data-ttu-id="2233d-213">GetValue()</span><span class="sxs-lookup"><span data-stu-id="2233d-213">GetValue()</span></span>|  
+|<span data-ttu-id="2233d-214">adUnsignedSmallInt</span><span class="sxs-lookup"><span data-stu-id="2233d-214">adUnsignedSmallInt</span></span>|<span data-ttu-id="2233d-215">DBTYPE_UI2</span><span class="sxs-lookup"><span data-stu-id="2233d-215">DBTYPE_UI2</span></span>|<span data-ttu-id="2233d-216">UInt16</span><span class="sxs-lookup"><span data-stu-id="2233d-216">UInt16</span></span>|<span data-ttu-id="2233d-217">GetValue()</span><span class="sxs-lookup"><span data-stu-id="2233d-217">GetValue()</span></span>|  
+|<span data-ttu-id="2233d-218">adUnsignedTinyInt</span><span class="sxs-lookup"><span data-stu-id="2233d-218">adUnsignedTinyInt</span></span>|<span data-ttu-id="2233d-219">DBTYPE_UI1</span><span class="sxs-lookup"><span data-stu-id="2233d-219">DBTYPE_UI1</span></span>|<span data-ttu-id="2233d-220">Byte</span><span class="sxs-lookup"><span data-stu-id="2233d-220">Byte</span></span>|<span data-ttu-id="2233d-221">GetByte()</span><span class="sxs-lookup"><span data-stu-id="2233d-221">GetByte()</span></span>|  
+|<span data-ttu-id="2233d-222">adVariant</span><span class="sxs-lookup"><span data-stu-id="2233d-222">adVariant</span></span>|<span data-ttu-id="2233d-223">DBTYPE_VARIANT</span><span class="sxs-lookup"><span data-stu-id="2233d-223">DBTYPE_VARIANT</span></span>|<span data-ttu-id="2233d-224">개체</span><span class="sxs-lookup"><span data-stu-id="2233d-224">Object</span></span>|<span data-ttu-id="2233d-225">GetValue()</span><span class="sxs-lookup"><span data-stu-id="2233d-225">GetValue()</span></span>|  
+|<span data-ttu-id="2233d-226">adWChar</span><span class="sxs-lookup"><span data-stu-id="2233d-226">adWChar</span></span>|<span data-ttu-id="2233d-227">DBTYPE_WSTR</span><span class="sxs-lookup"><span data-stu-id="2233d-227">DBTYPE_WSTR</span></span>|<span data-ttu-id="2233d-228">문자열</span><span class="sxs-lookup"><span data-stu-id="2233d-228">String</span></span>|<span data-ttu-id="2233d-229">GetString()</span><span class="sxs-lookup"><span data-stu-id="2233d-229">GetString()</span></span>|  
+|<span data-ttu-id="2233d-230">adUserDefined</span><span class="sxs-lookup"><span data-stu-id="2233d-230">adUserDefined</span></span>|<span data-ttu-id="2233d-231">DBTYPE_UDT</span><span class="sxs-lookup"><span data-stu-id="2233d-231">DBTYPE_UDT</span></span>|<span data-ttu-id="2233d-232">지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="2233d-232">not supported</span></span>||  
+|<span data-ttu-id="2233d-233">adVarNumeric</span><span class="sxs-lookup"><span data-stu-id="2233d-233">adVarNumeric</span></span>|<span data-ttu-id="2233d-234">DBTYPE_VARNUMERIC</span><span class="sxs-lookup"><span data-stu-id="2233d-234">DBTYPE_VARNUMERIC</span></span>|<span data-ttu-id="2233d-235">지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="2233d-235">not supported</span></span>||  
   
- \* OLE DB 형식의 `DBTYPE_IUNKNOWN` 및 `DBTYPE_IDISPATCH`의 경우 개체 참조는 포인터의 마샬링된 표현입니다.  
+ <span data-ttu-id="2233d-236">\*OLE DB 형식에 대 한 `DBTYPE_IUNKNOWN` 및 `DBTYPE_IDISPATCH`, 개체 참조는 포인터의 마샬링된 표현입니다.</span><span class="sxs-lookup"><span data-stu-id="2233d-236">\* For the OLE DB types `DBTYPE_IUNKNOWN` and `DBTYPE_IDISPATCH`, the object reference is a marshaled representation of the pointer.</span></span>  
   
-## 참고 항목  
- [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="2233d-237">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2233d-237">See Also</span></span>  
+ [<span data-ttu-id="2233d-238">ADO.NET에서 데이터 검색 및 수정</span><span class="sxs-lookup"><span data-stu-id="2233d-238">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="2233d-239">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="2233d-239">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

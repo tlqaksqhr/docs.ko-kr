@@ -1,36 +1,39 @@
 ---
-title: "방법: 디지털 서명을 암호화하지 않도록 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 디지털 서명을 암호화하지 않도록 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 25380c021372d8c74498952ddc482aada8a1e906
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: 디지털 서명을 암호화하지 않도록 설정
-기본적으로 메시지는 서명되며 서명은 디지털 방식으로 암호화됩니다.  이 작업은 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>의 인스턴스가 포함된 사용자 지정 바인딩을 만든 다음, 해당 클래스의 `MessageProtectionOrder` 속성을 <xref:System.ServiceModel.Security.MessageProtectionOrder> 열거형 값으로 설정하여 제어합니다.  기본값은 <xref:System.ServiceModel.Security.MessageProtectionOrder>입니다.  이 프로세스에서는 전체 메시지 크기를 기반으로 서명하고 암호화하는 경우보다 최대 30%의 시간이 더 소요됩니다. 메시지가 작을수록 성능에 미치는 영향이 더 큽니다.  하지만 서명 암호화를 사용하지 않으면 공격자가 메시지 내용을 추측할 수 있습니다.  서명 요소에는 메시지의 서명된 모든 부분에 대한 일반 텍스트의 해시 코드가 들어 있기 때문입니다.  예를 들어, 메시지 본문이 기본적으로 암호화되어 있더라도 암호화되어 있지 않은 서명에는 암호화 이전의 메시지 본문에 대한 해시 코드가 포함되어 있습니다.  서명 및 암호화된 부품에 사용 가능한 값이 작은 경우 공격자는 해시 값을 조사하여 내용을 추론할 수 있습니다.  서명을 암호화하면 이러한 공격 벡터를 완화할 수 있습니다.  
+# <a name="how-to-disable-encryption-of-digital-signatures"></a><span data-ttu-id="53090-102">방법: 디지털 서명을 암호화하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="53090-102">How to: Disable Encryption of Digital Signatures</span></span>
+<span data-ttu-id="53090-103">기본적으로 메시지는 서명되며 서명은 디지털 방식으로 암호화됩니다.</span><span class="sxs-lookup"><span data-stu-id="53090-103">By default, a message is signed and the signature is digitally encrypted.</span></span> <span data-ttu-id="53090-104">이 작업은 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>의 인스턴스가 포함된 사용자 지정 바인딩을 만든 다음, 해당 클래스의 `MessageProtectionOrder` 속성을 <xref:System.ServiceModel.Security.MessageProtectionOrder> 열거형 값으로 설정하여 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="53090-104">This is controlled by creating a custom binding with an instance of the <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> or the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> and setting the `MessageProtectionOrder` property of either class to a <xref:System.ServiceModel.Security.MessageProtectionOrder> enumeration value.</span></span> <span data-ttu-id="53090-105">기본값은 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>입니다.</span><span class="sxs-lookup"><span data-stu-id="53090-105">The default is <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>.</span></span> <span data-ttu-id="53090-106">이 프로세스에서는 전체 메시지 크기를 기반으로 서명하고 암호화하는 경우보다 최대 30%의 시간이 더 소요됩니다. 메시지가 작을수록 성능에 미치는 영향이 더 큽니다.</span><span class="sxs-lookup"><span data-stu-id="53090-106">This process consumes up to 30 percent more time than simply signing and encrypting based on the overall message size (the smaller the message, the greater the performance impact).</span></span> <span data-ttu-id="53090-107">하지만 서명 암호화를 사용하지 않으면 공격자가 메시지 내용을 추측할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53090-107">Disabling encryption of the signature, however, might allow an attacker to guess the content of the message.</span></span> <span data-ttu-id="53090-108">서명 요소에는 메시지의 서명된 모든 부분에 대한 일반 텍스트의 해시 코드가 들어 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="53090-108">This is possible because the signature element contains the hash code of the plain text of every signed part in the message.</span></span> <span data-ttu-id="53090-109">예를 들어, 메시지 본문이 기본적으로 암호화되어 있더라도 암호화되어 있지 않은 서명에는 암호화 이전의 메시지 본문에 대한 해시 코드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53090-109">For example, although the message body is encrypted by default, the unencrypted signature contains the hash code of the message body before the encryption.</span></span> <span data-ttu-id="53090-110">서명 및 암호화된 부품에 사용 가능한 값이 작은 경우 공격자는 해시 값을 조사하여 내용을 추론할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53090-110">If the set of possible values for the signed and encrypted part is small, an attacker might be able to deduce the contents by looking at the hash value.</span></span> <span data-ttu-id="53090-111">서명을 암호화하면 이러한 공격 벡터를 완화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53090-111">Encrypting the signature mitigates this attack vector.</span></span>  
   
- 따라서 내용 값이 작거나 가능한 내용 값이 크고 불명확하지만 위에서 설명한 공격을 줄이는 것보다 성능 향상이 더 중요한 경우에만 서명 암호화를 비활성화하세요.  
+ <span data-ttu-id="53090-112">따라서 내용 값이 작거나 가능한 내용 값이 크고 불명확하지만 위에서 설명한 공격을 줄이는 것보다 성능 향상이 더 중요한 경우에만 서명 암호화를 비활성화하세요.</span><span class="sxs-lookup"><span data-stu-id="53090-112">Therefore, disable encryption of the signature only when the value of the content is low or the set of possible content values is large and nondeterministic, and the performance gain is more important than mitigating the attack described above.</span></span>  
   
 > [!NOTE]
->  메시지에 암호화된 내용이 없는 경우에는 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=fullName> 또는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=fullName> 속성이 <xref:System.ServiceModel.Security.MessageProtectionOrder>로 설정되어 있더라도 서명 요소가 암호화되지 않습니다.  이 동작은 시스템 제공 바인딩에서도 발생합니다. 모든 시스템 제공 바인딩에서는 메시지 보호 순서가 `SignBeforeEncryptAndEncryptSignature`로 설정되어 있습니다.  그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 생성되는 WSDL\(웹 서비스 기술 언어\)은 `<sp:EncryptSignature>` 어설션을 계속해서 포함합니다.  
+>  <span data-ttu-id="53090-113">메시지에 암호화된 내용이 없는 경우에는 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> 속성이 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>로 설정되어 있더라도 서명 요소가 암호화되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="53090-113">If there is nothing in the message that is encrypted, the signature element is not encrypted, even when the <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> property is set to <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>.</span></span> <span data-ttu-id="53090-114">이 동작은 시스템 제공 바인딩에서도 발생합니다. 모든 시스템 제공 바인딩에서는 메시지 보호 순서가 `SignBeforeEncryptAndEncryptSignature`로 설정되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53090-114">This behavior occurs even with system-provided bindings; all system-provided bindings have the message protection order set to `SignBeforeEncryptAndEncryptSignature`.</span></span> <span data-ttu-id="53090-115">그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 생성되는 WSDL(웹 서비스 기술 언어)은 `<sp:EncryptSignature>` 어설션을 계속해서 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="53090-115">However, the Web Services Description Language (WSDL) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generates will still contain the `<sp:EncryptSignature>` assertion.</span></span>  
   
-### 디지털 서명을 사용하지 않도록 설정하려면  
+### <a name="to-disable-digital-signing"></a><span data-ttu-id="53090-116">디지털 서명을 사용하지 않도록 설정하려면</span><span class="sxs-lookup"><span data-stu-id="53090-116">To disable digital signing</span></span>  
   
-1.  <xref:System.ServiceModel.Channels.CustomBinding>를 만듭니다.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+1.  <span data-ttu-id="53090-117"><xref:System.ServiceModel.Channels.CustomBinding>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="53090-117">Create a <xref:System.ServiceModel.Channels.CustomBinding>.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="53090-118">[하는 방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩을 만들려면](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="53090-118"> [How to: Create a Custom Binding Using the SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).</span></span>  
   
-2.  <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 바인딩 컬렉션에 추가합니다.  
+2.  <span data-ttu-id="53090-119"><xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 바인딩 컬렉션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="53090-119">Add either an <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> or a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> to the binding collection.</span></span>  
   
-3.  <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=fullName> 속성을 <xref:System.ServiceModel.Security.MessageProtectionOrder>로 설정하거나 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=fullName> 속성을 <xref:System.ServiceModel.Security.MessageProtectionOrder>로 설정합니다.  
+3.  <span data-ttu-id="53090-120"><xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>로 설정하거나 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="53090-120">Set the <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> property to <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>, or set the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> property to <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.</span></span>  
   
-## 참고 항목  
- [사용자 지정 바인딩을 사용하는 보안 기능](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="53090-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="53090-121">See Also</span></span>  
+ [<span data-ttu-id="53090-122">사용자 지정 바인딩 사용 하는 보안 기능</span><span class="sxs-lookup"><span data-stu-id="53090-122">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)

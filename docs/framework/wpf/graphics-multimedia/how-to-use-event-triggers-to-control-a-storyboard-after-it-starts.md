@@ -1,58 +1,61 @@
 ---
-title: "방법: Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이벤트 트리거, Storyboard 제어"
-  - "스토리보드, 시작 후 제어"
-  - "트리거, Storyboard 제어"
+title: "방법: Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [WPF], controlling Storyboards
+- event triggers [WPF], controlling Storyboards
+- Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d9e096969713cc4b9c42261b238691d51cb49d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어
-이 예제에서는 <xref:System.Windows.Media.Animation.Storyboard>를 시작한 후 제어하는 방법을 보여 줍니다.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 <xref:System.Windows.Media.Animation.Storyboard>를 시작하려면 애니메이션 효과를 줄 개체와 속성에 애니메이션을 배포한 다음 Storyboard를 시작하는 <xref:System.Windows.Media.Animation.BeginStoryboard>를 사용해야 합니다.  <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> 속성을 지정하여 <xref:System.Windows.Media.Animation.BeginStoryboard>에 이름을 제공하면 제어 가능한 Storyboard로 만들 수 있습니다.  그러면 Storyboard를 시작한 후 대화형으로 제어할 수 있습니다.  
+# <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a><span data-ttu-id="38d1a-102">방법: Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어</span><span class="sxs-lookup"><span data-stu-id="38d1a-102">How to: Use Event Triggers to Control a Storyboard After It Starts</span></span>
+<span data-ttu-id="38d1a-103">제어 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard> 시작 된 후입니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-103">This example shows how to control a <xref:System.Windows.Media.Animation.Storyboard> after it starts.</span></span> <span data-ttu-id="38d1a-104">시작 하려면는 <xref:System.Windows.Media.Animation.Storyboard> 를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용 하 여 <xref:System.Windows.Media.Animation.BeginStoryboard>, 개체 및 애니메이션 효과 적용 하며 다음 스토리 보드를 시작 하는 속성에 애니메이션을 배포한입니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-104">To start a <xref:System.Windows.Media.Animation.Storyboard> by using [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use <xref:System.Windows.Media.Animation.BeginStoryboard>, which distributes the animations to the objects and properties they animate and then starts the storyboard.</span></span> <span data-ttu-id="38d1a-105">제공 하는 경우 <xref:System.Windows.Media.Animation.BeginStoryboard> 이름을 지정 하 여 해당 <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> 속성 되도록 하 여 제어할 수 있는 스토리 보드 합니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-105">If you give <xref:System.Windows.Media.Animation.BeginStoryboard> a name by specifying its <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> property, you make it a controllable storyboard.</span></span> <span data-ttu-id="38d1a-106">제어할 수 있습니다 다음 대화형으로 스토리 보드 시작 된 후.</span><span class="sxs-lookup"><span data-stu-id="38d1a-106">You can then interactively control the storyboard after it starts.</span></span>  
   
- Storyboard를 제어하려면 <xref:System.Windows.EventTrigger> 개체와 함께 다음 Storyboard 작업을 사용합니다.  
+ <span data-ttu-id="38d1a-107">와 함께 다음 스토리 보드 작업을 사용 하 여 <xref:System.Windows.EventTrigger> 스토리 보드를 제어 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-107">Use the following storyboard actions together with <xref:System.Windows.EventTrigger> objects to control a storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: Storyboard를 일시 중지합니다.  
+-   <span data-ttu-id="38d1a-108"><xref:System.Windows.Media.Animation.PauseStoryboard>: 스토리 보드를 일시 중지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-108"><xref:System.Windows.Media.Animation.PauseStoryboard>: Pauses the storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: 일시 중지한 Storyboard를 다시 시작합니다.  
+-   <span data-ttu-id="38d1a-109"><xref:System.Windows.Media.Animation.ResumeStoryboard>: 일시 중지 된 스토리 보드를 다시 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-109"><xref:System.Windows.Media.Animation.ResumeStoryboard>: Resumes a paused storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Storyboard 속도를 변경합니다.  
+-   <span data-ttu-id="38d1a-110"><xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: 스토리 보드 속도 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-110"><xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Changes the storyboard speed.</span></span>  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Storyboard를 해당 전체 기간\(있는 경우\)의 끝으로 진행합니다.  
+-   <span data-ttu-id="38d1a-111"><xref:System.Windows.Media.Animation.SkipStoryboardToFill>: 있는 경우 채우기 기간의 끝에 스토리 보드를 진행 합니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-111"><xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Advances a storyboard to the end of its fill period, if it has one.</span></span>  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: Storyboard를 중지합니다.  
+-   <span data-ttu-id="38d1a-112"><xref:System.Windows.Media.Animation.StopStoryboard>: 스토리 보드를 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-112"><xref:System.Windows.Media.Animation.StopStoryboard>: Stops the storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Storyboard를 제거하여 리소스를 해제합니다.  
+-   <span data-ttu-id="38d1a-113"><xref:System.Windows.Media.Animation.RemoveStoryboard>: 리소스를 확보 스토리 보드를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-113"><xref:System.Windows.Media.Animation.RemoveStoryboard>: Removes the storyboard, freeing resources.</span></span>  
   
-## 예제  
- 다음 예제에서는 제어 가능한 Storyboard 작업을 사용하여 대화형으로 Storyboard를 제어합니다.  
+## <a name="example"></a><span data-ttu-id="38d1a-114">예제</span><span class="sxs-lookup"><span data-stu-id="38d1a-114">Example</span></span>  
+ <span data-ttu-id="38d1a-115">다음 예제에서는 스토리 보드를 대화형으로 제어 제어할 수 있는 스토리 보드 작업을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-115">The following example uses controllable storyboard actions to interactively control a storyboard.</span></span>  
   
- **참고:** 코드를 사용한 Storyboard 제어 예제를 보려면 [대화형 메서드를 사용하여 이미 시작된 Storyboard 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)를 참조하십시오.  
+ <span data-ttu-id="38d1a-116">**참고:** 코드를 사용 하 여 스토리 보드 제어의 예를 보려면 [한 스토리 보드 후 것 시작를 사용 하 여 해당 대화형 방법을 제어할](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-116">**Note:** To see an example of controlling a storyboard by using code, see [Control a Storyboard After It Starts Using Its Interactive Methods](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md).</span></span>  
   
- [!code-xml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
+ [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
   
- 다른 예제를 보려면 [Animation Example Gallery](http://go.microsoft.com/fwlink/?LinkID=159969)를 참조하십시오.  
+ <span data-ttu-id="38d1a-117">추가 예제에 대 한 참조는 [애니메이션 예제 갤러리](http://go.microsoft.com/fwlink/?LinkID=159969)합니다.</span><span class="sxs-lookup"><span data-stu-id="38d1a-117">For additional examples, see the [Animation Example Gallery](http://go.microsoft.com/fwlink/?LinkID=159969).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Media.Animation.ResumeStoryboard>   
- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>   
- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>   
- <xref:System.Windows.Media.Animation.PauseStoryboard>   
- <xref:System.Windows.Media.Animation.StopStoryboard>   
- <xref:System.Windows.Media.Animation.SeekStoryboard>   
- [대화형 메서드를 사용하여 이미 시작된 Storyboard 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)   
- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a><span data-ttu-id="38d1a-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="38d1a-118">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.ResumeStoryboard>  
+ <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>  
+ <xref:System.Windows.Media.Animation.SkipStoryboardToFill>  
+ <xref:System.Windows.Media.Animation.PauseStoryboard>  
+ <xref:System.Windows.Media.Animation.StopStoryboard>  
+ <xref:System.Windows.Media.Animation.SeekStoryboard>  
+ [<span data-ttu-id="38d1a-119">대화형 메서드를 사용하여 이미 시작된 Storyboard 제어</span><span class="sxs-lookup"><span data-stu-id="38d1a-119">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
+ [<span data-ttu-id="38d1a-120">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="38d1a-120">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="38d1a-121">Storyboard 개요</span><span class="sxs-lookup"><span data-stu-id="38d1a-121">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

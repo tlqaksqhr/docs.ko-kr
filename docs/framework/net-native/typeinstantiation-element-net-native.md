@@ -5,26 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4b0a295e5d788eb50ba39227ac6971ea057ec1e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 442970c8253147313a38e1a1518219a96ec41945
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; 요소(.NET 네이티브)
-생성된 제네릭 형식에 런타임 리플렉션 정책을 적용합니다.  
+# <a name="lttypeinstantiationgt-element-net-native"></a><span data-ttu-id="ccee5-102">&lt;TypeInstantiation&gt; 요소(.NET 네이티브)</span><span class="sxs-lookup"><span data-stu-id="ccee5-102">&lt;TypeInstantiation&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="ccee5-103">생성된 제네릭 형식에 런타임 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-103">Applies runtime reflection policy to a constructed generic type.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="ccee5-104">구문</span><span class="sxs-lookup"><span data-stu-id="ccee5-104">Syntax</span></span>  
   
 ```xml  
 <TypeInstantiation Name="type_name"  
@@ -41,79 +39,79 @@ ms.lasthandoff: 08/21/2017
                    MarshalStructure="policy_setting" />  
 ```  
   
-## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ccee5-105">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="ccee5-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="ccee5-106">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>특성  
+### <a name="attributes"></a><span data-ttu-id="ccee5-107">특성</span><span class="sxs-lookup"><span data-stu-id="ccee5-107">Attributes</span></span>  
   
-|특성|특성 형식|설명|  
+|<span data-ttu-id="ccee5-108">특성</span><span class="sxs-lookup"><span data-stu-id="ccee5-108">Attribute</span></span>|<span data-ttu-id="ccee5-109">특성 형식</span><span class="sxs-lookup"><span data-stu-id="ccee5-109">Attribute type</span></span>|<span data-ttu-id="ccee5-110">설명</span><span class="sxs-lookup"><span data-stu-id="ccee5-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|일반|필수 특성입니다. 형식 이름을 지정합니다.|  
-|`Arguments`|일반|필수 특성입니다. 제네릭 형식 인수를 지정합니다. 인수가 여러 개이면 쉼표로 구분합니다.|  
-|`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
-|`Browse`|반사|선택적 특성입니다. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.|  
-|`Dynamic`|반사|선택적 특성입니다. 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.|  
-|`Serialize`|Serialization|선택적 특성입니다. Newtonsoft JSON serializer 등의 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.|  
-|`DataContractSerializer`|Serialization|선택적 특성입니다. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.|  
-|`DataContractJsonSerializer`|Serialization|선택적 특성입니다. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.|  
-|`XmlSerializer`|Serialization|선택적 특성입니다. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.|  
-|`MarshalObject`|Interop|선택적 특성입니다. Windows 런타임 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.|  
-|`MarshalDelegate`|Interop|선택적 특성입니다. 네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.|  
-|`MarshalStructure`|Interop|선택적 특성입니다. 구조체를 네이티브 코드로 마샬링하는 정책을 제어합니다.|  
+|`Name`|<span data-ttu-id="ccee5-111">일반</span><span class="sxs-lookup"><span data-stu-id="ccee5-111">General</span></span>|<span data-ttu-id="ccee5-112">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-112">Required attribute.</span></span> <span data-ttu-id="ccee5-113">형식 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-113">Specifies the type name.</span></span>|  
+|`Arguments`|<span data-ttu-id="ccee5-114">일반</span><span class="sxs-lookup"><span data-stu-id="ccee5-114">General</span></span>|<span data-ttu-id="ccee5-115">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-115">Required attribute.</span></span> <span data-ttu-id="ccee5-116">제네릭 형식 인수를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-116">Specifies the generic type arguments.</span></span> <span data-ttu-id="ccee5-117">인수가 여러 개이면 쉼표로 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-117">If multiple arguments are present, they are separated by commas.</span></span>|  
+|`Activate`|<span data-ttu-id="ccee5-118">반사</span><span class="sxs-lookup"><span data-stu-id="ccee5-118">Reflection</span></span>|<span data-ttu-id="ccee5-119">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-119">Optional attribute.</span></span> <span data-ttu-id="ccee5-120">인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-120">Controls runtime access to constructors to enable activation of instances.</span></span>|  
+|`Browse`|<span data-ttu-id="ccee5-121">반사</span><span class="sxs-lookup"><span data-stu-id="ccee5-121">Reflection</span></span>|<span data-ttu-id="ccee5-122">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-122">Optional attribute.</span></span> <span data-ttu-id="ccee5-123">프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-123">Controls querying for information about program elements, but does not enable any runtime access.</span></span>|  
+|`Dynamic`|<span data-ttu-id="ccee5-124">반사</span><span class="sxs-lookup"><span data-stu-id="ccee5-124">Reflection</span></span>|<span data-ttu-id="ccee5-125">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-125">Optional attribute.</span></span> <span data-ttu-id="ccee5-126">동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-126">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>|  
+|`Serialize`|<span data-ttu-id="ccee5-127">Serialization</span><span class="sxs-lookup"><span data-stu-id="ccee5-127">Serialization</span></span>|<span data-ttu-id="ccee5-128">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-128">Optional attribute.</span></span> <span data-ttu-id="ccee5-129">Newtonsoft JSON serializer 등의 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-129">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span>|  
+|`DataContractSerializer`|<span data-ttu-id="ccee5-130">Serialization</span><span class="sxs-lookup"><span data-stu-id="ccee5-130">Serialization</span></span>|<span data-ttu-id="ccee5-131">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-131">Optional attribute.</span></span> <span data-ttu-id="ccee5-132"><xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-132">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`DataContractJsonSerializer`|<span data-ttu-id="ccee5-133">Serialization</span><span class="sxs-lookup"><span data-stu-id="ccee5-133">Serialization</span></span>|<span data-ttu-id="ccee5-134">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-134">Optional attribute.</span></span> <span data-ttu-id="ccee5-135"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-135">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`XmlSerializer`|<span data-ttu-id="ccee5-136">Serialization</span><span class="sxs-lookup"><span data-stu-id="ccee5-136">Serialization</span></span>|<span data-ttu-id="ccee5-137">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-137">Optional attribute.</span></span> <span data-ttu-id="ccee5-138"><xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-138">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`MarshalObject`|<span data-ttu-id="ccee5-139">Interop</span><span class="sxs-lookup"><span data-stu-id="ccee5-139">Interop</span></span>|<span data-ttu-id="ccee5-140">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-140">Optional attribute.</span></span> <span data-ttu-id="ccee5-141">Windows 런타임 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-141">Controls policy for marshaling reference types to Windows Runtime and COM.</span></span>|  
+|`MarshalDelegate`|<span data-ttu-id="ccee5-142">Interop</span><span class="sxs-lookup"><span data-stu-id="ccee5-142">Interop</span></span>|<span data-ttu-id="ccee5-143">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-143">Optional attribute.</span></span> <span data-ttu-id="ccee5-144">네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-144">Controls policy for marshaling delegate types as function pointers to native code.</span></span>|  
+|`MarshalStructure`|<span data-ttu-id="ccee5-145">Interop</span><span class="sxs-lookup"><span data-stu-id="ccee5-145">Interop</span></span>|<span data-ttu-id="ccee5-146">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-146">Optional attribute.</span></span> <span data-ttu-id="ccee5-147">구조체를 네이티브 코드로 마샬링하는 정책을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-147">Controls policy for marshaling structures to native code.</span></span>|  
   
-## <a name="name-attribute"></a>Name 특성  
+## <a name="name-attribute"></a><span data-ttu-id="ccee5-148">Name 특성</span><span class="sxs-lookup"><span data-stu-id="ccee5-148">Name attribute</span></span>  
   
-|값|설명|  
+|<span data-ttu-id="ccee5-149">값</span><span class="sxs-lookup"><span data-stu-id="ccee5-149">Value</span></span>|<span data-ttu-id="ccee5-150">설명</span><span class="sxs-lookup"><span data-stu-id="ccee5-150">Description</span></span>|  
 |-----------|-----------------|  
-|*type_name*|형식 이름입니다. 이 `<TypeInstantiation>` 요소가 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 요소, [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소 또는 다른 `<TypeInstantiation>` 요소의 자식인 경우 *type_name*은 네임스페이스가 없는 형식 이름을 지정할 수 있습니다. 그러지 않으면 *type_name*은 정규화된 형식 이름을 포함해야 합니다. 형식 이름은 데코레이팅되지 않습니다. 예를 들어 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 개체의 `<TypeInstantiation>` 요소는 다음과 같이 표시될 수 있습니다.<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|<span data-ttu-id="ccee5-151">*type_name*</span><span class="sxs-lookup"><span data-stu-id="ccee5-151">*type_name*</span></span>|<span data-ttu-id="ccee5-152">형식 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-152">The type name.</span></span> <span data-ttu-id="ccee5-153">이 `<TypeInstantiation>` 요소가 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 요소, [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소 또는 다른 `<TypeInstantiation>` 요소의 자식인 경우 *type_name*은 네임스페이스가 없는 형식 이름을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-153">If this `<TypeInstantiation>` element is the child of a [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) element, a [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) element, or another `<TypeInstantiation>` element, *type_name* can specify the name of the type without its namespace.</span></span> <span data-ttu-id="ccee5-154">그러지 않으면 *type_name*은 정규화된 형식 이름을 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-154">Otherwise, *type_name* must include the fully qualified type name.</span></span> <span data-ttu-id="ccee5-155">형식 이름은 데코레이팅되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-155">The type name isn't decorated.</span></span> <span data-ttu-id="ccee5-156">예를 들어 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 개체의 `<TypeInstantiation>` 요소는 다음과 같이 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-156">For example, for a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> object, the `<TypeInstantiation>` element might appear as follows:</span></span><br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
-## <a name="arguments-attribute"></a>인수 특성  
+## <a name="arguments-attribute"></a><span data-ttu-id="ccee5-157">인수 특성</span><span class="sxs-lookup"><span data-stu-id="ccee5-157">Arguments attribute</span></span>  
   
-|값|설명|  
+|<span data-ttu-id="ccee5-158">값</span><span class="sxs-lookup"><span data-stu-id="ccee5-158">Value</span></span>|<span data-ttu-id="ccee5-159">설명</span><span class="sxs-lookup"><span data-stu-id="ccee5-159">Description</span></span>|  
 |-----------|-----------------|  
-|*type_argument*|제네릭 형식 인수를 지정합니다. 인수가 여러 개이면 쉼표로 구분합니다. 각 인수는 정규화된 형식 이름으로 구성되어야 합니다.|  
+|<span data-ttu-id="ccee5-160">*type_argument*</span><span class="sxs-lookup"><span data-stu-id="ccee5-160">*type_argument*</span></span>|<span data-ttu-id="ccee5-161">제네릭 형식 인수를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-161">Specifies the generic type arguments.</span></span> <span data-ttu-id="ccee5-162">인수가 여러 개이면 쉼표로 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-162">If multiple arguments are present, they are separated by commas.</span></span> <span data-ttu-id="ccee5-163">각 인수는 정규화된 형식 이름으로 구성되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-163">Each argument must consist of the fully qualified type name.</span></span>|  
   
-## <a name="all-other-attributes"></a>기타 모든 특성  
+## <a name="all-other-attributes"></a><span data-ttu-id="ccee5-164">기타 모든 특성</span><span class="sxs-lookup"><span data-stu-id="ccee5-164">All other attributes</span></span>  
   
-|값|설명|  
+|<span data-ttu-id="ccee5-165">값</span><span class="sxs-lookup"><span data-stu-id="ccee5-165">Value</span></span>|<span data-ttu-id="ccee5-166">설명</span><span class="sxs-lookup"><span data-stu-id="ccee5-166">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|생성된 제네릭 형식에 대해 이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)을 참조하세요.|  
+|<span data-ttu-id="ccee5-167">*policy_setting*</span><span class="sxs-lookup"><span data-stu-id="ccee5-167">*policy_setting*</span></span>|<span data-ttu-id="ccee5-168">생성된 제네릭 형식에 대해 이 정책 형식에 적용할 설정입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-168">The setting to apply to this policy type for the constructed generic type.</span></span> <span data-ttu-id="ccee5-169">가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-169">Possible values are `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, and `Required All`.</span></span> <span data-ttu-id="ccee5-170">자세한 내용은 [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ccee5-170">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="ccee5-171">자식 요소</span><span class="sxs-lookup"><span data-stu-id="ccee5-171">Child Elements</span></span>  
   
-|요소|설명|  
+|<span data-ttu-id="ccee5-172">요소</span><span class="sxs-lookup"><span data-stu-id="ccee5-172">Element</span></span>|<span data-ttu-id="ccee5-173">설명</span><span class="sxs-lookup"><span data-stu-id="ccee5-173">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|이 형식에 속하는 이벤트에 리플렉션 정책을 적용합니다.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|이 형식에 속하는 필드에 리플렉션 정책을 적용합니다.|  
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|포함 `<TypeInstantiation>` 요소가 나타내는 형식에 정책이 적용된 경우 형식에 해당 정책을 적용합니다.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|이 형식에 속하는 메서드에 리플렉션 정책을 적용합니다.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|이 형식에 속하는 생성된 제네릭 메서드에 리플렉션 정책을 적용합니다.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|이 형식에 속하는 속성에 리플렉션 정책을 적용합니다.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|중첩된 형식에 리플렉션 정책을 적용합니다.|  
-|`<TypeInstantiation>`|생성된 중첩 제네릭 형식에 리플렉션 정책을 적용합니다.|  
+|[<span data-ttu-id="ccee5-174">\<Event></span><span class="sxs-lookup"><span data-stu-id="ccee5-174">\<Event></span></span>](../../../docs/framework/net-native/event-element-net-native.md)|<span data-ttu-id="ccee5-175">이 형식에 속하는 이벤트에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-175">Applies reflection policy to an event belonging to this type.</span></span>|  
+|[<span data-ttu-id="ccee5-176">\<Field></span><span class="sxs-lookup"><span data-stu-id="ccee5-176">\<Field></span></span>](../../../docs/framework/net-native/field-element-net-native.md)|<span data-ttu-id="ccee5-177">이 형식에 속하는 필드에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-177">Applies reflection policy to a field belonging to this type.</span></span>|  
+|[<span data-ttu-id="ccee5-178">\<ImpliesType></span><span class="sxs-lookup"><span data-stu-id="ccee5-178">\<ImpliesType></span></span>](../../../docs/framework/net-native/impliestype-element-net-native.md)|<span data-ttu-id="ccee5-179">포함 `<TypeInstantiation>` 요소가 나타내는 형식에 정책이 적용된 경우 형식에 해당 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-179">Applies policy to a type, if that policy has been applied to the type represented by the containing `<TypeInstantiation>` element.</span></span>|  
+|[<span data-ttu-id="ccee5-180">\<Method></span><span class="sxs-lookup"><span data-stu-id="ccee5-180">\<Method></span></span>](../../../docs/framework/net-native/method-element-net-native.md)|<span data-ttu-id="ccee5-181">이 형식에 속하는 메서드에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-181">Applies reflection policy to a method belonging to this type.</span></span>|  
+|[<span data-ttu-id="ccee5-182">\<MethodInstantiation></span><span class="sxs-lookup"><span data-stu-id="ccee5-182">\<MethodInstantiation></span></span>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|<span data-ttu-id="ccee5-183">이 형식에 속하는 생성된 제네릭 메서드에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-183">Applies reflection policy to a constructed generic method belonging to this type.</span></span>|  
+|[<span data-ttu-id="ccee5-184">\<Property></span><span class="sxs-lookup"><span data-stu-id="ccee5-184">\<Property></span></span>](../../../docs/framework/net-native/property-element-net-native.md)|<span data-ttu-id="ccee5-185">이 형식에 속하는 속성에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-185">Applies reflection policy to a property belonging to this type.</span></span>|  
+|[<span data-ttu-id="ccee5-186">\<Type></span><span class="sxs-lookup"><span data-stu-id="ccee5-186">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="ccee5-187">중첩된 형식에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-187">Applies reflection policy to a nested type.</span></span>|  
+|`<TypeInstantiation>`|<span data-ttu-id="ccee5-188">생성된 중첩 제네릭 형식에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-188">Applies reflection policy to a nested constructed generic type.</span></span>|  
   
-### <a name="parent-elements"></a>부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="ccee5-189">부모 요소</span><span class="sxs-lookup"><span data-stu-id="ccee5-189">Parent Elements</span></span>  
   
-|요소|설명|  
+|<span data-ttu-id="ccee5-190">요소</span><span class="sxs-lookup"><span data-stu-id="ccee5-190">Element</span></span>|<span data-ttu-id="ccee5-191">설명</span><span class="sxs-lookup"><span data-stu-id="ccee5-191">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다.|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|지정된 어셈블리의 모든 형식에 리플렉션 정책을 적용합니다.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
-|`<TypeInstantiation>`|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
+|[<span data-ttu-id="ccee5-192">\<Application></span><span class="sxs-lookup"><span data-stu-id="ccee5-192">\<Application></span></span>](../../../docs/framework/net-native/application-element-net-native.md)|<span data-ttu-id="ccee5-193">런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-193">Serves as a container for application-wide types and type members whose metadata is available for reflection at run time.</span></span>|  
+|[<span data-ttu-id="ccee5-194">\<Assembly></span><span class="sxs-lookup"><span data-stu-id="ccee5-194">\<Assembly></span></span>](../../../docs/framework/net-native/assembly-element-net-native.md)|<span data-ttu-id="ccee5-195">지정된 어셈블리의 모든 형식에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-195">Applies reflection policy to all the types in a specified assembly.</span></span>|  
+|[<span data-ttu-id="ccee5-196">\<Library></span><span class="sxs-lookup"><span data-stu-id="ccee5-196">\<Library></span></span>](../../../docs/framework/net-native/library-element-net-native.md)|<span data-ttu-id="ccee5-197">런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-197">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span>|  
+|[<span data-ttu-id="ccee5-198">\<Namespace></span><span class="sxs-lookup"><span data-stu-id="ccee5-198">\<Namespace></span></span>](../../../docs/framework/net-native/namespace-element-net-native.md)|<span data-ttu-id="ccee5-199">네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-199">Applies reflection policy to all the types in a namespace.</span></span>|  
+|[<span data-ttu-id="ccee5-200">\<Type></span><span class="sxs-lookup"><span data-stu-id="ccee5-200">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="ccee5-201">형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-201">Applies reflection policy to a type and all its members.</span></span>|  
+|`<TypeInstantiation>`|<span data-ttu-id="ccee5-202">생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-202">Applies reflection policy to a constructed generic type and all its members.</span></span>|  
   
-## <a name="remarks"></a>설명  
- 리플렉션, serialization 및 interop 특성은 모두 선택 사항입니다. 그러나 이러한 특성이 하나 이상 있어야 합니다.  
+## <a name="remarks"></a><span data-ttu-id="ccee5-203">설명</span><span class="sxs-lookup"><span data-stu-id="ccee5-203">Remarks</span></span>  
+ <span data-ttu-id="ccee5-204">리플렉션, serialization 및 interop 특성은 모두 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-204">The reflection, serialization, and interop attributes are all optional.</span></span> <span data-ttu-id="ccee5-205">그러나 이러한 특성이 하나 이상 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-205">However, at least one must be present.</span></span>  
   
- `<TypeInstantiation>` 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 또는 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소의 자식인 경우 부모 요소가 정의하는 정책 설정을 재정의합니다. [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소가 해당 제네릭 형식 정의를 정의하는 경우 `<TypeInstantiation>` 요소는 지정한 생성된 제네릭 형식의 인스턴스화에 대해서만 런타임 리플렉션 정책을 재정의합니다.  
+ <span data-ttu-id="ccee5-206">`<TypeInstantiation>` 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 또는 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소의 자식인 경우 부모 요소가 정의하는 정책 설정을 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-206">If a `<TypeInstantiation>` element is the child of an [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), or [\<Type>](../../../docs/framework/net-native/type-element-net-native.md), element, it overrides the policy settings defined by the parent element.</span></span> <span data-ttu-id="ccee5-207">[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소가 해당 제네릭 형식 정의를 정의하는 경우 `<TypeInstantiation>` 요소는 지정한 생성된 제네릭 형식의 인스턴스화에 대해서만 런타임 리플렉션 정책을 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-207">If a [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) element defines a corresponding generic type definition, the `<TypeInstantiation>` element overrides runtime reflection policy only for instantiations of the specified constructed generic type.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 리플렉션을 사용하여 생성된 <xref:System.Collections.Generic.Dictionary%602> 개체에서 제네릭 형식 정의를 검색합니다. 또한 리플렉션을 사용하여 생성된 제네릭 형식 및 제네릭 형식 정의를 나타내는 <xref:System.Type> 개체에 대한 정보를 표시합니다. 예제의 `b` 변수는 [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 컨트롤입니다.  
+## <a name="example"></a><span data-ttu-id="ccee5-208">예제</span><span class="sxs-lookup"><span data-stu-id="ccee5-208">Example</span></span>  
+ <span data-ttu-id="ccee5-209">다음 예제에서는 리플렉션을 사용하여 생성된 <xref:System.Collections.Generic.Dictionary%602> 개체에서 제네릭 형식 정의를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-209">The following example uses reflection to retrieve the generic type definition from a constructed <xref:System.Collections.Generic.Dictionary%602> object.</span></span> <span data-ttu-id="ccee5-210">또한 리플렉션을 사용하여 생성된 제네릭 형식 및 제네릭 형식 정의를 나타내는 <xref:System.Type> 개체에 대한 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-210">It also uses reflection to display information about <xref:System.Type> objects that represent constructed generic types and generic type definitions.</span></span> <span data-ttu-id="ccee5-211">예제의 `b` 변수는 [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-211">The variable `b` in the example is a [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) control.</span></span>  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- 이 예제는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인을 사용하여 컴파일하면 <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName> 메서드를 호출하는 줄에서 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외를 throw합니다. 다음 `<TypeInstantiation>` 요소를 런타임 지시문 파일에 추가하면 예외를 방지하고 필요한 메타데이터를 제공할 수 있습니다.  
+ <span data-ttu-id="ccee5-212">이 예제는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인을 사용하여 컴파일하면 <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> 메서드를 호출하는 줄에서 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-212">After compilation with the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain, the example throws a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception on the line that calls the <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="ccee5-213">다음 `<TypeInstantiation>` 요소를 런타임 지시문 파일에 추가하면 예외를 방지하고 필요한 메타데이터를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccee5-213">You can eliminate the exception and provide the necessary metadata by adding the following `<TypeInstantiation>` element to the runtime directives file:</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -126,8 +124,7 @@ ms.lasthandoff: 08/21/2017
 </Directives>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="ccee5-214">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ccee5-214">See Also</span></span>  
+ [<span data-ttu-id="ccee5-215">런타임 지시문(rd.xml) 구성 파일 참조</span><span class="sxs-lookup"><span data-stu-id="ccee5-215">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="ccee5-216">런타임 지시문 요소</span><span class="sxs-lookup"><span data-stu-id="ccee5-216">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [<span data-ttu-id="ccee5-217">런타임 지시문 정책 설정</span><span class="sxs-lookup"><span data-stu-id="ccee5-217">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

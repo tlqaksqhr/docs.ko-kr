@@ -1,53 +1,57 @@
 ---
-title: "Dynamic Arguments | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Dynamic 인수"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 212f2df9e84a4af4e1c9e7d6792277adfb17351d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Dynamic Arguments
-이 샘플에서는 활동 작성자가 아니라 활동 소비자에 의해 인수가 정의되는 활동을 구현하는 방법을 보여 줍니다.이를 위해 런타임에서 활동의 메타데이터가 생성되는 방식을 재정의합니다.  
+# <a name="dynamic-arguments"></a><span data-ttu-id="e89aa-102">Dynamic 인수</span><span class="sxs-lookup"><span data-stu-id="e89aa-102">Dynamic Arguments</span></span>
+<span data-ttu-id="e89aa-103">이 샘플에서는 활동 작성자가 아니라 활동 소비자에 의해 인수가 정의되는 활동을 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-103">This sample demonstrates how to implement an activity for which the arguments are defined by the activity consumer rather than the activity author.</span></span> <span data-ttu-id="e89aa-104">이를 위해 런타임에서 활동의 메타데이터가 생성되는 방식을 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-104">It does this by overriding the way the runtime constructs the activity’s metadata.</span></span>  
   
-## 샘플 세부 정보  
- 실행 전 런타임에서는 활동 형식의 공용 멤버를 검사하고 자동으로 인수, 변수, 자식 활동 및 활동 대리자를 활동 메타데이터의 일부로 선언하여 활동에 대한 설명을 작성합니다.이를 통해 런타임에서는 워크플로가 올바르게 생성되도록 할 뿐 아니라 런타임 관계 및 수명 규칙을 관리합니다.일반적으로 활동 작성자는 <xref:System.Activities.Argument>에서 파생된 활동 형식에 공용 멤버를 지정하여 활동의 인수를 정의합니다.런타임에서는 <xref:System.Activities.Argument>에서 파생된 각 공용 멤버에 대해 <xref:System.Activities.RuntimeArgument>를 만들고 이를 해당 멤버에 대해 사용자가 제공한 인수 집합에 바인딩합니다.그러나 일부 경우에는 활동의 소비자가 인수 집합을 결정하는 구성을 제공합니다.활동 작성자는 <xref:System.Activities.Activity.CacheMetadata%2A>를 재정의하여 활동과 관련된 인수 집합을 비롯한 활동 메타데이터를 작성하는 방식을 사용자 지정합니다.  
+## <a name="sample-details"></a><span data-ttu-id="e89aa-105">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="e89aa-105">Sample details</span></span>  
+ <span data-ttu-id="e89aa-106">실행 전 런타임에서는 활동 형식의 공용 멤버를 검사하고 자동으로 인수, 변수, 자식 활동 및 활동 대리자를 활동 메타데이터의 일부로 선언하여 활동에 대한 설명을 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-106">Prior to execution, the runtime builds a description of an activity by examining the public members of the activity type and automatically declaring arguments, variables, child activities, and activity delegates as part of an activity’s metadata.</span></span> <span data-ttu-id="e89aa-107">이를 통해 런타임에서는 워크플로가 올바르게 생성되도록 할 뿐 아니라 런타임 관계 및 수명 규칙을 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-107">It does this to ensure correct construction of a workflow as well as to manage run-time relationships and lifetime rules.</span></span> <span data-ttu-id="e89aa-108">일반적으로 활동 작성자는 <xref:System.Activities.Argument>에서 파생된 활동 형식에 공용 멤버를 지정하여 활동의 인수를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-108">Typically an activity author defines the arguments of an activity by specifying public members on the activity type that derive from <xref:System.Activities.Argument>.</span></span> <span data-ttu-id="e89aa-109">런타임에서는 <xref:System.Activities.Argument>에서 파생된 각 공용 멤버에 대해 <xref:System.Activities.RuntimeArgument>를 만들고 이를 해당 멤버에 대해 사용자가 제공한 인수 집합에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-109">For each public member that derives from <xref:System.Activities.Argument>, the runtime creates a <xref:System.Activities.RuntimeArgument> and binds it to the user-provided argument set on that member.</span></span> <span data-ttu-id="e89aa-110">그러나 일부 경우에는 활동의 소비자가 인수 집합을 결정하는 구성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-110">In some cases, however, the consumer of the activity provides some configuration that determines the set of arguments.</span></span> <span data-ttu-id="e89aa-111">활동 작성자는 <xref:System.Activities.Activity.CacheMetadata%2A>를 재정의하여 활동과 관련된 인수 집합을 비롯한 활동 메타데이터를 작성하는 방식을 사용자 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-111">An activity author overrides <xref:System.Activities.Activity.CacheMetadata%2A> to customize the way activity metadata is built, which includes the set of arguments associated with the activity.</span></span>  
   
- 이 샘플에서는 메서드를 호출하는 활동에 대해 동적으로 인수 목록을 작성하는 방법을 보여 줍니다.활동 소비자는 호출할 형식 및 메서드 이름과 함께 해당 메서드에 전달할 인수 컬렉션을 지정합니다.  
+ <span data-ttu-id="e89aa-112">이 샘플에서는 메서드를 호출하는 활동에 대해 동적으로 인수 목록을 작성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-112">This sample demonstrates how to build an argument list dynamically for an activity that invokes a method.</span></span> <span data-ttu-id="e89aa-113">활동 소비자는 호출할 형식 및 메서드 이름과 함께 해당 메서드에 전달할 인수 컬렉션을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-113">The activity consumer specifies the type and the method name they want to invoke along with a collection of arguments to be passed to that method.</span></span>  
   
 > [!NOTE]
->  이 샘플의 목적은 <xref:System.Activities.CodeActivity.CacheMetadata%2A>의 재정의 방법과 <xref:System.Activities.RuntimeArgument>의 사용 방법을 보여 주는 것입니다.이 활동이 호출할 수 있는 메서드 종류와 관련하여 주의해야 할 사항이 몇 가지 있습니다.예를 들어 이 활동은 제네릭 또는 매개 변수 배열과 함께 사용할 수 없습니다..NET Framework에서 제공되는 <xref:System.Activities.Statements.InvokeMethod> 활동은 이와 같은 여러 경우를 처리합니다.  
+>  <span data-ttu-id="e89aa-114">이 샘플의 목적은 <xref:System.Activities.CodeActivity.CacheMetadata%2A>의 재정의 방법과 <xref:System.Activities.RuntimeArgument>의 사용 방법을 보여 주는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-114">The purpose of this sample is to demonstrate how to override <xref:System.Activities.CodeActivity.CacheMetadata%2A> and how to use <xref:System.Activities.RuntimeArgument>.</span></span> <span data-ttu-id="e89aa-115">이 활동이 호출할 수 있는 메서드 종류와 관련하여 주의해야 할 사항이 몇 가지 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-115">There are several caveats with respect to the kinds of methods that this activity can invoke.</span></span> <span data-ttu-id="e89aa-116">예를 들어 이 활동은 제네릭 또는 매개 변수 배열과 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-116">For example, it does not work with generics or parameter arrays.</span></span> <span data-ttu-id="e89aa-117">.NET Framework에서 제공되는 <xref:System.Activities.Statements.InvokeMethod> 활동은 이와 같은 여러 경우를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-117">The <xref:System.Activities.Statements.InvokeMethod> activity that ships in.NET Framework handles these cases and more.</span></span>  
   
- `MethodInvoke` 활동은 <xref:System.Activities.CodeActivity.CacheMetadata%2A>를 재정의하고, <xref:System.Activities.RuntimeArgument>를 만들어 메서드 호출 결과를 처리함으로써 작업을 시작합니다.또한 이 <xref:System.Activities.RuntimeArgument>를 공개적으로 설정 가능한 `Result`라는 <xref:System.Activities.OutArgument>에 바인딩합니다.`MethodInvoke.Result`가 `null`이면 런타임에서는 해당 형식의 기본 식으로 구성된 <xref:System.Activities.OutArgument>로 이를 자동으로 채웁니다.따라서 활동 작성자는 인수 속성이 `null`인지 여부를 확인할 필요가 전혀 없습니다.  
+ <span data-ttu-id="e89aa-118">`MethodInvoke` 활동은 <xref:System.Activities.CodeActivity.CacheMetadata%2A>를 재정의하고, <xref:System.Activities.RuntimeArgument>를 만들어 메서드 호출 결과를 처리함으로써 작업을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-118">The `MethodInvoke` activity overrides <xref:System.Activities.CodeActivity.CacheMetadata%2A> and begins by creating a <xref:System.Activities.RuntimeArgument> to handle any result from the method invocation.</span></span> <span data-ttu-id="e89aa-119">또한 이 <xref:System.Activities.RuntimeArgument>를 공개적으로 설정 가능한 <xref:System.Activities.OutArgument>라는 `Result`에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-119">It binds this <xref:System.Activities.RuntimeArgument> to the publicly settable <xref:System.Activities.OutArgument> named `Result`.</span></span> <span data-ttu-id="e89aa-120">`MethodInvoke.Result`가 `null`이면 런타임에서는 해당 형식의 기본 식으로 구성된 <xref:System.Activities.OutArgument>로 이를 자동으로 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-120">If `MethodInvoke.Result` is `null`, the runtime automatically populates it with an <xref:System.Activities.OutArgument> configured with the default expression for its type.</span></span> <span data-ttu-id="e89aa-121">따라서 활동 작성자는 인수 속성이 `null`인지 여부를 확인할 필요가 전혀 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-121">This behavior means an activity author never has to check whether an argument property is `null`.</span></span>  
   
- 그런 다음 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 재정의는 사용자가 제공한 `MethodName` 및 `TargetType`에서 호출할 때 사용하는 `MethodInfo`를 확인합니다.`DetermineMethodInfo` 메서드는 모든 구성 오류를 유효성 검사 오류로 보고할 수 있도록 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 재정의에 전달된 <xref:System.Activities.CodeActivityMetadata> 매개 변수를 사용하며,이를 위해 `metadata.AddValidationError`를 호출합니다.  
+ <span data-ttu-id="e89aa-122">그런 다음 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 재정의는 사용자가 제공한 `MethodInfo` 및 `MethodName`에서 호출할 때 사용하는 `TargetType`를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-122">Next, the <xref:System.Activities.CodeActivity.CacheMetadata%2A> override determines the `MethodInfo` it uses for invocation from the user-provided `MethodName` and `TargetType`.</span></span> <span data-ttu-id="e89aa-123">`DetermineMethodInfo` 메서드는 모든 구성 오류를 유효성 검사 오류로 보고할 수 있도록 <xref:System.Activities.CodeActivityMetadata> 재정의에 전달된 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 매개 변수를 사용하며,</span><span class="sxs-lookup"><span data-stu-id="e89aa-123">The `DetermineMethodInfo` method takes the <xref:System.Activities.CodeActivityMetadata> parameter passed to the <xref:System.Activities.CodeActivity.CacheMetadata%2A> override so that any configuration errors can be reported as validation errors.</span></span> <span data-ttu-id="e89aa-124">이를 위해 `metadata.AddValidationError`를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-124">This is done by calling `metadata.AddValidationError`.</span></span>  
   
- `MethodInfo`가 설정된 후 이 샘플에서는 `MethodInfo` 매개 변수를 반복합니다.또한 각 매개 변수에 대해 <xref:System.Activities.RuntimeArgument>를 만들고 이를 `Parameters` 속성에서 사용자가 제공한 컬렉션의 해당 인수에 바인딩합니다.마지막으로는 `metadata.SetArgumentsCollection`을 호출하여 <xref:System.Activities.RuntimeArgument>의 컬렉션을 활동과 연결합니다.  
+ <span data-ttu-id="e89aa-125">`MethodInfo`가 설정된 후 이 샘플에서는 `MethodInfo` 매개 변수를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-125">Once the `MethodInfo` has been set, the sample iterates over the `MethodInfo` parameters.</span></span> <span data-ttu-id="e89aa-126">또한 각 매개 변수에 대해 <xref:System.Activities.RuntimeArgument>를 만들고 이를 `Parameters` 속성에서 사용자가 제공한 컬렉션의 해당 인수에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-126">For each parameter, it creates a <xref:System.Activities.RuntimeArgument> and binds it to the corresponding argument in the user-provided collection from the `Parameters` property.</span></span> <span data-ttu-id="e89aa-127">마지막으로는 <xref:System.Activities.RuntimeArgument>을 호출하여 `metadata.SetArgumentsCollection`의 컬렉션을 활동과 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-127">Finally, the collection of <xref:System.Activities.RuntimeArgument>s is associated with the activity by calling `metadata.SetArgumentsCollection`.</span></span>  
   
- `resultArgument` 또는 사용자 제공 인수의 경우나 `Parameters` 컬렉션의 경우와 같이 <xref:System.Activities.RuntimeArgument>를 사용하여 인수를 확인할 수 있습니다.  
+ <span data-ttu-id="e89aa-128"><xref:System.Activities.RuntimeArgument> 또는 사용자 제공 인수의 경우나 `resultArgument` 컬렉션의 경우와 같이 `Parameters`를 사용하여 인수를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-128">Note that argument resolution can be done using a <xref:System.Activities.RuntimeArgument>, as in the case of `resultArgument` or the user-provided argument, as in the case of the `Parameters` collection.</span></span>  
   
-#### 이 샘플을 사용하려면  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="e89aa-129">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="e89aa-129">To use this sample</span></span>  
   
-1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 DynamicArguments.sln 파일을 엽니다.  
+1.  <span data-ttu-id="e89aa-130">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 DynamicArguments.sln 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-130">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the DynamicArguments.sln file.</span></span>  
   
-2.  Ctrl\+Shift\+B를 눌러 솔루션을 빌드합니다.  
+2.  <span data-ttu-id="e89aa-131">Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-131">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Ctrl\+F5를 눌러 솔루션을 실행합니다.  
+3.  <span data-ttu-id="e89aa-132">Ctrl+F5를 눌러 솔루션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-132">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.계속하기 전에 다음\(기본\) 디렉터리를 확인하십시오.  
+>  <span data-ttu-id="e89aa-133">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-133">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e89aa-134">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="e89aa-134">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하십시오.이 샘플은 다음 디렉터리에 있습니다.  
+>  <span data-ttu-id="e89aa-135">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="e89aa-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e89aa-136">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e89aa-136">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\DynamicArguments`  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="e89aa-137">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e89aa-137">See Also</span></span>

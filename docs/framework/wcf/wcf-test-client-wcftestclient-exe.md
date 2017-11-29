@@ -1,176 +1,179 @@
 ---
-title: "WCF 테스트 클라이언트(WcfTestClient.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 테스트 클라이언트(WcfTestClient.exe)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: 45
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 45
+caps.latest.revision: "45"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dc189ab1c68edfc41267e493a6ca6bccf9fe519a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# WCF 테스트 클라이언트(WcfTestClient.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 테스트 클라이언트\(WcfTestClient.exe\)는 사용자가 테스트 매개 변수를 입력하고, 해당 입력 내용을 서비스에 전송하고, 서비스에서 돌려보내는 응답을 보는 데 사용할 수 있는 GUI 도구입니다.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트와 이 도구를 함께 사용하면 서비스를 매끄럽게 테스트할 수 있습니다.  
+# <a name="wcf-test-client-wcftestclientexe"></a><span data-ttu-id="a5622-102">WCF 테스트 클라이언트(WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="a5622-102">WCF Test Client (WcfTestClient.exe)</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="a5622-103"> 테스트 클라이언트(WcfTestClient.exe)는 사용자가 테스트 매개 변수를 입력하고, 해당 입력 내용을 서비스에 전송하고, 서비스에서 돌려보내는 응답을 보는 데 사용할 수 있는 GUI 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-103"> Test Client (WcfTestClient.exe) is a GUI tool that enables users to input test parameters, submit that input to the service, and view the response that the service sends back.</span></span> <span data-ttu-id="a5622-104">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트와 이 도구를 함께 사용하면 서비스를 매끄럽게 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-104">It provides a seamless service testing experience when combined with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Host.</span></span>  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트\(WcfTestClient.exe\)는 C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE\\에 있습니다.  
+ <span data-ttu-id="a5622-105">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트(WcfTestClient.exe)는 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-105">You can find the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client (WcfTestClient.exe) in the following location: C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\\</span></span>  
   
-## 테스트 클라이언트 사용 시나리오  
- 다음 단원에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 사용하여 개발 프로세스를 간소화할 수 있는 가장 일반적인 시나리오를 설명합니다.  
+## <a name="scenarios-for-using-test-client"></a><span data-ttu-id="a5622-106">테스트 클라이언트 사용 시나리오</span><span class="sxs-lookup"><span data-stu-id="a5622-106">Scenarios for Using Test Client</span></span>  
+ <span data-ttu-id="a5622-107">다음 단원에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 사용하여 개발 프로세스를 간소화할 수 있는 가장 일반적인 시나리오를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-107">The following sections discuss the most common scenarios in which you can use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client to streamline your development process.</span></span>  
   
-### Visual Studio의 경우  
+### <a name="inside-visual-studio"></a><span data-ttu-id="a5622-108">Visual Studio의 경우</span><span class="sxs-lookup"><span data-stu-id="a5622-108">Inside Visual Studio</span></span>  
   
-#### WCF 서비스 호스트가 단일 서비스에서 WCF 테스트 클라이언트 시작  
- 새 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 프로젝트를 만들고 F5 키를 눌러 디버거를 시작하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트가 프로젝트의 서비스를 호스트하기 시작합니다.  그런 다음 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트는 구성 파일에 정의된 서비스 끝점 목록을 열어 표시합니다.  그러면 매개 변수를 테스트하고, 서비스를 호출하며, 이 프로세스를 반복하여 테스트를 계속하고 서비스의 유효성을 검사할 수 있습니다.  
+#### <a name="wcf-service-host-starts-wcf-test-client-with-a-single-service"></a><span data-ttu-id="a5622-109">WCF 서비스 호스트가 단일 서비스에서 WCF 테스트 클라이언트 시작</span><span class="sxs-lookup"><span data-stu-id="a5622-109">WCF Service Host Starts WCF Test Client with a Single Service</span></span>  
+ <span data-ttu-id="a5622-110">새 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 프로젝트를 만들고 F5 키를 눌러 디버거를 시작하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트가 프로젝트의 서비스를 호스트하기 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-110">After you create a new [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service project and press F5 to start the debugger, the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Host begins to host the service in your project.</span></span> <span data-ttu-id="a5622-111">그런 다음 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트는 구성 파일에 정의된 서비스 끝점 목록을 열어 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-111">Then, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client opens and displays a list of service endpoints defined in the configuration file.</span></span> <span data-ttu-id="a5622-112">그러면 매개 변수를 테스트하고, 서비스를 호출하며, 이 프로세스를 반복하여 테스트를 계속하고 서비스의 유효성을 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-112">You can test the parameters and invoke the service, and repeat this process to continuously test and validate your service.</span></span>  
   
-#### WCF 서비스 호스트가 여러 서비스에서 WCF 테스트 클라이언트 시작  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 사용하면 여러 서비스가 포함된 서비스 프로젝트를 디버깅하는 데에도 도움이 됩니다.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 열리면 자동으로 프로젝트의 서비스 목록을 반복 표시하고 테스트할 서비스를 엽니다.  
+#### <a name="wcf-service-host-starts-wcf-test-client-with-multiple-services"></a><span data-ttu-id="a5622-113">WCF 서비스 호스트가 여러 서비스에서 WCF 테스트 클라이언트 시작</span><span class="sxs-lookup"><span data-stu-id="a5622-113">WCF Service Host Starts WCF Test Client with Multiple Services</span></span>  
+ <span data-ttu-id="a5622-114">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 사용하면 여러 서비스가 포함된 서비스 프로젝트를 디버깅하는 데에도 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-114">You can also use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client to help debug a service project that contains multiple services.</span></span> <span data-ttu-id="a5622-115">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 열리면 자동으로 프로젝트의 서비스 목록을 반복 표시하고 테스트할 서비스를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-115">When [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client opens, it automatically iterates the list of services in your project and opens them for testing.</span></span>  
   
-### Visual Studio 외부  
- 또한 Visual Studio 외부에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트\(WcfTestClient.exe\)를 호출하여 인터넷에서 임의의 서비스를 테스트할 수도 있습니다.  도구를 찾으려면 다음 위치로 이동합니다.  
+### <a name="outside-visual-studio"></a><span data-ttu-id="a5622-116">Visual Studio 외부</span><span class="sxs-lookup"><span data-stu-id="a5622-116">Outside Visual Studio</span></span>  
+ <span data-ttu-id="a5622-117">또한 Visual Studio 외부에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트(WcfTestClient.exe)를 호출하여 인터넷에서 임의의 서비스를 테스트할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-117">You can also invoke the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client (WcfTestClient.exe) outside Visual Studio to test an arbitrary service on the Internet.</span></span> <span data-ttu-id="a5622-118">도구를 찾으려면 다음 위치로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-118">To locate the tool, go to the following location:</span></span>  
   
- C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE\\  
+ <span data-ttu-id="a5622-119">C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\\</span><span class="sxs-lookup"><span data-stu-id="a5622-119">C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\\</span></span>  
   
- 도구를 사용하려면 파일 이름을 두 번 클릭하여 이 위치에서 열거나 명령줄에서 시작합니다.  
+ <span data-ttu-id="a5622-120">도구를 사용하려면 파일 이름을 두 번 클릭하여 이 위치에서 열거나 명령줄에서 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-120">To use the tool, double-click the file name to open it from this location, or launch it from a command line.</span></span>  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서는 임의 개수의 URI을 명령줄 인수로 사용합니다.  이들은 테스트할 수 있는 서비스의 URI입니다.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="a5622-121"> 테스트 클라이언트에서는 임의 개수의 URI을 명령줄 인수로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-121"> Test Client takes an arbitrary number of URIs as command line arguments.</span></span>  <span data-ttu-id="a5622-122">이들은 테스트할 수 있는 서비스의 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-122">These are the URIs of services that can be tested.</span></span>  
   
  `wcfTestClient.exe URI1 URI2 …`  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 창이 열리면 **파일**\-\>**서비스 추가**를 클릭하고 열 서비스의 끝점 주소를 입력합니다.  
+ <span data-ttu-id="a5622-123">후의 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 창이 열리면, 클릭 **파일**->**서비스 추가**, 열려는 서비스의 끝점 주소를 입력 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-123">After the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client window is opened, click **File**->**Add Service**, and enter the endpoint address of the service you want to open.</span></span>  
   
-## WCF 테스트 클라이언트 사용자 인터페이스  
- 단일 서비스 또는 여러 서비스에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 사용할 수 있습니다.  
+## <a name="wcf-test-client-user-interface"></a><span data-ttu-id="a5622-124">WCF 테스트 클라이언트 사용자 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a5622-124">WCF Test Client User Interface</span></span>  
+ <span data-ttu-id="a5622-125">단일 서비스 또는 여러 서비스에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-125">You can use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client with a single service or multiple services.</span></span>  
   
-### 서비스 작업  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 주 창의 왼쪽 창에는 사용 가능한 모든 서비스가 각 끝점 및 작업과 함께 나열됩니다.  
+### <a name="service-operations"></a><span data-ttu-id="a5622-126">서비스 작업</span><span class="sxs-lookup"><span data-stu-id="a5622-126">Service Operations</span></span>  
+ <span data-ttu-id="a5622-127">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 주 창의 왼쪽 창에는 사용 가능한 모든 서비스가 각 끝점 및 작업과 함께 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-127">The left pane of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client main window lists all the available services, along with their respective endpoints and operations.</span></span>  
   
- 작업을 두 번 클릭하면 작업 이름이 표시된 새 탭 내의 오른쪽 창에서 해당 내용을 볼 수 있습니다.  
+ <span data-ttu-id="a5622-128">작업을 두 번 클릭하면 작업 이름이 표시된 새 탭 내의 오른쪽 창에서 해당 내용을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-128">When you double-click an operation, you can view its content in the right pane inside a new tab with the operation's name.</span></span>  
   
- 또한 왼쪽 창에는 클라이언트 구성 파일이 나열됩니다.  이 항목 중 하나를 두 번 클릭하면 오른쪽 창의 새 탭 창에 파일 내용이 표시됩니다.  
+ <span data-ttu-id="a5622-129">또한 왼쪽 창에는 클라이언트 구성 파일이 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-129">The left pane also lists client configuration files.</span></span> <span data-ttu-id="a5622-130">이 항목 중 하나를 두 번 클릭하면 오른쪽 창의 새 탭 창에 파일 내용이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-130">Double-click any of the items to display the content of the file in a new tabbed window in the right pane.</span></span>  
   
-### 테스트 매개 변수 입력  
- 테스트 매개 변수를 보려면 작업을 두 번 클릭하여 오른쪽 창에서 엽니다.  **서식 있음** 뷰에 매개 변수가 기본적으로 표시되며, 임의의 매개 변수 값을 입력하여 서비스를 테스트할 수 있습니다.  
+### <a name="entering-test-parameters"></a><span data-ttu-id="a5622-131">테스트 매개 변수 입력</span><span class="sxs-lookup"><span data-stu-id="a5622-131">Entering Test Parameters</span></span>  
+ <span data-ttu-id="a5622-132">테스트 매개 변수를 보려면 작업을 두 번 클릭하여 오른쪽 창에서 엽니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-132">To view the test parameters, double-click an operation to open it in the right pane.</span></span> <span data-ttu-id="a5622-133">매개 변수도 표시 되며 **형식** 기본적으로 뷰는 서비스를 테스트 하려면 매개 변수에 대 한 임의 값을 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-133">The parameters are showed in **Formatted** view by default, and you can enter arbitrary values for the parameters to test the service.</span></span>  
   
- 메시지의 XML을 보려면 **XML**을 클릭합니다.  입력한 값을 서비스에 보내려면 **호출**을 클릭합니다.  
+ <span data-ttu-id="a5622-134">메시지의 XML을 보려면 클릭 **XML**합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-134">To view the message's XML, click **XML**.</span></span> <span data-ttu-id="a5622-135">서비스에 보내도록 하려면 **Invoke**합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-135">To send them to the service, click **Invoke**.</span></span>  
   
- DataSet 매개 변수의 경우 **편집...** 옆에 있는 **…** 단추를 클릭하여 DataGrid가 표시되는 새 창에서 매개 변수를 편집합니다.  **데이터 집합 복사** 및 **데이터 집합 붙여넣기** 단추의 모양을 확인하세요.  처음 편집할 때 DataSet 개체의 스키마를 알 수 없는 경우 DataGrid는 비어 있습니다.  DataSet 개체는 같은 스키마를 사용하여 DataGrid의 현재 개체에 붙여 넣어야 합니다.  붙여넣기 작업 전에 다른 위치에서 스키마를 복사해야 합니다. **데이터 집합 복사** 단추를 클릭하여 나중에 사용할 수 있도록 DataSet 개체를 복사할 수도 있습니다.  
+ <span data-ttu-id="a5622-136">데이터 집합 매개 변수를 클릭 하 고 **...**</span><span class="sxs-lookup"><span data-stu-id="a5622-136">For a DataSet parameter, click the **…**</span></span> <span data-ttu-id="a5622-137">단추 옆에 **편집...**</span><span class="sxs-lookup"><span data-stu-id="a5622-137">button next to **Edit…**</span></span> <span data-ttu-id="a5622-138">DataGrid를 보여 주는 새 창에서 편집할 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-138">to edit it in a new window showing the DataGrid.</span></span> <span data-ttu-id="a5622-139">확인 된 **데이터 집합 복사** 및 **데이터 집합 붙여넣기** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-139">Notice the appearance of the **Copy DataSet** and **Paste DataSet** buttons.</span></span> <span data-ttu-id="a5622-140">처음 편집할 때 DataSet 개체의 스키마를 알 수 없는 경우 DataGrid는 비어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-140">If the schema of the DataSet object is unknown upon the first edit, the DataGrid is empty.</span></span> <span data-ttu-id="a5622-141">DataSet 개체는 같은 스키마를 사용하여 DataGrid의 현재 개체에 붙여 넣어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-141">You have to paste a DataSet object with the same schema into the current object in the DataGrid.</span></span> <span data-ttu-id="a5622-142">붙여넣기 작업 전에 다른 위치에서 스키마를 복사해야 합니다. 클릭 하 여 차후 사용률에 대 한 데이터 집합 개체를 복사할 수도 있습니다는 **데이터 집합 복사** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-142">(Notice that you need to copy the schema from somewhere else before the paste operation.) You can also copy a Dataset object for future usage by clicking the **Copy DataSet** button.</span></span>  
   
- 서비스의 응답은 테스트 매개 변수 아래에 표시됩니다.  
+ <span data-ttu-id="a5622-143">서비스의 응답은 테스트 매개 변수 아래에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-143">The service's response appears below the test parameters.</span></span>  
   
 > [!NOTE]
->  예상 반환 값이 문자열이면 제공된 입력 값이 따옴표 안에 들어 있지 않은 경우에도 결과는 따옴표로 묶인 문자열로 표시됩니다.  
+>  <span data-ttu-id="a5622-144">예상 반환 값이 문자열이면 제공된 입력 값이 따옴표 안에 들어 있지 않은 경우에도 결과는 따옴표로 묶인 문자열로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-144">If the expected return value is a string, the result will be displayed as a quoted string even though the input provided was not in quotes.</span></span>  
   
- 서비스의 계약을 만들 때 특정 작업을 단방향으로 지정한 경우 서비스 응답이 표시되지 않습니다.  메시지가 배달을 위해 대기 중이면 대화 상자가 표시되어 메시지를 보냈음을 알립니다.  
+ <span data-ttu-id="a5622-145">서비스의 계약을 만들 때 특정 작업을 단방향으로 지정한 경우 서비스 응답이 표시되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-145">If you specified a particular operation as one-way when you created the contract for the service, no service response is displayed.</span></span> <span data-ttu-id="a5622-146">메시지가 배달을 위해 대기 중이면 대화 상자가 표시되어 메시지를 보냈음을 알립니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-146">As soon as the message is queued for delivery, a dialog box pops up to notify you that the message was successfully sent.</span></span>  
   
-### 세션 지원  
- 서비스 작업 탭에서 **새 프록시 시작** 확인란을 사용하여 세션 지원을 설정하거나 해제할 수 있습니다.  이 상자는 기본적으로 선택되어 있지 않습니다.  
+### <a name="session-support"></a><span data-ttu-id="a5622-147">세션 지원</span><span class="sxs-lookup"><span data-stu-id="a5622-147">Session Support</span></span>  
+ <span data-ttu-id="a5622-148">**새 프록시 시작** 서비스 작업의 탭에 확인란을 사용 하면 세션 지원을 설정/해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-148">The **Start a new proxy** check box in a service operation's tab enables you to toggle session support.</span></span> <span data-ttu-id="a5622-149">이 상자는 기본적으로 선택되어 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-149">This box is cleared by default.</span></span>  
   
- 특정 작업 또는 같은 서비스 끝점의 다른 작업에 대한 테스트 매개 변수를 입력하고 이 확인란을 선택 취소한 상태로 **호출**을 여러 번 클릭하면 이러한 작업들이 하나의 프록시를 공유하고 여러 작업 간에 서비스 상태가 유지됩니다.  
+ <span data-ttu-id="a5622-150">특정 작업 (또는 동일한 서비스 끝점에 있는 다른 작업)에 대 한 테스트 매개 변수를 입력 하 고 클릭 **Invoke** 여러 번 확인란을 선택 취소 되어, 이러한 작업을 하나의 프록시 공유 및 서비스 상태는 여러 작업 간에 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-150">When you enter test parameters for a specific operation (or another operation in the same service endpoint) and click **Invoke** multiple times with the check box cleared, these operations share one proxy and the service status is persisted across multiple operations.</span></span>  
   
- **새 프록시 시작** 확인란을 선택하면 **호출**을 클릭할 때마다 새 프록시가 시작되고 이전 세션 시나리오는 종료되며 서비스 상태가 다시 설정됩니다.  
+ <span data-ttu-id="a5622-151">경우는 **새 프록시 시작** 확인란, 각각에 대해 새 프록시 시작 **Invoke**이전 세션 시나리오는 종료 하 고 서비스 상태가 다시 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-151">If the **Start a new proxy** check box is checked, a new proxy is started for each **Invoke**, the previous session scenario is ended, and the service status is reset.</span></span>  
   
-### 클라이언트 구성 편집  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 주 창의 왼쪽 창에는 클라이언트 구성 파일이 나열됩니다.  이 항목 중 하나를 두 번 클릭하면 오른쪽 창에 파일 내용이 표시됩니다.  
+### <a name="editing-client-configuration"></a><span data-ttu-id="a5622-152">클라이언트 구성 편집</span><span class="sxs-lookup"><span data-stu-id="a5622-152">Editing Client Configuration</span></span>  
+ <span data-ttu-id="a5622-153">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 주 창의 왼쪽 창에는 클라이언트 구성 파일이 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-153">The left pane of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client main window lists client configuration files.</span></span> <span data-ttu-id="a5622-154">이 항목 중 하나를 두 번 클릭하면 오른쪽 창에 파일 내용이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-154">Double-click any of the items to display the contents of the file in the right pane.</span></span>  
   
-#### 서비스 구성 편집기로 편집  
- 왼쪽 창에서 **구성 파일**을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴 **서비스 구성 편집기로 편집**을 선택합니다.  서비스 구성 편집기가 시작되어 클라이언트 구성 내용이 표시됩니다.  이 도구 내에서 구성을 편집하고 저장할 수 있습니다.  
+#### <a name="edit-with-service-configuration-editor"></a><span data-ttu-id="a5622-155">서비스 구성 편집기로 편집</span><span class="sxs-lookup"><span data-stu-id="a5622-155">Edit with Service Configuration Editor</span></span>  
+ <span data-ttu-id="a5622-156">마우스 오른쪽 단추로 클릭 **Config 파일** 왼쪽된 창 고에서 상황에 맞는 메뉴 **서비스 구성 편집기로 편집**합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-156">Right-click **Config File** in the left pane and select the context menu **Edit with SvcConfigEditor**.</span></span> <span data-ttu-id="a5622-157">서비스 구성 편집기가 시작되어 클라이언트 구성 내용이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-157">Service Configuration Editor is launched with the client configuration content.</span></span> <span data-ttu-id="a5622-158">이 도구 내에서 구성을 편집하고 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-158">You can edit the configuration and save it within the tool.</span></span>  
   
- 서비스 구성 편집기에서 파일을 저장하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 파일이 외부에서 수정되었다는 경고 메시지를 표시하고 파일을 다시 로드할지 묻습니다.  
+ <span data-ttu-id="a5622-159">서비스 구성 편집기에서 파일을 저장하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 파일이 외부에서 수정되었다는 경고 메시지를 표시하고 파일을 다시 로드할지 묻습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-159">After saving the file in Service Configuration Editor, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client displays a warning message to inform you that the file has been modified outside and asks whether you would like to reload it.</span></span>  
   
- **예**를 선택하면 편집기에서 변경한 내용이 "Client.dll.config" 탭의 구성 내용에 반영됩니다.  
+ <span data-ttu-id="a5622-160">선택 하는 경우 **예**, "Client.dll.config" 탭에서 구성 콘텐츠 편집기에서 변경한 변경 내용을 반영 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-160">If you select **Yes**, the configuration content in the "Client.dll.config" tab reflects the changes you made in the editor.</span></span>  
   
- **아니요**를 선택하면 "Client.dll.config" 탭의 구성 내용이 그대로 유지되고 수정된 내용이 자동으로 소스 파일에 저장됩니다.  
+ <span data-ttu-id="a5622-161">선택 하는 경우 **아니요**"Client.dll.config" 탭의 구성 내용이 그대로 유지 하 고 수정 된 내용이 자동으로 소스 파일에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-161">If you select **No**, the configuration content in the "Client.dll.config" tab remains unchanged and the modified content is automatically saved to the source file.</span></span>  
   
-#### 기본 구성으로 복원  
- 모든 변경 내용을 취소하고 기본 클라이언트 구성으로 복원하려면 왼쪽 창에서 **구성 파일**을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴 **기본 구성으로 복원**을 선택합니다.  기본 구성 값이 로드되고 "Client.dll.config" 탭의 내용이 복원됩니다.  
+#### <a name="restore-to-default-configuration"></a><span data-ttu-id="a5622-162">기본 구성으로 복원</span><span class="sxs-lookup"><span data-stu-id="a5622-162">Restore to Default Configuration</span></span>  
+ <span data-ttu-id="a5622-163">모든 변경 내용을 취소 하 고 기본 클라이언트 구성으로 복원 마우스 오른쪽 단추로 클릭 하려는 경우 **Config 파일** 왼쪽된 창 고에서 상황에 맞는 메뉴 **기본 구성으로 복원**합니다. 기본 구성 값이 로드 하 고 "Client.dll.config" 탭의 내용을 복원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-163">If you want to cancel all the changes and restore to the default client configuration, right-click **Config File** in the left pane and select the context menu **Restore to Default Config**. The default configuration value is loaded and content in "Client.dll.config" tab is restored.</span></span>  
   
-#### 변경 내용 확인  
- 저장한 변경 내용을 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트로 로드할 때 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 스키마에 대해 구성의 유효성을 검사합니다.  오류가 발견되면 오류 정보를 보여 주는 대화 상자가 표시됩니다.  
+#### <a name="validate-changes"></a><span data-ttu-id="a5622-164">변경 내용 확인</span><span class="sxs-lookup"><span data-stu-id="a5622-164">Validate Changes</span></span>  
+ <span data-ttu-id="a5622-165">저장한 변경 내용을 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트로 로드할 때 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 스키마에 대해 구성의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-165">When saved changes are being loaded in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client, the configuration is checked for validity against [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] schema.</span></span> <span data-ttu-id="a5622-166">오류가 발견되면 오류 정보를 보여 주는 대화 상자가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-166">If errors are found, a dialog box is displayed to show error details.</span></span>  
   
- 프록시 생성, 이진 컴파일 또는 서비스 호출 도중에는 편집을 지원하는 메뉴 항목\(즉, "편집…", "복원…" 등\)을 사용할 수 없습니다.  업데이트된 구성을 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트로 로딩할 때는 서비스 호출도 사용할 수 없습니다.  
+ <span data-ttu-id="a5622-167">프록시 생성, 이진 컴파일 또는 서비스 호출 하는 동안 (즉, "편집 …", "복원 …" 및 등)를 편집을 지 원하는 메뉴 항목을 사용 하는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-167">During proxy generation, binary compiling, or service invoking, menu items that support editing (that is, "Edit …", "Restore …", and so on) are disabled.</span></span> <span data-ttu-id="a5622-168">업데이트된 구성을 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트로 로딩할 때는 서비스 호출도 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-168">Service invocation is also disabled when loading updated configuration to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span>  
   
-#### 클라이언트 구성 유지  
- **도구**\-\>**옵션**\-\>**클라이언트 구성** 탭에는 기본적으로 사용되는 **서비스 시작 시 항상 구성 다시 생성** 옵션이 있습니다.  이 옵션은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 서비스를 로드할 때마다 최신 서비스 계약 및 서비스 App.config 파일을 기준으로 구성 파일을 다시 생성하도록 지정합니다.  
+#### <a name="persist-client-configuration"></a><span data-ttu-id="a5622-169">클라이언트 구성 유지</span><span class="sxs-lookup"><span data-stu-id="a5622-169">Persist Client Configuration</span></span>  
+ <span data-ttu-id="a5622-170">**도구**->**옵션**->**클라이언트 구성** 탭에는 **항상 다시 생성 구성 때 시작 서비스** 기본적으로 사용 되는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-170">The **Tools**->**Options**->**Client Configuration** tab contains an **Always Regenerate Config When Launching Services** option, which is enabled by default.</span></span> <span data-ttu-id="a5622-171">이 옵션은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 서비스를 로드할 때마다 최신 서비스 계약 및 서비스 App.config 파일을 기준으로 구성 파일을 다시 생성하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-171">This option specifies that every time [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client loads a service, it regenerates a configuration file based on the latest service contract and service App.config files.</span></span>  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스의 클라이언트 구성을 편집한 후 항상 이 업데이트된 파일을 사용하여 서비스를 디버깅하려면 **다시 생성** 옵션을 선택 취소할 수 있습니다.  그러면 서비스를 업데이트하고 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 다시 열더라도 Client.dll.config 파일은 업데이트된 서비스를 기준으로 다시 생성되지 않고 이전에 업데이트된 상태로 유지됩니다.  
+ <span data-ttu-id="a5622-172">에 대 한 클라이언트 구성을 편집한 후 사용자 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스와 항상이 업데이트 된 파일을 사용 하 여 서비스를 디버그 하려는 선택을 취소할 수 있습니다는 **다시 생성** 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-172">If you have edited the client configuration for your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service and want to always use this updated file to debug your service, you can uncheck the **Regenerate** option.</span></span> <span data-ttu-id="a5622-173">그러면 서비스를 업데이트하고 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 다시 열더라도 Client.dll.config 파일은 업데이트된 서비스를 기준으로 다시 생성되지 않고 이전에 업데이트된 상태로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-173">By doing so, even when you update the service and reopen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client, the Client.dll.config file is the one you updated previously instead of a regenerated one based on the updated service.</span></span>  
   
- 그러나 다시 생성된 프록시와 일치하도록 구성 파일을 편집해야 할 수 있습니다.  다시 생성된 프록시와 구성 파일이 업데이트된 서비스로 인해 일치하지 않으면 서비스를 호출할 때 오류가 발생합니다.  
+ <span data-ttu-id="a5622-174">그러나 다시 생성된 프록시와 일치하도록 구성 파일을 편집해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-174">However, you might need to edit the configuration file to make it consistent with the regenerated proxy.</span></span> <span data-ttu-id="a5622-175">다시 생성된 프록시와 구성 파일이 업데이트된 서비스로 인해 일치하지 않으면 서비스를 호출할 때 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-175">If the regenerated proxy and configuration file are mismatched due to an updated service, errors will occur when the service is invoked.</span></span>  
   
 > [!CAUTION]
->  클라이언트 구성 파일을 수정한 후 나중에 다시 사용하기 위해 선택하는 경우 파일이 다음 위치에 있습니다.  
+>  <span data-ttu-id="a5622-176">클라이언트 구성 파일을 수정한 후 나중에 다시 사용하기 위해 선택하는 경우 파일이 다음 위치에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-176">If you have modified the client configuration file and select to reuse it in the future, you can find the file in the following location:</span></span>  
 >   
->  \\Documents and Settings\\\[사용자 계정\]\\My Documents\\Test Client Projects  
+>  <span data-ttu-id="a5622-177">\Documents and 설정을\\[사용자 계정] \My Documents\Test 클라이언트 프로젝트입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-177">\Documents and Settings\\[User Account]\My Documents\Test Client Projects.</span></span>  
 >   
->  클라이언트 구성 파일에 저장된 업데이트된 자격 증명 정보는 ACL\(액세스 제어 목록\)을 통해 보호됩니다.  
+>  <span data-ttu-id="a5622-178">클라이언트 구성 파일에 저장된 업데이트된 자격 증명 정보는 ACL(Access Control 목록)을 통해 보호됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-178">Any updated credential information stored to the client configuration file is protected by the Access Control List (ACL) of this folder.</span></span>  
   
-### 서비스 추가, 제거 및 새로 고침  
+### <a name="adding-removing-and-refreshing-services"></a><span data-ttu-id="a5622-179">서비스 추가, 제거 및 새로 고침</span><span class="sxs-lookup"><span data-stu-id="a5622-179">Adding, Removing and Refreshing Services</span></span>  
   
-#### 서비스 추가  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에 서비스를 추가하려면 **파일**\-\>**서비스 추가**를 클릭합니다.  그런 다음 추가할 서비스의 URI\(끝점 주소\)를 입력해야 합니다.  서비스 주소는 mex 주소나 WSDL 주소일 수 있습니다.  
+#### <a name="add-service"></a><span data-ttu-id="a5622-180">서비스 추가</span><span class="sxs-lookup"><span data-stu-id="a5622-180">Add Service</span></span>  
+ <span data-ttu-id="a5622-181">클릭 **파일**->**서비스 추가** 서비스를 추가 하려면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-181">Click **File**->**Add Service** to add a service to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span> <span data-ttu-id="a5622-182">그런 다음 추가할 서비스의 URI(끝점 주소)를 입력해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-182">You are then required to type the URI (endpoint address) of the service to be added.</span></span> <span data-ttu-id="a5622-183">서비스 주소는 mex 주소나 WSDL 주소일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-183">The service’s address can be a mex address or WSDL address.</span></span>  
   
- 또한 **최근 서비스** 하위 메뉴에서 최근에 추가한 10개의 서비스 끝점 목록을 찾을 수도 있습니다.  이 중에서 하나를 선택하면 지정한 서비스가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에 추가됩니다.  
+ <span data-ttu-id="a5622-184">10 최근에 추가 된 서비스의 끝점 목록의 찾을 수도 있습니다는 **최근 서비스** 하위 메뉴입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-184">You can also find a list of 10 recently added services' endpoints in the **Recent Services** submenu.</span></span> <span data-ttu-id="a5622-185">이 중에서 하나를 선택하면 지정한 서비스가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-185">If you select one of them, the specified service is added to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span>  
   
- 또한 서비스 트리 **내 서비스 프로젝트**의 루트를 마우스 오른쪽 단추로 클릭하고 **서비스 추가**를 선택하여 같은 결과를 얻을 수 있습니다.  
+ <span data-ttu-id="a5622-186">서비스 트리의 루트를 마우스 오른쪽 단추로 클릭 **내 서비스 프로젝트**를 선택 하 고 **서비스 추가** 동일한 결과 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-186">You can also right-click the root of service tree **My Service Projects**, and select **Add Service** to achieve the same result.</span></span>  
   
- 프록시 생성, 이진 컴파일 또는 서비스 호출 도중에는 서비스 편집을 지원하는 메뉴 항목을 사용할 수 없습니다.  서비스 호출도 비활성화됩니다.  
+ <span data-ttu-id="a5622-187">프록시 생성, 이진 컴파일 또는 서비스 호출 도중에는 서비스 편집을 지원하는 메뉴 항목을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-187">During proxy generation, binary compiling, or service invocation, menu items that support adding a service are disabled.</span></span> <span data-ttu-id="a5622-188">서비스 호출도 비활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-188">Service invocation is also disabled.</span></span>  
   
-#### 서비스 제거  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 서비스를 제거하려면 제거할 서비스의 서비스 루트를 마우스 오른쪽 단추로 클릭하고 **서비스 제거**를 선택합니다.  
+#### <a name="remove-service"></a><span data-ttu-id="a5622-189">서비스 제거</span><span class="sxs-lookup"><span data-stu-id="a5622-189">Remove Service</span></span>  
+ <span data-ttu-id="a5622-190">제거 되 고 선택 서비스의 서비스 루트를 마우스 오른쪽 단추로 클릭 **서비스 제거** 에서 서비스를 제거 하려면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-190">Right-click the service root of the service to be removed, and select **Remove Service** to remove a service from [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span>  
   
- 프록시 생성, 이진 컴파일 또는 서비스 호출 도중에는 서비스 제거를 지원하는 메뉴 항목을 사용할 수 없습니다.  서비스 호출도 비활성화됩니다.  
+ <span data-ttu-id="a5622-191">프록시 생성, 이진 컴파일 또는 서비스 호출 도중에는 서비스 제거를 지원하는 메뉴 항목을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-191">During proxy generation, binary compiling, or service invocation, menu items that support removing a service are disabled.</span></span> <span data-ttu-id="a5622-192">서비스 호출도 비활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-192">Service invocation is also disabled.</span></span>  
   
-#### 서비스 새로 고침  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 실행되고 있는 동안 서비스를 변경한 경우 해당 서비스에 대한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 구현이 업데이트되도록 하려면 서비스의 서비스 루트를 마우스 오른쪽 단추로 클릭하고 **서비스 새로 고침**을 클릭합니다.  서비스를 새로 고친 한 서비스 상태는 다시 설정됩니다.  
+#### <a name="refresh-service"></a><span data-ttu-id="a5622-193">서비스 새로 고침</span><span class="sxs-lookup"><span data-stu-id="a5622-193">Refresh Service</span></span>  
+ <span data-ttu-id="a5622-194">상태 서비스에 변경 될 경우 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 실행 되 고 있는지 확인 하려면는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 구현이 해당 서비스에 대 한 최신 상태입니다. 서비스의 서비스 루트를 마우스 오른쪽 단추로 클릭 하 고 선택 **새로 고침 서비스**합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-194">If a change is made to the service while [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client is running and you want to ensure that the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client implementation for that service is up-to-date, right-click the service root of the service, and select **Refresh Service**.</span></span> <span data-ttu-id="a5622-195">서비스를 새로 고친 한 서비스 상태는 다시 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-195">Note that after refreshing, the service status is reset.</span></span>  
   
- 프록시 생성, 이진 컴파일 또는 서비스 호출 도중에는 서비스 새로 고침을 지원하는 메뉴 항목을 사용할 수 없습니다.  서비스 호출도 비활성화됩니다.  
+ <span data-ttu-id="a5622-196">프록시 생성, 이진 컴파일 또는 서비스 호출 도중에는 서비스 새로 고침을 지원하는 메뉴 항목을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-196">During proxy generation, binary compiling, or service invocation, menu items that support refreshing a service are disabled.</span></span> <span data-ttu-id="a5622-197">서비스 호출도 비활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-197">Service invocation is also disabled.</span></span>  
   
-## 테스트 클라이언트에서 생성한 파일의 위치  
- 기본적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서는 생성한 클라이언트 코드 및 구성 파일을 "%appdata%\\Local\\temp\\Test Client Projects" 폴더에 저장합니다.  이 폴더는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 종료되면 삭제됩니다.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 구성 파일을 수정할 때 **서비스 시작 시 항상 구성 다시 생성** 옵션이 비활성화되어 있는 경우 수정된 파일이 "My Documents\\Test Client Projects Documents\\Test Client Projects" 아래의 "Cached Config" 폴더 아래로 복사되고 매핑\(메타데이터 주소와 파일 이름 간\) XML 파일이 인덱스로 사용됩니다.  
+## <a name="location-of-files-generated-by-the-test-client"></a><span data-ttu-id="a5622-198">테스트 클라이언트에서 생성한 파일의 위치</span><span class="sxs-lookup"><span data-stu-id="a5622-198">Location of Files Generated by the Test Client</span></span>  
+ <span data-ttu-id="a5622-199">기본적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서는 "%appdata%\Local\temp\Test Client Projects" 폴더에서 클라이언트 코드 및 구성 파일을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-199">By default, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client stores generated client code and configuration files in the "%appdata%\Local\temp\Test Client Projects" folder.</span></span> <span data-ttu-id="a5622-200">이 폴더는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 종료되면 삭제됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-200">This folder is deleted after [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client exits.</span></span> <span data-ttu-id="a5622-201">구성 파일을 수정할 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 및 **다시 생성 구성 서비스 시작 시 항상** 옵션을 사용할 수 없습니다, 수정된 된 파일은 "My Documents\Test 아래의" Cached Config "폴더에 복사 Client Projects Documents\Test Client Projects"매핑 (메타 데이터 주소-파일-이름 간) XML 파일이 인덱스로 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-201">If a configuration file is modified in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client and the **Always Regenerate Config When Launching Services** option is disabled, the modified file is copied to the "Cached Config" folder under "My Documents\Test Client Projects Documents\Test Client Projects" with a mapping (metadata-address-to-file-name) XML file as an index.</span></span>  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 명령줄에서 시작할 수도 있습니다. 이 경우 `/ProjectPath` 스위치를 사용하여 생성된 파일을 저장할 새 경로를 지정하거나 `/RestoreProjectPath` 스위치를 사용하여 기본 위치를 복원할 수 있습니다.  구문은 다음과 같습니다.  
+ <span data-ttu-id="a5622-202">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 명령줄에서 시작할 수도 있습니다. 이 경우 `/ProjectPath` 스위치를 사용하여 생성된 파일을 저장할 새 경로를 지정하거나 `/RestoreProjectPath` 스위치를 사용하여 기본 위치를 복원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-202">You can also start [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client in a command line, use the `/ProjectPath` switch to specify a new desired path for storing generated files, or use the `/RestoreProjectPath` switch to restore the default location.</span></span> <span data-ttu-id="a5622-203">구문은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-203">The syntax is as follows:</span></span>  
   
  `wcfTestClient.exe /ProjectPath [desired location]`  
   
- 이 명령을 실행하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 열리지 않고  폴더 위치만 변경됩니다.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 실행되고 있는지 여부와 상관없이 이 명령을 실행할 수 있습니다.  새 위치는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 다시 시작될 때 적용됩니다.  위치 정보는 레지스트리나 "%appdata%\\Local\\temp\\Test Client Projects" 폴더의 WcfTestClient.exe.option 파일에 저장될 수 있습니다.  
+ <span data-ttu-id="a5622-204">이 명령을 실행하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 열리지 않고</span><span class="sxs-lookup"><span data-stu-id="a5622-204">Running this command does not open [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span> <span data-ttu-id="a5622-205">폴더 위치만 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-205">Only the folder location is changed.</span></span> <span data-ttu-id="a5622-206">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 실행되고 있는지 여부와 상관없이 이 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-206">You can run this command whether [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client is running or not.</span></span> <span data-ttu-id="a5622-207">새 위치는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 다시 시작될 때 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-207">The new location is applied when [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client is restarted.</span></span> <span data-ttu-id="a5622-208">위치 정보는 레지스트리 나 "%appdata%\Local\temp\Test Client Projects" 폴더의 WcfTestClient.exe.option 파일에 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-208">The location information can be saved in registry, or in the WcfTestClient.exe.option file in the "%appdata%\Local\temp\Test Client Projects" folder.</span></span>  
   
-## WCF 테스트 클라이언트에서 지원되는 기능  
- 다음은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 지원되는 기능의 목록입니다.  
+## <a name="features-supported-by-wcf-test-client"></a><span data-ttu-id="a5622-209">WCF 테스트 클라이언트에서 지원되는 기능</span><span class="sxs-lookup"><span data-stu-id="a5622-209">Features supported by WCF Test Client</span></span>  
+ <span data-ttu-id="a5622-210">다음은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 지원되는 기능의 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-210">The following is a list of features supported by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client:</span></span>  
   
--   서비스 호출: 요청\/응답 및 단방향 메시지.  
+-   <span data-ttu-id="a5622-211">서비스 호출: 요청/응답 및 단방향 메시지.</span><span class="sxs-lookup"><span data-stu-id="a5622-211">Service Invocation: Request/Response and One-way message.</span></span>  
   
--   바인딩: Svcutil.exe에서 지원되는 모든 바인딩.  
+-   <span data-ttu-id="a5622-212">바인딩: Svcutil.exe에서 지원되는 모든 바인딩.</span><span class="sxs-lookup"><span data-stu-id="a5622-212">Bindings: all bindings supported by Svcutil.exe.</span></span>  
   
--   세션 제어  
+-   <span data-ttu-id="a5622-213">세션 제어</span><span class="sxs-lookup"><span data-stu-id="a5622-213">Controlling Session.</span></span>  
   
--   메시지 계약  
+-   <span data-ttu-id="a5622-214">메시지 계약</span><span class="sxs-lookup"><span data-stu-id="a5622-214">Message Contract.</span></span>  
   
--   XML 직렬화  
+-   <span data-ttu-id="a5622-215">XML 직렬화</span><span class="sxs-lookup"><span data-stu-id="a5622-215">XML serialization.</span></span>  
   
- 다음은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 지원되지 않는 기능의 목록입니다.  
+ <span data-ttu-id="a5622-216">다음은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트에서 지원되지 않는 기능의 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-216">The following is a list of features not supported by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client:</span></span>  
   
--   형식: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 형식\(관련 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 특성 포함\), <xref:System.Xml.Linq.XDocument> 및 <xref:System.Xml.Linq.XElement> 형식, ADO.NET <xref:System.Data.DataTable> 형식  
+-   <span data-ttu-id="a5622-217">형식: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 형식(관련 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 특성 포함), <xref:System.Xml.Linq.XDocument> 및 <xref:System.Xml.Linq.XElement> 형식, ADO.NET <xref:System.Data.DataTable> 형식</span><span class="sxs-lookup"><span data-stu-id="a5622-217">Types: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, types that implement the <xref:System.Xml.Serialization.IXmlSerializable> interface, including the related <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> attribute, and the <xref:System.Xml.Linq.XDocument> and <xref:System.Xml.Linq.XElement> types and the ADO.NET <xref:System.Data.DataTable> type.</span></span>  
   
--   이중 계약  
+-   <span data-ttu-id="a5622-218">이중 계약</span><span class="sxs-lookup"><span data-stu-id="a5622-218">Duplex contract.</span></span>  
   
--   트랜잭션  
+-   <span data-ttu-id="a5622-219">트랜잭션</span><span class="sxs-lookup"><span data-stu-id="a5622-219">Transaction.</span></span>  
   
--   보안: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , 인증서 및 이름\/암호  
+-   <span data-ttu-id="a5622-220">보안: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , 인증서 및 이름/암호</span><span class="sxs-lookup"><span data-stu-id="a5622-220">Security: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , Certificate, and Username/Password.</span></span>  
   
--   바인딩: WSFederationbinding, 컨텍스트 바인딩 및 Https 바인딩, WebHttpbinding\(Json 응답 메시지 지원\)  
+-   <span data-ttu-id="a5622-221">바인딩: WSFederationbinding, 컨텍스트 바인딩 및 Https 바인딩, WebHttpbinding(Json 응답 메시지 지원)</span><span class="sxs-lookup"><span data-stu-id="a5622-221">Bindings: WSFederationbinding, any Context bindings and Https binding, WebHttpbinding (Json response message support).</span></span>  
   
-## WCF 테스트 클라이언트 닫기  
- 다음과 같은 방법으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 닫을 수 있습니다.  
+## <a name="closing-wcf-test-client"></a><span data-ttu-id="a5622-222">WCF 테스트 클라이언트 닫기</span><span class="sxs-lookup"><span data-stu-id="a5622-222">Closing WCF Test Client</span></span>  
+ <span data-ttu-id="a5622-223">다음과 같은 방법으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 닫을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-223">You can close [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client in the following ways:</span></span>  
   
--   **파일** 메뉴에서 **끝내기**를 클릭합니다.  또는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]테스트 클라이언트 주 창에서 **닫기**를 클릭합니다.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 통해 시작된 경우 이 두 작업은 또한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트를 종료하고 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 디버깅 프로세스를 중지합니다.  
+-   <span data-ttu-id="a5622-224">에 **파일** 메뉴를 클릭 하 여 **종료**합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-224">On the **File** menu, click **Exit**.</span></span> <span data-ttu-id="a5622-225">또는에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 주 창의 클릭 **닫기**합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-225">Alternatively, in the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client main window, click **Close**.</span></span> <span data-ttu-id="a5622-226">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 통해 시작된 경우 이 두 작업은 또한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트를 종료하고 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 디버깅 프로세스를 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-226">Both of these actions also shut down [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Auto Host and stop the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugging process if [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client was launched by [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span></span>  
   
--   알림 영역에서 **WCF 서비스 호스트** 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **끝내기**를 클릭합니다. 그러면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 모두 종료되고 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 디버깅 프로세스가 중지됩니다.  
+-   <span data-ttu-id="a5622-227">마우스 오른쪽 단추로 클릭는 **WCF 서비스 호스트** 클릭 한 다음 확인 하 고 알림 영역에서 아이콘 **종료 합니다.**</span><span class="sxs-lookup"><span data-stu-id="a5622-227">Right-click the **WCF Service Host** icon in the notification area, and then click **Exit.**</span></span> <span data-ttu-id="a5622-228">그러면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트가 모두 종료되고 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 디버깅 프로세스가 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5622-228">This shuts down both [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Auto Host and [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client and stops the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugging process.</span></span>  
   
-## 참고 항목  
- [WCF 서비스 호스트\(WcfSvcHost.exe\)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+## <a name="see-also"></a><span data-ttu-id="a5622-229">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a5622-229">See Also</span></span>  
+ [<span data-ttu-id="a5622-230">WCF 서비스 호스트(WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="a5622-230">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

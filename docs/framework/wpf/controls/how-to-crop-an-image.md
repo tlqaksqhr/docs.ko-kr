@@ -1,49 +1,53 @@
 ---
-title: "방법: 이미지 잘라내기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클래스, CroppedBitmap"
-  - "CroppedBitmap 클래스"
-  - "이미지 자르기"
-  - "이미지, 자르기"
+title: "방법: 이미지 잘라내기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [WPF], cropping
+- cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6de7914a1226381da763b3348d1794453fe93b02
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 이미지 잘라내기
-이 예제에서는 <xref:System.Windows.Media.Imaging.CroppedBitmap>을 사용하여 이미지를 잘라내는 방법을 보여 줍니다.  
+# <a name="how-to-crop-an-image"></a><span data-ttu-id="cf523-102">방법: 이미지 잘라내기</span><span class="sxs-lookup"><span data-stu-id="cf523-102">How to: Crop an Image</span></span>
+<span data-ttu-id="cf523-103">이 예제에서는을 사용 하 여 이미지를 자를 <xref:System.Windows.Media.Imaging.CroppedBitmap>합니다.</span><span class="sxs-lookup"><span data-stu-id="cf523-103">This example shows how to crop an image using <xref:System.Windows.Media.Imaging.CroppedBitmap>.</span></span>  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap>은 이미지의 잘려진 버전을 인코딩하여 파일로 저장할 때 주로 사용됩니다.  표시를 위해 이미지를 잘라내는 방법에 대한 자세한 내용은 [Create a Clip Region](http://msdn.microsoft.com/ko-kr/56e4bed6-78d7-4292-b917-d72d0b3e4376) 항목을 참조하십시오.  
+ <span data-ttu-id="cf523-104"><xref:System.Windows.Media.Imaging.CroppedBitmap>주로 자른된 이미지의 버전을 인코딩하는 경우 파일에 저장할 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf523-104"><xref:System.Windows.Media.Imaging.CroppedBitmap> is primarily used when encoding a cropped version of an image to save out to a file.</span></span> <span data-ttu-id="cf523-105">이미지 표시 목적으로 참조를 자르려면는 [클립 영역을 만들](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="cf523-105">To crop an image for display purposes see the [Create a Clip Region](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376) topic.</span></span>  
   
-## 예제  
- 다음 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에서는 아래의 샘플에 사용된 리소스를 정의합니다.  
+## <a name="example"></a><span data-ttu-id="cf523-106">예제</span><span class="sxs-lookup"><span data-stu-id="cf523-106">Example</span></span>  
+ <span data-ttu-id="cf523-107">다음 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 아래의 샘플에 사용 되는 리소스를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf523-107">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] defines resources used within the samples below.</span></span>  
   
- [!code-xml[imageelementexample#CroppedXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml1)]  
+ [!code-xaml[imageelementexample#CroppedXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml1)]  
   
- 다음 예제에서는 <xref:System.Windows.Media.Imaging.CroppedBitmap>을 소스로 사용하여 이미지를 만듭니다.  
+ <span data-ttu-id="cf523-108">다음 예제에서는 사용 하 여 이미지는 <xref:System.Windows.Media.Imaging.CroppedBitmap> 소스로 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf523-108">The following example creates an image using a <xref:System.Windows.Media.Imaging.CroppedBitmap> as its source.</span></span>  
   
- [!code-xml[imageelementexample#CroppedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml2)]  
+ [!code-xaml[imageelementexample#CroppedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml2)]  
   
  [!code-csharp[imageelementexample#CroppedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml.cs#croppedcsharp1)]
  [!code-vb[imageelementexample#CroppedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp1)]  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap>을 다른 <xref:System.Windows.Media.Imaging.CroppedBitmap>의 소스로 사용하여 잘라내기 작업을 연속적으로 수행할 수 있습니다.  <xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A>는 원래 이미지가 아니라 잘려진 소스 비트맵에 대해 상대적인 값을 사용합니다.  
+ <span data-ttu-id="cf523-109"><xref:System.Windows.Media.Imaging.CroppedBitmap> 다른 원본으로 사용할 수도 있습니다 <xref:System.Windows.Media.Imaging.CroppedBitmap>, 자르기 체인입니다.</span><span class="sxs-lookup"><span data-stu-id="cf523-109">The <xref:System.Windows.Media.Imaging.CroppedBitmap> can also be used as the source of another <xref:System.Windows.Media.Imaging.CroppedBitmap>, chaining the cropping.</span></span> <span data-ttu-id="cf523-110"><xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A> 소스 비트맵과 원래 이미지가 아니라 잘라 기준으로 하는 값을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf523-110">Note that the <xref:System.Windows.Media.Imaging.CroppedBitmap.SourceRect%2A> uses values that are relative to the source cropped bitmap and not the initial image.</span></span>  
   
- [!code-xml[imageelementexample#CroppedXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml3)]  
+ [!code-xaml[imageelementexample#CroppedXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml#croppedxaml3)]  
   
  [!code-csharp[imageelementexample#CroppedCSharp2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/CroppedImageExample.xaml.cs#croppedcsharp2)]
  [!code-vb[imageelementexample#CroppedCSharp2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
-## 참고 항목  
- [Create a Clip Region](http://msdn.microsoft.com/ko-kr/56e4bed6-78d7-4292-b917-d72d0b3e4376)
+## <a name="see-also"></a><span data-ttu-id="cf523-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cf523-111">See Also</span></span>  
+ [<span data-ttu-id="cf523-112">클립 영역 만들기</span><span class="sxs-lookup"><span data-stu-id="cf523-112">Create a Clip Region</span></span>](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376)

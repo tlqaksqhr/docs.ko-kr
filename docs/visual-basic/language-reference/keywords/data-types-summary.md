@@ -1,32 +1,30 @@
 ---
-title: "Data Types Summary (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "data types [Visual Basic], Visual Basic"
+title: "데이터 형식 요약(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: data types [Visual Basic], Visual Basic
 ms.assetid: 4ea2ef2a-3d4d-42d9-9f8f-173a37c96e53
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 921d9bfc5fd75ab7d82a8c0663fdb2ded9cfbbed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Data Types Summary (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Visual Basic 언어 키워드와 런타임 라이브러리 멤버는 목적과 용도에 따라 구성됩니다.  
+# <a name="data-types-summary-visual-basic"></a><span data-ttu-id="db8d5-102">데이터 형식 요약(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db8d5-102">Data Types Summary (Visual Basic)</span></span>
+<span data-ttu-id="db8d5-103">Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="db8d5-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|작업|언어 요소|  
-|--------|-----------|  
-|데이터 형식을 다른 데이터 형식으로 변환합니다.|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md) [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md) [CChar](../../../visual-basic/language-reference/functions/type-conversion-functions.md) [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), CDbl [](../../../visual-basic/language-reference/functions/type-conversion-functions.md "Type Conversion Functions (Visual Basic)")CDec [](../../../visual-basic/language-reference/functions/type-conversion-functions.md "Type Conversion Functions (Visual Basic)")CInt [](../../../visual-basic/language-reference/functions/type-conversion-functions.md "Type Conversion Functions (Visual Basic)")CLng [](../../../visual-basic/language-reference/functions/type-conversion-functions.md "Type Conversion Functions (Visual Basic)")CObj [](../../../visual-basic/language-reference/functions/type-conversion-functions.md "Type Conversion Functions (Visual Basic)")CShort [](../../../visual-basic/language-reference/functions/type-conversion-functions.md "Type Conversion Functions (Visual Basic)")CSng [](../../../visual-basic/language-reference/functions/type-conversion-functions.md "Type Conversion Functions (Visual Basic)")CStr [](../../../visual-basic/language-reference/functions/type-conversion-functions.md "Type Conversion Functions (Visual Basic)") <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
-|내장 데이터 형식을 설정합니다.|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Char](../../../visual-basic/language-reference/data-types/char-data-type.md), [Date](../../../visual-basic/language-reference/data-types/date-data-type.md), [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [Object](../../../visual-basic/language-reference/data-types/object-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), [String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
-|데이터 형식을 확인합니다.|<xref:Microsoft.VisualBasic.Information.IsArray%2A>, <xref:Microsoft.VisualBasic.Information.IsDate%2A>, <xref:Microsoft.VisualBasic.Information.IsDBNull%2A>, <xref:Microsoft.VisualBasic.Information.IsError%2A>, <xref:Microsoft.VisualBasic.Information.IsNothing%2A>, <xref:Microsoft.VisualBasic.Information.IsNumeric%2A>, <xref:Microsoft.VisualBasic.Information.IsReference%2A>|  
+|<span data-ttu-id="db8d5-104">작업</span><span class="sxs-lookup"><span data-stu-id="db8d5-104">Action</span></span>|<span data-ttu-id="db8d5-105">언어 요소</span><span class="sxs-lookup"><span data-stu-id="db8d5-105">Language element</span></span>|  
+|------------|----------------------|  
+|<span data-ttu-id="db8d5-106">데이터 형식 간 변환</span><span class="sxs-lookup"><span data-stu-id="db8d5-106">Convert between data types</span></span>|<span data-ttu-id="db8d5-107">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CChar](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CObj](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>,<xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="db8d5-107">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CChar](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CObj](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
+|<span data-ttu-id="db8d5-108">내장 데이터 형식 설정</span><span class="sxs-lookup"><span data-stu-id="db8d5-108">Set intrinsic data types</span></span>|<span data-ttu-id="db8d5-109">[부울](../../../visual-basic/language-reference/data-types/boolean-data-type.md), [바이트](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Char](../../../visual-basic/language-reference/data-types/char-data-type.md), [날짜](../../../visual-basic/language-reference/data-types/date-data-type.md), [10 진수](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), [정수](../../../visual-basic/language-reference/data-types/integer-data-type.md), [긴](../../../visual-basic/language-reference/data-types/long-data-type.md), [개체](../../../visual-basic/language-reference/data-types/object-data-type.md), [짧은](../../../visual-basic/language-reference/data-types/short-data-type.md), [단일](../../../visual-basic/language-reference/data-types/single-data-type.md), [문자열](../../../visual-basic/language-reference/data-types/string-data-type.md)</span><span class="sxs-lookup"><span data-stu-id="db8d5-109">[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Char](../../../visual-basic/language-reference/data-types/char-data-type.md), [Date](../../../visual-basic/language-reference/data-types/date-data-type.md), [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md), [Double](../../../visual-basic/language-reference/data-types/double-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [Object](../../../visual-basic/language-reference/data-types/object-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [Single](../../../visual-basic/language-reference/data-types/single-data-type.md), [String](../../../visual-basic/language-reference/data-types/string-data-type.md)</span></span>|  
+|<span data-ttu-id="db8d5-110">데이터 형식 확인</span><span class="sxs-lookup"><span data-stu-id="db8d5-110">Verify data types</span></span>|<span data-ttu-id="db8d5-111"><xref:Microsoft.VisualBasic.Information.IsArray%2A>, <xref:Microsoft.VisualBasic.Information.IsDate%2A>, <xref:Microsoft.VisualBasic.Information.IsDBNull%2A>, <xref:Microsoft.VisualBasic.Information.IsError%2A>, <xref:Microsoft.VisualBasic.Information.IsNothing%2A>, <xref:Microsoft.VisualBasic.Information.IsNumeric%2A>, <xref:Microsoft.VisualBasic.Information.IsReference%2A></span><span class="sxs-lookup"><span data-stu-id="db8d5-111"><xref:Microsoft.VisualBasic.Information.IsArray%2A>, <xref:Microsoft.VisualBasic.Information.IsDate%2A>, <xref:Microsoft.VisualBasic.Information.IsDBNull%2A>, <xref:Microsoft.VisualBasic.Information.IsError%2A>, <xref:Microsoft.VisualBasic.Information.IsNothing%2A>, <xref:Microsoft.VisualBasic.Information.IsNumeric%2A>, <xref:Microsoft.VisualBasic.Information.IsReference%2A></span></span>|  
   
-## 참고 항목  
- [키워드](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic Runtime Library Members](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a><span data-ttu-id="db8d5-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="db8d5-112">See Also</span></span>  
+ [<span data-ttu-id="db8d5-113">키워드</span><span class="sxs-lookup"><span data-stu-id="db8d5-113">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="db8d5-114">Visual Basic 런타임 라이브러리 멤버</span><span class="sxs-lookup"><span data-stu-id="db8d5-114">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

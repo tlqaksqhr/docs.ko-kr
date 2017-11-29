@@ -1,76 +1,73 @@
 ---
-title: "&lt;source&gt; 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#source"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source> 요소"
-  - "source 요소"
-ms.assetid: ecf86505-735d-4844-aaba-266fdd134218
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+title: "&lt;소스&gt; 요소"
+ms.date: 09/29/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#source
+helpviewer_keywords:
+- <source> element
+- source element
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 129888986a933fe875aade153f6becd8439d4704
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;source&gt; 요소
-추적 메시지를 발생시키는 추적 소스를 지정합니다.  
+# <a name="ltsourcegt-element"></a><span data-ttu-id="76819-102">&lt;소스&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="76819-102">&lt;source&gt; Element</span></span>
+<span data-ttu-id="76819-103">추적 메시지를 시작하는 추적 소스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="76819-103">Specifies a trace source that initiates tracing messages.</span></span>  
   
-## 구문  
+ <span data-ttu-id="76819-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="76819-104">\<configuration></span></span>  
+<span data-ttu-id="76819-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="76819-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="76819-106">\<소스 ></span><span class="sxs-lookup"><span data-stu-id="76819-106">\<sources></span></span>  
+<span data-ttu-id="76819-107">\<소스 ></span><span class="sxs-lookup"><span data-stu-id="76819-107">\<source></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="76819-108">구문</span><span class="sxs-lookup"><span data-stu-id="76819-108">Syntax</span></span>  
+  
+```xml  
 <source>   
   <listeners>...</listeners>  
 </source>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="76819-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="76819-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="76819-110">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="76819-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="76819-111">특성</span><span class="sxs-lookup"><span data-stu-id="76819-111">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|`name`|선택적 특성입니다.<br /><br /> 추적 소스의 이름을 지정합니다.|  
-|`switchName`|선택적 특성입니다.<br /><br /> 응용 프로그램에서 추적 스위치 인스턴스의 이름을 지정합니다.  `<switches>` 요소에서 스위치가 식별되지 않으면 이 값에 의해 스위치의 수준이 지정됩니다.|  
-|`switchType`|선택적 특성입니다.<br /><br /> 추적 스위치 형식을 지정합니다.  형식이 있는 경우 해당 형식은 유효한 클래스 이름이어야 하고 빈 문자열일 수 없습니다.|  
-|`extraAttribute`|선택적 특성입니다.<br /><br /> 해당 추적 소스에 대한 <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> 메서드가 식별하는 추적 소스 고유의 특성 값을 지정합니다.|  
+|<span data-ttu-id="76819-112">특성</span><span class="sxs-lookup"><span data-stu-id="76819-112">Attribute</span></span>|<span data-ttu-id="76819-113">설명</span><span class="sxs-lookup"><span data-stu-id="76819-113">Description</span></span>|  
+|---------------|-----------------|  
+|`name`|<span data-ttu-id="76819-114">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="76819-114">Optional attribute.</span></span><br /><br /> <span data-ttu-id="76819-115">추적 소스 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="76819-115">Specifies the name of the trace source.</span></span>|  
+|`switchName`|<span data-ttu-id="76819-116">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="76819-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="76819-117">응용 프로그램에서 추적 스위치 인스턴스 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="76819-117">Specifies the name of a trace switch instance in the application.</span></span> <span data-ttu-id="76819-118">스위치에서 식별 되지 않는 경우는 `<switches>` 요소 값에 스위치에 대 한 수준을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="76819-118">If the switch is not identified in a `<switches>` element, the value specifies the level for the switch.</span></span>|  
+|`switchType`|<span data-ttu-id="76819-119">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="76819-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="76819-120">추적 스위치의 유형을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="76819-120">Specifies the type of the trace switch.</span></span> <span data-ttu-id="76819-121">있는 경우 유효한 클래스 이름 이어야 합니다 형식과 빈 문자열일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="76819-121">If present, the type must be a valid class name and cannot be an empty string.</span></span>|  
+|`extraAttribute`|<span data-ttu-id="76819-122">선택적 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="76819-122">Optional attribute.</span></span><br /><br /> <span data-ttu-id="76819-123">로 식별 되는 추적 소스 관련 특성에 대 한 값을 지정 된 <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> 해당 추적 소스에 대 한 메서드.</span><span class="sxs-lookup"><span data-stu-id="76819-123">Specifies the value for a trace source-specific attribute identified by the <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> method for that trace source.</span></span>|  
   
-### 자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="76819-124">자식 요소</span><span class="sxs-lookup"><span data-stu-id="76819-124">Child Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|메시지를 수집하여 저장하고 라우팅하는 수신기를 포함합니다.|  
+|<span data-ttu-id="76819-125">요소</span><span class="sxs-lookup"><span data-stu-id="76819-125">Element</span></span>|<span data-ttu-id="76819-126">설명</span><span class="sxs-lookup"><span data-stu-id="76819-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="76819-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="76819-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="76819-128">수집, 저장 하 고 메시지를 라우팅하는 수신기를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="76819-128">Contains listeners that collect, store, and route messages.</span></span>|  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="76819-129">부모 요소</span><span class="sxs-lookup"><span data-stu-id="76819-129">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`system.diagnostics`|메시지를 수집하여 저장하고 라우트하는 추적 수신기와 추적 스위치를 설정할 수준을 지정합니다.|  
-|`sources`|추적 메시지를 발생시키는 추적 소스를 포함합니다.|  
+|<span data-ttu-id="76819-130">요소</span><span class="sxs-lookup"><span data-stu-id="76819-130">Element</span></span>|<span data-ttu-id="76819-131">설명</span><span class="sxs-lookup"><span data-stu-id="76819-131">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="76819-132">공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="76819-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="76819-133">메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="76819-133">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="76819-134">추적 메시지를 시작하는 추적 소스가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76819-134">Contains trace sources that initiate tracing messages.</span></span>|  
   
-## 설명  
- 이 요소는 컴퓨터 구성 파일\(Machine.config\) 및 응용 프로그램 구성 파일에 사용할 수 있습니다.  
+## <a name="remarks"></a><span data-ttu-id="76819-135">설명</span><span class="sxs-lookup"><span data-stu-id="76819-135">Remarks</span></span>  
+ <span data-ttu-id="76819-136">이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76819-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## 예제  
- 다음 예제에서는 `<source>`  요소를 사용하여 추적 소스 `mySource`를 추가하고 소스 스위치 `sourceSwitch`의 수준을 설정하는 방법을 보여 줍니다.  콘솔에 추적 정보를 쓰는 콘솔 추적 수신기가 추가됩니다.  
+## <a name="example"></a><span data-ttu-id="76819-137">예제</span><span class="sxs-lookup"><span data-stu-id="76819-137">Example</span></span>  
+ <span data-ttu-id="76819-138">사용 하는 방법을 보여 주는 다음 예제는 `<source>` 추적 소스를 추가할 요소의 `mySource` 명명 된 소스 스위치에 대 한 수준을 설정 하 고 `sourceSwitch`합니다.</span><span class="sxs-lookup"><span data-stu-id="76819-138">The following example shows how to use the `<source>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="76819-139">콘솔 추적 수신기는 추적 정보를 콘솔에 작성 하는 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="76819-139">A console trace listener is added that writes trace information to the console.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -90,6 +87,6 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## 참고 항목  
- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Switches](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a><span data-ttu-id="76819-140">참고 항목</span><span class="sxs-lookup"><span data-stu-id="76819-140">See Also</span></span>  
+ [<span data-ttu-id="76819-141">추적 및 디버그 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="76819-141">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="76819-142">추적 스위치</span><span class="sxs-lookup"><span data-stu-id="76819-142">Trace Switches</span></span>](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -1,63 +1,63 @@
 ---
-title: "사용자 지정 컨트롤 그리기 및 렌더링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "사용자 지정 컨트롤[Windows Forms], 그리기"
-  - "사용자 지정 컨트롤[Windows Forms], 렌더링"
-  - "OnPaint 메서드"
-  - "사용자 정의 컨트롤[Windows Forms], 그리기"
+title: "사용자 지정 컨트롤 그리기 및 렌더링"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], rendering
+- custom controls [Windows Forms], painting
+- user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: babf3d235f4cca61ad6d0e5fdc4e6b6146c7d060
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 사용자 지정 컨트롤 그리기 및 렌더링
-컨트롤의 사용자 지정 그리기는 .NET Framework로 쉽게 수행할 수 있는 여러 가지 복잡한 작업 중 하나입니다.  사용자 지정 컨트롤을 제작하면 컨트롤의 그래픽 모양과 관련된 다양한 옵션을 사용할 수 있습니다.  `Control`에서 상속되는 컨트롤을 제작하는 경우 컨트롤의 그래픽 표현을 렌더링할 수 있는 코드를 제공해야 합니다.  `UserControl`에서 상속하거나 Windows Forms 컨트롤 중 하나에서 상속하여 사용자 정의 컨트롤을 만들 경우 표준 그래픽 표현을 재정의하고 고유한 그래픽 코드를 제공할 수 있습니다.  제작 중인 `UserControl`의 구성 요소 컨트롤에 사용자 지정 렌더링을 제공할 경우 옵션은 더욱 제한되지만 컨트롤과 응용 프로그램에 대한 광범위한 그래픽 기능을 계속 사용할 수 있습니다.  
+# <a name="custom-control-painting-and-rendering"></a><span data-ttu-id="230c8-102">사용자 지정 컨트롤 그리기 및 렌더링</span><span class="sxs-lookup"><span data-stu-id="230c8-102">Custom Control Painting and Rendering</span></span>
+<span data-ttu-id="230c8-103">사용자 지정 그리기 컨트롤의.NET Framework로 쉽게 수행할 수 있는 여러 복잡 한 작업 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-103">Custom painting of controls is one of the many complicated tasks made easy by the .NET Framework.</span></span> <span data-ttu-id="230c8-104">사용자 지정 컨트롤을 작성할 때 컨트롤의 그래픽 모양에 대 한 많은 옵션이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-104">When authoring a custom control, you have many options regarding your control's graphical appearance.</span></span> <span data-ttu-id="230c8-105">상속 되는 컨트롤을 작성 하는 경우는 `Control`, 컨트롤의 그래픽 표현을 렌더링할 수 있는 코드를 제공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-105">If you are authoring a control that inherits from the `Control`, you must provide code that allows your control to render its graphical representation.</span></span> <span data-ttu-id="230c8-106">상속 하 여 사용자 정의 컨트롤을 만드는 경우는 `UserControl`, 상속 되는지 또는 Windows Forms 컨트롤 중 하나에서 있습니다는 표준 그래픽 표시를 재정의 그래픽 코드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-106">If you are creating a user control by inheriting from the `UserControl`, or are inheriting from one of the Windows Forms controls, you may override the standard graphical representation and provide your own graphics code.</span></span> <span data-ttu-id="230c8-107">구성 요소 컨트롤에 대 한 사용자 지정 렌더링을 제공 하려는 경우는 `UserControl` 제작 하는, 옵션은 더욱 제한 되지만 광범위 한 컨트롤 및 응용 프로그램에 대 한 그래픽 기능을 계속 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-107">If you want to provide custom rendering for the constituent controls of a `UserControl` you are authoring, your options become more limited, but still allow a wide range of graphical possibilities for your controls and applications.</span></span>  
   
-## 단원 내용  
- [Windows Forms 컨트롤 렌더링](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- 컨트롤을 표시하는 논리를 프로그래밍하는 방법을 보여 줍니다.  
+## <a name="in-this-section"></a><span data-ttu-id="230c8-108">단원 내용</span><span class="sxs-lookup"><span data-stu-id="230c8-108">In This Section</span></span>  
+ [<span data-ttu-id="230c8-109">Windows Forms 컨트롤 렌더링</span><span class="sxs-lookup"><span data-stu-id="230c8-109">Rendering a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
+ <span data-ttu-id="230c8-110">컨트롤을 표시 하는 논리를 프로그래밍 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-110">Shows how to program the logic that displays a control.</span></span>  
   
- [사용자가 그린 컨트롤](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
- 컨트롤의 렌더링 코드를 작성하고 재정의하는 과정을 설명합니다.  
+ [<span data-ttu-id="230c8-111">사용자가 그린 컨트롤</span><span class="sxs-lookup"><span data-stu-id="230c8-111">User-Drawn Controls</span></span>](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
+ <span data-ttu-id="230c8-112">작성 하 고 컨트롤 렌더링 코드를 재정의 하는 단계에 간략하게 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-112">Gives an overview of the steps involved in writing and overriding rendering code for your control.</span></span>  
   
- [구성 요소 컨트롤](../../../../docs/framework/winforms/controls/constituent-controls.md)  
- 사용자 정의 컨트롤과 폼의 구성 요소 컨트롤에 대한 사용자 지정 렌더링 코드를 구현하는 방법을 설명합니다.  
+ [<span data-ttu-id="230c8-113">구성 요소 컨트롤</span><span class="sxs-lookup"><span data-stu-id="230c8-113">Constituent Controls</span></span>](../../../../docs/framework/winforms/controls/constituent-controls.md)  
+ <span data-ttu-id="230c8-114">사용자 컨트롤 및 폼의 구성 요소 컨트롤에 대 한 사용자 지정 렌더링 코드를 구현 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-114">Describes how to implement custom rendering code for constituent controls in your user controls and forms.</span></span>  
   
- [방법: 런타임에 컨트롤 숨기기](../../../../docs/framework/winforms/controls/how-to-make-your-control-invisible-at-run-time.md)  
- <xref:System.Windows.Forms.Control.Visible%2A> 속성을 사용하여 컨트롤을 숨기고 표시하는 방법을 보여 줍니다.  
+ [<span data-ttu-id="230c8-115">방법: 런타임에 컨트롤 숨기기</span><span class="sxs-lookup"><span data-stu-id="230c8-115">How to: Make Your Control Invisible at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-make-your-control-invisible-at-run-time.md)  
+ <span data-ttu-id="230c8-116">사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 숨기 거 나 컨트롤을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-116">Shows how to use the <xref:System.Windows.Forms.Control.Visible%2A> property to hide and show a control.</span></span>  
   
- [방법: 컨트롤에 투명한 배경 적용](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- <xref:System.Windows.Forms.Control.SetStyle%2A> 메서드를 사용하여 불투명하거나, 투명하거나 부분적으로 투명한 배경 색을 만드는 방법을 보여 줍니다.  
+ [<span data-ttu-id="230c8-117">방법: 컨트롤에 투명한 배경 적용</span><span class="sxs-lookup"><span data-stu-id="230c8-117">How to: Give Your Control a Transparent Background</span></span>](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
+ <span data-ttu-id="230c8-118">사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.Control.SetStyle%2A> 방법을 불투명, 투명 하 게 또는 반투명 하는 배경색을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-118">Shows how to use the <xref:System.Windows.Forms.Control.SetStyle%2A> method to create a background color that is opaque, transparent, or partially transparent.</span></span>  
   
- [비주얼 스타일을 사용하여 컨트롤 렌더링](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
- 비주얼 스타일을 지원하는 운영 체제에서 비주얼 스타일을 사용하여 컨트롤을 렌더링하는 방법을 보여 줍니다.  
+ [<span data-ttu-id="230c8-119">비주얼 스타일을 사용하여 컨트롤 렌더링</span><span class="sxs-lookup"><span data-stu-id="230c8-119">Rendering Controls with Visual Styles</span></span>](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
+ <span data-ttu-id="230c8-120">비주얼 스타일을 지 원하는 운영 체제에서 사용 하 여 컨트롤을 렌더링 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-120">Shows how to render controls using visual styles in operating systems that support them.</span></span>  
   
-## 참조  
+## <a name="reference"></a><span data-ttu-id="230c8-121">참조</span><span class="sxs-lookup"><span data-stu-id="230c8-121">Reference</span></span>  
  <xref:System.Windows.Forms.Control>  
- 이 클래스를 설명하며 이 클래스의 모든 멤버에 대한 링크를 포함합니다.  
+ <span data-ttu-id="230c8-122">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-122">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.UserControl>  
- 이 클래스를 설명하며 이 클래스의 모든 멤버에 대한 링크를 포함합니다.  
+ <span data-ttu-id="230c8-123">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-123">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
- 이 메서드에 대해 설명합니다.  
+ <span data-ttu-id="230c8-124">이 메서드를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-124">Describes this method.</span></span>  
   
-## 관련 단원  
- [방법: 그리는 데 필요한 그래픽 개체 만들기](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- Visual Studio의 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그래픽 기능을 소개하고 상세 정보에 대한 링크를 제공합니다.  
+## <a name="related-sections"></a><span data-ttu-id="230c8-125">관련 단원</span><span class="sxs-lookup"><span data-stu-id="230c8-125">Related Sections</span></span>  
+ [<span data-ttu-id="230c8-126">방법: 그리는 데 필요한 그래픽 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="230c8-126">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ <span data-ttu-id="230c8-127">소개 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Visual Studio의 관점 및 제공 링크에서 자세한 정보를 그래픽 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-127">Introduces [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] graphics functionality from a Visual Studio perspective and gives links to more information.</span></span>  
   
- [사용자 지정 컨트롤의 종류](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- 제작할 수 있는 다양한 종류의 사용자 지정 컨트롤을 설명합니다.
+ [<span data-ttu-id="230c8-128">사용자 지정 컨트롤의 종류</span><span class="sxs-lookup"><span data-stu-id="230c8-128">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ <span data-ttu-id="230c8-129">사용자 지정 컨트롤을 제작할 수의 종류를 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="230c8-129">Describes the kinds of custom controls you can author.</span></span>

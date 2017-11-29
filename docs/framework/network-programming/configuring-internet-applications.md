@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - downloading Internet resources, default proxy
 - sending data, default proxy
@@ -32,25 +27,24 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a4a013b8a4ff60222bb88c6e9c4f14badd689b5d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 05f849810d28ebe69a773bd4bd9d536146df6357
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="configuring-internet-applications"></a>인터넷 응용 프로그램 구성
-[\<system.Net> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 구성 요소에는 응용 프로그램에 대한 네트워크 구성 정보가 들어 있습니다. [\<system.Net> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 구성 요소를 사용하여 프록시 서버를 설정하고, 연결 관리 매개 변수를 설정하고, 응용 프로그램에 사용자 지정 인증 및 요청 모듈을 포함할 수 있습니다.  
+# <a name="configuring-internet-applications"></a><span data-ttu-id="34d61-102">인터넷 응용 프로그램 구성</span><span class="sxs-lookup"><span data-stu-id="34d61-102">Configuring Internet Applications</span></span>
+<span data-ttu-id="34d61-103">[\<system.Net> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 구성 요소에는 응용 프로그램에 대한 네트워크 구성 정보가 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-103">The [\<system.Net> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) configuration element contains network configuration information for applications.</span></span> <span data-ttu-id="34d61-104">[\<system.Net> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 구성 요소를 사용하여 프록시 서버를 설정하고, 연결 관리 매개 변수를 설정하고, 응용 프로그램에 사용자 지정 인증 및 요청 모듈을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-104">Using the [\<system.Net> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element, you can set proxy servers, set connection management parameters, and include custom authentication and request modules in your application.</span></span>  
   
- [\<defaultProxy> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 구성 요소는 `GlobalProxySelection` 클래스에서 반환된 프록시 서버를 정의합니다. 자체적인 <xref:System.Net.HttpWebRequest.Proxy%2A> 속성이 특정 값으로 설정되지 않은 <xref:System.Net.HttpWebRequest>는 기본 프록시를 사용합니다. 프록시 주소를 설정하는 것 이외에 프록시를 사용하지 않을 서버 주소 목록을 만들고 로컬 주소에 프록시를 사용하지 않도록 지정할 수 있습니다.  
+ <span data-ttu-id="34d61-105">[\<defaultProxy> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 구성 요소는 `GlobalProxySelection` 클래스에서 반환된 프록시 서버를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-105">The [\<defaultProxy> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) element defines the proxy server returned by the `GlobalProxySelection` class.</span></span> <span data-ttu-id="34d61-106">자체적인 <xref:System.Net.HttpWebRequest.Proxy%2A> 속성이 특정 값으로 설정되지 않은 <xref:System.Net.HttpWebRequest>는 기본 프록시를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-106">Any <xref:System.Net.HttpWebRequest> that does not have its own <xref:System.Net.HttpWebRequest.Proxy%2A> property set to a specific value uses the default proxy.</span></span> <span data-ttu-id="34d61-107">프록시 주소를 설정하는 것 이외에 프록시를 사용하지 않을 서버 주소 목록을 만들고 로컬 주소에 프록시를 사용하지 않도록 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-107">In addition to setting the proxy address, you can create a list of server addresses that will not use the proxy, and you can indicate that the proxy should not be used for local addresses.</span></span>  
   
- Microsoft Internet Explorer 설정은 구성 설정과 결합되고 구성 설정이 우선 적용된다는 점을 기억해야 합니다.  
+ <span data-ttu-id="34d61-108">Microsoft Internet Explorer 설정은 구성 설정과 결합되고 구성 설정이 우선 적용된다는 점을 기억해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-108">It is important to note that the Microsoft Internet Explorer settings are combined with the configuration settings, with the latter taking precedence.</span></span>  
   
- 다음 예제에서는 기본 프록시 서버 주소를 http://proxyserver로 설정하고, 로컬 주소에 프록시를 사용하지 않도록 지정하고, contoso.com 도메인에 있는 서버에 대한 모든 요청이 프록시를 바이패스하도록 지정합니다.  
+ <span data-ttu-id="34d61-109">다음 예제에서는 기본 프록시 서버 주소를 http://proxyserver로 설정하고, 로컬 주소에 프록시를 사용하지 않도록 지정하고, contoso.com 도메인에 있는 서버에 대한 모든 요청이 프록시를 바이패스하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-109">The following example sets the default proxy server address to http://proxyserver, indicates that the proxy should not be used for local addresses, and specifies that all requests to servers located in the contoso.com domain should bypass the proxy.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,7 +63,7 @@ ms.lasthandoff: 08/21/2017
 </configuration>  
 ```  
   
- [\<connectionManagement> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) 구성 요소를 사용하여 특정 서버 또는 모든 기타 서버에 대해 설정할 수 있는 영구 연결 수를 구성합니다. 다음 예제에서는 응용 프로그램에서 www.contoso.com에 대한 영구 연결 2개, IP 주소 192.168.1.2를 사용한 서버에 대한 영구 연결 4개, 모든 기타 서버에 대한 영구 연결 1개를 사용하도록 구성합니다.  
+ <span data-ttu-id="34d61-110">[\<connectionManagement> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) 구성 요소를 사용하여 특정 서버 또는 모든 기타 서버에 대해 설정할 수 있는 영구 연결 수를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-110">Use the [\<connectionManagement> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) element to configure the number of persistent connections that can be made to a specific server or to all other servers.</span></span> <span data-ttu-id="34d61-111">다음 예제에서는 응용 프로그램에서 www.contoso.com에 대한 영구 연결 2개, IP 주소 192.168.1.2를 사용한 서버에 대한 영구 연결 4개, 모든 기타 서버에 대한 영구 연결 1개를 사용하도록 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-111">The following example configures the application to use two persistent connections to the server www.contoso.com, four persistent connections to the server with the IP address 192.168.1.2, and one persistent connection to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,9 +77,9 @@ ms.lasthandoff: 08/21/2017
 </configuration>  
 ```  
   
- 사용자 지정 인증 모듈은 [\<authenticationModules> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) 구성 요소를 사용하여 구성됩니다. 사용자 지정 인증 모듈은 <xref:System.Net.IAuthenticationModule> 인터페이스를 구현해야 합니다.  
+ <span data-ttu-id="34d61-112">사용자 지정 인증 모듈은 [\<authenticationModules> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) 구성 요소를 사용하여 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-112">Custom authentication modules are configured with the [\<authenticationModules> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) element.</span></span> <span data-ttu-id="34d61-113">사용자 지정 인증 모듈은 <xref:System.Net.IAuthenticationModule> 인터페이스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-113">Custom authentication modules must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
   
- 다음 예제에서는 사용자 지정 인증 모듈을 구성합니다.  
+ <span data-ttu-id="34d61-114">다음 예제에서는 사용자 지정 인증 모듈을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-114">The following example configures a custom authentication module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -97,7 +91,7 @@ ms.lasthandoff: 08/21/2017
 </configuration>  
 ```  
   
- [\<webRequestModules> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) 구성 요소를 사용하여 응용 프로그램에서 프로토콜별 모듈을 통해 인터넷 리소스의 정보를 요청하도록 구성합니다. 지정된 모듈은 <xref:System.Net.IWebRequestCreate> 인터페이스를 구현해야 합니다. 다음 예제와 같이 구성 파일에서 사용자 지정 모듈을 지정하여 기본 HTTP, HTTPS 및 파일 요청 모듈을 재정의할 수 있습니다.  
+ <span data-ttu-id="34d61-115">[\<webRequestModules> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) 구성 요소를 사용하여 응용 프로그램에서 프로토콜별 모듈을 통해 인터넷 리소스의 정보를 요청하도록 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-115">You can use the [\<webRequestModules> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) element to configure your application to use custom protocol-specific modules to request information from Internet resources.</span></span> <span data-ttu-id="34d61-116">지정된 모듈은 <xref:System.Net.IWebRequestCreate> 인터페이스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-116">The specified modules must implement the <xref:System.Net.IWebRequestCreate> interface.</span></span> <span data-ttu-id="34d61-117">다음 예제와 같이 구성 파일에서 사용자 지정 모듈을 지정하여 기본 HTTP, HTTPS 및 파일 요청 모듈을 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34d61-117">You can override the default HTTP, HTTPS, and file request modules by specifying your custom module in the configuration file, as in the following example.</span></span>  
   
 ```xml  
 <configuration>  
@@ -112,8 +106,7 @@ ms.lasthandoff: 08/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)   
- [네트워크 설정 스키마](../../../docs/framework/configure-apps/file-schema/network/index.md)   
- [\<system.Net> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="34d61-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="34d61-118">See Also</span></span>  
+ [<span data-ttu-id="34d61-119">.NET Framework의 네트워크 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="34d61-119">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+ [<span data-ttu-id="34d61-120">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="34d61-120">Network Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/network/index.md)  
+ [<span data-ttu-id="34d61-121">\<system.Net> 요소(네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="34d61-121">\<system.Net> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

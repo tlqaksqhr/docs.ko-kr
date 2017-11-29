@@ -1,74 +1,77 @@
 ---
-title: "Implementing the UI Automation Selection Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Selection control pattern"
-  - "UI Automation, Selection control pattern"
-  - "control patterns, Selection"
+title: "UI 자동화 Selection 컨트롤 패턴 구현"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Selection control pattern
+- UI Automation, Selection control pattern
+- control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-caps.latest.revision: 33
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: cb8b47b147e3a7a3c615418e2c0987e4d6a20f4c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Selection Control Pattern
+# <a name="implementing-the-ui-automation-selection-control-pattern"></a><span data-ttu-id="261fe-102">UI 자동화 Selection 컨트롤 패턴 구현</span><span class="sxs-lookup"><span data-stu-id="261fe-102">Implementing the UI Automation Selection Control Pattern</span></span>
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  <span data-ttu-id="261fe-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="261fe-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="261fe-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 이 항목에서는 이벤트 및 속성에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.  
+ <span data-ttu-id="261fe-105">이 항목에서는 이벤트 및 속성에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현하기 위한 지침 및 규칙을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.ISelectionProvider>, including information about events and properties.</span></span> <span data-ttu-id="261fe-106">추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- <xref:System.Windows.Automation.SelectionPattern> 컨트롤 패턴은 선택 가능한 자식 항목 컬렉션에 컨테이너 역할을 하는 컨트롤을 지원하는 데 사용됩니다. 이 요소의 자식 항목은 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>를 구현해야 합니다. 이 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
+ <span data-ttu-id="261fe-107"><xref:System.Windows.Automation.SelectionPattern> 컨트롤 패턴은 선택 가능한 자식 항목 컬렉션에 컨테이너 역할을 하는 컨트롤을 지원하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-107">The <xref:System.Windows.Automation.SelectionPattern> control pattern is used to support controls that act as containers for a collection of selectable child items.</span></span> <span data-ttu-id="261fe-108">이 요소의 자식 항목은 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-108">The children of this element must implement <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.</span></span> <span data-ttu-id="261fe-109">이 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="261fe-109">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## 구현 지침 및 규칙  
- Selection 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="261fe-110">구현 지침 및 규칙</span><span class="sxs-lookup"><span data-stu-id="261fe-110">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="261fe-111">Selection 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.</span><span class="sxs-lookup"><span data-stu-id="261fe-111">When implementing the Selection control pattern, note the following guidelines and conventions:</span></span>  
   
--   <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현하는 컨트롤을 통해 자식 항목을 하나 또는 여러 개 선택할 수 있습니다. 예를 들어 목록 상자, 목록 뷰, 트리 뷰는 여러 개의 선택을 지원하는 반면 콤보 상자, 슬라이더, 라디오 단추 그룹은 단일 선택을 지원합니다.  
+-   <span data-ttu-id="261fe-112"><xref:System.Windows.Automation.Provider.ISelectionProvider> 를 구현하는 컨트롤을 통해 자식 항목을 하나 또는 여러 개 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-112">Controls that implement <xref:System.Windows.Automation.Provider.ISelectionProvider> allow either single or multiple child items to be selected.</span></span> <span data-ttu-id="261fe-113">예를 들어 목록 상자, 목록 뷰, 트리 뷰는 여러 개의 선택을 지원하는 반면 콤보 상자, 슬라이더, 라디오 단추 그룹은 단일 선택을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-113">For example, list box, list view, and tree view support multiple selections whereas combo box, slider, and radio button group support single selection.</span></span>  
   
--   **볼륨** 슬라이더 컨트롤과 같이 최소, 최대, 연속 범위를 가진 컨트롤은 <xref:System.Windows.Automation.Provider.ISelectionProvider> 대신 <xref:System.Windows.Automation.Provider.IRangeValueProvider>를 구현해야 합니다.  
+-   <span data-ttu-id="261fe-114">**볼륨** 슬라이더 컨트롤과 같이 최소, 최대, 연속 범위를 가진 컨트롤은 <xref:System.Windows.Automation.Provider.IRangeValueProvider> 대신 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-114">Controls that have a minimum, maximum, and continuous range, such as the **Volume** slider control, should implement <xref:System.Windows.Automation.Provider.IRangeValueProvider> instead of <xref:System.Windows.Automation.Provider.ISelectionProvider>.</span></span>  
   
--   **표시 속성** 대화 상자의 **화면 해상도** 슬라이더 또는 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]의 **색 선택** 선택 컨트롤\(아래 그림 참조\) 등과 같이 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>를 구현하는 자식 컨트롤을 관리하는 단일 선택 컨트롤은 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현해야 하며, 해당 자식 항목은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider> 둘 다 구현해야 합니다.  
+-   <span data-ttu-id="261fe-115"><xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>표시 속성 **대화 상자의** 화면 해상도 **슬라이더 또는** 의 **색 선택** 선택 컨트롤(아래 그림 참조) 등과 같이 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 를 구현하는 자식 컨트롤을 관리하는 단일 선택 컨트롤은 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현해야 하며, 해당 자식 항목은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>둘 다 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-115">Single-selection controls that manage child controls that implement <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, such as the **Screen Resolution** slider in the **Display Properties** dialog box or the **Color Picker** selection control from [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (illustrated below), should implement <xref:System.Windows.Automation.Provider.ISelectionProvider>; their children should implement both <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> and <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.</span></span>  
   
- ![노란색이 강조 표시된 색 선택](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA\_ValuePattern\_ColorPicker")  
-색 견본 문자열 매핑의 예  
+ <span data-ttu-id="261fe-116">![노란색이 강조 표시 된 색 선택 합니다. ] (../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")</span><span class="sxs-lookup"><span data-stu-id="261fe-116">![Color picker with yellow highlighted.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")</span></span>  
+<span data-ttu-id="261fe-117">색 견본 문자열 매핑의 예</span><span class="sxs-lookup"><span data-stu-id="261fe-117">Example of Color Swatch String Mapping</span></span>  
   
--   메뉴는 <xref:System.Windows.Automation.SelectionPattern>을 지원하지 않습니다. 그래픽과 텍스트 둘 다 포함된 메뉴 항목을 작업하고\(예: [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]에서 **보기** 메뉴의 **미리 보기 창** 항목\) 상태를 전달해야 하는 경우 <xref:System.Windows.Automation.Provider.IToggleProvider>를 구현해야 합니다.  
+-   <span data-ttu-id="261fe-118">메뉴는 <xref:System.Windows.Automation.SelectionPattern>을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-118">Menus do not support <xref:System.Windows.Automation.SelectionPattern>.</span></span> <span data-ttu-id="261fe-119">그래픽과 텍스트 둘 다 포함된 메뉴 항목을 작업하고(예: **에서** 보기 **메뉴의** 미리 보기 창 [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]항목) 상태를 전달해야 하는 경우 <xref:System.Windows.Automation.Provider.IToggleProvider>를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-119">If you are working with menu items that include both graphics and text (such as the **Preview Pane** items in the **View** menu in [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]) and need to convey state, you should implement <xref:System.Windows.Automation.Provider.IToggleProvider>.</span></span>  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
-## ISelectionProvider에 필요한 멤버  
- <xref:System.Windows.Automation.Provider.ISelectionProvider> 인터페이스에는 다음과 같은 속성, 메서드 및 이벤트가 필요합니다.  
+## <a name="required-members-for-iselectionprovider"></a><span data-ttu-id="261fe-120">ISelectionProvider에 필요한 멤버</span><span class="sxs-lookup"><span data-stu-id="261fe-120">Required Members for ISelectionProvider</span></span>  
+ <span data-ttu-id="261fe-121"><xref:System.Windows.Automation.Provider.ISelectionProvider> 인터페이스에는 다음과 같은 속성, 메서드 및 이벤트가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-121">The following properties, methods, and events are required for the <xref:System.Windows.Automation.Provider.ISelectionProvider> interface.</span></span>  
   
-|필요한 멤버|형식|노트|  
-|------------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|속성|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 및 <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>를 사용하여 속성 변경 이벤트를 지원해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|속성|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 및 <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>를 사용하여 속성 변경 이벤트를 지원해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|메서드|없음|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|이벤트|컨테이너의 선택 항목이 현저히 변경되어 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 상수가 허용하는 것보다 더 많은 추가 및 제거 이벤트를 보내야 하는 경우에 발생합니다.|  
+|<span data-ttu-id="261fe-122">필요한 멤버</span><span class="sxs-lookup"><span data-stu-id="261fe-122">Required members</span></span>|<span data-ttu-id="261fe-123">형식</span><span class="sxs-lookup"><span data-stu-id="261fe-123">Type</span></span>|<span data-ttu-id="261fe-124">노트</span><span class="sxs-lookup"><span data-stu-id="261fe-124">Notes</span></span>|  
+|----------------------|----------|-----------|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|<span data-ttu-id="261fe-125">속성</span><span class="sxs-lookup"><span data-stu-id="261fe-125">Property</span></span>|<span data-ttu-id="261fe-126"><xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 및 <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>를 사용하여 속성 변경 이벤트를 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-126">Should support property changed events using <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> and <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|<span data-ttu-id="261fe-127">속성</span><span class="sxs-lookup"><span data-stu-id="261fe-127">Property</span></span>|<span data-ttu-id="261fe-128"><xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 및 <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>를 사용하여 속성 변경 이벤트를 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-128">Should support property changed events using <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> and <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|<span data-ttu-id="261fe-129">메서드</span><span class="sxs-lookup"><span data-stu-id="261fe-129">Method</span></span>|<span data-ttu-id="261fe-130">없음</span><span class="sxs-lookup"><span data-stu-id="261fe-130">None</span></span>|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|<span data-ttu-id="261fe-131">이벤트</span><span class="sxs-lookup"><span data-stu-id="261fe-131">Event</span></span>|<span data-ttu-id="261fe-132">컨테이너의 선택 항목이 현저히 변경되어 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 상수가 허용하는 것보다 더 많은 추가 및 제거 이벤트를 보내야 하는 경우에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-132">Raised when a selection in a container has changed significantly and requires sending more addition and removal events than the <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> constant permits.</span></span>|  
   
- <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> 및 <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>은 동적 속성일 수 있습니다. 예를 들어, 컨트롤의 초기 상태에서 기본적으로 항목이 선택되지 않을 수 있으며 이는 <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>가 `false`임을 나타냅니다. 그러나 항목이 선택된 후에는 컨트롤에 하나 이상의 항목이 항상 선택되어 있어야 합니다. 마찬가지로, 드문 경우지만 초기화될 때 컨트롤에서 여러 항목이 선택될 수 있지만 이후에는 하나의 선택 항목만 허용됩니다.  
+ <span data-ttu-id="261fe-133"><xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> 및 <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> 은 동적 속성일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-133">The <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> and <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> properties can be dynamic.</span></span> <span data-ttu-id="261fe-134">예를 들어, 컨트롤의 초기 상태에서 기본적으로 항목이 선택되지 않을 수 있으며 이는 <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> 가 `false`임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-134">For example, the initial state of a control might not have any items selected by default, indicating that <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> is `false`.</span></span> <span data-ttu-id="261fe-135">그러나 항목이 선택된 후에는 컨트롤에 하나 이상의 항목이 항상 선택되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-135">However, after an item is selected, the control must always have at least one item selected.</span></span> <span data-ttu-id="261fe-136">마찬가지로, 드문 경우지만 초기화될 때 컨트롤에서 여러 항목이 선택될 수 있지만 이후에는 하나의 선택 항목만 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-136">Similarly, in rare cases, a control might allow multiple items to be selected on initialization, but subsequently allow only single selections to be made.</span></span>  
   
 <a name="Exceptions"></a>   
-## 예외  
- 공급자는 다음과 같은 예외를 throw해야 합니다.  
+## <a name="exceptions"></a><span data-ttu-id="261fe-137">예외</span><span class="sxs-lookup"><span data-stu-id="261fe-137">Exceptions</span></span>  
+ <span data-ttu-id="261fe-138">공급자는 다음과 같은 예외를 throw해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="261fe-138">Providers must throw the following exceptions.</span></span>  
   
-|예외 형식|조건|  
-|-----------|--------|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|컨트롤이 사용 설정되지 않은 경우.|  
-|<xref:System.InvalidOperationException>|컨트롤이 숨겨진 경우.|  
+|<span data-ttu-id="261fe-139">예외 형식</span><span class="sxs-lookup"><span data-stu-id="261fe-139">Exception Type</span></span>|<span data-ttu-id="261fe-140">조건</span><span class="sxs-lookup"><span data-stu-id="261fe-140">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<span data-ttu-id="261fe-141">컨트롤이 사용 설정되지 않은 경우.</span><span class="sxs-lookup"><span data-stu-id="261fe-141">If the control is not enabled.</span></span>|  
+|<xref:System.InvalidOperationException>|<span data-ttu-id="261fe-142">컨트롤이 숨겨진 경우.</span><span class="sxs-lookup"><span data-stu-id="261fe-142">If the control is hidden.</span></span>|  
   
-## 참고 항목  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Implementing the UI Automation SelectionItem Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="261fe-143">참고 항목</span><span class="sxs-lookup"><span data-stu-id="261fe-143">See Also</span></span>  
+ [<span data-ttu-id="261fe-144">UI 자동화 컨트롤 패턴 개요</span><span class="sxs-lookup"><span data-stu-id="261fe-144">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="261fe-145">UI 자동화 공급자의 컨트롤 패턴 지원</span><span class="sxs-lookup"><span data-stu-id="261fe-145">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="261fe-146">클라이언트에 대 한 UI 자동화 컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="261fe-146">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="261fe-147">UI 자동화 SelectionItem 컨트롤 패턴 구현</span><span class="sxs-lookup"><span data-stu-id="261fe-147">Implementing the UI Automation SelectionItem Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)  
+ [<span data-ttu-id="261fe-148">UI 자동화 트리 개요</span><span class="sxs-lookup"><span data-stu-id="261fe-148">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="261fe-149">UI 자동화의 캐싱 사용</span><span class="sxs-lookup"><span data-stu-id="261fe-149">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -1,65 +1,66 @@
 ---
-title: "선, 곡선 및 도형 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "곡선, 그리기"
-  - "선, 그리기"
-  - "도형, 채우기"
-  - "도형. 그리기"
-  - "스플라인, 그리기"
+title: "선, 곡선 및 도형"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- shapes [Windows Forms], filling
+- splines [Windows Forms], drawing
+- shapes. drawing
+- lines [Windows Forms], drawing
+- curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2caa77285ebe327adc690b26baeb58aa800627fb
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 선, 곡선 및 도형
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]의 벡터 그래픽을 사용하여 선 그리기, 곡선 그리기, 도형 그리기 및 도형 채우기 작업을 수행할 수 있습니다.  
+# <a name="lines-curves-and-shapes"></a><span data-ttu-id="027df-102">선, 곡선 및 도형</span><span class="sxs-lookup"><span data-stu-id="027df-102">Lines, Curves, and Shapes</span></span>
+<span data-ttu-id="027df-103">벡터 그래픽 부분의 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선, 곡선 그리기를 그리기 및 도형 채우기 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="027df-103">The vector graphics portion of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is used to draw lines, draw curves, and to draw and fill shapes.</span></span>  
   
-## 단원 내용  
- [벡터 그래픽 개요](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)  
- 벡터 그래픽에 대해 설명합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="027df-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="027df-104">In This Section</span></span>  
+ [<span data-ttu-id="027df-105">벡터 그래픽 개요</span><span class="sxs-lookup"><span data-stu-id="027df-105">Vector Graphics Overview</span></span>](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)  
+ <span data-ttu-id="027df-106">벡터 그래픽을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-106">Discusses vector graphics.</span></span>  
   
- [GDI\+의 펜, 선 및 사각형](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
- 선 및 사각형 그리기에 대해 설명합니다.  
+ [<span data-ttu-id="027df-107">GDI+의 펜, 선 및 사각형</span><span class="sxs-lookup"><span data-stu-id="027df-107">Pens, Lines, and Rectangles in GDI+</span></span>](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
+ <span data-ttu-id="027df-108">선 및 사각형 그리기에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-108">Discusses drawing lines and rectangles.</span></span>  
   
- [GDI\+의 타원 및 원호](../../../../docs/framework/winforms/advanced/ellipses-and-arcs-in-gdi.md)  
- 원호와 타원을 정의하고 이 도형을 그리는 데 필요한 클래스를 식별합니다.  
+ [<span data-ttu-id="027df-109">GDI+의 타원 및 원호</span><span class="sxs-lookup"><span data-stu-id="027df-109">Ellipses and Arcs in GDI+</span></span>](../../../../docs/framework/winforms/advanced/ellipses-and-arcs-in-gdi.md)  
+ <span data-ttu-id="027df-110">타원 및 타원을 정의 하 고 그리는 데 필요한 클래스를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-110">Defines arcs and ellipses and identifies the classes needed to draw them.</span></span>  
   
- [GDI\+의 다각형](../../../../docs/framework/winforms/advanced/polygons-in-gdi.md)  
- 다각형을 정의하고 다각형을 그리는 데 필요한 클래스를 식별합니다.  
+ [<span data-ttu-id="027df-111">GDI+의 다각형</span><span class="sxs-lookup"><span data-stu-id="027df-111">Polygons in GDI+</span></span>](../../../../docs/framework/winforms/advanced/polygons-in-gdi.md)  
+ <span data-ttu-id="027df-112">다각형을 정의 하 고 그리는 데 필요한 클래스를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-112">Defines polygons and identifies the classes needed to draw them.</span></span>  
   
- [GDI\+의 카디널 스플라인](../../../../docs/framework/winforms/advanced/cardinal-splines-in-gdi.md)  
- 카디널 스플라인을 정의하고 카디널 스플라인을 그리는 데 필요한 클래스를 식별합니다.  
+ [<span data-ttu-id="027df-113">GDI+의 카디널 스플라인</span><span class="sxs-lookup"><span data-stu-id="027df-113">Cardinal Splines in GDI+</span></span>](../../../../docs/framework/winforms/advanced/cardinal-splines-in-gdi.md)  
+ <span data-ttu-id="027df-114">카디널 스플라인을 정의 하 고 그리는 데 필요한 클래스를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-114">Defines cardinal splines and identifies the classes needed to draw them.</span></span>  
   
- [GDI\+의 3차원 곡선 스플라인](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
- 3차원 곡선 스플라인을 정의하고 3차원 곡선 스플라인을 그리는 데 필요한 클래스를 식별합니다.  
+ [<span data-ttu-id="027df-115">GDI+의 3차원 곡선 스플라인</span><span class="sxs-lookup"><span data-stu-id="027df-115">Bézier Splines in GDI+</span></span>](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
+ <span data-ttu-id="027df-116">베 지 어 스플라인을 정의 하 고 그리는 데 필요한 클래스를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-116">Defines Bezier splines and identifies the classes needed to draw them.</span></span>  
   
- [GDI\+의 그래픽 경로](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)  
- 경로에 대해 설명하고 경로 만들기 및 그리기 방법에 대해 설명합니다.  
+ [<span data-ttu-id="027df-117">GDI+의 그래픽 경로</span><span class="sxs-lookup"><span data-stu-id="027df-117">Graphics Paths in GDI+</span></span>](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)  
+ <span data-ttu-id="027df-118">경로 및 만들기 및 그리기 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-118">Describes paths and how to create and draw them.</span></span>  
   
- [GDI\+의 브러시 및 채워진 도형](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
- 브러시 형식 및 이 형식을 사용하는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="027df-119">GDI+의 브러시 및 채워진 도형</span><span class="sxs-lookup"><span data-stu-id="027df-119">Brushes and Filled Shapes in GDI+</span></span>](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
+ <span data-ttu-id="027df-120">브러시 형식 및 사용 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-120">Describes brush types and how to use them.</span></span>  
   
- [GDI\+의 개곡선 및 폐곡선](../../../../docs/framework/winforms/advanced/open-and-closed-curves-in-gdi.md)  
- 열린 곡선과 닫힌 곡선을 정의하고 이 곡선의 그리기 및 채우기 방법에 대해 설명합니다.  
+ [<span data-ttu-id="027df-121">GDI+의 개곡선 및 폐곡선</span><span class="sxs-lookup"><span data-stu-id="027df-121">Open and Closed Curves in GDI+</span></span>](../../../../docs/framework/winforms/advanced/open-and-closed-curves-in-gdi.md)  
+ <span data-ttu-id="027df-122">개곡선 및 폐곡선 및 그리고를 채우는 하는 방법을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-122">Defines open and closed curves and how to draw and fill them.</span></span>  
   
- [GDI\+의 영역](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
- 영역에 연결된 메서드에 대해 설명합니다.  
+ [<span data-ttu-id="027df-123">GDI+의 영역</span><span class="sxs-lookup"><span data-stu-id="027df-123">Regions in GDI+</span></span>](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
+ <span data-ttu-id="027df-124">영역에 연결 된 메서드에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-124">Describes the methods associated with regions.</span></span>  
   
- [GDI\+에서 그리기 화면 제한](../../../../docs/framework/winforms/advanced/restricting-the-drawing-surface-in-gdi.md)  
- 클리핑 및 클리핑 사용 방법에 대해 설명합니다.  
+ [<span data-ttu-id="027df-125">GDI+에서 그리기 화면 제한</span><span class="sxs-lookup"><span data-stu-id="027df-125">Restricting the Drawing Surface in GDI+</span></span>](../../../../docs/framework/winforms/advanced/restricting-the-drawing-surface-in-gdi.md)  
+ <span data-ttu-id="027df-126">클리핑 및 사용 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-126">Describes clipping and how to use it.</span></span>  
   
- [선과 곡선의 앤티 앨리어싱](../../../../docs/framework/winforms/advanced/antialiasing-with-lines-and-curves.md)  
- 앤티 앨리어싱을 정의하고 앤티 앨리어싱을 사용하여 선 및 곡선을 그리는 방법에 대해 설명합니다.
+ [<span data-ttu-id="027df-127">선과 곡선의 앤티 앨리어싱</span><span class="sxs-lookup"><span data-stu-id="027df-127">Antialiasing with Lines and Curves</span></span>](../../../../docs/framework/winforms/advanced/antialiasing-with-lines-and-curves.md)  
+ <span data-ttu-id="027df-128">앤티앨리어싱 및 방법을 그릴 때 앤티 앨리어싱 선 및 곡선을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="027df-128">Defines antialiasing and how use antialiasing when drawing lines and curves.</span></span>

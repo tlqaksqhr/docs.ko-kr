@@ -1,84 +1,87 @@
 ---
-title: "UI Automation Support for the HeaderItem Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, Header Item control type"
-  - "Header Item control type"
-  - "control types, Header Item"
+title: "HeaderItem 컨트롤 형식에 대한 UI 자동화 지원"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Header Item control type
+- Header Item control type
+- control types, Header Item
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
-caps.latest.revision: 20
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 20933ea80fb23a379da55ec2a126e0f020090b05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the HeaderItem Control Type
+# <a name="ui-automation-support-for-the-headeritem-control-type"></a><span data-ttu-id="810b5-102">HeaderItem 컨트롤 형식에 대한 UI 자동화 지원</span><span class="sxs-lookup"><span data-stu-id="810b5-102">UI Automation Support for the HeaderItem Control Type</span></span>
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  <span data-ttu-id="810b5-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="810b5-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 이 항목에서는 HeaderItem 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
+ <span data-ttu-id="810b5-105">이 항목에서는 HeaderItem 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the HeaderItem control type.</span></span> <span data-ttu-id="810b5-106">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="810b5-107">이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- HeaderItem 컨트롤 형식이 정보의 행 또는 열의 시각적 레이블을 제공합니다.  
+ <span data-ttu-id="810b5-108">HeaderItem 컨트롤 형식이 정보의 행 또는 열의 시각적 레이블을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-108">The HeaderItem control type provides a visual label for a row or column of information.</span></span>  
   
- 헤더 항목 컨트롤은 HeaderItem 컨트롤 형식을 구현하는 컨트롤의 예입니다. 다음 섹션의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 헤더 컨트롤에 적용됩니다.  
+ <span data-ttu-id="810b5-109">헤더 항목 컨트롤은 HeaderItem 컨트롤 형식을 구현하는 컨트롤의 예입니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-109">Header item controls are examples of controls that implement the HeaderItem control type.</span></span> <span data-ttu-id="810b5-110">다음 섹션의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 헤더 컨트롤에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements in the following sections apply to all header controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 필요한 UI 자동화 트리 구조  
- 다음 표는 헤더 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대한 자세한 내용은 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="810b5-111">필요한 UI 자동화 트리 구조</span><span class="sxs-lookup"><span data-stu-id="810b5-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="810b5-112">다음 표는 헤더 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to header item controls and describes what can be contained in each view.</span></span> <span data-ttu-id="810b5-113">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리, 참조 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|컨트롤 뷰|콘텐츠 뷰|  
-|-----------|-----------|  
-|HeaderItem|없음|  
+|<span data-ttu-id="810b5-114">컨트롤 뷰</span><span class="sxs-lookup"><span data-stu-id="810b5-114">Control View</span></span>|<span data-ttu-id="810b5-115">콘텐츠 뷰</span><span class="sxs-lookup"><span data-stu-id="810b5-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="810b5-116">HeaderItem</span><span class="sxs-lookup"><span data-stu-id="810b5-116">HeaderItem</span></span>|<span data-ttu-id="810b5-117">없음</span><span class="sxs-lookup"><span data-stu-id="810b5-117">None</span></span>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 헤더 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대한 자세한 내용은 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)를 참조하세요.  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="810b5-118">필요한 UI 자동화 속성</span><span class="sxs-lookup"><span data-stu-id="810b5-118">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="810b5-119">다음 표에서는 값 또는 정의가 헤더 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-119">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to header item controls.</span></span> <span data-ttu-id="810b5-120">에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 참조 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-120">For more information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|경계 사각형이 없는 경우 지원됩니다. 경계 사각형 내의 일부 지점이 클릭 가능하지 않으며 특수화된 적중 테스트를 수행하는 경우 클릭 가능한 지점을 재정의하고 제공하세요.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|헤더 항목 컨트롤은 항상 자체적으로 레이블이 지정됩니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`.|헤더 항목 컨트롤에 정적 레이블이 없습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|HeaderItem|이 값은 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임워크에 대해 동일합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"header item"|HeaderItem 컨트롤 형식의 지역화된 문자열입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|헤더 항목 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에 포함되지 않습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|헤더 항목 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰에 항상 포함됩니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty>|메모를 참조하세요.|이 속성은 헤더 항목 기준의 정렬 순서에 대한 정보를 제공합니다.|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="810b5-121"> 속성</span><span class="sxs-lookup"><span data-stu-id="810b5-121"> Property</span></span>|<span data-ttu-id="810b5-122">값</span><span class="sxs-lookup"><span data-stu-id="810b5-122">Value</span></span>|<span data-ttu-id="810b5-123">노트</span><span class="sxs-lookup"><span data-stu-id="810b5-123">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="810b5-124">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-124">See notes.</span></span>|<span data-ttu-id="810b5-125">이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-125">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="810b5-126">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-126">See notes.</span></span>|<span data-ttu-id="810b5-127">전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-127">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="810b5-128">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-128">See notes.</span></span>|<span data-ttu-id="810b5-129">경계 사각형이 없는 경우 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-129">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="810b5-130">경계 사각형 내의 일부 지점이 클릭 가능하지 않으며 특수화된 적중 테스트를 수행하는 경우 클릭 가능한 지점을 재정의하고 제공하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-130">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="810b5-131">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-131">See notes.</span></span>|<span data-ttu-id="810b5-132">컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-132">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="810b5-133">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-133">See notes.</span></span>|<span data-ttu-id="810b5-134">헤더 항목 컨트롤은 항상 자체적으로 레이블이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-134">The header item control is always self-labeling.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="810b5-135">`Null`.</span><span class="sxs-lookup"><span data-stu-id="810b5-135">`Null`.</span></span>|<span data-ttu-id="810b5-136">헤더 항목 컨트롤에 정적 레이블이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-136">Header item controls do not have a static label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="810b5-137">HeaderItem</span><span class="sxs-lookup"><span data-stu-id="810b5-137">HeaderItem</span></span>|<span data-ttu-id="810b5-138">이 값은 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임워크에 대해 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-138">This value is the same for all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="810b5-139">"header item"</span><span class="sxs-lookup"><span data-stu-id="810b5-139">"header item"</span></span>|<span data-ttu-id="810b5-140">HeaderItem 컨트롤 형식의 지역화된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-140">Localized string for the HeaderItem control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="810b5-141">False</span><span class="sxs-lookup"><span data-stu-id="810b5-141">False</span></span>|<span data-ttu-id="810b5-142">헤더 항목 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-142">The header item control is not included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="810b5-143">True</span><span class="sxs-lookup"><span data-stu-id="810b5-143">True</span></span>|<span data-ttu-id="810b5-144">헤더 항목 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰에 항상 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-144">The header item control is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty>|<span data-ttu-id="810b5-145">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-145">See notes.</span></span>|<span data-ttu-id="810b5-146">이 속성은 헤더 항목 기준의 정렬 순서에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-146">This property provides information for sort orders by the header item.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 필요한 UI 자동화 컨트롤 패턴  
- 다음 표에서는 모든 헤더 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="810b5-147">필요한 UI 자동화 컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="810b5-147">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="810b5-148">다음 표에서는 모든 헤더 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-148">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by all header item controls.</span></span> <span data-ttu-id="810b5-149">컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-149">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|컨트롤 패턴|지원|노트|  
-|------------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider>|종속|헤더 항목 컨트롤의 크기를 조정할 수 있는 경우 이 컨트롤 패턴을 구현합니다.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|종속|헤더 항목 컨트롤을 클릭하여 데이터를 정렬할 수 있는 경우 이 컨트롤 패턴을 구현합니다.|  
+|<span data-ttu-id="810b5-150">컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="810b5-150">Control Pattern</span></span>|<span data-ttu-id="810b5-151">지원</span><span class="sxs-lookup"><span data-stu-id="810b5-151">Support</span></span>|<span data-ttu-id="810b5-152">노트</span><span class="sxs-lookup"><span data-stu-id="810b5-152">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider>|<span data-ttu-id="810b5-153">종속</span><span class="sxs-lookup"><span data-stu-id="810b5-153">Depends</span></span>|<span data-ttu-id="810b5-154">헤더 항목 컨트롤의 크기를 조정할 수 있는 경우 이 컨트롤 패턴을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-154">Implement this control pattern if the header item control can be resized.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|<span data-ttu-id="810b5-155">종속</span><span class="sxs-lookup"><span data-stu-id="810b5-155">Depends</span></span>|<span data-ttu-id="810b5-156">헤더 항목 컨트롤을 클릭하여 데이터를 정렬할 수 있는 경우 이 컨트롤 패턴을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-156">Implement this control pattern if the header item control can be clicked to sort the data.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 필요한 UI 자동화 이벤트  
- 다음 표에서는 모든 헤더 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="810b5-157">필요한 UI 자동화 이벤트</span><span class="sxs-lookup"><span data-stu-id="810b5-157">Required UI Automation Events</span></span>  
+ <span data-ttu-id="810b5-158">다음 표에서는 모든 헤더 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="810b5-158">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all header item controls.</span></span> <span data-ttu-id="810b5-159">이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="810b5-159">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
-|-------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|종속|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="810b5-160"> 이벤트</span><span class="sxs-lookup"><span data-stu-id="810b5-160"> Event</span></span>|<span data-ttu-id="810b5-161">지원</span><span class="sxs-lookup"><span data-stu-id="810b5-161">Support</span></span>|<span data-ttu-id="810b5-162">노트</span><span class="sxs-lookup"><span data-stu-id="810b5-162">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|<span data-ttu-id="810b5-163">종속</span><span class="sxs-lookup"><span data-stu-id="810b5-163">Depends</span></span>|<span data-ttu-id="810b5-164">없음</span><span class="sxs-lookup"><span data-stu-id="810b5-164">None</span></span>|  
+|<span data-ttu-id="810b5-165"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="810b5-165"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="810b5-166">필수</span><span class="sxs-lookup"><span data-stu-id="810b5-166">Required</span></span>|<span data-ttu-id="810b5-167">없음</span><span class="sxs-lookup"><span data-stu-id="810b5-167">None</span></span>|  
+|<span data-ttu-id="810b5-168"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="810b5-168"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="810b5-169">필수</span><span class="sxs-lookup"><span data-stu-id="810b5-169">Required</span></span>|<span data-ttu-id="810b5-170">없음</span><span class="sxs-lookup"><span data-stu-id="810b5-170">None</span></span>|  
+|<span data-ttu-id="810b5-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="810b5-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="810b5-172">필수</span><span class="sxs-lookup"><span data-stu-id="810b5-172">Required</span></span>|<span data-ttu-id="810b5-173">없음</span><span class="sxs-lookup"><span data-stu-id="810b5-173">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="810b5-174">필수</span><span class="sxs-lookup"><span data-stu-id="810b5-174">Required</span></span>|<span data-ttu-id="810b5-175">없음</span><span class="sxs-lookup"><span data-stu-id="810b5-175">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="810b5-176">필수</span><span class="sxs-lookup"><span data-stu-id="810b5-176">Required</span></span>|<span data-ttu-id="810b5-177">없음</span><span class="sxs-lookup"><span data-stu-id="810b5-177">None</span></span>|  
   
-## 참고 항목  
- <xref:System.Windows.Automation.ControlType.HeaderItem>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="810b5-178">참고 항목</span><span class="sxs-lookup"><span data-stu-id="810b5-178">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.HeaderItem>  
+ [<span data-ttu-id="810b5-179">UI 자동화 컨트롤 형식 개요</span><span class="sxs-lookup"><span data-stu-id="810b5-179">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="810b5-180">UI 자동화 개요</span><span class="sxs-lookup"><span data-stu-id="810b5-180">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)
