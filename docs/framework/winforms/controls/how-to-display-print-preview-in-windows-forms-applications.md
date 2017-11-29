@@ -1,44 +1,49 @@
 ---
-title: "방법: Windows Forms 응용 프로그램에서 인쇄 미리 보기 표시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "예제[Windows Forms], 인쇄 미리 보기"
-  - "인쇄 미리 보기, 표시"
-  - "인쇄[Windows Forms], 인쇄 미리 보기"
+title: "방법: Windows Forms 응용 프로그램에서 인쇄 미리 보기 표시"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- print preview [Windows Forms], displaying
+- printing [Windows Forms], print preview
+- examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e705575b8c3acdcc3d92b985c59b60e7310dce7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms 응용 프로그램에서 인쇄 미리 보기 표시
-<xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤을 사용하면 사용자가 문서를 인쇄하기 전에 미리 볼 수 있습니다.  
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>방법: Windows Forms 응용 프로그램에서 인쇄 미리 보기 표시
+사용할 수는 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤 사용자가 인쇄 하기 전에 자주 문서를 표시할 수 있도록 합니다.  
   
- 이렇게 하려면 <xref:System.Drawing.Printing.PrintDocument> 클래스의 인스턴스 즉, 인쇄할 문서를 지정해야 합니다.  <xref:System.Drawing.Printing.PrintDocument> 구성 요소를 통해 인쇄 미리 보기를 사용하는 방법에 대한 자세한 내용은 [방법: Windows Forms에서 인쇄 미리 보기를 사용하여 인쇄](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)를 참조하십시오.  
+ 이 작업을 수행 하려면 인스턴스를 지정 해야는 <xref:System.Drawing.Printing.PrintDocument> 클래스입니다;이 문서를 인쇄 합니다. 인쇄 미리 보기를 사용 하는 방법에 대 한 자세한 내용은 <xref:System.Drawing.Printing.PrintDocument> 구성 요소 참조 [하는 방법: Windows Forms를 사용 하 여 인쇄 미리 보기에서 인쇄](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)합니다.  
   
 > [!NOTE]
->  런타임에 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤을 사용하려면 사용자의 컴퓨터에 로컬로 또는 네트워크를 통해 설치된 프린터가 있어야 합니다. 왜냐하면 이러한 프린터가 <xref:System.Windows.Forms.PrintPreviewDialog> 구성 요소에서 문서의 인쇄 모양을 결정하는 데 영향을 주기 때문입니다.  
+>  사용 하는 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤 런타임 시 사용자가 프린터가 있어야 로컬 또는 네트워크를 통해 자신의 컴퓨터에 설치 되어 방법을 <xref:System.Windows.Forms.PrintPreviewDialog> 구성 요소는 인쇄 된 문서의 모양을 결정 합니다.  
   
- <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤은 <xref:System.Drawing.Printing.PrinterSettings> 클래스를 사용합니다.  또한 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤은 <xref:System.Windows.Forms.PrintPreviewDialog> 구성 요소가 사용하는 것처럼 <xref:System.Drawing.Printing.PageSettings> 클래스를 사용합니다.  <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤의 <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> 속성에 지정된 인쇄 문서는 <xref:System.Drawing.Printing.PrinterSettings> 및 <xref:System.Drawing.Printing.PageSettings> 클래스의 인스턴스를 참조하며 이러한 인스턴스는 미리 보기 창에서 문서를 렌더링하는 데 사용됩니다.  
+ <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤이 사용 하 여 <xref:System.Drawing.Printing.PrinterSettings> 클래스입니다. 또한는 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤이 사용 하는 <xref:System.Drawing.Printing.PageSettings> 클래스인 것과 마찬가지로 <xref:System.Windows.Forms.PrintPreviewDialog> 구성 요소가 수행 합니다. 에 지정 된 인쇄 문서는 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤의 <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> 속성은 모두의 인스턴스를 참조는 <xref:System.Drawing.Printing.PrinterSettings> 및 <xref:System.Drawing.Printing.PageSettings> 클래스 및 이러한는 미리 보기 창에서 문서를 렌더링 하는 데 사용 합니다.  
   
-### PrintPreviewDialog 컨트롤을 사용하여 페이지를 보려면  
+### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>PrintPreviewDialog 컨트롤을 사용 하 여 페이지를 보려면  
   
--   <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 대화 상자를 표시하고 사용할 <xref:System.Drawing.Printing.PrintDocument>를 지정합니다.  
+-   <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 대화 상자를 표시하고, 사용할 <xref:System.Drawing.Printing.PrintDocument> 를 지정합니다.  
   
-     다음 코드 예제에서는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 사용하여 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤의 인스턴스를 엽니다.  인쇄 문서는 <xref:System.Windows.Forms.PrintDialog.Document%2A> 속성에 지정됩니다.  다음 예제에서는 인쇄 문서가 지정되지 않습니다.  
+     다음 코드 예제에서는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기의 인스턴스를 열고는 <xref:System.Windows.Forms.PrintPreviewDialog> 제어 합니다. 인쇄 문서에 지정 된는 <xref:System.Windows.Forms.PrintDialog.Document%2A> 속성입니다. 아래 예제에서는 인쇄 문서가 지정 됩니다.  
   
-     이 예제에서는 폼에 <xref:System.Windows.Forms.Button> 컨트롤, 이름이 `myDocument`인 <xref:System.Drawing.Printing.PrintDocument> 구성 요소 및 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤이 있다고 가정합니다.  
+     이 예제에서는 폼에는 <xref:System.Windows.Forms.Button> 컨트롤은 <xref:System.Drawing.Printing.PrintDocument> 라는 구성 요소가 `myDocument`, 및 <xref:System.Windows.Forms.PrintPreviewDialog> 제어 합니다.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -49,7 +54,6 @@ caps.handback.revision: 19
        PrintPreviewDialog1.Document = myDocument  
        PrintPreviewDialog1.ShowDialog()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -61,7 +65,6 @@ caps.handback.revision: 19
        printPreviewDialog1.Document = myDocument;  
        printPreviewDialog1.ShowDialog();  
     }  
-  
     ```  
   
     ```cpp  
@@ -77,11 +80,10 @@ caps.handback.revision: 19
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 폼의 생성자에 다음 코드를 배치하여 이벤트 처리기를 등록합니다.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -89,8 +91,8 @@ caps.handback.revision: 19
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## 참고 항목  
- [PrintDocument 구성 요소](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)   
- [PrintPreviewDialog 컨트롤](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)   
- [Windows Forms 인쇄 지원](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
+## <a name="see-also"></a>참고 항목  
+ [PrintDocument 구성 요소](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ [PrintPreviewDialog 컨트롤](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [Windows Forms 인쇄 지원](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

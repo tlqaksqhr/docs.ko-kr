@@ -1,34 +1,37 @@
 ---
-title: "방법: .NET Framework 3.0 설치 여부 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WPF 존재 여부 감지"
-  - "WPT의 존재 여부, 검색"
-  - "WinFX 런타임 사용자 에이전트 문자열"
+title: "방법: .NET Framework 3.0 설치 여부 확인"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WinFX Runtime user-agent string
+- presence of WPT [WPF], detecting
+- detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e013c9426507e20da05df26932a1f9cf1e5df761
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: .NET Framework 3.0 설치 여부 확인
-시스템에 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] 응용 프로그램을 배포하려면 관리자는 먼저 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 런타임이 있는지 확인해야 합니다.  이 항목에서는 관리자가 시스템에 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]이 있는지 확인하기 위해 사용할 수 있는 HTML\/JavaScript 스크립트를 제공합니다.  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>방법: .NET Framework 3.0 설치 여부 확인
+배포 하려면 관리자 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] 응용 프로그램 시스템에서는 먼저 확인 해야 하는 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 런타임이 있는지 합니다. 이 항목에서는 작성 된 스크립트 관리자가 결정 하는 데 사용할 수 있는 HTML/javascript 여부 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 는 시스템에 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]의 설치, 배포 및 확인에 대한 자세한 내용은 [Deploying Microsoft .NET Framework Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)을 참조하십시오.  
+>  자세한 내용은 설치, 배포 및 검색에 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]에서 참조 [배포 Microsoft.NET Framework 버전 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)합니다.  
   
 <a name="content_expiration"></a>   
-## ".NET CLR" UserAgent 문자열 확인  
- [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]을 설치할 때 MSI는 ".NET CLR" 및 버전 번호를 UserAgent 문자열에 추가합니다.  다음 예제에서는 간단한 HTML 페이지에 포함된 스크립트를 보여 줍니다.  스크립트는 UserAgent 문자열을 검색하여 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]이 설치되었는지 확인하고 검색 결과에 상태 메시지를 표시합니다.  
+## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" 사용자 에이전트 문자열 검색  
+ 때 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 가 설치 된 MSI ".NET CLR" 및 버전 번호를 추가 UserAgent 문자열입니다. 다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다. 확인 하려면 UserAgent 문자열을 검색 하는 스크립트 여부 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 설치 되 고 검색 결과에 상태 메시지를 표시 합니다.  
   
 ```  
 <HTML>  
@@ -118,16 +121,15 @@ caps.handback.revision: 12
     <div id="result" />  
   </BODY>  
 </HTML>  
-  
 ```  
   
- ".NET CLR " 버전 검색에 성공하면 다음과 같은 메시지가 나타납니다.  
+ ".NET CLR" 버전에 대 한 검색 되 면 다음과 같은 유형의 상태 메시지가 나타납니다.  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- 그렇지 않으면 다음과 같은 상태 메시지가 나타납니다.  
+ 그렇지 않으면 다음과 같은 유형의 상태 메시지가 표시 됩니다.  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

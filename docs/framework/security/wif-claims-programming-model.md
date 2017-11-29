@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 9cfc3491b18d312b80ba69991edb9930f59d47cc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wif-claims-programming-model"></a>WIF 클레임 프로그래밍 모델
 ASP.NET 및 WCF(Windows Communication Foundation) 개발자는 일반적으로 사용자의 ID 정보 작업에 IIdentity 및 IPrincipal 인터페이스를 사용합니다. .NET 4.5에서는 다음 다이어그램과 같이 이제 모든 보안 주체에 대한 클레임이 항상 표시되도록 WIF(Windows Identity Foundation)가 통합되었습니다.  
@@ -84,4 +82,3 @@ ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 |Spki|`urn:oasis:names:tc:SAML:1.0:am:SPKI`|  
 |XmlDSig|`urn:ietf:rfc:3075`|  
 |지정되지 않음|`urn:oasis:names:tc:SAML:1.0:am:unspecified`|
-

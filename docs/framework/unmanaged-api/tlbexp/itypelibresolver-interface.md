@@ -1,0 +1,48 @@
+---
+title: "ITypeLibResolver 인터페이스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ITypeLibResolver
+api_location: tlbref.dll
+api_type: COM
+f1_keywords: ITypeLibResolver
+helpviewer_keywords: ITypeLibResolver interface [.NET Framework]
+ms.assetid: edaaed1d-0d26-40f0-83f1-48efc0ded1c6
+topic_type: apiref
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ed1b4dd4816f67bb98472b7150f3da3bd5b927b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="itypelibresolver-interface"></a>ITypeLibResolver 인터페이스
+제공 된 [ResolveTypeLib 메서드](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), 형식 라이브러리의 파일 경로 확인 하 합니다.  
+  
+## <a name="methods"></a>메서드  
+  
+|메서드|설명|  
+|------------|-----------------|  
+|[ResolveTypeLib 메서드](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|정규화 된 경로 반환 하 여 형식 라이브러리의 단순한 이름을 확인 합니다.|  
+  
+## <a name="requirements"></a>요구 사항  
+ **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+  
+ **헤더:** TlbRef.idl, TlbRef.h  
+  
+ **라이브러리:** TlbRef.lib  
+  
+ **.NET framework 버전:** 4, 3.5, 3.0, 2.0  
+  
+## <a name="see-also"></a>참고 항목  
+ [Tlbexp 도우미 함수](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [LoadTypeLibEx 함수](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)

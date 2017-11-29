@@ -1,48 +1,51 @@
 ---
-title: "LINQ to SQL의 코드 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LINQ to SQL에서 코드 생성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5720ca8adbfb4a25e6c1360ac156e950a2f1ce52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to SQL의 코드 생성
-데이터베이스를 나타내는 코드는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 또는 SQLMetal 명령줄 도구를 사용하여 생성할 수 있습니다.  두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.  
+# <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL에서 코드 생성
+데이터베이스를 나타내는 코드는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 또는 SQLMetal 명령줄 도구를 사용하여 생성할 수 있습니다. 두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.  
   
-1.  *DBML 추출기*가 데이터베이스에서 스키마 정보를 추출한 다음 XML 형식의 DBML 파일에 다시 어셈블합니다.  
+1.  *DBML 추출기* 데이터베이스에서 스키마 정보를 추출 하 고이 XML 형식의 DBML 파일에 다시 어셈블합니다.  
   
-2.  *DBML 유효성 검사기*가 DBML 파일을 검사하여 오류가 있는지 확인합니다.  
+2.  DBML 파일에서 검색 되는 *DBML 유효성 검사기* 오류에 대 한 합니다.  
   
 3.  유효성 검사 오류가 없으면 파일이 코드 생성기에 전달됩니다.  
   
- 자세한 내용은 [SqlMetal.exe\(코드 생성 도구\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)을 참조하세요.  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 코드를 생성할 수도 있습니다.  [LINQ to SQL 도구 Visual Studio에서](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio2.md)를 참조하세요.  
+ 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. 사용 하는 개발자 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 수도 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 코드를 생성 합니다. 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.  
   
-## DBML 추출기  
+## <a name="dbml-extractor"></a>DBML 추출기  
  DBML 추출기는 데이터베이스 메타데이터를 입력으로 사용하여 DMBL 파일을 출력하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 구성 요소입니다.  
   
-## 코드 생성기  
- 코드 생성기는 DBML 파일을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], C\# 또는 XML 매핑 파일로 변환하는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 구성 요소입니다.  
+## <a name="code-generator"></a>코드 생성기  
+ 코드 생성기는 DBML 파일을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], C# 또는 XML 매핑 파일로 변환하는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 구성 요소입니다.  
   
-## XML 스키마 정의 파일  
+## <a name="xml-schema-definition-file"></a>XML 스키마 정의 파일  
  DBML 파일은 다음 XSD 스키마 정의 파일에 대해 유효해야 합니다.  
   
- 이 스키마 정의 파일은 외부 매핑 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다.  자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)를 참조하세요.  
+ 이 스키마 정의 파일은 외부 매핑 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다. 자세한 내용은 참조 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 사용자의 경우 이 XSD 파일은 XML 스키마 대화 상자에 "DbmlSchema.xsd"로 표시됩니다.  DBML 파일의 유효성 검사에 XSD 파일을 올바르게 사용하려면 [방법: DBML 및 외부 매핑 파일 유효성 검사](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)를 참조하세요.  
+>  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 사용자의 경우 이 XSD 파일은 XML 스키마 대화 상자에 "DbmlSchema.xsd"로 표시됩니다. DBML 파일의 유효성 검사에 대 한 XSD 파일을 올바르게 사용 하려면 참조 [하는 방법: DBML 유효성 검사 및 외부 매핑 파일](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)합니다.  
   
 ```  
-﻿?<?xml version="1.0" encoding="utf-16"?>  
+?<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/dbml/2007" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -249,10 +252,10 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## 샘플 DBML 파일  
- 다음 코드에서는 Northwind 샘플 데이터베이스에서 만든 DBML 파일의 일부를 보여 줍니다.  **\/xml** 옵션과 함께 SQLMetal을 사용하여 전체 파일을 생성할 수 있습니다.  자세한 내용은 [SqlMetal.exe\(코드 생성 도구\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)을 참조하세요.  
+## <a name="sample-dbml-file"></a>샘플 DBML 파일  
+ 다음 코드에서는 Northwind 샘플 데이터베이스에서 만든 DBML 파일의 일부를 보여 줍니다. 함께 SQLMetal을 사용 하 여 전체 파일을 생성할 수 있습니다는 **/xml** 옵션입니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-16"?>  
 <Database Name="northwnd" Class="Northwnd" xmlns="http://schemas.microsoft.com/dsltools/DLinqML">  
   
@@ -276,9 +279,9 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## 참고 항목  
- [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)   
- [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)   
- [방법: 개체 모델을 외부 파일로 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)   
- [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)   
+## <a name="see-also"></a>참고 항목  
+ [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [방법: 외부 파일로 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
+ [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

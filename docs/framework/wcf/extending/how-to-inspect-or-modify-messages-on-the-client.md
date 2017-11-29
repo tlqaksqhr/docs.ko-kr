@@ -1,33 +1,36 @@
 ---
-title: "방법: 클라이언트에서 메시지 검사 또는 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 클라이언트에서 메시지 검사 또는 수정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 164e19891e576b6d310839a1221ad8ed0d315444
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 클라이언트에서 메시지 검사 또는 수정
-<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>를 구현하고 클라이언트 런타임에 삽입하여 들어오거나 보내는 메시지를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 검사하거나 수정할 수 있습니다.  자세한 내용은 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md)을 참조하세요.  서비스의 해당 기능은 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>입니다.  자세한 코드 예제는 [메시지 검사자](../../../../docs/framework/wcf/samples/message-inspectors.md) 샘플을 참조하세요.  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>방법: 클라이언트에서 메시지 검사 또는 수정
+[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 구현하고 클라이언트 런타임에 삽입하여 들어오거나 보내는 메시지를 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>에서 검사하거나 수정할 수 있습니다. 자세한 내용은 참조 [클라이언트 확장](../../../../docs/framework/wcf/extending/extending-clients.md)합니다. 서비스의 해당 기능은 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>입니다. 전체 코드 예제에 대 한 참조는 [메시지 검사자](../../../../docs/framework/wcf/samples/message-inspectors.md) 샘플.  
   
-### 메시지를 검사하거나 수정하려면  
+### <a name="to-inspect-or-modify-messages"></a>메시지를 검사하거나 수정하려면  
   
-1.  <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName> 인터페이스를 구현합니다.  
+1.  <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 인터페이스를 구현합니다.  
   
-2.  클라이언트 메시지 검사자를 삽입하려는 범위에 따라 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName> 또는 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName>를 구현합니다.  <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName>를 사용하여 끝점 수준에서 동작을 변경할 수 있습니다.  <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName>를 사용하여 계약 수준에서 동작을 변경할 수 있습니다.  
+2.  클라이언트 메시지 검사자를 삽입하려는 범위에 따라 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>를 구현합니다. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>끝점 수준에서 동작을 변경할 수 있습니다. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>계약 수준에서 동작을 변경할 수 있습니다.  
   
-3.  <xref:System.ServiceModel.ChannelFactory%601?displayProperty=fullName>에서 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=fullName> 또는 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName> 메서드를 호출하여 동작을 삽입합니다.  자세한 내용은 [동작을 사용하여 런타임 구성 및 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)를 참조하세요.  
+3.  <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>에서 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 메서드를 호출하여 동작을 삽입합니다. 자세한 내용은 참조 [구성 하 고 런타임 동작을 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 코드 예제는 아래 순서대로 나열되어 있습니다.  
   
 -   클라이언트 검사자 구현.  
@@ -57,7 +60,6 @@ public class SimpleMessageInspector : IClientMessageInspector
         return null;  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -102,10 +104,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
         return new SimpleEndpointBehavior();  
     }  
 }  
-  
 ```  
   
-```vb  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <system.serviceModel>  
@@ -132,10 +133,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
       </extensions>  
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 참고 항목  
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>   
- [동작을 사용하여 런타임 구성 및 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
+ [구성 하 고 런타임 동작을 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

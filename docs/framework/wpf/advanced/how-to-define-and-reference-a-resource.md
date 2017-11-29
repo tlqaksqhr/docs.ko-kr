@@ -1,36 +1,39 @@
 ---
-title: "방법: 리소스 정의 및 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 정의"
-  - "리소스 참조"
-  - "리소스, 정의"
-  - "리소스, 참조"
+title: "방법: 리소스 정의 및 참조"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resources [WPF], defining
+- defining resources [WPF]
+- resources [WPF], referencing
+- referencing resources [WPF]
 ms.assetid: b86b876b-0a10-489b-9a5d-581ea9b32406
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 322ac3e5ebfe2d820a4711d877396b9a1a2759a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 리소스 정의 및 참조
-이 예제에서는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]의 특성을 사용하여 리소스를 정의하고 참조하는 방법을 보여 줍니다.  
+# <a name="how-to-define-and-reference-a-resource"></a>방법: 리소스 정의 및 참조
+이 예제에서는 리소스를 정의 하 고 특성을 사용 하 여 참조 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  
   
-## 예제  
- 다음 예제에서는 두 가지 리소스 형식 즉, 한 개의 <xref:System.Windows.Media.SolidColorBrush> 리소스와 여러 개의 <xref:System.Windows.Style> 리소스를 정의합니다.  <xref:System.Windows.Media.SolidColorBrush> 리소스 `MyBrush`는 각 <xref:System.Windows.Media.Brush> 형식 값을 사용하는 여러 속성의 값을 제공하는 데 사용됩니다.  <xref:System.Windows.Style> 리소스 `PageBackground`, `TitleText` 및 `Label`은 특정 컨트롤 형식을 대상으로 합니다.  해당 스타일 리소스가 리소스 키에 의해 참조되고 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 정의된 여러 특정 컨트롤 요소의 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 설정하는 데 사용되는 경우 스타일은 대상 컨트롤에서 다양한 속성을 설정합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 두 가지 유형의 리소스를 정의:는 <xref:System.Windows.Media.SolidColorBrush> 리소스 및 여러 <xref:System.Windows.Style> 리소스입니다. <xref:System.Windows.Media.SolidColorBrush> 리소스 `MyBrush` 각각 사용 하는 몇 가지 속성의 값을 제공 하는 데 사용 되는 <xref:System.Windows.Media.Brush> 값을 입력 합니다. <xref:System.Windows.Style> 리소스 `PageBackground`, `TitleText` 및 `Label` 각각 특정 컨트롤 형식의 대상으로 합니다. 해당 스타일 리소스 리소스 키에서 참조 하 고 설정 하는 데 사용 되는 스타일은 대상된 컨트롤에서 다양 한 속성을 설정는 <xref:System.Windows.FrameworkElement.Style%2A> 속성으로 정의 된 몇 가지 특정 컨트롤 요소의 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
- 또한 `Label` 스타일의 setter 내 속성 중 하나는 앞에서 정의한 `MyBrush` 리소스를 참조합니다.  이는 일반적인 기법에 해당되지만, 리소스는 제공된 순서로 구분 분석되어 리소스 사전에 입력됨을 알아야 합니다.  또한 [StaticResource 태그 확장](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)을 사용하여 다른 리소스 내에서 리소스를 참조하는 경우 사전 내에서 발견되는 순서로 리소스가 요청됩니다.  참조하는 리소스가 리소스 컬렉션 내에서 리소스가 요청되는 위치보다 앞쪽에 정의되어 있는지 확인해야 합니다.  필요에 따라 [DynamicResource 태그 확장](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)을 사용하여 엄격한 리소스 참조의 생성 순서를 적용하여 대신 런타임에 리소스를 참조하게 만들 수 있지만 이 DynamicResource 기법은 성능과 관련되어 있습니다.  자세한 내용은 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)를 참조하십시오.  
+ setter에 메모 속성 중 하나는 `Label` 스타일도 참조는 `MyBrush` 앞에서 정의한 리소스입니다. 이 일반적인 방법 이지만 중요 리소스 구문 분석 되 고 제공 된 순서 대로 리소스 사전에 입력 합니다. 리소스 사용 하는 경우 사전 내에서 발견 되는 순서로 요청도 [StaticResource 태그 확장](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) 다른 리소스 내에서 참조 하도록 합니다. 여기서 해당 리소스가 요청 보다 리소스 컬렉션 내에서 참조 하는 모든 리소스 이전 정의 되어 있는지 확인 합니다. 경우 필요에 따라 해결할 수 있습니다 리소스 참조의 엄격한 생성 순서를 사용 하 여 한 [DynamicResource 태그 확장](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) 를 런타임 시 리소스를 대신 참조 알고 있어야 하지만 하는이 DynamicResource 기술 성능 결과가 표시 됩니다. 자세한 내용은 참조 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  
   
- [!code-xml[FEResource#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResource/CS/default.xaml#xaml)]  
+ [!code-xaml[FEResource#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResource/CS/default.xaml#xaml)]  
   
-## 참고 항목  
- [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)   
+## <a name="see-also"></a>참고 항목  
+ [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)

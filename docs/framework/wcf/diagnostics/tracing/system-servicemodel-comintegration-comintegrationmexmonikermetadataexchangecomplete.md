@@ -1,28 +1,31 @@
 ---
-title: "System.Runtime.Serialization.ReadObjectEnd | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.Runtime.Serialization.ReadObjectEnd
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c997554-a08e-4d14-8628-c92e2cf84fcb
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: aa93d4f9b0954789fa2f6a2189cef0f1b653fc38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# System.Runtime.Serialization.ReadObjectEnd
+# <a name="systemruntimeserializationreadobjectend"></a>System.Runtime.Serialization.ReadObjectEnd
 System.Runtime.Serialization.ReadObjectEnd  
   
-## 설명  
+## <a name="description"></a>설명  
  ReadObject를 완료했습니다.  
   
-## 참고 항목  
- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>참고 항목  
+ [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [추적을 사용 하 여 응용 프로그램 문제를 해결 하려면](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

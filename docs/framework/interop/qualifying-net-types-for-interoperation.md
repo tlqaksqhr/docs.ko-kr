@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - COM interop, qualifying .NET types
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68ecd5e4c562f1eecb31ee539adb70d67455a584
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6487c151f49f6084977deb600e7f93e5eb7acee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>상호 운용할 .NET 형식의 정규화
 어셈블리에서 형식을 COM 응용 프로그램으로 노출하려는 경우 디자인 타임에 COM interop의 요구 사항을 고려하세요. 다음 지침을 준수하면 관리되는 형식(클래스, 인터페이스, 구조체 및 열거형)이 COM 형식과 원활하게 통합됩니다.  
@@ -63,9 +56,8 @@ ms.lasthandoff: 08/21/2017
  COM으로 내보낼 때 관리되는 형식의 상속 계층 구조가 평면화됩니다. 관리되는 환경과 관리되지 않는 환경에서는 버전 관리도 다릅니다. COM에 노출된 형식에는 관리되는 다른 형식과 동일한 버전 관리 특성이 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
- [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [클래스 인터페이스 소개](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [Interop 특성 적용](../../../docs/framework/interop/applying-interop-attributes.md)   
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
+ [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [클래스 인터페이스 소개](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Interop 특성 적용](../../../docs/framework/interop/applying-interop-attributes.md)  
  [COM에서 사용할 어셈블리의 패키징](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-

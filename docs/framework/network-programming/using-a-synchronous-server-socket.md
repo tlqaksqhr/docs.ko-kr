@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - synchronous server sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4ecba2d6c5026a3b2f7d65540fcf40dd71ba3d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce50fa5cf8664f93753312ee5f1db2b3058c3fd9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-a-synchronous-server-socket"></a>동기 서버 소켓 사용
 동기 서버 소켓은 소켓에 연결 요청이 수신될 때까지 응용 프로그램 실행을 일시 중단합니다. 동기 서버 소켓은 네트워크를 작업에 많이 사용하는 응용 프로그램에 적합하지 않지만 간단한 네트워크 응용 프로그램에는 적합할 수 있습니다.  
@@ -88,7 +85,6 @@ handler.Close();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
- [동기 서버 소켓 예제](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
+ [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [동기 서버 소켓 예제](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
  [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)
-

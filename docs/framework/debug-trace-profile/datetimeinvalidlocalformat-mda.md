@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - dates [.NET Framework], formatting
 - invalid date time local format
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43155bb2eebfd2cd379d245715c100878fb9fb73
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3181acec440f2d01e928bb051b297fba75de1e2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 UTC(협정 세계 표준시)로 저장된 <xref:System.DateTime> 인스턴스가 로컬 <xref:System.DateTime> 인스턴스에만 사용해야 하는 형식을 사용하여 형식이 지정되면 `dateTimeInvalidLocalFormat` MDA가 활성화됩니다. 미지정 또는 기본 <xref:System.DateTime> 인스턴스의 경우 이 MDA는 활성화되지 않습니다.  
@@ -48,7 +41,7 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ```  
   
 ### <a name="cause"></a>원인  
- <xref:System.DateTime.ToString%2A?displayProperty=fullName> 메서드에 대한 ‘z’ 형식에는 로컬 표준 시간대 오프셋이 포함됩니다(예: 시드니 시간의 경우 “+10:00”). 이와 같이 <xref:System.DateTime> 값이 로컬인 경우 이 형식은 의미 있는 결과만 생성합니다. 값이 UTC 시간인 경우 <xref:System.DateTime.ToString%2A?displayProperty=fullName>에는 로컬 표준 시간대 오프셋이 포함되지만 표준 시간대 지정자를 표시하거나 조정하지 않습니다.  
+ <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> 메서드에 대한 ‘z’ 형식에는 로컬 표준 시간대 오프셋이 포함됩니다(예: 시드니 시간의 경우 “+10:00”). 이와 같이 <xref:System.DateTime> 값이 로컬인 경우 이 형식은 의미 있는 결과만 생성합니다. 값이 UTC 시간인 경우 <xref:System.DateTime.ToString%2A?displayProperty=nameWithType>에는 로컬 표준 시간대 오프셋이 포함되지만 표준 시간대 지정자를 표시하거나 조정하지 않습니다.  
   
 ### <a name="resolution"></a>해결  
  UTC <xref:System.DateTime> 인스턴스는 UTC임을 나타내는 방식으로 형식이 지정되어야 합니다. ‘Z’를 사용하여 UTC 시간을 나타내기 위한 권장 형식:  
@@ -102,6 +95,5 @@ String serialized = XmlConvert.ToString(myDateTime,
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Globalization.DateTimeFormatInfo>   
+ <xref:System.Globalization.DateTimeFormatInfo>  
  [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

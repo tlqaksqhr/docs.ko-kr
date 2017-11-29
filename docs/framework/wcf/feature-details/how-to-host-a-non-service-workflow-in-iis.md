@@ -1,45 +1,48 @@
 ---
-title: "방법: IIS에서 서비스가 아닌 워크플로 호스팅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: IIS에서 서비스가 아닌 워크플로 호스팅"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: IIS에서 서비스가 아닌 워크플로 호스팅
-워크플로 서비스가 아닌 워크플로는 IIS\/WAS에서 호스트될 수 있습니다.  이는 다른 사람이 작성한 워크플로를 호스트해야 하는 경우에 유용합니다.  Workflow Designer를 다시 호스트하고 사용자가 워크플로를 직접 만들 수 있도록 허용하는 경우를 예로 들 수 있습니다.  IIS에서 서비스가 아닌 워크플로를 호스트하면 프로세스 재활용, 유휴 상태이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화와 같은 기능이 지원됩니다.  IIS에서 호스트되는 워크플로 서비스에는 <xref:System.ServiceModel.Activities.Receive> 활동이 포함되고 IIS에서 메시지가 수신되면 서비스가 활성화됩니다.  서비스가 아닌 워크플로에는 메시징 활동이 포함되지 않으며 기본적으로 메시지 전송을 통해 활성화할 수 없습니다.  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>에서 클래스를 파생하고 워크플로 인스턴스를 만드는 작업이 포함된 서비스 계약을 정의해야 합니다.  이 항목에서는 간단한 워크플로를 만들고, 클라이언트에서 워크플로를 활성화하는 데 사용할 수 있는 서비스 계약을 정의하고, 서비스 계약을 사용하여 워크플로 만들기 요청을 수신 대기하는 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>에서 클래스를 파생하는 작업을 안내합니다.  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a>방법: IIS에서 서비스가 아닌 워크플로 호스팅
+워크플로 서비스가 아닌 워크플로는 IIS/WAS에서 호스트될 수 있습니다. 이는 다른 사람이 작성한 워크플로를 호스트해야 하는 경우에 유용합니다. Workflow Designer를 다시 호스트하고 사용자가 워크플로를 직접 만들 수 있도록 허용하는 경우를 예로 들 수 있습니다.  IIS에서 서비스가 아닌 워크플로를 호스트하면 프로세스 재활용, 유휴 상태이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화와 같은 기능이 지원됩니다. IIS에서 호스트되는 워크플로 서비스에는 <xref:System.ServiceModel.Activities.Receive> 활동이 포함되고 IIS에서 메시지가 수신되면 서비스가 활성화됩니다. 서비스가 아닌 워크플로에는 메시징 활동이 포함되지 않으며 기본적으로 메시지 전송을 통해 활성화할 수 없습니다.  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>에서 클래스를 파생하고 워크플로 인스턴스를 만드는 작업이 포함된 서비스 계약을 정의해야 합니다. 이 항목에서는 간단한 워크플로 만드는에서 워크플로 활성화 하기 위해 클라이언트가 사용할 수는 서비스 계약을 정의 및에서 클래스를 파생 하는 과정을 안내 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 워크플로 만들기 요청에 대 한 수신 하도록 서비스 계약을 사용 하 여입니다.  
   
-### 간단한 워크플로 만들기  
+### <a name="create-a-simple-workflow"></a>간단한 워크플로 만들기  
   
-1.  `CreationEndpointTest`라는 비어 있는 새 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 솔루션을 만듭니다.  
+1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]라는 비어 있는 새 `CreationEndpointTest` 솔루션을 만듭니다.  
   
-2.  `SimpleWorkflow`라는 새 WCF 워크플로 서비스 응용 프로그램 프로젝트를 솔루션에 추가합니다.  Workflow Designer가 열립니다.  
+2.  `SimpleWorkflow`라는 새 WCF 워크플로 서비스 응용 프로그램 프로젝트를 솔루션에 추가합니다. Workflow Designer가 열립니다.  
   
-3.  ReceiveRequest 및 SendResponse 활동을 삭제합니다.  이러한 활동은 워크플로를 워크플로 서비스로 만듭니다.  워크플로 서비스로 작업하는 것이 아니므로 이러한 활동이 더 이상 필요하지 않습니다.  
+3.  ReceiveRequest 및 SendResponse 활동을 삭제합니다. 이러한 활동은 워크플로를 워크플로 서비스로 만듭니다. 워크플로 서비스로 작업하는 것이 아니므로 이러한 활동이 더 이상 필요하지 않습니다.  
   
-4.  Sequence 활동의 DisplayName을 "Sequential Workflow"로 설정합니다.  
+4.  시퀀스 활동을 "Sequential Workflow" DisplayName을 설정 합니다.  
   
 5.  Service1.xamlx의 이름을 Workflow1.xamlx로 바꿉니다.  
   
-6.  디자이너에서 Sequence 활동 외부를 클릭하고 Name 및 ConfigurationName 속성을 “Workflow1”로 설정합니다.  
+6.  Sequence 활동 외부에서 디자이너를 클릭 하 고 Name 및 ConfigurationName 속성을 "workflow1"로 설정  
   
-7.  <xref:System.Activities.Statements.WriteLine> 활동을 <xref:System.Activities.Statements.Sequence>로 끌어 옵니다.  <xref:System.Activities.Statements.WriteLine> 활동은 도구 상자의 **기본 형식** 섹션에 있습니다.  <xref:System.Activities.Statements.WriteLine> 활동의 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성을 “Hello, world”로 설정합니다.  
+7.  <xref:System.Activities.Statements.WriteLine> 활동을 <xref:System.Activities.Statements.Sequence>로 끌어 옵니다. <xref:System.Activities.Statements.WriteLine> 에서 활동을 확인할 수 있습니다는 **기본 형식** 도구 상자의 섹션. 설정의 <xref:System.Activities.Statements.WriteLine.Text%2A> 의 속성은 <xref:System.Activities.Statements.WriteLine> 활동을 "Hello, world"입니다.  
   
      그러면 워크플로가 다음 다이어그램과 같이 표시됩니다.  
   
-     ![단순 워크플로](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
+     ![간단한 워크플로](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
   
-### 워크플로 생성 서비스 계약 만들기  
+### <a name="create-the-workflow-creation-service-contract"></a>워크플로 생성 서비스 계약 만들기  
   
 1.  `Shared`라는 새 클래스 라이브러리 프로젝트를 `CreationEndpointTest` 솔루션에 추가합니다.  
   
@@ -69,11 +72,11 @@ caps.handback.revision: 7
     }  
     ```  
   
-     이 계약은 두 작업을 정의합니다. 두 작업 모두 방금 만든 서비스가 아닌 워크플로의 새 인스턴스를 만듭니다.  한 작업은 생성된 인스턴스 ID를 사용하여 새 인스턴스를 만들고 다른 작업은 새 워크플로 인스턴스의 인스턴스 ID를 지정할 수 있도록 합니다.  두 방법 모두 새 워크플로 인스턴스에 매개 변수를 전달할 수 있습니다.  이 계약은 클라이언트에서 서비스가 아닌 워크플로의 새 인스턴스를 만들 수 있도록 하기 위해 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>에 의해 노출됩니다.  
+     이 계약은 두 작업을 정의합니다. 두 작업 모두 방금 만든 서비스가 아닌 워크플로의 새 인스턴스를 만듭니다. 한 작업은 생성된 인스턴스 ID를 사용하여 새 인스턴스를 만들고 다른 작업은 새 워크플로 인스턴스의 인스턴스 ID를 지정할 수 있도록 합니다.  두 방법 모두 새 워크플로 인스턴스에 매개 변수를 전달할 수 있습니다. 이 계약에서 노출 될는 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 클라이언트가 서비스가 아닌 워크플로의 새 인스턴스를 만들 수 있도록 합니다.  
   
-### WorkflowHostingEndpoint에서 클래스 파생  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a>WorkflowHostingEndpoint에서 클래스 파생  
   
-1.  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>에서 파생된 `CreationEndpoint`라는 새 클래스를 `Shared` 프로젝트에 추가합니다.  
+1.  라는 새 클래스 추가 `CreationEndpoint` 에서 파생 된 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 에 `Shared` 프로젝트.  
   
     ```  
     using System;  
@@ -92,7 +95,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-2.  `defaultBaseUri`라는 로컬 정적 <xref:System.Uri> 변수를 `CreationEndpoint` 클래스에 추가합니다.  
+2.  <xref:System.Uri>라는 로컬 정적 `defaultBaseUri` 변수를 `CreationEndpoint` 클래스에 추가합니다.  
   
     ```  
     public class CreationEndpoint : WorkflowHostingEndpoint  
@@ -101,7 +104,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-3.  `CreationEndpoint` 클래스에 다음 생성자를 추가합니다.  기본 생성자 호출에는 `IWorkflowCreation` 서비스 계약을 지정합니다.  
+3.  `CreationEndpoint` 클래스에 다음 생성자를 추가합니다. 기본 생성자 호출에는 `IWorkflowCreation` 서비스 계약을 지정합니다.  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -120,7 +123,7 @@ caps.handback.revision: 7
        }  
     ```  
   
-5.  `CreationEndpoint` 클래스에 정적 `DefaultBaseUri` 속성을 추가합니다.  이 속성은 기본적인 기본 URI가 제공되지 않은 경우 기본 URI를 저장하는 데 사용됩니다.  
+5.  `DefaultBaseUri` 클래스에 정적 `CreationEndpoint` 속성을 추가합니다. 이 속성은 기본적인 기본 URI가 제공되지 않은 경우 기본 URI를 저장하는 데 사용됩니다.  
   
     ```  
     static Uri DefaultBaseUri  
@@ -148,7 +151,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-7.  워크플로 인스턴스 ID를 반환하도록 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> 메서드를 재정의합니다.  `Action` 헤더가 “Create”로 끝나면 빈 GUID를 반환하고, `Action` 헤더가 “CreateWithInstanceId”로 끝나면 메서드에 전달된 GUID를 반환합니다.  그 외의 경우에는 <xref:System.InvalidOperationException>을 throw합니다.  이러한 `Action` 헤더는 `IWorkflowCreation` 서비스 계약에 정의된 두 작업에 해당합니다.  
+7.  워크플로 인스턴스 ID를 반환하도록 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> 메서드를 재정의합니다. 경우는 `Action` 경우 빈 GUID를 반환 하는 "만들기"로 `Action` 헤더가 "CreateWithInstanceId" 반환 메서드에 전달 된 GUID로 끝납니다. 그 외의 경우에는 <xref:System.InvalidOperationException>을 throw합니다. 이러한 `Action` 헤더는 `IWorkflowCreation` 서비스 계약에 정의된 두 작업에 해당합니다.  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -170,7 +173,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-8.  <xref:System.ServiceModel.Activities.WorkflowCreationContext>를 만들고 워크플로의 모든 인수를 추가한 다음 클라이언트에 인스턴스 ID를 보내고 <xref:System.ServiceModel.Activities.WorkflowCreationContext>를 반환하도록 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> 메서드를 재정의합니다.  
+8.  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A>를 만들고 워크플로의 모든 인수를 추가한 다음 클라이언트에 인스턴스 ID를 보내고 <xref:System.ServiceModel.Activities.WorkflowCreationContext>를 반환하도록 <xref:System.ServiceModel.Activities.WorkflowCreationContext> 메서드를 재정의합니다.  
   
     ```  
     protected override WorkflowCreationContext OnGetCreationContext(object[] inputs, OperationContext operationContext, Guid instanceId, WorkflowHostingResponseContext responseContext)  
@@ -198,11 +201,11 @@ caps.handback.revision: 7
     }  
     ```  
   
-### WorkflowCreationEndpoint를 구성할 수 있도록 표준 끝점 요소 만들기  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a>WorkflowCreationEndpoint를 구성할 수 있도록 표준 끝점 요소 만들기  
   
 1.  `CreationEndpoint` 프로젝트에서 Shared에 대한 참조를 추가합니다.  
   
-2.  <xref:System.ServiceModel.Configuration.StandardEndpointElement>에서 파생된 `CreationEndpointElement`라는 새 클래스를 `CreationEndpoint` 프로젝트에 추가합니다.  이 클래스는 web.config 파일의 `CreationEndpoint`를 나타냅니다.  
+2.  `CreationEndpointElement`에서 파생된 <xref:System.ServiceModel.Configuration.StandardEndpointElement>라는 새 클래스를 `CreationEndpoint` 프로젝트에 추가합니다. 이 클래스는 web.config 파일의 `CreationEndpoint`를 나타냅니다.  
   
     ```  
     using System;  
@@ -236,10 +239,9 @@ caps.handback.revision: 7
     {  
        return new CreationEndpoint();  
     }  
-  
     ```  
   
-5.  <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 및 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 메서드를 오버로드합니다.  이러한 메서드는 정의되어야 하며 이러한 메서드에 코드를 추가할 필요는 없습니다.  
+5.  <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 및 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 메서드를 오버로드합니다. 이러한 메서드는 정의되어야 하며 이러한 메서드에 코드를 추가할 필요는 없습니다.  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -259,7 +261,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-6.  `CreationEndpoint`의 컬렉션 클래스를 `CreationEndpoint` 프로젝트의 CreationEndpointElement.cs 파일에 추가합니다.  이 클래스는 web.config 파일에 많은 `CreationEndpoint` 인스턴스를 저장하기 위해 구성에서 사용됩니다.  
+6.  `CreationEndpoint`의 컬렉션 클래스를 `CreationEndpoint` 프로젝트의 CreationEndpointElement.cs 파일에 추가합니다. 이 클래스는 web.config 파일에 많은 `CreationEndpoint` 인스턴스를 저장하기 위해 구성에서 사용됩니다.  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -269,13 +271,13 @@ caps.handback.revision: 7
   
 7.  솔루션을 빌드합니다.  
   
-### IIS에서 워크플로 호스팅  
+### <a name="host-the-workflow-in-iis"></a>IIS에서 워크플로 호스팅  
   
 1.  IIS에서 `MyCreationEndpoint`라는 새 응용 프로그램을 만듭니다.  
   
 2.  Workflow Designer에서 생성된 workflow1.xaml 파일을 응용 프로그램 디렉터리에 복사하고 workflow1.xamlx로 이름을 바꿉니다.  
   
-3.  shared.dll 및 CreationEndpoint.dll 파일을 응용 프로그램의 bin 디렉터리에 복사합니다\(bin 디렉터리가 없는 경우 만들어야 함\).  
+3.  shared.dll 및 CreationEndpoint.dll 파일을 응용 프로그램의 bin 디렉터리에 복사합니다(bin 디렉터리가 없는 경우 만들어야 함).  
   
 4.  `CreationEndpoint` 프로젝트에서 Web.config 파일의 내용을 다음 코드로 바꿉니다.  
   
@@ -290,7 +292,7 @@ caps.handback.revision: 7
   
 5.  `<system.web>` 요소 뒤에 다음 구성 코드를 추가하여 `CreationEndpoint`를 등록합니다.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <!--register CreationEndpoint-->  
         <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />  
@@ -300,24 +302,22 @@ caps.handback.revision: 7
           </endpointExtensions>  
         </extensions>  
     </system.serviceModel>  
-  
     ```  
   
      이렇게 하면 `CreationEndpointCollection` 클래스가 등록되므로 web.config 파일에서 `CreationEndpoint`를 구성할 수 있습니다.  
   
-6.  들어오는 메시지를 수신 대기할 `CreationEndpoint`가 포함된 `<service>` 요소를 \<\/extensions\> 태그 뒤에 추가합니다.  
+6.  추가 `<service>` 요소 (후의 \</extensions > 태그)와 `CreationEndpoint` 들어오는 메시지를 수신 합니다.  
   
-    ```  
+    ```xml  
     <services>  
           <!-- add endpoint to service-->  
           <service name="Workflow1" behaviorConfiguration="basicConfig" >  
             <endpoint kind="creationEndpoint" binding="basicHttpBinding" address=""/>  
           </service>  
         </services>  
-  
     ```  
   
-7.  \<behaviors\> 요소를 \<\/services\> 태그 뒤에 추가하여 서비스 메타데이터를 사용하도록 설정합니다.  
+7.  추가 \<동작 > 요소 (후의  \< /서비스 > 태그) 서비스 메타 데이터를 사용 하도록 합니다.  
   
     ```xml  
     <behaviors>  
@@ -327,22 +327,21 @@ caps.handback.revision: 7
             </behavior>  
           </serviceBehaviors>  
         </behaviors>  
-  
     ```  
   
 8.  IIS 응용 프로그램 디렉터리에 web.config를 복사합니다.  
   
-9. Internet Explorer를 시작하고 http:\/\/localhost\/MyCreationEndpoint\/Workflow1.xamlx로 이동하여 만들기 끝점이 작동하고 있는지 확인합니다.  Internet Explorer는 다음 화면을 표시해야 합니다.  
+9. Internet Explorer를 시작하고 http://localhost/MyCreationEndpoint/Workflow1.xamlx로 이동하여 만들기 끝점이 작동하고 있는지 확인합니다. Internet Explorer는 다음 화면을 표시해야 합니다.  
   
      ![서비스 테스트](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   
-### CreationEndpoint를 호출할 클라이언트 만들기  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a>CreationEndpoint를 호출할 클라이언트 만들기  
   
 1.  새 콘솔 응용 프로그램을 `CreationEndpointTest` 솔루션에 추가합니다.  
   
 2.  System.ServiceModel.dll, System.ServiceModel.Activities 및 `Shared`에 대한 참조를 프로젝트에 추가합니다.  
   
-3.  `Main` 메서드에서 `IWorkflowCreation` 형식의 <xref:System.ServiceModel.ChannelFactory%601>를 만들고 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>을 호출합니다.  이렇게 하면 프록시가 반환됩니다.  이 프록시에서 `Create`를 호출하여 IIS에서 호스트된 워크플로 인스턴스를 만들 수 있습니다.  
+3.  에 `Main` 메서드 만들기는 <xref:System.ServiceModel.ChannelFactory%601> 형식의 `IWorkflowCreation` 호출 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>합니다. 이렇게 하면 프록시가 반환됩니다. 이 프록시에서 `Create`를 호출하여 IIS에서 호스트된 워크플로 인스턴스를 만들 수 있습니다.  
   
     ```  
     using System.Text;  
@@ -374,18 +373,16 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  CreationEndpointClient를 실행합니다.  출력은 다음과 같습니다.  
+4.  CreationEndpointClient를 실행합니다. 출력은 다음과 같습니다.  
   
     ```Output  
-  
-                Workflow Instance created using CreationEndpoint added in config.  Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693  
-    Press return to exit ...    
+    Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
     >  워크플로가 콘솔 출력이 없는 IIS에서 실행되고 있기 때문에 워크플로의 출력은 표시되지 않습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음은 이 샘플의 전체 코드입니다.  
   
 ```xaml  
@@ -430,7 +427,6 @@ caps.handback.revision: 7
     <p:WriteLine sap:VirtualizedContainerService.HintSize="211,61" Text="Hello, world" />  
   </p:Sequence>  
 </WorkflowService>  
-  
 ```  
   
 ```csharp  
@@ -488,7 +484,6 @@ namespace CreationEndpointTest
     {  
     }  
 }  
-  
 ```  
   
 ```xml  
@@ -521,7 +516,6 @@ namespace CreationEndpointTest
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ```csharp  
@@ -545,7 +539,6 @@ namespace Shared
         void CreateWithInstanceId(IDictionary<string, object> inputs, Guid instanceId);  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -649,7 +642,6 @@ namespace Shared
         }  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -686,17 +678,16 @@ namespace CreationClient
     }  
   
 }  
-  
 ```  
   
- `IWorkflowCreation`을 구현하는 서비스를 구현하지 않기 때문에 이 예제가 혼동스러울 수도 있습니다.  이는 `CreationEndpoint`가 이러한 구현 작업을 대신 수행하기 때문입니다.  
+ `IWorkflowCreation`을 구현하는 서비스를 구현하지 않기 때문에 이 예제가 혼동스러울 수도 있습니다. 이는 `CreationEndpoint`가 이러한 구현 작업을 대신 수행하기 때문입니다.  
   
-## 참고 항목  
- [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [인터넷 정보 서비스에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)   
- [인터넷 정보 서비스 호스팅을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)   
- [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)   
- [Windows Workflow 아키텍처](../../../../docs/framework/windows-workflow-foundation//architecture.md)   
- [WorkflowHostingEndpoint 다시 시작 책갈피](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)   
- [Workflow Designer 재호스팅](../../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Windows Workflow 개요](../../../../docs/framework/windows-workflow-foundation//overview.md)
+## <a name="see-also"></a>참고 항목  
+ [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [인터넷 정보 서비스에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [인터넷 정보 서비스 호스팅을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Windows 워크플로 아키텍처](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [WorkflowHostingEndpoint 다시 시작 책갈피](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [워크플로 디자이너 재호스트](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Windows 워크플로 개요](../../../../docs/framework/windows-workflow-foundation/overview.md)

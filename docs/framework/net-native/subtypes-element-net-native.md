@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e945c4c6a6b56422fc1aa228bc7a5f388406f16d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 39b46386c6861b6a8c2824a0055d4122ec0523c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltsubtypesgt-element-net-native"></a>&lt;하위 형식&gt; 요소(.NET 네이티브)
 포함 형식에서 상속된 모든 클래스에 런타임 정책을 적용합니다.  
@@ -50,9 +48,9 @@ ms.lasthandoff: 08/21/2017
 |`Browse`|반사|선택적 특성입니다. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.|  
 |`Dynamic`|반사|선택적 특성입니다. 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.|  
 |`Serialize`|Serialization|선택적 특성입니다. Newtonsoft JSON serializer 등의 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.|  
-|`DataContractSerializer`|Serialization|선택적 특성입니다. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.|  
-|`DataContractJsonSerializer`|Serialization|선택적 특성입니다. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.|  
-|`XmlSerializer`|Serialization|선택적 특성입니다. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.|  
+|`DataContractSerializer`|Serialization|선택적 특성입니다. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.|  
+|`DataContractJsonSerializer`|Serialization|선택적 특성입니다. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.|  
+|`XmlSerializer`|Serialization|선택적 특성입니다. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.|  
 |`MarshalObject`|Interop|선택적 특성입니다. Windows 런타임 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.|  
 |`MarshalDelegate`|Interop|선택적 특성입니다. 네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.|  
 |`MarshalStructure`|Interop|선택적 특성입니다. 값 형식을 네이티브 코드로 마샬링하는 정책을 제어합니다.|  
@@ -95,13 +93,12 @@ ms.lasthandoff: 08/21/2017
 </Directives>  
 ```  
   
- 이 `<Subtypes>` 지시문으로 인해 `Derived1` 메서드를 호출하여 <xref:System.Activator.CreateInstance%28System.Type%29?displayProperty=fullName> 인스턴스를 동적으로 인스턴스화하는 다음 코드는 정상적으로 실행됩니다.  여기서 블록 변수는 빈 Windows 스토어 앱의 <xref:System.Windows.Controls.TextBlock> 개체입니다.  
+ 이 `<Subtypes>` 지시문으로 인해 `Derived1` 메서드를 호출하여 <xref:System.Activator.CreateInstance%28System.Type%29?displayProperty=nameWithType> 인스턴스를 동적으로 인스턴스화하는 다음 코드는 정상적으로 실행됩니다.  여기서 블록 변수는 빈 Windows 스토어 앱의 <xref:System.Windows.Controls.TextBlock> 개체입니다.  
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
 ## <a name="see-also"></a>참고 항목  
- [\<Type> 요소](../../../docs/framework/net-native/type-element-net-native.md)   
- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [\<형식 > 요소](../../../docs/framework/net-native/type-element-net-native.md)  
+ [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-

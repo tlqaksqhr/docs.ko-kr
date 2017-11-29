@@ -1,26 +1,29 @@
 ---
-title: "방법: 구성 파일을 사용하여 서비스의 메타데이터 게시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 구성 파일을 사용하여 서비스의 메타데이터 게시"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e94fe7135d51c4e1578ca69768b6d0ba2aa6ae6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 구성 파일을 사용하여 서비스의 메타데이터 게시
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>방법: 구성 파일을 사용하여 서비스의 메타데이터 게시
 이 항목은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스의 메타데이터 게시를 보여 주는 두 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 구성 파일을 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
   
 > [!CAUTION]
->  이 항목에서는 보호되지 않은 방식으로 메타데이터를 게시하는 방법을 보여 줍니다. 즉, 모든 클라이언트가 서비스에서 메타데이터를 검색할 수 있습니다. 서비스를 안전한 방식으로 메타 데이터를 게시, 필요한 경우 참조 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)합니다.  
+>  이 항목에서는 보호되지 않은 방식으로 메타데이터를 게시하는 방법을 보여 줍니다. 즉, 모든 클라이언트가 서비스에서 메타데이터를 검색할 수 있습니다. 안전한 방식으로 메타 데이터를 게시 하려면 해당 서비스에 필요한 경우 참조 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)합니다.  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]코드에서 메타 데이터 게시 참조 [하는 방법: 서비스를 사용 하 여 코드에 대 한 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)합니다. 메타데이터를 게시하면 클라이언트에서 WS-Transfer GET 요청을 사용하는 메타데이터 또는 `?wsdl` 쿼리 문자열을 사용하는 HTTP/GET 요청을 검색할 수 있습니다. 코드가 작동 중인지 확인하려면 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 만듭니다. 편의상 다음 코드로 된 기본 자체 호스팅 서비스가 제공됩니다.  
   
@@ -95,7 +98,6 @@ namespace Metadata.Samples
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>응용 프로그램 구성 파일을 사용하여 WCF 서비스의 메타데이터를 게시하려면  
@@ -104,22 +106,15 @@ namespace Metadata.Samples
   
   
   
-2.  
-          `<behaviors>`
-          
-           요소 내에서 `<serviceBehaviors>` 요소를 추가합니다.  
+2.  `<behaviors>` 요소 내에서 `<serviceBehaviors>` 요소를 추가합니다.  
   
   
   
-3.  
-          `<behavior>`
-          
-          `name` 요소를 `<serviceBehaviors>``<behavior>` 요소에 추가하고  요소의  특성에 값을 지정합니다.  
+3.  `<behavior>``name` 요소를 `<serviceBehaviors>``<behavior>` 요소에 추가하고  요소의  특성에 값을 지정합니다.  
   
   
   
-4.  
-          `<serviceMetadata>` 요소를 `<behavior>` 요소에 추가합니다. `httpGetEnabled` 특성을 `true`로 설정하고 `policyVersion` 특성을 Policy15로 설정합니다. `httpGetEnabled`를 사용하면 서비스가 HTTP GET 요청으로 수행된 메타데이터 요청에 응답할 수 있습니다. `policyVersion`에 따라 서비스는 메타데이터를 생성할 때 WS-Policy 1.5를 준수합니다.  
+4.  `<serviceMetadata>` 요소를 `<behavior>` 요소에 추가합니다. `httpGetEnabled` 특성을 `true`로 설정하고 `policyVersion` 특성을 Policy15로 설정합니다. `httpGetEnabled`를 사용하면 서비스가 HTTP GET 요청으로 수행된 메타데이터 요청에 응답할 수 있습니다. `policyVersion`에 따라 서비스는 메타데이터를 생성할 때 WS-Policy 1.5를 준수합니다.  
   
   
   
@@ -185,7 +180,7 @@ namespace Metadata.Samples
   
 ### <a name="to-use-default-endpoints"></a>기본 끝점을 사용하려면  
   
-1.  기본 끝점을 사용 하는 서비스에서 메타 데이터를 구성 하려면 지정는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 구성에서 이전 예제와 같이 파일 하지만 끝점을 지정 하지 않습니다. 이렇게 구성하면 구성 파일이 다음과 같아집니다.  
+1.  기본 끝점을 사용하는 서비스에서 메타데이터를 구성하려면 이전 예제와 같이 구성 파일에 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>를 구성하되 끝점은 지정하지 마세요. 이렇게 구성하면 구성 파일이 다음과 같아집니다.  
   
     ```xml  
     <configuration>  
@@ -202,7 +197,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     서비스에 있기 때문에 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 와 `httpGetEnabled` 로 설정 `true`, 서비스에 사용 하도록 설정 하는 메타 데이터 게시 및 끝점이 명시적으로 추가 된 않았으므로 런타임이 기본 끝점을 추가 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]기본 끝점, 바인딩 및 동작, 참조 [단순화 된 구성](../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스를 위한 단순화 된 구성](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
+     서비스에 포함된 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>의 `httpGetEnabled`가 `true`로 설정되어 있으므로 서비스의 메타데이터 게시 기능은 사용하도록 설정되었으며, 끝점을 명시적으로 추가하지 않았으므로 런타임이 기본 끝점을 추가합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]기본 끝점, 바인딩 및 동작, 참조 [단순화 된 구성](../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 구현 및 서비스의 메타데이터를 게시하는 구성 파일을 보여 줍니다.  
@@ -277,9 +272,9 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>   
- [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)   
- [자체 호스팅](../../../../docs/framework/wcf/samples/self-host.md)   
- [메타 데이터 아키텍처 개요](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)   
- [메타 데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)   
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
+ [방법: 관리되는 응용 프로그램에서 WCF 서비스 호스트](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [자체 호스팅](../../../../docs/framework/wcf/samples/self-host.md)  
+ [메타 데이터 아키텍처 개요](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [메타 데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [방법: 코드를 사용 하 여 서비스에 대 한 메타 데이터를 게시 합니다.](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

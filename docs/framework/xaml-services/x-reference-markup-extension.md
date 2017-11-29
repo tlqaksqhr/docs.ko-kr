@@ -1,54 +1,57 @@
 ---
-title: "x:Reference Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "x:Reference markup extension [XAML Services]"
-  - "XAML [XAML Services], x:Reference Markup Extension"
-  - "Reference markup extension [XAML Services]"
+title: "x:Reference 태그 확장명"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- x:Reference markup extension [XAML Services]
+- XAML [XAML Services], x:Reference Markup Extension
+- Reference markup extension [XAML Services]
 ms.assetid: 2982e68b-d26b-4aa3-826a-34c57a9c5199
-caps.latest.revision: 8
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 06e59e7686004f8fd44473bd9572ed07a0118d1f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# x:Reference Markup Extension
-XAML 태그에 선언된 인스턴스를 참조합니다.  참조는 요소의 `x:Name`을 참조합니다.  
+# <a name="xreference-markup-extension"></a>x:Reference 태그 확장명
+XAML 태그에 선언 된 인스턴스를 참조 합니다. 요소의 참조 `x:Name`합니다.  
   
-## XAML 특성 사용  
+## <a name="xaml-attribute-usage"></a>XAML 특성 사용  
   
+```xaml  
+<object property="{x:Reference instancexName}" .../>  
 ```  
-<object property="{x:Reference instancexName}" .../>  
-```  
   
-## XAML 개체 요소 사용  
+## <a name="xaml-object-element-usage"></a>XAML 개체 요소 사용  
   
-```  
+```xaml  
 <object>  
   <object.property>  
-    <x:Reference Name="instancexName"/>  
+    <x:Reference Name="instancexName"/>  
   </object.property>  
 </object>  
 ```  
   
-## XAML 값  
+## <a name="xaml-values"></a>XAML 값  
   
 |||  
 |-|-|  
-|`instancexName`|참조되는 인스턴스의 `x:Name` 값\(또는 <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>\-식별된 속성 값\)입니다.|  
+|`instancexName`|`x:Name` 값 (또는 값의는 <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>-식별 된 속성) 참조 된 인스턴스.|  
   
-## 설명  
- `x:Reference`는 WPF 같은 특정 프레임워크에서 구현된 요소 참조 개념에 대한 XAML 언어 수준 지원을 제공합니다.  
+## <a name="remarks"></a>설명  
+ `x:Reference`WPF와 같은 특정 프레임 워크에서 구현 된 요소 참조 개념에 대 한 XAML 언어 수준 지원을 제공 합니다.  
   
-## x:참조 및 WPF  
- WPF 및 XAML 2006에서 요소 참조는 <xref:System.Windows.Data.Binding.ElementName%2A> 바인딩의 프레임워크 수준 기능으로 주소 지정됩니다.  대부분의 WPF 응용 프로그램 및 시나리오의 경우 <xref:System.Windows.Data.Binding.ElementName%2A> 바인딩을 계속 사용해야 합니다.  이 일반 지침의 예외는 데이터 바인딩을 실용적이지 못하게 만드는 데이터 컨텍스트 또는 다른 범위가 있고 태그 컴파일이 포함되지 않는 경우를 포함할 수 있습니다.  
+## <a name="xreference-and-wpf"></a>X:reference 및 WPF  
+ WPF 및 XAML 2006에서는 요소 참조의 프레임 워크 수준 기능에 의해 해결 <xref:System.Windows.Data.Binding.ElementName%2A> 바인딩. 대부분의 WPF 응용 프로그램과 시나리오에 대 한 <xref:System.Windows.Data.Binding.ElementName%2A> 바인딩을 사용 해야 합니다. 이 일반 지침에 대 한 예외 데이터 컨텍스트 또는 데이터 바인딩 불가능할 수 있는 기타 영역 지정 고려 사항 하 고 태그 컴파일에 포함 되지 않은 경우 포함할 수 있습니다.  
   
- `x:Reference`는 XAML 2009에 정의된 구문입니다.  WPF에서 XAML 2009 기능을 사용할 수 있지만 WPF 태그 컴파일되지 않은 XAML의 경우에만 가능합니다.  태그 컴파일된 XAML 및 BAML 형태의 XAML은 현재 XAML 2009 언어 키워드 및 기능을 지원하지 않습니다.
+ `x:Reference`XAML 2009에서 정의 된 구문입니다. WPF에서 XAML 2009 기능을 사용할 수 있지만 WPF 태그 컴파일된 XAML에만 사용할 수 있습니다. 태그 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 언어 키워드 및 기능을 지원하지 않습니다.

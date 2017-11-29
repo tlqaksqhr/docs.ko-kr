@@ -1,41 +1,45 @@
 ---
-title: "방법: 설치된 글꼴 열거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "예제[Windows Forms], 글꼴"
-  - "글꼴, 설치된 글꼴 열거"
+title: "방법: 설치된 글꼴 열거"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [Windows Forms], enumerating installed
+- examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bca536ed2f3e493e8d50fe8f1a0115327f1d8720
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 설치된 글꼴 열거
-<xref:System.Drawing.Text.InstalledFontCollection> 클래스는 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스에서 상속됩니다.  <xref:System.Drawing.Text.InstalledFontCollection> 개체는 컴퓨터에 설치되어 있는 글꼴을 열거하는 데 사용할 수 있습니다.  <xref:System.Drawing.Text.InstalledFontCollection> 개체의 <xref:System.Drawing.Text.FontCollection.Families%2A> 속성은 <xref:System.Drawing.FontFamily> 개체의 배열입니다.  
+# <a name="how-to-enumerate-installed-fonts"></a>방법: 설치된 글꼴 열거
+<xref:System.Drawing.Text.InstalledFontCollection> 클래스에서 상속 된 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스입니다. 사용할 수는 <xref:System.Drawing.Text.InstalledFontCollection> 컴퓨터에 설치 된 글꼴 열거 하는 개체입니다. <xref:System.Drawing.Text.FontCollection.Families%2A> 속성은 <xref:System.Drawing.Text.InstalledFontCollection> 개체의 배열이 <xref:System.Drawing.FontFamily> 개체입니다.  
   
-## 예제  
- 아래 예제에서는 시스템에 설치되어 있는 모든 글꼴 패밀리의 이름을 나열합니다.  해당 코드에서는 <xref:System.Drawing.Text.FontCollection.Families%2A> 속성에서 반환된 배열에 있는 각 <xref:System.Drawing.FontFamily> 개체의 <xref:System.Drawing.FontFamily.Name%2A> 속성을 검색하고  검색된 패밀리 이름을 연결하여 쉼표로 분리된 목록을 만듭니다.  그런 다음 <xref:System.Drawing.Graphics> 클래스의 <xref:System.Drawing.Graphics.DrawString%2A> 메서드가 쉼표로 구분된 목록을 사각형 안에 그립니다.  
+## <a name="example"></a>예제  
+ 다음 예제에는 컴퓨터에 설치 된 모든 글꼴 패밀리의 이름을 나열 합니다. 코드 검색은 <xref:System.Drawing.FontFamily.Name%2A> 각 속성 <xref:System.Drawing.FontFamily> 에서 반환 된 배열에 있는 개체는 <xref:System.Drawing.Text.FontCollection.Families%2A> 속성입니다. 패밀리 이름을 검색 하는 쉼표로 구분 된 형식 목록에 연결 합니다. 그런 다음 <xref:System.Drawing.Graphics.DrawString%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스 사각형에 쉼표로 구분 된 목록을 그립니다.  
   
- 예제 코드를 실행하면 다음 그림과 비슷한 결과가 나타납니다.  
+ 예제 코드를 실행 하는 경우 출력 다음 그림에 표시 된 것과 비슷한 됩니다.  
   
- ![설치된 글꼴](../../../../docs/framework/winforms/advanced/media/csfontstext6.png "csfontstext6")  
+ ![설치 된 글꼴](../../../../docs/framework/winforms/advanced/media/csfontstext6.png "csfontstext6")  
   
  [!code-csharp[System.Drawing.FontsAndText#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.FontsAndText#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#11)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  또한 <xref:System.Drawing.Text> 네임스페이스를 가져와야 합니다.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. 또한 가져오는 것이 고 <xref:System.Drawing.Text> 네임 스페이스입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [글꼴 및 텍스트 사용](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

@@ -1,49 +1,53 @@
 ---
-title: "방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "예제[Windows Forms], LinkLabel 컨트롤"
-  - "링크, 다른 폼에 적용"
-  - "LinkLabel 컨트롤[Windows Forms], 예제"
-  - "LinkLabel 컨트롤[Windows Forms], 개체 또는 웹 페이지에 연결"
-  - "링크, 다른 폼에 적용"
-  - "웹 페이지 링크 컨트롤"
-  - "Windows Forms, 개체에 연결"
-  - "Windows Forms, 웹 페이지에 연결"
+title: "방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], LinkLabel control
+- Windows Forms, linking to objects
+- Web page link control
+- linking [Windows Forms], to other forms
+- Windows Forms, linking to Web pages
+- links [Windows Forms], to other forms
+- LinkLabel control [Windows Forms], linking to object or Web page
+- LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 04566d96fe9031821b904df3bf9ec93244b62cfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결
-Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용하면 폼에서 웹 스타일 링크를 만들 수 있습니다.  링크를 클릭하면 링크 색이 바뀌도록 설정하여 해당 링크를 방문했음을 나타낼 수 있습니다.  색 변경에 대한 자세한 내용은 [방법: Windows Forms LinkLabel 컨트롤의 모양 변경](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)을 참조하십시오.  
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결
+Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤 폼에서 웹 스타일 링크를 만들 수 있습니다. 링크를 클릭할 때 링크를 방문한 나타내는 색을 변경할 수 있습니다. 색 변경에 대 한 자세한 내용은 참조 하십시오. [하는 방법: Windows Forms LinkLabel 컨트롤의 모양을 변경](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)합니다.  
   
-## 다른 폼에 링크  
+## <a name="linking-to-another-form"></a>다른 폼에 링크  
   
-#### LinkLabel 컨트롤을 사용하여 다른 폼에 링크하려면  
+#### <a name="to-link-to-another-form-with-a-linklabel-control"></a>LinkLabel 컨트롤에 다른 폼에 연결 하려면  
   
-1.  <xref:System.Windows.Forms.LinkLabel.Text%2A> 속성을 적절한 캡션으로 설정합니다.  
+1.  설정의 <xref:System.Windows.Forms.LinkLabel.Text%2A> 속성을 적절 한 캡션입니다.  
   
-2.  캡션에서 링크로 나타낼 부분을 결정하는 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 설정합니다.  표시되는 형태는 링크 레이블의 모양과 관련된 속성에 따라 달라집니다.  <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 값은 문자 시작 위치와 문자 수를 나타내는 두 개의 숫자를 포함하는 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 개체로 표시됩니다.  속성 창이나 다음과 같은 방법으로 코드에서 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 설정할 수 있습니다.  
+2.  설정의 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 어느 부분이 캡션 링크로 표시 됩니다. 표시 되는 링크 레이블 모양 관련 속성에 따라 달라 집니다. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 값으로 표시 됩니다는 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 두 숫자, 시작 문자 위치와 문자 수가 들어 있는 개체입니다. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 또는 다음과 유사한 방식으로 코드를 속성 창에서 속성을 설정할 수 있습니다.  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
     ' at the first character and extend for eight characters.  
     ' You may need to modify this based on the text entered in Step 1.  
     LinkLabel1.LinkArea = New LinkArea(0, 8)  
-  
     ```  
   
     ```csharp  
@@ -51,7 +55,6 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용하면 �
     // at the first character and extend for eight characters.  
     // You may need to modify this based on the text entered in Step 1.  
     linkLabel1.LinkArea = new LinkArea(0,8);  
-  
     ```  
   
     ```cpp  
@@ -61,10 +64,10 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용하면 �
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  <xref:System.Windows.Forms.LinkLabel.LinkClicked> 이벤트 처리기에서 <xref:System.Windows.Forms.Form.Show%2A> 메서드를 호출하여 프로젝트에서 다른 폼을 열고 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true`로 설정합니다.  
+3.  에 <xref:System.Windows.Forms.LinkLabel.LinkClicked> 이벤트 처리기 호출의 <xref:System.Windows.Forms.Form.Show%2A> 다른 폼에서 프로젝트를 열고 설정 하는 메서드는 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true`합니다.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> 클래스의 인스턴스는 클릭된 <xref:System.Windows.Forms.LinkLabel> 컨트롤에 대한 참조를 포함하기 때문에`sender` 개체를 캐스팅할 필요가 없습니다.  
+    >  인스턴스는 <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> 클래스에 대 한 참조를 전달는 <xref:System.Windows.Forms.LinkLabel> 캐스팅할 필요가 없습니다 이므로 클릭 된 컨트롤의 `sender` 개체입니다.  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -75,7 +78,6 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용하면 �
        f2.Show  
        LinkLabel1.LinkVisited = True  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -86,7 +88,6 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용하면 �
        f2.Show();  
        linkLabel1.LinkVisited = true;  
     }  
-  
     ```  
   
     ```cpp  
@@ -101,19 +102,19 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용하면 �
        }  
     ```  
   
-## 웹 페이지에 링크  
- <xref:System.Windows.Forms.LinkLabel> 컨트롤은 기본 브라우저로 웹 페이지를 표시하는 데 사용할 수도 있습니다.  
+## <a name="linking-to-a-web-page"></a>웹 페이지에 연결  
+ <xref:System.Windows.Forms.LinkLabel> 컨트롤 기본 브라우저와 웹 페이지를 표시 하려면 사용할 수도 있습니다.  
   
-#### LinkLabel 컨트롤을 사용하여 Internet Explorer를 시작하고 웹 페이지에 링크하려면  
+#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>LinkLabel 컨트롤을 Internet Explorer와 웹 페이지 링크를 시작 하려면  
   
-1.  <xref:System.Windows.Forms.LinkLabel.Text%2A> 속성을 적절한 캡션으로 설정합니다.  
+1.  설정의 <xref:System.Windows.Forms.LinkLabel.Text%2A> 속성을 적절 한 캡션입니다.  
   
-2.  캡션에서 링크로 나타낼 부분을 결정하는 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 설정합니다.  
+2.  설정의 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 어느 부분이 캡션 링크로 표시 됩니다.  
   
-3.  <xref:System.Windows.Forms.LinkLabel.LinkClicked> 이벤트 처리기에 있는 예외 처리 블록의 가운데에서 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true`로 설정하는 두 번째 프로시저를 호출하고 <xref:System.Diagnostics.Process.Start%2A> 메서드를 사용하여 임의의 URL로 기본 브라우저를 시작합니다.  <xref:System.Diagnostics.Process.Start%2A> 메서드를 사용하려면 <xref:System.Diagnostics?displayProperty=fullName> 네임스페이스에 대한 참조를 추가해야 합니다.  
+3.  <xref:System.Windows.Forms.LinkLabel.LinkClicked> 예외 처리 블록을 가운데 이벤트 처리기 호출을 설정 하는 두 번째 절차는 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true` 사용 하 여는 <xref:System.Diagnostics.Process.Start%2A> 메서드를 URL로 기본 브라우저를 시작 합니다. 사용 하는 <xref:System.Diagnostics.Process.Start%2A> 에 대 한 참조를 추가 해야 하는 메서드는 <xref:System.Diagnostics?displayProperty=nameWithType> 네임 스페이스입니다.  
   
     > [!IMPORTANT]
-    >  다음 코드를 공유 드라이브와 같은 부분 신뢰 환경에서 실행하면 `VisitLink` 메서드를 호출할 때 JIT 컴파일러가 실패합니다.  `System.Diagnostics.Process.Start` 문에서 링크 요청이 발생하고 이 요청은 실패합니다.  다음 코드처럼 `VisitLink` 메서드를 호출할 때 예외를 catch하면 JIT 컴파일러가 실패하는 경우 오류가 제대로 처리됩니다.  
+    >  아래 코드는 부분 신뢰 환경에서 실행 된 경우 (같은 공유 드라이브에 있음) 때 JIT 컴파일러가 실패는 `VisitLink` 메서드를 호출 합니다. `System.Diagnostics.Process.Start` 문을 실행 하면 실패 하는 링크 요청 합니다. 예외를 catch 하 여 때는 `VisitLink` 메서드가 호출 되 면 아래 코드에서 JIT 컴파일러에 오류가 발생 하면 오류는 처리 되도록 적절 하 게 합니다.  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -135,7 +136,6 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용하면 �
        ' with a URL:  
        System.Diagnostics.Process.Start("http://www.microsoft.com")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -160,7 +160,6 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용하면 �
        //with a URL:  
        System.Diagnostics.Process.Start("http://www.microsoft.com");  
     }  
-  
     ```  
   
     ```cpp  
@@ -189,8 +188,8 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용하면 �
        }  
     ```  
   
-## 참고 항목  
- <xref:System.Diagnostics.Process.Start%2A?displayProperty=fullName>   
- [LinkLabel 컨트롤 개요](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)   
- [방법: Windows Forms LinkLabel 컨트롤의 모양 변경](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>  
+ [LinkLabel 컨트롤 개요](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
+ [방법: Windows Forms LinkLabel 컨트롤의 모양 변경](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
  [LinkLabel 컨트롤](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

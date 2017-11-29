@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4ad3bae4c949f0b893b76164a671a3f44fa30a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 642a81b926262fb8ea95234d90e4c1a0c49ea96c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet, DataTable 및 DataView
 ADO.NET <xref:System.Data.DataSet>은 포함된 데이터 소스에 관계없이 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. <xref:System.Data.DataSet>은 데이터를 포함하고 제약하며 데이터의 순서를 지정하는 테이블과 각 테이블 간의 관계를 포함하는 데이터의 완전한 집합을 나타냅니다.  
@@ -91,6 +89,5 @@ ADO.NET <xref:System.Data.DataSet>은 포함된 데이터 소스에 관계없이
  데이터 원본의 기본 키 정보로 **데이터 집합**을 채우는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)   
+ [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
-

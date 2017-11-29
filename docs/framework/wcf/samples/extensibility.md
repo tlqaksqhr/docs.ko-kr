@@ -1,25 +1,28 @@
 ---
-title: "확장성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "확장성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ff52165ca4ff79d652eb1cd509bcd6898005650b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 확장성
+# <a name="extensibility"></a>확장성
 이 단원에는 사용자 지정 확장성 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 다른 기능을 처리하는 샘플이 포함되어 있습니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [채널 확장성](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  사용자 지정 채널을 보여 줍니다.  
   
@@ -35,7 +38,7 @@ caps.handback.revision: 6
  [메시지 인코더 확장성](../../../../docs/framework/wcf/samples/message-encoder-extensibility.md)  
  사용자 지정 메시지 인코딩을 보여 줍니다.  
   
- [메타데이터 확장성](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
+ [메타 데이터 확장성](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
  사용자 지정 메타데이터를 보여 줍니다.  
   
  [보안 확장성](../../../../docs/framework/wcf/samples/security-extensibility.md)  
@@ -62,7 +65,7 @@ caps.handback.revision: 6
  [DataContract 서로게이트](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  데이터 계약 서로게이트 클래스를 사용하여 serialization, deserialization, 스키마 내보내기 및 스키마 가져오기 등의 프로세스를 사용자 지정하는 방법을 보여 줍니다.  
   
- [오류 처리 및 오류 보고에 대한 확장 제어](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [오류 처리 및 보고에 대 한 제어 확장](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 사용하여 오류 처리 및 오류 보고에 대한 제어를 확장하는 방법을 보여 줍니다.  
   
  [메시지 검사자](../../../../docs/framework/wcf/samples/message-inspectors.md)  

@@ -1,39 +1,39 @@
 ---
-title: "지침 및 최선의 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "최선의 방법 [WCF], 응용 프로그램 디자인"
-  - "WCF, 최선의 방법"
-  - "WCF, 지침"
-  - "Windows Communication Foundation, 최선의 방법"
-  - "Windows Communication Foundation, 지침"
+title: "지침 및 최선의 구현 방법"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF, guidelines
+- best practices [WCF], application design
+- Windows Communication Foundation, best practices
+- WCF, best practices
+- Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8e2d4bb918946d618aa9253f2c1e27a4566d3d6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 지침 및 최선의 방법
+# <a name="guidelines-and-best-practices"></a>지침 및 최선의 구현 방법
 이 단원의 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만들기 위한 지침을 제공합니다.  
   
-## 단원 내용  
- [최선의 방법: 데이터 계약 버전 관리](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [모범 사례: 데이터 계약 버전 관리](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  다음 버전 생성 시 손상되지 않는 데이터 계약을 만드는 방법 및 시점에 대해 설명합니다.  
   
  [서비스 버전 관리](../../../docs/framework/wcf/service-versioning.md)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 버전 관리를 고려하는 방법에 대해 설명합니다.예를 들어, 배포 후 서비스\(및 노출된 끝점\)를 비즈니스 요구 사항 또는 IT 요구 사항 변경을 충족하거나 문제를 해결하기 위해 변경할 수 있습니다.각 변경 작업에는 새 버전의 서비스가 도입됩니다.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]의 버전 관리를 고려하는 방법에 대해 설명합니다. 예를 들어, 배포 후 서비스(및 노출된 끝점)를 비즈니스 요구 사항 또는 IT 요구 사항 변경을 충족하거나 문제를 해결하기 위해 변경할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다.  
   
  [부하 분산](../../../docs/framework/wcf/load-balancing.md)  
  웹 팜에서 부하 분산을 위한 지침을 보여 줍니다.  
@@ -44,18 +44,18 @@ caps.handback.revision: 18
  [ClickOnce를 사용하여 WCF 응용 프로그램 배포](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
  ClickOnce 기능 사용 시 고려할 사항에 대해 설명합니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization>  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [개념적 개요](../../../docs/framework/wcf/conceptual-overview.md)  
   
  [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## 참고 항목  
- [Windows Communication Foundation 정의](../../../docs/framework/wcf/whats-wcf.md)   
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/ko-kr/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)   
- [개념적 개요](../../../docs/framework/wcf/conceptual-overview.md)   
+## <a name="see-also"></a>참고 항목  
+ [Windows Communication Foundation 정의](../../../docs/framework/wcf/whats-wcf.md)  
+ [Windows Communication Foundation 샘플](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [개념적 개요](../../../docs/framework/wcf/conceptual-overview.md)  
  [클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)

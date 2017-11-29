@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-identity-model"></a>클레임 기반 ID 모델
 클레임 인식 응용 프로그램을 작성할 때 사용자 ID가 클레임 집합으로 응용 프로그램에 표시됩니다. 클레임 중 하나는 사용자 이름이고, 다른 하나는 전자 메일 주소일 수 있습니다. 외부 ID 시스템은 수신하는 ID 데이터가 신뢰할 수 있는 출처에서 제공되는 암호화 보증과 함께 각각의 요청을 작성한 사용자에 대해 파악하기 위해 필요한 모든 사항을 응용 프로그램에 제공하도록 구성됩니다.  
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/21/2017
 3.  IP가 브라우저에 반환되는 토큰을 발급합니다.  
   
 4.  이제 브라우저가 원래 요청된 페이지로 다시 리디렉션되며, 이 페이지에서 WIF가 토큰이 페이지 전반의 요구 사항을 만족하는지 판별합니다. 이 경우 한 번만 인증하면 되도록 세션을 설정하기 위해 쿠키가 발급되고, 응용 프로그램에 제어가 전달됩니다.
-

@@ -1,46 +1,27 @@
 ---
 title: "키워드(Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - reserved keywords, Visual Basic
 - keywords [Visual Basic]
-- Members, Visual Basic run-time
+- Members [Visual Basic], Visual Basic run-time
 - Visual Basic code, keywords
 - Visual Basic, language reference
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 7ee4d12659dd6da8c5290134c48d280692a496f4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
 다음 표에는 모든 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 키워드가 나와 있습니다.  
@@ -145,4 +126,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
-

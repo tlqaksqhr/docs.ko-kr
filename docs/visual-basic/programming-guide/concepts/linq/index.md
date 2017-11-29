@@ -1,31 +1,22 @@
 ---
 title: LINQ(Language-Integrated Query)(Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eca96e5d9be109bf5b8a9eff1bdf289b5b16ac06
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 4c465d18ec8b728b9b06d3de70e55b1275d1a565
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>LINQ(Language-Integrated Query)(Visual Basic)
 LINQ는 강력한 쿼리 기능을 Visual Basic 언어 구문으로 확장하는 기능 집합입니다. LINQ는 데이터 쿼리 및 업데이트를 위해 쉽게 배울 수 있는 표준 패턴을 제공하며 모든 종류의 데이터 저장소를 지원하도록 이 기술을 확장할 수 있습니다.  .NET Framework에는 .NET Framework 컬렉션, SQL Server 데이터베이스, ADO.NET 데이터 집합 및 XML 문서와 함께 LINQ를 사용할 수 있게 해주는 LINQ 공급자 어셈블리가 포함됩니다.  
@@ -54,4 +45,3 @@ LINQ는 강력한 쿼리 기능을 Visual Basic 언어 구문으로 확장하는
   
  [LINQ 쿼리에 대한 데이터 원본 활성화](../../../../visual-basic/programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying.md)  
  사용자 지정 LINQ 공급자와 LINQ 식 트리를 소개하고 LINQ를 확장하는 기타 방법을 소개합니다.
-

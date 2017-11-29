@@ -1,45 +1,43 @@
 ---
-title: "Out of memory (Visual Basic Compiler Error) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc2004"
-  - "bc2004"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC2004"
+title: "메모리가 부족합니다(Visual Basic 컴파일러 오류)."
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc2004
+- bc2004
+helpviewer_keywords: BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d6cf270002eac63badd8ceff28c4b8b57af0ab
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Out of memory (Visual Basic Compiler Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-사용 가능한 메모리 이상의 메모리가 필요합니다.  
+# <a name="out-of-memory-visual-basic-compiler-error"></a>메모리가 부족합니다(Visual Basic 컴파일러 오류).
+사용 가능한 것보다 더 많은 메모리가 필요했습니다.  
   
  **오류 ID:** BC2004  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   불필요한 응용 프로그램, 문서 및 소스 파일을 닫습니다.  
+-   불필요 한 응용 프로그램, 문서 및 소스 파일을 닫습니다.  
   
--   불필요한 컨트롤과 폼을 제거하여 한꺼번에 로드되는 항목의 개수를 줄입니다.  
+-   불필요 한 컨트롤을 제거 하 고 forms 수를 줄이는 것은 한 번에 로드  
   
--   `Public` 변수의 개수를 줄입니다.  
+-   수를 줄일 `Public` 변수입니다.  
   
--   사용 가능한 디스크 공간을 확인하십시오.  
+-   사용 가능한 디스크 공간을 확인 합니다.  
   
--   추가 메모리를 설치하거나 메모리를 다시 할당하여 사용 가능한 RAM을 늘립니다.  
+-   추가 메모리를 설치 하거나 메모리를 다시 할당 하 여 사용 가능한 RAM을 늘립니다.  
   
--   더 이상 필요 없는 메모리가 해제되도록 합니다.  
+-   확인 더 이상 필요 없는 경우 해당 메모리가 해제 됩니다.  
   
-## 참고 항목  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>참고 항목  
+ [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)

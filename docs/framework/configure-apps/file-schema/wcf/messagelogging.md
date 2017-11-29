@@ -1,32 +1,34 @@
 ---
-title: "&lt;messageLogging&gt;&lt;/messageLogging&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;메시지 로깅&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e5b232e3faf1e0e8976b0c08264c8ba03988902a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;messageLogging&gt;&lt;/messageLogging&gt;
+# <a name="ltmessagelogginggt"></a>&lt;메시지 로깅&gt;
 이 요소는 WCF(Windows Communication Foundation)의 메시지 로깅 기능 설정을 정의합니다.  
   
- \<system.ServiceModel>  
-<>\>  
-<>\>  
+ \<시스템입니다. ServiceModel >  
+\<진단 >  
+\<메시지 로깅 >  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```xml  
 <system.serviceModel>  
    <diagnostics>  
        <messageLogging logEntireMessage="Boolean"  
@@ -70,13 +72,13 @@ caps.handback.revision: 16
 |진단|관리자의 런타임 검사 및 제어를 위한 WCF 설정을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
- 메시지는 스택에서 서비스, 전송 및 잘못된 형식의&3;가지 다른 수준에서 로깅됩니다. 각 수준은 별도로 활성화될 수 있습니다.  
+ 메시지는 스택에서 서비스, 전송 및 잘못된 형식의 3가지 다른 수준에서 로깅됩니다. 각 수준은 별도로 활성화될 수 있습니다.  
   
  XPath 필터를 추가하여 전송 및 서비스 수준에서 특정 메시지를 로깅할 수 있습니다. 정의된 필터가 없으면 모든 메시지가 로깅됩니다. 필터는 메시지의 헤더에만 적용됩니다. 본문은 무시됩니다. WCF는 성능 향상을 위해 메시지 본문을 무시합니다. 본문의 내용을 기반으로 필터링하려면 해당 작업을 수행하는 필터를 갖춘 사용자 지정 수신기를 만듭니다.  
   
- 메시지 추적을 활성화하려면 추적 수신기를 만들어야 합니다. 수신기를 사용 하는 모든 수신기 수는 <xref:System.Diagnostics> 추적 아키텍처입니다. 다음 예에서는 이러한 수신기를 만드는 방법을 보여 줍니다.  
+ 메시지 추적을 활성화하려면 추적 수신기를 만들어야 합니다. 수신기는 <xref:System.Diagnostics> 추적 아키텍처에서 작동하는 수신기일 수 있습니다. 다음 예에서는 이러한 수신기를 만드는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <system.diagnostics>  
     <sources>  
           <source name="System.ServiceModel" switchValue="Verbose">  
@@ -111,7 +113,7 @@ caps.handback.revision: 16
   
 ## <a name="example"></a>예제  
   
-```  
+```xml  
 <messageLogging logEntireMessage="true"  
     logMalformedMessages="true"  
     logMessagesAtServiceLevel="true"  
@@ -125,8 +127,8 @@ caps.handback.revision: 16
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
- <xref:System.ServiceModel.Diagnostics>   
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>   
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>   
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
+ <xref:System.ServiceModel.Diagnostics>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
+ <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
  [메시지 로깅 구성](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)

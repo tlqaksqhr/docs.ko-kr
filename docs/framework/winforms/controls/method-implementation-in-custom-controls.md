@@ -1,30 +1,34 @@
 ---
-title: "사용자 지정 컨트롤에서 메서드 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "사용자 정의 컨트롤 [Windows Forms] 메서드 구현"
-  - "메서드를 오버 로드할 사용자 지정 컨트롤 [Windows Forms]"
-  - "메서드 구현 사용자 지정 컨트롤 [Windows Forms]"
-  - "메서드[Windows Forms]"
-  - "사용자 지정 컨트롤 [Windows Forms] 메서드"
+title: "사용자 지정 컨트롤에서 메서드 구현"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- user controls [Windows Forms], method implementation
+- custom controls [Windows Forms], overloading methods
+- custom controls [Windows Forms], method implementation
+- methods [Windows Forms]
+- methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c992197b653fb3999870247a3a4cdb4015612ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 사용자 지정 컨트롤에서 메서드 구현
+# <a name="method-implementation-in-custom-controls"></a>사용자 지정 컨트롤에서 메서드 구현
 메서드는 다른 구성 요소에서 구현되는 것과 같은 방식으로 컨트롤에서 구현됩니다.  
   
  Visual Basic에서 값을 반환해야 하는 메서드는 `Public Function`으로 구현됩니다. 값이 반환되지 않는 경우 메서드는 `Public Sub`로 구현됩니다. 메서드는 다음 구문을 사용하여 선언됩니다.  
@@ -82,5 +86,5 @@ public void Spin(Widget driver)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [이벤트](../../../../docs/standard/events/index.md)   
+ [이벤트](../../../../docs/standard/events/index.md)  
  [Windows Forms 컨트롤의 속성](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

@@ -1,26 +1,22 @@
 ---
-title: "지연 실행 예제 (Visual Basic) | Microsoft 문서"
+title: "지연된 실행 예제 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff3d6988ce826fea0aee1987a7c546f5c863e71d
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: a4d2146901d9282b0df706b483afef79f714f660
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deferred-execution-example-visual-basic"></a>지연된 실행 예제 (Visual Basic)
 이 항목에서는 지연된 실행과 지연 계산이 LINQ to XML 쿼리의 실행에 미치는 영향을 보여 줍니다.  

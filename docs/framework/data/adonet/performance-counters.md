@@ -1,52 +1,58 @@
 ---
-title: "성능 카운터(ADO.NET) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "성능 카운터(ADO.NET)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 18403ac8237b1e129ec07e0271ff75194d944855
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 성능 카운터(ADO.NET)
-ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient>를 모두 지원하는 성능 카운터에 대한 확장된 지원이 추가되었습니다.  이전 버전의 ADO.NET에서 사용 가능한 <xref:System.Data.SqlClient> 성능 카운터는 더 이상 사용되지 않는 대신 이 항목에 설명할 새 성능 카운터로 대체되었습니다.  ADO.NET 성능 카운터를 사용하여 응용 프로그램 상태와 응용 프로그램에서 사용하는 연결 리소스를 모니터링할 수 있습니다.  성능 카운터는 Windows 성능 카운터를 사용하여 모니터링하거나 <xref:System.Diagnostics> 네임스페이스의 <xref:System.Diagnostics.PerformanceCounter> 클래스를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.  
+# <a name="performance-counters-in-adonet"></a>성능 카운터(ADO.NET)
+ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient>를 모두 지원하는 성능 카운터에 대한 확장된 지원이 추가되었습니다. 이전 버전의 ADO.NET에서 사용 가능한 <xref:System.Data.SqlClient> 성능 카운터는 더 이상 사용되지 않는 대신 이 항목에 설명할 새 성능 카운터로 대체되었습니다. ADO.NET 성능 카운터를 사용하여 응용 프로그램 상태와 응용 프로그램에서 사용하는 연결 리소스를 모니터링할 수 있습니다. 성능 카운터는 Windows 성능 카운터를 사용하여 모니터링하거나 <xref:System.Diagnostics.PerformanceCounter> 네임스페이스의 <xref:System.Diagnostics> 클래스를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.  
   
-## 사용 가능한 성능 카운터  
- <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient> 에서 사용 가능한 성능 카운터는 현재 14가지가 있으며 다음 표에 설명되어 있습니다.  개별 카운터 이름은 Microsoft .NET Framework의 국가별 버전에서 지역화되어 있지 않습니다.  
+## <a name="available-performance-counters"></a>사용 가능한 성능 카운터  
+ <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient> 에서 사용 가능한 성능 카운터는 현재 14가지가 있으며 다음 표에 설명되어 있습니다. 개별 카운터 이름은 Microsoft .NET Framework의 국가별 버전에서 지역화되어 있지 않습니다.  
   
 |성능 카운터|설명|  
-|------------|--------|  
+|-------------------------|-----------------|  
 |`HardConnectsPerSecond`|데이터베이스 서버에 대한 초당 연결 수입니다.|  
 |`HardDisconnectsPerSecond`|데이터베이스 서버에 대한 초당 끊긴 연결 수입니다.|  
-|`NumberOfActiveConnectionPoolGroups`|활성화되어 있는 고유 연결 풀 그룹 수입니다.  이 카운터는 AppDomain에 있는 고유 연결 문자열 수에 의해 제어됩니다.|  
+|`NumberOfActiveConnectionPoolGroups`|활성화되어 있는 고유 연결 풀 그룹 수입니다. 이 카운터는 AppDomain에 있는 고유 연결 문자열 수에 의해 제어됩니다.|  
 |`NumberOfActiveConnectionPools`|연결 풀의 총 수입니다.|  
-|`NumberOfActiveConnections`|현재 사용 중인 활성 연결 수입니다. **Note:**  이 성능 카운터는 기본적으로 활성화되지 않습니다.  이 성능 카운터를 활성화하려면 [기본적으로 활성화되지 않은 카운터 활성화](#ActivatingOffByDefault)를 참조하세요.|  
-|`NumberOfFreeConnections`|연결 풀에서 사용할 수 있는 연결 수입니다. **Note:**  이 성능 카운터는 기본적으로 활성화되지 않습니다.  이 성능 카운터를 활성화하려면 [기본적으로 활성화되지 않은 카운터 활성화](#ActivatingOffByDefault)를 참조하세요.|  
-|`NumberOfInactiveConnectionPoolGroups`|정리하기로 표시된 고유 연결 풀 그룹 수입니다.  이 카운터는 AppDomain에 있는 고유 연결 문자열 수에 의해 제어됩니다.|  
+|`NumberOfActiveConnections`|현재 사용 중인 활성 연결 수입니다. **참고:** 이 성능 카운터는 기본적으로 활성화 되지 않습니다. 이 성능 카운터를 사용 하려면 참조 [활성화 되지 않은 카운터 오프 기본적으로](#ActivatingOffByDefault)합니다.|  
+|`NumberOfFreeConnections`|연결 풀에서 사용할 수 있는 연결 수입니다. **참고:** 이 성능 카운터는 기본적으로 활성화 되지 않습니다. 이 성능 카운터를 사용 하려면 참조 [활성화 되지 않은 카운터 오프 기본적으로](#ActivatingOffByDefault)합니다.|  
+|`NumberOfInactiveConnectionPoolGroups`|정리하기로 표시된 고유 연결 풀 그룹 수입니다. 이 카운터는 AppDomain에 있는 고유 연결 문자열 수에 의해 제어됩니다.|  
 |`NumberOfInactiveConnectionPools`|최근 활성화되지 않았고 삭제 대기 중인 비활성 연결 풀 수입니다.|  
 |`NumberOfNonPooledConnections`|풀링되지 않은 활성 연결 수입니다.|  
 |`NumberOfPooledConnections`|연결 풀링 인프라에서 관리되는 활성 연결 수입니다.|  
-|`NumberOfReclaimedConnections`|응용 프로그램에서 `Close` 또는 `Dispose`를 호출하지 않은 가비지 수집에서 회수된 연결 수입니다.  연결을 명시적으로 닫거나 삭제하는 것이 성능을 항상 저하시키는 것은 아닙니다.|  
+|`NumberOfReclaimedConnections`|응용 프로그램에서 `Close` 또는 `Dispose`를 호출하지 않은 가비지 수집에서 회수된 연결 수입니다. 연결을 명시적으로 닫거나 삭제하는 것이 성능을 항상 저하시키는 것은 아닙니다.|  
 |`NumberOfStasisConnections`|현재 작업 완료 대기 중이어서 사용자 응용 프로그램에서 사용할 수 없는 연결 수입니다.|  
-|`SoftConnectsPerSecond`|연결 풀에서 풀링되는 활성 연결 수입니다. **Note:**  이 성능 카운터는 기본적으로 활성화되지 않습니다.  이 성능 카운터를 활성화하려면 [기본적으로 활성화되지 않은 카운터 활성화](#ActivatingOffByDefault)를 참조하세요.|  
-|`SoftDisconnectsPerSecond`|연결 풀로 반환되는 활성 연결 수입니다. **Note:**  이 성능 카운터는 기본적으로 활성화되지 않습니다.  이 성능 카운터를 활성화하려면 [기본적으로 활성화되지 않은 카운터 활성화](#ActivatingOffByDefault)를 참조하세요.|  
+|`SoftConnectsPerSecond`|연결 풀에서 끌어온 활성 연결 수입니다. **참고:** 이 성능 카운터는 기본적으로 활성화 되지 않습니다. 이 성능 카운터를 사용 하려면 참조 [활성화 되지 않은 카운터 오프 기본적으로](#ActivatingOffByDefault)합니다.|  
+|`SoftDisconnectsPerSecond`|연결 풀로 반환되는 활성 연결 수입니다. **참고:** 이 성능 카운터는 기본적으로 활성화 되지 않습니다. 이 성능 카운터를 사용 하려면 참조 [활성화 되지 않은 카운터 오프 기본적으로](#ActivatingOffByDefault)합니다.|  
   
-### 연결 풀 그룹 및 연결 풀  
- Windows 인증\(통합 보안\)을 사용할 때 `NumberOfActiveConnectionPoolGroups` 및 `NumberOfActiveConnectionPools` 성능 카운터를 모두 모니터링해야 합니다.  이와 같이 해야 하는 이유는 연결 풀 그룹은 고유 연결 문자열에 매핑되기 때문입니다.  통합 보안이 사용되면 연결 풀이 연결 문자열에 매핑되며 개별 Windows ID에 대한 별도의 풀이 추가적으로 만들어집니다.  예를 들어, 동일한 AppDomain 내에서 Fred와 Julie가 모두 연결 문자열 `"Data Source=MySqlServer;Integrated Security=true"`를 사용하는 경우 연결 문자열에 대해 연결 풀 그룹이 만들어지며 Fred와 Julie에 대해 각각 하나씩 두 개의 추가 풀이 만들어집니다.  John과 Martha가 동일한 SQL Server 로그인 `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`를 사용하여 연결 문자열을 사용하는 경우 **lowPrivUser** ID에 대해서만 하나의 풀이 만들어집니다.  
+### <a name="connection-pool-groups-and-connection-pools"></a>연결 풀 그룹 및 연결 풀  
+ Windows 인증(통합 보안)을 사용할 때 `NumberOfActiveConnectionPoolGroups` 및 `NumberOfActiveConnectionPools` 성능 카운터를 모두 모니터링해야 합니다. 이와 같이 해야 하는 이유는 연결 풀 그룹은 고유 연결 문자열에 매핑되기 때문입니다. 통합 보안이 사용되면 연결 풀이 연결 문자열에 매핑되며 개별 Windows ID에 대한 별도의 풀이 추가적으로 만들어집니다. 예를 들어, 동일한 AppDomain 내에서 Fred와 Julie가 모두 연결 문자열 `"Data Source=MySqlServer;Integrated Security=true"`를 사용하는 경우 연결 문자열에 대해 연결 풀 그룹이 만들어지며 Fred와 Julie에 대해 각각 하나씩 두 개의 추가 풀이 만들어집니다. John과 martha가 동일한 SQL Server 로그인을 함께 연결 문자열을 사용 하는 경우 `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`에 대 한만 하나의 풀이 만들어집니다는 **lowPrivUser** identity입니다.  
   
 <a name="ActivatingOffByDefault"></a>   
-### 기본적으로 활성화되지 않은 카운터 활성화  
- `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond` 및 `SoftConnectsPerSecond` 성능 카운터는 기본적으로 비활성화되어 있습니다.  다음 정보를 응용 프로그램의 구성 파일에 추가하여 이러한 성능 카운터를 활성화할 수 있습니다.  
+### <a name="activating-off-by-default-counters"></a>기본적으로 활성화되지 않은 카운터 활성화  
+ `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond` 및 `SoftConnectsPerSecond` 성능 카운터는 기본적으로 비활성화되어 있습니다. 다음 정보를 응용 프로그램의 구성 파일에 추가하여 이러한 성능 카운터를 활성화할 수 있습니다.  
   
-```  
+```xml  
 <system.diagnostics>  
   <switches>  
     <add name="ConnectionPoolPerformanceCounterDetail"  
@@ -55,13 +61,13 @@ ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClien
 </system.diagnostics>  
 ```  
   
-## 성능 카운터 값 검색  
- 다음 콘솔 응용 프로그램에서는 사용자 응용 프로그램에서 성능 카운터 값을 검색하는 방법을 보여 줍니다.  모든 ADO.NET 성능 카운터에서 반환되는 정보에 대해 연결이 열려 있고 활성화되어야 합니다.  
+## <a name="retrieving-performance-counter-values"></a>성능 카운터 값 검색  
+ 다음 콘솔 응용 프로그램에서는 사용자 응용 프로그램에서 성능 카운터 값을 검색하는 방법을 보여 줍니다. 모든 ADO.NET 성능 카운터에서 반환되는 정보에 대해 연결이 열려 있고 활성화되어야 합니다.  
   
 > [!NOTE]
->  이 예제에서는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에 포함된 샘플 **AdventureWorks** 데이터베이스를 사용합니다.  이 샘플 코드에 제공된 연결 문자열에서는 인스턴스 이름이 SqlExpress인 데이터베이스가 로컬 컴퓨터에 설치되어 있고 사용 가능하며 연결 문자열에 제공된 문자열과 일치하는 SQL Server 로그인을 만들었다고 가정합니다.  Windows 인증만 허용하는 기본 보안 설정을 사용하여 서버를 구성하는 경우 SQL Server 로그인을 활성화해야 할 수도 있습니다.  사용자 환경에 맞게 연결 문자열을 수정합니다.  
+>  이 예제에서는 샘플을 사용 하 여 **AdventureWorks** 에 포함 된 데이터베이스 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]합니다. 이 샘플 코드에 제공된 연결 문자열에서는 인스턴스 이름이 SqlExpress인 데이터베이스가 로컬 컴퓨터에 설치되어 있고 사용 가능하며 연결 문자열에 제공된 문자열과 일치하는 SQL Server 로그인을 만들었다고 가정합니다. Windows 인증만 허용하는 기본 보안 설정을 사용하여 서버를 구성하는 경우 SQL Server 로그인을 활성화해야 할 수도 있습니다. 사용자 환경에 맞게 연결 문자열을 수정합니다.  
   
-### 예제  
+### <a name="example"></a>예제  
   
 ```vb  
 Option Explicit On  
@@ -398,10 +404,10 @@ class Program
 }  
 ```  
   
-## 참고 항목  
- [데이터 소스에 연결](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)   
- [OLE DB, ODBC 및 Oracle 연결 풀링](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)   
- [Performance Counters for ASP.NET](../Topic/Performance%20Counters%20for%20ASP.NET.md)   
- [런타임 프로파일링](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)   
- [Introduction to Monitoring Performance Thresholds](http://msdn.microsoft.com/ko-kr/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 소스에 연결](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [OLE DB, ODBC 및 Oracle 연결 풀링](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ [ASP.NET 용 성능 카운터](http://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
+ [런타임 프로파일링](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)  
+ [성능 임계값 모니터링 소개](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

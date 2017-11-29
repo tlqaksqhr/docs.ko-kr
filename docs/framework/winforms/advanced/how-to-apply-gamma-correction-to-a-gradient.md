@@ -1,42 +1,46 @@
 ---
-title: "방법: 그라데이션에 감마 보정 적용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "그라데이션 브러시, 감마 보정"
-  - "그라데이션, 감마 보정"
+title: "방법: 그라데이션에 감마 보정 적용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- gradient brushes [Windows Forms], gamma correction
+- gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2721a45381f2d0befe82d6d0db2630f3eae08d51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 그라데이션에 감마 보정 적용
-브러시의 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `true`로 설정하여 선형 그라데이션 브러시에 감마 보정을 사용하도록 할 수 있습니다.  <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `false`로 설정하면 감마 보정 기능을 해제할 수 있습니다.  감마 보정은 기본적으로 사용되지 않습니다.  
+# <a name="how-to-apply-gamma-correction-to-a-gradient"></a>방법: 그라데이션에 감마 보정 적용
+브러시의 설정 하 여 선형 그라데이션 브러시에 대 한 감마 보정을 사용 하도록 설정할 수 있습니다 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `true`합니다. 감마 보정을 사용 하지 않도록 설정 하 여 수는 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `false`합니다. 감마 보정은 기본적으로 비활성화 되어 있습니다.  
   
-## 예제  
- 이 예제에서는 선형 그라데이션 브러시를 만들고 이 브러시를 사용하여 두 사각형을 채웁니다.  첫 번째 사각형을 채울 때는 감마 보정을 사용하지 않지만 두 번째 사각형을 채울 때는 감마 보정을 사용합니다.  
+## <a name="example"></a>예제  
+ 선형 그라데이션 브러시를 만들고 해당 브러시를 사용 하 여 두 개의 사각형에 맞게는 예제입니다. 첫 번째 사각형 감마 보정 하지 않고 채워지고 두 번째 사각형 감마 보정 채워집니다.  
   
- 아래 그림에서는 채워진 두 사각형을 보여 줍니다.  감마 보정을 적용하지 않은 위쪽 사각형은 중간 부분이 짙게 나타나는 반면  감마 보정을 적용한 아래쪽 사각형은 농도가 좀 더 균일하게 나타납니다.  
+ 다음 그림에서는 두 개의 채워진된 사각형을 보여 줍니다. 감마 보정 없는 위쪽 사각형 중간에 어두운 나타납니다. 감마 보정 있는 아래 사각형 농도가 좀 더 균일에 나타납니다.  
   
  ![그라데이션](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
-## 참고 항목  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush>  
  [그라데이션 브러시를 사용하여 도형 채우기](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

@@ -1,23 +1,26 @@
 ---
-title: "방법: 동적 업데이트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 동적 업데이트"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-caps.latest.revision: 4
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 70f9bb374405496c62650ee3fb715f059e91cd7c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: 동적 업데이트
-이 항목에서는 라우팅 구성을 만들고 동적으로 업데이트하는 데 필요한 기본 단계에 대해 간략하게 설명합니다.이 예제에서는 구성 파일에서 초기 라우팅 구성을 가져오고 이 구성을 사용하여 모든 메시지를 regularCalc 계산기 서비스에 라우트합니다. 그러나 이 구성은 대상 끝점을 roundingCalc 서비스로 변경하기 위해 이후에 프로그래밍 방식으로 업데이트됩니다.  
+# <a name="how-to-dynamic-update"></a>방법: 동적 업데이트
+이 항목에서는 라우팅 구성을 만들고 동적으로 업데이트하는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서는 구성 파일에서 초기 라우팅 구성을 가져오고 이 구성을 사용하여 모든 메시지를 regularCalc 계산기 서비스에 라우트합니다. 그러나 이 구성은 대상 끝점을 roundingCalc 서비스로 변경하기 위해 이후에 프로그래밍 방식으로 업데이트됩니다.  
   
 > [!NOTE]
 >  다양한 구현에서 구성은 완전히 동적으로 업데이트되며 기본 구성에 의존하지 않지만 서비스를 시작할 때처럼 기본 구성을 사용해야 하는 경우도 있습니다.  
@@ -25,11 +28,11 @@ caps.handback.revision: 4
 > [!NOTE]
 >  동적 업데이트는 메모리에서만 발생하며 구성 파일을 수정하지는 않습니다.  
   
- regularCalc와 roundingCalc는 모두 같은 연산\(더하기, 빼기, 곱하기, 나누기\)을 지원하지만 roundingCalc는 가장 가까운 정수 값으로 모든 계산을 반올림합니다.구성 파일은 모든 메시지를 regularCalc 서비스에 라우트하도록 서비스를 구성하는 데 사용됩니다.라우팅 서비스가 시작된 후에는 메시지를 roundingCalc 서비스에 라우트하도록 서비스를 다시 구성하는 데 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>이 사용됩니다.  
+ regularCalc와 roundingCalc는 모두 같은 연산(더하기, 빼기, 곱하기, 나누기)을 지원하지만 roundingCalc는 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 구성 파일은 모든 메시지를 regularCalc 서비스에 라우트하도록 서비스를 구성하는 데 사용됩니다. 라우팅 서비스가 시작된 후에는 메시지를 roundingCalc 서비스에 라우트하도록 서비스를 다시 구성하는 데 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>이 사용됩니다.  
   
-### 초기 구성 구현  
+### <a name="implement-initial-configuration"></a>초기 구성 구현  
   
-1.  서비스에서 노출하는 서비스 끝점을 지정하여 기본 라우팅 서비스 구성을 만듭니다.다음 예제에서는 메시지를 받는 데 사용할 하나의 서비스 끝점과regularCalc에 메시지를 보내는 데 사용할 클라이언트 끝점을 정의합니다.  
+1.  서비스에서 노출하는 서비스 끝점을 지정하여 기본 라우팅 서비스 구성을 만듭니다. 다음 예제에서는 메시지를 받는 데 사용할 하나의 서비스 끝점과 regularCalc에 메시지를 보내는 데 사용할 클라이언트 끝점을 정의합니다.  
   
     ```xml  
     <services>  
@@ -56,7 +59,7 @@ caps.handback.revision: 4
     </client>  
     ```  
   
-2.  대상 끝점에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.이 예제에서는 MatchAll 필터를 사용하여 모든 메시지를 앞에서 정의한 regularCalcEndpoint에 라우트합니다.다음 예제에서는 필터와 필터 테이블을 정의합니다.  
+2.  대상 끝점에 메시지를 라우트하는 데 사용되는 필터를 정의합니다. 이 예제에서는 MatchAll 필터를 사용하여 모든 메시지를 앞에서 정의한 regularCalcEndpoint에 라우트합니다. 다음 예제에서는 필터와 필터 테이블을 정의합니다.  
   
     ```xml  
     <filters>  
@@ -69,10 +72,9 @@ caps.handback.revision: 4
           <add filterName="MatchAllFilter" endpointName="regularCalcEndpoint"/>  
       </filterTable>  
     </filterTables>  
-  
     ```  
   
-3.  필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 끝점과 연결해야 합니다.다음 예제에서는 “filterTable1”을 서비스 끝점과 연결하는 방법을 보여 줍니다.  
+3.  필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 끝점과 연결해야 합니다. 다음 예제에서는 "filterTable1"을 연결 된 서비스 끝점을 보여 줍니다.  
   
     ```xml  
     <behaviors>  
@@ -85,8 +87,8 @@ caps.handback.revision: 4
     </behaviors>  
     ```  
   
-## 동적 구성 구현  
- 라우팅 서비스의 동적 구성은 새 <xref:System.ServiceModel.Routing.RoutingConfiguration>을 만들고 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>을 사용하여 현재 구성을 대체하는 방식으로 코드에서만 수행할 수 있습니다.이 예제에서는 라우팅 서비스가 콘솔 응용 프로그램 내에서 자체 호스팅됩니다.응용 프로그램이 시작되면 콘솔 창에 ‘regular’ 또는 ‘rounding’을 입력하여 메시지가 라우트되는 대상 끝점을 구성하는 방식으로 라우팅 구성을 수정할 수 있습니다. ‘regular’를 입력하면 대상 끝점이 regularCalc가 되고 ‘rounding’을 입력하면 대상 끝점이 roundingCalc가 됩니다.  
+## <a name="implement-dynamic-configuration"></a>동적 구성 구현  
+ 라우팅 서비스의 동적 구성은 새 <xref:System.ServiceModel.Routing.RoutingConfiguration>을 만들고 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>을 사용하여 현재 구성을 대체하는 방식으로 코드에서만 수행할 수 있습니다.  이 예제에서는 라우팅 서비스가 콘솔 응용 프로그램 내에서 자체 호스팅됩니다. 응용 프로그램이 시작되면 콘솔 창에 ‘regular’ 또는 ‘rounding’을 입력하여 메시지가 라우트되는 대상 끝점을 구성하는 방식으로 라우팅 구성을 수정할 수 있습니다. ‘regular’를 입력하면 대상 끝점이 regularCalc가 되고 ‘rounding’을 입력하면 대상 끝점이 roundingCalc가 됩니다.  
   
 1.  라우팅 서비스를 지원하려면 다음 using 문을 추가해야 합니다.  
   
@@ -98,10 +100,9 @@ caps.handback.revision: 4
     using System.ServiceModel.Description;  
     using System.ServiceModel.Dispatcher;  
     using System.ServiceModel.Routing;  
-  
     ```  
   
-2.  다음 코드는 라우팅 서비스를 콘솔 응용 프로그램으로 자체 호스팅하는 데 사용됩니다.이 코드는 이전 단계에서 설명한 구성을 사용하여 라우팅 서비스를 초기화합니다. 이 구성은 응용 프로그램 구성 파일에 들어 있습니다.while 루프에는 라우팅 구성을 변경하는 데 사용되는 코드가 포함됩니다.  
+2.  다음 코드는 라우팅 서비스를 콘솔 응용 프로그램으로 자체 호스팅하는 데 사용됩니다. 이 코드는 이전 단계에서 설명한 구성을 사용하여 라우팅 서비스를 초기화합니다. 이 구성은 응용 프로그램 구성 파일에 들어 있습니다. while 루프에는 라우팅 구성을 변경하는 데 사용되는 코드가 포함됩니다.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -124,10 +125,9 @@ caps.handback.revision: 4
             }  
         }  
     }  
-  
     ```  
   
-3.  라우팅 구성을 동적으로 업데이트하려면 새 라우팅 구성을 만들어야 합니다.기존 라우팅 구성을 완전히 대체하므로 여기에는 새 라우팅 구성에 필요한 모든 끝점, 필터 및 필터 테이블이 포함되어야 합니다.새 라우팅 구성을 사용하려면 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>을 호출하고 새 구성을 전달해야 합니다.  
+3.  라우팅 구성을 동적으로 업데이트하려면 새 라우팅 구성을 만들어야 합니다. 기존 라우팅 구성을 완전히 대체하므로 여기에는 새 라우팅 구성에 필요한 모든 끝점, 필터 및 필터 테이블이 포함되어야 합니다. 새 라우팅 구성을 사용하려면 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>을 호출하고 새 구성을 전달해야 합니다.  
   
      앞에서 정의한 while 루프에 다음 코드를 추가하여 사용자 입력을 기반으로 서비스를 다시 구성할 수 있도록 합니다.  
   
@@ -170,9 +170,9 @@ caps.handback.revision: 4
     ```  
   
     > [!NOTE]
-    >  새 RoutingConfiguration을 제공하는 메서드가 RoutingExtension 서비스 확장에 포함되어 있으므로 새 RoutingConfiguration 개체는 ServiceHost 또는 ServiceExtensions에 대한 참조를 가지고 있거나 가져올 수 있는 WCF 확장성 모델의 아무 위치에나 제공될 수 있습니다. 예를 들면 다른 ServiceExtension에 제공될 수 있습니다.이런 방식으로 RoutingConfiguration을 동적으로 업데이트하는 방법에 대한 예제는 [동적 재구성](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md)을 참조하십시오.  
+    >  새 RoutingConfiguration을 제공하는 메서드가 RoutingExtension 서비스 확장에 포함되어 있으므로 새 RoutingConfiguration 개체는 ServiceHost 또는 ServiceExtensions에 대한 참조를 가지고 있거나 가져올 수 있는 WCF 확장성 모델의 아무 위치에나 제공될 수 있습니다. 예를 들면 다른 ServiceExtension에 제공될 수 있습니다. 이런이 방식으로 RoutingConfiguration을 동적으로 업데이트 하는 예제를 보려면 [동적 재구성](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음은 이 예제에 사용되는 콘솔 응용 프로그램의 전체 목록입니다.  
   
 ```  
@@ -248,10 +248,9 @@ namespace Microsoft.Samples.AdvancedFilters
         }  
     }  
 }  
-  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음은 이 예제에 사용되는 구성 파일의 전체 목록입니다.  
   
 ```xml  
@@ -305,8 +304,7 @@ namespace Microsoft.Samples.AdvancedFilters
     </routing>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [라우팅 서비스](../../../../docs/framework/wcf/samples/routing-services.md)

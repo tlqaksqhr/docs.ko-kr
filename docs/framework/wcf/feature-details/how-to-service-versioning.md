@@ -1,50 +1,53 @@
 ---
-title: "방법: 서비스 버전 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 서비스 버전 관리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: 6
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: 서비스 버전 관리
-이 항목에서는 메시지를 동일한 서비스의 여러 버전에 라우트하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다.이 예제에서 메시지는 계산기 서비스의 서로 다른 두 버전인 `roundingCalc`\(v1\)와 `regularCalc`\(v2\)에 라우트됩니다.두 구현 모두 같은 연산을 지원하지만 이전 버전인 `roundingCalc` 서비스에서는 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다.클라이언트 응용 프로그램에서는 새 버전인 `regularCalc` 서비스를 사용할지 여부를 나타낼 수 있어야 합니다.  
+# <a name="how-to-service-versioning"></a>방법: 서비스 버전 관리
+이 항목에서는 메시지를 동일한 서비스의 여러 버전에 라우트하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 계산기 서비스의 서로 다른 두 버전인 `roundingCalc`(v1)와 `regularCalc`(v2)에 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 이전 버전인 `roundingCalc` 서비스에서는 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 응용 프로그램에서는 새 버전인 `regularCalc` 서비스를 사용할지 여부를 나타낼 수 있어야 합니다.  
   
 > [!WARNING]
->  메시지를 특정 서비스 버전에 라우트하려면 라우팅 서비스에서 메시지 내용을 기반으로 메시지 대상을 확인할 수 있어야 합니다.아래에서 설명하는 방법에서는 클라이언트가 메시지 헤더에 정보를 삽입하여 버전을 지정합니다.그러나 클라이언트가 추가 데이터를 전달하지 않아도 서비스 버전을 관리할 수 있는 방법이 있습니다.예를 들어 최신 또는 가장 호환성이 뛰어난 버전의 서비스에 메시지를 라우트할 수 있거나 라우터에서 표준 SOAP 봉투의 일부를 사용할 수 있습니다.  
+>  메시지를 특정 서비스 버전에 라우트하려면 라우팅 서비스에서 메시지 내용을 기반으로 메시지 대상을 확인할 수 있어야 합니다. 아래에서 설명하는 방법에서는 클라이언트가 메시지 헤더에 정보를 삽입하여 버전을 지정합니다. 그러나 클라이언트가 추가 데이터를 전달하지 않아도 서비스 버전을 관리할 수 있는 방법이 있습니다. 예를 들어 최신 또는 가장 호환성이 뛰어난 버전의 서비스에 메시지를 라우트할 수 있거나 라우터에서 표준 SOAP 봉투의 일부를 사용할 수 있습니다.  
   
  두 서비스에 의해 노출되는 연산은 다음과 같습니다.  
   
--   추가  
+-   Add  
   
--   빼기  
+-   Subtract  
   
 -   곱하기  
   
--   나누기  
+-   Divide  
   
- 두 서비스 구현은 모두 같은 연산을 처리하고 반환하는 데이터를 제외하면 본질적으로 동일하므로 클라이언트 응용 프로그램에서 보낸 메시지에 포함된 기본 데이터는 요청을 라우트할 방법을 결정하기에는 고유성이 부족합니다.예를 들어 두 서비스의 기본 동작이 같기 때문에 동작 필터를 사용할 수 없습니다.  
+ 두 서비스 구현은 모두 같은 연산을 처리하고 반환하는 데이터를 제외하면 본질적으로 동일하므로 클라이언트 응용 프로그램에서 보낸 메시지에 포함된 기본 데이터는 요청을 라우트할 방법을 결정하기에는 고유성이 부족합니다. 예를 들어 두 서비스의 기본 동작이 같기 때문에 동작 필터를 사용할 수 없습니다.  
   
- 이 문제는 각 서비스 버전의 라우터에 특정 끝점을 노출하거나 서비스 버전을 나타내는 사용자 지정 헤더 요소를 메시지에 추가하는 등의 여러 가지 방법으로 해결할 수 있습니다.이러한 각 방법을 사용하면 들어오는 메시지를 특정 버전의 서비스에 고유하게 라우트할 수 있지만 여러 서비스 버전에 대한 요청을 구별하기 위해서는 고유한 메시지 내용을 사용하는 것이 좋습니다.  
+ 이 문제는 각 서비스 버전의 라우터에 특정 끝점을 노출하거나 서비스 버전을 나타내는 사용자 지정 헤더 요소를 메시지에 추가하는 등의 여러 가지 방법으로 해결할 수 있습니다.  이러한 각 방법을 사용하면 들어오는 메시지를 특정 버전의 서비스에 고유하게 라우트할 수 있지만 여러 서비스 버전에 대한 요청을 구별하기 위해서는 고유한 메시지 내용을 사용하는 것이 좋습니다.  
   
- 이 예제에서는 클라이언트 응용 프로그램에서 요청 메시지에 ‘CalcVer’ 사용자 지정 헤더를 추가합니다.이 헤더에는 메시지를 라우트해야 하는 대상 서비스의 버전을 나타내는 값이 포함됩니다.값 ‘1’은 roundingCalc 서비스로 메시지를 처리해야 함을 나타내고 값 ‘2’는 regularCalc 서비스로 메시지를 처리해야 함을 나타냅니다.이러한 값을 사용하면 클라이언트 응용 프로그램에서 메시지를 처리할 서비스의 버전을 직접 제어할 수 있습니다.사용자 지정 헤더가 메시지 내에 포함된 값이므로 한 끝점을 사용하여 두 서비스 버전의 대상이 되는 메시지를 받을 수 있습니다.다음 코드를 사용하면 클라이언트 응용 프로그램에서 이 사용자 지정 헤더를 메시지에 추가할 수 있습니다.  
+ 이 예제에서는 클라이언트 응용 프로그램에서 요청 메시지에 ‘CalcVer’ 사용자 지정 헤더를 추가합니다. 이 헤더에는 메시지를 라우트해야 하는 대상 서비스의 버전을 나타내는 값이 포함됩니다. 값 ‘1’은 roundingCalc 서비스로 메시지를 처리해야 함을 나타내고 값 ‘2’는 regularCalc 서비스로 메시지를 처리해야 함을 나타냅니다. 이러한 값을 사용하면 클라이언트 응용 프로그램에서 메시지를 처리할 서비스의 버전을 직접 제어할 수 있습니다.  사용자 지정 헤더가 메시지 내에 포함된 값이므로 한 끝점을 사용하여 두 서비스 버전의 대상이 되는 메시지를 받을 수 있습니다. 다음 코드를 사용하면 클라이언트 응용 프로그램에서 이 사용자 지정 헤더를 메시지에 추가할 수 있습니다.  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### 서비스 버전 관리 구현  
+### <a name="implement-service-versioning"></a>서비스 버전 관리 구현  
   
-1.  서비스에서 노출하는 서비스 끝점을 지정하여 기본 라우팅 서비스 구성을 만듭니다.다음 예제에서는 메시지를 받는 데 사용할 하나의 서비스 끝점과`roundingCalc`\(v1\) 및 `regularCalc`\(v2\) 서비스에 메시지를 보내는 데 사용할 클라이언트 끝점을 정의합니다.  
+1.  서비스에서 노출하는 서비스 끝점을 지정하여 기본 라우팅 서비스 구성을 만듭니다. 다음 예제에서는 메시지를 받는 데 사용할 하나의 서비스 끝점과 `roundingCalc`(v1) 및 `regularCalc`(v2) 서비스에 메시지를 보내는 데 사용할 클라이언트 끝점을 정의합니다.  
   
     ```xml  
     <services>  
@@ -74,10 +77,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
                     binding="wsHttpBinding"  
                     contract="*" />  
         </client>  
-  
     ```  
   
-2.  대상 끝점에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.이 예제에서는 XPath 필터를 통해 “CalcVer” 사용자 지정 헤더의 값을 감지하여 메시지를 라우트해야 하는 대상 버전을 확인합니다.XPath 필터는 “CalcVer” 헤더가 없는 메시지를 감지하는 데도 사용됩니다.다음 예제에서는 필요한 필터 및 네임스페이스 테이블을 정의합니다.  
+2.  대상 끝점에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.  이 예에서는 XPath 필터는 메시지를 라우트해야 하는 버전을 결정 하는 "CalcVer" 사용자 지정 헤더의 값을 감지 하 사용 됩니다. "CalcVer" 헤더가 포함 되지 않은 메시지 검색 하는 XPath 필터도 사용 됩니다. 다음 예제에서는 필요한 필터 및 네임스페이스 테이블을 정의합니다.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -102,9 +104,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  s12 네임스페이스 접두사는 기본적으로 네임스페이스 테이블에 정의되며 “http:\/\/www.w3.org\/2003\/05\/soap\-envelope” 네임스페이스를 나타냅니다.  
+    >  S12 네임 스페이스 접두사는 기본적으로 네임 스페이스 테이블에 정의 된 하 고 "http://www.w3.org/2003/05/soap-envelope" 네임 스페이스를 나타냅니다.  
   
-3.  각 끝점을 클라이언트 끝점과 연결하는 필터 테이블을 정의합니다.메시지에 포함된 “CalcVer” 헤더의 값이 1이면 메시지가 regularCalc 서비스에 보내지고값이 2이면 메시지가 roundingCalc 서비스에 보내집니다.헤더가 없으면 메시지가 regularCalc에 라우트됩니다.  
+3.  각 끝점을 클라이언트 끝점과 연결하는 필터 테이블을 정의합니다. 값이 1 인는 "CalcVer" 헤더를 포함 하는 메시지를 regularCalc 서비스로 보내집니다. 값이 2이면 메시지가 roundingCalc 서비스에 보내집니다. 헤더가 없으면 메시지가 regularCalc에 라우트됩니다.  
   
      다음 예제에서는 필터 테이블을 정의하고 앞에서 정의한 필터를 추가합니다.  
   
@@ -125,7 +127,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 끝점과 연결해야 합니다.다음 예제에서는 “filterTable1”을 서비스 끝점과 연결하는 방법을 보여 줍니다.  
+4.  필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 끝점과 연결해야 합니다.  다음 예제에서는 "filterTable1" 연결 된 서비스 끝점을 보여 줍니다.  
   
     ```xml  
     <behaviors>  
@@ -136,10 +138,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음은 구성 파일의 전체 목록입니다.  
   
 ```xml  
@@ -220,14 +221,12 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </routing>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음은 클라이언트 응용 프로그램의 전체 목록입니다.  
   
 ```csharp  
-  
 using System;  
 using System.ServiceModel;  
 using System.ServiceModel.Channels;  
@@ -333,8 +332,7 @@ namespace Microsoft.Samples.AdvancedFilters
         }  
     }  
 }  
-  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [라우팅 서비스](../../../../docs/framework/wcf/samples/routing-services.md)
