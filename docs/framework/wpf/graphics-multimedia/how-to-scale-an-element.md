@@ -1,53 +1,54 @@
 ---
-title: "방법: 요소 배율 조정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클래스, ScaleTransform"
-  - "그래픽, 요소 배율 조정"
-  - "ScaleTransform 클래스"
-  - "배율, 요소"
+title: "방법: 요소 배율 조정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scaling [WPF], elements
+- graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 23b3086452526e804bfdbe50bb0c134f33158f5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 요소 배율 조정
-이 예제에서는 <xref:System.Windows.Media.ScaleTransform>을 사용하여 요소의 배율을 조정하는 방법을 보여 줍니다.  
+# <a name="how-to-scale-an-element"></a><span data-ttu-id="57860-102">방법: 요소 배율 조정</span><span class="sxs-lookup"><span data-stu-id="57860-102">How to: Scale an Element</span></span>
+<span data-ttu-id="57860-103">사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ScaleTransform> 요소를 확장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="57860-103">This example shows how to use a <xref:System.Windows.Media.ScaleTransform> to scale an element.</span></span>  
   
- <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 및 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 속성을 사용하여 지정한 배율로 요소의 크기를 조정할 수 있습니다.  예를 들어 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 값으로 1.5를 지정하면 요소 너비가 원래 너비의 150%로 늘려지고,  <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 값으로 0.5를 지정하면 요소 높이가 50%까지 줄어듭니다.  
+ <span data-ttu-id="57860-104">사용 하 여는 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 및 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 요소의 크기를 조정 하 여 사용자가 지정한 인수는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="57860-104">Use the <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> properties to resize the element by the factor you specify.</span></span> <span data-ttu-id="57860-105">예를 들어 한 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 원래 너비의 150%로 요소를 확장 하는 1.5의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="57860-105">For example, a <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> value of 1.5 stretches the element to 150 percent of its original width.</span></span> <span data-ttu-id="57860-106">A <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 0.5의 50%가 요소의 높이 축소 합니다.</span><span class="sxs-lookup"><span data-stu-id="57860-106">A <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> value of 0.5 shrinks the height of an element by 50 percent.</span></span>  
   
- <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A> 속성을 사용하여 배율 조정 작업의 중점을 지정할 수 있습니다.  기본적으로 <xref:System.Windows.Media.ScaleTransform>의 중점은 사각형의 왼쪽 위 모퉁이에 해당하는 지점\(0,0\)입니다.  이는 요소를 이동하고 더 크게 보이도록 만드는 효과를 내는데, <xref:System.Windows.Media.Transform>을 적용할 때는 개체가 위치한 좌표 공간이 변경되기 때문입니다.  
+ <span data-ttu-id="57860-107">사용 하 여는 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A> 크기 조정 작업의 가운데 있는 지점을 지정 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="57860-107">Use the <xref:System.Windows.Media.ScaleTransform.CenterX%2A> and <xref:System.Windows.Media.ScaleTransform.CenterY%2A> properties to specify the point that is the center of the scale operation.</span></span> <span data-ttu-id="57860-108">기본적으로는 <xref:System.Windows.Media.ScaleTransform> 사각형의 왼쪽 위 모퉁이에 해당 하는 지점 (0, 0)에 가운데 맞춤 합니다.</span><span class="sxs-lookup"><span data-stu-id="57860-108">By default, a <xref:System.Windows.Media.ScaleTransform> is centered at the point (0,0), which corresponds to the upper-left corner of the rectangle.</span></span> <span data-ttu-id="57860-109">이 인해의 요소를 이동 하 고 적용 하는 경우 때문에 더 크게 표시 되 게의 영향을 <xref:System.Windows.Media.Transform>, 해당 개체가 속한 있는 좌표 공간을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="57860-109">This has the effect of moving the element and also of making it appear larger, because when you apply a <xref:System.Windows.Media.Transform>, you change the coordinate space in which the object resides.</span></span>  
   
- 다음 예제에서는 <xref:System.Windows.Media.ScaleTransform>을 사용하여 가로와 세로가 각각 50인 <xref:System.Windows.Shapes.Rectangle>의 크기를 두 배로 늘립니다.  <xref:System.Windows.Media.ScaleTransform>의 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A> 값은 모두 0\(기본값\)입니다.  
+ <span data-ttu-id="57860-110">다음 예제에서는 한 <xref:System.Windows.Media.ScaleTransform> 50-여-50의 크기를 두 배로 <xref:System.Windows.Shapes.Rectangle>합니다.</span><span class="sxs-lookup"><span data-stu-id="57860-110">The following example uses a <xref:System.Windows.Media.ScaleTransform> to double the size of a 50-by-50 <xref:System.Windows.Shapes.Rectangle>.</span></span> <span data-ttu-id="57860-111"><xref:System.Windows.Media.ScaleTransform> 둘 다에 대해 0 (기본값)의 값은 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="57860-111">The <xref:System.Windows.Media.ScaleTransform> has a value of 0 (the default) for both <xref:System.Windows.Media.ScaleTransform.CenterX%2A> and <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.</span></span>  
   
-## 예제  
- [!code-xml[transformsSample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
+## <a name="example"></a><span data-ttu-id="57860-112">예제</span><span class="sxs-lookup"><span data-stu-id="57860-112">Example</span></span>  
+ [!code-xaml[transformsSample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
   
- 일반적으로 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A>는 배율을 조정하는 개체의 중점\(<xref:System.Windows.FrameworkElement.Width%2A>\/2, <xref:System.Windows.FrameworkElement.Height%2A>\/2\)으로 설정합니다.  
+ <span data-ttu-id="57860-113">일반적으로 설정 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A> 의 크기가 조정 되는 개체의 센터로: (<xref:System.Windows.FrameworkElement.Width%2A>/2,  <xref:System.Windows.FrameworkElement.Height%2A> /2).</span><span class="sxs-lookup"><span data-stu-id="57860-113">Typically, you set <xref:System.Windows.Media.ScaleTransform.CenterX%2A> and <xref:System.Windows.Media.ScaleTransform.CenterY%2A> to the center of the object that is scaled: (<xref:System.Windows.FrameworkElement.Width%2A>/2, <xref:System.Windows.FrameworkElement.Height%2A>/2).</span></span>  
   
- 다음 예제에서는 크기가 두 배인 다른 <xref:System.Windows.Shapes.Rectangle>을 보여 줍니다. 하지만 이 <xref:System.Windows.Media.ScaleTransform>의 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A> 값은 모두 25이며 이는 사각형의 중점에 해당합니다.  
+ <span data-ttu-id="57860-114">다음 예제에서는 다른 <xref:System.Windows.Shapes.Rectangle> 크기가; 두 배로 증가 하는 반면이 <xref:System.Windows.Media.ScaleTransform> 25 값 모두에 대 한이 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, 사각형의 중앙에 해당 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="57860-114">The following example shows another <xref:System.Windows.Shapes.Rectangle> that is doubled in size; however, this <xref:System.Windows.Media.ScaleTransform> has a value of 25 for both <xref:System.Windows.Media.ScaleTransform.CenterX%2A> and <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, which corresponds to the center of the rectangle.</span></span>  
   
- [!code-xml[transformsSample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
+ [!code-xaml[transformsSample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
   
- 다음 그림에서는 두 <xref:System.Windows.Media.ScaleTransform> 작업의 차이점을 보여 줍니다.  점선은 배율 조정 전의 사각형의 크기와 위치를 보여 줍니다.  
+ <span data-ttu-id="57860-115">다음 그림에서는 두 기능 간의 차이점을 보여 줍니다 <xref:System.Windows.Media.ScaleTransform> 작업 합니다.</span><span class="sxs-lookup"><span data-stu-id="57860-115">The following illustration shows the difference between the two <xref:System.Windows.Media.ScaleTransform> operations.</span></span> <span data-ttu-id="57860-116">점선은 크기 조정 전의 사각형 크기 및 위치를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="57860-116">The dotted line shows the size and position of the rectangle before scaling.</span></span>  
   
- ![여러 중심점을 사용한 2x 배율 조정](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.png "wcpsdk\_graphicsmm\_scalecenter")  
-ScaleX 및 ScaleY 값이 같지만 중점은 다른 두 ScaleTransform 작업  
+ <span data-ttu-id="57860-117">![여러 중심점을 사용한 2x 배율 조정](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")</span><span class="sxs-lookup"><span data-stu-id="57860-117">![2x scales with different center points](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")</span></span>  
+<span data-ttu-id="57860-118">ScaleX 및 ScaleY 값은 같지만 중심은 다른 두 개의 ScaleTransform 작업</span><span class="sxs-lookup"><span data-stu-id="57860-118">Two ScaleTransform operations with identical ScaleX and ScaleY values but different centers</span></span>  
   
- 전체 샘플을 보려면 [2\-D Transforms 샘플](http://go.microsoft.com/fwlink/?LinkID=158252)을 참조하십시오.  
+ <span data-ttu-id="57860-119">전체 샘플을 보려면 [2차원 변환 샘플](http://go.microsoft.com/fwlink/?LinkID=158252)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="57860-119">For the complete sample, see [2-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.ScaleTransform>   
- [Transform 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="57860-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="57860-120">See Also</span></span>  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.ScaleTransform>  
+ [<span data-ttu-id="57860-121">Transform 개요</span><span class="sxs-lookup"><span data-stu-id="57860-121">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="57860-122">방법 항목</span><span class="sxs-lookup"><span data-stu-id="57860-122">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

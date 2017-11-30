@@ -1,1 +1,1 @@
-Microsoft Windows 탐색기
+<span data-ttu-id="2eab0-101">Microsoft Windows 탐색기</span><span class="sxs-lookup"><span data-stu-id="2eab0-101">Microsoft Windows Explorer</span></span>

@@ -1,1 +1,1 @@
-Windows 런타임
+<span data-ttu-id="c5d35-101">Windows 런타임</span><span class="sxs-lookup"><span data-stu-id="c5d35-101">Windows Runtime</span></span>

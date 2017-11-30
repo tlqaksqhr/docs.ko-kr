@@ -1,73 +1,73 @@
 ---
-title: "Windows Forms에서 지원하는 데이터 소스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "배열[Windows Forms]"
-  - "컬렉션[Windows Forms], 바인딩"
-  - "데이터[Windows Forms], 데이터 공급자"
-  - "데이터 공급자[Windows Forms]"
-  - "데이터 소스[Windows Forms]"
-  - "DataColumn 클래스"
-  - "DataSet 클래스, 바인딩 및 Windows Forms"
-  - "DataTable 클래스, 바인딩 및 Windows Forms"
-  - "DataView 클래스, 바인딩 및 Windows Forms"
-  - "DataViewManager 클래스, 바인딩 및 Windows Forms"
-  - "OLE DB 공급자, Windows Forms"
-  - "Windows Forms, 데이터 바인딩"
-  - "Windows Forms, 소스 데이터"
+title: "Windows Forms에서 지원하는 데이터 소스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Windows Forms], binding to
+- OLE DB providers [Windows Forms], Windows Forms
+- DataTable class [Windows Forms], binding and Windows Forms
+- Windows Forms, data binding
+- DataView class [Windows Forms], binding and Windows Forms
+- DataViewManager class [Windows Forms], binding and Windows Forms
+- Windows Forms, source data
+- arrays [Windows Forms]
+- data sources [Windows Forms]
+- data providers [Windows Forms]
+- DataSet class [Windows Forms], binding and Windows Forms
+- data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b02e492d0357c80776df0a1d0bd01ce228fa0b04
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms에서 지원하는 데이터 소스
-기존에는 데이터 바인딩이 응용 프로그램 안에서 데이터베이스에 저장된 데이터를 이용하는 데 사용되었습니다.  Windows Form 데이터 바인딩을 사용하면 최소한의 요구 사항이 충족되는 경우 데이터베이스의 데이터에 액세스할 수 있을 뿐 아니라 배열 및 컬렉션과 같이 다른 구조에 있는 데이터에도 액세스할 수 있습니다.  
+# <a name="data-sources-supported-by-windows-forms"></a><span data-ttu-id="1ba65-102">Windows Forms에서 지원하는 데이터 소스</span><span class="sxs-lookup"><span data-stu-id="1ba65-102">Data Sources Supported by Windows Forms</span></span>
+<span data-ttu-id="1ba65-103">일반적으로 데이터 바인딩을 사용 되었습니다 응용 프로그램 내에서 데이터베이스에 저장 된 데이터를 활용 하려면.</span><span class="sxs-lookup"><span data-stu-id="1ba65-103">Traditionally, data binding has been used within applications to take advantage of data stored in databases.</span></span> <span data-ttu-id="1ba65-104">Windows Forms 데이터 바인딩, 최소한의 특정 요구를 충족으로 배열 및 컬렉션 등의 다른 구조에 있는 데이터와 데이터베이스에서 데이터를 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-104">With Windows Forms data binding, you can access data from databases as well as data in other structures, such as arrays and collections, so long as certain minimum requirements have been met.</span></span>  
   
-## 바인딩할 구조  
- Windows Forms에서는 단순한 개체\(단순 바인딩\)부터 ADO.NET 데이터 테이블과 같은 복잡한 목록\(복합 바인딩\)에 이르기까지 다양한 구조에 바인딩할 수 있습니다.  단순 바인딩의 경우 Windows Forms에서는 단순 개체의 공용 속성에 대한 바인딩을 지원합니다.  Windows Forms 목록 기반 바인딩을 수행하려면 일반적으로 개체에서 <xref:System.Collections.IList> 인터페이스나 <xref:System.ComponentModel.IListSource> 인터페이스를 지원해야 합니다.  또한 <xref:System.Windows.Forms.BindingSource> 구성 요소를 통해 바인딩하는 경우에는 <xref:System.Collections.IEnumerable> 인터페이스를 지원하는 개체에 바인딩할 수 있습니다.  데이터 바인딩과 관련된 인터페이스에 대한 자세한 내용은 [데이터 바인딩과 관련된 인터페이스](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)를 참조하십시오.  
+## <a name="structures-to-bind-to"></a><span data-ttu-id="1ba65-105">바인딩할 구조</span><span class="sxs-lookup"><span data-stu-id="1ba65-105">Structures to Bind To</span></span>  
+ <span data-ttu-id="1ba65-106">Windows Forms에서 바인딩할 수 있습니다 구조체의 광범위 한 단순한 ADO.NET 데이터 테이블 (복잡 한 바인딩) 같은 복잡 한 목록에 있는 개체 (단순 바인딩) 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-106">In Windows Forms, you can bind to a wide variety of structures, from simple objects (simple binding) to complex lists such as ADO.NET data tables (complex binding).</span></span> <span data-ttu-id="1ba65-107">단순 바인딩에 대 한 Windows Forms는 단순 개체에 공용 속성에 바인딩을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-107">For simple binding, Windows Forms supports binding to the public properties on the simple object.</span></span> <span data-ttu-id="1ba65-108">Windows Forms 목록 기반 바인딩에 일반적으로 지 원하는 개체 필요는 <xref:System.Collections.IList> 인터페이스 또는 <xref:System.ComponentModel.IListSource> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-108">Windows Forms list-based binding generally requires that the object support the <xref:System.Collections.IList> interface or the <xref:System.ComponentModel.IListSource> interface.</span></span> <span data-ttu-id="1ba65-109">또한를 통해 바인딩하는 경우는 <xref:System.Windows.Forms.BindingSource> 구성 요소를 지 원하는 개체를 바인딩할 수 있습니다는 <xref:System.Collections.IEnumerable> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-109">Additionally, if you are binding with through a <xref:System.Windows.Forms.BindingSource> component, you can bind to an object that supports the <xref:System.Collections.IEnumerable> interface.</span></span> <span data-ttu-id="1ba65-110">데이터 바인딩과 관련 된 인터페이스에 대 한 자세한 내용은 참조 [인터페이스와 관련 된 데이터 바인딩](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-110">For more information about interfaces related to data binding, see [Interfaces Related to Data Binding](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).</span></span>  
   
- 다음 목록은 Windows Forms에서 바인딩할 수 있는 구조를 보여 줍니다.  
+ <span data-ttu-id="1ba65-111">다음 목록에는 Windows Forms에서 바인딩할 수 있습니다는 구조를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-111">The following list shows the structures you can bind to in Windows Forms.</span></span>  
   
  <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingSource>는 데이터 소스와 Windows Forms 컨트롤 간의 프록시로 사용되는 가장 일반적인 Windows Forms 데이터 소스입니다.  <xref:System.Windows.Forms.BindingSource>의 일반적인 사용 패턴은 컨트롤을 <xref:System.Windows.Forms.BindingSource>에 바인딩한 다음 <xref:System.Windows.Forms.BindingSource>를 데이터 소스\(예: ADO.NET 데이터 테이블 또는 비즈니스 개체\)에 바인딩하는 것입니다.  <xref:System.Windows.Forms.BindingSource>는 데이터 바인딩 지원을 사용할 수 있도록 하고 지원 수준을 높여 주는 서비스를 제공합니다.  예를 들어, <xref:System.Windows.Forms.DataGridView> 및 <xref:System.Windows.Forms.ComboBox>와 같은 Windows Forms 목록 기반 컨트롤은 <xref:System.Collections.IEnumerable> 데이터 소스에 대한 바인딩을 직접 지원하지 않지만 <xref:System.Windows.Forms.BindingSource>를 통해 바인딩함으로써 이 시나리오를 수행할 수 있습니다.  이 경우 <xref:System.Windows.Forms.BindingSource>는 데이터 소스를 <xref:System.Collections.IList>로 변환합니다.  
+ <span data-ttu-id="1ba65-112">A <xref:System.Windows.Forms.BindingSource> 는 가장 일반적인 Windows Forms 데이터 원본 및 데이터 원본 서버와 Windows Forms 컨트롤 간의 프록시 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-112">A <xref:System.Windows.Forms.BindingSource> is the most common Windows Forms data source and acts a proxy between a data source and Windows Forms controls.</span></span> <span data-ttu-id="1ba65-113">일반 <xref:System.Windows.Forms.BindingSource> 사용 패턴은 컨트롤을 바인딩하는 <xref:System.Windows.Forms.BindingSource> 바인딩하고 <xref:System.Windows.Forms.BindingSource> 데이터 원본 (예를 들어 ADO.NET 데이터 테이블 또는 비즈니스 개체)에 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-113">The general <xref:System.Windows.Forms.BindingSource> usage pattern is to bind your controls to the <xref:System.Windows.Forms.BindingSource> and bind the <xref:System.Windows.Forms.BindingSource> to the data source (for example, an ADO.NET data table or a business object).</span></span> <span data-ttu-id="1ba65-114"><xref:System.Windows.Forms.BindingSource> 및 데이터 바인딩 지원의 수준을 향상 시킬 수 있는 서비스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-114">The <xref:System.Windows.Forms.BindingSource> provides services that enable and improve the level of data binding support.</span></span> <span data-ttu-id="1ba65-115">그러나 예를 들어, Windows Forms 기반 하 여 목록 컨트롤 같은 <xref:System.Windows.Forms.DataGridView> 및 <xref:System.Windows.Forms.ComboBox> 바인딩을 직접 지원 하지 않습니다 <xref:System.Collections.IEnumerable> 데이터 원본이 시나리오를 통해 바인딩에서 사용할 수 있습니다는 <xref:System.Windows.Forms.BindingSource>합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-115">For example, Windows Forms list based controls such as the <xref:System.Windows.Forms.DataGridView> and <xref:System.Windows.Forms.ComboBox> do not directly support binding to <xref:System.Collections.IEnumerable> data sources however, you can enable this scenario by binding through a <xref:System.Windows.Forms.BindingSource>.</span></span> <span data-ttu-id="1ba65-116">이 경우에 <xref:System.Windows.Forms.BindingSource> 데이터 원본에는 변환는 <xref:System.Collections.IList>합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-116">In this case, the <xref:System.Windows.Forms.BindingSource> will convert the data source to an <xref:System.Collections.IList>.</span></span>  
   
- 단순 개체  
- Windows Forms에서는 <xref:System.Windows.Forms.Binding> 형식을 사용하여 개체 인스턴스의 공용 속성에 컨트롤 속성을 데이터 바인딩할 수 있습니다.  또한 Windows Forms에서는 <xref:System.Windows.Forms.BindingSource>를 사용할 경우 <xref:System.Windows.Forms.ListControl>과 같은 목록 기반 컨트롤을 개체 인스턴스에 바인딩할 수 있습니다.  
+ <span data-ttu-id="1ba65-117">단순 개체</span><span class="sxs-lookup"><span data-stu-id="1ba65-117">Simple objects</span></span>  
+ <span data-ttu-id="1ba65-118">Windows Forms 공용 속성에 데이터 바인딩 컨트롤 속성을 사용 하 여 개체의 인스턴스에 대해 지원 된 <xref:System.Windows.Forms.Binding> 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-118">Windows Forms supports data binding control properties to public properties on the instance of an object using the <xref:System.Windows.Forms.Binding> type.</span></span> <span data-ttu-id="1ba65-119">또한 Windows Forms에서는 바인딩 목록 기반 컨트롤을와 같은 한 <xref:System.Windows.Forms.ListControl> 인스턴스에 개체에는 <xref:System.Windows.Forms.BindingSource> 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-119">Windows Forms also supports binding list based controls, such as a <xref:System.Windows.Forms.ListControl> to an object instance when a <xref:System.Windows.Forms.BindingSource> is used.</span></span>  
   
- 배열 또는 컬렉션  
- 데이터 소스로 작동하려면 목록에서 <xref:System.Collections.IList> 인터페이스를 구현해야 합니다. 예를 들면 <xref:System.Array> 클래스의 인스턴스인 배열이 있습니다.  배열에 대한 자세한 내용은 [How to: Create an Array of Objects \(Visual Basic\)](http://msdn.microsoft.com/ko-kr/6b64e069-0387-400c-9081-3bdc581020c3)을 참조하십시오.  
+ <span data-ttu-id="1ba65-120">배열 또는 컬렉션</span><span class="sxs-lookup"><span data-stu-id="1ba65-120">array or collection</span></span>  
+ <span data-ttu-id="1ba65-121">을 데이터 원본으로 작동 하려면 목록을 구현 해야는 <xref:System.Collections.IList> 하나, 인터페이스 예의 인스턴스가 있는 배열을 것은 <xref:System.Array> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-121">To act as a data source, a list must implement the <xref:System.Collections.IList> interface; one example would be an array that is an instance of the <xref:System.Array> class.</span></span> <span data-ttu-id="1ba65-122">배열에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 한 배열의 개체 만들기 (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3)합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-122">For more information on arrays, see [How to: Create an Array of Objects (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3).</span></span>  
   
- 일반적으로 데이터 바인딩을 위한 개체의 목록을 만들 때는 <xref:System.ComponentModel.BindingList%601>을 사용합니다.  <xref:System.ComponentModel.BindingList%601>은 <xref:System.ComponentModel.IBindingList> 인터페이스의 제네릭 버전입니다.  <xref:System.ComponentModel.IBindingList> 인터페이스는 양방향 데이터 바인딩에 필요한 속성, 메서드 및 이벤트를 추가하여 <xref:System.Collections.IList> 인터페이스를 확장합니다.  
+ <span data-ttu-id="1ba65-123">일반적으로 사용 해야 <xref:System.ComponentModel.BindingList%601> 데이터 바인딩에 대 한 개체의 목록을 만들 때.</span><span class="sxs-lookup"><span data-stu-id="1ba65-123">In general, you should use <xref:System.ComponentModel.BindingList%601> when you create lists of objects for data binding.</span></span> <span data-ttu-id="1ba65-124"><xref:System.ComponentModel.BindingList%601>제네릭 버전의는 <xref:System.ComponentModel.IBindingList> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-124"><xref:System.ComponentModel.BindingList%601> is a generic version of the <xref:System.ComponentModel.IBindingList> interface.</span></span> <span data-ttu-id="1ba65-125"><xref:System.ComponentModel.IBindingList> 확장 인터페이스는 <xref:System.Collections.IList> 속성, 메서드 및 양방향 데이터 바인딩을에 필요한 이벤트를 추가 하 여 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-125">The <xref:System.ComponentModel.IBindingList> interface extends the <xref:System.Collections.IList> interface by adding properties, methods and events necessary for two-way data binding.</span></span>  
   
  <xref:System.Collections.IEnumerable>  
- Windows Forms 컨트롤은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 통해 바인딩된 경우 <xref:System.Collections.IEnumerable> 인터페이스만 지원하는 데이터 소스에 바인딩될 수 있습니다.  
+ <span data-ttu-id="1ba65-126">Windows Forms 컨트롤을 지 원하는 데이터 원본에 바인딩될 수는 <xref:System.Collections.IEnumerable> 통해 바인딩된 경우 인터페이스는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-126">Windows Forms controls can be bound to data sources that only support the <xref:System.Collections.IEnumerable> interface if they are bound through a <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 데이터 개체  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]에서는 바인딩 대상으로 사용하기에 적합한 데이터 구조를 많이 제공합니다.  각 구조에 따라 복잡성이 다릅니다.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]<span data-ttu-id="1ba65-127">데이터 개체</span><span class="sxs-lookup"><span data-stu-id="1ba65-127"> data objects</span></span>  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]<span data-ttu-id="1ba65-128">다양 한 데이터 구조에 대 한 바인딩에 적합 한를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-128"> provides a number of data structures suitable for binding to.</span></span> <span data-ttu-id="1ba65-129">각 구조 복잡성에 따라 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-129">Each varies in its sophistication and complexity.</span></span>  
   
--   <xref:System.Data.DataColumn>.  여러 열이 하나의 테이블을 구성한다는 점에서 <xref:System.Data.DataColumn>은 <xref:System.Data.DataTable>의 필수 빌딩 블록입니다.  각 <xref:System.Data.DataColumn>은 열에 저장되는 데이터 종류\(예: 차를 설명하는 테이블에 있는 자동차의 종류\)를 결정하는 <xref:System.Data.DataColumn.DataType%2A> 속성을 갖습니다.  컨트롤\(예: <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성\)을 데이터 테이블 안에 있는 열에 단순 바인딩할 수 있습니다.  
+-   <span data-ttu-id="1ba65-130"><xref:System.Data.DataColumn>.</span><span class="sxs-lookup"><span data-stu-id="1ba65-130"><xref:System.Data.DataColumn>.</span></span> <span data-ttu-id="1ba65-131">A <xref:System.Data.DataColumn> 은의 필수 구성 요소는 <xref:System.Data.DataTable>을 열 수를 하나의 테이블을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-131">A <xref:System.Data.DataColumn> is the essential building block of a <xref:System.Data.DataTable>, in that a number of columns comprise a table.</span></span> <span data-ttu-id="1ba65-132">각 <xref:System.Data.DataColumn> 에 <xref:System.Data.DataColumn.DataType%2A> 데이터 열에 저장 (예를 들어, 자동차를 설명 하는 테이블에 있는 자동차의 제조업체)의 종류를 결정 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-132">Each <xref:System.Data.DataColumn> has a <xref:System.Data.DataColumn.DataType%2A> property that determines the kind of data the column holds (for example, the make of an automobile in a table describing cars).</span></span> <span data-ttu-id="1ba65-133">바인딩할 수 있습니다 단순 컨트롤 (같은 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성) 데이터 테이블 내의 열입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-133">You can simple-bind a control (such as a <xref:System.Windows.Forms.TextBox> control's <xref:System.Windows.Forms.Control.Text%2A> property) to a column within a data table.</span></span>  
   
--   <xref:System.Data.DataTable>.  <xref:System.Data.DataTable>은 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]에서 행과 열이 있는 테이블을 나타냅니다.  데이터 테이블에는 두 개의 컬렉션이 포함됩니다. <xref:System.Data.DataColumn>은 주어진 테이블에 있는 데이터의 열을 나타내는데 이 열은 해당 테이블에 입력될 수 있는 데이터 종류를 결정합니다. <xref:System.Data.DataRow>는 주어진 테이블에 있는 데이터 행을 나타냅니다.  컨트롤을 데이터 테이블에 포함된 정보에 복합 바인딩\(예: <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 테이블에 바인딩\)할 수 있습니다.  그러나 <xref:System.Data.DataTable>에 바인딩할 경우 실제로는 테이블의 기본 뷰에 바인딩됩니다.  
+-   <span data-ttu-id="1ba65-134"><xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="1ba65-134"><xref:System.Data.DataTable>.</span></span> <span data-ttu-id="1ba65-135">A <xref:System.Data.DataTable> 에 행과 열이 있는 테이블의 표현인 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-135">A <xref:System.Data.DataTable> is the representation of a table, with rows and columns, in [!INCLUDE[vstecado](../../../includes/vstecado-md.md)].</span></span> <span data-ttu-id="1ba65-136">두 컬렉션을 포함 하는 데이터 테이블: <xref:System.Data.DataColumn>, (최종적으로 결정 하는 해당 테이블에 입력할 수 있는 데이터)는 지정된 된 테이블에 데이터의 열을 나타내는 및 <xref:System.Data.DataRow>, 지정된 된 테이블에 데이터 행을 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-136">A data table contains two collections: <xref:System.Data.DataColumn>, representing the columns of data in a given table (which ultimately determine the kinds of data that can be entered into that table), and <xref:System.Data.DataRow>, representing the rows of data in a given table.</span></span> <span data-ttu-id="1ba65-137">바인딩할 수 있습니다 복합 컨트롤을 데이터 테이블에 포함 된 정보 (바인딩 등의 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 테이블에).</span><span class="sxs-lookup"><span data-stu-id="1ba65-137">You can complex-bind a control to the information contained in a data table (such as binding the <xref:System.Windows.Forms.DataGridView> control to a data table).</span></span> <span data-ttu-id="1ba65-138">그러나에 바인딩하는 경우는 <xref:System.Data.DataTable>, 테이블의 기본 보기에 실제로 바인딩 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-138">However, when you bind to a <xref:System.Data.DataTable>, you are a really binding to the table's default view.</span></span>  
   
--   <xref:System.Data.DataView>.  <xref:System.Data.DataView>는 필터링 또는 정렬될 수 있는 단일 데이터 테이블에 대한 사용자 지정 뷰입니다.  데이터 뷰는 복합 바인딩된 컨트롤에서 사용하는 데이터 "스냅숏"입니다.  데이터 뷰 안에 있는 데이터에 단순 바인딩 또는 복합 바인딩할 수 있지만 이것은 업데이트될 수 있는 완전한 데이터 소스에 바인딩되는 것이 아니라 데이터의 고정된 "화면"에 바인딩되는 것입니다.  
+-   <span data-ttu-id="1ba65-139"><xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="1ba65-139"><xref:System.Data.DataView>.</span></span> <span data-ttu-id="1ba65-140">A <xref:System.Data.DataView> 필터링 하거나 정렬할 수 있는 단일 데이터 테이블의 사용자 지정 된 뷰입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-140">A <xref:System.Data.DataView> is a customized view of a single data table that may be filtered or sorted.</span></span> <span data-ttu-id="1ba65-141">데이터 뷰는 "스냅숏" 복합 바인딩된 컨트롤에서 사용 하는 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-141">A data view is the data "snapshot" used by complex-bound controls.</span></span> <span data-ttu-id="1ba65-142">있습니다 수 단순 바인딩 또는 복합 바인딩할 데이터 뷰의 데이터 있지만 잘 정리 되 고 업데이트 하는 데이터 원본 대신 데이터의 고정된 된 "화면"에 바인딩하는 점에 유의 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-142">You can simple-bind or complex-bind to the data within a data view, but be aware that you are binding to a fixed "picture" of the data rather than a clean, updating data source.</span></span>  
   
--   <xref:System.Data.DataSet>.  <xref:System.Data.DataSet>은 데이터베이스에 있는 데이터에 대한 테이블, 관계 및 제약 조건의 컬렉션입니다.  데이터 집합 안에 있는 데이터에 단순 바인딩 또는 복합 바인딩할 수 있지만 이것은 <xref:System.Data.DataSet>의 기본 <xref:System.Data.DataViewManager>에 바인딩되는 것입니다\(다음 글머리 기호 참조\).  
+-   <span data-ttu-id="1ba65-143"><xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="1ba65-143"><xref:System.Data.DataSet>.</span></span> <span data-ttu-id="1ba65-144">A <xref:System.Data.DataSet> 는 테이블, 관계 및 제약 조건 데이터베이스의 데이터의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-144">A <xref:System.Data.DataSet> is a collection of tables, relationships, and constraints of the data in a database.</span></span> <span data-ttu-id="1ba65-145">있습니다 수 단순 바인딩할 또는 복잡 한 바인딩은 데이터 집합 내의 데이터에 있지만 기본값을 바인딩하는 점에 유의 <xref:System.Data.DataViewManager> 에 대 한는 <xref:System.Data.DataSet> (다음 글머리 참조).</span><span class="sxs-lookup"><span data-stu-id="1ba65-145">You can simple-bind or complex-bind to the data within a dataset, but be aware that you are binding to the default <xref:System.Data.DataViewManager> for the <xref:System.Data.DataSet> (see the next bullet point).</span></span>  
   
--   <xref:System.Data.DataViewManager>.  <xref:System.Data.DataViewManager>는 전체 <xref:System.Data.DataSet>에 대한 사용자 지정 뷰이며, <xref:System.Data.DataView>와 비슷하지만 관계가 포함됩니다.  <xref:System.Data.DataViewManager.DataViewSettings%2A> 컬렉션을 사용하면 주어진 테이블에 대해 <xref:System.Data.DataViewManager>에서 가지고 있는 모든 뷰에 기본 필터와 정렬 옵션을 설정할 수 있습니다.  
+-   <span data-ttu-id="1ba65-146"><xref:System.Data.DataViewManager>.</span><span class="sxs-lookup"><span data-stu-id="1ba65-146"><xref:System.Data.DataViewManager>.</span></span> <span data-ttu-id="1ba65-147">A <xref:System.Data.DataViewManager> 전체의 사용자 지정된 보기는 <xref:System.Data.DataSet>뷰이며는 <xref:System.Data.DataView>, 비슷하지만 관계가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-147">A <xref:System.Data.DataViewManager> is a customized view of the entire <xref:System.Data.DataSet>, analogous to a <xref:System.Data.DataView>, but with relations included.</span></span> <span data-ttu-id="1ba65-148">와 <xref:System.Data.DataViewManager.DataViewSettings%2A> 컬렉션을 설정할 수 있습니다 기본 필터 및 정렬 옵션에 대 한 모든 뷰는는 <xref:System.Data.DataViewManager> 에 지정된 된 테이블에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ba65-148">With a <xref:System.Data.DataViewManager.DataViewSettings%2A> collection, you can set default filters and sort options for any views that the <xref:System.Data.DataViewManager> has for a given table.</span></span>  
   
-## 참고 항목  
- [Windows Forms 데이터 바인딩의 변경 알림](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)   
- [데이터 바인딩 및 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)   
- [Windows Forms 데이터 바인딩](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a><span data-ttu-id="1ba65-149">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1ba65-149">See Also</span></span>  
+ [<span data-ttu-id="1ba65-150">Windows Forms 데이터 바인딩의 변경 알림</span><span class="sxs-lookup"><span data-stu-id="1ba65-150">Change Notification in Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [<span data-ttu-id="1ba65-151">데이터 바인딩 및 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1ba65-151">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [<span data-ttu-id="1ba65-152">Windows Forms 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="1ba65-152">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)

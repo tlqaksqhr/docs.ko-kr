@@ -1,51 +1,54 @@
 ---
-title: "방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "데이터 계약 [WCF], 클래스 또는 구조체에 대해 만들기"
-  - "DataContractAttribute 클래스"
-  - "DataMemberAttribute"
+title: "방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataMemberAttribute
+- DataContractAttribute class
+- data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-caps.latest.revision: 25
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c5f82e2445e816c4e577e6ce5b0c8c4e2359221
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기
-이 항목에서는 클래스 또는 구조를 사용하여 데이터 계약을 만드는 기본 단계를 보여 줍니다.  데이터 계약 및 사용 방식에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)을 참조하세요.  
+# <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a><span data-ttu-id="c54b5-102">방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기</span><span class="sxs-lookup"><span data-stu-id="c54b5-102">How to: Create a Basic Data Contract for a Class or Structure</span></span>
+<span data-ttu-id="c54b5-103">이 항목에서는 클래스 또는 구조를 사용하여 데이터 계약을 만드는 기본 단계를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-103">This topic shows the basic steps to create a data contract using a class or structure.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c54b5-104">데이터 계약의 계약 및 사용 하는 참조 [를 사용 하 여 데이터 계약](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-104"> data contracts and how they are used, see [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span></span>  
   
- 기본 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 및 클라이언트를 만드는 단계를 안내하는 자습서는 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)를 참조하세요.  기본 서비스 및 클라이언트로 구성된 작업 샘플 응용 프로그램에 대해서는 [기본 데이터 계약](../../../../docs/framework/wcf/samples/basic-data-contract.md)을 참조하세요.  
+ <span data-ttu-id="c54b5-105">만드는 기본 단계를 안내 하는 자습서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 및 클라이언트, 참조는 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-105">For a tutorial that walks through the steps of creating a basic [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service and client, see the [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span> <span data-ttu-id="c54b5-106">기본 서비스와 클라이언트로 구성 된 작업 예제 응용 프로그램을 참조 하십시오. [기본 데이터 계약](../../../../docs/framework/wcf/samples/basic-data-contract.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-106">For a working sample application that consists of a basic service and client, see [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md).</span></span>  
   
-### 클래스 또는 구조체에 대한 기본 데이터 계약을 만들려면  
+### <a name="to-create-a-basic-data-contract-for-a-class-or-structure"></a><span data-ttu-id="c54b5-107">클래스 또는 구조체에 대한 기본 데이터 계약을 만들려면</span><span class="sxs-lookup"><span data-stu-id="c54b5-107">To create a basic data contract for a class or structure</span></span>  
   
-1.  <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 클래스에 적용하여 형식에 데이터 계약이 있음을 선언합니다.  특성이 없는 경우를 비롯한 모든 public 형식을 serialize할 있습니다.  <xref:System.Runtime.Serialization.DataContractAttribute> 특성이 없는 경우 <xref:System.Runtime.Serialization.DataContractSerializer>는 데이터 계약을 유추합니다.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)], [serialize할 수 있는 형식](../../../../docs/framework/wcf/feature-details/serializable-types.md)를 참조하세요.  
+1.  <span data-ttu-id="c54b5-108"><xref:System.Runtime.Serialization.DataContractAttribute> 특성을 클래스에 적용하여 형식에 데이터 계약이 있음을 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-108">Declare that the type has a data contract by applying the <xref:System.Runtime.Serialization.DataContractAttribute> attribute to the class.</span></span> <span data-ttu-id="c54b5-109">특성이 없는 경우를 비롯한 모든 public 형식을 serialize할 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-109">Note that all public types, including those without attributes, are serializable.</span></span> <span data-ttu-id="c54b5-110"><xref:System.Runtime.Serialization.DataContractSerializer> 특성이 없는 경우 <xref:System.Runtime.Serialization.DataContractAttribute>는 데이터 계약을 유추합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-110">The <xref:System.Runtime.Serialization.DataContractSerializer> infers a data contract if the <xref:System.Runtime.Serialization.DataContractAttribute> attribute is absent.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c54b5-111">[Serializable 형식](../../../../docs/framework/wcf/feature-details/serializable-types.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-111"> [Serializable Types](../../../../docs/framework/wcf/feature-details/serializable-types.md).</span></span>  
   
-2.  <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 각 멤버에 적용하여 serialize되는 멤버\(속성, 필드 또는 이벤트\)를 정의합니다.  이러한 멤버를 데이터 멤버라고 합니다.  기본적으로 모든 public 형식을 serialize할 있습니다.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)], [serialize할 수 있는 형식](../../../../docs/framework/wcf/feature-details/serializable-types.md)를 참조하세요.  
+2.  <span data-ttu-id="c54b5-112"><xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 각 멤버에 적용하여 serialize되는 멤버(속성, 필드 또는 이벤트)를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-112">Define the members (properties, fields, or events) that are serialized by applying the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute to each member.</span></span> <span data-ttu-id="c54b5-113">이러한 멤버를 데이터 멤버라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-113">These members are called data members.</span></span> <span data-ttu-id="c54b5-114">기본적으로 모든 public 형식을 serialize할 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-114">By default, all public types are serializable.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c54b5-115">[Serializable 형식](../../../../docs/framework/wcf/feature-details/serializable-types.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-115"> [Serializable Types](../../../../docs/framework/wcf/feature-details/serializable-types.md).</span></span>  
   
     > [!NOTE]
-    >  <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 private 필드에 적용하여 데이터가 다른 사용자에게 노출되게 할 수 있습니다.  멤버에 중요한 데이터가 포함되지 않도록 해야 합니다.  
+    >  <span data-ttu-id="c54b5-116"><xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 private 필드에 적용하여 데이터가 다른 사용자에게 노출되게 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-116">You can apply the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute to private fields, causing the data to be exposed to others.</span></span> <span data-ttu-id="c54b5-117">멤버에 중요한 데이터가 포함되지 않도록 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-117">Be sure that the member does not contain sensitive data.</span></span>  
   
-## 예제  
- 다음 예제에서는 클래스 및 해당 멤버에 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용하여 `Person` 형식의 데이터 계약을 만드는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="c54b5-118">예제</span><span class="sxs-lookup"><span data-stu-id="c54b5-118">Example</span></span>  
+ <span data-ttu-id="c54b5-119">다음 예제에서는 클래스 및 해당 멤버에 `Person` 및 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하여 <xref:System.Runtime.Serialization.DataMemberAttribute> 형식의 데이터 계약을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c54b5-119">The following example shows how to create a data contract for the `Person` type by applying the <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes to the class and its members.</span></span>  
   
  [!code-csharp[DataContractAttribute#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/datacontractattribute/cs/overview.cs#2)]
  [!code-vb[DataContractAttribute#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#2)]  
   
-## 참고 항목  
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)   
- [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+## <a name="see-also"></a><span data-ttu-id="c54b5-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c54b5-120">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ [<span data-ttu-id="c54b5-121">데이터 계약 사용</span><span class="sxs-lookup"><span data-stu-id="c54b5-121">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [<span data-ttu-id="c54b5-122">초보자를 위한 자습서</span><span class="sxs-lookup"><span data-stu-id="c54b5-122">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="c54b5-123">시작</span><span class="sxs-lookup"><span data-stu-id="c54b5-123">Getting Started</span></span>](../../../../docs/framework/wcf/samples/getting-started-sample.md)

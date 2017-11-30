@@ -1,39 +1,39 @@
 ---
-title: "RichTextBox 컨트롤 개요(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RichTextBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "RichTextBox 컨트롤[Windows Forms], RichTextBox 컨트롤 정보"
-  - "텍스트 상자, 텍스트 상자 정보"
+title: "RichTextBox 컨트롤 개요(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RichTextBox
+helpviewer_keywords:
+- RichTextBox control [Windows Forms], about RichTextBox control
+- text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4278f569a789ca6e8466e0b8e71557446b63955e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# RichTextBox 컨트롤 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤은 서식 있는 텍스트를 표시, 입력 및 조작하는 데 사용됩니다.  <xref:System.Windows.Forms.RichTextBox> 컨트롤은 <xref:System.Windows.Forms.TextBox> 컨트롤의 모든 기능을 수행할 뿐만 아니라 글꼴, 색 및 링크를 표시하고, 파일에서 텍스트 및 포함 이미지를 로드하고, 지정된 문자를 검색합니다.  <xref:System.Windows.Forms.RichTextBox> 컨트롤은 대개 텍스트를 조작하고 Microsoft Word와 같은 워드프로세서 응용 프로그램과 유사한 기능을 표시하는 데 사용됩니다.  <xref:System.Windows.Forms.TextBox> 컨트롤처럼 <xref:System.Windows.Forms.RichTextBox> 컨트롤도 스크롤 막대를 표시할 수 있지만 <xref:System.Windows.Forms.TextBox> 컨트롤과 달리 이 컨트롤은 기본적으로 필요에 따라 가로 및 세로 스크롤 막대를 모두 표시하며 스크롤 막대를 추가로 설정할 수도 있습니다.  
+# <a name="richtextbox-control-overview-windows-forms"></a><span data-ttu-id="42814-102">RichTextBox 컨트롤 개요(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="42814-102">RichTextBox Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="42814-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> 표시, 입력, 및 서식이 지정 된 텍스트를 조작 하기 위한 컨트롤을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="42814-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control is used for displaying, entering, and manipulating text with formatting.</span></span> <span data-ttu-id="42814-104"><xref:System.Windows.Forms.RichTextBox> 모든 작업을 수행 하는 컨트롤의 <xref:System.Windows.Forms.TextBox> 컨트롤 포함 하지만 또한 글꼴, 색 및 링크 표시; 파일에서 텍스트 및 포함된 이미지를 로드 및 지정 된 문자를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="42814-104">The <xref:System.Windows.Forms.RichTextBox> control does everything the <xref:System.Windows.Forms.TextBox> control does, but it can also display fonts, colors, and links; load text and embedded images from a file; and find specified characters.</span></span> <span data-ttu-id="42814-105"><xref:System.Windows.Forms.RichTextBox> 컨트롤은 일반적으로 텍스트를 조작 하 고 Microsoft Word와 같은 워드 프로세싱 응용 프로그램과 유사한 기능을 표시 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="42814-105">The <xref:System.Windows.Forms.RichTextBox> control is typically used to provide text manipulation and display features similar to word processing applications such as Microsoft Word.</span></span> <span data-ttu-id="42814-106">와 같은 <xref:System.Windows.Forms.TextBox> 컨트롤은 <xref:System.Windows.Forms.RichTextBox> 컨트롤; 스크롤 막대를 표시할 수 있습니다 하지만 달리는 <xref:System.Windows.Forms.TextBox> 필요에 따라 가로 및 세로 스크롤 막대를 표시 하는 컨트롤을 기본 설정인 것 이며 추가적인 스크롤 막대 설정이 합니다.</span><span class="sxs-lookup"><span data-stu-id="42814-106">Like the <xref:System.Windows.Forms.TextBox> control, the <xref:System.Windows.Forms.RichTextBox> control can display scroll bars; but unlike the <xref:System.Windows.Forms.TextBox> control, its default setting is to display both horizontal and vertical scrollbars as needed, and it has additional scrollbar settings.</span></span>  
   
-## RichTextBox 컨트롤 작업  
- <xref:System.Windows.Forms.TextBox> 컨트롤에서처럼 <xref:System.Windows.Forms.RichTextBox.Text%2A> 속성을 통해 표시할 텍스트를 설정합니다.  <xref:System.Windows.Forms.RichTextBox> 컨트롤에는 텍스트 서식 지정에 사용되는 많은 속성이 포함되어 있습니다.  이러한 속성에 대한 자세한 내용은 [방법: Windows Forms RichTextBox 컨트롤의 글꼴 특성 설정](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) 및 [방법: Windows Forms RichTextBox 컨트롤을 사용하여 들여쓰기, 내어쓰기 및 글머리 기호 단락 설정](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)을 참조하십시오.  파일 조작을 위해 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 및 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 메서드는 일반 텍스트, 유니코드 일반 텍스트 및 RTF\(서식 있는 텍스트\)를 포함한 여러 종류의 파일 형식을 표시하고 작성할 수 있습니다.  사용 가능한 파일 형식은 [RichTextBoxStreamType 열거형](frlrfSystemWindowsFormsRichTextBoxStreamTypeClassTopic)에 나열되어 있습니다.  <xref:System.Windows.Forms.RichTextBox.Find%2A> 메서드를 사용하여 텍스트 문자열이나 특정 문자를 찾을 수 있습니다.  
+## <a name="working-with-the-richtextbox-control"></a><span data-ttu-id="42814-107">RichTextBox 컨트롤 작업</span><span class="sxs-lookup"><span data-stu-id="42814-107">Working with the RichTextBox Control</span></span>  
+ <span data-ttu-id="42814-108">와 마찬가지로 <xref:System.Windows.Forms.TextBox> 컨트롤, 표시 되는 텍스트 설정 된 <xref:System.Windows.Forms.RichTextBox.Text%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="42814-108">As with the <xref:System.Windows.Forms.TextBox> control, the text displayed is set by the <xref:System.Windows.Forms.RichTextBox.Text%2A> property.</span></span> <span data-ttu-id="42814-109"><xref:System.Windows.Forms.RichTextBox> 컨트롤에 텍스트 서식을 지정 하려면 다양 한 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="42814-109">The <xref:System.Windows.Forms.RichTextBox> control has numerous properties to format text.</span></span> <span data-ttu-id="42814-110">이러한 속성에 대한 자세한 내용은 [방법: Windows Forms RichTextBox 컨트롤의 글꼴 특성 설정](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) 및 [방법: Windows Forms RichTextBox 컨트롤을 사용하여 들여쓰기, 내어쓰기 및 글머리 기호 단락 설정](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="42814-110">For details on these properties, see [How to: Set Font Attributes for the Windows Forms RichTextBox Control](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) and [How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md).</span></span> <span data-ttu-id="42814-111">파일을 조작 하는 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 및 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 메서드를 표시 하 고 일반 텍스트, 유니코드 일반 텍스트 및 서식 있는 텍스트 형식 (RTF)를 비롯 한 여러 가지 파일 형식을 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="42814-111">To manipulate files, the <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> and <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> methods can display and write multiple file formats including plain text, Unicode plain text, and Rich Text Format (RTF).</span></span> <span data-ttu-id="42814-112">가능한 파일 형식은 같거나 <xref:System.Windows.Forms.RichTextBoxStreamType>합니다.</span><span class="sxs-lookup"><span data-stu-id="42814-112">The possible file formats are listed in <xref:System.Windows.Forms.RichTextBoxStreamType>.</span></span> <span data-ttu-id="42814-113">사용할 수는 <xref:System.Windows.Forms.RichTextBox.Find%2A> 메서드 특정 문자 또는 텍스트 문자열을 찾으려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="42814-113">You can use the <xref:System.Windows.Forms.RichTextBox.Find%2A> method to find strings of text or specific characters.</span></span>  
   
- 또한 <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 속성을 `true`로 설정하고 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 이벤트 처리 코드를 작성하여 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 웹 스타일 링크에 대해 사용할 수 있습니다.  자세한 내용은 [방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)를 참조하십시오.  <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> 속성을 `true`로 설정하여 사용자가 컨트롤의 전체 또는 일부 텍스트를 조작하지 못하도록 할 수 있습니다.  
+ <span data-ttu-id="42814-114">사용할 수도 있습니다는 <xref:System.Windows.Forms.RichTextBox> 설정 하 여 웹 스타일 링크에 대 한 제어는 <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 속성을 `true` 처리 코드를 작성 하 고는 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="42814-114">You can also use a <xref:System.Windows.Forms.RichTextBox> control for Web-style links by setting the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property to `true` and writing code to handle the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event.</span></span> <span data-ttu-id="42814-115">자세한 내용은 [방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="42814-115">For more information, see [How to: Display Web-Style Links with the Windows Forms RichTextBox Control](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md).</span></span> <span data-ttu-id="42814-116">컨트롤에서 텍스트의 일부 또는 전부를 설정 하 여 조작에서 사용자를 방지할 수 있습니다는 <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="42814-116">You can prevent the user from manipulating some or all of the text in the control by setting the <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> property to `true`.</span></span>  
   
- <xref:System.Windows.Forms.TextBoxBase.Undo%2A> 및 <xref:System.Windows.Forms.RichTextBox.Redo%2A> 메서드를 호출하여 <xref:System.Windows.Forms.RichTextBox> 컨트롤에서 수행한 대부분의 편집 작업을 실행 취소하거나 다시 실행할 수 있습니다.  <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> 메서드를 사용하면 사용자가 실행 취소한 마지막 작업을 해당 컨트롤에 다시 적용할 수 있는지 여부를 확인할 수 있습니다.  
+ <span data-ttu-id="42814-117">실행 취소 하 고에서 대부분의 편집 작업을 다시 실행 한 <xref:System.Windows.Forms.RichTextBox> 호출 하 여 컨트롤의 <xref:System.Windows.Forms.TextBoxBase.Undo%2A> 및 <xref:System.Windows.Forms.RichTextBox.Redo%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="42814-117">You can undo and redo most edit operations in a <xref:System.Windows.Forms.RichTextBox> control by calling the <xref:System.Windows.Forms.TextBoxBase.Undo%2A> and <xref:System.Windows.Forms.RichTextBox.Redo%2A> methods.</span></span> <span data-ttu-id="42814-118"><xref:System.Windows.Forms.RichTextBox.CanRedo%2A> 메서드를 사용 하면 컨트롤에는 사용자가 실행 취소 마지막 작업을 다시 적용할 수 있는지 여부를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="42814-118">The <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> method enables you to determine whether the last operation the user has undone can be reapplied to the control.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox 컨트롤](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [TextBox 컨트롤 개요](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="42814-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="42814-119">See Also</span></span>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [<span data-ttu-id="42814-120">RichTextBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="42814-120">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="42814-121">TextBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="42814-121">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)

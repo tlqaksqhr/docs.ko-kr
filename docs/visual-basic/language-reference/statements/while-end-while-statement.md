@@ -1,100 +1,98 @@
 ---
-title: "While...End While Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.While"
-  - "vb.While...EndWhile"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "While statement, While...End While"
-  - "While statement"
-  - "While...End While statements"
+title: "While...End While 문(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.While
+- vb.While...EndWhile
+helpviewer_keywords:
+- While statement [Visual Basic], While...End While
+- While statement [Visual Basic]
+- While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# While...End While Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-지정한 조건이 `True`인 동안 일련의 문을 계속 실행합니다.  
+# <a name="whileend-while-statement-visual-basic"></a><span data-ttu-id="b71b9-102">While...End While 문(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b71b9-102">While...End While Statement (Visual Basic)</span></span>
+<span data-ttu-id="b71b9-103">지정한 조건이으로 일련의 문 실행 `True`합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-103">Runs a series of statements as long as a given condition is `True`.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="b71b9-104">구문</span><span class="sxs-lookup"><span data-stu-id="b71b9-104">Syntax</span></span>  
   
 ```  
 While condition  
-    [ statements ]  
+    [ statements ]  
     [ Continue While ]  
     [ statements ]  
-    [ Exit While ]  
-    [ statements ]  
+    [ Exit While ]  
+    [ statements ]  
 End While  
 ```  
   
-## 요소  
+## <a name="parts"></a><span data-ttu-id="b71b9-105">요소</span><span class="sxs-lookup"><span data-stu-id="b71b9-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|용어|정의|  
-|`condition`|필수 요소.  `Boolean` 식입니다.  `condition`이 `Nothing`이면 Visual Basic에서 `False`로 간주합니다.|  
-|`statements`|선택 사항입니다.  `While` 다음에 오는 하나 이상의 문이며 `condition`이 `True`일 때마다 실행됩니다.|  
-|`Continue While`|선택 사항입니다.  다음 반복으로 제어를 전달 된 `While` 블록.|  
-|`Exit While`|선택 사항입니다.  `While` 블록의 외부로 제어를 전송합니다.|  
-|`End While`|필수 요소.  이 `While` 블록의 정의를 마칩니다.|  
+|<span data-ttu-id="b71b9-106">용어</span><span class="sxs-lookup"><span data-stu-id="b71b9-106">Term</span></span>|<span data-ttu-id="b71b9-107">정의</span><span class="sxs-lookup"><span data-stu-id="b71b9-107">Definition</span></span>|  
+|---|---|  
+|`condition`|<span data-ttu-id="b71b9-108">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="b71b9-108">Required.</span></span> <span data-ttu-id="b71b9-109">`Boolean`식입니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-109">`Boolean` expression.</span></span> <span data-ttu-id="b71b9-110">경우 `condition` 은 `Nothing`, Visual Basic로 처리 `False`합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-110">If `condition` is `Nothing`, Visual Basic treats it as `False`.</span></span>|  
+|`statements`|<span data-ttu-id="b71b9-111">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-111">Optional.</span></span> <span data-ttu-id="b71b9-112">하나 이상의 문 다음 `While`, 때마다 실행 `condition` 은 `True`합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-112">One or more statements following `While`, which run every time `condition` is `True`.</span></span>|  
+|`Continue While`|<span data-ttu-id="b71b9-113">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-113">Optional.</span></span> <span data-ttu-id="b71b9-114">다음 반복으로 제어를 전달는 `While` 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-114">Transfers control to the next iteration of the `While` block.</span></span>|  
+|`Exit While`|<span data-ttu-id="b71b9-115">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-115">Optional.</span></span> <span data-ttu-id="b71b9-116">밖으로 제어를 전송에서 `While` 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-116">Transfers control out of the `While` block.</span></span>|  
+|`End While`|<span data-ttu-id="b71b9-117">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="b71b9-117">Required.</span></span> <span data-ttu-id="b71b9-118">`While` 블록의 정의를 종료합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-118">Terminates the definition of the `While` block.</span></span>|  
   
-## 설명  
- 조건이 `True`인 동안 문을 무한히 반복하려면 `While...End While` 구조를 사용합니다.  조건을 테스트하는 위치나 테스트 결과에 융통성을 주려면 [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)을 사용하는 것이 보다 나을 수도 있습니다.  문을 지정된 횟수만큼 반복하려면 [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)을 사용하는 것이 좋습니다.  
+## <a name="remarks"></a><span data-ttu-id="b71b9-119">설명</span><span class="sxs-lookup"><span data-stu-id="b71b9-119">Remarks</span></span>  
+ <span data-ttu-id="b71b9-120">사용 하 여 한 `While...End While` 조건이으로 문을 번 무한히 반복 하려는 경우 구조체 `True`합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-120">Use a `While...End While` structure when you want to repeat a set of statements an indefinite number of times, as long as a condition remains `True`.</span></span> <span data-ttu-id="b71b9-121">조건을 테스트 하는 위치 또는 결과 합니다 유연한이 할 것에 대 한 테스트 하려는 경우는 [수행... 문은 루프](../../../visual-basic/language-reference/statements/do-loop-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-121">If you want more flexibility with where you test the condition or what result you test it for, you might prefer the [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).</span></span> <span data-ttu-id="b71b9-122">문을 횟수 만큼 반복 하려는 경우는 [에 대 한... 다음 문](../../../visual-basic/language-reference/statements/for-next-statement.md) 일반적으로 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-122">If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.</span></span>  
   
 > [!NOTE]
->  `While` 키워드는 [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md), [Skip While Clause](../../../visual-basic/language-reference/queries/skip-while-clause.md) 및 [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md)에서도 사용됩니다.  
+>  <span data-ttu-id="b71b9-123">`While` 키워드는 또한는 [수행... 문은 루프](../../../visual-basic/language-reference/statements/do-loop-statement.md), [Skip While 절](../../../visual-basic/language-reference/queries/skip-while-clause.md) 및 [Take While 절](../../../visual-basic/language-reference/queries/take-while-clause.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-123">The `While` keyword is also used in the [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md), the [Skip While Clause](../../../visual-basic/language-reference/queries/skip-while-clause.md) and the [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md).</span></span>  
   
- `condition`이 `True`이면 `End While` 문이 나타날 때까지 모든 `statements`가 실행됩니다.  제어를 반환 하는 `While` 문 및 `condition` 다시 검사 됩니다.  `condition`이 계속 `True`이면 해당 프로세스가 반복되고  경우 `False`, 다음에 오는 문에 전달 제어는 `End While` 문.  
+ <span data-ttu-id="b71b9-124">경우 `condition` 은 `True`모든의 `statements` 실행 될 때까지 `End While` 문이 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-124">If `condition` is `True`, all of the `statements` run until the `End While` statement is encountered.</span></span> <span data-ttu-id="b71b9-125">돌아올 제어는 `While` 문, 및 `condition` 를 다시 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-125">Control then returns to the `While` statement, and `condition` is again checked.</span></span> <span data-ttu-id="b71b9-126">경우 `condition` 여전히 `True`, 프로세스를 반복 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-126">If `condition` is still `True`, the process is repeated.</span></span> <span data-ttu-id="b71b9-127">설정한 경우 `False`, 제어 뒤에 오는 문으로 전달은 `End While` 문.</span><span class="sxs-lookup"><span data-stu-id="b71b9-127">If it’s `False`, control passes to the statement that follows the `End While` statement.</span></span>  
   
- `While` 문은 항상 루프를 시작 하기 전에 조건을 검사 합니다.  조건이 `True`인 동안 루프가 계속 실행됩니다.  경우 `condition` 는 `False` 루프를 처음 입력할 때 한 번도 실행 되지 않습니다.  
+ <span data-ttu-id="b71b9-128">`While` 문은 항상 루프를 시작 하기 전에 조건을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-128">The `While` statement always checks the condition before it starts the loop.</span></span> <span data-ttu-id="b71b9-129">조건이 동안 계속 반복 `True`합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-129">Looping continues while the condition remains `True`.</span></span> <span data-ttu-id="b71b9-130">경우 `condition` 은 `False` 루프 처음 입력할 때 실행 되는 한 번도 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-130">If `condition` is `False` when you first enter the loop, it doesn’t run even once.</span></span>  
   
- `condition` 일반적으로 있지만 두 값의 결과를 비교 평가 되는 식 수는 [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) 값 \(`True` 또는 `False`\).  이 식은 숫자 형식으로 변환 된 다른 데이터 형식의 값을 포함할 수 있습니다 `Boolean`.  
+ <span data-ttu-id="b71b9-131">`condition` 일반적으로 두 값의 비교 결과로 계산 되는 식일 수는 [Boolean 데이터 형식](../../../visual-basic/language-reference/data-types/boolean-data-type.md) 값 (`True` 또는 `False`).</span><span class="sxs-lookup"><span data-stu-id="b71b9-131">The `condition` usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`).</span></span> <span data-ttu-id="b71b9-132">이 식은로 변환 된 하는 숫자 형식과 같은 다른 데이터 형식의 값을 포함할 수 있습니다 `Boolean`합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-132">This expression can include a value of another data type, such as a numeric type, that has been converted to `Boolean`.</span></span>  
   
- 한 루프를 다른 루프 내에 배치하여 `While` 루프를 서로 중첩할 수 있습니다.  또한 하나의 With...End With 구조 내에 다른 종류의 제어 구조를 중첩할 수 있습니다.  자세한 내용은 [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)를 참조하십시오.  
+ <span data-ttu-id="b71b9-133">중첩할 수 `While` 서로 배치 하 여 루프입니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-133">You can nest `While` loops by placing one loop within another.</span></span> <span data-ttu-id="b71b9-134">또한 다른 종류의 제어 구조를 중첩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-134">You can also nest different kinds of control structures within one another.</span></span> <span data-ttu-id="b71b9-135">자세한 내용은 참조 [중첩 제어 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-135">For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).</span></span>  
   
-## 종료 하는 동안  
- [를 종료 하는 동안](../../../visual-basic/language-reference/statements/exit-statement.md) 문을 종료 하는 다른 방법으로 제공할 수 있습니다는 `While` 루프.  `Exit While`바로 다음에 오는 문으로 제어를 전달 된 `End While` 문.  
+## <a name="exit-while"></a><span data-ttu-id="b71b9-136">종료 하는 동안</span><span class="sxs-lookup"><span data-stu-id="b71b9-136">Exit While</span></span>  
+ <span data-ttu-id="b71b9-137">[종료 동안](../../../visual-basic/language-reference/statements/exit-statement.md) 문을 종료 하는 다른 방법은 제공할 수는 `While` 루프입니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-137">The [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide another way to exit a `While` loop.</span></span> <span data-ttu-id="b71b9-138">`Exit While`바로 뒤에 오는 문으로 제어를 전송에서 `End While` 문.</span><span class="sxs-lookup"><span data-stu-id="b71b9-138">`Exit While` immediately transfers control to the statement that follows the `End While` statement.</span></span>  
   
- 일반적으로 사용 `Exit While` 일부 조건을 계산 하면 \(예를 들어,는 `If...Then...Else` 구조\).  예를 들어, 잘못된 값이나 종료 요청과 같이 계속 반복할 필요가 없거나 반복할 수 없는 조건을 발견하면 루프를 끝내야 할 수 있습니다.  사용할 수 있는 `Exit While` 인해 조건에 대 한 테스트는  *무한 루프*, 루프는 매우 크고도 무한 횟수 만큼 실행 될 수 있는.  다음 `Exit While` 루프를.  
+ <span data-ttu-id="b71b9-139">일반적으로 사용 `Exit While` 일부 조건이 계산 된 후 (예를 들어 한 `If...Then...Else` 구조).</span><span class="sxs-lookup"><span data-stu-id="b71b9-139">You typically use `Exit While` after some condition is evaluated (for example, in an `If...Then...Else` structure).</span></span> <span data-ttu-id="b71b9-140">불필요 하거나 잘못 된 값 이나 종료 요청 같이 계속 반복할 수 있게 해 주는 조건을 발견 하면 루프를 끝낼 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-140">You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request.</span></span> <span data-ttu-id="b71b9-141">사용할 수 있습니다 `Exit While` 를 일으킬 수 있는 조건에 대 한 테스트는 *무한 루프*, 상태가 매우 크거나 무한도 가능 여러 번 실행 될 수 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-141">You can use `Exit While` when you test for a condition that could cause an *endless loop*, which is a loop that could run an extremely large or even infinite number of times.</span></span> <span data-ttu-id="b71b9-142">사용할 수 있습니다 `Exit While` 루프를 이스케이프 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-142">You can then use `Exit While` to escape the loop.</span></span>  
   
- `While` 루프 어디서나 많은 `Exit While` 문을 배치할 수 있습니다.  
+ <span data-ttu-id="b71b9-143">개수에 관계 없이 배치할 수 `Exit While` 의 아무 곳 이나 문에서 `While` 루프입니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-143">You can place any number of `Exit While` statements anywhere in the `While` loop.</span></span>  
   
- 중첩된 `While` 루프 내에 `Exit While`를 사용하면 Exit Do는 가장 안쪽 루프 밖의 제어를 중첩 수준이 그 다음으로 높은 루프에 전달합니다.  
+ <span data-ttu-id="b71b9-144">사용할 경우 내에 중첩 `While` 루프, `Exit While` 제어 하며 다음 상위 수준의 중첩이 가장 안쪽 루프 밖으로 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-144">When used within nested `While` loops, `Exit While` transfers control out of the innermost loop and into the next higher level of nesting.</span></span>  
   
- `Continue While` 문은 즉시 전송 제어 루프의 다음 반복으로 합니다.  자세한 내용은 [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md)를 참조하십시오.  
+ <span data-ttu-id="b71b9-145">`Continue While` 문은 루프의 다음 반복으로 즉시 제어를 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-145">The `Continue While` statement immediately transfers control to the next iteration of the loop.</span></span> <span data-ttu-id="b71b9-146">자세한 내용은 참조 [Continue 문을](../../../visual-basic/language-reference/statements/continue-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-146">For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).</span></span>  
   
-## 예제  
- 다음 예에서 루프의 문은 `index` 변수가 10보다 커질 때까지 계속 실행됩니다.  
+## <a name="example"></a><span data-ttu-id="b71b9-147">예제</span><span class="sxs-lookup"><span data-stu-id="b71b9-147">Example</span></span>  
+ <span data-ttu-id="b71b9-148">다음 예제에서는 루프에서 계속 실행 될 때까지 `index` 변수 10 보다 큽니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-148">In the following example, the statements in the loop continue to run until the `index` variable is greater than 10.</span></span>  
   
  [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
   
-## 예제  
- 다음 예제에서는 `Continue While` 및 `Exit While` 문을 사용하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="b71b9-149">예제</span><span class="sxs-lookup"><span data-stu-id="b71b9-149">Example</span></span>  
+ <span data-ttu-id="b71b9-150">다음 예제에서는 `Continue While` 및 `Exit While` 문.</span><span class="sxs-lookup"><span data-stu-id="b71b9-150">The following example illustrates the use of the `Continue While` and `Exit While` statements.</span></span>  
   
  [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
   
-## 예제  
- 다음 예제에서는 텍스트 파일의 모든 줄을 읽습니다.  <xref:System.IO.File.OpenText%2A> 메서드는 파일을 열고 문자를 읽는 <xref:System.IO.StreamReader>를 반환합니다.  에 `While` 조건을 <xref:System.IO.StreamReader.Peek%2A> 메서드는 `StreamReader` 파일 추가 문자가 포함 되어 있는지 여부를 결정.  
+## <a name="example"></a><span data-ttu-id="b71b9-151">예제</span><span class="sxs-lookup"><span data-stu-id="b71b9-151">Example</span></span>  
+ <span data-ttu-id="b71b9-152">다음 예제에서는 텍스트 파일에 있는 모든 줄을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-152">The following example reads all lines in a text file.</span></span> <span data-ttu-id="b71b9-153"><xref:System.IO.File.OpenText%2A> 메서드는 파일을 열고 반환는 <xref:System.IO.StreamReader> 는 문자를 읽는 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-153">The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters.</span></span> <span data-ttu-id="b71b9-154">에 `While` 조건은 <xref:System.IO.StreamReader.Peek%2A> 의 메서드는 `StreamReader` 파일에 추가 문자가 포함 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="b71b9-154">In the `While` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether the file contains additional characters.</span></span>  
   
  [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
   
-## 참고 항목  
- [Loop Structures](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md)   
- [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md)
+## <a name="see-also"></a><span data-ttu-id="b71b9-155">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b71b9-155">See Also</span></span>  
+ [<span data-ttu-id="b71b9-156">루프 구조</span><span class="sxs-lookup"><span data-stu-id="b71b9-156">Loop Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [<span data-ttu-id="b71b9-157">Do...Loop 문</span><span class="sxs-lookup"><span data-stu-id="b71b9-157">Do...Loop Statement</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [<span data-ttu-id="b71b9-158">For...Next 문</span><span class="sxs-lookup"><span data-stu-id="b71b9-158">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [<span data-ttu-id="b71b9-159">Boolean 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="b71b9-159">Boolean Data Type</span></span>](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
+ [<span data-ttu-id="b71b9-160">중첩 제어 구조</span><span class="sxs-lookup"><span data-stu-id="b71b9-160">Nested Control Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [<span data-ttu-id="b71b9-161">Exit 문</span><span class="sxs-lookup"><span data-stu-id="b71b9-161">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="b71b9-162">Continue 문</span><span class="sxs-lookup"><span data-stu-id="b71b9-162">Continue Statement</span></span>](../../../visual-basic/language-reference/statements/continue-statement.md)

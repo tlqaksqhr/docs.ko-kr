@@ -5,67 +5,64 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c0eaafec80dbd7aa9b32c89a2d73a0fc444fb0bf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1788300407ad84a5ff7e3929eaa728f5399961ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
-문자 인코딩을 지정하는 옵션을 사용하여 메시지 인코딩을 바이트 스트림으로 지정합니다.  
+# <a name="ltbytestreammessageencodinggt"></a><span data-ttu-id="205d4-102">&lt;byteStreamMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="205d4-102">&lt;byteStreamMessageEncoding&gt;</span></span>
+<span data-ttu-id="205d4-103">문자 인코딩을 지정하는 옵션을 사용하여 메시지 인코딩을 바이트 스트림으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="205d4-103">Specifies the message encoding as a stream of bytes, with the option to specify the character encoding.</span></span>  
   
- \<system.serviceModel >  
-\<바인딩 >  
-\<customBinding >  
-\<바인딩 >  
-\<binaryMessageEncoding >  
+ <span data-ttu-id="205d4-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="205d4-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="205d4-105">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="205d4-105">\<bindings></span></span>  
+<span data-ttu-id="205d4-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="205d4-106">\<customBinding></span></span>  
+<span data-ttu-id="205d4-107">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="205d4-107">\<binding></span></span>  
+<span data-ttu-id="205d4-108">\<binaryMessageEncoding ></span><span class="sxs-lookup"><span data-stu-id="205d4-108">\<binaryMessageEncoding></span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="205d4-109">구문</span><span class="sxs-lookup"><span data-stu-id="205d4-109">Syntax</span></span>  
   
 ```xml  
 <byteStreamMessageEncoding/>  
 ```  
   
-## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="205d4-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="205d4-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="205d4-111">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="205d4-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>특성  
+### <a name="attributes"></a><span data-ttu-id="205d4-112">특성</span><span class="sxs-lookup"><span data-stu-id="205d4-112">Attributes</span></span>  
   
-|특성|설명|  
+|<span data-ttu-id="205d4-113">특성</span><span class="sxs-lookup"><span data-stu-id="205d4-113">Attribute</span></span>|<span data-ttu-id="205d4-114">설명</span><span class="sxs-lookup"><span data-stu-id="205d4-114">Description</span></span>|  
 |---------------|-----------------|  
-|messageVersion|바인딩을 사용하여 보낸 메시지의 SOAP 버전을 지정합니다. 이 속성은 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>의 메시지 버전 값으로만 설정할 수 있습니다. 바이트 스트림 메시지 인코더는 다른 메시지 버전을 지원하지 않습니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.Channels.MessageVersion> 형식입니다.|  
+|<span data-ttu-id="205d4-115">messageVersion</span><span class="sxs-lookup"><span data-stu-id="205d4-115">messageVersion</span></span>|<span data-ttu-id="205d4-116">바인딩을 사용하여 보낸 메시지의 SOAP 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="205d4-116">Specifies the SOAP version of the messages sent using the binding.</span></span> <span data-ttu-id="205d4-117">이 속성은 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>의 메시지 버전 값으로만 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="205d4-117">This property can only be set to the message version value of <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span> <span data-ttu-id="205d4-118">바이트 스트림 메시지 인코더는 다른 메시지 버전을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="205d4-118">The byte stream message encoder does not support any other message versions.</span></span><br /><br /> <span data-ttu-id="205d4-119">이 특성은 <xref:System.ServiceModel.Channels.MessageVersion> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="205d4-119">This attribute is of type <xref:System.ServiceModel.Channels.MessageVersion>.</span></span>|  
   
-### <a name="child-elements"></a>자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="205d4-120">자식 요소</span><span class="sxs-lookup"><span data-stu-id="205d4-120">Child Elements</span></span>  
   
-|요소|설명|  
+|<span data-ttu-id="205d4-121">요소</span><span class="sxs-lookup"><span data-stu-id="205d4-121">Element</span></span>|<span data-ttu-id="205d4-122">설명</span><span class="sxs-lookup"><span data-stu-id="205d4-122">Description</span></span>|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|이 바인딩으로 구성된 끝점에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
+|[<span data-ttu-id="205d4-123">\<readerQuotas ></span><span class="sxs-lookup"><span data-stu-id="205d4-123">\<readerQuotas></span></span>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="205d4-124">이 바인딩으로 구성된 끝점에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="205d4-124">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="205d4-125">이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="205d4-125">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a>부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="205d4-126">부모 요소</span><span class="sxs-lookup"><span data-stu-id="205d4-126">Parent Elements</span></span>  
   
-|요소|설명|  
+|<span data-ttu-id="205d4-127">요소</span><span class="sxs-lookup"><span data-stu-id="205d4-127">Element</span></span>|<span data-ttu-id="205d4-128">설명</span><span class="sxs-lookup"><span data-stu-id="205d4-128">Description</span></span>|  
 |-------------|-----------------|  
-|[\<바인딩 >](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|[<span data-ttu-id="205d4-129">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="205d4-129">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="205d4-130">사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="205d4-130">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>   
- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>   
- [메시지 인코딩](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)   
- [메시지 인코더 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-
+## <a name="see-also"></a><span data-ttu-id="205d4-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="205d4-131">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+ <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>  
+ [<span data-ttu-id="205d4-132">메시지 인코딩</span><span class="sxs-lookup"><span data-stu-id="205d4-132">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
+ [<span data-ttu-id="205d4-133">메시지 인코더 선택</span><span class="sxs-lookup"><span data-stu-id="205d4-133">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [<span data-ttu-id="205d4-134">바인딩</span><span class="sxs-lookup"><span data-stu-id="205d4-134">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="205d4-135">바인딩 확장</span><span class="sxs-lookup"><span data-stu-id="205d4-135">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="205d4-136">사용자 지정 바인딩</span><span class="sxs-lookup"><span data-stu-id="205d4-136">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="205d4-137">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="205d4-137">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

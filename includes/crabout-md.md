@@ -1,1 +1,1 @@
-추가 정보
+<span data-ttu-id="c46c9-101">추가 정보</span><span class="sxs-lookup"><span data-stu-id="c46c9-101">For more information about</span></span>

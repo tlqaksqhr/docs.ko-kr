@@ -1,106 +1,105 @@
 ---
-title: "LINQ to Entities | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: LINQ to Entities
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 685651f4291a11b857da82a63068e4bd2333275c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to Entities
-LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C\#을 사용하여 Entity Framework 개념적 모델에 대한 쿼리를 작성할 수 있도록 해 주는 LINQ\(Language\-Integrated Query\) 지원을 제공합니다.  Entity Framework에 대한 쿼리는 개체 컨텍스트에 대해 실행되는 명령 트리 쿼리로 표현됩니다.  LINQ to Entities는 LINQ\(Language\-Integrated Query\) 쿼리를 명령 트리 쿼리로 변환하여 Entity Framework에 대해 실행한 다음 Entity Framework와 LINQ에서 모두 사용할 수 있는 개체를 반환합니다.  다음은 LINQ to Entities 쿼리를 만들고 실행하는 프로세스입니다.  
+# <a name="linq-to-entities"></a><span data-ttu-id="8ef0c-102">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="8ef0c-102">LINQ to Entities</span></span>
+<span data-ttu-id="8ef0c-103">LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용하여 Entity Framework 개념적 모델에 대한 쿼리를 작성할 수 있도록 해 주는 LINQ(Language-Integrated Query) 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-103">LINQ to Entities provides Language-Integrated Query (LINQ) support that enables developers to write queries against the Entity Framework conceptual model using Visual Basic or Visual C#.</span></span> <span data-ttu-id="8ef0c-104">Entity Framework에 대한 쿼리는 개체 컨텍스트에 대해 실행되는 명령 트리 쿼리로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-104">Queries against the Entity Framework are represented by command tree queries, which execute against the object context.</span></span> <span data-ttu-id="8ef0c-105">LINQ to Entities는 LINQ(Language-Integrated Query) 쿼리를 명령 트리 쿼리로 변환하여 Entity Framework에 대해 실행한 다음 Entity Framework와 LINQ에서 모두 사용할 수 있는 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-105">LINQ to Entities converts Language-Integrated Queries (LINQ) queries to command tree queries, executes the queries against the Entity Framework, and returns objects that can be used by both the Entity Framework and LINQ.</span></span> <span data-ttu-id="8ef0c-106">다음은 LINQ to Entities 쿼리를 만들고 실행하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-106">The following is the process for creating and executing a LINQ to Entities query:</span></span>  
   
-1.  <xref:System.Data.Objects.ObjectContext>에서 <xref:System.Data.Objects.ObjectQuery%601> 인스턴스를 생성합니다.  
+1.  <span data-ttu-id="8ef0c-107"><xref:System.Data.Objects.ObjectQuery%601>에서 <xref:System.Data.Objects.ObjectContext> 인스턴스를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-107">Construct an <xref:System.Data.Objects.ObjectQuery%601> instance from <xref:System.Data.Objects.ObjectContext>.</span></span>  
   
-2.  <xref:System.Data.Objects.ObjectQuery%601> 인스턴스를 사용하여 LINQ to Entities 쿼리를 C\# 또는 Visual Basic으로 작성합니다.  
+2.  <span data-ttu-id="8ef0c-108"><xref:System.Data.Objects.ObjectQuery%601> 인스턴스를 사용하여 LINQ to Entities 쿼리를 C# 또는 Visual Basic으로 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-108">Compose a LINQ to Entities query in C# or Visual Basic by using the <xref:System.Data.Objects.ObjectQuery%601> instance.</span></span>  
   
-3.  LINQ 표준 쿼리 연산자 및 식을 명령 트리로 변환합니다.  
+3.  <span data-ttu-id="8ef0c-109">LINQ 표준 쿼리 연산자 및 식을 명령 트리로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-109">Convert LINQ standard query operators and expressions to command trees.</span></span>  
   
-4.  명령 트리 표현에서 데이터 소스에 대해 쿼리를 실행합니다.  실행 중에 데이터 소스에서 throw되는 모든 예외는 클라이언트에게 직접 전달됩니다.  
+4.  <span data-ttu-id="8ef0c-110">명령 트리 표현에서 데이터 소스에 대해 쿼리를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-110">Execute the query, in command tree representation, against the data source.</span></span> <span data-ttu-id="8ef0c-111">실행 중에 데이터 소스에서 throw되는 모든 예외는 클라이언트에게 직접 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-111">Any exceptions thrown on the data source during execution are passed directly up to the client.</span></span>  
   
-5.  쿼리 결과를 다시 클라이언트에 반환합니다.  
+5.  <span data-ttu-id="8ef0c-112">쿼리 결과를 다시 클라이언트에 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-112">Return query results back to the client.</span></span>  
   
-## ObjectQuery 인스턴스 생성  
- <xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 0개 이상의 형식화된 엔터티로 구성된 컬렉션을 반환하는 쿼리를 나타냅니다.  개체 쿼리는 수동으로 생성되는 대신 일반적으로 기존 개체 컨텍스트에서 생성되며 항상 해당 개체 컨텍스트에 속합니다.  이 컨텍스트는 쿼리를 작성하고 실행하는 데 필요한 연결 및 메타데이터 정보를 제공합니다.  <xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 LINQ 쿼리를 증분 빌드할 수 있는 작성기 메서드를 가지고 있는 <xref:System.Linq.IQueryable%601> 제네릭 인터페이스를 구현합니다.  C\# `var` 키워드\(Visual Basic에서는 로컬 형식 유추가 가능한 경우 `Dim`\)를 사용하여 컴파일러에서 엔터티 형식을 유추하도록 할 수도 있습니다.  
+## <a name="constructing-an-objectquery-instance"></a><span data-ttu-id="8ef0c-113">ObjectQuery 인스턴스 생성</span><span class="sxs-lookup"><span data-stu-id="8ef0c-113">Constructing an ObjectQuery Instance</span></span>  
+ <span data-ttu-id="8ef0c-114"><xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 0개 이상의 형식화된 엔터티로 구성된 컬렉션을 반환하는 쿼리를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-114">The <xref:System.Data.Objects.ObjectQuery%601> generic class represents a query that returns a collection of zero or more typed entities.</span></span> <span data-ttu-id="8ef0c-115">개체 쿼리는 수동으로 생성되는 대신 일반적으로 기존 개체 컨텍스트에서 생성되며 항상 해당 개체 컨텍스트에 속합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-115">An object query is typically constructed from an existing object context, instead of being manually constructed, and always belongs to that object context.</span></span> <span data-ttu-id="8ef0c-116">이 컨텍스트는 쿼리를 작성하고 실행하는 데 필요한 연결 및 메타데이터 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-116">This context provides the connection and metadata information that is required to compose and execute the query.</span></span> <span data-ttu-id="8ef0c-117"><xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 LINQ 쿼리를 증분 빌드할 수 있는 작성기 메서드를 가지고 있는 <xref:System.Linq.IQueryable%601> 제네릭 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-117">The <xref:System.Data.Objects.ObjectQuery%601> generic class implements the <xref:System.Linq.IQueryable%601> generic interface, whose builder methods enable LINQ queries to be incrementally built.</span></span> <span data-ttu-id="8ef0c-118">C# `var` 키워드(Visual Basic에서는 로컬 형식 유추가 가능한 경우 `Dim`)를 사용하여 컴파일러에서 엔터티 형식을 유추하도록 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-118">You can also let the compiler infer the type of entities by using the C# `var` keyword (`Dim` in Visual Basic, with local type inference enabled).</span></span>  
   
-## 쿼리 작성  
- <xref:System.Linq.IQueryable%601> 제네릭 인터페이스를 구현하는 <xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스의 인스턴스는 LINQ to Entities 쿼리의 데이터 소스 역할을 합니다.  쿼리에는 데이터 소스에서 검색하려는 정보를 정확히 지정해야 합니다.  또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다.  LINQ에서 쿼리는 변수에 저장됩니다.  이 쿼리 변수는 어떠한 작업을 수행하거나 데이터를 반환하지 않고 쿼리 정보를 저장하기만 합니다.  쿼리를 만든 후에는 해당 쿼리를 실행하여 데이터를 검색해야 합니다.  
+## <a name="composing-the-queries"></a><span data-ttu-id="8ef0c-119">쿼리 작성</span><span class="sxs-lookup"><span data-stu-id="8ef0c-119">Composing the Queries</span></span>  
+ <span data-ttu-id="8ef0c-120"><xref:System.Data.Objects.ObjectQuery%601> 제네릭 인터페이스를 구현하는 <xref:System.Linq.IQueryable%601> 제네릭 클래스의 인스턴스는 LINQ to Entities 쿼리의 데이터 소스 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-120">Instances of the <xref:System.Data.Objects.ObjectQuery%601> generic class, which implements the generic <xref:System.Linq.IQueryable%601> interface, serve as the data source for LINQ to Entities queries.</span></span> <span data-ttu-id="8ef0c-121">쿼리에는 데이터 소스에서 검색하려는 정보를 정확히 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-121">In a query, you specify exactly the information that you want to retrieve from the data source.</span></span> <span data-ttu-id="8ef0c-122">또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-122">A query can also specify how that information should be sorted, grouped, and shaped before it is returned.</span></span> <span data-ttu-id="8ef0c-123">LINQ에서 쿼리는 변수에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-123">In LINQ, a query is stored in a variable.</span></span> <span data-ttu-id="8ef0c-124">이 쿼리 변수는 어떠한 작업을 수행하거나 데이터를 반환하지 않고 쿼리 정보를 저장하기만 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-124">This query variable takes no action and returns no data; it only stores the query information.</span></span> <span data-ttu-id="8ef0c-125">쿼리를 만든 후에는 해당 쿼리를 실행하여 데이터를 검색해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-125">After you create a query you must execute that query to retrieve any data.</span></span>  
   
- LINQ to Entities 쿼리는 쿼리 식 구문과 메서드 기반 쿼리 구문이라는 두 가지 구문으로 작성할 수 있습니다.  쿼리 식 구문과 메서드 기반 쿼리 구문은 C\# 3.0과 Visual Basic 9.0의 새로운 기능입니다.  
+ <span data-ttu-id="8ef0c-126">LINQ to Entities 쿼리는 쿼리 식 구문과 메서드 기반 쿼리 구문이라는 두 가지 구문으로 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-126">LINQ to Entities queries can be composed in two different syntaxes: query expression syntax and method-based query syntax.</span></span> <span data-ttu-id="8ef0c-127">쿼리 식 구문과 메서드 기반 쿼리 구문은 C# 3.0과 Visual Basic 9.0의 새로운 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-127">Query expression syntax and method-based query syntax are new in C# 3.0 and Visual Basic 9.0.</span></span>  
   
- 자세한 내용은 [LINQ to Entities의 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)을 참조하세요.  
+ <span data-ttu-id="8ef0c-128">자세한 내용은 참조 [LINQ to Entities에서에서 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-128">For more information, see [Queries in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md).</span></span>  
   
-## 쿼리 변환  
- LINQ to Entities 쿼리를 Entity Framework에 대해 실행하려면 LINQ 쿼리를 Entity Framework에 대해 실행할 수 있는 명령 트리 표현으로 변환해야 합니다.  
+## <a name="query-conversion"></a><span data-ttu-id="8ef0c-129">쿼리 변환</span><span class="sxs-lookup"><span data-stu-id="8ef0c-129">Query Conversion</span></span>  
+ <span data-ttu-id="8ef0c-130">LINQ to Entities 쿼리를 Entity Framework에 대해 실행하려면 LINQ 쿼리를 Entity Framework에 대해 실행할 수 있는 명령 트리 표현으로 변환해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-130">To execute a LINQ to Entities query against the Entity Framework, the LINQ query must be converted to a command tree representation that can be executed against the Entity Framework.</span></span>  
   
- LINQ to Entities 쿼리는 LINQ 표준 쿼리 연산자\(예: <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A> 및 <xref:System.Linq.Queryable.GroupBy%2A>\)와 식\(x \> 10, Contact.LastName 등\)으로 구성됩니다.  LINQ 연산자는 클래스로 정의되지 않으며 클래스에 있는 메서드입니다.  LINQ에서 식은 <xref:System.Linq.Expressions> 네임스페이스 내의 형식에 허용되는 모든 항목을 포함할 수 있습니다. 확대하면 람다 함수로 표현할 수 있는 모든 항목을 포함할 수 있습니다.  LINQ의 식은 <xref:System.Data.Objects.ObjectQuery%601>에서 지원되고 정의에 따라 데이터베이스에서 허용되는 연산으로 제한된 Entity Framework에서 허용되는 식의 상위 집합입니다.  
+ <span data-ttu-id="8ef0c-131">LINQ to Entities 쿼리는 LINQ 표준 쿼리 연산자(예: <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A> 및 <xref:System.Linq.Queryable.GroupBy%2A>)와 식(x > 10, Contact.LastName 등)으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-131">LINQ to Entities queries are comprised of LINQ standard query operators (such as <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A>, and <xref:System.Linq.Queryable.GroupBy%2A>) and expressions (x > 10, Contact.LastName, and so on).</span></span> <span data-ttu-id="8ef0c-132">LINQ 연산자는 클래스로 정의되지 않으며 클래스에 있는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-132">LINQ operators are not defined by a class, but rather are methods on a class.</span></span> <span data-ttu-id="8ef0c-133">LINQ에서 식은 <xref:System.Linq.Expressions> 네임스페이스 내의 형식에 허용되는 모든 항목을 포함할 수 있습니다. 확대하면 람다 함수로 표현할 수 있는 모든 항목을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-133">In LINQ, expressions can contain anything allowed by types within the <xref:System.Linq.Expressions> namespace and, by extension, anything that can be represented in a lambda function.</span></span> <span data-ttu-id="8ef0c-134">LINQ의 식은 <xref:System.Data.Objects.ObjectQuery%601>에서 지원되고 정의에 따라 데이터베이스에서 허용되는 연산으로 제한된 Entity Framework에서 허용되는 식의 상위 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-134">This is a superset of the expressions that are allowed by the Entity Framework, which are by definition restricted to operations allowed on the database, and supported by <xref:System.Data.Objects.ObjectQuery%601>.</span></span>  
   
- Entity Framework에서는 연산자와 식이 모두 단일 형식 계층 구조로 표현된 다음 명령 트리에 배치됩니다.  명령 트리는 Entity Framework에서 쿼리를 실행하는 데 사용됩니다.  LINQ 쿼리를 명령 트리로 표현할 수 없는 경우에는 쿼리를 변환할 때 예외가 throw됩니다.  LINQ to Entities 쿼리를 변환하는 데는 표준 쿼리 연산자 변환과 식 변환이라는 두 가지 하위 변환이 수반됩니다.  
+ <span data-ttu-id="8ef0c-135">Entity Framework에서는 연산자와 식이 모두 단일 형식 계층 구조로 표현된 다음 명령 트리에 배치됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-135">In the Entity Framework, both operators and expressions are represented by a single type hierarchy, which are then placed in a command tree.</span></span> <span data-ttu-id="8ef0c-136">명령 트리는 Entity Framework에서 쿼리를 실행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-136">The command tree is used by the Entity Framework to execute the query.</span></span> <span data-ttu-id="8ef0c-137">LINQ 쿼리를 명령 트리로 표현할 수 없는 경우에는 쿼리를 변환할 때 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-137">If the LINQ query cannot be expressed as a command tree, an exception will be thrown when the query is being converted.</span></span> <span data-ttu-id="8ef0c-138">LINQ to Entities 쿼리를 변환하는 데는 표준 쿼리 연산자 변환과 식 변환이라는 두 가지 하위 변환이 수반됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-138">The conversion of LINQ to Entities queries involves two sub-conversions: the conversion of the standard query operators, and the conversion of the expressions.</span></span>  
   
- 많은 LINQ 표준 쿼리 연산자가 LINQ to Entities에서 올바르게 변환되지 않습니다.  이러한 연산자를 사용하면 쿼리를 변환할 때 예외가 발생합니다.  지원되는 LINQ to Entities 연산자 목록을 보려면 [지원되는 LINQ 메서드 및 지원되지 않는 LINQ 메서드\(LINQ to Entities\)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)를 참조하세요.  
+ <span data-ttu-id="8ef0c-139">많은 LINQ 표준 쿼리 연산자가 LINQ to Entities에서 올바르게 변환되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-139">There are a number of LINQ standard query operators that do not have a valid translation in LINQ to Entities.</span></span> <span data-ttu-id="8ef0c-140">이러한 연산자를 사용하면 쿼리를 변환할 때 예외가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-140">Attempts to use these operators will result in an exception at query translation time.</span></span> <span data-ttu-id="8ef0c-141">지원 되는 LINQ to Entities 연산자 목록, 참조 [지원 되 고 지원 되지 않는 LINQ 메서드 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-141">For a list of supported LINQ to Entities operators, see [Supported and Unsupported LINQ Methods (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md).</span></span>  
   
- LINQ to Entities의 표준 쿼리 연산자를 사용하는 방법에 대한 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)를 참조하세요.  
+ <span data-ttu-id="8ef0c-142">LINQ to Entities에서에서 표준 쿼리 연산자를 사용 하는 방법에 대 한 자세한 내용은 참조 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-142">For more information about using the standard query operators in LINQ to Entities, see [Standard Query Operators in LINQ to Entities Queries](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md).</span></span>  
   
- 일반적으로 LINQ to Entities의 식은 서버에서 계산되므로 식의 동작은 CLR 의미 체계를 따르지 않습니다.  자세한 내용은 [LINQ to Entities 쿼리의 식](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)을 참조하세요.  
+ <span data-ttu-id="8ef0c-143">일반적으로 LINQ to Entities의 식은 서버에서 계산되므로 식의 동작은 CLR 의미 체계를 따르지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-143">In general, expressions in LINQ to Entities are evaluated on the server, so the behavior of the expression should not be expected to follow CLR semantics.</span></span> <span data-ttu-id="8ef0c-144">자세한 내용은 참조 [LINQ to Entities 쿼리 식](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-144">For more information, see [Expressions in LINQ to Entities Queries](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).</span></span>  
   
- CLR 메서드 호출이 데이터 소스의 정식 함수에 매핑되는 방식에 대한 자세한 내용은 [CLR 메서드에서 정식 함수로의 매핑](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)을 참조하세요.  
+ <span data-ttu-id="8ef0c-145">CLR 메서드 호출이 데이터 원본에 대 한 정식 함수에 매핑되는 방법에 대 한 정보를 참조 하십시오. [정식 함수 매핑을 대 한 CLR 메서드](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-145">For information about how CLR method calls are mapped to canonical functions in the data source, see [CLR Method to Canonical Function Mapping](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).</span></span>  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리 내에서 정식 함수, 데이터베이스 함수 및 사용자 지정 함수를 호출하는 방법은 [LINQ to Entities 쿼리의 함수 호출](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)을 참조하세요.  
+ <span data-ttu-id="8ef0c-146">정식 호출, 데이터베이스, 하는 방법 및 내에서 사용자 정의 함수에 대 한 내용은 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리 참조 [linq to Entities 쿼리에서 함수 호출](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-146">For information about how to call canonical, database, and custom functions from within [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries, see [Calling Functions in LINQ to Entities Queries](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).</span></span>  
   
-## 쿼리 실행  
- 사용자가 만든 LINQ 쿼리는 Entity Framework와 호환되는 표현\(명령 트리 형태\)으로 변환된 다음 데이터 소스에 대해 실행됩니다.  쿼리 실행 시 모든 쿼리 식\(또는 쿼리의 구성 요소\)은 클라이언트나 서버에서 계산됩니다.  이러한 식에는 결과 구체화나 엔터티 프로젝션에 사용되는 식이 포함됩니다.  자세한 내용은 [쿼리 실행](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)을 참조하세요.  쿼리를 한 번 컴파일한 후 매개 변수를 다르게 하여 여러 차례 실행하는 방식으로 성능을 개선하는 방법은 [컴파일된 쿼리\(LINQ to Entities\)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)를 참조하세요.  
+## <a name="query-execution"></a><span data-ttu-id="8ef0c-147">쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="8ef0c-147">Query Execution</span></span>  
+ <span data-ttu-id="8ef0c-148">사용자가 만든 LINQ 쿼리는 Entity Framework와 호환되는 표현(명령 트리 형태)으로 변환된 다음 데이터 소스에 대해 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-148">After the LINQ query is created by the user, it is converted to a representation that is compatible with the Entity Framework (in the form of command trees), which is then executed against the data source.</span></span> <span data-ttu-id="8ef0c-149">쿼리 실행 시 모든 쿼리 식(또는 쿼리의 구성 요소)은 클라이언트나 서버에서 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-149">At query execution time, all query expressions (or components of the query) are evaluated on the client or on the server.</span></span> <span data-ttu-id="8ef0c-150">이러한 식에는 결과 구체화나 엔터티 프로젝션에 사용되는 식이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-150">This includes expressions that are used in result materialization or entity projections.</span></span> <span data-ttu-id="8ef0c-151">자세한 내용은 참조 [쿼리 실행](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-151">For more information, see [Query Execution](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md).</span></span> <span data-ttu-id="8ef0c-152">쿼리를 한 번 컴파일한 후 차례 실행 하는 여러 다른 매개 변수를 사용 하 여 성능을 향상 하는 방법에 대 한 정보를 참조 하십시오. [컴파일된 쿼리 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-152">For information on how to improve performance by compiling a query once and then executing it several times with different parameters, see [Compiled Queries  (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).</span></span>  
   
-## 구체화  
- 구체화는 쿼리 결과를 CLR 형식으로 클라이언트에게 다시 반환하는 프로세스입니다.  LINQ to Entities에서는 쿼리 결과 데이터 레코드가 반환되지 않으며 사용자나 Entity Framework에 의해 정의되었거나 컴파일러에 의해 생성된\(익명 형식\) 기본 CLR 형식이 항상 사용됩니다.  모든 개체 구체화는 Entity Framework에 의해 수행됩니다.  Entity Framework와 CLR 간의 매핑 실패로 인해 오류가 발생하면 개체 구체화 동안 예외가 throw됩니다.  
+## <a name="materialization"></a><span data-ttu-id="8ef0c-153">구체화</span><span class="sxs-lookup"><span data-stu-id="8ef0c-153">Materialization</span></span>  
+ <span data-ttu-id="8ef0c-154">구체화는 쿼리 결과를 CLR 형식으로 클라이언트에게 다시 반환하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-154">Materialization is the process of returning query results back to the client as CLR types.</span></span> <span data-ttu-id="8ef0c-155">LINQ to Entities에서는 쿼리 결과 데이터 레코드가 반환되지 않으며 사용자나 Entity Framework에 의해 정의되었거나 컴파일러에 의해 생성된(익명 형식) 기본 CLR 형식이 항상 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-155">In LINQ to Entities, query results data records are never returned; there is always a backing CLR type, defined by the user or by the Entity Framework, or generated by the compiler (anonymous types).</span></span> <span data-ttu-id="8ef0c-156">모든 개체 구체화는 Entity Framework에 의해 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-156">All object materialization is performed by the Entity Framework.</span></span> <span data-ttu-id="8ef0c-157">Entity Framework와 CLR 간의 매핑 실패로 인해 오류가 발생하면 개체 구체화 동안 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-157">Any errors that result from an inability to map between the Entity Framework and the CLR will cause exceptions to be thrown during object materialization.</span></span>  
   
- 쿼리 결과는 대개 다음 중 하나로 반환됩니다.  
+ <span data-ttu-id="8ef0c-158">쿼리 결과는 대개 다음 중 하나로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-158">Query results are usually returned as one of the following:</span></span>  
   
--   개념적 모델에 정의된 복합 형식의 프로젝션 또는 0개 이상의 형식화된 엔터티 개체가 포함된 컬렉션  
+-   <span data-ttu-id="8ef0c-159">개념적 모델에 정의된 복합 형식의 프로젝션 또는 0개 이상의 형식화된 엔터티 개체가 포함된 컬렉션</span><span class="sxs-lookup"><span data-stu-id="8ef0c-159">A collection of zero or more typed entity objects or a projection of complex types defined in the conceptual model.</span></span>  
   
--   [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]에서 지원하는 CLR 형식  
+-   <span data-ttu-id="8ef0c-160">[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]에서 지원하는 CLR 형식</span><span class="sxs-lookup"><span data-stu-id="8ef0c-160">CLR types that are supported by the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span>  
   
--   인라인 컬렉션  
+-   <span data-ttu-id="8ef0c-161">인라인 컬렉션</span><span class="sxs-lookup"><span data-stu-id="8ef0c-161">Inline collections.</span></span>  
   
--   익명 형식  
+-   <span data-ttu-id="8ef0c-162">익명 형식</span><span class="sxs-lookup"><span data-stu-id="8ef0c-162">Anonymous types.</span></span>  
   
- 자세한 내용은 [쿼리 결과](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)을 참조하세요.  
+ <span data-ttu-id="8ef0c-163">자세한 내용은 참조 [쿼리 결과](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-163">For more information, see [Query Results](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).</span></span>  
   
-## 단원 내용  
- [LINQ to Entities의 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8ef0c-164">단원 내용</span><span class="sxs-lookup"><span data-stu-id="8ef0c-164">In This Section</span></span>  
+ [<span data-ttu-id="8ef0c-165">LINQ to Entities에서 쿼리</span><span class="sxs-lookup"><span data-stu-id="8ef0c-165">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
   
- [LINQ to Entities 쿼리의 식](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)  
+ [<span data-ttu-id="8ef0c-166">LINQ to Entities 쿼리 식</span><span class="sxs-lookup"><span data-stu-id="8ef0c-166">Expressions in LINQ to Entities Queries</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)  
   
- [LINQ to Entities 쿼리의 함수 호출](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
+ [<span data-ttu-id="8ef0c-167">Linq to Entities 쿼리에서 함수를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="8ef0c-167">Calling Functions in LINQ to Entities Queries</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
   
- [컴파일된 쿼리\(LINQ to Entities\)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
+ [<span data-ttu-id="8ef0c-168">컴파일된 쿼리 (LINQ to Entities)</span><span class="sxs-lookup"><span data-stu-id="8ef0c-168">Compiled Queries  (LINQ to Entities)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
   
- [쿼리 실행](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
+ [<span data-ttu-id="8ef0c-169">쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="8ef0c-169">Query Execution</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
   
- [쿼리 결과](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
+ [<span data-ttu-id="8ef0c-170">쿼리 결과</span><span class="sxs-lookup"><span data-stu-id="8ef0c-170">Query Results</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
   
- [LINQ to Entities 쿼리의 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
+ [<span data-ttu-id="8ef0c-171">Linq to Entities 쿼리에서 표준 쿼리 연산자</span><span class="sxs-lookup"><span data-stu-id="8ef0c-171">Standard Query Operators in LINQ to Entities Queries</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
- [CLR 메서드에서 정식 함수로의 매핑](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
+ [<span data-ttu-id="8ef0c-172">정식 함수 매핑에 대 한 CLR 메서드</span><span class="sxs-lookup"><span data-stu-id="8ef0c-172">CLR Method to Canonical Function Mapping</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
   
- [지원되는 LINQ 메서드 및 지원되지 않는 LINQ 메서드\(LINQ to Entities\)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
+ [<span data-ttu-id="8ef0c-173">지원 및 미지원 LINQ 메서드 (LINQ to Entities)</span><span class="sxs-lookup"><span data-stu-id="8ef0c-173">Supported and Unsupported LINQ Methods (LINQ to Entities)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
   
- [LINQ to Entities의 알려진 문제 및 고려 사항](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
+ [<span data-ttu-id="8ef0c-174">알려진된 문제 및 linq에서 to Entities의 고려 사항</span><span class="sxs-lookup"><span data-stu-id="8ef0c-174">Known Issues and Considerations in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
-## 참고 항목  
- [LINQ to Entities의 알려진 문제 및 고려 사항](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)   
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [LINQ 및 ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)   
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+## <a name="see-also"></a><span data-ttu-id="8ef0c-175">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8ef0c-175">See Also</span></span>  
+ [<span data-ttu-id="8ef0c-176">알려진된 문제 및 linq에서 to Entities의 고려 사항</span><span class="sxs-lookup"><span data-stu-id="8ef0c-176">Known Issues and Considerations in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
+ [<span data-ttu-id="8ef0c-177">LINQ(Language-Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="8ef0c-177">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [<span data-ttu-id="8ef0c-178">LINQ 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="8ef0c-178">LINQ and ADO.NET</span></span>](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ [<span data-ttu-id="8ef0c-179">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="8ef0c-179">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)

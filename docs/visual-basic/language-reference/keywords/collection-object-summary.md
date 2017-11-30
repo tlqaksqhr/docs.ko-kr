@@ -1,51 +1,32 @@
 ---
-title: "Collection 개체 요약 (Visual Basic) | Microsoft 문서"
-ms.date: 2015-07-20
+title: "Collection 개체 요약(Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Collection object, summary
+helpviewer_keywords: Collection object, summary
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 80c48fbb33c5c9d97034508c4848ea49ce5dd09d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 96c2ebf7b0f92119cb8bea131310c675c8a7ef30
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="collection-object-summary-visual-basic"></a>Collection 개체 요약(Visual Basic)
-Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 용도 따라 구성 됩니다.  
+# <a name="collection-object-summary-visual-basic"></a><span data-ttu-id="15d07-102">Collection 개체 요약(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15d07-102">Collection Object Summary (Visual Basic)</span></span>
+<span data-ttu-id="15d07-103">Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="15d07-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|작업|언어 요소|  
+|<span data-ttu-id="15d07-104">작업</span><span class="sxs-lookup"><span data-stu-id="15d07-104">Action</span></span>|<span data-ttu-id="15d07-105">언어 요소</span><span class="sxs-lookup"><span data-stu-id="15d07-105">Language element</span></span>|  
 |------------|----------------------|  
-|`Collection` 개체를 만듭니다.|<xref:Microsoft.VisualBasic.Collection></xref:Microsoft.VisualBasic.Collection>|  
-|컬렉션에 항목을 추가 합니다.|<xref:Microsoft.VisualBasic.Collection.Add*></xref:Microsoft.VisualBasic.Collection.Add*>|  
-|컬렉션에서 개체를 제거 합니다.|<xref:Microsoft.VisualBasic.Collection.Remove*></xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|컬렉션에서 항목을 참조 합니다.|<xref:Microsoft.VisualBasic.Collection.Item*></xref:Microsoft.VisualBasic.Collection.Item*>|  
-|에 대 한 참조를 반환 합니다.는 <xref:System.Collections.IEnumerator>인터페이스.</xref:System.Collections.IEnumerator>|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A></xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|<span data-ttu-id="15d07-106">`Collection` 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="15d07-106">Create a `Collection` object.</span></span>|<xref:Microsoft.VisualBasic.Collection>|  
+|<span data-ttu-id="15d07-107">컬렉션에 항목을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="15d07-107">Add an item to a collection.</span></span>|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|<span data-ttu-id="15d07-108">컬렉션에서 개체를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="15d07-108">Remove an object from a collection.</span></span>|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|<span data-ttu-id="15d07-109">컬렉션의 항목을 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="15d07-109">Reference an item in a collection.</span></span>|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|<span data-ttu-id="15d07-110">에 대 한 참조를 반환 합니다.는 <xref:System.Collections.IEnumerator> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="15d07-110">Return a reference to an <xref:System.Collections.IEnumerator> interface.</span></span>|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
-## <a name="see-also"></a>참고 항목  
- [키워드](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
-
+## <a name="see-also"></a><span data-ttu-id="15d07-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="15d07-111">See Also</span></span>  
+ [<span data-ttu-id="15d07-112">키워드</span><span class="sxs-lookup"><span data-stu-id="15d07-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="15d07-113">Visual Basic 런타임 라이브러리 멤버</span><span class="sxs-lookup"><span data-stu-id="15d07-113">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

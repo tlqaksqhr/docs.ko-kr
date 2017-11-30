@@ -1,79 +1,81 @@
 ---
-title: "클레임 및 토큰 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클레임 [WCF], 및 토큰"
+title: "클레임 및 토큰"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5df0845a341dc557627210c7f84fc59b4fadfd10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 클레임 및 토큰
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 지원되는 기본 토큰으로부터 만드는 다양한 클레임 형식에 대해 설명합니다.  
+# <a name="claims-and-tokens"></a><span data-ttu-id="1697f-102">클레임 및 토큰</span><span class="sxs-lookup"><span data-stu-id="1697f-102">Claims and Tokens</span></span>
+<span data-ttu-id="1697f-103">이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 지원되는 기본 토큰으로부터 만드는 다양한 클레임 형식에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-103">This topic describes the various claim types that [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] creates from the default tokens that it supports.</span></span>  
   
- <xref:System.IdentityModel.Claims.ClaimSet> 및 <xref:System.IdentityModel.Claims.Claim> 클래스를 사용하여 클라이언트 자격 증명 클레임을 검사할 수 있습니다.  `ClaimSet`에는 `Claim` 개체의 컬렉션이 포함됩니다.  각 `Claim`의 중요한 멤버는 다음과 같습니다.  
+ <span data-ttu-id="1697f-104"><xref:System.IdentityModel.Claims.ClaimSet> 및 <xref:System.IdentityModel.Claims.Claim> 클래스를 사용하여 클라이언트 자격 증명 클레임을 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-104">You can examine the claims of a client credential by using the <xref:System.IdentityModel.Claims.ClaimSet> and <xref:System.IdentityModel.Claims.Claim> classes.</span></span> <span data-ttu-id="1697f-105">`ClaimSet`에는 `Claim` 개체의 컬렉션이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-105">The `ClaimSet` contains a collection of `Claim` objects.</span></span> <span data-ttu-id="1697f-106">각 `Claim`의 중요한 멤버는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-106">Each `Claim` has the following important members:</span></span>  
   
--   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 속성은 생성하는 클레임의 형식을 지정하는 URI\(Uniform Resource Identifier\)를 반환합니다.  예를 들어, 클레임 형식이 인증서의 지문인 경우 URI는 http:schemas.microsoft.com\/ws\/20005\/05\/identity\/claims\/thumprint입니다.  
+-   <span data-ttu-id="1697f-107"><xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 속성은 생성하는 클레임의 형식을 지정하는 URI(Uniform Resource Identifier)를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-107">The <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> property returns a Uniform Resource Identifier (URI) that specifies the type of claim being made.</span></span> <span data-ttu-id="1697f-108">예를 들어, 클레임 형식이 인증서의 지문인 경우 URI는 http:schemas.microsoft.com/ws/20005/05/identity/claims/thumprint입니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-108">For example, a claim type may be a thumbprint of a certificate, in which case the URI is http:schemas.microsoft.com/ws/20005/05/identity/claims/thumprint.</span></span>  
   
--   <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성은 클레임의 권한을 지정하는 URI를 반환합니다.  미리 정의된 권한은 <xref:System.IdentityModel.Claims.Rights> 클래스\(<xref:System.IdentityModel.Claims.Rights.Identity%2A>,  <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>\)에 있습니다.  
+-   <span data-ttu-id="1697f-109"><xref:System.IdentityModel.Claims.Claim.Right%2A> 속성은 클레임의 권한을 지정하는 URI를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-109">The <xref:System.IdentityModel.Claims.Claim.Right%2A> property returns a URI that specifies the right of the claim.</span></span> <span data-ttu-id="1697f-110">미리 정의된 권한은 <xref:System.IdentityModel.Claims.Rights> 클래스(<xref:System.IdentityModel.Claims.Rights.Identity%2A>,  <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>)에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-110">Predefined rights are found in the <xref:System.IdentityModel.Claims.Rights> class (<xref:System.IdentityModel.Claims.Rights.Identity%2A>,  <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>).</span></span>  
   
--   <xref:System.IdentityModel.Claims.Claim.Resource%2A> 속성은 클레임과 연결된 리소스를 반환합니다.  
+-   <span data-ttu-id="1697f-111"><xref:System.IdentityModel.Claims.Claim.Resource%2A> 속성은 클레임과 연결된 리소스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-111">The <xref:System.IdentityModel.Claims.Claim.Resource%2A> property returns the resource associated with the claim.</span></span>  
   
- 또한 각 <xref:System.IdentityModel.Claims.ClaimSet>에는 <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> 속성이 있습니다. 이 속성은 `Issuer`의 <xref:System.IdentityModel.Claims.ClaimSet>를 나타냅니다.  
+ <span data-ttu-id="1697f-112">또한 각 <xref:System.IdentityModel.Claims.ClaimSet>에는 <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> 속성이 있습니다. 이 속성은 <xref:System.IdentityModel.Claims.ClaimSet>의 `Issuer`를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-112">Each <xref:System.IdentityModel.Claims.ClaimSet> also has an <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> property, which represents the <xref:System.IdentityModel.Claims.ClaimSet> of the `Issuer`.</span></span>  
   
-## Windows 계정  
- 클라이언트 자격 증명이 Windows 사용자 계정에 매핑되는 경우 결과 <xref:System.IdentityModel.Claims.ClaimSet>의 값은 다음과 같습니다.  
+## <a name="windows-accounts"></a><span data-ttu-id="1697f-113">Windows 계정</span><span class="sxs-lookup"><span data-stu-id="1697f-113">Windows Accounts</span></span>  
+ <span data-ttu-id="1697f-114">클라이언트 자격 증명이 Windows 사용자 계정에 매핑되는 경우 결과 <xref:System.IdentityModel.Claims.ClaimSet>의 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-114">Where a client credential maps to a Windows user account, the resulting <xref:System.IdentityModel.Claims.ClaimSet> has the following values:</span></span>  
   
--   `Issuer`는 <xref:System.IdentityModel.Claims.ClaimSet> 클래스의 정적 Windows 속성에 의해 반환되는 값입니다.  
+-   <span data-ttu-id="1697f-115">`Issuer`는 <xref:System.IdentityModel.Claims.ClaimSet> 클래스의 정적 Windows 속성에 의해 반환되는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-115">The `Issuer` is the value returned by the static Windows property of the <xref:System.IdentityModel.Claims.ClaimSet> class.</span></span>  
   
--   컬렉션의 클레임은 다음과 같습니다.  
+-   <span data-ttu-id="1697f-116">컬렉션의 클레임은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-116">The claims in the collection are:</span></span>  
   
-    -   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 값이 SID\(보안 ID\)이고, <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성 값이 `Identity`이고, <xref:System.IdentityModel.Claims.Claim.Resource%2A>가 실제 SID 값을 반환하는 <xref:System.IdentityModel.Claims.Claim>.  SID는 도메인 컨트롤러에서 모든 사용자에게 발급하는 고유한 값입니다.  SID는 Windows 보안과 상호 작용하여 사용자를 식별하는 데 사용됩니다.  
+    -   <span data-ttu-id="1697f-117"><xref:System.IdentityModel.Claims.Claim> 값이 SID(보안 ID)이고, <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 속성 값이 <xref:System.IdentityModel.Claims.Claim.Right%2A>이고, `Identity`가 실제 SID 값을 반환하는 <xref:System.IdentityModel.Claims.Claim.Resource%2A>.</span><span class="sxs-lookup"><span data-stu-id="1697f-117">A <xref:System.IdentityModel.Claims.Claim> with a <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> value of security identifier (SID), a <xref:System.IdentityModel.Claims.Claim.Right%2A> property value of `Identity`, and a <xref:System.IdentityModel.Claims.Claim.Resource%2A> that returns the actual SID value.</span></span> <span data-ttu-id="1697f-118">SID는 도메인 컨트롤러에서 모든 사용자에게 발급하는 고유한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-118">A SID is a unique value the domain controller issues to every user.</span></span> <span data-ttu-id="1697f-119">SID는 Windows 보안과 상호 작용하여 사용자를 식별하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-119">The SID is used to identify the user in interactions with Windows security.</span></span>  
   
-    -   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 값이 SID이고, <xref:System.IdentityModel.Claims.Claim.Right%2A>가 `PossessProperty`이고, <xref:System.IdentityModel.Claims.Claim.Resource%2A>가 SID 값인 <xref:System.IdentityModel.Claims.Claim>.  
+    -   <span data-ttu-id="1697f-120"><xref:System.IdentityModel.Claims.Claim> 값이 SID이고, <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>가 <xref:System.IdentityModel.Claims.Claim.Right%2A>이고, `PossessProperty`가 SID 값인 <xref:System.IdentityModel.Claims.Claim.Resource%2A>.</span><span class="sxs-lookup"><span data-stu-id="1697f-120">A <xref:System.IdentityModel.Claims.Claim> with a <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> value of SID, a <xref:System.IdentityModel.Claims.Claim.Right%2A> of `PossessProperty`, and a <xref:System.IdentityModel.Claims.Claim.Resource%2A> of the SID value.</span></span>  
   
-    -   <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>이 <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>이고, <xref:System.IdentityModel.Claims.Claim.Right%2A>가 `PossessProperty`이고, <xref:System.IdentityModel.Claims.Claim.Resource%2A>가 사용자 이름을 포함하는 문자열\(예: "MYMACHINE\\Bob"\)인 <xref:System.IdentityModel.Claims.Claim>.  
+    -   <span data-ttu-id="1697f-121"><xref:System.IdentityModel.Claims.Claim>이 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>이고, <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>가 <xref:System.IdentityModel.Claims.Claim.Right%2A>이고, `PossessProperty`가 사용자 이름을 포함하는 문자열(예: "MYMACHINE\Bob")인 <xref:System.IdentityModel.Claims.Claim.Resource%2A>.</span><span class="sxs-lookup"><span data-stu-id="1697f-121">A <xref:System.IdentityModel.Claims.Claim> with a <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> of <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, a <xref:System.IdentityModel.Claims.Claim.Right%2A> of `PossessProperty` and a <xref:System.IdentityModel.Claims.Claim.Resource%2A> of string containing the user name (for example, "MYMACHINE\Bob").</span></span>  
   
-    -   사용자가 속하는 다양한 그룹에 대한 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>를 가진 추가 SID 클레임  
+    -   <span data-ttu-id="1697f-122">사용자가 속하는 다양한 그룹에 대한 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>를 가진 추가 SID 클레임</span><span class="sxs-lookup"><span data-stu-id="1697f-122">Additional SID claims with <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> for the various groups the user belongs to.</span></span>  
   
-## 인증서  
- 클라이언트 자격 증명이 인증서이면 결과 <xref:System.IdentityModel.Claims.ClaimSet> 값은 다음과 같습니다.  
+## <a name="certificates"></a><span data-ttu-id="1697f-123">인증서</span><span class="sxs-lookup"><span data-stu-id="1697f-123">Certificates</span></span>  
+ <span data-ttu-id="1697f-124">클라이언트 자격 증명이 인증서이면 결과 <xref:System.IdentityModel.Claims.ClaimSet> 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-124">Where the client credential is a certificate, the resulting <xref:System.IdentityModel.Claims.ClaimSet> has the following values:</span></span>  
   
--   자체 발급된 인증서의 경우 `Issuer`는 <xref:System.IdentityModel.Claims.ClaimSet> 자체입니다.  <xref:System.IdentityModel.Claims.ClaimSet>는 <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>의 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>, `Identity`의 <xref:System.IdentityModel.Claims.Claim.Right%2A> 및 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 값\(인증서의 지문을 포함하는 <xref:System.Byte> 배열\)을 반환합니다.  
+-   <span data-ttu-id="1697f-125">자체 발급된 인증서의 경우 `Issuer`는 <xref:System.IdentityModel.Claims.ClaimSet> 자체입니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-125">For self-issued certificates, the `Issuer` is the <xref:System.IdentityModel.Claims.ClaimSet> itself.</span></span> <span data-ttu-id="1697f-126"><xref:System.IdentityModel.Claims.ClaimSet>는 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>의 <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, <xref:System.IdentityModel.Claims.Claim.Right%2A>의 `Identity` 및 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 값(인증서의 지문을 포함하는 <xref:System.Byte> 배열)을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-126">The <xref:System.IdentityModel.Claims.ClaimSet> returns a <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> of <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, a <xref:System.IdentityModel.Claims.Claim.Right%2A> of `Identity`, and a <xref:System.IdentityModel.Claims.Claim.Resource%2A> value that is a <xref:System.Byte> array containing the thumbprint of the certificate.</span></span>  
   
--   인증 기관에서 발급한 인증서의 경우 발급자는 인증 기관의 인증서를 나타내는 `ClaimSet`입니다.  
+-   <span data-ttu-id="1697f-127">인증 기관에서 발급한 인증서의 경우 발급자는 인증 기관의 인증서를 나타내는 `ClaimSet`입니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-127">For a certificate issued by a certification authority, the issuer is the `ClaimSet` representing the certification authority’s certificate.</span></span>  
   
--   컬렉션의 `Claims`는 다음과 같습니다.  
+-   <span data-ttu-id="1697f-128">컬렉션의 `Claims`는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-128">The `Claims` in the collection include:</span></span>  
   
-    -   `ClaimType`이 지문이고, `Right`가 PossessProperty이고, `Resource`가 인증서의 지문을 포함하는 바이트 배열인 `Claim`  
+    -   <span data-ttu-id="1697f-129">`Claim`이 지문이고, `ClaimType`가 PossessProperty이고, `Right`가 인증서의 지문을 포함하는 바이트 배열인 `Resource`</span><span class="sxs-lookup"><span data-stu-id="1697f-129">A `Claim` with a `ClaimType` of Thumbprint, a `Right` of PossessProperty, and a `Resource` that is a byte array containing the thumbprint of the certificate</span></span>  
   
-    -   X500DistinguishedName, Dns, Name, Upn 및 Rsa를 포함하여 다양한 형식의 추가 PossessProperty 클레임이 인증서의 다양한 속성을 나타냅니다.  Rsa 클레임의 리소스는 인증서와 연결된 공개 키입니다.**참고** 클라이언트 자격 증명 형식이 서비스가 Windows 계정에 매핑되는 인증서이면 두 `ClaimSet` 개체가 생성됩니다.  첫 번째 개체는 Windows 계정과 관련된 모든 클레임을 포함하고 두 번째 개체는 인증서와 관련된 모든 클레임을 포함합니다.  
+    -   <span data-ttu-id="1697f-130">X500DistinguishedName, Dns, Name, Upn 및 Rsa를 포함하여 다양한 형식의 추가 PossessProperty 클레임이 인증서의 다양한 속성을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-130">Additional PossessProperty claims of various types, including X500DistinguishedName, Dns, Name, Upn, and Rsa, represent various properties of the certificate.</span></span> <span data-ttu-id="1697f-131">Rsa 클레임에 대 한 리소스에는 인증서와 연결 된 공개 키입니다. **참고** 클라이언트 자격 증명 형식이 서비스가 Windows에 매핑되는 인증서 인 계정으로 두 개의 `ClaimSet` 개체가 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-131">The resource for the Rsa claim is the public key associated with the certificate.**Note** Where the client credential type is a certificate that the service maps to a Windows account, two `ClaimSet` objects are generated.</span></span> <span data-ttu-id="1697f-132">첫 번째 개체는 Windows 계정과 관련된 모든 클레임을 포함하고 두 번째 개체는 인증서와 관련된 모든 클레임을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-132">The first contains all the claims related to the Windows account and the second contains all the claims related to the certificate.</span></span>  
   
-## 사용자 이름\/암호  
- 클라이언트 자격 증명이 Windows 계정에 매핑되지 않는 사용자 이름\/암호\(또는 동등한 형식\)인 경우 결과 `ClaimSet`는 `ClaimSet` 클래스의 static <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 속성에 의해 발급됩니다.  `ClaimSet`는 클라이언트가 제공하는 사용자 이름이 해당 리소스인  `` <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>형식의 `Identity` 클레임을 포함합니다.  해당 클레임에는 `PossessProperty`의 `Right`이 있습니다.  
+## <a name="user-namepassword"></a><span data-ttu-id="1697f-133">사용자 이름/암호</span><span class="sxs-lookup"><span data-stu-id="1697f-133">User Name/Password</span></span>  
+ <span data-ttu-id="1697f-134">클라이언트 자격 증명이 Windows 계정에 매핑되지 않는 사용자 이름/암호(또는 동등한 형식)인 경우 결과 `ClaimSet`는 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 클래스의 static `ClaimSet` 속성에 의해 발급됩니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-134">Where the client credential is a user name/password (or equivalent) that does not map to a Windows account, the resulting `ClaimSet` is issued by the static <xref:System.IdentityModel.Claims.ClaimSet.System%2A> property of the `ClaimSet` class.</span></span> <span data-ttu-id="1697f-135">`ClaimSet` 포함 한 `Identity` 형식의 클레임 <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> 의 리소스는 사용자 이름 클라이언트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-135">The `ClaimSet` contains an `Identity` claim of type <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> whose resource is the user name the client provides.</span></span> <span data-ttu-id="1697f-136">해당 클레임에는 `Right`의 `PossessProperty`이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-136">A corresponding claim has a `Right` of `PossessProperty`.</span></span>  
   
-## RSA 키  
- 인증서와 연결되지 않는 RSA 키가 사용되는 경우 결과 `ClaimSet`는 자체 발급되며 해당 리소스가 RSA 키인 <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>형식의 `Identity` 클레임을 포함합니다.  해당 클레임에는 `PossessProperty`의 `Right`가 있습니다.  
+## <a name="rsa-keys"></a><span data-ttu-id="1697f-137">RSA 키</span><span class="sxs-lookup"><span data-stu-id="1697f-137">RSA Keys</span></span>  
+ <span data-ttu-id="1697f-138">인증서와 연결 되지 않은 RSA 키를 사용 하는 결과 `ClaimSet` 는 자체 발급 되며 포함 한 `Identity` 형식의 클레임 <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> 리소스인 RSA 키입니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-138">Where an RSA key not associated with a certificate is used, the resulting `ClaimSet` is self-issued and contains an `Identity` claim of type <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> whose resource is the RSA key.</span></span> <span data-ttu-id="1697f-139">해당 클레임에는 `Right`의 `PossessProperty`이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-139">A corresponding claim has a `Right` of `PossessProperty`.</span></span>  
   
-## SAML  
- 클라이언트가 SAML\(Security Assertions Markup Language\) 토큰으로 인증되는 경우 결과 `ClaimSet`는 SAML 토큰에 서명한 엔터티에 의해 발급되며, SAML 토큰에 서명한 STS\(보안 토큰 서비스\) 인증서에 의해 발급되는 경우도 있습니다.  `ClaimSet`는 SAML 토큰에 있는 다양한 클레임을 포함합니다.  SAML 토큰에 `null`이 아닌 이름을 가진 `SamlSubject`가 있는 경우 형식이 <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A>이고 리소스 형식이 <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource>인 `Identity` 클레임이 만들어집니다.  
+## <a name="saml"></a><span data-ttu-id="1697f-140">SAML</span><span class="sxs-lookup"><span data-stu-id="1697f-140">SAML</span></span>  
+ <span data-ttu-id="1697f-141">클라이언트가 SAML(Security Assertions Markup Language) 토큰으로 인증되는 경우 결과 `ClaimSet`는 SAML 토큰에 서명한 엔터티에 의해 발급되며, SAML 토큰에 서명한 STS(보안 토큰 서비스) 인증서에 의해 발급되는 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-141">Where the client authenticates with a Security Assertions Markup Language (SAML) token, the resulting `ClaimSet` is issued by the entity that signed the SAML token, often the certificate of the security token service (STS) that issued the SAML token.</span></span> <span data-ttu-id="1697f-142">`ClaimSet`는 SAML 토큰에 있는 다양한 클레임을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-142">The `ClaimSet` contains various claims as found in the SAML token.</span></span> <span data-ttu-id="1697f-143">SAML 토큰에 `SamlSubject`이 아닌 이름을 가진 `null`가 있는 경우 형식이 `Identity`이고 리소스 형식이 <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A>인 <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> 클레임이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-143">If the SAML token contains a `SamlSubject` with a non-`null` name, then an `Identity` claim with a type of <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> and a resource type of <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> are created.</span></span>  
   
-## ID 클레임 및 ServiceSecurityContext.IsAnonymous  
- 클라이언트 자격 증명에서 생성된 `ClaimSet` 개체에 `Right`가 `Identity`인 클레임이 없는 경우 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 속성은 `true`를 반환합니다.  그런 클레임이 하나 이상 있는 경우 `IsAnonymous` 속성은 `false`를 반환합니다.  
+## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a><span data-ttu-id="1697f-144">ID 클레임 및 ServiceSecurityContext.IsAnonymous</span><span class="sxs-lookup"><span data-stu-id="1697f-144">Identity Claims and ServiceSecurityContext.IsAnonymous</span></span>  
+ <span data-ttu-id="1697f-145">아닌 경우는 `ClaimSet` 으로 클레임을 포함 하는 클라이언트 자격 증명 개체는 `Right` 의 `Identity,` 하면 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 속성에서 반환 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-145">If none of the `ClaimSet` objects resulting from the client credentials contain a claim with a `Right` of `Identity,` then the <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> property returns `true`.</span></span> <span data-ttu-id="1697f-146">그런 클레임이 하나 이상 있는 경우 `IsAnonymous` 속성은 `false`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1697f-146">If one or more such claims are present, the `IsAnonymous` property returns `false`.</span></span>  
   
-## 참고 항목  
- <xref:System.IdentityModel.Claims.ClaimSet>   
- <xref:System.IdentityModel.Claims.Claim>   
- <xref:System.IdentityModel.Claims.Rights>   
- <xref:System.IdentityModel.Claims.ClaimTypes>   
- [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a><span data-ttu-id="1697f-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1697f-147">See Also</span></span>  
+ <xref:System.IdentityModel.Claims.ClaimSet>  
+ <xref:System.IdentityModel.Claims.Claim>  
+ <xref:System.IdentityModel.Claims.Rights>  
+ <xref:System.IdentityModel.Claims.ClaimTypes>  
+ [<span data-ttu-id="1697f-148">클레임 및 권한 부여 Id 모델 관리</span><span class="sxs-lookup"><span data-stu-id="1697f-148">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

@@ -1,60 +1,58 @@
 ---
-title: "Principal 개체 및 Identity 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "GenericIdentity 개체"
-  - "GenericPrincipal 개체"
-  - "ID 개체, ID 개체 정보"
-  - "Principal 개체, Principal 개체 정보"
-  - "보안[.NET Framework], ID 개체"
-  - "보안[.NET Framework], 보안 주체"
-  - "WindowsIdentity 개체"
-  - "WindowsPrincipal 개체"
+title: "Principal 개체 및 Identity 개체"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WindowsIdentity objects
+- GenericIdentity objects
+- GenericPrincipal objects
+- identity objects, about identity objects
+- security [.NET Framework], identity objects
+- principal objects, about principal objects
+- security [.NET Framework], principals
+- WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ce3c5ce3d79a36320eee6b7312518d2559509127
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Principal 개체 및 Identity 개체
-관리 코드를 사용하여 [Identity](frlrfSystemSecurityPrincipalIIdentityClassTopic) 개체에 대한 참조가 들어 있는 [Principal](frlrfSystemSecurityPrincipalIPrincipalClassTopic) 개체를 통해 보안 주체의 ID 또는 역할을 검색할 수 있습니다.  Identity 개체와 Principal 개체를 사용자 및 그룹 계정과 같이 익숙한 개념과 비교해 보면 쉽게 이해할 수 있습니다.  대부분의 네트워크 환경에서 사용자 계정은 사람 또는 프로그램을 나타내고, 그룹 계정은 특정 사용자 범주 및 해당 사용자들이 소유하는 권한을 나타냅니다.  마찬가지로, .NET Framework의 Identity 개체는 사용자를 나타내고, 역할은 멤버 및 보안 컨텍스트를 나타냅니다.  .NET Framework에서 Principal 개체는 Identity 개체와 역할을 모두 캡슐화하며, .NET Framework 응용 프로그램에서는 보안 주체의 ID 또는 더 일반적인 경우에는 역할 멤버에 따라 보안 주체에 권한을 부여합니다.  
+# <a name="principal-and-identity-objects"></a><span data-ttu-id="7418f-102">Principal 개체 및 Identity 개체</span><span class="sxs-lookup"><span data-stu-id="7418f-102">Principal and Identity Objects</span></span>
+<span data-ttu-id="7418f-103">Id 또는 통해 주 역할을 관리 코드를 검색할 수는 <xref:System.Security.Principal.IPrincipal> 개체에 대 한 참조를 포함 하는 <xref:System.Security.Principal.IIdentity> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-103">Managed code can discover the identity or the role of a principal through a <xref:System.Security.Principal.IPrincipal> object, which contains a reference to an <xref:System.Security.Principal.IIdentity> object.</span></span> <span data-ttu-id="7418f-104">Identity 개체와 Principal 개체를 사용자 및 그룹 계정과 같이 익숙한 개념과 비교해 보면 쉽게 이해할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-104">It might be helpful to compare identity and principal objects to familiar concepts like user and group accounts.</span></span> <span data-ttu-id="7418f-105">대부분의 네트워크 환경에서 사용자 계정은 사람 또는 프로그램을 나타내고, 그룹 계정은 특정 사용자 범주 및 해당 사용자들이 소유하는 권한을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-105">In most network environments, user accounts represent people or programs, while group accounts represent certain categories of users and the rights they possess.</span></span> <span data-ttu-id="7418f-106">마찬가지로, .NET Framework의 Identity 개체는 사용자를 나타내고, 역할은 멤버 및 보안 컨텍스트를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-106">Similarly, .NET Framework identity objects represent users, while roles represent memberships and security contexts.</span></span> <span data-ttu-id="7418f-107">.NET Framework에서 Principal 개체는 Identity 개체와 역할을 모두 캡슐화합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-107">In the .NET Framework, the principal object encapsulates both an identity object and a role.</span></span> <span data-ttu-id="7418f-108">.NET Framework 응용 프로그램에서는 보안 주체의 ID 또는 더 일반적인 경우에는 역할 멤버에 따라 보안 주체에 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-108">.NET Framework applications grant rights to the principal based on its identity or, more commonly, its role membership.</span></span>  
   
-## Identity 개체  
- Identity 개체는 확인되는 사용자 또는 엔터티에 대한 정보를 캡슐화합니다.  가장 기본적인 수준의 Identity 개체에는 이름 및 인증 형식이 포함되어 있습니다.  이름으로는 사용자의 이름 또는 Windows 계정 이름이 사용될 수 있고, 인증 형식으로는 Kerberos V5와 같은 지원되는 로그온 프로토콜 또는 사용자 지정 값이 사용될 수 있습니다.  .NET Framework에서는 대부분의 사용자 지정 로그온 시나리오에 사용될 수 있는 <xref:System.Security.Principal.GenericIdentity> 개체와 응용 프로그램에 Windows 인증을 받고자할 때 사용할 수 있는 보다 특수화된 <xref:System.Security.Principal.WindowsIdentity> 개체를 정의합니다.  또한, 사용자 지정 사용자 정보를 캡슐화하는 고유한 identity 클래스를 직접 정의할 수도 있습니다.  
+## <a name="identity-objects"></a><span data-ttu-id="7418f-109">Identity 개체</span><span class="sxs-lookup"><span data-stu-id="7418f-109">Identity Objects</span></span>  
+ <span data-ttu-id="7418f-110">Identity 개체는 확인 중인 사용자 또는 엔터티에 대한 정보를 캡슐화합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-110">The identity object encapsulates information about the user or entity being validated.</span></span> <span data-ttu-id="7418f-111">가장 기본적인 수준의 Identity 개체에는 이름 및 인증 형식이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-111">At their most basic level, identity objects contain a name and an authentication type.</span></span> <span data-ttu-id="7418f-112">이름으로는 사용자의 이름 또는 Windows 계정 이름이 사용될 수 있고, 인증 형식으로는 Kerberos V5와 같은 지원되는 로그온 프로토콜 또는 사용자 지정 값이 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-112">The name can either be a user's name or the name of a Windows account, while the authentication type can be either a supported logon protocol, such as Kerberos V5, or a custom value.</span></span> <span data-ttu-id="7418f-113">.NET Framework 정의 <xref:System.Security.Principal.GenericIdentity> 기타 특수 한 대부분의 사용자 지정 로그온 시나리오에 사용할 수 있는 개체 <xref:System.Security.Principal.WindowsIdentity> 응용 프로그램을 Windows 인증을 사용 하려는 경우 사용할 수 있는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-113">The .NET Framework defines a <xref:System.Security.Principal.GenericIdentity> object that can be used for most custom logon scenarios and a more specialized <xref:System.Security.Principal.WindowsIdentity> object that can be used when you want your application to rely on Windows authentication.</span></span> <span data-ttu-id="7418f-114">또한 사용자 지정 사용자 정보를 캡슐화하는 고유한 identity 클래스를 직접 정의할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-114">Additionally, you can define your own identity class that encapsulates custom user information.</span></span>  
   
- <xref:System.Security.Principal.IIdentity> 인터페이스는 이름 및 인증 형식\(Kerberos V5, NTLM 등\)에 액세스하기 위한 속성을 정의하고,  모든 **Identity** 클래스는 **IIdentity** 인터페이스를 구현합니다.  **Identity** 개체와 스레드가 현재 실행 중인 Windows NT 프로세스 토큰 사이의 관계가 반드시 필요한 것은 아닙니다.  그러나 **Identity** 개체가 **WindowsIdentity** 개체인 경우 해당 ID는 Windows NT 보안 토큰을 나타내는 것으로 간주됩니다.  
+ <span data-ttu-id="7418f-115"><xref:System.Security.Principal.IIdentity> 인터페이스 이름과 예: NTLM 또는 Kerberos V5 인증 유형에 액세스 하기 위한 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-115">The <xref:System.Security.Principal.IIdentity> interface defines properties for accessing a name and an authentication type, such as Kerberos V5 or NTLM.</span></span> <span data-ttu-id="7418f-116">모든 **Identity** 클래스는 **IIdentity** 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-116">All **Identity** classes implement the **IIdentity** interface.</span></span> <span data-ttu-id="7418f-117">**Identity** 개체와 스레드가 현재 실행 중인 Windows NT 프로세스 토큰 사이의 관계가 반드시 필요한 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-117">There is no required relationship between an **Identity** object and the Windows NT process token under which a thread is currently executing.</span></span> <span data-ttu-id="7418f-118">그러나 **Identity** 개체가 **WindowsIdentity** 개체인 경우 해당 ID는 Windows NT 보안 토큰을 나타내는 것으로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-118">However, if the **Identity** object is a **WindowsIdentity** object, the identity is assumed to represent a Windows NT security token.</span></span>  
   
-## Principal 개체  
- Principal 개체는 코드가 실행되고 있는 보안 컨텍스트를 나타냅니다.  역할 기반 보안을 구현하는 응용 프로그램에서는 Principal 개체와 관련된 역할에 따라 권한을 부여합니다.  Identity 개체와 마찬가지로 .NET Framework에서는 <xref:System.Security.Principal.GenericPrincipal> 개체와 <xref:System.Security.Principal.WindowsPrincipal> 개체를 제공하며,  고유한 사용자 지정 principal 클래스를 정의할 수도 있습니다.  
+## <a name="principal-objects"></a><span data-ttu-id="7418f-119">Principal 개체</span><span class="sxs-lookup"><span data-stu-id="7418f-119">Principal Objects</span></span>  
+ <span data-ttu-id="7418f-120">Principal 개체는 코드가 실행되는 보안 컨텍스트를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-120">The principal object represents the security context under which code is running.</span></span> <span data-ttu-id="7418f-121">역할 기반 보안을 구현하는 응용 프로그램에서는 Principal 개체와 관련된 역할에 따라 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-121">Applications that implement role-based security grant rights based on the role associated with a principal object.</span></span> <span data-ttu-id="7418f-122">Id 개체와 마찬가지로,.NET Framework가 제공 된 <xref:System.Security.Principal.GenericPrincipal> 개체 및 <xref:System.Security.Principal.WindowsPrincipal> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-122">Similar to identity objects, the .NET Framework provides a <xref:System.Security.Principal.GenericPrincipal> object and a <xref:System.Security.Principal.WindowsPrincipal> object.</span></span> <span data-ttu-id="7418f-123">또한 고유한 사용자 지정 principal 클래스를 정의할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-123">You can also define your own custom principal classes.</span></span>  
   
- <xref:System.Security.Principal.IPrincipal> 인터페이스는 관련된 **Identity** 개체에 액세스하기 위한 속성과 **Principal** 개체에 의해 식별된 사용자가 지정된 역할 멤버인지 여부를 확인하기 위한 메서드를 정의합니다.  모든 **Principal** 클래스는 **IPrincipal** 인터페이스와 필요한 추가 속성 및 메서드를 모두 구현합니다.  예를 들어, 공용 언어 런타임에서는 Windows NT 또는 Windows 2000 그룹 멤버를 역할에 매핑하기 위한 추가 기능을 구현하는 **WindowsPrincipal** 클래스를 제공합니다.  
+ <span data-ttu-id="7418f-124"><xref:System.Security.Principal.IPrincipal> 인터페이스 정의 연결 된 액세스에 대 한 속성 **Identity** 개체 하 여 사용자를 식별할지 여부를 확인 하기 위한 한 방법 뿐만 아니라는 **주** 개체의 멤버인는 지정 된 역할입니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-124">The <xref:System.Security.Principal.IPrincipal> interface defines a property for accessing an associated **Identity** object as well as a method for determining whether the user identified by the **Principal** object is a member of a given role.</span></span> <span data-ttu-id="7418f-125">모든 **Principal** 클래스는 **IPrincipal** 인터페이스와 필요한 추가 속성 및 메서드를 모두 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-125">All **Principal** classes implement the **IPrincipal** interface as well as any additional properties and methods that are necessary.</span></span> <span data-ttu-id="7418f-126">예를 들어, 공용 언어 런타임에서는 Windows NT 또는 Windows 2000 그룹 멤버를 역할에 매핑하기 위한 추가 기능을 구현하는 **WindowsPrincipal** 클래스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-126">For example, the common language runtime provides the **WindowsPrincipal** class, which implements additional functionality for mapping Windows NT or Windows 2000 group membership to roles.</span></span>  
   
- **Principal** 개체는 응용 프로그램 도메인\(<xref:System.AppDomain>\) 내에서 호출 컨텍스트\(<xref:System.Runtime.Remoting.Messaging.CallContext>\) 개체에 바인딩됩니다.  기본 호출 컨텍스트는 항상 각각의 새로운 **AppDomain**을 사용하여 만들어지므로 **Principal** 개체를 허용하는 데 사용할 수 있는 호출 컨텍스트가 항상 있습니다.  새로운 스레드가 만들어지면 해당 스레드에 대한 **CallContext** 개체도 만들어집니다.  **Principal** 개체 참조는 만드는 스레드에서 새로운 스레드의 **CallContext**로 자동 복사됩니다.  런타임에서 어떤 **Principal** 개체가 해당 스레드의 작성자에 속하는지 확인할 수 없는 경우에는 **Principal** 및 **Identity** 개체 작성을 위한 기본 정책을 따릅니다.  
+ <span data-ttu-id="7418f-127">A **주** 개체가 호출 컨텍스트에 바인딩된 (<xref:System.Runtime.Remoting.Messaging.CallContext>) 응용 프로그램 도메인 내에서 개체 (<xref:System.AppDomain>).</span><span class="sxs-lookup"><span data-stu-id="7418f-127">A **Principal** object is bound to a call context (<xref:System.Runtime.Remoting.Messaging.CallContext>) object within an application domain (<xref:System.AppDomain>).</span></span> <span data-ttu-id="7418f-128">기본 호출 컨텍스트는 항상 각각의 새로운 **AppDomain**을 사용하여 만들어지므로 **Principal** 개체를 허용하는 데 사용할 수 있는 호출 컨텍스트가 항상 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-128">A default call context is always created with each new **AppDomain**, so there is always a call context available to accept the **Principal** object.</span></span> <span data-ttu-id="7418f-129">새로운 스레드가 만들어지면 해당 스레드에 대한 **CallContext** 개체도 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-129">When a new thread is created, a **CallContext** object is also created for the thread.</span></span> <span data-ttu-id="7418f-130">**Principal** 개체 참조는 만드는 스레드에서 새로운 스레드의 **CallContext**로 자동 복사됩니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-130">The **Principal** object reference is automatically copied from the creating thread to the new thread's **CallContext**.</span></span> <span data-ttu-id="7418f-131">런타임에서 어떤 **Principal** 개체가 해당 스레드의 작성자에 속하는지 확인할 수 없는 경우에는 **Principal** 및 **Identity** 개체 작성을 위한 기본 정책을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-131">If the runtime cannot determine which **Principal** object belongs to the creator of the thread, it follows the default policy for **Principal** and **Identity** object creation.</span></span>  
   
- 구성 가능한 응용 프로그램의 도메인 관련 정책을 사용하여 새 응용 프로그램 도메인과 연결할 **Principal** 개체의 형식을 결정하기 위한 규칙을 정의할 수 있습니다.  보안 정책이 허용하는 경우 런타임에서 현재 실행 스레드와 관련된 운영 체제 시스템 토큰을 반영하는 **Principal** 개체 및 **Identity** 개체를 만들 수 있습니다.  기본적으로 런타임에서는 인증되지 않은 사용자를 나타내는 **Principal** 개체 및 **Identity** 개체를 사용하며,  코드에서 기본 **Principal** 개체 및 **Identity** 개체에 액세스하려고 시도할 때까지는 이러한 개체들을 만들지 않습니다.  
+ <span data-ttu-id="7418f-132">구성 가능한 응용 프로그램의 도메인 관련 정책을 사용하여 새 응용 프로그램 도메인과 연결할 **Principal** 개체의 형식을 결정하기 위한 규칙을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-132">A configurable application domain-specific policy defines the rules for deciding what type of **Principal** object to associate with a new application domain.</span></span> <span data-ttu-id="7418f-133">보안 정책이 허용하는 경우 런타임에서 현재 실행 스레드와 관련된 운영 체제 시스템 토큰을 반영하는 **Principal** 개체 및 **Identity** 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-133">Where security policy permits, the runtime can create **Principal** and **Identity** objects that reflect the operating system token associated with the current thread of execution.</span></span> <span data-ttu-id="7418f-134">기본적으로 런타임에서는 인증되지 않은 사용자를 나타내는 **Principal** 및 **Identity** 개체를 사용하며,</span><span class="sxs-lookup"><span data-stu-id="7418f-134">By default, the runtime uses **Principal** and **Identity** objects that represent unauthenticated users.</span></span> <span data-ttu-id="7418f-135">코드에서 기본 **Principal** 및 **Identity** 개체에 액세스하려고 시도할 때까지는 이러한 개체들을 만들지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-135">The runtime does not create these default **Principal** and **Identity** objects until the code attempts to access them.</span></span>  
   
- 응용 프로그램 도메인을 만드는 트러스트된 코드를 사용하여 기본 **Principal** 개체 및 **Identity** 개체의 생성을 제어하는 응용 프로그램 도메인 정책을 설정할 수 있습니다.  이 응용 프로그램 도메인 관련 정책은 해당 응용 프로그램 도메인에 있는 모든 실행 스레드에 적용됩니다.  관리되지 않는 트러스트된 호스트에는 원래 이 정책을 설정할 수 있는 기능이 있지만, 이 정책을 설정하는 관리되는 코드에는 도메인 정책을 제어하기 위한 <xref:System.Security.Permissions.SecurityPermission?displayProperty=fullName>이 있어야 합니다.  
+ <span data-ttu-id="7418f-136">응용 프로그램 도메인을 만드는 트러스트된 코드를 사용하여 기본 **Principal** 및 **Identity** 개체의 생성을 제어하는 응용 프로그램 도메인 정책을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-136">Trusted code that creates an application domain can set the application domain policy that controls construction of the default **Principal** and **Identity** objects.</span></span> <span data-ttu-id="7418f-137">이 응용 프로그램 도메인 관련 정책은 해당 응용 프로그램 도메인에 있는 모든 실행 스레드에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-137">This application domain-specific policy applies to all execution threads in that application domain.</span></span> <span data-ttu-id="7418f-138">관리 되지 않음, 신뢰할 수 있는 호스트에는 기본적으로이 정책을 설정 하는 기능에 있지만이 정책을 설정 하는 관리 되는 코드 있어야는 <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> 도메인 정책을 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-138">An unmanaged, trusted host inherently has the ability to set this policy, but managed code that sets this policy must have the <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> for controlling domain policy.</span></span>  
   
- 여러 응용 프로그램 도메인 간에, 동일한 프로세스\(즉, 동일한 컴퓨터\)에서 **Principal** 개체를 전송하는 경우, 원격 인프라에서 호출자의 컨텍스트와 관련된 **Principal** 개체에 대한 참조를 호출 수신자의 컨텍스트에 복사합니다.  
+ <span data-ttu-id="7418f-139">여러 응용 프로그램 도메인 간에, 동일한 프로세스(즉, 동일한 컴퓨터)에서 **Principal** 개체를 전송하는 경우, 원격 인프라에서 호출자의 컨텍스트와 관련된 **Principal** 개체에 대한 참조를 호출 수신자의 컨텍스트에 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="7418f-139">When transmitting a **Principal** object across application domains but within the same process (and therefore on the same computer), the remoting infrastructure copies a reference to the **Principal** object associated with the caller's context to the callee's context.</span></span>  
   
-## 참고 항목  
- [방법: WindowsPrincipal 개체 만들기](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)   
- [방법: GenericPrincipal 및 GenericIdentity 개체 만들기](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)   
- [Principal 개체 바꾸기](../../../docs/standard/security/replacing-a-principal-object.md)   
- [가장 및 되돌리기](../../../docs/standard/security/impersonating-and-reverting.md)   
- [역할 기반 보안](../../../docs/standard/security/role-based-security.md)   
- [주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="7418f-140">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7418f-140">See Also</span></span>  
+ [<span data-ttu-id="7418f-141">방법: WindowsPrincipal 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="7418f-141">How to: Create a WindowsPrincipal Object</span></span>](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
+ [<span data-ttu-id="7418f-142">방법: GenericPrincipal 및 GenericIdentity 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="7418f-142">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
+ [<span data-ttu-id="7418f-143">Principal 개체 바꾸기</span><span class="sxs-lookup"><span data-stu-id="7418f-143">Replacing a Principal Object</span></span>](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [<span data-ttu-id="7418f-144">가장 및 되돌리기</span><span class="sxs-lookup"><span data-stu-id="7418f-144">Impersonating and Reverting</span></span>](../../../docs/standard/security/impersonating-and-reverting.md)  
+ [<span data-ttu-id="7418f-145">역할 기반 보안</span><span class="sxs-lookup"><span data-stu-id="7418f-145">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)  
+ [<span data-ttu-id="7418f-146">주요 보안 개념</span><span class="sxs-lookup"><span data-stu-id="7418f-146">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)

@@ -1,56 +1,59 @@
 ---
-title: "방법: 서비스에 대한 보안 컨텍스트 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "컨텍스트, Visual Studio 보안"
-  - "보안[Visual Studio], 컨텍스트"
-  - "보안[Visual Studio], 서비스 응용 프로그램"
-  - "ServiceInstaller 클래스, 보안 컨텍스트"
-  - "ServiceProcessInstaller 클래스, 보안 컨텍스트"
-  - "서비스, 보안"
-  - "Windows 서비스 응용 프로그램, 보안"
+title: "방법: 서비스에 대한 보안 컨텍스트 지정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Service applications, security
+- security [Visual Studio], contexts
+- contexts, Visual Studio security
+- security [Visual Studio], service applications
+- ServiceProcessInstaller class, security context
+- services, security
+- ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: 50a9c6ff7f02cda4475aa5390181fa5d410af161
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 서비스에 대한 보안 컨텍스트 지정
-기본적으로 서비스는 로그인한 사용자와 다른 보안 컨텍스트에서 실행됩니다.  서비스는 시스템 리소스에 대해 사용자와 다른 액세스 권한을 부여하는 `LocalSystem`이라는 기본 시스템 계정의 컨텍스트에서 실행됩니다.  이 동작을 변경하여 서비스가 실행될 다른 사용자 계정을 지정할 수 있습니다.  
+# <a name="how-to-specify-the-security-context-for-services"></a><span data-ttu-id="523d4-102">방법: 서비스에 대한 보안 컨텍스트 지정</span><span class="sxs-lookup"><span data-stu-id="523d4-102">How to: Specify the Security Context for Services</span></span>
+<span data-ttu-id="523d4-103">기본적으로 서비스에 로그인 한 사용자의 다른 보안 컨텍스트에서 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-103">By default, services run in a different security context than that of the logged-in user.</span></span> <span data-ttu-id="523d4-104">기본 시스템 계정의 컨텍스트에서 실행 되는 서비스 호출 `LocalSystem`는 서로 다른 액세스 권한을 부여 시스템 리소스에는 사용자입니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-104">Services run in the context of the default system account, called `LocalSystem`, which gives them different access privileges to system resources than the user.</span></span> <span data-ttu-id="523d4-105">서비스 실행 해야 하는 다른 사용자 계정을 지정 하려면이 동작을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-105">You can change this behavior to specify a different user account under which your service should run.</span></span>  
   
- 서비스가 실행되는 프로세스의 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 속성을 조작하여 보안 컨텍스트를 설정합니다.  이 속성을 사용하면 서비스를 다음 네 가지 계정 형식 중 하나로 설정할 수 있습니다.  
+ <span data-ttu-id="523d4-106">조작 하 여 보안 컨텍스트를 설정한는 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 서비스가 실행 되는 프로세스에 대 한 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-106">You set the security context by manipulating the <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> property for the process within which the service runs.</span></span> <span data-ttu-id="523d4-107">이 속성을 사용 하면 서비스 네 가지 계정 형식 중 하나로 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-107">This property allows you to set the service to one of four account types:</span></span>  
   
--   `User` — 서비스를 설치할 때 유효한 사용자 이름과 암호를 입력해야 합니다. 서비스는 네트워크에서 단일 사용자가 지정한 계정의 컨텍스트에서 실행됩니다.  
+-   <span data-ttu-id="523d4-108">`User`이 경우 서비스 설치 하는 네트워크에서 단일 사용자가 지정한 계정의 컨텍스트에서 실행 될 때 유효한 사용자 이름 및 암호에 대 한 메시지를 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="523d4-108">`User`, which causes the system to prompt for a valid user name and password when the service is installed and runs in the context of an account specified by a single user on the network;</span></span>  
   
--   `LocalService` — 서비스는 로컬 컴퓨터에 있는 권한이 없는 사용자 계정의 컨텍스트에서 실행되며 원격 서버에 익명 자격 증명을 제공합니다.  
+-   <span data-ttu-id="523d4-109">`LocalService`를 로컬 컴퓨터에서 권한 없는 사용자의 역할을 하 고; 원격 서버에 익명 자격 증명을 제공 하는 계정의 컨텍스트에서 실행 되는</span><span class="sxs-lookup"><span data-stu-id="523d4-109">`LocalService`, which runs in the context of an account that acts as a non-privileged user on the local computer, and presents anonymous credentials to any remote server;</span></span>  
   
--   `LocalSystem`광범위 한 로컬 권한을 제공 하 고; 원격 서버에 컴퓨터의 자격 증명을 제공 하는 계정의 컨텍스트에서 실행  
+-   <span data-ttu-id="523d4-110">`LocalSystem`광범위 한 로컬 권한을 제공 하 고 원격 서버로; 컴퓨터의 자격 증명을 제공 하는 계정의 컨텍스트에서 실행 되는</span><span class="sxs-lookup"><span data-stu-id="523d4-110">`LocalSystem`, which runs in the context of an account that provides extensive local privileges, and presents the computer's credentials to any remote server;</span></span>  
   
--   `NetworkService` — 서비스는 로컬 컴퓨터에 있는 권한이 없는 사용자 계정의 컨텍스트에서 실행되며 원격 서버에 컴퓨터의 자격 증명을 제공합니다.  
+-   <span data-ttu-id="523d4-111">`NetworkService`를 로컬 컴퓨터에서 권한 없는 사용자의 역할을 원격 서버에 컴퓨터의 자격 증명을 제공 하는 계정의 컨텍스트에서 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-111">`NetworkService`, which runs in the context of an account that acts as a non-privileged user on the local computer, and presents the computer's credentials to any remote server.</span></span>  
   
- 자세한 내용은 <xref:System.ServiceProcess.ServiceAccount> 열거형을 참조하십시오.  
+ <span data-ttu-id="523d4-112">자세한 내용은 <xref:System.ServiceProcess.ServiceAccount> 열거형을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="523d4-112">For more information, see the <xref:System.ServiceProcess.ServiceAccount> enumeration.</span></span>  
   
-### 서비스에 대한 보안 컨텍스트를 지정하려면  
+### <a name="to-specify-the-security-context-for-a-service"></a><span data-ttu-id="523d4-113">서비스에 대 한 보안 컨텍스트를 지정 하려면</span><span class="sxs-lookup"><span data-stu-id="523d4-113">To specify the security context for a service</span></span>  
   
-1.  서비스를 만든 후 필요한 설치 관리자를 추가합니다.  자세한 내용은 [방법: 서비스 응용 프로그램에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)을 참조하십시오.  
+1.  <span data-ttu-id="523d4-114">서비스를 만든 후에 필요한 설치 관리자를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-114">After creating your service, add the necessary installers for it.</span></span> <span data-ttu-id="523d4-115">자세한 내용은 참조 [하는 방법: 서비스 응용 프로그램 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-115">For more information, see [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>  
   
-2.  디자이너에서 `ProjectInstaller` 클래스에 액세스하고 사용할 서비스에 대한 프로세스 설치 관리자를 클릭합니다.  
+2.  <span data-ttu-id="523d4-116">디자이너에서 액세스는 `ProjectInstaller` 클래스 하 고 사용 하는 서비스에 대 한 서비스 프로세스 설치 관리자를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-116">In the designer, access the `ProjectInstaller` class and click the service process installer for the service you are working with.</span></span>  
   
     > [!NOTE]
-    >  모든 서비스 응용 프로그램의 `ProjectInstaller` 클래스에는 적어도 두 개의 설치 구성 요소가 있습니다. 하나는 프로젝트의 모든 서비스에 대한 프로세스를 설치하는 요소이고 다른 하나는 응용 프로그램에 포함된 각 서비스에 대한 설치 관리자입니다.  현재 인스턴스에서는 <xref:System.ServiceProcess.ServiceProcessInstaller>를 선택합니다.  
+    >  <span data-ttu-id="523d4-117">모든 서비스 응용 프로그램에 대 한는에서 두 개 이상 설치 구성 요소는 `ProjectInstaller` 클래스-모든 서비스에 대 한 프로세스는 프로젝트 및 응용 프로그램을 포함 하는 각 서비스에 대해 한 명의 설치 관리자에서 설치 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-117">For every service application, there are at least two installation components in the `ProjectInstaller` class — one that installs the processes for all services in the project, and one installer for each service the application contains.</span></span> <span data-ttu-id="523d4-118">이 경우에 선택 하려는 <xref:System.ServiceProcess.ServiceProcessInstaller>합니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-118">In this instance, you want to select <xref:System.ServiceProcess.ServiceProcessInstaller>.</span></span>  
   
-3.  **속성** 창에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>를 적절한 값으로 설정합니다.  
+3.  <span data-ttu-id="523d4-119">에 **속성** 창에서 설정 된 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 적절 한 값으로.</span><span class="sxs-lookup"><span data-stu-id="523d4-119">In the **Properties** window, set the <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> to the appropriate value.</span></span>  
   
-## 참고 항목  
- [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)   
- [방법: 서비스 응용 프로그램에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)   
- [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a><span data-ttu-id="523d4-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="523d4-120">See Also</span></span>  
+ [<span data-ttu-id="523d4-121">Windows 서비스 응용 프로그램 소개</span><span class="sxs-lookup"><span data-stu-id="523d4-121">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [<span data-ttu-id="523d4-122">방법: 서비스 응용 프로그램에 설치 관리자를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="523d4-122">How to: Add Installers to Your Service Application</span></span>](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [<span data-ttu-id="523d4-123">방법: Windows 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="523d4-123">How to: Create Windows Services</span></span>](../../../docs/framework/windows-services/how-to-create-windows-services.md)

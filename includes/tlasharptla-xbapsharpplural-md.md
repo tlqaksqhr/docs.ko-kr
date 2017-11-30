@@ -1,1 +1,1 @@
-XBAP(XAML 브라우저 응용 프로그램)
+<span data-ttu-id="0e9b6-101">XBAP(XAML 브라우저 응용 프로그램)</span><span class="sxs-lookup"><span data-stu-id="0e9b6-101">XAML browser applications (XBAPs)</span></span>

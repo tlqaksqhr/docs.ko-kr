@@ -1,1 +1,1 @@
-4.5.2부터 사용할 수 있음
+<span data-ttu-id="e7170-101">4.5.2부터 사용할 수 있음</span><span class="sxs-lookup"><span data-stu-id="e7170-101">Available since 4.5.2</span></span>

@@ -1,46 +1,52 @@
 ---
-title: "방법: 코드를 사용하여 이벤트 처리기 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이벤트 처리기, 추가"
-  - "XAML, 이벤트 처리기 추가"
+title: "방법: 코드를 사용하여 이벤트 처리기 추가"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- event handlers [WPF], adding
+- XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 348136a1feaf6e0a0824cf183a2eeec4e10b77fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 코드를 사용하여 이벤트 처리기 추가
-이 예제에서는 코드를 사용하여 요소에 이벤트 처리기를 추가하는 방법을 보여 줍니다.  
+# <a name="how-to-add-an-event-handler-using-code"></a><span data-ttu-id="f9b10-102">방법: 코드를 사용하여 이벤트 처리기 추가</span><span class="sxs-lookup"><span data-stu-id="f9b10-102">How to: Add an Event Handler Using Code</span></span>
+<span data-ttu-id="f9b10-103">이 예제 코드를 사용 하 여 요소에 이벤트 처리기를 추가 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-103">This example shows how to add an event handler to an element by using code.</span></span>  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 요소에 이벤트 처리기를 추가하려면 요소를 포함하는 태그 페이지를 먼저 로드한 후 코드를 사용하여 처리기를 추가해야 합니다.  또는, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 요소를 선언하는 않고 코드만 사용하여 전체 응용 프로그램의 요소 트리를 작성하는 경우에는 특정 메서드를 호출하여 구성된 요소 트리에 이벤트 처리기를 추가할 수 있습니다.  
+ <span data-ttu-id="f9b10-104">이벤트 처리기를 추가 하려는 경우는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 요소와 요소를 포함 하는 태그 페이지 이미 로드 된 코드를 사용 하 여 처리기를 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-104">If you want to add an event handler to a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] element, and the markup page that contains the element has already been loaded, you must add the handler using code.</span></span> <span data-ttu-id="f9b10-105">또는 응용 프로그램 코드를 사용 하 여 전체 하지를 사용 하 여 요소를 선언 하 고 요소 트리를 작성 하는 경우 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 생성 된 요소 트리를 이벤트 처리기를 추가 하는 특정 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-105">Alternatively, if you are building up the element tree for an application entirely using code and not declaring any elements using [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can call specific methods to add event handlers to the constructed element tree.</span></span>  
   
-## 예제  
- 다음 예제에서는 새 <xref:System.Windows.Controls.Button>을 원래 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 정의되어 있는 기존 페이지에 추가합니다.  코드 숨김 파일은 이벤트 처리기 메서드를 구현한 후 해당 메서드를 <xref:System.Windows.Controls.Button>에 대한 새 이벤트 처리기로 추가합니다.  
+## <a name="example"></a><span data-ttu-id="f9b10-106">예제</span><span class="sxs-lookup"><span data-stu-id="f9b10-106">Example</span></span>  
+ <span data-ttu-id="f9b10-107">다음 예제에서는 새 <xref:System.Windows.Controls.Button> 처음에 정의 된 기존 페이지 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-107">The following example adds a new <xref:System.Windows.Controls.Button> to an existing page that is initially defined in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="f9b10-108">코드 숨김 파일 이벤트 처리기 메서드를 구현 하 고 다음에 새 이벤트 처리기로 해당 메서드를 추가 <xref:System.Windows.Controls.Button>합니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-108">A code-behind file implements an event handler method and then adds that method as a new event handler on the <xref:System.Windows.Controls.Button>.</span></span>  
   
- [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 예제에서는 `+=` 연산자를 사용하여 이벤트에 처리기를 할당합니다.  이 연산자는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트 처리 모델에서 처리기를 할당하는 데 사용되는 것과 동일한 연산자입니다.  [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]에서는 이벤트 처리기를 추가하는 방법으로 이 연산자를 사용할 수 없습니다.  대신 다음 방법 중 하나를 사용해야 합니다.  
+ <span data-ttu-id="f9b10-109">[!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 사용 하 여 예제는 `+=` 이벤트에 대 한 처리기를 할당 하는 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-109">The [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] example uses the `+=` operator to assign a handler to an event.</span></span> <span data-ttu-id="f9b10-110">이것이에서 처리기를 할당 하는 데 사용 되는 동일한 연산자는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트 처리 모델입니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-110">This is the same operator that is used to assign a handler in the [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] event handling model.</span></span> [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]<span data-ttu-id="f9b10-111">이벤트 처리기를 추가 하는 방법으로이 연산자를 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-111"> does not support this operator as a means of adding event handlers.</span></span> <span data-ttu-id="f9b10-112">대신 두 가지 방법 중 하나가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-112">It instead requires one of two techniques:</span></span>  
   
--   <xref:System.Windows.UIElement.AddHandler%2A> 메서드를 `AddressOf` 연산자와 함께 사용하여 이벤트 처리기 구현을 참조합니다.  
+-   <span data-ttu-id="f9b10-113">사용 하 여는 <xref:System.Windows.UIElement.AddHandler%2A> 메서드를 함께 `AddressOf` 연산자 참조할 이벤트 처리기를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-113">Use the <xref:System.Windows.UIElement.AddHandler%2A> method, together with an `AddressOf` operator, to reference the event handler implementation.</span></span>  
   
--   이벤트 처리기 정의의 일부로 `Handles` 키워드를 사용합니다.  이 방법은 여기에서 보여 주지 않습니다. 대신 [Visual Basic 및 WPF 이벤트 처리](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)를 참조하십시오.  
+-   <span data-ttu-id="f9b10-114">사용 된 `Handles` 이벤트 처리기 정의의 일부로 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-114">Use the `Handles` keyword as part of the event handler definition.</span></span> <span data-ttu-id="f9b10-115">이 기술은; 여기 표시 되지 않습니다. 참조 [Visual Basic 및 WPF 이벤트 처리](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-115">This technique is not shown here; see [Visual Basic and WPF Event Handling](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).</span></span>  
   
- [!code-xml[RoutedEventAddRemoveHandler#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventAddRemoveHandler#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
  [!code-csharp[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml.cs#handler)]
  [!code-vb[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  처음에 구문 분석된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지에 이벤트 처리기를 추가하는 것이 훨씬 간단합니다.  이벤트 처리기를 추가하려는 개체 요소 내에 처리할 이벤트 이름과 일치하는 특성을 추가합니다.  그런 다음 해당 특성 값을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지의 코드 숨김 파일에 정의되어 있는 이벤트 처리기 메서드 이름으로 지정합니다.  자세한 내용은 [XAML 개요\(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 또는 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)를 참조하십시오.  
+>  <span data-ttu-id="f9b10-116">에 처음 구문 분석 된 이벤트 처리기를 추가 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 훨씬 더 간단 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-116">Adding an event handler in the initially parsed [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page is much simpler.</span></span> <span data-ttu-id="f9b10-117">이벤트 처리기를 추가 하려는 개체 요소 내에서 처리 하려면 이벤트의 이름과 일치 하는 특성을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-117">Within the object element where you want to add the event handler, add an attribute that matches the name of the event that you want to handle.</span></span> <span data-ttu-id="f9b10-118">다음의 코드 숨김 파일에 정의 된 이벤트 처리기 메서드의 이름으로 해당 특성의 값을 지정 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지.</span><span class="sxs-lookup"><span data-stu-id="f9b10-118">Then specify the value of that attribute as the name of the event handler method that you defined in the code-behind file of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="f9b10-119">자세한 내용은 참조 [XAML 개요 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 또는 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f9b10-119">For more information, see [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) or [Routed Events Overview](../../../../docs/framework/wpf/advanced/routed-events-overview.md).</span></span>  
   
-## 참고 항목  
- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [방법 항목](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="f9b10-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f9b10-120">See Also</span></span>  
+ [<span data-ttu-id="f9b10-121">라우트된 이벤트 개요</span><span class="sxs-lookup"><span data-stu-id="f9b10-121">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="f9b10-122">방법 항목</span><span class="sxs-lookup"><span data-stu-id="f9b10-122">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
