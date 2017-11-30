@@ -1,28 +1,24 @@
 ---
-title: "방법: 컨텍스트 (Visual Basic)를 기반으로 하는 요소를 찾는 쿼리를 작성 합니다. | Microsoft 문서"
+title: "방법: 컨텍스트 (Visual Basic)를 기반으로 요소를 찾는 쿼리를 작성 합니다."
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c26a6f0debd165a925bf45e2ac5063e1afff693f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 635a8c06d5ad928e192b8cd15862aa02192f94d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>방법: 컨텍스트 (Visual Basic)를 기반으로 하는 요소를 찾는 쿼리를 작성 합니다.
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>방법: 컨텍스트 (Visual Basic)를 기반으로 요소를 찾는 쿼리를 작성 합니다.
 컨텍스트에 따라 요소를 선택하는 쿼리를 작성해야 하는 경우가 있습니다. 이전 또는 다음 형제 요소를 기준으로 필터링하거나, 자식 또는 상위 요소를 기준으로 필터링하려고 할 수 있습니다.  
   
  쿼리를 작성하고 `where` 절에서 쿼리의 결과를 사용하여 이를 수행할 수 있습니다. 먼저 null에 대해 테스트하고 값을 테스트해야 하는 경우에는 `let` 절에서 쿼리를 수행한 다음 `where` 절에서 결과를 사용하는 것이 더 편리합니다.  
@@ -60,7 +56,6 @@ Dim items As IEnumerable(Of XElement) = _
 For Each e As XElement In items  
     Console.WriteLine("id = {0}", e.@<id>)  
 Next  
-  
 ```  
   
  이 코드의 결과는 다음과 같습니다.  
@@ -121,8 +116,8 @@ id = 6
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XElement.Parse%2A></xref:System.Xml.Linq.XElement.Parse%2A>   
- <xref:System.Xml.Linq.XContainer.Descendants%2A></xref:System.Xml.Linq.XContainer.Descendants%2A>   
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A></xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>   
- <xref:System.Linq.Enumerable.FirstOrDefault%2A></xref:System.Linq.Enumerable.FirstOrDefault%2A>   
+ <xref:System.Xml.Linq.XElement.Parse%2A>  
+ <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+ <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
  [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -1,37 +1,29 @@
 ---
-title: "방법: 문자열 컬렉션 (Visual Basic) (LINQ) 결합 및 비교 | Microsoft 문서"
+title: "방법: LINQ () (Visual Basic) 문자열 컬렉션 결합 및 비교"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b037b1aca378dc8a765fdc54746ace27703cee9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7240f9a8923060634e8824f2516c220b376e2e90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>방법: 문자열 컬렉션 (Visual Basic) (LINQ) 결합 및 비교
-이 예제에는 다음 결과 정렬 및 텍스트 줄을 포함 하는 파일을 병합 하는 방법을 보여 줍니다. 특히, 텍스트 줄의 두 집합에는 간단한 연결, 공용 구조체 및 교차를 수행 하는 방법을 보여 줍니다.  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>방법: LINQ () (Visual Basic) 문자열 컬렉션 결합 및 비교
+이 예제에서는 텍스트 줄이 포함된 파일을 병합하고 결과를 정렬하는 방법을 보여 줍니다. 특히, 두 개의 텍스트 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법을 보여 줍니다.  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>프로젝트 및 텍스트 파일을 설정 하려면  
+### <a name="to-set-up-the-project-and-the-text-files"></a>프로젝트 및 텍스트 파일을 설정하려면  
   
-1.  Names1.txt 라는 텍스트 파일에이 이름을 복사 하 고 프로젝트 폴더에 저장 합니다.  
+1.  이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.  
   
     ```  
     Bankov, Peter  
@@ -46,7 +38,7 @@ ms.lasthandoff: 03/13/2017
     Garcia, Debra  
     ```  
   
-2.  Names2.txt 라는 텍스트 파일에이 이름을 복사 하 고 프로젝트 폴더에 저장 합니다. 두 파일 이름이 지 몇 가지 공통 참고 합니다.  
+2.  이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일의 일부 이름에는 공통점이 있습니다.  
   
     ```  
     Liu, Jinghao  
@@ -180,8 +172,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` 는 System.Linq 네임 스페이스에 대 한 정보입니다.  
+ System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - qualifying XML names
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: e8f84cad46899d0dcce1532231f2f17553098b6a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 22ec3703331c43cd3b244ee3a5ce2e48d30314e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>방법: XML 요소 및 XML 특성 이름 한정
 [코드 예제](#cpconworkingwithxmlnamespacesanchor1)  
@@ -182,12 +179,11 @@ public class Book
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Serialization.XmlSerializer>   
- [XML 스키마 정의 도구 및 XML serialization](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)   
- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [XmlSerializer 클래스](xref:System.Xml.Serialization.XmlSerializer)   
- [XML serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
- [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)   
- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [XML 스키마 정의 도구 및 XML serialization](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
+ [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [XmlSerializer 클래스](xref:System.Xml.Serialization.XmlSerializer)  
+ [XML serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

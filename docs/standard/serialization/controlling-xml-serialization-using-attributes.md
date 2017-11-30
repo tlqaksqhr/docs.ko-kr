@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - classes, serializing
 - XML serialization, examples
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: c00ceea5e9700b0e964b799684eea743c540992d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e921402980b1382761dd25d9cbbabda6b2c6a038
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>특성을 사용하여 XML Serialization 제어
 특성을 사용하여 개체의 XML serialization을 제어하거나 동일한 클래스 집합에서 대체 XML 스트림을 만들 수 있습니다. 대체 XML 스트림 만들기에 대한 자세한 내용은 [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)을 참조하세요.  
@@ -320,11 +317,10 @@ public class Group{
  public 속성이나 필드를 serialize할 필요가 없는 상황이 있을 수 있습니다. 예를 들어 메타데이터를 포함하기 위해 필드나 속성을 사용할 수 있습니다. 이러한 경우에는 <xref:System.Xml.Serialization.XmlIgnoreAttribute>를 필드 또는 속성에 적용하면 <xref:System.Xml.Serialization.XmlSerializer>가 이를 건너뜁니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
- [인코딩된 SOAP serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)   
- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [XML serialization 예제](../../../docs/standard/serialization/examples-of-xml-serialization.md)   
- [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)   
- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [XML serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [인코딩된 SOAP serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [XML serialization 예제](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
+ [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-
