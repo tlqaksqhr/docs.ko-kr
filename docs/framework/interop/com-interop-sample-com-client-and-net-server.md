@@ -5,29 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8f87b17cc451b05186eee1e3228c38a05c945fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2c26b3b538517c216aa31b2cfa0c6174a9b76ab1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM Interop 샘플: COM 클라이언트 및 .NET 서버
 이 샘플에서는 담보 대출 계산을 수행하는 [COM 클라이언트](#cpconcominteropsamplecomclientnetserveranchor1) 및 [.NET 서버](#cpconcominteropsamplecomclientnetserveranchor2)의 상호 운용을 보여 줍니다. 이 예제에서 클라이언트는 관리되는 `Loan` 클래스 인스턴스를 만들고 호출한 다음 4개의 인수(4개 중 하나는 0임)를 인스턴스에 전달하고 계산 내용을 표시합니다. 이 샘플의 코드 예제는 이 섹션 전반에 표시됩니다.  
@@ -403,4 +399,3 @@ namespace LoanLib {
   
 ## <a name="see-also"></a>참고 항목  
  [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-

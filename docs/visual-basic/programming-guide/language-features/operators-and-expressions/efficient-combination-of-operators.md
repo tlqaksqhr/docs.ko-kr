@@ -1,65 +1,64 @@
 ---
-title: "Efficient Combination of Operators (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "expressions [Visual Basic], parentheses"
-  - "operators [Visual Basic], associativity"
-  - "expressions [Visual Basic], operators"
-  - "operators [Visual Basic], precedence"
-  - "Visual Basic code, operators"
-  - "Visual Basic code, expressions"
-  - "operators [Visual Basic], complex expressions"
-  - "expressions [Visual Basic], complex"
-  - "parentheses, complex expressions"
-  - "numeric expressions"
+title: "연산자의 효율적 결합(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- expressions [Visual Basic], parentheses
+- operators [Visual Basic], associativity
+- expressions [Visual Basic], operators
+- operators [Visual Basic], precedence
+- Visual Basic code, operators
+- Visual Basic code, expressions
+- operators [Visual Basic], complex expressions
+- expressions [Visual Basic], complex
+- parentheses [Visual Basic], complex expressions
+- numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4b0f1d637bc1757515cf271a8c70d62effab0843
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Efficient Combination of Operators (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-복합 식에는 여러 가지 다양한 연산자를 사용할 수 있습니다.  다음은 이에 대한 예입니다.  
+# <a name="efficient-combination-of-operators-visual-basic"></a>연산자의 효율적 결합(Visual Basic)
+복잡 한 식은 여러 다른 연산자를 포함할 수 있습니다. 다음은 이에 대한 예입니다.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- 위의 예제와 같은 복합 식을 만들려면 연산자 우선 순위 규칙을 완전히 이해해야 합니다.  자세한 내용은 [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)를 참조하십시오.  
+ 앞의 예제에 대 한 것과 같은 복잡 한 식 작성 연산자 우선 순위 규칙을 파악을 해야 합니다. 자세한 내용은 참조 [Visual Basic의 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)합니다.  
   
-## 괄호 식  
- 연산자 우선 순위에 의해 결정된 것과 다른 순서로 연산을 실행할 수도 있습니다.  다음 예제를 살펴보십시오.  
+## <a name="parenthetical-expressions"></a>괄호 식  
+ 연산자 우선 순위에 의해 결정 된 것과 다른 순서로 연산을 할 경우가 있습니다. 다음 예제를 살펴보십시오.  
   
  `x = z * y + 4`  
   
- 위의 예제에서는 `z`를 `y`로 곱한 다음 그 결과에 `4`를 더합니다.  그러나 괄호를 사용하여 일반 연산자 우선 순위를 재정의하면 `y`와 `4`를 더한 다음 그 결과에 `z`를 곱할 수 있습니다.  식을 괄호로 묶으면 연산자 우선 순위에 관계없이 괄호로 묶은 식이 가장 먼저 계산됩니다.  위의 예제에서 더하기를 가장 먼저 수행하려면 다음 예제와 같이 다시 작성합니다.  
+ 앞의 예제를 곱합니다 `z` 여 `y`, 그런 다음 결과를 `4`합니다. 추가 하려는 경우 `y` 및 `4` 기준으로 결과 곱하기 전에 `z`, 괄호를 사용 하 여 일반 연산자 우선 순위를 재정의할 수 있습니다. 식을 괄호로 묶어, 묶으면 연산자 우선 순위에 관계 없이, 먼저 계산 됩니다. 먼저 추가 작업을 수행 하는 앞의 예제를 강제로 표시 하려면 다음 예제와 같이 다시를 작성할 수 있습니다.  
   
  `x = z * (y + 4)`  
   
- 위의 예제에서는 `y`와 `4`를 더한 값에 `z`를 곱합니다.  
+ 위의 예제에서는 `y` 및 `4`를 더한 값에 곱합니다 `z`합니다.  
   
-### 중첩 괄호 식  
- 우선 순위를 추가로 재정의하려면 괄호를 여러 개 사용하여 식을 중첩시킬 수 있습니다.  괄호 내에서 가장 안쪽에 중첩된 식이 가장 먼저 계산되어 가장 바깥쪽에 중첩된 식까지 차례로 계산된 다음 괄호 외부의 식이 마지막으로 계산됩니다.  다음은 이에 대한 예입니다.  
+### <a name="nested-parenthetical-expressions"></a>중첩 된 괄호 식  
+ 식에 여러 수준의 우선 순위를 더욱 해소를 무시 하려면 괄호를 중첩할 수 있습니다. 가장 깊게 중첩 등을 가장 깊이 중첩 된 마지막 괄호 외부의 식이 다음으로 가장 깊이 중첩 된 괄호 안에 식은 먼저 평가 됩니다. 다음은 이에 대한 예입니다.  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- 위의 예제에서는 `z + 2`가 가장 먼저 계산된 다음 다른 괄호 식이 계산됩니다.  일반적으로 더하기나 빼기보다 우선 순위가 높은 지수 연산의 경우 다른 식이 괄호로 묶여 있기 때문에 이 예제에서는 마지막에 계산됩니다.  
+ 앞의 예제에서 `z + 2` 가장 먼저 평가 된 다음 다른 괄호 식이 됩니다. 지 수 연산자, 더하기 나 빼기 보다 높은 우선 순위에 일반적으로, 다른 식을 괄호로 묶여 있기 때문에이 예에서 마지막 평가 됩니다.  
   
-## 참고 항목  
- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)   
- [Logical\/Bitwise Operators](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [Boolean Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   
- [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
- [How to: Calculate Numeric Values](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)   
- [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+## <a name="see-also"></a>참고 항목  
+ [Visual Basic의 산술 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [Visual Basic의 논리 및 비트 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
+ [논리/비트 연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [부울 식](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
+ [값 비교](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
+ [방법: 숫자 값 계산](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)  
+ [Visual Basic에서의 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)

@@ -1,38 +1,43 @@
 ---
-title: "방법: TreeView의 성능 개선 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TreeView 컨트롤[WPF], 성능 향상"
+title: "방법: TreeView의 성능 개선"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 209f2c5645758aba4d1e10fc36fe773faa975e6b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: TreeView의 성능 개선
-<xref:System.Windows.Controls.TreeView>에 항목이 여러 개 포함되어 있으면 로드하는 데 소요되는 시간 때문에 사용자 인터페이스가 크게 지연될 수 있습니다.  <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=fullName> 연결된 속성을 `true`로 설정하면 로드 시간을 단축할 수 있습니다.  사용자가 마우스 휠을 사용하거나 스크롤 막대의 엄지 단추를 끌어 <xref:System.Windows.Controls.TreeView>를 스크롤하는 경우에도 UI 반응 속도가 느릴 수 있습니다.  <xref:System.Windows.Controls.VirtualizingStackPanel.VirtualizationMode%2A?displayProperty=fullName> 연결된 속성을 <xref:System.Windows.Controls.VirtualizationMode>으로 설정하면 사용자가 스크롤할 때의 <xref:System.Windows.Controls.TreeView> 성능을 높일 수 있습니다.  
+# <a name="how-to-improve-the-performance-of-a-treeview"></a>방법: TreeView의 성능 개선
+경우는 <xref:System.Windows.Controls.TreeView> 많은 항목이 포함 된 로드 하는 데 걸리는 시간의 양 사용자 인터페이스에 크게 지연 될 수 있습니다. 설정 하 여 로드 하는 시간을 향상 시킬 수 있습니다는 `VirtualizingStackPanel.IsVirtualizing` 연결 된 속성을 `true`합니다.  UI도 사용자가 스크롤할 때 응답 속도가 느려질 수 있습니다는 <xref:System.Windows.Controls.TreeView> 스크롤 막대의 엄지 단추를 끌거나 마우스 휠을 사용 하 여 합니다. 성능을 향상 시킬 수 있습니다는 <xref:System.Windows.Controls.TreeView> 사용자가을 설정 하 여를 스크롤할 때는 `VirtualizingStackPanel.VirtualizationMode` 연결 된 속성을 <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-## 설명  
- 다음 예제에서는 <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=fullName>을 true로 설정하고 <xref:System.Windows.Controls.VirtualizingStackPanel.VirtualizationMode%2A?displayProperty=fullName>를 <xref:System.Windows.Controls.VirtualizationMode>으로 설정하여 성능을 최적화하는 <xref:System.Windows.Controls.TreeView>를 만듭니다.  
+## <a name="description"></a>설명  
+다음 예제에서는 한 <xref:System.Windows.Controls.TreeView> 로 설정 하는 `VirtualizingStackPanel.IsVirtualizing` 연결 된 속성을 true로 및 `VirtualizingStackPanel.VirtualizationMode` 연결 된 속성을 <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType> 성능을 최적화할 수 있습니다.  
   
-## 코드  
- [!code-xml[RecycleItemContainerShippets#VirtualizingTreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml#virtualizingtreeview)]  
+## <a name="code"></a>코드  
+ [!code-xaml[RecycleItemContainerShippets#VirtualizingTreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml#virtualizingtreeview)]  
   
- 다음 예제에서는 이전 예제에서 사용한 데이터를 보여 줍니다.  
+ 다음 예제에서는 사용 하 여 이전 예제에서 데이터를 보여 줍니다.  
   
  [!code-csharp[RecycleItemContainerShippets#TreeViewData](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml.cs#treeviewdata)]
  [!code-vb[RecycleItemContainerShippets#TreeViewData](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#treeviewdata)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컨트롤](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

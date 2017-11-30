@@ -1,88 +1,87 @@
 ---
-title: "Partial Methods (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.PartialMethod"
-  - "PartialMethod"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "custom logic into code [Visual Basic]"
-  - "partial methods [Visual Basic]"
-  - "partial, methods [Visual Basic]"
-  - "methods [Visual Basic], partial methods"
-  - "inserting custom logic into code"
+title: "부분 메서드(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.PartialMethod
+- PartialMethod
+helpviewer_keywords:
+- custom logic into code [Visual Basic]
+- partial methods [Visual Basic]
+- partial [Visual Basic], methods [Visual Basic]
+- methods [Visual Basic], partial methods
+- inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Partial Methods (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-부분 메서드를 사용하면 개발자가 사용자 지정 논리를 코드에 삽입할 수 있습니다.  일반적으로 코드는 디자이너 생성 클래스의 일부입니다.  부분 메서드는 코드 생성기에 의해 생성된 Partial 클래스에 정의되어 있으며 변경된 내용이 있음을 나타내는 알림을 제공합니다.  부분 메서드를 사용하여 개발자는 변경에 따라 사용자 지정 동작을 지정할 수 있습니다.  
+# <a name="partial-methods-visual-basic"></a>부분 메서드(Visual Basic)
+부분 메서드는 개발자가 코드를 사용자 지정 논리를 삽입할 수를 사용 합니다. 일반적으로 코드는 디자이너에서 생성 된 클래스의 일부입니다. 부분 메서드는 코드 생성기에 의해 만들어진 partial 클래스에 정의 된 하 고 변경 된 내용이 알림을 제공 하 여 일반적으로 사용 됩니다. 사용 개발자는 변경에 따른에서 사용자 지정 동작을 지정할 수 있습니다.  
   
- 코드 생성기의 디자이너는 메서드 시그니처 및 메서드에 대한 하나 이상의 호출만 정의합니다.  그런 다음 개발자는 생성된 코드의 동작을 사용자 지정하는 경우 메서드의 구현을 제공할 수 있습니다.  구현이 제공되어 있지 않은 경우 메서드에 의한 호출은 컴파일러에 의해 제거되므로 추가 성능 오버헤드가 발생하지 않습니다.  
+ 코드 생성기의 디자이너 메서드 서명과 메서드에 하나 이상의 호출을 정의합니다. 그런 다음 개발자는 생성된 된 코드의 동작을 사용자 지정 하는 경우 메서드의 구현을 제공할 수 있습니다. 구현이 제공 되 면 메서드를 호출 하는 컴파일러에 추가적인 성능 오버 헤드 없음 통해 제거 됩니다.  
   
-## 선언  
- 생성된 코드는 시그니처 줄의 시작 부분에 키워드 `Partial`을 배치하여 부분 메서드의 정의를 표시합니다.  
+## <a name="declaration"></a>선언  
+ 키워드를 배치 하 여 부분 메서드의 정의 표시 하는 생성 된 코드 `Partial` 서명 줄의 시작 부분에 있습니다.  
   
-```vb#  
+```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
- 정의는 다음 조건을 만족해야 합니다.  
+ 정의는 다음 조건을 충족 해야 합니다.  
   
--   메서드는 `Function`이 아닌 `Sub`여야 합니다.  
+-   메서드는 이어야 합니다는 `Sub`이 아니라는 `Function`합니다.  
   
--   메서드의 본문은 비어 있어야 합니다.  
+-   메서드의 본문 비어 있어야 합니다.  
   
--   액세스 한정자는 `Private`이어야 합니다.  
+-   액세스 한정자 이어야 합니다. `Private`합니다.  
   
-## 구현  
- 구현은 주로 부분 메서드의 본문 채우기로 구성됩니다.  구현은 일반적으로 정의와는 별도의 Partial 클래스에 있으며 생성된 코드를 확장하려는 개발자에 의해 작성됩니다.  
+## <a name="implementation"></a>구현  
+ 구현에서는 주로 채우기로 부분 메서드의 본문에 구성 됩니다. 구현 정의에서 별도 partial 클래스에는 일반적으로 고 생성된 된 코드를 확장 하려는 개발자가 기록 됩니다.  
   
-```vb#  
+```vb  
 Private Sub QuantityChanged()  
 '    Code for executing the desired action.  
 End Sub  
 ```  
   
- 앞의 예제는 선언에서 확실히 시그니처가 중복되지만 변형이 가능합니다.  특히 `Overloads` 또는 `Overrides`와 같은 다른 한정자를 추가할 수 있습니다.  하나의 `Overrides` 한정자만 허용됩니다.  메서드 한정자에 대한 자세한 내용은 [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)을 참조하십시오.  
+ 앞의 예제는 선언의 시그니처를 정확 하 게 복제 되지만 변형이 가능 합니다. 특히, 다른 한정자를 추가할 수와 같은 `Overloads` 또는 `Overrides`합니다. 하나의 `Overrides` 한정자는 허용 됩니다. 메서드 한정자에 대 한 자세한 내용은 참조 [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)합니다.  
   
-## 사용할 도구  
- 다른 `Sub` 프로시저를 호출하는 것처럼 부분 메서드를 호출합니다.  메서드가 구현된 경우 인수가 평가되고 메서드의 본문이 실행됩니다.  그러나 부분 메서드를 구현하는 것은 선택 사항입니다.  메서드가 구현되지 않은 경우 메서드에 대한 호출은 효과가 없으며 인수로 메서드에 전달된 식은 평가되지 않습니다.  
+## <a name="use"></a>기능  
+ 다른 모든를 호출 하는 것 처럼 부분 메서드를 호출 `Sub` 프로시저입니다. 메서드 구현 된 경우 인수 평가 되 고 메서드 본문이 실행 됩니다. 그러나 부분 메서드를 구현 하는 선택적 임을 고려해 야 합니다. 메서드가 구현 되지 않은 경우에이 호출이 아무 효과가 없으며 메서드에 인수로 전달 된 식은 계산 되지 않습니다.  
   
-## 예제  
- Product.Designer.vb라는 파일에서 `Quantity` 속성이 있는 `Product` 클래스를 정의합니다.  
+## <a name="example"></a>예제  
+ Product.Designer.vb 라는 파일에 정의 된 `Product` 가 있는 클래스는 `Quantity` 속성.  
   
  [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
   
- Product.vb라는 파일에서 `QuantityChanged`에 대한 구현을 제공합니다.  
+ Product.vb 라는 파일에 대 한 구현을 제공 `QuantityChanged`합니다.  
   
  [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
   
- 마지막으로 프로젝트의 Main 메서드에서 `Product` 인스턴스를 선언하고 해당 `Quantity` 속성에 대해 초기 값을 제공합니다.  
+ 마지막으로, 프로젝트의 Main 메서드를 선언는 `Product` 인스턴스를 초기 값을 제공 합니다. 해당 `Quantity` 속성입니다.  
   
  [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
   
- 이 메시지를 표시하는 메시지 상자가 나타나야 합니다.  
+ 이 메시지를 표시 하는 메시지 상자가 나타납니다.  
   
  `Quantity was changed to 100`  
   
-## 참고 항목  
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Optional Parameters](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)   
- [LINQ to SQL의 코드 생성](../Topic/Code%20Generation%20in%20LINQ%20to%20SQL.md)   
- [부분 메서드를 사용하여 비즈니스 논리 추가](../Topic/Adding%20Business%20Logic%20By%20Using%20Partial%20Methods.md)
+## <a name="see-also"></a>참고 항목  
+ [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub 프로시저](./sub-procedures.md)  
+ [선택적 매개 변수](./optional-parameters.md)  
+ [부분](../../../../visual-basic/language-reference/modifiers/partial.md)  
+ [LINQ to SQL에서에서 코드 생성](https://msdn.microsoft.com/library/bb399400)  
+ [부분 메서드를 사용 하 여 비즈니스 논리 추가](https://msdn.microsoft.com/library/bb546176)

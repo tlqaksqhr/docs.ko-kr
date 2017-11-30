@@ -1,66 +1,65 @@
 ---
-title: "Differences Between Properties and Variables in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "property values"
-  - "variables [Visual Basic]"
-  - "Visual Basic code, procedures"
-  - "values, properties"
-  - "variables [Visual Basic], definition"
-  - "Visual Basic code, variables"
-  - "Visual Basic code, properties"
-  - "properties [Visual Basic], values"
-  - "properties [Visual Basic], defined"
-  - "variables [Visual Basic], and properties"
-  - "properties [Visual Basic], and variables"
+title: "Visual Basic에서 속성과 변수의 차이점"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- property values [Visual Basic]
+- variables [Visual Basic]
+- Visual Basic code, procedures
+- values [Visual Basic], properties
+- variables [Visual Basic], definition
+- Visual Basic code, variables
+- Visual Basic code, properties
+- properties [Visual Basic], values
+- properties [Visual Basic], defined
+- variables [Visual Basic], and properties
+- properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Differences Between Properties and Variables in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-변수와 속성은 모두 액세스할 수 있는 값을 나타내지만  저장소와 구현에 있어 차이가 납니다.  
+# <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic에서 속성과 변수의 차이점
+변수 및 속성에 모두 액세스할 수 있는 값을 나타냅니다. 그러나, 저장소 및 구현에 차이가 있습니다.  
   
-## 변수  
- *변수*는 메모리 위치에 직접적으로 해당합니다.  단일 선언문을 사용하여 변수를 정의합니다.  변수는 프로시저 내에 정의되어 해당 프로시저 내에서만 사용할 수 있는 *지역 변수*이거나 모듈, 클래스 또는 구조체에 정의되지만 프로시저 내에 정의되지 않는 *멤버 변수*일 수 있습니다.  멤버 변수를 *필드*라고도 합니다.  
+## <a name="variables"></a>변수  
+ A *변수* 메모리 위치에 직접 해당 합니다. 단일 선언 문 사용 하 여 변수를 정의 합니다. 변수를 사용할 수는 *지역 변수*, 프로시저 내 및 해당 프로시저 내 에서만 사용할 수 있는 정의 된 또는 수는 *멤버 변수*, 모듈, 클래스 또는 구조체의 내부가 아닌 모든 정의 프로시저입니다. 멤버 변수는 라고도 *필드*합니다.  
   
-## 속성  
- *속성*은 모듈, 클래스 또는 구조체에 정의되는 데이터 요소입니다.  `Property` 및 `End Property` 문 사이의 코드 블록을 사용하여 속성을 정의합니다.  코드 블록에는 `Get` 프로시저 또는 `Set` 프로시저가 포함되어 있거나 두 프로시저가 모두 포함되어 있습니다.  이러한 프로시저를 *속성 프로시저* 또는 *속성 접근자*라고 합니다.  이러한 프로시저는 속성 값을 검색 또는 저장하는 것 외에 액세스 카운터를 업데이트하는 등의 사용자 지정 작업을 수행할 수도 있습니다.  
+## <a name="properties"></a>속성  
+ A *속성* 모듈, 클래스 또는 구조체에 정의 된 데이터 요소입니다. 사이의 코드 블록을 사용 하 여 속성을 정의 `Property` 및 `End Property` 문. 코드 블록에는 `Get` 프로시저는 `Set` 프로시저 중 하나 또는 둘 다 합니다. 이러한 프로시저는 호출 *속성 프로시저* 또는 *속성 접근자*합니다. 검색 속성의 값을 저장 하거나, 아니라 액세스 카운터를 업데이트 하는 등의 사용자 지정 동작을 수행할 수 있습니다.  
   
-## 차이점  
- 다음 표에서는 변수와 속성의 몇 가지 중요한 차이점을 보여 줍니다.  
+## <a name="differences"></a>차이점  
+ 다음 표에서 변수 및 속성 간의 몇 가지 중요 한 차이점을 보여 줍니다.  
   
-|차이점|변수|Property|  
-|---------|--------|--------------|  
-|선언|단일 선언문|코드 블록에 있는 일련의 문|  
-|구현|단일 저장소 위치|실행 코드\(속성 프로시저\)|  
-|저장소|변수 값과 직접 연결됨|일반적으로 속성의 포함하는 클래스 또는 모듈의 외부에서 사용할 수 없는 내부 저장소를 가짐<br /><br /> 속성 값은 저장된 요소로 존재하거나 존재하지 않을 수 있음<sup>1</sup>|  
-|실행 코드|없음|적어도 하나 이상의 프로시저를 가져야 함|  
-|읽기 및 쓰기 권한|읽기\/쓰기 또는 읽기 전용|읽기\/쓰기, 읽기 전용 또는 쓰기 전용|  
-|사용자 지정 작업\(값 수락 또는 반환 외\)|불가능|속성 값 설정 또는 검색의 일부로 수행 가능|  
+|차이점|변수|속성|  
+|-------------------------|--------------|--------------|  
+|선언|단일 선언문|일련의 코드 블록에는 문|  
+|구현|단일 저장소 위치|실행 코드 (속성 프로시저)|  
+|저장소|직접 연결 된 변수 값|일반적으로 내부 저장소 속성의 포함 하는 클래스 또는 모듈 외부에서 사용할 수 없습니다.<br /><br /> 속성의 값 존재 하거나 저장 된 요소로로 존재 하지 않을 <sup>1</sup>|  
+|실행 코드|없음|프로시저를 적어도 하나 있어야 합니다.|  
+|읽기 및 쓰기 액세스|읽기/쓰기 또는 읽기 전용|읽기/쓰기, 읽기 전용 이거나 쓰기 전용|  
+|사용자 지정 작업 (외에도 수락 하거나 값을 반환)|수 없습니다.|설정 또는 검색 속성 값의 일부로 수행할 수 있습니다.|  
   
- <sup>1</sup> 변수와 달리 속성 값은 저장소의 단일 항목에 직접 해당되지 않을 수 있습니다.  편의상 또는 보안을 위해 저장소를 여러 부분으로 분할하거나 값을 암호화된 형식으로 저장할 수 있습니다.  이러한 경우에 `Get` 프로시저는 분할된 부분을 조합하거나 저장된 값을 해독하고 `Set` 프로시저는 새 값을 암호화하거나 이러한 값을 여러 저장소로 분할하여 저장합니다.  속성 값은 시간과 같이 순간적일 수 있으며 이 경우에는 속성에 액세스할 때마다 `Get` 프로시저가 속성 값을 즉시 계산합니다.  
+ <sup>1</sup> 변수와 달리 속성의 값은 저장소의 단일 항목에 직접 맞지 수 있습니다. 저장소 편의 또는 보안에 대 한 조각으로 분할 또는 값이 암호화 된 형식에 저장 될 수 있습니다. 이러한 경우에는 `Get` 프로시저 부분을 조합 하거나 저장 된 값을 암호 해독 및 `Set` 프로시저 새 값을 암호화 하거나 구성 저장소로 분할 합니다. 속성 값이 경우 시간, 자정 같은 임시 수 있습니다는 `Get` 프로시저 계산 즉석에서 속성에 액세스할 때마다 합니다.  
   
-## 참고 항목  
- [Property 프로시저](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)   
- [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)   
- [How to: Create a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-property.md)   
- [How to: Declare a Property with Mixed Access Levels](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)   
- [How to: Call a Property Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [How to: Put a Value in a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [How to: Get a Value from a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>참고 항목  
+ [속성 프로시저](./property-procedures.md)  
+ [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)  
+ [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [방법: 속성 만들기](./how-to-create-a-property.md)  
+ [방법: 액세스 수준이 혼합된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [방법: 속성 프로시저 호출](./how-to-call-a-property-procedure.md)  
+ [방법: 선언 하 고 Visual Basic의 기본 속성 호출](./how-to-declare-and-call-a-default-property.md)  
+ [방법: 속성 값 입력](./how-to-put-a-value-in-a-property.md)  
+ [방법: 속성에서 값 가져오기](./how-to-get-a-value-from-a-property.md)

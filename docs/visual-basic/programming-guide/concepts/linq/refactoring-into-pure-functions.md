@@ -1,29 +1,25 @@
 ---
-title: "(Visual Basic) 순수 함수로 리팩터링 | Microsoft 문서"
+title: "(Visual Basic) 순수 함수로 리팩터링"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e622436905893872521994f6dc1a5bc1c8b3d06a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0a1b8d314cf1403ef5065e5432f7acd15ebb440
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>(Visual Basic) 순수 함수로 리팩터링
-순수 함수 변형의 중요한 측면은 순수 함수를 사용하여 코드를 리팩터링하는 방법을 습득하는 것입니다.  
+순수 함수 변환의 중요한 측면은 순수 함수를 사용하여 코드를 리팩터링하는 방법을 습득하는 것입니다.  
   
  이 단원의 앞 부분에서 설명한 것처럼 순수 함수에는 두 가지 유용한 특징이 있습니다.  
   
@@ -62,7 +58,7 @@ End Module
 StringOne-StringTwo  
 ```  
   
- 참고 아닌지 관련 수정 되는 데이터가 있는지 여부 `public` 또는 `private` 되었거나, 액세스는 `shared` 멤버 또는 인스턴스 멤버입니다. 순수 함수는 함수 외부에 있는 데이터를 변경하지 않습니다.  
+ 아닌지 관련 수정 되는 데이터가 있는지 여부는 참고 `public` 또는 `private` 되었거나, 액세스 한 `shared` 멤버 또는 인스턴스 멤버입니다. 순수 함수는 함수 외부에 있는 데이터를 변경하지 않습니다.  
   
 ### <a name="non-pure-function-that-changes-an-argument"></a>인수를 변경하는 비순수 함수  
  또한 이 동일한 함수의 다음 버전은 매개 변수 `sb`의 내용을 수정하기 때문에 순수 함수가 아닙니다.  
@@ -81,7 +77,7 @@ Module Module1
 End Module  
 ```  
   
- 이 버전의 프로그램에서는 때문에 동일한 출력을 첫 번째 버전의 `HypenatedConcat` 함수를 호출 하 여 첫 번째 매개 변수의 값 (상태) 변경 되었습니다는 <xref:System.Text.StringBuilder.Append%2A>멤버 함수입니다.</xref:System.Text.StringBuilder.Append%2A> 이러한 변경은 `HypenatedConcat`에서 값에 의한 호출(call-by-value) 매개 변수 전달을 사용함에도 불구하고 발생합니다.  
+ `HypenatedConcat` 함수가 <xref:System.Text.StringBuilder.Append%2A> 멤버 함수를 호출하여 첫 번째 매개 변수의 값(상태)을 변경했기 때문에 이 프로그램 버전은 첫 번째 버전과 동일한 출력을 생성합니다. 이러한 변경은 `HypenatedConcat`에서 값에 의한 호출(call-by-value) 매개 변수 전달을 사용함에도 불구하고 발생합니다.  
   
 > [!IMPORTANT]
 >  참조 형식의 경우 값에 의해 매개 변수를 전달하면 개체에 대한 참조의 복사본이 전달됩니다. 이 복사본은 참조 변수가 새 개체에 할당될 때까지 원래 참조와 동일한 인스턴스 데이터와 연결되어 있습니다. 참조에 의한 호출(call-by-reference)을 사용하는 경우 함수에서 반드시 매개 변수를 수정해야 할 필요가 없습니다.  
@@ -113,5 +109,5 @@ End Module
  자세한 내용은 참조 [표준 쿼리 연산자 개요 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [순수 함수 변환 (Visual Basic) 소개](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
+ [순수 함수 변환 (Visual Basic) 소개](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

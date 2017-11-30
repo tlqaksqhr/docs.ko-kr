@@ -1,94 +1,92 @@
 ---
-title: "문자열 함수(Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "문자열 함수"
+title: "문자열 함수(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0e7672f03cda99aa0e1dcecd79b0358f9d5f16f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 문자열 함수(Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-다음 표에서는 Visual Basic에서 문자열을 검색 및 조작하는 데 사용할 수 있는 함수를 나열합니다.  
+# <a name="string-functions-visual-basic"></a>문자열 함수(Visual Basic)
+다음 표에서 Visual Basic에서는 검색 하 고 문자열을 조작 하는 함수를 나열 합니다.  
   
-|.NET Framework 메서드|설명|  
-|------------------------|--------|  
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|문자에 해당하는 문자 코드를 나타내는 `Integer` 값을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|지정한 문자 코드와 연관된 문자를 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|지정된 필터링 기준에 따라 `String` 배열의 하위 집합을 포함하는 0부터 시작하는 배열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|형식 `String` 식에 포함된 명령에 따라 형식 지정된 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|시스템 제어판에 정의된 통화 기호를 사용하여 통화 값으로 서식이 지정된 식을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|날짜\/시간 값을 나타내는 문자열 식을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|숫자로 서식이 지정된 식을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|뒤에 % 문자를 붙이고 100을 곱하여 백분율로 서식이 지정된 식을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|한 문자열에서 다른 문자열이 처음으로 나타나는 위치를 지정하는 정수를 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|문자열의 오른쪽에서 시작하여 한 문자열 내에서 다른 문자열이 처음 나오는 위치를 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|배열에 포함된 여러 부분 문자열을 조인하여 작성되는 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|소문자로 변환된 문자열 또는 문자를 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|문자열의 왼쪽에서 지정한 수의 문자를 포함하는 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|문자열의 문자 수가 포함된 정수를 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|지정된 문자열을 지정한 길이에 맞게 조정하고 왼쪽에 맞춘 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|선행 공백 없이 지정된 문자열의 복사본을 포함하는 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|문자열에서 지정한 수의 문자를 포함하는 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|지정된 부분 문자열이 지정된 횟수만큼 다른 부분 문자열로 대체된 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|문자열의 오른쪽에서 지정한 개수의 문자를 포함하는 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|지정된 길이에 맞게 조정된 특정 문자열이 포함된 문자열\(오른쪽에 맞춰진 문자열\)을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|후행 공백 없이 지정된 문자열의 복사본을 포함하는 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|지정한 수 만큼의 공백으로 구성되는 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|지정된 수의 부분 문자열을 포함하는 0부터 시작하는 1차원 배열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|문자열 비교의 결과에 따라 \-1, 0 또는 1을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|지정된 대로 변환된 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|지정된 횟수만큼 반복되는 특정 문자로 구성된 문자열 또는 개체를 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|지정된 문자열의 문자 순서를 역순으로 한 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|선행 또는 후행 공백 없이 지정된 문자열의 복사본을 포함하는 문자열을 반환합니다.|  
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|대문자로 변환된 특정 문자열이 있는 문자열 또는 문자를 반환합니다.|  
+|.NET framework 메서드|설명|  
+|---------------------------|-----------------|  
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|반환 된 `Integer` 문자에 해당 하는 문자 코드를 나타내는 값입니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|지정된 된 문자 코드와 연결 된 문자를 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|하위 집합을 포함 하는 0부터 시작 배열을 반환는 `String` 배열의 지정 된 필터 조건에 기반 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|형식에 포함 된 지침에 따라 형식이 지정 된 문자열로 반환 `String` 식입니다.|  
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|시스템 제어판에 정의 된 통화 기호를 사용 하 여 통화 값으로 형식이 지정 된 식을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|날짜/시간 값을 나타내는 문자열 식을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|숫자 형식의 식을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|백분율로 서식이 지정된 식(100을 곱함)을 % 문자를 붙여 반환합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|내에서 다른 한 문자열의 처음 나타나는 시작 위치를 지정 하는 정수를 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|문자열의 오른쪽에서에서 시작 하 여 다른 한 문자열의 첫 번째 나타나는 위치를 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|여러 배열에 포함 된 문자열을 결합 하 여 만든 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|문자열 또는 소문자로 변환 된 문자를 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|지정 된 된 수의 왼쪽된 부분 문자열에서에서 문자를 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|문자열의 문자 수를 포함 하는 정수를 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|지정한 길이로 조정 된 지정한 문자열을 포함 하는 왼쪽 맞춤 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|선행 공백 없이 지정된 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|지정된 된 수의 문자열에서 문자를 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|지정 된 횟수 만큼을 하위 문자열로를 지정한 하위 문자열이 바뀌었습니다 다른 문자열 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|지정된 된 수의 문자열의 오른쪽으로 문자를 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|지정한 길이로 조정 된 지정한 문자열을 포함 하는 오른쪽 맞춤 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|후행 공백 없이 지정된 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|지정 된 공백 수로 구성 된 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|부분 문자열의 지정 된 수를 포함 하는 0부터 시작 하는 1 차원 배열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|-1, 0 또는 1을 기반으로 문자열 비교 작업의 결과 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|지정 된 대로 변환 된 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|문자열 또는 개체를 지정된 된 문자 길이의 지정 된 횟수 만큼 반복을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|지정된 된 문자열의 문자 순서를 역순 한 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|선행 또는 후행 공백 없이 지정된 된 문자열의 복사본을 포함 하는 문자열을 반환 합니다.|  
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|문자열 또는 문자를 대문자로 변환 된 지정 된 문자열을 반환 합니다.|  
   
- [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) 문을 사용하여 문자열을 비교할 때 시스템 로캘에서 결정되는 대\/소문자를 구분하지 않는 텍스트 정렬 순서\(`Text`\)를 사용할지 또는 문자의 내부 이진 표현\(`Binary`\)을 사용할지를 설정할 수 있습니다.  기본 텍스트 비교 메서드는 `Binary`입니다.  
+ 사용할 수는 [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) 문 텍스트를 대/소문자 구분을 사용 하 여 문자열 비교 작동 하는지를 설정 하려면 시스템의 로캘에 따라 결정 된 순서 정렬 (`Text`) 또는 문자 (의 내부 이진 표현 `Binary`). 기본 텍스트 비교 방법은 `Binary`입니다.  
   
-## 예제  
- 다음 예제에서는 `UCase` 함수를 사용하여 대문자 문자열을 반환합니다.  
+## <a name="example"></a>예제  
+ 사용 하 여이 예제는 `UCase` 함수는 문자열의 대문자 버전을 반환 합니다.  
   
  [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
-## 예제  
- 이 예제에서는 문자열 변수에서 `LTrim` 함수를 사용하여 선행 공백을 제거하고 `RTrim` 함수를 사용하여 후행 공백을 제거하며  `Trim` 함수를 사용하여 양쪽 공백을 모두 제거합니다.  
+## <a name="example"></a>예제  
+ 사용 하 여이 예제는 `LTrim` 선행 공백을 제거 하는 함수 및 `RTrim` 문자열 변수에서 함수를 후행 공백입니다. 사용 하 여는 `Trim` 후행 공백 모두 제거 하는 함수입니다.  
   
  [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
-## 예제  
- 다음 예제에서는 문자열에서 `Mid` 함수를 사용하여 지정한 수의 문자열을 반환합니다.  
+## <a name="example"></a>예제  
+ 사용 하 여이 예제는 `Mid` 는 문자열에서 지정한 개수의 문자를 반환 하는 함수입니다.  
   
  [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
   
-## 예제  
- 다음 예제에서는 `Len` 함수를 사용하여 문자열의 문자 개수를 반환합니다.  
+## <a name="example"></a>예제  
+ 이 예에서는 `Len` 를 문자열의 문자 수를 반환 합니다.  
   
  [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
-## 예제  
- 다음 예제에서는 `InStr` 함수를 사용하여 한 문자열 안에 다른 문자열이 처음으로 나타나는 위치를 반환합니다.  
+## <a name="example"></a>예제  
+ 사용 하 여이 예제는 `InStr` 함수 내에서 다른 한 문자열의 첫 번째 발생 위치를 반환 합니다.  
   
  [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
-## 예제  
- 다음 예제에서는 `String` 형식과 사용자 정의 형식을 모두 사용하여 값의 형식을 지정하는 `Format` 함수의 다양한 사용 방법을 보여 줍니다.  날짜 구분 기호\(`/`\), 시간 구분 기호\(`:`\), AM\/PM 표시기\(`t` 및 `tt`\)의 경우 시스템에 실제로 표시되는 출력 형식은 코드에서 사용하는 로캘 설정에 따라 달라집니다.  개발 환경에 시간과 날짜가 표시되는 경우 코드 로캘의 간단한 시간 형식과 날짜 형식이 사용됩니다.  
+## <a name="example"></a>예제  
+ 다양 한 용도 보여 주는이 예제는 `Format` 모두 사용 하 여 값 형식 함수 `String` 형식이 나 사용자 정의 형식입니다. 날짜 구분 기호에 대 한 (`/`)을 시간 구분 기호 (`:`), 및 AM/PM 표시기 (`t` 및 `tt`), 실제로 출력 형식은 시스템에서 표시 되는 코드에서 사용 하는 로캘 설정에 따라 달라 집니다. 때 시간 및 개발 환경에서 표시 되는 날짜, 간단한 시간 형식 및 코드 로캘의 간단한 날짜 서식을 사용 됩니다.  
   
 > [!NOTE]
->  24시간 형식을 사용하는 로캘의 경우에는 AM\/PM 표시기\(`t`와 `tt`\)에 아무것도 표시되지 않습니다.  
+>  24 시간 시계를 AM/PM 표시기를 사용 하는 로캘의 (`t` 및 `tt`) 아무 것도 표시 합니다.  
   
  [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
-## 참고 항목  
- [키워드](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic Runtime Library Members](../../../visual-basic/language-reference/runtime-library-members.md)   
- [String Manipulation Summary](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+## <a name="see-also"></a>참고 항목  
+ [키워드](../../../visual-basic/language-reference/keywords/index.md)  
+ [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)  
+ [문자열 조작 요약](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

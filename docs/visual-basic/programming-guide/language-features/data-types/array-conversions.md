@@ -1,48 +1,47 @@
 ---
-title: "Array Conversions (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "arrays [Visual Basic], converting type"
-  - "type conversion, arrays"
-  - "conversions, type"
-  - "arrays [Visual Basic], data types"
-  - "conversions, data type"
-  - "object arrays, converting type"
-  - "data type conversion, array conversions"
-  - "conversions, array types"
-  - "object arrays"
+title: "배열 변환(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- arrays [Visual Basic], converting type
+- type conversion [Visual Basic], arrays
+- conversions [Visual Basic], type
+- arrays [Visual Basic], data types
+- conversions [Visual Basic], data type
+- object arrays [Visual Basic], converting type
+- data type conversion [Visual Basic], array conversions
+- conversions [Visual Basic], array types
+- object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 40dc9805157dd0bc991ca2375c3436aa6b6e09a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Array Conversions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-다음 조건이 충족되면 특정 배열 형식을 서로 다른 배열 형식으로 변환할 수 있습니다.  
+# <a name="array-conversions-visual-basic"></a>배열 변환(Visual Basic)
+다음 조건이 충족 되는 배열 형식이 다른 배열 형식으로 변환할 수 있습니다.  
   
--   **동일한 차수.** 두 배열의 차수가 동일해야 합니다. 즉, 동일한 개수의 차수를 가지고 있어야 합니다.  그러나 각 차원의 길이는 동일하지 않아도 됩니다.  
+-   **동일한 차수입니다.** 두 배열의 차수가 같아야, 즉, 동일한 차원 수 있어야 합니다. 그러나 각 차원의 길이 같이 필요가 없습니다.  
   
--   **요소 데이터 형식.** 두 배열의 요소 데이터 형식이 참조 형식이어야 합니다.  `Integer` 배열은 최소한 하나의 값 형식이 포함되어 있기 때문에 `Long` 배열이나 `Object` 배열로도 변환할 수 없습니다.  자세한 내용은 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)를 참조하십시오.  
+-   **요소 데이터 형식입니다.** 데이터 형식의 두 배열의 요소에는 참조 형식 이어야 합니다. 변환할 수 없습니다는 `Integer` 배열을 `Long` 배열 또는 심지어는 `Object` 하나 이상 값 형식이 포함 되어 있으므로 배열입니다. 자세한 내용은 참조 [값 형식과 참조 형식이](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)합니다.  
   
--   **변환 가능성.** 두 배열의 요소 형식 사이에서 확대 변환이나 축소 변환이 가능해야 합니다.  `String` 배열과 <xref:System.Attribute?displayProperty=fullName>에서 파생된 클래스의 배열 사이에 변환을 시도하는 경우가 이 요구 사항을 충족하지 않는 예입니다.  이 두 형식은 공통적인 요소가 전혀 없으므로 서로 간에 어떤 종류의 변환도 존재하지 않습니다.  
+-   **변환 가능성입니다.** 두 배열의 요소 형식 간에 변환, 확대 또는 축소 수 있어야 합니다. 이 요구 사항은 실패 하는 예제 변환을 시도 하는 사이 `String` 에서 파생 된 클래스의 배열 및 배열 <xref:System.Attribute?displayProperty=nameWithType>합니다. 이 두 가지 종류로 아무 공통으로 있고 서로 간에 어떤 종류의 변환 작업 없이 존재 합니다.  
   
- 배열 형식 간의 변환이 축소인지 확대인지 여부는 각 요소의 변환이 확대인지 축소인지에 따라 결정됩니다.  자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하십시오.  
+ 다른 배열 형식 변환은 확대 또는 축소 되는 각 요소의 변환 확대 또는 축소 여부에 따라 됩니다. 자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요.  
   
-## Object 배열로 변환  
- `Object` 배열을 초기화하지 않고 선언한 경우 배열의 요소 형식은 초기화되지 않는 동안은 `Object`입니다.  배열을 특정 클래스의 배열로 설정하면 해당 클래스 형식을 갖게 됩니다.  그러나 내부 형식은 여전히 `Object`이며 나중에 해당 배열을 관련이 없는 다른 클래스 배열로 설정할 수 있습니다.  모든 클래스는 `Object`에서 파생되므로 배열의 요소 형식을 한 클래스에서 다른 클래스로 자유롭게 변경할 수 있습니다.  
+## <a name="conversion-to-an-object-array"></a>개체 배열로 변환  
+ 선언 하는 경우는 `Object` 배열 요소 형식은 초기화 하지 않고 `Object` 으로 초기화 되지 않은 상태로 유지 됩니다. 특정 클래스의 배열에 설정 하는 경우 해당 클래스의 형식에 적용 됩니다. 그러나 내부 형식은 여전히 `Object`, 이후에 다른 배열을 관련 없는 클래스를 설정할 수 있습니다. 모든 클래스에서 파생 되므로 `Object`, 다른 클래스는 클래스에서 배열의 요소 형식을 변경할 수 있습니다.  
   
- 다음 예제에서 형식 `student`와 `String` 간에 변환은 발생하지 않지만 둘 모두 `Object`에서 파생되므로 모든 할당이 올바릅니다.  
+ 다음 예제에서는 변환 된 항목이 없고 형식 간의 `student` 및 `String`, 둘 다에서 파생 되지만 `Object`이므로 모든 할당은 유효 합니다.  
   
 ```  
 ' Assume student has already been defined as a class.  
@@ -55,10 +54,10 @@ testArray = names
 ' testArray is now a String array.  
 ```  
   
-### 배열의 내부 형식  
- 처음부터 배열을 특정 클래스로 선언하면 배열의 내부 요소 형식은 해당 클래스가 됩니다.  나중에 배열을 다른 클래스의 배열로 설정하는 경우에는 두 클래스 간에 변환이 수행되어야 합니다.  
+### <a name="underlying-type-of-an-array"></a>내부 배열 형식  
+ 특정 클래스에 배열을으로 원래 선언 내부 요소 형식은 해당는 해당 클래스입니다. 이후에 값을 설정 하면 다른 클래스의 배열에는 두 클래스 간에 변환 이어야 합니다.  
   
- 다음 예제에서 `students`는 `student` 배열입니다.  `String`과 `student` 사이에 어떠한 변환도 수행되지 않기 때문에 마지막 문은 실패합니다.  
+ 다음 예에서 `students` 는 `student` 배열입니다. 변환 작업 없이 사이 존재 하므로 `String` 및 `student`, 마지막 문은 실패 합니다.  
   
 ```  
 Dim students() As student  
@@ -68,12 +67,12 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## 참고 항목  
- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Implicit and Explicit Conversions](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Conversions Between Strings and Other Types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)   
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [암시적 변환과 명시적 변환](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [문자열과 다른 형식 사이의 변환](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [방법: Visual Basic에서 다른 형식으로 변환](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [형식 변환 함수](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

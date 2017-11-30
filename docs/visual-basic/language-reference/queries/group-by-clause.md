@@ -1,11 +1,10 @@
 ---
-title: "Group By 절 (Visual Basic) | Microsoft 문서"
-ms.date: 2015-07-20
+title: "Group By 절(Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.QueryGroupByInto
@@ -13,35 +12,19 @@ f1_keywords:
 - vb.QueryGroupRef
 - vb.QueryGroupInto
 - vb.QueryGroup
-dev_langs:
-- VB
 helpviewer_keywords:
 - queries [Visual Basic], Group By
-- Group By statement
-- Group By clause
+- Group By statement [Visual Basic]
+- Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a40074c4602d6c0164c784d497fbfb134402bf62
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b719bfa2ebe4c324acf82a03e215e481283845fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 절(Visual Basic)
 쿼리 결과의 요소를 그룹화합니다. 각 그룹에 집계 함수를 적용하는 데 사용할 수도 있습니다. 그룹화 작업은 하나 이상의 키를 기반으로 합니다.  
@@ -83,21 +66,21 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
      그룹에 적용할 집계 함수를 포함할 수도 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `Group By` 절을 사용하여 쿼리 결과를 그룹으로 나눌 수 있습니다. 그룹화는 키 또는 여러 키로 구성된 복합 키를 기반으로 합니다. 일치하는 키 값과 연결된 요소는 동일한 그룹에 포함됩니다.  
   
- `aggregateList` 절의 `Into` 매개 변수와 `Group` 키워드를 사용하여 그룹을 참조하는 데 사용되는 멤버 이름을 식별합니다. `Into` 절에 집계 함수를 포함하여 그룹화된 요소의 값을 계산할 수도 있습니다. 표준 집계 함수 목록은 참조 하십시오. [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)합니다.  
+ `aggregateList` 절의 `Into` 매개 변수와 `Group` 키워드를 사용하여 그룹을 참조하는 데 사용되는 멤버 이름을 식별합니다. `Into` 절에 집계 함수를 포함하여 그룹화된 요소의 값을 계산할 수도 있습니다. 목록이 표준 집계 함수에 대 한 참조 [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 해당 위치(국가)를 기준으로 고객 목록을 그룹화하고 각 그룹에 있는 고객 수를 제공합니다. 결과는 국가 이름별로 정렬됩니다. 그룹화된 결과는 도시 이름별로 정렬됩니다.  
   
- [!code-vb[VbSimpleQuerySamples #&11;](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [쿼리](../../../visual-basic/language-reference/queries/queries.md)   
- [Select 절](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From 절](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Order By 절](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)   
+ [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [쿼리](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select 절](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From 절](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Order By 절](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  [Group Join 절](../../../visual-basic/language-reference/queries/group-join-clause.md)

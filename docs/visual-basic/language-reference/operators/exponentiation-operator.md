@@ -1,95 +1,92 @@
 ---
-title: "^ Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.^"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "raising numbers to powers"
-  - "^ operator [Visual Basic], exponention"
-  - "square operator"
-  - "^ operator [Visual Basic]"
-  - "exponentiation operator [Visual Basic]"
-  - "exponent"
-  - "numbers, rasing"
-  - "powers"
-  - "arithmetic operators, exponentiation"
+title: "^ 연산자(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.^
+helpviewer_keywords:
+- raising numbers to powers
+- ^ operator [Visual Basic], exponention
+- square operator [Visual Basic]
+- ^ operator [Visual Basic]
+- exponentiation operator [Visual Basic]
+- exponent
+- numbers [Visual Basic], rasing
+- powers
+- arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ^ Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-특정 숫자를 다른 숫자의 승수로 거듭제곱합니다.  
+# <a name="-operator-visual-basic"></a>^ 연산자(Visual Basic)
+숫자를를 다른 숫자의 거듭제곱을 발생 시킵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
 number ^ exponent  
 ```  
   
-## 요소  
+## <a name="parts"></a>요소  
  `number`  
- 필수 요소.  임의의 숫자 식입니다.  
+ 필수 요소. 임의의 숫자 식입니다.  
   
  `exponent`  
- 필수 요소.  임의의 숫자 식입니다.  
+ 필수 요소. 임의의 숫자 식입니다.  
   
-## 결과  
- 결과는 `exponent`를 승수로 `number`를 거듭제곱한 값으로, 항상 `Double` 값입니다.  
+## <a name="result"></a>결과  
+ 결과 `number` 의 거듭제곱을 `exponent`, 항상로 `Double` 값입니다.  
   
-## 지원 형식  
- `Double`.  다른 형식의 피연산자는 `Double`로 변환됩니다.  
+## <a name="supported-types"></a>지원 형식  
+ `Double`. 다른 형식의 피연산자 변환할 `Double`합니다.  
   
-## 설명  
- Visual Basic에서는 지수 연산이 항상 [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md)으로 수행됩니다.  
+## <a name="remarks"></a>설명  
+ Visual Basic의 지 수를 항상 수행는 [Double 데이터 형식의](../../../visual-basic/language-reference/data-types/double-data-type.md)합니다.  
   
- `exponent`의 값은 소수나 음수 또는 음의 소수가 될 수 있습니다.  
+ 값 `exponent` 소수인 수 음수, 또는 둘 다 합니다.  
   
- 단일 식에서 두 번 이상 지수 연산을 수행하는 경우 `^` 연산자는 왼쪽에서 오른쪽으로 계산됩니다.  
+ 단일 식에서 둘 이상의 지 수 연산을 수행 되는 `^` 연산자는 왼쪽에서 오른쪽으로 계산 됩니다.  
   
 > [!NOTE]
->  `^` 연산자는 필요에 따라 *오버로드*할 수 있습니다. 즉, 피연산자의 형식이 특정 클래스 또는 구조체인 경우 해당 클래스나 구조체에서 이 연산자의 동작을 다시 정의할 수 있습니다.  코드에서 이러한 클래스나 구조체에 대해 이 연산자를 사용할 때는 다시 정의된 동작을 알고 있어야 합니다.  자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)를 참조하십시오.  
+>  `^` 연산자 될 수 있습니다 *오버 로드 된*, 클래스 또는 구조체 수 할의 동작에 해당 클래스 또는 구조체의 형식입니다. 이 연산자를 사용 하 여 이러한 클래스나 구조체에는 코드를 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 참조 [연산자 프로시저](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)합니다.  
   
-## 예제  
- 다음 예제에서는 `^` 연산자를 사용하여 숫자를 지수만큼 거듭제곱합니다.  즉, 첫째 피연산자가 둘째 피연산자의 승수로 거듭제곱됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `^` 연산자를 지 수의 숫자입니다. 결과 두 번째 거듭제곱을 첫 번째 피연산자입니다.  
   
  [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
- 위 예제의 결과는 다음과 같습니다.  
+ 앞의 예제 결과 다음과 같습니다.  
   
- `exp1`은 4\(2의 제곱\)로 설정됩니다.  
+ `exp1`4 (2의 제곱)로 설정 됩니다.  
   
- `exp2`는 19683\(3을 3제곱한 후 결과 값을 3제곱\)으로 설정됩니다.  
+ `exp2`19683 (3, 3 제곱 값을 제곱)로 설정 됩니다.  
   
- `exp3`은 \-125\(\-5의 3제곱\)로 설정됩니다.  
+ `exp3`(3 제곱-5)-125로 설정 됩니다.  
   
- `exp4`는 625\(\-5의 4제곱\)로 설정됩니다.  
+ `exp4`625 (4 제곱-5)로 설정 됩니다.  
   
- `exp5`는 2\(8의 3제곱근\)로 설정됩니다.  
+ `exp5`2 (64.64의 8)로 설정 됩니다.  
   
- `exp6`은 0.5\(1.0 나누기 8의 3제곱근\)로 설정됩니다.  
+ `exp6`(1.0 8의 세 제곱근으로 나눈) 0.5로 설정 됩니다.  
   
- 위 예제의 식에서는 괄호가 중요한 역할을 합니다.  *연산자 우선 순위* 때문에 Visual Basic에서는 `^` 연산자가 다른 어떤 연산자보다 먼저 수행되며, 단항 `–` 연산자보다도 먼저 수행됩니다.  `exp4`와 `exp6`을 괄호 없이 계산한다면 다음과 같은 결과가 생성됩니다.  
+ 앞의 예제 식에서는 괄호의 중요성을 note 합니다. 때문에 *연산자 우선 순위*, Visual Basic을 정상적으로 수행 된 `^` 단항 포함 하 여 다른 대체 이전에, 연산자 `–` 연산자입니다. 경우 `exp4` 및 `exp6` 계산 괄호 없이 다음과 같은 결과가 생성:  
   
- `exp4 = -5 ^ 4`\(5\-제곱\)를 계산 하는\-625에서 발생 합니다.  
+ `exp4 = -5 ^ 4`– (4 제곱 5)로 계산 될 것-625를 초래 합니다.  
   
- `exp6 = 8 ^ -1.0 / 3.0`은 \(8의 –1제곱, 즉 0.125\) 나누기 3.0, 즉 0.041666666666666666666666666666667로 계산됩니다.  
+ `exp6 = 8 ^ -1.0 / 3.0`(-1 제곱, 즉 0.125 8)로 계산 될 것 3.0 0.041666666666666666666666666666667로 나눈 값입니다.  
   
-## 참고 항목  
- [^\= Operator](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>참고 항목  
+ [^= 연산자](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -1,50 +1,32 @@
 ---
 title: "초기 바인딩 및 런타임에 바인딩(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- early binding
+- early binding [Visual Basic]
 - objects [Visual Basic], late-bound
 - objects [Visual Basic], early-bound
 - objects [Visual Basic], late bound
-- early binding, Visual Basic compiler
-- binding, late and early
+- early binding [Visual Basic], Visual Basic compiler
+- binding [Visual Basic], late and early
 - objects [Visual Basic], early bound
 - Visual Basic compiler, early and late binding
-- late binding
-- late binding, Visual Basic compiler
+- late binding [Visual Basic]
+- late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 66a34580417fb8b4a814b237ec36ffe700b1b30a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: aceffe59fb6043b3089621b9a3f95b0425f9a522
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="early-and-late-binding-visual-basic"></a>초기 바인딩 및 런타임에 바인딩(Visual Basic)
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러는 개체가 개체 변수에 할당될 때 `binding`이라는 프로세스를 수행합니다. 개체는 특정 개체 형식으로 선언된 변수에 할당되면 *초기 바인딩*됩니다. 초기 바인딩된 개체는 응용 프로그램이 실행되기 전에 컴파일러가 메모리를 할당하고 기타 최적화를 수행할 수 있도록 합니다. 예를 들어 다음 코드 조각에서는 변수를 <xref:System.IO.FileStream> 형식으로 선언합니다.  
@@ -64,7 +46,6 @@ ms.lasthandoff: 07/28/2017
 >  런타임에 바인딩은 `Public`으로 선언된 형식 멤버에 액세스하는 데만 사용할 수 있습니다. `Friend` 또는 `Protected Friend`로 선언된 멤버에 액세스하면 런타임 오류가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>   
- [개체 수명: 개체가 만들어지고 제거되는 방법](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
+ <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>  
+ [개체 수명: 개체가 만들어지고 제거되는 방법](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
  [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-

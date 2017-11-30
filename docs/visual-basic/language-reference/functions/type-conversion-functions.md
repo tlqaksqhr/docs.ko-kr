@@ -1,104 +1,103 @@
 ---
-title: "Type Conversion Functions (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.CUShort"
-  - "vb.csng"
-  - "vb.CDate"
-  - "CByte"
-  - "CSng"
-  - "vb.CDec"
-  - "CBool"
-  - "CStr"
-  - "vb.CULng"
-  - "CDec"
-  - "CVErr"
-  - "CDbl"
-  - "CShort"
-  - "vb.CObj"
-  - "vb.CVErr"
-  - "CULng"
-  - "vb.cdbl"
-  - "vb.cbool"
-  - "CObj"
-  - "CDate"
-  - "CLng"
-  - "vb.cstr"
-  - "vb.cbyte"
-  - "vb.clng"
-  - "vb.CChar"
-  - "CUShort"
-  - "vb.CUInt"
-  - "vb.cint"
-  - "vb.CShort"
-  - "CInt"
-  - "CUInt"
-  - "CChar"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CDate function"
-  - "CByte function"
-  - "Integer data type, converting"
-  - "string conversion, conversion functions"
-  - "fractions"
-  - "data types [Visual Basic], converting"
-  - "text, converting"
-  - "CDec function"
-  - "Char data type, converting"
-  - "type conversion, functions for"
-  - "Single data type, converting"
-  - "numbers, rounding"
-  - "rounding numbers, type conversion"
-  - "CUShort function"
-  - "Long data type, converting"
-  - "return values, data types"
-  - "single-precision numbers, converting"
-  - "data type conversion, functions for"
-  - "CStr function"
-  - "times, converting"
-  - "CSng function"
-  - "conversions, type conversion functions"
-  - "CBool function"
-  - "CDbl function"
-  - "CUInt function"
-  - "Currency data type, conversion functions"
-  - "numbers, converting"
-  - "Double data type, converting"
-  - "CLng function"
-  - "CSByte function"
-  - "double-precision numbers"
-  - "Decimal data type, converting"
-  - "Boolean data type, converting"
-  - "integers, type conversion functions"
-  - "dates, converting"
-  - "CULng function"
-  - "CInt function"
-  - "Date data type, converting"
-  - "Byte data type, converting"
-  - "String data type, converting"
-  - "CChar function"
-  - "banker's rounding"
-  - "Short data type, converting"
-  - "rounding numbers, banker's rounding"
-  - "type conversion, Visual Basic vs. .NET Framework"
+title: "형식 변환 함수(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.CUShort
+- vb.csng
+- vb.CDate
+- CByte
+- CSng
+- vb.CDec
+- CBool
+- CStr
+- vb.CULng
+- CDec
+- CVErr
+- CDbl
+- CShort
+- vb.CObj
+- vb.CVErr
+- CULng
+- vb.cdbl
+- vb.cbool
+- CObj
+- CDate
+- CLng
+- vb.cstr
+- vb.cbyte
+- vb.clng
+- vb.CChar
+- CUShort
+- vb.CUInt
+- vb.cint
+- vb.CShort
+- CInt
+- CUInt
+- CChar
+helpviewer_keywords:
+- CDate function
+- CByte function
+- Integer data type [Visual Basic], converting
+- string conversion [Visual Basic], conversion functions
+- fractions
+- data types [Visual Basic], converting
+- text, converting
+- CDec function
+- Char data type [Visual Basic], converting
+- type conversion [Visual Basic], functions for
+- Single data type [Visual Basic], converting
+- numbers [Visual Basic], rounding
+- rounding numbers [Visual Basic], type conversion
+- CUShort function
+- Long data type [Visual Basic], converting
+- return values [Visual Basic], data types
+- single-precision numbers [Visual Basic], converting
+- data type conversion [Visual Basic], functions for
+- CStr function
+- times [Visual Basic], converting
+- CSng function
+- conversions [Visual Basic], type conversion functions
+- CBool function
+- CDbl function
+- CUInt function
+- Currency data type [Visual Basic], conversion functions
+- numbers [Visual Basic], converting
+- Double data type [Visual Basic], converting
+- CLng function
+- CSByte function
+- double-precision numbers
+- Decimal data type [Visual Basic], converting
+- Boolean data type [Visual Basic], converting
+- integers [Visual Basic], type conversion functions
+- dates [Visual Basic], converting
+- CULng function
+- CInt function
+- Date data type [Visual Basic], converting
+- Byte data type [Visual Basic], converting
+- String data type [Visual Basic], converting
+- CChar function
+- banker's rounding
+- Short data type [Visual Basic], converting
+- rounding numbers [Visual Basic], banker's rounding
+- type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Type Conversion Functions (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-형식 변환 함수는 인라인으로 컴파일됩니다. 이는 변환 코드가 식을 계산하는 코드의 일부임을 의미합니다.  경우에 따라 변환을 수행하기 위해 프로시저를 호출할 필요가 없으므로 실행 속도가 빨라집니다.  다음의 각 함수는 해당 식을 특정 데이터 형식으로 변환합니다.  
+# <a name="type-conversion-functions-visual-basic"></a>형식 변환 함수(Visual Basic)
+이러한 함수는 인라인으로 컴파일됩니다 변환 코드는 식을 계산 하는 코드의 일부입니다. 경우에 따라 성능이 향상 되는 변환을 수행 하는 프로시저에 대 한 호출이 있습니다. 각 함수는 식을 특정 데이터 형식으로 강제 변환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 CBool(expression)  
@@ -119,163 +118,163 @@ CULng(expression)
 CUShort(expression)  
 ```  
   
-## 파트  
+## <a name="part"></a>파트  
  `expression`  
- 필수 요소.  소스 데이터 형식의 임의 식입니다.  
+ 필수 요소. 원본 데이터 형식의 모든 식입니다.  
   
-## 반환 값 데이터 형식  
- 다음 표에서 볼 수 있듯이 함수가 반환하는 값의 데이터 형식은 함수 이름에 따라 결정됩니다.  
+## <a name="return-value-data-type"></a>반환 값 데이터 형식  
+ 다음 표에 나와 있는 것 처럼 반환 하는 값의 데이터 형식을 결정 하는 함수 이름입니다.  
   
-|함수 이름|반환 데이터 형식|`expression` 인수 범위|  
-|-----------|---------------|------------------------|  
-|`CBool`|[Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|임의의 유효한 `Char` 또는 `String`이나 숫자 식입니다.|  
-|`CByte`|[Byte Data Type](../../../visual-basic/language-reference/data-types/byte-data-type.md)|값의 범위는 0에서 255까지\(부호가 없으며 소수 부분은 반올림됨<sup>1</sup>\)입니다.|  
-|`CChar`|[Char Data Type](../../../visual-basic/language-reference/data-types/char-data-type.md)|임의의 유효한 `Char` 또는 `String` 식입니다. `String`의 첫 문자만 변환되며 값의 범위는 0에서 65535까지\(부호 없음\)입니다.|  
-|`CDate`|[Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md)|임의의 유효한 날짜 및 시간 표시|  
-|`CDbl`|[Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md)|값의 범위는 \-1.79769313486231570E\+308에서 \-4.94065645841246544E\-324까지\(음수\) 또는 4.94065645841246544E\-324에서 1.79769313486231570E\+308까지\(양수\)입니다.|  
-|`CDec`|[Decimal Data Type](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|소수 자릿수가 없는 숫자\(소수 부분이 없는 숫자\)의 경우 범위는 \+\/\-79,228,162,514,264,337,593,543,950,335 사이이고,  소수 자릿수가 28개인 숫자의 경우에 범위는 \+\/\-7.9228162514264337593543950335 사이이며,  0이 아닌 숫자 중 가장 작은 숫자는 0.0000000000000000000000000001\(\+\/\-1E\-28\)입니다.|  
-|`CInt`|[Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md)|값의 범위는 \-2,147,483,648에서 2,147,483,647까지\(소수 부분은 반올림됨<sup>1</sup>\)입니다.|  
-|`CLng`|[Long Data Type](../../../visual-basic/language-reference/data-types/long-data-type.md)|값의 범위는 \-9,223,372,036,854,775,808에서 9,223,372,036,854,775,807까지\(소수 부분은 반올림됨<sup>1</sup>\)입니다.|  
-|`CObj`|[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)|임의의 유효한 식입니다.|  
-|`CSByte`|[SByte Data Type](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|값의 범위는 \-128에서 127까지\(소수 부분은 반올림됨<sup>1</sup>\)입니다.|  
-|`CShort`|[Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md)|값의 범위는 \-32,768에서 32,767까지\(소수 부분은 반올림됨<sup>1</sup>\)입니다.|  
-|`CSng`|[Single Data Type](../../../visual-basic/language-reference/data-types/single-data-type.md)|\-3.402823E\+38 ~ \-1.401298E\-45\(음수\), 1.401298E\-45 ~ 3.402823E\+38\(양수\)|  
-|`CStr`|[String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md)|`CStr`에 대한 반환은 `expression` 인수에 따라 다릅니다\(  자세한 내용은 [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)를 참조하십시오.|  
-|`CUInt`|[UInteger Data Type](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|값의 범위는 0에서 4,294,967,295까지\(부호가 없으며 소수 부분은 반올림됨<sup>1</sup>\)입니다.|  
-|`CULng`|[ULong Data Type](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|값의 범위는 0에서 18,446,744,073,709,551,615까지\(부호가 없으며 소수 부분은 반올림됨<sup>1</sup>\)입니다.|  
-|`CUShort`|[UShort Data Type](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|값의 범위는 0에서 65,535까지\(부호가 없으며 소수 부분은 반올림됨<sup>1</sup>\)입니다.|  
+|함수 이름|반환 데이터 형식|에 대 한 범위 `expression` 인수|  
+|-------------------|----------------------|-------------------------------------|  
+|`CBool`|[Boolean 데이터 형식](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|모든 유효한 `Char` 또는 `String` 또는 숫자 식입니다.|  
+|`CByte`|[Byte 데이터 형식](../../../visual-basic/language-reference/data-types/byte-data-type.md)|0부터 255 (부호 없음). 소수 부분이 반올림 됩니다. <sup>1</sup>|  
+|`CChar`|[Char 데이터 형식](../../../visual-basic/language-reference/data-types/char-data-type.md)|모든 유효한 `Char` 또는 `String` 식;의 첫 번째 문자만 `String` 변환 됩니다; 값 0 ~ 65535 (부호 없음) 될 수 있습니다.|  
+|`CDate`|[Date 데이터 형식](../../../visual-basic/language-reference/data-types/date-data-type.md)|날짜 및 시간의 유효한 표현을 합니다.|  
+|`CDbl`|[Double 데이터 형식](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570 e + 308에서-4.94065645841246544E-소수점; 4.94065645841246544E-324 1.79769313486231570 e + 308 양수 값에 대 한 합니다.|  
+|`CDec`|[Decimal 데이터 형식](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ /-79228162514264337593543950335-즉, 소수 자릿수가 없는 숫자입니다. 소수 자릿수가 28 숫자에 대 한 범위는 + /-7.9228162514264337593543950335 사이입니다. 0이 아닌 수를 최소로 0.0000000000000000000000000001 (+ 1E-28)입니다.|  
+|`CInt`|[Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)|-2147483648 ~ 2147483647; 소수 부분이 반올림 됩니다. <sup>1</sup>|  
+|`CLng`|[Long 데이터 형식](../../../visual-basic/language-reference/data-types/long-data-type.md)|-9223372036854775808에서 9223372036854775807; 소수 부분이 반올림 됩니다. <sup>1</sup>|  
+|`CObj`|[Object 데이터 형식](../../../visual-basic/language-reference/data-types/object-data-type.md)|모든 유효한 식입니다.|  
+|`CSByte`|[SByte 데이터 형식](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|-128에서 127; 소수 부분이 반올림 됩니다. <sup>1</sup>|  
+|`CShort`|[Short 데이터 형식](../../../visual-basic/language-reference/data-types/short-data-type.md)|-32, 768 32, 767; 소수 부분이 반올림 됩니다. <sup>1</sup>|  
+|`CSng`|[Single 데이터 형식](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E + 38에서-1.401298 e-45 음수 값이 있습니다. 1.401298 e-45 3.402823E + 38 양수 값에 대 한 합니다.|  
+|`CStr`|[String 데이터 형식](../../../visual-basic/language-reference/data-types/string-data-type.md)|에 대 한 반환 `CStr` 에 종속 된 `expression` 인수입니다. 참조 [CStr 함수의 반환 값](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)합니다.|  
+|`CUInt`|[UInteger 데이터 형식](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|0 ~ 4294967295 (부호 없음). 소수 부분이 반올림 됩니다. <sup>1</sup>|  
+|`CULng`|[ULong 데이터 형식](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|0에서 18446744073709551615 (부호 없음). 소수 부분이 반올림 됩니다. <sup>1</sup>|  
+|`CUShort`|[UShort 데이터 형식](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|0-65535 (부호 없음). 소수 부분이 반올림 됩니다. <sup>1</sup>|  
   
- <sup>1</sup> 소수 부분에는 *은행원 반올림*이라고 하는 특수한 형식의 반올림 규칙이 적용될 수 있습니다.  자세한 내용은 "설명" 부분을 참조하십시오.  
+ <sup>1</sup> 소수 부분이 호출 반올림 하는 특수 한 유형의 영향을 받을 수 *banker rounding*합니다. 자세한 내용은 "주의"를 참조 하십시오.  
   
-## 설명  
- 일반적으로 <xref:System.Convert> 클래스나 개별 형식 구조체 또는 클래스에서는 `ToString()` 같은 .NET Framework 메서드보다 Visual Basic 형식 변환 함수를 우선적으로 사용해야 합니다.  Visual Basic 함수는 Visual Basic 코드와 최적으로 상호 작용하도록 설계되었으며 소스 코드를 보다 간단하고 읽기 쉽게 만듭니다.  또한 .NET Framework 변환 메서드가 항상 Visual Basic 함수와 동일한 결과를 생성하는 것은 아닙니다\(예: `Boolean`을 `Integer`로 변환하는 경우\).  자세한 내용은 [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 일반적으로.NET Framework 메서드 대신 Visual Basic 형식 변환 함수를와 같은 사용 해야 `ToString()`, 중 하나에 <xref:System.Convert> 클래스 또는 개별 형식 구조체 또는 클래스에 있습니다. Visual Basic 함수는 Visual Basic 코드와의 최적의 상호 작용을 위한 하 고 더 짧게 만들어 더 쉽게 읽을 수 소스 코드 할 수도 있습니다. 또한.NET Framework의 변환 메서드는이 Visual Basic 함수 예를 들어 변환할 때와 동일한 결과 항상 생성 하지 않는 `Boolean` 를 `Integer`합니다. 자세한 내용은 참조 [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)합니다.  
   
-## 동작  
+## <a name="behavior"></a>동작  
   
--   **강제 변환.** 일반적으로 데이터 형식 변환 함수를 사용하여 연산의 결과를 기본 데이터 형식이 아닌 특정 데이터 형식으로 강제 변환할 수 있습니다.  예를 들어, 단정밀도, 배정밀도 또는 정수 연산이 발생할 경우 `CDec` 함수를 사용하여 10진수 연산을 계산합니다.  
+-   **강제 변환 합니다.** 일반적으로 기본 데이터 형식을 보다는 특정 데이터 형식에 대 한 작업의 결과 강제 변환할 데이터 형식 변환 함수를 사용할 수 있습니다. 예를 들어 사용 `CDec` 여기서 단 정밀도, 두 자리 또는 정수 산술이 정상적으로 수행 하는 경우에는 10 진수 연산을 합니다.  
   
--   **변환 실패.** 함수에 전달된 `expression`이 변환될 데이터 형식의 범위 밖에 있으면 <xref:System.OverflowException>이 발생합니다.  
+-   **변환 실패입니다.** 경우는 `expression` 함수에 전달 된 범위를 벗어났습니다 데이터 형식의 변환 될 수 있는는 <xref:System.OverflowException> 발생 합니다.  
   
--   **소수 부분.** 정수가 아닌 값을 정수 계열 형식으로 변환할 경우 정수 변환 함수\(`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng` 및 `CUShort`\)는 소수 부분을 제거하고 값을 가장 가까운 정수로 반올림합니다.  
+-   **소수 부분입니다.** 정수 계열에 정수가 아닌 값을 변환 하는 경우 입력, 정수 변환 함수 (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, 및 `CUShort`) 제거는 소수 부분 및 값을 가장 가까운 정수로 반올림 합니다.  
   
-     소수 부분이 정확하게 0.5이면 정수 변환 함수는 값을 가장 가까운 짝수 정수로 반올림합니다.  예를 들어, 0.5는 0으로 반올림하고 1.5 및 2.5는 모두 2로 반올림합니다.  이를 *은행원 반올림*이라고도 합니다. 이 반올림 규칙은 이러한 숫자를 여러 개 더할 경우에 누적될 수 있는 오차를 보정할 수 있습니다.  
+     소수 부분이 정확 하 게 하는 경우 0.5 정수 변환 함수 반올림 하는 가장 근사한 짝수 정수로 합니다. 예를 들어 0.5 0 및 1.5와 2.5는 2로 반올림을 반올림 합니다. 이 라고도 *banker rounding*와 함께 이러한 많은 숫자를 추가 하는 경우 누적 될 수 있는 편차에 대 한 보정 하기 위한 것입니다.  
   
-     `CInt`와 `CLng`와 달리 <xref:Microsoft.VisualBasic.Conversion.Int%2A> 및 <xref:Microsoft.VisualBasic.Conversion.Fix%2A> 함수는 소수 부분을 반올림하지 않고 버립니다.  또한 `Fix`와 `Int`는 항상 사용자가 전달한 값과 같은 데이터 형식 값을 반환합니다.  
+     `CInt`및 `CLng` 에서 다는 <xref:Microsoft.VisualBasic.Conversion.Int%2A> 및 <xref:Microsoft.VisualBasic.Conversion.Fix%2A> 숫자의 소수 부분을 반올림 하지 않고, truncate는 함수입니다. 또한 `Fix` 및 `Int` 에서 전달 항상 동일한 데이터 형식의 값을 반환 합니다.  
   
--   **날짜\/시간 변환.** <xref:Microsoft.VisualBasic.Information.IsDate%2A> 함수를 사용하여 값을 날짜 및 시간으로 변환할 수 있는지 확인합니다.  `CDate`는 날짜 리터럴 및 시간 리터럴은 인식하지만 숫자 값은 인식하지 못합니다.  Visual Basic 6.0 `Date` 값을 Visual Basic 2005 이상 버전의 `Date` 값으로 변환하려면 <xref:System.DateTime.FromOADate%2A?displayProperty=fullName> 메서드를 사용합니다.  
+-   **날짜/시간 변환 합니다.** 사용 된 <xref:Microsoft.VisualBasic.Information.IsDate%2A> 을 날짜 및 시간 값을 변환할 수 있는지 확인 하는 함수입니다. `CDate`리터럴 날짜 및 시간 리터럴 하지만 숫자 값이 아니라 인식합니다. Visual Basic 6.0 변환할 `Date` 값을 한 `Date` Visual Basic 2005에서에서 값 또는 이상 버전을 사용할 수 있습니다는 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 메서드.  
   
--   **기본 날짜\/시간 값.** [Date Data Type](../../../visual-basic/language-reference/data-types/date-data-type.md)에는 항상 날짜 정보와 시간 정보가 모두 포함됩니다.  형식 변환을 목적으로, Visual Basic은 1\/1\/0001\(1년 1월 1일\)을 날짜의 *기본값*으로 간주하고 00:00:00\(자정\)을 시간의 기본값으로 간주합니다.  `Date` 값을 문자열로 변환할 경우 `CStr`의 결과 문자열에 기본값이 포함되지 않습니다.  예를 들어, `#January 1, 0001 9:30:00#`을 문자열로 변환한 결과는 "9:30:00 AM"이며 날짜 정보는 표시되지 않습니다.  그러나 날짜 정보는 원래 `Date` 값에 그대로 있으며 <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> 등의 함수를 사용하여 복구할 수 있습니다.  
+-   **중립 날짜/시간 값입니다.** [Date 데이터 형식](../../../visual-basic/language-reference/data-types/date-data-type.md) 항상 날짜와 시간 정보를 포함 합니다. 형식 변환을 위해 Visual Basic 간주 1/1/0001 (1 1 년 1 월)는 *기본값으로* 시간에 대 한 기본값으로 간주 00시: 00 (자정) 및 날짜,입니다. 변환 하는 경우는 `Date` 값을 문자열로, `CStr` 기본값이 결과 문자열에 포함 되지 않습니다. 예를 들어, 변환 하면 `#January 1, 0001 9:30:00#` 문자열로 결과 "오전 9시 30분: 00" 하 고 날짜 정보는 표시 되지 않습니다. 그러나 날짜 정보에에서는 아직 있는 원래 `Date` 값 및와 같은 함수를 사용 하 여 복구할 수 수 <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> 함수입니다.  
   
--   **문화권 구분.** 문자열을 포함하는 형식 변환 함수는 응용 프로그램의 현재 문화권 설정에 기초하여 변환을 수행합니다.  예를 들어, `CDate`는 시스템의 로캘 설정에 따라 날짜 형식을 인식합니다.  사용자 로캘에 맞는 순서로 일, 월, 년을 지정해야 합니다. 그렇지 않으면 날짜가 올바르게 해석되지 않을 수 있습니다.  "Wednesday"와 같은 요일 문자열이 들어 있는 경우 long 날짜 형식은 인식되지 않습니다.  
+-   **문화권 구분 합니다.** 응용 프로그램에 대 한 현재 문화권 설정에 따라 변환을 수행 하는 문자열을 포함 하는 형식 변환 함수입니다. 예를 들어 `CDate` 시스템의 로캘 설정에 따라 날짜 형식을 인식 합니다. 일, 월 및 연도 사용자 로캘에 대 한 올바른 순서로 제공 해야 하거나 날짜 올바르게 해석 될 수 있습니다. 자세한 날짜 형식에는 "수요일" 등의 주 일 문자열을 포함 하는 경우 인식 되지 않습니다.  
   
-     로캘에 지정된 것과 다른 형식의 값 문자열 표현으로 변환하거나 이러한 표현에서 변환해야 할 경우에는 Visual Basic 형식 변환 함수를 사용할 수 없습니다.  이렇게 하려면 해당 값 형식의 `ToString(IFormatProvider)` 및 `Parse(String, IFormatProvider)` 메서드를 사용합니다.  예를 들어, 문자열을 `Double`로 변환할 경우 <xref:System.Double.Parse%2A?displayProperty=fullName>를 사용하고 `Double` 형식의 값을 문자열로 변환할 경우 <xref:System.Double.ToString%2A?displayProperty=fullName>을 사용합니다.  
+     사용자의 로캘에 따라 지정 되어 있지 않은 형식에 있는 값의 문자열 표현으로 변환 하는 경우 Visual Basic 형식 변환 함수를 사용할 수 없습니다. 이 위해 사용 하 여는 `ToString(IFormatProvider)` 및 `Parse(String, IFormatProvider)` 해당 값 형식의 메서드. 사용 예를 들어 <xref:System.Double.Parse%2A?displayProperty=nameWithType> 문자열을 변환 하는 경우는 `Double`를 사용 하 여 <xref:System.Double.ToString%2A?displayProperty=nameWithType> 형식의 값을 변환할 때 `Double` 문자열로 합니다.  
   
-## CType 함수  
- [CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md)는 두 번째 인수 `typename`을 가져와서 `expression`을 `typename`으로 강제 변환합니다. `typename`은 유효한 변환이 존재하는 임의의 데이터 형식, 구조체, 클래스 또는 인터페이스입니다.  
+## <a name="ctype-function"></a>CType Function  
+ [CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md) 두 번째 인수를 받으며 `typename`, 강제 `expression` 를 `typename`여기서 `typename` 데이터 형식, 구조체, 클래스 또는 인터페이스에 있는 유효한 변환 될 수 있습니다.  
   
- `CType`과 다른 형식 변환 키워드를 비교하려면 [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) 및 [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md)를 참조하십시오.  
+ 에 대 한 비교 `CType` 참조와 다른 형식 변환 키워드, [DirectCast 연산자](../../../visual-basic/language-reference/operators/directcast-operator.md) 및 [TryCast 연산자](../../../visual-basic/language-reference/operators/trycast-operator.md)합니다.  
   
-## CBool 예제  
- 다음 예제에서는 `CBool` 함수를 사용하여 식을 `Boolean` 값으로 변환합니다.  `CBool`은 식의 계산 결과가 0이 아니면 `True`를 반환하고, 0이면 `False`를 반환합니다.  
+## <a name="cbool-example"></a>CBool 예제  
+ 다음 예제에서는 `CBool` 식을 변환 하는 함수 `Boolean` 값입니다. 식이 0이 아닌 값으로 계산 될 경우 `CBool` 반환 `True`, 그렇지 않으면 반환 `False`합니다.  
   
  [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
   
-## CByte 예제  
- 다음 예제에서는 `CByte` 함수를 사용하여 식을 `Byte`로 변환합니다.  
+## <a name="cbyte-example"></a>CByte 예제  
+ 다음 예제에서는 `CByte` 식으로 변환 하는 함수는 `Byte`합니다.  
   
  [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
   
-## CChar 예제  
- 다음 예제에서는 `CChar` 함수를 사용하여 `String` 식의 첫 번째 문자를 `Char` 형식으로 변환합니다.  
+## <a name="cchar-example"></a>CChar 예제  
+ 사용 하 여 다음 예제는 `CChar` 의 첫 번째 문자를 변환 하는 함수는 `String` 식을 `Char` 유형입니다.  
   
  [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
   
- `CChar`에 대한 입력 인수는 `Char` 또는 `String` 데이터 형식이어야 합니다.  `CChar`는 숫자 데이터 형식을 허용하지 않기 때문에 `CChar`를 사용하여 숫자를 문자로 변환할 수 없습니다.  다음 예제에서는 코드 포인트\(문자 코드\)를 나타내는 숫자를 구하여 해당 문자로 변환합니다.  <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> 함수를 사용하여 숫자 문자열을 구하고 `CInt`를 사용하여 문자열을 `Integer` 형식으로 변환하고, `ChrW`를 사용하여 숫자를 `Char` 형식으로 변환합니다.  
+ 입력된 인수 `CChar` 데이터 형식 이어야 합니다 `Char` 또는 `String`합니다. 사용할 수 없는 `CChar` 때문에 숫자를 문자로 변환할 `CChar` 숫자 데이터 형식을 사용할 수 없습니다. 다음 예제에서는 코드 포인트 (문자 코드)를 나타내는 숫자를 구하여 해당 문자로 변환 합니다. 사용 하 여는 <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> 함수는 숫자, 문자열입니다. `CInt` 문자열 입력을 변환할 `Integer`, 및 `ChrW` 숫자 형식으로 변환 `Char`합니다.  
   
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
-## CDate 예제  
- 다음 예제에서는 `CDate` 함수를 사용하여 문자열을 `Date` 값으로 변환합니다.  일반적으로 다음 예제와 같이 날짜와 시간을 문자열로 하드 코딩하는 것은 좋지 않습니다.  대신 \#Feb 12, 1969\#, \#4:45:23 PM\# 등과 같은 날짜 리터럴과 시간 리터럴을 사용하십시오.  
+## <a name="cdate-example"></a>CDate 예제  
+ 다음 예제에서는 `CDate` 문자열을 변환 하는 함수 `Date` 값입니다. 일반적으로 하드 코딩 된 날짜 및 시간 문자열 (이 예제 에서처럼)로 권장 되지 않습니다. 날짜 리터럴과 &#1969; #Feb 12, 같은 시간 리터럴을 사용 하 여 및 # 4시 45분: 23 PM #를 대신 합니다.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
-## CDbl 예제  
+## <a name="cdbl-example"></a>CDbl 예제  
  [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
   
-## CDec 예제  
- 다음 예제에서는 `CDec` 함수를 사용하여 숫자 값을 `Decimal`로 변환합니다.  
+## <a name="cdec-example"></a>CDec 예제  
+ 다음 예제에서는 `CDec` 숫자 값을 변환 하려면 함수 `Decimal`합니다.  
   
  [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
   
-## CInt 예제  
- 다음 예제에서는 `CInt` 함수를 사용하여 값을 `Integer`로 변환합니다.  
+## <a name="cint-example"></a>CInt 예제  
+ 다음 예제에서는 `CInt` 함수에 값을 변환할 `Integer`합니다.  
   
  [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
   
-## CLng 예제  
- 다음 예제에서는 `CLng` 함수를 사용하여 값을 `Long`으로 변환합니다.  
+## <a name="clng-example"></a>CLng 예제  
+ 다음 예제에서는 `CLng` 값을 변환 하는 함수 `Long`합니다.  
   
  [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
   
-## CObj 예제  
- 다음 예제에서는 `CObj` 함수를 사용하여 숫자 값을 `Object`로 변환합니다.  `Object` 변수 자체에는 할당된 `Double` 값을 가리키는 4바이트 포인터만 들어 있습니다.  
+## <a name="cobj-example"></a>CObj 예제  
+ 다음 예제에서는 `CObj` 숫자 값을 변환 하려면 함수 `Object`합니다. `Object` 변수 자체에 가리키는 4 바이트 포인터만 포함 된 `Double` 할당 한 값입니다.  
   
  [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
   
-## CSByte 예제  
- 다음 예제에서는 `CSByte` 함수를 사용하여 숫자 값을 `SByte`로 변환합니다.  
+## <a name="csbyte-example"></a>CSByte 예제  
+ 다음 예제에서는 `CSByte` 숫자 값을 변환 하려면 함수 `SByte`합니다.  
   
  [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
   
-## CShort 예제  
- 다음 예제에서는 `CShort` 함수를 사용하여 숫자 값을 `Short`으로 변환합니다.  
+## <a name="cshort-example"></a>CShort 예제  
+ 다음 예제에서는 `CShort` 숫자 값을 변환 하려면 함수 `Short`합니다.  
   
  [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
   
-## CSng 예제  
- 다음 예제에서는 `CSng` 함수를 사용하여 값을 `Single`로 변환합니다.  
+## <a name="csng-example"></a>CSng 예제  
+ 다음 예제에서는 `CSng` 값을 변환 하는 함수 `Single`합니다.  
   
  [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
   
-## CStr 예제  
- 다음 예제에서는 `CStr` 함수를 사용하여 숫자 값을 `String`으로 변환합니다.  
+## <a name="cstr-example"></a>CStr 예제  
+ 다음 예제에서는 `CStr` 숫자 값을 변환 하려면 함수 `String`합니다.  
   
  [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
   
- 다음 예제에서는 `CStr` 함수를 사용하여 `Date` 값을 `String` 값으로 변환합니다.  
+ 다음 예제에서는 `CStr` 변환 하려면 함수를 `Date` 값을 `String` 값입니다.  
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`은 항상 현재 로캘에 대한 표준 short 형식으로 `Date` 값을 렌더링합니다\(예: "6\/15\/2003 4:35:47 PM"\).  그러나 `CStr`는 날짜와 시간에 대한 *기본값*인 1\/1\/0001 및 00:00:00을 표시하지 않습니다.  
+ `CStr`항상를 렌더링 한 `Date` 예를 들어 현재 로캘에 대 한 표준 짧은 형식 값 "6/15/2003 오후 4시 35분: 47"입니다. 그러나 `CStr` 표시 하지 않습니다는 *중립 값* 의 1/1/0001 한 날짜와 시간에 대 한 00시: 00입니다.  
   
- `CStr`에 의해 반환되는 값에 대한 자세한 내용은 [Return Values for the CStr Function](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)을 참조하십시오.  
+ 반환 값에 대 한 세부 `CStr`, 참조 [CStr 함수의 반환 값](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)합니다.  
   
-## CUInt 예제  
- 다음 예제에서는 `CUInt` 함수를 사용하여 숫자 값을 `UInteger`로 변환합니다.  
+## <a name="cuint-example"></a>CUInt 예제  
+ 다음 예제에서는 `CUInt` 숫자 값을 변환 하려면 함수 `UInteger`합니다.  
   
  [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
   
-## CULng 예제  
- 다음 예제에서는 `CULng` 함수를 사용하여 숫자 값을 `ULong`으로 변환합니다.  
+## <a name="culng-example"></a>CULng 예제  
+ 다음 예제에서는 `CULng` 숫자 값을 변환 하려면 함수 `ULong`합니다.  
   
  [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
   
-## CUShort 예제  
- 다음 예제에서는 `CUShort` 함수를 사용하여 숫자 값을 `UShort`으로 변환합니다.  
+## <a name="cushort-example"></a>CUShort 예제  
+ 다음 예제에서는 `CUShort` 숫자 값을 변환 하려면 함수 `UShort`합니다.  
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
-## 참고 항목  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>   
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>   
- <xref:Microsoft.VisualBasic.Strings.Format%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Str%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>   
- [Conversion Functions](../../../visual-basic/language-reference/functions/conversion-functions.md)   
- [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Format%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Str%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
+ [변환 함수](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [Visual Basic의 형식 변환](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

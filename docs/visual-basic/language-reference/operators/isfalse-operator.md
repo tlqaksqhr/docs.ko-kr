@@ -1,43 +1,41 @@
 ---
-title: "IsFalse Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.isfalse"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "AndAlso operator"
-  - "IsFalse operator"
+title: "IsFalse 연산자(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.isfalse
+helpviewer_keywords:
+- AndAlso operator [Visual Basic]
+- IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d85fc51a75f82c65cf226b8239a8eee6585bd18a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# IsFalse Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-식이 `False`인지 확인합니다.  
+# <a name="isfalse-operator-visual-basic"></a>IsFalse 연산자(Visual Basic)
+식이 인지 결정 `False`합니다.  
   
- 사용자 코드에서는 `IsFalse`를 명시적으로 호출할 수 없지만 Visual Basic 컴파일러는 이 연산자를 사용하여 `AndAlso` 절에서 코드를 생성할 수 있습니다.  클래스나 구조체를 정의한 다음 `AndAlso` 절에서 해당 형식의 변수를 사용하는 경우 해당 클래스나 구조체에 대해 `IsFalse`를 정의해야 합니다.  
+ 호출할 수 없습니다 `IsFalse` 명시적으로 코드 하지만 Visual Basic에서 컴파일러 있습니다 사용할에서 코드를 생성할 `AndAlso` 절. 클래스 또는 구조체 정의 다음에 해당 형식의 변수를 사용 하는 경우는 `AndAlso` 정의 해야 절 `IsFalse` 해당 클래스 또는 구조체에서 합니다.  
   
- 컴파일러는 `IsFalse`와 `IsTrue` 연산자를 *일치하는 쌍*으로 간주합니다.  즉, 둘 중 하나를 정의할 경우 다른 하나도 정의해야 합니다.  
+ 컴파일러 있다고 간주는 `IsFalse` 및 `IsTrue` 으로 연산자는 *일치 하는 쌍*합니다. 이 둘 중 하나를 정의 하는 경우도 정의 해야 다른 것을 의미 합니다.  
   
 > [!NOTE]
->  `IsFalse` 연산자는 필요에 따라 *오버로드*할 수 있습니다. 즉, 피연산자의 형식이 특정 클래스 또는 구조체인 경우 해당 클래스나 구조체에서 이 연산자의 동작을 다시 정의할 수 있습니다.  코드에서 이러한 클래스나 구조체에 대해 이 연산자를 사용할 때는 다시 정의된 동작을 알고 있어야 합니다.  자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)를 참조하십시오.  
+>  `IsFalse` 연산자 될 수 있습니다 *오버 로드 된*, 클래스 또는 구조체 수 할의 동작에 해당 클래스 또는 구조체의 형식입니다. 이 연산자를 사용 하 여 이러한 클래스나 구조체에는 코드를 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 참조 [연산자 프로시저](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)합니다.  
   
-## 예제  
- 다음 코드 예제에서는 `IsFalse`와 `IsTrue` 연산자에 대한 정의를 포함하는 구조체의 윤곽을 정의합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에 대 한 정의 포함 하는 구조체의 개요를 정의 고 `IsFalse` 및 `IsTrue` 연산자입니다.  
   
  [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isfalse-operator_1.vb)]  
   
-## 참고 항목  
- [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)   
- [How to: Define an Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md)
+## <a name="see-also"></a>참고 항목  
+ [IsTrue 연산자](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [방법: 연산자 정의](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [AndAlso 연산자](../../../visual-basic/language-reference/operators/andalso-operator.md)

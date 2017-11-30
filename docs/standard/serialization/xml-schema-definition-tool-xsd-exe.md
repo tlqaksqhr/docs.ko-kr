@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 83da65d17d927e6afa8c669d5a3123d458246b31
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 79d7aef2cf374acc4380fac6009615f75eaf1e81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 스키마 정의 도구(Xsd.exe)를 사용하면 XDR, XML 및 XSD 파일 또는 런타임 어셈블리의 클래스에서 XML 스키마 또는 공용 언어 런타임 클래스를 생성할 수 있습니다.  
@@ -65,7 +64,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |**/enableDataBinding**|생성된 모든 형식에 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하여 데이터 바인딩을 사용할 수 있습니다. 약식 표현은 `/edb`입니다.|  
 |**/enableLinqDataSet**|약식: `/eld`. 생성된 DataSet을 LINQ to DataSet을 사용하여 쿼리할 수 있도록 지정합니다. 이 옵션은 /dataset 옵션이 지정된 경우 사용됩니다. 자세한 내용은 [LINQ to DataSet 개요](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) 및 [형식화된 데이터 집합 쿼리](../../../docs/framework/data/adonet/querying-typed-datasets.md)를 참조하세요. LINQ 사용 방법에 대한 자세한 내용은 [LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)를 참조하세요.|  
 |**/f**[**ields**]|속성 대신 필드를 생성합니다. 기본적으로 속성이 생성됩니다.|  
-|**/l**[**anguage**]**:***language*|사용할 프로그래밍 언어를 지정합니다. `CS`(C#, 기본값), `VB`(Visual Basic), `JS`(JScript) 또는 `VJS`(Visual J#) 중에서 선택합니다. <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>를 구현하는 클래스의 정규화된 이름을 지정할 수도 있습니다.|  
+|**/l**[**anguage**]**:***language*|사용할 프로그래밍 언어를 지정합니다. `CS`(C#, 기본값), `VB`(Visual Basic), `JS`(JScript) 또는 `VJS`(Visual J#) 중에서 선택합니다. <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>를 구현하는 클래스의 정규화된 이름을 지정할 수도 있습니다.|  
 |**/n**[**amespace**]**:***namespace*|생성된 형식에 대한 런타임 네임스페이스를 지정합니다. 기본 네임스페이스는 `Schemas`입니다.|  
 |**/nologo**|배너를 표시하지 않습니다.|  
 |**/order**|모든 파티클 멤버에 대해 명시적인 순서 식별자를 생성합니다.|  
@@ -91,7 +90,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  XSD 스키마 파일에서 공용 언어 런타임 <xref:System.Data.DataSet> 클래스를 생성합니다. 이렇게 생성된 클래스에서는 일반 XML 데이터에 대한 강력한 개체 모델이 제공됩니다.  
   
  XSD에서 클래스로  
- XSD 스키마 파일에서 런타임 클래스를 생성합니다. 이렇게 생성된 클래스를 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>와 함께 사용하면 해당 스키마를 따르는 XML 코드를 읽고 쓸 수 있습니다.  
+ XSD 스키마 파일에서 런타임 클래스를 생성합니다. 이렇게 생성된 클래스를 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>와 함께 사용하면 해당 스키마를 따르는 XML 코드를 읽고 쓸 수 있습니다.  
   
  클래스를 XSD로  
  런타임 어셈블리 파일의 형식에서 XML 스키마를 생성합니다. 생성된 스키마는 `System.Xml.Serialization.XmlSerializer`에서 사용되는 XML 형식을 정의합니다.  
@@ -233,10 +232,9 @@ xsd myAssembly.dll
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Data.DataSet>  
- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>   
+ <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [도구](../../../docs/framework/tools/index.md)      
- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
- [LINQ to DataSet 개요](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)   
- [형식화된 데이터 집합 쿼리](../../../docs/framework/data/adonet/querying-typed-datasets.md)   
+ [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [LINQ to DataSet 개요](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ [형식화 된 데이터 집합 쿼리](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
-
