@@ -1,59 +1,64 @@
 ---
-title: "방법: Windows Forms에 컨트롤 배치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Location"
-  - "Location.Y"
-  - "Location.X"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "컨트롤[Windows Forms]"
-  - "컨트롤[Windows Forms], 이동"
-  - "컨트롤[Windows Forms], 위치 지정"
-  - "맞춤선"
+title: "방법: Windows Forms에 컨트롤 배치"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords:
+- Location
+- Location.Y
+- Location.X
+helpviewer_keywords:
+- controls [Windows Forms]
+- controls [Windows Forms], moving
+- snaplines
+- controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ff1096e6397f4422e0fbf6400a87041cfac6470
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms에 컨트롤 배치
-컨트롤의 위치를 지정하려면 Windows Forms 디자이너를 사용하거나 <xref:System.Windows.Forms.Control.Location%2A> 속성을 지정합니다.  
+# <a name="how-to-position-controls-on-windows-forms"></a>방법: Windows Forms에 컨트롤 배치
+컨트롤의 위치, Windows Forms 디자이너를 사용 하거나 지정 된 <xref:System.Windows.Forms.Control.Location%2A> 속성입니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
-### Windows Forms 디자이너의 디자인 화면에서 컨트롤의 위치를 지정하려면  
+### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Windows Forms 디자이너의 디자인 화면에 컨트롤을 배치 하려면  
   
--   마우스를 사용하여 컨트롤을 적절한 위치로 끌어 옵니다.  
-  
-    > [!NOTE]
-    >  화살표 키를 사용하여 컨트롤을 선택하고 이동하면 컨트롤의 위치를 더욱 정밀하게 지정할 수 있습니다.  또한 *맞춤선*을 사용하여 컨트롤을 폼에 정밀하게 배치할 수 있습니다.  자세한 내용은 [연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)을 참조하십시오.  
-  
-### 속성 창을 사용하여 컨트롤의 위치를 지정하려면  
-  
-1.  위치를 지정할 컨트롤을 클릭합니다.  
-  
-2.  **속성** 창에서 <xref:System.Windows.Forms.Control.Location%2A> 속성 값을 입력하여\(각 값은 쉼표로 구분\) 컨테이너 안에서 컨트롤의 위치를 지정합니다.  
-  
-     첫 번째 숫자\(X\)는 픽셀 단위로 측정된 컨테이너의 왼쪽 테두리부터의 거리이고 두 번째 숫자\(Y\)는 컨테이너 영역의 위쪽 테두리부터의 거리입니다.  
+-   컨트롤을 마우스로 적절 한 위치로 끕니다.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.Control.Location%2A> 속성을 확장하여 **X** 및 **Y** 값을 개별적으로 입력할 수 있습니다.  
+    >  컨트롤을 선택 하 고 화살표가 포함 된 키 보다 정확 하 게 배치 하기 이동 합니다. 또한 *맞춤선* 정확 하 게 폼에 컨트롤을 배치 하는 데 도움이 됩니다. 자세한 내용은 참조 [연습: 맞춤선 Windows Forms에서 사용 하 여 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)합니다.  
   
-### 프로그래밍 방식으로 컨트롤의 위치를 지정하려면  
+### <a name="to-position-a-control-using-the-properties-window"></a>속성 창을 사용 하 여 컨트롤을 배치 하기  
   
-1.  컨트롤의 <xref:System.Windows.Forms.Control.Location%2A> 속성을 <xref:System.Drawing.Point>로 설정합니다.  
+1.  컨트롤의 위치를 클릭 합니다.  
+  
+2.  **속성** 창에 대 한 유형 값의 <xref:System.Windows.Forms.Control.Location%2A> 해당 컨테이너 내에서 컨트롤을 배치 하는 쉼표로 구분 된 속성입니다.  
+  
+     첫 번째 번호 (X)은; 컨테이너의 왼쪽된 테두리 거리 두 번째 숫자 (Y)는 거리 (픽셀) 컨테이너 영역의 위쪽 테두리 합니다.  
+  
+    > [!NOTE]
+    >  확장할 수 있습니다는 <xref:System.Windows.Forms.Control.Location%2A> 속성 입력을 **X** 및 **Y** 값을 개별적으로 합니다.  
+  
+### <a name="to-position-a-control-programmatically"></a>컨트롤을 프로그래밍 방식으로 배치 하려면  
+  
+1.  설정의 <xref:System.Windows.Forms.Control.Location%2A> 컨트롤의 속성을 <xref:System.Drawing.Point>합니다.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -67,7 +72,7 @@ caps.handback.revision: 18
     button1->Location = Point(100, 100);  
     ```  
   
-2.  <xref:System.Windows.Forms.Control.Left%2A> 하위 속성을 사용하여 컨트롤의 X 좌표를 변경합니다.  
+2.  X 좌표는 컨트롤의 위치를 변경 사용 하 여 <xref:System.Windows.Forms.Control.Left%2A> 하위 속성입니다.  
   
     ```vb  
     Button1.Left = 300  
@@ -81,9 +86,9 @@ caps.handback.revision: 18
     button1->Left = 300;  
     ```  
   
-### 프로그래밍 방식으로 컨트롤의 위치를 늘리려면  
+### <a name="to-increment-a-controls-location-programmatically"></a>컨트롤의 위치를 프로그래밍 방식으로 증가  
   
-1.  <xref:System.Windows.Forms.Control.Left%2A> 하위 속성을 설정하여 컨트롤의 X 좌표를 늘립니다.  
+1.  설정의 <xref:System.Windows.Forms.Control.Left%2A> 하위 속성 컨트롤의 X 좌표를 늘립니다.  
   
     ```vb  
     Button1.Left += 200  
@@ -98,15 +103,15 @@ caps.handback.revision: 18
     ```  
   
     > [!NOTE]
-    >  컨트롤의 X 및 Y 위치를 동시에 설정하려면 <xref:System.Windows.Forms.Control.Location%2A> 속성을 사용합니다.  위치를 개별적으로 설정하려면 컨트롤의 <xref:System.Windows.Forms.Control.Left%2A>\(**X**\) 또는 <xref:System.Windows.Forms.Control.Top%2A>\(**Y**\) 하위 속성을 사용합니다.  단추의 위치를 나타내는 <xref:System.Drawing.Point> 구조체는 단추의 좌표에 대한 복사본을 가지고 있으므로 이 구조체의 X 좌표와 Y 좌표를 암시적으로 설정하지 마십시오.  
+    >  사용 하 여 <xref:System.Windows.Forms.Control.Location%2A> 속성을 설정 하는 컨트롤의 X 및 Y 위치를 동시에 합니다. 위치를 개별적으로 설정 하는 컨트롤을 사용 하 여 <xref:System.Windows.Forms.Control.Left%2A> (**X**) 또는 <xref:System.Windows.Forms.Control.Top%2A> (**Y**) 하위 속성입니다. 암시적으로의 X 및 Y 좌표를 설정 하지 마십시오는 <xref:System.Drawing.Point> 이 구조는 단추의 좌표의 복사본을 포함 하기 때문에 단추의 위치를 나타내는 구조입니다.  
   
-## 참고 항목  
- [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)   
- [연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)   
- [How to: Set the Screen Location of Windows Forms](http://msdn.microsoft.com/ko-kr/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)
+## <a name="see-also"></a>참고 항목  
+ [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)  
+ [연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [방법: Windows Forms의 화면 위치 설정](http://msdn.microsoft.com/en-us/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)

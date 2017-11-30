@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - protocols, TCP/UDP
 - network resources, TCP/UDP
@@ -27,19 +22,18 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f067d24b59fbb5b49803605a625cef52d12fdbea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 04a3bb1c7499a60175aaaa9715e780ea5ddceb31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tcp-udp"></a>TCP-UDP
-응용 프로그램은 <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스와 함께 TCP(Transmission Control Protocol) 및 UDP(User Datagram Protocol) 서비스를 사용할 수 있습니다. 이러한 프로토콜 클래스는 <xref:System.Net.Sockets.Socket?displayProperty=fullName> 클래스를 기반으로 빌드되며 데이터 전송의 세부 사항을 처리합니다.  
+응용 프로그램은 <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스와 함께 TCP(Transmission Control Protocol) 및 UDP(User Datagram Protocol) 서비스를 사용할 수 있습니다. 이러한 프로토콜 클래스는 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스를 기반으로 빌드되며 데이터 전송의 세부 사항을 처리합니다.  
   
  프로토콜 클래스는 **Socket** 클래스의 동기 메서드를 사용하여 상태 정보를 유지 관리하거나 프로토콜 관련 소켓 설정의 세부 정보를 알아야 하는 오버헤드 없이 네트워크 서비스에 대한 쉽고 간단한 액세스를 제공합니다. 비동기 **Socket** 메서드를 사용하려면 <xref:System.Net.Sockets.NetworkStream> 클래스에서 제공하는 비동기 메서드를 사용할 수 있습니다. 프로토콜 클래스에 의해 노출되지 않는 **Socket** 클래스의 기능에 액세스하려면 **Socket** 클래스를 사용해야 합니다.  
   
@@ -48,10 +42,9 @@ ms.lasthandoff: 08/21/2017
  **UdpClient** 클래스는 바이트 배열을 사용하여 UDP 데이터그램을 보유합니다. <xref:System.Net.Sockets.UdpClient.Send%2A> 메서드를 사용하여 네트워크에 데이터를 보내고 <xref:System.Net.Sockets.UdpClient.Receive%2A> 메서드를 사용하여 들어오는 데이터그램을 받습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [TCP 서비스 사용](../../../docs/framework/network-programming/using-tcp-services.md)   
- [UDP 서비스 사용](../../../docs/framework/network-programming/using-udp-services.md)   
- [네트워크에서 스트림 사용](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
- [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
+ [TCP 서비스를 사용 하 여](../../../docs/framework/network-programming/using-tcp-services.md)  
+ [UDP 서비스 사용](../../../docs/framework/network-programming/using-udp-services.md)  
+ [네트워크에서 스트림 사용](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
  [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)
-

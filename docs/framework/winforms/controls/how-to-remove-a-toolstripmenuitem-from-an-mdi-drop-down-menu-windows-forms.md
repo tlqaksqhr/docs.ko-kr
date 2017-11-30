@@ -1,62 +1,66 @@
 ---
-title: "방법: MDI 드롭다운 메뉴에서 ToolStripMenuItem 제거(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI, 메뉴 항목 병합"
-  - "메뉴 항목, MDI 드롭 다운 메뉴에서 제거"
-  - "MenuStrip 컨트롤[Windows Forms], 병합"
-  - "MenuStrip 컨트롤[Windows Forms], 제거"
+title: "방법: MDI 드롭다운 메뉴에서 ToolStripMenuItem 제거(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- menu items [Windows Forms], removing from MDI drop-down menus
+- MenuStrip control [Windows Forms], merging
+- MenuStrip control [Windows Forms], removing
+- MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b265544b45ad0614985fdc1d8dbf6f9c0b909ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: MDI 드롭다운 메뉴에서 ToolStripMenuItem 제거(Windows Forms)
-일부 응용 프로그램에서는 MDI\(다중 문서 인터페이스\) 자식 창의 종류가 MDI 부모 창의 종류와 다를 수 있습니다.  예를 들어, MDI 부모는 스프레드시트인데 MDI 자식은 차트일 수 있습니다.  이 경우 여러 종류의 MDI 자식 창이 활성화되어 있을 때 MDI 부모 메뉴의 내용을 MDI 자식 메뉴의 내용으로 업데이트해야 할 수 있습니다.  
+# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>방법: MDI 드롭다운 메뉴에서 ToolStripMenuItem 제거(Windows Forms)
+일부 응용 프로그램에서는 MDI(다중 문서 인터페이스) 자식 창의 종류가 MDI 부모 창과 다를 수 있습니다. 예를 들어 MDI 부모는 스프레드시트이고 MDI 자식은 차트일 수 있습니다. 이 경우 다른 종류의 MDI 자식 창이 활성화될 때 MDI 부모 메뉴의 내용을 MDI 자식 메뉴의 내용으로 업데이트하려고 합니다.  
   
- 다음 절차에서는 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 속성을 사용하여 MDI 부모 메뉴의 드롭다운 부분에서 메뉴 항목을 제거합니다.  MDI 자식 창을 닫으면 제거한 메뉴 항목이 MDI 부모 메뉴에 복원됩니다.  
+ 다음 절차를 사용 하 여는 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 속성을 MDI 부모 메뉴의 드롭다운 부분에서 메뉴 항목을 제거 합니다. MDI 자식 창을 닫으면 MDI 부모 메뉴를 제거 하는 메뉴 항목을 복원 합니다.  
   
-### MDI 드롭다운 메뉴에서 MenuStrip을 제거하려면  
+### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>MDI 드롭 다운 메뉴에서 MenuStrip을 제거 하려면  
   
-1.  폼을 만들고 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`로 설정합니다.  
+1.  폼을 만들고 해당 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`로 설정합니다.  
   
 2.  `Form1`에 <xref:System.Windows.Forms.MenuStrip>을 추가하고 <xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.  
   
-3.  최상위 메뉴 항목에 추가 `Form1`<xref:System.Windows.Forms.MenuStrip> 를 설정 하 고 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성에 `&File`.  
+3.  `Form1`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `&File`로 설정합니다.  
   
-4.  `&File` 메뉴 항목에 하위 메뉴 항목을 세 개 추가하고 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Open`, `&Import from` 및 `E&xit`로 설정합니다.  
+4.  3 개의 하위 메뉴 항목을 추가 `&File` 메뉴 항목 집합과 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Open`, `&Import from`, 및 `E&xit`합니다.  
   
-5.  `&Import from` 하위 메뉴 항목에 하위 메뉴 항목을 두 개 추가하고 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Word` 및 `&Excel`로 설정합니다.  
+5.  두 개의 하위 메뉴 항목을 추가 `&Import from` 하위 메뉴 항목 집합과 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Word` 및 `&Excel`합니다.  
   
-6.  폼을 프로젝트에 추가 하 고 추가 <xref:System.Windows.Forms.MenuStrip> 양식과 집합에는 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성에는 `Form2`<xref:System.Windows.Forms.MenuStrip> 에 `true`.  
+6.  프로젝트에 폼을 추가하고, 폼에 <xref:System.Windows.Forms.MenuStrip>을 추가한 다음 `Form2`<xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.  
   
-7.  최상위 메뉴 항목에 추가 `Form2`<xref:System.Windows.Forms.MenuStrip> 를 설정 하 고 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성에 `&File`.  
+7.  `Form2`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&File`로 설정합니다.  
   
-8.  `Form2`의 `&File` 메뉴에 `&Import from` 하위 메뉴 항목을 추가하고 `&File` 메뉴에 `&Word` 하위 메뉴 항목을 추가합니다.  
+8.  추가 `&Import from` 하위 메뉴 항목에는 `&File` 의 메뉴 `Form2`, 추가 하 고는 `&Word` 하위 메뉴 항목을는 `&File` 메뉴.  
   
-9. `Form2` 메뉴 항목의 <xref:System.Windows.Forms.MergeAction> 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 속성을 다음 표에 표시된 대로 설정합니다.  
+9. 설정는 <xref:System.Windows.Forms.MergeAction> 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 의 속성은 `Form2` 다음 표와 같이 메뉴 항목입니다.  
   
     |Form2 메뉴 항목|MergeAction 값|MergeIndex 값|  
-    |-----------------|-------------------|------------------|  
-    |파일|MatchOnly|\-1|  
-    |Import from|MatchOnly|\-1|  
-    |Word|제거|\-1|  
+    |---------------------|-----------------------|----------------------|  
+    |파일|MatchOnly|-1|  
+    |가져오기|MatchOnly|-1|  
+    |단어|제거|-1|  
   
-10. `Form1`에 대 한 이벤트 처리기를 만들는 <xref:System.Windows.Forms.Control.Click> 의 이벤트는 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. `Form1`에 대 한 이벤트 처리기를 만들고는 <xref:System.Windows.Forms.Control.Click> 의 이벤트는 `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>합니다.  
   
-11. 이벤트 처리기에서 `Form1`의 MDI 자식 폼으로 `Form2`의 새 인스턴스를 만들고 표시하는 다음 코드 예제와 비슷한 코드를 삽입합니다.  
+11. 이벤트 처리기에서 만들고의 새 인스턴스를 표시 하려면 다음 코드 예제와 비슷한 코드를 삽입 `Form2` 의 MDI 자식으로 `Form1`:  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
@@ -66,12 +70,9 @@ caps.handback.revision: 12
         'Display the new form.  
             NewMDIChild.Show()  
     End Sub  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void openToolStripMenuItem_Click(object sender, EventArgs e)  
     {  
         Form2 newMDIChild = new Form2();  
@@ -80,33 +81,30 @@ caps.handback.revision: 12
         // Display the new form.  
             newMDIChild.Show();  
     }  
-  
     ```  
   
-12. 다음 코드 예제에서는 유사한 코드 배치는 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> 이벤트 처리기를 등록 합니다.  
+12. `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>에 다음 코드 예제와 비슷한 코드를 배치하여 이벤트 처리기를 등록합니다.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
     EventArgs) Handles openToolStripMenuItem.Click  
-  
     ```  
   
     ```csharp  
     this.openToolStripMenuItem.Click += new _  
     System.EventHandler(this.openToolStripMenuItem_Click);  
-  
     ```  
   
-## 코드 컴파일  
+## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   두 개의 <xref:System.Windows.Forms.Form> 컨트롤 `Form1` 및 `Form2`  
+-   `Form1` 및 `Form2`라는 두 개의 <xref:System.Windows.Forms.Form> 컨트롤  
   
--   `Form1`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 `menuStrip1` 및 `Form2`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 `menuStrip2`  
+-   `menuStrip1`이라는 `Form1`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 및 `menuStrip2`라는 `Form2`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤  
   
--   <xref:System?displayProperty=fullName> 및 <xref:System.Windows.Forms?displayProperty=fullName> 어셈블리에 대한 참조  
+-   <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
-## 참고 항목  
- [방법: MDI 상위 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [방법: MDI 자식 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
+## <a name="see-also"></a>참고 항목  
+ [방법: MDI 상위 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [방법: MDI 자식 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
  [MenuStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

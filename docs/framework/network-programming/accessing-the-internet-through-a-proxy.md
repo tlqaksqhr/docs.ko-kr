@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Networking
 - global proxy instances
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ec177366c955e2ac555519f32fe48ddbc1aba5a0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9e2be47cfd1ce56df7a0ad926166f8224a812449
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>프록시를 통해 인터넷 액세스
 사이트가 프록시를 사용하여 인터넷에 대한 액세스를 제공하는 경우 응용 프로그램이 웹 프록시와 통신할 수 있도록 프록시 인스턴스를 구성해야 합니다.  
@@ -48,6 +42,5 @@ ms.lasthandoff: 08/21/2017
 -   [방법: 전역 프록시 선택 재정의](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)   
+ [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)  
  [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
-

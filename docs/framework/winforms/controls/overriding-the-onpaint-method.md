@@ -1,38 +1,42 @@
 ---
-title: "OnPaint 메서드 재정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "OnPaint 메서드, Windows Forms 사용자 지정 컨트롤에서 재정의"
-  - "Paint 이벤트, Windows Forms 사용자 지정 컨트롤에서 처리"
+title: "OnPaint 메서드 재정의"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Paint event [Windows Forms], handling in Windows Forms custom control
+- OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 41205f7f0ec21e27b97d0b12415fca89ae526552
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# OnPaint 메서드 재정의
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에 정의된 이벤트를 재정의하는 기본 단계는 동일하며 다음 목록에 요약되어 있습니다.  
+# <a name="overriding-the-onpaint-method"></a>OnPaint 메서드 재정의
+에 정의 된 이벤트를 재정의 하는 기본 단계는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 동일 하며 다음 목록에 요약 되어 있습니다.  
   
-#### 상속된 이벤트를 재정의하려면  
+#### <a name="to-override-an-inherited-event"></a>상속된 된 이벤트를 재정의 하려면  
   
-1.  보호된 `On`*EventName* 메서드를 재정의합니다.  
+1.  보호 된 재정의 `On` *EventName* 메서드.  
   
-2.  재정의된 `On`*EventName* 메서드에서 기본 클래스의 `On`*EventName* 메서드를 호출하여 등록된 대리자가 이벤트를 받도록 합니다.  
+2.  호출 된 `On` *EventName* 에서 재정의 된 기본 클래스의 메서드 `On` *EventName* 메서드를 등록 된 대리자가 이벤트를 받도록 합니다.  
   
- 모든 Windows Forms 컨트롤은 자신이 <xref:System.Windows.Forms.Control>에서 상속한 <xref:System.Windows.Forms.Control.Paint> 이벤트를 재정의해야 하기 때문에 여기서 <xref:System.Windows.Forms.Control.Paint> 이벤트를 자세히 설명합니다.  기본 <xref:System.Windows.Forms.Control> 클래스에는 파생 컨트롤을 만드는 방법에 대한 정보가 없으며 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드에 아무런 그리기 논리도 제공되지 않습니다.  <xref:System.Windows.Forms.Control>의 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드는 등록된 이벤트 수신자에게 <xref:System.Windows.Forms.Control.Paint> 이벤트를 디스패치하기만 합니다.  
+ <xref:System.Windows.Forms.Control.Paint> 이벤트는 모든 Windows Forms 컨트롤 재정의 해야 하기 때문에 여기에서 자세히 설명 되어는 <xref:System.Windows.Forms.Control.Paint> 에서 상속 된 이벤트 <xref:System.Windows.Forms.Control>합니다. 기본 <xref:System.Windows.Forms.Control> 클래스 파생된 된 컨트롤을 그릴 수 있도록 요구 하는 방법을 알지 못합니다 및 모든 그리기 논리를 제공 하지 않습니다는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드. <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드 <xref:System.Windows.Forms.Control> 디스패치 하기만 <xref:System.Windows.Forms.Control.Paint> 등록 된 이벤트 수신기에는 이벤트입니다.  
   
- [방법: 간단한 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)의 샘플을 작업한 경우 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 재정의하는 예제를 보았을 것입니다.  다음 코드 부분은 이 샘플에서 가져온 것입니다.  
+ 이 샘플에서 작업 한 경우 [하는 방법: 간단한 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), 재정의 하는 예제에 알아보았습니다는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드. 다음 코드에서는 샘플에서 수행 됩니다.  
   
 ```vb  
 Public Class FirstControl  
@@ -62,7 +66,7 @@ public class FirstControl : Control{
 }   
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs> 클래스에는 <xref:System.Windows.Forms.Control.Paint> 이벤트의 데이터가 들어 있습니다.  아래 코드에 표시된 것처럼, 이 클래스에는 두 개의 속성이 있습니다.  
+ <xref:System.Windows.Forms.PaintEventArgs> 클래스에 대 한 데이터가 포함 된 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 이것은 다음 코드에 표시 된 두 개의 속성.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -88,11 +92,11 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>은 그리려는 사각형이며 <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> 속성은 <xref:System.Drawing.Graphics> 개체를 참조합니다.  <xref:System.Drawing?displayProperty=fullName> 네임스페이스의 클래스는 새로운 Windows 그래픽 라이브러리인 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]의 기능에 액세스하는 관리되는 클래스입니다.  <xref:System.Drawing.Graphics> 개체에는 점, 문자열, 선, 원호, 타원 및 기타 모양을 그릴 수 있는 메서드가 있습니다.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>그리려는 사각형 및 <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> 속성은 참조는 <xref:System.Drawing.Graphics> 개체입니다. 클래스는 <xref:System.Drawing?displayProperty=nameWithType> 네임 스페이스는 관리의 기능에 대 한 액세스를 제공 하는 클래스 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 새 Windows 그래픽 라이브러리입니다. <xref:System.Drawing.Graphics> 개체의 포인트, 문자열, 선, 타원, 타원, 및 기타 많은 도형을 그릴 수 있는 메서드가 있습니다.  
   
- 컨트롤은 자신의 시각적 표시를 변경해야 할 때마다 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 호출합니다.  그 다음 이 메서드는 <xref:System.Windows.Forms.Control.Paint> 이벤트를 발생시킵니다.  
+ 컨트롤 호출 해당 <xref:System.Windows.Forms.Control.OnPaint%2A> 자신의 시각적 표시를 변경 해야 할 때마다 메서드. 이 메서드는 메서드가 다시에 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다.  
   
-## 참고 항목  
- [이벤트](../../../../docs/standard/events/index.md)   
- [Windows Forms 컨트롤 렌더링](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)   
+## <a name="see-also"></a>참고 항목  
+ [이벤트](../../../../docs/standard/events/index.md)  
+ [Windows Forms 컨트롤 렌더링](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
  [이벤트 정의](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)

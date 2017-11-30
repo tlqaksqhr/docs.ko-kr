@@ -1,44 +1,65 @@
 ---
-title: "(Visual Basic) 제네릭 컬렉션 용 인터페이스의 가변성 사용 | Microsoft 문서"
+title: "제네릭 컬렉션 (Visual Basic)에 대 한 인터페이스의 가변성 사용"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 86184c7de3fe16148bf954b16d703ca682216337
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b8944bf8f6377ddc633f81dccd9f379bf176d9f3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>(Visual Basic) 제네릭 컬렉션 용 인터페이스의 가변성 사용
-공변 (covariant) 인터페이스의 메서드를 인터페이스에 지정 된 것 보다 더 많은 파생된 형식을 반환할 수 있습니다. 반공 변 인터페이스의 메서드를 인터페이스에 지정 된 것 보다 더 적은 파생 형식의 매개 변수를 사용할 수 있도록 허용  
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>제네릭 컬렉션 (Visual Basic)에 대 한 인터페이스의 가변성 사용
+공변(covariant) 인터페이스는 메서드가 인터페이스에 지정된 것보다 더 많은 수의 파생된 형식을 반환하도록 허용합니다. 반공변(contravariant) 인터페이스는 메서드가 인터페이스에 지정된 것보다 더 적은 파생된 형식의 매개 변수를 수락하도록 허용합니다.  
   
- .NET Framework 4에서는 몇 가지 기존 인터페이스가 공변 (covariant) 및 반공 변입니다. 여기에 <xref:System.Collections.Generic.IEnumerable%601>및 <xref:System.IComparable%601>.</xref:System.IComparable%601> </xref:System.Collections.Generic.IEnumerable%601> 이 파생 형식의 컬렉션에 대 한 기본 형식의 제네릭 컬렉션과 함께 작동 하는 메서드를 다시 사용할 수 있습니다.  
+ .NET Framework 4에서는 몇 가지 기존 인터페이스가 공변(covariant) 및 반공변(contravariant)이 되었습니다. 여기에는 <xref:System.Collections.Generic.IEnumerable%601> 및 <xref:System.IComparable%601>이 포함됩니다. 따라서 파생된 형식의 컬렉션에 대한 기본 형식의 제네릭 컬렉션과 함께 작동하는 메서드를 다시 사용할 수 있습니다.  
   
- .NET Framework의 variant 인터페이스 목록은 참조 하십시오. [제네릭 인터페이스 (Visual Basic)에 대 한 분산](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)합니다.  
+ .NET Framework의 variant 인터페이스의 목록을 보려면 참조 [제네릭 인터페이스 (Visual Basic)에 대 한 분산](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)합니다.  
   
 ## <a name="converting-generic-collections"></a>제네릭 컬렉션 변환  
- 다음은 예제 공변성 (covariance) 지원의 혜택은 <xref:System.Collections.Generic.IEnumerable%601>인터페이스.</xref:System.Collections.Generic.IEnumerable%601> `PrintFullName` 메서드 컬렉션을 받아들여는 `IEnumerable(Of Person)` 형식을 매개 변수로 합니다. 그러나 다시 사용할 컬렉션의는 `IEnumerable(Of Person)` 하기 때문에 입력 `Employee` 상속 `Person`합니다.  
+ 다음 예제에서는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에서 공변성(Covariance) 지원의 이점을 보여 줍니다. `PrintFullName` 메서드는 `IEnumerable(Of Person)` 형식의 컬렉션을 매개 변수로 수락합니다. 그러나 `Employee`는 `Person`을 상속하므로 `IEnumerable(Of Person)` 형식의 컬렉션에 대해 이를 다시 사용할 수 있습니다.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```vb  
+' Simple hierarchy of classes.  
+Public Class Person  
+    Public Property FirstName As String  
+    Public Property LastName As String  
+End Class  
+  
+Public Class Employee  
+    Inherits Person  
+End Class  
+  
+' The method has a parameter of the IEnumerable(Of Person) type.  
+Public Sub PrintFullName(ByVal persons As IEnumerable(Of Person))  
+    For Each person As Person In persons  
+        Console.WriteLine(  
+            "Name: " & person.FirstName & " " & person.LastName)  
+    Next  
+End Sub  
+  
+Sub Main()  
+    Dim employees As IEnumerable(Of Employee) = New List(Of Employee)  
+  
+    ' You can pass IEnumerable(Of Employee),   
+    ' although the method expects IEnumerable(Of Person).  
+  
+    PrintFullName(employees)  
+  
+End Sub  
+```  
+  
 ## <a name="comparing-generic-collections"></a>제네릭 컬렉션 비교  
- 다음 예제에서는 반공 분산 지원의 혜택은 <xref:System.Collections.Generic.IComparer%601>인터페이스.</xref:System.Collections.Generic.IComparer%601> `PersonComparer` 클래스는 `IComparer(Of Person)` 인터페이스를 구현합니다. 그러나 다시 사용할 수 있습니다 개체의 시퀀스를 비교 하려면이 클래스는 `Employee` 하기 때문에 입력 `Employee` 상속 `Person`합니다.  
+ 다음 예제에서는 <xref:System.Collections.Generic.IComparer%601> 인터페이스에서 반공변성(Contravariance) 지원의 이점을 보여 줍니다. `PersonComparer` 클래스는 `IComparer(Of Person)` 인터페이스를 구현합니다. 그러나 `Employee`는 `Person`을 상속하므로 `Employee` 형식 개체의 시퀀스를 비교하기 위해 이 클래스를 다시 사용할 수 있습니다.  
   
 ```vb  
 ' Simple hierarhcy of classes.  
@@ -98,4 +119,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [(Visual Basic) 제네릭 인터페이스의 가변성](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+ [제네릭 인터페이스의 가변성(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

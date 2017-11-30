@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - trace switches, configuring
 - tracing [.NET Framework], trace switches
@@ -21,29 +18,28 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b5ba232e3c84f7bfa089822d4a4f792b179bf32
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f5fa8a0fbe6dc08811162ba9b1d4198af9256fc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>방법: 추적 스위치 만들기, 초기화 및 구성
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다.  
   
 <a name="create"></a>   
 ## <a name="creating-and-initializing-a-trace-switch"></a>추적 스위치 만들기 및 초기화  
- 추적 스위치를 사용하려면 먼저 만들어서 코드에 배치해야 합니다. 스위치 개체를 만드는 데 사용할 수 있는 미리 정의된 두 개의 클래스로는 <xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> 클래스와 <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName> 클래스가 있습니다. 추적 메시지의 표시 여부에만 관심이 있으면 <xref:System.Diagnostics.BooleanSwitch>를 사용하고 추적 수준을 구분하려면 <xref:System.Diagnostics.TraceSwitch>를 사용할 수 있습니다. <xref:System.Diagnostics.TraceSwitch>가 사용되면 개인적인 디버거 메시지를 정의한 다음 다양한 추적 수준과 연결할 수 있습니다. 추적 또는 디버깅에 두 가지 스위치 형식을 모두 사용할 수 있습니다. 기본적으로 <xref:System.Diagnostics.BooleanSwitch>는 비활성화되고 <xref:System.Diagnostics.TraceSwitch>는 <xref:System.Diagnostics.TraceLevel.Off?displayProperty=fullName> 수준으로 설정됩니다. 추적 스위치를 만들고 이 스위치를 사용할 수 있는 코드의 모든 부분에 배치할 수 있습니다.  
+ 추적 스위치를 사용하려면 먼저 만들어서 코드에 배치해야 합니다. 스위치 개체를 만드는 데 사용할 수 있는 미리 정의된 두 개의 클래스로는 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 클래스와 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 클래스가 있습니다. 추적 메시지의 표시 여부에만 관심이 있으면 <xref:System.Diagnostics.BooleanSwitch>를 사용하고 추적 수준을 구분하려면 <xref:System.Diagnostics.TraceSwitch>를 사용할 수 있습니다. <xref:System.Diagnostics.TraceSwitch>가 사용되면 개인적인 디버거 메시지를 정의한 다음 다양한 추적 수준과 연결할 수 있습니다. 추적 또는 디버깅에 두 가지 스위치 형식을 모두 사용할 수 있습니다. 기본적으로 <xref:System.Diagnostics.BooleanSwitch>는 비활성화되고 <xref:System.Diagnostics.TraceSwitch>는 <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType> 수준으로 설정됩니다. 추적 스위치를 만들고 이 스위치를 사용할 수 있는 코드의 모든 부분에 배치할 수 있습니다.  
   
  코드에 추적 수준과 기타 구성 옵션을 설정할 수도 있지만 구성 파일을 사용하여 스위치의 상태를 관리하는 것이 좋습니다. 이것은 구성 시스템에서 스위치 구성을 관리하면 좀 더 융통성 있게 사용할 수 있기 때문입니다. 즉, 응용 프로그램을 다시 컴파일하지 않고도 다양한 스위치를 설정하거나 해제하고 수준을 변경할 수 있습니다.  
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>추적 스위치를 만들고 초기화하려면  
   
-1.  스위치를 <xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> 형식 또는 <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName> 형식으로 정의하고 스위치의 이름과 설명을 설정합니다.  
+1.  스위치를 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 형식 또는 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 형식으로 정의하고 스위치의 이름과 설명을 설정합니다.  
   
 2.  추적 스위치를 구성합니다. 자세한 내용은 [추적 스위치 구성](#configure)을 참조하세요.  
   
@@ -72,7 +68,7 @@ ms.lasthandoff: 08/21/2017
   
  배포된 응용 프로그램에서 응용 프로그램이 실행되지 않을 때 스위치 개체를 재구성하여 추적 코드를 사용하도록 설정합니다. 일반적으로 이 작업을 위해 스위치 개체를 설정 및 해제하거나 추적 수준을 변경한 다음 응용 프로그램을 다시 시작해야 합니다.  
   
- 스위치 인스턴스를 만들 때 *displayName* 인수와 *description* 인수의 두 인수를 지정하여 초기화도 수행합니다. 생성자의 *displayName* 인수는 <xref:System.Diagnostics.Switch> 클래스 인스턴스의 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=fullName> 속성을 설정합니다. *displayName*은 .config 파일에서 스위치를 구성하는 데 사용되는 이름이고, *description* 인수는 스위치 및 스위치가 제어하는 메시지에 대한 간략한 설명을 반환해야 합니다.  
+ 스위치 인스턴스를 만들 때 *displayName* 인수와 *description* 인수의 두 인수를 지정하여 초기화도 수행합니다. 생성자의 *displayName* 인수는 <xref:System.Diagnostics.Switch> 클래스 인스턴스의 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> 속성을 설정합니다. *displayName*은 .config 파일에서 스위치를 구성하는 데 사용되는 이름이고, *description* 인수는 스위치 및 스위치가 제어하는 메시지에 대한 간략한 설명을 반환해야 합니다.  
   
  구성할 스위치의 이름을 지정하는 것은 물론 스위치의 값도 지정해야 합니다. 이 값은 정수입니다. <xref:System.Diagnostics.BooleanSwitch>에서 값 0은 **끄기**에 해당하고 0이 아닌 값은 **켜기**에 해당합니다. <xref:System.Diagnostics.TraceSwitch>에서 0, 1, 2, 3, 4는 각각 **끄기**, **오류**, **경고**, **정보** 및 **동사**에 해당합니다. 4보다 큰 숫자는 **동사**로 처리되고 0보다 작은 숫자는 **끄기**로 처리됩니다.  
   
@@ -138,8 +134,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)   
+ [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [추적 및 디버그 설정 스키마](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-

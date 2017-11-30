@@ -1,44 +1,49 @@
 ---
-title: "방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "예제[Windows Forms], 텍스트 상자"
-  - "RichTextBox 컨트롤[Windows Forms], 웹 페이지에 연결"
-  - "텍스트 상자, 웹 링크 표시"
+title: "방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- text boxes [Windows Forms], displaying Web links
+- examples [Windows Forms], text boxes
+- RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5391c48720e68a8a7e6e0fb7735252d00025adc6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시
-Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하여 밑줄이 그어진 컬러 웹 링크를 표시할 수 있습니다.  링크를 클릭하면 링크 텍스트에 지정된 웹 사이트가 브라우저 창에 표시되도록 코드를 작성할 수 있습니다.  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시
+Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 색이 지정 된이 및 밑줄 표시 된 웹 링크를 표시할 수 있습니다. 브라우저 창에 링크를 클릭 하면 링크 텍스트에 지정 된 웹 사이트를 표시 하는 코드를 작성할 수 있습니다.  
   
-### RichTextBox 컨트롤을 사용하여 웹 페이지에 연결하려면  
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>RichTextBox 컨트롤에서 웹 페이지에 연결 하려면  
   
-1.  <xref:System.Windows.Forms.RichTextBox.Text%2A> 속성을 올바른 URL\(예: "http:\/\/www.microsoft.com\/korea"\)을 포함하는 문자열로 설정합니다.  
+1.  설정의 <xref:System.Windows.Forms.RichTextBox.Text%2A> 속성을 올바른 URL (예: "http://www.microsoft.com/")를 포함 하는 문자열입니다.  
   
-2.  <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 속성이 기본값인 `true`로 설정되어 있는지 확인합니다.  
+2.  확인은 <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 속성이로 설정 되어 `true` (기본값).  
   
-3.  <xref:System.Diagnostics.Process> 개체의 새 전역 인스턴스를 만듭니다.  
+3.  새 전역 인스턴스를 만들고는 <xref:System.Diagnostics.Process> 개체입니다.  
   
-4.  브라우저에 원하는 텍스트를 보내는 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 이벤트에 대한 이벤트 처리기를 작성합니다.  
+4.  에 대 한 이벤트 처리기를 작성은 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 브라우저 원하는 텍스트를 전송 하는 이벤트입니다.  
   
-     아래 예제에서는 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 이벤트를 사용하여 <xref:System.Windows.Forms.RichTextBox> 컨트롤의 <xref:System.Windows.Forms.RichTextBox.Text%2A> 속성에 지정된 URL에서 Internet Explorer의 인스턴스를 엽니다.  이 예제에서는 폼에 <xref:System.Windows.Forms.RichTextBox> 컨트롤이 포함되어 있다고 가정합니다.  
+     다음 예제에는 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 이벤트에 지정 된 URL Internet Explorer의 인스턴스를 열고는 <xref:System.Windows.Forms.RichTextBox.Text%2A> 속성의는 <xref:System.Windows.Forms.RichTextBox> 컨트롤입니다. 이 예에서는 가정 된 폼을 <xref:System.Windows.Forms.RichTextBox> 제어 합니다.  
   
     > [!IMPORTANT]
-    >  <xref:System.Diagnostics.Process.Start%2A?displayProperty=fullName> 메서드를 호출할 때 부분 신뢰 컨텍스트에서 코드를 실행하면 권한이 충분하지 않기 때문에 <xref:System.Security.SecurityException> 예외가 발생합니다.  자세한 내용은 [코드 액세스 보안 기본 사항](../../../../docs/framework/misc/code-access-security-basics.md)을 참조하십시오.  
+    >  호출에는 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 메서드를 발생 하 게는 <xref:System.Security.SecurityException> 권한이 부족으로 인해 부분 신뢰 컨텍스트에서 코드를 실행 하는 경우는 예외입니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../docs/framework/misc/code-access-security-basics.md)을 참조하세요.  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -50,7 +55,6 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하여 
           ' with link text as URL.  
           p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -63,7 +67,6 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하여 
        // with link text as URL.  
        p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);  
     }  
-  
     ```  
   
     ```cpp  
@@ -81,19 +84,18 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하여 
        }  
     ```  
   
-     \([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 폼의 생성자에 다음 문을 포함하여`p` 프로세스를 초기화해야 합니다.  
+     ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 프로세스를 초기화 해야 `p`, 폼의 생성자에 다음 문을 포함 하 여 수행할 수 있는:  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 폼의 생성자에 다음 코드를 배치하여 이벤트 처리기를 등록합니다.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
        System.Windows.Forms.LinkClickedEventHandler  
        (this.richTextBox1_LinkClicked);  
-  
     ```  
   
     ```cpp  
@@ -102,13 +104,12 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하여 
        (this, &Form1::richTextBox1_LinkClicked);  
     ```  
   
-     만든 프로세스를 사용하여 작업을 마쳤으면 즉시 프로세스를 중지해야 합니다.  위에 나오는 코드의 경우 프로세스를 중지하는 코드는 다음과 같습니다.  
+     즉시 사용 하 여 작업을 완료 했으면 만든 프로세스를 중지 하는 것이 유용 합니다. 위에 나와 있는 코드를 참조 하는 프로세스를 중지 하는 코드 다음과 같이 표시 될 수 있습니다.  
   
     ```vb  
     Public Sub StopWebProcess()  
        p.Kill()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -116,7 +117,6 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하여 
     {  
        p.Kill();  
     }  
-  
     ```  
   
     ```cpp  
@@ -126,9 +126,9 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하여 
     }  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>   
- <xref:System.Windows.Forms.RichTextBox.LinkClicked>   
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox 컨트롤](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>  
+ <xref:System.Windows.Forms.RichTextBox.LinkClicked>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [RichTextBox 컨트롤](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

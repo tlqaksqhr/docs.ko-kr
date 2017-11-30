@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="method-etw-events"></a>메서드 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 메서드와 관련된 정보를 수집합니다. 이들 이벤트의 페이로드는 기호 확인을 위해 필요합니다. 또한 이들 이벤트는 메서드를 호출한 횟수와 같은 유용한 정보를 제공합니다.  
@@ -173,4 +171,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
-

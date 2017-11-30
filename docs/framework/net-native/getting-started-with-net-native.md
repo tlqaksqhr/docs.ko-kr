@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c9618213569766a6ae355a936a4b1f71a5046ef6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: eeda0c58e9b5e9f8b48e335849ce12f7e8d94a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getting-started-with-net-native"></a>.NET 네이티브 시작
 새로운 Windows 10용 Windows 앱을 작성하든지 기존 Windows 스토어 앱을 마이그레이션하든지 상관없이 동일한 절차 집합을 따르면 됩니다. [!INCLUDE[net_native](../../../includes/net-native-md.md)] 앱을 만들려면 다음 단계를 수행합니다.  
@@ -69,11 +67,11 @@ ms.lasthandoff: 08/21/2017
  **리플렉션을 사용하는 메서드**  
  코드에서 리플렉션이 사용되는지가 분명하지 않은 경우가 있습니다. 일부 공통 API 또는 프로그래밍 패턴은 리플렉션 API의 일부로는 간주되지 않지만 리플렉션을 사용해야 올바르게 실행됩니다. 여기에는 다음과 같은 형식 인스턴스화 및 메서드 생성 메서드가 포함됩니다.  
   
--   <xref:System.Type.MakeGenericType%2A?displayProperty=fullName> 메서드  
+-   <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 메서드  
   
--   <xref:System.Array.CreateInstance%2A?displayProperty=fullName> 및 <xref:System.Type.MakeArrayType%2A?displayProperty=fullName> 메서드  
+-   <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 및 <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 메서드  
   
--   <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=fullName> 메서드  
+-   <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 메서드  
   
  자세한 내용은 [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)을 참조하세요.  
   
@@ -123,11 +121,10 @@ ms.lasthandoff: 08/21/2017
 -   [.NET 네이티브 앱의 런타임 예외](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [NIB: .NET 네이티브 설치 및 구성](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)   
- [.NET 네이티브 및 컴파일](../../../docs/framework/net-native/net-native-and-compilation.md)   
- [리플렉션 및 .NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md)   
- [리플렉션을 사용하는 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)   
- [Serialization 및 메타데이터](../../../docs/framework/net-native/serialization-and-metadata.md)   
+ [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [NIB:.NET 네이티브 설치 및 구성](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)  
+ [.NET 네이티브 및 컴파일](../../../docs/framework/net-native/net-native-and-compilation.md)  
+ [리플렉션 및 .NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md)  
+ [리플렉션을 사용하는 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+ [Serialization 및 메타데이터](../../../docs/framework/net-native/serialization-and-metadata.md)  
  [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
-

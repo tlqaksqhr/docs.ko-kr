@@ -1,60 +1,61 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 기본 기능 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "데이터 표, DataGridView 컨트롤의 기본 기능"
-  - "DataGridView 컨트롤[Windows Forms], 기본 기능"
+title: "Windows Forms DataGridView 컨트롤의 기본 기능"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], default functionality in DataGridView control
+- DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d6b15085c301f074ef6fcf9e60a75299c4b245b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms DataGridView 컨트롤의 기본 기능
-Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 많은 기본 기능을 사용자에게 제공합니다.  
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 기본 기능
+Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 상당한 양의 기본 기능으로 사용자가 제공 합니다.  
   
-## 기본 기능  
- <xref:System.Windows.Forms.DataGridView> 컨트롤의 기본 기능은 다음과 같습니다.  
+## <a name="default-functionality"></a>기본 기능  
+ 기본적으로는 <xref:System.Windows.Forms.DataGridView> 제어:  
   
--   테이블을 세로로 스크롤할 때 계속 표시되는 열 머리글과 행 머리글을 자동으로 표시합니다.  
+-   열 머리글 및 행 머리글 계속 표시 되는 테이블을 세로로 스크롤할 때는 자동으로 표시 됩니다.  
   
--   현재 행에 대한 선택 영역 표시기가 포함된 행 머리글이 있습니다.  
+-   현재 행에 대 한 선택 표시기를 포함 하는 행 헤더를 있습니다.  
   
--   첫 번째 셀에 선택 영역 표시 직사각형이 있습니다.  
+-   선택 영역 직사각형 첫 번째 셀에 저장 합니다.  
   
--   사용자가 열 구분선을 두 번 클릭하여 크기를 자동으로 조정할 수 있는 열이 있습니다.  
+-   열 구분선을 두 번 클릭할 때 자동으로 조정할 수 있는 열이 있습니다.  
   
--   응용 프로그램의 `Main` 메서드에서 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드를 호출하는 경우에 Windows XP와 Windows Server 2003 제품군의 비주얼 스타일을 자동으로 지원합니다.  
+-   Windows XP 및 Windows Server 2003 제품군에서 비주얼 스타일을 자동으로 지원 때는 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 에서 응용 프로그램의 메서드는 `Main` 메서드.  
   
- 또한 다음과 같이 <xref:System.Windows.Forms.DataGridView> 컨트롤의 내용을 기본적으로 편집할 수 있습니다.  
+ 또한의 콘텐츠는 <xref:System.Windows.Forms.DataGridView> 기본적으로 컨트롤을 편집할 수 있습니다.  
   
--   사용자가 셀에서 두 번 클릭하거나 F2 키를 누르면 해당 셀이 자동으로 편집 모드로 바뀌며 사용자가 입력하는 대로 셀의 내용이 업데이트됩니다.  
+-   사용자가 두 번 클릭 또는 셀에서 f2 키를 누를 경우 컨트롤 자동으로 셀을 편집 모드로 전환 하 고 사용자가 셀의 내용을 업데이트.  
   
--   사용자가 테이블 끝으로 스크롤하면 새 레코드를 추가하기 위한 행이 있음을 확인할 수 있습니다.  사용자가 이 행을 클릭하면 새 행이 기본값으로 <xref:System.Windows.Forms.DataGridView> 컨트롤에 추가됩니다.  사용자가 Esc 키를 누르면 이 새 행이 사라집니다.  
+-   사용자가 눈금의 끝에 스크롤할 사용자는 새 레코드를 추가 하는 한 개의 행이 있는지 표시 됩니다. 이 행을 클릭 하면 새 행에 추가 됩니다는 <xref:System.Windows.Forms.DataGridView> 기본 값으로 제어 합니다. 사용자가 esc 키를 누르면이 새 행이 사라집니다.  
   
--   사용자가 행 머리글을 클릭하면 전체 행이 선택됩니다.  
+-   사용자가 행 머리글을 클릭 하면 전체 행이 선택 됩니다.  
   
- <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 속성을 설정하여 이 컨트롤을 데이터 소스에 바인딩하면 컨트롤에서는 다음과 같은 작업을 수행합니다.  
+ 바인딩하는 경우는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 소스를 설정 하 여 해당 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 속성, 컨트롤:  
   
--   자동으로 데이터 소스의 열 이름을 열 머리글 텍스트로 사용합니다.  
+-   열 머리글 텍스트 데이터 원본 열의 이름을 자동으로 사용 합니다.  
   
--   컨트롤이 데이터 소스의 내용으로 채워집니다.  데이터 소스의 각 열에 대해 <xref:System.Windows.Forms.DataGridView> 열이 자동으로 만들어집니다.  
+-   데이터 원본의 내용으로 채워집니다. <xref:System.Windows.Forms.DataGridView>열은 데이터 원본의 각 열에 대해 자동으로 만들어집니다.  
   
--   테이블에 표시되는 각 행에 대한 행을 만듭니다.  
+-   테이블에 표시 되는 각 행에 대 한 행을 만듭니다.  
   
--   사용자가 열 머리글을 클릭하면 내부 데이터를 기준으로 행을 자동 정렬합니다.  
+-   열 머리글을 마우스 오른쪽 단추로 클릭할 때 기본 데이터에 따라 행을 자동으로 정렬 합니다.  
   
-## 참고 항목  
- <xref:System.Windows.Forms.DataGridView>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 컨트롤](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

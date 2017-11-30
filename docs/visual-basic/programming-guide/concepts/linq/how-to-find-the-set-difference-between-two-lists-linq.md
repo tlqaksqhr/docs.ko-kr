@@ -1,37 +1,29 @@
 ---
-title: "방법: 두 목록 (Visual Basic) (LINQ) 간의 차집합 구하기 | Microsoft 문서"
+title: "방법: 두 목록 (Visual Basic) (LINQ) 간의 차집합 구하기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e2e67a03d5826d7d93e04b6c20a09cbbcabc8629
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 267e348ac528b210e25c5b8b6e01294a225bc48e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>방법: 두 목록 (Visual Basic) (LINQ) 간의 차집합 구하기
-이 예제에서는 LINQ를 문자열의 두 목록을 비교 하 고 names2.txt에 없지만 names1.txt에 있는 해당 줄을 출력을 사용 하는 방법을 보여 줍니다.  
+이 예제에서는 LINQ를 사용하여 두 개의 문자열 목록을 비교하고 names1.txt에 있지만 names2.txt에는 없는 줄만 출력하는 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
   
-1.  에 표시 된 대로 names1.txt 및 names2.txt 솔루션 폴더에 복사 [하는 방법: 결합 및 비교 문자열 컬렉션 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)합니다.  
+1.  에 표시 된 대로 names1.txt 및 names2.txt를 솔루션 폴더로 복사 [하는 방법: 결합 및 비교 문자열 컬렉션 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -68,10 +60,10 @@ End Class
 ' Garcia, Debra  
 ```  
   
- 와 같은 일부 유형의 쿼리 Visual Basic에서 작업 <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, 및 <xref:System.Linq.Enumerable.Concat%2A>, 메서드 기반 구문을 으로만 표시 될 수 있습니다.</xref:System.Linq.Enumerable.Concat%2A> </xref:System.Linq.Enumerable.Union%2A> </xref:System.Linq.Enumerable.Distinct%2A> </xref:System.Linq.Enumerable.Except%2A>  
+ 와 같은 일부 유형의 쿼리 Visual Basic에서 작업 <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, 및 <xref:System.Linq.Enumerable.Concat%2A>, 메서드 기반의 구문을 으로만 표시 될 수 있습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` System.Linq 네임 스페이스에 대 한 정보입니다.  
+ System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

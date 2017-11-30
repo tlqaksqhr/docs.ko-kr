@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
 ms.openlocfilehash: 1e7a223248b574e30c266c3c9ac66bf317f1d19f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]에서는 Windows Workflow Foundation에 많은 기능을 추가합니다. 이 문서에서는 여러 새로운 기능을 설명하고 이러한 기능이 유용할 수 있는 시나리오에 대한 세부 정보를 제공합니다.  
@@ -353,7 +352,7 @@ ms.lasthandoff: 09/25/2017
   
     1.  기본 프로필이 사용됩니다.  
   
-    2.  이벤트 뷰어를 열고 다음 노드에서 분석 채널을 사용 하도록 설정: **이벤트 뷰어**, **Applications and Services Logs**, **Microsoft**, **Windows **, **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택 **로그 사용**합니다.  
+    2.  이벤트 뷰어를 열고 다음 노드에서 분석 채널을 사용 하도록 설정: **이벤트 뷰어**, **Applications and Services Logs**, **Microsoft**, **Windows** , **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택 **로그 사용**합니다.  
   
     3.  워크플로 서비스를 실행합니다.  
   
@@ -373,4 +372,3 @@ ms.lasthandoff: 09/25/2017
 2.  샘플: [지 속성](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   
 3.  개념 설명서: [SQL 워크플로 인스턴스 저장소](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)합니다.
-

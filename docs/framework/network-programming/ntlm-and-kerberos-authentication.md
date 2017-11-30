@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - authentication [.NET Framework], NTLM
 - authentication [.NET Framework], Kerberos
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8cb52a70aa34e1011f12a77ea32ec5077f92c127
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 36e88b163ab857180a02278828dba7dcec457736
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM 및 Kerberos 인증
 기본 NTLM 인증 및 Kerberos 인증에서는 호출 응용 프로그램과 연결된 Microsoft Windows NT 사용자 자격 증명을 사용하여 서버에 인증을 시도합니다. 기본이 아닌 NTLM 인증을 사용할 때, 다음 예제에 표시된 대로 응용 프로그램에서 인증 형식을 NTLM으로 설정하고 <xref:System.Net.NetworkCredential> 개체를 사용하여 호스트에 사용자 이름, 암호 및 도메인을 전달합니다.  
@@ -75,6 +72,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 >  NTLM 인증은 프록시 서버를 통해 작동하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [기본 인증 및 다이제스트 인증](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
+ [기본 및 다이제스트 인증](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
  [인터넷 인증](../../../docs/framework/network-programming/internet-authentication.md)
-

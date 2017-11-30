@@ -1,41 +1,33 @@
 ---
-title: "XML 선언 (Visual Basic)으로 직렬화 하는 작업 | Microsoft 문서"
+title: "XML 선언 (Visual Basic)으로 직렬화 하는 작업"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 373df9b28ae7434d33ae81eba701d289cf1aa4f7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e8544157104b202a36f2ef75b069bcdd297b9158
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a>XML 선언 (Visual Basic)으로 직렬화 하는 작업
 이 항목에서는 serialization을 통해 XML 선언이 생성되는지 여부를 제어하는 방법에 대해 설명합니다.  
   
 ## <a name="xml-declaration-generation"></a>XML 선언 생성  
- 에 대 한 직렬화는 <xref:System.IO.File>또는 <xref:System.IO.TextWriter>를 사용 하는 <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>메서드 또는 <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>XML 선언이 생성.</xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> </xref:System.IO.TextWriter> </xref:System.IO.File> 로 serialize 하면는 <xref:System.Xml.XmlWriter>, 작성기 설정 (에 지정 된는 <xref:System.Xml.XmlWriterSettings>개체)는 XML 선언이 생성 되는지 여부를 결정 합니다.</xref:System.Xml.XmlWriterSettings> </xref:System.Xml.XmlWriter>  
+ <xref:System.IO.File> 메서드 또는 <xref:System.IO.TextWriter> 메서드를 사용하여 <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> 또는 <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>로 serialize하면 XML 선언이 생성됩니다. <xref:System.Xml.XmlWriter>로 serialize하면 <xref:System.Xml.XmlWriterSettings> 개체에 지정된 작성기 설정에 따라 XML 선언이 생성되는지 여부가 결정됩니다.  
   
  `ToString` 메서드를 사용하여 문자열로 serialize하는 경우 생성되는 XML에는 XML 선언이 포함되지 않습니다.  
   
 ### <a name="serializing-with-an-xml-declaration"></a>XML 선언으로 serialization  
- 다음 예제에서는 <xref:System.Xml.Linq.XElement>, 파일에 문서를 저장 한 다음 파일을 콘솔에 출력:</xref:System.Xml.Linq.XElement>  
+ 다음 예제에서는 <xref:System.Xml.Linq.XElement>를 만들고 문서를 파일에 저장한 다음 파일을 콘솔에 출력합니다.  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -56,7 +48,7 @@ Console.WriteLine(str)
 ```  
   
 ### <a name="serializing-without-an-xml-declaration"></a>XML 선언을 사용하지 않고 serialize  
- 다음 예제에서는 <xref:System.Xml.Linq.XElement> <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XElement> 저장 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 <xref:System.Xml.Linq.XElement>를 <xref:System.Xml.XmlWriter>에 저장하는 방법을 보여 줍니다.  
   
 ```vb  
 Dim sb As StringBuilder = New StringBuilder()  

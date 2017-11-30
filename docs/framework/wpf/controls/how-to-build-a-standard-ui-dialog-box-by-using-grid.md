@@ -1,43 +1,49 @@
 ---
-title: "방법: Grid를 사용하여 표준 UI 대화 상자 빌드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "대화 상자, 만들기"
-  - "Grid 컨트롤, 만들기, 대화 상자"
+title: "방법: Grid를 사용하여 표준 UI 대화 상자 빌드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dialog boxes [WPF], creating
+- Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 641e74d8c9f8db1afde19c008de08f0029b0bf90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Grid를 사용하여 표준 UI 대화 상자 빌드
-이 예제에서는 <xref:System.Windows.Controls.Grid> 요소를 사용하여 표준 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 대화 상자를 만드는 방법을 보여 줍니다.  
+# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>방법: Grid를 사용하여 표준 UI 대화 상자 빌드
+이 예제에서는 한 표준을 만들 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 대화 상자를 사용 하 여는 <xref:System.Windows.Controls.Grid> 요소입니다.  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 운영 체제의 **실행** 대화 상자와 같은 대화 상자를 만듭니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 같은 대화 상자가 **실행** 대화 상자에는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 운영 체제입니다.  
   
- 이 예제에서는 <xref:System.Windows.Controls.Grid>를 만들고 <xref:System.Windows.Controls.ColumnDefinition> 및 <xref:System.Windows.Controls.RowDefinition> 클래스를 사용하여 다섯 개의 열과 네 개의 행을 정의합니다.  
+ 이 예에서는 만듭니다는 <xref:System.Windows.Controls.Grid> 사용 하 여는 <xref:System.Windows.Controls.ColumnDefinition> 및 <xref:System.Windows.Controls.RowDefinition> 5 개의 열과 4 개의 행을 정의 하는 클래스입니다.  
   
- 그런 다음 <xref:System.Windows.Controls.Image>, `RunIcon.png`를 추가하고 배치하여 대화 상자의 이미지를 나타냅니다.  이미지는 <xref:System.Windows.Controls.Grid>의 첫 번째 열과 행\(왼쪽 위 모퉁이\)에 배치됩니다.  
+ 이 예제에서는 다음 추가 하 고 배치는 <xref:System.Windows.Controls.Image>, `RunIcon.png`대화 상자에서 발견 되는 이미지를 나타내기 위해. 이미지가 첫 번째 열과 행에 배치 되는 <xref:System.Windows.Controls.Grid> (왼쪽 위 모퉁이).  
   
- 다음으로, 첫 번째 열에 <xref:System.Windows.Controls.TextBlock> 요소를 추가하여 첫 번째 행의 나머지 열까지 포함하고,  다른 <xref:System.Windows.Controls.TextBlock> 요소를 첫 번째 열의 두 번째 행에 추가하여 **열기** 텍스트 상자를 나타냅니다.  뒤를 이어 데이터 입력 영역을 나타내는 <xref:System.Windows.Controls.TextBlock>을 하나 더 추가합니다.  
+ 이 예제에서는 추가 하는 다음으로 <xref:System.Windows.Controls.TextBlock> 첫 번째 행의 나머지 열을 포함 하는 첫 번째 열에는 요소입니다. 다른 추가 <xref:System.Windows.Controls.TextBlock> 두 번째 행을 나타내는 첫 번째 열에는 요소는 **열려** 입력란. A <xref:System.Windows.Controls.TextBlock> 다음과 데이터 입력 영역을 나타냅니다.  
   
- 최종적으로 **확인**, **취소** 및 **찾아보기** 이벤트를 각각 나타내는 세 개의 <xref:System.Windows.Controls.Button> 요소를 마지막 행에 추가합니다.  
+ 이 예에서는 세 개의 추가 마지막으로, <xref:System.Windows.Controls.Button> 은 마지막 행을 나타내는 요소는 **확인**, **취소**, 및 **찾아보기** 이벤트입니다.  
   
  [!code-csharp[GridRunDialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
-## 참고 항목  
- <xref:System.Windows.Controls.Grid>   
- <xref:System.Windows.GridUnitType>   
- [Panel 개요](../../../../docs/framework/wpf/controls/panels-overview.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Controls.Grid>  
+ <xref:System.Windows.GridUnitType>  
+ [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [방법 항목](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)

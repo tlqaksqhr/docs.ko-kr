@@ -1,6 +1,6 @@
 ---
 title: "제네릭(F#)"
-description: "제네릭(F#)"
+description: "F # 제네릭 함수 및 코드를 반복 하지 않고 다양 한 형식 사용 하는 코드를 작성할 수 있도록 하는 형식을 사용 하는 방법에 알아봅니다."
 keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: a9f2e2ee-bcb1-4ce3-8531-850aa183040f
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 98f65de4f3434aea9ee0b78848b85ba398543974
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: e7a5712fddf4d372d1ada86927f50e394a59a410
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generics"></a>제네릭
 
 F# 함수 값, 메서드, 속성 및 집계 형식(예: 클래스, 레코드 및 구분된 공용 구조체)은 *제네릭*일 수 있습니다. 제네릭 구문에는 형식 매개 변수가 하나 이상 포함됩니다. 형식 매개 변수는 제네릭 구문의 사용자가 일반적으로 지정합니다. 제네릭 함수 및 형식을 통해 각 형식에 대한 코드를 반복하지 않고 다양한 형식을 사용하는 코드를 작성할 수 있습니다. 컴파일러의 형식 유추 및 자동 일반화 메커니즘에서는 대개 코드를 암시적으로 제네릭으로 유추하므로 F#에서 코드를 제네릭 형식으로 지정하는 것은 간단할 수 있습니다.
@@ -103,7 +102,7 @@ F# 프로그램에서 사용할 수 있는 두 가지 종류의 형식 매개 �
 
 [정적으로 확인된 형식 매개 변수](statically-resolved-type-parameters.md)
 
-[.NET Framework의 제네릭](https://msdn.microsoft.com/library/ms172192.aspx)
+[.NET Framework의 제네릭](~/docs/standard/generics/index.md)
 
 [자동 일반화](automatic-generalization.md)
 

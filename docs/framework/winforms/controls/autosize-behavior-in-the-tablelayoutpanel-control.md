@@ -1,48 +1,49 @@
 ---
-title: "TableLayoutPanel 컨트롤의 AutoSize 동작 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "자동 크기 조정"
-  - "AutoSize 속성, TableLayoutPanel 컨트롤"
-  - "AutoSizeMode 속성"
-  - "컨트롤[Windows Forms], 크기 조정"
-  - "레이아웃[Windows Forms], AutoSize"
-  - "폼 지역화"
-  - "크기 조정, 자동"
-  - "TableLayoutPanel 컨트롤[Windows Forms], AutoSize 동작"
+title: "TableLayoutPanel 컨트롤의 AutoSize 동작"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AutoSize property [Windows Forms], tableLayoutPanel control
+- controls [Windows Forms], sizing
+- localizing forms
+- layout [Windows Forms], AutoSize
+- sizing [Windows Forms], automatic
+- TableLayoutPanel control [Windows Forms], AutoSize behavior
+- automatic sizing
+- AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3d4813b7bd37c0c5bd9b04b37cb825067b35ce3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# TableLayoutPanel 컨트롤의 AutoSize 동작
-## 고유한 AutoSize 동작  
- <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 다음과 같은 방법으로 자동 크기 조정 동작을 지원합니다.  
+# <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel 컨트롤의 AutoSize 동작
+## <a name="distinct-autosize-behaviors"></a>고유 AutoSize 동작  
+ <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 다음과 같은 방법으로 자동 크기 조정 동작을 지원 합니다.  
   
--   <xref:System.Windows.Forms.Control.AutoSize%2A> 속성을 통해  
+-   통해는 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성  
   
--   <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 열 및 행 스타일에 대한 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성을 통해  
+-   통해는 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성에는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 열 및 행 스타일입니다.  
   
-### 행 및 열 스타일의 AutoSize 속성  
- 다음 표에서는 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성과 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 열 및 행 스타일 사이의 상호 작용을 설명합니다.  
+### <a name="the-autosize-property-with-row-and-column-styles"></a>행과 열 스타일을 사용 하 여 AutoSize 속성  
+ 다음 표에서 설명 간의 상호 작용은 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성 및 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 열 및 행 스타일입니다.  
   
-|AutoSize 설정|스타일 상호 작용|  
-|-----------------|---------------|  
-|`false`|<xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 왼쪽에서 오른쪽으로 진행하며 열이나 행에 공간을 할당하거나 다음 순서대로 공간을 할당합니다.<br /><br /> 1.  <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성을 <xref:System.Windows.Forms.SizeType>로 설정하면 <xref:System.Windows.Forms.ColumnStyle.Width%2A> 또는 <xref:System.Windows.Forms.RowStyle.Height%2A>에서 지정한 픽셀 수가 할당됩니다.<br />2.  <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성을 <xref:System.Windows.Forms.SizeType>로 설정하면 자식 컨트롤의 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 메서드에서 반환되는 픽셀 수가 할당됩니다.<br />3.  모든 <xref:System.Windows.Forms.SizeType> 및 <xref:System.Windows.Forms.SizeType> 열 또는 행에 공간이 할당된 다음에는 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>이 <xref:System.Windows.Forms.SizeType>로 설정된 모든 열이나 행이 나머지 공간을 비례적으로 할당하는 데 사용됩니다.|  
-|`true`|<xref:System.Windows.Forms.SizeType> 열이나 행의 크기가 자동으로 조정된다는 점을 제외하면 위의 상호 작용과 비슷합니다.<br /><br /> <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 스타일이 <xref:System.Windows.Forms.SizeType>인 열이나 행에서 해당 내용이 잘리지 않도록 열이나 행을 확장하여 사용 가능한 공간을 만듭니다.  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 <xref:System.Windows.Forms.ColumnStyle.Width%2A> 또는 <xref:System.Windows.Forms.RowStyle.Height%2A> 속성에 따라 새 공간을 비례적으로 할당합니다.|  
+|자동 크기 조정 설정|스타일 상호 작용|  
+|----------------------|-----------------------|  
+|`false`|<xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 왼쪽에서 오른쪽으로 진행 하 고 다음과 같은 순서로 또는 열 이나 행에 대 한 공간을 할당 합니다.<br /><br /> 1.  경우는 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성이 <xref:System.Windows.Forms.SizeType.Absolute>, 하 여 지정 된 픽셀 수 <xref:System.Windows.Forms.ColumnStyle.Width%2A> 또는 <xref:System.Windows.Forms.RowStyle.Height%2A> 할당 됩니다.<br />2.  경우는 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성이 <xref:System.Windows.Forms.SizeType.AutoSize>, 자식 컨트롤에 의해 반환 되는 픽셀 수가 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 메서드를 할당 합니다.<br />3.  모든 공간 후 <xref:System.Windows.Forms.SizeType.Absolute> 및 <xref:System.Windows.Forms.SizeType.AutoSize> 열 이나 행은 할당 된 모든 열 이나 행으로 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 로 설정 <xref:System.Windows.Forms.SizeType.Percent> 비례적으로 남은 공간을 할당 하는 데 사용 됩니다|  
+|`true`|위의 상호 예외와 유사한는 <xref:System.Windows.Forms.SizeType.Percent> 열 이나 행 획득 한 자동 크기 조정 끝점이 있습니다.<br /><br /> <xref:System.Windows.Forms.TableLayoutPanel> 열 이나 행 충분 한 여유 공간을 확보할 컨트롤이 확장 되어 있도록 없는 열 이나 행으로 <xref:System.Windows.Forms.SizeType.Percent> 스타일 지정에는 해당 내용이 잘리지 합니다. <xref:System.Windows.Forms.TableLayoutPanel> 비율에 따라 새 공간을 할당 하는 컨트롤의 <xref:System.Windows.Forms.ColumnStyle.Width%2A> 또는 <xref:System.Windows.Forms.RowStyle.Height%2A> 속성입니다.|  
   
-## 참고 항목  
- <xref:System.Windows.Forms.TableLayoutPanel>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
  [TableLayoutPanel 컨트롤 개요](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)

@@ -1,33 +1,28 @@
 ---
-title: "방법: LINQ to XML (Visual Basic)를 사용 하 여 사전 작업 | Microsoft 문서"
+title: "방법: LINQ to XML (Visual Basic)를 사용 하 여 사전 작업"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3441e513012ba24419a3c5330cdb2f75f5ca394f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: dc7290a3afca22ffc92914efacdb768a72e2aef7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>방법: LINQ to XML (Visual Basic)를 사용 하 여 사전 작업
-다양한 데이터 구조를 XML로 변환하고 XML을 다시 다른 데이터 구조로 변환하는 것이 편리한 경우가 많습니다. 이 항목으로 변환 하 여이 일반적인 방법의 특정 구현에서는 한 <xref:System.Collections.Generic.Dictionary%602>XML 및 그.</xref:System.Collections.Generic.Dictionary%602>  
+다양한 데이터 구조를 XML로 변환하고 XML을 다시 다른 데이터 구조로 변환하는 것이 편리한 경우가 많습니다. 이 항목에서는 <xref:System.Collections.Generic.Dictionary%602>를 XML로 변환하고 다시 그 반대로 변환하여 이 일반적인 방법을 구체적으로 구현하는 것을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 포함된 식에서 쿼리와 XML 리터럴을 사용 합니다. 새 쿼리 프로젝트 <xref:System.Xml.Linq.XElement>는 개체의 새 내용이 됩니다는 `Root` <xref:System.Xml.Linq.XElement>개체.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement>  
+ 이 예제에서는 포함된 된 식에 XML 리터럴 및 쿼리를 사용 합니다. 쿼리는 새 <xref:System.Xml.Linq.XElement> 개체를 프로젝션하고 이 개체는 `Root` <xref:System.Xml.Linq.XElement> 개체의 새 내용이 됩니다.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -85,5 +80,4 @@ Child4:Value4
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [프로젝션 및 변환 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-
+ [프로젝션 및 변형 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

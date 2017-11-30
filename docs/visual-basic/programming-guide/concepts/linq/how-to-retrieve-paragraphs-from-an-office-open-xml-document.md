@@ -1,40 +1,36 @@
 ---
-title: "방법: Office Open XML 문서 (Visual Basic)에서 단락 검색 | Microsoft 문서"
+title: "방법: Office Open XML 문서 (Visual Basic)에서 단락 검색"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 303fffb8a548805f4ae7c1e66d683b35b9faf2b0
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: ecce435601092e0025a977c797100e0b5ff74b86
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>방법: Office Open XML 문서 (Visual Basic)에서 단락 검색
 이 항목에서는 Office Open XML 문서를 열고 문서에 있는 모든 단락의 컬렉션을 검색하는 예제를 제공합니다.  
   
- Office Open XML에 대 한 자세한 내용은 참조 하십시오. [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)합니다.  
+ Office Open XML에 대한 자세한 내용은 [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 Office Open XML 패키지를 열고 Open XML 패키지에서의 관계를 사용하여 문서와 스타일 부분을 찾습니다. 그런 다음 단락 포함 된 익명 형식의 컬렉션을 프로젝션 하는 문서를 쿼리하여 <xref:System.Xml.Linq.XElement>노드, 각 단락의 스타일 이름 및 각 단락의 텍스트.</xref:System.Xml.Linq.XElement>  
+ 이 예제에서는 Office Open XML 패키지를 열고 Open XML 패키지에서의 관계를 사용하여 문서와 스타일 부분을 찾습니다. 그런 다음 문서를 쿼리하여 단락 <xref:System.Xml.Linq.XElement> 노드, 각 단락의 스타일 이름 및 각 단락의 텍스트가 포함된 익명 형식의 컬렉션을 프로젝션합니다.  
   
  이 예제에서는 예제에서도 제공되는 `StringConcatenate`라는 확장 메서드를 사용합니다.  
   
- 이 예제의 작업 방식에 대해 설명 하는 자세한 자습서를 참조 하십시오. [순수 함수 변환의 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)합니다.  
+ 이 예제의 작동 방식을 설명 하는 자세한 자습서를 참조 하십시오. [순수 함수 변환의 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)합니다.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 형식을 사용는 <xref:System.IO.Packaging?displayProperty=fullName>네임 스페이스.</xref:System.IO.Packaging?displayProperty=fullName>  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  

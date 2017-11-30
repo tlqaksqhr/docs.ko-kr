@@ -1,36 +1,28 @@
 ---
-title: "스레드 타이머 (Visual Basic) | Microsoft 문서"
+title: "스레드 타이머 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 809cba93-cc93-4e21-afda-f299f9a39818
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ea657482d4e8e1465d9bc6ae3f94915badee512
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b828476301424ca767e2b581c173d6a2dcd184ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-timers-visual-basic"></a>스레드 타이머 (Visual Basic)
-<xref:System.Threading.Timer?displayProperty=fullName>클래스는 정기적으로 별도 스레드에서 작업을 실행 하는 데 유용 합니다.</xref:System.Threading.Timer?displayProperty=fullName> 예를 들어, 상태 및 데이터베이스의 무결성을 확인 하거나 중요 한 파일을 백업 하는 스레드 타이머를 사용할 수 있습니다.  
+<xref:System.Threading.Timer?displayProperty=nameWithType> 클래스는 별도 스레드에서 정기적으로 작업을 실행하는 데 유용합니다. 예를 들어 스레드 타이머를 사용하여 데이터베이스의 상태 및 무결성을 확인하거나 중요한 파일을 백업할 수 있습니다.  
   
 ## <a name="thread-timer-example"></a>스레드 타이머 예제  
- 다음 예에서는&2; 초 마다 작업을 시작 하 고 플래그를 사용 하 여 시작 하는 <xref:System.IDisposable.Dispose%2A>타이머를 중지 하는 메서드입니다.</xref:System.IDisposable.Dispose%2A> 이 예제에서는 출력 창에 상태를 게시합니다.  
+ 다음 예제에서는 2초마다 작업을 시작하고 플래그를 사용하여 타이머를 중지하는 <xref:System.IDisposable.Dispose%2A> 메서드를 시작합니다. 이 예제에서는 출력 창에 상태를 게시합니다.  
   
 ```vb  
 Private Class StateObjClass  
@@ -76,8 +68,8 @@ Private Sub TimerTask(ByVal StateObj As Object)
 End Sub  
 ```  
   
- 스레드 타이머는 특히 유용는 <xref:System.Windows.Forms.Timer?displayProperty=fullName>개체를 개발 하는 경우 콘솔 응용 프로그램 등을 사용할 수 없는.</xref:System.Windows.Forms.Timer?displayProperty=fullName>  
+ 스레드 타이머는 콘솔 응용 프로그램을 개발하는 경우 등 <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> 개체를 사용할 수 없는 경우에 특히 유용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading></xref:System.Threading>   
- [다중 스레드 응용 프로그램 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)
+ <xref:System.Threading>  
+ [다중 스레드 응용 프로그램(Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)

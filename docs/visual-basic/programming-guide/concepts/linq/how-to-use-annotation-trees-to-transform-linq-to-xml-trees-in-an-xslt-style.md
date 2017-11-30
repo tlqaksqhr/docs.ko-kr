@@ -1,33 +1,25 @@
 ---
-title: "방법: LINQ to XML 트리 (Visual Basic) XSLT 스타일에서 변환 하려면 주석을 사용 | Microsoft 문서"
+title: "방법: LINQ to (Visual Basic) XSLT 스타일에서 XML 트리 변형 하려면 주석을 사용"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 17324fb6dca653aa3c15e3bad2fcc5ac35828bef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e2e5fce154d5d59657302deb2ce0be80a3bc3ac6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: 주석을 사용 하 여 LINQ to XML 트리 (Visual Basic) XSLT 스타일에서 변환
-주석을 사용하여 XML 트리를 쉽게 변형할 수 있습니다.  
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: LINQ to (Visual Basic) XSLT 스타일에서 XML 트리 변형 하려면 주석을 사용
+주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  
   
  일부 XML 문서는 "혼합 내용이 포함된 문서 중심적"입니다. 이러한 문서를 사용하는 경우 요소의 자식 노드 모양을 반드시 알아야 할 필요가 없습니다. 예를 들어, 텍스트가 포함된 노드는 다음과 같을 수 있습니다.  
   
@@ -35,7 +27,7 @@ ms.lasthandoff: 03/13/2017
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- 지정된 텍스트 노드에는 자식 `<b>` 및 `<i>` 요소가 임의의 개수만큼 있을 수 있습니다. 이 방법은 많은 다른 상황으로 확장:와 같은 다양 한 일반 단락, 글머리 기호 단락 및 비트맵과 같은 자식 요소를 포함할 수 있는 페이지. 표의 셀에는 텍스트, 드롭다운 목록 또는 비트맵이 포함될 수 있습니다. 문서 중심 XML의 기본 특징 중 하나는 특정 요소에 포함될 자식 요소에 대해 알 수 없다는 것입니다.  
+ 지정된 텍스트 노드에는 자식 `<b>` 및 `<i>` 요소가 임의의 개수만큼 있을 수 있습니다. 이 방법은 많은 다른 상황으로 확장 됩니다: 예: 다양 한 일반 단락, 글머리 기호 단락 및 비트맵 같은 자식 요소를 포함할 수 있는 페이지. 표의 셀에는 텍스트, 드롭다운 목록 또는 비트맵이 포함될 수 있습니다. 문서 중심 XML의 기본 특징 중 하나는 특정 요소에 포함될 자식 요소에 대해 알 수 없다는 것입니다.  
   
  변환할 요소의 자식에 대해 반드시 자세히 알아야 할 필요가 없는 트리에서 요소를 변환하려면 주석을 사용하는 이 방법이 효과적인 방법입니다.  
   
@@ -47,13 +39,13 @@ ms.lasthandoff: 03/13/2017
   
  이 방법을 자세히 살펴보면 다음과 같습니다.  
   
--   모양을 변형할 요소의 집합을 반환하는 LINQ to XML 쿼리를 하나 이상 실행합니다. 쿼리의 각 요소에 추가할 새 <xref:System.Xml.Linq.XElement>요소를 주석으로 개체.</xref:System.Xml.Linq.XElement> 이 새 요소는 변형된 새 트리에서 주석이 달린 요소를 대체합니다. 예제에 나와 있듯이 이 코드는 간단하게 작성할 수 있습니다.  
+-   모양을 변환할 요소의 집합을 반환하는 LINQ to XML 쿼리를 하나 이상 실행합니다. 쿼리의 각 요소에 새 <xref:System.Xml.Linq.XElement> 개체를 주석으로 추가합니다. 이 새 요소는 변환된 새 트리에서 주석이 달린 요소를 대체합니다. 예제에 나와 있듯이 이 코드는 간단하게 작성할 수 있습니다.  
   
 -   주석으로 추가된 새 요소는 새 자식 노드를 포함할 수 있으며 원하는 모양의 하위 트리를 형성할 수 있습니다.  
   
 -   한 가지 특별한 규칙이 있습니다. 새 요소의 자식 노드가 이 목적을 위해 구성된 다른 네임스페이스(이 예제에서는 `http://www.microsoft.com/LinqToXmlTransform/2007`)에 있으면 해당 자식 요소가 새 트리에 복사되지 않습니다. 대신 네임스페이스가 위에서 언급한 특수 네임스페이스이고 요소의 로컬 이름이 `ApplyTransforms`이면 소스 트리에 있는 요소의 자식 노드가 반복되고 새 트리에 복사됩니다. 단, 주석이 달린 자식 요소는 이러한 규칙에 따라 스스로 변환됩니다.  
   
--   이 방법은 XSL의 변환 사양과 다소 유사합니다. 일련의 노드를 선택하는 쿼리는 템플릿에 대한 XPath 식과 유사합니다. 만드는 새 코드 <xref:System.Xml.Linq.XElement>XSL의 시퀀스 생성자와 유사 하 주석으로 저장 된 고 `ApplyTransforms` 요소는 함수에 유사한는 `xsl:apply-templates` XSL의 요소입니다.</xref:System.Xml.Linq.XElement>  
+-   이 방법은 XSL의 변환 사양과 다소 유사합니다. 일련의 노드를 선택하는 쿼리는 템플릿에 대한 XPath 식과 유사합니다. 주석으로 저장된 새 <xref:System.Xml.Linq.XElement>를 만들 코드는 XSL의 시퀀스 생성자와 유사하고 `ApplyTransforms` 요소는 XSL의 `xsl:apply-templates` 요소와 기능 면에서 유사합니다.  
   
 -   이 방법을 사용하는 경우의 한 가지 이점은 쿼리를 만들 때 항상 수정되지 않은 소스 트리에 대한 쿼리를 작성한다는 점입니다. 트리의 수정이 작성하고 있는 쿼리에 미치는 영향에 대해 우려할 필요가 없습니다.  
   

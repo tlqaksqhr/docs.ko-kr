@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -46,16 +45,15 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c3f93e90c330881ec5002b820569b27416e049a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reliability-best-practices"></a>최선의 안정성 구현 방법
 다음 안정성 규칙은 SQL Server 중심이지만, 호스트 기반 서버 응용 프로그램에도 적용됩니다. SQL Server와 같은 서버에서 리소스가 누출되지 않고 중단되지 않는 것이 매우 중요합니다.  그러나 이 작업은 개체의 상태를 변경하는 모든 메서드에 대해 취소 코드를 작성하여 수행할 수 없습니다.  취소 코드를 사용하여 모든 위치에서 모든 오류로부터 복구되는 100% 신뢰할 수 있는 관리 코드를 작성하는 것이 목표가 아닙니다.  성공 가능성이 희박한 매우 까다로운 작업입니다.  CLR(공용 언어 런타임)에서는 완벽한 코드를 작성할 수 있는 관리 코드가 제공된다고 확실히 보장할 수 없습니다.  ASP.NET과 달리 SQL Server에서는 허용할 수 없을 정도로 오랜 기간 동안 데이터베이스를 작동 중지하지 않고는 재활용할 수 없는 단 하나의 프로세스만 사용합니다.  
@@ -96,7 +94,7 @@ ms.lasthandoff: 08/21/2017
   
  현재 운영 체제 핸들을 정리만 하는 종료자가 있는 대부분의 클래스에는 더 이상 종료자가 필요하지 않습니다. 대신 종료자는 <xref:System.Runtime.InteropServices.SafeHandle> 파생 클래스에 있습니다.  
   
- <xref:System.Runtime.InteropServices.SafeHandle>은 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>의 대안이 아닙니다.  운영 체제 리소스를 명시적으로 삭제하면 여전히 리소스 경합과 성능 이점을 얻을 수 있습니다.  리소스를 명시적으로 삭제하지 않는 `finally` 블록은 완료될 때까지 실행되지 않을 수 있다는 점에 유의하세요.  
+ <xref:System.Runtime.InteropServices.SafeHandle>은 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>의 대안이 아닙니다.  운영 체제 리소스를 명시적으로 삭제하면 여전히 리소스 경합과 성능 이점을 얻을 수 있습니다.  리소스를 명시적으로 삭제하지 않는 `finally` 블록은 완료될 때까지 실행되지 않을 수 있다는 점에 유의하세요.  
   
  <xref:System.Runtime.InteropServices.SafeHandle>을 사용하면 운영 체제 핸들에 상태 전달, 루틴 해제 또는 루프에서 핸들 집합 해제와 같은 핸들 해제 작업을 수행하는 고유 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드를 구현할 수 있습니다.  CLR에서는 이 메서드가 확실히 실행됩니다.  작성자는 모든 상황에서 핸들이 해제되도록 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>을 구현해야 합니다. 그러지 않으면 핸들이 누출되므로, 핸들과 연결된 네이티브 리소스가 누출되는 결과가 자주 초래됩니다. 따라서 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 구현에서 호출 시 사용 가능하지 않은 리소스를 할당할 필요가 없도록 <xref:System.Runtime.InteropServices.SafeHandle> 파생 클래스를 구성하는 것이 중요합니다. 코드에서 이러한 실패를 처리하고 네이티브 핸들을 해제하는 계약을 완료할 수 있는 경우, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>의 구현에서 실패할 수 있는 메서드를 호출할 수 있습니다. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>에는 디버깅 용도의 <xref:System.Boolean> 반환 값이 있습니다. 리소스를 해제하지 못하게 하는 치명적인 오류가 발생하는 경우 이 값은 `false`로 설정될 수 있습니다. 그러면 [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA가 활성화되어(사용된 경우) 문제를 파악하는 데 도움이 됩니다. 다른 방식으로 런타임에 영향을 주지 않습니다. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>는 동일한 리소스에 대해 다시 호출되지 않으므로 핸들이 누출됩니다.  
   
@@ -289,6 +287,5 @@ public static MyClass SingletonProperty
  그러면 `try` 블록을 실행하기 전에 finally 블록의 모든 코드를 준비하도록 Just-In-Time 컴파일러에 지시합니다. 그러면 finally 블록의 코드가 빌드되고 경우에 상관없이 실행될 수 있습니다. CER에서 `try` 블록이 비어 있는 경우가 드물지 않습니다. CER을 사용하여 비동기 스레드 중단 및 메모리 부족 예외로부터 보호합니다. 매우 복잡한(deep) 코드의 스택 오버플로를 추가로 처리하는 CER 양식은 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.ConstrainedExecution>  
  [SQL Server 프로그래밍 및 호스트 보호 특성](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
-

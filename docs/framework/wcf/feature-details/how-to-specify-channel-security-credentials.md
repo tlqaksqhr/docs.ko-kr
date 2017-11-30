@@ -1,28 +1,31 @@
 ---
-title: "방법: 채널 보안 자격 증명 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 채널 보안 자격 증명 지정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 채널 보안 자격 증명 지정
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 모니커를 사용하여 COM 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 수 있습니다. 대부분의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서는 클라이언트가 인증 및 권한 부여를 위한 자격 증명을 지정해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 경우 관리되는 코드 또는 응용 프로그램 구성 파일에서 이러한 자격 증명을 지정할 수 있습니다. 호출할 때는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 COM 응용 프로그램에서 사용할 수 있습니다는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스 자격 증명을 지정 합니다. 이 항목에 사용 하 여 자격 증명을 지정 하는 다양 한 방법을 설명 합니다는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스입니다.  
+# <a name="how-to-specify-channel-security-credentials"></a>방법: 채널 보안 자격 증명 지정
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 모니커를 사용하여 COM 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 수 있습니다. 대부분의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서는 클라이언트가 인증 및 권한 부여를 위한 자격 증명을 지정해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 경우 관리되는 코드 또는 응용 프로그램 구성 파일에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 경우 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정할 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 는 IDispatch 기반 인터페이스 이며 Visual Studio 환경에서는 IntelliSense 기능을 가져오지 것입니다.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials>는 IDispatch 기반 인터페이스이며 Visual Studio 환경에서는 IntelliSense 기능을 가져오지 않습니다.  
   
- 이 문서는 사용 하 여는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 정의 된 서비스는 [메시지 보안 샘플](../../../../docs/framework/wcf/samples/message-security-sample.md)합니다.  
+ 이 문서 ´ ֲ는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 정의 된 서비스는 [Message Security 샘플](../../../../docs/framework/wcf/samples/message-security-sample.md)합니다.  
   
 ### <a name="to-specify-a-client-certificate"></a>클라이언트 인증서 지정  
   
@@ -57,7 +60,7 @@ caps.handback.revision: 18
   
 7.  Visual Basic 응용 프로그램을 실행하고 결과를 확인합니다.  
   
-     Visual Basic 응용 프로그램에 메시지 상자가 나타나며 Add(3, 4)를 호출한 결과가 표시됩니다. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 또는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> 대신 사용할 수도 있습니다 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> 클라이언트 인증서를 설정 하려면:  
+     Visual Basic 응용 프로그램에 메시지 상자가 나타나며 Add(3, 4)를 호출한 결과가 표시됩니다. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 또는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29>을 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> 대신 사용하여 클라이언트 인증서를 설정할 수도 있습니다.  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -75,8 +78,7 @@ caps.handback.revision: 18
   
   
   
-2.  
-          `clientCredentialType`을 UserName으로 설정합니다.  
+2.  `clientCredentialType`을 UserName으로 설정합니다.  
   
   
   
@@ -99,7 +101,7 @@ caps.handback.revision: 18
 4.  Visual Basic 응용 프로그램을 실행하고 결과를 확인합니다. Visual Basic 응용 프로그램에 메시지 상자가 나타나며 Add(3, 4)를 호출한 결과가 표시됩니다.  
   
     > [!NOTE]
-    >  이 샘플의 서비스 모니커에 지정된 바인딩이 WSHttpBinding_ICalculator로 변경되었습니다. 유효한 사용자 이름 및 암호에 대 한 호출에 제공 해야 였다면 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>합니다.  
+    >  이 샘플의 서비스 모니커에 지정된 바인딩이 WSHttpBinding_ICalculator로 변경되었습니다. 또한 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>을 호출할 때 유효한 사용자 이름과 암호를 제공해야 합니다.  
   
 ### <a name="to-specify-windows-credentials"></a>Windows 자격 증명 지정  
   
@@ -131,7 +133,7 @@ caps.handback.revision: 18
   
 1.  발급 토큰은 페더레이션 보안을 사용하는 응용 프로그램에서만 사용됩니다. 페더레이션된 보안에 대 한 자세한 내용은 참조 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) 및 [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
   
-     다음 Visual Basic 코드 예제에서는 호출 하는 방법을 보여 줍니다.는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> 메서드:  
+     다음 Visual Basic 코드 예제에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> 메서드를 호출하는 방법을 보여 줍니다.  
   
     ```  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -143,11 +145,11 @@ caps.handback.revision: 18
     monikerProxy.SetIssuedToken("http://somemachine/sts", "bindingType", "binding")  
     ```  
   
-     이 메서드에 대 한 매개 변수에 대 한 자세한 내용은 참조 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>합니다.  
+     이 메서드의 매개 변수에 대한 자세한 내용은 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)   
- [방법: 페더레이션 서비스에서 자격 증명을 구성 합니다.](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)   
- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)   
+ [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

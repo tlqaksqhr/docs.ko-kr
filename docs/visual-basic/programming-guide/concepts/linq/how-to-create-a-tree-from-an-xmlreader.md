@@ -1,38 +1,30 @@
 ---
-title: "방법: (Visual Basic) XmlReader에서 트리 조각 만들기 | Microsoft 문서"
+title: "방법: (Visual Basic) XmlReader에서 트리 조각 만들기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8dff4e518d8850b4050389e5677ac81ecd1e074
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4ceae7c2bee85e7b368322c8ba195dea9feff672
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>방법: (Visual Basic) XmlReader에서 트리 조각 만들기
-이 항목에서는 <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> 에서 직접 XML 트리를 만드는 방법을 보여 줍니다. 만들려는 <xref:System.Xml.Linq.XElement>에서 <xref:System.Xml.XmlReader>, 배치 해야는 <xref:System.Xml.XmlReader>가 요소 노드에.</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XElement> <xref:System.Xml.XmlReader>주석과 처리 명령을 건너뛰지만 경우 및는 <xref:System.Xml.XmlReader>커서가 텍스트 노드에 오류가 throw 됩니다.</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> 이러한 오류를 방지 하려면 항상는 <xref:System.Xml.XmlReader> <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> 에서 XML 트리를 만들기 전에 요소에</xref:System.Xml.XmlReader> 배치  
+이 항목에서는 <xref:System.Xml.XmlReader>에서 XML 트리를 직접 만드는 방법을 보여 줍니다. <xref:System.Xml.Linq.XElement>에서 <xref:System.Xml.XmlReader>를 만들려면 요소 노드에 <xref:System.Xml.XmlReader>를 배치해야 합니다. <xref:System.Xml.XmlReader>는 주석과 처리 명령을 건너뛰지만 <xref:System.Xml.XmlReader>가 텍스트 노드에 배치되면 오류가 throw됩니다. 이러한 오류를 방지하려면 <xref:System.Xml.XmlReader>에서 XML 트리를 만들기 전에 항상 <xref:System.Xml.XmlReader>를 요소에 배치하세요.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 다음 XML 문서: [샘플 XML 파일: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)합니다.  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)를 사용합니다.  
   
- 다음 코드에서는 `T:System.Xml.XmlReader` 개체를 만들고 첫 번째 요소 노드를 찾을 때까지 노드를 읽은 다음 로드 된 <xref:System.Xml.Linq.XElement>개체.</xref:System.Xml.Linq.XElement>  
+ 다음 코드에서는 `T:System.Xml.XmlReader` 개체를 만들고 첫 번째 요소 노드를 찾을 때까지 노드를 읽은 다음 <xref:System.Xml.Linq.XElement> 개체를 로드합니다.  
   
 ```vb  
 Dim r As XmlReader = XmlReader.Create("books.xml")  
@@ -70,4 +62,4 @@ Console.WriteLine(e)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [(Visual Basic) XML 구문 분석](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+ [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

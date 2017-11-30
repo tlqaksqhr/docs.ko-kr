@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - time-based cache policies
 - Revalidate policy
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 29bc33db40e396d28347d1fc491b94541eb75f33
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 75729fc92c6a4bfa0f5ad73b8bbd4b28456f21e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>캐시 정책 상호 작용 - 최대 보존 기간 및 최소 새로 고침
 최신 콘텐츠가 클라이언트 응용 프로그램에 반환되도록 돕기 위해 클라이언트 캐시 정책 및 서버 유효성 재검사 요구 사항의 상호 작용 결과로 항상 가장 보수적인 캐시 정책이 생성됩니다. 이 항목의 모든 예제에서는 1월 1일에 캐시되었으며 1월 4일에 만료되는 리소스에 대한 캐시 정책을 보여 줍니다.  
@@ -44,10 +38,9 @@ ms.lasthandoff: 08/21/2017
 -   캐시 정책이 `maxAge` = 2일, `minFresh` = 2일을 설정하는 경우 `maxAge`에 따라 1월 3일까지 콘텐츠가 최신 상태입니다. `minFresh`에 따라 콘텐츠가 1월 2일까지 최신 상태입니다. 따라서 1월 2일에 콘텐츠 유효성을 재검사해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [네트워크 응용 프로그램에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)   
- [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [네트워크 응용 프로그램에서 캐싱 구성](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
+ [네트워크 응용 프로그램에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)  
+ [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [네트워크 응용 프로그램에서 캐싱 구성](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [캐시 정책 조작 -최대 사용 기간 및 최대 부실](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)
-

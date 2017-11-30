@@ -1,26 +1,30 @@
 ---
-title: "사용자 지정 활동 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "사용자 지정 활동 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e534f9a3e8d0a7d675e43bc03266e4863f95d45d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 사용자 지정 활동 사용
-<xref:System.Activities.Activity> 또는 해당 하위 클래스에서 파생되는 활동은 더 큰 워크플로로 구성하거나 코드로 직접 작성할 수 있습니다.이 항목에서는 코드나 디자이너에서 만든 워크플로에서 사용자 지정 활동을 사용하는 방법에 대해 설명합니다.  
+# <a name="using-a-custom-activity"></a>사용자 지정 활동 사용
+<xref:System.Activities.Activity> 또는 해당 하위 클래스에서 파생되는 활동은 더 큰 워크플로로 구성하거나 코드로 직접 작성할 수 있습니다. 이 항목에서는 코드나 디자이너에서 만든 워크플로에서 사용자 지정 활동을 사용하는 방법에 대해 설명합니다.  
   
 > [!NOTE]
->  사용자 지정 활동과 해당 사용자 지정 활동을 사용하는 활동이 모두 컴파일된 경우\(즉, 빌드 프로세스에서 생성된 인스턴스화 형식에 의해 로드된 경우\) 사용자 지정활동을 해당 활동이 정의된 것과 프로젝트에서 사용할 수 있습니다. 참조하는 활동이 동적으로 로드된 경우\(즉,ActivityXAMLServices를 사용하는 경우\)에는 참조되는 어셈블리를 다른 프로젝트에 배치하거나 디자이너에서 생성된 XAML을 편집하여 해당 어셈블리를 사용할 수 있도록 해야 합니다.  
+>  사용자 지정 활동 정의 된 동일한 프로젝트에 사용할 수는 사용자 지정 활동과 활동을 사용 하 여 (즉, 빌드 프로세스에 의해 생성 된 인스턴스화하는 동안 유형 로드) 컴파일된으로 참조 하는 활동은 로드 된 경우 동적으로 참조 된 어셈블리를 다른 프로젝트에 배치 해야 합니다 (예:: ActivityXAMLServices 사용) 또는 디자이너에서 생성 된 XAML이 방법을 사용 하려면 직접 편집한 되도록 해야 합니다.  
   
-#### 워크플로 프로젝트에 사용자 지정 활동 사용  
+#### <a name="using-a-custom-activity-to-a-workflow-project"></a>워크플로 프로젝트에 사용자 지정 활동 사용  
   
 1.  사용자 지정 활동이 포함된 활동 라이브러리 프로젝트에 호스트 프로젝트에서의 참조를 추가합니다.  
   

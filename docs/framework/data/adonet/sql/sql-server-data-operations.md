@@ -1,29 +1,32 @@
 ---
-title: "ADO.NET의 SQL Server 데이터 작업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ADO.NET에서 SQL Server 데이터 작업"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f40fa8a29ea1c4204c6c3c9aa10507bd0a8a4789
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ADO.NET의 SQL Server 데이터 작업
-이 섹션에서는 .NET Framework Data Provider for SQL Server\(<xref:System.Data.SqlClient>\)와 관련된 SQL Server의 기능 및 특징에 대해 설명합니다.  
+# <a name="sql-server-data-operations-in-adonet"></a>ADO.NET에서 SQL Server 데이터 작업
+이 섹션에서는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)와 관련된 SQL Server의 기능 및 특징에 대해 설명합니다.  
   
-## 단원 내용  
- [SQL Server에서의 대량 복사 작업](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [SQL Server의 대량 복사 작업](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
  .NET Data Provider for SQL Server의 대량 복사 기능에 대해 설명합니다.  
   
- [MARS\(Multiple Active Result Sets\)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [Multiple Active Result Sets MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  개별 명령을 통해 <xref:System.Data.SqlClient.SqlDataReader>의 각 인스턴스를 시작한 경우 연결에서 둘 이상의 <xref:System.Data.SqlClient.SqlDataReader>를 열어 두는 방법을 설명합니다.  
   
  [비동기 작업](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
@@ -32,7 +35,7 @@ caps.handback.revision: 6
  [테이블 반환 매개 변수](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  SQL Server 2008에 도입된 테이블 반환 매개 변수를 사용하는 방법에 대해 설명합니다.  
   
-## 참고 항목  
- [ADO.NET에서 데이터 검색 및 수정](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [ADO.NET에서 데이터 검색 및 수정](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

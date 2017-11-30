@@ -1,83 +1,89 @@
 ---
-title: "방법: TileBrush의 가로 및 세로 맞춤 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "맞추기, TileBrushe"
-  - "TileBrushe의 가로 맞춤"
-  - "TileBrush, 맞춤"
-  - "TileBrushe의 세로 맞춤"
+title: "방법: TileBrush의 가로 및 세로 맞춤 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TileBrush [WPF], alignment of
+- vertical alignment of TileBrushes [WPF]
+- aligning [WPF], TileBrushes
+- horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c581bb167c020e9e4f0de26b0e17e7a1d70704e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: TileBrush의 가로 및 세로 맞춤 설정
-이 예제에서는 바둑판식 배열에서 콘텐츠의 가로 및 세로 맞춤을 제어하는 방법을 보여 줍니다.  <xref:System.Windows.Media.TileBrush>의 가로 및 세로 맞춤을 제어하려면 해당 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 사용합니다.  
+# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>방법: TileBrush의 가로 및 세로 맞춤 설정
+이 예제에서는 타일에서 콘텐츠의 가로 및 세로 맞춤을 제어하는 방법을 보여 줍니다. 가로 및 세로 맞춤을 제어 하는 <xref:System.Windows.Media.TileBrush>를 사용 하 여 해당 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성입니다.  
   
- 다음 조건 중 하나에 해당되면 <xref:System.Windows.Media.TileBrush>의 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 사용합니다.  
+ <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 의 속성은 <xref:System.Windows.Media.TileBrush> 사용 되는 다음 조건 중 하나가 true 이면 경우:  
   
--   <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성이 <xref:System.Windows.Media.Stretch> 또는 <xref:System.Windows.Media.Stretch>이고 <xref:System.Windows.Media.TileBrush.Viewbox%2A>와 <xref:System.Windows.Media.TileBrush.Viewport%2A>의 [가로 세로 비율](GTMT)이 서로 다릅니다.  
+-   <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.Stretch.Uniform> 또는 <xref:System.Windows.Media.Stretch.UniformToFill> 및 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 및 <xref:System.Windows.Media.TileBrush.Viewport%2A> 다른 가로 세로 비율입니다.  
   
--   <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성이 <xref:System.Windows.Media.Stretch>이고 <xref:System.Windows.Media.TileBrush.Viewbox%2A>와 <xref:System.Windows.Media.TileBrush.Viewport%2A>의 크기가 서로 다릅니다.  
+-   <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.Stretch.None> 및 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 및 <xref:System.Windows.Media.TileBrush.Viewport%2A> 크기가 다릅니다.  
   
-## 예제  
- 다음 예제에서는 형식이 <xref:System.Windows.Media.TileBrush>인 <xref:System.Windows.Media.DrawingBrush>의 콘텐츠를 바둑판식 배열의 왼쪽 위 모퉁이에 맞춥니다.  이 예제에서는 <xref:System.Windows.Media.DrawingBrush>의 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 속성을 <xref:System.Windows.Media.AlignmentX>로 설정하고 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 <xref:System.Windows.Media.AlignmentY>으로 설정하여 콘텐츠를 맞춥니다.  이 예제의 결과는 다음과 같습니다.  
+## <a name="example"></a>예제  
+ 콘텐츠를 정렬 하는 다음 예제는 <xref:System.Windows.Media.DrawingBrush>의 형식인 <xref:System.Windows.Media.TileBrush>, 타일의 왼쪽 위 모퉁이에 있습니다. 예제에서는 콘텐츠를 정렬 하는 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 의 속성은 <xref:System.Windows.Media.DrawingBrush> 를 <xref:System.Windows.Media.AlignmentX.Left> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 <xref:System.Windows.Media.AlignmentY.Top>합니다. 이 예제의 결과는 다음과 같습니다.  
   
- ![왼쪽 위에 정렬된 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm\_TileBrushAlignmentExampleTopLeft")  
-콘텐츠가 왼쪽 위 모퉁이에 맞춰진 TileBrush  
+ ![Top&#45;TileBrush; 왼쪽된 맞춤](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm_TileBrushAlignmentExampleTopLeft")  
+콘텐츠가 왼쪽 위 구석에 정렬된 TileBrush  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushtopleftalignmentinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushtopleftalignmentinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmentinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmentinline)]  
   
-## 예제  
- 다음 예제에서는 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 속성을 <xref:System.Windows.Media.AlignmentX>로 설정하고 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 <xref:System.Windows.Media.AlignmentY>으로 설정하여 <xref:System.Windows.Media.DrawingBrush>의 콘텐츠를 해당 바둑판식 배열의 오른쪽 아래 모퉁이에 맞춥니다.  다음과 같이 출력됩니다.  
+## <a name="example"></a>예제  
+ 콘텐츠를 정렬 하는 다음 예제는 <xref:System.Windows.Media.DrawingBrush> 설정 하 여 타일의 오른쪽 아래 모서리에는 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 속성을 <xref:System.Windows.Media.AlignmentX.Right> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 <xref:System.Windows.Media.AlignmentY.Bottom>합니다. 예제의 결과는 다음과 같습니다.  
   
- ![오른쪽 아래에 정렬된 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm\_TileBrushAlignmentExampleBottomRight")  
-콘텐츠가 오른쪽 아래 모퉁이에 맞춰진 TileBrush  
+ ![아래쪽 &#45;TileBrush; 오른쪽 맞춤](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm_TileBrushAlignmentExampleBottomRight")  
+콘텐츠가 오른쪽 아래 구석에 정렬된 TileBrush  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushbottomrightalignmentinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushbottomrightalignmentinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
   
-## 예제  
- 다음 예제에서는 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 속성을 <xref:System.Windows.Media.AlignmentX>로 설정하고 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 <xref:System.Windows.Media.AlignmentY>로 설정하여 <xref:System.Windows.Media.DrawingBrush>의 콘텐츠를 해당 바둑판식 배열의 왼쪽 위 모퉁이에 맞춥니다.  또한 <xref:System.Windows.Media.DrawingBrush>의 <xref:System.Windows.Media.TileBrush.Viewport%2A> 및 <xref:System.Windows.Media.TileBrush.TileMode%2A>를 설정하여 바둑판식 배열 패턴을 만듭니다.  다음과 같이 출력됩니다.  
+## <a name="example"></a>예제  
+ 콘텐츠를 정렬 하는 다음 예제는 <xref:System.Windows.Media.DrawingBrush> 설정 하 여 타일의 왼쪽 위 모퉁이에 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 속성을 <xref:System.Windows.Media.AlignmentX.Left> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 <xref:System.Windows.Media.AlignmentY.Top>합니다. 또한 설정는 <xref:System.Windows.Media.TileBrush.Viewport%2A> 및 <xref:System.Windows.Media.TileBrush.TileMode%2A> 의 <xref:System.Windows.Media.DrawingBrush> 타일 패턴을 생성 합니다. 예제의 결과는 다음과 같습니다.  
   
- ![바둑판식으로 왼쪽 위에 정렬된 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm\_TileBrushAlignmentExampleTopLeftTiled")  
-콘텐츠가 기본 바둑판식 배열의 왼쪽 위에 맞춰진 바둑판식 배열 패턴  
+ ![Top&#45;인 바둑판된 모양의 TileBrush; 왼쪽된 맞춤](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm_TileBrushAlignmentExampleTopLeftTiled")  
+콘텐츠가 기본 타일에서 왼쪽 위에 정렬된 타일 패턴  
   
- 그림에서는 콘텐츠의 맞춤 방식을 볼 수 있도록 기본 바둑판식 배열이 강조 표시되어 있습니다.  <xref:System.Windows.Media.DrawingBrush>의 콘텐츠가 기본 바둑판식 배열을 가로로 완전히 채우므로 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 설정은 아무런 영향을 주지 않습니다.  
+ 이 그림에서는 기본 타일을 강조해서 보여 주므로 해당 콘텐츠가 정렬되는 방식을 확인할 수 있습니다. 다음에 유의 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 때문에 설정의 영향 없음의 콘텐츠는 <xref:System.Windows.Media.DrawingBrush> 가로로 기본 타일을 완전히 채웁니다.  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushtopleftalignmenttiledinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushtopleftalignmenttiledinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmenttiledinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushTopLeftAlignmentTiledInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushtopleftalignmenttiledinline)]  
   
-## 예제  
- 마지막 예제에서는 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 속성을 <xref:System.Windows.Media.AlignmentX>로 설정하고 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 <xref:System.Windows.Media.AlignmentY>로 설정하여 바둑판식으로 배열된 <xref:System.Windows.Media.DrawingBrush>의 콘텐츠를 해당 기본 바둑판식 배열의 오른쪽 아래에 맞춥니다.  다음과 같이 출력됩니다.  
+## <a name="example"></a>예제  
+ 콘텐츠를 정렬 하는 마지막 예제 <xref:System.Windows.Media.DrawingBrush> 설정 하 여 기본 타일의 오른쪽 아래에는 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 속성을 <xref:System.Windows.Media.AlignmentX.Right> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 <xref:System.Windows.Media.AlignmentY.Bottom>합니다. 예제의 결과는 다음과 같습니다.  
   
- ![바둑판식으로 오른쪽 아래에 정렬된 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm\_TileBrushAlignmentExampleBottomRightTiled")  
-콘텐츠가 기본 바둑판식 배열의 오른쪽 아래에 맞춰진 바둑판식 배열 패턴  
+ ![A 아래쪽 &#45;TileBrush 바둑판식; 맞춤을 마우스 오른쪽 단추로](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm_TileBrushAlignmentExampleBottomRightTiled")  
+콘텐츠가 기본 타일에서 오른쪽 아래에 정렬된 타일 패턴  
   
- 이때도 <xref:System.Windows.Media.DrawingBrush>의 콘텐츠가 기본 바둑판식 배열을 가로로 완전히 채우므로 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 설정은 아무런 영향을 주지 않습니다.  
+ 다시는 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 때문에 설정의 영향 없음의 콘텐츠는 <xref:System.Windows.Media.DrawingBrush> 가로로 기본 타일을 완전히 채웁니다.  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushbottomrightalignmentinline)]
  [!code-vb[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_snip/visualbasic/tilebrushalignmentexample.vb#tilebrushbottomrightalignmentinline)]
- [!code-xml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
+ [!code-xaml[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileBrushAlignmentExample.xaml#tilebrushbottomrightalignmentinline)]  
   
- 앞의 여러 예제에서는 <xref:System.Windows.Media.DrawingBrush> 개체를 사용하여 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 사용하는 방법을 보여 줍니다.  이러한 속성은 <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.VisualBrush> 등의 모든 바둑판식 배열 브러시에 대해 동일하게 작동합니다.  바둑판식 배열 브러시에 대한 자세한 내용은 [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)를 참조하십시오.  
+ 예제에서는 사용 <xref:System.Windows.Media.DrawingBrush> 보여 주기 위해 개체 방법을 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성이 사용 됩니다. 이러한 속성에 대 한 모든 타일 브러시 동일 하 게 작동: <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush>, 및 <xref:System.Windows.Media.VisualBrush>합니다. 타일 브러시에 대한 자세한 내용은 [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)를 참조하세요.  
   
-## 참고 항목  
- <xref:System.Windows.Media.DrawingBrush>   
- <xref:System.Windows.Media.ImageBrush>   
- <xref:System.Windows.Media.VisualBrush>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Media.DrawingBrush>  
+ <xref:System.Windows.Media.ImageBrush>  
+ <xref:System.Windows.Media.VisualBrush>  
  [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

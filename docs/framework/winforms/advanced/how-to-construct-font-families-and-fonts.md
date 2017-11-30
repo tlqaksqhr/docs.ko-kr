@@ -1,60 +1,64 @@
 ---
-title: "방법: 글꼴 패밀리 및 글꼴 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "글꼴 패밀리, 만들기"
-  - "글꼴, 만들기"
+title: "방법: 글꼴 패밀리 및 글꼴 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- font families [Windows Forms], constructing
+- fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 066cf358e43dabb3b952b32ecec34ca77c6e8c38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 글꼴 패밀리 및 글꼴 만들기
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에서는 서체는 같고 스타일이 다른 글꼴로 글꼴 패밀리를 구성합니다.  예를 들어, Arial 글꼴 패밀리는 다음과 같은 글꼴로 구성됩니다.  
+# <a name="how-to-construct-font-families-and-fonts"></a>방법: 글꼴 패밀리 및 글꼴 만들기
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]글꼴 패밀리에 글꼴 서체 하지만 다양 한 스타일을 그룹화합니다. 예를 들어 Arial 글꼴 패밀리에는 다음 글꼴을 포함 되어 있습니다.  
   
--   Arial Regular  
+-   Arial 일반  
   
--   Arial Bold  
+-   Arial 굵게 표시  
   
--   Arial Italic  
+-   Arial 기울임꼴  
   
 -   Arial Bold Italic  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에서는 보통, 굵게, 기울임꼴 및 굵은 기울임꼴 등 네 가지 스타일을 사용하여 패밀리를 구성합니다.  *narrow* 및 *rounded*와 같은 형용사는 스타일이 아니라 패밀리 이름의 일부입니다.  예를 들어, Arial Narrow는 다음과 같은 멤버를 포함하는 글꼴 패밀리입니다.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]패밀리를 구성 하기 위해 네 개의 스타일을 사용 하 여: 일반, 굵게, 기울임꼴 및 굵은 기울임꼴 등. 형용사와 같은 *좁힐* 및 *반올림* 스타일; 간주 되지 않는 대신의 일부인 제품군 이름입니다. 예, 굴림은 다음 멤버로 구성 된 글꼴 패밀리입니다.  
   
--   Arial Narrow Regular  
+-   Arial 좁은 일반  
   
--   Arial Narrow Bold  
+-   굵게 표시 된 arial 좁은  
   
--   Arial Narrow Italic  
+-   Arial 좁은 기울임꼴  
   
--   Arial Narrow Bold Italic  
+-   Arial 좁은 Bold Italic  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에서 텍스트를 그리려면 먼저 <xref:System.Drawing.FontFamily> 개체와 <xref:System.Drawing.Font> 개체를 만들어야 합니다.  <xref:System.Drawing.FontFamily> 개체는 서체\(예: Arial\)를 지정하고 <xref:System.Drawing.Font> 개체는 크기, 스타일 및 단위를 지정합니다.  
+ 텍스트를 그릴 수 전에 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 생성 해야는 <xref:System.Drawing.FontFamily> 개체 및 <xref:System.Drawing.Font> 개체입니다. <xref:System.Drawing.FontFamily> 개체 지정 (예: Arial) 서체 및 <xref:System.Drawing.Font> 개체 크기, 스타일 및 단위를 지정 합니다.  
   
-## 예제  
- 다음 예제에서는 16픽셀 크기로 보통 스타일의 Arial 글꼴을 만듭니다.  다음 코드에서 <xref:System.Drawing.Font.%23ctor%2A> 생성자에 전달되는 첫 번째 인수는  <xref:System.Drawing.FontFamily> 개체입니다.  두 번째 인수에는 글꼴의 크기를 네 번째 인수에서 지정하는 단위로 지정합니다.  세 번째 인수에는 스타일을 지정합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 일반 스타일 Arial 글꼴 크기는 16 픽셀을 생성합니다. 다음 코드에서에 전달 되는 첫 번째 인수는 <xref:System.Drawing.Font.%23ctor%2A> 생성자는는 <xref:System.Drawing.FontFamily> 개체입니다. 두 번째 인수는 네 번째 인수에 의해 식별 된 단위로 측정 되는 글꼴의 크기를 지정 합니다. 세 번째 인수는 스타일을 식별 합니다.  
   
- <xref:System.Drawing.GraphicsUnit>은 <xref:System.Drawing.GraphicsUnit> 열거형의 멤버이고 <xref:System.Drawing.FontStyle>는 <xref:System.Drawing.FontStyle> 열거형의 멤버입니다.  
+ <xref:System.Drawing.GraphicsUnit.Pixel>멤버인는 <xref:System.Drawing.GraphicsUnit> 열거형 및 <xref:System.Drawing.FontStyle.Regular> 의 구성원은 <xref:System.Drawing.FontStyle> 열거형입니다.  
   
  [!code-csharp[System.Drawing.FontsAndText#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 `e`<xref:System.Windows.Forms.PaintEventHandler>가 필요합니다.  
   
-## 참고 항목  
- [글꼴 및 텍스트 사용](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
+## <a name="see-also"></a>참고 항목  
+ [글꼴 및 텍스트 사용](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
  [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

@@ -1,61 +1,58 @@
 ---
-title: "Skip While Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QuerySkipWhile"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Skip While statement"
-  - "Skip While clause"
-  - "queries [Visual Basic], Skip While"
+title: "Skip While 절(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QuerySkipWhile
+helpviewer_keywords:
+- Skip While statement [Visual Basic]
+- Skip While clause [Visual Basic]
+- queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f447a6d9b2eb58fa546ced6c96b987caf68fb3e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Skip While Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="skip-while-clause-visual-basic"></a>Skip While 절(Visual Basic)
 지정된 조건이 `true`이면 컬렉션에 있는 요소를 무시하고 나머지 요소를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 Skip While expression  
 ```  
   
-## 요소  
+## <a name="parts"></a>요소  
   
-|||  
-|-|-|  
 |용어|정의|  
-|`expression`|필수 요소.  요소를 테스트할 조건을 나타내는 식입니다.  식은 `Boolean` 값 또는 이에 상응하는 값\(예: `Boolean`으로 계산되는 `Integer`\)을 반환해야 합니다|  
+|---|---|  
+|`expression`|필수 요소. 에 대 한 요소를 테스트 하는 조건을 나타내는 식입니다. 식은 반환 해야 합니다는 `Boolean` 값 또는 이와 동일한 기능와 같은 프로그램 `Integer` 으로 계산 되는 `Boolean`합니다.|  
   
-## 설명  
- `Skip While` 절은 쿼리 결과의 시작 부분부터 제공된 `expression`에서 `false`를 반환할 때까지 요소를 건너뜁니다.  `expression`에서 `false`를 반환한 후 쿼리에서 나머지 요소를 모두 반환합니다.  `expression`은 나머지 결과에 대해 무시됩니다.  
+## <a name="remarks"></a>설명  
+ `Skip While` 까지 제공 된 쿼리 결과의 시작 부분에서 요소를 무시 하는 절 `expression` 반환 `false`합니다. 후 `expression` 반환 `false`, 쿼리에서 나머지 모든 요소를 반환 합니다. `expression` 나머지 결과 대해 무시 됩니다.  
   
- `Where` 절이 특정 조건을 만족하지 않는 쿼리에서 모든 요소를 제외하는 데 사용할 수 있다는 점에서 `Skip While` 절은 `Where` 절과 다릅니다.  `Skip While` 절은 처음으로 조건이 만족하지 않을 때까지만 요소를 제외합니다.  순서가 지정된 쿼리 결과를 사용할 때 `Skip While` 절이 가장 유용합니다.  
+ `Skip While` 절에서와 다른는 `Where` 절에 있는 `Where` 특정 조건을 충족 하지 않는 쿼리에서 모든 요소를 제외 하려면 절을 사용할 수 있습니다. `Skip While` 절 조건이 충족 되지 않은 처음 될 때까지 요소를 제외 합니다. `Skip While` 절은 순서가 지정 된 쿼리 결과 사용 하 여 작업할 때 가장 유용 합니다.  
   
- `Skip` 절을 사용하여 쿼리 결과의 시작 부분에서 특정 수의 결과를 건너뛸 수 있습니다.  
+ 사용 하 여 특정 수의 쿼리 결과의 시작 부분에서 결과 무시할 수 있습니다는 `Skip` 절.  
   
-## 예제  
- 다음 코드 예제에서는 `Skip While` 절을 사용하여 United States의 첫 번째 고객을 찾을 때까지 결과를 건너뜁니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 `Skip While` 절 미국에서 첫 번째 고객을 찾을 때까지 결과를 건너뜁니다.  
   
  [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
   
-## 참고 항목  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Skip Clause](../../../visual-basic/language-reference/queries/skip-clause.md)   
- [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md)   
- [Where Clause](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>참고 항목  
+ [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [쿼리](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select 절](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From 절](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Skip 절](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [Take While 절](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ [Where 절](../../../visual-basic/language-reference/queries/where-clause.md)

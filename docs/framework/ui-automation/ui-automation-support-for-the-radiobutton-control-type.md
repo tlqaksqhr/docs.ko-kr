@@ -1,51 +1,54 @@
 ---
-title: "UI Automation Support for the RadioButton Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Radio Button"
-  - "UI Automation, Radio Button control type"
-  - "RadioButton control type"
+title: "RadioButton 컨트롤 형식에 대한 UI 자동화 지원"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Radio Button
+- UI Automation, Radio Button control type
+- RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-caps.latest.revision: 21
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: e3b2723aaf61d25afb6164da8c3c6ca7a61e9e52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the RadioButton Control Type
+# <a name="ui-automation-support-for-the-radiobutton-control-type"></a>RadioButton 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
   
- 이 항목에서는 RadioButton 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
+ 이 항목에서는 RadioButton 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
   
- 라디오 단추는 라운드 단추와 응용 프로그램에서 정의한 텍스트\(레이블\), 아이콘 또는 사용자가 단추를 선택하여 수행할 수 있는 선택 항목을 나타내는 비트맵으로 구성됩니다. 일반적으로 응용 프로그램은 그룹 상자의 라디오 단추를 제공하므로 관련되어 있지만 함께 사용할 수 없는 옵션 집합에서 사용자가 선택할 수 있습니다. 예를 들어, 응용 프로그램은 사용자가 클라이언트 영역에서 선택된 텍스트에 대해 형식 기본 설정을 선택할 수 있는 라디오 단추 그룹을 제공할 수 있습니다. 사용자는 해당 라디오 단추를 선택하여 왼쪽 맞춤, 오른쪽 맞춤 또는 가운데 맞춤 형식을 선택할 수 있습니다. 일반적으로, 사용자는 라디오 단추 집합에서 한 번에 하나의 옵션만 선택할 수 있습니다.  
+ 라디오 단추는 라운드 단추와 응용 프로그램에서 정의한 텍스트(레이블), 아이콘 또는 사용자가 단추를 선택하여 수행할 수 있는 선택 항목을 나타내는 비트맵으로 구성됩니다. 일반적으로 응용 프로그램은 그룹 상자의 라디오 단추를 제공하므로 관련되어 있지만 함께 사용할 수 없는 옵션 집합에서 사용자가 선택할 수 있습니다. 예를 들어, 응용 프로그램은 사용자가 클라이언트 영역에서 선택된 텍스트에 대해 형식 기본 설정을 선택할 수 있는 라디오 단추 그룹을 제공할 수 있습니다. 사용자는 해당 라디오 단추를 선택하여 왼쪽 맞춤, 오른쪽 맞춤 또는 가운데 맞춤 형식을 선택할 수 있습니다. 일반적으로, 사용자는 라디오 단추 집합에서 한 번에 하나의 옵션만 선택할 수 있습니다.  
   
- 다음 섹션에서는 RadioButton 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 목록 컨트롤에 적용됩니다.  
+ 다음 섹션에서는 RadioButton 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 목록 컨트롤에 적용됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 필요한 UI 자동화 트리 구조  
- 다음 표는 라디오 단추 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대한 자세한 내용은 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
+ 다음 표는 라디오 단추 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리, 참조 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.  
   
 |컨트롤 뷰|콘텐츠 뷰|  
-|-----------|-----------|  
+|------------------|------------------|  
 |RadioButton|RadioButton|  
   
  컨트롤 뷰 또는 콘텐츠 뷰에 자식 항목이 없습니다.  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 RadioButton 컨트롤 형식과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대한 자세한 내용은 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)를 참조하세요.  
+## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
+ 다음 표에서는 값 또는 정의가 RadioButton 컨트롤 형식과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 참조 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
-|------------------------------------------------------------------------------|-------|--------|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
@@ -58,21 +61,21 @@ caps.handback.revision: 21
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|라디오 단추 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰에 항상 포함됩니다.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 필요한 UI 자동화 컨트롤 패턴  
+## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
  다음 표에서는 모든 라디오 단추 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
   
-|컨트롤 패턴\/컨트롤 패턴 속성|지원\/값|노트|  
-|-----------------------|-----------|--------|  
+|컨트롤 패턴/컨트롤 패턴 속성|지원/값|노트|  
+|-----------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|예|모든 라디오 단추 컨트롤은 이 컨트롤이 선택될 수 있도록 하는 Selection Item 패턴을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|메모를 참조하세요.|`SelectionContainerProperty`는 UI 자동화 클라이언트가 특정 콘텐츠 내에서 서로 관련된 다른 라디오 단추를 판별할 수 있도록 항상 완료되어야 합니다.  라디오 단추의 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 버전의 경우 이 속성이 지원되지 않습니다. 레거시 프레임워크에서는 정보를 가져올 수 없기 때문입니다.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|메모를 참조하세요.|`SelectionContainerProperty` 는 UI 자동화 클라이언트가 특정 콘텐츠 내에서 서로 관련된 다른 라디오 단추를 판별할 수 있도록 항상 완료되어야 합니다.  라디오 단추의 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 버전의 경우 이 속성이 지원되지 않습니다. 레거시 프레임워크에서는 정보를 가져올 수 없기 때문입니다.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Never|라디오 단추가 설정되면 상태를 순환할 수 없습니다.  이 패턴은 라디오 단추에서 지원되지 않아야 합니다.|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 필요한 UI 자동화 이벤트  
+## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
  다음 표에서는 모든 라디오 단추 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
-|-------------------------------------------------------------------------------|--------|--------|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|필수|없음|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|필수|없음|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 속성 변경 이벤트.|Never|없음|  
@@ -82,7 +85,7 @@ caps.handback.revision: 21
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
   
-## 참고 항목  
- <xref:System.Windows.Automation.ControlType.RadioButton>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Automation.ControlType.RadioButton>  
+ [UI 자동화 컨트롤 형식 개요](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)

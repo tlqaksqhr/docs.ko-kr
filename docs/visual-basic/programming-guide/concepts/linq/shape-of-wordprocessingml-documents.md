@@ -1,27 +1,22 @@
 ---
-title: "(Visual Basic) WordprocessingML 문서의 모양 | Microsoft 문서"
+title: "(Visual Basic) WordprocessingML 문서의 모양"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1982110ccf01f52ace20db6985d7329407357d8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: f29ed78062337c7036ada2405fa610ff1f883feb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>(Visual Basic) WordprocessingML 문서의 모양
 이 항목에서는 WordprocessingML 문서의 XML 모양에 대해 소개합니다.  
@@ -69,7 +64,7 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
   
  XML 형식으로 WordprocessingML 문서의 내용을 보는 가장 쉬운 방법은 Microsoft Word를 사용하여 문서를 만들어 저장한 후 XML을 콘솔에 출력하는 다음 프로그램을 실행하는 것입니다.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 형식을 사용는 <xref:System.IO.Packaging?displayProperty=fullName>네임 스페이스.</xref:System.IO.Packaging?displayProperty=fullName>  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -102,12 +97,11 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>외부 리소스  
- [Office (2007) Open XML 파일 형식 소개](http://go.microsoft.com/fwlink/?LinkId=98093)  
+ [Office(2007) Open XML 파일 형식 소개](http://go.microsoft.com/fwlink/?LinkId=98093)  
   
- [WordprocessingML 개요](http://go.microsoft.com/fwlink/?LinkId=98094)  
+ [WordprocessingML의 개요](http://go.microsoft.com/fwlink/?LinkId=98094)  
   
  [Office 2003: XML 참조 스키마 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=98095)  
   
 ## <a name="see-also"></a>참고 항목  
  [자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-

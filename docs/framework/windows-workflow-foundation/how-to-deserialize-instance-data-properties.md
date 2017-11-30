@@ -1,21 +1,25 @@
 ---
-title: "방법: 인스턴스 데이터 속성 Deserialize | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 인스턴스 데이터 속성 Deserialize"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4c29c9c0151c253ec1e981413aea2d6d2a0672ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: 인스턴스 데이터 속성 Deserialize
-경우에 따라서는 유지되고 있는 워크플로 인스턴스의 상태를 사용자나 워크플로 관리자가 수동으로 조사하고 싶을 수 있습니다.<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에서는 다음과 같은 네 개의 열이 포함된 인스턴스 테이블에 대한 뷰를 제공합니다.  
+# <a name="how-to-deserialize-instance-data-properties"></a>방법: 인스턴스 데이터 속성 Deserialize
+경우에 따라서는 유지되고 있는 워크플로 인스턴스의 상태를 사용자나 워크플로 관리자가 수동으로 조사하고 싶을 수 있습니다. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에서는 다음과 같은 네 개의 열이 포함된 인스턴스 테이블에 대한 뷰를 제공합니다.  
   
 -   ReadWritePrimitiveDataProperties  
   
@@ -25,16 +29,15 @@ caps.handback.revision: 9
   
 -   WriteOnlyComplexDataProperties  
   
- 기본 데이터 속성은 해당 .NET Framework 형식이 Int32 또는 String 등과 같이 "일반적"인 것으로 간주되는 속성을 가리키며, 복합 데이터 속성은 다른 모든 형식을 가리킵니다.기본 형식의 정확한 열거형은 이 코드 샘플의 뒷부분에 나와 있습니다.  
+ 기본 데이터 속성은 해당.NET Framework 형식이 다른 모든 형식에 복합 데이터 속성 참조 (예: Int32 또는 String), "일반적" 것으로 간주 되는를 참조 합니다. 기본 형식의 정확한 열거형은 이 코드 샘플의 뒷부분에 나와 있습니다.  
   
- Read\/write 속성은 인스턴스를 로드했을 때 워크플로 런타임으로 다시 반환되는 속성을 가리킵니다.WriteOnly 속성은 데이터베이스에 쓴 다음 다시 읽지 않는 속성입니다.  
+ 읽기/쓰기 속성은 인스턴스를 로드했을 때 워크플로 런타임으로 다시 반환되는 속성을 가리킵니다. WriteOnly 속성은 데이터베이스에 쓴 다음 다시 읽지 않는 속성입니다.  
   
- 이 샘플에서는 기본 데이터 속성을 deserialize하는 데 사용할 수 있는 코드를 제공합니다.ReadWritePrimitiveDataProperties 또는 WriteOnlyPrimitiveDataProperties 열에서 읽은 바이트 배열이 있으면 이 코드는 BLOB\(Binary Large Object\)를 \<XName, object\> 형식의 <xref:System.Collections.Generic.Dictionary%601>로 변환합니다. 여기에서 각 키 값 쌍은 속성 이름 및 그에 상응하는 값을 나타냅니다.  
+ 이 샘플에서는 기본 데이터 속성을 deserialize하는 데 사용할 수 있는 코드를 제공합니다. ReadWritePrimitiveDataProperties 또는 WriteOnlyPrimitiveDataProperties 열에서 읽은 바이트 배열이,이 코드는 binary large object (BLOB)로 변환 된 <xref:System.Collections.Generic.Dictionary%602> 형식의 \<XName, 개체 > 여기서 각 키 값 쌍 속성 이름 및 해당 값을 나타냅니다.  
   
  복합 데이터 속성을 deserialize하는 방법은 이 샘플에서 보여 주지 않습니다. 이와 같은 작업은 아직 지원되지 않습니다.  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -252,5 +255,4 @@ namespace PropertyReader
         }  
     }  
 }  
-  
 ```

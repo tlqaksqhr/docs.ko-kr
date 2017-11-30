@@ -5,29 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tasks, ETW events
+helpviewer_keywords: tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9de80f9f2319caefbb7b716e17c43fddf9db67e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9e3ff6c4ec8febda93136c5ac88223b5baf80124
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트
 작업 병렬 라이브러리 및 PLINQ는 둘 다 Windows Performance Analyzer와 같은 도구를 사용하여 응용 프로그램을 프로파일링하고 응용 프로그램 문제를 해결하는 데 사용할 수 있는 ETW(Windows용 이벤트 추적) 이벤트를 생성합니다. 그러나 대부분의 경우 병렬 응용 프로그램 코드를 프로파일링하는 가장 좋은 방법은 [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)]에서 [Concurrency 시각화](/visualstudio/profiling/concurrency-visualizer)를 사용하는 것입니다.  
   
 ## <a name="task-parallel-library-etw-events"></a>작업 병렬 라이브러리 ETW 이벤트  
- EVENT_HEADER 구조에서 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=fullName>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName> 및 <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=fullName>에 의해 생성된 이벤트에 대한 ProviderId GUID는 다음과 같습니다.  
+ EVENT_HEADER 구조에서 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType>에 의해 생성된 이벤트에 대한 ProviderId GUID는 다음과 같습니다.  
   
 ```  
 0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5  
@@ -42,12 +39,12 @@ ms.lasthandoff: 08/21/2017
   
 |**Name**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
-|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 TaskScheduler의 ID입니다.|  
-|OriginatingTaskID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 작업의 ID입니다.|  
-|ForkJoinContextID|<xref:System.Int32?displayProperty=fullName>|분기/조인 의미 체계에 따라 이벤트에 대한 중첩 및 쌍을 나타내는 데 사용되는 고유 식별자입니다.|  
-|OperationType|<xref:System.Int32?displayProperty=fullName>|루프 형식을 나타냅니다.<br /><br /> 1 = ParallelInvoke<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|  
-|InclusiveFrom|<xref:System.Int64?displayProperty=fullName>|루프 카운터의 시작 값입니다.|  
-|ExclusiveTo|<xref:System.Int64?displayProperty=fullName>|루프 카운터의 종료 값입니다.|  
+|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
+|OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
+|ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|분기/조인 의미 체계에 따라 이벤트에 대한 중첩 및 쌍을 나타내는 데 사용되는 고유 식별자입니다.|  
+|OperationType|<xref:System.Int32?displayProperty=nameWithType>|루프 형식을 나타냅니다.<br /><br /> 1 = ParallelInvoke<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|  
+|InclusiveFrom|<xref:System.Int64?displayProperty=nameWithType>|루프 카운터의 시작 값입니다.|  
+|ExclusiveTo|<xref:System.Int64?displayProperty=nameWithType>|루프 카운터의 종료 값입니다.|  
   
 ### <a name="parallel-loop-end"></a>병렬 루프 종료  
  EVENT_DESCRIPTOR.Task = 2  
@@ -58,10 +55,10 @@ ms.lasthandoff: 08/21/2017
   
 |**Name**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
-|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 TaskScheduler의 ID입니다.|  
-|OriginatingTaskID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 작업의 ID입니다.|  
-|ForkJoinContextID|<xref:System.Int32?displayProperty=fullName>|분기/조인 의미 체계에 따라 이벤트에 대한 중첩 및 쌍을 나타내는 데 사용되는 고유 식별자입니다.|  
-|totalIterations|<xref:System.Int64?displayProperty=fullName>|총 반복 횟수입니다.|  
+|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
+|OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
+|ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|분기/조인 의미 체계에 따라 이벤트에 대한 중첩 및 쌍을 나타내는 데 사용되는 고유 식별자입니다.|  
+|totalIterations|<xref:System.Int64?displayProperty=nameWithType>|총 반복 횟수입니다.|  
   
 ### <a name="parallel-invoke-begin"></a>병렬 호출 시작  
  EVENT_DESCRIPTOR.Task = 3  
@@ -72,12 +69,12 @@ ms.lasthandoff: 08/21/2017
   
 |**Name**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
-|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 TaskScheduler의 ID입니다.|  
-|OriginatingTaskID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 작업의 ID입니다.|  
-|ForkJoinContextID|<xref:System.Int32?displayProperty=fullName>|분기/조인 의미 체계에 따라 이벤트에 대한 중첩 및 쌍을 나타내는 데 사용되는 고유 식별자입니다.|  
-|totalIterations|<xref:System.Int64?displayProperty=fullName>|총 반복 횟수입니다.|  
-|operationType|<xref:System.Int32?displayProperty=fullName>|루프 형식을 나타냅니다.<br /><br /> 1 = ParallelInvoke<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|  
-|ActionCount|<xref:System.Int32?displayProperty=fullName>|병렬 호출에서 실행될 작업 수입니다.|  
+|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
+|OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
+|ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|분기/조인 의미 체계에 따라 이벤트에 대한 중첩 및 쌍을 나타내는 데 사용되는 고유 식별자입니다.|  
+|totalIterations|<xref:System.Int64?displayProperty=nameWithType>|총 반복 횟수입니다.|  
+|operationType|<xref:System.Int32?displayProperty=nameWithType>|루프 형식을 나타냅니다.<br /><br /> 1 = ParallelInvoke<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|  
+|ActionCount|<xref:System.Int32?displayProperty=nameWithType>|병렬 호출에서 실행될 작업 수입니다.|  
   
 ### <a name="parallel-invoke-end"></a>병렬 호출 종료  
  EVENT_DESCRIPTOR.Task = 4  
@@ -88,9 +85,9 @@ ms.lasthandoff: 08/21/2017
   
 |**Name**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
-|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 TaskScheduler의 ID입니다.|  
-|OriginatingTaskID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 작업의 ID입니다.|  
-|ForkJoinContextID|<xref:System.Int32?displayProperty=fullName>|분기/조인 의미 체계에 따라 이벤트에 대한 중첩 및 쌍을 나타내는 데 사용되는 고유 식별자입니다.|  
+|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
+|OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
+|ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|분기/조인 의미 체계에 따라 이벤트에 대한 중첩 및 쌍을 나타내는 데 사용되는 고유 식별자입니다.|  
   
 ## <a name="plinq-etw-events"></a>PLINQ ETW 이벤트  
  PLINQ에 대한 EVENT_HEADER.ProviderId GUID는 다음과 같습니다.  
@@ -108,9 +105,9 @@ ms.lasthandoff: 08/21/2017
   
 |**Name**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
-|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 TaskScheduler의 ID입니다.|  
-|OriginatingTaskID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 작업의 ID입니다.|  
-|QueryID|<xref:System.Int32?displayProperty=fullName>|고유 쿼리 식별자입니다.|  
+|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
+|OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
+|QueryID|<xref:System.Int32?displayProperty=nameWithType>|고유 쿼리 식별자입니다.|  
   
 ### <a name="parallel-query-end"></a>병렬 쿼리 종료  
  EVENT_DESCRIPTOR.Task = 2  
@@ -121,12 +118,11 @@ ms.lasthandoff: 08/21/2017
   
 |**Name**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
-|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 TaskScheduler의 ID입니다.|  
-|OriginatingTaskID|<xref:System.Int32?displayProperty=fullName>|루프를 시작한 작업의 ID입니다.|  
-|QueryID|<xref:System.Int32?displayProperty=fullName>|고유 쿼리 식별자입니다.|  
+|OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
+|OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
+|QueryID|<xref:System.Int32?displayProperty=nameWithType>|고유 쿼리 식별자입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET Framework의 ETW 이벤트](../../../docs/framework/performance/etw-events.md)   
- [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)   
+ [.NET Framework의 ETW 이벤트](../../../docs/framework/performance/etw-events.md)  
+ [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
  [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
-

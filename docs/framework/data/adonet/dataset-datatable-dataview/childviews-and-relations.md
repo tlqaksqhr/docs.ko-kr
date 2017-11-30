@@ -1,23 +1,29 @@
 ---
-title: "ChildViews 및 관계 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ChildView 및 관계"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 22c25a2633695b4b688a7185b6c612d918f12e2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ChildViews 및 관계
-<xref:System.Data.DataSet>의 테이블 사이에 관계가 존재하는 경우 부모 테이블의 행에 대한 <xref:System.Data.DataRowView>의 <xref:System.Data.DataRowView.CreateChildView%2A> 메서드를 사용하여 관련 자식 테이블의 행이 포함된 <xref:System.Data.DataView>를 만들 수 있습니다.  예를 들어, 다음 코드에서는 **CategoryName** 및 **ProductName**에 따라 사전순으로 정렬된 **Categories** 및 해당 관련 **Products**를 보여 줍니다.  
+# <a name="childviews-and-relations"></a>ChildView 및 관계
+<xref:System.Data.DataSet>의 테이블 사이에 관계가 존재하는 경우 부모 테이블의 행에 대한 <xref:System.Data.DataView>의 <xref:System.Data.DataRowView.CreateChildView%2A> 메서드를 사용하여 관련 자식 테이블의 행이 포함된 <xref:System.Data.DataRowView>를 만들 수 있습니다. 예를 들어 다음 코드 표시 **범주** 및 관련 **제품** 사전순으로 정렬 **CategoryName** 및 **ProductName** .  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -47,7 +53,6 @@ For Each catDRV In catView
     Console.WriteLine(vbTab & prodDRV("ProductName"))  
   Next  
 Next  
-  
 ```  
   
 ```csharp  
@@ -78,9 +83,9 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## 참고 항목  
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataView>   
- <xref:System.Data.DataRowView>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataView>  
+ <xref:System.Data.DataRowView>  
+ [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

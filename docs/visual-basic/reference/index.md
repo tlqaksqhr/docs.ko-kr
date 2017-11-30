@@ -1,39 +1,21 @@
 ---
 title: "참조(Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c341ec68a12019814d0185cab9b89ad5928d171
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 1bef4da309f5e281b4016912d4b0da8237db6ec0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="reference-visual-basic"></a>참조(Visual Basic)
 이 섹션에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로그래밍의 다양한 측면에 대한 참조 정보 링크를 제공합니다.  
@@ -67,4 +49,3 @@ ms.lasthandoff: 07/28/2017
   
  [자동화 및 확장성 참조](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
  공유 및 언어별 구성 요소 둘 다에 대한 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]의 자동화 및 확장성에 대해 다루는 항목의 링크를 제공합니다.
-

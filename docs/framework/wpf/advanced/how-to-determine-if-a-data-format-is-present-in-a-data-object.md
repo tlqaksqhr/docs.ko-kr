@@ -1,54 +1,60 @@
 ---
-title: "방법: 데이터 개체에 데이터 형식이 있는지 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 형식[WPF], 존재 여부 결정"
-  - "DataFormats 클래스[WPF]"
-  - "끌어서 놓기[WPF], 데이터 형식 있음"
+title: "방법: 데이터 개체에 데이터 형식이 있는지 확인"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataFormats class [WPF]
+- drag-and-drop [WPF], data formats present
+- data formats [WPF], determining if present
 ms.assetid: e487a454-c9fc-4e53-aeaa-c458d059ad4c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9e5eaad64e18ff955340a8e91bfe8bd0e09dd8d7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 데이터 개체에 데이터 형식이 있는지 확인
-다음 예제에서는 다양한 <xref:System.Windows.DataObject.GetDataPresent%2A> 메서드 오버로드를 사용하여 데이터 개체에 특정 데이터 형식이 있는지 쿼리하는 방법을 보여 줍니다.  
+# <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>방법: 데이터 개체에 데이터 형식이 있는지 확인
+다음 예제에서는 다양 한를 사용 하는 방법을 보여 <xref:System.Windows.DataObject.GetDataPresent%2A> 특정 데이터 형식의 데이터 개체에 있는지 여부를 쿼리 하 메서드 오버 로드 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- 다음 예제 코드에서는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> 오버로드를 사용하여 설명자 문자열을 기준으로 특정 데이터 형식이 있는지 쿼리하는 방법을 보여 줍니다.  
+### <a name="description"></a>설명  
+ 다음 예제 코드를 사용 하 여는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> 설명자 문자열에서 특정 데이터 형식의 존재를 쿼리 하는 오버 로드 합니다.  
   
-### 코드  
+### <a name="code"></a>코드  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_string)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_string)]  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- 다음 예제 코드에서는 <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> 오버로드를 사용하여 형식을 기준으로 특정 데이터 형식이 있는지 쿼리하는 방법을 보여 줍니다.  
+### <a name="description"></a>설명  
+ 다음 예제 코드를 사용 하 여는 <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> 유형별로 특정 데이터 형식의 존재를 쿼리 하는 오버 로드 합니다.  
   
-### 코드  
+### <a name="code"></a>코드  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_type)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_type)]  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- 다음 예제 코드에서는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> 오버로드를 사용하여 설명자 문자열을 기준으로 데이터를 쿼리하고 자동 변환할 수 있는 데이터 형식의 처리 방법을 지정합니다.  
+### <a name="description"></a>설명  
+ 다음 예제 코드를 사용 하 여는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> 설명자 문자열 데이터에 대 한 쿼리를 오버 로드 하 고 자동 변환을 데이터 형식을 처리 하는 방법을 지정 합니다.  
   
-### 코드  
+### <a name="code"></a>코드  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_autoconvert)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_autoconvert)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.IDataObject>

@@ -1,30 +1,22 @@
 ---
-title: "방법: Namespace 접두사 제어 (Visual Basic) (LINQ to XML) | Microsoft 문서"
+title: "방법: 네임스페이스 접두사 제어(Visual Basic)(LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9b559b54ffaa53b2ae5cd3b6c6d2d4db3ebe0a04
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a48feeb25cc8d28d57edc7421f73b2829f8c19ef
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>방법: 네임스페이스 접두사 제어(Visual Basic)(LINQ to XML)
 이 항목에서는 네임스페이스 접두사를 제어하는 방법에 대해 설명합니다.  
@@ -32,7 +24,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
- 이 예제에서는 두 네임스페이스를 선언한 다음 지정 하는 `http://www.adventure-works.com` 네임 스페이스가 `aw`, 하는 `www.fourthcoffee.com` 네임 스페이스의 접두사에 `fc`합니다.  
+ 이 예제에서는 두 네임스페이스를 선언한 다음 갖도록 지정는 `http://www.adventure-works.com` 네임 스페이스가 `aw`, 있고는 `www.fourthcoffee.com` 네임 스페이스의 접두사에 `fc`합니다.  
   
 ### <a name="code"></a>코드  
   

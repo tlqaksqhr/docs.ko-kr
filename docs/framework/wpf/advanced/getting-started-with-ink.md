@@ -1,88 +1,94 @@
 ---
-title: "잉크 시작 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "애니메이션, 그라데이션 브러시 색"
-  - "브러시, 색에 애니메이션 적용"
-  - "그라데이션 브러시, 색에 애니메이션 적용"
-  - "XAML 대신 프로시저 코드"
-  - "XAML, 대신 프로시저 코드"
+title: "잉크 시작"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- procedural code in lieu of XAML [WPF]
+- gradient brush [WPF], animating colors of
+- XAML [WPF], procedural code in lieu of
+- animation [WPF], gradient brush colors
+- brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc8ffe9ad68060d9dfbcafe99133a736237a2bb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 잉크 시작
-응용 프로그램에 디지털 잉크 기능을 통합하는 것이 훨씬 쉬워졌습니다.  잉크는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와의 완벽한 통합을 위해 자연스럽게 프로그래밍 방식의 COM 및 Windows Forms 메서드로 발전했습니다.  따라서 별도로 SDK나 런타임 라이브러리를 설치할 필요가 없습니다.  
+# <a name="getting-started-with-ink"></a>잉크 시작
+디지털 잉크 응용 프로그램에 통합 하는 것이 이전 보다 더 쉽습니다. 잉크가 발전 하 고 완벽 한 통합을 위한 프로그래밍의 COM 및 Windows Forms 메서드를 자연스럽 게 구축 되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 별도 Sdk 또는 런타임 라이브러리를 설치할 필요가 없습니다.  
   
-## 사전 요구 사항  
- 다음 예제를 사용하려면 먼저 Microsoft Visual Studio 2005와 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]를 설치해야 합니다.  또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]용 응용 프로그램을 작성하는 방법을 알고 있어야 합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 시작하는 방법에 대한 자세한 내용은 [연습: WPF 시작](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)을 참조하십시오.  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 다음 예제를 사용 하려면 먼저 설치 해야 Microsoft Visual Studio 2005 및 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]합니다. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]용 응용 프로그램을 작성하는 방법을 알고 있어야 합니다. 시작 하는 방법에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 참조 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
   
-## 퀵 스타트  
- 이 단원에는 잉크를 수집하는 간단한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법에 대한 유용한 정보가 나와 있습니다.  
+## <a name="quick-start"></a>빠른 시작  
+ 이 섹션에서는 간단한을 작성 하는 데 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 잉크를 수집 하는 응용 프로그램입니다.  
   
- 아직 Microsoft Visual Studio 2005 및 [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]를 설치하지 않았다면 지금 설치하십시오.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 대개 컴파일해야만 볼 수 있습니다. 이것은 응용 프로그램이 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]만으로 구성된 경우에도 마찬가지입니다.  하지만 [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]에는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 기반 UI를 구현하는 프로세스를 빠르게 처리할 수 있도록 디자인된 응용 프로그램인 XamlPad가 포함되어 있습니다.  이 응용 프로그램을 사용하면 이 문서의 앞부분에 있는 몇 가지 샘플을 보고 샘플을 사용하여 실습해 볼 수 있습니다.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 컴파일된 응용 프로그램을 만드는 프로세스에 대해서는 이 문서의 뒷부분에서 다룹니다.  
+ 그렇게 이미 하지 않은 경우 Microsoft Visual Studio 2005를 설치 및 [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]응용 프로그램 일반적으로 전에 컴파일되어야 볼 수 공백으로만 구성 된 경우에 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다. 그러나는 [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] 응용 프로그램이 포함 된, XamlPad 구현 과정을 가속화 하도록 디자인 된는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-UI를 기반으로 합니다. 보고 하 여 마다 개별적으로 처음 몇 가지 샘플이이 문서에서는 해당 응용 프로그램을 사용할 수 있습니다. 만드는 과정에서 컴파일된 응용 프로그램 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 이 문서의 뒷부분에서 설명 합니다.  
   
- XAMLPad를 시작하려면 **시작** 메뉴를 클릭하고 **모든 프로그램**, **Microsoft Windows SDK**, **도구**를 차례로 가리킨 다음 **XAMLPad**를 클릭합니다.  XAMLPad는 코드 창에서 작성한 XAML 코드를 렌더링 창에서 렌더링합니다.  XAML 코드를 편집하면 렌더링 창에 변경 사항이 즉시 나타납니다.  
+ XAMLPad를 실행 하려면 클릭는 **시작** 메뉴에서 **모든 프로그램**, 가리킨 **Microsoft Winndows SDK**, 가리킨 **도구**를 클릭 하 고 **XAMLPad**합니다. XAMLPad는 렌더링 창에서 코드 창에서 작성 된 XAML 코드를 렌더링 합니다. XAML 코드를 편집할 수 있으며 변경 내용이 즉시 렌더링 창에 표시 합니다.  
   
-#### 잉크 사용  
- 잉크를 지원하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 처음으로 만들어서 시작하려면 다음과 같이 하십시오.  
+#### <a name="got-ink"></a>잉크 사용  
+ 첫 번째를 시작 하려면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 잉크를 지 원하는 응용 프로그램:  
   
-1.  Microsoft Visual Studio 2005를 엽니다.  
+1.  Microsoft Visual Studio를 2005를 열으십시오  
   
-2.  새 **Windows 응용 프로그램\(WPF\)**을 만듭니다.  
+2.  새 **Windows 응용 프로그램 (WPF)**  
   
-3.  `<Grid>` 태그 사이에 `<InkCanvas/>`를 입력합니다.  
+3.  형식 `<InkCanvas/>` 사이 `<Grid>` 태그  
   
-4.  **F5** 키를 눌러 디버거에서 응용 프로그램을 시작합니다.  
+4.  키를 눌러 **F5** 디버거에서 응용 프로그램을 시작 하려면  
   
-5.  스타일러스나 마우스를 사용하여 창에 hello world를 씁니다.  
+5.  스타일러스 또는 마우스를 사용 하 여, 작성 **hello world** 창에서  
   
- "hello world"에 대한 잉크 응용 프로그램을 12번의 키 입력만으로 만들었습니다.  
+ 잉크 해당 하는 12 키 입력으로는 "hello world" 응용 프로그램을 작성 했습니다!  
   
-#### 응용 프로그램 꾸미기  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 몇 가지 기능을 이용해 보겠습니다.  여는 \<Window\> 태그와 닫는 \<\/Window\> 태그 사이에 있는 모든 요소를 다음 태그로 교체하여 잉크 기능으로 그려지는 표면에 그라데이션 브러시 배경을 추가합니다.  
+#### <a name="spice-up-your-application"></a>응용 프로그램 꾸미기  
+ 일부 기능을 사용 하겠습니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.  열기 사이 있는 모든 대체 \<창 > 태그와 닫는 \</Window > 태그를 다음 태그로 그라데이션 브러시 백그라운드 프로그램 잉크 표면에 얻으려고 합니다.  
   
- [!code-xml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
+ [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
+[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
   
-#### 애니메이션 사용  
- 재미를 위해 그라데이션 브러시의 색에 애니메이션 효과를 추가해 봅니다.  닫는 `</InkCanvas>` 태그와 닫는 `</Page>` 태그 사이에 다음과 같은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 추가합니다.  
+#### <a name="using-animation"></a>애니메이션을 사용 하 여  
+ 쉽도록 애니메이션 그라데이션 브러시의 색을 적용 해 보겠습니다. 다음 추가 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 닫은 후 `</InkCanvas>` 태그 닫히기 전까지 `</Page>` 태그입니다.  
   
- [!code-xml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
+ [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
   
-#### XAML에 몇 가지 코드 추가  
- XAML을 사용하면 사용자 인터페이스를 매우 쉽게 디자인할 수 있지만 실제 응용 프로그램에는 이벤트를 처리하는 코드를 추가해야 합니다.  다음은 마우스 오른쪽 단추를 클릭하여 잉크를 확대하는 단순한 예제입니다.  
+#### <a name="adding-some-code-behind-the-xaml"></a>XAML 뒤에 있는 일부 코드를 추가합니다.  
+ XAML을 사용 하면 매우 쉽게 사용자 인터페이스를 디자인 하려면, 실제 응용 프로그램 이벤트를 처리 하는 코드를 추가 해야 합니다. 잉크 마우스에서 마우스 단추 클릭에 대 한 응답에서을 확대 하는 간단한 예제는 다음과 같습니다.  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 `MouseRightButtonUp` 처리기를 설정합니다.  
+ 설정의 `MouseRightButtonUp` 처리기에 프로그램 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:  
   
- [!code-xml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
+ [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
   
- Visual Studio의 솔루션 탐색기에서 Windows1.xaml을 확장하고 코드 숨김 파일인 Window1.xaml.cs\(Visual Basic을 사용하는 경우 Window1.xaml.vb\)를 엽니다.  다음 이벤트 처리기 코드를 추가합니다.  
+ Visual Studio의 솔루션 탐색기에서 Windows1.xaml를 확장 하 고 코드 숨김 파일 Window1.xaml.cs 또는 Visual Basic을 사용 하는 경우 Window1.xaml.vb를 엽니다. 다음 이벤트 처리기 코드를 추가 합니다.  
   
  [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
  [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
   
- 이제 응용 프로그램을 실행합니다.  잉크를 추가한 후 마우스 오른쪽 단추로 잉크를 클릭하거나 스타일러스로 이와 동등한 누르고 있기 동작을 수행합니다.  
+ 이제 응용 프로그램을 실행 합니다. 잉크를 추가한 다음 마우스 오른쪽 단추로 클릭 하거나 스타일러스로 키를 눌러 보류 동작을 수행 합니다.  
   
-#### XAML 대신 프로시저 코드 사용  
- 프로시저 코드에서 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능에 액세스할 수 있습니다.  다음은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 전혀 사용하지 않는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]용 "Hello Ink World" 응용 프로그램입니다.  Visual Studio에서 다음 코드를 빈 콘솔 응용 프로그램에 붙여 넣습니다.  PresentationCore, PresentationFramework 및 WindowsBase 어셈블리에 대한 참조를 추가하고 **F5** 키를 눌러 응용 프로그램을 빌드합니다.  
+#### <a name="using-procedural-code-instead-of-xaml"></a>프로시저 코드를 사용 하 여 XAML 대신  
+ 모든 액세스할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로시저 코드의 기능입니다. 여기서는 "Hello 잉크 World" 응용 프로그램에 대 한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하나를 사용 하지 않는 하 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 전혀 합니다. Visual Studio에서 빈 콘솔 응용 프로그램에 아래 코드를 붙여 넣습니다. PresentationCore, PresentationFramework, 및 WindowsBase 어셈블리에 대 한 참조를 추가 하 고 키를 눌러 응용 프로그램을 빌드합니다 **F5**:  
   
  [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
  [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
   
-## 참고 항목  
- [디지털 잉크](../../../../docs/framework/wpf/advanced/digital-ink.md)   
- [잉크 수집](../../../../docs/framework/wpf/advanced/collecting-ink.md)   
- [필기 인식](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)   
+## <a name="see-also"></a>참고 항목  
+ [디지털 잉크](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [잉크 수집](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
+ [필기 인식](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
  [잉크 저장](../../../../docs/framework/wpf/advanced/storing-ink.md)
