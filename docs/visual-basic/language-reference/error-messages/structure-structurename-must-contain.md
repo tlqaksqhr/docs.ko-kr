@@ -1,39 +1,37 @@
 ---
-title: "Structure &#39;&lt;structurename&gt;&#39; must contain at least one instance member variable or at least one instance event declaration not marked &#39;Custom&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30941"
-  - "vbc30941"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30941"
+title: "구조 &#39; &lt;structurename&gt;&#39; 인스턴스를 하나 이상 멤버 변수 또는 표시 되지 않은 하나 이상의 이벤트 선언이 &#39; 포함 해야 합니다 사용자 지정 &#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30941
+- vbc30941
+helpviewer_keywords: BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b28dd59271bdaca52072710ea797fae6e9168eab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Structure &#39;&lt;structurename&gt;&#39; must contain at least one instance member variable or at least one instance event declaration not marked &#39;Custom&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-구조체 정의에는 비공유 변수 또는 비공유인 비사용자 지정 이벤트가 포함되지 않습니다.  
+# <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a><span data-ttu-id="f7497-102">구조 &#39; &lt;structurename&gt;&#39; 인스턴스를 하나 이상 멤버 변수 또는 표시 되지 않은 하나 이상의 이벤트 선언이 &#39; 포함 해야 합니다 사용자 지정 &#39;</span><span class="sxs-lookup"><span data-stu-id="f7497-102">Structure &#39;&lt;structurename&gt;&#39; must contain at least one instance member variable or at least one instance event declaration not marked &#39;Custom&#39;</span></span>
+<span data-ttu-id="f7497-103">구조 정의 비공유 변수 또는 비공유 사용자 이벤트가 포함 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f7497-103">A structure definition does not include any nonshared variables or nonshared noncustom events.</span></span>  
   
- 각 구조체에는 모든 인스턴스에 집합적으로 적용되게 아니라\([Shared](../../../visual-basic/language-reference/modifiers/shared.md)\) 특정의 비공유 인스턴스에 각각 적용되는 변수나 이벤트가 있어야 합니다.  비공유 상수, 속성 및 프로시저는 이 요구 사항에 맞지 않습니다.  또한 비공유 변수가 없고 비공유 이벤트가 하나만 있는 경우 해당 이벤트는 `Custom` 이벤트가 될 수 없습니다.  
+ <span data-ttu-id="f7497-104">모든 구조는 변수 또는 비공유 대신 각 특정 인스턴스마다 모든 인스턴스에 전체적으로 적용 되는 이벤트 중 하나에 있어야 합니다 ([Shared](../../../visual-basic/language-reference/modifiers/shared.md)).</span><span class="sxs-lookup"><span data-stu-id="f7497-104">Every structure must have either a variable or an event that applies to each specific instance (nonshared) instead of to all instances collectively ([Shared](../../../visual-basic/language-reference/modifiers/shared.md)).</span></span> <span data-ttu-id="f7497-105">비공유 상수, 속성 및 프로시저가 요구이 사항을 충족 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f7497-105">Nonshared constants, properties, and procedures do not satisfy this requirement.</span></span> <span data-ttu-id="f7497-106">또한 비공유 변수가 및 비공유 이벤트가 하나만 있는 경우 해당 이벤트 일 수 없습니다는 `Custom` 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="f7497-106">In addition, if there are no nonshared variables and only one nonshared event, that event cannot be a `Custom` event.</span></span>  
   
- **오류 ID:** BC30941  
+ <span data-ttu-id="f7497-107">**오류 ID:** BC30941</span><span class="sxs-lookup"><span data-stu-id="f7497-107">**Error ID:** BC30941</span></span>  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f7497-108">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="f7497-108">To correct this error</span></span>  
   
--   `Shared`가 아닌 변수나 이벤트를 하나 이상 정의합니다.  이벤트를 하나만 정의할 경우 이 이벤트는 비공유 이벤트인 동시에 비사용자 지정 이벤트여야 합니다.  
+-   <span data-ttu-id="f7497-109">하나 이상의 변수나 없는 이벤트를 정의 `Shared`합니다.</span><span class="sxs-lookup"><span data-stu-id="f7497-109">Define at least one variable or event that is not `Shared`.</span></span> <span data-ttu-id="f7497-110">하나의 이벤트를 정의 하는 경우 사용자와 공유 되지 않는 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7497-110">If you define only one event, it must be noncustom as well as nonshared.</span></span>  
   
-## 참고 항목  
- [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [How to: Declare a Structure](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a><span data-ttu-id="f7497-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f7497-111">See Also</span></span>  
+ [<span data-ttu-id="f7497-112">구조체</span><span class="sxs-lookup"><span data-stu-id="f7497-112">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="f7497-113">방법: 구조체 선언</span><span class="sxs-lookup"><span data-stu-id="f7497-113">How to: Declare a Structure</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [<span data-ttu-id="f7497-114">Structure 문</span><span class="sxs-lookup"><span data-stu-id="f7497-114">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)

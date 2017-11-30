@@ -1,66 +1,69 @@
 ---
-title: "DataTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataTables
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# DataTables
-<xref:System.Data.DataSet>은 테이블 컬렉션, 관계 및 제약 조건으로 구성되어 있습니다.  ADO.NET에서 <xref:System.Data.DataTable> 개체는 **DataSet**의 테이블을 표시하는 데 사용됩니다.  **DataTable**은 메모리 내 관계형 데이터가 포함된 테이블입니다. 데이터는 .NET 기반 응용 프로그램에 로컬로 상주하지만 Microsoft SQL Server와 같은 데이터 소스에서 **DataAdapter**를 사용하여 이 테이블을 채울 수 있습니다. 자세한 내용은 [DataAdapter에서 데이터 집합 채우기](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)를 참조하세요.  
+# <a name="datatables"></a><span data-ttu-id="d5d13-102">DataTables</span><span class="sxs-lookup"><span data-stu-id="d5d13-102">DataTables</span></span>
+<span data-ttu-id="d5d13-103"><xref:System.Data.DataSet>은 테이블 컬렉션, 관계 및 제약 조건으로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-103">A <xref:System.Data.DataSet> is made up of a collection of tables, relationships, and constraints.</span></span> <span data-ttu-id="d5d13-104">Ado.net에서는 <xref:System.Data.DataTable> 개체의 테이블을 표시 하는 데 사용 됩니다는 **DataSet**합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-104">In ADO.NET, <xref:System.Data.DataTable> objects are used to represent the tables in a **DataSet**.</span></span> <span data-ttu-id="d5d13-105">A **DataTable** 하나의 테이블을 메모리 내 관계형 데이터를 나타내며 데이터에 로컬인는 합니다. .NET 기반 응용 프로그램은 상주 하지만 Microsoft SQL Server를 사용 하 여 같은 데이터 원본에서 채울 수 있습니다는 **DataAdapter** 자세한 내용은 참조 [DataAdapter에서 DataSet 채우기](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .</span><span class="sxs-lookup"><span data-stu-id="d5d13-105">A **DataTable** represents one table of in-memory relational data; the data is local to the .NET-based application in which it resides, but can be populated from a data source such as Microsoft SQL Server using a **DataAdapter** For more information, see [Populating a DataSet from a DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).</span></span>  
   
- .NET Framework 클래스 라이브러리 내에서 **DataTable** 클래스는 **System.Data** 네임스페이스의 멤버입니다.  사용자는 **DataTable**을 **DataSet**의 멤버로 또는 독립적으로 만들어 사용할 수 있으며, <xref:System.Data.DataView> 등의 다른 .NET Framework 개체와 함께 **DataTable** 개체를 사용할 수 있습니다.  **DataSet** 개체의 **Tables** 속성을 통해 **DataSet**의 테이블 컬렉션에 액세스합니다.  
+ <span data-ttu-id="d5d13-106">**DataTable** 클래스의 멤버는는 **System.Data** 네임 스페이스는.NET Framework 클래스 라이브러리 내에서.</span><span class="sxs-lookup"><span data-stu-id="d5d13-106">The **DataTable** class is a member of the **System.Data** namespace within the .NET Framework class library.</span></span> <span data-ttu-id="d5d13-107">만들고 사용 하는 **DataTable** 독립적으로 또는의 구성원으로는 **DataSet**, 및 **DataTable** 개체 다른.NET Framework 개체와 함께에서 사용할 수도 있습니다 포함 하는 <xref:System.Data.DataView>합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-107">You can create and use a **DataTable** independently or as a member of a **DataSet**, and **DataTable** objects can also be used in conjunction with other .NET Framework objects, including the <xref:System.Data.DataView>.</span></span> <span data-ttu-id="d5d13-108">테이블 컬렉션에 액세스 한 **데이터 집합** 통해는 **테이블** 속성의는 **데이터 집합** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-108">You access the collection of tables in a **DataSet** through the **Tables** property of the **DataSet** object.</span></span>  
   
- 테이블의 스키마나 구조는 열이나 제약 조건에 의해 표시됩니다.  **DataTable**의 스키마는 <xref:System.Data.DataColumn> 개체를 비롯하여 <xref:System.Data.ForeignKeyConstraint> 및 <xref:System.Data.UniqueConstraint> 개체를 사용하여 정의합니다.  테이블 열은 데이터 소스 열에 매핑될 수 있습니다. 또한 이 열은 식에서 계산된 값을 포함하며 값을 자동으로 증가시키고 기본 키 값을 포함할 수 있습니다.  
+ <span data-ttu-id="d5d13-109">테이블의 스키마나 구조는 열이나 제약 조건에 의해 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-109">The schema, or structure of a table is represented by columns and constraints.</span></span> <span data-ttu-id="d5d13-110">스키마를 정의 **DataTable** 를 사용 하 여 <xref:System.Data.DataColumn> 개체와 <xref:System.Data.ForeignKeyConstraint> 및 <xref:System.Data.UniqueConstraint> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-110">You define the schema of a **DataTable** using <xref:System.Data.DataColumn> objects as well as <xref:System.Data.ForeignKeyConstraint> and <xref:System.Data.UniqueConstraint> objects.</span></span> <span data-ttu-id="d5d13-111">테이블 열은 데이터 소스 열에 매핑될 수 있습니다. 또한 이 열은 식에서 계산된 값을 포함하며 값을 자동으로 증가시키고 기본 키 값을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-111">The columns in a table can map to columns in a data source, contain calculated values from expressions, automatically increment their values, or contain primary key values.</span></span>  
   
- **DataTable**에는 스키마 이외에도 데이터를 포함하고 정렬하는 데 사용되는 행이 들어 있습니다.  <xref:System.Data.DataRow> 클래스는 테이블에 포함된 실제 데이터를 나타냅니다.  **DataRow**와 해당 속성 및 메서드를 사용하여 테이블의 데이터를 검색, 평가 및 조작할 수 있습니다.  특정 행에 포함되어 있는 데이터에 액세스하여 이 데이터를 변경하는 동안 **DataRow** 개체는 해당 행의 현재 상태와 원래 상태를 모두 유지합니다.  
+ <span data-ttu-id="d5d13-112">스키마 이외에 **DataTable** 행을 포함 하 고 주문 데이터가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-112">In addition to a schema, a **DataTable** must also have rows to contain and order data.</span></span> <span data-ttu-id="d5d13-113"><xref:System.Data.DataRow> 클래스는 테이블에 포함된 실제 데이터를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-113">The <xref:System.Data.DataRow> class represents the actual data contained in a table.</span></span> <span data-ttu-id="d5d13-114">사용 하면는 **DataRow** 및 해당 속성 및 메서드를 검색 하기 위해 평가 하 고 테이블의 데이터를 조작 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-114">You use the **DataRow** and its properties and methods to retrieve, evaluate, and manipulate the data in a table.</span></span> <span data-ttu-id="d5d13-115">액세스 하 고 행 데이터를 변경할 때의 **DataRow** 개체의 현재 및 원래의 상태로 유지 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-115">As you access and change the data within a row, the **DataRow** object maintains both its current and original state.</span></span>  
   
- 테이블에서 하나 이상의 관련 열을 사용하면 테이블 간에 부모\-자식 관계를 만들 수 있습니다.  <xref:System.Data.DataRelation>은 **DataTable** 개체 간의 관계를 만드는 데 사용됩니다.  그런 다음 **DataRelation** 개체를 사용하여 특정 행과 관련된 부모 또는 자식 행을 반환합니다.  자세한 내용은 [DataRelations 추가](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)을 참조하세요.  
+ <span data-ttu-id="d5d13-116">테이블에서 하나 이상의 관련 열을 사용하면 테이블 간에 부모-자식 관계를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-116">You can create parent-child relationships between tables using one or more related columns in the tables.</span></span> <span data-ttu-id="d5d13-117">간의 관계를 만들면 **DataTable** 를 사용 하 여 개체는 <xref:System.Data.DataRelation>합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-117">You create a relationship between **DataTable** objects using a <xref:System.Data.DataRelation>.</span></span> <span data-ttu-id="d5d13-118">**DataRelation** 개체는 특정 행의 관련된 자식 또는 부모 행을 반환 하려면 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-118">**DataRelation** objects can then be used to return the related child or parent rows of a particular row.</span></span> <span data-ttu-id="d5d13-119">자세한 내용은 참조 [Datarelation 추가](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-119">For more information, see [Adding DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).</span></span>  
   
-## 단원 내용  
- [DataTable 만들기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
- **DataTable**을 만들어 **DataSet**에 추가하는 방법에 대해 설명합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="d5d13-120">단원 내용</span><span class="sxs-lookup"><span data-stu-id="d5d13-120">In This Section</span></span>  
+ [<span data-ttu-id="d5d13-121">DataTable 만들기</span><span class="sxs-lookup"><span data-stu-id="d5d13-121">Creating a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ <span data-ttu-id="d5d13-122">만드는 방법을 설명는 **DataTable** 에 추가 하는 **DataSet**합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-122">Explains how to create a **DataTable** and add it to a **DataSet**.</span></span>  
   
- [DataTable 스키마 정의](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- **DataColumn** 개체 및 제약 조건을 만들고 사용하는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="d5d13-123">DataTable 스키마 정의</span><span class="sxs-lookup"><span data-stu-id="d5d13-123">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ <span data-ttu-id="d5d13-124">만들기 및 사용 하는 방법에 대 한 정보를 제공 **DataColumn** 개체 및 제약 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-124">Provides information about creating and using **DataColumn** objects and constraints.</span></span>  
   
- [DataTable에서 데이터 조작](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- 테이블에서 데이터를 추가, 수정 및 삭제하는 방법에 대해 설명합니다.  변경된 테이블 데이터를 검사하기 위해 **DataTable** 이벤트를 사용하는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="d5d13-125">DataTable에서 데이터 조작</span><span class="sxs-lookup"><span data-stu-id="d5d13-125">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ <span data-ttu-id="d5d13-126">테이블에서 데이터를 추가, 수정 및 삭제하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-126">Explains how to add, modify, and delete data in a table.</span></span> <span data-ttu-id="d5d13-127">사용 하는 방법에 설명 **DataTable** 데이터 테이블의 변경 내용을 검사 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-127">Explains how to use **DataTable** events to examine changes to data in the table.</span></span>  
   
- [DataTable 이벤트 처리](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- 열 값을 수정하거나 행을 추가 또는 삭제하는 경우의 이벤트를 포함하여 **DataTable**과 함께 사용할 수 있는 이벤트와 관련된 정보를 제공합니다.  
+ [<span data-ttu-id="d5d13-128">DataTable 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="d5d13-128">Handling DataTable Events</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ <span data-ttu-id="d5d13-129">사용 하기 위해 사용할 수 있는 이벤트에 대 한 정보를 제공는 **DataTable**, 열 값이 수정 되 고 행이 추가 되거나 삭제 될 때 이벤트를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-129">Provides information about the events available for use with a **DataTable**, including events when column values are modified and rows are added or deleted.</span></span>  
   
-## 관련 단원  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, 이를 사용하여 기존 데이터 소스에 액세스하고 응용 프로그램 데이터를 관리하는 방법을 설명합니다.  
+## <a name="related-sections"></a><span data-ttu-id="d5d13-130">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d5d13-130">Related Sections</span></span>  
+ [<span data-ttu-id="d5d13-131">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d5d13-131">ADO.NET</span></span>](../../../../../docs/framework/data/adonet/index.md)  
+ <span data-ttu-id="d5d13-132">ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, 이를 사용하여 기존 데이터 소스에 액세스하고 응용 프로그램 데이터를 관리하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-132">Describes the ADO.NET architecture and components, and how to use them to access existing data sources and manage application data.</span></span>  
   
- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- 테이블 간의 관계를 만드는 방법을 포함하여 ADO.NET **DataSet**에 대한 정보를 제공합니다.  
+ [<span data-ttu-id="d5d13-133">DataSet, DataTable 및 DataView</span><span class="sxs-lookup"><span data-stu-id="d5d13-133">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="d5d13-134">ADO.NET에 대 한 정보를 제공 **DataSet** 테이블 간의 관계를 만드는 방법에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-134">Provides information about the ADO.NET **DataSet** including how to create relationships between tables.</span></span>  
   
- [Constraint Class](frlrfSystemDataConstraintClassTopic)  
- **Constraint** 개체와 관련된 참조 정보를 제공합니다.  
+ <xref:System.Data.Constraint>  
+ <span data-ttu-id="d5d13-135">에 대 한 참조 정보를 제공는 **제약 조건** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-135">Provides reference information about the **Constraint** object.</span></span>  
   
- [DataColumn 클래스](frlrfSystemDataDataColumnClassTopic)  
- **DataColumn** 개체와 관련된 참조 정보를 제공합니다.  
+ <xref:System.Data.DataColumn>  
+ <span data-ttu-id="d5d13-136">에 대 한 참조 정보를 제공는 **DataColumn** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-136">Provides reference information about the **DataColumn** object.</span></span>  
   
- [DataSet 클래스](frlrfSystemDataDataSetClassTopic)  
- **DataSet** 개체와 관련된 참조 정보를 제공합니다.  
+ <xref:System.Data.DataSet>  
+ <span data-ttu-id="d5d13-137">에 대 한 참조 정보를 제공는 **DataSet** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-137">Provides reference information about the **DataSet** object.</span></span>  
   
- [DataTable 클래스](frlrfSystemDataDataTableClassTopic)  
- **DataTable** 개체와 관련된 참조 정보를 제공합니다.  
+ <xref:System.Data.DataTable>  
+ <span data-ttu-id="d5d13-138">에 대 한 참조 정보를 제공는 **DataTable** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-138">Provides reference information about the **DataTable** object.</span></span>  
   
- [클래스 라이브러리 개요](../../../../../docs/standard/class-library-overview.md)  
- **System** 네임스페이스를 포함하는 .NET Framework 클래스 라이브러리뿐만 아니라 이 라이브러리의 2차 네임스페이스인 **System.Data**에 대해 간략하게 설명합니다.  
+ [<span data-ttu-id="d5d13-139">클래스 라이브러리 개요</span><span class="sxs-lookup"><span data-stu-id="d5d13-139">Class Library Overview</span></span>](../../../../../docs/standard/class-library-overview.md)  
+ <span data-ttu-id="d5d13-140">.NET Framework 클래스 라이브러리에 간략하게 포함 하는 **시스템** 네임 스페이스의 2 차 네임 스페이스 뿐만 아니라 **System.Data**합니다.</span><span class="sxs-lookup"><span data-stu-id="d5d13-140">Provides an overview of the .NET Framework class library, including the **System** namespace as well as its second-level namespace, **System.Data**.</span></span>  
   
-## 참고 항목  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d5d13-141">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d5d13-141">See Also</span></span>  
+ [<span data-ttu-id="d5d13-142">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="d5d13-142">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

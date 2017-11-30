@@ -1,1 +1,1 @@
-IDE(통합 개발 환경)
+<span data-ttu-id="27eb7-101">IDE(통합 개발 환경)</span><span class="sxs-lookup"><span data-stu-id="27eb7-101">Integrated Development Environment (IDE)</span></span>

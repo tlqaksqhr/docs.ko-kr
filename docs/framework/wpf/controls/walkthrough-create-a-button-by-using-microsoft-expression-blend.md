@@ -1,262 +1,265 @@
 ---
-title: "연습: Microsoft Expression Blend를 사용하여 단추 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "단추"
-  - "변환, 단추에 도형 사용"
-  - "Expression Blend[WPF Designer]"
+title: "연습: Microsoft Expression Blend를 사용하여 단추 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- buttons [WPF]
+- converting [WPF], shape to button
+- Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1371fdc3582e2ebe052442b15ecb2d5cf0b2865a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 연습: Microsoft Expression Blend를 사용하여 단추 만들기
-이 연습에서는 Microsoft Expression Blend를 사용하여 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 사용자 지정 단추를 만드는 과정을 단계별로 설명합니다.  
+# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a><span data-ttu-id="0e544-102">연습: Microsoft Expression Blend를 사용하여 단추 만들기</span><span class="sxs-lookup"><span data-stu-id="0e544-102">Walkthrough: Create a Button by Using Microsoft Expression Blend</span></span>
+<span data-ttu-id="0e544-103">이 연습 단계를 만드는 과정을 안내는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Microsoft Expression Blend를 사용 하 여 사용자 지정 된 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-103">This walkthrough steps you through the process of creating a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] customized button using Microsoft Expression Blend.</span></span>  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend는 실행 프로그램을 만들기 위해 컴파일되는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 생성하여 작동합니다.  직접 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 사용하려는 경우에는 Blend 대신 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]에서 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 사용하여 동일한 응용 프로그램을 만드는 다른 연습을 진행할 수 있습니다.  자세한 내용은 [XAML을 사용하여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)를 참조하십시오.  
+>  <span data-ttu-id="0e544-104">Microsoft Expression Blend를 생성 하 여 작동 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 실행 프로그램을 확인 한 다음 컴파일됩니다입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-104">Microsoft Expression Blend works by generating [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] that is then compiled to make the executable program.</span></span> <span data-ttu-id="0e544-105">하면 사용 하려는 경우 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 를 직접는이 수행 하 여와 같은 응용 프로그램을 만드는 다른 연습을 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 와 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Blend 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-105">If you would rather work with [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] directly, there is another walkthrough that creates the same application as this one using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] with [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] rather than Blend.</span></span> <span data-ttu-id="0e544-106">참조 [xaml을 사용 하 여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) 자세한 정보에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-106">See [Create a Button by Using XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) for more information.</span></span>  
   
- 다음 그림에서는 사용자가 만들 사용자 지정 단추를 보여 줍니다.  
+ <span data-ttu-id="0e544-107">다음 그림 만들기는 사용자 지정된 단추를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-107">The following illustration shows the customized button that you will create.</span></span>  
   
- ![만들게 될 사용자 지정된 단추](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.png "custom\_button\_blend\_Intro")  
+ <span data-ttu-id="0e544-108">![만들 사용자 지정된 단추](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")</span><span class="sxs-lookup"><span data-stu-id="0e544-108">![The customized button that you will create](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")</span></span>  
   
-## 모양을 단추로 변환  
- 이 연습의 첫 번째 부분에서는 사용자 지정 단추의 사용자 지정 모양을 만듭니다.  이렇게 하려면 먼저 사각형을 단추로 변환합니다.  그런 다음 단추 템플릿에 다른 모양을 추가하여 보다 복잡한 단추를 만듭니다.  처음부터 일반 단추를 사용하여 사용자 지정하지 않는 이유는  단추에는 사용자가 필요로 하지 않는 기본 제공 기능이 포함되어 있기 때문이며 사각형을 사용하여 시작하는 것이 더 쉽습니다.  
+## <a name="convert-a-shape-to-a-button"></a><span data-ttu-id="0e544-109">도형을 단추로 변환</span><span class="sxs-lookup"><span data-stu-id="0e544-109">Convert a Shape to a Button</span></span>  
+ <span data-ttu-id="0e544-110">이 연습의 첫 번째 부분에서 사용자 지정 모양을 사용자 지정 단추를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-110">In the first part of this walkthrough you create the custom look of the custom button.</span></span> <span data-ttu-id="0e544-111">이 수행 하려면 먼저를 단추에는 사각형을 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-111">To do this, you first convert a rectangle to a button.</span></span> <span data-ttu-id="0e544-112">다음 추가 셰이프를 추가 단추를 템플릿에 더 복잡 한 모양의 단추를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-112">You then add additional shapes to the template of the button, creating a more complex looking button.</span></span> <span data-ttu-id="0e544-113">일반 단추로 시작 하 고 사용자 지정할 수 없습니까?</span><span class="sxs-lookup"><span data-stu-id="0e544-113">Why not start with a regular button and customize it?</span></span> <span data-ttu-id="0e544-114">단추에 필요 하지 않은; 기본 제공 기능이 있기 때문에 사용자 지정 단추에 대 한 사각형을 시작 하려면 쉽습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-114">Because a button has built-in functionality that you do not need; for custom buttons, it is easier to start with a rectangle.</span></span>  
   
-#### Expression Blend에서 새 프로젝트를 만들려면  
+#### <a name="to-create-a-new-project-in-expression-blend"></a><span data-ttu-id="0e544-115">Expression Blend에서 새 프로젝트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="0e544-115">To create a new project in Expression Blend</span></span>  
   
-1.  Expression Blend를 시작합니다.  **시작**을 클릭하고 **모든 프로그램**, **Microsoft Expression**을 차례로 가리킨 다음 **Microsoft Expression Blend**를 클릭하여 Expression Blend를 시작합니다.  
+1.  <span data-ttu-id="0e544-116">Expression Blend를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-116">Start Expression Blend.</span></span> <span data-ttu-id="0e544-117">(클릭 **시작**, 가리킨 **모든 프로그램**, 가리킨 **Microsoft 식**, 클릭 하 고 **Microsoft Expression Blend**.)</span><span class="sxs-lookup"><span data-stu-id="0e544-117">(Click **Start**, point to **All Programs**, point to **Microsoft Expression**, and then click **Microsoft Expression Blend**.)</span></span>  
   
-2.  필요한 경우 응용 프로그램을 최대화합니다.  
+2.  <span data-ttu-id="0e544-118">필요한 경우 응용 프로그램을 최대화 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-118">Maximize the application if needed.</span></span>  
   
-3.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
+3.  <span data-ttu-id="0e544-119">**파일** 메뉴에서 **새 프로젝트**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-119">On the **File** menu, click **New Project**.</span></span>  
   
-4.  **표준 응용 프로그램\(.exe\)**을 선택합니다.  
+4.  <span data-ttu-id="0e544-120">선택 **표준 응용 프로그램 (.exe)**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-120">Select **Standard Application (.exe)**.</span></span>  
   
-5.  프로젝트 이름을 `CustomButton`으로 지정하고 **확인**을 누릅니다.  
+5.  <span data-ttu-id="0e544-121">프로젝트 이름을 `CustomButton` 누릅니다 **확인**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-121">Name the project `CustomButton` and press **OK**.</span></span>  
   
- 그러면 빈 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 프로젝트가 표시됩니다.  F5 키를 눌러 응용 프로그램을 실행합니다.  예상대로 응용 프로그램이 빈 창으로만 구성됩니다.  다음으로 모퉁이가 둥근 사각형을 만들어 단추로 변환합니다.  
+ <span data-ttu-id="0e544-122">이 시점에서 비어 있는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 프로젝트.</span><span class="sxs-lookup"><span data-stu-id="0e544-122">At this point you have a blank [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] project.</span></span> <span data-ttu-id="0e544-123">F5 키를 눌러 응용 프로그램을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-123">You can press F5 to run the application.</span></span> <span data-ttu-id="0e544-124">예상 대로 응용 프로그램 빈 창이 이루어져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-124">As you might expect, the application consists of only a blank window.</span></span> <span data-ttu-id="0e544-125">다음으로, 모서리가 둥근된 사각형을 만들고 단추로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-125">Next, you create a rounded rectangle and convert it into a button.</span></span>  
   
-#### 사각형을 단추로 변환하려면  
+#### <a name="to-convert-a-rectangle-to-a-button"></a><span data-ttu-id="0e544-126">단추에 사각형을 변환 하려면</span><span class="sxs-lookup"><span data-stu-id="0e544-126">To convert a Rectangle to a Button</span></span>  
   
-1.  **창 배경 속성을 검정으로 설정.** 창을 선택하고 **속성** 탭을 클릭한 다음 <xref:System.Windows.Controls.Control.Background%2A> 속성을 `Black`으로 설정합니다.  
+1.  <span data-ttu-id="0e544-127">**창 배경 속성 검정색으로 설정:** 창을 선택를 클릭는 **속성 탭**를 설정 하 고는 <xref:System.Windows.Controls.Control.Background%2A> 속성을 `Black`합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-127">**Set the Window Background property to black:** Select the Window, click the **Properties Tab**, and set the <xref:System.Windows.Controls.Control.Background%2A> property to `Black`.</span></span>  
   
-     ![단추의 배경색을 검은색으로 설정하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom\_button\_blend\_ChangeBackground")  
+     <span data-ttu-id="0e544-128">![단추의 배경을 검정색으로 설정 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")</span><span class="sxs-lookup"><span data-stu-id="0e544-128">![How to set the background of a button to black](../../../../docs/framework/wpf/controls/media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")</span></span>  
   
-2.  **창에서 단추 크기에 가깝게 사각형 그리기.** 왼쪽 도구 패널에서 사각형 도구를 선택하고 사각형을 창으로 끌어 옵니다.  
+2.  <span data-ttu-id="0e544-129">**창에 있는 단추의 크기 약 사각형 그리기:** 왼쪽 도구 패널에 사각형 도구를 선택 하 고 창으로 사각형으로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-129">**Draw a rectangle approximately the size of a button on the Window:** Select the rectangle tool on the left-hand tool panel and drag the rectangle onto the Window.</span></span>  
   
-     ![사각형을 그리는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom\_button\_blend\_DrawRect")  
+     <span data-ttu-id="0e544-130">![사각형을 그리는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")</span><span class="sxs-lookup"><span data-stu-id="0e544-130">![How to draw a rectangle](../../../../docs/framework/wpf/controls/media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")</span></span>  
   
-3.  **사각형의 모퉁이를 둥글게 만들기.** 사각형의 제어점을 끌거나 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 및 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 속성을 직접 설정합니다.  <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 및 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>의 값을 20으로 설정합니다.  
+3.  <span data-ttu-id="0e544-131">**사각형의 모퉁이:** 사각형의 제어점 끌어 하거나 직접 설정는 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 및 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-131">**Round out the corners of the rectangle:** Either drag the control points of the rectangle or directly set the <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> and <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> properties.</span></span> <span data-ttu-id="0e544-132">값을 설정할 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 및 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 20입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-132">Set the values of <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> and <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> to 20.</span></span>  
   
-     ![사각형의 모서리를 둥글게 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom\_button\_blend\_RoundCorners")  
+     <span data-ttu-id="0e544-133">![둥근 사각형의 모서리를 확인 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")</span><span class="sxs-lookup"><span data-stu-id="0e544-133">![How to make the corners of a rectangle round](../../../../docs/framework/wpf/controls/media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")</span></span>  
   
-4.  **사각형을 단추로 변경.** 사각형을 선택합니다.  **도구** 메뉴에서 **단추 만들기**를 클릭합니다.  
+4.  <span data-ttu-id="0e544-134">**사각형을 단추로 변경한:** 사각형을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-134">**Change the rectangle into a button:** Select the rectangle.</span></span> <span data-ttu-id="0e544-135">에 **도구** 메뉴를 클릭 하 여 **단추 만들기**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-135">On the **Tools** menu, click **Make Button**.</span></span>  
   
-     ![도형을 단추로 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom\_button\_blend\_MakeButton")  
+     <span data-ttu-id="0e544-136">![단추에 셰이프를 확인 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")</span><span class="sxs-lookup"><span data-stu-id="0e544-136">![How to make a shape into a button](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")</span></span>  
   
-5.  **스타일\/템플릿의 범위 지정.** 다음과 같은 대화 상자가 나타납니다.  
+5.  <span data-ttu-id="0e544-137">**스타일/template의 범위 지정:** 다음과 같은 결과 같은 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="0e544-137">**Specify the scope of the style/template:** A dialog box like the following appears.</span></span>  
   
-     !["스타일 리소스 만들기" 대화 상자](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom\_button\_blend\_MakeButton2")  
+     <span data-ttu-id="0e544-138">!["스타일 리소스 만들기" 대화 상자](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")</span><span class="sxs-lookup"><span data-stu-id="0e544-138">![The "Create Style Resource" dialog box](../../../../docs/framework/wpf/controls/media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")</span></span>  
   
-     **리소스 이름\(키\)**에 대해 **모든 항목에 적용**을 선택합니다.  그러면 결과 스타일 및 단추 템플릿이 모든 단추 개체에 적용됩니다.  **정의 위치**에 대해 **응용 프로그램**을 선택합니다.  그러면 결과 스타일 및 단추 템플릿의 범위가 전체 응용 프로그램이 됩니다.  이러한 두 상자에 값을 설정하면 단추 스타일 및 템플릿이 전체 응용 프로그램 내에 있는 모든 단추에 적용되고 응용 프로그램에서 만드는 모든 단추는 기본적으로 이 템플릿을 사용하게 됩니다.  
+     <span data-ttu-id="0e544-139">에 대 한 **리소스 이름 (키)**선택, **모두 적용**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-139">For **Resource name (Key)**, select **Apply to all**.</span></span>  <span data-ttu-id="0e544-140">이렇게 하면 결과 스타일 및 단추 템플릿은 단추가 있는 모든 개체에 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-140">This will make the resulting style and button template apply to all objects that are buttons.</span></span> <span data-ttu-id="0e544-141">에 대 한 **에서 정의**선택, **응용 프로그램**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-141">For **Define in**, select **Application**.</span></span> <span data-ttu-id="0e544-142">이렇게 하면 결과 스타일 및 범위는 전체 응용 프로그램에 대 한 단추 템플릿이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-142">This will make the resulting style and button template have scope over the entire application.</span></span> <span data-ttu-id="0e544-143">전체 응용 프로그램 내에서 모든 단추에 적용 하는 단추 스타일 및 서식 파일 및 응용 프로그램에서 만드는 모든 단추는 기본적으로 이러한 두 상자에 값을 설정할 때이 템플릿을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-143">When you set the values in these two boxes, the button style and template apply to all buttons within the entire application and any button you create in the application will, by default, use this template.</span></span>  
   
-## 단추 템플릿 편집  
- 이제 단추로 변경된 사각형이 만들어졌습니다.  이 단원에서는 단추의 템플릿을 수정하고 모양을 추가적으로 사용자 지정합니다.  
+## <a name="edit-the-button-template"></a><span data-ttu-id="0e544-144">편집 단추 템플릿</span><span class="sxs-lookup"><span data-stu-id="0e544-144">Edit the Button Template</span></span>  
+ <span data-ttu-id="0e544-145">단추에 변경 된 사각형을 생깁니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-145">You now have a rectangle that has been changed to a button.</span></span> <span data-ttu-id="0e544-146">이 섹션에서는 단추 서식 파일을 수정 하 고 어떻게 나타나는지를 추가로 사용자 지정할 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-146">In this section, you'll modify the template of the button and further customize how it looks.</span></span>  
   
-#### 단추 템플릿을 편집하여 단추 모양을 변경하려면  
+#### <a name="to-edit-the-button-template-to-change-the-button-appearance"></a><span data-ttu-id="0e544-147">단추 모양을 변경 하려면 단추 템플릿을 편집 하려면</span><span class="sxs-lookup"><span data-stu-id="0e544-147">To edit the button template to change the button appearance</span></span>  
   
-1.  **템플릿 편집 뷰로 이동.** 단추의 모양을 추가적으로 사용자 지정하려면 단추 템플릿을 편집해야 합니다.  이 템플릿은 사각형을 단추로 변환할 때 만들었습니다.  단추 템플릿을 편집하려면 단추를 마우스 오른쪽 단추로 클릭하고 **컨트롤 구성 요소\(템플릿\) 편집**을 선택한 다음 **템플릿 편집**을 클릭합니다.  
+1.  <span data-ttu-id="0e544-148">**템플릿 편집 뷰로 이동:** 단추의 모양을 추가로 사용자 지정 하려면 단추 서식 파일을 편집 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-148">**Go into edit template view:** To further customize the look of our button, we need to edit the button template.</span></span> <span data-ttu-id="0e544-149">단추에는 사각형으로 변환할 때이 템플릿을 만들었습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-149">This template was created when we converted the rectangle into a button.</span></span> <span data-ttu-id="0e544-150">단추 서식 파일을 편집 하려면 단추를 마우스 오른쪽 단추로 클릭 하 고 선택 **컨트롤 구성 요소 (템플릿)** 차례로 **템플릿 편집**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-150">To edit the button template, right-click the button and select **Edit Control Parts (Template)** and then **Edit Template**.</span></span>  
   
-     ![템플릿을 편집하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom\_button\_blend\_EditTemplate")  
+     <span data-ttu-id="0e544-151">![서식 파일을 편집 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")</span><span class="sxs-lookup"><span data-stu-id="0e544-151">![How to edit a template](../../../../docs/framework/wpf/controls/media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")</span></span>  
   
-     템플릿 편집기에서 이제 단추가 <xref:System.Windows.Shapes.Rectangle>과 <xref:System.Windows.Controls.ContentPresenter>로 분리된 것을 확인할 수 있습니다.  <xref:System.Windows.Controls.ContentPresenter>는 "Button"이라는 문자열과 같은 콘텐츠를 단추 내에 표시하는 데 사용됩니다.  사각형과 <xref:System.Windows.Controls.ContentPresenter>는 모두 <xref:System.Windows.Controls.Grid> 내에 배치됩니다.  
+     <span data-ttu-id="0e544-152">템플릿 편집기에서 단추가 이제으로 분리 되어 있는지를 확인 한 <xref:System.Windows.Shapes.Rectangle> 및 <xref:System.Windows.Controls.ContentPresenter>합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-152">In the template editor, notice that the button is now separated into a <xref:System.Windows.Shapes.Rectangle> and the <xref:System.Windows.Controls.ContentPresenter>.</span></span> <span data-ttu-id="0e544-153"><xref:System.Windows.Controls.ContentPresenter> 단추 (예를 들어 문자열 "단추") 내에서 콘텐츠를 제공 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-153">The <xref:System.Windows.Controls.ContentPresenter> is used to present content within the button (for example, the string "Button").</span></span> <span data-ttu-id="0e544-154">두 사각형 및 <xref:System.Windows.Controls.ContentPresenter> 내에 배치 되는 <xref:System.Windows.Controls.Grid>합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-154">Both the rectangle and <xref:System.Windows.Controls.ContentPresenter> are laid out inside of a <xref:System.Windows.Controls.Grid>.</span></span>  
   
-     ![사각형 표현의 구성 요소](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom\_button\_blend\_TemplatePanel")  
+     <span data-ttu-id="0e544-155">![사각형 표현의 구성 요소](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom_button_blend_TemplatePanel")</span><span class="sxs-lookup"><span data-stu-id="0e544-155">![Components in the presentation of a rectangle](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatepanel.png "custom_button_blend_TemplatePanel")</span></span>  
   
-2.  **템플릿 구성 요소의 이름 변경.** 템플릿 인벤터리에서 사각형을 마우스 오른쪽 단추로 클릭한 다음 <xref:System.Windows.Shapes.Rectangle> 이름을 "\[Rectangle\]"에서 "outerRectangle"로 변경하고 "\[ContentPresenter\]"를 "myContentPresenter"로 변경합니다.  
+2.  <span data-ttu-id="0e544-156">**템플릿 구성의 이름을 변경:** 템플릿 인벤토리, 변경 된 사각형을 마우스 오른쪽 단추로 클릭는 <xref:System.Windows.Shapes.Rectangle> "차원적"를 "[사각형]"에서 이름을 지정 하 고 "[ContentPresenter]" "요소의"로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-156">**Change the names of the template components:** Right-click the rectangle in the template inventory, change the <xref:System.Windows.Shapes.Rectangle> name from "[Rectangle]" to "outerRectangle", and change "[ContentPresenter]" to "myContentPresenter".</span></span>  
   
-     ![템플릿의 구성 요소 이름을 변경하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom\_button\_blend\_RenameComponents")  
+     <span data-ttu-id="0e544-157">![서식 파일의 구성 요소 이름을 바꾸는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")</span><span class="sxs-lookup"><span data-stu-id="0e544-157">![How to rename a component of a template](../../../../docs/framework/wpf/controls/media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")</span></span>  
   
-3.  **도넛처럼 안이 비도록 사각형 변경.** **outerRectangle**을 선택한 다음 <xref:System.Windows.Shapes.Shape.Fill%2A>을 "Transparent"로 설정하고 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>를 5로 설정합니다.  
+3.  <span data-ttu-id="0e544-158">**사각형을 변경 하는 (예: 도넛형) 안에 비어:** 선택 **차원적** 설정 <xref:System.Windows.Shapes.Shape.Fill%2A> "transparent" 및 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 5입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-158">**Alter the rectangle so that it is empty inside (like a donut):** Select **outerRectangle** and set <xref:System.Windows.Shapes.Shape.Fill%2A> to "Transparent" and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> to 5.</span></span>  
   
-     ![빈 사각형을 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom\_button\_blend\_ChangeRectProperties")  
+     <span data-ttu-id="0e544-159">![빈 사각형을 확인 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")</span><span class="sxs-lookup"><span data-stu-id="0e544-159">![How to make a rectangle empty](../../../../docs/framework/wpf/controls/media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")</span></span>  
   
-     그런 다음 <xref:System.Windows.Shapes.Shape.Stroke%2A>를 변경될 템플릿의 색으로 설정합니다.  이렇게 하려면 **스트로크** 옆에 있는 작은 흰색 상자를 클릭하고 **CustomExpression**을 선택한 다음 대화 상자에 "{TemplateBinding Background}"를 입력합니다.  
+     <span data-ttu-id="0e544-160">다음 설정의 <xref:System.Windows.Shapes.Shape.Stroke%2A> 템플릿을 수 무엇이 든의 색입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-160">Then set the <xref:System.Windows.Shapes.Shape.Stroke%2A> to the color of whatever the template will be.</span></span> <span data-ttu-id="0e544-161">이 작업을 수행 하려면 작은 흰색 상자 옆에 **획**을 선택 **CustomExpression**, 대화 상자에 "{TemplateBinding 배경}"를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-161">To do this, click the small white box next to **Stroke**, select **CustomExpression**, and type "{TemplateBinding Background}" in the dialog box.</span></span>  
   
-     ![템플릿의 색 사용을 설정하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom\_button\_blend\_TemplateStroke")  
+     <span data-ttu-id="0e544-162">![템플릿의 색 사용을 설정 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")</span><span class="sxs-lookup"><span data-stu-id="0e544-162">![How to set the use the color of the template](../../../../docs/framework/wpf/controls/media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")</span></span>  
   
-4.  **안쪽 사각형 만들기.** 이제 "innerRectangle"이라는 다른 사각형을 만들고 **outerRectangle** 내부에 대칭적으로 배치합니다.  이러한 종류의 작업을 수행할 때는 편집 영역에서 단추가 보다 크게 표시되도록 확대할 수 있습니다.  
-  
-    > [!NOTE]
-    >  사용자가 만드는 사각형은 모퉁이가 둥근 등 그림의 사각형과 모양이 다를 수 있습니다.  
-  
-     ![다른 사각형 안에 사각형을 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom\_button\_blend\_innerRectangleProperties")  
-  
-5.  **ContentPresenter를 위로 이동.** 이 시점에서는 "Button"이라는 텍스트가 더 이상 표시되지 않을 수 있습니다.  그 이유는 **innerRectangle**이 **myContentPresenter** 위에 있기 때문입니다.  이 문제를 수정하려면 **myContentPresenter**를 **innerRectangle** 아래로 끌어 옵니다.  아래와 같이 보이도록 사각형과 **myContentPresenter**의 위치를 조정합니다.  
+4.  <span data-ttu-id="0e544-163">**내부 사각형 만들기:** 이제 다른 사각형을 만듭니다 ("그" 이름을) 대칭적의 안쪽에 배치 **차원적** 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-163">**Create an inner rectangle:** Now, create another rectangle (name it "innerRectangle") and position it symmetrically on the inside of **outerRectangle** .</span></span> <span data-ttu-id="0e544-164">이러한 종류의 작업에 대 한 편집 영역에서 더 큰 단추 만들기를 확대/축소 하려고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-164">For this kind of work, you will probably want to zoom to make the button larger in the editing area.</span></span>  
   
     > [!NOTE]
-    >  **myContentPresenter**를 마우스 오른쪽 단추로 클릭하고 **앞으로 가져오기**을 눌러 해당 개체를 위에 배치할 수도 있습니다.  
+    >  <span data-ttu-id="0e544-165">사각형에 그림에 있는 것 보다 다르게 보일 수 있습니다 (예를 들어 것 수 둥글게).</span><span class="sxs-lookup"><span data-stu-id="0e544-165">Your rectangle might look different than the one in the figure (for example, it might have rounded corners).</span></span>  
   
-     ![한 단추를 다른 단추 위로 이동하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom\_button\_blend\_innerRectangle2")  
+     <span data-ttu-id="0e544-166">![다른 사각형 안에 사각형을 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")</span><span class="sxs-lookup"><span data-stu-id="0e544-166">![How to create a rectangle inside another rectangle](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")</span></span>  
   
-6.  **innerRectangle의 모양 변경:** <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 및 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 값을 20으로 설정합니다.  또한 사용자 지정 식 "{TemplateBinding Background}"를 사용하여 <xref:System.Windows.Shapes.Shape.Fill%2A>을 템플릿의 배경으로 설정하고 <xref:System.Windows.Shapes.Shape.Stroke%2A>를 "transparent"로 설정합니다.  **innerRectangle**의 <xref:System.Windows.Shapes.Shape.Fill%2A> 및 <xref:System.Windows.Shapes.Shape.Stroke%2A>에 대한 설정은 **outerRectangle**의 해당 설정과 반대입니다.  
-  
-     ![사각형의 모양을 변경하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom\_button\_blend\_glassRectangleProperties1")  
-  
-7.  **위에 투명 효과 레이어 추가.** 단추의 모양을 사용자 지정하는 마지막 단계에서는 위에 투명 효과 레이어를 추가합니다.  이 투명 효과 레이어는 세 번째 사각형을 구성합니다.  투명 효과는 전체 단추를 덮어야 하므로 투명 효과 사각형이 차원적으로 **outerRectangle**과 유사합니다.  따라서 간단하게 **outerRectangle**을 복사하여 사각형을 만듭니다.  **outerRectangle**을 강조 표시하고 Ctrl\+C 및 Ctrl\+V를 사용하여 복사본을 만듭니다.  이 새 사각형의 이름을 "glassCube"로 지정합니다.  
-  
-8.  **필요한 경우 glassCube의 위치 조정.** 아직 전체 단추가 덮이도록 **glassCube**를 배치하지 않은 경우에는 끌어 와서 적절하게 배치합니다.  
-  
-9. **glassCube의 모양을 outerRectangle과 약간 다르게 지정.** **glassCube**의 속성을 변경합니다.  먼저 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 및 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 속성을 10으로 변경하고 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>를 2로 변경합니다.  
-  
-     ![glassCube에 대한 모양 설정](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom\_button\_blend\_GlassCubeAppearance")  
-  
-10. **glassCube에 투명 효과 적용.** 불투명도가 75%인 선형 그라데이션을 사용하여 <xref:System.Windows.Shapes.Shape.Fill%2A>에 투명 효과를 적용하고 거의 균일한 6개의 간격을 따라 White와 Transparent를 번갈아 적용합니다.  그라데이션 중지점의 설정 값은 다음과 같습니다.  
-  
-    -   그라데이션 중지점 1: 알파 값이 75%인 White  
-  
-    -   그라데이션 중지점 2: 투명  
-  
-    -   그라데이션 중지점 3: 알파 값이 75%인 White  
-  
-    -   그라데이션 중지점 4: 투명  
-  
-    -   그라데이션 중지점 5: 알파 값이 75%인 White  
-  
-    -   그라데이션 중지점 6: 투명  
-  
-     이렇게 하면 "물결치는" 투명 효과 모양이 만들어집니다.  
-  
-     ![유리처럼 보이는 사각형](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom\_button\_blend\_glassRectangleProperties2")  
-  
-11. **투명 효과 레이어 숨기기.** 투명 효과 레이어를 만들어 보았으니 이제 **속성** 패널의 **모양** 창으로 이동하고 불투명도를 0%로 설정하여 해당 레이어를 숨겨 봅니다.  다음 단원에서는 속성 트리거 및 이벤트를 사용하여 투명 효과 레이어를 표시하고 조작합니다.  
-  
-     ![투명 효과 사각형을 숨기는 방법](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom\_button\_glassRectangleProperties3")  
-  
-## 단추 동작 사용자 지정  
- 이 시점에서는 해당 템플릿을 편집하여 단추 표시를 사용자 지정했음에도 불구하고 마우스를 해당 항목 위로 이동하거나, 포커스를 받거나, 클릭할 때 모양이 변경되는 일반적인 단추처럼 해당 단추가 사용자 작업에 반응하지 않습니다. 다음 두 절차에서는 이러한 동작을 사용자 지정 단추에 빌드하는 방법을 보여 줍니다.  먼저 간단한 속성 트리거를 사용하고 이벤트 트리거 및 애니메이션을 추가합니다.  
-  
-#### 속성 트리거를 설정하려면  
-  
-1.  **새 속성 트리거 만들기.** **glassCube**가 선택된 상태에서 다음 단계 아래의 그림과 같이 **트리거** 패널에서 **\+ 속성**을 클릭합니다.  이렇게 하면 기본 속성 트리거를 사용하여 속성 트리거가 만들어집니다.  
-  
-2.  **트리거에서 IsMouseOver 속성을 사용하도록 만들기.** 속성을 <xref:System.Windows.UIElement.IsMouseOver%2A>로 변경합니다.  이렇게 하면 <xref:System.Windows.UIElement.IsMouseOver%2A> 속성이 `true`인 경우, 즉 사용자가 마우스로 단추를 가리키는 경우 속성 트리거가 활성화됩니다.  
-  
-     ![속성에 트리거를 설정하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom\_button\_blend\_IsMousedOverPropertyTrigger")  
-  
-3.  **glassCube에 대해 IsMouseOver 트리거의 불투명도를 100%로 지정.** **트리거 기록 설정**\(위 그림 참조\)을 확인합니다.  이는 기록이 진행되는 동안 **glassCube**의 속성 값에 대해 변경하는 내용이 <xref:System.Windows.UIElement.IsMouseOver%2A>가 `true`인 경우 발생하는 작업이 됨을 의미합니다.  기록이 진행되는 동안 **glassCube**의 <xref:System.Windows.UIElement.Opacity%2A>를 100%로 변경합니다.  
-  
-     ![단추의 불투명도를 설정하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom\_button\_blend\_IsMousedOverPropertyTrigger2")  
-  
-     이제 첫 번째 속성 트리거가 만들어졌습니다.  편집기의 **트리거** 패널에서 100%로 변경되는 <xref:System.Windows.UIElement.Opacity%2A>가 기록됨을 확인할 수 있습니다.  
-  
-     !["트리거" 패널](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerinfo.png "custom\_button\_blend\_PropertyTriggerInfo")  
-  
-     F5 키를 눌러 응용 프로그램을 실행하고 마우스 포인터를 단추 위 및 외부로 이동합니다.  이때 마우스를 단추 위로 이동하면 투명 효과 레이어가 나타나고 포인터를 단추 외부로 이동하면 투명 효과 레이어가 사라져야 합니다.  
-  
-4.  **IsMouseOver 트리거의 스트로크 값 변경.** 이제 <xref:System.Windows.UIElement.IsMouseOver%2A> 트리거에 몇 가지 다른 작업을 연결합니다.  기록이 계속되는 동안 선택 항목을 **glassCube**에서 **outerRectangle**로 전환합니다.  그런 다음 **outerRectangle**의 <xref:System.Windows.Shapes.Shape.Stroke%2A>를 사용자 지정 식 "{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"로 설정합니다.  이렇게 하면 <xref:System.Windows.Shapes.Shape.Stroke%2A>가 단추에 사용되는 일반적인 강조 색으로 설정됩니다.  F5 키를 눌러 마우스를 단추 위로 이동할 때의 효과를 확인합니다.  
-  
-     ![스트로크를 강조 색으로 설정하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom\_button\_blend\_IsMousedOverPropertyTrigger3")  
-  
-5.  **IsMouseOver 트리거의 흐린 텍스트.** 이제 <xref:System.Windows.UIElement.IsMouseOver%2A> 속성 트리거에 한 가지 작업을 더 연결합니다.  단추 위에 투명 효과가 나타날 때 단추의 콘텐츠가 약간 흐리게 나타나도록 만듭니다.  이렇게 하려면 <xref:System.Windows.Controls.ContentPresenter>\(**myContentPresenter**\)에 흐림 <xref:System.Windows.Media.Effects.BitmapEffect>를 적용합니다.  
-  
-     ![단추의 콘텐츠를 흐리게 표시하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom\_button\_blend\_PropertyTriggerWithBitMapEffect")  
+5.  <span data-ttu-id="0e544-167">**ContentPresenter 맨 위로 이동:** 이 시점에서 것 같습니다 "단추" 라는 텍스트 수 없음을 표시 더 이상.</span><span class="sxs-lookup"><span data-stu-id="0e544-167">**Move ContentPresenter to the top:** At this point, it is possible that the text "Button" will not be visible any longer.</span></span> <span data-ttu-id="0e544-168">그런 경우 때문에 이것이 **그** 기반는 **사각형과**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-168">If this is so, this is because **innerRectangle** is on top of the **myContentPresenter**.</span></span> <span data-ttu-id="0e544-169">이 문제를 해결 하려면 드래그 **사각형과** 아래 **그**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-169">To fix this, drag **myContentPresenter** below **innerRectangle**.</span></span> <span data-ttu-id="0e544-170">사각형의 위치를 변경 하 고 **사각형과** 아래 처럼 보이도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-170">Reposition rectangles and **myContentPresenter** to look similar to below.</span></span>  
   
     > [!NOTE]
-    >  **속성** 패널을 <xref:System.Windows.Media.Effects.BitmapEffect>를 검색하기 이전 상태로 되돌리려면 **검색** 상자에서 텍스트를 지우십시오.  
+    >  <span data-ttu-id="0e544-171">또는 배치할 수도 있습니다 **사각형과** 위에 표시 하기를 마우스 오른쪽 단추로 클릭 하 고 키를 눌러 **앞으로 보낼**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-171">Alternatively, you can also position **myContentPresenter** on top by right-clicking it and pressing **Send Forward**.</span></span>  
   
-     지금까지 몇 가지 작업이 연결된 속성 트리거를 사용하여 마우스 포인터가 단추 영역으로 들어오고 나갈 때 강조 표시가 되는 동작을 만들었습니다.  단추의 또 다른 일반적인 동작은 단추를 클릭하고 난 후처럼 단추가 포커스를 받을 때 강조 표시를 하는 것입니다.  <xref:System.Windows.UIElement.IsFocused%2A> 속성에 대해 다른 속성 트리거를 추가하여 이러한 동작을 추가할 수 있습니다.  
+     <span data-ttu-id="0e544-172">![다른 단추 위로 단추를 이동 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")</span><span class="sxs-lookup"><span data-stu-id="0e544-172">![How to move one button on top of another button](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")</span></span>  
   
-6.  **IsFocused에 대한 속성 트리거 만들기.** <xref:System.Windows.UIElement.IsMouseOver%2A>\(이 단원의 첫 번째 단계 참조\)와 같은 절차를 사용하여 <xref:System.Windows.UIElement.IsFocused%2A> 속성에 대해 다른 속성 트리거를 만듭니다.  **트리거 기록 설정**이 설정되어 있는 상태에서 트리거에 다음 작업을 추가합니다.  
+6.  <span data-ttu-id="0e544-173">**그의 모양을 변경:** 설정는 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, 및 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 값을 20입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-173">**Change the look of innerRectangle:** Set the <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> values to 20.</span></span> <span data-ttu-id="0e544-174">또한 설정는 <xref:System.Windows.Shapes.Shape.Fill%2A> "{TemplateBinding 배경}" 사용자 지정 식을 사용 하 여 서식 파일의 배경에) 설정 하 고 <xref:System.Windows.Shapes.Shape.Stroke%2A> "투명"입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-174">In addition, set the <xref:System.Windows.Shapes.Shape.Fill%2A> to the background of the template using the custom expression "{TemplateBinding Background}" ) and set <xref:System.Windows.Shapes.Shape.Stroke%2A> to "transparent".</span></span> <span data-ttu-id="0e544-175">에 대 한 설정을 <xref:System.Windows.Shapes.Shape.Fill%2A> 및 <xref:System.Windows.Shapes.Shape.Stroke%2A> 의 **그** 대의 반대 **차원적**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-175">Notice that the settings for the <xref:System.Windows.Shapes.Shape.Fill%2A> and <xref:System.Windows.Shapes.Shape.Stroke%2A> of **innerRectangle** are the opposite of those for **outerRectangle**.</span></span>  
   
-    -   **glassCube**에 100%의 <xref:System.Windows.UIElement.Opacity%2A> 지정  
+     <span data-ttu-id="0e544-176">![사각형의 모양을 변경 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")</span><span class="sxs-lookup"><span data-stu-id="0e544-176">![How to change the appearance of a rectangle](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")</span></span>  
   
-    -   **outerRectangle**의 <xref:System.Windows.Shapes.Shape.Stroke%2A>를 사용자 지정 식 값 "{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"로 설정  
+7.  <span data-ttu-id="0e544-177">**유리 레이어 맨 위에 추가:** 단추의 모양을 사용자 지정의 마지막 부분 위에 유리 레이어를 추가 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-177">**Add a glass layer on top:** The final piece of customizing the look of the button is to add a glass layer on top.</span></span> <span data-ttu-id="0e544-178">이 항목이 며 계층은 세 번째 사각형으로 이루어져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-178">This glass layer consists of a third rectangle.</span></span> <span data-ttu-id="0e544-179">투명 효과 사각형에 대 한 차원을 비슷합니다 유리 됩니다 전체 단추를 포함 하기 때문에 **차원적**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-179">Because the glass will cover the entire button, the glass rectangle is similar in dimensions to the **outerRectangle**.</span></span> <span data-ttu-id="0e544-180">따라서 단순히 복사 하 여 사각형을 만듭니다는 **차원적**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-180">Therefore, create the rectangle by simply making a copy of the **outerRectangle**.</span></span> <span data-ttu-id="0e544-181">강조 표시 **차원적** CTRL + C 및 CTRL + V를 사용 하 여 복사본을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-181">Highlight **outerRectangle** and use CTRL+C and CTRL+V to make a copy.</span></span> <span data-ttu-id="0e544-182">이 새 사각형 "glassCube" 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-182">Name this new rectangle "glassCube".</span></span>  
   
- 이 연습의 마지막 단계에서는 단추에 애니메이션을 추가합니다.  이러한 애니메이션은 특히 <xref:System.Windows.UIElement.MouseEnter> 및 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트와 같은 이벤트에 의해 트리거됩니다.  
+8.  <span data-ttu-id="0e544-183">**필요한 경우 glassCube 위치 변경:** 경우 **glassCube** 은 위치로 끕니다 아직을 전체 단추 덮도 록의 위치를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-183">**Reposition glassCube if necessary:** If **glassCube** is not already positioned so that it covers the entire button, drag it into position.</span></span>  
   
-#### 이벤트 트리거 및 애니메이션을 사용하여 대화형 작업을 추가하려면  
+9. <span data-ttu-id="0e544-184">**GlassCube 차원적 모양이 약간 다른 제공:** 의 속성 변경 **glassCube**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-184">**Give glassCube a slightly different shape than outerRectangle:** Change the properties of **glassCube**.</span></span> <span data-ttu-id="0e544-185">변경 하 여 시작 된 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 및 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 속성을 10 및 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 2로 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-185">Start off by changing the <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> and <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> properties to 10 and the <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> to 2.</span></span>  
   
-1.  **MouseEnter 이벤트 트리거 만들기.** 새 이벤트 트리거를 추가하고 트리거에 사용할 이벤트로 <xref:System.Windows.UIElement.MouseEnter>를 선택합니다.  
+     <span data-ttu-id="0e544-186">![GlassCube에 대 한 모양 설정](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom_button_blend_GlassCubeAppearance")</span><span class="sxs-lookup"><span data-stu-id="0e544-186">![The appearance settings for glassCube](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom_button_blend_GlassCubeAppearance")</span></span>  
   
-     ![MouseEnter 이벤트 트리거를 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom\_button\_blend\_MouseOverEventTrigger")  
+10. <span data-ttu-id="0e544-187">**유리 처럼 표시 glassCube 확인:** 설정의 <xref:System.Windows.Shapes.Shape.Fill%2A> 를 사용 하 여 숨겨 조회 하도록 75% 불투명 하 고 사이 번갈아 전환 White와 투명 6 약 균등 하 게 하는 선형 그라데이션 간격을 따라 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-187">**Make glassCube look like glass:** Set the <xref:System.Windows.Shapes.Shape.Fill%2A> to a glassy look by  using a linear gradient that is 75% opaque and alternates between the color White and Transparent over 6 approximately evenly spaced intervals.</span></span> <span data-ttu-id="0e544-188">값은 그라데이션 중지점으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-188">This is what to set the gradient stops to:</span></span>  
   
-2.  **애니메이션 시간 표시 막대 만들기.** 다음으로 애니메이션 시간 표시 막대를 <xref:System.Windows.UIElement.MouseEnter> 이벤트에 연결합니다.  
+    -   <span data-ttu-id="0e544-189">그라데이션 중지점 1: White 75%의 알파 값으로</span><span class="sxs-lookup"><span data-stu-id="0e544-189">Gradient Stop 1: White with Alpha value of 75%</span></span>  
   
-     ![이벤트에 애니메이션 시간 표시 막대를 추가하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom\_button\_blend\_MouseOverEventTrigger2")  
+    -   <span data-ttu-id="0e544-190">그라데이션 중지점 2: 투명 한</span><span class="sxs-lookup"><span data-stu-id="0e544-190">Gradient Stop 2: Transparent</span></span>  
   
-     **확인**을 눌러 새 시간 표시 막대를 만들면 **시간 표시 막대** 패널이 나타나고 "시간 표시 막대 기록 설정"이 디자인 패널에 표시됩니다.  이는 시간 표시 막대에서 속성 변경 내용을 기록하여 속성 변경 내용에 애니메이션 효과를 줄 수 있음을 의미합니다.  
+    -   <span data-ttu-id="0e544-191">그라데이션 중지점 3: White 75%의 알파 값으로</span><span class="sxs-lookup"><span data-stu-id="0e544-191">Gradient Stop 3: White with Alpha value of 75%</span></span>  
+  
+    -   <span data-ttu-id="0e544-192">그라데이션 중지점 4: 투명 한</span><span class="sxs-lookup"><span data-stu-id="0e544-192">Gradient Stop 4: Transparent</span></span>  
+  
+    -   <span data-ttu-id="0e544-193">그라데이션 중지점 5: White 75%의 알파 값으로</span><span class="sxs-lookup"><span data-stu-id="0e544-193">Gradient Stop 5: White with Alpha value of 75%</span></span>  
+  
+    -   <span data-ttu-id="0e544-194">그라데이션 중지점 6: 투명 한</span><span class="sxs-lookup"><span data-stu-id="0e544-194">Gradient Stop 6: Transparent</span></span>  
+  
+     <span data-ttu-id="0e544-195">이렇게 하면 "물결 무늬" 유리 모양을 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-195">This creates a "wavy" glass look.</span></span>  
+  
+     <span data-ttu-id="0e544-196">![유리 처럼 보이는 사각형](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom_button_blend_glassRectangleProperties2")</span><span class="sxs-lookup"><span data-stu-id="0e544-196">![A rectangle that that looks like glass](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties2.png "custom_button_blend_glassRectangleProperties2")</span></span>  
+  
+11. <span data-ttu-id="0e544-197">**유리 레이어 숨기기:** 레이어를 숨겨 모양을, 참조 했으므로 다루지는 **모양 창** 의 **속성 패널** 불투명도 0%로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-197">**Hide the glass layer:** Now that you see what the glassy layer looks like, go into the **Appearance pane** of the **Properties panel** and set the Opacity to 0% to hide it.</span></span> <span data-ttu-id="0e544-198">다음 단원에서 속성 트리거 및 이벤트 보기 및 조작 유리 레이어를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-198">In the sections ahead, we'll use property triggers and events to show and manipulate the glass layer.</span></span>  
+  
+     <span data-ttu-id="0e544-199">![투명 효과 사각형을 숨기는 방법에](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom_button_glassRectangleProperties3")</span><span class="sxs-lookup"><span data-stu-id="0e544-199">![How to hide the glass rectangle](../../../../docs/framework/wpf/controls/media/custom-button-glassrectangleproperties3.gif "custom_button_glassRectangleProperties3")</span></span>  
+  
+## <a name="customize-the-button-behavior"></a><span data-ttu-id="0e544-200">단추 동작을 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="0e544-200">Customize the Button Behavior</span></span>  
+ <span data-ttu-id="0e544-201">이 시점에서 해당 템플릿을 편집 하 여 단추 표시를 사용자 지정한 하지만 일반적인 단추 처럼 (예를 들어 마우스를 위에 놓았을 때 모양이 변경, 포커스를 받을 고 클릭 합니다.) 단추 사용자 작업에 응답 하지 않습니다. 다음 두 절차에는 사용자 지정 단추에 이러한 동작을 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-201">At this point, you have customized the presentation of the button by editing its template, but the button does not react to user actions as typical buttons do (for example, changing appearance upon mouse-over, receiving focus, and clicking.) The next two procedures show how to build behaviors like these into the custom button.</span></span> <span data-ttu-id="0e544-202">간단한 속성 트리거 시작 알아보고 트리거 이벤트 및 애니메이션을 추가 하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-202">We'll start with simple property triggers, and then add event triggers and animations.</span></span>  
+  
+#### <a name="to-set-property-triggers"></a><span data-ttu-id="0e544-203">트리거 속성을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="0e544-203">To set property triggers</span></span>  
+  
+1.  <span data-ttu-id="0e544-204">**새 속성 트리거 만들기:** 와 **glassCube** 선택한 클릭 **+ 속성** 에 **트리거** 패널 (다음 단계에 나오는 그림 참조).</span><span class="sxs-lookup"><span data-stu-id="0e544-204">**Create a new property trigger:** With **glassCube** selected, click **+ Property** in the **Triggers** panel (see the figure that follows the next step).</span></span> <span data-ttu-id="0e544-205">이렇게 하면 기본 속성 트리거 속성 트리거를 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-205">This creates a property trigger with a default property trigger.</span></span>  
+  
+2.  <span data-ttu-id="0e544-206">**IsMouseOver 트리거에 의해 사용 되는 속성 확인:** 속성을 변경 <xref:System.Windows.UIElement.IsMouseOver%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-206">**Make IsMouseOver the property used by the trigger:** Change the property to <xref:System.Windows.UIElement.IsMouseOver%2A>.</span></span> <span data-ttu-id="0e544-207">이렇게 하면 되었을 때 활성화 속성 트리거는 <xref:System.Windows.UIElement.IsMouseOver%2A> 속성은 `true` (때 사용자 포인트는 마우스 단추).</span><span class="sxs-lookup"><span data-stu-id="0e544-207">This makes the property trigger activate when the <xref:System.Windows.UIElement.IsMouseOver%2A> property is `true` (when the user points to the button with the mouse).</span></span>  
+  
+     <span data-ttu-id="0e544-208">![속성에는 트리거를 설정 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")</span><span class="sxs-lookup"><span data-stu-id="0e544-208">![How to set a trigger on a property](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")</span></span>  
+  
+3.  <span data-ttu-id="0e544-209">**IsMouseOver glassCube에 대 한 100%의 불투명도 트리거합니다:** 는 **트리거 기록** (위 그림 참조).</span><span class="sxs-lookup"><span data-stu-id="0e544-209">**IsMouseOver triggers opacity of 100% for glassCube:** Notice that the **Trigger recording is on** (see the preceding figure).</span></span> <span data-ttu-id="0e544-210">즉,의 속성 값에 적용 한 변경 내용 **glassCube** 동안 되는 경우 발생 하 <xref:System.Windows.UIElement.IsMouseOver%2A> 은 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-210">This means that any changes you make to the property values of **glassCube** while recording is on will become an action that takes place when <xref:System.Windows.UIElement.IsMouseOver%2A> is `true`.</span></span> <span data-ttu-id="0e544-211">기록 하는 동안 변경 된 <xref:System.Windows.UIElement.Opacity%2A> 의 **glassCube** 100%입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-211">While recording, change the <xref:System.Windows.UIElement.Opacity%2A> of **glassCube** to 100%.</span></span>  
+  
+     <span data-ttu-id="0e544-212">![단추의 불투명도 설정 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")</span><span class="sxs-lookup"><span data-stu-id="0e544-212">![How to set the opacity of a button](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")</span></span>  
+  
+     <span data-ttu-id="0e544-213">이제 사용자의 첫 번째 속성 트리거를 만들어졌습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-213">You have now created your first property trigger.</span></span> <span data-ttu-id="0e544-214">다음에 유의 **트리거 패널** 편집기의 기록에 <xref:System.Windows.UIElement.Opacity%2A> 100%로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-214">Notice that the **Triggers panel** of the editor has recorded the <xref:System.Windows.UIElement.Opacity%2A> being changed to 100%.</span></span>  
+  
+     <span data-ttu-id="0e544-215">![“트리거” 패널](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerinfo.png "custom_button_blend_PropertyTriggerInfo")</span><span class="sxs-lookup"><span data-stu-id="0e544-215">![The "Triggers" panel](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerinfo.png "custom_button_blend_PropertyTriggerInfo")</span></span>  
+  
+     <span data-ttu-id="0e544-216">F5 키를 눌러 응용 프로그램을 실행 하 고 켜거나 단추 위로 마우스 포인터를 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-216">Press F5 to run the application, and move the mouse pointer over and off the button.</span></span> <span data-ttu-id="0e544-217">했을 때 나타나는 유리 계층 표시 되어야 단추 위에 마우스를 벗어날 때 사라집니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-217">You should see the glass layer appear when you mouse-over the button and disappear when the pointer leaves.</span></span>  
+  
+4.  <span data-ttu-id="0e544-218">**IsMouseOver 트리거 값을 변경 하 스트로크:** 다른 작업을 연결 해 보겠습니다는 <xref:System.Windows.UIElement.IsMouseOver%2A> 트리거.</span><span class="sxs-lookup"><span data-stu-id="0e544-218">**IsMouseOver triggers stroke value change:** Let's associate some other actions with the <xref:System.Windows.UIElement.IsMouseOver%2A> trigger.</span></span> <span data-ttu-id="0e544-219">기록을 계속 하는 동안 사용자에서 선택한 항목을 전환 **glassCube** 를 **차원적**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-219">While recording continues, switch your selection from **glassCube** to **outerRectangle**.</span></span> <span data-ttu-id="0e544-220">다음 설정의 <xref:System.Windows.Shapes.Shape.Stroke%2A> 의 **차원적** "{DynamicResource {X:static SystemColors.HighlightBrushKey}}"에서는 사용자 지정 식입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-220">Then set the <xref:System.Windows.Shapes.Shape.Stroke%2A> of **outerRectangle** to the custom expression of "{DynamicResource {x:Static SystemColors.HighlightBrushKey}}".</span></span> <span data-ttu-id="0e544-221">이 옵션은 설정 된 <xref:System.Windows.Shapes.Shape.Stroke%2A> 일반적인 하려면 색 단추에서 사용 하는 강조 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-221">This sets the <xref:System.Windows.Shapes.Shape.Stroke%2A> to the typical highlight color used by buttons.</span></span> <span data-ttu-id="0e544-222">F5 키를 눌러 단추 위로 마우스를 가져가면 영향을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-222">Press F5 to see the effect when you mouse over the button.</span></span>  
+  
+     <span data-ttu-id="0e544-223">![스트로크를 강조 표시 색을 설정 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")</span><span class="sxs-lookup"><span data-stu-id="0e544-223">![How to set the stroke to the highlight color](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")</span></span>  
+  
+5.  <span data-ttu-id="0e544-224">**IsMouseOver 트리거 텍스트가 번:** 보겠습니다 작업을 하나 더 연결는 <xref:System.Windows.UIElement.IsMouseOver%2A> 속성 트리거.</span><span class="sxs-lookup"><span data-stu-id="0e544-224">**IsMouseOver triggers blurry text:** Let's associate one more action to the <xref:System.Windows.UIElement.IsMouseOver%2A> property trigger.</span></span> <span data-ttu-id="0e544-225">유리 위에 표시 되 면 약간 흐리게 표시 하는 단추의 콘텐츠를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-225">Make the content of the button appear a little blurry when the glass appears over it.</span></span> <span data-ttu-id="0e544-226">이 작업을 수행 하는 흐림 효과 적용할 수 있습니다 <xref:System.Windows.Media.Effects.BitmapEffect> 에 <xref:System.Windows.Controls.ContentPresenter> (**사각형과**).</span><span class="sxs-lookup"><span data-stu-id="0e544-226">To do this, we can apply a blur <xref:System.Windows.Media.Effects.BitmapEffect> to the <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).</span></span>  
+  
+     <span data-ttu-id="0e544-227">![단추의 콘텐츠를 흐리게 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom_button_blend_PropertyTriggerWithBitMapEffect")</span><span class="sxs-lookup"><span data-stu-id="0e544-227">![How to blur the content of a button](../../../../docs/framework/wpf/controls/media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom_button_blend_PropertyTriggerWithBitMapEffect")</span></span>  
   
     > [!NOTE]
-    >  표시되는 창 및\/또는 패널의 크기를 조정해야 할 수 있습니다.  
+    >  <span data-ttu-id="0e544-228">반환 하는 **속성 패널** 를 다시 검색 하기 전에 <xref:System.Windows.Media.Effects.BitmapEffect>에서 텍스트를 지우십시오는 **검색 상자**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-228">To return the **Properties panel** back to what it was before you did the search for <xref:System.Windows.Media.Effects.BitmapEffect>, clear the text from the **Search box**.</span></span>  
   
-     ![시간 표시 막대 패널](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom\_button\_blend\_MouseOverEventTrigger3")  
+     <span data-ttu-id="0e544-229">이 시점에서 사용 했습니다 속성 트리거 몇 가지 작업이 연결된 된 동작을 만들 강조 표시에 대 한 마우스 포인터를 입력 하 고 단추 영역에서 벗어날 때.</span><span class="sxs-lookup"><span data-stu-id="0e544-229">At this point, we have used a property trigger with several associated actions to create highlighting behavior for when the mouse pointer enters and leaves the button area.</span></span> <span data-ttu-id="0e544-230">또 다른 일반적인 동작은 단추에 포커스가 있을 때 강조 표시 하는 것 (으로 클릭 한 후).</span><span class="sxs-lookup"><span data-stu-id="0e544-230">Another typical behavior for a button is to highlight when it has focus (as after it is clicked).</span></span> <span data-ttu-id="0e544-231">이러한 동작에 대 한 다른 속성 트리거를 추가 하 여 추가할 수 있습니다는 <xref:System.Windows.UIElement.IsFocused%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-231">We can add such behavior by adding another property trigger for the <xref:System.Windows.UIElement.IsFocused%2A> property.</span></span>  
   
-3.  **키프레임 만들기.** 애니메이션을 만들려면 애니메이션 효과를 줄 개체를 선택하고 시간 표시 막대에서 둘 이상의 키프레임을 만든 다음 해당 키프레임에 대해 애니메이션의 보간 속성 값을 설정합니다.  다음 그림에서는 키프레임을 만드는 과정을 보여 줍니다.  
+6.  <span data-ttu-id="0e544-232">**속성 트리거 IsFocused에 대 한 만들기:** 와 동일한 절차를 사용 하 여 <xref:System.Windows.UIElement.IsMouseOver%2A> (이 섹션의 첫 번째 단계 참조)에 대 한 다른 속성 트리거 만들기는 <xref:System.Windows.UIElement.IsFocused%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-232">**Create property trigger for IsFocused:** Using the same procedure as for <xref:System.Windows.UIElement.IsMouseOver%2A> (see the first step of this section), create another property trigger for the <xref:System.Windows.UIElement.IsFocused%2A> property.</span></span> <span data-ttu-id="0e544-233">동안 **트리거 기록**, 다음 작업 트리거를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-233">While **Trigger recording is on**, add the following actions to the trigger:</span></span>  
   
-     ![키 프레임을 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom\_button\_blend\_MouseOverEventTrigger4")  
+    -   <span data-ttu-id="0e544-234">**glassCube** 가져옵니다는 <xref:System.Windows.UIElement.Opacity%2A> 100%입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-234">**glassCube** gets an <xref:System.Windows.UIElement.Opacity%2A> of 100%.</span></span>  
   
-4.  **이 키프레임의 glassCube 축소.** 두 번째 키프레임이 선택된 상태에서 **크기 변형**을 사용하여 **glassCube**의 크기를 전체 크기의 90%로 축소합니다.  
+    -   <span data-ttu-id="0e544-235">**차원적** 가져옵니다는 <xref:System.Windows.Shapes.Shape.Stroke%2A> "{DynamicResource {X:static SystemColors.HighlightBrushKey}}"의 사용자 지정 식 값입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-235">**outerRectangle** gets a <xref:System.Windows.Shapes.Shape.Stroke%2A> custom expression value of "{DynamicResource {x:Static SystemColors.HighlightBrushKey}}".</span></span>  
   
-     ![단추 크기를 축소하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom\_button\_blend\_SizeTransform")  
+ <span data-ttu-id="0e544-236">이 연습에서 마지막 단계로 단추에 애니메이션 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-236">As the final step in this walkthrough, we will add animations to the button.</span></span> <span data-ttu-id="0e544-237">이러한 애니메이션은 이벤트에 의해 트리거되지-특히는 <xref:System.Windows.UIElement.MouseEnter> 및 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-237">These animations will be triggered by events—specifically, the <xref:System.Windows.UIElement.MouseEnter> and <xref:System.Windows.Controls.Primitives.ButtonBase.Click> events.</span></span>  
   
-     F5 키를 눌러 응용 프로그램을 실행합니다.  마우스 포인터를 단추 위로 이동합니다.  투명 효과 레이어가 단추 위에서 축소되는 것을 확인할 수 있습니다.  
+#### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a><span data-ttu-id="0e544-238">대화형 작업을 추가 하려면 이벤트 트리거 및 애니메이션을 사용 하려면</span><span class="sxs-lookup"><span data-stu-id="0e544-238">To use event triggers and animations to add interactivity</span></span>  
   
-5.  **다른 이벤트 트리거를 만들어 다양한 애니메이션에 연결.** 이제 다른 애니메이션을 하나 더 추가합니다.  이전 이벤트 트리거 애니메이션을 만드는 데 사용한 것과 유사한 절차를 사용하여 다음을 수행합니다.  
+1.  <span data-ttu-id="0e544-239">**MouseEnter 이벤트 트리거 만들기:** 새 이벤트 트리거를 추가 하 고 선택 <xref:System.Windows.UIElement.MouseEnter> 트리거에 사용 하도록 이벤트로 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-239">**Create a MouseEnter Event Trigger:** Add a new event trigger and select <xref:System.Windows.UIElement.MouseEnter> as the event to use in the trigger.</span></span>  
   
-    1.  <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트를 사용하여 새 이벤트 트리거를 만듭니다.  
+     <span data-ttu-id="0e544-240">![MouseEnter 이벤트 트리거를 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom_button_blend_MouseOverEventTrigger")</span><span class="sxs-lookup"><span data-stu-id="0e544-240">![How to create a MouseEnter event trigger](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger.png "custom_button_blend_MouseOverEventTrigger")</span></span>  
   
-    2.  <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에 새 시간 표시 막대를 연결합니다.  
+2.  <span data-ttu-id="0e544-241">**애니메이션 타임 라인 만들기:** 애니메이션 타임 라인에 다음으로, 연결 된 <xref:System.Windows.UIElement.MouseEnter> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-241">**Create an animation timeline:** Next, associate an animation timeline to the <xref:System.Windows.UIElement.MouseEnter> event.</span></span>  
   
-     ![시간 표시 막대를 새로 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-clickeventtrigger1.png "custom\_button\_blend\_ClickEventTrigger1")  
+     <span data-ttu-id="0e544-242">![이벤트에 애니메이션 타임 라인을 추가 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")</span><span class="sxs-lookup"><span data-stu-id="0e544-242">![How to add an animation timeline to an event](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")</span></span>  
   
-    1.  이 시간 표시 막대에 대해 각각 0.0초 및 0.3초에 키프레임을 만듭니다.  
+     <span data-ttu-id="0e544-243">키를 누르면 **확인** 새 일정을 만듭니다는 **타임 라인 패널** 표시 "기록 시간 표시 막대" 디자인 패널에 표시 되 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-243">After you press **OK** to create a new timeline, a **Timeline Panel** appears and "Timeline recording is on" is visible in the design panel.</span></span> <span data-ttu-id="0e544-244">즉, (애니메이션 적용 속성 변화 없음) 타임 라인에 속성 변경을 기록를 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-244">This means we can start recording property changes in the timeline (animate property changes).</span></span>  
   
-    2.  0.3초의 키프레임이 강조 표시된 상태에서 **회전 변형 각도**를 360도로 설정합니다.  
+    > [!NOTE]
+    >  <span data-ttu-id="0e544-245">창 및/또는 패널을 표시 되는 크기를 조정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-245">You may need to resize your window and/or panels to see the display.</span></span>  
   
-     ![회전 변환을 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-rotatetransform.gif "custom\_button\_blend\_RotateTransform")  
+     <span data-ttu-id="0e544-246">![타임 라인 패널](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")</span><span class="sxs-lookup"><span data-stu-id="0e544-246">![The timeline panel](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")</span></span>  
   
-    1.  F5 키를 눌러 응용 프로그램을 실행합니다.  단추를 클릭합니다.  투명 효과 레이어가 회전되는 것을 확인할 수 있습니다.  
+3.  <span data-ttu-id="0e544-247">**키 프레임을 만듭니다:** 애니메이션을 만들려는 애니메이션, 타임 라인에서 및 이러한 키 프레임에 대 한 두 개 이상의 키 프레임을 만들, 간을 보간하여 애니메이션 속성 값을 설정 하려는 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-247">**Create a keyframe:** To create an animation, select the object you want to animate, create two or more keyframes on the timeline, and for those keyframes, set the property values you want the animation to interpolate between.</span></span> <span data-ttu-id="0e544-248">다음 그림에서는 키 프레임의 생성을 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-248">The following figure guides you through the creation of a keyframe.</span></span>  
   
-## 결론  
- 사용자 지정 단추를 완성하였습니다.  이러한 작업은 응용 프로그램의 모든 단추에 적용되는 단추 템플릿을 사용하여 수행했습니다.  템플릿 편집 모드를 종료\(다음 그림 참조\)하고 추가로 단추를 만들면 해당 단추는 기본 단추가 아닌 사용자 지정 단추처럼 표시되고 동작합니다.  
+     <span data-ttu-id="0e544-249">![키 프레임을 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")</span><span class="sxs-lookup"><span data-stu-id="0e544-249">![How to create a keyframe](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")</span></span>  
   
- ![사용자 지정 단추 템플릿](../../../../docs/framework/wpf/controls/media/custom-button-blend-scopeup.gif "custom\_button\_blend\_ScopeUp")  
+4.  <span data-ttu-id="0e544-250">**이 키 프레임에서 glassCube 축소:** 으로 선택한 두 번째 키 프레임의 크기를 축소는 **glassCube** 사용 하 여 해당 전체 크기의 90%는 **크기 변형**합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-250">**Shrink glassCube at this keyframe:** With the second keyframe selected, shrink the size of the **glassCube** to 90% of its full size using the **Size Transform**.</span></span>  
   
- ![같은 템플릿을 사용하는 여러 단추](../../../../docs/framework/wpf/controls/media/custom-button-blend-createmultiplebuttons.png "custom\_button\_blend\_CreateMultipleButtons")  
+     <span data-ttu-id="0e544-251">![단추 크기를 축소 하는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")</span><span class="sxs-lookup"><span data-stu-id="0e544-251">![How to shrink the size of a button](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")</span></span>  
   
- F5 키를 눌러 응용 프로그램을 실행합니다.  단추를 클릭하여 모든 단추가 동일하게 동작하는 방식을 확인합니다.  
+     <span data-ttu-id="0e544-252">F5 키를 눌러 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-252">Press F5 to run the application.</span></span> <span data-ttu-id="0e544-253">마우스 포인터를 단추 위로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-253">Move the mouse pointer over the button.</span></span> <span data-ttu-id="0e544-254">투명 효과 레이어 단추 위에 축소 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-254">Notice that the glass layer shrinks on top of the button.</span></span>  
   
- 템플릿을 사용자 지정하는 동안에 **innerRectangle**의 <xref:System.Windows.Shapes.Shape.Fill%2A> 속성과 **outerRectangle**의 <xref:System.Windows.Shapes.Shape.Stroke%2A> 속성을 템플릿 배경\({TemplateBinding Background}\)으로 설정했습니다.  따라서 개별 단추의 배경색을 설정하면 설정한 배경이 이러한 각 속성에 사용됩니다.  배경을 지금 변경해 봅니다.  다음 그림에서는 다양한 그라데이션이 사용되었습니다.  따라서 단추와 같은 컨트롤에 대한 전반적인 사용자 지정 작업에 템플릿을 사용하면 유용하지만 템플릿이 있는 여러 컨트롤을 수정하여 컨트롤이 서로 다르게 표시되도록 만들 수도 있습니다.  
+5.  <span data-ttu-id="0e544-255">**다른 이벤트 트리거를 만들고 다른 애니메이션 연결:** 애니메이션을 하나 더 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-255">**Create another Event Trigger and associate a different animation with it:** Let's add one more animation.</span></span> <span data-ttu-id="0e544-256">이전 이벤트 트리거 애니메이션을 만드는 데 사용 하는 유사한 프로시저를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-256">Use a similar procedure to what you used to create the previous event trigger animation:</span></span>  
   
- ![템플릿은 같지만 모양이 서로 다른 단추](../../../../docs/framework/wpf/controls/media/custom-button-blend-blendconclusion.png "custom\_button\_blend\_BlendConclusion")  
+    1.  <span data-ttu-id="0e544-257">사용 하 여 새 이벤트 트리거 만들기는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-257">Create a new event trigger using the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span>  
   
- 결론적으로 단추 템플릿을 사용자 지정하는 과정을 통해 Microsoft Expression Blend에서 다음 작업을 수행하는 방법을 배웠습니다.  
+    2.  <span data-ttu-id="0e544-258">연결 된 새 타임은 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-258">Associate a new timeline with the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span>  
   
--   컨트롤의 모양 사용자 지정  
+     <span data-ttu-id="0e544-259">![새 일정을 만드는 방법](../../../../docs/framework/wpf/controls/media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")</span><span class="sxs-lookup"><span data-stu-id="0e544-259">![How to create a new timeline](../../../../docs/framework/wpf/controls/media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")</span></span>  
   
--   속성 트리거 설정.  속성 트리거는 컨트롤뿐만 아니라 대부분의 개체에 사용할 수 있기 때문에 매우 유용합니다.  
+    1.  <span data-ttu-id="0e544-260">이 타임 라인에 대 한 두 개의 키프레임, 각각 0.0 초 및 0.3 초에 두 번째 식을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-260">For this timeline, create two keyframes, one at 0.0 seconds and the second one at 0.3 seconds.</span></span>  
   
--   이벤트 트리거 설정.  이벤트 트리거는 컨트롤뿐만 아니라 대부분의 개체에 사용할 수 있기 때문에 매우 유용합니다.  
+    2.  <span data-ttu-id="0e544-261">강조 표시 된 0.3 초에 키 프레임을 사용 하 여 설정할는 **회전 변형 각도** 부터 360도 까지입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-261">With the keyframe at 0.3 seconds highlighted, set the **Rotate Transform Angle** to 360 degrees.</span></span>  
   
--   애니메이션 만들기  
+     <span data-ttu-id="0e544-262">![회전 변환을 만드는 방법을](../../../../docs/framework/wpf/controls/media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")</span><span class="sxs-lookup"><span data-stu-id="0e544-262">![How to create a rotate transform](../../../../docs/framework/wpf/controls/media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")</span></span>  
   
--   그라데이션 만들기, BitmapEffect 추가, 변환 사용 및 개체의 기본 속성 설정 등과 같은 기타 작업  
+    1.  <span data-ttu-id="0e544-263">F5 키를 눌러 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-263">Press F5 to run the application.</span></span> <span data-ttu-id="0e544-264">단추를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-264">Click the button.</span></span> <span data-ttu-id="0e544-265">투명 효과 레이어가 회전 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-265">Notice that the glass layer spins around.</span></span>  
   
-## 참고 항목  
- [XAML을 사용하여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)   
- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
- [비트맵 효과 개요](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="conclusion"></a><span data-ttu-id="0e544-266">결론</span><span class="sxs-lookup"><span data-stu-id="0e544-266">Conclusion</span></span>  
+ <span data-ttu-id="0e544-267">사용자 지정된 단추를 완료 했습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-267">You have completed a customized button.</span></span> <span data-ttu-id="0e544-268">응용 프로그램의 모든 단추에 적용 되는 단추 템플릿을 사용 하 여이 연습 했습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-268">You did this using a button template that was applied to all buttons in the application.</span></span> <span data-ttu-id="0e544-269">템플릿 편집 모드를 두면 (다음 그림 참조) 및 더 많은 단추 만들기, 모양 및 기본 단추 처럼 아닌 사용자 지정 단추 처럼 동작 하 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-269">If you leave the template editing mode (see the following figure) and create more buttons, you will see that they look and behave like your custom button rather than like the default button.</span></span>  
+  
+ <span data-ttu-id="0e544-270">![사용자 지정 단추 템플릿](../../../../docs/framework/wpf/controls/media/custom-button-blend-scopeup.gif "custom_button_blend_ScopeUp")</span><span class="sxs-lookup"><span data-stu-id="0e544-270">![The custom button template](../../../../docs/framework/wpf/controls/media/custom-button-blend-scopeup.gif "custom_button_blend_ScopeUp")</span></span>  
+  
+ <span data-ttu-id="0e544-271">![같은 템플릿을 사용 하는 여러 개의 단추](../../../../docs/framework/wpf/controls/media/custom-button-blend-createmultiplebuttons.png "custom_button_blend_CreateMultipleButtons")</span><span class="sxs-lookup"><span data-stu-id="0e544-271">![Multiple buttons that use the same template](../../../../docs/framework/wpf/controls/media/custom-button-blend-createmultiplebuttons.png "custom_button_blend_CreateMultipleButtons")</span></span>  
+  
+ <span data-ttu-id="0e544-272">F5 키를 눌러 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-272">Press F5 to run the application.</span></span> <span data-ttu-id="0e544-273">단추를 클릭 하 고 어떻게 모두 동일 하 게 동작 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-273">Click the buttons and notice how they all behave the same.</span></span>  
+  
+ <span data-ttu-id="0e544-274">서식 파일을 사용자 지정 하는 동안 설정 하는 기억는 <xref:System.Windows.Shapes.Shape.Fill%2A> 속성 **그** 및 <xref:System.Windows.Shapes.Shape.Stroke%2A> 속성 **차원적** ({템플릿 배경 TemplateBinding 배경})입니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-274">Remember that while you were customizing the template, you set the <xref:System.Windows.Shapes.Shape.Fill%2A> property of **innerRectangle** and the <xref:System.Windows.Shapes.Shape.Stroke%2A> property **outerRectangle** to the template background ({TemplateBinding Background}).</span></span> <span data-ttu-id="0e544-275">이 인해 개별 단추의 배경색을 설정 하는 경우 설정한 백그라운드 사용될지 이러한 각 속성에 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-275">Because of this, when you set the background color of the individual buttons, the background you set will be used for those respective properties.</span></span> <span data-ttu-id="0e544-276">배경을 지금 변경해 보십시오.</span><span class="sxs-lookup"><span data-stu-id="0e544-276">Try changing the backgrounds now.</span></span> <span data-ttu-id="0e544-277">다음 그림에서는 다양 한 그라데이션이 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-277">In the following figure, different gradients are used.</span></span> <span data-ttu-id="0e544-278">따라서 템플릿이 있으면 단추와 같은 컨트롤의 전체 사용자 지정 하는 데 유용 하지만 서식 파일을 사용 하 여 컨트롤 계속 하도록 수정할 수 있습니다를 서로 다르게 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-278">Therefore, although a template is useful for overall customization of controls like button, controls with templates can still be modified to look different from each other.</span></span>  
+  
+ <span data-ttu-id="0e544-279">![같은 템플릿 사용 하 여 단추 같지만](../../../../docs/framework/wpf/controls/media/custom-button-blend-blendconclusion.jpg "custom_button_blend_BlendConclusion")</span><span class="sxs-lookup"><span data-stu-id="0e544-279">![Buttons with the same template that look diferent](../../../../docs/framework/wpf/controls/media/custom-button-blend-blendconclusion.jpg "custom_button_blend_BlendConclusion")</span></span>  
+  
+ <span data-ttu-id="0e544-280">결론적으로 단추 템플릿을 사용자 지정 하는 과정 Microsoft Expression Blend에서 다음을 수행 하는 방법을 설명 했습니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-280">In conclusion, in the process of customizing a button template you have learned how to do the following in Microsoft Expression Blend:</span></span>  
+  
+-   <span data-ttu-id="0e544-281">컨트롤의 모양을 사용자 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-281">Customize the look of a control.</span></span>  
+  
+-   <span data-ttu-id="0e544-282">속성 트리거를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-282">Set property triggers.</span></span> <span data-ttu-id="0e544-283">속성 트리거 컨트롤 뿐만 아니라 대부분의 개체에 사용할 수 있기 때문에 매우 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-283">Property triggers are very useful because they can be used on most objects, not just controls.</span></span>  
+  
+-   <span data-ttu-id="0e544-284">이벤트 트리거를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-284">Set event triggers.</span></span> <span data-ttu-id="0e544-285">이벤트 트리거 컨트롤 뿐만 아니라 대부분의 개체에 사용할 수 있기 때문에 매우 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-285">Event triggers are very useful because they can be used on most objects, not just controls.</span></span>  
+  
+-   <span data-ttu-id="0e544-286">애니메이션 만들기</span><span class="sxs-lookup"><span data-stu-id="0e544-286">Create animations.</span></span>  
+  
+-   <span data-ttu-id="0e544-287">Bitmapeffect 추가 그라데이션, 만들기, 변환, 사용 하 고 개체의 기본 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e544-287">Miscellaneous: create gradients, add BitmapEffects, use transforms, and set basic properties of objects.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="0e544-288">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0e544-288">See Also</span></span>  
+ [<span data-ttu-id="0e544-289">XAML을 사용하여 단추 만들기</span><span class="sxs-lookup"><span data-stu-id="0e544-289">Create a Button by Using XAML</span></span>](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
+ [<span data-ttu-id="0e544-290">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="0e544-290">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="0e544-291">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="0e544-291">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="0e544-292">단색 및 그라데이션을 사용한 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="0e544-292">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="0e544-293">비트맵 효과 개요</span><span class="sxs-lookup"><span data-stu-id="0e544-293">Bitmap Effects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

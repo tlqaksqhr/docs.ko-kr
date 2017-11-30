@@ -1,138 +1,143 @@
 ---
-title: "TileBrush 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "브러시, TileBrush"
-  - "TileBrush"
+title: "TileBrush 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TileBrush [WPF]
+- brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f759a56233e8cf2b1c1d39862706be518fefe43
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# TileBrush 개요
-<xref:System.Windows.Media.TileBrush> 개체를 사용하면 이미지, <xref:System.Windows.Media.Drawing> 또는 <xref:System.Windows.Media.Visual>로 영역을 그리는 방법을 다양하게 제어할 수 있습니다.  이 항목에서는 <xref:System.Windows.Media.TileBrush> 기능을 사용하여 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush>로 영역을 그리는 방법을 보다 잘 제어할 수 있는 방법에 대해 설명합니다.  
+# <a name="tilebrush-overview"></a><span data-ttu-id="04baa-102">TileBrush 개요</span><span class="sxs-lookup"><span data-stu-id="04baa-102">TileBrush Overview</span></span>
+<span data-ttu-id="04baa-103"><xref:System.Windows.Media.TileBrush>개체를 제공 하는 다양 한 이미지를 영역을 그리는 방법에 대 한 제어 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-103"><xref:System.Windows.Media.TileBrush> objects provide you with a great deal of control over how an area is painted with an image, <xref:System.Windows.Media.Drawing>, or <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="04baa-104">이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.TileBrush> 방법을 더 잘 제어 하는 데 기능이 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 영역을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-104">This topic describes how to use <xref:System.Windows.Media.TileBrush> features to gain more control over how an <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, or <xref:System.Windows.Media.VisualBrush> paints an area.</span></span>  
   
-   
   
 <a name="prerequisite"></a>   
-## 사전 요구 사항  
- 이 항목의 내용을 이해하려면 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush> 클래스의 기본 기능을 사용하는 방법에 대해 이해하는 것이 좋습니다.  이러한 형식에 대한 소개는 [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)를 참조하십시오.  
+## <a name="prerequisites"></a><span data-ttu-id="04baa-105">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="04baa-105">Prerequisites</span></span>  
+ <span data-ttu-id="04baa-106">이 항목을 이해 하려면의 기본 기능을 사용 하는 방법을 이해 하면 도움이 되는 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-106">To understand this topic, it's helpful to understand how to use the basic features of the <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, or <xref:System.Windows.Media.VisualBrush> class.</span></span> <span data-ttu-id="04baa-107">이러한 형식에 대 한 소개를 참조 하십시오.는 [이미지, 그리기, 및 시각적 개체를 사용 하 여 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-107">For an introduction to these types, see the [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
 <a name="tilebrush"></a>   
-## 바둑판으로 영역 그리기  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> 및 <xref:System.Windows.Media.VisualBrush>는 <xref:System.Windows.Media.TileBrush> 개체의 형식입니다.  바둑판 브러시를 사용하면 이미지, 그림 또는 시각적 표시로 영역을 그리는 방법을 다양하게 제어할 수 있습니다.  예를 들어 하나의 늘어난 이미지를 사용하여 영역을 그리는 대신 패턴을 만드는 일련의 이미지 바둑판을 사용하여 영역을 그릴 수 있습니다.  
+## <a name="painting-an-area-with-tiles"></a><span data-ttu-id="04baa-108">타일로 영역 그리기</span><span class="sxs-lookup"><span data-stu-id="04baa-108">Painting an Area with Tiles</span></span>  
+ <span data-ttu-id="04baa-109"><xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>는 <xref:System.Windows.Media.VisualBrush> 유형의 <xref:System.Windows.Media.TileBrush> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-109"><xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, are <xref:System.Windows.Media.VisualBrush> are types of <xref:System.Windows.Media.TileBrush> objects.</span></span> <span data-ttu-id="04baa-110">타일 브러시는 이미지, 그림 또는 시각적 개체로 영역을 그리는 방법을 강력하게 제어할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-110">Tile brushes provide you with a great deal of control over how an area is painted with an image, drawing, or visual.</span></span> <span data-ttu-id="04baa-111">예를 들어 늘어난 이미지만으로 영역을 그리기보다, 패턴을 만드는 일련의 이미지 타일을 사용하여 영역을 그릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-111">For example, instead of just painting an area with a single stretched image, you can paint an area with a series of image tiles that create a pattern.</span></span>  
   
- 바둑판으로 영역을 그리는 데에는 내용, 기본 바둑판 및 출력 영역이라는 세 가지 구성 요소가 필요합니다.  
+ <span data-ttu-id="04baa-112">타일 브러시로 영역을 그리려면 세 가지 구성 요소인, 콘텐츠, 기본 타일 및 출력 영역이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-112">Painting an area with a tile brush involves three components: content, the base tile, and the output area.</span></span>  
   
- ![TileBrush 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk\_mmgraphics\_defaultcontentprojection2")  
-하나의 바둑판을 포함하는 TileBrush의 구성 요소  
+ <span data-ttu-id="04baa-113">![TileBrush 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")</span><span class="sxs-lookup"><span data-stu-id="04baa-113">![TileBrush components](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")</span></span>  
+<span data-ttu-id="04baa-114">단일 타일이 있는 TileBrush의 구성 요소</span><span class="sxs-lookup"><span data-stu-id="04baa-114">Components of a TileBrush with a single tile</span></span>  
   
- ![바둑판식으로 배열된 TileBrush의 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm\_tiledprojection")  
-TileMode가 Tile인 TileBrush의 구성 요소  
+ <span data-ttu-id="04baa-115">![바둑판식으로 배열 된 TileBrush의 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")</span><span class="sxs-lookup"><span data-stu-id="04baa-115">![Components of a tiled TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")</span></span>  
+<span data-ttu-id="04baa-116">TileMode가 Tile인 TileBrush의 구성 요소</span><span class="sxs-lookup"><span data-stu-id="04baa-116">Components of a TileBrush with a TileMode of Tile</span></span>  
   
- 출력 영역은 그리고 있는 영역을 의미하며 <xref:System.Windows.Shapes.Ellipse>의 <xref:System.Windows.Shapes.Shape.Fill%2A> 또는 <xref:System.Windows.Controls.Button>의 <xref:System.Windows.Controls.Control.Background%2A>를 예로 들 수 있습니다.  다음 단원에서는 <xref:System.Windows.Media.TileBrush>의 다른 두 가지 구성 요소에 대해 설명합니다.  
+ <span data-ttu-id="04baa-117">출력 영역에는 같은 그리고 있는 영역에서 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 <xref:System.Windows.Shapes.Ellipse> 또는 <xref:System.Windows.Controls.Control.Background%2A> 의 <xref:System.Windows.Controls.Button>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-117">The output area is the area being painted, such as the <xref:System.Windows.Shapes.Shape.Fill%2A> of an <xref:System.Windows.Shapes.Ellipse> or the <xref:System.Windows.Controls.Control.Background%2A> of a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="04baa-118">다음 섹션의 다른 두 가지 구성 요소 설명 하는 <xref:System.Windows.Media.TileBrush>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-118">The next sections describe the other two components of a <xref:System.Windows.Media.TileBrush>.</span></span>  
   
 <a name="brushcontent"></a>   
-## 브러시 내용  
- 세 가지 다른 형식의 <xref:System.Windows.Media.TileBrush>가 있으며 각각 다른 형식의 내용을 그립니다.  
+## <a name="brush-content"></a><span data-ttu-id="04baa-119">브러시 콘텐츠</span><span class="sxs-lookup"><span data-stu-id="04baa-119">Brush Content</span></span>  
+ <span data-ttu-id="04baa-120">세 가지 유형의 없는 <xref:System.Windows.Media.TileBrush> 다른 종류의 콘텐츠 각각을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-120">There are three different types of <xref:System.Windows.Media.TileBrush> and each paints with a different type of content.</span></span>  
   
--   브러시가 <xref:System.Windows.Media.ImageBrush>인 경우 이 내용은 이미지입니다. <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 속성은 <xref:System.Windows.Media.ImageBrush>의 내용을 지정합니다.  
+-   <span data-ttu-id="04baa-121">브러시가 <xref:System.Windows.Media.ImageBrush>,이 콘텐츠는 이미지는 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 속성의 내용을 지정 된 <xref:System.Windows.Media.ImageBrush>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-121">If the brush is an <xref:System.Windows.Media.ImageBrush>, this content is an image The <xref:System.Windows.Media.ImageBrush.ImageSource%2A> property specifies the contents of the <xref:System.Windows.Media.ImageBrush>.</span></span>  
   
--   브러시가 <xref:System.Windows.Media.DrawingBrush>이면 이 내용은 그리기입니다.  <xref:System.Windows.Media.DrawingBrush.Drawing%2A> 속성은 <xref:System.Windows.Media.DrawingBrush>의 내용을 지정합니다.  
+-   <span data-ttu-id="04baa-122">브러시가 <xref:System.Windows.Media.DrawingBrush>,이 콘텐츠는 드로잉 합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-122">If the brush is a <xref:System.Windows.Media.DrawingBrush>, this content is a drawing.</span></span> <span data-ttu-id="04baa-123"><xref:System.Windows.Media.DrawingBrush.Drawing%2A> 속성의 내용을 지정 된 <xref:System.Windows.Media.DrawingBrush>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-123">The <xref:System.Windows.Media.DrawingBrush.Drawing%2A> property specifies the contents of the <xref:System.Windows.Media.DrawingBrush>.</span></span>  
   
--   브러시가 <xref:System.Windows.Media.VisualBrush>이면 이 내용은 표시입니다.  <xref:System.Windows.Media.VisualBrush.Visual%2A> 속성은 <xref:System.Windows.Media.VisualBrush>의 내용을 지정합니다.  
+-   <span data-ttu-id="04baa-124">브러시가 <xref:System.Windows.Media.VisualBrush>,이 콘텐츠는 시각적 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-124">If the brush is a <xref:System.Windows.Media.VisualBrush>, this content is a visual.</span></span> <span data-ttu-id="04baa-125"><xref:System.Windows.Media.VisualBrush.Visual%2A> 속성의 내용을 지정 된 <xref:System.Windows.Media.VisualBrush>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-125">The <xref:System.Windows.Media.VisualBrush.Visual%2A> property specifies the content of the <xref:System.Windows.Media.VisualBrush>.</span></span>  
   
- <xref:System.Windows.Media.TileBrush.Viewbox%2A> 속성을 사용하여 <xref:System.Windows.Media.TileBrush> 내용의 위치와 크기를 지정할 수도 있지만 일반적으로 <xref:System.Windows.Media.TileBrush.Viewbox%2A>는 기본값으로 그대로 둡니다.  기본적으로 <xref:System.Windows.Media.TileBrush.Viewbox%2A>는 브러시의 내용을 완전히 포함하도록 구성됩니다.  <xref:System.Windows.Controls.Viewbox>를 구성하는 방법에 대한 자세한 내용은 <xref:System.Windows.Controls.Viewbox> 속성 페이지를 참조하십시오.  
+ <span data-ttu-id="04baa-126">위치 및 크기를 지정할 수 있습니다 <xref:System.Windows.Media.TileBrush> 를 사용 하 여 콘텐츠는 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 속성을 두려면 일반적으로 하지만 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 해당 기본값으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-126">You can specify the position and dimensions of <xref:System.Windows.Media.TileBrush> content by using the <xref:System.Windows.Media.TileBrush.Viewbox%2A> property, although it is common to leave the <xref:System.Windows.Media.TileBrush.Viewbox%2A> set to its default value.</span></span> <span data-ttu-id="04baa-127">기본적으로는 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 완전히 브러시의 내용을 포함 하도록 구성 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-127">By default, the <xref:System.Windows.Media.TileBrush.Viewbox%2A> is configured to completely contain the brush's contents.</span></span> <span data-ttu-id="04baa-128">구성에 대 한 자세한 내용은 <xref:System.Windows.Controls.Viewbox>, 참조는 <xref:System.Windows.Controls.Viewbox> 속성 페이지.</span><span class="sxs-lookup"><span data-stu-id="04baa-128">For more information about configuring the <xref:System.Windows.Controls.Viewbox>, see the <xref:System.Windows.Controls.Viewbox> property page.</span></span>  
   
 <a name="thebasetile"></a>   
-## 기본 바둑판  
- <xref:System.Windows.Media.TileBrush>는 자체의 내용을 기본 바둑판에 투영합니다.  <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.TileBrush> 내용이 기본 바둑판을 채우도록 해당 내용을 늘리는 방법을 제어합니다.  <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성에는 <xref:System.Windows.Media.Stretch> 열거형으로 정의하는 다음과 같은 값을 사용할 수 있습니다.  
+## <a name="the-base-tile"></a><span data-ttu-id="04baa-129">기본 타일</span><span class="sxs-lookup"><span data-stu-id="04baa-129">The Base Tile</span></span>  
+ <span data-ttu-id="04baa-130">A <xref:System.Windows.Media.TileBrush> 기본 타일에 해당 콘텐츠를 프로젝션 합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-130">A <xref:System.Windows.Media.TileBrush> projects its content onto a base tile.</span></span> <span data-ttu-id="04baa-131"><xref:System.Windows.Media.TileBrush.Stretch%2A> 속성 컨트롤 어떻게 <xref:System.Windows.Media.TileBrush> 을 기본 타일을 채우도록 콘텐츠를 늘립니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-131">The <xref:System.Windows.Media.TileBrush.Stretch%2A> property controls how <xref:System.Windows.Media.TileBrush> content is stretched to fill the base tile.</span></span> <span data-ttu-id="04baa-132"><xref:System.Windows.Media.TileBrush.Stretch%2A> 속성에 의해 정의 된 다음 값은 허용 된 <xref:System.Windows.Media.Stretch> 열거형:</span><span class="sxs-lookup"><span data-stu-id="04baa-132">The <xref:System.Windows.Media.TileBrush.Stretch%2A> property accepts the following values, defined by the <xref:System.Windows.Media.Stretch> enumeration:</span></span>  
   
--   <xref:System.Windows.Media.Stretch>: 브러시의 내용이 바둑판을 채우도록 늘어나지 않습니다.  
+-   <span data-ttu-id="04baa-133"><xref:System.Windows.Media.Stretch.None>: 타일에 맞게 브러시의 내용을 늘어나지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-133"><xref:System.Windows.Media.Stretch.None>: The brush's content is not stretched to fill the tile.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>: 브러시의 내용이 바둑판에 맞게 배율 조정됩니다.  내용의 높이와 너비의 배율이 독립적으로 조정되기 때문에 내용의 원래 가로 세로 비율이 유지되지 않을 수 있습니다.  즉, 브러시의 내용이 출력 바둑판을 완전히 채우기 위해 휠 수 있습니다.  
+-   <span data-ttu-id="04baa-134"><xref:System.Windows.Media.Stretch.Fill>: 타일에 맞게 브러시의 콘텐츠 크기가 조정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-134"><xref:System.Windows.Media.Stretch.Fill>: The brush's content is scaled to fit the tile.</span></span> <span data-ttu-id="04baa-135">콘텐츠의 높이 및 너비가 독립적으로 조정되므로 콘텐츠의 원래 가로 세로 비율이 유지되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-135">Because the content's height and width are scaled independently, the original aspect ratio of the content might not be preserved.</span></span> <span data-ttu-id="04baa-136">즉, 출력 타일을 완전히 채우도록 브러시 콘텐츠를 이동해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-136">That is, the brush's content might be warped in order to completely fill the output tile.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>: 브러시의 내용이 모두 바둑판 내에 포함되도록 배율 조정됩니다.  내용의 가로 세로 비율은 유지됩니다.  
+-   <span data-ttu-id="04baa-137"><xref:System.Windows.Media.Stretch.Uniform>: 타일 내에서 완전히 맞도록 브러시의 콘텐츠 크기가 조정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-137"><xref:System.Windows.Media.Stretch.Uniform>: The brush's content is scaled so that it fits completely within the tile.</span></span> <span data-ttu-id="04baa-138">콘텐츠의 가로 세로 비율이 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-138">The content's aspect ratio is preserved.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>: 브러시 내용이 출력 영역을 완벽하게 채우도록 배율 조정되며 내용의 원래 가로 세로 비율은 유지됩니다.  
+-   <span data-ttu-id="04baa-139"><xref:System.Windows.Media.Stretch.UniformToFill>: 콘텐츠의 원래 가로 세로 비율을 유지 하면서 출력 영역을 채우도록 완전히 브러시의 콘텐츠 크기가 조정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-139"><xref:System.Windows.Media.Stretch.UniformToFill>: The brush's content is scaled so that it completely fills the output area while preserving the content's original aspect ratio.</span></span>  
   
- 다음 이미지에서는 여러 가지 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정을 보여 줍니다.  
+ <span data-ttu-id="04baa-140">다음 그림에서는 서로 다른 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-140">The following image illustrates the different <xref:System.Windows.Media.TileBrush.Stretch%2A> settings.</span></span>  
   
- ![여러 TileBrush Stretch 설정](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.png "img\_mmgraphics\_stretchenum")  
+ <span data-ttu-id="04baa-141">![여러 TileBrush Stretch 설정](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")</span><span class="sxs-lookup"><span data-stu-id="04baa-141">![Different TileBrush Stretch settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")</span></span>  
   
- 다음 예제에서는 <xref:System.Windows.Media.ImageBrush>의 내용이 출력 영역을 채우기 위해 늘어나지 않도록 설정합니다.  
+ <span data-ttu-id="04baa-142">다음 예에서 콘텐츠는 <xref:System.Windows.Media.ImageBrush> 을 설정 하 여 출력 영역을 채우기 위해 늘여 지지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-142">In the following example, the content of an <xref:System.Windows.Media.ImageBrush> is set so that it does not stretch to fill the output area.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
   
- 기본적으로 <xref:System.Windows.Media.TileBrush>는 하나의 바둑판\(기본 바둑판\)을 생성하고 해당 바둑판을 늘려 출력 영역을 완전히 채웁니다.  <xref:System.Windows.Media.TileBrush.Viewport%2A> 및 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성을 설정하여 기본 바둑판의 크기와 위치를 변경할 수 있습니다.  
+ <span data-ttu-id="04baa-143">기본적으로는 <xref:System.Windows.Media.TileBrush> 단일 타일 (기본 타일)를 생성 하 고 확장 하는 해당 타일을 출력 영역을 완전히 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-143">By default, a <xref:System.Windows.Media.TileBrush> generates a single tile (the base tile) and stretches that tile to completely fill the output area.</span></span> <span data-ttu-id="04baa-144">기본 파일의 위치와 크기를 설정 하 여 변경할 수 있습니다는 <xref:System.Windows.Media.TileBrush.Viewport%2A> 및 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-144">You can change the size and position of the base tile by setting the <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> properties.</span></span>  
   
 <a name="basetilesize"></a>   
-### 기본 바둑판 크기  
- <xref:System.Windows.Media.TileBrush.Viewport%2A> 속성은 기본 바둑판의 크기와 위치를 결정하고 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성은 <xref:System.Windows.Media.TileBrush.Viewport%2A>를 절대 좌표 또는 상대 좌표 중 무엇을 사용하여 지정하는지를 결정합니다.  좌표가 상대적이면 출력 영역의 크기가 기준입니다.  \(0, 0\) 지점은 출력 영역의 왼쪽 위 모퉁이를 나타내고 \(1, 1\)은 출력 영역의 오른쪽 아래 모퉁이를 나타냅니다.  <xref:System.Windows.Media.TileBrush.Viewport%2A> 속성에서 절대 좌표를 사용하도록 지정하려면 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성을 <xref:System.Windows.Media.BrushMappingMode>로 설정합니다.  
+### <a name="base-tile-size"></a><span data-ttu-id="04baa-145">기본 타일 크기</span><span class="sxs-lookup"><span data-stu-id="04baa-145">Base Tile Size</span></span>  
+ <span data-ttu-id="04baa-146"><xref:System.Windows.Media.TileBrush.Viewport%2A> 속성 크기와 기본 파일의 위치를 결정 및 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성에 따라 결정 여부는 <xref:System.Windows.Media.TileBrush.Viewport%2A> 절대 또는 상대 좌표를 사용 하 여 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-146">The <xref:System.Windows.Media.TileBrush.Viewport%2A> property determines the size and position of the base tile, and the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> property determines whether the <xref:System.Windows.Media.TileBrush.Viewport%2A> is specified using absolute or relative coordinates.</span></span> <span data-ttu-id="04baa-147">상대 좌표인 경우 출력 영역의 크기를 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-147">If the coordinates are relative, they are relative to the size of the output area.</span></span> <span data-ttu-id="04baa-148">점 (0,0)은 출력 영역의 왼쪽 위 구석을 나타내고 (1,1)은 출력 영역의 오른쪽 아래 구석을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-148">The point (0,0) represents the top left corner of the output area, and (1,1) represents the bottom right corner of the output area.</span></span> <span data-ttu-id="04baa-149">되도록 지정 하려면는 <xref:System.Windows.Media.TileBrush.Viewport%2A> 절대 좌표를 사용 하는 속성으로 설정 된 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성을 <xref:System.Windows.Media.BrushMappingMode.Absolute>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-149">To specify that the <xref:System.Windows.Media.TileBrush.Viewport%2A> property uses absolute coordinates, set the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> property to <xref:System.Windows.Media.BrushMappingMode.Absolute>.</span></span>  
   
- 다음 그림에서는 상대 및 절대 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>를 사용한 <xref:System.Windows.Media.TileBrush> 간의 출력 차이를 보여 줍니다.  각 그림은 바둑판식 배열 패턴을 보여 줍니다. 다음 단원에서는 바둑판 패턴을 지정하는 방법을 설명합니다.  
+ <span data-ttu-id="04baa-150">다음 그림과 간 출력 차이 <xref:System.Windows.Media.TileBrush> absolute 및 relative <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-150">The following illustration shows the difference in output between a <xref:System.Windows.Media.TileBrush> with relative versus absolute <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>.</span></span> <span data-ttu-id="04baa-151">각 그림은 바둑판식 배열 패턴을 보여 줍니다. 다음 섹션에서는 바둑판식 배열 패턴을 지정하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-151">Notice that the illustrations each show a tiled pattern; the next section describes how to specify tile pattern.</span></span>  
   
- ![절대적 및 상대적 뷰포트 단위](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute\_and\_relative\_viewports")  
+ <span data-ttu-id="04baa-152">![절대 및 상대 뷰포트 단위](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")</span><span class="sxs-lookup"><span data-stu-id="04baa-152">![Absolute and Relative Viewport Units](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")</span></span>  
   
- 다음 예제에서는 이미지를 사용하여 너비와 높이가 50%인 바둑판을 만듭니다.  기본 바둑판은 출력 영역의 \(0,0\)에 있습니다.  
+ <span data-ttu-id="04baa-153">다음 예제에서는 이미지를 사용하여 너비 및 높이가 50%인 타일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-153">In the following example, an image is used to create a tile that has a width and height of 50%.</span></span> <span data-ttu-id="04baa-154">기본 타일은 출력 영역의 (0,0) 위치에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-154">The base tile is located at (0,0) of the output area.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
   
- 다음 예제에서는 <xref:System.Windows.Media.ImageBrush>의 바둑판을 25 x 25 [장치 독립적 픽셀](GTMT)을 설정합니다.  <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>가 절대적이므로 <xref:System.Windows.Media.ImageBrush> 바둑판은 그리고 있는 영역의 크기에 관계없이 항상 25 x 25픽셀입니다.  
+ <span data-ttu-id="04baa-155">타일을 설정 하는 다음 예제는 <xref:System.Windows.Media.ImageBrush> 를 25에서 25 장치 독립적 픽셀입니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-155">The next example sets the tiles of an <xref:System.Windows.Media.ImageBrush> to 25 by 25 device independent pixels.</span></span> <span data-ttu-id="04baa-156">때문에 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> , 절대 좌표 인지는 <xref:System.Windows.Media.ImageBrush> 타일은 항상 그리고 영역의 크기에 관계 없이 25 여 25 (픽셀)입니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-156">Because the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> are absolute, the <xref:System.Windows.Media.ImageBrush> tiles are always 25 by 25 pixels, regardless of the size of the area being painted.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmabsoluteviewportunitsexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmabsoluteviewportunitsexample1)]  
   
 <a name="tilingbehavior"></a>   
-### 바둑판식 배열 동작  
- <xref:System.Windows.Media.TileBrush>에서는 기본 바둑판이 출력 영역을 완전히 채우지 않고 <xref:System.Windows.Media.TileMode> 외의 바둑판식 배열 모드가 지정된 경우 바둑판식 배열 패턴을 생성합니다.  브러시의 바둑판이 출력 영역을 완전히 채우지 않고 해당 <xref:System.Windows.Media.TileBrush.TileMode%2A> 속성에서 기본 바둑판을 복제하여 출력 영역을 채워야 하는지 여부를 지정하고, 그럴 경우 기본 바둑판을 복제하는 방법을 지정합니다.  <xref:System.Windows.Media.TileBrush.TileMode%2A> 속성에는 <xref:System.Windows.Media.TileMode> 열거형으로 정의하는 다음과 같은 값을 사용할 수 있습니다.  
+### <a name="tiling-behavior"></a><span data-ttu-id="04baa-157">바둑판식 배열 동작</span><span class="sxs-lookup"><span data-stu-id="04baa-157">Tiling Behavior</span></span>  
+ <span data-ttu-id="04baa-158">A <xref:System.Windows.Media.TileBrush> 기본 타일 완전히 채우지 않고 출력 영역을 바둑판식 배열 모드 이외의 때 바둑판식 배열된 패턴을 생성 <xref:System.Windows.Media.TileMode.None> 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-158">A <xref:System.Windows.Media.TileBrush> produces a tiled pattern when its base tile does not completely fill the output area and a tiling mode other then <xref:System.Windows.Media.TileMode.None> is specified.</span></span> <span data-ttu-id="04baa-159">타일 브러시의 타일이 출력 영역에 완전히 채우지 않고 때 해당 <xref:System.Windows.Media.TileBrush.TileMode%2A> 속성 그리고 하는지를 지정 기본 타일이 출력 영역을 채우는 복제 하는 경우 기본 타일이 어떻게 복제 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-159">When a tile brush's tile does not completely fill the output area, its <xref:System.Windows.Media.TileBrush.TileMode%2A> property specifies whether the base tile should be duplicated to fill the output area and, if so, how the base tile should be duplicated.</span></span> <span data-ttu-id="04baa-160"><xref:System.Windows.Media.TileBrush.TileMode%2A> 속성에 의해 정의 된 다음 값은 허용 된 <xref:System.Windows.Media.TileMode> 열거형:</span><span class="sxs-lookup"><span data-stu-id="04baa-160">The <xref:System.Windows.Media.TileBrush.TileMode%2A> property accepts the following values, defined by the <xref:System.Windows.Media.TileMode> enumeration:</span></span>  
   
--   <xref:System.Windows.Media.TileMode>: 기본 바둑판만 그립니다.  
+-   <span data-ttu-id="04baa-161"><xref:System.Windows.Media.TileMode.None>: 기본 타일은만 그려집니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-161"><xref:System.Windows.Media.TileMode.None>: Only the base tile is drawn.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>: 기본 바둑판을 그리고 나머지 영역은 기본 바둑판을 반복하여 채웁니다. 이때 한 바둑판의 오른쪽 가장자리가 다음 바둑판의 왼쪽 가장자리 옆에 오고 마찬가지로 아래쪽과 위쪽 바둑판이 인접하도록 반복합니다.  
+-   <span data-ttu-id="04baa-162"><xref:System.Windows.Media.TileMode.Tile>: 기본 타일이 그려지고 나머지 영역이 반복 하 여 기본 타일은 하나의 타일의 오른쪽 가장자리에 인접 하는 다음의 및 왼쪽된 가장자리 되도록 마찬가지로 하 한 및 상한에 대해 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-162"><xref:System.Windows.Media.TileMode.Tile>: The base tile is drawn and the remaining area is filled by repeating the base tile such that the right edge of one tile is adjacent to the left edge of the next, and similarly for bottom and top.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>: 바둑판의 대체 열이 좌우 대칭 이동한다는 점을 제외하고 <xref:System.Windows.Media.TileMode>과 같습니다.  
+-   <span data-ttu-id="04baa-163"><xref:System.Windows.Media.TileMode.FlipX>: 동일 <xref:System.Windows.Media.TileMode.Tile>, 타일의 대체 열이 좌우로 하지만 합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-163"><xref:System.Windows.Media.TileMode.FlipX>: The same as <xref:System.Windows.Media.TileMode.Tile>, but alternate columns of tiles are flipped horizontally.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>: 바둑판의 대체 행이 세로로 대칭 이동한다는 점을 제외하고 <xref:System.Windows.Media.TileMode>과 같습니다.  
+-   <span data-ttu-id="04baa-164"><xref:System.Windows.Media.TileMode.FlipY>: 동일 <xref:System.Windows.Media.TileMode.Tile>, 타일의 대체 행이 상하로 하지만 합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-164"><xref:System.Windows.Media.TileMode.FlipY>: The same as <xref:System.Windows.Media.TileMode.Tile>, but alternate rows of tiles are flipped vertically.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>: <xref:System.Windows.Media.TileMode> 및 <xref:System.Windows.Media.TileMode>의 조합입니다.  
+-   <span data-ttu-id="04baa-165"><xref:System.Windows.Media.TileMode.FlipXY>:의 조합을 <xref:System.Windows.Media.TileMode.FlipX> 및 <xref:System.Windows.Media.TileMode.FlipY>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-165"><xref:System.Windows.Media.TileMode.FlipXY>: A combination of <xref:System.Windows.Media.TileMode.FlipX> and <xref:System.Windows.Media.TileMode.FlipY>.</span></span>  
   
- 다음 이미지에서는 여러 가지 바둑판식 배열 모드를 보여 줍니다.  
+ <span data-ttu-id="04baa-166">다음 이미지는 여러 다른 바둑판식 배열 모드를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-166">The following image illustrates the different tiling modes.</span></span>  
   
- ![여러 TileBrush TileMode 설정](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.png "img\_mmgraphics\_tilemodes")  
+ <span data-ttu-id="04baa-167">![여러 TileBrush TileMode 설정](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")</span><span class="sxs-lookup"><span data-stu-id="04baa-167">![Different TileBrush TileMode settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")</span></span>  
   
- 다음 예제에서는 너비가 100픽셀이고 높이가 100픽셀인 사각형을 이미지를 사용하여 그립니다.  브러시의 <xref:System.Windows.Media.TileBrush.Viewport%2A>를 0,0,0.25,0.25로 설정하면 브러시의 기본 바둑판이 출력 영역의 1\/4이 되게 만들어집니다.  바둑판의 행으로 사각형을 채우도록 브러시의 <xref:System.Windows.Media.TileBrush.TileMode%2A>를 <xref:System.Windows.Media.TileMode>로  설정합니다.  
+ <span data-ttu-id="04baa-168">다음 예제에서는 이미지를 사용하여 너비 및 높이가 100x100픽셀인 사각형을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-168">In the following example, an image is used to paint a rectangle that is 100 pixels wide and 100 pixels tall.</span></span> <span data-ttu-id="04baa-169">브러시의 설정 하 여 <xref:System.Windows.Media.TileBrush.Viewport%2A> 설정한 0,0,0.25,0.25에 기본 타일 브러시의 1/4 출력 영역의 되도록 이루어집니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-169">By setting the brush's <xref:System.Windows.Media.TileBrush.Viewport%2A> has been set to 0,0,0.25,0.25, the brush's base tile is made to be 1/4 of the output area.</span></span> <span data-ttu-id="04baa-170">브러시의 <xref:System.Windows.Media.TileBrush.TileMode%2A> 로 설정 된 <xref:System.Windows.Media.TileMode.FlipXY>합니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-170">The brush's <xref:System.Windows.Media.TileBrush.TileMode%2A> is set to <xref:System.Windows.Media.TileMode.FlipXY>.</span></span> <span data-ttu-id="04baa-171">이를 통해 타일 행으로 사각형이 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="04baa-171">so that it fills the rectangle with rows of tiles.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## 참고 항목  
- <xref:System.Windows.Media.ImageBrush>   
- <xref:System.Windows.Media.DrawingBrush>   
- <xref:System.Windows.Media.VisualBrush>   
- <xref:System.Windows.Media.TileBrush>   
- [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)   
- [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [ImageBrush 샘플](http://go.microsoft.com/fwlink/?LinkID=160005)   
- [VisualBrush 샘플](http://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a><span data-ttu-id="04baa-172">참고 항목</span><span class="sxs-lookup"><span data-stu-id="04baa-172">See Also</span></span>  
+ <xref:System.Windows.Media.ImageBrush>  
+ <xref:System.Windows.Media.DrawingBrush>  
+ <xref:System.Windows.Media.VisualBrush>  
+ <xref:System.Windows.Media.TileBrush>  
+ [<span data-ttu-id="04baa-173">이미지, 그림 및 시각적 표시로 그리기</span><span class="sxs-lookup"><span data-stu-id="04baa-173">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="04baa-174">방법 항목</span><span class="sxs-lookup"><span data-stu-id="04baa-174">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [<span data-ttu-id="04baa-175">Freezable 개체 개요</span><span class="sxs-lookup"><span data-stu-id="04baa-175">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="04baa-176">ImageBrush 샘플</span><span class="sxs-lookup"><span data-stu-id="04baa-176">ImageBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160005)  
+ [<span data-ttu-id="04baa-177">VisualBrush 샘플</span><span class="sxs-lookup"><span data-stu-id="04baa-177">VisualBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160049)

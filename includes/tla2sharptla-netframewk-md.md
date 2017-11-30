@@ -1,1 +1,1 @@
-프레임워크
+<span data-ttu-id="138a3-101">프레임워크</span><span class="sxs-lookup"><span data-stu-id="138a3-101">Framework</span></span>

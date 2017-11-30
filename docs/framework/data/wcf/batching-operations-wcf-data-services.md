@@ -1,35 +1,37 @@
 ---
-title: "일괄 처리 작업(WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF Data Services, 클라이언트 라이브러리"
+title: "일괄 처리 작업(WCF Data Services)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e929e9771ba1d47016919f017f3476b17581d8a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 일괄 처리 작업(WCF Data Services)
-[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]은 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기반 서비스에 대한 요청의 일괄 처리를 지원합니다.  자세한 내용은 [OData: 일괄 처리](http://go.microsoft.com/fwlink/?LinkId=186075)\(영문\)를 참조하세요. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 쿼리 실행, 변경 사항 저장과 같이 <xref:System.Data.Services.Client.DataServiceContext>를 사용하는 작업을 실행할 때마다 별도의 요청이 데이터 서비스로 전송됩니다.  작업 집합에 대해 논리적 범위를 유지하려면 작업 일괄 처리를 명시적으로 정의합니다.  이렇게 하면 일괄 처리의 모든 작업이 단일 HTTP 요청으로 데이터 서비스에 전송되고, 서버에서 작업을 개별적으로 처리할 수 있으며, 데이터 서비스에 대한 왕복 수가 줄어듭니다.  
+# <a name="batching-operations-wcf-data-services"></a><span data-ttu-id="32409-102">일괄 처리 작업(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="32409-102">Batching Operations (WCF Data Services)</span></span>
+<span data-ttu-id="32409-103">[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 지원 일괄 처리에 대 한 요청을 처리 한 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-기반 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="32409-103">The [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] supports batch processing of requests to an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-based service.</span></span> <span data-ttu-id="32409-104">자세한 내용은 참조 [OData: 일괄 처리](http://go.microsoft.com/fwlink/?LinkId=186075)합니다.</span><span class="sxs-lookup"><span data-stu-id="32409-104">For more information, see [OData: Batch Processing](http://go.microsoft.com/fwlink/?LinkId=186075).</span></span> <span data-ttu-id="32409-105">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 각 작업을 사용 하는 <xref:System.Data.Services.Client.DataServiceContext>, 같은 쿼리를 실행 하거나 결과 데이터 서비스에 전송 되는 별도 요청에 변경 내용을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="32409-105">In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], each operation that uses the <xref:System.Data.Services.Client.DataServiceContext>, such as executing a query or saving changes, results in a separate request being sent to the data service.</span></span> <span data-ttu-id="32409-106">작업 집합에 대해 논리적 범위를 유지하려면 작업 일괄 처리를 명시적으로 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="32409-106">In order to maintain a logical scope for sets of operations, you can explicitly define operational batches.</span></span> <span data-ttu-id="32409-107">이렇게 하면 일괄 처리의 모든 작업이 단일 HTTP 요청에 데이터 서비스에 전송, 서버가 작업을 개별적으로 처리할 수 있도록 데이터 서비스와 왕복 수를 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="32409-107">This ensures that all operations in the batch are sent to the data service in a single HTTP request, enables the server to process the operations atomically, and reduces the number of round trips to the data service.</span></span>  
   
-## 쿼리 작업 일괄 처리  
- 여러 쿼리를 단일 일괄 처리로 실행하려면 일괄 처리의 각 쿼리를 별도의 <xref:System.Data.Services.Client.DataServiceRequest%601> 클래스 인스턴스로 만들어야 합니다.  이런 방식으로 쿼리 요청을 만들면 쿼리 자체가 URI로 정의되며 리소스의 주소 지정 규칙을 따릅니다.  자세한 내용은 [데이터 서비스 리소스 액세스](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)을 참조하세요.  쿼리 요청 개체가 포함된 <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> 메서드를 호출하면 일괄 처리된 쿼리 요청 결과가 데이터 서비스로 전송됩니다.  이 메서드는 일괄 처리에 포함된 개별 쿼리에 대한 응답을 나타내며 각각 쿼리에서 반환된 개체 컬렉션이나 오류 정보를 포함하는 <xref:System.Data.Services.Client.QueryOperationResponse%601> 개체의 컬렉션인 <xref:System.Data.Services.Client.DataServiceResponse> 개체를 반환합니다.  일괄 처리에서 단일 쿼리 작업이 실패하면 <xref:System.Data.Services.Client.QueryOperationResponse%601> 개체에 실패한 작업에 대한 오류 정보가 반환되며 나머지 작업은 계속 실행됩니다.  자세한 내용은 [방법: 일괄 처리로 쿼리 실행](../../../../docs/framework/data/wcf/how-to-execute-queries-in-a-batch-wcf-data-services.md)을 참조하세요.  
+## <a name="batching-query-operations"></a><span data-ttu-id="32409-108">쿼리 작업 일괄 처리</span><span class="sxs-lookup"><span data-stu-id="32409-108">Batching Query Operations</span></span>  
+ <span data-ttu-id="32409-109">여러 쿼리를 단일 일괄 처리로 실행하려면 일괄 처리의 각 쿼리를 별도의 <xref:System.Data.Services.Client.DataServiceRequest%601> 클래스 인스턴스로 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="32409-109">To execute multiple queries in a single batch, you must create each query in the batch as a separate instance of the <xref:System.Data.Services.Client.DataServiceRequest%601> class.</span></span> <span data-ttu-id="32409-110">이런 방식으로 쿼리 요청을 만들면 쿼리 자체가 URI로 정의되며 리소스의 주소 지정 규칙을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="32409-110">When you create a query request in this manner, the query itself is defined as a URI, and it follows the rules for addressing resources.</span></span> <span data-ttu-id="32409-111">자세한 내용은 참조 [데이터 서비스 리소스 액세스](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="32409-111">For more information, see [Accessing Data Service Resources](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md).</span></span> <span data-ttu-id="32409-112">쿼리 요청 개체가 포함된 <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> 메서드를 호출하면 일괄 처리된 쿼리 요청 결과가 데이터 서비스로 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="32409-112">The batched query requests are sent to the data service when the <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> method is called that contains the query request objects.</span></span> <span data-ttu-id="32409-113">이 메서드는 일괄 처리에 포함된 개별 쿼리에 대한 응답을 나타내며 각각 쿼리에서 반환된 개체 컬렉션이나 오류 정보를 포함하는 <xref:System.Data.Services.Client.DataServiceResponse> 개체의 컬렉션인 <xref:System.Data.Services.Client.QueryOperationResponse%601> 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="32409-113">This method returns a <xref:System.Data.Services.Client.DataServiceResponse> object, which is a collection of <xref:System.Data.Services.Client.QueryOperationResponse%601> objects that represent responses to individual queries in the batch, each of which contains either a collection of objects returned by the query or error information.</span></span> <span data-ttu-id="32409-114">일괄 처리에서 단일 쿼리 작업이 실패하면 <xref:System.Data.Services.Client.QueryOperationResponse%601> 개체에 실패한 작업에 대한 오류 정보가 반환되며 나머지 작업은 계속 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="32409-114">When any single query operation in the batch fails, error information is returned in the <xref:System.Data.Services.Client.QueryOperationResponse%601> object for the operation that failed and the remaining operations are still executed.</span></span> <span data-ttu-id="32409-115">자세한 내용은 참조 [하는 방법: 일괄 처리에서 쿼리 실행](../../../../docs/framework/data/wcf/how-to-execute-queries-in-a-batch-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="32409-115">For more information, see [How to: Execute Queries in a Batch](../../../../docs/framework/data/wcf/how-to-execute-queries-in-a-batch-wcf-data-services.md).</span></span>  
   
- 일괄 처리된 쿼리를 비동기적으로 실행할 수도 있습니다.  자세한 내용은 [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)을 참조하세요.  
+ <span data-ttu-id="32409-116">일괄 처리된 쿼리를 비동기적으로 실행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="32409-116">Batched queries can also be executed asynchronously.</span></span> <span data-ttu-id="32409-117">자세한 내용은 참조 [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="32409-117">For more information, see [Asynchronous Operations](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).</span></span>  
   
-## SaveChanges 작업 일괄 처리  
- <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 호출하면 컨텍스트에서 추적하는 모든 변경 내용이 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 서비스에 대한 요청으로 전송되는 REST 기반 작업으로 변환됩니다.  기본적으로 이러한 변경 내용은 단일 요청 메시지로 전송되지 않습니다.  모든 변경 내용을 단일 요청으로 보내도록 하려면 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%28System.Data.Services.Client.SaveChangesOptions%29> 메서드를 호출하고 메서드에 제공하는 <xref:System.Data.Services.Client.SaveChangesOptions> 열거형에 <xref:System.Data.Services.Client.SaveChangesOptions> 값을 포함해야 합니다.  
+## <a name="batching-the-savechanges-operation"></a><span data-ttu-id="32409-118">SaveChanges 작업 일괄 처리</span><span class="sxs-lookup"><span data-stu-id="32409-118">Batching the SaveChanges Operation</span></span>  
+ <span data-ttu-id="32409-119">호출 하는 경우는 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 트랙으로 전송 되는 REST 기반 작업으로 변환 된 결과 컨텍스트 하도록 요청 하는 모든 변경 내용을 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="32409-119">When you call the <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> method, all changes that the context tracks are translated into REST-based operations that are sent as requests to the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service.</span></span> <span data-ttu-id="32409-120">기본적으로 이러한 변경 내용은 단일 요청 메시지로 전송되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="32409-120">By default, these changes are not sent in a single request message.</span></span> <span data-ttu-id="32409-121">모든 변경 내용을 단일 요청에서 보낼 수를 요구 하려면 호출 해야 합니다는 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%28System.Data.Services.Client.SaveChangesOptions%29> 메서드 값을 포함 하 고 <xref:System.Data.Services.Client.SaveChangesOptions.Batch> 에 <xref:System.Data.Services.Client.SaveChangesOptions> 메서드에 제공 하는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="32409-121">To require that all changes be sent in a single request, you must call the <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%28System.Data.Services.Client.SaveChangesOptions%29> method and include a value of <xref:System.Data.Services.Client.SaveChangesOptions.Batch> in the <xref:System.Data.Services.Client.SaveChangesOptions> enumeration that you supply to the method.</span></span>  
   
- 일괄 처리된 변경 내용을 비동기적으로 저장할 수도 있습니다.  자세한 내용은 [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)을 참조하세요.  
+ <span data-ttu-id="32409-122">일괄 처리된 변경 내용을 비동기적으로 저장할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="32409-122">You can also asynchronously save batched changes.</span></span> <span data-ttu-id="32409-123">자세한 내용은 참조 [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="32409-123">For more information, see [Asynchronous Operations](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).</span></span>  
   
-## 참고 항목  
- [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a><span data-ttu-id="32409-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="32409-124">See Also</span></span>  
+ [<span data-ttu-id="32409-125">WCF Data Services 클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="32409-125">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

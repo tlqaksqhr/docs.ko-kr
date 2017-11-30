@@ -1,41 +1,39 @@
 ---
-title: "System.Xml 사용법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "System.Xml 사용법"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a9bfa0f984f97e774d00a64fc3fd8489b3d5b40e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# System.Xml 사용법
-이 섹션에 있는 여러 유형의 사용에 대 한 이야기 <xref:System.Xml?displayProperty=fullName> 네임 스페이스는 XML 데이터를 나타내는 데 사용할 수 있습니다.  
+# <a name="systemxml-usage"></a><span data-ttu-id="81ca6-102">System.Xml 사용법</span><span class="sxs-lookup"><span data-stu-id="81ca6-102">System.Xml Usage</span></span>
+<span data-ttu-id="81ca6-103">이 섹션에 있는 여러 유형의 사용에 대 한 설명 <xref:System.Xml?displayProperty=nameWithType> XML 데이터를 나타내기 위해 사용할 수 있는 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="81ca6-103">This section talks about usage of several types residing in <xref:System.Xml?displayProperty=nameWithType> namespaces that can be used to represent XML data.</span></span>  
   
- **X 하지 않으려면** 사용 <xref:System.Xml.XmlNode> 또는 <xref:System.Xml.XmlDocument> XML 데이터를 표시 하도록 합니다. 인스턴스를 사용 하 여 유리한 <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, 또는의 하위 형식을 <xref:System.Xml.Linq.XNode> 대신 합니다.`XmlNode` 및 `XmlDocument` 는 공용 Api를 노출 하기 위한 설계 되지 않았습니다.  
+ <span data-ttu-id="81ca6-104">**X 하지 않으면** 사용 <xref:System.Xml.XmlNode> 또는 <xref:System.Xml.XmlDocument> XML 데이터를 표시 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="81ca6-104">**X DO NOT** use <xref:System.Xml.XmlNode> or <xref:System.Xml.XmlDocument> to represent XML data.</span></span> <span data-ttu-id="81ca6-105">인스턴스를 사용 하 여 유사한 <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, 또는 유형의 하위 <xref:System.Xml.Linq.XNode> 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="81ca6-105">Favor using instances of <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, or subtypes of <xref:System.Xml.Linq.XNode> instead.</span></span> <span data-ttu-id="81ca6-106">`XmlNode`및 `XmlDocument` 공용 Api에서 노출 하는 데 설계 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="81ca6-106">`XmlNode` and `XmlDocument` are not designed for exposing in public APIs.</span></span>  
   
- **✓ 수행** 사용 `XmlReader`, `IXPathNavigable`, 또는의 하위 형식을 `XNode` 받아들이거나 XML을 반환 하는 멤버의 입력 또는 출력으로 합니다.  
+ <span data-ttu-id="81ca6-107">**✓ 않습니다** 사용 `XmlReader`, `IXPathNavigable`, 또는 유형의 하위 `XNode` 입력 또는 출력을 사용 하거나 XML을 반환 하는 멤버의으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="81ca6-107">**✓ DO** use `XmlReader`, `IXPathNavigable`, or subtypes of `XNode` as input or output of members that accept or return XML.</span></span>  
   
- 대신 이러한 추상화를 사용 하 여 `XmlDocument`, `XmlNode`, 또는 <xref:System.Xml.XPath.XPathDocument>, 이 메서드는 메모리 내 XML 문서의 특정 구현에서 분리 하 고 노출 하는 가상 XML 데이터 원본을 사용 하도록 허용 하기 때문에, `XNode`, `XmlReader`, 또는 <xref:System.Xml.XPath.XPathNavigator>합니다.  
+ <span data-ttu-id="81ca6-108">대신 이러한 추상화를 사용 하 여 `XmlDocument`, `XmlNode`, 또는 <xref:System.Xml.XPath.XPathDocument>없기 때문에이 분리 하는 메모리 내 XML 문서의 특정 구현에서 메서드를 노출 하는 가상 XML 데이터 원본으로 작업 하도록 허용 `XNode` `XmlReader`, 또는 <xref:System.Xml.XPath.XPathNavigator>합니다.</span><span class="sxs-lookup"><span data-stu-id="81ca6-108">Use these abstractions instead of `XmlDocument`, `XmlNode`, or <xref:System.Xml.XPath.XPathDocument>, because this decouples the methods from specific implementations of an in-memory XML document and allows them to work with virtual XML data sources that expose `XNode`, `XmlReader`, or <xref:System.Xml.XPath.XPathNavigator>.</span></span>  
   
- **X 하지 않으려면** 하위 클래스 `XmlDocument` 경우 만들려면 기본 개체 모델 또는 데이터 원본에 대 한 XML 뷰를 나타내는 형식입니다.  
+ <span data-ttu-id="81ca6-109">**X 하지 않으면** 하위 클래스 `XmlDocument` 경우 만들려면 기본 개체 모델 또는 데이터 원본에 대 한 XML 뷰를 나타내는 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="81ca6-109">**X DO NOT** subclass `XmlDocument` if you want to create a type representing an XML view of an underlying object model or data source.</span></span>  
   
- *부분 © 2005, 2009 Microsoft Corporation. All rights reserved.*  
+ <span data-ttu-id="81ca6-110">*일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*</span><span class="sxs-lookup"><span data-stu-id="81ca6-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *피어슨 교육, i n c.에서의 사용 권한 때마다 다시 인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리, 제 2 판에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams Addison\-wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
+ <span data-ttu-id="81ca6-111">*피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="81ca6-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## 참고 항목  
- [프레임 워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)   
- [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="81ca6-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="81ca6-112">See Also</span></span>  
+ [<span data-ttu-id="81ca6-113">프레임워크 디자인 지침</span><span class="sxs-lookup"><span data-stu-id="81ca6-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="81ca6-114">사용 지침</span><span class="sxs-lookup"><span data-stu-id="81ca6-114">Usage Guidelines</span></span>](../../../docs/standard/design-guidelines/usage-guidelines.md)

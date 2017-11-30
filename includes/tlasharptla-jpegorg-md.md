@@ -1,1 +1,1 @@
-JPEG(Joint Photographics Experts Group)
+<span data-ttu-id="881a4-101">JPEG(Joint Photographics Experts Group)</span><span class="sxs-lookup"><span data-stu-id="881a4-101">Joint Photographics Experts Group (JPEG)</span></span>

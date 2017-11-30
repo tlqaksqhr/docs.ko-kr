@@ -1,33 +1,36 @@
 ---
-title: "보안(LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "보안(LINQ to DataSet)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c0c919bb5be12005850b81059fc641f6f25b06bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 보안(LINQ to DataSet)
-이 항목에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 보안 문제에 대해 설명합니다.  
+# <a name="security-linq-to-dataset"></a><span data-ttu-id="73ebb-102">보안(LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="73ebb-102">Security (LINQ to DataSet)</span></span>
+<span data-ttu-id="73ebb-103">이 항목에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 보안 문제에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-103">This topic discusses security issues in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
   
-## 신뢰할 수 없는 구성 요소에 쿼리 전달  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리는 프로그램의 한 위치에서 작성한 다음 다른 위치에서 실행할 수 있습니다.  쿼리를 작성하는 위치에서는 호출 메서드가 속한 클래스의 전용 멤버나 지역 변수\/인수를 나타내는 기호와 같이 해당 위치에서 표시되는 모든 요소를 쿼리에서 참조할 수 있습니다.  쿼리 실행 중에는 작성 시 쿼리에서 참조한 멤버를 호출 코드에서 확인할 수 없는 경우에도 쿼리에서 이러한 멤버에 유효하게 액세스할 수 있습니다.  쿼리를 실행하는 코드는 액세스할 대상을 선택할 수 없으므로 멤버에 대한 자체적인 액세스가 불가합니다.  코드는 쿼리가 액세스하는 멤버에만 해당 쿼리를 통해서만 액세스할 수 있습니다.  
+## <a name="passing-a-query-to-an-untrusted-component"></a><span data-ttu-id="73ebb-104">신뢰할 수 없는 구성 요소에 쿼리 전달</span><span class="sxs-lookup"><span data-stu-id="73ebb-104">Passing a Query to an Untrusted Component</span></span>  
+ <span data-ttu-id="73ebb-105">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리는 프로그램의 한 위치에서 작성한 다음 다른 위치에서 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-105">A [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query can be formulated in one point of a program and executed in a different one.</span></span> <span data-ttu-id="73ebb-106">쿼리를 작성하는 위치에서는 호출 메서드가 속한 클래스의 전용 멤버나 지역 변수/인수를 나타내는 기호와 같이 해당 위치에서 표시되는 모든 요소를 쿼리에서 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-106">At the point where the query is formulated, the query can reference any element that is visible at that point, such as private members of the class that the calling method belongs to, or symbols representing local variables/arguments.</span></span> <span data-ttu-id="73ebb-107">쿼리 실행 중에는 작성 시 쿼리에서 참조한 멤버를 호출 코드에서 확인할 수 없는 경우에도 쿼리에서 이러한 멤버에 유효하게 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-107">At execution time, the query will effectively be able to access those members that were referenced by the query at formulation, even if the calling code does not have visibility into them.</span></span> <span data-ttu-id="73ebb-108">쿼리를 실행하는 코드는 액세스할 대상을 선택할 수 없으므로 멤버에 대한 자체적인 액세스가 불가합니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-108">The code that executes the query does not have arbitrary added visibility, in that it cannot choose what to access.</span></span> <span data-ttu-id="73ebb-109">코드는 쿼리가 액세스하는 멤버에만 해당 쿼리를 통해서만 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-109">It will be able to access strictly what the query accesses, and only through the query itself.</span></span>  
   
- 이것은 쿼리에 대한 참조를 다른 코드 조각에 전달함으로써 쿼리를 받는 구성 요소를 신뢰하고 이러한 구성 요소에 쿼리가 참조하는 모든 공용 및 전용 멤버에 대한 액세스를 부여할 수 있음을 의미합니다.  일반적으로, 쿼리가 기밀로 유지해야 하는 정보를 노출하지 않도록 주의 깊게 작성된 경우가 아니라면 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 신뢰할 수 없는 구성 요소로 전달해서는 안 됩니다.  
+ <span data-ttu-id="73ebb-110">이것은 쿼리에 대한 참조를 다른 코드 조각에 전달함으로써 쿼리를 받는 구성 요소를 신뢰하고 이러한 구성 요소에 쿼리가 참조하는 모든 공용 및 전용 멤버에 대한 액세스를 부여할 수 있음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-110">This implies that by passing a reference to a query to another piece of code the component receiving the query is being trusted with access to all public and private members that the query refers to.</span></span> <span data-ttu-id="73ebb-111">일반적으로, 쿼리가 기밀로 유지해야 하는 정보를 노출하지 않도록 주의 깊게 작성된 경우가 아니라면 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 신뢰할 수 없는 구성 요소로 전달해서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-111">In general, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] queries should not be passed to untrusted components, unless the query has been carefully constructed so that it does not expose information that should be kept private.</span></span>  
   
-## 외부 입력  
- 응용 프로그램은 사용자나 다른 외부 에이전트로부터 외부 입력을 받아 그에 기반한 동작을 수행하는 경우가 많습니다.  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 경우에는 응용 프로그램에서 외부 입력에 기반하는 특정 방식으로 쿼리를 작성하거나 쿼리에서 외부 입력을 사용할 수 있습니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서는 리터럴을 사용할 수 있는 모든 위치에 매개 변수를 사용할 수 있습니다.  응용 프로그램 개발자는 외부 에이전트에서 쿼리로 직접 리터럴을 삽입하는 대신 매개 변수가 있는 쿼리를 사용해야 합니다.  
+## <a name="external-input"></a><span data-ttu-id="73ebb-112">외부 입력</span><span class="sxs-lookup"><span data-stu-id="73ebb-112">External Input</span></span>  
+ <span data-ttu-id="73ebb-113">응용 프로그램은 사용자나 다른 외부 에이전트로부터 외부 입력을 받아 그에 기반한 동작을 수행하는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-113">Applications often take external input (from a user or another external agent) and perform actions based on that input.</span></span>  <span data-ttu-id="73ebb-114">경우 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], 응용 프로그램 특정 방식으로 외부 입력 또는 사용 하 여 외부 쿼리에 입력에 따라 쿼리를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-114">In the case of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], the application might construct a query in a certain way, based on external input or use external input in the query.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="73ebb-115"> 쿼리는 해당 리터럴이 허용되는 모든 곳에서 매개 변수를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-115"> queries accept parameters everywhere that literals are accepted.</span></span> <span data-ttu-id="73ebb-116">응용 프로그램 개발자는 외부 에이전트에서 쿼리로 직접 리터럴을 삽입하는 대신 매개 변수가 있는 쿼리를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-116">Application developers should use parameterized queries, rather than injecting literals from an external agent directly into the query.</span></span>  
   
- 사용자나 외부 에이전트에서 직접 또는 간접적으로 파생되는 모든 입력에는 인증되지 않은 작업을 수행하기 위해 대상 언어의 구문을 이용하는 콘텐츠가 있을 수 있습니다.  이러한 공격은 대상 언어가 Transact\-SQL인 공격 패턴에 따라 SQL 삽입 공격으로 이름이 붙여졌습니다.  쿼리에 직접 삽입되는 사용자 입력은 데이터베이스 테이블 삭제, 서비스 거부 유발 또는 수행되는 작업의 특성을 변경하는 데 사용될 수 있습니다.  쿼리는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에서 작성할 수 있지만 개체 모델 API를 통해 수행됩니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리는 Transact\-SQL에서와 같이 문자열 조작이나 연결을 사용하여 작성되지 않으므로 일반적으로 SQL 삽입 공격을 쉽게 받지 않습니다.  
+ <span data-ttu-id="73ebb-117">사용자나 외부 에이전트에서 직접 또는 간접적으로 파생되는 모든 입력에는 인증되지 않은 작업을 수행하기 위해 대상 언어의 구문을 이용하는 콘텐츠가 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-117">Any input directly or indirectly derived from the user or an external agent might have content that leverages the syntax of the target language in order to perform unauthorized actions.</span></span> <span data-ttu-id="73ebb-118">이러한 공격은 대상 언어가 Transact-SQL인 공격 패턴에 따라 SQL 삽입 공격으로 이름이 붙여졌습니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-118">This is known as a SQL injection attack, named after an attack pattern where the target language is Transact-SQL.</span></span> <span data-ttu-id="73ebb-119">쿼리에 직접 삽입되는 사용자 입력은 데이터베이스 테이블 삭제, 서비스 거부 유발 또는 수행되는 작업의 특성을 변경하는 데 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-119">User input injected directly into the query is used to drop a database table, cause a denial of service, or otherwise change the nature of the operation being performed.</span></span> <span data-ttu-id="73ebb-120">쿼리는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에서 작성할 수 있지만 개체 모델 API를 통해 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-120">Although query composition is possible in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], it is performed through the object model API.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="73ebb-121">transact-sql, 되 고 일반적인 의미에서 SQL 삽입 공격을 쉽게 받지 않습니다 문자열 조작 이나 연결을 사용 하 여 쿼리로 구성 되지 않은 합니다.</span><span class="sxs-lookup"><span data-stu-id="73ebb-121"> queries are not composed by using string manipulation or concatenation, as they are in Transact-SQL, and are not susceptible to SQL injection attacks in the traditional sense.</span></span>  
   
-## 참고 항목  
- [프로그래밍 가이드](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="73ebb-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="73ebb-122">See Also</span></span>  
+ [<span data-ttu-id="73ebb-123">프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="73ebb-123">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

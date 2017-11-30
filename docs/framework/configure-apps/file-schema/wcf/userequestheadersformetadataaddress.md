@@ -1,52 +1,60 @@
 ---
-title: "&lt;useRequestHeadersForMetadataAddress&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;useRequestHeadersForMetadataAddress&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c538939a97e43239048853b5d6c32251d557d7e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;useRequestHeadersForMetadataAddress&gt;
-요청 메시지 헤더에서 메타데이터 주소 정보를 검색할 수 있도록 합니다.  
+# <a name="ltuserequestheadersformetadataaddressgt"></a><span data-ttu-id="d39a2-102">&lt;useRequestHeadersForMetadataAddress&gt;</span><span class="sxs-lookup"><span data-stu-id="d39a2-102">&lt;useRequestHeadersForMetadataAddress&gt;</span></span>
+<span data-ttu-id="d39a2-103">요청 메시지 헤더에서 메타데이터 주소 정보를 검색할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="d39a2-103">Enables the retrieval of metadata address information from the request message headers.</span></span>  
   
-## 구문  
+<span data-ttu-id="d39a2-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d39a2-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d39a2-105">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="d39a2-105">\<behaviors></span></span>  
+<span data-ttu-id="d39a2-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="d39a2-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="d39a2-107">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="d39a2-107">\<behavior></span></span>  
+<span data-ttu-id="d39a2-108">\<useRequestHeadersForMetadataAddress ></span><span class="sxs-lookup"><span data-stu-id="d39a2-108">\<useRequestHeadersForMetadataAddress></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d39a2-109">구문</span><span class="sxs-lookup"><span data-stu-id="d39a2-109">Syntax</span></span>  
   
-<useRequestHeadersForMetadataAddress>  
-   <defaultPorts>  
-      <add scheme="http" port="integer" />  
-   </defaultPorts>  
+```xml  
+<useRequestHeadersForMetadataAddress>
+  <defaultPorts>
+    <add scheme="http" port="integer" />
+  </defaultPorts>
 </useRequestHeadersForMetadataAddress>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d39a2-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="d39a2-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="d39a2-111">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d39a2-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
- 없음  
+### <a name="attributes"></a><span data-ttu-id="d39a2-112">특성</span><span class="sxs-lookup"><span data-stu-id="d39a2-112">Attributes</span></span>  
+ <span data-ttu-id="d39a2-113">없음</span><span class="sxs-lookup"><span data-stu-id="d39a2-113">None.</span></span>  
   
-### 자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="d39a2-114">자식 요소</span><span class="sxs-lookup"><span data-stu-id="d39a2-114">Child Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<defaultPorts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|클라이언트 응용 프로그램에서 수신하는 기본 통신 끝점을 나열하는 기본 포트의 컬렉션입니다.|  
+|<span data-ttu-id="d39a2-115">요소</span><span class="sxs-lookup"><span data-stu-id="d39a2-115">Element</span></span>|<span data-ttu-id="d39a2-116">설명</span><span class="sxs-lookup"><span data-stu-id="d39a2-116">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d39a2-117">\<a d d ></span><span class="sxs-lookup"><span data-stu-id="d39a2-117">\<defaultPorts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|<span data-ttu-id="d39a2-118">클라이언트 응용 프로그램에서 수신하는 기본 통신 끝점을 나열하는 기본 포트의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="d39a2-118">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>|  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="d39a2-119">부모 요소</span><span class="sxs-lookup"><span data-stu-id="d39a2-119">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<behavior\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
+|<span data-ttu-id="d39a2-120">요소</span><span class="sxs-lookup"><span data-stu-id="d39a2-120">Element</span></span>|<span data-ttu-id="d39a2-121">설명</span><span class="sxs-lookup"><span data-stu-id="d39a2-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d39a2-122">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="d39a2-122">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="d39a2-123">동작 요소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d39a2-123">Specifies a behavior element.</span></span>|  
   
-## 참고 항목  
+## <a name="see-also"></a><span data-ttu-id="d39a2-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d39a2-124">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.UseRequestHeadersForMetadataAddressElement>
