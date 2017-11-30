@@ -1,64 +1,65 @@
 ---
-title: "Frame 스타일 및 템플릿 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate[WPF], 프레임"
-  - "Frame[WPF], 스타일 및 템플릿"
-  - "요소[WPF], 프레임"
-  - "상태[WPF], 프레임"
-  - "스타일[WPF], 프레임"
-  - "템플릿[WPF], 프레임"
+title: "Frame 스타일 및 템플릿"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parts [WPF], Frame
+- templates [WPF], Frame
+- ControlTemplate [WPF], Frame
+- Frame [WPF], styles and templates
+- states [WPF], Frame
+- styles [WPF], Frame
 ms.assetid: a01c32e2-c951-46a0-a82f-2614ca241f0b
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 603c4f766b836c7a301cc151112457ddb0972d10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Frame 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.Frame> 컨트롤의 스타일 및 템플릿에 대해 설명합니다.  기본 <xref:System.Windows.Controls.ControlTemplate>을 수정하여 컨트롤에 고유한 모양을 지정할 수 있습니다.  자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하십시오.  
+# <a name="frame-styles-and-templates"></a><span data-ttu-id="10946-102">Frame 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="10946-102">Frame Styles and Templates</span></span>
+<span data-ttu-id="10946-103">이 항목에서는 스타일 및 서식 파일에 대 한 설명의 <xref:System.Windows.Controls.Frame> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="10946-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.Frame> control.</span></span> <span data-ttu-id="10946-104">기본값을 수정할 수 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="10946-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="10946-105">자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="10946-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Frame 요소  
- 다음 표에서는 <xref:System.Windows.Controls.Frame> 컨트롤의 명명된 요소를 보여 줍니다.  
+## <a name="frame-parts"></a><span data-ttu-id="10946-106">프레임 부분</span><span class="sxs-lookup"><span data-stu-id="10946-106">Frame Parts</span></span>  
+ <span data-ttu-id="10946-107">다음 표에서 명명된 된 요소를 나열는 <xref:System.Windows.Controls.Frame> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="10946-107">The following table lists the named parts for the <xref:System.Windows.Controls.Frame> control.</span></span>  
   
-||||  
+|<span data-ttu-id="10946-108">파트</span><span class="sxs-lookup"><span data-stu-id="10946-108">Part</span></span>|<span data-ttu-id="10946-109">형식</span><span class="sxs-lookup"><span data-stu-id="10946-109">Type</span></span>|<span data-ttu-id="10946-110">설명</span><span class="sxs-lookup"><span data-stu-id="10946-110">Description</span></span>|  
 |-|-|-|  
-|파트|형식|설명|  
-|PART\_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|콘텐츠 영역입니다.|  
+|<span data-ttu-id="10946-111">PART_FrameCP</span><span class="sxs-lookup"><span data-stu-id="10946-111">PART_FrameCP</span></span>|<xref:System.Windows.Controls.ContentPresenter>|<span data-ttu-id="10946-112">콘텐츠 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="10946-112">The content area.</span></span>|  
   
-## Frame 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Frame> 컨트롤의 시각적 상태를 보여 줍니다.  
+## <a name="frame-states"></a><span data-ttu-id="10946-113">프레임 상태</span><span class="sxs-lookup"><span data-stu-id="10946-113">Frame States</span></span>  
+ <span data-ttu-id="10946-114">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.Frame> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="10946-114">The following table lists the visual states for the <xref:System.Windows.Controls.Frame> control.</span></span>  
   
-||||  
+|<span data-ttu-id="10946-115">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="10946-115">VisualState Name</span></span>|<span data-ttu-id="10946-116">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="10946-116">VisualStateGroup Name</span></span>|<span data-ttu-id="10946-117">설명</span><span class="sxs-lookup"><span data-stu-id="10946-117">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|Valid|ValidationStates|이 컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용하며 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `false`입니다.|  
-|InvalidFocused|ValidationStates|컨트롤에 포커스가 있는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤에 포커스가 없는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
+|<span data-ttu-id="10946-118">유효</span><span class="sxs-lookup"><span data-stu-id="10946-118">Valid</span></span>|<span data-ttu-id="10946-119">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="10946-119">ValidationStates</span></span>|<span data-ttu-id="10946-120">컨트롤이 사용 하는 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="10946-120">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="10946-121">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="10946-121">InvalidFocused</span></span>|<span data-ttu-id="10946-122">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="10946-122">ValidationStates</span></span>|<span data-ttu-id="10946-123"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="10946-123">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="10946-124">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="10946-124">InvalidUnfocused</span></span>|<span data-ttu-id="10946-125">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="10946-125">ValidationStates</span></span>|<span data-ttu-id="10946-126"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="10946-126">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Frame ControlTemplate 예제  
- 다음 예제에서는 <xref:System.Windows.Controls.Frame> 컨트롤에 대한 <xref:System.Windows.Controls.ControlTemplate>을 정의하는 방법을 보여 줍니다.  
+## <a name="frame-controltemplate-example"></a><span data-ttu-id="10946-127">프레임 ControlTemplate 예제</span><span class="sxs-lookup"><span data-stu-id="10946-127">Frame ControlTemplate Example</span></span>  
+ <span data-ttu-id="10946-128">다음 예제에서는 정의 하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.Frame> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="10946-128">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.Frame> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Frame](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/frame.xaml#frame)]  
+ [!code-xaml[ControlTemplateExamples#Frame](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/frame.xaml#frame)]  
   
- 앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.  
+ <span data-ttu-id="10946-129">앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="10946-129">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 전체 샘플을 보려면 [Styling with ControlTemplates 샘플](http://go.microsoft.com/fwlink/?LinkID=160041)을 참조하십시오.  
+ <span data-ttu-id="10946-130">전체 샘플을 보려면 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="10946-130">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Control 스타일 및 템플릿](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [컨트롤 사용자 지정](../../../../docs/framework/wpf/controls/control-customization.md)   
- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="10946-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="10946-131">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="10946-132">Control 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="10946-132">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="10946-133">컨트롤 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="10946-133">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="10946-134">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="10946-134">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="10946-135">ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="10946-135">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

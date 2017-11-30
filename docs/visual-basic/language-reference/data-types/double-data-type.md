@@ -1,74 +1,72 @@
 ---
-title: "Double Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Double"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "identifier type characters, #"
-  - "trailing zeros"
-  - "real numbers"
-  - "trailing 0 characters"
-  - "0 characters, trailing"
-  - "literal type characters, R"
-  - "data types [Visual Basic], assigning"
-  - "Double data type [Visual Basic]"
-  - "# identifier type character"
-  - "double-precision numbers"
-  - "floating-point numbers, Double data type"
-  - "R literal type character"
-  - "zeros, trailing"
-  - "Double data type"
+title: "Double 데이터 형식(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Double
+helpviewer_keywords:
+- 'identifier type characters [Visual Basic], #'
+- trailing zeros
+- real numbers
+- trailing 0 characters [Visual Basic]
+- 0 characters [Visual Basic], trailing
+- literal type characters [Visual Basic], R
+- data types [Visual Basic], assigning
+- Double data type [Visual Basic]
+- '# identifier type character'
+- double-precision numbers
+- floating-point numbers [Visual Basic], Double data type
+- R literal type character [Visual Basic]
+- zeros, trailing
+- Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ad0e8082edfb7b7d96b0ca2019da88514e5b3b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Double Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-값의 범위가 \-1.79769313486231570E\+308에서 \-4.94065645841246544E\-324까지\(음수\) 또는 4.94065645841246544E\-324에서 1.79769313486231570E\+308까지\(양수\)인 부호 있는 IEEE 64비트\(8바이트\) 배정밀도 부동 소수점 숫자를 저장합니다.  배정밀도 숫자는 실수의 근사값을 저장합니다.  
+# <a name="double-data-type-visual-basic"></a><span data-ttu-id="cf868-102">Double 데이터 형식(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf868-102">Double Data Type (Visual Basic)</span></span>
+<span data-ttu-id="cf868-103">부호 있는 IEEE 64 비트 (8 바이트) 배정밀 부동 소수점 숫자 값에서-1.79769313486231570 e + 308에서-범위에 있는 저장 4.94065645841246544E-324 음수 경우 4.94065645841246544 e에서-324 1.79769313486231570 e + 308 양수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-103">Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values.</span></span> <span data-ttu-id="cf868-104">두 자리 숫자는 실수의 근사값을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-104">Double-precision numbers store an approximation of a real number.</span></span>  
   
-## 설명  
- `Double` 데이터 형식은 크기가 가장 큰 숫자와 가장 작은 숫자를 제공합니다.  
+## <a name="remarks"></a><span data-ttu-id="cf868-105">설명</span><span class="sxs-lookup"><span data-stu-id="cf868-105">Remarks</span></span>  
+ <span data-ttu-id="cf868-106">`Double` 숫자 데이터 형식을 사용할 수 있는 가장 큰와 가장 작은 크기를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-106">The `Double` data type provides the largest and smallest possible magnitudes for a number.</span></span>  
   
- `Double`의 기본값은 0입니다.  
+ <span data-ttu-id="cf868-107">`Double`의 기본값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-107">The default value of `Double` is 0.</span></span>  
   
-## 프로그래밍 팁  
+## <a name="programming-tips"></a><span data-ttu-id="cf868-108">프로그래밍 팁</span><span class="sxs-lookup"><span data-stu-id="cf868-108">Programming Tips</span></span>  
   
--   **정밀도.** 부동 소수점 숫자에 대한 작업을 수행하는 경우 해당 숫자가 메모리에서 항상 정확하게 표현되지 않는다는 점에 주의합니다.  따라서 값 비교, `Mod` 연산자 등과 같은 특정 연산에서 예기치 않은 결과가 나타날 수 있습니다.  자세한 내용은 [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)를 참조하십시오.  
+-   <span data-ttu-id="cf868-109">**전체 자릿수입니다.**</span><span class="sxs-lookup"><span data-stu-id="cf868-109">**Precision.**</span></span> <span data-ttu-id="cf868-110">부동 소수점 숫자를 작업할 때에 항상 없는 정확한 표시 메모리에 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-110">When you work with floating-point numbers, remember that they do not always have a precise representation in memory.</span></span> <span data-ttu-id="cf868-111">값 비교 같은 특정 작업에서 예기치 않은 결과가 발생할 수 및 `Mod` 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-111">This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="cf868-112">자세한 내용은 참조 [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-112">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
   
--   **뒤에 오는 0.** 부동 소수점 데이터 형식에는 후행 0 문자에 대한 내부 표현이 없습니다.  예를 들어, 4.2000과 4.2를 구분하지 않습니다.  따라서 부동 소수점 값을 표시하거나 인쇄할 때 후행 0 문자는 나타나지 않습니다.  
+-   <span data-ttu-id="cf868-113">**뒤에 오는 0입니다.**</span><span class="sxs-lookup"><span data-stu-id="cf868-113">**Trailing Zeros.**</span></span> <span data-ttu-id="cf868-114">부동 소수점 데이터 형식에는 후행 0 문자 모든 내부 표현이지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-114">The floating-point data types do not have any internal representation of trailing zero characters.</span></span> <span data-ttu-id="cf868-115">예를 들어 이러한 구분 하지 않습니다 4.2000 및 4.2 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-115">For example, they do not distinguish between 4.2000 and 4.2.</span></span> <span data-ttu-id="cf868-116">따라서 후행 0 문자를 표시할 때 또는 인쇄 부동 소수점 값 표시 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-116">Consequently, trailing zero characters do not appear when you display or print floating-point values.</span></span>  
   
--   **형식 문자.** 리터럴 형식 문자 `R`를 리터럴에 추가하면 `Double` 데이터 형식이 됩니다.  예를 들어 정수 값 뒤에 `R`이 있으면 이 값은 `Double`로 바뀝니다.  
+-   <span data-ttu-id="cf868-117">**형식 문자입니다.**</span><span class="sxs-lookup"><span data-stu-id="cf868-117">**Type Characters.**</span></span> <span data-ttu-id="cf868-118">리터럴 형식 문자 `R`를 리터럴에 추가하면 `Double` 데이터 형식이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-118">Appending the literal type character `R` to a literal forces it to the `Double` data type.</span></span> <span data-ttu-id="cf868-119">예를 들어, 다음에 정수 값 되 면 `R`, 값이 변경 되는 `Double`합니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-119">For example, if an integer value is followed by `R`, the value is changed to a `Double`.</span></span>  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
     Dim dub As Double = 4.0R  
     ```  
   
-     식별자 형식 문자 `#`을 식별자에 추가하면 `Double`가 됩니다.  다음 예제에서 변수 `num`은 `Double`로 형식이 지정됩니다.  
+     <span data-ttu-id="cf868-120">식별자 형식 문자 `#`를 식별자에 추가하면 `Double`가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-120">Appending the identifier type character `#` to any identifier forces it to `Double`.</span></span> <span data-ttu-id="cf868-121">다음 예에서 변수 `num` 로 형식화 되는 `Double`:</span><span class="sxs-lookup"><span data-stu-id="cf868-121">In the following example, the variable `num` is typed as a `Double`:</span></span>  
   
     ```  
     Dim num# = 3  
     ```  
   
--   **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.Double?displayProperty=fullName> 구조체입니다.  
+-   <span data-ttu-id="cf868-122">**Framework 형식입니다.**</span><span class="sxs-lookup"><span data-stu-id="cf868-122">**Framework Type.**</span></span> <span data-ttu-id="cf868-123">.NET Framework에서 해당하는 형식은 <xref:System.Double?displayProperty=nameWithType> 구조체입니다.</span><span class="sxs-lookup"><span data-stu-id="cf868-123">The corresponding type in the .NET Framework is the <xref:System.Double?displayProperty=nameWithType> structure.</span></span>  
   
-## 참고 항목  
- <xref:System.Double?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Decimal Data Type](../../../visual-basic/language-reference/data-types/decimal-data-type.md)   
- [Single Data Type](../../../visual-basic/language-reference/data-types/single-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a><span data-ttu-id="cf868-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cf868-124">See Also</span></span>  
+ <xref:System.Double?displayProperty=nameWithType>  
+ [<span data-ttu-id="cf868-125">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="cf868-125">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="cf868-126">Decimal 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="cf868-126">Decimal Data Type</span></span>](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
+ [<span data-ttu-id="cf868-127">Single 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="cf868-127">Single Data Type</span></span>](../../../visual-basic/language-reference/data-types/single-data-type.md)  
+ [<span data-ttu-id="cf868-128">형식 변환 함수</span><span class="sxs-lookup"><span data-stu-id="cf868-128">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="cf868-129">변환 요약</span><span class="sxs-lookup"><span data-stu-id="cf868-129">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="cf868-130">데이터 형식의 효율적 사용</span><span class="sxs-lookup"><span data-stu-id="cf868-130">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [<span data-ttu-id="cf868-131">데이터 형식 문제 해결</span><span class="sxs-lookup"><span data-stu-id="cf868-131">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="cf868-132">형식 문자</span><span class="sxs-lookup"><span data-stu-id="cf868-132">Type Characters</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

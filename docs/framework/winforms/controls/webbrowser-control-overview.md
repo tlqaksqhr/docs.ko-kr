@@ -1,69 +1,69 @@
 ---
-title: "WebBrowser 컨트롤 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WebBrowser"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "웹 페이지, 응용 프로그램에서 표시"
-  - "WebBrowser 컨트롤[Windows Forms], 정보"
+title: "WebBrowser 컨트롤 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: WebBrowser
+helpviewer_keywords:
+- WebBrowser control [Windows Forms], about
+- Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c2dfae4cbd7f583ce69ff5591c24a573db0d4e4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WebBrowser 컨트롤 개요
-<xref:System.Windows.Forms.WebBrowser> 컨트롤은 WebBrowser ActiveX 컨트롤에 대한 관리되는 래퍼를 제공합니다.  관리되는 래퍼를 사용하면 Windows Forms 클라이언트 응용 프로그램에 웹 페이지를 표시할 수 있습니다.  <xref:System.Windows.Forms.WebBrowser> 컨트롤을 사용하면 응용 프로그램에서 Internet Explorer 웹 검색 기능을 복제하거나 기본 Internet Explorer 기능을 해제한 다음 해당 컨트롤을 단순한 HTML 문서 뷰어로 사용할 수 있습니다.  또한 이 컨트롤을 사용하여 DHTML 기반 사용자 인터페이스 요소를 폼에 추가하고 이 요소가 <xref:System.Windows.Forms.WebBrowser> 컨트롤에 호스팅된 사실을 숨길 수 있습니다.  이러한 방식으로 단일 응용 프로그램에서 웹 컨트롤과 Windows Forms 컨트롤을 완전하게 결합할 수 있습니다.  
+# <a name="webbrowser-control-overview"></a><span data-ttu-id="5cf96-102">WebBrowser 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="5cf96-102">WebBrowser Control Overview</span></span>
+<span data-ttu-id="5cf96-103"><xref:System.Windows.Forms.WebBrowser> 컨트롤은 WebBrowser ActiveX 컨트롤에 대 한 관리 되는 래퍼를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-103">The <xref:System.Windows.Forms.WebBrowser> control provides a managed wrapper for the WebBrowser ActiveX control.</span></span> <span data-ttu-id="5cf96-104">관리 되는 래퍼를 사용 하면 Windows Forms 클라이언트 응용 프로그램에서 웹 페이지를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-104">The managed wrapper lets you display Web pages in your Windows Forms client applications.</span></span> <span data-ttu-id="5cf96-105">사용할 수는 <xref:System.Windows.Forms.WebBrowser> Internet Explorer 웹 응용 프로그램에 검색 기능을 복제 하는 컨트롤 기본 Internet Explorer 기능을 사용 하지 않도록 설정 하 고 간단한 HTML 문서 뷰어 컨트롤을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-105">You can use the <xref:System.Windows.Forms.WebBrowser> control to duplicate Internet Explorer Web browsing functionality in your application or you can disable default Internet Explorer functionality and use the control as a simple HTML document viewer.</span></span> <span data-ttu-id="5cf96-106">DHTML 기반 사용자 인터페이스 요소를 폼에 추가 하 고 숨길에서 호스트 되는 팩트에 컨트롤을 사용할 수도 있습니다는 <xref:System.Windows.Forms.WebBrowser> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-106">You can also use the control to add DHTML-based user interface elements to your form and hide the fact that they are hosted in the <xref:System.Windows.Forms.WebBrowser> control.</span></span> <span data-ttu-id="5cf96-107">이 방법을 사용 하면 단일 응용 프로그램에서 Windows Forms 컨트롤을 사용 하 여 웹 컨트롤을 원활 하 게 결합 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-107">This approach lets you seamlessly combine Web controls with Windows Forms controls in a single application.</span></span>  
   
-## 자주 사용되는 속성, 메서드 및 이벤트  
- 또한 <xref:System.Windows.Forms.WebBrowser> 컨트롤에는 Internet Explorer에 있는 컨트롤을 구현하는 데 사용할 수 있는 여러 속성, 메서드 및 이벤트가 포함되어 있습니다.  예를 들어, `Navigate` 메서드를 사용하여 주소 표시줄을 구현하고 `GoBack`, `GoForward`, `Stop` 및 `Refresh` 메서드를 사용하여 도구 모음에 탐색 단추를 구현할 수 있습니다.  `Navigated` 이벤트를 처리하여 주소 표시줄을 `Url` 속성 값으로 업데이트하고 제목 표시줄을 `DocumentTitle` 속성 값으로 업데이트할 수 있습니다.  
+## <a name="frequently-used-properties-methods-and-events"></a><span data-ttu-id="5cf96-108">자주 사용 되는 속성, 메서드 및 이벤트</span><span class="sxs-lookup"><span data-stu-id="5cf96-108">Frequently Used Properties, Methods, and Events</span></span>  
+ <span data-ttu-id="5cf96-109"><xref:System.Windows.Forms.WebBrowser> 컨트롤에 여러 속성, 메서드 및 Internet Explorer에 있는 컨트롤을 구현 하는 데 사용할 수 있는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-109">The <xref:System.Windows.Forms.WebBrowser> control has several properties, methods, and events that you can use to implement controls found in Internet Explorer.</span></span> <span data-ttu-id="5cf96-110">예를 들어 사용할 수 있습니다는 `Navigate` 주소 표시줄을 구현 하는 메서드 및 `GoBack`, `GoForward`, `Stop`, 및 `Refresh` 도구 모음에 탐색 단추를 구현 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-110">For example, you can use the `Navigate` method to implement an address bar, and the `GoBack`, `GoForward`, `Stop`, and `Refresh` methods to implement navigation buttons on a toolbar.</span></span> <span data-ttu-id="5cf96-111">처리할 수 있습니다는 `Navigated` 주소 표시줄의 값으로 업데이트 하는 이벤트는 `Url` 속성 및 값이 있는 제목 표시줄의 `DocumentTitle` 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-111">You can handle the `Navigated` event to update the address bar with the value of the `Url` property and the title bar with the value of the `DocumentTitle` property.</span></span>  
   
- 응용 프로그램 내에 사용자 고유의 페이지 내용을 생성하려면 `DocumentText` 속성을 설정합니다.  HTML DOM\(문서 개체 모델\)에 친숙한 경우에는 `Document` 속성을 통해 현재 웹 페이지의 내용을 조작할 수도 있습니다.  이 속성을 사용하면 파일을 탐색하는 대신 메모리에 문서를 저장하거나 수정할 수 있습니다.  
+ <span data-ttu-id="5cf96-112">응용 프로그램 내에서 고유한 페이지 콘텐츠를 생성 하려는 경우 설정할 수 있습니다는 `DocumentText` 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-112">If you want to generate your own page content within your application, you can set the `DocumentText` property.</span></span> <span data-ttu-id="5cf96-113">HTML 문서 개체 모델 (DOM)에 잘 알고 있다면 통해 현재 웹 페이지의 내용을 조작할 수도 있습니다는 `Document` 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-113">If you are familiar with the HTML document object model (DOM), you can also manipulate the contents of the current Web page through the `Document` property.</span></span> <span data-ttu-id="5cf96-114">이 속성을 저장 하 고 파일을 탐색 하는 대신 메모리에 문서를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-114">With this property, you can store and modify documents in memory instead of navigating among files.</span></span>  
   
- 또한 `Document` 속성을 사용하면 클라이언트 응용 프로그램 코드에서 웹 페이지 스크립팅 코드에 구현된 메서드를 호출할 수 있습니다.  스크립팅 코드에서 클라이언트 응용 프로그램 코드에 액세스하려면 `ObjectForScripting` 속성을 설정합니다.  지정하는 개체는 스크립트 코드에서 `window.external` 개체로 액세스할 수 있습니다.  
+ <span data-ttu-id="5cf96-115">`Document` 속성 또한 웹 페이지 스크립팅 코드에서 클라이언트 응용 프로그램 코드에서에서 구현 되는 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-115">The `Document` property also lets you call methods implemented in Web page scripting code from your client application code.</span></span> <span data-ttu-id="5cf96-116">설정 스크립팅 코드에서 클라이언트 응용 프로그램 코드에 액세스 하려면는 `ObjectForScripting` 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-116">To access your client application code from your scripting code, set the `ObjectForScripting` property.</span></span> <span data-ttu-id="5cf96-117">스크립트 코드에서 지정 하는 개체를 액세스할 수 있습니다는 `window.external` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-117">The object that you specify can be accessed by your script code as the `window.external` object.</span></span>  
   
-|Name|설명|  
-|----------|--------|  
-|<xref:System.Windows.Forms.WebBrowser.Document%2A> 속성|현재 웹 페이지의 HTML DOM\(문서 개체 모델\)에 대한 관리되는 액세스를 제공하는 개체를 가져옵니다.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트|웹 페이지 로드가 완료되면 발생합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 속성|현재 웹 페이지의 HTML 콘텐츠를 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> 속성|현재 웹 페이지의 제목을 가져옵니다.|  
-|<xref:System.Windows.Forms.WebBrowser.GoBack%2A> 메서드|기록의 이전 페이지를 탐색합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.GoForward%2A> 메서드|기록의 다음 페이지를 탐색합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigate%2A> 메서드|지정한 URL을 탐색합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating> 이벤트|작업을 취소할 수 있도록 탐색이 시작되기 전에 발생합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 속성|웹 페이지 스크립팅 코드에서 응용 프로그램과 통신하는 데 사용할 수 있는 개체를 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.Print%2A> 메서드|현재 웹 페이지를 인쇄합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.Refresh%2A> 메서드|현재 웹 페이지를 다시 로드합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.Stop%2A> 메서드|현재 탐색을 중단하고 소리와 애니메이션 등의 동적 페이지 요소를 중지합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.Url%2A> 속성|현재 웹 페이지의 URL을 가져오거나 설정합니다.  이 속성을 설정하면 컨트롤이 새 URL로 이동됩니다.|  
+|<span data-ttu-id="5cf96-118">이름</span><span class="sxs-lookup"><span data-stu-id="5cf96-118">Name</span></span>|<span data-ttu-id="5cf96-119">설명</span><span class="sxs-lookup"><span data-stu-id="5cf96-119">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="5cf96-120"><xref:System.Windows.Forms.WebBrowser.Document%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="5cf96-120"><xref:System.Windows.Forms.WebBrowser.Document%2A> property</span></span>|<span data-ttu-id="5cf96-121">현재 웹 페이지의 HTML 문서 개체 모델 (DOM)에 대 한 관리 되는 액세스를 제공 하는 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-121">Gets an object that provides managed access to the HTML document object model (DOM) of the current Web page.</span></span>|  
+|<span data-ttu-id="5cf96-122"><xref:System.Windows.Forms.WebBrowser.DocumentCompleted>이벤트</span><span class="sxs-lookup"><span data-stu-id="5cf96-122"><xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event</span></span>|<span data-ttu-id="5cf96-123">웹 페이지 로드가 완료 되 면 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-123">Occurs when a Web page finishes loading.</span></span>|  
+|<span data-ttu-id="5cf96-124"><xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="5cf96-124"><xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property</span></span>|<span data-ttu-id="5cf96-125">현재 웹 페이지의 콘텐츠는 HTML 가져오거나 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-125">Gets or sets the HTML content of the current Web page.</span></span>|  
+|<span data-ttu-id="5cf96-126"><xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="5cf96-126"><xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> property</span></span>|<span data-ttu-id="5cf96-127">현재 웹 페이지의 제목을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-127">Gets the title of the current Web page.</span></span>|  
+|<span data-ttu-id="5cf96-128"><xref:System.Windows.Forms.WebBrowser.GoBack%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="5cf96-128"><xref:System.Windows.Forms.WebBrowser.GoBack%2A> method</span></span>|<span data-ttu-id="5cf96-129">기록의 이전 페이지를 탐색합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-129">Navigates to the previous page in history.</span></span>|  
+|<span data-ttu-id="5cf96-130"><xref:System.Windows.Forms.WebBrowser.GoForward%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="5cf96-130"><xref:System.Windows.Forms.WebBrowser.GoForward%2A> method</span></span>|<span data-ttu-id="5cf96-131">기록의 다음 페이지로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-131">Navigates to the next page in history.</span></span>|  
+|<span data-ttu-id="5cf96-132"><xref:System.Windows.Forms.WebBrowser.Navigate%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="5cf96-132"><xref:System.Windows.Forms.WebBrowser.Navigate%2A> method</span></span>|<span data-ttu-id="5cf96-133">지정된 된 URL로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-133">Navigates to the specified URL.</span></span>|  
+|<span data-ttu-id="5cf96-134"><xref:System.Windows.Forms.WebBrowser.Navigating>이벤트</span><span class="sxs-lookup"><span data-stu-id="5cf96-134"><xref:System.Windows.Forms.WebBrowser.Navigating> event</span></span>|<span data-ttu-id="5cf96-135">작업을 취소할 수 있도록 탐색이 시작 되기 전에 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-135">Occurs before navigation begins, enabling the action to be canceled.</span></span>|  
+|<span data-ttu-id="5cf96-136"><xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="5cf96-136"><xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> property</span></span>|<span data-ttu-id="5cf96-137">웹 페이지 스크립팅 코드에서 응용 프로그램과 통신 하는 데 사용할 수 있는 개체를 가져오거나 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-137">Gets or sets an object that Web page scripting code can use to communicate with your application.</span></span>|  
+|<span data-ttu-id="5cf96-138"><xref:System.Windows.Forms.WebBrowser.Print%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="5cf96-138"><xref:System.Windows.Forms.WebBrowser.Print%2A> method</span></span>|<span data-ttu-id="5cf96-139">현재 웹 페이지를 인쇄합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-139">Prints the current Web page.</span></span>|  
+|<span data-ttu-id="5cf96-140"><xref:System.Windows.Forms.WebBrowser.Refresh%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="5cf96-140"><xref:System.Windows.Forms.WebBrowser.Refresh%2A> method</span></span>|<span data-ttu-id="5cf96-141">현재 웹 페이지를 다시 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-141">Reloads the current Web page.</span></span>|  
+|<span data-ttu-id="5cf96-142"><xref:System.Windows.Forms.WebBrowser.Stop%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="5cf96-142"><xref:System.Windows.Forms.WebBrowser.Stop%2A> method</span></span>|<span data-ttu-id="5cf96-143">현재 탐색 하 고 소리 및 애니메이션과 같은 동적 페이지 요소를 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-143">Halts the current navigation and stops dynamic page elements such as sounds and animation.</span></span>|  
+|<span data-ttu-id="5cf96-144"><xref:System.Windows.Forms.WebBrowser.Url%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="5cf96-144"><xref:System.Windows.Forms.WebBrowser.Url%2A> property</span></span>|<span data-ttu-id="5cf96-145">현재 웹 페이지의 URL을 가져오거나 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-145">Gets or sets the URL of the current Web page.</span></span> <span data-ttu-id="5cf96-146">컨트롤에 새 URL 탐색이 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cf96-146">Setting this property navigates the control to the new URL.</span></span>|  
   
-## 참고 항목  
- <xref:System.Windows.Forms.WebBrowser>   
- <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>   
- <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>   
- <xref:System.Windows.Forms.WebBrowserEncryptionLevel>   
- <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>   
- <xref:System.Windows.Forms.WebBrowserNavigatedEventHandler>   
- <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs>   
- <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>   
- <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>   
- <xref:System.Windows.Forms.WebBrowserReadyState>   
- <xref:System.Windows.Forms.WebBrowserRefreshOption>   
- [방법: WebBrowser 컨트롤을 사용하여 URL 탐색](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)   
- [방법: WebBrowser 컨트롤을 사용하여 인쇄](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)   
- [방법: Windows Forms 응용 프로그램에 웹 브라우저 기능 추가](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)   
- [방법: Windows Forms 응용 프로그램에서 HTML 문서 뷰어 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)   
- [방법: DHTML 코드와 클라이언트 응용 프로그램 코드 간의 양방향 통신 구현](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)   
- [WebBrowser 보안](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+## <a name="see-also"></a><span data-ttu-id="5cf96-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5cf96-147">See Also</span></span>  
+ <xref:System.Windows.Forms.WebBrowser>  
+ <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
+ <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>  
+ <xref:System.Windows.Forms.WebBrowserEncryptionLevel>  
+ <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>  
+ <xref:System.Windows.Forms.WebBrowserNavigatedEventHandler>  
+ <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs>  
+ <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>  
+ <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>  
+ <xref:System.Windows.Forms.WebBrowserReadyState>  
+ <xref:System.Windows.Forms.WebBrowserRefreshOption>  
+ [<span data-ttu-id="5cf96-148">방법: WebBrowser 컨트롤을 사용하여 URL 탐색</span><span class="sxs-lookup"><span data-stu-id="5cf96-148">How to: Navigate to a URL with the WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [<span data-ttu-id="5cf96-149">방법: WebBrowser 컨트롤을 사용하여 인쇄</span><span class="sxs-lookup"><span data-stu-id="5cf96-149">How to: Print with a WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
+ [<span data-ttu-id="5cf96-150">방법: Windows Forms 응용 프로그램에 웹 브라우저 기능 추가</span><span class="sxs-lookup"><span data-stu-id="5cf96-150">How to: Add Web Browser Capabilities to a Windows Forms Application</span></span>](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [<span data-ttu-id="5cf96-151">방법: Windows Forms 응용 프로그램에서 HTML 문서 뷰어 만들기</span><span class="sxs-lookup"><span data-stu-id="5cf96-151">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="5cf96-152">방법: DHTML 코드와 클라이언트 응용 프로그램 코드 간의 양방향 통신 구현</span><span class="sxs-lookup"><span data-stu-id="5cf96-152">How to: Implement Two-Way Communication Between DHTML Code and Client Application Code</span></span>](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
+ [<span data-ttu-id="5cf96-153">WebBrowser 보안</span><span class="sxs-lookup"><span data-stu-id="5cf96-153">WebBrowser Security</span></span>](../../../../docs/framework/winforms/controls/webbrowser-security.md)

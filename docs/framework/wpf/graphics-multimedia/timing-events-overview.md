@@ -1,89 +1,92 @@
 ---
-title: "타이밍 이벤트 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clock 클래스"
-  - "클래스, 시계"
-  - "Timeline"
-  - "타이밍 이벤트"
+title: "타이밍 이벤트 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- timelines [WPF]
+- timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 타이밍 이벤트 개요
-이 항목에서 사용할 수 있는&5; 개의 타이밍 이벤트를 사용 하는 방법에 설명 <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 개체입니다.  
+# <a name="timing-events-overview"></a><span data-ttu-id="8e70a-102">타이밍 이벤트 개요</span><span class="sxs-lookup"><span data-stu-id="8e70a-102">Timing Events Overview</span></span>
+<span data-ttu-id="8e70a-103">이 항목에서는에서 사용할 수 있는 5 개의 타이밍 이벤트를 사용 하는 방법을 설명 <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-103">This topic describes how to use the five timing events available on <xref:System.Windows.Media.Animation.Timeline> and <xref:System.Windows.Media.Animation.Clock> objects.</span></span>  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
-## <a name="prerequisites"></a>필수 구성 요소  
- 이 항목을 이해 하려면 만들고 애니메이션을 사용 하는 방법을 이해 해야 합니다. 애니메이션을 시작 하려면 참조는 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)합니다.  
+## <a name="prerequisites"></a><span data-ttu-id="8e70a-104">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="8e70a-104">Prerequisites</span></span>  
+ <span data-ttu-id="8e70a-105">이 항목을 이해하려면 애니메이션을 만들고 사용하는 방법을 이해해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-105">To understand this topic, you should understand how to create and use animations.</span></span> <span data-ttu-id="8e70a-106">애니메이션을 시작 하려면 참조는 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-106">To get started with animation, see the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
- 여러 가지 방법으로 속성에 애니메이션 효과를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ <span data-ttu-id="8e70a-107">여러 가지 방법으로 속성에 애니메이션 효과를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="8e70a-107">There are multiple ways to animate properties in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:</span></span>  
   
--   **스토리 보드 개체를 사용 하 여** (태그 및 코드): 사용할 수 있습니다 <xref:System.Windows.Media.Animation.Storyboard> 개체를 정렬 하 고 하나 이상의 개체에 애니메이션을 배포 합니다. 예를 들어 참조 [스토리 보드를 사용 하 여 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)합니다.  
+-   <span data-ttu-id="8e70a-108">**스토리 보드 개체를 사용 하 여** (태그 및 코드): 사용할 수 있습니다 <xref:System.Windows.Media.Animation.Storyboard> 개체를 정렬 하 고 하나 이상의 개체에 애니메이션을 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-108">**Using storyboard objects** (markup and code): You can use <xref:System.Windows.Media.Animation.Storyboard> objects to arrange and distribute animations to one or more objects.</span></span> <span data-ttu-id="8e70a-109">예를 들어 참조 [속성 스토리 보드를 사용 하 여 애니메이션을 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-109">For an example, see [Animate a Property by Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).</span></span>  
   
--   **로컬 애니메이션을 사용 하 여** (코드): 적용할 수 있습니다 <xref:System.Windows.Media.Animation.AnimationTimeline> 애니메이션을 적용 하는 속성에 직접 개체입니다. 예를 들어 참조 [속성 없이 사용 하는 스토리 보드에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)합니다.  
+-   <span data-ttu-id="8e70a-110">**로컬 애니메이션을 사용 하 여** (코드): 적용할 수 있습니다 <xref:System.Windows.Media.Animation.AnimationTimeline> 애니메이션 효과 주는 속성에 직접 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-110">**Using local animations** (code only): You can apply <xref:System.Windows.Media.Animation.AnimationTimeline> objects directly to the properties they animate.</span></span> <span data-ttu-id="8e70a-111">예제를 보려면 [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8e70a-111">For an example, see [Animate a Property Without Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).</span></span>  
   
--   **시계를 사용 하 여** (코드): 명시적으로 시계 생성을 관리 하 고 애니메이션 clock 직접 배포할 수 있습니다.  예를 들어 참조 [AnimationClock을 사용 하 여 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)합니다.  
+-   <span data-ttu-id="8e70a-112">**클록 사용**(코드만): 클록 생성을 명시적으로 관리하고 애니메이션 클록을 직접 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-112">**Using clocks** (code only): You can explicitly manage clock creation and distribute the animation clocks yourself.</span></span>  <span data-ttu-id="8e70a-113">예를 들어 참조 [속성은 AnimationClock를 사용 하 여 애니메이션을 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-113">For an example, see [Animate a Property by Using an AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).</span></span>  
   
- 이 개요의 예제를 사용 하는 태그와 코드에 사용할 수 있습니다, 있으므로 <xref:System.Windows.Media.Animation.Storyboard> 개체입니다. 그러나 다른 속성에 애니메이션 적용 방법에 설명 된 개념을 적용할 수 있습니다.  
+ <span data-ttu-id="8e70a-114">이 개요의 예제를 사용 하는 태그와 코드에서 사용할 수 있습니다, 때문에 <xref:System.Windows.Media.Animation.Storyboard> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-114">Because you can use them in markup and code, the examples in this overview use <xref:System.Windows.Media.Animation.Storyboard> objects.</span></span> <span data-ttu-id="8e70a-115">그러나 설명된 개념을 속성에 애니메이션 효과를 주는 다른 방법에도 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-115">However, the concepts described can be applied to the other methods of animating properties.</span></span>  
   
-### <a name="what-is-a-clock"></a>Clock 무엇입니까?  
- 타임 라인을 자체적으로 실제로 아무런 동작이 수행 되지 이외의 다른 시간 세그먼트에 설명 합니다. 타임 라인의는 <xref:System.Windows.Media.Animation.Clock> 실제 작업을 수행 하는 개체: 시간 표시 막대에 대 한 타이밍 관련 런타임 상태를 유지 관리 합니다. 같은 경우 storyboard를 사용 하 여 대부분의 경우 클록이 자동으로 만들어지며 일정에 대 한 만들 수도 있습니다는 <xref:System.Windows.Media.Animation.Clock> 를 사용 하 여 명시적으로 <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> 메서드. 에 대 한 자세한 내용은 <xref:System.Windows.Media.Animation.Clock> 개체 참조는 [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)합니다.  
+### <a name="what-is-a-clock"></a><span data-ttu-id="8e70a-116">클록이란?</span><span class="sxs-lookup"><span data-stu-id="8e70a-116">What is a clock?</span></span>  
+ <span data-ttu-id="8e70a-117">타임라인 자체는 실제로 시간 세그먼트를 설명하는 것 이외의 어떤 작업도 수행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-117">A timeline, by itself, doesn't actually do anything other than describe a segment of time.</span></span> <span data-ttu-id="8e70a-118">타임 라인의는 <xref:System.Windows.Media.Animation.Clock> 실제 작업을 수행 하는 개체: 시간 표시 막대에 대 한 타이밍 관련 런타임 상태를 유지 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-118">It's the timeline's <xref:System.Windows.Media.Animation.Clock> object that does the real work: it maintains timing-related run-time state for the timeline.</span></span> <span data-ttu-id="8e70a-119">Storyboard를 사용할 때와 같이 대부분의 경우에 타임라인에 대해 자동으로 클록이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-119">In most cases, such as when using storyboards, a clock is created automatically for your timeline.</span></span> <span data-ttu-id="8e70a-120">만들 수도 있습니다는 <xref:System.Windows.Media.Animation.Clock> 를 사용 하 여 명시적으로 <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="8e70a-120">You can also create a <xref:System.Windows.Media.Animation.Clock> explicitly by using the <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> method.</span></span> <span data-ttu-id="8e70a-121">에 대 한 자세한 내용은 <xref:System.Windows.Media.Animation.Clock> 개체 참조는 [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-121">For more information about <xref:System.Windows.Media.Animation.Clock> objects, see the [Animation and Timing System Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).</span></span>  
   
-## <a name="why-use-events"></a>이벤트를 사용 하는 이유는?  
- 제외한 나머지 (마지막 틱에 정렬 된 검색), 모든 대화형 타이밍 작업은 비동기적입니다. 정확 하 게 실행 되는 시점을 알 수 있는 방법은 없습니다. 타이밍 작업이 종속 된 다른 코드가 있는 경우 문제가 될 수입니다. 사각형에 애니메이션 효과 타임 라인을 중지 하려는 것을 가정 합니다. 타임 라인 중지 된 후 사각형의 색을 변경 합니다.  
+## <a name="why-use-events"></a><span data-ttu-id="8e70a-122">이벤트를 사용하는 이유</span><span class="sxs-lookup"><span data-stu-id="8e70a-122">Why Use Events?</span></span>  
+ <span data-ttu-id="8e70a-123">하나(마지막 틱에 맞춰진 검색)를 제외한 모든 대화형 타이밍 작업은 비동기적입니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-123">With the exception of one (seek aligned to last tick), all interactive timing operations are asynchronous.</span></span> <span data-ttu-id="8e70a-124">실행될 시기를 정확히 알 방법은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-124">There is no way for you to know exactly when they will execute.</span></span> <span data-ttu-id="8e70a-125">타이밍 작업에 의존하는 다른 코드가 있을 때는 문제가 될 수입니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-125">That can be a problem when you have other code that's dependent upon your timing operation.</span></span> <span data-ttu-id="8e70a-126">사각형에 애니메이션 효과를 적용한 타임라인을 중지하려고 한다고 가정해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-126">Suppose that you wanted to stop a timeline that animated a rectangle.</span></span> <span data-ttu-id="8e70a-127">이 타임라인이 중지된 후에 사각형의 색을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-127">After the timeline stops, you change the color of the rectangle.</span></span>  
   
  [!code-csharp[events_procedural#NeedForEventsFragment](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
  [!code-vb[events_procedural#NeedForEventsFragment](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
   
- 앞의 예제 코드의 두 번째 줄은 스토리 보드가 중단 하기 전에 실행할 수 있습니다. 중지 하는 비동기 작업 때문입니다. 시간 표시 막대 또는 시계를 중지 하 라는 요청을 만듭니다 "stop" 일종의 타이밍 엔진의 다음 틱 될 때까지 처리 되지 않는.  
+ <span data-ttu-id="8e70a-128">앞의 예제에서 두 번째 코드 줄은 Storyboard가 중지되기 전에 실행될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-128">In the previous example, the second line of code might execute before the storyboard stops.</span></span> <span data-ttu-id="8e70a-129">중지는 비동기 작업이기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-129">That's because stopping is an asynchronous operation.</span></span> <span data-ttu-id="8e70a-130">타임라인이나 클록에 중지하도록 지시하면 타이밍 엔진의 다음 틱까지는 처리되지 않는 일종의 “중지 요청”이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-130">Telling a timeline or clock to stop creates a "stop request" of sorts that isn't processed until the timing engine's next tick.</span></span>  
   
- 타이밍 이벤트를 사용 하는 타임 라인 완료 된 후 명령을 실행 합니다. 다음 예제에서는 이벤트 처리기는 스토리 보드 재생이 중지 되 면 사각형의 색을 변경 하려면 사용 됩니다.  
+ <span data-ttu-id="8e70a-131">타임라인이 완료된 후에 명령을 실행하려면 타이밍 이벤트를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-131">To execute commands after a timeline completes, use timing events.</span></span> <span data-ttu-id="8e70a-132">다음 예제에서 이벤트 처리기는 Storyboard가 재생을 중지한 후에 사각형의 색을 변경하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-132">In the following example, an event handler is used to change the color of a rectangle after the storyboard stops playing.</span></span>  
   
  [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
  [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
 [!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
 [!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- 자세한 예제를 참조 하십시오. [수신 알림을 때는 시계의 상태가 변경](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)합니다.  
+ <span data-ttu-id="8e70a-133">자세한 예제를 참조 하십시오. [수신 알림 때 정도 클록의 상태 변경을](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-133">For a more complete example, see [Receive Notification When a Clock's State Changes](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md).</span></span>  
   
-## <a name="public-events"></a>Public 이벤트  
- <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 클래스는 모두&5; 개의 타이밍 이벤트를 제공 합니다. 다음 표에서 이러한 이벤트와 해당 트리거하는 조건을 나열 합니다.  
+## <a name="public-events"></a><span data-ttu-id="8e70a-134">Public 이벤트</span><span class="sxs-lookup"><span data-stu-id="8e70a-134">Public Events</span></span>  
+ <span data-ttu-id="8e70a-135"><xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 클래스는 모두 5 개의 타이밍 이벤트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-135">The <xref:System.Windows.Media.Animation.Timeline> and <xref:System.Windows.Media.Animation.Clock> classes both provide five timing events.</span></span> <span data-ttu-id="8e70a-136">다음 표에는 이러한 이벤트와 해당 이벤트를 트리거하는 조건이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-136">The following table lists these events and the conditions that trigger them.</span></span>  
   
-|이벤트|트리거 대화형 작업|다른 트리거|  
+|<span data-ttu-id="8e70a-137">Event</span><span class="sxs-lookup"><span data-stu-id="8e70a-137">Event</span></span>|<span data-ttu-id="8e70a-138">트리거하는 대화형 작업</span><span class="sxs-lookup"><span data-stu-id="8e70a-138">Triggering interactive operation</span></span>|<span data-ttu-id="8e70a-139">기타 트리거</span><span class="sxs-lookup"><span data-stu-id="8e70a-139">Other triggers</span></span>|  
 |-----------|--------------------------------------|--------------------|  
-|**완료**|채우는 건너뛰기|클록을 완료합니다.|  
-|**CurrentGlobalSpeedInvalidated**|일시 중지, 다시 시작, 검색, 속도 비율 설정, 건너뜁니다 채우기, 중지|시계를 반대로 바꿉니다, 그리고 가속화, 시작 하거나 중지 합니다.|  
-|**CurrentStateInvalidated**|시작, 건너 뛰어 채우기, 중지|시작, 중지, 또는 채우기는 시계.|  
-|**CurrentTimeInvalidated**|시작, 이동, 건너뜁니다 채우기, 중지|클록 진행 됩니다.|  
-|**RemoveRequested**|제거||  
+|<span data-ttu-id="8e70a-140">**Completed**</span><span class="sxs-lookup"><span data-stu-id="8e70a-140">**Completed**</span></span>|<span data-ttu-id="8e70a-141">건너뛰어서 채우기</span><span class="sxs-lookup"><span data-stu-id="8e70a-141">Skip to fill</span></span>|<span data-ttu-id="8e70a-142">클록이 완료됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-142">The clock completes.</span></span>|  
+|<span data-ttu-id="8e70a-143">**CurrentGlobalSpeedInvalidated**</span><span class="sxs-lookup"><span data-stu-id="8e70a-143">**CurrentGlobalSpeedInvalidated**</span></span>|<span data-ttu-id="8e70a-144">일시 중지, 다시 시작, 검색, 속도 비율 설정, 건너뛰어서 채우기, 중지</span><span class="sxs-lookup"><span data-stu-id="8e70a-144">Pause, resume, seek, set speed ratio, skip to fill, stop</span></span>|<span data-ttu-id="8e70a-145">클록이 거꾸로 진행되거나, 가속되거나, 시작되거나, 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-145">The clock reverses, accelerates, starts, or stops.</span></span>|  
+|<span data-ttu-id="8e70a-146">**CurrentStateInvalidated**</span><span class="sxs-lookup"><span data-stu-id="8e70a-146">**CurrentStateInvalidated**</span></span>|<span data-ttu-id="8e70a-147">시작, 건너뛰어서 채우기, 중지</span><span class="sxs-lookup"><span data-stu-id="8e70a-147">Begin, skip to fill, stop</span></span>|<span data-ttu-id="8e70a-148">클록이 시작되거나, 중지되거나, 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-148">The clock starts, stops, or fills.</span></span>|  
+|<span data-ttu-id="8e70a-149">**CurrentTimeInvalidated**</span><span class="sxs-lookup"><span data-stu-id="8e70a-149">**CurrentTimeInvalidated**</span></span>|<span data-ttu-id="8e70a-150">시작, 검색, 건너뛰어서 채우기, 중지</span><span class="sxs-lookup"><span data-stu-id="8e70a-150">Begin, seek, skip to fill, stop</span></span>|<span data-ttu-id="8e70a-151">클록이 진행됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-151">The clock progresses.</span></span>|  
+|<span data-ttu-id="8e70a-152">**RemoveRequested**</span><span class="sxs-lookup"><span data-stu-id="8e70a-152">**RemoveRequested**</span></span>|<span data-ttu-id="8e70a-153">제거</span><span class="sxs-lookup"><span data-stu-id="8e70a-153">Remove</span></span>||  
   
-## <a name="ticking-and-event-consolidation"></a>틱 및 이벤트 통합  
- 개체에 애니메이션 효과 주기 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 애니메이션을 관리 하는 타이밍 엔진입니다. 타이밍 엔진은 시간의 진행을 추적 하 고 각 애니메이션의 상태를 계산 합니다. 이러한 많은 평가가 통과를 초당에서 있게 해줍니다. 이러한 평가 통과 "틱입니다." 라고 합니다.  
+## <a name="ticking-and-event-consolidation"></a><span data-ttu-id="8e70a-154">틱 및 이벤트 통합</span><span class="sxs-lookup"><span data-stu-id="8e70a-154">Ticking and Event Consolidation</span></span>  
+ <span data-ttu-id="8e70a-155">개체에 애니메이션 효과 주는 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 타이밍 엔진 애니메이션을 관리 하입니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-155">When you animate objects in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], it’s the timing engine that manages your animations.</span></span> <span data-ttu-id="8e70a-156">타이밍 엔진은 시간의 진행을 추적하고 각 애니메이션의 상태를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-156">The timing engine tracks the progression of time and computes the state of each animation.</span></span> <span data-ttu-id="8e70a-157">1초 안에 이러한 많은 계산 패스가 진행됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-157">It makes many such evaluation passes in a second.</span></span> <span data-ttu-id="8e70a-158">이러한 계산 패스를 "틱"이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-158">These evaluation passes are known as "ticks."</span></span>  
   
- 틱이 자주 발생 하는 동안 많은 결과가 틱 간에 발생 하는 것이 같습니다. 예를 들어 타임 라인 수 중지, 시작, 하 고 다시 중지는 경우 현재 상태의 변경 되기&3; 번입니다. 이론적으로 이벤트에서에서 발생할 수 여러 번 단일 틱입니다. 그러나 타이밍 엔진은 틱 당 각 이벤트를 한 번만 발생 수 있도록 이벤트를 통합 합니다.  
+ <span data-ttu-id="8e70a-159">틱은 자주 발생하지만 틱 간에 많은 사항이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-159">While ticks occur frequently, it's possible for a lot of things to happen between ticks.</span></span> <span data-ttu-id="8e70a-160">예를 들어 타임라인이 중지되었다가 시작된 후 다시 중지될 수 있습니다. 이 경우 현재 상태는 3번 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-160">For example, a timeline might be stopped, started, and stopped again, in which case its current state will have changed three times.</span></span> <span data-ttu-id="8e70a-161">이론적으로 단일 틱에서 이벤트가 여러 번 발생할 수 있지만 타이밍 엔진은 이벤트를 통합하므로 각 이벤트는 틱마다 한 번만 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-161">In theory, the event could be raised multiple times in a single tick; however, the timing engine consolidates events, so that each event can be raised at most once per tick.</span></span>  
   
-## <a name="registering-for-events"></a>이벤트 등록  
- 타이밍 이벤트에 등록 하는 방법은 두 가지가: 시간 표시 막대 또는 타임 라인에서 만든 시계를 등록할 수 있습니다. 코드에서 있어야만 완료할 수 있지만 시계와 직접 이벤트에 대 한 등록 하는 것은 매우 간단 합니다. 태그 또는 코드에서 일정을 사용 하 여 이벤트를 등록할 수 있습니다. 다음 섹션에는 일정으로 시계 이벤트에 등록 하는 방법을 설명 합니다.  
+## <a name="registering-for-events"></a><span data-ttu-id="8e70a-162">이벤트 등록</span><span class="sxs-lookup"><span data-stu-id="8e70a-162">Registering for Events</span></span>  
+ <span data-ttu-id="8e70a-163">타이밍 이벤트를 등록하는 방법에는 두 가지가 있습니다. 하나는 타임라인에 등록하는 것이고 다른 하나는 타임라인에서 생성된 클록에 등록하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-163">There are two ways to register for timing events: you can register with the timeline or with the clock created from the timeline.</span></span> <span data-ttu-id="8e70a-164">이벤트를 클록에 직접 등록하는 과정은 매우 간단합니다. 단, 반드시 코드에서만 수행할 수 있다는 단점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-164">Registering for an event directly with a clock is fairly straightforward, although it can only be done from code.</span></span> <span data-ttu-id="8e70a-165">태그 또는 코드에서 타임라인에 이벤트를 등록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-165">You can register for events with a timeline from markup or code.</span></span> <span data-ttu-id="8e70a-166">다음 섹션에서는 타임라인에 클록 이벤트를 등록하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-166">The next section describes how to register for clock events with a timeline.</span></span>  
   
 <a name="registeringforclockeventswithatimeline"></a>   
-## <a name="registering-for-clock-events-with-a-timeline"></a>시간 표시 막대를 사용 하 여 클록 이벤트 등록  
- 하지만 timeline의 <xref:System.Windows.Media.Animation.Timeline.Completed>, <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>, 및 <xref:System.Windows.Media.Animation.Timeline.RemoveRequested> 이벤트와 이벤트 처리기를 실제로 연결 하는 이러한 이벤트에 대해 등록 타임 라인와 연결 되도록 표시는 <xref:System.Windows.Media.Animation.Clock> 타임 라인에 대해 생성 합니다.  
+## <a name="registering-for-clock-events-with-a-timeline"></a><span data-ttu-id="8e70a-167">타임라인에 클록 이벤트 등록</span><span class="sxs-lookup"><span data-stu-id="8e70a-167">Registering for Clock Events with a Timeline</span></span>  
+ <span data-ttu-id="8e70a-168">하지만 timeline의 <xref:System.Windows.Media.Animation.Timeline.Completed>, <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>, 및 <xref:System.Windows.Media.Animation.Timeline.RemoveRequested> 이벤트와 이벤트 처리기를 실제로 연결 하는 이러한 이벤트에 대해 등록 된 타임 라인과 연결 된 것으로 표시는 <xref:System.Windows.Media.Animation.Clock> 타임 라인에 대해 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-168">Although a timeline's <xref:System.Windows.Media.Animation.Timeline.Completed>, <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>, and <xref:System.Windows.Media.Animation.Timeline.RemoveRequested> events appear to be associated with the timeline, registering for these events actually associates an event handler with the <xref:System.Windows.Media.Animation.Clock> created for the timeline.</span></span>  
   
- 등록할 때는 <xref:System.Windows.Media.Animation.Timeline.Completed> 타임 라인에서 이벤트를 예를 들어 실제로 시키는 시스템에 등록 하는 <xref:System.Windows.Media.Animation.Clock.Completed> 각 클럭의 만들어지는 타임 라인에 대 한 이벤트입니다. 이 이벤트 전에 등록 해야 코드에서는 <xref:System.Windows.Media.Animation.Clock> 이 타임 라인;에 대해 만들어집니다 알림을 받을 수 없습니다, 그러지 않으면. 이 자동으로 발생 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 파서는 이전 이벤트에 대 한 자동으로 등록 된 <xref:System.Windows.Media.Animation.Clock> 만들어집니다.  
+ <span data-ttu-id="8e70a-169">에 대해 등록 하는 <xref:System.Windows.Media.Animation.Timeline.Completed> 타임 라인에서 이벤트, 예를 들어 하면 실제로 이야기 시스템에 대 한 등록을 <xref:System.Windows.Media.Animation.Clock.Completed> 이벤트 시계의 각 만들어진 시간 표시 막대에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-169">When you register for the <xref:System.Windows.Media.Animation.Timeline.Completed> event on a timeline, for example, you're actually telling the system to register for the <xref:System.Windows.Media.Animation.Clock.Completed> event of each clock that is created for the timeline.</span></span> <span data-ttu-id="8e70a-170">이전에이 이벤트에 대 한 등록 해야 코드에서는 <xref:System.Windows.Media.Animation.Clock> 이 타임 라인;에 대해 만들어집니다 알림을 받을 수 없습니다, 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-170">In code, you must register for this event before the <xref:System.Windows.Media.Animation.Clock> is created for this timeline; otherwise, you won't receive notification.</span></span> <span data-ttu-id="8e70a-171">자동으로 이런 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 파서가 이전 이벤트에 대 한 자동으로 등록는 <xref:System.Windows.Media.Animation.Clock> 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="8e70a-171">This happens automatically in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; the parser automatically registers for the event before the <xref:System.Windows.Media.Animation.Clock> is created.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)   
- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [타이밍 동작 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a><span data-ttu-id="8e70a-172">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8e70a-172">See Also</span></span>  
+ [<span data-ttu-id="8e70a-173">애니메이션 및 타이밍 시스템 개요</span><span class="sxs-lookup"><span data-stu-id="8e70a-173">Animation and Timing System Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [<span data-ttu-id="8e70a-174">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="8e70a-174">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="8e70a-175">타이밍 동작 개요</span><span class="sxs-lookup"><span data-stu-id="8e70a-175">Timing Behaviors Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

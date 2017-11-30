@@ -1,44 +1,50 @@
 ---
-title: "방법: 시각적 요소의 기하 도형 적중 테스트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Geometry 개체, 구성 표시 개체"
-  - "적중 테스트, Geometry 개체를 구성하는 표시 개체에"
-  - "표시 개체, 적중 테스트"
+title: "방법: 시각적 요소의 기하 도형 적중 테스트"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hit tests [WPF], on visual objects comprising Geometry objects [WPF]
+- visual objects [WPF], hit tests on
+- Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ab125fe4031b5408eb202f21ce0fdf4314781f1a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 시각적 요소의 기하 도형 적중 테스트
-이 예제에서는 하나 이상의 <xref:System.Windows.Media.Geometry> 개체로 구성된 시각적 개체에 대해 [적중 테스트](GTMT)를 수행하는 방법을 보여 줍니다.  
+# <a name="how-to-hit-test-geometry-in-a-visual"></a><span data-ttu-id="f7d34-102">방법: 시각적 요소의 기하 도형 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="f7d34-102">How to: Hit Test Geometry in a Visual</span></span>
+<span data-ttu-id="f7d34-103">하나 이상의 요소로 구성 된 시각적 개체에서 적중 횟수 테스트를 수행 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Geometry> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f7d34-103">This example shows how to perform a hit test on a visual object that is composed of one or more <xref:System.Windows.Media.Geometry> objects.</span></span>  
   
-## 예제  
- 다음 예제에서는 <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> 메서드를 사용하는 시각적 개체에서 <xref:System.Windows.Media.DrawingGroup>을 검색하는 방법을 보여 줍니다.  그런 다음 <xref:System.Windows.Media.DrawingGroup>에 있는 각 그리기의 렌더링된 콘텐츠에 대해 적중 테스트를 수행하여 적중된 기하 도형을 확인합니다.  
+## <a name="example"></a><span data-ttu-id="f7d34-104">예제</span><span class="sxs-lookup"><span data-stu-id="f7d34-104">Example</span></span>  
+ <span data-ttu-id="f7d34-105">다음 예제에서는 검색 하는 방법을 보여 줍니다.는 <xref:System.Windows.Media.DrawingGroup> 에서 사용 하는 시각적 개체는 <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="f7d34-105">The following example shows how to retrieve the <xref:System.Windows.Media.DrawingGroup> from a visual object that uses the <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> method.</span></span> <span data-ttu-id="f7d34-106">적중 횟수 테스트에 있는 각 그리기의 렌더링 된 콘텐츠에 대해 수행한 후의 <xref:System.Windows.Media.DrawingGroup> 기 하 도형을 적중 되었음을 확인 하려면.</span><span class="sxs-lookup"><span data-stu-id="f7d34-106">A hit test is then performed on the rendered content of each drawing in the <xref:System.Windows.Media.DrawingGroup> to determine which geometry was hit.</span></span>  
   
 > [!NOTE]
->  대개의 경우 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 메서드를 사용하여 점이 시각적 요소의 렌더링된 콘텐츠와 교차하는지 여부를 확인합니다.  
+>  <span data-ttu-id="f7d34-107">대부분의 경우에서 사용는 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 점을 시각적 개체의 렌더링 된 콘텐츠의 모든 교차 하는지 여부를 결정 하는 메서드.</span><span class="sxs-lookup"><span data-stu-id="f7d34-107">In most cases, you would use the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method to determine whether a point intersects any of the rendered content of a visual.</span></span>  
   
  [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
  [!code-vb[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
- <xref:System.Windows.Media.Geometry.FillContains%2A> 메서드는 지정된 <xref:System.Windows.Point> 또는 <xref:System.Windows.Media.Geometry>를 사용하여 적중 테스트를 수행할 수 있게 해 주는 오버로드된 메서드입니다.  기하 도형이 스트로크되는 경우 스크로크는 채우기 경계 밖으로 확장될 수 있습니다.  경우에 따라 <xref:System.Windows.Media.Geometry.FillContains%2A>와 함께 <xref:System.Windows.Media.Geometry.StrokeContains%2A>를 호출할 수 있습니다.  
+ <span data-ttu-id="f7d34-108"><xref:System.Windows.Media.Geometry.FillContains%2A> 적중 테스트는 지정 된를 사용 하 여 할 수 있는 오버 로드 된 메서드는 <xref:System.Windows.Point> 또는 <xref:System.Windows.Media.Geometry>합니다.</span><span class="sxs-lookup"><span data-stu-id="f7d34-108">The <xref:System.Windows.Media.Geometry.FillContains%2A> method is an overloaded method that allows you to hit test by using a specified <xref:System.Windows.Point> or <xref:System.Windows.Media.Geometry>.</span></span> <span data-ttu-id="f7d34-109">기하 도형에 스트로크를 적용할 경우 스트로크가 채우기 경계 밖으로 확장될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f7d34-109">If a geometry is stroked, the stroke can extend outside the fill bounds.</span></span> <span data-ttu-id="f7d34-110">호출 하려는 수 있으며이 경우 <xref:System.Windows.Media.Geometry.StrokeContains%2A> 외에 <xref:System.Windows.Media.Geometry.FillContains%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="f7d34-110">In which case, you may want to call <xref:System.Windows.Media.Geometry.StrokeContains%2A> in addition to <xref:System.Windows.Media.Geometry.FillContains%2A>.</span></span>  
   
- 또한 3차원 펴기의 목적으로 사용되는 <xref:System.Windows.Media.ToleranceType>을 제공할 수도 있습니다.  
+ <span data-ttu-id="f7d34-111">제공할 수도 있습니다는 <xref:System.Windows.Media.ToleranceType> 베 지 어 병합의 목적에 사용 되는 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7d34-111">You can also provide a <xref:System.Windows.Media.ToleranceType> that is used for the purposes of Bezier flattening.</span></span>  
   
 > [!NOTE]
->  이 샘플에서는 기하 도형에 적용될 수 있는 모든 변환이나 클리핑을 고려하지 않습니다.  또한 직접 연결된 그리기가 없기 때문에 이 샘플은 스타일이 적용된 컨트롤에서는 작동하지 않습니다.  
+>  <span data-ttu-id="f7d34-112">이 샘플에서는 기하 도형에 적용될 수 있는 변환 또는 클리핑을 고려하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f7d34-112">This sample does not take into account any transforms or clipping that may be applied to the geometry.</span></span> <span data-ttu-id="f7d34-113">또한 이 샘플은 직접 연결된 그림이 없으므로 스타일이 적용된 컨트롤에서 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f7d34-113">In addition, this sample will not work with a styled control, since it does not have any drawings directly associated with it.</span></span>  
   
-## 참고 항목  
- [시각적 계층에서 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)   
- [기하 도형을 매개 변수로 사용하여 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)
+## <a name="see-also"></a><span data-ttu-id="f7d34-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f7d34-114">See Also</span></span>  
+ [<span data-ttu-id="f7d34-115">시각적 계층에서 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="f7d34-115">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="f7d34-116">기하 도형을 매개 변수로 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="f7d34-116">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)

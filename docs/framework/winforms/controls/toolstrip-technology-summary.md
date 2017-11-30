@@ -1,132 +1,133 @@
 ---
-title: "ToolStrip 기술 요약 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "메뉴[Windows Forms], 기술 요약"
-  - "상태 표시줄, 기술 요약"
-  - "도구 모음[Windows Forms], 기술 요약"
-  - "ToolStrip 컨트롤[Windows Forms], 기술 요약"
+title: "ToolStrip 기술 요약"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], technology summary
+- status bars [Windows Forms], technology summary
+- toolbars [Windows Forms], technology summary
+- menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-caps.latest.revision: 27
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 75b340bfb2d9106827d39a3253f65f3c2419bd94
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ToolStrip 기술 요약
-이 항목에서는 `ToolStrip` 제어 및 이를 사용하도록 지원하는 클래스에 대한 정보를 요약하여 설명합니다.  
+# <a name="toolstrip-technology-summary"></a><span data-ttu-id="683f9-102">ToolStrip 기술 요약</span><span class="sxs-lookup"><span data-stu-id="683f9-102">ToolStrip Technology Summary</span></span>
+<span data-ttu-id="683f9-103">이 항목에서는 `ToolStrip` 제어 및 이를 사용하도록 지원하는 클래스에 대한 정보를 요약하여 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-103">This topic summarizes information about the `ToolStrip` control and the classes that support its use.</span></span>  
   
- `ToolStrip` 컨트롤과 연결된 클래스는 도구 모음, 상태 표시줄 및 메뉴를 만드는 완벽한 솔루션을 제공합니다.  
+ <span data-ttu-id="683f9-104">`ToolStrip` 컨트롤과 연결된 클래스는 도구 모음, 상태 표시줄 및 메뉴를 만드는 완벽한 솔루션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-104">The `ToolStrip` control and its associated classes provide a complete solution for creating toolbars, status bars, and menus.</span></span>  
   
-## 네임스페이스  
- <xref:System.Windows.Forms?displayProperty=fullName>  
+## <a name="namespaces"></a><span data-ttu-id="683f9-105">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="683f9-105">Namespaces</span></span>  
+ <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
-## 배경  
- `ToolStrip` 컨트롤과 연결된 클래스를 사용하여 일관되고 전문적인 모양 및 동작을 제공하는 고급 도구 모음 기능을 만들 수 있습니다.  `ToolStrip` 컨트롤 및 클래스는 이전 컨트롤에 비해 다음과 같은 향상된 기능을 제공합니다.  
+## <a name="background"></a><span data-ttu-id="683f9-106">배경</span><span class="sxs-lookup"><span data-stu-id="683f9-106">Background</span></span>  
+ <span data-ttu-id="683f9-107">`ToolStrip` 컨트롤과 연결된 클래스를 사용하여 일관되고 전문적인 모양 및 동작을 제공하는 고급 도구 모음 기능을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-107">With the `ToolStrip` control and its associated classes, you can create advanced toolbar functionality that has consistent and professional appearance and behavior.</span></span> <span data-ttu-id="683f9-108">`ToolStrip` 컨트롤 및 클래스는 이전 컨트롤에 비해 다음과 같은 향상된 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-108">The `ToolStrip` control and classes offer the following improvements over previous controls:</span></span>  
   
--   더 일관된 이벤트 모델.  
+-   <span data-ttu-id="683f9-109">더 일관된 이벤트 모델.</span><span class="sxs-lookup"><span data-stu-id="683f9-109">A more consistent event model.</span></span>  
   
--   작업 목록 및 항목 컬렉션 편집기가 포함된 더 일관된 디자인 타임 동작.  
+-   <span data-ttu-id="683f9-110">작업 목록 및 항목 컬렉션 편집기가 포함된 더 일관된 디자인 타임 동작.</span><span class="sxs-lookup"><span data-stu-id="683f9-110">A more consistent design-time behavior that contains task lists and item collection editors.</span></span>  
   
--   `ToolStripManager` 및 `ToolStripRenderer`를 사용한 사용자 지정 렌더링.  
+-   <span data-ttu-id="683f9-111">`ToolStripManager` 및 `ToolStripRenderer`를 사용한 사용자 지정 렌더링.</span><span class="sxs-lookup"><span data-stu-id="683f9-111">Custom rendering with `ToolStripManager` and `ToolStripRenderer`.</span></span>  
   
--   `ToolStripContainer` 및 `ToolStripPanel`을 사용한 기본 제공 래프팅\(도킹된 경우 도구 영역 내에서 가로 또는 세로 공간 공유\).  
+-   <span data-ttu-id="683f9-112">`ToolStripContainer` 및 `ToolStripPanel`을 사용한 기본 제공 래프팅(도킹된 경우 도구 영역 내에서 가로 또는 세로 공간 공유).</span><span class="sxs-lookup"><span data-stu-id="683f9-112">Built-in rafting (sharing of horizontal or vertical space within the tool area when docked) with the `ToolStripContainer` and `ToolStripPanel`.</span></span>  
   
--   <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 속성을 사용한 디자인 타임 및 런타임 항목 다시 정렬.  
+-   <span data-ttu-id="683f9-113"><xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 속성을 사용한 디자인 타임 및 런타임 항목 다시 정렬.</span><span class="sxs-lookup"><span data-stu-id="683f9-113">Design-time and run-time reordering of items with the <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> property.</span></span>  
   
--   <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 속성을 사용한 오버플로 메뉴 항목에 대한 항목 위치 변경.  
+-   <span data-ttu-id="683f9-114"><xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 속성을 사용한 오버플로 메뉴 항목에 대한 항목 위치 변경.</span><span class="sxs-lookup"><span data-stu-id="683f9-114">Relocation of items to an overflow menu with the <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> property.</span></span>  
   
--   `ToolStripContainer`, `ToolStripPanel` 및 `ToolStripContentPanel`을 통해 완전히 구성 가능한 컨트롤 위치.  
+-   <span data-ttu-id="683f9-115">`ToolStripContainer`, `ToolStripPanel` 및 `ToolStripContentPanel`을 통해 완전히 구성 가능한 컨트롤 위치.</span><span class="sxs-lookup"><span data-stu-id="683f9-115">Completely configurable control location with the `ToolStripContainer`, `ToolStripPanel`, and `ToolStripContentPanel`.</span></span>  
   
--   `ToolStripControlHost`를 사용하여 `ToolStrip`, 기본 컨트롤 및 사용자 지정 컨트롤 호스트.  
+-   <span data-ttu-id="683f9-116">`ToolStripControlHost`를 사용하여 `ToolStrip`, 기본 컨트롤 및 사용자 지정 컨트롤 호스트.</span><span class="sxs-lookup"><span data-stu-id="683f9-116">Hosting of `ToolStrip`, traditional, or custom controls using `ToolStripControlHost`.</span></span>  
   
--   `ToolStripPanel`을 사용하여 `ToolStrip` 컨트롤 병합.  
+-   <span data-ttu-id="683f9-117">`ToolStripPanel`을 사용하여 `ToolStrip` 컨트롤 병합.</span><span class="sxs-lookup"><span data-stu-id="683f9-117">Merging of `ToolStrip` controls using `ToolStripPanel`.</span></span>  
   
- `ToolStrip`는 `MenuStrip`, `ContextMenuStrip` 및 `StatusStrip`의 확장 가능한 기본 클래스입니다.  이들 컨트롤은 각 구현이 적절한 동작을 처리하도록 확장된, 일반 동작 및 이벤트 처리를 상속하는 <xref:System.Windows.Forms.ToolStripItem> 컨테이너입니다.  <xref:System.Windows.Forms.ToolStripItem>에서 파생되는 컨트롤이 다음 표에 나와 있습니다.  기본 `ToolStrip` 클래스는 이들 컨트롤에 대한 그리기, 사용자 입력 및 끌어서 놓기 이벤트를 처리합니다.  
+ <span data-ttu-id="683f9-118">`ToolStrip`는 `MenuStrip`, `ContextMenuStrip` 및 `StatusStrip`의 확장 가능한 기본 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-118">`ToolStrip` is the extensible base class for `MenuStrip`, `ContextMenuStrip`, and `StatusStrip`.</span></span> <span data-ttu-id="683f9-119">이들 컨트롤은 각 구현이 적절한 동작을 처리하도록 확장된, 일반 동작 및 이벤트 처리를 상속하는 <xref:System.Windows.Forms.ToolStripItem> 컨테이너입니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-119">These controls are <xref:System.Windows.Forms.ToolStripItem> containers that inherit common behavior and event handling, extended so that each implementation deals with the behavior that is appropriate for it.</span></span> <span data-ttu-id="683f9-120"><xref:System.Windows.Forms.ToolStripItem>에서 파생되는 컨트롤이 다음 표에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-120">Controls that derive from <xref:System.Windows.Forms.ToolStripItem> are listed in the following table.</span></span> <span data-ttu-id="683f9-121">기본 `ToolStrip` 클래스는 이들 컨트롤에 대한 그리기, 사용자 입력 및 끌어서 놓기 이벤트를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-121">The base `ToolStrip` class handles painting, user input, and drag-and-drop events for these controls.</span></span>  
   
- `ToolStrip`, `MenuStrip`, `ContextMenuStrip` 및 `StatusStrip` 컨트롤은 이전 도구 모음, 메뉴, 바로 가기 메뉴 및 상태 표시줄 컨트롤을 대체합니다. 이전 버전과의 호환성을 위해 해당 컨트롤이 유지되는 경우에도 마찬가지입니다.  
+ <span data-ttu-id="683f9-122">`ToolStrip`, `MenuStrip`, `ContextMenuStrip` 및 `StatusStrip` 컨트롤은 이전 도구 모음, 메뉴, 바로 가기 메뉴 및 상태 표시줄 컨트롤을 대체합니다. 이전 버전과의 호환성을 위해 해당 컨트롤이 유지되는 경우에도 마찬가지입니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-122">The `ToolStrip`, `MenuStrip`, `ContextMenuStrip`, and `StatusStrip` controls replace the previous toolbar, menu, shortcut menu, and status bar controls, although those controls are retained for backward compatibility.</span></span>  
   
-## ToolStrip 클래스 개요  
- 다음 표에서는 기술 영역별로 그룹화된 ToolStrip 클래스를 보여 줍니다.  
+## <a name="toolstrip-classes-at-a-glance"></a><span data-ttu-id="683f9-123">ToolStrip 클래스 개요</span><span class="sxs-lookup"><span data-stu-id="683f9-123">ToolStrip Classes at a Glance</span></span>  
+ <span data-ttu-id="683f9-124">다음 표에서는 기술 영역별로 그룹화된 ToolStrip 클래스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-124">The following table shows the ToolStrip classes grouped by technology area.</span></span>  
   
-|기술 영역|클래스|  
-|-----------|---------|  
-|도구 모음, 상태 및 메뉴 컨테이너|<xref:System.Windows.Forms.ToolStrip><br /><br /> <xref:System.Windows.Forms.MenuStrip><br /><br /> <xref:System.Windows.Forms.ContextMenuStrip><br /><br /> <xref:System.Windows.Forms.StatusStrip><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownMenu>|  
-|ToolStrip 항목|<xref:System.Windows.Forms.ToolStripLabel><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownItem><br /><br /> <xref:System.Windows.Forms.ToolStripMenuItem><br /><br /> <xref:System.Windows.Forms.ToolStripButton><br /><br /> <xref:System.Windows.Forms.ToolStripStatusLabel><br /><br /> <xref:System.Windows.Forms.ToolStripSeparator><br /><br /> <xref:System.Windows.Forms.ToolStripControlHost><br /><br /> <xref:System.Windows.Forms.ToolStripComboBox><br /><br /> <xref:System.Windows.Forms.ToolStripTextBox><br /><br /> <xref:System.Windows.Forms.ToolStripProgressBar><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownButton><br /><br /> <xref:System.Windows.Forms.ToolStripSplitButton>|  
-|위치|<xref:System.Windows.Forms.ToolStripContainer><br /><br /> <xref:System.Windows.Forms.ToolStripContentPanel><br /><br /> <xref:System.Windows.Forms.ToolStripPanel>|  
-|프레젠테이션 및 렌더링|<xref:System.Windows.Forms.ToolStripManager><br /><br /> <xref:System.Windows.Forms.ToolStripRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripProfessionalRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripRenderMode><br /><br /> <xref:System.Windows.Forms.ToolStripManagerRenderMode>|  
+|<span data-ttu-id="683f9-125">기술 영역</span><span class="sxs-lookup"><span data-stu-id="683f9-125">Technology area</span></span>|<span data-ttu-id="683f9-126">클래스</span><span class="sxs-lookup"><span data-stu-id="683f9-126">Class</span></span>|  
+|---------------------|-----------|  
+|<span data-ttu-id="683f9-127">도구 모음, 상태 및 메뉴 컨테이너</span><span class="sxs-lookup"><span data-stu-id="683f9-127">Toolbar, Status, and Menu containers</span></span>|<xref:System.Windows.Forms.ToolStrip><br /><br /> <xref:System.Windows.Forms.MenuStrip><br /><br /> <xref:System.Windows.Forms.ContextMenuStrip><br /><br /> <xref:System.Windows.Forms.StatusStrip><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownMenu>|  
+|<span data-ttu-id="683f9-128">ToolStrip 항목</span><span class="sxs-lookup"><span data-stu-id="683f9-128">ToolStrip items</span></span>|<xref:System.Windows.Forms.ToolStripLabel><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownItem><br /><br /> <xref:System.Windows.Forms.ToolStripMenuItem><br /><br /> <xref:System.Windows.Forms.ToolStripButton><br /><br /> <xref:System.Windows.Forms.ToolStripStatusLabel><br /><br /> <xref:System.Windows.Forms.ToolStripSeparator><br /><br /> <xref:System.Windows.Forms.ToolStripControlHost><br /><br /> <xref:System.Windows.Forms.ToolStripComboBox><br /><br /> <xref:System.Windows.Forms.ToolStripTextBox><br /><br /> <xref:System.Windows.Forms.ToolStripProgressBar><br /><br /> <xref:System.Windows.Forms.ToolStripDropDownButton><br /><br /> <xref:System.Windows.Forms.ToolStripSplitButton>|  
+|<span data-ttu-id="683f9-129">위치</span><span class="sxs-lookup"><span data-stu-id="683f9-129">Location</span></span>|<xref:System.Windows.Forms.ToolStripContainer><br /><br /> <xref:System.Windows.Forms.ToolStripContentPanel><br /><br /> <xref:System.Windows.Forms.ToolStripPanel>|  
+|<span data-ttu-id="683f9-130">프레젠테이션 및 렌더링</span><span class="sxs-lookup"><span data-stu-id="683f9-130">Presentation and rendering</span></span>|<xref:System.Windows.Forms.ToolStripManager><br /><br /> <xref:System.Windows.Forms.ToolStripRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripProfessionalRenderer><br /><br /> <xref:System.Windows.Forms.ToolStripRenderMode><br /><br /> <xref:System.Windows.Forms.ToolStripManagerRenderMode>|  
   
-## ToolStrip 디자인 타임 기능  
- 컨트롤의 <xref:System.Windows.Forms.ToolStrip> 패밀리는 작업 응용 프로그램을 빠르게 만들 수 있도록 사용자 인터페이스의 기본 사항을 내부 편집하고 정의하기 위한 다양한 도구 및 템플릿 집합을 제공합니다.  
+## <a name="toolstrip-design-time-features"></a><span data-ttu-id="683f9-131">ToolStrip 디자인 타임 기능</span><span class="sxs-lookup"><span data-stu-id="683f9-131">ToolStrip Design-Time Features</span></span>  
+ <span data-ttu-id="683f9-132">컨트롤의 <xref:System.Windows.Forms.ToolStrip> 패밀리는 작업 응용 프로그램을 빠르게 만들 수 있도록 사용자 인터페이스의 기본 사항을 내부 편집하고 정의하기 위한 다양한 도구 및 템플릿 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-132">The <xref:System.Windows.Forms.ToolStrip> family of controls provides a rich set of tools and templates for in-place editing and defining the foundation of the user interface so that you can quickly create a working application.</span></span>  
   
-### 작업 대화 상자  
- Visual Studio에서는 디자이너의 컨트롤에서 스마트 태그를 클릭하면 자주 사용되는 대부분 명령에 편리하게 액세스할 수 있는 작업 목록이 표시됩니다.  
+### <a name="task-dialog-boxes"></a><span data-ttu-id="683f9-133">작업 대화 상자</span><span class="sxs-lookup"><span data-stu-id="683f9-133">Task Dialog Boxes</span></span>  
+ <span data-ttu-id="683f9-134">Visual Studio에서는 디자이너의 컨트롤에서 스마트 태그를 클릭하면 자주 사용되는 대부분 명령에 편리하게 액세스할 수 있는 작업 목록이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-134">In Visual Studio, clicking the smart tag on a control in the designer displays a task list for convenient access to many frequently used commands.</span></span>  
   
--   [MenuStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   <span data-ttu-id="683f9-135">[MenuStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="683f9-135">[MenuStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))</span></span>  
   
--   [ToolStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   <span data-ttu-id="683f9-136">[ToolStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="683f9-136">[ToolStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))</span></span>  
   
--   [ContextMenuStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   <span data-ttu-id="683f9-137">[ContextMenuStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="683f9-137">[ContextMenuStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))</span></span>  
   
--   [StatusStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   <span data-ttu-id="683f9-138">[StatusStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="683f9-138">[StatusStrip Tasks Dialog Box](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))</span></span>  
   
--   [ToolStripContainer 작업 대화 상자](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   <span data-ttu-id="683f9-139">[ToolStripContainer 작업 대화 상자](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="683f9-139">[ToolStripContainer Tasks Dialog Box](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))</span></span>  
   
-### 항목 컬렉션 편집기  
- Visual Studio에서는 작업 목록에서 **항목 편집**을 클릭하거나 컨트롤을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **항목 편집**을 선택하면 컨트롤에 대한 컬렉션 편집기가 표시됩니다.  컬렉션 편집기를 통해 컨트롤에 포함된 항목을 추가, 제거, 다시 정렬할 수 있습니다.  컨트롤 및 컨트롤 항목에 대한 속성을 보고 변경할 수도 있습니다.  
+### <a name="items-collection-editors"></a><span data-ttu-id="683f9-140">항목 컬렉션 편집기</span><span class="sxs-lookup"><span data-stu-id="683f9-140">Items Collection Editors</span></span>  
+ <span data-ttu-id="683f9-141">클릭할 때 Visual Studio에서 **항목 편집** 작업 나열 하거나 선택한 컨트롤을 마우스 오른쪽 단추로 클릭 **항목 편집** 바로 가기 메뉴의 컨트롤에 대 한 컬렉션 편집기가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-141">In Visual Studio, when you click **Edit Items** on the task list or right-click the control and select **Edit Items** in the shortcut menu, the collection editor for the control is displayed.</span></span> <span data-ttu-id="683f9-142">컬렉션 편집기를 통해 컨트롤에 포함된 항목을 추가, 제거, 다시 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-142">Collection editors let you add, remove, and reorder items that the control contains.</span></span> <span data-ttu-id="683f9-143">컨트롤 및 컨트롤 항목에 대한 속성을 보고 변경할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-143">You can also view and change the properties for the control and the control's items.</span></span>  
   
--   [MenuStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   <span data-ttu-id="683f9-144">[MenuStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="683f9-144">[MenuStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))</span></span>  
   
--   [StatusStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   <span data-ttu-id="683f9-145">[StatusStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="683f9-145">[StatusStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))</span></span>  
   
--   [ContextMenuStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   <span data-ttu-id="683f9-146">[ContextMenuStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="683f9-146">[ContextMenuStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))</span></span>  
   
--   [ToolStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   <span data-ttu-id="683f9-147">[ToolStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="683f9-147">[ToolStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))</span></span>  
   
-## 컨트롤 호스트  
- <xref:System.Windows.Forms.ToolStripControlHost> 클래스는 <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> 및 <xref:System.Windows.Forms.ToolStripProgressBar> 컨트롤에 대한 기본 제공 래퍼를 제공합니다.  다른 기존 컨트롤이나 COM 컨트롤을 <xref:System.Windows.Forms.ToolStripControlHost>에서 호스트할 수도 있습니다.  
+## <a name="hosting-controls"></a><span data-ttu-id="683f9-148">컨트롤 호스트</span><span class="sxs-lookup"><span data-stu-id="683f9-148">Hosting Controls</span></span>  
+ <span data-ttu-id="683f9-149"><xref:System.Windows.Forms.ToolStripControlHost> 클래스는 <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> 및 <xref:System.Windows.Forms.ToolStripProgressBar> 컨트롤에 대한 기본 제공 래퍼를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-149">The <xref:System.Windows.Forms.ToolStripControlHost> class provides built-in wrappers for <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, and <xref:System.Windows.Forms.ToolStripProgressBar> controls.</span></span> <span data-ttu-id="683f9-150">다른 기존 컨트롤이나 COM 컨트롤을 <xref:System.Windows.Forms.ToolStripControlHost>에서 호스트할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-150">You can also host any other existing or COM control in a <xref:System.Windows.Forms.ToolStripControlHost>.</span></span>  
   
- 컨트롤 호스팅의 예를 보려면 [방법: ToolStripControlHost를 사용하여 Windows Forms 컨트롤 래핑](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)을 참조하세요.  
+ <span data-ttu-id="683f9-151">컨트롤 호스팅의 예를 들어 참조 [하는 방법: ToolStripControlHost 사용 하 여 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-151">For an example of control hosting, see [How to: Wrap a Windows Forms Control with ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).</span></span>  
   
-## 렌더링  
- <xref:System.Windows.Forms.ToolStrip> 클래스는 기타 Windows Forms 컨트롤과 크게 다른 렌더링 체계를 구현합니다.  이 체계를 사용하여 스타일과 테마를 쉽게 적용할 수 있습니다.  
+## <a name="rendering"></a><span data-ttu-id="683f9-152">렌더링</span><span class="sxs-lookup"><span data-stu-id="683f9-152">Rendering</span></span>  
+ <span data-ttu-id="683f9-153"><xref:System.Windows.Forms.ToolStrip> 클래스는 기타 Windows Forms 컨트롤과 크게 다른 렌더링 체계를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-153"><xref:System.Windows.Forms.ToolStrip> classes implement a rendering scheme that is significantly different from other Windows Forms controls.</span></span> <span data-ttu-id="683f9-154">이 체계를 사용하여 스타일과 테마를 쉽게 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-154">With this scheme, you can easily apply styles and themes.</span></span>  
   
- <xref:System.Windows.Forms.ToolStrip> 및 여기에 포함된 모든 <xref:System.Windows.Forms.ToolStripItem> 개체에 스타일을 적용하려면 각 항목에 대한 <xref:System.Windows.Forms.ToolStripItem.Paint> 이벤트를 처리할 필요가 없습니다.  대신에 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 속성을 <xref:System.Windows.Forms.ToolStripRenderMode>이 아닌 <xref:System.Windows.Forms.ToolStripRenderMode> 값의 하나로 설정할 수 있습니다.  또는 <xref:System.Windows.Forms.ToolStrip.Renderer%2A>를 직접 <xref:System.Windows.Forms.ToolStripRenderer> 클래스에서 상속되는 클래스로 설정할 수 있습니다.  이 속성을 설정하면 자동으로 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>가 설정됩니다.  
+ <span data-ttu-id="683f9-155"><xref:System.Windows.Forms.ToolStrip> 및 여기에 포함된 모든 <xref:System.Windows.Forms.ToolStripItem> 개체에 스타일을 적용하려면 각 항목에 대한 <xref:System.Windows.Forms.ToolStripItem.Paint> 이벤트를 처리할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-155">To apply a style to a <xref:System.Windows.Forms.ToolStrip> and all the <xref:System.Windows.Forms.ToolStripItem> objects it contains, you do not have to handle the <xref:System.Windows.Forms.ToolStripItem.Paint> event for each item.</span></span> <span data-ttu-id="683f9-156">대신에 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 속성을 <xref:System.Windows.Forms.ToolStripRenderMode.Custom>이 아닌 <xref:System.Windows.Forms.ToolStripRenderMode> 값의 하나로 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-156">Instead, you can set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to one of the <xref:System.Windows.Forms.ToolStripRenderMode> values other than <xref:System.Windows.Forms.ToolStripRenderMode.Custom>.</span></span> <span data-ttu-id="683f9-157">또는 <xref:System.Windows.Forms.ToolStrip.Renderer%2A>를 직접 <xref:System.Windows.Forms.ToolStripRenderer> 클래스에서 상속되는 클래스로 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-157">Alternatively, you can set the <xref:System.Windows.Forms.ToolStrip.Renderer%2A> directly to any class that inherits from the <xref:System.Windows.Forms.ToolStripRenderer> class.</span></span> <span data-ttu-id="683f9-158">이 속성을 설정하면 자동으로 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>가 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-158">Setting this property automatically sets the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>.</span></span>  
   
- <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>를 <xref:System.Windows.Forms.ToolStripRenderMode>로 설정하거나 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> 또는 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> 속성을 각각 원하는 <xref:System.Windows.Forms.ToolStripManagerRenderMode> 또는 <xref:System.Windows.Forms.ToolStripRenderer> 값으로 설정하여 같은 응용 프로그램의 여러 <xref:System.Windows.Forms.ToolStrip> 개체에 같은 스타일을 적용할 수 있습니다.  
+ <span data-ttu-id="683f9-159"><xref:System.Windows.Forms.ToolStrip.RenderMode%2A>를 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>로 설정하거나 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> 또는 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> 속성을 각각 원하는 <xref:System.Windows.Forms.ToolStripManagerRenderMode> 또는 <xref:System.Windows.Forms.ToolStripRenderer> 값으로 설정하여 같은 응용 프로그램의 여러 <xref:System.Windows.Forms.ToolStrip> 개체에 같은 스타일을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-159">You can apply the same style to multiple <xref:System.Windows.Forms.ToolStrip> objects in the same application by setting the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> to <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> and setting the <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> or <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> property to <xref:System.Windows.Forms.ToolStripManagerRenderMode> that you want or <xref:System.Windows.Forms.ToolStripRenderer> value, respectively.</span></span>  
   
- 렌더링의 예를 보려면 [방법: Windows Forms의 ToolStrip 컨트롤에 대한 사용자 지정 렌더러 만들기 및 설정](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)을 참조하세요.  
+ <span data-ttu-id="683f9-160">렌더링의 예 참조 [하는 방법: 만들기 및 Windows Forms의 ToolStrip 컨트롤에 대 한 사용자 지정 렌더러 설정](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-160">For examples of rendering, see [How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).</span></span>  
   
-## 스타일 및 테마  
- <xref:System.Windows.Forms.ToolStrip> 및 연결된 클래스를 사용하면 각 항목에 대한 <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> 메서드를 재정의할 필요 없이 시각적 스타일과 사용자 지정 모양을 쉽게 지원할 수 있습니다.  <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>과 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 및 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 속성을 사용합니다.  
+## <a name="styles-and-themes"></a><span data-ttu-id="683f9-161">스타일 및 테마</span><span class="sxs-lookup"><span data-stu-id="683f9-161">Styles and Themes</span></span>  
+ <span data-ttu-id="683f9-162"><xref:System.Windows.Forms.ToolStrip> 및 연결된 클래스를 사용하면 각 항목에 대한 <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> 메서드를 재정의할 필요 없이 시각적 스타일과 사용자 지정 모양을 쉽게 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-162"><xref:System.Windows.Forms.ToolStrip> and associated classes provide an easy way to support visual styles and custom appearance that do not require overriding the <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> methods for each item.</span></span> <span data-ttu-id="683f9-163"><xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>과 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 및 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 속성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-163">Use the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> and the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> and <xref:System.Windows.Forms.ToolStrip.Renderer%2A> properties.</span></span>  
   
-## 래프팅 및 도킹  
- <xref:System.Windows.Forms.ToolStrip> 컨트롤을 래프팅, 도킹 또는 절대적으로 배치할 수 있습니다.  <xref:System.Windows.Forms.ToolStrip> 항목은 컨테이너의 <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A>에 의해 배치됩니다.  
+## <a name="rafting-and-docking"></a><span data-ttu-id="683f9-164">래프팅 및 도킹</span><span class="sxs-lookup"><span data-stu-id="683f9-164">Rafting and Docking</span></span>  
+ <span data-ttu-id="683f9-165"><xref:System.Windows.Forms.ToolStrip> 컨트롤을 래프팅, 도킹 또는 절대적으로 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-165">You can raft, dock, or absolutely position <xref:System.Windows.Forms.ToolStrip> controls.</span></span> <span data-ttu-id="683f9-166"><xref:System.Windows.Forms.ToolStrip> 항목은 컨테이너의 <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A>에 의해 배치됩니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-166"><xref:System.Windows.Forms.ToolStrip> items are laid out by the <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> of the container.</span></span>  
   
- *래프팅*은 가로 또는 세로 공간을 공유하는 도구 모음의 기능입니다.  Windows 폼에는 <xref:System.Windows.Forms.ToolStripContainer>가 포함될 수 있고, 이 컨테이너에는 폼의 왼쪽, 오른쪽, 위쪽, 아래쪽에 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤을 배치 및 래프팅할 패널이 있습니다.  왼쪽 또는 오른쪽 <xref:System.Windows.Forms.ToolStripContainer>에 여러 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 배치하면 컨트롤이 세로로 쌓입니다.  위쪽 또는 아래쪽 <xref:System.Windows.Forms.ToolStripContainer>에 배치하면 가로로 쌓입니다.  <xref:System.Windows.Forms.ToolStripContainer>의 가운데 <xref:System.Windows.Forms.ToolStripContentPanel>을 사용하여 기존 컨트롤을 폼에 배치할 수 있습니다.  
+ <span data-ttu-id="683f9-167">*래프팅* 가로 또는 세로 공간을 공유 하는 기능 모음입니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-167">*Rafting* is the ability of toolbars to share horizontal or vertical space.</span></span> <span data-ttu-id="683f9-168">Windows 폼에는 <xref:System.Windows.Forms.ToolStripContainer>가 포함될 수 있고, 이 컨테이너에는 폼의 왼쪽, 오른쪽, 위쪽, 아래쪽에 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤을 배치 및 래프팅할 패널이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-168">A Windows form can have a <xref:System.Windows.Forms.ToolStripContainer> that in turn has panels on the form's left, right, top, and bottom sides for positioning and rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> controls.</span></span> <span data-ttu-id="683f9-169">왼쪽 또는 오른쪽 <xref:System.Windows.Forms.ToolStripContainer>에 여러 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 배치하면 컨트롤이 세로로 쌓입니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-169">Multiple <xref:System.Windows.Forms.ToolStrip> controls stack vertically if you put them in the left or right <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="683f9-170">위쪽 또는 아래쪽 <xref:System.Windows.Forms.ToolStripContainer>에 배치하면 가로로 쌓입니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-170">They stack horizontally if you put them in the top or bottom <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="683f9-171"><xref:System.Windows.Forms.ToolStripContainer>의 가운데 <xref:System.Windows.Forms.ToolStripContentPanel>을 사용하여 기존 컨트롤을 폼에 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-171">You can use the central <xref:System.Windows.Forms.ToolStripContentPanel> of the <xref:System.Windows.Forms.ToolStripContainer> to position traditional controls on the form.</span></span>  
   
- 임의 또는 모든 <xref:System.Windows.Forms.ToolStripContainer> 컨트롤은 디자인 타임에 직접 선택할 수 있고 삭제할 수 있습니다.  <xref:System.Windows.Forms.ToolStripContainer>는 확장 및 축소 가능하고 포함된 컨트롤을 사용하여 크기가 조정됩니다.  
+ <span data-ttu-id="683f9-172">임의 또는 모든 <xref:System.Windows.Forms.ToolStripContainer> 컨트롤은 디자인 타임에 직접 선택할 수 있고 삭제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-172">Any or all <xref:System.Windows.Forms.ToolStripContainer> controls are directly selectable at design time and can be deleted.</span></span> <span data-ttu-id="683f9-173"><xref:System.Windows.Forms.ToolStripContainer>는 확장 및 축소 가능하고 포함된 컨트롤을 사용하여 크기가 조정됩니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-173">A <xref:System.Windows.Forms.ToolStripContainer> is expandable and collapsible, and resizes with the controls that it contains.</span></span>  
   
- *도킹*은 폼의 왼쪽, 오른쪽, 위쪽 또는 아래쪽에 컨트롤의 단순 위치를 지정하는 것입니다.  
+ <span data-ttu-id="683f9-174">*도킹* 폼의 왼쪽, 오른쪽, 위쪽 또는 아래쪽에는 컨트롤의 단순 위치를 지정 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-174">*Docking* is the specifying of a control's simple location on the form's left, right, top, or bottom side.</span></span>  
   
- 도킹을 통해 래프팅하는 이점은 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤이 다른 컨트롤과 가로 또는 세로 공간을 공유할 수 있다는 점입니다.  
+ <span data-ttu-id="683f9-175">도킹을 통해 래프팅하는 이점은 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤이 다른 컨트롤과 가로 또는 세로 공간을 공유할 수 있다는 점입니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-175">The advantage of rafting over docking is that <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> controls can share horizontal or vertical space with other controls.</span></span>  
   
- 대부분 <xref:System.Windows.Forms.ToolStrip> 컨트롤은 래프팅을 사용하는 대신 다른 컨트롤 같이 폼에 도킹될 수 있습니다.  <xref:System.Windows.Forms.ToolStrip> 컨트롤을 <xref:System.Windows.Forms.ToolStripContainer>에서 제거하고 해당 `Dock` 속성을 `None`으로 설정하여 해당 컨트롤이 폼에 자유롭게 배치되도록 지정하거나, 각 <xref:System.Windows.Forms.Control.Location%2A> 속성을 설정하여 절대 위치를 지정할 수 있습니다.  [방법: ToolStripContainer의 ToolStrip을 폼으로 이동](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)을 참조하십시오.  
+ <span data-ttu-id="683f9-176">대부분 <xref:System.Windows.Forms.ToolStrip> 컨트롤은 래프팅을 사용하는 대신 다른 컨트롤 같이 폼에 도킹될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-176">Most of the <xref:System.Windows.Forms.ToolStrip> controls can be docked to the form like other controls instead of using rafting.</span></span> <span data-ttu-id="683f9-177"><xref:System.Windows.Forms.ToolStrip> 컨트롤을 <xref:System.Windows.Forms.ToolStripContainer>에서 제거하고 해당 `Dock` 속성을 `None`으로 설정하여 해당 컨트롤이 폼에 자유롭게 배치되도록 지정하거나, 각 <xref:System.Windows.Forms.Control.Location%2A> 속성을 설정하여 절대 위치를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-177">You can also specify that a <xref:System.Windows.Forms.ToolStrip> control be freely positioned on the form by removing it from its <xref:System.Windows.Forms.ToolStripContainer> and setting its `Dock` property to `None`, or you can specify its absolute position by setting the respective <xref:System.Windows.Forms.Control.Location%2A> property.</span></span> <span data-ttu-id="683f9-178">참조 [하는 방법: 폼으로 ToolStripContainer의 ToolStrip 이동](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-178">See [How to: Move a ToolStrip Out of a ToolStripContainer onto a Form](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).</span></span>  
   
- 더 큰 유연성, 특히 MDI\(다중 문서 인터페이스\) 응용 프로그램을 위해 또는 <xref:System.Windows.Forms.ToolStripContainer>가 필요하지 않을 경우 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 하나 이상 사용합니다.  <xref:System.Windows.Forms.ToolStripPanel>에서는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 배치 및 래프팅할 도킹 가능한 공간을 제공하지만 기존 컨트롤에 사용할 공간을 제공하지 않습니다.  기본적으로 <xref:System.Windows.Forms.ToolStripPanel>은 디자이너 **도구 상자**에 표시되지 않지만 **도구 상자**를 마우스 오른쪽 단추로 클릭하여 컨트롤을 도구 상자에 배치하고 **항목 선택**을 클릭합니다.  다른 클래스처럼 <xref:System.Windows.Forms.ToolStripPanel>에 프로그래밍 방식으로 액세스할 수도 있습니다.  
+ <span data-ttu-id="683f9-179">더 큰 유연성, 특히 MDI(다중 문서 인터페이스) 응용 프로그램을 위해 또는 <xref:System.Windows.Forms.ToolStripContainer>가 필요하지 않을 경우 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 하나 이상 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-179">Use one or more <xref:System.Windows.Forms.ToolStripPanel> controls for more flexibility, especially for Multiple Document Interface (MDI) applications, or if you do not need a <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="683f9-180"><xref:System.Windows.Forms.ToolStripPanel>에서는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 배치 및 래프팅할 도킹 가능한 공간을 제공하지만 기존 컨트롤에 사용할 공간을 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-180">A <xref:System.Windows.Forms.ToolStripPanel> provides a dockable space for locating and rafting <xref:System.Windows.Forms.ToolStrip> controls but not traditional controls.</span></span> <span data-ttu-id="683f9-181">기본적으로는 <xref:System.Windows.Forms.ToolStripPanel> 디자이너에 표시 되지 않는 **도구 상자**, 마우스 오른쪽 단추로 클릭 하 여 것이 있으면를 넣을 수 있습니다 하지만 **도구 상자**, 클릭 하 고 **항목 선택**합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-181">By default, the <xref:System.Windows.Forms.ToolStripPanel> does not appear in the designer **Toolbox**, but you can put it there by right-clicking the **Toolbox**, and then click **Choose Items**.</span></span> <span data-ttu-id="683f9-182">다른 클래스처럼 <xref:System.Windows.Forms.ToolStripPanel>에 프로그래밍 방식으로 액세스할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-182">You can also programmatically access the <xref:System.Windows.Forms.ToolStripPanel> like any other class.</span></span>  
   
- <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.StatusStrip>을 통해 항목이 오버플로될 수 있습니다.  이는 이들 항목이 Microsoft Office 도구 모음에서 동작하는 방식과 비슷합니다.  
+ <span data-ttu-id="683f9-183"><xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.StatusStrip>을 통해 항목이 오버플로될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-183">The <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> let items overflow.</span></span> <span data-ttu-id="683f9-184">이는 이들 항목이 Microsoft Office 도구 모음에서 동작하는 방식과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="683f9-184">This is similar to the way these items behave on Microsoft Office toolbars.</span></span>  
   
-## 참고 항목  
- [ToolStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [ToolStrip 컨트롤 아키텍처](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+## <a name="see-also"></a><span data-ttu-id="683f9-185">참고 항목</span><span class="sxs-lookup"><span data-stu-id="683f9-185">See Also</span></span>  
+ [<span data-ttu-id="683f9-186">ToolStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="683f9-186">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [<span data-ttu-id="683f9-187">ToolStrip 컨트롤 아키텍처</span><span class="sxs-lookup"><span data-stu-id="683f9-187">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)

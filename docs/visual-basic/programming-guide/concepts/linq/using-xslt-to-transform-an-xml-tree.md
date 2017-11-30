@@ -1,35 +1,27 @@
 ---
-title: "XSLT를 사용 하 여 XML 트리 (Visual Basic) 변환 | Microsoft 문서"
+title: "XSLT를 사용 하 여 변형 하는 XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 226a802cd640f2f251e1849486dab4a5c4af3497
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 18637ecf786c3e44e7a07b5a1ca48cf3c8a4ae35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>XSLT를 사용 하 여을 변환 하는 XML (Visual Basic)
-만들고 XML 트리를 만들 수는 <xref:System.Xml.XmlReader>에서 XML 트리를 새 문서를 만들고는 <xref:System.Xml.XmlWriter>새 문서에 쓸입니다.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 그런 다음 전달 하 여 XSLT 변환을 호출할 수 있습니다는 <xref:System.Xml.XmlReader>및 <xref:System.Xml.XmlWriter>을 변환 합니다.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.  
+# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a><span data-ttu-id="2a3cf-102">XSLT를 사용 하 여 변형 하는 XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a3cf-102">Using XSLT to Transform an XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="2a3cf-103">XML 트리를 만들고 XML 트리에서 <xref:System.Xml.XmlReader>를 만든 다음 새 문서를 만들고 새 문서에 쓸 <xref:System.Xml.XmlWriter>를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a3cf-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="2a3cf-104">그런 다음 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 변환에 전달하여 XSLT 변환을 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a3cf-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="2a3cf-105">변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="2a3cf-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="2a3cf-106">예제</span><span class="sxs-lookup"><span data-stu-id="2a3cf-106">Example</span></span>  
   
 ```vb  
 Dim xslMarkup As XDocument = _   
@@ -68,7 +60,7 @@ End Using
 Console.WriteLine(newTree)  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ <span data-ttu-id="2a3cf-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2a3cf-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -77,7 +69,7 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName></xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName></xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName>   
- [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="2a3cf-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2a3cf-108">See Also</span></span>  
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="2a3cf-109">고급 LINQ to XML 프로그래밍 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a3cf-109">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

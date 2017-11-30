@@ -1,256 +1,257 @@
 ---
-title: "연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "컨트롤[Windows Forms], snaplines를 사용하여 정렬"
-  - "SnapLine 클래스, 연습"
-  - "맞춤선, Windows Forms 컨트롤 정렬"
-  - "Windows Forms 컨트롤, 정렬"
+title: "연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], arranging with snaplines
+- snaplines [Windows Forms], arranging Windows Forms controls
+- SnapLine class [Windows Forms], walkthroughs
+- Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be514f435b787c770eca114d42bee5c1424a40c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬
-많은 응용 프로그램에 있어 폼에 컨트롤을 정확하게 배치하는 작업은 매우 중요합니다.  Windows Forms 디자이너에서는 이러한 작업을 위한 여러 가지 레이아웃 도구를 제공합니다.  가장 중요한 기능 중 하나가 <xref:System.Windows.Forms.Design.Behavior.SnapLine>입니다.  
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a><span data-ttu-id="7b962-102">연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="7b962-102">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>
+<span data-ttu-id="7b962-103">폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="7b962-104">Windows Forms 디자이너가이를 위해 여러 레이아웃 도구를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-104">The Windows Forms Designer gives you many layout tools to accomplish this.</span></span> <span data-ttu-id="7b962-105">가장 중요 한 중 하나는 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-105">One of the most important is the <xref:System.Windows.Forms.Design.Behavior.SnapLine> feature.</span></span>  
   
- 맞춤선은 컨트롤을 다른 컨트롤과 맞출 정확한 위치를 보여 줍니다.  또한 Windows 사용자 인터페이스 지침에 지정된 컨트롤 간 여백에 대한 권장 간격을 보여 줍니다.  자세한 내용은 [User Interface Design and Development\(사용자 인터페이스 디자인 및 개발\)](http://go.microsoft.com/FWLink/?LinkId=83878)를 참조하십시오.  
+ <span data-ttu-id="7b962-106">맞춤선은 정확 하 게 정렬 위치를 다른 제어 기능과 함께 컨트롤을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-106">Snaplines show you precisely where to line up controls with other controls.</span></span> <span data-ttu-id="7b962-107">또한 보여 있습니다 여백의 Windows 사용자 인터페이스 지침에 지정 된 대로 컨트롤 사이의 권장된 거리입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-107">They also show you the recommended distances for margins between controls, as specified by the Windows User Interface Guidelines.</span></span> <span data-ttu-id="7b962-108">자세한 내용은 참조 [사용자 인터페이스 디자인 및 개발](http://go.microsoft.com/FWLink/?LinkId=83878)합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-108">For details, see [User Interface Design and Development](http://go.microsoft.com/FWLink/?LinkId=83878).</span></span>  
   
- 맞춤선을 사용하면 컨트롤이 보다 전문적인 모양과 동작\(모양 및 느낌\)을 가질 수 있도록 컨트롤을 쉽게 정렬할 수 있습니다.  
+ <span data-ttu-id="7b962-109">맞춤선 쉽게 보다를 사용자 컨트롤을 맞출 전문적인 모양 및 동작 (모양 및 느낌).</span><span class="sxs-lookup"><span data-stu-id="7b962-109">Snaplines make it easy to align your controls, for crisp, professional appearance and behavior (look and feel).</span></span>  
   
- 이 연습에서 수행할 작업은 다음과 같습니다.  
+ <span data-ttu-id="7b962-110">이 연습에서 설명하는 작업은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-110">Tasks illustrated in this walkthrough include:</span></span>  
   
--   Windows Forms 프로젝트 만들기  
+-   <span data-ttu-id="7b962-111">Windows Forms 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="7b962-111">Creating a Windows Forms project</span></span>  
   
--   맞춤선을 사용하여 컨트롤 간격 조정 및 맞춤  
+-   <span data-ttu-id="7b962-112">간격 및 맞춤선을 사용 하 여 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="7b962-112">Spacing and Aligning Controls Using Snaplines</span></span>  
   
--   폼 및 컨테이너 여백에 맞춤  
+-   <span data-ttu-id="7b962-113">에 폼과 컨테이너 여백</span><span class="sxs-lookup"><span data-stu-id="7b962-113">Aligning to Form and Container Margins</span></span>  
   
--   그룹화된 컨트롤에 맞춤  
+-   <span data-ttu-id="7b962-114">그룹화 된 컨트롤에 맞춤</span><span class="sxs-lookup"><span data-stu-id="7b962-114">Aligning to Grouped Controls</span></span>  
   
--   컨트롤 크기를 윤곽선으로 지정하여 컨트롤을 배치하는 데 맞춤선 사용  
+-   <span data-ttu-id="7b962-115">맞춤선을 사용 하 여 크기로 윤곽선 지정 하 여 컨트롤을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-115">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
   
--   도구 상자에서 컨트롤을 끄는 데 맞춤선 사용  
+-   <span data-ttu-id="7b962-116">도구 상자에서 컨트롤을 끌어 올 때 맞춤선을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="7b962-116">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
   
--   맞춤선을 사용하여 컨트롤 크기 조정  
+-   <span data-ttu-id="7b962-117">맞춤선을 사용 하 여 컨트롤 크기 조정</span><span class="sxs-lookup"><span data-stu-id="7b962-117">Resizing Controls Using Snaplines</span></span>  
   
--   컨트롤의 텍스트에 레이블 맞춤  
+-   <span data-ttu-id="7b962-118">컨트롤의 텍스트에 레이블 맞춤</span><span class="sxs-lookup"><span data-stu-id="7b962-118">Aligning a Label to a Control's Text</span></span>  
   
--   키보드 탐색에 맞춤선 사용  
+-   <span data-ttu-id="7b962-119">맞춤선을 사용 하 여 키보드 탐색</span><span class="sxs-lookup"><span data-stu-id="7b962-119">Using Snaplines with Keyboard Navigation</span></span>  
   
--   맞춤선 및 레이아웃 패널  
+-   <span data-ttu-id="7b962-120">맞춤선 및 레이아웃 패널</span><span class="sxs-lookup"><span data-stu-id="7b962-120">Snaplines and Layout Panels</span></span>  
   
--   맞춤선 해제  
+-   <span data-ttu-id="7b962-121">맞춤선을 사용 하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="7b962-121">Disabling Snaplines</span></span>  
   
- 작업이 끝나면 맞춤선 기능이 수행하는 레이아웃 역할을 이해할 수 있게 됩니다.  
-  
-> [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
-  
-## 프로젝트 만들기  
- 첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.  
-  
-#### 프로젝트를 만들려면  
-  
-1.  "SnaplineExample"이라고 하는 Windows 기반 응용 프로그램 프로젝트를 만듭니다.  자세한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/ko-kr/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하십시오.  
-  
-2.  폼 디자이너에서 폼을 선택합니다.  
-  
-## 맞춤선을 사용하여 컨트롤 간격 조정 및 맞춤  
- 맞춤선은 정확하고 간단하게 폼에 컨트롤을 맞추는 방법을 제공합니다.  선택한 컨트롤을 다른 컨트롤이나 컨트롤 집합에 맞출 위치 주위로 이동하면 맞춤선이 나타납니다.  선택한 컨트롤을 다른 컨트롤로 이동하면 선택한 컨트롤이 제안된 위치에 "맞춰집니다".  
-  
-#### 맞춤선을 사용하여 컨트롤을 정렬하려면  
-  
-1.  **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 폼으로 끌어 옵니다.  
-  
-2.  <xref:System.Windows.Forms.Button> 컨트롤을 폼의 오른쪽 아래 모퉁이로 이동합니다.  <xref:System.Windows.Forms.Button> 컨트롤이 폼의 아래쪽 모퉁이와 오른쪽 모퉁이에 접근하면 맞춤선이 나타납니다.  이러한 맞춤선은 컨트롤과 폼의 테두리 간 권장 간격을 표시합니다.  
-  
-3.  <xref:System.Windows.Forms.Button> 컨트롤을 폼의 테두리 주위로 이동하고 맞춤선이 나타나는 위치를 확인합니다.  작업이 끝나면 <xref:System.Windows.Forms.Button> 컨트롤을 폼의 가운데 주위로 이동합니다.  
-  
-4.  **도구 상자**의 다른 <xref:System.Windows.Forms.Button> 컨트롤을 폼으로 끌어 옵니다.  
-  
-5.  두 번째 <xref:System.Windows.Forms.Button> 컨트롤이 첫 번째 컨트롤이 있는 수준과 가까워질 때까지 두 번째 컨트롤을 이동합니다.  맞춤선이 두 단추의 텍스트 기준선에 나타나고 이동하는 컨트롤이 다른 컨트롤이 있는 수준의 위치에 맞춰집니다.  
-  
-6.  두 번째 <xref:System.Windows.Forms.Button> 컨트롤이 첫 번째 컨트롤 바로 위에 배치될 때까지 두 번째 컨트롤을 이동합니다.  맞춤선이 두 단추의 왼쪽 가장자리와 오른쪽 가장자리에 나타나고 이동하는 컨트롤이 다른 컨트롤에 정렬되는 위치에 맞춰집니다.  
-  
-7.  <xref:System.Windows.Forms.Button> 컨트롤 중 하나를 선택하고 다른 컨트롤에 거의 닿을 때까지 가깝게 이동합니다.  이러한 컨트롤 사이에 맞춤선이 나타납니다.  컨트롤 테두리 사이에 이 간격을 사용하는 것이 좋습니다.  또한 이동 중인 컨트롤이 이 위치에 맞춰집니다.  
-  
-8.  **도구 상자**의 두 개의 <xref:System.Windows.Forms.Panel> 컨트롤을 폼으로 끌어 옵니다.  
-  
-9. <xref:System.Windows.Forms.Panel> 컨트롤 중 하나가 첫 번째 컨트롤이 있는 수준과 가까워질 때까지 해당 컨트롤을 이동합니다.  맞춤선이 두 컨트롤의 위쪽 가장자리와 아래쪽 가장자리에 나타나고 이동하는 컨트롤이 다른 컨트롤이 있는 수준의 위치에 맞춰집니다.  
-  
-## 폼 및 컨테이너 여백에 맞춤  
- 맞춤선은 컨트롤을 폼 및 컨테이너 여백에 일관된 방식으로 맞추는 데 도움을 줍니다.  
-  
-#### 폼 및 컨테이너 여백에 컨트롤을 맞추려면  
-  
-1.  <xref:System.Windows.Forms.Button> 컨트롤 중 하나를 선택하여 맞춤선이 나타날 때까지 폼의 오른쪽 테두리에 가깝게 이동합니다.  오른쪽 테두리에서의 맞춤선 간격은 컨트롤의 <xref:System.Windows.Forms.Control.Margin%2A> 속성과 폼의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 값을 합한 것입니다.  
+ <span data-ttu-id="7b962-122">완료 되 면 맞춤선 기능에 의해 수행 하는 레이아웃 역할을 이해를 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-122">When you are finished, you will have an understanding of the layout role played by the snaplines feature.</span></span>  
   
 > [!NOTE]
->  폼의 <xref:System.Windows.Forms.Control.Padding%2A> 속성이 0,0,0,0으로 설정된 경우 Windows Forms Designer에서 숨겨진 <xref:System.Windows.Forms.Control.Padding%2A> 값 9,9,9,9를 폼에 지정합니다.  이 동작을 재정의하려면 0,0,0,0 이외의 값을 할당합니다.  
+>  <span data-ttu-id="7b962-123">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-123">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="7b962-124">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-124">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="7b962-125">자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7b962-125">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-1.  **속성** 창에서 <xref:System.Windows.Forms.Control.Margin%2A> 항목을 확장하고 <xref:System.Windows.Forms.Padding.All%2A> 속성을 10으로 설정하여 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Margin%2A> 속성 값을 변경합니다.  자세한 내용은 [연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)을 참조하십시오.  
+## <a name="creating-the-project"></a><span data-ttu-id="7b962-126">프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="7b962-126">Creating the Project</span></span>  
+ <span data-ttu-id="7b962-127">첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-127">The first step is to create the project and set up the form.</span></span>  
   
-2.  맞춤선이 나타날 때까지 <xref:System.Windows.Forms.Button> 컨트롤을 폼의 오른쪽 테두리에 가깝게 이동합니다.  이 간격은 폼의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 값에서 제공됩니다.  
+#### <a name="to-create-the-project"></a><span data-ttu-id="7b962-128">프로젝트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="7b962-128">To create the project</span></span>  
   
-3.  **도구 상자**의 <xref:System.Windows.Forms.GroupBox> 컨트롤을 폼으로 끌어 옵니다.  
+1.  <span data-ttu-id="7b962-129">"SnaplineExample" 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-129">Create a Windows-based application project called "SnaplineExample".</span></span> <span data-ttu-id="7b962-130">자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7b962-130">For details, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-4.  **속성** 창에서 <xref:System.Windows.Forms.Control.Padding%2A> 항목을 확장하고 <xref:System.Windows.Forms.Padding.All%2A> 속성을 10으로 설정하여 <xref:System.Windows.Forms.GroupBox> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 값을 변경합니다.  
+2.  <span data-ttu-id="7b962-131">폼 디자이너에서 폼을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-131">Select the form in the Forms Designer.</span></span>  
   
-5.  **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.GroupBox> 컨트롤로 끌어 옵니다.  
+## <a name="spacing-and-aligning-controls-using-snaplines"></a><span data-ttu-id="7b962-132">간격 및 맞춤선을 사용 하 여 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="7b962-132">Spacing and Aligning Controls Using Snaplines</span></span>  
+ <span data-ttu-id="7b962-133">맞춤선 폼에서 컨트롤 정렬 하는 정확 하 고 직관적인 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-133">Snaplines give you an accurate and intuitive way to align controls on your form.</span></span> <span data-ttu-id="7b962-134">선택한 컨트롤을 다른 컨트롤 또는 컨트롤 집합에 맞출 위치 근처 이동할 때 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-134">They appear when you are moving a selected control or controls near a position that would align with another control or set of controls.</span></span> <span data-ttu-id="7b962-135">선택 항목은 "맞춤선" 제안된 된 위치에 다른 컨트롤을 지 나 이동 하면 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-135">Your selection will "snap" to the suggested position as you move it past the other controls.</span></span>  
   
-6.  맞춤선이 나타날 때까지 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.GroupBox> 컨트롤의 오른쪽 테두리에 가깝게 이동합니다.  <xref:System.Windows.Forms.GroupBox> 컨트롤 내에서 <xref:System.Windows.Forms.Button> 컨트롤을 이동하고 맞춤선이 나타나는 위치를 확인합니다.  
+#### <a name="to-arrange-controls-using-snaplines"></a><span data-ttu-id="7b962-136">맞춤선을 사용 하 여 컨트롤을 정렬 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-136">To arrange controls using snaplines</span></span>  
   
-## 그룹화된 컨트롤에 맞춤  
- 맞춤선을 사용하여 <xref:System.Windows.Forms.GroupBox> 컨트롤 내에서 컨트롤뿐만 아니라 그룹화된 컨트롤을 맞출 수 있습니다.  
+1.  <span data-ttu-id="7b962-137">끌어서는 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-137">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-#### 그룹화된 컨트롤에 맞추려면  
+2.  <span data-ttu-id="7b962-138">이동 된 <xref:System.Windows.Forms.Button> 컨트롤을 폼의 오른쪽 아래 모퉁이로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-138">Move the <xref:System.Windows.Forms.Button> control to the lower-right corner of the form.</span></span> <span data-ttu-id="7b962-139">참고로 표시 되는 맞춤선의 <xref:System.Windows.Forms.Button> 아래쪽 및 오른쪽 테두리 폼의 컨트롤에 도달 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-139">Note the snaplines that appear as the <xref:System.Windows.Forms.Button> control approaches the bottom and right borders of the form.</span></span> <span data-ttu-id="7b962-140">이러한 맞춤선 폼 컨트롤의 테두리 사이의 권장된 거리를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-140">These snaplines display the recommended distance between the borders of the control and the form.</span></span>  
   
-1.  폼에서 두 개의 컨트롤을 선택합니다.  선택한 컨트롤을 이동하면 선택한 컨트롤과 다른 컨트롤 사이에 맞춤선이 나타납니다.  
+3.  <span data-ttu-id="7b962-141">이동 된 <xref:System.Windows.Forms.Button> 컨트롤 주위의 테두리 폼 및 맞춤선 나타나는 위치를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-141">Move the <xref:System.Windows.Forms.Button> control around the borders of the form and note where the snaplines appear.</span></span> <span data-ttu-id="7b962-142">작업을 완료 하는 경우 이동 된 <xref:System.Windows.Forms.Button> 가운데 폼의 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-142">When you are finished, move the <xref:System.Windows.Forms.Button> control near the center of the form.</span></span>  
   
-2.  **도구 상자**의 <xref:System.Windows.Forms.GroupBox> 컨트롤을 폼으로 끌어 옵니다.  
+4.  <span data-ttu-id="7b962-143">다른 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-143">Drag another <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-3.  **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.GroupBox> 컨트롤로 끌어 옵니다.  
+5.  <span data-ttu-id="7b962-144">두 번째 이동 <xref:System.Windows.Forms.Button> 거의 첫 번째 수준 될 때까지 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-144">Move the second <xref:System.Windows.Forms.Button> control until it is nearly level with the first.</span></span> <span data-ttu-id="7b962-145">맞춤선이 두 단추의 텍스트 기준선에 표시 되 고 컨트롤이 이동 하는 컨트롤이 다른 컨트롤과 수준의 위치에 맞춰집니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-145">Note the snapline that appears at the text baseline of both buttons, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-4.  <xref:System.Windows.Forms.Button> 컨트롤 중 하나를 선택하여 <xref:System.Windows.Forms.GroupBox> 컨트롤 주위로 이동합니다.  맞춤선이 <xref:System.Windows.Forms.GroupBox> 컨트롤의 가장자리에 나타납니다.  또한 맞춤선이 <xref:System.Windows.Forms.GroupBox> 컨트롤에 포함된 <xref:System.Windows.Forms.Button> 컨트롤의 가장자리에 나타납니다.  컨테이너 컨트롤의 자식 컨트롤도 맞춤선을 지원합니다.  
+6.  <span data-ttu-id="7b962-146">두 번째 이동 <xref:System.Windows.Forms.Button> 첫 번째 바로 위에 놓을 때까지 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-146">Move the second <xref:System.Windows.Forms.Button> control until it is positioned directly above the first.</span></span> <span data-ttu-id="7b962-147">컨트롤 사용자는 다른 컨트롤과 정렬 되는 위치에 이동 맞춰집니다 있고 두 단추의 왼쪽 및 오른쪽 가장자리를 따라 표시 되는 맞춤선을 note 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-147">Note the snaplines that appear along the left and right edges of both buttons, and note that the control you are moving snaps to a position that is exactly aligned with the other control.</span></span>  
   
-## 컨트롤 크기를 윤곽선으로 지정하여 컨트롤을 배치하는 데 맞춤선 사용  
- 맞춤선은 폼에 컨트롤을 처음 배치하는 경우 컨트롤을 맞추는 데 도움을 줍니다.  
+7.  <span data-ttu-id="7b962-148">중 하나를 선택는 <xref:System.Windows.Forms.Button> 제어 하 고 거의 닿는 될 때까지 다른 가깝게 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-148">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the other, until they are almost touching.</span></span> <span data-ttu-id="7b962-149">사이 나타나는 맞춤선 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-149">Note the snapline that appears between them.</span></span> <span data-ttu-id="7b962-150">이 간격은 컨트롤 테두리 사이의 권장된 거리입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-150">This distance is the recommended distance between the borders of the controls.</span></span> <span data-ttu-id="7b962-151">또한 참고는 컨트롤이 이동 하는이 위치에 맞춰집니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-151">Also note that the control you are moving snaps to this position.</span></span>  
   
-#### 컨트롤 크기를 윤곽선으로 지정하여 컨트롤을 배치하는 데 맞춤선을 사용하려면  
+8.  <span data-ttu-id="7b962-152">두 개 <xref:System.Windows.Forms.Panel> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-152">Drag two <xref:System.Windows.Forms.Panel> controls from the **Toolbox** onto your form.</span></span>  
   
-1.  **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤 아이콘을 클릭합니다.  이 때 컨트롤을 폼으로 끌어 오지 마십시오.  
+9. <span data-ttu-id="7b962-153">이동 중 하나는 <xref:System.Windows.Forms.Panel> 거의 첫 번째 수준 될 때까지 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-153">Move one of the <xref:System.Windows.Forms.Panel> controls until it is nearly level with the first.</span></span> <span data-ttu-id="7b962-154">두 컨트롤의 위쪽 및 아래쪽 가장자리를 따라 표시 되 고 컨트롤이 다른 컨트롤과 수준의 위치로 이동 하는 컨트롤 맞춰집니다 되는 맞춤선을 note 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-154">Note the snaplines that appear along the top and bottom edges of both controls, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-2.  마우스 포인터를 폼의 디자인 화면으로 이동합니다.  포인터가 <xref:System.Windows.Forms.Button> 컨트롤 아이콘이 연결된 십자형으로 변경됩니다.  또한 <xref:System.Windows.Forms.Button> 컨트롤의 맞춤 위치를 제안하는 맞춤선이 나타납니다.  
+## <a name="aligning-to-form-and-container-margins"></a><span data-ttu-id="7b962-155">에 폼과 컨테이너 여백</span><span class="sxs-lookup"><span data-stu-id="7b962-155">Aligning to Form and Container Margins</span></span>  
+ <span data-ttu-id="7b962-156">맞춤선을 사용 하면 일관 된 방식으로 컨트롤을 폼 및 컨테이너 여백을 맞출 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-156">Snaplines help you to align your controls to form and container margins in a consistent manner.</span></span>  
   
-3.  마우스 단추를 클릭한 채로 있습니다.  
+#### <a name="to-align-controls-to-form-and-container-margins"></a><span data-ttu-id="7b962-157">폼 및 컨테이너 여백에 컨트롤을 맞추려면</span><span class="sxs-lookup"><span data-stu-id="7b962-157">To align controls to form and container margins</span></span>  
   
-4.  마우스 포인터를 폼 주위로 끕니다.  컨트롤의 위치와 크기를 나타내는 윤곽선이 그려집니다.  
+1.  <span data-ttu-id="7b962-158">중 하나를 선택는 <xref:System.Windows.Forms.Button> 제어 하 고 맞춤선 나타날 때까지 폼의 오른쪽 테두리에 가깝게 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-158">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="7b962-159">오른쪽 테두리에서 계산 된 맞춤선의 거리는 컨트롤의 합계인 <xref:System.Windows.Forms.Control.Margin%2A> 속성과 양식의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 값입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-159">The snapline's distance from the right border is the sum of the control's <xref:System.Windows.Forms.Control.Margin%2A> property and the form's <xref:System.Windows.Forms.Control.Padding%2A> property values.</span></span>  
   
-5.  컨트롤이 폼의 다른 컨트롤에 맞춰질 때까지 포인터를 끕니다.  맞춤을 나타내는 맞춤선이 나타납니다.  
+> [!NOTE]
+>  <span data-ttu-id="7b962-160">하는 경우 폼의 <xref:System.Windows.Forms.Control.Padding%2A> 0,0,0,0 속성, Windows Forms 디자이너는 숨겨진 폼 제공 <xref:System.Windows.Forms.Control.Padding%2A> 9,9,9,9의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-160">If the form's <xref:System.Windows.Forms.Control.Padding%2A> property is set to 0,0,0,0, the Windows Forms Designer gives the form a shadowed <xref:System.Windows.Forms.Control.Padding%2A> value of 9,9,9,9.</span></span> <span data-ttu-id="7b962-161">이 동작을 재정의 하려면 0,0,0,0 이외의 값을 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-161">To override this behavior, assign a value other than 0,0,0,0.</span></span>  
   
-6.  마우스 단추를 놓습니다.  윤곽선으로 표시된 위치와 크기로 컨트롤이 만들어집니다.  
+1.  <span data-ttu-id="7b962-162">값을 변경는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Margin%2A> 확장은 <xref:System.Windows.Forms.Control.Margin%2A> 항목에는 **속성** 창과 설정은 <xref:System.Windows.Forms.Padding.All%2A> 속성을 0입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-162">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Margin%2A> property by expanding the <xref:System.Windows.Forms.Control.Margin%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 0.</span></span> <span data-ttu-id="7b962-163">자세한 내용은 참조 [연습: 레이아웃으로 Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-163">For details, see [Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).</span></span>  
   
-## 도구 상자에서 컨트롤을 끄는 데 맞춤선 사용  
- 맞춤선은 **도구 상자**의 컨트롤을 폼으로 끌 때 컨트롤을 맞추는 데 도움이 됩니다.  
+2.  <span data-ttu-id="7b962-164">이동 된 <xref:System.Windows.Forms.Button> 맞춤선이 나타날 때까지 폼의 오른쪽 테두리에 가깝게 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-164">Move the <xref:System.Windows.Forms.Button> control close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="7b962-165">이 간격은 폼의 값에서 제공 됩니다 <xref:System.Windows.Forms.Control.Padding%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-165">This distance is now given by the value of the form's <xref:System.Windows.Forms.Control.Padding%2A> property.</span></span>  
   
-#### 도구 상자에서 컨트롤을 끄는 데 맞춤선을 사용하려면  
+3.  <span data-ttu-id="7b962-166">끌어서는 <xref:System.Windows.Forms.GroupBox> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-166">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-1.  **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 폼으로 끌고 마우스 단추를 클릭한 채로 있습니다.  
+4.  <span data-ttu-id="7b962-167">값을 변경는 <xref:System.Windows.Forms.GroupBox> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 확장은 <xref:System.Windows.Forms.Control.Padding%2A> 항목에는 **속성** 창과 설정은 <xref:System.Windows.Forms.Padding.All%2A> 속성을 10입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-167">Change the value of the <xref:System.Windows.Forms.GroupBox> control's <xref:System.Windows.Forms.Control.Padding%2A> property by expanding the <xref:System.Windows.Forms.Control.Padding%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 10.</span></span>  
   
-2.  마우스 포인터를 폼의 디자인 화면으로 이동합니다.  포인터가 변경되어 새 <xref:System.Windows.Forms.Button> 컨트롤이 만들어지는 위치를 나타냅니다.  
+5.  <span data-ttu-id="7b962-168">끌어서는 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 에 <xref:System.Windows.Forms.GroupBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-168">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  마우스 포인터를 폼 주위로 끕니다.  <xref:System.Windows.Forms.Button> 컨트롤의 맞춤 위치를 제안하는 맞춤선이 나타납니다.  다른 컨트롤에 정렬되는 위치를 찾습니다.  
+6.  <span data-ttu-id="7b962-169">이동 된 <xref:System.Windows.Forms.Button> 컨트롤의 오른쪽 테두리에 가깝게는 <xref:System.Windows.Forms.GroupBox> 맞춤선이 나타날 때까지 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-169">Move the <xref:System.Windows.Forms.Button> control close to the right border of the <xref:System.Windows.Forms.GroupBox> control until a snapline appears.</span></span> <span data-ttu-id="7b962-170">이동의 <xref:System.Windows.Forms.Button> 컨트롤 내에서 <xref:System.Windows.Forms.GroupBox> 제어 및 맞춤선 나타나는 위치를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-170">Move the <xref:System.Windows.Forms.Button> control within the <xref:System.Windows.Forms.GroupBox> control and note where the snaplines appear.</span></span>  
   
-4.  마우스 단추를 놓습니다.  맞춤선이 나타낸 위치에 컨트롤이 만들어집니다.  
+## <a name="aligning-to-grouped-controls"></a><span data-ttu-id="7b962-171">그룹화 된 컨트롤에 맞춤</span><span class="sxs-lookup"><span data-stu-id="7b962-171">Aligning to Grouped Controls</span></span>  
+ <span data-ttu-id="7b962-172">맞춤선을 사용 하 여 그룹화 된 컨트롤을 맞출 수 컨트롤 내에서 뿐만 <xref:System.Windows.Forms.GroupBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-172">You can use snaplines to align grouped controls as well as controls within a <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-## 맞춤선을 사용하여 컨트롤 크기 조정  
- 맞춤선은 컨트롤 크기를 조정할 때 컨트롤을 맞추는 데 도움을 줍니다.  
+#### <a name="to-align-to-grouped-controls"></a><span data-ttu-id="7b962-173">그룹화 된 컨트롤을 맞추려면</span><span class="sxs-lookup"><span data-stu-id="7b962-173">To align to grouped controls</span></span>  
   
-#### 맞춤선을 사용하여 컨트롤 크기를 조정하려면  
+1.  <span data-ttu-id="7b962-174">두 개의 폼에 컨트롤을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-174">Select two of the controls on your form.</span></span> <span data-ttu-id="7b962-175">선택 영역을 이동 하 고 선택 항목 및 다른 컨트롤 사이 표시 되는 맞춤선을 기록해 둡니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-175">Move the selection around and note the snaplines that appear between your selection and the other controls.</span></span>  
   
-1.  **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 폼으로 끌어 옵니다.  
+2.  <span data-ttu-id="7b962-176">끌어서는 <xref:System.Windows.Forms.GroupBox> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-176">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-2.  모퉁이 크기 조정 핸들 중 하나를 선택하고 끌어서 <xref:System.Windows.Forms.Button> 컨트롤의 크기를 조정합니다.  자세한 내용은 [방법: Windows Forms에서 컨트롤의 크기 조정](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)을 참조하십시오.  
+3.  <span data-ttu-id="7b962-177">끌어서는 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 에 <xref:System.Windows.Forms.GroupBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-177">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  <xref:System.Windows.Forms.Button> 컨트롤의 테두리 중 하나가 다른 컨트롤에 맞춰질 때까지 크기 조정 핸들을 끕니다.  맞춤선이 나타납니다.  또한 크기 조정 핸들이 맞춤선이 나타낸 위치에 맞춰집니다.  
+4.  <span data-ttu-id="7b962-178">중 하나를 선택는 <xref:System.Windows.Forms.Button> 컨트롤과 주위로 이동는 <xref:System.Windows.Forms.GroupBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-178">Select one of the <xref:System.Windows.Forms.Button> controls and move it around the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="7b962-179">참고의 가장자리에 표시 되는 맞춤선의 <xref:System.Windows.Forms.GroupBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-179">Note the snaplines that appear at the edges of the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="7b962-180">또한 맞춤선의 가장자리에 표시 되는 <xref:System.Windows.Forms.Button> 컨트롤에 포함 되는 <xref:System.Windows.Forms.GroupBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-180">Also note the snaplines that appear at the edges of the <xref:System.Windows.Forms.Button> control that is contained by the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="7b962-181">컨테이너 컨트롤의 자식 컨트롤에는 또한 맞춤선을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-181">Controls that are children of a container control also support snaplines.</span></span>  
   
-4.  다른 방향에서 <xref:System.Windows.Forms.Button> 컨트롤의 크기를 조정하고 크기 조정 핸들을 다른 컨트롤에 맞춥니다.  맞춤을 나타내는 맞춤선이 여러 방향에서 표시되는 방식을 확인합니다.  
+## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="7b962-182">맞춤선을 사용 하 여 크기로 윤곽선 지정 하 여 컨트롤을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-182">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
+ <span data-ttu-id="7b962-183">맞춤선 정렬 때 처음 배치 하는 폼에서 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-183">Snaplines help you align controls when you first place them on a form.</span></span>  
   
-## 컨트롤의 텍스트에 레이블 맞춤  
- 일부 컨트롤은 표시된 텍스트에 다른 컨트롤을 맞추기 위해 맞춤선을 제공합니다.  
+#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="7b962-184">크기로 윤곽선 지정 하 여 컨트롤을 배치 하려면 맞춤선을 사용 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-184">To use snaplines to place a control by outlining its size</span></span>  
   
-#### 컨트롤의 텍스트에 레이블을 맞추려면  
+1.  <span data-ttu-id="7b962-185">**도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤 아이콘을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-185">In the **Toolbox**, click the <xref:System.Windows.Forms.Button> control icon.</span></span> <span data-ttu-id="7b962-186">폼으로 끌어다 놓지 마세요.</span><span class="sxs-lookup"><span data-stu-id="7b962-186">Do not drag it onto the form.</span></span>  
   
-1.  **도구 상자**의 <xref:System.Windows.Forms.TextBox> 컨트롤을 폼으로 끌어 옵니다.  <xref:System.Windows.Forms.TextBox> 컨트롤을 폼으로 끌어 올 때 스마트 태그 문자 모양을 클릭하고 **TextBox1에 텍스트 맞추기** 옵션을 선택합니다.  자세한 내용은 [연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)을 참조하십시오.  
+2.  <span data-ttu-id="7b962-187">폼의 디자인 화면 위로 마우스 포인터를 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-187">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="7b962-188">포인터가 <xref:System.Windows.Forms.Button> 컨트롤 아이콘이 연결된 십자형으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-188">Note that the pointer changes to a crosshair with the <xref:System.Windows.Forms.Button> control icon attached.</span></span> <span data-ttu-id="7b962-189">또한 맞춤선 맞춤된 위치를 제안에 게 표시 되는 <xref:System.Windows.Forms.Button> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-189">Also note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span>  
   
-2.  **도구 상자**의 <xref:System.Windows.Forms.Label> 컨트롤을 폼으로 끌어 옵니다.  
+3.  <span data-ttu-id="7b962-190">마우스 단추를 길게 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-190">Click and hold the mouse button.</span></span>  
   
-3.  <xref:System.Windows.Forms.Label> 컨트롤의 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성 값을 `true`로 변경합니다.  컨트롤의 테두리가 표시된 텍스트에 맞게 조정됩니다.  
+4.  <span data-ttu-id="7b962-191">폼에서 마우스 포인터를 끕니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-191">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="7b962-192">참고 개요 그려짐을, 위치 및 컨트롤의 크기를 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-192">Note that an outline is drawn, indicating the position and the size of the control.</span></span>  
   
-4.  <xref:System.Windows.Forms.Label> 컨트롤을 <xref:System.Windows.Forms.TextBox> 컨트롤의 왼쪽으로 이동하여 <xref:System.Windows.Forms.TextBox> 컨트롤의 아래쪽 가장자리에 맞춥니다.  맞춤선이 두 컨트롤의 아래쪽 가장자리에 나타납니다.  
+5.  <span data-ttu-id="7b962-193">폼에 다른 컨트롤과 맞춰질 때까지 포인터를 끕니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-193">Drag the pointer until it aligns with another control on the form.</span></span> <span data-ttu-id="7b962-194">맞춤을 나타내는 맞춤선 나타나는 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-194">Note that a snapline appears to indicate alignment.</span></span>  
   
-5.  <xref:System.Windows.Forms.Label> 텍스트 및 <xref:System.Windows.Forms.TextBox> 텍스트가 맞춰질 때까지 <xref:System.Windows.Forms.Label>컨트롤을 조금 위쪽으로 이동합니다.  두 컨트롤의 텍스트 필드가 맞춰졌음을 나타내는 다른 스타일의 맞춤선이 나타납니다.  
+6.  <span data-ttu-id="7b962-195">마우스 단추를 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-195">Release the mouse button.</span></span> <span data-ttu-id="7b962-196">컨트롤의 윤곽선으로 표시 되는 크기와 위치에 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-196">The control is created at the position and size indicated by the outline.</span></span>  
   
-## 키보드 탐색에 맞춤선 사용  
- 맞춤선은 키보드의 화살표 키를 사용하여 컨트롤을 정렬할 때 컨트롤을 맞추는 데 도움을 줍니다.  
+## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="7b962-197">도구 상자에서 컨트롤을 끌어 올 때 맞춤선을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="7b962-197">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
+ <span data-ttu-id="7b962-198">맞춤선 정렬 컨트롤을 끌어 올 때에서 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-198">Snaplines help you align controls when you drag them from the **Toolbox** onto your form.</span></span>  
   
-#### 키보드 탐색에 맞춤선을 사용하려면  
+#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="7b962-199">도구 상자에서 컨트롤을 끌어 올 때 맞춤선을 사용 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-199">To use snaplines when dragging a control from the Toolbox</span></span>  
   
-1.  **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 폼으로 끌어 옵니다.  폼의 왼쪽 위 모퉁이에 배치합니다.  
+1.  <span data-ttu-id="7b962-200">끌어서는 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 에서 폼으로 하지만 마우스 단추를 해제 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-200">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form, but do not release the mouse button.</span></span>  
   
-2.  Ctrl\+아래쪽 화살표 키를 누릅니다.  컨트롤은 첫 번째로 사용 가능한 가로 맞춤 위치로 폼을 이동합니다.  
+2.  <span data-ttu-id="7b962-201">폼의 디자인 화면 위로 마우스 포인터를 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-201">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="7b962-202">포인터가 변경 되는 위치를 나타내는 새 <xref:System.Windows.Forms.Button> 컨트롤 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-202">Note that the pointer changes to indicate the position at which the new <xref:System.Windows.Forms.Button> control will be created.</span></span>  
   
-3.  컨트롤이 폼의 아래쪽에 도달할 때까지 Ctrl\+아래쪽 화살표 키를 누릅니다.  폼 아래로 이동될 때 컨트롤의 위치를 확인합니다.  
+3.  <span data-ttu-id="7b962-203">폼에서 마우스 포인터를 끕니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-203">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="7b962-204">맞춤선에 대 한 맞춤된 위치를 제안에 게 표시 되는 <xref:System.Windows.Forms.Button> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-204">Note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="7b962-205">다른 컨트롤에 정렬 되는 위치를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-205">Find a position that is aligned with other controls.</span></span>  
   
-4.  Ctrl\+오른쪽 화살표 키를 누릅니다.  컨트롤은 첫 번째로 사용 가능한 세로 맞춤 위치로 폼을 이동합니다.  
+4.  <span data-ttu-id="7b962-206">마우스 단추를 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-206">Release the mouse button.</span></span> <span data-ttu-id="7b962-207">컨트롤이 맞춤선 나타내는 위치에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-207">The control is created at the position indicated by the snaplines.</span></span>  
   
-5.  컨트롤이 폼의 한 쪽에 도달할 때까지 Ctrl\+오른쪽 화살표 키를 누릅니다.  컨트롤이 폼으로 이동될 때 컨트롤의 위치를 확인합니다.  
+## <a name="resizing-controls-using-snaplines"></a><span data-ttu-id="7b962-208">맞춤선을 사용 하 여 컨트롤 크기 조정</span><span class="sxs-lookup"><span data-stu-id="7b962-208">Resizing Controls Using Snaplines</span></span>  
+ <span data-ttu-id="7b962-209">맞춤선 하는 데 도움이 크기를 조정할 때 컨트롤을 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-209">Snaplines help you align controls as you resize them.</span></span>  
   
-6.  화살표 키 조합을 사용하여 컨트롤을 폼 주위로 이동합니다.  컨트롤의 위치와 해당 맞춤선을 확인합니다.  
+#### <a name="to-resize-a-control-using-snaplines"></a><span data-ttu-id="7b962-210">맞춤선을 사용 하는 컨트롤의 크기를 조정 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-210">To resize a control using snaplines</span></span>  
   
-7.  픽셀 하나씩 늘려서 <xref:System.Windows.Forms.Button> 컨트롤의 크기를 조정하려면 Shift\+임의의 화살표 키를 누릅니다.  
+1.  <span data-ttu-id="7b962-211">끌어서는 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-211">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-8.  맞춤선을 늘려 <xref:System.Windows.Forms.Button> 컨트롤의 크기를 조정하려면 Ctrl\+Shift\+임의의 화살표 키를 누릅니다.  
+2.  <span data-ttu-id="7b962-212">크기 조정의 <xref:System.Windows.Forms.Button> 모퉁이 끌어서 크기 조정 핸들 중 하나를 선택 하 여 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-212">Resize the <xref:System.Windows.Forms.Button> control by grabbing one of the corner sizing handles and dragging.</span></span> <span data-ttu-id="7b962-213">자세한 내용은 참조 [하는 방법: Windows Forms에서 컨트롤의 크기를 조정](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-213">For details, see [How to: Resize Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).</span></span>  
   
-## 맞춤선 및 레이아웃 패널  
- 맞춤선은 레이아웃 패널 내에서 사용되지 않습니다.  
+3.  <span data-ttu-id="7b962-214">중 하나가 때까지 크기 조정 핸들을 끌어는 <xref:System.Windows.Forms.Button> 컨트롤의 테두리는 다른 컨트롤과 정렬 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-214">Drag the sizing handle until one of the <xref:System.Windows.Forms.Button> control's borders is aligned with another control.</span></span> <span data-ttu-id="7b962-215">맞춤선 나타나는 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-215">Note that a snapline appears.</span></span> <span data-ttu-id="7b962-216">또한 메모를 크기 조정 핸들 맞춤선으로 지정 된 위치에 맞춰집니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-216">Also note that the sizing handle snaps to the position indicated by the snapline.</span></span>  
   
-#### 맞춤선을 선택적으로 해제하려면  
+4.  <span data-ttu-id="7b962-217">크기 조정 된 <xref:System.Windows.Forms.Button> 방향을 제어 하 고 크기 조정 핸들을 다른 컨트롤에 맞춥니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-217">Resize the <xref:System.Windows.Forms.Button> control in different directions and align the sizing handle to different controls.</span></span> <span data-ttu-id="7b962-218">Note 맞춤선 맞춤을 나타내는 다양 한 방향에 표시 되는 방식입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-218">Note how the snaplines appear in various orientations to indicate alignment.</span></span>  
   
-1.  **도구 상자**의 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 폼으로 끌어 옵니다.  
+## <a name="aligning-a-label-to-a-controls-text"></a><span data-ttu-id="7b962-219">컨트롤의 텍스트에 레이블 맞춤</span><span class="sxs-lookup"><span data-stu-id="7b962-219">Aligning a Label to a Control's Text</span></span>  
+ <span data-ttu-id="7b962-220">일부 컨트롤은 다른 컨트롤에 표시 된 텍스트 정렬을 위한 맞춤선을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-220">Some controls offer a snapline for aligning other controls to displayed text.</span></span>  
   
-2.  **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤 아이콘을 두 번 클릭합니다.  새 단추 컨트롤이 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 첫 번째 셀에 나타납니다.  
+#### <a name="to-align-a-label-to-a-controls-text"></a><span data-ttu-id="7b962-221">컨트롤의 텍스트에 레이블을 맞추려면</span><span class="sxs-lookup"><span data-stu-id="7b962-221">To align a label to a control's text</span></span>  
   
-3.  두 번 더 **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤 아이콘을 두 번 클릭합니다.  이렇게 하면 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에 빈 셀이 하나만 남게 됩니다.  
+1.  <span data-ttu-id="7b962-222">끌어서는 <xref:System.Windows.Forms.TextBox> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-222">Drag a <xref:System.Windows.Forms.TextBox> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="7b962-223">삭제할 경우는 <xref:System.Windows.Forms.TextBox> 컨트롤을 폼으로, 스마트 태그 문자 모양을 클릭 하 고, 선택는 **텍스트 textBox1를 설정할** 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-223">When you drop the <xref:System.Windows.Forms.TextBox> control onto the form, click the smart-tag glyph and select the **Set text to textBox1** option.</span></span> <span data-ttu-id="7b962-224">자세한 내용은 참조 [연습: 수행 일반적인 태스크를 사용 하 여 스마트 태그를 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-224">For details, see [Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).</span></span>  
   
-4.  **도구 상자**의 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 빈 셀로 끌어 옵니다.  맞춤선이 나타나지 않습니다.  
+2.  <span data-ttu-id="7b962-225">끌어서는 <xref:System.Windows.Forms.Label> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-225">Drag a <xref:System.Windows.Forms.Label> control from the **Toolbox** onto your form.</span></span>  
   
-5.  <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 밖으로 끈 다음 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 주위로 이동합니다.  맞춤선이 다시 나타납니다.  
+3.  <span data-ttu-id="7b962-226"><xref:System.Windows.Forms.Label> 컨트롤의 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성 값을 `true`로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-226">Change the value of the <xref:System.Windows.Forms.Label> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="7b962-227">참고가 컨트롤의 테두리 표시 텍스트에 맞게 조정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-227">Note that the control's borders are adjusted to fit the display text.</span></span>  
   
-## 맞춤선 해제  
- 맞춤선은 기본적으로 설정됩니다.  맞춤선을 선택적으로 해제하거나 디자인 환경에서 해제할 수 있습니다.  
+4.  <span data-ttu-id="7b962-228">이동의 <xref:System.Windows.Forms.Label> 컨트롤의 왼쪽에는 <xref:System.Windows.Forms.TextBox> 의 아래쪽 가장자리에 맞춥니다 이므로 컨트롤는 <xref:System.Windows.Forms.TextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-228">Move the <xref:System.Windows.Forms.Label> control to the left of the <xref:System.Windows.Forms.TextBox> control, so it is aligned with the bottom edge of the <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="7b962-229">두 컨트롤의 아래쪽 가장자리를 따라 나타나는 맞춤선을 note 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-229">Note the snapline that appears along the bottom edges of the two controls.</span></span>  
   
-#### 맞춤선을 선택적으로 해제하려면  
+5.  <span data-ttu-id="7b962-230">이동의 <xref:System.Windows.Forms.Label> 제어 될 때까지 상향 약간는 <xref:System.Windows.Forms.Label> 텍스트 및 <xref:System.Windows.Forms.TextBox> 텍스트를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-230">Move the <xref:System.Windows.Forms.Label> control slightly upward, until the <xref:System.Windows.Forms.Label> text and the <xref:System.Windows.Forms.TextBox> text are aligned.</span></span> <span data-ttu-id="7b962-231">두 컨트롤의 텍스트 필드 맞춰진 경우를 나타내는 표시 하는 다른 스타일된 맞춤선을 note 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-231">Note the differently styled snapline that appears, indicating when the text fields of both controls are aligned.</span></span>  
   
--   Alt 키를 누른 채 컨트롤을 폼 주위로 이동합니다.  
+## <a name="using-snaplines-with-keyboard-navigation"></a><span data-ttu-id="7b962-232">맞춤선을 사용 하 여 키보드 탐색</span><span class="sxs-lookup"><span data-stu-id="7b962-232">Using Snaplines with Keyboard Navigation</span></span>  
+ <span data-ttu-id="7b962-233">맞춤선 정렬 키보드의 화살표 키를 사용 하 여 정렬할 때 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-233">Snaplines help you align controls when you are arranging them using the keyboard's arrow keys.</span></span>  
   
-     맞춤선이 나타나지 않고 컨트롤이 가능한 맞춤 위치에 맞춰지지 않습니다.  
+#### <a name="to-use-snaplines-with-keyboard-navigation"></a><span data-ttu-id="7b962-234">키보드 탐색 맞춤선을 사용 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-234">To use snaplines with keyboard navigation</span></span>  
   
-#### 디자인 환경에서 맞춤선을 해제하려면  
+1.  <span data-ttu-id="7b962-235">끌어서는 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-235">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="7b962-236">폼의 왼쪽 위 모퉁이에 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-236">Place it in the upper-left corner of the form.</span></span>  
   
-1.  **도구** 메뉴에서 **옵션** 대화 상자를 엽니다.  Windows Forms 디자이너 대화 상자가 열립니다.  자세한 내용은 [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/ko-kr/8dd170af-72f0-4212-b04b-034ceee92834)을 참조하십시오.  
+2.  <span data-ttu-id="7b962-237">CTRL + 아래쪽 화살표를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-237">Press CTRL+DOWN ARROW.</span></span> <span data-ttu-id="7b962-238">첫 번째 사용 가능한 가로 맞춤 위치로 컨트롤을 폼 아래로 이동 하는 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-238">Note that the control moves down the form to the first available horizontal alignment position.</span></span>  
   
-2.  **일반** 노드를 선택합니다.  **LayoutMode** 섹션에서 **SnapLines**에서 **SnapToGrid**로 선택 사항을 변경합니다.  
+3.  <span data-ttu-id="7b962-239">컨트롤이 폼의 맨 아래에 도달할 때까지 CTRL + 아래쪽 화살표를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-239">Press CTRL+DOWN ARROW until the control reaches the bottom of the form.</span></span> <span data-ttu-id="7b962-240">Note 양식을 아래로 이동할 때 컨트롤의 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-240">Note the positions it occupies as it moves down the form.</span></span>  
   
-3.  확인을 클릭하여 설정을 적용합니다.  
+4.  <span data-ttu-id="7b962-241">CTRL + 오른쪽 화살표를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-241">Press CTRL+RIGHT ARROW.</span></span> <span data-ttu-id="7b962-242">컨트롤의 첫 번째 세로 맞춤을 사용할 수 있는 위치로 폼으로 이동 하는 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-242">Note that the control moves across the form to the first available vertical alignment position.</span></span>  
   
-4.  폼에서 컨트롤을 선택하여 다른 컨트롤 주위로 이동합니다.  맞춤선이 나타나지 않습니다.  
+5.  <span data-ttu-id="7b962-243">컨트롤이 폼의 측면에 도달할 때까지 CTRL + 오른쪽 화살표를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-243">Press CTRL+RIGHT ARROW until the control reaches the side of the form.</span></span> <span data-ttu-id="7b962-244">폼에서 이동할 때 컨트롤의 위치를 note 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-244">Note the positions it occupies as it moves across the form.</span></span>  
   
-## 다음 단계  
- 맞춤선을 사용하면 간단하게 폼에 컨트롤을 맞출 수 있습니다.  다음과 같은 제안을 따르는 것이 좋습니다.  
+6.  <span data-ttu-id="7b962-245">화살표 키의 조합으로 컨트롤을 폼 주위로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-245">Move the control around the form with a combination of arrow keys.</span></span> <span data-ttu-id="7b962-246">컨트롤이 차지 하는 위치를 확인 하 고 맞춤선을 함께 사용 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-246">Note the positions the control occupies and the snaplines that accompany them.</span></span>  
   
--   다른 <xref:System.Windows.Forms.GroupBox> 컨트롤 내에 <xref:System.Windows.Forms.GroupBox> 컨트롤을 중첩해 보십시오.  <xref:System.Windows.Forms.Button> 컨트롤을 자식 <xref:System.Windows.Forms.GroupBox> 컨트롤에 배치하고 다른 컨트롤을 부모 <xref:System.Windows.Forms.GroupBox> 컨트롤에 배치합니다.  <xref:System.Windows.Forms.Button> 컨트롤을 이동하여 맞춤선이 컨테이너 경계와 어떻게 교차하는지 확인합니다.  
+7.  <span data-ttu-id="7b962-247">크기를 조정 하려면 SHIFT + 화살표 키를 눌러는 <xref:System.Windows.Forms.Button> 하나의 픽셀 단위로 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-247">Press SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control by increments of one pixel.</span></span>  
   
--   <xref:System.Windows.Forms.TextBox> 컨트롤 열 및 해당 <xref:System.Windows.Forms.Label> 컨트롤 열을 만듭니다.  <xref:System.Windows.Forms.Label>컨트롤의 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성 값을 `true`로 설정합니다.  맞춤선을 사용하여 표시된 텍스트가 <xref:System.Windows.Forms.TextBox> 컨트롤의 텍스트에 맞춰지도록 <xref:System.Windows.Forms.Label>컨트롤을 이동합니다.  
+8.  <span data-ttu-id="7b962-248">크기를 조정 하려면 CTRL + SHIFT + 모든 화살표 키를 눌러는 <xref:System.Windows.Forms.Button> 맞춤선 단위로 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-248">Press CTRL+SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control in snapline increments.</span></span>  
   
- Windows 사용자 인터페이스 디자인에 대한 자세한 내용은 서적 *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, WA: Microsoft Press, 1999.  \(USBN: 0\-7356\-0566\-1\)를 참조하십시오.  
+## <a name="snaplines-and-layout-panels"></a><span data-ttu-id="7b962-249">맞춤선 및 레이아웃 패널</span><span class="sxs-lookup"><span data-stu-id="7b962-249">Snaplines and Layout Panels</span></span>  
+ <span data-ttu-id="7b962-250">맞춤선은 레이아웃 패널 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-250">Snaplines are disabled within layout panels.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.Design.Behavior.SnapLine>   
- [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)   
- [Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="7b962-251">맞춤선을 선택적으로 해제 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-251">To selectively disable snaplines</span></span>  
+  
+1.  <span data-ttu-id="7b962-252">끌어서는 <xref:System.Windows.Forms.TableLayoutPanel> 에서 제어는 **도구 상자** 폼으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-252">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
+  
+2.  <span data-ttu-id="7b962-253"><xref:System.Windows.Forms.Button> 도구 상자 **에서**컨트롤 아이콘을 두 번 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-253">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox**.</span></span> <span data-ttu-id="7b962-254">참고 새 단추 컨트롤에 표시 되는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 첫 번째 셀입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-254">Note that a new button control appears in the <xref:System.Windows.Forms.TableLayoutPanel> control's first cell.</span></span>  
+  
+3.  <span data-ttu-id="7b962-255">두 번 클릭 하 고 <xref:System.Windows.Forms.Button> 컨트롤 아이콘은 **도구 상자** 두 번 더 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-255">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox** twice more.</span></span> <span data-ttu-id="7b962-256">이 방법에서 빈 셀이 하나는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-256">This leaves one empty cell in the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
+  
+4.  <span data-ttu-id="7b962-257">끌어서는 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 의 빈 셀에는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-257">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the empty cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="7b962-258">참고 맞춤선이 나타나지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-258">Note that no snaplines appear.</span></span>  
+  
+5.  <span data-ttu-id="7b962-259">끌어서는 <xref:System.Windows.Forms.Button> 의 제어는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 하 고 주위로 이동는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-259">Drag the <xref:System.Windows.Forms.Button> control out of the <xref:System.Windows.Forms.TableLayoutPanel> control and move it around the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="7b962-260">맞춤선이 다시 나타납니다 유의 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-260">Note that snaplines appear again.</span></span>  
+  
+## <a name="disabling-snaplines"></a><span data-ttu-id="7b962-261">맞춤선을 사용 하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="7b962-261">Disabling Snaplines</span></span>  
+ <span data-ttu-id="7b962-262">맞춤선은 기본적으로 켜 집니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-262">Snaplines are turned on by default.</span></span> <span data-ttu-id="7b962-263">맞춤선을 선택적으로 해제할 수 있습니다 또는 디자인 환경에서 비활성화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-263">You can disable snaplines selectively, or you can disable them in the design environment.</span></span>  
+  
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="7b962-264">맞춤선을 선택적으로 해제 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-264">To selectively disable snaplines</span></span>  
+  
+-   <span data-ttu-id="7b962-265">ALT 키를 누르고 주위 폼 컨트롤을 이동 하는 동안 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-265">Press the ALT key and while moving a control around the form.</span></span>  
+  
+     <span data-ttu-id="7b962-266">Note 맞춤선이 나타나지 않고 및 가능한 맞춤 위치에 컨트롤 맞춤 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-266">Note that no snaplines appear and the control does not snap to any potential alignment positions.</span></span>  
+  
+#### <a name="to-disable-snaplines-in-the-design-environment"></a><span data-ttu-id="7b962-267">디자인 환경에서 맞춤선을 사용 하지 않도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="7b962-267">To disable snaplines in the design environment</span></span>  
+  
+1.  <span data-ttu-id="7b962-268">**도구** 메뉴를 열고는 **옵션** 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="7b962-268">From the **Tools** menu, open the **Options** dialog box.</span></span> <span data-ttu-id="7b962-269">Windows Forms 디자이너 대화 상자를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-269">Open the Windows Forms Designer dialog box.</span></span> <span data-ttu-id="7b962-270">자세한 내용은 참조 [Windows Forms 디자이너, 옵션 대화 상자, 일반](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-270">For details, see [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).</span></span>  
+  
+2.  <span data-ttu-id="7b962-271">선택 된 **일반** 노드.</span><span class="sxs-lookup"><span data-stu-id="7b962-271">Select the **General** node.</span></span> <span data-ttu-id="7b962-272">에 **레이아웃 모드** 섹션, 선택을 변경 **맞춤선** 를 **SnapToGrid**합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-272">In the **Layout Mode** section, change the selection from **SnapLines** to **SnapToGrid**.</span></span>  
+  
+3.  <span data-ttu-id="7b962-273">설정을 적용 하려면 확인을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-273">Click OK to apply the setting.</span></span>  
+  
+4.  <span data-ttu-id="7b962-274">폼에 컨트롤을 선택 하 고 다른 컨트롤 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-274">Select a control on your form and move it around the other controls.</span></span> <span data-ttu-id="7b962-275">맞춤선 나타나지 않는 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-275">Note that snaplines do not appear.</span></span>  
+  
+## <a name="next-steps"></a><span data-ttu-id="7b962-276">다음 단계</span><span class="sxs-lookup"><span data-stu-id="7b962-276">Next Steps</span></span>  
+ <span data-ttu-id="7b962-277">맞춤선에 폼 컨트롤을 정렬 하는 직관적인 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-277">Snaplines offer an intuitive means of aligning controls on your form.</span></span> <span data-ttu-id="7b962-278">다음과 같은 사항을 더 살펴보는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-278">Suggestions for more exploration include:</span></span>  
+  
+-   <span data-ttu-id="7b962-279">중첩 시도 <xref:System.Windows.Forms.GroupBox> 컨트롤 내에 다른 <xref:System.Windows.Forms.GroupBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-279">Try nesting a <xref:System.Windows.Forms.GroupBox> control within another <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="7b962-280">위치는 <xref:System.Windows.Forms.Button> 자식 내에서 컨트롤 <xref:System.Windows.Forms.GroupBox> 컨트롤과 부모 내의 다른 <xref:System.Windows.Forms.GroupBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-280">Place a <xref:System.Windows.Forms.Button> control within the child <xref:System.Windows.Forms.GroupBox> control, and another within the parent <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="7b962-281">이동 된 <xref:System.Windows.Forms.Button> 컨트롤을 맞춤선 컨테이너 경계를 교차 하는 방법을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="7b962-281">Move the <xref:System.Windows.Forms.Button> controls around to see how the snaplines cross container boundaries.</span></span>  
+  
+-   <span data-ttu-id="7b962-282">열을 만들 <xref:System.Windows.Forms.TextBox> 컨트롤 및 해당 열 <xref:System.Windows.Forms.Label> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-282">Create a column of <xref:System.Windows.Forms.TextBox> controls and a corresponding column of <xref:System.Windows.Forms.Label> controls.</span></span> <span data-ttu-id="7b962-283">값으로 설정 된 <xref:System.Windows.Forms.Label> 컨트롤의 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-283">Set the value of the <xref:System.Windows.Forms.Label> controls' <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="7b962-284">맞춤선을 사용 하 여 이동 된 <xref:System.Windows.Forms.Label> 컨트롤의 표시 된 텍스트의 텍스트를 맞춥니다는 <xref:System.Windows.Forms.TextBox> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-284">Use snaplines to move the <xref:System.Windows.Forms.Label> controls so their displayed text is aligned with the text in the <xref:System.Windows.Forms.TextBox> controls.</span></span>  
+  
+ <span data-ttu-id="7b962-285">Windows 사용자 인터페이스 디자인에 대 한 내용은 책을 참조 하십시오. *Microsoft Windows User Experience, Official Guidelines 사용자 인터페이스 개발자 및 디자이너에 대 한* Redmond, WA: Microsoft Press, 1999 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b962-285">For information about Windows user interface design, see the book *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, WA: Microsoft Press, 1999.</span></span> <span data-ttu-id="7b962-286">(USBN: 0-7356-0566-1).</span><span class="sxs-lookup"><span data-stu-id="7b962-286">(USBN: 0-7356-0566-1).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="7b962-287">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7b962-287">See Also</span></span>  
+ <xref:System.Windows.Forms.Design.Behavior.SnapLine>  
+ [<span data-ttu-id="7b962-288">연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="7b962-288">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="7b962-289">연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="7b962-289">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="7b962-290">연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃</span><span class="sxs-lookup"><span data-stu-id="7b962-290">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
+ [<span data-ttu-id="7b962-291">Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="7b962-291">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
