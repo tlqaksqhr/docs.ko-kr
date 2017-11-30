@@ -1,32 +1,38 @@
 ---
-title: "이중 서비스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "이중 서비스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5b5e0e2b1b2aa6292d53f1688ef124d9add42b5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 이중 서비스
+# <a name="duplex-services"></a>이중 서비스
 이중 서비스 계약은 양쪽 끝점에서 메시지를 다른 사용자에게 독립적으로 전송할 수 있는 메시지 교환 패턴입니다. 따라서 이중 서비스에서는 클라이언트 끝점으로 메시지를 보내 이벤트와 비슷한 동작을 제공할 수 있습니다. 이중 통신은 클라이언트가 서비스에 연결할 때 이루어지며, 서비스에서 클라이언트로 메시지를 다시 보낼 수 있는 채널을 제공합니다. 이중 서비스의 이벤트와 비슷한 동작은 세션 내에서만 작동합니다.  
   
- 이중 계약을 만들려면 인터페이스 쌍을 만듭니다. 첫 번째는 클라이언트가 호출할 수 있는 작업을 설명하는 서비스 계약 인터페이스입니다. 해당 서비스 계약을 지정 해야는 *콜백 계약* 에 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=fullName> 속성입니다. 콜백 계약은 서비스가 클라이언트 끝점에서 호출할 수 있는 작업을 정의하는 인터페이스입니다. 시스템이 제공하는 이중 바인딩은 세션을 사용하지만 이중 계약에서는 세션이 필요 없습니다.  
+ 이중 계약을 만들려면 인터페이스 쌍을 만듭니다. 첫 번째는 클라이언트가 호출할 수 있는 작업을 설명하는 서비스 계약 인터페이스입니다. 해당 서비스 계약을 지정 해야 합니다는 *콜백 계약* 에 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 속성입니다. 콜백 계약은 서비스가 클라이언트 끝점에서 호출할 수 있는 작업을 정의하는 인터페이스입니다. 시스템이 제공하는 이중 바인딩은 세션을 사용하지만 이중 계약에서는 세션이 필요 없습니다.  
   
  다음은 이중 계약의 예제입니다.  
   
  [!code-csharp[c_DuplexServices#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#0)]
  [!code-vb[c_DuplexServices#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#0)]  
   
- `CalculatorService` 클래스는 기본 `ICalculatorDuplex` 인터페이스를 구현합니다. 서비스에서 사용 하는 <xref:System.ServiceModel.InstanceContextMode> 인스턴스 모드를 각 세션에 대 한 결과 유지 관리 합니다. `Callback`이라는 private 속성이 클라이언트에 대한 콜백 채널에 액세스합니다. 서비스는 다음 샘플 코드에 표시된 것처럼 콜백 인터페이스를 통해 클라이언트에 다시 전송하는 메시지의 콜백을 사용합니다.  
+ `CalculatorService` 클래스는 기본 `ICalculatorDuplex` 인터페이스를 구현합니다. 서비스는 <xref:System.ServiceModel.InstanceContextMode.PerSession> 인스턴스 모드를 사용하여 각 세션의 결과를 유지합니다. `Callback`이라는 private 속성이 클라이언트에 대한 콜백 채널에 액세스합니다. 서비스는 다음 샘플 코드에 표시된 것처럼 콜백 인터페이스를 통해 클라이언트에 다시 전송하는 메시지의 콜백을 사용합니다.  
   
  [!code-csharp[c_DuplexServices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#1)]
  [!code-vb[c_DuplexServices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#1)]  
@@ -36,7 +42,7 @@ caps.handback.revision: 17
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이중 계약에 대해 생성 되는 클라이언트는 <xref:System.ServiceModel.InstanceContext> 클래스를 생성 시 제공 해야 합니다. 이 <xref:System.ServiceModel.InstanceContext> 클래스는 콜백 인터페이스를 구현 하 고 서비스에서 다시 전송 된 메시지를 처리 하는 개체에 대 한 사이트도 사용 됩니다. <xref:System.ServiceModel.InstanceContext> 클래스의 인스턴스를 사용 하 여 생성 되는 `CallbackHandler` 클래스입니다. 이 개체는 콜백 인터페이스를 통해 서비스에서 클라이언트로 전송된 메시지를 처리합니다.  
+ 이중 계약에 대해 생성된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트의 경우 생성 시 <xref:System.ServiceModel.InstanceContext> 클래스를 제공해야 합니다. 이 <xref:System.ServiceModel.InstanceContext> 클래스는 콜백 인터페이스를 구현하는 개체의 사이트로 사용되고 서비스에서 다시 전송된 메시지를 처리합니다. <xref:System.ServiceModel.InstanceContext> 클래스는 `CallbackHandler` 클래스의 인스턴스를 사용하여 생성됩니다. 이 개체는 콜백 인터페이스를 통해 서비스에서 클라이언트로 전송된 메시지를 처리합니다.  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  
@@ -48,7 +54,7 @@ caps.handback.revision: 17
   
   
 > [!NOTE]
->  일반적으로 보안 대화를 사용 하 여 인증에 실패 하는 이중이 아닌 클라이언트에서 throw 한 <xref:System.ServiceModel.Security.MessageSecurityException>합니다. 그러나 보안 대화를 사용 하는 이중 클라이언트가 인증할 수 없는 경우 클라이언트가 수신는 <xref:System.TimeoutException> 대신 합니다.  
+>  보안 대화를 사용하여 인증할 수 없는 이중이 아닌 클라이언트는 일반적으로 <xref:System.ServiceModel.Security.MessageSecurityException>을 throw합니다. 그러나 보안 대화를 사용하는 이중 클라이언트가 인증할 수 없는 경우 클라이언트는 대신 <xref:System.TimeoutException>을 수신합니다.  
   
  `WSHttpBinding` 요소를 사용하여 클라이언트/서비스를 만들고 클라이언트 콜백 끝점이 없는 경우 다음 오류를 수신합니다.  
   
@@ -67,7 +73,7 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
   
  다음 샘플 코드에서는 구성에서 클라이언트 끝점 주소를 지정하는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <client>  
     <endpoint name ="ServerEndpoint"   
           address="http://localhost:12000/DuplexTestUsingConfig/Server"  
@@ -83,13 +89,12 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
          </binding>  
     </wsDualHttpBinding>  
 </bindings>  
-  
 ```  
   
 > [!WARNING]
 >  이중 모델에서는 서비스나 클라이언트가 채널을 닫을 때를 자동으로 감지하지 않습니다. 따라서 클라이언트가 예기치 않게 종료되는 경우 기본적으로 클라이언트가 알림을 받지 못하고, 클라이언트가 예기치 않게 종료되는 경우에는 서비스가 알림을 받지 못합니다. 클라이언트와 서비스는 선택하는 경우 서로에게 알리도록 자체 프로토콜을 구현할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [이중](../../../../docs/framework/wcf/samples/duplex.md)   
- [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)   
- [방법: 채널 팩터리를 만들고 관리 채널을 만들고 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+ [이중](../../../../docs/framework/wcf/samples/duplex.md)  
+ [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
+ [방법: 채널 팩터리를 만들어 만들기 및 관리 채널을 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

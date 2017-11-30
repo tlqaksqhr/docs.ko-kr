@@ -1,39 +1,40 @@
 ---
-title: "DataGridView 컨트롤 코드 디렉터리(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "데이터 표, 예제"
-  - "DataGridView 컨트롤[Windows Forms], 코드 디렉터리"
-  - "DataGridView 컨트롤[Windows Forms], 예제"
-  - "예제[Windows Forms], DataGridView 컨트롤"
+title: "DataGridView 컨트롤 코드 디렉터리(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], examples
+- examples [Windows Forms], DataGridView control
+- DataGridView control [Windows Forms], examples
+- DataGridView control [Windows Forms], code directory
 ms.assetid: ea8bd66a-5ed6-491b-b9da-63873e275a0a
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89de7edc167ccc21ac2a31fa0de82299c5047969
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataGridView 컨트롤 코드 디렉터리(Windows Forms)
-이 항목에서는 설명서에서 사용할 수 있는 <xref:System.Windows.Forms.DataGridView> 관련 코드 예제에 대한 링크를 제공합니다.  
+# <a name="datagridview-control-code-directory-windows-forms"></a>DataGridView 컨트롤 코드 디렉터리(Windows Forms)
+이 항목에 대 한 링크를 제공 <xref:System.Windows.Forms.DataGridView>-관련 코드 예제는 문서에서 확인할 수 있습니다.  
   
 > [!NOTE]
->  링크는 항상 코드 예제가 있는 항목의 위쪽으로 이동합니다.  
+>  링크는 항상 코드 예제는 항목이 있는 항목의 맨 위로 이동 합니다.  
   
- 클래스 라이브러리 참조 설명서에서 추가 코드 예제를 볼 수 있습니다.  <xref:System.Windows.Forms.DataGridView> 컨트롤과 연결된 principal 클래스 및 인터페이스 목록을 보려면 [DataGridView 컨트롤 기술 요약](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)의 표를 참조하십시오.  
+ 추가 코드 예제는 클래스 라이브러리 참조 문서에서 사용할 수 있습니다. 주 클래스와 관련 된 인터페이스의 목록은 <xref:System.Windows.Forms.DataGridView> 제어에 표를 참조 하십시오 [DataGridView 컨트롤 기술 요약](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)합니다.  
   
-## 코드 목록  
+## <a name="codelist"></a>코드 목록  
   
-## 바인딩되지 않은 데이터 예제  
+## <a name="unbound-data-examples"></a>바인딩되지 않은 데이터 예제  
   
 -   [방법: 데이터 바인딩된 Windows Forms DataGridView 컨트롤에 바인딩되지 않은 열 추가](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
   
@@ -41,7 +42,7 @@ caps.handback.revision: 9
   
 -   [연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
   
-## 데이터 바인딩 예제  
+## <a name="data-binding-examples"></a>데이터 바인딩 예제  
   
 -   [방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
   
@@ -53,17 +54,17 @@ caps.handback.revision: 9
   
 -   [방법: Windows Forms DataGridView 행에 바인딩된 개체에 액세스](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
   
--   [방법: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터\/세부 폼 만들기](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagrids.md)  
+-   [방법: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터/세부 폼 만들기](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)  
   
--   [연습: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터\/세부 폼 만들기](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagrids.md)  
+-   [연습: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터/세부 폼 만들기](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
   
-## 데이터 형식 지정 예제  
+## <a name="data-formatting-examples"></a>데이터 형식 지정 예제  
   
 -   [방법: Windows Forms DataGridView 컨트롤의 데이터 형식 지정](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
   
 -   [방법: Windows Forms DataGridView 컨트롤에서 데이터 형식 사용자 지정](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
   
-## 데이터 유효성 검사 예제  
+## <a name="data-validation-examples"></a>데이터 유효성 검사 예제  
   
 -   [방법: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
   
@@ -73,7 +74,7 @@ caps.handback.revision: 9
   
 -   [연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
-## 모양 사용자 지정 예제  
+## <a name="appearance-customization-examples"></a>모양 사용자 지정 예제  
   
 -   [방법: Windows Forms DataGridView 컨트롤의 테두리 및 모눈선 스타일 변경](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
   
@@ -85,7 +86,7 @@ caps.handback.revision: 9
   
 -   [방법: Windows Forms DataGridView 컨트롤에 교대로 반복되는 행 스타일 설정](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
   
-## 동작 사용자 지정 예제  
+## <a name="behavior-customization-examples"></a>동작 사용자 지정 예제  
   
 -   [방법: Windows Forms DataGridView 컨트롤에 편집 모드 지정](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
   
@@ -103,7 +104,7 @@ caps.handback.revision: 9
   
 -   [방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
   
-## 열 조작 예제  
+## <a name="column-manipulation-examples"></a>열 조작 예제  
   
 -   [방법: Windows Forms DataGridView 컨트롤에서 열 고정](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
   
@@ -123,7 +124,7 @@ caps.handback.revision: 9
   
 -   [방법: Windows Forms DataGridView 컨트롤에서 열 조작](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
   
-## 행 및 열 크기 조정 예제  
+## <a name="row-and-column-sizing-examples"></a>행 및 열 크기 조정 예제  
   
 -   [Windows Forms DataGridView 컨트롤의 열 채우기 모드](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
   
@@ -133,7 +134,7 @@ caps.handback.revision: 9
   
 -   [방법: Windows Forms DataGridView 컨트롤에서 내용이 변경되는 경우 자동으로 셀 크기 조정](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
   
-## 선택 예제  
+## <a name="selection-examples"></a>선택 영역 예제  
   
 -   [방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
   
@@ -141,7 +142,7 @@ caps.handback.revision: 9
   
 -   [방법: Windows Forms DataGridView 컨트롤에서 현재 셀 가져오기 및 설정](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
   
-## 고급 사용자 지정 예제  
+## <a name="advanced-customization-examples"></a>고급 사용자 지정 예제  
   
 -   [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
   
@@ -153,14 +154,14 @@ caps.handback.revision: 9
   
 -   [방법: Windows Forms DataGridView 셀에서 컨트롤 호스팅](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
   
-## 고급 데이터 예제  
+## <a name="advanced-data-examples"></a>고급 데이터 예제  
   
 -   [방법: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
   
 -   [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
   
--   [Windows Forms DataGridView 컨트롤에서 Just\-In\-Time 데이터 로드를 사용하여 가상 모드 구현](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+-   [Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## 참고 항목  
- <xref:System.Windows.Forms.DataGridView>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 컨트롤 개요](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

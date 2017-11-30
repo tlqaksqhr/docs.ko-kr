@@ -1,56 +1,47 @@
 ---
-title: "비동기 응용 프로그램 (Visual Basic)에서 재진입 처리 | Microsoft 문서"
+title: "비동기 응용 프로그램 (Visual Basic)에서 재진입 처리"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64a708e3b88f48ad30d3f3ad25141a31f3d8f73d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 45dfc4dd4ab42c3ce8edd7e41b7b0401bb0db672
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>비동기 응용 프로그램 (Visual Basic)에서 재진입 처리
 앱에 비동기 코드를 포함하는 경우 완료되기 전에 비동기 작업을 다시 입력하는 것을 나타내는 재입력을 고려하고 방지할 수 있어야 합니다. 재입력 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 발생할 수 있습니다.  
   
  **항목 내용**  
   
--   [재진입 인식](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [재입력 인식](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [재진입 처리](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [재입력 처리](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [시작 단추를 사용 하지 않도록 설정](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [시작 단추 사용 안 함](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [취소 하 고 작업을 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [작업 취소 및 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [여러 작업을 실행 하 고 출력 큐](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [여러 작업을 실행하고 출력을 큐 대기](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [검토 및 예제 응용 프로그램 실행](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [예제 앱 검토 및 실행](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
 > [!NOTE]
->  예제를 실행 하려면 Visual Studio 2012 이상 및.NET Framework 4.5 또는 있어야 사용자의 컴퓨터에 설치 되어 있습니다.  
+>  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
-##  <a name="BKMK_RecognizingReentrancy"></a>재진입 인식  
- 이 항목의 예제에서는 사용자가 선택 된 **시작** 일련의 웹 사이트를 다운로드 하 고 다운로드 하는 바이트의 총 수를 계산 하는 비동기 응용 프로그램을 시작 하려면 단추입니다. 예제의 동기 버전은 처음 실행 후 앱 실행이 완료될 때까지 UI 스레드에서 해당 이벤트를 무시하므로 사용자가 단추를 선택하는 횟수에 관계없이 동일한 방식으로 응답합니다. 그러나 비동기 앱에서 UI 스레드는 계속 응답하므로 완료되기 전에 비동기 작업을 다시 입력할 수 있습니다.  
+##  <a name="BKMK_RecognizingReentrancy"></a> 재입력 인식  
+ 이 항목의 예제에서는 사용자가 **시작** 단추를 선택하여 일련의 웹 사이트를 다운로드하고 다운로드되는 총 바이트 수를 계산하는 비동기 앱을 시작합니다. 예제의 동기 버전은 처음 실행 후 앱 실행이 완료될 때까지 UI 스레드에서 해당 이벤트를 무시하므로 사용자가 단추를 선택하는 횟수에 관계없이 동일한 방식으로 응답합니다. 그러나 비동기 앱에서 UI 스레드는 계속 응답하므로 완료되기 전에 비동기 작업을 다시 입력할 수 있습니다.  
   
- 다음 예제에서는 예상 되는 사용자가 선택 하는 경우 출력은 **시작** 단추를 두 번만 합니다. 다운로드된 웹 사이트 목록이 각 사이트의 크기(바이트)와 함께 나타납니다. 총 바이트 수는 끝에 나타납니다.  
+ 다음 예제에서는 사용자가 **시작** 단추를 한 번만 선택하는 경우 예상되는 출력을 보여 줍니다. 다운로드된 웹 사이트 목록이 각 사이트의 크기(바이트)와 함께 나타납니다. 총 바이트 수는 끝에 나타납니다.  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -102,27 +93,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- 이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다. 로컬 컴퓨터에 솔루션을 다운로드 하 고 다음 WebsiteDownload 프로젝트를 실행 하 여 코드를 시험해 하거나 자세한 내용 및 지침에 대 한 고유한 프로젝트를 만들려면이 항목의 끝에 코드를 사용, 참조 수 [검토 및 예제 응용 프로그램을 실행](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)합니다.  
+ 이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다. 로컬 컴퓨터에 솔루션을 다운로드한 다음 WebsiteDownload 프로젝트를 실행하거나 이 항목의 끝에 있는 코드를 사용하여 고유한 프로젝트를 만들면 코드를 테스트할 수 있습니다. 자세한 내용 및 지침은 [예제 앱 검토 및 실행](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)을 참조하세요.  
   
-##  <a name="BKMK_HandlingReentrancy"></a>재진입 처리  
+##  <a name="BKMK_HandlingReentrancy"></a> 재입력 처리  
  앱에서 수행하려는 작업에 따라 다양한 방법으로 재진입을 처리할 수 있습니다. 이 항목에서는 다음 예제를 제공합니다.  
   
--   [시작 단추를 사용 하지 않도록 설정](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [시작 단추 사용 안 함](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     사용 하지 않도록 설정 된 **시작** 사용자가 중단 하지 않도록 작업이 실행 되는 동안 단추입니다.  
+     작업이 실행되는 동안 **시작** 단추를 사용할 수 없도록 설정하여 사용자가 작업을 중단할 수 없도록 합니다.  
   
--   [취소 하 고 작업을 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [작업 취소 및 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     사용자가 여전히 실행 되 고 모든 작업이 취소 된 **시작** 단추를 다시 선택한 다음 let 가장 최근 요청 된 작업을 계속 합니다.  
+     사용자가 **시작** 단추를 다시 선택하는 경우 계속 실행되고 있는 작업을 취소한 다음 가장 최근에 요청한 작업이 계속되도록 합니다.  
   
--   [여러 작업을 실행 하 고 출력 큐](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [여러 작업을 실행하고 출력을 큐 대기](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      요청한 모든 작업이 비동기적으로 실행되도록 허용하지만 각 작업의 결과가 함께 순서대로 나타나도록 출력의 표시를 조정합니다.  
   
-###  <a name="BKMK_DisableTheStartButton"></a>시작 단추를 사용 하지 않도록 설정  
- 차단할 수는 **시작** 맨 위에 있는 단추를 비활성화 하 여 작업이 실행 되는 동안 단추는 `StartButton_Click` 이벤트 처리기입니다. 그런 다음 작업이 완료되면 `Finally` 블록 내에서 단추를 다시 사용하도록 설정하여 사용자가 앱을 다시 실행하도록 할 수 있습니다.  
+###  <a name="BKMK_DisableTheStartButton"></a> 시작 단추 사용 안 함  
+ `StartButton_Click` 이벤트 처리기의 위쪽에 있는 단추를 사용하지 않도록 설정하여 작업이 실행되는 동안 **시작** 단추를 차단할 수 있습니다. 그런 다음 작업이 완료되면 `Finally` 블록 내에서 단추를 다시 사용하도록 설정하여 사용자가 앱을 다시 실행하도록 할 수 있습니다.  
   
- 다음 코드에서는 이러한 변경 내용을 보여 주며, 별표로 표시되어 있습니다. 변경 내용을이 항목의 끝에 코드를 추가 하거나에서 완성된 된 응용 프로그램을 다운로드할 수 있습니다 [Async 샘플:.NET 데스크톱 응용 프로그램에서 재진입](http://go.microsoft.com/fwlink/?LinkId=266571)합니다. 프로젝트 이름은 DisableStartButton입니다.  
+ 다음 코드에서는 이러한 변경 내용을 보여 주며, 별표로 표시되어 있습니다. 변경 내용을 이 항목의 끝에 있는 코드에 추가하거나 완성된 앱을 [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 다운로드할 수 있습니다. 프로젝트 이름은 DisableStartButton입니다.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -147,14 +138,14 @@ End Sub
   
  변경의 결과로 `AccessTheWebAsync`에서 웹 사이트를 다운로드하는 동안 단추가 응답하지 않으므로 프로세스를 다시 입력할 수 없습니다.  
   
-###  <a name="BKMK_CancelAndRestart"></a>취소 하 고 작업을 다시 시작  
- 사용 하지 않도록 설정 하는 대신는 **시작** 단추를 단추는 활성 상태로 유지 하지만 수, 사용자가 단추를 다시 선택 하는 경우 이미 실행 하 고 가장 최근에 시작한 작업을 계속 할 작업을 취소 합니다.  
+###  <a name="BKMK_CancelAndRestart"></a> 작업 취소 및 다시 시작  
+ **시작** 단추를 사용하지 않도록 설정하는 대신 단추를 활성 상태로 유지하지만 사용자가 해당 단추를 다시 선택하는 경우 이미 실행되고 있는 작업을 취소하고 가장 최근에 시작한 작업이 계속되도록 합니다.  
   
  취소에 대 한 자세한 내용은 참조 [미세 조정 Your 비동기 응용 프로그램 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)합니다.  
   
- 이 시나리오를 설정 하려면 다음과 같이 변경에 제공 되는 기본 코드가 [검토 및 예제 응용 프로그램을 실행](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)합니다. 완성된 된 응용 프로그램에서 다운로드할 수 [Async 샘플:.NET 데스크톱 응용 프로그램에서 재진입](http://go.microsoft.com/fwlink/?LinkId=266571)합니다. 이 프로젝트의 이름은 CancelAndRestart입니다.  
+ 이 시나리오를 설정하려면 [예제 앱 검토 및 실행](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다. 이 프로젝트의 이름은 CancelAndRestart입니다.  
   
-1.  선언는 <xref:System.Threading.CancellationTokenSource>변수인 `cts`, 모든 메서드에 대 한 범위에는.</xref:System.Threading.CancellationTokenSource>  
+1.  모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -163,7 +154,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  `StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다. 하는 경우의 값 `cts` 는 `Nothing`, 작업이 이미 활성화 되어 있습니다. 값이 없으면 `Nothing`, 이미 실행 중인 작업이 취소 됩니다.  
+2.  `StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다. 하는 경우의 값 `cts` 은 `Nothing`, 없습니다 작업이 이미 활성화 되어 있습니다. 값이 없으면 `Nothing`, 이미 실행 중인 작업이 취소 됩니다.  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -180,7 +171,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  끝에 `StartButton_Click`, 현재 프로세스가 완료 되의 값을 설정 하므로 `cts` 다시 `Nothing`합니다.  
+4.  끝에 `StartButton_Click`, 현재 프로세스 완료 되 면 값을 설정 하므로 `cts` 다시 `Nothing`합니다.  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -228,7 +219,7 @@ End Sub
   
 -   `StartButton_Click`에서 취소 토큰을 허용하도록 매개 변수를 추가합니다.  
   
--   사용 된 <xref:System.Net.Http.HttpClient.GetAsync%2A>때문에 웹 사이트를 다운로드 하려면 `GetAsync` 허용는 <xref:System.Threading.CancellationToken>인수.</xref:System.Threading.CancellationToken> </xref:System.Net.Http.HttpClient.GetAsync%2A>  
+-   `GetAsync`는 <xref:System.Threading.CancellationToken> 인수를 허용하므로 <xref:System.Net.Http.HttpClient.GetAsync%2A> 메서드를 사용하여 웹 사이트를 다운로드합니다.  
   
 -   `DisplayResults`를 호출하여 다운로드한 각 웹 사이트에 대한 결과를 표시하려면 먼저 `ct`를 확인하여 현재 작업이 취소되었는지 확인합니다.  
   
@@ -272,7 +263,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function  
 ```  
   
- 선택 하는 경우는 **시작** 단추를 몇 번이이 앱이 실행 되는 동안 다음과 같은 출력을 유사한 결과 생성 해야 합니다.  
+ 이 앱이 실행되는 동안 **시작** 단추를 여러 번 선택하면 다음 출력과 유사한 결과가 생성되어야 합니다.  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -302,14 +293,14 @@ TOTAL bytes returned:  890591
   
  부분 목록을 제거하려면 `StartButton_Click`에서 코드 첫 줄의 주석 처리를 제거하여 사용자가 작업을 다시 시작할 때마다 텍스트 상자의 선택을 취소합니다.  
   
-###  <a name="BKMK_RunMultipleOperations"></a>여러 작업을 실행 하 고 출력 큐  
- 이 세 번째 예제는 앱이 시작 될 때마다 사용자가 선택 하는 다른 비동기 작업에는 가장 복잡 한는 **시작** 단추 및 모든 작업 실행을 완료 합니다. 요청한 모든 작업은 목록에서 비동기적으로 웹 사이트를 다운로드하지만 작업의 출력은 순차적으로 제공됩니다. 즉, 실제 다운로드 활동 인터리브되지에서 출력으로 [재진입 인식](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) 표시 되지만 각 그룹에 대 한 결과 목록은 개별적으로 표시 됩니다.  
+###  <a name="BKMK_RunMultipleOperations"></a> 여러 작업을 실행하고 출력을 큐 대기  
+ 이 세 번째 예제는 사용자가 **시작** 단추를 선택할 때마다 앱이 다른 비동기 작업을 시작하고 모든 작업이 실행되어 완료된다는 점에서 가장 복잡합니다. 요청한 모든 작업은 목록에서 비동기적으로 웹 사이트를 다운로드하지만 작업의 출력은 순차적으로 제공됩니다. 즉, 실제 다운로드 작업은 [재입력 인식](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 출력에 표시된 대로 인터리브되지만 각 그룹에 대한 결과 목록은 별도로 제공됩니다.  
   
- 작업 공유 전역 <xref:System.Threading.Tasks.Task>, `pendingWork`, 디스플레이 프로세스에 대 한 게이트 키퍼도 작동 합니다.</xref:System.Threading.Tasks.Task>  
+ 작업은 표시 프로세스의 게이트키퍼 역할을 하는 전역 <xref:System.Threading.Tasks.Task>, `pendingWork`를 공유합니다.  
   
- 변경 내용을 코드에 붙여넣어이 예제를 실행할 수 있습니다 [응용 프로그램 작성](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), 지침에 따르면 또는 [응용 프로그램 다운로드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) 샘플을 다운로드 하 고 다음 QueueResults 프로젝트를 실행 합니다.  
+ 변경 내용을 [앱 빌드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 코드에 붙여 넣어 이 예제를 실행하거나, [앱 다운로드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 지침에 따라 샘플을 다운로드한 다음 QueueResults 프로젝트를 실행할 수 있습니다.  
   
- 다음과 같은 출력 결과 표시 하는 경우 사용자가 선택 된 **시작** 단추를 두 번만 합니다. 결과에서 처음으로 문자, 레이블 및 A 나타냅니다는 **시작** 단추를 선택 합니다. 숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.  
+ 다음 출력은 사용자가 **시작** 단추를 한 번만 선택하는 경우의 결과를 보여 줍니다. 문제 레이블 A는 처음으로 **시작** 단추를 선택한 경우의 결과임을 나타냅니다. 숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.  
   
 ```  
 #Starting group A.  
@@ -329,7 +320,7 @@ TOTAL bytes returned:  918876
 #Group A is complete.  
 ```  
   
- 사용자가 선택 된 **시작** 단추를 세 번, 다음 줄을 유사한 출력을 생성 하는 응용 프로그램입니다. 파운드 기호(#)로 시작하는 정보 줄은 응용 프로그램의 진행률을 추적합니다.  
+ 사용자가 **시작** 단추를 세 번 선택하면 앱이 다음 줄과 유사한 출력을 생성합니다. 파운드 기호(#)로 시작하는 정보 줄은 응용 프로그램의 진행률을 추적합니다.  
   
 ```  
 #Starting group A.  
@@ -385,7 +376,7 @@ TOTAL bytes returned:  920526
 #Group C is complete.  
 ```  
   
- 그룹 B와 C는 그룹 A가 완료되기 전에 시작되지만 각 그룹에 대한 출력은 별도로 나타납니다. 그룹 A에 대 한 모든 출력 그룹 B에 대 한 모든 출력 한 다음 모든 출력&3;. 그룹에 대 한 다음, 첫 번째로 표시 앱 항상 순서에 그룹을 표시 하며, 각 그룹에 대해 항상 표시는 개별 웹 사이트에 대 한 정보 Url은 Url의 목록에 표시 되는 순서 대로.  
+ 그룹 B와 C는 그룹 A가 완료되기 전에 시작되지만 각 그룹에 대한 출력은 별도로 나타납니다. 그룹 A에 대한 모든 출력이 먼저 나타나고 그 뒤에 그룹 B에 대한 모든 출력과 그룹 C에 대한 모든 출력이 차례로 나타납니다. 앱은 항상 순서대로 그룹을 표시하고 각 그룹에 대해 URL이 URL 목록에 나타나는 순서대로 개별 웹 사이트에 대한 정보를 항상 표시합니다.  
   
  그러나 다운로드가 실제로 수행되는 순서는 예측할 수 없습니다. 여러 그룹이 시작된 후에는 그룹이 생성하는 다운로드 작업이 모두 활성화됩니다. A-1이 B-1보다 먼저 다운로드된다고 가정할 수 없으며 A-1이 A-2보다 먼저 다운로드된다고 가정할 수 없습니다.  
   
@@ -403,7 +394,7 @@ Class MainWindow    ' Class MainPage in Windows Store app.
  `Task` 변수 `pendingWork`는 표시 프로세스를 감독하고 모든 그룹이 다른 그룹의 표시 작업을 방해하지 않도록 합니다. 문자 변수 `group`은 다른 그룹의 출력에 레이블을 지정하여 해당 결과가 예상 순서대로 나타나는지 확인합니다.  
   
 #### <a name="the-click-event-handler"></a>Click 이벤트 처리기  
- 이벤트 처리기 `StartButton_Click`, 그룹 문자를 선택할 때마다 증가 **시작** 단추입니다. 그런 다음 처리기에서 `AccessTheWebAsync`를 호출하여 다운로드 중인 작업을 실행합니다.  
+ 이벤트 처리기 `StartButton_Click`은 사용자가 **시작** 단추를 선택할 때마다 그룹 문자를 증가시킵니다. 그런 다음 처리기에서 `AccessTheWebAsync`를 호출하여 다운로드 중인 작업을 실행합니다.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -428,7 +419,7 @@ End Sub
 ```  
   
 #### <a name="the-accessthewebasync-method"></a>AccessTheWebAsync 메서드  
- 이 예제에서는 `AccessTheWebAsync`를 두 개의 메서드로 분할합니다. 첫 번째 메서드 `AccessTheWebAsync`는 그룹에 대해 모든 다운로드 작업을 시작하고 `pendingWork`를 설정하여 표시 프로세스를 제어합니다. 언어 통합 쿼리 (LINQ 쿼리)를 사용 하는 메서드 및 <xref:System.Linq.Enumerable.ToArray%2A>를 동시에 모든 다운로드 작업을 시작 합니다.</xref:System.Linq.Enumerable.ToArray%2A>  
+ 이 예제에서는 `AccessTheWebAsync`를 두 개의 메서드로 분할합니다. 첫 번째 메서드 `AccessTheWebAsync`는 그룹에 대해 모든 다운로드 작업을 시작하고 `pendingWork`를 설정하여 표시 프로세스를 제어합니다. 이 메서드는 LINQ(통합 언어 쿼리) 쿼리 및 <xref:System.Linq.Enumerable.ToArray%2A>를 사용하여 모든 다운로드 작업을 동시에 시작합니다.  
   
  그런 다음 `AccessTheWebAsync`는 `FinishOneGroupAsync`를 호출하여 각 다운로드가 완료될 때까지 대기하고 해당 길이를 표시합니다.  
   
@@ -464,7 +455,7 @@ End Function
 #### <a name="the-finishonegroupasync-method"></a>FinishOneGroupAsync 메서드  
  이 메서드는 한 그룹의 다운로드 작업을 순환하여 각 작업을 대기하고 다운로드한 웹 사이트의 길이를 표시하고 길이를 합계에 추가합니다.  
   
- 첫 번째 문에 `FinishOneGroupAsync` 사용 하 여 `pendingWork` 되도록 하는 이미 디스플레이 프로세스 중이거나 이미 대기 되는 작업을 방해 하지 메서드를 입력 하십시오. 이러한 작업이 진행 중인 경우 입력 작업은 해당 순서를 기다려야 합니다.  
+ `FinishOneGroupAsync`의 첫 번째 문은 `pendingWork`를 사용하여 메서드 입력이 이미 표시 프로세스에 있거나 이미 대기 중인 작업을 방해하지 않는지 확인합니다. 이러한 작업이 진행 중인 경우 입력 작업은 해당 순서를 기다려야 합니다.  
   
 ```vb  
 Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks As Task(Of Byte())(), grp As Char) As Task  
@@ -491,7 +482,7 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- 변경 내용을 코드에 붙여넣어이 예제를 실행할 수 있습니다 [응용 프로그램 작성](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), 지침에 따르면 또는 [응용 프로그램 다운로드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) 샘플을 다운로드 하 고 다음 QueueResults 프로젝트를 실행 합니다.  
+ 변경 내용을 [앱 빌드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 코드에 붙여 넣어 이 예제를 실행하거나, [앱 다운로드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 지침에 따라 샘플을 다운로드한 다음 QueueResults 프로젝트를 실행할 수 있습니다.  
   
 #### <a name="points-of-interest"></a>관심 영역  
  출력에서 파운드 기호(#)로 시작하는 정보 줄은 이 예제의 작동 방식을 명확히 나타냅니다.  
@@ -534,7 +525,7 @@ End Function
     TOTAL bytes returned:  915908  
     ```  
   
--   `pendingWork` 작업은 `Nothing` 의 시작 부분에 `FinishOneGroupAsync` 그룹 A에 대해서만 먼저 시작 합니다. 그룹 A는 `FinishOneGroupAsync`에 도달할 때 await 식을 아직 완료하지 않았습니다. 따라서 컨트롤이 `AccessTheWebAsync`로 반환되지 않았으며 `pendingWork`에 대한 첫 번째 할당이 발생되지 않았습니다.  
+-   `pendingWork` 작업은 `Nothing` 의 시작 부분에 `FinishOneGroupAsync` 그룹 A에 대해서만 처음에 시작 합니다. 그룹 A는 `FinishOneGroupAsync`에 도달할 때 await 식을 아직 완료하지 않았습니다. 따라서 컨트롤이 `AccessTheWebAsync`로 반환되지 않았으며 `pendingWork`에 대한 첫 번째 할당이 발생되지 않았습니다.  
   
 -   다음 두 줄은 항상 출력에 함께 나타납니다. 코드는 `StartButton_Click`의 그룹 작업 시작과 `pendingWork`에 그룹에 대한 작업 할당 사이에서 중단되지 않습니다.  
   
@@ -545,15 +536,15 @@ End Function
   
      그룹이 `StartButton_Click`을 입력한 후 작업은 `FinishOneGroupAsync`를 입력한 다음에야 await 식을 완료합니다. 따라서 코드의 해당 세그먼트 중에는 다른 작업에서 제어할 수 없습니다.  
   
-##  <a name="BKMD_SettingUpTheExample"></a>검토 및 예제 응용 프로그램 실행  
+##  <a name="BKMD_SettingUpTheExample"></a> 예제 앱 검토 및 실행  
  예제 앱을 더 잘 이해하려면 다운로드하거나, 직접 빌드하거나, 앱을 구현하지 않고 이 항목의 끝에 있는 코드를 검토할 수 있습니다.  
   
 > [!NOTE]
->  Windows Presentation Foundation (WPF) 데스크톱 응용 프로그램으로는 예제를 실행 하려면 Visual Studio 2012 이상 및.NET Framework 4.5 또는 있어야 사용자의 컴퓨터에 설치 되어 있습니다.  
+>  예제를 WPF(Windows Presentation Foundation) 데스크톱 앱으로 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
-###  <a name="BKMK_DownloadingTheApp"></a>응용 프로그램 다운로드  
+###  <a name="BKMK_DownloadingTheApp"></a> 앱 다운로드  
   
-1.  압축 된 파일을 다운로드할 [Async 샘플:.NET 데스크톱 응용 프로그램에서 재진입](http://go.microsoft.com/fwlink/?LinkId=266571)합니다.  
+1.  [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 압축 파일을 다운로드합니다.  
   
 2.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
@@ -561,12 +552,12 @@ End Function
   
 4.  압축을 푼 샘플 코드가 저장된 폴더로 이동한 다음 솔루션(.sln) 파일을 엽니다.  
   
-5.  **솔루션 탐색기**를 실행 하 고 다음을 선택 하려는 프로젝트에 대 한 바로 가기 메뉴를 열고 **StartUpProject으로 설정**합니다.  
+5.  **솔루션 탐색기**에서 실행하려는 프로젝트의 바로 가기 메뉴를 연 후 **StartUpProject로 설정**을 선택합니다.  
   
 6.  CTRL+F5를 선택하여 프로젝트를 빌드하고 실행합니다.  
   
-###  <a name="BKMK_BuildingTheApp"></a>응용 프로그램 빌드  
- 다음 섹션으로 WPF 응용 프로그램 예제를 빌드하려면 코드를 제공 합니다.  
+###  <a name="BKMK_BuildingTheApp"></a> 앱 빌드  
+ 다음 섹션에서는 예제를 WPF 앱으로 빌드하는 코드를 제공합니다.  
   
 ##### <a name="to-build-a-wpf-app"></a>WPF 응용 프로그램을 빌드하려면  
   
@@ -576,19 +567,19 @@ End Function
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
-3.  에 **설치 된 템플릿** 창 확장 **Visual Basic**를 차례로 확장 한 다음 **Windows**합니다.  
+3.  에 **설치 된 템플릿** 창 확장 **Visual Basic**, 한 다음 확장 **Windows**합니다.  
   
-4.  프로젝트 형식 목록에서 선택 **WPF 응용 프로그램**합니다.  
+4.  프로젝트 형식 목록에서 **WPF 응용 프로그램**을 선택합니다.  
   
-5.  프로젝트 이름을 `WebsiteDownloadWPF`를 선택한 다음는 **확인** 단추입니다.  
+5.  프로젝트 이름을 `WebsiteDownloadWPF`로 지정한 다음 **확인** 단추를 선택합니다.  
   
-     새 프로젝트가 표시 **솔루션 탐색기**합니다.  
+     **솔루션 탐색기**에 새 프로젝트가 표시됩니다.  
   
 6.  Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.  
   
-     탭이 표시 되지 않으면 mainwindow.xaml의 바로 가기 메뉴를 열고 **솔루션 탐색기**를 선택한 다음 **코드 보기**합니다.  
+     탭이 표시되지 않는 경우 **솔루션 탐색기**에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.  
   
-7.  에 **XAML** MainWindow.xaml의 보기에서 코드를 다음 코드로 바꿉니다.  
+7.  MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -606,11 +597,11 @@ End Function
     </Window>  
     ```  
   
-     에 텍스트 상자와 단추가 포함 된 간단한 창이 표시는 **디자인** MainWindow.xaml의 보기입니다.  
+     텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.  
   
-8.  <xref:System.Net.Http>.</xref:System.Net.Http> 에 대 한 참조를 추가 합니다.  
+8.  <xref:System.Net.Http>에 대한 참조를 추가합니다.  
   
-9. **솔루션 탐색기**, MainWindow.xaml.vb에 대 한 바로 가기 메뉴를 열고 선택한 다음 **코드 보기**합니다.  
+9. **솔루션 탐색기**, MainWindow.xaml.vb에 대 한 바로 가기 메뉴를 열고 선택한 후 **코드 보기**합니다.  
   
 10. MainWindow.xaml.vb에서 코드를 다음 코드로 바꿉니다.  
   
@@ -690,11 +681,10 @@ End Function
     End Class  
     ```  
   
-11. 프로그램을 실행 한 다음 CTRL + F5 키를 선택 된 **시작** 단추를 여러 번입니다.  
+11. CTRL+F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 여러 번 선택합니다.  
   
-12. 변경 [시작 단추를 사용 하지 않도록 설정](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [취소 하 고 작업을 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), 또는 [여러 작업을 실행 하 고 출력 큐](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) 는 재진입 처리 하도록 합니다.  
+12. [시작 단추 사용 안 함](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [작업 취소 및 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) 또는 [여러 작업을 실행하고 출력을 큐 대기](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 내용을 변경하여 재입력을 처리합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [연습: Async를 사용 하 여 웹 서비스에 액세스 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [비동기 프로그래밍 async 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-
+ [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

@@ -1,45 +1,49 @@
 ---
-title: "방법: RectangleGeometry를 사용하여 사각형 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클래스, RectangleGeometry"
-  - "그래픽[WPF], 사각형"
-  - "RectangleGeometry 클래스"
-  - "사각형, RectangleGeometry 클래스로 만들기"
+title: "방법: RectangleGeometry를 사용하여 사각형 정의"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], rectangles
+- rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 678d6f36c02c63825782b9f1c860285450a6a9f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: RectangleGeometry를 사용하여 사각형 정의
-이 예제에서는 <xref:System.Windows.Media.RectangleGeometry> 클래스를 사용하여 사각형을 설명하는 방법을 보여 줍니다.  
+# <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>방법: RectangleGeometry를 사용하여 사각형 정의
+이 예제에 사용 하는 방법에 설명 된 <xref:System.Windows.Media.RectangleGeometry> 사각형을 설명 하는 클래스입니다.  
   
-## 예제  
- 다음 예제에서는 <xref:System.Windows.Media.RectangleGeometry>를 만들고 렌더링하는 방법을 보여 줍니다.  사각형의 상대적 위치와 크기는 <xref:System.Windows.Rect> 구조체를 사용하여 정의합니다.  상대적 위치는 `50,50`으로 지정하고 높이와 너비를 모두 `25`로 지정하여 정사각형을 만듭니다.  사각형의 내부는 <xref:System.Windows.Media.Brushes.LemonChiffon%2A> 브러시를 사용하여 칠하고 사각형의 윤곽선은 두께가 `1`인 <xref:System.Windows.Media.Brushes.Black%2A> 스트로크를 사용하여 그립니다.  
+## <a name="example"></a>예제  
+ 만들고 렌더링 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.RectangleGeometry>합니다.  정의 된 상대적 위치와 사각형의 크기는 <xref:System.Windows.Rect> 구조입니다. 상대적 위치는 `50,50` 고 높이 너비를 모두 `25` 는 정사각형을 만듭니다. 사각형의 내부로 그려집니다는 <xref:System.Windows.Media.Brushes.LemonChiffon%2A> 로 브러시 및 윤곽선을 그리는 <xref:System.Windows.Media.Brushes.Black%2A> 스트로크 두께를 `1`합니다.  
   
- [!code-xml[GeometryOverviewSamples_snip#GraphicsMMRectangleGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmrectanglegeometryexample)]  
+ [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMRectangleGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmrectanglegeometryexample)]  
   
  [!code-csharp[GeometryOverviewSamples_procedural_snip#GraphicsMMRectangleGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/CSharp/GeometryExamples.cs#graphicsmmrectanglegeometryexample)]
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMRectangleGeometryExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmrectanglegeometryexample)]  
   
- ![RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rectangle.png "graphicsmm\_rectangle")  
+ ![RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rectangle.gif "graphicsmm_rectangle")  
 RectangleGeometry  
   
- 이 예제에서는 <xref:System.Windows.Shapes.Path> 요소를 사용하여 <xref:System.Windows.Media.RectangleGeometry>를 렌더링하지만 <xref:System.Windows.Media.RectangleGeometry> 개체를 사용하는 다른 방법도 많이 있습니다.  예를 들어 <xref:System.Windows.UIElement>의 <xref:System.Windows.UIElement.Clip%2A> 또는 <xref:System.Windows.Media.GeometryDrawing>의 <xref:System.Windows.Media.GeometryDrawing.Geometry%2A>를 지정하는 데 <xref:System.Windows.Media.RectangleGeometry>를 사용할 수 있습니다.  
+ 이 예에서는 사용 되지만 <xref:System.Windows.Shapes.Path> 요소를 렌더링 하는 <xref:System.Windows.Media.RectangleGeometry>, 여러 가지 다른 방법으로 사용 하도록 <xref:System.Windows.Media.RectangleGeometry> 개체입니다. 예를 들어 한 <xref:System.Windows.Media.RectangleGeometry> 는 지정 하는 데 사용할 수는 <xref:System.Windows.UIElement.Clip%2A> 의 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> 의 <xref:System.Windows.Media.GeometryDrawing>합니다.  
   
- 다른 단순한 기하 도형 클래스로는 <xref:System.Windows.Media.LineGeometry> 및 <xref:System.Windows.Media.EllipseGeometry>가 있습니다.  이러한 기하 도형 및 보다 복잡한 기하 도형은 <xref:System.Windows.Media.PathGeometry> 또는 <xref:System.Windows.Media.StreamGeometry>를 사용하여 만들 수도 있습니다.  
+ 다른 간단한 기 하 도형 클래스 포함 <xref:System.Windows.Media.LineGeometry> 및 <xref:System.Windows.Media.EllipseGeometry>합니다. 이 기 하이 도형 뿐만 아니라 더 복잡 한 프로젝트로 만들 수도 있습니다를 사용 하는 <xref:System.Windows.Media.PathGeometry> 또는 <xref:System.Windows.Media.StreamGeometry>합니다.  
   
-## 참고 항목  
- [Geometry 개요](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [복합 도형 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)   
+## <a name="see-also"></a>참고 항목  
+ [Geometry 개요](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [복합 도형 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
  [PathGeometry를 사용하여 도형 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)
