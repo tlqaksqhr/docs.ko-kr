@@ -1,1 +1,1 @@
-**이 항목은: ✓** .NET Core 1.x **✓** .NET Core 2.x
+<span data-ttu-id="9174b-101">**이 항목에 적용 됩니다: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.x</span><span class="sxs-lookup"><span data-stu-id="9174b-101">**This topic applies to: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.x</span></span>

@@ -1,78 +1,80 @@
 ---
-title: "Data Structures for Parallel Programming | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data structures, multi-threading"
+title: "병렬 프로그래밍을 위한 데이터 구조"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f35c5382455021f0a001604367e59204ce4ad93c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Data Structures for Parallel Programming
-.NET Framework 버전 4에서는 여러 개의 동시 컬렉션 클래스, 간단한 동기화 기본 형식 및 초기화 지연을 위한 형식을 비롯하여 병렬 프로그래밍에 유용한 몇 가지 새로운 형식이 추가되었습니다.  이러한 형식은 작업 병렬 라이브러리 및 PLINQ 등의 다중 스레드 응용 프로그램과 함께 사용할 수 있습니다.  
+# <a name="data-structures-for-parallel-programming"></a><span data-ttu-id="53d98-102">병렬 프로그래밍을 위한 데이터 구조</span><span class="sxs-lookup"><span data-stu-id="53d98-102">Data Structures for Parallel Programming</span></span>
+<span data-ttu-id="53d98-103">.NET Framework 버전 4에서는 동시 컬렉션 클래스, 간단한 동기화 기본 형식 및 초기화 지연에 대 한 형식 집합을 포함 하는 병렬 프로그래밍에 유용한 몇 가지 새로운 유형을 소개 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-103">The .NET Framework version 4 introduces several new types that are useful in parallel programming, including a set of concurrent collection classes, lightweight synchronization primitives, and types for lazy initialization.</span></span> <span data-ttu-id="53d98-104">작업 병렬 라이브러리 및 PLINQ를 포함 하 여 모든 다중 스레드 응용 프로그램 코드와 이러한 형식을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-104">You can use these types with any multithreaded application code, including the Task Parallel Library and PLINQ.</span></span>  
   
-## 동시 컬렉션 클래스  
- <xref:System.Collections.Concurrent?displayProperty=fullName> 네임스페이스의 컬렉션 클래스는 가능하면 잠금을 피하고 잠금이 필요할 경우에는 미세 잠금을 사용하는 스레드로부터 안전한 추가 및 제거 작업을 제공합니다.  .NET Framework 버전 1.0 및 2.0에서 도입되었던 컬렉션과 달리 동시 컬렉션 클래스에서는 항목에 액세스할 때 잠금을 가져오는 사용자 코드를 사용할 필요가 없습니다.  여러 스레드에서 컬렉션의 항목을 추가 및 제거하는 경우에 동시 컬렉션 클래스를 사용하면 사용자 구현 잠금을 사용하는 <xref:System.Collections.ArrayList?displayProperty=fullName> 및 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 등의 형식을 사용할 때보다 성능을 상당히 향상시킬 수 있습니다.  
+## <a name="concurrent-collection-classes"></a><span data-ttu-id="53d98-105">동시 컬렉션 클래스</span><span class="sxs-lookup"><span data-stu-id="53d98-105">Concurrent Collection Classes</span></span>  
+ <span data-ttu-id="53d98-106">컬렉션에 있는 클래스는 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임 스페이스 제공 스레드로부터 안전 하 고 추가 하 고, 가능 잠금을 방지 하는 작업을 제거 하 고, 잠금은 필요한 세분화 된 잠금을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-106">The collection classes in the <xref:System.Collections.Concurrent?displayProperty=nameWithType> namespace provide thread-safe add and remove operations that avoid locks wherever possible and use fine-grained locking where locks are necessary.</span></span> <span data-ttu-id="53d98-107">.NET Framework 버전 1.0 및 2.0에서에서 도입 된 컬렉션과 달리 동시 컬렉션 클래스는 항목에 액세스할 때에 잠금을 수행 하는 사용자 코드를 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-107">Unlike collections that were introduced in the .NET Framework versions 1.0 and 2.0, a concurrent collection class does not require user code to take any locks when it accesses items.</span></span> <span data-ttu-id="53d98-108">동시 컬렉션 클래스 성능이 크게 향상 형식에 대 등 <xref:System.Collections.ArrayList?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (사용자 구현 잠금을)으로 여러 스레드를 추가 하 고 컬렉션에서 항목을 제거할 시나리오에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-108">The concurrent collection classes can significantly improve performance over types such as <xref:System.Collections.ArrayList?displayProperty=nameWithType> and <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (with user-implemented locking) in scenarios where multiple threads add and remove items from a collection.</span></span>  
   
- 다음 표에서는 새로 추가된 동시 컬렉션 클래스를 보여 줍니다.  
+ <span data-ttu-id="53d98-109">다음 표에서 새 동시 컬렉션 클래스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-109">The following table lists the new concurrent collection classes:</span></span>  
   
-|형식|설명|  
-|--------|--------|  
-|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>|<xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=fullName>을 구현하는 스레드로부터 안전한 컬렉션에 대한 차단 및 경계 기능을 제공합니다.  공급자 스레드는 사용 가능한 슬롯이 없거나 컬렉션이 가득 찬 경우에 차단되고,  소비자 스레드는 컬렉션이 비어 있는 경우에 차단됩니다.  이 형식은 소비자와 공급자에 의한 비차단 액세스도 지원합니다.  <xref:System.Collections.Concurrent.BlockingCollection%601>을 기본 클래스나 백업 저장소로 사용하여 <xref:System.Collections.Generic.IEnumerable%601>을 지원하는 컬렉션 클래스에 대한 차단 및 경계 기능을 제공할 수 있습니다.|  
-|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>|확장 가능한 추가 및 가져오기 작업을 제공하는 스레드로부터 안전한 모음 구현입니다.|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>|확장 가능한 동시 사전 형식입니다.|  
-|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>|확장 가능한 동시 FIFO 큐입니다.|  
-|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName>|확장 가능한 동시 LIFO 스택입니다.|  
+|<span data-ttu-id="53d98-110">형식</span><span class="sxs-lookup"><span data-stu-id="53d98-110">Type</span></span>|<span data-ttu-id="53d98-111">설명</span><span class="sxs-lookup"><span data-stu-id="53d98-111">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|<span data-ttu-id="53d98-112"><xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>을 구현하는 스레드로부터 안전한 컬렉션에 대한 차단 및 경계 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-112">Provides blocking and bounding capabilities for thread-safe collections that implement <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="53d98-113">생산자 스레드는 사용할 수 있는 슬롯이 없습니다. 또는 컬렉션이 전체 차단 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-113">Producer threads block if no slots are available or if the collection is full.</span></span> <span data-ttu-id="53d98-114">소비자 스레드 컬렉션이 비어 있는 경우 차단 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-114">Consumer threads block if the collection is empty.</span></span> <span data-ttu-id="53d98-115">이 형식에는 소비자와 공급자에 비 블록 킹 액세스를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-115">This type also supports non-blocking access by consumers and producers.</span></span> <span data-ttu-id="53d98-116"><xref:System.Collections.Concurrent.BlockingCollection%601>기본 클래스로 사용할 수 있고 백업 차단 하 고 지 원하는 모든 컬렉션 클래스에 대 한 경계를 제공 하는 저장소 <xref:System.Collections.Generic.IEnumerable%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-116"><xref:System.Collections.Concurrent.BlockingCollection%601> can be used as a base class or backing store to provide blocking and bounding for any collection class that supports <xref:System.Collections.Generic.IEnumerable%601>.</span></span>|  
+|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|<span data-ttu-id="53d98-117">확장성을 제공 하는 스레드로부터 안전한 모음 구현 추가 하 고 작업을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-117">A thread-safe bag implementation that provides scalable add and get operations.</span></span>|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>|<span data-ttu-id="53d98-118">확장 가능한 동시 사전 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-118">A concurrent and scalable dictionary type.</span></span>|  
+|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>|<span data-ttu-id="53d98-119">동시 및 확장 가능한 FIFO 큐입니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-119">A concurrent and scalable FIFO queue.</span></span>|  
+|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>|<span data-ttu-id="53d98-120">동시 및 확장 가능한 LIFO 스택입니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-120">A concurrent and scalable LIFO stack.</span></span>|  
   
- 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)을 참조하십시오.  
+ <span data-ttu-id="53d98-121">자세한 내용은 [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53d98-121">For more information, see [Thread-Safe Collections](../../../docs/standard/collections/thread-safe/index.md).</span></span>  
   
-## 동기화 기본 형식  
- <xref:System.Threading?displayProperty=fullName> 네임스페이스의 새로운 동기화 기본 형식을 통해 레거시 다중 스레딩 코드에 사용되는 부담이 큰 잠금 메커니즘을 피할 수 있고 이를 통해 세부적인 동시성과 더 빠른 성능을 얻을 수 있습니다.  새 형식 중 <xref:System.Threading.Barrier?displayProperty=fullName> 및 <xref:System.Threading.CountdownEvent?displayProperty=fullName>와 같은 일부 형식은 이전 버전의 .NET Framework에는 없던 완전히 새로운 형식입니다.  
+## <a name="synchronization-primitives"></a><span data-ttu-id="53d98-122">동기화 기본 형식</span><span class="sxs-lookup"><span data-stu-id="53d98-122">Synchronization Primitives</span></span>  
+ <span data-ttu-id="53d98-123">새 동기화 기본은 <xref:System.Threading?displayProperty=nameWithType> 레거시 다중 스레딩 코드에 비용이 많이 드는 잠금 메커니즘을 방지 하 여 세분화 된 동시성 및 성능을 향상 시키려면 네임 스페이스 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-123">The new synchronization primitives in the <xref:System.Threading?displayProperty=nameWithType> namespace enable fine-grained concurrency and faster performance by avoiding expensive locking mechanisms found in legacy multithreading code.</span></span> <span data-ttu-id="53d98-124">새 형식 중 일부와 같은 <xref:System.Threading.Barrier?displayProperty=nameWithType> 및 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> .NET Framework의 이전 릴리스에서 없는 버전이 있으며 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-124">Some of the new types, such as <xref:System.Threading.Barrier?displayProperty=nameWithType> and <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> have no counterparts in earlier releases of the .NET Framework.</span></span>  
   
- 다음 표에서는 새로운 동기화 형식을 보여 줍니다.  
+ <span data-ttu-id="53d98-125">다음 표에서 새로운 동기화 형식을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-125">The following table lists the new synchronization types:</span></span>  
   
-|형식|설명|  
-|--------|--------|  
-|<xref:System.Threading.Barrier?displayProperty=fullName>|각 작업에서 해당 작업이 장벽에 도달했음을 알린 다음 일부 또는 모든 작업이 도착할 때까지 차단될 수 있는 지점을 제공하여 여러 스레드가 한 알고리즘에서 병렬로 작동할 수 있게 해 줍니다.  자세한 내용은 [Barrier](../../../docs/standard/threading/barrier.md)을 참조하십시오.|  
-|<xref:System.Threading.CountdownEvent?displayProperty=fullName>|쉬운 집결 메커니즘을 제공하여 분기\/조인 시나리오를 단순화합니다.  자세한 내용은 [CountdownEvent](../../../docs/standard/threading/countdownevent.md)을 참조하십시오.|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=fullName>|<xref:System.Threading.ManualResetEvent?displayProperty=fullName>와 비슷한 동기화 기본 형식입니다.  <xref:System.Threading.ManualResetEventSlim>은 이보다 더 단순하지만 프로세스 내 통신에만 사용할 수 있습니다.  자세한 내용은 [ManualResetEvent and ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)을 참조하십시오.|  
-|<xref:System.Threading.SemaphoreSlim?displayProperty=fullName>|리소스 또는 리소스 풀에 동시에 액세스할 수 있는 스레드 수를 제한하는 동기화 기본 형식입니다.  자세한 내용은 [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)을 참조하십시오.|  
-|<xref:System.Threading.SpinLock?displayProperty=fullName>|잠금을 획득하려고 하는 스레드가 퀀텀을 생성하기 전에 일정 시간 동안 루프, 즉 *스핀*에서 대기하도록 하는 상호 제외 잠금 기본 형식입니다.  잠금 대기 시간이 짧아야 하는 경우 <xref:System.Threading.SpinLock>은 다른 형태의 잠금보다 뛰어난 성능을 제공합니다.  자세한 내용은 [SpinLock](../../../docs/standard/threading/spinlock.md)을 참조하십시오.|  
-|<xref:System.Threading.SpinWait?displayProperty=fullName>|지정된 시간 동안 스핀하다가 스핀 횟수가 초과되면 스레드를 대기 상태로 전환하는 작고 단순한 형식입니다.  자세한 내용은 [SpinWait](../../../docs/standard/threading/spinwait.md)을 참조하십시오.|  
+|<span data-ttu-id="53d98-126">형식</span><span class="sxs-lookup"><span data-stu-id="53d98-126">Type</span></span>|<span data-ttu-id="53d98-127">설명</span><span class="sxs-lookup"><span data-stu-id="53d98-127">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Threading.Barrier?displayProperty=nameWithType>|<span data-ttu-id="53d98-128">여러 스레드를를 각 작업 신호 도착 하 고 다음 차단할 수 일부 또는 모든 작업이 도착 될 때까지 지점을 제공 하 여 특정 알고리즘에서 병렬로에서 작업할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-128">Enables multiple threads to work on an algorithm in parallel by providing a point at which each task can signal its arrival and then block until some or all tasks have arrived.</span></span> <span data-ttu-id="53d98-129">자세한 내용은 [Barrier](../../../docs/standard/threading/barrier.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53d98-129">For more information, see [Barrier](../../../docs/standard/threading/barrier.md).</span></span>|  
+|<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|<span data-ttu-id="53d98-130">쉽게 rendezvous 메커니즘을 제공 하 여 분기 및 조인 시나리오를 단순화 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-130">Simplifies fork and join scenarios by providing an easy rendezvous mechanism.</span></span> <span data-ttu-id="53d98-131">자세한 내용은 참조 [CountdownEvent](../../../docs/standard/threading/countdownevent.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-131">For more information, see [CountdownEvent](../../../docs/standard/threading/countdownevent.md).</span></span>|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|<span data-ttu-id="53d98-132">동기화 기본 형식을 비슷합니다 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-132">A synchronization primitive similar to <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.</span></span> <span data-ttu-id="53d98-133"><xref:System.Threading.ManualResetEventSlim>간단한 하지만 프로세스 내의 통신에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-133"><xref:System.Threading.ManualResetEventSlim> is lighter-weight but can only be used for intra-process communication.</span></span> <span data-ttu-id="53d98-134">자세한 내용은 참조 [ManualResetEvent 및 ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-134">For more information, see [ManualResetEvent and ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).</span></span>|  
+|<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|<span data-ttu-id="53d98-135">리소스를 동시에 액세스할 수 있는 스레드 수 또는 리소스 풀을 제한 하는 동기화 기본 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-135">A synchronization primitive that limits the number of threads that can concurrently access a resource or a pool of resources.</span></span> <span data-ttu-id="53d98-136">자세한 내용은 참조 [세마포 및 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-136">For more information, see [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).</span></span>|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|<span data-ttu-id="53d98-137">스레드를 발생 시키는 상호 배제 잠금 기본 형식을 루프에서 대기 하도록 잠금을 획득 하려고 합니다. 또는 *스핀*, 퀀텀을 생성 하기 전에 일정 기간에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-137">A mutual exclusion lock primitive that causes the thread that is trying to acquire the lock to wait in a loop, or *spin*, for a period of time before yielding its quantum.</span></span> <span data-ttu-id="53d98-138">잠금 대기 시간이 짧거나 되도록 필요한 시나리오에서 <xref:System.Threading.SpinLock> 뛰어난 다른 형태의 잠금 성능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-138">In scenarios where the wait for the lock is expected to be short, <xref:System.Threading.SpinLock> offers better performance than other forms of locking.</span></span> <span data-ttu-id="53d98-139">자세한 내용은 참조 [SpinLock](../../../docs/standard/threading/spinlock.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-139">For more information, see [SpinLock](../../../docs/standard/threading/spinlock.md).</span></span>|  
+|<xref:System.Threading.SpinWait?displayProperty=nameWithType>|<span data-ttu-id="53d98-140">지정된 된 시간 동안이 고 결국으로 회전 하는 작고 단순한 형식 스핀 수를 초과 하는 스레드가 대기 상태로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-140">A small, lightweight type that will spin for a specified time and eventually put the thread into a wait state if the spin count is exceeded.</span></span>  <span data-ttu-id="53d98-141">자세한 내용은 참조 [SpinWait](../../../docs/standard/threading/spinwait.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-141">For more information, see [SpinWait](../../../docs/standard/threading/spinwait.md).</span></span>|  
   
- 자세한 내용은 다음을 참조하십시오.  
+ <span data-ttu-id="53d98-142">자세한 내용은 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53d98-142">For more information, see:</span></span>  
   
--   [How to: Use SpinLock for Low\-Level Synchronization](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+-   [<span data-ttu-id="53d98-143">방법: 낮은 수준의 동기화에 SpinLock 사용</span><span class="sxs-lookup"><span data-stu-id="53d98-143">How to: Use SpinLock for Low-Level Synchronization</span></span>](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [How to: Synchronize Concurrent Operations with a Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+-   <span data-ttu-id="53d98-144">[방법: 동시 작업을 장벽과 동기화](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-144">[How to: Synchronize Concurrent Operations with a Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).</span></span>  
   
-## 초기화 지연 클래스  
- 초기화 지연을 사용하면 필요할 때까지 개체의 메모리가 할당되지 않습니다.  초기화 지연 기능은 개체 할당을 프로그램의 수명 기간 전체에 균일하게 분산시켜 성능을 향상시킬 수 있습니다.  <xref:System.Lazy%601> 형식을 래핑하여 모든 사용자 지정 형식에 대해 초기화 지연을 사용할 수 있습니다.  
+## <a name="lazy-initialization-classes"></a><span data-ttu-id="53d98-145">초기화 지연 클래스</span><span class="sxs-lookup"><span data-stu-id="53d98-145">Lazy Initialization Classes</span></span>  
+ <span data-ttu-id="53d98-146">초기화 지연을 사용 필요할 때까지 개체에 대 한 메모리 할당 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-146">With lazy initialization, the memory for an object is not allocated until it is needed.</span></span> <span data-ttu-id="53d98-147">초기화 지연 프로그램의 수명 기간 전체 개체 할당을 균등 하 게 분배 하 여 성능을 향상 시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-147">Lazy initialization can improve performance by spreading object allocations evenly across the lifetime of a program.</span></span> <span data-ttu-id="53d98-148">모든 사용자 지정 형식에 대해 초기화 지연을 사용 하도록 설정할 형식을 래핑하여 수 <xref:System.Lazy%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-148">You can enable lazy initialization for any custom type by wrapping the type <xref:System.Lazy%601>.</span></span>  
   
- 다음 표에서는 초기화 지연 형식을 보여 줍니다.  
+ <span data-ttu-id="53d98-149">다음 표에서 초기화 지연 형식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-149">The following table lists the lazy initialization types:</span></span>  
   
-|형식|설명|  
-|--------|--------|  
-|<xref:System.Lazy%601?displayProperty=fullName>|단순하고 스레드로부터 안전한 초기화 지연 기능을 제공합니다.|  
-|<xref:System.Threading.ThreadLocal%601?displayProperty=fullName>|스레드별로 초기화 지연된 값을 제공하여 각 스레드에서 초기화 함수를 나중에 호출하도록 합니다.|  
-|<xref:System.Threading.LazyInitializer?displayProperty=fullName>|전용의 초기화 지연 인스턴스를 할당할 필요가 없도록 하는 정적 메서드를 제공합니다.  대신 이러한 메서드는 참조를 사용하여 대상에 액세스할 때 대상이 초기화되었는지 확인합니다.|  
+|<span data-ttu-id="53d98-150">형식</span><span class="sxs-lookup"><span data-stu-id="53d98-150">Type</span></span>|<span data-ttu-id="53d98-151">설명</span><span class="sxs-lookup"><span data-stu-id="53d98-151">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Lazy%601?displayProperty=nameWithType>|<span data-ttu-id="53d98-152">간단 하 고 스레드 안전 초기화 지연를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-152">Provides lightweight, thread-safe lazy-initialization.</span></span>|  
+|<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|<span data-ttu-id="53d98-153">나중에 호출 초기화 함수가 각 스레드가 스레드 단위로에 지연 초기화 값을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-153">Provides a lazily-initialized value on a per-thread basis, with each thread lazily-invoking the initialization function.</span></span>|  
+|<xref:System.Threading.LazyInitializer?displayProperty=nameWithType>|<span data-ttu-id="53d98-154">초기화 지연 전용된 인스턴스를 할당할 필요가 없도록 하는 정적 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-154">Provides static methods that avoid the need to allocate a dedicated, lazy-initialization instance.</span></span> <span data-ttu-id="53d98-155">대신, 참조 대상이 액세스할 때 초기화 되었는지 확인 하려면 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-155">Instead, they use references to ensure targets have been initialized as they are accessed.</span></span>|  
   
- 자세한 내용은 [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)을 참조하십시오.  
+ <span data-ttu-id="53d98-156">자세한 내용은 [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53d98-156">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
   
-## 집계 예외  
- <xref:System.AggregateException?displayProperty=fullName> 형식을 사용하여 개별 스레드에서 동시에 throw된 여러 예외를 캡처하고 이를 조인하는 스레드에 단일 예외로 반환할 수 있습니다.  <xref:System.Threading.Tasks.Task?displayProperty=fullName> 및 <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 형식과 PLINQ에는 이를 주 목적으로 하는 <xref:System.AggregateException>이 사용됩니다.  자세한 내용은 [NIB: How to: Handle Exceptions Thrown by Tasks](http://msdn.microsoft.com/ko-kr/d6c47ec8-9de9-4880-beb3-ff19ae51565d) 및 [How to: Handle Exceptions in a PLINQ Query](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)를 참조하십시오.  
+## <a name="aggregate-exceptions"></a><span data-ttu-id="53d98-157">집계 예외</span><span class="sxs-lookup"><span data-stu-id="53d98-157">Aggregate Exceptions</span></span>  
+ <span data-ttu-id="53d98-158"><xref:System.AggregateException?displayProperty=nameWithType> 형식을 별도 스레드에서 동시에 throw 되 고 조인 하는 스레드는 단일 예외로 반환 하는 여러 예외 캡처를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-158">The <xref:System.AggregateException?displayProperty=nameWithType> type can be used to capture multiple exceptions that are thrown concurrently on separate threads, and return them to the joining thread as a single exception.</span></span> <span data-ttu-id="53d98-159"><xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 사용 하 여 형식 및 PLINQ <xref:System.AggregateException> 이 목적을 위해 광범위 하 게 합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-159">The <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> types and PLINQ use <xref:System.AggregateException> extensively for this purpose.</span></span> <span data-ttu-id="53d98-160">자세한 내용은 참조 [NIB: 방법: 작업에서 발생 한 예외 처리](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d) 및 [하는 방법: PLINQ 쿼리의 예외 처리](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="53d98-160">For more information, see [NIB: How to: Handle Exceptions Thrown by Tasks](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d) and [How to: Handle Exceptions in a PLINQ Query](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).</span></span>  
   
-## 참고 항목  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- <xref:System.Threading?displayProperty=fullName>   
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a><span data-ttu-id="53d98-161">참고 항목</span><span class="sxs-lookup"><span data-stu-id="53d98-161">See Also</span></span>  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ <xref:System.Threading?displayProperty=nameWithType>  
+ [<span data-ttu-id="53d98-162">병렬 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="53d98-162">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)

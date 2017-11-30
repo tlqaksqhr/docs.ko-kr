@@ -1,137 +1,143 @@
 ---
-title: "표준 TimeSpan 서식 문자열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "형식 지정자, 표준 시간 간격"
-  - "형식 지정자, 시간 간격"
-  - "형식 문자열"
-  - "서식 지정[.NET Framework], 시간"
-  - "서식 지정[.NET Framework], 시간 간격"
-  - "표준 형식 문자열, 시간 간격"
-  - "표준 시간 간격 형식 문자열"
-  - "표준 TimeSpan 형식 문자열"
-  - "시간[.NET Framework], 서식 지정"
-  - "시간 간격[.NET Framework], 서식 지정"
+title: "표준 TimeSpan 서식 문자열"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- format specifiers, standard time interval
+- format strings
+- standard time interval format strings
+- standard format strings, time intervals
+- format specifiers, time intervals
+- time intervals [.NET Framework], formatting
+- time [.NET Framework], formatting
+- formatting [.NET Framework], time
+- standard TimeSpan format strings
+- formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c4c486728ee4f98a6718c4d019976fccd6f380d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 표준 TimeSpan 서식 문자열
-표준 <xref:System.TimeSpan> 형식 문자열은 단일 형식 지정자를 사용하여 서식 지정 작업에서 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다.  공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다.  자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.  
+# <a name="standard-timespan-format-strings"></a><span data-ttu-id="d7800-102">표준 TimeSpan 서식 문자열</span><span class="sxs-lookup"><span data-stu-id="d7800-102">Standard TimeSpan Format Strings</span></span>
+<span data-ttu-id="d7800-103"><a name="Top"></a>표준 <xref:System.TimeSpan> 형식 문자열의 텍스트 표현을 정의 하는 단일 형식 지정자를 사용 하 여 한 <xref:System.TimeSpan> 서식 지정 작업의 결과로 생성 되는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-103"><a name="Top"></a> A standard <xref:System.TimeSpan> format string uses a single format specifier to define the text representation of a <xref:System.TimeSpan> value that results from a formatting operation.</span></span> <span data-ttu-id="d7800-104">공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-104">Any format string that contains more than one character, including white space, is interpreted as a custom <xref:System.TimeSpan> format string.</span></span> <span data-ttu-id="d7800-105">자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d7800-105">For more information, see [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) .</span></span>  
   
- <xref:System.TimeSpan> 값의 문자열 표현은 <xref:System.String.Format%2A?displayProperty=fullName>과 같이 복합 서식 지정을 지원하는 메서드 및 <xref:System.TimeSpan.ToString%2A?displayProperty=fullName> 메서드의 오버로드 호출을 통해 생성됩니다.  자세한 내용은 [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md) 및 [복합 형식 지정](../../../docs/standard/base-types/composite-formatting.md)를 참조하세요.  다음 예제에서는 서식 지정 작업에 표준 형식 문자열을 사용하는 방법을 보여 줍니다.  
+ <span data-ttu-id="d7800-106"><xref:System.TimeSpan> 값의 문자열 표현은 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>과 같이 복합 서식 지정을 지원하는 메서드 및 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드의 오버로드 호출을 통해 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-106">The string representations of <xref:System.TimeSpan> values are produced by calls to the overloads of the <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> method, as well as by methods that support composite formatting, such as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="d7800-107">자세한 내용은 [서식 지정 형식](../../../docs/standard/base-types/formatting-types.md) 및 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d7800-107">For more information, see [Formatting Types](../../../docs/standard/base-types/formatting-types.md) and [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).</span></span> <span data-ttu-id="d7800-108">다음 예제에서는 서식 지정 작업에 표준 형식 문자열을 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-108">The following example illustrates the use of standard format strings in formatting operations.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- 표준 <xref:System.TimeSpan> 형식 문자열은 구문 분석 작업에 필요한 입력 문자열 서식을 정의하기 위해 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 및 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 메서드에서도 사용됩니다.  구문 분석 시에는 값의 문자열 표현이 해당 값으로 변환됩니다. 다음 예제에서는 구문 분석 작업에 표준 형식 문자열을 사용하는 방법을 보여 줍니다.  
+ <span data-ttu-id="d7800-109">표준 <xref:System.TimeSpan> 형식 문자열은 구문 분석 작업에 필요한 입력 문자열 서식을 정의하기 위해 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 및 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드에서도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-109">Standard <xref:System.TimeSpan> format strings are also used by the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> and <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> methods to define the required format of input strings for parsing operations.</span></span> <span data-ttu-id="d7800-110">구문 분석 시에는 값의 문자열 표현이 해당 값으로 변환됩니다. 다음 예제에서는 구문 분석 작업에 표준 형식 문자열을 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-110">(Parsing converts the string representation of a value to that value.) The following example illustrates the use of standard format strings in parsing operations.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a> 다음 표에는 표준 시간 간격 형식 지정자가 나와 있습니다.  
+<span data-ttu-id="d7800-111"><a name="top"></a> 다음 표에는 표준 시간 간격 형식 지정자가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-111"><a name="top"></a> The following table lists the standard time interval format specifiers.</span></span>  
   
-|형식 지정자|이름|설명|예제|  
-|------------|--------|--------|--------|  
-|"c"|상수\(고정\) 형식|이 지정자는 문화권을 구분하지 않으며  형식은 `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`입니다.<br /><br /> "t" 및 "T" 형식 문자열은 같은 결과를 생성합니다.<br /><br /> 추가 정보: [상수\("c"\) 형식 지정자](#Constant)|`TimeSpan.Zero` \-\> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` \-\> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` \-\> 3.17:25:30.5000000|  
-|"g"|일반 약식|이 지정자는 필요한 내용만 출력하고  문화권을 구분하며 형식은 `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`입니다.<br /><br /> 추가 정보: [일반 약식\("g"\) 형식 지정자](#GeneralShort)|`New TimeSpan(1, 3, 16, 50, 500)` \-\> 1:3:16:50.5\(en\-US\)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` \-\> 1:3:16:50,5\(fr\-FR\)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` \-\> 1:3:16:50.599\(en\-US\)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` \-\> 1:3:16:50,599\(fr\-FR\)|  
-|"G"|일반 긴 형식|이 지정자는 항상 일 수와 7자리 소수 자릿수를 출력하고  문화권을 구분하며 형식은 `[-]d’:’hh’:’mm’:’ss.fffffff`입니다.<br /><br /> 추가 정보: [일반 긴\("G"\) 형식 지정자](#GeneralLong)|`New TimeSpan(18, 30, 0)` \-\> 0:18:30:00.0000000\(en\-US\)<br /><br /> `New TimeSpan(18, 30, 0)` \-\> 0:18:30:00,0000000\(fr\-FR\)|  
+|<span data-ttu-id="d7800-112">형식 지정자</span><span class="sxs-lookup"><span data-stu-id="d7800-112">Format specifier</span></span>|<span data-ttu-id="d7800-113">이름</span><span class="sxs-lookup"><span data-stu-id="d7800-113">Name</span></span>|<span data-ttu-id="d7800-114">설명</span><span class="sxs-lookup"><span data-stu-id="d7800-114">Description</span></span>|<span data-ttu-id="d7800-115">예제</span><span class="sxs-lookup"><span data-stu-id="d7800-115">Examples</span></span>|  
+|----------------------|----------|-----------------|--------------|  
+|<span data-ttu-id="d7800-116">"c"</span><span class="sxs-lookup"><span data-stu-id="d7800-116">"c"</span></span>|<span data-ttu-id="d7800-117">상수(고정) 형식</span><span class="sxs-lookup"><span data-stu-id="d7800-117">Constant (invariant) format</span></span>|<span data-ttu-id="d7800-118">이 지정자는 문화권을 구분하지 않으며</span><span class="sxs-lookup"><span data-stu-id="d7800-118">This specifier is not culture-sensitive.</span></span> <span data-ttu-id="d7800-119">형식은 `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-119">It takes the form `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.</span></span><br /><br /> <span data-ttu-id="d7800-120">"t" 및 "T" 형식 문자열은 같은 결과를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-120">(The "t" and "T" format strings produce the same results.)</span></span><br /><br /> <span data-ttu-id="d7800-121">추가 정보: [상수("c") 형식 지정자](#Constant)</span><span class="sxs-lookup"><span data-stu-id="d7800-121">More information: [The Constant ("c") Format Specifier](#Constant).</span></span>|<span data-ttu-id="d7800-122">`TimeSpan.Zero` -> 00:00:00</span><span class="sxs-lookup"><span data-stu-id="d7800-122">`TimeSpan.Zero` -> 00:00:00</span></span><br /><br /> <span data-ttu-id="d7800-123">`New TimeSpan(0, 0, 30, 0)` -> 00:30:00</span><span class="sxs-lookup"><span data-stu-id="d7800-123">`New TimeSpan(0, 0, 30, 0)` -> 00:30:00</span></span><br /><br /> <span data-ttu-id="d7800-124">`New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000</span><span class="sxs-lookup"><span data-stu-id="d7800-124">`New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000</span></span>|  
+|<span data-ttu-id="d7800-125">"g"</span><span class="sxs-lookup"><span data-stu-id="d7800-125">"g"</span></span>|<span data-ttu-id="d7800-126">일반 약식</span><span class="sxs-lookup"><span data-stu-id="d7800-126">General short format</span></span>|<span data-ttu-id="d7800-127">이 지정자는 필요한 내용만 출력하고</span><span class="sxs-lookup"><span data-stu-id="d7800-127">This specifier outputs only what is needed.</span></span> <span data-ttu-id="d7800-128">문화권을 구분하며 형식은 `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-128">It is culture-sensitive and takes the form `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.</span></span><br /><br /> <span data-ttu-id="d7800-129">추가 정보: [일반 약식("g") 형식 지정자](#GeneralShort)</span><span class="sxs-lookup"><span data-stu-id="d7800-129">More information: [The General Short ("g") Format Specifier](#GeneralShort).</span></span>|<span data-ttu-id="d7800-130">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5(en-US)</span><span class="sxs-lookup"><span data-stu-id="d7800-130">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)</span></span><br /><br /> <span data-ttu-id="d7800-131">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5(fr-FR)</span><span class="sxs-lookup"><span data-stu-id="d7800-131">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)</span></span><br /><br /> <span data-ttu-id="d7800-132">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599(en-US)</span><span class="sxs-lookup"><span data-stu-id="d7800-132">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)</span></span><br /><br /> <span data-ttu-id="d7800-133">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599(fr-FR)</span><span class="sxs-lookup"><span data-stu-id="d7800-133">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)</span></span>|  
+|<span data-ttu-id="d7800-134">"G"</span><span class="sxs-lookup"><span data-stu-id="d7800-134">"G"</span></span>|<span data-ttu-id="d7800-135">일반 긴 형식</span><span class="sxs-lookup"><span data-stu-id="d7800-135">General long format</span></span>|<span data-ttu-id="d7800-136">이 지정자는 항상 일 수와 7자리 소수 자릿수를 출력하고</span><span class="sxs-lookup"><span data-stu-id="d7800-136">This specifier always outputs days and seven fractional digits.</span></span> <span data-ttu-id="d7800-137">문화권을 구분하며 형식은 `[-]d’:’hh’:’mm’:’ss.fffffff`입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-137">It is culture-sensitive and takes the form `[-]d’:’hh’:’mm’:’ss.fffffff`.</span></span><br /><br /> <span data-ttu-id="d7800-138">추가 정보: [일반 긴("G") 형식 지정자](#GeneralLong)</span><span class="sxs-lookup"><span data-stu-id="d7800-138">More information: [The General Long ("G") Format Specifier](#GeneralLong).</span></span>|<span data-ttu-id="d7800-139">`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000(en-US)</span><span class="sxs-lookup"><span data-stu-id="d7800-139">`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)</span></span><br /><br /> <span data-ttu-id="d7800-140">`New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000(fr-FR)</span><span class="sxs-lookup"><span data-stu-id="d7800-140">`New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)</span></span>|  
   
 <a name="Constant"></a>   
-## 상수\("c"\) 형식 지정자  
- "c" 형식 지정자는 <xref:System.TimeSpan> 값의 문자열 표현을 다음 형식으로 반환합니다.  
+## <a name="the-constant-c-format-specifier"></a><span data-ttu-id="d7800-141">상수("c") 형식 지정자</span><span class="sxs-lookup"><span data-stu-id="d7800-141">The Constant ("c") Format Specifier</span></span>  
+ <span data-ttu-id="d7800-142">"c" 형식 지정자는 <xref:System.TimeSpan> 값의 문자열 표현을 다음 형식으로 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-142">The "c" format specifier returns the string representation of a <xref:System.TimeSpan> value in the following form:</span></span>  
   
- \[\-\]\[*d*.\]*hh*:*mm*:*ss*\[.*fffffff*\]  
+ <span data-ttu-id="d7800-143">[-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]</span><span class="sxs-lookup"><span data-stu-id="d7800-143">[-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]</span></span>  
   
- 대괄호 \(\[ 및 \]\) 안의 요소는 선택적 요소입니다.  마침표\(.\)와 콜론\(:\)은 리터럴 기호입니다.  다음 표에서는 나머지 요소에 대해 설명합니다.  
+ <span data-ttu-id="d7800-144">대괄호 ([ 및 ]) 안의 요소는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-144">Elements in square brackets ([ and ]) are optional.</span></span> <span data-ttu-id="d7800-145">마침표(.)와 콜론(:)은 리터럴 기호입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-145">The period (.) and colon (:) are literal symbols.</span></span> <span data-ttu-id="d7800-146">다음 표에서는 나머지 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-146">The following table describes the remaining elements.</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|*\-*|음수 시간 간격을 나타내는 선택적 음수 기호입니다.|  
-|*d*|앞에 오는 0이 없는 선택적 일 수입니다.|  
-|*hh*|"00"부터 "23" 범위의 시간입니다.|  
-|*mm*|"00"부터 "59" 범위의 분입니다.|  
-|*ss*|"0"부터 "59" 범위의 초입니다.|  
-|*fffffff*|선택적인 초의 소수 부분입니다.  값 범위는 "0000001"\(틱 1개 또는 1천만 분의 1초\)에서 "9999999"\(9,999,999천만 분의 1초 또는 1초\-틱 1개\)까지입니다.|  
+|<span data-ttu-id="d7800-147">요소</span><span class="sxs-lookup"><span data-stu-id="d7800-147">Element</span></span>|<span data-ttu-id="d7800-148">설명</span><span class="sxs-lookup"><span data-stu-id="d7800-148">Description</span></span>|  
+|-------------|-----------------|  
+|*-*|<span data-ttu-id="d7800-149">음수 시간 간격을 나타내는 선택적 음수 기호입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-149">An optional negative sign, which indicates a negative time interval.</span></span>|  
+|<span data-ttu-id="d7800-150">*d*</span><span class="sxs-lookup"><span data-stu-id="d7800-150">*d*</span></span>|<span data-ttu-id="d7800-151">앞에 오는 0이 없는 선택적 일 수입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-151">The optional number of days, with no leading zeros.</span></span>|  
+|<span data-ttu-id="d7800-152">*hh*</span><span class="sxs-lookup"><span data-stu-id="d7800-152">*hh*</span></span>|<span data-ttu-id="d7800-153">"00"부터 "23" 범위의 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-153">The number of hours, which ranges from "00" to "23".</span></span>|  
+|<span data-ttu-id="d7800-154">*mm*</span><span class="sxs-lookup"><span data-stu-id="d7800-154">*mm*</span></span>|<span data-ttu-id="d7800-155">"00"부터 "59" 범위의 분입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-155">The number of minutes, which ranges from "00" to "59".</span></span>|  
+|<span data-ttu-id="d7800-156">*ss*</span><span class="sxs-lookup"><span data-stu-id="d7800-156">*ss*</span></span>|<span data-ttu-id="d7800-157">"0"부터 "59" 범위의 초입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-157">The number of seconds, which ranges from "0" to "59".</span></span>|  
+|<span data-ttu-id="d7800-158">*fffffff*</span><span class="sxs-lookup"><span data-stu-id="d7800-158">*fffffff*</span></span>|<span data-ttu-id="d7800-159">선택적인 초의 소수 부분입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-159">The optional fractional portion of a second.</span></span>  <span data-ttu-id="d7800-160">값 범위는 "0000001"(틱 1개 또는 1천만 분의 1초)에서 "9999999"(9,999,999천만 분의 1초 또는 1초-틱 1개)까지입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-160">Its value can range from "0000001" (one tick, or one ten-millionth of a second)  to "9999999" (9,999,999 ten-millionths of a second, or one second less one tick).</span></span>|  
   
- "g" 및 "G" 형식 지정자와 달리 "c" 형식 지정자는 문화권을 구분하지 않으며,  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 이전의 모든 이전 .NET Framework 버전에 공통적으로 적용되는 고정된 <xref:System.TimeSpan> 값의 문자열 표현을 생성합니다. "  c"가 기본 <xref:System.TimeSpan> 형식 문자열입니다. 즉, <xref:System.TimeSpan.ToString?displayProperty=fullName> 메서드는 "c" 형식 문자열을 사용하여 시간 간격 값의 서식을 지정합니다.  
+ <span data-ttu-id="d7800-161">"g" 및 "G" 형식 지정자와 달리 "c" 형식 지정자는 문화권을 구분하지 않으며,</span><span class="sxs-lookup"><span data-stu-id="d7800-161">Unlike the "g" and "G" format specifiers, the "c" format specifier is not culture-sensitive.</span></span> <span data-ttu-id="d7800-162"><xref:System.TimeSpan> 이전의 모든 이전 .NET Framework 버전에 공통적으로 적용되는 고정된 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 값의 문자열 표현을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-162">It produces the string representation of a <xref:System.TimeSpan> value that is invariant and that is common to all previous versions of the .NET Framework before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="d7800-163">"c"는 기본 <xref:System.TimeSpan> 형식 문자열, <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 메서드 "c" 형식 문자열을 사용 하 여 시간 간격 값의 형식을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-163">"c" is the default <xref:System.TimeSpan> format string; the <xref:System.TimeSpan.ToString?displayProperty=nameWithType> method formats a time interval value by using the "c" format string.</span></span>  
   
 > [!NOTE]
->  <xref:System.TimeSpan>은 "c" 표준 형식 문자열과 동작이 동일한 "t" 및 "T" 표준 형식 문자열도 지원합니다.  
+>  <span data-ttu-id="d7800-164"><xref:System.TimeSpan>은 "c" 표준 형식 문자열과 동작이 동일한 "t" 및 "T" 표준 형식 문자열도 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-164"><xref:System.TimeSpan> also supports the "t" and "T" standard format strings, which are identical in behavior to the "c" standard format string.</span></span>  
   
- 다음 예제에서는 두 <xref:System.TimeSpan> 개체를 인스턴스화한 다음 해당 개체를 사용하여 산술 연산을 수행하고 결과를 표시합니다.  각 경우에서는 복합 서식을 사용하여 "c" 형식 지정자를 통해 <xref:System.TimeSpan> 값을 표시합니다.  
+ <span data-ttu-id="d7800-165">다음 예제에서는 두 <xref:System.TimeSpan> 개체를 인스턴스화한 다음 해당 개체를 사용하여 산술 연산을 수행하고 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-165">The following example instantiates two <xref:System.TimeSpan> objects, uses them to perform arithmetic operations, and displays the result.</span></span> <span data-ttu-id="d7800-166">각 경우에서는 복합 서식을 사용하여 "c" 형식 지정자를 통해 <xref:System.TimeSpan> 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-166">In each case, it uses composite formatting to display the <xref:System.TimeSpan> value by using the "c" format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
   
- [표로 이동](#Top)  
+ [<span data-ttu-id="d7800-167">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d7800-167">Back to table</span></span>](#Top)  
   
 <a name="GeneralShort"></a>   
-## 일반 약식\("g"\) 형식 지정자  
- "g" <xref:System.TimeSpan> 형식 지정자는 필요한 요소만 포함하여 <xref:System.TimeSpan> 값의 문자열 표현을 압축 형식으로 반환합니다.  이 형식 지정자의 형식은 다음과 같습니다.  
+## <a name="the-general-short-g-format-specifier"></a><span data-ttu-id="d7800-168">일반 약식("g") 형식 지정자</span><span class="sxs-lookup"><span data-stu-id="d7800-168">The General Short ("g") Format Specifier</span></span>  
+ <span data-ttu-id="d7800-169">"g" <xref:System.TimeSpan> 형식 지정자는 필요한 요소만 포함하여 <xref:System.TimeSpan> 값의 문자열 표현을 압축 형식으로 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-169">The "g" <xref:System.TimeSpan> format specifier returns the string representation of a <xref:System.TimeSpan> value in a compact form by including only the elements that are necessary.</span></span> <span data-ttu-id="d7800-170">이 형식 지정자의 형식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-170">It has the following form:</span></span>  
   
- \[\-\]\[*d*:\]*h*:*mm*:*ss*\[.*FFFFFFF*\]  
+ <span data-ttu-id="d7800-171">[-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]</span><span class="sxs-lookup"><span data-stu-id="d7800-171">[-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]</span></span>  
   
- 대괄호 \(\[ 및 \]\) 안의 요소는 선택적 요소입니다.  콜론\(:\)은 리터럴 기호입니다.  다음 표에서는 나머지 요소에 대해 설명합니다.  
+ <span data-ttu-id="d7800-172">대괄호 ([ 및 ]) 안의 요소는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-172">Elements in square brackets ([ and ]) are optional.</span></span> <span data-ttu-id="d7800-173">콜론(:)은 리터럴 기호입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-173">The colon (:) is a literal symbol.</span></span> <span data-ttu-id="d7800-174">다음 표에서는 나머지 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-174">The following table describes the remaining elements.</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|*\-*|음수 시간 간격을 나타내는 선택적 음수 기호입니다.|  
-|*d*|앞에 오는 0이 없는 선택적 일 수입니다.|  
-|*h*|앞에 오는 0이 없는 "0"부터"23" 범위의 시간입니다.|  
-|*mm*|"00"부터 "59" 범위의 분입니다.|  
-|*ss*|"00"부터 "59" 범위의 초입니다.|  
-|*.*|초 소수 구분 기호입니다.  사용자 재정의가 없는 지정한 문화권의 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 속성과 같습니다.|  
-|*FFFFFFF*|초의 소수 부분입니다.  최대한 적은 자릿수가 표시됩니다.|  
+|<span data-ttu-id="d7800-175">요소</span><span class="sxs-lookup"><span data-stu-id="d7800-175">Element</span></span>|<span data-ttu-id="d7800-176">설명</span><span class="sxs-lookup"><span data-stu-id="d7800-176">Description</span></span>|  
+|-------------|-----------------|  
+|*-*|<span data-ttu-id="d7800-177">음수 시간 간격을 나타내는 선택적 음수 기호입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-177">An optional negative sign, which indicates a negative time interval.</span></span>|  
+|<span data-ttu-id="d7800-178">*d*</span><span class="sxs-lookup"><span data-stu-id="d7800-178">*d*</span></span>|<span data-ttu-id="d7800-179">앞에 오는 0이 없는 선택적 일 수입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-179">The optional number of days, with no leading zeros.</span></span>|  
+|<span data-ttu-id="d7800-180">*h*</span><span class="sxs-lookup"><span data-stu-id="d7800-180">*h*</span></span>|<span data-ttu-id="d7800-181">앞에 오는 0이 없는 "0"부터"23" 범위의 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-181">The number of hours, which ranges from "0" to "23", with no leading zeros.</span></span>|  
+|<span data-ttu-id="d7800-182">*mm*</span><span class="sxs-lookup"><span data-stu-id="d7800-182">*mm*</span></span>|<span data-ttu-id="d7800-183">"00"부터 "59" 범위의 분입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-183">The number of minutes, which ranges from "00" to "59"..</span></span>|  
+|<span data-ttu-id="d7800-184">*ss*</span><span class="sxs-lookup"><span data-stu-id="d7800-184">*ss*</span></span>|<span data-ttu-id="d7800-185">"00"부터 "59" 범위의 초입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-185">The number of seconds, which ranges from "00" to "59"..</span></span>|  
+|<span data-ttu-id="d7800-186">*.*</span><span class="sxs-lookup"><span data-stu-id="d7800-186">*.*</span></span>|<span data-ttu-id="d7800-187">초 소수 구분 기호입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-187">The fractional seconds separator.</span></span> <span data-ttu-id="d7800-188">사용자 재정의가 없는 지정한 문화권의 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 속성과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-188">It is equivalent to the specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property without user overrides.</span></span>|  
+|<span data-ttu-id="d7800-189">*FFFFFFF*</span><span class="sxs-lookup"><span data-stu-id="d7800-189">*FFFFFFF*</span></span>|<span data-ttu-id="d7800-190">초의 소수 부분입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-190">The fractional seconds.</span></span> <span data-ttu-id="d7800-191">최대한 적은 자릿수가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-191">As few digits as possible are displayed.</span></span>|  
   
- "G" 형식 지정자와 마찬가지로 "g" 형식 지정자도 지역화됩니다.  해당 초 소수 구분 기호는 현재 문화권 또는 지정한 문화권의 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 속성을 기준으로 합니다.  
+ <span data-ttu-id="d7800-192">"G" 형식 지정자와 마찬가지로 "g" 형식 지정자도 지역화됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-192">Like the "G" format specifier, the "g" format specifier is localized.</span></span> <span data-ttu-id="d7800-193">해당 초 소수 구분 기호는 현재 문화권 또는 지정한 문화권의 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 속성을 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-193">Its fractional seconds separator is based on either the current culture or a specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property.</span></span>  
   
- 다음 예제에서는 두 <xref:System.TimeSpan> 개체를 인스턴스화한 다음 해당 개체를 사용하여 산술 연산을 수행하고 결과를 표시합니다.  각 경우에서는 복합 서식을 사용하여 "g" 형식 지정자를 통해 <xref:System.TimeSpan> 값을 표시합니다.  또한 현재 시스템 문화권\(여기서는 영어 \- 미국 또는 en\-US\) 및 프랑스어 \- 프랑스\(fr\-FR\) 문화권의 서식 규칙을 사용하여 <xref:System.TimeSpan> 값의 서식을 지정합니다.  
+ <span data-ttu-id="d7800-194">다음 예제에서는 두 <xref:System.TimeSpan> 개체를 인스턴스화한 다음 해당 개체를 사용하여 산술 연산을 수행하고 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-194">The following example instantiates two <xref:System.TimeSpan> objects, uses them to perform arithmetic operations, and displays the result.</span></span> <span data-ttu-id="d7800-195">각 경우에서는 복합 서식을 사용하여 "g" 형식 지정자를 통해 <xref:System.TimeSpan> 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-195">In each case, it uses composite formatting to display the <xref:System.TimeSpan> value by using the "g" format specifier.</span></span> <span data-ttu-id="d7800-196">또한 현재 시스템 문화권(여기서는 영어 - 미국 또는 en-US) 및 프랑스어 - 프랑스(fr-FR) 문화권의 서식 규칙을 사용하여 <xref:System.TimeSpan> 값의 서식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-196">In addition, it formats the <xref:System.TimeSpan> value by using the formatting conventions of the current system culture (which, in this case, is English - United States or en-US) and the French - France (fr-FR) culture.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
   
- [표로 이동](#Top)  
+ [<span data-ttu-id="d7800-197">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d7800-197">Back to table</span></span>](#Top)  
   
 <a name="GeneralLong"></a>   
-## 일반 긴\("G"\) 형식 지정자  
- "G" <xref:System.TimeSpan> 형식 지정자는 항상 일 수와 초의 소수 부분을 모두 포함하는 긴 형식으로 <xref:System.TimeSpan> 값의 문자열 표현을 반환합니다.  "G" 표준 형식 지정자에서 생성 되는 문자열의 형식은 다음과 같습니다.  
+## <a name="the-general-long-g-format-specifier"></a><span data-ttu-id="d7800-198">일반 긴("G") 형식 지정자</span><span class="sxs-lookup"><span data-stu-id="d7800-198">The General Long ("G") Format Specifier</span></span>  
+ <span data-ttu-id="d7800-199">"G" <xref:System.TimeSpan> 형식 지정자는 항상 일 수와 초의 소수 부분을 모두 포함하는 긴 형식으로 <xref:System.TimeSpan> 값의 문자열 표현을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-199">The "G" <xref:System.TimeSpan> format specifier returns the string representation of a <xref:System.TimeSpan> value in a long form that always includes both days and fractional seconds.</span></span> <span data-ttu-id="d7800-200">"G" 표준 형식 지정자에서 생성 되는 문자열의 형식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-200">The string that results from the "G" standard format specifier has the following form:</span></span>  
   
- \[\-\]*d*:*hh*:*mm*:*ss*.*fffffff*  
+ <span data-ttu-id="d7800-201">[-]*d*:*hh*:*mm*:*ss*.*fffffff*</span><span class="sxs-lookup"><span data-stu-id="d7800-201">[-]*d*:*hh*:*mm*:*ss*.*fffffff*</span></span>  
   
- 대괄호 \(\[ 및 \]\) 안의 요소는 선택적 요소입니다.  콜론\(:\)은 리터럴 기호입니다.  다음 표에서는 나머지 요소에 대해 설명합니다.  
+ <span data-ttu-id="d7800-202">대괄호 ([ 및 ]) 안의 요소는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-202">Elements in square brackets ([ and ]) are optional.</span></span> <span data-ttu-id="d7800-203">콜론(:)은 리터럴 기호입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-203">The colon (:) is a literal symbol.</span></span> <span data-ttu-id="d7800-204">다음 표에서는 나머지 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-204">The following table describes the remaining elements.</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|*\-*|음수 시간 간격을 나타내는 선택적 음수 기호입니다.|  
-|*d*|앞에 오는 0이 없는 일 수입니다.|  
-|*hh*|"00"부터 "23" 범위의 시간입니다.|  
-|*mm*|"00"부터 "59" 범위의 분입니다.|  
-|*ss*|"00"부터 "59" 범위의 초입니다.|  
-|*.*|초 소수 구분 기호입니다.  사용자 재정의가 없는 지정한 문화권의 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 속성과 같습니다.|  
-|*fffffff*|초의 소수 부분입니다.|  
+|<span data-ttu-id="d7800-205">요소</span><span class="sxs-lookup"><span data-stu-id="d7800-205">Element</span></span>|<span data-ttu-id="d7800-206">설명</span><span class="sxs-lookup"><span data-stu-id="d7800-206">Description</span></span>|  
+|-------------|-----------------|  
+|*-*|<span data-ttu-id="d7800-207">음수 시간 간격을 나타내는 선택적 음수 기호입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-207">An optional negative sign, which indicates a negative time interval.</span></span>|  
+|<span data-ttu-id="d7800-208">*d*</span><span class="sxs-lookup"><span data-stu-id="d7800-208">*d*</span></span>|<span data-ttu-id="d7800-209">앞에 오는 0이 없는 일 수입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-209">The number of days, with no leading zeros.</span></span>|  
+|<span data-ttu-id="d7800-210">*hh*</span><span class="sxs-lookup"><span data-stu-id="d7800-210">*hh*</span></span>|<span data-ttu-id="d7800-211">"00"부터 "23" 범위의 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-211">The number of hours, which ranges from "00" to "23".</span></span>|  
+|<span data-ttu-id="d7800-212">*mm*</span><span class="sxs-lookup"><span data-stu-id="d7800-212">*mm*</span></span>|<span data-ttu-id="d7800-213">"00"부터 "59" 범위의 분입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-213">The number of minutes, which ranges from "00" to "59".</span></span>|  
+|<span data-ttu-id="d7800-214">*ss*</span><span class="sxs-lookup"><span data-stu-id="d7800-214">*ss*</span></span>|<span data-ttu-id="d7800-215">"00"부터 "59" 범위의 초입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-215">The number of seconds, which ranges from "00" to "59".</span></span>|  
+|<span data-ttu-id="d7800-216">*.*</span><span class="sxs-lookup"><span data-stu-id="d7800-216">*.*</span></span>|<span data-ttu-id="d7800-217">초 소수 구분 기호입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-217">The fractional seconds separator.</span></span> <span data-ttu-id="d7800-218">사용자 재정의가 없는 지정한 문화권의 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 속성과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-218">It is equivalent to the specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property without user overrides.</span></span>|  
+|<span data-ttu-id="d7800-219">*fffffff*</span><span class="sxs-lookup"><span data-stu-id="d7800-219">*fffffff*</span></span>|<span data-ttu-id="d7800-220">초의 소수 부분입니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-220">The fractional seconds.</span></span>|  
   
- "G" 형식 지정자와 마찬가지로 "g" 형식 지정자도 지역화됩니다.  해당 초 소수 구분 기호는 현재 문화권 또는 지정한 문화권의 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 속성을 기준으로 합니다.  
+ <span data-ttu-id="d7800-221">"G" 형식 지정자와 마찬가지로 "g" 형식 지정자도 지역화됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-221">Like the "G" format specifier, the "g" format specifier is localized.</span></span> <span data-ttu-id="d7800-222">해당 초 소수 구분 기호는 현재 문화권 또는 지정한 문화권의 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 속성을 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-222">Its fractional seconds separator is based on either the current culture or a specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property.</span></span>  
   
- 다음 예제에서는 두 <xref:System.TimeSpan> 개체를 인스턴스화한 다음 해당 개체를 사용하여 산술 연산을 수행하고 결과를 표시합니다.  각 경우에서는 복합 서식을 사용하여 "G" 형식 지정자를 통해 <xref:System.TimeSpan> 값을 표시합니다.  또한 현재 시스템 문화권\(여기서는 영어 \- 미국 또는 en\-US\) 및 프랑스어 \- 프랑스\(fr\-FR\) 문화권의 서식 규칙을 사용하여 <xref:System.TimeSpan> 값의 서식을 지정합니다.  
+ <span data-ttu-id="d7800-223">다음 예제에서는 두 <xref:System.TimeSpan> 개체를 인스턴스화한 다음 해당 개체를 사용하여 산술 연산을 수행하고 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-223">The following example instantiates two <xref:System.TimeSpan> objects, uses them to perform arithmetic operations, and displays the result.</span></span> <span data-ttu-id="d7800-224">각 경우에서는 복합 서식을 사용하여 "G" 형식 지정자를 통해 <xref:System.TimeSpan> 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-224">In each case, it uses composite formatting to display the <xref:System.TimeSpan> value by using the "G" format specifier.</span></span> <span data-ttu-id="d7800-225">또한 현재 시스템 문화권(여기서는 영어 - 미국 또는 en-US) 및 프랑스어 - 프랑스(fr-FR) 문화권의 서식 규칙을 사용하여 <xref:System.TimeSpan> 값의 서식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d7800-225">In addition, it formats the <xref:System.TimeSpan> value by using the formatting conventions of the current system culture (which, in this case, is English - United States or en-US) and the French - France (fr-FR) culture.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
   
- [표로 이동](#Top)  
+ [<span data-ttu-id="d7800-226">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d7800-226">Back to table</span></span>](#Top)  
   
-## 참고 항목  
- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)   
- [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)   
- [문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a><span data-ttu-id="d7800-227">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d7800-227">See Also</span></span>  
+ [<span data-ttu-id="d7800-228">형식 서식 지정</span><span class="sxs-lookup"><span data-stu-id="d7800-228">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="d7800-229">사용자 지정 TimeSpan 서식 문자열</span><span class="sxs-lookup"><span data-stu-id="d7800-229">Custom TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+ [<span data-ttu-id="d7800-230">문자열 구문 분석</span><span class="sxs-lookup"><span data-stu-id="d7800-230">Parsing Strings</span></span>](../../../docs/standard/base-types/parsing-strings.md)

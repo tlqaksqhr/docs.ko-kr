@@ -1,48 +1,46 @@
 ---
-title: "XML 처리 옵션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XML 처리 옵션"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 18f8f9c76a1842517340eaa3f74b4778f869403e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# XML 처리 옵션
-XML 데이터를 처리하는 데 사용할 수 있는 Microsoft 기술 목록은 다음 표를 참조하세요.  
+# <a name="xml-processing-options"></a><span data-ttu-id="f8309-102">XML 처리 옵션</span><span class="sxs-lookup"><span data-stu-id="f8309-102">XML Processing Options</span></span>
+<span data-ttu-id="f8309-103">XML 데이터를 처리하는 데 사용할 수 있는 Microsoft 기술 목록은 다음 표를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f8309-103">See the following tables for a list of Microsoft technologies you can use to process XML data.</span></span>  
   
-## .NET Framework 옵션  
+## <a name="net-framework-options"></a><span data-ttu-id="f8309-104">.NET Framework 옵션</span><span class="sxs-lookup"><span data-stu-id="f8309-104">.NET Framework Options</span></span>  
   
-|**옵션**|**처리 유형**|**설명**|  
-|------------|---------------|------------|  
-|[LINQ to XML](../../../../ocs/visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br /> \(<xref:System.Xml.Linq> 네임스페이스\)|메모리 내|-   .NET Framework LINQ\(Language\-Integrated Query\) 기술을 기반으로 합니다.<br />-   개체, 관계형 데이터 및 XML 데이터에 대해 SQL과 유사한 쿼리 경험을 제공합니다.<br />-   직관적인 문서 작성 및 문서 변환 기능을 제공합니다.<br />-   새 코드를 작성 중인 경우 이 옵션을 사용합니다.|  
-|<xref:System.Xml.XmlReader?displayProperty=fullName>|스트림 기반|-   캐시를 사용하지 않고 앞으로만 이동 가능한 빠른 XML 데이터 액세스 방법을 제공합니다.<br />-   <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> 메서드를 사용하여 개체를 만들고 <xref:System.Xml.XmlReaderSettings> 클래스를 사용하여 개체에서 활성화할 기능 집합을 지정할 수 있습니다.|  
-|<xref:System.Xml.XmlWriter?displayProperty=fullName>|스트림 기반|-   캐시를 사용하지 않고 앞으로만 이동 가능한 빠른 XML 데이터 생성 방법을 제공합니다.<br />-   <xref:System.Xml.XmlWriter.Create%2A?displayProperty=fullName> 메서드를 사용하여 개체를 만들고 <xref:System.Xml.XmlWriterSettings> 클래스를 사용하여 개체에서 활성화할 기능 집합을 지정할 수 있습니다.|  
-|<xref:System.Xml.XmlDocument?displayProperty=fullName>|메모리 내|-   [W3C DOM\(문서 개체 모델\) 수준 1 코어](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)\(영문\) 및 [DOM 수준 2 코어](http://www.w3.org/TR/DOM-Level-2-Core/)\(영문\) 권장 사항을 구현합니다.<br />-   익숙한 DOM 모델을 기반으로 한 메서드 및 속성을 사용하여 노드를 생성, 삽입, 제거 및 수정할 수 있습니다.<br />-   W3C DOM을 사용하는 기존 코드를 수정 중인 경우 이 옵션을 사용합니다.|  
-|<xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>|메모리 내|-   커서 모델을 사용하는 몇 가지 편집 옵션 및 탐색 기능을 제공합니다.<br />-   XML 문서는 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체에 포함될 수 있습니다.<br />-   XML의 읽기 전용 처리에 우수한 성능을 제공합니다.<br />-   XPath 쿼리 또는 XSLT 변환이 포함된 기존 코드를 수정 중인 경우 이 옵션을 사용합니다.|  
-|<xref:System.Xml.Xsl.XslCompiledTransform>|메모리 내|-   XSL 변환을 사용하여 XML 데이터를 변환하는 옵션을 제공합니다.<br />-   [XSLT 컴파일러\(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)를 사용하여 응용 프로그램에서 미리 컴파일된 변환을 참조할 수 있습니다.|  
+|<span data-ttu-id="f8309-105">**옵션**</span><span class="sxs-lookup"><span data-stu-id="f8309-105">**Option**</span></span>|<span data-ttu-id="f8309-106">**처리 유형**</span><span class="sxs-lookup"><span data-stu-id="f8309-106">**Processing type**</span></span>|<span data-ttu-id="f8309-107">**설명**</span><span class="sxs-lookup"><span data-stu-id="f8309-107">**Description**</span></span>|  
+|----------------|-------------------------|---------------------|  
+|[<span data-ttu-id="f8309-108">LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="f8309-108">LINQ to XML</span></span>](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br /><span data-ttu-id="f8309-109">(<xref:System.Xml.Linq> 네임스페이스)</span><span class="sxs-lookup"><span data-stu-id="f8309-109">(<xref:System.Xml.Linq> namespace)</span></span>|<span data-ttu-id="f8309-110">메모리 내</span><span class="sxs-lookup"><span data-stu-id="f8309-110">In-memory</span></span>|<span data-ttu-id="f8309-111">-LINQ (language-integrated Query) 기술을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-111">-   Based on the .NET Framework Language-Integrated Query (LINQ) technology.</span></span><br /><span data-ttu-id="f8309-112">-개체, 관계형 데이터 및 XML 데이터에 대 한 SQL과 유사한 쿼리 환경을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-112">-   Provides query experience that is similar to SQL for objects, relational data, and XML data.</span></span><br /><span data-ttu-id="f8309-113">-직관적인 문서 작성 및 변환 기능 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-113">-   Provides inituive document creation and transformation capabilities.</span></span><br /><span data-ttu-id="f8309-114">-새 코드를 작성 하는 경우이 옵션을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-114">-   Use this option if you're writing new code.</span></span>|  
+|<xref:System.Xml.XmlReader?displayProperty=nameWithType>|<span data-ttu-id="f8309-115">스트림 기반</span><span class="sxs-lookup"><span data-stu-id="f8309-115">Stream-based</span></span>|<span data-ttu-id="f8309-116">-XML 데이터에 액세스 하는 빠르고 캐시 되지 않은, 앞 으로만 이동 가능한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-116">-   Provides a fast, non-cached, forward-only way to access XML data.</span></span><br /><span data-ttu-id="f8309-117">사용 하 여 개체를 만들 수-는 <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> 메서드를 사용 하 여 개체에서 활성화할 기능 집합을 지정 하 고는 <xref:System.Xml.XmlReaderSettings> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-117">-   You can create objects by using the <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> method, and specify the set of features to enable on the object by using the <xref:System.Xml.XmlReaderSettings> class.</span></span>|  
+|<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|<span data-ttu-id="f8309-118">스트림 기반</span><span class="sxs-lookup"><span data-stu-id="f8309-118">Stream-based</span></span>|<span data-ttu-id="f8309-119">-XML 데이터를 생성 하는 빠르고 캐시 되지 않은, 앞 으로만 이동 가능한 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-119">-   Provides a fast, non-cached, forward-only way to generate XML data.</span></span><br /><span data-ttu-id="f8309-120">사용 하 여 개체를 만들 수-는 <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> 메서드를 사용 하 여 개체에서 활성화할 기능 집합을 지정 하 고는 <xref:System.Xml.XmlWriterSettings> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-120">-   You can create objects by using the <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> method, and specify the set of features to enable on the object by using the <xref:System.Xml.XmlWriterSettings> class.</span></span>|  
+|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|<span data-ttu-id="f8309-121">메모리 내</span><span class="sxs-lookup"><span data-stu-id="f8309-121">In-memory</span></span>|<span data-ttu-id="f8309-122">-구현에서 [W3C 문서 개체 모델 (DOM) Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) 및 [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) 권장 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-122">-   Implements the [W3C Document Object Model (DOM) Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) and [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) recommendations.</span></span><br /><span data-ttu-id="f8309-123">-있습니다 수 만들, 삽입, 제거 및 익숙한 DOM 모델을 기반으로 하는 속성과 메서드를 사용 하 여 노드를 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-123">-   You can create, insert, remove, and modify nodes by using methods and properties based on the familiar DOM model.</span></span><br /><span data-ttu-id="f8309-124">-W3C DOM를 활용 하는 기존 코드를 수정 하는 경우이 옵션 사용</span><span class="sxs-lookup"><span data-stu-id="f8309-124">-   Use this option if you're modifying existing code that utilizes the W3C DOM.</span></span>|  
+|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|<span data-ttu-id="f8309-125">메모리 내</span><span class="sxs-lookup"><span data-stu-id="f8309-125">In-memory</span></span>|<span data-ttu-id="f8309-126">-몇 가지 편집 옵션 및 커서 모델을 사용 하 여 탐색 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-126">-   Offers several editing options and navigation capabilities using a cursor model.</span></span><br /><span data-ttu-id="f8309-127">XML 문서에 포함 될 수는 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-127">-   XML documents can be contained in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span><br /><span data-ttu-id="f8309-128">-XML의 읽기 전용 처리에 우수한 성능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-128">-   Provides excellent performance for read-only processing of XML.</span></span><br /><span data-ttu-id="f8309-129">-XPath 쿼리 또는 XSLT 변형이 포함 된 기존 코드를 수정 하는 경우이 옵션을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-129">-   Use this option if you're modifying existing code with XPath queries or XSLT transformations.</span></span>|  
+|<xref:System.Xml.Xsl.XslCompiledTransform>|<span data-ttu-id="f8309-130">메모리 내</span><span class="sxs-lookup"><span data-stu-id="f8309-130">In-memory</span></span>|<span data-ttu-id="f8309-131">-XSL 변형을 사용 하 여 XML 데이터를 변환에 대 한 옵션을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-131">-   Provides options for transforming XML data using XSL transformations.</span></span><br /><span data-ttu-id="f8309-132">- [XSLT 컴파일러 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) 응용 프로그램에서 변환으로 미리 컴파일한 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-132">-   The [XSLT Compiler (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) lets you reference pre-compiled transformations in your app.</span></span>|  
   
-## Win32 및 COM 기반 옵션  
+## <a name="win32-and-com-based-options"></a><span data-ttu-id="f8309-133">Win32 및 COM 기반 옵션</span><span class="sxs-lookup"><span data-stu-id="f8309-133">Win32 and COM-based Options</span></span>  
   
-|**옵션**|**설명**|  
-|------------|------------|  
-|[XmlLite](http://go.microsoft.com/fwlink/?LinkId=93723)\(영문\)|-   빠르고 안전하며 캐시를 사용하지 않고 앞으로만 이동 가능한 XML 파서로서, 고성능의 XML 응용 프로그램을 작성할 수 있도록 도움을 줍니다.<br />-   DLL\(동적 연결 라이브러리\)을 사용할 수 있는 모든 언어에서 사용할 수 있습니다. C\+\+ 사용을 권장합니다.|  
-|[MSXML](http://go.microsoft.com/fwlink/?LinkId=93722)\(영문\)|-   Windows 운영 체제에 포함된 XML을 처리할 수 있는 COM 기반 기술입니다.<br />-   XPath 및 XSLT를 지원하는 DOM의 기본적인 구현을 제공합니다.<br />-   SAX2 이벤트 기반 파서가 포함되어 있습니다.|  
+|<span data-ttu-id="f8309-134">**옵션**</span><span class="sxs-lookup"><span data-stu-id="f8309-134">**Option**</span></span>|<span data-ttu-id="f8309-135">**설명**</span><span class="sxs-lookup"><span data-stu-id="f8309-135">**Description**</span></span>|  
+|----------------|---------------------|  
+|[<span data-ttu-id="f8309-136">XmlLite</span><span class="sxs-lookup"><span data-stu-id="f8309-136">XmlLite</span></span>](http://go.microsoft.com/fwlink/?LinkId=93723)|<span data-ttu-id="f8309-137">-빠른, 보안, 캐시, 앞 으로만 이동 가능한 XML 파서를 사용 하면 고성능 XML 앱 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-137">-   A fast, secure, non-caching, forward-only XML parser that helps you build high-performance XML apps.</span></span><br /><span data-ttu-id="f8309-138">-동적 연결 라이브러리 (Dll);를 사용할 수 있는 모든 언어에서 작동 합니다. c + +를 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-138">-   Works with any language that can use dynamic link libraries (DLLs); we recommend using C++.</span></span>|  
+|[<span data-ttu-id="f8309-139">MSXML</span><span class="sxs-lookup"><span data-stu-id="f8309-139">MSXML</span></span>](http://go.microsoft.com/fwlink/?LinkId=93722)|<span data-ttu-id="f8309-140">-Windows 운영 체제에 포함 된 XML 처리를 위한 COM 기반 기술입니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-140">-   COM-based technology for processing XML that is included with the Windows operating system.</span></span><br /><span data-ttu-id="f8309-141">-XPath 및 XSLT를 지 원하는 DOM의 기본적인 구현을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-141">-   Provides a native implementation of the DOM with support for XPath and XSLT.</span></span><br /><span data-ttu-id="f8309-142">-SAX2 이벤트 기반 파서가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8309-142">-   Contains the SAX2 event-based parser.</span></span>|  
   
-## 참고 항목  
- [DOM 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)   
- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [XSLT 컴파일러\(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+## <a name="see-also"></a><span data-ttu-id="f8309-143">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f8309-143">See Also</span></span>  
+ [<span data-ttu-id="f8309-144">DOM 모델을 사용 하 여 XML 데이터 처리</span><span class="sxs-lookup"><span data-stu-id="f8309-144">Process XML Data Using the DOM Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [<span data-ttu-id="f8309-145">XPath 데이터 모델을 사용하여 XML 데이터 처리</span><span class="sxs-lookup"><span data-stu-id="f8309-145">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="f8309-146">XSLT 컴파일러 (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="f8309-146">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

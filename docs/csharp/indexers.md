@@ -10,28 +10,26 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
+ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 468c86f36fe71558dcd7a9150337f5a3cce066b8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/08/2017
 ---
+# <a name="indexers"></a><span data-ttu-id="6656f-104">인덱서</span><span class="sxs-lookup"><span data-stu-id="6656f-104">Indexers</span></span>
 
-# <a name="indexers"></a>인덱서
+<span data-ttu-id="6656f-105">*인덱서*는 속성과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-105">*Indexers* are similar to properties.</span></span> <span data-ttu-id="6656f-106">다양한 방식으로 인덱서는 [속성](properties.md)과 동일한 언어 기능을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-106">In many ways indexers build on the same language features as [properties](properties.md).</span></span> <span data-ttu-id="6656f-107">인덱서는 *인덱싱된* 속성, 즉 하나 이상의 인수로 참조된 속성을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-107">Indexers enable *indexed* properties: properties referenced using one or more arguments.</span></span> <span data-ttu-id="6656f-108">이러한 인수는 일부 값 컬렉션에 인덱스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-108">Those arguments provide an index into some collection of values.</span></span>
 
-*인덱서*는 속성과 비슷합니다. 다양한 방식으로 인덱서는 [속성](properties.md)과 동일한 언어 기능을 기반으로 합니다. 인덱서는 *인덱싱된* 속성, 즉 하나 이상의 인수로 참조된 속성을 사용하도록 설정합니다. 이러한 인수는 일부 값 컬렉션에 인덱스를 제공합니다.
+## <a name="indexer-syntax"></a><span data-ttu-id="6656f-109">인덱서 구문</span><span class="sxs-lookup"><span data-stu-id="6656f-109">Indexer Syntax</span></span>
 
-## <a name="indexer-syntax"></a>인덱서 구문
-
-변수 이름과 대괄호를 통해 인덱서에 액세스합니다. 인덱서 인수를 대괄호 안에 넣습니다.
+<span data-ttu-id="6656f-110">변수 이름과 대괄호를 통해 인덱서에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-110">You access an indexer through a variable name and square brackets .</span></span> <span data-ttu-id="6656f-111">인덱서 인수를 대괄호 안에 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-111">You place the indexer arguments inside the brackets:</span></span>
 
 ```csharp
 var item = someObject["key"];
 someObject["AnotherKey"] = item;
 ```
 
-`this` 키워드를 속성 이름으로 사용하고 대괄호 내에서 인수를 선언하여 인덱서를 선언합니다. 이 선언은 앞 단락에 표시된 사용법과 일치합니다.
+<span data-ttu-id="6656f-112">`this` 키워드를 속성 이름으로 사용하고 대괄호 내에서 인수를 선언하여 인덱서를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-112">You declare indexers using the `this` keyword as the property name, and declaring the arguments within square brackets.</span></span> <span data-ttu-id="6656f-113">이 선언은 앞 단락에 표시된 사용법과 일치합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-113">This declaration would match the usage shown in the previous paragraph:</span></span>
 
 ```csharp
 public int this[string key]
@@ -41,25 +39,25 @@ public int this[string key]
 }
 ```
 
-이 초기 예제에서 속성 및 인덱서 구문 간의 관계를 확인할 수 있습니다. 이 유사성은 인덱서에 대한 대부분의 구문 규칙에 적용됩니다. 인덱서에는 유효한 모든 액세스 한정자(public, protected internal, protected, internal 또는 private)를 사용할 수 있습니다. sealed, virtual 또는 abstract일 수 있습니다. 속성과 마찬가지로, 인덱서의 get 및 set 접근자에 대해 다양한 액세스 한정자를 지정할 수 있습니다.
-읽기 전용 인덱서(set 접근자 생략) 또는 쓰기 전용 인덱서(get 접근자 생략)를 지정할 수도 있습니다.
+<span data-ttu-id="6656f-114">이 초기 예제에서 속성 및 인덱서 구문 간의 관계를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-114">From this initial example, you can see the relationship between the syntax for properties and for indexers.</span></span> <span data-ttu-id="6656f-115">이 유사성은 인덱서에 대한 대부분의 구문 규칙에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-115">This analogy carries through most of the syntax rules for indexers.</span></span> <span data-ttu-id="6656f-116">인덱서에 유효한 액세스 한정자를 사용할 수 있습니다 (public, protected 내부, protected, 내부, 개인 또는 private protected).</span><span class="sxs-lookup"><span data-stu-id="6656f-116">Indexers can have any valid access modifiers (public, protected internal, protected, internal, private or private protected).</span></span> <span data-ttu-id="6656f-117">sealed, virtual 또는 abstract일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-117">They may be sealed, virtual, or abstract.</span></span> <span data-ttu-id="6656f-118">속성과 마찬가지로, 인덱서의 get 및 set 접근자에 대해 다양한 액세스 한정자를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-118">As with properties, you can specify different access modifiers for the get and set accesssors in an indexer.</span></span>
+<span data-ttu-id="6656f-119">읽기 전용 인덱서(set 접근자 생략) 또는 쓰기 전용 인덱서(get 접근자 생략)를 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-119">You may also specify read-only indexers (by omitting the set accessor), or write-only indexers (by omitting the get accessor).</span></span>
 
-속성 작업에서 배운 거의 모든 내용을 인덱서에 적용할 수 있습니다. 해당 규칙의 유일한 예외는 *자동 구현 속성*입니다. 컴파일러가 항상 인덱서에 올바른 저장소를 생성할 수 있는 것은 아닙니다.
+<span data-ttu-id="6656f-120">속성 작업에서 배운 거의 모든 내용을 인덱서에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-120">You can apply almost everything you learn from working with properties to indexers.</span></span> <span data-ttu-id="6656f-121">해당 규칙의 유일한 예외는 *자동 구현 속성*입니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-121">The only exception to that rule is *auto implemented properties*.</span></span> <span data-ttu-id="6656f-122">컴파일러가 항상 인덱서에 올바른 저장소를 생성할 수 있는 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-122">The compiler cannot always generate the correct storage for an indexer.</span></span>
 
-항목 집합의 항목을 참조하는 인수의 존재 여부로 인덱서와 속성을 구분합니다. 각 인덱서의 인수 목록이 고유하기만 하면 형식에 여러 인덱서를 정의할 수 있습니다. 클래스 정의에 하나 이상의 인덱서를 사용할 수 있는 다양한 시나리오를 살펴보겠습니다. 
+<span data-ttu-id="6656f-123">항목 집합의 항목을 참조하는 인수의 존재 여부로 인덱서와 속성을 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-123">The presence of arguments to reference an item in a set of items distinguishes indexers from properties.</span></span> <span data-ttu-id="6656f-124">각 인덱서의 인수 목록이 고유하기만 하면 형식에 여러 인덱서를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-124">You may define multiple indexers on a type, as long as the argument lists for each indexer is unique.</span></span> <span data-ttu-id="6656f-125">클래스 정의에 하나 이상의 인덱서를 사용할 수 있는 다양한 시나리오를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-125">Let's explore different scenarios where you might use one or more indexers in a class definition.</span></span> 
 
-## <a name="scenarios"></a>시나리오
+## <a name="scenarios"></a><span data-ttu-id="6656f-126">시나리오</span><span class="sxs-lookup"><span data-stu-id="6656f-126">Scenarios</span></span>
 
-API가 해당 컬렉션에 대한 인수가 정의되는 일부 컬렉션을 모델링하는 경우 형식에 *인덱서*를 정의합니다. 인덱서는 .NET Core Framework의 일부인 컬렉션 형식에 직접 매핑될 수도 있고, 매핑되지 않을 수도 있습니다. 형식에 컬렉션 모델링 이외의 다른 책임이 있을 수도 있습니다.
-인덱서를 사용하면 해당 추상화의 값이 저장 또는 계산되는 방법의 내부 세부 정보를 노출하지 않고 형식의 추상화와 일치하는 API를 제공할 수 있습니다.
+<span data-ttu-id="6656f-127">API가 해당 컬렉션에 대한 인수가 정의되는 일부 컬렉션을 모델링하는 경우 형식에 *인덱서*를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-127">You would define *indexers* in your type when its API models some collection where you define the arguments to that collection.</span></span> <span data-ttu-id="6656f-128">인덱서는 .NET Core Framework의 일부인 컬렉션 형식에 직접 매핑될 수도 있고, 매핑되지 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-128">Your indexers may or may not map directly to the collection types that are part of the .NET core framework.</span></span> <span data-ttu-id="6656f-129">형식에 컬렉션 모델링 이외의 다른 책임이 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-129">Your type may have other responsibilities in addition to modeling a collection.</span></span>
+<span data-ttu-id="6656f-130">인덱서를 사용하면 해당 추상화의 값이 저장 또는 계산되는 방법의 내부 세부 정보를 노출하지 않고 형식의 추상화와 일치하는 API를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-130">Indexers enable you to provide the API that matches your type's abstraction without exposing the inner details of how the values for that abstraction are stored or computed.</span></span>
 
-*인덱서*를 사용하기 위한 몇 가지 일반적인 시나리오를 살펴보겠습니다. [인덱서에 대한 샘플 폴더](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)에 액세스할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+<span data-ttu-id="6656f-131">*인덱서*를 사용하기 위한 몇 가지 일반적인 시나리오를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-131">Let's walk through some of the common scenarios for using *indexers*.</span></span> <span data-ttu-id="6656f-132">[인덱서에 대한 샘플 폴더](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-132">You can access the [sample folder for indexers](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers).</span></span> <span data-ttu-id="6656f-133">다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6656f-133">For download instructions, see [Samples and Tutorials](../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-### <a name="arrays-and-vectors"></a>배열 및 벡터
+### <a name="arrays-and-vectors"></a><span data-ttu-id="6656f-134">배열 및 벡터</span><span class="sxs-lookup"><span data-stu-id="6656f-134">Arrays and Vectors</span></span>
 
-인덱서를 만들기 위한 가장 일반적인 시나리오 중 하나는 형식이 배열 또는 벡터를 모델링하는 경우입니다. 인덱서를 만들어 정렬된 데이터 목록을 모델링할 수 있습니다. 
+<span data-ttu-id="6656f-135">인덱서를 만들기 위한 가장 일반적인 시나리오 중 하나는 형식이 배열 또는 벡터를 모델링하는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-135">One of the most common scenarios for creating indexers is when your type models an array, or a vector.</span></span> <span data-ttu-id="6656f-136">인덱서를 만들어 정렬된 데이터 목록을 모델링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-136">You can create an indexer to model an ordered list of data.</span></span> 
 
-사용자 고유의 인덱서를 만드는 경우 해당 컬렉션에 대한 저장소를 요구 사항에 맞게 정의할 수 있다는 장점이 있습니다. 너무 커서 한 번에 메모리에 로드할 수 없는 기록 데이터를 형식이 모델링하는 시나리오를 가정합니다. 사용량에 따라 컬렉션의 섹션을 로드 및 언로드해야 합니다. 다음 예제에서는 이 동작을 모델링합니다. 존재하는 데이터 요소 수를 보고합니다. 필요에 따라 데이터 섹션이 포함될 페이지를 만듭니다. 최신 요청에 필요한 페이지의 공간을 만들기 위해 메모리에서 페이지를 제거합니다.
+<span data-ttu-id="6656f-137">사용자 고유의 인덱서를 만드는 경우 해당 컬렉션에 대한 저장소를 요구 사항에 맞게 정의할 수 있다는 장점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-137">The advantage of creating your own indexer is that you can define the storage for that collection to suit your needs.</span></span> <span data-ttu-id="6656f-138">너무 커서 한 번에 메모리에 로드할 수 없는 기록 데이터를 형식이 모델링하는 시나리오를 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-138">Imagine a scenario where your type models historical data that is too large to load into memory at once.</span></span> <span data-ttu-id="6656f-139">사용량에 따라 컬렉션의 섹션을 로드 및 언로드해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-139">You need to load and unload sections of the collection based on usage.</span></span> <span data-ttu-id="6656f-140">다음 예제에서는 이 동작을 모델링합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-140">The example following models this behavior.</span></span> <span data-ttu-id="6656f-141">존재하는 데이터 요소 수를 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-141">It reports on how many data points exist.</span></span> <span data-ttu-id="6656f-142">필요에 따라 데이터 섹션이 포함될 페이지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-142">It creates pages to hold sections of the data on demand.</span></span> <span data-ttu-id="6656f-143">최신 요청에 필요한 페이지의 공간을 만들기 위해 메모리에서 페이지를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-143">It removes pages from memory to make room for pages needed by more recent requests.</span></span>
 
 ```csharp
 public class DataSamples
@@ -180,11 +178,11 @@ public class DataSamples
 }
 ```
 
-이 디자인 구문에 따라 전체 데이터 집합을 메모리 내 컬렉션에 로드할 필요가 없는 모든 종류의 컬렉션을 모델링할 수 있습니다. `Page` 클래스는 공용 인터페이스의 일부가 아닌 중첩된 private 클래스입니다. 이러한 세부 정보는 이 클래스의 모든 사용자로부터 숨겨집니다.
+<span data-ttu-id="6656f-144">이 디자인 구문에 따라 전체 데이터 집합을 메모리 내 컬렉션에 로드할 필요가 없는 모든 종류의 컬렉션을 모델링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-144">You can follow this design idiom to model any sort of collection where there are good reasons not to load the entire set of data into an in- memory collection.</span></span> <span data-ttu-id="6656f-145">`Page` 클래스는 공용 인터페이스의 일부가 아닌 중첩된 private 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-145">Notice that the `Page` class is a private nested class that is not part of the public interface.</span></span> <span data-ttu-id="6656f-146">이러한 세부 정보는 이 클래스의 모든 사용자로부터 숨겨집니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-146">Those details are hidden from any users of this class.</span></span>
 
-### <a name="dictionaries"></a>사전
+### <a name="dictionaries"></a><span data-ttu-id="6656f-147">사전</span><span class="sxs-lookup"><span data-stu-id="6656f-147">Dictionaries</span></span>
 
-또 다른 일반적인 시나리오는 사전 또는 맵을 모델링해야 하는 경우입니다. 이 시나리오는 형식이 키, 일반적으로 텍스트 키에 따라 값을 저장하는 경우입니다. 이 예제에서는 해당 옵션을 관리하는 [람다 식](delegates-overview.md)에 명령줄 인수를 매핑하는 사전을 만듭니다. 다음 예제에서는 명령줄 옵션을 `Action` 대리자에 매핑하는 `ArgsActions` 클래스와 해당 옵션을 발견할 경우 `ArgsActions`를 사용하여 각 `Action`을 실행하는 `ArgsProcessor` 클래스 등 두 개의 클래스를 보여 줍니다.
+<span data-ttu-id="6656f-148">또 다른 일반적인 시나리오는 사전 또는 맵을 모델링해야 하는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-148">Another common scenario is when you need to model a dictionary or a map.</span></span> <span data-ttu-id="6656f-149">이 시나리오는 형식이 키, 일반적으로 텍스트 키에 따라 값을 저장하는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-149">This scenario is when your type stores values based on key, typically text keys.</span></span> <span data-ttu-id="6656f-150">이 예제에서는 해당 옵션을 관리하는 [람다 식](delegates-overview.md)에 명령줄 인수를 매핑하는 사전을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-150">This example creates a dictionary that maps command line arguments to [lamdba expressions](delegates-overview.md) that manage those options.</span></span> <span data-ttu-id="6656f-151">다음 예제에서는 명령줄 옵션을 `Action` 대리자에 매핑하는 `ArgsActions` 클래스와 해당 옵션을 발견할 경우 `ArgsActions`를 사용하여 각 `Action`을 실행하는 `ArgsProcessor` 클래스 등 두 개의 클래스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-151">The following example shows two classes: an `ArgsActions` class that maps a command line option to an `Action` delegate, and an `ArgsProcessor` that uses the `ArgsActions` to execute each `Action` when it encounters that option.</span></span>
 
 ```csharp
 public class ArgsProcessor
@@ -226,15 +224,15 @@ public class ArgsActions
 }
 ```
 
-이 예제에서 `ArgsAction` 컬렉션은 기본 컬렉션과 거의 같도록 매핑됩니다.
-`get`은 지정된 옵션이 구성되었는지 여부를 확인합니다. 구성된 경우 해당 옵션과 연결된 `Action`을 반환합니다. 구성되지 않은 경우 아무 작업도 수행하지 않는 `Action`을 반환합니다. public 접근자는 `set` 접근자를 포함하지 않습니다. 대신, public 메서드를 옵션 설정에 사용하는 디자인입니다.
+<span data-ttu-id="6656f-152">이 예제에서 `ArgsAction` 컬렉션은 기본 컬렉션과 거의 같도록 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-152">In this example, the `ArgsAction` collection maps closely to the underlying collection.</span></span>
+<span data-ttu-id="6656f-153">`get`은 지정된 옵션이 구성되었는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-153">The `get` determines if a given option has been configured.</span></span> <span data-ttu-id="6656f-154">구성된 경우 해당 옵션과 연결된 `Action`을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-154">If so, it returns the `Action` associated with that option.</span></span> <span data-ttu-id="6656f-155">구성되지 않은 경우 아무 작업도 수행하지 않는 `Action`을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-155">If not, it returns an `Action` that does nothing.</span></span> <span data-ttu-id="6656f-156">public 접근자는 `set` 접근자를 포함하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-156">The public accessor does not include a `set` accessor.</span></span> <span data-ttu-id="6656f-157">대신, public 메서드를 옵션 설정에 사용하는 디자인입니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-157">Rather, the design using a public method for setting options.</span></span>
 
-### <a name="multi-dimensional-maps"></a>다차원 맵
+### <a name="multi-dimensional-maps"></a><span data-ttu-id="6656f-158">다차원 맵</span><span class="sxs-lookup"><span data-stu-id="6656f-158">Multi-Dimensional Maps</span></span>
 
-여러 인수를 사용하는 인덱서를 만들 수 있습니다. 또한 이러한 인수는 같은 형식으로 제한되지 않습니다. 두 가지 예제를 살펴보겠습니다.   
+<span data-ttu-id="6656f-159">여러 인수를 사용하는 인덱서를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-159">You can create indexers that use multiple arguments.</span></span> <span data-ttu-id="6656f-160">또한 이러한 인수는 같은 형식으로 제한되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-160">In addition, those arguments are not constrained to be the same type.</span></span> <span data-ttu-id="6656f-161">두 가지 예제를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-161">Let's look at two examples.</span></span>   
 
-첫 번째 예제는 Mandelbrot 집합의 값을 생성하는 클래스를 보여 줍니다. 집합 뒤의 수학에 대한 자세한 내용은 [이 문서](https://en.wikipedia.org/wiki/Mandelbrot_set)를 참조하세요. 인덱서는 두 개의 double을 사용하여 X, Y 평면의 한 지점을 정의합니다.
-get 접근자는 한 지점이 집합에 없는 것으로 확인될 때까지 반복 횟수를 계산합니다. 최대 반복 횟수에 도달하면 지점이 집합에 있고 클래스의 maxIterations 값이 반환됩니다. Mandelbrot 집합에 대해 잘 알려진 컴퓨터 생성 이미지는 한 지점이 집합 외부에 있음을 확인하는 데 필요한 반복 횟수의 색을 정의합니다.
+<span data-ttu-id="6656f-162">첫 번째 예제는 Mandelbrot 집합의 값을 생성하는 클래스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-162">The first example shows a class that generates values for a Mandelbrot set.</span></span> <span data-ttu-id="6656f-163">집합 뒤의 수학에 대한 자세한 내용은 [이 문서](https://en.wikipedia.org/wiki/Mandelbrot_set)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6656f-163">For more information on the mathematics behind the set, read [this article](https://en.wikipedia.org/wiki/Mandelbrot_set).</span></span> <span data-ttu-id="6656f-164">인덱서는 두 개의 double을 사용하여 X, Y 평면의 한 지점을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-164">The indexer uses two doubles to define a point in the X, Y plane.</span></span>
+<span data-ttu-id="6656f-165">get 접근자는 한 지점이 집합에 없는 것으로 확인될 때까지 반복 횟수를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-165">The get accessor computes the number of iterations until a point is determined to be not in the set.</span></span> <span data-ttu-id="6656f-166">최대 반복 횟수에 도달하면 지점이 집합에 있고 클래스의 maxIterations 값이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-166">If the maximum iterations is reached, the point is in the set, and the class's maxIterations value is returned.</span></span> <span data-ttu-id="6656f-167">Mandelbrot 집합에 대해 잘 알려진 컴퓨터 생성 이미지는 한 지점이 집합 외부에 있음을 확인하는 데 필요한 반복 횟수의 색을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-167">(The computer generated images popularized for the Mandelbrot set define colors for the number of iterations necessary to determine that a point is outside the set.</span></span>
 
 ```csharp
 public class Mandelbrot
@@ -268,10 +266,10 @@ public class Mandelbrot
 }
 ```
 
-Mandelbrot 집합은 실수 값의 모든 (x, y) 좌표에서 값을 정의합니다.
-그러면 무한 개수의 값을 포함할 수 있는 사전이 정의됩니다. 따라서 집합 뒤에는 저장소가 없습니다. 대신, 이 클래스는 코드에서 `get` 접근자를 호출할 때 각 지점의 값을 계산합니다. 사용되는 기본 저장소는 없습니다.
+<span data-ttu-id="6656f-168">Mandelbrot 집합은 실수 값의 모든 (x, y) 좌표에서 값을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-168">The Mandelbrot Set defines values at every (x,y) coordinate for real number values.</span></span>
+<span data-ttu-id="6656f-169">그러면 무한 개수의 값을 포함할 수 있는 사전이 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-169">That defines a dictionary that could contain an infinite number of values.</span></span> <span data-ttu-id="6656f-170">따라서 집합 뒤에는 저장소가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-170">Therefore, there is no storage behind the set.</span></span> <span data-ttu-id="6656f-171">대신, 이 클래스는 코드에서 `get` 접근자를 호출할 때 각 지점의 값을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-171">Instead, this class computes the value for each point when code calls the `get` accessor.</span></span> <span data-ttu-id="6656f-172">사용되는 기본 저장소는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-172">There's no underlying storage used.</span></span>
 
-인덱서가 서로 다른 형식의 여러 인수를 사용하는 인덱서의 마지막 사용 방법을 살펴보겠습니다. 기록 온도 데이터를 관리하는 프로그램을 가정합니다. 이 인덱서는 도시 및 날짜를 사용하여 해당 위치의 상한 및 하한 온도를 설정하거나 가져옵니다.
+<span data-ttu-id="6656f-173">인덱서가 서로 다른 형식의 여러 인수를 사용하는 인덱서의 마지막 사용 방법을 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-173">Let's examine one last use of indexers, where the indexer takes multiple arguments of different types.</span></span> <span data-ttu-id="6656f-174">기록 온도 데이터를 관리하는 프로그램을 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-174">Consider a program that manages historical temperature data.</span></span> <span data-ttu-id="6656f-175">이 인덱서는 도시 및 날짜를 사용하여 해당 위치의 상한 및 하한 온도를 설정하거나 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-175">This indexer uses a city and a date to set or get the high and low temperatures for that location:</span></span>
 
 ```csharp
 using DateMeasurements = 
@@ -317,22 +315,21 @@ public class HistoricalWeatherData
 }
 ```
 
-이 예제에서는 도시(`string`) 및 날짜(`DateTime`)의 두 인수에 대한 날씨 데이터를 매핑하는 인덱서를 만듭니다. 내부 저장소는 두 개의 `Dictionary` 클래스를 사용하여 2차원 사전을 나타냅니다. 공용 API는 더 이상 기본 저장소를 나타내지 않습니다. 대신, 기본 저장소가 다양한 핵심 컬렉션 형식을 사용해야 하는 경우에도 인덱서의 언어 기능을 사용하여 추상화를 나타내는 공용 인터페이스를 만들 수 있습니다.
+<span data-ttu-id="6656f-176">이 예제에서는 도시(`string`) 및 날짜(`DateTime`)의 두 인수에 대한 날씨 데이터를 매핑하는 인덱서를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-176">This example creates an indexer that maps weather data on two different arguments: a city (represented by a `string`) and a date (represented by a `DateTime`).</span></span> <span data-ttu-id="6656f-177">내부 저장소는 두 개의 `Dictionary` 클래스를 사용하여 2차원 사전을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-177">The internal storage uses two `Dictionary` classes to represent the two-dimensional dictionary.</span></span> <span data-ttu-id="6656f-178">공용 API는 더 이상 기본 저장소를 나타내지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-178">The public API no longer represents the underlying storage.</span></span> <span data-ttu-id="6656f-179">대신, 기본 저장소가 다양한 핵심 컬렉션 형식을 사용해야 하는 경우에도 인덱서의 언어 기능을 사용하여 추상화를 나타내는 공용 인터페이스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-179">Rather, the language features of indexers enables you to create a public interface that represents your abstraction, even though the underlying storage must use different core collection types.</span></span>
 
-일부 개발자에게 친숙하지 않을 수 있는 이 코드의 두 부분이 있습니다. 다음 두 개의 `using` 문을 살펴보세요.
+<span data-ttu-id="6656f-180">일부 개발자에게 친숙하지 않을 수 있는 이 코드의 두 부분이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-180">There are two parts of this code that may be unfamiliar to some developers.</span></span> <span data-ttu-id="6656f-181">다음 두 개의 `using` 문을 살펴보세요.</span><span class="sxs-lookup"><span data-stu-id="6656f-181">These two `using` statements:</span></span>
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-두 문은 생성된 제네릭 형식의 *별칭*을 만듭니다. 이러한 문을 통해 나중에 코드에서 `Dictionary<DateTime, Measurements>` 및 `Dictionary<string, Dictionary<DateTime, Measurements> >`의 제네릭 구문이 아니라 더 설명적인 `DateMeasurements` 및 `CityDateMeasurements` 이름을 사용할 수 있습니다. 이 구문의 경우 `=` 기호의 오른쪽에 정규화된 형식 이름을 사용해야 합니다.
+<span data-ttu-id="6656f-182">두 문은 생성된 제네릭 형식의 *별칭*을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-182">create an *alias* for a constructed generic type.</span></span> <span data-ttu-id="6656f-183">이러한 문을 통해 나중에 코드에서 `Dictionary<DateTime, Measurements>` 및 `Dictionary<string, Dictionary<DateTime, Measurements> >`의 제네릭 구문이 아니라 더 설명적인 `DateMeasurements` 및 `CityDateMeasurements` 이름을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-183">Those statements enable the code later to use the more descriptive `DateMeasurements` and `CityDateMeasurements` names instead of the generic construction of `Dictionary<DateTime, Measurements>` and `Dictionary<string, Dictionary<DateTime, Measurements> >`.</span></span> <span data-ttu-id="6656f-184">이 구문의 경우 `=` 기호의 오른쪽에 정규화된 형식 이름을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-184">This construct does require using the fully qualified type names on the right side of the `=` sign.</span></span>
 
-두 번째 방법은 컬렉션에 인덱싱하는 데 사용되는 `DateTime` 개체의 시간 부분을 제거하는 것입니다. .NET Framework는 날짜 전용 형식을 포함하지 않습니다.
-개발자는 `DateTime` 형식을 사용하지만 `Date` 속성을 사용하여 해당 날짜의 `DateTime` 개체가 모두 같도록 합니다.
+<span data-ttu-id="6656f-185">두 번째 방법은 컬렉션에 인덱싱하는 데 사용되는 `DateTime` 개체의 시간 부분을 제거하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-185">The second technique is to strip off the time portions of any `DateTime` object used to index into the collections.</span></span> <span data-ttu-id="6656f-186">.NET Framework는 날짜 전용 형식을 포함하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-186">The .NET framework does not include a Date only type.</span></span>
+<span data-ttu-id="6656f-187">개발자는 `DateTime` 형식을 사용하지만 `Date` 속성을 사용하여 해당 날짜의 `DateTime` 개체가 모두 같도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-187">Developers use the `DateTime` type, but use the `Date` property to ensure that any `DateTime` object from that day are equal.</span></span>
 
-## <a name="summing-up"></a>요약
+## <a name="summing-up"></a><span data-ttu-id="6656f-188">요약</span><span class="sxs-lookup"><span data-stu-id="6656f-188">Summing Up</span></span>
 
-해당 속성이 단일 값이 아니라 각 개별 항목이 인수 집합으로 식별되는 값 컬렉션을 나타내는, 속성과 유사한 요소가 클래스에 있을 경우 항상 인덱서를 만들어야 합니다. 이러한 인수는 참조해야 하는 컬렉션의 항목을 고유하게 식별할 수 있습니다.
-인덱서는 [속성](properties.md) 개념을 확장하며, 이 경우 멤버가 클래스 외부의 데이터 항목처럼 처리되지만 부가적으로 메서드처럼 처리됩니다. 인덱서를 사용하면 인수가 항목 집합을 나타내는 속성에서 단일 항목을 찾을 수 있습니다.
-
+<span data-ttu-id="6656f-189">해당 속성이 단일 값이 아니라 각 개별 항목이 인수 집합으로 식별되는 값 컬렉션을 나타내는, 속성과 유사한 요소가 클래스에 있을 경우 항상 인덱서를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-189">You should create indexers anytime you have a property-like element in your class where that property represents not a single value, but rather a collection of values where each individual item is identified by a set of arguments.</span></span> <span data-ttu-id="6656f-190">이러한 인수는 참조해야 하는 컬렉션의 항목을 고유하게 식별할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-190">Those arguments can uniquely identify which item in the collection should be referenced.</span></span>
+<span data-ttu-id="6656f-191">인덱서는 [속성](properties.md) 개념을 확장하며, 이 경우 멤버가 클래스 외부의 데이터 항목처럼 처리되지만 부가적으로 메서드처럼 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-191">Indexers extend the concept of [properties](properties.md), where a member is treated like a data item from outside the class, but like a method on the side.</span></span> <span data-ttu-id="6656f-192">인덱서를 사용하면 인수가 항목 집합을 나타내는 속성에서 단일 항목을 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6656f-192">Indexers allow arguments to find a single item in a property that represents a set of items.</span></span>

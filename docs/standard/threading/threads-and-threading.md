@@ -1,100 +1,103 @@
 ---
-title: "Threads and Threading | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "multiple threads"
-  - "threading [.NET Framework]"
-  - "threading [.NET Framework], multiple threads"
+title: "스레드 및 스레딩"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple threads
+- threading [.NET Framework]
+- threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b57cac34009e13c27c6d34a0ab402f9ecbe08305
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Threads and Threading
-운영 체제에서는 프로세스를 사용하여 실행 중인 다양한 응용 프로그램을 구분합니다.  스레드는 운영 체제에서 프로세서 시간을 할당하는 기본 단위로 두 개 이상의 스레드가 해당 프로세스 내에서 코드를 실행할 수 있습니다.  각 스레드에서는 예외 처리기와 스케줄링 우선 순위, 시스템에서 일정을 잡을 때까지 스레드 컨텍스트를 저장하는 데 사용되는 구조 집합을 유지 관리합니다.  스레드 컨텍스트는 스레드의 CPU 레지스터와 스택 집합을 비롯하여 실행을 다시 시작하기 위해 스레드에서 필요한 모든 정보를 스레드 호스트 프로세스의 주소 공간에 포함합니다.  
+# <a name="threads-and-threading"></a><span data-ttu-id="826b1-102">스레드 및 스레딩</span><span class="sxs-lookup"><span data-stu-id="826b1-102">Threads and Threading</span></span>
+<span data-ttu-id="826b1-103">운영 체제를 다른 실행 중인 다른 응용 프로그램 프로세스를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-103">Operating systems use processes to separate the different applications that they are executing.</span></span> <span data-ttu-id="826b1-104">스레드는 운영 체제를 있는 프로세서 시간을 할당 하는 기본 단위 및 둘 이상의 스레드가 해당 프로세스 내에서 코드를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-104">Threads are the basic unit to which an operating system allocates processor time, and more than one thread can be executing code inside that process.</span></span> <span data-ttu-id="826b1-105">각 스레드 예외 처리기, 일정 예약 우선 순위 및 작업이 예약 되는 때까지 스레드 컨텍스트를 저장 하는 시스템에서 사용 하는 구조 집합을 유지 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-105">Each thread maintains exception handlers, a scheduling priority, and a set of structures the system uses to save the thread context until it is scheduled.</span></span> <span data-ttu-id="826b1-106">스레드 컨텍스트 스레드가 스레드 호스트 프로세스의 주소 공간에서의 CPU 레지스터와 스택 스레드의 집합을 포함 하 여 실행을 다시 시작 하는 데 필요한 모든 정보가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-106">The thread context includes all the information the thread needs to seamlessly resume execution, including the thread's set of CPU registers and stack, in the address space of the thread's host process.</span></span>  
   
- .NET Framework는 <xref:System.AppDomain?displayProperty=fullName>으로 표시되며 응용 프로그램 도메인이라는 간단한 관리되는 하위 프로세스로 운영 체제 프로세스를 분할합니다.  <xref:System.Threading.Thread?displayProperty=fullName>로 표시되는 하나 이상의 관리되는 스레드는 동일한 관리되는 프로세스 내의 하나 이상의 응용 프로그램 도메인에서 실행될 수 있습니다.  각 응용 프로그램 도메인은 단일 스레드로 시작되지만 해당 응용 프로그램 도메인의 코드는 추가 응용 프로그램 도메인과 추가 스레드를 만들 수 있습니다.  따라서 관리되는 스레드가 동일한 관리되는 프로세스 내의 응용 프로그램 도메인 사이를 자유롭게 이동할 수 있습니다. 한 스레드만 여러 응용 프로그램 도메인 사이를 이동하는 경우도 있습니다.  
+ <span data-ttu-id="826b1-107">.NET Framework를 추가 응용 프로그램 도메인을 나타내는 호출 하는 간단한 관리 되는 하위 나눌 운영 체제 프로세스 <xref:System.AppDomain?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-107">The .NET Framework further subdivides an operating system process into lightweight managed subprocesses, called application domains, represented by <xref:System.AppDomain?displayProperty=nameWithType>.</span></span> <span data-ttu-id="826b1-108">하나 이상의 관리 되는 스레드 (나타내는 <xref:System.Threading.Thread?displayProperty=nameWithType>) 동일한 관리 되는 프로세스 내에서 응용 프로그램 도메인의 하나 이상을 수에서 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-108">One or more managed threads (represented by <xref:System.Threading.Thread?displayProperty=nameWithType>) can run in one or any number of application domains within the same managed process.</span></span> <span data-ttu-id="826b1-109">각 응용 프로그램 도메인은 단일 스레드 시작 하지만 해당 응용 프로그램 도메인에 코드 추가 응용 프로그램 도메인과 추가 스레드를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-109">Although each application domain is started with a single thread, code in that application domain can create additional application domains and additional threads.</span></span> <span data-ttu-id="826b1-110">결과 관리 되는 스레드; 관리 되는 동일한 프로세스 내 응용 프로그램 도메인 간에 자유롭게 이동할 수 있습니다. 여러 응용 프로그램 도메인 간에 이동 하는 스레드 하나만 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-110">The result is that a managed thread can move freely between application domains inside the same managed process; you might have only one thread moving among several application domains.</span></span>  
   
- 선점 멀티태스킹을 지원하는 운영 체제는 여러 프로세스에서 여러 스레드를 동시에 실행하는 효과를 냅니다.  각 스레드에 프로세서 시간 간격을 차례로 할당하여 프로세서 시간을 필요로 하는 스레드에 사용 가능한 프로세서 시간을 분배하면 가능합니다.  현재 실행 중인 스레드는 해당 시간 간격이 경과되면 일시 중단되고 다른 스레드의 실행이 다시 시작됩니다.  시스템이 한 스레드에서 다른 스레드로 전환될 때 선점 스레드의 스레드 컨텍스트를 저장하고 스레드 큐에 저장된 다음 스레드의 스레드 컨텍스트를 다시 로드합니다.  
+ <span data-ttu-id="826b1-111">운영 체제에서 지 원하는 선점형 멀티태스킹을 여러 프로세스에서 여러 스레드에서 동시에 실행할의 효과 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-111">An operating system that supports preemptive multitasking creates the effect of simultaneous execution of multiple threads from multiple processes.</span></span> <span data-ttu-id="826b1-112">이렇게 하기 필요로 하는 스레드 간에 사용 가능한 프로세서 시간을 분할 한 번에 하나씩 각 스레드에 프로세서 시간 조각 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-112">It does this by dividing the available processor time among the threads that need it, allocating a processor time slice to each thread one after another.</span></span> <span data-ttu-id="826b1-113">시간 간격이 경과 되 고 다른 스레드가 실행이 다시 시작 하는 경우 현재 실행 중인 스레드의 일시 중단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-113">The currently executing thread is suspended when its time slice elapses, and another thread resumes running.</span></span> <span data-ttu-id="826b1-114">시스템에서 다른 스레드 간에 전환 되는 경우 선점 스레드의 스레드 컨텍스트를 저장 하 고 스레드의 스레드 큐에 저장 된 스레드 컨텍스트를 다시 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-114">When the system switches from one thread to another, it saves the thread context of the preempted thread and reloads the saved thread context of the next thread in the thread queue.</span></span>  
   
- 시간 간격의 길이는 운영 체제와 프로세서에 따라 달라집니다.  각 시간 간격이 짧기 때문에 프로세서가 한 개만 있더라도 여러 스레드가 동시에 실행되는 것처럼 보입니다.  실제로 다중 프로세서 시스템의 경우 실행 가능한 스레드가 사용 가능한 프로세서에 분배됩니다.  
+ <span data-ttu-id="826b1-115">시간 간격의 길이 운영 체제 및 프로세서에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-115">The length of the time slice depends on the operating system and the processor.</span></span> <span data-ttu-id="826b1-116">각 시간 조각은 작은 이기 때문에 프로세서가 하나 밖에 없는 경우에 여러 스레드가 같은 시간에 실행 되는 것 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-116">Because each time slice is small, multiple threads appear to be executing at the same time, even if there is only one processor.</span></span> <span data-ttu-id="826b1-117">이 경우 실제로 다중 프로세서 시스템에서 실행 가능한 스레드가 사용 가능한 프로세서에 분산 되어 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-117">This is actually the case on multiprocessor systems, where the executable threads are distributed among the available processors.</span></span>  
   
-## 다중 스레드를 사용해야 하는 경우  
- 사용자 상호 작용이 필요한 소프트웨어는 다양한 사용자 경험을 제공하기 위해 최대한 빨리 사용자 동작에 반응해야 합니다.  동시에 사용자에게 데이터를 표시하는 데 필요한 계산을 최대한 빨리 수행해야 합니다.  응용 프로그램에서 실행 스레드를 한 개만 사용할 경우 ASP.NET을 사용하여 만든 [.NET Framework Remoting](http://msdn.microsoft.com/ko-kr/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)이나 [XML Web services](http://msdn.microsoft.com/ko-kr/1e64af78-d705-4384-b08d-591a45f4379c)를 [비동기 프로그래밍](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)과 결합하여 다른 컴퓨터의 처리 시간을 함께 사용함으로써 사용자에 대한 응답성을 향상시키고 응용 프로그램의 데이터 처리 시간을 줄일 수 있습니다.  프로세서 사용이 많은 입출력 작업을 수행할 때 I\/O 완료 포트를 사용하여 응용 프로그램의 응답성을 향상시킬 수 있습니다.  
+## <a name="when-to-use-multiple-threads"></a><span data-ttu-id="826b1-118">여러 스레드를 사용 하는 경우</span><span class="sxs-lookup"><span data-stu-id="826b1-118">When To Use Multiple Threads</span></span>  
+ <span data-ttu-id="826b1-119">사용자 상호 작용에 필요한 소프트웨어를 사용자의 활동에 풍부한 사용자 환경을 제공 하기 위해 최대한 빨리 반응 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-119">Software that requires user interaction must react to the user's activities as rapidly as possible to provide a rich user experience.</span></span> <span data-ttu-id="826b1-120">그러나 같은 시간에 사용 하기에 가능한 한 빠르게 사용자에 게 데이터를 표시 하는 데 필요한 계산이 수행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-120">At the same time, however, it must do the calculations necessary to present data to the user as fast as possible.</span></span> <span data-ttu-id="826b1-121">결합할 수 하나의 스레드 실행을 사용 하는 사용자 응용 프로그램 [비동기 프로그래밍](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) 와[.NET Framework remoting](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) 또는 [XML Web services](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c) ASP를 사용 하 여 만든 .NET 사용자 및 응용 프로그램의 데이터 처리 시간이 감소에 대 한 응답성 향상을 위해 직접의 추가적 다른 컴퓨터의 처리 시간을 사용 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-121">If your application uses only one thread of execution, you can combine [asynchronous programming](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) with[.NET Framework remoting](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) or [XML Web services](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c) created using ASP.NET to use the processing time of other computers in addition to that of your own to increase responsiveness to the user and decrease the data processing time of your application.</span></span> <span data-ttu-id="826b1-122">많은 입/출력 작업을 수행 하는 경우에 응용 프로그램의 응답성 향상을 위해 I/O 완료 포트를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-122">If you are doing intensive input/output work, you can also use I/O completion ports to increase your application's responsiveness.</span></span>  
   
-### 다중 스레드의 장점  
- 두 개 이상의 스레드를 사용하는 것은 사용자에 대한 응답성을 향상시키고 동시에 작업을 완료시키기 위해 필요한 데이터를 처리할 수 있는 강력한 기술입니다.  프로세서가 한 개인 컴퓨터의 경우, 다중 스레드에서 사용자 이벤트 사이의 짧은 시간 간격을 이용하여 백그라운드에서 데이터를 처리하면 이러한 효과를 낼 수 있습니다.  예를 들어, 사용자가 스프레드시트를 편집하는 동안 다른 스레드에서 해당 스프레드시트의 다른 부분을 다시 계산할 수 있습니다.  
+### <a name="advantages-of-multiple-threads"></a><span data-ttu-id="826b1-123">여러 스레드에서의 장점</span><span class="sxs-lookup"><span data-stu-id="826b1-123">Advantages of Multiple Threads</span></span>  
+ <span data-ttu-id="826b1-124">그러나 둘 이상의 스레드를 사용 하는 사용자에 대 한 응답성을 향상 시키고 작업을 거의 동시에 수행 하는 데 필요한 데이터를 처리할 수 하는 가장 강력한 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-124">Using more than one thread, however, is the most powerful technique available to increase responsiveness to the user and process the data necessary to get the job done at almost the same time.</span></span> <span data-ttu-id="826b1-125">프로세서가 두 개 있는 컴퓨터에서는 여러 스레드 백그라운드에서 데이터를 처리 하는 사용자 이벤트 사이의 시간 간격을 활용 하기 위해 이러한 효과 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-125">On a computer with one processor, multiple threads can create this effect, taking advantage of the small periods of time in between user events to process the data in the background.</span></span> <span data-ttu-id="826b1-126">예를 들어 사용자는 다른 스레드가 동일한 응용 프로그램 내 스프레드시트의 다른 부분 다시 계산 하는 동안 스프레드시트를 편집할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-126">For example, a user can edit a spreadsheet while another thread is recalculating other parts of the spreadsheet within the same application.</span></span>  
   
- 응용 프로그램을 수정하지 않고 두 개 이상의 프로세서를 사용하는 컴퓨터에서 실행하더라도 사용자 만족도가 훨씬 향상됩니다.  단일 응용 프로그램 도메인에서 다중 스레드를 사용하여 다음 작업을 수행할 수 있습니다.  
+ <span data-ttu-id="826b1-127">수정 하지 않고 동일한 응용 프로그램이 여러 개의 프로세서가 있는 컴퓨터에서 실행 하는 경우 사용자 만족도 훨씬 향상 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-127">Without modification, the same application would dramatically increase user satisfaction when run on a computer with more than one processor.</span></span> <span data-ttu-id="826b1-128">단일 응용 프로그램 도메인 여러 스레드를 사용 하 여 다음 작업을 수행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-128">Your single application domain could use multiple threads to accomplish the following tasks:</span></span>  
   
--   네트워크를 통해 웹 서버 및 데이터베이스와 통신  
+-   <span data-ttu-id="826b1-129">웹 서버와 데이터베이스에는 네트워크를 통해 통신 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-129">Communicate over a network, to a Web server, and to a database.</span></span>  
   
--   시간이 오래 걸리는 작업 수행  
+-   <span data-ttu-id="826b1-130">많은 양의 시간을 사용 하는 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-130">Perform operations that take a large amount of time.</span></span>  
   
--   우선 순위가 다른 작업 구분.  예를 들어, 우선 순위가 높은 스레드는 시간 위험 작업을 관리하고 우선 순위가 낮은 스레드는 다른 작업을 수행합니다.  
+-   <span data-ttu-id="826b1-131">우선 순위가 다른 작업을 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-131">Distinguish tasks of varying priority.</span></span> <span data-ttu-id="826b1-132">예를 들어 높은 우선 순위의 스레드 시간 위험 작업을 관리 하 고 우선 순위가 낮은 스레드가 다른 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-132">For example, a high-priority thread manages time-critical tasks, and a low-priority thread performs other tasks.</span></span>  
   
--   백그라운드 작업에 시간을 할당하면서 사용자 인터페이스의 응답성  
+-   <span data-ttu-id="826b1-133">응답성 시간 백그라운드 작업을 할당 하는 동안 사용자 인터페이스를 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-133">Allow the user interface to remain responsive, while allocating time to background tasks.</span></span>  
   
-### 다중 스레드의 단점  
- 가능한 스레드를 적게 사용하여 운영 체제 리소스 사용을 최소화하고 성능을 향상시키는 것이 좋습니다.  스레딩에는 응용 프로그램을 디자인할 때 고려해야 할 리소스 요구 사항과 잠재적 충돌이 있습니다.  리소스 요구 사항은 다음과 같습니다.  
+### <a name="disadvantages-of-multiple-threads"></a><span data-ttu-id="826b1-134">여러 스레드에서의 단점</span><span class="sxs-lookup"><span data-stu-id="826b1-134">Disadvantages of Multiple Threads</span></span>  
+ <span data-ttu-id="826b1-135">가능한, 하므로 운영 체제 리소스 사용을 최소화 하 고 성능을 향상으로 적은 수의 스레드를 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-135">It is recommended that you use as few threads as possible, thereby minimizing the use of operating-system resources and improving performance.</span></span> <span data-ttu-id="826b1-136">응용 프로그램을 설계할 때 고려해 야 할 리소스 요구 사항과 잠재적 충돌에 스레딩 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-136">Threading also has resource requirements and potential conflicts to be considered when designing your application.</span></span> <span data-ttu-id="826b1-137">리소스 요구 사항은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-137">The resource requirements are as follows:</span></span>  
   
--   프로세스, **AppDomain** 개체 및 스레드에서 필요한 컨텍스트 정보는 시스템 메모리에 저장됩니다.  따라서 만들 수 있는 프로세스, **AppDomain** 개체 및 스레드의 수는 사용 가능한 메모리에 의해 제한됩니다.  
+-   <span data-ttu-id="826b1-138">시스템 프로세스에서 필요한 컨텍스트 정보에 대 한 메모리 소모 **AppDomain** 개체 및 스레드입니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-138">The system consumes memory for the context information required by processes, **AppDomain** objects, and threads.</span></span> <span data-ttu-id="826b1-139">숫자의 프로세스를 따라서 **AppDomain** 개체 및 스레드를 만들 수 있는 사용 가능한 메모리 크기로 제한 됩니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-139">Therefore, the number of processes, **AppDomain** objects, and threads that can be created is limited by available memory.</span></span>  
   
--   많은 수의 스레드를 관리하려면 상당한 프로세서 시간이 소비됩니다.  스레드가 너무 많으면 대부분의 스레드에서 작업이 크게 진행되지 못합니다.  현재 스레드가 대부분 한 프로세스에 있으면 다른 프로세스에 있는 스레드의 일정은 자주 잡히지 않습니다.  
+-   <span data-ttu-id="826b1-140">많은 수의 스레드는 추적 프로세서 시간이 많이 소요 됩니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-140">Keeping track of a large number of threads consumes significant processor time.</span></span> <span data-ttu-id="826b1-141">너무 많은 스레드가 있으면 그 중 대부분은 크게 진행 되지 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-141">If there are too many threads, most of them will not make significant progress.</span></span> <span data-ttu-id="826b1-142">현재 스레드가 대부분 한 프로세스에 있는 다른 프로세스에서 스레드 덜 자주 예약 됩니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-142">If most of the current threads are in one process, threads in other processes are scheduled less frequently.</span></span>  
   
--   많은 스레드로 코드 실행을 제어하면 복잡하고 버그가 많이 발생할 수 있습니다.  
+-   <span data-ttu-id="826b1-143">여러 스레드를 사용 하 여 코드 실행을 제어은 복잡 하며, 여러 버그의 원인이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-143">Controlling code execution with many threads is complex, and can be a source of many bugs.</span></span>  
   
--   스레드를 삭제하려면 삭제 후 발생하게 될 문제와 그 처리 방법에 대해 알아야 합니다.  
+-   <span data-ttu-id="826b1-144">스레드 삭제 발생 하 게 될 알고 있으면 하 고 이러한 문제를 처리 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-144">Destroying threads requires knowing what could happen and handling those issues.</span></span>  
   
- 리소스에 공유 액세스를 제공하면 충돌이 생길 수 있습니다.  충돌을 피하려면 공유 리소스에 대한 액세스를 제어하거나 동기화해야 합니다.  같거나 다른 응용 프로그램 도메인에서 액세스를 제대로 동기화하지 못하면, 교착 상태 또는 경쟁 상태와 같은 문제가 발생할 수 있습니다. 교착 상태에 빠지면 두 개의 스레드가 서로 완료되기를 기다리면서 모두 응답을 멈추게 되고, 경쟁 상태에 빠지면 두 이벤트의 타이밍에 대한 예기치 못한 심각한 종속성으로 인해 비정상적인 결과가 발생할 수 있습니다.  시스템에서 다중 스레드 간의 리소스 공유를 조정하는 데 사용되는 동기화 개체를 제공합니다.  스레드 수를 줄이면 리소스를 동기화하기가 더 쉽습니다.  
+ <span data-ttu-id="826b1-145">리소스에 대 한 공유 액세스를 제공 하 충돌이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-145">Providing shared access to resources can create conflicts.</span></span> <span data-ttu-id="826b1-146">충돌을 방지 하려면 동기화 또는 공유 리소스에 액세스를 제어 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-146">To avoid conflicts, you must synchronize, or control the access to, shared resources.</span></span> <span data-ttu-id="826b1-147">제대로 같거나 다른 응용 프로그램 도메인에 대 한 액세스를 동기화 하지 않으면 (두 개의 스레드 각를 기다리는 동안 완료를 위해 다른 응답 중지) 교착 상태 같은 문제가 발생할 수 있습니다 (비정상적인 결과 때문에 발생 하는 경우 경쟁 조건 예기치 않은 중요에 대 한 종속성 두 이벤트의 타이밍).</span><span class="sxs-lookup"><span data-stu-id="826b1-147">Failure to synchronize access properly (in the same or different application domains) can lead to problems such as deadlocks (in which two threads stop responding while each waits for the other to complete) and race conditions (when an anomalous result occurs due to an unexpected critical dependence on the timing of two events).</span></span> <span data-ttu-id="826b1-148">시스템은 리소스 여러 스레드 간 공유를 조정에 사용할 수 있는 동기화 개체를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-148">The system provides synchronization objects that can be used to coordinate resource sharing among multiple threads.</span></span> <span data-ttu-id="826b1-149">스레드 수를 줄이면 쉽게 자원을 동기화 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-149">Reducing the number of threads makes it easier to synchronize resources.</span></span>  
   
- 동기화가 필요한 리소스는 다음과 같습니다.  
+ <span data-ttu-id="826b1-150">동기화를 필요로 하는 리소스는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-150">Resources that require synchronization include:</span></span>  
   
--   시스템 리소스\(예: 통신 포트\)  
+-   <span data-ttu-id="826b1-151">시스템 리소스 (예: 통신 포트)입니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-151">System resources (such as communications ports).</span></span>  
   
--   여러 프로세스에서 공유하는 리소스\(예: 파일 처리\)  
+-   <span data-ttu-id="826b1-152">여러 프로세스 (예: 파일 핸들)에서 공유 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-152">Resources shared by multiple processes (such as file handles).</span></span>  
   
--   다중 스레드에서 액세스하는 단일 응용 프로그램 도메인의 리소스\(예: 전역, 정적, 인스턴스 필드\)  
+-   <span data-ttu-id="826b1-153">단일 응용 프로그램 도메인의 리소스 (전역, 정적 등 인스턴스 필드) 알려주기 위해 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-153">The resources of a single application domain (such as global, static, and instance fields) accessed by multiple threads.</span></span>  
   
-### 스레딩 및 응용 프로그램 디자인  
- 일반적으로 <xref:System.Threading.ThreadPool> 클래스를 사용하면 다른 스레드를 차단하지 않고 작업 스케줄링이 필요 없는 간단한 작업에 대해 여러 스레드를 매우 쉽게 처리할 수 있습니다.  하지만 다음과 같이 사용자 고유의 스레드를 만들어야 하는 여러 가지 이유가 있습니다.  
+### <a name="threading-and-application-design"></a><span data-ttu-id="826b1-154">스레딩 및 응용 프로그램 디자인</span><span class="sxs-lookup"><span data-stu-id="826b1-154">Threading and Application Design</span></span>  
+ <span data-ttu-id="826b1-155">일반적으로 사용 하 여 <xref:System.Threading.ThreadPool> 클래스는 다른 스레드를 차단 하지는 및 작업 스케줄링이 필요 하지 비교적 짧은 작업에 대 한 여러 스레드를 처리 하는 가장 쉬운 방법은 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-155">In general, using the <xref:System.Threading.ThreadPool> class is the easiest way to handle multiple threads for relatively short tasks that will not block other threads and when you do not expect any particular scheduling of the tasks.</span></span> <span data-ttu-id="826b1-156">그러나 여러 가지 이유로 고유한 스레드를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-156">However, there are a number of reasons to create your own threads:</span></span>  
   
--   작업에 특정 우선 순위를 지정해야 할 경우  
+-   <span data-ttu-id="826b1-157">특정 우선 순위를 가지도록 작업 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-157">If you need a task to have a particular priority.</span></span>  
   
--   실행 시간이 오래 걸려서 다른 작업을 차단해야 할 경우  
+-   <span data-ttu-id="826b1-158">있는 경우 작업 수를 실행 하는 시간이 오래 (다른 작업 차단).</span><span class="sxs-lookup"><span data-stu-id="826b1-158">If you have a task that might run a long time (and therefore block other tasks).</span></span>  
   
--   모든 **ThreadPool** 스레드는 다중 스레드 아파트에 있는데 일부 스레드를 단일 스레드 아파트에 두어야 하는 경우  
+-   <span data-ttu-id="826b1-159">단일 스레드 아파트에 스레드를 배치 해야 하는 경우 (모든 **ThreadPool** 스레드는 다중 스레드 아파트에).</span><span class="sxs-lookup"><span data-stu-id="826b1-159">If you need to place threads into a single-threaded apartment (all **ThreadPool** threads are in the multithreaded apartment).</span></span>  
   
--   스레드에 안정적인 ID가 필요할 경우.  예를 들어, 스레드를 중단하거나 일시 중단, 이름으로 검색할 경우 전용 스레드를 사용해야 합니다.  
+-   <span data-ttu-id="826b1-160">스레드와 연결 된 안정적인 id가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-160">If you need a stable identity associated with the thread.</span></span> <span data-ttu-id="826b1-161">예를 들어 해당 스레드를 중단, 일시 중단, 또는 이름으로 검색 하는 전용된 스레드를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-161">For example, you should use a dedicated thread to abort that thread, suspend it, or discover it by name.</span></span>  
   
--   사용자 인터페이스와 상호 작용하는 백그라운드 스레드를 실행해야 하는 경우 .NET Framework 버전 2.0에서는 이벤트를 사용하여 사용자 인터페이스 스레드로 크로스 스레드 마샬링과 통신하는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 제공합니다.  
+-   <span data-ttu-id="826b1-162">.NET Framework 버전 2.0에서는 사용자 인터페이스와 상호 작용 하는 백그라운드 스레드를 실행 해야 하는 경우는 <xref:System.ComponentModel.BackgroundWorker> 이벤트를 사용 하 여 사용자 인터페이스 스레드로 마샬링과 스레드 간 통신 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-162">If you need to run background threads that interact with the user interface, the .NET Framework version 2.0 provides a <xref:System.ComponentModel.BackgroundWorker> component that communicates using events, with cross-thread marshaling to the user-interface thread.</span></span>  
   
-### 스레딩 및 예외 사항  
- 스레드에서는 예외가 처리됩니다.  일반적으로 백그라운드 스레드를 포함한 스레드의 처리되지 않은 예외로 인해 프로세스가 종료됩니다.  다음은 이 규칙의 세 가지 예외 사항입니다.  
+### <a name="threading-and-exceptions"></a><span data-ttu-id="826b1-163">스레딩 및 예외</span><span class="sxs-lookup"><span data-stu-id="826b1-163">Threading and Exceptions</span></span>  
+ <span data-ttu-id="826b1-164">스레드는 예외가 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-164">Do handle exceptions in threads.</span></span> <span data-ttu-id="826b1-165">스레드의 백그라운드 스레드를 포함 하는 처리 되지 않은 예외는 일반적으로 프로세스를 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-165">Unhandled exceptions in threads, even background threads, generally terminate the process.</span></span> <span data-ttu-id="826b1-166">이 규칙에는 다음 세 가지 예외 사항이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-166">There are three exceptions to this rule:</span></span>  
   
--   <xref:System.Threading.Thread.Abort%2A>가 취소되었으므로 스레드에서 <xref:System.Threading.ThreadAbortException>이 throw됩니다.  
+-   <span data-ttu-id="826b1-167">A <xref:System.Threading.ThreadAbortException> 없으므로 스레드에서 throw <xref:System.Threading.Thread.Abort%2A> 호출 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-167">A <xref:System.Threading.ThreadAbortException> is thrown in a thread because <xref:System.Threading.Thread.Abort%2A> was called.</span></span>  
   
--   응용 프로그램 도메인이 언로드 중이므로 <xref:System.AppDomainUnloadedException>이 throw됩니다.  
+-   <span data-ttu-id="826b1-168"><xref:System.AppDomainUnloadedException> 응용 프로그램 도메인이 언로드되고 있으므로 스레드에 throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-168">An <xref:System.AppDomainUnloadedException> is thrown in a thread because the application domain is being unloaded.</span></span>  
   
--   공용 언어 런타임 또는 호스트 프로세스에서 스레드를 종료합니다.  
+-   <span data-ttu-id="826b1-169">공용 언어 런타임 또는 호스트 프로세스에서 스레드를 종료합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-169">The common language runtime or a host process terminates the thread.</span></span>  
   
- 자세한 내용은 [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md)을 참조하십시오.  
+ <span data-ttu-id="826b1-170">자세한 내용은 참조 [관리 되는 스레드의 예외](../../../docs/standard/threading/exceptions-in-managed-threads.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-170">For more information, see [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md).</span></span>  
   
 > [!NOTE]
->  .NET Framework 버전 1.0 및 1.1에서 공용 언어 런타임은 스레드 풀 스레드 등에서 일부 예외를 포착합니다.  이렇게 하면 응용 프로그램 상태가 손상되어 결국 응용 프로그램이 중단될 수 있고, 이에 따라 디버깅이 어려워질 수 있습니다.  
+>  <span data-ttu-id="826b1-171">.NET Framework 버전 1.0 및 1.1에서는 공용 언어 런타임 스레드 풀 스레드의 예를 들어 몇 가지 예외를 포착합니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-171">In the .NET Framework versions 1.0 and 1.1, the common language runtime silently traps some exceptions, for example in thread pool threads.</span></span> <span data-ttu-id="826b1-172">이 수 응용 프로그램 상태를 손상 하 고 결국 응용 프로그램이 중단 되 디버깅이 어려워질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826b1-172">This may corrupt application state and eventually cause applications to hang, which might be very difficult to debug.</span></span>  
   
-## 참고 항목  
- <xref:System.Threading.ThreadPool>   
- <xref:System.ComponentModel.BackgroundWorker>   
- [Synchronizing Data for Multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)   
- [The Managed Thread Pool](../../../docs/standard/threading/the-managed-thread-pool.md)
+## <a name="see-also"></a><span data-ttu-id="826b1-173">참고 항목</span><span class="sxs-lookup"><span data-stu-id="826b1-173">See Also</span></span>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ [<span data-ttu-id="826b1-174">다중 스레딩을 위한 데이터 동기화</span><span class="sxs-lookup"><span data-stu-id="826b1-174">Synchronizing Data for Multithreading</span></span>](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ [<span data-ttu-id="826b1-175">관리되는 스레드 풀</span><span class="sxs-lookup"><span data-stu-id="826b1-175">The Managed Thread Pool</span></span>](../../../docs/standard/threading/the-managed-thread-pool.md)

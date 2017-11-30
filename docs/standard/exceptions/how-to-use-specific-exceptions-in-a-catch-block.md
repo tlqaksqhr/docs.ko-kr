@@ -1,41 +1,43 @@
 ---
-title: "방법: Catch 블록에 특정 예외 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "catch 블록"
-  - "예외, try/catch 블록"
-  - "try/catch 블록"
+title: "방법: Catch 블록에 특정 예외 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- exceptions, try/catch blocks
+- try/catch blocks
+- catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 94e5840ca4bb5f871a0ae91f53404de6a60d749d
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/21/2017
 ---
-# 방법: Catch 블록에 특정 예외 사용
-발생한 예외는 스택으로 전달되므로 각 catch 블록은 예외를 처리할 수 있게 됩니다.  catch 문의 순서는 중요합니다.  일반적인 예외 catch 블록 앞에 특정 예외를 대상으로 하는 catch 블록을 지정하지 않으면 컴파일러에서 오류가 발생할 수 있습니다.  적합한 catch 블록이 결정되는 방식은 예외 유형을 catch 블록에 지정된 예외의 이름과 대응시키는 것입니다.  특정 catch 블록이 없으면 예외는 일반적인 catch 블록\(있는 경우\)에 의해 catch됩니다.  
-  
- 다음 코드 예제에서는 try\/catch 블록을 사용하여 <xref:System.InvalidCastException>을 catch합니다.  이 예제에서는 직급\(`Emlevel`\) 속성 하나만을 가지는 `Employee`라는 클래스를 만듭니다.  `PromoteEmployee` 메서드는 개체를 받아서 직급을 증가시킵니다.  <xref:System.DateTime> 인스턴스가 `PromoteEmployee` 메서드로 전달되면 **InvalidCastException**이 발생합니다.  
-  
-## 예제  
- [!code-cpp[CatchException#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception1.cpp#2)]
- [!code-csharp[CatchException#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception1.cs#2)]
- [!code-vb[CatchException#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception1.vb#2)]  
-  
- 공용 언어 런타임에서는 catch 블록으로 catch되지 않는 예외를 catch합니다.  런타임의 구성 상태에 따라 디버그 대화 상자가 나타나거나 프로그램 실행이 중단되고 예외 정보가 표시된 대화 상자가 나타납니다.  디버깅에 대한 자세한 내용은 [응용 프로그램 디버깅 및 프로파일링](../../../docs/framework/debug-trace-profile/index.md)을 참조하십시오.  
-  
-## 참고 항목  
- [방법: Try\/Catch 블록을 사용하여 예외 catch](../../../docs/standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md)   
- [방법: 명시적으로 예외 Throw](../../../docs/standard/exceptions/how-to-explicitly-throw-exceptions.md)   
- [방법: 사용자 정의 예외 만들기](../../../docs/standard/exceptions/how-to-create-user-defined-exceptions.md)   
- [방법: Finally 블록 사용](../../../docs/standard/exceptions/how-to-use-finally-blocks.md)   
- [Exception 클래스 및 속성](../../../docs/standard/exceptions/exception-class-and-properties.md)   
- [예외 처리 기본 사항](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+# <a name="how-to-use-specific-exceptions-in-a-catch-block"></a><span data-ttu-id="d4d9b-102">특정 예외는 catch 블록에서 사용 하는 방법</span><span class="sxs-lookup"><span data-stu-id="d4d9b-102">How to use specific exceptions in a catch block</span></span>
+
+<span data-ttu-id="d4d9b-103">일반적으로 것이 바람직한 프로그래밍 습관 기본을 사용 하지 않고 특정 형식의 예외를 catch 하려면 `catch` 문.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-103">In general, it's good programming practice to catch a specific type of exception rather than use a basic `catch` statement.</span></span>
+
+<span data-ttu-id="d4d9b-104">예외가 발생하면 스택 위로 전달되며 각 catch 블록에 예외를 처리할 수 있는 기회가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-104">When an exception occurs, it is passed up the stack and each catch block is given the opportunity to handle it.</span></span> <span data-ttu-id="d4d9b-105">catch 문의 순서가 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-105">The order of catch statements is important.</span></span> <span data-ttu-id="d4d9b-106">특정 예외를 대상으로 하는 catch 블록은 일반 예외 catch 블록 앞에 배치합니다. 그러지 않으면 컴파일러에서 오류가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-106">Put catch blocks targeted to specific exceptions before a general exception catch block or the compiler might issue an error.</span></span> <span data-ttu-id="d4d9b-107">예외 형식을 catch 블록에 지정된 예외 이름과 비교하여 적절한 catch 블록을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-107">The proper catch block is determined by matching the type of the exception to the name of the exception specified in the catch block.</span></span> <span data-ttu-id="d4d9b-108">특정 catch 블록이 없는 경우 일반 catch 블록(있는 경우)에서 예외를 catch합니다.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-108">If there is no specific catch block, the exception is caught by a general catch block, if one exists.</span></span>
+
+<span data-ttu-id="d4d9b-109">다음 코드 예제에서는 `try`/`catch` 블록을 사용하여 <xref:System.InvalidCastException>을 catch합니다.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-109">The following code example uses a `try`/`catch` block to catch an <xref:System.InvalidCastException>.</span></span> <span data-ttu-id="d4d9b-110">샘플에서는 직원 수준이라는 하나의 속성(`Emlevel`)이 있는 `Employee` 클래스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-110">The sample creates a class called `Employee` with a single property, employee level (`Emlevel`).</span></span> <span data-ttu-id="d4d9b-111">`PromoteEmployee` 메서드는 개체를 사용하고 직원 수준을 증가시킵니다.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-111">A method, `PromoteEmployee`, takes an object and increments the employee level.</span></span> <span data-ttu-id="d4d9b-112"><xref:System.DateTime> 인스턴스가 `PromoteEmployee` 메서드로 전달될 때 <xref:System.InvalidCastException>이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="d4d9b-112">An <xref:System.InvalidCastException> occurs when a <xref:System.DateTime> instance is passed to the `PromoteEmployee` method.</span></span>
+
+[!code-cpp[CatchException#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception1.cpp#2)]
+[!code-csharp[CatchException#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception1.cs#2)]
+[!code-vb[CatchException#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception1.vb#2)] 
+
+## <a name="see-also"></a><span data-ttu-id="d4d9b-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d4d9b-113">See Also</span></span>  
+[<span data-ttu-id="d4d9b-114">예외</span><span class="sxs-lookup"><span data-stu-id="d4d9b-114">Exceptions</span></span>](index.md)

@@ -10,295 +10,296 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
+ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c71aee3dbfb6544973e1527955ca03deb6b569f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/08/2017
 ---
-# <a name="classes-and-objects"></a>클래스 및 개체
+# <a name="classes-and-objects"></a><span data-ttu-id="b534a-105">클래스 및 개체</span><span class="sxs-lookup"><span data-stu-id="b534a-105">Classes and objects</span></span>
 
-*클래스*는 C#의 가장 기본적인 형식입니다. 클래스는 상태(필드)와 작업(메서드 및 기타 함수 멤버)을 하나의 단위로 결합하는 데이터 구조입니다. 클래스는 해당 클래스의 동적으로 생성된 *인스턴스*(*개체*라고도 함)에 대한 정의를 제공합니다. 클래스는 *상속* 및 *다형성*과 *파생된 클래스*가 *기본 클래스*를 확장하고 특수화할 수 있는 메커니즘을 지원합니다.
+<span data-ttu-id="b534a-106">*클래스*는 C#의 가장 기본적인 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-106">*Classes* are the most fundamental of C#’s types.</span></span> <span data-ttu-id="b534a-107">클래스는 상태(필드)와 작업(메서드 및 기타 함수 멤버)을 하나의 단위로 결합하는 데이터 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-107">A class is a data structure that combines state (fields) and actions (methods and other function members) in a single unit.</span></span> <span data-ttu-id="b534a-108">클래스는 해당 클래스의 동적으로 생성된 *인스턴스*(*개체*라고도 함)에 대한 정의를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-108">A class provides a definition for dynamically created *instances* of the class, also known as *objects*.</span></span> <span data-ttu-id="b534a-109">클래스는 *상속* 및 *다형성*과 *파생된 클래스*가 *기본 클래스*를 확장하고 특수화할 수 있는 메커니즘을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-109">Classes support *inheritance* and *polymorphism*, mechanisms whereby *derived classes* can extend and specialize *base classes*.</span></span>
 
-새 클래스는 클래스 선언을 사용하여 만들어집니다. 클래스 선언은 클래스의 특성 및 한정자, 클래스의 이름, 기본 클래스(제공된 경우), 클래스로 구현되는 인터페이스를 지정하는 헤더로 시작합니다. 헤더 다음에는 구분 기호 `{` 및 `}` 간에 작성되는 멤버 선언 목록으로 구성되는 클래스 본문이 나옵니다.
+<span data-ttu-id="b534a-110">새 클래스는 클래스 선언을 사용하여 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-110">New classes are created using class declarations.</span></span> <span data-ttu-id="b534a-111">클래스 선언은 클래스의 특성 및 한정자, 클래스의 이름, 기본 클래스(제공된 경우), 클래스로 구현되는 인터페이스를 지정하는 헤더로 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-111">A class declaration starts with a header that specifies the attributes and modifiers of the class, the name of the class, the base class (if given), and the interfaces implemented by the class.</span></span> <span data-ttu-id="b534a-112">헤더 다음에는 구분 기호 `{` 및 `}` 간에 작성되는 멤버 선언 목록으로 구성되는 클래스 본문이 나옵니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-112">The header is followed by the class body, which consists of a list of member declarations written between the delimiters `{` and `}`.</span></span>
 
-다음은 `Point`라는 간단한 클래스 선언입니다.
+<span data-ttu-id="b534a-113">다음은 `Point`라는 간단한 클래스 선언입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-113">The following is a declaration of a simple class named `Point`:</span></span>
 
 [!code-csharp[PointClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
 
-클래스의 인스턴스는 새 인스턴스에 대한 메모리를 할당하고, 인스턴스를 초기화하는 생성자를 호출하고, 인스턴스에 대한 참조를 반환하는 `new` 연산자를 사용하여 만들어집니다. 다음 문은 두 개의 Point 개체를 만들고 해당 개체에 대한 참조를 두 변수에 저장합니다.
+<span data-ttu-id="b534a-114">클래스의 인스턴스는 새 인스턴스에 대한 메모리를 할당하고, 인스턴스를 초기화하는 생성자를 호출하고, 인스턴스에 대한 참조를 반환하는 `new` 연산자를 사용하여 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-114">Instances of classes are created using the `new` operator, which allocates memory for a new instance, invokes a constructor to initialize the instance, and returns a reference to the instance.</span></span> <span data-ttu-id="b534a-115">다음 문은 두 개의 Point 개체를 만들고 해당 개체에 대한 참조를 두 변수에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-115">The following statements create two Point objects and store references to those objects in two variables:</span></span>
 
 [!code-csharp[PointExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
 
-개체가 차지하는 메모리는 개체에 더 이상 연결할 수 있는 때 자동으로 회수됩니다. C#에서 개체를 명시적으로 할당 취소할 필요도 없으며 가능하지도 않습니다.
+<span data-ttu-id="b534a-116">개체가 차지하는 메모리는 개체에 더 이상 연결할 수 있는 때 자동으로 회수됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-116">The memory occupied by an object is automatically reclaimed when the object is no longer reachable.</span></span> <span data-ttu-id="b534a-117">C#에서 개체를 명시적으로 할당 취소할 필요도 없으며 가능하지도 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-117">It is neither necessary nor possible to explicitly deallocate objects in C#.</span></span>
 
-## <a name="members"></a>멤버
+## <a name="members"></a><span data-ttu-id="b534a-118">멤버</span><span class="sxs-lookup"><span data-stu-id="b534a-118">Members</span></span>
 
-클래스의 멤버는 정적 멤버 또는 인스턴스 멤버입니다. 정적 멤버는 클래스에 속하며 인스턴스 멤버는 개체(클래스의 인스턴스)에 속합니다.
+<span data-ttu-id="b534a-119">클래스의 멤버는 정적 멤버 또는 인스턴스 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-119">The members of a class are either static members or instance members.</span></span> <span data-ttu-id="b534a-120">정적 멤버는 클래스에 속하며 인스턴스 멤버는 개체(클래스의 인스턴스)에 속합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-120">Static members belong to classes, and instance members belong to objects (instances of classes).</span></span>
 
-다음은 클래스에 포함될 수는 멤버 종류를 대략적으로 나타낸 것입니다.
+<span data-ttu-id="b534a-121">다음은 클래스에 포함될 수는 멤버 종류를 대략적으로 나타낸 것입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-121">The following provides an overview of the kinds of members a class can contain.</span></span>
 
-* 상수
-    - 클래스와 연결된 상수 값
-* 필드
-    - 클래스의 변수
-* 메서드
-    - 클래스가 수행할 수 있는 계산 및 작업
-* 속성
-    - 클래스의 명명된 속성에 대한 읽기 및 쓰기와 관련된 작업
-* 인덱서
-    - 클래스 인스턴스를 배열처럼 인덱싱하는 것과 관련된 작업
-* 이벤트
-    - 클래스에 의해 생성될 수 있는 알림
-* 연산자
-    - 클래스가 지원하는 변환 및 식 연산자
-* 생성자
-    - 클래스의 인스턴스 또는 클래스 자체를 초기화하는 데 필요한 작업
-* 종료자
-    - 클래스의 인스턴스가 영구적으로 삭제되기 전에 수행 작업
-* 유형
-    - 클래스에 의해 선언된 중첩 형식
+* <span data-ttu-id="b534a-122">상수</span><span class="sxs-lookup"><span data-stu-id="b534a-122">Constants</span></span>
+    - <span data-ttu-id="b534a-123">클래스와 연결된 상수 값</span><span class="sxs-lookup"><span data-stu-id="b534a-123">Constant values associated with the class</span></span>
+* <span data-ttu-id="b534a-124">필드</span><span class="sxs-lookup"><span data-stu-id="b534a-124">Fields</span></span>
+    - <span data-ttu-id="b534a-125">클래스의 변수</span><span class="sxs-lookup"><span data-stu-id="b534a-125">Variables of the class</span></span>
+* <span data-ttu-id="b534a-126">메서드</span><span class="sxs-lookup"><span data-stu-id="b534a-126">Methods</span></span>
+    - <span data-ttu-id="b534a-127">클래스가 수행할 수 있는 계산 및 작업</span><span class="sxs-lookup"><span data-stu-id="b534a-127">Computations and actions that can be performed by the class</span></span>
+* <span data-ttu-id="b534a-128">속성</span><span class="sxs-lookup"><span data-stu-id="b534a-128">Properties</span></span>
+    - <span data-ttu-id="b534a-129">클래스의 명명된 속성에 대한 읽기 및 쓰기와 관련된 작업</span><span class="sxs-lookup"><span data-stu-id="b534a-129">Actions associated with reading and writing named properties of the class</span></span>
+* <span data-ttu-id="b534a-130">인덱서</span><span class="sxs-lookup"><span data-stu-id="b534a-130">Indexers</span></span>
+    - <span data-ttu-id="b534a-131">클래스 인스턴스를 배열처럼 인덱싱하는 것과 관련된 작업</span><span class="sxs-lookup"><span data-stu-id="b534a-131">Actions associated with indexing instances of the class like an array</span></span>
+* <span data-ttu-id="b534a-132">이벤트</span><span class="sxs-lookup"><span data-stu-id="b534a-132">Events</span></span>
+    - <span data-ttu-id="b534a-133">클래스에 의해 생성될 수 있는 알림</span><span class="sxs-lookup"><span data-stu-id="b534a-133">Notifications that can be generated by the class</span></span>
+* <span data-ttu-id="b534a-134">연산자</span><span class="sxs-lookup"><span data-stu-id="b534a-134">Operators</span></span>
+    - <span data-ttu-id="b534a-135">클래스가 지원하는 변환 및 식 연산자</span><span class="sxs-lookup"><span data-stu-id="b534a-135">Conversions and expression operators supported by the class</span></span>
+* <span data-ttu-id="b534a-136">생성자</span><span class="sxs-lookup"><span data-stu-id="b534a-136">Constructors</span></span>
+    - <span data-ttu-id="b534a-137">클래스의 인스턴스 또는 클래스 자체를 초기화하는 데 필요한 작업</span><span class="sxs-lookup"><span data-stu-id="b534a-137">Actions required to initialize instances of the class or the class itself</span></span>
+* <span data-ttu-id="b534a-138">종료자</span><span class="sxs-lookup"><span data-stu-id="b534a-138">Finalizers</span></span>
+    - <span data-ttu-id="b534a-139">클래스의 인스턴스가 영구적으로 삭제되기 전에 수행 작업</span><span class="sxs-lookup"><span data-stu-id="b534a-139">Actions to perform before instances of the class are permanently discarded</span></span>
+* <span data-ttu-id="b534a-140">유형</span><span class="sxs-lookup"><span data-stu-id="b534a-140">Types</span></span>
+    - <span data-ttu-id="b534a-141">클래스에 의해 선언된 중첩 형식</span><span class="sxs-lookup"><span data-stu-id="b534a-141">Nested types declared by the class</span></span>
 
-## <a name="accessibility"></a>접근성
+## <a name="accessibility"></a><span data-ttu-id="b534a-142">접근성</span><span class="sxs-lookup"><span data-stu-id="b534a-142">Accessibility</span></span>
 
-클래스의 각 멤버에는 멤버에 액세스할 수 있는 프로그램 텍스트의 영역을 제어하는 액세스 가능성이 연결되어 있습니다. 액세스 가능성은 5가지 형태로 제공됩니다. 이러한 내용은 아래에 간략하게 정리되어 있습니다.
+<span data-ttu-id="b534a-143">클래스의 각 멤버에는 멤버에 액세스할 수 있는 프로그램 텍스트의 영역을 제어하는 액세스 가능성이 연결되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-143">Each member of a class has an associated accessibility, which controls the regions of program text that are able to access the member.</span></span> <span data-ttu-id="b534a-144">액세스 가능성은 5가지 형태로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-144">There are five possible forms of accessibility.</span></span> <span data-ttu-id="b534a-145">이러한 내용은 아래에 간략하게 정리되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-145">These are summarized below.</span></span>
 
 * `public`
-    - 액세스가 제한되지 않음
+    - <span data-ttu-id="b534a-146">액세스가 제한되지 않음</span><span class="sxs-lookup"><span data-stu-id="b534a-146">Access not limited</span></span>
 * `protected`
-    - 이 클래스 또는 이 클래스에서 파생된 클래스로만 액세스가 제한됨
+    - <span data-ttu-id="b534a-147">이 클래스 또는 이 클래스에서 파생된 클래스로만 액세스가 제한됨</span><span class="sxs-lookup"><span data-stu-id="b534a-147">Access limited to this class or classes derived from this class</span></span>
 * `internal`
-    - 현재 어셈블리(.exe, .dll 등)로만 액세스가 제한됨
+    - <span data-ttu-id="b534a-148">현재 어셈블리(.exe, .dll 등)로만 액세스가 제한됨</span><span class="sxs-lookup"><span data-stu-id="b534a-148">Access limited to the current assembly (.exe, .dll, etc.)</span></span>
 * `protected internal`
-    - 포함하는 클래스 또는 포함하는 클래스에서 파생된 클래스로만 액세스가 제한됨
+    - <span data-ttu-id="b534a-149">포함하는 클래스 또는 포함하는 클래스에서 파생된 클래스로만 액세스가 제한됨</span><span class="sxs-lookup"><span data-stu-id="b534a-149">Access limited to the containing class or classes derived from the containing class</span></span>
 * `private`
-    - 이 클래스로만 액세스가 제한됨
+    - <span data-ttu-id="b534a-150">이 클래스로만 액세스가 제한됨</span><span class="sxs-lookup"><span data-stu-id="b534a-150">Access limited to this class</span></span>
+* `private protected`
+    - <span data-ttu-id="b534a-151">동일한 어셈블리 포함 형식 내에서에서 파생 된 클래스 또는 클래스에 대해서만 액세스</span><span class="sxs-lookup"><span data-stu-id="b534a-151">Access limited to the containing class or classes derived from the containing type withing the same assembly</span></span>
 
-## <a name="type-parameters"></a>형식 매개 변수
+## <a name="type-parameters"></a><span data-ttu-id="b534a-152">형식 매개 변수</span><span class="sxs-lookup"><span data-stu-id="b534a-152">Type parameters</span></span>
 
-클래스 정의는 클래스 이름 다음에 대괄호로 묶은 형식 매개 변수 이름 목록을 지정하여 형식 매개 변수 집합을 지정할 수 있습니다. 그런 후 형식 매개 변수를 클래스 선언 본문에 사용하여 클래스의 멤버를 정의할 수 있습니다. 다음 예제에서 `Pair`의 형식 매개 변수는 `TFirst` 및 `TSecond`입니다.
+<span data-ttu-id="b534a-153">클래스 정의는 클래스 이름 다음에 대괄호로 묶은 형식 매개 변수 이름 목록을 지정하여 형식 매개 변수 집합을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-153">A class definition may specify a set of type parameters by following the class name with angle brackets enclosing a list of type parameter names.</span></span> <span data-ttu-id="b534a-154">그런 후 형식 매개 변수를 클래스 선언 본문에 사용하여 클래스의 멤버를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-154">The type parameters can then be used in the body of the class declarations to define the members of the class.</span></span> <span data-ttu-id="b534a-155">다음 예제에서 `Pair`의 형식 매개 변수는 `TFirst` 및 `TSecond`입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-155">In the following example, the type parameters of `Pair` are `TFirst` and `TSecond`:</span></span>
 
 [!code-csharp[Pair](../../../samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
 
-형식 매개 변수를 사용하도록 선언된 클래스 형식을 *제네릭 클래스 형식*이라고 합니다. 구조체, 인터페이스 및 대리자 형식도 제네릭일 수 있습니다.
-제네릭 클래스를 사용하는 경우 각 형식 매개 변수에 대해 다음과 같은 형식 인수가 제공되어야 합니다.
+<span data-ttu-id="b534a-156">형식 매개 변수를 사용하도록 선언된 클래스 형식을 *제네릭 클래스 형식*이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-156">A class type that is declared to take type parameters is called a *generic class type*.</span></span> <span data-ttu-id="b534a-157">구조체, 인터페이스 및 대리자 형식도 제네릭일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-157">Struct, interface and delegate types can also be generic.</span></span>
+<span data-ttu-id="b534a-158">제네릭 클래스를 사용하는 경우 각 형식 매개 변수에 대해 다음과 같은 형식 인수가 제공되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-158">When the generic class is used, type arguments must be provided for each of the type parameters:</span></span>
 
 [!code-csharp[PairExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
 
-위의 `Pair<int,string>`과 같이 형식 인수가 제공된 제네릭 형식을 *생성된 형식*이라고 합니다.
+<span data-ttu-id="b534a-159">위의 `Pair<int,string>`과 같이 형식 인수가 제공된 제네릭 형식을 *생성된 형식*이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-159">A generic type with type arguments provided, like `Pair<int,string>` above, is called a *constructed type*.</span></span>
 
-## <a name="base-classes"></a>기본 클래스
+## <a name="base-classes"></a><span data-ttu-id="b534a-160">기본 클래스</span><span class="sxs-lookup"><span data-stu-id="b534a-160">Base classes</span></span>
 
-클래스 선언은 클래스 이름 및 형식 매개 변수 뒤에 콜론과 기본 클래스의 이름을 사용하여 기본 클래스를 지정할 수 있습니다. 기본 클래스 지정을 생략하면 `object` 형식에서 파생되는 클래스와 같습니다. 다음 예제에서 `Point3D`의 기본 클래스는 `Point`이고 `Point`의 기본 클래스는 `object`입니다.
+<span data-ttu-id="b534a-161">클래스 선언은 클래스 이름 및 형식 매개 변수 뒤에 콜론과 기본 클래스의 이름을 사용하여 기본 클래스를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-161">A class declaration may specify a base class by following the class name and type parameters with a colon and the name of the base class.</span></span> <span data-ttu-id="b534a-162">기본 클래스 지정을 생략하면 `object` 형식에서 파생되는 클래스와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-162">Omitting a base class specification is the same as deriving from type `object`.</span></span> <span data-ttu-id="b534a-163">다음 예제에서 `Point3D`의 기본 클래스는 `Point`이고 `Point`의 기본 클래스는 `object`입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-163">In the following example, the base class of `Point3D` is `Point`, and the base class of `Point` is `object`:</span></span>
 
 [!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
-클래스는 기본 클래스의 멤버를 상속합니다. 상속은 클래스가 인스턴스 및 정적 생성자와 기본 클래스의 종결자를 제외하는 기본 클래스의 모든 멤버를 암시적으로 포함함을 의미합니다. 파생된 클래스를 상속하는 대상에 새 멤버를 추가할 수 있지만 상속된 멤버의 정의를 제거할 수 없습니다. 앞의 예제에서 `Point3D`는 `Point`에서 `x` 및 `y` 필드를 상속하고 모든 `Point3D` 인스턴스는 세 개의 필드, 즉 `x`, `y` 및 `z`를 포함합니다.
+<span data-ttu-id="b534a-164">클래스는 기본 클래스의 멤버를 상속합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-164">A class inherits the members of its base class.</span></span> <span data-ttu-id="b534a-165">상속은 클래스가 인스턴스 및 정적 생성자와 기본 클래스의 종결자를 제외하는 기본 클래스의 모든 멤버를 암시적으로 포함함을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-165">Inheritance means that a class implicitly contains all members of its base class, except for the instance and static constructors, and the finalizers of the base class.</span></span> <span data-ttu-id="b534a-166">파생된 클래스를 상속하는 대상에 새 멤버를 추가할 수 있지만 상속된 멤버의 정의를 제거할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-166">A derived class can add new members to those it inherits, but it cannot remove the definition of an inherited member.</span></span> <span data-ttu-id="b534a-167">앞의 예제에서 `Point3D`는 `Point`에서 `x` 및 `y` 필드를 상속하고 모든 `Point3D` 인스턴스는 세 개의 필드, 즉 `x`, `y` 및 `z`를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-167">In the previous example, `Point3D` inherits the `x` and `y` fields from `Point`, and every `Point3D` instance contains three fields, `x`, `y`, and `z`.</span></span>
 
-클래스 형식에서 해당 기본 클래스 형식 간에 암시적 변환이 존재합니다. 따라서 클래스 형식의 변수는 해당 클래스의 인스턴스 또는 파생된 모든 클래스의 인스턴스를 참조할 수 있습니다. 예를 들어 이전 클래스 선언에서 형식 `Point`의 변수는 `Point` 또는 `Point3D`를 참조할 수 있습니다.
+<span data-ttu-id="b534a-168">클래스 형식에서 해당 기본 클래스 형식 간에 암시적 변환이 존재합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-168">An implicit conversion exists from a class type to any of its base class types.</span></span> <span data-ttu-id="b534a-169">따라서 클래스 형식의 변수는 해당 클래스의 인스턴스 또는 파생된 모든 클래스의 인스턴스를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-169">Therefore, a variable of a class type can reference an instance of that class or an instance of any derived class.</span></span> <span data-ttu-id="b534a-170">예를 들어 이전 클래스 선언에서 형식 `Point`의 변수는 `Point` 또는 `Point3D`를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-170">For example, given the previous class declarations, a variable of type `Point` can reference either a `Point` or a `Point3D`:</span></span>
 
 [!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
-## <a name="fields"></a>필드
+## <a name="fields"></a><span data-ttu-id="b534a-171">필드</span><span class="sxs-lookup"><span data-stu-id="b534a-171">Fields</span></span>
 
-*필드*는 클래스 또는 클래스의 인스턴스와 연결된 변수입니다.
+<span data-ttu-id="b534a-172">*필드*는 클래스 또는 클래스의 인스턴스와 연결된 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-172">A *field* is a variable that is associated with a class or with an instance of a class.</span></span>
 
-static 한정자를 사용하여 선언된 필드는 정적 필드를 정의합니다. 정적 필드는 정확히 하나의 저장 위치를 식별합니다. 생성된 클래스 인스턴스 수에 관계없이 정적 필드의 복사본은 하나뿐입니다.
+<span data-ttu-id="b534a-173">static 한정자를 사용하여 선언된 필드는 정적 필드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-173">A field declared with the static modifier defines a static field.</span></span> <span data-ttu-id="b534a-174">정적 필드는 정확히 하나의 저장 위치를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-174">A static field identifies exactly one storage location.</span></span> <span data-ttu-id="b534a-175">생성된 클래스 인스턴스 수에 관계없이 정적 필드의 복사본은 하나뿐입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-175">No matter how many instances of a class are created, there is only ever one copy of a static field.</span></span>
 
-static 한정자 없이 선언된 필드는 인스턴스 필드를 정의합니다. 클래스의 모든 인스턴스는 해당 클래스의 모든 인스턴스 필드의 별도 복사본을 포함합니다.
+<span data-ttu-id="b534a-176">static 한정자 없이 선언된 필드는 인스턴스 필드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-176">A field declared without the static modifier defines an instance field.</span></span> <span data-ttu-id="b534a-177">클래스의 모든 인스턴스는 해당 클래스의 모든 인스턴스 필드의 별도 복사본을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-177">Every instance of a class contains a separate copy of all the instance fields of that class.</span></span>
 
-다음 예제에서 `Color` 클래스의 각 인스턴스는 `r`, `g` 및 `b` 인스턴스 필드의 별도 복사본을 갖지만 `Black`, `White`, `Red`, `Green` 및 `Blue` 정적 필드의 복사본은 하나뿐입니다.
+<span data-ttu-id="b534a-178">다음 예제에서 `Color` 클래스의 각 인스턴스는 `r`, `g` 및 `b` 인스턴스 필드의 별도 복사본을 갖지만 `Black`, `White`, `Red`, `Green` 및 `Blue` 정적 필드의 복사본은 하나뿐입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-178">In the following example, each instance of the `Color` class has a separate copy of the `r`, `g`, and `b` instance fields, but there is only one copy of the `Black`, `White`, `Red`, `Green`, and `Blue` static fields:</span></span>
 
 [!code-csharp[ColorClass](../../../samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]
 
-앞의 예제와 같이 *읽기 전용 필드*는 `readonly` 한정자를 사용하여 선언될 수 있습니다. `readonly` 필드에 대한 할당은 필드 선언의 일부로 또는 동일한 클래스의 생성자에서만 발생할 수 있습니다.
+<span data-ttu-id="b534a-179">앞의 예제와 같이 *읽기 전용 필드*는 `readonly` 한정자를 사용하여 선언될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-179">As shown in the previous example, *read-only fields* may be declared with a `readonly` modifier.</span></span> <span data-ttu-id="b534a-180">`readonly` 필드에 대한 할당은 필드 선언의 일부로 또는 동일한 클래스의 생성자에서만 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-180">Assignment to a `readonly` field can only occur as part of the field’s declaration or in a constructor in the same class.</span></span>
 
-## <a name="methods"></a>메서드
+## <a name="methods"></a><span data-ttu-id="b534a-181">메서드</span><span class="sxs-lookup"><span data-stu-id="b534a-181">Methods</span></span>
 
-*메서드*는 개체 또는 클래스에서 수행할 수 있는 계산이나 작업을 구현하는 멤버입니다. *정적 메서드*는 클래스를 통해 액세스됩니다. *인스턴스 메서드*는 클래스의 인스턴스를 통해 액세스됩니다.
+<span data-ttu-id="b534a-182">*메서드*는 개체 또는 클래스에서 수행할 수 있는 계산이나 작업을 구현하는 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-182">A *method* is a member that implements a computation or action that can be performed by an object or class.</span></span> <span data-ttu-id="b534a-183">*정적 메서드*는 클래스를 통해 액세스됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-183">*Static methods* are accessed through the class.</span></span> <span data-ttu-id="b534a-184">*인스턴스 메서드*는 클래스의 인스턴스를 통해 액세스됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-184">*Instance methods* are accessed through instances of the class.</span></span>
 
-메서드에는 메서드로 전달되는 값 또는 변수 참조를 나타내는 *매개 변수* 목록과 메서드에 의해 계산되고 반환되는 값의 형식을 지정하는 *반환 형식*이 있을 수 있습니다. 값을 반환하지 않으면 메서드의 반환 형식은 `void`입니다.
+<span data-ttu-id="b534a-185">메서드에는 메서드로 전달되는 값 또는 변수 참조를 나타내는 *매개 변수* 목록과 메서드에 의해 계산되고 반환되는 값의 형식을 지정하는 *반환 형식*이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-185">Methods may have a list of *parameters*, which represent values or variable references passed to the method, and a *return type*, which specifies the type of the value computed and returned by the method.</span></span> <span data-ttu-id="b534a-186">값을 반환하지 않으면 메서드의 반환 형식은 `void`입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-186">A method’s return type is `void` if it does not return a value.</span></span>
 
-형식과 마찬가지로 메서드에는 메서드가 호출될 때 형식 인수가 지정되어야 하는 형식 매개 변수 집합도 있을 수 있습니다. 형식과 달리 형식 인수는 종종 메서드 호출의 인수에서 유추될 수 있으므로 명시적으로 지정할 필요가 없습니다.
+<span data-ttu-id="b534a-187">형식과 마찬가지로 메서드에는 메서드가 호출될 때 형식 인수가 지정되어야 하는 형식 매개 변수 집합도 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-187">Like types, methods may also have a set of type parameters, for which type arguments must be specified when the method is called.</span></span> <span data-ttu-id="b534a-188">형식과 달리 형식 인수는 종종 메서드 호출의 인수에서 유추될 수 있으므로 명시적으로 지정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-188">Unlike types, the type arguments can often be inferred from the arguments of a method call and need not be explicitly given.</span></span>
 
-메서드의 *시그니처*는 메서드가 선언되는 클래스에서 고유해야 합니다. 메서드 시그니처는 메서드의 이름, 형식 매개 변수의 수, 해당 매개 변수의 수, 한정자 및 형식으로 구성됩니다. 메서드 시그니처는 반환 형식을 포함하지 않습니다.
+<span data-ttu-id="b534a-189">메서드의 *시그니처*는 메서드가 선언되는 클래스에서 고유해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-189">The *signature* of a method must be unique in the class in which the method is declared.</span></span> <span data-ttu-id="b534a-190">메서드 시그니처는 메서드의 이름, 형식 매개 변수의 수, 해당 매개 변수의 수, 한정자 및 형식으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-190">The signature of a method consists of the name of the method, the number of type parameters and the number, modifiers, and types of its parameters.</span></span> <span data-ttu-id="b534a-191">메서드 시그니처는 반환 형식을 포함하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-191">The signature of a method does not include the return type.</span></span>
 
-### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a><span data-ttu-id="b534a-192">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b534a-192">Parameters</span></span>
 
-매개 변수는 메서드에 값 또는 변수 참조를 전달하는 데 사용됩니다. 메서드의 매개 변수는 메서드가 호출될 때 지정된 *인수*에서 실제 값을 가져옵니다. 매개 변수에는 값 매개 변수, 참조 매개 변수, 출력 매개 변수 및 매개 변수 배열의 네 가지 종류가 있습니다.
+<span data-ttu-id="b534a-193">매개 변수는 메서드에 값 또는 변수 참조를 전달하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-193">Parameters are used to pass values or variable references to methods.</span></span> <span data-ttu-id="b534a-194">메서드의 매개 변수는 메서드가 호출될 때 지정된 *인수*에서 실제 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-194">The parameters of a method get their actual values from the *arguments* that are specified when the method is invoked.</span></span> <span data-ttu-id="b534a-195">매개 변수에는 값 매개 변수, 참조 매개 변수, 출력 매개 변수 및 매개 변수 배열의 네 가지 종류가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-195">There are four kinds of parameters: value parameters, reference parameters, output parameters, and parameter arrays.</span></span>
 
-*값 매개 변수*는 입력 매개 변수를 전달하는 데 사용됩니다. 값 매개 변수는 매개 변수에 전달된 인수에서 초기 값을 가져오는 지역 변수에 해당합니다. 값 매개 변수를 수정해도 매개 변수에 전달된 인수에는 영향을 주지 않습니다. 
+<span data-ttu-id="b534a-196">*값 매개 변수*는 입력 매개 변수를 전달하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-196">A *value parameter* is used for passing input arguments.</span></span> <span data-ttu-id="b534a-197">값 매개 변수는 매개 변수에 전달된 인수에서 초기 값을 가져오는 지역 변수에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-197">A value parameter corresponds to a local variable that gets its initial value from the argument that was passed for the parameter.</span></span> <span data-ttu-id="b534a-198">값 매개 변수를 수정해도 매개 변수에 전달된 인수에는 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-198">Modifications to a value parameter do not affect the argument that was passed for the parameter.</span></span> 
 
-해당 인수를 생략할 수 있도록 기본값을 지정하면 값 매개 변수는 선택적일 수 있습니다.
+<span data-ttu-id="b534a-199">해당 인수를 생략할 수 있도록 기본값을 지정하면 값 매개 변수는 선택적일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-199">Value parameters can be optional, by specifying a default value so that corresponding arguments can be omitted.</span></span>
 
-*참조 매개 변수*는 인수를 참조로 전달하는 데 사용됩니다. 참조 매개 변수에 전달되는 인수는 한정된 값을 가진 변수여야 하며, 메서드를 실행하는 동안 참조 매개 변수는 인수 변수와 동일한 저장소 위치를 나타냅니다. 참조 매개 변수는 `ref` 한정자를 사용하여 선언됩니다. 다음 예제에서는 `ref` 매개 변수를 사용하는 방법을 보여 줍니다.
+<span data-ttu-id="b534a-200">*참조 매개 변수*는 인수를 참조로 전달하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-200">A *reference parameter* is used for passing arguments by reference.</span></span> <span data-ttu-id="b534a-201">참조 매개 변수에 전달되는 인수는 한정된 값을 가진 변수여야 하며, 메서드를 실행하는 동안 참조 매개 변수는 인수 변수와 동일한 저장소 위치를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-201">The argument passed for a reference parameter must be a variable with a definite value, and during execution of the method, the reference parameter represents the same storage location as the argument variable.</span></span> <span data-ttu-id="b534a-202">참조 매개 변수는 `ref` 한정자를 사용하여 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-202">A reference parameter is declared with the `ref` modifier.</span></span> <span data-ttu-id="b534a-203">다음 예제에서는 `ref` 매개 변수를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-203">The following example shows the use of `ref` parameters.</span></span>
 
 [!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
 
-*출력 매개 변수*는 인수를 참조로 전달하는 데 사용됩니다. 호출자가 제공한 인수에 값을 명시적으로 할당할 필요가 없다는 점을 제외하고 참조 매개 변수와 비슷합니다. 출력 매개 변수는 `out` 한정자를 사용하여 선언됩니다. 다음 예제에서는 C# 7에서 도입된 구문으로 `out` 매개 변수를 사용하는 방법을 보여 줍니다.
+<span data-ttu-id="b534a-204">*출력 매개 변수*는 인수를 참조로 전달하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-204">An *output parameter* is used for passing arguments by reference.</span></span> <span data-ttu-id="b534a-205">호출자가 제공한 인수에 값을 명시적으로 할당할 필요가 없다는 점을 제외하고 참조 매개 변수와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-205">It's similar to a reference parameter, except that it doesn't require that you explicitly assign a value to the caller-provided argument.</span></span> <span data-ttu-id="b534a-206">출력 매개 변수는 `out` 한정자를 사용하여 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-206">An output parameter is declared with the `out` modifier.</span></span> <span data-ttu-id="b534a-207">다음 예제에서는 C# 7에서 도입된 구문으로 `out` 매개 변수를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-207">The following example shows the use of `out` parameters using the syntax introduced in C# 7.</span></span>
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-*매개 변수 배열*은 다양한 개수의 인수가 메서드에 전달되도록 허용합니다. 매개 변수 배열은 `params` 한정자를 사용하여 선언됩니다. 메서드의 마지막 매개 변수만 매개 변수 배열일 수 있으며 매개 변수 배열의 형식은 1차원 배열 형식이어야 합니다. `@System.Console` 클래스의 Write 및 WriteLine 메서드는 매개 변수 배열 사용의 좋은 예입니다. 이러한 메서드는 다음과 같이 선언됩니다.
+<span data-ttu-id="b534a-208">*매개 변수 배열*은 다양한 개수의 인수가 메서드에 전달되도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-208">A *parameter array* permits a variable number of arguments to be passed to a method.</span></span> <span data-ttu-id="b534a-209">매개 변수 배열은 `params` 한정자를 사용하여 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-209">A parameter array is declared with the `params` modifier.</span></span> <span data-ttu-id="b534a-210">메서드의 마지막 매개 변수만 매개 변수 배열일 수 있으며 매개 변수 배열의 형식은 1차원 배열 형식이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-210">Only the last parameter of a method can be a parameter array, and the type of a parameter array must be a single-dimensional array type.</span></span> <span data-ttu-id="b534a-211"><xref:System.Console?displayProperty=nameWithType> 클래스의 Write 및 WriteLine 메서드는 매개 변수 배열 사용의 좋은 예입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-211">The Write and WriteLine methods of the <xref:System.Console?displayProperty=nameWithType> class are good examples of parameter array usage.</span></span> <span data-ttu-id="b534a-212">이러한 메서드는 다음과 같이 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-212">They are declared as follows.</span></span>
 
 [!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
-매개 변수 배열을 사용하는 메서드 내에서 매개 변수 배열은 배열 형식의 일반 매개 변수와 정확히 동일하게 동작합니다. 그러나 매개 변수 배열을 사용한 메서드 호출에서 매개 변수 배열 형식의 단일 인수 또는 매개 변수 배열에 있는 임의 개수의 요소 형식 인수를 전달할 수 있습니다. 후자의 경우 지정된 인수를 사용하여 배열 인스턴스가 자동으로 만들어지고 초기화됩니다. 다음 예제는
+<span data-ttu-id="b534a-213">매개 변수 배열을 사용하는 메서드 내에서 매개 변수 배열은 배열 형식의 일반 매개 변수와 정확히 동일하게 동작합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-213">Within a method that uses a parameter array, the parameter array behaves exactly like a regular parameter of an array type.</span></span> <span data-ttu-id="b534a-214">그러나 매개 변수 배열을 사용한 메서드 호출에서 매개 변수 배열 형식의 단일 인수 또는 매개 변수 배열에 있는 임의 개수의 요소 형식 인수를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-214">However, in an invocation of a method with a parameter array, it is possible to pass either a single argument of the parameter array type or any number of arguments of the element type of the parameter array.</span></span> <span data-ttu-id="b534a-215">후자의 경우 지정된 인수를 사용하여 배열 인스턴스가 자동으로 만들어지고 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-215">In the latter case, an array instance is automatically created and initialized with the given arguments.</span></span> <span data-ttu-id="b534a-216">다음 예제는</span><span class="sxs-lookup"><span data-stu-id="b534a-216">This example</span></span>
 
 [!code-csharp[StringFormat](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
 
-다음을 작성하는 것과 같습니다.
+<span data-ttu-id="b534a-217">다음을 작성하는 것과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-217">is equivalent to writing the following.</span></span>
 
 [!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
 
-### <a name="method-body-and-local-variables"></a>메서드 본문 및 지역 변수
+### <a name="method-body-and-local-variables"></a><span data-ttu-id="b534a-218">메서드 본문 및 지역 변수</span><span class="sxs-lookup"><span data-stu-id="b534a-218">Method body and local variables</span></span>
 
-메서드의 본문은 메서드가 호출될 때 실행할 문을 지정합니다.
+<span data-ttu-id="b534a-219">메서드의 본문은 메서드가 호출될 때 실행할 문을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-219">A method’s body specifies the statements to execute when the method is invoked.</span></span>
 
-메서드 본문은 메서드 호출과 관련된 변수를 선언할 수 있습니다. 이러한 변수를 *지역 변수*라고 합니다. 지역 변수 선언은 형식 이름, 변수 이름을 지정하며 초기 값을 지정할 수도 있습니다. 다음 예제에서는 초기 값이 0인 지역 변수 `i`와 초기 값이 없는 지역 변수 `j`를 선언합니다.
+<span data-ttu-id="b534a-220">메서드 본문은 메서드 호출과 관련된 변수를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-220">A method body can declare variables that are specific to the invocation of the method.</span></span> <span data-ttu-id="b534a-221">이러한 변수를 *지역 변수*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-221">Such variables are called *local variables*.</span></span> <span data-ttu-id="b534a-222">지역 변수 선언은 형식 이름, 변수 이름을 지정하며 초기 값을 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-222">A local variable declaration specifies a type name, a variable name, and possibly an initial value.</span></span> <span data-ttu-id="b534a-223">다음 예제에서는 초기 값이 0인 지역 변수 `i`와 초기 값이 없는 지역 변수 `j`를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-223">The following example declares a local variable `i` with an initial value of zero and a local variable `j` with no initial value.</span></span>
 
 [!code-csharp[Squares](../../../samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
 
-C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 할당*해야 합니다. 예를 들어 이전 `i`의 선언에 초기 값이 포함되지 않으면 컴파일러는 `i`의 후속 사용에 대해 오류를 보고합니다. `i`는 프로그램에서 해당 시점에 명확하게 할당되지 않은 것이기 때문입니다.
+<span data-ttu-id="b534a-224">C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 할당*해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-224">C# requires a local variable to be *definitely assigned* before its value can be obtained.</span></span> <span data-ttu-id="b534a-225">예를 들어 이전 `i`의 선언에 초기 값이 포함되지 않으면 컴파일러는 `i`의 후속 사용에 대해 오류를 보고합니다. `i`는 프로그램에서 해당 시점에 명확하게 할당되지 않은 것이기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-225">For example, if the declaration of the previous `i` did not include an initial value, the compiler would report an error for the subsequent usages of `i` because `i` would not be definitely assigned at those points in the program.</span></span>
 
-메서드는 `return` 문을 사용하여 해당 호출자에게 컨트롤을 반환할 수 있습니다. `void`를 반환하는 메서드에서 `return` 문은 식을 지정할 수 없습니다. void 이외의 값을 반환하는 메서드에서 `return` 문은 반환 값을 계산하는 식을 포함해야 합니다.
+<span data-ttu-id="b534a-226">메서드는 `return` 문을 사용하여 해당 호출자에게 컨트롤을 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-226">A method can use `return` statements to return control to its caller.</span></span> <span data-ttu-id="b534a-227">`void`를 반환하는 메서드에서 `return` 문은 식을 지정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-227">In a method returning `void`, `return` statements cannot specify an expression.</span></span> <span data-ttu-id="b534a-228">void 이외의 값을 반환하는 메서드에서 `return` 문은 반환 값을 계산하는 식을 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-228">In a method returning non-void, `return` statements must include an expression that computes the return value.</span></span>
 
-### <a name="static-and-instance-methods"></a>정적 및 인스턴스 메서드
+### <a name="static-and-instance-methods"></a><span data-ttu-id="b534a-229">정적 및 인스턴스 메서드</span><span class="sxs-lookup"><span data-stu-id="b534a-229">Static and instance methods</span></span>
 
-정적 한정자를 사용하여 선언된 메서드는 *정적 메서드*입니다. 정적 메서드는 특정 인스턴스에 작동하지 않고 정적 멤버에 직접적으로만 액세스할 수 있습니다.
+<span data-ttu-id="b534a-230">정적 한정자를 사용하여 선언된 메서드는 *정적 메서드*입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-230">A method declared with a static modifier is a *static method*.</span></span> <span data-ttu-id="b534a-231">정적 메서드는 특정 인스턴스에 작동하지 않고 정적 멤버에 직접적으로만 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-231">A static method does not operate on a specific instance and can only directly access static members.</span></span>
 
-정적 한정자를 사용하지 않고 선언된 메서드는 *인스턴스 메서드*입니다. 인스턴스 메서드는 특정 인스턴스에 작동하며 정적 및 인스턴스 멤버 둘 다에 액세스할 수 있습니다. 인스턴스 메서드가 호출된 인스턴스는 `this`로 명시적으로 액세스할 수 있습니다. 정적 메서드에서 `this`를 참조하면 오류가 발생합니다.
+<span data-ttu-id="b534a-232">정적 한정자를 사용하지 않고 선언된 메서드는 *인스턴스 메서드*입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-232">A method declared without a static modifier is an *instance method*.</span></span> <span data-ttu-id="b534a-233">인스턴스 메서드는 특정 인스턴스에 작동하며 정적 및 인스턴스 멤버 둘 다에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-233">An instance method operates on a specific instance and can access both static and instance members.</span></span> <span data-ttu-id="b534a-234">인스턴스 메서드가 호출된 인스턴스는 `this`로 명시적으로 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-234">The instance on which an instance method was invoked can be explicitly accessed as `this`.</span></span> <span data-ttu-id="b534a-235">정적 메서드에서 `this`를 참조하면 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-235">It is an error to refer to `this` in a static method.</span></span>
 
-다음 `Entity` 클래스에는 정적 멤버와 인스턴스 멤버가 모두 있습니다.
+<span data-ttu-id="b534a-236">다음 `Entity` 클래스에는 정적 멤버와 인스턴스 멤버가 모두 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-236">The following `Entity` class has both static and instance members.</span></span>
 
 [!code-csharp[Entity](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
 
-각 `Entity` 인스턴스에는 일련 번호(및 여기에 표시되지 않는 일부 정보)가 포함되어 있습니다. `Entity` 생성자(인스턴스 메서드와 유사함)는 사용 가능한 다음 일련 번호를 사용하여 새 인스턴스를 초기화합니다. 생성자가 인스턴스 멤버이기 때문에 `serialNo` 인스턴스 필드 및 `nextSerialNo` 정적 필드 둘 다에 액세스하도록 허용됩니다.
+<span data-ttu-id="b534a-237">각 `Entity` 인스턴스에는 일련 번호(및 여기에 표시되지 않는 일부 정보)가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-237">Each `Entity` instance contains a serial number (and presumably some other information that is not shown here).</span></span> <span data-ttu-id="b534a-238">`Entity` 생성자(인스턴스 메서드와 유사함)는 사용 가능한 다음 일련 번호를 사용하여 새 인스턴스를 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-238">The `Entity` constructor (which is like an instance method) initializes the new instance with the next available serial number.</span></span> <span data-ttu-id="b534a-239">생성자가 인스턴스 멤버이기 때문에 `serialNo` 인스턴스 필드 및 `nextSerialNo` 정적 필드 둘 다에 액세스하도록 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-239">Because the constructor is an instance member, it is permitted to access both the `serialNo` instance field and the `nextSerialNo` static field.</span></span>
 
-`GetNextSerialNo` 및 `SetNextSerialNo` 정적 메서드는 `nextSerialNo` 정적 필드에 액세스할 수 있지만 `serialNo` 인스턴스 필드에 직접 액세스하면 오류가 발생합니다.
+<span data-ttu-id="b534a-240">`GetNextSerialNo` 및 `SetNextSerialNo` 정적 메서드는 `nextSerialNo` 정적 필드에 액세스할 수 있지만 `serialNo` 인스턴스 필드에 직접 액세스하면 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-240">The `GetNextSerialNo` and `SetNextSerialNo` static methods can access the `nextSerialNo` static field, but it would be an error for them to directly access the `serialNo` instance field.</span></span>
 
-다음 예제에서는 Entity 클래스의 사용 방법을 보여 줍니다.
+<span data-ttu-id="b534a-241">다음 예제에서는 Entity 클래스의 사용 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-241">The following example shows the use of the Entity class.</span></span>
 
 [!code-csharp[EntityExample](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
 
-`SetNextSerialNo` 및 `GetNextSerialNo` 정적 메서드는 클래스에 대해 호출되지만 `GetSerialNo` 인스턴스 메서드는 클래스의 인스턴스에 대해 호출됩니다.
+<span data-ttu-id="b534a-242">`SetNextSerialNo` 및 `GetNextSerialNo` 정적 메서드는 클래스에 대해 호출되지만 `GetSerialNo` 인스턴스 메서드는 클래스의 인스턴스에 대해 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-242">Note that the `SetNextSerialNo` and `GetNextSerialNo` static methods are invoked on the class whereas the `GetSerialNo` instance method is invoked on instances of the class.</span></span>
 
-### <a name="virtual-override-and-abstract-methods"></a>가상, 재정의 및 추상 메서드
+### <a name="virtual-override-and-abstract-methods"></a><span data-ttu-id="b534a-243">가상, 재정의 및 추상 메서드</span><span class="sxs-lookup"><span data-stu-id="b534a-243">Virtual, override, and abstract methods</span></span>
 
-인스턴스 메서드 선언에 `virtual` 한정자가 포함되면 해당 메서드를 *가상 메서드*라고 합니다. 가상 한정자가 없으면 해당 메서드를 *비가상 메서드*라고 합니다.
+<span data-ttu-id="b534a-244">인스턴스 메서드 선언에 `virtual` 한정자가 포함되면 해당 메서드를 *가상 메서드*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-244">When an instance method declaration includes a `virtual` modifier, the method is said to be a *virtual method*.</span></span> <span data-ttu-id="b534a-245">가상 한정자가 없으면 해당 메서드를 *비가상 메서드*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-245">When no virtual modifier is present, the method is said to be a *nonvirtual method*.</span></span>
 
-가상 메서드가 호출되면 호출이 발생하는 인스턴스의 *런타임 형식*에 따라 호출할 실제 메서드 구현이 결정됩니다. 비가상 메서드 호출에서는 인스턴스의 *컴파일 타임 형식*이 결정 요인입니다.
+<span data-ttu-id="b534a-246">가상 메서드가 호출되면 호출이 발생하는 인스턴스의 *런타임 형식*에 따라 호출할 실제 메서드 구현이 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-246">When a virtual method is invoked, the *run-time type* of the instance for which that invocation takes place determines the actual method implementation to invoke.</span></span> <span data-ttu-id="b534a-247">비가상 메서드 호출에서는 인스턴스의 *컴파일 타임 형식*이 결정 요인입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-247">In a nonvirtual method invocation, the *compile-time type* of the instance is the determining factor.</span></span>
 
-가상 메서드는 파생된 클래스에서 *재정의*될 수 있습니다. 인스턴스 메서드 선언에 재정의 한정자가 포함될 경우 메서드는 동일한 시그니처로 상속된 가상 메서드를 재정의합니다. 가상 메서드 선언은 새 메서드를 도입하지만 재정의 메서드 선언은 해당 메서드의 새 구현을 제공하여 기존의 상속된 가상 메서드를 특수화합니다.
+<span data-ttu-id="b534a-248">가상 메서드는 파생된 클래스에서 *재정의*될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-248">A virtual method can be *overridden* in a derived class.</span></span> <span data-ttu-id="b534a-249">인스턴스 메서드 선언에 재정의 한정자가 포함될 경우 메서드는 동일한 시그니처로 상속된 가상 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-249">When an instance method declaration includes an override modifier, the method overrides an inherited virtual method with the same signature.</span></span> <span data-ttu-id="b534a-250">가상 메서드 선언은 새 메서드를 도입하지만 재정의 메서드 선언은 해당 메서드의 새 구현을 제공하여 기존의 상속된 가상 메서드를 특수화합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-250">Whereas a virtual method declaration introduces a new method, an override method declaration specializes an existing inherited virtual method by providing a new implementation of that method.</span></span>
 
-*추상 메서드*는 구현이 없는 가상 메서드입니다. 추상 메서드는 abstract 한정자를 사용하여 선언되며 추상으로도 선언된 클래스에서만 허용됩니다. 추상 메서드는 모든 비추상 파생 클래스에서 재정의해야 합니다.
+<span data-ttu-id="b534a-251">*추상 메서드*는 구현이 없는 가상 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-251">An *abstract method* is a virtual method with no implementation.</span></span> <span data-ttu-id="b534a-252">추상 메서드는 abstract 한정자를 사용하여 선언되며 추상으로도 선언된 클래스에서만 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-252">An abstract method is declared with the abstract modifier and is permitted only in a class that is also declared abstract.</span></span> <span data-ttu-id="b534a-253">추상 메서드는 모든 비추상 파생 클래스에서 재정의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-253">An abstract method must be overridden in every non-abstract derived class.</span></span>
 
-다음 예제에서는 식 트리 노드를 나타내는 추상 클래스 `Expression`와 상수, 변수 참조 및 산술 연산에 대한 식 트리 노드를 구현하는 세 개의 파생 클래스 `Constant`, `VariableReference` 및 `Operation`을 선언합니다. (이것은 식 트리 형식과 비슷하지만 혼동하지 않아야 합니다.)
+<span data-ttu-id="b534a-254">다음 예제에서는 식 트리 노드를 나타내는 추상 클래스 `Expression`와 상수, 변수 참조 및 산술 연산에 대한 식 트리 노드를 구현하는 세 개의 파생 클래스 `Constant`, `VariableReference` 및 `Operation`을 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-254">The following example declares an abstract class, `Expression`, which represents an expression tree node, and three derived classes, `Constant`, `VariableReference`, and `Operation`, which implement expression tree nodes for constants, variable references, and arithmetic operations.</span></span> <span data-ttu-id="b534a-255">(이것은 식 트리 형식과 비슷하지만 혼동하지 않아야 합니다.)</span><span class="sxs-lookup"><span data-stu-id="b534a-255">(This is similar to, but not to be confused with the expression tree types).</span></span>
 
 [!code-csharp[ExpressionClass](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
 
-이전의 4개 클래스는 산술 연산자를 모델링하는 데 사용할 수 있습니다. 예를 들어 이러한 클래스의 인스턴스를 사용할 경우 식 `x + 3`을 다음과 같이 나타낼 수 있습니다.
+<span data-ttu-id="b534a-256">이전의 4개 클래스는 산술 연산자를 모델링하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-256">The previous four classes can be used to model arithmetic expressions.</span></span> <span data-ttu-id="b534a-257">예를 들어 이러한 클래스의 인스턴스를 사용할 경우 식 `x + 3`을 다음과 같이 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-257">For example, using instances of these classes, the expression `x + 3` can be represented as follows.</span></span>
 
 [!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
 
-`Expression` 인스턴스의 `Evaluate` 메서드는 지정된 식을 계산하고 `double` 값을 생성하기 위해 호출됩니다. 이 메서드는 변수 이름(항목의 키)과 값(항목의 값)을 포함하는 `Dictionary` 인수를 사용합니다. `Evaluate`가 추상 메서드이기 때문에 `Expression`에서 파생된 비추상 클래스는 `Evaluate`를 재정의해야 합니다.
+<span data-ttu-id="b534a-258">`Expression` 인스턴스의 `Evaluate` 메서드는 지정된 식을 계산하고 `double` 값을 생성하기 위해 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-258">The `Evaluate` method of an `Expression` instance is invoked to evaluate the given expression and produce a `double` value.</span></span> <span data-ttu-id="b534a-259">이 메서드는 변수 이름(항목의 키)과 값(항목의 값)을 포함하는 `Dictionary` 인수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-259">The method takes a `Dictionary` argument that contains variable names (as keys of the entries) and values (as values of the entries).</span></span> <span data-ttu-id="b534a-260">`Evaluate`가 추상 메서드이기 때문에 `Expression`에서 파생된 비추상 클래스는 `Evaluate`를 재정의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-260">Because `Evaluate` is an abstract method, non-abstract classes derived from `Expression` must override `Evaluate`.</span></span>
 
-`Evaluate`의 `Constant` 구현은 단순히 저장된 상수를 반환합니다. `VariableReference`의 구현은 사전에서 변수 이름을 조회하고 결과 값을 반환합니다. `Operation`의 구현은 먼저 왼쪽 및 오른쪽 피연산자를 계산하고(재귀적으로 해당 `Evaluate` 메서드 호출) 지정된 산술 연산을 수행합니다.
+<span data-ttu-id="b534a-261">`Evaluate`의 `Constant` 구현은 단순히 저장된 상수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-261">A `Constant`'s implementation of `Evaluate` simply returns the stored constant.</span></span> <span data-ttu-id="b534a-262">`VariableReference`의 구현은 사전에서 변수 이름을 조회하고 결과 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-262">A `VariableReference`'s implementation looks up the variable name in the dictionary and returns the resulting value.</span></span> <span data-ttu-id="b534a-263">`Operation`의 구현은 먼저 왼쪽 및 오른쪽 피연산자를 계산하고(재귀적으로 해당 `Evaluate` 메서드 호출) 지정된 산술 연산을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-263">An `Operation`'s implementation first evaluates the left and right operands (by recursively invoking their `Evaluate` methods) and then performs the given arithmetic operation.</span></span>
 
-다음 프로그램에서는 `Expression` 클래스를 사용하여 `x` 및 `y`의 다른 값에 대해 식 `x * (y + 2)`를 계산합니다.
+<span data-ttu-id="b534a-264">다음 프로그램에서는 `Expression` 클래스를 사용하여 `x` 및 `y`의 다른 값에 대해 식 `x * (y + 2)`를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-264">The following program uses the `Expression` classes to evaluate the expression `x * (y + 2)` for different values of `x` and `y`.</span></span>
 
 [!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
 
-### <a name="method-overloading"></a>메서드 오버로드
+### <a name="method-overloading"></a><span data-ttu-id="b534a-265">메서드 오버로드</span><span class="sxs-lookup"><span data-stu-id="b534a-265">Method overloading</span></span>
 
-메서드 *오버로드*는 동일한 클래스가 고유한 시그니처를 갖는 한, 동일한 이름을 갖도록 허용합니다. 오버로드된 메서드의 호출을 컴파일할 때 컴파일러는 *오버로드 확인*을 사용하여 호출할 특정 메서드를 결정합니다. 오버로드 확인은 인수와 가장 적합하게 일치하는 단일 메서드를 찾으며, 최상의 일치 메서드를 찾을 수 있는 경우 오류를 보고합니다. 다음 예제에서는 실제로 진행되는 오버로드 확인을 보여 줍니다. `Main` 메서드의 각 호출에 대한 주석은 실제로 호출되는 메서드를 보여 줍니다.
+<span data-ttu-id="b534a-266">메서드 *오버로드*는 동일한 클래스가 고유한 시그니처를 갖는 한, 동일한 이름을 갖도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-266">Method *overloading* permits multiple methods in the same class to have the same name as long as they have unique signatures.</span></span> <span data-ttu-id="b534a-267">오버로드된 메서드의 호출을 컴파일할 때 컴파일러는 *오버로드 확인*을 사용하여 호출할 특정 메서드를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-267">When compiling an invocation of an overloaded method, the compiler uses *overload resolution* to determine the specific method to invoke.</span></span> <span data-ttu-id="b534a-268">오버로드 확인은 인수와 가장 적합하게 일치하는 단일 메서드를 찾으며, 최상의 일치 메서드를 찾을 수 있는 경우 오류를 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-268">Overload resolution finds the one method that best matches the arguments or reports an error if no single best match can be found.</span></span> <span data-ttu-id="b534a-269">다음 예제에서는 실제로 진행되는 오버로드 확인을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-269">The following example shows overload resolution in effect.</span></span> <span data-ttu-id="b534a-270">`Main` 메서드의 각 호출에 대한 주석은 실제로 호출되는 메서드를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-270">The comment for each invocation in the `Main` method shows which method is actually invoked.</span></span>
 
 [!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
-예제와 같이, 인수를 정확한 매개 변수 형식으로 명시적으로 캐스팅하거나 형식 인수를 명시적으로 제공하여 항상 특정 메서드를 선택할 수 있습니다.
+<span data-ttu-id="b534a-271">예제와 같이, 인수를 정확한 매개 변수 형식으로 명시적으로 캐스팅하거나 형식 인수를 명시적으로 제공하여 항상 특정 메서드를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-271">As shown by the example, a particular method can always be selected by explicitly casting the arguments to the exact parameter types and/or explicitly supplying type arguments.</span></span>
 
-## <a name="other-function-members"></a>기타 함수 멤버
+## <a name="other-function-members"></a><span data-ttu-id="b534a-272">기타 함수 멤버</span><span class="sxs-lookup"><span data-stu-id="b534a-272">Other function members</span></span>
 
-실행 코드를 포함하는 멤버를 통칭하여 클래스의 *함수 멤버*라고 합니다. 이전 섹션에서는 함수 멤버의 기본 종류인 메서드에 대해 설명합니다. 이 섹션에서는 C#에서 지원하는 다른 종류의 함수 멤버인 생성자, 속성, 인덱서, 이벤트, 연산자 및 종료자에 대해 설명합니다.
+<span data-ttu-id="b534a-273">실행 코드를 포함하는 멤버를 통칭하여 클래스의 *함수 멤버*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-273">Members that contain executable code are collectively known as the *function members* of a class.</span></span> <span data-ttu-id="b534a-274">이전 섹션에서는 함수 멤버의 기본 종류인 메서드에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-274">The preceding section describes methods, which are the primary kind of function members.</span></span> <span data-ttu-id="b534a-275">이 섹션에서는 C#에서 지원하는 다른 종류의 함수 멤버인 생성자, 속성, 인덱서, 이벤트, 연산자 및 종료자에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-275">This section describes the other kinds of function members supported by C#: constructors, properties, indexers, events, operators, and finalizers.</span></span>
 
-다음에서는 증가될 수 있는 개체 목록을 구현하는 List<T>라는 제네릭 클래스를 보여 줍니다. 이 클래스는 함수 멤버의 가장 일반적인 몇 가지 예제를 포함합니다.
+<span data-ttu-id="b534a-276">다음에서는 증가될 수 있는 개체 목록을 구현하는 List<T>라는 제네릭 클래스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-276">The following shows a generic class called List<T>, which implements a growable list of objects.</span></span> <span data-ttu-id="b534a-277">이 클래스는 함수 멤버의 가장 일반적인 몇 가지 예제를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-277">The class contains several examples of the most common kinds of function members.</span></span>
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 
-### <a name="constructors"></a>생성자
+### <a name="constructors"></a><span data-ttu-id="b534a-278">생성자</span><span class="sxs-lookup"><span data-stu-id="b534a-278">Constructors</span></span>
 
-C#은 인스턴스 및 정적 생성자를 모두 지원합니다. *인스턴스 생성자*는 클래스의 인스턴스를 초기화하는 데 필요한 작업을 구현하는 멤버입니다. *정적 생성자*는 처음 로드될 때 클래스 자체를 인스턴스화하는 데 필요한 작업을 구현하는 멤버입니다.
+<span data-ttu-id="b534a-279">C#은 인스턴스 및 정적 생성자를 모두 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-279">C# supports both instance and static constructors.</span></span> <span data-ttu-id="b534a-280">*인스턴스 생성자*는 클래스의 인스턴스를 초기화하는 데 필요한 작업을 구현하는 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-280">An *instance constructor* is a member that implements the actions required to initialize an instance of a class.</span></span> <span data-ttu-id="b534a-281">*정적 생성자*는 처음 로드될 때 클래스 자체를 인스턴스화하는 데 필요한 작업을 구현하는 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-281">A *static constructor* is a member that implements the actions required to initialize a class itself when it is first loaded.</span></span>
 
-생성자는 반환 형식이 없고 포함하는 클래스와 동일한 이름을 갖는 메서드처럼 선언됩니다. 생성자 선언에 static 한정자가 포함될 경우 정적 생성자를 선언합니다. 그렇지 않으면 인스턴스 생성자를 선언합니다.
+<span data-ttu-id="b534a-282">생성자는 반환 형식이 없고 포함하는 클래스와 동일한 이름을 갖는 메서드처럼 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-282">A constructor is declared like a method with no return type and the same name as the containing class.</span></span> <span data-ttu-id="b534a-283">생성자 선언에 static 한정자가 포함될 경우 정적 생성자를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-283">If a constructor declaration includes a static modifier, it declares a static constructor.</span></span> <span data-ttu-id="b534a-284">그렇지 않으면 인스턴스 생성자를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-284">Otherwise, it declares an instance constructor.</span></span>
 
-인스턴스 생성자는 오버로드될 수 있으며 선택적 매개 변수를 가질 수 있습니다. 예를 들어 `List<T>` 클래스는 2개의 인스턴스 생성자, 즉, 매개 변수가 없는 생성자와 `int` 매개 변수를 취하는 생성자를 선언합니다. 인스턴스 생성자는 `new` 연산자를 사용하여 호출됩니다. 다음 문은 각각 선택적 인수를 사용하거나 사용하지 않고 `List<string>` 클래스의 생성자를 사용하여 2가지 `List` 인스턴스를 할당합니다.
+<span data-ttu-id="b534a-285">인스턴스 생성자는 오버로드될 수 있으며 선택적 매개 변수를 가질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-285">Instance constructors can be overloaded, and can have optional parameters.</span></span> <span data-ttu-id="b534a-286">예를 들어 `List<T>` 클래스는 2개의 인스턴스 생성자, 즉, 매개 변수가 없는 생성자와 `int` 매개 변수를 취하는 생성자를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-286">For example, the `List<T>` class declares two instance constructors, one with no parameters and one that takes an `int` parameter.</span></span> <span data-ttu-id="b534a-287">인스턴스 생성자는 `new` 연산자를 사용하여 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-287">Instance constructors are invoked using the `new` operator.</span></span> <span data-ttu-id="b534a-288">다음 문은 각각 선택적 인수를 사용하거나 사용하지 않고 `List<string>` 클래스의 생성자를 사용하여 2가지 `List` 인스턴스를 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-288">The following statements allocate two `List<string>` instances using the constructor of the `List` class with and without the optional argument.</span></span>
 
 [!code-csharp[ListExample1](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 
-다른 멤버와 달리 인스턴스 생성자는 상속되지 않으며 클래스에는 클래스에서 실제로 선언된 인스턴스 생성자만 포함됩니다. 클래스에 대해 인스턴스 생성자가 제공되지 않으면 매개 변수가 없는 빈 인스턴스 생성자가 자동으로 제공됩니다.
+<span data-ttu-id="b534a-289">다른 멤버와 달리 인스턴스 생성자는 상속되지 않으며 클래스에는 클래스에서 실제로 선언된 인스턴스 생성자만 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-289">Unlike other members, instance constructors are not inherited, and a class has no instance constructors other than those actually declared in the class.</span></span> <span data-ttu-id="b534a-290">클래스에 대해 인스턴스 생성자가 제공되지 않으면 매개 변수가 없는 빈 인스턴스 생성자가 자동으로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-290">If no instance constructor is supplied for a class, then an empty one with no parameters is automatically provided.</span></span>
 
-### <a name="properties"></a>속성
+### <a name="properties"></a><span data-ttu-id="b534a-291">속성</span><span class="sxs-lookup"><span data-stu-id="b534a-291">Properties</span></span>
 
-*속성*은 필드의 기본 확장입니다. 둘 다 연결된 형식으로 명명되는 멤버이며, 필드 및 속성에 액세스하는 구문은 동일합니다. 그러나 필드와 달리 속성은 저장 위치를 명시하지 않습니다. 대신, 속성에는 해당 값을 읽거나 쓸 때 실행될 문을 지정하는 *접근자*가 있습니다.
+<span data-ttu-id="b534a-292">*속성*은 필드의 기본 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-292">*Properties* are a natural extension of fields.</span></span> <span data-ttu-id="b534a-293">둘 다 연결된 형식으로 명명되는 멤버이며, 필드 및 속성에 액세스하는 구문은 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-293">Both are named members with associated types, and the syntax for accessing fields and properties is the same.</span></span> <span data-ttu-id="b534a-294">그러나 필드와 달리 속성은 저장 위치를 명시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-294">However, unlike fields, properties do not denote storage locations.</span></span> <span data-ttu-id="b534a-295">대신, 속성에는 해당 값을 읽거나 쓸 때 실행될 문을 지정하는 *접근자*가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-295">Instead, properties have *accessors* that specify the statements to be executed when their values are read or written.</span></span>
 
-속성은 필드처럼 선언되지만, 선언이 세미콜론으로 끝나지 않고, 구분 기호 `{` 및 `}` 사이에 쓴 get 접근자 및/또는 set 접근자로 끝난다는 점이 다릅니다. get 접근자 및 set 접근자가 둘 다 있는 속성은 *읽기/쓰기 속성*이고, get 접근자만 있는 속성은 *읽기 전용 속성*이고, set 접근자만 있는 속성은 *쓰기 전용 속성*입니다.
+<span data-ttu-id="b534a-296">속성은 필드처럼 선언되지만, 선언이 세미콜론으로 끝나지 않고, 구분 기호 `{` 및 `}` 사이에 쓴 get 접근자 및/또는 set 접근자로 끝난다는 점이 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-296">A property is declared like a field, except that the declaration ends with a get accessor and/or a set accessor written between the delimiters `{` and `}` instead of ending in a semicolon.</span></span> <span data-ttu-id="b534a-297">get 접근자 및 set 접근자가 둘 다 있는 속성은 *읽기/쓰기 속성*이고, get 접근자만 있는 속성은 *읽기 전용 속성*이고, set 접근자만 있는 속성은 *쓰기 전용 속성*입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-297">A property that has both a get accessor and a set accessor is a *read-write property*, a property that has only a get accessor is a *read-only property*, and a property that has only a set accessor is a *write-only property*.</span></span>
 
-get 접근자는 속성 형식의 반환 값을 갖는 매개 변수 없는 메서드에 해당합니다. 할당 목표에 맞게, 속성이 식에 참조될 때 속성의 get 접근자가 속성 값 계산을 위해 호출됩니다.
+<span data-ttu-id="b534a-298">get 접근자는 속성 형식의 반환 값을 갖는 매개 변수 없는 메서드에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-298">A get accessor corresponds to a parameterless method with a return value of the property type.</span></span> <span data-ttu-id="b534a-299">할당 목표에 맞게, 속성이 식에 참조될 때 속성의 get 접근자가 속성 값 계산을 위해 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-299">Except as the target of an assignment, when a property is referenced in an expression, the get accessor of the property is invoked to compute the value of the property.</span></span>
 
-set 접근자는 value라는 단일 매개 변수를 가지며 반환 형식이 없는 메서드에 해당합니다. 속성이 할당 대상이나 ++ 또는 --의 피연산자로 참조되면 set 접근자는 새 값을 제공하는 인수를 사용하여 호출됩니다.
+<span data-ttu-id="b534a-300">set 접근자는 value라는 단일 매개 변수를 가지며 반환 형식이 없는 메서드에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-300">A set accessor corresponds to a method with a single parameter named value and no return type.</span></span> <span data-ttu-id="b534a-301">속성이 할당 대상이나 ++ 또는 --의 피연산자로 참조되면 set 접근자는 새 값을 제공하는 인수를 사용하여 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-301">When a property is referenced as the target of an assignment or as the operand of ++ or --, the set accessor is invoked with an argument that provides the new value.</span></span>
 
-`List<T>` 클래스는 각각 읽기 전용 및 읽기/쓰기 특성을 갖는 두 개의 속성 Count 및 Capacity를 선언합니다. 다음은 이러한 속성 사용의 예입니다.
+<span data-ttu-id="b534a-302">`List<T>` 클래스는 각각 읽기 전용 및 읽기/쓰기 특성을 갖는 두 개의 속성 Count 및 Capacity를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-302">The `List<T>` class declares two properties, Count and Capacity, which are read-only and read-write, respectively.</span></span> <span data-ttu-id="b534a-303">다음은 이러한 속성 사용의 예입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-303">The following is an example of use of these properties.</span></span>
 
 [!code-csharp[ListExample2](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
 
-필드 및 메서드와 마찬가지로, C#은 인스턴스 속성 및 정적 속성을 모두 지원합니다. 정적 속성은 static 한정자를 사용하여 선언되고 인스턴스 속성은 이 한정자를 사용하지 않고 선언됩니다.
+<span data-ttu-id="b534a-304">필드 및 메서드와 마찬가지로, C#은 인스턴스 속성 및 정적 속성을 모두 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-304">Similar to fields and methods, C# supports both instance properties and static properties.</span></span> <span data-ttu-id="b534a-305">정적 속성은 static 한정자를 사용하여 선언되고 인스턴스 속성은 이 한정자를 사용하지 않고 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-305">Static properties are declared with the static modifier, and instance properties are declared without it.</span></span>
 
-속성의 접근자는 가상일 수 있습니다. 속성 선언에 `virtual`, `abstract`, 또는 `override` 한정자가 포함되면 속성의 접근자에 적용됩니다.
+<span data-ttu-id="b534a-306">속성의 접근자는 가상일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-306">The accessor(s) of a property can be virtual.</span></span> <span data-ttu-id="b534a-307">속성 선언에 `virtual`, `abstract`, 또는 `override` 한정자가 포함되면 속성의 접근자에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-307">When a property declaration includes a `virtual`, `abstract`, or `override` modifier, it applies to the accessor(s) of the property.</span></span>
 
-### <a name="indexers"></a>인덱서
+### <a name="indexers"></a><span data-ttu-id="b534a-308">인덱서</span><span class="sxs-lookup"><span data-stu-id="b534a-308">Indexers</span></span>
 
-*인덱서*는 개체가 배열과 같은 방식으로 인덱싱될 수 있도록 하는 멤버입니다. 인덱서는 멤버 이름과 구분 기호 `[` 및 `]` 사이에 작성된 매개 변수 목록을 합쳐서 멤버 이름으로 사용한다는 점을 제외하고 속성처럼 선언됩니다. 매개 변수는 인덱서의 접근자에서 사용할 수 있습니다. 속성과 마찬가지로 인덱서는 읽기/쓰기, 읽기 전용 및 쓰기 전용일 수 있으며 인덱서의 접근자는 가상일 수 있습니다.
+<span data-ttu-id="b534a-309">*인덱서*는 개체가 배열과 같은 방식으로 인덱싱될 수 있도록 하는 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-309">An *indexer* is a member that enables objects to be indexed in the same way as an array.</span></span> <span data-ttu-id="b534a-310">인덱서는 멤버 이름과 구분 기호 `[` 및 `]` 사이에 작성된 매개 변수 목록을 합쳐서 멤버 이름으로 사용한다는 점을 제외하고 속성처럼 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-310">An indexer is declared like a property except that the name of the member is this followed by a parameter list written between the delimiters `[` and `]`.</span></span> <span data-ttu-id="b534a-311">매개 변수는 인덱서의 접근자에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-311">The parameters are available in the accessor(s) of the indexer.</span></span> <span data-ttu-id="b534a-312">속성과 마찬가지로 인덱서는 읽기/쓰기, 읽기 전용 및 쓰기 전용일 수 있으며 인덱서의 접근자는 가상일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-312">Similar to properties, indexers can be read-write, read-only, and write-only, and the accessor(s) of an indexer can be virtual.</span></span>
 
-`List` 클래스는 `int` 매개 변수를 사용하는 단일 읽기/쓰기 인덱서를 선언합니다. 인덱서는 `List` 인스턴스를 `int` 값으로 인덱싱할 수 있도록 합니다. 예:
+<span data-ttu-id="b534a-313">`List` 클래스는 `int` 매개 변수를 사용하는 단일 읽기/쓰기 인덱서를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-313">The `List` class declares a single read-write indexer that takes an `int` parameter.</span></span> <span data-ttu-id="b534a-314">인덱서는 `List` 인스턴스를 `int` 값으로 인덱싱할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-314">The indexer makes it possible to index `List` instances with `int` values.</span></span> <span data-ttu-id="b534a-315">예:</span><span class="sxs-lookup"><span data-stu-id="b534a-315">For example:</span></span>
 
 [!code-csharp[ListExample3](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
 
-인덱서는 오버로드될 수 있습니다. 즉, 해당 매개 변수의 수와 형식이 다를 경우 한 클래스가 여러 인덱서를 선언할 수 있습니다.
+<span data-ttu-id="b534a-316">인덱서는 오버로드될 수 있습니다. 즉, 해당 매개 변수의 수와 형식이 다를 경우 한 클래스가 여러 인덱서를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-316">Indexers can be overloaded, meaning that a class can declare multiple indexers as long as the number or types of their parameters differ.</span></span>
 
-### <a name="events"></a>이벤트
+### <a name="events"></a><span data-ttu-id="b534a-317">이벤트</span><span class="sxs-lookup"><span data-stu-id="b534a-317">Events</span></span>
 
-*이벤트*는 클래스 또는 개체가 알림을 제공할 수 있도록 하는 멤버입니다. 이벤트는 선언에 이벤트 키워드가 포함되고 형식이 대리자 형식이어야 한다는 점을 제외하고 필드처럼 선언됩니다.
+<span data-ttu-id="b534a-318">*이벤트*는 클래스 또는 개체가 알림을 제공할 수 있도록 하는 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-318">An *event* is a member that enables a class or object to provide notifications.</span></span> <span data-ttu-id="b534a-319">이벤트는 선언에 이벤트 키워드가 포함되고 형식이 대리자 형식이어야 한다는 점을 제외하고 필드처럼 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-319">An event is declared like a field except that the declaration includes an event keyword and the type must be a delegate type.</span></span>
 
-이벤트 멤버를 선언하는 클래스 내에서 이벤트는 대리자 형식의 필드처럼 동작합니다(이벤트가 추상이 아니고 접근자를 선언하지 않을 경우). 필드는 이벤트에 추가된 이벤트 처리기를 나타내는 대리자에 대한 참조를 저장합니다. 이벤트 처리기가 없는 경우 필드는 `null`입니다.
+<span data-ttu-id="b534a-320">이벤트 멤버를 선언하는 클래스 내에서 이벤트는 대리자 형식의 필드처럼 동작합니다(이벤트가 추상이 아니고 접근자를 선언하지 않을 경우).</span><span class="sxs-lookup"><span data-stu-id="b534a-320">Within a class that declares an event member, the event behaves just like a field of a delegate type (provided the event is not abstract and does not declare accessors).</span></span> <span data-ttu-id="b534a-321">필드는 이벤트에 추가된 이벤트 처리기를 나타내는 대리자에 대한 참조를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-321">The field stores a reference to a delegate that represents the event handlers that have been added to the event.</span></span> <span data-ttu-id="b534a-322">이벤트 처리기가 없는 경우 필드는 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-322">If no event handlers are present, the field is `null`.</span></span>
 
-`List<T>` 클래스는 `Changed`라는 단일 이벤트 멤버를 선언합니다. 이것은 새 항목이 목록에 추가되었음을 나타냅니다. Changed 이벤트는 `OnChanged` 가상 메서드에 의해 발생합니다. 이 메서드는 먼저 이벤트가 `null`인지 확인합니다(처리기가 없음을 의미함). 이벤트 발생 개념은 이벤트가 나타내는 대리자를 호출하는 것과 정확히 동일하므로 이벤트 발생을 위한 특수한 언어 구문은 없습니다.
+<span data-ttu-id="b534a-323">`List<T>` 클래스는 `Changed`라는 단일 이벤트 멤버를 선언합니다. 이것은 새 항목이 목록에 추가되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-323">The `List<T>` class declares a single event member called `Changed`, which indicates that a new item has been added to the list.</span></span> <span data-ttu-id="b534a-324">Changed 이벤트는 `OnChanged` 가상 메서드에 의해 발생합니다. 이 메서드는 먼저 이벤트가 `null`인지 확인합니다(처리기가 없음을 의미함).</span><span class="sxs-lookup"><span data-stu-id="b534a-324">The Changed event is raised by the `OnChanged` virtual method, which first checks whether the event is `null` (meaning that no handlers are present).</span></span> <span data-ttu-id="b534a-325">이벤트 발생 개념은 이벤트가 나타내는 대리자를 호출하는 것과 정확히 동일하므로 이벤트 발생을 위한 특수한 언어 구문은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-325">The notion of raising an event is precisely equivalent to invoking the delegate represented by the event—thus, there are no special language constructs for raising events.</span></span>
 
-클라이언트는 *이벤트 처리기*를 통해 이벤트에 반응합니다. 이벤트 처리기는 `+=` 연산자를 사용하여 추가되고, `-=` 연산자를 사용하여 제거됩니다. 다음 예제에서는 이벤트 처리기를 `List<string>`의 `Changed` 이벤트에 추가합니다.
+<span data-ttu-id="b534a-326">클라이언트는 *이벤트 처리기*를 통해 이벤트에 반응합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-326">Clients react to events through *event handlers*.</span></span> <span data-ttu-id="b534a-327">이벤트 처리기는 `+=` 연산자를 사용하여 추가되고, `-=` 연산자를 사용하여 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-327">Event handlers are attached using the `+=` operator and removed using the `-=` operator.</span></span> <span data-ttu-id="b534a-328">다음 예제에서는 이벤트 처리기를 `List<string>`의 `Changed` 이벤트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-328">The following example attaches an event handler to the `Changed` event of a `List<string>`.</span></span>
 
 [!code-csharp[EventExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
 
-이벤트의 기본 저장소를 제어하려고 하는 고급 시나리오의 경우 이벤트 선언에서 속성의 `set` 접근자와 비슷한 `add` 및 `remove` 접근자를 명시적으로 제공할 수 있습니다.
+<span data-ttu-id="b534a-329">이벤트의 기본 저장소를 제어하려고 하는 고급 시나리오의 경우 이벤트 선언에서 속성의 `set` 접근자와 비슷한 `add` 및 `remove` 접근자를 명시적으로 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-329">For advanced scenarios where control of the underlying storage of an event is desired, an event declaration can explicitly provide `add` and `remove` accessors, which are somewhat similar to the `set` accessor of a property.</span></span>
 
-### <a name="operators"></a>연산자
+### <a name="operators"></a><span data-ttu-id="b534a-330">연산자</span><span class="sxs-lookup"><span data-stu-id="b534a-330">Operators</span></span>
 
-*연산자*는 클래스 인스턴스에 특정 식 연산자를 적용하는 것의 의미를 정의하는 멤버입니다. 세 가지 종류의 연산자, 즉, 단항 연산자, 이항 연산자 및 변환 연산자를 정의할 수 있습니다. 모든 연산자는 `public` 및 `static`으로 선언해야 합니다.
+<span data-ttu-id="b534a-331">*연산자*는 클래스 인스턴스에 특정 식 연산자를 적용하는 것의 의미를 정의하는 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-331">An *operator* is a member that defines the meaning of applying a particular expression operator to instances of a class.</span></span> <span data-ttu-id="b534a-332">세 가지 종류의 연산자, 즉, 단항 연산자, 이항 연산자 및 변환 연산자를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-332">Three kinds of operators can be defined: unary operators, binary operators, and conversion operators.</span></span> <span data-ttu-id="b534a-333">모든 연산자는 `public` 및 `static`으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-333">All operators must be declared as `public` and `static`.</span></span>
 
-`List<T>` 클래스는 두 가지 연산자인 `operator ==` 및 `operator !=`를 선언하므로 해당 연산자를 `List` 인스턴스에 적용하는 새로운 의미를 식에 지정합니다. 특히, 이러한 연산자는 해당 Equals 메서드를 사용하여 포함된 각 개체를 비교할 때 두 `List<T>` 인스턴스의 같음을 정의합니다. 다음 예제에서는 `==` 연산자를 사용하여 두 `List<int>` 인스턴스를 비교합니다.
+<span data-ttu-id="b534a-334">`List<T>` 클래스는 두 가지 연산자인 `operator ==` 및 `operator !=`를 선언하므로 해당 연산자를 `List` 인스턴스에 적용하는 새로운 의미를 식에 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-334">The `List<T>` class declares two operators, `operator ==` and `operator !=`, and thus gives new meaning to expressions that apply those operators to `List` instances.</span></span> <span data-ttu-id="b534a-335">특히, 이러한 연산자는 해당 Equals 메서드를 사용하여 포함된 각 개체를 비교할 때 두 `List<T>` 인스턴스의 같음을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-335">Specifically, the operators define equality of two `List<T>` instances as comparing each of the contained objects using their Equals methods.</span></span> <span data-ttu-id="b534a-336">다음 예제에서는 `==` 연산자를 사용하여 두 `List<int>` 인스턴스를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-336">The following example uses the `==` operator to compare two `List<int>` instances.</span></span>
 
 [!code-csharp[OperatorExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]
 
-두 목록은 같은 순서로 같은 값을 갖는 동일한 수의 개체를 포함하므로 첫 번째 `Console.WriteLine`은 `True`를 출력합니다. `List<T>`에서 `operator ==`이 정의되지 않았으면 `a` 및 `b`은 다른 `List<int>` 인스턴스를 참조하므로 첫 번째 `Console.WriteLine`은 `False`를 출력합니다.
+<span data-ttu-id="b534a-337">두 목록은 같은 순서로 같은 값을 갖는 동일한 수의 개체를 포함하므로 첫 번째 `Console.WriteLine`은 `True`를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-337">The first `Console.WriteLine` outputs `True` because the two lists contain the same number of objects with the same values in the same order.</span></span> <span data-ttu-id="b534a-338">`List<T>`에서 `operator ==`이 정의되지 않았으면 `a` 및 `b`은 다른 `List<int>` 인스턴스를 참조하므로 첫 번째 `Console.WriteLine`은 `False`를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-338">Had `List<T>` not defined `operator ==`, the first `Console.WriteLine` would have output `False` because `a` and `b` reference different `List<int>` instances.</span></span>
 
-### <a name="finalizers"></a>종료자
+### <a name="finalizers"></a><span data-ttu-id="b534a-339">종료자</span><span class="sxs-lookup"><span data-stu-id="b534a-339">Finalizers</span></span>
 
-*종료자*는 클래스의 인스턴스를 종결하는 데 필요한 작업을 구현하는 멤버입니다. 종료자는 매개 변수를 사용할 수 없고, 액세스 가능성 한정자를 포함할 수 없으며, 명시적으로 호출할 수 없습니다. 인스턴스에 대한 종료자는 가비지 수집 중에 자동으로 호출됩니다.
+<span data-ttu-id="b534a-340">*종료자*는 클래스의 인스턴스를 종결하는 데 필요한 작업을 구현하는 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-340">A *finalizer* is a member that implements the actions required to finalize an instance of a class.</span></span> <span data-ttu-id="b534a-341">종료자는 매개 변수를 사용할 수 없고, 액세스 가능성 한정자를 포함할 수 없으며, 명시적으로 호출할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-341">Finalizers cannot have parameters, they cannot have accessibility modifiers, and they cannot be invoked explicitly.</span></span> <span data-ttu-id="b534a-342">인스턴스에 대한 종료자는 가비지 수집 중에 자동으로 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-342">The finalizer for an instance is invoked automatically during garbage collection.</span></span>
 
-가비지 수집기는 개체를 수집하고 종료자를 실행할 시기를 유연하게 결정할 수 있도록 합니다. 특히, 종료자 호출 타이밍은 결정적이 아니며 모든 스레드에서 종료자를 실행할 수 있습니다. 이러한 이유 및 기타 이유로 클래스는 가능한 다른 솔루션이 없을 때만 종료자를 구현해야 합니다.
+<span data-ttu-id="b534a-343">가비지 수집기는 개체를 수집하고 종료자를 실행할 시기를 유연하게 결정할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-343">The garbage collector is allowed wide latitude in deciding when to collect objects and run finalizers.</span></span> <span data-ttu-id="b534a-344">특히, 종료자 호출 타이밍은 결정적이 아니며 모든 스레드에서 종료자를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-344">Specifically, the timing of finalizer invocations is not deterministic, and finalizers may be executed on any thread.</span></span> <span data-ttu-id="b534a-345">이러한 이유 및 기타 이유로 클래스는 가능한 다른 솔루션이 없을 때만 종료자를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-345">For these and other reasons, classes should implement finalizers only when no other solutions are feasible.</span></span>
 
-`using` 문은 개체 소멸을 위한 더 나은 방법을 제공합니다.
+<span data-ttu-id="b534a-346">`using` 문은 개체 소멸을 위한 더 나은 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b534a-346">The `using` statement provides a better approach to object destruction.</span></span>
 
 >[!div class="step-by-step"]
-[이전](statements.md)
-[다음](structs.md)
-
+<span data-ttu-id="b534a-347">[이전](statements.md)
+[다음](structs.md)</span><span class="sxs-lookup"><span data-stu-id="b534a-347">[Previous](statements.md)
+[Next](structs.md)</span></span>

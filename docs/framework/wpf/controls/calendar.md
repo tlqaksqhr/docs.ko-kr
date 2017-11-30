@@ -1,63 +1,66 @@
 ---
-title: "Calendar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Calendar 컨트롤[WPF]"
-  - "컨트롤[WPF], Calendar"
+title: "일정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], Calendar
+- Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 857f6b3be1467ec54fd27c76679279c0d0960690
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Calendar
-달력을 사용하면 사용자가 시각적으로 표시된 달력에서 날짜를 선택할 수 있습니다.  
+# <a name="calendar"></a><span data-ttu-id="83fc5-102">일정</span><span class="sxs-lookup"><span data-stu-id="83fc5-102">Calendar</span></span>
+<span data-ttu-id="83fc5-103">달력 사용자를 시각적 일정 표시를 사용 하 여 날짜를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-103">A calendar enables a user to select a date by using a visual calendar display.</span></span>  
   
- <xref:System.Windows.Controls.Calendar> 컨트롤은 단독으로 사용하거나 <xref:System.Windows.Controls.DatePicker> 컨트롤의 드롭다운 부분으로 사용할 수 있습니다.  자세한 내용은 <xref:System.Windows.Controls.DatePicker>를 참조하십시오.  
+ <span data-ttu-id="83fc5-104">A <xref:System.Windows.Controls.Calendar> 컨트롤의 드롭다운 부분으로 또는 자체적으로 사용할 수는 <xref:System.Windows.Controls.DatePicker> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-104">A <xref:System.Windows.Controls.Calendar> control can be used on its own, or as a drop-down part of a <xref:System.Windows.Controls.DatePicker> control.</span></span> <span data-ttu-id="83fc5-105">자세한 내용은 <xref:System.Windows.Controls.DatePicker>을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="83fc5-105">For more information, see <xref:System.Windows.Controls.DatePicker>.</span></span>  
   
- 다음 그림에서는 두 개의 <xref:System.Windows.Controls.Calendar> 컨트롤을 보여 줍니다. 하나는 선택 사항과 블랙아웃 날짜가 있고 다른 하나는 이러한 항목이 없습니다.  
+ <span data-ttu-id="83fc5-106">다음 그림은 두 개의 <xref:System.Windows.Controls.Calendar> 보여 한 하지 않고 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-106">The following illustration shows two <xref:System.Windows.Controls.Calendar> controls, one with selections and blackout dates and one without.</span></span>  
   
- ![달력 컨트롤](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP\_CalendarControls")  
-Calendar 컨트롤  
+ <span data-ttu-id="83fc5-107">![달력 컨트롤](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")</span><span class="sxs-lookup"><span data-stu-id="83fc5-107">![Calendar controls](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")</span></span>  
+<span data-ttu-id="83fc5-108">달력 컨트롤</span><span class="sxs-lookup"><span data-stu-id="83fc5-108">Calendar controls</span></span>  
   
- 다음 표에서는 일반적으로 <xref:System.Windows.Controls.Calendar>와 관련된 작업에 대한 정보를 제공합니다.  
+ <span data-ttu-id="83fc5-109">다음 표에서 일반적으로 연결 된 작업에 대 한 정보를 제공는 <xref:System.Windows.Controls.Calendar>합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-109">The following table provides information about tasks that are typically associated with the <xref:System.Windows.Controls.Calendar>.</span></span>  
   
-|Task|구현|  
-|----------|--------|  
-|선택할 수 없는 날짜를 지정합니다.|<xref:System.Windows.Controls.Calendar.BlackoutDates%2A> 속성을 사용합니다.|  
-|<xref:System.Windows.Controls.Calendar>가 월, 전체 연도 또는 10년을 표시하도록 합니다.|<xref:System.Windows.Controls.Calendar.DisplayMode%2A> 속성을 월, 년, 10년으로 설정합니다.|  
-|사용자가 날짜, 날짜 범위, 또는 여러 날짜 범위를 선택할 수 있는지 여부를 지정합니다.|<xref:System.Windows.Controls.Calendar.SelectionMode%2A>를 사용합니다.|  
-|<xref:System.Windows.Controls.Calendar>가 표시하는 날짜의 범위를 지정합니다.|<xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> 및 <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> 속성을 사용합니다.|  
-|현재 날짜를 강조 표시할지 여부를 지정합니다.|<xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> 속성을 사용합니다.  <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A>의 기본값은 `true`입니다.|  
-|<xref:System.Windows.Controls.Calendar>의 크기를 변경합니다.|<xref:System.Windows.Controls.Viewbox>를 사용하거나 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 속성을 <xref:System.Windows.Media.ScaleTransform>으로 설정합니다.  <xref:System.Windows.Controls.Calendar>의 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 속성을 설정하면 실제 달력의 크기는 변경되지 않습니다.|  
+|<span data-ttu-id="83fc5-110">작업</span><span class="sxs-lookup"><span data-stu-id="83fc5-110">Task</span></span>|<span data-ttu-id="83fc5-111">구현</span><span class="sxs-lookup"><span data-stu-id="83fc5-111">Implementation</span></span>|  
+|----------|--------------------|  
+|<span data-ttu-id="83fc5-112">날짜를 지정 하는 선택할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-112">Specify dates that cannot be selected.</span></span>|<span data-ttu-id="83fc5-113"><xref:System.Windows.Controls.Calendar.BlackoutDates%2A> 속성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-113">Use the <xref:System.Windows.Controls.Calendar.BlackoutDates%2A> property.</span></span>|  
+|<span data-ttu-id="83fc5-114">있어야는 <xref:System.Windows.Controls.Calendar> 한 달, 전체 연도 또는 10 년을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-114">Have the <xref:System.Windows.Controls.Calendar> display a month, an entire year, or a decade.</span></span>|<span data-ttu-id="83fc5-115">설정의 <xref:System.Windows.Controls.Calendar.DisplayMode%2A> 속성 월, 연도 또는 10 년을 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-115">Set the <xref:System.Windows.Controls.Calendar.DisplayMode%2A> property to Month, Year, or Decade.</span></span>|  
+|<span data-ttu-id="83fc5-116">날짜를 선택할 수 있는지 여부, 날짜, 범위 또는 여러 날짜 범위를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-116">Specify whether the user can select a date, a range of dates, or multiple ranges of dates.</span></span>|<span data-ttu-id="83fc5-117">사용 하 여 <xref:System.Windows.Controls.Calendar.SelectionMode%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-117">Use the <xref:System.Windows.Controls.Calendar.SelectionMode%2A>.</span></span>|  
+|<span data-ttu-id="83fc5-118">날짜 범위를 지정 하는 <xref:System.Windows.Controls.Calendar> 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-118">Specify the range of dates that the <xref:System.Windows.Controls.Calendar> displays.</span></span>|<span data-ttu-id="83fc5-119">사용 하 여 <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> 및 <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-119">Use the <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> and <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> properties.</span></span>|  
+|<span data-ttu-id="83fc5-120">현재 날짜를 강조 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-120">Specify whether the current date is highlighted.</span></span>|<span data-ttu-id="83fc5-121"><xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> 속성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-121">Use the <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> property.</span></span> <span data-ttu-id="83fc5-122">기본적으로 <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> 은 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-122">By default, <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> is `true`.</span></span>|  
+|<span data-ttu-id="83fc5-123">크기를 변경는 <xref:System.Windows.Controls.Calendar>합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-123">Change the size of the <xref:System.Windows.Controls.Calendar>.</span></span>|<span data-ttu-id="83fc5-124">사용 하 여 한 <xref:System.Windows.Controls.Viewbox> 설정 또는 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 속성을는 <xref:System.Windows.Media.ScaleTransform>합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-124">Use a <xref:System.Windows.Controls.Viewbox> or set the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property to a <xref:System.Windows.Media.ScaleTransform>.</span></span> <span data-ttu-id="83fc5-125">설정한 경우에 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 의 속성은 <xref:System.Windows.Controls.Calendar>, 실제 달력의 크기를 변경 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-125">Note that if you set the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties of a <xref:System.Windows.Controls.Calendar>, the actual calendar does not change its size.</span></span>|  
   
- <xref:System.Windows.Controls.Calendar> 컨트롤은 마우스 또는 키보드를 사용하는 기본 탐색을 제공합니다.  다음 표에서는 키보드 탐색을 요약하여 보여 줍니다.  
+ <span data-ttu-id="83fc5-126"><xref:System.Windows.Controls.Calendar> 컨트롤은 마우스 또는 키보드를 사용 하 여 기본 탐색을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-126">The <xref:System.Windows.Controls.Calendar> control provides basic navigation using either the mouse or keyboard.</span></span> <span data-ttu-id="83fc5-127">다음 표에서 키보드 탐색을 요약 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-127">The following table summarizes keyboard navigation.</span></span>  
   
-|키 조합|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|동작|  
-|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------|  
-|위쪽 화살표|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.SelectionMode%2A> 속성이 <xref:System.Windows.Controls.CalendarSelectionMode>로 설정되지 않은 경우 <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 속성을 변경합니다.|  
-|위쪽 화살표|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.DisplayDate%2A> 속성의 월을 변경합니다.  <xref:System.Windows.Controls.Calendar.SelectedDate%2A>는 변경되지 않습니다.|  
-|위쪽 화살표|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.DisplayDate%2A>의 연도를 변경합니다.  <xref:System.Windows.Controls.Calendar.SelectedDate%2A>는 변경되지 않습니다.|  
-|Shift\+위쪽 화살표|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.SelectionMode%2A>가 <xref:System.Windows.Controls.CalendarSelectionMode> 또는 <xref:System.Windows.Controls.CalendarSelectionMode>으로 설정되지 않은 경우 선택한 날짜 범위를 확장합니다.|  
-|Home|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.SelectedDate%2A>를 현재 월의 첫 일자로 변경합니다.|  
-|Home|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.DisplayDate%2A>의 월을 해당 연도의 첫 달로 변경합니다.  <xref:System.Windows.Controls.Calendar.SelectedDate%2A>는 변경되지 않습니다.|  
-|Home|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.DisplayDate%2A>의 연도를 해당 연대의 첫 연도로 변경합니다.  <xref:System.Windows.Controls.Calendar.SelectedDate%2A>는 변경되지 않습니다.|  
-|End|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.SelectedDate%2A>를 현재 월의 마지막 일자로 변경합니다.|  
-|End|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.DisplayDate%2A>의 월을 해당 연도의 마지막 달로 변경합니다.  <xref:System.Windows.Controls.Calendar.SelectedDate%2A>는 변경되지 않습니다.|  
-|End|<xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.DisplayDate%2A>의 연도를 해당 연대의 마지막 연도로 변경합니다.  <xref:System.Windows.Controls.Calendar.SelectedDate%2A>는 변경되지 않습니다.|  
-|Ctrl\+위쪽 화살표|임의|다음으로 큰 <xref:System.Windows.Controls.Calendar.DisplayMode%2A>로 전환합니다.  <xref:System.Windows.Controls.Calendar.DisplayMode%2A>가 이미 <xref:System.Windows.Controls.CalendarMode>인 경우 아무 작업도 수행되지 않습니다.|  
-|\<Ctrl\+아래쪽 화살표\>|임의|다음으로 작은 <xref:System.Windows.Controls.Calendar.DisplayMode%2A>로 전환합니다.  <xref:System.Windows.Controls.Calendar.DisplayMode%2A>가 이미 <xref:System.Windows.Controls.CalendarMode>인 경우 아무 작업도 수행되지 않습니다.|  
-|스페이스바 또는 Enter|<xref:System.Windows.Controls.CalendarMode> 또는 <xref:System.Windows.Controls.CalendarMode>|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>를 포커스가 있는 항목이 나타내는 <xref:System.Windows.Controls.CalendarMode> 또는 <xref:System.Windows.Controls.CalendarMode>로 전환합니다.|  
+|<span data-ttu-id="83fc5-128">키 조합</span><span class="sxs-lookup"><span data-stu-id="83fc5-128">Key Combination</span></span>|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|<span data-ttu-id="83fc5-129">작업</span><span class="sxs-lookup"><span data-stu-id="83fc5-129">Action</span></span>|  
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------|  
+|<span data-ttu-id="83fc5-130">화살표</span><span class="sxs-lookup"><span data-stu-id="83fc5-130">ARROW</span></span>|<xref:System.Windows.Controls.CalendarMode.Month>|<span data-ttu-id="83fc5-131">변경 된 <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 속성 경우는 <xref:System.Windows.Controls.Calendar.SelectionMode%2A> 속성으로 설정 되지 않은 <xref:System.Windows.Controls.CalendarSelectionMode.None>합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-131">Changes the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> property if the <xref:System.Windows.Controls.Calendar.SelectionMode%2A> property is not set to <xref:System.Windows.Controls.CalendarSelectionMode.None>.</span></span>|  
+|<span data-ttu-id="83fc5-132">화살표</span><span class="sxs-lookup"><span data-stu-id="83fc5-132">ARROW</span></span>|<xref:System.Windows.Controls.CalendarMode.Year>|<span data-ttu-id="83fc5-133">변경 된 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-133">Changes the month of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> property.</span></span> <span data-ttu-id="83fc5-134"><xref:System.Windows.Controls.Calendar.SelectedDate%2A> 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-134">Note that the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="83fc5-135">화살표</span><span class="sxs-lookup"><span data-stu-id="83fc5-135">ARROW</span></span>|<xref:System.Windows.Controls.CalendarMode.Decade>|<span data-ttu-id="83fc5-136">연도 변경는 <xref:System.Windows.Controls.Calendar.DisplayDate%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-136">Changes the year of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A>.</span></span> <span data-ttu-id="83fc5-137"><xref:System.Windows.Controls.Calendar.SelectedDate%2A> 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-137">Note that the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="83fc5-138">SHIFT + 화살표</span><span class="sxs-lookup"><span data-stu-id="83fc5-138">SHIFT+ARROW</span></span>|<xref:System.Windows.Controls.CalendarMode.Month>|<span data-ttu-id="83fc5-139">경우 <xref:System.Windows.Controls.Calendar.SelectionMode%2A> 로 설정 되지 않은 <xref:System.Windows.Controls.CalendarSelectionMode.SingleDate> 또는 <xref:System.Windows.Controls.CalendarSelectionMode.None>, 선택 된 날짜의 범위를 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-139">If <xref:System.Windows.Controls.Calendar.SelectionMode%2A> is not set to <xref:System.Windows.Controls.CalendarSelectionMode.SingleDate> or <xref:System.Windows.Controls.CalendarSelectionMode.None>, extends the range of selected dates.</span></span>|  
+|<span data-ttu-id="83fc5-140">홈</span><span class="sxs-lookup"><span data-stu-id="83fc5-140">HOME</span></span>|<xref:System.Windows.Controls.CalendarMode.Month>|<span data-ttu-id="83fc5-141">변경 된 <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 현재 달의 첫째 날에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-141">Changes the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> to the first day of the current month.</span></span>|  
+|<span data-ttu-id="83fc5-142">홈</span><span class="sxs-lookup"><span data-stu-id="83fc5-142">HOME</span></span>|<xref:System.Windows.Controls.CalendarMode.Year>|<span data-ttu-id="83fc5-143">변경 된 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 연도의 첫 번째 월입니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-143">Changes the month of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> to the first month of the year.</span></span> <span data-ttu-id="83fc5-144"><xref:System.Windows.Controls.Calendar.SelectedDate%2A> 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-144">The <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="83fc5-145">홈</span><span class="sxs-lookup"><span data-stu-id="83fc5-145">HOME</span></span>|<xref:System.Windows.Controls.CalendarMode.Decade>|<span data-ttu-id="83fc5-146">연도 변경는 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 는 10 년의 첫 번째는 연도입니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-146">Changes the year of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> to the first year of the decade.</span></span> <span data-ttu-id="83fc5-147"><xref:System.Windows.Controls.Calendar.SelectedDate%2A> 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-147">The <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="83fc5-148">End </span><span class="sxs-lookup"><span data-stu-id="83fc5-148">END</span></span>|<xref:System.Windows.Controls.CalendarMode.Month>|<span data-ttu-id="83fc5-149">변경 된 <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 현재 달의 마지막 날입니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-149">Changes the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> to the last day of the current month.</span></span>|  
+|<span data-ttu-id="83fc5-150">End </span><span class="sxs-lookup"><span data-stu-id="83fc5-150">END</span></span>|<xref:System.Windows.Controls.CalendarMode.Year>|<span data-ttu-id="83fc5-151">변경 된 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 연도의 지난 달에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-151">Changes the month of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> to the last month of the year.</span></span> <span data-ttu-id="83fc5-152"><xref:System.Windows.Controls.Calendar.SelectedDate%2A> 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-152">The <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="83fc5-153">End </span><span class="sxs-lookup"><span data-stu-id="83fc5-153">END</span></span>|<xref:System.Windows.Controls.CalendarMode.Decade>|<span data-ttu-id="83fc5-154">연도 변경는 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 는 10 년의 마지막 연도입니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-154">Changes the year of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> to the last year of the decade.</span></span> <span data-ttu-id="83fc5-155"><xref:System.Windows.Controls.Calendar.SelectedDate%2A> 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-155">The <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="83fc5-156">Ctrl+위쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="83fc5-156">CTRL+UP ARROW</span></span>|<span data-ttu-id="83fc5-157">임의의 값</span><span class="sxs-lookup"><span data-stu-id="83fc5-157">Any</span></span>|<span data-ttu-id="83fc5-158">다음 전환 큰 <xref:System.Windows.Controls.Calendar.DisplayMode%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-158">Switches to the next larger <xref:System.Windows.Controls.Calendar.DisplayMode%2A>.</span></span> <span data-ttu-id="83fc5-159">경우 <xref:System.Windows.Controls.Calendar.DisplayMode%2A> 이미 <xref:System.Windows.Controls.CalendarMode.Decade>, 작업이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-159">If <xref:System.Windows.Controls.Calendar.DisplayMode%2A> is already <xref:System.Windows.Controls.CalendarMode.Decade>, no action.</span></span>|  
+|<span data-ttu-id="83fc5-160">Ctrl+아래쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="83fc5-160">CTRL+DOWN ARROW</span></span>|<span data-ttu-id="83fc5-161">임의의 값</span><span class="sxs-lookup"><span data-stu-id="83fc5-161">Any</span></span>|<span data-ttu-id="83fc5-162">다음 전환 작은 <xref:System.Windows.Controls.Calendar.DisplayMode%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-162">Switches to the next smaller <xref:System.Windows.Controls.Calendar.DisplayMode%2A>.</span></span> <span data-ttu-id="83fc5-163">경우 <xref:System.Windows.Controls.Calendar.DisplayMode%2A> 이미 <xref:System.Windows.Controls.CalendarMode.Month>, 작업이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-163">If <xref:System.Windows.Controls.Calendar.DisplayMode%2A> is already <xref:System.Windows.Controls.CalendarMode.Month>, no action.</span></span>|  
+|<span data-ttu-id="83fc5-164">스페이스바 또는 ENTER</span><span class="sxs-lookup"><span data-stu-id="83fc5-164">SPACEBAR or ENTER</span></span>|<span data-ttu-id="83fc5-165"><xref:System.Windows.Controls.CalendarMode.Year> 또는 <xref:System.Windows.Controls.CalendarMode.Decade></span><span class="sxs-lookup"><span data-stu-id="83fc5-165"><xref:System.Windows.Controls.CalendarMode.Year> or <xref:System.Windows.Controls.CalendarMode.Decade></span></span>|<span data-ttu-id="83fc5-166">스위치 <xref:System.Windows.Controls.Calendar.DisplayMode%2A> 에 <xref:System.Windows.Controls.CalendarMode.Month> 또는 <xref:System.Windows.Controls.CalendarMode.Year> 포커스가 지정 된 항목으로 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="83fc5-166">Switches <xref:System.Windows.Controls.Calendar.DisplayMode%2A> to the <xref:System.Windows.Controls.CalendarMode.Month> or <xref:System.Windows.Controls.CalendarMode.Year> represented by focused item.</span></span>|  
   
-## 참고 항목  
- [컨트롤](../../../../docs/framework/wpf/controls/index.md)   
- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="83fc5-167">참고 항목</span><span class="sxs-lookup"><span data-stu-id="83fc5-167">See Also</span></span>  
+ [<span data-ttu-id="83fc5-168">컨트롤</span><span class="sxs-lookup"><span data-stu-id="83fc5-168">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+ [<span data-ttu-id="83fc5-169">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="83fc5-169">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

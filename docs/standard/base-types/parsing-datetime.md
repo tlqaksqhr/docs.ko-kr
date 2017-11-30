@@ -1,71 +1,77 @@
 ---
-title: ".NET Framework의 날짜 및 시간 문자열 구문 분석 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "기본 형식, 문자열 구문 분석"
-  - "날짜 및 시간 문자열"
-  - "DateTime 개체"
-  - "열거형[.NET Framework], 문자열 구문 분석"
-  - "ParseExact 메서드"
-  - "문자열 구문 분석, 날짜 및 시간 문자열"
-  - "시간 문자열"
+title: ".NET Framework의 날짜 및 시간 문자열 구문 분석"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- parsing strings, date and time strings
+- date and time strings
+- ParseExact method
+- enumerations [.NET Framework], parsing strings
+- base types, parsing strings
+- DateTime object
+- time strings
 ms.assetid: 43bae51e-9b1d-41a6-a187-772c0d096d90
-caps.latest.revision: 24
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 1beceb2b2d32c500e73cd7786c480fcd84c3001c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# .NET Framework의 날짜 및 시간 문자열 구문 분석
-구문 분석 메서드는 날짜 및 시간의 문자열 표현을 해당 <xref:System.DateTime> 개체로 변환합니다.  <xref:System.DateTime.Parse%2A> 및 <xref:System.DateTime.TryParse%2A> 메서드는 날짜 및 시간의 몇 가지 일반적인 표현을 모두 변환합니다.  <xref:System.DateTime.ParseExact%2A> 및 <xref:System.DateTime.TryParseExact%2A> 메서드는 날짜 및 시간 형식 문자열로 지정된 패턴을 따르는 문자열 표현을 변환합니다. [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) 및 [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)에 대한 항목을 참조하십시오.  
+# <a name="parsing-date-and-time-strings-in-net"></a><span data-ttu-id="fd30f-102">날짜 및.net에서 시간 문자열 구문 분석</span><span class="sxs-lookup"><span data-stu-id="fd30f-102">Parsing Date and Time Strings in .NET</span></span>
+<span data-ttu-id="fd30f-103">구문 분석 메서드는 날짜 및 시간의 문자열 표현을 해당 하는 변환 <xref:System.DateTime> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-103">Parsing methods convert the string representation of a date and time to an equivalent <xref:System.DateTime> object.</span></span> <span data-ttu-id="fd30f-104"><xref:System.DateTime.Parse%2A> 및 <xref:System.DateTime.TryParse%2A> 메서드는 몇 가지 일반적인 표현 된 날짜 및 시간 중 어느 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-104">The <xref:System.DateTime.Parse%2A> and <xref:System.DateTime.TryParse%2A> methods convert any of several common representations of a date and time.</span></span> <span data-ttu-id="fd30f-105"><xref:System.DateTime.ParseExact%2A> 및 <xref:System.DateTime.TryParseExact%2A> 메서드 날짜 및 시간 형식 문자열에 의해 지정 된 패턴을 따르는 문자열 표현을 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-105">The <xref:System.DateTime.ParseExact%2A> and <xref:System.DateTime.TryParseExact%2A> methods convert a string representation that conforms to the pattern specified by a date and time format string.</span></span> <span data-ttu-id="fd30f-106">[표준 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) 및 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)의 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fd30f-106">(See the topics on [standard date and time format strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) and [custom date and time format strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).)</span></span>  
   
- 구문 분석은 날짜 및 시간 구분 기호와 월, 일 및 연대 이름에 사용되는 문자열과 같은 정보를 제공하는 형식 공급자의 속성에 따라 영향을 받습니다.  형식 공급자는 현재 스레드 문화권에 의해 암시적으로 제공되거나 구문 분석 메서드의 <xref:System.IFormatProvider> 매개 변수에 의해 명시적으로 제공되는 현재 <xref:System.Globalization.DateTimeFormatInfo> 개체입니다.  <xref:System.IFormatProvider> 매개 변수의 경우 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체나 <xref:System.Globalization.DateTimeFormatInfo> 개체를 지정합니다.  
+ <span data-ttu-id="fd30f-107">구문 분석은 날짜 및 시간 구분 기호와 월, 일 및 연대의 이름에 사용되는 문자열과 같은 정보를 제공하는 서식 공급자의 속성에 의해 영향을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-107">Parsing is influenced by the properties of a format provider that supplies information such as the strings used for date and time separators, and the names of months, days, and eras.</span></span> <span data-ttu-id="fd30f-108">형식 공급자가 현재 <xref:System.Globalization.DateTimeFormatInfo> 의해 명시적으로 또는 현재 스레드 문화권에 의해 암시적으로 제공 되는 개체는 <xref:System.IFormatProvider> 구문 분석 방법의 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-108">The format provider is the current <xref:System.Globalization.DateTimeFormatInfo> object, which is provided implicitly by the current thread culture or explicitly by the <xref:System.IFormatProvider> parameter of a parsing method.</span></span> <span data-ttu-id="fd30f-109">에 대 한는 <xref:System.IFormatProvider> 매개 변수를 지정 된 <xref:System.Globalization.CultureInfo> 는 문화권을 나타내는 개체 또는 <xref:System.Globalization.DateTimeFormatInfo> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-109">For the <xref:System.IFormatProvider> parameter, specify a <xref:System.Globalization.CultureInfo> object, which represents a culture, or a <xref:System.Globalization.DateTimeFormatInfo> object.</span></span>  
   
- 구문 분석할 날짜의 문자열 표현에는 월이 포함되고 일 또는 연도 중 적어도 하나가 포함되어야 합니다.  시간의 문자열 표현에는 시가 포함되고 분 또는 AM\/PM 지정자 중 적어도 하나가 포함되어야 합니다.  그러나 생략된 구성 요소에는 가능하면 구문 분석 시 기본값이 제공됩니다.  날짜, 연도, 일\(월 기준\) 및 시간이 생략되었을 때 기본적으로 제공되는 값은 각각 현재 날짜, 현재 연도, 월의 첫 번째 일 및 자정입니다.  
+ <span data-ttu-id="fd30f-110">구문 분석될 날짜의 문자열 표현은 월을 포함해야 하고 적어도 날이나 연도를 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-110">The string representation of a date to be parsed must include the month and at least a day or year.</span></span> <span data-ttu-id="fd30f-111">시간의 문자열 표현은 시간을 포함해야 하고 적어도 분이나 AM/PM 지정자를 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-111">The string representation of a time must include the hour and at least minutes or the AM/PM designator.</span></span> <span data-ttu-id="fd30f-112">하지만 가능한 경우 구문 분석은 생략된 구성 요소에 대한 기본값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-112">However, parsing supplies default values for omitted components if possible.</span></span> <span data-ttu-id="fd30f-113">누락된 날짜는 기본값으로 현재 날짜를 사용하고 누락된 연도는 현재 연도를 사용하며 누락된 월의 날은 월의 첫 번째 날을 사용하고 누락된 시간은 자정을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-113">A missing date defaults to the current date, a missing year defaults to the current year, a missing day of the month defaults to the first day of the month, and a missing time defaults to midnight.</span></span>  
   
- 문자열 표현에 시간만 지정된 경우 구문 분석을 실행하면 <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> 및 <xref:System.DateTime.Day%2A> 속성이 <xref:System.DateTime.Today%2A> 속성의 해당 값으로 설정된 <xref:System.DateTime> 개체가 반환됩니다.  그러나 구문 분석 메서드에 <xref:System.Globalization.DateTimeStyles> 상수가 지정된 경우 결과 연도, 월 및 일 속성은 값 `1`로 설정됩니다.  
+ <span data-ttu-id="fd30f-114">한 번만 지정 하는 문자열 표현, 경우에 반환 구문 분석 한 <xref:System.DateTime> 개체를 해당 <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, 및 <xref:System.DateTime.Day%2A> 속성이의 해당 값으로 설정는 <xref:System.DateTime.Today%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-114">If the string representation specifies only a time, parsing returns a <xref:System.DateTime> object with its <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A> properties set to the corresponding values of the <xref:System.DateTime.Today%2A> property.</span></span> <span data-ttu-id="fd30f-115">그러나 경우는 <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> 구문 분석 방법, 결과 연도, 월, 상수를 지정 하 고 날짜 속성 값으로 설정 된 `1`합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-115">However, if the <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> constant is specified in the parsing method, the resulting year, month, and day properties are set to the value `1`.</span></span>  
   
- 날짜 및 시간의 문자열 표현에는 날짜 및 시간 구성 요소뿐 아니라 시간이 UTC\(협정 세계시\)와 얼마나 차이가 나는지를 나타내는 오프셋이 포함될 수 있습니다.  예를 들어, 문자열 "2\/14\/2007 5:32:00 \-7:00"은 UTC보다 7시간 이른 시간을 정의합니다.  시간의 문자열 표현에서 오프셋이 생략된 경우 구문 분석을 실행하면 <xref:System.DateTime.Kind%2A> 속성이 <xref:System.DateTimeKind?displayProperty=fullName>로 지정된 <xref:System.DateTime> 개체가 반환됩니다.  오프셋을 지정한 경우 구문 분석을 실행하면 <xref:System.DateTime.Kind%2A> 속성이 <xref:System.DateTimeKind>로 지정되고 해당 값이 컴퓨터의 지역 표준 시간대로 조정된 <xref:System.DateTime> 개체가 반환됩니다.  구문 분석 메서드와 <xref:System.Globalization.DateTimeStyles> 상수를 함께 사용하여 이 동작을 수정할 수 있습니다.  
+ <span data-ttu-id="fd30f-116">날짜 및 시간 구성 요소 외에도 날짜 및 시간의 문자열 표현은 시간이 UTC(협정 세계시)와 얼마나 다른지를 나타내는 오프셋을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-116">In addition to a date and a time component, the string representation of a date and time can include an offset that indicates how much the time differs from Coordinated Universal Time (UTC).</span></span> <span data-ttu-id="fd30f-117">예를 들어, 문자열 "2/14/2007 5:32:00 -7:00"는 UTC보다 7시간 이전인 시간을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-117">For example, the string "2/14/2007 5:32:00 -7:00" defines a time that is seven hours earlier than UTC.</span></span> <span data-ttu-id="fd30f-118">오프셋을 한 번의 문자열 표현에서 생략 하면 반환 구문 분석 한 <xref:System.DateTime> 개체를 해당 <xref:System.DateTime.Kind%2A> 속성이로 설정 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-118">If an offset is omitted from the string representation of a time, parsing returns a <xref:System.DateTime> object with its <xref:System.DateTime.Kind%2A> property set to <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>.</span></span> <span data-ttu-id="fd30f-119">오프셋을 지정 하는 경우 반환 구문 분석 한 <xref:System.DateTime> 개체를 해당 <xref:System.DateTime.Kind%2A> 속성이로 설정 <xref:System.DateTimeKind.Local> 있으며 컴퓨터의 현지 표준 시간대에 해당 값을 조정 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-119">If an offset is specified, parsing returns a <xref:System.DateTime> object with its <xref:System.DateTime.Kind%2A> property set to <xref:System.DateTimeKind.Local> and its value adjusted to the local time zone of your machine.</span></span> <span data-ttu-id="fd30f-120">사용 하 여이 동작을 수정할 수는 <xref:System.Globalization.DateTimeStyles> 구문 분석 방법 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-120">You can modify this behavior by using a <xref:System.Globalization.DateTimeStyles> constant with the parsing method.</span></span>  
   
- 형식 공급자는 모호한 날짜 값을 해석하는 데도 사용됩니다.  예를 들어, 문자열 "02\/03\/04"로 나타낸 날짜의 경우 월, 일 및 연도에 해당하는 구성 요소가 분명하지 않습니다.  이 경우 구성 요소는 형식 공급자의 비슷한 날짜 형식 순서에 따라 해석됩니다.  
+ <span data-ttu-id="fd30f-121">서식 공급자는 모호한 날짜를 해석하는 데에도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-121">The format provider is also used to interpret an ambiguous numeric date.</span></span> <span data-ttu-id="fd30f-122">예를 들어 "02/03/04" 문자열에서 나타내는 날짜의 구성 요소 중 무엇이 월, 일 및 연도인지가 명확하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-122">For example, it is not clear which components of the date represented by the string "02/03/04" are the month, day, and year.</span></span> <span data-ttu-id="fd30f-123">이 경우에 구성 요소는 서식 공급자에서 비슷한 날짜 서식의 순서에 따라 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-123">In this case, the components are interpreted according to the order of similar date formats in the format provider.</span></span>  
   
-## Parse  
- 다음 코드 예제에서는 **Parse** 메서드를 사용하여 문자열을 **DateTime**으로 변환하는 방법을 보여 줍니다.  이 예제에서는 현재 스레드와 연결된 문화권을 사용하여 구문 분석을 수행합니다.  현재 문화권과 연결된 <xref:System.Globalization.CultureInfo>가 입력 문자열을 구문 분석할 수 없으면 <xref:System.FormatException>이 throw됩니다.  
+## <a name="parse"></a><span data-ttu-id="fd30f-124">Parse</span><span class="sxs-lookup"><span data-stu-id="fd30f-124">Parse</span></span>  
+ <span data-ttu-id="fd30f-125">다음 코드 예제에서는 **구문 분석** 에 문자열을 변환 하는 메서드는 **DateTime**합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-125">The following code example illustrates the use of the **Parse** method to convert a string into a **DateTime**.</span></span> <span data-ttu-id="fd30f-126">이 예제에서는 현재 스레드와 연결된 문화권을 사용하여 구문 분석을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-126">This example uses the culture associated with the current thread to perform the parse.</span></span> <span data-ttu-id="fd30f-127">경우는 <xref:System.Globalization.CultureInfo> 현재와 관련 된 문화권 입력된 문자열을 구문 분석할 수 없습니다는 <xref:System.FormatException> throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-127">If the <xref:System.Globalization.CultureInfo> associated with the current culture cannot parse the input string, a <xref:System.FormatException> is thrown.</span></span>  
   
  [!code-csharp[Parsing.DateAndTime#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example.cs#1)]
  [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example.vb#1)]  
   
- 또한 **CultureInfo**가 해당 개체에서 정의하는 문화권 중 하나로 설정되도록 지정하거나 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=fullName> 속성에서 반환되는 표준 <xref:System.Globalization.DateTimeFormatInfo> 개체 중 하나를 지정할 수도 있습니다.  다음 코드 예제에서는 형식 공급자를 사용하여 독일어 문자열을 **DateTime**으로 구문 분석합니다.  de\-DE culture를 나타내는 **CultureInfo**는 이 특정 문자열을 올바르게 구문 분석할 수 있도록 구문 분석되는 문자열과 함께 정의되고 전달됩니다.  이렇게 하면 **CurrentThread**의 **CurrentCulture**에 있는 설정은 무시됩니다.  
+ <span data-ttu-id="fd30f-128">지정할 수 있습니다는 **CultureInfo** 해당 개체에 의해 정의 된 문화권 중 하나를 설정 또는 표준 중 하나를 지정할 수 있습니다 <xref:System.Globalization.DateTimeFormatInfo> 에서 반환 된 개체는 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-128">You can also specify a **CultureInfo** set to one of the cultures defined by that object, or you can specify one of the standard <xref:System.Globalization.DateTimeFormatInfo> objects returned by the <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="fd30f-129">다음 코드 예제에서는 형식 공급자를 사용 하 여 독일어에 문자열을 구문 분석 하는 **DateTime**합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-129">The following code example uses a format provider to parse a German string into a **DateTime**.</span></span> <span data-ttu-id="fd30f-130">A **CultureInfo** DE-DE 문화권을 나타내는 정의 되 고이 특정 문자열을 성공적으로 구문 분석 되도록 구문 분석 중인 문자열과 함께 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-130">A **CultureInfo** representing the de-DE culture is defined and passed with the string being parsed to ensure successful parsing of this particular string.</span></span> <span data-ttu-id="fd30f-131">원하는 설정이이 불가능는 **CurrentCulture** 의 **CurrentThread**합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-131">This precludes whatever setting is in the **CurrentCulture** of the **CurrentThread**.</span></span>  
   
  [!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example2.cs#2)]
  [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example2.vb#2)]  
   
- 그러나 <xref:System.DateTime.Parse%2A> 메서드의 오버로드를 사용하여 사용자 지정 형식 공급자를 지정할 수 있지만 이 메서드에서는 비표준 형식 공급자를 사용할 수 없습니다.  비표준 형식으로 표시된 날짜 및 시간을 구문 분석하려면 대신 <xref:System.DateTime.ParseExact%2A> 메서드를 사용합니다.  
+ <span data-ttu-id="fd30f-132">그러나의 오버 로드를 사용할 수 있지만 <xref:System.DateTime.Parse%2A> 사용자 지정 형식 공급자를 지정 하는 메서드는 방법은 비표준 형식 공급자의 사용을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-132">However, although you can use overloads of the <xref:System.DateTime.Parse%2A> method to specify custom format providers, the method does not support the use of non-standard format providers.</span></span> <span data-ttu-id="fd30f-133">사용 하 여 날짜 및 비표준 형식으로 표현 된 시간을 구문 분석 하려면는 <xref:System.DateTime.ParseExact%2A> 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-133">To parse a date and time expressed in a non-standard format, use the <xref:System.DateTime.ParseExact%2A> method instead.</span></span>  
   
- 다음 코드 예제에서는 <xref:System.Globalization.DateTimeStyles> 열거형을 사용하여 해당 문자열이 정의하지 않는 필드에 대해 현재 날짜 및 시간 정보가 **DateTime**에 추가되지 않도록 지정합니다.  
+ <span data-ttu-id="fd30f-134">다음 코드 예제에서는 <xref:System.Globalization.DateTimeStyles> 현재 날짜 및 시간 정보를 하지 추가 되어야 함을 지정 하는 열거형은 **DateTime** 문자열을 정의 하지 않는 필드에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-134">The following code example uses the <xref:System.Globalization.DateTimeStyles> enumeration to specify that the current date and time information should not be added to the **DateTime** for fields that the string does not define.</span></span>  
   
  [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example3.cs#3)]
  [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example3.vb#3)]  
   
-## ParseExact  
- <xref:System.DateTime.ParseExact%2A?displayProperty=fullName> 메서드는 지정된 문자열 패턴을 따르는 문자열을 **DateTime** 개체로 변환합니다.  지정된 형식이 아닌 문자열이 이 메서드에 전달되면 <xref:System.FormatException>이 throw됩니다.  표준 날짜 및 시간 서식 지정자 중 하나를 지정하거나 사용자 지정 날짜 및 시간 서식 지정자를 제한적으로 조합하여 지정할 수 있습니다.  사용자 지정 서식 지정자를 사용하면 사용자 지정 인식 문자열을 생성할 수 있습니다.  지정자에 대한 설명은 [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) 및 [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)에 대한 항목을 참조하십시오.  
+## <a name="parseexact"></a><span data-ttu-id="fd30f-135">ParseExact</span><span class="sxs-lookup"><span data-stu-id="fd30f-135">ParseExact</span></span>  
+ <span data-ttu-id="fd30f-136"><xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 메서드를 지정 된 문자열 패턴을 따르는 문자열 변환는 **DateTime** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-136">The <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> method converts a string that conforms to a specified string pattern to a **DateTime** object.</span></span> <span data-ttu-id="fd30f-137">지정 된 폼의 하지 않은 문자열을이 메서드에 전달 되 면 한 <xref:System.FormatException> throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-137">When a string that is not of the form specified is passed to this method, a <xref:System.FormatException> is thrown.</span></span> <span data-ttu-id="fd30f-138">표준 날짜 및 시간 서식 지정자 또는 사용자 지정 날짜 및 시간 서식 지정자의 제한 조합 중 하나를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-138">You can specify one of the standard date and time format specifiers or a limited combination of the custom date and time format specifiers.</span></span> <span data-ttu-id="fd30f-139">사용자 지정 서식 지정자를 사용하면 사용자 지정 문자열을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-139">Using the custom format specifiers, it is possible for you to construct a custom recognition string.</span></span> <span data-ttu-id="fd30f-140">지정자에 대한 설명은 [표준 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) 및 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)의 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fd30f-140">For an explanation of the specifiers, see the topics on [standard date and time format strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) and [custom date and time format strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).</span></span>  
   
- <xref:System.DateTime.ParseExact%2A> 메서드의 각 오버로드에는 일반적으로 문자열의 서식 지정에 대한 문화권 관련 정보를 제공하는 <xref:System.IFormatProvider> 매개 변수도 포함되어 있습니다.  일반적으로 이 <xref:System.IFormatProvider> 개체는 표준 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체나 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=fullName> 속성에서 반환되는 <xref:System.Globalization.DateTimeFormatInfo> 개체입니다.  그러나 다른 날짜 및 시간 구문 분석 기능과 달리 이 메서드에서는 비표준 날짜 및 시간 형식을 정의하는 <xref:System.IFormatProvider>도 지원합니다.  
+ <span data-ttu-id="fd30f-141">각 오버 로드는 <xref:System.DateTime.ParseExact%2A> 메서드 역시는 <xref:System.IFormatProvider> 일반적으로 문자열의 서식 지정 하는 방법에 대 한 문화권별 정보를 제공 하는 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-141">Each overload of the <xref:System.DateTime.ParseExact%2A> method also has an <xref:System.IFormatProvider> parameter that typically provides culture-specific information about the formatting of the string.</span></span> <span data-ttu-id="fd30f-142">일반적으로이 <xref:System.IFormatProvider> 개체가 <xref:System.Globalization.CultureInfo> 표준 문화권을 나타내는 개체 또는 <xref:System.Globalization.DateTimeFormatInfo> 에서 반환 되는 개체는 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-142">Typically, this <xref:System.IFormatProvider> object is a <xref:System.Globalization.CultureInfo> object that represents a standard culture or a <xref:System.Globalization.DateTimeFormatInfo> object that is returned by the <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="fd30f-143">그러나 다른 날짜 및 시간 함수를 구문 분석, 달리이 방식은 또한 지원는 <xref:System.IFormatProvider> 비표준 날짜 및 시간 형식을 정의 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-143">However, unlike the other date and time parsing functions, this method also supports an <xref:System.IFormatProvider> that defines a non-standard date and time format.</span></span>  
   
- 다음 코드 예제에서 **ParseExact** 메서드에는 구문 분석할 문자열 개체와 서식 지정자 및 **CultureInfo** 개체가 차례로 전달됩니다.  이 **ParseExact** 메서드는 en\-US culture에서 긴 날짜 패턴을 표시하는 문자열만 구문 분석합니다.  
+ <span data-ttu-id="fd30f-144">다음 코드 예제에서는 **ParseExact** 메서드에 전달 됩니다 구문 분석, string 개체에는 형식 지정자 다음에 옵니다는 **CultureInfo** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-144">In the following code example, the **ParseExact** method is passed a string object to parse, followed by a format specifier, followed by a **CultureInfo** object.</span></span> <span data-ttu-id="fd30f-145">이 **ParseExact** 메서드 EN-US 문화권의 자세한 날짜 패턴을 수행 하는 문자열 구문 분석만 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd30f-145">This **ParseExact** method can only parse strings that exhibit the long date pattern in the en-US culture.</span></span>  
   
  [!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example4.cs#4)]
  [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example4.vb#4)]  
   
-## 참고 항목  
- [문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)   
- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)   
- [.NET Framework의 형식 변환](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a><span data-ttu-id="fd30f-146">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fd30f-146">See Also</span></span>  
+ [<span data-ttu-id="fd30f-147">문자열 구문 분석</span><span class="sxs-lookup"><span data-stu-id="fd30f-147">Parsing Strings</span></span>](../../../docs/standard/base-types/parsing-strings.md)  
+ [<span data-ttu-id="fd30f-148">형식 서식 지정</span><span class="sxs-lookup"><span data-stu-id="fd30f-148">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="fd30f-149">.NET에서 형식 변환</span><span class="sxs-lookup"><span data-stu-id="fd30f-149">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)

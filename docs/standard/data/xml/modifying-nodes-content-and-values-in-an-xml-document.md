@@ -1,59 +1,57 @@
 ---
-title: "XML 문서에서 노드, 내용 및 값 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XML 문서에서 노드, 내용 및 값 수정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 00b923edb95852d9434db1b393df68fd9d0c8a1a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# XML 문서에서 노드, 내용 및 값 수정
-여러 가지 방법으로 문서에서 노드와 내용을 수정할 수 있습니다.  다음과 같은 작업을 수행할 수 있습니다.  
+# <a name="modifying-nodes-content-and-values-in-an-xml-document"></a><span data-ttu-id="efaf2-102">XML 문서에서 노드, 내용 및 값 수정</span><span class="sxs-lookup"><span data-stu-id="efaf2-102">Modifying Nodes, Content, and Values in an XML Document</span></span>
+<span data-ttu-id="efaf2-103">여러 가지 방법으로 문서에서 노드와 내용을 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-103">There are many ways you can modify the nodes and content in a document.</span></span> <span data-ttu-id="efaf2-104">다음과 같은 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-104">You can:</span></span>  
   
--   <xref:System.Xml.XmlNode.Value%2A> 속성을 사용하여 노드 값을 변경할 수 있습니다.  
+-   <span data-ttu-id="efaf2-105"><xref:System.Xml.XmlNode.Value%2A> 속성을 사용하여 노드 값을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-105">Change the value of nodes using the <xref:System.Xml.XmlNode.Value%2A> property.</span></span>  
   
--   노드를 새 노드로 바꿔 전체 노드 집합을 수정할 수 있습니다.  이 작업은 <xref:System.Xml.XmlNode.InnerXml%2A> 속성을 사용하여 수행합니다.  
+-   <span data-ttu-id="efaf2-106">노드를 새 노드로 바꿔 전체 노드 집합을 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-106">Modify an entire set of nodes by replacing the nodes with new nodes.</span></span> <span data-ttu-id="efaf2-107">이 작업은 <xref:System.Xml.XmlNode.InnerXml%2A> 속성을 사용하여 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-107">This is done using the <xref:System.Xml.XmlNode.InnerXml%2A> property.</span></span>  
   
--   <xref:System.Xml.XmlNode.RemoveChild%2A> 메서드를 사용하여 기존 노드를 새 노드로 바꿀 수 있습니다.  
+-   <span data-ttu-id="efaf2-108"><xref:System.Xml.XmlNode.RemoveChild%2A> 메서드를 사용하여 기존 노드를 새 노드로 바꿀 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-108">Replace existing nodes with new nodes using the <xref:System.Xml.XmlNode.RemoveChild%2A> method.</span></span>  
   
--   <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> 또는 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 메서드를 사용하여 <xref:System.Xml.XmlCharacterData> 클래스에서 상속된 노드에 문자를 추가할 수 있습니다.  
+-   <span data-ttu-id="efaf2-109"><xref:System.Xml.XmlCharacterData>, <xref:System.Xml.XmlCharacterData.AppendData%2A> 또는 <xref:System.Xml.XmlCharacterData.InsertData%2A> 메서드를 사용하여 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 클래스에서 상속된 노드에 문자를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-109">Add additional characters to nodes that inherit from the <xref:System.Xml.XmlCharacterData> class using the <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A>, or <xref:System.Xml.XmlCharacterData.ReplaceData%2A> methods.</span></span>  
   
--   <xref:System.Xml.XmlCharacterData>에서 상속된 노드 형식에서 <xref:System.Xml.XmlCharacterData.DeleteData%2A> 메서드로 문자 범위를 제거하여 내용을 수정할 수 있습니다.  
+-   <span data-ttu-id="efaf2-110"><xref:System.Xml.XmlCharacterData.DeleteData%2A>에서 상속된 노드 형식에서 <xref:System.Xml.XmlCharacterData> 메서드로 문자 범위를 제거하여 내용을 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-110">Modify the content by removing a range of characters using the <xref:System.Xml.XmlCharacterData.DeleteData%2A> method on node types that inherit from <xref:System.Xml.XmlCharacterData>.</span></span>  
   
- `node.Value = "new value";`를 사용하면 쉽게 노드 값을 변경할 수 있습니다.  다음 표에서는 이 한 줄 코드를 사용할 수 있는 노드 형식 및 이 노드 형식에 대해 변경되는 데이터를 보여 줍니다.  
+ <span data-ttu-id="efaf2-111">`node.Value = "new value";`를 사용하면 쉽게 노드 값을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-111">A simple technique for changing the value of a node is to use `node.Value = "new value";`.</span></span> <span data-ttu-id="efaf2-112">다음 표에서는 이 한 줄 코드를 사용할 수 있는 노드 형식 및 이 노드 형식에 대해 변경되는 데이터를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-112">The following table lists the node types that this single line of code works on and exactly what data for that node type is changed.</span></span>  
   
-|노드 형식|변경되는 데이터|  
-|-----------|--------------|  
-|특성|특성 값|  
-|CDATASection|CDATASection 내용|  
-|주석|주석의 내용입니다.|  
-|ProcessingInstruction|대상을 제외한 내용|  
-|Text|텍스트 내용|  
-|XmlDeclaration|`<?xml` 및 `?>` 태그를 제외한 선언 내용|  
-|Whitespace|공백 값.  인식된 XML 공백 문자인 공백, 탭, CR 또는 LF 중 하나로 값을 설정할 수 있습니다.|  
-|SignificantWhitespace|유효 공백 값.  인식된 XML 공백 문자인 공백, 탭, CR 또는 LF 중 하나로 값을 설정할 수 있습니다.|  
+|<span data-ttu-id="efaf2-113">노드 형식</span><span class="sxs-lookup"><span data-stu-id="efaf2-113">Node type</span></span>|<span data-ttu-id="efaf2-114">변경되는 데이터</span><span class="sxs-lookup"><span data-stu-id="efaf2-114">Data changed</span></span>|  
+|---------------|------------------|  
+|<span data-ttu-id="efaf2-115">특성</span><span class="sxs-lookup"><span data-stu-id="efaf2-115">Attribute</span></span>|<span data-ttu-id="efaf2-116">특성 값</span><span class="sxs-lookup"><span data-stu-id="efaf2-116">The value of the attribute.</span></span>|  
+|<span data-ttu-id="efaf2-117">CDATASection</span><span class="sxs-lookup"><span data-stu-id="efaf2-117">CDATASection</span></span>|<span data-ttu-id="efaf2-118">CDATASection 내용</span><span class="sxs-lookup"><span data-stu-id="efaf2-118">The content of the CDATASection.</span></span>|  
+|<span data-ttu-id="efaf2-119">주석</span><span class="sxs-lookup"><span data-stu-id="efaf2-119">Comment</span></span>|<span data-ttu-id="efaf2-120">주석의 내용입니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-120">The content of the comment.</span></span>|  
+|<span data-ttu-id="efaf2-121">ProcessingInstruction</span><span class="sxs-lookup"><span data-stu-id="efaf2-121">ProcessingInstruction</span></span>|<span data-ttu-id="efaf2-122">대상을 제외한 내용</span><span class="sxs-lookup"><span data-stu-id="efaf2-122">The content, excluding the target.</span></span>|  
+|<span data-ttu-id="efaf2-123">Text</span><span class="sxs-lookup"><span data-stu-id="efaf2-123">Text</span></span>|<span data-ttu-id="efaf2-124">텍스트 내용</span><span class="sxs-lookup"><span data-stu-id="efaf2-124">The content of the text.</span></span>|  
+|<span data-ttu-id="efaf2-125">XmlDeclaration</span><span class="sxs-lookup"><span data-stu-id="efaf2-125">XmlDeclaration</span></span>|<span data-ttu-id="efaf2-126">`<?xml` 및 `?>` 태그를 제외한 선언 내용</span><span class="sxs-lookup"><span data-stu-id="efaf2-126">The content of the declaration, excluding the `<?xml` and `?>` markup.</span></span>|  
+|<span data-ttu-id="efaf2-127">Whitespace</span><span class="sxs-lookup"><span data-stu-id="efaf2-127">Whitespace</span></span>|<span data-ttu-id="efaf2-128">공백 값.</span><span class="sxs-lookup"><span data-stu-id="efaf2-128">The value of the white space.</span></span> <span data-ttu-id="efaf2-129">인식된 XML 공백 문자인 공백, 탭, CR 또는 LF 중 하나로 값을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-129">You can set the value to be one of the four recognized XML white space characters: space, tab, CR, or LF.</span></span>|  
+|<span data-ttu-id="efaf2-130">SignificantWhitespace</span><span class="sxs-lookup"><span data-stu-id="efaf2-130">SignificantWhitespace</span></span>|<span data-ttu-id="efaf2-131">유효 공백 값.</span><span class="sxs-lookup"><span data-stu-id="efaf2-131">The value of the significant white space.</span></span> <span data-ttu-id="efaf2-132">인식된 XML 공백 문자인 공백, 탭, CR 또는 LF 중 하나로 값을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-132">You can set the value to be one of the four recognized XML white space characters: space, tab, CR, or LF.</span></span>|  
   
- 이 표에 나열되지 않은 노드 형식은 값을 설정하기에 적합한 노드 형식이 아닙니다.  다른 노드 형식에서 값을 설정하면 <xref:System.InvalidOperationException>이 throw됩니다.  
+ <span data-ttu-id="efaf2-133">이 표에 나열되지 않은 노드 형식은 값을 설정하기에 적합한 노드 형식이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-133">Any node type not listed in the table is not a valid node type to set a value on.</span></span> <span data-ttu-id="efaf2-134">다른 노드 형식에서 값을 설정하면 <xref:System.InvalidOperationException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-134">Setting a value on any other node type throws an <xref:System.InvalidOperationException>.</span></span>  
   
- <xref:System.Xml.XmlNode.InnerXml%2A> 속성은 현재 노드의 자식 노드 태그를 변경합니다.  이 속성을 설정하면 자식 노드가 지정된 문자열의 구문 분석된 내용으로 바뀝니다.  현재 네임스페이스 컨텍스트에서 구문 분석이 수행됩니다.  또한 <xref:System.Xml.XmlNode.InnerXml%2A>은 중복 네임스페이스 선언을 제거합니다.  결과적으로 복사 및 붙여넣기를 여러 번 실행해도 중복 네임스페이스 선언으로 인해 문서 크기가 증가하지 않습니다.  <xref:System.Xml.XmlNode.InnerXml%2A> 작업에서 네임스페이스의 결과를 보여 주는 코드 예제는 <xref:System.Xml.XmlDocument.InnerXml%2A> 속성을 참조하세요.  
+ <span data-ttu-id="efaf2-135"><xref:System.Xml.XmlNode.InnerXml%2A> 속성은 현재 노드의 자식 노드 태그를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-135">The <xref:System.Xml.XmlNode.InnerXml%2A> property changes the markup of the child nodes for the current node.</span></span> <span data-ttu-id="efaf2-136">이 속성을 설정하면 자식 노드가 지정된 문자열의 구문 분석된 내용으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-136">Setting this property replaces the child nodes with the parsed contents of the given string.</span></span> <span data-ttu-id="efaf2-137">현재 네임스페이스 컨텍스트에서 구문 분석이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-137">The parsing is done in the current namespace context.</span></span> <span data-ttu-id="efaf2-138">또한 <xref:System.Xml.XmlNode.InnerXml%2A>은 중복 네임스페이스 선언을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-138">In addition, <xref:System.Xml.XmlNode.InnerXml%2A> removes redundant namespace declarations.</span></span> <span data-ttu-id="efaf2-139">결과적으로 복사 및 붙여넣기를 여러 번 실행해도 중복 네임스페이스 선언으로 인해 문서 크기가 증가하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-139">As a result, numerous cut and paste operations do not increase the size of your document with redundant namespace declarations.</span></span> <span data-ttu-id="efaf2-140"><xref:System.Xml.XmlNode.InnerXml%2A> 작업에서 네임스페이스의 결과를 보여 주는 코드 예제는 <xref:System.Xml.XmlDocument.InnerXml%2A> 속성을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="efaf2-140">For a code example showing the effect of namespaces on the <xref:System.Xml.XmlNode.InnerXml%2A> operation, see the <xref:System.Xml.XmlDocument.InnerXml%2A> property.</span></span>  
   
- <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 및 <xref:System.Xml.XmlNode.RemoveChild%2A> 메서드를 사용하는 경우 이 메서드는 바뀌거나 제거된 노드를 반환합니다.  그러면 이 노드를 XML DOM\(문서 개체 모델\)에 다시 삽입할 수 있습니다.  <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 메서드는 문서에 삽입하는 노드에서 두 가지 유효성 검사를 수행합니다.  첫 번째 검사에서 노드가 해당 형식의 자식 노드를 가질 수 있는 노드의 자식이 되는지 확인합니다.  두 번째 검사에서 삽입하는 노드가 부모가 될 노드의 상위 노드가 아닌지 확인합니다.  이러한 조건을 하나라도 위반하면 <xref:System.InvalidOperationException>이 throw됩니다.  
+ <span data-ttu-id="efaf2-141"><xref:System.Xml.XmlCharacterData.ReplaceData%2A> 및 <xref:System.Xml.XmlNode.RemoveChild%2A> 메서드를 사용하는 경우 이 메서드는 바뀌거나 제거된 노드를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-141">When using the <xref:System.Xml.XmlCharacterData.ReplaceData%2A> and <xref:System.Xml.XmlNode.RemoveChild%2A> methods, the methods return the replaced or removed node.</span></span> <span data-ttu-id="efaf2-142">그러면 이 노드를 XML DOM(문서 개체 모델)에 다시 삽입할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-142">This node can then be reinserted somewhere else in the XML Document Object Model (DOM).</span></span> <span data-ttu-id="efaf2-143"><xref:System.Xml.XmlCharacterData.ReplaceData%2A> 메서드는 문서에 삽입하는 노드에서 두 가지 유효성 검사를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-143">The <xref:System.Xml.XmlCharacterData.ReplaceData%2A> method does two validation checks on the node being inserted into the document.</span></span> <span data-ttu-id="efaf2-144">첫 번째 검사에서 노드가 해당 형식의 자식 노드를 가질 수 있는 노드의 자식이 되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-144">The first check ensures that the node is becoming a child of a node that can have child nodes of its type.</span></span> <span data-ttu-id="efaf2-145">두 번째 검사에서 삽입하는 노드가 부모가 될 노드의 상위 노드가 아닌지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-145">The second check ensures that the node being inserted is not an ancestor of the node it is becoming a child of.</span></span> <span data-ttu-id="efaf2-146">이러한 조건을 하나라도 위반하면 <xref:System.InvalidOperationException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-146">Violating either of these conditions throws an <xref:System.InvalidOperationException>.</span></span>  
   
- 편집할 수 있는 노드에서 읽기 전용 자식을 추가하거나 제거할 수 있습니다.  그러나 읽기 전용 노드 자체를 수정하려고 시도하면 <xref:System.InvalidOperationException>이 throw됩니다.  이에 관한 예제는 <xref:System.Xml.XmlEntityReference> 노드의 자식을 수정하는 것입니다.  자식은 읽기 전용이며 수정할 수 없습니다.  자식을 수정하려고 시도하면 <xref:System.InvalidOperationException>이 throw됩니다.  
+ <span data-ttu-id="efaf2-147">편집할 수 있는 노드에서 읽기 전용 자식을 추가하거나 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-147">It is valid to add or remove a read-only child from a node that can be edited.</span></span> <span data-ttu-id="efaf2-148">그러나 읽기 전용 노드 자체를 수정하려고 시도하면 <xref:System.InvalidOperationException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-148">However, attempts to modify the read-only node itself throws an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="efaf2-149">이에 관한 예제는 <xref:System.Xml.XmlEntityReference> 노드의 자식을 수정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-149">An example of this is modifying the children of an <xref:System.Xml.XmlEntityReference> node.</span></span> <span data-ttu-id="efaf2-150">자식은 읽기 전용이며 수정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-150">The children are read-only and cannot be modified.</span></span> <span data-ttu-id="efaf2-151">자식을 수정하려고 시도하면 <xref:System.InvalidOperationException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="efaf2-151">Any attempt to modify them throws an <xref:System.InvalidOperationException>.</span></span>  
   
-## 참고 항목  
- [XML DOM\(문서 개체 모델\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="efaf2-152">참고 항목</span><span class="sxs-lookup"><span data-stu-id="efaf2-152">See Also</span></span>  
+ [<span data-ttu-id="efaf2-153">XML 문서 개체 모델 (DOM)</span><span class="sxs-lookup"><span data-stu-id="efaf2-153">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

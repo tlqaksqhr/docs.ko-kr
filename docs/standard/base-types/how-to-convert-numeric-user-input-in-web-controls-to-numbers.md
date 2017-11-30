@@ -1,77 +1,83 @@
 ---
-title: "방법: 사용자가 웹 컨트롤에 입력한 숫자를 숫자로 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "숫자 사용자 입력을 숫자로 변환"
-  - "서식 지정[.NET Framework], 숫자"
-  - "숫자 형식 지정[.NET Framework]"
-  - "숫자[.NET Framework], 숫자 사용자 입력을 숫자로 변환"
-  - "숫자 형식 문자열[.NET Framework]"
-  - "문자열 구문 분석[.NET Framework], 숫자 문자열"
+title: "방법: 사용자가 웹 컨트롤에 입력한 숫자를 숫자로 변환"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- number formatting [.NET Framework]
+- parsing strings [.NET Framework], numeric strings
+- converting numeric user input to number
+- numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 92e28e3b303a7523b9da69b7eb283e0261fc681c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 사용자가 웹 컨트롤에 입력한 숫자를 숫자로 변환
-웹 페이지는 세계 어디서나 표시될 수 있기 때문에 사용자가 <xref:System.Web.UI.WebControls.TextBox> 컨트롤에 숫자 데이터를 입력할 수 있는 형식에는 거의 제한이 없습니다.  그러므로 웹 페이지 사용자의 로캘 및 문화권을 확인하는 일은 매우 중요합니다.  사용자 입력을 구문 분석할 때는 사용자의 로캘 및 문화권에 의해 정의되는 서식 지정 규칙을 적용할 수 있습니다.  
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a><span data-ttu-id="a73b2-102">방법: 사용자가 웹 컨트롤에 입력한 숫자를 숫자로 변환</span><span class="sxs-lookup"><span data-stu-id="a73b2-102">How to: Convert Numeric User Input in Web Controls to Numbers</span></span>
+<span data-ttu-id="a73b2-103">사용자가 숫자 데이터를 입력할 수는 웹 페이지는 전 세계 어디서 나 표시 될 수 있으므로 <xref:System.Web.UI.WebControls.TextBox> 거의 무제한 형식 중에서 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-103">Because a Web page can be displayed anywhere in the world, users can input numeric data into a <xref:System.Web.UI.WebControls.TextBox> control in an almost unlimited number of formats.</span></span> <span data-ttu-id="a73b2-104">결과적으로, 것이 로캘 및 웹 페이지의 사용자의 문화권을 결정 하는 매우 중요 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-104">As a result, it is very important to determine the locale and culture of the Web page's user.</span></span> <span data-ttu-id="a73b2-105">사용자 입력을 구문 분석할 때 사용자의 로캘 및 문화권에 의해 정의 된 서식 지정 규칙을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-105">When you parse user input, you can then apply the formatting conventions defined by the user's locale and culture.</span></span>  
   
-### 웹 TextBox 컨트롤에 입력한 숫자를 숫자로 변환하려면  
+### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a><span data-ttu-id="a73b2-106">웹 TextBox 컨트롤에서 입력을 숫자로 변환 하려면</span><span class="sxs-lookup"><span data-stu-id="a73b2-106">To convert numeric input from a Web TextBox control to a number</span></span>  
   
-1.  <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 속성이 반환하는 문자열 배열이 채워져 있는지 확인합니다.  배열이 채워져 있지 않으면 6단계로 이동합니다.  
+1.  <span data-ttu-id="a73b2-107">문자열 배열에서 반환 되는지 확인은 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 속성이 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-107">Determine whether the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> property is populated.</span></span> <span data-ttu-id="a73b2-108">그렇지 않을 경우 6 단계를 진행 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-108">If it is not, continue to step 6.</span></span>  
   
-2.  <xref:System.Web.HttpRequest.UserLanguages%2A> 속성이 반환하는 문자열 배열이 채워져 있으면 배열의 첫 번째 요소를 검색합니다.  첫 번째 요소는 사용자의 기본\(기본 설정\) 언어 및 지역을 나타냅니다.  
+2.  <span data-ttu-id="a73b2-109">문자열 배열에서 반환 하는 경우는 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성이 채워집니다, 그 첫 번째 요소를 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-109">If the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property is populated, retrieve its first element.</span></span> <span data-ttu-id="a73b2-110">첫 번째 요소는 사용자의 기본 또는 기본 언어와 지역을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-110">The first element indicates the user's default or preferred language and region.</span></span>  
   
-3.  <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 생성자를 호출하여 사용자의 기본 설정 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화합니다.  
+3.  <span data-ttu-id="a73b2-111">인스턴스화하는 <xref:System.Globalization.CultureInfo> 사용자를 나타내는 개체를 호출 하 여 문화권의 기본 설정의 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-111">Instantiate a <xref:System.Globalization.CultureInfo> object that represents the user's preferred culture by calling the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructor.</span></span>  
   
-4.  사용자 입력을 변환할 대상 숫자 형식의 `TryParse` 또는 `Parse` 메서드를 호출합니다.  `TryParse` 또는 `Parse` 메서드의 오버로드를 `provider` 매개 변수와 함께 사용하고 다음 중 하나를 전달합니다.  
+4.  <span data-ttu-id="a73b2-112">호출 된 `TryParse` 또는 `Parse` 사용자 변환할 숫자 형식의 메서드 입력을 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-112">Call either the `TryParse` or the `Parse` method of the numeric type that you want to convert the user's input to.</span></span> <span data-ttu-id="a73b2-113">오버 로드를 사용 하 여는 `TryParse` 또는 `Parse` 사용 하 여 메서드는 `provider` 매개 변수를 다음 중 하나를 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-113">Use an overload of the `TryParse` or the `Parse` method with a `provider` parameter, and pass it either of the following:</span></span>  
   
-    -   3단계에서 만든 <xref:System.Globalization.CultureInfo> 개체  
+    -   <span data-ttu-id="a73b2-114"><xref:System.Globalization.CultureInfo> 3 단계에서 만든 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-114">The <xref:System.Globalization.CultureInfo> object created in step 3.</span></span>  
   
-    -   3단계에서 만든 <xref:System.Globalization.CultureInfo> 개체의 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 속성에서 반환되는 <xref:System.Globalization.NumberFormatInfo> 개체  
+    -   <span data-ttu-id="a73b2-115"><xref:System.Globalization.NumberFormatInfo> 에서 반환 되는 개체는 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 의 속성은 <xref:System.Globalization.CultureInfo> 3 단계에서 만든 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-115">The <xref:System.Globalization.NumberFormatInfo> object that is returned by the <xref:System.Globalization.CultureInfo.NumberFormat%2A> property of the <xref:System.Globalization.CultureInfo> object created in step 3.</span></span>  
   
-5.  변환이 실패하면 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환되는 문자열 배열에 있는 나머지 각 요소에 대해 2단계에서 4단계를 반복합니다.  
+5.  <span data-ttu-id="a73b2-116">변환에 실패 하는 경우 2 단계까지 반복 문자열 배열에 나머지 각 요소에 대해 4에서 반환 되는 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-116">If the conversion fails, repeat steps 2 through 4 for each remaining element in the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property.</span></span>  
   
-6.  그래도 변환이 실패하거나 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환하는 문자열 배열이 비어 있으면 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 속성에서 반환하는 고정 문화권을 사용하여 문자열을 구문 분석합니다.  
+6.  <span data-ttu-id="a73b2-117">변환에 실패 하면 여전히 또는 문자열 배열에서 반환 하는 경우는 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성이 비어 있으면 반환 하는 고정 문화권을 사용 하 여 문자열을 구문 분석은 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-117">If the conversion still fails or if the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property is empty, parse the string by using the invariant culture, which is returned by the <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property.</span></span>  
   
-## 예제  
- 다음 예제는 사용자에게 <xref:System.Web.UI.WebControls.TextBox> 컨트롤에 숫자 값을 입력하도록 하고 해당 값을 숫자로 변환하는 Web Form의 전체 코드 숨김 페이지입니다.  사용자가 입력한 숫자 값은 원래 입력 값과 같은 서식 지정 규칙을 사용하여 두 배로 늘어나 표시됩니다.  
+## <a name="example"></a><span data-ttu-id="a73b2-118">예제</span><span class="sxs-lookup"><span data-stu-id="a73b2-118">Example</span></span>  
+ <span data-ttu-id="a73b2-119">다음 예제는 전체 코드 숨김 페이지에 숫자 값을 입력 하 라는 웹 폼에 대 한 <xref:System.Web.UI.WebControls.TextBox> 제어 하 고을 숫자로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-119">The following example is the complete code-behind page for a Web form that asks the user to enter a numeric value in a <xref:System.Web.UI.WebControls.TextBox> control and converts it to a number.</span></span> <span data-ttu-id="a73b2-120">해당 숫자를 두 배로 증가 하 고 원래 입력에서 동일한 서식 규칙을 사용 하 여 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-120">That number is then doubled and displayed by using the same formatting rules as the original input.</span></span>  
   
  [!code-csharp[Formatting.HowTo.ParseNumericInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseNumericInput/cs/NumericUserInput1.aspx.cs#1)]
  [!code-vb[Formatting.HowTo.ParseNumericInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseNumericInput/vb/NumericUserInput1.aspx.vb#1)]  
   
- <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 속성은 HTTP 요청에 포함된 `Accept-Language` 헤더에 들어 있는 문화권 이름에서 채워집니다.  그러나 모든 브라우저의 요청에 `Accept-Language` 헤더가 들어 있는 것은 아니며 사용자가 헤더를 완전히 표시하지 않을 수도 있습니다.  그러므로 사용자 입력을 구문 분석할 때는 대체\(fallback\) 문화권이 있어야 합니다.  일반적으로 대체\(fallback\) 문화권은 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>에서 반환하는 고정 문화권입니다.  사용자는 텍스트 상자에 문화권 이름을 입력하여 Internet Explorer에 대해 문화권 이름을 제공할 수도 있지만, 이렇게 하면 문화권 이름이 유효하지 않게 될 수도 있습니다.  그러므로 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화할 때는 예외 처리를 사용해야 합니다.  
+ <span data-ttu-id="a73b2-121"><xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 속성에 포함 된 문화권 이름에서 입력 됩니다 `Accept-Language` HTTP 요청에 포함 된 헤더입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-121">The <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> property is populated from the culture names that are contained in `Accept-Language` headers included in an HTTP request.</span></span> <span data-ttu-id="a73b2-122">그러나 포함 하지 않는 브라우저 `Accept-Language` 헤더의 요청 및 사용자에 헤더를 완전히 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-122">However, not all browsers include `Accept-Language` headers in their requests, and users can also suppress the headers completely.</span></span> <span data-ttu-id="a73b2-123">이렇게 하면 사용자 입력을 구문 분석할 때 대체 문화권을 보유 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-123">This makes it important to have a fallback culture when parsing user input.</span></span> <span data-ttu-id="a73b2-124">일반적으로 대체 문화권은 고정 문화권에서 반환 된 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-124">Typically, the fallback culture is the invariant culture returned by <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="a73b2-125">사용자가 제공할 수도 Internet Explorer 문화권 이름으로는 문화권 이름은 유효 하지 않게 될 가능성을 만드는 텍스트 상자에 입력 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-125">Users can also provide Internet Explorer with culture names that they input in a text box, which creates the possibility that the culture names may not be valid.</span></span> <span data-ttu-id="a73b2-126">이렇게 하면 인스턴스화할 때 예외 처리를 사용 하는 것이 중요 한 <xref:System.Globalization.CultureInfo> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-126">This makes it important to use exception handling when instantiating a <xref:System.Globalization.CultureInfo> object.</span></span>  
   
- Internet Explorer에서 전송한 HTTP 요청에서 검색되는 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 배열은 사용자가 기본 설정한 순서대로 채워집니다.  배열의 첫 번째 요소에는 사용자의 기본 문화권\/지역 이름이 포함됩니다.  배열에 항목이 추가로 포함된 경우에는 Internet Explorer에서 이러한 항목에 품질 지정자를 임의로 할당합니다. 품질 지정자는 세미콜론을 사용하여 문화권 이름과 구분됩니다.  예를 들어 fr\-FR 문화권에 대한 항목은 `fr-FR;q=0.7` 형식일 수 있습니다.  
+ <span data-ttu-id="a73b2-127">Internet Explorer에서 제출 하는 HTTP 요청에서 검색할 때의 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 배열 사용자 기본 설정 순서에 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-127">When retrieved from an HTTP request submitted by Internet Explorer, the <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> array is populated in order of user preference.</span></span> <span data-ttu-id="a73b2-128">배열의 첫 번째 요소에는 사용자의 기본 문화권/지역의 이름을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-128">The first element in the array contains the name of the user's primary culture/region.</span></span> <span data-ttu-id="a73b2-129">배열에는 추가 항목이 포함 된 경우 Internet Explorer 임의로 할당 품질 지정자에서 문화권 이름을 세미콜론으로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-129">If the array contains any additional items, Internet Explorer arbitrarily assigns them a quality specifier, which is delimited from the culture name by a semicolon.</span></span> <span data-ttu-id="a73b2-130">FR-FR 문화권에 대 한 항목 형식을 가질 수 예를 들어 `fr-FR;q=0.7`합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-130">For example, an entry for the fr-FR culture might take the form `fr-FR;q=0.7`.</span></span>  
   
- 이 예제에서는 `useUserOverride` 매개 변수를 `false`로 설정하고 <xref:System.Globalization.CultureInfo.%23ctor%2A> 생성자를 호출하여 새 <xref:System.Globalization.CultureInfo> 개체를 만듭니다.  이렇게 하면 문화권 이름이 서버의 기본 문화권 이름인 경우 클래스 생성자에서 만드는 새 <xref:System.Globalization.CultureInfo> 개체에 문화권의 기본 설정이 포함되고 서버의 **국가 및 언어 옵션**을 사용하여 재정의한 모든 설정이 반영되지 않습니다.  서버에서 재정의된 설정 값은 사용자 시스템에 없거나 사용자 입력에 반영되지 않습니다.  
+ <span data-ttu-id="a73b2-131">예제에서는 <xref:System.Globalization.CultureInfo.%23ctor%2A> 생성자와 해당 `useUserOverride` 매개 변수 설정 `false` 새로 만들려면 <xref:System.Globalization.CultureInfo> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-131">The example calls the <xref:System.Globalization.CultureInfo.%23ctor%2A> constructor with its `useUserOverride` parameter set to `false` to create a new <xref:System.Globalization.CultureInfo> object.</span></span> <span data-ttu-id="a73b2-132">이렇게 하면, 문화권 이름이 서버에서 기본 문화권 이름을 새 <xref:System.Globalization.CultureInfo> 클래스 생성자가 만든 개체는 문화권의 기본 설정을 포함 하 고 서버를 사용 하 여 재정의 설정을 반영 하지 않습니다  **국가별 및 언어 옵션** 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-132">This ensures that, if the culture name is the default culture name on the server, the new <xref:System.Globalization.CultureInfo> object created by the class constructor contains a culture's default settings and does not reflect any settings overridden by using the server's **Regional and Language Options** application.</span></span> <span data-ttu-id="a73b2-133">서버에서 재정의 된 설정의 값 사용자의 시스템에 있는 사용자의 입력에 반영 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-133">The values from any overridden settings on the server are unlikely to exist on the user's system or to be reflected in the user's input.</span></span>  
   
- 코드에서 사용자 입력을 변환할 대상 숫자 형식의 `Parse` 또는 `TryParse` 메서드를 호출할 수 있습니다.  한 번의 구문 분석 작업을 위해 구문 분석 메서드를 반복해서 호출해야 할 수 있습니다.  그러므로 구문 분석 작업이 실패하면 `false`를 반환하는 `TryParse` 메서드를 사용하는 것이 보다 효과적입니다.  반면 `Parse` 메서드에서 throw할 수 있는 반복적인 예외를 처리하는 작업은 웹 응용 프로그램의 경우 매우 많은 비용이 소요될 수 있습니다.  
+ <span data-ttu-id="a73b2-134">코드 중 하나를 호출할 수는 `Parse` 또는 `TryParse` 메서드는 사용자의 입력 하는 숫자 형식으로 변환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-134">Your code can call either the `Parse` or the `TryParse` method of the numeric type that the user's input will be converted to.</span></span> <span data-ttu-id="a73b2-135">Parse 메서드를 반복된 호출 하는 단일 구문 분석 작업에 대 한 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-135">Repeated calls to a parse method may be required for a single parsing operation.</span></span> <span data-ttu-id="a73b2-136">결과적으로 `TryParse` 메서드는 반환 하기 때문에 더 나은, `false` 구문 분석 작업이 실패 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="a73b2-136">As a result, the `TryParse` method is better, because it returns `false` if a parse operation fails.</span></span> <span data-ttu-id="a73b2-137">반면에 의해 throw 될 수 있는 반복 된 예외를 처리는 `Parse` 웹 응용 프로그램에는 매우 많은 비용이 소요 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-137">In contrast, handling the repeated exceptions that may be thrown by the `Parse` method can be a very expensive proposition in a Web application.</span></span>  
   
-## 코드 컴파일  
- 코드를 컴파일하려면 모든 기존 코드를 대체하도록 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 코드 숨김 페이지에 복사합니다.  그러면 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 페이지에 다음 컨트롤이 포함됩니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="a73b2-138">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="a73b2-138">Compiling the Code</span></span>  
+ <span data-ttu-id="a73b2-139">코드를 컴파일하려면 복사에 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 코드 숨김 페이지 모든 기존 코드를 대체 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-139">To compile the code, copy it into an [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] code-behind page so that it replaces all the existing code.</span></span> <span data-ttu-id="a73b2-140">[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 페이지는 다음과 같은 컨트롤을 포함 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-140">The [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web page should contain the following controls:</span></span>  
   
--   코드에서 참조되지 않는 <xref:System.Web.UI.WebControls.Label> 컨트롤.  <xref:System.Web.UI.WebControls.TextBox.Text%2A> 속성을 "Enter a Number:"로 설정합니다.  
+-   <span data-ttu-id="a73b2-141">A <xref:System.Web.UI.WebControls.Label> 컨트롤을 코드에서 참조 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-141">A <xref:System.Web.UI.WebControls.Label> control, which is not referenced in code.</span></span> <span data-ttu-id="a73b2-142">설정의 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 속성을 "숫자를 입력 하십시오:".</span><span class="sxs-lookup"><span data-stu-id="a73b2-142">Set its <xref:System.Web.UI.WebControls.TextBox.Text%2A> property to "Enter a Number:".</span></span>  
   
--   `NumericString`이라는 <xref:System.Web.UI.WebControls.TextBox> 컨트롤  
+-   <span data-ttu-id="a73b2-143">`NumericString`이라는 <xref:System.Web.UI.WebControls.TextBox> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a73b2-143">A <xref:System.Web.UI.WebControls.TextBox> control named `NumericString`.</span></span>  
   
--   `OKButton`이라는 <xref:System.Web.UI.WebControls.Button> 컨트롤.  <xref:System.Web.UI.WebControls.Button.Text%2A> 속성을 "OK"로 설정합니다.  
+-   <span data-ttu-id="a73b2-144">`OKButton`이라는 <xref:System.Web.UI.WebControls.Button> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a73b2-144">A <xref:System.Web.UI.WebControls.Button> control named `OKButton`.</span></span> <span data-ttu-id="a73b2-145">설정의 <xref:System.Web.UI.WebControls.Button.Text%2A> 속성을 "OK"입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-145">Set its <xref:System.Web.UI.WebControls.Button.Text%2A> property to "OK".</span></span>  
   
- 클래스의 이름을 `NumericUserInput`에서 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 페이지 `Page` 지시문의 `Inherits` 특성에서 정의되는 클래스의 이름으로 변경합니다.  `NumericInput` 개체 참조의 이름을 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 페이지 `form` 태그의 `id` 특성에서 정의되는 이름으로 변경합니다.  
+ <span data-ttu-id="a73b2-146">클래스의 이름을 변경 `NumericUserInput` 에서 정의 된 클래스의 이름에는 `Inherits` 특성에는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 페이지의 `Page` 지시문입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-146">Change the name of the class from `NumericUserInput` to the name of the class that is defined by the `Inherits` attribute of the [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page's `Page` directive.</span></span> <span data-ttu-id="a73b2-147">이름을 변경는 `NumericInput` 개체에 정의 된 이름에 대 한 참조는 `id` 특성에는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 페이지의 `form` 태그입니다.</span><span class="sxs-lookup"><span data-stu-id="a73b2-147">Change the name of the `NumericInput` object reference to the name defined by the `id` attribute of the [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page's `form` tag.</span></span>  
   
-## .NET Framework 보안  
- 사용자가 HTML 스트림에 스크립트를 삽입하지 못하게 하려면 사용자 입력을 서버 응답에서 직접 다시 에코해서는 안 됩니다.  이 경우에는 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=fullName> 메서드를 사용하여 입력을 인코딩해야 합니다.  
+## <a name="net-framework-security"></a><span data-ttu-id="a73b2-148">.NET Framework 보안</span><span class="sxs-lookup"><span data-stu-id="a73b2-148">.NET Framework Security</span></span>  
+ <span data-ttu-id="a73b2-149">사용자 스크립트를 HTML 스트림에 삽입 되지 않도록 하려면 사용자 입력 되지 에코 해야 할지 직접 서버 응답에서.</span><span class="sxs-lookup"><span data-stu-id="a73b2-149">To prevent a user from injecting script into the HTML stream, user input should never be directly echoed back in the server response.</span></span> <span data-ttu-id="a73b2-150">대신, 사용 하 여 암호화 되어야는 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> 메서드.</span><span class="sxs-lookup"><span data-stu-id="a73b2-150">Instead, it should be encoded by using the <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> method.</span></span>  
   
-## 참고 항목  
- [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [숫자 문자열 구문 분석](../../../docs/standard/base-types/parsing-numeric.md)
+## <a name="see-also"></a><span data-ttu-id="a73b2-151">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a73b2-151">See Also</span></span>  
+ [<span data-ttu-id="a73b2-152">서식 지정 작업 수행</span><span class="sxs-lookup"><span data-stu-id="a73b2-152">Performing Formatting Operations</span></span>](../../../docs/standard/base-types/performing-formatting-operations.md)  
+ [<span data-ttu-id="a73b2-153">숫자 문자열 구문 분석</span><span class="sxs-lookup"><span data-stu-id="a73b2-153">Parsing Numeric Strings</span></span>](../../../docs/standard/base-types/parsing-numeric.md)

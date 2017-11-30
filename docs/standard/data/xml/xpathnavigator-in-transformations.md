@@ -1,38 +1,39 @@
 ---
-title: "변환 과정에서 XPathNavigator의 역할 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "변형 과정에서 XPathNavigator의 역할"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 변환 과정에서 XPathNavigator의 역할
-<xref:System.Xml.XPath.XPathNavigator> 클래스는 데이터에 대한 임의의 읽기 전용 액세스를 제공하며 XSLT\(Extensible Stylesheet Language for Transformations\)의 입력으로 사용하도록 디자인되었습니다.  이 클래스는 <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> 및 <xref:System.Xml.XmlDocument>에서 구현합니다.  <xref:System.Xml.XPath.XPathNavigator>는 XPath\(XML Path Language\) 권장 사항의 5단원에서 설명하는 W3C\(World Wide Web 컨소시엄\) 데이터 모델을 기반으로 합니다.  
+# <a name="xpathnavigator-in-transformations"></a><span data-ttu-id="3bacf-102">변형 과정에서 XPathNavigator의 역할</span><span class="sxs-lookup"><span data-stu-id="3bacf-102">XPathNavigator in Transformations</span></span>
+<span data-ttu-id="3bacf-103"><xref:System.Xml.XPath.XPathNavigator> 클래스는 데이터에 대한 임의의 읽기 전용 액세스를 제공하며 XSLT(Extensible Stylesheet Language for Transformations)의 입력으로 사용하도록 디자인되었습니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-103">The <xref:System.Xml.XPath.XPathNavigator> class provides read-only random access to data and is designed for use as an input to Extensible Stylesheet Language for Transformations (XSLT).</span></span> <span data-ttu-id="3bacf-104">이 클래스는 <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> 및 <xref:System.Xml.XmlDocument>에서 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-104">It is implemented on the <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, and <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="3bacf-105"><xref:System.Xml.XPath.XPathNavigator>는 XPath(XML Path Language) 권장 사항의 5단원에서 설명하는 W3C(World Wide Web 컨소시엄) 데이터 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-105">The <xref:System.Xml.XPath.XPathNavigator> is based upon the World Wide Web Consortium (W3C) Data Model as described in section 5 of the XML Path Language (XPath) recommendation.</span></span>  
   
- <xref:System.Xml.XPath.XPathNavigator>는 모든 저장소에 대한 커서 모델을 정의하며 모든 데이터 저장소에 대한 빠른 속도의 읽기 전용 XPath 쿼리를 제공합니다.  또한 <xref:System.Xml.XPath.XPathNavigator>는 결과 트리 조각을 반복하는 데 사용되는 클래스이기도 합니다.  
+ <span data-ttu-id="3bacf-106"><xref:System.Xml.XPath.XPathNavigator>는 모든 저장소에 대한 커서 모델을 정의하며 모든 데이터 저장소에 대한 빠른 속도의 읽기 전용 XPath 쿼리를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-106">The <xref:System.Xml.XPath.XPathNavigator> defines a cursor model over any store and provides fast, read-only XPath queries over any data store.</span></span> <span data-ttu-id="3bacf-107">또한 <xref:System.Xml.XPath.XPathNavigator>는 결과 트리 조각을 반복하는 데 사용되는 클래스이기도 합니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-107">The <xref:System.Xml.XPath.XPathNavigator> is also the class to use for iterating over result tree fragments.</span></span>  
   
- API를 사용하면 저장소의 현재 노드에서 정보를 가져오고 연결된 노드로 이동할 수 있습니다.  <xref:System.Xml.XPath.XPathNavigator>는 일련의 **Move** 메서드를 사용하여 저장소를 순회하는 커서 스타일 모델입니다.  <xref:System.Xml.XPath.XPathNavigator>는 항상 노드에 위치합니다.  **Move** 메서드가 실패하더라도 <xref:System.Xml.XPath.XPathNavigator>는 변경되지 않습니다.  
+ <span data-ttu-id="3bacf-108">API를 사용하면 저장소의 현재 노드에서 정보를 가져오고 연결된 노드로 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-108">The API enables you to get information from the current node in the store and move to connected nodes.</span></span> <span data-ttu-id="3bacf-109"><xref:System.Xml.XPath.XPathNavigator> 집합을 사용 하 여 저장소를 순회 하는 커서 스타일 모델은 **이동** 메서드.</span><span class="sxs-lookup"><span data-stu-id="3bacf-109">The <xref:System.Xml.XPath.XPathNavigator> is a cursor style model that performs traversal over a store using a set of **Move** methods.</span></span> <span data-ttu-id="3bacf-110"><xref:System.Xml.XPath.XPathNavigator>는 항상 노드에 위치합니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-110">The <xref:System.Xml.XPath.XPathNavigator> is always positioned on a node.</span></span> <span data-ttu-id="3bacf-111">모든 **이동** 메서드가 실패 하더라도 <xref:System.Xml.XPath.XPathNavigator> 변경 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-111">Any **Move** method that fails leaves the <xref:System.Xml.XPath.XPathNavigator> unchanged.</span></span>  
   
- <xref:System.Xml.XPath.XPathNavigator>는 결과 트리 조각을 반복하는 데 사용되는 클래스입니다.  다음 코드 샘플에서는 XML을 포함하는 `fragment` 매개 변수로 함수를 호출하여 스타일시트 내부에서 결과 트리 조각을 만듭니다.  
+ <span data-ttu-id="3bacf-112"><xref:System.Xml.XPath.XPathNavigator>는 결과 트리 조각을 반복하는 데 사용되는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-112">The <xref:System.Xml.XPath.XPathNavigator> is the class to use for iterating over result tree fragments.</span></span> <span data-ttu-id="3bacf-113">다음 코드 샘플에서는 XML을 포함하는 `fragment` 매개 변수로 함수를 호출하여 스타일시트 내부에서 결과 트리 조각을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-113">The following code sample creates a result tree fragment within a style sheet by calling the function with the parameter, `fragment`, which contains XML.</span></span>  
   
-## test.xsl  
+## <a name="testxsl"></a><span data-ttu-id="3bacf-114">test.xsl</span><span class="sxs-lookup"><span data-stu-id="3bacf-114">test.xsl</span></span>  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
                 xmlns:msxsl ="urn:schemas-microsoft-com:xslt"  
                 xmlns:user="http://www.adventure-works.com"  
@@ -61,16 +62,15 @@ caps.handback.revision: 3
 </xsl:template>  
   
 </xsl:stylesheet>  
-  
 ```  
   
-## test.xml  
+## <a name="testxml"></a><span data-ttu-id="3bacf-115">test.xml</span><span class="sxs-lookup"><span data-stu-id="3bacf-115">test.xml</span></span>  
   
-```  
+```xml  
 <root>Some text</root>  
 ```  
   
- 다음 코드에서는 **test.xsl** 스타일시트와 **test.xml** 입력 데이터를 사용합니다.  
+ <span data-ttu-id="3bacf-116">다음 코드에서는 **test.xsl** 스타일 시트 및 **test.xml** 입력 데이터를 필터링 합니다.</span><span class="sxs-lookup"><span data-stu-id="3bacf-116">The following code uses the **test.xsl** style sheet and **test.xml** input data.</span></span>  
   
 ```vb  
 Imports System  
@@ -91,7 +91,6 @@ Public Class sample
         xslt.Transform(xd, Nothing, strmTemp, Nothing)  
     End Sub 'Main  
 End Class 'sample  
-  
 ```  
   
 ```csharp  
@@ -117,13 +116,12 @@ public class sample
 }  
 ```  
   
-## 출력  
- 변환 결과는 **out.xml** 파일에 표시됩니다.  
+## <a name="output"></a><span data-ttu-id="3bacf-117">출력</span><span class="sxs-lookup"><span data-stu-id="3bacf-117">Output</span></span>  
+ <span data-ttu-id="3bacf-118">변환의 결과 파일에서 찾은 **out.xml**:</span><span class="sxs-lookup"><span data-stu-id="3bacf-118">The result of the transformation is found in the file **out.xml**:</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
-  
 ```  
   
-## 참고 항목  
- [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a><span data-ttu-id="3bacf-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3bacf-119">See Also</span></span>  
+ [<span data-ttu-id="3bacf-120">XslTransform 클래스의 XSLT 프로세서 구현</span><span class="sxs-lookup"><span data-stu-id="3bacf-120">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

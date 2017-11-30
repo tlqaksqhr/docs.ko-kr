@@ -1,64 +1,67 @@
 ---
-title: "Latency Modes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, intrusiveness"
-  - "garbage collection, latency modes"
+title: "대기 모드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- garbage collection, intrusiveness
+- garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: 41
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Latency Modes
-개체를 회수하려면, 가비지 수집기가 응용 프로그램의 실행 스레드를 모두 중지해야 합니다.  응용 프로그램이 데이터를 검색하거나 콘텐츠를 표시하는 경우와 같은 일부 상황에서는 전체 가비지 수집이 중요한 시간에 발생하여 성능이 저하될 수 있습니다.  <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=fullName> 속성을 <xref:System.Runtime.GCLatencyMode?displayProperty=fullName> 값 중 하나로 설정하여 가비지 수집기의 개입을 조정할 수 있습니다.  
+# <a name="latency-modes"></a><span data-ttu-id="ff2ad-102">대기 모드</span><span class="sxs-lookup"><span data-stu-id="ff2ad-102">Latency Modes</span></span>
+<span data-ttu-id="ff2ad-103">개체를 회수하려면, 가비지 수집기가 응용 프로그램의 실행 스레드를 모두 중지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-103">To reclaim objects, the garbage collector must stop all the executing threads in an application.</span></span> <span data-ttu-id="ff2ad-104">응용 프로그램이 데이터를 검색하거나 콘텐츠를 표시하는 경우와 같은 일부 상황에서는 전체 가비지 수집이 중요한 시간에 발생하여 성능이 저하될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-104">In some situations, such as when an application retrieves data or displays content, a full garbage collection can occur at a critical time and impede performance.</span></span> <span data-ttu-id="ff2ad-105"><xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 속성을 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 값 중 하나로 설정하여 가비지 수집기의 개입을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-105">You can adjust the intrusiveness of the garbage collector by setting the <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> property to one of the <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> values.</span></span>  
   
- 대기 시간은 가비지 수집기가 응용 프로그램에 개입하는 시간을 참조합니다.  대기 시간이 짧은 기간 중에는 가비지 수집기가 보다 보수적이고 개체 회수에 덜 개입합니다.  <xref:System.Runtime.GCLatencyMode?displayProperty=fullName> 열거형은 두 개의 짧은 대기 시간 설정을 제공합니다.  
+ <span data-ttu-id="ff2ad-106">대기 시간은 가비지 수집기가 응용 프로그램에 개입하는 시간을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-106">Latency refers to the time that the garbage collector intrudes in your application.</span></span> <span data-ttu-id="ff2ad-107">대기 시간이 짧은 기간 중에는 가비지 수집기가 보다 보수적이고 개체 회수에 덜 개입합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-107">During low latency periods, the garbage collector is more conservative and less intrusive in reclaiming objects.</span></span> <span data-ttu-id="ff2ad-108"><xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 열거형은 두 개의 짧은 대기 시간 설정을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-108">The <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> enumeration provides two low latency settings:</span></span>  
   
--   <xref:System.Runtime.GCLatencyMode>는 2세대 수집을 사용하지 않고 0세대 및 1세대 수집만 수행합니다.  짧은 시간 동안에만 사용할 수 있습니다.  긴 시간 동안 사용하여 시스템의 메모리 사용량이 많을 경우 가비지 수집기가 응용 프로그램을 잠시 중지하고 시간 결정적 작업을 방해할 수 있는 수집을 트리거합니다.  이 설정은 워크스테이션 가비지 수집에서만 사용할 수 있습니다.  
+-   <span data-ttu-id="ff2ad-109"><xref:System.Runtime.GCLatencyMode.LowLatency>는 2세대 수집을 사용하지 않고 0세대 및 1세대 수집만 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-109"><xref:System.Runtime.GCLatencyMode.LowLatency> suppresses generation 2 collections and performs only generation 0 and 1 collections.</span></span> <span data-ttu-id="ff2ad-110">짧은 시간 동안에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-110">It can be used only for short periods of time.</span></span> <span data-ttu-id="ff2ad-111">긴 시간 동안 사용하여 시스템의 메모리 사용량이 많을 경우 가비지 수집기가 응용 프로그램을 잠시 중지하고 시간 결정적 작업을 방해할 수 있는 수집을 트리거합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-111">Over longer periods, if the system is under memory pressure, the garbage collector will trigger a collection, which can briefly pause the application and disrupt a time-critical operation.</span></span> <span data-ttu-id="ff2ad-112">이 설정은 워크스테이션 가비지 수집에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-112">This setting is available only for workstation garbage collection.</span></span>  
   
--   <xref:System.Runtime.GCLatencyMode>는 2세대 포그라운드 수집을 사용하지 않고 0세대, 1세대 및 2세대 백그라운드 수집만 수행합니다.  오랜 시간 동안 사용할 수 있으며 워크스테이션 및 서버 가비지 수집 모두에 대해 사용할 수 있습니다.  이 설정은 [동시 가비지 수집](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)을 사용하지 않을 경우 사용할 수 없습니다.  
+-   <span data-ttu-id="ff2ad-113"><xref:System.Runtime.GCLatencyMode.SustainedLowLatency>는 2세대 포그라운드 수집을 사용하지 않고 0세대, 1세대 및 2세대 백그라운드 수집만 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-113"><xref:System.Runtime.GCLatencyMode.SustainedLowLatency> suppresses foreground generation 2 collections and performs only generation 0, 1, and background generation 2 collections.</span></span> <span data-ttu-id="ff2ad-114">오랜 시간 동안 사용할 수 있으며 워크스테이션 및 서버 가비지 컬렉션 모두에 대해 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-114">It can be used for longer periods of time, and is available for both workstation and server garbage collection.</span></span> <span data-ttu-id="ff2ad-115">[동시 가비지 수집](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)을 사용하지 않을 경우 이 설정을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-115">This setting cannot be used if [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is disabled.</span></span>  
   
- 대기 시간이 짧은 기간 중에는 다음이 발생하지 않는 한 2세대 수집이 사용되지 않습니다.  
+ <span data-ttu-id="ff2ad-116">대기 시간이 짧은 기간 중에는 다음이 발생하지 않는 한 2세대 컬렉션이 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-116">During low latency periods, generation 2 collections are suppressed unless the following occurs:</span></span>  
   
--   시스템에 운영 체제에서 메모리 부족 알림을 받습니다.  
+-   <span data-ttu-id="ff2ad-117">시스템에 운영 체제에서 메모리 부족 알림을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-117">The system receives a low memory notification from the operating system.</span></span>  
   
--   응용 프로그램 코드는 <xref:System.GC.Collect%2A?displayProperty=fullName> 메서드를 호출하고 `generation` 매개 변수에 대해 2를 지정하여 수집을 줄입니다.  
+-   <span data-ttu-id="ff2ad-118">응용 프로그램 코드는 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 메서드를 호출하고 `generation` 매개 변수에 대해 2를 지정하여 수집을 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-118">Your application code induces a collection by calling the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method and specifying 2 for the `generation` parameter.</span></span>  
   
- 다음 표에서는 <xref:System.Runtime.GCLatencyMode> 값을 사용하는 응용 프로그램 시나리오를 보여 줍니다.  
+ <span data-ttu-id="ff2ad-119">다음 표에서는 <xref:System.Runtime.GCLatencyMode> 값을 사용하는 응용 프로그램 시나리오를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-119">The following table lists the application scenarios for using the <xref:System.Runtime.GCLatencyMode> values.</span></span>  
   
-|대기 시간 모드|응용 프로그램 시나리오|  
-|--------------|------------------|  
-|<xref:System.Runtime.GCLatencyMode>|UI 또는 서버 쪽 작업이 없는 응용 프로그램.<br /><br /> [동시 가비지 수집](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)을 사용하지 않을 때 기본 모드입니다.|  
-|<xref:System.Runtime.GCLatencyMode>|UI가 있는 대부분의 응용 프로그램의 경우.<br /><br /> [동시 가비지 수집](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)을 사용할 때 기본 모드입니다.|  
-|<xref:System.Runtime.GCLatencyMode>|가비지 수집기의 방해로 인한 영향을 받을 수 있는 단기간의 시간이 중요한 작업이 있는 응용 프로그램\(예:  애니메이션 렌더링이나 데이터 취득 기능을 수행하는 응용 프로그램\)|  
-|<xref:System.Runtime.GCLatencyMode>|가비지 수집기의 방해로 인한 영향을 받을 수 있는 포함된 기간이지만 잠재적으로 장기간의 시간 결정적인 작업이 있는 응용 프로그램\(예:  거래 시간 동안 시장 데이터가 변경될 때 빠른 응답 시간을 필요로 하는 응용 프로그램\)<br /><br /> 이 모드에서는 다른 모드보다 관리되는 힙 크기가 더 큽니다.  관리되는 힙을 압축하지 않기 때문에 조각화의 수준이 더 높을 수 있습니다.  충분한 메모리를 사용할 수 있는지 확인하세요.|  
+|<span data-ttu-id="ff2ad-120">대기 시간 모드</span><span class="sxs-lookup"><span data-stu-id="ff2ad-120">Latency mode</span></span>|<span data-ttu-id="ff2ad-121">응용 프로그램 시나리오</span><span class="sxs-lookup"><span data-stu-id="ff2ad-121">Application scenarios</span></span>|  
+|------------------|---------------------------|  
+|<xref:System.Runtime.GCLatencyMode.Batch>|<span data-ttu-id="ff2ad-122">UI 또는 서버 쪽 작업이 없는 응용 프로그램.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-122">For applications that have no UI or server-side operations.</span></span><br /><br /> <span data-ttu-id="ff2ad-123">[동시 가비지 수집](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)을 사용하지 않을 때 기본 모드입니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-123">This is the default mode when [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is disabled.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.Interactive>|<span data-ttu-id="ff2ad-124">UI가 있는 대부분의 응용 프로그램의 경우.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-124">For most applications that have a UI.</span></span><br /><br /> <span data-ttu-id="ff2ad-125">[동시 가비지 수집](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)을 사용할 때 기본 모드입니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-125">This is the default mode when [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is enabled.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.LowLatency>|<span data-ttu-id="ff2ad-126">가비지 수집기의 방해로 인한 영향을 받을 수 있는 단기간의 시간이 중요한 작업이 있는 응용 프로그램(예:</span><span class="sxs-lookup"><span data-stu-id="ff2ad-126">For applications that have short-term, time-sensitive operations during which interruptions from the garbage collector could be disruptive.</span></span> <span data-ttu-id="ff2ad-127">애니메이션 렌더링이나 데이터 취득 기능을 수행하는 응용 프로그램)</span><span class="sxs-lookup"><span data-stu-id="ff2ad-127">For example, applications that do animation rendering or data acquisition functions.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|<span data-ttu-id="ff2ad-128">가비지 수집기의 방해로 인한 영향을 받을 수 있는 포함된 기간이지만 잠재적으로 장기간의 시간 결정적인 작업이 있는 응용 프로그램(예:</span><span class="sxs-lookup"><span data-stu-id="ff2ad-128">For applications that have time-sensitive operations for a contained but potentially longer duration of time during which interruptions from the garbage collector could be disruptive.</span></span> <span data-ttu-id="ff2ad-129">거래 시간 동안 시장 데이터가 변경될 때 빠른 응답 시간을 필요로 하는 응용 프로그램)</span><span class="sxs-lookup"><span data-stu-id="ff2ad-129">For example, applications that need quick response times as market data changes during trading hours.</span></span><br /><br /> <span data-ttu-id="ff2ad-130">이 모드에서는 다른 모드보다 관리되는 힙 크기가 더 큽니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-130">This mode results in a larger managed heap size than other modes.</span></span> <span data-ttu-id="ff2ad-131">관리되는 힙을 압축하지 않기 때문에 조각화의 수준이 더 높을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-131">Because it does not compact the managed heap, higher fragmentation is possible.</span></span> <span data-ttu-id="ff2ad-132">충분한 메모리를 사용할 수 있는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-132">Ensure that sufficient memory is available.</span></span>|  
   
-## 짧은 대기 시간 사용에 대한 지침  
- <xref:System.Runtime.GCLatencyMode> 모드를 사용하는 경우 다음과 같은 지침을 고려합니다.  
+## <a name="guidelines-for-using-low-latency"></a><span data-ttu-id="ff2ad-133">짧은 대기 시간 사용에 대한 지침</span><span class="sxs-lookup"><span data-stu-id="ff2ad-133">Guidelines for Using Low Latency</span></span>  
+ <span data-ttu-id="ff2ad-134"><xref:System.Runtime.GCLatencyMode.LowLatency> 모드를 사용하는 경우 다음과 같은 지침을 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-134">When you use <xref:System.Runtime.GCLatencyMode.LowLatency> mode, consider the following guidelines:</span></span>  
   
--   짧은 대기 시간 기간을 가능한 한 짧게 유지합니다.  
+-   <span data-ttu-id="ff2ad-135">짧은 대기 시간 기간을 가능한 한 짧게 유지합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-135">Keep the period of time in low latency as short as possible.</span></span>  
   
--   짧은 대기 시간 기간 중 많은 양의 메모리를 할당하지 마세요.  가비지 수집에서 확보하는 개체 수가 더 적기 때문에 메모리 부족 알림이 발생할 수 있습니다.  
+-   <span data-ttu-id="ff2ad-136">짧은 대기 시간 기간 중 많은 양의 메모리를 할당하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-136">Avoid allocating high amounts of memory during low latency periods.</span></span> <span data-ttu-id="ff2ad-137">가비지 수집에서 확보하는 개체 수가 더 적기 때문에 메모리 부족 알림이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-137">Low memory notifications can occur because garbage collection reclaims fewer objects.</span></span>  
   
--   짧은 대기 시간 모드에서는 할당 수, 특히 대형 개체 힙 및 고정 개체에 대한 할당 수를 최소화합니다.  
+-   <span data-ttu-id="ff2ad-138">짧은 대기 시간 모드에서는 할당 수, 특히 대형 개체 힙 및 고정 개체에 대한 할당 수를 최소화합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-138">While in the low latency mode, minimize the number of allocations you make, in particular allocations onto the Large Object Heap and pinned objects.</span></span>  
   
--   할당할 수 있는 스레드를 확인합니다.  <xref:System.Runtime.GCSettings.LatencyMode%2A> 속성 설정은 프로세스 전체에 적용되므로 할당될 수 있는 모든 스레드에서 <xref:System.OutOfMemoryException>을 생성할 수 있습니다.  
+-   <span data-ttu-id="ff2ad-139">할당할 수 있는 스레드를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-139">Be aware of threads that could be allocating.</span></span> <span data-ttu-id="ff2ad-140"><xref:System.Runtime.GCSettings.LatencyMode%2A> 속성 설정은 프로세스 전체에 적용되므로 할당될 수 있는 모든 스레드에서 <xref:System.OutOfMemoryException>을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-140">Because the <xref:System.Runtime.GCSettings.LatencyMode%2A> property setting is process-wide, you could generate an <xref:System.OutOfMemoryException> on any thread that may be allocating.</span></span>  
   
--   제약이 있는 실행 영역에 짧은 대기 시간 코드를 래핑합니다\(자세한 내용은 [제약이 있는 실행 영역](../../../docs/framework/performance/constrained-execution-regions.md) 참조\).  
+-   <span data-ttu-id="ff2ad-141">제약이 있는 실행 영역에 짧은 대기 시간 코드를 래핑합니다 (자세한 내용은 참조 [제약이 있는 실행 영역](../../../docs/framework/performance/constrained-execution-regions.md)).</span><span class="sxs-lookup"><span data-stu-id="ff2ad-141">Wrap the low latency code in constrained execution regions (for more information, see [Constrained Execution Regions](../../../docs/framework/performance/constrained-execution-regions.md)).</span></span>  
   
--   <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=fullName> 메서드를 호출하여 짧은 대기 시간 기간 중 2세대 수집을 강제할 수 있습니다.  
+-   <span data-ttu-id="ff2ad-142"><xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 메서드를 호출하여 짧은 대기 시간 기간 중 2세대 수집을 강제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff2ad-142">You can force generation 2 collections during a low latency period by calling the <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> method.</span></span>  
   
-## 참고 항목  
- <xref:System.GC?displayProperty=fullName>   
- [인덱싱된 컬렉션](../../../docs/standard/garbage-collection/induced.md)   
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="ff2ad-143">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ff2ad-143">See Also</span></span>  
+ <xref:System.GC?displayProperty=nameWithType>  
+ [<span data-ttu-id="ff2ad-144">인덱싱된 컬렉션</span><span class="sxs-lookup"><span data-stu-id="ff2ad-144">Induced Collections</span></span>](../../../docs/standard/garbage-collection/induced.md)  
+ [<span data-ttu-id="ff2ad-145">가비지 수집</span><span class="sxs-lookup"><span data-stu-id="ff2ad-145">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

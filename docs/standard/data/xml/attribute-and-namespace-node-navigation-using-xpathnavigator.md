@@ -1,35 +1,33 @@
 ---
-title: "XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 45e94954641e935597394b7cf04818c6c78ea675
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색
-<xref:System.Xml.XPath.XPathNavigator> 클래스는 두 개의 탐색 메서드 집합을 제공합니다. [XPathNavigator를 사용하여 노드 집합 탐색](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) 항목에서 찾을 수 있는 첫 번째 집합은 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체에서 *노드 집합*을 탐색하는 데 사용합니다.  이 항목에서 설명하는 두 번째 집합은 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체에서 *특성 및 네임스페이스 노드*를 탐색하는 데 사용합니다.  
+# <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a><span data-ttu-id="e52d2-102">XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색</span><span class="sxs-lookup"><span data-stu-id="e52d2-102">Attribute and Namespace Node Navigation Using XPathNavigator</span></span>
+<span data-ttu-id="e52d2-103"><xref:System.Xml.XPath.XPathNavigator> 에서 발견 한 첫 번째 집합 두 집합 탐색 메서드를 제공 하는 클래스는 [노드 집합 탐색을 사용 하 여 XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) 항목을 탐색 하는 데는 *노드 집합* 에 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-103">The <xref:System.Xml.XPath.XPathNavigator> class provides two sets of navigation methods, the first set, found in the [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) topic, are used to navigate *node sets* in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span> <span data-ttu-id="e52d2-104">이 항목에서 설명 하는 두 번째 집합을 탐색 하는 데는 *특성 및 네임 스페이스 노드* 에 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-104">The second set, described in this topic, are used to navigate *attribute and namespace nodes* in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span>  
   
-## 특성 노드 탐색  
- 특성은 요소의 자식이 아니라 요소의 속성입니다.  이러한 구분은 형제, 부모 및 자식 노드를 탐색하는 데 사용되는 <xref:System.Xml.XPath.XPathNavigator> 클래스의 메서드로 인해 중요하게 작용합니다.  
+## <a name="attribute-node-navigation"></a><span data-ttu-id="e52d2-105">특성 노드 탐색</span><span class="sxs-lookup"><span data-stu-id="e52d2-105">Attribute Node Navigation</span></span>  
+ <span data-ttu-id="e52d2-106">특성은 요소의 자식이 아니라 요소의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-106">Attributes are properties of an element, not children of an element.</span></span> <span data-ttu-id="e52d2-107">이러한 구분은 형제, 부모 및 자식 노드를 탐색하는 데 사용되는 <xref:System.Xml.XPath.XPathNavigator> 클래스의 메서드로 인해 중요하게 작용합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-107">This distinction is important, because of the methods of the <xref:System.Xml.XPath.XPathNavigator> class used to navigate sibling, parent, and child nodes.</span></span>  
   
- 예를 들어, <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 메서드는 요소와 특성 사이 또는 특성 간을 탐색하는 데 사용되지 않습니다.  대신 특성에는 구분되는 탐색 메서드가 있습니다.  
+ <span data-ttu-id="e52d2-108">예를 들어, <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 메서드는 요소와 특성 사이 또는 특성 간을 탐색하는 데 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-108">For example, the <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> methods are not used to navigate from an element to an attribute or between attributes.</span></span> <span data-ttu-id="e52d2-109">대신 특성에는 구분되는 탐색 메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-109">Instead, attributes have distinct methods of navigation.</span></span>  
   
- 다음은 <xref:System.Xml.XPath.XPathNavigator> 클래스의 특성 탐색 메서드입니다.  
+ <span data-ttu-id="e52d2-110">다음은 <xref:System.Xml.XPath.XPathNavigator> 클래스의 특성 탐색 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-110">The following are the attribute navigation methods of the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
   
 -   <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
   
@@ -37,17 +35,17 @@ caps.handback.revision: 2
   
 -   <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
   
- 현재 노드가 요소이면 <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> 속성을 사용하여 해당 요소와 연관된 특성이 있는지 확인할 수 있습니다.  요소에 특성이 있다고 확인되면 특성에 액세스하기 위한 여러 메서드가 있는 것입니다.  요소에서 단일 특성을 검색하려면 <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> 메서드를 사용합니다.  <xref:System.Xml.XPath.XPathNavigator>를 특정 특성으로 이동하려면 <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> 메서드를 사용합니다.  <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> 메서드를 사용하고 그 다음에 <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> 메서드를 여러 번 호출하면 요소의 각 특성을 반복할 수 있습니다.  
+ <span data-ttu-id="e52d2-111">현재 노드가 요소이면 <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> 속성을 사용하여 해당 요소와 연관된 특성이 있는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-111">When the current node is an element, you can use the <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> property to see if there are any attributes associated with the element.</span></span> <span data-ttu-id="e52d2-112">요소에 특성이 있다고 확인되면 특성에 액세스하기 위한 여러 메서드가 있는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-112">After it is known that an element has attributes, there are multiple methods for accessing attributes.</span></span> <span data-ttu-id="e52d2-113">요소에서 단일 특성을 검색하려면 <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-113">To retrieve a single attribute from the element, use the <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> method.</span></span> <span data-ttu-id="e52d2-114"><xref:System.Xml.XPath.XPathNavigator>를 특정 특성으로 이동하려면 <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-114">To move the <xref:System.Xml.XPath.XPathNavigator> to a particular attribute, use the <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> method.</span></span> <span data-ttu-id="e52d2-115"><xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> 메서드를 사용하고 그 다음에 <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> 메서드를 여러 번 호출하면 요소의 각 특성을 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-115">You can also iterate over each attribute of an element by using the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> method, followed by multiple calls to the <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> method.</span></span>  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator> 개체가 특성 또는 네임스페이스 노드에 위치하면 <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 메서드는 항상 `false`를 반환하고 <xref:System.Xml.XPath.XPathNavigator>의 위치에는 영향을 주지 않습니다.  예외에는 <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>메서드가 있습니다.  
+>  <span data-ttu-id="e52d2-116"><xref:System.Xml.XPath.XPathNavigator> 개체가 특성 또는 네임스페이스 노드에 위치하면 <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 메서드는 항상 `false`를 반환하고 <xref:System.Xml.XPath.XPathNavigator>의 위치에는 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-116">When the <xref:System.Xml.XPath.XPathNavigator> object is positioned on an attribute or namespace node, the <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> methods always return `false`, and have no effect on the position of the <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="e52d2-117">예외에는 <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-117">The exceptions are the <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, and <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> methods.</span></span>  
   
-## 네임스페이스 노드 탐색  
- 각 요소에는 네임스페이스 노드 집합이 연결되어 있으며 하나는 요소의 범위에 있는 네임스페이스 URI\(모든 XML 문서에서 암시적으로 선언된 `http://www.w3.org/XML/1998/namespace` 네임스페이스에 바인딩된 XML 접두사 포함\)에 바인딩된 각 네임스페이스 접두사에 대한 노드 집합이고 하나는 요소의 범위 내에 있을 경우 기본 네임스페이스에 대한 노드 집합입니다.  요소는 이러한 네임스페이스 노드 각각의 부모이지만 네임스페이스 노드는 해당 부모 요소의 자식이 아닙니다.  
+## <a name="namespace-node-navigation"></a><span data-ttu-id="e52d2-118">네임스페이스 노드 탐색</span><span class="sxs-lookup"><span data-stu-id="e52d2-118">Namespace Node Navigation</span></span>  
+ <span data-ttu-id="e52d2-119">각 요소에는 네임스페이스 노드 집합이 연결되어 있으며 하나는 요소의 범위에 있는 네임스페이스 URI(모든 XML 문서에서 암시적으로 선언된 `http://www.w3.org/XML/1998/namespace` 네임스페이스에 바인딩된 XML 접두사 포함)에 바인딩된 각 네임스페이스 접두사에 대한 노드 집합이고 하나는 요소의 범위 내에 있을 경우 기본 네임스페이스에 대한 노드 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-119">Each element has an associated set of namespace nodes, one for each distinct namespace prefix that is bound to a namespace URI in scope for the element (including the XML prefix bound to the `http://www.w3.org/XML/1998/namespace` namespace, which is implicitly declared in every XML document) and one for the default namespace if one is in scope for the element.</span></span> <span data-ttu-id="e52d2-120">요소는 이러한 네임스페이스 노드 각각의 부모이지만 네임스페이스 노드는 해당 부모 요소의 자식이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-120">The element is the parent of each of these namespace nodes; however, a namespace node is not a child of its parent element.</span></span>  
   
- 특성과 마찬가지로 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 메서드는 요소와 네임스페이스 노드 또는 네임스페이스 노드 간을 탐색하는 데 사용되지 않습니다.  대신 네임스페이스 노드에는 구분되는 탐색 메서드가 있습니다.  
+ <span data-ttu-id="e52d2-121">특성과 마찬가지로 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 메서드는 요소와 네임스페이스 노드 또는 네임스페이스 노드 간을 탐색하는 데 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-121">As with attributes, the <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> methods are not used to navigate from an element to a namespace node, or between namespace nodes.</span></span> <span data-ttu-id="e52d2-122">대신 네임스페이스 노드에는 구분되는 탐색 메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-122">Instead, namespace nodes have distinct methods of navigation.</span></span>  
   
- 다음은 <xref:System.Xml.XPath.XPathNavigator> 클래스의 네임스페이스 탐색 메서드입니다.  
+ <span data-ttu-id="e52d2-123">다음은 <xref:System.Xml.XPath.XPathNavigator> 클래스의 네임스페이스 탐색 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-123">The following are the namespace navigation methods of the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
   
 -   <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
   
@@ -55,17 +53,17 @@ caps.handback.revision: 2
   
 -   <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
   
- XML 문서의 요소 범위 내에는 항상 네임스페이스 노드가 한 개 이상 있습니다.  이 네임스페이스 노드에는 접두사 `xml`과 네임스페이스 URI `http://www.w3.org/XML/1998/namespace`가 있습니다.  특정 접두사가 지정된 범위 내에서 네임스페이스 URI를 검색하려면 <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> 메서드를 사용합니다.  <xref:System.Xml.XPath.XPathNavigator> 개체를 특정 네임스페이스 노드로 이동하려면 <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> 메서드를 사용합니다.  <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 메서드를 사용하고 그 다음에 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드를 여러 번 호출하면 요소의 범위 내에서 각 네임스페이스 노드를 반복할 수 있습니다.  
+ <span data-ttu-id="e52d2-124">XML 문서의 요소 범위 내에는 항상 네임스페이스 노드가 한 개 이상 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-124">There is always at least one namespace node in scope for any element in an XML document.</span></span> <span data-ttu-id="e52d2-125">이 네임스페이스 노드에는 접두사 `xml`과 네임스페이스 URI `http://www.w3.org/XML/1998/namespace`가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-125">This is the namespace node with the prefix `xml` and namespace URI `http://www.w3.org/XML/1998/namespace`.</span></span> <span data-ttu-id="e52d2-126">특정 접두사가 지정된 범위 내에서 네임스페이스 URI를 검색하려면 <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-126">To retrieve a namespace URI in scope given a particular prefix, use the <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> method.</span></span> <span data-ttu-id="e52d2-127"><xref:System.Xml.XPath.XPathNavigator> 개체를 특정 네임스페이스 노드로 이동하려면 <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-127">To move the <xref:System.Xml.XPath.XPathNavigator> object to a particular namespace node, use the <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> method.</span></span> <span data-ttu-id="e52d2-128"><xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 메서드를 사용하고 그 다음에 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드를 여러 번 호출하면 요소의 범위 내에서 각 네임스페이스 노드를 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-128">You can also iterate over each namespace node in scope for an element by using the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> method followed by multiple calls to the <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> method.</span></span>  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator> 개체가 특성 또는 네임스페이스 노드에 위치하면 <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 메서드는 항상 `false`를 반환하고 <xref:System.Xml.XPath.XPathNavigator>의 위치에는 영향을 주지 않습니다.  예외에는 <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>메서드가 있습니다.  
+>  <span data-ttu-id="e52d2-129"><xref:System.Xml.XPath.XPathNavigator> 개체가 특성 또는 네임스페이스 노드에 위치하면 <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 메서드는 항상 `false`를 반환하고 <xref:System.Xml.XPath.XPathNavigator>의 위치에는 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-129">When the <xref:System.Xml.XPath.XPathNavigator> object is positioned on an attribute or namespace node, the <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> methods always return `false`, and have no effect on the position of the <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="e52d2-130">예외에는 <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-130">The exceptions are the <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, and <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> methods.</span></span>  
   
-### XPathNamespaceScope 열거형  
- 네임스페이스 노드를 탐색할 때 <xref:System.Xml.XPath.XPathNamespaceScope> 매개 변수를 사용하여 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드를 호출할 수 있습니다.  이러한 메서드는 매개 변수 없이 호출되는 메서드와 다르게 동작합니다.  <xref:System.Xml.XPath.XPathNamespaceScope> 열거형에는 <xref:System.Xml.XPath.XPathNamespaceScope>, <xref:System.Xml.XPath.XPathNamespaceScope> 또는 <xref:System.Xml.XPath.XPathNamespaceScope> 값이 있습니다.  
+### <a name="the-xpathnamespacescope-enumeration"></a><span data-ttu-id="e52d2-131">XPathNamespaceScope 열거형</span><span class="sxs-lookup"><span data-stu-id="e52d2-131">The XPathNamespaceScope Enumeration</span></span>  
+ <span data-ttu-id="e52d2-132">네임스페이스 노드를 탐색할 때 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 매개 변수를 사용하여 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 및 <xref:System.Xml.XPath.XPathNamespaceScope> 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-132">When navigating namespace nodes the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> methods can be called with an <xref:System.Xml.XPath.XPathNamespaceScope> parameter.</span></span> <span data-ttu-id="e52d2-133">이러한 메서드는 매개 변수 없이 호출되는 메서드와 다르게 동작합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-133">These methods behave differently than their counterparts called with no parameters.</span></span> <span data-ttu-id="e52d2-134"><xref:System.Xml.XPath.XPathNamespaceScope> 열거형에는 <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> 또는 <xref:System.Xml.XPath.XPathNamespaceScope.Local> 값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-134">The <xref:System.Xml.XPath.XPathNamespaceScope> enumeration has values of <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>, or <xref:System.Xml.XPath.XPathNamespaceScope.Local>.</span></span>  
   
- 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드가 반환하는 네임스페이스를 보여 줍니다.  
+ <span data-ttu-id="e52d2-135">다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드가 반환하는 네임스페이스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-135">The following examples show what namespaces are returned by the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> methods at various scopes in an XML document.</span></span>  
   
-```  
+```xml  
 <root>  
     <element1 xmlns="http://www.contoso.com" xmlns:books="http://www.contoso.com/books">  
         <element2 />  
@@ -73,20 +71,20 @@ caps.handback.revision: 2
 </root>  
 ```  
   
- 네임스페이스 시퀀스\(<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 메서드를 호출하고 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드를 여러 번 호출한 후 <xref:System.Xml.XPath.XPathNavigator>가 배치되는 네임스페이스\)는 다음과 같습니다.  
+ <span data-ttu-id="e52d2-136">네임스페이스 시퀀스(<xref:System.Xml.XPath.XPathNavigator> 메서드를 호출하고 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 메서드를 여러 번 호출한 후 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>가 배치되는 네임스페이스)는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-136">The namespace sequence (the namespace the <xref:System.Xml.XPath.XPathNavigator> is positioned upon after calling the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> method followed by a series of calls to the <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> method) is as follows.</span></span>  
   
--   `element2`에 위치하는 경우: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` 및 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`  
+-   <span data-ttu-id="e52d2-137">`element2`에 위치하는 경우: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` 및 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`</span><span class="sxs-lookup"><span data-stu-id="e52d2-137">When positioned on `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, and `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.</span></span>  
   
--   `element1`에 위치하는 경우: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` 및 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`  
+-   <span data-ttu-id="e52d2-138">`element1`에 위치하는 경우: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` 및 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`</span><span class="sxs-lookup"><span data-stu-id="e52d2-138">When positioned on `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, and `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.</span></span>  
   
--   `root`에 위치하는 경우: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+-   <span data-ttu-id="e52d2-139">`root`에 위치하는 경우: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`</span><span class="sxs-lookup"><span data-stu-id="e52d2-139">When positioned on `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`</span></span>  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator> 클래스는 네임스페이스 노드를 문서 순서와 역순으로 반환합니다.  따라서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>는 기본적으로 현재 범위의 마지막 네임스페이스 노드로 이동합니다.  
+>  <span data-ttu-id="e52d2-140"><xref:System.Xml.XPath.XPathNavigator> 클래스는 네임스페이스 노드를 문서 순서와 역순으로 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-140">The <xref:System.Xml.XPath.XPathNavigator> class returns namespace nodes in reverse document order.</span></span> <span data-ttu-id="e52d2-141">따라서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>는 기본적으로 현재 범위의 마지막 네임스페이스 노드로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-141">Therefore, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> essentially moves to the last namespace node in the current scope.</span></span>  
   
- 다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNamespaceScope> 열거형을 지정한 경우 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드가 반환하는 네임스페이스를 보여 줍니다.  
+ <span data-ttu-id="e52d2-142">다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 열거형을 지정한 경우 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 및 <xref:System.Xml.XPath.XPathNamespaceScope> 메서드가 반환하는 네임스페이스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-142">The following examples show what namespaces are returned by the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> methods with the <xref:System.Xml.XPath.XPathNamespaceScope> enumeration specified at various scopes in an XML document.</span></span>  
   
-```  
+```xml  
 <root xmlns="http://www.contoso.com" xmlns:a="http://www.contoso.com/a" xmlns:b="http://www.contoso.com/b">  
     <child1 xmlns="" xmlns:a="urn:a">  
         <child2 xmlns:c="urn:c" />  
@@ -94,22 +92,22 @@ caps.handback.revision: 2
 </root>  
 ```  
   
- `child2`에 배치된 경우 네임스페이스 시퀀스\(<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 메서드를 호출하고 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드를 여러 번 호출한 후 <xref:System.Xml.XPath.XPathNavigator>가 배치되는 네임스페이스\)는 다음과 같습니다.  
+ <span data-ttu-id="e52d2-143">`child2`에 배치된 경우 네임스페이스 시퀀스(<xref:System.Xml.XPath.XPathNavigator> 메서드를 호출하고 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 메서드를 여러 번 호출한 후 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>가 배치되는 네임스페이스)는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-143">When positioned on `child2`, the namespace sequence (the namespace the <xref:System.Xml.XPath.XPathNavigator> is positioned upon after calling the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> method followed by a series of calls to the <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> method) is as follows.</span></span>  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"` 및 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`  
+-   <span data-ttu-id="e52d2-144"><xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"` 및 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`</span><span class="sxs-lookup"><span data-stu-id="e52d2-144"><xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"`, and `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.</span></span>  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"` 및 `xmlns="http://www.contoso.com"`  
+-   <span data-ttu-id="e52d2-145"><xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"` 및 `xmlns="http://www.contoso.com"`</span><span class="sxs-lookup"><span data-stu-id="e52d2-145"><xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, and `xmlns="http://www.contoso.com"`.</span></span>  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope>: `xmlns:c="urn:c"`.  
+-   <span data-ttu-id="e52d2-146"><xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`입니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-146"><xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.</span></span>  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator> 클래스는 네임스페이스 노드를 문서 순서와 역순으로 반환합니다.  따라서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>는 기본적으로 현재 범위의 마지막 네임스페이스 노드로 이동합니다.  
+>  <span data-ttu-id="e52d2-147"><xref:System.Xml.XPath.XPathNavigator> 클래스는 네임스페이스 노드를 문서 순서와 역순으로 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-147">The <xref:System.Xml.XPath.XPathNavigator> class returns namespace nodes in reverse document order.</span></span> <span data-ttu-id="e52d2-148">따라서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>는 기본적으로 현재 범위의 마지막 네임스페이스 노드로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-148">Therefore, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> essentially moves to the last namespace node in the current scope.</span></span>  
   
-## 참고 항목  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [XPathNavigator를 사용하여 노드 집합 탐색](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)   
- [XPathNavigator를 사용하여 XML 데이터 추출](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)   
- [XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a><span data-ttu-id="e52d2-149">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e52d2-149">See Also</span></span>  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [<span data-ttu-id="e52d2-150">XPath 데이터 모델을 사용하여 XML 데이터 처리</span><span class="sxs-lookup"><span data-stu-id="e52d2-150">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="e52d2-151">XPathNavigator를 사용 하 여 노드 집합 탐색</span><span class="sxs-lookup"><span data-stu-id="e52d2-151">Node Set Navigation Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [<span data-ttu-id="e52d2-152">XPathNavigator를 사용 하 여 XML 데이터를 추출 합니다.</span><span class="sxs-lookup"><span data-stu-id="e52d2-152">Extract XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="e52d2-153">강력한 형식의 XPathNavigator를 사용 하 여 XML 데이터 액세스</span><span class="sxs-lookup"><span data-stu-id="e52d2-153">Accessing Strongly Typed XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

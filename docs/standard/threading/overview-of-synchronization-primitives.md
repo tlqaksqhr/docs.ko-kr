@@ -1,183 +1,186 @@
 ---
-title: "Overview of Synchronization Primitives | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "synchronization, threads"
-  - "threading [.NET Framework],synchronizing threads"
-  - "managed threading"
+title: "동기화 기본 형식 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization, threads
+- threading [.NET Framework],synchronizing threads
+- managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Overview of Synchronization Primitives
-.NET Framework에서는 스레드 조작을 제어하고 경합 상태를 방지할 수 있는 동기화 기본 형식 범위를 제공합니다.  이들 기본 형식은 크게 잠금, 신호 및 연관 작업의 세 범주로 구분됩니다.  
+# <a name="overview-of-synchronization-primitives"></a><span data-ttu-id="e2118-102">동기화 기본 형식 개요</span><span class="sxs-lookup"><span data-stu-id="e2118-102">Overview of Synchronization Primitives</span></span>
+<span data-ttu-id="e2118-103"><a name="top"></a> .NET Framework에서는 스레드 조작을 제어하고 경합 상태를 방지할 수 있는 동기화 기본 형식 범위를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-103"><a name="top"></a> The .NET Framework provides a range of synchronization primitives for controlling the interactions of threads and avoiding race conditions.</span></span> <span data-ttu-id="e2118-104">이들 기본 형식은 크게 잠금, 신호 및 연관 작업의 세 범주로 구분됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-104">These can be roughly divided into three categories: locking, signaling, and interlocked operations.</span></span>  
   
- 범주는 깔끔하고 분명하게 정의되지 않습니다. 일부 동기화 메커니즘에는 다음과 같은 여러 범주 특성이 있습니다. 한 번에 하나의 스레드를 해제하는 이벤트는 기능상 잠금과 같고, 잠금 해제는 신호로 간주할 수 있고, 연관 작업은 잠금을 구성하는 데 사용할 수 있습니다.  그러나 범주도 유용합니다.  
+ <span data-ttu-id="e2118-105">범주는 깔끔하고 분명하게 정의되지 않습니다. 일부 동기화 메커니즘에는 다음과 같은 여러 범주 특성이 있습니다. 한 번에 하나의 스레드를 해제하는 이벤트는 기능상 잠금과 같고, 잠금 해제는 신호로 간주할 수 있고, 연관 작업은 잠금을 구성하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-105">The categories are not tidy nor clearly defined: Some synchronization mechanisms have characteristics of multiple categories; events that release a single thread at a time are functionally like locks; the release of any lock can be thought of as a signal; and interlocked operations can be used to construct locks.</span></span> <span data-ttu-id="e2118-106">그러나 범주도 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-106">However, the categories are still useful.</span></span>  
   
- 스레드 동기화는 협력 작업임을 고려해야 합니다.  하나라도 스레드가 동기화 메커니즘을 건너뛰고 보호된 리소스에 직접 액세스하면 해당 동기화 메커니즘이 적용되지 않습니다.  
+ <span data-ttu-id="e2118-107">스레드 동기화는 협력 작업임을 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-107">It is important to remember that thread synchronization is cooperative.</span></span> <span data-ttu-id="e2118-108">하나라도 스레드가 동기화 메커니즘을 건너뛰고 보호된 리소스에 직접 액세스하면 해당 동기화 메커니즘이 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-108">If even one thread bypasses a synchronization mechanism and accesses the protected resource directly, that synchronization mechanism cannot be effective.</span></span>  
   
- 이 개요는 다음과 같은 단원으로 구성됩니다.  
+ <span data-ttu-id="e2118-109">이 개요는 다음과 같은 단원으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-109">This overview contains the following sections:</span></span>  
   
--   [잠금](#locking)  
+-   [<span data-ttu-id="e2118-110">Locking</span><span class="sxs-lookup"><span data-stu-id="e2118-110">Locking</span></span>](#locking)  
   
--   [Signaling](#signaling)  
+-   [<span data-ttu-id="e2118-111">Signaling</span><span class="sxs-lookup"><span data-stu-id="e2118-111">Signaling</span></span>](#signaling)  
   
--   [간단한 동기화 형식](#lightweight_synchronization_types)  
+-   [<span data-ttu-id="e2118-112">간단한 동기화 형식</span><span class="sxs-lookup"><span data-stu-id="e2118-112">Lightweight Synchronization Types</span></span>](#lightweight_synchronization_types)  
   
--   [SpinWait](#spinwait)  
+-   [<span data-ttu-id="e2118-113">SpinWait</span><span class="sxs-lookup"><span data-stu-id="e2118-113">SpinWait</span></span>](#spinwait)  
   
--   [연동 작업](#interlocked_operations)  
+-   [<span data-ttu-id="e2118-114">연동 작업</span><span class="sxs-lookup"><span data-stu-id="e2118-114">Interlocked Operations</span></span>](#interlocked_operations)  
   
 <a name="locking"></a>   
-## 잠금  
- 잠금을 통해 리소스를 한 번에 하나의 스레드 또는 지정된 수의 스레드로 제어할 수 있습니다.  잠금이 사용 중일 때 단독 잠금을 요청하는 스레드는 잠금을 사용할 수 있을 때까지 차단됩니다.  
+## <a name="locking"></a><span data-ttu-id="e2118-115">잠금</span><span class="sxs-lookup"><span data-stu-id="e2118-115">Locking</span></span>  
+ <span data-ttu-id="e2118-116">잠금을 통해 리소스를 한 번에 하나의 스레드 또는 지정된 수의 스레드로 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-116">Locks give control of a resource to one thread at a time, or to a specified number of threads.</span></span> <span data-ttu-id="e2118-117">잠금이 사용 중일 때 단독 잠금을 요청하는 스레드는 잠금을 사용할 수 있을 때까지 차단됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-117">A thread that requests an exclusive lock when the lock is in use blocks until the lock becomes available.</span></span>  
   
-### 단독 잠금  
- 가장 단순한 잠금 형식은 코드 블록에 대한 액세스를 제어하는 C\# `lock` 문\(Visual Basic의 `SyncLock`\)입니다.  해당 블록을 임계 영역이라고 합니다.  `lock` 문은 <xref:System.Threading.Monitor> 클래스의 <xref:System.Threading.Monitor.Enter%2A> 및 <xref:System.Threading.Monitor.Exit%2A> 메서드를 사용하여 구현하고 `try…catch…finally`를 사용하여 잠금이 해제되었는지를 확인합니다.  
+### <a name="exclusive-locks"></a><span data-ttu-id="e2118-118">단독 잠금</span><span class="sxs-lookup"><span data-stu-id="e2118-118">Exclusive Locks</span></span>  
+ <span data-ttu-id="e2118-119">가장 단순한 잠금 형식은 코드 블록에 대한 액세스를 제어하는 C#의 `lock` 문과, Visual Basic의 `SyncLock` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-119">The simplest form of locking is the `lock` statement in C# and the `SyncLock` statement in Visual Basic, which controls access to a block of code.</span></span> <span data-ttu-id="e2118-120">해당 블록을 임계 영역이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-120">Such a block is frequently referred to as a critical section.</span></span> <span data-ttu-id="e2118-121">`lock` 문을 사용 하 여 구현 되는 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 메서드, 변수를 사용 `try…catch…finally` 잠금이 해제 되도록 하는 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-121">The `lock` statement is implemented by using the <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> and <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> methods, and it uses `try…catch…finally` block to ensure that the lock is released.</span></span>  
   
- 일반적으로 `lock` 문을 통해 작은 코드 블록을 보호하여 메서드가 두 개 이상 스패닝되지 않게 하는 것이 <xref:System.Threading.Monitor> 클래스를 사용하는 가장 좋은 방법입니다.  강력하지만 <xref:System.Threading.Monitor> 클래스는 잠금 및 교착 상태를 분리할 수 있습니다.  
+ <span data-ttu-id="e2118-122">일반적으로 사용 하 여는 `lock` 또는 `SyncLock` 문을 작은 블록의 코드, 이상 스패닝 되지 않게 단일 메서드를 보호 하는 가장 좋은 방법은 사용 하 여 <xref:System.Threading.Monitor> 클래스.</span><span class="sxs-lookup"><span data-stu-id="e2118-122">In general, using the `lock` or `SyncLock` statement to protect small blocks of code, never spanning more than a single method, is the best way to use the <xref:System.Threading.Monitor> class.</span></span> <span data-ttu-id="e2118-123">강력하지만 <xref:System.Threading.Monitor> 클래스는 잠금 및 교착 상태를 분리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-123">Although powerful, the <xref:System.Threading.Monitor> class is prone to orphan locks and deadlocks.</span></span>  
   
-#### Monitor 클래스  
- <xref:System.Threading.Monitor> 클래스는 `lock` 문과 함께 사용할 수 있는 추가적인 기능을 제공합니다.  
+#### <a name="monitor-class"></a><span data-ttu-id="e2118-124">Monitor 클래스</span><span class="sxs-lookup"><span data-stu-id="e2118-124">Monitor Class</span></span>  
+ <span data-ttu-id="e2118-125"><xref:System.Threading.Monitor> 클래스는 `lock` 문과 함께 사용할 수 있는 추가적인 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-125">The <xref:System.Threading.Monitor> class provides additional functionality, which can be used in conjunction with the `lock` statement:</span></span>  
   
--   <xref:System.Threading.Monitor.TryEnter%2A> 메서드는 차단된 스레드가 지정된 간격 후에 리소스가 포기할 때까지 대기하도록 허용합니다.  잠재적인 교차 상태를 감지하고 방지하는 데 사용할 수 있는 성공 또는 실패를 나타내는 부울 값을 반환합니다.  
+-   <span data-ttu-id="e2118-126"><xref:System.Threading.Monitor.TryEnter%2A> 메서드는 차단된 스레드가 지정된 간격 후에 리소스가 포기할 때까지 대기하도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-126">The <xref:System.Threading.Monitor.TryEnter%2A> method allows a thread that is blocked waiting for the resource to give up after a specified interval.</span></span> <span data-ttu-id="e2118-127">잠재적인 교차 상태를 감지하고 방지하는 데 사용할 수 있는 성공 또는 실패를 나타내는 부울 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-127">It returns a Boolean value indicating success or failure, which can be used to detect and avoid potential deadlocks.</span></span>  
   
--   <xref:System.Threading.Monitor.Wait%2A> 메서드는 임계 영역에서 스레드가 호출합니다.  이 메서드는 리소스 제어를 포기하고 리소스를 다시 사용할 수 있을 때까지 차단됩니다.  
+-   <span data-ttu-id="e2118-128"><xref:System.Threading.Monitor.Wait%2A> 메서드는 임계 영역에서 스레드가 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-128">The <xref:System.Threading.Monitor.Wait%2A> method is called by a thread in a critical section.</span></span> <span data-ttu-id="e2118-129">이 메서드는 리소스 제어를 포기하고 리소스를 다시 사용할 수 있을 때까지 차단됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-129">It gives up control of the resource and blocks until the resource is available again.</span></span>  
   
--   <xref:System.Threading.Monitor.Pulse%2A> 및 <xref:System.Threading.Monitor.PulseAll%2A> 메서드는 잠금을 해제하거나 <xref:System.Threading.Monitor.Wait%2A>를 호출하여 스레드 하나 이상을 준비 큐에 넣으려고 하는 스레드를 허용하므로 잠금을 획득할 수 있습니다.  
+-   <span data-ttu-id="e2118-130"><xref:System.Threading.Monitor.Pulse%2A> 및 <xref:System.Threading.Monitor.PulseAll%2A> 메서드는 잠금을 해제하거나 <xref:System.Threading.Monitor.Wait%2A>를 호출하여 스레드 하나 이상을 준비 큐에 넣으려고 하는 스레드를 허용하므로 잠금을 획득할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-130">The <xref:System.Threading.Monitor.Pulse%2A> and <xref:System.Threading.Monitor.PulseAll%2A> methods allow a thread that is about to release the lock or to call <xref:System.Threading.Monitor.Wait%2A> to put one or more threads into the ready queue, so that they can acquire the lock.</span></span>  
   
- <xref:System.Threading.Monitor.Wait%2A> 메서드 오버로드에 대한 시간 제한은 스레드가 준비 큐로 이스케이프될 때까지 기다리도록 허용합니다.  
+ <span data-ttu-id="e2118-131"><xref:System.Threading.Monitor.Wait%2A> 메서드 오버로드에 대한 시간 제한은 스레드가 준비 큐로 이스케이프될 때까지 기다리도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-131">Timeouts on <xref:System.Threading.Monitor.Wait%2A> method overloads allow waiting threads to escape to the ready queue.</span></span>  
   
- 잠금에 사용되는 개체가 <xref:System.MarshalByRefObject>에서 파생되면 <xref:System.Threading.Monitor> 클래스는 여러 응용 프로그램 도메인에서 잠금을 제공할 수 있습니다.  
+ <span data-ttu-id="e2118-132">잠금에 사용되는 개체가 <xref:System.MarshalByRefObject>에서 파생되면 <xref:System.Threading.Monitor> 클래스는 여러 응용 프로그램 도메인에서 잠금을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-132">The <xref:System.Threading.Monitor> class can provide locking in multiple application domains if the object used for the lock derives from <xref:System.MarshalByRefObject>.</span></span>  
   
- <xref:System.Threading.Monitor>에는 스레드 선호도가 있습니다.  즉, 모니터를 시작한 스레드는 <xref:System.Threading.Monitor.Exit%2A> 또는 <xref:System.Threading.Monitor.Wait%2A>를 호출하여 종료해야 합니다.  
+ <span data-ttu-id="e2118-133"><xref:System.Threading.Monitor>에는 스레드 선호도가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-133"><xref:System.Threading.Monitor> has thread affinity.</span></span> <span data-ttu-id="e2118-134">즉, 모니터를 시작한 스레드는 <xref:System.Threading.Monitor.Exit%2A> 또는 <xref:System.Threading.Monitor.Wait%2A>를 호출하여 종료해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-134">That is, a thread that entered the monitor must exit by calling <xref:System.Threading.Monitor.Exit%2A> or <xref:System.Threading.Monitor.Wait%2A>.</span></span>  
   
- <xref:System.Threading.Monitor> 클래스는 인스턴스화할 수 없습니다.  해당 메서드는 정적\(Visual Basic의 `Shared`\)이고 인스턴스화할 수 있는 잠금 개체에서 작동합니다.  
+ <span data-ttu-id="e2118-135"><xref:System.Threading.Monitor> 클래스는 인스턴스화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-135">The <xref:System.Threading.Monitor> class is not instantiable.</span></span> <span data-ttu-id="e2118-136">해당 메서드는 정적(Visual Basic의 `Shared`)이고 인스턴스화할 수 있는 잠금 개체에서 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-136">Its methods are static (`Shared` in Visual Basic), and act on an instantiable lock object.</span></span>  
   
- 개념적인 개요를 보려면 [Monitor](../Topic/Monitors.md)를 참조하세요.  
+ <span data-ttu-id="e2118-137">개념적인 개요를 보려면 [모니터](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2118-137">For a conceptual overview, see [Monitors](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).</span></span>  
   
-#### Mutex 클래스  
- 스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드의 오버로드를 호출하여 <xref:System.Threading.Mutex>를 요청합니다.  스레드가 대기를 포기할 수 있도록 시간 제한이 있는 오버로드가 제공됩니다.  <xref:System.Threading.Monitor> 클래스와 달리 뮤텍스는 로컬 또는 전역일 수 있습니다.  명명된 뮤텍스라고도 하는 전역 뮤텍스는 운영 체제 전체에 표시되고 여러 응용 프로그램 도메인 또는 프로세스에서 스레드를 동기화하는 데 사용될 수 있습니다.  로컬 뮤텍스는 <xref:System.MarshalByRefObject>에서 파생되고 응용 프로그램 도메인 경계에 걸쳐 사용할 수 있습니다.  
+#### <a name="mutex-class"></a><span data-ttu-id="e2118-138">Mutex 클래스</span><span class="sxs-lookup"><span data-stu-id="e2118-138">Mutex Class</span></span>  
+ <span data-ttu-id="e2118-139">스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드의 오버로드를 호출하여 <xref:System.Threading.Mutex>를 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-139">Threads request a <xref:System.Threading.Mutex> by calling an overload of its <xref:System.Threading.WaitHandle.WaitOne%2A> method.</span></span> <span data-ttu-id="e2118-140">스레드가 대기를 포기할 수 있도록 시간 제한이 있는 오버로드가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-140">Overloads with timeouts are provided, to allow threads to give up the wait.</span></span> <span data-ttu-id="e2118-141"><xref:System.Threading.Monitor> 클래스와 달리 뮤텍스는 로컬 또는 전역일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-141">Unlike the <xref:System.Threading.Monitor> class, a mutex can be either local or global.</span></span> <span data-ttu-id="e2118-142">명명된 뮤텍스라고도 하는 전역 뮤텍스는 운영 체제 전체에 표시되고 여러 응용 프로그램 도메인 또는 프로세스에서 스레드를 동기화하는 데 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-142">Global mutexes, also called named mutexes, are visible throughout the operating system, and can be used to synchronize threads in multiple application domains or processes.</span></span> <span data-ttu-id="e2118-143">로컬 뮤텍스는 <xref:System.MarshalByRefObject>에서 파생되고 응용 프로그램 도메인 경계에 걸쳐 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-143">Local mutexes derive from <xref:System.MarshalByRefObject>, and can be used across application domain boundaries.</span></span>  
   
- 또한 <xref:System.Threading.Mutex>는 <xref:System.Threading.WaitHandle>에서 파생됩니다. 즉, <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> 및 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 메서드와 같은 <xref:System.Threading.WaitHandle>에서 제공된 신호 메커니즘과 함께 사용할 수 있습니다.  
+ <span data-ttu-id="e2118-144">또한 <xref:System.Threading.Mutex>는 <xref:System.Threading.WaitHandle>에서 파생됩니다. 즉, <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> 및 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 메서드와 같은 <xref:System.Threading.WaitHandle>에서 제공된 신호 메커니즘과 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-144">In addition, <xref:System.Threading.Mutex> derives from <xref:System.Threading.WaitHandle>, which means that it can be used with the signaling mechanisms provided by <xref:System.Threading.WaitHandle>, such as the <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, and <xref:System.Threading.WaitHandle.SignalAndWait%2A> methods.</span></span>  
   
- <xref:System.Threading.Monitor>처럼 <xref:System.Threading.Mutex>에는 스레드 선호도가 있습니다.  <xref:System.Threading.Monitor>와 달리 <xref:System.Threading.Mutex>는 인스턴스화할 수 있는 개체입니다.  
+ <span data-ttu-id="e2118-145"><xref:System.Threading.Monitor>처럼 <xref:System.Threading.Mutex>에는 스레드 선호도가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-145">Like <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> has thread affinity.</span></span> <span data-ttu-id="e2118-146"><xref:System.Threading.Monitor>와 달리 <xref:System.Threading.Mutex>는 인스턴스화할 수 있는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-146">Unlike <xref:System.Threading.Monitor>, a <xref:System.Threading.Mutex> is an instantiable object.</span></span>  
   
- 개념적인 개요를 보려면 [Mutexes](../../../docs/standard/threading/mutexes.md)를 참조하세요.  
+ <span data-ttu-id="e2118-147">개념적인 개요를 보려면 [뮤텍스](../../../docs/standard/threading/mutexes.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2118-147">For a conceptual overview, see [Mutexes](../../../docs/standard/threading/mutexes.md).</span></span>  
   
-#### SpinLock 클래스  
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 <xref:System.Threading.Monitor>에 필요한 오버헤드의 성능이 저하될 때 <xref:System.Threading.SpinLock> 클래스를 사용할 수 있습니다.  <xref:System.Threading.SpinLock>는 잠긴 임계 영역을 발견하면 잠금을 사용할 수 있을 때까지 루프에서 스핀합니다.  잠시 잠금이 유지되면 스핀을 통해 차단보다 향상된 성능을 제공할 수 있습니다.  그러나 잠금이 몇 십 회 주기 이상 유지되면 <xref:System.Threading.SpinLock>은 <xref:System.Threading.Monitor>처럼 동작하지만 더 많은 CPU 주기를 사용하므로 스레드 또는 프로세스의 성능이 저하될 수 있습니다.  
+#### <a name="spinlock-class"></a><span data-ttu-id="e2118-148">SpinLock 클래스</span><span class="sxs-lookup"><span data-stu-id="e2118-148">SpinLock Class</span></span>  
+ <span data-ttu-id="e2118-149">부터는 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]를 사용할 수 있습니다는 <xref:System.Threading.SpinLock> 오버 헤드에 따라 필요 하면 클래스 <xref:System.Threading.Monitor> 성능이 저하 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-149">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use the <xref:System.Threading.SpinLock> class when the overhead required by <xref:System.Threading.Monitor> degrades performance.</span></span> <span data-ttu-id="e2118-150"><xref:System.Threading.SpinLock>는 잠긴 임계 영역을 발견하면 잠금을 사용할 수 있을 때까지 루프에서 스핀합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-150">When <xref:System.Threading.SpinLock> encounters a locked critical section, it simply spins in a loop until the lock becomes available.</span></span> <span data-ttu-id="e2118-151">잠시 잠금이 유지되면 스핀을 통해 차단보다 향상된 성능을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-151">If the lock is held for a very short time, spinning can provide better performance than blocking.</span></span> <span data-ttu-id="e2118-152">그러나 잠금이 몇 십 주기를 유지 하는 경우, <xref:System.Threading.SpinLock> 은으로 <xref:System.Threading.Monitor>, 하지만 더 많은 CPU 주기를 사용 하므로 다른 스레드 또는 프로세스의 성능이 저하 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-152">However, if the lock is held for more than a few tens of cycles, <xref:System.Threading.SpinLock> performs just as well as <xref:System.Threading.Monitor>, but will use more CPU cycles and thus can degrade the performance of other threads or processes.</span></span>  
   
-### 기타 잠금  
- 잠금은 단독 잠금일 필요가 없습니다.  리소스에 동시에 액세스할 수 있는 스레드 수를 제한하는 것이 유용할 수 있습니다.  세마포와 판독기 및 작성기 잠금은 이런 풀링된 리소스 액세스를 제어하도록 디자인되었습니다.  
+### <a name="other-locks"></a><span data-ttu-id="e2118-153">기타 잠금</span><span class="sxs-lookup"><span data-stu-id="e2118-153">Other Locks</span></span>  
+ <span data-ttu-id="e2118-154">잠금은 단독 잠금일 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-154">Locks need not be exclusive.</span></span> <span data-ttu-id="e2118-155">리소스에 동시에 액세스할 수 있는 스레드 수를 제한하는 것이 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-155">It is often useful to allow a limited number of threads concurrent access to a resource.</span></span> <span data-ttu-id="e2118-156">세마포와 판독기 및 작성기 잠금은 이런 풀링된 리소스 액세스를 제어하도록 디자인되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-156">Semaphores and reader-writer locks are designed to control this kind of pooled resource access.</span></span>  
   
-#### ReaderWriterLock 클래스  
- <xref:System.Threading.ReaderWriterLockSlim> 클래스는 데이터를 변경하는 스레드에 리소스에 대한 단독 액세스 권한이 있어야 하는 경우를 처리합니다.  작성기가 활성화되지 않으면 판독기가 제한 없이 리소스에 액세스할 수 있습니다\(예: <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> 메서드 호출을 통해\).  스레드가 단독 액세스를 요청하면\(예: <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> 메서드 호출을 통해\) 모든 기존 판독기가 잠금을 종료하고 작성기가 잠금을 시작 및 종료할 때까지 이후 작성기 요청이 차단됩니다.  
+#### <a name="readerwriterlock-class"></a><span data-ttu-id="e2118-157">ReaderWriterLock 클래스</span><span class="sxs-lookup"><span data-stu-id="e2118-157">ReaderWriterLock Class</span></span>  
+ <span data-ttu-id="e2118-158"><xref:System.Threading.ReaderWriterLockSlim> 클래스는 데이터를 변경하는 스레드에 리소스에 대한 단독 액세스 권한이 있어야 하는 경우를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-158">The <xref:System.Threading.ReaderWriterLockSlim> class addresses the case where a thread that changes data, the writer, must have exclusive access to a resource.</span></span> <span data-ttu-id="e2118-159">작성기가 활성화되지 않으면 판독기가 제한 없이 리소스에 액세스할 수 있습니다(예: <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> 메서드 호출을 통해).</span><span class="sxs-lookup"><span data-stu-id="e2118-159">When the writer is not active, any number of readers can access the resource (for example, by calling the <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> method).</span></span> <span data-ttu-id="e2118-160">스레드가 단독 액세스를 요청하면(예: <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> 메서드 호출을 통해) 모든 기존 판독기가 잠금을 종료하고 작성기가 잠금을 시작 및 종료할 때까지 이후 작성기 요청이 차단됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-160">When a thread requests exclusive access, (for example, by calling the <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> method), subsequent reader requests block until all existing readers have exited the lock, and the writer has entered and exited the lock.</span></span>  
   
- <xref:System.Threading.ReaderWriterLockSlim>에는 스레드 선호도가 있습니다.  
+ <span data-ttu-id="e2118-161"><xref:System.Threading.ReaderWriterLockSlim>에는 스레드 선호도가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-161"><xref:System.Threading.ReaderWriterLockSlim> has thread affinity.</span></span>  
   
- 개념적인 개요를 보려면 [Reader\-Writer Locks](../../../docs/standard/threading/reader-writer-locks.md)을 참조하세요.  
+ <span data-ttu-id="e2118-162">개념적인 개요를 보려면 [판독기 및 작성기 잠금](../../../docs/standard/threading/reader-writer-locks.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2118-162">For a conceptual overview, see [Reader-Writer Locks](../../../docs/standard/threading/reader-writer-locks.md).</span></span>  
   
-#### Semaphore 클래스  
- <xref:System.Threading.Semaphore> 클래스는 지정된 수만큼 스레드가 리소스에 액세스하도록 허용합니다.  리소스를 요청하는 추가적인 스레드는 스레드가 세마포를 해제할 때까지 차단됩니다.  
+#### <a name="semaphore-class"></a><span data-ttu-id="e2118-163">Semaphore 클래스</span><span class="sxs-lookup"><span data-stu-id="e2118-163">Semaphore Class</span></span>  
+ <span data-ttu-id="e2118-164"><xref:System.Threading.Semaphore> 클래스는 지정된 수만큼 스레드가 리소스에 액세스하도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-164">The <xref:System.Threading.Semaphore> class allows a specified number of threads to access a resource.</span></span> <span data-ttu-id="e2118-165">리소스를 요청하는 추가적인 스레드는 스레드가 세마포를 해제할 때까지 차단됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-165">Additional threads requesting the resource block until a thread releases the semaphore.</span></span>  
   
- <xref:System.Threading.Mutex> 클래스처럼 <xref:System.Threading.Semaphore>는 <xref:System.Threading.WaitHandle>에서 파생됩니다.  <xref:System.Threading.Mutex>처럼 <xref:System.Threading.Semaphore>도 로컬 또는 전역일 수 있습니다.  응용 프로그램 도메인 경계에 걸쳐 사용할 수 있습니다.  
+ <span data-ttu-id="e2118-166"><xref:System.Threading.Mutex> 클래스처럼 <xref:System.Threading.Semaphore>는 <xref:System.Threading.WaitHandle>에서 파생됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-166">Like the <xref:System.Threading.Mutex> class, <xref:System.Threading.Semaphore> derives from <xref:System.Threading.WaitHandle>.</span></span> <span data-ttu-id="e2118-167"><xref:System.Threading.Mutex>처럼 <xref:System.Threading.Semaphore>도 로컬 또는 전역일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-167">Also like <xref:System.Threading.Mutex>, a <xref:System.Threading.Semaphore> can be either local or global.</span></span> <span data-ttu-id="e2118-168">응용 프로그램 도메인 경계에 걸쳐 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-168">It can be used across application domain boundaries.</span></span>  
   
- <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> 및 <xref:System.Threading.ReaderWriterLock>과 달리 <xref:System.Threading.Semaphore>에는 스레드 선호도가 없습니다.  즉, 한 스레드가 세마포를 획득하고 다른 스레드가 세마포를 해제하는 시나리오에서 사용할 수 있습니다.  
+ <span data-ttu-id="e2118-169"><xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> 및 <xref:System.Threading.ReaderWriterLock>과 달리 <xref:System.Threading.Semaphore>에는 스레드 선호도가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-169">Unlike <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex>, and <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Semaphore> does not have thread affinity.</span></span> <span data-ttu-id="e2118-170">즉, 한 스레드가 세마포를 획득하고 다른 스레드가 세마포를 해제하는 시나리오에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-170">This means it can be used in scenarios where one thread acquires the semaphore and another releases it.</span></span>  
   
- 개념적인 개요를 보려면 [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)를 참조하세요.  
+ <span data-ttu-id="e2118-171">개념적인 개요를 보려면 [세마포 및 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2118-171">For a conceptual overview, see [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).</span></span>  
   
- <xref:System.Threading.SemaphoreSlim?displayProperty=fullName>은 단일 프로세스 경계 내에서 동기화하기 위한 간단한 세마포입니다.  
+ <span data-ttu-id="e2118-172"><xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>은 단일 프로세스 경계 내에서 동기화하기 위한 간단한 세마포입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-172"><xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> is a lightweight semaphore for synchronization within a single process boundary.</span></span>  
   
- [맨 위로 이동](#top)  
+ [<span data-ttu-id="e2118-173">맨 위로 이동</span><span class="sxs-lookup"><span data-stu-id="e2118-173">Back to top</span></span>](#top)  
   
 <a name="signaling"></a>   
-## Signaling  
- 다른 스레드의 신호를 기다리는 가장 간단한 방법은 다른 스레드가 완료될 때까지 차단되는 <xref:System.Threading.Thread.Join%2A> 메서드를 호출하는 것입니다.  <xref:System.Threading.Thread.Join%2A>에는 차단된 스레드가 지정된 간격이 지난 후 대기에서 해제되도록 허용하는 두 가지 오버로드가 있습니다.  
+## <a name="signaling"></a><span data-ttu-id="e2118-174">Signaling</span><span class="sxs-lookup"><span data-stu-id="e2118-174">Signaling</span></span>  
+ <span data-ttu-id="e2118-175">다른 스레드의 신호를 기다리는 가장 간단한 방법은 다른 스레드가 완료될 때까지 차단되는 <xref:System.Threading.Thread.Join%2A> 메서드를 호출하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-175">The simplest way to wait for a signal from another thread is to call the <xref:System.Threading.Thread.Join%2A> method, which blocks until the other thread completes.</span></span> <span data-ttu-id="e2118-176"><xref:System.Threading.Thread.Join%2A>에는 차단된 스레드가 지정된 간격이 지난 후 대기에서 해제되도록 허용하는 두 가지 오버로드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-176"><xref:System.Threading.Thread.Join%2A> has two overloads that allow the blocked thread to break out of the wait after a specified interval has elapsed.</span></span>  
   
- 대기 핸들은 훨씬 다양한 대기 및 신호 기능 집합을 제공합니다.  
+ <span data-ttu-id="e2118-177">대기 핸들은 훨씬 다양한 대기 및 신호 기능 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-177">Wait handles provide a much richer set of waiting and signaling capabilities.</span></span>  
   
-### 대기 핸들  
- 대기 핸들은 <xref:System.Threading.WaitHandle> 클래스에서 파생되고 이 클래스는 <xref:System.MarshalByRefObject>에서 파생됩니다.  따라서 대기 핸들을 사용하여 응용 프로그램 도메인 경계에 걸쳐 스레드 활동을 동기화할 수 있습니다.  
+### <a name="wait-handles"></a><span data-ttu-id="e2118-178">대기 핸들</span><span class="sxs-lookup"><span data-stu-id="e2118-178">Wait Handles</span></span>  
+ <span data-ttu-id="e2118-179">대기 핸들은 <xref:System.Threading.WaitHandle> 클래스에서 파생되고 이 클래스는 <xref:System.MarshalByRefObject>에서 파생됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-179">Wait handles derive from the <xref:System.Threading.WaitHandle> class, which in turn derives from <xref:System.MarshalByRefObject>.</span></span> <span data-ttu-id="e2118-180">따라서 대기 핸들을 사용하여 응용 프로그램 도메인 경계에 걸쳐 스레드 활동을 동기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-180">Thus, wait handles can be used to synchronize the activities of threads across application domain boundaries.</span></span>  
   
- 스레드는 인스턴스 메서드 <xref:System.Threading.WaitHandle.WaitOne%2A>를 호출하거나 정적 메서드 <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> 또는 <xref:System.Threading.WaitHandle.SignalAndWait%2A>의 하나를 호출하는 방식으로 대기 핸들에서 차단됩니다.  스레드가 해제되는 방식은 호출되는 메서드 및 대기 핸들 유형에 따라 달라집니다.  
+ <span data-ttu-id="e2118-181">스레드는 인스턴스 메서드 <xref:System.Threading.WaitHandle.WaitOne%2A>를 호출하거나 정적 메서드 <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> 또는 <xref:System.Threading.WaitHandle.SignalAndWait%2A>의 하나를 호출하는 방식으로 대기 핸들에서 차단됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-181">Threads block on wait handles by calling the instance method <xref:System.Threading.WaitHandle.WaitOne%2A> or one of the static methods <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, or <xref:System.Threading.WaitHandle.SignalAndWait%2A>.</span></span> <span data-ttu-id="e2118-182">스레드가 해제되는 방식은 호출되는 메서드 및 대기 핸들 유형에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-182">How they are released depends on which method was called, and on the kind of wait handles.</span></span>  
   
- 개념적인 개요를 보려면 [Wait Handles](../Topic/Wait%20Handles.md)을 참조하세요.  
+ <span data-ttu-id="e2118-183">개념적인 개요를 보려면 [WaitHandle](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2118-183">For a conceptual overview, see [Wait Handles](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).</span></span>  
   
-#### 이벤트 대기 핸들  
- 이벤트 대기 핸들에는 <xref:System.Threading.EventWaitHandle> 클래스와 파생 클래스 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>가 포함됩니다.  <xref:System.Threading.EventWaitHandle.Set%2A> 메서드를 호출하거나 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 메서드를 사용하여 보낸 신호를 이벤트 대기 핸들이 받으면 이벤트 대기 핸들에서 스레드가 해제됩니다.  
+#### <a name="event-wait-handles"></a><span data-ttu-id="e2118-184">이벤트 대기 핸들</span><span class="sxs-lookup"><span data-stu-id="e2118-184">Event Wait Handles</span></span>  
+ <span data-ttu-id="e2118-185">이벤트 대기 핸들에는 <xref:System.Threading.EventWaitHandle> 클래스와 파생 클래스 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-185">Event wait handles include the <xref:System.Threading.EventWaitHandle> class and its derived classes, <xref:System.Threading.AutoResetEvent> and <xref:System.Threading.ManualResetEvent>.</span></span> <span data-ttu-id="e2118-186"><xref:System.Threading.EventWaitHandle.Set%2A> 메서드를 호출하거나 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 메서드를 사용하여 보낸 신호를 이벤트 대기 핸들이 받으면 이벤트 대기 핸들에서 스레드가 해제됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-186">Threads are released from an event wait handle when the event wait handle is signaled by calling its <xref:System.Threading.EventWaitHandle.Set%2A> method or by using the <xref:System.Threading.WaitHandle.SignalAndWait%2A> method.</span></span>  
   
- 이벤트 대기 핸들은 신호를 받을 때마다 스레드를 하나만 허용하는 턴스타일처럼 자동으로 다시 설정되거나, 신호를 받을 때까지 닫혀 있다가 누군가 닫을 때까지 열려 있는 게이트처럼 수동으로 다시 설정되어야 합니다.  이름이 나타내듯이 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>는 각각 전자 및 후자를 나타냅니다.  <xref:System.Threading.ManualResetEventSlim?displayProperty=fullName>은 단일 프로세스 경계 내에서 동기화하기 위한 간단한 이벤트입니다.  
+ <span data-ttu-id="e2118-187">이벤트 대기 핸들은 신호를 받을 때마다 스레드를 하나만 허용하는 턴스타일처럼 자동으로 다시 설정되거나, 신호를 받을 때까지 닫혀 있다가 누군가 닫을 때까지 열려 있는 게이트처럼 수동으로 다시 설정되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-187">Event wait handles either reset themselves automatically, like a turnstile that allows only one thread through each time it is signaled, or must be reset manually, like a gate that is closed until signaled and then open until someone closes it.</span></span> <span data-ttu-id="e2118-188">이름이 나타내듯이 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>는 각각 전자 및 후자를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-188">As their names imply, <xref:System.Threading.AutoResetEvent> and <xref:System.Threading.ManualResetEvent> represent the former and latter, respectively.</span></span> <span data-ttu-id="e2118-189"><xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>은 단일 프로세스 경계 내에서 동기화하기 위한 간단한 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-189"><xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> is a lightweight event for synchronization within a single process boundary.</span></span>  
   
- <xref:System.Threading.EventWaitHandle>은 이벤트 형식을 나타낼 수 있고 로컬 또는 전역일 수 있습니다.  파생 클래스 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>는 항상 로컬입니다.  
+ <span data-ttu-id="e2118-190"><xref:System.Threading.EventWaitHandle>은 이벤트 형식을 나타낼 수 있고 로컬 또는 전역일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-190">An <xref:System.Threading.EventWaitHandle> can represent either type of event, and can be either local or global.</span></span> <span data-ttu-id="e2118-191">파생 클래스 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>는 항상 로컬입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-191">The derived classes <xref:System.Threading.AutoResetEvent> and <xref:System.Threading.ManualResetEvent> are always local.</span></span>  
   
- 이벤트 대기 핸들에는 스레드 선호도가 없습니다.  모든 스레드가 이벤트 대기 핸들에 신호를 보낼 수 있습니다.  
+ <span data-ttu-id="e2118-192">이벤트 대기 핸들에는 스레드 선호도가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-192">Event wait handles do not have thread affinity.</span></span> <span data-ttu-id="e2118-193">모든 스레드가 이벤트 대기 핸들에 신호를 보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-193">Any thread can signal an event wait handle.</span></span>  
   
- 개념적인 개요를 보려면 [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)를 참조하세요.  
+ <span data-ttu-id="e2118-194">개념적인 개요를 보려면 [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2118-194">For a conceptual overview, see [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).</span></span>  
   
-#### 뮤텍스 및 세마포 클래스  
- <xref:System.Threading.Mutex> 및 <xref:System.Threading.Semaphore> 클래스는 <xref:System.Threading.WaitHandle>에서 파생되므로 <xref:System.Threading.WaitHandle>의 정적 메서드와 함께 사용할 수 있습니다.  예를 들어 스레드는 <xref:System.Threading.WaitHandle.WaitAll%2A> 메서드를 사용하여 <xref:System.Threading.EventWaitHandle>이 신호를 받고 <xref:System.Threading.Mutex>가 해제되고 <xref:System.Threading.Semaphore>가 해제되는 세 가지 조건이 모두 충족될 때까지 대기할 수 있습니다.  마찬가지로 스레드는 <xref:System.Threading.WaitHandle.WaitAny%2A> 메서드를 사용하여 해당 조건의 하나가 충족될 때까지 대기할 수 있습니다.  
+#### <a name="mutex-and-semaphore-classes"></a><span data-ttu-id="e2118-195">뮤텍스 및 세마포 클래스</span><span class="sxs-lookup"><span data-stu-id="e2118-195">Mutex and Semaphore Classes</span></span>  
+ <span data-ttu-id="e2118-196"><xref:System.Threading.Mutex> 및 <xref:System.Threading.Semaphore> 클래스는 <xref:System.Threading.WaitHandle>에서 파생되므로 <xref:System.Threading.WaitHandle>의 정적 메서드와 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-196">Because the <xref:System.Threading.Mutex> and <xref:System.Threading.Semaphore> classes derive from <xref:System.Threading.WaitHandle>, they can be used with the static methods of <xref:System.Threading.WaitHandle>.</span></span> <span data-ttu-id="e2118-197">예를 들어 스레드는 <xref:System.Threading.WaitHandle.WaitAll%2A> 메서드를 사용하여 <xref:System.Threading.EventWaitHandle>이 신호를 받고 <xref:System.Threading.Mutex>가 해제되고 <xref:System.Threading.Semaphore>가 해제되는 세 가지 조건이 모두 충족될 때까지 대기할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-197">For example, a thread can use the <xref:System.Threading.WaitHandle.WaitAll%2A> method to wait until all three of the following are true: an <xref:System.Threading.EventWaitHandle> is signaled, a <xref:System.Threading.Mutex> is released, and a <xref:System.Threading.Semaphore> is released.</span></span> <span data-ttu-id="e2118-198">마찬가지로 스레드는 <xref:System.Threading.WaitHandle.WaitAny%2A> 메서드를 사용하여 해당 조건의 하나가 충족될 때까지 대기할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-198">Similarly, a thread can use the <xref:System.Threading.WaitHandle.WaitAny%2A> method to wait until any one of those conditions is true.</span></span>  
   
- <xref:System.Threading.Mutex> 또는 <xref:System.Threading.Semaphore>의 경우 신호를 받는다는 것은 해제됨을 의미합니다.  한쪽 형식이 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 메서드의 첫 번째 인수로 사용되면 해제된 것입니다.  스레드 선호도가 있는 <xref:System.Threading.Mutex>의 경우 호출하는 스레드가 뮤텍스를 소유하고 있지 않으면 예외가 throw됩니다.  앞에서 설명한 대로 세마포에는 스레드 선호도가 없습니다.  
+ <span data-ttu-id="e2118-199"><xref:System.Threading.Mutex> 또는 <xref:System.Threading.Semaphore>의 경우 신호를 받는다는 것은 해제됨을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-199">For a <xref:System.Threading.Mutex> or a <xref:System.Threading.Semaphore>, being signaled means being released.</span></span> <span data-ttu-id="e2118-200">한쪽 형식이 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 메서드의 첫 번째 인수로 사용되면 해제된 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-200">If either type is used as the first argument of the <xref:System.Threading.WaitHandle.SignalAndWait%2A> method, it is released.</span></span> <span data-ttu-id="e2118-201">스레드 선호도가 있는 <xref:System.Threading.Mutex>의 경우 호출하는 스레드가 뮤텍스를 소유하고 있지 않으면 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-201">In the case of a <xref:System.Threading.Mutex>, which has thread affinity, an exception is thrown if the calling thread does not own the mutex.</span></span> <span data-ttu-id="e2118-202">앞에서 설명한 대로 세마포에는 스레드 선호도가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-202">As noted previously, semaphores do not have thread affinity.</span></span>  
   
-#### 장벽  
- <xref:System.Threading.Barrier> 클래스는 여러 스레드가 같은 지점에서 모두 차단되고 모든 다른 스레드가 완료될 때까지 대기하도록 여러 스레드를 순환해서 동기화하는 방법을 제공합니다.  장벽은 스레드 하나 이상이 알고리즘의 다음 단계로 진행하기 전에 다른 스레드의 결과를 필요로 할 때 유용합니다.  자세한 내용은 [Barrier](../../../docs/standard/threading/barrier.md)을 참조하세요.  
+#### <a name="barrier"></a><span data-ttu-id="e2118-203">장벽</span><span class="sxs-lookup"><span data-stu-id="e2118-203">Barrier</span></span>  
+ <span data-ttu-id="e2118-204"><xref:System.Threading.Barrier> 클래스는 여러 스레드가 같은 지점에서 모두 차단되고 모든 다른 스레드가 완료될 때까지 대기하도록 여러 스레드를 순환해서 동기화하는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-204">The <xref:System.Threading.Barrier> class provides a way to cyclically synchronize multiple threads so that they all block at the same point and wait for all other threads to complete.</span></span> <span data-ttu-id="e2118-205">장벽은 스레드 하나 이상이 알고리즘의 다음 단계로 진행하기 전에 다른 스레드의 결과를 필요로 할 때 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-205">A barrier is useful when one or more threads require the results of another thread before continuing to the next phase of an algorithm.</span></span> <span data-ttu-id="e2118-206">자세한 내용은 [Barrier](../../../docs/standard/threading/barrier.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2118-206">For more information, see [Barrier](../../../docs/standard/threading/barrier.md).</span></span>  
   
- [맨 위로 이동](#top)  
+ [<span data-ttu-id="e2118-207">맨 위로 이동</span><span class="sxs-lookup"><span data-stu-id="e2118-207">Back to top</span></span>](#top)  
   
 <a name="lightweight_synchronization_types"></a>   
-## 간단한 동기화 형식  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터는 가능할 때마다 대기 핸들과 같은 비싼 Win32 커널 개체를 사용하지 않는 방식으로 빠른 성능을 제공하는 동기화 기본 형식을 사용할 수 있습니다.  일반적으로 대기 시간이 짧은 경우와 원래 동기화 형식이 시도되었으나 만족스럽지 않은 것으로 확인된 경우에만 이들 형식을 사용해야 합니다.  간단한 형식은 프로세스 간 통신이 필요한 시나리오에서 사용할 수 없습니다.  
+## <a name="lightweight-synchronization-types"></a><span data-ttu-id="e2118-208">간단한 동기화 형식</span><span class="sxs-lookup"><span data-stu-id="e2118-208">Lightweight Synchronization Types</span></span>  
+ <span data-ttu-id="e2118-209">[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터는 가능할 때마다 대기 핸들과 같은 비싼 Win32 커널 개체를 사용하지 않는 방식으로 빠른 성능을 제공하는 동기화 기본 형식을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-209">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], you can use synchronization primitives that provide fast performance by avoiding expensive reliance on Win32 kernel objects such as wait handles whenever possible.</span></span> <span data-ttu-id="e2118-210">일반적으로 대기 시간이 짧은 경우와 원래 동기화 형식이 시도되었으나 만족스럽지 않은 것으로 확인된 경우에만 이들 형식을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-210">In general, you should use these types when wait times are short and only when the original synchronization types have been tried and found to be unsatisfactory.</span></span> <span data-ttu-id="e2118-211">간단한 형식은 프로세스 간 통신이 필요한 시나리오에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-211">The lightweight types cannot be used in scenarios that require cross-process communication.</span></span>  
   
--   <xref:System.Threading.SemaphoreSlim?displayProperty=fullName>은 <xref:System.Threading.Semaphore?displayProperty=fullName>의 간단한 버전입니다.  
+-   <span data-ttu-id="e2118-212"><xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>은 <xref:System.Threading.Semaphore?displayProperty=nameWithType>의 간단한 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-212"><xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> is a lightweight version of <xref:System.Threading.Semaphore?displayProperty=nameWithType>.</span></span>  
   
--   <xref:System.Threading.ManualResetEventSlim?displayProperty=fullName>은 <xref:System.Threading.ManualResetEvent?displayProperty=fullName>의 간단한 버전입니다.  
+-   <span data-ttu-id="e2118-213"><xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>은 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>의 간단한 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-213"><xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> is a lightweight version of <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.</span></span>  
   
--   <xref:System.Threading.CountdownEvent?displayProperty=fullName>는 개수가 0일 때 신호를 받게 되는 이벤트를 나타냅니다.  
+-   <span data-ttu-id="e2118-214"><xref:System.Threading.CountdownEvent?displayProperty=nameWithType>는 개수가 0일 때 신호를 받게 되는 이벤트를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-214"><xref:System.Threading.CountdownEvent?displayProperty=nameWithType> represents an event that becomes signaled when its count is zero.</span></span>  
   
--   <xref:System.Threading.Barrier?displayProperty=fullName>를 사용하면 여러 스레드가 마스터 스레드에 의한 제어 없이 서로 동기화될 수 있습니다.  장벽은 모든 스레드가 지정된 지점에 도달할 때까지 각 스레드가 계속하지 못하도록 차단합니다.  
+-   <span data-ttu-id="e2118-215"><xref:System.Threading.Barrier?displayProperty=nameWithType>를 사용하면 여러 스레드가 마스터 스레드에 의한 제어 없이 서로 동기화될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-215"><xref:System.Threading.Barrier?displayProperty=nameWithType> enables multiple threads to synchronize with one another without requiring control by a master thread.</span></span> <span data-ttu-id="e2118-216">장벽은 모든 스레드가 지정된 지점에 도달할 때까지 각 스레드가 계속하지 못하도록 차단합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-216">A barrier prevents each thread from continuing until all threads have reached a specified point.</span></span>  
   
- [맨 위로 이동](#top)  
+ [<span data-ttu-id="e2118-217">맨 위로 이동</span><span class="sxs-lookup"><span data-stu-id="e2118-217">Back to top</span></span>](#top)  
   
 <a name="spinwait"></a>   
-## SpinWait  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터는 이벤트가 신호를 받거나 조건이 충족될 때까지 스레드가 대기해야 하지만 대기 핸들을 사용하거나 현재 스레드를 차단하여 실제 대기 시간이 필요한 대기 시간보다 적을 것으로 예상할 때 <xref:System.Threading.SpinWait?displayProperty=fullName> 구조체를 사용할 수 있습니다.  <xref:System.Threading.SpinWait>를 사용하면 대기하는 동안 스핀하고 지정된 시간 안에 조건이 충족되지 않을 경우에만 대기 또는 중지를 통해 양보하는 짧은 기간을 지정할 수 있습니다.  
+## <a name="spinwait"></a><span data-ttu-id="e2118-218">SpinWait</span><span class="sxs-lookup"><span data-stu-id="e2118-218">SpinWait</span></span>  
+ <span data-ttu-id="e2118-219">부터는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]를 사용할 수 있습니다는 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 신호 이벤트가 받거나 조건이 충족 될 때까지 대기 하는 스레드에 하지만 실제 대기 시간이 otherwi 또는 대기 핸들을 사용 하 여 필요한 대기 시간 보다 작을 것으로 예상 되는 경우 구조체 se 현재 스레드를 차단 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-219">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], you can use the <xref:System.Threading.SpinWait?displayProperty=nameWithType> structure when a thread has to wait for an event to be signaled or a condition to be met, but when the actual wait time is expected to be less than the waiting time required by using a wait handle or by otherwise blocking the current thread.</span></span> <span data-ttu-id="e2118-220"><xref:System.Threading.SpinWait>를 사용하면 대기하는 동안 스핀하고 지정된 시간 안에 조건이 충족되지 않을 경우에만 대기 또는 중지를 통해 양보하는 짧은 기간을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-220">By using <xref:System.Threading.SpinWait>, you can specify a short period of time to spin while waiting, and then yield (for example, by waiting or sleeping) only if the condition was not met in the specified time.</span></span>  
   
- [맨 위로 이동](#top)  
+ [<span data-ttu-id="e2118-221">맨 위로 이동</span><span class="sxs-lookup"><span data-stu-id="e2118-221">Back to top</span></span>](#top)  
   
 <a name="interlocked_operations"></a>   
-## 연동 작업  
- 연동 작업은 <xref:System.Threading.Interlocked> 클래스의 정적 메서드를 통해 메모리 위치에서 수행되는 간단한 원자성 작업입니다.  해당 원자성 작업에는 비교에 따라 추가, 증가 및 감소, 교환, 조건부 교환이 포함되고 32비트 플랫폼에서 64비트 값을 읽는 작업이 포함됩니다.  
+## <a name="interlocked-operations"></a><span data-ttu-id="e2118-222">연동 작업</span><span class="sxs-lookup"><span data-stu-id="e2118-222">Interlocked Operations</span></span>  
+ <span data-ttu-id="e2118-223">연동 작업은 <xref:System.Threading.Interlocked> 클래스의 정적 메서드를 통해 메모리 위치에서 수행되는 간단한 원자성 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-223">Interlocked operations are simple atomic operations performed on a memory location by static methods of the <xref:System.Threading.Interlocked> class.</span></span> <span data-ttu-id="e2118-224">해당 원자성 작업에는 비교에 따라 추가, 증가 및 감소, 교환, 조건부 교환이 포함되고 32비트 플랫폼에서 64비트 값을 읽는 작업이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-224">Those atomic operations include addition, increment and decrement, exchange, conditional exchange depending on a comparison, and read operations for 64-bit values on 32-bit platforms.</span></span>  
   
 > [!NOTE]
->  원자성 보장은 개별 작업으로 제한됩니다. 여러 작업을 한 단위로 수행해야 하면 더 개략적인 동기화 메커니즘을 사용해야 합니다.  
+>  <span data-ttu-id="e2118-225">원자성 보장은 개별 작업으로 제한됩니다. 여러 작업을 한 단위로 수행해야 하면 더 개략적인 동기화 메커니즘을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-225">The guarantee of atomicity is limited to individual operations; when multiple operations must be performed as a unit, a more coarse-grained synchronization mechanism must be used.</span></span>  
   
- 이들 작업은 잠금이나 신호가 아니지만 잠금 및 신호를 구성하는 데 사용할 수 있습니다.  Windows 운영 체제에 기본 제공되므로 연동 작업은 매우 빠릅니다.  
+ <span data-ttu-id="e2118-226">이들 작업은 잠금이나 신호가 아니지만 잠금 및 신호를 구성하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-226">Although none of these operations are locks or signals, they can be used to construct locks and signals.</span></span> <span data-ttu-id="e2118-227">Windows 운영 체제에 기본 제공되므로 연동 작업은 매우 빠릅니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-227">Because they are native to the Windows operating system, interlocked operations are extremely fast.</span></span>  
   
- 연동 작업은 휘발성 메모리 보장과 함께 강력한 비차단 동시성을 보이는 응용 프로그램을 작성하는 데 사용할 수 있습니다.  그러나 연동 작업에는 정교하고 낮은 수준의 프로그래밍이 필요하므로 대부분 용도에는 간단한 잠금을 선택하는 것이 좋습니다.  
+ <span data-ttu-id="e2118-228">연동 작업은 휘발성 메모리 보장과 함께 강력한 비차단 동시성을 보이는 응용 프로그램을 작성하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-228">Interlocked operations can be used with volatile memory guarantees to write applications that exhibit powerful non-blocking concurrency.</span></span> <span data-ttu-id="e2118-229">그러나 연동 작업에는 정교하고 낮은 수준의 프로그래밍이 필요하므로 대부분 용도에는 간단한 잠금을 선택하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="e2118-229">However, they require sophisticated, low-level programming, so for most purposes, simple locks are a better choice.</span></span>  
   
- 개념적인 개요를 보려면 [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md)을 참조하세요.  
+ <span data-ttu-id="e2118-230">개념적 개요를 보려면 [연동 작업](../../../docs/standard/threading/interlocked-operations.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2118-230">For a conceptual overview, see [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md).</span></span>  
   
-## 참고 항목  
- [Synchronizing Data for Multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)   
- [Monitor](../Topic/Monitors.md)   
- [Mutexes](../../../docs/standard/threading/mutexes.md)   
- [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)   
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)   
- [Wait Handles](../Topic/Wait%20Handles.md)   
- [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md)   
- [Reader\-Writer Locks](../../../docs/standard/threading/reader-writer-locks.md)   
- [Barrier](../../../docs/standard/threading/barrier.md)   
- [SpinWait](../../../docs/standard/threading/spinwait.md)   
- [SpinLock](../../../docs/standard/threading/spinlock.md)
+## <a name="see-also"></a><span data-ttu-id="e2118-231">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e2118-231">See Also</span></span>  
+ [<span data-ttu-id="e2118-232">다중 스레딩을 위한 데이터 동기화</span><span class="sxs-lookup"><span data-stu-id="e2118-232">Synchronizing Data for Multithreading</span></span>](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ [<span data-ttu-id="e2118-233">모니터</span><span class="sxs-lookup"><span data-stu-id="e2118-233">Monitors</span></span>](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [<span data-ttu-id="e2118-234">뮤텍스</span><span class="sxs-lookup"><span data-stu-id="e2118-234">Mutexes</span></span>](../../../docs/standard/threading/mutexes.md)  
+ [<span data-ttu-id="e2118-235">세마포 및 SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="e2118-235">Semaphore and SemaphoreSlim</span></span>](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
+ [<span data-ttu-id="e2118-236">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span><span class="sxs-lookup"><span data-stu-id="e2118-236">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span></span>](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+ [<span data-ttu-id="e2118-237">대기 핸들</span><span class="sxs-lookup"><span data-stu-id="e2118-237">Wait Handles</span></span>](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [<span data-ttu-id="e2118-238">연동 작업</span><span class="sxs-lookup"><span data-stu-id="e2118-238">Interlocked Operations</span></span>](../../../docs/standard/threading/interlocked-operations.md)  
+ [<span data-ttu-id="e2118-239">판독기 및 작성기 잠금</span><span class="sxs-lookup"><span data-stu-id="e2118-239">Reader-Writer Locks</span></span>](../../../docs/standard/threading/reader-writer-locks.md)  
+ [<span data-ttu-id="e2118-240">장벽</span><span class="sxs-lookup"><span data-stu-id="e2118-240">Barrier</span></span>](../../../docs/standard/threading/barrier.md)  
+ [<span data-ttu-id="e2118-241">스핀 대기</span><span class="sxs-lookup"><span data-stu-id="e2118-241">SpinWait</span></span>](../../../docs/standard/threading/spinwait.md)  
+ [<span data-ttu-id="e2118-242">스핀 잠금</span><span class="sxs-lookup"><span data-stu-id="e2118-242">SpinLock</span></span>](../../../docs/standard/threading/spinlock.md)

@@ -1,81 +1,87 @@
 ---
-title: "지역화 가능성 검토 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "지역화 대비 응용 프로그램, 지역화 가능성"
-  - "응용 프로그램 개발[.NET Framework], 지역화"
-  - "지역화 가능성[.NET Framework]"
-  - "국가별 응용 프로그램[.NET Framework], 지역화 가능성"
-  - "전역화[.NET Framework], 지역화 가능성"
-  - "문화권, 지역화 가능성"
-  - "지역화[.NET Framework], 지역화 가능성"
-  - "전역 응용 프로그램, 지역화 가능성"
-  - "리소스 지역화"
+title: "지역화 가능성 검토"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- world-ready applications, localizability
+- application development [.NET Framework], localization
+- localizability [.NET Framework]
+- international applications [.NET Framework], localizability
+- globalization [.NET Framework], localizability
+- culture, localizability
+- localization [.NET Framework], localizability
+- global applications, localizability
+- localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 지역화 가능성 검토
-지역화 가능성 검토는 지역화 대비 응용 프로그램 개발의 중간 단계입니다.  전역화 된 응용 프로그램이 지역화 될 준비가 되고 특별한 처리를 필요로 하는 사용자 인터페이스의 모든 측면 또는 모든 코드를 확인 합니다.  이 단계는 또한 지역화 과정이 응용 프로그램에 기능적 결함이 발생되지 않게 소개합니다  지역화 가능성 검토에 의해 발생한 모든 문제를 해결 하는 경우, 응용 프로그램은 지역화 될 준비가 됩니다.  지역화 가능성 검토가 철저하다면, 지역화 과정 동안 소스 코드를 수정할 필요가 없습니다.  
+# <a name="localizability-review"></a><span data-ttu-id="cdbfc-102">지역화 가능성 검토</span><span class="sxs-lookup"><span data-stu-id="cdbfc-102">Localizability Review</span></span>
+<span data-ttu-id="cdbfc-103">지역화 가능성 검토는 지역화 대비 응용 프로그램 개발의 중간 단계로,</span><span class="sxs-lookup"><span data-stu-id="cdbfc-103">The localizability review is an intermediate step in the development of a world-ready application.</span></span> <span data-ttu-id="cdbfc-104">전역화된 응용 프로그램이 지역화될 준비가 되어 있는지 점검하고 특별한 처리가 필요한 사용자 인터페이스의 모든 코드 또는 측면을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-104">It verifies that a globalized application is ready for localization and identifies any code or any aspects of the user interface that require special handling.</span></span> <span data-ttu-id="cdbfc-105">또한 이 단계를 통해 지역화 과정 후에도 응용 프로그램에 기능적 결함이 발생되지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-105">This step also helps ensure that the localization process will not introduce any functional defects into your application.</span></span> <span data-ttu-id="cdbfc-106">지역화 가능성 검토에서 제기된 모든 문제가 해결되면 응용 프로그램은 지역화될 준비가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-106">When all the issues raised by the localizability review have been addressed, your application is ready for localization.</span></span> <span data-ttu-id="cdbfc-107">지역화 가능성 검토가 철저할 경우 지역화 과정 중에 소스 코드를 수정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-107">If the localizability review is thorough, you should not have to modify any source code during the localization process.</span></span>  
   
- 지역화 가능성 검토는 다음 세 가지 검사로 이루어져 있습니다.  
+ <span data-ttu-id="cdbfc-108">지역화 가능성 검토는 다음 세 가지 검사로 이루어져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-108">The localizability review consists of the following three checks:</span></span>  
   
--   [세계화 권장 사항이 구현되었습니까?](#global)  
+-   [<span data-ttu-id="cdbfc-109">전역화 권장 사항 구현 되었습니까?</span><span class="sxs-lookup"><span data-stu-id="cdbfc-109">Are the globalization recommendations implemented?</span></span>](#global)  
   
--   [문화권 구분 기능이 올바르게 처리되었습니까?](#culture)  
+-   [<span data-ttu-id="cdbfc-110">문화권 구분 기능이 올바르게 처리 되도록?</span><span class="sxs-lookup"><span data-stu-id="cdbfc-110">Are culture-sensitive features handled correctly?</span></span>](#culture)  
   
--   [국가별 데이터를 사용하여 응용 프로그램을 테스트 했습니까?](#test)  
+-   [<span data-ttu-id="cdbfc-111">국가별 데이터를 응용 프로그램을 테스트 했습니까?</span><span class="sxs-lookup"><span data-stu-id="cdbfc-111">Have you tested your application with international data?</span></span>](#test)  
   
 <a name="global"></a>   
-## 전역화 권장 사항 구현  
- 지역화를 염두에 두고 응용 프로그램을 디자인하고 개발한 경우, [전역화](../../../docs/standard/globalization-localization/globalization.md) 에서 설명 된 권장 사항을 따른 경우, 지역화 가능성 검토는 주로 품질 보증 단계일 것입니다.  그렇지 않으면, 이 단계에서 [globalization](../../../docs/standard/globalization-localization/globalization.md) 를 위한 권장 사항을 검토하고 구현하고, 지역화를 방해하는 소스 코드의 오류를 수정 합니다.  
+## <a name="implementing-globalization-recommendations"></a><span data-ttu-id="cdbfc-112">전역화 권장 사항 구현</span><span class="sxs-lookup"><span data-stu-id="cdbfc-112">Implementing globalization recommendations</span></span>  
+ <span data-ttu-id="cdbfc-113">디자인 하 고 지역화를 염두에서에 응용 프로그램을 개발 하 고 권장 사항에서 설명한를 수행한 경우는 [전역화](../../../docs/standard/globalization-localization/globalization.md) 문서, 지역화 가능성 검토는 주로 품질 보증 패스 됩니다 .</span><span class="sxs-lookup"><span data-stu-id="cdbfc-113">If you have designed and developed your application with localization in mind, and if you have followed the recommendations discussed in the [Globalization](../../../docs/standard/globalization-localization/globalization.md) article, the localizability review will largely be a quality assurance pass.</span></span> <span data-ttu-id="cdbfc-114">그렇지 않은 경우이 단계에서 검토 하 고 해야에 대 한 권장 구성을 구현 [전역화](../../../docs/standard/globalization-localization/globalization.md), 고 지역화를 방해 하는 소스 코드의 오류를 해결 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-114">Otherwise, during this stage you should review and implement the recommendations for [globalization](../../../docs/standard/globalization-localization/globalization.md), and fix the errors in source code that prevent localization.</span></span>  
   
 <a name="culture"></a>   
-## 문화권 구분 기능 처리  
- .NET Framework는 다양한 문화권에서 광범위 하게 변화하는 영역에서 프로그래밍 방식을 지원 하지 않습니다.  대부분의 경우, 다음과 같은 기능 영역을 처리 하기 위해 사용자 지정 코드를 작성할 수 있습니다.  
+## <a name="handling-culture-sensitive-features"></a><span data-ttu-id="cdbfc-115">문화권 구분 기능 처리</span><span class="sxs-lookup"><span data-stu-id="cdbfc-115">Handling culture-sensitive features</span></span>  
+ <span data-ttu-id="cdbfc-116">.NET Framework는 문화권마다 크게 다른 다양한 영역에서 프로그래밍 방식 지원을 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-116">The .NET Framework does not provide programmatic support in a number of areas that vary widely by culture.</span></span> <span data-ttu-id="cdbfc-117">대부분의 경우 사용자 지정 코드를 작성하여 다음과 같은 기능 영역을 처리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-117">In most cases, you have to write custom code to handle feature areas like the following:</span></span>  
   
--   주소  
+-   <span data-ttu-id="cdbfc-118">주소.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-118">Addresses.</span></span>  
   
--   전화 번호.  
+-   <span data-ttu-id="cdbfc-119">전화 번호.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-119">Telephone numbers.</span></span>  
   
--   용지 크기.  
+-   <span data-ttu-id="cdbfc-120">용지 크기.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-120">Paper sizes.</span></span>  
   
--   길이, 무게, 영역, 볼륨 및 온도에 사용 되는 측정 단위.  .NET Framework가 측정 단위 간의 변환에 대해 기본 제공을 지원하지 않지만, <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=fullName> 속성을 다음 예제와 같이 특정 국가 또는 지역에서 미터법을 사용 하는지 여부를 확인 합니다.  
+-   <span data-ttu-id="cdbfc-121">길이, 무게, 영역, 볼륨 및 온도에 사용되는 측정 단위.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-121">Units of measure used for lengths, weights, area, volume, and temperatures.</span></span> <span data-ttu-id="cdbfc-122">.NET Framework에서 측정 단위 간의 변환에 대한 기본 지원을 제공하지 않지만, 다음 예제와 같이 <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType> 속성을 사용하여 특정 국가 또는 지역이 미터법을 사용하는지 여부를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-122">Although the .NET Framework does not offer built-in support for converting between units of measure, you can use the <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType> property to determine whether a particular country or region uses the metric system, as the following example illustrates.</span></span>  
   
      [!code-csharp[Conceptual.Localizability#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.localizability/cs/ismetric1.cs#1)]
      [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]  
   
 <a name="test"></a>   
-## 응용 프로그램 테스트  
- 응용 프로그램을 지역화 하기 전에, 운영 체제의 국가별 버전에서 국가별 데이터를 사용하여 테스트 해야 합니다.  대부분의 사용자 인터페이스는 이 시점에서 지역화 되지 않지만, 다음과 같은 문제를 발견할 수 있습니다.  
+## <a name="testing-your-application"></a><span data-ttu-id="cdbfc-123">응용 프로그램 테스트</span><span class="sxs-lookup"><span data-stu-id="cdbfc-123">Testing your application</span></span>  
+ <span data-ttu-id="cdbfc-124">응용 프로그램을 지역화하기 전에 운영 체제의 국가별 버전에서 국가별 데이터를 사용하여 테스트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-124">Before you localize your application, you should test it by using international data on international versions of the operating system.</span></span> <span data-ttu-id="cdbfc-125">대부분의 사용자 인터페이스는 이 시점에서 지역화되지 않지만, 다음과 같은 문제를 발견할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-125">Although most of the user interface will not be localized at this point, you will be able to detect problems such as the following:</span></span>  
   
--   운영 체제 버전에서 올바르게 역직렬화 되지 않은 데이터를 직렬화합니다.  
+-   <span data-ttu-id="cdbfc-126">운영 체제 버전마다 제대로 deserialize하지 않는 serialize된 데이터.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-126">Serialized data that does not deserialize correctly across operating system versions.</span></span>  
   
--   현재 문화권의 규칙에 반영 되지 않는 숫자 데이터입니다.  예를 들어, 숫자가 정확 하지 않은 그룹 구분 기호, 소수 구분 기호 또는 통화 기호를 사용하여 표시 될 수 있습니다.  
+-   <span data-ttu-id="cdbfc-127">현재 문화권의 규칙을 반영하지 않는 숫자 데이터.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-127">Numeric data that does not reflect the conventions of the current culture.</span></span> <span data-ttu-id="cdbfc-128">예를 들어, 숫자가 정확하지 않은 그룹 구분 기호, 소수 구분 기호 또는 통화 기호를 사용하여 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-128">For example, numbers may be displayed with inaccurate group separators, decimal separators, or currency symbols.</span></span>  
   
--   현재 문화권의 규칙에 반영 되지 않는 날짜 및 시간 데이터입니다.  예를 들어, 달과 날짜를 나타내는 숫자를 잘못된 순서로 나타날 수 있습니다, 날짜 구분 기호가 올바르지 않을 수 있거나 영역 시간대 정보가 잘못 될 수 있습니다.  
+-   <span data-ttu-id="cdbfc-129">현재 문화권의 규칙을 반영하지 않는 날짜 및 시간 데이터.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-129">Date and time data that does not reflect the conventions of the current culture.</span></span> <span data-ttu-id="cdbfc-130">예를 들어, 월 및 일을 나타내는 숫자가 잘못된 순서로 나타나고, 날짜 구분 기호가 올바르지 않거나 표준 시간대 정보가 잘못될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-130">For example, numbers that represent the month and day may appear in the wrong order, date separators may be incorrect, or time zone information may be incorrect.</span></span>  
   
--   응용 프로그램을 위한 기본 culture를 확인 하지 못했기 때문에 찾을 수 없는 리소스입니다.  
+-   <span data-ttu-id="cdbfc-131">응용 프로그램에 대한 기본 문화권을 확인하지 않았으므로 찾을 수 없는 리소스.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-131">Resources that cannot be found because you have not identified a default culture for your application.</span></span>  
   
--   특정 문화권에 대해 특별한 순서 대로 표시 되는 문자열입니다.  
+-   <span data-ttu-id="cdbfc-132">특정 문화권에 대해 비정상적인 순서로 표시되는 문자열.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-132">Strings that are displayed in an unusual order for the specific culture.</span></span>  
   
--   문자열 비교 또는 예기치 않은 결과를 반환 하는 비교입니다.  
+-   <span data-ttu-id="cdbfc-133">예기치 않은 결과를 반환하는 같음 비교 또는 문자열 비교.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-133">String comparisons or comparisons for equality that return unexpected results.</span></span>  
   
- 응용 프로그램, 올바르게 처리된 문화에 민감한 기능, 테스트 동안 발생한 지역화 이슈의 확인과 호출을 개발할 때 세계화 추천을 따른 경우, 다음 단계인 [지역화](../../../docs/standard/globalization-localization/localization.md)로 진행할 수 있습니다.  
+ <span data-ttu-id="cdbfc-134">다음 단계를 진행할 수 한 전역화 권장 뒤에 응용 프로그램을 개발 하는 경우, 문화권 구분 기능이 올바르게 처리 하 고 확인 하 고 테스트 하는 동안 발생 하는 지역화 문제가 해결 되었습니다., 경우 [지역화](../../../docs/standard/globalization-localization/localization.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="cdbfc-134">If you've followed the globalization recommendations when developing your application, handled culture-sensitive features correctly, and identified and addressed the localization issues that arose during testing, you can proceed to the next step, [Localization](../../../docs/standard/globalization-localization/localization.md).</span></span>  
   
-## 참고 항목  
- [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)   
- [지역화](../../../docs/standard/globalization-localization/localization.md)   
- [전역화](../../../docs/standard/globalization-localization/globalization.md)   
- [데스크톱 응용 프로그램의 리소스](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a><span data-ttu-id="cdbfc-135">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cdbfc-135">See Also</span></span>  
+ [<span data-ttu-id="cdbfc-136">전역화 및 지역화</span><span class="sxs-lookup"><span data-stu-id="cdbfc-136">Globalization and Localization</span></span>](../../../docs/standard/globalization-localization/index.md)  
+ [<span data-ttu-id="cdbfc-137">지역화</span><span class="sxs-lookup"><span data-stu-id="cdbfc-137">Localization</span></span>](../../../docs/standard/globalization-localization/localization.md)  
+ [<span data-ttu-id="cdbfc-138">전역화</span><span class="sxs-lookup"><span data-stu-id="cdbfc-138">Globalization</span></span>](../../../docs/standard/globalization-localization/globalization.md)  
+ [<span data-ttu-id="cdbfc-139">데스크톱 앱의 리소스</span><span class="sxs-lookup"><span data-stu-id="cdbfc-139">Resources in Desktop Apps</span></span>](../../../docs/framework/resources/index.md)

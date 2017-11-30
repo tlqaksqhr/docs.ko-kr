@@ -1,153 +1,156 @@
 ---
-title: "특성 기반 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "특성 기반 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a8397c106ec45d9e6e1e9ec513536142d3048bd7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 특성 기반 매핑
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 특성을 적용하거나 외부 매핑 파일을 사용하여 SQL Server 데이터베이스를 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델에 매핑합니다.  이 항목에서는 특성 기반 접근 방법에 대해 간략하게 설명합니다.  
+# <a name="attribute-based-mapping"></a><span data-ttu-id="45318-102">특성 기반 매핑</span><span class="sxs-lookup"><span data-stu-id="45318-102">Attribute-Based Mapping</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="45318-103">SQL Server 데이터베이스를 매핑하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 특성을 적용 하거나 또는 외부 매핑 파일을 사용 하 여 개체 모델입니다.</span><span class="sxs-lookup"><span data-stu-id="45318-103"> maps a SQL Server database to a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model by either applying attributes or by using an external mapping file.</span></span> <span data-ttu-id="45318-104">이 항목에서는 특성 기반 접근 방법에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-104">This topic outlines the attribute-based approach.</span></span>  
   
- 가장 기본적인 형식인 경우에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 데이터베이스를 <xref:System.Data.Linq.DataContext>에 매핑하고 테이블을 클래스에 매핑하며 열과 관계를 이러한 클래스의 속성에 매핑합니다.  또한 특성을 사용하여 개체 모델에서 상속 계층 구조를 매핑할 수도 있습니다.  자세한 내용은 [방법: Visual Basic 또는 C\#에서 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)를 참조하세요.  
+ <span data-ttu-id="45318-105">가장 기본적인 형식인 경우에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 데이터베이스를 <xref:System.Data.Linq.DataContext>에 매핑하고 테이블을 클래스에 매핑하며 열과 관계를 이러한 클래스의 속성에 매핑합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-105">In its most elementary form, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] maps a database to a <xref:System.Data.Linq.DataContext>, a table to a class, and columns and relationships to properties on those classes.</span></span> <span data-ttu-id="45318-106">또한 특성을 사용하여 개체 모델에서 상속 계층 구조를 매핑할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45318-106">You can also use attributes to map an inheritance hierarchy in your object model.</span></span> <span data-ttu-id="45318-107">자세한 내용은 참조 [하는 방법: Visual Basic 또는 C#에서 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-107">For more information, see [How to: Generate the Object Model in Visual Basic or C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).</span></span>  
   
- [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자는 일반적으로 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 특성 기반 매핑을 수행합니다. SQLMetal 명령줄 도구를 사용하거나 특성을 직접 코딩할 수도 있습니다.  자세한 내용은 [방법: Visual Basic 또는 C\#에서 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)을 참조하세요.  
-  
-> [!NOTE]
->  이외에도 외부 XML 파일을 사용하여 매핑할 수도 있습니다.  자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)를 참조하세요.  
-  
- 다음 단원에서는 특성 기반 매핑에 대해 더 자세히 설명합니다.  자세한 내용은 <xref:System.Data.Linq.Mapping> 네임스페이스를 참조하세요.  
-  
-## DatabaseAttribute 특성  
- 연결에서 이름이 제공되지 않은 경우 데이터베이스의 기본 이름을 지정하려면 이 특성을 사용합니다.  이 특성은 선택 사항이지만 이 특성을 사용할 경우 다음 표에 설명된 대로 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 속성을 적용해야 합니다.  
-  
-|속성|형식|기본|설명|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|문자열|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>을 참조하세요.|해당 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 속성과 함께 사용되어 데이터베이스의 이름을 지정합니다.|  
-  
- 자세한 내용은 <xref:System.Data.Linq.Mapping.DatabaseAttribute>을 참조하세요.  
-  
-## TableAttribute 특성  
- 클래스를 데이터베이스 테이블 또는 데이터베이스 뷰와 연결된 엔터티 클래스로 지정하려면 이 특성을 사용합니다.  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 이 특성이 있는 클래스를 영구 클래스로 처리합니다.  다음 표에서는 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 속성에 대해 설명합니다.  
-  
-|속성|형식|기본|설명|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|문자열|클래스 이름과 동일한 문자열|클래스를 데이터베이스 테이블과 연결된 엔터티 클래스로 지정합니다.|  
-  
- 자세한 내용은 <xref:System.Data.Linq.Mapping.TableAttribute>을 참조하세요.  
-  
-## ColumnAttribute 특성  
- 엔터티 클래스의 멤버가 데이터베이스 테이블의 열을 나타내도록 지정하려면 이 특성을 사용합니다.  이 특성은 모든 필드나 속성에 적용할 수 있습니다.  
-  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 변경 내용을 데이터베이스에 저장할 때 열로 식별된 멤버만 검색 및 유지됩니다.  이 특성이 없는 멤버는 비영구적인 것으로 간주되며 삽입 또는 업데이트를 위해 전송되지 않습니다.  
-  
- 다음 표에서는 이 특성의 속성을 설명합니다.  
-  
-|속성|형식|기본|설명|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|삽입 또는 업데이트 작업 후에 값을 검색하도록 CLR\(공용 언어 런타임\)에 지시합니다.<br /><br /> 옵션: Always, Never, OnUpdate, OnInsert|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|부울|`true`|열이 null 값을 포함할 수 있다는 것을 나타냅니다.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|문자열|유추된 데이터베이스 열 형식|데이터베이스 형식과 한정자를 사용하여 데이터베이스 열의 형식을 지정합니다.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|문자열|Empty|데이터베이스에서 계산 열을 정의합니다.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|부울|`false`|열이 데이터베이스가 자동으로 생성하는 값을 포함한다는 것을 나타냅니다.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|부울|`false`|열이 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 상속 계층 구조에 대한 판별자 값을 포함한다는 것을 나타냅니다.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|부울|`false`|이 클래스 멤버가 테이블의 기본 키이거나 기본 키의 일부인 열을 나타낸다는 것을 지정합니다.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|부울|`false`|멤버의 열 형식을 데이터베이스 타임스탬프 또는 버전 번호로 식별합니다.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|멤버에 대한 `Always`이 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>가 아니면 `true`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 낙관적 동시성 충돌 감지에 접근하는 방법을 지정합니다.|  
-  
- 자세한 내용은 <xref:System.Data.Linq.Mapping.ColumnAttribute>을 참조하세요.  
+ <span data-ttu-id="45318-108">[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자는 일반적으로 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 특성 기반 매핑을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-108">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] typically perform attribute-based mapping by using the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span></span> <span data-ttu-id="45318-109">SQLMetal 명령줄 도구를 사용하거나 특성을 직접 코딩할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45318-109">You can also use the SQLMetal command-line tool, or you can hand-code the attributes yourself.</span></span> <span data-ttu-id="45318-110">자세한 내용은 참조 [하는 방법: Visual Basic 또는 C#에서 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-110">For more information, see [How to: Generate the Object Model in Visual Basic or C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).</span></span>  
   
 > [!NOTE]
->  AssociationAttribute 및 ColumnAttribute Storage 속성 값은 대\/소문자를 구분합니다.  예를 들어 AssociationAttribute.Storage 속성의 특성에 사용하는 값은 코드의 다른 곳에서 사용하는 해당 속성 이름과 대\/소문자가 동일해야 합니다.  이 규칙은 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]과 같이 일반적으로 대\/소문자를 구분하지 않는 프로그래밍 언어를 포함하여 모든 .NET 프로그래밍 언어에 적용됩니다.  Storage 속성에 대한 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=fullName>를 참조하세요.  
+>  <span data-ttu-id="45318-111">이외에도 외부 XML 파일을 사용하여 매핑할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45318-111">You can also map by using an external XML file.</span></span> <span data-ttu-id="45318-112">자세한 내용은 참조 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-112">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
   
-## AssociationAttribute 특성  
- 외래 키와 기본 키 사이의 관계와 같은 데이터베이스 내 연결을 나타내려면 이 특성을 사용하여 속성을 지정합니다.  관계에 대한 자세한 내용은 [방법: 데이터베이스 관계 매핑](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)을 참조하세요.  
+ <span data-ttu-id="45318-113">다음 단원에서는 특성 기반 매핑에 대해 더 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-113">The following sections describe attribute-based mapping in more detail.</span></span> <span data-ttu-id="45318-114">자세한 내용은 <xref:System.Data.Linq.Mapping> 네임스페이스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-114">For more information, see the <xref:System.Data.Linq.Mapping> namespace.</span></span>  
   
- 다음 표에서는 이 특성의 속성을 설명합니다.  
+## <a name="databaseattribute-attribute"></a><span data-ttu-id="45318-115">DatabaseAttribute 특성</span><span class="sxs-lookup"><span data-stu-id="45318-115">DatabaseAttribute Attribute</span></span>  
+ <span data-ttu-id="45318-116">연결에서 이름이 제공되지 않은 경우 데이터베이스의 기본 이름을 지정하려면 이 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-116">Use this attribute to specify the default name of the database when a name is not supplied by the connection.</span></span> <span data-ttu-id="45318-117">이 특성은 선택 사항이지만 이 특성을 사용할 경우 다음 표에 설명된 대로 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 속성을 적용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-117">This attribute is optional, but if you use it, you must apply the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property, as described in the following table.</span></span>  
   
-|속성|형식|기본|설명|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|부울|`false`|외래 키 멤버가 모두 null을 허용하지 않는 연결에 배치되는 경우 연결이 null로 설정되면 개체를 삭제합니다.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|문자열|없음|삭제 동작을 연결에 추가합니다.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|부울|`false`|true이면 데이터베이스 관계를 나타내는 연결의 외래 키로 멤버를 지정합니다.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|부울|`false`|true이면 외래 키에 대한 고유성 제약 조건을 나타냅니다.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|문자열|관련 클래스의 ID|대상 엔터티 클래스의 하나 이상의 멤버를 연결 반대쪽의 키 값으로 지정합니다.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|문자열|포함하는 클래스의 ID|연결 이쪽의 키 값을 나타낼 이 엔터티 클래스의 멤버를 지정합니다.|  
+|<span data-ttu-id="45318-118">속성</span><span class="sxs-lookup"><span data-stu-id="45318-118">Property</span></span>|<span data-ttu-id="45318-119">형식</span><span class="sxs-lookup"><span data-stu-id="45318-119">Type</span></span>|<span data-ttu-id="45318-120">기본</span><span class="sxs-lookup"><span data-stu-id="45318-120">Default</span></span>|<span data-ttu-id="45318-121">설명</span><span class="sxs-lookup"><span data-stu-id="45318-121">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|<span data-ttu-id="45318-122">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-122">String</span></span>|<span data-ttu-id="45318-123"><xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-123">See <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A></span></span>|<span data-ttu-id="45318-124">해당 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 속성과 함께 사용되어 데이터베이스의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-124">Used with its <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property, specifies the name of the database.</span></span>|  
   
- 자세한 내용은 <xref:System.Data.Linq.Mapping.AssociationAttribute>을 참조하세요.  
+ <span data-ttu-id="45318-125">자세한 내용은 <xref:System.Data.Linq.Mapping.DatabaseAttribute>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-125">For more information, see <xref:System.Data.Linq.Mapping.DatabaseAttribute>.</span></span>  
+  
+## <a name="tableattribute-attribute"></a><span data-ttu-id="45318-126">TableAttribute 특성</span><span class="sxs-lookup"><span data-stu-id="45318-126">TableAttribute Attribute</span></span>  
+ <span data-ttu-id="45318-127">클래스를 데이터베이스 테이블 또는 데이터베이스 뷰와 연결된 엔터티 클래스로 지정하려면 이 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-127">Use this attribute to designate a class as an entity class that is associated with a database table or view.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="45318-128">은 이 특성이 있는 클래스를 영구 클래스로 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-128"> treats classes that have this attribute as persistent classes.</span></span> <span data-ttu-id="45318-129">다음 표에서는 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 속성에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-129">The following table describes the <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> property.</span></span>  
+  
+|<span data-ttu-id="45318-130">속성</span><span class="sxs-lookup"><span data-stu-id="45318-130">Property</span></span>|<span data-ttu-id="45318-131">형식</span><span class="sxs-lookup"><span data-stu-id="45318-131">Type</span></span>|<span data-ttu-id="45318-132">기본</span><span class="sxs-lookup"><span data-stu-id="45318-132">Default</span></span>|<span data-ttu-id="45318-133">설명</span><span class="sxs-lookup"><span data-stu-id="45318-133">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|<span data-ttu-id="45318-134">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-134">String</span></span>|<span data-ttu-id="45318-135">클래스 이름과 동일한 문자열</span><span class="sxs-lookup"><span data-stu-id="45318-135">Same string as class name</span></span>|<span data-ttu-id="45318-136">클래스를 데이터베이스 테이블과 연결된 엔터티 클래스로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-136">Designates a class as an entity class associated with a database table.</span></span>|  
+  
+ <span data-ttu-id="45318-137">자세한 내용은 <xref:System.Data.Linq.Mapping.TableAttribute>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-137">For more information, see <xref:System.Data.Linq.Mapping.TableAttribute>.</span></span>  
+  
+## <a name="columnattribute-attribute"></a><span data-ttu-id="45318-138">ColumnAttribute 특성</span><span class="sxs-lookup"><span data-stu-id="45318-138">ColumnAttribute Attribute</span></span>  
+ <span data-ttu-id="45318-139">엔터티 클래스의 멤버가 데이터베이스 테이블의 열을 나타내도록 지정하려면 이 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-139">Use this attribute to designate a member of an entity class to represent a column in a database table.</span></span> <span data-ttu-id="45318-140">이 특성은 모든 필드나 속성에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45318-140">You can apply this attribute to any field or property.</span></span>  
+  
+ <span data-ttu-id="45318-141">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 변경 내용을 데이터베이스에 저장할 때 열로 식별된 멤버만 검색 및 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="45318-141">Only those members you identify as columns are retrieved and persisted when [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saves changes to the database.</span></span> <span data-ttu-id="45318-142">이 특성이 없는 멤버는 비영구적인 것으로 간주되며 삽입 또는 업데이트를 위해 전송되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="45318-142">Members without this attribute are assumed to be non-persistent and are not submitted for inserts or updates.</span></span>  
+  
+ <span data-ttu-id="45318-143">다음 표에서는 이 특성의 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-143">The following table describes properties of this attribute.</span></span>  
+  
+|<span data-ttu-id="45318-144">속성</span><span class="sxs-lookup"><span data-stu-id="45318-144">Property</span></span>|<span data-ttu-id="45318-145">형식</span><span class="sxs-lookup"><span data-stu-id="45318-145">Type</span></span>|<span data-ttu-id="45318-146">기본</span><span class="sxs-lookup"><span data-stu-id="45318-146">Default</span></span>|<span data-ttu-id="45318-147">설명</span><span class="sxs-lookup"><span data-stu-id="45318-147">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|<span data-ttu-id="45318-148">AutoSync</span><span class="sxs-lookup"><span data-stu-id="45318-148">AutoSync</span></span>|<span data-ttu-id="45318-149">Never</span><span class="sxs-lookup"><span data-stu-id="45318-149">Never</span></span>|<span data-ttu-id="45318-150">삽입 또는 업데이트 작업 후에 값을 검색하도록 CLR(공용 언어 런타임)에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-150">Instructs the common language runtime (CLR) to retrieve the value after an insert or update operation.</span></span><br /><br /> <span data-ttu-id="45318-151">옵션: Always, Never, OnUpdate, OnInsert</span><span class="sxs-lookup"><span data-stu-id="45318-151">Options: Always, Never, OnUpdate, OnInsert.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|<span data-ttu-id="45318-152">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-152">Boolean</span></span>|`true`|<span data-ttu-id="45318-153">열이 null 값을 포함할 수 있다는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="45318-153">Indicates that a column can contain null values.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|<span data-ttu-id="45318-154">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-154">String</span></span>|<span data-ttu-id="45318-155">유추된 데이터베이스 열 형식</span><span class="sxs-lookup"><span data-stu-id="45318-155">Inferred database column type</span></span>|<span data-ttu-id="45318-156">데이터베이스 형식과 한정자를 사용하여 데이터베이스 열의 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-156">Uses database types and modifiers to specify the type of the database column.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|<span data-ttu-id="45318-157">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-157">String</span></span>|<span data-ttu-id="45318-158">Empty</span><span class="sxs-lookup"><span data-stu-id="45318-158">Empty</span></span>|<span data-ttu-id="45318-159">데이터베이스에서 계산 열을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-159">Defines a computed column in a database.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|<span data-ttu-id="45318-160">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-160">Boolean</span></span>|`false`|<span data-ttu-id="45318-161">열이 데이터베이스가 자동으로 생성하는 값을 포함한다는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="45318-161">Indicates that a column contains values that the database auto-generates.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|<span data-ttu-id="45318-162">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-162">Boolean</span></span>|`false`|<span data-ttu-id="45318-163">열이 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 상속 계층 구조에 대한 판별자 값을 포함한다는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="45318-163">Indicates that the column contains a discriminator value for a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] inheritance hierarchy.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|<span data-ttu-id="45318-164">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-164">Boolean</span></span>|`false`|<span data-ttu-id="45318-165">이 클래스 멤버가 테이블의 기본 키이거나 기본 키의 일부인 열을 나타낸다는 것을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-165">Specifies that this class member represents a column that is or is part of the primary keys of the table.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|<span data-ttu-id="45318-166">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-166">Boolean</span></span>|`false`|<span data-ttu-id="45318-167">멤버의 열 형식을 데이터베이스 타임스탬프 또는 버전 번호로 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-167">Identifies the column type of the member as a database timestamp or version number.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|<span data-ttu-id="45318-168">UpdateCheck</span><span class="sxs-lookup"><span data-stu-id="45318-168">UpdateCheck</span></span>|<span data-ttu-id="45318-169">멤버에 대한 `Always`이 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>가 아니면 `true`</span><span class="sxs-lookup"><span data-stu-id="45318-169">`Always`, unless <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> is `true` for a member</span></span>|<span data-ttu-id="45318-170">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 낙관적 동시성 충돌 감지에 접근하는 방법을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-170">Specifies how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] approaches the detection of optimistic concurrency conflicts.</span></span>|  
+  
+ <span data-ttu-id="45318-171">자세한 내용은 <xref:System.Data.Linq.Mapping.ColumnAttribute>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-171">For more information, see <xref:System.Data.Linq.Mapping.ColumnAttribute>.</span></span>  
   
 > [!NOTE]
->  AssociationAttribute 및 ColumnAttribute Storage 속성 값은 대\/소문자를 구분합니다.  예를 들어 AssociationAttribute.Storage 속성의 특성에 사용하는 값은 코드의 다른 곳에서 사용하는 해당 속성 이름과 대\/소문자가 동일해야 합니다.  이 규칙은 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]과 같이 일반적으로 대\/소문자를 구분하지 않는 프로그래밍 언어를 포함하여 모든 .NET 프로그래밍 언어에 적용됩니다.  Storage 속성에 대한 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=fullName>를 참조하세요.  
+>  <span data-ttu-id="45318-172">AssociationAttribute 및 ColumnAttribute Storage 속성 값은 대/소문자를 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-172">AssociationAttribute and ColumnAttribute Storage property values are case sensitive.</span></span> <span data-ttu-id="45318-173">예를 들어 AssociationAttribute.Storage 속성의 특성에 사용하는 값은 코드의 다른 곳에서 사용하는 해당 속성 이름과 대/소문자가 동일해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-173">For example, ensure that values used in the attribute for the AssociationAttribute.Storage property match the case for the corresponding property names used elsewhere in the code.</span></span> <span data-ttu-id="45318-174">이 규칙은 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]과 같이 일반적으로 대/소문자를 구분하지 않는 프로그래밍 언어를 포함하여 모든 .NET 프로그래밍 언어에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="45318-174">This applies to all .NET programming languages, even those which are not typically case sensitive, including [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)].</span></span> <span data-ttu-id="45318-175">Storage 속성에 대한 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-175">For more information about the Storage property, see <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.</span></span>  
   
-## InheritanceMappingAttribute 특성  
- 상속 계층 구조를 매핑하려면 이 특성을 사용합니다.  
+## <a name="associationattribute-attribute"></a><span data-ttu-id="45318-176">AssociationAttribute 특성</span><span class="sxs-lookup"><span data-stu-id="45318-176">AssociationAttribute Attribute</span></span>  
+ <span data-ttu-id="45318-177">외래 키와 기본 키 사이의 관계와 같은 데이터베이스 내 연결을 나타내려면 이 특성을 사용하여 속성을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-177">Use this attribute to designate a property to represent an association in the database, such as a foreign key to primary key relationship.</span></span> <span data-ttu-id="45318-178">관계에 대 한 자세한 내용은 참조 [하는 방법: 지도 데이터베이스 관계](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-178">For more information about relationships, see [How to: Map Database Relationships](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).</span></span>  
   
- 다음 표에서는 이 특성의 속성을 설명합니다.  
+ <span data-ttu-id="45318-179">다음 표에서는 이 특성의 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-179">The following table describes properties of this attribute.</span></span>  
   
-|속성|형식|기본|설명|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|문자열|없음  값을 제공해야 함|판별자의 코드 값을 지정합니다.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|부울|`false`|true이면 저장소의 판별자 값이 지정된 값 중 하나와 일치하지 않을 경우 이 형식의 개체를 인스턴스화합니다.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|형식|없음  값을 제공해야 함|계층 구조에서 클래스의 형식을 지정합니다.|  
+|<span data-ttu-id="45318-180">속성</span><span class="sxs-lookup"><span data-stu-id="45318-180">Property</span></span>|<span data-ttu-id="45318-181">형식</span><span class="sxs-lookup"><span data-stu-id="45318-181">Type</span></span>|<span data-ttu-id="45318-182">기본</span><span class="sxs-lookup"><span data-stu-id="45318-182">Default</span></span>|<span data-ttu-id="45318-183">설명</span><span class="sxs-lookup"><span data-stu-id="45318-183">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|<span data-ttu-id="45318-184">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-184">Boolean</span></span>|`false`|<span data-ttu-id="45318-185">외래 키 멤버가 모두 null을 허용하지 않는 연결에 배치되는 경우 연결이 null로 설정되면 개체를 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-185">When placed on an association whose foreign key members are all non-nullable, deletes the object when the association is set to null.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|<span data-ttu-id="45318-186">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-186">String</span></span>|<span data-ttu-id="45318-187">없음</span><span class="sxs-lookup"><span data-stu-id="45318-187">None</span></span>|<span data-ttu-id="45318-188">삭제 동작을 연결에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-188">Adds delete behavior to an association.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|<span data-ttu-id="45318-189">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-189">Boolean</span></span>|`false`|<span data-ttu-id="45318-190">true이면 데이터베이스 관계를 나타내는 연결의 외래 키로 멤버를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-190">If true, designates the member as the foreign key in an association representing a database relationship.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|<span data-ttu-id="45318-191">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-191">Boolean</span></span>|`false`|<span data-ttu-id="45318-192">true이면 외래 키에 대한 고유성 제약 조건을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="45318-192">If true, indicates a uniqueness constraint on the foreign key.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|<span data-ttu-id="45318-193">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-193">String</span></span>|<span data-ttu-id="45318-194">관련 클래스의 ID</span><span class="sxs-lookup"><span data-stu-id="45318-194">ID of the related class</span></span>|<span data-ttu-id="45318-195">대상 엔터티 클래스의 하나 이상의 멤버를 연결 반대쪽의 키 값으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-195">Designates one or more members of the target entity class as key values on the other side of the association.</span></span>|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|<span data-ttu-id="45318-196">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-196">String</span></span>|<span data-ttu-id="45318-197">포함하는 클래스의 ID</span><span class="sxs-lookup"><span data-stu-id="45318-197">ID of the containing class</span></span>|<span data-ttu-id="45318-198">연결 이쪽의 키 값을 나타낼 이 엔터티 클래스의 멤버를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-198">Designates members of this entity class to represent the key values on this side of the association.</span></span>|  
   
- 자세한 내용은 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>을 참조하세요.  
+ <span data-ttu-id="45318-199">자세한 내용은 <xref:System.Data.Linq.Mapping.AssociationAttribute>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-199">For more information, see <xref:System.Data.Linq.Mapping.AssociationAttribute>.</span></span>  
   
-## FunctionAttribute 특성  
- 데이터베이스의 저장 프로시저나 사용자 정의 함수를 나타내는 것으로 메서드를 지정하려면 이 특성을 사용합니다.  
+> [!NOTE]
+>  <span data-ttu-id="45318-200">AssociationAttribute 및 ColumnAttribute Storage 속성 값은 대/소문자를 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-200">AssociationAttribute and ColumnAttribute Storage property values are case sensitive.</span></span> <span data-ttu-id="45318-201">예를 들어 AssociationAttribute.Storage 속성의 특성에 사용하는 값은 코드의 다른 곳에서 사용하는 해당 속성 이름과 대/소문자가 동일해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-201">For example, ensure that values used in the attribute for the AssociationAttribute.Storage property match the case for the corresponding property names used elsewhere in the code.</span></span> <span data-ttu-id="45318-202">이 규칙은 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]과 같이 일반적으로 대/소문자를 구분하지 않는 프로그래밍 언어를 포함하여 모든 .NET 프로그래밍 언어에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="45318-202">This applies to all .NET programming languages, even those which are not typically case sensitive, including [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)].</span></span> <span data-ttu-id="45318-203">Storage 속성에 대한 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-203">For more information about the Storage property, see <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.</span></span>  
   
- 다음 표에서는 이 특성의 속성을 설명합니다.  
+## <a name="inheritancemappingattribute-attribute"></a><span data-ttu-id="45318-204">InheritanceMappingAttribute 특성</span><span class="sxs-lookup"><span data-stu-id="45318-204">InheritanceMappingAttribute Attribute</span></span>  
+ <span data-ttu-id="45318-205">상속 계층 구조를 매핑하려면 이 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-205">Use this attribute to map an inheritance hierarchy.</span></span>  
   
-|속성|형식|기본|설명|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|부울|`false`|false이면 저장 프로시저에 대한 매핑을 나타냅니다.  true이면 사용자 정의 함수에 대한 매핑을 나타냅니다.|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|문자열|데이터베이스에 있는 이름과 동일한 문자열|저장 프로시저 또는 사용자 정의 함수의 이름을 지정합니다.|  
+ <span data-ttu-id="45318-206">다음 표에서는 이 특성의 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-206">The following table describes properties of this attribute.</span></span>  
   
- 자세한 내용은 <xref:System.Data.Linq.Mapping.FunctionAttribute>을 참조하세요.  
+|<span data-ttu-id="45318-207">속성</span><span class="sxs-lookup"><span data-stu-id="45318-207">Property</span></span>|<span data-ttu-id="45318-208">형식</span><span class="sxs-lookup"><span data-stu-id="45318-208">Type</span></span>|<span data-ttu-id="45318-209">기본</span><span class="sxs-lookup"><span data-stu-id="45318-209">Default</span></span>|<span data-ttu-id="45318-210">설명</span><span class="sxs-lookup"><span data-stu-id="45318-210">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|<span data-ttu-id="45318-211">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-211">String</span></span>|<span data-ttu-id="45318-212">없음</span><span class="sxs-lookup"><span data-stu-id="45318-212">None.</span></span> <span data-ttu-id="45318-213">값을 제공해야 함</span><span class="sxs-lookup"><span data-stu-id="45318-213">Value must be supplied.</span></span>|<span data-ttu-id="45318-214">판별자의 코드 값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-214">Specifies the code value of the discriminator.</span></span>|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|<span data-ttu-id="45318-215">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-215">Boolean</span></span>|`false`|<span data-ttu-id="45318-216">true이면 저장소의 판별자 값이 지정된 값 중 하나와 일치하지 않을 경우 이 형식의 개체를 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-216">If true, instantiates an object of this type when no discriminator value in the store matches any one of the specified values.</span></span>|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|<span data-ttu-id="45318-217">형식</span><span class="sxs-lookup"><span data-stu-id="45318-217">Type</span></span>|<span data-ttu-id="45318-218">없음</span><span class="sxs-lookup"><span data-stu-id="45318-218">None.</span></span> <span data-ttu-id="45318-219">값을 제공해야 함</span><span class="sxs-lookup"><span data-stu-id="45318-219">Value must be supplied.</span></span>|<span data-ttu-id="45318-220">계층 구조에서 클래스의 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-220">Specifies the type of the class in the hierarchy.</span></span>|  
   
-## ParameterAttribute 특성  
- 저장 프로시저 메서드에서 입력 매개 변수를 매핑하려면 이 특성을 사용합니다.  
+ <span data-ttu-id="45318-221">자세한 내용은 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-221">For more information, see <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>.</span></span>  
   
- 다음 표에서는 이 특성의 속성을 설명합니다.  
+## <a name="functionattribute-attribute"></a><span data-ttu-id="45318-222">FunctionAttribute 특성</span><span class="sxs-lookup"><span data-stu-id="45318-222">FunctionAttribute Attribute</span></span>  
+ <span data-ttu-id="45318-223">데이터베이스의 저장 프로시저나 사용자 정의 함수를 나타내는 것으로 메서드를 지정하려면 이 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-223">Use this attribute to designate a method as representing a stored procedure or user-defined function in the database.</span></span>  
   
-|속성|형식|기본|설명|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|문자열|없음|데이터베이스 형식을 지정합니다.|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|문자열|데이터베이스에 있는 매개 변수 이름과 동일한 문자열|매개 변수의 이름을 지정합니다.|  
+ <span data-ttu-id="45318-224">다음 표에서는 이 특성의 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-224">The following table describes the properties of this attribute.</span></span>  
   
- 자세한 내용은 <xref:System.Data.Linq.Mapping.ParameterAttribute>을 참조하세요.  
+|<span data-ttu-id="45318-225">속성</span><span class="sxs-lookup"><span data-stu-id="45318-225">Property</span></span>|<span data-ttu-id="45318-226">형식</span><span class="sxs-lookup"><span data-stu-id="45318-226">Type</span></span>|<span data-ttu-id="45318-227">기본</span><span class="sxs-lookup"><span data-stu-id="45318-227">Default</span></span>|<span data-ttu-id="45318-228">설명</span><span class="sxs-lookup"><span data-stu-id="45318-228">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|<span data-ttu-id="45318-229">Boolean</span><span class="sxs-lookup"><span data-stu-id="45318-229">Boolean</span></span>|`false`|<span data-ttu-id="45318-230">false이면 저장 프로시저에 대한 매핑을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="45318-230">If false, indicates mapping to a stored procedure.</span></span> <span data-ttu-id="45318-231">true이면 사용자 정의 함수에 대한 매핑을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="45318-231">If true, indicates mapping to a user-defined function.</span></span>|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|<span data-ttu-id="45318-232">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-232">String</span></span>|<span data-ttu-id="45318-233">데이터베이스에 있는 이름과 동일한 문자열</span><span class="sxs-lookup"><span data-stu-id="45318-233">Same string as name in the database</span></span>|<span data-ttu-id="45318-234">저장 프로시저 또는 사용자 정의 함수의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-234">Specifies the name of the stored procedure or user-defined function.</span></span>|  
   
-## ResultTypeAttribute 특성  
- 결과 형식을 지정하려면 이 특성을 사용합니다.  
+ <span data-ttu-id="45318-235">자세한 내용은 <xref:System.Data.Linq.Mapping.FunctionAttribute>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-235">For more information, see <xref:System.Data.Linq.Mapping.FunctionAttribute>.</span></span>  
   
- 다음 표에서는 이 특성의 속성을 설명합니다.  
+## <a name="parameterattribute-attribute"></a><span data-ttu-id="45318-236">ParameterAttribute 특성</span><span class="sxs-lookup"><span data-stu-id="45318-236">ParameterAttribute Attribute</span></span>  
+ <span data-ttu-id="45318-237">저장 프로시저 메서드에서 입력 매개 변수를 매핑하려면 이 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-237">Use this attribute to map input parameters on stored procedure methods.</span></span>  
   
-|속성|형식|기본|설명|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|형식|\(None\)|<xref:System.Data.Linq.IMultipleResults>를 반환하는 저장 프로시저에 매핑되는 메서드에 사용됩니다.  저장 프로시저에 대해 유효하거나 필요한 형식 매핑을 선언합니다.|  
+ <span data-ttu-id="45318-238">다음 표에서는 이 특성의 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-238">The following table describes properties of this attribute.</span></span>  
   
- 자세한 내용은 <xref:System.Data.Linq.Mapping.ResultTypeAttribute>을 참조하세요.  
+|<span data-ttu-id="45318-239">속성</span><span class="sxs-lookup"><span data-stu-id="45318-239">Property</span></span>|<span data-ttu-id="45318-240">형식</span><span class="sxs-lookup"><span data-stu-id="45318-240">Type</span></span>|<span data-ttu-id="45318-241">기본</span><span class="sxs-lookup"><span data-stu-id="45318-241">Default</span></span>|<span data-ttu-id="45318-242">설명</span><span class="sxs-lookup"><span data-stu-id="45318-242">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|<span data-ttu-id="45318-243">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-243">String</span></span>|<span data-ttu-id="45318-244">없음</span><span class="sxs-lookup"><span data-stu-id="45318-244">None</span></span>|<span data-ttu-id="45318-245">데이터베이스 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-245">Specifies database type.</span></span>|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|<span data-ttu-id="45318-246">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-246">String</span></span>|<span data-ttu-id="45318-247">데이터베이스에 있는 매개 변수 이름과 동일한 문자열</span><span class="sxs-lookup"><span data-stu-id="45318-247">Same string as parameter name in database</span></span>|<span data-ttu-id="45318-248">매개 변수의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-248">Specifies a name for the parameter.</span></span>|  
   
-## DataAttribute 특성  
- 이름 및 전용 저장소 필드를 지정하려면 이 특성을 사용합니다.  
+ <span data-ttu-id="45318-249">자세한 내용은 <xref:System.Data.Linq.Mapping.ParameterAttribute>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-249">For more information, see <xref:System.Data.Linq.Mapping.ParameterAttribute>.</span></span>  
   
- 다음 표에서는 이 특성의 속성을 설명합니다.  
+## <a name="resulttypeattribute-attribute"></a><span data-ttu-id="45318-250">ResultTypeAttribute 특성</span><span class="sxs-lookup"><span data-stu-id="45318-250">ResultTypeAttribute Attribute</span></span>  
+ <span data-ttu-id="45318-251">결과 형식을 지정하려면 이 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-251">Use this attribute to specify a result type.</span></span>  
   
-|속성|형식|기본|설명|  
-|--------|--------|--------|--------|  
-|<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|문자열|데이터베이스에 있는 이름과 동일|테이블, 열 등의 이름을 지정합니다.|  
-|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|문자열|공용 접근자|기본 저장소 필드의 이름을 지정합니다.|  
+ <span data-ttu-id="45318-252">다음 표에서는 이 특성의 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-252">The following table describes properties of this attribute.</span></span>  
   
- 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute>을 참조하세요.  
+|<span data-ttu-id="45318-253">속성</span><span class="sxs-lookup"><span data-stu-id="45318-253">Property</span></span>|<span data-ttu-id="45318-254">형식</span><span class="sxs-lookup"><span data-stu-id="45318-254">Type</span></span>|<span data-ttu-id="45318-255">기본</span><span class="sxs-lookup"><span data-stu-id="45318-255">Default</span></span>|<span data-ttu-id="45318-256">설명</span><span class="sxs-lookup"><span data-stu-id="45318-256">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|<span data-ttu-id="45318-257">형식</span><span class="sxs-lookup"><span data-stu-id="45318-257">Type</span></span>|<span data-ttu-id="45318-258">(None)</span><span class="sxs-lookup"><span data-stu-id="45318-258">(None)</span></span>|<span data-ttu-id="45318-259"><xref:System.Data.Linq.IMultipleResults>를 반환하는 저장 프로시저에 매핑되는 메서드에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="45318-259">Used on methods mapped to stored procedures that return <xref:System.Data.Linq.IMultipleResults>.</span></span> <span data-ttu-id="45318-260">저장 프로시저에 대해 유효하거나 필요한 형식 매핑을 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-260">Declares the valid or expected type mappings for the stored procedure.</span></span>|  
   
-## 참고 항목  
- [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+ <span data-ttu-id="45318-261">자세한 내용은 <xref:System.Data.Linq.Mapping.ResultTypeAttribute>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="45318-261">For more information, see <xref:System.Data.Linq.Mapping.ResultTypeAttribute>.</span></span>  
+  
+## <a name="dataattribute-attribute"></a><span data-ttu-id="45318-262">DataAttribute 특성</span><span class="sxs-lookup"><span data-stu-id="45318-262">DataAttribute Attribute</span></span>  
+ <span data-ttu-id="45318-263">이름 및 전용 저장소 필드를 지정하려면 이 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-263">Use this attribute to specify names and private storage fields.</span></span>  
+  
+ <span data-ttu-id="45318-264">다음 표에서는 이 특성의 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-264">The following table describes properties of this attribute.</span></span>  
+  
+|<span data-ttu-id="45318-265">속성</span><span class="sxs-lookup"><span data-stu-id="45318-265">Property</span></span>|<span data-ttu-id="45318-266">형식</span><span class="sxs-lookup"><span data-stu-id="45318-266">Type</span></span>|<span data-ttu-id="45318-267">기본</span><span class="sxs-lookup"><span data-stu-id="45318-267">Default</span></span>|<span data-ttu-id="45318-268">설명</span><span class="sxs-lookup"><span data-stu-id="45318-268">Description</span></span>|  
+|--------------|----------|-------------|-----------------|  
+|<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|<span data-ttu-id="45318-269">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-269">String</span></span>|<span data-ttu-id="45318-270">데이터베이스에 있는 이름과 동일</span><span class="sxs-lookup"><span data-stu-id="45318-270">Same as name in database</span></span>|<span data-ttu-id="45318-271">테이블, 열 등의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-271">Specifies the name of the table, column, and so on.</span></span>|  
+|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|<span data-ttu-id="45318-272">문자열</span><span class="sxs-lookup"><span data-stu-id="45318-272">String</span></span>|<span data-ttu-id="45318-273">공용 접근자</span><span class="sxs-lookup"><span data-stu-id="45318-273">Public accessors</span></span>|<span data-ttu-id="45318-274">기본 저장소 필드의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="45318-274">Specifies the name of the underlying storage field.</span></span>|  
+  
+ <span data-ttu-id="45318-275">자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute>을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="45318-275">For more information, see <xref:System.Data.Linq.Mapping.DataAttribute>.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="45318-276">참고 항목</span><span class="sxs-lookup"><span data-stu-id="45318-276">See Also</span></span>  
+ [<span data-ttu-id="45318-277">참조</span><span class="sxs-lookup"><span data-stu-id="45318-277">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

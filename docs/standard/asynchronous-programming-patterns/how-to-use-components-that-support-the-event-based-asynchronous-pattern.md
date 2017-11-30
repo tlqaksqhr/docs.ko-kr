@@ -1,49 +1,55 @@
 ---
-title: "How to: Use Components That Support the Event-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event-based Asynchronous Pattern"
-  - "ProgressChangedEventArgs class"
-  - "BackgroundWorker component"
-  - "events [.NET Framework], asynchronous"
-  - "Asynchronous Pattern"
-  - "AsyncOperationManager class"
-  - "threading [.NET Framework], asynchronous features"
-  - "components [.NET Framework], asynchronous"
-  - "AsyncOperation class"
-  - "threading [Windows Forms], asynchronous features"
-  - "AsyncCompletedEventArgs class"
+title: "방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- Asynchronous Pattern
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- components [.NET Framework], asynchronous
+- AsyncOperation class
+- threading [Windows Forms], asynchronous features
+- AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 49e03a8d886ccd4ed6e4b2a19692c1874f5928ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Use Components That Support the Event-based Asynchronous Pattern
-많은 구성 요소들은 작업을 비동기식으로 수행하는 옵션을 제공합니다.  예를 들어, <xref:System.Media.SoundPlayer> 및 <xref:System.Windows.Forms.PictureBox> 구성 요소를 사용하면 주 스레드가 중단 없이 계속 실행되는 동안 소리 및 이미지를 "백그라운드로" 로드할 수 있습니다.  
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a><span data-ttu-id="49962-102">방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용</span><span class="sxs-lookup"><span data-stu-id="49962-102">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>
+<span data-ttu-id="49962-103">여러 구성 요소를 비동기적으로 작업을 수행할 수 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-103">Many components provide you with the option of performing their work asynchronously.</span></span> <span data-ttu-id="49962-104"><xref:System.Media.SoundPlayer> 및 <xref:System.Windows.Forms.PictureBox> 구성 요소, 예를 들어 소리 로드할 수 있습니다 및 하면 주 스레드가 계속 중단 없이 실행 되는 동안 백그라운드"에서" 이미지를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-104">The <xref:System.Media.SoundPlayer> and <xref:System.Windows.Forms.PictureBox> components, for example, enable you to load sounds and images "in the background" while your main thread continues running without interruption.</span></span>  
   
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) 를 지원하는 클래스에 비동기 메서드를 사용하는 작업은 다른 이벤트의 경우에서와 같이 구성 요소의 *MethodName*`Completed` 이벤트에 이벤트 처리기를 연결하는 것처럼 간단히 수행할 수 있습니다.  *MethodName*`Async` 메서드를 호출할 떄 응용 프로그램은 *MethodName*`Completed` 이벤트가 발생될 때까지 중단 없이 계속 실행됩니다.  이벤트 처리기에서 <xref:System.ComponentModel.AsyncCompletedEventArgs> 매개 변수를 검토하여 비동기 작업이 완료되었는지 아니면 취소되었는지 확인할 수 있습니다.  
+ <span data-ttu-id="49962-105">지 원하는 클래스에서 비동기 메서드를 사용 하 여는 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) 구성 요소의 이벤트 처리기를 연결할 처럼 간단 해질 수 *MethodName* `Completed` 이벤트 와 마찬가지로 다른 이벤트에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-105">Using asynchronous methods on a class that supports the [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) can be as simple as attaching an event handler to the component's *MethodName*`Completed` event, just as you would for any other event.</span></span> <span data-ttu-id="49962-106">호출 하는 경우는 *MethodName* `Async` 메서드, 응용 프로그램이 실행 될 때까지 중단 없이 계속 됩니다는 *MethodName* `Completed` 이벤트가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-106">When you call the *MethodName*`Async` method, your application will continue running without interruption until the *MethodName*`Completed` event is raised.</span></span> <span data-ttu-id="49962-107">이벤트 처리기에서 검사할 수 있습니다는 <xref:System.ComponentModel.AsyncCompletedEventArgs> 매개 변수를 비동기 작업이 성공적으로 완료 또는 취소 되었는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-107">In your event handler, you can examine the <xref:System.ComponentModel.AsyncCompletedEventArgs> parameter to determine if the asynchronous operation successfully completed or if it was canceled.</span></span>  
   
- 이벤트 처리기를 사용하는 방법에 대한 자세한 내용은 [이벤트 처리기 개요](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)를 참조하십시오.  
+ <span data-ttu-id="49962-108">이벤트 처리기를 사용 하는 방법에 대 한 자세한 내용은 참조 [이벤트 처리기 개요](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-108">For more information about using event handlers, see [Event Handlers Overview](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span></span>  
   
- 다음 절차에서는 <xref:System.Windows.Forms.PictureBox> 컨트롤의 비동기 이미지 로드 기능을 사용하는 방법을 보여 줍니다.  
+ <span data-ttu-id="49962-109">다음 절차에서는 비동기 이미지 로드 기능을 사용 하는 <xref:System.Windows.Forms.PictureBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-109">The following procedure shows how to use the asynchronous image-loading capability of a <xref:System.Windows.Forms.PictureBox> control.</span></span>  
   
-### PictureBox 컨트롤을 사용하여 이미지를 비동기식으로 로드하려면  
+### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a><span data-ttu-id="49962-110">이미지를 비동기적으로 로드 하려면 PictureBox 컨트롤을 사용 하도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="49962-110">To enable a PictureBox control to asynchronously load an image</span></span>  
   
-1.  폼에 <xref:System.Windows.Forms.PictureBox> 구성 요소의 인스턴스를 만듭니다.  
+1.  <span data-ttu-id="49962-111">인스턴스를 만들고는 <xref:System.Windows.Forms.PictureBox> 양식에 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="49962-111">Create an instance of the <xref:System.Windows.Forms.PictureBox> component in your form.</span></span>  
   
-2.  <xref:System.Windows.Forms.PictureBox.LoadCompleted> 이벤트에 이벤트 처리기를 할당합니다.  
+2.  <span data-ttu-id="49962-112">이벤트 처리기를 할당 된 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="49962-112">Assign an event handler to the <xref:System.Windows.Forms.PictureBox.LoadCompleted> event.</span></span>  
   
-     여기에서 비동기 다운로드 중에 발생했을 수 있는 오류를 확인합니다.  작업의 취소 여부도 확인할 수 있습니다.  
+     <span data-ttu-id="49962-113">여기에서 비동기 다운로드 하는 동안 발생 했을 수 있는 오류를 확인 하십시오.</span><span class="sxs-lookup"><span data-stu-id="49962-113">Check for any errors that may have occurred during the asynchronous download here.</span></span> <span data-ttu-id="49962-114">또한 취소를 확인 하는 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="49962-114">This is also where you check for cancellation.</span></span>  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#2)]  
@@ -51,7 +57,7 @@ caps.handback.revision: 15
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  폼에 `loadButton` 및 `cancelLoadButton`의 두 단추를 추가합니다.  <xref:System.Windows.Forms.Control.Click> 이벤트를 추가하여 다운로드를 시작 및 취소합니다.  
+3.  <span data-ttu-id="49962-115">호출 하는 두 개의 단추 추가 `loadButton` 및 `cancelLoadButton`, 폼에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49962-115">Add two buttons, called `loadButton` and `cancelLoadButton`, to your form.</span></span> <span data-ttu-id="49962-116">추가 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 시작 하 고 다운로드를 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-116">Add <xref:System.Windows.Forms.Control.Click> event handlers to start and cancel the download.</span></span>  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -59,11 +65,11 @@ caps.handback.revision: 15
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4.  응용 프로그램을 실행합니다.  
+4.  <span data-ttu-id="49962-117">응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-117">Run your application.</span></span>  
   
-     이미지 다운로드가 진행될 때 폼을 자유롭게 이동하고 최소화하고 최대화할 수 있습니다.  
+     <span data-ttu-id="49962-118">이미지 다운로드 진행 됨에 따라 폼을 자유롭게 이동할 수, 최소화 및 최대화 합니다.</span><span class="sxs-lookup"><span data-stu-id="49962-118">As the image download proceeds, you can move the form freely, minimize it, and maximize it.</span></span>  
   
-## 참고 항목  
- [방법: 백그라운드에서 작업 실행](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)   
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)   
- [NOT IN BUILD: Multithreading in Visual Basic](http://msdn.microsoft.com/ko-kr/c731a50c-09c1-4468-9646-54c86b75d269)
+## <a name="see-also"></a><span data-ttu-id="49962-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="49962-119">See Also</span></span>  
+ [<span data-ttu-id="49962-120">방법: 백그라운드에서 작업 실행</span><span class="sxs-lookup"><span data-stu-id="49962-120">How to: Run an Operation in the Background</span></span>](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [<span data-ttu-id="49962-121">이벤트 기반 비동기 패턴 개요</span><span class="sxs-lookup"><span data-stu-id="49962-121">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ [<span data-ttu-id="49962-122">빌드에 없음: Visual Basic의 다중 스레딩</span><span class="sxs-lookup"><span data-stu-id="49962-122">NOT IN BUILD: Multithreading in Visual Basic</span></span>](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)

@@ -1,71 +1,51 @@
 ---
 title: "-target:module(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /target:module
-dev_langs:
-- CSharp
+f1_keywords: /target:module
 helpviewer_keywords:
 - -target compiler options [C#], /target:module
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2b54ea9085ecc23d4a535d440d0634c997f22615
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 23c91fe0e4002ebf4c002eb4e0c7e25020fed356
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="targetmodule-c-compiler-options"></a>/target:module(C# 컴파일러 옵션)
-이 옵션은 컴파일러에서 어셈블리 매니페스트를 생성하지 않도록 합니다.  
+# <a name="targetmodule-c-compiler-options"></a><span data-ttu-id="8b016-102">/target:module(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="8b016-102">/target:module (C# Compiler Options)</span></span>
+<span data-ttu-id="8b016-103">이 옵션은 컴파일러에서 어셈블리 매니페스트를 생성하지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="8b016-103">This option causes the compiler to not generate an assembly manifest.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="8b016-104">구문</span><span class="sxs-lookup"><span data-stu-id="8b016-104">Syntax</span></span>  
   
 ```console  
 /target:module  
 ```  
   
-## <a name="remarks"></a>설명  
- 기본적으로 이 옵션으로 컴파일하여 생성되는 출력 파일의 확장명은 .netmodule입니다.  
+## <a name="remarks"></a><span data-ttu-id="8b016-105">설명</span><span class="sxs-lookup"><span data-stu-id="8b016-105">Remarks</span></span>  
+ <span data-ttu-id="8b016-106">기본적으로 이 옵션으로 컴파일하여 생성되는 출력 파일의 확장명은 .netmodule입니다.</span><span class="sxs-lookup"><span data-stu-id="8b016-106">By default, the output file created by compiling with this option will have an extension of .netmodule.</span></span>  
   
- 어셈블리 매니페스트가 없는 파일은 .NET Framework 공용 언어 런타임에서 로드할 수 없습니다. 그러나 이러한 파일은 [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)을 통해 어셈블리의 어셈블리 매니페스트에 통합할 수 있습니다.  
+ <span data-ttu-id="8b016-107">어셈블리 매니페스트가 없는 파일은 .NET Framework 공용 언어 런타임에서 로드할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8b016-107">A file that does not have an assembly manifest cannot be loaded by the .NET Framework common language runtime.</span></span> <span data-ttu-id="8b016-108">그러나 이러한 파일은 [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)을 통해 어셈블리의 어셈블리 매니페스트에 통합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8b016-108">However, such a file can be incorporated into the assembly manifest of an assembly by means of [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).</span></span>  
   
- 둘 이상의 모듈이 단일 컴파일에서 생성될 경우 한 모듈의 [내부](../../../csharp/language-reference/keywords/internal.md) 형식을 컴파일에 포함된 다른 모듈에서 사용할 수 있습니다. 한 모듈의 코드가 다른 모듈의 `internal` 형식을 참조하는 경우 **/addmodule**을 통해 두 모듈을 모두 어셈블리 매니페스트에 통합해야 합니다.  
+ <span data-ttu-id="8b016-109">둘 이상의 모듈이 단일 컴파일에서 생성될 경우 한 모듈의 [내부](../../../csharp/language-reference/keywords/internal.md) 형식을 컴파일에 포함된 다른 모듈에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8b016-109">If more than one module is created in a single compilation, [internal](../../../csharp/language-reference/keywords/internal.md) types in one module will be available to other modules in the compilation.</span></span> <span data-ttu-id="8b016-110">한 모듈의 코드가 다른 모듈의 `internal` 형식을 참조하는 경우 **/addmodule**을 통해 두 모듈을 모두 어셈블리 매니페스트에 통합해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8b016-110">When code in one module references `internal` types in another module, then both modules must be incorporated into an assembly manifest, by means of **/addmodule**.</span></span>  
   
- Visual Studio 개발 환경에서는 모듈을 만들 수 없습니다.  
+ <span data-ttu-id="8b016-111">Visual Studio 개발 환경에서는 모듈을 만들 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8b016-111">Creating a module is not supported in the Visual Studio development environment.</span></span>  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.  
+ <span data-ttu-id="8b016-112">이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8b016-112">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a>예제  
- `in.cs`를 컴파일하고 `in.netmodule`을 만듭니다.  
+## <a name="example"></a><span data-ttu-id="8b016-113">예제</span><span class="sxs-lookup"><span data-stu-id="8b016-113">Example</span></span>  
+ <span data-ttu-id="8b016-114">`in.cs`를 컴파일하고 `in.netmodule`을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8b016-114">Compile `in.cs`, creating `in.netmodule`:</span></span>  
   
 ```console  
 csc /target:module in.cs  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [/target(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="8b016-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8b016-115">See Also</span></span>  
+ [<span data-ttu-id="8b016-116">/target (C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="8b016-116">/target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [<span data-ttu-id="8b016-117">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="8b016-117">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

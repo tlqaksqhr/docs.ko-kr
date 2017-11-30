@@ -1,155 +1,162 @@
 ---
-title: ".NET Framework에서 문자열 비교 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Compare 메서드"
-  - "CompareOrdinal 메서드"
-  - "CompareTo 메서드"
-  - "EndsWith 메서드"
-  - "Equals 메서드"
-  - "IndexOf 메서드"
-  - "LastIndexOf 메서드"
-  - "StartsWith 메서드"
-  - "문자열[.NET Framework], 비교"
-  - "문자열의 값 비교"
+title: ".NET에서 문자열 비교"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- value comparisons of strings
+- LastIndexOf method
+- CompareTo method
+- IndexOf method
+- Compare method
+- strings [.NET Framework], comparing
+- CompareOrdinal method
+- EndsWith method
+- Equals method
+- StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 34aa922155943d1b4d39de2e7c33ebc1228e1083
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# .NET Framework에서 문자열 비교
-.NET Framework는 문자열의 값을 비교하는 여러 메서드를 제공합니다. 다음 표에서는 값 비교 메서드를 나열하고 설명합니다.  
+# <a name="comparing-strings-in-net"></a><span data-ttu-id="dda83-102">.NET에서 문자열 비교</span><span class="sxs-lookup"><span data-stu-id="dda83-102">Comparing Strings in .NET</span></span>
+<span data-ttu-id="dda83-103">.NET에서는 문자열의 값을 비교하는 여러 가지 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-103">.NET provides several methods to compare the values of strings.</span></span> <span data-ttu-id="dda83-104">다음 표에서는 값 비교 메서드를 나열하고 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-104">The following table lists and describes the value-comparison methods.</span></span>  
   
-|메서드 이름|기능|  
-|------------|--------|  
-|<xref:System.String.Compare%2A?displayProperty=fullName>|두 문자열의 값을 비교합니다. 정수 값을 반환합니다.|  
-|<xref:System.String.CompareOrdinal%2A?displayProperty=fullName>|로컬 문화권에 관계없이 두 문자열을 비교합니다. 정수 값을 반환합니다.|  
-|<xref:System.String.CompareTo%2A?displayProperty=fullName>|현재 문자열 개체를 다른 문자열과 비교합니다. 정수 값을 반환합니다.|  
-|<xref:System.String.StartsWith%2A?displayProperty=fullName>|문자열이 전달된 문자열로 시작하는지 여부를 확인합니다. 부울 값을 반환합니다.|  
-|<xref:System.String.EndsWith%2A?displayProperty=fullName>|문자열이 전달된 문자열로 끝나는지 여부를 확인합니다. 부울 값을 반환합니다.|  
-|<xref:System.String.Equals%2A?displayProperty=fullName>|두 문자열이 같은지 여부를 확인합니다. 부울 값을 반환합니다.|  
-|<xref:System.String.IndexOf%2A?displayProperty=fullName>|검사 중인 문자열의 처음부터 시작하여 문자 또는 문자열의 인덱스 위치를 반환합니다. 정수 값을 반환합니다.|  
-|<xref:System.String.LastIndexOf%2A?displayProperty=fullName>|검사 중인 문자열의 끝부터 시작하여 문자 또는 문자열의 인덱스 위치를 반환합니다. 정수 값을 반환합니다.|  
+|<span data-ttu-id="dda83-105">메서드 이름</span><span class="sxs-lookup"><span data-stu-id="dda83-105">Method name</span></span>|<span data-ttu-id="dda83-106">기능</span><span class="sxs-lookup"><span data-stu-id="dda83-106">Use</span></span>|  
+|-----------------|---------|  
+|<xref:System.String.Compare%2A?displayProperty=nameWithType>|<span data-ttu-id="dda83-107">두 문자열의 값을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-107">Compares the values of two strings.</span></span> <span data-ttu-id="dda83-108">정수 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-108">Returns an integer value.</span></span>|  
+|<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|<span data-ttu-id="dda83-109">로컬 문화권에 관계없이 두 문자열을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-109">Compares two strings without regard to local culture.</span></span> <span data-ttu-id="dda83-110">정수 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-110">Returns an integer value.</span></span>|  
+|<xref:System.String.CompareTo%2A?displayProperty=nameWithType>|<span data-ttu-id="dda83-111">현재 문자열 개체를 다른 문자열과 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-111">Compares the current string object to another string.</span></span> <span data-ttu-id="dda83-112">정수 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-112">Returns an integer value.</span></span>|  
+|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|<span data-ttu-id="dda83-113">문자열이 전달된 문자열로 시작하는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-113">Determines whether a string begins with the string passed.</span></span> <span data-ttu-id="dda83-114">부울 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-114">Returns a Boolean value.</span></span>|  
+|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|<span data-ttu-id="dda83-115">문자열이 전달된 문자열로 끝나는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-115">Determines whether a string ends with the string passed.</span></span> <span data-ttu-id="dda83-116">부울 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-116">Returns a Boolean value.</span></span>|  
+|<xref:System.String.Equals%2A?displayProperty=nameWithType>|<span data-ttu-id="dda83-117">두 문자열이 같은지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-117">Determines whether two strings are the same.</span></span> <span data-ttu-id="dda83-118">부울 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-118">Returns a Boolean value.</span></span>|  
+|<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|<span data-ttu-id="dda83-119">검사 중인 문자열의 처음부터 시작하여 문자 또는 문자열의 인덱스 위치를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-119">Returns the index position of a character or string, starting from the beginning of the string you are examining.</span></span> <span data-ttu-id="dda83-120">정수 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-120">Returns an integer value.</span></span>|  
+|<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|<span data-ttu-id="dda83-121">검사 중인 문자열의 끝부터 시작하여 문자 또는 문자열의 인덱스 위치를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-121">Returns the index position of a character or string, starting from the end of the string you are examining.</span></span> <span data-ttu-id="dda83-122">정수 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-122">Returns an integer value.</span></span>|  
   
-## 비교  
- 정적 <xref:System.String.Compare%2A?displayProperty=fullName> 메서드는 두 문자열을 비교하는 철저한 방법을 제공합니다. 이 메서드는 문화권을 인식합니다. 이 함수를 사용하여 두 문자열 또는 두 문자열의 부분 문자열을 비교할 수 있습니다. 또한 대\/소문자와 문화권 차이를 반영하거나 무시하는 오버로드가 제공됩니다. 다음 표에서는 이 메서드가 반환할 수 있는 세 가지 정수 값을 보여 줍니다.  
+## <a name="compare"></a><span data-ttu-id="dda83-123">비교</span><span class="sxs-lookup"><span data-stu-id="dda83-123">Compare</span></span>  
+ <span data-ttu-id="dda83-124">정적 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 두 문자열을 비교하는 철저한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-124">The static <xref:System.String.Compare%2A?displayProperty=nameWithType> method provides a thorough way of comparing two strings.</span></span> <span data-ttu-id="dda83-125">이 메서드는 문화권을 인식합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-125">This method is culturally aware.</span></span> <span data-ttu-id="dda83-126">이 함수를 사용하여 두 문자열 또는 두 문자열의 부분 문자열을 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-126">You can use this function to compare two strings or substrings of two strings.</span></span> <span data-ttu-id="dda83-127">또한 대/소문자와 문화권 차이를 반영하거나 무시하는 오버로드가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-127">Additionally, overloads are provided that regard or disregard case and cultural variance.</span></span> <span data-ttu-id="dda83-128">다음 표에서는 이 메서드가 반환할 수 있는 세 가지 정수 값을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-128">The following table shows the three integer values that this method might return.</span></span>  
   
-|반환 값|조건|  
-|----------|--------|  
-|음의 정수|정렬 순서에서 첫 번째 문자열이 두 번째 문자열 앞에 옵니다.<br /><br /> 또는<br /><br /> 첫 번째 문자열이 `null`입니다.|  
-|0|첫 번째 문자열과 두 번째 문자열이 같습니다.<br /><br /> 또는<br /><br /> 두 문자열이 모두 `null`입니다.|  
-|양의 정수<br /><br /> 또는<br /><br /> 1|정렬 순서에서 첫 번째 문자열이 두 번째 문자열 뒤에 옵니다.<br /><br /> 또는<br /><br /> 두 번째 문자열이 `null`입니다.|  
+|<span data-ttu-id="dda83-129">반환 값</span><span class="sxs-lookup"><span data-stu-id="dda83-129">Return value</span></span>|<span data-ttu-id="dda83-130">조건</span><span class="sxs-lookup"><span data-stu-id="dda83-130">Condition</span></span>|  
+|------------------|---------------|  
+|<span data-ttu-id="dda83-131">음의 정수</span><span class="sxs-lookup"><span data-stu-id="dda83-131">A negative integer</span></span>|<span data-ttu-id="dda83-132">정렬 순서에서 첫 번째 문자열이 두 번째 문자열 앞에 옵니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-132">The first string precedes the second string in the sort order.</span></span><br /><br /> <span data-ttu-id="dda83-133">또는</span><span class="sxs-lookup"><span data-stu-id="dda83-133">-or-</span></span><br /><br /> <span data-ttu-id="dda83-134">첫 번째 문자열이 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-134">The first string is `null`.</span></span>|  
+|<span data-ttu-id="dda83-135">0</span><span class="sxs-lookup"><span data-stu-id="dda83-135">0</span></span>|<span data-ttu-id="dda83-136">첫 번째 문자열과 두 번째 문자열이 같습니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-136">The first string and the second string are equal.</span></span><br /><br /> <span data-ttu-id="dda83-137">또는</span><span class="sxs-lookup"><span data-stu-id="dda83-137">-or-</span></span><br /><br /> <span data-ttu-id="dda83-138">두 문자열이 모두 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-138">Both strings are `null`.</span></span>|  
+|<span data-ttu-id="dda83-139">양의 정수</span><span class="sxs-lookup"><span data-stu-id="dda83-139">A positive integer</span></span><br /><br /> <span data-ttu-id="dda83-140">또는</span><span class="sxs-lookup"><span data-stu-id="dda83-140">-or-</span></span><br /><br /> <span data-ttu-id="dda83-141">1</span><span class="sxs-lookup"><span data-stu-id="dda83-141">1</span></span>|<span data-ttu-id="dda83-142">정렬 순서에서 첫 번째 문자열이 두 번째 문자열 뒤에 옵니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-142">The first string follows the second string in the sort order.</span></span><br /><br /> <span data-ttu-id="dda83-143">또는</span><span class="sxs-lookup"><span data-stu-id="dda83-143">-or-</span></span><br /><br /> <span data-ttu-id="dda83-144">두 번째 문자열이 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-144">The second string is `null`.</span></span>|  
   
 > [!IMPORTANT]
->  <xref:System.String.Compare%2A?displayProperty=fullName> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다.<xref:System.String.Compare%2A?displayProperty=fullName> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다\(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨\). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=fullName> 메서드를 사용합니다.  
+>  <span data-ttu-id="dda83-145"><xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-145">The <xref:System.String.Compare%2A?displayProperty=nameWithType> method is primarily intended for use when ordering or sorting strings.</span></span> <span data-ttu-id="dda83-146"><xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨).</span><span class="sxs-lookup"><span data-stu-id="dda83-146">You should not use the <xref:System.String.Compare%2A?displayProperty=nameWithType> method to test for equality (that is, to explicitly look for a return value of 0 with no regard for whether one string is less than or greater than the other).</span></span> <span data-ttu-id="dda83-147">대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-147">Instead, to determine whether two strings are equal, use the <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method.</span></span>  
   
- 다음 예제에서는 <xref:System.String.Compare%2A?displayProperty=fullName> 메서드를 사용하여 두 문자열의 상대 값을 확인합니다.  
+ <span data-ttu-id="dda83-148">다음 예제에서는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 사용하여 두 문자열의 상대 값을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-148">The following example uses the <xref:System.String.Compare%2A?displayProperty=nameWithType> method to determine the relative values of two strings.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#6)]
  [!code-csharp[Conceptual.String.BasicOps#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#6)]
  [!code-vb[Conceptual.String.BasicOps#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#6)]  
   
- 이 예제에서는 콘솔에 `-1`를 표시합니다.  
+ <span data-ttu-id="dda83-149">이 예제에서는 콘솔에 `-1` 를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-149">This example displays `-1` to the console.</span></span>  
   
- 앞의 예제는 기본적으로 문화권을 구분합니다. 문화권을 구분하지 않는 문자열 비교를 수행하려면 *culture* 매개 변수를 제공하여 사용할 문화권을 지정할 수 있게 해주는 <xref:System.String.Compare%2A?displayProperty=fullName> 메서드의 오버로드를 사용합니다.<xref:System.String.Compare%2A?displayProperty=fullName> 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
+ <span data-ttu-id="dda83-150">앞의 예제는 기본적으로 문화권을 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-150">The preceding example is culture-sensitive by default.</span></span> <span data-ttu-id="dda83-151">오버 로드를 사용 하 여 문화권을 구분 하지 않는 문자열 비교를 수행 하려면는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 제공 하 여 사용할 문화권을 지정할 수 있습니다는 *문화권* 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-151">To perform a culture-insensitive string comparison, use an overload of the <xref:System.String.Compare%2A?displayProperty=nameWithType> method that allows you to specify the culture to use by supplying a *culture* parameter.</span></span> <span data-ttu-id="dda83-152">사용 하는 방법을 보여 주는 예제는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 문화권을 구분 하지 않는 비교를 수행 하는 메서드를 참조 [문화권을 구분 하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-152">For an example that demonstrates how to use the <xref:System.String.Compare%2A?displayProperty=nameWithType> method to perform a culture-insensitive comparison, see [Performing Culture-Insensitive String Comparisons](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).</span></span>  
   
-## CompareOrdinal  
- <xref:System.String.CompareOrdinal%2A?displayProperty=fullName> 메서드는 로컬 문화권을 고려하지 않고 두 문자열 개체를 비교합니다. 이 메서드의 반환 값은 앞의 표에서 **Compare** 메서드가 반환하는 값과 동일합니다.  
+## <a name="compareordinal"></a><span data-ttu-id="dda83-153">CompareOrdinal</span><span class="sxs-lookup"><span data-stu-id="dda83-153">CompareOrdinal</span></span>  
+ <span data-ttu-id="dda83-154"><xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드는 로컬 문화권을 고려하지 않고 두 문자열 개체를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-154">The <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> method compares two string objects without considering the local culture.</span></span> <span data-ttu-id="dda83-155">이 메서드의 반환 값은 앞의 표에서 **Compare** 메서드가 반환하는 값과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-155">The return values of this method are identical to the values returned by the **Compare** method in the previous table.</span></span>  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareOrdinal%2A?displayProperty=fullName> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다.<xref:System.String.CompareOrdinal%2A?displayProperty=fullName> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다\(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨\). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=fullName> 메서드를 사용합니다.  
+>  <span data-ttu-id="dda83-156"><xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-156">The <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> method is primarily intended for use when ordering or sorting strings.</span></span> <span data-ttu-id="dda83-157"><xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨).</span><span class="sxs-lookup"><span data-stu-id="dda83-157">You should not use the <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> method to test for equality (that is, to explicitly look for a return value of 0 with no regard for whether one string is less than or greater than the other).</span></span> <span data-ttu-id="dda83-158">대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-158">Instead, to determine whether two strings are equal, use the <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method.</span></span>  
   
- 다음 예제에서는 **CompareOrdinal** 메서드를 사용하여 두 문자열의 값을 비교합니다.  
+ <span data-ttu-id="dda83-159">다음 예제에서는 **CompareOrdinal** 메서드를 사용하여 두 문자열의 값을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-159">The following example uses the **CompareOrdinal** method to compare the values of two strings.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#7)]
  [!code-csharp[Conceptual.String.BasicOps#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#7)]
  [!code-vb[Conceptual.String.BasicOps#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#7)]  
   
- 이 예제에서는 콘솔에 `-32`를 표시합니다.  
+ <span data-ttu-id="dda83-160">이 예제에서는 콘솔에 `-32` 를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-160">This example displays `-32` to the console.</span></span>  
   
-## CompareTo  
- <xref:System.String.CompareTo%2A?displayProperty=fullName> 메서드는 현재 문자열 개체가 캡슐화하는 문자열을 다른 문자열 또는 개체와 비교합니다. 이 메서드의 반환 값은 앞의 표에서 <xref:System.String.Compare%2A?displayProperty=fullName> 메서드가 반환하는 값과 동일합니다.  
+## <a name="compareto"></a><span data-ttu-id="dda83-161">CompareTo</span><span class="sxs-lookup"><span data-stu-id="dda83-161">CompareTo</span></span>  
+ <span data-ttu-id="dda83-162"><xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 현재 문자열 개체가 캡슐화하는 문자열을 다른 문자열 또는 개체와 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-162">The <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method compares the string that the current string object encapsulates to another string or object.</span></span> <span data-ttu-id="dda83-163">이 메서드의 반환 값은 앞의 표에서 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드가 반환하는 값과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-163">The return values of this method are identical to the values returned by the <xref:System.String.Compare%2A?displayProperty=nameWithType> method in the previous table.</span></span>  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareTo%2A?displayProperty=fullName> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다.<xref:System.String.CompareTo%2A?displayProperty=fullName> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다\(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨\). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=fullName> 메서드를 사용합니다.  
+>  <span data-ttu-id="dda83-164"><xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-164">The <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method is primarily intended for use when ordering or sorting strings.</span></span> <span data-ttu-id="dda83-165"><xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨).</span><span class="sxs-lookup"><span data-stu-id="dda83-165">You should not use the <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method to test for equality (that is, to explicitly look for a return value of 0 with no regard for whether one string is less than or greater than the other).</span></span> <span data-ttu-id="dda83-166">대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-166">Instead, to determine whether two strings are equal, use the <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method.</span></span>  
   
- 다음 예제에서는 <xref:System.String.CompareTo%2A?displayProperty=fullName> 메서드를 사용하여 `string1` 개체를 `string2` 개체와 비교합니다.  
+ <span data-ttu-id="dda83-167">다음 예제에서는 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 사용하여 `string1` 개체를 `string2` 개체와 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-167">The following example uses the <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method to compare the `string1` object to the `string2` object.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#8)]
  [!code-csharp[Conceptual.String.BasicOps#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#8)]
  [!code-vb[Conceptual.String.BasicOps#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#8)]  
   
- 이 예제에서는 콘솔에 `-1`를 표시합니다.  
+ <span data-ttu-id="dda83-168">이 예제에서는 콘솔에 `-1` 를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-168">This example displays `-1` to the console.</span></span>  
   
- <xref:System.String.CompareTo%2A?displayProperty=fullName> 메서드의 모든 오버로드는 기본적으로 문화권 구분 및 대\/소문자 구분 비교 작업을 수행합니다. 문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다. 코드를 이해하기 쉽도록 문화권 구분 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>를 지정하고 문화권을 구분하지 않는 작업에는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>를 지정하여 **String.Compare** 메서드를 대신하는 것이 좋습니다.**String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
+ <span data-ttu-id="dda83-169">모든 오버 로드는 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 기본적으로 문화권 구분 및 대/소문자 구분 비교를 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-169">All overloads of the <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method perform culture-sensitive and case-sensitive comparisons by default.</span></span> <span data-ttu-id="dda83-170">문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-170">No overloads of this method are provided that allow you to perform a culture-insensitive comparison.</span></span> <span data-ttu-id="dda83-171">코드의 명확성을 위해 사용 하는 권장는 **String.Compare** 메서드 대신 지정 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 문화권 구분 작업에 대 한 또는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 문화권을 구분 하지 않는 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-171">For code clarity, we recommend that you use the **String.Compare** method instead, specifying <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> for culture-sensitive operations or <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> for culture-insensitive operations.</span></span> <span data-ttu-id="dda83-172">**String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dda83-172">For examples that demonstrate how to use the **String.Compare** method to perform both culture-sensitive and culture-insensitive comparisons, see [Performing Culture-Insensitive String Comparisons](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).</span></span>  
   
-## 같음  
- **String.Equals** 메서드는 두 문자열이 같은지 여부를 쉽게 확인할 수 있습니다. 대\/소문자 구분 메서드는 **true** 또는 **false** 부울 값을 반환합니다. 다음 예제와 같이 기존 클래스에서 사용할 수 있습니다. 다음 예제에서는 **Equals** 메서드를 사용하여 문자열 개체에 "Hello World"라는 구가 포함되어 있는지 여부를 확인합니다.  
+## <a name="equals"></a><span data-ttu-id="dda83-173">같음</span><span class="sxs-lookup"><span data-stu-id="dda83-173">Equals</span></span>  
+ <span data-ttu-id="dda83-174">**String.Equals** 메서드는 두 문자열이 같은지 여부를 쉽게 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-174">The **String.Equals** method can easily determine if two strings are the same.</span></span> <span data-ttu-id="dda83-175">대/소문자 구분 메서드는 **true** 또는 **false** 부울 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-175">This case-sensitive method returns a **true** or **false** Boolean value.</span></span> <span data-ttu-id="dda83-176">다음 예제와 같이 기존 클래스에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-176">It can be used from an existing class, as illustrated in the next example.</span></span> <span data-ttu-id="dda83-177">다음 예제에서는 **Equals** 메서드를 사용하여 문자열 개체에 "Hello World"라는 구가 포함되어 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-177">The following example uses the **Equals** method to determine whether a string object contains the phrase "Hello World".</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#9)]
  [!code-csharp[Conceptual.String.BasicOps#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#9)]
  [!code-vb[Conceptual.String.BasicOps#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#9)]  
   
- 이 예제에서는 콘솔에 `True`를 표시합니다.  
+ <span data-ttu-id="dda83-178">이 예제에서는 콘솔에 `True` 를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-178">This example displays `True` to the console.</span></span>  
   
- 이 메서드는 정적 메서드로 사용될 수도 있습니다. 다음 예제에서는 정적 메서드를 사용하여 두 문자열 개체를 비교합니다.  
+ <span data-ttu-id="dda83-179">이 메서드는 정적 메서드로 사용될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-179">This method can also be used as a static method.</span></span> <span data-ttu-id="dda83-180">다음 예제에서는 정적 메서드를 사용하여 두 문자열 개체를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-180">The following example compares two string objects using a static method.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#10](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#10)]
  [!code-csharp[Conceptual.String.BasicOps#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#10)]
  [!code-vb[Conceptual.String.BasicOps#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#10)]  
   
- 이 예제에서는 콘솔에 `True`를 표시합니다.  
+ <span data-ttu-id="dda83-181">이 예제에서는 콘솔에 `True` 를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-181">This example displays `True` to the console.</span></span>  
   
-## StartsWith 및 EndsWith  
- **String.StartsWith** 메서드를 사용하여 문자열 개체가 다른 문자열을 포함하는 동일한 문자로 시작하는지 여부를 확인합니다. 이 대\/소문자 구분 메서드는 현재 문자열 개체가 전달된 문자열로 시작하는 경우 **true**를 반환하고, 그러지 않은 경우 **false**를 반환합니다. 다음 예제에서는 이 메서드를 사용하여 문자열 개체가 "Hello"로 시작하는지 여부를 확인합니다.  
+## <a name="startswith-and-endswith"></a><span data-ttu-id="dda83-182">StartsWith 및 EndsWith</span><span class="sxs-lookup"><span data-stu-id="dda83-182">StartsWith and EndsWith</span></span>  
+ <span data-ttu-id="dda83-183">**String.StartsWith** 메서드를 사용하여 문자열 개체가 다른 문자열을 포함하는 동일한 문자로 시작하는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-183">You can use the **String.StartsWith** method to determine whether a string object begins with the same characters that encompass another string.</span></span> <span data-ttu-id="dda83-184">이 대/소문자 구분 메서드는 현재 문자열 개체가 전달된 문자열로 시작하는 경우 **true** 를 반환하고, 그러지 않은 경우 **false** 를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-184">This case-sensitive method returns **true** if the current string object begins with the passed string and **false** if it does not.</span></span> <span data-ttu-id="dda83-185">다음 예제에서는 이 메서드를 사용하여 문자열 개체가 "Hello"로 시작하는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-185">The following example uses this method to determine if a string object begins with "Hello".</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#11)]
  [!code-csharp[Conceptual.String.BasicOps#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#11)]
  [!code-vb[Conceptual.String.BasicOps#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#11)]  
   
- 이 예제에서는 콘솔에 `True`를 표시합니다.  
+ <span data-ttu-id="dda83-186">이 예제에서는 콘솔에 `True` 를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-186">This example displays `True` to the console.</span></span>  
   
- **String.EndsWith** 메서드는 전달된 문자열을 현재 문자열 개체의 끝에 있는 문자와 비교합니다. 역시 부울 값을 반환합니다. 다음 예제에서는 **EndsWith** 메서드를 사용하여 문자열의 끝을 검사합니다.  
+ <span data-ttu-id="dda83-187">**String.EndsWith** 메서드는 전달된 문자열을 현재 문자열 개체의 끝에 있는 문자와 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-187">The **String.EndsWith** method compares a passed string to the characters that exist at the end of the current string object.</span></span> <span data-ttu-id="dda83-188">역시 부울 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-188">It also returns a Boolean value.</span></span> <span data-ttu-id="dda83-189">다음 예제에서는 **EndsWith** 메서드를 사용하여 문자열의 끝을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-189">The following example checks the end of a string using the **EndsWith** method.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#12)]
  [!code-csharp[Conceptual.String.BasicOps#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#12)]
  [!code-vb[Conceptual.String.BasicOps#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#12)]  
   
- 이 예제에서는 콘솔에 `False` 를 표시합니다.  
+ <span data-ttu-id="dda83-190">이 예제에서는 콘솔에 `False` 를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-190">This example displays `False` to the console.</span></span>  
   
-## IndexOf 및 LastIndexOf  
- **String.IndexOf** 메서드를 사용하여 문자열 내에서 특정 문자의 첫 번째 발생 위치를 확인합니다. 이 대\/소문자 구분 메서드는 문자열의 시작 부분에서 계산을 시작하고 0부터 시작하는 인덱스를 사용하여 전달된 문자의 위치를 반환합니다. 문자를 찾을 수 없는 경우 \-1 값이 반환됩니다.  
+## <a name="indexof-and-lastindexof"></a><span data-ttu-id="dda83-191">IndexOf 및 LastIndexOf</span><span class="sxs-lookup"><span data-stu-id="dda83-191">IndexOf and LastIndexOf</span></span>  
+ <span data-ttu-id="dda83-192">**String.IndexOf** 메서드를 사용하여 문자열 내에서 특정 문자의 첫 번째 발생 위치를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-192">You can use the **String.IndexOf** method to determine the position of the first occurrence of a particular character within a string.</span></span> <span data-ttu-id="dda83-193">이 대/소문자 구분 메서드는 문자열의 시작 부분에서 계산을 시작하고 0부터 시작하는 인덱스를 사용하여 전달된 문자의 위치를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-193">This case-sensitive method starts counting from the beginning of a string and returns the position of a passed character using a zero-based index.</span></span> <span data-ttu-id="dda83-194">문자를 찾을 수 없는 경우 -1 값이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-194">If the character cannot be found, a value of –1 is returned.</span></span>  
   
- 다음 예제에서는 **IndexOf** 메서드를 사용하여 문자열에서 '`l`' 문자의 첫 번째 발생을 검색합니다.  
+ <span data-ttu-id="dda83-195">다음 예제에서는 **IndexOf** 메서드를 사용하여 문자열에서 '`l`' 문자의 첫 번째 발생을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-195">The following example uses the **IndexOf** method to search for the first occurrence of the '`l`' character in a string.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#13](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#13)]
  [!code-csharp[Conceptual.String.BasicOps#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#13)]
  [!code-vb[Conceptual.String.BasicOps#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#13)]  
   
- 이 예제에서는 콘솔에 `2`를 표시합니다.  
+ <span data-ttu-id="dda83-196">이 예제에서는 콘솔에 `2` 를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-196">This example displays `2` to the console.</span></span>  
   
- **String.LastIndexOf** 메서드는 문자열 내에서 특정 문자의 마지막 발생 위치를 반환한다는 점을 제외하고 **String.IndexOf** 메서드와 비슷합니다. 대\/소문자를 구분하며 0부터 시작하는 인덱스를 사용합니다.  
+ <span data-ttu-id="dda83-197">**String.LastIndexOf** 메서드는 문자열 내에서 특정 문자의 마지막 발생 위치를 반환한다는 점을 제외하고 **String.IndexOf** 메서드와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-197">The **String.LastIndexOf** method is similar to the **String.IndexOf** method except that it returns the position of the last occurrence of a particular character within a string.</span></span> <span data-ttu-id="dda83-198">대/소문자를 구분하며 0부터 시작하는 인덱스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-198">It is case-sensitive and uses a zero-based index.</span></span>  
   
- 다음 예제에서는 **LastIndexOf** 메서드를 사용하여 문자열에서 '`l`' 문자의 마지막 발생을 검색합니다.  
+ <span data-ttu-id="dda83-199">다음 예제에서는 **LastIndexOf** 메서드를 사용하여 문자열에서 '`l`' 문자의 마지막 발생을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-199">The following example uses the **LastIndexOf** method to search for the last occurrence of the '`l`' character in a string.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#14)]
  [!code-csharp[Conceptual.String.BasicOps#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#14)]
  [!code-vb[Conceptual.String.BasicOps#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#14)]  
   
- 이 예제에서는 콘솔에 `9`를 표시합니다.  
+ <span data-ttu-id="dda83-200">이 예제에서는 콘솔에 `9` 를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-200">This example displays `9` to the console.</span></span>  
   
- 두 메서드는 모두 **String.Remove** 메서드와 함께 사용할 때 유용합니다. 문자 또는 해당 문자로 시작하는 단어를 제거하기 위해 **IndexOf** 또는 **LastIndexOf** 메서드 중 하나를 사용하여 문자의 위치를 검색한 다음 해당 위치를 **Remove** 메서드에 제공할 수 있습니다.  
+ <span data-ttu-id="dda83-201">두 메서드는 모두 **String.Remove** 메서드와 함께 사용할 때 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-201">Both methods are useful when used in conjunction with the **String.Remove** method.</span></span> <span data-ttu-id="dda83-202">문자 또는 해당 문자로 시작하는 단어를 제거하기 위해 **IndexOf** 또는 **LastIndexOf** 메서드 중 하나를 사용하여 문자의 위치를 검색한 다음 해당 위치를 **Remove** 메서드에 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dda83-202">You can use either the **IndexOf** or **LastIndexOf** methods to retrieve the position of a character, and then supply that position to the **Remove** method in order to remove a character or a word that begins with that character.</span></span>  
   
-## 참고 항목  
- [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)   
- [Culture의 영향을 받지 않는 문자열 작업 수행](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a><span data-ttu-id="dda83-203">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dda83-203">See Also</span></span>  
+ [<span data-ttu-id="dda83-204">기본적인 문자열 작업</span><span class="sxs-lookup"><span data-stu-id="dda83-204">Basic String Operations</span></span>](../../../docs/standard/base-types/basic-string-operations.md)  
+ [<span data-ttu-id="dda83-205">Culture의 영향을 받지 않는 문자열 작업 수행</span><span class="sxs-lookup"><span data-stu-id="dda83-205">Performing Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

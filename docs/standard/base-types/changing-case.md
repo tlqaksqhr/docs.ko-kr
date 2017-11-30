@@ -1,76 +1,82 @@
 ---
-title: ".NET Framework에서 대/소문자 바꾸기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "대/소문자 구분"
-  - "소문자"
-  - "문자열[.NET Framework], 대/소문자"
-  - "ToLower 메서드"
-  - "ToUpper 메서드"
-  - "대문자"
+title: ".NET Framework에서 대/소문자 바꾸기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- strings [.NET Framework], case
+- case sensitivity
+- ToUpper method
+- ToLower method
+- uppercase
+- lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# .NET Framework에서 대/소문자 바꾸기
-사용자 입력을 수락하는 응용 프로그램을 작성하는 경우 데이터를 입력할 때 사용하는 대\/소문자를 확신할 수 없습니다.  특히 사용자 인터페이스에 표시하는 경우 문자열의 대\/소문자를 일관되게 표시하려는 경우가 많습니다.  다음 표에서는 세 가지 대\/소문자 변경 메서드를 설명합니다.  처음 두 메서드는 문화권을 수락하는 오버로드를 제공합니다.  
+# <a name="changing-case-in-net"></a><span data-ttu-id="b5c20-102">.NET에서 대/소문자 바꾸기</span><span class="sxs-lookup"><span data-stu-id="b5c20-102">Changing Case in .NET</span></span>
+<span data-ttu-id="b5c20-103">사용자 입력을 수락하는 응용 프로그램을 작성하는 경우 데이터를 입력할 때 사용하는 대/소문자를 확신할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-103">If you write an application that accepts input from a user, you can never be sure what case he or she will use to enter the data.</span></span> <span data-ttu-id="b5c20-104">특히 사용자 인터페이스에 표시하는 경우 문자열의 대/소문자를 일관되게 표시하려는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-104">Often, you want strings to be cased consistently, particularly if you are displaying them in the user interface.</span></span> <span data-ttu-id="b5c20-105">다음 표에서는 세 가지 대/소문자 변경 메서드를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-105">The following table describes three case-changing methods.</span></span> <span data-ttu-id="b5c20-106">처음 두 메서드는 문화권을 수락하는 오버로드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-106">The first two methods provide an overload that accepts a culture.</span></span>  
   
-|메서드 이름|기능|  
-|------------|--------|  
-|<xref:System.String.ToUpper%2A?displayProperty=fullName>|문자열의 모든 문자를 대문자로 변환합니다.|  
-|<xref:System.String.ToLower%2A?displayProperty=fullName>|문자열의 모든 문자를 소문자로 변환합니다.|  
-|<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName>|문자열에서 단어의 첫 글자를 대문자로 변환합니다.|  
+|<span data-ttu-id="b5c20-107">메서드 이름</span><span class="sxs-lookup"><span data-stu-id="b5c20-107">Method name</span></span>|<span data-ttu-id="b5c20-108">기능</span><span class="sxs-lookup"><span data-stu-id="b5c20-108">Use</span></span>|  
+|-----------------|---------|  
+|<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|<span data-ttu-id="b5c20-109">문자열의 모든 문자를 대문자로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-109">Converts all characters in a string to uppercase.</span></span>|  
+|<xref:System.String.ToLower%2A?displayProperty=nameWithType>|<span data-ttu-id="b5c20-110">문자열의 모든 문자를 소문자로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-110">Converts all characters in a string to lowercase.</span></span>|  
+|<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|<span data-ttu-id="b5c20-111">문자열에서 단어의 첫 글자를 대문자로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-111">Converts a string to title case.</span></span>|  
   
 > [!WARNING]
->  문자열을 비교하거나 같은지 테스트하기 위해 <xref:System.String.ToUpper%2A?displayProperty=fullName> 및 <xref:System.String.ToLower%2A?displayProperty=fullName> 메서드를 사용하여 문자열을 변환하면 안 됩니다.  자세한 내용은 [대\/소문자가 혼합된 문자열 비교](#Comparing) 섹션을 참조하세요.  
+>  <span data-ttu-id="b5c20-112">문자열을 비교하거나 같은지 테스트하기 위해 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 및 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열을 변환하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-112">Note that the <xref:System.String.ToUpper%2A?displayProperty=nameWithType> and <xref:System.String.ToLower%2A?displayProperty=nameWithType> methods should not be used to convert strings in order to compare them or test them for equality.</span></span> <span data-ttu-id="b5c20-113">자세한 내용은 참조는 [/소문자가 혼합 된 문자열 비교](#Comparing) 섹션.</span><span class="sxs-lookup"><span data-stu-id="b5c20-113">For more information, see the [Comparing strings of mixed case](#Comparing) section.</span></span>  
   
 <a name="Comparing"></a>   
-## 대\/소문자가 혼합된 문자열 비교  
- 대\/소문자가 혼합된 문자열을 비교하여 순서를 확인하려면 <xref:System.String.CompareTo%2A?displayProperty=fullName> 메서드의 오버로드 중 하나를 `comparisonType` 매개 변수와 함께 호출하고 `comparisonType` 인수에 대해 <xref:System.StringComparison?displayProperty=fullName>, <xref:System.StringComparison?displayProperty=fullName> 또는 <xref:System.StringComparison?displayProperty=fullName> 값을 제공합니다.  현재 문화권이 아닌 특정 문화권을 사용하여 비교하려면 <xref:System.String.CompareTo%2A?displayProperty=fullName> 메서드의 오버로드를 `culture` 및 `options` 매개 변수 둘 다와 함께 호출하고 `options` 인수로 <xref:System.Globalization.CompareOptions?displayProperty=fullName> 값을 제공합니다.  
+## <a name="comparing-strings-of-mixed-case"></a><span data-ttu-id="b5c20-114">대/소문자가 혼합된 문자열 비교</span><span class="sxs-lookup"><span data-stu-id="b5c20-114">Comparing strings of mixed case</span></span>  
+ <span data-ttu-id="b5c20-115">대/소문자가 혼합된 문자열을 비교하여 순서를 확인하려면 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나를 `comparisonType` 매개 변수와 함께 호출하고 `comparisonType` 인수에 대해 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> 또는 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-115">To compare strings of mixed case to determine their ordering, call one of the overloads of the <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method with a `comparisonType` parameter, and provide a value of either <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>, or <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> for the `comparisonType` argument.</span></span> <span data-ttu-id="b5c20-116">현재 문화권이 아닌 특정 문화권을 사용하여 비교하려면 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 오버로드를 `culture` 및 `options` 매개 변수 둘 다와 함께 호출하고 `options` 인수로 <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-116">For a comparison using a specific culture other than the current culture, call an overload of the <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method with both a `culture` and `options` parameter, and provide a value of <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> as the `options` argument.</span></span>  
   
- 대\/소문자가 혼합된 문자열을 비교하여 같은지 확인하려면 <xref:System.String.Equals%2A?displayProperty=fullName> 메서드의 오버로드 중 하나를 `comparisonType` 매개 변수와 함께 호출하고 `comparisonType` 인수에 대해 <xref:System.StringComparison?displayProperty=fullName>, <xref:System.StringComparison?displayProperty=fullName> 또는 <xref:System.StringComparison?displayProperty=fullName> 값을 제공합니다.  
+ <span data-ttu-id="b5c20-117">대/소문자가 혼합된 문자열을 비교하여 같은지 확인하려면 <xref:System.String.Equals%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나를 `comparisonType` 매개 변수와 함께 호출하고 `comparisonType` 인수에 대해 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> 또는 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-117">To compare strings of mixed case to determine whether they are equal, their, call one of the overloads of the <xref:System.String.Equals%2A?displayProperty=nameWithType> method with a `comparisonType` parameter, and provide a value of either <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>, or <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> for the `comparisonType` argument.</span></span>  
   
- 자세한 내용은 [문자열 사용에 대한 유용한 정보](../../../docs/standard/base-types/best-practices-strings.md)를 참조하세요.  
+ <span data-ttu-id="b5c20-118">자세한 내용은 [문자열 사용에 대한 모범 사례](../../../docs/standard/base-types/best-practices-strings.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b5c20-118">For more information, see [Best Practices for Using Strings](../../../docs/standard/base-types/best-practices-strings.md).</span></span>  
   
-## ToUpper  
- <xref:System.String.ToUpper%2A?displayProperty=fullName> 메서드는 문자열의 모든 문자를 대문자로 변경합니다.  다음 예제에서는 대\/소문자가 혼합된 "Hello World\!" 문자열을 대문자로 변환합니다.  
+## <a name="toupper"></a><span data-ttu-id="b5c20-119">ToUpper</span><span class="sxs-lookup"><span data-stu-id="b5c20-119">ToUpper</span></span>  
+ <span data-ttu-id="b5c20-120"><xref:System.String.ToUpper%2A?displayProperty=nameWithType> 메서드는 문자열의 모든 문자를 대문자로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-120">The <xref:System.String.ToUpper%2A?displayProperty=nameWithType> method changes all characters in a string to uppercase.</span></span> <span data-ttu-id="b5c20-121">다음 예제에서는 "Hello World!" 문자열을</span><span class="sxs-lookup"><span data-stu-id="b5c20-121">The following example converts the string "Hello World!"</span></span> <span data-ttu-id="b5c20-122">대/소문자 혼합에서 대문자로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-122">from mixed case to uppercase.</span></span>  
   
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- 앞의 예제는 기본적으로 문화권을 구분합니다. 기본적으로 현재 문화권의 대\/소문자 규칙을 적용합니다.  문화권을 구분하지 않는 대\/소문자 변경을 수행하거나 특정 문화권의 대\/소문자 규칙을 적용하려면 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=fullName> 메서드 오버로드를 사용하고 지정된 문화권을 나타내는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 값 또는 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 개체를 *culture* 매개 변수에 제공합니다.  <xref:System.String.ToUpper%2A> 메서드를 사용하여 문화권을 구분하지 않는 대\/소문자 변경을 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 대\/소문자 변경 수행](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)을 참조하세요.  
+ <span data-ttu-id="b5c20-123">앞의 예제는 기본적으로 문화권을 구분합니다. 기본적으로 현재 문화권의 대/소문자 규칙을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-123">The preceding example is culture-sensitive by default; it applies the casing conventions of the current culture.</span></span> <span data-ttu-id="b5c20-124">문화권을 구분 하지 않는 대/소문자 변경 수행 하거나 특정 문화권의 대/소문자 규칙을 적용 하려면 사용 된 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 메서드 오버 로드 하 고 값을 지정 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 또는 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 는 에지정된된문화권을나타내는개체*문화권* 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-124">To perform a culture-insensitive case change or to apply the casing conventions of a particular culture, use the <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> method overload and supply a value of <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> or a <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> object that represents the specified culture to the *culture* parameter.</span></span> <span data-ttu-id="b5c20-125">사용 하는 방법을 보여 주는 예제는 <xref:System.String.ToUpper%2A> 메서드는 문화권을 구분 하지 않는 대/소문자 변경 수행 하도록 참조 [문화권을 구분 하지 않는 대/소문자 변경 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-125">For an example that demonstrates how to use the <xref:System.String.ToUpper%2A> method to perform a culture-insensitive case change, see [Performing Culture-Insensitive Case Changes](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).</span></span>  
   
-## ToLower  
- <xref:System.String.ToLower%2A?displayProperty=fullName> 메서드는 이전 메서드와 비슷하지만 대신 문자열의 모든 문자를 소문자로 변환합니다.  다음 예제에서는 "Hello World\!" 문자열을 소문자로 변환합니다.  
+## <a name="tolower"></a><span data-ttu-id="b5c20-126">ToLower</span><span class="sxs-lookup"><span data-stu-id="b5c20-126">ToLower</span></span>  
+ <span data-ttu-id="b5c20-127"><xref:System.String.ToLower%2A?displayProperty=nameWithType> 메서드는 이전 메서드와 비슷하지만 대신 문자열의 모든 문자를 소문자로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-127">The <xref:System.String.ToLower%2A?displayProperty=nameWithType> method is similar to the previous method, but instead converts all the characters in a string to lowercase.</span></span> <span data-ttu-id="b5c20-128">다음 예제에서는 "Hello World!" 문자열을</span><span class="sxs-lookup"><span data-stu-id="b5c20-128">The following example converts the string "Hello World!"</span></span> <span data-ttu-id="b5c20-129">소문자로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-129">to lowercase.</span></span>  
   
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- 앞의 예제는 기본적으로 문화권을 구분합니다. 기본적으로 현재 문화권의 대\/소문자 규칙을 적용합니다.  문화권을 구분하지 않는 대\/소문자 변경을 수행하거나 특정 문화권의 대\/소문자 규칙을 적용하려면 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=fullName> 메서드 오버로드를 사용하고 지정된 문화권을 나타내는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 값 또는 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 개체를 *culture* 매개 변수에 제공합니다.  <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 메서드를 사용하여 문화권을 구분하지 않는 대\/소문자 변경을 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 대\/소문자 변경 수행](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)을 참조하세요.  
+ <span data-ttu-id="b5c20-130">앞의 예제는 기본적으로 문화권을 구분합니다. 기본적으로 현재 문화권의 대/소문자 규칙을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-130">The preceding example is culture-sensitive by default; it applies the casing conventions of the current culture.</span></span> <span data-ttu-id="b5c20-131">문화권을 구분 하지 않는 대/소문자 변경 수행 하거나 특정 문화권의 대/소문자 규칙을 적용 하려면 사용 된 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 메서드 오버 로드 하 고 값을 지정 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 또는 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 는 에지정된된문화권을나타내는개체*문화권* 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-131">To perform a culture-insensitive case change or to apply the casing conventions of a particular culture, use the <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> method overload and supply a value of <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> or a <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> object that represents the specified culture to the *culture* parameter.</span></span> <span data-ttu-id="b5c20-132">사용 하는 방법을 보여 주는 예제는 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 메서드는 문화권을 구분 하지 않는 대/소문자 변경 수행 하도록 참조 [문화권을 구분 하지 않는 대/소문자 변경 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-132">For an example that demonstrates how to use the <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> method to perform a culture-insensitive case change, see [Performing Culture-Insensitive Case Changes](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).</span></span>  
   
-## ToTitleCase  
- <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName>는 각 문자의 첫 문자를 대문자로 변환하고 나머지 문자를 소문자로 변환합니다.  그러나 전체적으로 대문자인 단어는 머리글자어로 간주되며 변환되지 않습니다.  
+## <a name="totitlecase"></a><span data-ttu-id="b5c20-133">ToTitleCase</span><span class="sxs-lookup"><span data-stu-id="b5c20-133">ToTitleCase</span></span>  
+ <span data-ttu-id="b5c20-134"><xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>는 각 문자의 첫 문자를 대문자로 변환하고 나머지 문자를 소문자로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-134">The <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> converts the first character of each word to uppercase and the remaining characters to lowercase.</span></span> <span data-ttu-id="b5c20-135">그러나 전체적으로 대문자인 단어는 머리글자어로 간주되며 변환되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-135">However, words that are entirely uppercase are assumed to be acronyms and are not converted.</span></span>  
   
- <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> 메서드는 문화권을 구분합니다. 즉, 특정 문화권의 대\/소문자 규칙을 사용합니다.  메서드를 호출하려면 먼저 특정 문화권의 <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=fullName> 속성에서 특정 문화권의 대\/소문자 규칙을 나타내는 <xref:System.Globalization.TextInfo> 개체를 검색합니다.  
+ <span data-ttu-id="b5c20-136"><xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 메서드는 문화권을 구분합니다. 즉, 특정 문화권의 대/소문자 규칙을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-136">The <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> method is culture-sensitive; that is, it uses the casing conventions of a particular culture.</span></span> <span data-ttu-id="b5c20-137">메서드를 호출하려면 먼저 특정 문화권의 <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> 속성에서 특정 문화권의 대/소문자 규칙을 나타내는 <xref:System.Globalization.TextInfo> 개체를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-137">In order to call the method, you first retrieve the <xref:System.Globalization.TextInfo> object that represents the casing conventions of the particular culture from the <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> property of a particular culture.</span></span>  
   
- 다음 예제에서는 배열의 각 문자열을 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> 메서드에 전달합니다.  문자열에는 적절한 제목 문자열과 머리글자어가 포함됩니다.  영어\(미국\) 문화권의 대\/소문자 규칙을 사용하여 문자열에서 단어의 첫 글자가 대문자로 변환됩니다.  
+ <span data-ttu-id="b5c20-138">다음 예제에서는 배열의 각 문자열을 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 메서드에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-138">The following example passes each string in an array to the <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> method.</span></span>  <span data-ttu-id="b5c20-139">문자열에는 적절한 제목 문자열과 머리글자어가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-139">The strings include proper title strings as well as acronyms.</span></span> <span data-ttu-id="b5c20-140">영어(미국) 문화권의 대/소문자 규칙을 사용하여 문자열에서 단어의 첫 글자가 대문자로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-140">The strings are converted to title case by using the casing conventions of the English (United States) culture.</span></span>  
   
  [!code-csharp[System.Globalization.TextInfo.ToTitleCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.textinfo.totitlecase/cs/totitlecase2.cs#1)]
  [!code-vb[System.Globalization.TextInfo.ToTitleCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.textinfo.totitlecase/vb/totitlecase2.vb#1)]  
   
- 문화권을 구분하지만 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> 메서드는 언어학적으로 올바른 대\/소문자 규칙을 제공하지 않습니다.  예를 들어 앞의 예제에서 메서드는 "a tale of two cities"를 "A Tale Of Two Cities"로 변환합니다.  그러나 en\-US 문화권에서 언어적으로 올바른 단어의 첫 글자를 대문자로 변환은 "A Tale of Two Cities"입니다.  
+ <span data-ttu-id="b5c20-141">문화권을 구분하지만 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 메서드는 언어학적으로 올바른 대/소문자 규칙을 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-141">Note that although it is culture-sensitive, the <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> method does not provide linguistically correct casing rules.</span></span> <span data-ttu-id="b5c20-142">예를 들어 앞의 예제에서 메서드는 "a tale of two cities"를 "A Tale Of Two Cities"로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-142">For instance, in the previous example, the method converts "a tale of two cities" to "A Tale Of Two Cities".</span></span> <span data-ttu-id="b5c20-143">그러나 en-US 문화권에서 언어적으로 올바른 단어의 첫 글자를 대문자로 변환은 "A Tale of Two Cities"입니다.</span><span class="sxs-lookup"><span data-stu-id="b5c20-143">However, the linguistically correct title casing for the en-US culture is "A Tale of Two Cities."</span></span>  
   
-## 참고 항목  
- [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)   
- [Culture의 영향을 받지 않는 문자열 작업 수행](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a><span data-ttu-id="b5c20-144">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b5c20-144">See Also</span></span>  
+ [<span data-ttu-id="b5c20-145">기본적인 문자열 작업</span><span class="sxs-lookup"><span data-stu-id="b5c20-145">Basic String Operations</span></span>](../../../docs/standard/base-types/basic-string-operations.md)  
+ [<span data-ttu-id="b5c20-146">Culture의 영향을 받지 않는 문자열 작업 수행</span><span class="sxs-lookup"><span data-stu-id="b5c20-146">Performing Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

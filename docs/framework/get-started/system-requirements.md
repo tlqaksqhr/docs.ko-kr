@@ -1,13 +1,9 @@
 ---
 title: ".NET Framework 시스템 요구 사항"
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - software requirements
@@ -16,91 +12,91 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-caps.latest.revision: 95
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b08bd7b78a8606f61c266da51f4079f0b5f4aac6
+ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: 18875105836ee4be0a3d3fb61a83ef6cd29b8c58
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/25/2017
 ---
+# <a name="net-framework-system-requirements"></a><span data-ttu-id="b26e9-102">.NET Framework 시스템 요구 사항</span><span class="sxs-lookup"><span data-stu-id="b26e9-102">.NET Framework system requirements</span></span>
 
-# <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
+<span data-ttu-id="b26e9-103">이 항목의 표에 나와 하드웨어, 운영 체제 및 소프트웨어 요구 사항은.NET Framework 4.5 및 해당 포인트 릴리스 (4.5.1과 4.5.2)의 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 해당 포인트 릴리스 (4.6.1 및 4.6.2) 및.NET Framework 4.7 및 해당 포인트 릴리스 (4.7.1)입니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-103">The tables in this topic provide the hardware, operating system, and software requirements for the .NET Framework 4.5 and its point releases (4.5.1 and 4.5.2), the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] and its point releases (4.6.1 and 4.6.2), and the .NET Framework 4.7 and its point release (4.7.1).</span></span> <span data-ttu-id="b26e9-104">.NET Framework용 앱을 개발할 수 있는 개발 환경을 구축하려면 또 다른 여러 가지 요구 사항을 충족해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-104">Development environments that enable you to develop apps for the .NET Framework have a separate set of requirements.</span></span>
 
-이 항목의 표에는 .NET Framework 4.7, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 해당 포인트 릴리스(4.6.1 및 4.6.2)와 .NET Framework 4.5 및 해당 포인트 릴리스(4.5.1과 4.5.2)의 하드웨어, 운영 체제 및 소프트웨어 요구 사항이 나와 있습니다. .NET Framework용 앱을 개발할 수 있는 개발 환경을 구축하려면 또 다른 여러 가지 요구 사항을 충족해야 합니다.
+<span data-ttu-id="b26e9-105">다운로드 정보와 링크에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b26e9-105">For download information and links, see [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md).</span></span>
 
-다운로드 정보와 링크에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.
+<span data-ttu-id="b26e9-106">.NET Framework 버전의 지원 기간에 대한 자세한 내용은 [Microsoft 제품 지원 수명 주기](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)를 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b26e9-106">For information on the support lifecycle of .NET Framework versions, see [Microsoft Support Lifecycle](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).</span></span>
 
-.NET Framework 버전의 지원 기간에 대한 자세한 내용은 [Microsoft 제품 지원 수명 주기](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)를 참조하십시오.
-
-## <a name="hardware-requirements"></a>하드웨어 요구 사항
+## <a name="hardware-requirements"></a><span data-ttu-id="b26e9-107">하드웨어 요구 사항</span><span class="sxs-lookup"><span data-stu-id="b26e9-107">Hardware requirements</span></span>
 
 |                          |        |
 | ------------------------ | ------ |
-| **프로세서**            | 1GHz  |
-| **RAM**                  | 512MB |
-| **디스크 공간(최소)** |        |
-| 32비트                   | 4.5GB |
-| 64비트                   | 4.5GB |
+| <span data-ttu-id="b26e9-108">**프로세서**</span><span class="sxs-lookup"><span data-stu-id="b26e9-108">**Processor**</span></span>            | <span data-ttu-id="b26e9-109">1GHz</span><span class="sxs-lookup"><span data-stu-id="b26e9-109">1 GHz</span></span>  |
+| <span data-ttu-id="b26e9-110">**RAM**</span><span class="sxs-lookup"><span data-stu-id="b26e9-110">**RAM**</span></span>                  | <span data-ttu-id="b26e9-111">512MB</span><span class="sxs-lookup"><span data-stu-id="b26e9-111">512 MB</span></span> |
+| <span data-ttu-id="b26e9-112">**디스크 공간(최소)**</span><span class="sxs-lookup"><span data-stu-id="b26e9-112">**Disk space (minimum)**</span></span> |        |
+| <span data-ttu-id="b26e9-113">32비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-113">32-bit</span></span>                   | <span data-ttu-id="b26e9-114">4.5GB</span><span class="sxs-lookup"><span data-stu-id="b26e9-114">4.5 GB</span></span> |
+| <span data-ttu-id="b26e9-115">64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-115">64-bit</span></span>                   | <span data-ttu-id="b26e9-116">4.5GB</span><span class="sxs-lookup"><span data-stu-id="b26e9-116">4.5 GB</span></span> |
 
-## <a name="installation-requirements"></a>설치 요구 사항
+## <a name="installation-requirements"></a><span data-ttu-id="b26e9-117">설치 요구 사항</span><span class="sxs-lookup"><span data-stu-id="b26e9-117">Installation requirements</span></span>
 
-.NET Framework를 설치하려면 관리자 권한이 필요합니다. .NET Framework를 설치하려는 컴퓨터에 대한 관리자 권한이 없는 경우 네트워크 관리자에게 문의하세요.
+<span data-ttu-id="b26e9-118">.NET Framework를 설치하려면 관리자 권한이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-118">The .NET Framework requires administrator privileges for installation.</span></span> <span data-ttu-id="b26e9-119">.NET Framework를 설치하려는 컴퓨터에 대한 관리자 권한이 없는 경우 네트워크 관리자에게 문의하세요.</span><span class="sxs-lookup"><span data-stu-id="b26e9-119">If you don't have administrator rights to the computer where you'd like to install the .NET Framework, contact your network administrator.</span></span>
 
-## <a name="supported-client-operating-systems"></a>지원되는 클라이언트 운영 체제
+## <a name="supported-client-operating-systems"></a><span data-ttu-id="b26e9-120">지원되는 클라이언트 운영 체제</span><span class="sxs-lookup"><span data-stu-id="b26e9-120">Supported client operating systems</span></span>
 
-| 운영 체제 | 지원되는 버전 | OS가 사전 설치됨 | 별도로 설치 가능 |
+| <span data-ttu-id="b26e9-121">운영 체제</span><span class="sxs-lookup"><span data-stu-id="b26e9-121">Operating system</span></span> | <span data-ttu-id="b26e9-122">지원되는 버전</span><span class="sxs-lookup"><span data-stu-id="b26e9-122">Supported editions</span></span> | <span data-ttu-id="b26e9-123">OS가 사전 설치됨</span><span class="sxs-lookup"><span data-stu-id="b26e9-123">Preinstalled with the OS</span></span> | <span data-ttu-id="b26e9-124">별도로 설치 가능</span><span class="sxs-lookup"><span data-stu-id="b26e9-124">Installable separately</span></span> |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows 10 작성자 업데이트 | 32비트 및 64비트 | .NET Framework 4.7 | | 
-| Windows 10 1주년 업데이트 | 32비트 및 64비트 | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|.NET Framework 4.7 |
-| Windows 10 11월 업데이트 | 32비트 및 64비트 | [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] | |
-| Windows 10 | 32비트 및 64비트 | [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] | [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |
-| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32비트, 64비트 및 ARM | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7 |
-| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32비트, 64비트 및 ARM | [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |
-| Windows 7 SP1|32비트 및 64비트 | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7 |
-| Windows Vista SP2|32비트 및 64비트 | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
-| Windows XP |32비트 및 64비트 | -- | .NET Framework 4 |
+| <span data-ttu-id="b26e9-125">Windows 10 년 작성자 업데이트</span><span class="sxs-lookup"><span data-stu-id="b26e9-125">Windows 10 Fall Creators Update</span></span> | <span data-ttu-id="b26e9-126">32비트 및 64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-126">32-bit and 64-bit</span></span> | <span data-ttu-id="b26e9-127">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-127">.NET Framework 4.7.1</span></span> | |
+| <span data-ttu-id="b26e9-128">Windows 10 작성자 업데이트</span><span class="sxs-lookup"><span data-stu-id="b26e9-128">Windows 10 Creators Update</span></span> | <span data-ttu-id="b26e9-129">32비트 및 64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-129">32-bit and 64-bit</span></span> | <span data-ttu-id="b26e9-130">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="b26e9-130">.NET Framework 4.7</span></span> | <span data-ttu-id="b26e9-131">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-131">.Net Framework 4.7.1</span></span> | 
+| <span data-ttu-id="b26e9-132">Windows 10 1주년 업데이트</span><span class="sxs-lookup"><span data-stu-id="b26e9-132">Windows 10 Anniversary Update</span></span> | <span data-ttu-id="b26e9-133">32비트 및 64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-133">32-bit and 64-bit</span></span> | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|<span data-ttu-id="b26e9-134">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="b26e9-134">.NET Framework 4.7</span></span><br/><br/><span data-ttu-id="b26e9-135">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-135">.NET Framework 4.7.1</span></span> |
+| <span data-ttu-id="b26e9-136">Windows 10 11월 업데이트</span><span class="sxs-lookup"><span data-stu-id="b26e9-136">Windows 10 November Update</span></span> | <span data-ttu-id="b26e9-137">32비트 및 64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-137">32-bit and 64-bit</span></span> | [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] | |
+| <span data-ttu-id="b26e9-138">Windows 10</span><span class="sxs-lookup"><span data-stu-id="b26e9-138">Windows 10</span></span> | <span data-ttu-id="b26e9-139">32비트 및 64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-139">32-bit and 64-bit</span></span> | [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] | [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |
+| [!INCLUDE[win81](../../../includes/win81-md.md)] | <span data-ttu-id="b26e9-140">32비트, 64비트 및 ARM</span><span class="sxs-lookup"><span data-stu-id="b26e9-140">32-bit, 64-bit, and ARM</span></span> | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br /><span data-ttu-id="b26e9-141">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="b26e9-141">.NET Framework 4.7</span></span><br/><br/><span data-ttu-id="b26e9-142">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-142">.NET Framework 4.7.1</span></span> |
+| [!INCLUDE[win8](../../../includes/win8-md.md)] | <span data-ttu-id="b26e9-143">32비트, 64비트 및 ARM</span><span class="sxs-lookup"><span data-stu-id="b26e9-143">32-bit, 64-bit, and ARM</span></span> | [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |
+| <span data-ttu-id="b26e9-144">Windows 7 SP1</span><span class="sxs-lookup"><span data-stu-id="b26e9-144">Windows 7 SP1</span></span>|<span data-ttu-id="b26e9-145">32비트 및 64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-145">32-bit and 64-bit</span></span> | -- | <span data-ttu-id="b26e9-146">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="b26e9-146">.NET Framework 4</span></span><br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br /><span data-ttu-id="b26e9-147">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="b26e9-147">.NET Framework 4.7</span></span><br/><br/><span data-ttu-id="b26e9-148">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-148">.NET Framework 4.7.1</span></span>|
+| <span data-ttu-id="b26e9-149">Windows Vista SP2</span><span class="sxs-lookup"><span data-stu-id="b26e9-149">Windows Vista SP2</span></span>|<span data-ttu-id="b26e9-150">32비트 및 64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-150">32-bit and 64-bit</span></span> | -- | <span data-ttu-id="b26e9-151">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="b26e9-151">.NET Framework 4</span></span><br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
+| <span data-ttu-id="b26e9-152">Windows XP</span><span class="sxs-lookup"><span data-stu-id="b26e9-152">Windows XP</span></span> |<span data-ttu-id="b26e9-153">32비트 및 64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-153">32-bit and 64-bit</span></span> | -- | <span data-ttu-id="b26e9-154">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="b26e9-154">.NET Framework 4</span></span> |
 
- **참고:**
+ <span data-ttu-id="b26e9-155">**참고:**</span><span class="sxs-lookup"><span data-stu-id="b26e9-155">**Notes:**</span></span>
 
-- Windows 7 시스템에서 .NET Framework를 사용하려면 Windows 7 SP1이 필요합니다. Windows 7을 사용하며 서비스 팩 1을 아직 설치하지 않은 경우 .NET Framework를 설치하기 전에 먼저 설치해야 합니다.
+- <span data-ttu-id="b26e9-156">Windows 7 시스템에서 .NET Framework를 사용하려면 Windows 7 SP1이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-156">On Windows 7 systems, the .NET Framework requires Windows 7 SP1.</span></span> <span data-ttu-id="b26e9-157">Windows 7을 사용하며 서비스 팩 1을 아직 설치하지 않은 경우 .NET Framework를 설치하기 전에 먼저 설치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-157">If you're on Windows 7 and haven't yet installed Service Pack 1, you'll need to do so before installing the .NET Framework.</span></span>
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 Windows 사전 설치 환경(Windows PE)에서 지원됩니다. 일부 기능은 Windows PE에서 지원되지 않습니다.
+- <span data-ttu-id="b26e9-158">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 Windows 사전 설치 환경(Windows PE)에서 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-158">The [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] is supported on the Windows Preinstallation Environment (Windows PE).</span></span> <span data-ttu-id="b26e9-159">일부 기능은 Windows PE에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-159">Not all features are supported on Windows PE.</span></span>
 
-- .NET Framework 4는 IA64 플랫폼도 지원합니다.
+- <span data-ttu-id="b26e9-160">.NET Framework 4는 IA64 플랫폼도 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-160">The .NET Framework 4 also supports the IA64 platform.</span></span>
 
-- 최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=168461)에서 제공하는 최신 Windows 서비스 팩으로 업그레이드하고 중요 업데이트를 설치하는 것이 좋습니다.
+- <span data-ttu-id="b26e9-161">최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=168461)에서 제공하는 최신 Windows 서비스 팩으로 업그레이드하고 중요 업데이트를 설치하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-161">For all platforms, we recommend that you upgrade to the latest Windows Service Pack and install critical updates available from the [Windows Update website](http://go.microsoft.com/fwlink/?LinkId=168461) to ensure the best compatibility and security.</span></span>
 
-- 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
+- <span data-ttu-id="b26e9-162">64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-162">On 64-bit operating systems, the .NET Framework supports both WOW64 (32-bit processing on a 64-bit machine) and native 64-bit processing.</span></span>
 
-## <a name="supported-server-operating-systems"></a>지원되는 서버 운영 체제
+## <a name="supported-server-operating-systems"></a><span data-ttu-id="b26e9-163">지원되는 서버 운영 체제</span><span class="sxs-lookup"><span data-stu-id="b26e9-163">Supported server operating systems</span></span>
 
-| 운영 체제 | 지원되는 버전 | OS가 사전 설치됨 | 별도로 설치 가능 |
+| <span data-ttu-id="b26e9-164">운영 체제</span><span class="sxs-lookup"><span data-stu-id="b26e9-164">Operating system</span></span> | <span data-ttu-id="b26e9-165">지원되는 버전</span><span class="sxs-lookup"><span data-stu-id="b26e9-165">Supported editions</span></span> | <span data-ttu-id="b26e9-166">OS가 사전 설치됨</span><span class="sxs-lookup"><span data-stu-id="b26e9-166">Preinstalled with the OS</span></span> | <span data-ttu-id="b26e9-167">별도로 설치 가능</span><span class="sxs-lookup"><span data-stu-id="b26e9-167">Installable separately</span></span> |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows Server 2016 | 64비트 | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET Framework 4.7 |
-| [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] | 64비트 | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7 |
-| [!INCLUDE[winserver8](../../../includes/winserver8-md.md)](64비트 버전) | 64비트| [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7 |
-| Windows Server 2008 R2 SP1|64비트 | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7 |
-| Windows Server 2008 SP2|32비트 및 64비트 | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
+| <span data-ttu-id="b26e9-168">Windows Server, 버전 1709</span><span class="sxs-lookup"><span data-stu-id="b26e9-168">Windows Server, version 1709</span></span> | <span data-ttu-id="b26e9-169">64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-169">64-bit</span></span> | <span data-ttu-id="b26e9-170">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-170">.NET Framework 4.7.1</span></span> | -- |
+| <span data-ttu-id="b26e9-171">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="b26e9-171">Windows Server 2016</span></span> | <span data-ttu-id="b26e9-172">64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-172">64-bit</span></span> | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | <span data-ttu-id="b26e9-173">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="b26e9-173">.NET Framework 4.7</span></span><br/><br/> <span data-ttu-id="b26e9-174">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-174">.NET Framework 4.7.1</span></span> |
+| <span data-ttu-id="b26e9-175">Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="b26e9-175">Windows Server 2012 R2</span></span> | <span data-ttu-id="b26e9-176">64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-176">64-bit</span></span> | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br /><span data-ttu-id="b26e9-177">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="b26e9-177">.NET Framework 4.7</span></span><br/><br/> <span data-ttu-id="b26e9-178">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-178">.NET Framework 4.7.1</span></span> |
+| <span data-ttu-id="b26e9-179">Windows Server 2012 (64 비트 버전)</span><span class="sxs-lookup"><span data-stu-id="b26e9-179">Windows Server 2012 (64-bit edition)</span></span> | <span data-ttu-id="b26e9-180">64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-180">64-bit</span></span>| [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br /><span data-ttu-id="b26e9-181">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="b26e9-181">.NET Framework 4.7</span></span><br/><br/><span data-ttu-id="b26e9-182">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-182">.NET Framework 4.7.1</span></span> |
+| <span data-ttu-id="b26e9-183">Windows Server 2008 R2 SP1</span><span class="sxs-lookup"><span data-stu-id="b26e9-183">Windows Server 2008 R2 SP1</span></span>|<span data-ttu-id="b26e9-184">64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-184">64-bit</span></span> | -- | <span data-ttu-id="b26e9-185">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="b26e9-185">.NET Framework 4</span></span><br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br /><span data-ttu-id="b26e9-186">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="b26e9-186">.NET Framework 4.7</span></span><br/><br/><span data-ttu-id="b26e9-187">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="b26e9-187">.NET Framework 4.7.1</span></span> |
+| <span data-ttu-id="b26e9-188">Windows Server 2008 SP2</span><span class="sxs-lookup"><span data-stu-id="b26e9-188">Windows Server 2008 SP2</span></span>|<span data-ttu-id="b26e9-189">32비트 및 64비트</span><span class="sxs-lookup"><span data-stu-id="b26e9-189">32-bit and 64-bit</span></span> | -- | <span data-ttu-id="b26e9-190">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="b26e9-190">.NET Framework 4</span></span><br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
 
- **참고:**
+ <span data-ttu-id="b26e9-191">**참고:**</span><span class="sxs-lookup"><span data-stu-id="b26e9-191">**Notes:**</span></span>
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]에 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]가 포함되기 때문에 별도로 설치할 필요가 없습니다. 마찬가지로 [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]에는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]이 포함됩니다.
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<span data-ttu-id="b26e9-192">에 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]가 포함되기 때문에 별도로 설치할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-192"> includes the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], so you don't have to install it separately.</span></span> <span data-ttu-id="b26e9-193">마찬가지로 [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]에는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-193">Similarly, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] includes the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].</span></span>
 
-- .NET Framework는 Windows Server 2008 R2 SP1 이상의 Server Core 역할에서 지원되지만, Itanium 기반 시스템의 경우 Windows Server 2008 R2에서 지원되지 않습니다.
+- <span data-ttu-id="b26e9-194">.NET Framework는 Windows Server 2008 R2 SP1 이상의 Server Core 역할에 대 한 지원이 제한 합니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-194">The .NET Framework has limited support for the Server Core Role with Windows Server 2008 R2 SP1 or later.</span></span> <span data-ttu-id="b26e9-195">참조 [Server Core.NET 기능은](https://msdn.microsoft.com/library/ee391632.aspx) 목록은 지원 되지 않는 Api에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-195">See [Server Core .NET Functionality](https://msdn.microsoft.com/library/ee391632.aspx) for a list of unsupported APIs.</span></span>
 
-- Windows Server 2008 SP2에서는 .NET Framework가 Server Core 역할에서 지원되지 않습니다.
+- <span data-ttu-id="b26e9-196">.NET Framework는 itanium 기반 시스템용 Windows Server 2008 r 2에서 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-196">The .NET Framework isn't supported on Windows Server 2008 R2 for Itanium-Based Systems.</span></span>
 
-- 최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=168461)에서 제공하는 최신 Windows 서비스 팩과 중요 업데이트로 업그레이드하는 것이 좋습니다. 일부 운영 체제에서는 최신 Windows 서비스 팩을 설치해야 할 수도 있습니다.
+- <span data-ttu-id="b26e9-197">Windows Server 2008 SP2에서는 .NET Framework가 Server Core 역할에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-197">On Windows Server 2008 SP2, the .NET Framework is not supported in the Server Core Role.</span></span>
 
-- 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
+- <span data-ttu-id="b26e9-198">최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=168461)에서 제공하는 최신 Windows 서비스 팩과 중요 업데이트로 업그레이드하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-198">For all platforms, we recommend that you upgrade to the latest Windows Service Pack and critical updates available from the [Windows Update website](http://go.microsoft.com/fwlink/?LinkId=168461) to ensure the best compatibility and security.</span></span> <span data-ttu-id="b26e9-199">일부 운영 체제에서는 최신 Windows 서비스 팩을 설치해야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-199">Installation of the latest Windows Service Pack may be required on some operating systems.</span></span>
 
-## <a name="see-also"></a>참고 항목
+- <span data-ttu-id="b26e9-200">64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="b26e9-200">On 64-bit operating systems, the .NET Framework supports both WOW64 (32-bit processing on a 64-bit machine) and native 64-bit processing.</span></span>
 
-[설치 가이드](../../../docs/framework/install/index.md)   
-[시작](../../../docs/framework/get-started/index.md)   
-[차단된 .NET Framework 설치 및 제거 문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+## <a name="see-also"></a><span data-ttu-id="b26e9-201">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b26e9-201">See also</span></span>
 
+<span data-ttu-id="b26e9-202">[설치 가이드](../../../docs/framework/install/index.md) </span><span class="sxs-lookup"><span data-stu-id="b26e9-202">[Installation Guide](../../../docs/framework/install/index.md) </span></span>  
+<span data-ttu-id="b26e9-203">[시작](../../../docs/framework/get-started/index.md) </span><span class="sxs-lookup"><span data-stu-id="b26e9-203">[Getting Started](../../../docs/framework/get-started/index.md) </span></span>  
+[<span data-ttu-id="b26e9-204">차단된 .NET Framework 설치 및 제거 문제 해결</span><span class="sxs-lookup"><span data-stu-id="b26e9-204">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

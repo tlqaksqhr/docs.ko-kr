@@ -1,75 +1,78 @@
 ---
-title: "Managed and Unmanaged Threading in Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], unmanaged"
-  - "threading [.NET Framework], managed"
-  - "managed threading"
+title: "Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], unmanaged
+- threading [.NET Framework], managed
+- managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 3c55caaff3fd96b2791e75a392a9522abfceb22e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Managed and Unmanaged Threading in Windows
-공용 언어 런타임에 의해 만들어진 스레드 및 런타임 외부에서 만들어져 코드를 실행하기 위해 관리되는 환경에 들어가는 스레드를 비롯한 모든 스레드는 <xref:System.Threading.Thread> 클래스를 통해 관리됩니다. 런타임은 해당 프로세스에서 관리되는 실행 환경 내에서 코드를 실행한 적이 있는 모든 스레드를 모니터링하며, 다른 모든 스레드는 추적하지 않습니다. 스레드는 COM interop\(런타임이 관리되는 개체를 관리되지 않는 환경에 COM 개체로 노출하므로\), COM [DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) 함수 및 플랫폼 호출을 통해 관리되는 실행 환경에 들어갈 수 있습니다.  
+# <a name="managed-and-unmanaged-threading-in-windows"></a><span data-ttu-id="4b4db-102">Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩</span><span class="sxs-lookup"><span data-stu-id="4b4db-102">Managed and Unmanaged Threading in Windows</span></span>
+<span data-ttu-id="4b4db-103">공용 언어 런타임에 의해 만들어진 스레드 및 런타임 외부에서 만들어져 코드를 실행하기 위해 관리되는 환경에 들어가는 스레드를 비롯한 모든 스레드는 <xref:System.Threading.Thread> 클래스를 통해 관리됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-103">Management of all threads is done through the <xref:System.Threading.Thread> class, including threads created by the common language runtime and those created outside the runtime that enter the managed environment to execute code.</span></span> <span data-ttu-id="4b4db-104">런타임은 해당 프로세스에서 관리되는 실행 환경 내에서 코드를 실행한 적이 있는 모든 스레드를 모니터링하며,</span><span class="sxs-lookup"><span data-stu-id="4b4db-104">The runtime monitors all the threads in its process that have ever executed code within the managed execution environment.</span></span> <span data-ttu-id="4b4db-105">다른 모든 스레드는 추적하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-105">It does not track any other threads.</span></span> <span data-ttu-id="4b4db-106">스레드는 COM interop(런타임이 관리되는 개체를 관리되지 않는 환경에 COM 개체로 노출하므로), COM [DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) 함수 및 플랫폼 호출을 통해 관리되는 실행 환경에 들어갈 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-106">Threads can enter the managed execution environment through COM interop (because the runtime exposes managed objects as COM objects to the unmanaged world), the COM [DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) function, and platform invoke.</span></span>  
   
- 관리되지 않는 스레드가 COM 호출 가능 래퍼를 통해 런타임에 들어가면 시스템에서는 해당 스레드의 스레드 로컬 저장소를 확인하여 내부의 관리되는 <xref:System.Threading.Thread>개체를 찾습니다. 이 개체를 찾은 경우 런타임이 이미 이 스레드에 대해 알고 있는 것입니다. 그러나 이 개체를 찾을 수 없으면 런타임은 새 <xref:System.Threading.Thread> 개체를 빌드하여 해당 스레드의 스레드 로컬 저장소에 설치합니다.  
+ <span data-ttu-id="4b4db-107">관리되지 않는 스레드가 COM 호출 가능 래퍼를 통해 런타임에 들어가면 시스템에서는 해당 스레드의 스레드 로컬 저장소를 확인하여 내부의 관리되는 <xref:System.Threading.Thread> 개체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-107">When an unmanaged thread enters the runtime through, for example, a COM callable wrapper, the system checks the thread-local store of that thread to look for an internal managed <xref:System.Threading.Thread> object.</span></span> <span data-ttu-id="4b4db-108">이 개체를 찾은 경우 런타임이 이미 이 스레드에 대해 알고 있는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-108">If one is found, the runtime is already aware of this thread.</span></span> <span data-ttu-id="4b4db-109">그러나 이 개체를 찾을 수 없으면 런타임은 새 <xref:System.Threading.Thread> 개체를 빌드하여 해당 스레드의 스레드 로컬 저장소에 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-109">If it cannot find one, however, the runtime builds a new <xref:System.Threading.Thread> object and installs it in the thread-local store of that thread.</span></span>  
   
- 관리되는 스레딩에서 <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=fullName>는 안정적인 관리되는 스레드 ID입니다. 이는 이 값을 가져온 응용 프로그램 도메인과 관계없이 스레드 수명 동안 다른 모든 스레드의 값과 충돌하지 않습니다.  
+ <span data-ttu-id="4b4db-110">스레딩, 관리 되는 <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> 는 안정적인 관리 되는 스레드 id입니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-110">In managed threading, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> is the stable managed thread identification.</span></span> <span data-ttu-id="4b4db-111">이는 이 값을 가져온 응용 프로그램 도메인과 관계없이 스레드 수명 동안 다른 모든 스레드의 값과 충돌하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-111">For the lifetime of your thread, it will not collide with the value from any other thread, regardless of the application domain from which you obtain this value.</span></span>  
   
 > [!NOTE]
->  관리되지 않는 호스트가 관리되는 스레드와 관리되지 않는 스레드 간의 관계를 제어할 수 있으므로 운영 체제 **ThreadId**는 관리되는 스레드에 대한 고정 관계를 포함하지 않습니다. 특히, 정교한 호스트는 파이버 API를 사용하여 동일한 운영 체제 스레드에 대해 관리되는 여러 스레드를 예약하거나 다양한 운영 체제 스레드 간에 관리되는 스레드를 이동할 수 있습니다.  
+>  <span data-ttu-id="4b4db-112">관리되지 않는 호스트가 관리되는 스레드와 관리되지 않는 스레드 간의 관계를 제어할 수 있으므로 운영 체제 **ThreadId** 는 관리되는 스레드에 대한 고정 관계를 포함하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-112">An operating-system **ThreadId** has no fixed relationship to a managed thread, because an unmanaged host can control the relationship between managed and unmanaged threads.</span></span> <span data-ttu-id="4b4db-113">특히, 정교한 호스트는 파이버 API를 사용하여 동일한 운영 체제 스레드에 대해 관리되는 여러 스레드를 예약하거나 다양한 운영 체제 스레드 간에 관리되는 스레드를 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-113">Specifically, a sophisticated host can use the Fiber API to schedule many managed threads against the same operating system thread, or to move a managed thread among different operating system threads.</span></span>  
   
-## Win32 스레딩에서 관리되는 스레딩으로 매핑  
- 다음 테이블에는 Win32 스레딩 요소가 대략적으로 동일한 런타임 요소에 매핑되어 있습니다. 이 매핑은 동일한 기능을 나타내지 않습니다. 예를 들어, **TerminateThread**는 **finally** 절을 실행하거나 리소스를 해제하지 않고 방지될 수 없습니다. 그러나 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>는 모든 롤백 코드를 실행하고 모든 리소스를 회수하며 <xref:System.Threading.Thread.ResetAbort%2A>를 사용하여 거부될 수 있습니다. 기능에 대해 가정하기 전에 설명서를 주의해서 읽어야 합니다.  
+## <a name="mapping-from-win32-threading-to-managed-threading"></a><span data-ttu-id="4b4db-114">Win32 스레딩에서 관리되는 스레딩으로 매핑</span><span class="sxs-lookup"><span data-stu-id="4b4db-114">Mapping from Win32 Threading to Managed Threading</span></span>  
+ <span data-ttu-id="4b4db-115">다음 테이블에는 Win32 스레딩 요소가 대략적으로 동일한 런타임 요소에 매핑되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-115">The following table maps Win32 threading elements to their approximate runtime equivalent.</span></span> <span data-ttu-id="4b4db-116">이 매핑은 동일한 기능을 나타내지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-116">Note that this mapping does not represent identical functionality.</span></span> <span data-ttu-id="4b4db-117">예를 들어, **TerminateThread** 는 **finally** 절을 실행하거나 리소스를 해제하지 않고 방지될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-117">For example, **TerminateThread** does not execute **finally** clauses or free up resources, and cannot be prevented.</span></span> <span data-ttu-id="4b4db-118">그러나 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 모든 롤백 코드를 실행하고 모든 리소스를 회수하며 <xref:System.Threading.Thread.ResetAbort%2A>를 사용하여 거부될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-118">However, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> executes all your rollback code, reclaims all the resources, and can be denied using <xref:System.Threading.Thread.ResetAbort%2A>.</span></span> <span data-ttu-id="4b4db-119">기능에 대해 가정하기 전에 설명서를 주의해서 읽어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-119">Be sure to read the documentation closely before making assumptions about functionality.</span></span>  
   
-|Win32|공용 언어 런타임|  
-|-----------|---------------|  
-|**CreateThread**|**Thread**와 <xref:System.Threading.ThreadStart>의 조합|  
-|**TerminateThread**|<xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>|  
-|**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|  
-|**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName>|  
-|**Sleep**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName>|  
-|스레드 핸들의 **WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=fullName>|  
-|**ExitThread**|동일한 요소 없음|  
-|**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=fullName>|  
-|**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=fullName>|  
-|동일한 요소 없음|<xref:System.Threading.Thread.Name%2A?displayProperty=fullName>|  
-|동일한 요소 없음|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=fullName>|  
-|**CoInitializeEx**\(OLE32.DLL\)와 비슷함|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName>|  
+|<span data-ttu-id="4b4db-120">Win32</span><span class="sxs-lookup"><span data-stu-id="4b4db-120">In Win32</span></span>|<span data-ttu-id="4b4db-121">공용 언어 런타임</span><span class="sxs-lookup"><span data-stu-id="4b4db-121">In the common language runtime</span></span>|  
+|--------------|------------------------------------|  
+|<span data-ttu-id="4b4db-122">**CreateThread**</span><span class="sxs-lookup"><span data-stu-id="4b4db-122">**CreateThread**</span></span>|<span data-ttu-id="4b4db-123">**Thread** 와 <xref:System.Threading.ThreadStart>의 조합</span><span class="sxs-lookup"><span data-stu-id="4b4db-123">Combination of **Thread** and <xref:System.Threading.ThreadStart></span></span>|  
+|<span data-ttu-id="4b4db-124">**TerminateThread**</span><span class="sxs-lookup"><span data-stu-id="4b4db-124">**TerminateThread**</span></span>|<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b4db-125">**SuspendThread**</span><span class="sxs-lookup"><span data-stu-id="4b4db-125">**SuspendThread**</span></span>|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b4db-126">**ResumeThread**</span><span class="sxs-lookup"><span data-stu-id="4b4db-126">**ResumeThread**</span></span>|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b4db-127">**Sleep**</span><span class="sxs-lookup"><span data-stu-id="4b4db-127">**Sleep**</span></span>|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b4db-128">스레드 핸들의**WaitForSingleObject** </span><span class="sxs-lookup"><span data-stu-id="4b4db-128">**WaitForSingleObject** on the thread handle</span></span>|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b4db-129">**ExitThread**</span><span class="sxs-lookup"><span data-stu-id="4b4db-129">**ExitThread**</span></span>|<span data-ttu-id="4b4db-130">동일한 요소 없음</span><span class="sxs-lookup"><span data-stu-id="4b4db-130">No equivalent</span></span>|  
+|<span data-ttu-id="4b4db-131">**GetCurrentThread**</span><span class="sxs-lookup"><span data-stu-id="4b4db-131">**GetCurrentThread**</span></span>|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b4db-132">**SetThreadPriority**</span><span class="sxs-lookup"><span data-stu-id="4b4db-132">**SetThreadPriority**</span></span>|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b4db-133">동일한 요소 없음</span><span class="sxs-lookup"><span data-stu-id="4b4db-133">No equivalent</span></span>|<xref:System.Threading.Thread.Name%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b4db-134">동일한 요소 없음</span><span class="sxs-lookup"><span data-stu-id="4b4db-134">No equivalent</span></span>|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4b4db-135">**CoInitializeEx** (OLE32.DLL)와 비슷함</span><span class="sxs-lookup"><span data-stu-id="4b4db-135">Close to **CoInitializeEx** (OLE32.DLL)</span></span>|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
-## 관리되는 스레드 및 COM 아파트  
- 관리되는 스레드는 [단일 스레드](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) 또는 [다중 스레드](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) 아파트를 호스트할 것임을 나타내기 위해 표시될 수 있습니다. COM 스레딩 아키텍처에 대한 자세한 내용은 [프로세스, 스레드 및 아파트](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)를 참조하세요.<xref:System.Threading.Thread.GetApartmentState%2A> 클래스의 <xref:System.Threading.Thread.SetApartmentState%2A>, <xref:System.Threading.Thread.TrySetApartmentState%2A> 및 <xref:System.Threading.Thread> 메서드는 스레드의 아파트 상태를 반환하고 할당합니다. 상태가 설정되지 않은 경우 <xref:System.Threading.Thread.GetApartmentState%2A>는 <xref:System.Threading.ApartmentState?displayProperty=fullName>을 반환합니다.  
+## <a name="managed-threads-and-com-apartments"></a><span data-ttu-id="4b4db-136">관리되는 스레드 및 COM 아파트</span><span class="sxs-lookup"><span data-stu-id="4b4db-136">Managed Threads and COM Apartments</span></span>  
+ <span data-ttu-id="4b4db-137">관리되는 스레드는 [단일 스레드](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) 또는 [다중 스레드](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) 아파트를 호스트할 것임을 나타내기 위해 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-137">A managed thread can be marked to indicate that it will host a [single-threaded](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) or [multithreaded](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) apartment.</span></span> <span data-ttu-id="4b4db-138">(COM 스레딩 아키텍처에 대한 자세한 내용은 [프로세스, 스레드 및 아파트](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)를 참조하세요.) <xref:System.Threading.Thread.GetApartmentState%2A> 클래스의 <xref:System.Threading.Thread.SetApartmentState%2A>, <xref:System.Threading.Thread.TrySetApartmentState%2A> 및 <xref:System.Threading.Thread> 메서드는 스레드의 아파트 상태를 반환하고 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-138">(For more information on the COM threading architecture, see [Processes, threads, and Apartments](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) The <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A>, and <xref:System.Threading.Thread.TrySetApartmentState%2A> methods of the <xref:System.Threading.Thread> class return and assign the apartment state of a thread.</span></span> <span data-ttu-id="4b4db-139">상태가 설정 되지 않은 경우 <xref:System.Threading.Thread.GetApartmentState%2A> 반환 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-139">If the state has not been set, <xref:System.Threading.Thread.GetApartmentState%2A> returns <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.</span></span>  
   
- 이 속성은 스레드가 <xref:System.Threading.ThreadState?displayProperty=fullName> 상태일 때만 설정될 수 있으며, 한 스레드에 대해 한 번만 설정될 수 있습니다.  
+ <span data-ttu-id="4b4db-140">속성은 스레드가 하는 경우에 설정할 수 있습니다는 <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> 상태 스레드에 대 한 한 번만 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-140">The property can be set only when the thread is in the <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> state; it can be set only once for a thread.</span></span>  
   
- 스레드가 시작되기 전에 아파트 상태가 설정되지 않은 경우 스레드가 MTA\(다중 스레드 아파트\)로 초기화됩니다. 종료자 스레드 및 <xref:System.Threading.ThreadPool>에 의해 제어되는 모든 스레드는 MTA입니다.  
+ <span data-ttu-id="4b4db-141">스레드가 시작되기 전에 아파트 상태가 설정되지 않은 경우 스레드가 MTA(다중 스레드 아파트)로 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-141">If the apartment state is not set before the thread is started, the thread is initialized as a multithreaded apartment (MTA).</span></span> <span data-ttu-id="4b4db-142">종료자 스레드 및 <xref:System.Threading.ThreadPool> 에 의해 제어되는 모든 스레드는 MTA입니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-142">The finalizer thread and all threads controlled by <xref:System.Threading.ThreadPool> are MTA.</span></span>  
   
 > [!IMPORTANT]
->  응용 프로그램 시작 코드의 경우 아파트 상태를 제어하는 유일한 방법은 <xref:System.MTAThreadAttribute> 또는 <xref:System.STAThreadAttribute>를 진입점 프로시저에 적용하는 것입니다. .NET Framework 1.0 및 1.1에서는 <xref:System.Threading.Thread.ApartmentState%2A> 속성을 코드의 첫 번째 줄로 설정할 수 있습니다. .NET Framework 2.0에서는 이러한 설정이 허용되지 않습니다.  
+>  <span data-ttu-id="4b4db-143">응용 프로그램 시작 코드의 경우 아파트 상태를 제어하는 유일한 방법은 <xref:System.MTAThreadAttribute> 또는 <xref:System.STAThreadAttribute> 를 진입점 프로시저에 적용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-143">For application startup code, the only way to control apartment state is to apply the <xref:System.MTAThreadAttribute> or the <xref:System.STAThreadAttribute> to the entry point procedure.</span></span> <span data-ttu-id="4b4db-144">.NET Framework 1.0 및 1.1에서는 <xref:System.Threading.Thread.ApartmentState%2A> 속성을 코드의 첫 번째 줄로 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-144">In the .NET Framework 1.0 and 1.1, the <xref:System.Threading.Thread.ApartmentState%2A> property can be set as the first line of code.</span></span> <span data-ttu-id="4b4db-145">.NET Framework 2.0에서는 이러한 설정이 허용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-145">This is not permitted in the .NET Framework 2.0.</span></span>  
   
- COM에 노출된 관리되는 개체는 자유 스레드된 마샬러를 집계한 것처럼 동작합니다. 즉, 모든 COM 아파트에서 자유 스레드 방식으로 이러한 개체를 호출할 수 있습니다. 이 자유 스레드 동작을 노출하지 않는 관리되는 개체만이 <xref:System.EnterpriseServices.ServicedComponent> 또는 <xref:System.Runtime.InteropServices.StandardOleMarshalObject>에서 파생되는 개체입니다.  
+ <span data-ttu-id="4b4db-146">COM에 노출된 관리되는 개체는 자유 스레드된 마샬러를 집계한 것처럼 동작합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-146">Managed objects that are exposed to COM behave as if they had aggregated the free-threaded marshaler.</span></span> <span data-ttu-id="4b4db-147">즉, 모든 COM 아파트에서 자유 스레드 방식으로 이러한 개체를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-147">In other words, they can be called from any COM apartment in a free-threaded manner.</span></span> <span data-ttu-id="4b4db-148">이 자유 스레드 동작을 노출하지 않는 관리되는 개체만이 <xref:System.EnterpriseServices.ServicedComponent> 또는 <xref:System.Runtime.InteropServices.StandardOleMarshalObject>에서 파생되는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-148">The only managed objects that do not exhibit this free-threaded behavior are those objects that derive from <xref:System.EnterpriseServices.ServicedComponent> or <xref:System.Runtime.InteropServices.StandardOleMarshalObject>.</span></span>  
   
- 관리되는 세계에는 컨텍스트 및 컨텍스트 바인딩된 관리되는 인스턴스를 사용하지 않는 한 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>에 대한 지원이 없습니다.[EnterpriseServices](../Topic/System.EnterpriseServices.md)를 사용하는 경우 개체를 <xref:System.EnterpriseServices>\(이 자체는 <xref:System.ContextBoundObject>에서 파생됨\)에서 파생시켜야 합니다.  
+ <span data-ttu-id="4b4db-149">관리되는 세계에는 컨텍스트 및 컨텍스트 바인딩된 관리되는 인스턴스를 사용하지 않는 한 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 에 대한 지원이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-149">In the managed world, there is no support for the <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> unless you use contexts and context-bound managed instances.</span></span> <span data-ttu-id="4b4db-150">엔터프라이즈 서비스를 사용 하는 경우 개체에서 파생 되어야 <xref:System.EnterpriseServices.ServicedComponent> (자체에서 파생 된 <xref:System.ContextBoundObject>).</span><span class="sxs-lookup"><span data-stu-id="4b4db-150">If you are using Enterprise Services, then your object must derive from <xref:System.EnterpriseServices.ServicedComponent> (which is itself derived from <xref:System.ContextBoundObject>).</span></span>  
   
- 관리 코드가 COM 개체를 호출할 때는 항상 COM 규칙을 따릅니다. 즉, 관리 코드는 OLE32에서 지시하는 대로 COM 아파트 프록시 및 COM\+ 1.0 컨텍스트 래퍼를 통해 호출합니다.  
+ <span data-ttu-id="4b4db-151">관리 코드가 COM 개체를 호출할 때는 항상 COM 규칙을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-151">When managed code calls out to COM objects, it always follows COM rules.</span></span> <span data-ttu-id="4b4db-152">즉, 관리 코드는 OLE32에서 지시하는 대로 COM 아파트 프록시 및 COM+ 1.0 컨텍스트 래퍼를 통해 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-152">In other words, it calls through COM apartment proxies and COM+ 1.0 context wrappers as dictated by OLE32.</span></span>  
   
-## 차단 문제  
- 스레드가 비관리 코드에서 스레드를 차단한 운영 체제에 대해 관리되지 않는 호출을 수행할 경우 런타임이 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=fullName> 또는 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>에 대해 스레드를 제어하지 못합니다.<xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>의 경우 런타임은 스레드에 **Abort**를 표시하고 스레드가 관리 코드에 다시 들어가면 스레드를 제어합니다. 관리되지 않는 차단이 아니라 관리되는 차단을 사용하는 것이 좋습니다.<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=fullName>, <xref:System.Threading.Thread.Join%2A?displayProperty=fullName>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=fullName> 등은 모두 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=fullName> 및 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>에 응답합니다. 또한 스레드가 단일 스레드 아파트에 있는 경우 이러한 모든 관리되는 차단 작업은 스레드가 차단되어 있는 동안 올바르게 아파트에 메시지를 펌핑합니다.  
+## <a name="blocking-issues"></a><span data-ttu-id="4b4db-153">차단 문제</span><span class="sxs-lookup"><span data-stu-id="4b4db-153">Blocking Issues</span></span>  
+ <span data-ttu-id="4b4db-154">스레드가 비관리 코드에서 스레드를 차단한 운영 체제에 대해 관리되지 않는 호출을 수행할 경우 런타임이 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>에 대해 스레드를 제어하지 못합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-154">If a thread makes an unmanaged call into the operating system that has blocked the thread in unmanaged code, the runtime will not take control of it for <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> or <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4b4db-155">경우 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, 런타임은 스레드에 표시 **중단** 및 관리 코드를 다시 입력할 때이 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-155">In the case of <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, the runtime marks the thread for **Abort** and takes control of it when it re-enters managed code.</span></span> <span data-ttu-id="4b4db-156">관리되지 않는 차단이 아니라 관리되는 차단을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-156">It is preferable for you to use managed blocking rather than unmanaged blocking.</span></span> <span data-ttu-id="4b4db-157"><xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType><xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>등 모든 응답을 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-157"><xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>, and so on are all responsive to <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> and to <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4b4db-158">또한 스레드가 단일 스레드 아파트에 있는 경우 이러한 모든 관리되는 차단 작업은 스레드가 차단되어 있는 동안 올바르게 아파트에 메시지를 펌핑합니다.</span><span class="sxs-lookup"><span data-stu-id="4b4db-158">Also, if your thread is in a single-threaded apartment, all these managed blocking operations will correctly pump messages in your apartment while your thread is blocked.</span></span>  
   
-## 참고 항목  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName>   
- <xref:System.Threading.ThreadState>   
- <xref:System.EnterpriseServices.ServicedComponent>   
- <xref:System.Threading.Thread>   
+## <a name="see-also"></a><span data-ttu-id="4b4db-159">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4b4db-159">See Also</span></span>  
+ <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+ <xref:System.Threading.ThreadState>  
+ <xref:System.EnterpriseServices.ServicedComponent>  
+ <xref:System.Threading.Thread>  
  <xref:System.Threading.Monitor>

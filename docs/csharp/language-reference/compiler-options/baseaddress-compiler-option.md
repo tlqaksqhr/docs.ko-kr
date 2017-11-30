@@ -1,77 +1,57 @@
 ---
 title: "-baseaddress(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /dllbase
-dev_langs:
-- CSharp
+f1_keywords: /dllbase
 helpviewer_keywords:
 - baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 - -baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7cd3269754f783ab8b26683f5215aa81825673e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 91193ae794957b5045a225614d6322e86d18d459
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="baseaddress-c-compiler-options"></a>/baseaddress(C# 컴파일러 옵션)
-**/baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다. 이 옵션을 사용하는 시기와 이유에 대한 자세한 내용은 [Improving Application Startup Time](http://go.microsoft.com/fwlink/?LinkId=107043)(응용 프로그램 시작 시간 향상)과 [Larry Osterman's WebLog](http://go.microsoft.com/fwlink/?LinkId=107044)를 참조하세요.  
+# <a name="baseaddress-c-compiler-options"></a><span data-ttu-id="93fd0-102">/baseaddress(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="93fd0-102">/baseaddress (C# Compiler Options)</span></span>
+<span data-ttu-id="93fd0-103">**/baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-103">The **/baseaddress** option lets you specify the preferred base address at which to load a DLL.</span></span> <span data-ttu-id="93fd0-104">이 옵션을 사용 하는 이유 및 시기에 대 한 자세한 내용은 참조 [Larry Osterman 웹 로그](http://go.microsoft.com/fwlink/?LinkId=107044)합니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-104">For more information about when and why to use this option, see [Larry Osterman's WebLog](http://go.microsoft.com/fwlink/?LinkId=107044).</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="93fd0-105">구문</span><span class="sxs-lookup"><span data-stu-id="93fd0-105">Syntax</span></span>  
   
 ```console  
 /baseaddress:address  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a><span data-ttu-id="93fd0-106">인수</span><span class="sxs-lookup"><span data-stu-id="93fd0-106">Arguments</span></span>  
  `address`  
- DLL의 기준 주소입니다. 이 주소는 10진수, 16진수 또는 8진수 숫자로 지정할 수 있습니다.  
+ <span data-ttu-id="93fd0-107">DLL의 기준 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-107">The base address for the DLL.</span></span> <span data-ttu-id="93fd0-108">이 주소는 10진수, 16진수 또는 8진수 숫자로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-108">This address can be specified as a decimal, hexadecimal, or octal number.</span></span>  
   
-## <a name="remarks"></a>설명  
- DLL에 대한 기본 기준 주소는 .NET Framework 공용 언어 런타임에 의해 설정됩니다.  
+## <a name="remarks"></a><span data-ttu-id="93fd0-109">설명</span><span class="sxs-lookup"><span data-stu-id="93fd0-109">Remarks</span></span>  
+ <span data-ttu-id="93fd0-110">DLL에 대한 기본 기준 주소는 .NET Framework 공용 언어 런타임에 의해 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-110">The default base address for a DLL is set by the .NET Framework common language runtime.</span></span>  
   
- 이 주소의 하위 단어는 반올림됩니다. 예를 들어 0x11110001을 지정하면 0x11110000으로 반올림됩니다.  
+ <span data-ttu-id="93fd0-111">이 주소의 하위 단어는 반올림됩니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-111">Be aware that the lower-order word in this address will be rounded.</span></span> <span data-ttu-id="93fd0-112">예를 들어 0x11110001을 지정하면 0x11110000으로 반올림됩니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-112">For example, if you specify 0x11110001, it will be rounded to 0x11110000.</span></span>  
   
- DLL에 대한 서명 프로세스를 완료하려면 SN.EXE에 -R 옵션을 사용합니다.  
+ <span data-ttu-id="93fd0-113">DLL에 대한 서명 프로세스를 완료하려면 SN.EXE에 -R 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-113">To complete the signing process for a DLL, use SN.EXE with the -R option.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="93fd0-114">Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="93fd0-114">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  프로젝트 **속성** 페이지를 엽니다.  
+1.  <span data-ttu-id="93fd0-115">프로젝트 **속성** 페이지를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-115">Open the project's **Properties** page.</span></span>  
   
-2.  **빌드** 속성 페이지를 클릭합니다.  
+2.  <span data-ttu-id="93fd0-116">**빌드** 속성 페이지를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-116">Click the **Build** property page.</span></span>  
   
-3.  **고급** 단추를 클릭합니다.  
+3.  <span data-ttu-id="93fd0-117">**고급** 단추를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-117">Click the **Advanced** button.</span></span>  
   
-4.  **DLL 기준 주소** 속성을 수정합니다.  
+4.  <span data-ttu-id="93fd0-118">**DLL 기준 주소** 속성을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="93fd0-118">Modify the **DLL Base Address** property.</span></span>  
   
-     프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>를 참조하세요.  
+     <span data-ttu-id="93fd0-119">프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="93fd0-119">To set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=fullName>   
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="93fd0-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="93fd0-120">See Also</span></span>  
+ <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="93fd0-121">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="93fd0-121">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="93fd0-122">프로젝트 및 솔루션 속성 관리</span><span class="sxs-lookup"><span data-stu-id="93fd0-122">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

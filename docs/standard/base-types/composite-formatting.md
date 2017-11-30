@@ -1,170 +1,176 @@
 ---
-title: "복합 형식 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "합성 형식 지정"
-  - "형식 지정자, 합성 형식 지정"
-  - "개체[.NET Framework], 여러 개체 형식 지정"
-  - "매개 변수 지정자"
-  - "문자열[.NET Framework], 맞춤"
-  - "문자열[.NET Framework], 복합"
+title: "복합 형식 지정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- parameter specifiers
+- strings [.NET Framework], alignment
+- format specifiers, composite formatting
+- strings [.NET Framework], composite
+- composite formatting
+- objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 36
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "36"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 복합 형식 지정
-.NET Framework의 합성 서식 지정 기능에는 개체 목록과 합성 서식 문자열이 입력으로 사용됩니다.  합성 서식 문자열은 고정 텍스트와 목록의 개체에 해당하는 인덱싱된 자리 표시자\(서식 항목이라고 함\)가 결합된 형태로 구성됩니다.  서식 지정 작업을 통해 원래의 고정 텍스트와 목록에 있는 개체의 문자열 표현이 결합된 형태의 결과 문자열을 얻을 수 있습니다.  
+# <a name="composite-formatting"></a><span data-ttu-id="89ccd-102">복합 형식 지정</span><span class="sxs-lookup"><span data-stu-id="89ccd-102">Composite Formatting</span></span>
+<span data-ttu-id="89ccd-103">.NET Framework의 합성 서식 지정 기능에는 개체 목록과 합성 서식 문자열이 입력으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-103">The .NET Framework composite formatting feature takes a list of objects and a composite format string as input.</span></span> <span data-ttu-id="89ccd-104">합성 서식 문자열은 고정 텍스트와 목록의 개체에 해당하는 인덱싱된 자리 표시자(서식 항목이라고 함)가 결합된 형태로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-104">A composite format string consists of fixed text intermixed with indexed placeholders, called format items, that correspond to the objects in the list.</span></span> <span data-ttu-id="89ccd-105">서식 지정 작업을 통해 원래의 고정 텍스트와 목록에 있는 개체의 문자열 표현이 결합된 형태의 결과 문자열을 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-105">The formatting operation yields a result string that consists of the original fixed text intermixed with the string representation of the objects in the list.</span></span>  
   
- 다음과 같은 메서드에서 합성 형식 지정 기능을 지원합니다.  
+ <span data-ttu-id="89ccd-106">다음과 같은 메서드에서 합성 형식 지정 기능을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-106">The composite formatting feature is supported by methods such as the following:</span></span>  
   
--   서식이 지정된 결과 문자열을 반환하는 <xref:System.String.Format%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="89ccd-107">서식이 지정된 결과 문자열을 반환하는 <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="89ccd-107"><xref:System.String.Format%2A?displayProperty=nameWithType>, which returns a formatted result string.</span></span>  
   
--   서식이 지정된 결과 문자열을 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=fullName> 개체에 추가하는 <xref:System.Text.StringBuilder>.  
+-   <span data-ttu-id="89ccd-108">서식이 지정된 결과 문자열을 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 개체에 추가하는 <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="89ccd-108"><xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, which appends a formatted result string to a <xref:System.Text.StringBuilder> object.</span></span>  
   
--   콘솔에 서식이 지정된 결과 문자열을 표시하는 <xref:System.Console.WriteLine%2A?displayProperty=fullName> 메서드의 과부하.  
+-   <span data-ttu-id="89ccd-109">콘솔에 서식이 지정된 결과 문자열을 표시하는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 메서드의 과부하.</span><span class="sxs-lookup"><span data-stu-id="89ccd-109">Some overloads of the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method, which display a formatted result string to the console.</span></span>  
   
--   스트림 또는 파일에 서식이 지정된 결과 문자열을 쓰는 <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=fullName> 메서드의 과부하.  <xref:System.IO.TextWriter> 및 <xref:System.IO.StreamWriter>와 같은 <xref:System.Web.UI.HtmlTextWriter>에서 파생된 클래스도 이 기능을 공유합니다.  
+-   <span data-ttu-id="89ccd-110">스트림 또는 파일에 서식이 지정된 결과 문자열을 쓰는 <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> 메서드의 과부하.</span><span class="sxs-lookup"><span data-stu-id="89ccd-110">Some overloads of the <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> method, which write the formatted result string to a stream or file.</span></span> <span data-ttu-id="89ccd-111"><xref:System.IO.TextWriter> 및 <xref:System.IO.StreamWriter>와 같은 <xref:System.Web.UI.HtmlTextWriter>에서 파생된 클래스도 이 기능을 공유합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-111">The classes derived from <xref:System.IO.TextWriter>, such as <xref:System.IO.StreamWriter> and <xref:System.Web.UI.HtmlTextWriter>, also share this functionality.</span></span>  
   
--   추적 수신기로 서식이 지정된 메시지를 출력하는 [Debug.WriteLine\(String, Object\<xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=fullName>.  
+-   <span data-ttu-id="89ccd-112">추적 수신기로 서식이 지정된 메시지를 출력하는 <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="89ccd-112"><xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, which outputs a formatted message to trace listeners.</span></span>  
   
--   추적 수신기로 서식이 지정된 메시지를 출력하는 [Trace.TraceError\(String, Object\<xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=fullName>, [Trace.TraceInformation\(String, Object\<xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 및 [Trace.TraceWarning\(String, Object\<xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 메서드.  
+-   <span data-ttu-id="89ccd-113">추적 수신기로 서식이 지정된 메시지를 출력하는 <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드.</span><span class="sxs-lookup"><span data-stu-id="89ccd-113">The <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, and <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> methods, which output formatted messages to trace listeners.</span></span>  
   
--   추적 수신기에 정보 메서드를 쓰는 [TraceSource.TraceInformation\(String, Object\<xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 메서드.  
+-   <span data-ttu-id="89ccd-114">추적 수신기에 정보 메서드를 쓰는 <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드.</span><span class="sxs-lookup"><span data-stu-id="89ccd-114">The <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method, which writes an informational method to trace listeners.</span></span>  
   
-## 합성 서식 문자열  
- 합성 서식 문자열과 개체 목록은 합성 서식 지정 기능을 지원하는 메서드의 인수로 사용됩니다.  합성 서식 문자열은 0개 이상의 고정 텍스트가 하나 이상의 서식 항목과 결합된 형태로 구성됩니다.  고정 텍스트는 사용자가 선택하는 임의의 문자열이고, 각 서식 항목은 목록의 개체나 boxed 구조체에 해당합니다.  합성 서식 지정 기능은 각 서식 항목을 목록에 있는 해당 개체의 문자열 표현으로 바꿔 새로운 결과 문자열을 반환합니다.  
+## <a name="composite-format-string"></a><span data-ttu-id="89ccd-115">합성 서식 문자열</span><span class="sxs-lookup"><span data-stu-id="89ccd-115">Composite Format String</span></span>  
+ <span data-ttu-id="89ccd-116">합성 서식 문자열과 개체 목록은 합성 서식 지정 기능을 지원하는 메서드의 인수로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-116">A composite format string and object list are used as arguments of methods that support the composite formatting feature.</span></span> <span data-ttu-id="89ccd-117">합성 서식 문자열은 0개 이상의 고정 텍스트가 하나 이상의 서식 항목과 결합된 형태로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-117">A composite format string consists of zero or more runs of fixed text intermixed with one or more format items.</span></span> <span data-ttu-id="89ccd-118">고정 텍스트는 사용자가 선택하는 임의의 문자열이고, 각 서식 항목은 목록의 개체나 boxed 구조체에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-118">The fixed text is any string that you choose, and each format item corresponds to an object or boxed structure in the list.</span></span> <span data-ttu-id="89ccd-119">합성 서식 지정 기능은 각 서식 항목을 목록에 있는 해당 개체의 문자열 표현으로 바꿔 새로운 결과 문자열을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-119">The composite formatting feature returns a new result string where each format item is replaced by the string representation of the corresponding object in the list.</span></span>  
   
- 다음은 이 기능을 보여 주는 <xref:System.String.Format%2A> 코드 조각입니다.  
+ <span data-ttu-id="89ccd-120">다음은 이 기능을 보여 주는 <xref:System.String.Format%2A> 코드 조각입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-120">Consider the following <xref:System.String.Format%2A> code fragment.</span></span>  
   
  [!code-csharp[Formatting.Composite#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#1)]
  [!code-vb[Formatting.Composite#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#1)]  
   
- 고정 텍스트는 "`Name =` " 및 "`, hours =` "입니다.  형식 항목은 인덱스가 0이고  `myName` 개체에 해당하는 "`{0}`"과 인덱스가 1이고  `DateTime.Now` 개체에 해당하는 "`{1:hh}`"입니다.  
+ <span data-ttu-id="89ccd-121">고정 텍스트는 “`Name =`” 및 “`, hours =`”입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-121">The fixed text is "`Name =` " and "`, hours =` ".</span></span> <span data-ttu-id="89ccd-122">형식 항목은 인덱스가 0이고 `name` 개체에 해당하는 “`{0}`”과(와) 인덱스가 1이고 `DateTime.Now` 개체에 해당하는 “`{1:hh}`”입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-122">The format items are "`{0}`", whose index is 0, which corresponds to the object `name`, and "`{1:hh}`", whose index is 1, which corresponds to the object `DateTime.Now`.</span></span>  
   
-## 서식 항목 구문  
- 각 서식 항목의 형태와 구성 요소는 다음과 같습니다.  
+## <a name="format-item-syntax"></a><span data-ttu-id="89ccd-123">서식 항목 구문</span><span class="sxs-lookup"><span data-stu-id="89ccd-123">Format Item Syntax</span></span>  
+ <span data-ttu-id="89ccd-124">각 서식 항목의 형태와 구성 요소는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-124">Each format item takes the following form and consists of the following components:</span></span>  
   
- `{` *index*\[`,`*alignment*\]\[`:`*formatString*\]`}`  
+ <span data-ttu-id="89ccd-125">`{` *index*[`,`*alignment*][`:`*formatString*]`}`</span><span class="sxs-lookup"><span data-stu-id="89ccd-125">`{` *index*[`,`*alignment*][`:`*formatString*]`}`</span></span>  
   
- 여기서 중괄호\("{"와 "}"\)의 짝이 반드시 맞아야 합니다.  
+ <span data-ttu-id="89ccd-126">여기서 중괄호("{"와 "}")의 짝이 반드시 맞아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-126">The matching braces ("{" and "}") are required.</span></span>  
   
-### Index 구성 요소  
- 매개 변수 지정자라고도 하는 필수 *index* 구성 요소는 0부터 시작하는 숫자로서, 개체 목록에서 해당하는 항목을 식별합니다.  즉, 매개 변수 지정자가 0인 서식 항목은 목록에 있는 첫째 개체의 서식을 지정하고 매개 변수 지정자가 1인 서식 항목은 목록에 있는 둘째 개체의 서식을 지정하는 식으로 적용됩니다.  다음 예제에는 10보다 작은 소수를 나타내는 5개의 매개 변수 지정자가 포함됩니다.  
+### <a name="index-component"></a><span data-ttu-id="89ccd-127">Index 구성 요소</span><span class="sxs-lookup"><span data-stu-id="89ccd-127">Index Component</span></span>  
+ <span data-ttu-id="89ccd-128">매개 변수 지정자라고도 하는 필수 *index* 구성 요소는 0부터 시작하는 숫자로, 개체 목록에서 해당하는 항목을 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-128">The mandatory *index* component, also called a parameter specifier, is a number starting from 0 that identifies a corresponding item in the list of objects.</span></span> <span data-ttu-id="89ccd-129">즉, 매개 변수 지정자가 0인 서식 항목은 목록에 있는 첫째 개체의 서식을 지정하고 매개 변수 지정자가 1인 서식 항목은 목록에 있는 둘째 개체의 서식을 지정하는 식으로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-129">That is, the format item whose parameter specifier is 0 formats the first object in the list, the format item whose parameter specifier is 1 formats the second object in the list, and so on.</span></span> <span data-ttu-id="89ccd-130">다음 예제에는 10보다 작은 소수를 나타내고 0부터 3까지 번호가 매겨진 4개의 매개 변수 지정자가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-130">The following example includes four parameter specifiers, numbered zero through three,  to represent prime numbers less than ten:</span></span>  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 동일한 매개 변수 지정자를 지정하여 여러 서식 항목이 개체 목록의 동일한 요소를 참조하도록 할 수 있습니다.  예를 들어 다음 예제와 같이 복합 형식 문자열을 "0x{0:X} {0:E} {0:N}"과 같이 지정하여 동일한 숫자 값을 16진수, 지수 및 숫자 형식으로 지정할 수 있습니다.  
+ <span data-ttu-id="89ccd-131">동일한 매개 변수 지정자를 지정하여 여러 서식 항목이 개체 목록의 동일한 요소를 참조하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-131">Multiple format items can refer to the same element in the list of objects by specifying the same parameter specifier.</span></span> <span data-ttu-id="89ccd-132">예를 들어 다음 예제와 같이 복합 형식 문자열을 "0x{0:X} {0:E} {0:N}"과 같이 지정하여 동일한 숫자 값을 16진수, 지수 및 숫자 형식으로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-132">For example, you can format the same numeric value in hexadecimal, scientific, and number format by specifying a composite format string such as : "0x{0:X} {0:E} {0:N}", as the following example shows.</span></span>  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- 각 서식 항목은 목록의 어떤 개체나 참조할 수 있습니다.  예를 들어, 세 개의 개체가 있을 경우 "{1} {0} {2}"와 같이 복합 서식 문자열을 지정하여 둘째, 첫째 및 셋째 개체의 서식을 지정할 수 있습니다.  서식 항목에서 참조하지 않는 개체는 무시됩니다.  매개 변수 지정자가 개체 목록 범위를 벗어나는 항목을 지정하면 런타임에 <xref:System.FormatException>이 발생합니다.  
+ <span data-ttu-id="89ccd-133">각 서식 항목은 목록의 어떤 개체나 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-133">Each format item can refer to any object in the list.</span></span> <span data-ttu-id="89ccd-134">예를 들어, 세 개의 개체가 있을 경우 "{1} {0} {2}"와 같이 복합 서식 문자열을 지정하여 둘째, 첫째 및 셋째 개체의 서식을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-134">For example, if there are three objects, you can format the second, first, and third object by specifying a composite format string like this: "{1} {0} {2}".</span></span> <span data-ttu-id="89ccd-135">서식 항목에서 참조하지 않는 개체는 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-135">An object that is not referenced by a format item is ignored.</span></span> <span data-ttu-id="89ccd-136">매개 변수 지정자가 개체 목록 범위를 벗어나는 항목을 지정하면 런타임에 <xref:System.FormatException>이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-136">A <xref:System.FormatException> is thrown at runtime if a parameter specifier designates an item outside the bounds of the list of objects.</span></span>  
   
-### Alignment 구성 요소  
- 선택적인 *alignment* 구성 요소는 기본 서식의 필드 너비를 나타내는 부호 있는 정수입니다.  *alignment* 값이 서식이 지정된 문자열보다 작으면 *alignment*는 무시되고 서식이 지정된 문자열의 길이가 필드 너비로 사용됩니다.  *alignment*가 양수이면 필드에서 서식이 지정된 데이터가 오른쪽 맞춤되고 *alignment*가 음수이면 왼쪽 맞춤됩니다.  채우기가 필요하면 공백이 사용됩니다.  *alignment*가 지정되면 쉼표를 사용해야 합니다.  
+### <a name="alignment-component"></a><span data-ttu-id="89ccd-137">Alignment 구성 요소</span><span class="sxs-lookup"><span data-stu-id="89ccd-137">Alignment Component</span></span>  
+ <span data-ttu-id="89ccd-138">선택적인 *alignment* 구성 요소는 기본 형식의 필드 너비를 나타내는 부호 있는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-138">The optional *alignment* component is a signed integer indicating the preferred formatted field width.</span></span> <span data-ttu-id="89ccd-139">*alignment* 값이 형식이 지정된 문자열보다 작으면 *alignment*는 무시되고 형식이 지정된 문자열의 길이가 필드 너비로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-139">If the value of *alignment* is less than the length of the formatted string, *alignment* is ignored and the length of the formatted string is used as the field width.</span></span> <span data-ttu-id="89ccd-140">*alignment*가 양수이면 필드에서 형식이 지정된 데이터가 오른쪽 맞춤되고 *alignment*가 음수이면 왼쪽 맞춤됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-140">The formatted data in the field is right-aligned if *alignment* is positive and left-aligned if *alignment* is negative.</span></span> <span data-ttu-id="89ccd-141">채우기가 필요하면 공백이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-141">If padding is necessary, white space is used.</span></span> <span data-ttu-id="89ccd-142">*alignment*를 지정하는 경우 쉼표가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-142">The comma is required if *alignment*  is specified.</span></span>  
   
- 다음 예제에서는 두 배열, 즉 직원의 이름을 포함하는 배열과 2주 동안의 작업 시간을 포함하는 배열을 정의합니다.  복합 형식 문자열은 20자 필드에 이름을 왼쪽 맞춤하고 5자 필드에 해당 시간을 오른쪽 맞춤합니다.  소수 1자리로 시간 형식을 지정하기 위해 "N1" 표준 형식 문자열도 사용됩니다.  
+ <span data-ttu-id="89ccd-143">다음 예제에서는 두 배열, 즉 직원의 이름을 포함하는 배열과 2주 동안의 작업 시간을 포함하는 배열을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-143">The following example defines two arrays, one containing the names of employees and the other containing the hours they worked over a two-week period.</span></span> <span data-ttu-id="89ccd-144">복합 형식 문자열은 20자 필드에 이름을 왼쪽 맞춤하고 5자 필드에 해당 시간을 오른쪽 맞춤합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-144">The composite format string left-aligns the names in a 20-character field, and right-aligns their hours in a 5-character field.</span></span> <span data-ttu-id="89ccd-145">소수 1자리로 시간 형식을 지정하기 위해 "N1" 표준 형식 문자열도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-145">Note that the "N1" standard format string is also used to format the hours with one fractional digit.</span></span>  
   
  [!code-csharp[Formatting.Composite#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/alignment1.cs#8)]
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
-### Format String 구성 요소  
- 선택적 *formatString* 구성 요소는 서식을 지정할 개체 형식에 적절한 서식 문자열입니다.  해당 개체가 숫자 값이면 표준 또는 사용자 지정 숫자 서식 문자열을, <xref:System.DateTime> 개체이면 표준 또는 사용자 지정 날짜 및 시간 서식 문자열을, 열거형 값이면 [열거형 서식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)을 지정합니다.  *formatString*을 지정하지 않으면 숫자, 날짜 및 시간, 또는 열거형 형식에 대해 일반\("G"\) 서식 지정자가 사용됩니다.  *formatString*을 지정하는 경우에는 콜론이 필요합니다.  
+### <a name="format-string-component"></a><span data-ttu-id="89ccd-146">Format String 구성 요소</span><span class="sxs-lookup"><span data-stu-id="89ccd-146">Format String Component</span></span>  
+ <span data-ttu-id="89ccd-147">선택적 *formatString* 구성 요소는 서식을 지정할 개체 형식에 적절한 형식 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-147">The optional *formatString* component is a format string that is appropriate for the type of object being formatted.</span></span> <span data-ttu-id="89ccd-148">표준 또는 사용자 지정 숫자 서식 문자열을 해당 개체가 숫자 값 이면 표준 또는 사용자 지정 날짜 및 시간 형식 문자열 해당 개체가 지정 된 <xref:System.DateTime> 개체 또는 [열거형 형식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)해당 개체가 열거형 값입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-148">Specify a standard or custom numeric format string if the corresponding object is a numeric value, a standard or custom date and time format string if the corresponding object is a <xref:System.DateTime> object, or an [enumeration format string](../../../docs/standard/base-types/enumeration-format-strings.md) if the corresponding object is an enumeration value.</span></span> <span data-ttu-id="89ccd-149">*formatString*을 지정하지 않으면 숫자, 날짜 및 시간, 또는 열거형 형식에 대해 일반("G") 형식 지정자가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-149">If *formatString* is not specified, the general ("G") format specifier for a numeric, date and time, or enumeration type is used.</span></span> <span data-ttu-id="89ccd-150">*formatString*을 지정하는 경우 콜론이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-150">The colon is required if *formatString* is specified.</span></span>  
   
- 다음 표에는 미리 정의된 서식 문자열 집합을 지원하는 .NET Framework 클래스 라이브러리의 형식 또는 형식 범주와 지원되는 서식 문자열을 나열하는 항목에 대한 링크가 나와 있습니다.  문자열 서식 지정은 응용 프로그램 정의 형식에서 지원하는 형식 문자열 집합을 정의하는, 모든 기존 형식을 위한 새 형식 문자열을 정의하는 확장 가능한 메커니즘입니다.  자세한 내용은 <xref:System.IFormattable> 및 <xref:System.ICustomFormatter> 인터페이스 항목을 참조하세요.  
+ <span data-ttu-id="89ccd-151">다음 표에는 미리 정의된 서식 문자열 집합을 지원하는 .NET Framework 클래스 라이브러리의 형식 또는 형식 범주와 지원되는 서식 문자열을 나열하는 항목에 대한 링크가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-151">The following table lists types or categories of types in the .NET Framework class library that support a predefined set of format strings, and provides links to the topics that list the supported format strings.</span></span> <span data-ttu-id="89ccd-152">문자열 서식 지정은 응용 프로그램 정의 형식에서 지원하는 형식 문자열 집합을 정의하는, 모든 기존 형식을 위한 새 형식 문자열을 정의하는 확장 가능한 메커니즘입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-152">Note that string formatting is an extensible mechanism that makes it possible to define new format strings for all existing types as well as to define a set of format strings supported by an application-defined type.</span></span> <span data-ttu-id="89ccd-153">자세한 내용은 <xref:System.IFormattable> 및 <xref:System.ICustomFormatter> 인터페이스 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="89ccd-153">For more information, see the <xref:System.IFormattable> and <xref:System.ICustomFormatter> interface topics.</span></span>  
   
-|형식 또는 형식 범주|참조|  
-|-----------------|--------|  
-|날짜 및 시간 형식\(<xref:System.DateTime>, <xref:System.DateTimeOffset>\)|[표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|열거형 형식\(<xref:System.Enum?displayProperty=fullName>에서 파생되는 모든 형식\)|[열거형 형식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|숫자 형식\(<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>\)|[표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
-|<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=fullName>|  
-|<xref:System.TimeSpan>|[표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
+|<span data-ttu-id="89ccd-154">형식 또는 형식 범주</span><span class="sxs-lookup"><span data-stu-id="89ccd-154">Type or type category</span></span>|<span data-ttu-id="89ccd-155">참조</span><span class="sxs-lookup"><span data-stu-id="89ccd-155">See</span></span>|  
+|---------------------------|---------|  
+|<span data-ttu-id="89ccd-156">날짜 및 시간 형식(<xref:System.DateTime>, <xref:System.DateTimeOffset>)</span><span class="sxs-lookup"><span data-stu-id="89ccd-156">Date and time types (<xref:System.DateTime>, <xref:System.DateTimeOffset>)</span></span>|[<span data-ttu-id="89ccd-157">Standard Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="89ccd-157">Standard Date and Time Format Strings</span></span>](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [<span data-ttu-id="89ccd-158">Custom Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="89ccd-158">Custom Date and Time Format Strings</span></span>](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|<span data-ttu-id="89ccd-159">열거형 형식(<xref:System.Enum?displayProperty=nameWithType>에서 파생되는 모든 형식)</span><span class="sxs-lookup"><span data-stu-id="89ccd-159">Enumeration types (all types derived from <xref:System.Enum?displayProperty=nameWithType>)</span></span>|[<span data-ttu-id="89ccd-160">Enumeration Format Strings</span><span class="sxs-lookup"><span data-stu-id="89ccd-160">Enumeration Format Strings</span></span>](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|<span data-ttu-id="89ccd-161">숫자 형식(<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)</span><span class="sxs-lookup"><span data-stu-id="89ccd-161">Numeric types (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)</span></span>|[<span data-ttu-id="89ccd-162">Standard Numeric Format Strings</span><span class="sxs-lookup"><span data-stu-id="89ccd-162">Standard Numeric Format Strings</span></span>](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [<span data-ttu-id="89ccd-163">Custom Numeric Format Strings</span><span class="sxs-lookup"><span data-stu-id="89ccd-163">Custom Numeric Format Strings</span></span>](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
+|<xref:System.TimeSpan>|[<span data-ttu-id="89ccd-164">표준 TimeSpan 서식 문자열</span><span class="sxs-lookup"><span data-stu-id="89ccd-164">Standard TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [<span data-ttu-id="89ccd-165">사용자 지정 TimeSpan 서식 문자열</span><span class="sxs-lookup"><span data-stu-id="89ccd-165">Custom TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
-### 이스케이프 중괄호  
- 여는 중괄호와 닫는 중괄호는 서식 항목의 시작과 끝으로 해석됩니다.  따라서 리터럴 여는 중괄호나 닫는 중괄호를 표시하려면 이스케이프 시퀀스를 사용해야 합니다.  고정 텍스트에서 여는 중괄호 2개\("{{"\)를 사용하면 여는 중괄호 1개\("{"\)가, 닫는 중괄호 2개\("}}"\)를 사용하면 닫는 중괄호 1개\("}"\)가 표시됩니다.  서식 항목에서 중괄호는 나타나는 순서대로 해석됩니다.  중첩 중괄호 해석은 지원되지 않습니다.  
+### <a name="escaping-braces"></a><span data-ttu-id="89ccd-166">이스케이프 중괄호</span><span class="sxs-lookup"><span data-stu-id="89ccd-166">Escaping Braces</span></span>  
+ <span data-ttu-id="89ccd-167">여는 중괄호와 닫는 중괄호는 서식 항목의 시작과 끝으로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-167">Opening and closing braces are interpreted as starting and ending a format item.</span></span> <span data-ttu-id="89ccd-168">따라서 리터럴 여는 중괄호나 닫는 중괄호를 표시하려면 이스케이프 시퀀스를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-168">Consequently, you must use an escape sequence to display a literal opening brace or closing brace.</span></span> <span data-ttu-id="89ccd-169">고정 텍스트에서 여는 중괄호 2개("{{")를 사용하면 여는 중괄호 1개("{")가, 닫는 중괄호 2개("}}")를 사용하면 닫는 중괄호 1개("}")가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-169">Specify two opening braces ("{{") in the fixed text to display one opening brace ("{"), or two closing braces ("}}") to display one closing brace ("}").</span></span> <span data-ttu-id="89ccd-170">서식 항목에서 중괄호는 나타나는 순서대로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-170">Braces in a format item are interpreted sequentially in the order they are encountered.</span></span> <span data-ttu-id="89ccd-171">중첩 중괄호 해석은 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-171">Interpreting nested braces is not supported.</span></span>  
   
- 이스케이프된 중괄호가 해석되는 방식에 따라 예기치 않은 결과가 나올 수도 있습니다.  예를 들어 여는 중괄호, 10진수로 서식 지정된 숫자 값 및 닫는 중괄호를 표시하기 위해 서식 항목 "{{{0:D}}}"를 사용했다고 가정해 봅시다.  그러나 이 서식 항목은 다음과 같이 해석됩니다.  
+ <span data-ttu-id="89ccd-172">이스케이프된 중괄호가 해석되는 방식에 따라 예기치 않은 결과가 나올 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-172">The way escaped braces are interpreted can lead to unexpected results.</span></span> <span data-ttu-id="89ccd-173">예를 들어 여는 중괄호, 10진수로 서식 지정된 숫자 값 및 닫는 중괄호를 표시하기 위해 서식 항목 "{{{0:D}}}"를 사용했다고 가정해 봅시다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-173">For example, consider the format item "{{{0:D}}}", which is intended to display an opening brace, a numeric value formatted as a decimal number, and a closing brace.</span></span> <span data-ttu-id="89ccd-174">그러나 이 서식 항목은 다음과 같이 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-174">However, the format item is actually interpreted in the following manner:</span></span>  
   
-1.  맨 처음 여는 중괄호 2개\("{{"\)는 이스케이프되어 여는 중괄호 1개가 됩니다.  
+1.  <span data-ttu-id="89ccd-175">맨 처음 여는 중괄호 2개("{{")는 이스케이프되어 여는 중괄호 1개가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-175">The first two opening braces ("{{") are escaped and yield one opening brace.</span></span>  
   
-2.  그 다음 3개의 문자\("{0:"\)는 서식 항목의 시작으로 해석됩니다.  
+2.  <span data-ttu-id="89ccd-176">그 다음 3개의 문자("{0:")는 서식 항목의 시작으로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-176">The next three characters ("{0:") are interpreted as the start of a format item.</span></span>  
   
-3.  다음 문자\("D"\)는 10진 표준 숫자 서식 지정자로 해석되지만, 그 다음 이스케이프된 중괄호 2개\("}}"\)는 중괄호 1개로 인식됩니다.  결과 문자열\("D}"\)은 표준 숫자 서식 지정자가 아니므로 리터럴 문자열 "D}"를 표시하는 사용자 지정 서식 문자열로 해석됩니다.  
+3.  <span data-ttu-id="89ccd-177">다음 문자("D")는 10진 표준 숫자 서식 지정자로 해석되지만, 그 다음 이스케이프된 중괄호 2개("}}")는 중괄호 1개로 인식됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-177">The next character ("D") would be interpreted as the Decimal standard numeric format specifier, but the next two escaped braces ("}}") yield a single brace.</span></span> <span data-ttu-id="89ccd-178">결과 문자열("D}")은 표준 숫자 서식 지정자가 아니므로 리터럴 문자열 "D}"를 표시하는 사용자 지정 서식 문자열로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-178">Because the resulting string ("D}") is not a standard numeric format specifier, the resulting string is interpreted as a custom format string that means display the literal string "D}".</span></span>  
   
-4.  마지막 중괄호\("}"\)는 서식 항목의 끝으로 해석됩니다.  
+4.  <span data-ttu-id="89ccd-179">마지막 중괄호("}")는 서식 항목의 끝으로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-179">The last brace ("}") is interpreted as the end of the format item.</span></span>  
   
-5.  표시되는 최종 결과는 리터럴 문자열 "{D}"입니다.  서식 지정 시 의도했던 숫자 값이 표시되지 않습니다.  
+5.  <span data-ttu-id="89ccd-180">표시되는 최종 결과는 리터럴 문자열 "{D}"입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-180">The final result that is displayed is the literal string, "{D}".</span></span> <span data-ttu-id="89ccd-181">서식 지정 시 의도했던 숫자 값이 표시되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-181">The numeric value that was to be formatted is not displayed.</span></span>  
   
- 이스케이프된 중괄호 및 서식 항목이 잘못 해석되지 않도록 코드를 작성하는 방법 중 하나는 중괄호와 서식 항목의 서식을 따로 지정하는 것입니다.  즉, 첫째 서식 작업에서 리터럴 여는 중괄호를 표시하고 다음 작업에서 서식 항목의 결과를 표시한 다음 마지막 작업에서 리터럴 닫는 괄호를 표시합니다.  다음 예제에서 이 방법을 보여 줍니다.  
+ <span data-ttu-id="89ccd-182">이스케이프된 중괄호 및 서식 항목이 잘못 해석되지 않도록 코드를 작성하는 방법 중 하나는 중괄호와 서식 항목의 서식을 따로 지정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-182">One way to write your code to avoid misinterpreting escaped braces and format items is to format the braces and format item separately.</span></span> <span data-ttu-id="89ccd-183">즉, 첫째 서식 작업에서 리터럴 여는 중괄호를 표시하고 다음 작업에서 서식 항목의 결과를 표시한 다음 마지막 작업에서 리터럴 닫는 괄호를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-183">That is, in the first format operation display a literal opening brace, in the next operation display the result of the format item, then in the final operation display a literal closing brace.</span></span> <span data-ttu-id="89ccd-184">다음 예제에서 이 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-184">The following example illustrates this approach.</span></span>  
   
  [!code-csharp[Formatting.Composite#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Escaping1.cs#2)]
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
-### 처리 순서  
- 합성 서식 지정 메서드에 대한 호출에 값이 <xref:System.IFormatProvider>이 아닌 `null` 인수가 포함되는 경우, 런타임은 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=fullName> 메서드를 호출하여 <xref:System.ICustomFormatter> 구현을 요청합니다.  이 메서드가 <xref:System.ICustomFormatter> 구현을 반환할 수 있는 경우 나중에 사용할 수 있도록 캐시됩니다.  
+### <a name="processing-order"></a><span data-ttu-id="89ccd-185">처리 순서</span><span class="sxs-lookup"><span data-stu-id="89ccd-185">Processing Order</span></span>  
+ <span data-ttu-id="89ccd-186">합성 서식 지정 메서드에 대한 호출에 값이 <xref:System.IFormatProvider>이 아닌 `null` 인수가 포함되는 경우, 런타임은 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.ICustomFormatter> 구현을 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-186">If the call to the composite formatting method includes an <xref:System.IFormatProvider> argument whose value is not `null`, the runtime calls its <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> method to request an <xref:System.ICustomFormatter> implementation.</span></span> <span data-ttu-id="89ccd-187">이 메서드가 <xref:System.ICustomFormatter> 구현을 반환할 수 있는 경우 나중에 사용할 수 있도록 캐시됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-187">If the method is able to return an <xref:System.ICustomFormatter> implementation, it is cached for later use.</span></span>  
   
- 다음 단계를 수행하면 서식 항목에 상응하는 매개 변수 목록의 각 값이 문자열로 변환됩니다.  처음 세 단계의 조건 중 해당 사항이 하나라도 있으면 해당 단계에서 값의 문자열 표현이 반환되고 이후의 단계는 실행되지 않습니다.  
+ <span data-ttu-id="89ccd-188">다음 단계를 수행하면 서식 항목에 상응하는 매개 변수 목록의 각 값이 문자열로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-188">Each value in the parameter list that corresponds to a format item is converted to a string by performing the following steps.</span></span> <span data-ttu-id="89ccd-189">처음 세 단계의 조건 중 해당 사항이 하나라도 있으면 해당 단계에서 값의 문자열 표현이 반환되고 이후의 단계는 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-189">If any condition in the first three steps is true, the string representation of the value is returned in that step, and subsequent steps are not executed.</span></span>  
   
-1.  서식을 지정할 값이 `null`이면 빈 문자열\(""\)이 반환됩니다.  
+1.  <span data-ttu-id="89ccd-190">서식을 지정할 값이 `null`이면 빈 문자열("")이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-190">If the value to be formatted is `null`, an empty string ("") is returned.</span></span>  
   
-2.  <xref:System.ICustomFormatter> 구현을 사용할 수 있는 경우 런타임은 <xref:System.ICustomFormatter.Format%2A> 메서드를 호출합니다.  <xref:System.IFormatProvider> 구현과 함께, 형식 항목의 *formatString* 값이 있는 경우 이 메서드로 값을 전달하거나, 값이 없는 경우에는 `null`을 전달합니다.  
+2.  <span data-ttu-id="89ccd-191"><xref:System.ICustomFormatter> 구현을 사용할 수 있는 경우 런타임은 <xref:System.ICustomFormatter.Format%2A> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-191">If an <xref:System.ICustomFormatter> implementation is available, the runtime calls its <xref:System.ICustomFormatter.Format%2A> method.</span></span> <span data-ttu-id="89ccd-192">형식 항목의 메서드에 전달 *formatString* 가 없는 경우이 값 또는 `null` 정상이 아닌 경우와 함께 <xref:System.IFormatProvider> 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-192">It passes the method the format item's *formatString* value, if one is present, or `null` if it is not, along with the <xref:System.IFormatProvider> implementation.</span></span>  
   
-3.  값이 <xref:System.IFormattable> 인터페이스를 구현하면 인터페이스의 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 메서드가 호출됩니다.  형식 항목에 값이 있는 경우 메서드로 *formatString* 값이 전달되거나, 이 값이 없는 경우 `null`이 전달됩니다.  <xref:System.IFormatProvider> 인수는 다음과 같이 결정됩니다.  
+3.  <span data-ttu-id="89ccd-193">값이 <xref:System.IFormattable> 인터페이스를 구현하면 인터페이스의 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 메서드가 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-193">If the value implements the <xref:System.IFormattable> interface, the interface's <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> method is called.</span></span> <span data-ttu-id="89ccd-194">*formatString* 값(형식 항목에 있는 경우) 또는 `null`(없는 경우)이 메서드에 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-194">The method is passed the *formatString* value, if one is present in the format item, or `null` if it is not.</span></span> <span data-ttu-id="89ccd-195"><xref:System.IFormatProvider> 인수는 다음과 같이 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-195">The <xref:System.IFormatProvider> argument is determined as follows:</span></span>  
   
-    -   숫자 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.NumberFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=fullName> 개체를 요청합니다.  값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.NumberFormatInfo> 개체가 사용됩니다.  
+    -   <span data-ttu-id="89ccd-196">숫자 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.NumberFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체를 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-196">For a numeric value, if a composite formatting method with a non-null <xref:System.IFormatProvider> argument is called, the runtime requests a <xref:System.Globalization.NumberFormatInfo> object from its <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="89ccd-197">값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.NumberFormatInfo> 개체가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-197">If it is unable to supply one, if the value of the argument is `null`, or if the composite formatting method does not have an <xref:System.IFormatProvider> parameter, the <xref:System.Globalization.NumberFormatInfo> object for the current thread culture is used.</span></span>  
   
-    -   날짜 및 시간 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.DateTimeFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=fullName> 개체를 요청합니다.  값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.DateTimeFormatInfo> 개체가 사용됩니다.  
+    -   <span data-ttu-id="89ccd-198">날짜 및 시간 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.DateTimeFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체를 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-198">For a date and time value, if a composite formatting method with a non-null <xref:System.IFormatProvider> argument is called, the runtime requests a <xref:System.Globalization.DateTimeFormatInfo> object from its <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="89ccd-199">값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.DateTimeFormatInfo> 개체가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-199">If it is unable to supply one, if the value of the argument is `null`, or if the composite formatting method does not have an <xref:System.IFormatProvider> parameter, the <xref:System.Globalization.DateTimeFormatInfo> object for the current thread culture is used.</span></span>  
   
-    -   다른 형식의 개체에 대해, 합성 서식 지정이 <xref:System.IFormatProvider> 인수와 함께 호출되는 경우 그 값\(아무런 `null` 개체도 제공되지 않는 경우 <xref:System.IFormatProvider> 포함\)은 <xref:System.IFormattable.ToString%2A?displayProperty=fullName> 구현으로 직접 전달됩니다.  그러지 않은 경우, 현재 스레드 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체가 <xref:System.IFormattable.ToString%2A?displayProperty=fullName> 구현으로 전달됩니다.  
+    -   <span data-ttu-id="89ccd-200">다른 형식의 개체에 대해, 합성 서식 지정이 <xref:System.IFormatProvider> 인수와 함께 호출되는 경우 그 값(아무런 `null` 개체도 제공되지 않는 경우 <xref:System.IFormatProvider> 포함)은 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 직접 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-200">For objects of other types, if a composite formatting is called with an <xref:System.IFormatProvider> argument, its value (including a `null`, if no <xref:System.IFormatProvider> object is supplied) is passed directly to the <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementation.</span></span>  <span data-ttu-id="89ccd-201">그러지 않은 경우, 현재 스레드 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체가 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-201">Otherwise, a <xref:System.Globalization.CultureInfo> object that represents the current thread culture is passed to the <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementation.</span></span>  
   
-4.  `ToString`을 재정의하거나 기본 클래스의 동작을 상속하는, 형식의 매개 변수 없는 <xref:System.Object.ToString?displayProperty=fullName> 메서드가 호출됩니다.  이 경우, 형식 항목에서 *formatString* 구성 요소에 의해 지정된 형식 문자열은 무시됩니다\(있는 경우\).  
+4.  <span data-ttu-id="89ccd-202">`ToString`을 재정의하거나 기본 클래스의 동작을 상속하는, 형식의 매개 변수 없는 <xref:System.Object.ToString?displayProperty=nameWithType> 메서드가 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-202">The type's parameterless `ToString` method, which either overrides <xref:System.Object.ToString?displayProperty=nameWithType> or inherits the behavior of its base class, is called.</span></span> <span data-ttu-id="89ccd-203">이 경우, 형식 항목에서 *formatString* 구성 요소로 지정된 형식 문자열(있는 경우)은 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-203">In this case, the format string specified by the *formatString* component in the format item, if it is present, is ignored.</span></span>  
   
- 앞의 단계가 수행된 후에 맞춤이 적용됩니다.  
+ <span data-ttu-id="89ccd-204">앞의 단계가 수행된 후에 맞춤이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-204">Alignment is applied after the preceding steps have been performed.</span></span>  
   
-## 코드 예제  
- 다음 예제에서는 합성 서식 지정을 사용하여 만든 문자열과 개체의 `ToString` 메서드를 사용하여 만든 문자열을 보여 줍니다.  두 형식의 서식을 지정한 결과는 같습니다.  
+## <a name="code-examples"></a><span data-ttu-id="89ccd-205">코드 예제</span><span class="sxs-lookup"><span data-stu-id="89ccd-205">Code Examples</span></span>  
+ <span data-ttu-id="89ccd-206">다음 예제에서는 합성 서식 지정을 사용하여 만든 문자열과 개체의 `ToString` 메서드를 사용하여 만든 문자열을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-206">The following example shows one string created using composite formatting and another created using an object's `ToString` method.</span></span> <span data-ttu-id="89ccd-207">두 형식의 서식을 지정한 결과는 같습니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-207">Both types of formatting produce equivalent results.</span></span>  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]
  [!code-vb[Formatting.Composite#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#3)]  
   
- 오늘이 5월의 목요일이라고 가정할 때 앞의 예제에서 두 문자열의 값은 미국 영어 문화권에서 `Thursday May` 입니다.  
+ <span data-ttu-id="89ccd-208">오늘이 5월의 목요일이라고 가정할 때 앞의 예제에서 두 문자열의 값은 미국 영어 문화권에서 `Thursday May` 입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-208">Assuming that the current day is a Thursday in May, the value of both strings in the preceding example is `Thursday May` in the U.S. English culture.</span></span>  
   
- <xref:System.Console.WriteLine%2A?displayProperty=fullName>은 <xref:System.String.Format%2A?displayProperty=fullName>과 동일한 기능을 제공합니다.  두 메서드가 유일하게 다른 점은 <xref:System.String.Format%2A?displayProperty=fullName>은 결과를 문자열로 반환하는 반면 <xref:System.Console.WriteLine%2A?displayProperty=fullName>은 <xref:System.Console> 개체와 연결된 출력 스트림에 결과를 쓴다는 것입니다.  다음 예제에서는 <xref:System.Console.WriteLine%2A?displayProperty=fullName> 메서드를 사용하여 `MyInt` 값의 서식을 통화 값으로 지정합니다.  
+ <span data-ttu-id="89ccd-209"><xref:System.Console.WriteLine%2A?displayProperty=nameWithType>은 <xref:System.String.Format%2A?displayProperty=nameWithType>과 동일한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-209"><xref:System.Console.WriteLine%2A?displayProperty=nameWithType> exposes the same functionality as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="89ccd-210">두 메서드가 유일하게 다른 점은 <xref:System.String.Format%2A?displayProperty=nameWithType>은 결과를 문자열로 반환하는 반면 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>은 <xref:System.Console> 개체와 연결된 출력 스트림에 결과를 쓴다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-210">The only difference between the two methods is that <xref:System.String.Format%2A?displayProperty=nameWithType> returns its result as a string, while <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> writes the result to the output stream associated with the <xref:System.Console> object.</span></span> <span data-ttu-id="89ccd-211">다음 예제에서는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 메서드를 사용하여 `MyInt` 값의 서식을 통화 값으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-211">The following example uses the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to format the value of `MyInt` to a currency value.</span></span>  
   
  [!code-csharp[Formatting.Composite#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#4)]
  [!code-vb[Formatting.Composite#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#4)]  
   
- 다음 예제에서는 하나의 개체 서식을 두 가지 다른 방법으로 지정하는 경우를 비롯하여 여러 개체의 서식을 지정하는 방법을 보여 줍니다.  
+ <span data-ttu-id="89ccd-212">다음 예제에서는 하나의 개체 서식을 두 가지 다른 방법으로 지정하는 경우를 비롯하여 여러 개체의 서식을 지정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-212">The following example demonstrates formatting multiple objects, including formatting one object two different ways.</span></span>  
   
  [!code-csharp[Formatting.Composite#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#5)]
  [!code-vb[Formatting.Composite#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#5)]  
   
- 다음 예제에서는 서식 지정에서 맞춤을 사용하는 방법을 보여 줍니다.  서식 지정되는 인수가 세로줄 문자\('&#124;'\) 사이에 위치하면서 결과 맞춤이 강조됩니다.  
+ <span data-ttu-id="89ccd-213">다음 예제에서는 서식 지정에서 맞춤을 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-213">The following example demonstrates the use of alignment in formatting.</span></span> <span data-ttu-id="89ccd-214">서식 지정되는 인수가 세로줄 문자(&#124;) 사이에 위치하면서 결과 맞춤이 강조됩니다.</span><span class="sxs-lookup"><span data-stu-id="89ccd-214">The arguments that are formatted are placed between vertical bar characters (&#124;) to highlight the resulting alignment.</span></span>  
   
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## 참고 항목  
- <xref:System.Console.WriteLine%2A>   
- <xref:System.String.Format%2A?displayProperty=fullName>   
- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)   
- [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)   
- [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)   
- [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)   
- [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)   
- [표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)   
- [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)   
- [열거형 형식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)
+## <a name="see-also"></a><span data-ttu-id="89ccd-215">참고 항목</span><span class="sxs-lookup"><span data-stu-id="89ccd-215">See Also</span></span>  
+ <xref:System.Console.WriteLine%2A>  
+ <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="89ccd-216">형식 서식 지정</span><span class="sxs-lookup"><span data-stu-id="89ccd-216">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="89ccd-217">표준 숫자 형식 문자열</span><span class="sxs-lookup"><span data-stu-id="89ccd-217">Standard Numeric Format Strings</span></span>](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+ [<span data-ttu-id="89ccd-218">사용자 지정 숫자 형식 문자열</span><span class="sxs-lookup"><span data-stu-id="89ccd-218">Custom Numeric Format Strings</span></span>](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+ [<span data-ttu-id="89ccd-219">표준 날짜 및 시간 형식 문자열</span><span class="sxs-lookup"><span data-stu-id="89ccd-219">Standard Date and Time Format Strings</span></span>](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [<span data-ttu-id="89ccd-220">사용자 지정 날짜 및 시간 형식 문자열</span><span class="sxs-lookup"><span data-stu-id="89ccd-220">Custom Date and Time Format Strings</span></span>](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [<span data-ttu-id="89ccd-221">표준 TimeSpan 서식 문자열</span><span class="sxs-lookup"><span data-stu-id="89ccd-221">Standard TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
+ [<span data-ttu-id="89ccd-222">사용자 지정 TimeSpan 서식 문자열</span><span class="sxs-lookup"><span data-stu-id="89ccd-222">Custom TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+ [<span data-ttu-id="89ccd-223">Enumeration Format Strings</span><span class="sxs-lookup"><span data-stu-id="89ccd-223">Enumeration Format Strings</span></span>](../../../docs/standard/base-types/enumeration-format-strings.md)

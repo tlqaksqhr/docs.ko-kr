@@ -1,236 +1,243 @@
 ---
-title: "사용자 지정 숫자 형식 문자열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "사용자 지정 숫자 형식 문자열"
-  - "형식 지정자, 사용자 지정 숫자 형식 문자열"
-  - "형식 지정자, 숫자"
-  - "형식 문자열"
-  - "서식 지정[.NET Framework], 숫자"
-  - "숫자 형식 지정[.NET Framework]"
-  - "숫자[.NET Framework], 서식 지정"
-  - "숫자 형식 문자열[.NET Framework]"
+title: "사용자 지정 숫자 형식 문자열"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- format strings
+- custom numeric format strings
+- numbers [.NET Framework], formatting
+- format specifiers, numeric
+- formatting numbers [.NET Framework]
+- format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: 54
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 54
+caps.latest.revision: "54"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 사용자 지정 숫자 형식 문자열
-하나 이상의 사용자 지정 숫자 서식 지정자로 구성된 사용자 지정 숫자 서식 문자열을 만들어 숫자 데이터의 서식을 지정하는 방법을 정의할 수 있습니다. 사용자 지정 숫자 서식 문자열은 [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)이 아닌 모든 서식 문자열입니다.  
+# <a name="custom-numeric-format-strings"></a><span data-ttu-id="d5887-102">사용자 지정 숫자 형식 문자열</span><span class="sxs-lookup"><span data-stu-id="d5887-102">Custom Numeric Format Strings</span></span>
+<span data-ttu-id="d5887-103">하나 이상의 사용자 지정 숫자 서식 지정자로 구성된 사용자 지정 숫자 서식 문자열을 만들어 숫자 데이터의 서식을 지정하는 방법을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-103">You can create a custom numeric format string, which consists of one or more custom numeric specifiers, to define how to format numeric data.</span></span> <span data-ttu-id="d5887-104">사용자 지정 숫자 서식 문자열은 [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)이 아닌 모든 서식 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-104">A custom numeric format string is any format string that is not a [standard numeric format string](../../../docs/standard/base-types/standard-numeric-format-strings.md).</span></span>  
   
- 사용자 지정 숫자 서식 문자열은 모든 숫자 형식의 `ToString` 메서드를 오버로드하여 사용할 수 있습니다. 예를 들어 <xref:System.Int32.ToString%28System.String%29> 형식의 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 및 <xref:System.Int32> 메서드에 숫자 서식 문자열을 제공할 수 있습니다.<xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=fullName> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=fullName> 메서드에 사용되는 .NET Framework [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md)을 통해서도 사용자 지정 숫자 서식 문자열을 사용할 수 있습니다.  
+ <span data-ttu-id="d5887-105">사용자 지정 숫자 서식 문자열은 모든 숫자 형식의 `ToString` 메서드를 오버로드하여 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-105">Custom numeric format strings are supported by some overloads of the `ToString` method of all numeric types.</span></span> <span data-ttu-id="d5887-106">예를 들어 <xref:System.Int32.ToString%28System.String%29> 형식의 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 및 <xref:System.Int32> 메서드에 숫자 서식 문자열을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-106">For example, you can supply a numeric format string to the <xref:System.Int32.ToString%28System.String%29> and <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> methods of the <xref:System.Int32> type.</span></span> <span data-ttu-id="d5887-107">사용자 지정 숫자 형식 문자열은.NET에서 지원도 [합성 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md), 일부에서 사용 되는 `Write` 및 `WriteLine` 의 메서드는 <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스는 <xref:System.String.Format%2A?displayProperty=nameWithType>메서드, 및 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드.</span><span class="sxs-lookup"><span data-stu-id="d5887-107">Custom numeric format strings are also supported by the .NET [composite formatting feature](../../../docs/standard/base-types/composite-formatting.md), which is used by some `Write` and `WriteLine` methods of the <xref:System.Console> and <xref:System.IO.StreamWriter> classes, the <xref:System.String.Format%2A?displayProperty=nameWithType> method, and the <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> method.</span></span>  
   
 > [!TIP]
->  서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 응용 프로그램인 [서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.  
+>  <span data-ttu-id="d5887-108">서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 응용 프로그램인 [서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)를 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-108">You can download the [Formatting Utility](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), an application that enables you to apply format strings to either numeric or date and time values and displays the result string.</span></span>  
   
-<a name="table"></a> 다음 표에서는 사용자 지정 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여 줍니다. 사용자 지정 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesCustomFormatting) 단원을 참조하고, 이러한 사용 방법을 자세히 보여 주는 예제를 보려면 [예제](#example) 단원을 참조하세요.  
+<span data-ttu-id="d5887-109"><a name="table"></a> 다음 표에서는 사용자 지정 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-109"><a name="table"></a> The following table describes the custom numeric format specifiers and displays sample output produced by each format specifier.</span></span> <span data-ttu-id="d5887-110">사용자 지정 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesCustomFormatting) 단원을 참조하고, 이러한 사용 방법을 자세히 보여 주는 예제를 보려면 [예제](#example) 단원을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d5887-110">See the [Notes](#NotesCustomFormatting) section for additional information about using custom numeric format strings, and the [Example](#example) section for a comprehensive illustration of their use.</span></span>  
   
-|형식 지정자|이름|설명|예제|  
-|------------|--------|--------|--------|  
-|"0"|0 자리 표시자|해당 숫자가 있을 경우 0을 해당 숫자로 바꾸고, 그렇지 않으면 결과 문자열에 0을 표시합니다.<br /><br /> 추가 정보: ["0" 사용자 지정 지정자](#Specifier0)|1234.5678 \("00000"\) \-\> 01235<br /><br /> 0.45678 \("0.00", en\-US\) \-\> 0.46<br /><br /> 0.45678 \("0.00", fr\-FR\) \-\> 0,46|  
-|"\#"|10진수 자리 표시자|해당 숫자가 있을 경우 "\#" 기호를 해당 숫자로 바꾸고, 그렇지 않으면 결과 문자열에 숫자를 표시하지 않습니다.<br /><br /> 입력 문자열의 해당 숫자가 의미 없는 0인 경우 결과 문자열에 숫자를 표시하지 않습니다. 예를 들어 0003 \("\#\#\#\#"\) \-\> 3입니다.<br /><br /> 추가 정보: ["\#" 사용자 지정 지정자](#SpecifierD)|1234.5678 \("\#\#\#\#\#"\) \-\> 1235<br /><br /> 0.45678 \("\#.\#\#", en\-US\) \-\> .46<br /><br /> 0.45678 \("\#.\#\#", fr\-FR\) \-\> ,46|  
-|"."|소수점|결과 문자열에서 소수 구분 기호의 위치를 결정합니다.<br /><br /> 추가 정보: ["." 사용자 지정 지정자](#SpecifierPt)|0.45678 \("0.00", en\-US\) \-\> 0.46<br /><br /> 0.45678 \("0.00", fr\-FR\) \-\> 0,46|  
-|","|그룹 구분 기호 및 숫자 배율|그룹 구분 기호 지정자와 숫자 배율 지정자로 모두 사용됩니다. 그룹 구분 기호로 사용될 경우 각 그룹 사이에 지역화된 그룹 구분 기호 문자를 삽입합니다. 숫자 배율 지정자로 사용될 경우 숫자를 쉼표 단위로 끊어서 1000으로 나눕니다.<br /><br /> 추가 정보: ["," 사용자 지정 지정자](#SpecifierTh)|그룹 구분 기호 지정자:<br /><br /> 2147483647 \("\#\#,\#", en\-US\) \-\> 2,147,483,647<br /><br /> 2147483647 \("\#\#,\#", es\-ES\) \-\> 2.147.483.647<br /><br /> 배율 지정자:<br /><br /> 2147483647 \("\#,\#,,", en\-US\) \-\> 2,147<br /><br /> 2147483647 \("\#,\#,,", es\-ES\) \-\> 2.147|  
-|"%"|백분율 자리 표시자|숫자에 100을 곱하고 결과 문자열에 지역화된 백분율 기호를 삽입합니다.<br /><br /> 추가 정보: ["%" 사용자 지정 지정자](#SpecifierPct)|0.3697 \("%\#0.00", en\-US\) \-\> %36.97<br /><br /> 0.3697 \("%\#0.00", el\-GR\) \-\> %36,97<br /><br /> 0.3697 \("\#\#.0 %", en\-US\) \-\> 37.0 %<br /><br /> 0.3697 \("\#\#.0 %", el\-GR\) \-\> 37,0 %|  
-|"‰"|천분율 자리 표시자|숫자에 1000을 곱하고 결과 문자열에 지역화된 천분율 기호를 삽입합니다.<br /><br /> 추가 정보: ["‰" 사용자 지정 지정자](#SpecifierPerMille)|0.03697 \("\#0.00‰", en\-US\) \-\> 36.97‰<br /><br /> 0.03697 \("\#0.00‰", ru\-RU\) \-\> 36,97‰|  
-|"E0"<br /><br /> "E\+0"<br /><br /> "E\-0"<br /><br /> "e0"<br /><br /> "e\+0"<br /><br /> "e\-0"|지수 표기법|적어도 하나의 0이 뒤에 오면 지수 표기법을 사용하여 결과의 서식을 지정합니다. "E" 또는 "e" 문자는 결과 문자열에 표시되는 지수 기호의 대\/소문자를 나타냅니다. "E" 또는 "e" 문자 뒤에 오는 0의 수에 따라 지수의 최소 자릿수가 결정됩니다. 더하기 기호\(\+\)는 기호 문자가 항상 지수 앞에 온다는 것을 나타냅니다. 빼기 기호\(\-\)는 기호 문자가 음의 지수 앞에만 온다는 것을 나타냅니다.<br /><br /> 추가 정보: ["E" 및 "e" 사용자 지정 지정자](#SpecifierExponent)|987654 \("\#0.0e0"\) \-\> 98.8e4<br /><br /> 1503.92311 \("0.0\#\#e\+00"\) \-\> 1.504e\+03<br /><br /> 1.8901385E\-16 \("0.0e\+00"\) \-\> 1.9e\-16|  
-|\\|이스케이프 문자|뒤에 오는 문자가 사용자 지정 형식 지정자가 아닌 리터럴로 해석되도록 합니다.<br /><br /> 추가 정보: ["\\" 이스케이프 문자](#SpecifierEscape)|987654 \("\\\#\#\#00\\\#"\) \-\> \#987654\#|  
-|'*string*'<br /><br /> "*string*"|리터럴 문자열 구분 기호|괄호로 묶인 문자가 변경되지 않은 상태로 결과 문자열에 복사되어야 함을 나타냅니다.|68 \("\# ' degrees'"\) \-\> 68  degrees<br /><br /> 68 \("\#' degrees'"\) \-\> 68 degrees|  
-|;|섹션 구분 기호|양수, 음수 및 0에 따라 별도의 서식 문자열을 사용하여 섹션을 정의합니다.<br /><br /> 추가 정보: [";" 섹션 구분 기호](#SectionSeparator)|12.345 \("\#0.0\#;\(\#0.0\#\);\-\\0\-"\) \-\> 12.35<br /><br /> 0 \("\#0.0\#;\(\#0.0\#\);\-\\0\-"\) \-\> \-0\-<br /><br /> \-12.345 \("\#0.0\#;\(\#0.0\#\);\-\\0\-"\) \-\> \(12.35\)<br /><br /> 12.345 \("\#0.0\#;\(\#0.0\#\)"\) \-\> 12.35<br /><br /> 0 \("\#0.0\#;\(\#0.0\#\)"\) \-\> 0.0<br /><br /> \-12.345 \("\#0.0\#;\(\#0.0\#\)"\) \-\> \(12.35\)|  
-|기타|다른 모든 문자|문자가 변경되지 않은 상태로 결과 문자열에 복사됩니다.|68 \("\# °"\) \-\> 68 °|  
+|<span data-ttu-id="d5887-111">형식 지정자</span><span class="sxs-lookup"><span data-stu-id="d5887-111">Format specifier</span></span>|<span data-ttu-id="d5887-112">이름</span><span class="sxs-lookup"><span data-stu-id="d5887-112">Name</span></span>|<span data-ttu-id="d5887-113">설명</span><span class="sxs-lookup"><span data-stu-id="d5887-113">Description</span></span>|<span data-ttu-id="d5887-114">예제</span><span class="sxs-lookup"><span data-stu-id="d5887-114">Examples</span></span>|  
+|----------------------|----------|-----------------|--------------|  
+|<span data-ttu-id="d5887-115">"0"</span><span class="sxs-lookup"><span data-stu-id="d5887-115">"0"</span></span>|<span data-ttu-id="d5887-116">0 자리 표시자</span><span class="sxs-lookup"><span data-stu-id="d5887-116">Zero placeholder</span></span>|<span data-ttu-id="d5887-117">해당 숫자가 있을 경우 0을 해당 숫자로 바꾸고, 그렇지 않으면 결과 문자열에 0을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-117">Replaces the zero with the corresponding digit if one is present; otherwise, zero appears in the result string.</span></span><br /><br /> <span data-ttu-id="d5887-118">추가 정보: ["0" 사용자 지정 지정자](#Specifier0)</span><span class="sxs-lookup"><span data-stu-id="d5887-118">More information: [The "0" Custom Specifier](#Specifier0).</span></span>|<span data-ttu-id="d5887-119">1234.5678 ("00000") -> 01235</span><span class="sxs-lookup"><span data-stu-id="d5887-119">1234.5678 ("00000") -> 01235</span></span><br /><br /> <span data-ttu-id="d5887-120">0.45678 ("0.00", en-US) -> 0.46</span><span class="sxs-lookup"><span data-stu-id="d5887-120">0.45678 ("0.00", en-US) -> 0.46</span></span><br /><br /> <span data-ttu-id="d5887-121">0.45678 ("0.00", fr-FR) -> 0,46</span><span class="sxs-lookup"><span data-stu-id="d5887-121">0.45678 ("0.00", fr-FR) -> 0,46</span></span>|  
+|<span data-ttu-id="d5887-122">"#"</span><span class="sxs-lookup"><span data-stu-id="d5887-122">"#"</span></span>|<span data-ttu-id="d5887-123">10진수 자리 표시자</span><span class="sxs-lookup"><span data-stu-id="d5887-123">Digit placeholder</span></span>|<span data-ttu-id="d5887-124">해당 숫자가 있을 경우 "#" 기호를 해당 숫자로 바꾸고, 그렇지 않으면 결과 문자열에 숫자를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-124">Replaces the "#" symbol with the corresponding digit if one is present; otherwise, no digit appears in the result string.</span></span><br /><br /> <span data-ttu-id="d5887-125">입력 문자열의 해당 숫자가 의미 없는 0인 경우 결과 문자열에 숫자를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-125">Note that no digit appears in the result string if the corresponding digit in the input string is a non-significant 0.</span></span> <span data-ttu-id="d5887-126">예를 들어 0003 ("####") -> 3입니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-126">For example, 0003 ("####") -> 3.</span></span><br /><br /> <span data-ttu-id="d5887-127">추가 정보: ["#" 사용자 지정 지정자](#SpecifierD)</span><span class="sxs-lookup"><span data-stu-id="d5887-127">More information: [The "#" Custom Specifier](#SpecifierD).</span></span>|<span data-ttu-id="d5887-128">1234.5678 ("#####") -> 1235</span><span class="sxs-lookup"><span data-stu-id="d5887-128">1234.5678 ("#####") -> 1235</span></span><br /><br /> <span data-ttu-id="d5887-129">0.45678 ("#.##", en-US) -> .46</span><span class="sxs-lookup"><span data-stu-id="d5887-129">0.45678 ("#.##", en-US) -> .46</span></span><br /><br /> <span data-ttu-id="d5887-130">0.45678 ("#.##", fr-FR) -> ,46</span><span class="sxs-lookup"><span data-stu-id="d5887-130">0.45678 ("#.##", fr-FR) -> ,46</span></span>|  
+|<span data-ttu-id="d5887-131">"."</span><span class="sxs-lookup"><span data-stu-id="d5887-131">"."</span></span>|<span data-ttu-id="d5887-132">소수점</span><span class="sxs-lookup"><span data-stu-id="d5887-132">Decimal point</span></span>|<span data-ttu-id="d5887-133">결과 문자열에서 소수 구분 기호의 위치를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-133">Determines the location of the decimal separator in the result string.</span></span><br /><br /> <span data-ttu-id="d5887-134">추가 정보: ["." 사용자 지정 지정자](#SpecifierPt)</span><span class="sxs-lookup"><span data-stu-id="d5887-134">More information: [The "." Custom Specifier](#SpecifierPt).</span></span>|<span data-ttu-id="d5887-135">0.45678 ("0.00", en-US) -> 0.46</span><span class="sxs-lookup"><span data-stu-id="d5887-135">0.45678 ("0.00", en-US) -> 0.46</span></span><br /><br /> <span data-ttu-id="d5887-136">0.45678 ("0.00", fr-FR) -> 0,46</span><span class="sxs-lookup"><span data-stu-id="d5887-136">0.45678 ("0.00", fr-FR) -> 0,46</span></span>|  
+|<span data-ttu-id="d5887-137">","</span><span class="sxs-lookup"><span data-stu-id="d5887-137">","</span></span>|<span data-ttu-id="d5887-138">그룹 구분 기호 및 숫자 배율</span><span class="sxs-lookup"><span data-stu-id="d5887-138">Group separator and number scaling</span></span>|<span data-ttu-id="d5887-139">그룹 구분 기호 지정자와 숫자 배율 지정자로 모두 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-139">Serves as both a group separator and a number scaling specifier.</span></span> <span data-ttu-id="d5887-140">그룹 구분 기호로 사용될 경우 각 그룹 사이에 지역화된 그룹 구분 기호 문자를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-140">As a group separator, it inserts a localized group separator character between each group.</span></span> <span data-ttu-id="d5887-141">숫자 배율 지정자로 사용될 경우 숫자를 쉼표 단위로 끊어서 1000으로 나눕니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-141">As a number scaling specifier, it divides a number by 1000 for each comma specified.</span></span><br /><br /> <span data-ttu-id="d5887-142">추가 정보: ["," 사용자 지정 지정자](#SpecifierTh)</span><span class="sxs-lookup"><span data-stu-id="d5887-142">More information: [The "," Custom Specifier](#SpecifierTh).</span></span>|<span data-ttu-id="d5887-143">그룹 구분 기호 지정자:</span><span class="sxs-lookup"><span data-stu-id="d5887-143">Group separator specifier:</span></span><br /><br /> <span data-ttu-id="d5887-144">2147483647 ("##,#", en-US) -> 2,147,483,647</span><span class="sxs-lookup"><span data-stu-id="d5887-144">2147483647 ("##,#", en-US) -> 2,147,483,647</span></span><br /><br /> <span data-ttu-id="d5887-145">2147483647 ("##,#", es-ES) -> 2.147.483.647</span><span class="sxs-lookup"><span data-stu-id="d5887-145">2147483647 ("##,#", es-ES) -> 2.147.483.647</span></span><br /><br /> <span data-ttu-id="d5887-146">배율 지정자:</span><span class="sxs-lookup"><span data-stu-id="d5887-146">Scaling specifier:</span></span><br /><br /> <span data-ttu-id="d5887-147">2147483647 ("#,#,,", en-US) -> 2,147</span><span class="sxs-lookup"><span data-stu-id="d5887-147">2147483647 ("#,#,,", en-US) -> 2,147</span></span><br /><br /> <span data-ttu-id="d5887-148">2147483647 ("#,#,,", es-ES) -> 2.147</span><span class="sxs-lookup"><span data-stu-id="d5887-148">2147483647 ("#,#,,", es-ES) -> 2.147</span></span>|  
+|<span data-ttu-id="d5887-149">"%"</span><span class="sxs-lookup"><span data-stu-id="d5887-149">"%"</span></span>|<span data-ttu-id="d5887-150">백분율 자리 표시자</span><span class="sxs-lookup"><span data-stu-id="d5887-150">Percentage placeholder</span></span>|<span data-ttu-id="d5887-151">숫자에 100을 곱하고 결과 문자열에 지역화된 백분율 기호를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-151">Multiplies a number by 100 and inserts a localized percentage symbol in the result string.</span></span><br /><br /> <span data-ttu-id="d5887-152">추가 정보: ["%" 사용자 지정 지정자](#SpecifierPct)</span><span class="sxs-lookup"><span data-stu-id="d5887-152">More information: [The "%" Custom Specifier](#SpecifierPct).</span></span>|<span data-ttu-id="d5887-153">0.3697 ("%#0.00", en-US) -> %36.97</span><span class="sxs-lookup"><span data-stu-id="d5887-153">0.3697 ("%#0.00", en-US) -> %36.97</span></span><br /><br /> <span data-ttu-id="d5887-154">0.3697 ("%#0.00", el-GR) -> %36,97</span><span class="sxs-lookup"><span data-stu-id="d5887-154">0.3697 ("%#0.00", el-GR) -> %36,97</span></span><br /><br /> <span data-ttu-id="d5887-155">0.3697 ("##.0 %", en-US) -> 37.0 %</span><span class="sxs-lookup"><span data-stu-id="d5887-155">0.3697 ("##.0 %", en-US) -> 37.0 %</span></span><br /><br /> <span data-ttu-id="d5887-156">0.3697 ("##.0 %", el-GR) -> 37,0 %</span><span class="sxs-lookup"><span data-stu-id="d5887-156">0.3697 ("##.0 %", el-GR) -> 37,0 %</span></span>|  
+|<span data-ttu-id="d5887-157">"‰"</span><span class="sxs-lookup"><span data-stu-id="d5887-157">"‰"</span></span>|<span data-ttu-id="d5887-158">천분율 자리 표시자</span><span class="sxs-lookup"><span data-stu-id="d5887-158">Per mille placeholder</span></span>|<span data-ttu-id="d5887-159">숫자에 1000을 곱하고 결과 문자열에 지역화된 천분율 기호를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-159">Multiplies a number by 1000 and inserts a localized per mille symbol in the result string.</span></span><br /><br /> <span data-ttu-id="d5887-160">추가 정보: ["‰" 사용자 지정 지정자](#SpecifierPerMille)</span><span class="sxs-lookup"><span data-stu-id="d5887-160">More information: [The "‰" Custom Specifier](#SpecifierPerMille).</span></span>|<span data-ttu-id="d5887-161">0.03697 ("#0.00‰", en-US) -> 36.97‰</span><span class="sxs-lookup"><span data-stu-id="d5887-161">0.03697 ("#0.00‰", en-US) -> 36.97‰</span></span><br /><br /> <span data-ttu-id="d5887-162">0.03697 ("#0.00‰", ru-RU) -> 36,97‰</span><span class="sxs-lookup"><span data-stu-id="d5887-162">0.03697 ("#0.00‰", ru-RU) -> 36,97‰</span></span>|  
+|<span data-ttu-id="d5887-163">"E0"</span><span class="sxs-lookup"><span data-stu-id="d5887-163">"E0"</span></span><br /><br /> <span data-ttu-id="d5887-164">"E+0"</span><span class="sxs-lookup"><span data-stu-id="d5887-164">"E+0"</span></span><br /><br /> <span data-ttu-id="d5887-165">"E-0"</span><span class="sxs-lookup"><span data-stu-id="d5887-165">"E-0"</span></span><br /><br /> <span data-ttu-id="d5887-166">"E0"</span><span class="sxs-lookup"><span data-stu-id="d5887-166">"e0"</span></span><br /><br /> <span data-ttu-id="d5887-167">"E+0"</span><span class="sxs-lookup"><span data-stu-id="d5887-167">"e+0"</span></span><br /><br /> <span data-ttu-id="d5887-168">"E-0"</span><span class="sxs-lookup"><span data-stu-id="d5887-168">"e-0"</span></span>|<span data-ttu-id="d5887-169">지수 표기법</span><span class="sxs-lookup"><span data-stu-id="d5887-169">Exponential notation</span></span>|<span data-ttu-id="d5887-170">적어도 하나의 0이 뒤에 오면 지수 표기법을 사용하여 결과의 서식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-170">If followed by at least one 0 (zero), formats the result using exponential notation.</span></span> <span data-ttu-id="d5887-171">"E" 또는 "e" 문자는 결과 문자열에 표시되는 지수 기호의 대/소문자를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-171">The case of "E" or "e" indicates the case of the exponent symbol in the result string.</span></span> <span data-ttu-id="d5887-172">"E" 또는 "e" 문자 뒤에 오는 0의 수에 따라 지수의 최소 자릿수가 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-172">The number of zeros following the "E" or "e" character determines the minimum number of digits in the exponent.</span></span> <span data-ttu-id="d5887-173">더하기 기호(+)는 기호 문자가 항상 지수 앞에 온다는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-173">A plus sign (+) indicates that a sign character always precedes the exponent.</span></span> <span data-ttu-id="d5887-174">빼기 기호(-)는 기호 문자가 음의 지수 앞에만 온다는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-174">A minus sign (-) indicates that a sign character precedes only negative exponents.</span></span><br /><br /> <span data-ttu-id="d5887-175">추가 정보: ["E" 및 "e" 사용자 지정 지정자](#SpecifierExponent)</span><span class="sxs-lookup"><span data-stu-id="d5887-175">More information: [The "E" and "e" Custom Specifiers](#SpecifierExponent).</span></span>|<span data-ttu-id="d5887-176">987654 ("#0.0e0") -> 98.8e4</span><span class="sxs-lookup"><span data-stu-id="d5887-176">987654 ("#0.0e0") -> 98.8e4</span></span><br /><br /> <span data-ttu-id="d5887-177">1503.92311 ("0.0##e+00") -> 1.504e+03</span><span class="sxs-lookup"><span data-stu-id="d5887-177">1503.92311 ("0.0##e+00") -> 1.504e+03</span></span><br /><br /> <span data-ttu-id="d5887-178">1.8901385E-16 ("0.0e+00") -> 1.9e-16</span><span class="sxs-lookup"><span data-stu-id="d5887-178">1.8901385E-16 ("0.0e+00") -> 1.9e-16</span></span>|  
+|<span data-ttu-id="d5887-179">"\\"</span><span class="sxs-lookup"><span data-stu-id="d5887-179">"\\"</span></span>|<span data-ttu-id="d5887-180">이스케이프 문자</span><span class="sxs-lookup"><span data-stu-id="d5887-180">Escape character</span></span>|<span data-ttu-id="d5887-181">뒤에 오는 문자가 사용자 지정 형식 지정자가 아닌 리터럴로 해석되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-181">Causes the next character to be interpreted as a literal rather than as a custom format specifier.</span></span><br /><br /> <span data-ttu-id="d5887-182">자세한 내용은: [는 "\\" 이스케이프 문자](#SpecifierEscape)합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-182">More information: [The "\\" Escape Character](#SpecifierEscape).</span></span>|<span data-ttu-id="d5887-183">987654 ("\\###00\\#") -> #987654#</span><span class="sxs-lookup"><span data-stu-id="d5887-183">987654 ("\\###00\\#") -> #987654#</span></span>|  
+|<span data-ttu-id="d5887-184">'*string*'</span><span class="sxs-lookup"><span data-stu-id="d5887-184">'*string*'</span></span><br /><br /> <span data-ttu-id="d5887-185">"*string*"</span><span class="sxs-lookup"><span data-stu-id="d5887-185">"*string*"</span></span>|<span data-ttu-id="d5887-186">리터럴 문자열 구분 기호</span><span class="sxs-lookup"><span data-stu-id="d5887-186">Literal string delimiter</span></span>|<span data-ttu-id="d5887-187">괄호로 묶인 문자가 변경되지 않은 상태로 결과 문자열에 복사되어야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-187">Indicates that the enclosed characters should be copied to the result string unchanged.</span></span>|<span data-ttu-id="d5887-188">68 ("# ' degrees'") -> 68  degrees</span><span class="sxs-lookup"><span data-stu-id="d5887-188">68 ("# ' degrees'") -> 68  degrees</span></span><br /><br /> <span data-ttu-id="d5887-189">68 ("#' degrees'") -> 68 degrees</span><span class="sxs-lookup"><span data-stu-id="d5887-189">68 ("#' degrees'") -> 68 degrees</span></span>|  
+|<span data-ttu-id="d5887-190">;</span><span class="sxs-lookup"><span data-stu-id="d5887-190">;</span></span>|<span data-ttu-id="d5887-191">섹션 구분 기호</span><span class="sxs-lookup"><span data-stu-id="d5887-191">Section separator</span></span>|<span data-ttu-id="d5887-192">양수, 음수 및 0에 따라 별도의 서식 문자열을 사용하여 섹션을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-192">Defines sections with separate format strings for positive, negative, and zero numbers.</span></span><br /><br /> <span data-ttu-id="d5887-193">추가 정보: [";" 섹션 구분 기호](#SectionSeparator)</span><span class="sxs-lookup"><span data-stu-id="d5887-193">More information: [The ";" Section Separator](#SectionSeparator).</span></span>|<span data-ttu-id="d5887-194">12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35</span><span class="sxs-lookup"><span data-stu-id="d5887-194">12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35</span></span><br /><br /> <span data-ttu-id="d5887-195">0 ("#0.0#;(#0.0#);-\0-") -> -0-</span><span class="sxs-lookup"><span data-stu-id="d5887-195">0 ("#0.0#;(#0.0#);-\0-") -> -0-</span></span><br /><br /> <span data-ttu-id="d5887-196">-12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)</span><span class="sxs-lookup"><span data-stu-id="d5887-196">-12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)</span></span><br /><br /> <span data-ttu-id="d5887-197">12.345 ("#0.0#;(#0.0#)") -> 12.35</span><span class="sxs-lookup"><span data-stu-id="d5887-197">12.345 ("#0.0#;(#0.0#)") -> 12.35</span></span><br /><br /> <span data-ttu-id="d5887-198">0 ("#0.0#;(#0.0#)") -> 0.0</span><span class="sxs-lookup"><span data-stu-id="d5887-198">0 ("#0.0#;(#0.0#)") -> 0.0</span></span><br /><br /> <span data-ttu-id="d5887-199">-12.345 ("#0.0#;(#0.0#)") -> (12.35)</span><span class="sxs-lookup"><span data-stu-id="d5887-199">-12.345 ("#0.0#;(#0.0#)") -> (12.35)</span></span>|  
+|<span data-ttu-id="d5887-200">기타</span><span class="sxs-lookup"><span data-stu-id="d5887-200">Other</span></span>|<span data-ttu-id="d5887-201">다른 모든 문자</span><span class="sxs-lookup"><span data-stu-id="d5887-201">All other characters</span></span>|<span data-ttu-id="d5887-202">문자가 변경되지 않은 상태로 결과 문자열에 복사됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-202">The character is copied to the result string unchanged.</span></span>|<span data-ttu-id="d5887-203">68 ("# °") -> 68 °</span><span class="sxs-lookup"><span data-stu-id="d5887-203">68 ("# °") -> 68 °</span></span>|  
   
- 다음 단원에서는 각 사용자 지정 숫자 서식 지정자에 대해 자세히 설명합니다.  
+ <span data-ttu-id="d5887-204">다음 단원에서는 각 사용자 지정 숫자 서식 지정자에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-204">The following sections provide detailed information about each of the custom numeric format specifiers.</span></span>  
   
 <a name="Specifier0"></a>   
-## "0" 사용자 지정 지정자  
- "0" 사용자 지정 지정자는 0 자리 표시자 기호로 사용됩니다. 서식을 지정할 값이 서식 문자열의 0이 표시된 위치에 숫자를 가지고 있으면 해당 숫자가 결과 문자열로 복사되고, 그렇지 않으면 결과 문자열에 0이 표시됩니다. 소수점 앞 가장 왼쪽의 0과 소수점 뒤 가장 오른쪽 0의 위치는 결과 문자열에 항상 표시될 자릿수의 범위를 결정합니다.  
+## <a name="the-0-custom-specifier"></a><span data-ttu-id="d5887-205">"0" 사용자 지정 지정자</span><span class="sxs-lookup"><span data-stu-id="d5887-205">The "0" Custom Specifier</span></span>  
+ <span data-ttu-id="d5887-206">"0" 사용자 지정 지정자는 0 자리 표시자 기호로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-206">The "0" custom format specifier serves as a zero-placeholder symbol.</span></span> <span data-ttu-id="d5887-207">서식을 지정할 값이 서식 문자열의 0이 표시된 위치에 숫자를 가지고 있으면 해당 숫자가 결과 문자열로 복사되고, 그렇지 않으면 결과 문자열에 0이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-207">If the value that is being formatted has a digit in the position where the zero appears in the format string, that digit is copied to the result string; otherwise, a zero appears in the result string.</span></span> <span data-ttu-id="d5887-208">소수점 앞 가장 왼쪽의 0과 소수점 뒤 가장 오른쪽 0의 위치는 결과 문자열에 항상 표시될 자릿수의 범위를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-208">The position of the leftmost zero before the decimal point and the rightmost zero after the decimal point determines the range of digits that are always present in the result string.</span></span>  
   
- "00" 지정자를 사용하면 해당 값이 소수점 뒤 첫째 자리에서 반올림되며 항상 0 이상의 정수 값으로 표시됩니다. 예를 들어, 34.5의 서식을 "00"으로 지정하면 결과는 35가 됩니다.  
+ <span data-ttu-id="d5887-209">"00" 지정자를 사용하면 해당 값이 소수점 뒤 첫째 자리에서 반올림되며 항상 0 이상의 정수 값으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-209">The "00" specifier causes the value to be rounded to the nearest digit preceding the decimal, where rounding away from zero is always used.</span></span> <span data-ttu-id="d5887-210">예를 들어, 34.5의 서식을 "00"으로 지정하면 결과는 35가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-210">For example, formatting 34.5 with "00" would result in the value 35.</span></span>  
   
- 다음 예제에서는 0 자리 표시자가 포함된 사용자 지정 서식 문자열을 사용하여 여러 가지 값을 표시합니다.  
+ <span data-ttu-id="d5887-211">다음 예제에서는 0 자리 표시자가 포함된 사용자 지정 서식 문자열을 사용하여 여러 가지 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-211">The following example displays several values that are formatted by using custom format strings that include zero placeholders.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
  [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-212">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-212">Back to table</span></span>](#table)  
   
 <a name="SpecifierD"></a>   
-## "\#" 사용자 지정 지정자  
- "\#" 사용자 지정 지정자는 숫자 표시자 기호로 사용됩니다. 서식을 지정할 값이 서식 문자열의 "\#" 기호가 표시된 위치에 숫자를 가지고 있으면 해당 숫자가 결과 문자열로 복사되고, 그렇지 않으면 결과 문자열의 해당 위치에 아무 것도 저장되지 않습니다.  
+## <a name="the--custom-specifier"></a><span data-ttu-id="d5887-213">"#" 사용자 지정 지정자</span><span class="sxs-lookup"><span data-stu-id="d5887-213">The "#" Custom Specifier</span></span>  
+ <span data-ttu-id="d5887-214">"#" 사용자 지정 지정자는 숫자 표시자 기호로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-214">The "#" custom format specifier serves as a digit-placeholder symbol.</span></span> <span data-ttu-id="d5887-215">서식을 지정할 값이 서식 문자열의 "#" 기호가 표시된 위치에 숫자를 가지고 있으면 해당 숫자가 결과 문자열로 복사되고,</span><span class="sxs-lookup"><span data-stu-id="d5887-215">If the value that is being formatted has a digit in the position where the "#" symbol appears in the format string, that digit is copied to the result string.</span></span> <span data-ttu-id="d5887-216">그렇지 않으면 결과 문자열의 해당 위치에 아무 것도 저장되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-216">Otherwise, nothing is stored in that position in the result string.</span></span>  
   
- 0이 유효 자릿수가 아니면 이 지정자는 문자열에서 0이 유일한 숫자라 할지라도 0을 표시하지 않습니다. 표시되는 숫자에서 0이 유효 자릿수이면 이 지정자는 0을 표시합니다.  
+ <span data-ttu-id="d5887-217">0이 유효 자릿수가 아니면 이 지정자는 문자열에서 0이 유일한 숫자라 할지라도 0을 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-217">Note that this specifier never displays a zero that is not a significant digit, even if zero is the only digit in the string.</span></span> <span data-ttu-id="d5887-218">표시되는 숫자에서 0이 유효 자릿수이면 이 지정자는 0을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-218">It will display zero only if it is a significant digit in the number that is being displayed.</span></span>  
   
- "\#\#" 서식 문자열을 사용하면 해당 값이 소수점 뒤 첫째 자리에서 반올림되며 항상 0 이상의 정수로 표시됩니다. 예를 들어, 34.5의 서식을 "\#\#"으로 지정하면 결과는 35가 됩니다.  
+ <span data-ttu-id="d5887-219">"##" 서식 문자열을 사용하면 해당 값이 소수점 뒤 첫째 자리에서 반올림되며 항상 0 이상의 정수로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-219">The "##" format string causes the value to be rounded to the nearest digit preceding the decimal, where rounding away from zero is always used.</span></span> <span data-ttu-id="d5887-220">예를 들어, 34.5의 서식을 "##"으로 지정하면 결과는 35가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-220">For example, formatting 34.5 with "##" would result in the value 35.</span></span>  
   
- 다음 예제에서는 숫자 자리 표시자가 포함된 사용자 지정 서식 문자열을 사용하여 여러 가지 값을 표시합니다.  
+ <span data-ttu-id="d5887-221">다음 예제에서는 숫자 자리 표시자가 포함된 사용자 지정 서식 문자열을 사용하여 여러 가지 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-221">The following example displays several values that are formatted by using custom format strings that include digit placeholders.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
  [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
- 빈 숫자나 선행 0이 공백으로 대체되는 결과 문자열을 반환하려면 다음 예제와 같이 [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md)을 사용하고 필드 너비를 지정합니다.  
+ <span data-ttu-id="d5887-222">빈 숫자나 선행 0이 공백으로 대체되는 결과 문자열을 반환하려면 다음 예제와 같이 [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md) 을 사용하고 필드 너비를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-222">To return a result string in which absent digits or leading zeroes are replaced by spaces, use the [composite formatting feature](../../../docs/standard/base-types/composite-formatting.md) and specify a field width, as the following example illustrates.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
  [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-223">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-223">Back to table</span></span>](#table)  
   
 <a name="SpecifierPt"></a>   
-## "." 사용자 지정 지정자  
- "." 사용자 지정 서식 지정자는 결과 문자열에 지역화된 소수 구분 기호를 삽입합니다. 서식 문자열의 첫째 마침표 문자는 서식이 지정될 값에서 소수 구분 기호의 위치를 결정하며, 다른 마침표 문자는 무시됩니다.  
+## <a name="the--custom-specifier"></a><span data-ttu-id="d5887-224">"." 사용자 지정 지정자</span><span class="sxs-lookup"><span data-stu-id="d5887-224">The "." Custom Specifier</span></span>  
+ <span data-ttu-id="d5887-225">"." 사용자 지정 서식 지정자는 결과 문자열에 지역화된 소수 구분 기호를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-225">The "." custom format specifier inserts a localized decimal separator into the result string.</span></span> <span data-ttu-id="d5887-226">서식 문자열의 첫째 마침표 문자는 서식이 지정될 값에서 소수 구분 기호의 위치를 결정하며, 다른 마침표 문자는 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-226">The first period in the format string determines the location of the decimal separator in the formatted value; any additional periods are ignored.</span></span>  
   
- 결과 문자열에서 소수 구분 기호로 사용되는 문자는 항상 마침표는 아니며 서식 지정을 제어하는 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 개체의 <xref:System.Globalization.NumberFormatInfo> 속성에 의해 결정됩니다.  
+ <span data-ttu-id="d5887-227">결과 문자열에서 소수 구분 기호로 사용되는 문자는 항상 마침표는 아니며 서식 지정을 제어하는 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 개체의 <xref:System.Globalization.NumberFormatInfo> 속성에 의해 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-227">The character that is used as the decimal separator in the result string is not always a period; it is determined by the <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property of the <xref:System.Globalization.NumberFormatInfo> object that controls formatting.</span></span>  
   
- 다음 예제에서는 "." 서식 지정자를 사용하여 여러 결과 문자열에서 소수점의 위치를 정의합니다.  
+ <span data-ttu-id="d5887-228">다음 예제에서는 "." 서식 지정자를 사용하여 여러 결과 문자열에서 소수점의 위치를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-228">The following example uses the "." format specifier to define the location of the decimal point in several result strings.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
  [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-229">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-229">Back to table</span></span>](#table)  
   
 <a name="SpecifierTh"></a>   
-## "," 사용자 지정 지정자  
- "," 문자는 그룹 구분 기호 지정자와 숫자 배율 지정자로 사용됩니다.  
+## <a name="the--custom-specifier"></a><span data-ttu-id="d5887-230">"," 사용자 지정 지정자</span><span class="sxs-lookup"><span data-stu-id="d5887-230">The "," Custom Specifier</span></span>  
+ <span data-ttu-id="d5887-231">"," 문자는 그룹 구분 기호 지정자와 숫자 배율 지정자로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-231">The "," character serves as both a group separator and a number scaling specifier.</span></span>  
   
--   그룹 구분 기호 지정자: 두 개의 10진수 자리 표시자\(0 또는 \#\) 사이에 정수 계열 자릿수의 서식을 지정하는 하나 이상의 쉼표 문자가 지정된 경우 정수 계열 출력 부분의 각 숫자 그룹 사이에 그룹 구분 문자가 삽입됩니다.  
+-   <span data-ttu-id="d5887-232">그룹 구분 기호 지정자: 두 개의 10진수 자리 표시자(0 또는 #) 사이에 정수 계열 자릿수의 서식을 지정하는 하나 이상의 쉼표 문자가 지정된 경우 정수 계열 출력 부분의 각 숫자 그룹 사이에 그룹 구분 문자가 삽입됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-232">Group separator: If one or more commas are specified between two digit placeholders (0 or #) that format the integral digits of a number, a group separator character is inserted between each number group in the integral part of the output.</span></span>  
   
-     현재 <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> 개체의 <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> 및 <xref:System.Globalization.NumberFormatInfo> 속성은 숫자 그룹 구분 기호로 사용되는 문자와 각 숫자 그룹의 크기를 결정합니다. 예를 들어, 문자열 "\#,\#"과 고정 문화권을 사용하여 숫자 1000의 서식을 지정할 경우 "1,000"이 출력됩니다.  
+     <span data-ttu-id="d5887-233">현재 <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> 개체의 <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> 및 <xref:System.Globalization.NumberFormatInfo> 속성은 숫자 그룹 구분 기호로 사용되는 문자와 각 숫자 그룹의 크기를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-233">The <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> and <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> properties of the current <xref:System.Globalization.NumberFormatInfo> object determine the character used as the number group separator and the size of each number group.</span></span> <span data-ttu-id="d5887-234">예를 들어, 문자열 "#,#"과 고정 문화권을 사용하여 숫자 1000의 서식을 지정할 경우 "1,000"이 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-234">For example, if the string "#,#" and the invariant culture are used to format the number 1000, the output is "1,000".</span></span>  
   
--   숫자 배율 지정자: 명시적 또는 암시적 소수점의 바로 왼쪽에 하나 이상의 쉼표가 지정된 경우 서식이 지정될 숫자는 쉼표 단위로 끊어서 1000으로 나뉩니다. 예를 들어, 문자열 "0,,"을 사용하여 숫자 100000000의 서식을 지정할 경우 "100"이 출력됩니다.  
+-   <span data-ttu-id="d5887-235">숫자 배율 지정자: 명시적 또는 암시적 소수점의 바로 왼쪽에 하나 이상의 쉼표가 지정된 경우 서식이 지정될 숫자는 쉼표 단위로 끊어서 1000으로 나뉩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-235">Number scaling specifier: If one or more commas are specified immediately to the left of the explicit or implicit decimal point, the number to be formatted is divided by 1000 for each comma.</span></span> <span data-ttu-id="d5887-236">예를 들어, 문자열 "0,,"을 사용하여 숫자 100000000의 서식을 지정할 경우 "100"이 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-236">For example, if the string "0,," is used to format the number 100 million, the output is "100".</span></span>  
   
- 동일한 서식 문자열에 그룹 구분 기호와 숫자 배율 지정자를 함께 사용할 수 있습니다. 예를 들어, 문자열 "\#,0,,"과 고정 문화권을 사용하여 숫자 1000000000의 서식을 지정할 경우 "1,000"이 출력됩니다.  
+ <span data-ttu-id="d5887-237">동일한 서식 문자열에 그룹 구분 기호와 숫자 배율 지정자를 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-237">You can use group separator and number scaling specifiers in the same format string.</span></span> <span data-ttu-id="d5887-238">예를 들어, 문자열 "#,0,,"과 고정 문화권을 사용하여 숫자 1000000000의 서식을 지정할 경우 "1,000"이 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-238">For example, if the string "#,0,," and the invariant culture are used to format the number one billion, the output is "1,000".</span></span>  
   
- 다음 예제에서는 쉼표를 그룹 구분 기호로 사용하는 방법을 보여 줍니다.  
+ <span data-ttu-id="d5887-239">다음 예제에서는 쉼표를 그룹 구분 기호로 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-239">The following example illustrates the use of the comma as a group separator.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
  [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
- 다음 예제에서는 쉼표를 숫자 배율 지정자로 사용하는 방법을 보여 줍니다.  
+ <span data-ttu-id="d5887-240">다음 예제에서는 쉼표를 숫자 배율 지정자로 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-240">The following example illustrates the use of the comma as a specifier for number scaling.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
  [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-241">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-241">Back to table</span></span>](#table)  
   
 <a name="SpecifierPct"></a>   
-## "%" 사용자 지정 지정자  
- 서식 문자열에 백분율 기호\(%\)가 있으면 서식이 지정되기 전에 해당 수에 100이 곱해집니다. 서식 문자열에서 %가 표시된 위치에 있는 숫자에는 지역화된 백분율 기호가 삽입됩니다. 사용된 백분율 문자는 <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> 개체의 <xref:System.Globalization.NumberFormatInfo> 속성에 의해 정의됩니다.  
+## <a name="the--custom-specifier"></a><span data-ttu-id="d5887-242">"%" 사용자 지정 지정자</span><span class="sxs-lookup"><span data-stu-id="d5887-242">The "%" Custom Specifier</span></span>  
+ <span data-ttu-id="d5887-243">서식 문자열에 백분율 기호(%)가 있으면 서식이 지정되기 전에 해당 수에 100이 곱해집니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-243">A percent sign (%) in a format string causes a number to be multiplied by 100 before it is formatted.</span></span> <span data-ttu-id="d5887-244">서식 문자열에서 %가 표시된 위치에 있는 숫자에는 지역화된 백분율 기호가 삽입됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-244">The localized percent symbol is inserted in the number at the location where the % appears in the format string.</span></span> <span data-ttu-id="d5887-245">사용된 백분율 문자는 <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> 개체의 <xref:System.Globalization.NumberFormatInfo> 속성에 의해 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-245">The percent character used is defined by the <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> property of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span>  
   
- 다음 예제에서는 "%" 사용자 지정 지정자가 포함된 여러 가지 사용자 지정 서식 문자열을 정의합니다.  
+ <span data-ttu-id="d5887-246">다음 예제에서는 "%" 사용자 지정 지정자가 포함된 여러 가지 사용자 지정 서식 문자열을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-246">The following example defines several custom format strings that include the "%" custom specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
  [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-247">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-247">Back to table</span></span>](#table)  
   
 <a name="SpecifierPerMille"></a>   
-## "‰" 사용자 지정 지정자  
- 서식 문자열에 천분율 문자\(‰ 또는 \\u2030\)가 있으면 서식이 지정되기 전에 해당 수에 1000이 곱해집니다. 서식 문자열에서 ‰가 표시된 위치에 있는 반환된 문자열에는 적절한 천분율 기호가 삽입됩니다. 사용되는 천분율 문자는 문화권별 서식 지정 정보를 제공하는 개체의 <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=fullName> 속성에 정의되어 있습니다.  
+## <a name="the--custom-specifier"></a><span data-ttu-id="d5887-248">"‰" 사용자 지정 지정자</span><span class="sxs-lookup"><span data-stu-id="d5887-248">The "‰" Custom Specifier</span></span>  
+ <span data-ttu-id="d5887-249">서식 문자열에 천분율 문자(‰ 또는 \u2030)가 있으면 서식이 지정되기 전에 해당 수에 1000이 곱해집니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-249">A per mille character (‰ or \u2030) in a format string causes a number to be multiplied by 1000 before it is formatted.</span></span> <span data-ttu-id="d5887-250">서식 문자열에서 ‰가 표시된 위치에 있는 반환된 문자열에는 적절한 천분율 기호가 삽입됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-250">The appropriate per mille symbol is inserted in the returned string at the location where the ‰ symbol appears in the format string.</span></span> <span data-ttu-id="d5887-251">사용되는 천분율 문자는 문화권별 서식 지정 정보를 제공하는 개체의 <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> 속성에 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-251">The per mille character used is defined by the <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> property of the object that provides culture-specific formatting information.</span></span>  
   
- 다음 예제에서는 "‰" 사용자 지정 지정자가 포함된 사용자 지정 서식 문자열을 정의합니다.  
+ <span data-ttu-id="d5887-252">다음 예제에서는 "‰" 사용자 지정 지정자가 포함된 사용자 지정 서식 문자열을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-252">The following example defines a custom format string that includes the "‰" custom specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
  [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-253">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-253">Back to table</span></span>](#table)  
   
 <a name="SpecifierExponent"></a>   
-## "E" 및 "e" 사용자 지정 지정자  
- 서식 문자열에 "E", "E\+", "E\-", "e", "e\+" 또는 "e\-" 문자열이 표시되고 바로 뒤에 적어도 하나의 0이 오면, 해당 수와 지수 사이에 "E" 또는 "e"가 삽입되는 과학적 표기법으로 서식이 지정됩니다. 과학적 표기법 표시기 뒤에 오는 0의 개수는 이 숫자의 지수로 나타낼 최소 자릿수를 결정합니다. "E\+" 및 "e\+" 서식은 더하기 기호나 빼기 기호가 항상 지수 앞에 와야 한다는 것을 나타냅니다. "E", "E\-", "e" 또는 "e\-" 서식은 기호 문자가 음의 지수 앞에만 와야 한다는 것을 나타냅니다.  
+## <a name="the-e-and-e-custom-specifiers"></a><span data-ttu-id="d5887-254">"E" 및 "e" 사용자 지정 지정자</span><span class="sxs-lookup"><span data-stu-id="d5887-254">The "E" and "e" Custom Specifiers</span></span>  
+ <span data-ttu-id="d5887-255">서식 문자열에 "E", "E+", "E-", "e", "e+" 또는 "e-" 문자열이 표시되고 바로 뒤에 적어도 하나의 0이 오면, 해당 수와 지수 사이에 "E" 또는 "e"가 삽입되는 과학적 표기법으로 서식이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-255">If any of the strings "E", "E+", "E-", "e", "e+", or "e-" are present in the format string and are followed immediately by at least one zero, the number is formatted by using scientific notation with an "E" or "e" inserted between the number and the exponent.</span></span> <span data-ttu-id="d5887-256">과학적 표기법 표시기 뒤에 오는 0의 개수는 이 숫자의 지수로 나타낼 최소 자릿수를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-256">The number of zeros following the scientific notation indicator determines the minimum number of digits to output for the exponent.</span></span> <span data-ttu-id="d5887-257">"E+" 및 "e+" 서식은 더하기 기호나 빼기 기호가 항상 지수 앞에 와야 한다는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-257">The "E+" and "e+" formats indicate that a plus sign or minus sign should always precede the exponent.</span></span> <span data-ttu-id="d5887-258">"E", "E-", "e" 또는 "e-" 서식은 기호 문자가 음의 지수 앞에만 와야 한다는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-258">The "E", "E-", "e", or "e-" formats indicate that a sign character should precede only negative exponents.</span></span>  
   
- 다음 예제에서는 과학적 표기법 지정자를 사용하여 여러 가지 숫자 값에 서식을 지정합니다.  
+ <span data-ttu-id="d5887-259">다음 예제에서는 과학적 표기법 지정자를 사용하여 여러 가지 숫자 값에 서식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-259">The following example formats several numeric values using the specifiers for scientific notation.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
  [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-260">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-260">Back to table</span></span>](#table)  
   
 <a name="SpecifierEscape"></a>   
-## "\\" 이스케이프 문자  
- 서식 문자열의 "\#", "0", ".", ",", "%" 및 "‰" 기호는 리터럴 문자가 아닌 서식 지정자로 해석됩니다. 사용자 지정 서식 문자열에서 이러한 문자가 있는 위치에 따라 대문자 및 소문자 "E"와 \+ 및 \- 기호도 서식 지정자로 해석될 수 있습니다.  
+## <a name="the--escape-character"></a><span data-ttu-id="d5887-261">"\\" 이스케이프 문자</span><span class="sxs-lookup"><span data-stu-id="d5887-261">The "\\" Escape Character</span></span>  
+ <span data-ttu-id="d5887-262">서식 문자열의 "#", "0", ".", ",", "%" 및 "‰" 기호는 리터럴 문자가 아닌 서식 지정자로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-262">The "#", "0", ".", ",", "%", and "‰" symbols in a format string are interpreted as format specifiers rather than as literal characters.</span></span> <span data-ttu-id="d5887-263">사용자 지정 서식 문자열에서 이러한 문자가 있는 위치에 따라 대문자 및 소문자 "E"와 + 및 - 기호도 서식 지정자로 해석될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-263">Depending on their position in a custom format string, the uppercase and lowercase "E" as well as the + and - symbols may also be interpreted as format specifiers.</span></span>  
   
- 문자가 서식 지정자로 해석되지 않도록 하려면 해당 문자 앞에 이스케이프 문자인 백슬래시를 삽입하면 됩니다. 이스케이프 문자는 뒤에 오는 문자가 변경되지 않은 상태로 결과 문자열에 포함되어야 하는 문자 리터럴임을 나타냅니다.  
+ <span data-ttu-id="d5887-264">문자가 서식 지정자로 해석되지 않도록 하려면 해당 문자 앞에 이스케이프 문자인 백슬래시를 삽입하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-264">To prevent a character from being interpreted as a format specifier, you can precede it with a backslash, which is the escape character.</span></span> <span data-ttu-id="d5887-265">이스케이프 문자는 뒤에 오는 문자가 변경되지 않은 상태로 결과 문자열에 포함되어야 하는 문자 리터럴임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-265">The escape character signifies that the following character is a character literal that should be included in the result string unchanged.</span></span>  
   
- 결과 문자열에 백슬래시를 포함하려면 `\\`처럼 두 개의 백슬래시를 연속해서 입력해야 합니다.  
+ <span data-ttu-id="d5887-266">결과 문자열에 백슬래시를 포함하려면`\\`처럼 두 개의 백슬래시를 연속해서 입력해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-266">To include a backslash in a result string, you must escape it with another backslash (`\\`).</span></span>  
   
 > [!NOTE]
->  C\+\+ 및 C\# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다. 형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자\(@ 문자\)를 사용하거나\(C\#의 경우\) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다\(C\# 및 C\+\+의 경우\). 다음 C\# 예제에서는 이 두 가지 방법을 모두 보여 줍니다.  
+>  <span data-ttu-id="d5887-267">C++ 및 C# 컴파일러 같은 일부 컴파일러에서는 하나의 백슬래시 문자가 이스케이프 문자로 해석될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-267">Some compilers, such as the C++ and C# compilers, may also interpret a single backslash character as an escape character.</span></span> <span data-ttu-id="d5887-268">형식을 지정할 때 문자열이 올바로 해석되도록 하려면 해당 문자열 앞에 축자 문자열 리터럴 문자(@ 문자)를 사용하거나(C#의 경우) 각 백슬래시 앞에 또 다른 백슬래시를 추가하면 됩니다(C# 및 C++의 경우).</span><span class="sxs-lookup"><span data-stu-id="d5887-268">To ensure that a string is interpreted correctly when formatting, you can use the verbatim string literal character (the @ character) before the string in C#, or add another backslash character before each backslash in C# and C++.</span></span> <span data-ttu-id="d5887-269">다음 C# 예제에서는 이 두 가지 방법을 모두 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-269">The following C# example illustrates both approaches.</span></span>  
   
- 다음 예제에서는 이스케이프 문자를 사용하여 서식 지정 작업에서 "\#", "0" 및 "\\" 문자가 이스케이프 문자나 서식 지정자로 해석되지 않도록 합니다. 이 C\# 예제에서는 추가 백슬래시를 사용하여 백슬래시가 리터럴 문자로 해석되도록 합니다.  
+ <span data-ttu-id="d5887-270">다음 예제에서는 이스케이프 문자를 사용 하 여 해석 "#", "0"에서 서식 지정 작업을 방지 하기 위해 및 "\\" 이스케이프 문자 또는 형식 지정자 문자입니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-270">The following example uses the escape character to prevent the formatting operation from interpreting the "#", "0", and "\\" characters as either escape characters or format specifiers.</span></span> <span data-ttu-id="d5887-271">이 C# 예제에서는 추가 백슬래시를 사용하여 백슬래시가 리터럴 문자로 해석되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-271">The C# examples uses an additional backslash to ensure that a backslash is interpreted as a literal character.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
  [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
  [!code-vb[Formatting.Numeric.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/escape1.vb#11)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-272">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-272">Back to table</span></span>](#table)  
   
 <a name="SectionSeparator"></a>   
-## ";" 섹션 구분 기호  
- 세미콜론\(;\)은 해당 값이 양수인지 여부에 따라 서로 다른 서식을 숫자에 적용하는 조건부 서식 지정자입니다. 이렇게 하려면 사용자 지정 서식 문자열에 세미콜론으로 구분된 최대 세 개의 섹션이 포함되어야 합니다. 다음 표에서는 이러한 섹션에 대해 설명합니다.  
+## <a name="the--section-separator"></a><span data-ttu-id="d5887-273">";" 섹션 구분 기호</span><span class="sxs-lookup"><span data-stu-id="d5887-273">The ";" Section Separator</span></span>  
+ <span data-ttu-id="d5887-274">세미콜론(;)은 해당 값이 양수인지 여부에 따라 서로 다른 서식을 숫자에 적용하는 조건부 서식 지정자입니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-274">The semicolon (;) is a conditional format specifier that applies different formatting to a number depending on whether its value is positive, negative, or zero.</span></span> <span data-ttu-id="d5887-275">이렇게 하려면 사용자 지정 서식 문자열에 세미콜론으로 구분된 최대 세 개의 섹션이 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-275">To produce this behavior, a custom format string can contain up to three sections separated by semicolons.</span></span> <span data-ttu-id="d5887-276">다음 표에서는 이러한 섹션에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-276">These sections are described in the following table.</span></span>  
   
-|섹션 수|설명|  
-|----------|--------|  
-|한 섹션|형식 문자열이 모든 값에 적용됩니다.|  
-|두 섹션|첫째 섹션은 양수 값과 0에 적용되고, 둘째 섹션은 음수 값에 적용됩니다.<br /><br /> 서식을 지정할 수가 음수였는데 둘째 섹션의 서식에 따라 반올림한 후에 0이 된 경우, 결과값 0은 첫째 섹션에 따라 서식이 지정됩니다.|  
-|세 섹션|첫째 섹션은 양수 값에 적용되고, 둘째 섹션은 음수 값에 적용되며, 셋째 섹션은 0에 적용됩니다.<br /><br /> 세미콜론 사이에 아무 것도 없어서 둘째 섹션이 비어 있는 경우에는 첫째 섹션을 0이 아닌 모든 값에 적용합니다.<br /><br /> 서식을 지정할 수가 0이 아니었는데 첫째 또는 둘째 섹션의 서식에 따라 반올림한 후에 0이 된 경우, 결과값 0은 셋째 섹션에 따라 서식이 지정됩니다.|  
+|<span data-ttu-id="d5887-277">섹션 수</span><span class="sxs-lookup"><span data-stu-id="d5887-277">Number of sections</span></span>|<span data-ttu-id="d5887-278">설명</span><span class="sxs-lookup"><span data-stu-id="d5887-278">Description</span></span>|  
+|------------------------|-----------------|  
+|<span data-ttu-id="d5887-279">한 섹션</span><span class="sxs-lookup"><span data-stu-id="d5887-279">One section</span></span>|<span data-ttu-id="d5887-280">형식 문자열이 모든 값에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-280">The format string applies to all values.</span></span>|  
+|<span data-ttu-id="d5887-281">두 섹션</span><span class="sxs-lookup"><span data-stu-id="d5887-281">Two sections</span></span>|<span data-ttu-id="d5887-282">첫째 섹션은 양수 값과 0에 적용되고, 둘째 섹션은 음수 값에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-282">The first section applies to positive values and zeros, and the second section applies to negative values.</span></span><br /><br /> <span data-ttu-id="d5887-283">서식을 지정할 수가 음수였는데 둘째 섹션의 서식에 따라 반올림한 후에 0이 된 경우, 결과값 0은 첫째 섹션에 따라 서식이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-283">If the number to be formatted is negative, but becomes zero after rounding according to the format in the second section, the resulting zero is formatted according to the first section.</span></span>|  
+|<span data-ttu-id="d5887-284">세 섹션</span><span class="sxs-lookup"><span data-stu-id="d5887-284">Three sections</span></span>|<span data-ttu-id="d5887-285">첫째 섹션은 양수 값에 적용되고, 둘째 섹션은 음수 값에 적용되며, 셋째 섹션은 0에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-285">The first section applies to positive values, the second section applies to negative values, and the third section applies to zeros.</span></span><br /><br /> <span data-ttu-id="d5887-286">세미콜론 사이에 아무 것도 없어서 둘째 섹션이 비어 있는 경우에는 첫째 섹션을 0이 아닌 모든 값에 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-286">The second section can be left empty (by having nothing between the semicolons), in which case the first section applies to all nonzero values.</span></span><br /><br /> <span data-ttu-id="d5887-287">서식을 지정할 수가 0이 아니었는데 첫째 또는 둘째 섹션의 서식에 따라 반올림한 후에 0이 된 경우, 결과값 0은 셋째 섹션에 따라 서식이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-287">If the number to be formatted is nonzero, but becomes zero after rounding according to the format in the first or second section, the resulting zero is formatted according to the third section.</span></span>|  
   
- 섹션 구분 기호는 마지막 값의 서식을 지정할 때 숫자와 연관된 기존 서식을 무시합니다. 예를 들어, 섹션 구분 기호가 사용되면 음수 값은 항상 빼기 기호 없이 표시됩니다. 마지막에 서식을 지정한 값에 빼기 기호를 붙이려면 빼기 기호를 사용자 지정 서식 지정자의 일부로 명시적으로 포함시켜야 합니다.  
+ <span data-ttu-id="d5887-288">섹션 구분 기호는 마지막 값의 서식을 지정할 때 숫자와 연관된 기존 서식을 무시합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-288">Section separators ignore any preexisting formatting associated with a number when the final value is formatted.</span></span> <span data-ttu-id="d5887-289">예를 들어, 섹션 구분 기호가 사용되면 음수 값은 항상 빼기 기호 없이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-289">For example, negative values are always displayed without a minus sign when section separators are used.</span></span> <span data-ttu-id="d5887-290">마지막에 서식을 지정한 값에 빼기 기호를 붙이려면 빼기 기호를 사용자 지정 서식 지정자의 일부로 명시적으로 포함시켜야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-290">If you want the final formatted value to have a minus sign, you should explicitly include the minus sign as part of the custom format specifier.</span></span>  
   
- 다음 예제에서는 ";" 서식 지정자를 사용하여 양수, 음수 및 0의 서식을 각각 다르게 지정합니다.  
+ <span data-ttu-id="d5887-291">다음 예제에서는 ";" 서식 지정자를 사용하여 양수, 음수 및 0의 서식을 각각 다르게 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-291">The following example uses the ";" format specifier to format positive, negative, and zero numbers differently.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#8](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#8)]
  [!code-csharp[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
  [!code-vb[Formatting.Numeric.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#8)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-292">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-292">Back to table</span></span>](#table)  
   
 <a name="NotesCustomFormatting"></a>   
-## 참고  
+## <a name="notes"></a><span data-ttu-id="d5887-293">참고</span><span class="sxs-lookup"><span data-stu-id="d5887-293">Notes</span></span>  
   
-### 부동 소수점 무한대 및 NaN  
- 서식 문자열에 관계없이 <xref:System.Single> 또는 <xref:System.Double> 부동 소수점 형식의 값이 양의 무한대, 음의 무한대 또는 NaN\(Not a Number\)이면 서식이 지정된 문자열은 각각 현재 적용 가능한 <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> 개체에서 지정하는 해당 <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> 또는 <xref:System.Globalization.NumberFormatInfo> 속성의 값입니다.  
+### <a name="floating-point-infinities-and-nan"></a><span data-ttu-id="d5887-294">부동 소수점 무한대 및 NaN</span><span class="sxs-lookup"><span data-stu-id="d5887-294">Floating-Point Infinities and NaN</span></span>  
+ <span data-ttu-id="d5887-295">서식 문자열에 관계없이 <xref:System.Single> 또는 <xref:System.Double> 부동 소수점 형식의 값이 양의 무한대, 음의 무한대 또는 NaN(Not a Number)이면 서식이 지정된 문자열은 각각 현재 적용 가능한 <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>개체에서 지정하는 해당 <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> 또는 <xref:System.Globalization.NumberFormatInfo> 속성의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-295">Regardless of the format string, if the value of a <xref:System.Single> or <xref:System.Double> floating-point type is positive infinity, negative infinity, or not a number (NaN), the formatted string is the value of the respective <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, or <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> property specified by the currently applicable <xref:System.Globalization.NumberFormatInfo> object.</span></span>  
   
-### 제어판 설정  
- 제어판에 있는 **국가 및 언어 옵션** 항목의 설정은 서식 지정 작업으로 생성되는 결과 문자열에 영향을 줍니다. 이러한 설정은 현재 스레드 문화권과 연결된 <xref:System.Globalization.NumberFormatInfo> 개체를 초기화하는 데 사용됩니다. 현재 스레드 문화권은 서식을 제어하는 데 사용되는 값을 제공합니다. 다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.  
+### <a name="control-panel-settings"></a><span data-ttu-id="d5887-296">제어판 설정</span><span class="sxs-lookup"><span data-stu-id="d5887-296">Control Panel Settings</span></span>  
+ <span data-ttu-id="d5887-297">제어판에 있는 **국가 및 언어 옵션** 항목의 설정은 서식 지정 작업으로 생성되는 결과 문자열에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-297">The settings in the **Regional and Language Options** item in Control Panel influence the result string produced by a formatting operation.</span></span> <span data-ttu-id="d5887-298">이러한 설정은 현재 스레드 문화권과 연결된 <xref:System.Globalization.NumberFormatInfo> 개체를 초기화하는 데 사용됩니다. 현재 스레드 문화권은 서식을 제어하는 데 사용되는 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-298">Those settings are used to initialize the <xref:System.Globalization.NumberFormatInfo> object associated with the current thread culture, and the current thread culture provides values used to govern formatting.</span></span> <span data-ttu-id="d5887-299">다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-299">Computers that use different settings generate different result strings.</span></span>  
   
- 또한 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=fullName> 생성자를 사용하여 현재 시스템 문화권과 동일한 문화권을 나타내는 새 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화하는 경우 제어판의 **국가 및 언어 옵션** 항목을 통해 설정된 사용자 지정 내용이 새 <xref:System.Globalization.CultureInfo> 개체에도 적용됩니다.<xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.  
+ <span data-ttu-id="d5887-300">또한 사용 하는 경우는 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 생성자를 인스턴스화하는 새 <xref:System.Globalization.CultureInfo> 으로 설정 된 모든 사용자 지정 현재 시스템 문화권과 동일한 문화권을 나타내는 개체는 **국가 및 언어 옵션** 제어판 항목을 적용할 새 <xref:System.Globalization.CultureInfo> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-300">In addition, if you use the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructor to instantiate a new <xref:System.Globalization.CultureInfo> object that represents the same culture as the current system culture, any customizations established by the **Regional and Language Options** item in Control Panel will be applied to the new <xref:System.Globalization.CultureInfo> object.</span></span> <span data-ttu-id="d5887-301"><xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-301">You can use the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructor to create a <xref:System.Globalization.CultureInfo> object that does not reflect a system's customizations.</span></span>  
   
-### 반올림 및 고정 소수점 서식 문자열  
- 고정 소수점 서식 문자열, 즉 과학적 표기법 서식 문자가 들어 있지 않은 서식 문자열의 경우 소수점 오른쪽에 있는 10진수 자리 표시자와 같은 개수의 소수 자릿수만큼 숫자가 반올림됩니다. 서식 문자열에 소수점이 없으면 숫자는 가장 근접한 정수로 반올림됩니다. 숫자의 자릿수가 소수점 왼쪽의 10진수 자리 표시자보다 많으면, 초과 숫자가 결과 문자열의 첫째 10진수 자리 표시자 바로 앞에 복사됩니다.  
+### <a name="rounding-and-fixed-point-format-strings"></a><span data-ttu-id="d5887-302">반올림 및 고정 소수점 서식 문자열</span><span class="sxs-lookup"><span data-stu-id="d5887-302">Rounding and Fixed-Point Format Strings</span></span>  
+ <span data-ttu-id="d5887-303">고정 소수점 서식 문자열, 즉 과학적 표기법 서식 문자가 들어 있지 않은 서식 문자열의 경우 소수점 오른쪽에 있는 10진수 자리 표시자와 같은 개수의 소수 자릿수만큼 숫자가 반올림됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-303">For fixed-point format strings (that is, format strings that do not contain scientific notation format characters), numbers are rounded to as many decimal places as there are digit placeholders to the right of the decimal point.</span></span> <span data-ttu-id="d5887-304">서식 문자열에 소수점이 없으면 숫자는 가장 근접한 정수로 반올림됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-304">If the format string does not contain a decimal point, the number is rounded to the nearest integer.</span></span> <span data-ttu-id="d5887-305">숫자의 자릿수가 소수점 왼쪽의 10진수 자리 표시자보다 많으면, 초과 숫자가 결과 문자열의 첫째 10진수 자리 표시자 바로 앞에 복사됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-305">If the number has more digits than there are digit placeholders to the left of the decimal point, the extra digits are copied to the result string immediately before the first digit placeholder.</span></span>  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-306">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-306">Back to table</span></span>](#table)  
   
 <a name="example"></a>   
-## 예제  
- 다음 예제에서는 두 개의 사용자 지정 숫자 서식 문자열을 보여 줍니다. 두 경우 모두에서 숫자 자리 표시자\(`#`\)는 숫자 데이터를 표시하며, 다른 모든 문자는 결과 문자열에 복사됩니다.  
+## <a name="example"></a><span data-ttu-id="d5887-307">예제</span><span class="sxs-lookup"><span data-stu-id="d5887-307">Example</span></span>  
+ <span data-ttu-id="d5887-308">다음 예제에서는 두 개의 사용자 지정 숫자 서식 문자열을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-308">The following example demonstrates two custom numeric format strings.</span></span> <span data-ttu-id="d5887-309">두 경우 모두에서 숫자 자리 표시자(`#`)는 숫자 데이터를 표시하며, 다른 모든 문자는 결과 문자열에 복사됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5887-309">In both cases, the digit placeholder (`#`) displays the numeric data, and all other characters are copied to the result string.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
  [!code-csharp[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
  [!code-vb[Formatting.Numeric.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/example1.vb#10)]  
   
- [표로 이동](#table)  
+ [<span data-ttu-id="d5887-310">표로 이동</span><span class="sxs-lookup"><span data-stu-id="d5887-310">Back to table</span></span>](#table)  
   
-## 참고 항목  
- <xref:System.Globalization.NumberFormatInfo>   
- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)   
- [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)   
- [방법: 숫자 앞에 0으로 채우기](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)   
- [샘플: .NET Framework 4 서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a><span data-ttu-id="d5887-311">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d5887-311">See Also</span></span>  
+ <xref:System.Globalization.NumberFormatInfo>  
+ [<span data-ttu-id="d5887-312">형식 서식 지정</span><span class="sxs-lookup"><span data-stu-id="d5887-312">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="d5887-313">Standard Numeric Format Strings</span><span class="sxs-lookup"><span data-stu-id="d5887-313">Standard Numeric Format Strings</span></span>](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+ [<span data-ttu-id="d5887-314">방법: 숫자 앞에 0으로 채우기</span><span class="sxs-lookup"><span data-stu-id="d5887-314">How to: Pad a Number with Leading Zeros</span></span>](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+ [<span data-ttu-id="d5887-315">샘플: .NET Framework 4 서식 유틸리티</span><span class="sxs-lookup"><span data-stu-id="d5887-315">Sample: .NET Framework 4 Formatting Utility</span></span>](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

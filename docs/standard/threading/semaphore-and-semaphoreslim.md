@@ -1,56 +1,59 @@
 ---
-title: "Semaphore and SemaphoreSlim | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "counting semaphores"
-  - "semaphores"
-  - "threading [.NET Framework], cross-process synchronization"
-  - "Semaphore class, about Semaphore class"
-  - "SemaphoreSlim class, about SemaphoreSlim class"
-  - "threading [.NET Framework], Semaphore class"
+title: "세마포 및 SemaphoreSlim"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- counting semaphores
+- semaphores
+- threading [.NET Framework], cross-process synchronization
+- Semaphore class, about Semaphore class
+- SemaphoreSlim class, about SemaphoreSlim class
+- threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Semaphore and SemaphoreSlim
-로컬 또는 명명된\(시스템 전체\) 세마포를 나타내는 <xref:System.Threading.Semaphore?displayProperty=fullName> 클래스는  Win32 세마포 개체를 묶는 씬 래퍼입니다.  Win32 세마포는 리소스 풀에 대한 액세스를 제어하는 데 사용할 수 있는 가산 세마포입니다.  
+# <a name="semaphore-and-semaphoreslim"></a><span data-ttu-id="47a99-102">세마포 및 SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="47a99-102">Semaphore and SemaphoreSlim</span></span>
+<span data-ttu-id="47a99-103">로컬 또는 명명된(시스템 전체) 세마포를 나타내는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스는</span><span class="sxs-lookup"><span data-stu-id="47a99-103">The <xref:System.Threading.Semaphore?displayProperty=nameWithType> class represents a named (systemwide) or local semaphore.</span></span> <span data-ttu-id="47a99-104">Win32 세마포 개체를 묶는 씬 래퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-104">It is a thin wrapper around the Win32 semaphore object.</span></span> <span data-ttu-id="47a99-105">Win32 세마포는 리소스 풀에 대한 액세스를 제어하는 데 사용할 수 있는 가산 세마포입니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-105">Win32 semaphores are counting semaphores, which can be used to control access to a pool of resources.</span></span>  
   
- <xref:System.Threading.SemaphoreSlim> 클래스는 대기 시간이 매우 짧을 것으로 예상될 때 단일 프로세스 내에서 대기하는 데 사용할 수 있는 간단하고 빠른 세마포를 나타냅니다.  <xref:System.Threading.SemaphoreSlim>은 CLR\(공용 언어 런타임\)에서 제공하는 동기화 기본 형식을 최대한 활용합니다.  그러나 필요에 따라 여러 세마포에 대해 대기를 지원할 수 있도록 지연 초기화된 커널 기반 대기 핸들도 제공합니다.  또한 <xref:System.Threading.SemaphoreSlim>은 취소 토큰 사용도 지원하지만 명명된 세마포 또는 동기화용 대기 핸들 사용은 지원하지 않습니다.  
+ <span data-ttu-id="47a99-106"><xref:System.Threading.SemaphoreSlim> 클래스는 대기 시간이 매우 짧을 것으로 예상될 때 단일 프로세스 내에서 대기하는 데 사용할 수 있는 간단하고 빠른 세마포를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-106">The <xref:System.Threading.SemaphoreSlim> class represents a lightweight, fast semaphore that can be used for waiting within a single process when wait times are expected to be very short.</span></span> <span data-ttu-id="47a99-107"><xref:System.Threading.SemaphoreSlim>은 CLR(공용 언어 런타임)에서 제공하는 동기화 기본 형식을 최대한 활용합니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-107"><xref:System.Threading.SemaphoreSlim> relies as much as possible on synchronization primitives provided by the common language runtime (CLR).</span></span> <span data-ttu-id="47a99-108">그러나 필요에 따라 여러 세마포에 대해 대기를 지원할 수 있도록 지연 초기화된 커널 기반 대기 핸들도 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-108">However, it also provides lazily initialized, kernel-based wait handles as necessary to support waiting on multiple semaphores.</span></span> <span data-ttu-id="47a99-109">또한 <xref:System.Threading.SemaphoreSlim>은 취소 토큰 사용도 지원하지만 명명된 세마포 또는 동기화용 대기 핸들 사용은 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-109"><xref:System.Threading.SemaphoreSlim> also supports the use of cancellation tokens, but it does not support named semaphores or the use of a wait handle for synchronization.</span></span>  
   
-## 제한된 리소스 관리  
- 스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 호출하여 세마포를 입력합니다. 이 메서드는 <xref:System.Threading.Semaphore?displayProperty=fullName> 개체의 경우 <xref:System.Threading.WaitHandle> 클래스에서 상속되고 <xref:System.Threading.SemaphoreSlim> 개체의 경우에는 <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=fullName> 또는 <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=fullName> 메서드에서 상속됩니다.  호출이 반환되면 세마포 수가 감소합니다.  스레드가 항목을 요청할 때 개수가 0이면 해당 스레드는 차단됩니다.  스레드가 <xref:System.Threading.Semaphore.Release%2A?displayProperty=fullName> 또는 <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=fullName> 메서드를 호출하여 세마포를 해제하면 차단된 스레드를 입력할 수 있게 됩니다.  FIFO\(선입 선출\) 또는 LIFO\(후입 선출\)와 같이 차단된 스레드가 세마포에 입력되는 보장된 순서는 없습니다.  
+## <a name="managing-a-limited-resource"></a><span data-ttu-id="47a99-110">제한된 리소스 관리</span><span class="sxs-lookup"><span data-stu-id="47a99-110">Managing a Limited Resource</span></span>  
+ <span data-ttu-id="47a99-111">스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 호출하여 세마포를 입력합니다. 이 메서드는 <xref:System.Threading.WaitHandle> 개체의 경우 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스에서 상속되고 <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> 개체의 경우에는 <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.SemaphoreSlim> 메서드에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-111">Threads enter the semaphore by calling the <xref:System.Threading.WaitHandle.WaitOne%2A> method, which is inherited from the <xref:System.Threading.WaitHandle> class, in the case of a <xref:System.Threading.Semaphore?displayProperty=nameWithType> object, or the <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> or <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> method, in the case of a <xref:System.Threading.SemaphoreSlim> object..</span></span> <span data-ttu-id="47a99-112">호출이 반환되면 세마포 수가 감소합니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-112">When the call returns, the count on the semaphore is decremented.</span></span> <span data-ttu-id="47a99-113">스레드가 항목을 요청할 때 개수가 0이면 해당 스레드는 차단됩니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-113">When a thread requests entry and the count is zero, the thread blocks.</span></span> <span data-ttu-id="47a99-114">스레드가 <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> 메서드를 호출하여 세마포를 해제하면 차단된 스레드를 입력할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-114">As threads release the semaphore by calling the <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> or <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> method, blocked threads are allowed to enter.</span></span> <span data-ttu-id="47a99-115">FIFO(선입 선출) 또는 LIFO(후입 선출)와 같이 차단된 스레드가 세마포에 입력되는 보장된 순서는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-115">There is no guaranteed order, such as first-in, first-out (FIFO) or last-in, first-out (LIFO), for blocked threads to enter the semaphore.</span></span>  
   
- 스레드는 <xref:System.Threading.Semaphore?displayProperty=fullName> 개체의 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드 또는 <xref:System.Threading.SemaphoreSlim> 개체의 <xref:System.Threading.SemaphoreSlim.Wait%2A> 메서드를 반복적으로 호출하여 세마포를 여러 번 입력할 수 있습니다.  세마포를 해제하려는 경우 스레드는 <xref:System.Threading.Semaphore.Release?displayProperty=fullName> 또는 <xref:System.Threading.SemaphoreSlim.Release?displayProperty=fullName> 메서드 오버로드를 같은 횟수만큼 호출하거나 <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=fullName> 또는 <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=fullName> 메서드 오버로드를 호출하고 해제할 항목 수를 지정할 수 있습니다.  
+ <span data-ttu-id="47a99-116">스레드는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 개체의 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드 또는 <xref:System.Threading.SemaphoreSlim> 개체의 <xref:System.Threading.SemaphoreSlim.Wait%2A> 메서드를 반복적으로 호출하여 세마포를 여러 번 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-116">A thread can enter the semaphore multiple times by calling the <xref:System.Threading.Semaphore?displayProperty=nameWithType> object's <xref:System.Threading.WaitHandle.WaitOne%2A> method or the  <xref:System.Threading.SemaphoreSlim> object's <xref:System.Threading.SemaphoreSlim.Wait%2A> method repeatedly.</span></span> <span data-ttu-id="47a99-117">세마포를 해제하려는 경우 스레드는 <xref:System.Threading.Semaphore.Release?displayProperty=nameWithType> 또는 <xref:System.Threading.SemaphoreSlim.Release?displayProperty=nameWithType> 메서드 오버로드를 같은 횟수만큼 호출하거나 <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=nameWithType> 또는 <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=nameWithType> 메서드 오버로드를 호출하고 해제할 항목 수를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-117">To release the semaphore, the thread can either call the <xref:System.Threading.Semaphore.Release?displayProperty=nameWithType> or <xref:System.Threading.SemaphoreSlim.Release?displayProperty=nameWithType> method overload the same number of times, or call the <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=nameWithType> or <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=nameWithType> method overload and specify the number of entries to be released.</span></span>  
   
-### 세마포 및 스레드 ID  
- 두 세마포 형식은 <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> 및 <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=fullName> 메서드 호출에 대해 스레드 ID를 적용하지 않습니다.  예를 들어 세마포의 일반적인 사용 시나리오에서는 생산자 스레드와 소비자 스레드가 사용되는데, 여기서 스레드 하나는 항상 세마포 수를 증가시키고 다른 하나는 항상 세마포 수를 감소시킵니다.  
+### <a name="semaphores-and-thread-identity"></a><span data-ttu-id="47a99-118">세마포 및 스레드 ID</span><span class="sxs-lookup"><span data-stu-id="47a99-118">Semaphores and Thread Identity</span></span>  
+ <span data-ttu-id="47a99-119">두 세마포 형식은 <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> 및 <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> 메서드 호출에 대해 스레드 ID를 적용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-119">The two semaphore types do not enforce thread identity on calls to the <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A>, and <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="47a99-120">예를 들어 세마포의 일반적인 사용 시나리오에서는 생산자 스레드와 소비자 스레드가 사용되는데, 여기서 스레드 하나는 항상 세마포 수를 증가시키고 다른 하나는 항상 세마포 수를 감소시킵니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-120">For example, a common usage scenario for semaphores involves a producer thread and a consumer thread, with one thread always incrementing the semaphore count and the other always decrementing it.</span></span>  
   
- 프로그래머는 스레드가 세마포를 너무 여러 번 해제하지 않는지 확인해야 합니다.  예를 들어 세마포의 최대 개수가 2개인데 스레드 A와 스레드 B가 모두 세마포를 입력한다고 가정해 보겠습니다.  스레드 B에서 프로그래밍 오류가 발생하여 `Release`가 두 번 호출되면 두 호출은 모두 성공합니다.  그러면 세마포 개수가 다 차서 스레드 A가 `Release`를 호출하면 <xref:System.Threading.SemaphoreFullException>이 throw됩니다.  
+ <span data-ttu-id="47a99-121">프로그래머는 스레드가 세마포를 너무 여러 번 해제하지 않는지 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-121">It is the programmer's responsibility to ensure that a thread does not release the semaphore too many times.</span></span> <span data-ttu-id="47a99-122">예를 들어 세마포의 최대 개수가 2개인데 스레드 A와 스레드 B가 모두 세마포를 입력한다고 가정해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-122">For example, suppose a semaphore has a maximum count of two, and that thread A and thread B both enter the semaphore.</span></span> <span data-ttu-id="47a99-123">스레드 B에서 프로그래밍 오류가 발생하여 `Release`가 두 번 호출되면 두 호출은 모두 성공합니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-123">If a programming error in thread B causes it to call  `Release` twice, both calls succeed.</span></span> <span data-ttu-id="47a99-124">세마포 개수 꽉 차서 스레드 A 호출 `Release`, <xref:System.Threading.SemaphoreFullException> throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-124">The count on the semaphore is full, and when thread A eventually calls `Release`, a <xref:System.Threading.SemaphoreFullException> is thrown.</span></span>  
   
-## 명명된 세마포  
- Windows 운영 체제에서는 세마포에 이름을 지정할 수 있습니다.  명명된 세마포는 시스템 전체에 사용됩니다.  즉, 명명된 세마포는 작성되고 나면 모든 프로세스의 모든 프로세스에 표시됩니다.  따라서 명명된 세마포는 스레드뿐 아니라 프로세스의 활동을 동기화하는 데도 사용할 수 있습니다.  
+## <a name="named-semaphores"></a><span data-ttu-id="47a99-125">명명된 세마포</span><span class="sxs-lookup"><span data-stu-id="47a99-125">Named Semaphores</span></span>  
+ <span data-ttu-id="47a99-126">Windows 운영 체제에서는 세마포에 이름을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-126">The Windows operating system allows semaphores to have names.</span></span> <span data-ttu-id="47a99-127">명명된 세마포는 시스템 전체에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-127">A named semaphore is system wide.</span></span> <span data-ttu-id="47a99-128">즉, 명명된 세마포는 작성되고 나면 모든 프로세스의 모든 프로세스에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-128">That is, once the named semaphore is created, it is visible to all threads in all processes.</span></span> <span data-ttu-id="47a99-129">따라서 명명된 세마포는 스레드뿐 아니라 프로세스의 활동을 동기화하는 데도 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-129">Thus, named semaphore can be used to synchronize the activities of processes as well as threads.</span></span>  
   
- 이름을 지정하는 생성자 중 하나를 사용하여 명명된 시스템 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 만들 수 있습니다.  
+ <span data-ttu-id="47a99-130">이름을 지정하는 생성자 중 하나를 사용하여 명명된 시스템 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-130">You can create a <xref:System.Threading.Semaphore> object that represents a named system semaphore by using one of the constructors that specifies a name.</span></span>  
   
 > [!NOTE]
->  명명된 세마포는 시스템 전체 세마포이므로 같은 명명된 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 여러 개 사용할 수 있습니다.  생성자 또는 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=fullName> 메서드를 호출할 때마다 새 <xref:System.Threading.Semaphore> 개체가 만들어집니다.  같은 이름을 반복적으로 지정하면 같은 명명된 세마포를 나타내는 개체가 여러 개 만들어집니다.  
+>  <span data-ttu-id="47a99-131">명명된 세마포는 시스템 전체 세마포이므로 같은 명명된 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 여러 개 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-131">Because named semaphores are system wide, it is possible to have multiple <xref:System.Threading.Semaphore> objects that represent the same named semaphore.</span></span> <span data-ttu-id="47a99-132">생성자 또는 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 메서드를 호출할 때마다 새 <xref:System.Threading.Semaphore> 개체가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-132">Each time you call a constructor or the <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> method, a new <xref:System.Threading.Semaphore> object is created.</span></span> <span data-ttu-id="47a99-133">같은 이름을 반복적으로 지정하면 같은 명명된 세마포를 나타내는 개체가 여러 개 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-133">Specifying the same name repeatedly creates multiple objects that represent the same named semaphore.</span></span>  
   
- 명명된 세마포를 사용할 때는 주의해야 합니다.  이러한 세마포는 시스템 전체 세마포이므로 같은 이름을 사용하는 다른 프로세스가 예기치 않게 세마포를 입력할 수 있습니다.  그러면 동일 컴퓨터에서 실행되는 악성 코드가 이를 악용해 서비스 거부 공격을 수행할 수 있습니다.  
+ <span data-ttu-id="47a99-134">명명된 세마포를 사용할 때는 주의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-134">Be careful when you use named semaphores.</span></span> <span data-ttu-id="47a99-135">이러한 세마포는 시스템 전체 세마포이므로 같은 이름을 사용하는 다른 프로세스가 예기치 않게 세마포를 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-135">Because they are system wide, another process that uses the same name can enter your semaphore unexpectedly.</span></span> <span data-ttu-id="47a99-136">그러면 동일 컴퓨터에서 실행되는 악성 코드가 이를 악용해 서비스 거부 공격을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-136">Malicious code executing on the same computer could use this as the basis of a denial-of-service attack.</span></span>  
   
- 명명된 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 보호하려면 액세스 제어 보안을 사용합니다. 이때 <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=fullName> 개체를 지정하는 생성자를 사용하는 것이 좋습니다.  <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=fullName> 메서드를 사용하여 액세스 제어 보안을 적용할 수도 있지만 이렇게 하면 세마포 작성 시간과 보호가 적용되는 시간 사이에 취약한 기간이 생기게 됩니다.  액세스 제어 보안을 통해 세마포를 보호하면 악의적인 공격을 방지할 수는 있지만 의도하지 않은 이름 충돌 문제는 해결되지 않습니다.  
+ <span data-ttu-id="47a99-137">명명된 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 보호하려면 액세스 제어 보안을 사용합니다. 이때 <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> 개체를 지정하는 생성자를 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-137">Use access control security to protect a <xref:System.Threading.Semaphore> object that represents a named semaphore, preferably by using a constructor that specifies a <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> object.</span></span> <span data-ttu-id="47a99-138"><xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> 메서드를 사용하여 액세스 제어 보안을 적용할 수도 있지만 이렇게 하면 세마포 작성 시간과 보호가 적용되는 시간 사이에 취약한 기간이 생기게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-138">You can also apply access control security using the <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> method, but this leaves a window of vulnerability between the time the semaphore is created and the time it is protected.</span></span> <span data-ttu-id="47a99-139">액세스 제어 보안을 통해 세마포를 보호하면 악의적인 공격을 방지할 수는 있지만 의도하지 않은 이름 충돌 문제는 해결되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="47a99-139">Protecting semaphores with access control security helps prevent malicious attacks, but does not solve the problem of unintentional name collisions.</span></span>  
   
-## 참고 항목  
- <xref:System.Threading.Semaphore>   
- <xref:System.Threading.SemaphoreSlim>   
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a><span data-ttu-id="47a99-140">참고 항목</span><span class="sxs-lookup"><span data-stu-id="47a99-140">See Also</span></span>  
+ <xref:System.Threading.Semaphore>  
+ <xref:System.Threading.SemaphoreSlim>  
+ [<span data-ttu-id="47a99-141">스레딩 개체 및 기능</span><span class="sxs-lookup"><span data-stu-id="47a99-141">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)

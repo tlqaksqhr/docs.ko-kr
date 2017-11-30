@@ -1,108 +1,111 @@
 ---
-title: "DataGrid 컨트롤에서의 기본 키보드 및 마우스 동작 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DataGrid[WPF], 키보드 동작"
-  - "DataGrid[WPF], 마우스 동작"
-  - "키보드 동작[WPF], DataGrid"
-  - "마우스 동작[WPF], DataGrid"
+title: "DataGrid 컨트롤에서의 기본 키보드 및 마우스 동작"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGrid [WPF], keyboard behavior
+- DataGrid [WPF], mouse behavior
+- keyboard behavior [WPF], DataGrid
+- mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ddbbab88a22a4350626a36f79236aab67da24a7f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataGrid 컨트롤에서의 기본 키보드 및 마우스 동작
-이 항목에서는 사용자가 키보드 및 마우스를 사용하여 <xref:System.Windows.Controls.DataGrid> 컨트롤과 상호 작용하는 방법에 대해 설명합니다.  
+# <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a><span data-ttu-id="ca0e4-102">DataGrid 컨트롤에서의 기본 키보드 및 마우스 동작</span><span class="sxs-lookup"><span data-stu-id="ca0e4-102">Default Keyboard and Mouse Behavior in the DataGrid Control</span></span>
+<span data-ttu-id="ca0e4-103">이 항목에서는 사용자 수와 상호 작용 하는 방법을 설명는 <xref:System.Windows.Controls.DataGrid> 키보드 및 마우스를 사용 하 여 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-103">This topic describes how users can interact with the <xref:System.Windows.Controls.DataGrid> control by using the keyboard and mouse.</span></span>  
   
- <xref:System.Windows.Controls.DataGrid>와의 일반적 상호 작용에는 탐색, 선택 및 편집이 있습니다.  선택 동작은 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 및 <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> 속성에 의해 영향을 받습니다.  이 항목에서 설명하는 동작의 원인이 되는 기본값은 <xref:System.Windows.Controls.DataGridSelectionMode?displayProperty=fullName> 및 <xref:System.Windows.Controls.DataGridSelectionUnit?displayProperty=fullName>입니다.  이러한 값을 변경하면 설명과 다른 동작이 발생할 수도 있습니다.  셀이 편집 모드인 경우 편집 컨트롤에서 <xref:System.Windows.Controls.DataGrid>의 표준 키보드 동작을 재정의할 수 있습니다.  
+ <span data-ttu-id="ca0e4-104">와 일반적인 상호 작용은 <xref:System.Windows.Controls.DataGrid> 탐색, 선택 및 편집을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-104">Typical interactions with the <xref:System.Windows.Controls.DataGrid> include navigation, selection, and editing.</span></span> <span data-ttu-id="ca0e4-105">선택 동작에 영향을 받는 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 및 <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-105">Selection behavior is affected by the <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> and <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> properties.</span></span> <span data-ttu-id="ca0e4-106">이 항목에 설명 된 동작의 원인이 되는 기본값은 <xref:System.Windows.Controls.DataGridSelectionMode.Extended?displayProperty=nameWithType> 및 <xref:System.Windows.Controls.DataGridSelectionUnit.FullRow?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-106">The default values that cause the behavior described in this topic are <xref:System.Windows.Controls.DataGridSelectionMode.Extended?displayProperty=nameWithType> and <xref:System.Windows.Controls.DataGridSelectionUnit.FullRow?displayProperty=nameWithType>.</span></span> <span data-ttu-id="ca0e4-107">이러한 값을 변경 하는 설명 된 것과 다른 동작을 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-107">Changing these values might cause behavior that is different from that described.</span></span> <span data-ttu-id="ca0e4-108">편집 컨트롤의 표준 키보드의 동작을 재정의할 수 있습니다 셀 편집 모드일 때는 <xref:System.Windows.Controls.DataGrid>합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-108">When a cell is in edit mode, the editing control might override the standard keyboard behavior of the <xref:System.Windows.Controls.DataGrid>.</span></span>  
   
-## 기본 키보드 동작  
- 다음 표에서는 <xref:System.Windows.Controls.DataGrid>에 대한 기본 키보드 동작을 보여 줍니다.  
+## <a name="default-keyboard-behavior"></a><span data-ttu-id="ca0e4-109">기본 키보드 동작</span><span class="sxs-lookup"><span data-stu-id="ca0e4-109">Default Keyboard Behavior</span></span>  
+ <span data-ttu-id="ca0e4-110">다음 표에서 기본 키보드 동작에 대 한는 <xref:System.Windows.Controls.DataGrid>합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-110">The following table lists the default keyboard behavior for the <xref:System.Windows.Controls.DataGrid>.</span></span>  
   
-|키 또는 키 조합|설명|  
-|---------------|--------|  
-|아래쪽 화살표|포커스를 현재 셀의 바로 아래 셀로 이동합니다.  포커스가 마지막 행에 있으면 아래쪽 화살표를 눌러도 아무런 동작도 수행되지 않습니다.|  
-|위쪽 화살표|포커스를 현재 셀의 바로 위 셀로 이동합니다.  포커스가 첫 번째 행에 있으면 위쪽 화살표를 눌러도 아무런 동작도 수행되지 않습니다.|  
-|왼쪽 화살표|포커스를 행의 이전 셀로 이동합니다.  포커스가 행의 첫 번째 셀에 있는 경우 왼쪽 화살표를 눌러도 아무런 동작도 수행되지 않습니다.|  
-|오른쪽 화살표|포커스를 행의 다음 셀로 이동합니다.  포커스가 행의 마지막 셀에 있는 경우 오른쪽 화살표를 눌러도 아무런 동작도 수행되지 않습니다.|  
-|Home|포커스를 현재 행의 첫 번째 셀로 이동합니다.|  
-|End|포커스를 현재 행의 마지막 셀로 이동합니다.|  
-|Page Down|행이 그룹화되어 있지 않으면 완전하게 표시되는 행 수만큼 컨트롤을 아래로 스크롤합니다.  열을 변경하지 않고 포커스를 마지막으로 완전하게 표시되는 행으로 이동합니다.<br /><br /> 행이 그룹화되어 있으면 열을 변경하지 않고 <xref:System.Windows.Controls.DataGrid>에서 마지막 행으로 포커스를 이동합니다.|  
-|Page Up|행이 그룹화되어 있지 않으면 완전하게 표시되는 행 수만큼 컨트롤을 위로 스크롤합니다.  열을 변경하지 않고 포커스를 처음 표시되는 행으로 이동합니다.<br /><br /> 행이 그룹화되어 있으면 열을 변경하지 않고 <xref:System.Windows.Controls.DataGrid>에서 첫 번째 행으로 포커스를 이동합니다.|  
-|TAB|포커스를 현재 행의 다음 셀로 이동합니다.  포커스가 행의 마지막 셀에 있으면 다음 행의 첫 번째 셀로 포커스를 이동합니다.  포커스가 컨트롤의 마지막 셀에 있으면 부모 컨테이너의 탭 순서에서 다음 컨트롤로 포커스를 이동합니다.<br /><br /> 현재 셀이 편집 모드에 있으며 TAB을 누르면 포커스가 현재 행 밖으로 이동하는 경우 행에 대해 변경한 모든 내용은 포커스를 변경 하기 전에 커밋됩니다.|  
-|Shift\+Tab|포커스를 현재 행의 이전 셀로 이동합니다.  포커스가 행의 첫 번째 셀에 이미 있으면 이전 행의 마지막 셀로 포커스를 이동합니다.  포커스가 컨트롤의 첫 번째 셀에 있으면 부모 컨테이너의 탭 순서에서 이전 컨트롤로 포커스를 이동합니다.<br /><br /> 현재 셀이 편집 모드에 있으며 TAB을 누르면 포커스가 현재 행 밖으로 이동하는 경우 행에 대해 변경한 모든 내용은 포커스를 변경 하기 전에 커밋됩니다.|  
-|\<Ctrl\+아래쪽 화살표\>|포커스를 현재 열의 마지막 셀로 이동합니다.|  
-|Ctrl\+위쪽 화살표|포커스를 현재 열의 첫 번째 셀로 이동합니다.|  
-|Ctrl\+오른쪽 화살표|포커스를 현재 행의 마지막 셀로 이동합니다.|  
-|Ctrl\+왼쪽 화살표|포커스를 현재 행의 첫 번째 셀로 이동합니다.|  
-|Ctrl\+Home|포커스를 컨트롤의 첫 번째 셀로 이동합니다.|  
-|Ctrl\+End|포커스를 컨트롤의 마지막 셀로 이동합니다.|  
-|Ctrl\+Page Down|Page Down과 같습니다.|  
-|Ctrl\+Page Up|Page Up과 같습니다.|  
-|F2|<xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=fullName> 속성이 `false`이고 현재 열의 <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A?displayProperty=fullName> 속성이 `false`이면 현재 셀이 셀 편집 모드가 됩니다.|  
-|Enter|현재 셀과 행에 대한 변경 내용을 커밋하고 포커스를 현재 셀의 바로 아래 셀로 이동합니다.  포커스가 마지막 행에 있으면 변경 내용을 모두 커밋하고 포커스는 이동하지 않습니다.|  
-|Esc|컨트롤이 편집 모드에 있으면 편집을 취소하고 해당 컨트롤의 모든 변경 내용을 되돌립니다.  내부 데이터 소스가 <xref:System.ComponentModel.IEditableObject>를 구현하는 경우 Esc를 두 번째 누르면 전체 행에 대해 편집 모드가 취소됩니다.|  
-|백스페이스|셀을 편집할 때 커서 앞에 있는 문자를 삭제합니다.|  
-|DELETE|셀을 편집할 때 커서 뒤에 있는 문자를 삭제합니다.|  
-|Ctrl\+Enter|현재 셀의 변경 내용을 모두 커밋하고 포커스는 이동하지 않습니다.|  
-|Ctrl\+A|<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>가 <xref:System.Windows.Controls.DataGridSelectionMode>로 설정된 경우 <xref:System.Windows.Controls.DataGrid>의 모든 행이 선택됩니다.|  
+|<span data-ttu-id="ca0e4-111">키 또는 키 조합</span><span class="sxs-lookup"><span data-stu-id="ca0e4-111">Key or key combination</span></span>|<span data-ttu-id="ca0e4-112">설명</span><span class="sxs-lookup"><span data-stu-id="ca0e4-112">Description</span></span>|  
+|----------------------------|-----------------|  
+|<span data-ttu-id="ca0e4-113">아래쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-113">DOWN ARROW</span></span>|<span data-ttu-id="ca0e4-114">현재 셀의 바로 아래 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-114">Moves the focus to the cell directly below the current cell.</span></span> <span data-ttu-id="ca0e4-115">마지막 행에 포커스가 있으면 아래쪽 화살표를 누르면는 아무 작업도 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-115">If the focus is in the last row, pressing the DOWN ARROW does nothing.</span></span>|  
+|<span data-ttu-id="ca0e4-116">위쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-116">UP ARROW</span></span>|<span data-ttu-id="ca0e4-117">현재 셀 바로 위 셀에 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-117">Moves the focus to the cell directly above the current cell.</span></span> <span data-ttu-id="ca0e4-118">첫 번째 행에 포커스가 있으면 위쪽 화살표 키를 누르면는 아무 작업도 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-118">If the focus is in the first row, pressing the UP ARROW does nothing.</span></span>|  
+|<span data-ttu-id="ca0e4-119">왼쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-119">LEFT ARROW</span></span>|<span data-ttu-id="ca0e4-120">이전 행의 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-120">Moves the focus to the previous cell in the row.</span></span> <span data-ttu-id="ca0e4-121">포커스가 행의 첫 번째 셀에 있는 경우 왼쪽 화살표 키를 누르면는 아무 작업도 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-121">If the focus is in the first cell in the row, pressing the LEFT ARROW does nothing.</span></span>|  
+|<span data-ttu-id="ca0e4-122">오른쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-122">RIGHT ARROW</span></span>|<span data-ttu-id="ca0e4-123">행의 다음 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-123">Moves the focus to the next cell in the row.</span></span> <span data-ttu-id="ca0e4-124">포커스가 행의 마지막 셀에 있는 경우 오른쪽 화살표를는 아무 작업도 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-124">If the focus is in the last cell in the row, pressing the RIGHT ARROW does nothing.</span></span>|  
+|<span data-ttu-id="ca0e4-125">홈</span><span class="sxs-lookup"><span data-stu-id="ca0e4-125">HOME</span></span>|<span data-ttu-id="ca0e4-126">현재 행의 첫 번째 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-126">Moves the focus to the first cell in the current row.</span></span>|  
+|<span data-ttu-id="ca0e4-127">End </span><span class="sxs-lookup"><span data-stu-id="ca0e4-127">END</span></span>|<span data-ttu-id="ca0e4-128">현재 행의 마지막 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-128">Moves the focus to the last cell in the current row.</span></span>|  
+|<span data-ttu-id="ca0e4-129">Page Down</span><span class="sxs-lookup"><span data-stu-id="ca0e4-129">PAGE DOWN</span></span>|<span data-ttu-id="ca0e4-130">행 그룹화 되어 있지 않으면 완벽 하 게 표시 되는 행의 개수로 컨트롤을 아래로 스크롤합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-130">If rows are not grouped, scrolls the control downward by the number of rows that are fully displayed.</span></span> <span data-ttu-id="ca0e4-131">열을 변경 하지 않고 마지막 완벽 하 게 표시 되는 행에서 포커스를 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-131">Moves the focus to the last fully displayed row without changing columns.</span></span><br /><br /> <span data-ttu-id="ca0e4-132">행을 그룹화 하는 경우의 마지막 행에 포커스를 이동는 <xref:System.Windows.Controls.DataGrid> 열을 변경 하지 않고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-132">If rows are grouped, moves the focus to the last row in the <xref:System.Windows.Controls.DataGrid> without changing columns.</span></span>|  
+|<span data-ttu-id="ca0e4-133">Page Up</span><span class="sxs-lookup"><span data-stu-id="ca0e4-133">PAGE UP</span></span>|<span data-ttu-id="ca0e4-134">행 그룹화 되어 있지 않으면 컨트롤을 위로 스크롤합니다 완벽 하 게 표시 되는 행 수입니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-134">If rows are not grouped, scrolls the control upward by the number of rows that are fully displayed.</span></span> <span data-ttu-id="ca0e4-135">열을 변경 하지 않고 표시 되는 첫 번째 행에 포커스를 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-135">Moves focus to the first displayed row without changing columns.</span></span><br /><br /> <span data-ttu-id="ca0e4-136">행을 그룹화 하는 경우 첫 번째 행에 포커스를 이동는 <xref:System.Windows.Controls.DataGrid> 열을 변경 하지 않고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-136">If rows are grouped, moves the focus to the first row in the <xref:System.Windows.Controls.DataGrid> without changing columns.</span></span>|  
+|<span data-ttu-id="ca0e4-137">Tab</span><span class="sxs-lookup"><span data-stu-id="ca0e4-137">TAB</span></span>|<span data-ttu-id="ca0e4-138">현재 행에서 다음 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-138">Moves the focus to the next cell in the current row.</span></span> <span data-ttu-id="ca0e4-139">행의 마지막 셀에 포커스가 있으면 포커스가 다음 행의 첫 번째 셀으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-139">If the focus is in the last cell of the row, moves the focus to the first cell in the next row.</span></span> <span data-ttu-id="ca0e4-140">컨트롤의 마지막 셀에 포커스가 있으면 부모 컨테이너의 탭 순서의 다음 컨트롤로 포커스를 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-140">If the focus is in the last cell in the control, moves the focus to the next control in the tab order of the parent container.</span></span><br /><br /> <span data-ttu-id="ca0e4-141">현재 셀이 편집 모드에 있고 TAB을 누르면 포커스가 현재 행에서 멀리 이동, 모든 변경 된 행에 대 한 내용이 포커스를 변경 하기 전에 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-141">If the current cell is in edit mode and pressing TAB causes focus to move away from the current row, any changes that were made to the row are committed before focus is changed.</span></span>|  
+|<span data-ttu-id="ca0e4-142">Shift+Tab</span><span class="sxs-lookup"><span data-stu-id="ca0e4-142">SHIFT+TAB</span></span>|<span data-ttu-id="ca0e4-143">현재 행에서 이전 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-143">Moves the focus to the previous cell in the current row.</span></span> <span data-ttu-id="ca0e4-144">포커스가 행의 첫 번째 셀에 이미 있으면 이전 행의 마지막 셀으로 포커스를 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-144">If the focus is already in the first cell of the row, moves the focus to the last cell in the previous row.</span></span> <span data-ttu-id="ca0e4-145">컨트롤의 첫 번째 셀에 포커스가 있으면 포커스가 부모 컨테이너의 탭 순서에서 이전 컨트롤로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-145">If the focus is in the first cell in the control, moves the focus to the previous control in the tab order of the parent container.</span></span><br /><br /> <span data-ttu-id="ca0e4-146">현재 셀이 편집 모드에 있고 TAB을 누르면 포커스가 현재 행에서 멀리 이동, 모든 변경 된 행에 대 한 내용이 포커스를 변경 하기 전에 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-146">If the current cell is in edit mode and pressing TAB causes focus to move away from the current row, any changes that were made to the row are committed before focus is changed.</span></span>|  
+|<span data-ttu-id="ca0e4-147">Ctrl+아래쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-147">CTRL+DOWN ARROW</span></span>|<span data-ttu-id="ca0e4-148">현재 열의 마지막 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-148">Moves the focus to the last cell in the current column.</span></span>|  
+|<span data-ttu-id="ca0e4-149">Ctrl+위쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-149">CTRL+UP ARROW</span></span>|<span data-ttu-id="ca0e4-150">현재 열에서 첫 번째 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-150">Moves the focus to the first cell in the current column.</span></span>|  
+|<span data-ttu-id="ca0e4-151">Ctrl+오른쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-151">CTRL+RIGHT ARROW</span></span>|<span data-ttu-id="ca0e4-152">현재 행의 마지막 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-152">Moves the focus to the last cell in the current row.</span></span>|  
+|<span data-ttu-id="ca0e4-153">Ctrl+왼쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-153">CTRL+LEFT ARROW</span></span>|<span data-ttu-id="ca0e4-154">현재 행의 첫 번째 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-154">Moves the focus to the first cell in the current row.</span></span>|  
+|<span data-ttu-id="ca0e4-155">CTRL + HOME</span><span class="sxs-lookup"><span data-stu-id="ca0e4-155">CTRL+HOME</span></span>|<span data-ttu-id="ca0e4-156">컨트롤의 첫 번째 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-156">Moves the focus to the first cell in the control.</span></span>|  
+|<span data-ttu-id="ca0e4-157">CTRL + END</span><span class="sxs-lookup"><span data-stu-id="ca0e4-157">CTRL+END</span></span>|<span data-ttu-id="ca0e4-158">컨트롤의 마지막 셀으로 포커스를 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-158">Moves the focus to the last cell in the control.</span></span>|  
+|<span data-ttu-id="ca0e4-159">Ctrl+Page Down</span><span class="sxs-lookup"><span data-stu-id="ca0e4-159">CTRL+PAGE DOWN</span></span>|<span data-ttu-id="ca0e4-160">PAGE DOWN와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-160">Same as PAGE DOWN.</span></span>|  
+|<span data-ttu-id="ca0e4-161">Ctrl+Page Up</span><span class="sxs-lookup"><span data-stu-id="ca0e4-161">CTRL+PAGE UP</span></span>|<span data-ttu-id="ca0e4-162">PAGE UP와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-162">Same as PAGE UP.</span></span>|  
+|<span data-ttu-id="ca0e4-163">F2</span><span class="sxs-lookup"><span data-stu-id="ca0e4-163">F2</span></span>|<span data-ttu-id="ca0e4-164">경우는 <xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=nameWithType> 속성은 `false` 및 <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A?displayProperty=nameWithType> 속성은 `false` 현재 열에 대 한 현재 셀을 셀 편집 모드로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-164">If the <xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=nameWithType> property is `false` and the <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A?displayProperty=nameWithType> property is `false` for the current column, puts the current cell into cell edit mode.</span></span>|  
+|<span data-ttu-id="ca0e4-165">Enter 키</span><span class="sxs-lookup"><span data-stu-id="ca0e4-165">ENTER</span></span>|<span data-ttu-id="ca0e4-166">현재 셀 및 행에 모든 변경 내용을 커밋합니다 하 고 현재 셀의 바로 아래 셀으로 포커스를 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-166">Commits any changes to the current cell and row and moves the focus to the cell directly below the current cell.</span></span> <span data-ttu-id="ca0e4-167">마지막 행에 포커스가 있으면 포커스가 이동 하지 않고 변경을 내용을 커밋합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-167">If the focus is in the last row, commits any changes without moving the focus.</span></span>|  
+|<span data-ttu-id="ca0e4-168">Esc</span><span class="sxs-lookup"><span data-stu-id="ca0e4-168">ESC</span></span>|<span data-ttu-id="ca0e4-169">컨트롤 편집 모드에 있으면 편집을 취소 하 고 컨트롤에 적용 된 모든 변경 내용이 되돌립니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-169">If the control is in edit mode, cancels the edit and reverts any changes that were made in the control.</span></span> <span data-ttu-id="ca0e4-170">기본 데이터 원본 구현 하는 경우 <xref:System.ComponentModel.IEditableObject>, esc 키를 두 번째로 전체 행에 대 한 편집 모드를 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-170">If the underlying data source implements <xref:System.ComponentModel.IEditableObject>, pressing ESC a second time cancels edit mode for the entire row.</span></span>|  
+|<span data-ttu-id="ca0e4-171">백스페이스</span><span class="sxs-lookup"><span data-stu-id="ca0e4-171">BACKSPACE</span></span>|<span data-ttu-id="ca0e4-172">셀을 편집할 때 커서를 앞에 있는 문자를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-172">Deletes the character before the cursor when editing a cell.</span></span>|  
+|<span data-ttu-id="ca0e4-173">Delete</span><span class="sxs-lookup"><span data-stu-id="ca0e4-173">DELETE</span></span>|<span data-ttu-id="ca0e4-174">셀을 편집할 때 커서 뒤의 문자를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-174">Deletes the character after the cursor when editing a cell.</span></span>|  
+|<span data-ttu-id="ca0e4-175">Ctrl+Enter</span><span class="sxs-lookup"><span data-stu-id="ca0e4-175">CTRL+ENTER</span></span>|<span data-ttu-id="ca0e4-176">포커스를 이동 하지 않고 현재 셀의 모든 변경 사항을 커밋합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-176">Commits any changes to the current cell without moving the focus.</span></span>|  
+|<span data-ttu-id="ca0e4-177">Ctrl+A</span><span class="sxs-lookup"><span data-stu-id="ca0e4-177">CTRL+A</span></span>|<span data-ttu-id="ca0e4-178">경우 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 로 설정 된 <xref:System.Windows.Controls.DataGridSelectionMode.Extended>의 모든 행을 선택는 <xref:System.Windows.Controls.DataGrid>합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-178">If <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> is set to <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, selects all rows in the <xref:System.Windows.Controls.DataGrid>.</span></span>|  
   
-## 선택 키  
- <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 속성이 <xref:System.Windows.Controls.DataGridSelectionMode>로 설정되면 탐색 동작이 변경되지는 않지만 Ctrl\+Shift 또는 Shift 키를 누른 채 키보드를 사용하여 탐색하면 여러 행 선택 영역이 수정됩니다.  탐색을 시작하기 전에 컨트롤은 현재 행을 앵커 행으로 표시합니다.  Shift 키를 누른 채 탐색하면 앵커 행과 현재 행 사이의 모든 행이 선택 영역에 포함됩니다.  
+## <a name="selection-keys"></a><span data-ttu-id="ca0e4-179">선택 키</span><span class="sxs-lookup"><span data-stu-id="ca0e4-179">Selection Keys</span></span>  
+ <span data-ttu-id="ca0e4-180">경우는 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 속성이 <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, 탐색 동작을 변경 되지 않지만 다중 행 선택 영역을 수정 합니다 (CTRL + SHIFT 포함) SHIFT를 누른 채 키보드를 사용 하 여 탐색 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-180">If the <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> property is set to <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, the navigation behavior does not change, but navigating with the keyboard while pressing SHIFT (including CTRL+SHIFT) will modify a multi-row selection.</span></span> <span data-ttu-id="ca0e4-181">탐색 시작 되기 전에 컨트롤을 앵커 행으로 현재 행을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-181">Before navigation starts, the control marks the current row as an anchor row.</span></span> <span data-ttu-id="ca0e4-182">Shift 키를 누른 채 탐색 하는 경우 앵커 행과 현재 행 사이의 모든 행 선택 영역에 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-182">When you navigate while pressing SHIFT, the selection includes all rows between the anchor row and the current row.</span></span>  
   
- 다음 선택 키를 사용하면 여러 행 선택 영역이 수정됩니다.  
+ <span data-ttu-id="ca0e4-183">다음 선택 키를 사용 하는 여러 행 선택 영역이 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-183">The following selection keys modify multi-row selection.</span></span>  
   
--   Shift\+아래쪽 화살표  
+-   <span data-ttu-id="ca0e4-184">Shift+아래쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-184">SHIFT+DOWN ARROW</span></span>  
   
--   Shift\+위쪽 화살표  
+-   <span data-ttu-id="ca0e4-185">Shift+위쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-185">SHIFT+UP ARROW</span></span>  
   
--   Shift\+Page Down  
+-   <span data-ttu-id="ca0e4-186">Shift+Page Down</span><span class="sxs-lookup"><span data-stu-id="ca0e4-186">SHIFT+PAGE DOWN</span></span>  
   
--   Shift\+Page Up  
+-   <span data-ttu-id="ca0e4-187">Shift+Page Up</span><span class="sxs-lookup"><span data-stu-id="ca0e4-187">SHIFT+PAGE UP</span></span>  
   
--   Ctrl\+Shift\+아래쪽 화살표  
+-   <span data-ttu-id="ca0e4-188">Ctrl+Shift+아래쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-188">CTRL+SHIFT+DOWN ARROW</span></span>  
   
--   Ctrl\+Shift\+위쪽 화살표  
+-   <span data-ttu-id="ca0e4-189">Ctrl+Shift+위쪽 화살표</span><span class="sxs-lookup"><span data-stu-id="ca0e4-189">CTRL+SHIFT+UP ARROW</span></span>  
   
--   Ctrl\+Shift\+Home  
+-   <span data-ttu-id="ca0e4-190">CTRL + SHIFT + HOME</span><span class="sxs-lookup"><span data-stu-id="ca0e4-190">CTRL+SHIFT+HOME</span></span>  
   
--   Ctrl\+Shift\+End  
+-   <span data-ttu-id="ca0e4-191">CTRL + SHIFT + END</span><span class="sxs-lookup"><span data-stu-id="ca0e4-191">CTRL+SHIFT+END</span></span>  
   
-## 기본 마우스 동작  
- 다음 표에서는 <xref:System.Windows.Controls.DataGrid>에 대한 기본 마우스 동작을 보여 줍니다.  
+## <a name="default-mouse-behavior"></a><span data-ttu-id="ca0e4-192">기본 마우스 동작</span><span class="sxs-lookup"><span data-stu-id="ca0e4-192">Default Mouse Behavior</span></span>  
+ <span data-ttu-id="ca0e4-193">다음 표에서 기본 마우스 동작에 대 한는 <xref:System.Windows.Controls.DataGrid>합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-193">The following table lists the default mouse behavior for the <xref:System.Windows.Controls.DataGrid>.</span></span>  
   
-|마우스 동작|설명|  
-|------------|--------|  
-|선택되지 않은 행 클릭|클릭한 행을 현재 행으로 만들고 클릭한 셀을 현재 셀로 만듭니다.|  
-|현재 셀을 클릭합니다.|현재 셀을 편집 모드로 전환합니다.|  
-|열 머리글 셀 끌기|<xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A?displayProperty=fullName> 속성이 `true`이고 현재 열의 <xref:System.Windows.Controls.DataGridColumn.CanUserReorder%2A?displayProperty=fullName> 속성이 `true`이면 열이 새로운 위치에 놓여질 수 있도록 열을 이동합니다.|  
-|열 머리글 구분 기호 끌기|<xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=fullName> 속성이 `true`이고 현재 열의 <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=fullName> 속성이 `true`이면 열의 크기가 조정됩니다.|  
-|열 머리글 구분선 두 번 클릭|<xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=fullName> 속성이 `true`이고 <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=fullName> 속성이 현재 열에 대해 `true`인 경우 <xref:System.Windows.Controls.DataGridLength.Auto%2A> 크기 조정 모드를 사용하여 열의 크기를 자동으로 조정합니다.|  
-|열 머리글 셀 클릭|<xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A?displayProperty=fullName> 속성이 `true`이고 현재 열의 <xref:System.Windows.Controls.DataGridColumn.CanUserSort%2A?displayProperty=fullName> 속성이 `true`이면 열을 정렬합니다.<br /><br /> 이미 정렬된 열의 머리글을 클릭하면 해당 열의 정렬 방향이 바뀝니다.<br /><br /> Shift 키를 누른 채로 여러 열 머리글을 클릭하면 클릭한 순서대로 여러 열이 정렬됩니다.|  
-|Ctrl\+행 클릭|<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>가 <xref:System.Windows.Controls.DataGridSelectionMode>로 설정되어 있으면 연속되지 않은 여러 행 선택 영역이 수정됩니다.<br /><br /> 행이 이미 선택되어 있으면 해당 행의 선택을 취소합니다.|  
-|Shift\+행 클릭|<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>가 <xref:System.Windows.Controls.DataGridSelectionMode>로 설정되어 있으면 연속된 여러 행 선택 영역이 수정됩니다.|  
-|행 그룹 머리글을 클릭합니다.|그룹을 확장하거나 축소합니다.|  
-|<xref:System.Windows.Controls.DataGrid>의 왼쪽 위 모퉁이에 나타나는 모두 선택 단추를 클릭합니다.|<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>가 <xref:System.Windows.Controls.DataGridSelectionMode>로 설정된 경우 <xref:System.Windows.Controls.DataGrid>의 모든 행이 선택됩니다.|  
+|<span data-ttu-id="ca0e4-194">마우스 작업</span><span class="sxs-lookup"><span data-stu-id="ca0e4-194">Mouse action</span></span>|<span data-ttu-id="ca0e4-195">설명</span><span class="sxs-lookup"><span data-stu-id="ca0e4-195">Description</span></span>|  
+|------------------|-----------------|  
+|<span data-ttu-id="ca0e4-196">선택 되지 않은 행을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-196">Click an unselected row</span></span>|<span data-ttu-id="ca0e4-197">현재 행 및 현재 셀 클릭 한 셀을 클릭 한 행으로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-197">Makes the clicked row the current row, and the clicked cell the current cell.</span></span>|  
+|<span data-ttu-id="ca0e4-198">현재 셀을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-198">Click the current cell</span></span>|<span data-ttu-id="ca0e4-199">현재 셀을 편집 모드로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-199">Puts the current cell into edit mode.</span></span>|  
+|<span data-ttu-id="ca0e4-200">열 머리글 셀을 끌어 옵니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-200">Drag a column header cell</span></span>|<span data-ttu-id="ca0e4-201">경우는 <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A?displayProperty=nameWithType> 속성은 `true` 및 <xref:System.Windows.Controls.DataGridColumn.CanUserReorder%2A?displayProperty=nameWithType> 속성은 `true` 새로운 위치에 놓을 수 있도록 현재 열에 대 한 열을 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-201">If the <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A?displayProperty=nameWithType> property is `true` and the <xref:System.Windows.Controls.DataGridColumn.CanUserReorder%2A?displayProperty=nameWithType> property is `true` for the current column, moves the column so that it can be dropped into a new position.</span></span>|  
+|<span data-ttu-id="ca0e4-202">열 머리글 구분 기호를 끌어 옵니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-202">Drag a column header separator</span></span>|<span data-ttu-id="ca0e4-203">경우는 <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> 속성은 `true` 및 <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> 속성은 `true` 현재 열에 대 한 열 크기를 조정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-203">If the <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> property is `true` and the <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> property is `true` for the current column, resizes the column.</span></span>|  
+|<span data-ttu-id="ca0e4-204">열 머리글 구분선을 두 번 클릭</span><span class="sxs-lookup"><span data-stu-id="ca0e4-204">Double-click a column header separator</span></span>|<span data-ttu-id="ca0e4-205">경우는 <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> 속성은 `true` 및 <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> 속성은 `true` 현재 열 자동 크기에 대 한 사용 하 여 열에서 <xref:System.Windows.Controls.DataGridLength.Auto%2A> 크기 조정 모드입니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-205">If the <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> property is `true` and the <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> property is `true` for the current column, auto-sizes the column using the <xref:System.Windows.Controls.DataGridLength.Auto%2A> sizing mode.</span></span>|  
+|<span data-ttu-id="ca0e4-206">열 머리글 셀을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-206">Click a column header cell</span></span>|<span data-ttu-id="ca0e4-207">경우는 <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A?displayProperty=nameWithType> 속성은 `true` 및 <xref:System.Windows.Controls.DataGridColumn.CanUserSort%2A?displayProperty=nameWithType> 속성은 `true` 현재 열에 대 한 열을 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-207">If the <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A?displayProperty=nameWithType> property is `true` and the <xref:System.Windows.Controls.DataGridColumn.CanUserSort%2A?displayProperty=nameWithType> property is `true` for the current column, sorts the column.</span></span><br /><br /> <span data-ttu-id="ca0e4-208">정렬 된 열의 머리글을 클릭 하는 해당 열의 정렬 방향을 반대로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-208">Clicking the header of a column that is already sorted will reverse the sort direction of that column.</span></span><br /><br /> <span data-ttu-id="ca0e4-209">여러 열 머리글을 클릭 하는 여러 열을 클릭 한 순서로 별로 정렬 하는 동안 SHIFT 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-209">Pressing the SHIFT key while clicking multiple column headers will sort by multiple columns in the order clicked.</span></span>|  
+|<span data-ttu-id="ca0e4-210">CTRL + 행을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-210">CTRL+click a row</span></span>|<span data-ttu-id="ca0e4-211">경우 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 로 설정 된 <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, 연속 되지 않은 다중 행 선택 영역이 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-211">If <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> is set to <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, modifies a non-contiguous multi-row selection.</span></span><br /><br /> <span data-ttu-id="ca0e4-212">행은 이미 선택 되어 있으면 행을 선택 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-212">If the row is already selected, deselects the row.</span></span>|  
+|<span data-ttu-id="ca0e4-213">Shift 키를 한 행을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-213">SHIFT+click a row</span></span>|<span data-ttu-id="ca0e4-214">경우 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 로 설정 된 <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, 연속 다중 행 선택 영역이 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-214">If <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> is set to <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, modifies a contiguous multi-row selection.</span></span>|  
+|<span data-ttu-id="ca0e4-215">행 그룹 머리글을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-215">Click a row group header</span></span>|<span data-ttu-id="ca0e4-216">활동이 확장 되거나 그룹을 축소 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-216">Expands or collapses the group.</span></span>|  
+|<span data-ttu-id="ca0e4-217">왼쪽된 위 모퉁이에 있는 모든 선택 단추를 클릭 합니다.는<xref:System.Windows.Controls.DataGrid></span><span class="sxs-lookup"><span data-stu-id="ca0e4-217">Click the Select All button at the top left corner of the <xref:System.Windows.Controls.DataGrid></span></span>|<span data-ttu-id="ca0e4-218">경우 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 로 설정 된 <xref:System.Windows.Controls.DataGridSelectionMode.Extended>의 모든 행을 선택는 <xref:System.Windows.Controls.DataGrid>합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-218">If <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> is set to <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, selects all rows in the <xref:System.Windows.Controls.DataGrid>.</span></span>|  
   
-## 마우스 선택  
- <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 속성이 <xref:System.Windows.Controls.DataGridSelectionMode>로 설정되어 있는 경우, Ctrl 키 또는 Shift 키를 누른 채 행을 클릭하면 여러 행 선택 영역이 수정됩니다.  
+## <a name="mouse-selection"></a><span data-ttu-id="ca0e4-219">마우스 선택</span><span class="sxs-lookup"><span data-stu-id="ca0e4-219">Mouse Selection</span></span>  
+ <span data-ttu-id="ca0e4-220">경우는 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 속성이 <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, CTRL 또는 shift 키를 누른 채 행을 클릭 하면 여러 행 선택 영역이 수정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-220">If the <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> property is set to <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, clicking a row while pressing CTRL or SHIFT will modify a multi-row selection.</span></span>  
   
- Ctrl 키를 누른 채 행을 클릭하면 해당 행의 선택 상태가 변경되며 다른 모든 행은 현재 선택 상태로 유지됩니다.  인접하지 않은 행의 범위를 선택하려면 이와 같이 수행하십시오.  
+ <span data-ttu-id="ca0e4-221">CTRL 키를 눌러 하는 동안 행을 클릭 하면 다른 모든 행 현재 선택 영역 상태를 유지 하는 동안 행의 선택 상태가 변경 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-221">When you click a row while pressing CTRL, the row will change its selection state while all other rows retain their current selection state.</span></span> <span data-ttu-id="ca0e4-222">인접 하지 않은 행을 선택 하려면이 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-222">Do this to select non-adjacent rows.</span></span>  
   
- Shift 키를 누른 채 행을 클릭하면 클릭하기 전의 현재 행 위치에 있는 앵커 행과 현재 행 사이의 모든 행이 선택 영역에 포함됩니다.  이후에 Shift 키를 누른 채 클릭하면 앵커 행이 아닌 현재 행이 변경됩니다.  인접 행의 범위를 선택하려면 이와 같이 수행하십시오.  
+ <span data-ttu-id="ca0e4-223">Shift 키를 누른 채 행을 클릭 하면 현재 행과 클릭 하기 전에 현재 행의 위치에 있는 앵커 행 사이의 모든 행 선택 영역에 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-223">When you click a row while pressing SHIFT, the selection includes all rows between the current row and an anchor row located at the position of the current row prior to the click.</span></span> <span data-ttu-id="ca0e4-224">이후에 shift 키를 누른 채 클릭 앵커 행이 아니라 현재 행이 변경 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-224">Subsequent clicks while pressing SHIFT change the current row, but not the anchor row.</span></span> <span data-ttu-id="ca0e4-225">인접 한 행의 범위를 선택 하려면이 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-225">Do this to select a range of adjacent rows.</span></span>  
   
- 인접 행의 인접하지 않은 범위를 선택하기 위해 CTRL \+ SHIFT를 결합할 수 있습니다.  이렇게 하려면 앞에 설명된 대로 SHIFT\+클릭을 사용하여 첫 번째 범위를 선택합니다.  행의 첫 번째 범위가 선택된 후에 CTRL\+클릭을 사용하여 다음 범위의 첫 번째 행을 선택한 다음, 다음 범위의 마지막 행을 클릭하면서 CTRL\+SHIFT를 누릅니다.  
+ <span data-ttu-id="ca0e4-226">인접 한 행의 인접 하지 않은 범위를 선택 하려면 CTRL + SHIFT은 결합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-226">CTRL+SHIFT can be combined to select non-adjacent ranges of adjacent rows.</span></span> <span data-ttu-id="ca0e4-227">이 수행 하려면 shift 키를 사용 하 여 첫 번째 범위를 선택 하에서 앞에서 설명한 대로 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-227">To do this, select the first range by using SHIFT+click as described earlier.</span></span> <span data-ttu-id="ca0e4-228">첫 번째 범위의 행을 선택한 후 ctrl 키를 사용 + 다음 범위에서 첫 번째 행을 선택 하려면 클릭 한 다음 CTRL + SHIFT를 누른 채 다음 범위에서 마지막 행을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="ca0e4-228">After the first range of rows is selected, use CTRL+click to select the first row in the next range, and then click the last row in the next range while pressing CTRL+SHIFT.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Controls.DataGrid>   
+## <a name="see-also"></a><span data-ttu-id="ca0e4-229">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ca0e4-229">See Also</span></span>  
+ <xref:System.Windows.Controls.DataGrid>  
  <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

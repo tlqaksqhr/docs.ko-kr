@@ -1,15 +1,12 @@
 ---
 title: "명명된 인수와 선택적 인수(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - namedParameter_CSharpKeyword
 - cs_namedParameter
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - parameters [C#], named
 - named arguments [C#]
@@ -19,132 +16,125 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서는 명명된 인수 및 선택적 인수를 소개합니다. *명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.  
+# <a name="named-and-optional-arguments-c-programming-guide"></a><span data-ttu-id="8fef5-102">명명된 인수와 선택적 인수(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="8fef5-102">Named and Optional Arguments (C# Programming Guide)</span></span>
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]<span data-ttu-id="8fef5-103">에서는 명명된 인수 및 선택적 인수를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-103"> introduces named and optional arguments.</span></span> <span data-ttu-id="8fef5-104">*명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-104">*Named arguments* enable you to specify an argument for a particular parameter by associating the argument with the parameter's name rather than with the parameter's position in the parameter list.</span></span> <span data-ttu-id="8fef5-105">*선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-105">*Optional arguments* enable you to omit arguments for some parameters.</span></span> <span data-ttu-id="8fef5-106">두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-106">Both techniques can be used with methods, indexers, constructors, and delegates.</span></span>  
   
- 명명된 인수와 선택적 인수를 사용하는 경우 매개 변수 목록이 아니라 인수 목록에 표시되는 순서대로 인수가 평가됩니다.  
+ <span data-ttu-id="8fef5-107">명명된 인수와 선택적 인수를 사용하는 경우 매개 변수 목록이 아니라 인수 목록에 표시되는 순서대로 인수가 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-107">When you use named and optional arguments, the arguments are evaluated in the order in which they appear in the argument list, not the parameter list.</span></span>  
   
- 명명된 매개 변수와 선택적 매개 변수를 함께 사용하는 경우 선택적 매개 변수 목록에서 몇 개의 매개 변수에 대해서만 인수를 제공할 수 있습니다. 이 기능은 Microsoft Office 자동화 API와 같은 COM 인터페이스에 대한 호출에 큰 도움이 됩니다.  
+ <span data-ttu-id="8fef5-108">명명된 매개 변수와 선택적 매개 변수를 함께 사용하는 경우 선택적 매개 변수 목록에서 몇 개의 매개 변수에 대해서만 인수를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-108">Named and optional parameters, when used together, enable you to supply arguments for only a few parameters from a list of optional parameters.</span></span> <span data-ttu-id="8fef5-109">이 기능은 Microsoft Office 자동화 API와 같은 COM 인터페이스에 대한 호출에 큰 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-109">This capability greatly facilitates calls to COM interfaces such as the Microsoft Office Automation APIs.</span></span>  
   
-## <a name="named-arguments"></a>명명된 인수  
- 명명된 인수를 사용하면 호출된 메서드의 매개 변수 목록에서 매개 변수의 순서를 기억하거나 조회할 필요가 없습니다. 각 인수에 대한 매개 변수를 매개 변수 이름으로 지정할 수 있습니다. 예를 들어 함수에 정의된 순서의 위치로 체중과 키의 인수를 전송하여 표준 방법으로 BMI(체질량 지수)를 호출할 수 있습니다.  
+## <a name="named-arguments"></a><span data-ttu-id="8fef5-110">명명된 인수</span><span class="sxs-lookup"><span data-stu-id="8fef5-110">Named Arguments</span></span>  
+ <span data-ttu-id="8fef5-111">명명된 인수를 사용하면 호출된 메서드의 매개 변수 목록에서 매개 변수의 순서를 기억하거나 조회할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-111">Named arguments free you from the need to remember or to look up the order of parameters in the parameter lists of called methods.</span></span> <span data-ttu-id="8fef5-112">각 인수에 대한 매개 변수를 매개 변수 이름으로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-112">The parameter for each argument can be specified by parameter name.</span></span> <span data-ttu-id="8fef5-113">예를 들어 주문 세부 정보를 출력 하는 함수 (등 판매자 이름, 주문 번호 및 제품 이름) 함수에 의해 정의 된 순서에 따라 인수를 전송 하 여 표준 방식으로 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-113">For example, a function that prints order details (such as, seller name, order number & product name) can be called in the standard way by sending arguments by position, in the order defined by the function.</span></span>
   
- `CalculateBMI(123, 64);`  
+ `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- 매개 변수의 순서를 기억하지 못하지만 해당 이름을 알고 있는 경우 임의의 순서(체중 먼저 또는 키 먼저)로 인수를 보낼 수 있습니다.  
+ <span data-ttu-id="8fef5-114">매개 변수의 순서를 기억 하지 못하는 해도 이름만 알고 있는 경우 순서에 관계 없이 인수를 보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-114">If you do not remember the order of the parameters but know their names, you can send the arguments in any order.</span></span>  
   
- `CalculateBMI(weight: 123, height: 64);`  
+ `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
- `CalculateBMI(height: 64, weight: 123);`  
+ `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- 또한 명명된 인수는 각 인수가 무엇을 나타내는지를 식별하여 코드의 가독성을 향상합니다.  
+ <span data-ttu-id="8fef5-115">또한 명명된 인수는 각 인수가 무엇을 나타내는지를 식별하여 코드의 가독성을 향상합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-115">Named arguments also improve the readability of your code by identifying what each argument represents.</span></span> <span data-ttu-id="8fef5-116">아래 예제에서는 메서드에서 `sellerName` null 또는 공백일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-116">In the example method below, the `sellerName` cannot be null or whitespace.</span></span> <span data-ttu-id="8fef5-117">두 가지 모두 `sellerName` 및 `productName` 문자열 유형이 인수 위치에 따라, 보내는 대신 하면 하는 명명 된 인수를 사용 하 여 두 명확 하 게 코드를 읽는 사람에 대 한 혼동을 줄이기 위해을 합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-117">As both `sellerName` and `productName` are string types, instead of sending arguments by position, it makes sense to use named arguments to disambiguate the two and reduce confusion for anyone reading the code.</span></span>
   
- 명명된 인수는 다음과 같이 위치 인수를 따를 수 있습니다.  
+ <span data-ttu-id="8fef5-118">명명 된 인수를 위치 인수와 함께 사용할 경우, 올바른지으로</span><span class="sxs-lookup"><span data-stu-id="8fef5-118">Named arguments, when used with positional arguments, are valid as long as</span></span> 
+
+- <span data-ttu-id="8fef5-119">모든 위치 인수에 의해 따르지는 또는</span><span class="sxs-lookup"><span data-stu-id="8fef5-119">they're not followed by any positional arguments, or</span></span>
+
+ `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
+
+- <span data-ttu-id="8fef5-120">_C# 7.2 부터는_를 올바른 위치에 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-120">_starting with C# 7.2_, they're used in the correct position.</span></span> <span data-ttu-id="8fef5-121">매개 변수 아래 예제에서는 `orderNum` 올바른 위치에 있지만 명시적으로 명명 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-121">In the example below, the parameter `orderNum` is in the correct position but isn't explicitly named.</span></span>
+
+ `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- `CalculateBMI(123, height: 64);`  
+ <span data-ttu-id="8fef5-122">그러나 순서가의 명명 된 인수가 위치 인수에서 수행 하는 올바르지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-122">However, out-of-order named arguments are invalid if they're followed by positional arguments.</span></span>
+
+ ```csharp
+ // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
+ PrintOrderDetails(productName: "Red Mug", 31, "Gift Shop");
+ ```
   
- 그러나 위치 인수는 명명된 인수 다음에 올 수 없습니다. 다음 문을 실행하면 컴파일러 오류가 발생합니다.  
+## <a name="example"></a><span data-ttu-id="8fef5-123">예제</span><span class="sxs-lookup"><span data-stu-id="8fef5-123">Example</span></span>  
+ <span data-ttu-id="8fef5-124">다음 코드 예제에서는 몇 가지 추가 것과 함께이 섹션에서 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-124">The following code implements the examples from this section along with some additional ones.</span></span>  
   
- `//CalculateBMI(weight: 123, 64);`  
+ [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
-## <a name="example"></a>예제  
- 다음 코드는 이 섹션의 예제를 구현합니다.  
+## <a name="optional-arguments"></a><span data-ttu-id="8fef5-125">선택적 인수</span><span class="sxs-lookup"><span data-stu-id="8fef5-125">Optional Arguments</span></span>  
+ <span data-ttu-id="8fef5-126">메서드, 생성자, 인덱서 또는 대리자의 정의에서 해당 매개 변수를 필수 또는 선택 사항으로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-126">The definition of a method, constructor, indexer, or delegate can specify that its parameters are required or that they are optional.</span></span> <span data-ttu-id="8fef5-127">호출 시 모든 필수 매개 변수에 대한 인수를 제공해야 하지만 선택적 매개 변수에 대한 인수는 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-127">Any call must provide arguments for all required parameters, but can omit arguments for optional parameters.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
+ <span data-ttu-id="8fef5-128">각 선택적 매개 변수에는 해당 정의의 일부로 기본값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-128">Each optional parameter has a default value as part of its definition.</span></span> <span data-ttu-id="8fef5-129">해당 매개 변수에 대한 인수가 전송되지 않은 경우 기본값이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-129">If no argument is sent for that parameter, the default value is used.</span></span> <span data-ttu-id="8fef5-130">기본값은 다음 유형의 식 중 하나여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-130">A default value must be one of the following types of expressions:</span></span>  
   
-## <a name="optional-arguments"></a>선택적 인수  
- 메서드, 생성자, 인덱서 또는 대리자의 정의에서 해당 매개 변수를 필수 또는 선택 사항으로 지정할 수 있습니다. 호출 시 모든 필수 매개 변수에 대한 인수를 제공해야 하지만 선택적 매개 변수에 대한 인수는 생략할 수 있습니다.  
+-   <span data-ttu-id="8fef5-131">상수 식</span><span class="sxs-lookup"><span data-stu-id="8fef5-131">a constant expression;</span></span>  
   
- 각 선택적 매개 변수에는 해당 정의의 일부로 기본값이 있습니다. 해당 매개 변수에 대한 인수가 전송되지 않은 경우 기본값이 사용됩니다. 기본값은 다음 유형의 식 중 하나여야 합니다.  
+-   <span data-ttu-id="8fef5-132">`new ValType()` 형태의 식. 여기서 `ValType`은 [enum](../../../csharp/language-reference/keywords/enum.md) 또는 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)와 같은 값 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-132">an expression of the form `new ValType()`, where `ValType` is a value type, such as an [enum](../../../csharp/language-reference/keywords/enum.md) or a [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);</span></span>  
   
--   상수 식  
+-   <span data-ttu-id="8fef5-133">[default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) 형태의 식. 여기서 `ValType`은 값 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-133">an expression of the form [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md),  where `ValType` is a value type.</span></span>  
   
--   `new ValType()` 형태의 식. 여기서 `ValType`은 [enum](../../../csharp/language-reference/keywords/enum.md) 또는 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)와 같은 값 형식입니다.  
+ <span data-ttu-id="8fef5-134">선택적 매개 변수는 매개 변수 목록의 끝에서 모든 필수 매개 변수 다음에 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-134">Optional parameters are defined at the end of the parameter list, after any required parameters.</span></span> <span data-ttu-id="8fef5-135">호출자가 연속된 선택적 매개 변수 중 하나에 대한 인수를 제공하는 경우 이전의 모든 선택적 매개 변수에 대한 인수를 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-135">If the caller provides an argument for any one of a succession of optional parameters, it must provide arguments for all preceding optional parameters.</span></span> <span data-ttu-id="8fef5-136">인수 목록에서 쉼표로 구분된 간격은 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-136">Comma-separated gaps in the argument list are not supported.</span></span> <span data-ttu-id="8fef5-137">예를 들어 다음 코드에서 인스턴스 메서드 `ExampleMethod`는 필수 매개 변수 하나와 선택적 매개 변수 두 개로 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-137">For example, in the following code, instance method `ExampleMethod` is defined with one required and two optional parameters.</span></span>  
   
--   [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) 형태의 식. 여기서 `ValType`은 값 형식입니다.  
+ [!code-csharp[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
- 선택적 매개 변수는 매개 변수 목록의 끝에서 모든 필수 매개 변수 다음에 정의됩니다. 호출자가 연속된 선택적 매개 변수 중 하나에 대한 인수를 제공하는 경우 이전의 모든 선택적 매개 변수에 대한 인수를 제공해야 합니다. 인수 목록에서 쉼표로 구분된 간격은 지원되지 않습니다. 예를 들어 다음 코드에서 인스턴스 메서드 `ExampleMethod`는 필수 매개 변수 하나와 선택적 매개 변수 두 개로 정의됩니다.  
-  
- [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
-  
- 다음과 같은 `ExampleMethod` 호출에서는 세 번째 매개 변수에 대한 인수가 제공되었지만 두 번째 매개 변수에 대한 인수는 제공되지 않았기 때문에 컴파일러 오류가 발생합니다.  
+ <span data-ttu-id="8fef5-138">다음과 같은 `ExampleMethod` 호출에서는 세 번째 매개 변수에 대한 인수가 제공되었지만 두 번째 매개 변수에 대한 인수는 제공되지 않았기 때문에 컴파일러 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-138">The following call to `ExampleMethod` causes a compiler error, because an argument is provided for the third parameter but not for the second.</span></span>  
   
  `//anExample.ExampleMethod(3, ,4);`  
   
- 그러나 세 번째 매개 변수의 이름을 알고 있으면 명명된 인수를 사용하여 작업을 수행할 수 있습니다.  
+ <span data-ttu-id="8fef5-139">그러나 세 번째 매개 변수의 이름을 알고 있으면 명명된 인수를 사용하여 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-139">However, if you know the name of the third parameter, you can use a named argument to accomplish the task.</span></span>  
   
  `anExample.ExampleMethod(3, optionalint: 4);`  
   
- IntelliSense는 다음 그림과 같이 대괄호를 사용하여 선택적 매개 변수를 나타냅니다.  
+ <span data-ttu-id="8fef5-140">IntelliSense는 다음 그림과 같이 대괄호를 사용하여 선택적 매개 변수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-140">IntelliSense uses brackets to indicate optional parameters, as shown in the following illustration.</span></span>  
   
- ![ExampleMethod 메서드에 대한 IntelliSense 요약 정보](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
-ExampleMethod의 선택적 매개 변수  
+ <span data-ttu-id="8fef5-141">![ExampleMethod 메서드에 대한 IntelliSense 요약 정보](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")</span><span class="sxs-lookup"><span data-stu-id="8fef5-141">![IntelliSense Quick Info for method ExampleMethod.](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")</span></span>  
+<span data-ttu-id="8fef5-142">ExampleMethod의 선택적 매개 변수</span><span class="sxs-lookup"><span data-stu-id="8fef5-142">Optional parameters in ExampleMethod</span></span>  
   
 > [!NOTE]
->  .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 클래스를 사용하여 선택적 매개 변수를 선언할 수도 있습니다. `OptionalAttribute` 매개 변수는 기본값이 필요하지 않습니다.  
+>  <span data-ttu-id="8fef5-143">.NET <xref:System.Runtime.InteropServices.OptionalAttribute> 클래스를 사용하여 선택적 매개 변수를 선언할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-143">You can also declare optional parameters by using the .NET <xref:System.Runtime.InteropServices.OptionalAttribute> class.</span></span> <span data-ttu-id="8fef5-144">`OptionalAttribute` 매개 변수는 기본값이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-144">`OptionalAttribute` parameters do not require a default value.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `ExampleClass`에 대한 생성자에 선택 사항인 매개 변수 하나가 있습니다. 인스턴스 메서드 `ExampleMethod`에는 `required`라는 필수 매개 변수 하나와 `optionalstr` 및 `optionalint`라는 선택적 매개 변수 두 개가 있습니다. `Main`의 코드는 생성자와 메서드를 호출할 수 있는 여러 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="8fef5-145">예제</span><span class="sxs-lookup"><span data-stu-id="8fef5-145">Example</span></span>  
+ <span data-ttu-id="8fef5-146">다음 예제에서는 `ExampleClass`에 대한 생성자에 선택 사항인 매개 변수 하나가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-146">In the following example, the constructor for `ExampleClass` has one parameter, which is optional.</span></span> <span data-ttu-id="8fef5-147">인스턴스 메서드 `ExampleMethod`에는 `required`라는 필수 매개 변수 하나와 `optionalstr` 및 `optionalint`라는 선택적 매개 변수 두 개가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-147">Instance method `ExampleMethod` has one required parameter, `required`, and two optional parameters, `optionalstr` and `optionalint`.</span></span> <span data-ttu-id="8fef5-148">`Main`의 코드는 생성자와 메서드를 호출할 수 있는 여러 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-148">The code in `Main` shows the different ways in which the constructor and method can be invoked.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
-## <a name="com-interfaces"></a>COM 인터페이스  
- 동적 개체 및 기타 향상된 기능에 대한 지원과 더불어 명명된 인수와 선택적 인수는 Office 자동화 API와 같은 COM API와의 상호 운용성을 크게 향상합니다.  
+## <a name="com-interfaces"></a><span data-ttu-id="8fef5-149">COM 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8fef5-149">COM Interfaces</span></span>  
+ <span data-ttu-id="8fef5-150">동적 개체 및 기타 향상된 기능에 대한 지원과 더불어 명명된 인수와 선택적 인수는 Office 자동화 API와 같은 COM API와의 상호 운용성을 크게 향상합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-150">Named and optional arguments, along with support for dynamic objects and other enhancements, greatly improve interoperability with COM APIs, such as Office Automation APIs.</span></span>  
   
- 예를 들어 Microsoft Office Excel [범위](http://go.microsoft.com/fwlink/?LinkId=148196) 인터페이스의 [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) 메서드에는 모두 선택 사항인 매개 변수 7개가 있습니다. 해당 매개 변수는 다음 그림에 나와 있습니다.  
+ <span data-ttu-id="8fef5-151">예를 들어 Microsoft Office Excel [범위](http://go.microsoft.com/fwlink/?LinkId=148196) 인터페이스의 [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) 메서드에는 모두 선택 사항인 매개 변수 7개가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-151">For example, the [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) method in the Microsoft Office Excel [Range](http://go.microsoft.com/fwlink/?LinkId=148196) interface has seven parameters, all of which are optional.</span></span> <span data-ttu-id="8fef5-152">해당 매개 변수는 다음 그림에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-152">These parameters are shown in the following illustration.</span></span>  
   
- ![AutoFormat 메서드에 대한 IntelliSense 요약 정보](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-AutoFormat 매개 변수  
+ <span data-ttu-id="8fef5-153">![AutoFormat 메서드에 대한 IntelliSense 요약 정보](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")</span><span class="sxs-lookup"><span data-stu-id="8fef5-153">![IntelliSense Quick Info for the AutoFormat method.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")</span></span>  
+<span data-ttu-id="8fef5-154">AutoFormat 매개 변수</span><span class="sxs-lookup"><span data-stu-id="8fef5-154">AutoFormat parameters</span></span>  
   
- C# 3.0 및 이전 버전에서는 다음 예제와 같이 각 매개 변수에 대한 인수가 필요합니다.  
+ <span data-ttu-id="8fef5-155">C# 3.0 및 이전 버전에서는 다음 예제와 같이 각 매개 변수에 대한 인수가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-155">In C# 3.0 and earlier versions, an argument is required for each parameter, as shown in the following example.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
- 그러나 C# 4.0에서 도입된 명명된 인수와 선택적 인수를 사용하면 `AutoFormat` 호출을 훨씬 간소화할 수 있습니다. 명명된 인수와 선택적 인수를 사용하면 매개 변수의 기본값을 변경하지 않으려는 경우 선택적 매개 변수에 대한 인수를 생략할 수 있습니다. 다음 호출에서는 7개 매개 변수 중 하나에 대한 값만 지정되었습니다.  
+ <span data-ttu-id="8fef5-156">그러나 C# 4.0에서 도입된 명명된 인수와 선택적 인수를 사용하면 `AutoFormat` 호출을 훨씬 간소화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-156">However, you can greatly simplify the call to `AutoFormat` by using named and optional arguments, introduced in C# 4.0.</span></span> <span data-ttu-id="8fef5-157">명명된 인수와 선택적 인수를 사용하면 매개 변수의 기본값을 변경하지 않으려는 경우 선택적 매개 변수에 대한 인수를 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-157">Named and optional arguments enable you to omit the argument for an optional parameter if you do not want to change the parameter's default value.</span></span> <span data-ttu-id="8fef5-158">다음 호출에서는 7개 매개 변수 중 하나에 대한 값만 지정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-158">In the following call, a value is specified for only one of the seven parameters.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
- 자세한 내용 및 예제는 [방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) 및 [방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)를 참조하세요.  
+ <span data-ttu-id="8fef5-159">자세한 내용 및 예제는 [방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) 및 [방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8fef5-159">For more information and examples, see [How to: Use Named and Optional Arguments in Office Programming](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) and [How to: Access Office Interop Objects by Using Visual C# Features](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).</span></span>  
   
-## <a name="overload-resolution"></a>Overload Resolution  
- 명명된 인수 및 선택적 인수를 사용하면 다음과 같은 방법으로 오버로드 확인에 영향을 줍니다.  
+## <a name="overload-resolution"></a><span data-ttu-id="8fef5-160">Overload Resolution</span><span class="sxs-lookup"><span data-stu-id="8fef5-160">Overload Resolution</span></span>  
+ <span data-ttu-id="8fef5-161">명명된 인수 및 선택적 인수를 사용하면 다음과 같은 방법으로 오버로드 확인에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-161">Use of named and optional arguments affects overload resolution in the following ways:</span></span>  
   
--   메서드, 인덱서 또는 생성자는 해당 매개 변수가 각각 선택 사항이거나 이름 또는 위치로 호출하는 문의 단일 인수에 해당하고 이 인수를 매개 변수의 형식으로 변환할 수 있는 경우 실행 후보가 됩니다.  
+-   <span data-ttu-id="8fef5-162">메서드, 인덱서 또는 생성자는 해당 매개 변수가 각각 선택 사항이거나 이름 또는 위치로 호출하는 문의 단일 인수에 해당하고 이 인수를 매개 변수의 형식으로 변환할 수 있는 경우 실행 후보가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-162">A method, indexer, or constructor is a candidate for execution if each of its parameters either is optional or corresponds, by name or by position, to a single argument in the calling statement, and that argument can be converted to the type of the parameter.</span></span>  
   
--   둘 이상의 인증서가 있으면 기본 설정 변환에 대한 오버로드 확인 규칙이 명시적으로 지정된 인수에 적용됩니다. 선택적 매개 변수에 대해 생략된 인수는 무시됩니다.  
+-   <span data-ttu-id="8fef5-163">둘 이상의 인증서가 있으면 기본 설정 변환에 대한 오버로드 확인 규칙이 명시적으로 지정된 인수에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-163">If more than one candidate is found, overload resolution rules for preferred conversions are applied to the arguments that are explicitly specified.</span></span> <span data-ttu-id="8fef5-164">선택적 매개 변수에 대해 생략된 인수는 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-164">Omitted arguments for optional parameters are ignored.</span></span>  
   
--   두 후보가 똑같이 정상이라고 판단되는 경우 기본적으로 호출에서 인수가 생략된 선택적 매개 변수가 없는 후보가 설정됩니다. 이는 매개 변수가 적은 후보에 대한 오버로드 확인에서 일반적인 기본 설정의 결과입니다.  
+-   <span data-ttu-id="8fef5-165">두 후보가 똑같이 정상이라고 판단되는 경우 기본적으로 호출에서 인수가 생략된 선택적 매개 변수가 없는 후보가 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-165">If two candidates are judged to be equally good, preference goes to a candidate that does not have optional parameters for which arguments were omitted in the call.</span></span> <span data-ttu-id="8fef5-166">이는 매개 변수가 적은 후보에 대한 오버로드 확인에서 일반적인 기본 설정의 결과입니다.</span><span class="sxs-lookup"><span data-stu-id="8fef5-166">This is a consequence of a general preference in overload resolution for candidates that have fewer parameters.</span></span>  
   
-## <a name="c-language-specification"></a>C# 언어 사양  
+## <a name="c-language-specification"></a><span data-ttu-id="8fef5-167">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="8fef5-167">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   
- [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
- [인덱서 사용](../../../csharp/programming-guide/indexers/using-indexers.md)
-
+## <a name="see-also"></a><span data-ttu-id="8fef5-168">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8fef5-168">See Also</span></span>  
+ [<span data-ttu-id="8fef5-169">방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용</span><span class="sxs-lookup"><span data-stu-id="8fef5-169">How to: Use Named and Optional Arguments in Office Programming</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+ [<span data-ttu-id="8fef5-170">dynamic 형식 사용</span><span class="sxs-lookup"><span data-stu-id="8fef5-170">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [<span data-ttu-id="8fef5-171">생성자 사용</span><span class="sxs-lookup"><span data-stu-id="8fef5-171">Using Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [<span data-ttu-id="8fef5-172">인덱서 사용</span><span class="sxs-lookup"><span data-stu-id="8fef5-172">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)

@@ -1,96 +1,102 @@
 ---
-title: "방법: 사용자 지정 숫자 형식 공급자 정의 및 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "사용자 지정 형식 문자열"
-  - "사용자 지정 숫자 형식 문자열"
-  - "날짜 및 시간 데이터 표시"
-  - "형식 공급자[.NET Framework]"
-  - "서식 지정[.NET Framework], 숫자"
-  - "숫자 형식 지정[.NET Framework]"
-  - "숫자[.NET Framework], 사용자 지정 숫자 형식 문자열"
-  - "숫자 형식 문자열[.NET Framework]"
+title: "방법: 사용자 지정 숫자 형식 공급자 정의 및 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- number formatting [.NET Framework]
+- custom numeric format strings
+- numbers [.NET Framework], custom numeric format strings
+- displaying date and time data
+- format providers [.NET Framework]
+- custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0e44a909eb92f0d9dfa21980a918a2d370dcf427
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: 사용자 지정 숫자 형식 공급자 정의 및 사용
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 숫자 값의 문자열 표현을 다양한 방식으로 제어할 수 있습니다.  숫자 값 형식을 사용자 지정하는 데 사용할 수 있는 기능은 다음과 같습니다.  
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a><span data-ttu-id="2873d-102">방법: 사용자 지정 숫자 형식 공급자 정의 및 사용</span><span class="sxs-lookup"><span data-stu-id="2873d-102">How to: Define and Use Custom Numeric Format Providers</span></span>
+<span data-ttu-id="2873d-103">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 숫자 값의 문자열 표현 광범위 하 게 제어할 수 있게 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gives you extensive control over the string representation of numeric values.</span></span> <span data-ttu-id="2873d-104">숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-104">It supports the following features for customizing the format of numeric values:</span></span>  
   
--   숫자를 문자열 표현으로 변환하는 데 사용되는 미리 정의된 형식 집합을 제공하는 표준 숫자 형식 문자열.  `format` 매개 변수가 있는 <xref:System.Decimal.ToString%28System.String%29?displayProperty=fullName> 등의 숫자 서식 지정 메서드에 이러한 문자열을 사용할 수 있습니다.  자세한 내용은 [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)를 참조하십시오.  
+-   <span data-ttu-id="2873d-105">숫자를 해당 문자열 표현으로 변환하기 위한 미리 정의된 형식 집합을 제공하는 표준 숫자 형식 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-105">Standard numeric format strings, which provide a predefined set of formats for converting numbers to their string representation.</span></span> <span data-ttu-id="2873d-106">숫자와 같은 서식 지정 메서드에 사용할 수 있습니다 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, 올려진는 `format` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-106">You can use them with any numeric formatting method, such as <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, that has a `format` parameter.</span></span> <span data-ttu-id="2873d-107">자세한 내용은 참조 [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-107">For details, see [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).</span></span>  
   
--   사용자 지정 숫자 서식 지정자를 정의하기 위해 조합할 수 있는 기호 집합을 제공하는 사용자 지정 숫자 형식 문자열.  이러한 문자열은 `format` 매개 변수가 있는 <xref:System.Decimal.ToString%28System.String%29?displayProperty=fullName> 등의 숫자 서식 지정 메서드에도 사용할 수 있습니다.  자세한 내용은 [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)를 참조하십시오.  
+-   <span data-ttu-id="2873d-108">함께 결합되어 사용자 지정 숫자 형식 지정자를 정의할 수 있는 기호 집합을 제공하는 사용자 지정 숫자 형식 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-108">Custom numeric format strings, which provide a set of symbols that can be combined to define custom numeric format specifiers.</span></span> <span data-ttu-id="2873d-109">모든 숫자와 같은 서식 지정 메서드에 함께 사용할 수도 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, 올려진는 `format` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-109">They can also be used with any numeric formatting method, such as <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, that has a `format` parameter.</span></span> <span data-ttu-id="2873d-110">자세한 내용은 참조 [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-110">For details, see [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).</span></span>  
   
--   숫자 값의 문자열 표현을 표시하는 데 사용되는 기호 및 형식 패턴을 정의하는 사용자 지정 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체.  `provider` 매개 변수가 있는 <xref:System.Int32.ToString%2A> 등의 숫자 서식 지정 메서드에 이러한 개체를 사용할 수 있습니다.  대개 `provider` 매개 변수는 문화권별 형식을 지정하는 데 사용됩니다.  
+-   <span data-ttu-id="2873d-111">사용자 지정 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 기호를 정의 하 고 숫자 값의 문자열 표현을 표시에 사용 되는 패턴 서식을 지정 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-111">Custom <xref:System.Globalization.CultureInfo> or <xref:System.Globalization.NumberFormatInfo> objects, which define the symbols and format patterns used in displaying the string representations of numeric values.</span></span> <span data-ttu-id="2873d-112">숫자와 같은 서식 지정 메서드에 사용할 수 있습니다 <xref:System.Int32.ToString%2A>, 올려진는 `provider` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-112">You can use them with any numeric formatting method, such as <xref:System.Int32.ToString%2A>, that has a `provider` parameter.</span></span> <span data-ttu-id="2873d-113">일반적으로 `provider` culture 별 서식 지정 하려면 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-113">Typically, the `provider` parameter is used to specify culture-specific formatting.</span></span>  
   
- 응용 프로그램에서 서식이 지정된 계좌 번호, ID 번호 또는 우편 번호를 표시해야 하는 등의 일부 경우에는 이 세 가지 기술이 적합하지 않습니다.  또한 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 <xref:System.Globalization.CultureInfo> 개체도, <xref:System.Globalization.NumberFormatInfo> 개체도 아닌 서식 지정 개체를 정의하여 숫자 값의 서식 지정 방식을 결정할 수 있습니다.  이 항목에서는 이러한 개체를 구현하기 위한 단계별 지침과 전화 번호 형식을 지정하는 예제를 제공합니다.  
+ <span data-ttu-id="2873d-114">응용 프로그램에서 형식이 지정된 계정 번호, ID 번호 또는 우편 번호를 표시해야 하는 경우와 같이 이 세 가지 방법이 부적절한 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-114">In some cases (such as when an application must display a formatted account number, an identification number, or a postal code) these three techniques are inappropriate.</span></span> <span data-ttu-id="2873d-115">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 서식 지정 개체를 정의할 수 있습니다는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 숫자 값을 형식 지정 방법을 결정 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-115">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] also enables you to define a formatting object that is neither a <xref:System.Globalization.CultureInfo> nor a <xref:System.Globalization.NumberFormatInfo> object to determine how a numeric value is formatted.</span></span> <span data-ttu-id="2873d-116">이 항목에서는 이러한 개체를 구현하기 위한 단계별 지침을 제공하고 전화 번호 형식을 지정하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-116">This topic provides the step-by-step instructions for implementing such an object, and provides an example that formats telephone numbers.</span></span>  
   
-### 사용자 지정 형식 공급자를 정의하려면  
+### <a name="to-define-a-custom-format-provider"></a><span data-ttu-id="2873d-117">사용자 지정 형식 공급자를 정의하려면</span><span class="sxs-lookup"><span data-stu-id="2873d-117">To define a custom format provider</span></span>  
   
-1.  <xref:System.IFormatProvider> 및 <xref:System.ICustomFormatter> 인터페이스를 구현하는 클래스를 정의합니다.  
+1.  <span data-ttu-id="2873d-118">구현 하는 클래스 정의 <xref:System.IFormatProvider> 및 <xref:System.ICustomFormatter> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-118">Define a class that implements the <xref:System.IFormatProvider> and <xref:System.ICustomFormatter> interfaces.</span></span>  
   
-2.  <xref:System.IFormatProvider.GetFormat%2A?displayProperty=fullName> 메서드를 구현합니다.  <xref:System.IFormatProvider.GetFormat%2A>은 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 메서드와 같은 서식 지정 메서드가 실제로 사용자 지정 서식 지정을 수행하는 개체를 검색하기 위해 호출하는 콜백 메서드입니다.  일반적으로 <xref:System.IFormatProvider.GetFormat%2A>을 구현하면 다음 작업이 수행됩니다.  
+2.  <span data-ttu-id="2873d-119"><xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-119">Implement the <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="2873d-120"><xref:System.IFormatProvider.GetFormat%2A>콜백 메서드는 서식 지정 방법 (같은 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드)를 실제로 담당 하는 개체를 검색 하기 위해 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-120"><xref:System.IFormatProvider.GetFormat%2A> is a callback method that the formatting method (such as the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method) invokes to retrieve the object that is actually responsible for performing custom formatting.</span></span> <span data-ttu-id="2873d-121">구현 하는 일반적인 <xref:System.IFormatProvider.GetFormat%2A> 다음 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-121">A typical implementation of <xref:System.IFormatProvider.GetFormat%2A> does the following:</span></span>  
   
-    1.  메서드 매개 변수로 전달되는 <xref:System.Type> 개체가 <xref:System.ICustomFormatter> 인터페이스를 나타내는지 여부를 확인합니다.  
+    1.  <span data-ttu-id="2873d-122">결정 여부는 <xref:System.Type> 개체 메서드로 전달 된 매개 변수를 나타냅니다는 <xref:System.ICustomFormatter> 인터페이스.</span><span class="sxs-lookup"><span data-stu-id="2873d-122">Determines whether the <xref:System.Type> object passed as a method parameter represents an <xref:System.ICustomFormatter> interface.</span></span>  
   
-    2.  매개 변수가 <xref:System.ICustomFormatter> 인터페이스를 나타내는 경우 <xref:System.IFormatProvider.GetFormat%2A>은 사용자 지정 서식 지정을 수행하는 <xref:System.ICustomFormatter> 인터페이스를 구현하는 개체를 반환합니다.  일반적으로 사용자 지정 서식 지정 개체는 자기 자신을 반환합니다.  
+    2.  <span data-ttu-id="2873d-123">매개 변수가 나타내는 경우는 <xref:System.ICustomFormatter> 인터페이스를 <xref:System.IFormatProvider.GetFormat%2A> 구현 하는 개체를 반환 합니다.는 <xref:System.ICustomFormatter> 인터페이스를 사용자 지정 서식을 제공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-123">If the parameter does represent the <xref:System.ICustomFormatter> interface, <xref:System.IFormatProvider.GetFormat%2A> returns an object that implements the <xref:System.ICustomFormatter> interface that is responsible for providing custom formatting.</span></span> <span data-ttu-id="2873d-124">일반적으로 사용자 지정 형식 지정 개체 자체가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-124">Typically, the custom formatting object returns itself.</span></span>  
   
-    3.  매개 변수가 <xref:System.ICustomFormatter> 인터페이스를 나타내지 않으면 <xref:System.IFormatProvider.GetFormat%2A>은 `null`을 반환합니다.  
+    3.  <span data-ttu-id="2873d-125">매개 변수를 나타내지 않는 경우는 <xref:System.ICustomFormatter> 인터페이스 <xref:System.IFormatProvider.GetFormat%2A> 반환 `null`합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-125">If the parameter does not represent the <xref:System.ICustomFormatter> interface, <xref:System.IFormatProvider.GetFormat%2A> returns `null`.</span></span>  
   
-3.  <xref:System.ICustomFormatter.Format%2A> 메서드를 구현합니다.  이 메서드는 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 메서드에서 호출되며 숫자의 문자열 표현을 반환합니다.  이 메서드를 구현할 때는 대개 다음 작업이 수행됩니다.  
+3.  <span data-ttu-id="2873d-126"><xref:System.ICustomFormatter.Format%2A> 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-126">Implement the <xref:System.ICustomFormatter.Format%2A> method.</span></span> <span data-ttu-id="2873d-127">이 메서드는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드 및 숫자의 문자열 표현을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-127">This method is called by the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method and is responsible for returning the string representation of a number.</span></span> <span data-ttu-id="2873d-128">일반적으로 메서드를 구현하는 과정은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-128">Implementing the method typically involves the following:</span></span>  
   
-    1.  선택적으로 `provider` 매개 변수를 확인하여 이 메서드가 서식 지정 서비스를 제공하기 위한 것인지를 확인합니다.  <xref:System.IFormatProvider> 및 <xref:System.ICustomFormatter>를 모두 구현하는 서식 지정 개체의 경우 여기에는 현재 서식 지정 개체와 같은지 확인하기 위해 `provider` 매개 변수를 테스트하는 작업이 포함됩니다.  
+    1.  <span data-ttu-id="2873d-129">필요에 따라 메서드를 검사 하 여 형식 지정 서비스를 제공 하기 위한 것인지 확인는 `provider` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-129">Optionally, make sure that the method is legitimately intended to provide formatting services by examining the `provider` parameter.</span></span> <span data-ttu-id="2873d-130">둘 다를 구현 하는 개체의 서식을 지정 하기 위한 <xref:System.IFormatProvider> 및 <xref:System.ICustomFormatter>, 테스트 하 여는 `provider` 서식 현재 개체와 같은지 여부에 대 한 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-130">For formatting objects that implement both <xref:System.IFormatProvider> and <xref:System.ICustomFormatter>, this involves testing the `provider` parameter for equality with the current formatting object.</span></span>  
   
-    2.  서식 지정 개체가 사용자 지정 서식 지정자를 지원하는지 여부를 확인합니다. \(예를 들어, "N" 형식 지정자는 미국 전화 번호가 NANP 형식으로 출력 되어야 하 고 "I" 지정자는 Itu\-t 권장 E.123 형식으로 출력을 나타낼 수 있습니다.\) 서식 지정자를 사용하는 경우 이 메서드가 특정 서식 지정자를 처리해야 합니다.  서식 지정자는 `format` 매개 변수에서 메서드로 전달됩니다.  지정자가 없으면 `format` 매개 변수의 값은 <xref:System.String.Empty?displayProperty=fullName>가 됩니다.  
+    2.  <span data-ttu-id="2873d-131">형식 지정 개체가 사용자 지정 형식 지정자를 지원해야 하는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-131">Determine whether the formatting object should support custom format specifiers.</span></span> <span data-ttu-id="2873d-132">예를 들어 "N" 형식 지정자는 미국 전화 번호가 NANP 형식으로, "I" 형식 지정자는 ITU-T 권장 E.123 형식으로 출력되어야 함을 나타낼 수 있습니다. 형식 지정자가 사용된 경우 메서드에서 특정 형식 지정자를 처리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-132">(For example, an "N" format specifier might indicate that a U.S. telephone number should be output in NANP format, and an "I" might indicate output in ITU-T Recommendation E.123 format.) If format specifiers are used, the method should handle the specific format specifier.</span></span> <span data-ttu-id="2873d-133">메서드에 전달 되는 `format` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-133">It is passed to the method in the `format` parameter.</span></span> <span data-ttu-id="2873d-134">지정 자가 없는 경우 현재의 가치는 `format` 매개 변수는 <xref:System.String.Empty?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-134">If no specifier is present, the value of the `format` parameter is <xref:System.String.Empty?displayProperty=nameWithType>.</span></span>  
   
-    3.  `arg` 매개 변수로 메서드에 전달된 숫자 값을 검색합니다.  적절히 조작하여 숫자 값을 문자열 표현으로 변환합니다.  
+    3.  <span data-ttu-id="2873d-135">숫자 값으로 메서드에 전달 된 검색의 `arg` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-135">Retrieve the numeric value passed to the method as the `arg` parameter.</span></span> <span data-ttu-id="2873d-136">문자열 표현으로 변환하는 데 필요한 조작을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-136">Perform whatever manipulations are required to convert it to its string representation.</span></span>  
   
-    4.  `arg` 매개 변수의 문자열 표현을 반환합니다.  
+    4.  <span data-ttu-id="2873d-137">문자열 표현을 반환는 `arg` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-137">Return the string representation of the `arg` parameter.</span></span>  
   
-### 사용자 지정 숫자 서식 지정 개체를 사용하려면  
+### <a name="to-use-a-custom-numeric-formatting-object"></a><span data-ttu-id="2873d-138">사용자 지정 숫자 형식 지정 개체를 사용하려면</span><span class="sxs-lookup"><span data-stu-id="2873d-138">To use a custom numeric formatting object</span></span>  
   
-1.  사용자 지정 서식 지정 클래스의 새 인스턴스를 만듭니다.  
+1.  <span data-ttu-id="2873d-139">사용자 지정 형식 지정 클래스의 새 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-139">Create a new instance of the custom formatting class.</span></span>  
   
-2.  [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 서식 지정 메서드를 호출하여 사용자 지정 서식 지정 개체, 서식 지정자\(지정자를 사용하지 않는 경우 <xref:System.String.Empty?displayProperty=fullName>\) 및 형식을 지정할 숫자 값을 전달합니다.  
+2.  <span data-ttu-id="2873d-140">호출의 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 서식 지정 메서드에 사용자 지정 형식 지정 개체에 서식 지정자를 전달 합니다 (또는 <xref:System.String.Empty?displayProperty=nameWithType>사용 되지 않는 경우,), 서식을 지정할 숫자 값입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-140">Call the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> formatting method, passing it the custom formatting object, the formatting specifier (or <xref:System.String.Empty?displayProperty=nameWithType>, if one is not used), and the numeric value to be formatted.</span></span>  
   
-## 예제  
- 다음 예제에서는 미국 전화 번호를 NANP 또는 E.123 형식으로 나타내는 숫자로 변환하는 `TelephoneFormatter` 라는 사용자 지정 숫자 형식 공급자를 정의합니다.  이 메서드는 두 서식 지정자, 즉 NANP 형식을 출력하는 "N"과 국제 E.123 형식을 출력하는 "I"를 처리합니다.  
+## <a name="example"></a><span data-ttu-id="2873d-141">예제</span><span class="sxs-lookup"><span data-stu-id="2873d-141">Example</span></span>  
+ <span data-ttu-id="2873d-142">다음 예제에서는 미국 전화 번호를 나타내는 숫자를 NANP 또는 E.123 형식으로 변환하는 `TelephoneFormatter`라는 사용자 지정 숫자 형식 공급자를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-142">The following example defines a custom numeric format provider named `TelephoneFormatter` that converts a number that represents a U.S. telephone number to its NANP or E.123 format.</span></span> <span data-ttu-id="2873d-143">메서드는 두 가지 형식 지정자 "N"(NANP 형식 출력)과 "I"(국제 E.123 형식 출력)를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-143">The method handles two format specifiers, "N" (which outputs the NANP format) and "I" (which outputs the international E.123 format).</span></span>  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]
  [!code-vb[Formatting.HowTo.NumericValue#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#1)]  
   
- 사용자 지정 숫자 형식 공급자는 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 메서드에서만 사용할 수 있습니다.  형식이 <xref:System.IFormatProvider>인 매개 변수가 있는 `ToString` 등의 다른 숫자 서식 지정 메서드 오버로드는 모두 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=fullName> 구현에 <xref:System.Globalization.NumberFormatInfo> 형식을 나타내는 <xref:System.Type> 개체를 전달합니다.  이러한 오버로드를 사용하는 경우 메서드는 <xref:System.Globalization.NumberFormatInfo> 개체를 반환해야 합니다.  그렇지 않으면 사용자 지정 숫자 형식 공급자는 무시되고 현재 문화권의 <xref:System.Globalization.NumberFormatInfo> 개체가 대신 사용됩니다.  예제에서 `TelephoneFormatter.GetFormat` 메서드는 메서드 매개 변수를 확인하고 매개 변수가 <xref:System.ICustomFormatter> 이외의 형식을 나타내는 경우 `null`을 반환하여 매개 변수가 숫자 서식 지정 메서드로 잘못 전달되지 않도록 처리합니다.  
+ <span data-ttu-id="2873d-144">사용자 지정 숫자 형식 공급자에만 사용할 수 있습니다는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드.</span><span class="sxs-lookup"><span data-stu-id="2873d-144">The custom numeric format provider can be used only with the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="2873d-145">다른 숫자 서식 지정 메서드 오버 로드 (같은 `ToString`) 형식의 매개 변수가 있는 <xref:System.IFormatProvider> 모두 통과 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 구현은 <xref:System.Type> 를 나타내는 개체입니다는 <xref:System.Globalization.NumberFormatInfo> 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-145">The other overloads of numeric formatting methods (such as `ToString`) that have a parameter of type <xref:System.IFormatProvider> all pass the <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementation a <xref:System.Type> object that represents the <xref:System.Globalization.NumberFormatInfo> type.</span></span> <span data-ttu-id="2873d-146">반환 하는 메서드, 예상 되는 <xref:System.Globalization.NumberFormatInfo> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-146">In return, they expect the method to return a <xref:System.Globalization.NumberFormatInfo> object.</span></span> <span data-ttu-id="2873d-147">표시 되지 않는 경우는 사용자 지정 숫자 형식 공급자는 무시 되 고 <xref:System.Globalization.NumberFormatInfo> 개체가 현재 문화권은 그 위치에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-147">If it does not, the custom numeric format provider is ignored, and the <xref:System.Globalization.NumberFormatInfo> object for the current culture is used in its place.</span></span> <span data-ttu-id="2873d-148">예제에서는 `TelephoneFormatter.GetFormat` 메서드가를 반환 하는 메서드 매개 변수를 검사 하 여 서식 지정 메서드에 부적절 하 게 전달 될 수 있는 가능성을 처리 `null` 이외의 다른 형식을 나타내는 경우 <xref:System.ICustomFormatter>합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-148">In the example, the `TelephoneFormatter.GetFormat` method handles the possibility that it may be inappropriately passed to a numeric formatting method by examining the method parameter and returning `null` if it represents a type other than <xref:System.ICustomFormatter>.</span></span>  
   
- 사용자 지정 숫자 형식 공급자가 서식 지정자 집합을 지원하는 경우, [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 메서드 호출에 사용된 형식 항목에 서식 지정자가 제공되지 않으면 기본 동작을 제공해야 합니다.  이 예제에서는 "N"이 기본 서식 지정자입니다.  이렇게 하면 명시적인 서식 지정자를 제공하여 숫자를 서식이 지정된 전화 번호로 변환할 수 있습니다.  다음 예제에서는 이와 같은 메서드 호출을 보여 줍니다.  
+ <span data-ttu-id="2873d-149">사용자 지정 숫자 형식 공급자의 형식 지정자 집합을 지 원하는 경우에 사용 되는 서식 항목의 형식 지정 자가 없는 제공 하는 경우 기본 동작을 제공 하는지 확인는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-149">If a custom numeric format provider supports a set of format specifiers, make sure you provide a default behavior if no format specifier is supplied in the format item used in the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method call.</span></span> <span data-ttu-id="2873d-150">예제에서는 "N"이 기본 형식 지정자입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-150">In the example, "N" is the default format specifier.</span></span> <span data-ttu-id="2873d-151">이렇게 하면 명시적 형식 지정자를 제공하여 숫자를 형식이 지정된 전화 번호로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-151">This allows for a number to be converted to a formatted telephone number by providing an explicit format specifier.</span></span> <span data-ttu-id="2873d-152">다음 예제에서는 이러한 메서드 호출을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-152">The following example illustrates such a method call.</span></span>  
   
  [!code-csharp[Formatting.HowTo.NumericValue#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#2)]
  [!code-vb[Formatting.HowTo.NumericValue#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#2)]  
   
- 그러나 서식 지정자가 없는 경우에도 변환을 수행할 수 있습니다.  다음 예제에서는 이와 같은 메서드 호출을 보여 줍니다.  
+ <span data-ttu-id="2873d-153">그러나 형식 지정자가 없는 경우에도 변환을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-153">But it also allows the conversion to occur if no format specifier is present.</span></span> <span data-ttu-id="2873d-154">다음 예제에서는 이러한 메서드 호출을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-154">The following example illustrates such a method call.</span></span>  
   
  [!code-csharp[Formatting.HowTo.NumericValue#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#3)]
  [!code-vb[Formatting.HowTo.NumericValue#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#3)]  
   
- 기본 서식 지정자가 정의되어 있지 않으면 .NET Framework에서 코드가 지원하지 않는 서식 지정을 제공하도록 <xref:System.ICustomFormatter.Format%2A?displayProperty=fullName> 메서드 구현에 다음과 같은 코드를 포함해야 합니다.  
+ <span data-ttu-id="2873d-155">기본 형식 지정 자가 없는 정의 된 경우 구현에서 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 메서드는 해당.NET을 제공할 수 있도록 서식 코드를 지원 하지 않습니다는 다음과 같은 코드를 포함 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-155">If no default format specifier is defined, your implementation of the <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> method should include code such as the following so that .NET can provide formatting that your code does not support.</span></span>  
   
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- 이 예제의 경우 <xref:System.ICustomFormatter.Format%2A?displayProperty=fullName>을 구현하는 메서드는 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 메서드의 콜백 메서드 역할을 합니다.  그러므로 이 메서드는 현재 `TelephoneFormatter` 개체에 대한 참조가 포함되어 있는지 `formatProvider` 매개 변수를 확인합니다.  그러나 이 메서드를 코드에서 직접 호출할 수도 있습니다.  이 경우에는 `formatProvider` 매개 변수를 사용하여 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체를 제공할 수 있습니다.  
+ <span data-ttu-id="2873d-156">이 예제의 경우 메서드를 구현 하는 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 에 대 한 콜백 메서드로 제공 하기 위한는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드.</span><span class="sxs-lookup"><span data-stu-id="2873d-156">In the case of this example, the method that implements <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> is intended to serve as a callback method for the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="2873d-157">그러므로 메서드는 `formatProvider` 현재에 대 한 참조가 포함 되어 있는지 여부를 확인 하려면 매개 변수 `TelephoneFormatter` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-157">Therefore, it examines the `formatProvider` parameter to determine whether it contains a reference to the current `TelephoneFormatter` object.</span></span> <span data-ttu-id="2873d-158">그러나 코드에서 메서드를 직접 호출할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-158">However, the method can also be called directly from code.</span></span> <span data-ttu-id="2873d-159">이 경우 사용할 수 있습니다는 `formatProvider` 매개 변수를 한 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> culture 별 서식 지정 정보를 제공 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-159">In that case, you can use the `formatProvider` parameter to provide a <xref:System.Globalization.CultureInfo> or <xref:System.Globalization.NumberFormatInfo> object that supplies culture-specific formatting information.</span></span>  
   
-## 코드 컴파일  
- csc.exe 또는 vb.exe를 사용하여 명령줄에서 코드를 컴파일합니다.  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 코드를 컴파일하려면 콘솔 응용 프로젝트 템플릿에 코드를 삽입합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="2873d-160">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="2873d-160">Compiling the Code</span></span>  
+ <span data-ttu-id="2873d-161">Csc.exe 또는 vb.exe를 사용 하 여 명령줄에서 코드를 컴파일하십시오.</span><span class="sxs-lookup"><span data-stu-id="2873d-161">Compile the code at the command line using csc.exe or vb.exe.</span></span> <span data-ttu-id="2873d-162">코드를 컴파일하려면 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], 콘솔 응용 프로그램 프로젝트 템플릿을에 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="2873d-162">To compile the code in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], put it in a console application project template.</span></span>  
   
-## 참고 항목  
- [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a><span data-ttu-id="2873d-163">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2873d-163">See Also</span></span>  
+ [<span data-ttu-id="2873d-164">서식 지정 작업 수행</span><span class="sxs-lookup"><span data-stu-id="2873d-164">Performing Formatting Operations</span></span>](../../../docs/standard/base-types/performing-formatting-operations.md)
