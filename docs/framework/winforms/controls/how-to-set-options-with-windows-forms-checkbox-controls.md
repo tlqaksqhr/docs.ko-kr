@@ -1,37 +1,41 @@
 ---
-title: "방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "checked"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "확인란, 옵션 설정에 사용"
-  - "CheckBox 컨트롤[Windows Forms], 선택 상태"
-  - "CheckBox 컨트롤[Windows Forms], 옵션 설정에 사용"
+title: "방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: checked
+helpviewer_keywords:
+- CheckBox control [Windows Forms], checked state
+- check boxes [Windows Forms], using to set options
+- CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b7d3ddb090488f6503c0765f6054308c28d4ab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정
-Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 사용자에게 True\/False 또는 Yes\/No 옵션을 제공하기 위해 사용합니다.  옵션을 선택하면 확인란에 확인 표시가 나타납니다.  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정
+Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤이 True/False 사용자에 게 부여 하는 데 사용 되 나 예/아니요 옵션입니다. 컨트롤 선택 된 경우 확인 표시가 나타납니다.  
   
-### CheckBox 컨트롤을 사용하여 옵션을 설정하려면  
+### <a name="to-set-options-with-checkbox-controls"></a>확인란 컨트롤을 사용할 옵션을 설정 하려면  
   
-1.  <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성 값을 검사하여 해당 속성의 상태를 확인한 다음 이 속성 값을 사용하여 옵션을 설정합니다.  
+1.  값을 검사는 <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성의 상태를 확인 하는 옵션을 설정 하려면 해당 값을 사용 합니다.  
   
-     다음 코드 샘플에서는 <xref:System.Windows.Forms.CheckBox> 컨트롤의 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 이벤트가 발생할 때 확인란이 선택된 경우 폼의 <xref:System.Windows.Forms.Control.AllowDrop%2A> 속성이 `false`로 설정됩니다.  이 방법은 사용자의 상호 작용을 제한하려는 경우에 유용합니다.  
+     경우 아래의 코드 예제에는 <xref:System.Windows.Forms.CheckBox> 컨트롤의 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 이벤트는 폼의 <xref:System.Windows.Forms.Control.AllowDrop%2A> 속성이로 설정 되어 `false` 는 확인란을 선택 하는 경우. 이 사용자 상호 작용을 제한 하려는 경우에 유용 합니다.  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -42,7 +46,6 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 사용자에게 
           Me.AllowDrop = False  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -55,7 +58,6 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 사용자에게 
           this.AllowDrop = false;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -72,8 +74,8 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 사용자에게 
        }  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.CheckBox>   
- [CheckBox 컨트롤 개요](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [방법: Windows Forms CheckBox 클릭에 응답](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.CheckBox>  
+ [CheckBox 컨트롤 개요](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [방법: Windows Forms CheckBox 클릭에 응답](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
  [CheckBox 컨트롤](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

@@ -1,52 +1,44 @@
 ---
-title: "스레드 동기화 (Visual Basic) | Microsoft 문서"
+title: "스레드 동기화 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ec8fa89c8921eadee428a90971d9ae4ce305a109
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 643dbb6fdceb4e1cfd074d3a532787562dbfd03b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-synchronization-visual-basic"></a>스레드 동기화 (Visual Basic)
-다음 섹션에서는 기능 및 다중 스레드 응용 프로그램의 리소스에 대 한 액세스를 동기화 하는 데 사용할 수 있는 클래스를 설명 합니다.  
+다음 섹션에서는 다중 스레드 응용 프로그램에서 리소스에 대한 액세스를 동기화 하는 데 사용할 수 있는 기능 및 클래스를 설명합니다.  
   
- 여러 스레드를 사용 하 여 응용 프로그램에서 이점 중 하나는 각 스레드에 비동기적으로 실행 합니다. Windows 응용 프로그램, 이렇게 하면 시간이 많이 걸리는 작업을 응용 프로그램 창의 하는 동안 백그라운드에서 수행 해야 하 고 컨트롤 응답성을 유지 합니다. 서버에 대 한 다중 스레딩 응용 프로그램을 서로 다른 스레드로 들어오는 각 요청을 처리 하는 기능을 제공 합니다. 그렇지 않으면 새로운 각 요청은 하지 처리를 시작할 수는 이전 요청이 완전히 처리 될 때까지 합니다.  
+ 응용 프로그램에서 여러 스레드를 사용하는 이점 중 하나는 각 스레드가 비동기적으로 실행된다는 것입니다. Windows 응용 프로그램의 경우 이렇게 하면 시간이 많이 걸리는 작업을 백그라운드에서 수행하는 동시에 응용 프로그램 창과 컨트롤의 응답성을 유지할 수 있습니다. 서버 응용 프로그램의 경우 다중 스레딩을 사용하면 들어오는 각 요청을 다른 스레드에서 처리할 수 있습니다. 다중 스레딩을 사용하지 않으면 이전 요청이 완전히 충족될 때까지 새로운 각 요청이 처리되지 않습니다.  
   
- 그러나 파일 핸들, 네트워크 연결 및 메모리와 같은 리소스에 액세스 하는 스레드 의미의 비동기 특성 조정 되어야 합니다. 그렇지 않으면 두 개 이상의 스레드가 다른 스레드의 작업의 각 인식 하지 못하는 같은 시간에 같은 리소스에 액세스할 수 있습니다. 결과는 예측할 수 없는 데이터가 손상 되었습니다.  
+ 그러나 스레드의 비동기 특성 때문에 파일 핸들, 네트워크 연결, 메모리 등의 리소스에 대한 액세스를 조정해야 합니다. 조정하지 않으면 둘 이상의 스레드가 다른 스레드의 작업을 모르는 상태로 같은 리소스에 동시에 액세스할 수 있습니다. 그 결과, 예측할 수 없는 데이터 손상이 발생합니다.  
   
- 정수 계열 숫자 데이터 형식에 간단한 작업에 대 한 스레드를 동기화 할 수 <xref:System.Threading.Interlocked>클래스</xref:System.Threading.Interlocked> 의 멤버와 다른 모든 데이터에 대 한 형식 및 다중 스레딩을 스레드로부터 안전 하지 않은 리소스 에서만 안전 하 게 수행할 수 있는 생성을 사용 하 여이 항목의 합니다.  
+ 정수 계열 숫자 데이터 형식에 대한 간단한 작업을 위해 <xref:System.Threading.Interlocked> 클래스의 멤버를 사용하여 스레드를 동기화할 수 있습니다. 다른 모든 데이터 형식 및 스레드로부터 안전하지 않은 리소스의 경우 이 항목의 생성자를 사용해야만 다중 스레딩을 안전하게 수행할 수 있습니다.  
   
- 다중 스레드 프로그래밍에 대 한 배경 정보를 참조 하십시오.  
+ 다중 스레드 프로그래밍에 대한 배경 정보는 다음을 참조하세요.  
   
--   [관리 되는 스레딩 기본 사항](http://msdn.microsoft.com/library/b2944911-0e8f-427d-a8bb-077550618935)  
+-   [관리되는 스레딩 기본 사항](../../../../standard/threading/managed-threading-basics.md)  
   
--   [스레드 및 스레딩 사용](http://msdn.microsoft.com/library/9b5ec2cd-121b-4d49-b075-222cf26f2344)  
+-   [스레드 및 스레딩 사용](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [관리 되는 스레딩 모범 사례](http://msdn.microsoft.com/library/e51988e7-7f4b-4646-a06d-1416cee8d557)  
+-   [관리되는 스레딩을 구현하는 최선의 방법](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>Lock 및 SyncLock 키워드  
- Visual Basic `SyncLock` 다른 스레드에 의해 중단 없이 완료 될 때까지 코드 블록을 실행 하려면 사용할 수 문입니다. 이 코드 블록의 기간에 대 한 지정된 된 개체에 대 한 상호 배타적 잠금을 확보 하 여 수행 됩니다.  
+## <a name="the-lock-and-synclock-keywords"></a>잠금 및 SyncLock 키워드  
+ Visual Basic `SyncLock` 다른 스레드에서 코드 블록을 중단 없이 완료 될 때까지 실행 되도록 사용할 수 문입니다. 이렇게 하려면 코드 블록 기간 동안 지정된 개체에 대한 상호 배타적 잠금을 얻습니다.  
   
- A `SyncLock` 문 개체를 인수로 지정 하며 한 번에 하나의 스레드에 의해 실행 되는 코드 블록 나옵니다. 예:  
+ `SyncLock` 문에 개체가 인수로 지정되고, 한 번에 하나의 스레드에 의해 실행되는 코드 블록이 뒤에 나옵니다. 예:  
   
 ```vb  
 Public Class TestThreading  
@@ -60,18 +52,18 @@ Public Class TestThreading
 End Class  
 ```  
   
- 에 제공 되는 인수는 `SyncLock` 키워드는 참조 형식에 따라 개체 여야 하 고 잠금 범위를 정의 하는 데 사용 됩니다. 위의 예에서 잠금 범위는이 함수로 제한 때문에 개체에 대 한 참조가 없는 `lockThis` 함수 외부에 존재 합니다. 참조 되는 이러한가 존재 하는 경우 해당 개체에 잠금 범위 확장 합니다. 엄격히 말해서, 제공 된 개체는 임의의 클래스 인스턴스가 사용할 수 있도록 여러 스레드 간에 공유 되는 리소스를 고유 하 게 식별 하는 데에 사용 됩니다. 그러나 실제로,이 개체 일반적으로 나타냅니다 스레드 동기화가 필요한 리소스를. 예를 들어 컨테이너 개체를 여러 스레드에서 사용 될 경우 컨테이너를 잠그는로 전달 될 수 및 잠금 뒤에 나오는 동기화 된 코드 블록 컨테이너에 액세스 합니다. 개체에 대 한 액세스가 동기화 안전 하 게 한 다음,에 액세스 하기 전에 다른 스레드가 동일한 잠금으로 포함 합니다.  
+ `SyncLock` 키워드에 제공되는 인수는 참조 형식을 기반으로 하는 개체여야 하며, 잠금 범위를 정의하는 데 사용됩니다. 위의 예제에서는 `lockThis` 개체에 대한 참조가 함수 외부에 없기 때문에 잠금 범위가 이 함수로 제한됩니다. 이러한 참조가 있으면 잠금 범위가 해당 개체까지 확장됩니다. 엄격히 말해, 제공된 개체는 여러 스레드 간에 공유되는 리소스를 고유하게 식별하는 용도로만 사용되므로 임의의 클래스 인스턴스일 수 있습니다. 그러나 실제로 이 개체는 일반적으로 스레드 동기화가 필요한 리소스를 나타냅니다. 예를 들어 컨테이너 개체가 여러 스레드에서 사용되는 경우 컨테이너를 잠금으로 전달할 수 있으며, 잠금 뒤에 나오는 동기화된 코드 블록에서 컨테이너에 액세스합니다. 액세스하기 전에 다른 스레드가 동일한 컨테이너를 잠그기만 하면 개체 액세스가 안전하게 동기화됩니다.  
   
- 잠금을 사용 하지 않는 좋습니다 일반적으로 `public` 유형 또는 응용 프로그램의 제어를 벗어난 개체 인스턴스. 예를 들어 `lockThis` 도 개체에 감당 하기는 코드를 잠글 수 때문에 인스턴스를 공개적으로 액세스할 수 있는 경우에 문제가 될 수 있습니다. 이 교착 상태 상황 동일한 개체의 릴리스에 대 한 두 개 이상의 스레드가 대기 하는 위치를 만들 수 있습니다. 개체 아니라 공용 데이터 형식에 대해 잠금을 이와 같은 이유로 문제가 발생할 수 있습니다. 리터럴 문자열은 때문에 특히 위험는 리터럴 문자열에 잠금 *내부 풀에 추가* 에서 공용 언어 런타임 (CLR). 즉, 전체 프로그램에 대 한 리터럴 지정된 된 문자열의 인스턴스 하나는 정확 하 게 동일한 개체가 나타내는 모든 응용 프로그램 도메인, 모든 스레드에 대해 실행 합니다. 결과적으로, 잠금 내용이 동일한 문자열에 곳에 나 배치 응용 프로그램 프로세스 잠금 응용 프로그램에서 해당 문자열의 모든 인스턴스입니다. 결과적으로 되지 내부 풀에 추가 하는 private 또는 protected 멤버를 잠그는 것이 좋습니다. 일부 클래스는 잠금을 위한 특별 한 멤버를 제공합니다. <xref:System.Array>형식, 예를 들어 <xref:System.Array.SyncRoot%2A>.</xref:System.Array.SyncRoot%2A> 를 제공합니다 합니다.</xref:System.Array> 많은 컬렉션 형식은 제공는 `SyncRoot` 멤버도 있습니다.  
+ 일반적으로 응용 프로그램의 제어를 벗어난 `public` 형식 또는 개체 인스턴스에 대한 잠금은 피하는 것이 좋습니다. 예를 들어 `lockThis`는 인스턴스를 공개적으로 액세스할 수 있는 경우 사용자의 제어를 벗어난 코드에서 개체를 잠글 수도 있기 때문에 문제가 될 수 있습니다. 이 경우 둘 이상의 스레드가 동일한 개체의 해제를 기다리는 교착 상태 상황이 생성될 수 있습니다. 개체가 아니라 공용 데이터 형식을 잠그는 경우 동일한 이유로 문제가 발생할 수 있습니다. 리터럴 문자열 잠금은 리터럴 문자열이 CLR(공용 언어 런타임)에 의해 *인턴 지정*되므로 특히 위험합니다. 즉, 지정된 문자열 리터럴 인스턴스가 전체 프로그램에 하나만 있고, 실행 중인 모든 응용 프로그램 도메인의 모든 스레드에서 똑같은 개체가 해당 리터럴을 나타냅니다. 그 결과, 응용 프로그램 프로세스의 어디든지 동일한 콘텐츠가 있는 문자열에 잠금을 설정하면 응용 프로그램에서 해당 문자열의 모든 인스턴스가 잠깁니다. 따라서 인턴 지정되지 않은 private 또는 protected 멤버를 잠그는 것이 좋습니다. 일부 클래스는 잠금을 위한 특수 멤버를 제공합니다. 예를 들어 <xref:System.Array> 형식은 <xref:System.Array.SyncRoot%2A>를 제공합니다. 많은 컬렉션 형식은 `SyncRoot` 멤버도 제공합니다.  
   
- 에 대 한 자세한 내용은 `SyncLock` 문을 다음 항목을 참조 합니다.  
+ `SyncLock` 문에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [SyncLock 문](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
   
--   @System.Threading.Monitor  
+-   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>모니터  
- 마찬가지로 `SyncLock` 키워드를 모니터 여러 스레드에서 동시에 실행에서 코드 블록을 방지 합니다. <xref:System.Threading.Monitor.Enter%2A>메서드를 사용 하면 하나의 스레드를 다음 문으로 계속 진행 하 고 다른 모든 스레드가 실행 되는 스레드 <xref:System.Threading.Monitor.Exit%2A>.</xref:System.Threading.Monitor.Exit%2A> 를 호출할 때까지 차단 됩니다</xref:System.Threading.Monitor.Enter%2A> 이 사용할 때 처럼는 `SyncLock` 키워드입니다. 예:  
+ `SyncLock` 키워드와 마찬가지로, 모니터는 코드 블록이 여러 스레드에서 동시에 실행되지 않도록 합니다. <xref:System.Threading.Monitor.Enter%2A> 메서드를 사용하면 하나의 스레드만 다음 문으로 계속 진행할 수 있습니다. 다른 모든 스레드는 실행 중인 스레드가 <xref:System.Threading.Monitor.Exit%2A>를 호출할 때까지 차단됩니다. 이는 `SyncLock` 키워드를 사용하는 것과 같습니다. 예:  
   
 ```vb  
 SyncLock x  
@@ -79,7 +71,7 @@ SyncLock x
 End SyncLock  
 ```  
   
- 이 다음과 같습니다.  
+ 다음 코드와 동일합니다.  
   
 ```vb  
 Dim obj As Object = CType(x, Object)  
@@ -91,16 +83,16 @@ Finally
 End Try  
 ```  
   
- 사용 하 여는 `SyncLock` 사용 하 여 키워드는 일반적으로 선호는 <xref:System.Threading.Monitor>클래스를 직접 때문에 `SyncLock` 는 더 간결 하 고 `SyncLock` 보호 되는 코드는 예외를 throw 하는 경우에 기본 모니터 해제 되도록 사용 하면.</xref:System.Threading.Monitor> 이 사용 하 여 수행 되는 `Finally` 예외가 throw 되는 여부에 관계 없이 해당 관련된 코드 블록을 실행 하는 키워드입니다.  
+ `SyncLock`이 더 간결할 뿐 아니라 `SyncLock`은 보호된 코드에서 예외를 throw하는 경우에도 기본 모니터가 해제되도록 하기 때문에 일반적으로 <xref:System.Threading.Monitor> 클래스를 직접 사용하는 것보다 `SyncLock` 키워드를 사용하는 것이 좋습니다. 이렇게 하려면 예외가 throw되는지 여부에 관계없이 관련된 코드 블록을 실행하는 `Finally` 키워드를 사용합니다.  
   
 ## <a name="synchronization-events-and-wait-handles"></a>동기화 이벤트 및 대기 핸들  
- 잠금 또는 모니터를 사용 하 여 스레드 관련 코드 블록을 동시에 실행할 방지 하는 데 유용 하지만 이러한 구조를 다른 이벤트를 전달 하는 스레드 하나를 허용 하지 않습니다. 이 위해서는 *동기화 이벤트*, 두 상태 중 하나를 가진 개체는 신호를 받은 및 취소 신호를 사용할 수 있는 활성화 하 고 스레드를 일시 중단 합니다. 스레드는 동기화 되지 않은 이벤트에 신호를 대기 하 여 일시 중단할 수 및 이벤트 상태를 신호를 변경 하 여 활성화 될 수 있습니다. 스레드를 이미 신호를 받는 이벤트를 대기 하려고 하는 경우 지연 없이 실행 하는 스레드가 계속 합니다.  
+ 잠금 또는 모니터는 스레드가 중요한 코드 블록의 동시 실행을 방지하는 데 유용하지만 이러한 구문은 한 스레드가 다른 스레드에 이벤트를 전달할 수 있도록 허용하지 않습니다. 이렇게 하려면 스레드를 활성화하고 일시 중단하는 데 사용할 수 있는 두 상태(신호 알림 및 신호 알림 해제) 중 하나인 *동기화 이벤트* 개체가 필요합니다. 신호 알림이 해제된 동기화 이벤트에서 대기하도록 하여 스레드를 일시 중단하고, 이벤트 상태를 신호 알림으로 변경하여 스레드를 활성화할 수 있습니다. 스레드가 이미 신호 알림을 보낸 이벤트에서 대기하려고 하면 지연 없이 계속 실행됩니다.  
   
- 동기화 이벤트의 두 가지가: <xref:System.Threading.AutoResetEvent>, 및 <xref:System.Threading.ManualResetEvent>.</xref:System.Threading.ManualResetEvent> </xref:System.Threading.AutoResetEvent> 만 다를 <xref:System.Threading.AutoResetEvent>의 변경 내용을 신호를 보내지 않은 자동으로 때마다 스레드를 활성화 합니다.</xref:System.Threading.AutoResetEvent> 반대로,는 <xref:System.Threading.ManualResetEvent>스레드는 신호를 받은 상태에 의해 활성화 될 수 있으며이 신호를 보내지 않은에 되돌아갑니다 하면 상태로 해당 <xref:System.Threading.EventWaitHandle.Reset%2A>메서드를 호출 합니다.</xref:System.Threading.EventWaitHandle.Reset%2A> </xref:System.Threading.ManualResetEvent>  
+ 동기화 이벤트에는 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>의 두 가지 종류가 있습니다. 두 가지 동기화 이벤트는 <xref:System.Threading.AutoResetEvent>가 스레드를 활성화할 때마다 자동으로 신호 알림에서 신호 알림 해제로 변경된다는 점만 다릅니다. 반대로, <xref:System.Threading.ManualResetEvent>는 개수와 관계없이 스레드가 신호 알림 상태에 의해 활성화될 수 있도록 하며, 해당 <xref:System.Threading.EventWaitHandle.Reset%2A> 메서드가 호출될 때만 신호 알림 해제 상태로 돌아갑니다.  
   
- 스레드 수와 같은 대기 메서드 중 하나를 호출 하 여 이벤트를 대기할 <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, 또는 <xref:System.Threading.WaitHandle.WaitAll%2A>.</xref:System.Threading.WaitHandle.WaitAll%2A> </xref:System.Threading.WaitHandle.WaitAny%2A> </xref:System.Threading.WaitHandle.WaitOne%2A> <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName>단일 이벤트, 신호가 전달 될 때까지 대기 하는 스레드가 <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName>하나 이상의 지정 된 이벤트가, 신호가 전달 될 때까지 스레드를 차단 하 고 <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName>모든 표시 된 이벤트 신호가 전달 될 때까지 스레드를 차단 합니다.</xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> </xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName></xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> 이벤트에 신호가 전달 하면 해당 <xref:System.Threading.EventWaitHandle.Set%2A>메서드를 호출 합니다.</xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, <xref:System.Threading.WaitHandle.WaitAll%2A> 등의 대기 메서드 중 하나를 호출하여 스레드가 이벤트에서 대기하도록 만들 수 있습니다. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>을 사용하면 단일 이벤트 신호 알림을 보낼 때까지 스레드가 대기하고, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>을 사용하면 표시된 하나 이상의 이벤트 신호 알림을 보낼 때까지 스레드가 차단되고, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>을 사용하면 표시된 모든 이벤트 신호 알림을 보낼 때까지 스레드가 차단됩니다. 해당 <xref:System.Threading.EventWaitHandle.Set%2A> 메서드가 호출될 때 이벤트 신호를 보냅니다.  
   
- 다음 예제에서는에서 스레드를 만들고 시작 하 여는 `Main` 함수입니다. 사용 하 여 이벤트에서 대기 하는 새 스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A>메서드.</xref:System.Threading.WaitHandle.WaitOne%2A> 기본 스레드를 실행 하 여 이벤트에 신호가 전달 될 때까지 스레드가 일시 중단 되는 `Main` 함수입니다. 이벤트 신호를 받는 되 면 보조 스레드에서 반환 합니다. 이 경우 이벤트 사용 되기 때문에 한 스레드가 활성화 중 하나는 <xref:System.Threading.AutoResetEvent>또는 <xref:System.Threading.ManualResetEvent>클래스를 사용할 수 있습니다.</xref:System.Threading.ManualResetEvent> </xref:System.Threading.AutoResetEvent>  
+ 다음 예제에서는 `Main` 함수에 의해 스레드가 생성되고 시작됩니다. 새 스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 사용하여 이벤트에서 대기합니다. `Main` 함수를 실행하는 기본 스레드에서 이벤트 신호 알림을 보낼 때까지 스레드가 일시 중단됩니다. 이벤트 신호 알림을 보내면 보조 스레드가 반환됩니다. 이 경우 이벤트는 하나의 스레드 활성화에만 사용되므로 <xref:System.Threading.AutoResetEvent> 또는 <xref:System.Threading.ManualResetEvent> 클래스를 사용할 수 있습니다.  
   
 ```vb  
 Imports System.Threading  
@@ -131,42 +123,42 @@ End Module
 ```  
   
 ## <a name="mutex-object"></a>뮤텍스 개체  
- A *뮤텍스* 모니터; 비슷합니다 한 번에 둘 이상의 스레드가 코드 블록을 동시에 실행할 것입니다. 실제로 뮤텍스"이름"은 "함께 사용할 수 없습니다." 라는 용어의 축약 된 형식 그러나 모니터와 달리 뮤텍스는 데 사용할 수 프로세스 간에 스레드를 동기화 합니다. 뮤텍스 나타내는 <xref:System.Threading.Mutex>클래스가 있습니다.</xref:System.Threading.Mutex>  
+ *뮤텍스*는 모니터와 유사하며, 한 번에 둘 이상의 스레드가 코드 블록을 동시에 실행할 수 없도록 합니다. 실제로 "뮤텍스"란 이름은 "상호 배타적"이란 용어의 약식 형태입니다. 그러나 모니터와 달리 뮤텍스는 프로세스 간에 스레드를 동기화하는 데 사용할 수 있습니다. 뮤텍스는 <xref:System.Threading.Mutex> 클래스가 나타냅니다.  
   
- 프로세스 간 동기화에 사용 하는 경우 뮤텍스 라고는 *명명 된 뮤텍스* 다른 응용 프로그램에서 사용할 수 있기 때문에 따라서 전역 또는 정적 변수를 사용 하 여 공유할 수 없습니다. 이 응용 프로그램을 모두 동일한 mutex 개체에 액세스할 수 있는 이름을 제공 되어야 합니다.  
+ 프로세스 간 동기화에 사용되는 경우 뮤텍스가 다른 응용 프로그램에서 사용되어 전역 또는 정적 변수를 통해 공유할 수 없기 때문에 *명명 된 뮤텍스*라고 합니다. 두 응용 프로그램이 모두 동일한 뮤텍스 개체에 액세스할 수 있도록 이름이 지정되어야 합니다.  
   
- 뮤텍스는 프로세스 내의 스레드 동기화에 사용할 수 있지만 사용 하 여 <xref:System.Threading.Monitor>모니터.NET Framework에 맞게 설계 된 때문에 일반적으로 선호 되 고 따라서 리소스를 더 효율적으로 사용 합니다.</xref:System.Threading.Monitor> 반면에 <xref:System.Threading.Mutex>클래스는 Win32 구문에 대 한 래퍼입니다.</xref:System.Threading.Mutex> 뮤텍스는 <xref:System.Threading.Monitor>클래스</xref:System.Threading.Monitor> 에서 필요한 것 보다 비용이 더 계산 하는 interop 전환이 필요 모니터 보다 더 강력 하지만, 뮤텍스를 사용 하는 예제를 참조 하십시오. [뮤텍스](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)합니다.  
+ 프로세스 간 스레드 동기화에 뮤텍스를 사용할 수 있지만, 모니터가 .NET Framework용으로 특별히 설계되어 리소스를 더 효율적으로 사용하기 때문에 일반적으로 <xref:System.Threading.Monitor>를 사용하는 것이 좋습니다. 반면, <xref:System.Threading.Mutex> 클래스는 Win32 구문에 대한 래퍼입니다. 모니터보다 더 강력하지만, 뮤텍스는 <xref:System.Threading.Monitor> 클래스에 필요한 것보다 계산 비용이 더 큰 interop 전환이 필요합니다. 뮤텍스 사용 예제는 [뮤텍스](../../../../standard/threading/mutexes.md)를 참조하세요.  
   
 ## <a name="interlocked-class"></a>Interlocked 클래스  
- 메서드를 사용할 수는 <xref:System.Threading.Interlocked>여러 스레드가 동시에 업데이트 하거나 동일한 값을 비교 하려고 하는 경우 발생할 수 있는 문제를 방지 하는 클래스입니다.</xref:System.Threading.Interlocked> 이 클래스의 메서드를 사용 하면 안전 하 게 증가, 감소, 교환, 및 모든 스레드의 값을 비교 합니다.  
+ <xref:System.Threading.Interlocked> 클래스의 메서드를 사용하여 여러 스레드가 동일한 값을 동시에 업데이트하거나 비교하려고 할 때 발생할 수 있는 문제를 방지할 수 있습니다. 이 클래스의 메서드를 사용하면 모든 스레드의 값을 안전하게 증가, 감소, 교환 및 비교할 수 있습니다.  
   
 ## <a name="readerwriter-locks"></a>ReaderWriter 잠금  
- 경우에 따라 데이터를 기록 하는 경우에 리소스를 잠글 여러 클라이언트가 동시에 데이터를 읽을 때 데이터가 업데이트 되지 않습니다 허용 하는 것이 좋습니다. <xref:System.Threading.ReaderWriterLock>클래스는 리소스를 수정 하는 스레드는 있지만 리소스를 읽을 때-단독 액세스를 허용 하는 동안 리소스에 대 한 단독 액세스를 적용 합니다.</xref:System.Threading.ReaderWriterLock> ReaderWriter 잠금은 단독 잠금 대기도 경우 이러한 스레드 않아도 데이터를 업데이트 하도록 다른 스레드를 대신 사용 하면 유용 합니다.  
+ 경우에 따라 데이터를 쓰고 있을 때만 리소스를 잠그고, 데이터를 업데이트하지 않을 때는 여러 클라이언트가 동시에 데이터를 읽을 수 있도록 허용할 수 있습니다. <xref:System.Threading.ReaderWriterLock> 클래스는 스레드가 리소스를 수정하는 동안에는 리소스에 대한 배타적 액세스를 적용하지만 리소스를 읽을 때는 비배타적 액세스를 허용합니다. ReaderWriter 잠금은 다른 스레드가 데이터를 업데이트할 필요가 없는 경우에도 해당 스레드가 대기하도록 하는 배타적 잠금의 유용한 대안입니다.  
   
 ## <a name="deadlocks"></a>교착 상태  
- 스레드 동기화는 다중 스레드 응용 프로그램에 가장 유용 하지만 항상 발생할 위험이 있습니다는 `deadlock`, 여기서 서로 다른 여러 스레드가 대기 하 여 응용 프로그램이 중단 됩니다. 교착 상태는 자동차에서&4; 방향 중지를 중지 하 고 각자 다른 자동차가 기다리고 상황이 같습니다. 교착 상태 방지 하는 것이 중요 합니다. 키는 신중 하 게 계획 합니다. 다중 스레드 응용 프로그램 코딩을 시작 하기 전에 다이어그램을 작성 하면 교착 상태 상황을 자주 예측할 수 있습니다.  
+ 스레드 동기화는 다중 스레드 응용 프로그램에서 중요하지만 항상 여러 스레드가 서로를 대기하여 응용 프로그램이 중단되는 `deadlock`이 발생할 위험이 있습니다. 교착 상태는 자동차가 교차로 일단 정지 지점에서 멈춰 있고 서로 지나가기를 기다리는 상황과 유사합니다. 교착 상태를 방지하는 것이 중요하며, 관건은 신중한 계획입니다. 대체로 코딩을 시작하기 전에 다중 스레드 응용 프로그램의 다이어그램을 작성하면 교착 상태 상황을 예측할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Thread></xref:System.Threading.Thread>   
- <xref:System.Threading.WaitHandle.WaitOne%2A></xref:System.Threading.WaitHandle.WaitOne%2A>   
- <xref:System.Threading.WaitHandle.WaitAny%2A></xref:System.Threading.WaitHandle.WaitAny%2A>   
- <xref:System.Threading.WaitHandle.WaitAll%2A></xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.Thread.Join%2A></xref:System.Threading.Thread.Join%2A>   
- <xref:System.Threading.Thread.Start%2A></xref:System.Threading.Thread.Start%2A>   
- <xref:System.Threading.Thread.Sleep%2A></xref:System.Threading.Thread.Sleep%2A>   
- <xref:System.Threading.Monitor></xref:System.Threading.Monitor>   
- <xref:System.Threading.Mutex></xref:System.Threading.Mutex>   
- <xref:System.Threading.AutoResetEvent></xref:System.Threading.AutoResetEvent>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.Interlocked></xref:System.Threading.Interlocked>   
- <xref:System.Threading.WaitHandle></xref:System.Threading.WaitHandle>   
- <xref:System.Threading.EventWaitHandle></xref:System.Threading.EventWaitHandle>   
- <xref:System.Threading></xref:System.Threading>   
- <xref:System.Threading.EventWaitHandle.Set%2A></xref:System.Threading.EventWaitHandle.Set%2A>   
- [다중 스레드 응용 프로그램 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
- [SyncLock 문](../../../../visual-basic/language-reference/statements/synclock-statement.md)   
- [뮤텍스](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)   
- @System.Threading.Monitor   
- [연동된 작업](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
- [에 대 한 데이터를 동기화 할 다중 스레딩](http://msdn.microsoft.com/library/b980eb4c-71d5-4860-864a-6dfe3692430a)
+ <xref:System.Threading.Thread>  
+ <xref:System.Threading.WaitHandle.WaitOne%2A>  
+ <xref:System.Threading.WaitHandle.WaitAny%2A>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.Thread.Join%2A>  
+ <xref:System.Threading.Thread.Start%2A>  
+ <xref:System.Threading.Thread.Sleep%2A>  
+ <xref:System.Threading.Monitor>  
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.AutoResetEvent>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Interlocked>  
+ <xref:System.Threading.WaitHandle>  
+ <xref:System.Threading.EventWaitHandle>  
+ <xref:System.Threading>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.Monitor>  
+ [다중 스레드 응용 프로그램(Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [SyncLock 문](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
+ [뮤텍스](../../../../standard/threading/mutexes.md)  
+ [연동 작업](../../../../standard/threading/interlocked-operations.md)  
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+ [다중 스레딩을 위한 데이터 동기화](../../../../standard/threading/synchronizing-data-for-multithreading.md)

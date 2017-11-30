@@ -1,31 +1,30 @@
 ---
-title: "null 허용 구조적 형식(Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "null 허용 구조적 형식(Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ac7405aea459d51154ac25171bc76d637a94bf81
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# null 허용 구조적 형식(Entity SQL)
-구조적 형식의 `null` 인스턴스는 존재하지 않는 인스턴스입니다.  이는 모든 속성에 `null` 값이 있는 기존 인스턴스와 다릅니다.  
+# <a name="nullable-structured-types-entity-sql"></a>null 허용 구조적 형식(Entity SQL)
+구조적 형식의 `null` 인스턴스는 존재하지 않는 인스턴스입니다. 이는 모든 속성에 `null` 값이 있는 기존 인스턴스와 다릅니다.  
   
  이 항목에서는 어떤 형식이 nullable이고 어떤 코드 패턴이 구조적 nullable 형식의 `null` 인스턴스를 생성하는지를 비롯하여 구조적 nullable형식에 대해 설명합니다.  
   
-## 구조적 Nullable 형식의 종류  
+## <a name="kinds-of-nullable-structured-types"></a>구조적 Nullable 형식의 종류  
  구조적 nullable 형식에는 세 가지 종류가 있습니다.  
   
 -   행 형식  
@@ -34,7 +33,7 @@ caps.handback.revision: 2
   
 -   엔터티 형식  
   
-## 구조적 형식의 Null 인스턴스를 생성하는 코드 패턴  
+## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>구조적 형식의 Null 인스턴스를 생성하는 코드 패턴  
  다음 시나리오에서는 `null` 인스턴스를 생성합니다.  
   
 -   `null`을 구조적 형식으로 모양 결정:  
@@ -56,14 +55,14 @@ caps.handback.revision: 2
     ON FalseCondition  
     ```  
   
-     \-\-또는  
+     --또는  
   
     ```  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     \-\-또는  
+     --또는  
   
     ```  
     Collection1 FULL OUTER JOIN Collection2  
@@ -90,7 +89,7 @@ caps.handback.revision: 2
     {  
         if (reader.IsDBNull(i))  
         {  
-            Console.WriteLine(“[NULL]”);  
+            Console.WriteLine("[NULL]");  
         }  
         else  
         {  
@@ -99,5 +98,5 @@ caps.handback.revision: 2
     }  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

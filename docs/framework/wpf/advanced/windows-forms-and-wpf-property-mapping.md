@@ -1,65 +1,68 @@
 ---
-title: "Windows Forms 및 WPF 속성 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "상호 운용성[WPF], Windows Forms"
-  - "속성 매핑[WPF 상호 운용성]"
-  - "Windows Forms[WPF], 상호 운용성"
-  - "Windows Forms, WPF 상호 운용"
-  - "WindowsFormsHost 요소 속성 매핑"
+title: "Windows Forms 및 WPF 속성 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- property mapping [WPF interoperability]
+- Windows Forms [WPF], interoperability with
+- Windows Forms [WPF], WPF interoperation
+- interoperability [WPF], Windows Forms
+- WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a0af1015747e2f27b19c2cac2c896dd60214264
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms 및 WPF 속성 매핑
-[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기술에는 서로 비슷하지만 다른 두 개의 속성 모델이 있습니다.  *속성 매핑*은 두 아키텍처 간의 상호 운용을 지원하며 다음 기능을 제공합니다.  
+# <a name="windows-forms-and-wpf-property-mapping"></a>Windows Forms 및 WPF 속성 매핑
+[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기술은 두 개의 유사 하지만 서로 다른 속성 모델을 갖추고 있습니다. *속성 매핑* 두 아키텍처 간의 상호 운용을 지원 하며 다음과 같은 기능을 제공 합니다.  
   
--   호스트 환경에서의 관련 속성 변경 사항을 호스팅된 컨트롤 또는 요소에 보다 쉽게 매핑할 수 있습니다.  
+-   호스팅된 컨트롤 또는 요소를 호스트 환경에서 관련 속성 변경 매핑할 쉽게 있습니다.  
   
--   가장 자주 사용되는 속성을 매핑하기 위한 기본 처리를 제공합니다.  
+-   속성을 사용 하는 가장 일반적으로 매핑하기 위한 기본 처리를 제공 합니다.  
   
--   기본 속성을 쉽게 제거, 재정의 또는 확장할 수 있도록 합니다.  
+-   쉽게 제거를, 재정의 또는 기본 속성을 확장할 수 있습니다.  
   
--   호스트에서의 속성 값 변경 사항이 자동으로 검색되어 호스팅된 컨트롤 또는 요소로 변환되도록 합니다.  
+-   호스트에서 속성 값이 변경 자동으로 감지 및 호스팅된 컨트롤 또는 요소에 대 한 번역을 확인 합니다.  
   
 > [!NOTE]
->  속성 변경 이벤트는 호스팅 컨트롤 또는 요소 계층 구조에서 위로 전파되지 않습니다.  직접 설정, 스타일, 상속, 데이터 바인딩 또는 속성 값을 변경하는 기타 메커니즘으로 인해 속성의 로컬 값이 변경되지 않으면 속성 변환이 수행되지 않습니다.  
+>  속성 변경 이벤트 호스팅 컨트롤 또는 요소 계층 구조를 전파 되지 않습니다. 속성의 로컬 값을 직접 설정, 스타일, 상속, 데이터 바인딩, 또는 속성의 값을 변경 하는 기타 메커니즘으로 인해 변경 되지 않는 경우에 속성 변환이 수행 되지 않습니다.  
   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소의 <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> 속성과 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤의 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 속성을 사용하여 속성 매핑에 액세스합니다.  
+ 사용 하 여는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> 속성에는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소 및 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 속성을 <xref:System.Windows.Forms.Integration.ElementHost> 속성 매핑에 액세스를 제어 합니다.  
   
-## WindowsFormsHost 요소로 속성 매핑  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 다음 변환 표를 사용하여 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성을 이에 상응하는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]로 변환합니다.  
+## <a name="property-mapping-with-the-windowsformshost-element"></a>WindowsFormsHost 요소와 속성 매핑  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소 기본 변환 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성을 해당 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 다음 변환 표를 사용 하 여 해당 항목입니다.  
   
 |Windows Presentation Foundation 호스팅|Windows Forms|상호 운용 동작|  
-|-----------------------------------------|-------------------|--------------|  
-|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\)|<xref:System.Windows.Forms.Control.BackColor%2A><br /><br /> \(<xref:System.Drawing.Color?displayProperty=fullName>\)|<xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.BackColor%2A> 속성과 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 속성을 설정합니다.  매핑은 다음 규칙을 사용하여 수행됩니다.<br /><br /> -   <xref:System.Windows.Controls.Control.Background%2A>가 단색일 경우에는 변환되어 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.BackColor%2A> 속성을 설정하는 데 사용됩니다.  호스팅된 컨트롤이 <xref:System.Windows.Forms.Control.BackColor%2A> 속성의 값을 상속할 수 있으므로 <xref:System.Windows.Forms.Control.BackColor%2A> 속성은 호스팅된 컨트롤에 설정되지 않습니다. **Note:**  호스팅된 컨트롤은 투명도를 지원하지 않습니다.  <xref:System.Windows.Forms.Control.BackColor%2A>에 할당된 모든 색상은 알파 값 0xFF로 완전히 불투명해야 합니다. <br /><br /> -   <xref:System.Windows.Controls.Control.Background%2A>가 단색이 아닌 경우에는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤이 <xref:System.Windows.Controls.Control.Background%2A> 속성에서 비트맵을 만듭니다.  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤이 이 비트맵을 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 속성에 할당합니다.  이렇게 함으로써 투명도와 비슷한 효과가 제공됩니다. **Note:**  이 동작을 재정의하거나 <xref:System.Windows.Controls.Control.Background%2A> 속성 매핑을 제거할 수 있습니다.|  
-|<xref:System.Windows.FrameworkElement.Cursor%2A>|<xref:System.Windows.Forms.Control.Cursor%2A>|기본 매핑이 다시 할당되지 않으면 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤은 <xref:System.Windows.FrameworkElement.Cursor%2A> 속성이 설정된 상위 항목을 찾을 때까지 상위 계층 구조를 순회합니다.  이 값은 가장 유사한 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 커서로 변환됩니다.<br /><br /> <xref:System.Windows.FrameworkElement.ForceCursor%2A> 속성의 기본 매핑이 다시 할당되지 않으면 <xref:System.Windows.FrameworkElement.ForceCursor%2A>가 `true`로 설정된 첫 번째 상위 항목에서 순회가 중지됩니다.|  
-|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> \(<xref:System.Windows.FlowDirection?displayProperty=fullName>\)|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> \(<xref:System.Windows.Forms.RightToLeft?displayProperty=fullName>\)|<xref:System.Windows.FlowDirection>는 <xref:System.Windows.Forms.RightToLeft>에 매핑됩니다.<br /><br /> <xref:System.Windows.FlowDirection>는 <xref:System.Windows.Forms.RightToLeft>에 매핑됩니다.<br /><br /> <xref:System.Windows.Forms.RightToLeft>는 매핑되지 않습니다.<br /><br /> <xref:System.Windows.FlowDirection?displayProperty=fullName>는 <xref:System.Windows.Forms.RightToLeft?displayProperty=fullName>에 매핑됩니다.|  
-|<xref:System.Windows.Controls.Control.FontStyle%2A>|호스팅된 컨트롤의 <xref:System.Drawing.Font?displayProperty=fullName>에 있는 <xref:System.Drawing.Font.Style%2A>|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성의 집합은 해당 <xref:System.Drawing.Font>로 변환됩니다.  이러한 속성 중 하나가 변경될 때 새 <xref:System.Drawing.Font>가 만들어집니다.  <xref:System.Windows.FontStyles.Normal%2A>의 경우 <xref:System.Drawing.FontStyle>을 사용할 수 없습니다.  <xref:System.Windows.FontStyles.Italic%2A> 또는 <xref:System.Windows.FontStyles.Oblique%2A>의 경우 <xref:System.Drawing.FontStyle>을 사용할 수 있습니다.|  
-|<xref:System.Windows.Controls.Control.FontWeight%2A>|호스팅된 컨트롤의 <xref:System.Drawing.Font?displayProperty=fullName>에 있는 <xref:System.Drawing.Font.Style%2A>|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성의 집합은 해당 <xref:System.Drawing.Font>로 변환됩니다.  이러한 속성 중 하나가 변경될 때 새 <xref:System.Drawing.Font>가 만들어집니다.  <xref:System.Windows.FontWeights.Black%2A>, <xref:System.Windows.FontWeights.Bold%2A>, <xref:System.Windows.FontWeights.DemiBold%2A>, <xref:System.Windows.FontWeights.ExtraBold%2A>, <xref:System.Windows.FontWeights.Heavy%2A>, <xref:System.Windows.FontWeights.Medium%2A>, <xref:System.Windows.FontWeights.SemiBold%2A> 또는 <xref:System.Windows.FontWeights.UltraBold%2A>의 경우 <xref:System.Drawing.FontStyle>를 사용할 수 있습니다.  <xref:System.Windows.FontWeights.ExtraLight%2A>, <xref:System.Windows.FontWeights.Light%2A>, <xref:System.Windows.FontWeights.Normal%2A>, <xref:System.Windows.FontWeights.Regular%2A>, <xref:System.Windows.FontWeights.Thin%2A> 또는 <xref:System.Windows.FontWeights.UltraLight%2A>의 경우 <xref:System.Drawing.FontStyle>를 사용할 수 없습니다.|  
-|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Windows.Forms.Control.Font%2A><br /><br /> \(<xref:System.Drawing.Font?displayProperty=fullName>\)|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성의 집합은 해당 <xref:System.Drawing.Font>로 변환됩니다.  이러한 속성 중 하나가 변경될 때 새 <xref:System.Drawing.Font>가 만들어집니다.  호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 글꼴 크기를 기준으로 크기가 조정됩니다.<br /><br /> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 글꼴 크기는 1\/96인치로 표현되며 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서는 1\/72인치로 표현됩니다.  해당 변환은 다음과 같습니다.<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 글꼴 크기 \= [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 글꼴 크기 \* 72.0 \/ 96.0|  
-|<xref:System.Windows.Controls.Control.Foreground%2A><br /><br /> \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\)|<xref:System.Windows.Forms.Control.ForeColor%2A><br /><br /> \(<xref:System.Drawing.Color?displayProperty=fullName>\)|<xref:System.Windows.Controls.Control.Foreground%2A> 속성 매핑은 다음 규칙을 사용하여 수행됩니다.<br /><br /> -   <xref:System.Windows.Controls.Control.Foreground%2A>가 <xref:System.Windows.Media.SolidColorBrush>인 경우에는 <xref:System.Windows.Forms.Control.ForeColor%2A>에 대해 <xref:System.Windows.Media.SolidColorBrush.Color%2A>를 사용합니다.<br />-   <xref:System.Windows.Controls.Control.Foreground%2A>가 <xref:System.Windows.Media.GradientBrush>인 경우에는 <xref:System.Windows.Media.GradientStop>의 색상을 <xref:System.Windows.Forms.Control.ForeColor%2A>의 가장 낮은 오프셋 값으로 사용합니다.<br />-   다른 <xref:System.Windows.Media.Brush> 형식의 경우에는 <xref:System.Windows.Forms.Control.ForeColor%2A>를 변경하지 않고 그대로 둡니다.  즉, 기본값이 사용됩니다.|  
-|<xref:System.Windows.UIElement.IsEnabled%2A>|<xref:System.Windows.Forms.Control.Enabled%2A>|<xref:System.Windows.UIElement.IsEnabled%2A>가 설정되어 있으면 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소가 호스팅된 컨트롤에 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 설정합니다.|  
-|<xref:System.Windows.Controls.Control.Padding%2A>|<xref:System.Windows.Forms.Control.Padding%2A>|호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 있는 <xref:System.Windows.Forms.Control.Padding%2A> 속성의 네 개의 값 모두는 동일한 <xref:System.Windows.Thickness> 값으로 설정됩니다.<br /><br /> -   <xref:System.Int32.MaxValue>보다 큰 값은 <xref:System.Int32.MaxValue>로 설정됩니다.<br />-   <xref:System.Int32.MinValue>보다 낮은 값은 <xref:System.Int32.MinValue>로 설정됩니다.|  
-|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Control.Visible%2A>|-   <xref:System.Windows.Visibility>은 <xref:System.Windows.Forms.Control.Visible%2A> \= `true`에 매핑됩니다.  호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 표시됩니다.  호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 `false`로 명시적으로 설정하는 것은 권장되지 않습니다.<br />-   <xref:System.Windows.Visibility>는 <xref:System.Windows.Forms.Control.Visible%2A> \= `true` 또는 `false`에 매핑됩니다.  호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 그려지지 않고 해당 영역은 축소됩니다.<br />-   <xref:System.Windows.Visibility>: 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤이 레이아웃에서 공간을 차지하지만 표시되지 않습니다.  이 경우 <xref:System.Windows.Forms.Control.Visible%2A> 속성이 `true`로 설정됩니다.  호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 `false`로 명시적으로 설정하는 것은 권장되지 않습니다.|  
+|---------------------------------------------|-------------------|-----------------------------|  
+|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Control.BackColor%2A><br /><br /> (<xref:System.Drawing.Color?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소 집합에서 <xref:System.Windows.Forms.Control.BackColor%2A> 호스팅된 컨트롤의 속성 및 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 호스팅된 컨트롤의 속성입니다. 매핑은 다음 규칙을 사용 하 여 수행 됩니다.<br /><br /> -If <xref:System.Windows.Controls.Control.Background%2A> 는 단색으로 변환 되 고 설정 하는 데는 <xref:System.Windows.Forms.Control.BackColor%2A> 호스팅된 컨트롤의 속성입니다. <xref:System.Windows.Forms.Control.BackColor%2A> 호스팅된 컨트롤의 값을 상속할 수 있으므로 호스팅된 컨트롤에 속성이 설정 되지 않았는지는 <xref:System.Windows.Forms.Control.BackColor%2A> 속성입니다. **참고:** 호스팅된 컨트롤 투명도 지원 하지 않습니다. 에 할당 된 모든 색 <xref:System.Windows.Forms.Control.BackColor%2A> 완전히 불투명 0xFF 알파 값을 사용 해야 합니다. <br /><br /> -If <xref:System.Windows.Controls.Control.Background%2A> 단색으로 않습니다는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤에서 비트맵을 만듭니다는 <xref:System.Windows.Controls.Control.Background%2A> 속성입니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤 할당이 비트맵에는 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 호스팅된 컨트롤의 속성입니다. 투명도 비슷한 효과 제공 합니다. **참고:** 이 동작을 재정의 하거나 제거할 수 있습니다는 <xref:System.Windows.Controls.Control.Background%2A> 속성 매핑.|  
+|<xref:System.Windows.FrameworkElement.Cursor%2A>|<xref:System.Windows.Forms.Control.Cursor%2A>|기본 매핑을 다시 할당 되지 않은, 경우 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 된 상위 항목을 찾을 때까지 상위 계층 구조를 통과 해당 <xref:System.Windows.FrameworkElement.Cursor%2A> 속성 집합입니다. 이 값은 가장 유사한 변환 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 커서입니다.<br /><br /> 경우에 대 한 기본 매핑을 <xref:System.Windows.FrameworkElement.ForceCursor%2A> 속성 다시 할당 되지 않은 경우, 순회가 있는 첫 번째 상위 항목에서 중지 <xref:System.Windows.FrameworkElement.ForceCursor%2A> 로 설정 `true`합니다.|  
+|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FlowDirection.LeftToRight>은 <xref:System.Windows.Forms.RightToLeft.No>에 매핑됩니다.<br /><br /> <xref:System.Windows.FlowDirection.RightToLeft>은 <xref:System.Windows.Forms.RightToLeft.Yes>에 매핑됩니다.<br /><br /> <xref:System.Windows.Forms.RightToLeft.Inherit>매핑되지 않습니다.<br /><br /> <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType>은 <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType>에 매핑됩니다.|  
+|<xref:System.Windows.Controls.Control.FontStyle%2A>|<xref:System.Drawing.Font.Style%2A>호스팅된 컨트롤에서<xref:System.Drawing.Font?displayProperty=nameWithType>|집합이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성은 해당 변환할 <xref:System.Drawing.Font>합니다. 이러한 속성 중 하나가 변경 되 면 새 <xref:System.Drawing.Font> 만들어집니다. 에 대 한 <xref:System.Windows.FontStyles.Normal%2A>: <xref:System.Drawing.FontStyle.Italic> 을 사용할 수 없습니다. 에 대 한 <xref:System.Windows.FontStyles.Italic%2A> 또는 <xref:System.Windows.FontStyles.Oblique%2A>: <xref:System.Drawing.FontStyle.Italic> 를 사용할 수 있습니다.|  
+|<xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Drawing.Font.Style%2A>호스팅된 컨트롤에서<xref:System.Drawing.Font?displayProperty=nameWithType>|집합이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성은 해당 변환할 <xref:System.Drawing.Font>합니다. 이러한 속성 중 하나가 변경 되 면 새 <xref:System.Drawing.Font> 만들어집니다. 에 대 한 <xref:System.Windows.FontWeights.Black%2A>, <xref:System.Windows.FontWeights.Bold%2A>, <xref:System.Windows.FontWeights.DemiBold%2A>, <xref:System.Windows.FontWeights.ExtraBold%2A>, <xref:System.Windows.FontWeights.Heavy%2A>, <xref:System.Windows.FontWeights.Medium%2A>, <xref:System.Windows.FontWeights.SemiBold%2A>, 또는 <xref:System.Windows.FontWeights.UltraBold%2A>: <xref:System.Drawing.FontStyle.Bold> 를 사용할 수 있습니다. 에 대 한 <xref:System.Windows.FontWeights.ExtraLight%2A>, <xref:System.Windows.FontWeights.Light%2A>, <xref:System.Windows.FontWeights.Normal%2A>, <xref:System.Windows.FontWeights.Regular%2A>, <xref:System.Windows.FontWeights.Thin%2A>, 또는 <xref:System.Windows.FontWeights.UltraLight%2A>: <xref:System.Drawing.FontStyle.Bold> 을 사용할 수 없습니다.|  
+|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Windows.Forms.Control.Font%2A><br /><br /> (<xref:System.Drawing.Font?displayProperty=nameWithType>)|집합이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성은 해당 변환할 <xref:System.Drawing.Font>합니다. 이러한 속성 중 하나가 변경 되 면 새 <xref:System.Drawing.Font> 만들어집니다. 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 글꼴 크기에 따라 크기가 조정 합니다.<br /><br /> 글꼴 크기 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 는 1/96 인치와로 표시 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 인치의 1/72 초까지 합니다. 해당 변환은 다음과 같습니다.<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]글꼴 크기 = [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 글꼴 크기 * 72.0 96.0 / 합니다.|  
+|<xref:System.Windows.Controls.Control.Foreground%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Control.ForeColor%2A><br /><br /> (<xref:System.Drawing.Color?displayProperty=nameWithType>)|<xref:System.Windows.Controls.Control.Foreground%2A> 속성 매핑은 다음 규칙을 사용 하 여 수행 됩니다.<br /><br /> -If <xref:System.Windows.Controls.Control.Foreground%2A> 는 <xref:System.Windows.Media.SolidColorBrush>를 사용 하 여 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 에 대 한 <xref:System.Windows.Forms.Control.ForeColor%2A>합니다.<br />-If <xref:System.Windows.Controls.Control.Foreground%2A> 는 <xref:System.Windows.Media.GradientBrush>의 색을 사용 하 여는 <xref:System.Windows.Media.GradientStop> 에 대 한 오프셋 값이 가장 낮은 <xref:System.Windows.Forms.Control.ForeColor%2A>합니다.<br />-에 대 한 다른 모든 <xref:System.Windows.Media.Brush> 입력으로 둡니다 <xref:System.Windows.Forms.Control.ForeColor%2A> 변경 되지 않습니다. 즉, 기본값이 사용 됩니다.|  
+|<xref:System.Windows.UIElement.IsEnabled%2A>|<xref:System.Windows.Forms.Control.Enabled%2A>|때 <xref:System.Windows.UIElement.IsEnabled%2A> 설정 되어 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소 집합에서 <xref:System.Windows.Forms.Control.Enabled%2A> 호스팅된 컨트롤에는 속성입니다.|  
+|<xref:System.Windows.Controls.Control.Padding%2A>|<xref:System.Windows.Forms.Control.Padding%2A>|모든 4 개의 값은 <xref:System.Windows.Forms.Control.Padding%2A> 속성에 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 동일 하 게 설정 <xref:System.Windows.Thickness> 값입니다.<br /><br /> -보다 큰 값 <xref:System.Int32.MaxValue> 로 설정 <xref:System.Int32.MaxValue>합니다.<br />-값 보다 작은 <xref:System.Int32.MinValue> 로 설정 <xref:System.Int32.MinValue>합니다.|  
+|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Control.Visible%2A>|-   <xref:System.Windows.Visibility.Visible>매핑될 <xref:System.Windows.Forms.Control.Visible%2A>  =  `true`합니다. 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤이 표시 됩니다. 명시적으로 설정 된 <xref:System.Windows.Forms.Control.Visible%2A> 에 호스팅된 컨트롤에서 속성 `false` 권장 되지 않습니다.<br />-   <xref:System.Windows.Visibility.Collapsed>매핑될 <xref:System.Windows.Forms.Control.Visible%2A>  =  `true` 또는 `false`합니다. 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 그리지 않습니다 및 그 영역이 축소 된 것입니다.<br />-   <xref:System.Windows.Visibility.Hidden>: 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서는 레이아웃에서 공간을 차지 하지만 표시 되지 않습니다. 이 경우에 <xref:System.Windows.Forms.Control.Visible%2A> 속성이 `true`합니다. 명시적으로 설정 된 <xref:System.Windows.Forms.Control.Visible%2A> 에 호스팅된 컨트롤에서 속성 `false` 권장 되지 않습니다.|  
   
- 컨테이너 요소에 연결된 속성은 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에서 완전히 지원됩니다.  
+ 컨테이너 요소에 연결 된 속성에서 완전히 지원 되는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소입니다.  
   
- 자세한 내용은 [연습: WindowsFormsHost 요소를 사용하여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)을 참조하십시오.  
+ 자세한 내용은 참조 [연습: WindowsFormsHost 요소를 사용 하 여 매핑 속성](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)합니다.  
   
-## 부모 속성에 대한 업데이트  
- 최상위 부모 속성을 변경하면 호스팅된 자식 컨트롤에 알림을 보냅니다.  다음 목록에서는 값이 변경될 때 알림을 보내지 않는 속성을 설명합니다.  
+## <a name="updates-to-parent-properties"></a>부모 속성에 대 한 업데이트  
+ 대부분의 부모 속성 변경이 호스팅된 자식 컨트롤에는 알림입니다. 다음 목록에는 해당 값이 변경 될 때 알림을 발생 하지 않는 속성을 설명 합니다.  
   
 -   <xref:System.Windows.Controls.Control.Background%2A>  
   
@@ -69,10 +72,10 @@ caps.handback.revision: 21
   
 -   <xref:System.Windows.UIElement.Visibility%2A>  
   
- 예를 들어 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소의 <xref:System.Windows.Controls.Control.Background%2A> 속성 값을 변경하는 경우 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.BackColor%2A> 속성은 변경되지 않습니다.  
+ 예를 들어, 값을 변경 하는 경우는 <xref:System.Windows.Controls.Control.Background%2A> 속성의는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 <xref:System.Windows.Forms.Control.BackColor%2A> 호스팅된 컨트롤의 속성이 변경 되지 않습니다.  
   
-## ElementHost 컨트롤로 속성 매핑  
- 다음 속성은 기본 제공 변경 알림을 제공합니다.  다음과 같은 속성을 매핑할 때는 <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> 메서드를 호출하지 마십시오.  
+## <a name="property-mapping-with-the-elementhost-control"></a>ElementHost 컨트롤에서 속성 매핑  
+ 다음 속성에는 기본 제공 변경 알림을 제공합니다. 호출 하지 마십시오는 <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> 메서드가 이러한 속성을 매핑할 경우:  
   
 -   AutoSize  
   
@@ -90,11 +93,11 @@ caps.handback.revision: 21
   
 -   ContextMenuStrip  
   
--   커서  
+-   Cursor  
   
--   Dock  
+-   도킹  
   
--   Enabled  
+-   사용  
   
 -   글꼴  
   
@@ -102,7 +105,7 @@ caps.handback.revision: 21
   
 -   위치  
   
--   Margin  
+-   여백  
   
 -   안쪽 여백  
   
@@ -118,33 +121,33 @@ caps.handback.revision: 21
   
 -   TabStop  
   
--   Text  
+-   텍스트  
   
--   Visible  
+-   표시  
   
- <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤은 다음 변환 표를 사용하여 기본 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 속성을 이에 상응하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]로 변환합니다.  
+ <xref:System.Windows.Forms.Integration.ElementHost> 제어 기본 변환 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 속성을 해당 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 변환 표를 사용 하 여 해당 항목입니다.  
   
- 자세한 내용은 [연습: ElementHost 컨트롤을 사용하여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)을 참조하십시오.  
+ 자세한 내용은 참조 [연습: ElementHost 컨트롤을 사용 하 여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)합니다.  
   
 |Windows Forms 호스팅|Windows Presentation Foundation|상호 운용 동작|  
-|-----------------------|-------------------------------------|--------------|  
-|<xref:System.Windows.Forms.Control.BackColor%2A><br /><br /> \(<xref:System.Drawing.Color?displayProperty=fullName>\)|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> 호스팅된 요소에 있는 \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\)|이 속성을 설정하면 <xref:System.Windows.Media.ImageBrush>로 강제로 다시 칠합니다.  <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 속성이 `false`\(기본값\)로 설정되어 있으면 이 <xref:System.Windows.Media.ImageBrush>가 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤의 모양을 기준으로 합니다. 이 기준에는 해당 <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Control.BackgroundImageLayout%2A> 속성 및 연결된 모든 Paint 처리기가 포함됩니다.<br /><br /> <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 속성이 `true`로 설정되어 있으면 이 <xref:System.Windows.Media.ImageBrush>가 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 부모의 모양을 기준으로 합니다. 이 기준에는 부모의 <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Control.BackgroundImageLayout%2A> 속성 및 연결된 모든 Paint 처리기가 포함됩니다.|  
-|<xref:System.Windows.Forms.Control.BackgroundImage%2A><br /><br /> \(<xref:System.Drawing.Image?displayProperty=fullName>\)|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> 호스팅된 요소에 있는 \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\)|이 속성을 설정하면 <xref:System.Windows.Forms.Control.BackColor%2A> 매핑에 대해 설명된 것과 동일한 동작이 발생합니다.|  
-|<xref:System.Windows.Forms.Control.BackgroundImageLayout%2A>|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> 호스팅된 요소에 있는 \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\)|이 속성을 설정하면 <xref:System.Windows.Forms.Control.BackColor%2A> 매핑에 대해 설명된 것과 동일한 동작이 발생합니다.|  
-|<xref:System.Windows.Forms.Control.Cursor%2A><br /><br /> \(<xref:System.Windows.Forms.Cursor?displayProperty=fullName>\)|<xref:System.Windows.FrameworkElement.Cursor%2A><br /><br /> \(<xref:System.Windows.Input.Cursor?displayProperty=fullName>\)|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 표준 커서는 상응하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 표준 커서로 변환됩니다.  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]가 표준 커서가 아니면 기본값이 할당됩니다.|  
-|<xref:System.Windows.Forms.Control.Enabled%2A>|<xref:System.Windows.UIElement.IsEnabled%2A>|<xref:System.Windows.Forms.Control.Enabled%2A>가 설정되어 있으면 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤이 호스팅된 요소에 <xref:System.Windows.UIElement.IsEnabled%2A> 속성을 설정합니다.|  
-|<xref:System.Windows.Forms.Control.Font%2A><br /><br /> \(<xref:System.Drawing.Font?displayProperty=fullName>\)|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Windows.Forms.Control.Font%2A> 값은 상응하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 글꼴 속성의 집합으로 변환됩니다.|  
-|<xref:System.Drawing.Font.Bold%2A>|호스팅된 요소에 있는 <xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Drawing.Font.Bold%2A>가 `true`이면 <xref:System.Windows.Controls.Control.FontWeight%2A>가 <xref:System.Windows.FontWeights.Bold%2A>로 설정됩니다.<br /><br /> <xref:System.Drawing.Font.Bold%2A>이 `false`이면 <xref:System.Windows.Controls.Control.FontWeight%2A>가 <xref:System.Windows.FontWeights.Normal%2A>로 설정됩니다.|  
-|<xref:System.Drawing.Font.Italic%2A>|호스팅된 요소에 있는 <xref:System.Windows.Controls.Control.FontStyle%2A>|<xref:System.Drawing.Font.Italic%2A>이 `true`이면 <xref:System.Windows.Controls.Control.FontStyle%2A>이 <xref:System.Windows.FontStyles.Italic%2A>으로 설정됩니다.<br /><br /> <xref:System.Drawing.Font.Italic%2A>이 `false`이면 <xref:System.Windows.Controls.Control.FontStyle%2A>이 <xref:System.Windows.FontStyles.Normal%2A>로 설정됩니다.|  
-|<xref:System.Drawing.Font.Strikeout%2A>|호스팅된 요소에 있는 <xref:System.Windows.TextDecorations>|<xref:System.Windows.Controls.TextBlock> 컨트롤을 호스팅할 때만 적용됩니다.|  
-|<xref:System.Drawing.Font.Underline%2A>|호스팅된 요소에 있는 <xref:System.Windows.TextDecorations>|<xref:System.Windows.Controls.TextBlock> 컨트롤을 호스팅할 때만 적용됩니다.|  
-|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> \(<xref:System.Windows.Forms.RightToLeft?displayProperty=fullName>\)|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> \(<xref:System.Windows.FlowDirection>\)|<xref:System.Windows.Forms.RightToLeft>는 <xref:System.Windows.FlowDirection>에 매핑됩니다.<br /><br /> <xref:System.Windows.Forms.RightToLeft>는 <xref:System.Windows.FlowDirection>에 매핑됩니다.|  
-|<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Integration.ElementHost> 컨트롤은 다음 규칙을 사용하여 호스팅된 요소에 <xref:System.Windows.UIElement.Visibility%2A> 속성을 설정합니다.<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> \= `true`는 <xref:System.Windows.Visibility>에 매핑됩니다.<br />-   <xref:System.Windows.Forms.Control.Visible%2A> \= `false`는 <xref:System.Windows.Visibility>에 매핑됩니다.|  
+|---------------------------|-------------------------------------|-----------------------------|  
+|<xref:System.Windows.Forms.Control.BackColor%2A><br /><br /> (<xref:System.Drawing.Color?displayProperty=nameWithType>)|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>) 호스팅된 요소에|이 속성을 강제로 다시 그리도록와는 <xref:System.Windows.Media.ImageBrush>합니다. 경우는 <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 속성이 `false` (기본값)이 <xref:System.Windows.Media.ImageBrush> 의 모양에 따라는 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 포함 하 여 해당 <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Control.BackgroundImageLayout%2A> 속성과 연결 된 모든 그리기 처리기입니다.<br /><br /> 경우는 <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> 속성이 `true`, <xref:System.Windows.Media.ImageBrush> 의 모양에 따라는 <xref:System.Windows.Forms.Integration.ElementHost> 부모 항목을 포함 하 여 컨트롤의 부모 <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Control.BackgroundImageLayout%2A> 속성과 연결 된 모든 그리기 처리기입니다.|  
+|<xref:System.Windows.Forms.Control.BackgroundImage%2A><br /><br /> (<xref:System.Drawing.Image?displayProperty=nameWithType>)|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>) 호스팅된 요소에|이 속성을 설정 하면 동일한 동작에 대 한 설명의 <xref:System.Windows.Forms.Control.BackColor%2A> 매핑.|  
+|<xref:System.Windows.Forms.Control.BackgroundImageLayout%2A>|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>) 호스팅된 요소에|이 속성을 설정 하면 동일한 동작에 대 한 설명의 <xref:System.Windows.Forms.Control.BackColor%2A> 매핑.|  
+|<xref:System.Windows.Forms.Control.Cursor%2A><br /><br /> (<xref:System.Windows.Forms.Cursor?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.Cursor%2A><br /><br /> (<xref:System.Windows.Input.Cursor?displayProperty=nameWithType>)|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 해당 표준 커서는 변환 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 표준 커서입니다. 경우는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 표준 커서 않습니다 기본값이 할당 됩니다.|  
+|<xref:System.Windows.Forms.Control.Enabled%2A>|<xref:System.Windows.UIElement.IsEnabled%2A>|때 <xref:System.Windows.Forms.Control.Enabled%2A> 설정 되 면는 <xref:System.Windows.Forms.Integration.ElementHost> 설정 제어는 <xref:System.Windows.UIElement.IsEnabled%2A> 호스팅된 요소에는 속성입니다.|  
+|<xref:System.Windows.Forms.Control.Font%2A><br /><br /> (<xref:System.Drawing.Font?displayProperty=nameWithType>)|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Windows.Forms.Control.Font%2A> 값은 해당 집합으로 변환 됩니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 글꼴 속성입니다.|  
+|<xref:System.Drawing.Font.Bold%2A>|<xref:System.Windows.Controls.Control.FontWeight%2A>호스팅된 요소에|<xref:System.Drawing.Font.Bold%2A>이`true`이면 <xref:System.Windows.Controls.Control.FontWeight%2A>가 <xref:System.Windows.FontWeights.Bold%2A>로 설정됩니다.<br /><br /> <xref:System.Drawing.Font.Bold%2A>이`false`이면 <xref:System.Windows.Controls.Control.FontWeight%2A>가 <xref:System.Windows.FontWeights.Normal%2A>로 설정됩니다.|  
+|<xref:System.Drawing.Font.Italic%2A>|<xref:System.Windows.Controls.Control.FontStyle%2A>호스팅된 요소에|<xref:System.Drawing.Font.Italic%2A>이`true`이면 <xref:System.Windows.Controls.Control.FontStyle%2A>가 <xref:System.Windows.FontStyles.Italic%2A>로 설정됩니다.<br /><br /> <xref:System.Drawing.Font.Italic%2A>이`false`이면 <xref:System.Windows.Controls.Control.FontStyle%2A>가 <xref:System.Windows.FontStyles.Normal%2A>로 설정됩니다.|  
+|<xref:System.Drawing.Font.Strikeout%2A>|<xref:System.Windows.TextDecorations>호스팅된 요소에|호스트 하는 경우에 적용 되는 <xref:System.Windows.Controls.TextBlock> 컨트롤입니다.|  
+|<xref:System.Drawing.Font.Underline%2A>|<xref:System.Windows.TextDecorations>호스팅된 요소에|호스트 하는 경우에 적용 되는 <xref:System.Windows.Controls.TextBlock> 컨트롤입니다.|  
+|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection>)|<xref:System.Windows.Forms.RightToLeft.No>은 <xref:System.Windows.FlowDirection.LeftToRight>에 매핑됩니다.<br /><br /> <xref:System.Windows.Forms.RightToLeft.Yes>은 <xref:System.Windows.FlowDirection.RightToLeft>에 매핑됩니다.|  
+|<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Integration.ElementHost> 설정 제어는 <xref:System.Windows.UIElement.Visibility%2A> 다음 규칙을 사용 하 여 호스팅된 요소에는 속성:<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> = `true`매핑될 <xref:System.Windows.Visibility.Visible>합니다.<br />-   <xref:System.Windows.Forms.Control.Visible%2A> = `false`매핑될 <xref:System.Windows.Visibility.Hidden>합니다.|  
   
-## 참고 항목  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)   
- [WPF 및 Windows Forms 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)   
- [연습: WindowsFormsHost 요소를 사용하여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [WPF 및 Windows Forms 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)  
+ [연습: WindowsFormsHost 요소를 사용하여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)  
  [연습: ElementHost 컨트롤을 사용하여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)

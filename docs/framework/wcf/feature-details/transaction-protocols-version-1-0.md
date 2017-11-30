@@ -1,154 +1,157 @@
 ---
-title: "트랜잭션 프로토콜 버전 1.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "트랜잭션 프로토콜 버전 1.0"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 95bf16a4e243d82b9b8fe83b306284335ae0bd16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 트랜잭션 프로토콜 버전 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 버전 1은 WS\-Atomic Transaction 및 WS\-Coordination 프로토콜의 버전 1.0을 구현합니다.버전 1.1에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)을 참조하십시오.  
+# <a name="transaction-protocols-version-10"></a>트랜잭션 프로토콜 버전 1.0
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 버전 1은 WS-Atomic Transaction 및 WS-Coordination 프로토콜의 버전 1.0을 구현합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]버전 1.1에서 참조 [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)합니다.  
   
-|사양\/문서|링크|  
-|------------|--------|  
-|WS\-Coordination|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-coordination\/|  
-|WS\-AtomicTransaction|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-atomictransaction\/|  
+|사양/문서|링크|  
+|-----------------------------|----------|  
+|WS-Coordination|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
+|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
   
- 이러한 프로토콜 사양에서의 상호 운용성은 응용 프로그램 간 및 트랜잭션 관리자 간, 이렇게 두 가지 수준에서 필요합니다\(다음 그림 참조\).사양은 두 가지 수준의 상호 운용성을 위한 메시지 형식 및 메시지 교환을 상세하게 설명합니다.응용 프로그램 간의 교환을 위한 보안, 안정성 및 인코딩은 일반적인 응용 프로그램 교환을 위해 수행되는 것과 같은 방식으로 적용됩니다.그러나 트랜잭션 관리자 간의 상호 운용성을 위해서는 특정한 바인딩에 대한 동의가 필요합니다. 이러한 부분은 일반적으로 사용자가 구성하지 않기 때문입니다.  
+ 이러한 프로토콜 사양에서의 상호 운용성은 응용 프로그램 간 및 트랜잭션 관리자 간 이렇게 두 가지 수준에서 필요합니다(다음 그림 참조) 사양은 두 가지 수준의 상호 운용성을 위한 메시지 형식 및 메시지 교환을 상세하게 설명합니다. 응용 프로그램 간의 교환을 위한 보안, 안정성 및 인코딩은 일반적인 응용 프로그램 교환을 위해 수행되는 것과 같은 방식으로 적용됩니다. 그러나 트랜잭션 관리자 간의 상호 운용성을 위해서는 특정한 바인딩에 대한 동의가 필요합니다. 이러한 부분은 일반적으로 사용자가 구성하지 않기 때문입니다.  
   
- 이 항목에서는 WS\-AT\(WS\-Atomic Transaction\) 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다.이 문서에서 설명하는 방식은 IBM, IONA, Sun Microsystems 등에서 WS\-AT 및 WS\-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.  
+ 이 항목에서는 WS-AT(WS-Atomic Transaction) 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다. 이 문서에서 설명하는 방식은 IBM, IONA, Sun Microsystems 등에서 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.  
   
- 다음 그림에서는 두 개의 트랜잭션 관리자\(트랜잭션 관리자 1, 트랜잭션 관리자 2\)와 두 개의 응용 프로그램\(응용 프로그램 1, 응용 프로그램 2\) 간의 상호 운용성에 대해 설명합니다.  
+ 다음 그림에서는 두 개의 트랜잭션 관리자(트랜잭션 관리자 1, 트랜잭션 관리자 2)와 두 개의 응용 프로그램(응용 프로그램 1, 응용 프로그램 2) 간의 상호 운용성에 대해 설명합니다.  
   
- ![트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ ![트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "했지만")  
   
- 한 명의 개시자\(I\)와 한 명의 참가자\(P\)가 있는 일반적인 WS\-Coordination\/WS\-Atomic Transaction 시나리오를 예로 들어 봅니다.개시자와 참가자는 둘 다 트랜잭션 관리자\(각각 ITM과 PTM\)를 가집니다.이 항목에서는 2단계 커밋을 2PC라고 합니다.  
+ 한 명의 개시자(I)와 한 명의 참가자(P)가 있는 일반적인 WS-Coordination/WS-Atomic Transaction 시나리오를 예로 들어 봅니다. 개시자와 참가자는 둘 다 트랜잭션 관리자(각각 ITM과 PTM)를 가집니다. 이 항목에서는 2단계 커밋을 2PC라고 합니다.  
   
 |||  
 |-|-|  
-|1.CreateCoordinationContext|12.응용 프로그램 메시지 응답|  
-|2.CreateCoordinationContextResponse|13.커밋\(완료\)|  
-|3.등록\(완료\)|14.준비\(2PC\)|  
-|4.RegisterResponse|15.준비\(2PC\)|  
-|5.응용 프로그램 메시지|16.준비됨\(2PC\)|  
-|6.CreateCoordinationContext와 Context|17.준비됨\(2PC\)|  
-|7.등록\(지속적\)|18.커밋됨\(완료\)|  
-|8.RegisterResponse|19.커밋\(2PC\)|  
-|9.CreateCoordinationContextResponse|20.커밋\(2PC\)|  
-|10.등록\(지속적\)|21.커밋됨\(2PC\)|  
-|11.RegisterResponse|22.커밋됨\(2PC\)|  
+|1. CreateCoordinationContext|12. 응용 프로그램 메시지 응답|  
+|2. CreateCoordinationContextResponse|13. 커밋(완료)|  
+|3. 등록(완료)|14. 준비(2PC)|  
+|4. RegisterResponse|15. 준비(2PC)|  
+|5. 응용 프로그램 메시지|16. 준비됨(2PC)|  
+|6. CreateCoordinationContext와 Context|17. 준비됨(2PC)|  
+|7. 등록(지속적)|18. 커밋됨(완료)|  
+|8. RegisterResponse|19. 커밋(2PC)|  
+|9. CreateCoordinationContextResponse|20. 커밋(2PC)|  
+|10. 등록(지속적)|21. 커밋됨(2PC)|  
+|11. RegisterResponse|22. 커밋됨(2PC)|  
   
- 이 문서에서는 WS\-AtomicTransaction 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다.이 문서에서 설명하는 방식은 WS\-AT 및 WS\-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.  
+ 이 문서에서는 WS-AtomicTransaction 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다. 이 문서에서 설명하는 방식은 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.  
   
  그림과 표에서는 보안의 관점에서 메시지에 대한 4가지 클래스를 보여 줍니다.  
   
--   활성화 메시지\(CreateCoordinationContext 및 CreateCoordinationContextResponse\)  
+-   활성화 메시지(CreateCoordinationContext 및 CreateCoordinationContextResponse)  
   
--   등록 메시지\(Register 및 RegisterResponse\)  
+-   등록 메시지(Register 및 RegisterResponse)  
   
--   프로토콜 메시지\(준비, 롤백, 커밋, 중단 등\)  
+-   프로토콜 메시지(준비, 롤백, 커밋, 중단 등)  
   
 -   응용 프로그램 메시지  
   
- 처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 "응용 프로그램 메시지 교환"에서 설명합니다.네 번째 메시지는 응용 프로그램 간 메시지이며, 이 항목의 뒷부분에 있는 "메시지 예제" 단원에서 설명합니다.이 단원에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이러한 클래스 각각에 대해 사용하는 프로토콜 바인딩에 대해 설명합니다.  
+ 처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 "응용 프로그램 메시지 교환"에서 설명합니다. 네 번째 메시지는 응용 프로그램 간 메시지이며, 이 항목의 뒷부분에 있는 "메시지 예제" 단원에서 설명합니다. 이 단원에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이러한 클래스 각각에 대해 사용하는 프로토콜 바인딩에 대해 설명합니다.  
   
  다음 XML 네임스페이스 및 관련 접두사는 이 문서 전체에서 사용됩니다.  
   
 |접두사|네임스페이스 URI|  
-|---------|----------------|  
-|s11|http:\/\/schemas.xmlsoap.org\/soap\/envelope|  
-|wsa|http:\/\/www.w3.org\/2004\/08\/addressing|  
-|wscoor|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wscoor|  
-|wsat|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wsat|  
-|t|http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust|  
-|o|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-secext\-1.0.xsd|  
-|xsd|http:\/\/www.w3.org\/2001\/XMLSchema|  
+|------------|-------------------|  
+|s11|http://schemas.xmlsoap.org/soap/envelope|  
+|wsa|http://www.w3.org/2004/08/addressing|  
+|wscoor|http://schemas.xmlsoap.org/ws/2004/10/wscoor|  
+|wsat|http://schemas.xmlsoap.org/ws/2004/10/wsat|  
+|t|http://schemas.xmlsoap.org/ws/2005/02/trust|  
+|o|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd|  
+|xsd|http://www.w3.org/2001/XMLSchema|  
   
-## 트랜잭션 관리자 바인딩  
- R1001: 트랜잭션 관리자는 WS\-Atomic Transaction 및 WS\-Coordination 메시지 교환을 위해 SOAP 1.1과 WS\-Addressing 2004\/08을 사용해야 합니다.  
+## <a name="transaction-manager-bindings"></a>트랜잭션 관리자 바인딩  
+ R1001: 트랜잭션 관리자는 WS-Atomic Transaction 및 WS-Coordination 메시지 교환을 위해 SOAP 1.1과 WS-Addressing 2004/08을 사용해야 합니다.  
   
  응용 프로그램 메시지는 이러한 바인딩에 제한되지 않으며, 이에 대해서는 나중에 설명합니다.  
   
-### 트랜잭션 관리자 HTTPS 바인딩  
- 트랜잭션 관리자 HTTPS 바인딩은 전송 보안에만 전적으로 의존하여 보안을 수행하며, 트랜잭션 트리에 있는 각 발신자\-수신자 쌍 간의 신뢰를 설정합니다.  
+### <a name="transaction-manager-https-binding"></a>트랜잭션 관리자 HTTPS 바인딩  
+ 트랜잭션 관리자 HTTPS 바인딩은 전송 보안에만 전적으로 의존하여 보안을 수행하며, 트랜잭션 트리에 있는 각 발신자-수신자 쌍 간의 신뢰를 설정합니다.  
   
-#### HTTPS 전송 구성  
- X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다.클라이언트\/서버 인증이 필요하며, 클라이언트\/서버 권한 부여는 구현 정보로 유지됩니다.  
+#### <a name="https-transport-configuration"></a>HTTPS 전송 구성  
+ X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다. 클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.  
   
--   R1111: 연결을 통해 표시되는 X.509 인증서에는 원래 컴퓨터의 FQDN\(정규화된 도메인 이름\)과 일치하는 주체 이름이 있어야 합니다.  
+-   R1111: 연결을 통해 표시되는 X.509 인증서에는 원래 컴퓨터의 FQDN(정규화된 도메인 이름)과 일치하는 주체 이름이 있어야 합니다.  
   
--   B1112: DNS는 X.509 주체 이름을 확인한 시스템에서 각 발신자\-수신자 쌍 간에 작동해야 합니다.  
+-   B1112: DNS는 X.509 주체 이름을 확인한 시스템에서 각 발신자-수신자 쌍 간에 작동해야 합니다.  
   
-#### 바인딩 구성 활성화 및 등록  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 HTTPS를 통한 상관 관계와 함께 요청\/회신 이중 바인딩이 필요합니다.요청\/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS\-Atomic Transaction을 참조하십시오.  
+#### <a name="activation-and-registration-binding-configuration"></a>바인딩 구성 활성화 및 등록  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 HTTPS를 통한 상관 관계와 함께 요청/회신 이중 바인딩이 필요합니다. 요청/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS-Atomic Transaction을 참조하십시오.  
   
-#### 2PC 프로토콜 바인딩 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 HTTPS를 통해 단방향\(데이터그램\) 메시지를 지원합니다.메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
+#### <a name="2pc-protocol-binding-configuration"></a>2PC 프로토콜 바인딩 구성  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 HTTPS를 통해 단방향(데이터그램) 메시지를 지원합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
   
- B2131: 구현은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 2PC 메시지 상관 관계를 수행하기 위해 WS\-Addressing에 설명된 대로`wsa:ReferenceParameters`를 지원해야 합니다.  
+ B2131: 구현에서 지원 해야 `wsa:ReferenceParameters` 의 상관 관계를 달성 하기 위해 Ws-addressing에서 설명 된 대로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 2PC 메시지입니다.  
   
-### 트랜잭션 관리자가 혼합된 보안 바인딩  
- 이는 ID 설정을 목적으로 WS\-Coordination Issued Token 모델과 혼합된 전송 보안을 사용하는 대체\(혼합 모드\) 바인딩입니다.두 바인딩 간에 다른 요소는 활성화와 등록뿐입니다.  
+### <a name="transaction-manager-mixed-security-binding"></a>트랜잭션 관리자가 혼합된 보안 바인딩  
+ 이 바인딩 id 설정 목적 Ws-coordination 발급 토큰 모델과 함께 사용 하 여 전송 보안을 하는 대체 (혼합된 모드).  두 바인딩 간에 다른 요소는 활성화와 등록뿐입니다.  
   
-#### HTTPS 전송 구성  
- X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다.클라이언트\/서버 인증이 필요하며, 클라이언트\/서버 권한 부여는 구현 정보로 유지됩니다.  
+#### <a name="https-transport-configuration"></a>HTTPS 전송 구성  
+ X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다. 클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.  
   
-#### 활성화 메시지 바인딩 구성  
+#### <a name="activation-message-binding-configuration"></a>활성화 메시지 바인딩 구성  
  활성화 메시지는 일반적으로 응용 프로그램과 해당 로컬 트랜잭션 관리자 간에 발생하기 때문에 대개 상호 운용성에 관여하지 않습니다.  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 활성화 메시지에 대해 이중 HTTPS 바인딩\([메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md) 참조\)을 사용합니다.요청 및 회신 메시지는 WS\-Addressing 2004\/08을 사용하여 상호 관련됩니다.  
+ B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이중 HTTPS 바인딩을 사용 하 여 (에 설명 된 [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 활성화 메시지에 대 한 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
- 8단원 WS\-Atomic Transaction 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
+ 8단원 WS-Atomic Transaction 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
   
--   R1222: 코디네이터는 `CreateCoordinationContext`를 수신하는 즉시 연관된 비밀 `STx`로 `SecurityContextToken`을 발급해야 합니다.이 토큰은 WS\-Trust 사양을 따르는 `t:IssuedTokens` 헤더의 내부로 반환됩니다.  
+-   R1222: 코디네이터는 `CreateCoordinationContext`를 수신하는 즉시 연관된 비밀 `SecurityContextToken`로 `STx`을 발급해야 합니다. 이 토큰은 WS-Trust 사양을 따르는 `t:IssuedTokens` 헤더의 내부로 반환됩니다.  
   
--   R1223: 기존 코디네이션 컨텍스트 내에서 활성화가 수행되면 기존 컨텍스트와 연관된 `SecurityContextToken`과 함께 `t:IssuedTokens` 헤더가 `CreateCoordinationContext` 메시지에서 이동해야 합니다.  
+-   R1223: 기존 코디네이션 컨텍스트 내에서 활성화가 수행되면 기존 컨텍스트와 연관된 `t:IssuedTokens`과 함께 `SecurityContextToken` 헤더가 `CreateCoordinationContext` 메시지에서 이동해야 합니다.  
   
- 새 `t:IssuedTokens` 헤더는 보내는 `wscoor:CreateCoordinationContextResponse` 메시지에 연결되도록 생성되어야 합니다.  
+ 새 `t:IssuedTokens` 에 나가는 연결에 대 한 헤더를 생성 해야 `wscoor:CreateCoordinationContextResponse` 메시지입니다.  
   
-#### 등록 메시지 바인딩 구성  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 이중 HTTPS 바인딩\([메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md) 참조\)을 사용합니다.요청 및 회신 메시지는 WS\-Addressing 2004\/08을 사용하여 상호 관련됩니다.  
+#### <a name="registration-message-binding-configuration"></a>등록 메시지 바인딩 구성  
+ B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이중 HTTPS 바인딩을 사용 하 여 (에 설명 된 [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
- 8단원 WS\-AtomicTransaction에서는 메시지 교환 패턴의 상관 관계 및 설명에 대해 좀 더 자세히 설명합니다.  
+ 8단원 WS-AtomicTransaction에서는 메시지 교환 패턴의 상관 관계 및 설명에 대해 좀 더 자세히 설명합니다.  
   
- R1232: 보내는 `wscoor:Register` 메시지는 [보안 프로토콜](../../../../docs/framework/wcf/feature-details/security-protocols.md)에 설명된 `IssuedTokenOverTransport` 인증 모드를 사용해야 합니다.  
+ R1232: 나가는 `wscoor:Register` 메시지를 사용 해야 합니다는 `IssuedTokenOverTransport` 에 설명 된 인증 모드 [보안 프로토콜](../../../../docs/framework/wcf/feature-details/security-protocols.md)합니다.  
   
- `wsse:Timestamp` 요소는 발급된 `SecurityContextToken``STx`를 사용하여 서명되어야 합니다.이 서명은 특정 트랜잭션과 연관된 토큰을 소유했음을 나타내며, 트랜잭션에 등록된 참가자를 인증하는 데 사용합니다.RegistrationResponse 메시지는 HTTPS를 통해 다시 보내집니다.  
+ `wsse:Timestamp` 요소를 사용 하 여 서명 해야 합니다는 `SecurityContextToken``STx` 발급 합니다. 이 서명은 특정 트랜잭션과 연관된 토큰을 소유했음을 나타내며, 트랜잭션에 등록된 참가자를 인증하는 데 사용합니다. RegistrationResponse 메시지는 HTTPS를 통해 다시 보내집니다.  
   
-#### 2PC 프로토콜 바인딩 구성  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 HTTPS를 통해 단방향\(데이터그램\) 메시지를 지원합니다.메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
+#### <a name="2pc-protocol-binding-configuration"></a>2PC 프로토콜 바인딩 구성  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 HTTPS를 통해 단방향(데이터그램) 메시지를 지원합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
   
- B2131: 구현은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 2PC 메시지 상관 관계를 수행하기 위해 WS\-Addressing에 설명된 대로`wsa:ReferenceParameters`를 지원해야 합니다.  
+ B2131: 구현에서 지원 해야 `wsa:ReferenceParameters` 의 상관 관계를 달성 하기 위해 Ws-addressing에서 설명 된 대로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 2PC 메시지입니다.  
   
-## 응용 프로그램 메시지 교환  
+## <a name="application-message-exchange"></a>응용 프로그램 메시지 교환  
  바인딩이 다음 보안 요구 사항을 만족하는 경우, 응용 프로그램에서는 응용 프로그램 간 메시지에 대해 특정 바인딩을 자유롭게 사용할 수 있습니다.  
   
--   R2001: 응용 프로그램 간 메시지는 메시지의 헤더에서 `CoordinationContext`와 함께 `t:IssuedTokens` 헤더를 이동시켜야 합니다.  
+-   R2001: 응용 프로그램 간 메시지는 메시지의 헤더에서 `t:IssuedTokens`와 함께 `CoordinationContext` 헤더를 이동시켜야 합니다.  
   
 -   R2002: `t:IssuedToken`의 무결성 및 기밀성이 제공되어야 합니다.  
   
- `CoordinationContext` 헤더에는 `wscoor:Identifier`가 포함됩니다.`xsd:AnyURI`를 정의하면 절대 URI와 상대 URI를 모두 사용할 수 있지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 절대 URI인 `wscoor:Identifiers`만 지원합니다.  
+ `CoordinationContext` 헤더에는 `wscoor:Identifier`가 포함됩니다. `xsd:AnyURI`를 정의하면 절대 URI와 상대 URI를 모두 사용할 수 있지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 절대 URI인 `wscoor:Identifiers`만 지원합니다.  
   
- `wscoor:CoordinationContext`의 `wscoor:Identifier`가 상대 URI이면 트랜잭션 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 오류가 반환됩니다.  
+ `wscoor:Identifier`의 `wscoor:CoordinationContext`가 상대 URI이면 트랜잭션 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 오류가 반환됩니다.  
   
-## 메시지 예제  
+## <a name="message-examples"></a>메시지 예제  
   
-### CreateCoordinationContext 요청\/응답 메시지  
- 다음 메시지는 요청\/응답 패턴을 따릅니다.  
+### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext 요청/응답 메시지  
+ 다음 메시지는 요청/응답 패턴을 따릅니다.  
   
-#### CreateCoordinationContext  
+#### <a name="createcoordinationcontext"></a>CreateCoordinationContext  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wscoor/CreateCoordinationContext</Action>  
@@ -170,12 +173,11 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContext>  
   </s:Body>  
 </s11:Envelope>  
-  
 ```  
   
-#### CreateCoordinationContextResponse  
+#### <a name="createcoordinationcontextresponse"></a>CreateCoordinationContextResponse  
   
-```  
+```xml  
 <s:Envelope>  
   <!-- Data below is shown in the clear for  
        illustration purposes only. -->  
@@ -253,15 +255,14 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContextResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### 등록 메시지  
+### <a name="registration-messages"></a>등록 메시지  
  다음 메시지는 등록 메시지입니다.  
   
-#### 등록  
+#### <a name="register"></a>레지스터  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register</a:Action>  
@@ -318,12 +319,11 @@ caps.handback.revision: 3
     </wscoor:Register>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-#### 응답 등록  
+#### <a name="register-response"></a>응답 등록  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>  
@@ -355,15 +355,14 @@ caps.handback.revision: 3
     </wscoor:RegisterResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### 2단계 커밋 프로토콜 메시지  
- 다음 메시지는 2PC\(2단계 커밋\) 프로토콜과 관련됩니다.  
+### <a name="two-phase-commit-protocol-messages"></a>2단계 커밋 프로토콜 메시지  
+ 다음 메시지는 2PC(2단계 커밋) 프로토콜과 관련됩니다.  
   
-#### 커밋  
+#### <a name="commit"></a>커밋  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wsat/Commit</a:Action>  
@@ -382,15 +381,14 @@ caps.handback.revision: 3
     <wsat:Commit />  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### 응용 프로그램 메시지  
+### <a name="application-messages"></a>응용 프로그램 메시지  
  다음 메시지는 응용 프로그램 메시지입니다.  
   
-#### 응용 프로그램 메시지\-요청  
+#### <a name="application-message-request"></a>응용 프로그램 메시지-요청  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
 <!-- Addressing headers, all signed-->  

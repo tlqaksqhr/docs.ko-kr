@@ -1,38 +1,34 @@
 ---
-title: "(Visual Basic)의 기본 단락 스타일 찾기 | Microsoft 문서"
+title: "기본 단락 스타일 (Visual Basic) 찾기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 041e99f4fd70008208a8f661f6763159ac7f4479
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: cd22a545f8162352050ba698717fb0ceb3a72cfc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="finding-the-default-paragraph-style-visual-basic"></a>(Visual Basic)의 기본 단락 스타일 찾기
-WordprocessingML 문서 자습서에서 정보 조작는 첫 번째 작업은 문서에서 단락의 기본 스타일을 찾는 것입니다.  
+# <a name="finding-the-default-paragraph-style-visual-basic"></a>기본 단락 스타일 (Visual Basic) 찾기
+WordprocessingML 문서에서 정보 조작 자습서의 첫 번째 작업은 문서에 있는 단락의 기본 스타일을 찾는 것입니다.  
   
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
- 다음 예제에서는 Office Open XML WordprocessingML 문서를 열고 패키지의 문서 및 스타일 부분을 찾은 다음 기본 스타일 이름을 찾는 쿼리를 실행합니다. Office Open XML 문서 패키지와 패키지의 구성 하는 부분에 대 한 정보를 참조 하십시오. [세부 정보 Office Open XML WordprocessingML 문서의 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)합니다.  
+ 다음 예제에서는 Office Open XML WordprocessingML 문서를 열고 패키지의 문서 및 스타일 부분을 찾은 다음 기본 스타일 이름을 찾는 쿼리를 실행합니다. Office Open XML 문서 패키지 및 구성 됩니다 부분에 대 한 정보를 참조 하십시오. [세부 정보 Office Open XML WordprocessingML 문서의 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)합니다.  
   
- 쿼리에서는 값이 "paragraph"인 `w:style` 특성과 값이 "1"인 `w:type` 특성을 가진 `w:default`이라는 노드를 찾습니다. 쿼리를 사용 하는 이기 때문에 이러한 특성이 XML 노드를 하나만는 <xref:System.Linq.Enumerable.First%2A?displayProperty=fullName>컬렉션을 singleton으로 변환 하는 연산자입니다.</xref:System.Linq.Enumerable.First%2A?displayProperty=fullName> 그런 다음 이름이 `w:styleId`인 특성의 값을 가져옵니다.  
+ 쿼리에서는 값이 "paragraph"인 `w:style` 특성과 값이 "1"인 `w:type` 특성을 가진 `w:default`이라는 노드를 찾습니다. 이러한 특성을 가진 XML 노드는 하나뿐이기 때문에 쿼리에서는 <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 연산자를 사용하여 컬렉션을 singleton으로 변환합니다. 그런 다음 이름이 `w:styleId`인 특성의 값을 가져옵니다.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 형식을 사용는 <xref:System.IO.Packaging?displayProperty=fullName>네임 스페이스.</xref:System.IO.Packaging?displayProperty=fullName>  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ### <a name="code"></a>코드  
   
@@ -100,9 +96,9 @@ The default style is: Normal
 ```  
   
 ## <a name="next-steps"></a>다음 단계  
- 다음 예제에서는 문서 및 해당 스타일에 있는 모든 단락을 발견 하는 비슷한 쿼리를 만듭니다.  
+ 다음 예제에서는 문서의 모든 단락과 단락의 스타일을 찾는 유사한 쿼리를 만듭니다.  
   
--   [단락 및 해당 스타일 (Visual Basic) 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+-   [단락 및 해당 스타일 (Visual Basic)를 검색합니다.](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -1,54 +1,69 @@
 ---
-title: "Byte Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Byte"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Byte data type"
-  - "data types [Visual Basic], assigning"
+title: "Byte 데이터 형식(Visual Basic)"
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Byte
+helpviewer_keywords:
+- Byte data type
+- data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 6475ff3ed905abb022a9ef60204c04b45130ae22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Byte Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+# <a name="byte-data-type-visual-basic"></a>Byte 데이터 형식 (Visual Basic)
+값 범위에 있는 0에서 255 까지의 부호 없는 8 비트 (1 바이트) 정수를 보유 합니다.
 
-0에서 255까지의 값 범위에 있는 부호 없는 8비트\(1바이트\) 정수를 저장합니다.  
+## <a name="remarks"></a>설명
+
+사용 하 여는 `Byte` 이진 데이터를 포함 하도록 데이터 형식입니다.  
   
-## 설명  
- 이진 데이터를 저장하려면 `Byte` 데이터 형식을 사용합니다.  
+`Byte`의 기본값은 0입니다.
+
+## <a name="literal-assignments"></a>리터럴 할당
+
+선언 하 고 초기화는 `Byte` 10 진 리터럴, 16 진수 리터럴을 8 진수 리터럴을 할당 (부터는 Visual Basic 2017) 이진 리터럴 또는 변수입니다. 정수 리터럴은의 범위를 벗어나는 경우는 `Byte` (경우 즉, 보다 작은 <xref:System.Byte.MinValue?displayProperty=nameWithType> 보다 큰 <xref:System.Byte.MaxValue?displayProperty=nameWithType>), 컴파일 오류가 발생 합니다.
+
+다음 예제에서는 정수 같지 10 진수, 16 진수로 표현 되는 201 및 이진 리터럴에서 암시적으로 변환 된 [정수](integer-data-type.md) 를 `byte` 값입니다.
+
+[!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Byte)]
+
+> [!NOTE]
+> 접두사를 사용 `&h` 또는 `&H` 를 나타내는 16 진수 리터럴을, 접두사 `&b` 또는 `&B` 이진 리터럴와 접두사를 나타내기 위해 `&o` 또는 `&O` 8 진수 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다.
+
+Visual Basic 2017 부터는 사용할 수도 있습니다는 밑줄 문자 `_`, 가독성을 향상 시키기 위해 숫자 구분 기호,으로 다음 예제와 같이 보여 줍니다.
+
+[!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
+
+## <a name="programming-tips"></a>프로그래밍 팁
+
+-   **음수입니다.** 때문에 `Byte` 부호 없는 정수 형식이 면 음수를 나타낼 수 없습니다. 단항 빼기를 사용 하는 경우 (`-`) 형식으로 계산 되는 식에 연산자 `Byte`, Visual Basic 식을 변환 `Short` 첫 번째입니다.
   
- `Byte`의 기본값은 0입니다.  
+-   **형식 변환 합니다.** Visual Basic을 읽거나 파일을 작성 하는 경우 또는 Dll, 메서드 및 속성을 호출할 때 자동 데이터 형식 간에 변환할 수 있습니다. 에 저장 된 이진 데이터 `Byte` 변수 및 배열 그러한 형식 변환이 이루어지는 동안 보존 됩니다. 사용 하지 않아야는 `String` ANSI 및 유니코드 변환 시의 내용이 손상 될 수 때문에 이진 데이터에 대 한 변수입니다.
+
+-   **확대 합니다.** `Byte` 데이터 형식으로 확대 되 `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, 또는 `Double`합니다. 즉, 변환할 수 `Byte` 발생 없이 이러한 유형 중 하나로 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.
   
-## 프로그래밍 팁  
-  
--   **음수.** `Byte`는 부호 없는 형식이므로 음수를 나타낼 수 없습니다.  `Byte` 형식으로 계산되는 식에서 단항 마이너스\(`-`\) 연산자를 사용하면 Visual Basic은 먼저 식을 `Short`로 변환합니다.  
-  
--   **형식 변환.** Visual Basic에서 파일을 읽거나 쓰는 경우 또는 DLL, 메서드 및 속성을 호출하는 경우 데이터 형식 간 변환이 자동으로 이루어질 수 있습니다.  `Byte` 변수와 배열에 저장된 이진 데이터는 그러한 형식 변환이 이루어지는 동안 보존됩니다.  ANSI와 유니코드 형식 사이에서 변환하는 동안 이진 데이터의 내용이 손상될 수도 있기 때문에 이진 데이터에 `String` 변수를 사용해서는 안 됩니다.  
-  
--   **확대 변환.** `Byte` 데이터 형식은 `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single` 또는 `Double`로 확대 변환됩니다.  이것은 <xref:System.OverflowException?displayProperty=fullName> 오류의 발생 없이 `Byte`를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
-  
--   **형식 문자.** `Byte`에는 리터럴 형식 문자나 식별자 형식 문자가 없습니다.  
-  
--   **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.Byte?displayProperty=fullName> 구조체입니다.  
-  
-## 예제  
- 다음 예제에서 `b`는 `Byte` 변수입니다.  예제의 문에서는 이 변수의 범위와 비트 시프트 연산자가 적용되는 방법을 보여 줍니다.  
-  
- [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
-  
-## 참고 항목  
- <xref:System.Byte?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+-   **형식 문자입니다.** `Byte`에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
+
+-   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Byte?displayProperty=nameWithType> 구조체입니다.
+
+## <a name="example"></a>예제
+
+ 다음 예에서 `b` 는 `Byte` 변수입니다. 문을 변수의 범위와 비트 시프트 연산자의 응용 프로그램을 보여 줍니다.
+
+[!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
+
+## <a name="see-also"></a>참고 항목
+
+ <xref:System.Byte?displayProperty=nameWithType>  
+ [데이터 형식](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
