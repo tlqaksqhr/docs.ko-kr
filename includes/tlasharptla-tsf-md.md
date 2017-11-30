@@ -1,1 +1,1 @@
-TSF(텍스트 서비스 프레임워크)
+<span data-ttu-id="0ccc3-101">TSF(텍스트 서비스 프레임워크)</span><span class="sxs-lookup"><span data-stu-id="0ccc3-101">Text Services Framework (TSF)</span></span>

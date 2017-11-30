@@ -1,1 +1,1 @@
-CSS 스타일시트
+<span data-ttu-id="b8985-101">CSS 스타일시트</span><span class="sxs-lookup"><span data-stu-id="b8985-101">Cascading Style Sheets (CSS)</span></span>

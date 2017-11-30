@@ -1,1 +1,1 @@
-ActiveX
+<span data-ttu-id="48fb4-101">ActiveX</span><span class="sxs-lookup"><span data-stu-id="48fb4-101">ActiveX</span></span>

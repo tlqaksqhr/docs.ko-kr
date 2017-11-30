@@ -1,1 +1,1 @@
-OPC(Open Packaging Conventions)
+<span data-ttu-id="5ee24-101">OPC(Open Packaging Conventions)</span><span class="sxs-lookup"><span data-stu-id="5ee24-101">Open Packaging Conventions (OPC)</span></span>

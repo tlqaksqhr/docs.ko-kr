@@ -1,1 +1,1 @@
-WinEvents
+<span data-ttu-id="baa31-101">WinEvents</span><span class="sxs-lookup"><span data-stu-id="baa31-101">WinEvents</span></span>

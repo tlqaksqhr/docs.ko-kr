@@ -1,1 +1,1 @@
-GPU(그래픽 처리 장치)
+<span data-ttu-id="871c1-101">GPU(그래픽 처리 장치)</span><span class="sxs-lookup"><span data-stu-id="871c1-101">graphics processing unit (GPU)</span></span>

@@ -1,62 +1,60 @@
 ---
-title: "구조체 디자인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "클래스 라이브러리 디자인 지침 [.NET Framework] 구조"
-  - "구조체 할당 취소"
-  - "구조체 할당"
-  - "값 형식 구조"
-  - "구조 디자인"
-  - "구조 형식 디자인 지침"
-  - "구조체 [.NET Framework] 디자인 지침"
+title: "구조체 디자인"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- class library design guidelines [.NET Framework], structures
+- deallocating structures
+- allocating structures
+- value types, structures
+- structure design
+- type design guidelines, structures
+- structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d1566d2b67e1dda5b0b221a2c10affb6bdaea888
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 구조체 디자인
-범용 값 형식은 가장 자주 구조체를 해당 C\# 키워드 라고 합니다. 이 섹션 일반 구조체 디자인에 대 한 지침을 제공합니다.  
+# <a name="struct-design"></a><span data-ttu-id="77b2a-102">구조체 디자인</span><span class="sxs-lookup"><span data-stu-id="77b2a-102">Struct Design</span></span>
+<span data-ttu-id="77b2a-103">범용 값 형식이 가장 자주 C# 키워드는 구조체 라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-103">The general-purpose value type is most often referred to as a struct, its C# keyword.</span></span> <span data-ttu-id="77b2a-104">이 섹션에서는 일반 구조체 디자인에 대 한 지침을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-104">This section provides guidelines for general struct design.</span></span>  
   
- **X 하지 않으려면** 구조체에 대 한 기본 생성자를 제공 합니다.  
+ <span data-ttu-id="77b2a-105">**X 하지 않으면** 구조체에 대 한 기본 생성자를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-105">**X DO NOT** provide a default constructor for a struct.</span></span>  
   
- 배열의 각 항목에는 생성자를 실행 하지 않고도 만들 구조체의 배열을이 지침을 따르면 있습니다. C\# 없도록 기본 생성자가 하는 구조체를 확인 합니다.  
+ <span data-ttu-id="77b2a-106">이 지침에 따라 배열을 구조체를 배열의 각 항목에는 생성자를 실행할 필요 없이 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-106">Following this guideline allows arrays of structs to be created without having to run the constructor on each item of the array.</span></span> <span data-ttu-id="77b2a-107">C#에서는 기본 생성자가 있는 경우에 구조체를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-107">Notice that C# does not allow structs to have default constructors.</span></span>  
   
- **X 하지 않으려면** 변경할 수 있는 값 형식을 정의 합니다.  
+ <span data-ttu-id="77b2a-108">**X 하지 않으면** 변경할 수 있는 값 형식을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-108">**X DO NOT** define mutable value types.</span></span>  
   
- 변경할 수 있는 값 형식에는 몇 가지 문제가 있습니다. 예를 들어, 속성 getter 값 형식을 반환 하는 경우 호출자는 복사본을 받습니다. 복사본 암시적으로 만들어지기 때문에 개발자는 복사 및 원래 값이 아니라 변경 된 인식 아닐 수도 있습니다. 또한 일부 언어 \(특히에서 동적 언어\) 문제가 때문에 변경할 수 있는 값 형식을 사용 하 여 지역 변수를 역참조 시도, 수행 하면 복사 합니다.  
+ <span data-ttu-id="77b2a-109">변경 가능한 값 형식에 몇 가지 문제가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-109">Mutable value types have several problems.</span></span> <span data-ttu-id="77b2a-110">예를 들어, 속성 getter 값 형식을 반환 하는 경우 호출자에 게 복사본을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-110">For example, when a property getter returns a value type, the caller receives a copy.</span></span> <span data-ttu-id="77b2a-111">복사본을 암시적으로 생성 되므로 개발자는 복사 및 원래 값이 아니라 변경할는 인식 아닐 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-111">Because the copy is created implicitly, developers might not be aware that they are mutating the copy, and not the original value.</span></span> <span data-ttu-id="77b2a-112">또한, 일부 언어 (특히에서 동적 언어)는 문제 때문에 변경할 수 있는 값 형식을 사용 하 여 지역 변수를 포함 하 여 역참조 시, 하면 복사 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-112">Also, some languages (dynamic languages, in particular) have problems using mutable value types because even local variables, when dereferenced, cause a copy to be made.</span></span>  
   
- **✓ 수행** 있는지 확인 하세요. 모든 인스턴스 데이터를 상태 0으로 설정 되어 false 또는 null 적절 하 게 유효 합니다.  
+ <span data-ttu-id="77b2a-113">**✓ 않습니다** 0으로 설정 되어 있는 모든 인스턴스 데이터는 상태, false 또는 적절 하 게 null 올바른지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-113">**✓ DO** ensure that a state where all instance data is set to zero, false, or null (as appropriate) is valid.</span></span>  
   
- 이렇게 하면 실수로 잘못 된 인스턴스 만들기를 구조체의 배열을 만들어질 때 않습니다.  
+ <span data-ttu-id="77b2a-114">이렇게 하면 의도치 않게 잘못 된 인스턴스 만들기를 구조체의 배열을 만들 때 않습니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-114">This prevents accidental creation of invalid instances when an array of the structs is created.</span></span>  
   
- **✓ 수행** 구현 <xref:System.IEquatable%601> 값 형식에 있습니다.  
+ <span data-ttu-id="77b2a-115">**✓ 않습니다** 구현 <xref:System.IEquatable%601> 값 형식에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-115">**✓ DO** implement <xref:System.IEquatable%601> on value types.</span></span>  
   
- <xref:System.Object.Equals%2A?displayProperty=fullName> 리플렉션을 사용 하 여 해당 기본 구현은 매우 효율적 이므로 및 값 형식에서 메서드를 boxing을 사용 하면 됩니다.<xref:System.IEquatable%601.Equals%2A> 훨씬 더 나은 성능을 얻을 수 및 boxing이 발생 하지 것입니다 있도록 구현할 수 있습니다.  
+ <span data-ttu-id="77b2a-116"><xref:System.Object.Equals%2A?displayProperty=nameWithType> 값 형식에서 메서드를 boxing을 사용 하면 고 리플렉션을 사용 하기 때문에 기본 구현 효율적이 지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-116">The <xref:System.Object.Equals%2A?displayProperty=nameWithType> method on value types causes boxing, and its default implementation is not very efficient, because it uses reflection.</span></span> <span data-ttu-id="77b2a-117"><xref:System.IEquatable%601.Equals%2A>성능을 향상을 가질 수 있습니다 및 boxing이 발생 하지 것입니다 있도록 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-117"><xref:System.IEquatable%601.Equals%2A> can have much better performance and can be implemented so that it will not cause boxing.</span></span>  
   
- **X 하지 않으려면** 명시적으로 확장 <xref:System.ValueType>합니다. 사실 대부분의 언어 이러한 문제를 방지 합니다.  
+ <span data-ttu-id="77b2a-118">**X 하지 않으면** 명시적으로 확장 <xref:System.ValueType>합니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-118">**X DO NOT** explicitly extend <xref:System.ValueType>.</span></span> <span data-ttu-id="77b2a-119">실제로 대부분의 언어가를 방지 합니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-119">In fact, most languages prevent this.</span></span>  
   
- 일반적으로 구조체 매우 유용할 수 있지만 자주 박스형 하지 작은를 변경할 수 없는 단일 값만 사용 해야 합니다.  
+ <span data-ttu-id="77b2a-120">일반적으로 구조체 매우 유용할 수 있지만 자주 boxed 하지 하는 작은를 변경할 수 없는 단일 값만 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="77b2a-120">In general, structs can be very useful but should only be used for small, single, immutable values that will not be boxed frequently.</span></span>  
   
- *부분 © 2005, 2009 Microsoft Corporation. All rights reserved.*  
+ <span data-ttu-id="77b2a-121">*일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*</span><span class="sxs-lookup"><span data-stu-id="77b2a-121">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *피어슨 교육, i n c.에서의 사용 권한 때마다 다시 인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리, 제 2 판에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams Addison\-wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
+ <span data-ttu-id="77b2a-122">*피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*</span><span class="sxs-lookup"><span data-stu-id="77b2a-122">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## 참고 항목  
- [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)   
- [프레임 워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)   
- [클래스와 구조체 간의 선택](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+## <a name="see-also"></a><span data-ttu-id="77b2a-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="77b2a-123">See Also</span></span>  
+ [<span data-ttu-id="77b2a-124">형식 디자인 지침</span><span class="sxs-lookup"><span data-stu-id="77b2a-124">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="77b2a-125">프레임워크 디자인 지침</span><span class="sxs-lookup"><span data-stu-id="77b2a-125">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="77b2a-126">클래스 및 구조체 중에서 선택</span><span class="sxs-lookup"><span data-stu-id="77b2a-126">Choosing Between Class and Struct</span></span>](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

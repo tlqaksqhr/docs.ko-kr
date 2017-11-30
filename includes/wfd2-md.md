@@ -1,1 +1,1 @@
-Workflow Designer
+<span data-ttu-id="f37d8-101">Workflow Designer</span><span class="sxs-lookup"><span data-stu-id="f37d8-101">Workflow Designer</span></span>

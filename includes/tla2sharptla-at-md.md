@@ -1,1 +1,1 @@
-보조 기술
+<span data-ttu-id="148c5-101">보조 기술</span><span class="sxs-lookup"><span data-stu-id="148c5-101">assistive technology</span></span>

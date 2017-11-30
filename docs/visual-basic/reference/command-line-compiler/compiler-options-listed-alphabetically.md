@@ -1,106 +1,88 @@
 ---
-title: "Visual Basic 컴파일러 옵션 사전순 목록 | Microsoft 문서"
-ms.date: 2015-07-20
+title: Visual Basic Compiler Options Listed Alphabetically
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93246b3a38002955234a7a93529d05b71ab4e580
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0bcb3b182ee224457165be2177dd90ad48b00e56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic Compiler Options Listed Alphabetically
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] IDE(통합 개발 환경)에서 프로그램을 컴파일하는 대신 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 명령줄 컴파일러를 사용할 수 있습니다. 다음은 사전순으로 정렬된 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 명령줄 컴파일러 옵션 목록입니다.  
+# <a name="visual-basic-compiler-options-listed-alphabetically"></a><span data-ttu-id="3c53e-102">Visual Basic Compiler Options Listed Alphabetically</span><span class="sxs-lookup"><span data-stu-id="3c53e-102">Visual Basic Compiler Options Listed Alphabetically</span></span>
+<span data-ttu-id="3c53e-103">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] IDE(통합 개발 환경)에서 프로그램을 컴파일하는 대신 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 명령줄 컴파일러를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-103">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler is provided as an alternative to compiling programs from the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment (IDE).</span></span> <span data-ttu-id="3c53e-104">다음은 사전순으로 정렬된 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 명령줄 컴파일러 옵션 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-104">The following is a list of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler options sorted alphabetically.</span></span>  
   
-|옵션|용도|  
+|<span data-ttu-id="3c53e-105">옵션</span><span class="sxs-lookup"><span data-stu-id="3c53e-105">Option</span></span>|<span data-ttu-id="3c53e-106">용도</span><span class="sxs-lookup"><span data-stu-id="3c53e-106">Purpose</span></span>|  
 |------------|-------------|  
-|[@(지시 파일 지정)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|지시 파일을 지정합니다.|  
-|[/?](../../../visual-basic/reference/command-line-compiler/help.md)|컴파일러 옵션을 표시합니다. 이 명령은 `/help` 옵션 지정과 같습니다. 컴파일이 수행되지 않습니다.|  
-|`/additionalfile`|코드 생성에 직접 영향을 주지 않지만 오류 또는 경고를 생성하기 위해 분석기에서 사용할 수 있는 추가 파일에 이름을 지정합니다.|  
-|[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|컴파일러에서 지정된 파일의 모든 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.|  
-|`/analyzer`|이 어셈블리에서 분석기를 실행합니다(약식: /a).|  
-|[/baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|DLL의 기본 주소를 지정합니다.|  
-|[/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|쉽게 버그를 보고할 수 있도록 정보가 포함된 파일을 만듭니다.|  
-|`/checksumalgorithm:<alg>`|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 SHA1(기본값) 또는 SHA256입니다.|  
-|[/codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.|  
-|[/debug](../../../visual-basic/reference/command-line-compiler/debug.md)|디버깅 정보를 생성합니다.|  
-|[/define](../../../visual-basic/reference/command-line-compiler/define.md)|조건부 컴파일 기호를 정의합니다.|  
-|[/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다.|  
-|[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|XML 파일에 대해 문서 주석을 처리합니다.|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 컴파일러에서 내부 컴파일러 오류를 보고하는 방식을 지정합니다.|  
-|[/filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|출력 파일의 섹션에 맞출 위치를 지정합니다.|  
-|[/help](../../../visual-basic/reference/command-line-compiler/help.md)|컴파일러 옵션을 표시합니다. 이 명령은 `/?` 옵션 지정과 같습니다. 컴파일이 수행되지 않습니다.|  
-|[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|특정 실행 파일이 높은 엔트로피 ASLR(Address Space Layout Randomization)을 지원하는지 여부를 나타냅니다.|  
-|[/imports](../../../visual-basic/reference/command-line-compiler/imports.md)|지정된 어셈블리에서 네임스페이스를 가져옵니다.|  
-|[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|어셈블리에 강력한 이름을 지정하는 키 쌍의 키 컨테이너 이름을 지정합니다.|  
-|[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|언어 버전을 지정: 9 | 9.0 | 10 | 10.0 | 11 | 11.0입니다.|  
-|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|참조 어셈블리의 위치를 지정 된 [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션입니다.|  
-|[/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|관리되는 리소스에 대한 링크를 만듭니다.|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|포함 하는 클래스를 지정 합니다.는 `Sub``Main` 프로시저를 시작할 때 사용 합니다.|  
-|[/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|모듈이 속할 어셈블리의 이름을 지정합니다.|  
-|`/modulename:<string>`|소스 모듈의 이름을 지정합니다.|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)]를 대상으로 하도록 컴파일러를 설정합니다.|  
-|[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Vbc.rsp로 컴파일하지 않습니다.|  
-|[/nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|컴파일러 배너 정보를 표시하지 않습니다.|  
-|[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|컴파일러에서 표준 라이브러리를 참조하지 않도록 합니다.|  
-|[/nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)|컴파일러에서 경고를 생성하지 않도록 합니다.|  
-|[/nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.|  
-|[/optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|코드 최적화를 사용하거나 사용하지 않도록 설정합니다.|  
-|[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|문자열 비교가 이진인지 또는 로캘별 텍스트 의미 체계를 사용해야 하는지를 지정합니다.|  
-|[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|명시적 변수 선언이 있어야 합니다.|  
-|[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.|  
-|[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|언어 의미 체계를 엄격하게 확인합니다.|  
-|[/out](../../../visual-basic/reference/command-line-compiler/out.md)|출력 파일을 지정합니다.|  
-|`/parallel[+&#124;-]`|동시 빌드(+)를 사용할지 여부를 지정합니다.|  
-|[/platform](../../../visual-basic/reference/command-line-compiler/platform.md)|출력 파일에 대한 컴파일러 대상으로 프로세서 플랫폼을 지정합니다.|  
-|`/preferreduilang`|기본 출력 언어 이름을 지정합니다.|  
-|[/quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|컴파일러에서 구문 관련 오류 및 경고에 대한 코드를 표시하지 않도록 합니다.|  
-|[/recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|하위 디렉터리에서 컴파일할 소스 파일을 검색합니다.|  
-|[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)|어셈블리에서 메타데이터를 가져옵니다.|  
-|[/removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|정수 오버플로 검사를 사용하지 않습니다.|  
-|[/resource](../../../visual-basic/reference/command-line-compiler/resource.md)|관리되는 리소스를 어셈블리에 포함합니다.|  
-|[/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|모든 형식 선언에 대한 네임스페이스를 지정합니다.|  
-|`/ruleset:<file>`|특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.|  
-|[/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Mscorlib.dll 및 Microsoft.VisualBasic.dll의 위치를 지정합니다.|  
-|[/subsystemversion](../../../visual-basic/reference/command-line-compiler/subsystemversion.md)|생성된 실행 파일이 사용할 수 있는 하위 시스템의 최소 버전을 지정합니다.|  
-|[/target](../../../visual-basic/reference/command-line-compiler/target.md)|출력 파일의 형식을 지정합니다.|  
-|[/utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|UTF-8 인코딩을 사용하여 컴파일러 출력을 표시합니다.|  
-|[/vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|컴파일러에서 Visual Basic 런타임 라이브러리에 대한 참조 없이 컴파일하거나 특정 런타임 라이브러리를 참조하여 컴파일하도록 지정합니다.|  
-|[/verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|컴파일하는 동안 추가 정보를 출력합니다.|  
-|[/warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|경고를 오류로 승격합니다.|  
-|[/win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|출력 파일에 .ico 파일을 삽입합니다.|  
-|[/win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 응용 프로그램 매니페스트 파일을 식별합니다.|  
-|[/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|출력 파일에 Win32 리소스를 삽입합니다.|  
+|[<span data-ttu-id="3c53e-107">@(지시 파일 지정)</span><span class="sxs-lookup"><span data-stu-id="3c53e-107">@ (Specify Response File)</span></span>](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|<span data-ttu-id="3c53e-108">지시 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-108">Specifies a response file.</span></span>|  
+|[<span data-ttu-id="3c53e-109">/?</span><span class="sxs-lookup"><span data-stu-id="3c53e-109">/?</span></span>](../../../visual-basic/reference/command-line-compiler/help.md)|<span data-ttu-id="3c53e-110">컴파일러 옵션을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-110">Displays compiler options.</span></span> <span data-ttu-id="3c53e-111">이 명령은 `/help` 옵션 지정과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-111">This command is the same as specifying the `/help` option.</span></span> <span data-ttu-id="3c53e-112">컴파일이 수행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-112">No compilation occurs.</span></span>|  
+|`/additionalfile`|<span data-ttu-id="3c53e-113">코드 생성에 직접 영향을 주지 않지만 오류 또는 경고를 생성하기 위해 분석기에서 사용할 수 있는 추가 파일에 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-113">Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.</span></span>|  
+|[<span data-ttu-id="3c53e-114">/addmodule</span><span class="sxs-lookup"><span data-stu-id="3c53e-114">/addmodule</span></span>](../../../visual-basic/reference/command-line-compiler/addmodule.md)|<span data-ttu-id="3c53e-115">컴파일러에서 지정된 파일의 모든 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-115">Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.</span></span>|  
+|`/analyzer`|<span data-ttu-id="3c53e-116">이 어셈블리에서 분석기를 실행합니다(약식: /a).</span><span class="sxs-lookup"><span data-stu-id="3c53e-116">Run the analyzers from this assembly (Short form: /a)</span></span>|  
+|[<span data-ttu-id="3c53e-117">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="3c53e-117">/baseaddress</span></span>](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|<span data-ttu-id="3c53e-118">DLL의 기본 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-118">Specifies the base address of a DLL.</span></span>|  
+|[<span data-ttu-id="3c53e-119">/bugreport</span><span class="sxs-lookup"><span data-stu-id="3c53e-119">/bugreport</span></span>](../../../visual-basic/reference/command-line-compiler/bugreport.md)|<span data-ttu-id="3c53e-120">쉽게 버그를 보고할 수 있도록 정보가 포함된 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-120">Creates a file that contains information that makes it easy to report a bug.</span></span>|  
+|`/checksumalgorithm:<alg>`|<span data-ttu-id="3c53e-121">PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-121">Specify the algorithm for calculating the source file checksum stored in PDB.</span></span>  <span data-ttu-id="3c53e-122">지원되는 값은 SHA1(기본값) 또는 SHA256입니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-122">Supported values are: SHA1 (default) or SHA256.</span></span>|  
+|[<span data-ttu-id="3c53e-123">/codepage</span><span class="sxs-lookup"><span data-stu-id="3c53e-123">/codepage</span></span>](../../../visual-basic/reference/command-line-compiler/codepage.md)|<span data-ttu-id="3c53e-124">컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-124">Specifies the code page to use for all source code files in the compilation.</span></span>|  
+|[<span data-ttu-id="3c53e-125">/debug</span><span class="sxs-lookup"><span data-stu-id="3c53e-125">/debug</span></span>](../../../visual-basic/reference/command-line-compiler/debug.md)|<span data-ttu-id="3c53e-126">디버깅 정보를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-126">Produces debugging information.</span></span>|  
+|[<span data-ttu-id="3c53e-127">/define</span><span class="sxs-lookup"><span data-stu-id="3c53e-127">/define</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)|<span data-ttu-id="3c53e-128">조건부 컴파일 기호를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-128">Defines symbols for conditional compilation.</span></span>|  
+|[<span data-ttu-id="3c53e-129">/delaysign</span><span class="sxs-lookup"><span data-stu-id="3c53e-129">/delaysign</span></span>](../../../visual-basic/reference/command-line-compiler/delaysign.md)|<span data-ttu-id="3c53e-130">어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-130">Specifies whether the assembly will be fully or partially signed.</span></span>|  
+|[<span data-ttu-id="3c53e-131">/doc</span><span class="sxs-lookup"><span data-stu-id="3c53e-131">/doc</span></span>](../../../visual-basic/reference/command-line-compiler/doc.md)|<span data-ttu-id="3c53e-132">XML 파일에 대해 문서 주석을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-132">Processes documentation comments to an XML file.</span></span>|  
+|[<span data-ttu-id="3c53e-133">/errorreport</span><span class="sxs-lookup"><span data-stu-id="3c53e-133">/errorreport</span></span>](../../../visual-basic/reference/command-line-compiler/errorreport.md)|<span data-ttu-id="3c53e-134">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에서 내부 컴파일러 오류를 보고하는 방식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-134">Specifies how the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler should report internal compiler errors.</span></span>|  
+|[<span data-ttu-id="3c53e-135">/filealign</span><span class="sxs-lookup"><span data-stu-id="3c53e-135">/filealign</span></span>](../../../visual-basic/reference/command-line-compiler/filealign.md)|<span data-ttu-id="3c53e-136">출력 파일의 섹션에 맞출 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-136">Specifies where to align the sections of the output file.</span></span>|  
+|[<span data-ttu-id="3c53e-137">/help</span><span class="sxs-lookup"><span data-stu-id="3c53e-137">/help</span></span>](../../../visual-basic/reference/command-line-compiler/help.md)|<span data-ttu-id="3c53e-138">컴파일러 옵션을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-138">Displays compiler options.</span></span> <span data-ttu-id="3c53e-139">이 명령은 `/?` 옵션 지정과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-139">This command is the same as specifying the `/?` option.</span></span> <span data-ttu-id="3c53e-140">컴파일이 수행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-140">No compilation occurs.</span></span>|  
+|[<span data-ttu-id="3c53e-141">/highentropyva</span><span class="sxs-lookup"><span data-stu-id="3c53e-141">/highentropyva</span></span>](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|<span data-ttu-id="3c53e-142">특정 실행 파일이 높은 엔트로피 ASLR(Address Space Layout Randomization)을 지원하는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-142">Indicates whether a particular executable supports high entropy Address Space Layout Randomization (ASLR).</span></span>|  
+|[<span data-ttu-id="3c53e-143">/imports</span><span class="sxs-lookup"><span data-stu-id="3c53e-143">/imports</span></span>](../../../visual-basic/reference/command-line-compiler/imports.md)|<span data-ttu-id="3c53e-144">지정된 어셈블리에서 네임스페이스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-144">Imports a namespace from a specified assembly.</span></span>|  
+|[<span data-ttu-id="3c53e-145">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="3c53e-145">/keycontainer</span></span>](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|<span data-ttu-id="3c53e-146">어셈블리에 강력한 이름을 지정하는 키 쌍의 키 컨테이너 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-146">Specifies a key container name for a key pair to give an assembly a strong name.</span></span>|  
+|[<span data-ttu-id="3c53e-147">/keyfile</span><span class="sxs-lookup"><span data-stu-id="3c53e-147">/keyfile</span></span>](../../../visual-basic/reference/command-line-compiler/keyfile.md)|<span data-ttu-id="3c53e-148">어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-148">Specifies a file that contains a key or key pair to give an assembly a strong name.</span></span>|  
+|[<span data-ttu-id="3c53e-149">/langversion</span><span class="sxs-lookup"><span data-stu-id="3c53e-149">/langversion</span></span>](../../../visual-basic/reference/command-line-compiler/langversion.md)|<span data-ttu-id="3c53e-150">언어 버전 지정: 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0입니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-150">Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.</span></span>|  
+|[<span data-ttu-id="3c53e-151">/libpath</span><span class="sxs-lookup"><span data-stu-id="3c53e-151">/libpath</span></span>](../../../visual-basic/reference/command-line-compiler/libpath.md)|<span data-ttu-id="3c53e-152">참조 어셈블리의 위치를 지정 된 [/참조](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-152">Specifies the location of assemblies referenced by the [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>|  
+|[<span data-ttu-id="3c53e-153">/linkresource</span><span class="sxs-lookup"><span data-stu-id="3c53e-153">/linkresource</span></span>](../../../visual-basic/reference/command-line-compiler/linkresource.md)|<span data-ttu-id="3c53e-154">관리되는 리소스에 대한 링크를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-154">Creates a link to a managed resource.</span></span>|  
+|[<span data-ttu-id="3c53e-155">/main</span><span class="sxs-lookup"><span data-stu-id="3c53e-155">/main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)|<span data-ttu-id="3c53e-156">포함 된 클래스를 지정 하는 `Sub Main` 프로시저를 시작할 때 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-156">Specifies the class that contains the `Sub Main` procedure to use at startup.</span></span>|  
+|[<span data-ttu-id="3c53e-157">/moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="3c53e-157">/moduleassemblyname</span></span>](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|<span data-ttu-id="3c53e-158">모듈이 속할 어셈블리의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-158">Specifies the name of the assembly that a module will be a part of.</span></span>|  
+|`/modulename:<string>`|<span data-ttu-id="3c53e-159">소스 모듈의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-159">Specify the name of the source module</span></span>|  
+|[<span data-ttu-id="3c53e-160">/netcf</span><span class="sxs-lookup"><span data-stu-id="3c53e-160">/netcf</span></span>](../../../visual-basic/reference/command-line-compiler/netcf.md)|<span data-ttu-id="3c53e-161">[!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-161">Sets the compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>|  
+|[<span data-ttu-id="3c53e-162">/noconfig</span><span class="sxs-lookup"><span data-stu-id="3c53e-162">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)|<span data-ttu-id="3c53e-163">Vbc.rsp로 컴파일하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-163">Do not compile with Vbc.rsp.</span></span>|  
+|[<span data-ttu-id="3c53e-164">/nologo</span><span class="sxs-lookup"><span data-stu-id="3c53e-164">/nologo</span></span>](../../../visual-basic/reference/command-line-compiler/nologo.md)|<span data-ttu-id="3c53e-165">컴파일러 배너 정보를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-165">Suppresses compiler banner information.</span></span>|  
+|[<span data-ttu-id="3c53e-166">/nostdlib</span><span class="sxs-lookup"><span data-stu-id="3c53e-166">/nostdlib</span></span>](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|<span data-ttu-id="3c53e-167">컴파일러에서 표준 라이브러리를 참조하지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-167">Causes the compiler not to reference the standard libraries.</span></span>|  
+|[<span data-ttu-id="3c53e-168">/nowarn</span><span class="sxs-lookup"><span data-stu-id="3c53e-168">/nowarn</span></span>](../../../visual-basic/reference/command-line-compiler/nowarn.md)|<span data-ttu-id="3c53e-169">컴파일러에서 경고를 생성하지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-169">Suppresses the compiler's ability to generate warnings.</span></span>|  
+|[<span data-ttu-id="3c53e-170">/nowin32manifest</span><span class="sxs-lookup"><span data-stu-id="3c53e-170">/nowin32manifest</span></span>](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|<span data-ttu-id="3c53e-171">실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-171">Instructs the compiler not to embed any application manifest into the executable file.</span></span>|  
+|[<span data-ttu-id="3c53e-172">/optimize</span><span class="sxs-lookup"><span data-stu-id="3c53e-172">/optimize</span></span>](../../../visual-basic/reference/command-line-compiler/optimize.md)|<span data-ttu-id="3c53e-173">코드 최적화를 사용하거나 사용하지 않도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-173">Enables/disables code optimization.</span></span>|  
+|[<span data-ttu-id="3c53e-174">/optioncompare</span><span class="sxs-lookup"><span data-stu-id="3c53e-174">/optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|<span data-ttu-id="3c53e-175">문자열 비교가 이진인지 또는 로캘별 텍스트 의미 체계를 사용해야 하는지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-175">Specifies whether string comparisons should be binary or use locale-specific text semantics.</span></span>|  
+|[<span data-ttu-id="3c53e-176">/optionexplicit</span><span class="sxs-lookup"><span data-stu-id="3c53e-176">/optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|<span data-ttu-id="3c53e-177">명시적 변수 선언이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-177">Enforces explicit declaration of variables.</span></span>|  
+|[<span data-ttu-id="3c53e-178">/optioninfer</span><span class="sxs-lookup"><span data-stu-id="3c53e-178">/optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|<span data-ttu-id="3c53e-179">변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-179">Enables the use of local type inference in variable declarations.</span></span>|  
+|[<span data-ttu-id="3c53e-180">/optionstrict</span><span class="sxs-lookup"><span data-stu-id="3c53e-180">/optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|<span data-ttu-id="3c53e-181">언어 의미 체계를 엄격하게 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-181">Enforces strict language semantics.</span></span>|  
+|[<span data-ttu-id="3c53e-182">/out</span><span class="sxs-lookup"><span data-stu-id="3c53e-182">/out</span></span>](../../../visual-basic/reference/command-line-compiler/out.md)|<span data-ttu-id="3c53e-183">출력 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-183">Specifies an output file.</span></span>|  
+|`/parallel[+&#124;-]`|<span data-ttu-id="3c53e-184">동시 빌드(+)를 사용할지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-184">Specifies whether to use concurrent build (+).</span></span>|  
+|[<span data-ttu-id="3c53e-185">/platform</span><span class="sxs-lookup"><span data-stu-id="3c53e-185">/platform</span></span>](../../../visual-basic/reference/command-line-compiler/platform.md)|<span data-ttu-id="3c53e-186">출력 파일에 대한 컴파일러 대상으로 프로세서 플랫폼을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-186">Specifies the processor platform the compiler targets for the output file.</span></span>|  
+|`/preferreduilang`|<span data-ttu-id="3c53e-187">기본 출력 언어 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-187">Specify the preferred output language name.</span></span>|  
+|[<span data-ttu-id="3c53e-188">/quiet</span><span class="sxs-lookup"><span data-stu-id="3c53e-188">/quiet</span></span>](../../../visual-basic/reference/command-line-compiler/quiet.md)|<span data-ttu-id="3c53e-189">컴파일러에서 구문 관련 오류 및 경고에 대한 코드를 표시하지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-189">Prevents the compiler from displaying code for syntax-related errors and warnings.</span></span>|  
+|[<span data-ttu-id="3c53e-190">/recurse</span><span class="sxs-lookup"><span data-stu-id="3c53e-190">/recurse</span></span>](../../../visual-basic/reference/command-line-compiler/recurse.md)|<span data-ttu-id="3c53e-191">하위 디렉터리에서 컴파일할 소스 파일을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-191">Searches subdirectories for source files to compile.</span></span>|  
+|[<span data-ttu-id="3c53e-192">/reference</span><span class="sxs-lookup"><span data-stu-id="3c53e-192">/reference</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)|<span data-ttu-id="3c53e-193">어셈블리에서 메타데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-193">Imports metadata from an assembly.</span></span>|  
+|[<span data-ttu-id="3c53e-194">/removeintchecks</span><span class="sxs-lookup"><span data-stu-id="3c53e-194">/removeintchecks</span></span>](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|<span data-ttu-id="3c53e-195">정수 오버플로 검사를 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-195">Disables integer overflow checking.</span></span>|  
+|[<span data-ttu-id="3c53e-196">/resource</span><span class="sxs-lookup"><span data-stu-id="3c53e-196">/resource</span></span>](../../../visual-basic/reference/command-line-compiler/resource.md)|<span data-ttu-id="3c53e-197">관리되는 리소스를 어셈블리에 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-197">Embeds a managed resource in an assembly.</span></span>|  
+|[<span data-ttu-id="3c53e-198">/rootnamespace</span><span class="sxs-lookup"><span data-stu-id="3c53e-198">/rootnamespace</span></span>](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|<span data-ttu-id="3c53e-199">모든 형식 선언에 대한 네임스페이스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-199">Specifies a namespace for all type declarations.</span></span>|  
+|`/ruleset:<file>`|<span data-ttu-id="3c53e-200">특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-200">Specify a ruleset file that disables specific diagnostics.</span></span>|  
+|[<span data-ttu-id="3c53e-201">/sdkpath</span><span class="sxs-lookup"><span data-stu-id="3c53e-201">/sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|<span data-ttu-id="3c53e-202">Mscorlib.dll 및 Microsoft.VisualBasic.dll의 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-202">Specifies the location of Mscorlib.dll and Microsoft.VisualBasic.dll.</span></span>|  
+|[<span data-ttu-id="3c53e-203">/subsystemversion</span><span class="sxs-lookup"><span data-stu-id="3c53e-203">/subsystemversion</span></span>](../../../visual-basic/reference/command-line-compiler/subsystemversion.md)|<span data-ttu-id="3c53e-204">생성된 실행 파일이 사용할 수 있는 하위 시스템의 최소 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-204">Specifies the minimum version of the subsystem that the generated executable file can use.</span></span>|  
+|[<span data-ttu-id="3c53e-205">/target</span><span class="sxs-lookup"><span data-stu-id="3c53e-205">/target</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)|<span data-ttu-id="3c53e-206">출력 파일의 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-206">Specifies the format of the output file.</span></span>|  
+|[<span data-ttu-id="3c53e-207">/utf8output</span><span class="sxs-lookup"><span data-stu-id="3c53e-207">/utf8output</span></span>](../../../visual-basic/reference/command-line-compiler/utf8output.md)|<span data-ttu-id="3c53e-208">UTF-8 인코딩을 사용하여 컴파일러 출력을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-208">Displays compiler output using UTF-8 encoding.</span></span>|  
+|[<span data-ttu-id="3c53e-209">/vbruntime</span><span class="sxs-lookup"><span data-stu-id="3c53e-209">/vbruntime</span></span>](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|<span data-ttu-id="3c53e-210">컴파일러에서 Visual Basic 런타임 라이브러리에 대한 참조 없이 컴파일하거나 특정 런타임 라이브러리를 참조하여 컴파일하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-210">Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.</span></span>|  
+|[<span data-ttu-id="3c53e-211">/verbose</span><span class="sxs-lookup"><span data-stu-id="3c53e-211">/verbose</span></span>](../../../visual-basic/reference/command-line-compiler/verbose.md)|<span data-ttu-id="3c53e-212">컴파일하는 동안 추가 정보를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-212">Outputs extra information during compilation.</span></span>|  
+|[<span data-ttu-id="3c53e-213">/warnaserror</span><span class="sxs-lookup"><span data-stu-id="3c53e-213">/warnaserror</span></span>](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|<span data-ttu-id="3c53e-214">경고를 오류로 승격합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-214">Promotes warnings to errors.</span></span>|  
+|[<span data-ttu-id="3c53e-215">/win32icon</span><span class="sxs-lookup"><span data-stu-id="3c53e-215">/win32icon</span></span>](../../../visual-basic/reference/command-line-compiler/win32icon.md)|<span data-ttu-id="3c53e-216">출력 파일에 .ico 파일을 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-216">Inserts an .ico file into the output file.</span></span>|  
+|[<span data-ttu-id="3c53e-217">/win32manifest</span><span class="sxs-lookup"><span data-stu-id="3c53e-217">/win32manifest</span></span>](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|<span data-ttu-id="3c53e-218">프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 응용 프로그램 매니페스트 파일을 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-218">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>|  
+|[<span data-ttu-id="3c53e-219">/win32resource</span><span class="sxs-lookup"><span data-stu-id="3c53e-219">/win32resource</span></span>](../../../visual-basic/reference/command-line-compiler/win32resource.md)|<span data-ttu-id="3c53e-220">출력 파일에 Win32 리소스를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="3c53e-220">Inserts a Win32 resource into the output file.</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 컴파일러 옵션 범주별 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)   
- [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [C# 컴파일러 옵션 사전순 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [범주별 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a><span data-ttu-id="3c53e-221">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3c53e-221">See Also</span></span>  
+ [<span data-ttu-id="3c53e-222">Visual Basic 컴파일러 옵션 범주별 목록</span><span class="sxs-lookup"><span data-stu-id="3c53e-222">Visual Basic Compiler Options Listed by Category</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+ [<span data-ttu-id="3c53e-223">프로젝트 디자이너 소개</span><span class="sxs-lookup"><span data-stu-id="3c53e-223">Introduction to the Project Designer</span></span>](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [<span data-ttu-id="3c53e-224">사전순 C# 컴파일러 옵션 목록</span><span class="sxs-lookup"><span data-stu-id="3c53e-224">C# Compiler Options Listed Alphabetically</span></span>](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [<span data-ttu-id="3c53e-225">범주별 C# 컴파일러 옵션 목록</span><span class="sxs-lookup"><span data-stu-id="3c53e-225">C# Compiler Options Listed by Category</span></span>](../../../csharp/language-reference/compiler-options/listed-by-category.md)

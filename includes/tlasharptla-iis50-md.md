@@ -1,1 +1,1 @@
-Microsoft IIS(인터넷 정보 서비스) 5.0
+<span data-ttu-id="9547c-101">Microsoft IIS(인터넷 정보 서비스) 5.0</span><span class="sxs-lookup"><span data-stu-id="9547c-101">Microsoft Internet Information Services (IIS) 5.0</span></span>

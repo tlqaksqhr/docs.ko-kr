@@ -1,1 +1,1 @@
-유니코드
+<span data-ttu-id="2bc9c-101">유니코드</span><span class="sxs-lookup"><span data-stu-id="2bc9c-101">Unicode</span></span>

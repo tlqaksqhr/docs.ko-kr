@@ -1,1 +1,1 @@
-Windows Internet Explorer
+<span data-ttu-id="ff7cb-101">Windows Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="ff7cb-101">Windows Internet Explorer</span></span>

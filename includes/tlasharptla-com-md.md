@@ -1,1 +1,1 @@
-COM(구성 요소 개체 모델)
+<span data-ttu-id="140ea-101">COM(구성 요소 개체 모델)</span><span class="sxs-lookup"><span data-stu-id="140ea-101">Component Object Model (COM)</span></span>

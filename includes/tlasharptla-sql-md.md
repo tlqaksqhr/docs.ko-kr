@@ -1,1 +1,1 @@
-SQL(구조적 쿼리 언어)
+<span data-ttu-id="ea4cf-101">SQL(구조적 쿼리 언어)</span><span class="sxs-lookup"><span data-stu-id="ea4cf-101">Structured Query Language (SQL)</span></span>

@@ -1,1 +1,1 @@
-Windows 7 운영 체제
+<span data-ttu-id="288a7-101">Windows 7 운영 체제</span><span class="sxs-lookup"><span data-stu-id="288a7-101">Windows°7 operating system</span></span>

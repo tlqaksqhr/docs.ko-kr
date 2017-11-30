@@ -1,1 +1,1 @@
-2차원
+<span data-ttu-id="a9eb3-101">2차원</span><span class="sxs-lookup"><span data-stu-id="a9eb3-101">2-D</span></span>

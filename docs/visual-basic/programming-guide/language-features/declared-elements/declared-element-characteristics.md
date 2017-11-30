@@ -1,73 +1,72 @@
 ---
-title: "Declared Element Characteristics (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declared elements, lifetime"
-  - "access levels, declared elements"
-  - "declared elements, scope"
-  - "visibility, declared elements"
-  - "elements, programming"
-  - "scope, declared elements"
-  - "lifetime, declared elements"
-  - "declared elements, access level"
-  - "data types [Visual Basic], declared elements"
-  - "declared elements, visibility"
+title: "선언된 요소 특성(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- declared elements [Visual Basic], lifetime
+- access levels, declared elements
+- declared elements [Visual Basic], scope
+- visibility [Visual Basic], declared elements
+- elements [Visual Basic], programming
+- scope [Visual Basic], declared elements
+- lifetime [Visual Basic], declared elements
+- declared elements [Visual Basic], access level
+- data types [Visual Basic], declared elements
+- declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 26ee27d3a1d085c6ab45ae850dbdac700aa208a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Declared Element Characteristics (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-선언 요소의 *특징*은 코드가 이 요소와 상호 작용하는 방식에 영향을 주는 부분을 말합니다.  선언된 모든 요소에는 다음 특징이 하나 이상 연결되어 있습니다.  
+# <a name="declared-element-characteristics-visual-basic"></a><span data-ttu-id="0a8e9-102">선언된 요소 특성(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a8e9-102">Declared Element Characteristics (Visual Basic)</span></span>
+<span data-ttu-id="0a8e9-103">A *특징* 선언 요소의 코드 상호 작용 하는 방법에 영향을 주는 요소는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-103">A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it.</span></span> <span data-ttu-id="0a8e9-104">선언 된 모든 요소에 하나 이상의 관련 된 다음과 같은 특징이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-104">Every declared element has one or more of the following characteristics associated with it:</span></span>  
   
--   *데이터 형식* — 요소에 사용할 수 있는 값과 이러한 값이 저장되는 방식  자세한 내용은 [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)을 참조하십시오.  
+-   <span data-ttu-id="0a8e9-105">*데이터 형식* -요소에 수의 값과 이러한 값이 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-105">*Data type* — the values the element can hold, and how it stores those values.</span></span> <span data-ttu-id="0a8e9-106">자세한 내용은 참조 [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-106">For more information, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
--   *수명* — 요소를 사용할 수 있는 실행 기간  자세한 내용은 [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)을 참조하십시오.  
+-   <span data-ttu-id="0a8e9-107">*수명* -요소를 사용할 수 있는 실행 기간입니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-107">*Lifetime* — the period of execution time during which the element is available for use.</span></span> <span data-ttu-id="0a8e9-108">자세한 내용은 참조 [Visual Basic의 수명](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-108">For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span></span>  
   
--   *범위* — 요소 이름을 한정하지 않고 이를 참조할 수 있는 모든 코드 집합  자세한 내용은 [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)를 참조하십시오.  
+-   <span data-ttu-id="0a8e9-109">*범위* -이름을 한정 하지 않고 요소를 참조할 수 있는 모든 코드의 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-109">*Scope* — the set of all code that can refer to the element without qualifying its name.</span></span> <span data-ttu-id="0a8e9-110">자세한 내용은 참조 [하는 방법: 변수의 범위 제어](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-110">For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).</span></span>  
   
--   *액세스 수준* — 코드가 요소를 사용할 수 있는 권한  자세한 내용은 [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)를 참조하십시오.  
+-   <span data-ttu-id="0a8e9-111">*액세스 수준* -확인 하는 코드에 대 한 권한을 요소를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-111">*Access level* — the permission for code to make use of the element.</span></span> <span data-ttu-id="0a8e9-112">자세한 내용은 참조 [하는 방법: 변수의 사용 가능성 제어](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-112">For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).</span></span>  
   
-## 요소의 특징  
- 다음 표에서는 선언 요소와 각 요소에 해당되는 특징을 보여 줍니다.  
+## <a name="characteristics-of-the-elements"></a><span data-ttu-id="0a8e9-113">요소 특징</span><span class="sxs-lookup"><span data-stu-id="0a8e9-113">Characteristics of the Elements</span></span>  
+ <span data-ttu-id="0a8e9-114">다음 표에서 선언 된 요소와 각 배열에 적용 되는 특징을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-114">The following table shows the declared elements and the characteristics that apply to each one.</span></span>  
   
-|요소|데이터 형식|수명|범위 <sup>1</sup>|액세스 수준|  
-|--------|------------|--------|---------------------|------------|  
-|변수|예|예|예|예|  
-|상수|예|아니요|예|예|  
-|열거형|예|아니요|예|예|  
-|구조체|아니요|아니요|예|예|  
-|Property|예|예|예|예|  
-|메서드|아니요|예|예|예|  
-|프로시저\(`Sub` 또는 `Function`\)|아니요|예|예|예|  
-|프로시저 매개 변수|예|예|예|아니요|  
-|함수 반환값|예|예|예|아니요|  
-|Operator|예|아니요|예|예|  
-|Interface|아니요|아니요|예|예|  
-|클래스|아니요|아니요|예|예|  
-|Event|아니요|아니요|예|예|  
-|대리자|아니요|아니요|예|예|  
+|<span data-ttu-id="0a8e9-115">요소</span><span class="sxs-lookup"><span data-stu-id="0a8e9-115">Element</span></span>|<span data-ttu-id="0a8e9-116">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="0a8e9-116">Data Type</span></span>|<span data-ttu-id="0a8e9-117">수명</span><span class="sxs-lookup"><span data-stu-id="0a8e9-117">Lifetime</span></span>|<span data-ttu-id="0a8e9-118">범위 <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="0a8e9-118">Scope <sup>1</sup></span></span>|<span data-ttu-id="0a8e9-119">액세스 수준</span><span class="sxs-lookup"><span data-stu-id="0a8e9-119">Access Level</span></span>|  
+|-------------|---------------|--------------|------------------------|------------------|  
+|<span data-ttu-id="0a8e9-120">변수</span><span class="sxs-lookup"><span data-stu-id="0a8e9-120">Variable</span></span>|<span data-ttu-id="0a8e9-121">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-121">Yes</span></span>|<span data-ttu-id="0a8e9-122">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-122">Yes</span></span>|<span data-ttu-id="0a8e9-123">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-123">Yes</span></span>|<span data-ttu-id="0a8e9-124">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-124">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-125">상수</span><span class="sxs-lookup"><span data-stu-id="0a8e9-125">Constant</span></span>|<span data-ttu-id="0a8e9-126">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-126">Yes</span></span>|<span data-ttu-id="0a8e9-127">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-127">No</span></span>|<span data-ttu-id="0a8e9-128">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-128">Yes</span></span>|<span data-ttu-id="0a8e9-129">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-129">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-130">열거형</span><span class="sxs-lookup"><span data-stu-id="0a8e9-130">Enumeration</span></span>|<span data-ttu-id="0a8e9-131">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-131">Yes</span></span>|<span data-ttu-id="0a8e9-132">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-132">No</span></span>|<span data-ttu-id="0a8e9-133">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-133">Yes</span></span>|<span data-ttu-id="0a8e9-134">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-134">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-135">구조체</span><span class="sxs-lookup"><span data-stu-id="0a8e9-135">Structure</span></span>|<span data-ttu-id="0a8e9-136">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-136">No</span></span>|<span data-ttu-id="0a8e9-137">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-137">No</span></span>|<span data-ttu-id="0a8e9-138">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-138">Yes</span></span>|<span data-ttu-id="0a8e9-139">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-139">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-140">속성</span><span class="sxs-lookup"><span data-stu-id="0a8e9-140">Property</span></span>|<span data-ttu-id="0a8e9-141">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-141">Yes</span></span>|<span data-ttu-id="0a8e9-142">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-142">Yes</span></span>|<span data-ttu-id="0a8e9-143">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-143">Yes</span></span>|<span data-ttu-id="0a8e9-144">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-144">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-145">메서드</span><span class="sxs-lookup"><span data-stu-id="0a8e9-145">Method</span></span>|<span data-ttu-id="0a8e9-146">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-146">No</span></span>|<span data-ttu-id="0a8e9-147">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-147">Yes</span></span>|<span data-ttu-id="0a8e9-148">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-148">Yes</span></span>|<span data-ttu-id="0a8e9-149">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-149">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-150">프로시저 (`Sub` 또는 `Function`)</span><span class="sxs-lookup"><span data-stu-id="0a8e9-150">Procedure (`Sub` or `Function`)</span></span>|<span data-ttu-id="0a8e9-151">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-151">No</span></span>|<span data-ttu-id="0a8e9-152">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-152">Yes</span></span>|<span data-ttu-id="0a8e9-153">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-153">Yes</span></span>|<span data-ttu-id="0a8e9-154">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-154">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-155">프로시저 매개 변수</span><span class="sxs-lookup"><span data-stu-id="0a8e9-155">Procedure parameter</span></span>|<span data-ttu-id="0a8e9-156">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-156">Yes</span></span>|<span data-ttu-id="0a8e9-157">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-157">Yes</span></span>|<span data-ttu-id="0a8e9-158">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-158">Yes</span></span>|<span data-ttu-id="0a8e9-159">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-159">No</span></span>|  
+|<span data-ttu-id="0a8e9-160">함수 반환 값</span><span class="sxs-lookup"><span data-stu-id="0a8e9-160">Function return</span></span>|<span data-ttu-id="0a8e9-161">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-161">Yes</span></span>|<span data-ttu-id="0a8e9-162">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-162">Yes</span></span>|<span data-ttu-id="0a8e9-163">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-163">Yes</span></span>|<span data-ttu-id="0a8e9-164">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-164">No</span></span>|  
+|<span data-ttu-id="0a8e9-165">연산자</span><span class="sxs-lookup"><span data-stu-id="0a8e9-165">Operator</span></span>|<span data-ttu-id="0a8e9-166">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-166">Yes</span></span>|<span data-ttu-id="0a8e9-167">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-167">No</span></span>|<span data-ttu-id="0a8e9-168">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-168">Yes</span></span>|<span data-ttu-id="0a8e9-169">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-169">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-170">인터페이스</span><span class="sxs-lookup"><span data-stu-id="0a8e9-170">Interface</span></span>|<span data-ttu-id="0a8e9-171">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-171">No</span></span>|<span data-ttu-id="0a8e9-172">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-172">No</span></span>|<span data-ttu-id="0a8e9-173">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-173">Yes</span></span>|<span data-ttu-id="0a8e9-174">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-174">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-175">클래스</span><span class="sxs-lookup"><span data-stu-id="0a8e9-175">Class</span></span>|<span data-ttu-id="0a8e9-176">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-176">No</span></span>|<span data-ttu-id="0a8e9-177">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-177">No</span></span>|<span data-ttu-id="0a8e9-178">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-178">Yes</span></span>|<span data-ttu-id="0a8e9-179">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-179">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-180">이벤트</span><span class="sxs-lookup"><span data-stu-id="0a8e9-180">Event</span></span>|<span data-ttu-id="0a8e9-181">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-181">No</span></span>|<span data-ttu-id="0a8e9-182">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-182">No</span></span>|<span data-ttu-id="0a8e9-183">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-183">Yes</span></span>|<span data-ttu-id="0a8e9-184">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-184">Yes</span></span>|  
+|<span data-ttu-id="0a8e9-185">대리자</span><span class="sxs-lookup"><span data-stu-id="0a8e9-185">Delegate</span></span>|<span data-ttu-id="0a8e9-186">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-186">No</span></span>|<span data-ttu-id="0a8e9-187">아니요</span><span class="sxs-lookup"><span data-stu-id="0a8e9-187">No</span></span>|<span data-ttu-id="0a8e9-188">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-188">Yes</span></span>|<span data-ttu-id="0a8e9-189">예</span><span class="sxs-lookup"><span data-stu-id="0a8e9-189">Yes</span></span>|  
   
- <sup>1</sup> 범위를 *표시 유형*이라고도 합니다.  
+ <span data-ttu-id="0a8e9-190"><sup>1</sup> 범위는 라고도 *가시성*합니다.</span><span class="sxs-lookup"><span data-stu-id="0a8e9-190"><sup>1</sup> Scope is sometimes referred to as *visibility*.</span></span>  
   
-## 참고 항목  
- [Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)   
- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="0a8e9-191">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0a8e9-191">See Also</span></span>  
+ [<span data-ttu-id="0a8e9-192">선언 요소</span><span class="sxs-lookup"><span data-stu-id="0a8e9-192">Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
+ [<span data-ttu-id="0a8e9-193">선언 요소 이름</span><span class="sxs-lookup"><span data-stu-id="0a8e9-193">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="0a8e9-194">선언된 요소 참조</span><span class="sxs-lookup"><span data-stu-id="0a8e9-194">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="0a8e9-195">Visual Basic의 수명</span><span class="sxs-lookup"><span data-stu-id="0a8e9-195">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="0a8e9-196">Visual Basic의 범위</span><span class="sxs-lookup"><span data-stu-id="0a8e9-196">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="0a8e9-197">Visual Basic의 액세스 수준</span><span class="sxs-lookup"><span data-stu-id="0a8e9-197">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="0a8e9-198">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="0a8e9-198">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="0a8e9-199">변수 선언</span><span class="sxs-lookup"><span data-stu-id="0a8e9-199">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

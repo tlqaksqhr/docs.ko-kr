@@ -1,90 +1,89 @@
 ---
-title: "개체 수명 이벤트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "활성화된 이벤트"
-  - "응용 프로그램 개체, 수명 이벤트"
-  - "클래스, 프레임"
-  - "클래스, NavigationWindow"
-  - "Closed 이벤트"
-  - "Closing 이벤트"
-  - "ContentRendered 이벤트"
-  - "Deactivated 이벤트"
-  - "이벤트, Activated"
-  - "이벤트, 닫힘"
-  - "이벤트, Closing"
-  - "이벤트, ContentRendered"
-  - "이벤트, Deactivated"
-  - "이벤트, 초기화됨"
-  - "이벤트, 로드됨"
-  - "이벤트, 언로드됨"
-  - "이벤트 종료"
-  - "Frame 클래스"
-  - "Initialized 이벤트"
-  - "개체의 수명 이벤트"
-  - "Loaded 이벤트"
-  - "NavigationWindow 클래스"
-  - "개체의 수명 이벤트"
-  - "Startup 이벤트"
-  - "Unloaded 이벤트"
+title: "개체 수명 이벤트"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [WPF], ContentRendered
+- events [WPF], Deactivated
+- events [WPF], Unloaded
+- Activated events [WPF]
+- events [WPF], Loaded
+- Application objects [WPF], lifetime events
+- events [WPF], Activated
+- ContentRendered events [WPF]
+- Deactivated events [WPF]
+- events [WPF], Initialized
+- events [WPF], Closing
+- Unloaded events [WPF]
+- exit events [WPF]
+- objects' lifetime events [WPF]
+- Loaded events [WPF]
+- Closing events [WPF]
+- events [WPF], Closed
+- Initialized events [WPF]
+- Closed events [WPF]
+- startup events [WPF]
+- lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e31997cfc1ff7500317bdfc59ac6ad12d3d27a23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 개체 수명 이벤트
-이 항목에서는 생성, 사용, 소멸이라는 개체 수명의 단계를 나타내는 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에 대해 설명합니다.  
+# <a name="object-lifetime-events"></a><span data-ttu-id="bd4f6-102">개체 수명 이벤트</span><span class="sxs-lookup"><span data-stu-id="bd4f6-102">Object Lifetime Events</span></span>
+<span data-ttu-id="bd4f6-103">이 항목에서는 생성, 사용 및 소멸 등의 개체 수명 단계를 나타내는 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-103">This topic describes the specific [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] events that signify stages in an object lifetime of creation, use, and destruction.</span></span>  
   
-   
+
   
 <a name="prerequisites"></a>   
-## 사전 요구 사항  
- 이 항목에서는 독자가 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스의 기존 [종속성 속성](GTMT)의 사용자로서 종속성 속성을 이해하고 있으며 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 읽었다고 가정합니다.  이 항목의 예제를 실행하려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에 대해서도 이해하고 있어야 하며\([XAML 개요\(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 참조\) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 작성 방법을 알고 있어야 합니다.  
+## <a name="prerequisites"></a><span data-ttu-id="bd4f6-104">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="bd4f6-104">Prerequisites</span></span>  
+ <span data-ttu-id="bd4f6-105">이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스의 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) 항목을 읽었다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-105">This topic assumes that you understand dependency properties from the perspective of a consumer of existing dependency properties on [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] classes, and have read the [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) topic.</span></span> <span data-ttu-id="bd4f6-106">이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]([XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 참조)과 함께 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법을 알아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-106">In order to follow the examples in this topic, you should also understand [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (see [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)) and know how to write [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  
   
 <a name="intro"></a>   
-## 개체 수명 이벤트  
- [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] 관리 코드의 모든 개체는 생성, 사용, 소멸이라는 비슷한 일련의 수명 단계를 거칩니다.  대부분의 개체는 소멸 단계의 일부로 발생하는 종료 단계도 거칩니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체, 구체적으로 말해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 요소로 식별하는 시각적 개체도 일반적인 개체 수명 단계를 거칩니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 및 응용 프로그램 모델에서는 이러한 단계를 일련의 이벤트로 노출합니다.  개체 수명 이벤트 측면에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 일반 요소, 창 요소, 탐색 호스트, 그리고 응용 프로그램 개체라는 네 가지 종류의 개체가 있습니다.  창 및 탐색 호스트는 시각적 개체\(요소\)라는 더 큰 그룹에도 포함됩니다.  이 항목에서는 모든 요소에 공통된 개체 수명 이벤트에 대해 설명하고 응용 프로그램 정의, 창 또는 탐색 호스트에 적용되는 특정 이벤트에 대해 소개합니다.  
+## <a name="object-lifetime-events"></a><span data-ttu-id="bd4f6-107">개체 수명 이벤트</span><span class="sxs-lookup"><span data-stu-id="bd4f6-107">Object Lifetime Events</span></span>  
+ <span data-ttu-id="bd4f6-108">[!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] 관리 코드의 모든 개체는 수명, 생성, 사용 및 소멸에 대한 유사한 일련의 단계를 거칩니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-108">All objects in [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] managed code go through a similar set of stages of life, creation, use, and destruction.</span></span> <span data-ttu-id="bd4f6-109">또한 많은 개체에는 소멸 단계의 일부로 발생하는 종료 단계가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-109">Many objects also have a finalization stage of life that occurs as part of the destruction phase.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="bd4f6-110"> 개체, 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 요소로 식별하는 시각적 개체에는 개체 수명의 공통 단계 집합이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-110"> objects, more specifically the visual objects that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] identifies as elements, also have a set of common stages of object life.</span></span> <span data-ttu-id="bd4f6-111">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 및 응용 프로그램 모델은 이러한 단계를 일련의 이벤트로 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-111">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programming and application models expose these stages as a series of events.</span></span> <span data-ttu-id="bd4f6-112">수명 이벤트와 관련하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 일반적인 요소, 창 요소, 탐색 호스트 및 응용 프로그램 개체 등 네 가지 기본 유형의 개체가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-112">There are four main types of objects in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] with respect to lifetime events; elements in general, window elements, navigation hosts, and application objects.</span></span> <span data-ttu-id="bd4f6-113">Windows 및 탐색 호스트도 시각적 개체(요소)의 더 큰 그룹에 속합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-113">Windows and navigation hosts are also within the larger grouping of visual objects (elements).</span></span> <span data-ttu-id="bd4f6-114">이 항목에서는 모든 요소에 공통적으로 적용되는 수명 이벤트에 대해 설명한 다음 응용 프로그램 정의, 창 또는 탐색 호스트에 적용되는 특정 이벤트를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-114">This topic describes the lifetime events that are common to all elements and then introduces the more specific ones that apply to application definitions, windows or navigation hosts.</span></span>  
   
 <a name="common_events"></a>   
-## 요소에 대한 공통 개체 수명 이벤트  
- 모든 [WPF 프레임워크 수준](GTMT) 요소\(<xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>에서 파생되는 개체\)에는 <xref:System.Windows.FrameworkElement.Initialized>, <xref:System.Windows.FrameworkElement.Loaded> 및 <xref:System.Windows.FrameworkElement.Unloaded>라는 공통된 세 가지 개체 수명 이벤트가 있습니다.  
+## <a name="common-lifetime-events-for-elements"></a><span data-ttu-id="bd4f6-115">요소에 대한 공통 수명 이벤트</span><span class="sxs-lookup"><span data-stu-id="bd4f6-115">Common Lifetime Events for Elements</span></span>  
+ <span data-ttu-id="bd4f6-116">모든 WPF 프레임 워크 수준 요소 (해당 개체에서 파생 되 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>)에 세 가지 일반적인 수명을 이벤트가: <xref:System.Windows.FrameworkElement.Initialized>, <xref:System.Windows.FrameworkElement.Loaded>, 및 <xref:System.Windows.FrameworkElement.Unloaded>합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-116">Any WPF framework-level element (those objects deriving from either <xref:System.Windows.FrameworkElement> or <xref:System.Windows.FrameworkContentElement>) has three common lifetime events: <xref:System.Windows.FrameworkElement.Initialized>, <xref:System.Windows.FrameworkElement.Loaded>, and <xref:System.Windows.FrameworkElement.Unloaded>.</span></span>  
   
-### Initialized  
- <xref:System.Windows.FrameworkElement.Initialized>는 가장 먼저 발생하며 개체 생성자를 호출하여 개체가 초기화되는 시점에 해당합니다.  이 이벤트는 초기화에 응답하여 발생하므로 이 이벤트가 발생하면 개체의 모든 속성이 설정되어 있음을 알 수 있습니다.  동적 리소스나 바인딩과 같은 식 사용의 경우는 예외입니다. 이러한 식은 평가되지 않은 식이 됩니다. 모든 속성이 설정되어 있어야 한다는 요구 사항으로 인해 태그에 정의된 중첩 요소에 의해 발생하는 일련의 <xref:System.Windows.FrameworkElement.Initialized> 이벤트는 요소 트리의 가장 아래에 있는 요소부터 시작하여 루트를 향해 부모 요소의 순서로 발생합니다.  순서가 이와 같은 이유는 부모\/자식 관계와 포함이 속성이고 따라서 부모는 속성을 채우는 자식 요소 또한 완전히 초기화되기 전에는 초기화를 보고할 수 없기 때문입니다.  
+### <a name="initialized"></a><span data-ttu-id="bd4f6-117">초기화됨</span><span class="sxs-lookup"><span data-stu-id="bd4f6-117">Initialized</span></span>  
+ <span data-ttu-id="bd4f6-118"><xref:System.Windows.FrameworkElement.Initialized>먼저 발생 하 고 해당 생성자를 호출 하 여 개체의 초기화에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-118"><xref:System.Windows.FrameworkElement.Initialized> is raised first, and roughly corresponds to the initialization of the object by the call to its constructor.</span></span> <span data-ttu-id="bd4f6-119">이 이벤트는 초기화에 응답하여 발생하므로 이 이벤트가 발생하면 개체의 모든 속성이 설정되어 있음을 알 수 있습니다</span><span class="sxs-lookup"><span data-stu-id="bd4f6-119">Because the event happens in response to initialization, you are guaranteed that all properties of the object are set.</span></span> <span data-ttu-id="bd4f6-120">동적 리소스나 바인딩과 같은 식 사용의 경우는 예외입니다. 이러한 식은 평가되지 않은 식이 됩니다. 요구 사항이 모든 속성을 설정 하는 순서에 따라 <xref:System.Windows.FrameworkElement.Initialized> 먼저, 가장 깊은 요소 요소 트리에 있는 순서 대로 발생가 태그에 정의 된 중첩 된 요소에 의해 발생 하는 루트를 향해 부모 요소의 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-120">(An exception is expression usages such as dynamic resources or binding; these will be unevaluated expressions.) As a consequence of the requirement that all properties are set, the sequence of <xref:System.Windows.FrameworkElement.Initialized> being raised by nested elements that are defined in markup appears to occur in order of deepest elements in the element tree first, then parent elements toward the root.</span></span> <span data-ttu-id="bd4f6-121">순서가 이와 같은 이유는 부모/자식 관계와 포함이 속성이고 따라서 부모는 속성을 채우는 자식 요소 또한 완전히 초기화되기 전에는 초기화를 보고할 수 없기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-121">This order is because the parent-child relationships and containment are properties, and therefore the parent cannot report initialization until the child elements that fill the property are also completely initialized.</span></span>  
   
- <xref:System.Windows.FrameworkElement.Initialized> 이벤트에 대한 응답으로 처리기를 작성할 때는 처리기가 연결된 요소 트리\([논리 트리](GTMT) 또는 [시각적 트리](GTMT)\)의 다른 모든 요소가 만들어졌는지, 특히 부모 요소가 만들어지는지에 대해 어떤 것도 보장되지 않는다는 점을 고려해야 합니다.  멤버 변수가 null이거나 식 수준에서도 데이터 소스가 기본 바인딩으로 채워지지 않을 수도 있습니다.  
+ <span data-ttu-id="bd4f6-122">처리기에 대 한 응답에서에 작성 하는 경우는 <xref:System.Windows.FrameworkElement.Initialized> 이벤트를 고려해 야 하는 처리기가 연결 된 주위 요소 트리 (논리적 트리 또는 시각적 트리)의 다른 모든 요소를 만든 특히 하지 않을 수도 있다는 것 부모 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-122">When you are writing handlers in response to the <xref:System.Windows.FrameworkElement.Initialized> event, you must consider that there is no guarantee that all other elements in the element tree (either logical tree or visual tree) around where the handler is attached have been created, particularly parent elements.</span></span> <span data-ttu-id="bd4f6-123">멤버 변수가 null일 수 있거나 식 수준에서도 데이터 소스가 기본 바인딩으로 채워지지 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-123">Member variables may be null, or data sources might not yet be populated by the underlying binding (even at the expression level).</span></span>  
   
-### Loaded  
- 그 다음으로 <xref:System.Windows.FrameworkElement.Loaded>가 발생합니다.  <xref:System.Windows.FrameworkElement.Loaded> 이벤트는 최종 렌더링 전에, 레이아웃 시스템이 렌더링에 필요한 모든 값을 계산한 후에 발생합니다.  <xref:System.Windows.FrameworkElement.Loaded>가 발생하려면 요소가 포함되어 있는 논리 트리가 완전해야 하고 HWND 및 렌더링 화면을 제공하는 프레젠테이션 소스에 연결되어야 합니다.  표준 데이터 바인딩\(다른 속성 또는 직접 정의한 데이터 소스와 같은 로컬 소스에 대한 바인딩\)은 <xref:System.Windows.FrameworkElement.Loaded>가 발생하기 전에 발생합니다.  비동기 데이터 바인딩\(외부 또는 동적 소스\)이 발생할 수도 있지만 비동기라는 용어에서 유추할 수 있듯이 그 발생 여부를 보장할 수는 없습니다.  
+### <a name="loaded"></a><span data-ttu-id="bd4f6-124">로드됨</span><span class="sxs-lookup"><span data-stu-id="bd4f6-124">Loaded</span></span>  
+ <span data-ttu-id="bd4f6-125"><xref:System.Windows.FrameworkElement.Loaded>다음 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-125"><xref:System.Windows.FrameworkElement.Loaded> is raised next.</span></span> <span data-ttu-id="bd4f6-126"><xref:System.Windows.FrameworkElement.Loaded> 최종 렌더링 되기 전에 되지만 레이아웃 시스템 렌더링에 필요한 모든 값에서 계산 된 후 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-126">The <xref:System.Windows.FrameworkElement.Loaded> event is raised before the final rendering, but after the layout system has calculated all necessary values for rendering.</span></span> <span data-ttu-id="bd4f6-127"><xref:System.Windows.FrameworkElement.Loaded>요소 내에 포함 된 논리적 트리에서 완료 되며 HWND 및 표면 렌더링을 제공 하는 프레젠테이션 소스에 연결 하는 과정이 수반 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-127"><xref:System.Windows.FrameworkElement.Loaded> entails that the logical tree that an element is contained within is complete, and connects to a presentation source that provides the HWND and the rendering surface.</span></span> <span data-ttu-id="bd4f6-128">표준 데이터 바인딩 (다른 속성 또는 직접 정의 된 데이터 원본 등의 로컬 소스에 바인딩) 이전에 발생 됩니다 <xref:System.Windows.FrameworkElement.Loaded>합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-128">Standard data binding (binding to local sources, such as other properties or directly defined data sources) will have occurred prior to <xref:System.Windows.FrameworkElement.Loaded>.</span></span> <span data-ttu-id="bd4f6-129">비동기 데이터 바인딩(외부 또는 동적 소스)이 발생할 수도 있지만 비동기라는 용어에서 유추할 수 있듯이 그 발생 여부를 보장할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-129">Asynchronous data binding (external or dynamic sources) might have occurred, but by definition of its asynchronous nature cannot be guaranteed to have occurred.</span></span>  
   
- <xref:System.Windows.FrameworkElement.Loaded> 이벤트를 발생시키는 메커니즘은 <xref:System.Windows.FrameworkElement.Initialized>와는 다릅니다.  <xref:System.Windows.FrameworkElement.Initialized> 이벤트는 전체 요소 트리의 직접적인 중재 없이 요소 별로 발생합니다.  반면 <xref:System.Windows.FrameworkElement.Loaded> 이벤트는 전체 요소 트리, 특히 [논리 트리](GTMT)의 중재를 통해 발생합니다.  트리의 모든 요소가 로드된 상태가 되면 먼저 루트 요소에서 <xref:System.Windows.FrameworkElement.Loaded> 이벤트가 발생한 다음  각 자식 요소에서 연속적으로 <xref:System.Windows.FrameworkElement.Loaded> 이벤트가 발생합니다.  
+ <span data-ttu-id="bd4f6-130">메커니즘은는 <xref:System.Windows.FrameworkElement.Loaded> 이벤트는 다른 <xref:System.Windows.FrameworkElement.Initialized>합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-130">The mechanism by which the <xref:System.Windows.FrameworkElement.Loaded> event is raised is different than <xref:System.Windows.FrameworkElement.Initialized>.</span></span> <span data-ttu-id="bd4f6-131"><xref:System.Windows.FrameworkElement.Initialized> 이벤트는 전체 요소 트리의 하 여 직접 조정 하지 않는 요소에 의해 발생된 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-131">The <xref:System.Windows.FrameworkElement.Initialized> event is raised element by element, without a direct coordination by a completed element tree.</span></span> <span data-ttu-id="bd4f6-132">반면,는 <xref:System.Windows.FrameworkElement.Loaded> 트리 전체에서 전체 요소 (특히, 논리 트리) 중재 이벤트가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-132">By contrast, the <xref:System.Windows.FrameworkElement.Loaded> event is raised as a coordinated effort throughout the entire element tree (specifically, the logical tree).</span></span> <span data-ttu-id="bd4f6-133">고려 되는 상태 로드 하는 트리의 모든 요소는 <xref:System.Windows.FrameworkElement.Loaded> 이벤트는 루트 요소에서 먼저 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-133">When all elements in the tree are in a state where they are considered loaded, the <xref:System.Windows.FrameworkElement.Loaded> event is first raised on the root element.</span></span> <span data-ttu-id="bd4f6-134"><xref:System.Windows.FrameworkElement.Loaded> 각 자식 요소에 대해 이벤트가 연속 해 서 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-134">The <xref:System.Windows.FrameworkElement.Loaded> event is then raised successively on each child element.</span></span>  
   
 > [!NOTE]
->  이 동작은 겉으로는 [라우트된 이벤트](GTMT)에 대한 터널링과 비슷합니다.  하지만 이벤트에서 이벤트로 어떤 정보도 전달되지 않습니다.  각 이벤트는 항상 자신의 <xref:System.Windows.FrameworkElement.Loaded> 이벤트를 처리할 기회를 가지며 이벤트 데이터를 처리된 것으로 표시해도 해당 요소가 아닌 다른 요소에는 어떠한 영향도 주지 않습니다.  
+>  <span data-ttu-id="bd4f6-135">이 동작은 표면적으로 볼 때 라우트된 이벤트의 터널링과 유사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-135">This behavior might superficially resemble tunneling for a routed event.</span></span> <span data-ttu-id="bd4f6-136">그러나 이벤트 간에 정보가 전달되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-136">However, no information is carried from event to event.</span></span> <span data-ttu-id="bd4f6-137">각 요소에는 항상 처리 하는 해당 <xref:System.Windows.FrameworkElement.Loaded> 이벤트 및 이벤트 데이터를 처리 된 것으로 표시에 해당 요소가 아닌 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-137">Each element always has the opportunity to handle its <xref:System.Windows.FrameworkElement.Loaded> event, and marking the event data as handled has no effect beyond that element.</span></span>  
   
-### Unloaded  
- <xref:System.Windows.FrameworkElement.Unloaded>는 마지막으로 발생하며 제거할 프레젠테이션 소스 또는 시각적 부모에 의해 시작됩니다.  <xref:System.Windows.FrameworkElement.Unloaded>가 발생하고 처리되고 나면 이벤트 소스 부모\(<xref:System.Windows.FrameworkElement.Parent%2A> 속성으로 결정됨\)에 해당하는 요소 또는 논리 트리나 시각적 트리의 위쪽에 있는 지정된 요소가 이미 해제되어 있을 수도 있습니다. 즉, 데이터 바인딩, 리소스 참조 및 스타일이 각자의 일반 값 또는 마지막으로 알려진 런타임 값으로 설정되어 있지 않을 수도 있습니다.  
+### <a name="unloaded"></a><span data-ttu-id="bd4f6-138">언로드됨</span><span class="sxs-lookup"><span data-stu-id="bd4f6-138">Unloaded</span></span>  
+ <span data-ttu-id="bd4f6-139"><xref:System.Windows.FrameworkElement.Unloaded>마지막 발생 하 고 프레젠테이션 소스 또는 제거 하 고 시각적 부모 중 하나에 의해 시작 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-139"><xref:System.Windows.FrameworkElement.Unloaded> is raised last and is initiated by either the presentation source or the visual parent being removed.</span></span> <span data-ttu-id="bd4f6-140">때 <xref:System.Windows.FrameworkElement.Unloaded> 발생 하 고 처리 된 이벤트 소스 부모 요소의 (기준으로 <xref:System.Windows.FrameworkElement.Parent%2A> 속성) 또는 논리 또는 시각적 트리 위쪽에 있는 지정 된 요소가 이미 했을 수 있습니다 설정, 리소스 참조 데이터 바인딩을 지를 의미 합니다. 스타일 또는 마지막 알려진된 실행 시간 값으로 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-140">When <xref:System.Windows.FrameworkElement.Unloaded> is raised and handled, the element that is the event source parent (as determined by <xref:System.Windows.FrameworkElement.Parent%2A> property) or any given element upwards in the logical or visual trees may have already been unset, meaning that data binding, resource references, and styles may not be set to their normal or last known run-time value.</span></span>  
   
 <a name="application_model_elements"></a>   
-## 개체 수명 이벤트 응용 프로그램 모델 요소  
- <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow> 및 <xref:System.Windows.Controls.Frame>은 요소에 대한 공통 개체 수명 이벤트를 기반으로 하는 응용 프로그램 모델 요소입니다.  이러한 요소는 특정 목적과 관련된 추가 이벤트를 사용하여 공통 개체 수명 이벤트를 확장합니다.  다음 항목에서 이에 대해 자세히 설명합니다.  
+## <a name="lifetime-events-application-model-elements"></a><span data-ttu-id="bd4f6-141">수명 이벤트 응용 프로그램 모델 요소</span><span class="sxs-lookup"><span data-stu-id="bd4f6-141">Lifetime Events Application Model Elements</span></span>  
+ <span data-ttu-id="bd4f6-142">요소는 다음과 같은 응용 프로그램 모델 요소에 대 한 일반적인 수명 이벤트에서 빌드: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, 및 <xref:System.Windows.Controls.Frame>합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-142">Building on the common lifetime events for elements are the following application model elements: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, and <xref:System.Windows.Controls.Frame>.</span></span> <span data-ttu-id="bd4f6-143">이러한 요소는 특정 목적과 관련된 추가 이벤트를 사용하여 공통 개체 수명 이벤트를 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-143">These extend the common lifetime events with additional events that are relevant to their specific purpose.</span></span> <span data-ttu-id="bd4f6-144">다음 항목에서 이에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-144">These are discussed in detail in the following locations:</span></span>  
   
--   <xref:System.Windows.Application>: [응용 프로그램 관리 개요](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+-   <span data-ttu-id="bd4f6-145"><xref:System.Windows.Application>: [응용 프로그램 관리 개요](../../../../docs/framework/wpf/app-development/application-management-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-145"><xref:System.Windows.Application>: [Application Management Overview](../../../../docs/framework/wpf/app-development/application-management-overview.md).</span></span>  
   
--   <xref:System.Windows.Window>: [WPF 창 개요](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
+-   <span data-ttu-id="bd4f6-146"><xref:System.Windows.Window>: [WPF Windows 개요](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-146"><xref:System.Windows.Window>: [WPF Windows Overview](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).</span></span>  
   
--   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow> 및 <xref:System.Windows.Controls.Frame>: [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+-   <span data-ttu-id="bd4f6-147"><xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>, 및 <xref:System.Windows.Controls.Frame>: [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bd4f6-147"><xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, and <xref:System.Windows.Controls.Frame>: [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span></span>  
   
-## 참고 항목  
- [종속성 속성 값 우선 순위](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)   
- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+## <a name="see-also"></a><span data-ttu-id="bd4f6-148">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bd4f6-148">See Also</span></span>  
+ [<span data-ttu-id="bd4f6-149">종속성 속성 값 우선 순위</span><span class="sxs-lookup"><span data-stu-id="bd4f6-149">Dependency Property Value Precedence</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
+ [<span data-ttu-id="bd4f6-150">라우트된 이벤트 개요</span><span class="sxs-lookup"><span data-stu-id="bd4f6-150">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

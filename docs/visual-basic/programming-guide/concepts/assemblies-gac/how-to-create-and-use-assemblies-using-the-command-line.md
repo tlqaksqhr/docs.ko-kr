@@ -1,43 +1,35 @@
 ---
-title: "방법: 명령줄 (Visual Basic)를 사용 하 여 어셈블리 만들기 및 사용 | Microsoft 문서"
+title: "방법: 명령줄 (Visual Basic)를 사용 하 여 어셈블리 만들기 및 사용"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 363bca806736e5540165ea96e9b4fe60d0968098
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 72f3e91f9fb88019f937dcd281aa14ab4e887daf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>방법: 명령줄 (Visual Basic)를 사용 하 여 어셈블리 만들기 및 사용
-어셈블리 또는 동적 연결 라이브러리 (DLL)는 런타임 시 프로그램에 연결 됩니다. 빌드 및 DLL 사용을 보여 주기 위해 다음 시나리오를 고려 합니다.  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a><span data-ttu-id="2ffca-102">방법: 명령줄 (Visual Basic)를 사용 하 여 어셈블리 만들기 및 사용</span><span class="sxs-lookup"><span data-stu-id="2ffca-102">How to: Create and Use Assemblies Using the Command Line (Visual Basic)</span></span>
+<span data-ttu-id="2ffca-103">어셈블리 또는 DLL(동적 연결 라이브러리)은 런타임 시 프로그램에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="2ffca-104">DLL 빌드 및 사용을 보여 주려면 다음 시나리오를 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
   
--   `MathLibrary.DLL`런타임 시 호출 되는 메서드가 포함 된: 라이브러리 파일입니다. 이 예제에서는 DLL 포함, 두 메서드는 `Add` 및 `Multiply`합니다.  
+-   <span data-ttu-id="2ffca-105">`MathLibrary.DLL`: 런타임 시 호출할 메서드가 포함된 라이브러리 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="2ffca-106">이 예제의 DLL에는 두 개의 메서드 `Add` 및 `Multiply`가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
   
--   `Add`메서드를 포함 하는 소스 파일: `Add`합니다. 해당 매개 변수의 합계를 반환합니다. 클래스 `AddClass` 메서드가 있는 `Add` 네임 스페이스의 멤버인 `UtilityMethods`합니다.  
+-   <span data-ttu-id="2ffca-107">`Add`: `Add` 메서드가 포함된 소스 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="2ffca-108">해당 매개 변수의 합계를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="2ffca-109">`Add` 메서드가 포함된 `AddClass` 클래스는 `UtilityMethods` 네임스페이스의 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
   
--   `Mult`메서드를 포함 하는 소스 코드: `Multiply`합니다. 매개 변수의 곱을 반환합니다. 클래스 `MultiplyClass` 메서드가 있는 `Multiply` 네임 스페이스의 멤버 이기도 `UtilityMethods`합니다.  
+-   <span data-ttu-id="2ffca-110">`Mult`: `Multiply` 메서드가 포함된 소스 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="2ffca-111">매개 변수의 곱을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-111">It returns the product of its parameters.</span></span> <span data-ttu-id="2ffca-112">`Multiply` 메서드가 포함된 `MultiplyClass` 클래스는 `UtilityMethods` 네임스페이스의 멤버이기도 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
   
--   `TestCode`: 포함 된 파일은 `Main` 메서드. 합계 및 제품의 런타임 인수를 계산 하는 DLL 파일의 메서드 사용 합니다.  
+-   <span data-ttu-id="2ffca-113">`TestCode`: `Main` 메서드가 포함된 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="2ffca-114">DLL 파일의 메서드를 사용하여 런타임 인수의 합계와 곱을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="2ffca-115">예제</span><span class="sxs-lookup"><span data-stu-id="2ffca-115">Example</span></span>  
   
 ```vb  
 ' File: Add.vb   
@@ -96,45 +88,45 @@ End Module
 ' 1234 * 5678 = 7006652  
 ```  
   
- 이 파일에 DLL 메서드를 사용 하는 알고리즘 `Add` 및 `Multiply`합니다. 명령줄에 입력 된 구문 분석 `num1` 및 `num2`합니다. 사용 하 여 합계를 계산한 다음는 `Add` 메서드를는 `AddClass` 클래스 및 사용 하 여 제품의 `Multiply` 메서드를는 `MultiplyClass` 클래스입니다.  
+ <span data-ttu-id="2ffca-116">이 파일에는 DLL 메서드 `Add` 및 `Multiply`를 사용하는 알고리즘이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="2ffca-117">명령줄에서 입력된 인수 `num1` 및 `num2`의 구문 분석으로 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="2ffca-118">그런 다음 `AddClass` 클래스의 `Add` 메서드를 사용하여 합계를 계산하고 `MultiplyClass` 클래스의 `Multiply` 메서드를 사용하여 곱을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
   
- 다음에 유의 `Imports` 파일의 시작 부분에 문을 컴파일할 때 DLL 메서드를 다음과 같이 참조를 정규화 되지 않은 클래스 이름을 사용할 수 있습니다.  
+ <span data-ttu-id="2ffca-119">에 `Imports` 파일의 시작 부분에 문을 사용 하면 정규화 되지 않은 클래스 이름을 사용 하 여 컴파일 타임에 다음과 같이 DLL 메서드를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-119">Notice that the  `Imports` statement at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
 ```  
   
- 그렇지 않은 경우 다음과 같이 정규화 된 이름을 사용 해야 합니다.  
+ <span data-ttu-id="2ffca-120">사용하지 않을 경우 정규화된 이름을 다음과 같이 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
   
 ```vb  
 UtilityMethods.MultiplyClass.Multiply(num1, num2)  
 ```  
   
-## <a name="execution"></a>실행  
- 프로그램을 실행 하려면 다음과 같이 두 개의 숫자를 다음 EXE 파일의 이름을 입력 합니다.  
+## <a name="execution"></a><span data-ttu-id="2ffca-121">실행</span><span class="sxs-lookup"><span data-stu-id="2ffca-121">Execution</span></span>  
+ <span data-ttu-id="2ffca-122">프로그램을 실행하려면 다음과 같이 EXE 파일의 이름과 두 개의 숫자를 차례로 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
   
  `TestCode 1234 5678`  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- 파일을 빌드하려면 `MathLibrary.DLL`, 두 개의 파일을 컴파일할 `Add` 및 `Mult` 다음 명령줄을 사용 하 여 합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="2ffca-123">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="2ffca-123">Compiling the Code</span></span>  
+ <span data-ttu-id="2ffca-124">`MathLibrary.DLL` 파일을 빌드하려면 다음 명령줄을 사용하여 두 개의 파일 `Add` 및 `Mult`를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-124">To build the file `MathLibrary.DLL`, compile the two files `Add` and `Mult` by using the following command line.</span></span>  
   
 ```vb  
 vbc /target:library /out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) 컴파일러 옵션 EXE 파일 대신 DLL을 출력 하도록 지시 합니다. [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) 파일 이름이 옵니다 컴파일러 옵션은 DLL 파일 이름을 지정 하는 데 사용 됩니다. 컴파일러는 첫 번째 파일을 사용 하는 그렇지 않은 경우 (`Add.vb`) DLL의 이름으로 합니다.  
+ <span data-ttu-id="2ffca-125">[/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) 컴파일러 옵션 EXE 파일 대신 DLL을 출력 하도록 컴파일러에 지시 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-125">The [/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) compiler option tells the compiler to output a DLL instead of an EXE file.</span></span> <span data-ttu-id="2ffca-126">[/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) 파일 이름이 옵니다 컴파일러 옵션은 DLL 파일 이름을 지정 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-126">The [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) compiler option followed by a file name is used to specify the DLL file name.</span></span> <span data-ttu-id="2ffca-127">사용하지 않을 경우 컴파일러는 첫 번째 파일(`Add.vb`)을 DLL의 이름으로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-127">Otherwise, the compiler uses the first file (`Add.vb`) as the name of the DLL.</span></span>  
   
- 실행 파일을 빌드합니다 `TestCode.exe`, 다음 명령줄을 사용 합니다.  
+ <span data-ttu-id="2ffca-128">실행 파일 `TestCode.exe`를 빌드하려면 다음 명령줄을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-128">To build the executable file, `TestCode.exe`, use the following command line:</span></span>  
   
 ```vb  
 vbc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- **/출력** 컴파일러 옵션 EXE 파일을 출력 하도록 컴파일러에 지시 하 고 출력 파일의 이름을 지정 합니다 (`TestCode.exe`). 이 컴파일러 옵션은 선택 사항입니다. [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션에이 프로그램을 사용 하는 DLL 파일을 지정 합니다.  
+ <span data-ttu-id="2ffca-129">**/out** 컴파일러 옵션은 EXE 파일을 출력하도록 컴파일러에 지시하고 출력 파일의 이름(`TestCode.exe`)을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-129">The **/out** compiler option tells the compiler to output an EXE file and specifies the name of the output file (`TestCode.exe`).</span></span> <span data-ttu-id="2ffca-130">이 컴파일러 옵션은 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-130">This compiler option is optional.</span></span> <span data-ttu-id="2ffca-131">[/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션을이 프로그램을 사용 하는 DLL 파일을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-131">The [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) compiler option specifies the DLL file or files that this program uses.</span></span>  
   
- 명령줄에서 빌드에 대 한 자세한 내용은 참조 및 [명령줄에서 빌드](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)합니다.  
+ <span data-ttu-id="2ffca-132">명령줄에서 빌드에 대 한 자세한 내용은 참조 및 [명령줄에서 빌드](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2ffca-132">For more information about building from the command line, see  and [Building from the Command Line](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [프로그래밍 개념](../../../../visual-basic/programming-guide/concepts/index.md)   
- [어셈블리 및 전역 어셈블리 캐시 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [DLL 함수가 포함 된 클래스 만들기](http://msdn.microsoft.com/library/e08e4c34-0223-45f7-aa55-a3d8dd979b0f)
+## <a name="see-also"></a><span data-ttu-id="2ffca-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2ffca-133">See Also</span></span>  
+ [<span data-ttu-id="2ffca-134">프로그래밍 개념</span><span class="sxs-lookup"><span data-stu-id="2ffca-134">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="2ffca-135">어셈블리와 전역 어셈블리 캐시(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ffca-135">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="2ffca-136">DLL 함수가 포함된 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="2ffca-136">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

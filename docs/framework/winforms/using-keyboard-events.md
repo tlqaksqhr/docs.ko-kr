@@ -1,53 +1,54 @@
 ---
-title: "키보드 이벤트 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "이벤트[Windows Forms], 키보드"
-  - "키보드 이벤트"
-  - "키보드, 키보드 이벤트"
-  - "KeyDown 이벤트"
-  - "KeyPress 이벤트"
-  - "KeyUp 이벤트"
+title: "키보드 이벤트 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- KeyPress event [Windows Forms]
+- keyboards [Windows Forms], keyboard events
+- KeyUp event
+- KeyDown event
+- keyboard events
+- events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 19bad48188a039baeeb6365a2cd38671f83fca4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 키보드 이벤트 사용
-대부분 Windows Forms 프로그램에서는 키보드 이벤트를 처리하는 방식으로 키보드 입력을 처리합니다.  이 항목에서는 각 이벤트를 사용하는 시기 및 각 이벤트에 대해 제공되는 데이터에 대한 세부 정보를 포함하여 키보드 이벤트에 대한 개요를 제공합니다.  [이벤트 처리기 개요\(Windows Forms\)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [이벤트 개요\(Windows Forms\)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))를 참조하세요.  
+# <a name="using-keyboard-events"></a><span data-ttu-id="59b0d-102">키보드 이벤트 사용</span><span class="sxs-lookup"><span data-stu-id="59b0d-102">Using Keyboard Events</span></span>
+<span data-ttu-id="59b0d-103">대부분 Windows Forms 프로그램에서는 키보드 이벤트를 처리하는 방식으로 키보드 입력을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-103">Most Windows Forms programs process keyboard input by handling the keyboard events.</span></span> <span data-ttu-id="59b0d-104">이 항목에서는 각 이벤트를 사용하는 시기 및 각 이벤트에 대해 제공되는 데이터에 대한 세부 정보를 포함하여 키보드 이벤트에 대한 개요를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-104">This topic provides an overview of the keyboard events, including details on when to use each event and the data that is supplied for each event.</span></span>  <span data-ttu-id="59b0d-105">또한 참조 [이벤트 처리기 개요 (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [이벤트 개요 (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-105">Also see [Event Handlers Overview (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Events Overview (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).</span></span>  
   
-## 키보드 이벤트  
- Windows Forms에서는 사용자가 키보드 키를 누를 때 발생하는 두 가지 이벤트와 사용자가 키보드 키를 놓을 때 발생하는 한 가지 이벤트를 제공합니다.  
+## <a name="keyboard-events"></a><span data-ttu-id="59b0d-106">키보드 이벤트</span><span class="sxs-lookup"><span data-stu-id="59b0d-106">Keyboard Events</span></span>  
+ <span data-ttu-id="59b0d-107">Windows Forms에서는 사용자가 키보드 키를 누를 때 발생하는 두 가지 이벤트와 사용자가 키보드 키를 놓을 때 발생하는 한 가지 이벤트를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-107">Windows Forms provides two events that occur when a user presses a keyboard key and one event when a user releases a keyboard key:</span></span>  
   
--   한 번 발생하는 <xref:System.Windows.Forms.Control.KeyDown> 이벤트.  
+-   <span data-ttu-id="59b0d-108">한 번 발생하는 <xref:System.Windows.Forms.Control.KeyDown> 이벤트.</span><span class="sxs-lookup"><span data-stu-id="59b0d-108">The <xref:System.Windows.Forms.Control.KeyDown> event occurs once</span></span>  
   
--   사용자가 같은 키를 누르고 있을 때 여러 번 발생할 수 있는 <xref:System.Windows.Forms.Control.KeyPress> 이벤트.  
+-   <span data-ttu-id="59b0d-109">사용자가 같은 키를 누르고 있을 때 여러 번 발생할 수 있는 <xref:System.Windows.Forms.Control.KeyPress> 이벤트.</span><span class="sxs-lookup"><span data-stu-id="59b0d-109">The <xref:System.Windows.Forms.Control.KeyPress> event, which can occur multiple times when a user holds down the same key.</span></span>  
   
--   사용자가 키를 놓을 때 한 번 발생하는 <xref:System.Windows.Forms.Control.KeyUp> 이벤트.  
+-   <span data-ttu-id="59b0d-110">사용자가 키를 놓을 때 한 번 발생하는 <xref:System.Windows.Forms.Control.KeyUp> 이벤트.</span><span class="sxs-lookup"><span data-stu-id="59b0d-110">The <xref:System.Windows.Forms.Control.KeyUp> event occurs once when a user releases a key.</span></span>  
   
- 사용자가 키를 누를 때 Windows Forms에서는 키보드 메시지가 문자 키 또는 물리적 키를 지정하는지에 따라 발생할 이벤트를 결정합니다.  문자 및 물리적 키에 대한 자세한 내용은 [키보드 입력 작동 방식](../../../docs/framework/winforms/how-keyboard-input-works.md)을 참조하세요.  
+ <span data-ttu-id="59b0d-111">사용자가 키를 누를 때 Windows Forms에서는 키보드 메시지가 문자 키 또는 물리적 키를 지정하는지에 따라 발생할 이벤트를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-111">When a user presses a key, Windows Forms determines which event to raise based on whether the keyboard message specifies a character key or a physical key.</span></span> <span data-ttu-id="59b0d-112">문자 및 물리적 키에 대 한 자세한 내용은 참조 [키보드 입력 작동 방식](../../../docs/framework/winforms/how-keyboard-input-works.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-112">For more information about character and physical keys, see [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md).</span></span>  
   
- 다음 표에서는 세 가지 키보드 이벤트에 대해 설명합니다.  
+ <span data-ttu-id="59b0d-113">다음 표에서는 세 가지 키보드 이벤트에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-113">The following table describes the three keyboard events.</span></span>  
   
-|키보드 이벤트|설명|결과|  
-|-------------|--------|--------|  
-|<xref:System.Windows.Forms.Control.KeyDown>|이 이벤트는 사용자가 물리적 키를 누를 때 발생합니다.|<xref:System.Windows.Forms.Control.KeyDown>에 대한 처리기는 다음을 수신합니다.<br /><br /> <ul><li>물리적 키보드 단추를 지정하는 <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> 속성을 제공하는 <xref:System.Windows.Forms.KeyEventArgs> 매개 변수.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> 속성\(SHIFT, CTRL 또는 ALT\).</li><li>키 코드 및 한정자를 결합하는 <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> 속성.  <xref:System.Windows.Forms.KeyEventArgs> 매개 변수는 다음을 제공합니다.<br /><br /> <ul><li>기본 컨트롤의 키 수신을 방지하도록 설정될 수 있는 <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> 속성.</li><li>해당 키 입력에 대한 <xref:System.Windows.Forms.Control.KeyPress> 및 <xref:System.Windows.Forms.Control.KeyUp> 이벤트를 억제하는 사용될 수 있는 <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> 속성.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyPress>|이 이벤트는 키를 하나 이상 눌러서 문자가 표시될 때 발생합니다.  예를 들어 사용자가 SHIFT 키와 소문자 "a" 키를 누르면 대문자 "A" 문자가 표시됩니다.|<xref:System.Windows.Forms.Control.KeyPress>는 <xref:System.Windows.Forms.Control.KeyDown> 뒤에 발생합니다.<br /><br /> <ul><li><xref:System.Windows.Forms.Control.KeyPress>에 대한 처리기는 다음을 수신합니다.</li><li>눌린 키의 문자 코드가 포함된 <xref:System.Windows.Forms.KeyPressEventArgs> 매개 변수.  이 문자 코드는 모든 문자 키 및 한정자 키 조합에 대해 고유합니다.<br /><br />     예를 들어 "A" 키는 다음을 생성합니다.<br /><br /> <ul><li>문자 코드 65, SHIFT 키와 함께 누른 경우</li><li>또는 CAPS LOCK 키, 97, 키 자체를 누른 경우</li><li>및 1, CTRL 키와 함께 누른 경우.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyUp>|이 이벤트는 사용자가 물리적 키를 놓을 때 발생합니다.|<xref:System.Windows.Forms.Control.KeyUp>에 대한 처리기는 다음을 수신합니다.<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs> 매개 변수:<br /><br /> <ul><li>물리적 키보드 단추를 지정하는 <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> 속성을 제공.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> 속성\(SHIFT, CTRL 또는 ALT\).</li><li>키 코드 및 한정자를 결합하는 <xref:System.Globalization.SortKey.KeyData%2A> 속성.</li></ul></li></ul>|  
+|<span data-ttu-id="59b0d-114">키보드 이벤트</span><span class="sxs-lookup"><span data-stu-id="59b0d-114">Keyboard event</span></span>|<span data-ttu-id="59b0d-115">설명</span><span class="sxs-lookup"><span data-stu-id="59b0d-115">Description</span></span>|<span data-ttu-id="59b0d-116">결과</span><span class="sxs-lookup"><span data-stu-id="59b0d-116">Results</span></span>|  
+|--------------------|-----------------|-------------|  
+|<xref:System.Windows.Forms.Control.KeyDown>|<span data-ttu-id="59b0d-117">이 이벤트는 사용자가 물리적 키를 누를 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-117">This event is raised when a user presses a physical key.</span></span>|<span data-ttu-id="59b0d-118"><xref:System.Windows.Forms.Control.KeyDown>에 대한 처리기는 다음을 수신합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-118">The handler for <xref:System.Windows.Forms.Control.KeyDown> receives:</span></span><br /><br /> <ul><li><span data-ttu-id="59b0d-119">물리적 키보드 단추를 지정하는 <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> 속성을 제공하는 <xref:System.Windows.Forms.KeyEventArgs> 매개 변수.</span><span class="sxs-lookup"><span data-stu-id="59b0d-119">A <xref:System.Windows.Forms.KeyEventArgs> parameter, which provides the <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> property (which specifies a physical keyboard button).</span></span></li><li><span data-ttu-id="59b0d-120"><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> 속성(SHIFT, CTRL 또는 ALT).</span><span class="sxs-lookup"><span data-stu-id="59b0d-120">The <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> property (SHIFT, CTRL, or ALT).</span></span></li><li><span data-ttu-id="59b0d-121">키 코드 및 한정자를 결합하는 <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> 속성.</span><span class="sxs-lookup"><span data-stu-id="59b0d-121">The <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> property (which combines the key code and modifier).</span></span> <span data-ttu-id="59b0d-122"><xref:System.Windows.Forms.KeyEventArgs> 매개 변수는 다음을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-122">The <xref:System.Windows.Forms.KeyEventArgs> parameter also provides:</span></span><br /><br /> <ul><li><span data-ttu-id="59b0d-123">기본 컨트롤의 키 수신을 방지하도록 설정될 수 있는 <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> 속성.</span><span class="sxs-lookup"><span data-stu-id="59b0d-123">The <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> property, which can be set to prevent the underlying control from receiving the key.</span></span></li><li><span data-ttu-id="59b0d-124">해당 키 입력에 대한 <xref:System.Windows.Forms.Control.KeyPress> 및 <xref:System.Windows.Forms.Control.KeyUp> 이벤트를 억제하는 사용될 수 있는 <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> 속성.</span><span class="sxs-lookup"><span data-stu-id="59b0d-124">The <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> property, which can be used to suppress the <xref:System.Windows.Forms.Control.KeyPress> and <xref:System.Windows.Forms.Control.KeyUp> events for that keystroke.</span></span></li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyPress>|<span data-ttu-id="59b0d-125">이 이벤트는 키를 하나 이상 눌러서 문자가 표시될 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-125">This event is raised when the key or keys pressed result in a character.</span></span> <span data-ttu-id="59b0d-126">예를 들어 사용자가 SHIFT 키와 소문자 "a" 키를 누르면 대문자 "A" 문자가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-126">For example, a user presses SHIFT and the lowercase "a" keys, which result in a capital letter "A" character.</span></span>|<span data-ttu-id="59b0d-127"><xref:System.Windows.Forms.Control.KeyPress>는 <xref:System.Windows.Forms.Control.KeyDown> 뒤에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-127"><xref:System.Windows.Forms.Control.KeyPress> is raised after <xref:System.Windows.Forms.Control.KeyDown>.</span></span><br /><br /> <ul><li><span data-ttu-id="59b0d-128"><xref:System.Windows.Forms.Control.KeyPress>에 대한 처리기는 다음을 수신합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-128">The handler for <xref:System.Windows.Forms.Control.KeyPress> receives:</span></span></li><li><span data-ttu-id="59b0d-129">눌린 키의 문자 코드가 포함된 <xref:System.Windows.Forms.KeyPressEventArgs> 매개 변수.</span><span class="sxs-lookup"><span data-stu-id="59b0d-129">A <xref:System.Windows.Forms.KeyPressEventArgs> parameter, which contains the character code of the key that was pressed.</span></span> <span data-ttu-id="59b0d-130">이 문자 코드는 모든 문자 키 및 한정자 키 조합에 대해 고유합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-130">This character code is unique for every combination of a character key and a modifier key.</span></span><br /><br />     <span data-ttu-id="59b0d-131">예를 들어 "A" 키는 다음을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-131">For example, the "A" key will generate:</span></span><br /><br /> <ul><li><span data-ttu-id="59b0d-132">문자 코드 65, SHIFT 키와 함께 누른 경우</span><span class="sxs-lookup"><span data-stu-id="59b0d-132">The character code 65, if it is pressed with the SHIFT key</span></span></li><li><span data-ttu-id="59b0d-133">또는 CAPS LOCK 키, 97, 키 자체를 누른 경우</span><span class="sxs-lookup"><span data-stu-id="59b0d-133">Or the CAPS LOCK key, 97 if it is pressed by itself,</span></span></li><li><span data-ttu-id="59b0d-134">및 1, CTRL 키와 함께 누른 경우.</span><span class="sxs-lookup"><span data-stu-id="59b0d-134">And 1, if it is pressed with the CTRL key.</span></span></li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyUp>|<span data-ttu-id="59b0d-135">이 이벤트는 사용자가 물리적 키를 놓을 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-135">This event is raised when a user releases a physical key.</span></span>|<span data-ttu-id="59b0d-136"><xref:System.Windows.Forms.Control.KeyUp>에 대한 처리기는 다음을 수신합니다.</span><span class="sxs-lookup"><span data-stu-id="59b0d-136">The handler for <xref:System.Windows.Forms.Control.KeyUp> receives:</span></span><br /><br /> <ul><li><span data-ttu-id="59b0d-137"><xref:System.Windows.Forms.KeyEventArgs> 매개 변수:</span><span class="sxs-lookup"><span data-stu-id="59b0d-137">A <xref:System.Windows.Forms.KeyEventArgs> parameter:</span></span><br /><br /> <ul><li><span data-ttu-id="59b0d-138">물리적 키보드 단추를 지정하는 <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> 속성을 제공.</span><span class="sxs-lookup"><span data-stu-id="59b0d-138">Which provides the <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> property (which specifies a physical keyboard button).</span></span></li><li><span data-ttu-id="59b0d-139"><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> 속성(SHIFT, CTRL 또는 ALT).</span><span class="sxs-lookup"><span data-stu-id="59b0d-139">The <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> property (SHIFT, CTRL, or ALT).</span></span></li><li><span data-ttu-id="59b0d-140">키 코드 및 한정자를 결합하는 <xref:System.Globalization.SortKey.KeyData%2A> 속성.</span><span class="sxs-lookup"><span data-stu-id="59b0d-140">The <xref:System.Globalization.SortKey.KeyData%2A> property (which combines the key code and modifier).</span></span></li></ul></li></ul>|  
   
-## 참고 항목  
- [Windows Forms 응용 프로그램의 키보드 입력](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)   
- [키보드 입력 작동 방식](../../../docs/framework/winforms/how-keyboard-input-works.md)   
- [Windows Forms 응용 프로그램의 마우스 입력](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a><span data-ttu-id="59b0d-141">참고 항목</span><span class="sxs-lookup"><span data-stu-id="59b0d-141">See Also</span></span>  
+ [<span data-ttu-id="59b0d-142">Windows Forms 응용 프로그램의 키보드 입력</span><span class="sxs-lookup"><span data-stu-id="59b0d-142">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="59b0d-143">키보드 입력 작동 방식</span><span class="sxs-lookup"><span data-stu-id="59b0d-143">How Keyboard Input Works</span></span>](../../../docs/framework/winforms/how-keyboard-input-works.md)  
+ [<span data-ttu-id="59b0d-144">Windows Forms 응용 프로그램의 마우스 입력</span><span class="sxs-lookup"><span data-stu-id="59b0d-144">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
