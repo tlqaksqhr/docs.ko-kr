@@ -1,14 +1,10 @@
 ---
 title: "-resource(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /resource
-dev_langs:
-- CSharp
+f1_keywords: /resource
 helpviewer_keywords:
 - -resource compiler option [C#]
 - /resource compiler option [C#]
@@ -17,29 +13,14 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 726956275436e22723bc32b98b2b8b7c7df5fb12
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fdb7be630300e11c2e63d88bd6add7d229714bfa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resource-c-compiler-options"></a>/resource(C# 컴파일러 옵션)
 출력 파일에 지정된 리소스를 포함합니다.  
@@ -65,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
  기본적으로 리소스는 C# 컴파일러를 사용하여 생성될 때 어셈블리에서 public입니다. 리소스를 private로 만들려면 접근성 한정자로 `private`를 지정합니다. `public` 또는 `private` 이외의 다른 접근성은 허용되지 않습니다.  
   
- 예를 들어 `filename`이 [Resgen.exe](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager?displayProperty=fullName>을 참조하십시오. 다른 모든 리소스의 경우에는 런타임에 <xref:System.Reflection.Assembly> 클래스의 `GetManifestResource`* 메서드를 사용하여 리소스에 액세스합니다.  
+ 예를 들어 `filename`이 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>을 참조하십시오. 다른 모든 리소스는 `GetManifestResource` 의 메서드는 <xref:System.Reflection.Assembly> 런타임 시 리소스에 액세스 하는 클래스입니다.  
   
  **/res**는 **/resource**의 약식입니다.  
   
@@ -91,6 +72,5 @@ csc /resource:rf.resource in.cs
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

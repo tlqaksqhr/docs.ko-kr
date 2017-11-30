@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>관리자를 위한 .NET Framework 배포 가이드
 이 단계별 문서에서는 시스템 관리자가 Microsoft System Center Configuration Manager를 사용하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법에 대해 설명합니다. 이 문서에서는 .NET Framework 4의 최소 요구 사항이 모든 대상 클라이언트 컴퓨터에서 충족되는 것으로 가정합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치를 위한 소프트웨어와 하드웨어 요구 사항 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -39,8 +32,8 @@ ms.lasthandoff: 07/28/2017
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
- [배포 프로세스](#the_deployment_process)   
- [.NET Framework 배포](#deploying_in_a_test_environment)   
+ [배포 프로세스](#the_deployment_process)  
+ [.NET Framework 배포](#deploying_in_a_test_environment)  
  [컬렉션 만들기](#creating_a_collection)  
  [패키지 및 프로그램 만들기](#creating_a_package)  
  [배포 지점 선택](#select_dist_point)  
@@ -145,8 +138,8 @@ ms.lasthandoff: 07/28/2017
 |**/norestart**|설치 프로그램이 자동으로 재부팅하지 않도록 합니다. 이 옵션을 사용하는 경우 Configuration Manager는 컴퓨터 다시 시작을 처리해야 합니다.|  
 |**/chainingpackage** *PackageName*|연결을 수행하는 패키지의 이름을 지정합니다. 이 정보는 [Microsoft CEIP(사용자 환경 개선 프로그램)](http://go.microsoft.com/fwlink/p/?LinkId=248244)에 등록한 사용자에 대한 다른 설치 세션 정보와 함께 보고됩니다. 패키지 이름에 공백이 포함되어 있으면 **/chainingpackage "Chaining Product"**와 같이 큰따옴표를 구분 기호로 사용합니다.|  
   
- 위 단계를 통해 .NET Framework 4.5라는 이름의 패키지가 만들어집니다. 이 프로그램은 .NET Framework 4.5 자동 설치 프로그램을 배포합니다. 자동 설치에서 사용자는 설치 프로세스와 상호 작용하지 않으며 연결 응용 프로그램은 반환 코드를 캡처하고 재부팅을 처리해야 합니다. MSDN 라이브러리의 [설치 패키지에서 프로세스 진행 정보 가져오기](http://go.microsoft.com/fwlink/?LinkId=179606)를 참조하세요.  
-  
+ 위 단계를 통해 .NET Framework 4.5라는 이름의 패키지가 만들어집니다. 이 프로그램은 .NET Framework 4.5 자동 설치 프로그램을 배포합니다. 자동 설치의 경우 사용자가 설치 프로세스를 상호 작용 하지 않습니다 및 반환 코드 및; 재부팅을 처리 하는 연결 응용 프로그램은 참조 [설치 패키지에서 프로세스 진행 정보 가져오기](http://go.microsoft.com/fwlink/?LinkId=179606)합니다.  
+ 
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>배포 지점 선택  
  서버에서 클라이언트 컴퓨터에 패키지와 프로그램을 배포하려면 먼저 사이트 시스템을 배포 지점으로 지정한 다음 배포 지점에 패키지를 배포해야 합니다.  
@@ -236,7 +229,7 @@ ms.lasthandoff: 07/28/2017
 ### <a name="log-file-locations"></a>로그 파일 위치  
  다음 로그 파일은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치 중에 생성됩니다.  
   
- %temp%\Microsoft .NET Framework 4.5*.txt   
+ %temp%\Microsoft .NET Framework 4.5*.txt  
  %temp%\Microsoft .NET Framework 4.5\*.html  
   
  [로그 수집 도구](http://www.microsoft.com/download/details.aspx?id=12493)를 사용하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 로그 파일을 수집하고 파일 크기를 줄여주는 압축된 캐비닛 파일(.cab)을 만들 수 있습니다.  
@@ -272,6 +265,5 @@ ms.lasthandoff: 07/28/2017
 -   [Windows 업데이트 에이전트 결과 코드](http://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
- [개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)
-

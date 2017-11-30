@@ -1,12 +1,11 @@
 ---
-title: "동적 언어 런타임 개요"
+title: "동적 언어 런타임 개요 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b62a737a5106c64d08a342365867c460075011b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f6bfc54a3a597325da153852710a0b22871b54e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamic-language-runtime-overview"></a>동적 언어 런타임 개요
 DLR(*동적 언어 런타임*)은 동적 언어에 대한 서비스 집합을 CLR(공용 언어 런타임)에 추가하는 런타임 환경입니다. DLR을 사용하면 .NET Framework에서 실행할 동적 언어를 개발하고 정적 형식의 언어에 동적 기능을 추가하기가 간편해집니다.  
@@ -102,9 +100,8 @@ DLR 아키텍처
  오픈 소스 버전의 DLR을 사용하여 언어에 동적 동작을 추가하는 방법이나 .NET Framework에 동적 언어를 사용할 수 있도록 하는 방법에 대한 자세한 내용은 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 웹 사이트에서 제공하는 문서를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Dynamic.ExpandoObject>   
- <xref:System.Dynamic.DynamicObject>   
- [공용 언어 런타임](../../../docs/standard/clr.md)   
- [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
+ <xref:System.Dynamic.ExpandoObject>  
+ <xref:System.Dynamic.DynamicObject>  
+ [공용 언어 런타임](../../../docs/standard/clr.md)  
+ [식 트리](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
  [연습: 동적 개체 만들기 및 사용](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
-

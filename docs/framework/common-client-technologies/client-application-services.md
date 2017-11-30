@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 31738e205d0b2b88cbb049607eeb027db873db3f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c776040786a51089c9aa988e9229805c06b28bae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="client-application-services"></a>클라이언트 응용 프로그램 서비스
 클라이언트 응용 프로그램 서비스를 통해 Microsoft ASP.NET 2.0 AJAX 확장에 포함된 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 로그인, 역할 및 프로필 응용 프로그램 서비스를 사용하는 Windows 기반 응용 프로그램을 쉽게 만들 수 있습니다. 이 서비스를 통해 여러 웹 응용 프로그램과 Windows 기반 응용 프로그램이 단일 서버에서 사용자 정보와 사용자 관리 기능을 공유할 수 있습니다. 예를 들어 이 서비스를 통해 다음 작업을 수행할 수 있습니다.  
@@ -76,11 +74,10 @@ ms.lasthandoff: 07/28/2017
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
 ## <a name="see-also"></a>참고 항목  
- [ASP.NET 응용 프로그램 서비스 개요](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)   
- [Microsoft Ajax에서 양식 인증 사용](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)   
- [Microsoft Ajax에서 역할 정보 사용](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)   
- [Microsoft Ajax에서 프로필 정보 사용](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)   
- [ASP.NET 인증](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)   
+ [ASP.NET 응용 프로그램 서비스 개요](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Microsoft Ajax에서 양식 인증 사용](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [Microsoft Ajax와 함께 역할 정보를 사용 하 여](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Microsoft Ajax와 함께 프로필 정보를 사용 하 여](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [ASP.NET 인증](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
  [역할을 사용하여 인증 관리](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
  [응용 프로그램 설정 개요](../../../docs/framework/winforms/advanced/application-settings-overview.md)
-

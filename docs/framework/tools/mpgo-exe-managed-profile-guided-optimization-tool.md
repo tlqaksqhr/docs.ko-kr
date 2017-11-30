@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Mpgo.exe
 - training scenarios, generating profiles with
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b6c95613cdc7ac656e8beafcf9a685e51eddf5a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 81c68f718b0395b70f604ed9157daeaa84e9eefc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 관리되는 프로필 기반 최적화 도구(Mpgo.exe)는 공통 최종 사용자 시나리오를 사용하여 [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)로 만들어지는 네이티브 이미지 어셈블리를 최적화하는 명령줄 도구입니다. 이 도구를 사용하면 프로필 데이터를 생성하는 교육 시나리오를 실행할 수 있습니다. [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)는 이 데이터를 사용하여 생성된 네이티브 이미지 응용 프로그램 어셈블리를 최적화합니다. 교육 시나리오는 응용 프로그램의 정상적 용도에 대한 평가 실행입니다. Mpgo.exe는 Visual Studio Ultimate 2012 이상 버전에서 사용할 수 있습니다. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]부터 Mpgo.exe를 사용하여 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 최적화할 수도 있습니다.  
@@ -141,8 +134,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)   
- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
- [데스크톱 응용 프로그램의 시작 성능 개선](http://go.microsoft.com/fwlink/p/?LinkId=248943)   
+ [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [데스크톱 응용 프로그램에 대 한 시작 성능 개선](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
  [.NET 4.5의 성능 개선 개요](http://go.microsoft.com/fwlink/p/?LinkId=249131)
-

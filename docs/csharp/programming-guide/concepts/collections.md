@@ -1,27 +1,18 @@
 ---
 title: "컬렉션(C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4955b3d7048b4dfee23fbcf6eeaed995ebf4f1be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 26a90b57350837bd51f222ff716364cb3bb902d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collections-c"></a>컬렉션(C#)
 대부분의 응용 프로그램의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다. 개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.  
@@ -32,7 +23,7 @@ ms.lasthandoff: 07/28/2017
   
  컬렉션은 클래스이므로 해당 컬렉션에 요소를 추가하려면 먼저 클래스 인스턴스를 선언해야 합니다.  
   
- 컬렉션에 단일 데이터 형식의 요소만 포함된 경우 <xref:System.Collections.Generic?displayProperty=fullName> 네임스페이스의 클래스 중 하나를 사용할 수 있습니다. 제네릭 컬렉션은 다른 데이터 형식을 추가할 수 없도록 형식 안전성을 적용합니다. 제네릭 컬렉션에서 요소를 검색하는 경우 해당 데이터 형식을 결정하거나 변환할 필요가 없습니다.  
+ 컬렉션에 단일 데이터 형식의 요소만 포함된 경우 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스의 클래스 중 하나를 사용할 수 있습니다. 제네릭 컬렉션은 다른 데이터 형식을 추가할 수 없도록 형식 안전성을 적용합니다. 제네릭 컬렉션에서 요소를 검색하는 경우 해당 데이터 형식을 결정하거나 변환할 필요가 없습니다.  
   
 > [!NOTE]
 >  이 항목의 예제에서는 `System.Collections.Generic` 및 `System.Linq` 네임스페이스에 대한 [using](../../../csharp/language-reference/keywords/using-directive.md) 지시문을 포함합니다.  
@@ -195,17 +186,17 @@ public class Galaxy
   
  이 섹션에서는 다음 몇 가지 일반적인 컬렉션 클래스에 대해 설명합니다.  
   
--   @System.Collections.Generic 클래스  
+-   <xref:System.Collections.Generic> 클래스  
   
--   @System.Collections.Concurrent 클래스  
+-   <xref:System.Collections.Concurrent> 클래스  
   
--   @System.Collections 클래스  
+-   <xref:System.Collections> 클래스  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic 클래스  
  <xref:System.Collections.Generic> 네임스페이스의 클래스 중 하나를 사용하여 제네릭 컬렉션을 만들 수 있습니다. 제네릭 컬렉션은 컬렉션의 모든 항목에 동일한 데이터 형식이 있는 경우에 유용합니다. 제네릭 컬렉션은 원하는 데이터 형식만 추가할 수 있도록 하여 강력한 형식 지정을 적용합니다.  
   
- 다음 표에서는 자주 사용되는 <xref:System.Collections.Generic?displayProperty=fullName> 네임스페이스 클래스 중 일부를 보여 줍니다.  
+ 다음 표에서는 자주 사용되는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스 클래스 중 일부를 보여 줍니다.  
 
 |클래스|설명| 
 |---|---|  
@@ -215,21 +206,21 @@ public class Galaxy
 |<xref:System.Collections.Generic.SortedList%602>|연관된 <xref:System.Collections.Generic.IComparer%601> 구현을 기반으로 키에 따라 정렬된 키/값 쌍의 컬렉션을 나타냅니다.|  
 |<xref:System.Collections.Generic.Stack%601>|LIFO(후입선출) 방식의 개체 컬렉션을 나타냅니다.|  
   
- 자세한 내용은 [일반적으로 사용되는 컬렉션 형식](../../../standard/collections/commonly-used-collection-types.md), [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md) 및 @System.Collections.Generic을 참조하세요.  
+ 자세한 내용은 [일반적으로 사용되는 컬렉션 형식](../../../standard/collections/commonly-used-collection-types.md), [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md) 및 <xref:System.Collections.Generic>을 참조하세요.  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent 클래스  
  .NET Framework 4 이상에서 <xref:System.Collections.Concurrent> 네임스페이스의 컬렉션은 여러 스레드에서 컬렉션 항목에 액세스하기 위한 효율적이고 스레드로부터 안전한 작업을 제공합니다.  
   
- 여러 스레드가 동시에 컬렉션에 액세스할 때마다 <xref:System.Collections.Generic?displayProperty=fullName> 및 <xref:System.Collections?displayProperty=fullName>의 해당 형식 대신 <xref:System.Collections.Concurrent> 네임스페이스의 클래스를 사용해야 합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../standard/collections/thread-safe/index.md) 및 <xref:System.Collections.Concurrent>를 참조하세요.  
+ 여러 스레드가 동시에 컬렉션에 액세스할 때마다 <xref:System.Collections.Generic?displayProperty=nameWithType> 및 <xref:System.Collections?displayProperty=nameWithType>의 해당 형식 대신 <xref:System.Collections.Concurrent> 네임스페이스의 클래스를 사용해야 합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../standard/collections/thread-safe/index.md) 및 <xref:System.Collections.Concurrent>를 참조하세요.  
   
  <xref:System.Collections.Concurrent> 네임스페이스에 포함된 일부 클래스는 <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601>입니다.  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>System.Collections 클래스  
- <xref:System.Collections?displayProperty=fullName> 네임스페이스의 클래스는 구체적 형식의 개체가 아니라 `Object` 형식의 개체로 요소를 저장합니다.  
+ <xref:System.Collections?displayProperty=nameWithType> 네임스페이스의 클래스는 구체적 형식의 개체가 아니라 `Object` 형식의 개체로 요소를 저장합니다.  
   
- 가능하면 항상 `System.Collections` 네임스페이스의 레거시 형식 대신 <xref:System.Collections.Generic?displayProperty=fullName> 네임스페이스 또는 <xref:System.Collections.Concurrent> 네임스페이스의 제네릭 컬렉션을 사용해야 합니다.  
+ 가능하면 항상 `System.Collections` 네임스페이스의 레거시 형식 대신 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스 또는 <xref:System.Collections.Concurrent> 네임스페이스의 제네릭 컬렉션을 사용해야 합니다.  
   
  다음 표에서는 자주 사용되는 `System.Collections` 네임스페이스 클래스 중 일부를 보여 줍니다.  
   
@@ -590,15 +581,14 @@ private static IEnumerable<int> EvenSequence(
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [프로그래밍 개념(C#)](../../../csharp/programming-guide/concepts/index.md)   
- [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [LINQ to Objects(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [PLINQ(병렬 LINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)   
- [컬렉션 및 데이터 구조](../../../standard/collections/index.md)   
- [컬렉션 만들기 및 조작](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
- [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md)   
- [컬렉션 내에서 비교 및 정렬](../../../standard/collections/comparisons-and-sorts-within-collections.md)   
- [제네릭 컬렉션 사용 기준](../../../standard/collections/when-to-use-generic-collections.md)   
+ [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [프로그래밍 개념(C#)](../../../csharp/programming-guide/concepts/index.md)  
+ [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [LINQ to Objects(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [PLINQ(병렬 LINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+ [컬렉션 및 데이터 구조](../../../standard/collections/index.md)  
+ [컬렉션 만들기 및 조작](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md)  
+ [컬렉션 내에서 비교 및 정렬](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+ [제네릭 컬렉션 사용 기준](../../../standard/collections/when-to-use-generic-collections.md)  
  [방법: foreach를 사용하여 컬렉션 클래스 액세스](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)
-

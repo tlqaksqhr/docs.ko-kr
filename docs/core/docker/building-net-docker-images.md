@@ -2,227 +2,267 @@
 title: ".NET Core Docker 이미지 작성"
 description: "Docker 이미지 및 .NET Core 이해"
 keywords: .NET, .NET Core, Docker
-author: spboyer
-ms.author: shboyer
-ms.date: 09/06/2017
-ms.topic: article
+author: jralexander
+ms.author: johalex
+ms.date: 11/06/2017
+ms.topic: tutorial
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
+ms.custom: mvc
+manager: wpickett
+ms.openlocfilehash: 3ec2d5a58b46e332de41b618f1c3fac663b29bee
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: a0b6edbc13fddd8558f6677d25ce279147d761c3
-ms.openlocfilehash: efec7e390f029d2f0ab952e316976ad1c6408b0f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/08/2017
 ---
+# <a name="building-docker-images-for-net-core-applications"></a>.NET Core 응용 프로그램에 대한 Docker 이미지 작성
 
-#<a name="building-docker-images-for-net-core-applications"></a>.NET Core 응용 프로그램에 대한 Docker 이미지 작성
+ 이 자습서에서는 Docker에서.NET Core를 사용 하는 방법에 집중 합니다. 첫째, 살펴볼 제공 되며 Microsoft 및 사용 사례에서 유지 관리 하는 서로 다른 Docker 이미지입니다. 에서는 빌드 및 ASP.NET Core 응용 프로그램 dockerize 하는 방법을 알아봅니다.
 
- 
-> [!IMPORTANT]
-> 이 문서에서 .NET Core 2.0 관련 내용을 업데이트하는 중입니다. 다음 지침은 최신이 아닙니다. 불편을 끼쳐드려서 죄송합니다.
-
-.NET Core와 Docker를 함께 사용하는 방법을 이해하려면 먼저 제공되는 다양한 Docker 이미지와 올바른 사용 시기에 대해 알고 있어야 합니다. 여기서는 제공되는 변형 이미지를 살펴보고, ASP.NET Core Web API를 빌드하며, Yeoman Docker 도구를 사용하여 디버깅 가능한 컨테이너를 만들 뿐만 아니라 Visual Studio Code가 이 프로세스에 어떻게 도움이 되는지를 살펴봅니다. 
+이 자습서는 과정을 자세히 배울 있습니다.
+> [!div class="checklist"]
+> * Microsoft.NET Core Docker 이미지에 대 한 자세한 내용은 
+> * ASP.NET Core Dockerize에 샘플 응용 프로그램 가져오기
+> * ASP.NET 샘플 앱을 로컬로 실행
+> * 빌드 및 Linux 컨테이너에 대 한 Docker가 있는 샘플 실행
+> * 빌드 및 Windows 용 Docker 컨테이너와 샘플을 실행 합니다.
 
 ## <a name="docker-image-optimizations"></a>Docker 이미지 최적화
 
 개발자를 위한 Docker 이미지를 작성할 때 다음 세 가지 주요 시나리오를 중점적으로 고려했습니다.
 
-- .NET Core 앱을 개발하는 데 사용되는 이미지
-- .NET Core 앱을 빌드하는 데 사용되는 이미지
-- .NET Core 앱을 실행하는 데 사용되는 이미지
+* .NET Core 앱을 개발하는 데 사용되는 이미지
+* .NET Core 앱을 빌드하는 데 사용되는 이미지
+* .NET Core 앱을 실행하는 데 사용되는 이미지
 
 왜 이 세 가지 이미지가 중요할까요?
-컨테이너화된 응용 프로그램을 개발, 빌드 및 실행할 때 서로 다른 우선 순위가 있습니다.
-- **개발:**  얼마나 빨리 변경을 반복할 수 있는지 그리고 변경 내용을 디버그하는 기능이 중요합니다. 이미지의 크기는 중요하지 않으며 코드를 변경하고 변경 내용을 신속하게 확인할 수 있어야 합니다. [yo docker](https://aka.ms/yodocker)와 같이 Visual Studio Code에서 사용하는 일부 도구에서 개발하는 동안 이 이미지를 사용합니다. 
-- **빌드:** 앱을 컴파일하는 데 무엇이 필요한지가 중요합니다. 여기에는 컴파일러와 이진 파일을 최적화하기 위한 다른 모든 종속성이 포함됩니다. 이 이미지는 배포하는 이미지가 아니며, 프로덕션 이미지에 배치하는 콘텐츠를 빌드하는 데 사용되는 이미지입니다. 이 이미지는 연속 통합 또는 빌드 환경에서 사용됩니다. 예를 들어 모든 종속성을 빌드 에이전트에 직접 설치하는 대신 빌드 에이전트는 빌드 이미지를 인스턴스화하여 이미지 내에 포함된 앱을 빌드하는 데 필요한 모든 종속성을 사용하여 응용 프로그램을 컴파일합니다. 빌드 에이전트는 이 Docker 이미지를 실행하는 방법만 알고 있으면 됩니다. 
-- **프로덕션:** 이미지를 배포하고 시작할 수 있는 속도가 중요합니다. 이 이미지는 작기 때문에 Docker 레지스트리에서 Docker 호스트 사이의 네트워크를 신속하게 이동할 수 있습니다. 콘텐츠를 실행할 준비가 되면 Docker 실행부터 결과 처리까지 가장 빠른 시간에 수행할 수 있습니다. 변경이 불가능한 Docker 모델에서는 코드를 동적으로 컴파일할 필요가 없습니다. 이 이미지에 배치되는 콘텐츠는 이진 파일과 응용 프로그램을 실행하는 데 필요한 콘텐츠로 제한됩니다. 컴파일된 이진 파일, 이미지, .js 및 .css 파일을 포함하는 `dotnet publish`를 사용하는 게시된 출력을 예로 들 수 있습니다. 시간이 지남에 따라 미리 JIT 컴파일된 패키지를 포함하는 이미지가 표시됩니다.  
+개발, 빌드 및 실행 중인 컨테이너 화 된 응용 프로그램 때 서로 다른 우선 해야 합니다.
 
-여러 버전의 .NET Core 이미지가 있지만 모두 하나 이상의 레이어를 공유합니다. 모든 이미지가 동일한 기본 레이어와 잠재적으로 다른 레이어를 공유하기 때문에 저장하는 데 필요한 디스크 공간의 크기나 레지스트리에서 끌어오는 델타가 전체보다 훨씬 더 작습니다.  
+* **개발:** 변경 내용 및 변경 내용을 디버깅 하는 기능에 신속 하 게 우선 순위 중점적 반복 합니다. 이미지의 크기를으로 중요 하지 않습니다, 그리고 대신 수 변경 코드를 신속 하 게 참조 하세요?
+
+* **빌드:** 이 이미지는 컴파일러 및 이진 파일을 최적화 하기 위해 다른 종속성을 포함 하 여 응용 프로그램을 컴파일하는 데 필요한 모든 항목을 포함 합니다.  이미지를 프로덕션에 배치 하는 자산을 만드는 빌드 이미지를 사용 합니다. 연속 통합 또는 빌드 환경에서 빌드 이미지를 사용할 것입니다. 이 방법은 빌드 에이전트를 컴파일하고 빌드 이미지 인스턴스에서 (모든 필수 종속성)이 있는 응용 프로그램을 빌드할 수 있도록 합니다. 빌드 에이전트는 이 Docker 이미지를 실행하는 방법만 알고 있으면 됩니다.
+
+* **프로덕션:** 배포 하 고 이미지를 시작할 수 속도? 이 이미지 Docker 호스트에 Docker 레지스트리에서 네트워크 성능을 최적화 하도록 작습니다. 콘텐츠를 실행할 준비가 되면 Docker 실행부터 결과 처리까지 가장 빠른 시간에 수행할 수 있습니다. 동적 코드 컴파일에 Docker 모델에 필요 하지 않습니다. 이 이미지에 배치되는 콘텐츠는 이진 파일과 응용 프로그램을 실행하는 데 필요한 콘텐츠로 제한됩니다.
+
+    예를 들어는 `dotnet publish` 출력에 포함 되어 있습니다.
+
+    * 컴파일된 이진 파일
+    * .css 및.js 파일
+
+
+포함 하는 이유는 `dotnet publish` 프로덕션 이미지에서 명령 출력은 변경 하지 않으려면 해당 '는 최소 크기입니다.
+
+일부.NET Core 이미지 최신 태그를 다운로드 하는 것은 비교적 단순해 프로세스 않도록 다른 태그 간의 계층을 공유 합니다. 컴퓨터에 이전 버전이 이미 있는 경우이 아키텍처는 필요한 디스크 공간을 줄입니다.
+
+동일한 컴퓨터에 공용 이미지를 사용 하는 여러 응용 프로그램, 메모리 공용 이미지 간에 공유 됩니다. 이미지를 공유할 수 동일 해야 합니다.
 
 ## <a name="docker-image-variations"></a>Docker 이미지 변형
 
-위의 목표를 달성하기 위해 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)에서 이미지 변형을 제공합니다.
+목표를 달성 하기 위, 아래 이미지 변형 제공 [ `microsoft/dotnet` ](https://hub.docker.com/r/microsoft/dotnet/)합니다.
 
-- `microsoft/dotnet:<version>-sdk`: 즉, **microsoft/dotnet:1.0.0-preview2-sdk**로, 이 이미지는 .NET Core 및 CLI(명령줄 도구)가 포함된 .NET Core SDK를 포함합니다. 이 이미지는 **개발 시나리오**에 매핑됩니다. 로컬 개발, 디버깅 및 단위 테스트에 이 이미지를 사용합니다. 예를 들어 코드 체크 인 전의 모든 개발 작업에 사용합니다. 이 이미지는 **빌드** 시나리오에도 사용할 수 있습니다.
+* `microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.0.0-sdk`)이이 이미지는.NET Core 및 명령줄 도구 (CLI)을 포함 하는.NET Core SDK를 포함 합니다. 이 이미지는 **개발 시나리오**에 매핑됩니다. 이 이미지를 사용 하 여 로컬 개발, 디버깅 및 단위 테스트에 대 한 합니다. 이 이미지는 **빌드** 시나리오에도 사용할 수 있습니다. 사용 하 여 `microsoft/dotnet:sdk` 항상 최신 버전을 제공 합니다.
 
-- `microsoft/dotnet:<version>-core`: 즉, **microsoft/dotnet:1.0.0-core**로, [이식 가능한 .NET Core 응용 프로그램](../deploying/index.md)을 실행하는 이미지이며 **프로덕션**에서 응용 프로그램을 실행하는 데 맞게 최적화되어 있습니다. SDK를 포함하지 않으며 `dotnet publish`의 최적화된 출력을 수행하기 위한 것입니다. 이식 가능한 런타임은 실행 중인 여러 컨테이너에서 공유 이미지 레이어를 활용하는 경우 Docker 컨테이너 시나리오에 적합합니다.  
+> [!TIP]
+> 사용 하려는 경우 확실 하지 않은 사용자의 요구에 대 한,는 `microsoft/dotnet:<version>-sdk` 이미지입니다. Throw가으로 사용할 수 있도록 설계 했습니다 "사실상" 이미지로 트래버스하여 컨테이너 (소스 코드를 탑재 및 응용 프로그램을 시작 컨테이너 시작) 및 다른 이미지를 작성 하는 기본 이미지입니다.
+
+* `microsoft/dotnet:<version>-runtime`:이 이미지.NET Core (런타임 및 라이브러리)을 포함 하 고 실행 중인.NET Core 응용 프로그램에 최적화 되어 **프로덕션**합니다.
 
 ## <a name="alternative-images"></a>대체 이미지
 
 개발, 빌드 및 프로덕션에 최적화된 시나리오 외에도 추가 이미지를 제공합니다.
 
-- `microsoft/dotnet:<version>-onbuild`: 즉, **microsoft/dotnet:1.0.0-preview2-onbuild**로, [ONBUILD](https://docs.docker.com/engine/reference/builder/#/onbuild) 트리거를 포함합니다. 빌드는 응용 프로그램을 [COPY](https://docs.docker.com/engine/reference/builder/#/copy)하고, `dotnet restore`를 실행하며, Docker 이미지가 실행될 때 응용 프로그램을 실행하는 [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint) `dotnet run` 명령을 만듭니다. 프로덕션에 최적화된 이미지는 아니지만 단순히 소스 코드를 이미지에 복사하여 실행할 때 유용한 경우는 있습니다. 
-
-- `microsoft/dotnet:<version>-core-deps`: 즉, **microsoft/dotnet:1.0.0-core-deps**로, 자체 포함 응용 프로그램을 실행하려는 경우 이 이미지를 사용합니다. .NET Core에 필요한 모든 기본 종속성과 함께 운영 체제를 포함합니다. 이 이미지는 고유한 사용자 지정 CoreFX 또는 CoreCLR 빌드에 대한 기본 이미지로 사용할 수도 있습니다. **onbuild** 변형이 단순히 코드를 이미지에 배치하고 실행하도록 최적화된 반면, 이 이미지는 .NET 런타임이 응용 프로그램과 함께 패키지로 제공되는 .NET Core 앱을 실행하는 데 필요한 운영 체제 종속성만 갖도록 최적화되어 있습니다. 각 이미지가 응용 프로그램 내에서 .NET Core 런타임을 전달하기 때문에 이 이미지는 일반적으로 동일한 호스트에서 여러 .NET Core 컨테이너를 실행하는 데 최적화되어 있지 않으며 이미지 레이어를 활용할 수 없습니다.   
+* `microsoft/dotnet:<version>-runtime-deps`: **런타임 deps** 이미지.NET Core에서 필요한 네이티브 종속성의 모든 운영 체제를 포함 합니다. 이 이미지에 대 한는 [자체 포함 된 응용 프로그램](https://docs.microsoft.com/dotnet/core/deploying/index)합니다.
 
 각 변형의 최신 버전:
 
-- `microsoft/dotnet` 또는 `microsoft/dotnet:latest`(SDK 포함)
-- `microsoft/dotnet:onbuild`
-- `microsoft/dotnet:core`
-- `microsoft/dotnet:core-deps`
+* `microsoft/dotnet`또는 `microsoft/dotnet:latest` (SDK 이미지에 대 한 별칭)
+* `microsoft/dotnet:sdk`
+* `microsoft/dotnet:runtime`
+* `microsoft/dotnet:runtime-deps`
 
-다음은 개발 컴퓨터에서 다양한 크기를 보여 주는 `docker pull <imagename>` 다음의 이미지 목록입니다. 개발/빌드 변형인 `microsoft/dotnet:1.0.0-preview2-sdk`는 응용 프로그램을 개발하고 빌드하는 SDK를 포함하기 때문에 더 큽니다. 프로덕션 변형인 `microsoft/dotnet:core`는 .NET Core 런타임만 포함하기 때문에 더 작습니다. Linux에서 사용할 수 있는 최소 이미지인 `core-deps`는 훨씬 더 작지만 응용 프로그램에서 이 이미지를 사용하여 .NET 런타임의 개인 복사본을 복사해야 합니다. 컨테이너가 이미 개인 격리 장벽이기 때문에 여러 dotnet 기반 컨테이너를 실행할 경우 최적화가 손실됩니다. 
+## <a name="samples-to-explore"></a>탐색 하는 샘플
 
-```
-REPOSITORY          TAG                     IMAGE ID            SIZE
-microsoft/dotnet    1.0.0-preview2-onbuild  19b6a6c4b1db        540.4 MB
-microsoft/dotnet    onbuild                 19b6a6c4b1db        540.4 MB
-microsoft/dotnet    1.0.0-preview2-sdk      a92c3d9ad0e7        540.4 MB
-microsoft/dotnet    core                    5224a9f2a2aa        253.2 MB
-microsoft/dotnet    1.0.0-core-deps         c981a2eebe0e        166.2 MB
-microsoft/dotnet    core-deps               c981a2eebe0e        166.2 MB
-microsoft/dotnet    latest                  03c10abbd08a        540.4 MB
-microsoft/dotnet    1.0.0-core              b8da4a1fd280        253.2 MB
-```
+* [이 ASP.NET Core Docker 샘플](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) 프로덕션에 대 한 앱 ASP.NET Core 용 Docker 이미지를 구성 하기 위한 모범 사례 패턴을 보여 줍니다. 샘플은 Windows와 Linux 컨테이너에서 작동합니다.
 
-## <a name="prerequisites"></a>필수 조건
+* 이.NET Core Docker 샘플에 대 한 모범 사례 패턴 [프로덕션에 대 한.NET Core 응용 프로그램에 대 한 Docker 이미지를 작성 합니다.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)
 
-빌드하고 실행하려면 다음과 같은 몇 가지 항목을 설치해야 합니다.
+## <a name="your-first-aspnet-core-docker-app"></a>첫 번째 ASP.NET Core Docker 앱
 
-- [.NET Core](http://dot.net)
-- Docker 컨테이너를 로컬로 실행하기 위한 [Docker](https://www.docker.com/products/docker)
-- [Node.js](https://nodejs.org/)
-- Web API 응용 프로그램을 만들기 위한 [ASP.NET용 Yeoman 생성기](https://github.com/omnisharp/generator-aspnet)
-- Microsoft의 [Docker용 Yeoman 생성기](http://aka.ms/yodocker)
+이 자습서에서는 dockerize 하고자 하는 앱에 대 한 ASP.NET Core Docker 샘플 응용 프로그램을 사용 하 여 수 있습니다. ASP.NET Core Docker 샘플 응용 프로그램에이 프로덕션에 대 한 앱 ASP.NET Core 용 Docker 이미지를 구성 하기 위한 모범 사례 패턴을 보여 줍니다. 샘플은 Windows와 Linux 컨테이너에서 작동합니다.
 
-npm을 사용하여 ASP.NET Core 및 Docker용 Yeoman 생성기 설치 
+Dockerfile 샘플 ASP.NET Core 런타임 Docker 기본 이미지 기반으로 ASP.NET Core 응용 프로그램 Docker 이미지를 만듭니다.
 
-```
-npm install -g yo generator-aspnet generator-docker
-```
+사용 하 여는 [여러 단계로 이루어진 Docker 빌드 기능](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) 에:
 
-> [!NOTE]
-> 이 샘플에서는 [Visual Studio Code](http://code.visualstudio.com)를 편집기에 사용합니다.
+* 에 따라 컨테이너에서 샘플을 빌드하는 **큰** ASP.NET Core 빌드 Docker 기본 이미지 
+* 최종 빌드 결과에 따라 Docker 이미지를에 복사는 **더 작은** ASP.NET Core Docker 런타임 기본 이미지
 
-## <a name="creating-the-web-api-application"></a>Web API 응용 프로그램 만들기
+> [!Note]
+> 빌드 이미지 런타임 이미지는 손실 응용 프로그램을 빌드하는 필요한 도구를 포함 합니다.
 
-참조 지점으로 응용 프로그램을 컨테이너화하기 전에 먼저 로컬로 응용 프로그램을 실행합니다. 
+### <a name="prerequisites"></a>필수 구성 요소
 
-완성된 응용 프로그램은 [GitHub의 dotnet/docs 리포지토리](https://github.com/dotnet/docs/tree/master/samples/core/docker/building-net-docker-images)에 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+빌드하고 실행 하려면 다음 항목을 설치 합니다.
 
-응용 프로그램에 대한 디렉터리를 만듭니다.
+#### <a name="net-core-20-sdk"></a>.NET core 2.0 SDK
 
-해당 디렉터리에서 명령 또는 터미널 세션을 열고 다음을 입력하여 ASP.NET Yeoman 생성기를 사용합니다.
-```
-yo aspnet
-```
+* 설치 [.NET Core SDK 2.0](https://www.microsoft.com/net/core)합니다.
 
-**Web API 응용 프로그램**을 선택하고 앱의 이름으로 **api**를 입력한 다음 <Enter> 키를 탭합니다.  응용 프로그램이 스캐폴드되면 `/api` 디렉터리로 변경하고 `dotnet restore`를 사용하여 NuGet 종속성을 복원합니다.
+* 아직 없는 경우, 즐겨 찾는 코드 편집기를 설치 합니다.
 
-```
-cd api
-dotnet restore
-```
+> [!TIP]
+> 코드 편집기를 설치 해야? 시도 [Visual Studio](https://visualstudio.com/downloads)!
 
-`dotnet run`을 사용하고 **http://localhost:5000/api/values** 로 이동하여 응용 프로그램을 테스트합니다.
+#### <a name="installing-docker-client"></a>Docker 클라이언트를 설치합니다.
 
-```javascript
-[
-    "value1",
-    "value2"
-]
-```
+설치 [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) Docker 클라이언트의 이상.
 
-`Ctrl+C`를 사용하여 응용 프로그램을 중지합니다.
+에 Docker 클라이언트를 설치할 수 있습니다.
 
-## <a name="adding-docker-support"></a>Docker 지원 추가
+* Linux 배포
 
-Microsoft용 Yeoman 생성기를 사용하여 프로젝트에 Docker 지원을 추가할 수 있습니다. 현재 컨테이너 내에서 프로젝트를 빌드하고 실행하는 데 도움이 되는 Dockerfile 및 스크립트를 만들어 .NET Core, Node.js 및 Go 프로젝트를 지원합니다. 편집기 디버깅 및 명령 팔레트를 지원하기 위해 Visual Studio Code 관련 파일(launch.json, tasks.json)도 추가됩니다.
+   * [CentOS](https://www.docker.com/docker-centos-distribution)
+
+   * [Debian](https://www.docker.com/docker-debian)
+
+   * [Fedora](https://www.docker.com/docker-fedora)
+
+   * [Ubuntu](https://www.docker.com/docker-ubuntu)
+
+* [macOS](https://docs.docker.com/docker-for-mac/)
+
+* [Windows](https://docs.docker.com/docker-for-windows/)합니다.
+
+#### <a name="installing-git-for-sample-repository"></a>샘플 저장소에 대 한 Git 설치
+
+* 설치 [git](https://git-scm.com/download) 리포지토리 복제 하려는 경우.
+
+### <a name="getting-the-sample-application"></a>샘플 응용 프로그램 가져오기
+
+복제 하 여이 샘플을 가져오는 가장 쉬운 방법은 [샘플 리포지토리](https://github.com/dotnet/dotnet-docker-samples) git에서 다음 지침을 사용 하 여: 
 
 ```console
-$ yo docker
-
-     _-----_     ╭──────────────────────────╮
-    |       |    │   Welcome to the Docker  │
-    |--(o)--|    │        generator!        │
-   `---------´   │     Let's add Docker     │
-    ( _´U`_ )    │  container magic to your │
-    /___A___\   /│           app!           │
-     |  ~  |     ╰──────────────────────────╯
-   __'.___.'__
- ´   `  |° ´ Y `
-
-? What language is your project using? (Use arrow keys)
-❯ .NET Core
-  Golang
-  Node.js
+git clone https://github.com/dotnet/dotnet-docker-samples/
 ```
 
-- `.NET Core`를 프로젝트 형식으로 선택
-- `rtm`: .NET Core의 버전
-- `Y`: 프로젝트에서 웹 서버 사용
-- `5000`: Web API 응용 프로그램에서 수신 대기하는 포트(http://localhost:5000)
-- `api`: 이미지 이름
-- `api`: 서비스 이름
-- `api`: 작성 프로젝트 
-- `Y`: 현재 Dockerfile 덮어쓰기
+또한.NET Core Docker 샘플 리포지토리에서 zip으로 (에 작은) 저장소를 다운로드할 수 있습니다.
 
-생성기가 완료되면 다음 파일이 프로젝트에 추가됩니다.
+### <a name="run-the-aspnet-app-locally"></a>ASP.NET 응용 프로그램을 로컬로 실행
 
-- .vscode/launch.json
-- Dockerfile.debug
-- Dockerfile
-- docker-compose.debug.yml
-- docker-compose.yml
-- dockerTask.ps1
-- dockerTask.sh
-- .vscode/tasks.json
+참조 지점으로 응용 프로그램을 컨테이너화하기 전에 먼저 로컬로 응용 프로그램을 실행합니다.
 
-생성자는 두 개의 Dockerfile을 만듭니다.
+작성 하 고 (지침에서는 저장소의 루트를 가정 하는 데 사용) 다음 명령을 사용 하 여.NET Core 2.0 SDK와 함께 응용 프로그램을 로컬로 실행할 수 있습니다.
 
-**Dockerfile.debug** - 이 파일은 이미지 변형 목록에서 확인할 경우 SDK, CLI 및 .NET Core를 포함하고 개발 및 디버깅(F5)에 사용되는 이미지인 **microsoft/dotnet:1.0.0-preview2-sdk** 이미지를 기반으로 합니다. 이러한 모든 구성 요소를 포함하면 약 540MB의 더 큰 이미지가 생성됩니다.
+```console
+cd aspnetapp
+dotnet run
+```
 
-**Dockerfile** - 이 이미지는 **microsoft/dotnet:1.0.0-core**를 기반으로 하는 릴리스 이미지이며 프로덕션에 사용됩니다. 빌드할 때 이 이미지는 약 253MB입니다.
+응용 프로그램이 시작 된 후 방문 **http://localhost:5000** 웹 브라우저에서 합니다.
 
-### <a name="creating-the-docker-images"></a>Docker 이미지 만들기
-`dockerTask.sh` 또는 `dockerTask.ps1` 스크립트를 사용하여 특정 환경에서 **api** 응용 프로그램에 대한 이미지 및 컨테이너를 빌드하거나 작성할 수 있습니다. 다음 명령을 실행하여 **debug** 이미지를 빌드합니다.
+### <a name="build-and-run-the-sample-with-docker-for-linux-containers"></a>빌드 및 Linux 컨테이너에 대 한 Docker가 있는 샘플 실행
+
+빌드하고 수 있습니다 (지침에서는 저장소의 루트를 가정 하는 데 사용) 다음 명령을 사용 하 여 Linux 컨테이너를 사용 하 여 Docker에서 샘플을 실행 합니다.
+
+```console
+cd aspnetapp
+docker build -t aspnetapp .
+docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
+```
+
+> [!Note] `docker run` '-p' 인수 지도 포트 컨테이너에는 80으로 로컬 컴퓨터에서 5000 포트 (포트 매핑 폼이 `host:container`). 자세한 내용은 참조는 [docker 실행](https://docs.docker.com/engine/reference/commandline/exec/) 명령줄 매개 변수에 대 한 참조입니다.
+
+응용 프로그램이 시작 된 후 방문 **http://localhost:5000** 웹 브라우저에서 합니다.
+
+### <a name="build-and-run-the-sample-with-docker-for-windows-containers"></a>빌드 및 Windows 용 Docker 컨테이너와 샘플을 실행 합니다.
+
+빌드하고 수 있습니다 (지침에서는 저장소의 루트를 가정 하는 데 사용) 다음 명령을 사용 하 여 Windows 컨테이너를 사용 하 여 Docker에서 샘플을 실행 합니다.
+
+```console
+cd aspnetapp
+docker build -t aspnetapp .
+docker run -it --rm --name aspnetcore_sample aspnetapp
+```
+
+> [!IMPORTANT]
+> 이동 해야 합니다는 **컨테이너 IP 주소** (http://localhost) 대비 직접 브라우저에서 Windows 컨테이너를 사용 하는 경우. 다음 단계를 컨테이너의 IP 주소를 가져올 수 있습니다.
+
+* 다른 명령 프롬프트를 엽니다.
+* 실행 `docker ps` 프로그램 실행 중인 컨테이너를 볼 수 있습니다. "Aspnetcore_sample" 컨테이너가 있어야 합니다.
+* `docker exec aspnetcore_sample ipconfig`를 실행합니다.
+* 컨테이너 IP 주소를 복사 하 고 (예를 들어 172.29.245.43) 브라우저에 붙여 넣습니다.
+
+> [!Note]
+> Docker exec 식별 컨테이너의 이름이 나 해시를 지원합니다. 이름 (aspnetcore_sample) 예에서 사용 됩니다.
+
+다음 예제에서는 실행 중인 Windows 컨테이너의 IP 주소를 얻어야 하는 방법의를 참조 하십시오.
+
+```console
+docker exec aspnetcore_sample ipconfig
+
+Windows IP Configuration
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : contoso.com
+   Link-local IPv6 Address . . . . . : fe80::1967:6598:124:cfa3%4
+   IPv4 Address. . . . . . . . . . . : 172.29.245.43
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . : 172.29.240.1
+```
+
+> [!Note]
+> Docker exec 실행 중인 컨테이너에 새 명령을 실행합니다. 자세한 내용은 참조는 [docker exec 참조](https://docs.docker.com/engine/reference/commandline/exec/) 에 명령줄 매개 변수입니다.
+
+사용 하 여 로컬로 프로덕션 배포를 준비 하는 응용 프로그램을 만들 수 있습니다는 [dotnet 게시](../tools/dotnet-publish.md) 명령입니다.
+
+```console
+dotnet publish -c release -o published
+```
+
+> [!Note]
+> -C 릴리스 인수 (기본값은 디버그 모드) 릴리스 모드에서 응용 프로그램을 작성 합니다. 자세한 내용은 참조는 [dotnet run 참조](../tools/dotnet-run.md) 명령줄 매개 변수에 대.
+
+응용 프로그램을 실행할 수 있습니다 **Windows** 다음 명령을 사용 합니다.
+
+```console
+dotnet published\aspnetapp.dll
+```
+
+응용 프로그램을 실행할 수 있습니다 **Linux** 또는 **macOS** 다음 명령을 사용 합니다.
 
 ```bash
-./dockerTask.sh build debug
+dotnet published/aspnetapp.dll
 ```
 
-이 이미지는 ASP.NET 응용 프로그램을 빌드하고 `dotnet restore`를 실행하며 디버거를 이미지에 추가하고 `ENTRYPOINT`를 설정한 다음 마지막으로 이미지에 앱을 복사합니다. 결과는 `TAG`가 *debug*인 *api*라는 Docker 이미지입니다.  `docker images`를 사용하여 컴퓨터의 이미지를 확인하세요.
+### <a name="docker-images-used-in-this-sample"></a>이 샘플에 사용 되는 docker 이미지
 
-```bash
-docker images
+이 예제에 사용 된 다음 Docker 이미지
 
-REPOSITORY          TAG                  IMAGE ID            CREATED             SIZE
-api                 debug                70e89fbc5dbe        a few seconds ago   779.8 MB
-```
+* `microsoft/aspnetcore-build:2.0`
+* `microsoft/aspnetcore:2.0`
 
-이미지를 생성하고 Docker 컨테이너 내에서 응용 프로그램을 실행하는 또 다른 방법은 Visual Studio Code에서 응용 프로그램을 열고 디버깅 도구를 사용하는 것입니다. 
-
-Visual Studio Code의 왼쪽에 있는 보기 표시줄에서 디버깅 아이콘을 선택합니다.
-
-![vscode 디버깅 아이콘](./media/building-net-docker-images/debugging_debugicon.png)
-
-그런 다음 재생 아이콘이나 <F5> 키를 탭하여 이미지를 생성하고 컨테이너 내에서 응용 프로그램을 시작합니다. Web API가 http://localhost:5000에서 기본 웹 브라우저를 사용하여 시작됩니다.
-
-![VSCode Docker 도구 디버그](./media/building-net-docker-images/docker-tools-vscode-f5.png)
-
-마치 응용 프로그램이 컨테이너 내부가 아닌 개발 컴퓨터에서 로컬로 실행되는 것처럼 응용 프로그램에서 중단점을 설정하고 단계별로 실행하는 등의 작업을 수행할 수 있습니다. 컨테이너 내에서 디버깅하는 장점은 프로덕션 환경에 배포되는 것과 동일한 이미지가 사용된다는 점입니다.
-
-릴리스 또는 프로덕션 이미지를 만들려면 `release` 환경 이름을 전달하여 터미널에서 명령을 실행하기만 하면 됩니다.
-
-```bash
-./dockerTask build release
-```
-
-이 명령은 더 작은 **microsoft/dotnet:core** 기본 이미지를 기반으로 이미지를 만들고, 포트 5000을 [EXPOSE](https://docs.docker.com/engine/reference/builder/#/expose) `dotnet api.dll`에 대한 [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint) 설정하며, `/app` 디렉터리에 이 이미지를 복사합니다. 훨씬 더 작은 이미지를 생성하는 디버거, SDK 또는 `dotnet restore`가 없습니다. 이미지 이름은 `TAG`가 **latest**인 **api**입니다.
-
-```
-REPOSITORY          TAG                  IMAGE ID            CREATED             SIZE
-api                 debug                70e89fbc5dbe        1 hour ago        779.8 MB
-api                 latest               ef17184c8de6        1 hour ago        260.7 MB
-```
-
-## <a name="summary"></a>요약
-
-Docker 생성기를 사용하여 Web API 응용 프로그램에 필요한 파일을 추가하면 이미지의 개발 및 프로덕션 버전을 만드는 프로세스가 간단해집니다.  도구는 컨테이너 내에서 응용 프로그램의 단계별 실행 디버깅을 제공하는 Windows 및 Visual Studio Code 통합에서 동일한 결과를 얻도록 하는 PowerShell 스크립트도 제공하여 플랫폼 간 도구입니다. 이미지 변형 및 대상 시나리오를 이해하면 프로덕션 배포에 최적화된 이미지를 얻는 동시에 내부 루프 개발 프로세스를 최적화할 수 있습니다.  
+지금까지 바로 사용할 수 있습니다.
+> [!div class="checklist"]
+> * Microsoft.NET Core Docker 이미지에 대 한 학습
+> * ASP.NET Core Dockerize에 샘플 응용 프로그램을 가져왔습니다.
+> * ASP.NET 샘플 앱을 로컬로 실행
+> * 빌드 및 Linux 컨테이너에 대 한 Docker가 있는 샘플 실행
+> * 빌드 및 Windows 용 Docker 컨테이너와 샘플을 실행 했습니다.
 
 
+**다음 단계**
 
+수행할 수 있는 몇 가지 다음 단계는 다음과 같습니다.
+
+* [Visual Studio Docker 도구 사용](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
+* [Azure 컨테이너 인스턴스를 Azure 컨테이너 레지스트리에서 Docker 이미지 배포](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
+* [Visual Studio 코드를 사용 하 여 디버깅](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) 
+* [가져오기 손에 Visual Studio와 함께 Mac, 컨테이너 및 서버 없이 코드에 대 한 클라우드](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
+* [Mac 랩 용 Docker 및 Visual Studio 시작](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
+
+> [!Note]
+> Azure 구독이 없는 경우 [바로 등록할](https://azure.microsoft.com/free/?b=16.48) 무료 30 일 계정 및 Azure 서비스의 조합을 사용해 Azure 크레딧에서 get $200에 대 한 합니다.

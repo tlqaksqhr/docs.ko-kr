@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 630457e4d1b30fe2a9439c3a41af5da92606c55a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3b6057076f750d6ad5f8e5de00bc907ac9bf08c2
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>사용자 지정 암호화 알고리즘 지정
 WCF를 통해 데이터를 암호화하거나 디지털 서명을 연산화할 때 사용할 사용자 지정 암호화 알고리즘을 지정할 수 있습니다. 이렇게 하려면 다음 단계를 따릅니다.  
@@ -117,7 +117,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
   
  아래 섹션에서 <`cryptoClasses`> 요소에서은 SHA256CryptoServiceProvider와 별칭 "SHA256CSP" 간의 매핑을 만듭니다. <`nameEntry`> 요소는 "SHA256CSP" 별칭과 지정된 된 URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm) 간의 매핑을 만듭니다.  
   
- 사용 하 여 코드에서에서 사용자 지정 알고리즘을 등록 하는 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False & autoUpgrade = True 메서드. 이 메서드는 두 매핑을 모두 만듭니다. 다음 예제에서는 이 메서드를 호출하는 방법을 보여 줍니다.  
+ 코드로 사용자 지정 알고리즘을 등록하려면 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> 메서드를 사용합니다. 이 메서드는 두 매핑을 모두 만듭니다. 다음 예제에서는 이 메서드를 호출하는 방법을 보여 줍니다.  
   
 ```  
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   

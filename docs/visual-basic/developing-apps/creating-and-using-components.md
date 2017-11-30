@@ -1,41 +1,22 @@
 ---
 title: "Visual Basic에서 구성 요소 만들기 및 사용"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- components [Visual Basic]
+helpviewer_keywords: components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 03929dd0dbb81a9efee5b69ede78ff0b4ab4d380
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic에서 구성 요소 만들기 및 사용
-*구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
+*구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
   
  구성 요소의 중요한 기능은 구성 요소가 디자인 가능하다는 것입니다. 즉, 구성 요소인 클래스는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합 개발 환경에서 사용할 수 있습니다. 구성 요소는 도구 상자에 추가하고, 양식에 끌어서 놓고, 디자인 화면에서 조작할 수 있습니다. 구성 요소에 대한 기본 디자인 타임 지원은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에 기본 제공됩니다. 구성 요소 개발자는 기본 디자인 타임 기능을 이용하기 위해 추가 작업을 할 필요가 없습니다.  
   
@@ -100,7 +81,6 @@ ms.lasthandoff: 07/28/2017
  일반적인 문제 해결 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: Windows Forms에서 디자인 타임 지원 액세스](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)   
- [방법: 디자인 모드에서 컨트롤의 모양과 동작 확장](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)   
+ [방법: Windows Forms에서 디자인 타임 지원에 액세스](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
+ [방법: 모양과 디자인 모드에서 컨트롤의 동작을 확장 합니다.](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
  [방법: 디자인 모드에서 컨트롤에 대한 사용자 지정 초기화 수행](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
-

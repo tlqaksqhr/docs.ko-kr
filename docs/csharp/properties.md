@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
+ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5d2d5d7074678383243e687d4b469606007e585
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="properties"></a>속성
 
 속성은 C#의 주요 구성 요소입니다. 언어는 개발자가 디자인 의도를 정확하게 표현하는 코드를 작성할 수 있는 구문을 정의합니다.
@@ -151,7 +149,7 @@ public class Person
 
 이제 `FirstName` 속성을 모든 코드에서 액세스할 수 있지만 `Person` 클래스의 다른 코드에서만 할당할 수 있습니다.
 
-set 또는 get 접근자에 제한적인 액세스 한정자를 추가할 수 있습니다. 개별 접근자에 설정하는 액세스 한정자는 속성 정의의 액세스 한정자보다 더 제한적이어야 합니다. 위 내용은 `FirstName` 속성이 `public`이지만 set 접근자가 `private`이므로 유효합니다. `public` 접근자를 사용하여 `private` 속성을 선언할 수 없습니다. 속성 선언을 `protected`, `internal`, `protected internal` 또는 `private`로 선언할 수도 있습니다.   
+set 또는 get 접근자에 제한적인 액세스 한정자를 추가할 수 있습니다. 개별 접근자에 설정하는 액세스 한정자는 속성 정의의 액세스 한정자보다 더 제한적이어야 합니다. 위 내용은 `FirstName` 속성이 `public`이지만 set 접근자가 `private`이므로 유효합니다. `public` 접근자를 사용하여 `private` 속성을 선언할 수 없습니다. 속성 선언을 선언할 수도 `protected`, `internal`, `protected internal`, `private protected` 또는 심지어 `private`합니다.   
 
 `get` 접근자에 더 제한적인 한정자를 설정하는 것도 가능합니다. 예를 들어 `public` 속성이 있지만 `get` 접근자를 `private`로 제한할 수 있습니다. 이 시나리오는 실제로 거의 수행되지 않습니다.
 
@@ -317,4 +315,3 @@ public class Person : INotifyPropertyChanged
 
 속성은 클래스 또는 개체에 있는 스마트 필드의 한 형태입니다. 개체 외부에서는 개체의 필드와 유사하게 나타납니다. 그러나 C# 기능의 전체 팔레트를 사용하여 속성을 구현할 수 있습니다.
 유효성 검사, 다른 액세스 가능성, 지연 평가 또는 시나리오에 필요한 모든 요구 사항을 제공할 수 있습니다.
-

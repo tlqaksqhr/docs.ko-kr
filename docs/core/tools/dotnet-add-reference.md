@@ -3,16 +3,15 @@ title: "dotnet-add reference 명령 - .NET Core CLI"
 description: "dotnet add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 9c6b0f434a9d6b1431e375ec6a437497aaddfc61
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 18e3ce22c1b9a4506b2690262d8d0c4e13a58ed1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/14/2017
 
 `PROJECT`
 
-프로젝트 파일을 지정합니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 솔루션 파일을 하나 검색합니다.
+프로젝트 파일을 지정합니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 검색합니다.
 
 `PROJECT_REFERENCES`
 
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/14/2017
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-여러 프로젝트 참조 추가:
+현재 디렉터리에 여러 프로젝트 참조를 프로젝트에 추가 합니다.
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 

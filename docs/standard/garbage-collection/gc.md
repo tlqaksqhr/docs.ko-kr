@@ -1,22 +1,21 @@
 ---
 title: "자동 메모리 관리 및 가비지 수집"
-description: "자동 메모리 관리 및 가비지 수집"
+description: "어떻게 자동 메모리 관리는 관리 되는 실행 하는 동안 공용 언어 런타임에서 제공 하는 서비스 중 하나에 대해 알아봅니다."
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 36423ac3248b14a9bb95611d5997d06b927fa88e
-ms.lasthandoff: 03/02/2017
-
+ms.openlocfilehash: 30bcf08ebb4e05706d5b25e2f805474dd1ee428e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="automatic-memory-management-and-garbage-collection"></a>자동 메모리 관리 및 가비지 수집
 
 자동 메모리 관리는 관리되는 실행을 수행하는 중에 공용 언어 런타임에서 제공되는 서비스 중 하나입니다. CLR의 가비지 수집기에서 응용 프로그램의 메모리 할당과 해제를 관리합니다. 즉, 관리되는 응용 프로그램을 개발할 때 개발자는 메모리 관리 작업을 수행하기 위해 코드를 작성할 필요가 없습니다. 자동 메모리 관리를 사용하면 실수로 개체 비우기를 수행하지 않거나 메모리 누수를 유발하거나 또는 이미 비워진 개체를 찾기 위해 메모리에 액세스하려는 경우 등의 일반적인 문제를 해결할 수 있습니다. 이 단원에서는 가비지 수집기에서 메모리를 할당하고 해제하는 방법에 대해 설명합니다.
@@ -56,5 +55,4 @@ ms.lasthandoff: 03/02/2017
 [System.GC](xref:System.GC)
 
 [.NET에서 가비지 수집](index.md)
-
 

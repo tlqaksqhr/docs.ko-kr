@@ -1,44 +1,25 @@
 ---
 title: "?: 연산자(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
 - :_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9abfe4ca6be29b54edd591b503069c15e02c3532
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 794ff53fe471ef23163503f59599b528df127e2e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 조건 연산자(`?:`)는 부울 식의 값에 따라 두 값 중 하나를 반환합니다. 다음은 조건 연산자의 구문입니다.  
@@ -54,7 +35,7 @@ condition ? first_expression : second_expression;
   
  조건 연산자를 사용하면 `if-else` 구성이 필요할 수 있는 계산을 더 간결하게 표현할 수 있습니다. 예를 들어, 다음 코드는 처음에 `if` 문을 사용한 다음 조건부 연산자를 사용하여 정수를 양 또는 음으로 분류합니다.  
   
-```  
+```csharp
 int input = Convert.ToInt32(Console.ReadLine());  
 string classify;  
   
@@ -73,13 +54,12 @@ classify = (input > 0) ? "positive" : "negative";
  조건 연산자는 오버로드할 수 없습니다.  
   
 ## <a name="example"></a>예제  
- [!code-cs[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
+ [!code-csharp[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 연산자](../../../csharp/language-reference/operators/index.md)   
- [if-else](../../../csharp/language-reference/keywords/if-else.md)   
- [?. 및 ? 연산자](../../../csharp/language-reference/operators/null-conditional-operators.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 연산자](../../../csharp/language-reference/operators/index.md)  
+ [if-else](../../../csharp/language-reference/keywords/if-else.md)  
+ [?. 및? 연산자](../../../csharp/language-reference/operators/null-conditional-operators.md)  
  [?? 연산자](../../../csharp/language-reference/operators/null-conditional-operator.md)
-

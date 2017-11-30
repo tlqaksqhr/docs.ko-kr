@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
+ms.openlocfilehash: 694201c1a2a2c373f62b0e0d8e3c1d8aa7e6e881
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b164198f5fbbae5ebc6164fc281dd7de8172b70
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축
 
 Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 이 문서의 절차에서는 재사용 가능한 라이브러리, 테스트 및 타사 라이브러리 사용을 비롯하여 일반적인 .NET Core 솔루션을 빌드하는 데 필요한 단계를 설명합니다. 
@@ -29,7 +27,7 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 ### <a name="writing-the-library"></a>라이브러리 작성
 
-1. Visual Studio에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드를 확장하고 **.NET Core** 노드를 선택한 다음 **클래스 라이브러리(.NET 표준)**를 선택합니다. 
+1. Visual Studio에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다. 에 **새 프로젝트** 대화 상자에서 확장는 **Visual C#** 노드를 선택 하 고는 **.NET 표준** 노드를 선택한 후 **클래스 라이브러리 (.NET 표준)**. 
 
 2. 프로젝트 이름을 "Library", 솔루션 이름을 "Golden"으로 지정합니다. **솔루션용 디렉터리 만들기** 확인란을 선택한 상태로 둡니다. **확인**을 클릭합니다.
 
@@ -81,4 +79,3 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 9. F5 키를 눌러 응용 프로그램을 실행합니다.
 
    응용 프로그램이 오류 없이 빌드되고 중단점에 도달합니다. 또한 응용 프로그램 출력이 "The answer is 42."인지 확인할 수 있습니다.
-

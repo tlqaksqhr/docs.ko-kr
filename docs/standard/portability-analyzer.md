@@ -1,5 +1,5 @@
 ---
-title: ".NET 이식성 분석기 - .NET | Microsoft Docs"
+title: ".NET 이식성 분석기-.NET"
 description: ".NET 이식성 분석기 도구를 사용하여 다양한 .NET 구현에서 코드가 얼마나 이식성이 있는지 평가하는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
+ms.openlocfilehash: c204af75283278d16bf661e76f2ec5ae0f1d0b3e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: adb1971c14c8ff8c147dba378ae0e9a5bc0fb5ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
 라이브러리를 다중 플랫폼으로 만들고 싶으세요? 응용 프로그램이 다른 .NET 구현과 호환되도록 하는 데 필요한 작업량을 확인하고 싶으세요? [.NET 이식성 분석기](http://go.microsoft.com/fwlink/?LinkID=507467)는 어셈블리를 분석하여 프로그램이 .NET 구현에서 얼마나 유연한지에 대한 자세한 보고서를 제공하는 도구입니다. 이식성 분석기는 Visual Studio 확장 및 콘솔 앱으로 제공됩니다.
@@ -52,4 +50,3 @@ Visual Studio를 사용하고 싶지 않으신가요? 명령 프롬프트에서 
 .NET 이식성 보고서는 현재 디렉터리에 Excel 파일(*.xlsx*)로 저장됩니다. Excel 통합 문서의 **세부 정보** 탭에는 추가 정보가 포함됩니다.
 
 .NET 이식성 분석기에 대한 자세한 내용은 [GitHub 문서](https://github.com/Microsoft/dotnet-apiport#documentation) 및 [A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)(.NET 이식성 분석기 간단하게 살펴보기) Channel 9 비디오를 참조하세요.
-

@@ -12,11 +12,11 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: c8567eb848fbb7b5f6c68f52f1be78750a002411
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: e77800b21d671a0de0cab6f442919f50ce5ca51b
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="for-activity"></a>For 활동
 For 샘플에서는 <xref:System.Activities.NativeActivity>에서 상속되는 사용자 지정 활동을 빌드한 후 워크플로에서 해당 활동을 사용하여 실제 예제를 실행하는 방법을 보여 줍니다. 이 샘플에 포함된 사용자 지정 활동은 C# `for` 문처럼 작동합니다. T  
@@ -68,6 +68,4 @@ For 샘플에서는 <xref:System.Activities.NativeActivity>에서 상속되는 �
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\For`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\For`

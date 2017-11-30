@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
+ms.openlocfilehash: fc7a40667c9b0a623bb0ebdf4ad60783fa58e6c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 3d799c6f824bd5cf08c0e939b069a21092395268
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>CLI(명령줄 인터페이스) 도구를 사용하여 .NET Core 앱 배포
 
 .NET Core 응용 프로그램은 응용 프로그램 이진을 포함하지만 대상 시스템에 .NET Core가 있는지 여부에 따라 달라지는 *프레임워크 종속 배포* 또는 응용 프로그램과 .NET Core 이진을 모두 포함하는 *자체 포함 배포*로 배포할 수 있습니다. 개요는 [.NET Core 응용 프로그램 배포](index.md)를 참조하세요.
@@ -46,11 +44,11 @@ ms.lasthandoff: 09/12/2017
 
    편집기에서 *Program.cs* 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 프로젝트의 종속성 및 도구를 업데이트합니다.
  
-   [dotnet restore](../tools/dotnet-restore.md) 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
+   실행의 [dotnet 복원](../tools/dotnet-restore.md) ([참고 참조](#dotnet-restore-note)) 프로젝트에 지정 된 종속성을 복원 하는 명령입니다.
 
 1. 앱의 디버그 빌드를 만듭니다.
 
@@ -73,7 +71,7 @@ ms.lasthandoff: 09/12/2017
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>타사 종속성이 있는 프레임워크 종속 배포
 
-하나 이상의 타사 종속성이 있는 프레임워크 종속 배포를 배포하려면 프로젝트에서 해당 종속성을 사용할 수 있어야 합니다. 다음 두 가지 추가 단계를 수행해야 `dotnet restore` 명령을 실행할 수 있습니다.
+하나 이상의 타사 종속성이 있는 프레임워크 종속 배포를 배포하려면 프로젝트에서 해당 종속성을 사용할 수 있어야 합니다. 두 가지 추가 단계가 필요를 실행 하기 전에 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 명령:
 
 1. 필요한 타사 라이브러리에 대한 참조를 *csproj* 파일의 `<ItemGroup>` 섹션에 추가합니다. 다음 `<ItemGroup>` 섹션에는 [Json.NET](http://www.newtonsoft.com/json)에 대한 종속성이 타사 라이브러리로 포함되어 있습니다.
 
@@ -83,7 +81,7 @@ ms.lasthandoff: 09/12/2017
       </ItemGroup>
       ```
 
-1. 타사 종속성을 포함하는 NuGet 패키지를 아직 다운로드하지 않은 경우 다운로드합니다. 패키지를 다운로드하려면 종속성을 추가한 후 `dotnet restore` 명령을 실행합니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
+1. 타사 종속성을 포함하는 NuGet 패키지를 아직 다운로드하지 않은 경우 다운로드합니다. 패키지를 다운로드 하려면를 실행는 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 종속성을 추가한 후 명령입니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
 
 타사 종속성이 있는 프레임워크 종속 배포는 타사 종속성만큼만 이식 가능합니다. 예를 들어 타사 라이브러리에서 macOS를 지원하는 경우 Windows 시스템에 앱을 이식할 수 없습니다. 이러한 현상은 타사 종속성 자체가 네이티브 코드에 종속된 경우에 발생합니다. 관련된 좋은 예로 [libuv](https://github.com/libuv/libuv)에 대한 기본 종속성이 필요한 [Kestrel 서버](/aspnet/core/fundamentals/servers/kestrel)가 있습니다. 이런 종류의 타사 종속성이 있는 응용 프로그램에 대해 FDD를 만들면 게시된 출력에는 기본 종속성에서 지원하고 NuGet 패키지에 있는 각 [RID(런타임 식별자)](../rid-catalog.md)에 대한 폴더가 포함됩니다.
 
@@ -103,7 +101,7 @@ ms.lasthandoff: 09/12/2017
 
    편집기에서 *Program.cs* 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 앱의 대상 플랫폼을 정의합니다.
 
@@ -121,7 +119,7 @@ ms.lasthandoff: 09/12/2017
 
 1. 프로젝트의 종속성 및 도구를 업데이트합니다.
 
-   [dotnet restore](../tools/dotnet-restore.md) 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
+   실행의 [dotnet 복원](../tools/dotnet-restore.md) ([참고 참조](#dotnet-restore-note)) 프로젝트에 지정 된 종속성을 복원 하는 명령입니다.
 
 1. 앱의 디버그 빌드를 만듭니다.
 
@@ -156,7 +154,7 @@ ms.lasthandoff: 09/12/2017
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>타사 종속성이 있는 자체 포함 배포
 
-하나 이상의 타사 종속성이 있는 자체 포함 배포에는 종속성 추가가 포함됩니다. 다음 두 가지 추가 단계를 수행해야 `dotnet restore` 명령을 실행할 수 있습니다.
+하나 이상의 타사 종속성이 있는 자체 포함 배포에는 종속성 추가가 포함됩니다. 두 가지 추가 단계가 필요를 실행 하기 전에 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 명령:
 
 1. 모든 타사 라이브러리에 대한 참조를 *csproj* 파일의 `<ItemGroup>` 섹션에 추가합니다. 다음 `<ItemGroup>` 섹션에서는 Json.NET을 타사 라이브러리로 사용합니다.
 
@@ -166,7 +164,7 @@ ms.lasthandoff: 09/12/2017
       </ItemGroup>
     ```
 
-1. 타사 종속성을 포함하는 NuGet 패키지를 시스템에 아직 다운로드하지 않은 경우 다운로드합니다. 앱에서 종속성을 사용할 수 있도록 하려면 종속성을 추가한 후 `dotnet restore` 명령을 실행합니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
+1. 타사 종속성을 포함하는 NuGet 패키지를 시스템에 아직 다운로드하지 않은 경우 다운로드합니다. 종속성을 앱에 사용할 수 있도록 하려면 실행는 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 종속성을 추가한 후 명령입니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
 
 다음은 이 프로젝트에 대한 전체 *csproj* 파일입니다.
 
@@ -186,6 +184,9 @@ ms.lasthandoff: 09/12/2017
 응용 프로그램을 배포하면 앱에서 사용된 타사 종속성도 응용 프로그램 파일에 포함됩니다. 타사 라이브러리는 앱이 실행되는 시스템에 없어도 됩니다.
 
 타사 라이브러리가 있는 자체 포함 배포는 해당 라이브러리에서 지원하는 플랫폼에만 배포할 수 있습니다. 이 배포는 기본 종속성과 함께 타사 종속성이 있는 프레임워크 종속 배포와 유사하며, 기본 종속성이 앱을 배포할 플랫폼과 호환되어야 합니다.
+
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 # <a name="see-also"></a>참고 항목
 

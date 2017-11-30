@@ -1,37 +1,18 @@
 ---
 title: "using 정적 지시문(C# 참조)"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- using static directive [C#]
+helpviewer_keywords: using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5838bede475cf2ad1b72518770241e86206a06bb
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7d69d0262ba6f450e2cc0d5b30692bba181f9d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-static-directive-c-reference"></a>using 정적 지시문(C# 참조)
 
@@ -49,13 +30,13 @@ using static <fully-qualified-type-name>
 
 ## <a name="remarks"></a>설명
  
-일반적으로 정적 멤버를 호출할 때 멤버 이름과 함께 형식 이름을 제공합니다. 형식의 멤버를 호출하기 위해 동일한 형식 이름을 반복해서 입력하면 코드가 복잡하고 난해해질 수 있습니다. 예를 들어 `Circle` 클래스에 대한 다음 정의에서는 @System.Math 클래스의 많은 멤버를 참조합니다.
+일반적으로 정적 멤버를 호출할 때 멤버 이름과 함께 형식 이름을 제공합니다. 형식의 멤버를 호출하기 위해 동일한 형식 이름을 반복해서 입력하면 코드가 복잡하고 난해해질 수 있습니다. 예를 들어 `Circle` 클래스에 대한 다음 정의에서는 <xref:System.Math> 클래스의 많은 멤버를 참조합니다.
   
-[!code-cs[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
+[!code-csharp[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
 
-멤버를 참조할 때마다 @System.Math 클래스를 명시적으로 참조할 필요가 없으므로 `using static` 지시문은 훨씬 깔끔한 코드를 생성합니다.
+멤버를 참조할 때마다 <xref:System.Math> 클래스를 명시적으로 참조할 필요가 없으므로 `using static` 지시문은 훨씬 깔끔한 코드를 생성합니다.
 
-[!code-cs[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
+[!code-csharp[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
 `using static`은 액세스 가능한 정적 멤버와 지정된 형식에 선언된 중첩된 형식만 가져옵니다.  상속된 멤버는 가져오지 않습니다.  using static 지시문을 사용하여 Visual Basic 모듈을 포함한 모든 명명된 형식에서 가져올 수 있습니다.  F# 최상위 함수가 메타데이터에서 이름이 유효한 C# 식별자인 명명된 형식의 정적 멤버로 나타나면 F# 함수를 가져올 수 있습니다.  
   
@@ -65,11 +46,11 @@ using static <fully-qualified-type-name>
   
 ## <a name="example"></a>예제
 
-다음 예제에서는 형식 이름을 지정할 필요 없이 `using static` 지시문을 사용하여 @System.Console, @System.Math 및 @System.String 클래스의 정적 멤버를 사용 가능하게 합니다.
+다음 예제에서는 형식 이름을 지정할 필요 없이 `using static` 지시문을 사용하여 <xref:System.Console>, <xref:System.Math> 및 <xref:System.String> 클래스의 정적 멤버를 사용 가능하게 합니다.
 
-[!code-cs[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
+[!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-이 예제에서는 `using static` 지시문을 @System.Double 형식에 적용했을 수도 있습니다. 이 경우 형식 이름을 지정하지 않고도 @System.Double.TryParse(System.String,System.Double@) 메서드를 호출할 수 있습니다. 그러나 이렇게 하면 코드 가독성이 떨어집니다. 어떤 숫자 형식의 `TryParse` 메서드가 호출되었는지 알아보기 위해 `using static` 문을 확인해야 하기 때문입니다.
+이 예제에서는 `using static` 지시문을 <xref:System.Double> 형식에 적용했을 수도 있습니다. 이가 인해를 호출할 수는 <xref:System.Double.TryParse(System.String,System.Double@)> 형식 이름을 지정 하지 않고 메서드. 그러나 이렇게 하면 코드 가독성이 떨어집니다. 어떤 숫자 형식의 `TryParse` 메서드가 호출되었는지 알아보기 위해 `using static` 문을 확인해야 하기 때문입니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -79,4 +60,3 @@ using static <fully-qualified-type-name>
 [네임스페이스 사용](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
 [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)   
 [네임스페이스](../../../csharp/programming-guide/namespaces/index.md)   
-

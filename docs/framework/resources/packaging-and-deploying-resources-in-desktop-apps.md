@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - resource files, deploying
@@ -31,16 +33,15 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c91195c4e70366a3feb7a96f80e4e44dda89239e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5de456ff1a371a43241dba3b47be7dcd80bf8f70
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>데스크톱 응용 프로그램의 리소스 패키징 및 배포
 응용 프로그램은 <xref:System.Resources.ResourceManager> 클래스가 나타내는 .NET Framework 리소스 관리자를 사용하여 지역화된 리소스를 검색합니다. 리소스 관리자는 허브 및 스포크 모델이 리소스 패키지 및 배포에 사용된다고 가정합니다. 허브는 지역화할 수 없는 실행 코드와 중립 또는 기본 문화권이라고 하는 단일 문화권의 리소스를 포함하는 주 어셈블리입니다. 기본 문화권은 응용 프로그램의 대체 문화권으로, 지역화된 리소스를 찾을 수 없는 경우 해당 리소스가 사용되는 문화권입니다. 각 스포크는 단일 문화권의 리소스를 포함하지만 코드는 포함하지 않는 위성 어셈블리에 연결됩니다.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 07/28/2017
  응용 프로그램의 리소스를 패키지할 때는 공용 언어 런타임에서 적용하는 리소스 명명 규칙을 사용하여 이름을 지정해야 합니다. 런타임에서는 문화권 이름으로 리소스를 식별합니다. 각 문화권에는 일반적으로 언어와 관련된 2자의 소문자 문화권 이름과 필요한 경우 국가 또는 지역과 관련된 2자의 대문자 하위 문화권 이름이 조합된 고유한 이름이 지정됩니다. 하위 문화권 이름이 문화권 이름 다음에 추가되고 대시(-)로 구분됩니다. 예를 들어 일본에서 사용되는 일본어는 ja-JP, 미국에서 사용되는 영어는 en-US, 독일에서 사용되는 독일어는 de-DE, 오스트리아에서 사용되는 독일어는 de-AT입니다. 문화권 이름의 전체 목록은 Go Global 개발자 센터에서 [NLS(국가별 언어 지원) API 참조](http://go.microsoft.com/fwlink/?LinkId=200048)를 참조하세요.  
   
 > [!NOTE]
->  리소스 파일을 만드는 방법에 대한 자세한 내용은 MSDN 라이브러리에서 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) 및 [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)를 참조하세요.  
+>  리소스 파일을 만드는 방법은 참조 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) 및 [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)합니다.  
   
 <a name="cpconpackagingdeployingresourcesanchor1"></a>   
 ## <a name="the-resource-fallback-process"></a>리소스 대체 프로세스  
@@ -84,7 +85,7 @@ ms.lasthandoff: 07/28/2017
   
 3.  그다음 런타임은 Windows Installer를 쿼리하여 요청 시 위성 어셈블리를 설치할지 여부를 확인합니다. 설치할 경우 설치를 처리하고, 어셈블리를 로드한 다음 어셈블리나 요청된 리소스를 검색합니다. 어셈블리에서 리소스를 찾으면 해당 리소스가 사용됩니다. 리소스를 찾지 못하면 검색을 계속합니다.  
   
-4.  런타임은 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 이벤트를 발생시켜 위성 어셈블리를 찾을 수 없음을 나타냅니다. 이벤트를 처리하도록 선택한 경우 이벤트 처리기에서 조회에 해당 리소스가 사용되는 위성 어셈블리에 대한 참조를 반환할 수 있습니다. 이벤트를 처리하지 않는 경우 이벤트 처리기에서 `null`을 반환하고 검색이 계속됩니다.  
+4.  런타임은 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 발생시켜 위성 어셈블리를 찾을 수 없음을 나타냅니다. 이벤트를 처리하도록 선택한 경우 이벤트 처리기에서 조회에 해당 리소스가 사용되는 위성 어셈블리에 대한 참조를 반환할 수 있습니다. 이벤트를 처리하지 않는 경우 이벤트 처리기에서 `null`을 반환하고 검색이 계속됩니다.  
   
 5.  그다음 런타임은 전역 어셈블리 캐시에서 이번에는 요청된 문화권의 부모 어셈블리를 검색합니다. 부모 어셈블리가 전역 어셈블리 캐시에 있을 경우 런타임은 어셈블리에서 요청된 리소스를 검색합니다.  
   
@@ -94,9 +95,9 @@ ms.lasthandoff: 07/28/2017
   
 7.  그다음 런타임은 Windows Installer를 쿼리하여 요청 시 부모 위성 어셈블리를 설치할지 여부를 확인합니다. 설치할 경우 설치를 처리하고, 어셈블리를 로드한 다음 어셈블리나 요청된 리소스를 검색합니다. 어셈블리에서 리소스를 찾으면 해당 리소스가 사용됩니다. 리소스를 찾지 못하면 검색을 계속합니다.  
   
-8.  런타임은 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 이벤트를 발생시켜 적절한 대체 리소스를 찾을 수 없음을 나타냅니다. 이벤트를 처리하도록 선택한 경우 이벤트 처리기에서 조회에 해당 리소스가 사용되는 위성 어셈블리에 대한 참조를 반환할 수 있습니다. 이벤트를 처리하지 않는 경우 이벤트 처리기에서 `null`을 반환하고 검색이 계속됩니다.  
+8.  런타임은 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 발생시켜 적절한 대체 리소스를 찾을 수 없음을 나타냅니다. 이벤트를 처리하도록 선택한 경우 이벤트 처리기에서 조회에 해당 리소스가 사용되는 위성 어셈블리에 대한 참조를 반환할 수 있습니다. 이벤트를 처리하지 않는 경우 이벤트 처리기에서 `null`을 반환하고 검색이 계속됩니다.  
   
-9. 그다음 런타임은 앞의 세 단계와 마찬가지로 가능한 여러 수준에서 부모 어셈블리를 검색합니다. 각 문화권에는 <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=fullName> 속성으로 정의된 부모 하나만 있지만 부모가 해당 부모를 포함할 수도 있습니다. 문화권의 <xref:System.Globalization.CultureInfo.Parent%2A> 속성이 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>을 반환하면 부모 문화권 검색이 중지됩니다. 리소스 대체에서 고정 문화권은 부모 문화권 또는 리소스를 가질 수 있는 문화권으로 간주되지 않습니다.  
+9. 그다음 런타임은 앞의 세 단계와 마찬가지로 가능한 여러 수준에서 부모 어셈블리를 검색합니다. 각 문화권에는 <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> 속성으로 정의된 부모 하나만 있지만 부모가 해당 부모를 포함할 수도 있습니다. 문화권의 <xref:System.Globalization.CultureInfo.Parent%2A> 속성이 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>을 반환하면 부모 문화권 검색이 중지됩니다. 리소스 대체에서 고정 문화권은 부모 문화권 또는 리소스를 가질 수 있는 문화권으로 간주되지 않습니다.  
   
 10. 원래 지정된 문화권 및 모든 부모를 검색했지만 리소스를 찾지 못하면 기본(대체) 문화권의 리소스가 사용됩니다. 일반적으로 기본 문화권의 리소스는 주 응용 프로그램 어셈블리에 포함되어 있습니다. 그러나 <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성의 <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> 속성에 대해 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> 값을 지정하여 리소스의 최종 대체 위치가 주 어셈블리가 아니라 위성 어셈블리임을 나타낼 수 있습니다.  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 07/28/2017
   
 -   위성 어셈블리는 요청 시 설치되지 않습니다.  
   
--   응용 프로그램 코드는 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 이벤트를 처리하지 않습니다.  
+-   응용 프로그램 코드는 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 처리하지 않습니다.  
   
  다음 예제와 같이 응용 프로그램 구성 파일에 [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 요소를 포함하고 해당 `enabled` 특성을 `true`로 설정하여 위성 어셈블리에 대한 프로브를 최적화합니다.  
   
@@ -133,10 +134,10 @@ ms.lasthandoff: 07/28/2017
   
 -   런타임은 위성 어셈블리의 요청 시 설치에 대해 Windows Installer를 쿼리하지 않습니다.  
   
--   특정 리소스 어셈블리 검색이 실패할 경우 런타임에서 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 이벤트가 발생하지 않습니다.  
+-   특정 리소스 어셈블리 검색이 실패할 경우 런타임에서 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트가 발생하지 않습니다.  
   
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>위성 어셈블리에 대한 최종 대체  
- 필요에 따라 주 어셈블리에서 리소스를 제거하고 런타임이 특정 문화권에 해당하는 위성 어셈블리에서 최종 대체 리소스를 로드하도록 지정할 수 있습니다. 대체 프로세스를 제어하려면 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=fullName> 생성자를 사용하고 리소스 관리자가 주 어셈블리 또는 위성 어셈블리에서 대체 리소스를 추출해야 하는지를 지정하는 <xref:System.Resources.UltimateResourceFallbackLocation> 매개 변수의 값을 제공합니다.  
+ 필요에 따라 주 어셈블리에서 리소스를 제거하고 런타임이 특정 문화권에 해당하는 위성 어셈블리에서 최종 대체 리소스를 로드하도록 지정할 수 있습니다. 대체 프로세스를 제어하려면 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> 생성자를 사용하고 리소스 관리자가 주 어셈블리 또는 위성 어셈블리에서 대체 리소스를 추출해야 하는지를 지정하는 <xref:System.Resources.UltimateResourceFallbackLocation> 매개 변수의 값을 제공합니다.  
   
  다음 예제에서는 <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성을 사용하여 프랑스어(fr) 언어에 대한 위성 어셈블리에 응용 프로그램의 대체 리소스를 저장합니다.  이 예제에는 `Greeting`이라는 단일 문자열 리소스를 정의하는 두 개의 텍스트 기반 리소스 파일이 있습니다. 첫 번째 resources.fr.txt에는 프랑스어 리소스가 들어 있습니다.  
   
@@ -168,7 +169,8 @@ Greeting=Добрый день
   
  응용 프로그램 소스 코드는 Example1.cs 또는 Example1.vb라는 파일에 있습니다. <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성을 포함하여 기본 응용 프로그램 리소스가 fr 하위 디렉터리에 있음을 나타냅니다. 리소스 관리자를 인스턴스화하고, `Greeting` 리소스의 값을 검색하여 콘솔에 표시합니다.  
   
- [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)] [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
+ [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]  
   
  명령줄에서 다음과 같이 C# 소스 코드를 컴파일할 수 있습니다.  
   
@@ -190,8 +192,7 @@ Bon jour!
  시간 또는 예산 제약 조건으로 인해 응용 프로그램이 지원하는 모든 하위 문화권의 리소스 집합을 만들지 못할 수도 있습니다. 대신, 부모 문화권에 대해 관련된 모든 하위 문화권이 사용할 수 있는 단일 위성 어셈블리를 만들 수 있습니다. 예를 들어 지역별 영어 리소스를 요청하는 사용자가 검색하는 단일 영어 위성 어셈블리(en) 및 지역별 독일어 리소스를 요청하는 사용자를 위한 단일 독일어 위성 어셈블리(de)를 제공할 수 있습니다. 예를 들어 독일에서 사용되는 독일어(de-DE), 오스트리아에서 사용되는 독일어(de-AT), 스위스에서 사용되는 독일어(de-CH) 요청은 독일어 위성 어셈블리(de)로 대체됩니다. 기본 리소스는 최종 대체라서 대부분의 응용 프로그램 사용자가 요청하는 리소스여야 하므로 이러한 리소스를 선택할 때는 주의하세요. 이 접근 방법은 문화권별 성격이 약한 리소스를 배포하지만 응용 프로그램의 지역화 비용을 훨씬 줄일 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)   
- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)   
- [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
+ [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)  
+ [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)  
+ [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
  [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-

@@ -1,24 +1,25 @@
 ---
 title: "방법: 설치된 .NET Framework 버전 확인"
-ms.date: 08/09/2017
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+ms.custom: updateeachrelease
 helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-caps.latest.revision: 62
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: edd5a8e8cc32037d45d95d544f6eae5097d0c468
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: afb01fd47ed2ce3b9c5838f3a8f61c8d34147378
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 사용자는 자신의 컴퓨터에 여러 버전의 .NET Framework를 설치하여 실행할 수 있습니다. 따라서 앱을 개발하거나 배포할 때는 사용자의 컴퓨터에 어떤 .NET Framework 버전이 설치되었는지 알아야 합니다. .NET Framework는 각 버전으로 식별되는 다음과 같은 2개의 주요 구성 요소로 구성됩니다.  
@@ -95,18 +96,19 @@ ms.lasthandoff: 08/11/2017
     |Windows 10 11월 업데이트 시스템: 394254<br /><br /> 모든 다른 OS 버전: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
     |Windows 10 1주년 업데이트: 394802<br /><br /> 모든 다른 OS 버전: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Windows 10 작성자 업데이트: 460798<br/><br/> 다른 모든 OS 버전: 460805 | .NET Framework 4.7 |
-
+    |Windows 10 작성자 업데이트 대체: 461308<br/><br/> 다른 모든 OS 버전에서: 461310 | .NET framework 4.7.1 |
 <a name="net_c"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>코드로 레지스트리를 쿼리하여 .NET Framework 버전을 찾으려면(.NET Framework 1-4)
 
-- <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> 클래스를 사용하여 Windows 레지스트리의 HKEY_LOCAL_MACHINE 아래에 있는 Software\Microsoft\NET Framework Setup\NDP\ 하위 키에 액세스합니다.
+- <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 클래스를 사용하여 Windows 레지스트리의 HKEY_LOCAL_MACHINE 아래에 있는 Software\Microsoft\NET Framework Setup\NDP\ 하위 키에 액세스합니다.
 
      다음 코드에서는 이 쿼리의 예제를 보여 줍니다.
 
     > [!NOTE]
     > 이 코드는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상 버전을 검색하는 방법은 보여 주지 않습니다. 이전 섹션에 설명된 대로 `Release` DWORD를 확인하여 해당 버전을 검색합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 이후 버전을 검색하는 코드에 대해서는 이 문서의 다음 섹션을 참조하세요.
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
+     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
      이 예제는 다음과 유사한 출력 결과를 표시합니다.
 
@@ -122,7 +124,7 @@ ms.lasthandoff: 08/11/2017
 <a name="net_d"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>코드로 레지스트리를 쿼리하여 .NET Framework 버전을 찾으려면(.NET Framework 4.5 이상)
 
-1. `Release` DWORD가 있으면 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있는 것입니다. 이 키워드 값이 설치된 버전을 나타냅니다. 이 키워드를 확인하려면 <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> 클래스의 <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> 및 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 메서드를 사용하여 Windows 레지스트리의 HKEY_LOCAL_MACHINE 아래에 있는 Software\Microsoft\NET Framework Setup\NDP\v4\Full 하위 키에 액세스합니다.
+1. `Release` DWORD가 있으면 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있는 것입니다. 이 키워드 값이 설치된 버전을 나타냅니다. 이 키워드를 확인하려면 <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 클래스의 <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> 및 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 메서드를 사용하여 Windows 레지스트리의 HKEY_LOCAL_MACHINE 아래에 있는 Software\Microsoft\NET Framework Setup\NDP\v4\Full 하위 키에 액세스합니다.
 
 2. `Release` 키워드 값을 확인하여 설치된 버전을 확인합니다. 이후 버전과의 호환성을 유지하려는 경우 버전의 값이 표에 나와 있는 값 이상인지를 확인하면 됩니다. 다음 표에는 .NET Framework 버전 및 이에 해당되는 `Release` 키워드가 나와 있습니다.
 
@@ -140,10 +142,13 @@ ms.lasthandoff: 08/11/2017
     |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]이 다른 모든 Windows OS 버전에 설치됨|394806|
     |.NET Framework 4.7이 Windows 10 크리에이터 업데이트에 설치됨|460798|
     |.NET Framework 4.7이 다른 모든 Windows OS 버전에 설치됨|460805|
+    |.NET framework 4.7.1에 Windows 10 년 작성자가 업데이트 설치|461308|
+    |.NET framework 4.7.1 다른 모든 Windows OS 버전에 설치|461310|
 
      다음 예제에서는 레지스트리에서 `Release` 값을 확인하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 이후 버전의 .NET Framework가 설치되어 있는지 확인합니다.
 
-     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]   [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
+     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
+     [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
 
      이 예제에서는 버전을 확인하기 위한 권장된 방법을 수행합니다.
 
@@ -157,7 +162,7 @@ ms.lasthandoff: 08/11/2017
 - 다음 예제에서는 `Release` 키워드 값을 확인하여 Windows OS 버전에 관계없이 .NET Framework 4.6.2 이상이 설치되어 있는지 확인합니다(해당하는 경우 `True` 반환, 이외의 경우 `False` 반환).
 
     ```PowerShell
-    Get-ChildItem "hklm:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | % { $_ -ge 394802 } 
+    Get-ChildItem "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | ForEach-Object { $_ -ge 394802 } 
     ```
 
     다른 최소한 필요한 .NET Framework 버전을 확인하기 위해 이전 예제의 `394802`를 다음 표의 다른 값으로 바꿀 수 있습니다.
@@ -171,7 +176,8 @@ ms.lasthandoff: 08/11/2017
     |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
     |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
     |.NET Framework 4.7|460798|
-
+    |.NET framework 4.7.1|461308|
+    
 <a name="clr_a"></a> 
 #### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Clrver 도구를 사용하여 현재 런타임 버전을 찾으려면
 
@@ -190,16 +196,17 @@ ms.lasthandoff: 08/11/2017
 <a name="clr_b"></a> 
 #### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>Environment 클래스를 코드로 쿼리하여 현재 런타임 버전을 확인하려면
 
-- 현재 코드를 실행하는 런타임 버전을 식별하는 <xref:System.Version> 개체를 검색하기 위해 <xref:System.Environment.Version%2A?displayProperty=fullName> 속성을 쿼리합니다. <xref:System.Version.Major%2A?displayProperty=fullName> 속성을 사용하여 주 릴리스 식별자(예: 버전 4.0의 "4")를 얻거나 <xref:System.Version.Minor%2A?displayProperty=fullName> 속성을 사용하여 부 릴리스 식별자(예: 버전 4.0의 "0")를 얻거나 <xref:System.Object.ToString%2A?displayProperty=fullName> 메서드를 사용하여 전체 버전 문자열(예: 다음 코드에 표시된 "4.0.30319.18010")을 얻을 수 있습니다. 이 속성은 현재 코드를 실행 중인 런타임 버전을 반영하는 단일 값을 반환합니다. 컴퓨터에 설치되어 있을 수 있는 다른 버전의 런타임이나 어셈블리 버전은 반환하지 않습니다.
+- 현재 코드를 실행하는 런타임 버전을 식별하는 <xref:System.Version> 개체를 검색하기 위해 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성을 쿼리합니다. <xref:System.Version.Major%2A?displayProperty=nameWithType> 속성을 사용하여 주 릴리스 식별자(예: 버전 4.0의 "4")를 얻거나 <xref:System.Version.Minor%2A?displayProperty=nameWithType> 속성을 사용하여 부 릴리스 식별자(예: 버전 4.0의 "0")를 얻거나 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드를 사용하여 전체 버전 문자열(예: 다음 코드에 표시된 "4.0.30319.18010")을 얻을 수 있습니다. 이 속성은 현재 코드를 실행 중인 런타임 버전을 반영하는 단일 값을 반환합니다. 컴퓨터에 설치되어 있을 수 있는 다른 버전의 런타임이나 어셈블리 버전은 반환하지 않습니다.
 
-     .NET Framework 버전 4, 4.5, 4.5.1 및 4.5.2의 경우 <xref:System.Environment.Version%2A?displayProperty=fullName> 속성은 문자열 표시가 `4.0.30319.xxxxx` 형식인 <xref:System.Version> 개체를 반환합니다. .NET Framework 4.6 이상에서는 `4.0.30319.42000` 형식입니다.
+     .NET Framework 버전 4, 4.5, 4.5.1 및 4.5.2의 경우 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성은 문자열 표시가 `4.0.30319.xxxxx` 형식인 <xref:System.Version> 개체를 반환합니다. .NET Framework 4.6 이상에서는 `4.0.30319.42000` 형식입니다.
 
     > [!IMPORTANT]
-    > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상의 경우 <xref:System.Environment.Version%2A?displayProperty=fullName> 속성을 사용하여 런타임 버전을 확인하는 것을 권장하지 않습니다. 대신 이 문서의 앞부분에 나오는 [코드로 레지스트리를 쿼리하여 .NET Framework 버전을 찾으려면(.NET Framework 4.5 이상)](#net_d) 섹션에서 설명된 것처럼 레지스트리를 쿼리하는 것을 권장합니다.
+    > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상의 경우 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성을 사용하여 런타임 버전을 확인하는 것을 권장하지 않습니다. 대신 이 문서의 앞부분에 나오는 [코드로 레지스트리를 쿼리하여 .NET Framework 버전을 찾으려면(.NET Framework 4.5 이상)](#net_d) 섹션에서 설명된 것처럼 레지스트리를 쿼리하는 것을 권장합니다.
 
-     런타임 버전 정보의 <xref:System.Environment.Version%2A?displayProperty=fullName> 속성을 쿼리하는 예제는 다음과 같습니다.
+     런타임 버전 정보의 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성을 쿼리하는 예제는 다음과 같습니다.
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
+     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
      이 예제는 다음과 유사한 출력 결과를 표시합니다.
 
@@ -208,7 +215,6 @@ ms.lasthandoff: 08/11/2017
     ```
 
 ## <a name="see-also"></a>참고 항목
- [방법: 설치된 .NET Framework 업데이트 확인](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)   
- [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)   
+ [방법: 설치된 .NET Framework 업데이트 확인](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+ [개발자를 위한.NET Framework를 설치 합니다.](../../../docs/framework/install/guide-for-developers.md)  
  [버전 및 종속성](~/docs/framework/migration-guide/versions-and-dependencies.md)
-

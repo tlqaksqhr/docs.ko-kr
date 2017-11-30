@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: f2f422c4001c2e6ec46fc796e8dbf1b85e6a2b77
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: ff6a55157e886b54d631d1ca5d2598785de7608d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>값 범위에서 전환할 사용자 지정 활동
 이 샘플에서는 <xref:System.Activities.Statements.Switch%601>의 사용을 확장하는 사용자 지정 활동을 만드는 방법을 보여 줍니다. 일반적인 <xref:System.Activities.Statements.Switch%601> 문을 사용하면 단일 값에 따라 전환할 수 있습니다. 그러나 값 범위에 따라 활동을 전환해야 하는 비즈니스 시나리오도 있습니다. 예를 들어 활동이 전환되는 기준 값이 1과 5 사이인 경우 하나의 동작을 실행하고 값이 6에서 10 사이인 경우 다른 동작을 실행하고 다른 모든 값의 경우 기본 동작을 실행할 수 있습니다. 이 사용자 지정 활동을 사용하면 해당 시나리오를 정확하게 수행할 수 있습니다.  
@@ -112,6 +112,4 @@ Activity SwitchRange = new SwitchRange<int>
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`

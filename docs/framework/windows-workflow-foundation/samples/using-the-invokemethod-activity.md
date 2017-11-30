@@ -12,16 +12,16 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5dd488a01e00af0661ee7ee110c79d2c56a0b777
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: aacc20bf483877ac501fd8b35c04f6e3f9311afb
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="using-the-invokemethod-activity"></a>InvokeMethod 활동 사용
 이 샘플에 사용 하는 방법을 보여 줍니다는 <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) public 클래스의 공용 메서드를 호출 하는 활동입니다. <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) 활동 하면 워크플로에서 개체에 대해 메서드를 호출, 매개 변수를 전달, 반환 값을 제네릭 메서드의 형식을 지정 하는 메서드는 동기적 있는지 여부를 지정 하거나 비동기입니다. 
   
- 비 제네릭 버전의 <xref:System.Activities.Statements.InvokeMethod> 활동 경우 반환 값으로 설정 되어는 <xref:System.Activities.Statements.InvokeMethod.Result%2A> 속성과 제네릭 버전의는 <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) 반환 되는 반환 값 통해는 <!--zz <xref:System.Activities.Statements.InvokeMethod.Result%601.Result%2A> --> [ <code>System.Activities.Statements.InvokeMethod\`1.Result</code> ](https://msdn.microsoft.com/library/dd987724.aspx) 형식의 속성이 `TResult`합니다.  
+비 제네릭 버전의 <xref:System.Activities.Statements.InvokeMethod> 활동 경우 반환 값으로 설정 되어는 <xref:System.Activities.Statements.InvokeMethod.Result%2A> 속성과 제네릭 버전의는 <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) 반환 되는 반환 값 통해는 <!--zz <xref:System.Activities.Statements.InvokeMethod.Result%601.Result%2A> --> [ <code>System.Activities.Statements.InvokeMethod\`1.Result</code> ](https://msdn.microsoft.com/library/dd987724.aspx) 형식의 속성이 `TResult`합니다. 
   
  이 샘플에서는 다양한 메서드 형식을 호출하는 방법을 보여 줍니다. 다음 목록에는 이 샘플에서 보여 주는 메서드 형식이 자세히 나와 있습니다.  
   
@@ -62,6 +62,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`

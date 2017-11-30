@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 08dab8e7b210ab5159645563cd381d50145d764b
+ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/19/2017
 ---
-
 # <a name="console-application"></a>콘솔 응용 프로그램
 
 ## <a name="introduction"></a>소개
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="create-the-application"></a>응용 프로그램 만들기
 첫 번째 단계에서는 새 응용 프로그램을 만듭니다. 명령 프롬프트를 열고 응용 프로그램에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 명령 프롬프트에 명령 `dotnet new console`을 입력합니다. 이렇게 하면 기본 "Hello World" 응용 프로그램에 대한 시작 파일이 만들어집니다.
 
-파일 수정을 시작하기 전에 간단한 Hello World 응용 프로그램을 실행하는 단계를 진행해 보겠습니다. 응용 프로그램을 만든 후에 명령 프롬프트에서 `dotnet restore`를 입력합니다. 이 명령은 NuGet 패키지 복원 프로세스를 실행합니다. NuGet은 .NET 패키지 관리자입니다. 이 명령은 프로젝트에 대한 누락된 종속성 중 하나를 다운로드합니다. 이 프로젝트는 새 프로젝트이므로 어떤 종속성도 없습니다. 따라서 처음 실행하면 .NET Core 프레임워크가 다운로드됩니다. 이 초기 단계 후에 새 종속 패키지를 추가하거나 종속성 버전을 업데이트할 때 `dotnet restore`를 실행하기만 하면 됩니다. 이 프로세스는 프로젝트 디렉터리에 프로젝트 잠금 파일(project.lock.json)도 만듭니다. 이 파일은 프로젝트 종속성을 관리하는 데 도움이 됩니다. 이 파일에는 모든 프로젝트 종속성의 로컬 위치가 포함됩니다. 이 파일을 소스 제어에 추가할 필요가 없습니다. `dotnet restore`를 실행할 때 생성됩니다. 
+파일 수정을 시작하기 전에 간단한 Hello World 응용 프로그램을 실행하는 단계를 진행해 보겠습니다. 응용 프로그램을 만든 후 입력 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 명령 프롬프트입니다. 이 명령은 NuGet 패키지 복원 프로세스를 실행합니다. NuGet은 .NET 패키지 관리자입니다. 이 명령은 프로젝트에 대한 누락된 종속성 중 하나를 다운로드합니다. 이 프로젝트는 새 프로젝트이므로 어떤 종속성도 없습니다. 따라서 처음 실행하면 .NET Core 프레임워크가 다운로드됩니다. 이 초기 단계 후 하기만 하면 됩니다 실행 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 새 종속 패키지를 추가 하거나는 종속성 버전을 업데이트할 때. 이 프로세스는 프로젝트 디렉터리에 프로젝트 잠금 파일(project.lock.json)도 만듭니다. 이 파일은 프로젝트 종속성을 관리하는 데 도움이 됩니다. 이 파일에는 모든 프로젝트 종속성의 로컬 위치가 포함됩니다. 소스 제어에 파일을 저장 필요가 없습니다. 실행할 때 생성 됩니다 `dotnet restore` ([참고](#dotnet-restore-note)). 
 
 패키지를 복원한 후 `dotnet build`를 실행합니다. 이렇게 하면 빌드 엔진이 실행되고 응용 프로그램 실행 파일이 만들어집니다. 마지막으로 `dotnet run`을 실행하여 응용 프로그램을 실행합니다.  
 
@@ -79,13 +77,13 @@ using System.Collections.Generic;
 using System.IO;
 ```
 
-`IEnumerable<T>` 인터페이스는 `System.Collections.Generic` 네임스페이스에 정의되어 있습니다. @System.IO.File 클래스는 `System.IO` 네임스페이스에 있습니다.
+`IEnumerable<T>` 인터페이스는 `System.Collections.Generic` 네임스페이스에 정의되어 있습니다. <xref:System.IO.File> 클래스는 `System.IO` 네임스페이스에 있습니다.
 
 이 메서드는 *열거자 메서드*라는 특수한 형식의 C# 메서드입니다. 열거자 메서드는 지연 계산되는 시퀀스를 반환합니다. 즉, 시퀀스의 각 항목은 시퀀스를 사용하는 코드에서 요청된 것처럼 생성됩니다. 열거자 메서드는 하나 이상의 `yield return` 문을 포함하는 메서드입니다. `ReadFrom` 메서드에서 반환된 개체는 시퀀스의 각 항목을 생성하는 코드를 포함합니다. 이 예제에서는 소스 파일에서 다음 텍스트 줄을 읽고 해당 문자열을 반환하는 코드에 해당합니다. 호출하는 코드가 시퀀스에서 다음 항목을 요청할 때마다 코드는 파일에서 다음 텍스트 줄을 읽고 반환합니다. 파일이 완전히 읽히면 시퀀스는 항목이 더 이상 없음을 나타냅니다.
 
-여러분에게 생소할 수 있는 두 개의 다른 C# 구문 요소가 있습니다. 이 메서드의 `using` 문은 리소스 정리를 관리합니다. `using` 문(이 예제의 `reader`)에서 초기화되는 변수는 `IDisposable` 인터페이스를 구현해야 합니다. @System.IDisposable 인터페이스는 리소스를 해제해야 할 때 호출되어야 하는 단일 메서드 `Dispose`를 정의합니다. 컴파일러는 실행 중에 `using` 문의 닫는 중괄호에 도달하면 해당 호출을 생성합니다. 컴파일러에서 생성된 코드는 using 문으로 정의된 블록의 코드에서 예외가 throw되더라도 리소스가 해제되도록 합니다.
+여러분에게 생소할 수 있는 두 개의 다른 C# 구문 요소가 있습니다. 이 메서드의 `using` 문은 리소스 정리를 관리합니다. `using` 문(이 예제의 `reader`)에서 초기화되는 변수는 `IDisposable` 인터페이스를 구현해야 합니다. <xref:System.IDisposable> 인터페이스는 리소스를 해제해야 할 때 호출되어야 하는 단일 메서드 `Dispose`를 정의합니다. 컴파일러는 실행 중에 `using` 문의 닫는 중괄호에 도달하면 해당 호출을 생성합니다. 컴파일러에서 생성된 코드는 using 문으로 정의된 블록의 코드에서 예외가 throw되더라도 리소스가 해제되도록 합니다.
 
-`reader` 변수는 `var` 키워드를 사용하여 정의됩니다. `var`은 *암시적으로 형식화한 지역 변수*를 정의합니다. 즉, 변수의 형식이 변수에 할당된 개체의 컴파일 타임 형식에 의해 결정됩니다. 여기서는 @System.IO.StreamReader 개체에 해당하는 @System.IO.File.OpenText의 반환 값입니다.
+`reader` 변수는 `var` 키워드를 사용하여 정의됩니다. `var`은 *암시적으로 형식화한 지역 변수*를 정의합니다. 즉, 변수의 형식이 변수에 할당된 개체의 컴파일 타임 형식에 의해 결정됩니다. 여기에서 반환 값이 있는 <xref:System.IO.File.OpenText(System.String)> 은 메서드는 <xref:System.IO.StreamReader> 개체입니다.
  
 이제 `Main` 메서드에서 파일을 읽는 코드를 채웁니다. 
 
@@ -154,7 +152,7 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>비동기 작업
 이 마지막 단계에서는 텍스트 표시 속도를 높이거나 낮추려는 경우 사용자로부터 입력을 읽는 작업을 실행하면서 다른 작업에서 비동기적으로 출력을 쓰는 코드를 추가합니다. 이 과정은 몇 가지 단계로 진행되며 마지막에 필요한 모든 업데이트가 수행됩니다.
-첫 번째 단계는 지금까지 파일을 읽고 표시하기 위해 만든 코드를 나타내는 비동기 @System.Threading.Tasks.Task 반환 메서드를 만드는 것입니다.
+첫 번째 단계는 지금까지 파일을 읽고 표시하기 위해 만든 코드를 나타내는 비동기 <xref:System.Threading.Tasks.Task> 반환 메서드를 만드는 것입니다.
 
 이 메서드를 `Program` 클래스(`Main` 메서드 본문에서 가져옴)에 추가합니다.
 
@@ -173,7 +171,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-두 가지가 변경된 것을 알 수 있습니다. 첫째, 이 버전은 메서드 본문에서 @System.Threading.Tasks.Task.Wait 를 호출하여 작업이 완료되기를 동기식으로 대기하지 않고, `await` 키워드를 사용합니다. 이 작업을 수행하기 위해 메서드 시그니처에 `async` 한정자를 추가해야 합니다. 이 메서드는 `Task`를 반환합니다. `Task` 개체를 반환하는 Return 문은 없습니다. 대신, `Task` 개체는 `await` 연산자를 사용할 때 컴파일러가 생성하는 코드에 의해 만들어집니다. `await`에 도달하면 이 메서드가 반환되는 것을 상상할 수 있습니다. 반환된 `Task`는 작업이 완료되지 않았음을 나타냅니다.
+두 가지가 변경된 것을 알 수 있습니다. 첫째, 이 버전은 메서드 본문에서 <xref:System.Threading.Tasks.Task.Wait> 를 호출하여 작업이 완료되기를 동기식으로 대기하지 않고, `await` 키워드를 사용합니다. 이 작업을 수행하기 위해 메서드 시그니처에 `async` 한정자를 추가해야 합니다. 이 메서드는 `Task`를 반환합니다. `Task` 개체를 반환하는 Return 문은 없습니다. 대신, `Task` 개체는 `await` 연산자를 사용할 때 컴파일러가 생성하는 코드에 의해 만들어집니다. `await`에 도달하면 이 메서드가 반환되는 것을 상상할 수 있습니다. 반환된 `Task`는 작업이 완료되지 않았음을 나타냅니다.
 이 메서드는 대기 중인 작업이 완료되면 다시 시작됩니다. 실행되어 완료되면 반환된 `Task`는 완료되었음을 나타냅니다.
 호출하는 코드는 반환된 `Task`를 모니터링하여 완료되었는지 확인합니다.
 
@@ -209,7 +207,7 @@ private static async Task GetInput()
 }
 ```
 
-이 메서드는 콘솔에서 키를 읽고 사용자가 ‘<’ 또는 ‘>’를 누를 때 지연을 나타내는 지역 변수를 수정하는 @System.Action 대리자를 나타내는 람다 식을 만듭니다. 이 메서드는 @System.Console.ReadKey 를 사용하여 차단한 후 사용자가 키를 누를 때까지 기다립니다.
+이 메서드는 콘솔에서 키를 읽고 사용자가 ‘<’ 또는 ‘>’를 누를 때 지연을 나타내는 지역 변수를 수정하는 <xref:System.Action> 대리자를 나타내는 람다 식을 만듭니다. 이 메서드는 <xref:System.Console.ReadKey> 를 사용하여 차단한 후 사용자가 키를 누를 때까지 기다립니다.
 
 이 기능을 완료하려면 이러한 두 작업(`GetInput` 및 `ShowTeleprompter`)을 시작하고 이러한 두 작업 간에 공유 데이터를 관리하는 새 `async Task` 반환 메서드를 만들어야 합니다.
  
@@ -257,7 +255,7 @@ private static async Task RunTeleprompter()
 }
 ```
 
-여기에서 새 메서드 하나는 @System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[]) 호출입니다. 그러면 인수 목록의 모든 작업이 완료되는 즉시 완료되는 `Task`가 만들어집니다.
+여기에서 하나의 새 메서드는는 <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> 호출 합니다. 그러면 인수 목록의 모든 작업이 완료되는 즉시 완료되는 `Task`가 만들어집니다.
 
 다음에는 지연을 위해 `config` 개체를 사용하도록 `ShowTeleprompter` 및 `GetInput` 메서드를 모두 업데이트해야 합니다.
 
@@ -316,4 +314,5 @@ public void SetDone()
 이 자습서에서는 콘솔 응용 프로그램 사용과 관련된 다양한 C# 언어 및 .NET Core 라이브러리 기능을 살펴보았습니다.
 이 지식을 토대로 해당 언어 및 여기서 소개된 클래스에 대해 좀 더 자세히 알아볼 수 있습니다. 지금까지 파일 및 콘솔 I/O 기본 사항, 작업 기반 비동기 프로그래밍 모델의 차단 및 비차단 사용, C# 언어 둘러보기, C# 프로그램이 구성되는 방식, .NET Core 명령줄 인터페이스 및 도구에 대해 살펴보았습니다.
  
-
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

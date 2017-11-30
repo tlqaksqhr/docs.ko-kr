@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
+ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 465326fe520d6a062609e0c4c471135ef88b0dd6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 및 `delegate` 키워드
 
 [이전](delegates-overview.md)
@@ -26,7 +24,7 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="defining-delegate-types"></a>대리자 형식 정의
 
-먼저 'delegate' 키워드를 살펴보겠습니다. 대리자 작업을 수행할 때 기본적으로 이 키워드를 사용하기 때문입니다. `delegate` 키워드를 사용할 때 컴파일러가 생성하는 코드는 @System.Delegate 및 @System.MulticastDelegate 클래스의 멤버를 호출하는 메서드 호출에 매핑됩니다. 
+먼저 'delegate' 키워드를 살펴보겠습니다. 대리자 작업을 수행할 때 기본적으로 이 키워드를 사용하기 때문입니다. `delegate` 키워드를 사용할 때 컴파일러가 생성하는 코드는 <xref:System.Delegate> 및 <xref:System.MulticastDelegate> 클래스의 멤버를 호출하는 메서드 호출에 매핑됩니다. 
 
 메서드 시그니처를 정의하는 것과 비슷한 구문을 사용하여 대리자 형식을 정의합니다. `delegate` 키워드를 정의에 추가하면 됩니다.
 
@@ -122,7 +120,7 @@ Sort() 예제에서는 일반적으로 단일 대상 메서드를 대리자에 �
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Delegate 및 MulticastDelegate 클래스
 
-위에 설명된 언어 지원은 일반적으로 대리자를 사용할 때 필요한 기능과 지원을 제공합니다. 이러한 기능은 .NET Core Framework의 두 가지 클래스 @System.Delegate 및 @"System.MulticastDelegate"를 기반으로 빌드됩니다.
+위에 설명된 언어 지원은 일반적으로 대리자를 사용할 때 필요한 기능과 지원을 제공합니다. 이러한 기능은 두 클래스는.NET Core framework에서 기반으로 만들어진: <xref:System.Delegate> 및 <xref:System.MulticastDelegate>합니다.
 
 `System.Delegate` 클래스와 단일 직접 하위 클래스 `System.MulticastDelegate`는 대리자를 만들고, 메서드를 대리자 대상으로 등록하고, 대리자 대상으로 등록된 모든 메서드를 호출하기 위한 프레임워크 지원을 제공합니다. 
 
@@ -143,4 +141,3 @@ Sort() 예제에서는 일반적으로 단일 대상 메서드를 대리자에 �
 이제 언어 구문 및 대리자 지원 클래스를 확인했으므로 강력한 형식의 대리자를 사용하고, 만들고, 호출하는 방법을 살펴보겠습니다.
 
 [다음](delegates-strongly-typed.md)
-

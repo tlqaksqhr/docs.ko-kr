@@ -1,40 +1,22 @@
 ---
 title: "방법: 이벤트 구독 및 구독 취소(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: deeed6f6b572e04780f0eda1e7e42f1dd6233567
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>방법: 이벤트 구독 및 구독 취소(C# 프로그래밍 가이드)
 해당 이벤트가 발생할 때 호출되는 사용자 지정 코드를 작성하려는 경우 다른 클래스에 의해 게시되는 이벤트를 구독합니다. 예를 들어 사용자가 단추를 클릭할 때 응용 프로그램에서 유용한 작업을 수행하도록 하려면 단추의 `click` 이벤트를 구독할 수 있습니다.  
@@ -49,7 +31,7 @@ ms.lasthandoff: 09/19/2017
   
      [!INCLUDE[csprcs](~/includes/csprcs-md.md)]에서 빈 이벤트 처리기 메서드를 만들고 코드에 추가합니다. 또는 **코드** 보기에서 수동으로 코드를 추가할 수 있습니다. 예를 들어 다음 코드 줄은 `Form` 클래스에서 `Load` 이벤트가 발생할 때 호출되는 이벤트 처리기 메서드를 선언합니다.  
   
-     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
+     [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
      이벤트를 구독하는 데 필요한 코드 줄도 프로젝트의 Form1.Designer.cs 파일에 있는 `InitializeComponent` 메서드에 자동으로 생성됩니다. 해당 코드는 다음과 같습니다.  
   
@@ -122,9 +104,8 @@ ms.lasthandoff: 09/19/2017
      모든 구독자가 이벤트 구독을 취소하면 게시자 클래스의 이벤트 인스턴스가 `null`로 설정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [이벤트](../../../csharp/programming-guide/events/index.md)   
- [event](../../../csharp/language-reference/keywords/event.md)   
- [방법: .NET Framework 지침을 따르는 이벤트 게시](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)   
- [-= 연산자(C# 참조)](../../language-reference/operators/subtraction-assignment-operator.md)   
+ [이벤트](../../../csharp/programming-guide/events/index.md)  
+ [event](../../../csharp/language-reference/keywords/event.md)  
+ [방법: .NET Framework 지침을 따르는 이벤트 게시](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+ [-= 연산자 (C# 참조)](../../language-reference/operators/subtraction-assignment-operator.md)  
  [+= 연산자](../../../csharp/language-reference/operators/addition-assignment-operator.md)
-

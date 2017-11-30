@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: d4f9d9e966a0a6d8fa48d195b17438b3d78b32a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 01d5d6f35ed9eaa64786d18c2477862594c546be
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="basic-transactionscope"></a>기본 TransactionScope
 이 샘플은 <xref:System.Activities.Statements.TransactionScope> 인스턴스를 중첩시키는 방법을 보여 주는 네 개의 시나리오로 구성되어 있습니다. 첫 번째 시나리오에서는 작성자가 생성에 대해 알지 못하는 타사 활동을 중첩시키는 방법을 보여 줍니다. 두 번째와 세 번째 시나리오에서는 제한 시간을 적용하는 방법을 보여 주고 마지막 시나리오에서는 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 설정을 보여 줍니다.  
@@ -47,6 +47,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`

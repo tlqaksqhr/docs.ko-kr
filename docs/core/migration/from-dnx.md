@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
+ms.openlocfilehash: 1e2ab018fc690b31b59a04bf8c0c0990225c293b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e94ab83bb6638438e0a98020a5b42755322af5da
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX에서.NET Core CLI(project.json)로 마이그레이션
 
 ## <a name="overview"></a>개요
@@ -62,7 +60,7 @@ DNX를 사용한 경우 세 부분(DNX, DNU 또는 DNVM) 중 하나에서 몇 �
 | dnu pack                          | dotnet pack       | 코드의 NuGet 패키지를 패키지합니다.                                                                          |
 | dnx \[command](예: "dnx web")   | 해당 없음\*             | DNX 세계에서 project.json에 정의된 대로 명령을 실행합니다.                                                       |
 | dnu install                       | 해당 없음\*             | DNX 세계에서 종속성으로 패키지를 설치합니다.                                                              |
-| dnu restore                       | dotnet restore    | Project.json에 지정된 종속성을 복원합니다.                                                              |
+| dnu restore                       | dotnet restore    | Project.json에 지정된 종속성을 복원합니다. ([참고](#dotnet-restore-note))                                                               |
 | dnu publish                       | dotnet publish    | 배포할 응용 프로그램을 세 가지 형식(이식 가능, 이식 가능과 네이티브, 독립 실행형) 중 하나로 게시합니다.    |
 | dnu wrap                          | 해당 없음\*             | DNX 세계에서 csproj의 project.json을 래핑합니다.                                                                      |
 | dnu commands                      | 해당 없음\*             | DNX 세계에서 전역적으로 설치된 명령을 관리합니다.                                                             |
@@ -78,7 +76,7 @@ DNU는 "명령 전역"이라는 개념과 함께 제공되었습니다. 이는 �
 CLI는 이 개념을 지원하지 않습니다. 대신 친숙한 `dotnet <command>` 구문을 사용하여 호출할 수 있는 프로젝트별 명령을 추가하는 개념을 지원합니다.
 
 ### <a name="installing-dependencies"></a>종속성 설치
-v1부터 .NET Core CLI 도구에는 종속성 설치를 위한 `install` 명령이 없습니다. NuGet에서 패키지를 설치하려면 이를 종속성으로 `project.json` 파일에 추가한 후 `dotnet restore`를 실행해야 합니다. 
+v1부터 .NET Core CLI 도구에는 종속성 설치를 위한 `install` 명령이 없습니다. NuGet 패키지를 설치 하기 위해 해야 하는 종속성으로 추가 하 여 `project.json` 파일을 실행 한 다음 `dotnet restore` ([참고를 참조 하십시오](#dotnet-restore-note)). 
 
 ### <a name="running-your-code"></a>코드 실행
 코드를 실행하는 두 가지 중요한 방법이 있습니다. 하나는 소스에서 `dotnet run`으로 실행하는 것입니다. `dnx run`과는 달리, 이 경우 메모리 내 컴파일을 수행하지 않습니다. 실제로 `dotnet build`를 호출하여 코드를 빌드하고 빌드된 바이너리를 실행합니다. 
@@ -131,7 +129,7 @@ CLI와 DNX는 둘 다 `project.json` 파일 기반의 동일한 기본 프로젝
 
 `project.json`이 거의 준비되었습니다. 종속성 목록을 살펴보고, 특히 ASP.NET Core 종속성을 사용하는 경우 종속성을 새 버전으로 업데이트해야 합니다. 별도의 BCL API용 패키지를 사용한 경우 [응용 프로그램 이식성 유형](../deploying/index.md) 문서에 설명된 대로 런타임 패키지를 사용할 수 있습니다. 
 
-준비가 되면 `dotnet restore`로 복원을 시도할 수 있습니다. 종속성의 버전에 따라, NuGet이 위의 대상 프레임워크 중 하나에 대한 종속성을 확인할 수 없는 경우 오류가 발생할 수 있습니다. 이는 "시점" 문제입니다. 시간이 지나면서 이러한 프레임워크를 지원하는 패키지가 점점 더 많아질 것입니다. 지금은 `framework` 노드 내에서 `imports` 문을 사용하여, 프레임워크를 대상으로 하는 패키지를 복원할 수 있는 NuGet을 "imports" 문 내에 지정할 수 있습니다. 이 경우 표시되는 복원 오류는 어떤 프레임워크를 가져와야 하는지에 대한 충분한 정보를 제공합니다. 잘 모르는 경우 일반적으로 `imports` 문에서 `dnxcore50` 및 `portable-net45+win8`을 지정하면 도움이 될 수 있습니다. 다음의 JSON 코드 조각은 이를 보여 줍니다.
+준비가 되 면 복원 해 볼 수 있습니다 `dotnet restore` ([참고](#dotnet-restore-note)). 종속성의 버전에 따라, NuGet이 위의 대상 프레임워크 중 하나에 대한 종속성을 확인할 수 없는 경우 오류가 발생할 수 있습니다. 이는 "시점" 문제입니다. 시간이 지나면서 이러한 프레임워크를 지원하는 패키지가 점점 더 많아질 것입니다. 지금은 `framework` 노드 내에서 `imports` 문을 사용하여, 프레임워크를 대상으로 하는 패키지를 복원할 수 있는 NuGet을 "imports" 문 내에 지정할 수 있습니다. 이 경우 표시되는 복원 오류는 어떤 프레임워크를 가져와야 하는지에 대한 충분한 정보를 제공합니다. 잘 모르는 경우 일반적으로 `imports` 문에서 `dnxcore50` 및 `portable-net45+win8`을 지정하면 도움이 될 수 있습니다. 다음의 JSON 코드 조각은 이를 보여 줍니다.
 
 ```json
     "frameworks": {
@@ -143,3 +141,5 @@ CLI와 DNX는 둘 다 `project.json` 파일 기반의 동일한 기본 프로젝
 
 `dotnet build`를 실행하면 너무 많지는 않더라도 궁극적인 빌드 오류가 표시됩니다. 코드를 빌드하여 적절히 실행한 후에는 Runner로 테스트할 수 있습니다. `dotnet <path-to-your-assembly>`를 실행하고 살펴보세요.
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -1,38 +1,19 @@
 ---
 title: "using 지시문(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- using directive [C#]
+helpviewer_keywords: using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1129efd8a1c4058a9648eab61f98cdcef7e9f2f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-directive-c-reference"></a>using 지시문(C# 참조)
 `using` 지시문에는 다음 세 가지 용도가 있습니다.  
@@ -81,15 +62,15 @@ class Program
   
  `using` 지시문을 만들어서 네임스페이스를 지정할 필요 없이 네임스페이스에서 이 형식을 사용합니다. `using` 지시문은 지정한 네임스페이스에 중첩된 모든 네임스페이스에 대한 액세스 권한을 제공하지 않습니다.  
   
- 네임스페이스는 두 가지 범주인 사용자 정의 및 시스템 정의로 구분됩니다. 사용자 정의 네임스페이스는 코드에서 정의된 네임스페이스입니다. 시스템 정의 네임스페이스 목록을 보려면 [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)를 참조하세요.  
+ 네임스페이스는 두 가지 범주인 사용자 정의 및 시스템 정의로 구분됩니다. 사용자 정의 네임스페이스는 코드에서 정의된 네임스페이스입니다. 시스템 정의 네임 스페이스의 목록에 대 한 참조 [.NET Framework 클래스 라이브러리 개요](../../../standard/class-library-overview.md)합니다.  
   
- 다른 어셈블리의 메서드를 참조하는 방법에 대한 자세한 내용은 [C# DLL 만들기 및 사용](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)을 참조하세요.  
+ 다른 어셈블리의 메서드를 참조 하는 예제를 참조 하십시오. [만들기 및 사용 하 여 어셈블리 사용 하 여 명령줄](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)합니다.  
   
 ## <a name="example-1"></a>예제 1  
   
  다음 예제에서는 `using` 네임스페이스에 대한 별칭을 정의 및 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
   
  using alias 지시문의 오른쪽에는 공개 제네릭 형식이 포함될 수 없습니다. 예를 들어 List\<T>에 대해서는 using 별칭을 만들 수 없지만 List\<int>에 대해서는 만들 수 있습니다.  
   
@@ -97,17 +78,16 @@ class Program
   
  다음 예제에서는 클래스에 대한 `using` 지시문 및 `using` 별칭을 정의하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [네임스페이스 사용](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [네임스페이스](../../../csharp/programming-guide/namespaces/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [네임스페이스 사용](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [네임스페이스](../../../csharp/programming-guide/namespaces/index.md)  
  [using 문](../../../csharp/language-reference/keywords/using-statement.md)
-

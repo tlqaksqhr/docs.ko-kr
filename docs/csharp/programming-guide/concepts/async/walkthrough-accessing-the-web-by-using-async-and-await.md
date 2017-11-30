@@ -1,30 +1,21 @@
 ---
 title: "연습: async 및 await를 사용하여 웹에 액세스(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 85edc87bc8c5183f85618351034c0b043472b530
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7c03cad060e2ba459277c28f929df88be70e4044
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
 async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직관적인 방식으로 작성할 수 있습니다. 동기 코드처럼 보이는 비동기 코드를 작성하고 일반적으로 비동기 코드에 수반되는 어려운 콜백 함수 및 연속 작업을 컴파일러에서 처리하도록 할 수 있습니다.  
@@ -741,12 +732,11 @@ namespace AsyncExampleWPF
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)   
- [async](../../../../csharp/language-reference/keywords/async.md)   
- [await](../../../../csharp/language-reference/keywords/await.md)   
- [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)   
- [TAP(작업 기반 비동기 프로그래밍)](http://go.microsoft.com/fwlink/?LinkId=204847)   
- [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)   
+ [Async 샘플: 웹 연습 (C# 및 Visual Basic)에 액세스](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [async](../../../../csharp/language-reference/keywords/async.md)  
+ [await](../../../../csharp/language-reference/keywords/await.md)  
+ [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
+ [작업 기반 비동기 프로그래밍 (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
-

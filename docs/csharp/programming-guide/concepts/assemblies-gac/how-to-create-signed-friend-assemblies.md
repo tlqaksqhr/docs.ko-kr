@@ -1,30 +1,21 @@
 ---
 title: "방법: 서명된 Friend 어셈블리 만들기(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 79f5ff0615a572db162906c698c47196c6f045da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e9d56602eaffe73ff301ade95aaebeabab663be6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>방법: 서명된 Friend 어셈블리 만들기(C#)
 이 예제에서는 강력한 이름을 가진 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다. 두 어셈블리에 모두 강력한 이름을 지정해야 합니다. 이 예제의 두 어셈블리는 모두 동일한 키를 사용하지만 두 어셈블리에 서로 다른 키를 사용할 수 있습니다.  
@@ -106,12 +97,11 @@ ms.lasthandoff: 07/28/2017
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성과 <xref:System.Security.Permissions.StrongNameIdentityPermission> 클래스 간에는 유사점이 있습니다. 주요 차이점은 <xref:System.Security.Permissions.StrongNameIdentityPermission>은 코드의 특정 섹션을 실행하는 보안 권한을 요구할 수 있는 반면, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성은 `internal` 형식 및 멤버의 표시 유형을 제어한다는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
- [Friend 어셈블리(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
- [방법: 서명되지 않은 Friend 어셈블리 만들기(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)   
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)   
- [Sn.exe(강력한 이름 도구)](https://msdn.microsoft.com/library/k5b5tt23)   
- [강력한 이름의 어셈블리 만들기 및 사용](https://msdn.microsoft.com/library/xwb8f617)   
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [Friend 어셈블리 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [방법: 서명 되지 않은 Friend 어셈블리 (C#) 만들기](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [Sn.exe(강력한 이름 도구)](https://msdn.microsoft.com/library/k5b5tt23)  
+ [강력한 이름의 어셈블리 만들기 및 사용](https://msdn.microsoft.com/library/xwb8f617)  
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
-

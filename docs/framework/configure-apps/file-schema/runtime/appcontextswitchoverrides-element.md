@@ -20,11 +20,11 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9ed1b11cef909af153e43d61e71a4875648bdbfb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: d0c87092786e1057bb925f55cfe46e3f4ef58b9d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -128,6 +128,6 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [AppContext](xref:System.AppContext?qualifyHint=False&autoUpgrade=True)  
+<xref:System.AppContext>  
  [\<런타임 > 요소](runtime-element.md)  
  [\<configuration> 요소](../configuration-element.md)

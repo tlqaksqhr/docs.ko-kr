@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>튜플 및 기타 형식 분해 #
 
@@ -34,7 +34,7 @@ C#에서는 튜플 분해를 기본적으로 지원하므로 한 작업에서 �
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-다음과 같은 두 가지 방법으로 튜플을 분해합니다.
+튜플을 분해 하기 위해 세 가지가 있습니다.
 
 - 괄호 안에 각 필드의 형식을 명시적으로 선언할 수 있습니다. 다음 예제에서는 이 방법을 사용하여 `QueryCityData` 메서드에서 반환된 3 튜플을 분해합니다.
 
@@ -50,9 +50,15 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
     이 방법은 번거로우므로 사용하지 않는 것이 좋습니다.
 
+- 마지막으로, 이미 선언 하는 변수로 튜플의 해체 될 수 있습니다.
+
+    [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
+
 튜플에 있는 모든 필드의 형식이 같은 경우에도 괄호 밖에 특정 형식을 지정할 수 없습니다. 이 경우 컴파일러 오류 CS8136, “Deconstruction 'var (...)' 양식에서는 'var'에 특정 형식을 사용할 수 없습니다.”가 생성됩니다.
 
 튜플의 각 요소도 변수에 할당해야 합니다. 생략하는 요소가 있으면 컴파일러에서 CS8132 오류, “‘x’ 요소의 튜플을 ‘y’ 변수로 분해할 수 없습니다.”가 생성됩니다.
+
+참고 선언 및 왼쪽에 있는 기존 변수를 할당 한 제거를 함께 사용할 수 없습니다. 컴파일러 오류 "는 제거 혼합할 수 없습니다 선언 및 왼쪽 hand-양쪽 식입니다." CS8184를 생성 합니다. 때 멤버 새로 선언 하 고 기존 변수를 포함 합니다.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>무시 항목을 사용한 튜플 요소 분해
 

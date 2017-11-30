@@ -12,11 +12,11 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6e3ec30edc65fd136fff56b1469664a6ba3b44f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 9ff7a7e7cfd29ea6e5029219115b4bfff1c6895c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
 일반적으로 워크플로 응용 프로그램 내에서 규칙이 사용될 경우 해당 규칙은 어셈블리의 일부입니다. 일부 시나리오에서는 워크플로 어셈블리를 다시 빌드하고 배포하지 않고도 RuleSet을 업데이트할 수 있도록 어셈블리와 별도로 RuleSet을 유지할 수 있습니다. 이 샘플에서는 데이터베이스에 있는 RuleSet을 관리하고 편집하며 런타임에 워크플로에서 이러한 RuleSet에 액세스할 수 있습니다. 따라서 워크플로 인스턴스를 실행하여 RuleSet 변경 내용을 자동으로 통합할 수 있습니다.  
@@ -143,6 +143,4 @@ ms.lasthandoff: 10/18/2017
 10. 이제 다른 모든 워크플로 콘솔 응용 프로그램처럼 `RuleSetToolkitUsageSample` 프로젝트를 실행할 수 있습니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 F5 키 또는 Ctrl+F5를 누르거나 RuleSetToolkitUsageSample.exe 파일을 직접 실행합니다.  
   
     > [!NOTE]
-    >  RuleSet 도구에서는 사용 샘플 어셈블리를 로드하므로 사용 샘플을 다시 컴파일하려면 도구를 닫아야 합니다.  
-  
-## <a name="see-also"></a>참고 항목
+    >  RuleSet 도구에서는 사용 샘플 어셈블리를 로드하므로 사용 샘플을 다시 컴파일하려면 도구를 닫아야 합니다.

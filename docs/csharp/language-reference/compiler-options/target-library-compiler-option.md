@@ -1,42 +1,23 @@
 ---
 title: "-target:library(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /dll
-dev_langs:
-- CSharp
+f1_keywords: /dll
 helpviewer_keywords:
 - -target compiler options [C#], /target:library
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e66e2edd86dc4a1302b23dab07226a5d56cb79b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c54599a3badf65fe6d53f74f71fde58772afa6c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="targetlibrary-c-compiler-options"></a>/target:library(C# 컴파일러 옵션)
 **/target:library** 옵션을 사용하면 컴파일러가 실행 파일(EXE) 대신 DLL(동적 연결 라이브러리)을 만듭니다.  
@@ -74,6 +55,5 @@ csc /target:library in.cs
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [/target(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
+ [/target (C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
-

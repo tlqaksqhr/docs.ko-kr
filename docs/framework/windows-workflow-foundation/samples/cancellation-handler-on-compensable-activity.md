@@ -12,11 +12,11 @@ caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b39b5d9277767160225a34be9e0c71a36e7b6d78
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 64d594711a805f75e1d76e59579032b0dc73dc93
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="cancellation-handler-on-compensable-activity"></a>보정 가능한 활동에 대한 취소 처리기
 이 샘플에서는 <xref:System.Activities.Statements.CompensableActivity>에 대해 취소 처리기를 사용하는 방법을 보여 줍니다.  
@@ -94,6 +94,4 @@ Parallel
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CompensationCancellation`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CompensationCancellation`

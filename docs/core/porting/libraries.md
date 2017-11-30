@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
+ms.openlocfilehash: 390d08332113a50b363bdbb71921bafd7e33e87d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---libraries"></a>.NET Core로 이식 - 라이브러리
 
 이 문서에서는 플랫폼 간에 실행되도록 .NET Core에 라이브러리 코드를 이식하는 방법에 관해 설명합니다.
@@ -25,7 +23,8 @@ ms.lasthandoff: 08/04/2017
 
 이 문서에서는 다음을 전제로 합니다.
 
-- 사용자가 Visual Studio 2017 이상을 사용합니다. .NET Core는 이전 버전의 Visual Studio에서 지원되지 않습니다.
+- 사용자가 Visual Studio 2017 이상을 사용합니다.
+  - .NET core는 이전 버전의 Visual Studio에서 지원 되지 않습니다.
 - 사용자가 [권장 이식 프로세스](index.md)를 이해합니다.
 - 사용자가 [타사 종속성](third-party-deps.md)과 관련된 문제를 모두 해결했습니다.
 
@@ -56,7 +55,7 @@ API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로
 
 AppDomain은 앱을 서로 분리합니다. AppDomain에는 런타임 지원이 필요하고, 일반적으로 상당히 비싸므로 .NET Core에서 구현되지 않습니다. 앞으로 이 기능을 추가할 계획이 없습니다. 코드 격리의 경우 별도의 프로세스 또는 컨테이너를 대신 사용하는 것이 좋습니다. 어셈블리를 동적으로 로드하기 위해 새 <xref:System.Runtime.Loader.AssemblyLoadContext> 클래스를 사용하는 것이 좋습니다.
 
-.NET Framework에서 코드를 쉽게 마이그레이션할 수 있도록 .NET Core에서 <xref:System.AppDomain> API 표면의 일부를 공개했습니다. API 중 일부는 정상적으로 작동하고(예: <xref:System.AppDomain.UnhandledException?displayProperty=fullName>), 일부 멤버는 아무것도 하지 않고(예: <xref:System.AppDomain.SetCachePath%2A>), 일부는 <xref:System.PlatformNotSupportedException>을 throw합니다(예: <xref:System.AppDomain.CreateDomain%2A>). [dotnet/corefx GitHub 리포지토리](https://github.com/dotnet/corefx)의 [`System.AppDomain` 참조 소스](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs)에 대해 사용하는 형식을 확인하여 구현된 버전과 일치하는 분기를 선택합니다.
+.NET Framework에서 코드를 쉽게 마이그레이션할 수 있도록 .NET Core에서 <xref:System.AppDomain> API 표면의 일부를 공개했습니다. API 중 일부는 정상적으로 작동하고(예: <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), 일부 멤버는 아무것도 하지 않고(예: <xref:System.AppDomain.SetCachePath%2A>), 일부는 <xref:System.PlatformNotSupportedException>을 throw합니다(예: <xref:System.AppDomain.CreateDomain%2A>). [dotnet/corefx GitHub 리포지토리](https://github.com/dotnet/corefx)의 [`System.AppDomain` 참조 소스](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs)에 대해 사용하는 형식을 확인하여 구현된 버전과 일치하는 분기를 선택합니다.
 
 ### <a name="remoting"></a>원격 통신
 
@@ -197,4 +196,3 @@ Visual Studio에서 이식하려는 각 프로젝트에 대해 다음을 수행�
 1. 이식할 다음 코드 계층을 선택하고 이전 단계를 반복합니다.
 
 라이브러리의 기본으로 시작하고 기본에서 바깥쪽으로 이동하면서 필요에 따라 각 계층을 테스트하면, 이식은 한 번에 하나의 코드 계층으로 문제가 격리되는 체계적인 프로세스가 됩니다.
-

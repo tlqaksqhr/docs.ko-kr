@@ -1,13 +1,9 @@
 ---
 title: "개발자용 .NET Framework 설치"
-ms.custom: 
-ms.date: 05/26/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: get-started-article
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
@@ -15,23 +11,20 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-caps.latest.revision: 165
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: db8d543b07ede81c8b07e607bedd4ee2a01b0022
+ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: 844b3e40b816d324ca4ba22d6884be5a7e3a2ec1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/19/2017
 ---
-
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
 .NET은 Windows에서 실행되는 대부분의 앱에서 필수적인 요소이며, 해당 앱이 실행되는 데 필요한 공통적인 기능을 제공합니다. 개발자를 위해 .NET Framework에서는 시각적으로 멋진 사용자 환경 및 원활하고 안전한 통신이 가능한 앱을 구축하기 위한 포괄적이고 일관적인 프로그래밍 모델을 제공합니다.  
 
-이 문서에서는 컴퓨터에 .NET Framework 4.5와 해당 포인트 릴리스(4.5.1, 4.5.2), [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 해당 포인트 릴리스(4.6.1, 4.6.2) 및 .NET Framework 4.7을 설치하기 위한 링크를 제공합니다. 개발자는 이러한 링크를 앱과 함께 .NET Framework를 다운로드하고 재배포하기 위해 사용할 수 있습니다.
+이 문서에서는.NET Framework 4.5, 해당 포인트 릴리스 (4.5.1, 4.5.2)를 설치 하기 위한 링크를 제공 된 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 해당 컴퓨터에 포인트 릴리스 (4.6.1, 4.6.2) 및.NET Framework 4.7 및 해당 포인트 릴리스 (4.7.1). 개발자는 이러한 링크를 앱과 함께 .NET Framework를 다운로드하고 재배포하기 위해 사용할 수 있습니다.
 
 .NET Framework의 새 버전을 설치한다고 항상 이전 버전이 대체되는 것은 아닙니다. .NET Framework 버전 및 컴퓨터에 설치된 버전을 확인하는 방법에 대한 자세한 내용은 [버전 및 종속성](~/docs/framework/migration-guide/versions-and-dependencies.md) 및 [방법: 설치되는 .NET Framework 버전 결정](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하십시오. 다음 표에 나열된 모든 .NET Framework 버전은 .NET Framework 4의 현재 위치 업데이트입니다. 다시 말해 .NET Framework 4.6과 같은 최신 버전을 설치하는 경우 .NET Framework 4.5, 4.5.1 또는 4.5.2 등의 이전 버전을 먼저 설치할 필요가 없습니다. 마찬가지로 .NET Framework 4.6과 같은 최신 버전을 설치하는 경우 .NET Framework 4.5, 4.5.1 또는 4.5.2 등의 이전 버전을 먼저 제거할 필요도 없습니다. 
 
@@ -44,6 +37,7 @@ ms.lasthandoff: 08/05/2017
   
 |.NET Framework 버전|개발자 설치|재배포 가능 설치|플랫폼 지원|  
 |----------------------------|----------------------------|----------------------------------|----------------------|  
+|**4.7.1**|[NET Framework 4.7.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 용 다운로드 페이지 웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [다운로드 페이지 4.7.1에 대 한 오프 라인 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=852107)|포함된 운영 체제: <br/>Windows 10 년 작성자 업데이트<br/>Windows Server, 버전 1709<br /><br /> 설치 가능한 운영 체제:<br/> Windows 10 작성자 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)||
 |**4.7**|[NET Framework 4.7 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 웹 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 오프라인 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=825303)|포함된 운영 체제: <br/>Windows 10 크리에이터스 업데이트<br /><br /> 설치 가능한 운영 체제:<br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)||
 |**4.6.2**|[NET Framework 4.6.2 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 웹 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 오프라인 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=780601)|포함된 운영 체제: <br /> Windows 10 Anniversary Edition<br /><br /> 설치 가능한 운영 체제:<br /> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)|
 |**4.6.1**|[NET Framework 4.6.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 웹 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 오프라인 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=671744)|설치 가능한 운영 체제:<br /> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)|
@@ -71,7 +65,9 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
   
 ## <a name="to-install-the-net-framework-developer-or-targeting-pack"></a>.NET Framework 개발자 또는 타기팅 팩을 설치하려면
 
-.NET Framework 4.5.1 또는 4.5.2용 개발자 팩, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]용 타기팅 팩 및 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], 4.6.2 또는 4.7용 개발자 팩에서는 Visual Studio와 같은 통합 개발 환경에서 사용할 수 있는 .NET Framework 4.5.1이나 4.5.2 또는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1이나 4.6.2 또는 .NET Framework 4.7 참조 어셈블리, 언어 팩 및 IntelliSense 파일을 제공합니다.  Visual Studio를 사용하는 경우 개발자 팩 또는 타기팅 팩은 설치된 .NET Framework 버전을 새 프로젝트를 만들 때 선택한 대상에도 추가합니다.  다음 개발자 팩 또는 타기팅 팩 중 하나를 선택합니다.  
+에 대 한.NET Framework 4.5.1 또는 4.5.2를 대상 지정 팩 용 개발자 팩은 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 및 용 개발자 팩은 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], 4.6.2, 4.7, 또는 4.7.1 제공.NET Framework 4.5.1 또는 4.5.2 또는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.2, 4.6.1 또는.NET 4.7 또는 4.7.1 프레임 워크 참조 어셈블리, 언어 팩 및 IntelliSense 파일을 Visual Studio와 같은 통합된 개발 환경에서 사용 합니다.  Visual Studio를 사용하는 경우 개발자 팩 또는 타기팅 팩은 설치된 .NET Framework 버전을 새 프로젝트를 만들 때 선택한 대상에도 추가합니다.  다음 개발자 팩 또는 타기팅 팩 중 하나를 선택합니다.  
+
+- [Microsoft.NET Framework 4.7.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=852105)
 
 - [Microsoft .NET Framework 4.7 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=825319)
 
@@ -105,7 +101,9 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
   
 1.  설치하려는 .NET Framework 버전의 다운로드 페이지를 엽니다.  
 
-    - .NET Framework 4.7([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=825299) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=825303))
+   - .NET framework 4.7.1 ([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=852095) 또는 [오프 라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=852107))
+
+   - .NET Framework 4.7([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=825299) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=825303))
 
     - .NET Framework 4.6.2([웹 설치 관리자](http://go.microsoft.com/fwlink/?LinkId=780597) 또는 [오프라인 설치 관리자](http://go.microsoft.com/fwlink/p/?LinkId=780601))  
     
@@ -138,13 +136,13 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
   
  **설치 참고:**  
   
-- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 및 4.5.2와 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 및 4.7은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 현재 위치 업데이트입니다.  
+- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 및 4.5.2로 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, 4.7, 및 4.7.1 됩니다에 대 한 현재 위치 업데이트는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]합니다.  
   
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 해당 포인트 릴리스, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 해당 포인트 릴리스 및 .NET Framework 4.7이 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]를 대체합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]가 설치되어 있는 시스템에 이러한 버전을 설치하면 어셈블리가 교체됩니다.
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 해당 포인트 릴리스는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 해당 포인트 릴리스 및.NET Framework 4.7 및 해당 포인트 릴리스 replace는 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]가 설치되어 있는 시스템에 이러한 버전을 설치하면 어셈블리가 교체됩니다.
   
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 해당 포인트 릴리스, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 해당 포인트 릴리스 또는 .NET Framework 4.7을 제거하면 기존 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 파일도 제거됩니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)](으)로 돌아가려면 해당 프로그램과 업데이트를 다시 설치해야 합니다. ([.NET Framework 4 설치](http://go.microsoft.com/fwlink/p/?LinkId=230665) 참조)  
+- 제거는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 해당 포인트 릴리스는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 해당 포인트 릴리스 또는.NET Framework 4.7 및 해당 포인트 릴리스도 제거 해도 기존의 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 파일입니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)](으)로 돌아가려면 해당 프로그램과 업데이트를 다시 설치해야 합니다. ( [.NET Framework 4 설치](http://go.microsoft.com/fwlink/p/?LinkId=230665)참조)  
   
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 해당 포인트 릴리스, .NET Framework 4.6, 해당 포인트 릴리스 및 .NET Framework 4.7을 설치하려면 관리자 자격 증명이 있어야 합니다.
+- 설치 하려면 관리 자격 증명이 있어야는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 해당 릴리스,.NET Framework 4.6 및 해당 포인트 릴리스 및.NET Framework 4.7 및 해당 포인트 릴리스를 가리킵니다.
   
 - .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/p/?LinkId=245484)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](http://technet.microsoft.com/security/advisory/2749655) 및 [기술 자료 문서 2770445](http://support.microsoft.com/kb/2770445)를 참조하십시오.  
   
@@ -158,6 +156,8 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
   
 1.  설치된 .NET Framework 버전의 언어 팩 다운로드 페이지를 엽니다.  
   
+    - [.NET framework 4.7.1 언어 팩](http://go.microsoft.com/fwlink/?LinkID=852090) 
+
     - [.NET Framework 4.7 언어 팩](http://go.microsoft.com/fwlink/?LinkID=825306) 
 
     - [.NET Framework 4.6.2 언어 팩](http://go.microsoft.com/fwlink/?LinkID=780604)  
@@ -209,7 +209,7 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
   
 - .NET Framework를 처음 사용하는 경우 [개요](~/docs/framework/get-started/overview.md)에서 주요 개념과 구성 요소에 대한 소개를 참조하십시오.  
   
-- .NET Framework 4.7, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.5.2, 4.5.1 및 4.5의 새로운 기능과 향상된 기능을 확인하려면 [새로운 기능](../../../docs/framework/whats-new/index.md)을 참조하세요.  
+- 새로운 기능 및.NET Framework 4.5 및 모든 이후 버전의 향상 된 기능에 대 한 참조 [새로운](../../../docs/framework/whats-new/index.md)합니다.  
   
 - 응용 프로그램과 함께 .NET Framework를 배포하는 방법에 대한 자세한 정보는 [개발자를 위한 배포 가이드](~/docs/framework/deployment/deployment-guide-for-developers.md)를 참조하십시오.  
   
@@ -217,7 +217,7 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
   
 - 응용 프로그램을 .NET Framework 4에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 해당 포인트 릴리스 중 하나로 마이그레이션하는 방법에 대한 자세한 내용은 [마이그레이션 가이드](~/docs/framework/migration-guide/index.md)를 참조하십시오. 
 
-- 온라인에서 .NET Framework 소스 코드를 검색하려면 [.NET Framework 참조 소스](http://referencesource.microsoft.com/)를 참조하십시오. 참조 소스는 [Github](https://github.com/Microsoft/referencesource)에서도 사용할 수 있습니다. [참조 소스를 다운로드](http://referencesource.microsoft.com/download.html)하여 오프라인에서 살펴보고, 디버그 시 소스(패치 및 업데이트 포함)를 단계별로 실행할 수 있습니다. 자세한 내용은 블로그 항목 [.NET 참조 소스의 새로운 디자인](http://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)을 참조하십시오.  
+- 온라인에서 .NET Framework 소스 코드를 검색하려면 [.NET Framework 참조 소스](http://referencesource.microsoft.com/)를 참조하십시오. 참조 소스에서 사용할 수는 또한 [GitHub](https://github.com/Microsoft/referencesource)합니다. [참조 소스를 다운로드](http://referencesource.microsoft.com/download.html)하여 오프라인에서 살펴보고, 디버그 시 소스(패치 및 업데이트 포함)를 단계별로 실행할 수 있습니다. 자세한 내용은 블로그 항목 [.NET 참조 소스의 새로운 디자인](http://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목
 
@@ -225,4 +225,3 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
 [관리자를 위한 배포 가이드](~/docs/framework/deployment/guide-for-administrators.md)   
 [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](~/docs/framework/install/dotnet-35-windows-10.md)   
 [차단된 .NET Framework 설치 및 제거 문제 해결](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-

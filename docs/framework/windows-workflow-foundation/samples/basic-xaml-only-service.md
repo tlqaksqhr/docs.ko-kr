@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 3fbf8a719647199439e2333ba5e26cbe51be3add
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 004a37682b855135998ef4620e673421f769326d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="basic-xaml-only-service"></a>기본적인 XAML 전용 서비스
 이 샘플에서는 XAML로만 구성된 서비스를 만드는 방법을 보여 줍니다. 이 시나리오는 자동차 관련 문제에 대한 진단 서비스입니다. 이 서비스는 문제를 진단하기 위해 고객에게 일련의 질문을 하는 워크플로로 구현됩니다. 이 서비스로 진단할 수 있는 문제에는 두 가지 유형이 있습니다. 그 중 하나는 자동차의 시동이 걸리지 않는 문제이고, 다른 하나는 공조기가 작동하지 않는 문제입니다. 이 워크플로에서는 디자이너의 요청/회신 템플릿을 사용하여 간단한 서비스 작업 세 가지를 노출합니다. 서비스는 IIS에 가상 디렉터리를 만들고 service1.xamlx와 Web.config 파일을 가상 디렉터리에 복사하여 IIS에서 호스트되며 컴파일된 코드는 필요하지 않습니다. 기본적으로이 샘플에서는 자동으로 복사 필요한 파일을 WCF 및 WF 샘플에 대 한 설치 지침을 수행할 때 만든 가상 디렉터리에: [WindowsCommunicationFoundation샘플의일회설치절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) Visual Studio 2010에서 기본적으로 제공 하는 경우.  
@@ -38,6 +38,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLService`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLService`

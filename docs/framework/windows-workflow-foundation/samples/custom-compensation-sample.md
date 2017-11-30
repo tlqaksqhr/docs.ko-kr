@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: c3a9745c0cdd3a2d7050aed083d2eee5dfd4aaaf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 088e8e771d5fea60987e7ac53ebad0d3fef24b5d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="custom-compensation-sample"></a>사용자 지정 보정 샘플
 이 샘플에서는 <xref:System.Activities.Statements.CompensableActivity>와 해당 보정 처리기를 사용하여 사용자 지정 보정 논리를 정의하는 방법을 보여 줍니다. 이 샘플에서 모델링하는 시나리오는 트럭 렌탈 대행사입니다.  
@@ -59,6 +59,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`

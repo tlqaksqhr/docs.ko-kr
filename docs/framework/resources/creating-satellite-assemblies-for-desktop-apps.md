@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - resource files, deploying
@@ -28,22 +30,21 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>데스크톱 응용 프로그램용 위성 어셈블리 만들기
 리소스 파일은 지역화된 응용 프로그램에서 중요한 역할을 합니다. 응용 프로그램을 사용하여 사용자의 언어 및 문화권에서 문자열, 이미지 및 기타 데이터를 표시하고 사용자의 언어 또는 문화권에 대한 리소스를 사용할 수 없는 경우 대체 데이터를 제공할 수 있습니다. .NET Framework에서는 허브 및 스포크 모델을 사용하여 지역화된 리소스를 찾고 검색합니다. 허브는 지역화할 수 없는 실행 코드와 중립 또는 기본 문화권이라고 하는 단일 문화권의 리소스를 포함하는 주 어셈블리입니다. 기본 문화권은 응용 프로그램의 대체 문화권으로, 지역화된 리소스를 사용할 수 없는 경우 사용됩니다. <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성을 사용하여 응용 프로그램의 기본 문화권의 문화를 지정합니다. 각 스포크는 지역화된 단일 문화권의 리소스를 포함하지만 코드는 포함하지 않는 위성 어셈블리에 연결됩니다. 위성 어셈블리는 주 어셈블리의 일부가 아니므로 응용 프로그램의 주 어셈블리를 바꾸지 않고도 특정 문화권에 해당하는 리소스를 손쉽게 업데이트하거나 바꿀 수 있습니다.  
   
 > [!NOTE]
->  응용 프로그램의 기본 문화권의 리소스를 위성 어셈블리에 저장할 수도 있습니다. 그러려면 <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성에 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=fullName>의 값을 할당합니다.  
+>  응용 프로그램의 기본 문화권의 리소스를 위성 어셈블리에 저장할 수도 있습니다. 그러려면 <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성에 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>의 값을 할당합니다.  
   
 ## <a name="satellite-assembly-name-and-location"></a>위성 어셈블리의 이름 및 위치  
  허브 및 스포크 모델을 사용하려면 리소스를 쉽게 찾아서 사용할 수 있도록 특정 위치에 두어야 합니다. 리소스 컴파일과 이름 지정을 제대로 하지 않거나 리소스를 정확한 위치에 두지 않으면 공용 언어 런타임에서는 이 리소스를 찾을 수 없으며 대신 기본 문화권의 리소스를 사용합니다. <xref:System.Resources.ResourceManager> 개체로 표현되는 .NET Framework 리소스 관리자는 지역화된 리소스에 자동으로 액세스하는 데 사용됩니다. 리소스 관리자에는 다음 사항이 필요합니다.  
@@ -96,9 +97,10 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 1.  기본 문화권의 리소스를 포함하는 Greeting.resx 또는 Greeting.txt라는 리소스 파일을 만듭니다. 값이 “Hello world!”인 `HelloString`이라는 단일 문자열을 이 파일에 저장합니다.  
   
-2.  영어(en)가 응용 프로그램의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> 특성을 응용 프로그램의 AssemblyInfo 파일 또는 응용 프로그램의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.  
+2.  영어(en)가 응용 프로그램의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 특성을 응용 프로그램의 AssemblyInfo 파일 또는 응용 프로그램의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.  
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]  [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3.  추가 문화권(en-US, fr-FR 및 ru-RU)에 대한 지원을 응용 프로그램에 다음과 같이 추가할 수 있습니다.  
   
@@ -122,9 +124,10 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
 5.  다음 소스 코드를 기본 문화권에 대한 리소스와 함께 응용 프로그램의 주 어셈블리로 컴파일합니다.  
   
     > [!IMPORTANT]
-    >  Visual Studio 대신 명령줄을 사용하여 예제를 만들 경우 <xref:System.Resources.ResourceManager> 클래스 생성자에 대한 호출을 `ResourceManager rm = new ResourceManager("Greetings",``typeof(Example).Assembly);`와 같이 수정해야 합니다.  
+    >  Visual Studio 대신 명령줄을 사용하여 예제를 만들 경우 <xref:System.Resources.ResourceManager> 클래스 생성자에 대한 호출을 `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`와 같이 수정해야 합니다.  
   
-     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]  [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
+     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
+     [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
   
      응용 프로그램의 이름이 Example이고 명령줄에서 컴파일하는 경우 C# 컴파일러에 대한 명령은 다음과 같습니다.  
   
@@ -223,9 +226,10 @@ gacutil /i:StringLibrary.resources.dll
   
 3.  기본 문화권의 리소스를 포함할 Strings.resx라는 리소스 파일을 만듭니다. "How do you do?"의 값을 가진 `Greeting`이라는 이름의 단일 문자열을 해당 파일에 저장합니다.  
   
-4.  "en"가 응용 프로그램의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> 특성을 응용 프로그램의 AssemblyInfo 파일 또는 응용 프로그램의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.  
+4.  "en"가 응용 프로그램의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 특성을 응용 프로그램의 AssemblyInfo 파일 또는 응용 프로그램의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.  
   
-     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]  [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
+     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
+     [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
 5.  추가 문화권(en-US, fr-FR 및 ru-RU 문화권)에 대한 지원을 응용 프로그램에 다음과 같이 추가합니다.  
   
@@ -246,9 +250,10 @@ gacutil /i:StringLibrary.resources.dll
 7.  StringLibrary.vb 또는 StringLibrary.cs에 대한 다음 소스 코드를 기본 문화권의 리소스와 함께 StringLibrary.dll이라는 지연 서명된 라이브러리 어셈블리로 컴파일합니다.  
   
     > [!IMPORTANT]
-    >  Visual Studio 대신 명령줄을 사용하여 예제를 만들 경우 <xref:System.Resources.ResourceManager> 클래스 생성자에 대한 호출을 `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`로 수정해야 합니다.  
+    >  을 사용 중인 Visual Studio 대신 명령줄 예제를 만들려면에 대 한 호출을 수정 해야는 <xref:System.Resources.ResourceManager> 클래스 생성자를 `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`합니다.  
   
-     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]  [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
+     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
+     [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
   
      C# 컴파일러에 대한 명령은 다음과 같습니다.  
   
@@ -294,7 +299,8 @@ gacutil /i:StringLibrary.resources.dll
   
 13. Visual Studio를 사용하는 경우 `Example`이라는 새 **콘솔 응용 프로그램** 프로젝트를 만들고, StringLibrary.dll에 참조와 다음 소스 코드를 추가하고 컴파일합니다.  
   
-     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]  [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  
+     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
+     [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  
   
      명령줄에서 컴파일하려면 C# 컴파일러에서 다음 명령을 사용합니다.  
   
@@ -311,10 +317,9 @@ gacutil /i:StringLibrary.resources.dll
 14. Example.exe를 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)   
- [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [Gacutil.exe(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   
+ [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+ [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Gacutil.exe(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
-

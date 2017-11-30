@@ -12,11 +12,11 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 888282d10be9840817274e0fed36b3cb1cf6da32
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 005d6f98a7341954801c9b98e9eefdb1f0391d6c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="designer-rehosting"></a>디자이너 재호스팅
 디자이너 재호스팅은 사용자 지정 응용 프로그램 내에 워크플로 디자인 캔버스를 호스트하는 방식을 가리키는 일반적인 시나리오입니다. 대부분의 사람들이 가장 잘 알고 있는 호스팅 응용 프로그램은 Visual Studio이지만, 응용 프로그램에 Workflow Designer를 표시하는 것이 유용할 수 있는 시나리오는 그 밖에도 여러 가지가 있습니다.  
@@ -136,6 +136,4 @@ protected override void OnInitialized(EventArgs e)
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

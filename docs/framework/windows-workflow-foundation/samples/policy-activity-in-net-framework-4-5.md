@@ -12,11 +12,11 @@ caps.latest.revision: "15"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 1374bc086923b9ffef288a7fa90427710bdd91b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: d12a3d5a74fa8b0d266fb2ba9494e1a5775f0411
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5의에서 정책 작업
 Policy4 활동을 사용하면 WF 3.5에서 제공되는 규칙 엔진을 사용하여 [!INCLUDE[wf2](../../../../includes/wf2-md.md)](WF 4.5)의 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]에서 직접 <xref:System.Workflow.Activities.Rules.RuleSet>(WF 3.5)의 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 개체를 사용할 수 있습니다. 이 활동을 사용하여 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 만들고 실행할 수 있습니다. Windows Workflow Foundation의 일부로 포함된 WF 3.5 규칙 엔진[!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows Workflow Foundation 규칙 엔진 소개를 참조하세요. 마이그레이션에 대 한 자세한 내용은 규칙에서 WF [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], 읽으십시오 [마이그레이션 지침](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.  
@@ -87,6 +87,4 @@ public class Policy4Activity<TResult>: NativeActivity<TResult>
   
 3.  프로젝트를 컴파일하려면 Ctrl+Shift+B를 누릅니다.  
   
-4.  Ctrl+F5를 눌러 프로젝트를 실행합니다.  
-  
-## <a name="see-also"></a>참고 항목
+4.  Ctrl+F5를 눌러 프로젝트를 실행합니다.

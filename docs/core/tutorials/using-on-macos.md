@@ -9,14 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
+ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-macos"></a>macOS에서 .NET Core 시작
 
 이 문서에서는 macOS용 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다. 프로젝트 및 단위 테스트를 만들고, 디버깅 도구를 사용하고, [NuGet](https://www.nuget.org/)을 통해 타사 라이브러리를 통합하는 방법을 알아봅니다.
@@ -82,7 +80,7 @@ dotnet add library package Newtonsoft.Json
 </ItemGroup>
 ```
 
-종속성을 복원하고 *library* 내에 *obj* 폴더를 만드는 [`dotnet restore`](../tools/dotnet-restore.md)를 실행합니다. 이 폴더 안에는 *project.assets.json* 파일을 비롯한 세 개의 파일이 들어 있습니다.
+실행 [ `dotnet restore` ](../tools/dotnet-restore.md), ([참고 참조](#dotnet-restore-note)) 종속성을 복원 하 고 만듭니다는 *obj* 폴더 *라이브러리* 3 개 에 파일을 포함 하는 *project.assets.json* 파일:
 
 ```console
 dotnet restore
@@ -162,7 +160,7 @@ namespace TestApp
 *golden* 폴더에서 다음 명령을 실행합니다.
 
 ```console
-dotnet restore
+dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
 
@@ -196,7 +194,7 @@ dotnet sln add app/app.csproj
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-`dotnet restore`를 실행하여 솔루션에 있는 세 프로젝트의 종속성을 복원합니다. *Program.cs*를 열고 `Main` 메서드의 내용을 다음 줄로 바꿉니다.
+실행 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 솔루션의 세 가지 프로젝트의 종속성을 복원 합니다. *Program.cs*를 열고 `Main` 메서드의 내용을 다음 줄로 바꿉니다.
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
@@ -225,3 +223,5 @@ Visual Studio Code 도구 모음에서 디버그 아이콘을 선택하거나, �
 
 디버거에서 응용 프로그램을 시작하려면 재생 단추를 누릅니다. 앱이 실행을 시작하고 중단점까지 실행되며, 여기서 중단됩니다. `Get` 메서드를 단계별로 실행하며 올바른 인수를 전달했는지 확인합니다. 응답이 42인지 확인합니다.
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

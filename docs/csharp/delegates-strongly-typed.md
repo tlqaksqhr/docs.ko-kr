@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
+ms.openlocfilehash: 467ba18f8e032b9b3b8f480d4b10c92d0d7ba3b9
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a8185c21e129c91b2c3ecb1f74f8ce2f75c5db9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="strongly-typed-delegates"></a>강력한 형식의 대리자
 
 [이전](delegate-class.md)
@@ -30,7 +28,7 @@ ms.lasthandoff: 07/28/2017
 
 다행히도 반드시 필요하지는 않습니다. .NET Core 프레임워크에는 대리자 형식이 필요할 때마다 재사용할 수 있는 여러 가지 형식이 포함되어 있습니다. 이러한 형식은 [제네릭](programming-guide/generics/index.md) 정의이므로 새 메서드 선언이 필요할 때 사용자 지정을 선언할 수 있습니다. 
 
-이러한 형식 중 첫 번째는 @System.Action 형식이며 여러 가지 변형이 있습니다.
+이러한 형식 중 첫 번째는 <xref:System.Action> 형식이며 여러 가지 변형이 있습니다.
 
 ```csharp
 public delegate void Action();
@@ -41,7 +39,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 
 제네릭 형식 인수에 대한 `in` 한정자는 공변성(Covariance)에 대한 문서에서 설명합니다.
 
-@System.Action%6016 같이 최대 16개의 인수가 포함된 `Action` 대리자의 변형이 있습니다.
+이름의 변형이 `Action` 같이 최대 16 개 사이의 인수를 포함 하는 대리자 <xref:System.Action%6016>합니다.
 이러한 정의에서는 각 대리자 인수에 대해 서로 다른 제네릭 인수를 사용하여 최대한의 유연성을 제공합니다. 메서드 인수는 같은 형식일 필요가 없지만 같은 형식일 수 있습니다.
 
 void 반환 형식을 갖는 대리자 형식에 대해 `Action` 형식 중 하나를 사용합니다.
@@ -57,12 +55,12 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 결과 제네릭 형식 인수에 대한 `out` 한정자는 공변성(Covariance)에 대한 문서에서 설명합니다.
 
-@System.Func%6017 같이 최대 16개의 입력 인수가 포함된 `Func` 대리자의 변형이 있습니다.
+이름의 변형이 `Func` 와 같은 최대 16 개의 입력된 인수와 함께 위임 <xref:System.Func%6017>합니다.
 규칙에 따라 결과의 형식은 모든 `Func` 선언에서 항상 마지막 형식 매개 변수입니다.
 
 값을 반환하는 모든 대리자 형식에 대해 `Func` 형식 중 하나를 사용합니다.
 
-또한 단일 값에 대한 테스트를 반환하는 대리자에 대해 특수화된 @System.Predicate%601 형식이 있습니다.
+또한 특수 <xref:System.Predicate%601> 단일 값에는 테스트를 반환 하는 대리자에 대 한 유형:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
@@ -85,4 +83,3 @@ Predicate<string> AnotherTestForString;
 다음 문서에서는 실제로 대리자로 작업하기 위한 몇 가지 일반적인 패턴이 표시됩니다.
 
 [다음](delegates-patterns.md)
-

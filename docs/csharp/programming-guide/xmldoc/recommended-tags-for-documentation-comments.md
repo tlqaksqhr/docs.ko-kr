@@ -1,40 +1,21 @@
 ---
 title: "문서 주석에 대한 권장 태그(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4d558bbe58d1f4a1c290b4f36718293d5ba1c734
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4f4033ed66fd68afceb9d98cbc6da18c262ae02b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>문서 주석에 대한 권장 태그(C# 프로그래밍 가이드)
 C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 옵션에서 지정한 이름의 파일에 XML로 형식을 지정합니다. 컴파일러에서 생성한 파일을 기반으로 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [Sandcastle](https://github.com/EWSoftware/SHFB)과 같은 도구를 사용하면 됩니다.  
@@ -67,7 +48,6 @@ C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 �
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [/doc(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [/doc (C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML 문서 주석](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-

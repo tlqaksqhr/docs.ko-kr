@@ -1,37 +1,28 @@
 ---
 title: "Friend 어셈블리(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 20b8d4f2d58af510a28160d28e6ef740d293d835
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e2680b5799c552a063ff7c539a31a5dd00b90a75
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="friend-assemblies-c"></a>Friend 어셈블리(C#)
 *friend 어셈블리*는 다른 어셈블리의 [내부](../../../../csharp/language-reference/keywords/internal.md) 형식 및 멤버에 액세스할 수 있는 어셈블리입니다. 어셈블리를 friend 어셈블리로 식별하는 경우 다른 어셈블리에서 액세스할 수 있도록 하기 위해 더 이상 형식 및 멤버를 public으로 표시할 필요가 없습니다. 다음과 같은 시나리오에서 특히 편리합니다.  
   
--   유닛 테스트 중 테스트 코드는 별도의 어셈블리에서 실행되지만 테스트 중인 어셈블리에서 `internal`로 표시된 멤버에 액세스해야 하는 경우.  
+-   단위 테스트 중 테스트 코드는 별도의 어셈블리에서 실행되지만 테스트 중인 어셈블리에서 `internal`로 표시된 멤버에 액세스해야 하는 경우.  
   
--   클래스 라이브러리를 개발하고 있고 라이브러리에 대한 추가 사항이 별도의 어셈블리에 포함되어 있지만 기존 어셈블리에서 `internal`(으)로 표시된 멤버에 액세스해야 하는 경우  
+-   클래스 라이브러리를 개발하고 있고 라이브러리에 대한 추가 사항이 별도의 어셈블리에 포함되어 있지만 기존 어셈블리에서 `internal`로 표시된 멤버에 액세스해야 하는 경우  
   
 ## <a name="remarks"></a>설명  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 지정된 어셈블리에 대해 하나 이상의 friend 어셈블리를 식별할 수 있습니다. 다음 예제에서는 어셈블리 A에서 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하고 `AssemblyB` 어셈블리를 friend 어셈블리로 지정합니다. 그러면 `AssemblyB` 어셈블리가 어셈블리 A에서 `internal`로 표시된 모든 형식 및 멤버에 액세스할 수 있습니다.  
@@ -88,10 +79,9 @@ public class ClassWithFriendMethod
  모듈 파일(확장명이 .netmodule인 파일)에서 어셈블리의 `internal` 형식 및 메서드에 액세스하는 방법에 대한 자세한 내용은 [/moduleassemblyname(C#)](../../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- <xref:System.Security.Permissions.StrongNameIdentityPermission>   
- [방법: 서명되지 않은 Friend 어셈블리 만들기(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)   
- [방법: 서명된 Friend 어셈블리 만들기(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
- [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ <xref:System.Security.Permissions.StrongNameIdentityPermission>  
+ [방법: 서명 되지 않은 Friend 어셈블리 (C#) 만들기](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [방법: 서명 된 Friend 어셈블리 (C#) 만들기](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
-

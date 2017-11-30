@@ -20,11 +20,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ca3bbb4b88bf4355d3c487196672636e6b77d419
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>데이터 계약의 컬렉션 형식
 *컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 경우 이러한 목록은 배열이나 여러 형식(제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>또는 <xref:System.Collections.ArrayList>)을 사용하여 나타낼 수 있습니다. 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.  
@@ -165,7 +165,7 @@ ms.lasthandoff: 10/18/2017
   
 ```xml  
 <CustomerList4>  
-    <customer>...</ customer>  
+    <customer>...</customer>  
     <customer>...</customer>  
     <customer>...</customer>  
     ...  
@@ -297,10 +297,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |참조된 형식|참조된 형식으로 구현된 인터페이스|예제|처리되는 형식|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(매개 변수 수에는 제한 없음)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 또는<br /><br /> `MyType<T> : IDictionary` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IDictionary<object,object>`)|  
-|폐쇄형 제네릭 형식(여러 개의 매개 변수)|<xref:System.Collections.Generic.IDictionary%602>, 폐쇄형|`MyType<T> : IDictionary\<string, bool>` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IDIctionary\<string,bool>`)|  
-|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 값 또는 키 중 하나가 폐쇄형이며, 나머지 하나는 개방형이고 형식의 매개 변수 중 하나를 사용|`MyType\<T,U,V> : IDictionary\<string,V>` 여기서 T=`int`, U=`float`, V=`bool`<br /><br /> 또는<br /><br /> `MyType<Z> : IDictionary\<Z,bool>` 여기서 Z=`string`|폐쇄형 제네릭 형식(예: `IDictionary\<string,bool>`)|  
-|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 키와 값 모두 개방형이고 각각은 형식의 매개 변수 중 하나를 사용|`MyType\<T,U,V> : IDictionary\<V,U>` 여기서 T=`int`, U=`bool`, V=`string`|폐쇄형 제네릭 형식(예: `IDictionary\<string,bool>`)|  
-|개방형 제네릭 형식(두 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 개방형, 형식의 제네릭 매개 변수가 나타나는 순서대로 두 개의 매개 변수 모두 사용|`MyType\<K,V> : IDictionary\<K,V>`, K와 V 모두 개방형|개방형 제네릭 형식(예: `IDictionary\<K,V>`)|  
+|폐쇄형 제네릭 형식(여러 개의 매개 변수)|<xref:System.Collections.Generic.IDictionary%602>, 폐쇄형|`MyType<T> : IDictionary<string, bool>`여기서 T =`int`|폐쇄형 제네릭 형식(예: `IDIctionary<string,bool>`)|  
+|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 값 또는 키 중 하나가 폐쇄형이며, 나머지 하나는 개방형이고 형식의 매개 변수 중 하나를 사용|`MyType<T,U,V> : IDictionary<string,V>`여기서 T =`int`, U =`float`, V =`bool`<br /><br /> 또는<br /><br /> `MyType<Z> : IDictionary<Z,bool>`여기서 Z =`string`|폐쇄형 제네릭 형식(예: `IDictionary<string,bool>`)|  
+|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 키와 값 모두 개방형이고 각각은 형식의 매개 변수 중 하나를 사용|`MyType<T,U,V> : IDictionary<V,U>` 여기서 T=`int`, U=`bool`, V=`string`|폐쇄형 제네릭 형식(예: `IDictionary<string,bool>`)|  
+|개방형 제네릭 형식(두 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 개방형, 형식의 제네릭 매개 변수가 나타나는 순서대로 두 개의 매개 변수 모두 사용|`MyType<K,V> : IDictionary<K,V>`, K와 V 모두 개방형|개방형 제네릭 형식(예: `IDictionary<K,V>`)|  
   
  형식에서 <xref:System.Collections.IDictionary> 및 제네릭 <xref:System.Collections.Generic.IDictionary%602>를 모두 구현하는 경우 제네릭 <xref:System.Collections.Generic.IDictionary%602> 만 고려됩니다.  
   

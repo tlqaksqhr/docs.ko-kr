@@ -1,12 +1,9 @@
 ---
 title: "캐스팅 및 형식 변환(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - type conversion [C#]
 - data type conversion [C#]
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8729677b0c7bee60f0ebeb07439b1c0e71508aa8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: f5844cab81f194b9301a394117e92305eaa45e62
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>캐스팅 및 형식 변환(C# 프로그래밍 가이드)
 C#은 컴파일 시간에 정적으로 형식화되므로 변수가 선언된 후에는 다시 선언되거나 다른 형식의 값을 저장하는 데 사용될 수 없습니다. 단, 형식이 변수의 형식으로 변환될 수 있는 경우는 예외입니다. 예를 들어 정수에서 임의 문자열로의 변환은 없습니다. 따라서 `i`를 정수로 선언한 후에는 다음 코드와 같이 문자열 "Hello"를 할당할 수 없습니다.  
@@ -60,7 +42,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 ## <a name="implicit-conversions"></a>암시적 변환  
  기본 제공 숫자 형식의 경우 저장되는 값이 잘리거나 반올림되지 않고 변수에 맞출 수 있을 때 암시적 변환을 수행할 수 있습니다. 예를 들어 [long](../../../csharp/language-reference/keywords/long.md) 형식의 변수(8바이트 정수)는 [int](../../../csharp/language-reference/keywords/int.md)(32비트 컴퓨터의 4바이트)가 저장할 수 있는 모든 값을 저장할 수 있습니다. 다음 예제에서 컴파일러는 오른쪽의 값을 `long` 형식으로 암시적으로 변환한 후 `bigNum`에 할당합니다.  
   
- [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
+ [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   
  모든 암시적 숫자 변환 규칙의 전체 목록은 [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하세요.  
   
@@ -74,7 +56,7 @@ Base b = d; // Always OK.
 ## <a name="explicit-conversions"></a>명시적 변환  
  그러나 변환을 수행할 때 정보 손실의 위험이 있는 경우에는 컴파일러에서 *캐스트*라는 명시적 변환을 수행해야 합니다. 캐스트는 변환을 수행하고자 하고 데이터 손실이 발생할 가능성을 알고 있음을 컴파일러에 명시적으로 알리는 방법입니다. 캐스트를 수행하려면 변환할 값 또는 변수 앞에 캐스트할 형식을 괄호 안에 지정합니다. 다음 프로그램은 [double](../../../csharp/language-reference/keywords/double.md)을 [int](../../../csharp/language-reference/keywords/int.md)로 캐스트합니다. 캐스트가 없으면 프로그램이 컴파일되지 않습니다.  
   
- [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
+ [!code-csharp[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
   
  허용되는 명시적 숫자 변환 목록은 [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하세요.  
   
@@ -99,7 +81,7 @@ Giraffe g2 = (Giraffe) a;
 ## <a name="type-conversion-exceptions-at-run-time"></a>런타임의 형식 변환 예외  
  일부 참조 형식 변환 시에는 컴파일러에서 캐스트가 유효한지 여부를 확인할 수 없습니다. 제대로 컴파일되는 캐스트 작업이 런타임에 실패할 수 있습니다. 다음 예제와 같이 런타임에 형식 캐스트가 실패하면 <xref:System.InvalidCastException>이 throw됩니다.  
   
- [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
+ [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
  C#에서는 실제로 캐스트를 수행하기 전에 호환성을 테스트할 수 있는 [is](../../../csharp/language-reference/keywords/is.md) 및 [as](../../../csharp/language-reference/keywords/as.md) 연산자를 제공합니다. 자세한 내용은 [방법: AS 및 IS 연산자를 사용한 안전한 캐스트](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)를 참조하세요.  
   
@@ -107,13 +89,12 @@ Giraffe g2 = (Giraffe) a;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [형식](../../../csharp/programming-guide/types/index.md)   
- [() 연산자](../../../csharp/language-reference/operators/invocation-operator.md)   
- [explicit](../../../csharp/language-reference/keywords/explicit.md)   
- [implicit](../../../csharp/language-reference/keywords/implicit.md)   
- [변환 연산자](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)   
- [일반화된 형식 변환](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)   
- [내보낸 형식 변환](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [유형](../../../csharp/programming-guide/types/index.md)  
+ [() 연산자](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+ [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+ [변환 연산자](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
+ [일반화 된 형식 변환](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
+ [내보낸된 형식 변환](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
  [방법: 문자열을 숫자로 변환](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
-

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
+ms.openlocfilehash: c3955951c0367e1933342172c1bc1888fb58f60c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
-ms.openlocfilehash: 243c924826a54907840b337a91cf1e5d19cff985
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿 만들기
 
 이 자습서에서는 다음을 수행하는 방법을 보여 줍니다.
@@ -41,7 +39,7 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="create-a-template-from-a-project"></a>프로젝트에서 템플릿 만들기
 
-컴파일 및 실행되는 것으로 확인한 기존 프로젝트를 사용하거나 하드 드라이브의 폴더에서 새 콘솔 앱 프로젝트를 만듭니다. 이 자습서에서는 프로젝트 폴더 이름은 사용자 프로필의 *Documents/Templates*에 저장된 *GarciaSoftware.ConsoleTemplate.CSharp*입니다. 이 자습서의 프로젝트 템플릿 이름은 *\<회사 이름>.\<템플릿 형식>.\<프로그래밍 언어>*이지만, 프로젝트와 템플릿에 원하는 이름을 지정할 수 있습니다.
+사용 하 여 기존 프로젝트를 확인 한 컴파일 및 하거나 실행 하거나 하드 드라이브에 폴더에 새 콘솔 응용 프로그램 프로젝트를 만듭니다. 이 자습서에서는 프로젝트 폴더 이름은 사용자 프로필의 *Documents/Templates*에 저장된 *GarciaSoftware.ConsoleTemplate.CSharp*입니다. 이 자습서의 프로젝트 템플릿 이름은 *\<회사 이름>.\<템플릿 형식>.\<프로그래밍 언어>*이지만, 프로젝트와 템플릿에 원하는 이름을 지정할 수 있습니다.
 
 1. 프로젝트의 루트에 *.template.config*라는 폴더를 추가합니다.
 1. *.template.config* 폴더 내부에서 *template.json* 파일을 만들어 템플릿을 구성합니다. 에 대 한 자세한 정보와 멤버 정의 대 한는 *template.json* 파일, 참조는 [새 dotnet 용 사용자 지정 템플릿](../tools/custom-templates.md#templatejson) 항목 및 [ *template.json* JSON 스키마 저장소에서 스키마](http://json.schemastore.org/template)합니다.
@@ -219,4 +217,3 @@ dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate
 [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)  
 [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)(dotnet new에 대한 사용자 지정 템플릿을 만드는 방법)  
 [*template.json* JSON 스키마 저장소에 대 한 스키마](http://json.schemastore.org/template)  
-

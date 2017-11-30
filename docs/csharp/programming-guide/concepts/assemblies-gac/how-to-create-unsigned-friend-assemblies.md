@@ -1,30 +1,21 @@
 ---
 title: "방법: 서명되지 않은 Friend 어셈블리 만들기(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 854df39394ef10bf2404fb3f762586fb102fba7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 967436204ab0824a510c12dc4c6e288d91d7dfa0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>방법: 서명되지 않은 Friend 어셈블리 만들기(C#)
 이 예제에서는 서명되지 않은 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.  
@@ -108,9 +99,8 @@ ms.lasthandoff: 07/28/2017
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성과 <xref:System.Security.Permissions.StrongNameIdentityPermission> 클래스 간에는 유사점이 있습니다. 주요 차이점은 <xref:System.Security.Permissions.StrongNameIdentityPermission>은 코드의 특정 섹션을 실행하는 보안 권한을 요구할 수 있는 반면, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성은 `internal` 형식 및 멤버의 표시 유형을 제어한다는 것입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
- [Friend 어셈블리(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
- [방법: 서명된 Friend 어셈블리 만들기(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [Friend 어셈블리 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [방법: 서명 된 Friend 어셈블리 (C#) 만들기](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
-

@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: aa7b3b6815adfba9367585174b242aa7410d578e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 84218f16f846e640baea663efc7153a40a6c764a
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="using-collection-activities"></a>컬렉션 활동 사용
 이 샘플에서는 <xref:System.Activities.Statements.AddToCollection%601> 인터페이스를 구현하는 클래스를 사용하여 <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601>, <xref:System.Activities.Statements.RemoveFromCollection%601> 및 <xref:System.Collections.ICollection> 컬렉션 활동을 사용하는 방법과 컬렉션을 반복하여 컬렉션의 각 요소 내용을 출력하는 사용자 지정 활동을 만드는 방법을 보여 줍니다. `PrintCollection`이라는 사용자 지정 활동은 `Numbers`라는 컬렉션의 항목 멤버를 콘솔에 출력합니다.  
@@ -54,6 +54,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`

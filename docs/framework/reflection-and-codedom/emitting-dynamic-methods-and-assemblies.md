@@ -1,12 +1,11 @@
 ---
 title: "동적 메서드 및 어셈블리 생성"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 08/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,14 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.assetid: 8e8e2631-62fd-40e7-a8ee-0039b06749bc
-caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 91b0cc4614834f2ad8f7b54d9364d484ca9a6990
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c28a5b71a93ea5159adc73316771d490dbe0db87
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>동적 메서드 및 어셈블리 생성
 이 섹션에서는 컴파일러 또는 도구가 런타임에 메타데이터 및 MSIL(Microsoft Intermediate Language)을 내보내고 선택적으로 디스크에서 PE(이식 가능한 실행) 파일을 생성할 수 있게 해주는 <xref:System.Reflection.Emit> 네임스페이스의 관리되는 형식 집합을 설명합니다. 스크립트 엔진과 컴파일러는 이 네임스페이스의 주 사용자입니다. 이 섹션에서는 <xref:System.Reflection.Emit> 네임스페이스에서 제공하는 기능을 리플렉션 내보내기라고 합니다.  
@@ -48,9 +44,22 @@ ms.lasthandoff: 07/28/2017
   
  메타데이터 및 MSIL 작업을 위한 다른 유용한 리소스는 CLI(공용 언어 인프라) 설명서, 특히 "Partition II: Metadata Definition and Semantics" 및 "Partition III: CIL Instruction Set"입니다. 이 설명서는 [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) 및 [Ecma 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=116487)에서 온라인으로 제공됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [리플렉션 내보내기의 보안 문제점](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- 리플렉션 내보내기를 사용하여 동적 어셈블리를 만드는 경우와 관련된 보안 문제를 설명합니다.  
+## <a name="in-this-section"></a>단원 내용
+  
+[리플렉션 내보내기의 보안 문제점](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+리플렉션 내보내기를 사용하여 동적 어셈블리를 만드는 경우와 관련된 보안 문제를 설명합니다.  
+
+[방법: 정의 및 동적 메서드를 실행 합니다.](how-to-define-and-execute-dynamic-methods.md)   
+간단한 동적 메서드 및 클래스의 인스턴스에 바인딩되어 동적 메서드를 실행 하는 방법을 보여 줍니다.
+
+[방법: 리플렉션 사용 하 여 제네릭 형식 정의 내보내기](how-to-define-a-generic-type-with-reflection-emit.md)   
+간단한 제네릭 형식을 두 형식 매개 변수를 만드는 방법, 형식 매개 변수에 클래스, 인터페이스 및 특수 제약 조건을 적용 하는 방법 및 만드는 memers 반환 형식 및 매개 변수 형식으로 클래스의 형식 매개 변수를 사용 하는 방법을 보여 줍니다.
+
+[방법: 리플렉션 사용 하 여 제네릭 메서드 정의 내보내기](how-to-define-a-generic-method-with-reflection-emit.md)   
+만들기, 내보내기 및 간단한 제네릭 메서드를 호출 하는 방법을 보여 줍니다.
+
+[수집 가능한 어셈블리 동적 형식 생성](collectible-assemblies.md)   
+언로드할 수는 만든 응용 프로그램 도메인을 언로드하지 않고는 동적 어셈블리는 수집 가능한 어셈블리를 소개 합니다.
   
 ## <a name="reference"></a>참조  
  <xref:System.Reflection.Emit.OpCodes>  
@@ -70,5 +79,4 @@ ms.lasthandoff: 07/28/2017
  메타데이터와 관리 코드를 탐색하는 방법을 설명합니다.  
   
  [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- .NET Framework의 어셈블리에 대해 간략하게 설명합니다.
-
+ 어셈블리.NET 구현에 대 한 개요를 제공합니다.

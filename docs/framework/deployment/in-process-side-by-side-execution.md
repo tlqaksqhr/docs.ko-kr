@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>In-Process Side-by-Side 실행
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR(공용 언어 런타임)을 실행할 수 있습니다. 기본적으로 관리되는 COM 구성 요소는 프로세스에 대해 로드된 .NET Framework 버전에 관계없이 빌드 시 사용된 .NET Framework 버전을 사용하여 실행됩니다.  
@@ -47,7 +40,7 @@ ms.lasthandoff: 07/28/2017
   
 -   **응용 프로그램 개발자**. 병렬 호스팅은 응용 프로그램 개발자에게 거의 영향을 주지 않습니다. 기본적으로 응용 프로그램은 항상 빌드 시 사용된 .NET Framework 버전에서 실행되며, 이 동작은 변경되지 않았습니다. 그러나 개발자가 이 동작을 재정의하고 응용 프로그램이 최신 버전의 .NET Framework에서 실행되도록 지정할 수 있습니다([시나리오 2](#scenarios) 참조).  
   
--   **라이브러리 개발자 및 소비자**. 병렬 호스팅은 라이브러리 개발자가 직면하는 호환성 문제를 해결하지 않습니다. 직접 참조를 통해 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 호출을 통해 응용 프로그램에서 직접 로드하는 라이브러리는 로드된 <xref:System.AppDomain>의 런타임을 계속 사용합니다. 지원하려는 모든 버전의 .NET Framework에 대해 라이브러리를 테스트해야 합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임을 사용하여 응용 프로그램이 컴파일되었지만 이전 런타임을 사용하여 빌드된 라이브러리를 포함하는 경우 해당 라이브러리는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임도 사용합니다. 그러나 이전 런타임을 사용하여 빌드된 응용 프로그램과 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]을 사용하여 빌드된 라이브러리가 있는 경우 응용 프로그램이 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]도 사용하도록 강제 적용해야 합니다([시나리오 3](#scenarios) 참조).  
+-   **라이브러리 개발자 및 소비자**. 병렬 호스팅은 라이브러리 개발자가 직면하는 호환성 문제를 해결하지 않습니다. 직접 참조를 통해 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 호출을 통해 응용 프로그램에서 직접 로드하는 라이브러리는 로드된 <xref:System.AppDomain>의 런타임을 계속 사용합니다. 지원하려는 모든 버전의 .NET Framework에 대해 라이브러리를 테스트해야 합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임을 사용하여 응용 프로그램이 컴파일되었지만 이전 런타임을 사용하여 빌드된 라이브러리를 포함하는 경우 해당 라이브러리는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임도 사용합니다. 그러나 이전 런타임을 사용하여 빌드된 응용 프로그램과 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]을 사용하여 빌드된 라이브러리가 있는 경우 응용 프로그램이 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]도 사용하도록 강제 적용해야 합니다([시나리오 3](#scenarios) 참조).  
   
 -   **관리되는 COM 구성 요소 개발자**. 과거에는 관리되는 COM 구성 요소가 자동으로 컴퓨터에 설치된 최신 버전의 런타임을 사용하여 실행되었습니다. 이제 빌드 시 사용된 런타임 버전에서 COM 구성 요소를 실행할 수 있습니다.  
   
@@ -189,6 +182,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [\<startup> 요소](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [\<시작 > 요소](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  [\<supportedRuntime> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-

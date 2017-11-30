@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 52c36870134006eafaaf64824969c5314459d2c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: b3b436d1f01e1ddb2f8f8058acfbbbdc7dcae12f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="document-approval-process"></a>문서 승인 프로세스
 이 샘플에서는 여러 가지 [!INCLUDE[wf](../../../../includes/wf-md.md)] 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 기능을 함께 사용하는 방법을 보여 줍니다. 이 기능들은 문서 승인 프로세스 시나리오를 구현하는 데 함께 사용됩니다. 클라이언트 응용 프로그램은 승인이 필요한 문서를 제출하고 문서를 승인합니다. 클라이언트 사이의 원활한 통신을 지원하고 승인 프로세스의 규칙을 적용하는 데는 승인 관리자 응용 프로그램이 사용됩니다. 승인 프로세스는 여러 가지 유형의 승인을 실행할 수 있는 워크플로입니다. 단일 승인 프로세스, 정족수 승인(승인자 집합의 백분율) 프로세스 및 정족수 승인과 단일 승인이 차례로 이루어지는 복합 승인 프로세스를 처리하기 위하여 각기 다른 활동이 사용됩니다.  
@@ -155,6 +155,4 @@ ms.lasthandoff: 10/18/2017
   
 ##### <a name="to-clean-up"></a>정리하려면  
   
-1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 명령 프롬프트에서 DocumentApprovalProcess 폴더로 이동하여 Cleanup.cmd를 실행합니다.  
-  
-## <a name="see-also"></a>참고 항목
+1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 명령 프롬프트에서 DocumentApprovalProcess 폴더로 이동하여 Cleanup.cmd를 실행합니다.

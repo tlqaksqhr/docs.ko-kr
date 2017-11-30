@@ -4,19 +4,17 @@ description: "기존 및 .NET Core csproj 파일 간의 차이점에 대해 알�
 keywords: "참조, csproj, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 05/24/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
+ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63c7a6f0aa3a926c7ae01ad6c434ecf296c81811
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
 이 문서는 *project.json*에서 *csproj* 및 [MSBuild](https://github.com/Microsoft/MSBuild)로 프로젝트 시스템을 전환함에 따라 프로젝트 파일에 추가된 변경 내용을 간략하게 설명합니다. 일반 프로젝트 파일 구문 및 참조에 대한 자세한 내용은 [MSBuild 프로젝트 파일](/visualstudio/msbuild/msbuild-project-file-schema-reference) 설명서를 참조하세요.  
@@ -39,10 +37,11 @@ ms.lasthandoff: 07/28/2017
 ### <a name="recommendations"></a>권장 사항
 `Microsoft.NETCore.App` 또는 `NetStandard.Library` 메타패키지가 암시적으로 참조되기 때문에 권장되는 모범 사례는 다음과 같습니다.
 
-* 절대로 프로젝트 파일의 `<PackageReference>` 항목을 통해 `Microsoft.NETCore.App` 또는 `NetStandard.Library` 메타패키지를 명시적으로 참조하지 않습니다.
-* 특정 버전의 런타임이 필요한 경우 메타패키지를 참조하는 대신 프로젝트의 `<RuntimeFrameworkVersion>` 속성(예: `1.0.4`)을 사용해야 합니다.
+* 에 대 한 명시적 참조를 갖지.NET Core 또는 표준.NET을 대상으로 지정 하는 경우는 `Microsoft.NETCore.App` 또는 `NetStandard.Library` 통해 metapackages는 `<PackageReference>` 프로젝트 파일의 항목입니다.
+* .NET Core를 대상으로 할 때 런타임에서의 특정 버전을 해야 하는 경우 사용 해야는 `<RuntimeFrameworkVersion>` 프로젝트의 속성 (예를 들어 `1.0.4`)는 metapackage 참조 하는 대신 합니다.
     * 예를 들어 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)를 사용하고, 1.0.0 LTS 런타임이라는 특정 패치 버전이 필요한 경우 이런 일이 발생할 수 있습니다.
-* 특정 버전의 `NetStandard.Library` 메타패키지가 필요한 경우 `<NetStandardImplicitPackageVersion>` 속성을 사용하고 필요한 버전을 설정할 수 있습니다. 
+* 특정 버전의 경우는 `NetStandard.Library` 사용할 수 있습니다 metapackage.NET 표준을 대상으로 하는 경우는 `<NetStandardImplicitPackageVersion>` 필요한 속성 및 버전을 설정 합니다.
+* 명시적으로 추가 하거나 하나에 대 한 참조를 업데이트 하지 마십시오는 `Microsoft.NETCore.App` 또는 `NetStandard.Library` metapackage.NET Framework 프로젝트에 있습니다. 하는 경우 모든 버전의 `NetStandard.Library` 자동으로.NET 표준 기반 NuGet 패키지를 NuGet을 사용 하 여 해당 버전을 설치할 때 필요 합니다.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 프로젝트의 기본 컴파일 포함 사항
 최신 SDK 버전의 *csproj* 형식으로 전환하면서 컴파일 항목에 대한 기본 포함 사항과 제외 사항 및 포함 리소스를 SDK 속성 파일로 이동했습니다. 따라서 더 이상 프로젝트 파일에서 컴파일 항목을 지정할 필요가 없습니다. 
@@ -71,6 +70,15 @@ ms.lasthandoff: 07/28/2017
 이 속성을 `false`로 설정하면 암시적인 포함이 재정의되고, 프로젝트에서 기본 GLOB를 지정해야 했던 이전 SDK로 동작이 되돌아갑니다. 
 
 이러한 변경으로 인해 다른 포함 항목의 기본 메커니즘이 수정되지 않습니다. 그러나 예를 들어 일부 파일을 지정하여 앱에 게시하려는 경우 해당 사항에 대해 *csproj*의 알려진 메커니즘을 계속 사용할 수 있습니다(예: `<Content>` 요소).
+
+`<EnableDefaultCompileItems>`만 해제 `Compile` globs 암시적 같은 다른 globs에 영향을 주지 않지만 `None` glob에도 적용 됩니다는 \*.cs 항목입니다. 따라서, **솔루션 탐색기** 표시는 계속 \*.cs 항목으로 포함 하는 프로젝트의 일부로 `None` 항목입니다. 이와 비슷한 방식으로 사용할 수 있습니다 `<EnableDefaultNoneItems>` 암시적 사용 하지 않으려면 `None` glob 합니다.
+
+사용 하지 않으려면 **모든 암시적 globs**를 설정할 수 있습니다는 `<EnableDefaultItems>` 속성을 `false` 다음 예제와 같이:
+```xml
+<PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+</PropertyGroup>
+```
 
 ### <a name="recommendation"></a>권장 사항
 csproj를 사용하는 경우 프로젝트에서 기본 GLOB를 제거하고 다양한 시나리오(예: 런타임 및 NuGet 패키징)에 대해 앱/라이브러리에서 필요로 하는 아티팩트에 대한 GLOB가 있는 파일 경로만 추가하는 것이 좋습니다.
@@ -261,4 +269,3 @@ nuget.exe 및 Visual Studio 패키지 관리자에 의해 적용되는, 이 패�
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 key=value 쌍의 세미콜론으로 구분된 목록입니다.
-

@@ -12,11 +12,11 @@ caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b5fc8834fb72163a615633d81232e25768683278
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 085c52d94db5af12a022fa353a80d69534bfe219
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="transaction-convoy-scope"></a>트랜잭션 호송 범위
 이 샘플에서는 <xref:System.ServiceModel.Activities.TransactedReceiveScope>와 함께 Parallel Convoy 메시징 활동 패턴을 만들어 많은 작업이 모두 같은 트랜잭션에서 순서에 관계없이 발생할 수 있는 프로토콜을 모델링하는 방법을 보여 줍니다. 또한 트랜잭션이 서버로 이동되지 않는 경우<xref:System.ServiceModel.Activities.TransactedReceiveScope>가 자동으로 새 트랜잭션을 만들어 클라이언트가 어떤 트랜잭션도 사용하지 않도록 하는 방법도 보여 줍니다.  
@@ -50,6 +50,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`  
-  
-## <a name="see-also"></a>참고 항목
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

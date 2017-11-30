@@ -1,41 +1,22 @@
 ---
 title: "yield(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - yield
 - yield_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- yield keyword [C#]
+helpviewer_keywords: yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4735ab33faea71b792cbc6b567884b64bd6ca029
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eb55fd5b1ade48316516cda83633935abbf8dcf9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="yield-c-reference"></a>yield(C# 참조)
 문에 `yield` 키워드를 사용하는 경우 해당 메서드, 연산자, 또는 이 키워드가 나타나는 `get` 접근자가 반복기임을 나타냅니다. `yield`를 사용하여 반복기를 정의할 경우 사용자 지정 컬렉션 형식에 <xref:System.Collections.Generic.IEnumerator%601> 및 <xref:System.Collections.IEnumerable> 패턴을 구현하면 명시적 추가 클래스(열거형의 상태를 보관하는 클래스, 예제는 <xref:System.Collections.IEnumerator> 참조)를 사용하지 않아도 됩니다.  
@@ -54,7 +35,7 @@ yield break;
   
  `yield break` 문을 사용하여 반복기를 종료할 수 있습니다.  
   
- 반복기에 대한 자세한 내용은 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)를 참조하세요.  
+ 반복기에 대한 자세한 내용은 [반복기](../../iterators.md)를 참조하세요.  
   
 ## <a name="iterator-methods-and-get-accessors"></a>반복기 메서드 및 Get 접근자  
  반복기 선언은 다음과 같은 요구 사항을 충족해야 합니다.  
@@ -91,7 +72,7 @@ foreach (string element in elements)
   
  `MyIteratorMethod` 호출은 메서드의 본문을 실행하지 않습니다. 대신에 `IEnumerable<string>` 변수에 `elements`을 반환합니다.  
   
- `foreach` 루프 반복에서 <xref:System.Collections.IEnumerator.MoveNext%2A>에 대한 `elements` 메서드가 호출됩니다. 이 호출은 다음 `MyIteratorMethod` 문에 도달할 때까지 `yield return` 본문을 실행합니다. `yield return` 문에서 반환하는 식은 루프 본문에서 사용하는 `element` 변수 값뿐만 아니라 요소의 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 속성인 `IEnumerable<string>`도 결정합니다.  
+ `foreach` 루프 반복에서 <xref:System.Collections.IEnumerator.MoveNext%2A>에 대한 `elements` 메서드가 호출됩니다. 이 호출은 다음 `MyIteratorMethod` 문에 도달할 때까지 `yield return` 본문을 실행합니다. 반환 하는 식은 `yield return` 뿐만 아니라의 값을 결정 하는 문에 `element` 루프 본문에서 소비 하기 위한 변수 뿐만 아니라는 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 의 속성 `elements`, 변수인는 `IEnumerable<string>`합니다.  
   
  이후에 `foreach` 루프가 반복될 때마다 중지되었던 위치에서 반복기 본문 실행이 계속되고 `yield return` 문에 도달하면 다시 중지됩니다. `foreach` 루프는 반복기 메서드가 종료되거나 `yield break` 문에 도달하면 완료됩니다.  
   
@@ -100,19 +81,18 @@ foreach (string element in elements)
   
  반복기 메서드의 반환 형식은 반복기 인터페이스 형식인 <xref:System.Collections.IEnumerable>입니다. 반복기 메서드가 호출되면 숫자의 거듭제곱이 들어 있는 열거형 개체를 반환합니다.  
   
- [!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]  
+ [!code-csharp[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제는 반복기인 `get` 접근자에 대해 설명합니다. 이 예제에서는 각 `yield return` 문이 사용자 정의 클래스의 인스턴스를 반환합니다.  
   
- [!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]  
+ [!code-csharp[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
-
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [반복기](../../iterators.md)

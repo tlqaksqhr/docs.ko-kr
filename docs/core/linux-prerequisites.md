@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
+ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b0379156f44b0a3e765f8d832c7a1ca74ee3598
-ms.openlocfilehash: d9da6ea27293e95e36ff8edc42ef8bafbc86c8ec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
 이 문서에서는 Linux에서 .NET Core 응용 프로그램을 개발하는 데 필요한 종속성을 보여 줍니다. 다음에 나오는 지원되는 Linux 배포/버전 및 종속성은 Linux에서 .NET Core 앱을 개발하기 위한 두 가지 방법에 적용됩니다.
@@ -64,33 +62,35 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="linux-distribution-dependencies"></a>Linux 배포 종속성
 
+다음 예제로 사용 됩니다. 정확한 버전 및 이름 선택한 Linux 분포로 약간 다를 수 있습니다.
+
 ### <a name="ubuntu"></a>Ubuntu
 
 Ubuntu 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 
 * libunwind8
-* libunwind8-dev
-* gettext
-* libicu-dev
-* liblttng-ust-dev
-* libcurl4-openssl-dev
-* libssl-dev
-* uuid-dev
-* unzip
+* liblttng ust0
+* libcurl3
+* libssl1.0.0
+* libuuid1
+* libkrb5
+* zlib1g
+* libicu52 (14.X)에 대 한
+* libicu55 (용 16.X)
+* libicu57 (용 17.X)
 
 ### <a name="centos"></a>CentOS
 
 CentOS 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 
-* deltarpm
-* epel-release
-* unzip
 * libunwind
-* gettext
-* libcurl-devel
-* openssl-devel
+* lttng ust
+* libcurl
+* openssl 라이브러리
+* libuuid
+* 하려면 krb5 라이브러리
+* libicu
 * zlib
-* libicu-devel
 
 종속성에 대한 자세한 내용은 [자체 포함 Linux 응용 프로그램](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
 
@@ -105,7 +105,7 @@ Linux에는 두 가지 패키지 선택 항목이 있습니다.
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core 설치 관리자 스크립트를 사용하여 설치 스크립팅
 
-`dotnet-install` 스크립트는 CLI 도구 체인 및 공유 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. [CLI GitHub 리포지토리](https://github.com/dotnet/cli/tree/rel/1.0.0/scripts/obtain)에서 스크립트를 다운로드할 수 있습니다.
+`dotnet-install` 스크립트는 CLI 도구 체인 및 공유 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. 스크립트를 다운로드할 수 있습니다: https://dot.net/v1/dotnet-install.sh
 
 설치 관리자 bash 스크립트는 자동화 시나리오 및 비관리자 설치에 사용됩니다. 또한 이 스크립트는 PowerShell 스위치를 읽으므로 Linux/OS X 시스템에서 스크립트와 함께 사용할 수 있습니다.
 
@@ -633,4 +633,3 @@ openSUSE용 .NET Core 2.x 또는 openSUSE(64비트)용 .NET Core 1.x를 설치�
 > 지원되는 Linux 배포/버전의 .NET Core 2.x 설치에 문제가 있는 경우 설치된 배포/버전은 [2.0 Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.0)(2.0 알려진 문제) 항목을 참조하세요. 
 >
 > 지원되는 Linux 배포/버전의 .NET Core 1.x 설치에 문제가 있는 경우 설치된 배포/버전은 [1.0.0 Known issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)(1.0.0 알려진 문제) 및 [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)(1.0.1 알려진 문제) 항목을 참조하세요.
-

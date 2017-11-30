@@ -1,34 +1,35 @@
 ---
-title: "DOM에서 요소의 새 특성 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "DOM에서 요소의 새 특성 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 6970ffc38e900c9b47c58c8ae4b81b9551f5589b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# DOM에서 요소의 새 특성 만들기
-특성은 노드가 아닌 요소 노드의 속성이며 요소와 연관된 **XmlAttributeCollection**에 포함되기 때문에 새 특성을 만드는 것은 다른 노드 형식을 만드는 것과 다릅니다.  다음과 같은 여러 가지 방법으로 특성을 만들고 요소를 추가할 수 있습니다.  
+# <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM에서 요소의 새 특성 만들기
+새 특성을 만드는 차이가 있는 특성, 노드는 않지만 요소 노드의 속성 이며에 포함 하기 때문에 다른 노드 형식을 만드는 것 보다는 **XmlAttributeCollection** 요소와 연결 합니다. 다음과 같은 여러 가지 방법으로 특성을 만들고 요소를 추가할 수 있습니다.  
   
--   요소 노드를 가져오고 **SetAttribute**를 사용하여 특성을 해당 요소의 특성 컬렉션에 추가합니다.  
+-   요소 노드 및 사용 하 여 **SetAttribute** 해당 요소의 특성 컬렉션에 특성을 추가 하려면.  
   
--   **CreateAttribute** 메서드를 사용하여 **XmlAttribute** 노드를 만들고, 요소 노드를 가져온 다음 **SetAttributeNode**를 사용하여 해당 요소의 특성 컬렉션에 노드를 추가합니다.  
+-   만들기는 **XmlAttribute** 사용 하 여 노드는 **CreateAttribute** 메서드, 요소 노드를 가져오고 다음 사용 하 여 **SetAttributeNode** 있는 특성 컬렉션에 노드를 추가 하려면 요소입니다.  
   
- 다음 예제에서는 **SetAttribute** 메서드를 사용하여 요소에 특성을 추가하는 방법을 보여 줍니다.  
+ 특성을 사용 하 여 요소를 추가 하는 방법을 보여 주는 다음 예제는 **SetAttribute** 메서드.  
   
 ```vb  
 Imports System  
@@ -78,11 +79,11 @@ public class Sample
   }  
 ```  
   
- 다음 예제에서는 **CreateAttribute** 메서드를 사용하여 새 특성을 만들고  **SetAttributeNode** 메서드를 사용하여 **book** 요소의 특성 컬렉션에 해당 특성을 추가하는 예를 보여 줍니다.  
+ 다음 예제에서는 새 특성을 만들고 사용 하 여 **CreateAttribute** 메서드. 다음의 특성 컬렉션에 추가 특성을 표시는 **책** 사용 하 여 요소는 **SetAttributeNode** 메서드.  
   
  다음과 같은 XML을 가정합니다.  
   
-```  
+```xml  
 <book genre='novel' ISBN='1-861001-57-5'>  
 <title>Pride And Prejudice</title>  
 </book>  
@@ -112,23 +113,23 @@ doc.DocumentElement.SetAttributeNode(attr);
   
  **출력**  
   
-```  
+```xml  
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">  
 <title>Pride And Prejudice</title>  
 </book>  
 ```  
   
- 전체 코드 샘플은 [XmlDocument.CreateAttribute 메서드](frlrfSystemXmlXmlDocumentClassCreateAttributeTopic)를 참조하세요.  
+ 전체 코드 샘플에서 찾을 수 있습니다 <xref:System.Xml.XmlDocument.CreateAttribute%2A>합니다.  
   
- 또한 **XmlAttribute** 노드를 만들고 **InsertBefore** 또는 **InsertAfter** 메서드를 사용하여 해당 노드를 컬렉션의 적절한 위치에 배치할 수 있습니다.  동일한 이름의 특성이 이미 특성 컬렉션에 있는 경우 기존 **XmlAttribute** 노드가 컬렉션에서 제거되고 새 **XmlAttribute** 노드가 삽입됩니다.  그러면 **SetAttribute** 메서드와 동일한 방식으로 작동합니다.  이러한 메서드는 매개 변수 형태로 **InsertBefore** 및 **InsertAfter**에 대한 참조 위치를 나타내는 기존 노드를 사용합니다.  새 노드의 삽입 위치를 나타내는 참조 노드를 제공하지 않으면 **InsertAfter** 메서드는 기본적으로 컬렉션의 처음에 새 노드를 삽입합니다.  참조 노드가 제공되지 않을 경우 **InsertBefore**의 기본 위치는 컬렉션의 끝입니다.  
+ 만들 수도 있습니다는 **XmlAttribute** 노드는 **InsertBefore** 또는 **InsertAfter** 컬렉션의 적절 한 위치에 배치 하는 메서드. 동일한 이름의 특성이 기존 특성 컬렉션에 이미 있으면 **XmlAttribute** 컬렉션에서 새 노드가 제거 **XmlAttribute** 노드가 삽입 됩니다. 이 동일한 방식으로 수행 된 **SetAttribute** 메서드. 이러한 메서드를 매개 변수로, 작업을 수행 하는 참조 지점으로 기존 노드는 **InsertBefore** 및 **InsertAfter**합니다. 에 대 한 기본 새 노드의 삽입 위치를 나타내는 참조 노드를 제공 하지 않으면는 **InsertAfter** 메서드는 컬렉션의 시작 부분에 새 노드를 삽입 합니다. 에 대 한 기본 위치는 **InsertBefore**없는 참조 노드가 제공 하는 경우는 컬렉션의 끝입니다.  
   
- 특성의 **XmlNamedNodeMap**을 만든 경우 [SetNamedItem 메서드](frlrfSystemXmlXmlNamedNodeMapClassSetNamedItemTopic)를 사용하여 이름에 따라 특성을 추가할 수 있습니다.  자세한 내용은 [NamedNodeMaps 및 NodeLists의 노드 컬렉션](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md)을 참조하세요.  
+ 만든 경우는 **XmlNamedNodeMap** 특성의 이름을 사용 하 여 특성을 추가할 수는 <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>합니다. 자세한 내용은 참조 [NamedNodeMaps 및 NodeLists의 노드 컬렉션](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md)합니다.  
   
-## 기본 특성  
- 기본 특성을 포함하도록 선언된 요소를 만들면 새 기본 특성이 XML DOM\(문서 개체 모델\)에서 해당 기본값과 함께 만들어지고 해당 요소에 추가됩니다.  이때 기본 특성의 자식 노드도 만들어집니다.  
+## <a name="default-attributes"></a>기본 특성  
+ 기본 특성을 포함하도록 선언된 요소를 만들면 새 기본 특성이 XML DOM(문서 개체 모델)에서 해당 기본값과 함께 만들어지고 해당 요소에 추가됩니다. 이때 기본 특성의 자식 노드도 만들어집니다.  
   
-## 특성 자식 노드  
- 특성 노드 값은 자신의 자식 노드가 됩니다.  유효한 자식 노드에는 **XmlText** 노드와 **XmlEntityReference** 노드의 두 가지 형식만 있습니다.  **FirstChild** 및 **LastChild**와 같은 메서드에서 이러한 형식의 노드를 자식 노드로 처리한다는 점에서 이러한 형식의 노드는 자식 노드입니다.  자식 노드가 있는 특성의 이와 같은 차이점은 특성이나 특성 자식 노드를 제거하려는 경우에 중요합니다.  자세한 내용은 [DOM의 요소 노드에서 특성 제거](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)를 참조하세요.  
+## <a name="attribute-child-nodes"></a>특성 자식 노드  
+ 특성 노드 값은 자신의 자식 노드가 됩니다. 유효한 자식 노드에 두 가지: **XmlText** 노드 및 **XmlEntityReference** 노드. 자식 노드의 의미에서와 같은 해당 메서드를 이들은 **FirstChild** 및 **LastChild** 자식 노드로 처리 합니다. 자식 노드가 있는 특성의 이와 같은 차이점은 특성이나 특성 자식 노드를 제거하려는 경우에 중요합니다. 자세한 내용은 참조 [DOM의 요소 노드에서 특성 제거](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)합니다.  
   
-## 참고 항목  
- [XML DOM\(문서 개체 모델\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>참고 항목  
+ [XML 문서 개체 모델 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

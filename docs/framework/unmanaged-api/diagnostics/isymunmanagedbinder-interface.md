@@ -19,11 +19,11 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5061ce28c4a09f445267c99420bf1942d99076bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 00b0b5ee330a606ae7417185a804f3d37ab6664a
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder 인터페이스
 비관리 코드의 기호 바인더를 나타냅니다.  
@@ -35,8 +35,8 @@ ms.lasthandoff: 11/21/2017
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetReaderForFile 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|메타 데이터 인터페이스와 파일 이름을 제공 올바른 반환 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 구조는 모듈에 연결 된 디버깅 기호는 읽기입니다.|  
-|[GetReaderFromStream 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|제공 되는 메타 데이터 인터페이스와 기호 저장소를 포함 하는 스트림을 올바른 반환 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 지정 된 기호 저장소에서 기호 디버깅 읽을 구조입니다.|  
+|[GetReaderForFile 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|메타 데이터 인터페이스와 파일 이름을 제공 올바른 반환 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 구조는 모듈에 연결 된 디버깅 기호는 읽기입니다.|  
+|[GetReaderFromStream 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|제공 되는 메타 데이터 인터페이스와 기호 저장소를 포함 하는 스트림을 올바른 반환 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 디버깅 읽을 구조에서 지정 된 기호 저장소 기호입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym.idl, CorSym.h  

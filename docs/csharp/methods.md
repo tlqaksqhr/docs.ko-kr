@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
+ms.openlocfilehash: 38e9d8955c99c7fb3ee6347af70037d3da08ff39
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: df8733c5c4532dc188ceb95d7bf236bcd2182b9f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="methods"></a>메서드 #
 
@@ -88,11 +87,11 @@ ms.lasthandoff: 09/14/2017
  <a name="inherited"></a>
  ##<a name="inherited-and-overridden-methods"></a>상속 및 재정의된 메서드 ##
 
-형식은 해당 형식에서 명시적으로 정의된 멤버 외에도 기본 클래스에서 정의된 멤버를 상속합니다. 관리되는 형식 시스템의 모든 형식이 직접 또는 간접적으로 @System.Object 클래스에서 상속하므로 모든 형식은 @System.Object.Equals(System.Object), @System.Object.GetType 및 @System.Object.ToString과 같은 해당 멤버를 상속합니다. 다음 예제에서는 `Person` 클래스를 정의하고, 두 개의 `Person` 개체를 인스턴스화하고, `Person.Equals` 메서드를 호출하여 두 개체가 같은지 여부를 확인합니다. 그러나 `Equals` 메서드는 `Person` 클래스에서 정의되지 않고 @System.Object에서 상속됩니다.
+형식은 해당 형식에서 명시적으로 정의된 멤버 외에도 기본 클래스에서 정의된 멤버를 상속합니다. 관리 되는 형식 시스템의 모든 형식에서 직접 또는 간접적으로 상속 하므로 <xref:System.Object> 클래스, 모든 형식은 해당 멤버와 같은 상속 <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, 및 <xref:System.Object.ToString>합니다. 다음 예제에서는 `Person` 클래스를 정의하고, 두 개의 `Person` 개체를 인스턴스화하고, `Person.Equals` 메서드를 호출하여 두 개체가 같은지 여부를 확인합니다. 그러나 `Equals` 메서드는 `Person` 클래스에서 정의되지 않고 <xref:System.Object>에서 상속됩니다.
 
 [!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
-형식은 `override` 키워드를 사용하고 재정의된 메서드에 대한 구현을 제공하여 상속된 멤버를 재정의할 수 있습니다. 메서드 시그니처는 재정의된 메서드의 시그니처와 같아야 합니다. 다음 예제는 @Object.Equals(System.Object) 메서드를 재정의한다는 점을 제외하고 이전 예제와 비슷합니다. 또한 두 메서드가 일치하는 결과를 제공하기 때문에 @Object.GetHashCode 메서드를 재정의합니다.
+형식은 `override` 키워드를 사용하고 재정의된 메서드에 대한 구현을 제공하여 상속된 멤버를 재정의할 수 있습니다. 메서드 시그니처 재정의 된 메서드의 것과 동일 해야 합니다. 무시 한다는 점을 제외 하면 다음 예제는 이전 쿼리와 같이 <xref:System.Object.Equals(System.Object)> 메서드. 또한 두 메서드가 일치하는 결과를 제공하기 때문에 <xref:System.Object.GetHashCode> 메서드를 재정의합니다.
 
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
@@ -196,7 +195,7 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 
 지역 변수(이 경우 `result`)를 사용하여 값을 저장하는 것은 선택 사항입니다. 코드의 가독성에 도움이 될 수 있고 전체 메서드 범위에 대해 인수의 원래 값을 저장해야 할 경우 필요할 수도 있습니다.
 
-메서드에서 둘 이상의 값을 반환하려는 경우도 있습니다. C# 7.0부터 *튜플 형식* 및 *튜플 리터럴*을 사용하면 이 작업을 쉽게 수행할 수 있습니다. 튜플 형식은 튜플 요소의 데이터 형식을 정의합니다. 튜플 리터럴은 반환된 튜플의 실제 값을 제공합니다. 다음 예제에서 `(string, string, string, int)`는 `GetPersonalInfo` 메서드에서 반환되는 튜플 형식을 정의합니다. `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 식은 튜플 리터럴입니다. 메서드는 `PersonInfo` 개체와 함께 이름, 중간 이름 및 성을 반환합니다.
+메서드에서 둘 이상의 값을 반환하려는 경우도 있습니다. C# 7.0부터 *튜플 형식* 및 *튜플 리터럴*을 사용하면 이 작업을 쉽게 수행할 수 있습니다. 튜플 형식은 튜플 요소의 데이터 형식을 정의합니다. 튜플 리터럴은 반환된 튜플의 실제 값을 제공합니다. 다음 예에서 `(string, string, string, int)` 에서 반환 되는 튜플 형식 정의 `GetPersonalInfo` 메서드. `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 식은 튜플 리터럴입니다. 메서드는 `PersonInfo` 개체와 함께 이름, 중간 이름 및 성을 반환합니다.
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -264,7 +263,7 @@ if (person != null)
 > [!NOTE]
 > 비동기 메서드는 아직 완료되지 않은 첫 번째 대기된 개체를 검색할 때나 비동기 메서드의 끝에 도달할 때 중에서 먼저 발생하는 시점에 호출자에게 반환됩니다.
 
-비동기 메서드의 반환 형식은 @System.Threading.Tasks.Task<TResult>, @System.Threading.Tasks.Task 또는 `void`일 수 있습니다. `void` 반환 형식은 기본적으로 `void` 반환 형식이 필요할 때 이벤트 처리기를 정의하는 데 사용됩니다. `void`를 반환하는 비동기 메서드는 대기할 수 없고 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다. C# 7이 릴리스되면 비동기 메서드가 [작업과 유사한 형식을 반환](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)할 수 있도록 이 제한이 완화됩니다.
+비동기 메서드의 반환 형식을 가질 수 있습니다 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, 또는 `void`합니다. `void` 반환 형식은 기본적으로 `void` 반환 형식이 필요할 때 이벤트 처리기를 정의하는 데 사용됩니다. `void`를 반환하는 비동기 메서드는 대기할 수 없고 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다. C# 7이 릴리스되면 비동기 메서드가 [작업과 유사한 형식을 반환](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)할 수 있도록 이 제한이 완화됩니다.
 
 다음 예제에서 `DelayAsync`는 정수를 반환하는 return 문을 포함하는 비동기 메서드입니다. 비동기 메서드이기 때문에 해당 메서드 선언의 반환 형식은 `Task<int>`여야 합니다. 반환 형식이 `Task<int>`이므로 `DoSomethingAsync`의 `await` 식 계산에서 다음 `int result = await delayTask` 문과 같이 정수가 생성됩니다.
 
@@ -295,7 +294,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. `yield return` 문에 도달하면 호출자가 시퀀스의 다음 요소를 요청할 수 있도록 현재 위치가 기억됩니다.
 
-반복기의 반환 형식은 @System.Collections.IEnumerable, @System.Collections.Generic.IEnumerable%601, @System.Collections.IEnumerator 또는 @System.Collections.Generic.IEnumerator%601일 수 있습니다.
+반복기의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>또는 <xref:System.Collections.Generic.IEnumerator%601>일 수 있습니다.
 
 자세한 내용은 [반복기](programming-guide/concepts/iterators.md)를 참조하세요.
 
@@ -309,4 +308,3 @@ public Customer this[long id] => store.LookupCustomer(id);
 [out](language-reference/keywords/out.md)   
 [ref](language-reference/keywords/ref.md)   
 [매개 변수 전달](programming-guide/classes-and-structs/passing-parameters.md)
-

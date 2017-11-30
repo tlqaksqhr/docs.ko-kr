@@ -9,25 +9,26 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 51b190fba32186cb4c52ccd773274d9ae22c8efb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="c-quick-start-collections"></a>C# 빠른 시작: 컬렉션 #
 
-이 자습서에서는 C# 언어 및 <xref:System.Collections.Generic.List%601> 클래스의 기본 사항에 대해 소개합니다.
+이 빠른 시작에서는 C# 언어 및의 기본 사항을 소개는 <xref:System.Collections.Generic.List%601> 클래스입니다.
 
-## <a name="a-simple-list-example"></a>간단한 목록 예제입니다.
+이 빠른 시작에서는 개발에 사용할 수 있습니다를 가질 수 있습니다. .NET 항목 [10 분 후에 시작](https://www.microsoft.com/net/core) Mac, PC 또는 Linux 로컬 개발 환경 설정에 대 한 지침이 있습니다.
 
-> [!NOTE]
-> [dot.net](https://dot.net/)으로 작성한 코드에서 시작하는 경우 이 섹션에서 작성한 코드를 이미 가지고 있습니다. [목록 콘텐츠 수정](#modify-list-contents)으로 이동합니다.
-
-이 단원에서는 온라인 빠른 시작을 완료했으며 [.NET Core SDK](http://dot.net/core) 및 [Visual Studio Code](https://code.visualstudio.com/)를 설치했다고 가정합니다. 
+## <a name="a-basic-list-example"></a>기본 목록 예제입니다.
 
 **list-quickstart**라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console`을 실행합니다.
 
+> [!NOTE]
+> 방금 완료 한 경우 [10 분 후에.NET 시작](https://www.microsoft.com/net)를 사용 하 여 방금 만든 myApp 응용 프로그램을 유지할 수 있습니다.
+ 
 편집기에서 **Program.cs**를 열고 기존 코드를 다음으로 바꿉니다.
 
 ```csharp
@@ -213,10 +214,10 @@ foreach(var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>과제 완료
 
-[GitHub에서 완료된 샘플 코드를 보고](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs) 예제 솔루션을 확인할 수 있습니다.
+[GitHub에서 완료된 샘플 코드를 보고](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23) 예제 솔루션을 확인할 수 있습니다.
 
 루프의 각 반복을 통해 목록의 마지막 두 정수를 사용하고, 더하고, 해당 값을 목록에 추가합니다. 목록에 20개의 항목이 추가될 때까지 루프가 반복됩니다.
 
-축하합니다. 목록 자습서를 완료했습니다.
+축, 목록 빠른 시작을 완료 했습니다. 계속 진행할 수 있습니다는 [클래스 소개](introduction-to-classes.md) 사용자 고유의 개발 환경에서 빠른 시작 합니다.
 
 [.NET 가이드](../../standard/index.md)의 [컬렉션](../../standard/collections/index.md) 항목에서 `List` 형식에 대해 더 자세히 학습할 수 있습니다. 다른 많은 컬렉션 형식에 대해서도 학습합니다.
