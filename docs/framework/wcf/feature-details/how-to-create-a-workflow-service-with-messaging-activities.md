@@ -1,102 +1,105 @@
 ---
-title: "방법: 메시징 작업을 사용하여 워크플로 서비스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 메시징 작업을 사용하여 워크플로 서비스 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b2f418298b5b937b5d4c7af2bd2def38c5827e9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 메시징 작업을 사용하여 워크플로 서비스 만들기
-이 항목에서는 메시징 작업을 사용하여 간단한 워크플로 서비스를 만드는 방법을 보여 줍니다.  이 항목에서는 서비스가 메시징 작업만으로 구성된 워크플로 서비스를 만드는 방법에 중점을 둡니다.  실제 서비스의 워크플로에는 다른 많은 작업이 포함되어 있습니다.  이 항목의 서비스에서는 문자열을 받아서 호출자에게 반환하는 Echo라는 하나의 작업을 구현합니다.  이 항목은 시리즈로 된 두 항목 중 첫 번째 항목입니다.  다음 항목인 [방법: 워크플로 응용 프로그램에서 서비스 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)에서는 이 항목에서 만든 서비스를 호출할 수 있는 워크플로 응용 프로그램을 만드는 방법을 설명합니다.  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a><span data-ttu-id="526fc-102">방법: 메시징 작업을 사용하여 워크플로 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="526fc-102">How to: Create a Workflow Service with Messaging Activities</span></span>
+<span data-ttu-id="526fc-103">이 항목에서는 메시징 작업을 사용하여 간단한 워크플로 서비스를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-103">This topic describes how to create a simple workflow service using messaging activities.</span></span> <span data-ttu-id="526fc-104">이 항목에서는 서비스가 메시징 작업만으로 구성된 워크플로 서비스를 만드는 방법에 중점을 둡니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-104">This topic focuses on the mechanics of creating a workflow service where the service consists solely of messaging activities.</span></span> <span data-ttu-id="526fc-105">실제 서비스의 워크플로에는 다른 많은 작업이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-105">In a real-world service, the workflow contains many other activities.</span></span> <span data-ttu-id="526fc-106">이 항목의 서비스에서는 문자열을 받아서 호출자에게 반환하는 Echo라는 하나의 작업을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-106">The service implements one operation called Echo, which takes a string and returns the string to the caller.</span></span> <span data-ttu-id="526fc-107">이 항목은 시리즈로 된 두 항목 중 첫 번째 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-107">This topic is the first in a series of two topics.</span></span> <span data-ttu-id="526fc-108">다음 항목에서는 [How To:는 서비스는 워크플로 응용 프로그램에서 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) 이 항목에서 만든 서비스를 호출할 수 있는 워크플로 응용 프로그램을 만드는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-108">The next topic [How To: Access a Service From a Workflow Application](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) discusses how to create a workflow application that can call the service created in this topic.</span></span>  
   
-### 워크플로 서비스 프로젝트를 만들려면  
+### <a name="to-create-a-workflow-service-project"></a><span data-ttu-id="526fc-109">워크플로 서비스 프로젝트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="526fc-109">To create a workflow service project</span></span>  
   
-1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]를 시작합니다.  
+1.  <span data-ttu-id="526fc-110">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-110">Start [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  **파일** 메뉴를 클릭하고 **새로 만들기**를 선택한 다음 **프로젝트**를 선택하여 **새 프로젝트 대화 상자**를 표시합니다.  설치된 템플릿 목록에서 **워크플로**를 선택하고 프로젝트 형식 목록에서 **WCF 워크플로 서비스 응용 프로그램**을 선택합니다.  다음 그림과 같이 프로젝트 이름을 `MyWFService`로 지정하고 기본 위치를 사용합니다.  
+2.  <span data-ttu-id="526fc-111">클릭는 **파일** 메뉴 선택 **새로**, 차례로 **프로젝트** 표시 하는 **새 프로젝트 대화 상자**합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-111">Click the **File** menu, select **New**, and then **Project** to display the **New Project Dialog**.</span></span> <span data-ttu-id="526fc-112">선택 **워크플로** 설치 된 템플릿 목록에서 및 **WCF 워크플로 서비스 응용 프로그램** 프로젝트 형식 목록에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-112">Select **Workflow** from the list of installed templates and **WCF Workflow Service Application** from the list of project types.</span></span> <span data-ttu-id="526fc-113">프로젝트 이름을 `MyWFService` 다음 그림에 나와 있는 것 처럼 기본 위치를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-113">Name the project `MyWFService` and use the default location as shown in the following illustration.</span></span>  
   
-     **확인** 단추를 클릭하여 **새 프로젝트 대화 상자** 닫습니다.  
+     <span data-ttu-id="526fc-114">클릭는 **확인** 해제 단추는 **새 프로젝트 대화 상자**합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-114">Click the **OK** button to dismiss the **New Project Dialog**.</span></span>  
   
-3.  프로젝트가 생성되면 다음 그림과 같이 Service1.xamlx 파일이 디자이너에서 열립니다.  
+3.  <span data-ttu-id="526fc-115">프로젝트가 생성되면 다음 그림과 같이 Service1.xamlx 파일이 디자이너에서 열립니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-115">When the project is created, the Service1.xamlx file is opened in the designer as shown in the following illustration.</span></span>  
   
-     ![디자이너에 표시된 기본 워크플로](../../../../docs/framework/wcf/feature-details/media/defaultworkflowservice.JPG "DefaultWorkflowService")  
+     <span data-ttu-id="526fc-116">![디자이너에 표시 된 기본 워크플로](../../../../docs/framework/wcf/feature-details/media/defaultworkflowservice.JPG "DefaultWorkflowService")</span><span class="sxs-lookup"><span data-stu-id="526fc-116">![The default workflow displayed in the designer](../../../../docs/framework/wcf/feature-details/media/defaultworkflowservice.JPG "DefaultWorkflowService")</span></span>  
   
-     **순차 서비스**라는 작업을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+     <span data-ttu-id="526fc-117">레이블이 지정 된 활동을 마우스 오른쪽 단추로 클릭 **순차 서비스** 선택 **삭제**합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-117">Right-click the activity labeled **Sequential Service** and select **Delete**.</span></span>  
   
-### 워크플로 서비스를 구현하려면  
+### <a name="to-implement-the-workflow-service"></a><span data-ttu-id="526fc-118">워크플로 서비스를 구현하려면</span><span class="sxs-lookup"><span data-stu-id="526fc-118">To implement the workflow service</span></span>  
   
-1.  화면 왼쪽에 있는 **도구 상자** 탭을 선택하여 도구 상자를 표시하고 압정을 클릭하여 창을 열린 상태로 유지합니다.  다음 그림과 같이 도구 상자의 **메시징** 섹션을 확장하여 메시징 작업과 메시징 작업 템플릿을 표시합니다.  
+1.  <span data-ttu-id="526fc-119">선택 된 **도구 상자** 탭 창을 계속 열어에 압정을 클릭 하 고 도구 상자를 표시 하려면 화면 왼쪽에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-119">Select the **Toolbox** tab on the left side of the screen to display the toolbox and click the pushpin to keep the window open.</span></span> <span data-ttu-id="526fc-120">확장 된 **메시징** 다음 그림에 나와 있는 것 처럼 여 메시징 작업과 메시징 작업 템플릿을 표시 하려면 도구 상자의 섹션.</span><span class="sxs-lookup"><span data-stu-id="526fc-120">Expand the **Messaging** section of the toolbox to display the messaging activities and the messaging activity templates as shown in the following illustration.</span></span>  
   
-     ![메시징 탭이 확장된 도구 상자](../../../../docs/framework/wcf/feature-details/media/wfdesignertoolbox.JPG "WFDesignerToolbox")  
+     <span data-ttu-id="526fc-121">![메시징 탭 된 도구 상자 확장](../../../../docs/framework/wcf/feature-details/media/wfdesignertoolbox.JPG "WFDesignerToolbox")</span><span class="sxs-lookup"><span data-stu-id="526fc-121">![The toolbox with messaging tab expanded](../../../../docs/framework/wcf/feature-details/media/wfdesignertoolbox.JPG "WFDesignerToolbox")</span></span>  
   
-2.  **ReceiveAndSendReply** 템플릿을 워크플로 디자이너로 끌어서 놓습니다.  그러면 다음 그림과 같이 <xref:System.ServiceModel.Activities.Sequence>Receive 작업과 그 뒤에  작업이 포함된 <xref:System.ServiceModel.Activities.SendReply> 작업이 만들어집니다.  
+2.  <span data-ttu-id="526fc-122">끌어서 놓기는 **ReceiveAndSendReply** 템플릿을 워크플로 디자이너로 합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-122">Drag and drop a **ReceiveAndSendReply** template to the workflow designer.</span></span> <span data-ttu-id="526fc-123">그렇기 때문에 <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` 활동과 **수신** 작업과 그 뒤는 <xref:System.ServiceModel.Activities.SendReply> 다음 그림과 같이 작업 합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-123">This creates a <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activity with a **Receive** activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity as shown in the following illustration.</span></span>  
   
-     ![디자이너의 ReceiveAndSendReply 템플릿](../../../../docs/framework/wcf/feature-details/media/receiveandsendreply.JPG "ReceiveAndSendReply")  
+     <span data-ttu-id="526fc-124">![디자이너의 ReceiveAndSendReply 템플릿](../../../../docs/framework/wcf/feature-details/media/receiveandsendreply.JPG "ReceiveAndSendReply")</span><span class="sxs-lookup"><span data-stu-id="526fc-124">![ReceiveAndSendReply template in designer](../../../../docs/framework/wcf/feature-details/media/receiveandsendreply.JPG "ReceiveAndSendReply")</span></span>  
   
-     <xref:System.ServiceModel.Activities.SendReply> 작업의 <xref:System.ServiceModel.Activities.SendReply.Request%2A> 속성이 `Receive` 작업이 회신하는 <xref:System.ServiceModel.Activities.Receive> 작업의 이름인 <xref:System.ServiceModel.Activities.SendReply>로 설정됩니다.  
+     <span data-ttu-id="526fc-125"><xref:System.ServiceModel.Activities.SendReply> 작업의 <xref:System.ServiceModel.Activities.SendReply.Request%2A> 속성이 `Receive` 작업이 회신하는 <xref:System.ServiceModel.Activities.Receive> 작업의 이름인 <xref:System.ServiceModel.Activities.SendReply>로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-125">Notice that the <xref:System.ServiceModel.Activities.SendReply> activity’s <xref:System.ServiceModel.Activities.SendReply.Request%2A> property is set to `Receive`, the name of the <xref:System.ServiceModel.Activities.Receive> activity to which the <xref:System.ServiceModel.Activities.SendReply> activity is replying.</span></span>  
   
-3.  <xref:System.ServiceModel.Activities.Receive> 작업에서 `OperationName`이라는 입력란에 **Echo**를 입력합니다.  그러면 서비스가 구현하는 작업의 이름이 정의됩니다.  
+3.  <span data-ttu-id="526fc-126">에 <xref:System.ServiceModel.Activities.Receive> 활동 유형 `Echo` 이라는 입력란에 **OperationName**합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-126">In the <xref:System.ServiceModel.Activities.Receive> activity type `Echo` into the textbox labeled **OperationName**.</span></span> <span data-ttu-id="526fc-127">그러면 서비스가 구현하는 작업의 이름이 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-127">This defines the name of the operation the service implements.</span></span>  
   
-     ![작업 이름 지정](../../../../docs/framework/wcf/feature-details/media/defineoperation.JPG "DefineOperation")  
+     <span data-ttu-id="526fc-128">![작업 이름 지정](../../../../docs/framework/wcf/feature-details/media/defineoperation.JPG "DefineOperation")</span><span class="sxs-lookup"><span data-stu-id="526fc-128">![Specify the operation name](../../../../docs/framework/wcf/feature-details/media/defineoperation.JPG "DefineOperation")</span></span>  
   
-4.  <xref:System.ServiceModel.Activities.Receive> 작업이 선택되어 있는 상태에서 속성 창이 아직 열려 있지 않은 경우 **보기** 메뉴를 클릭하고 **속성 창**을 선택하여 속성 창을 엽니다.  다음 그림과 같이 **속성 창**에서 **CanCreateInstance**가 나타날 때까지 아래로 스크롤하고 확인란을 클릭합니다.  이렇게 설정하면 메시지를 받을 때 필요한 경우 워크플로 서비스 호스트가 서비스의 새 인스턴스를 만들 수 있습니다.  
+4.  <span data-ttu-id="526fc-129">와 <xref:System.ServiceModel.Activities.Receive> 활동을 선택한 경우 속성 창을 열고 클릭 하 여 열려 있지 않으면는 **보기** 메뉴에서 **속성 창**합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-129">With the <xref:System.ServiceModel.Activities.Receive> activity selected, open the properties window if not already open by clicking the **View** menu and selecting **Properties Window**.</span></span> <span data-ttu-id="526fc-130">에 **속성 창** 나타날 때까지 아래로 스크롤하여 **CanCreateInstance** 다음 그림에 나와 있는 것 처럼이 확인란을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-130">In the **Properties Window** scroll down until you see **CanCreateInstance** and click the checkbox as shown in the following illustration.</span></span> <span data-ttu-id="526fc-131">이렇게 설정하면 메시지를 받을 때 필요한 경우 워크플로 서비스 호스트가 서비스의 새 인스턴스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-131">This setting enables the workflow service host to create a new instance of the service (if needed) when a message is received.</span></span>  
   
-     ![CanCreateInstance 속성](../../../../docs/framework/wcf/feature-details/media/cancreateinstance.JPG "CanCreateInstance")  
+     <span data-ttu-id="526fc-132">![CanCreateInstance 속성](../../../../docs/framework/wcf/feature-details/media/cancreateinstance.JPG "CanCreateInstance")</span><span class="sxs-lookup"><span data-stu-id="526fc-132">![CanCreateInstance property](../../../../docs/framework/wcf/feature-details/media/cancreateinstance.JPG "CanCreateInstance")</span></span>  
   
-5.  디자이너의 왼쪽 아래 모퉁이에서 <xref:System.ServiceModel.Activities.Sequence> 작업을 선택하고 **변수** 단추를 클릭합니다.  그러면 변수 편집기가 표시됩니다.  **변수 만들기** 링크를 클릭하여 작업에 보내진 문자열을 저장하는 변수를 추가합니다.  다음 그림과 같이 변수 이름을 `msg`로 지정하고 해당 **변수** 형식을 문자열로 설정합니다.  
+5.  <span data-ttu-id="526fc-133">선택은 <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` 활동과 클릭은 **변수** 디자이너의 왼쪽된 아래 모서리에서 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-133">Select the <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activity and click the **Variables** button in the lower left corner of the designer.</span></span> <span data-ttu-id="526fc-134">그러면 변수 편집기가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-134">This displays the variables editor.</span></span> <span data-ttu-id="526fc-135">클릭는 **변수 만들기** 링크 작업에 전송 하 여 문자열을 저장할 변수를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-135">Click the **Create Variable** link to add a variable to store the string sent to the operation.</span></span> <span data-ttu-id="526fc-136">변수 이름을 `msg` 설정 하 고 해당 **변수** 다음 그림에 나와 있는 것 처럼 문자열을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-136">Name the variable `msg` and set its **Variable** type to String as shown in the following illustration.</span></span>  
   
-     ![변수 추가](../../../../docs/framework/wcf/feature-details/media/addvariable.JPG "AddVariable")  
+     <span data-ttu-id="526fc-137">![변수 추가](../../../../docs/framework/wcf/feature-details/media/addvariable.JPG "AddVariable")</span><span class="sxs-lookup"><span data-stu-id="526fc-137">![Add a variable](../../../../docs/framework/wcf/feature-details/media/addvariable.JPG "AddVariable")</span></span>  
   
-     **변수** 단추를 다시 클릭하여 변수 편집기를 닫습니다.  
+     <span data-ttu-id="526fc-138">클릭는 **변수** 변수 편집기를 다시 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-138">Click the **Variables** button again to close the variables editor.</span></span>  
   
-6.  작업의 **콘텐츠** 입력란에 있는 <xref:System.ServiceModel.Activities.Receive> **정의...** 링크를 클릭하여 **콘텐츠 정의** 대화 상자를 표시합니다.  다음 그림과 같이 **매개 변수** 라디오 단추를 선택하고 **새 매개 변수 추가** 링크를 클릭한 다음 `이름` 입력란에 **inMsg**를 입력합니다. 그런 다음 **형식** 드롭다운 목록 상자에서 **문자열**을 선택하고 `할당 대상` 입력란에 **msg**를 입력합니다.  
+6.  <span data-ttu-id="526fc-139">클릭는 **정의...**</span><span class="sxs-lookup"><span data-stu-id="526fc-139">Click the **Define..**</span></span> <span data-ttu-id="526fc-140">연결에 **콘텐츠** 텍스트 상자에 <xref:System.ServiceModel.Activities.Receive> 표시 하는 활동의 **콘텐츠 정의** 대화입니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-140">link in the **Content** text box in the <xref:System.ServiceModel.Activities.Receive> activity to display the **Content Definition** dialog.</span></span> <span data-ttu-id="526fc-141">선택 된 **매개 변수** 라디오 단추를 클릭는 **새 매개 변수를 추가** 링크를 입력 `inMsg` 에 **이름** 텍스트 상자 **문자열**에 **형식** 드롭 다운 목록 상자 및 형식 `msg` 에 **에 할당할** 다음 그림에 나와 있는 것 처럼 텍스트 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-141">Select the **Parameters** radio button, click the **Add new Parameter** link, type `inMsg` in the **name** text box, select **String** in the **Type** drop down list box, and type `msg` in the **Assign To** text box as shown in the following illustration.</span></span>  
   
-     ![매개 변수 콘텐츠 추가](../../../../docs/framework/wcf/feature-details/media/parameterscontent.jpg "ParametersContent")  
+     <span data-ttu-id="526fc-142">![매개 변수 콘텐츠 추가](../../../../docs/framework/wcf/feature-details/media/parameterscontent.jpg "ParametersContent")</span><span class="sxs-lookup"><span data-stu-id="526fc-142">![Adding Parameters Content](../../../../docs/framework/wcf/feature-details/media/parameterscontent.jpg "ParametersContent")</span></span>  
   
-     그러면 받기 작업이 문자열 매개 변수를 받고 데이터가 `msg` 변수에 바인딩되도록 지정됩니다.  **확인**을 클릭하여 **콘텐츠 정의** 대화 상자를 닫습니다.  
+     <span data-ttu-id="526fc-143">그러면 받기 작업이 문자열 매개 변수를 받고 데이터가 `msg` 변수에 바인딩되도록 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-143">This specifies that the Receive activity receives string parameter and that data is bound to the `msg` variable.</span></span> <span data-ttu-id="526fc-144">클릭 **확인** 를 닫으려면는 **콘텐츠 정의** 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="526fc-144">Click **OK** to close the **Content Definition** dialog.</span></span>  
   
-7.  **정의...** 작업의 **콘텐츠** 상자에 있는 <xref:System.ServiceModel.Activities.SendReply> 링크를 클릭하여 **콘텐츠 정의** 대화 상자를 표시합니다.  다음 그림과 같이 **매개 변수** 라디오 단추를 선택하고 **새 매개 변수 추가** 링크를 클릭한 다음 `이름` 입력란에 **msg**를 입력합니다. 그런 다음 **형식** 드롭다운 목록 상자에서 **문자열**을 선택하고 `값` 입력란에 **msg**를 입력합니다.  
+7.  <span data-ttu-id="526fc-145">클릭는 **정의...**  연결에 **콘텐츠** 상자에 <xref:System.ServiceModel.Activities.SendReply> 표시 하는 활동의 **콘텐츠 정의** 대화입니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-145">Click the **Define...** link in the **Content** box in the <xref:System.ServiceModel.Activities.SendReply> activity to display the **Content Definition** dialog.</span></span> <span data-ttu-id="526fc-146">선택은 **매개 변수** 라디오 단추를 클릭는 **새 매개 변수를 추가** 링크를 입력 `outMsg` 에 **이름** textbox, **문자열**에 **형식** 드롭다운 목록 상자 및 `msg` 에 **값** 다음 그림에 나와 있는 것 처럼 텍스트 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-146">Select the **Parameters** radio button, click the **Add new Parameter** link, type `outMsg` in the **name** textbox, select **String** in the **Type** dropdown list box, and `msg` in the **Value** text box as shown in the following illustration.</span></span>  
   
-     ![매개 변수 콘텐츠 추가](../../../../docs/framework/wcf/feature-details/media/parameterscontent2.jpg "ParametersContent2")  
+     <span data-ttu-id="526fc-147">![매개 변수 콘텐츠 추가](../../../../docs/framework/wcf/feature-details/media/parameterscontent2.jpg "ParametersContent2")</span><span class="sxs-lookup"><span data-stu-id="526fc-147">![Adding Parameters Content](../../../../docs/framework/wcf/feature-details/media/parameterscontent2.jpg "ParametersContent2")</span></span>  
   
-     그러면 <xref:System.ServiceModel.Activities.SendReply> 작업이 메시지 또는 메시지 계약 형식을 보내고 데이터가 `msg` 변수에 바인딩되도록 지정됩니다.  이 작업이 <xref:System.ServiceModel.Activities.SendReply> 작업이므로 이는 이 작업이 클라이언트에 다시 보내는 메시지를 채우는 데 `msg`의 데이터가 사용됨을 의미합니다.  **확인**을 클릭하여 **콘텐츠 정의** 대화 상자를 닫습니다.  
+     <span data-ttu-id="526fc-148">그러면 <xref:System.ServiceModel.Activities.SendReply> 작업이 메시지 또는 메시지 계약 형식을 보내고 데이터가 `msg` 변수에 바인딩되도록 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-148">This specifies that the <xref:System.ServiceModel.Activities.SendReply> activity sends a message or message contract type and that data is bound to the `msg` variable.</span></span> <span data-ttu-id="526fc-149">이 작업이 <xref:System.ServiceModel.Activities.SendReply> 작업이므로 이는 이 작업이 클라이언트에 다시 보내는 메시지를 채우는 데 `msg`의 데이터가 사용됨을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-149">Because this is a <xref:System.ServiceModel.Activities.SendReply> activity, this means the data in `msg` is used to populate the message the activity sends back to the client.</span></span> <span data-ttu-id="526fc-150">클릭 **확인** 를 닫으려면는 **콘텐츠 정의** 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="526fc-150">Click **OK** to close the **Content Definition** dialog.</span></span>  
   
-8.  **빌드** 메뉴를 클릭하고 **솔루션 빌드**를 선택하여 솔루션을 저장하고 빌드합니다.  
+8.  <span data-ttu-id="526fc-151">저장 하 고 클릭 하 여 솔루션을 빌드합니다는 **빌드** 메뉴에서 **솔루션 빌드**합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-151">Save and build the solution by clicking the **Build** menu and selecting **Build Solution**.</span></span>  
   
-## 워크플로 서비스 프로젝트 구성  
- 워크플로 서비스가 완료되었으므로  이 단원에서는 워크플로 서비스 솔루션을 손쉽게 호스팅하고 실행할 수 있도록 구성하는 방법에 대해 설명합니다.  이 솔루션은 ASP.NET Development Server를 사용하여 서비스를 호스팅합니다.  
+## <a name="configure-the-workflow-service-project"></a><span data-ttu-id="526fc-152">워크플로 서비스 프로젝트 구성</span><span class="sxs-lookup"><span data-stu-id="526fc-152">Configure the Workflow Service Project</span></span>  
+ <span data-ttu-id="526fc-153">워크플로 서비스가 완료되었으므로</span><span class="sxs-lookup"><span data-stu-id="526fc-153">The workflow service is complete.</span></span> <span data-ttu-id="526fc-154">이 단원에서는 워크플로 서비스 솔루션을 손쉽게 호스팅하고 실행할 수 있도록 구성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-154">This section explains how to configure the workflow service solution to make it easy to host and run.</span></span> <span data-ttu-id="526fc-155">이 솔루션은 ASP.NET Development Server를 사용하여 서비스를 호스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-155">This solution uses the ASP.NET Development Server to host the service.</span></span>  
   
-#### 프로젝트 시작 옵션을 설정하려면  
+#### <a name="to-set-project-start-up-options"></a><span data-ttu-id="526fc-156">프로젝트 시작 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="526fc-156">To set project start up options</span></span>  
   
-1.  **솔루션 탐색기**에서 **MyWFService**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 **프로젝트 속성** 대화 상자를 표시합니다.  
+1.  <span data-ttu-id="526fc-157">에 **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **MyWFService** 선택 **속성** 표시 하는 **프로젝트 속성** 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="526fc-157">In the **Solution Explorer**, right-click **MyWFService** and select **Properties** to display the **Project Properties** dialog.</span></span>  
   
-2.  다음 그림과 같이 **웹** 탭을 선택하고 **시작 작업** 아래에서 **특정 페이지**를 선택한 다음 입력란에 `Service1.xamlx`를 입력합니다.  
+2.  <span data-ttu-id="526fc-158">선택 된 **웹** 탭을 선택한 **특정 페이지** 아래 **시작 작업** 유형과 `Service1.xamlx` 다음 그림에 나와 있는 것 처럼 텍스트 상자에 합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-158">Select the **Web** tab and select **Specific Page** under **Start Action** and type `Service1.xamlx` in the text box as shown in the following illustration.</span></span>  
   
-     ![프로젝트 속성 대화 상자](../../../../docs/framework/wcf/feature-details/media/projectpropertiesdlg.JPG "ProjectPropertiesDlg")  
+     <span data-ttu-id="526fc-159">![프로젝트 속성 대화 상자](../../../../docs/framework/wcf/feature-details/media/projectpropertiesdlg.JPG "ProjectPropertiesDlg")</span><span class="sxs-lookup"><span data-stu-id="526fc-159">![The project properties dialog](../../../../docs/framework/wcf/feature-details/media/projectpropertiesdlg.JPG "ProjectPropertiesDlg")</span></span>  
   
-     그러면 ASP.NET Development Server에서 Service1.xamlx에 정의된 서비스가 호스팅됩니다.  
+     <span data-ttu-id="526fc-160">그러면 ASP.NET Development Server에서 Service1.xamlx에 정의된 서비스가 호스팅됩니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-160">This hosts the service defined in Service1.xamlx in the ASP.NET Development Server.</span></span>  
   
-3.  Ctrl\+F5를 눌러 서비스를 시작합니다.  그러면 다음 그림과 같이 바탕 화면의 오른쪽 아래에 ASP.NET Development Server 아이콘이 표시됩니다.  
+3.  <span data-ttu-id="526fc-161">Ctrl+F5를 눌러 서비스를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-161">Press Ctrl + F5 to launch the service.</span></span> <span data-ttu-id="526fc-162">그러면 다음 그림과 같이 바탕 화면의 오른쪽 아래에 ASP.NET Development Server 아이콘이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-162">The ASP.NET Development Server icon is displayed in the lower right side of the desktop as shown in the following image.</span></span>  
   
-     ![ASP.NET Developer Server 아이콘](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")  
+     <span data-ttu-id="526fc-163">![ASP.NET Developer Server 아이콘](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")</span><span class="sxs-lookup"><span data-stu-id="526fc-163">![The ASP.NET Developer Server Icon](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")</span></span>  
   
-     또한 Internet Explorer에 서비스에 대한 WCF 서비스 도움말 페이지가 표시됩니다.  
+     <span data-ttu-id="526fc-164">또한 Internet Explorer에 서비스에 대한 WCF 서비스 도움말 페이지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-164">In addition, Internet Explorer displays the WCF Service Help Page for the service.</span></span>  
   
-     ![WCF 도움말 페이지](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
+     <span data-ttu-id="526fc-165">![WCF 도움말 페이지](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")</span><span class="sxs-lookup"><span data-stu-id="526fc-165">![WCF Help Page](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")</span></span>  
   
-4.  [방법: 워크플로 응용 프로그램에서 서비스 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) 항목을 계속 진행하여 이 서비스를 호출하는 워크플로 클라이언트를 만듭니다.  
+4.  <span data-ttu-id="526fc-166">계속 진행 하는 [How To:는 서비스는 워크플로 응용 프로그램에서 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) 이 서비스를 호출 하는 워크플로 클라이언트를 만드는 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="526fc-166">Continue on to the [How To: Access a Service From a Workflow Application](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) topic to create a workflow client that calls this service.</span></span>  
   
-## 참고 항목  
- [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [워크플로 서비스 호스팅 개요](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)   
- [메시징 활동](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a><span data-ttu-id="526fc-167">참고 항목</span><span class="sxs-lookup"><span data-stu-id="526fc-167">See Also</span></span>  
+ [<span data-ttu-id="526fc-168">워크플로 서비스</span><span class="sxs-lookup"><span data-stu-id="526fc-168">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="526fc-169">워크플로 서비스 호스팅 개요</span><span class="sxs-lookup"><span data-stu-id="526fc-169">Hosting Workflow Services Overview</span></span>](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
+ [<span data-ttu-id="526fc-170">메시징 활동</span><span class="sxs-lookup"><span data-stu-id="526fc-170">Messaging Activities</span></span>](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

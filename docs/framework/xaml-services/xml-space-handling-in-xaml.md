@@ -1,52 +1,55 @@
 ---
-title: "xml:space Handling in XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML [XAML Services], xml:space attribute"
-  - "XAML [XAML Services], whitespace processing"
-  - "xml:space attribute [XAML Services]"
-  - "whitespace processing [XAML Services]"
+title: "XAML의 xml:space 처리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [XAML Services], xml:space attribute
+- XAML [XAML Services], whitespace processing
+- xml:space attribute [XAML Services]
+- whitespace processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-caps.latest.revision: 15
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: a5048cbad1d2ea914d041ac3c87a43223b208c3a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# xml:space Handling in XAML
-`xml:space` 특성은 개체 요소 내에 중요한 공백 처리 동작을 선언하는 XML 정의 특성입니다.  이 동작은 `xml:space`이 선언된 요소 내에 포함된 모든 콘텐츠\(내부 텍스트\)와 관련이 있으며 자식 요소도 범위에 포함됩니다.  
+# <a name="xmlspace-handling-in-xaml"></a><span data-ttu-id="b9d51-102">XAML의 xml:space 처리</span><span class="sxs-lookup"><span data-stu-id="b9d51-102">xml:space Handling in XAML</span></span>
+<span data-ttu-id="b9d51-103">`xml:space` 특성은 object 요소 내에서 공백 처리 동작을 선언 하는 XML로 정의 된 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="b9d51-103">The `xml:space` attribute is an XML-defined attribute that declares the significant whitespace processing behavior within an object element.</span></span> <span data-ttu-id="b9d51-104">이 동작은 요소 내에 포함 된 모든 콘텐츠 (내부 텍스트)와 관련이 있는 `xml:space` 선언 되 고 범위 자식 요소를 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9d51-104">This behavior is relevant for all content (inner text) contained within the element where `xml:space` is declared, and also scopes to child elements.</span></span>  
   
-## XAML 특성 사용  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="b9d51-105">XAML 특성 사용</span><span class="sxs-lookup"><span data-stu-id="b9d51-105">XAML Attribute Usage</span></span>  
   
-```  
-<object xml:space="preserve" />  
-```  
-  
- \-또는\-  
-  
-```  
-<object xml:space="default" />  
+```xaml  
+<object xml:space="preserve" />  
 ```  
   
-## 설명  
- XAML의 `xml:space` 특성 및 이 특성의 가능한 두 값에 대한 정의는 XML에 대한 W3C 사양에서 "특수 특성"으로 정의된 `xml:space`에서 파생됩니다.  
+ <span data-ttu-id="b9d51-106">\- 또는 -</span><span class="sxs-lookup"><span data-stu-id="b9d51-106">\- or -</span></span>  
   
- `xml:space` 특성의 기본값은 리터럴 값 `"default"`입니다.  `"default"` 값을 사용하거나 `xml:space`를 지정하지 않은 경우에는 [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md) 항목에 정의되어 있는 유효한 공백 구문 분석 동작이 기본 처리 동작입니다.  
+```xaml  
+<object xml:space="default" />  
+```  
   
- 개체 요소 콘텐츠 내에서 공백을 유지하려면 해당 개체 요소에서 `xml:space="preserve"`를 지정합니다.  
+## <a name="remarks"></a><span data-ttu-id="b9d51-107">설명</span><span class="sxs-lookup"><span data-stu-id="b9d51-107">Remarks</span></span>  
+ <span data-ttu-id="b9d51-108">에 대 한 정의 `xml:space` 가능한 두 값을 포함 하 여 XAML의 특성에서 파생 된 `xml:space` XML에 대 한 W3C 사양에 "특수 특성"으로 정의 된 대로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9d51-108">The definition for the `xml:space` attribute in XAML including its two possible values is derived from `xml:space` as defined as a "special attribute" by W3C specifications for XML.</span></span>  
   
- 대부분의 해석에서는 `xml:space` 특성 효과 및 특성의 값은 자식 요소로 범위가 지정됩니다.  
+ <span data-ttu-id="b9d51-109">기본값은 `xml:space` 특성은 리터럴 값 `"default"`합니다.</span><span class="sxs-lookup"><span data-stu-id="b9d51-109">The default value of the `xml:space` attribute is the literal value `"default"`.</span></span> <span data-ttu-id="b9d51-110">값에 대 한 `"default"`, if 또는 `xml:space` 항목에 정의 된 공백을 구문 분석의 동작은 기본 처리 전혀 표시 되지 않습니다 [XAML의 공백 처리](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b9d51-110">For the value `"default"`, or if `xml:space` is not indicated at all, the behavior of significant whitespace parsing is the default handling, as defined in the topic [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span></span>  
   
- XAML에서 공백 처리에 대한 자세한 설명은 [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)를 참조하십시오.  
+ <span data-ttu-id="b9d51-111">개체 요소 콘텐츠 내에서 공백을 유지 하기 위해 지정 `xml:space="preserve"` 개체 요소의 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9d51-111">To preserve whitespace within object element content, specify `xml:space="preserve"` on that object element.</span></span>  
   
-## 참고 항목  
- [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)   
- [XAML 개요\(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)
+ <span data-ttu-id="b9d51-112">대부분의 해석 된 `xml:space` 특성 효과 및 특성의 값을 자식 요소 범위가 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b9d51-112">Under most interpretations, the `xml:space` attribute effects and the value of the attribute are scoped to child elements.</span></span>  
+  
+ <span data-ttu-id="b9d51-113">XAML의 공백 처리에 대 한 자세한 내용은 참조 하십시오. [XAML의 공백 처리](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b9d51-113">For a complete discussion of whitespace processing in XAML, see [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b9d51-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b9d51-114">See Also</span></span>  
+ [<span data-ttu-id="b9d51-115">XAML의 공백 처리</span><span class="sxs-lookup"><span data-stu-id="b9d51-115">Whitespace Processing in XAML</span></span>](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
+ [<span data-ttu-id="b9d51-116">XAML 개요(WPF)</span><span class="sxs-lookup"><span data-stu-id="b9d51-116">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

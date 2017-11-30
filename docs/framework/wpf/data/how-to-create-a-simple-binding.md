@@ -1,43 +1,46 @@
 ---
-title: "방법: 단순 바인딩 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 바인딩, 만들기"
-  - "데이터 바인딩(data binding), 단순 바인딩 만들기"
-  - "단순 바인딩, 만들기"
+title: "방법: 단순 바인딩 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- simple binding [WPF], creating
+- data binding [WPF], creating simple bindings
+- binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a61844f917539f5d5e7c99299c8a33f4aa18450f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 단순 바인딩 만들기
-이 예제에서는 단순 <xref:System.Windows.Data.Binding>을 만드는 방법을 보여 줍니다.  
+# <a name="how-to-create-a-simple-binding"></a><span data-ttu-id="981d6-102">방법: 단순 바인딩 만들기</span><span class="sxs-lookup"><span data-stu-id="981d6-102">How to: Create a Simple Binding</span></span>
+<span data-ttu-id="981d6-103">이 예제에서는 간단한을 만드는 방법을 보여 줍니다. <xref:System.Windows.Data.Binding>합니다.</span><span class="sxs-lookup"><span data-stu-id="981d6-103">This example shows you how to create a simple <xref:System.Windows.Data.Binding>.</span></span>  
   
-## 예제  
- 이 예제에는 `PersonName`이라는 문자열 속성과 함께 `Person` 개체가 있습니다.  `Person` 개체는 `SDKSample`이라는 네임스페이스에 정의되어 있습니다.  
+## <a name="example"></a><span data-ttu-id="981d6-104">예제</span><span class="sxs-lookup"><span data-stu-id="981d6-104">Example</span></span>  
+ <span data-ttu-id="981d6-105">이 예에서 한는 `Person` 라는 문자열 속성이 있는 개체 `PersonName`합니다.</span><span class="sxs-lookup"><span data-stu-id="981d6-105">In this example, you have a `Person` object with a string property named `PersonName`.</span></span> <span data-ttu-id="981d6-106">`Person` 개체가 라는 네임 스페이스에 정의 된 `SDKSample`합니다.</span><span class="sxs-lookup"><span data-stu-id="981d6-106">The `Person` object is defined in the namespace called `SDKSample`.</span></span>  
   
- 다음 예제에서는 `Joe`의 `PersonName` 속성 값을 사용하여 `Person` 개체를 인스턴스화합니다.  이 작업은 `Resources` 섹션에서 수행되고 `x:Key`를 할당합니다.  
+ <span data-ttu-id="981d6-107">다음 예제는 `Person` 개체는 `PersonName` 속성 값이 `Joe`합니다.</span><span class="sxs-lookup"><span data-stu-id="981d6-107">The following example instantiates the `Person` object with a `PersonName` property value of `Joe`.</span></span> <span data-ttu-id="981d6-108">이 작업은 `Resources` 섹션 및 할당 된 `x:Key`합니다.</span><span class="sxs-lookup"><span data-stu-id="981d6-108">This is done in the `Resources` section and assigned an `x:Key`.</span></span>  
   
- [!code-xml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
-[!code-xml[SimpleBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
-[!code-xml[SimpleBinding#EndWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#endwindow)]  
+ [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
+[!code-xaml[SimpleBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
+[!code-xaml[SimpleBinding#EndWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#endwindow)]  
   
- `PersonName` 속성을 바인딩하려면 다음을 수행합니다.  
+ <span data-ttu-id="981d6-109">바인딩할는 `PersonName` 속성 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="981d6-109">To bind to the `PersonName` property you would do the following:</span></span>  
   
- [!code-xml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
   
- 따라서 <xref:System.Windows.Controls.TextBlock>은 "Joe" 값과 함께 나타납니다.  
+ <span data-ttu-id="981d6-110">결과적으로 <xref:System.Windows.Controls.TextBlock> "Joe" 값으로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="981d6-110">As a result, the <xref:System.Windows.Controls.TextBlock> appears with the value "Joe".</span></span>  
   
-## 참고 항목  
- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="981d6-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="981d6-111">See Also</span></span>  
+ [<span data-ttu-id="981d6-112">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="981d6-112">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="981d6-113">방법 항목</span><span class="sxs-lookup"><span data-stu-id="981d6-113">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

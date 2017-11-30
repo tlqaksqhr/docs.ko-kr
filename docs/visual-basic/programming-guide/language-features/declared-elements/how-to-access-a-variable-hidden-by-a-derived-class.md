@@ -1,42 +1,41 @@
 ---
-title: "How to: Access a Variable Hidden by a Derived Class (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "qualification, of element names"
-  - "base classes, accessing elements"
-  - "element names, qualification"
-  - "references, declared elements"
-  - "declared elements, referencing"
-  - "variables [Visual Basic], accessing hidden"
+title: "방법: 파생 클래스에 의해 숨겨진 변수에 액세스(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- qualification [Visual Basic], of element names
+- base classes [Visual Basic], accessing elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declared elements [Visual Basic], referencing
+- variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0f94e45fcb0a26b0d59789e101c37aceba219250
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Access a Variable Hidden by a Derived Class (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-파생 클래스의 코드에서 변수에 액세스할 때 컴파일러에서는 일반적으로 해당 참조를 가장 가까운 위치에 있는 액세스 가능 버전, 즉 액세스하는 클래스에서 바로 이전 파생 단계의 액세스 가능 버전으로 확인합니다.  변수가 파생 클래스에 정의되었으면 코드에서는 일반적으로 이 정의에 액세스합니다.  
+# <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a><span data-ttu-id="80897-102">방법: 파생 클래스에 의해 숨겨진 변수에 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="80897-102">How to: Access a Variable Hidden by a Derived Class (Visual Basic)</span></span>
+<span data-ttu-id="80897-103">변수에 액세스 하는 파생된 클래스에서 코드를 컴파일러는 이전 파생 단계의 액세스 하는 클래스에서 액세스할 수 있는 버전 즉, 가장 가까운 액세스할 수 있는 버전에 대 한 참조에 해결 일반적으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="80897-103">When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class.</span></span> <span data-ttu-id="80897-104">변수를 파생된 클래스에서 정의 하는 경우 코드는 일반적으로 해당 정의 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="80897-104">If the variable is defined in the derived class, the code normally accesses that definition.</span></span>  
   
- 파생 클래스 변수가 기본 클래스의 변수를 숨기는 경우 기본 클래스 버전은 숨겨집니다.  하지만 `MyBase` 키워드로 변수를 한정하면 기본 클래스 변수에 액세스할 수 있습니다.  
+ <span data-ttu-id="80897-105">파생된 클래스 변수는 기본 클래스의 변수를 숨기면 기본 클래스 버전을 숨깁니다.</span><span class="sxs-lookup"><span data-stu-id="80897-105">If the derived class variable shadows a variable in the base class, it hides the base class version.</span></span> <span data-ttu-id="80897-106">그러나 기본 클래스 변수를 정규화 하 여 액세스할 수 있습니다는 `MyBase` 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="80897-106">However, you can access the base class variable by qualifying it with the `MyBase` keyword.</span></span>  
   
-### 파생 클래스에 의해 숨겨진 기본 클래스 변수에 액세스하려면  
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a><span data-ttu-id="80897-107">파생된 클래스에 의해 숨겨진 기본 클래스 변수에 액세스 하려면</span><span class="sxs-lookup"><span data-stu-id="80897-107">To access a base class variable hidden by a derived class</span></span>  
   
--   식 또는 대입문에서 변수 이름 앞에 `MyBase` 키워드와 마침표\(`.`\)를 차례로 붙입니다.  
+-   <span data-ttu-id="80897-108">식 또는 대입문, 변수 이름 앞에 `MyBase` 키워드와 마침표 (`.`).</span><span class="sxs-lookup"><span data-stu-id="80897-108">In an expression or assignment statement, precede the variable name with the `MyBase` keyword and a period (`.`).</span></span>  
   
-     컴파일러에서 해당 참조가 기본 클래스 버전의 변수로 확인됩니다.  
+     <span data-ttu-id="80897-109">컴파일러는 변수의 기본 클래스 버전에 대 한 참조를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="80897-109">The compiler resolves the reference to the base class version of the variable.</span></span>  
   
-     다음 예제에서는 상속을 통해 숨기는 방법을 보여 줍니다.  예제에서 만드는 두 개의 참조 중 하나는 숨기는 변수에 액세스하고 다른 하나는 숨기기를 무시합니다.  
+     <span data-ttu-id="80897-110">다음 예제에서는 상속을 통한 숨김</span><span class="sxs-lookup"><span data-stu-id="80897-110">The following example illustrates shadowing through inheritance.</span></span> <span data-ttu-id="80897-111">예제에서는 두 개의 참조, 숨기는 변수에 액세스 하 고 다른 하나는 숨기기를 무시.</span><span class="sxs-lookup"><span data-stu-id="80897-111">It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.</span></span>  
   
     ```  
     Public Class shadowBaseClass  
@@ -53,18 +52,18 @@ caps.handback.revision: 20
     End Class  
     ```  
   
-     위 예제에서는 기본 클래스에 `shadowString` 변수를 선언하고 파생 클래스에서 이를 숨깁니다.  파생 클래스의 `showStrings` 프로시저는 `shadowString`이라는 이름이 한정되지 않은 경우 해당 문자열의 숨김 버전을 표시합니다.  그런 다음 `shadowString`이 `MyBase`  키워드로 한정되면 숨겨진 버전을 표시합니다.  
+     <span data-ttu-id="80897-112">위 예제에서는 변수를 선언 `shadowString` 기본 클래스에서 파생된 클래스에서이 숨깁니다.</span><span class="sxs-lookup"><span data-stu-id="80897-112">The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class.</span></span> <span data-ttu-id="80897-113">프로시저 `showStrings` 파생된 클래스에서 문자열의 숨김 버전을 표시 때 이름 `shadowString` 한정 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="80897-113">The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified.</span></span> <span data-ttu-id="80897-114">다음 숨겨진된 버전을 표시 때 `shadowString` 으로 한정 되는 `MyBase` 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="80897-114">It then displays the shadowed version when `shadowString` is qualified with the `MyBase`  keyword.</span></span>  
   
-## 강력한 프로그래밍  
- 숨겨진 변수의 원하지 않는 버전을 참조하게 될 가능성을 줄이려면 숨겨진 변수에 대한 모든 참조를 완전히 한정합니다.  변수를 숨기면 이름이 동일한 변수 버전을 두 가지 이상 사용할 수 있습니다.  코드 문이 변수 이름을 참조할 때 컴파일러에서 이 참조에 해당하는 것으로 확인하는 버전은 코드 문의 위치, 한정 문자열이 있는지 여부 등의 요소에 따라 달라집니다.  따라서 잘못된 버전의 변수를 참조하게 될 가능성이 늘어납니다.  
+## <a name="robust-programming"></a><span data-ttu-id="80897-115">강력한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="80897-115">Robust Programming</span></span>  
+ <span data-ttu-id="80897-116">위험을 낮추기 위해서는 의도 하지 않은 버전의 숨겨진된 변수에 참조를 완전히 숨겨진된 변수에 대 한 모든 참조를 한정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80897-116">To lower the risk of referring to an unintended version of a shadowed variable, you can fully qualify all references to a shadowed variable.</span></span> <span data-ttu-id="80897-117">섀도잉 동일한 이름 가진 변수 둘 이상의 버전을 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="80897-117">Shadowing introduces more than one version of a variable with the same name.</span></span> <span data-ttu-id="80897-118">코드 문이 변수 이름에는 참조, 컴파일러 참조를 확인 하는 버전 문 코드의 위치 및 한정 문자열이 있는지 여부 등의 요인에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="80897-118">When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string.</span></span> <span data-ttu-id="80897-119">잘못 된 버전의 변수를 참조할 위험이 높아질 수 있습니다이 합니다.</span><span class="sxs-lookup"><span data-stu-id="80897-119">This can increase the risk of referring to the wrong version of the variable.</span></span>  
   
-## 참고 항목  
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Differences Between Shadowing and Overriding](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)   
- [How to: Hide an Inherited Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me, My, MyBase, and MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [Inheritance Basics](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a><span data-ttu-id="80897-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="80897-120">See Also</span></span>  
+ [<span data-ttu-id="80897-121">선언된 요소 참조</span><span class="sxs-lookup"><span data-stu-id="80897-121">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="80897-122">Visual Basic의 숨김 기능</span><span class="sxs-lookup"><span data-stu-id="80897-122">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="80897-123">숨기기와 재정의의 차이점</span><span class="sxs-lookup"><span data-stu-id="80897-123">Differences Between Shadowing and Overriding</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [<span data-ttu-id="80897-124">방법: 이름이 같은 변수 숨기기</span><span class="sxs-lookup"><span data-stu-id="80897-124">How to: Hide a Variable with the Same Name as Your Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [<span data-ttu-id="80897-125">방법: 상속된 변수 숨기기</span><span class="sxs-lookup"><span data-stu-id="80897-125">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="80897-126">Shadows</span><span class="sxs-lookup"><span data-stu-id="80897-126">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="80897-127">재정의</span><span class="sxs-lookup"><span data-stu-id="80897-127">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="80897-128">Me, My, MyBase 및 MyClass</span><span class="sxs-lookup"><span data-stu-id="80897-128">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [<span data-ttu-id="80897-129">상속 기본 사항</span><span class="sxs-lookup"><span data-stu-id="80897-129">Inheritance Basics</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -1,107 +1,108 @@
 ---
-title: "Windows Forms에서 사용자 입력 유효성 검사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "사용자 입력, Windows Forms에서 유효성 검사"
-  - "사용자 입력 유효성 검사, Windows Forms"
-  - "유효성 검사, Windows Forms 사용자 입력"
-  - "Windows Forms, 사용자 입력 유효성 검사"
+title: "Windows Forms에서 사용자 입력 유효성 검사"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, validating user input
+- validation [Windows Forms], Windows Forms user input
+- user input [Windows Forms], validating in Windows Forms
+- validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48a28db24731f9aa248bb149c9f19a57cf76bbf1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms에서 사용자 입력 유효성 검사
-사용자가 응용 프로그램에 데이터를 입력하는 경우 응용 프로그램에서 해당 데이터를 사용하기 전에 데이터가 유효한지 여부를 확인할 수 있습니다.  특정 텍스트 필드의 길이가 0이 아니도록 지정하거나, 필드의 형식이 전화 번호 또는 기타 올바른 데이터 형식이 되도록 지정하거나, 데이터베이스의 보안을 손상시킬 수 있는 안전하지 않은 문자가 문자열에 포함되지 않도록 지정할 수 있습니다.  Windows Forms에서는 여러 가지 방법을 통해 응용 프로그램에서 입력의 유효성을 검사할 수 있도록 합니다.  
+# <a name="user-input-validation-in-windows-forms"></a><span data-ttu-id="b1641-102">Windows Forms에서 사용자 입력 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="b1641-102">User Input Validation in Windows Forms</span></span>
+<span data-ttu-id="b1641-103">사용자가 응용 프로그램에 데이터를 입력 하면 응용 프로그램에 사용 하기 전에 데이터가 유효한 지 확인 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-103">When users enter data into your application, you may want to verify that the data is valid before your application uses it.</span></span> <span data-ttu-id="b1641-104">특정 텍스트 필드 길이가 0 인 전화 번호 또는 다른 종류의 올바른 형식의 데이터 필드를 지정 하거나, 하거나 문자열에 데이터베이스의 보안을 손상 하기 위해 사용할 수 있는 안전 하지 않은 문자가 포함 되지 않도록 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-104">You may require that certain text fields not be zero-length, that a field be formatted as a telephone number or other type of well-formed data, or that a string not contain any unsafe characters that could be used to compromise the security of a database.</span></span> <span data-ttu-id="b1641-105">Windows Forms 응용 프로그램에서 입력의 유효성을 검사 하는 여러 가지 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-105">Windows Forms provides several ways for you to validate input in your application.</span></span>  
   
-## MaskedTextBox 컨트롤을 사용한 유효성 검사  
- 데이터를 전화 번호나 부품 번호와 같이 정의된 형식으로 입력하게 하려는 경우 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤을 사용하면 최소한의 코드로 빠르게 이 작업을 수행할 수 있습니다.  *마스크*는 텍스트 상자의 지정된 위치에 입력할 수 있는 문자를 지정하는 마스킹 언어의 문자로 구성된 문자열입니다.  컨트롤에 일련의 메시지가 표시됩니다.  숫자를 입력해야 할 곳에 문자를 입력하는 경우와 같이 사용자가 잘못된 내용을 입력하는 경우 컨트롤에서 입력 내용이 자동으로 거부됩니다.  
+## <a name="validation-with-the-maskedtextbox-control"></a><span data-ttu-id="b1641-106">MaskedTextBox 컨트롤 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="b1641-106">Validation with the MaskedTextBox Control</span></span>  
+ <span data-ttu-id="b1641-107">사용자가 전화 번호 또는 부품 번호 등의 잘 정의 된 형식으로 데이터를 입력 하도록 하는 경우이 수행할 수 있습니다 신속 하 고 최소한의 코드를 사용 하 여는 <xref:System.Windows.Forms.MaskedTextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-107">If you need to require users to enter data in a well-defined format, such as a telephone number or a part number, you can accomplish this quickly and with minimal code by using the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span> <span data-ttu-id="b1641-108">A *마스크* 문자로 텍스트 상자에 지정된 된 위치에 있는 문자를 입력할 수를 지정 하는 마스킹 언어에서 구성 된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-108">A *mask* is a string made up of characters from a masking language that specifies which characters can be entered at any given position in the text box.</span></span> <span data-ttu-id="b1641-109">컨트롤에 사용자에 게 표시 되는 메시지 집합이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-109">The control displays a set of prompts to the user.</span></span> <span data-ttu-id="b1641-110">예를 들어 사용자가 잘못 된 항목을 숫자가 필요한 경우 사용자는 문자를 입력, 컨트롤의 입력을 자동으로 거부 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-110">If the user types an incorrect entry, for example, the user types a letter when a digit is required, the control will automatically reject the input.</span></span>  
   
- <xref:System.Windows.Forms.MaskedTextBox>에서 사용하는 마스킹 언어는 융통성이 크기 때문에  필수 문자, 선택적 문자, 하이픈과 괄호 같은 리터럴 문자, 통화 문자 및 날짜 구분 기호를 지정하는 데 사용할 수 있습니다.  또한 컨트롤은 데이터 소스에 바인딩될 경우 잘 작동합니다.  즉, 데이터 바인딩의 <xref:System.Windows.Forms.Binding.Format> 이벤트를 사용하여 들어오는 데이터의 형식을 마스크에 맞도록 다시 지정할 수 있으며, <xref:System.Windows.Forms.Binding.Parse> 이벤트를 사용하여 나가는 데이터의 형식을 데이터 필드의 사양에 맞도록 다시 지정할 수 있습니다.  
+ <span data-ttu-id="b1641-111">사용 되는 마스킹 언어 <xref:System.Windows.Forms.MaskedTextBox> 매우 유연 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-111">The masking language that is used by <xref:System.Windows.Forms.MaskedTextBox> is very flexible.</span></span> <span data-ttu-id="b1641-112">필요한 문자, 필요에 따라 문자, 하이픈 및 괄호 같은 리터럴 문자, 통화 문자 및 날짜 구분 기호를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-112">It allows you to specify required characters, optional characters, literal characters, such as hyphens and parentheses, currency characters, and date separators.</span></span> <span data-ttu-id="b1641-113">컨트롤을 데이터 원본에 바인딩될 경우 잘 에서도 작동 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-113">The control also works well when bound to a data source.</span></span> <span data-ttu-id="b1641-114"><xref:System.Windows.Forms.Binding.Format> 마스크를 충족 하기 위해 들어오는 데이터의 서식을 다시 지정에서 데이터 바인딩 이벤트를 사용할 수 및 <xref:System.Windows.Forms.Binding.Parse> 데이터 필드의 사양을 준수 하도록 보내는 데이터의 서식을 다시 지정 이벤트를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-114">The <xref:System.Windows.Forms.Binding.Format> event on a data binding can be used to reformat incoming data to comply with the mask, and the <xref:System.Windows.Forms.Binding.Parse> event can be used to reformat outgoing data to comply with the specifications of the data field.</span></span>  
   
- 자세한 내용은 [MaskedTextBox 컨트롤](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)을 참조하십시오.  
+ <span data-ttu-id="b1641-115">자세한 내용은 참조 [MaskedTextBox 컨트롤](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-115">For more information, see [MaskedTextBox Control](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md).</span></span>  
   
-## 이벤트 구동 유효성 검사  
- 유효성 검사를 완전 프로그래밍 방식으로 제어하거나 복잡한 유효성 검사를 수행해야 하는 경우에는 대부분의 Windows Forms 컨트롤에 기본 제공되는 유효성 검사 이벤트를 사용해야 합니다.  자유 형식의 사용자 입력을 받는 각 컨트롤에는 컨트롤에 데이터 유효성 검사가 필요할 때마다 발생하는 <xref:System.Windows.Forms.Control.Validating> 이벤트가 있습니다.  <xref:System.Windows.Forms.Control.Validating> 이벤트 처리 메서드에서는 사용자 입력의 유효성 검사를 다양한 방식으로 수행할 수 있습니다.  예를 들어 우편 번호가 들어가야 하는 텍스트 상자가 있는 경우 다음과 같은 방식으로 유효성 검사를 수행할 수 있습니다.  
+## <a name="event-driven-validation"></a><span data-ttu-id="b1641-116">이벤트 기반 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="b1641-116">Event-Driven Validation</span></span>  
+ <span data-ttu-id="b1641-117">유효성 검사를 보다 완전 프로그래밍 방식으로 제어 하려면 하거나 복잡 한 유효성 검사를 수행 해야 할 경우에 대부분의 Windows Forms 컨트롤에 기본 제공 유효성 검사 이벤트를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-117">If you want full programmatic control over validation, or need to perform complex validation checks, you should use the validation events built into most Windows Forms controls.</span></span> <span data-ttu-id="b1641-118">자유 형식 사용자 입력을 허용 하는 각 컨트롤에는 <xref:System.Windows.Forms.Control.Validating> 컨트롤에 필요한 데이터 유효성 검사 될 때마다 발생 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-118">Each control that accepts free-form user input has a <xref:System.Windows.Forms.Control.Validating> event that will occur whenever the control requires data validation.</span></span> <span data-ttu-id="b1641-119">에 <xref:System.Windows.Forms.Control.Validating> 이벤트 처리 메서드를 여러 가지 방법으로의 사용자 입력 검증할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-119">In the <xref:System.Windows.Forms.Control.Validating> event-handling method, you can validate user input in several ways.</span></span> <span data-ttu-id="b1641-120">예를 들어 우편 번호를 포함 해야 하는 텍스트 상자가 설정한 경우 다음과 같은 방법으로 유효성 검사를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-120">For example, if you have a text box that must contain a postal code, you can perform the validation in the following ways:</span></span>  
   
--   우편 번호가 특정 우편 번호 그룹에 속해야 하는 경우에는 입력에 대해 문자열 비교를 수행하여 사용자가 입력한 데이터의 유효성을 검사할 수 있습니다.  예를 들어 우편 번호가 {10001, 10002, 10003} 집합에 있어야 하는 경우에는 문자열 비교를 수행하여 데이터의 유효성을 검사할 수 있습니다.  
+-   <span data-ttu-id="b1641-121">우편 번호 zip 코드의 특정 그룹에 속해야 합니다, 경우에 사용자가 입력 한 데이터 유효성 검사에 대 한 입력 문자열 비교를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-121">If the postal code must belong to a specific group of zip codes, you can perform a string comparison on the input to validate the data entered by the user.</span></span> <span data-ttu-id="b1641-122">예를 들어 우편 번호는 {10001, 10002, 10003} 집합에 수 있어야 할 경우 문자열 비교를 사용 하 여 데이터 유효성 검사 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-122">For example, if the postal code must be in the set {10001, 10002, 10003}, then you can use a string comparison to validate the data.</span></span>  
   
--   우편 번호가 특정 형태여야 하는 경우에는 정규식을 사용하여 사용자가 입력한 데이터의 유효성을 검사할 수 있습니다.  예를 들어 `#####` 또는 `#####-####` 폼의 유효성을 검사하려면 정규식 `^(\d{5})(-\d{4})?$`를 사용합니다.  `A#A #A#` 폼의 유효성을 검사하려면 정규식 `[A-Z]\d[A-Z] \d[A-Z]\d`를 사용합니다.  정규식에 대한 자세한 내용은 [.NET Framework 정규식](../../../docs/standard/base-types/regular-expressions.md) 및 [정규식 예제](../../../docs/standard/base-types/regular-expression-examples.md)를 참조하십시오.  
+-   <span data-ttu-id="b1641-123">우편 번호 특정 폼에 있어야 하는 경우 사용자가 입력 한 데이터 유효성 검사 정규식을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-123">If the postal code must be in a specific form you can use regular expressions to validate the data entered by the user.</span></span> <span data-ttu-id="b1641-124">예를 들어 양식에 유효성을 검사 하려면 `#####` 또는 `#####-####`, 정규식을 사용할 수 있습니다 `^(\d{5})(-\d{4})?$`합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-124">For example, to validate the form `#####` or `#####-####`, you can use the regular expression `^(\d{5})(-\d{4})?$`.</span></span> <span data-ttu-id="b1641-125">폼 유효성을 검사 하려면 `A#A #A#`, 정규식을 사용할 수 있습니다 `[A-Z]\d[A-Z] \d[A-Z]\d`합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-125">To validate the form `A#A #A#`, you can use the regular expression `[A-Z]\d[A-Z] \d[A-Z]\d`.</span></span> <span data-ttu-id="b1641-126">정규식에 대 한 자세한 내용은 참조 [.NET Framework 정규식](../../../docs/standard/base-types/regular-expressions.md) 및 [일반 식 예제](../../../docs/standard/base-types/regular-expression-examples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-126">For more information about regular expressions, see [.NET Framework Regular Expressions](../../../docs/standard/base-types/regular-expressions.md) and [Regular Expression Examples](../../../docs/standard/base-types/regular-expression-examples.md).</span></span>  
   
--   우편 번호가 유효한 미국 우편 번호여야 하는 경우에는 우편 번호 웹 서비스를 호출하여 사용자가 입력한 데이터의 유효성을 검사할 수 있습니다.  
+-   <span data-ttu-id="b1641-127">우편 번호에 유효한 미국 우편 번호 여야 합니다, 우편 번호 웹 서비스는 사용자가 입력 한 데이터 유효성 검사를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-127">If the postal code must be a valid United States Zip code, you could call a Zip code Web service to validate the data entered by the user.</span></span>  
   
- <xref:System.Windows.Forms.Control.Validating> 이벤트에는 <xref:System.ComponentModel.CancelEventArgs> 형식의 개체가 제공됩니다.  컨트롤의 데이터가 잘못되었음이 확인되면 이 개체의 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 `true`로 설정하여 <xref:System.Windows.Forms.Control.Validating> 이벤트를 취소할 수 있습니다.  <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 설정하지 않으면 Windows Forms은 해당 컨트롤에 대한 유효성 검사가 성공한 것으로 가정하고 <xref:System.Windows.Forms.Control.Validated> 이벤트를 발생시킵니다.  
+ <span data-ttu-id="b1641-128"><xref:System.Windows.Forms.Control.Validating> 이벤트를 제공 하는 형식의 개체로 <xref:System.ComponentModel.CancelEventArgs>합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-128">The <xref:System.Windows.Forms.Control.Validating> event is supplied an object of type <xref:System.ComponentModel.CancelEventArgs>.</span></span> <span data-ttu-id="b1641-129">컨트롤의 데이터가 유효한 지를 확인 하는 경우를 취소할 수는 <xref:System.Windows.Forms.Control.Validating> 이 개체를 설정 하 여 이벤트 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-129">If you determine that the control's data is not valid, you can cancel the <xref:System.Windows.Forms.Control.Validating> event by setting this object's <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property to `true`.</span></span> <span data-ttu-id="b1641-130">설정 하지 않은 경우는 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성, Windows Forms 해당 유효성 검사는 해당 컨트롤에 대 한 성공 가정 되며 발생는 <xref:System.Windows.Forms.Control.Validated> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-130">If you do not set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property, Windows Forms will assume that validation succeeded for that control, and raise the <xref:System.Windows.Forms.Control.Validated> event.</span></span>  
   
- <xref:System.Windows.Controls.TextBox>의 전자 메일 주소에 대한 유효성을 검사하는 코드 예제를 보려면 <xref:System.Windows.Forms.Control.Validating>을 참조하십시오.  
+ <span data-ttu-id="b1641-131">전자 메일 주소 유효성을 검사 하는 코드 예제는 <xref:System.Windows.Controls.TextBox>, 참조 <xref:System.Windows.Forms.Control.Validating>합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-131">For a code example that validates an e-mail address in a <xref:System.Windows.Controls.TextBox>, see <xref:System.Windows.Forms.Control.Validating>.</span></span>  
   
-### 데이터 바인딩 및 이벤트 구동 유효성 검사  
- 유효성 검사는 데이터베이스 테이블과 같은 데이터 소스에 컨트롤을 바인딩한 경우 매우 유용합니다.  유효성 검사를 사용하면 컨트롤의 데이터가 데이터 소스에서 요구하는 형식과 일치하고, 안전하지 않을 수 있는 따옴표와 백슬래시 같은 특수 문자가 포함되지 않도록 할 수 있습니다.  
+### <a name="data-binding-and-event-driven-validation"></a><span data-ttu-id="b1641-132">데이터 바인딩 및 이벤트 기반 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="b1641-132">Data Binding and Event-Driven Validation</span></span>  
+ <span data-ttu-id="b1641-133">유효성 검사 컨트롤 데이터베이스 테이블과 같은 데이터 소스에 바인딩한 경우 매우 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-133">Validation is very useful when you have bound your controls to a data source, such as a database table.</span></span> <span data-ttu-id="b1641-134">하도록 하는 유효성 검사를 사용 하 여 컨트롤의 데이터가 데이터 원본에 필요한 형식과 일치 하는 것 않습니다 하지 인용 부호와 같은 특수 문자를 포함할와 백슬래시는 안전 하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-134">By using validation, you can make sure that your control's data satisfies the format required by the data source, and that it does not contain any special characters such as quotation marks and back slashes that might be unsafe.</span></span>  
   
- 데이터 바인딩을 사용할 경우 컨트롤의 데이터는 <xref:System.Windows.Forms.Control.Validating> 이벤트가 실행되는 동안 데이터 소스와 동기화됩니다.  <xref:System.Windows.Forms.Control.Validating> 이벤트를 취소하면 데이터는 데이터 소스와 동기화되지 않습니다.  
+ <span data-ttu-id="b1641-135">컨트롤에서 데이터가 데이터 바인딩을 사용 하면 실행 하는 동안 데이터 소스와 동기화 되었는지는 <xref:System.Windows.Forms.Control.Validating> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-135">When you use data binding, the data in your control is synchronized with the data source during execution of the <xref:System.Windows.Forms.Control.Validating> event.</span></span> <span data-ttu-id="b1641-136">취소 하는 경우는 <xref:System.Windows.Forms.Control.Validating> 이벤트 데이터를 데이터 소스와 동기화 되지 것입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-136">If you cancel the <xref:System.Windows.Forms.Control.Validating> event, the data will not be synchronized with the data source.</span></span>  
   
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.Control.Validating> 이벤트 이후에 발생하는 사용자 지정 유효성 검사가 있는 경우에는 데이터 바인딩에 영향을 주지 않습니다.  예를 들어 <xref:System.Windows.Forms.Control.Validated> 이벤트에 데이터 바인딩의 취소를 시도하는 코드가 있더라도 데이터 바인딩이 계속 발생합니다.  이 경우 <xref:System.Windows.Forms.Control.Validated> 이벤트에서 유효성 검사를 수행하려면 컨트롤의 **데이터 소스 업데이트 모드** 속성\(**\(Databindings\)**\\**\(Advanced\)** 아래\)을 **OnValidation**에서 **Never**로 변경하고 *Control*`.DataBindings["`*\<YOURFIELD\>*`"].WriteValue()`를 유효성 검사 코드에 추가합니다.  
+>  <span data-ttu-id="b1641-137">사용자 지정 유효성 검사 후 발생 하는 경우는 <xref:System.Windows.Forms.Control.Validating> 이벤트는 달라 지지 것입니다 데이터 바인딩.</span><span class="sxs-lookup"><span data-stu-id="b1641-137">If you have custom validation that takes place after the <xref:System.Windows.Forms.Control.Validating> event, it will not affect the data binding.</span></span> <span data-ttu-id="b1641-138">예를 들어, 코드를 있는 경우는 <xref:System.Windows.Forms.Control.Validated> 데이터 바인딩을 취소 하려고 시도 하는 이벤트, 데이터 바인딩 계속 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-138">For example, if you have code in a <xref:System.Windows.Forms.Control.Validated> event that attempts to cancel the data binding, the data binding will still occur.</span></span> <span data-ttu-id="b1641-139">이 경우에서 유효성 검사를 수행 하는 <xref:System.Windows.Forms.Control.Validated> 이벤트를 컨트롤의 변경 **데이터 원본 업데이트 모드** 속성 (**(Databindings)에서**\\**(고급)** )에서 **OnValidation** 를 **Never**, 추가 *제어*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` 유효성 검사 코드에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-139">In this case, to perform validation in the <xref:System.Windows.Forms.Control.Validated> event, change the control's **Data Source Update Mode** property (**under (Databindings)**\\**(Advanced)**) from **OnValidation** to **Never**, and add *Control*`.DataBindings["`*\<YOURFIELD>*`"].WriteValue()` to your validation code.</span></span>  
   
-### 암시적 유효성 검사와 명시적 유효성 검사  
- 그렇다면 컨트롤의 데이터는 언제 유효성을 검사할까요?  이 시기는 개발자가 결정합니다.  응용 프로그램의 필요에 따라 암시적 유효성 검사 또는 명시적 유효성 검사를 사용할 수 있습니다.  
+### <a name="implicit-and-explicit-validation"></a><span data-ttu-id="b1641-140">암시적 및 명시적 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="b1641-140">Implicit and Explicit Validation</span></span>  
+ <span data-ttu-id="b1641-141">따라서 때는 컨트롤의 데이터 한 유효성 검사를?</span><span class="sxs-lookup"><span data-stu-id="b1641-141">So when does a control's data get validated?</span></span> <span data-ttu-id="b1641-142">사용자, 개발자의 책임입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-142">This is up to you, the developer.</span></span> <span data-ttu-id="b1641-143">응용 프로그램의 필요에 따라 암시적 또는 명시적 유효성 검사를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-143">You can use either implicit or explicit validation, depending on the needs of your application.</span></span>  
   
-#### 암시적 유효성 검사  
- 암시적 유효성 검사 방식에서는 사용자가 입력한 데이터의 유효성을 검사합니다.  컨트롤에 입력되는 데이터에 대한 유효성 검사는 눌려진 키를 읽는 방식으로 수행하거나, 좀 더 일반적으로는 사용자가 입력 포커스를 한 컨트롤에서 다음 컨트롤로 이동할 때마다 수행할 수 있습니다.  이 접근 방식은 사용자에게 데이터에 대한 피드백을 즉각적으로 제공하려는 경우에 유용합니다.  
+#### <a name="implicit-validation"></a><span data-ttu-id="b1641-144">암시적 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="b1641-144">Implicit Validation</span></span>  
+ <span data-ttu-id="b1641-145">암시적 유효성 검사 방식 사용자가 해당 데이터의 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-145">The implicit validation approach validates data as the user enters it.</span></span> <span data-ttu-id="b1641-146">사용자가 입력된 포커스 제어를 사용 하 고 다음으로 이동 될 때마다 일반적으로 데이터 키를 누를 읽는로 컨트롤 이상으로 입력 데이터를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-146">You can validate the data as the data is entered in a control by reading the keys as they are pressed, or more commonly whenever the user takes the input focus away from one control and moves to the next.</span></span> <span data-ttu-id="b1641-147">이 방법은 작업 데이터에 대 한 사용자 즉각적인 피드백을 제공 하려는 경우에 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-147">This approach is useful when you want to give the user immediate feedback about the data as they are working.</span></span>  
   
- 컨트롤에 대해 암시적 유효성 검사를 사용하려는 경우 해당 컨트롤의 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 속성을 `true`로 설정해야 합니다.  <xref:System.Windows.Forms.Control.Validating> 이벤트를 취소할 경우 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>에 할당된 값에 따라 컨트롤의 동작이 결정됩니다.  <xref:System.Windows.Forms.AutoValidate>를 할당한 경우 이벤트를 취소하면 <xref:System.Windows.Forms.Control.Validated> 이벤트가 발생하지 않습니다.  입력 포커스는 사용자가 데이터를 유효한 입력으로 변경할 때까지 현재 컨트롤에 유지됩니다.  <xref:System.Windows.Forms.AutoValidate>를 할당한 경우 이벤트를 취소하면 <xref:System.Windows.Forms.Control.Validated> 이벤트가 발생하지 않지만 포커스는 다음 컨트롤로 이동합니다.  
+ <span data-ttu-id="b1641-148">컨트롤에 대 한 암시적 유효성 검사를 사용 하려는 경우에 해당 컨트롤의 설정 해야 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-148">If you want to use implicit validation for a control, you must set that control's <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> property to `true`.</span></span> <span data-ttu-id="b1641-149">취소 하는 경우는 <xref:System.Windows.Forms.Control.Validating> 이벤트에는 컨트롤의 동작에 할당 하는 값에 의해 결정 됩니다 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-149">If you cancel the <xref:System.Windows.Forms.Control.Validating> event, the behavior of the control will be determined by what value that you assigned to <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>.</span></span> <span data-ttu-id="b1641-150">할당 한 경우 <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>, 이벤트를 취소는 <xref:System.Windows.Forms.Control.Validated> 이벤트를 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-150">If you assigned <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>, canceling the event will cause the <xref:System.Windows.Forms.Control.Validated> event not to occur.</span></span> <span data-ttu-id="b1641-151">사용자 입력에는 데이터를 변경할 때까지 현재 컨트롤에 입력된 포커스 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-151">Input focus will remain on the current control until the user changes the data to a valid input.</span></span> <span data-ttu-id="b1641-152">할당 한 경우 <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>, <xref:System.Windows.Forms.Control.Validated> 이벤트를 취소 하지만 포커스 다음 컨트롤로 때 이벤트가 발생 하지 것입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-152">If you assigned <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>, the <xref:System.Windows.Forms.Control.Validated> event will not occur when you cancel the event, but focus will still change to the next control.</span></span>  
   
- <xref:System.Windows.Forms.AutoValidate>을 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 속성에 할당하면 암시적 유효성 검사도 함께 사용할 수 없게 됩니다.  컨트롤의 유효성을 검사하려면 명시적 유효성 검사를 사용해야 합니다.  
+ <span data-ttu-id="b1641-153">할당 <xref:System.Windows.Forms.AutoValidate.Disable> 에 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 암시적 유효성 검사를 모두 방지 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-153">Assigning <xref:System.Windows.Forms.AutoValidate.Disable> to the <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> property prevents implicit validation altogether.</span></span> <span data-ttu-id="b1641-154">컨트롤의 유효성을 검사 하려면 명시적 유효성 검사를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-154">To validate your controls, you will have to use explicit validation.</span></span>  
   
-#### 명시적 유효성 검사  
- 명시적 유효성 검사 방식에서는 데이터의 유효성을 한 번에 검사합니다.  저장 단추 또는 다음 링크를 클릭하는 등의 사용자 작업에 대해 데이터의 유효성을 검사할 수 있습니다.  사용자 작업이 발생하면 다음 방법 중 하나로 명시적 유효성 검사를 트리거할 수 있습니다.  
+#### <a name="explicit-validation"></a><span data-ttu-id="b1641-155">명시적 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="b1641-155">Explicit Validation</span></span>  
+ <span data-ttu-id="b1641-156">명시적 유효성 검사 방법은 데이터를 한 번에 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-156">The explicit validation approach validates data at one time.</span></span> <span data-ttu-id="b1641-157">저장 단추 또는 다음 링크를 클릭 하는 등의 사용자 작업에 대 한 응답에서 데이터를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-157">You can validate the data in response to a user action, such as clicking a Save button or a Next link.</span></span> <span data-ttu-id="b1641-158">사용자 작업이 발생 하는 경우 다음 방법 중 하나로 명시적 유효성 검사를 트리거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-158">When the user action occurs, you can trigger explicit validation in one of the following ways:</span></span>  
   
--   <xref:System.Windows.Forms.ContainerControl.Validate%2A>를 호출하여 포커스를 잃은 마지막 컨트롤의 유효성을 검사합니다.  
+-   <span data-ttu-id="b1641-159">호출 <xref:System.Windows.Forms.ContainerControl.Validate%2A> 에 포커스를 잃은 마지막 컨트롤의 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-159">Call <xref:System.Windows.Forms.ContainerControl.Validate%2A> to validate the last control to have lost focus.</span></span>  
   
--   <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>을 호출하여 폼 또는 컨테이너 컨트롤에 있는 모든 자식 컨트롤의 유효성을 검사합니다.  
+-   <span data-ttu-id="b1641-160">호출 <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> 를 폼 이나 컨테이너 컨트롤로의 모든 자식 컨트롤의 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-160">Call <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> to validate all child controls in a form or container control.</span></span>  
   
--   사용자 지정 메서드를 호출하여 컨트롤에 있는 데이터의 유효성을 수동으로 검사합니다.  
+-   <span data-ttu-id="b1641-161">컨트롤의 데이터를 수동으로 유효성을 검사 하는 사용자 지정 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-161">Call a custom method to validate the data in the controls manually.</span></span>  
   
-#### Windows Forms 컨트롤의 기본 암시적 유효성 검사 동작  
- <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 속성은 Windows Forms 컨트롤마다 기본값이 다릅니다.  다음 표에서는 가장 일반적인 컨트롤과 해당 기본값을 보여 줍니다.  
+#### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a><span data-ttu-id="b1641-162">기본 암시적 유효성 검사 동작에 대 한 Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="b1641-162">Default Implicit Validation Behavior for Windows Forms Controls</span></span>  
+ <span data-ttu-id="b1641-163">다른 Windows Forms 컨트롤에 대 한 기본값은 다를 자신의 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-163">Different Windows Forms controls have different defaults for their <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> property.</span></span> <span data-ttu-id="b1641-164">다음 표에서 가장 일반적인 컨트롤과 해당 기본값을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-164">The following table shows the most common controls and their defaults.</span></span>  
   
-|컨트롤|기본 유효성 검사 동작|  
-|---------|------------------|  
-|<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate>|  
-|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate>|  
-|<xref:System.Windows.Forms.PropertyGrid>|Visual Studio에서는 노출되지 않는 속성입니다.|  
-|<xref:System.Windows.Forms.ToolStripContainer>|Visual Studio에서는 노출되지 않는 속성입니다.|  
-|<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Forms.AutoValidate>|  
-|<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Forms.AutoValidate>|  
+|<span data-ttu-id="b1641-165">컨트롤</span><span class="sxs-lookup"><span data-stu-id="b1641-165">Control</span></span>|<span data-ttu-id="b1641-166">기본 유효성 검사 동작</span><span class="sxs-lookup"><span data-stu-id="b1641-166">Default Validation Behavior</span></span>|  
+|-------------|---------------------------------|  
+|<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
+|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
+|<xref:System.Windows.Forms.PropertyGrid>|<span data-ttu-id="b1641-167">Visual Studio에서 노출 되지 않지만 속성</span><span class="sxs-lookup"><span data-stu-id="b1641-167">Property not exposed in Visual Studio</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer>|<span data-ttu-id="b1641-168">Visual Studio에서 노출 되지 않지만 속성</span><span class="sxs-lookup"><span data-stu-id="b1641-168">Property not exposed in Visual Studio</span></span>|  
+|<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
+|<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
   
-## 폼 닫기 및 유효성 검사 무시  
- 포함된 데이터가 올바르지 않기 때문에 컨트롤에서 포커스가 이동하지 못하는 경우 다음과 같은 방법으로는 부모 폼을 닫을 수 없습니다.  
+## <a name="closing-the-form-and-overriding-validation"></a><span data-ttu-id="b1641-169">양식을 닫기 및 유효성 검사 무시</span><span class="sxs-lookup"><span data-stu-id="b1641-169">Closing the Form and Overriding Validation</span></span>  
+ <span data-ttu-id="b1641-170">컨트롤에서 포함 된 데이터가 유효 하지 않아서 포커스가 때 일반적인 방법 중 하나로 부모 폼을 닫을 수 없으면:</span><span class="sxs-lookup"><span data-stu-id="b1641-170">When a control maintains focus because the data it contains is invalid, it is impossible to close the parent form in one of the usual ways:</span></span>  
   
--   **닫기** 단추 클릭  
+-   <span data-ttu-id="b1641-171">클릭 하 여는 **닫기** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-171">By clicking the **Close** button.</span></span>  
   
--   **시스템** 메뉴의 **닫기** 선택  
+-   <span data-ttu-id="b1641-172">선택 하 여 **닫기** 에 **시스템** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="b1641-172">By selecting **Close** in the **System** menu.</span></span>  
   
--   프로그래밍 방식으로 <xref:System.Windows.Forms.Form.Close%2A> 메서드 호출  
+-   <span data-ttu-id="b1641-173">호출 하 여는 <xref:System.Windows.Forms.Form.Close%2A> 메서드 프로그래밍 방식으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-173">By calling the <xref:System.Windows.Forms.Form.Close%2A> method programmatically.</span></span>  
   
- 그러나 컨트롤의 값이 올바른지 여부에 상관없이 사용자가 폼을 닫을 수 있도록 해야 하는 경우가 있습니다.  폼의 <xref:System.Windows.Forms.Form.Closing> 이벤트에 대한 처리기를 만들어 유효성 검사를 재정의하고 올바르지 않은 데이터가 들어 있는 폼을 닫을 수 있습니다.  이벤트에서 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 `false`로 설정합니다.  그러면 폼이 강제로 닫힙니다.  자세한 내용과 예제는 <xref:System.Windows.Forms.Form.Closing?displayProperty=fullName>을 참조하십시오.  
+ <span data-ttu-id="b1641-174">하지만, 경우에 따라 컨트롤의 값이 올바른지 여부에 관계 없이 폼을 닫을 수 있도록 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-174">However, in some cases, you might want to let the user close the form regardless of whether the values in the controls are valid.</span></span> <span data-ttu-id="b1641-175">유효성 검사를 무시 하 고 폼의에 대 한 처리기를 만들고 잘못 된 데이터를 여전히 포함 되어 있는 폼을 닫을 수도 <xref:System.Windows.Forms.Form.Closing> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-175">You can override validation and close a form that still contains invalid data by creating a handler for the form's <xref:System.Windows.Forms.Form.Closing> event.</span></span> <span data-ttu-id="b1641-176">이벤트에 설정 된 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-176">In the event, set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property to `false`.</span></span> <span data-ttu-id="b1641-177">이렇게 하면 폼을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-177">This forces the form to close.</span></span> <span data-ttu-id="b1641-178">자세한 내용과 예제는 <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b1641-178">For more information and an example, see <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.</span></span>  
   
 > [!NOTE]
->  이런 식으로 폼을 강제로 닫는 경우 폼의 컨트롤에 있는 저장되지 않은 데이터가 손실됩니다.  또한 모달 폼은 폼을 닫을 때 컨트롤 내용의 유효성을 검사하지 않습니다.  컨트롤 유효성 검사를 통해 컨트롤에 대한 포커스를 잠글 수는 있지만 폼을 닫는 동작에 대해서는 신경 쓸 필요가 없습니다.  
+>  <span data-ttu-id="b1641-179">해당 폼을 이런이 방식으로 실행 하면 저장 되지 않은 폼의 컨트롤에서 모든 데이터는 손실 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-179">If you force the form to close in this manner, any data in the form's controls that has not already been saved is lost.</span></span> <span data-ttu-id="b1641-180">또한 모달 폼 닫을 때 컨트롤의 내용을 확인 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-180">In addition, modal forms do not validate the contents of controls when they are closed.</span></span> <span data-ttu-id="b1641-181">컨트롤에 포커스를 잠그려면 컨트롤 유효성 검사를 계속 사용할 수 있습니다 하지만 양식을 닫기와 관련 된 동작에 대 한 신경 쓸 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b1641-181">You can still use control validation to lock focus to a control, but you do not have to be concerned about the behavior associated with closing the form.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>   
- <xref:System.Windows.Forms.Form.Closing?displayProperty=fullName>   
- <xref:System.ComponentModel.CancelEventArgs?displayProperty=fullName>   
- [MaskedTextBox 컨트롤](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)   
- [정규식 예제](../../../docs/standard/base-types/regular-expression-examples.md)
+## <a name="see-also"></a><span data-ttu-id="b1641-182">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b1641-182">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
+ <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>  
+ [<span data-ttu-id="b1641-183">MaskedTextBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="b1641-183">MaskedTextBox Control</span></span>](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="b1641-184">정규식 예제</span><span class="sxs-lookup"><span data-stu-id="b1641-184">Regular Expression Examples</span></span>](../../../docs/standard/base-types/regular-expression-examples.md)

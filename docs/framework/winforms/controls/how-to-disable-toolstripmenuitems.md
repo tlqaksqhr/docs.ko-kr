@@ -1,36 +1,41 @@
 ---
-title: "방법: ToolStripMenuItems 사용 안 함 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "메뉴 항목 사용 안 함"
-  - "메뉴 항목, 비활성화"
-  - "메뉴 항목, 사용"
-  - "메뉴, 메뉴 항목 사용 안 함"
-  - "ToolStripMenuItems, 비활성화"
-  - "ToolStripMenuItems, 사용"
+title: "방법: ToolStripMenuItems 사용 안 함"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ToolStripMenuItems [Windows Forms], enabling
+- ToolStripMenuItems [Windows Forms], disabling
+- menu items [Windows Forms], disabling
+- disabling menu items
+- menu items [Windows Forms], enabling
+- menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e3307da3e0810ea775c799a4b065e1f7484b5779
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: ToolStripMenuItems 사용 안 함
-사용자의 동작에 따라 메뉴 항목을 활성화 또는 비활성화하여 사용자가 수행하는 명령을 제한하거나 확장할 수 있습니다.  메뉴 항목은 처음 만들 때 기본적으로 활성화되지만 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 속성을 통해 조정할 수 있습니다.  이 속성은 디자인 타임에 **속성** 창에서 조작하거나, 코드로 설정하여 프로그래밍 방식으로 조작할 수 있습니다.  
+# <a name="how-to-disable-toolstripmenuitems"></a><span data-ttu-id="7bde5-102">방법: ToolStripMenuItems 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="7bde5-102">How to: Disable ToolStripMenuItems</span></span>
+<span data-ttu-id="7bde5-103">제한 하거나 사용자의 동작에 대 한 응답으로 메뉴 항목을 설정 하거나 해제 하 여 사용자가 수행 하는 명령을 넓힐 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7bde5-103">You can limit or broaden the commands a user may make by enabling and disabling menu items in response to user activities.</span></span> <span data-ttu-id="7bde5-104">메뉴 항목은 기본적으로 활성화 만들어질 때 통해 조정할 수 있습니다는 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="7bde5-104">Menu items are enabled by default when they are created, but this can be adjusted through the <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> property.</span></span> <span data-ttu-id="7bde5-105">디자인 타임에이 속성을 조작할 수 있습니다는 **속성** 창 또는 코드에서 설정 하 여 프로그래밍 방식으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bde5-105">You can manipulate this property at design time in the **Properties** window or programmatically by setting it in code.</span></span>  
   
-### 프로그래밍 방식으로 메뉴를 비활성화하려면  
+### <a name="to-disable-a-menu-item-programmatically"></a><span data-ttu-id="7bde5-106">메뉴 항목을 프로그래밍 방식으로 사용 하지 않도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="7bde5-106">To disable a menu item programmatically</span></span>  
   
--   메뉴 항목의 속성을 설정하는 메서드에 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 속성을 `false`로 설정하는 코드를 추가합니다.  
+-   <span data-ttu-id="7bde5-107">메뉴 항목의 속성을 설정 하는 메서드를 추가 설정 하는 코드는 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 속성을 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="7bde5-107">Within the method where you set the properties of the menu item, add code to set the <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> property to `false`.</span></span>  
   
     ```vb  
     MenuItem1.Enabled = False  
@@ -45,10 +50,10 @@ caps.handback.revision: 15
     ```  
   
     > [!TIP]
-    >  메뉴에서 첫 번째 항목 또는 최상위 항목을 비활성화하면 해당 메뉴에 포함된 모든 메뉴 항목이 숨겨지지만 비활성화되지는 않습니다.  마찬가지로 하위 메뉴 항목을 가진 메뉴 항목을 비활성화하면 해당 하위 메뉴 항목이 숨겨지지만 비활성화되지 않습니다.  특정 메뉴의 모든 명령이 사용할 수 없는 명령일 경우 사용자 인터페이스를 명확하게 표시하기 위해 전체 메뉴를 숨기고 비활성화하는 것이 바람직한 프로그래밍 습관입니다.  메뉴 항목을 숨기기만 할 경우 바로 가기 키를 통해 메뉴 명령에 액세스하는 것을 방지할 수 없으므로 메뉴를 숨기고 비활성화한 다음 모든 항목과 해당 메뉴의 모든 하위 메뉴 항목을 비활성화해야 합니다.  최상위 메뉴 항목의 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 속성을 `false`로 설정하여 전체 메뉴를 숨깁니다.  
+    >  <span data-ttu-id="7bde5-108">메뉴의 첫 번째 또는 최상위 메뉴 항목을 사용 하지 않도록 설정 메뉴에서 내에 포함 된 모든 메뉴 항목 숨겨지지만 비활성화 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7bde5-108">Disabling the first or top-level menu item in a menu hides all the menu items contained within the menu, but does not disable them.</span></span> <span data-ttu-id="7bde5-109">마찬가지로, 하위 메뉴 항목이 포함 된 메뉴 항목을 비활성화 하면 하위 메뉴 항목을 숨깁니다 하지만 비활성화 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7bde5-109">Likewise, disabling a menu item that has submenu items hides the submenu items, but does not disable them.</span></span> <span data-ttu-id="7bde5-110">메뉴의 모든 명령을 사용자에 게 사용할 수 없을 경우이 인해 사용자 인터페이스를 명확 하는 대로 숨기고 전체 메뉴를 사용 하지 않도록 설정 하는 바람직한 프로그래밍 관행을 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7bde5-110">If all the commands on a given menu are unavailable to the user, it is considered good programming practice to both hide and disable the entire menu, as this presents a clean user interface.</span></span> <span data-ttu-id="7bde5-111">숨기기 및 메뉴를 사용 하지 않도록 설정 하 고 숨기기만 하더라도 사용자는 바로 가기 키를 통해 메뉴 명령에 액세스 하기 때문에 모든 항목과 하위 메뉴 항목 메뉴를 사용 하지 않도록 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bde5-111">You should hide and disable the menu, and disable every item and submenu item in the menu, because hiding alone does not prevent access to a menu command via a shortcut key.</span></span> <span data-ttu-id="7bde5-112">설정의 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 에 최상위 메뉴 항목의 `false` 전체 메뉴를 숨기 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bde5-112">Set the <xref:System.Windows.Forms.ToolStripItem.Visible%2A> property of a top-level menu item to `false` to hide the entire menu.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [방법: ToolStripMenuItems 숨기기](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)   
- [MenuStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="7bde5-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7bde5-113">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [<span data-ttu-id="7bde5-114">방법: ToolStripMenuItems 숨기기</span><span class="sxs-lookup"><span data-stu-id="7bde5-114">How to: Hide ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
+ [<span data-ttu-id="7bde5-115">MenuStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="7bde5-115">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

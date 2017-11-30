@@ -1,61 +1,66 @@
 ---
-title: "구조적 탐색 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "구조적 탐색[WPF]"
+title: "구조적 탐색 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-caps.latest.revision: 43
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 36
+caps.latest.revision: "43"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b241e9a2dbe84833f43dadb2e979e5ee079706a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 구조적 탐색 개요
-[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame> 또는 <xref:System.Windows.Navigation.NavigationWindow>에서 호스팅될 수 있는 콘텐츠는 Pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]로 식별되고 하이퍼링크를 통해 탐색 가능한 페이지로 구성됩니다.  페이지의 구조 및 하이퍼링크로 정의되는 페이지 탐색 방법을 탐색 토폴로지라고 합니다.  이러한 토폴로지는 다양한 종류의 응용 프로그램, 특히 문서를 탐색하는 응용 프로그램에 적합합니다.  이러한 응용 프로그램에서 사용자는 각 페이지에 대한 아무런 정보 없이 특정 페이지에서 다른 페이지를 탐색할 수 있습니다.  
+# <a name="structured-navigation-overview"></a><span data-ttu-id="3d35d-102">구조적 탐색 개요</span><span class="sxs-lookup"><span data-stu-id="3d35d-102">Structured Navigation Overview</span></span>
+<span data-ttu-id="3d35d-103">호스팅될 수 있는 콘텐츠는 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, 또는 <xref:System.Windows.Navigation.NavigationWindow> 팩으로 식별할 수 있는 페이지로 구성 됩니다 [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] 하이퍼링크로 탐색할 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-103">Content that can be hosted by an [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], a <xref:System.Windows.Controls.Frame>, or a <xref:System.Windows.Navigation.NavigationWindow> is composed of pages that can be identified by pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] and navigated to by hyperlinks.</span></span> <span data-ttu-id="3d35d-104">하이퍼링크를 통해 정의되는 페이지 및 페이지 탐색 방법의 구조를 탐색 토폴로지라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-104">The structure of pages and the ways in which they can be navigated, as defined by hyperlinks, is known as a navigation topology.</span></span> <span data-ttu-id="3d35d-105">이 토폴로지는 다양한 응용 프로그램 형식, 특히 문서를 탐색하는 응용 프로그램에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-105">Such a topology suits a variety of application types, particularly those that navigate through documents.</span></span> <span data-ttu-id="3d35d-106">해당 응용 프로그램의 경우 한쪽 페이지가 다른 페이지에 대해 아무것도 알 필요 없이 사용자가 페이지 사이에서 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-106">For such applications, the user can navigate from one page to another page without either page needing to know anything about the other.</span></span>  
   
- 그러나 페이지에 탐색 시점 정보가 필요한 다른 종류의 응용 프로그램도 있습니다.  예를 들어 인사 관리 응용 프로그램에 회사의 모든 직원이 나열된 "직원 목록" 페이지가 있다고 가정해 보겠습니다.  이 페이지에서는 하이퍼링크를 클릭하여 새 직원을 추가할 수도 있습니다.  하이퍼링크를 클릭하면 "직원 추가" 페이지로 이동하여 새 직원에 대한 정보를 수집한 후 "직원 목록" 페이지로 돌아가 새 직원을 만들고 목록을 업데이트할 수 있습니다.  이러한 스타일의 탐색은 메서드를 호출하여 처리 작업을 수행한 후 값을 반환하는 구조적 프로그래밍과 유사합니다.  이러한 이유로 이러한 스타일의 탐색을 *구조적 탐색*이라고 합니다.  
+ <span data-ttu-id="3d35d-107">하지만 다른 유형의 응용 프로그램 형식에는 페이지를 탐색할 때 알아야 하는 페이지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-107">However, other types of applications have pages that do need to know when they have been navigated between.</span></span> <span data-ttu-id="3d35d-108">예를 들어 조직의 모든 직원을 나열하는 하나의 "직원 목록" 페이지가 있는 인사 관리 응용 프로그램을 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-108">For example, consider a human resources application that has one page to list all the employees in an organization—the "List Employees" page.</span></span> <span data-ttu-id="3d35d-109">이 페이지에서 사용자는 하이퍼링크를 클릭하여 새 직원을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-109">This page could also allow users to add a new employee by clicking a hyperlink.</span></span> <span data-ttu-id="3d35d-110">클릭되면 페이지가 "직원 추가" 페이지로 이동하여 새 직원의 세부 정보를 수집하고 이를 "직원 목록" 페이지로 반환하여 새 직원을 만들고 목록을 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-110">When clicked, the page navigates to an "Add an Employee" page to gather the new employee's details and return them to the "List Employees" page to create the new employee and update the list.</span></span> <span data-ttu-id="3d35d-111">이 탐색 스타일은 처리를 수행하고 값을 반환하는 구조적 프로그래밍이라고 알려진 메서드 호출과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-111">This style of navigation is similar to calling a method to perform some processing and return a value, which is known as structured programming.</span></span> <span data-ttu-id="3d35d-112">마찬가지로 이 탐색 스타일을 *구조적 탐색*이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-112">As such, this style of navigation is known as *structured navigation*.</span></span>  
   
- <xref:System.Windows.Controls.Page> 클래스는 구조적 탐색을 지원하지 않습니다.  대신 <xref:System.Windows.Controls.Page>에서 <xref:System.Windows.Navigation.PageFunction%601> 클래스가 파생되어 구조적 탐색에 필요한 기본 생성자를 제공합니다.  이 항목에서는 <xref:System.Windows.Navigation.PageFunction%601>을 사용하여 구조적 탐색을 설정하는 방법을 보여 줍니다.  
+ <span data-ttu-id="3d35d-113"><xref:System.Windows.Controls.Page> 클래스 구조적된 탐색에 대 한 지원을 구현 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-113">The <xref:System.Windows.Controls.Page> class doesn't implement support for structured navigation.</span></span> <span data-ttu-id="3d35d-114">대신,는 <xref:System.Windows.Navigation.PageFunction%601> 클래스에서 파생 <xref:System.Windows.Controls.Page> 구조적된 탐색에 필요한 기본 생성자를 사용 하도록 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-114">Instead, the <xref:System.Windows.Navigation.PageFunction%601> class derives from <xref:System.Windows.Controls.Page> and extends it with the basic constructs required for structured navigation.</span></span> <span data-ttu-id="3d35d-115">이 항목에서는 다음을 사용 하 여 구조적된 탐색을 설정 하는 방법을 보여 줍니다. <xref:System.Windows.Navigation.PageFunction%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-115">This topic shows how to establish structured navigation using <xref:System.Windows.Navigation.PageFunction%601>.</span></span>  
   
-   
+ 
   
 <a name="Structured_Navigation"></a>   
-## 구조적 탐색  
- 구조적 탐색에서 특정 페이지가 다른 페이지를 호출하는 경우 다음 동작의 일부 또는 전체가 수행되어야 합니다.  
+## <a name="structured-navigation"></a><span data-ttu-id="3d35d-116">구조적 탐색</span><span class="sxs-lookup"><span data-stu-id="3d35d-116">Structured Navigation</span></span>  
+ <span data-ttu-id="3d35d-117">구조적 탐색에서 한 페이지가 다른 페이지를 호출하면 다음 동작의 일부 또는 전체가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-117">When one page calls another page in a structured navigation, some or all of the following behaviors are required:</span></span>  
   
--   호출 페이지가 호출 대상 페이지를 탐색하고, 호출 대상 페이지에 필요한 매개 변수를 선택적으로 전달합니다.  
+-   <span data-ttu-id="3d35d-118">호출 페이지는 호출된 페이지로 이동하고 필요한 경우 호출된 페이지에 필요한 매개 변수를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-118">The calling page navigates to the called page, optionally passing parameters required by the called page.</span></span>  
   
--   호출 페이지를 사용하는 작업을 완료하면 호출 대상 페이지는 호출 페이지로 돌아가고 선택적으로 다음과 같은 작업을 수행합니다.  
+-   <span data-ttu-id="3d35d-119">사용자가 호출 페이지 사용을 마치면 호출된 페이지는 필요한 경우 특별히 호출 페이지로 돌아갑니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-119">The called page, when a user has completed using the calling page, returns specifically to the calling page, optionally:</span></span>  
   
-    -   호출 페이지가 완료된 방법을 설명하는 상태 정보를 반환합니다\(예: 사용자가 OK 단추 또는 Cancel 단추를 눌렀는지 여부\).  
+    -   <span data-ttu-id="3d35d-120">호출 페이지가 완료된 방식을 설명하는 상태 정보 반환(예: 사용자가 [확인] 단추나 [취소] 단추를 눌렀는지 여부).</span><span class="sxs-lookup"><span data-stu-id="3d35d-120">Returning state information that describes how the calling page was completed (for example, whether a user pressed an OK button or a Cancel button).</span></span>  
   
-    -   사용자로부터 수집한 데이터를 반환합니다\(예: 새 직원 정보\).  
+    -   <span data-ttu-id="3d35d-121">사용자로부터 수집된 데이터 반환(예: 새 직원 세부 정보).</span><span class="sxs-lookup"><span data-stu-id="3d35d-121">Returning that data that was collected from the user (for example, new employee details).</span></span>  
   
--   호출 페이지가 호출 대상 페이지로 돌아가면 호출 대상 페이지의 각 인스턴스를 구분하기 위해 호출 대상 페이지가 탐색 기록에서 제거됩니다.  
+-   <span data-ttu-id="3d35d-122">호출 페이지가 호출된 페이지로 돌아가면 호출된 페이지 인스턴스를 다른 인스턴스와 격리하기 위해 호출된 페이지가 탐색 기록에서 제거됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-122">When the calling page returns to the called page, the called page is removed from navigation history to isolate one instance of a called page from another.</span></span>  
   
- 다음 그림에서는 이러한 동작을 보여 줍니다.  
+ <span data-ttu-id="3d35d-123">다음 그림에서는 이러한 동작을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-123">These behaviors are illustrated by the following figure.</span></span>  
   
- ![호출 페이지와 호출된 페이지 사이의 흐름](../../../../docs/framework/wpf/app-development/media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")  
+ <span data-ttu-id="3d35d-124">![호출 페이지와 호출된 페이지 사이의 흐름](../../../../docs/framework/wpf/app-development/media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")</span><span class="sxs-lookup"><span data-stu-id="3d35d-124">![Flow between calling page and called page](../../../../docs/framework/wpf/app-development/media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")</span></span>  
   
- <xref:System.Windows.Navigation.PageFunction%601>을 호출 대상 페이지로 사용하여 이러한 동작을 구현할 수 있습니다.  
+ <span data-ttu-id="3d35d-125">사용 하 여 이러한 동작을 구현할 수는 <xref:System.Windows.Navigation.PageFunction%601> 으로 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-125">You can implement these behaviors by using a <xref:System.Windows.Navigation.PageFunction%601> as the called page.</span></span>  
   
 <a name="Structured_Navigation_with_PageFunction"></a>   
-## PageFunction을 통한 구조적 탐색  
- 이 항목에서는 <xref:System.Windows.Navigation.PageFunction%601> 하나로 구성된 구조적 탐색의 기본 기술을 구현하는 방법을 보여 줍니다.  이 샘플에서 <xref:System.Windows.Controls.Page>는 <xref:System.Windows.Navigation.PageFunction%601>을 호출하여 사용자로부터 <xref:System.String> 값을 받은 후 해당 값을 반환합니다.  
+## <a name="structured-navigation-with-pagefunction"></a><span data-ttu-id="3d35d-126">PageFunction을 사용한 구조적 탐색</span><span class="sxs-lookup"><span data-stu-id="3d35d-126">Structured Navigation with PageFunction</span></span>  
+ <span data-ttu-id="3d35d-127">이 항목에서는 단일 구성 된 구조적된 탐색의 기본 메커니즘을 구현 하는 방법을 보여 줍니다. <xref:System.Windows.Navigation.PageFunction%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-127">This topic shows how to implement the basic mechanics of structured navigation involving a single <xref:System.Windows.Navigation.PageFunction%601>.</span></span> <span data-ttu-id="3d35d-128">이 샘플에는 <xref:System.Windows.Controls.Page> 호출은 <xref:System.Windows.Navigation.PageFunction%601> 가져오려는 <xref:System.String> 사용자 로부터 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-128">In this sample, a <xref:System.Windows.Controls.Page> calls a <xref:System.Windows.Navigation.PageFunction%601> to get a <xref:System.String> value from the user and return it.</span></span>  
   
-### 호출 페이지 만들기  
- <xref:System.Windows.Navigation.PageFunction%601>을 호출하는 페이지는 <xref:System.Windows.Controls.Page> 또는 <xref:System.Windows.Navigation.PageFunction%601>일 수 있습니다.  이 예제에서 호출 페이지는 다음 코드에 나와 있는 것과 같이 <xref:System.Windows.Controls.Page>입니다.  
+### <a name="creating-a-calling-page"></a><span data-ttu-id="3d35d-129">호출 페이지 만들기</span><span class="sxs-lookup"><span data-stu-id="3d35d-129">Creating a Calling Page</span></span>  
+ <span data-ttu-id="3d35d-130">호출 하는 페이지는 <xref:System.Windows.Navigation.PageFunction%601> 일 수 있습니다는 <xref:System.Windows.Controls.Page> 또는 <xref:System.Windows.Navigation.PageFunction%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-130">The page that calls a <xref:System.Windows.Navigation.PageFunction%601> can be either a <xref:System.Windows.Controls.Page> or a <xref:System.Windows.Navigation.PageFunction%601>.</span></span> <span data-ttu-id="3d35d-131">이 예제는 <xref:System.Windows.Controls.Page>다음 코드에 나온 것 처럼 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-131">In this example, it is a <xref:System.Windows.Controls.Page>, as shown in the following code.</span></span>  
   
- [!code-xml[StructuredNavigationSample#CallingPageDefaultMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup1)]  
-[!code-xml[StructuredNavigationSample#CallingPageDefaultMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup2)]  
+ [!code-xaml[StructuredNavigationSample#CallingPageDefaultMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup1)]  
+[!code-xaml[StructuredNavigationSample#CallingPageDefaultMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup2)]  
   
  [!code-csharp[StructuredNavigationSample#CallingPageDefaultCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#callingpagedefaultcodebehind1)]
  [!code-vb[StructuredNavigationSample#CallingPageDefaultCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#callingpagedefaultcodebehind1)]  
@@ -64,40 +69,41 @@ caps.handback.revision: 36
 [!code-csharp[StructuredNavigationSample#CallingPageDefaultCODEBEHIND3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#callingpagedefaultcodebehind3)]
 [!code-vb[StructuredNavigationSample#CallingPageDefaultCODEBEHIND3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#callingpagedefaultcodebehind3)]  
   
-### 호출할 페이지 함수 만들기  
- 호출 페이지는 호출 대상 페이지를 사용하여 사용자로부터 데이터를 수집하여 반환할 수 있기 때문에 <xref:System.Windows.Navigation.PageFunction%601>은 제네릭 클래스로 구현되고, 이 클래스의 형식 인수는 호출 대상 페이지가 반환할 값의 형식을 지정합니다.  다음 코드에서는 <xref:System.Windows.Navigation.PageFunction%601>을 사용하여 구현되고 <xref:System.String>을 반환하는 호출 대상 페이지의 초기 구현을 보여 줍니다.  
+### <a name="creating-a-page-function-to-call"></a><span data-ttu-id="3d35d-132">호출할 페이지 함수 만들기</span><span class="sxs-lookup"><span data-stu-id="3d35d-132">Creating a Page Function to Call</span></span>  
+ <span data-ttu-id="3d35d-133">호출 페이지를 수집 하는 사용자 로부터 데이터를 반환 합니다. 호출된 된 페이지를 사용할 수 있으므로 <xref:System.Windows.Navigation.PageFunction%601> 의 형식 인수에는 호출에서 반환 되는 값의 형식을 지정 하는 제네릭 클래스로 구현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-133">Because the calling page can use the called page to collect and return data from the user, <xref:System.Windows.Navigation.PageFunction%601> is implemented as a generic class whose type argument specifies the type of the value that the called page will return.</span></span> <span data-ttu-id="3d35d-134">다음 코드에서는 호출 된 초기 구현 페이지를 사용 하 여는 <xref:System.Windows.Navigation.PageFunction%601>를 반환 하는 <xref:System.String>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-134">The following code shows the initial implementation of the called page, using a <xref:System.Windows.Navigation.PageFunction%601>, which returns a <xref:System.String>.</span></span>  
   
- [!code-xml[StructuredNavigationSample#CalledPageFunctionMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml#calledpagefunctionmarkup)]  
+ [!code-xaml[StructuredNavigationSample#CalledPageFunctionMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml#calledpagefunctionmarkup)]  
   
  [!code-csharp[StructuredNavigationSample#CalledPageFunctionCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#calledpagefunctioncodebehind1)]
  [!code-vb[StructuredNavigationSample#CalledPageFunctionCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#calledpagefunctioncodebehind1)]  
 [!code-csharp[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#calledpagefunctioncodebehind2)]
 [!code-vb[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#calledpagefunctioncodebehind2)]  
   
- <xref:System.Windows.Navigation.PageFunction%601> 선언은 형식 인수가 추가된다는 점을 제외하고는 <xref:System.Windows.Controls.Page> 선언과 유사합니다.  코드 예제에서 알 수 있듯이 형식 인수는 `x:TypeArguments` 특성을 사용하여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그에도 지정되고, 표준 제네릭 형식 인수 구문을 사용하여 숨김 코드에도 지정됩니다.  
+ <span data-ttu-id="3d35d-135">선언은 <xref:System.Windows.Navigation.PageFunction%601> 선언의 비슷합니다는 <xref:System.Windows.Controls.Page> 형식 인수를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-135">The declaration of a <xref:System.Windows.Navigation.PageFunction%601> is similar to the declaration of a <xref:System.Windows.Controls.Page> with the addition of the type arguments.</span></span> <span data-ttu-id="3d35d-136">코드 예제에서 확인할 수 있는 것처럼 형식 인수는 `x:TypeArguments` 특성을 사용하여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그에서 지정되고 표준 제네릭 형식 인수 구문을 사용하여 코드 숨김에서 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-136">As you can see from the code example, the type arguments are specified in both [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup, using the `x:TypeArguments` attribute, and code-behind, using standard generic type argument syntax.</span></span>  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스만 형식 인수로 사용할 수 있는 것은 아닙니다.  <xref:System.Windows.Navigation.PageFunction%601>을 호출하여 사용자 지정 형식으로 추상화된 도메인별 데이터를 수집할 수도 있습니다.  다음 코드에서는 사용자 지정 형식을 <xref:System.Windows.Navigation.PageFunction%601>의 형식 인수로 사용하는 방법을 보여 줍니다.  
+ <span data-ttu-id="3d35d-137">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스만 형식 인수로 사용할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-137">You don't have to use only [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] classes as type arguments.</span></span> <span data-ttu-id="3d35d-138">A <xref:System.Windows.Navigation.PageFunction%601> 사용자 지정 형식으로 추출 하는 도메인 별로 데이터를 수집 하기 위해 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-138">A <xref:System.Windows.Navigation.PageFunction%601> could be called to gather domain-specific data that is abstracted as a custom type.</span></span> <span data-ttu-id="3d35d-139">다음 코드에서는 사용자 지정 형식에 대 한 형식 인수로 사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Navigation.PageFunction%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-139">The following code shows how to use a custom type as a type argument for a <xref:System.Windows.Navigation.PageFunction%601>.</span></span>  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode2)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode2)]  
   
- [!code-xml[CustomTypePageFunctionSnippets#CustomTypePageFunctionMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml#customtypepagefunctionmarkup1)]  
-[!code-xml[CustomTypePageFunctionSnippets#CustomTypePageFunctionMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml#customtypepagefunctionmarkup2)]  
+ [!code-xaml[CustomTypePageFunctionSnippets#CustomTypePageFunctionMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml#customtypepagefunctionmarkup1)]  
+[!code-xaml[CustomTypePageFunctionSnippets#CustomTypePageFunctionMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml#customtypepagefunctionmarkup2)]  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml.cs#customtypepagefunctioncodebehind1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomTypePageFunction.xaml.vb#customtypepagefunctioncodebehind1)]  
+[!code-csharp[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml.cs#customtypepagefunctioncodebehind2)]
+[!code-vb[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomTypePageFunction.xaml.vb#customtypepagefunctioncodebehind2)]  
   
+ <span data-ttu-id="3d35d-140">에 대 한 형식 인수는 <xref:System.Windows.Navigation.PageFunction%601> 다음 섹션에서 설명 하는 호출 페이지와 호출된 된 페이지 간 통신에 대 한 기초를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-140">The type arguments for the <xref:System.Windows.Navigation.PageFunction%601> provide the foundation for the communication between a calling page and the called page, which are discussed in the following sections.</span></span>  
   
- <xref:System.Windows.Navigation.PageFunction%601>의 형식 인수는 호출 페이지와 호출 대상 페이지 사이의 통신 기반을 제공합니다. 자세한 내용은 다음 단원에서 설명합니다.  
+ <span data-ttu-id="3d35d-141">하겠지만의 선언으로 식별 되는 형식은 <xref:System.Windows.Navigation.PageFunction%601> 데이터를 반환할 때의 중요 한 역할을 <xref:System.Windows.Navigation.PageFunction%601> 호출 페이지로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-141">As you'll see, the type that is identified with the declaration of a <xref:System.Windows.Navigation.PageFunction%601> plays an important role in returning data from a <xref:System.Windows.Navigation.PageFunction%601> to the calling page.</span></span>  
   
- 다음 단원에서 설명하겠지만 <xref:System.Windows.Navigation.PageFunction%601> 선언을 통해 식별되는 형식은 <xref:System.Windows.Navigation.PageFunction%601>에서 호출 페이지로 데이터를 반환하는 데 매우 중요한 역할을 합니다.  
+### <a name="calling-a-pagefunction-and-passing-parameters"></a><span data-ttu-id="3d35d-142">PageFunction 호출 및 매개 변수 전달</span><span class="sxs-lookup"><span data-stu-id="3d35d-142">Calling a PageFunction and Passing Parameters</span></span>  
+ <span data-ttu-id="3d35d-143">페이지를 호출 하려면 호출 페이지 해야 호출 인스턴스화하고 탐색을 사용 하 여는 <xref:System.Windows.Navigation.NavigationService.Navigate%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="3d35d-143">To call a page, the calling page must instantiate the called page and navigate to it using the <xref:System.Windows.Navigation.NavigationService.Navigate%2A> method.</span></span> <span data-ttu-id="3d35d-144">이렇게 하면 호출 페이지가 호출된 페이지에서 수집되는 데이터의 기본값과 같은 초기 데이터를 호출된 페이지에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-144">This allows the calling page to pass initial data to the called page, such as default values for the data being gathered by the called page.</span></span>  
   
-### PageFunction 호출 및 매개 변수 전달  
- 페이지를 호출하려면 호출 페이지는 호출 대상 페이지를 인스턴스화하고 <xref:System.Windows.Navigation.NavigationService.Navigate%2A> 메서드를 사용하여 해당 페이지를 탐색해야 합니다.  이렇게 하면 호출 페이지는 호출 대상 페이지에 초기 데이터\(예: 호출 대상 페이지에서 수집하는 데이터의 기본값\)를 전달할 수 있습니다.  
-  
- 다음 코드에서는 호출 페이지에서 전달된 매개 변수를 받으며 기본이 아닌 생성자를 사용하는 호출 대상 페이지를 보여 줍니다.  
+ <span data-ttu-id="3d35d-145">다음 코드에서는 기본값이 아닌 생성자를 사용하여 호출 페이지에서 매개 변수를 허용하는 호출된 페이지를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-145">The following code shows the called page with a non-default constructor to accept parameters from the calling page.</span></span>  
   
  [!code-csharp[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#acceptsinitialdatacodebehind1)]
  [!code-vb[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#acceptsinitialdatacodebehind1)]  
@@ -108,9 +114,9 @@ caps.handback.revision: 36
 [!code-csharp[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#acceptsinitialdatacodebehind4)]
 [!code-vb[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#acceptsinitialdatacodebehind4)]  
   
- 다음 코드에서는 호출 대상 페이지를 인스턴스화하고 초기 문자열 값을 이 페이지에 전달하기 위해 <xref:System.Windows.Documents.Hyperlink>의 <xref:System.Windows.Documents.Hyperlink.Click> 이벤트를 처리하는 호출 페이지를 보여 줍니다.  
+ <span data-ttu-id="3d35d-146">다음 코드에서는 호출 페이지 처리의 <xref:System.Windows.Documents.Hyperlink.Click> 의 이벤트는 <xref:System.Windows.Documents.Hyperlink> 호출된 된 페이지를 인스턴스화할 때 초기 문자열 값을 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-146">The following code shows the calling page handling the <xref:System.Windows.Documents.Hyperlink.Click> event of the <xref:System.Windows.Documents.Hyperlink> to instantiate the called page and pass it an initial string value.</span></span>  
   
- [!code-xml[StructuredNavigationSample#PassingDataMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#passingdatamarkup2)]  
+ [!code-xaml[StructuredNavigationSample#PassingDataMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#passingdatamarkup2)]  
 [!code-csharp[StructuredNavigationSample#PassingDataCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#passingdatacodebehind1)]
 [!code-vb[StructuredNavigationSample#PassingDataCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#passingdatacodebehind1)]  
 [!code-csharp[StructuredNavigationSample#PassingDataCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#passingdatacodebehind2)]
@@ -118,61 +124,61 @@ caps.handback.revision: 36
 [!code-csharp[StructuredNavigationSample#PassingDataCODEBEHIND3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#passingdatacodebehind3)]
 [!code-vb[StructuredNavigationSample#PassingDataCODEBEHIND3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#passingdatacodebehind3)]  
   
- 호출 대상 페이지에 매개 변수를 전달하는 대신  다음과 같이 할 수 있습니다.  
+ <span data-ttu-id="3d35d-147">매개 변수를 호출된 페이지로 전달할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-147">You are not required to pass parameters to the called page.</span></span> <span data-ttu-id="3d35d-148">대신에 다음을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-148">Instead, you could do the following:</span></span>  
   
--   호출 페이지에서 다음을 수행합니다.  
+-   <span data-ttu-id="3d35d-149">호출 페이지에서:</span><span class="sxs-lookup"><span data-stu-id="3d35d-149">From the calling page:</span></span>  
   
-    1.  기본 생성자를 사용하여 호출 대상 <xref:System.Windows.Navigation.PageFunction%601>을 인스턴스화합니다.  
+    1.  <span data-ttu-id="3d35d-150">호출 된 인스턴스화할 <xref:System.Windows.Navigation.PageFunction%601> 기본 생성자를 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-150">Instantiate the called <xref:System.Windows.Navigation.PageFunction%601> using the default constructor.</span></span>  
   
-    2.  매개 변수를 <xref:System.Windows.Application.Properties%2A>에 저장합니다.  
+    2.  <span data-ttu-id="3d35d-151">매개 변수를 저장 <xref:System.Windows.Application.Properties%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-151">Store the parameters in <xref:System.Windows.Application.Properties%2A>.</span></span>  
   
-    3.  호출 대상 <xref:System.Windows.Navigation.PageFunction%601>을 탐색합니다.  
+    3.  <span data-ttu-id="3d35d-152">호출 된 이동 <xref:System.Windows.Navigation.PageFunction%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-152">Navigate to the called <xref:System.Windows.Navigation.PageFunction%601>.</span></span>  
   
--   호출 대상 <xref:System.Windows.Navigation.PageFunction%601>에서 다음을 수행합니다.  
+-   <span data-ttu-id="3d35d-153">호출 된 <xref:System.Windows.Navigation.PageFunction%601>:</span><span class="sxs-lookup"><span data-stu-id="3d35d-153">From the called <xref:System.Windows.Navigation.PageFunction%601>:</span></span>  
   
-    -   <xref:System.Windows.Application.Properties%2A>에 저장된 매개 변수를 검색하고 사용합니다.  
+    -   <span data-ttu-id="3d35d-154">에 저장 된 매개 변수를 사용 하 여 검색 <xref:System.Windows.Application.Properties%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-154">Retrieve and use the parameters stored in <xref:System.Windows.Application.Properties%2A>.</span></span>  
   
- 잠시 후에 설명하겠지만 호출 대상 페이지에서 반환하는 데이터를 수집하려면 여전히 코드를 사용하여 호출 대상 페이지를 인스턴스화하고 탐색해야 합니다.  이러한 이유 때문에 <xref:System.Windows.Navigation.PageFunction%601>을 유지해야 합니다. 그렇지 않으면 다음에 <xref:System.Windows.Navigation.PageFunction%601>을 탐색할 때 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 기본 생성자를 사용하여 <xref:System.Windows.Navigation.PageFunction%601>을 인스턴스화합니다.  
+ <span data-ttu-id="3d35d-155">그러나 간단히 살펴보겠지만 호출된 페이지에서 반환된 데이터를 수집하려고 호출된 페이지를 인스턴스화하고 여기로 이동하는 데는 코드를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-155">But, as you'll see shortly, you'll still need use code to instantiate and navigate to the called page to collect the data returned by the called page.</span></span> <span data-ttu-id="3d35d-156">이러한 이유로 <xref:System.Windows.Navigation.PageFunction%601> 로 이동 하 고, 그렇지 않으면 활성 상태로 유지 해야 하는 요구, 다음에 <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 인스턴스화하는 <xref:System.Windows.Navigation.PageFunction%601> 기본 생성자를 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-156">For this reason, the <xref:System.Windows.Navigation.PageFunction%601> needs to be kept alive; otherwise, the next time you navigate to the <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] instantiates the <xref:System.Windows.Navigation.PageFunction%601> using the default constructor.</span></span>  
   
- 그러나 호출 대상 페이지가 돌아가려면 호출 페이지에서 검색할 수 있는 데이터를 반환해야 합니다.  
+ <span data-ttu-id="3d35d-157">하지만 호출된 페이지는 호출 페이지에서 검색될 수 있는 데이터를 반환해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-157">Before the called page can return, however, it needs to return data that can be retrieved by the calling page.</span></span>  
   
-### 호출 페이지로 작업 결과 및 작업 데이터 반환  
- 사용자가 호출 대상 페이지 사용을 마치면 호출 대상 페이지가 돌아가야 합니다. 이 예제에서는 OK 또는 Cancel 단추를 눌러 호출 대상 페이지 사용을 마쳤는지 알릴 수 있습니다.  호출 페이지는 호출 대상 페이지를 사용하여 사용자로부터 데이터를 수집했기 때문에 호출 페이지에는 두 가지 종류의 정보가 필요합니다.  
+### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a><span data-ttu-id="3d35d-158">작업에서 호출 페이지로 작업 결과 및 작업 데이터 반환</span><span class="sxs-lookup"><span data-stu-id="3d35d-158">Returning Task Result and Task Data from a Task to a Calling Page</span></span>  
+ <span data-ttu-id="3d35d-159">사용자가 [확인] 또는 [취소] 단추를 눌러 이 예제에서 보여 준 호출된 페이지 사용을 마치면 호출된 페이지가 반환해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-159">Once the user has finished using the called page, signified in this example by pressing either the OK or Cancel buttons, the called page needs to return.</span></span> <span data-ttu-id="3d35d-160">호출 페이지는 호출된 페이지를 사용하여 사용자로부터 데이터를 수집했으므로 호출 페이지에는 두 가지 정보가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-160">Since the calling page used the called page to collect data from the user, the calling page requires two types of information:</span></span>  
   
-1.  호출 대상 페이지를 취소했는지 여부. 이 예제에서는 OK 단추 또는 Cancel 단추를 눌러 호출 대상 페이지에서 수행한 작업을 취소하거나 승인할 수 있습니다.  이 정보를 통해 호출 페이지는 사용자로부터 수집한 데이터를 처리해야 할지 여부를 결정할 수 있습니다.  
+1.  <span data-ttu-id="3d35d-161">사용자가 호출된 페이지를 취소했는지 여부(이 예제에서 [확인] 또는 [취소] 단추를 눌러).</span><span class="sxs-lookup"><span data-stu-id="3d35d-161">Whether the user canceled the called page (by pressing either the OK button or the Cancel button in this example).</span></span> <span data-ttu-id="3d35d-162">이 경우 호출 페이지는 호출 페이지가 사용자로부터 수집한 데이터를 처리할지 결정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-162">This allows the calling page to determine whether to process the data that the calling page gathered from the user.</span></span>  
   
-2.  사용자가 제공한 데이터  
+2.  <span data-ttu-id="3d35d-163">사용자가 제공한 데이터.</span><span class="sxs-lookup"><span data-stu-id="3d35d-163">The data that was provided by the user.</span></span>  
   
- <xref:System.Windows.Navigation.PageFunction%601>은 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 메서드를 구현하여 정보를 반환합니다.  다음 코드에서는 이 메서드를 호출하는 방법을 보여 줍니다.  
+ <span data-ttu-id="3d35d-164">정보를 반환 하려면 <xref:System.Windows.Navigation.PageFunction%601> 구현 하는 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="3d35d-164">To return information, <xref:System.Windows.Navigation.PageFunction%601> implements the <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> method.</span></span> <span data-ttu-id="3d35d-165">다음 코드에서는 메서드를 호출하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-165">The following code shows how to call it.</span></span>  
   
  [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind1)]
  [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind1)]  
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]  
   
- 이 예제의 경우 사용자가 Cancel 단추를 누르면 호출 페이지에 `null` 값이 반환되고,  OK 단추를 누르면 사용자가 입력한 문자열 값이 반환됩니다.  <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>은 데이터를 호출 페이지에 반환하기 위해 호출하는 `protected` `virtual` 메서드입니다.  데이터는 <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A>의 반환 값 형식을 지정하는 형식 인수가 포함된 제네릭 <xref:System.Windows.Navigation.ReturnEventArgs%601> 형식의 인스턴스에 패키지되어야 합니다.  이렇게 할 경우 특정 형식 인수를 사용하여 <xref:System.Windows.Navigation.PageFunction%601>을 선언하면 <xref:System.Windows.Navigation.PageFunction%601>에서 해당 형식 인수로 지정된 형식의 인스턴스를 반환합니다.  이 예제에서는 형식 인수 및 반환 값의 형식이 <xref:System.String>입니다.  
+ <span data-ttu-id="3d35d-166">이 예제에서 사용자가 [취소] 단추를 누르면 `null` 값이 호출 페이지로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-166">In this example, if a user presses the Cancel button, a value of `null` is returned to the calling page.</span></span> <span data-ttu-id="3d35d-167">[확인] 단추를 누르면 사용자가 제공한 문자열 값이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-167">If the OK button is pressed instead, the string value provided by the user is returned.</span></span> <span data-ttu-id="3d35d-168"><xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>이 `protected``virtual` 메서드를 호출 하는 페이지에 데이터를 반환 하기 위해 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-168"><xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> is a `protected``virtual` method that you call to return your data to the calling page.</span></span> <span data-ttu-id="3d35d-169">데이터 원본이 인스턴스의 패키지할 수 해야 <xref:System.Windows.Navigation.ReturnEventArgs%601> 형식, 형식 인수 유형을 지정 하는 값 <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-169">Your data needs to be packaged in an instance of the generic <xref:System.Windows.Navigation.ReturnEventArgs%601> type, whose type argument specifies the type of value that <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> returns.</span></span> <span data-ttu-id="3d35d-170">이러한 방식으로 선언 하는 경우에 <xref:System.Windows.Navigation.PageFunction%601> 특정 형식 인수를 사용 하는 나타낼 수 있습니다는 <xref:System.Windows.Navigation.PageFunction%601> 형식 인수에 의해 지정 된 형식의 인스턴스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-170">In this way, when you declare a <xref:System.Windows.Navigation.PageFunction%601> with a particular type argument, you are stating that a <xref:System.Windows.Navigation.PageFunction%601> will return an instance of the type that is specified by the type argument.</span></span> <span data-ttu-id="3d35d-171">이 예제에서는 형식 인수 및 반환 값은 형식의 <xref:System.String>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-171">In this example, the type argument and, consequently, the return value is of type <xref:System.String>.</span></span>  
   
- <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>을 호출하면 호출 페이지가 <xref:System.Windows.Navigation.PageFunction%601>의 반환 값을 어떤 방법으로든 검색해야 합니다.  이러한 이유로 <xref:System.Windows.Navigation.PageFunction%601>은 호출 페이지에서 처리할 <xref:System.Windows.Navigation.PageFunction%601.Return> 이벤트를 구현합니다.  <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>을 호출하면 <xref:System.Windows.Navigation.PageFunction%601.Return>이 발생하여 호출 페이지가 알림을 받도록 <xref:System.Windows.Navigation.PageFunction%601.Return>에 등록할 수 있습니다.  
+ <span data-ttu-id="3d35d-172">때 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 호출의 반환 값 어떤 방법으로든 호출 페이지 요구는 <xref:System.Windows.Navigation.PageFunction%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-172">When <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> is called, the calling page needs some way of receiving the return value of the <xref:System.Windows.Navigation.PageFunction%601>.</span></span> <span data-ttu-id="3d35d-173">이러한 이유로 <xref:System.Windows.Navigation.PageFunction%601> 구현 하는 <xref:System.Windows.Navigation.PageFunction%601.Return> 이벤트를 처리 하는 페이지를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-173">For this reason, <xref:System.Windows.Navigation.PageFunction%601> implements the <xref:System.Windows.Navigation.PageFunction%601.Return> event for calling pages to handle.</span></span> <span data-ttu-id="3d35d-174">때 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 가 호출 <xref:System.Windows.Navigation.PageFunction%601.Return> 이 발생 하면 호출 페이지를 등록할 수 있도록 <xref:System.Windows.Navigation.PageFunction%601.Return> 는 알림을 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-174">When <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> is called, <xref:System.Windows.Navigation.PageFunction%601.Return> is raised, so the calling page can register with <xref:System.Windows.Navigation.PageFunction%601.Return> to receive the notification.</span></span>  
   
  [!code-csharp[StructuredNavigationSample#ProcessResultCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#processresultcodebehind1)]
  [!code-vb[StructuredNavigationSample#ProcessResultCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#processresultcodebehind1)]  
 [!code-csharp[StructuredNavigationSample#ProcessResultCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#processresultcodebehind2)]
 [!code-vb[StructuredNavigationSample#ProcessResultCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#processresultcodebehind2)]  
   
-### 작업 완료 시 작업 페이지 제거  
- 호출 대상 페이지가 돌아가는 경우 사용자가 호출 대상 페이지를 취소하지 않았으면 호출 페이지가 사용자가 제공하고 호출 대상 페이지에서 반환한 데이터를 처리합니다.  일반적으로 이러한 방식의 데이터 수집은 격리된 작업입니다. 따라서 호출 대상 페이지가 돌아가면 호출 페이지에서는 더 많은 데이터를 캡처하기 위해 새 호출 페이지를 만들고 탐색해야 합니다.  
+### <a name="removing-task-pages-when-a-task-completes"></a><span data-ttu-id="3d35d-175">작업이 완료될 때 작업 페이지 제거</span><span class="sxs-lookup"><span data-stu-id="3d35d-175">Removing Task Pages When a Task Completes</span></span>  
+ <span data-ttu-id="3d35d-176">호출된 페이지가 반환하고 사용자가 호출된 페이지를 취소하면 호출 페이지는 사용자가 제공한 데이터와 호출된 페이지에서 반환된 데이터를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-176">When a called page returns, and the user didn't cancel the called page, the calling page will process the data that was provided by the user and also returned from the called page.</span></span> <span data-ttu-id="3d35d-177">이 방법으로 데이터를 취득하는 것은 격리된 활동입니다. 호출된 페이지가 반환할 경우 호출 페이지는 추가 데이터를 캡처하기 위해 새 호출 페이지를 만들고 여기로 이동해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-177">Data acquisition in this way is usually an isolated activity; when the called page returns, the calling page needs to create and navigate to a new calling page to capture more data.</span></span>  
   
- 그러나 호출 대상 페이지를 [저널](GTMT)에서 제거하지 않으면 사용자가 호출 페이지의 이전 인스턴스를 다시 탐색할 수 있습니다.  <xref:System.Windows.Navigation.PageFunction%601>을 [저널](GTMT)에 유지할지 여부는 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 속성을 통해 결정됩니다.  <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A>은 기본적으로 `true`로 설정되기 때문에 페이지 함수는 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>이 호출되면 자동으로 제거됩니다.  <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>이 호출된 이후에도 탐색 기록에 페이지 함수를 유지하려면 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A>을 `false`로 설정해야 합니다.  
+ <span data-ttu-id="3d35d-178">하지만 호출된 페이지가 업무 일지에서 제거되지 않는 한 사용자는 호출 페이지의 이전 인스턴스로 돌아갈 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-178">However, unless a called page is removed from the journal, a user will be able to navigate back to a previous instance of the calling page.</span></span> <span data-ttu-id="3d35d-179">여부는 <xref:System.Windows.Navigation.PageFunction%601> 에 보존 되는 업무 일지에 의해 결정 됩니다는 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-179">Whether a <xref:System.Windows.Navigation.PageFunction%601> is retained in the journal is determined by the <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> property.</span></span> <span data-ttu-id="3d35d-180">기본적으로 페이지 함수는 자동으로 제거 될 때 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 라고 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 로 설정 된 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-180">By default, a page function is automatically removed when <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> is called because <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> is set to `true`.</span></span> <span data-ttu-id="3d35d-181">후, 탐색 기록의 페이지 기능을 유지 하려면 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 호출 설정 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 를 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-181">To keep a page function in navigation history after <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> is called, set <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> to `false`.</span></span>  
   
 <a name="Other_Types_of_Structured_Navigation"></a>   
-## 다른 종류의 구조적 탐색  
- 이 항목에서는 호출\/반환 구조적 탐색을 지원하는 가장 기본적인 <xref:System.Windows.Navigation.PageFunction%601> 사용 방법에 대해 설명합니다.  이를 기초로 하여 복잡한 형식의 구조적 탐색을 만들 수 있습니다.  
+## <a name="other-types-of-structured-navigation"></a><span data-ttu-id="3d35d-182">기타 구조적 탐색 유형</span><span class="sxs-lookup"><span data-stu-id="3d35d-182">Other Types of Structured Navigation</span></span>  
+ <span data-ttu-id="3d35d-183">이 항목에서는의 가장 기본적인 용도 <xref:System.Windows.Navigation.PageFunction%601> 호출/반환을 지원 하기 위해 구조 탐색 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-183">This topic illustrates the most basic use of a <xref:System.Windows.Navigation.PageFunction%601> to support call/return structured navigation.</span></span> <span data-ttu-id="3d35d-184">이 기본 사항은 더 복잡한 구조적 탐색을 만들 수 있는 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-184">This foundation provides you with the ability to create more complex types of structured navigation.</span></span>  
   
- 예를 들어 호출 페이지에서 사용자로부터 충분한 데이터를 수집하거나 작업을 수행하기 위해 여러 페이지를 사용해야 하는 경우도 있습니다.  이와 같이 여러 페이지를 사용하는 경우를 "마법사"라고 합니다.  
+ <span data-ttu-id="3d35d-185">예를 들어 사용자로부터 충분한 데이터를 수집하거나 작업을 수행하기 위해 호출 페이지에 여러 페이지가 필요한 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-185">For example, sometimes multiple pages are required by a calling page to gather enough data from a user or to perform a task.</span></span> <span data-ttu-id="3d35d-186">여러 페이지를 사용하는 것을 "마법사"라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-186">The use of multiple pages is referred to as a "wizard".</span></span>  
   
- 응용 프로그램의 탐색 토폴로지가 복잡하여 구조적 탐색을 사용해야만 응용 프로그램이 효과적으로 작동하는 경우도 있습니다.  자세한 내용은 [탐색 토폴로지 개요](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)를 참조하십시오.  
+ <span data-ttu-id="3d35d-187">다른 경우에는 구조적 탐색을 기반으로 효과적으로 작동하는 복잡한 탐색 토폴로지가 응용 프로그램에 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d35d-187">In other cases, applications may have complex navigation topologies that depend on structured navigation to operate effectively.</span></span> <span data-ttu-id="3d35d-188">자세한 내용은 [탐색 토폴로지 개요](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3d35d-188">For more information, see [Navigation Topologies Overview](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Navigation.PageFunction%601>   
- <xref:System.Windows.Navigation.NavigationService>   
- [탐색 토폴로지 개요](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3d35d-189">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3d35d-189">See Also</span></span>  
+ <xref:System.Windows.Navigation.PageFunction%601>  
+ <xref:System.Windows.Navigation.NavigationService>  
+ [<span data-ttu-id="3d35d-190">탐색 토폴로지 개요</span><span class="sxs-lookup"><span data-stu-id="3d35d-190">Navigation Topologies Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

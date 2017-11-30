@@ -1,116 +1,121 @@
 ---
-title: "오류 보내기 및 받기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "오류 처리 [WCF], 보내기"
+title: "오류 보내기 및 받기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7b7a97ef253431b5519de2b3e45485a15ca3f5ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 오류 보내기 및 받기
-SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달하고 이중 클라이언트의 경우에는 상호 운용 가능한 방식으로 클라이언트에서 서비스로 전달합니다.일반적으로 서비스는 사용자 지정 오류 내용을 정의하고 이들을 반환할 수 있는 작업을 지정합니다.자세한 내용은 [오류 정의 및 지정](../../../docs/framework/wcf/defining-and-specifying-faults.md)을 참조하십시오. 이 항목에서는 해당 오류 조건이 발생한 경우 서비스 또는 이중 클라이언트가 그러한 오류를 보낼 수 있는 방법과 클라이언트 또는 서비스 응용 프로그램이 이러한 오류를 처리하는 방법에 대해 설명합니다.[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램의 오류 처리에 대한 개요는 [계약 및 서비스에서 오류 지정 및 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)를 참조하십시오.  
+# <a name="sending-and-receiving-faults"></a><span data-ttu-id="6653b-102">오류 보내기 및 받기</span><span class="sxs-lookup"><span data-stu-id="6653b-102">Sending and Receiving Faults</span></span>
+<span data-ttu-id="6653b-103">SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달하고 이중 클라이언트의 경우에는 상호 운용 가능한 방식으로 클라이언트에서 서비스로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-103">SOAP faults convey error condition information from a service to a client and in the duplex case from a client to a service in an interoperable way.</span></span> <span data-ttu-id="6653b-104">일반적으로 서비스는 사용자 지정 오류 내용을 정의하고 이들을 반환할 수 있는 작업을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-104">Typically a service defines custom fault content and specifies which operations can return them.</span></span> <span data-ttu-id="6653b-105">(자세한 내용은 참조 [정 및 오류 지정](../../../docs/framework/wcf/defining-and-specifying-faults.md).) 이 항목에서는 해당 오류 조건이 발생한 경우 서비스 또는 이중 클라이언트가 그러한 오류를 보낼 수 있는 방법과 클라이언트 또는 서비스 응용 프로그램이 이러한 오류를 처리하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-105">(For more information, see [Defining and Specifying Faults](../../../docs/framework/wcf/defining-and-specifying-faults.md).) This topic discusses how a service or duplex client can send those faults when the corresponding error condition has occurred and how a client or service application handles these faults.</span></span> <span data-ttu-id="6653b-106">오류 처리에 대 한 개요 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램 참조 [지정 및 계약 및 서비스에서 처리 오류](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-106">For an overview of error handling in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applications, see [Specifying and Handling Faults in Contracts and Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).</span></span>  
   
-## SOAP 오류 보내기  
- 선언된 SOAP 오류는 작업에 사용자 지정 SOAP 오류 유형을 지정하는 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=fullName>가 있는 오류입니다.선언되지 않은 SOAP 오류는 작업 계약에 지정되지 않은 오류입니다.  
+## <a name="sending-soap-faults"></a><span data-ttu-id="6653b-107">SOAP 오류 보내기</span><span class="sxs-lookup"><span data-stu-id="6653b-107">Sending SOAP Faults</span></span>  
+ <span data-ttu-id="6653b-108">선언된 SOAP 오류는 작업에 사용자 지정 SOAP 오류 유형을 지정하는 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>가 있는 오류입니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-108">Declared SOAP faults are those in which an operation has a <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> that specifies a custom SOAP fault type.</span></span> <span data-ttu-id="6653b-109">선언되지 않은 SOAP 오류는 작업 계약에 지정되지 않은 오류입니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-109">Undeclared SOAP faults are those that are not specified in the contract for an operation.</span></span>  
   
-### 선언된 오류 보내기  
- 선언된 SOAP 오류를 보내려면 SOAP 오류가 적합한 오류 조건을 검색하고 새 <xref:System.ServiceModel.FaultException%601?displayProperty=fullName>을 throw합니다. 여기서, 형식 매개 변수는 해당 작업의 <xref:System.ServiceModel.FaultContractAttribute>에 지정된 형식의 새 개체입니다.다음 코드 예제에서는 <xref:System.ServiceModel.FaultContractAttribute>를 사용하여 `SampleMethod` 작업이 `GreetingFault`의 세부 유형이 있는 SOAP 오류를 반환할 수 있도록 지정하는 방법을 보여 줍니다.  
+### <a name="sending-declared-faults"></a><span data-ttu-id="6653b-110">선언된 오류 보내기</span><span class="sxs-lookup"><span data-stu-id="6653b-110">Sending Declared Faults</span></span>  
+ <span data-ttu-id="6653b-111">선언된 SOAP 오류를 보내려면 SOAP 오류가 적합한 오류 조건을 검색하고 새 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>을 throw합니다. 여기서, 형식 매개 변수는 해당 작업의 <xref:System.ServiceModel.FaultContractAttribute>에 지정된 형식의 새 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-111">To send a declared SOAP fault, detect the error condition for which the SOAP fault is appropriate and throw a new <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> where the type parameter is a new object of the type specified in the <xref:System.ServiceModel.FaultContractAttribute> for that operation.</span></span> <span data-ttu-id="6653b-112">다음 코드 예제에서는 <xref:System.ServiceModel.FaultContractAttribute>를 사용하여 `SampleMethod` 작업이 `GreetingFault`의 세부 유형이 있는 SOAP 오류를 반환할 수 있도록 지정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-112">The following code example shows the use of <xref:System.ServiceModel.FaultContractAttribute> to specify that the `SampleMethod` operation can return a SOAP fault with the detail type of `GreetingFault`.</span></span>  
   
  [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
  [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  
   
- `GreetingFault` 오류 정보를 클라이언트에게 전달하려면 적합한 오류 조건을 catch하고 다음 코드 예제처럼 새 `GreetingFault` 개체가 인수인 `GreetingFault` 유형의 새 <xref:System.ServiceModel.FaultException%601?displayProperty=fullName>을 throw합니다.클라이언트가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 응용 프로그램이면 형식이 `GreetingFault` 형식의 <xref:System.ServiceModel.FaultException%601?displayProperty=fullName>인 관리되는 예외가 됩니다.  
+ <span data-ttu-id="6653b-113">`GreetingFault` 오류 정보를 클라이언트에게 전달하려면 적합한 오류 조건을 catch하고 다음 코드 예제처럼 새 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 개체가 인수인 `GreetingFault` 유형의 새 `GreetingFault`을 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-113">To convey the `GreetingFault` error information to the client, catch the appropriate error condition and throw a new <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> of type `GreetingFault` with a new `GreetingFault` object as the argument, as in the following code example.</span></span> <span data-ttu-id="6653b-114">클라이언트가 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 응용 프로그램이면 형식이 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 형식의 `GreetingFault`인 관리되는 예외가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-114">If the client is an [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client application, it experiences this as a managed exception where the type is <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> of type `GreetingFault`.</span></span>  
   
  [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
  [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]  
   
-### 선언되지 않은 오류 보내기  
- 선언되지 않은 오류를 보내는 것은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 문제를 신속하게 진단하고 디버깅하는 데 유용하지만 디버깅 도구로서의 유용성에는 한계가 있습니다.일반적으로 디버깅할 때 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 속성을 사용하는 것이 좋습니다.이 값을 true로 설정하면 클라이언트에 <xref:System.ServiceModel.ExceptionDetail> 형식의 <xref:System.ServiceModel.FaultException%601> 예외와 같은 오류가 발생합니다.  
+### <a name="sending-undeclared-faults"></a><span data-ttu-id="6653b-115">선언되지 않은 오류 보내기</span><span class="sxs-lookup"><span data-stu-id="6653b-115">Sending Undeclared Faults</span></span>  
+ <span data-ttu-id="6653b-116">선언되지 않은 오류를 보내는 것은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 문제를 신속하게 진단하고 디버깅하는 데 유용하지만 디버깅 도구로서의 유용성에는 한계가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-116">Sending undeclared faults can be very useful to quickly diagnose and debug problems in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications, but its usefulness as a debugging tool is limited.</span></span> <span data-ttu-id="6653b-117">일반적으로 디버깅할 때 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-117">More generally, when debugging it is recommended that you use the <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="6653b-118">이 값을 true로 설정하면 클라이언트에 <xref:System.ServiceModel.FaultException%601> 형식의 <xref:System.ServiceModel.ExceptionDetail> 예외와 같은 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-118">When you set this value to true, clients experience such faults as <xref:System.ServiceModel.FaultException%601> exceptions of type <xref:System.ServiceModel.ExceptionDetail>.</span></span>  
   
 > [!IMPORTANT]
->  관리되는 예외는 내부 응용 프로그램 정보를 노출할 수 있으므로 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName>를 `true`로 설정하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트에서는 개인적으로 식별할 수 있는 정보나 기타 중요한 정보를 비롯하여 내부 서비스 작업 예외에 대한 정보를 얻을 수 있습니다.  
+>  <span data-ttu-id="6653b-119">관리되는 예외는 내부 응용 프로그램 정보를 노출할 수 있으므로 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>를 `true`로 설정하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트에서는 개인적으로 식별할 수 있는 정보나 기타 중요한 정보를 포함하여 내부 서비스 작업 예외에 대한 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-119">Because managed exceptions can expose internal application information, setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> to `true` can permit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients to obtain information about internal service operation exceptions, including personally identifiable or other sensitive information.</span></span>  
 >   
->  그러므로 임시로 서비스 응용 프로그램을 디버깅하려는 경우 권장되는 유일한 방법은 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName>를 `true`로 설정하는 것입니다.또한 이 방법으로 처리되지 않은 관리되는 예외를 반환하는 메서드의 WSDL에는 <xref:System.ServiceModel.ExceptionDetail> 형식의 <xref:System.ServiceModel.FaultException%601>에 대한 계약이 포함되지 않습니다.디버깅 정보를 제대로 얻으려면 클라이언트는 <xref:System.ServiceModel.FaultException?displayProperty=fullName> 개체로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트에 반환되는 알 수 없는 SOAP 오류의 가능성을 예상해야 합니다.  
+>  <span data-ttu-id="6653b-120">그러므로 임시로 서비스 응용 프로그램을 디버깅하려는 경우 권장되는 유일한 방법은 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>를 `true`로 설정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-120">Therefore, setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> to `true` is only recommended as a way of temporarily debugging a service application.</span></span> <span data-ttu-id="6653b-121">또한 이 방법으로 처리되지 않은 관리되는 예외를 반환하는 메서드의 WSDL에는 <xref:System.ServiceModel.FaultException%601> 형식의 <xref:System.ServiceModel.ExceptionDetail>에 대한 계약이 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-121">In addition, the WSDL for a method that returns unhandled managed exceptions in this way does not contain the contract for the <xref:System.ServiceModel.FaultException%601> of type <xref:System.ServiceModel.ExceptionDetail>.</span></span> <span data-ttu-id="6653b-122">디버깅 정보를 제대로 얻으려면 클라이언트는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 개체로 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 클라이언트에 반환되는 알 수 없는 SOAP 오류의 가능성을 예상해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-122">Clients must expect the possibility of an unknown SOAP fault (returned to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients as <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> objects) to obtain the debugging information properly.</span></span>  
   
- 선언되지 않은 SOAP 오류를 보내려면 <xref:System.ServiceModel.FaultException?displayProperty=fullName> 개체\(즉, 제네릭 형식 <xref:System.ServiceModel.FaultException%601>이 아님\)를 throw하고 문자열을 생성자에게 전달합니다.이것은 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=fullName> 메서드를 호출하여 문자열을 사용할 수 있는 throw된 <xref:System.ServiceModel.FaultException?displayProperty=fullName> 예외로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 응용 프로그램에 노출됩니다.  
+ <span data-ttu-id="6653b-123">선언되지 않은 SOAP 오류를 보내려면 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 개체(즉, 제네릭 형식 <xref:System.ServiceModel.FaultException%601>이 아님)를 throw하고 문자열을 생성자에게 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-123">To send an undeclared SOAP fault, throw a <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> object (that is, not the generic type <xref:System.ServiceModel.FaultException%601>) and pass the string to the constructor.</span></span> <span data-ttu-id="6653b-124">이것은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 메서드를 호출하여 문자열을 사용할 수 있는 throw된 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 예외로 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> 클라이언트 응용 프로그램에 노출됩니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-124">This is exposed to the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client applications as a thrown <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> exception where the string is available by calling the <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> method.</span></span>  
   
 > [!NOTE]
->  문자열 형식의 SOAP 오류를 선언한 다음 서비스에서 형식 매개 변수가 <xref:System.String?displayProperty=fullName>인 <xref:System.ServiceModel.FaultException%601>로 throw하면 문자열 값이 <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=fullName> 속성에 지정되며 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=fullName>에서 사용할 수 없습니다.  
+>  <span data-ttu-id="6653b-125">문자열 형식의 SOAP 오류를 선언한 다음 서비스에서 형식 매개 변수가 <xref:System.ServiceModel.FaultException%601>인 <xref:System.String?displayProperty=nameWithType>로 throw하면 문자열 값이 <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> 속성에 지정되며 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-125">If you declare a SOAP fault of type string, and then throw this in your service as a <xref:System.ServiceModel.FaultException%601> where the type parameter is a <xref:System.String?displayProperty=nameWithType> the string value is assigned to the <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> property, and is not available from <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>.</span></span>  
   
-## 오류 처리  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트에서 통신 중에 발생하는 클라이언트 응용 프로그램 관련 SOAP 오류는 관리되는 예외로 발생합니다.프로그램 실행 중에 발생할 수 있는 예외가 여러 가지 있지만 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 프로그래밍 모델을 사용하는 응용 프로그램은 통신 결과로 다음과 같은 두 가지 형식의 예외를 처리할 수 있습니다.  
+## <a name="handling-faults"></a><span data-ttu-id="6653b-126">오류 처리</span><span class="sxs-lookup"><span data-stu-id="6653b-126">Handling Faults</span></span>  
+ <span data-ttu-id="6653b-127">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트에서 통신 중에 발생하는 클라이언트 응용 프로그램 관련 SOAP 오류는 관리되는 예외로 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-127">In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients, SOAP faults that occur during communication that are of interest to client applications are raised as managed exceptions.</span></span> <span data-ttu-id="6653b-128">프로그램 실행 중에 발생할 수 있는 예외가 여러 가지 있지만 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 프로그래밍 모델을 사용하는 응용 프로그램은 통신 결과로 다음과 같은 두 가지 형식의 예외를 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-128">While there are many exceptions that can occur during the execution of any program, applications using the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client programming model can expect to handle exceptions of the following two types as a result of communication.</span></span>  
   
 -   <xref:System.TimeoutException>  
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- 작업이 지정된 제한 시간을 초과하면 <xref:System.TimeoutException> 개체가 throw됩니다.  
+ <span data-ttu-id="6653b-129">작업이 지정된 제한 시간을 초과하면 <xref:System.TimeoutException> 개체가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-129"><xref:System.TimeoutException> objects are thrown when an operation exceeds the specified timeout period.</span></span>  
   
- 서비스나 클라이언트에 복구할 수 있는 통신 오류 조건이 있는 경우 <xref:System.ServiceModel.CommunicationException> 개체가 throw됩니다.  
+ <span data-ttu-id="6653b-130">서비스나 클라이언트에 복구할 수 있는 통신 오류 조건이 있는 경우 <xref:System.ServiceModel.CommunicationException> 개체가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-130"><xref:System.ServiceModel.CommunicationException> objects are thrown when there is some recoverable communication error condition on either the service or the client.</span></span>  
   
- <xref:System.ServiceModel.CommunicationException> 클래스에는 두 가지 중요한 파생 형식인 <xref:System.ServiceModel.FaultException>과 제네릭 <xref:System.ServiceModel.FaultException%601> 형식이 있습니다.  
+ <span data-ttu-id="6653b-131"><xref:System.ServiceModel.CommunicationException> 클래스에는 두 가지 중요한 파생 형식인 <xref:System.ServiceModel.FaultException>과 제네릭 <xref:System.ServiceModel.FaultException%601> 형식이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-131">The <xref:System.ServiceModel.CommunicationException> class has two important derived types, <xref:System.ServiceModel.FaultException> and the generic <xref:System.ServiceModel.FaultException%601> type.</span></span>  
   
- 수신자가 작업 계약에 예상되지 않거나 지정되지 않은 오류를 받으면 <xref:System.ServiceModel.FaultException> 예외가 throw됩니다. 일반적으로 이러한 예외는 응용 프로그램이 디버깅 중이고 서비스의 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 속성이 `true`로 설정된 경우 발생합니다.  
+ <span data-ttu-id="6653b-132">수신자가 작업 계약에 예상되지 않거나 지정되지 않은 오류를 받으면 <xref:System.ServiceModel.FaultException> 예외가 throw됩니다. 일반적으로 이러한 예외는 응용 프로그램이 디버깅 중이고 서비스의 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성이 `true`로 설정된 경우 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-132"><xref:System.ServiceModel.FaultException> exceptions are thrown when a listener receives a fault that is not expected or specified in the operation contract; usually this occurs when the application is being debugged and the service has the <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> property set to `true`.</span></span>  
   
- 양방향 작업\(즉, <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>가 `false`로 설정된 <xref:System.ServiceModel.OperationContractAttribute> 특성이 있는 메서드\)에 대한 응답으로 작업 계약에 지정된 오류를 받은 경우 클라이언트에서 <xref:System.ServiceModel.FaultException%601> 예외가 throw됩니다.  
-  
-> [!NOTE]
->  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 속성이 `true`로 설정된 경우 클라이언트에는 이 오류가 <xref:System.ServiceModel.ExceptionDetail> 형식의 선언되지 않은 <xref:System.ServiceModel.FaultException%601>로 표시됩니다.클라이언트는 이러한 특정 오류를 catch하거나 <xref:System.ServiceModel.FaultException>에 대한 catch 블록의 오류를 처리할 수 있습니다.  
-  
- 일반적으로 <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException> 및 <xref:System.ServiceModel.CommunicationException> 예외만 클라이언트와 서비스에 관련된 것입니다.  
+ <span data-ttu-id="6653b-133">양방향 작업(즉, <xref:System.ServiceModel.FaultException%601>가 <xref:System.ServiceModel.OperationContractAttribute>로 설정된 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 특성이 있는 메서드)에 대한 응답으로 작업 계약에 지정된 오류를 받은 경우 클라이언트에서 `false` 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-133"><xref:System.ServiceModel.FaultException%601> exceptions are thrown on the client when a fault that is specified in the operation contract is received in response to a two-way operation (that is, a method with an <xref:System.ServiceModel.OperationContractAttribute> attribute with <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> set to `false`).</span></span>  
   
 > [!NOTE]
->  물론 다른 예외도 발생합니다.예기치 않은 예외가 <xref:System.OutOfMemoryException?displayProperty=fullName>과 같은 오류를 포함합니다. 일반적으로 응용 프로그램은 그러한 메서드를 catch하지 않아야 합니다.  
+>  <span data-ttu-id="6653b-134">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성이 `true`로 설정된 경우 클라이언트에는 이 오류가 <xref:System.ServiceModel.FaultException%601> 형식의 선언되지 않은 <xref:System.ServiceModel.ExceptionDetail>로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-134">When an [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service has the <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> property set to `true` the client experiences this as an undeclared <xref:System.ServiceModel.FaultException%601> of type <xref:System.ServiceModel.ExceptionDetail>.</span></span> <span data-ttu-id="6653b-135">클라이언트는 이러한 특정 오류를 catch하거나 <xref:System.ServiceModel.FaultException>에 대한 catch 블록의 오류를 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-135">Clients can either catch this specific fault or handle the fault in a catch block for <xref:System.ServiceModel.FaultException>.</span></span>  
   
-### 올바른 순서로 오류 예외 catch  
- <xref:System.ServiceModel.FaultException%601>은 <xref:System.ServiceModel.FaultException>에서 파생되고 <xref:System.ServiceModel.FaultException>은 <xref:System.ServiceModel.CommunicationException>에서 파생되므로 적합한 순서로 이러한 예외를 catch하는 것이 중요합니다.예를 들어 먼저 <xref:System.ServiceModel.CommunicationException>을 catch하는 try\/catch 블록이 있는 경우 모든 지정된 SOAP 오류와 지정되지 않은 SOAP 오류가 여기서 처리됩니다. 사용자 지정 <xref:System.ServiceModel.FaultException%601> 예외를 처리할 이후 catch 블록은 호출되지 않습니다.  
-  
- 하나의 작업이 여러 개의 지정된 오류를 반환할 수 있습니다.각 오류는 고유한 형식이며 별도로 처리해야 합니다.  
-  
-### 채널을 닫을 때 예외 처리  
- 앞에서 설명한 내용은 대부분 응용 프로그램 메시지, 즉 클라이언트 응용 프로그램이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체에서 작업을 호출하는 경우 클라이언트가 명시적으로 보낸 메시지를 처리하는 동안 전송된 오류와 관련된 것입니다.  
-  
- 로컬 개체 외에도 개체를 삭제하면 재활용 프로세스 중에 발생하는 예외를 발생시키거나 마스킹할 수 있습니다.[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 사용하는 경우 비슷한 상황이 발생할 수 있습니다.작업을 호출할 때 설정된 연결을 통해 메시지를 보내게 됩니다.연결을 완전히 종료할 수 없거나 연결이 이미 종료된 경우, 모든 작업이 제대로 반환되어도 채널을 닫으면 예외가 throw될 수 있습니다.  
-  
- 일반적으로 클라이언트 개체 채널은 다음 중 한 가지 방법으로 닫힙니다.  
-  
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체가 재활용되는 경우  
-  
--   클라이언트 응용 프로그램이 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=fullName>를 호출하는 경우  
-  
--   클라이언트 응용 프로그램이 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=fullName>를 호출하는 경우  
-  
--   클라이언트 응용 프로그램이 세션에 대한 종료 작업을 호출하는 경우  
-  
- 모든 경우에 채널을 닫으면 응용 프로그램 수준에서 복잡한 기능을 지원할 메시지를 보낼 수 있는 기본 채널을 닫도록 채널에 지시합니다.예를 들어 계약에 세션이 필요한 경우 세션이 설정될 때까지 바인딩 과정에서 서비스 채널과 메시지를 교환하여 세션을 설정합니다.채널이 닫히면 기본 세션 채널은 세션이 종료되었음을 서비스에 알립니다.이 때 채널이 이미 중단되었거나 닫혔거나 사용할 수 없는 경우\(예: 네트워크 케이블이 연결되지 않은 경우\) 클라이언트 채널은 세션이 종료되었으며 예외가 발생할 수 있음을 서비스 채널에 알릴 수 없습니다.  
-  
-### 필요한 경우 채널 중단  
- 채널을 닫아도 예외가 throw될 수 있으므로 올바른 순서로 오류 예외를 catch하는 것뿐만 아니라 catch 블록에서 호출에 사용된 채널을 중단하는 것도 중요합니다.  
-  
- 작업별 오류 정보가 제공되고 다른 작업에서 이 정보를 사용할 수 있으면 드물긴 하지만 채널을 중단하지 않아도 됩니다.다른 모든 경우에는 채널을 중단하는 것이 좋습니다.이러한 모든 지점을 보여 주는 샘플은 [예상되는 예외](../../../docs/framework/wcf/samples/expected-exceptions.md)를 참조하십시오.  
-  
- 다음 코드 예제에서는 선언된 오류와 선언되지 않은 오류를 비롯하여 기본 클라이언트 응용 프로그램에서 SOAP 오류 예외를 처리하는 방법을 보여 줍니다.  
+ <span data-ttu-id="6653b-136">일반적으로 <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException> 및 <xref:System.ServiceModel.CommunicationException> 예외만 클라이언트와 서비스에 관련된 것입니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-136">Typically, only <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException>, and <xref:System.ServiceModel.CommunicationException> exceptions are of interest to clients and services.</span></span>  
   
 > [!NOTE]
->  이 샘플 코드에서는 `using` 구문을 사용하지 않습니다.채널을 닫으면 예외가 throw될 수 있으므로 응용 프로그램에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 먼저 만든 다음 같은 try 블록에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 열고, 사용하고 닫는 것이 좋습니다.자세한 내용은 [WCF 클라이언트 개요](../../../docs/framework/wcf/wcf-client-overview.md) 및 [문 사용시 문제 회피](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)를 참조하십시오.  
+>  <span data-ttu-id="6653b-137">물론 다른 예외도 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-137">Other exceptions, of course, do occur.</span></span> <span data-ttu-id="6653b-138">예기치 않은 예외가 <xref:System.OutOfMemoryException?displayProperty=nameWithType>과 같은 오류를 포함합니다. 일반적으로 응용 프로그램은 그러한 메서드를 catch하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-138">Unexpected exceptions include catastrophic failures like <xref:System.OutOfMemoryException?displayProperty=nameWithType>; typically applications should not catch such methods.</span></span>  
+  
+### <a name="catch-fault-exceptions-in-the-correct-order"></a><span data-ttu-id="6653b-139">올바른 순서로 오류 예외 catch</span><span class="sxs-lookup"><span data-stu-id="6653b-139">Catch Fault Exceptions in the Correct Order</span></span>  
+ <span data-ttu-id="6653b-140"><xref:System.ServiceModel.FaultException%601>은 <xref:System.ServiceModel.FaultException>에서 파생되고 <xref:System.ServiceModel.FaultException>은 <xref:System.ServiceModel.CommunicationException>에서 파생되므로 적합한 순서로 이러한 예외를 catch하는 것이 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-140">Because <xref:System.ServiceModel.FaultException%601> derives from <xref:System.ServiceModel.FaultException>, and <xref:System.ServiceModel.FaultException> derives from <xref:System.ServiceModel.CommunicationException>, it is important to catch these exceptions in the proper order.</span></span> <span data-ttu-id="6653b-141">예를 들어 먼저 <xref:System.ServiceModel.CommunicationException>을 catch하는 try/catch 블록이 있는 경우 모든 지정된 SOAP 오류와 지정되지 않은 SOAP 오류가 여기서 처리됩니다. 사용자 지정 <xref:System.ServiceModel.FaultException%601> 예외를 처리할 이후 catch 블록은 호출되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-141">If, for example, you have a try/catch block in which you first catch <xref:System.ServiceModel.CommunicationException>, all specified and unspecified SOAP faults are handled there; any subsequent catch blocks to handle a custom <xref:System.ServiceModel.FaultException%601> exception are never invoked.</span></span>  
+  
+ <span data-ttu-id="6653b-142">하나의 작업이 여러 개의 지정된 오류를 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-142">Remember that one operation can return any number of specified faults.</span></span> <span data-ttu-id="6653b-143">각 오류는 고유한 형식이며 별도로 처리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-143">Each fault is a unique type and must be handled separately.</span></span>  
+  
+### <a name="handle-exceptions-when-closing-the-channel"></a><span data-ttu-id="6653b-144">채널을 닫을 때 예외 처리</span><span class="sxs-lookup"><span data-stu-id="6653b-144">Handle Exceptions When Closing the Channel</span></span>  
+ <span data-ttu-id="6653b-145">앞에서 설명한 내용은 대부분 응용 프로그램 메시지, 즉 클라이언트 응용 프로그램이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체에서 작업을 호출하는 경우 클라이언트가 명시적으로 보낸 메시지를 처리하는 동안 전송된 오류와 관련된 것입니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-145">Most of the preceding discussion has to do with faults sent in the course of processing application messages, that is, messages explicitly sent by the client when the client application calls operations on the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client object.</span></span>  
+  
+ <span data-ttu-id="6653b-146">로컬 개체 외에도 개체를 삭제하면 재활용 프로세스 중에 발생하는 예외를 발생시키거나 마스킹할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-146">Even with local objects disposing the object can either raise or mask exceptions that occur during the recycling process.</span></span> <span data-ttu-id="6653b-147">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체를 사용하는 경우 비슷한 상황이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-147">Something similar can occur when you use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client objects.</span></span> <span data-ttu-id="6653b-148">작업을 호출할 때 설정된 연결을 통해 메시지를 보내게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-148">When you call operations you are sending messages over an established connection.</span></span> <span data-ttu-id="6653b-149">연결을 완전히 종료할 수 없거나 연결이 이미 종료된 경우, 모든 작업이 제대로 반환되어도 채널을 닫으면 예외가 throw될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-149">Closing the channel can throw exceptions if the connection cannot be cleanly closed or is already closed, even if all the operations returned properly.</span></span>  
+  
+ <span data-ttu-id="6653b-150">일반적으로 클라이언트 개체 채널은 다음 중 한 가지 방법으로 닫힙니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-150">Typically, client object channels are closed in one of the following ways:</span></span>  
+  
+-   <span data-ttu-id="6653b-151">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 개체가 재활용되는 경우</span><span class="sxs-lookup"><span data-stu-id="6653b-151">When the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client object is recycled.</span></span>  
+  
+-   <span data-ttu-id="6653b-152">클라이언트 응용 프로그램이 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>를 호출하는 경우</span><span class="sxs-lookup"><span data-stu-id="6653b-152">When the client application calls <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.</span></span>  
+  
+-   <span data-ttu-id="6653b-153">클라이언트 응용 프로그램이 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>를 호출하는 경우</span><span class="sxs-lookup"><span data-stu-id="6653b-153">When the client application calls <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.</span></span>  
+  
+-   <span data-ttu-id="6653b-154">클라이언트 응용 프로그램이 세션에 대한 종료 작업을 호출하는 경우</span><span class="sxs-lookup"><span data-stu-id="6653b-154">When the client application calls an operation that is a terminating operation for a session.</span></span>  
+  
+ <span data-ttu-id="6653b-155">모든 경우에 채널을 닫으면 응용 프로그램 수준에서 복잡한 기능을 지원할 메시지를 보낼 수 있는 기본 채널을 닫도록 채널에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-155">In all cases, closing the channel instructs the channel to begin closing any underlying channels that may be sending messages to support complex functionality at the application level.</span></span> <span data-ttu-id="6653b-156">예를 들어 계약에 세션이 필요한 경우 세션이 설정될 때까지 바인딩 과정에서 서비스 채널과 메시지를 교환하여 세션을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-156">For example, when a contract requires sessions a binding attempts to establish a session by exchanging messages with the service channel until a session is established.</span></span> <span data-ttu-id="6653b-157">채널이 닫히면 기본 세션 채널은 세션이 종료되었음을 서비스에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-157">When the channel is closed, the underlying session channel notifies the service that the session is terminated.</span></span> <span data-ttu-id="6653b-158">이 때 채널이 이미 중단되었거나 닫혔거나 사용할 수 없는 경우(예: 네트워크 케이블이 연결되지 않은 경우) 클라이언트 채널은 세션이 종료되었으며 예외가 발생할 수 있음을 서비스 채널에 알릴 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-158">In this case, if the channel has already aborted, closed, or is otherwise unusable (for example, when a network cable is unplugged), the client channel cannot inform the service channel that the session is terminated and an exception can result.</span></span>  
+  
+### <a name="abort-the-channel-if-necessary"></a><span data-ttu-id="6653b-159">필요한 경우 채널 중단</span><span class="sxs-lookup"><span data-stu-id="6653b-159">Abort the Channel If Necessary</span></span>  
+ <span data-ttu-id="6653b-160">채널을 닫아도 예외가 throw될 수 있으므로 올바른 순서로 오류 예외를 catch하는 것뿐만 아니라 catch 블록에서 호출에 사용된 채널을 중단하는 것도 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-160">Because closing the channel can also throw exceptions, then, it is recommended that in addition to catching fault exceptions in the correct order, it is important to abort the channel that was used in making the call in the catch block.</span></span>  
+  
+ <span data-ttu-id="6653b-161">작업별 오류 정보가 제공되고 다른 작업에서 이 정보를 사용할 수 있으면 드물긴 하지만 채널을 중단하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-161">If the fault conveys error information specific to an operation and it remains possible that others can use it, there is no need to abort the channel (although these cases are rare).</span></span> <span data-ttu-id="6653b-162">다른 모든 경우에는 채널을 중단하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-162">In all other cases, it is recommended that you abort the channel.</span></span> <span data-ttu-id="6653b-163">이러한 사항을 모두 보여 주는 샘플을 보려면 [예상 예외](../../../docs/framework/wcf/samples/expected-exceptions.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-163">For a sample that demonstrates all of these points, see [Expected Exceptions](../../../docs/framework/wcf/samples/expected-exceptions.md).</span></span>  
+  
+ <span data-ttu-id="6653b-164">다음 코드 예제에서는 선언된 오류와 선언되지 않은 오류를 비롯하여 기본 클라이언트 응용 프로그램에서 SOAP 오류 예외를 처리하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-164">The following code example shows how to handle SOAP fault exceptions in a basic client application, including a declared fault and an undeclared fault.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="6653b-165">이 샘플 코드에서는 `using` 구문을 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-165">This sample code does not use the `using` construct.</span></span> <span data-ttu-id="6653b-166">채널을 닫으면 예외가 throw될 수 있으므로 응용 프로그램에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 먼저 만든 다음 같은 try 블록에서 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 열고, 사용하고 닫는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-166">Because closing channels can throw exceptions, it is recommended that applications create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client first, and then open, use, and close the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client in the same try block.</span></span> <span data-ttu-id="6653b-167">자세한 내용은 참조 [WCF 클라이언트 개요](../../../docs/framework/wcf/wcf-client-overview.md) 및 [Using 문과 문제 방지](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-167">For details, see [WCF Client Overview](../../../docs/framework/wcf/wcf-client-overview.md) and [Avoiding Problems with the Using Statement](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).</span></span>  
   
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
-## 참고 항목  
- <xref:System.ServiceModel.FaultException>   
- <xref:System.ServiceModel.FaultException%601>   
- <xref:System.ServiceModel.CommunicationException?displayProperty=fullName>   
- [예상되는 예외](../../../docs/framework/wcf/samples/expected-exceptions.md)   
- [문 사용시 문제 회피](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+## <a name="see-also"></a><span data-ttu-id="6653b-168">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6653b-168">See Also</span></span>  
+ <xref:System.ServiceModel.FaultException>  
+ <xref:System.ServiceModel.FaultException%601>  
+ <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
+ [<span data-ttu-id="6653b-169">예상 되는 예외</span><span class="sxs-lookup"><span data-stu-id="6653b-169">Expected Exceptions</span></span>](../../../docs/framework/wcf/samples/expected-exceptions.md)  
+ [<span data-ttu-id="6653b-170">사용 하 여 문 사용 하 여 문제를 방지합니다.</span><span class="sxs-lookup"><span data-stu-id="6653b-170">Avoiding Problems with the Using Statement</span></span>](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)

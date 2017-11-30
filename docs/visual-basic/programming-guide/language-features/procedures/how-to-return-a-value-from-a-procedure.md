@@ -1,81 +1,64 @@
 ---
-title: "방법: 프로시저 (Visual Basic)에서 값 반환 | Microsoft 문서"
+title: "방법: 프로시저에서 값 반환(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, procedures
-- procedures, returning from
-- procedures, returning a value
+- procedures [Visual Basic], returning from
+- procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 98f0fb0740a021a16e87454bfaebbfad7858477c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6ce7aa0942be413986cb010963753447ea18cdf2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>방법: 프로시저에서 값 반환(Visual Basic)
-A `Function` 프로시저에 값을 반환 호출 코드를 실행 하 여 하나는 `Return` 문 또는 발생 하 여는 `Exit Function` 또는 `End Function` 문입니다.  
+# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a><span data-ttu-id="9b5bf-102">방법: 프로시저에서 값 반환(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b5bf-102">How to: Return a Value from a Procedure (Visual Basic)</span></span>
+<span data-ttu-id="9b5bf-103">A `Function` 프로시저가 반환 값을 호출 하는 코드 실행 하거나 한 `Return` 문 또는 발생 하 여는 `Exit Function` 또는 `End Function` 문.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-103">A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.</span></span>  
   
-### <a name="to-return-a-value-using-the-return-statement"></a>Return 문을 사용 하 여 값을 반환 하려면  
+### <a name="to-return-a-value-using-the-return-statement"></a><span data-ttu-id="9b5bf-104">Return 문을 사용 하 여 값을 반환 하려면</span><span class="sxs-lookup"><span data-stu-id="9b5bf-104">To return a value using the Return statement</span></span>  
   
-1.  배치는 `Return` 프로시저의 작업이 완료 되는 지점에 문의 합니다.  
+1.  <span data-ttu-id="9b5bf-105">배치는 `Return` 프로시저의 작업이 완료 되는 지점에 문의 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-105">Put a `Return` statement at the point where the procedure's task is completed.</span></span>  
   
-2.  에 따라는 `Return` 호출 코드로 반환 하려는 키워드 값을 생성 하는 식입니다.  
+2.  <span data-ttu-id="9b5bf-106">에 따라는 `Return` 호출 코드에 반환 하려는 값을 생성 하는 식으로 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-106">Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.</span></span>  
   
-3.  둘 이상의 `Return` 동일한 절차에는 문입니다.  
+3.  <span data-ttu-id="9b5bf-107">동일한 프로시저에 `Return` 문을 둘 이상 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-107">You can have more than one `Return` statement in the same procedure.</span></span>  
   
-     다음 `Function` 프로시저 가장 긴 면 또는 직각 삼각형의 빗변을 계산 하 고 호출 코드에 반환 합니다.  
+     <span data-ttu-id="9b5bf-108">다음 `Function` 프로시저가 가장 긴 측 또는 직각 삼각형의 빗변 계산 하 고 호출 코드에 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-108">The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&1;](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
   
-     다음 예제에서는 호출을 `hypotenuse`, 반환된 된 값을 저장 하는 합니다.  
+     <span data-ttu-id="9b5bf-109">다음 예제에서는 호출을 `hypotenuse`, 반환된 된 값을 저장 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-109">The following example shows a typical call to `hypotenuse`, which stores the returned value.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&6;](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
   
-### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Exit 함수 또는 End 함수를 사용 하 여 값을 반환 하려면  
+### <a name="to-return-a-value-using-exit-function-or-end-function"></a><span data-ttu-id="9b5bf-110">Exit 함수 또는 최종 함수를 사용 하 여 값을 반환 하려면</span><span class="sxs-lookup"><span data-stu-id="9b5bf-110">To return a value using Exit Function or End Function</span></span>  
   
-1.  하나 이상의 위치에는 `Function` 프로시저는 프로시저의 이름으로이 값을 할당 합니다.  
+1.  <span data-ttu-id="9b5bf-111">적어도 한 위치에 `Function` 프로시저를 프로시저의 이름에 값 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-111">In at least one place in the `Function` procedure, assign a value to the procedure's name.</span></span>  
   
-2.  실행 하는 경우는 `Exit Function` 또는 `End Function` 문을 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 프로시저의 이름에 가장 최근에 할당 된 값을 반환 합니다.  
+2.  <span data-ttu-id="9b5bf-112">실행 하는 동안는 `Exit Function` 또는 `End Function` 문, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로시저의 이름에 가장 최근에 할당 된 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-112">When you execute an `Exit Function` or `End Function` statement, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] returns the value most recently assigned to the procedure's name.</span></span>  
   
-3.  둘 이상의 `Exit Function` 문을 동일한 절차에 혼합할 수 `Return` 및 `Exit Function` 동일한 프로시저의 문이 있습니다.  
+3.  <span data-ttu-id="9b5bf-113">동일한 프로시저에 `Exit Function` 문을 둘 이상 사용할 수 있으며, `Return` 및 `Exit Function` 문을 혼합할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-113">You can have more than one `Exit Function` statement in the same procedure, and you can mix `Return` and `Exit Function` statements in the same procedure.</span></span>  
   
-4.  하나씩만 있을 수 `End Function` 문에서 `Function` 프로시저입니다.  
+4.  <span data-ttu-id="9b5bf-114">하나만 사용할 수 있습니다 `End Function` 의 문에서 `Function` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-114">You can have only one `End Function` statement in a `Function` procedure.</span></span>  
   
-     자세한 내용 및 예제에 대 한 "반환 값이"의 참조 [Function 문의](../../../../visual-basic/language-reference/statements/function-statement.md)합니다.  
+     <span data-ttu-id="9b5bf-115">자세한 내용 및 예제에 대 한 "반환 값이"의 참조 [Function 문](../../../../visual-basic/language-reference/statements/function-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9b5bf-115">For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [프로시저](./index.md)   
- [Sub 프로시저](./sub-procedures.md)   
- [속성 프로시저](./property-procedures.md)   
- [연산자 프로시저](./operator-procedures.md)   
- [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)   
- [Function 문](../../../../visual-basic/language-reference/statements/function-statement.md)   
- [Return 문](../../../../visual-basic/language-reference/statements/return-statement.md)   
- [방법: 값을 반환 하는 프로시저 만들기](./how-to-create-a-procedure-that-returns-a-value.md)   
- [방법: 값을 반환하는 프로시저 호출](./how-to-call-a-procedure-that-returns-a-value.md)
+## <a name="see-also"></a><span data-ttu-id="9b5bf-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9b5bf-116">See Also</span></span>  
+ [<span data-ttu-id="9b5bf-117">절차</span><span class="sxs-lookup"><span data-stu-id="9b5bf-117">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="9b5bf-118">Sub 프로시저</span><span class="sxs-lookup"><span data-stu-id="9b5bf-118">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="9b5bf-119">속성 프로시저</span><span class="sxs-lookup"><span data-stu-id="9b5bf-119">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="9b5bf-120">연산자 프로시저</span><span class="sxs-lookup"><span data-stu-id="9b5bf-120">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="9b5bf-121">프로시저 매개 변수 및 인수</span><span class="sxs-lookup"><span data-stu-id="9b5bf-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="9b5bf-122">Function 문</span><span class="sxs-lookup"><span data-stu-id="9b5bf-122">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="9b5bf-123">Return 문</span><span class="sxs-lookup"><span data-stu-id="9b5bf-123">Return Statement</span></span>](../../../../visual-basic/language-reference/statements/return-statement.md)  
+ [<span data-ttu-id="9b5bf-124">방법: 값을 반환하는 프로시저 만들기</span><span class="sxs-lookup"><span data-stu-id="9b5bf-124">How to: Create a Procedure that Returns a Value</span></span>](./how-to-create-a-procedure-that-returns-a-value.md)  
+ [<span data-ttu-id="9b5bf-125">방법: 값을 반환하는 프로시저 호출</span><span class="sxs-lookup"><span data-stu-id="9b5bf-125">How to: Call a Procedure That Returns a Value</span></span>](./how-to-call-a-procedure-that-returns-a-value.md)

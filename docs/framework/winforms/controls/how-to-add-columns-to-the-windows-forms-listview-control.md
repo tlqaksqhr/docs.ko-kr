@@ -1,40 +1,44 @@
 ---
-title: "방법: Windows Forms ListView 컨트롤에 열 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "열[Windows Forms], ListView 컨트롤에 추가"
-  - "목록 보기, 열 추가"
-  - "ListView 컨트롤[Windows Forms], 열 머리글 추가"
+title: "방법: Windows Forms ListView 컨트롤에 열 추가"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ListView control [Windows Forms], adding column headers
+- columns [Windows Forms], adding to ListView controls
+- list views [Windows Forms], adding columns
 ms.assetid: 79174274-12ee-4a5d-80db-6ec02976d010
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8df87e62e8c19ee6e30ffdbc2a4e473b444f538
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms ListView 컨트롤에 열 추가
-자세히 보기에서 <xref:System.Windows.Forms.ListView> 컨트롤은 각 목록 항목에 대해 여러 개의 열을 표시할 수 있습니다.  여러 개의 열을 사용하면 각 목록 항목에 대한 여러 유형의 정보를 사용자에게 표시할 수 있습니다.  예를 들어, 파일 목록에 파일 이름, 파일 형식, 파일 크기 및 파일을 마지막으로 수정한 날짜를 표시할 수 있습니다.  만들어진 열을 채우는 방법에 대한 자세한 내용은 [방법: Windows Forms ListView 컨트롤을 사용하여 열에 하위 항목 표시](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)를 참조하십시오.  
+# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a><span data-ttu-id="f16c0-102">방법: Windows Forms ListView 컨트롤에 열 추가</span><span class="sxs-lookup"><span data-stu-id="f16c0-102">How to: Add Columns to the Windows Forms ListView Control</span></span>
+<span data-ttu-id="f16c0-103">세부 정보 뷰에서 <xref:System.Windows.Forms.ListView> 컨트롤 각 목록 항목에 대 한 여러 열을 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f16c0-103">In the Details view, the <xref:System.Windows.Forms.ListView> control can display multiple columns for each list item.</span></span> <span data-ttu-id="f16c0-104">여러 유형의 각 목록 항목에 대 한 정보를 사용자에 게 표시 하는 열을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f16c0-104">You can use the columns to display to the user several types of information about each list item.</span></span> <span data-ttu-id="f16c0-105">예를 들어 파일 이름, 파일 형식, 크기 및 파일을 마지막으로 수정한 날짜 파일의 목록을 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f16c0-105">For example, a list of files could display the file name, file type, size, and date the file was last modified.</span></span> <span data-ttu-id="f16c0-106">생성 된 후 열을 채우는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Windows Forms ListView 컨트롤에서 열에 하위 항목 표시](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f16c0-106">For information about populating the columns after they are created, see [How to: Display Subitems in Columns with the Windows Forms ListView Control](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).</span></span>  
   
-### 프로그래밍 방식으로 열을 추가하려면  
+### <a name="to-add-columns-programmatically"></a><span data-ttu-id="f16c0-107">프로그래밍 방식으로 열을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="f16c0-107">To add columns programmatically</span></span>  
   
-1.  컨트롤의 <xref:System.Windows.Forms.ListView.View%2A> 속성을 <xref:System.Windows.Forms.View>로 설정합니다.  
+1.  <span data-ttu-id="f16c0-108">컨트롤의 <xref:System.Windows.Forms.ListView.View%2A> 속성을 <xref:System.Windows.Forms.View.Details>합니다.</span><span class="sxs-lookup"><span data-stu-id="f16c0-108">Set the control's <xref:System.Windows.Forms.ListView.View%2A> property to <xref:System.Windows.Forms.View.Details>.</span></span>  
   
-2.  목록 보기에 있는 <xref:System.Windows.Forms.ListView.Columns%2A> 속성의 <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> 메서드를 사용합니다.  
+2.  <span data-ttu-id="f16c0-109">사용 하 여는 <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> 메서드 목록 보기의 <xref:System.Windows.Forms.ListView.Columns%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="f16c0-109">Use the <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> method of the list view's <xref:System.Windows.Forms.ListView.Columns%2A> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#31)]  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ListView>   
- [ListView 컨트롤](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)   
- [ListView 컨트롤 개요](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f16c0-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f16c0-110">See Also</span></span>  
+ <xref:System.Windows.Forms.ListView>  
+ [<span data-ttu-id="f16c0-111">ListView 컨트롤</span><span class="sxs-lookup"><span data-stu-id="f16c0-111">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [<span data-ttu-id="f16c0-112">ListView 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="f16c0-112">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)

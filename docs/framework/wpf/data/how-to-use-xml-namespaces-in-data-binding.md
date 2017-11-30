@@ -1,43 +1,45 @@
 ---
-title: "방법: XML 네임스페이스를 데이터 바인딩에 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 바인딩(data binding), XML 네임스페이스"
-  - "네임스페이스, XML"
-  - "XML, 네임스페이스"
+title: "방법: XML 네임스페이스를 데이터 바인딩에 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML [WPF], namespaces
+- data binding [WPF], XML namespaces
+- namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f98d174fd0bd8ea28c7b72cec25b5b16f2b76c51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: XML 네임스페이스를 데이터 바인딩에 사용
-## 예제  
- 이 예제에서는 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] [바인딩 소스](GTMT)에 지정된 네임스페이스를 처리하는 방법을 보여 줍니다.  
+# <a name="how-to-use-xml-namespaces-in-data-binding"></a><span data-ttu-id="dd75b-102">방법: XML 네임스페이스를 데이터 바인딩에 사용</span><span class="sxs-lookup"><span data-stu-id="dd75b-102">How to: Use XML Namespaces in Data Binding</span></span>
+## <a name="example"></a><span data-ttu-id="dd75b-103">예제</span><span class="sxs-lookup"><span data-stu-id="dd75b-103">Example</span></span>  
+ <span data-ttu-id="dd75b-104">이 예제에서는 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 바인딩 소스에 지정된 네임스페이스를 처리하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dd75b-104">This example shows how to handle namespaces specified in your [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] binding source.</span></span>  
   
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터에 다음 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임스페이스 정의가 있는 경우  
+ <span data-ttu-id="dd75b-105">[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터에 다음 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임스페이스 정의가 있는 경우</span><span class="sxs-lookup"><span data-stu-id="dd75b-105">If your [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data has the following [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] namespace definition:</span></span>  
   
  `<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">`  
   
- 다음 예제와 같이 <xref:System.Windows.Data.XmlNamespaceMapping> 요소를 사용하여 네임스페이스를 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>에 매핑할 수 있습니다.  그런 다음 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>를 사용하여 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임스페이스를 참조할 수 있습니다.  이 예제의 <xref:System.Windows.Controls.ListBox>는 각 *item*의 *title*과 *dc:date*를 표시합니다.  
+ <span data-ttu-id="dd75b-106">사용할 수는 <xref:System.Windows.Data.XmlNamespaceMapping> 요소를 네임 스페이스를 한 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>다음 예제와 같이, 합니다.</span><span class="sxs-lookup"><span data-stu-id="dd75b-106">You can use the <xref:System.Windows.Data.XmlNamespaceMapping> element to map the namespace to a <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>, as in the following example.</span></span> <span data-ttu-id="dd75b-107">그런 다음 사용할 수는 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> 참조 하는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="dd75b-107">You can then use the <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> to refer to the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] namespace.</span></span> <span data-ttu-id="dd75b-108"><xref:System.Windows.Controls.ListBox> 이 예제에 표시 됩니다는 *제목* 및 *dc:date* 각 *항목*합니다.</span><span class="sxs-lookup"><span data-stu-id="dd75b-108">The <xref:System.Windows.Controls.ListBox> in this example displays the *title* and *dc:date* of each *item*.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]  -->
- <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  -->  
+ [!code-xaml[XmlnsBindSnippet#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBindSnippet/CS/Window1.xaml#xmlnamespacemapping)]  
   
- 지정하는 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>가 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 소스에 사용되는 접두사와 일치할 필요는 없습니다. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 소스에서 접두사가 변경되더라도 매핑은 계속 작동합니다.  
+ <span data-ttu-id="dd75b-109"><xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> 사용 하는 것과 일치 하지 않아도 지정는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 원본; 접두사를 변경 하는 경우는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 소스 매핑은 계속 작동 합니다.</span><span class="sxs-lookup"><span data-stu-id="dd75b-109">Note that the <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> you specify does not have to match the one used in the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] source; if the prefix changes in the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] source your mapping still works.</span></span>  
   
- 이 예제에서 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터는 웹 서비스에서 가져온 것이지만 <xref:System.Windows.Data.XmlNamespaceMapping> 요소는 포함된 파일의 인라인 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 또는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터의 경우에도 작동합니다.  
+ <span data-ttu-id="dd75b-110">이 특정 예제는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터는 웹 서비스에서 제공 되지만 <xref:System.Windows.Data.XmlNamespaceMapping> 인라인 요소 에서도 작동 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 또는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 포함된 된 파일의 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="dd75b-110">In this particular example, the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data comes from a web service, but the <xref:System.Windows.Data.XmlNamespaceMapping> element also works with inline [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] or [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data in an embedded file.</span></span>  
   
-## 참고 항목  
- [XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)   
- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="dd75b-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dd75b-111">See Also</span></span>  
+ [<span data-ttu-id="dd75b-112">XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩</span><span class="sxs-lookup"><span data-stu-id="dd75b-112">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [<span data-ttu-id="dd75b-113">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="dd75b-113">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="dd75b-114">방법 항목</span><span class="sxs-lookup"><span data-stu-id="dd75b-114">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -1,56 +1,55 @@
 ---
-title: "How to: Declare a Property with Mixed Access Levels (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "access levels, properties"
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "mixed access levels"
-  - "Visual Basic code, properties"
-  - "properties [Visual Basic], access levels"
-  - "Property statement, declaring mixed access levels"
+title: "방법: 액세스 수준이 혼합된 속성 선언(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- access levels [Visual Basic], properties
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- mixed access levels
+- Visual Basic code, properties
+- properties [Visual Basic], access levels
+- Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 90fe20303f6f2ed692e54e44ee8cc65897531543
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Declare a Property with Mixed Access Levels (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-속성에 대한 `Get` 프로시저와 `Set` 프로시저의 액세스 수준을 서로 다르게 하려면 `Property` 문에서는 좀 더 관대한 수준을 사용하고 `Get` 또는 `Set` 문에서는 좀 더 제한적인 수준을 사용하면 됩니다.  코드의 특정 구성 요소에서는 속성 값을 가져올 수 있도록 하고 다른 구성 요소에서는 속성 값을 변경할 수 있도록 하려면 해당 속성에 대해 액세스 수준을 혼합하여 사용합니다.  
+# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a><span data-ttu-id="ef38d-102">방법: 액세스 수준이 혼합된 속성 선언(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ef38d-102">How to: Declare a Property with Mixed Access Levels (Visual Basic)</span></span>
+<span data-ttu-id="ef38d-103">원하는 경우는 `Get` 및 `Set` 액세스 수준이 서로 속성에 프로시저에서 더 수준을 사용할 수 있습니다는 `Property` 문과 더 제한적인 수준 중 하나에 `Get` 또는 `Set` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="ef38d-103">If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement.</span></span> <span data-ttu-id="ef38d-104">일부 속성의 값을 가져올 수 있게 되기를 코드와 값을 변경 하려면 코드의 다른 구성 요소 속성에 액세스 수준이 혼합된를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef38d-104">You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.</span></span>  
   
- 액세스 수준에 대한 자세한 내용은 [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하십시오.  
+ <span data-ttu-id="ef38d-105">액세스 수준에 대 한 자세한 내용은 참조 하십시오. [액세스 수준을 Visual Basic의](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ef38d-105">For more information on access levels, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-### 액세스 수준이 혼합된 속성을 선언하려면  
+### <a name="to-declare-a-property-with-mixed-access-levels"></a><span data-ttu-id="ef38d-106">액세스 수준이 혼합된 된 속성을 선언 하려면</span><span class="sxs-lookup"><span data-stu-id="ef38d-106">To declare a property with mixed access levels</span></span>  
   
-1.  속성을 일반적인 방식으로 선언하고 `Property` 문에서 덜 제한적인 액세스 수준\(예: `Public`\)을 지정합니다.  
+1.  <span data-ttu-id="ef38d-107">일반적인 방법으로 속성을 선언 하 고 덜 제한적인 액세스 수준을 지정할 (같은 `Public`)에 `Property` 문.</span><span class="sxs-lookup"><span data-stu-id="ef38d-107">Declare the property in the normal way, and specify the less restrictive access level (such as `Public`) in the `Property` statement.</span></span>  
   
-2.  보다 제한적인 액세스 수준\(예: `Friend`\)을 지정하는 `Get` 또는 `Set` 프로시저를 선언합니다.  
+2.  <span data-ttu-id="ef38d-108">선언 중 하나는 `Get` 또는 `Set` 더 제한적인 액세스 수준을 지정 하는 프로시저 (같은 `Friend`).</span><span class="sxs-lookup"><span data-stu-id="ef38d-108">Declare either the `Get` or the `Set` procedure specifying the more restrictive access level (such as `Friend`).</span></span>  
   
-3.  다른 속성 프로시저에는 액세스 수준을 지정하지 않습니다.  해당 프로시저에 `Property` 문에서 액세스 수준이 선언된 것으로 가정합니다.  속성 프로시저 중 하나에 대해서만 액세스를 제한할 수 있습니다.  
+3.  <span data-ttu-id="ef38d-109">다른 속성 프로시저에 대 한 액세스 수준을 지정 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="ef38d-109">Do not specify an access level on the other property procedure.</span></span> <span data-ttu-id="ef38d-110">액세스 수준에 선언 된 것으로 가정은 `Property` 문.</span><span class="sxs-lookup"><span data-stu-id="ef38d-110">It assumes the access level declared in the `Property` statement.</span></span> <span data-ttu-id="ef38d-111">속성 프로시저 중 하나 에서만 액세스를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef38d-111">You can restrict access on only one of the property procedures.</span></span>  
   
      [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
   
-     위 예제에서 `Get` 프로시저에는 속성 자체와 동일한 `Protected` 액세스가 지정되지만, `Set` 프로시저에는 `Private` 액세스가 지정됩니다.  `employee`에서 파생된 클래스는 `salary` 값을 읽을 수 있지만 값 설정은 `employee` 클래스만이 할 수 있습니다.  
+     <span data-ttu-id="ef38d-112">앞의 예제에는 `Get` 프로시저에 동일한 `Protected` 자체를 속성으로 액세스 하는 동안는 `Set` 프로시저에 `Private` 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef38d-112">In the preceding example, the `Get` procedure has the same `Protected` access as the property itself, while the `Set` procedure has `Private` access.</span></span> <span data-ttu-id="ef38d-113">클래스에서 파생 `employee` 읽을 수는 `salary` 값만 `employee` 클래스에서 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef38d-113">A class derived from `employee` can read the `salary` value, but only the `employee` class can set it.</span></span>  
   
-## 참고 항목  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Property 프로시저](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)   
- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [How to: Create a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-property.md)   
- [How to: Call a Property Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [How to: Put a Value in a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [How to: Get a Value from a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a><span data-ttu-id="ef38d-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ef38d-114">See Also</span></span>  
+ [<span data-ttu-id="ef38d-115">절차</span><span class="sxs-lookup"><span data-stu-id="ef38d-115">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="ef38d-116">속성 프로시저</span><span class="sxs-lookup"><span data-stu-id="ef38d-116">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="ef38d-117">프로시저 매개 변수 및 인수</span><span class="sxs-lookup"><span data-stu-id="ef38d-117">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="ef38d-118">Property 문</span><span class="sxs-lookup"><span data-stu-id="ef38d-118">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="ef38d-119">Visual Basic에서 속성과 변수의 차이점</span><span class="sxs-lookup"><span data-stu-id="ef38d-119">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)  
+ [<span data-ttu-id="ef38d-120">방법: 속성 만들기</span><span class="sxs-lookup"><span data-stu-id="ef38d-120">How to: Create a Property</span></span>](./how-to-create-a-property.md)  
+ [<span data-ttu-id="ef38d-121">방법: 속성 프로시저 호출</span><span class="sxs-lookup"><span data-stu-id="ef38d-121">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)  
+ [<span data-ttu-id="ef38d-122">방법: 선언 하 고 Visual Basic의 기본 속성 호출</span><span class="sxs-lookup"><span data-stu-id="ef38d-122">How to: Declare and Call a Default Property in Visual Basic</span></span>](./how-to-declare-and-call-a-default-property.md)  
+ [<span data-ttu-id="ef38d-123">방법: 속성 값 입력</span><span class="sxs-lookup"><span data-stu-id="ef38d-123">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)  
+ [<span data-ttu-id="ef38d-124">방법: 속성에서 값 가져오기</span><span class="sxs-lookup"><span data-stu-id="ef38d-124">How to: Get a Value from a Property</span></span>](./how-to-get-a-value-from-a-property.md)

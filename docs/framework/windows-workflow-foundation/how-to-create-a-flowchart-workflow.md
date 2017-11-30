@@ -1,77 +1,84 @@
 ---
-title: "방법: 순서도 워크플로 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 순서도 워크플로 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 570e51c3b9c8ee227a9c5688fc7caa1b4a0d9c6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 순서도 워크플로 만들기
-기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다.이 항목에서는 <xref:System.Activities.Statements.Flowchart> 활동과 같은 기본 제공 활동 및 이전 [방법: 활동 만들기](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md) 항목의 사용자 지정 활동을 모두 사용하는 워크플로를 만드는 방법을 단계별로 설명합니다.이 워크플로는 숫자 추측 게임을 모델링합니다.  
+# <a name="how-to-create-a-flowchart-workflow"></a><span data-ttu-id="8d729-102">방법: 순서도 워크플로 만들기</span><span class="sxs-lookup"><span data-stu-id="8d729-102">How to: Create a Flowchart Workflow</span></span>
+<span data-ttu-id="8d729-103">기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-103">Workflows can be constructed from built-in activities as well as from custom activities.</span></span> <span data-ttu-id="8d729-104">이 항목의 단계와 같은 기본 제공 활동을 모두 사용 하는 워크플로 만드는 따라는 <xref:System.Activities.Statements.Flowchart> 활동과 이전 사용자 지정 활동 [하는 방법: 활동 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-104">This topic steps through creating a workflow that uses both built-in activities such as the <xref:System.Activities.Statements.Flowchart> activity, and the custom activities from the previous [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) topic.</span></span> <span data-ttu-id="8d729-105">이 워크플로는 숫자 추측 게임을 모델링합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-105">The workflow models a number guessing game.</span></span>  
   
 > [!NOTE]
->  초보자를 위한 자습서의 각 항목은 이전 항목을 바탕으로 합니다.이 항목을 완료하려면 먼저 [방법: 활동 만들기](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md)를 완료해야 합니다.  
+>  <span data-ttu-id="8d729-106">초보자를 위한 자습서의 각 항목은 이전 항목을 바탕으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-106">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="8d729-107">이 항목을 완료 하려면 먼저 완료 해야 [하는 방법: 활동 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-107">To complete this topic, you must first complete [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).</span></span>  
   
 > [!NOTE]
->  자습서의 전체 버전을 다운로드하려면 [Windows Workflow Foundation\(WF45\) \- 초보자를 위한 자습서](http://go.microsoft.com/fwlink/?LinkID=248976)를 참조하십시오.  
+>  <span data-ttu-id="8d729-108">자습서의 전체 버전을 다운로드하려면 [Windows Workflow Foundation(WF45) - 초보자를 위한 자습서](http://go.microsoft.com/fwlink/?LinkID=248976)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8d729-108">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-### 워크플로를 만들려면  
+### <a name="to-create-the-workflow"></a><span data-ttu-id="8d729-109">워크플로를 만들려면</span><span class="sxs-lookup"><span data-stu-id="8d729-109">To create the workflow</span></span>  
   
-1.  **솔루션 탐색기**에서 **NumberGuessWorkflowActivities**를 마우스 오른쪽 단추로 클릭하고 **추가**, **새 항목**을 차례로 선택합니다.  
+1.  <span data-ttu-id="8d729-110">마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowActivities** 에 **솔루션 탐색기** 선택 **추가**, **새 항목**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-110">Right-click **NumberGuessWorkflowActivities** in **Solution Explorer** and select **Add**, **New Item**.</span></span>  
   
-2.  **설치됨**, **공통 항목** 노드에서 **워크플로**를 선택합니다.**워크플로** 목록에서 **활동**을 선택합니다.  
+2.  <span data-ttu-id="8d729-111">에 **설치 됨**, **공통 항목** 노드를 **워크플로**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-111">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="8d729-112">선택 **활동** 에서 **워크플로** 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-112">Select **Activity** from the **Workflow** list.</span></span>  
   
-3.  **이름** 상자에 `FlowchartNumberGuessWorkflow`를 입력하고 **추가**를 클릭합니다.  
+3.  <span data-ttu-id="8d729-113">형식 `FlowchartNumberGuessWorkflow` 에 **이름** 상자 한 클릭 **추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-113">Type `FlowchartNumberGuessWorkflow` into the **Name** box and click **Add**.</span></span>  
   
-4.  **도구 상자**의 **순서도** 섹션에서 **Flowchart** 활동을 끌어 워크플로 디자인 화면의 **여기에 작업 놓기** 레이블에 놓습니다.  
+4.  <span data-ttu-id="8d729-114">끌어서는 **순서도** 활동을는 **순서도** 의 섹션은 **도구 상자** 놓습니다는 **여기에 작업 놓기** 에 레이블는 워크플로 디자인 화면입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-114">Drag a **Flowchart** activity from the **Flowchart** section of the **Toolbox** and drop it onto the **Drop activity here** label on the workflow design surface.</span></span>  
   
-### 워크플로 변수와 인수를 만들려면  
+### <a name="to-create-the-workflow-variables-and-arguments"></a><span data-ttu-id="8d729-115">워크플로 변수와 인수를 만들려면</span><span class="sxs-lookup"><span data-stu-id="8d729-115">To create the workflow variables and arguments</span></span>  
   
-1.  워크플로가 아직 표시되어 있지 않은 경우 **솔루션 탐색기**에서 **FlowchartNumberGuessWorkflow.xaml**을 두 번 클릭하여 디자이너에 워크플로를 표시합니다.  
+1.  <span data-ttu-id="8d729-116">두 번 클릭 **FlowchartNumberGuessWorkflow.xaml** 에 **솔루션 탐색기** 에 표시 되지 않은 경우 워크플로 디자이너를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-116">Double-click **FlowchartNumberGuessWorkflow.xaml** in **Solution Explorer** to display the workflow in the designer, if it is not already displayed.</span></span>  
   
-2.  Workflow Designer 왼쪽 아래에 있는 **인수**를 클릭하여 **인수** 창을 표시합니다.  
+2.  <span data-ttu-id="8d729-117">클릭 **인수** 표시 하려면 워크플로 디자이너 왼쪽 아래에에서는 **인수** 창.</span><span class="sxs-lookup"><span data-stu-id="8d729-117">Click **Arguments** in the lower-left side of the workflow designer to display the **Arguments** pane.</span></span>  
   
-3.  **인수 만들기**를 클릭합니다.  
+3.  <span data-ttu-id="8d729-118">클릭 **인수 만들기**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-118">Click **Create Argument**.</span></span>  
   
-4.  **이름** 상자에 `MaxNumber`를 입력하고 **방향** 드롭다운 목록에서 **입력**을 선택한 다음 **인수 형식** 드롭다운 목록에서 **Int32**를 선택하고 Enter 키를 눌러 인수를 저장합니다.  
+4.  <span data-ttu-id="8d729-119">형식 `MaxNumber` 에 **이름** 상자 **에** 에서 **방향** 드롭 다운 목록 **Int32** 는 에서**인수 형식이** 드롭 다운 목록 및 다음 인수를 저장 하는 ENTER 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-119">Type `MaxNumber` into the **Name** box, select **In** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
   
-5.  **인수 만들기**를 클릭합니다.  
+5.  <span data-ttu-id="8d729-120">클릭 **인수 만들기**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-120">Click **Create Argument**.</span></span>  
   
-6.  새로 추가된 `MaxNumber` 인수 아래에 있는 **이름** 상자에 `Turns`를 입력하고 **방향** 드롭다운 목록에서 **출력**을 선택한 다음 **인수 형식** 드롭다운 목록에서 **Int32**를 선택하고 Enter 키를 누릅니다.  
+6.  <span data-ttu-id="8d729-121">형식 `Turns` 에 **이름** 새로 추가 된 아래에 있는 상자 `MaxNumber` 인수를 **아웃** 에서 **방향** 드롭 다운 목록에서  **Int32** 에서 **인수 형식이** 드롭 다운 목록 및 다음 ENTER 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-121">Type `Turns` into the **Name** box that is below the newly added `MaxNumber` argument, select **Out** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER.</span></span>  
   
-7.  활동 디자이너 왼쪽 아래에 있는 **인수**를 클릭하여 **인수** 창을 닫습니다.  
+7.  <span data-ttu-id="8d729-122">클릭 **인수** 를 닫으려면 활동 디자이너 왼쪽 아래에에서는 **인수** 창.</span><span class="sxs-lookup"><span data-stu-id="8d729-122">Click **Arguments** in the lower-left side of the activity designer to close the **Arguments** pane.</span></span>  
   
-8.  Workflow Designer 왼쪽 아래에 있는 **변수**를 클릭하여 **변수** 창을 표시합니다.  
+8.  <span data-ttu-id="8d729-123">클릭 **변수** 표시 하려면 워크플로 디자이너 왼쪽 아래에에서는 **변수** 창.</span><span class="sxs-lookup"><span data-stu-id="8d729-123">Click **Variables** in the lower-left side of the workflow designer to display the **Variables** pane.</span></span>  
   
-9. **변수 만들기**를 클릭합니다.  
+9. <span data-ttu-id="8d729-124">클릭 **변수를 만들고**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-124">Click **Create Variable**.</span></span>  
   
     > [!TIP]
-    >  **변수 만들기** 상자가 표시되어 있지 않으면 Workflow Designer 화면에서 <xref:System.Activities.Statements.Flowchart> 활동을 클릭하여 선택합니다.  
+    >  <span data-ttu-id="8d729-125">되지 않은 경우 **변수 만들기** 상자가 표시 됩니다을 클릭는 <xref:System.Activities.Statements.Flowchart> 활동을 워크플로 디자이너 화면을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-125">If no **Create Variable** box is displayed, click the <xref:System.Activities.Statements.Flowchart> activity on the workflow designer surface to select it.</span></span>  
   
-10. **이름** 상자에 `Guess`를 입력하고 **변수 형식** 드롭다운 목록에서 **Int32**를 선택한 다음 Enter 키를 눌러 변수를 저장합니다.  
+10. <span data-ttu-id="8d729-126">형식 `Guess` 에 **이름** 상자 **Int32** 에서 **변수 형식** 드롭 다운 목록 및 다음 변수를 저장 하는 ENTER 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-126">Type `Guess` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
   
-11. **변수 만들기**를 클릭합니다.  
+11. <span data-ttu-id="8d729-127">클릭 **변수를 만들고**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-127">Click **Create Variable**.</span></span>  
   
-12. **이름** 상자에 `Target`을 입력하고 **변수 형식** 드롭다운 목록에서 **Int32**를 선택한 다음 Enter 키를 눌러 변수를 저장합니다.  
+12. <span data-ttu-id="8d729-128">형식 `Target` 에 **이름** 상자 **Int32** 에서 **변수 형식** 드롭 다운 목록 및 다음 변수를 저장 하는 ENTER 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-128">Type `Target` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
   
-13. 활동 디자이너 왼쪽 아래에 있는 **변수**를 클릭하여 **변수** 창을 닫습니다.  
+13. <span data-ttu-id="8d729-129">클릭 **변수** 를 닫으려면 활동 디자이너 왼쪽 아래에에서는 **변수** 창.</span><span class="sxs-lookup"><span data-stu-id="8d729-129">Click **Variables** in the lower-left side of the activity designer to close the **Variables** pane.</span></span>  
   
-### 워크플로 활동을 추가하려면  
+### <a name="to-add-the-workflow-activities"></a><span data-ttu-id="8d729-130">워크플로 활동을 추가하려면</span><span class="sxs-lookup"><span data-stu-id="8d729-130">To add the workflow activities</span></span>  
   
-1.  **도구 상자**의 **기본 형식** 섹션에서 **Assign** 활동을 끌어 순서도의 맨 위에 있는 **시작** 노드 위에 놓습니다.**Assign** 활동이 **시작** 노드 위에 있으면 **시작** 노드 주위에 삼각형 세 개가 표시됩니다.**시작** 노드 바로 아래에 있는 삼각형에 **Assign** 활동을 놓습니다.그러면 두 항목이 서로 연결되고 **Assign** 활동이 순서도의 첫 번째 활동으로 지정됩니다.  
+1.  <span data-ttu-id="8d729-131">끌어서는 **할당** 활동을는 **기본 형식** 의 섹션은 **도구 상자** 위로 가져갑니다는 **시작** 의 위쪽에 있는 노드는 순서도입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-131">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and hover it over the **Start** node, which is at the top of the flowchart.</span></span> <span data-ttu-id="8d729-132">경우는 **할당** 활동 스타일러스가 **시작** 노드를 주위에 삼각형 세 개가 표시 됩니다는 **시작** 노드.</span><span class="sxs-lookup"><span data-stu-id="8d729-132">When the **Assign** activity is over the **Start** node, three triangles will appear around the **Start** node.</span></span> <span data-ttu-id="8d729-133">삭제는 **할당** 바로 아래에 있는 삼각형에 활동의 **시작** 노드.</span><span class="sxs-lookup"><span data-stu-id="8d729-133">Drop the **Assign** activity on the triangle that is directly below the **Start** node.</span></span> <span data-ttu-id="8d729-134">이 두 항목을 함께 연결 됩니다 하 고은 **할당** 순서도의 첫 번째 활동으로 작업 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-134">This will link the two items together and designates the **Assign** activity as the first activity in the flowchart.</span></span>  
   
     > [!NOTE]
-    >  시작 노드에 활동을 직접 연결하여 워크플로에서 해당 활동을 시작 활동으로 나타낼 수도 있습니다.이렇게 하려면 마우스를 **시작** 노드 위로 가져가서 마우스가 **시작** 노드 위에 있을 때 나타나는 사각형 중 하나를 클릭하고 연결선을 원하는 활동 아래로 끌어 나타나는 사각형 중 하나 위에 놓습니다.활동을 마우스 오른쪽 단추로 클릭하고 **시작 노드로 설정**을 선택하여 해당 활동을 시작 활동으로 지정할 수도 있습니다.  
+    >  <span data-ttu-id="8d729-135">시작 노드에 활동을 직접 연결하여 워크플로에서 해당 활동을 시작 활동으로 나타낼 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-135">Activities can also be indicated as the starting activity in the workflow by manually linking them activity to the start node.</span></span> <span data-ttu-id="8d729-136">이렇게 하려면 위로 마우스를 가져가고는 **시작** 노드를 마우스를 위로 가져갈 때 나타나는 사각형 중 하나를 클릭는 **시작** 노드와 연결 된 아래로 끌어 원하는 활동 중 하나에 놓는 나타나는 사각형입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-136">To do this, hover the mouse over the **Start** node, click one of the rectangles that appear when the mouse is over the **Start** node, and drag the connecting line down to the desired activity and drop it on one of the rectangles that appear.</span></span> <span data-ttu-id="8d729-137">또한 지정할 수 있습니다 및 it를 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 활동을 시작 활동으로 활동 **시작 노드로 설정**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-137">You can also designate and activity as the starting activity by right-clicking the it and choosing **Set as Start Node**.</span></span>  
   
-2.  **대상** 상자에 `Target`을 입력하고 **C\# 식 입력** 또는 **VB 식 입력** 상자에 다음 식을 입력합니다.  
+2.  <span data-ttu-id="8d729-138">형식 `Target` 에 **를** 상자와에 다음 식을 **C# 식 입력** 또는 **VB 식 입력** 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-138">Type `Target` into the **To** box and the following expression into the **Enter a C# Expression** or **Enter a VB expression** box.</span></span>  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -82,11 +89,11 @@ caps.handback.revision: 7
     ```  
   
     > [!TIP]
-    >  **도구 상자** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **도구 상자**를 선택합니다.  
+    >  <span data-ttu-id="8d729-139">경우는 **도구 상자** 창이 표시 되지 않으면, 선택 **도구 상자** 에서 **보기** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="8d729-139">If the **Toolbox** window is not displayed, select **Toolbox** from the **View** menu.</span></span>  
   
-3.  **도구 상자**의 **NumberGuessWorkflowActivities** 섹션에서 **Prompt** 활동을 끌어 이전 단계의 **Assign** 활동 아래에 놓고 **Prompt** 활동을 **Assign** 활동에 연결합니다.두 활동을 연결하는 방법에는 세 가지가 있습니다.첫 번째 방법은 워크플로에 **Prompt** 활동을 놓을 때 두 활동을 연결하는 것입니다.**Prompt** 활동을 워크플로로 끌 때 **Assign** 활동 위에 마우스를 놓고 **Prompt** 활동이 **Assign** 활동 위에 있을 때 나타나는 삼각형 네 개 중 하나에 놓습니다.두 번째 방법은 **Prompt** 활동을 워크플로의 원하는 위치에 놓는 것입니다.그런 다음 마우스를 **Assign** 활동 위에 놓고 **Prompt** 활동 아래에 나타나는 사각형 중 하나를 끕니다.**Assign** 활동의 연결선이 **Prompt** 활동의 사각형 중 하나에 연결되도록 마우스를 끌고 마우스 단추를 놓습니다.세 번째 방법은 첫 번째와 매우 유사합니다. **도구 상자**에서 **Prompt** 활동을 끄는 대신 워크플로 디자인 화면의 해당 위치에서 활동을 끌어 **Assign** 활동 위로 가져간 다음 나타나는 삼각형 중 하나에 놓습니다.  
+3.  <span data-ttu-id="8d729-140">끌어서는 **프롬프트** 활동을는 **NumberGuessWorkflowActivities** 의 섹션은 **도구 상자**, 아래에 놓습니다는 **할당** 활동 이전 단계별로 실행 하며 연결 된 **프롬프트** 활동을는 **할당** 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-140">Drag a **Prompt** activity from the **NumberGuessWorkflowActivities** section of the **Toolbox**, drop it below the **Assign** activity from the previous step, and connect the **Prompt** activity to the **Assign** activity.</span></span> <span data-ttu-id="8d729-141">두 활동을 연결하는 방법에는 세 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-141">There are three ways to connect the two activities.</span></span> <span data-ttu-id="8d729-142">첫 번째 방법은 놓을 때 연결 하는 **프롬프트** 워크플로에 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-142">The first way is to connect them as you drop the **Prompt** activity on the workflow.</span></span> <span data-ttu-id="8d729-143">로 끌는 **프롬프트** 워크플로에 활동 위로 마우스를 가져가고는 **할당** 활동 때 표시 되는 4 개의 삼각형 중 하나에 놓습니다는 **프롬프트** 활동은 위에 **할당** 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-143">As you are dragging the **Prompt** activity to the workflow, hover it over the **Assign** activity and drop it onto one of the four triangles that appear when the **Prompt** activity is over the **Assign** activity.</span></span> <span data-ttu-id="8d729-144">두 번째 방법은 삭제 하는 **프롬프트** 활동을 워크플로의 원하는 위치에 놓으면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-144">The second way is to drop the **Prompt** activity onto the workflow at the desired location.</span></span> <span data-ttu-id="8d729-145">그런 다음 위로 마우스를 가져가고는 **할당** 활동 및 아래에 나타나는 사각형 중 하나는 끌어서는 **프롬프트** 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-145">Then, hover the mouse over the **Assign** activity and drag one of the rectangles that appears down to the **Prompt** activity.</span></span> <span data-ttu-id="8d729-146">연결선이 되도록 마우스를 끌어는 **할당** 활동의 사각형 중 하나에 연결는 **프롬프트** 작업을 선택한 다음 마우스 단추를 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-146">Drag the mouse so that the connecting line from the **Assign** activity connects to one of the rectangles of the **Prompt** activity, and then release the mouse button.</span></span> <span data-ttu-id="8d729-147">세 번째 방법은 매우 비슷합니다 끌어오는 방법 대신 점을 제외 하 고 첫 번째 방법은 **프롬프트** 활동을는 **도구 상자**, 워크플로 디자인 화면의 해당 위치에서 끌어는 위로마우스를가져가고 **할당** 활동에 나타나는 삼각형 중 하나에 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-147">The third way is very similar to the first way, except that instead of dragging the **Prompt** activity from the **Toolbox**, you drag it from its location on the workflow design surface, hover it over the **Assign** activity, and drop it onto one of the triangles that appears.</span></span>  
   
-4.  **Prompt** 활동의 **속성 창**에서 **BookmarkName** 속성 값 상자에 `"EnterGuess"`를 따옴표를 포함하여 입력합니다.**결과** 속성 값 상자에 `Guess`를 입력하고 **텍스트** 속성 상자에 다음 식을 입력합니다.  
+4.  <span data-ttu-id="8d729-148">에 **속성 창** 에 대 한는 **프롬프트** 활동, 형식 `"EnterGuess"` 따옴표를 포함 하는 **BookmarkName** 속성 값 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-148">In the **Properties Window** for the **Prompt** activity, type `"EnterGuess"` including the quotes into the **BookmarkName** property value box.</span></span> <span data-ttu-id="8d729-149">형식 `Guess` 에 **결과** 속성 값 상자에 다음 식을 입력 하 고는 **텍스트** 속성 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-149">Type `Guess` into the **Result** property value box, and type the following expression into the **Text** property box.</span></span>  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -97,13 +104,13 @@ caps.handback.revision: 7
     ```  
   
     > [!TIP]
-    >  **속성 창**이 표시되지 않은 경우 **보기** 메뉴에서 **속성 창**을 선택합니다.  
+    >  <span data-ttu-id="8d729-150">경우는 **속성 창** 가 표시 되지 않는 select **속성 창** 에서 **보기** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="8d729-150">If the **Properties Window** is not displayed, select **Properties Window** from the **View** menu.</span></span>  
   
-5.  **도구 상자**의 **기본 형식** 섹션에서 **Assign** 활동을 끌어 온 다음 이전 단계에서 설명한 방법 중 하나를 사용하여 이 활동이 **Prompt** 활동 아래에 오도록 연결합니다.  
+5.  <span data-ttu-id="8d729-151">끌어서는 **할당** 활동을는 **기본 형식** 의 섹션은 **도구 상자** 는 아래에이전단계에서설명하는방법중하나를사용하여연결하고 **Prompt** 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-151">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and connect it using one of the methods described in the previous step so that it is below the **Prompt** activity.</span></span>  
   
-6.  **대상** 상자에 `Turns`를 입력하고 **C\# 식 입력** 또는 **VB 식 입력** 상자에 `Turns + 1`을 입력합니다.  
+6.  <span data-ttu-id="8d729-152">형식 `Turns` 에 **를** 상자 및 `Turns + 1` 에 **C# 식 입력** 또는 **VB 식 입력** 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-152">Type `Turns` into the **To** box and `Turns + 1` into the **Enter a C# expression**  or **Enter a VB expression** box.</span></span>  
   
-7.  **도구 상자**의 **순서도** 섹션에서 **FlowDecision**을 끌어 **Assign** 활동 아래에 연결합니다.**속성 창**의 **조건** 속성 값 상자에 다음 식을 입력합니다.  
+7.  <span data-ttu-id="8d729-153">끌어서는 **FlowDecision** 에서 **순서도** 의 섹션은 **도구 상자** 아래에 연결 하 고는 **할당** 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-153">Drag a **FlowDecision** from the **Flowchart** section of the **Toolbox** and connect it below the **Assign** activity.</span></span> <span data-ttu-id="8d729-154">에 **속성 창**에 다음 식을 입력는 **조건** 속성 값 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-154">In the **Properties Window**, type the following expression into the **Condition** property value box.</span></span>  
   
     ```vb  
     Guess = Target  
@@ -113,50 +120,50 @@ caps.handback.revision: 7
     Guess == Target  
     ```  
   
-8.  **도구 상자**에서 다른 **FlowDecision** 활동을 끌어 첫 번째 활동 아래에 놓습니다.**FlowDecision** 활동 맨 위의 **False** 레이블이 있는 사각형에서 두 번째 **FlowDecision** 활동 맨 위의 사각형으로 끌어 두 활동을 연결합니다.  
+8.  <span data-ttu-id="8d729-155">다른 **FlowDecision** 활동을는 **도구 상자** 첫 번째 아래에 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-155">Drag another **FlowDecision** activity from the **Toolbox** and drop it below the first one.</span></span> <span data-ttu-id="8d729-156">레이블이 있는 사각형에서 끌어 두 활동을 연결 **False** 상단 **FlowDecision** 사각형에 두 번째 맨 위에 있는 활동 **FlowDecision**활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-156">Connect the two activities by dragging from the rectangle that is labeled **False** on the top **FlowDecision** activity to the rectangle at the top of the second **FlowDecision** activity.</span></span>  
   
     > [!TIP]
-    >  **FlowDecision**에 **True** 및 **False** 레이블이 표시되어 있지 않으면 마우스로 **FlowDecision**을 가리킵니다.  
+    >  <span data-ttu-id="8d729-157">표시 되지 않으면는 **True** 및 **False** 레이블의 **FlowDecision**, 위로 마우스를 가져가고는 **FlowDecision**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-157">If you do not see the **True** and **False** labels on the **FlowDecision**, hover the mouse over the **FlowDecision**.</span></span>  
   
-9. 두 번째 **FlowDecision** 활동을 클릭하여 선택합니다.**속성 창**의 **조건** 속성 값 상자에 다음 식을 입력합니다.  
+9. <span data-ttu-id="8d729-158">두 번째 클릭 **FlowDecision** 활동을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-158">Click the second **FlowDecision** activity to select it.</span></span> <span data-ttu-id="8d729-159">에 **속성 창**에 다음 식을 입력는 **조건** 속성 값 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-159">In the **Properties Window**, type the following expression into the **Condition** property value box.</span></span>  
   
-    ```vb-c#  
+    ```
     Guess < Target  
     ```  
   
-10. **도구 상자**의 **기본 형식** 섹션에서 두 **WriteLine** 활동을 끌어 두 **FlowDecision** 활동 아래에 나란히 놓습니다.**FlowDecision** 활동의 **True** 동작을 맨 왼쪽 **WriteLine** 활동에 연결하고 **False** 동작을 맨 오른쪽 **WriteLine** 활동에 연결합니다.  
+10. <span data-ttu-id="8d729-160">두 개 **WriteLine** 활동을는 **기본 형식** 의 섹션은 **도구 상자** 있도록 함께 두 아래에 놓으면 **FlowDecision**  활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-160">Drag two **WriteLine** activities from the **Primitives** section of the **Toolbox** and drop them so that they are side by side below the two **FlowDecision** activities.</span></span> <span data-ttu-id="8d729-161">연결의 **True** 맨 **FlowDecision** 활동을 맨 왼쪽 **WriteLine** 활동 및 **False** 동작을는 맨 오른쪽 **WriteLine** 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-161">Connect the **True** action of the bottom **FlowDecision** activity to the leftmost **WriteLine** activity, and the **False** action to the rightmost **WriteLine** activity.</span></span>  
   
-11. 맨 왼쪽 **WriteLine** 활동을 클릭하여 선택하고 **속성 창**의 **텍스트** 속성 값 상자에 다음 식을 입력합니다.  
+11. <span data-ttu-id="8d729-162">가장 왼쪽에 있는 클릭 **WriteLine** 활동을 선택 하 고에 다음 식을 입력는 **텍스트** 속성 값 상자에 **속성 창**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-162">Click the leftmost **WriteLine** activity to select it, and type the following expression into the **Text** property value box in the **Properties Window**.</span></span>  
   
-    ```vb-c#  
+    ```
     "Your guess is too low."  
     ```  
   
-12. **WriteLine**을 위에 있는 **프롬프트** 활동 왼쪽에 연결합니다.  
+12. <span data-ttu-id="8d729-163">연결 된 **WriteLine** 의 왼쪽에는 **프롬프트** 그 보다 상위 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-163">Connect the **WriteLine** to the left side of the **Prompt** activity that is above it.</span></span>  
   
-13. 맨 오른쪽 **WriteLine** 활동을 클릭하여 선택하고 **속성 창**의 **텍스트** 속성 값 상자에 다음 식을 입력합니다.  
+13. <span data-ttu-id="8d729-164">맨 오른쪽 클릭 **WriteLine** 활동을 선택 하 고에 다음 식을 입력는 **텍스트** 속성 값 상자에 **속성 창**합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-164">Click the rightmost **WriteLine** activity to select it, and type the following expression into the **Text** property value box in the **Properties Window**.</span></span>  
   
-    ```vb-c#  
+    ```
     "Your guess is too high."  
     ```  
   
-14. **WriteLine** 활동을 위에 있는 **프롬프트** 활동 오른쪽에 연결합니다.  
+14. <span data-ttu-id="8d729-165">연결의 **WriteLine** 활동의 오른쪽에는 **프롬프트** 상위 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-165">Connect the **WriteLine** activity to the right side of the **Prompt** activity above it.</span></span>  
   
-     다음 예제에서는 완료된 워크플로를 보여 줍니다.  
+     <span data-ttu-id="8d729-166">다음 예제에서는 완료된 워크플로를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-166">The following example illustrates the completed workflow.</span></span>  
   
-     ![완료된 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
+     <span data-ttu-id="8d729-167">![Windows Workflow Foundation 완료](../../../docs/framework/windows-workflow-foundation/media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")</span><span class="sxs-lookup"><span data-stu-id="8d729-167">![Completed Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")</span></span>  
   
-### 워크플로를 빌드하려면  
+### <a name="to-build-the-workflow"></a><span data-ttu-id="8d729-168">워크플로를 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="8d729-168">To build the workflow</span></span>  
   
-1.  Ctrl\+Shift\+B를 눌러 솔루션을 빌드합니다.  
+1.  <span data-ttu-id="8d729-169">Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-169">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-     워크플로를 실행하는 방법에 대한 지침은 다음 항목 [방법: 워크플로 실행](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md)을 참조하십시오.워크플로의 다른 스타일로 [방법: 워크플로 실행](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) 단계를 이미 수행했고 이 단계에서 순서도 워크플로를 사용하여 이 워크플로를 실행하려고 할 경우 [방법: 워크플로 실행](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md)의 [응용 프로그램을 빌드하고 실행하려면](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md#BKMK_ToRunTheApplication) 단원으로 건너뛰십시오.  
+     <span data-ttu-id="8d729-170">워크플로 실행 하는 방법에 대 한 지침은 다음 항목을 참조 하십시오 [하는 방법: 워크플로 실행](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-170">For instructions on how to run the workflow, please see the next topic, [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span></span> <span data-ttu-id="8d729-171">이미 완료 된 경우는 [하는 방법: 워크플로 실행](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) 워크플로의 다른 스타일이 적용 된 단계와이 단계에서 순서도 워크플로 사용 하 여 실행 하려면,으로 바로 이동 하는 [빌드하고응용프로그램을실행하려면](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)섹션 [하는 방법: 워크플로 실행](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8d729-171">If you have already completed the [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) step with a different style of workflow and wish to run it using the flowchart workflow from this step, skip ahead to the [To build and run the application](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section of [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span></span>  
   
-## 참고 항목  
- <xref:System.Activities.Statements.Flowchart>   
- <xref:System.Activities.Statements.FlowDecision>   
- [Windows Workflow Foundation 프로그래밍](../../../docs/framework/windows-workflow-foundation//programming.md)   
- [워크플로 디자인](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)   
- [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)   
- [방법: 활동 만들기](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md)   
- [방법: 워크플로 실행](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md)
+## <a name="see-also"></a><span data-ttu-id="8d729-172">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8d729-172">See Also</span></span>  
+ <xref:System.Activities.Statements.Flowchart>  
+ <xref:System.Activities.Statements.FlowDecision>  
+ [<span data-ttu-id="8d729-173">Windows Workflow Foundation 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="8d729-173">Windows Workflow Foundation Programming</span></span>](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [<span data-ttu-id="8d729-174">워크플로 디자인</span><span class="sxs-lookup"><span data-stu-id="8d729-174">Designing Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ [<span data-ttu-id="8d729-175">초보자를 위한 자습서</span><span class="sxs-lookup"><span data-stu-id="8d729-175">Getting Started Tutorial</span></span>](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
+ [<span data-ttu-id="8d729-176">방법: 활동 만들기</span><span class="sxs-lookup"><span data-stu-id="8d729-176">How to: Create an Activity</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [<span data-ttu-id="8d729-177">방법: 워크플로 실행</span><span class="sxs-lookup"><span data-stu-id="8d729-177">How to: Run a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

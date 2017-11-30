@@ -1,70 +1,69 @@
 ---
-title: "Differences Between Shadowing and Overriding (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "shadowing, vs. overriding"
-  - "overriding, vs. shadowing"
+title: "숨기기와 재정의의 차이점(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- shadowing, vs. overriding
+- overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Differences Between Shadowing and Overriding (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-기본 클래스에서 상속하는 클래스를 정의할 때 파생 클래스에서 하나 이상의 기본 클래스 요소를 다시 정의하려는 경우가 있습니다.  숨기기와 재정의는 모두 이러한 용도로 사용할 수 있습니다.  
+# <a name="differences-between-shadowing-and-overriding-visual-basic"></a><span data-ttu-id="ec133-102">숨기기와 재정의의 차이점(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec133-102">Differences Between Shadowing and Overriding (Visual Basic)</span></span>
+<span data-ttu-id="ec133-103">기본 클래스에서 상속 되는 클래스를 정의할 때 파생된 클래스에서 기본 클래스 요소 중 하나 이상을 재정의 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-103">When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class.</span></span> <span data-ttu-id="ec133-104">숨기기와 재정의이 목적을 위해 둘 다 사용할 수는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-104">Shadowing and overriding are both available for this purpose.</span></span>  
   
-## 비교  
- 숨기기와 재정의 모두 파생된 클래스가 기본 클래스에서 상속할 때 사용되며, 하나의 선언된 요소를 다른 요소로 재정의하지만  둘 사이에는 상당한 차이점이 있습니다.  
+## <a name="comparison"></a><span data-ttu-id="ec133-105">비교</span><span class="sxs-lookup"><span data-stu-id="ec133-105">Comparison</span></span>  
+ <span data-ttu-id="ec133-106">숨기기와 재정의 모두 사용 하는 파생된 클래스는 기본 클래스에서 상속 하 고 다른 한 선언 된 요소를 다시 정의 둘 다 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-106">Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another.</span></span> <span data-ttu-id="ec133-107">하지만 두 가지 중요 한 차이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-107">But there are significant differences between the two.</span></span>  
   
- 다음 표에서는 숨김과 재정의를 비교합니다.  
+ <span data-ttu-id="ec133-108">다음 표에서 비교 숨김과 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-108">The following table compares shadowing with overriding.</span></span>  
   
 ||||  
-|-|-|-|  
-|비교 관점|숨김|재정의|  
-|목적|파생된 클래스에 이미 정의된 멤버를 사용하여 기본 클래스가 더 이상 수정되지 않도록 방지함|호출 시퀀스<sup>1</sup>가 동일한 프로시저나 속성을 다르게 구현하여 다형성을 제공함|  
-|재정의되는 요소|모든 선언된 요소 형식|프로시저\(`Function`, `Sub` 또는 `Operator`\) 또는 속성만|  
-|재정의 요소|모든 선언된 요소 형식|호출 시퀀스<sup>1</sup>가 같은 프로시저 또는 속성만|  
-|다시 정의하는 요소의 액세스 수준|모든 액세스 수준|재정의된 요소의 액세스 수준을 변경할 수 없음|  
-|다시 정의하는 요소의 읽기 및 쓰기 가능성|모든 조합|재정의된 속성의 읽기 가능성 또는 쓰기 가능성을 변경할 수 없음|  
-|다시 정의에 대한 제어|기본 클래스 요소는 숨김을 적용하거나 금지할 수 없음|기본 클래스 요소는 `MustOverride`, `NotOverridable` 또는 `Overridable`를 지정할 수 있음|  
-|키워드 사용법|파생된 클래스에는 `Shadows`를 사용하는 것이 좋음. `Shadows`와 `Overrides` 중 어느 것도 지정하지 않으면 `Shadows`로 간주됨<sup>2</sup>|기본 클래스에는 반드시 `Overridable` 또는 `MustOverride`를 사용하고, 파생된 클래스에는 `Overrides`를 사용해야 함|  
-|파생된 클래스로부터 다시 클래스를 파생할 때 재정의 요소 상속|추가로 파생되는 클래스에 의해 상속되는 요소 숨김. 숨겨진 요소는 계속 숨겨진 상태로 유지됨<sup>3</sup>|추가로 파생되는 클래스에 의해 상속되는 요소 재정의. 재정의된 요소는 계속 재정의된 상태로 유지됨|  
+|---|---|---|  
+|<span data-ttu-id="ec133-109">비교 지점</span><span class="sxs-lookup"><span data-stu-id="ec133-109">Point of comparison</span></span>|<span data-ttu-id="ec133-110">섀도잉</span><span class="sxs-lookup"><span data-stu-id="ec133-110">Shadowing</span></span>|<span data-ttu-id="ec133-111">재정의</span><span class="sxs-lookup"><span data-stu-id="ec133-111">Overriding</span></span>|  
+|<span data-ttu-id="ec133-112">용도</span><span class="sxs-lookup"><span data-stu-id="ec133-112">Purpose</span></span>|<span data-ttu-id="ec133-113">파생된 클래스에서 이미 정의 된 멤버를 소개 하는 이후에 기본 클래스 수정 으로부터 보호</span><span class="sxs-lookup"><span data-stu-id="ec133-113">Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class</span></span>|<span data-ttu-id="ec133-114">다른 프로시저 또는 같은 호출 시퀀스를 사용 하 여 속성을 구현 하 여 다형성을 함<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="ec133-114">Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup></span></span>|  
+|<span data-ttu-id="ec133-115">재정의 되는 요소</span><span class="sxs-lookup"><span data-stu-id="ec133-115">Redefined element</span></span>|<span data-ttu-id="ec133-116">선언 된 요소 형식</span><span class="sxs-lookup"><span data-stu-id="ec133-116">Any declared element type</span></span>|<span data-ttu-id="ec133-117">프로시저만 (`Function`, `Sub`, 또는 `Operator`) 또는 속성</span><span class="sxs-lookup"><span data-stu-id="ec133-117">Only a procedure (`Function`, `Sub`, or `Operator`) or property</span></span>|  
+|<span data-ttu-id="ec133-118">재정의 요소</span><span class="sxs-lookup"><span data-stu-id="ec133-118">Redefining element</span></span>|<span data-ttu-id="ec133-119">선언 된 요소 형식</span><span class="sxs-lookup"><span data-stu-id="ec133-119">Any declared element type</span></span>|<span data-ttu-id="ec133-120">프로시저 또는 같은 호출 시퀀스를 사용 하 여 속성<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="ec133-120">Only a procedure or property with the identical calling sequence<sup>1</sup></span></span>|  
+|<span data-ttu-id="ec133-121">재정의 요소 액세스 수준</span><span class="sxs-lookup"><span data-stu-id="ec133-121">Access level of redefining element</span></span>|<span data-ttu-id="ec133-122">모든 액세스 수준</span><span class="sxs-lookup"><span data-stu-id="ec133-122">Any access level</span></span>|<span data-ttu-id="ec133-123">재정의 된 요소 형식의 액세스 수준을 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-123">Cannot change access level of overridden element</span></span>|  
+|<span data-ttu-id="ec133-124">읽기 및 쓰기 가능성 재정의 요소</span><span class="sxs-lookup"><span data-stu-id="ec133-124">Readability and writability of redefining element</span></span>|<span data-ttu-id="ec133-125">모든 조합</span><span class="sxs-lookup"><span data-stu-id="ec133-125">Any combination</span></span>|<span data-ttu-id="ec133-126">또는 쓰기 재정의 된 속성의 가능성을 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-126">Cannot change readability or writability of overridden property</span></span>|  
+|<span data-ttu-id="ec133-127">재정의 통해 제어</span><span class="sxs-lookup"><span data-stu-id="ec133-127">Control over redefining</span></span>|<span data-ttu-id="ec133-128">기본 클래스 요소 적용 또는 섀도잉 금지 수 없음</span><span class="sxs-lookup"><span data-stu-id="ec133-128">Base class element cannot enforce or prohibit shadowing</span></span>|<span data-ttu-id="ec133-129">기본 클래스 요소를 지정할 수 `MustOverride`, `NotOverridable`, 또는`Overridable`</span><span class="sxs-lookup"><span data-stu-id="ec133-129">Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`</span></span>|  
+|<span data-ttu-id="ec133-130">키워드 사용</span><span class="sxs-lookup"><span data-stu-id="ec133-130">Keyword usage</span></span>|<span data-ttu-id="ec133-131">`Shadows`파생된 클래스에서 권장 `Shadows` 두 가정 `Shadows` 나 `Overrides` 지정<sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="ec133-131">`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup></span></span>|<span data-ttu-id="ec133-132">`Overridable`또는 `MustOverride` 기본 클래스;에 필요한 `Overrides` 파생된 클래스에서 필요한</span><span class="sxs-lookup"><span data-stu-id="ec133-132">`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class</span></span>|  
+|<span data-ttu-id="ec133-133">파생된 클래스에서 파생 된 클래스에서 재정의 되는 요소 상속</span><span class="sxs-lookup"><span data-stu-id="ec133-133">Inheritance of redefining element by classes deriving from your derived class</span></span>|<span data-ttu-id="ec133-134">에 의해 상속 요소 숨김 추가로 파생 되는 클래스입니다. 숨겨진된 요소는 여전히 숨겨져<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="ec133-134">Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup></span></span>|<span data-ttu-id="ec133-135">상속 된 요소를 재정의 추가로 파생 되는 클래스입니다. 재정의 된 요소는 여전히 재정의</span><span class="sxs-lookup"><span data-stu-id="ec133-135">Overriding element inherited by further derived classes; overridden element still overridden</span></span>|  
   
- <sup>1</sup> *호출 시퀀스*는 요소 형식\(`Function`, `Sub`, `Operator` 또는 `Property`\), 이름, 매개 변수 목록 및 반환 형식으로 구성됩니다.  프로시저를 속성으로 재정의하거나 그 반대로 재정의할 수 없습니다.  또한 한 종류의 프로시저\(`Function`, `Sub` 또는 `Operator`\)를 다른 종류의 프로시저로 재정의할 수 없습니다.  
+ <span data-ttu-id="ec133-136"><sup>1</sup> 는 *호출 시퀀스* 요소 형식으로 이루어져 (`Function`, `Sub`, `Operator`, 또는 `Property`), 이름, 매개 변수 목록 및 반환 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-136"><sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type.</span></span> <span data-ttu-id="ec133-137">속성 또는 그 반대로 사용 하 여 프로시저를 재정의할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-137">You cannot override a procedure with a property, or the other way around.</span></span> <span data-ttu-id="ec133-138">한 종류의 프로시저를 재정의할 수 없습니다 (`Function`, `Sub`, 또는 `Operator`)를 다른 종류입니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-138">You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.</span></span>  
   
- <sup>2</sup> `Shadows`나 `Overrides`를 지정하지 않으면 사용할 재정의 유형을 확인할 수 있도록 컴파일러에서 경고 메시지를 보냅니다.  이 경고를 무시하면 숨김 메커니즘이 사용됩니다.  
+ <span data-ttu-id="ec133-139"><sup>2</sup> 지정 하지 않으면 `Shadows` 또는 `Overrides`, 컴파일러를 사용 하려는 재정의 유형을 확인할 수 있도록 경고 메시지가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-139"><sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use.</span></span> <span data-ttu-id="ec133-140">경고를 무시 하는 경우에 숨김 메커니즘 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-140">If you ignore the warning, the shadowing mechanism is used.</span></span>  
   
- <sup>3</sup> 추가로 파생되는 클래스에서 숨기는 요소에 액세스할 수 없는 경우 숨김은 상속되지 않습니다.  예를 들어, 숨기는 요소를 `Private`으로 선언하면 파생된 클래스에서 다시 파생되는 클래스는 숨기는 요소 대신 원래 요소를 상속합니다.  
+ <span data-ttu-id="ec133-141"><sup>3</sup> 숨기는 요소는 추가 파생된 클래스에서 액세스할 수 없는 경우 숨김은 상속 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-141"><sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited.</span></span> <span data-ttu-id="ec133-142">예를 들어, 숨기는 요소를 선언 하는 경우 `Private`, 파생된 클래스에서 파생 되는 클래스는 섀도잉 요소 대신 원래 요소를 상속 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-142">For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.</span></span>  
   
-## 지침  
- 일반적으로 다음 경우에 재정의를 사용합니다.  
+## <a name="guidelines"></a><span data-ttu-id="ec133-143">지침</span><span class="sxs-lookup"><span data-stu-id="ec133-143">Guidelines</span></span>  
+ <span data-ttu-id="ec133-144">일반적으로 다음과 같은 경우에 재정의 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-144">You normally use overriding in the following cases:</span></span>  
   
--   다형 파생 클래스를 정의하는 경우  
+-   <span data-ttu-id="ec133-145">다형 파생된 클래스에 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-145">You are defining polymorphic derived classes.</span></span>  
   
--   안전을 위해 컴파일러에서 동일한 요소 형식과 호출 시퀀스를 적용하도록 하려는 경우  
+-   <span data-ttu-id="ec133-146">동일한 요소 형식과 호출 시퀀스를 적용 하는 컴파일러의 안전성 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-146">You want the safety of having the compiler enforce the identical element type and calling sequence.</span></span>  
   
- 일반적으로 다음 경우에 숨기기를 사용합니다.  
+ <span data-ttu-id="ec133-147">일반적으로 다음과 같은 경우에 그림자를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-147">You normally use shadowing in the following cases:</span></span>  
   
--   기본 클래스가 수정되거나 사용자의 클래스와 동일한 이름의 요소를 정의할 수 있다고 예상하는 경우  
+-   <span data-ttu-id="ec133-148">기본 클래스에 수정 될 수 있으며 사용자 작업과 동일한 이름을 사용 하는 요소를 정의 예상 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-148">You anticipate that your base class might be modified and define an element using the same name as yours.</span></span>  
   
--   요소 형식이나 호출 시퀀스를 자유롭게 변경하려는 경우  
+-   <span data-ttu-id="ec133-149">요소 형식 변경 또는 호출 시퀀스의 자유롭게 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="ec133-149">You want the freedom of changing the element type or calling sequence.</span></span>  
   
-## 참고 항목  
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)   
- [How to: Hide an Inherited Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
+## <a name="see-also"></a><span data-ttu-id="ec133-150">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ec133-150">See Also</span></span>  
+ [<span data-ttu-id="ec133-151">선언된 요소 참조</span><span class="sxs-lookup"><span data-stu-id="ec133-151">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="ec133-152">Visual Basic의 숨김 기능</span><span class="sxs-lookup"><span data-stu-id="ec133-152">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="ec133-153">방법: 이름이 같은 변수 숨기기</span><span class="sxs-lookup"><span data-stu-id="ec133-153">How to: Hide a Variable with the Same Name as Your Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [<span data-ttu-id="ec133-154">방법: 상속된 변수 숨기기</span><span class="sxs-lookup"><span data-stu-id="ec133-154">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="ec133-155">방법: 파생 클래스에 의해 숨겨진 변수에 액세스</span><span class="sxs-lookup"><span data-stu-id="ec133-155">How to: Access a Variable Hidden by a Derived Class</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [<span data-ttu-id="ec133-156">Shadows</span><span class="sxs-lookup"><span data-stu-id="ec133-156">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="ec133-157">재정의</span><span class="sxs-lookup"><span data-stu-id="ec133-157">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)

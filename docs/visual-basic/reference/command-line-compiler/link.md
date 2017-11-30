@@ -1,14 +1,11 @@
 ---
-title: "/link (Visual Basic) | Microsoft 문서"
-ms.date: 2015-07-20
+title: /link(Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - l compiler option [Visual Basic]
 - EmbedInteropTypes
@@ -19,33 +16,19 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e98c855f0a0185e9d1b6682df9fc734e9f1f07bc
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: effaeae48bdeb1dfd0f8cda31fedf2436e7deaca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="link-visual-basic"></a>/link(Visual Basic)
-현재 컴파일 중인 프로젝트에 사용할 수 있는 지정된 된 어셈블리에서 COM 형식 정보를 확인 하는 컴파일러가 선택 합니다.  
+# <a name="link-visual-basic"></a><span data-ttu-id="58663-102">/link(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="58663-102">/link (Visual Basic)</span></span>
+<span data-ttu-id="58663-103">컴파일러에서 지정된 어셈블리의 COM 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-103">Causes the compiler to make COM type information in the specified assemblies available to the project that you are currently compiling.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="58663-104">구문</span><span class="sxs-lookup"><span data-stu-id="58663-104">Syntax</span></span>  
   
 ```  
 /link:fileList  
@@ -53,67 +36,67 @@ ms.lasthandoff: 03/13/2017
 /l:fileList  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a><span data-ttu-id="58663-105">인수</span><span class="sxs-lookup"><span data-stu-id="58663-105">Arguments</span></span>  
   
-|용어|정의|  
+|<span data-ttu-id="58663-106">용어</span><span class="sxs-lookup"><span data-stu-id="58663-106">Term</span></span>|<span data-ttu-id="58663-107">정의</span><span class="sxs-lookup"><span data-stu-id="58663-107">Definition</span></span>|  
 |---|---|  
-|`fileList`|필수 요소. 어셈블리 파일 이름의 쉼표로 구분 된 목록입니다. 파일 이름에 공백이 있으면 이름을 따옴표로 묶습니다.|  
+|`fileList`|<span data-ttu-id="58663-108">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="58663-108">Required.</span></span> <span data-ttu-id="58663-109">쉼표로 구분된 어셈블리 파일 이름 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="58663-109">Comma-delimited list of assembly file names.</span></span> <span data-ttu-id="58663-110">파일 이름에 공백이 있으면 이름을 따옴표로 묶습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-110">If the file name contains a space, enclose the name in quotation marks.</span></span>|  
   
-## <a name="remarks"></a>설명  
- `/link` 옵션을 사용 하면 형식 정보를 포함 하는 응용 프로그램을 배포할 수 있습니다. 응용 프로그램 런타임 어셈블리에 대 한 참조를 요구 하지 않고 포함된 된 형식 정보를 구현 하는 런타임 어셈블리의 형식을 사용할 수 있습니다. 런타임 어셈블리의 여러 버전을 게시 하는 포함된 된 형식 정보를 포함 하는 응용 프로그램을 다시 컴파일하지 않고도 다양 한 버전 작업할 수 있습니다. 예를 들어 참조 [연습: 관리 되는 어셈블리의 형식 포함](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)합니다.  
+## <a name="remarks"></a><span data-ttu-id="58663-111">주의</span><span class="sxs-lookup"><span data-stu-id="58663-111">Remarks</span></span>  
+ <span data-ttu-id="58663-112">`/link` 옵션을 사용하면 포함된 형식 정보가 있는 응용 프로그램을 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-112">The `/link` option enables you to deploy an application that has embedded type information.</span></span> <span data-ttu-id="58663-113">그러면 응용 프로그램은 런타임 어셈블리에 대한 참조를 요구하지 않고 포함된 형식 정보를 구현하는 형식을 런타임 어셈블리에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-113">The application can then use types in a runtime assembly that implement the embedded type information without requiring a reference to the runtime assembly.</span></span> <span data-ttu-id="58663-114">다양한 버전의 런타임 어셈블리가 게시된 경우 포함된 형식 정보를 포함하는 응용 프로그램은 다시 컴파일하지 않아도 다양한 버전에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-114">If various versions of the runtime assembly are published, the application that contains the embedded type information can work with the various versions without having to be recompiled.</span></span> <span data-ttu-id="58663-115">예제를 보려면 [연습: 관리되는 어셈블리의 형식 포함](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58663-115">For an example, see [Walkthrough: Embedding Types from Managed Assemblies](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).</span></span>  
   
- 사용 하 여 `/link` 옵션은 COM interop를 사용 하 여 작업할 때 특히 유용 합니다. 응용 프로그램에 더 이상 주 interop 어셈블리를 PIA ()는 대상 컴퓨터에 필요한 수 있도록 COM 형식을 포함할 수 없습니다. `/link` 옵션 컴파일러가 결과 컴파일된 코드에 참조 된 interop 어셈블리에서 COM 형식 정보를 포함 하도록 합니다. COM 형식이 CLSID (GUID) 값으로 식별 됩니다. 결과적으로, 응용 프로그램가 같은 COM 형식이 같은 CLSID 값으로 설치 하는 대상 컴퓨터에서 실행할 수 있습니다. Microsoft Office를 자동화 하는 응용 프로그램은 좋은 예입니다. Office와 같은 응용 프로그램은 일반적으로 다양 한 버전에서 같은 CLSID 값 유지, 때문에 메서드, 속성 또는 이벤트가 참조 하는 COM 형식에 포함 된 응용 프로그램이 사용 하 고 대상 컴퓨터에.NET Framework 4 이상이 설치 되어 응용 프로그램 참조 된 COM 형식을 사용할 수 있습니다.  
+ <span data-ttu-id="58663-116">`/link` 옵션을 사용하면 COM interop를 사용하여 작업할 때 특히 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-116">Using the `/link` option is especially useful when you are working with COM interop.</span></span> <span data-ttu-id="58663-117">응용 프로그램에 대상 컴퓨터의 PIA(주 interop 어셈블리)가 더 이상 필요하지 않도록 COM 형식을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-117">You can embed COM types so that your application no longer requires a primary interop assembly (PIA) on the target computer.</span></span> <span data-ttu-id="58663-118">`/link` 옵션은 참조된 interop 어셈블리의 COM 형식 정보를 컴파일된 결과 코드에 포함하도록 컴파일러에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-118">The `/link` option instructs the compiler to embed the COM type information from the referenced interop assembly into the resulting compiled code.</span></span> <span data-ttu-id="58663-119">COM 형식은 CLSID(GUID) 값으로 식별됩니다.</span><span class="sxs-lookup"><span data-stu-id="58663-119">The COM type is identified by the CLSID (GUID) value.</span></span> <span data-ttu-id="58663-120">따라서 동일한 CLSID 값을 갖는 동일한 COM 형식이 설치된 대상 컴퓨터에서 응용 프로그램을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-120">As a result, your application can run on a target computer that has installed the same COM types with the same CLSID values.</span></span> <span data-ttu-id="58663-121">Microsoft Office를 자동화하는 응용 프로그램이 좋은 예입니다.</span><span class="sxs-lookup"><span data-stu-id="58663-121">Applications that automate Microsoft Office are a good example.</span></span> <span data-ttu-id="58663-122">Office와 같은 응용 프로그램은 일반적으로 여러 버전에서 동일한 CLSID 값을 유지하지 때문에 .NET Framework 4 이상이 대상 컴퓨터에 설치되어 있고 응용 프로그램이 참조된 COM 형식에 포함된 메서드, 속성 또는 이벤트를 사용하는 한 응용 프로그램에서 참조된 COM 형식을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-122">Because applications like Office usually keep the same CLSID value across different versions, your application can use the referenced COM types as long as .NET Framework 4 or later is installed on the target computer and your application uses methods, properties, or events that are included in the referenced COM types.</span></span>  
   
- `/link` 옵션 인터페이스, 구조 및 대리자를 포함 합니다. COM 클래스를 포함 하는 것은 지원 되지 않습니다.  
+ <span data-ttu-id="58663-123">`/link` 옵션은 인터페이스, 구조체 및 대리자만 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-123">The `/link` option embeds only interfaces, structures, and delegates.</span></span> <span data-ttu-id="58663-124">COM 클래스는 포함할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-124">Embedding COM classes is not supported.</span></span>  
   
 > [!NOTE]
->  코드에 포함 된 COM 형식의 인스턴스를 만들 때 적절 한 인터페이스를 사용 하 여 인스턴스를 만들어야 합니다. CoClass를 사용 하 여 포함 된 COM 형식의 인스턴스를 만들려고 하면 오류가 발생 합니다.  
+>  <span data-ttu-id="58663-125">코드에서 포함된 COM 형식의 인스턴스를 만드는 경우 적절한 인터페이스를 사용하여 인스턴스를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-125">When you create an instance of an embedded COM type in your code, you must create the instance by using the appropriate interface.</span></span> <span data-ttu-id="58663-126">CoClass를 사용하여 포함된 COM 형식의 인스턴스를 만들려고 하면 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-126">Attempting to create an instance of an embedded COM type by using the CoClass causes an error.</span></span>  
   
- 설정 하는 `/link` 옵션 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)], 어셈블리 참조를 추가 하 고 설정의 `Embed Interop Types` 속성을 **true**합니다. 기본값은 `Embed Interop Types` 속성은 **false**합니다.  
+ <span data-ttu-id="58663-127">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 `/link` 옵션을 설정하려면 어셈블리 참조를 추가하고 `Embed Interop Types` 속성을 **true**로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-127">To set the `/link` option in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], add an assembly reference and set the `Embed Interop Types` property to **true**.</span></span> <span data-ttu-id="58663-128">`Embed Interop Types` 속성의 기본값은 **false**입니다.</span><span class="sxs-lookup"><span data-stu-id="58663-128">The default for the `Embed Interop Types` property is **false**.</span></span>  
   
- COM 어셈블리 (어셈블리 A)에 연결 되는 경우 다른 COM 어셈블리 (어셈블리 B)를 참조 하는데, 다음 중 하나에 해당 하는 경우 어셈블리 B에 연결 해야 합니다.  
+ <span data-ttu-id="58663-129">COM 어셈블리 자체가 또 다른 COM 어셈블리(어셈블리 B)를 참조하는 COM 어셈블리(어셈블리 A)에 연결하는 경우 다음 중 하나에 해당되면 어셈블리 B에도 연결해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-129">If you link to a COM assembly (Assembly A) which itself references another COM assembly (Assembly B), you also have to link to Assembly B if either of the following is true:</span></span>  
   
--   어셈블리 A에서에서 형식을 형식에서 상속 되거나 어셈블리 B의 인터페이스 구현  
+-   <span data-ttu-id="58663-130">어셈블리 A의 형식은 형식에서 상속되거나 어셈블리 B의 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-130">A type from Assembly A inherits from a type or implements an interface from Assembly B.</span></span>  
   
--   필드, 속성, 이벤트 또는 어셈블리 B의 반환 형식이 나 매개 변수 형식의 변수가 있는 메서드가 호출 됩니다.  
+-   <span data-ttu-id="58663-131">어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드가 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="58663-131">A field, property, event, or method that has a return type or parameter type from Assembly B is invoked.</span></span>  
   
- 사용 하 여 [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) 어셈블리 참조 중 하나 이상이 있는 디렉터리를 지정할 수 있습니다.  
+ <span data-ttu-id="58663-132">사용 하 여 [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) 어셈블리 참조 중 하나 이상이 있는 디렉터리를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-132">Use [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.</span></span>  
   
- 마찬가지로 [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션은 `/link` 컴파일러 옵션 참조 자주 사용 되는 Vbc.rsp 지시 파일을 사용 하 여 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 어셈블리. 사용 하 여 [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) Vbc.rsp 파일을 사용 하도록 컴파일러에 원하지 않는 경우 컴파일러 옵션입니다.  
+ <span data-ttu-id="58663-133">와 같은 [/참조](../../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러 옵션은 `/link` 컴파일러 옵션 참조 자주 사용 되는 Vbc.rsp 지시 파일을 사용 하 여 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="58663-133">Like the [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) compiler option, the `/link` compiler option uses the Vbc.rsp response file, which references frequently used [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies.</span></span> <span data-ttu-id="58663-134">사용 하 여는 [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) Vbc.rsp 파일을 사용 하도록 컴파일러에 하지 않을 경우 컴파일러 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="58663-134">Use the [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.</span></span>  
   
- 약식 `/link` 는 `/l`합니다.  
+ <span data-ttu-id="58663-135">`/link`의 약식은 `/l`입니다.</span><span class="sxs-lookup"><span data-stu-id="58663-135">The short form of `/link` is `/l`.</span></span>  
   
-## <a name="generics-and-embedded-types"></a>제네릭 및 포함 된 형식  
- 다음 섹션에서는 interop 형식 포함 하는 응용 프로그램에서 제네릭 형식 사용에 제한 사항에 설명 합니다.  
+## <a name="generics-and-embedded-types"></a><span data-ttu-id="58663-136">제네릭 및 포함된 형식</span><span class="sxs-lookup"><span data-stu-id="58663-136">Generics and Embedded Types</span></span>  
+ <span data-ttu-id="58663-137">다음 섹션에서는 interop 형식을 포함하는 응용 프로그램에서 제네릭 형식을 사용할 경우의 제한 사항에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-137">The following sections describe the limitations on using generic types in applications that embed interop types.</span></span>  
   
-### <a name="generic-interfaces"></a>제네릭 인터페이스  
- Interop 어셈블리를 포함 하는 제네릭 인터페이스를 사용할 수 없습니다. 다음 예제에서 이를 확인할 수 있습니다.  
+### <a name="generic-interfaces"></a><span data-ttu-id="58663-138">제네릭 인터페이스</span><span class="sxs-lookup"><span data-stu-id="58663-138">Generic Interfaces</span></span>  
+ <span data-ttu-id="58663-139">interop 어셈블리에서 포함되는 제네릭 인터페이스는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-139">Generic interfaces that are embedded from an interop assembly cannot be used.</span></span> <span data-ttu-id="58663-140">다음 예제에서 이를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-140">This is shown in the following example.</span></span>  
   
- [!code-vb[VbLinkCompiler #&1;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
+ [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
   
-### <a name="types-that-have-generic-parameters"></a>제네릭 매개 변수가 있는 형식  
- Interop 어셈블리에서 해당 형식이 포함 된 제네릭 매개 변수를 가진 형식에 사용할 수 없습니다 경우 외부 어셈블리의 형식입니다. 인터페이스에는이 제한이 적용 되지 않습니다. 예를 들어는 <xref:Microsoft.Office.Interop.Excel.Range>에 정의 된 인터페이스는 <xref:Microsoft.Office.Interop.Excel>어셈블리.</xref:Microsoft.Office.Interop.Excel> </xref:Microsoft.Office.Interop.Excel.Range> 라이브러리의 interop 형식을 포함 하는 경우는 <xref:Microsoft.Office.Interop.Excel>어셈블리 및 형식을 갖는 매개 변수가 있는 제네릭 형식을 반환 하는 메서드는 노출 된 <xref:Microsoft.Office.Interop.Excel.Range>인터페이스 메서드에 다음 코드 예제와 같이 제네릭 인터페이스를 반환 해야 함을.</xref:Microsoft.Office.Interop.Excel.Range> </xref:Microsoft.Office.Interop.Excel>  
+### <a name="types-that-have-generic-parameters"></a><span data-ttu-id="58663-141">제네릭 매개 변수가 있는 형식</span><span class="sxs-lookup"><span data-stu-id="58663-141">Types That Have Generic Parameters</span></span>  
+ <span data-ttu-id="58663-142">형식이 interop 어셈블리에서 포함된 제네릭 매개 변수가 있는 형식은 해당 형식이 외부 어셈블리에서 제공된 경우 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-142">Types that have a generic parameter whose type is embedded from an interop assembly cannot be used if that type is from an external assembly.</span></span> <span data-ttu-id="58663-143">인터페이스에는 이 제한이 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-143">This restriction does not apply to interfaces.</span></span> <span data-ttu-id="58663-144">예를 들어 <xref:Microsoft.Office.Interop.Excel> 어셈블리에 정의된 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스를 살펴보세요.</span><span class="sxs-lookup"><span data-stu-id="58663-144">For example, consider the <xref:Microsoft.Office.Interop.Excel.Range> interface that is defined in the <xref:Microsoft.Office.Interop.Excel> assembly.</span></span> <span data-ttu-id="58663-145">다음 코드 예제와 같이 라이브러리가 <xref:Microsoft.Office.Interop.Excel> 어셈블리의 interop 형식을 포함하고 형식이 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스인 매개 변수가 있는 제네릭 형식을 반환하는 메서드를 노출하는 경우 해당 메서드는 제네릭 인터페이스를 반환해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-145">If a library embeds interop types from the <xref:Microsoft.Office.Interop.Excel> assembly and exposes a method that returns a generic type that has a parameter whose type is the <xref:Microsoft.Office.Interop.Excel.Range> interface, that method must return a generic interface, as shown in the following code example.</span></span>  
   
- [!code-vb[VbLinkCompiler #&2;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
-[!code-vb[VbLinkCompiler #&3;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
-[!code-vb[VbLinkCompiler #&4;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
+ [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
+[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
+[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
   
- 다음 예제에서는 클라이언트 코드를 반환 하는 메서드를 호출할 수는 <xref:System.Collections.IList>오류 없이 제네릭 인터페이스.</xref:System.Collections.IList>  
+ <span data-ttu-id="58663-146">다음 예제에서 클라이언트 코드는 <xref:System.Collections.IList> 제네릭 인터페이스를 반환하는 메서드를 오류 없이 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58663-146">In the following example, client code can call the method that returns the <xref:System.Collections.IList> generic interface without error.</span></span>  
   
- [!code-vb[VbLinkCompiler #&5;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
+ [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
-## <a name="example"></a>예제  
- 다음 코드는 소스 파일을 컴파일하 `OfficeApp.vb` 의 어셈블리를 참조 하 고 `COMData1.dll` 및 `COMData2.dll` 생성 `OfficeApp.exe`합니다.  
+## <a name="example"></a><span data-ttu-id="58663-147">예제</span><span class="sxs-lookup"><span data-stu-id="58663-147">Example</span></span>  
+ <span data-ttu-id="58663-148">다음 코드는 소스 파일 `OfficeApp.vb`와 `COMData1.dll` 및 `COMData2.dll`의 참조 어셈블리를 컴파일하여 `OfficeApp.exe`를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="58663-148">The following code compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.</span></span>  
   
 ```vb  
 vbc /link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)   
- [연습: 관리 되는 어셈블리의 형식 포함](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)   
- [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
- [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)   
- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [COM Interop 소개](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+## <a name="see-also"></a><span data-ttu-id="58663-149">참고 항목</span><span class="sxs-lookup"><span data-stu-id="58663-149">See Also</span></span>  
+ [<span data-ttu-id="58663-150">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="58663-150">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="58663-151">연습: 관리되는 어셈블리의 형식 포함</span><span class="sxs-lookup"><span data-stu-id="58663-151">Walkthrough: Embedding Types from Managed Assemblies</span></span>](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [<span data-ttu-id="58663-152">/reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="58663-152">/reference (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)  
+ [<span data-ttu-id="58663-153">/noconfig</span><span class="sxs-lookup"><span data-stu-id="58663-153">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [<span data-ttu-id="58663-154">/libpath</span><span class="sxs-lookup"><span data-stu-id="58663-154">/libpath</span></span>](../../../visual-basic/reference/command-line-compiler/libpath.md)  
+ [<span data-ttu-id="58663-155">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="58663-155">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="58663-156">COM Interop 소개</span><span class="sxs-lookup"><span data-stu-id="58663-156">Introduction to COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

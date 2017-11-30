@@ -1,107 +1,106 @@
 ---
-title: "Data Type Summary (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Boolean data type, supported types in Visual Basic"
-  - "storage, order of storage"
-  - "data types [Visual Basic], Visual Basic"
-  - "Single data type, supported types in Visual Basic"
-  - "notation, scientific"
-  - "memory requirements, data types"
-  - "user-defined data types, Visual Basic"
-  - "Date data type, Visual Basic"
-  - "Visual Basic, data types"
-  - "storage, allocation"
-  - "Integer data type, Visual Basic data types"
-  - "storage, space"
-  - "Variant data types, supported types in Visual Basic"
-  - "Char data type, Visual Basic data types"
-  - "intrinsic data types"
-  - "memory consumption, data types"
-  - "single-precision numbers"
-  - "data types [Visual Basic], order of storage"
-  - "Long data type, supported types in Visual Basic"
-  - "String data type, Visual Basic data types"
-  - "storage order, data types"
-  - "StructLayoutAttribute class, Visual Basic data type storage"
-  - "scientific notation"
-  - "Double data type, Visual Basic data types"
-  - "Byte data type, Visual Basic data types"
-  - "Object data type, supported types in Visual Basic"
-  - "data types [Visual Basic], storage allocation"
-  - "double-precision numbers"
-  - "data types [Visual Basic], summary"
-  - "dates [Visual Basic], data types"
-  - "strings [Visual Basic], data types"
-  - "memory consumption"
-  - "storage order, controlling in Visual Basic"
-  - "data types [Visual Basic], memory requirements"
+title: "데이터 형식 요약(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Boolean data type [Visual Basic], supported types in Visual Basic
+- storage [Visual Basic], order of storage
+- data types [Visual Basic], Visual Basic
+- Single data type [Visual Basic], supported types in Visual Basic
+- notation [Visual Basic], scientific
+- memory requirements, data types
+- user-defined data types [Visual Basic], Visual Basic
+- Date data type [Visual Basic], Visual Basic
+- Visual Basic, data types
+- storage [Visual Basic], allocation
+- Integer data type [Visual Basic], Visual Basic data types
+- storage [Visual Basic], space
+- Variant data types [Visual Basic], supported types in Visual Basic
+- Char data type [Visual Basic], Visual Basic data types
+- intrinsic data types [Visual Basic]
+- memory consumption [Visual Basic], data types
+- single-precision numbers
+- data types [Visual Basic], order of storage
+- Long data type [Visual Basic], supported types in Visual Basic
+- String data type [Visual Basic], Visual Basic data types
+- storage order, data types
+- StructLayoutAttribute class, Visual Basic data type storage
+- scientific notation
+- Double data type [Visual Basic], Visual Basic data types
+- Byte data type [Visual Basic], Visual Basic data types
+- Object data type [Visual Basic], supported types in Visual Basic
+- data types [Visual Basic], storage allocation
+- double-precision numbers
+- data types [Visual Basic], summary
+- dates [Visual Basic], data types
+- strings [Visual Basic], data types
+- memory consumption
+- storage order, controlling in Visual Basic
+- data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Data Type Summary (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-다음 표에서는 Visual Basic 데이터 형식과 각 형식이 지원하는 공용 언어 런타임 형식, 일반 저장소 할당 및 값 범위를 보여 줍니다.  
+# <a name="data-type-summary-visual-basic"></a><span data-ttu-id="7380d-102">데이터 형식 요약(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7380d-102">Data Type Summary (Visual Basic)</span></span>
+<span data-ttu-id="7380d-103">다음 표에서 Visual Basic 데이터 형식, 해당 지 원하는 공용 언어 런타임 형식, 일반 저장소 할당, 및 해당 값 범위를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-103">The following table shows the Visual Basic data types, their supporting common language runtime types, their nominal storage allocation, and their value ranges.</span></span>  
   
-|Visual Basic 형식|공용 언어 런타임 형식 구조체|일반 저장소 할당|값 범위|  
-|---------------------|----------------------|---------------|----------|  
-|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|구현하는 플랫폼에 따라 다름|`True` 또는 `False`|  
-|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1바이트|값 범위는 0에서 255까지\(부호 없음\)입니다.|  
-|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md)\(단일 문자\)|<xref:System.Char>|2바이트|값 범위는 0에서 65535까지\(부호 없음\)입니다.|  
-|[날짜](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8바이트|값 범위는 0:00:00\(1년 1월 1일 자정\)에서 11:59:59 PM\(9999년 12월 31일\)까지 입니다.|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16바이트|값의 범위는 0에서 \+\/\-79,228,162,514,264,337,593,543,950,335\(\+\/\-7.9...E\+28\)<sup>†</sup>까지\(소수 부분이 없음\) 또는 0에서 \+\/\-7.9228162514264337593543950335까지\(소수 자릿수가 28개가 있음\)입니다.<br /><br /> 0이 아닌 숫자 중에서 최소 숫자는 \+\/\-0.0000000000000000000000000001\(\+\/\-1E\-28\)<sup>†</sup>입니다.|  
-|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) \(배정밀도 부동 소수점\)|<xref:System.Double>|8바이트|값의 범위는 \-1.79769313486231570E\+308에서 \-4.94065645841246544E\-324<sup>†</sup>까지\(음수\)입니다.<br /><br /> 값의 범위는 4.94065645841246544E\-324에서 1.79769313486231570E\+308<sup>†</sup>까지\(양수\)입니다.|  
-|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4바이트|값의 범위는 \-2,147,483,648에서 2,147,483,647까지\(부호 있음\)입니다.|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)\(정수\(Long\)\)|<xref:System.Int64>|8바이트|값의 범위는 \-9,223,372,036,854,775,808에서 9,223,372,036,854,775,807\(9.2...E\+18 <sup>†</sup>\)까지\(부호 있음\)입니다.|  
-|[개체](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>\(클래스\)|32비트 플랫폼에서 4바이트<br /><br /> 64비트 플랫폼에서 8바이트|`Object` 형식의 변수에는 모든 형식을 저장할 수 있습니다.|  
-|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1바이트|값의 범위는 \-128에서 127까지\(부호 있음\)입니다.|  
-|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md)\(정수\(Short\)\)|<xref:System.Int16>|2바이트|값의 범위는 \-32,768에서 32,767까지\(부호 있음\)입니다.|  
-|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) \(단정밀도 부동 소수점\)|<xref:System.Single>|4바이트|값의 범위는 \-3.4028235E\+38에서 \-1.401298E\-45<sup>†</sup>까지\(음수\) 또는<br /><br /> 1.401298E\-45에서 3.4028235E\+38<sup>†</sup>까지\(양수\)입니다.|  
-|[String](../../../visual-basic/language-reference/data-types/string-data-type.md) \(가변 길이\)|<xref:System.String>\(클래스\)|구현하는 플랫폼에 따라 다름|0에서 약 20억 개의 유니코드 문자입니다.|  
-|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4바이트|값의 범위는 0에서 4,294,967,295까지\(부호 없음\)입니다.|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8바이트|값의 범위는 0에서 18,446,744,073,709,551,615\(1.8...E\+19 <sup>†</sup>\)까지\(부호 없음\)입니다.|  
-|[사용자 정의](../../../visual-basic/language-reference/data-types/user-defined-data-type.md)\(구조체\)|\(<xref:System.ValueType>에서 상속\)|구현하는 플랫폼에 따라 다름|구조체의 각 멤버는 데이터 형식에 의해 결정되고 다른 멤버의 범위와는 무관한 범위를 갖습니다.|  
-|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2바이트|값의 범위는 0에서 65,535까지\(부호 없음\)입니다.|  
+|<span data-ttu-id="7380d-104">Visual Basic 형식</span><span class="sxs-lookup"><span data-stu-id="7380d-104">Visual Basic type</span></span>|<span data-ttu-id="7380d-105">공용 언어 런타임 형식 구조</span><span class="sxs-lookup"><span data-stu-id="7380d-105">Common language runtime type structure</span></span>|<span data-ttu-id="7380d-106">일반 저장소 할당</span><span class="sxs-lookup"><span data-stu-id="7380d-106">Nominal storage allocation</span></span>|<span data-ttu-id="7380d-107">값 범위</span><span class="sxs-lookup"><span data-stu-id="7380d-107">Value range</span></span>|  
+|-----------------------|--------------------------------------------|--------------------------------|-----------------|  
+|[<span data-ttu-id="7380d-108">Boolean</span><span class="sxs-lookup"><span data-stu-id="7380d-108">Boolean</span></span>](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|<span data-ttu-id="7380d-109">구현 하는 플랫폼에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-109">Depends on implementing platform</span></span>|<span data-ttu-id="7380d-110">`True` 또는 `False`</span><span class="sxs-lookup"><span data-stu-id="7380d-110">`True` or `False`</span></span>|  
+|[<span data-ttu-id="7380d-111">Byte</span><span class="sxs-lookup"><span data-stu-id="7380d-111">Byte</span></span>](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|<span data-ttu-id="7380d-112">1바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-112">1 byte</span></span>|<span data-ttu-id="7380d-113">0부터 255 (부호 없음)</span><span class="sxs-lookup"><span data-stu-id="7380d-113">0 through 255 (unsigned)</span></span>|  
+|<span data-ttu-id="7380d-114">[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (단일 문자)</span><span class="sxs-lookup"><span data-stu-id="7380d-114">[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (single character)</span></span>|<xref:System.Char>|<span data-ttu-id="7380d-115">2바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-115">2 bytes</span></span>|<span data-ttu-id="7380d-116">0 ~ 65535 (부호 없음)</span><span class="sxs-lookup"><span data-stu-id="7380d-116">0 through 65535 (unsigned)</span></span>|  
+|[<span data-ttu-id="7380d-117">Date</span><span class="sxs-lookup"><span data-stu-id="7380d-117">Date</span></span>](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|<span data-ttu-id="7380d-118">8바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-118">8 bytes</span></span>|<span data-ttu-id="7380d-119">0:00:00 (자정)에서 9999 년 12 월 31 일 오후 11시 59분: 59 0001 년 1 월 1 일</span><span class="sxs-lookup"><span data-stu-id="7380d-119">0:00:00 (midnight) on January 1, 0001 through 11:59:59 PM on December 31, 9999</span></span>|  
+|[<span data-ttu-id="7380d-120">Decimal</span><span class="sxs-lookup"><span data-stu-id="7380d-120">Decimal</span></span>](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|<span data-ttu-id="7380d-121">16바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-121">16 bytes</span></span>|<span data-ttu-id="7380d-122">79228162514264337593543950335 + /-0 ~ (7.9... + /-+ 28) <sup>†</sup> 없이 소수점; 소수점 자릿수가 28-7.9228162514264337593543950335 + /-0 ~</span><span class="sxs-lookup"><span data-stu-id="7380d-122">0 through +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9...E+28) <sup>†</sup> with no decimal point; 0 through +/-7.9228162514264337593543950335 with 28 places to the right of the decimal;</span></span><br /><br /> <span data-ttu-id="7380d-123">0.0000000000000000000000000001 1E-28) (+ + /-0이 아닌 숫자 중 가장 작은 값은 <sup>†</sup></span><span class="sxs-lookup"><span data-stu-id="7380d-123">smallest nonzero number is +/-0.0000000000000000000000000001 (+/-1E-28) <sup>†</sup></span></span>|  
+|<span data-ttu-id="7380d-124">[이중](../../../visual-basic/language-reference/data-types/double-data-type.md) (배정밀도 부동 소수점)</span><span class="sxs-lookup"><span data-stu-id="7380d-124">[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (double-precision floating-point)</span></span>|<xref:System.Double>|<span data-ttu-id="7380d-125">8바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-125">8 bytes</span></span>|<span data-ttu-id="7380d-126">-1.79769313486231570 e + 308에서-4.94065645841246544E-324 <sup>†</sup> 음수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-126">-1.79769313486231570E+308 through -4.94065645841246544E-324 <sup>†</sup> for negative values;</span></span><br /><br /> <span data-ttu-id="7380d-127">4.94065645841246544E-324 1.79769313486231570 e + 308 <sup>†</sup> 양수 값</span><span class="sxs-lookup"><span data-stu-id="7380d-127">4.94065645841246544E-324 through 1.79769313486231570E+308 <sup>†</sup> for positive values</span></span>|  
+|[<span data-ttu-id="7380d-128">Integer</span><span class="sxs-lookup"><span data-stu-id="7380d-128">Integer</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|<span data-ttu-id="7380d-129">4바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-129">4 bytes</span></span>|<span data-ttu-id="7380d-130">-2147483648 ~ 2147483647 (부호 있음)</span><span class="sxs-lookup"><span data-stu-id="7380d-130">-2,147,483,648 through 2,147,483,647 (signed)</span></span>|  
+|<span data-ttu-id="7380d-131">[긴](../../../visual-basic/language-reference/data-types/long-data-type.md) (long 정수)</span><span class="sxs-lookup"><span data-stu-id="7380d-131">[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (long integer)</span></span>|<xref:System.Int64>|<span data-ttu-id="7380d-132">8바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-132">8 bytes</span></span>|<span data-ttu-id="7380d-133">-9223372036854775808에서 9223372036854775807 (9.2... E + 18 <sup>†</sup>) (부호 있음)</span><span class="sxs-lookup"><span data-stu-id="7380d-133">-9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18 <sup>†</sup>) (signed)</span></span>|  
+|[<span data-ttu-id="7380d-134">개체</span><span class="sxs-lookup"><span data-stu-id="7380d-134">Object</span></span>](../../../visual-basic/language-reference/data-types/object-data-type.md)|<span data-ttu-id="7380d-135"><xref:System.Object>(클래스)</span><span class="sxs-lookup"><span data-stu-id="7380d-135"><xref:System.Object> (class)</span></span>|<span data-ttu-id="7380d-136">32 비트 플랫폼에서 4 바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-136">4 bytes on 32-bit platform</span></span><br /><br /> <span data-ttu-id="7380d-137">64 비트 플랫폼에서 8 바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-137">8 bytes on 64-bit platform</span></span>|<span data-ttu-id="7380d-138">형식의 변수에 저장할 수 있는 모든 유형에`Object`</span><span class="sxs-lookup"><span data-stu-id="7380d-138">Any type can be stored in a variable of type `Object`</span></span>|  
+|[<span data-ttu-id="7380d-139">SByte</span><span class="sxs-lookup"><span data-stu-id="7380d-139">SByte</span></span>](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|<span data-ttu-id="7380d-140">1바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-140">1 byte</span></span>|<span data-ttu-id="7380d-141">-128에서 127 (부호 있음)를 통해</span><span class="sxs-lookup"><span data-stu-id="7380d-141">-128 through 127 (signed)</span></span>|  
+|<span data-ttu-id="7380d-142">[짧은](../../../visual-basic/language-reference/data-types/short-data-type.md) (short 정수)</span><span class="sxs-lookup"><span data-stu-id="7380d-142">[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (short integer)</span></span>|<xref:System.Int16>|<span data-ttu-id="7380d-143">2바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-143">2 bytes</span></span>|<span data-ttu-id="7380d-144">-32, 768 32, 767 (부호 있음)</span><span class="sxs-lookup"><span data-stu-id="7380d-144">-32,768 through 32,767 (signed)</span></span>|  
+|<span data-ttu-id="7380d-145">[단일](../../../visual-basic/language-reference/data-types/single-data-type.md) (단 정밀도 부동 소수점)</span><span class="sxs-lookup"><span data-stu-id="7380d-145">[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) (single-precision floating-point)</span></span>|<xref:System.Single>|<span data-ttu-id="7380d-146">4바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-146">4 bytes</span></span>|<span data-ttu-id="7380d-147">-3.4028235 e + 38에서-1.401298 e-45 <sup>†</sup> 음수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-147">-3.4028235E+38 through -1.401298E-45 <sup>†</sup> for negative values;</span></span><br /><br /> <span data-ttu-id="7380d-148">1.401298 e-45 3.4028235 e + 38 <sup>†</sup> 양수 값</span><span class="sxs-lookup"><span data-stu-id="7380d-148">1.401298E-45 through 3.4028235E+38 <sup>†</sup> for positive values</span></span>|  
+|<span data-ttu-id="7380d-149">[문자열](../../../visual-basic/language-reference/data-types/string-data-type.md) (가변 길이)</span><span class="sxs-lookup"><span data-stu-id="7380d-149">[String](../../../visual-basic/language-reference/data-types/string-data-type.md) (variable-length)</span></span>|<span data-ttu-id="7380d-150"><xref:System.String>(클래스)</span><span class="sxs-lookup"><span data-stu-id="7380d-150"><xref:System.String> (class)</span></span>|<span data-ttu-id="7380d-151">구현 하는 플랫폼에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-151">Depends on implementing platform</span></span>|<span data-ttu-id="7380d-152">0 ~ 약 2 십억 유니코드 문자입니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-152">0 to approximately 2 billion Unicode characters</span></span>|  
+|[<span data-ttu-id="7380d-153">UInteger</span><span class="sxs-lookup"><span data-stu-id="7380d-153">UInteger</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|<span data-ttu-id="7380d-154">4바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-154">4 bytes</span></span>|<span data-ttu-id="7380d-155">0 ~ 4294967295 (부호 없음)</span><span class="sxs-lookup"><span data-stu-id="7380d-155">0 through 4,294,967,295 (unsigned)</span></span>|  
+|[<span data-ttu-id="7380d-156">ULong</span><span class="sxs-lookup"><span data-stu-id="7380d-156">ULong</span></span>](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|<span data-ttu-id="7380d-157">8바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-157">8 bytes</span></span>|<span data-ttu-id="7380d-158">0에서 18446744073709551615 (1.8 … E + 19 <sup>†</sup>) (부호 없음)</span><span class="sxs-lookup"><span data-stu-id="7380d-158">0 through 18,446,744,073,709,551,615 (1.8...E+19 <sup>†</sup>) (unsigned)</span></span>|  
+|<span data-ttu-id="7380d-159">[사용자 정의](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (구조)</span><span class="sxs-lookup"><span data-stu-id="7380d-159">[User-Defined](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (structure)</span></span>|<span data-ttu-id="7380d-160">(에서 상속 <xref:System.ValueType>)</span><span class="sxs-lookup"><span data-stu-id="7380d-160">(inherits from <xref:System.ValueType>)</span></span>|<span data-ttu-id="7380d-161">구현 하는 플랫폼에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-161">Depends on implementing platform</span></span>|<span data-ttu-id="7380d-162">구조체의 각 구성원에 게 해당 데이터 형식, 그리고 다른 멤버의 범위와 무관 결정 범위</span><span class="sxs-lookup"><span data-stu-id="7380d-162">Each member of the structure has a range determined by its data type and independent of the ranges of the other members</span></span>|  
+|[<span data-ttu-id="7380d-163">UShort</span><span class="sxs-lookup"><span data-stu-id="7380d-163">UShort</span></span>](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|<span data-ttu-id="7380d-164">2바이트</span><span class="sxs-lookup"><span data-stu-id="7380d-164">2 bytes</span></span>|<span data-ttu-id="7380d-165">0-65535 (부호 없음)</span><span class="sxs-lookup"><span data-stu-id="7380d-165">0 through 65,535 (unsigned)</span></span>|  
   
- <sup>†</sup> *과학적 표기법*에서 "E"는 10의 거듭제곱을 나타냅니다.  따라서 3.56E\+2는 3.56 x 10<sup>2</sup>, 즉 356을 나타내고 3.56E\-2는 3.56 \/ 10<sup>2</sup>, 즉 0.0356을 나타냅니다.  
+ <span data-ttu-id="7380d-166"><sup>†</sup> 에 *과학적 표기법*, "E"는 10의 거듭제곱을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-166"><sup>†</sup> In *scientific notation*, "E" refers to a power of 10.</span></span> <span data-ttu-id="7380d-167">따라서 3.56 e + 2는 3.56 x 10<sup>2</sup> 356, 및 3.56 e 또는-2는 3.56 10 /<sup>2</sup> 또는 0.0356을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-167">So 3.56E+2 signifies 3.56 x 10<sup>2</sup> or 356, and 3.56E-2 signifies 3.56 / 10<sup>2</sup> or 0.0356.</span></span>  
   
 > [!NOTE]
->  텍스트를 포함하는 문자열에서는 <xref:Microsoft.VisualBasic.Strings.StrConv%2A> 함수를 사용하여 텍스트 형식을 다른 형식으로 변환하십시오.  
+>  <span data-ttu-id="7380d-168">텍스트를 포함 하는 문자열을 사용 하 여는 <xref:Microsoft.VisualBasic.Strings.StrConv%2A> 다른 하나의 텍스트 형식에서 변환 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-168">For strings containing text, use the <xref:Microsoft.VisualBasic.Strings.StrConv%2A> function to convert from one text format to another.</span></span>  
   
- 선언문에서 데이터 형식을 지정 하는 것 외에 형식 문자를 사용 하 여 일부 프로그래밍 요소의 데이터 형식을 할 수 있습니다.  자세한 내용은 [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)를 참조하십시오.  
+ <span data-ttu-id="7380d-169">를 선언문의 데이터 형식을 지정 하는 것 외에도 형식 문자를 사용 하 여 몇 가지 프로그래밍 요소의 데이터 형식을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-169">In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements by using a type character.</span></span> <span data-ttu-id="7380d-170">참조 [문자 입력](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-170">See [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).</span></span>  
   
-## 메모리 사용  
- 기본 데이터 형식을 선언할 때 메모리 사용량이 일반 저장소 할당량과 같다고 가정하는 것은 위험합니다.  이는 다음과 같이 고려해야 할 사항이 있기 때문입니다.  
+## <a name="memory-consumption"></a><span data-ttu-id="7380d-171">메모리 소비</span><span class="sxs-lookup"><span data-stu-id="7380d-171">Memory Consumption</span></span>  
+ <span data-ttu-id="7380d-172">기본 데이터 형식을 선언 하는 경우 메모리 소비가 일반 저장소 할당량과 가정 하에 안전 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-172">When you declare an elementary data type, it is not safe to assume that its memory consumption is the same as its nominal storage allocation.</span></span> <span data-ttu-id="7380d-173">이 다음 고려 사항 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-173">This is due to the following considerations:</span></span>  
   
--   **저장소 할당.** 공용 언어 런타임에서 응용 프로그램이 실행되고 있는 플랫폼의 특성에 따라 저장소를 할당할 수 있습니다.  메모리에 여유 공간이 거의 없으면 선언된 요소가 가능한 서로 인접하도록 함께 묶입니다.  다른 경우에는 성능을 최적화하기 위해 자연스러운 하드웨어 경계에 메모리 주소를 맞출 수 있습니다.  
+-   <span data-ttu-id="7380d-174">**저장소 할당입니다.**</span><span class="sxs-lookup"><span data-stu-id="7380d-174">**Storage Assignment.**</span></span> <span data-ttu-id="7380d-175">공용 언어 런타임 응용 프로그램이 실행 되는 플랫폼의 특성에 따라 저장소를 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-175">The common language runtime can assign storage based on the current characteristics of the platform on which your application is executing.</span></span> <span data-ttu-id="7380d-176">메모리를 거의 꽉 찬 경우 선언 된 요소가 밀접 하 게 함께 최대한 팩 수 것입니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-176">If memory is nearly full, it might pack your declared elements as closely together as possible.</span></span> <span data-ttu-id="7380d-177">다른 경우에 메모리 주소 성능을 최적화 하기 위해 일반적인 하드웨어 경계를 맞출 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-177">In other cases it might align their memory addresses to natural hardware boundaries to optimize performance.</span></span>  
   
--   **플랫폼 너비.** 64비트 플랫폼에서의 저장소 할당은 32비트 플랫폼에서의 할당과 다릅니다.  
+-   <span data-ttu-id="7380d-178">**플랫폼 너비입니다.**</span><span class="sxs-lookup"><span data-stu-id="7380d-178">**Platform Width.**</span></span> <span data-ttu-id="7380d-179">64 비트 플랫폼에 저장소 할당은 32 비트 플랫폼에서 할당와에서 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-179">Storage assignment on a 64-bit platform is different from assignment on a 32-bit platform.</span></span>  
   
-### 복합 데이터 형식  
- 구조체나 배열과 같은 복합 데이터 형식의 각 멤버에는 같은 고려 사항이 적용됩니다.  단순히 형식 멤버의 일반 저장소 할당량을 모두 더하는 것만으로 필요한 메모리를 계산할 수는 없습니다.  또한 다음과 같은 다른 고려 사항도 적용됩니다.  
+### <a name="composite-data-types"></a><span data-ttu-id="7380d-180">복합 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="7380d-180">Composite Data Types</span></span>  
+ <span data-ttu-id="7380d-181">구조체 또는 배열과 같은 복합 데이터 형식의 각 멤버에 동일한 고려 사항이 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-181">The same considerations apply to each member of a composite data type, such as a structure or an array.</span></span> <span data-ttu-id="7380d-182">형식의 멤버의 일반 저장소 할당량을 단순히 더하거나에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-182">You cannot rely on simply adding together the nominal storage allocations of the type's members.</span></span> <span data-ttu-id="7380d-183">또한 다음과 같은 다른 고려해 야 할 사항이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-183">Furthermore, there are other considerations, such as the following:</span></span>  
   
--   **오버헤드.** 일부 복합 형식에는 메모리가 추가로 필요합니다.  예를 들어, 배열은 배열 자체뿐 아니라 각 차원에 대해서도 메모리를 사용합니다.  32비트 플랫폼의 경우 현재 각 차원에 대해 기본적인 12바이트 외에 8바이트가 추가로 필요합니다.  64비트 플랫폼에서는 이 요구 사항이 두 배로 증가합니다.  
+-   <span data-ttu-id="7380d-184">**오버 헤드입니다.**</span><span class="sxs-lookup"><span data-stu-id="7380d-184">**Overhead.**</span></span> <span data-ttu-id="7380d-185">일부 복합 형식에는 추가 메모리 요구 사항이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-185">Some composite types have additional memory requirements.</span></span> <span data-ttu-id="7380d-186">예를 들어 배열 배열 자체에 대 한 및 각 차원에 대 한 추가 메모리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-186">For example, an array uses extra memory for the array itself and also for each dimension.</span></span> <span data-ttu-id="7380d-187">32 비트 플랫폼에서이 오버 헤드는 현재 12 바이트 + 각 차원에 대 한 8 바이트입니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-187">On a 32-bit platform, this overhead is currently 12 bytes plus 8 bytes for each dimension.</span></span> <span data-ttu-id="7380d-188">64 비트 플랫폼에서이 요구 사항은 두 배가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-188">On a 64-bit platform this requirement is doubled.</span></span>  
   
--   **저장소 레이아웃.** 메모리에서 저장소의 순서가 사용자의 선언 순서와 동일하다고 가정할 수 없습니다.  심지어 2바이트 또는 4바이트 경계와 같은 바이트 정렬을 가정할 수도 없습니다.  클래스나 구조체를 정의하는 중이며 해당 멤버의 저장소 레이아웃을 제어해야 할 경우 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 클래스나 구조체에 적용할 수 있습니다.  
+-   <span data-ttu-id="7380d-189">**저장소 레이아웃입니다.**</span><span class="sxs-lookup"><span data-stu-id="7380d-189">**Storage Layout.**</span></span> <span data-ttu-id="7380d-190">메모리에는 저장소의 순서는 사용자의 선언 순서와 같습니다 안전 하 게 가정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-190">You cannot safely assume that the order of storage in memory is the same as your order of declaration.</span></span> <span data-ttu-id="7380d-191">2 바이트 또는 4 바이트 경계와 같은 바이트 맞춤에 대 한 가정을 작업도 수행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-191">You cannot even make assumptions about byte alignment, such as a 2-byte or 4-byte boundary.</span></span> <span data-ttu-id="7380d-192">클래스 또는 구조체를 정의 하는 하 고 해당 멤버의 저장소 레이아웃을 제어 해야 할을 적용할 수는 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 클래스 또는 구조체입니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-192">If you are defining a class or structure and you need to control the storage layout of its members, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the class or structure.</span></span>  
   
-### 개체 오버헤드  
- 기본 또는 복합 데이터 형식을 참조하는 `Object`는 해당 데이터 형식에 포함된 데이터 외에 4바이트를 추가로 사용합니다.  
+### <a name="object-overhead"></a><span data-ttu-id="7380d-193">개체의 오버 헤드</span><span class="sxs-lookup"><span data-stu-id="7380d-193">Object Overhead</span></span>  
+ <span data-ttu-id="7380d-194">`Object` 데이터 형식에 포함 된 데이터 외에 4 바이트를 사용 하 여 형식 기본 또는 복합 데이터를 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="7380d-194">An `Object` referring to any elementary or composite data type uses 4 bytes in addition to the data contained in the data type.</span></span>  
   
-## 참고 항목  
- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="7380d-195">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7380d-195">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ [<span data-ttu-id="7380d-196">형식 변환 함수</span><span class="sxs-lookup"><span data-stu-id="7380d-196">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="7380d-197">변환 요약</span><span class="sxs-lookup"><span data-stu-id="7380d-197">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="7380d-198">형식 문자</span><span class="sxs-lookup"><span data-stu-id="7380d-198">Type Characters</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="7380d-199">데이터 형식의 효율적 사용</span><span class="sxs-lookup"><span data-stu-id="7380d-199">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -1,57 +1,61 @@
 ---
-title: "방법: 사각형 안에 줄 바꿈된 텍스트 그리기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "문자열[Windows Forms], 사각형에 그리기"
-  - "텍스트[Windows Forms], 사각형에 그리기"
-  - "Windows Forms, 사각형에 텍스트 그리기"
+title: "방법: 사각형 안에 줄 바꿈된 텍스트 그리기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, drawing text in a rectangle
+- text [Windows Forms], drawing in a rectangle
+- strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 773216c30adf1c684ec705a909038354aab0fec9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 사각형 안에 줄 바꿈된 텍스트 그리기
-<xref:System.Drawing.Rectangle> 또는 <xref:System.Drawing.RectangleF> 매개 변수를 사용하는 <xref:System.Drawing.Graphics> 클래스의 오버로드된 <xref:System.Drawing.Graphics.DrawString%2A> 메서드를 사용하여 사각형 안에 줄 바꿈된 텍스트를 그릴 수 있습니다.  <xref:System.Drawing.Brush> 및 <xref:System.Drawing.Font>도 사용해야 합니다.  
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a><span data-ttu-id="8f859-102">방법: 사각형 안에 줄 바꿈된 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="8f859-102">How to: Draw Wrapped Text in a Rectangle</span></span>
+<span data-ttu-id="8f859-103">사용 하 여 사각형 안에 줄 바꿈된 텍스트를 그릴 수 있습니다는 <xref:System.Drawing.Graphics.DrawString%2A> 의 메서드를 오버 로드는 <xref:System.Drawing.Graphics> 클래스를 사용 하는 <xref:System.Drawing.Rectangle> 또는 <xref:System.Drawing.RectangleF> 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="8f859-103">You can draw wrapped text in a rectangle by using the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method of the <xref:System.Drawing.Graphics> class that takes a <xref:System.Drawing.Rectangle> or <xref:System.Drawing.RectangleF> parameter.</span></span> <span data-ttu-id="8f859-104">사용할 수도 있습니다는 <xref:System.Drawing.Brush> 및 <xref:System.Drawing.Font>합니다.</span><span class="sxs-lookup"><span data-stu-id="8f859-104">You will also use a <xref:System.Drawing.Brush> and a <xref:System.Drawing.Font>.</span></span>  
   
- <xref:System.Drawing.Rectangle> 및 <xref:System.Windows.Forms.TextFormatFlags> 매개 변수를 사용하는 <xref:System.Windows.Forms.TextRenderer>의 오버로드된 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 메서드를 사용하여 사각형 안에 줄 바꿈된 텍스트를 그릴 수도 있습니다.  <xref:System.Drawing.Color> 및 <xref:System.Drawing.Font>도 사용해야 합니다.  
+ <span data-ttu-id="8f859-105">사용 하 여 사각형 안에 줄 바꿈된 텍스트를 그릴 수도 있습니다는 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 의 메서드를 오버 로드는 <xref:System.Windows.Forms.TextRenderer> 를 사용 하는 <xref:System.Drawing.Rectangle> 및 <xref:System.Windows.Forms.TextFormatFlags> 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="8f859-105">You can also draw wrapped text in a rectangle by using the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> overloaded method of the <xref:System.Windows.Forms.TextRenderer> that takes a <xref:System.Drawing.Rectangle> and a <xref:System.Windows.Forms.TextFormatFlags> parameter.</span></span> <span data-ttu-id="8f859-106">사용할 수도 있습니다는 <xref:System.Drawing.Color> 및 <xref:System.Drawing.Font>합니다.</span><span class="sxs-lookup"><span data-stu-id="8f859-106">You will also use a <xref:System.Drawing.Color> and a <xref:System.Drawing.Font>.</span></span>  
   
- 다음 그림에서는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드를 사용하여 사각형 안에 그린 텍스트의 출력을 보여 줍니다.  
+ <span data-ttu-id="8f859-107">다음 그림과 텍스트 출력을 사용 하 여 그린 사각형에는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="8f859-107">The following illustration shows the output of text drawn in the rectangle when you use the <xref:System.Drawing.Graphics.DrawString%2A> method.</span></span>  
   
- ![글꼴 텍스트](../../../../docs/framework/winforms/advanced/media/csfontstext2.png "csfontstext2")  
+ <span data-ttu-id="8f859-108">![글꼴 텍스트](../../../../docs/framework/winforms/advanced/media/csfontstext2.png "csfontstext2")</span><span class="sxs-lookup"><span data-stu-id="8f859-108">![Fonts Text](../../../../docs/framework/winforms/advanced/media/csfontstext2.png "csfontstext2")</span></span>  
   
-### GDI\+를 사용하여 사각형 안에 줄 바꿈된 텍스트를 그리려면  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a><span data-ttu-id="8f859-109">GDI + 사용 하 여 사각형 안에 줄 바꿈된 텍스트를 그리기</span><span class="sxs-lookup"><span data-stu-id="8f859-109">To draw wrapped text in a rectangle with GDI+</span></span>  
   
-1.  오버로드된 <xref:System.Drawing.Graphics.DrawString%2A> 메서드를 사용하여 원하는 텍스트, <xref:System.Drawing.Rectangle> 또는 <xref:System.Drawing.RectangleF>, <xref:System.Drawing.Font> 및 <xref:System.Drawing.Brush>를 전달합니다.  
+1.  <span data-ttu-id="8f859-110">사용 하 여는 <xref:System.Drawing.Graphics.DrawString%2A> 텍스트를 전달 하는 메서드를 오버 로드 된 <xref:System.Drawing.Rectangle> 또는 <xref:System.Drawing.RectangleF>, <xref:System.Drawing.Font> 및 <xref:System.Drawing.Brush>합니다.</span><span class="sxs-lookup"><span data-stu-id="8f859-110">Use the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method, passing the text you want, <xref:System.Drawing.Rectangle> or <xref:System.Drawing.RectangleF>, <xref:System.Drawing.Font> and <xref:System.Drawing.Brush>.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#50)]
      [!code-vb[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#50)]  
   
-### GDI를 사용하여 사각형 안에 줄 바꿈된 텍스트를 그리려면  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a><span data-ttu-id="8f859-111">GDI 사용 하 여 사각형 안에 줄 바꿈된 텍스트를 그리기</span><span class="sxs-lookup"><span data-stu-id="8f859-111">To draw wrapped text in a rectangle with GDI</span></span>  
   
-1.  <xref:System.Windows.Forms.TextFormatFlags> 열거형 값을 사용하면 원하는 텍스트, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Font> 및 <xref:System.Drawing.Color>를 전달하여 오버로드된 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 메서드로 줄 바꿈할 텍스트를 지정할 수 있습니다.  
+1.  <span data-ttu-id="8f859-112">사용 하 여는 <xref:System.Windows.Forms.TextFormatFlags> 와 텍스트를 지정 하려면 열거형 값을 래핑하는 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 텍스트를 전달 하는 메서드를 오버 로드 된 <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Font> 및 <xref:System.Drawing.Color>합니다.</span><span class="sxs-lookup"><span data-stu-id="8f859-112">Use the <xref:System.Windows.Forms.TextFormatFlags> enumeration value to specify the text should be wrapped with the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> overloaded method, passing the text you want, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Font> and <xref:System.Drawing.Color>.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#60)]
      [!code-vb[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#60)]  
   
-## 코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="8f859-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="8f859-113">Compiling the Code</span></span>  
+ <span data-ttu-id="8f859-114">이전 예제 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="8f859-114">The previous examples require:</span></span>  
   
--   <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`  
+-   <span data-ttu-id="8f859-115"><xref:System.Windows.Forms.PaintEventArgs>`e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.</span><span class="sxs-lookup"><span data-stu-id="8f859-115"><xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## 참고 항목  
- [방법: GDI를 사용하여 텍스트 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)   
- [글꼴 및 텍스트 사용](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
- [방법: 글꼴 패밀리 및 글꼴 만들기](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)   
- [방법: 지정된 위치에 텍스트 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)
+## <a name="see-also"></a><span data-ttu-id="8f859-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8f859-116">See Also</span></span>  
+ [<span data-ttu-id="8f859-117">방법: GDI를 사용하여 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="8f859-117">How to: Draw Text with GDI</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ [<span data-ttu-id="8f859-118">글꼴 및 텍스트 사용</span><span class="sxs-lookup"><span data-stu-id="8f859-118">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ [<span data-ttu-id="8f859-119">방법: 글꼴 패밀리 및 글꼴 만들기</span><span class="sxs-lookup"><span data-stu-id="8f859-119">How to: Construct Font Families and Fonts</span></span>](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
+ [<span data-ttu-id="8f859-120">방법: 지정된 위치에 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="8f859-120">How to: Draw Text at a Specified Location</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)

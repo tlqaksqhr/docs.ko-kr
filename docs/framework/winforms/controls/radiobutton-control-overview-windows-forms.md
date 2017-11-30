@@ -1,44 +1,44 @@
 ---
-title: "RadioButton 컨트롤 개요(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RadioButton"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "라디오 단추, 라디오 단추 정보"
-  - "라디오 단추, 상태 확인"
-  - "RadioButton 컨트롤[Windows Forms], RadioButton 컨트롤 정보"
-  - "RadioButton 컨트롤[Windows Forms], 상태 확인"
+title: "RadioButton 컨트롤 개요(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RadioButton
+helpviewer_keywords:
+- RadioButton control [Windows Forms], about RadioButton control
+- RadioButton control [Windows Forms], determining state
+- radio buttons [Windows Forms], determining state
+- radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ac0a04c506919ef807a3f8c5ed5aa75ee998f64a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# RadioButton 컨트롤 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤을 사용하면 두 개 이상의 항목으로 구성된 집합에서 하나의 항목을 상호 배타적으로 선택하도록 할 수 있습니다.  라디오 단추와 확인란은 유사한 기능을 가지고 있지만 중요한 차이가 있습니다. 라디오 단추는 하나의 그룹에서 한 개만 선택할 수 있습니다.  확인란은 개수에 관계없이 선택할 수 있습니다.  사용자가 하나의 항목만 선택할 수 있도록 하려면 라디오 단추 그룹을 지정합니다.  
+# <a name="radiobutton-control-overview-windows-forms"></a><span data-ttu-id="5e360-102">RadioButton 컨트롤 개요(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5e360-102">RadioButton Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="5e360-103">Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤 사용자에 게 한 상호 배타적인 두 개 이상의 옵션 집합을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-103">Windows Forms <xref:System.Windows.Forms.RadioButton> controls present a set of two or more mutually exclusive choices to the user.</span></span> <span data-ttu-id="5e360-104">라디오 단추 및 확인란 유사한 기능 나타날 수 있습니다는 중요 한 차이점이: 동일한 그룹에 다른 라디오 단추도 선택할 수 없는 사용자가 라디오 단추를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-104">While radio buttons and check boxes may appear to function similarly, there is an important difference: when a user selects a radio button, the other radio buttons in the same group cannot be selected as well.</span></span> <span data-ttu-id="5e360-105">반면에 임의 개수의 확인란을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-105">In contrast, any number of check boxes can be selected.</span></span> <span data-ttu-id="5e360-106">라디오 단추 그룹 사용자 지정, "여기 하나만 선택할 수 있는 선택 항목 집합이".</span><span class="sxs-lookup"><span data-stu-id="5e360-106">Defining a radio button group tells the user, "Here is a set of choices from which you can choose one and only one."</span></span>  
   
-## 컨트롤 사용  
- <xref:System.Windows.Forms.RadioButton> 컨트롤을 클릭하면 이 컨트롤의 <xref:System.Windows.Forms.RadioButton.Checked%2A> 속성이 `true`로 설정되고 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 호출됩니다.  <xref:System.Windows.Forms.RadioButton.Checked%2A> 속성의 값이 변경되면 <xref:System.Windows.Forms.RadioButton.CheckedChanged> 이벤트가 발생합니다.  <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> 속성이 `true`\(기본값\)로 설정된 경우 라디오 단추를 선택하면 해당 그룹의 다른 모든 선택 표시가 자동으로 지워집니다.  이 속성은 선택한 라디오 단추가 허용되는 옵션인지 확인하기 위해 유효성 검사 코드를 사용할 경우 대개 `false`로만 설정됩니다.  컨트롤에 표시되는 텍스트는 <xref:System.Windows.Forms.Control.Text%2A> 속성으로 설정하며 이 속성을 사용하여 선택키를 표시할 수 있습니다.  Alt 키와 함께 선택키를 누르면 컨트롤을 "클릭"하는 것과 같은 효과를 나타낼 수 있습니다.  자세한 내용은 [방법: Windows Forms 컨트롤에 대한 선택키 만들기](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) 및 [방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)을 참조하십시오.  
+## <a name="using-the-control"></a><span data-ttu-id="5e360-107">컨트롤을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="5e360-107">Using the Control</span></span>  
+ <span data-ttu-id="5e360-108">때는 <xref:System.Windows.Forms.RadioButton> 컨트롤을 클릭 하 고, 해당 <xref:System.Windows.Forms.RadioButton.Checked%2A> 속성이로 설정 되어 `true` 및 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-108">When a <xref:System.Windows.Forms.RadioButton> control is clicked, its <xref:System.Windows.Forms.RadioButton.Checked%2A> property is set to `true` and the <xref:System.Windows.Forms.Control.Click> event handler is called.</span></span> <span data-ttu-id="5e360-109"><xref:System.Windows.Forms.RadioButton.CheckedChanged> 이벤트가 발생할 때의 값은 <xref:System.Windows.Forms.RadioButton.Checked%2A> 속성 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-109">The <xref:System.Windows.Forms.RadioButton.CheckedChanged> event is raised when the value of the <xref:System.Windows.Forms.RadioButton.Checked%2A> property changes.</span></span> <span data-ttu-id="5e360-110">경우는 <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> 속성이 `true` (기본값) 라디오 단추를 선택 하면 그룹의 다른 모든 자동으로 지워집니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-110">If the <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> property is set to `true` (the default), when the radio button is selected all others in the group are automatically cleared.</span></span> <span data-ttu-id="5e360-111">이 속성은 대개로 설정 `false` 선택한 라디오 단추가 있는지 유효성 검사 코드를 사용 하는 경우 허용 되는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-111">This property is usually only set to `false` when validation code is used to make sure the radio button selected is an allowable option.</span></span> <span data-ttu-id="5e360-112">으로 설정 된 컨트롤에 표시 되는 텍스트는 <xref:System.Windows.Forms.Control.Text%2A> 속성 선택 키를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-112">The text displayed within the control is set with the <xref:System.Windows.Forms.Control.Text%2A> property, which can contain access key shortcuts.</span></span> <span data-ttu-id="5e360-113">선택 키를 선택 하면 컨트롤을 함께 ALT 키를 눌러 "클릭" 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-113">An access key enables a user to "click" the control by pressing the ALT key with the access key.</span></span> <span data-ttu-id="5e360-114">자세한 내용은 참조 [하는 방법: 만들 액세스 키에 대 한 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) 및 [하는 방법: Windows Forms 컨트롤에서 텍스트 표시 설정](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-114">For more information, see [How to: Create Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) and [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span>  
   
- <xref:System.Windows.Forms.RadioButton.Appearance%2A> 속성을 <xref:System.Windows.Forms.Appearance>으로 설정하면 <xref:System.Windows.Forms.RadioButton> 컨트롤이 명령 단추처럼 표시되어 선택되었을 때 눌린 모습으로 나타납니다.  또한 라디오 단추는 <xref:System.Windows.Forms.ButtonBase.Image%2A> 및 <xref:System.Windows.Forms.ButtonBase.ImageList%2A> 속성을 사용하여 이미지를 표시할 수 있습니다.  자세한 내용은 [방법: Windows Forms 컨트롤에서 표시하는 이미지 설정](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)를 참조하십시오.  
+ <span data-ttu-id="5e360-115"><xref:System.Windows.Forms.RadioButton> 제어 하는 경우 눌러진을 선택 된 것으로 표시 되는 명령 단추 처럼 표시는 <xref:System.Windows.Forms.RadioButton.Appearance%2A> 속성이 <xref:System.Windows.Forms.Appearance.Button>합니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-115">The <xref:System.Windows.Forms.RadioButton> control can appear like a command button, which appears to have been depressed if selected, if the <xref:System.Windows.Forms.RadioButton.Appearance%2A> property is set to <xref:System.Windows.Forms.Appearance.Button>.</span></span> <span data-ttu-id="5e360-116">라디오 단추를 사용 하 여 이미지를 표시할 수도 있습니다는 <xref:System.Windows.Forms.ButtonBase.Image%2A> 및 <xref:System.Windows.Forms.ButtonBase.ImageList%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-116">Radio buttons can also display images using the <xref:System.Windows.Forms.ButtonBase.Image%2A> and <xref:System.Windows.Forms.ButtonBase.ImageList%2A> properties.</span></span> <span data-ttu-id="5e360-117">자세한 내용은 참조 [하는 방법: Windows Forms 컨트롤에서 이미지 표시 설정](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5e360-117">For more information, see [How to: Set the Image Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.RadioButton>   
- [Panel 컨트롤 개요](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [GroupBox 컨트롤 개요](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)   
- [CheckBox 컨트롤 개요](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [방법: Windows Forms 컨트롤에 대한 선택키 만들기](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)   
- [방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [방법: 기능별로 Windows Forms RadioButton 컨트롤 그룹화](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)   
- [RadioButton 컨트롤](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="5e360-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5e360-118">See Also</span></span>  
+ <xref:System.Windows.Forms.RadioButton>  
+ [<span data-ttu-id="5e360-119">Panel 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="5e360-119">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="5e360-120">GroupBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="5e360-120">GroupBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="5e360-121">CheckBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="5e360-121">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="5e360-122">방법: Windows Forms 컨트롤에 대한 선택키 만들기</span><span class="sxs-lookup"><span data-stu-id="5e360-122">How to: Create Access Keys for Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [<span data-ttu-id="5e360-123">방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정</span><span class="sxs-lookup"><span data-stu-id="5e360-123">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="5e360-124">방법: 기능별로 Windows Forms RadioButton 컨트롤 그룹화</span><span class="sxs-lookup"><span data-stu-id="5e360-124">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [<span data-ttu-id="5e360-125">RadioButton 컨트롤</span><span class="sxs-lookup"><span data-stu-id="5e360-125">RadioButton Control</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)

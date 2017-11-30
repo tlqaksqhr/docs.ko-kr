@@ -1,37 +1,29 @@
 ---
-title: "방법: CSV 텍스트 파일 (Visual Basic) (LINQ)의 열 값 계산 | Microsoft 문서"
+title: "방법: CSV 텍스트 파일 (LINQ) (Visual Basic)의 열 값 계산"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36fbe64601ab66f7a87669fa4293f2e6d43d95c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d57376ca2741801d6aee858688f00cba245a225d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>방법: CSV 텍스트 파일 (Visual Basic) (LINQ)의 열 값 계산
-이 예제에는.csv 파일의 열에 합계, 평균, 최소값 및 최대값 같은 집계 계산을 수행 하는 방법을 보여 줍니다. 여기에 나와 있는 예제 원칙 다른 종류의 구조화 된 텍스트에 적용할 수 있습니다.  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="c3a43-102">방법: CSV 텍스트 파일 (LINQ) (Visual Basic)의 열 값 계산</span><span class="sxs-lookup"><span data-stu-id="c3a43-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="c3a43-103">이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c3a43-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="c3a43-104">여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c3a43-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a>소스 파일을 만들려면  
+### <a name="to-create-the-source-file"></a><span data-ttu-id="c3a43-105">소스 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="c3a43-105">To create the source file</span></span>  
   
-1.  Scores.csv 라는 파일에 다음 줄을 복사 하 고 프로젝트 폴더에 저장 합니다. 첫 번째 열은 학생 ID를 나타내고 후속 열 점수에서&4; 개의 시험을 가정 합니다.  
+1.  <span data-ttu-id="c3a43-106">다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="c3a43-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="c3a43-107">첫 번째 열은 학생 ID를 나타내고 후속 열은 4개 시험의 점수를 나타낸다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="c3a43-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ ms.lasthandoff: 03/13/2017
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="c3a43-108">예제</span><span class="sxs-lookup"><span data-stu-id="c3a43-108">Example</span></span>  
   
 ```vb  
 Class SumColumns  
@@ -157,11 +149,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- 사용 하 여 작동 하는 쿼리는 <xref:System.String.Split%2A>메서드를 각 텍스트 줄의 배열로 변환 합니다.</xref:System.String.Split%2A> 각 배열 요소는 열을 나타냅니다. 마지막으로, 각 열에 있는 텍스트는 해당 숫자 표현으로 변환 됩니다. 인수 탭으로 구분 된 파일을 파일을 사용 하는 경우 업데이트는 `Split` 메서드를 `\t`합니다.  
+ <span data-ttu-id="c3a43-109">쿼리는 <xref:System.String.Split%2A> 메서드를 사용하여 텍스트의 각 줄을 배열로 변환하는 방식으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="c3a43-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="c3a43-110">각 배열 요소는 열을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c3a43-110">Each array element represents a column.</span></span> <span data-ttu-id="c3a43-111">마지막으로 각 열의 텍스트가 숫자 표현으로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="c3a43-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="c3a43-112">탭으로 구분된 파일인 경우 `Split` 메서드의 인수를 `\t`로 업데이트하세요.</span><span class="sxs-lookup"><span data-stu-id="c3a43-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` System.Linq 네임 스페이스에 대 한 정보입니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="c3a43-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="c3a43-113">Compiling the Code</span></span>  
+ <span data-ttu-id="c3a43-114">System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c3a43-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="c3a43-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c3a43-115">See Also</span></span>  
+ [<span data-ttu-id="c3a43-116">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3a43-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="c3a43-117">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3a43-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

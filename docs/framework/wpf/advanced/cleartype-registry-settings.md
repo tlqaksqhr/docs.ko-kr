@@ -1,127 +1,129 @@
 ---
-title: "ClearType 레지스트리 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ClearType, 레지스트리 설정"
-  - "입력 체계, ClearType 레지스트리 설정"
+title: "ClearType 레지스트리 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ClearType [WPF], registry settings
+- typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fc4411c8141579150cde1bda2e46d7d2abe42e9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ClearType 레지스트리 설정
-이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에 사용되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 레지스트리 설정의 개요를 제공합니다.  
+# <a name="cleartype-registry-settings"></a><span data-ttu-id="afc6f-102">ClearType 레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="afc6f-102">ClearType Registry Settings</span></span>
+<span data-ttu-id="afc6f-103">이 항목에 대해 간략하게 설명 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 에서 사용 되는 레지스트리 설정이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-103">This topic provides an overview of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] registry settings that are used by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  
   
-   
   
 <a name="overview"></a>   
-## 기술 개요  
- 텍스트를 디스플레이 장치로 렌더링하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서는 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능을 사용하여 향상된 읽기 환경을 제공합니다.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 랩톱 화면, 포켓 PC 화면, 평면 모니터 등 기존의 LCD\(액정 디스플레이\)에서 보다 쉽게 텍스트를 읽을 수 있도록 지원하기 위해 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서 개발한 소프트웨어 기술입니다.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 LCD 화면의 모든 픽셀에 있는 각각의 세로 줄로 된 색 요소에 액세스하는 방식으로 작동합니다.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]에 대한 자세한 내용은 [ClearType 개요](../../../../docs/framework/wpf/advanced/cleartype-overview.md)를 참조하십시오.  
+## <a name="technology-overview"></a><span data-ttu-id="afc6f-104">기술 개요</span><span class="sxs-lookup"><span data-stu-id="afc6f-104">Technology Overview</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="afc6f-105">디스플레이 장치 사용에 대 한 텍스트를 렌더링 하는 응용 프로그램 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능 향상된 된 읽기 환경을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-105"> applications that render text to a display device use [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] features to provide an enhanced reading experience.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="afc6f-106">은 랩톱 화면, Pocket PC 화면, 평면 모니터 등 기존의 LCD(액정 디스플레이)에서 보다 쉽게 텍스트를 읽을 수 있도록 하기 위해 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서 개발한 소프트웨어 기술입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-106"> is a software technology developed by [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] that improves the readability of text on existing LCDs (Liquid Crystal Displays), such as laptop screens, Pocket PC screens and flat panel monitors.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="afc6f-107">은 LCD 화면의 모든 픽셀에 있는 개별 세로 색 스트라이프 요소에 액세스하는 방식으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-107"> works by accessing the individual vertical color stripe elements in every pixel of an LCD screen.</span></span> <span data-ttu-id="afc6f-108">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], 참조 [ClearType 개요](../../../../docs/framework/wpf/advanced/cleartype-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-108">For more information on [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], see [ClearType Overview](../../../../docs/framework/wpf/advanced/cleartype-overview.md).</span></span>  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]으로 렌더링되는 텍스트는 다양한 디스플레이 장치에서 볼 경우 상당히 다르게 나타날 수 있습니다.  예를 들어 일부 모니터에서는 세로 줄로 된 색 요소가 일반적인 빨강, 녹색, 파랑\([!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]\)의 순서가 아니라 파랑, 녹색, 빨강의 순서로 구현됩니다.  
+ <span data-ttu-id="afc6f-109">텍스트와 함께 렌더링 된 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 다양 한 디스플레이 장치에서 크게 다르게 보일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-109">Text that is rendered with [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] can appear significantly different when viewed on various display devices.</span></span> <span data-ttu-id="afc6f-110">파란색, 녹색, 빨강 순서로 색 요소가 아닌 일반적인 빨강, 녹색, 파란색 모니터 수가 적은 구현 하는 예를 들어 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 순서입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-110">For example, a small number of monitors implement the color stripe elements in blue, green, red order rather than the more common red, green, blue (    [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) order.</span></span>  
   
- 또한 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]으로 렌더링되는 텍스트는 각 개인이 지닌 색에 대한 민감도에 따라 상당히 다르게 보일 수 있습니다.  일부 사용자는 다른 사람보다 미묘한 색 차이를 더 잘 감지할 수 있습니다.  
+ <span data-ttu-id="afc6f-111">텍스트와 함께 렌더링 된 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 도 다양 한 수준의 색 민감도 개인이 크게 다르게 보일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-111">Text that is rendered with [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] can also appear significantly different when viewed by individuals with varying levels of color sensitivity.</span></span> <span data-ttu-id="afc6f-112">어떤 사람은 다른 사람보다 미묘한 색의 차이를 더 잘 감지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-112">Some individuals can detect slight differences in color better than others.</span></span>  
   
- 이러한 경우에는 모든 사람에게 최선의 읽기 환경을 제공하기 위해 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능을 수정해야 합니다.  
+ <span data-ttu-id="afc6f-113">이러한 경우 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능 최선의 읽기 각 개인에 대 한 환경을 제공 하기 위해 수정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-113">In each of these cases, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] features need to be modified in order to provide the best reading experience for each individual.</span></span>  
   
 <a name="registry_settings"></a>   
-## 레지스트리 설정  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능을 제어하기 위해 다음과 같은 네 가지 레지스트리 설정을 지정합니다.  
+## <a name="registry-settings"></a><span data-ttu-id="afc6f-114">레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="afc6f-114">Registry Settings</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="afc6f-115">네 가지 레지스트리 설정을 제어 하기 위한 지정 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능:</span><span class="sxs-lookup"><span data-stu-id="afc6f-115"> specifies four registry settings for controlling [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] features:</span></span>  
   
-|설정|설명|  
-|--------|--------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 색 명확성의 수준을 설명합니다.|  
-|감마 수준|디스플레이 장치의 픽셀 색 구성 요소 수준을 설명합니다.|  
-|픽셀 구조체|디스플레이 장치의 픽셀 배치를 설명합니다.|  
-|텍스트 대비 수준|표시된 텍스트의 대비 수준을 설명합니다.|  
+|<span data-ttu-id="afc6f-116">설정</span><span class="sxs-lookup"><span data-stu-id="afc6f-116">Setting</span></span>|<span data-ttu-id="afc6f-117">설명</span><span class="sxs-lookup"><span data-stu-id="afc6f-117">Description</span></span>|  
+|-------------|-----------------|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="afc6f-118"> 수준</span><span class="sxs-lookup"><span data-stu-id="afc6f-118"> level</span></span>|<span data-ttu-id="afc6f-119">수준을 설명 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 색 명확성 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-119">Describes the level of [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] color clarity.</span></span>|  
+|<span data-ttu-id="afc6f-120">감마 수준</span><span class="sxs-lookup"><span data-stu-id="afc6f-120">Gamma level</span></span>|<span data-ttu-id="afc6f-121">디스플레이 장치의 픽셀 색 구성 요소 수준을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-121">Describes the level of the pixel color component for a display device.</span></span>|  
+|<span data-ttu-id="afc6f-122">픽셀 구조체</span><span class="sxs-lookup"><span data-stu-id="afc6f-122">Pixel structure</span></span>|<span data-ttu-id="afc6f-123">디스플레이 장치의 픽셀 배치를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-123">Describes the arrangement of pixels for a display device.</span></span>|  
+|<span data-ttu-id="afc6f-124">텍스트 대비 수준</span><span class="sxs-lookup"><span data-stu-id="afc6f-124">Text contrast level</span></span>|<span data-ttu-id="afc6f-125">표시되는 텍스트의 대비 수준을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-125">Describes the level of contrast for displayed text.</span></span>|  
   
- 이러한 설정은 식별된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 레지스트리 설정을 참조할 수 있는 외부 구성 유틸리티에서 액세스할 수 있습니다.  또한 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 레지스트리 편집기를 사용하여 직접 값에 액세스하여 이러한 설정을 만들거나 수정할 수도 있습니다.  
+ <span data-ttu-id="afc6f-126">이러한 설정은 식별 된 참조 하는 방법을 있는 외부 구성 유틸리티에서 액세스할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 레지스트리 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-126">These settings can be accessed by an external configuration utility that knows how to reference the identified [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] registry settings.</span></span> <span data-ttu-id="afc6f-127">이러한 설정은 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 레지스트리 편집기를 통해 직접 값에 액세스하여 만들거나 수정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-127">These settings can also be created or modified by accessing the values directly by using the [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Registry Editor.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 레지스트리 설정이 지정되어 있지 않으면\(기본 상태\) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램이 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 시스템 매개 변수 정보에서 글꼴 다듬기 설정을 쿼리합니다.  
+ <span data-ttu-id="afc6f-128">경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 레지스트리 설정은 (이 기본 상태), 설정 되지 않습니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 쿼리는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 글꼴 다듬기 설정에 대 한 시스템 매개 변수 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-128">If the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] registry settings are not set (which is the default state), the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application queries the [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] system parameters information for font smoothing settings.</span></span>  
   
 > [!NOTE]
->  디스플레이 장치 이름을 열거하는 방법에 대한 자세한 내용은 `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수를 참조하십시오.  
+>  <span data-ttu-id="afc6f-129">디스플레이 장치 이름을 열거에 대 한 자세한 내용은 참조는 `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-129">For information on enumerating display device names, see the `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] function.</span></span>  
   
 <a name="ClearType_level"></a>   
-## ClearType 수준  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준을 사용하면 개인의 색 민감도와 인식 정도를 기준으로 텍스트 렌더링을 조정할 수 있습니다. 사용자에 따라 최고 수준의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]을 사용하는 텍스트 렌더링이 최상의 읽기 환경을 제공하지 못하는 경우도 있을 수 있습니다.  
+## <a name="cleartype-level"></a><span data-ttu-id="afc6f-130">ClearType 수준</span><span class="sxs-lookup"><span data-stu-id="afc6f-130">ClearType Level</span></span>  
+ <span data-ttu-id="afc6f-131">[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준에서는 개인에 대 한 인식와 색 민감도에 따라 텍스트의 렌더링을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-131">The [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level allows you to adjust the rendering of text based on the color sensitivity and perception of an individual.</span></span> <span data-ttu-id="afc6f-132">일부 개인, 텍스트의 렌더링을 사용 하는 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 가장 높은 수준에서 최선의 환경을 읽기을 생성 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-132">For some individuals, the rendering of text that uses [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] at its highest level does not produce the best reading experience.</span></span>  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준은 0부터 100 사이의 정수 값이고  기본값은 100입니다. 다시 말해 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]에서는 디스플레이 장치에서 제공하는 최고 수준의 색 선 요소를 사용합니다.  반대로 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준 0은 텍스트를 회색조로 렌더링합니다.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준을 0에서 100 사이의 값으로 설정하면 개인의 색 민감도에 따라 적절한 중간 수준을 만들 수 있습니다.  
+ <span data-ttu-id="afc6f-133">[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준은 0에서 100 사이의 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-133">The [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level is an integer value that ranges from 0 to 100.</span></span> <span data-ttu-id="afc6f-134">기본값은 100, 즉 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 디스플레이 장치의 색 요소가의 최대는 기능을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-134">The default level is 100, which means [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] uses the maximum capability of the color stripe elements of the display device.</span></span> <span data-ttu-id="afc6f-135">그러나 한 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준 0의 텍스트를 회색조로 렌더링 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-135">However, a [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level of 0 renders text as gray scale.</span></span> <span data-ttu-id="afc6f-136">설정 하 여는 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 0과 100 사이의 임의 수준에서 만들 수 있습니다 각 사용자의 색 구분 하기에 적합 한 중간 수준을 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-136">By setting the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level somewhere between 0 and 100, you can create an intermediate level that is suitable to an individual's color sensitivity.</span></span>  
   
-### 레지스트리 설정  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준에 대한 레지스트리 설정 위치는 특정 디스플레이 장치 이름에 해당하는 개별 사용자 설정입니다.  
+### <a name="registry-setting"></a><span data-ttu-id="afc6f-137">레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="afc6f-137">Registry Setting</span></span>  
+ <span data-ttu-id="afc6f-138">에 대 한 레지스트리 설정 위치는 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준은 특정 디스플레이 장치 이름에 해당 하는 개별 사용자 설정:</span><span class="sxs-lookup"><span data-stu-id="afc6f-138">The registry setting location for the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level is an individual user setting that corresponds to a specific display device name:</span></span>  
   
  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- 사용자의 각 디스플레이 장치 이름에 대해 `ClearTypeLevel` DWORD 값이 정의됩니다.  다음 스크린 샷에서는 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준에 대한 레지스트리 편집기 설정을 보여 줍니다.  
+ <span data-ttu-id="afc6f-139">사용자가 각 디스플레이 장치 이름에 대 한 한 `ClearTypeLevel` DWORD 값 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-139">For each display device name for a user, a `ClearTypeLevel` DWORD value is defined.</span></span> <span data-ttu-id="afc6f-140">다음 스크린샷은 대 한 레지스트리 편집기 설정의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-140">The following screenshot shows the Registry Editor setting for the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level.</span></span>  
   
- ![레지스트리 편집기의 ClearType 설정](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ <span data-ttu-id="afc6f-141">![레지스트리 편집기의 ClearType 설정](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")</span><span class="sxs-lookup"><span data-stu-id="afc6f-141">![ClearType settings in the Registry Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서는 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]이 있는 상태와 없는 상태 두 가지 모드로 텍스트를 렌더링합니다.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 없이 텍스트를 렌더링하는 경우를 회색조 렌더링이라고 합니다.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="afc6f-142">응용 프로그램의 텍스트와 사용 하지 않는 다음 중 하나가 두 가지 모드 중 하나를 렌더링 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-142"> applications render text in one of either two modes, with and without [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].</span></span> <span data-ttu-id="afc6f-143">없이 텍스트를 렌더링 하는 경우 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], 회색조 렌더링 라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-143">When text is rendered without [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], it is referred to as gray scale rendering.</span></span>  
   
 <a name="gamma_level"></a>   
-## 감마 수준  
- 감마 수준은 픽셀 값과 광도 간의 비선형 관계를 나타냅니다.  감마 수준 설정은 디스플레이 장치의 물리적 특성과 일치해야 합니다. 그렇지 않으면 렌더링된 출력에서 왜곡이 발생할 수 있습니다.  예를 들어 테스트가 지나치게 넓거나 좁게 나타난다거나 문자 모양의 세로 획 가장자리에 색 주름이 나타날 수 있습니다.  
+## <a name="gamma-level"></a><span data-ttu-id="afc6f-144">감마 수준</span><span class="sxs-lookup"><span data-stu-id="afc6f-144">Gamma Level</span></span>  
+ <span data-ttu-id="afc6f-145">감마 수준은 픽셀 값과 광도 사이의 비선형 관계를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-145">The gamma level refers to the nonlinear relationship between a pixel value and luminance.</span></span> <span data-ttu-id="afc6f-146">감마 수준 설정은 디스플레이 장치의 물리적 특성과 일치해야 합니다. 그렇지 않으면 렌더링된 출력에서 왜곡이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-146">The gamma level setting should correspond to the physical characteristics of the display device; otherwise, distortions in rendered output may occur.</span></span> <span data-ttu-id="afc6f-147">예를 들어 테스트가 너무 넓거나 너무 좁게 나타나거나 문자 모양의 세로 획 가장자리에 색 주름이 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-147">For example, test may appear too wide or too narrow, or color fringes may appear on the edges of vertical stems of glyphs.</span></span>  
   
- 감마 수준은 1000에서 2200 사이의 정수 값이며  기본 수준은 1900입니다.  
+ <span data-ttu-id="afc6f-148">감마 수준은 1,000에서 2,200까지의 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-148">The gamma level is an integer value that ranges from 1000 to 2200.</span></span> <span data-ttu-id="afc6f-149">기본 수준은 1,900입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-149">The default level is 1900.</span></span>  
   
-### 레지스트리 설정  
- 감마 수준에 대한 레지스트리 설정 위치는 특정 디스플레이 장치 이름에 해당하는 로컬 컴퓨터 설정입니다.  
+### <a name="registry-setting"></a><span data-ttu-id="afc6f-150">레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="afc6f-150">Registry Setting</span></span>  
+ <span data-ttu-id="afc6f-151">감마 수준에 대한 레지스트리 설정 위치는 특정 디스플레이 장치 이름에 해당하는 로컬 컴퓨터 설정입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-151">The registry setting location for the gamma level is a local machine setting that corresponds to a specific display device name:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- 사용자의 각 디스플레이 장치 이름에 대해 `GammaLevel` DWORD 값이 정의됩니다.  다음 스크린 샷에서는 감마 수준에 대한 레지스트리 편집기 설정을 보여 줍니다.  
+ <span data-ttu-id="afc6f-152">사용자가 각 디스플레이 장치 이름에 대 한 한 `GammaLevel` DWORD 값 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-152">For each display device name for a user, a `GammaLevel` DWORD value is defined.</span></span> <span data-ttu-id="afc6f-153">다음 스크린샷에서는 감마 수준에 대한 레지스트리 편집기 설정을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-153">The following screenshot shows the Registry Editor setting for the gamma level.</span></span>  
   
- ![레지스트리 편집기의 ClearType 설정](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ <span data-ttu-id="afc6f-154">![레지스트리 편집기의 ClearType 설정](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")</span><span class="sxs-lookup"><span data-stu-id="afc6f-154">![ClearType settings in the Registry Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")</span></span>  
   
 <a name="pixel_structure"></a>   
-## 픽셀 구조체  
- 픽셀 구조체는 디스플레이 장치를 구성하는 픽셀 형식을 설명합니다.  픽셀 구조체는 다음 세 가지 형식 중 하나로 정의됩니다.  
+## <a name="pixel-structure"></a><span data-ttu-id="afc6f-155">픽셀 구조체</span><span class="sxs-lookup"><span data-stu-id="afc6f-155">Pixel Structure</span></span>  
+ <span data-ttu-id="afc6f-156">픽셀 구조체는 디스플레이 장치를 구성하는 픽셀 형식을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-156">The pixel structure describes the type of pixels that make up a display device.</span></span> <span data-ttu-id="afc6f-157">픽셀 구조체는 다음 세 가지 형식 중 하나로 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-157">The pixel structure is defined as one of three types:</span></span>  
   
-|형식|값|설명|  
-|--------|-------|--------|  
-|단순|0|디스플레이 장치에 픽셀 구조체가 없습니다.  즉, 각 색의 광원이 픽셀 영역에서 고르게 분산된다는 의미로, 이것을 회색조 렌더링이라고 합니다.  이것이 표준 디스플레이 장치가 작동하는 방식입니다.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 렌더링된 텍스트에 적용되지 않습니다.|  
-|RGB|1|디스플레이 장치에 빨강, 녹색, 파랑의 순서로 세 개의 선을 구성하는 픽셀이 있습니다.  렌더링된 텍스트에 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]이 적용됩니다.|  
-|BGR|2|디스플레이 장치에 파랑, 녹색, 빨강의 순서로 세 개의 선을 구성하는 픽셀이 있습니다.  렌더링된 텍스트에 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]이 적용됩니다.  색의 순서가 RGB 형식과는 반대입니다.|  
+|<span data-ttu-id="afc6f-158">형식</span><span class="sxs-lookup"><span data-stu-id="afc6f-158">Type</span></span>|<span data-ttu-id="afc6f-159">값</span><span class="sxs-lookup"><span data-stu-id="afc6f-159">Value</span></span>|<span data-ttu-id="afc6f-160">설명</span><span class="sxs-lookup"><span data-stu-id="afc6f-160">Description</span></span>|  
+|----------|-----------|-----------------|  
+|<span data-ttu-id="afc6f-161">플랫</span><span class="sxs-lookup"><span data-stu-id="afc6f-161">Flat</span></span>|<span data-ttu-id="afc6f-162">0</span><span class="sxs-lookup"><span data-stu-id="afc6f-162">0</span></span>|<span data-ttu-id="afc6f-163">디스플레이 장치에는 픽셀 구조체가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-163">The display device has no pixel structure.</span></span> <span data-ttu-id="afc6f-164">즉 각 색의 광원이 픽셀 영역에서 고르게 분산되며, 이를 회색조 렌더링이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-164">This means that light sources for each color are spread equally on the pixel area—this is referred to as gray scale rendering.</span></span> <span data-ttu-id="afc6f-165">이 형식은 표준 디스플레이 장치에서 작동하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-165">This is how a standard display device works.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="afc6f-166">이 렌더링된 텍스트에 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-166"> is never applied to the rendered text.</span></span>|  
+|<span data-ttu-id="afc6f-167">RGB</span><span class="sxs-lookup"><span data-stu-id="afc6f-167">RGB</span></span>|<span data-ttu-id="afc6f-168">1</span><span class="sxs-lookup"><span data-stu-id="afc6f-168">1</span></span>|<span data-ttu-id="afc6f-169">디스플레이 장치에는 빨강, 녹색 및 파랑 순서의 3개 스트라이프로 구성되는 픽셀이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-169">The display device has pixels that consist of three stripes in the following order: red, green, and blue.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="afc6f-170">이 렌더링된 텍스트에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-170"> is applied to the rendered text.</span></span>|  
+|<span data-ttu-id="afc6f-171">BGR</span><span class="sxs-lookup"><span data-stu-id="afc6f-171">BGR</span></span>|<span data-ttu-id="afc6f-172">2</span><span class="sxs-lookup"><span data-stu-id="afc6f-172">2</span></span>|<span data-ttu-id="afc6f-173">디스플레이 장치에는 파랑, 녹색 및 빨강 순서의 3개 스트라이프로 구성되는 픽셀이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-173">The display device has pixels that consist of three stripes in the following order: blue, green, and red.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="afc6f-174">이 렌더링된 텍스트에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-174"> is applied to the rendered text.</span></span> <span data-ttu-id="afc6f-175">색의 순서가 RGB 형식과는 반대입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-175">Notice how the order is inverted from the RGB type.</span></span>|  
   
- 픽셀 구조체는 0부터 2 사이의 정수 값에 해당하며  기본 수준은 평면 픽셀 구조체를 나타내는 0입니다.  
+ <span data-ttu-id="afc6f-176">픽셀 구조체는 0에서 2까지의 정수 값에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-176">The pixel structure corresponds to an integer value that ranges from 0 to 2.</span></span> <span data-ttu-id="afc6f-177">기본 수준은 플랫 픽셀 구조체를 나타내는 0입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-177">The default level is 0, which represents a flat pixel structure.</span></span>  
   
 > [!NOTE]
->  디스플레이 장치 이름을 열거하는 방법에 대한 자세한 내용은 `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수를 참조하십시오.  
+>  <span data-ttu-id="afc6f-178">디스플레이 장치 이름을 열거에 대 한 자세한 내용은 참조는 `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-178">For information on enumerating display device names, see the `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] function.</span></span>  
   
-### 레지스트리 설정  
- 픽셀 구조체에 대한 레지스트리 설정 위치는 특정 디스플레이 장치 이름에 해당하는 로컬 컴퓨터 설정입니다.  
+### <a name="registry-setting"></a><span data-ttu-id="afc6f-179">레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="afc6f-179">Registry Setting</span></span>  
+ <span data-ttu-id="afc6f-180">픽셀 구조체에 대한 레지스트리 설정 위치는 특정 디스플레이 장치 이름에 해당하는 로컬 컴퓨터 설정입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-180">The registry setting location for the pixel structure is a local machine setting that corresponds to a specific display device name:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- 사용자의 각 디스플레이 장치 이름에 대해 `PixelStructure` DWORD 값이 정의됩니다.  다음 스크린 샷에서는 픽셀 구조체에 대한 레지스트리 편집기 설정을 보여 줍니다.  
+ <span data-ttu-id="afc6f-181">사용자가 각 디스플레이 장치 이름에 대 한 한 `PixelStructure` DWORD 값 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-181">For each display device name for a user, a `PixelStructure` DWORD value is defined.</span></span> <span data-ttu-id="afc6f-182">다음 스크린샷에서는 픽셀 구조체에 대한 레지스트리 편집기 설정을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-182">The following screenshot shows the Registry Editor setting for the pixel structure.</span></span>  
   
- ![레지스트리 편집기의 ClearType 설정](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ <span data-ttu-id="afc6f-183">![레지스트리 편집기의 ClearType 설정](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")</span><span class="sxs-lookup"><span data-stu-id="afc6f-183">![ClearType settings in the Registry Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")</span></span>  
   
 <a name="text_contrast_level"></a>   
-## 텍스트 대비 수준  
- 텍스트 대비 수준을 사용하면 문자 모양의 획 너비를 기준으로 텍스트 렌더링을 조정할 수 있습니다.  텍스트 대비 수준은 0에서 6 사이의 정수 값이며 값이 클수록 획이 넓어집니다.  기본 수준은 1입니다.  
+## <a name="text-contrast-level"></a><span data-ttu-id="afc6f-184">텍스트 대비 수준</span><span class="sxs-lookup"><span data-stu-id="afc6f-184">Text Contrast Level</span></span>  
+ <span data-ttu-id="afc6f-185">텍스트 대비 수준을 사용하면 문자 모양의 획 너비를 기준으로 텍스트 렌더링을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-185">The text contrast level allows you to adjust the rendering of text based on the stem widths of glyphs.</span></span> <span data-ttu-id="afc6f-186">텍스트 대비 수준은 0에서 6까지의 정수 값이며, 정수 값이 클수록 획이 넓어집니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-186">The text contrast level is an integer value that ranges from 0 to 6—the larger the integer value, the wider the stem.</span></span> <span data-ttu-id="afc6f-187">기본 수준은 1입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-187">The default level is 1.</span></span>  
   
-### 레지스트리 설정  
- 텍스트 대비 수준에 대한 레지스트리 설정 위치는 특정 디스플레이 장치 이름에 해당하는 개별 사용자 설정입니다.  
+### <a name="registry-setting"></a><span data-ttu-id="afc6f-188">레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="afc6f-188">Registry Setting</span></span>  
+ <span data-ttu-id="afc6f-189">텍스트 대비 수준에 대한 레지스트리 설정 위치는 특정 디스플레이 장치 이름에 해당하는 개별 사용자 설정입니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-189">The registry setting location for the text contrast level is an individual user setting that corresponds to a specific display device name:</span></span>  
   
  `HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics\<displayName>`  
   
- 사용자의 각 디스플레이 장치 이름에 대해 `TextContrastLevel` DWORD 값이 정의됩니다.  다음 스크린 샷에서는 텍스트 대비 수준에 대한 레지스트리 편집기 설정을 보여 줍니다.  
+ <span data-ttu-id="afc6f-190">사용자가 각 디스플레이 장치 이름에 대 한 한 `TextContrastLevel` DWORD 값 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-190">For each display device name for a user, a `TextContrastLevel` DWORD value is defined.</span></span> <span data-ttu-id="afc6f-191">다음 스크린샷에서는 텍스트 대조 수준에 대한 레지스트리 편집기 설정을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="afc6f-191">The following screenshot shows the Registry Editor setting for the text contrast level.</span></span>  
   
- ![레지스트리 편집기의 ClearType 설정](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ <span data-ttu-id="afc6f-192">![레지스트리 편집기의 ClearType 설정](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")</span><span class="sxs-lookup"><span data-stu-id="afc6f-192">![ClearType settings in the Registry Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")</span></span>  
   
-## 참고 항목  
- [ClearType 개요](../../../../docs/framework/wpf/advanced/cleartype-overview.md)   
- [ClearType Antialiasing](_win32_ClearType_Antialiasing)
+## <a name="see-also"></a><span data-ttu-id="afc6f-193">참고 항목</span><span class="sxs-lookup"><span data-stu-id="afc6f-193">See Also</span></span>  
+ [<span data-ttu-id="afc6f-194">ClearType 개요</span><span class="sxs-lookup"><span data-stu-id="afc6f-194">ClearType Overview</span></span>](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
+ <span data-ttu-id="afc6f-195">[ClearType 앤티 앨리어싱](https://msdn.microsoft.com/library/dd183433(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="afc6f-195">[ClearType Antialiasing](https://msdn.microsoft.com/library/dd183433(v=vs.85).aspx)</span></span>

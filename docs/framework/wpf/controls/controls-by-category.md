@@ -1,28 +1,30 @@
 ---
-title: "컨트롤 범주 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "컨트롤, 범주별로 나열"
+title: "컨트롤 범주"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6616ba0cc6a1c584834b9bef56da05c4461876b6
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 컨트롤 범주
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 컨트롤은 논리적인 여러 개의 범주로 그룹화할 수 있습니다.  이러한 범주를 사용하면 비슷한 사용 패턴이나 기능을 가진 컨트롤을 쉽게 확인할 수 있으므로 시나리오에 적합한 컨트롤을 선택하는 데 도움이 됩니다.  
+# <a name="controls-by-category"></a><span data-ttu-id="67e7b-102">컨트롤 범주</span><span class="sxs-lookup"><span data-stu-id="67e7b-102">Controls by Category</span></span>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="67e7b-103"> 컨트롤을 논리적으로 여러 범주로 그룹화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-103"> controls can be logically grouped into several categories.</span></span> <span data-ttu-id="67e7b-104">이러한 범주를 사용하면 유사한 사용 패턴 또는 기능이 있는 컨트롤을 볼 수 있으므로 시나리오에 적절한 컨트롤을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-104">These categories can be used to select the appropriate control for your scenario by helping you see which controls have similar usage patterns or functionality.</span></span>  
   
-## Layout  
- 레이아웃 컨트롤은 자식 요소의 크기, 치수, 위치 및 정렬을 관리하는 데 사용합니다.  
+## <a name="layout"></a><span data-ttu-id="67e7b-105">레이아웃</span><span class="sxs-lookup"><span data-stu-id="67e7b-105">Layout</span></span>  
+ <span data-ttu-id="67e7b-106">레이아웃 컨트롤은 자식 요소의 크기, 차원, 위치 및 정렬을 관리하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-106">Layout controls are used to manage the size, dimensions, position, and arrangement of child elements.</span></span>  
   
 -   <xref:System.Windows.Controls.Border>  
   
@@ -62,15 +64,15 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
-## 단추  
- 단추는 가장 기본적인 사용자 인터페이스 컨트롤 중 하나입니다.  사용자가 단추를 클릭할 때 일반적으로 응용 프로그램에서는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에서 특정 작업을 수행합니다.  
+## <a name="buttons"></a><span data-ttu-id="67e7b-107">단추</span><span class="sxs-lookup"><span data-stu-id="67e7b-107">Buttons</span></span>  
+ <span data-ttu-id="67e7b-108">단추는 가장 기본적인 사용자 인터페이스 컨트롤 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-108">Buttons are one of the most basic user interface controls.</span></span> <span data-ttu-id="67e7b-109">응용 프로그램은 일반적으로 몇 가지 작업을 수행는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에는 사용자가 클릭할 때입니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-109">Applications typically perform some task in the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event when a user clicks on them.</span></span>  
   
 -   <xref:System.Windows.Controls.Button>  
   
 -   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## 데이터 표시  
- 데이터 표시 컨트롤은 데이터 소스에서 정보를 표시하는 데 사용 됩니다.  
+## <a name="data-display"></a><span data-ttu-id="67e7b-110">데이터 표시</span><span class="sxs-lookup"><span data-stu-id="67e7b-110">Data Display</span></span>  
+ <span data-ttu-id="67e7b-111">데이터 표시 컨트롤은 데이터 소스의 정보를 표시하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-111">Data display controls are used to show information from a data source.</span></span>  
   
 -   <xref:System.Windows.Controls.DataGrid>  
   
@@ -78,15 +80,15 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TreeView>  
   
-## 날짜 표시 및 선택  
- 날짜 컨트롤은 달력 정보를 표시하고 선택하는 데 사용됩니다.  
+## <a name="date-display-and-selection"></a><span data-ttu-id="67e7b-112">날짜 표시 및 선택</span><span class="sxs-lookup"><span data-stu-id="67e7b-112">Date Display and Selection</span></span>  
+ <span data-ttu-id="67e7b-113">날짜 컨트롤은 일정 정보를 표시하고 선택하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-113">Date controls are used to display and select calendar information.</span></span>  
   
 -   <xref:System.Windows.Controls.Calendar>  
   
 -   <xref:System.Windows.Controls.DatePicker>  
   
-## 메뉴  
- 메뉴는 관련 작업을 그룹화하거나 상황에 맞는 도움을 제공하는 데 사용합니다.  
+## <a name="menus"></a><span data-ttu-id="67e7b-114">메뉴</span><span class="sxs-lookup"><span data-stu-id="67e7b-114">Menus</span></span>  
+ <span data-ttu-id="67e7b-115">메뉴는 관련 작업을 그룹화하거나 상황별 지원을 제공하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-115">Menus are used to group related actions or to provide contextual assistance.</span></span>  
   
 -   <xref:System.Windows.Controls.ContextMenu>  
   
@@ -94,8 +96,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolBar>  
   
-## 선택 영역  
- 선택 컨트롤은 사용자가 하나 이상의 옵션을 선택할 수 있도록 하는 데 사용합니다.  
+## <a name="selection"></a><span data-ttu-id="67e7b-116">선택</span><span class="sxs-lookup"><span data-stu-id="67e7b-116">Selection</span></span>  
+ <span data-ttu-id="67e7b-117">선택 컨트롤은 사용자가 하나 이상의 옵션을 선택할 수 있게 하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-117">Selection controls are used to enable a user to select one or more options.</span></span>  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -107,8 +109,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.Slider>  
   
-## 탐색  
- 탐색 컨트롤은 대상 프레임 또는 탭이 있는 응용 프로그램 모양을 만들어 응용 프로그램의 탐색 환경을 개선하거나 확장하는 데 사용합니다.  
+## <a name="navigation"></a><span data-ttu-id="67e7b-118">탐색</span><span class="sxs-lookup"><span data-stu-id="67e7b-118">Navigation</span></span>  
+ <span data-ttu-id="67e7b-119">탐색 컨트롤은 대상 프레임 또는 탭 응용 프로그램 모양을 만들어 응용 프로그램 탐색 환경을 향상시키거나 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-119">Navigation controls enhance or extend the application navigation experience by creating targeting frames or tabbed application appearance.</span></span>  
   
 -   <xref:System.Windows.Controls.Frame>  
   
@@ -120,8 +122,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TabControl>  
   
-## 대화 상자  
- 대화 상자는 인쇄와 같은 일반 사용자 상호 작용 시나리오를 지원합니다.  
+## <a name="dialog-boxes"></a><span data-ttu-id="67e7b-120">대화 상자</span><span class="sxs-lookup"><span data-stu-id="67e7b-120">Dialog Boxes</span></span>  
+ <span data-ttu-id="67e7b-121">대화 상자는 인쇄와 같은 일반적인 사용자 상호 작용 시나리오에 대한 대상 지원 서비스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-121">Dialog boxes provide targeted support for common user-interaction scenarios such as printing.</span></span>  
   
 -   <xref:Microsoft.Win32.OpenFileDialog>  
   
@@ -129,8 +131,8 @@ caps.handback.revision: 17
   
 -   <xref:Microsoft.Win32.SaveFileDialog>  
   
-## 사용자 정보  
- 사용자 정보 컨트롤은 응용 프로그램의 사용자 인터페이스를 이해하기 쉽게 설명하거나 그에 대한 상황에 맞는 피드백을 제공합니다.  사용자는 대개 이러한 컨트롤과는 상호 작용할 수 없습니다.  
+## <a name="user-information"></a><span data-ttu-id="67e7b-122">사용자 정보</span><span class="sxs-lookup"><span data-stu-id="67e7b-122">User Information</span></span>  
+ <span data-ttu-id="67e7b-123">사용자 정보 컨트롤은 상황별 피드백을 제공하거나 응용 프로그램의 사용자 인터페이스를 명확히 합니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-123">User information controls provide contextual feedback or clarify an application's user interface.</span></span> <span data-ttu-id="67e7b-124">사용자는 일반적으로 이러한 컨트롤과 상호 작용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-124">The user typically cannot interact with these controls.</span></span>  
   
 -   <xref:System.Windows.Controls.AccessText>  
   
@@ -146,8 +148,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolTip>  
   
-## 문서  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 문서를 보는 데 사용할 수 있는 몇 가지 특수 컨트롤이 포함되어 있습니다.  이러한 컨트롤은 대상 사용자 시나리오에 따라 읽기 환경을 최적화합니다.  
+## <a name="documents"></a><span data-ttu-id="67e7b-125">문서</span><span class="sxs-lookup"><span data-stu-id="67e7b-125">Documents</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="67e7b-126">에는 문서를 보는 데 필요한 여러 가지 특수 컨트롤이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-126"> includes several specialized controls for viewing documents.</span></span> <span data-ttu-id="67e7b-127">이러한 컨트롤은 대상 사용자 시나리오를 기반으로 읽기 환경을 최적화합니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-127">These controls optimize the reading experience, based on the targeted user scenario.</span></span>  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -159,8 +161,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.StickyNoteControl>  
   
-## 입력  
- 입력 컨트롤은 사용자가 텍스트 및 다른 콘텐츠를 입력할 수 있게 합니다.  
+## <a name="input"></a><span data-ttu-id="67e7b-128">입력</span><span class="sxs-lookup"><span data-stu-id="67e7b-128">Input</span></span>  
+ <span data-ttu-id="67e7b-129">입력 컨트롤을 사용하여 텍스트 및 기타 콘텐츠를 입력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-129">Input controls enable the user to input text and other content.</span></span>  
   
 -   <xref:System.Windows.Controls.TextBox>  
   
@@ -168,8 +170,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.PasswordBox>  
   
-## 미디어  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 오디오 및 비디오 콘텐츠 호스팅을 위한 통합된 지원 기능 및 널리 사용되는 이미지 형식에 대한 [코덱](GTMT) 지원 기능을 제공합니다.  
+## <a name="media"></a><span data-ttu-id="67e7b-130">미디어</span><span class="sxs-lookup"><span data-stu-id="67e7b-130">Media</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="67e7b-131">에는 가장 인기있는 이미지 형식을 위한 [코덱]뿐만 아니라 오디오 및 비디오 콘텐츠 호스팅을 위한 통합 지원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-131"> includes integrated support for hosting both audio and video content, as well as [codecs] for most popular image formats.</span></span>  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -177,12 +179,12 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.SoundPlayerAction>  
   
-## 디지털 잉크  
- 디지털 잉크 컨트롤은 잉크 보기 및 잉크 입력과 같은 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] 기능에 대한 통합된 지원 기능을 제공합니다.  
+## <a name="digital-ink"></a><span data-ttu-id="67e7b-132">디지털 잉크</span><span class="sxs-lookup"><span data-stu-id="67e7b-132">Digital Ink</span></span>  
+ <span data-ttu-id="67e7b-133">디지털 잉크 컨트롤은 잉크 보기 및 잉크 입력과 같은 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] 기능을 통합적으로 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="67e7b-133">Digital ink controls provide integrated support for [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] features, such as ink viewing and ink input.</span></span>  
   
 -   <xref:System.Windows.Controls.InkCanvas>  
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## 참고 항목  
- [컨트롤 라이브러리](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a><span data-ttu-id="67e7b-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="67e7b-134">See Also</span></span>  
+ [<span data-ttu-id="67e7b-135">컨트롤 라이브러리</span><span class="sxs-lookup"><span data-stu-id="67e7b-135">Control Library</span></span>](../../../../docs/framework/wpf/controls/control-library.md)

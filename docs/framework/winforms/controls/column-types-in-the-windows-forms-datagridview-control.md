@@ -1,104 +1,105 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 열 형식 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "열[Windows Forms], 형식"
-  - "데이터 표, 열"
-  - "DataGridView 컨트롤[Windows Forms], 열 형식"
+title: "Windows Forms DataGridView 컨트롤의 열 형식"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Windows Forms], types
+- DataGridView control [Windows Forms], column types
+- data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e45ddcec4459e376a5dab4eec36e51cc2e5e49c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms DataGridView 컨트롤의 열 형식
-<xref:System.Windows.Forms.DataGridView> 컨트롤은 여러 열 형식을 사용하여 해당 정보를 표시하고 사용자가 정보를 추가 또는 수정할 수 있게 해줍니다.  
+# <a name="column-types-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="8c302-102">Windows Forms DataGridView 컨트롤의 열 형식</span><span class="sxs-lookup"><span data-stu-id="8c302-102">Column Types in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="8c302-103"><xref:System.Windows.Forms.DataGridView> 컨트롤 형식을 사용 하 여 여러 열 해당 정보를 표시 하 고 사용자가 정보를 수정 하거나 추가할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-103">The <xref:System.Windows.Forms.DataGridView> control uses several column types to display its information and enable users to modify or add information.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView> 컨트롤을 바인딩하고 <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> 속성을 `true`로 설정하면 바인딩된 데이터 소스에 포함된 데이터 형식에 적합한 기본 열 형식을 사용하여 열이 자동으로 생성됩니다.  
+ <span data-ttu-id="8c302-104">바인딩하는 경우는 <xref:System.Windows.Forms.DataGridView> 제어 하 고 설정의 <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> 속성을 `true`, 열에 바인딩된 데이터 소스가 포함 된 데이터 형식에 적합 한 기본 열 형식을 사용 하 여 자동으로 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-104">When you bind a <xref:System.Windows.Forms.DataGridView> control and set the <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> property to `true`, columns are automatically generated using default column types appropriate for the data types contained in the bound data source.</span></span>  
   
- 또한 모든 열 클래스의 인스턴스를 사용자가 직접 만들 수 있으며 이 인스턴스를 <xref:System.Windows.Forms.DataGridView.Columns%2A> 속성에서 반환하는 컬렉션에 추가할 수 있습니다.  인스턴스를 만들어서 바인딩되지 않은 열로 사용할 수도 있고 이러한 인스턴스를 수동으로 바인딩할 수도 있습니다.  수동으로 바인딩된 열은 자동으로 생성된 형식 열을 다른 형식 열로 바꾸려는 경우에 유용합니다.  
+ <span data-ttu-id="8c302-105">모든 열 클래스의 인스턴스를 직접 만들 수 있고에서 반환 된 컬렉션에 추가 하면는 <xref:System.Windows.Forms.DataGridView.Columns%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-105">You can also create instances of any of the column classes yourself and add them to the collection returned by the <xref:System.Windows.Forms.DataGridView.Columns%2A> property.</span></span> <span data-ttu-id="8c302-106">바인딩되지 않은 열으로 사용 하기 위해 이러한 인스턴스를 만들거나 수동으로 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-106">You can create these instances for use as unbound columns, or you can manually bind them.</span></span> <span data-ttu-id="8c302-107">직접 바인딩한 열은 다른 형식의 열이 있는 한 종류의 자동으로 생성 되는 열을 바꿀 때 예를 들어 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-107">Manually bound columns are useful, for example, when you want to replace an automatically generated column of one type with a column of another type.</span></span>  
   
- 다음 표에서는 <xref:System.Windows.Forms.DataGridView> 컨트롤에 사용할 수 있는 다양한 열 클래스를 설명합니다.  
+ <span data-ttu-id="8c302-108">다음 표에서 설명에서 사용 하기 위해 사용할 수 있는 다양 한 열 클래스는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-108">The following table describes the various column classes available for use in the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-|클래스|설명|  
-|---------|--------|  
-|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|텍스트 기반 값과 함께 사용됩니다.  숫자 및 문자열에 바인딩할 때 자동으로 생성됩니다.|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|<xref:System.Boolean> 및 <xref:System.Windows.Forms.CheckState> 값과 함께 사용됩니다.  이러한 형식의 값에 바인딩할 때 자동으로 생성됩니다.|  
-|<xref:System.Windows.Forms.DataGridViewImageColumn>|이미지를 표시하는 데 사용됩니다.  바이트 배열, <xref:System.Drawing.Image> 개체 또는 <xref:System.Drawing.Icon> 개체에 바인딩할 때 자동으로 생성됩니다.|  
-|<xref:System.Windows.Forms.DataGridViewButtonColumn>|셀에서 단추를 표시하는 데 사용됩니다.  바인딩할 때 자동으로 생성되지 않습니다.  일반적으로 바인딩되지 않은 열로 사용됩니다.|  
-|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|셀에서 드롭다운 목록을 표시하는 데 사용됩니다.  바인딩할 때 자동으로 생성되지 않습니다.  일반적으로 수동으로 데이터 바인딩됩니다.|  
-|<xref:System.Windows.Forms.DataGridViewLinkColumn>|셀에서 링크를 표시하는 데 사용됩니다.  바인딩할 때 자동으로 생성되지 않습니다.  일반적으로 수동으로 데이터 바인딩됩니다.|  
-|사용자 지정 열 형식|<xref:System.Windows.Forms.DataGridViewColumn> 클래스 또는 이 클래스의 파생 클래스를 상속하여 고유한 열 클래스를 만들면 사용자 지정 모양, 동작 또는 호스팅된 컨트롤을 제공할 수 있습니다.  자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 동작 및 모양을 확장하여 셀과 열 사용자 지정](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)를 참조하십시오.|  
+|<span data-ttu-id="8c302-109">클래스</span><span class="sxs-lookup"><span data-stu-id="8c302-109">Class</span></span>|<span data-ttu-id="8c302-110">설명</span><span class="sxs-lookup"><span data-stu-id="8c302-110">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|<span data-ttu-id="8c302-111">텍스트 기반 값과 함께 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-111">Used with text-based values.</span></span> <span data-ttu-id="8c302-112">숫자와 문자열에 바인딩할 때 자동으로 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-112">Generated automatically when binding to numbers and strings.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|<span data-ttu-id="8c302-113">함께 사용할 <xref:System.Boolean> 및 <xref:System.Windows.Forms.CheckState> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-113">Used with <xref:System.Boolean> and <xref:System.Windows.Forms.CheckState> values.</span></span> <span data-ttu-id="8c302-114">이러한 형식의 값에 바인딩할 때 자동으로 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-114">Generated automatically when binding to values of these types.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewImageColumn>|<span data-ttu-id="8c302-115">이미지를 표시 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-115">Used to display images.</span></span> <span data-ttu-id="8c302-116">바이트 배열에 바인딩할 때 자동으로 생성 <xref:System.Drawing.Image> 개체 또는 <xref:System.Drawing.Icon> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-116">Generated automatically when binding to byte arrays, <xref:System.Drawing.Image> objects, or <xref:System.Drawing.Icon> objects.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewButtonColumn>|<span data-ttu-id="8c302-117">셀의 단추를 표시 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-117">Used to display buttons in cells.</span></span> <span data-ttu-id="8c302-118">바인딩할 때 자동으로 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-118">Not automatically generated when binding.</span></span> <span data-ttu-id="8c302-119">일반적으로 바인딩되지 않은 열으로 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-119">Typically used as unbound columns.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|<span data-ttu-id="8c302-120">셀에서 드롭 다운 목록을 표시 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-120">Used to display drop-down lists in cells.</span></span> <span data-ttu-id="8c302-121">바인딩할 때 자동으로 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-121">Not automatically generated when binding.</span></span> <span data-ttu-id="8c302-122">일반적으로 데이터 바인딩된 수동으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-122">Typically data-bound manually.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewLinkColumn>|<span data-ttu-id="8c302-123">셀에 대 한 링크를 표시 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-123">Used to display links in cells.</span></span> <span data-ttu-id="8c302-124">바인딩할 때 자동으로 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-124">Not automatically generated when binding.</span></span> <span data-ttu-id="8c302-125">일반적으로 데이터 바인딩된 수동으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-125">Typically data-bound manually.</span></span>|  
+|<span data-ttu-id="8c302-126">사용자 지정 열 형식</span><span class="sxs-lookup"><span data-stu-id="8c302-126">Your custom column type</span></span>|<span data-ttu-id="8c302-127">상속 하 여 고유한 열 클래스를 만들 수는 <xref:System.Windows.Forms.DataGridViewColumn> 클래스 또는 사용자 지정 모양, 동작 또는 호스트 된 컨트롤을 제공 하는 해당 파생된 클래스 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-127">You can create your own column class by inheriting the <xref:System.Windows.Forms.DataGridViewColumn> class or any of its derived classes to provide custom appearance, behavior, or hosted controls.</span></span> <span data-ttu-id="8c302-128">자세한 내용은 참조 [하는 방법: 확장 해당 동작과 모양은 하 여 Windows Forms DataGridView 컨트롤에서 사용자 지정 셀 및 열](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)</span><span class="sxs-lookup"><span data-stu-id="8c302-128">For more information, see [How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)</span></span>|  
   
- 이러한 열 형식은 다음 단원에서 자세하게 설명됩니다.  
+ <span data-ttu-id="8c302-129">이러한 열 유형에 다음 섹션에서 자세히 설명 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-129">These column types are described in more detail in the following sections.</span></span>  
   
-## DataGridViewTextBoxColumn  
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>은 숫자 및 문자열과 같은 텍스트 기반 값에 사용되는 일반적인 목적의 열 형식입니다.  <xref:System.Windows.Forms.TextBox> 컨트롤은 편집 모드에서 활성 셀에 표시되며 사용자가 셀 값을 수정할 수 있게 합니다.  
+## <a name="datagridviewtextboxcolumn"></a><span data-ttu-id="8c302-130">DataGridViewTextBoxColumn</span><span class="sxs-lookup"><span data-stu-id="8c302-130">DataGridViewTextBoxColumn</span></span>  
+ <span data-ttu-id="8c302-131"><xref:System.Windows.Forms.DataGridViewTextBoxColumn> 숫자와 문자열 같은 텍스트 기반 값으로 사용 하기 위해 범용 열 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-131">The <xref:System.Windows.Forms.DataGridViewTextBoxColumn> is a general-purpose column type for use with text-based values such as numbers and strings.</span></span> <span data-ttu-id="8c302-132">편집 모드에는 <xref:System.Windows.Forms.TextBox> 컨트롤 사용자가 셀 값을 수정할 수 있도록 현재 셀에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-132">In editing mode, a <xref:System.Windows.Forms.TextBox> control is displayed in the active cell, enabling users to modify the cell value.</span></span>  
   
- 셀 값은 표시할 문자열로 자동 변환됩니다.  사용자가 입력 또는 수정한 값은 자동으로 구문 분석되어 해당 데이터 형식의 셀 값을 만듭니다.  이러한 변환은 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.CellFormatting> 및 <xref:System.Windows.Forms.DataGridView.CellParsing> 이벤트를 처리하여 사용자 지정할 수 있습니다.  
+ <span data-ttu-id="8c302-133">셀 값이 자동으로 표시할 문자열로 변환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-133">Cell values are automatically converted to strings for display.</span></span> <span data-ttu-id="8c302-134">입력 하거나 사용자가 수정할 값 적절 한 데이터 형식의 셀 값을 만드는 구문 분석 자동으로 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-134">Values entered or modified by the user are automatically parsed to create a cell value of the appropriate data type.</span></span> <span data-ttu-id="8c302-135">이러한 변환을 처리 하 여 사용자 지정할 수 있습니다는 <xref:System.Windows.Forms.DataGridView.CellFormatting> 및 <xref:System.Windows.Forms.DataGridView.CellParsing> 의 이벤트는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-135">You can customize these conversions by handling the <xref:System.Windows.Forms.DataGridView.CellFormatting> and <xref:System.Windows.Forms.DataGridView.CellParsing> events of the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
- 열의 셀 값 데이터 형식은 열의 <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> 속성에 지정됩니다.  
+ <span data-ttu-id="8c302-136">셀 값 데이터 형식의 열에 지정 된는 <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> 열의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-136">The cell value data type of a column is specified in the <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> property of the column.</span></span>  
   
-## DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>은 <xref:System.Boolean> 및 <xref:System.Windows.Forms.CheckState> 값과 함께 사용됩니다.  <xref:System.Boolean> 값은 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성 값에 따라 두 가지 상태 또는 세 가지 상태 확인란으로 표시됩니다.  열이 <xref:System.Windows.Forms.CheckState> 값에 바인딩되면 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성의 기본값은 `true`입니다.  
+## <a name="datagridviewcheckboxcolumn"></a><span data-ttu-id="8c302-137">DataGridViewCheckBoxColumn</span><span class="sxs-lookup"><span data-stu-id="8c302-137">DataGridViewCheckBoxColumn</span></span>  
+ <span data-ttu-id="8c302-138"><xref:System.Windows.Forms.DataGridViewCheckBoxColumn> 와 함께 사용 되 <xref:System.Boolean> 및 <xref:System.Windows.Forms.CheckState> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-138">The <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> is used with <xref:System.Boolean> and <xref:System.Windows.Forms.CheckState> values.</span></span> <span data-ttu-id="8c302-139"><xref:System.Boolean>2 단계 또는 3 상 확인란으로, 값에 따라 값이 표시는 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-139"><xref:System.Boolean> values display as two-state or three-state check boxes, depending on the value of the <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> property.</span></span> <span data-ttu-id="8c302-140">열에 바인딩된 경우 <xref:System.Windows.Forms.CheckState> 값의 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성 값은 `true` 기본적으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-140">When the column is bound to <xref:System.Windows.Forms.CheckState> values, the <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> property value is `true` by default.</span></span>  
   
- 일반적으로 확인란 셀 값은 다른 데이터처럼 저장소용이거나 대량 작업을 수행하기 위한 것입니다.  사용자가 확인란 셀을 클릭할 때 바로 응답하려면 <xref:System.Windows.Forms.DataGridView.CellClick> 이벤트를 처리하면 되지만 이 이벤트는 셀 값이 업데이트되기 전에 발생합니다.  셀이 클릭될 때 새 값이 필요하면 현재 값을 기준으로 예상 값을 계산하거나  변경 사항을 바로 커밋하고 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 이벤트를 처리하여 이 이벤트에 응답합니다.  셀이 클릭될 때 변경 사항을 커밋하려면 <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> 이벤트를 처리해야 합니다.  처리기에서 현재 셀이 확인란 셀이면 <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> 메서드를 호출하여 <xref:System.Windows.Forms.DataGridViewDataErrorContexts> 값에 전달합니다.  
+ <span data-ttu-id="8c302-141">일반적으로 확인란 셀 값은 다른 데이터를 저장 하거나 대량 작업을 수행 하기 위한 용도로 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-141">Typically, check box cell values are intended either for storage, like any other data, or for performing bulk operations.</span></span> <span data-ttu-id="8c302-142">처리할 수 사용자가 확인란 셀을 클릭 하면 바로 대응 하려는 경우는 <xref:System.Windows.Forms.DataGridView.CellClick> 이벤트, 하지만이 이벤트는 셀 값이 업데이트 되기 전에 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-142">If you want to respond immediately when users click a check box cell, you can handle the <xref:System.Windows.Forms.DataGridView.CellClick> event, but this event occurs before the cell value is updated.</span></span> <span data-ttu-id="8c302-143">한 가지 옵션은 됩니다 예상 값을 계산 하 고 클릭 시 새 값이 필요한 경우 현재 값을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-143">If you need the new value at the time of the click, one option is to calculate what the expected value will be based on the current value.</span></span> <span data-ttu-id="8c302-144">또 다른 방법은 즉시 변경 내용을 커밋하고 처리 하는 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 에 응답 하려면 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-144">Another approach is to commit the change immediately, and handle the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event to respond to it.</span></span> <span data-ttu-id="8c302-145">셀을 클릭할 때의 변경 내용을 커밋하지를 처리 해야 합니다는 <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-145">To commit the change when the cell is clicked, you must handle the <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> event.</span></span> <span data-ttu-id="8c302-146">처리기에서 확인란 셀 현재 셀을 사용 하는 경우 호출 된 <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> 메서드와 전달은 <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> 값.</span><span class="sxs-lookup"><span data-stu-id="8c302-146">In the handler, if the current cell is a check box cell, call the <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> method and pass in the <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> value.</span></span>  
   
-## DataGridViewImageColumn  
- <xref:System.Windows.Forms.DataGridViewImageColumn>은 이미지를 표시하는 데 사용됩니다.  이미지 열은 데이터 소스에서 자동으로 채우거나, 바인딩되지 않은 열에 대해 수동으로 채우거나, <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트의 처리기에서 동적으로 채울 수 있습니다.  
+## <a name="datagridviewimagecolumn"></a><span data-ttu-id="8c302-147">DataGridViewImageColumn</span><span class="sxs-lookup"><span data-stu-id="8c302-147">DataGridViewImageColumn</span></span>  
+ <span data-ttu-id="8c302-148"><xref:System.Windows.Forms.DataGridViewImageColumn> 이미지를 표시 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-148">The <xref:System.Windows.Forms.DataGridViewImageColumn> is used to display images.</span></span> <span data-ttu-id="8c302-149">Image 열 데이터 원본에서 자동으로 채워지므로, 바인딩되지 않은 열에 대 한 수동으로 배치 하거나에 대 한 처리기에서 동적으로 채울 수는 <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-149">Image columns can be populated automatically from a data source, populated manually for unbound columns, or populated dynamically in a handler for the <xref:System.Windows.Forms.DataGridView.CellFormatting> event.</span></span>  
   
- 데이터 소스에서 이미지 열을 자동으로 채우는 방법은 <xref:System.Drawing.Image> 클래스에서 지원하는 모든 형식 및 Microsoft® Access와 Northwind 샘플 데이터베이스에서 사용되는 OLE Picture 형식을 비롯하여 여러 이미지 형식으로 바이트 배열에 사용됩니다.  
+ <span data-ttu-id="8c302-150">다양 한 이미지 형식에서 지 원하는 모든 형식을 포함 하 여 바이트 배열에서 작동 하는 데이터 원본에서 image 열의 자동 채우기를 <xref:System.Drawing.Image> 클래스 및 Microsoft® Access 및 Northwind 샘플 데이터베이스에서 사용 되는 OLE 그림 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-150">The automatic population of an image column from a data source works with byte arrays in a variety of image formats, including all formats supported by the <xref:System.Drawing.Image> class and the OLE Picture format used by Microsoft® Access and the Northwind sample database.</span></span>  
   
- 이미지 열을 수동으로 채우는 방법은 <xref:System.Windows.Forms.DataGridViewButtonColumn>의 기능을 사용자 지정된 모양으로 제공하려는 경우에 유용합니다.  <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=fullName> 이벤트를 처리하여 이미지 셀에서 클릭 시 응답할 수 있습니다.  
+ <span data-ttu-id="8c302-151">이미지 열을 수동으로 채우기는의 기능을 제공 하려는 경우 유용는 <xref:System.Windows.Forms.DataGridViewButtonColumn>, 하면서도 사용자 지정 된 모양입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-151">Populating an image column manually is useful when you want to provide the functionality of a <xref:System.Windows.Forms.DataGridViewButtonColumn>, but with a customized appearance.</span></span> <span data-ttu-id="8c302-152">처리할 수는 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> 이미지 셀 내에서 클릭에 응답 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-152">You can handle the <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> event to respond to clicks within an image cell.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트의 처리기에서 이미지 열의 셀을 채우는 방법은 계산된 값이나 이미지가 아닌 형식의 값에 이미지를 제공하려는 경우에 유용합니다.  예를 들어, 아이콘으로 표시할 문자열 값으로 `"high"`, `"middle"` 및 `"low"`와 같은 문자열이 있는 "Risk" 열이 있을 수 있습니다.  또는 "Image" 열에 이미지의 이진 내용이 아니라 로드해야 하는 이미지 위치가 포함되어 있을 수 있습니다.  
+ <span data-ttu-id="8c302-153">이미지 열에 대 한 처리기에 셀을 채우는 방법은 <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트는 계산 된 값 또는 이미지가 아닌 형식의 값에 대 한 이미지를 제공 하려는 경우에 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-153">Populating the cells of an image column in a handler for the <xref:System.Windows.Forms.DataGridView.CellFormatting> event is useful when you want to provide images for calculated values or values in non-image formats.</span></span> <span data-ttu-id="8c302-154">예를 들어 할 수 있습니다 "위험" 문자열 값이 열을와 같은 `"high"`, `"middle"`, 및 `"low"` 를 아이콘으로 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-154">For example, you may have a "Risk" column with string values such as `"high"`, `"middle"`, and `"low"` that you want to display as icons.</span></span> <span data-ttu-id="8c302-155">또는 이미지의 이진 콘텐츠 아니라 로드 해야 하는 이미지의 위치를 포함 하는 "이미지" 열을 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-155">Alternately, you may have an "Image" column that contains the locations of images that must be loaded rather than the binary content of the images.</span></span>  
   
-## DataGridViewButtonColumn  
- <xref:System.Windows.Forms.DataGridViewButtonColumn>을 사용하여 단추가 포함된 셀의 열을 표시할 수 있습니다.  사용자가 특정 레코드에 대해 순서 지정 또는 별도의 창에 자식 레코드 표시와 같은 작업을 쉽게 수행하는 방법을 제공하려는 경우에 유용합니다.  
+## <a name="datagridviewbuttoncolumn"></a><span data-ttu-id="8c302-156">DataGridViewButtonColumn</span><span class="sxs-lookup"><span data-stu-id="8c302-156">DataGridViewButtonColumn</span></span>  
+ <span data-ttu-id="8c302-157">와 <xref:System.Windows.Forms.DataGridViewButtonColumn>, 단추가 포함 된 셀의 열을 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-157">With the <xref:System.Windows.Forms.DataGridViewButtonColumn>, you can display a column of cells that contain buttons.</span></span> <span data-ttu-id="8c302-158">사용자는 주문 또는 별도 창에 자식 레코드 표시와 같은 특정 레코드에서 작업을 수행할 수 있는 간편한 방법을 제공 하는 경우에 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-158">This is useful when you want to provide an easy way for your users to perform actions on particular records, such as placing an order or displaying child records in a separate window.</span></span>  
   
- 단추 열은 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 바인딩할 때 자동으로 생성되지 않습니다.  단추 열을 사용하려면 수동으로 단추 열을 만든 다음 <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=fullName> 속성에서 반환된 컬렉션에 추가해야 합니다.  
+ <span data-ttu-id="8c302-159">데이터 바인딩할 때 단추 열 자동으로 생성 되지 않습니다는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-159">Button columns are not generated automatically when data-binding a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="8c302-160">단추 열을 사용 하려면 수동으로 만들 및에서 반환 된 컬렉션에 추가 해야 합니다는 <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-160">To use button columns, you must create them manually and add them to the collection returned by the <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> property.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=fullName> 이벤트를 처리하면 사용자가 단추 셀을 클릭하는 경우 응답이 이루어지도록 할 수 있습니다.  
+ <span data-ttu-id="8c302-161">처리 하 여 사용자가 클릭 단추 셀에서에 응답할 수는 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-161">You can respond to user clicks in button cells by handling the <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> event.</span></span>  
   
-## DataGridViewComboBoxColumn  
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>을 사용하여 드롭다운 목록 상자가 포함된 셀의 열을 표시할 수 있습니다.  Northwind 샘플 데이터베이스에 있는 Products 테이블의 Category 열처럼 특정 값만 포함할 수 있는 필드에 데이터를 입력하는 경우에 유용합니다.  
+## <a name="datagridviewcomboboxcolumn"></a><span data-ttu-id="8c302-162">DataGridViewComboBoxColumn</span><span class="sxs-lookup"><span data-stu-id="8c302-162">DataGridViewComboBoxColumn</span></span>  
+ <span data-ttu-id="8c302-163">와 <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, 드롭 다운 목록 상자를 포함 하는 셀의 열을 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-163">With the <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, you can display a column of cells that contain drop-down list boxes.</span></span> <span data-ttu-id="8c302-164">Northwind 샘플 데이터베이스의 Products 테이블의 범주 열 등의 특정 값만 포함할 수 있는 필드에 데이터를 입력할 때 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-164">This is useful for data entry in fields that can only contain particular values, such as the Category column of the Products table in the Northwind sample database.</span></span>  
   
- <xref:System.Windows.Forms.ComboBox> 드롭다운 목록을 채우는 방법과 동일한 방법 즉, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> 속성에서 반환된 컬렉션을 통해 수동으로 또는 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 및 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 속성을 통해 드롭다운 목록을 데이터 소스에 바인딩하여 모든 셀에 사용된 드롭다운 목록을 채울 수 있습니다.  자세한 내용은 [ComboBox 컨트롤](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)을 참조하십시오.  
+ <span data-ttu-id="8c302-165">채우는 같은 방식으로 모든 셀에 대해 사용 되는 드롭다운 목록을 채울 수는 <xref:System.Windows.Forms.ComboBox> 드롭 다운 목록에서 반환 된 컬렉션을 통해 수동으로 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> 속성을 통해 데이터 소스에 바인딩하는 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, 및 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-165">You can populate the drop-down list used for all cells the same way you would populate a <xref:System.Windows.Forms.ComboBox> drop-down list, either manually through the collection returned by the <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> property, or by binding it to a data source through the <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, and <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> properties.</span></span> <span data-ttu-id="8c302-166">자세한 내용은 참조 [ComboBox 컨트롤](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-166">For more information, see [ComboBox Control](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).</span></span>  
   
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=fullName>의 <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> 속성을 설정하여 실제 셀 값을 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용하는 데이터 소스에 바인딩할 수 있습니다.  
+ <span data-ttu-id="8c302-167">사용 하는 데이터 원본에는 실제 셀 값을 바인딩할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 설정 하 여 컨트롤의 <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> 속성은 <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-167">You can bind the actual cell values to the data source used by the <xref:System.Windows.Forms.DataGridView> control by setting the <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> property of the <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.</span></span>  
   
- 콤보 상자 열은 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 바인딩할 때 자동으로 생성되지 않습니다.  콤보 상자 열을 사용하려면 수동으로 콤보 상자 열을 만든 다음 <xref:System.Windows.Forms.DataGridView.Columns%2A> 속성에서 반환된 컬렉션에 추가해야 합니다.  
+ <span data-ttu-id="8c302-168">데이터 바인딩할 때 콤보 상자 열 자동으로 생성 되지 않습니다는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-168">Combo box columns are not generated automatically when data-binding a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="8c302-169">콤보 상자 열을 사용 하려면 수동으로 만들 및에서 반환 된 컬렉션에 추가 해야 합니다는 <xref:System.Windows.Forms.DataGridView.Columns%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-169">To use combo box columns, you must create them manually and add them to the collection returned by the <xref:System.Windows.Forms.DataGridView.Columns%2A> property.</span></span>  
   
-## DataGridViewLinkColumn  
- <xref:System.Windows.Forms.DataGridViewLinkColumn>을 사용하면 하이퍼링크가 포함된 셀의 열을 표시할 수 있습니다.  이렇게 하면 데이터 소스에 URL 값이 있는 경우 또는 자식 레코드가 있는 창을 여는 동작처럼 특별한 동작에 대한 단추 열을 대체하려는 경우에 유용합니다.  
+## <a name="datagridviewlinkcolumn"></a><span data-ttu-id="8c302-170">DataGridViewLinkColumn</span><span class="sxs-lookup"><span data-stu-id="8c302-170">DataGridViewLinkColumn</span></span>  
+ <span data-ttu-id="8c302-171">와 <xref:System.Windows.Forms.DataGridViewLinkColumn>, 하이퍼링크가 들어 있는 셀의 열을 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-171">With the <xref:System.Windows.Forms.DataGridViewLinkColumn>, you can display a column of cells that contain hyperlinks.</span></span> <span data-ttu-id="8c302-172">데이터 원본 또는 자식 레코드와 창을 여는 것 처럼 특별 한 동작에 대 한 단추 열 하는 대신 URL 값에 대 한 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-172">This is useful for URL values in the data source or as an alternative to the button column for special behaviors such as opening a window with child records.</span></span>  
   
- 링크 열은 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 바인딩할 때 자동으로 생성되지 않습니다.  링크 열을 사용하려면 수동으로 링크 열을 만든 다음 <xref:System.Windows.Forms.DataGridView.Columns%2A> 속성에서 반환된 컬렉션에 추가해야 합니다.  
+ <span data-ttu-id="8c302-173">데이터 바인딩할 때 링크 열 자동으로 생성 되지 않습니다는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-173">Link columns are not generated automatically when data-binding a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="8c302-174">링크 열을 사용 하려면 수동으로 만들 및에서 반환 된 컬렉션에 추가 해야 합니다는 <xref:System.Windows.Forms.DataGridView.Columns%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-174">To use link columns, you must create them manually and add them to the collection returned by the <xref:System.Windows.Forms.DataGridView.Columns%2A> property.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView.CellContentClick> 이벤트를 처리하면 사용자가 링크 클릭 시 응답할 수 있습니다.  이 이벤트는 사용자가 셀의 아무 곳이나 클릭했을 때 발생하는 <xref:System.Windows.Forms.DataGridView.CellClick> 및 <xref:System.Windows.Forms.DataGridView.CellMouseClick> 이벤트와 다릅니다.  
+ <span data-ttu-id="8c302-175">처리 하 여 사용자가 링크 클릭 시에 응답할 수는 <xref:System.Windows.Forms.DataGridView.CellContentClick> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-175">You can respond to user clicks on links by handling the <xref:System.Windows.Forms.DataGridView.CellContentClick> event.</span></span> <span data-ttu-id="8c302-176">이 이벤트는 구별는 <xref:System.Windows.Forms.DataGridView.CellClick> 및 <xref:System.Windows.Forms.DataGridView.CellMouseClick> 셀에는 사용자가 클릭할 때 발생 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-176">This event is distinct from the <xref:System.Windows.Forms.DataGridView.CellClick> and <xref:System.Windows.Forms.DataGridView.CellMouseClick> events, which occur when a user clicks anywhere in a cell.</span></span>  
   
- <xref:System.Windows.Forms.DataGridViewLinkColumn> 클래스는 링크를 클릭하기 전, 클릭하는 동안, 그리고 클릭한 후의 링크 모양을 수정하기 위한 몇 가지 속성을 제공합니다.  
+ <span data-ttu-id="8c302-177"><xref:System.Windows.Forms.DataGridViewLinkColumn> 하기 전에, 전후 또는 배포 시 링크의 모양 수정에 대 한 여러 속성을 제공 하는 클래스 클릭할 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c302-177">The <xref:System.Windows.Forms.DataGridViewLinkColumn> class provides several properties for modifying the appearance of links before, during, and after they are clicked.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewColumn>   
- <xref:System.Windows.Forms.DataGridViewButtonColumn>   
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewImageColumn>   
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewLinkColumn>   
- [DataGridView 컨트롤](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [방법: Windows Forms DataGridView 컨트롤의 셀에 이미지 표시](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)   
- [방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)   
- [Windows Forms DataGridView 컨트롤 사용자 지정](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="8c302-178">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8c302-178">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewColumn>  
+ <xref:System.Windows.Forms.DataGridViewButtonColumn>  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewImageColumn>  
+ <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewLinkColumn>  
+ [<span data-ttu-id="8c302-179">DataGridView 컨트롤</span><span class="sxs-lookup"><span data-stu-id="8c302-179">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [<span data-ttu-id="8c302-180">방법: Windows Forms DataGridView 컨트롤의 셀에 이미지 표시</span><span class="sxs-lookup"><span data-stu-id="8c302-180">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="8c302-181">방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업</span><span class="sxs-lookup"><span data-stu-id="8c302-181">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="8c302-182">Windows Forms DataGridView 컨트롤 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="8c302-182">Customizing the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)

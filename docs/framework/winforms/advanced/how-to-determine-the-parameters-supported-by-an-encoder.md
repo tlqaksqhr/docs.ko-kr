@@ -1,42 +1,45 @@
 ---
-title: "방법: 인코더에서 지원하는 매개 변수 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "인코더 매개 변수, 지원 여부 확인"
+title: "방법: 인코더에서 지원하는 매개 변수 확인"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e041434e9ace24618dbdc45341a0e8468721c3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 인코더에서 지원하는 매개 변수 확인
-품질 및 압축 수준 같은 이미지 매개 변수를 조정할 수 있지만 이 경우 특정 이미지 인코더에서 지원되는 매개 변수를 알고 있어야 합니다.  <xref:System.Drawing.Image> 클래스에서는 특정 인코더에서 지원되는 이미지 매개 변수를 확인할 수 있도록 <xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드를 제공합니다.  인코더는 GUID로 지정합니다.  <xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드는 <xref:System.Drawing.Imaging.EncoderParameter> 개체의 배열을 반환합니다.  
+# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a><span data-ttu-id="f4157-102">방법: 인코더에서 지원하는 매개 변수 확인</span><span class="sxs-lookup"><span data-stu-id="f4157-102">How to: Determine the Parameters Supported by an Encoder</span></span>
+<span data-ttu-id="f4157-103">품질 및 압축 수준 등의 이미지 매개 변수를 조정할 수 있지만 지정된 이미지 인코더에 의해 지원 되는 매개 변수를 알고 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4157-103">You can adjust image parameters, such as quality and compression level, but you must know which parameters are supported by a given image encoder.</span></span> <span data-ttu-id="f4157-104"><xref:System.Drawing.Image> 클래스를 제공는 <xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드를 특정 인코더에 대 한 지원 되는 이미지 매개 변수를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4157-104">The <xref:System.Drawing.Image> class provides the <xref:System.Drawing.Image.GetEncoderParameterList%2A> method so that you can determine which image parameters are supported for a particular encoder.</span></span> <span data-ttu-id="f4157-105">GUID가 하는 인코더를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4157-105">You specify the encoder with a GUID.</span></span> <span data-ttu-id="f4157-106"><xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드 배열을 반환 <xref:System.Drawing.Imaging.EncoderParameter> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f4157-106">The <xref:System.Drawing.Image.GetEncoderParameterList%2A> method returns an array of <xref:System.Drawing.Imaging.EncoderParameter> objects.</span></span>  
   
-## 예제  
- 다음 예제 코드에서는 JPEG 인코더에 대해 지원되는 매개 변수를 출력합니다.  <xref:System.Drawing.Imaging.Encoder> 클래스 개요에 있는 이 매개 변수 범주 및 연관된 GUID 목록을 사용하여 각 매개 변수의 범주를 확인합니다.  
+## <a name="example"></a><span data-ttu-id="f4157-107">예제</span><span class="sxs-lookup"><span data-stu-id="f4157-107">Example</span></span>  
+ <span data-ttu-id="f4157-108">다음 예제 코드는 JPEG 인코더에 대 한 지원 되는 매개 변수를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="f4157-108">The following example code outputs the supported parameters for the JPEG encoder.</span></span> <span data-ttu-id="f4157-109">매개 변수 범주 및 연관 된 Guid의 목록을 사용 하 여는 <xref:System.Drawing.Imaging.Encoder> 클래스 개요 각 매개 변수에 대 한 범주를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4157-109">Use the list of parameter categories and associated GUIDs in the <xref:System.Drawing.Imaging.Encoder> class overview to determine the category for each parameter.</span></span>  
   
  [!code-csharp[UsingImageEncodersDecoders#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#3)]
  [!code-vb[UsingImageEncodersDecoders#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#3)]  
   
-## 코드 컴파일  
- 이 예제에는 다음 사항이 필요합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="f4157-110">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="f4157-110">Compiling the Code</span></span>  
+ <span data-ttu-id="f4157-111">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="f4157-111">This example requires:</span></span>  
   
--   Windows Forms 응용 프로그램입니다.  
+-   <span data-ttu-id="f4157-112">Windows Forms 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="f4157-112">A Windows Forms application.</span></span>  
   
--   <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs>입니다.  
+-   <span data-ttu-id="f4157-113">A <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.</span><span class="sxs-lookup"><span data-stu-id="f4157-113">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## 참고 항목  
- [방법: 설치된 인코더 나열](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)   
- [비트맵의 유형](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)   
- [관리 GDI\+에서 이미지 인코더 및 디코더 사용](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="f4157-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f4157-114">See Also</span></span>  
+ [<span data-ttu-id="f4157-115">방법: 설치된 인코더 나열</span><span class="sxs-lookup"><span data-stu-id="f4157-115">How to: List Installed Encoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [<span data-ttu-id="f4157-116">비트맵의 유형</span><span class="sxs-lookup"><span data-stu-id="f4157-116">Types of Bitmaps</span></span>](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
+ [<span data-ttu-id="f4157-117">관리되는 GDI+에서 이미지 인코더 및 디코더 사용</span><span class="sxs-lookup"><span data-stu-id="f4157-117">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

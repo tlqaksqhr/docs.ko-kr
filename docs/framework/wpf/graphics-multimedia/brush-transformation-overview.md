@@ -1,112 +1,117 @@
 ---
-title: "브러시 변환 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "브러시, 변환 속성"
-  - "속성, 변환"
-  - "브러시의 변환 속성"
+title: "브러시 변환 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [WPF], transformation properties
+- properties [WPF], transformation
+- transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b57c5ee36c9ed9c89fc8ca1bfb7ea265c2460c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 브러시 변환 개요
-브러시 클래스에서는 두 개의 변환 속성인 <xref:System.Windows.Media.Brush.Transform%2A> 및 <xref:System.Windows.Media.Brush.RelativeTransform%2A>을 제공합니다.  이 속성을 사용하여 브러시 내용에 대해 회전, 배율 조정, 기울이기 및 변환을 수행할 수 있습니다.  이 항목에서는 이러한 두 속성 간의 차이점에 대해 설명하고 사용 예를 제공합니다.  
+# <a name="brush-transformation-overview"></a><span data-ttu-id="e0277-102">브러시 변환 개요</span><span class="sxs-lookup"><span data-stu-id="e0277-102">Brush Transformation Overview</span></span>
+<span data-ttu-id="e0277-103">두 변환 속성을 제공 하는 브러시 클래스: <xref:System.Windows.Media.Brush.Transform%2A> 및 <xref:System.Windows.Media.Brush.RelativeTransform%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-103">The Brush class provides two transformation properties: <xref:System.Windows.Media.Brush.Transform%2A> and <xref:System.Windows.Media.Brush.RelativeTransform%2A>.</span></span> <span data-ttu-id="e0277-104">이러한 속성을 사용하여 브러시의 콘텐츠를 회전, 비율 크기 조정, 기울이기 및 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-104">The properties enable you to rotate, scale, skew, and translate a brush's contents.</span></span> <span data-ttu-id="e0277-105">이 항목에서는 이러한 두 속성 간의 차이점을 설명하고 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-105">This topic describes the differences between these two properties and provides examples of their usage.</span></span>  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## 사전 요구 사항  
- 이 항목을 이해하려면 변환하는 브러시의 기능을 잘 알고 있어야 합니다.  <xref:System.Windows.Media.LinearGradientBrush> 및 <xref:System.Windows.Media.RadialGradientBrush>에 대해서는 [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)를 참조하십시오.  <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush>에 대해서는 [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)를 참조하십시오.  [Transform 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)에 설명되어 있는 2D 변환에 대해서도 잘 알고 있어야 합니다.  
+## <a name="prerequisites"></a><span data-ttu-id="e0277-106">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="e0277-106">Prerequisites</span></span>  
+ <span data-ttu-id="e0277-107">이 항목을 이해하려면 변환하는 브러시의 기능을 이해해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-107">To understand this topic, you should understand the features of the brush that you are transforming.</span></span> <span data-ttu-id="e0277-108">에 대 한 <xref:System.Windows.Media.LinearGradientBrush> 및 <xref:System.Windows.Media.RadialGradientBrush>, 참조는 [단색 및 그라데이션 개요 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-108">For <xref:System.Windows.Media.LinearGradientBrush> and <xref:System.Windows.Media.RadialGradientBrush>, see the [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span></span> <span data-ttu-id="e0277-109">에 대 한 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush>, 참조 [이미지, 그리기, 및 시각적 개체를 사용 하 여 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-109">For <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, or <xref:System.Windows.Media.VisualBrush>, see  [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span> <span data-ttu-id="e0277-110">[변환 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)에 설명된 2D 변환에도 익숙해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-110">You should also be familiar with the 2D transforms described in the  [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).</span></span>  
   
 <a name="transformversusrelativetransform"></a>   
-## Transform 속성과 RelativeTransform 속성의 차이점  
- 브러시의 <xref:System.Windows.Media.Brush.Transform%2A> 속성에 변환을 적용할 때 중심 점을 기준으로 브러시 내용을 변환하려면 그려지는 영역의 크기를 알고 있어야 합니다.  그려지는 영역이 [장치 독립적 픽셀](GTMT) 단위로 너비 200, 높이 150이라고 가정하십시오.  <xref:System.Windows.Media.RotateTransform>을 사용하여 중심 점을 기준으로 브러시의 출력을 45도 회전한 경우에는 <xref:System.Windows.Media.RotateTransform>의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 값을 100으로, <xref:System.Windows.Media.RotateTransform.CenterY%2A> 값을 75로 지정한 것입니다.  
+## <a name="differences-between-the-transform-and-relativetransform-properties"></a><span data-ttu-id="e0277-111">Transform 및 RelativeTransform 속성 간 차이점</span><span class="sxs-lookup"><span data-stu-id="e0277-111">Differences between the Transform and RelativeTransform Properties</span></span>  
+ <span data-ttu-id="e0277-112">브러시의 변환을 적용 하는 경우 <xref:System.Windows.Media.Brush.Transform%2A> 중심을 관통 하는 방법에 대 한 브러시 내용을 변환 하려는 경우 그려지는 영역 크기를 파악 해야 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-112">When you apply a transform to a brush's <xref:System.Windows.Media.Brush.Transform%2A> property, you need to know the size of the painted area if you want to transform the brush contents about its center.</span></span> <span data-ttu-id="e0277-113">그려지는 영역의 장치 독립적 픽셀 크기를 너비 200, 높이 150으로 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-113">Suppose the painted area is 200 device independent pixels wide and 150 tall.</span></span>  <span data-ttu-id="e0277-114">사용 하는 경우는 <xref:System.Windows.Media.RotateTransform> 가운데를 중심으로 45도 출력 브러시를 회전 하려면, 지정는 <xref:System.Windows.Media.RotateTransform> 는 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 100 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 75입니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-114">If you used a <xref:System.Windows.Media.RotateTransform> to rotate the brush's output 45 degrees about its center, you'd give the <xref:System.Windows.Media.RotateTransform> a <xref:System.Windows.Media.RotateTransform.CenterX%2A> of 100 and a <xref:System.Windows.Media.RotateTransform.CenterY%2A> of 75.</span></span>  
   
- 브러시의 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성에 변환을 적용할 때 해당 변환은 그려지는 영역에 출력이 매핑되기 전에 브러시에 적용됩니다.  다음 목록에서는 브러시의 내용을 처리하고 변환하는 순서를 설명합니다.  
+ <span data-ttu-id="e0277-115">브러시의 변환을 적용 하는 경우 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성을 출력 그려지는 영역에 매핑된 전에 해당 변환이 브러시에 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-115">When you apply a transform to a brush's <xref:System.Windows.Media.Brush.RelativeTransform%2A> property, that transform is applied to the brush before its output is mapped to the painted area.</span></span> <span data-ttu-id="e0277-116">다음 목록에서는 브러시 콘텐츠가 처리되고 변환되는 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-116">The following list describes the order in which a brush’s contents are processed and transformed.</span></span>  
   
-1.  브러시의 내용을 처리합니다.  <xref:System.Windows.Media.GradientBrush>의 경우 그라데이션 영역을 결정하는 것을 의미합니다.  <xref:System.Windows.Media.TileBrush>의 경우 <xref:System.Windows.Media.TileBrush.Viewbox%2A>가 <xref:System.Windows.Media.TileBrush.Viewport%2A>에 매핑됩니다.  이것이 브러시의 출력이 됩니다.  
+1.  <span data-ttu-id="e0277-117">브러시의 콘텐츠를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-117">Process the brush’s contents.</span></span> <span data-ttu-id="e0277-118">에 대 한 한 <xref:System.Windows.Media.GradientBrush>, 즉, 그라데이션 영역을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-118">For a <xref:System.Windows.Media.GradientBrush>, this means determining the gradient area.</span></span> <span data-ttu-id="e0277-119">에 대 한는 <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> 매핑되는 <xref:System.Windows.Media.TileBrush.Viewport%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-119">For a <xref:System.Windows.Media.TileBrush>, the <xref:System.Windows.Media.TileBrush.Viewbox%2A> is mapped to the <xref:System.Windows.Media.TileBrush.Viewport%2A>.</span></span> <span data-ttu-id="e0277-120">이것이 브러시의 출력이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-120">This becomes the brush’s output.</span></span>  
   
-2.  브러시의 출력을 1 x 1 변환 직사각형에 반영합니다.  
+2.  <span data-ttu-id="e0277-121">브러시의 출력을 1 x 1 변환 사각형에 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-121">Project the brush’s output onto the 1 x 1 transformation rectangle.</span></span>  
   
-3.  브러시에 <xref:System.Windows.Media.Brush.RelativeTransform%2A>이 있으면 이를 적용합니다.  
+3.  <span data-ttu-id="e0277-122">브러시의 적용 <xref:System.Windows.Media.Brush.RelativeTransform%2A>, 있는 경우.</span><span class="sxs-lookup"><span data-stu-id="e0277-122">Apply the brush’s <xref:System.Windows.Media.Brush.RelativeTransform%2A>, if it has one.</span></span>  
   
-4.  변환된 출력을 그릴 영역에 반영합니다.  
+4.  <span data-ttu-id="e0277-123">변환된 출력을 그릴 영역에 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-123">Project the transformed output onto the area to paint.</span></span>  
   
-5.  브러시에 <xref:System.Windows.Media.Transform>이 있으면 이를 적용합니다.  
+5.  <span data-ttu-id="e0277-124">브러시의 적용 <xref:System.Windows.Media.Transform>, 있는 경우.</span><span class="sxs-lookup"><span data-stu-id="e0277-124">Apply the brush’s <xref:System.Windows.Media.Transform>, if it has one.</span></span>  
   
- <xref:System.Windows.Media.Brush.RelativeTransform%2A>은 브러시의 출력이 1 x 1 직사각형에 매핑되어 있는 동안 적용되기 때문에 변환 중앙 및 오프셋 값은 상대적인 것으로 나타납니다.  예를 들어 <xref:System.Windows.Media.RotateTransform>을 사용하여 중심 점을 기준으로 브러시의 출력을 45도 회전한 경우에는 <xref:System.Windows.Media.RotateTransform>의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 값을 0.5로, <xref:System.Windows.Media.RotateTransform.CenterY%2A> 값을 0.5로 지정한 것입니다.  
+ <span data-ttu-id="e0277-125">때문에 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 브러시의 출력이 변환 중심 1 x 1 사각형에 매핑되고 오프셋된 값이 상대 것으로 표시 하는 동안 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-125">Because the <xref:System.Windows.Media.Brush.RelativeTransform%2A> is applied while the brush’s output is mapped to a 1 x 1 rectangle, transform center and offset values appear to be relative.</span></span> <span data-ttu-id="e0277-126">예를 들어, 사용 하는 경우는 <xref:System.Windows.Media.RotateTransform> 가운데를 중심으로 45도 출력 브러시를 회전 하려면, 지정는 <xref:System.Windows.Media.RotateTransform> 는 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 0.5 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0.5입니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-126">For example, if you used a <xref:System.Windows.Media.RotateTransform> to rotate the brush's output 45 degrees about its center, you'd give the <xref:System.Windows.Media.RotateTransform> a <xref:System.Windows.Media.RotateTransform.CenterX%2A> of 0.5 and a <xref:System.Windows.Media.RotateTransform.CenterY%2A> of 0.5.</span></span>  
   
- 다음 그림은 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 및 <xref:System.Windows.Media.Brush.Transform%2A> 속성을 사용하여 45도 회전한 여러 브러시의 출력을 보여 줍니다.  
+ <span data-ttu-id="e0277-127">다음 그림으로 사용 하 여 45도 회전 된 여러 브러시의 출력이 나와 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 및 <xref:System.Windows.Media.Brush.Transform%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-127">The following illustration shows the output of several brushes that have been rotated by 45 degrees using the <xref:System.Windows.Media.Brush.RelativeTransform%2A> and <xref:System.Windows.Media.Brush.Transform%2A> properties.</span></span>  
   
- ![RelativeTransform 및 Transform 속성](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm\_brushrelativetransform\_transform\_small")  
+ <span data-ttu-id="e0277-128">![RelativeTransform 및 Transform 속성](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm_brushrelativetransform_transform_small")</span><span class="sxs-lookup"><span data-stu-id="e0277-128">![RelativeTransform and Transform properties](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm_brushrelativetransform_transform_small")</span></span>  
   
 <a name="relativetransformandtilebrush"></a>   
-## RelativeTransform과 TileBrush 함께 사용  
- 바둑판식 배열 브러시는 다른 브러시보다 더 복잡하기 때문에 <xref:System.Windows.Media.Brush.RelativeTransform%2A>을 적용하면 예상치 못한 결과가 발생할 수 있습니다.  예를 들어 다음 이미지를 보십시오.  
+## <a name="using-relativetransform-with-a-tilebrush"></a><span data-ttu-id="e0277-129">TileBrush에서 RelativeTransform 사용</span><span class="sxs-lookup"><span data-stu-id="e0277-129">Using RelativeTransform with a TileBrush</span></span>  
+ <span data-ttu-id="e0277-130">타일 브러시 다른 브러시 보다 더 복잡 한 이므로, 적용 한 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 하나에 예기치 않은 결과가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-130">Because tile brushes are more complex than other brushes, applying a <xref:System.Windows.Media.Brush.RelativeTransform%2A> to one might produce unexpected results.</span></span> <span data-ttu-id="e0277-131">예를 들어 다음 이미지를 살펴보세요.</span><span class="sxs-lookup"><span data-stu-id="e0277-131">For example, take the following image.</span></span>  
   
- ![소스 이미지](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-1-original-image.png "graphicsmm\_reltransform\_1\_original\_image")  
+ <span data-ttu-id="e0277-132">![소스 이미지](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")</span><span class="sxs-lookup"><span data-stu-id="e0277-132">![The source image](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")</span></span>  
   
- 다음 예제는 <xref:System.Windows.Media.ImageBrush>를 사용하여 이전 이미지를 포함하는 직사각형 영역을 그립니다.  또한 <xref:System.Windows.Media.RotateTransform>을 <xref:System.Windows.Media.ImageBrush> 개체의 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성에 적용하고 해당 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 <xref:System.Windows.Media.Stretch>로 설정합니다. 이렇게 하면 직사각형을 완전히 채우기 위해 이미지를 늘릴 때 이미지의 가로 세로 비율이 유지됩니다.  
+ <span data-ttu-id="e0277-133">다음 예제에서는 <xref:System.Windows.Media.ImageBrush> 이전 이미지와 사각형 영역을 그리는 데 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-133">The following example uses an <xref:System.Windows.Media.ImageBrush> to paint a rectangular area with the preceding image.</span></span> <span data-ttu-id="e0277-134">적용 되는 <xref:System.Windows.Media.RotateTransform> 에 <xref:System.Windows.Media.ImageBrush> 개체의 <xref:System.Windows.Media.Brush.RelativeTransform%2A> , 속성을 설정 해당 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 <xref:System.Windows.Media.Stretch.UniformToFill>, 완전히 사각형을 채우는 데 늘 이미지의 가로 세로 비율을 유지 해야 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-134">It applies a <xref:System.Windows.Media.RotateTransform> to the <xref:System.Windows.Media.ImageBrush> object's <xref:System.Windows.Media.Brush.RelativeTransform%2A> property, and sets its <xref:System.Windows.Media.TileBrush.Stretch%2A> property to <xref:System.Windows.Media.Stretch.UniformToFill>, which should preserve the image's aspect ratio when it is stretched to completely fill the rectangle.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMRelativeTransformExample2Inline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/RelativeTransformIllustration.xaml#graphicsmmrelativetransformexample2inline)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeTransformExample2Inline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/RelativeTransformIllustration.xaml#graphicsmmrelativetransformexample2inline)]  
   
- 이 예제의 결과는 다음과 같습니다.  
+ <span data-ttu-id="e0277-135">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-135">This example produces the following output:</span></span>  
   
- ![변환된 출력](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-6-output.png "graphicsmm\_reltransform\_6\_output")  
+ <span data-ttu-id="e0277-136">![변환된 출력](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-6-output.png "graphicsmm_reltransform_6_output")</span><span class="sxs-lookup"><span data-stu-id="e0277-136">![The transformed output](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-6-output.png "graphicsmm_reltransform_6_output")</span></span>  
   
- 브러시의 <xref:System.Windows.Media.TileBrush.Stretch%2A>가 <xref:System.Windows.Media.Stretch>로 설정되었음에도 불구하고 이미지가 왜곡됩니다.  이것은 브러시의 <xref:System.Windows.Media.TileBrush.Viewbox%2A>가 해당 <xref:System.Windows.Media.TileBrush.Viewport%2A>에 매핑된 후에 상대적 변환이 적용되기 때문입니다.  다음 목록에서는 프로세스의 각 단계에 대해 설명합니다.  
+ <span data-ttu-id="e0277-137">이미지가 왜곡, 경우에 확인 브러시의 <xref:System.Windows.Media.TileBrush.Stretch%2A> 로 설정 된 <xref:System.Windows.Media.Stretch.UniformToFill>합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-137">Notice that the image is distorted, even though the brush's <xref:System.Windows.Media.TileBrush.Stretch%2A> was set to <xref:System.Windows.Media.Stretch.UniformToFill>.</span></span> <span data-ttu-id="e0277-138">브러시의 후 상대적 변형 적용 되기 때문에 이것이 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 에 매핑된 해당 <xref:System.Windows.Media.TileBrush.Viewport%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-138">That's because the relative transform is applied after the brush's <xref:System.Windows.Media.TileBrush.Viewbox%2A> is mapped to its <xref:System.Windows.Media.TileBrush.Viewport%2A>.</span></span> <span data-ttu-id="e0277-139">다음 목록에서는 프로세스의 각 단계를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-139">The following list describes each step of the process:</span></span>  
   
-1.  브러시의 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정을 사용하여 브러시의 내용\(<xref:System.Windows.Media.TileBrush.Viewbox%2A>\)을 해당 기본 바둑판식 배열\(<xref:System.Windows.Media.TileBrush.Viewport%2A>\)에 반영합니다.  
+1.  <span data-ttu-id="e0277-140">브러시의 내용을 프로젝트 (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 기본 바둑판 (<xref:System.Windows.Media.TileBrush.Viewport%2A>) 브러시를 사용 하 여 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-140">Project the brush's contents (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) onto its base tile (<xref:System.Windows.Media.TileBrush.Viewport%2A>) using the brush's <xref:System.Windows.Media.TileBrush.Stretch%2A> setting.</span></span>  
   
-     ![Viewbox를 뷰포트에 맞게 늘이기](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm\_reltransform\_2\_viewbox\_to\_viewport")  
+     <span data-ttu-id="e0277-141">![Viewbox를 뷰포트에 맞게 늘이기](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")</span><span class="sxs-lookup"><span data-stu-id="e0277-141">![Stretch the Viewbox to fit the Viewport](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")</span></span>  
   
-2.  기본 바둑판식 배열을 1 x 1 변환 직사각형에 반영합니다.  
+2.  <span data-ttu-id="e0277-142">기본 타일을 1 x 1 변환 사각형에 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-142">Project the base tile onto the 1 x 1 transformation rectangle.</span></span>  
   
-     ![뷰포트를 변환 사각형에 매핑](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm\_reltransform\_3\_output\_to\_transform")  
+     <span data-ttu-id="e0277-143">![뷰포트를 변환 사각형에 매핑](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")</span><span class="sxs-lookup"><span data-stu-id="e0277-143">![Map the Viewport to the transformation rectangle](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")</span></span>  
   
-3.  <xref:System.Windows.Media.RotateTransform>을 적용합니다.  
+3.  <span data-ttu-id="e0277-144">적용 된 <xref:System.Windows.Media.RotateTransform>합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-144">Apply the <xref:System.Windows.Media.RotateTransform>.</span></span>  
   
-     ![상대 변환 적용](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm\_reltransform\_4\_transform\_rotate")  
+     <span data-ttu-id="e0277-145">![상대 변환 적용](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")</span><span class="sxs-lookup"><span data-stu-id="e0277-145">![Apply the relative transform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")</span></span>  
   
-4.  변환된 기본 바둑판식 배열을 그릴 영역에 반영합니다.  
+4.  <span data-ttu-id="e0277-146">변환된 기본 타일을 그릴 영역에 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-146">Project the transformed base tile onto the area to paint.</span></span>  
   
-     ![변환된 브러시를 출력 영역으로 프로젝션](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm\_reltransform\_5\_transform\_to\_output")  
+     <span data-ttu-id="e0277-147">![변환된 브러시를 출력 영역으로 프로젝션](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")</span><span class="sxs-lookup"><span data-stu-id="e0277-147">![Project the transformed brush onto the output area](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")</span></span>  
   
 <a name="rotateexample"></a>   
-## 예제: ImageBrush 45도 회전  
- 다음 예제에서는 <xref:System.Windows.Media.RotateTransform>을 <xref:System.Windows.Media.ImageBrush>의 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성에 적용합니다.  <xref:System.Windows.Media.RotateTransform> 개체의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 속성은 모두 이 내용 중심 점의 상대적 좌표인 0.5로 설정됩니다.  그 결과 브러시의 내용이 중심 점을 기준으로 회전합니다.  
+## <a name="example-rotate-an-imagebrush-45-degrees"></a><span data-ttu-id="e0277-148">예제: ImageBrush를 45도 회전</span><span class="sxs-lookup"><span data-stu-id="e0277-148">Example: Rotate an ImageBrush 45 Degrees</span></span>  
+ <span data-ttu-id="e0277-149">다음 예제에서는 적용 한 <xref:System.Windows.Media.RotateTransform> 에 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성의는 <xref:System.Windows.Media.ImageBrush>합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-149">The following example applies a <xref:System.Windows.Media.RotateTransform> to the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property of an <xref:System.Windows.Media.ImageBrush>.</span></span> <span data-ttu-id="e0277-150"><xref:System.Windows.Media.RotateTransform> 개체의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 속성이 모두 설정 0.5로 내용 중심의 상대 좌표를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-150">The <xref:System.Windows.Media.RotateTransform> object's <xref:System.Windows.Media.RotateTransform.CenterX%2A> and <xref:System.Windows.Media.RotateTransform.CenterY%2A> properties are both set to 0.5, the relative coordinates of the content's center point.</span></span> <span data-ttu-id="e0277-151">결과적으로 브러시 콘텐츠는 중심을 기준으로 회전합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-151">As a result, the brush's contents are rotated about its center.</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
- [!code-xml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
+ [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- 다음 예제에서도 <xref:System.Windows.Media.RotateTransform>을 <xref:System.Windows.Media.ImageBrush>에 적용하지만 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성 대신 <xref:System.Windows.Media.Brush.Transform%2A> 속성을 사용합니다.  브러시 중심을 기준으로 회전하려면 <xref:System.Windows.Media.RotateTransform> 개체의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 속성을 절대 좌표로 설정해야 합니다.  브러시는 175 x 90 픽셀의 사각형을 칠하기 때문에 사각형의 중심 점은 \(87.5, 45\)입니다.  
+ <span data-ttu-id="e0277-152">다음 예제에서는 적용 됩니다. 한 <xref:System.Windows.Media.RotateTransform> 에 <xref:System.Windows.Media.ImageBrush>, 하지만 사용 하 여는 <xref:System.Windows.Media.Brush.Transform%2A> 속성 대신는 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-152">The next example also applies a <xref:System.Windows.Media.RotateTransform> to an <xref:System.Windows.Media.ImageBrush>, but uses the <xref:System.Windows.Media.Brush.Transform%2A> property instead of the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property.</span></span> <span data-ttu-id="e0277-153">회전의 중심을 브러시는 <xref:System.Windows.Media.RotateTransform> 개체의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 절대 좌표를 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-153">To rotate the brush about its center, the <xref:System.Windows.Media.RotateTransform> object's <xref:System.Windows.Media.RotateTransform.CenterX%2A> and <xref:System.Windows.Media.RotateTransform.CenterY%2A> must be set to absolute coordinates.</span></span> <span data-ttu-id="e0277-154">브러시에 의해 그려지는 사각형은 175 x 90 픽셀이기 때문에 중심점은 (87.5, 45)입니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-154">Because the rectangle being painted by the brush is 175 by 90 pixels, its center point is (87.5, 45).</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
- [!code-xml[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
+ [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- 다음 그림은 변환 없는 브러시를 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성에 적용된 변환 및 <xref:System.Windows.Media.Brush.Transform%2A> 속성에 적용된 변환과 함께 보여 줍니다.  
+ <span data-ttu-id="e0277-155">다음 그림과 브러시에 적용 된 변환으로 변환 하지 않고는 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성에 적용 된 변환 하 고는 <xref:System.Windows.Media.Brush.Transform%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-155">The following illustration shows the brush without a transform, with the transform applied to the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property, and with the transform applied to the <xref:System.Windows.Media.Brush.Transform%2A> property.</span></span>  
   
- ![Brush RelativeTransform 및 Transform 설정](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk\_graphicsmm\_transformandrelativetransform")  
+ <span data-ttu-id="e0277-156">![Brush RelativeTransform 및 Transform 설정](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")</span><span class="sxs-lookup"><span data-stu-id="e0277-156">![Brush RelativeTransform and Transform settings](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")</span></span>  
   
- 이 예제는 보다 큰 예제의 일부입니다.  전체 샘플을 보려면 [Brushes 샘플](http://go.microsoft.com/fwlink/?LinkID=159973)을 참조하십시오.  브러시에 대한 자세한 내용은 [WPF 브러시 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)를 참조하십시오.  
+ <span data-ttu-id="e0277-157">이 예제는 더 큰 샘플의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="e0277-157">This example is part of a larger sample.</span></span> <span data-ttu-id="e0277-158">전체 샘플을 보려면 [브러시 샘플](http://go.microsoft.com/fwlink/?LinkID=159973)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e0277-158">For the complete sample, see the [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973).</span></span> <span data-ttu-id="e0277-159">브러시에 대한 자세한 내용은 [WPF 브러시 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e0277-159">For more information about brushes, see the  [WPF Brushes Overview](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Media.Brush.Transform%2A>   
- <xref:System.Windows.Media.Brush.RelativeTransform%2A>   
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.Brush>   
- [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
- [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [Transform 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e0277-160">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e0277-160">See Also</span></span>  
+ <xref:System.Windows.Media.Brush.Transform%2A>  
+ <xref:System.Windows.Media.Brush.RelativeTransform%2A>  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.Brush>  
+ [<span data-ttu-id="e0277-161">단색 및 그라데이션을 사용한 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="e0277-161">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="e0277-162">이미지, 그림 및 시각적 표시로 그리기</span><span class="sxs-lookup"><span data-stu-id="e0277-162">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="e0277-163">Transform 개요</span><span class="sxs-lookup"><span data-stu-id="e0277-163">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

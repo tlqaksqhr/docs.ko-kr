@@ -1,168 +1,166 @@
 ---
-title: "Comparison Operators (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.<>"
-  - "vb.>="
-  - "vb.<="
-  - "vb.>"
-  - "vb.<"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "greater than or equal to operator [Visual Basic]"
-  - ">= operator [Visual Basic]"
-  - "= operator [Visual Basic]"
-  - "< operator [Visual Basic]"
-  - "less than operator [Visual Basic]"
-  - "relational operators, syntax"
-  - "Like operator [Visual Basic]"
-  - "<> operator [Visual Basic]"
-  - "> operator [Visual Basic]"
-  - "equal operator [Visual Basic]"
-  - "less than or equal to operator [Visual Basic]"
-  - "symbols, operators"
-  - "greater than operator [Visual Basic]"
-  - "comparing values [Visual Basic]"
-  - "operators [Visual Basic], relational"
-  - "string comparison [Visual Basic]"
-  - "not equal to comparison operator [Visual Basic]"
-  - "<= operator [Visual Basic]"
-  - "operators [Visual Basic], comparison"
-  - "Is operator [Visual Basic]"
-  - "comparison operators, Visual Basicl"
+title: "비교 연산자(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.<>
+- vb.>=
+- vb.<=
+- vb.>
+- vb.<
+helpviewer_keywords:
+- greater than or equal to operator [Visual Basic]
+- '>= operator [Visual Basic]'
+- = operator [Visual Basic]
+- < operator [Visual Basic]
+- less than operator [Visual Basic]
+- relational operators [Visual Basic], syntax
+- Like operator [Visual Basic]
+- <> operator [Visual Basic]
+- '> operator [Visual Basic]'
+- equal operator [Visual Basic]
+- less than or equal to operator [Visual Basic]
+- symbols, operators
+- greater than operator [Visual Basic]
+- comparing values [Visual Basic]
+- operators [Visual Basic], relational
+- string comparison [Visual Basic]
+- not equal to comparison operator [Visual Basic]
+- <= operator [Visual Basic]
+- operators [Visual Basic], comparison
+- Is operator [Visual Basic]
+- comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Comparison Operators (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-다음은 Visual Basic에 정의된 비교 연산자입니다.  
+# <a name="comparison-operators-visual-basic"></a><span data-ttu-id="21803-102">비교 연산자(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21803-102">Comparison Operators (Visual Basic)</span></span>
+<span data-ttu-id="21803-103">Visual Basic에서 정의 하는 비교 연산자는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="21803-103">The following are the comparison operators defined in Visual Basic.</span></span>  
   
- `<` 연산자  
+ <span data-ttu-id="21803-104">`<`연산자</span><span class="sxs-lookup"><span data-stu-id="21803-104">`<` operator</span></span>  
   
- `<=` 연산자  
+ <span data-ttu-id="21803-105">`<=`연산자</span><span class="sxs-lookup"><span data-stu-id="21803-105">`<=` operator</span></span>  
   
- `>` 연산자  
+ <span data-ttu-id="21803-106">`>`연산자</span><span class="sxs-lookup"><span data-stu-id="21803-106">`>` operator</span></span>  
   
- `>=` 연산자  
+ <span data-ttu-id="21803-107">`>=`연산자</span><span class="sxs-lookup"><span data-stu-id="21803-107">`>=` operator</span></span>  
   
- `=` 연산자  
+ <span data-ttu-id="21803-108">`=`연산자</span><span class="sxs-lookup"><span data-stu-id="21803-108">`=` operator</span></span>  
   
- `<>` 연산자  
+ <span data-ttu-id="21803-109">`<>`연산자</span><span class="sxs-lookup"><span data-stu-id="21803-109">`<>` operator</span></span>  
   
- [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [<span data-ttu-id="21803-110">Is 연산자</span><span class="sxs-lookup"><span data-stu-id="21803-110">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)  
   
- [IsNot Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [<span data-ttu-id="21803-111">IsNot 연산자</span><span class="sxs-lookup"><span data-stu-id="21803-111">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)  
   
- [Like Operator](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [<span data-ttu-id="21803-112">Like 연산자</span><span class="sxs-lookup"><span data-stu-id="21803-112">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)  
   
- 이러한 연산자는 두 개의 식을 비교하여 서로 같은지 확인하고 같지 않을 경우 차이가 얼마나 나는지 확인합니다.  `Is`, `IsNot` 및 `Like`에 대해서는 별도의 도움말 페이지에서 자세하게 설명합니다.  이 페이지에서는 관계 비교 연산자에 대해 자세하게 설명합니다.  
+ <span data-ttu-id="21803-113">이러한 연산자는 두 식이 같은지 하 고 그렇지 않은 경우 이러한 어떻게 다른 지 여부를 확인 하려면 비교 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-113">These operators compare two expressions to determine whether or not they are equal, and if not, how they differ.</span></span> <span data-ttu-id="21803-114">`Is``IsNot`, 및 `Like` 별도 도움말 페이지에 자세하게에서 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-114">`Is`, `IsNot`, and `Like` are discussed in detail on separate Help pages.</span></span> <span data-ttu-id="21803-115">관계 비교 연산자는이 페이지에 자세히 설명 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21803-115">The relational comparison operators are discussed in detail on this page.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="21803-116">구문</span><span class="sxs-lookup"><span data-stu-id="21803-116">Syntax</span></span>  
   
 ```  
-  
       result = expression1 comparisonoperator expression2  
 result = object1 [Is | IsNot] object2  
 result = string Like pattern  
 ```  
   
-## 요소  
+## <a name="parts"></a><span data-ttu-id="21803-117">요소</span><span class="sxs-lookup"><span data-stu-id="21803-117">Parts</span></span>  
  `result`  
- 필수 요소.  비교 결과를 나타내는 `Boolean` 값입니다.  
+ <span data-ttu-id="21803-118">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="21803-118">Required.</span></span> <span data-ttu-id="21803-119">A `Boolean` 비교 결과 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="21803-119">A `Boolean` value representing the result of the comparison.</span></span>  
   
  `expression`  
- 필수 요소.  임의의 식입니다.  
+ <span data-ttu-id="21803-120">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="21803-120">Required.</span></span> <span data-ttu-id="21803-121">임의의 식입니다.</span><span class="sxs-lookup"><span data-stu-id="21803-121">Any expression.</span></span>  
   
  `comparisonoperator`  
- 필수 요소.  임의의 관계 비교 연산자입니다.  
+ <span data-ttu-id="21803-122">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="21803-122">Required.</span></span> <span data-ttu-id="21803-123">모든 관계형 비교 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="21803-123">Any relational comparison operator.</span></span>  
   
- `object1`, `object2`  
- 필수 요소.  임의의 참조 개체 이름입니다.  
+ <span data-ttu-id="21803-124">`object1`, `object2`</span><span class="sxs-lookup"><span data-stu-id="21803-124">`object1`, `object2`</span></span>  
+ <span data-ttu-id="21803-125">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="21803-125">Required.</span></span> <span data-ttu-id="21803-126">모든 개체 이름을 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-126">Any reference object names.</span></span>  
   
  `string`  
- 필수 요소.  `String` 식입니다.  
+ <span data-ttu-id="21803-127">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="21803-127">Required.</span></span> <span data-ttu-id="21803-128">임의의 `String` 식입니다.</span><span class="sxs-lookup"><span data-stu-id="21803-128">Any `String` expression.</span></span>  
   
  `pattern`  
- 필수 요소.  임의의 `String` 식 또는 문자의 범위입니다.  
+ <span data-ttu-id="21803-129">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="21803-129">Required.</span></span> <span data-ttu-id="21803-130">모든 `String` 식 또는 문자 범위입니다.</span><span class="sxs-lookup"><span data-stu-id="21803-130">Any `String` expression or range of characters.</span></span>  
   
-## 설명  
- 다음 표에서는 `result`가 `True` 또는 `False`인지를 결정하는 관계 비교 연산자 및 조건을 보여 줍니다.  
+## <a name="remarks"></a><span data-ttu-id="21803-131">설명</span><span class="sxs-lookup"><span data-stu-id="21803-131">Remarks</span></span>  
+ <span data-ttu-id="21803-132">다음 표에서 관계형 비교 연산자와 결정 하는 조건 목록을 여부 `result` 은 `True` 또는 `False`합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-132">The following table contains a list of the relational comparison operators and the conditions that determine whether `result` is `True` or `False`.</span></span>  
   
-|Operator|결과가 `True`인 조건|결과가 `False`인 조건|  
-|--------------|--------------------|---------------------|  
-|`<`\(보다 작음\)|`expression1` \< `expression2`|`expression1` \>\= `expression2`|  
-|`<=`\(작거나 같음\)|`expression1` \<\= `expression2`|`expression1` \> `expression2`인 경우|  
-|`>`\(보다 큼\)|`expression1` \> `expression2`인 경우|`expression1` \<\= `expression2`|  
-|`>=`\(크거나 같음\)|`expression1` \>\= `expression2`|`expression1` \< `expression2`|  
-|`=`\(같음\)|`expression1` \= `expression2`|`expression1` \<\> `expression2`|  
-|`<>`\(같지 않음\)|`expression1` \<\> `expression2`|`expression1` \= `expression2`|  
+|<span data-ttu-id="21803-133">연산자</span><span class="sxs-lookup"><span data-stu-id="21803-133">Operator</span></span>|<span data-ttu-id="21803-134">`True`if</span><span class="sxs-lookup"><span data-stu-id="21803-134">`True` if</span></span>|<span data-ttu-id="21803-135">`False`if</span><span class="sxs-lookup"><span data-stu-id="21803-135">`False` if</span></span>|  
+|--------------|---------------|----------------|  
+|<span data-ttu-id="21803-136">`<`(보다 작음)</span><span class="sxs-lookup"><span data-stu-id="21803-136">`<` (Less than)</span></span>|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|<span data-ttu-id="21803-137">`<=`(작거나 같음)</span><span class="sxs-lookup"><span data-stu-id="21803-137">`<=` (Less than or equal to)</span></span>|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|<span data-ttu-id="21803-138">`>`(보다 큼)</span><span class="sxs-lookup"><span data-stu-id="21803-138">`>` (Greater than)</span></span>|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|<span data-ttu-id="21803-139">`>=`(보다 크거나 같음)</span><span class="sxs-lookup"><span data-stu-id="21803-139">`>=` (Greater than or equal to)</span></span>|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|<span data-ttu-id="21803-140">`=`(같음)</span><span class="sxs-lookup"><span data-stu-id="21803-140">`=` (Equal to)</span></span>|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|<span data-ttu-id="21803-141">`<>`(같지 않음)</span><span class="sxs-lookup"><span data-stu-id="21803-141">`<>` (Not equal to)</span></span>|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
->  [\= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)는 할당 연산자로도 사용할 수 있습니다.  
+>  <span data-ttu-id="21803-142">[연산자 =](../../../visual-basic/language-reference/operators/assignment-operator.md) 할당 연산자로도 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21803-142">The [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) is also used as an assignment operator.</span></span>  
   
- `Is`, `IsNot` 및 `Like` 연산자에는 위의 표에 있는 연산자와는 다른 특별한 비교 기능이 있습니다.  
+ <span data-ttu-id="21803-143">`Is` 연산자는 `IsNot` 연산자 및 `Like` 연산자 앞의 표에 연산자와 다른 특정 비교 기능을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-143">The `Is` operator, the `IsNot` operator, and the `Like` operator have specific comparison functionalities that differ from the operators in the preceding table.</span></span>  
   
-## 숫자 비교  
- `Single` 형식의 식이 `Double` 형식의 식과 비교되면 `Single` 식이 `Double`로 변환됩니다.  이 동작은 Visual Basic 6에서 수행되는 동작과 반대입니다.  
+## <a name="comparing-numbers"></a><span data-ttu-id="21803-144">숫자를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-144">Comparing Numbers</span></span>  
+ <span data-ttu-id="21803-145">형식의 식은 비교할 때 `Single` 형식 중 하나로 `Double`, `Single` 식이 변환 되 `Double`합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-145">When you compare an expression of type `Single` to one of type `Double`, the `Single` expression is converted to `Double`.</span></span> <span data-ttu-id="21803-146">이 동작은 Visual Basic 6 동작 반대입니다.</span><span class="sxs-lookup"><span data-stu-id="21803-146">This behavior is opposite to the behavior found in Visual Basic 6.</span></span>  
   
- 마찬가지로 `Decimal` 형식의 식이 `Single` 또는 `Double` 형식의 식과 비교되면 `Decimal` 식이 `Single` 또는 `Double`로 변환됩니다.  `Decimal` 식의 경우 1E\-28보다 작은 소수 값은 손실됩니다.  소수 값이 손실되면 두 값이 서로 다르더라도 같은 값으로 비교될 수 있습니다.  따라서 두 개의 부동 소수점 변수를 비교하는 경우 주의하여 상등 연산자\(`=`\)를 사용해야 합니다.  두 숫자의 차에 대한 절대 값이 허용 오차보다 작은지 테스트하는 것이 더 안전합니다.  
+ <span data-ttu-id="21803-147">마찬가지로, 형식의 식은 비교할 때 `Decimal` 형식의 식에 `Single` 또는 `Double`, `Decimal` 식이 변환 되 `Single` 또는 `Double`합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-147">Similarly, when you compare an expression of type `Decimal` to an expression of type `Single` or `Double`, the `Decimal` expression is converted to `Single` or `Double`.</span></span> <span data-ttu-id="21803-148">에 대 한 `Decimal` 식 소수 값 보다 작은 1E 28 손실 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21803-148">For `Decimal` expressions, any fractional value less than 1E-28 might be lost.</span></span> <span data-ttu-id="21803-149">이러한 소수 자릿수 값 손실 되지 않은 것으로 비교 하려면 두 값을 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21803-149">Such fractional value loss may cause two values to compare as equal when they are not.</span></span> <span data-ttu-id="21803-150">이러한 이유로 주의 해야 같음을 사용 하는 경우 (`=`) 부동 소수점 변수 두 개를 비교 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-150">For this reason, you should take care when using equality (`=`) to compare two floating-point variables.</span></span> <span data-ttu-id="21803-151">더 안전의 차이 두 숫자의 절대값 허용 오차 보다 작은지 여부를 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-151">It is safer to test whether the absolute value of the difference between the two numbers is less than a small acceptable tolerance.</span></span>  
   
-### 부동 소수점 부정확성  
- 부동 소수점 숫자로 작업할 때에는 메모리에 정밀한 표현이 항상 제공되지는 않는다는 것을 염두에 두고 있어야 합니다.  따라서 값 비교, [Mod 연산자](../../../visual-basic/language-reference/operators/mod-operator.md)와 같은 특정 연산에서 예기치 않은 결과가 나타날 수 있습니다.  자세한 내용은 [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)를 참조하십시오.  
+### <a name="floating-point-imprecision"></a><span data-ttu-id="21803-152">부동 소수점 연산이</span><span class="sxs-lookup"><span data-stu-id="21803-152">Floating-point Imprecision</span></span>  
+ <span data-ttu-id="21803-153">부동 소수점 숫자를 작업할 때는 항상 없는 정확한 표시 메모리에 염두에 둬야 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-153">When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory.</span></span> <span data-ttu-id="21803-154">값 비교 같은 특정 작업에서 예기치 않은 결과가 발생할 수 및 [Mod 연산자](../../../visual-basic/language-reference/operators/mod-operator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-154">This could lead to unexpected results from certain operations, such as value comparison and the [Mod Operator](../../../visual-basic/language-reference/operators/mod-operator.md).</span></span> <span data-ttu-id="21803-155">자세한 내용은 참조 [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-155">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
   
-## 문자열 비교  
- 문자열을 비교하는 경우 문자열 식은 사전순으로 계산되며 이 순서는 `Option Compare` 설정에 따라 달라집니다.  
+## <a name="comparing-strings"></a><span data-ttu-id="21803-156">문자열 비교</span><span class="sxs-lookup"><span data-stu-id="21803-156">Comparing Strings</span></span>  
+ <span data-ttu-id="21803-157">문자열을 비교할 때 문자열 식이에 따라 달라 지는 사전순 정렬 순서에 따라 평가 되는 `Option Compare` 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-157">When you compare strings, the string expressions are evaluated based on their alphabetical sort order, which depends on the `Option Compare` setting.</span></span>  
   
- `Option Compare Binary`는 문자의 내부 이진 표현에서 파생된 정렬 순서에 따라 문자열을 비교합니다.  정렬 순서는 코드 페이지에 의해 결정됩니다.  다음 예제에서는 일반적인 이진 정렬 순서를 보여 줍니다.  
+ <span data-ttu-id="21803-158">`Option Compare Binary`문자열을 비교 문자의 내부 이진 표현에서 파생 된 정렬 순서입니다.</span><span class="sxs-lookup"><span data-stu-id="21803-158">`Option Compare Binary` bases string comparisons on a sort order derived from the internal binary representations of the characters.</span></span> <span data-ttu-id="21803-159">정렬 순서는 코드 페이지에 의해 결정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21803-159">The sort order is determined by the code page.</span></span> <span data-ttu-id="21803-160">다음 예제에서는 일반적인 이진 정렬 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="21803-160">The following example shows a typical binary sort order.</span></span>  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`는 응용 프로그램의 로캘에서 결정된 대\/소문자를 구분하지 않는 텍스트 정렬 순서에 따라 문자열을 비교합니다.  위의 예제에서 `Option Compare Text`를 설정하고 문자를 정렬하면 다음 텍스트 정렬 순서가 적용됩니다.  
+ <span data-ttu-id="21803-161">`Option Compare Text`응용 프로그램의 로캘에 따라 결정 되는 대/소문자 구분 텍스트 정렬 순서에 대 한 비교 문자열 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-161">`Option Compare Text` bases string comparisons on a case-insensitive, textual sort order determined by your application's locale.</span></span> <span data-ttu-id="21803-162">설정 하는 경우 `Option Compare Text` 앞의 예에서 문자를 정렬 하 고, 다음 텍스트 정렬 순서가 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21803-162">When you set `Option Compare Text` and sort the characters in the preceding example, the following text sort order applies:</span></span>  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
-### 로캘 종속성  
- `Option Compare Text`를 설정하면 문자열 비교 결과는 응용 프로그램이 실행되고 있는 로캘에 따라 달라집니다.  한 로캘에서는 두 문자가 동일한 것으로 비교되지만 다른 로캘에서는 그렇지 않습니다.  문자열 비교를 사용하여 중요한 결정\(예: 로그온 시도를 허용할지 여부\)을 내리는 경우 로캘 구분에 주의해야 합니다.  `Option Compare Binary`를 설정하거나 <xref:Microsoft.VisualBasic.Strings.StrComp%2A>를 호출하여 로캘을 살펴볼 수 있습니다.  
+### <a name="locale-dependence"></a><span data-ttu-id="21803-163">로캘 종속성</span><span class="sxs-lookup"><span data-stu-id="21803-163">Locale Dependence</span></span>  
+ <span data-ttu-id="21803-164">설정 하는 경우 `Option Compare Text`, 문자열 비교 작업의 결과 응용 프로그램이 실행 되 고 있는 로캘에 따라 달라질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21803-164">When you set `Option Compare Text`, the result of a string comparison can depend on the locale in which the application is running.</span></span> <span data-ttu-id="21803-165">두 개의 문자 1 개 로캘만에 동일한 것으로 비교 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21803-165">Two characters might compare as equal in one locale but not in another.</span></span> <span data-ttu-id="21803-166">로그온 시도를 허용할지 여부와 같은 중요 한 결정을 내릴 수 문자열 비교를 사용 하는 경우에 로캘 구분에 주의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-166">If you are using a string comparison to make important decisions, such as whether to accept an attempt to log on, you should be alert to locale sensitivity.</span></span> <span data-ttu-id="21803-167">설정 하거나 `Option Compare Binary` 호출 또는 <xref:Microsoft.VisualBasic.Strings.StrComp%2A>, 하는 로캘의 고려 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-167">Consider either setting `Option Compare Binary` or calling the <xref:Microsoft.VisualBasic.Strings.StrComp%2A>, which takes the locale into account.</span></span>  
   
-## 관계 비교 연산자는 있지만 관대한 형식의 프로그래밍  
- `Option Strict On`인 경우 `Object` 식에 관계 비교 연산자를 사용할 수 없습니다.  `Option Strict`가 `Off`이고 `expression1` 또는 `expression2`가 `Object` 식이면 런타임 형식에 따라 비교 방법이 결정됩니다.  다음 표에서는 피연산자의 런타임 형식에 따라 식이 비교되는 방식과 비교 결과를 보여 줍니다.  
+## <a name="typeless-programming-with-relational-comparison-operators"></a><span data-ttu-id="21803-168">관대 한 형식의 프로그래밍 관계 비교 연산자</span><span class="sxs-lookup"><span data-stu-id="21803-168">Typeless Programming with Relational Comparison Operators</span></span>  
+ <span data-ttu-id="21803-169">관계 비교 연산자를 사용 하 여 `Object` 식에서 허용 되지 않습니다 `Option Strict On`합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-169">The use of relational comparison operators with `Object` expressions is not allowed under `Option Strict On`.</span></span> <span data-ttu-id="21803-170">때 `Option Strict` 은 `Off`, 고 `expression1` 또는 `expression2` 는 `Object` 식, 런타임 형식의 비교 방법을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-170">When `Option Strict` is `Off`, and either `expression1` or `expression2` is an `Object` expression, the run-time types determine how they are compared.</span></span> <span data-ttu-id="21803-171">다음 표에서 식의 비교 방법 및 적용 한 결과 피연산자의 런타임 형식에 따라 비교를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="21803-171">The following table shows how the expressions are compared and the result from the comparison, depending on the runtime type of the operands.</span></span>  
   
-|피연산자|비교 방법|  
-|----------|-----------|  
-|둘 다 `String`인 경우|문자열 정렬 특성에 따라 비교를 정렬합니다.|  
-|둘 다 숫자인 경우|개체가 `Double`로 변환되고 숫자가 비교됩니다.|  
-|하나는 숫자이고 다른 하나는 `String`인 경우|`String`이 `Double`로 변환되고 숫자가 비교됩니다.  `String`을 `Double`로 변환할 수 없으면 <xref:System.InvalidCastException>이 throw됩니다.|  
-|하나 또는 둘 모두가 `String`이 아닌 다른 참조 형식인 경우|<xref:System.InvalidCastException>이 throw됩니다.|  
+|<span data-ttu-id="21803-172">피연산자가</span><span class="sxs-lookup"><span data-stu-id="21803-172">If operands are</span></span>|<span data-ttu-id="21803-173">비교는</span><span class="sxs-lookup"><span data-stu-id="21803-173">Comparison is</span></span>|  
+|---------------------|-------------------|  
+|<span data-ttu-id="21803-174">둘 다`String`</span><span class="sxs-lookup"><span data-stu-id="21803-174">Both `String`</span></span>|<span data-ttu-id="21803-175">문자열 정렬 특성에 따라 비교를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-175">Sort comparison based on string sorting characteristics.</span></span>|  
+|<span data-ttu-id="21803-176">두 숫자</span><span class="sxs-lookup"><span data-stu-id="21803-176">Both numeric</span></span>|<span data-ttu-id="21803-177">개체 변환 `Double`, 숫자 비교 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-177">Objects converted to `Double`, numeric comparison.</span></span>|  
+|<span data-ttu-id="21803-178">한 숫자가 고 하나`String`</span><span class="sxs-lookup"><span data-stu-id="21803-178">One numeric and one `String`</span></span>|<span data-ttu-id="21803-179">`String` 변환 되는 `Double` 숫자 비교가 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21803-179">The `String` is converted to a `Double` and numeric comparison is performed.</span></span> <span data-ttu-id="21803-180">경우는 `String` 변환할 수 없습니다 `Double`, <xref:System.InvalidCastException> throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21803-180">If the `String` cannot be converted to `Double`, an <xref:System.InvalidCastException> is thrown.</span></span>|  
+|<span data-ttu-id="21803-181">하나 또는 둘 다가 아닌 다른 참조 형식`String`</span><span class="sxs-lookup"><span data-stu-id="21803-181">Either or both are reference types other than `String`</span></span>|<span data-ttu-id="21803-182"><xref:System.InvalidCastException>이 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="21803-182">An <xref:System.InvalidCastException> is thrown.</span></span>|  
   
- 숫자 비교는 `Nothing`을 0으로 간주합니다.  문자열 비교는 `Nothing`을 `""`\(빈 문자열\)로 취급합니다.  
+ <span data-ttu-id="21803-183">숫자 비교 처리 `Nothing` 0으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-183">Numeric comparisons treat `Nothing` as 0.</span></span> <span data-ttu-id="21803-184">문자열 비교 처리 `Nothing` 으로 `""` (빈 문자열)입니다.</span><span class="sxs-lookup"><span data-stu-id="21803-184">String comparisons treat `Nothing` as `""` (an empty string).</span></span>  
   
-## 오버로딩  
- 관계형 비교 연산자\(`<`,  `<=`, `>`, `>=`, `=`, `<>`\)는 *오버로드*할 수 있습니다. 즉, 피연산자의 형식이 특정 클래스 또는 구조체의 형식인 경우 해당 클래스나 구조체에서 해당 동작을 다시 정의할 수 있습니다.  코드에서 이러한 클래스나 구조체에 대해 이 연산자를 사용할 때는 다시 정의된 동작을 알고 있어야 합니다.  자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)를 참조하십시오.  
+## <a name="overloading"></a><span data-ttu-id="21803-185">오버로딩</span><span class="sxs-lookup"><span data-stu-id="21803-185">Overloading</span></span>  
+ <span data-ttu-id="21803-186">관계 비교 연산자 (`<`합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-186">The relational comparison operators (`<`.</span></span> <span data-ttu-id="21803-187">`<=``>`, `>=`, `=`, `<>`) 될 수 있습니다 *오버 로드 된*, 클래스 또는 구조체 수 할의 동작에 해당 클래스 또는 구조체의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="21803-187">`<=`, `>`, `>=`, `=`, `<>`) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="21803-188">코드를 사용 하는 이러한 클래스 또는 구조체에서 이러한 연산자를 다시 정의 된 동작을 이해 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-188">If your code uses any of these operators on such a class or structure, be sure you understand the redefined behavior.</span></span> <span data-ttu-id="21803-189">자세한 내용은 참조 [연산자 프로시저](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-189">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
- [\= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)는 할당 연산자가 아니라 관계 비교 연산자로만 오버로드할 수 있다는 점에 주의합니다.  
+ <span data-ttu-id="21803-190">에 [연산자 =](../../../visual-basic/language-reference/operators/assignment-operator.md) 할당 연산자가 아닌 비교 관계형 연산자로 오버 로드 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21803-190">Notice that the [= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) can be overloaded only as a relational comparison operator, not as an assignment operator.</span></span>  
   
-## 예제  
- 다음 예제에서는 관계 비교 연산자를 사용하여 식을 비교하는 여러 가지 방법을 보여 줍니다.  관계 비교 연산자는 식이 `True`인지 여부를 나타내는 `Boolean` 결과를 반환합니다.  `>` 및 `<` 연산자를 문자열에 적용하면 해당 문자열이 표준 사전순으로 비교됩니다.  이 순서는 로캘 설정에 따라 달라질 수 있습니다.  정렬 순서의 대\/소문자 구분 여부는[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)설정에 따라 결정됩니다.  
+## <a name="example"></a><span data-ttu-id="21803-191">예제</span><span class="sxs-lookup"><span data-stu-id="21803-191">Example</span></span>  
+ <span data-ttu-id="21803-192">다음 예제에서는 식을 비교 하는 데 사용할 수 있는 관계 비교 연산자의 다양 한 용도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="21803-192">The following example shows various uses of relational comparison operators, which you use to compare expressions.</span></span> <span data-ttu-id="21803-193">관계 비교 연산자는 반환 된 `Boolean` 명시 식이 있는지 여부를 나타내는 결과입니다 `True`합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-193">Relational comparison operators return a `Boolean` result that represents whether or not the stated expression evaluates to `True`.</span></span> <span data-ttu-id="21803-194">적용 하는 경우는 `>` 및 `<` 연산자를 문자열 면 비교가 수행 되는 문자열의 일반 사전순 정렬 순서를 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-194">When you apply the `>` and `<` operators to strings, the comparison is made using the normal alphabetical sorting order of the strings.</span></span> <span data-ttu-id="21803-195">이 순서는 로캘 설정에 종속 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21803-195">This order can be dependent on your locale setting.</span></span> <span data-ttu-id="21803-196">정렬은 대/소문자 구분 여부에 따라 결정 된 [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-196">Whether the sort is case-sensitive or not depends on the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) setting.</span></span>  
   
  [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
- 위 예제에서 첫 번째 비교는 `False`를 반환하고 나머지 비교는 `True`를 반환합니다.  
+ <span data-ttu-id="21803-197">앞의 예제에서 첫 번째 비교 반환 `False` 나머지 비교 다음 다시 돌아와 `True`합니다.</span><span class="sxs-lookup"><span data-stu-id="21803-197">In the preceding example, the first comparison returns `False` and the remaining comparisons return `True`.</span></span>  
   
-## 참고 항목  
- <xref:System.InvalidCastException>   
- [\= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+## <a name="see-also"></a><span data-ttu-id="21803-198">참고 항목</span><span class="sxs-lookup"><span data-stu-id="21803-198">See Also</span></span>  
+ <xref:System.InvalidCastException>  
+ [<span data-ttu-id="21803-199">= 연산자</span><span class="sxs-lookup"><span data-stu-id="21803-199">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [<span data-ttu-id="21803-200">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="21803-200">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="21803-201">기능별 연산자 목록</span><span class="sxs-lookup"><span data-stu-id="21803-201">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="21803-202">데이터 형식 문제 해결</span><span class="sxs-lookup"><span data-stu-id="21803-202">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="21803-203">Visual Basic의 비교 연산자</span><span class="sxs-lookup"><span data-stu-id="21803-203">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

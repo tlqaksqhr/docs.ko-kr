@@ -1,60 +1,59 @@
 ---
-title: "How to: Hold More Than One Value in a Variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "classes [Visual Basic], composite data types"
-  - "composite types"
-  - "composite data types"
-  - "data types [Visual Basic], composite"
-  - "arrays [Visual Basic], composite data types"
-  - "structures, composite data types"
-  - "arrays [Visual Basic], compilation errors"
-  - "types [Visual Basic], composite"
+title: "방법: 변수에 두 개 이상의 값 사용(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- classes [Visual Basic], composite data types
+- composite types [Visual Basic]
+- composite data types [Visual Basic]
+- data types [Visual Basic], composite
+- arrays [Visual Basic], composite data types
+- structures [Visual Basic], composite data types
+- arrays [Visual Basic], compilation errors
+- types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c8c567ec2ba01d094819c98a2937af75cd105956
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Hold More Than One Value in a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-변수를 *복합 데이터 형식*으로 선언하면 변수에 값을 두 개 이상 사용할 수 있습니다.  
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a><span data-ttu-id="ce4d4-102">방법: 변수에 두 개 이상의 값 사용(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ce4d4-102">How to: Hold More Than One Value in a Variable (Visual Basic)</span></span>
+<span data-ttu-id="ce4d4-103">변수에 둘 이상의 값으로 선언 하는 경우는 *복합 데이터 형식을*합니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-103">A variable holds more than one value if you declare it to be of a *composite data type*.</span></span>  
   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)에는 구조체, 배열 및 클래스가 포함됩니다.  복합 데이터 형식의 변수에는 기본 데이터 형식과 다른 복합 형식의 조합을 사용할 수 있습니다.  구조체와 클래스에는 코드와 데이터를 사용할 수 있습니다.  
+ <span data-ttu-id="ce4d4-104">[복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) 구조, 배열 및 클래스를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-104">[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes.</span></span> <span data-ttu-id="ce4d4-105">복합 데이터 형식의 변수에 기본 데이터 형식 및 기타 복합 형식의 조합을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-105">A variable of a composite data type can hold a combination of elementary data types and other composite types.</span></span> <span data-ttu-id="ce4d4-106">구조체와 클래스 코드 뿐만 아니라 데이터를 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-106">Structures and classes can hold code as well as data.</span></span>  
   
-### 변수에 값을 두 개 이상 사용하려면  
+### <a name="to-hold-more-than-one-value-in-a-variable"></a><span data-ttu-id="ce4d4-107">변수에 두 개 이상의 값을</span><span class="sxs-lookup"><span data-stu-id="ce4d4-107">To hold more than one value in a variable</span></span>  
   
-1.  변수에 사용할 복합 데이터 형식을 결정합니다.  
+1.  <span data-ttu-id="ce4d4-108">변수를 사용 하려면 복합 데이터 형식을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-108">Determine what composite data type you want to use for your variable.</span></span>  
   
-2.  복합 데이터 형식이 아직 정의되지 않았으면 변수에서 사용할 수 있도록 복합 데이터 형식을 정의합니다.  
+2.  <span data-ttu-id="ce4d4-109">복합 데이터 형식이 아직 정의 되지 않은 정의 변수에서 사용할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-109">If the composite data type is not already defined, define it so that your variable can use it.</span></span>  
   
-    -   [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)을 사용하여 구조체를 정의합니다.  
+    -   <span data-ttu-id="ce4d4-110">구조체를 정의 [Structure 문을](../../../../visual-basic/language-reference/statements/structure-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-110">Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).</span></span>  
   
-    -   [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)을 사용하여 배열을 정의합니다.  
+    -   <span data-ttu-id="ce4d4-111">정의 된 배열을 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-111">Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span>  
   
-    -   [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md)을 사용하여 클래스를 정의합니다.  
+    -   <span data-ttu-id="ce4d4-112">클래스를 정의 [Class 문](../../../../visual-basic/language-reference/statements/class-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-112">Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).</span></span>  
   
-3.  `Dim`을 사용하여 변수를 선언합니다.  
+3.  <span data-ttu-id="ce4d4-113">사용 하 여 변수를 선언는 `Dim` 문.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-113">Declare your variable with a `Dim` statement.</span></span>  
   
-4.  변수 이름 뒤에 `As` 절을 붙입니다.  
+4.  <span data-ttu-id="ce4d4-114">변수 이름 뒤에 `As` 절.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-114">Follow the variable name with an `As` clause.</span></span>  
   
-5.  `As` 키워드 뒤에 해당 복합 데이터 형식의 이름을 붙입니다.  
+5.  <span data-ttu-id="ce4d4-115">에 따라는 `As` 키워드와 적절 한 복합 데이터 형식의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ce4d4-115">Follow the `As` keyword with the name of the appropriate composite data type.</span></span>  
   
-## 참고 항목  
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Characters](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a><span data-ttu-id="ce4d4-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ce4d4-116">See Also</span></span>  
+ [<span data-ttu-id="ce4d4-117">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="ce4d4-117">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="ce4d4-118">형식 문자</span><span class="sxs-lookup"><span data-stu-id="ce4d4-118">Type Characters</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="ce4d4-119">복합 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="ce4d4-119">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="ce4d4-120">구조체</span><span class="sxs-lookup"><span data-stu-id="ce4d4-120">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="ce4d4-121">배열</span><span class="sxs-lookup"><span data-stu-id="ce4d4-121">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="ce4d4-122">개체 및 클래스</span><span class="sxs-lookup"><span data-stu-id="ce4d4-122">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [<span data-ttu-id="ce4d4-123">값 형식과 참조 형식</span><span class="sxs-lookup"><span data-stu-id="ce4d4-123">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

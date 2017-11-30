@@ -1,47 +1,47 @@
 ---
-title: "ToolBar 컨트롤 개요(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ToolBar 컨트롤[Windows Forms], ToolBar 컨트롤 정보"
-  - "도구 모음[Windows Forms], 도구 모음 정보"
+title: "ToolBar 컨트롤 개요(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolBar
+helpviewer_keywords:
+- toolbars [Windows Forms], about toolbars
+- ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 857cc04af6c619035fa2bf0a548053f57292f7bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ToolBar 컨트롤 개요(Windows Forms)
+# <a name="toolbar-control-overview-windows-forms"></a><span data-ttu-id="c100c-102">ToolBar 컨트롤 개요(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c100c-102">ToolBar Control Overview (Windows Forms)</span></span>
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
+>  <span data-ttu-id="c100c-103"><xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- Windows Forms <xref:System.Windows.Forms.ToolBar> 컨트롤은 폼에서 컨트롤 막대로 사용됩니다. 컨트롤 막대에는 명령을 활성화하는 비트맵 이미지 단추 및 드롭다운 메뉴가 한 행으로 표시됩니다.  즉, 도구 모음 단추를 클릭하면 메뉴 명령이 선택됩니다.  도구 모음 단추가 누름 단추, 드롭다운 메뉴 또는 구분선으로 표시되고 동작하도록 구성할 수 있습니다.  응용 프로그램에서 가장 많이 사용되는 기능과 명령에 빠르게 액세스할 수 있도록 도구 모음에는 일반적으로 응용 프로그램 메뉴 구조의 항목에 해당하는 단추 및 메뉴가 포함되어 있습니다.  
+ <span data-ttu-id="c100c-104">Windows Forms <xref:System.Windows.Forms.ToolBar> 컨트롤은 폼에서 드롭다운 메뉴 및 명령을 활성화하는 비트맵 단추가 포함된 한 행을 표시하는 컨트롤 막대로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-104">The Windows Forms <xref:System.Windows.Forms.ToolBar> control is used on forms as a control bar that displays a row of drop-down menus and bitmapped buttons that activate commands.</span></span> <span data-ttu-id="c100c-105">따라서 도구 모음 단추를 클릭하는 것은 메뉴 명령을 선택하는 것과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-105">Thus, clicking a toolbar button can be an equivalent to choosing a menu command.</span></span> <span data-ttu-id="c100c-106">단추는 누름 단추, 드롭다운 메뉴 또는 구분 기호로 표시 되고 동작하도록 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-106">The buttons can be configured to appear and behave as pushbuttons, drop-down menus, or separators.</span></span> <span data-ttu-id="c100c-107">일반적으로 도구 모음에는 응용 프로그램 메뉴 구조의 항목에 해당하는 단추 및 메뉴가 포함되며, 응용 프로그램에서 자주 사용되는 함수 및 명령에 대한 빠른 액세스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-107">Typically, a toolbar contains buttons and menus that correspond to items in an application's menu structure, providing quick access to an application's most frequently used functions and commands.</span></span>  
   
-## ToolBar 컨트롤 사용  
- <xref:System.Windows.Forms.ToolBar> 컨트롤은 일반적으로 부모 창의 맨 위에 "도킹"되어 있지만 창에서 원하는 가장자리 위치에 도킹할 수 있습니다.  사용자가 마우스 포인터로 도구 모음 단추를 가리키면 도구 설명이 표시됩니다.  도구 설명은 해당 단추나 메뉴의 기능을 간략하게 설명하는 작은 팝업 창입니다.  도구 설명을 표시하려면 <xref:System.Windows.Forms.ToolBar.ShowToolTips%2A> 속성을 `true`로 설정해야 합니다.  
+## <a name="working-with-the-toolbar-control"></a><span data-ttu-id="c100c-108">ToolBar 컨트롤 사용</span><span class="sxs-lookup"><span data-stu-id="c100c-108">Working with the ToolBar Control</span></span>  
+ <span data-ttu-id="c100c-109">A <xref:System.Windows.Forms.ToolBar> 도킹 컨트롤은 일반적으로 "고정" 위쪽 해당 부모 창에 있지만 창의 모든 면에 도킹 될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-109">A <xref:System.Windows.Forms.ToolBar> control is usually "docked" along the top of its parent window, but it can also be docked to any side of the window.</span></span> <span data-ttu-id="c100c-110">도구 모음에서 사용자가 마우스 포인터로 도구 모음 단추를 가리키면 도구 설명을 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-110">A toolbar can display tooltips when the user points the mouse pointer at a toolbar button.</span></span> <span data-ttu-id="c100c-111">도구 설명은 단추 또는 메뉴의 기능을 간략하게 설명하는 작은 팝업 창입니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-111">A ToolTip is a small pop-up window that briefly describes the button or menu's purpose.</span></span> <span data-ttu-id="c100c-112">도구 설명을 표시 하는 <xref:System.Windows.Forms.ToolBar.ShowToolTips%2A> 속성으로 설정 되어 있어야 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-112">To display ToolTips, the <xref:System.Windows.Forms.ToolBar.ShowToolTips%2A> property must be set to `true`.</span></span>  
   
 > [!NOTE]
->  특정 응용 프로그램 기능 컨트롤은 응용 프로그램 창 위에 두고 "이동"하며 위치를 변경할 수 있는 기능이 포함된 도구 모음과 매우 비슷합니다.  그러나 Windows Forms ToolBar 컨트롤에는 이러한 기능이 없습니다.  
+>  <span data-ttu-id="c100c-113">특정 응용 프로그램은 응용 프로그램 창 위에서 "고정 해제"되어 위치를 변경할 수 있는 도구 모음과 매우 비슷한 기능이 있는 컨트롤을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-113">Certain applications feature controls very similar to the toolbar that have the ability to "float" above the application window and be repositioned.</span></span> <span data-ttu-id="c100c-114">Windows Forms ToolBar 컨트롤은 이러한 동작을 수행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-114">The Windows Forms ToolBar control is not able to do these actions.</span></span>  
   
- <xref:System.Windows.Forms.ToolBar.Appearance%2A> 속성을 [Normal](frlrfSystemWindowsFormsToolBarAppearanceClassTopic)로 설정하면 도구 모음 단추가 볼록한 3차원 모양으로 나타납니다.  도구 모음의 <xref:System.Windows.Forms.ToolBar.Appearance%2A> 속성을 <xref:System.Windows.Forms.ToolBarAppearance>으로 설정하면 도구 모음과 도구 모음 단추를 평면 모양으로 만들 수 있습니다.  마우스 포인터를 평면 모양의 단추 위로 이동하면 3차원 모양 단추로 변경됩니다.  구분선을 사용하여 도구 모음 단추를 논리적 그룹으로 나눌 수 있습니다.  구분선은 <xref:System.Windows.Forms.ToolBarButton.Style%2A> 속성이 [Separator](frlrfSystemWindowsFormsToolBarButtonStyleClassTopic)로 설정된 도구 모음 단추이며  도구 모음에서 공백으로 나타납니다.  도구 모음이 평면 모양일 경우에는 단추 구분선이 단추 사이에 공백 대신 선으로 나타납니다.  
+ <span data-ttu-id="c100c-115">경우는 <xref:System.Windows.Forms.ToolBar.Appearance%2A> 속성이 <xref:System.Windows.Forms.ToolBarAppearance>, 도구 모음 단추 볼록하게 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-115">When the <xref:System.Windows.Forms.ToolBar.Appearance%2A> property is set to <xref:System.Windows.Forms.ToolBarAppearance>, the toolbar buttons appear raised and three-dimensional.</span></span> <span data-ttu-id="c100c-116">설정할 수 있습니다는 <xref:System.Windows.Forms.ToolBar.Appearance%2A> 도구 모음의 속성 <xref:System.Windows.Forms.ToolBarAppearance> 평면 모양 도구 모음 및 단추를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-116">You can set the <xref:System.Windows.Forms.ToolBar.Appearance%2A> property of the toolbar to <xref:System.Windows.Forms.ToolBarAppearance> to give the toolbar and its buttons a flat appearance.</span></span> <span data-ttu-id="c100c-117">마우스 포인터를 평면 모양의 단추 위로 움직이면 단추 모양이 3차원 모양으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-117">When the mouse pointer moves over a flat button, the button's appearance changes to three-dimensional.</span></span> <span data-ttu-id="c100c-118">도구 모음 단추는 구분 기호를 사용하여 논리 그룹으로 나눌 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-118">Toolbar buttons can be divided into logical groups by using separators.</span></span> <span data-ttu-id="c100c-119">구분 기호는 도구 모음 단추는 <xref:System.Windows.Forms.ToolBarButton.Style%2A> 속성이로 설정 <xref:System.Windows.Forms.ToolBarButtonStyle>합니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-119">A separator is a toolbar button with the <xref:System.Windows.Forms.ToolBarButton.Style%2A> property set to <xref:System.Windows.Forms.ToolBarButtonStyle>.</span></span> <span data-ttu-id="c100c-120">도구 모음에서 빈 공간으로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-120">It appears as empty space on the toolbar.</span></span> <span data-ttu-id="c100c-121">도구 모음이 평면 모양이면 단추 구분 기호는 단추 사이의 공간이 아니라 선으로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-121">When the toolbar has a flat appearance, button separators appear as lines rather than spaces between the buttons.</span></span>  
   
- <xref:System.Windows.Forms.ToolBar> 컨트롤을 사용하면 <xref:System.Windows.Forms.Button> 개체를 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 컬렉션에 추가하여 도구 모음을 만들 수 있습니다.  컬렉션 편집기를 통해 <xref:System.Windows.Forms.ToolBar> 컨트롤에 단추를 추가할 수 있습니다. 각 <xref:System.Windows.Forms.Button> 개체에는 텍스트나 이미지가 지정되어 있어야 하며 사용자가 직접 지정할 수도 있습니다.  이미지는 연결된 [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 구성 요소에서 제공합니다.  런타임에 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> 및 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> 메서드를 사용하여 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection>에 대해 단추를 추가하거나 제거할 수 있습니다.  <xref:System.Windows.Forms.ToolBar>의 단추를 프로그래밍하려면 <xref:System.Windows.Forms.ToolBar>의 <xref:System.Windows.Forms.ToolBar.ButtonClick> 이벤트에 코드를 추가합니다. 이때 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 클래스의 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> 속성을 사용하여 클릭된 단추를 확인해야 합니다.  
+ <span data-ttu-id="c100c-122"><xref:System.Windows.Forms.ToolBar> 컨트롤 도구 모음을 추가 하 여 만들 수 있습니다 <xref:System.Windows.Forms.Button> 개체는 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-122">The <xref:System.Windows.Forms.ToolBar> control allows you to create toolbars by adding <xref:System.Windows.Forms.Button> objects to a <xref:System.Windows.Forms.ToolBar.Buttons%2A> collection.</span></span> <span data-ttu-id="c100c-123">컬렉션 편집기를 사용 하 여 단추를 추가 하는 <xref:System.Windows.Forms.ToolBar> ; 각 <xref:System.Windows.Forms.Button> 둘 다에 할당할 수 있지만 개체는 텍스트 또는 이미지가 지정에 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-123">You can use the Collection Editor to add buttons to a <xref:System.Windows.Forms.ToolBar> control; each <xref:System.Windows.Forms.Button> object should have text or an image assigned, although you can assign both.</span></span> <span data-ttu-id="c100c-124">이미지는 연결된 [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 구성 요소에서 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-124">The image is supplied by an associated [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) component.</span></span> <span data-ttu-id="c100c-125">실행 시 추가 하거나에서 단추를 제거할 수 있습니다는 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> 를 사용 하는 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> 및 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="c100c-125">At run time, you can add or remove buttons from the <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> using the <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> and <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> methods.</span></span> <span data-ttu-id="c100c-126">단추를 프로그래밍 하는 <xref:System.Windows.Forms.ToolBar>, 코드를 추가 하는 <xref:System.Windows.Forms.ToolBar.ButtonClick> 의 이벤트는 <xref:System.Windows.Forms.ToolBar>를 사용 하 여는 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> 속성의는 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 어떤 단추가 클릭 되었는지 확인 하려면 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="c100c-126">To program the buttons of a <xref:System.Windows.Forms.ToolBar>, add code to the <xref:System.Windows.Forms.ToolBar.ButtonClick> events of the <xref:System.Windows.Forms.ToolBar>, using the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine which button was clicked.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ToolBar>   
- [ToolBar 컨트롤](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)   
- [방법: ToolBar 컨트롤에 단추 추가](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)   
- [방법: 도구 모음 단추의 아이콘 정의](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)   
- [방법: 도구 모음 단추에 대한 메뉴 이벤트 발생](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+## <a name="see-also"></a><span data-ttu-id="c100c-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c100c-127">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolBar>  
+ [<span data-ttu-id="c100c-128">ToolBar 컨트롤</span><span class="sxs-lookup"><span data-stu-id="c100c-128">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
+ [<span data-ttu-id="c100c-129">방법: ToolBar 컨트롤에 단추 추가</span><span class="sxs-lookup"><span data-stu-id="c100c-129">How to: Add Buttons to a ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
+ [<span data-ttu-id="c100c-130">방법: ToolBar 단추의 아이콘 정의</span><span class="sxs-lookup"><span data-stu-id="c100c-130">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [<span data-ttu-id="c100c-131">방법: Toolbar 단추의 메뉴 이벤트 트리거</span><span class="sxs-lookup"><span data-stu-id="c100c-131">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)

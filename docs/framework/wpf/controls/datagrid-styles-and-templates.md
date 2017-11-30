@@ -1,195 +1,188 @@
 ---
-title: "DataGrid 스타일 및 템플릿 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate[WPF], DataGrid"
-  - "DataGrid[WPF], 스타일 및 템플릿"
-  - "요소[WPF], DataGrid"
-  - "상태[WPF], DataGrid"
-  - "스타일[WPF], DataGrid"
-  - "템플릿[WPF], DataGrid"
+title: "DataGrid 스타일 및 템플릿"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], DataGrid
+- ControlTemplate [WPF], DataGrid
+- DataGrid [WPF], styles and templates
+- templates [WPF], DataGrid
+- styles [WPF], DataGrid
+- parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2dd7e47454cdfa806ce025d905073468f70f7cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataGrid 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤의 스타일 및 템플릿에 대해 설명합니다.  기본 <xref:System.Windows.Controls.ControlTemplate>을 수정하여 컨트롤에 고유한 모양을 지정할 수 있습니다.  자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하십시오.  
+# <a name="datagrid-styles-and-templates"></a><span data-ttu-id="1555b-102">DataGrid 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="1555b-102">DataGrid Styles and Templates</span></span>
+<span data-ttu-id="1555b-103">이 항목에서는 스타일 및 서식 파일에 대 한 설명의 <xref:System.Windows.Controls.DataGrid> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.DataGrid> control.</span></span> <span data-ttu-id="1555b-104">기본값을 수정할 수 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="1555b-105">자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1555b-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## DataGrid 요소  
- 다음 표에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤의 명명된 요소를 보여 줍니다.  
+## <a name="datagrid-parts"></a><span data-ttu-id="1555b-106">DataGrid 부분</span><span class="sxs-lookup"><span data-stu-id="1555b-106">DataGrid Parts</span></span>  
+ <span data-ttu-id="1555b-107">다음 표에서 명명된 된 요소를 나열는 <xref:System.Windows.Controls.DataGrid> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-107">The following table lists the named parts for the <xref:System.Windows.Controls.DataGrid> control.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-108">파트</span><span class="sxs-lookup"><span data-stu-id="1555b-108">Part</span></span>|<span data-ttu-id="1555b-109">형식</span><span class="sxs-lookup"><span data-stu-id="1555b-109">Type</span></span>|<span data-ttu-id="1555b-110">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-110">Description</span></span>|  
 |-|-|-|  
-|파트|형식|설명|  
-|PART\_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|열 머리글을 포함하는 행입니다.|  
+|<span data-ttu-id="1555b-111">PART_ColumnHeadersPresenter</span><span class="sxs-lookup"><span data-stu-id="1555b-111">PART_ColumnHeadersPresenter</span></span>|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|<span data-ttu-id="1555b-112">열 머리글을 포함 하는 행입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-112">The row that contains the column headers.</span></span>|  
   
- <xref:System.Windows.Controls.DataGrid>에 대한 <xref:System.Windows.Controls.ControlTemplate>을 만들 경우 템플릿의 <xref:System.Windows.Controls.ScrollViewer> 내에 <xref:System.Windows.Controls.ItemsPresenter>가 포함될 수 있습니다.  <xref:System.Windows.Controls.ItemsPresenter>는 각 항목을 <xref:System.Windows.Controls.DataGrid>에 표시하고 <xref:System.Windows.Controls.ScrollViewer>는 컨트롤 내에서 스크롤할 수 있도록 합니다.  <xref:System.Windows.Controls.ItemsPresenter>가 <xref:System.Windows.Controls.ScrollViewer>의 직계 자식이 아니면 <xref:System.Windows.Controls.ItemsPresenter>에 `ItemsPresenter`라는 이름을 지정해야 합니다.  
+ <span data-ttu-id="1555b-113">만들 때 한 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.DataGrid>, 서식 파일에 포함 될 수 있습니다는 <xref:System.Windows.Controls.ItemsPresenter> 내는 <xref:System.Windows.Controls.ScrollViewer>합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-113">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.DataGrid>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="1555b-114">(의 <xref:System.Windows.Controls.ItemsPresenter> 각 항목에 표시 됩니다는 <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> 컨트롤 내에서 스크롤할 수)입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-114">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.DataGrid>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="1555b-115">경우는 <xref:System.Windows.Controls.ItemsPresenter> 의 직계 자식이 없는 <xref:System.Windows.Controls.ScrollViewer>를 지정 해야 합니다는 <xref:System.Windows.Controls.ItemsPresenter> 이름, `ItemsPresenter`합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-115">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
- <xref:System.Windows.Controls.DataGrid>의 기본 템플릿에는 <xref:System.Windows.Controls.ScrollViewer> 컨트롤이 포함되어 있습니다.  <xref:System.Windows.Controls.ScrollViewer>에서 정의된 요소에 대한 자세한 내용은 [ScrollViewer 스타일 및 템플릿](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)을 참조하십시오.  
+ <span data-ttu-id="1555b-116">에 대 한 기본 서식 파일의 <xref:System.Windows.Controls.DataGrid> 포함 한 <xref:System.Windows.Controls.ScrollViewer> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-116">The default template for the <xref:System.Windows.Controls.DataGrid> contains a <xref:System.Windows.Controls.ScrollViewer> control.</span></span> <span data-ttu-id="1555b-117">정의 된 요소에 대 한 자세한 내용은 <xref:System.Windows.Controls.ScrollViewer>, 참조 [ScrollViewer 스타일 및 템플릿](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-117">For more information about the parts defined by the <xref:System.Windows.Controls.ScrollViewer>, see [ScrollViewer Styles and Templates](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).</span></span>  
   
-## DataGrid 상태  
- 다음 표에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤의 시각적 상태를 보여 줍니다.  
+## <a name="datagrid-states"></a><span data-ttu-id="1555b-118">DataGrid 상태</span><span class="sxs-lookup"><span data-stu-id="1555b-118">DataGrid States</span></span>  
+ <span data-ttu-id="1555b-119">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.DataGrid> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-119">The following table lists the visual states for the <xref:System.Windows.Controls.DataGrid> control.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-120">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-120">VisualState Name</span></span>|<span data-ttu-id="1555b-121">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-121">VisualStateGroup Name</span></span>|<span data-ttu-id="1555b-122">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-122">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|보통|CommonStates|기본 상태입니다.|  
-|Disabled|CommonStates|컨트롤이 사용하지 않도록 설정되어 있습니다.|  
-|InvalidFocused|ValidationStates|컨트롤이 잘못되었지만 포커스가 있습니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤이 잘못되었으며 포커스가 없습니다.|  
-|Valid|ValidationStates|컨트롤이 유효합니다.|  
+|<span data-ttu-id="1555b-123">보통</span><span class="sxs-lookup"><span data-stu-id="1555b-123">Normal</span></span>|<span data-ttu-id="1555b-124">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-124">CommonStates</span></span>|<span data-ttu-id="1555b-125">기본 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-125">The default state.</span></span>|  
+|<span data-ttu-id="1555b-126">사용 안 함</span><span class="sxs-lookup"><span data-stu-id="1555b-126">Disabled</span></span>|<span data-ttu-id="1555b-127">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-127">CommonStates</span></span>|<span data-ttu-id="1555b-128">컨트롤이 비활성화되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-128">The control is disabled.</span></span>|  
+|<span data-ttu-id="1555b-129">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="1555b-129">InvalidFocused</span></span>|<span data-ttu-id="1555b-130">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-130">ValidationStates</span></span>|<span data-ttu-id="1555b-131">컨트롤이 유효하지 않고 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-131">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="1555b-132">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="1555b-132">InvalidUnfocused</span></span>|<span data-ttu-id="1555b-133">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-133">ValidationStates</span></span>|<span data-ttu-id="1555b-134">컨트롤이 유효하지 않고 컨트롤에 포커스가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-134">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-135">유효</span><span class="sxs-lookup"><span data-stu-id="1555b-135">Valid</span></span>|<span data-ttu-id="1555b-136">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-136">ValidationStates</span></span>|<span data-ttu-id="1555b-137">컨트롤이 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-137">The control is valid.</span></span>|  
   
-## DataGridCell 요소  
- <xref:System.Windows.Controls.DataGridCell> 요소에는 명명된 요소가 없습니다.  
+## <a name="datagridcell-parts"></a><span data-ttu-id="1555b-138">DataGridCell 부분</span><span class="sxs-lookup"><span data-stu-id="1555b-138">DataGridCell Parts</span></span>  
+ <span data-ttu-id="1555b-139"><xref:System.Windows.Controls.DataGridCell> 요소에는 명명된 된 요소가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-139">The <xref:System.Windows.Controls.DataGridCell> element does not have any named parts.</span></span>  
   
-## DataGridCell 상태  
- 다음 표에서는 <xref:System.Windows.Controls.DataGridCell> 요소의 시각적 상태를 보여 줍니다.  
+## <a name="datagridcell-states"></a><span data-ttu-id="1555b-140">DataGridCell 상태</span><span class="sxs-lookup"><span data-stu-id="1555b-140">DataGridCell States</span></span>  
+ <span data-ttu-id="1555b-141">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.DataGridCell> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-141">The following table lists the visual states for the <xref:System.Windows.Controls.DataGridCell> element.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-142">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-142">VisualState Name</span></span>|<span data-ttu-id="1555b-143">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-143">VisualStateGroup Name</span></span>|<span data-ttu-id="1555b-144">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-144">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|보통|CommonStates|기본 상태입니다.|  
-|MouseOver|CommonStates|마우스 포인터가 셀 위에 있습니다.|  
-|Focused|FocusStates|포커스가 있는 셀입니다.|  
-|Unfocused|FocusStates|포커스가 없는 셀입니다.|  
-|Current|CurrentStates|셀이 현재 셀입니다.|  
-|기본|CurrentStates|셀이 현재 셀이 아닙니다.|  
-|표시|InteractionStates|셀이 디스플레이 모드에 있습니다.|  
-|편집|InteractionStates|셀이 편집 모드에 있습니다.|  
-|선택함|SelectionStates|셀이 선택되어 있습니다.|  
-|선택하지 않음|SelectionStates|셀이 선택되어 있지 않습니다.|  
-|InvalidFocused|ValidationStates|셀이 잘못되었지만 포커스가 있습니다.|  
-|InvalidUnfocused|ValidationStates|셀이 잘못되었으며 포커스가 없습니다.|  
-|Valid|ValidationStates|셀이 유효합니다.|  
+|<span data-ttu-id="1555b-145">보통</span><span class="sxs-lookup"><span data-stu-id="1555b-145">Normal</span></span>|<span data-ttu-id="1555b-146">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-146">CommonStates</span></span>|<span data-ttu-id="1555b-147">기본 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-147">The default state.</span></span>|  
+|<span data-ttu-id="1555b-148">MouseOver</span><span class="sxs-lookup"><span data-stu-id="1555b-148">MouseOver</span></span>|<span data-ttu-id="1555b-149">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-149">CommonStates</span></span>|<span data-ttu-id="1555b-150">마우스 포인터가 셀 위에 배치 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-150">The mouse pointer is positioned over the cell.</span></span>|  
+|<span data-ttu-id="1555b-151">포커스 있음</span><span class="sxs-lookup"><span data-stu-id="1555b-151">Focused</span></span>|<span data-ttu-id="1555b-152">FocusStates</span><span class="sxs-lookup"><span data-stu-id="1555b-152">FocusStates</span></span>|<span data-ttu-id="1555b-153">셀에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-153">The cell has focus.</span></span>|  
+|<span data-ttu-id="1555b-154">포커스 없음</span><span class="sxs-lookup"><span data-stu-id="1555b-154">Unfocused</span></span>|<span data-ttu-id="1555b-155">FocusStates</span><span class="sxs-lookup"><span data-stu-id="1555b-155">FocusStates</span></span>|<span data-ttu-id="1555b-156">셀에 포커스가 없으면</span><span class="sxs-lookup"><span data-stu-id="1555b-156">The cell does not have focus</span></span>|  
+|<span data-ttu-id="1555b-157">현재</span><span class="sxs-lookup"><span data-stu-id="1555b-157">Current</span></span>|<span data-ttu-id="1555b-158">CurrentStates</span><span class="sxs-lookup"><span data-stu-id="1555b-158">CurrentStates</span></span>|<span data-ttu-id="1555b-159">셀이 현재 셀입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-159">The cell is the current cell.</span></span>|  
+|<span data-ttu-id="1555b-160">기본</span><span class="sxs-lookup"><span data-stu-id="1555b-160">Regular</span></span>|<span data-ttu-id="1555b-161">CurrentStates</span><span class="sxs-lookup"><span data-stu-id="1555b-161">CurrentStates</span></span>|<span data-ttu-id="1555b-162">셀의 현재 셀이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-162">The cell is not the current cell.</span></span>|  
+|<span data-ttu-id="1555b-163">표시</span><span class="sxs-lookup"><span data-stu-id="1555b-163">Display</span></span>|<span data-ttu-id="1555b-164">InteractionStates</span><span class="sxs-lookup"><span data-stu-id="1555b-164">InteractionStates</span></span>|<span data-ttu-id="1555b-165">셀의 표시 모드입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-165">The cell is in display mode.</span></span>|  
+|<span data-ttu-id="1555b-166">편집</span><span class="sxs-lookup"><span data-stu-id="1555b-166">Editing</span></span>|<span data-ttu-id="1555b-167">InteractionStates</span><span class="sxs-lookup"><span data-stu-id="1555b-167">InteractionStates</span></span>|<span data-ttu-id="1555b-168">셀이 편집 모드에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-168">The cell is in edit mode.</span></span>|  
+|<span data-ttu-id="1555b-169">선택함</span><span class="sxs-lookup"><span data-stu-id="1555b-169">Selected</span></span>|<span data-ttu-id="1555b-170">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="1555b-170">SelectionStates</span></span>|<span data-ttu-id="1555b-171">셀이 선택 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-171">The cell is selected.</span></span>|  
+|<span data-ttu-id="1555b-172">선택 취소</span><span class="sxs-lookup"><span data-stu-id="1555b-172">Unselected</span></span>|<span data-ttu-id="1555b-173">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="1555b-173">SelectionStates</span></span>|<span data-ttu-id="1555b-174">셀을 선택 하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-174">The cell is not selected.</span></span>|  
+|<span data-ttu-id="1555b-175">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="1555b-175">InvalidFocused</span></span>|<span data-ttu-id="1555b-176">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-176">ValidationStates</span></span>|<span data-ttu-id="1555b-177">셀 잘못 되었으며에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-177">The cell is not valid and has focus.</span></span>|  
+|<span data-ttu-id="1555b-178">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="1555b-178">InvalidUnfocused</span></span>|<span data-ttu-id="1555b-179">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-179">ValidationStates</span></span>|<span data-ttu-id="1555b-180">셀 잘못 되었으며 포커스가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-180">The cell is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-181">유효</span><span class="sxs-lookup"><span data-stu-id="1555b-181">Valid</span></span>|<span data-ttu-id="1555b-182">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-182">ValidationStates</span></span>|<span data-ttu-id="1555b-183">셀이 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-183">The cell is valid.</span></span>|  
   
-## DataGridRow 요소  
- <xref:System.Windows.Controls.DataGridRow> 요소에는 명명된 요소가 없습니다.  
+## <a name="datagridrow-parts"></a><span data-ttu-id="1555b-184">DataGridRow 부분</span><span class="sxs-lookup"><span data-stu-id="1555b-184">DataGridRow Parts</span></span>  
+ <span data-ttu-id="1555b-185"><xref:System.Windows.Controls.DataGridRow> 요소에는 명명된 된 요소가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-185">The <xref:System.Windows.Controls.DataGridRow> element does not have any named parts.</span></span>  
   
-## DataGridRow 상태  
- 다음 표에서는 <xref:System.Windows.Controls.DataGridRow> 요소의 시각적 상태를 보여 줍니다.  
+## <a name="datagridrow-states"></a><span data-ttu-id="1555b-186">DataGridRow 상태</span><span class="sxs-lookup"><span data-stu-id="1555b-186">DataGridRow States</span></span>  
+ <span data-ttu-id="1555b-187">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.DataGridRow> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-187">The following table lists the visual states for the <xref:System.Windows.Controls.DataGridRow> element.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-188">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-188">VisualState Name</span></span>|<span data-ttu-id="1555b-189">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-189">VisualStateGroup Name</span></span>|<span data-ttu-id="1555b-190">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-190">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|보통|CommonStates|기본 상태입니다.|  
-|MouseOver|CommonStates|마우스 포인터가 행 위에 있습니다.|  
-|MouseOver\_Editing|CommonStates|마우스 포인터가 행 위에 있으며 행이 편집 모드에 있습니다.|  
-|MouseOver\_Selected|CommonStates|마우스 포인터가 행 위에 있으며 행이 선택되어 있습니다.|  
-|MouseOver\_Unfocused\_Editing|CommonStates|마우스 포인터가 행 위에 있으며 행이 편집 모드에 있고 포커스가 없습니다.|  
-|MouseOver\_Unfocused\_Selected|CommonStates|마우스 포인터가 행 위에 있으며 행이 선택되어 있고 포커스가 없습니다.|  
-|Normal\_AlternatingRow|CommonStates|행이 교대로 반복되는 행입니다.|  
-|Normal\_Editing|CommonStates|행이 편집 모드에 있습니다.|  
-|Normal\_Selected|CommonStates|행이 선택되어 있습니다.|  
-|Unfocused\_Editing|CommonStates|행이 편집 모드에 있고 포커스가 없습니다.|  
-|Unfocused\_Selected|CommonStates|행이 선택되어 있고 포커스가 없습니다.|  
-|InvalidFocused|ValidationStates|컨트롤이 잘못되었지만 포커스가 있습니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤이 잘못되었으며 포커스가 없습니다.|  
-|Valid|ValidationStates|컨트롤이 유효합니다.|  
+|<span data-ttu-id="1555b-191">보통</span><span class="sxs-lookup"><span data-stu-id="1555b-191">Normal</span></span>|<span data-ttu-id="1555b-192">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-192">CommonStates</span></span>|<span data-ttu-id="1555b-193">기본 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-193">The default state.</span></span>|  
+|<span data-ttu-id="1555b-194">MouseOver</span><span class="sxs-lookup"><span data-stu-id="1555b-194">MouseOver</span></span>|<span data-ttu-id="1555b-195">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-195">CommonStates</span></span>|<span data-ttu-id="1555b-196">마우스 포인터가 행 위에 배치 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-196">The mouse pointer is positioned over the row.</span></span>|  
+|<span data-ttu-id="1555b-197">MouseOver_Editing</span><span class="sxs-lookup"><span data-stu-id="1555b-197">MouseOver_Editing</span></span>|<span data-ttu-id="1555b-198">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-198">CommonStates</span></span>|<span data-ttu-id="1555b-199">마우스 포인터가 행 위에 및 행이 편집 모드에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-199">The mouse pointer is positioned over the row and the row is in edit mode.</span></span>|  
+|<span data-ttu-id="1555b-200">MouseOver_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-200">MouseOver_Selected</span></span>|<span data-ttu-id="1555b-201">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-201">CommonStates</span></span>|<span data-ttu-id="1555b-202">마우스 포인터가 행 위에 및 행을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-202">The mouse pointer is positioned over the row and the row is selected.</span></span>|  
+|<span data-ttu-id="1555b-203">MouseOver_Unfocused_Editing</span><span class="sxs-lookup"><span data-stu-id="1555b-203">MouseOver_Unfocused_Editing</span></span>|<span data-ttu-id="1555b-204">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-204">CommonStates</span></span>|<span data-ttu-id="1555b-205">마우스 포인터가 행 위에 행이 편집 모드를 및 포커스가 없으면, 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-205">The mouse pointer is positioned over the row, the row is in edit mode, and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-206">MouseOver_Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-206">MouseOver_Unfocused_Selected</span></span>|<span data-ttu-id="1555b-207">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-207">CommonStates</span></span>|<span data-ttu-id="1555b-208">마우스 포인터가 행 위에, 행을 선택한 포커스가 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-208">The mouse pointer is positioned over the row, the row is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-209">Normal_AlternatingRow</span><span class="sxs-lookup"><span data-stu-id="1555b-209">Normal_AlternatingRow</span></span>|<span data-ttu-id="1555b-210">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-210">CommonStates</span></span>|<span data-ttu-id="1555b-211">교대로 반복 되는 행이입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-211">The row is an alternating row.</span></span>|  
+|<span data-ttu-id="1555b-212">Normal_Editing</span><span class="sxs-lookup"><span data-stu-id="1555b-212">Normal_Editing</span></span>|<span data-ttu-id="1555b-213">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-213">CommonStates</span></span>|<span data-ttu-id="1555b-214">행이 편집 모드에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-214">The row is in edit mode.</span></span>|  
+|<span data-ttu-id="1555b-215">Normal_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-215">Normal_Selected</span></span>|<span data-ttu-id="1555b-216">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-216">CommonStates</span></span>|<span data-ttu-id="1555b-217">행이 선택 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-217">The row is selected.</span></span>|  
+|<span data-ttu-id="1555b-218">Unfocused_Editing</span><span class="sxs-lookup"><span data-stu-id="1555b-218">Unfocused_Editing</span></span>|<span data-ttu-id="1555b-219">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-219">CommonStates</span></span>|<span data-ttu-id="1555b-220">행이 편집 모드에 있고 포커스가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-220">The row is in edit mode and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-221">Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-221">Unfocused_Selected</span></span>|<span data-ttu-id="1555b-222">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-222">CommonStates</span></span>|<span data-ttu-id="1555b-223">행을 선택 및 포커스가 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-223">The row is selected and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-224">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="1555b-224">InvalidFocused</span></span>|<span data-ttu-id="1555b-225">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-225">ValidationStates</span></span>|<span data-ttu-id="1555b-226">컨트롤이 유효하지 않고 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-226">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="1555b-227">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="1555b-227">InvalidUnfocused</span></span>|<span data-ttu-id="1555b-228">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-228">ValidationStates</span></span>|<span data-ttu-id="1555b-229">컨트롤이 유효하지 않고 컨트롤에 포커스가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-229">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-230">유효</span><span class="sxs-lookup"><span data-stu-id="1555b-230">Valid</span></span>|<span data-ttu-id="1555b-231">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-231">ValidationStates</span></span>|<span data-ttu-id="1555b-232">컨트롤이 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-232">The control is valid.</span></span>|  
   
-## DataGridRowHeader 요소  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 요소의 명명된 요소를 보여 줍니다.  
+## <a name="datagridrowheader-parts"></a><span data-ttu-id="1555b-233">DataGridRowHeader 부분</span><span class="sxs-lookup"><span data-stu-id="1555b-233">DataGridRowHeader Parts</span></span>  
+ <span data-ttu-id="1555b-234">다음 표에서 명명된 된 요소를 나열는 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-234">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridRowHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-235">파트</span><span class="sxs-lookup"><span data-stu-id="1555b-235">Part</span></span>|<span data-ttu-id="1555b-236">형식</span><span class="sxs-lookup"><span data-stu-id="1555b-236">Type</span></span>|<span data-ttu-id="1555b-237">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-237">Description</span></span>|  
 |-|-|-|  
-|파트|형식|설명|  
-|PART\_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|맨 위에서 행 머리글의 크기를 변경하는 데 사용되는 요소입니다.|  
-|PART\_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|맨 아래에서 행 머리글의 크기를 변경하는 데 사용되는 요소입니다.|  
+|<span data-ttu-id="1555b-238">PART_TopHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="1555b-238">PART_TopHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="1555b-239">위쪽에서 행 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-239">The element that is used to resize the row header from the top.</span></span>|  
+|<span data-ttu-id="1555b-240">PART_BottomHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="1555b-240">PART_BottomHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="1555b-241">맨 아래에서 행 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-241">The element that is used to resize the row header from the bottom.</span></span>|  
   
-## DataGridRowHeader 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 요소의 시각적 상태를 보여 줍니다.  
+## <a name="datagridrowheader-states"></a><span data-ttu-id="1555b-242">DataGridRowHeader 상태</span><span class="sxs-lookup"><span data-stu-id="1555b-242">DataGridRowHeader States</span></span>  
+ <span data-ttu-id="1555b-243">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-243">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridRowHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-244">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-244">VisualState Name</span></span>|<span data-ttu-id="1555b-245">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-245">VisualStateGroup Name</span></span>|<span data-ttu-id="1555b-246">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-246">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|보통|CommonStates|기본 상태입니다.|  
-|MouseOver|CommonStates|마우스 포인터가 행 위에 있습니다.|  
-|MouseOver\_CurrentRow|CommonStates|마우스 포인터가 행 위에 있으며 행이 현재 행입니다.|  
-|MouseOver\_CurrentRow\_Selected|CommonStates|마우스 포인터가 행 위에 있으며 행이 현재 선택되어 있습니다.|  
-|MouseOver\_EditingRow|CommonStates|마우스 포인터가 행 위에 있으며 행이 편집 모드에 있습니다.|  
-|MouseOver\_Selected|CommonStates|마우스 포인터가 행 위에 있으며 행이 선택되어 있습니다.|  
-|MouseOver\_Unfocused\_CurrentRow\_Selected|CommonStates|마우스 포인터가 행 위에 있으며 행이 현재 선택되어 있고 포커스가 없습니다.|  
-|MouseOver\_Unfocused\_EditingRow|CommonStates|마우스 포인터가 행 위에 있으며 행이 편집 모드에 있고 포커스가 없습니다.|  
-|MouseOver\_Unfocused\_Selected|CommonStates|마우스 포인터가 행 위에 있으며 행이 선택되어 있고 포커스가 없습니다.|  
-|Normal\_CurrentRow|CommonStates|행이 현재 행입니다.|  
-|Normal\_CurrentRow\_Selected|CommonStates|행이 현재 행이며 선택되어 있습니다.|  
-|Normal\_EditingRow|CommonStates|행이 편집 모드에 있습니다.|  
-|Normal\_Selected|CommonStates|행이 선택되어 있습니다.|  
-|Unfocused\_CurrentRow\_Selected|CommonStates|행이 현재 행이며 선택되어 있고 포커스가 없습니다.|  
-|Unfocused\_EditingRow|CommonStates|행이 편집 모드에 있고 포커스가 없습니다.|  
-|Unfocused\_Selected|CommonStates|행이 선택되어 있고 포커스가 없습니다.|  
-|InvalidFocused|ValidationStates|컨트롤이 잘못되었지만 포커스가 있습니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤이 잘못되었으며 포커스가 없습니다.|  
-|Valid|ValidationStates|컨트롤이 유효합니다.|  
+|<span data-ttu-id="1555b-247">보통</span><span class="sxs-lookup"><span data-stu-id="1555b-247">Normal</span></span>|<span data-ttu-id="1555b-248">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-248">CommonStates</span></span>|<span data-ttu-id="1555b-249">기본 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-249">The default state.</span></span>|  
+|<span data-ttu-id="1555b-250">MouseOver</span><span class="sxs-lookup"><span data-stu-id="1555b-250">MouseOver</span></span>|<span data-ttu-id="1555b-251">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-251">CommonStates</span></span>|<span data-ttu-id="1555b-252">마우스 포인터가 행 위에 배치 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-252">The mouse pointer is positioned over the row.</span></span>|  
+|<span data-ttu-id="1555b-253">MouseOver_CurrentRow</span><span class="sxs-lookup"><span data-stu-id="1555b-253">MouseOver_CurrentRow</span></span>|<span data-ttu-id="1555b-254">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-254">CommonStates</span></span>|<span data-ttu-id="1555b-255">마우스 포인터가 행 위에 및 현재 행입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-255">The mouse pointer is positioned over the row and the row is the current row.</span></span>|  
+|<span data-ttu-id="1555b-256">MouseOver_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-256">MouseOver_CurrentRow_Selected</span></span>|<span data-ttu-id="1555b-257">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-257">CommonStates</span></span>|<span data-ttu-id="1555b-258">마우스 포인터가 행 위에 및 행이 현재 선택 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-258">The mouse pointer is positioned over the row, and the row is current and selected.</span></span>|  
+|<span data-ttu-id="1555b-259">MouseOver_EditingRow</span><span class="sxs-lookup"><span data-stu-id="1555b-259">MouseOver_EditingRow</span></span>|<span data-ttu-id="1555b-260">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-260">CommonStates</span></span>|<span data-ttu-id="1555b-261">마우스 포인터가 행 위에 및 행이 편집 모드에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-261">The mouse pointer is positioned over the row and the row is in edit mode.</span></span>|  
+|<span data-ttu-id="1555b-262">MouseOver_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-262">MouseOver_Selected</span></span>|<span data-ttu-id="1555b-263">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-263">CommonStates</span></span>|<span data-ttu-id="1555b-264">마우스 포인터가 행 위에 및 행을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-264">The mouse pointer is positioned over the row and the row is selected.</span></span>|  
+|<span data-ttu-id="1555b-265">MouseOver_Unfocused_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-265">MouseOver_Unfocused_CurrentRow_Selected</span></span>|<span data-ttu-id="1555b-266">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-266">CommonStates</span></span>|<span data-ttu-id="1555b-267">마우스 포인터가 행 위에 행이 현재 선택 및 포커스가 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-267">The mouse pointer is positioned over the row, the row is current and selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-268">MouseOver_Unfocused_EditingRow</span><span class="sxs-lookup"><span data-stu-id="1555b-268">MouseOver_Unfocused_EditingRow</span></span>|<span data-ttu-id="1555b-269">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-269">CommonStates</span></span>|<span data-ttu-id="1555b-270">마우스 포인터가 행 위에 행이 편집 모드를 및 포커스가 없으면, 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-270">The mouse pointer is positioned over the row, the row is in edit mode, and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-271">MouseOver_Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-271">MouseOver_Unfocused_Selected</span></span>|<span data-ttu-id="1555b-272">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-272">CommonStates</span></span>|<span data-ttu-id="1555b-273">마우스 포인터가 행 위에, 행을 선택한 포커스가 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-273">The mouse pointer is positioned over the row, the row is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-274">Normal_CurrentRow</span><span class="sxs-lookup"><span data-stu-id="1555b-274">Normal_CurrentRow</span></span>|<span data-ttu-id="1555b-275">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-275">CommonStates</span></span>|<span data-ttu-id="1555b-276">현재 행이입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-276">The row is the current row.</span></span>|  
+|<span data-ttu-id="1555b-277">Normal_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-277">Normal_CurrentRow_Selected</span></span>|<span data-ttu-id="1555b-278">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-278">CommonStates</span></span>|<span data-ttu-id="1555b-279">행이 현재 행을 선택 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-279">The row is the current row and is selected.</span></span>|  
+|<span data-ttu-id="1555b-280">Normal_EditingRow</span><span class="sxs-lookup"><span data-stu-id="1555b-280">Normal_EditingRow</span></span>|<span data-ttu-id="1555b-281">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-281">CommonStates</span></span>|<span data-ttu-id="1555b-282">행이 편집 모드에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-282">The row is in edit mode.</span></span>|  
+|<span data-ttu-id="1555b-283">Normal_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-283">Normal_Selected</span></span>|<span data-ttu-id="1555b-284">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-284">CommonStates</span></span>|<span data-ttu-id="1555b-285">행이 선택 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-285">The row is selected.</span></span>|  
+|<span data-ttu-id="1555b-286">Unfocused_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-286">Unfocused_CurrentRow_Selected</span></span>|<span data-ttu-id="1555b-287">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-287">CommonStates</span></span>|<span data-ttu-id="1555b-288">행이 현재 행을 선택 및 포커스가 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-288">The row is the current row, is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-289">Unfocused_EditingRow</span><span class="sxs-lookup"><span data-stu-id="1555b-289">Unfocused_EditingRow</span></span>|<span data-ttu-id="1555b-290">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-290">CommonStates</span></span>|<span data-ttu-id="1555b-291">행이 편집 모드에 있고 포커스가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-291">The row is in edit mode and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-292">Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="1555b-292">Unfocused_Selected</span></span>|<span data-ttu-id="1555b-293">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-293">CommonStates</span></span>|<span data-ttu-id="1555b-294">행을 선택 및 포커스가 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-294">The row is selected and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-295">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="1555b-295">InvalidFocused</span></span>|<span data-ttu-id="1555b-296">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-296">ValidationStates</span></span>|<span data-ttu-id="1555b-297">컨트롤이 유효하지 않고 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-297">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="1555b-298">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="1555b-298">InvalidUnfocused</span></span>|<span data-ttu-id="1555b-299">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-299">ValidationStates</span></span>|<span data-ttu-id="1555b-300">컨트롤이 유효하지 않고 컨트롤에 포커스가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-300">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-301">유효</span><span class="sxs-lookup"><span data-stu-id="1555b-301">Valid</span></span>|<span data-ttu-id="1555b-302">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-302">ValidationStates</span></span>|<span data-ttu-id="1555b-303">컨트롤이 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-303">The control is valid.</span></span>|  
   
-## DataGridColumnHeadersPresenter 요소  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 요소의 명명된 요소를 보여 줍니다.  
+## <a name="datagridcolumnheaderspresenter-parts"></a><span data-ttu-id="1555b-304">DataGridColumnHeadersPresenter 부분</span><span class="sxs-lookup"><span data-stu-id="1555b-304">DataGridColumnHeadersPresenter Parts</span></span>  
+ <span data-ttu-id="1555b-305">다음 표에서 명명된 된 요소를 나열는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-305">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> element.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-306">파트</span><span class="sxs-lookup"><span data-stu-id="1555b-306">Part</span></span>|<span data-ttu-id="1555b-307">형식</span><span class="sxs-lookup"><span data-stu-id="1555b-307">Type</span></span>|<span data-ttu-id="1555b-308">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-308">Description</span></span>|  
 |-|-|-|  
-|파트|형식|설명|  
-|PART\_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|열 머리글의 자리 표시자입니다.|  
+|<span data-ttu-id="1555b-309">PART_FillerColumnHeader</span><span class="sxs-lookup"><span data-stu-id="1555b-309">PART_FillerColumnHeader</span></span>|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|<span data-ttu-id="1555b-310">열 머리글에 대 한 자리 표시자입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-310">The placeholder for column headers.</span></span>|  
   
-## DataGridColumnHeadersPresenter 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 요소의 시각적 상태를 보여 줍니다.  
+## <a name="datagridcolumnheaderspresenter-states"></a><span data-ttu-id="1555b-311">DataGridColumnHeadersPresenter 상태</span><span class="sxs-lookup"><span data-stu-id="1555b-311">DataGridColumnHeadersPresenter States</span></span>  
+ <span data-ttu-id="1555b-312">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-312">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> element.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-313">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-313">VisualState Name</span></span>|<span data-ttu-id="1555b-314">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-314">VisualStateGroup Name</span></span>|<span data-ttu-id="1555b-315">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-315">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|InvalidFocused|ValidationStates|셀이 잘못되었지만 포커스가 있습니다.|  
-|InvalidUnfocused|ValidationStates|셀이 잘못되었으며 포커스가 없습니다.|  
-|Valid|ValidationStates|셀이 유효합니다.|  
+|<span data-ttu-id="1555b-316">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="1555b-316">InvalidFocused</span></span>|<span data-ttu-id="1555b-317">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-317">ValidationStates</span></span>|<span data-ttu-id="1555b-318">셀 잘못 되었으며에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-318">The cell is not valid and has focus.</span></span>|  
+|<span data-ttu-id="1555b-319">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="1555b-319">InvalidUnfocused</span></span>|<span data-ttu-id="1555b-320">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-320">ValidationStates</span></span>|<span data-ttu-id="1555b-321">셀 잘못 되었으며 포커스가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-321">The cell is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-322">유효</span><span class="sxs-lookup"><span data-stu-id="1555b-322">Valid</span></span>|<span data-ttu-id="1555b-323">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-323">ValidationStates</span></span>|<span data-ttu-id="1555b-324">셀이 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-324">The cell is valid.</span></span>|  
   
-## DataGridColumnHeader 요소  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 요소의 명명된 요소를 보여 줍니다.  
+## <a name="datagridcolumnheader-parts"></a><span data-ttu-id="1555b-325">DataGridColumnHeader 부분</span><span class="sxs-lookup"><span data-stu-id="1555b-325">DataGridColumnHeader Parts</span></span>  
+ <span data-ttu-id="1555b-326">다음 표에서 명명된 된 요소를 나열는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-326">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-327">파트</span><span class="sxs-lookup"><span data-stu-id="1555b-327">Part</span></span>|<span data-ttu-id="1555b-328">형식</span><span class="sxs-lookup"><span data-stu-id="1555b-328">Type</span></span>|<span data-ttu-id="1555b-329">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-329">Description</span></span>|  
 |-|-|-|  
-|파트|형식|설명|  
-|PART\_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|왼쪽에 있는 열 머리글의 크기를 변경하는 데 사용되는 요소입니다.|  
-|PART\_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|오른쪽에 있는 열 머리글의 크기를 변경하는 데 사용되는 요소입니다.|  
+|<span data-ttu-id="1555b-330">PART_LeftHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="1555b-330">PART_LeftHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="1555b-331">열 머리글 왼쪽의 크기를 조정 하는 데 사용 되는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-331">The element that is used to resize the column header from the left.</span></span>|  
+|<span data-ttu-id="1555b-332">PART_RightHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="1555b-332">PART_RightHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="1555b-333">열 머리글 오른쪽의 크기를 조정 하는 데 사용 되는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-333">The element that is used to resize the column header from the right.</span></span>|  
   
-## DataGridColumnHeader 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 요소의 시각적 상태를 보여 줍니다.  
+## <a name="datagridcolumnheader-states"></a><span data-ttu-id="1555b-334">DataGridColumnHeader 상태</span><span class="sxs-lookup"><span data-stu-id="1555b-334">DataGridColumnHeader States</span></span>  
+ <span data-ttu-id="1555b-335">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-335">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="1555b-336">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-336">VisualState Name</span></span>|<span data-ttu-id="1555b-337">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="1555b-337">VisualStateGroup Name</span></span>|<span data-ttu-id="1555b-338">설명</span><span class="sxs-lookup"><span data-stu-id="1555b-338">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|보통|CommonStates|기본 상태입니다.|  
-|MouseOver|CommonStates|마우스 포인터가 컨트롤 위에 있습니다.|  
-|Pressed|CommonStates|컨트롤을 눌렀습니다.|  
-|SortAscending|SortStates|이 열은 오름차순으로 정렬됩니다.|  
-|SortDescending|SortStates|이 열은 내림차순으로 정렬됩니다.|  
-|Unsorted|SortStates|열이 정렬되어 있지 않습니다.|  
-|InvalidFocused|ValidationStates|컨트롤이 잘못되었지만 포커스가 있습니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤이 잘못되었으며 포커스가 없습니다.|  
-|Valid|ValidationStates|컨트롤이 유효합니다.|  
+|<span data-ttu-id="1555b-339">보통</span><span class="sxs-lookup"><span data-stu-id="1555b-339">Normal</span></span>|<span data-ttu-id="1555b-340">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-340">CommonStates</span></span>|<span data-ttu-id="1555b-341">기본 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-341">The default state.</span></span>|  
+|<span data-ttu-id="1555b-342">MouseOver</span><span class="sxs-lookup"><span data-stu-id="1555b-342">MouseOver</span></span>|<span data-ttu-id="1555b-343">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-343">CommonStates</span></span>|<span data-ttu-id="1555b-344">마우스 포인터가 컨트롤 위에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-344">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="1555b-345">누름</span><span class="sxs-lookup"><span data-stu-id="1555b-345">Pressed</span></span>|<span data-ttu-id="1555b-346">CommonStates</span><span class="sxs-lookup"><span data-stu-id="1555b-346">CommonStates</span></span>|<span data-ttu-id="1555b-347">컨트롤을 눌렀습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-347">The control is pressed.</span></span>|  
+|<span data-ttu-id="1555b-348">오름차순 정렬</span><span class="sxs-lookup"><span data-stu-id="1555b-348">SortAscending</span></span>|<span data-ttu-id="1555b-349">SortStates</span><span class="sxs-lookup"><span data-stu-id="1555b-349">SortStates</span></span>|<span data-ttu-id="1555b-350">열이 오름차순으로 정렬 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-350">The column is sorted in ascending order.</span></span>|  
+|<span data-ttu-id="1555b-351">내림차순 정렬</span><span class="sxs-lookup"><span data-stu-id="1555b-351">SortDescending</span></span>|<span data-ttu-id="1555b-352">SortStates</span><span class="sxs-lookup"><span data-stu-id="1555b-352">SortStates</span></span>|<span data-ttu-id="1555b-353">열이 내림차순 정렬 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-353">The column is sorted in descending order.</span></span>|  
+|<span data-ttu-id="1555b-354">정렬 되지 않은</span><span class="sxs-lookup"><span data-stu-id="1555b-354">Unsorted</span></span>|<span data-ttu-id="1555b-355">SortStates</span><span class="sxs-lookup"><span data-stu-id="1555b-355">SortStates</span></span>|<span data-ttu-id="1555b-356">열이 정렬 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-356">The column is not sorted.</span></span>|  
+|<span data-ttu-id="1555b-357">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="1555b-357">InvalidFocused</span></span>|<span data-ttu-id="1555b-358">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-358">ValidationStates</span></span>|<span data-ttu-id="1555b-359">컨트롤이 유효하지 않고 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-359">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="1555b-360">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="1555b-360">InvalidUnfocused</span></span>|<span data-ttu-id="1555b-361">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-361">ValidationStates</span></span>|<span data-ttu-id="1555b-362">컨트롤이 유효하지 않고 컨트롤에 포커스가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-362">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="1555b-363">유효</span><span class="sxs-lookup"><span data-stu-id="1555b-363">Valid</span></span>|<span data-ttu-id="1555b-364">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="1555b-364">ValidationStates</span></span>|<span data-ttu-id="1555b-365">컨트롤이 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-365">The control is valid.</span></span>|  
   
-## DataGrid ControlTemplate 예제  
- 다음 예제에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤과 해당 연결 형식의 <xref:System.Windows.Controls.ControlTemplate>을 정의하는 방법을 보여 줍니다.  
+## <a name="datagrid-controltemplate-example"></a><span data-ttu-id="1555b-366">DataGrid ControlTemplate 예제</span><span class="sxs-lookup"><span data-stu-id="1555b-366">DataGrid ControlTemplate Example</span></span>  
+ <span data-ttu-id="1555b-367">다음 예제에서는 정의 하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.DataGrid> 컨트롤과 연결 된 해당 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-367">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.DataGrid> control and its associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
- 앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.  
+ <span data-ttu-id="1555b-368">앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1555b-368">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 전체 샘플을 보려면          [Styling with ControlTemplates 샘플](http://go.microsoft.com/fwlink/?LinkID=160041)을 참조하십시오.  
+ <span data-ttu-id="1555b-369">전체 샘플을 보려면 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1555b-369">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Control 스타일 및 템플릿](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [컨트롤 사용자 지정](../../../../docs/framework/wpf/controls/control-customization.md)   
- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="1555b-370">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1555b-370">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="1555b-371">Control 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="1555b-371">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="1555b-372">컨트롤 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="1555b-372">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="1555b-373">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="1555b-373">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="1555b-374">ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="1555b-374">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

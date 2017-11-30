@@ -1,128 +1,111 @@
 ---
-title: "Visual Basic의 산술 연산자 | Microsoft 문서"
+title: "Visual Basic의 산술 연산자"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - type safety
 - operators [Visual Basic], bitwise
 - operators [Visual Basic], bit-shift
-- bitwise operators
-- bit-shift operators
+- bitwise operators [Visual Basic]
+- bit-shift operators [Visual Basic]
 - zero, division by zero
 - operators [Visual Basic], arithmetic
-- division, by zero
+- division [Visual Basic], by zero
 - Visual Basic code, operators
-- arithmetic operators, about arithmetic operators
+- arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c724bf8b6794e71d49b32c7d3ce9e010f541f68f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7fec98c38eebc34a0f84e051dc7c0914f537418f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic의 산술 연산자
-산술 연산자는 많은 리터럴, 변수, 기타 식, 함수 및 속성 호출 및 상수를 나타내는 숫자 값의 계산을 수행 하는 친숙 한 산술 연산을 수행 하는 데 사용 됩니다. 피연산자의 각 비트의 고 수준에서 작동 하 고 왼쪽 이나 오른쪽으로의 비트 패턴을 이동 하는 비트 시프트 연산자는 산술 연산자로 분류 합니다.  
+# <a name="arithmetic-operators-in-visual-basic"></a><span data-ttu-id="95dce-102">Visual Basic의 산술 연산자</span><span class="sxs-lookup"><span data-stu-id="95dce-102">Arithmetic Operators in Visual Basic</span></span>
+<span data-ttu-id="95dce-103">산술 연산자는 많은 리터럴, 변수, 다른 식, 함수 및 속성 호출 및 상수를 나타내는 숫자 값의 계산을 포함 하는 친숙 한 산술 연산을 수행 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-103">Arithmetic operators are used to perform many of the familiar arithmetic operations that involve the calculation of numeric values represented by literals, variables, other expressions, function and property calls, and constants.</span></span> <span data-ttu-id="95dce-104">피연산자의 개별 비트 수준에서 작동 하 고 왼쪽 이나 오른쪽으로의 비트 패턴을 이동 하는 비트 시프트 연산자는 산술 연산자를 사용 하 여 분류도 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-104">Also classified with arithmetic operators are the bit-shift operators, which act at the level of the individual bits of the operands and shift their bit patterns to the left or right.</span></span>  
   
-## <a name="arithmetic-operations"></a>산술 연산  
- 와 함께 식에서 두 개의 값을 추가할 수는 [+ 연산자](../../../../visual-basic/language-reference/operators/addition-operator.md), 더하거나은 다른는 [-연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)다음 예제 에서처럼, 합니다.  
+## <a name="arithmetic-operations"></a><span data-ttu-id="95dce-105">산술 연산</span><span class="sxs-lookup"><span data-stu-id="95dce-105">Arithmetic Operations</span></span>  
+ <span data-ttu-id="95dce-106">와 함께 식에서 두 개의 값을 추가할 수 있습니다는 [+ 연산자](../../../../visual-basic/language-reference/operators/addition-operator.md), 또는와 다른 빼기는 [-연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)다음 예제에서 보여 주듯이, 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-106">You can add two values in an expression together with the [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md), or subtract one from another with the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), as the following example demonstrates.</span></span>  
   
- [!code-vb[VbVbalrOperators #&57;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
   
- 부정 또한 사용 하 여는 [-연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), 없지만 하나만 피연산자와 함께 다음 예제와 같이 보여 줍니다.  
+ <span data-ttu-id="95dce-107">부정 또한 사용 하 여는 [-연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), 없지만 하나의 피연산자와 함께 다음 예제와 같이 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-107">Negation also uses the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), but with only one operand, as the following example demonstrates.</span></span>  
   
- [!code-vb[VbVbalrOperators #&58;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
   
- 사용 하 여 곱하기와 나누기는 [* 연산자](../../../../visual-basic/language-reference/operators/multiplication-operator.md) 및 [/ 연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), 다음 예제 에서처럼 각각.  
+ <span data-ttu-id="95dce-108">사용 하 여 곱하기와 나누기는 [* 연산자](../../../../visual-basic/language-reference/operators/multiplication-operator.md) 및 [/ 연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)다음 예제에서 보여 주듯이 각각.</span><span class="sxs-lookup"><span data-stu-id="95dce-108">Multiplication and division use the [* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) and [/ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), respectively, as the following example demonstrates.</span></span>  
   
- [!code-vb[VbVbalrOperators #&59;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
   
- 지 수 연산을 사용 하 여는 [^ 연산자](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)와 마찬가지로 다음 예제를 보여 줍니다.  
+ <span data-ttu-id="95dce-109">사용 하 여 지 수는 [^ 연산자](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)다음 예제에서 보여 주듯이, 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-109">Exponentiation uses the [^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), as the following example demonstrates.</span></span>  
   
- [!code-vb[VbVbalrOperators #&60;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
   
- 정수 나누기가 사용 하 여 수행 된 [\ 연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)합니다. 정수 나누기 몫을 반환 합니다, 그리고 즉, 횟수를 나타내는 정수 제도 나눌 수 있으며 나머지의 고려 사항 없이 피제수입니다. Divisor와 dividend 모두 정수 계열 형식 이어야 합니다 (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, 및 `ULong`)이이 연산자에 대 한 합니다. 먼저 다른 모든 형식은 정수 계열 형식으로 변환 합니다. 다음 예제에서는 정수 나누기를 보여 줍니다.  
+ <span data-ttu-id="95dce-110">정수 나누기 연산을 수행 하는 사용 하 여 [\ 연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-110">Integer division is carried out using the [\ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md).</span></span> <span data-ttu-id="95dce-111">즉, 횟수를 나타내는 정수 제도 나눌 수 있으며 나머지를 고려 하지 않고 피제수, 정수 나누기 몫을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-111">Integer division returns the quotient, that is, the integer that represents the number of times the divisor can divide into the dividend without consideration of any remainder.</span></span> <span data-ttu-id="95dce-112">Divisor와 dividend가 모두 정수 계열 형식 이어야 합니다 (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, 및 `ULong`)이이 연산자에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-112">Both the divisor and the dividend must be integral types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, and `ULong`) for this operator.</span></span> <span data-ttu-id="95dce-113">다른 모든 형식은 정수 계열 형식으로 먼저 변환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-113">All other types must be converted to an integral type first.</span></span> <span data-ttu-id="95dce-114">다음 예제에서는 정수 나누기를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-114">The following example demonstrates integer division.</span></span>  
   
- [!code-vb[VbVbalrOperators #&61;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
   
- 산술 나머지를 사용 하 여 수행 된 [Mod 연산자](../../../../visual-basic/language-reference/operators/mod-operator.md)합니다. 이 연산자 나머지를 반환 제 수를 피제수로 나눈 다음 정수 횟수입니다. Divisor와 dividend 모두 정수 계열 형식이 경우 반환된 된 값은 정수입니다. Divisor와 dividend 부동 소수점 형식 경우 반환 되는 값 부동 소수점 이기도 합니다. 다음 예제에서는이 동작을 보여 줍니다.  
+ <span data-ttu-id="95dce-115">모듈러스 산술 사용 하 여 수행 되는 [Mod 연산자](../../../../visual-basic/language-reference/operators/mod-operator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-115">Modulus arithmetic is performed using the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md).</span></span> <span data-ttu-id="95dce-116">이 연산자 번을 합한 값으로 하 제 수를 피제수로 나눈 다음 나머지를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-116">This operator returns the remainder after dividing the divisor into the dividend an integral number of times.</span></span> <span data-ttu-id="95dce-117">Divisor와 dividend 둘 다 정수 계열 형식인 경우 반환 되는 값은 정수 계열입니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-117">If both divisor and dividend are integral types, the returned value is integral.</span></span> <span data-ttu-id="95dce-118">Divisor와 dividend 부동 소수점 형식인 경우 반환 되는 값도 부동 소수점입니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-118">If divisor and dividend are floating-point types, the returned value is also floating-point.</span></span> <span data-ttu-id="95dce-119">다음 예제에서는이 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-119">The following example demonstrates this behavior.</span></span>  
   
- [!code-vb[VbVbalrOperators #&62;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
   
- [!code-vb[VbVbalrOperators #&63;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
   
-### <a name="attempted-division-by-zero"></a>0으로 나누기  
- 0으로 나누기는 관련 된 데이터 형식에 따라 다른 결과입니다. In integral divisions (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), the [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] throws a <xref:System.DivideByZeroException> exception.</xref:System.DivideByZeroException> 나누기에 대 한 작업에는 `Decimal` 또는 `Single` 데이터 형식으로는 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 또한 throw 하는 <xref:System.DivideByZeroException>예외.</xref:System.DivideByZeroException>  
+### <a name="attempted-division-by-zero"></a><span data-ttu-id="95dce-120">0으로 나누기</span><span class="sxs-lookup"><span data-stu-id="95dce-120">Attempted Division by Zero</span></span>  
+ <span data-ttu-id="95dce-121">0으로 나누기는 관련 된 데이터 형식에 따라 다른 결과입니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-121">Division by zero has different results depending on the data types involved.</span></span> <span data-ttu-id="95dce-122">정수 계열 사업부의 (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] throw 한 <xref:System.DivideByZeroException> 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-122">In integral divisions (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] throws a <xref:System.DivideByZeroException> exception.</span></span> <span data-ttu-id="95dce-123">나누기에 대 한 작업에는 `Decimal` 또는 `Single` 데이터 형식으로는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] throw는 <xref:System.DivideByZeroException> 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-123">In division operations on the `Decimal` or `Single` data type, the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] also throws a <xref:System.DivideByZeroException> exception.</span></span>  
   
- 부동 소수점 나누기에서는 `Double` 데이터 형식 예외가 throw 되지 및 결과 나타내는 클래스 멤버는 <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, 또는 <xref:System.Double.NegativeInfinity>피제수에 따라.</xref:System.Double.NegativeInfinity> </xref:System.Double.PositiveInfinity> </xref:System.Double.NaN> 다음 표에서 나누기의 다양 한 결과 요약 한 `Double` 값을&0;으로 합니다.  
+ <span data-ttu-id="95dce-124">부동 소수점 나누기에서는 `Double` 데이터 형식 예외가 throw 되지 않으며 결과 나타내는 클래스 멤버는 <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, 또는 <xref:System.Double.NegativeInfinity>피제수에 따라 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-124">In floating-point divisions involving the `Double` data type, no exception is thrown, and the result is the class member representing <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, or <xref:System.Double.NegativeInfinity>, depending on the dividend.</span></span> <span data-ttu-id="95dce-125">다음 표에서 나누기의 다양 한 결과 요약 한 `Double` 값을 0으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-125">The following table summarizes the various results of attempting to divide a `Double` value by zero.</span></span>  
   
-|피제수 데이터 형식|제 수 데이터 형식|피제수 값|결과|  
+|<span data-ttu-id="95dce-126">피제수 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="95dce-126">Dividend data type</span></span>|<span data-ttu-id="95dce-127">제 수 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="95dce-127">Divisor data type</span></span>|<span data-ttu-id="95dce-128">피제수 값</span><span class="sxs-lookup"><span data-stu-id="95dce-128">Dividend value</span></span>|<span data-ttu-id="95dce-129">결과</span><span class="sxs-lookup"><span data-stu-id="95dce-129">Result</span></span>|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>(수학적으로 정의 된 숫자가 아님)</xref:System.Double.NaN>|  
-|`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity></xref:System.Double.PositiveInfinity>|  
-|`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity></xref:System.Double.NegativeInfinity>|  
+|`Double`|`Double`|<span data-ttu-id="95dce-130">0</span><span class="sxs-lookup"><span data-stu-id="95dce-130">0</span></span>|<span data-ttu-id="95dce-131"><xref:System.Double.NaN>(수학적으로 정의 된 숫자가 아님)</span><span class="sxs-lookup"><span data-stu-id="95dce-131"><xref:System.Double.NaN> (not a mathematically defined number)</span></span>|  
+|`Double`|`Double`|<span data-ttu-id="95dce-132">> 0</span><span class="sxs-lookup"><span data-stu-id="95dce-132">> 0</span></span>|<xref:System.Double.PositiveInfinity>|  
+|`Double`|`Double`|<span data-ttu-id="95dce-133">\< 0</span><span class="sxs-lookup"><span data-stu-id="95dce-133">\< 0</span></span>|<xref:System.Double.NegativeInfinity>|  
   
- <xref:System.DivideByZeroException>예외를 처리 합니다.에 도움이 되도록 멤버를 사용할 수</xref:System.DivideByZeroException> 는 catch 예를 들어는 <xref:System.Exception.Message%2A>속성 예외에 대 한 메시지 텍스트를 저장 합니다.</xref:System.Exception.Message%2A> 자세한 내용은 참조 [시도 중... Catch... Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)합니다.  
+ <span data-ttu-id="95dce-134">Catch 하는 <xref:System.DivideByZeroException> 예외를 처리할 수 있도록 해당 멤버를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-134">When you catch a <xref:System.DivideByZeroException> exception, you can use its members to help you handle it.</span></span> <span data-ttu-id="95dce-135">예를 들어는 <xref:System.Exception.Message%2A> 속성 예외에 대 한 메시지 텍스트를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-135">For example, the <xref:System.Exception.Message%2A> property holds the message text for the exception.</span></span> <span data-ttu-id="95dce-136">자세한 내용은 [Try...Catch...Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="95dce-136">For more information, see [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
-## <a name="bit-shift-operations"></a>비트 시프트 연산  
- 비트 시프트 작업과 비트 패턴에 산술 시프트를 수행 합니다. 오른쪽의 피연산자는 패턴을 이동할 위치의 수를 지정 하는 동안 패턴 왼쪽 피연산자에 포함 되어 있습니다. 오른쪽으로 패턴을 이동할 수는 [>> 연산자](../../../../visual-basic/language-reference/operators/right-shift-operator.md) 또는 왼쪽에는 [ <> </> ](../../../../visual-basic/language-reference/operators/left-shift-operator.md)합니다.  
+## <a name="bit-shift-operations"></a><span data-ttu-id="95dce-137">비트 시프트 연산</span><span class="sxs-lookup"><span data-stu-id="95dce-137">Bit-Shift Operations</span></span>  
+ <span data-ttu-id="95dce-138">비트 시프트 작업과 비트 패턴에 산술 시프트를 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-138">A bit-shift operation performs an arithmetic shift on a bit pattern.</span></span> <span data-ttu-id="95dce-139">오른쪽의 피연산자는 패턴을 이동할 위치 수를 지정 하는 동안 패턴 왼쪽의 피연산자에 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-139">The pattern is contained in the operand on the left, while the operand on the right specifies the number of positions to shift the pattern.</span></span> <span data-ttu-id="95dce-140">오른쪽에는 패턴을 이동할 수 있습니다는 [>> 연산자](../../../../visual-basic/language-reference/operators/right-shift-operator.md) 또는 왼쪽에는 [<< 연산자](../../../../visual-basic/language-reference/operators/left-shift-operator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-140">You can shift the pattern to the right with the [>> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md) or to the left with the [<< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md).</span></span>  
   
- 패턴 피연산자의 데이터 형식 이어야 합니다 `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, 또는 `ULong`합니다. 시프트 횟수 피연산자의 데이터 형식 이어야 합니다 `Integer` 으로 확대 변환 되어야 또는 `Integer`합니다.  
+ <span data-ttu-id="95dce-141">패턴 피연산자의 데이터 형식 이어야 합니다 `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, 또는 `ULong`합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-141">The data type of the pattern operand must be `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`.</span></span> <span data-ttu-id="95dce-142">시프트 횟수 피연산자의 데이터 형식은 이어야 `Integer` 으로 확장 되어야 또는 `Integer`합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-142">The data type of the shift amount operand must be `Integer` or must widen to `Integer`.</span></span>  
   
- 산술 시프트는 하지 순환 결과의 한쪽 끝에서 벗어나 이동한 비트는 다른 쪽 끝에서 다시 발생 하지 않습니다. 이동 후 비워진 비트 위치는 다음과 같이 설정 됩니다.  
+ <span data-ttu-id="95dce-143">이동 하는 산술 형식 이므로 하지 순환, 결과의 한쪽 끝에서 이동 하는 비트는 다른 쪽 끝에서 다시 도입 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-143">Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end.</span></span> <span data-ttu-id="95dce-144">이동 후 비워진 비트 위치는 다음과 같이 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-144">The bit positions vacated by a shift are set as follows:</span></span>  
   
--   산술 왼쪽된 시프트에 대 한&0;  
+-   <span data-ttu-id="95dce-145">산술 왼쪽된 시프트에 대 한 0</span><span class="sxs-lookup"><span data-stu-id="95dce-145">0 for an arithmetic left shift</span></span>  
   
--   양수의 산술 오른쪽 시프트에 대 한&0;  
+-   <span data-ttu-id="95dce-146">양수의 산술 오른쪽 시프트에 대 한 0</span><span class="sxs-lookup"><span data-stu-id="95dce-146">0 for an arithmetic right shift of a positive number</span></span>  
   
--   부호 없는 데이터 형식에 산술 오른쪽 시프트에 대 한&0; (`Byte`, `UShort`, `UInteger`, `ULong`)  
+-   <span data-ttu-id="95dce-147">부호 없는 데이터 형식에 산술 오른쪽 시프트에 대 한 0 (`Byte`, `UShort`, `UInteger`, `ULong`)</span><span class="sxs-lookup"><span data-stu-id="95dce-147">0 for an arithmetic right shift of an unsigned data type (`Byte`, `UShort`, `UInteger`, `ULong`)</span></span>  
   
--   1은 음수의 산술 오른쪽 시프트 (`SByte`, `Short`, `Integer`, 또는 `Long`)  
+-   <span data-ttu-id="95dce-148">음수 숫자의 산술 오른쪽 시프트에 대 한 1 (`SByte`, `Short`, `Integer`, 또는 `Long`)</span><span class="sxs-lookup"><span data-stu-id="95dce-148">1 for an arithmetic right shift of a negative number (`SByte`, `Short`, `Integer`, or `Long`)</span></span>  
   
- 다음 예제에서는 이동는 `Integer` 값을 왼쪽 및 오른쪽입니다.  
+ <span data-ttu-id="95dce-149">다음 예제에서는 이동는 `Integer` 값을 왼쪽 및 오른쪽입니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-149">The following example shifts an `Integer` value both left and right.</span></span>  
   
- [!code-vb[VbVbalrOperators #&64;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
   
- 이동 하는 산술 오버플로 예외를 생성 하지 않습니다.  
+ <span data-ttu-id="95dce-150">이동 하는 산술 오버플로 예외를 생성 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-150">Arithmetic shifts never generate overflow exceptions.</span></span>  
   
-## <a name="bitwise-operations"></a>비트 연산  
- 논리 연산자로 사용 될 뿐 아니라 `Not`, `Or`, `And`, 및 `Xor` 숫자 값에 사용 될 경우 비트 연산도 수행 합니다. 자세한 내용은 "비트 연산에서 참조 [논리 및 비트 Visual Basic의 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)합니다.  
+## <a name="bitwise-operations"></a><span data-ttu-id="95dce-151">비트 연산</span><span class="sxs-lookup"><span data-stu-id="95dce-151">Bitwise Operations</span></span>  
+ <span data-ttu-id="95dce-152">논리 연산자로 사용 될 뿐 아니라 `Not`, `Or`, `And`, 및 `Xor` 비트 연산도 숫자 값에 사용할 때 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-152">In addition to being logical operators, `Not`, `Or`, `And`, and `Xor` also perform bitwise arithmetic when used on numeric values.</span></span> <span data-ttu-id="95dce-153">자세한 내용은의 "비트 작업" 참조 [논리 및 비트 Visual Basic의 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-153">For more information, see "Bitwise Operations" in [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).</span></span>  
   
-## <a name="type-safety"></a>형식 안전성  
- 동일한 형식의 피연산자는 일반적으로 해야 합니다. 예를 들어, 추가 하는 경우는 `Integer` 변수를 추가 해야 다른 `Integer` 변수에 결과 형식의 변수를 할당 해야 `Integer` 도 합니다.  
+## <a name="type-safety"></a><span data-ttu-id="95dce-154">형식 안전성</span><span class="sxs-lookup"><span data-stu-id="95dce-154">Type Safety</span></span>  
+ <span data-ttu-id="95dce-155">피연산자는 일반적으로 같은 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-155">Operands should normally be of the same type.</span></span> <span data-ttu-id="95dce-156">예를 들어, 추가 하는 경우는 `Integer` 변수를 추가 해야 다른 `Integer` 변수에 결과 형식의 변수를 할당 해야 `Integer` 도 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-156">For example, if you are doing addition with an `Integer` variable, you should add it to another `Integer` variable, and you should assign the result to a variable of type `Integer` as well.</span></span>  
   
- 형식이 안전한 확인 하는 한 가지 방법은 코딩 방법 사용 하는 것은 [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다. 설정한 경우 `Option Strict On`, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 자동으로 수행 *형식이 안전한* 변환 합니다. 예를 들어 추가 하려고 하면는 `Integer` 변수를 `Double` 변수 값을 할당 하 고는 `Double` 변수인 작업이 정상적으로 진행 하기 때문에 `Integer` 값을 변환할 수 `Double` 데이터 손실 없이. 형식 안전 하지 않은 변환에는 반면에으로 컴파일러 오류가 발생 `Option Strict On`합니다. 예를 들어 추가 하려고 하면는 `Integer` 변수를 `Double` 변수 값을 할당 하 고는 `Integer` 변수인 컴파일러 오류가 발생 한 `Double` 변수 형식으로 암시적으로 변환 될 수 없습니다 `Integer`.  
+ <span data-ttu-id="95dce-157">형식이 안전한 되도록 한 가지 방법은 코딩 사례 사용 하는 것은 [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-157">One way to ensure good type-safe coding practice is to use the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span> <span data-ttu-id="95dce-158">설정한 경우 `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 자동으로 수행 *형식이 안전한* 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-158">If you set `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatically performs *type-safe* conversions.</span></span> <span data-ttu-id="95dce-159">추가 하려는 경우 등는 `Integer` 변수를 한 `Double` 변수 값을 할당 하 고는 `Double` 변수, 작업을 정상적으로 진행 되므로 `Integer` 값을 변환할 수 `Double` 데이터 손실 없이 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-159">For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to a `Double` variable, the operation proceeds normally, because an `Integer` value can be converted to `Double` without loss of data.</span></span> <span data-ttu-id="95dce-160">변환의 형식이 안전 하지 않은 경우에 반면에으로 컴파일러 오류가 발생 `Option Strict On`합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-160">Type-unsafe conversions, on the other hand, cause a compiler error with `Option Strict On`.</span></span> <span data-ttu-id="95dce-161">추가 하려는 경우 등는 `Integer` 변수를 `Double` 변수 값을 할당 하 고는 `Integer` 변수, 컴파일러 오류가 발생 한 `Double` 변수 형식으로 암시적으로 변환 될 수 없습니다 `Integer`합니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-161">For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to an `Integer` variable, a compiler error results, because a `Double` variable cannot be implicitly converted to type `Integer`.</span></span>  
   
- 설정한 경우 `Option Strict Off`그러나 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 암시적 축소 변환을 수행 하면 허용 예기치 않은 데이터 또는 정밀도 손실을 초래할 수 있습니다. 이러한 이유로 사용 하는 권장 `Option Strict On` 프로덕션 코드를 작성 하는 경우. 자세한 내용은 참조 [확장 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)합니다.  
+ <span data-ttu-id="95dce-162">설정한 경우 `Option Strict Off`그러나 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 암시적 축소 변환을 수행 하면 허용 예기치 않은 데이터 또는 정밀도 손실을 초래할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95dce-162">If you set `Option Strict Off`, however, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] allows implicit narrowing conversions to take place, although they can result in the unexpected loss of data or precision.</span></span> <span data-ttu-id="95dce-163">이러한 이유로 사용 하는 권장 `Option Strict On` 프로덕션 코드를 작성할 때.</span><span class="sxs-lookup"><span data-stu-id="95dce-163">For this reason, we recommend that you use `Option Strict On` when writing production code.</span></span> <span data-ttu-id="95dce-164">자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="95dce-164">For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [산술 연산자](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [비트 시프트 연산자](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)   
- [Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Visual Basic의 연결 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)   
- [Visual Basic의 논리 및 비트 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)   
- [연산자의 효율적 결합](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+## <a name="see-also"></a><span data-ttu-id="95dce-165">참고 항목</span><span class="sxs-lookup"><span data-stu-id="95dce-165">See Also</span></span>  
+ [<span data-ttu-id="95dce-166">산술 연산자</span><span class="sxs-lookup"><span data-stu-id="95dce-166">Arithmetic Operators</span></span>](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="95dce-167">비트 시프트 연산자</span><span class="sxs-lookup"><span data-stu-id="95dce-167">Bit Shift Operators</span></span>](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [<span data-ttu-id="95dce-168">Visual Basic의 비교 연산자</span><span class="sxs-lookup"><span data-stu-id="95dce-168">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [<span data-ttu-id="95dce-169">Visual Basic의 연결 연산자</span><span class="sxs-lookup"><span data-stu-id="95dce-169">Concatenation Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
+ [<span data-ttu-id="95dce-170">Visual Basic의 논리 및 비트 연산자</span><span class="sxs-lookup"><span data-stu-id="95dce-170">Logical and Bitwise Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
+ [<span data-ttu-id="95dce-171">연산자의 효율적 결합</span><span class="sxs-lookup"><span data-stu-id="95dce-171">Efficient Combination of Operators</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
