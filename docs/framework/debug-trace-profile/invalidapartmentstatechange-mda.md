@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
 - managed debugging assistants (MDAs), invalid apartment state
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f42a2b840a0cf678cfc2a06be0e9ed252c355a2a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71634018e42ad66fdd2d03d0b0d496394cde801e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` MDA(관리 디버깅 도우미)는 다음 두 문제 중 하나가 발생하면 활성화됩니다.  
@@ -50,7 +43,7 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="cause"></a>원인  
   
--   스레드가 이전에 다른 COM 아파트 상태로 초기화되었습니다. 스레드의 아파트 상태는 명시적으로 또는 암시적으로 설정할 수 있습니다. 명시적 작업에는 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> 속성과 <xref:System.Threading.Thread.SetApartmentState%2A> 및 <xref:System.Threading.Thread.TrySetApartmentState%2A> 메서드가 포함됩니다. 스레드가 시작되기 전에 <xref:System.Threading.Thread.SetApartmentState%2A>가 호출되지 않을 경우 <xref:System.Threading.Thread.Start%2A> 메서드를 사용하여 만든 스레드는 암시적으로 <xref:System.Threading.ApartmentState.MTA>로 설정됩니다. 주 메서드에서 <xref:System.STAThreadAttribute> 특성이 지정되지 않은 경우 응용 프로그램의 주 스레드는 <xref:System.Threading.ApartmentState.MTA>로 암시적으로 초기화됩니다.  
+-   스레드가 이전에 다른 COM 아파트 상태로 초기화되었습니다. 스레드의 아파트 상태는 명시적으로 또는 암시적으로 설정할 수 있습니다. 명시적 작업에는 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 속성과 <xref:System.Threading.Thread.SetApartmentState%2A> 및 <xref:System.Threading.Thread.TrySetApartmentState%2A> 메서드가 포함됩니다. 스레드가 시작되기 전에 <xref:System.Threading.Thread.SetApartmentState%2A>가 호출되지 않을 경우 <xref:System.Threading.Thread.Start%2A> 메서드를 사용하여 만든 스레드는 암시적으로 <xref:System.Threading.ApartmentState.MTA>로 설정됩니다. 주 메서드에서 <xref:System.STAThreadAttribute> 특성이 지정되지 않은 경우 응용 프로그램의 주 스레드는 <xref:System.Threading.ApartmentState.MTA>로 암시적으로 초기화됩니다.  
   
 -   다른 동시성 모델이 포함된 `CoUninitialize` 메서드(또는 `CoInitializeEx` 메서드)는 스레드에서 호출됩니다.  
   
@@ -93,7 +86,6 @@ namespace ApartmentStateMDA
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
-
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

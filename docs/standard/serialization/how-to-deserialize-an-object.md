@@ -8,24 +8,21 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 4cda35e71de77c63b2b4f414446c3af06fb407b1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b28d80951cb2d71f8f8fb532710f738fecdf8508
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-deserialize-an-object"></a>방법: 개체 Deserialize
 개체를 deserialize할 때는 전송 형식에 따라 스트림을 만들지 파일 개체를 만들지 여부가 결정됩니다. 전송 형식이 결정된 뒤에는 필요에 따라 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 또는 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 호출할 수 있습니다.  
@@ -64,6 +61,5 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)   
+ [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-

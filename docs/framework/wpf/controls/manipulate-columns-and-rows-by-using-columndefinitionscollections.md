@@ -1,43 +1,45 @@
 ---
-title: "방법: ColumnDefinitionsCollections 및 RowDefinitionsCollections를 사용하여 열 및 행 조작 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클래스, ColumnDefinitionCollection"
-  - "클래스, RowDefinitionCollection"
-  - "ColumnDefinitionCollection 클래스"
-  - "컨트롤, Grid 클래스"
-  - "Grid 컨트롤, ColumnDefinitionCollection 클래스"
-  - "Grid 컨트롤, RowDefinitionCollection 클래스"
-  - "RowDefinitionCollection 클래스"
+title: "방법: ColumnDefinitionsCollections 및 RowDefinitionsCollections를 사용하여 열 및 행 조작"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], Grid class
+- Grid control [WPF], ColumnDefinitionCollection class
+- Grid control [WPF], RowDefinitionCollection class
 ms.assetid: bfc7160a-45f2-4e17-9961-df414dfb13c5
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e87c5001a676bcda331d289c286cf6b3e87c136f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: ColumnDefinitionsCollections 및 RowDefinitionsCollections를 사용하여 열 및 행 조작
-이 예제에서는 <xref:System.Windows.Controls.ColumnDefinitionCollection> 및 <xref:System.Windows.Controls.RowDefinitionCollection> 클래스의 메서드를 사용하여 행이나 열의 내용 추가, 지우기 또는 계산과 같은 작업을 수행하는 방법을 보여 줍니다.  예를 들어 <xref:System.Windows.Controls.ColumnDefinition> 또는 <xref:System.Windows.Controls.RowDefinition>에 포함된 항목에 대해 <xref:System.Windows.Controls.ColumnDefinitionCollection.Add%2A>, <xref:System.Windows.Controls.ColumnDefinitionCollection.Clear%2A> 또는 <xref:System.Windows.Controls.ColumnDefinitionCollection.Count%2A>를 수행할 수 있습니다.  
+# <a name="how-to-manipulate-columns-and-rows-by-using-columndefinitionscollections-and-rowdefinitionscollections"></a>방법: ColumnDefinitionsCollections 및 RowDefinitionsCollections를 사용하여 열 및 행 조작
+메서드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ColumnDefinitionCollection> 및 <xref:System.Windows.Controls.RowDefinitionCollection> 추가, 지우기 또는 행 또는 열의 내용을 계산과 같은 동작을 수행 하는 클래스가 있습니다. 예를 들어, <xref:System.Windows.Controls.ColumnDefinitionCollection.Add%2A>, <xref:System.Windows.Controls.ColumnDefinitionCollection.Clear%2A>, 또는 <xref:System.Windows.Controls.ColumnDefinitionCollection.Count%2A> 에 포함 된 항목을 <xref:System.Windows.Controls.ColumnDefinition> 또는 <xref:System.Windows.Controls.RowDefinition>합니다.  
   
-## 예제  
- 다음 예제에서는 <xref:System.Windows.FrameworkElement.Name%2A>이 `grid1`인 <xref:System.Windows.Controls.Grid> 요소를 만듭니다.  <xref:System.Windows.Controls.Grid>에는 각각 서로 다른 컬렉션 메서드로 제어되는 <xref:System.Windows.Controls.Button> 요소가 저장되는 <xref:System.Windows.Controls.StackPanel>이 포함됩니다.  <xref:System.Windows.Controls.Button>을 클릭하면 코드 숨김 파일에서 메서드 호출이 활성화됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 한 <xref:System.Windows.Controls.Grid> 인 요소는 <xref:System.Windows.FrameworkElement.Name%2A> 의 `grid1`합니다. <xref:System.Windows.Controls.Grid> 포함 한 <xref:System.Windows.Controls.StackPanel> 를 보유 하는 <xref:System.Windows.Controls.Button> 다른 수집 방법으로 제어 각 요소입니다. 클릭는 <xref:System.Windows.Controls.Button>, 코드 숨김 파일에서 메서드 호출을 활성화 합니다.  
   
- [!code-xml[ColumnDefinitionsGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ColumnDefinitionsGrid/CSharp/Window1.xaml#1)]  
+ [!code-xaml[ColumnDefinitionsGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ColumnDefinitionsGrid/CSharp/Window1.xaml#1)]  
   
- 이 예제에서는 각각 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일의 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에 해당하는 일련의 사용자 지정 메서드를 정의합니다.  <xref:System.Windows.Controls.Grid>의 열과 행 수를 여러 방법으로 변경할 수 있습니다. 여기에는 행과 열의 추가 또는 제거와 전체 행과 열 수의 계산이 포함됩니다.  <xref:System.ArgumentOutOfRangeException> 및 <xref:System.ArgumentException> 예외가 발생하지 않도록 하려면 <xref:System.Windows.Controls.ColumnDefinitionCollection.RemoveRange%2A> 메서드가 제공하는 오류 검사 기능을 사용할 수 있습니다.  
+ 일련의 각에 해당 하는 사용자 지정 메서드를 정의 하는이 예제는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일입니다. 열과 행의 수를 변경할 수는 <xref:System.Windows.Controls.Grid> 에서 여러 가지 방법으로, 포함 또는 추가 하 고, 행 및 열을 제거 하 고, 행과 열의 총 수를 계산 합니다. 방지 하기 위해 <xref:System.ArgumentOutOfRangeException> 및 <xref:System.ArgumentException> 예외를 오류 검사 기능을 사용할 수 있는 <xref:System.Windows.Controls.ColumnDefinitionCollection.RemoveRange%2A> 메서드를 제공 합니다.  
   
  [!code-csharp[ColumnDefinitionsGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ColumnDefinitionsGrid/CSharp/Window1.xaml.cs#2)]
  [!code-vb[ColumnDefinitionsGrid#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ColumnDefinitionsGrid/VisualBasic/Window1.xaml.vb#2)]  
   
-## 참고 항목  
- <xref:System.Windows.Controls.Grid>   
- <xref:System.Windows.Controls.ColumnDefinitionCollection>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Controls.Grid>  
+ <xref:System.Windows.Controls.ColumnDefinitionCollection>  
  <xref:System.Windows.Controls.RowDefinitionCollection>

@@ -1,45 +1,27 @@
 ---
 title: "대리자(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0b65f2d74064542177790e513eb2452274743b51
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="delegates-visual-basic"></a>대리자(Visual Basic)
-대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. 그러나 함수 포인터와 달리 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 대리자는 <xref:System.Delegate?displayProperty=fullName> 클래스를 기준으로 하는 참조 형식입니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.  
+대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. 그러나 함수 포인터와 달리 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 대리자는 <xref:System.Delegate?displayProperty=nameWithType> 클래스를 기준으로 하는 참조 형식입니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.  
   
 ## <a name="delegates-and-events"></a>대리자 및 이벤트  
  대리자는 호출 프로시저와 호출되는 프로시저 간에 중개자가 필요한 경우에 유용합니다. 예를 들어 다양한 상황에서 다른 이벤트 처리기를 호출하도록 하는 이벤트를 발생시키는 개체를 원할 수 있습니다. 그러나 이벤트를 발생시키는 개체는 특정 이벤트를 처리할 이벤트 처리기가 어느 것인지를 미리 알 수 없습니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 사용자가 `AddHandler` 문을 사용할 때 사용자의 대리자를 만들어 이벤트 처리기를 이벤트에 동적으로 연결할 수 있습니다. 런타임 시 대리자는 적절한 이벤트 처리기로 호출을 전달합니다.  
@@ -91,4 +73,3 @@ ms.lasthandoff: 07/28/2017
 |[방법: Visual Basic에서 프로시저에 다른 프로시저 전달](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|대리자를 사용하여 한 프로시저를 다른 프로시저에 전달하는 방법을 보여 줍니다.|  
 |[완화된 대리자 변환](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|시그니처가 동일하지 않더라도 sub 및 함수를 대리자 또는 처리기에 할당하는 방법을 설명합니다.|  
 |[이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)|Visual Basic의 이벤트에 대해 간략하게 설명합니다.|
-

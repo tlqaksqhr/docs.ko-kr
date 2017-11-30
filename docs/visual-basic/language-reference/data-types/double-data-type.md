@@ -1,74 +1,72 @@
 ---
-title: "Double Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Double"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "identifier type characters, #"
-  - "trailing zeros"
-  - "real numbers"
-  - "trailing 0 characters"
-  - "0 characters, trailing"
-  - "literal type characters, R"
-  - "data types [Visual Basic], assigning"
-  - "Double data type [Visual Basic]"
-  - "# identifier type character"
-  - "double-precision numbers"
-  - "floating-point numbers, Double data type"
-  - "R literal type character"
-  - "zeros, trailing"
-  - "Double data type"
+title: "Double 데이터 형식(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Double
+helpviewer_keywords:
+- 'identifier type characters [Visual Basic], #'
+- trailing zeros
+- real numbers
+- trailing 0 characters [Visual Basic]
+- 0 characters [Visual Basic], trailing
+- literal type characters [Visual Basic], R
+- data types [Visual Basic], assigning
+- Double data type [Visual Basic]
+- '# identifier type character'
+- double-precision numbers
+- floating-point numbers [Visual Basic], Double data type
+- R literal type character [Visual Basic]
+- zeros, trailing
+- Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ad0e8082edfb7b7d96b0ca2019da88514e5b3b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Double Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-값의 범위가 \-1.79769313486231570E\+308에서 \-4.94065645841246544E\-324까지\(음수\) 또는 4.94065645841246544E\-324에서 1.79769313486231570E\+308까지\(양수\)인 부호 있는 IEEE 64비트\(8바이트\) 배정밀도 부동 소수점 숫자를 저장합니다.  배정밀도 숫자는 실수의 근사값을 저장합니다.  
+# <a name="double-data-type-visual-basic"></a>Double 데이터 형식(Visual Basic)
+부호 있는 IEEE 64 비트 (8 바이트) 배정밀 부동 소수점 숫자 값에서-1.79769313486231570 e + 308에서-범위에 있는 저장 4.94065645841246544E-324 음수 경우 4.94065645841246544 e에서-324 1.79769313486231570 e + 308 양수 값입니다. 두 자리 숫자는 실수의 근사값을 저장합니다.  
   
-## 설명  
- `Double` 데이터 형식은 크기가 가장 큰 숫자와 가장 작은 숫자를 제공합니다.  
+## <a name="remarks"></a>설명  
+ `Double` 숫자 데이터 형식을 사용할 수 있는 가장 큰와 가장 작은 크기를 제공 합니다.  
   
  `Double`의 기본값은 0입니다.  
   
-## 프로그래밍 팁  
+## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **정밀도.** 부동 소수점 숫자에 대한 작업을 수행하는 경우 해당 숫자가 메모리에서 항상 정확하게 표현되지 않는다는 점에 주의합니다.  따라서 값 비교, `Mod` 연산자 등과 같은 특정 연산에서 예기치 않은 결과가 나타날 수 있습니다.  자세한 내용은 [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)를 참조하십시오.  
+-   **전체 자릿수입니다.** 부동 소수점 숫자를 작업할 때에 항상 없는 정확한 표시 메모리에 해야 합니다. 값 비교 같은 특정 작업에서 예기치 않은 결과가 발생할 수 및 `Mod` 연산자입니다. 자세한 내용은 참조 [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)합니다.  
   
--   **뒤에 오는 0.** 부동 소수점 데이터 형식에는 후행 0 문자에 대한 내부 표현이 없습니다.  예를 들어, 4.2000과 4.2를 구분하지 않습니다.  따라서 부동 소수점 값을 표시하거나 인쇄할 때 후행 0 문자는 나타나지 않습니다.  
+-   **뒤에 오는 0입니다.** 부동 소수점 데이터 형식에는 후행 0 문자 모든 내부 표현이지 않습니다. 예를 들어 이러한 구분 하지 않습니다 4.2000 및 4.2 합니다. 따라서 후행 0 문자를 표시할 때 또는 인쇄 부동 소수점 값 표시 되지 않습니다.  
   
--   **형식 문자.** 리터럴 형식 문자 `R`를 리터럴에 추가하면 `Double` 데이터 형식이 됩니다.  예를 들어 정수 값 뒤에 `R`이 있으면 이 값은 `Double`로 바뀝니다.  
+-   **형식 문자입니다.** 리터럴 형식 문자 `R`를 리터럴에 추가하면 `Double` 데이터 형식이 됩니다. 예를 들어, 다음에 정수 값 되 면 `R`, 값이 변경 되는 `Double`합니다.  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
     Dim dub As Double = 4.0R  
     ```  
   
-     식별자 형식 문자 `#`을 식별자에 추가하면 `Double`가 됩니다.  다음 예제에서 변수 `num`은 `Double`로 형식이 지정됩니다.  
+     식별자 형식 문자 `#`를 식별자에 추가하면 `Double`가 됩니다. 다음 예에서 변수 `num` 로 형식화 되는 `Double`:  
   
     ```  
     Dim num# = 3  
     ```  
   
--   **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.Double?displayProperty=fullName> 구조체입니다.  
+-   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Double?displayProperty=nameWithType> 구조체입니다.  
   
-## 참고 항목  
- <xref:System.Double?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Decimal Data Type](../../../visual-basic/language-reference/data-types/decimal-data-type.md)   
- [Single Data Type](../../../visual-basic/language-reference/data-types/single-data-type.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Double?displayProperty=nameWithType>  
+ [데이터 형식](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Decimal 데이터 형식](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
+ [Single 데이터 형식](../../../visual-basic/language-reference/data-types/single-data-type.md)  
+ [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [형식 문자](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

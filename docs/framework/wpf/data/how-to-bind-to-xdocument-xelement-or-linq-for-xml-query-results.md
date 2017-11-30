@@ -1,50 +1,56 @@
 ---
-title: "방법: XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 바인딩[WPF], XDocument에 바인딩"
-  - "데이터 바인딩[WPF], XElement에 바인딩"
+title: "방법: XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data binding [WPF], binding to XDocument
+- data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6b39c45a7c85155a0fb46e8e176da5979e52e6e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩
-이 예제에서는 <xref:System.Xml.Linq.XDocument>를 사용하여 XML 데이터를 <xref:System.Windows.Controls.ItemsControl>에 바인딩하는 방법을 설명합니다.  
+# <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>방법: XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩
+XML 데이터를 바인딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ItemsControl> 를 사용 하 여 <xref:System.Xml.Linq.XDocument>합니다.  
   
-## 예제  
- 다음 XAML 코드에서는 <xref:System.Windows.Controls.ItemsControl>을 정의하고 `Planet` 데이터 형식의 데이터 템플릿을 `http://planetsNS` XML 네임스페이스에 포함합니다.  네임스페이스를 사용하는 XML 데이터 형식에는 중괄호로 묶은 네임스페이스가 포함되어야 하며, XAML 태그 확장이 나타나는 위치에 네임스페이스를 사용하는 경우에는 네임스페이스 앞에 중괄호 이스케이프 시퀀스를 추가해야 합니다.  이 코드는 <xref:System.Xml.Linq.XElement> 클래스의 <xref:System.Xml.Linq.XContainer.Element%2A> 및 <xref:System.Xml.Linq.XElement.Attribute%2A> 메서드에 해당하는 동적 속성에 바인딩됩니다.  동적 속성을 사용하면 XAML을 메서드 이름을 공유하는 동적 속성에 바인딩할 수 있습니다.  자세한 내용은 [LINQ to XML 동적 속성](../Topic/LINQ%20to%20XML%20Dynamic%20Properties.md)을 참조하십시오.  XML에 대한 기본 네임스페이스 선언은 특성 이름에 적용되지 않습니다.  
+## <a name="example"></a>예제  
+ 다음 XAML 코드 정의 <xref:System.Windows.Controls.ItemsControl> 형식의 데이터에 대 한 데이터 템플릿을 포함 `Planet` 에 `http://planetsNS` XML 네임 스페이스입니다. 네임스페이스를 차지하는 XML 데이터 형식은 중괄호에서 네임스페이스를 포함해야 하고 XAML 태그 확장이 표시되는 위치에 표시되는 경우 중괄호 이스케이프 시퀀스를 가진 네임스페이스 앞에 표시되어야 합니다. 이 코드에 해당 하는 동적 속성에 바인딩하는 <xref:System.Xml.Linq.XContainer.Element%2A> 및 <xref:System.Xml.Linq.XElement.Attribute%2A> 의 메서드는 <xref:System.Xml.Linq.XElement> 클래스입니다. 동적 속성을 사용하면 XAML을 메서드의 이름을 공유하는 동적 속성에 바인딩할 수 있습니다. 자세한 내용은 [LINQ to XML 동적 속성](/visualstudio/designers/linq-to-xml-dynamic-properties)을 참조하세요. XML의 기본 네임스페이스 선언이 특성 이름에 적용되지 않는지를 확인합니다.  
   
- [!code-xml[XLinqExample#StackPanelResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
-[!code-xml[XLinqExample#ItemsControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#itemscontrol)]  
+ [!code-xaml[XLinqExample#StackPanelResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
+[!code-xaml[XLinqExample#ItemsControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#itemscontrol)]  
   
- 다음 C\# 코드에서는 <xref:System.Xml.Linq.XDocument.Load%2A>를 호출하고 `http://planetsNS` XML 네임스페이스에서 `SolarSystemPlanets`이라는 요소의 모든 하위 요소에 대한 스택 패널 데이터 컨텍스트를 설정합니다.  
+ 다음 C# 코드에서는 <xref:System.Xml.Linq.XDocument.Load%2A> 라는 요소의 모든 하위 요소를 스택 패널 데이터 컨텍스트를 설정 하 고 `SolarSystemPlanets` 에 `http://planetsNS` XML 네임 스페이스입니다.  
   
  [!code-csharp[XLinqExample#LoadDCFromFile](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromfile)]
  [!code-vb[XLinqExample#LoadDCFromFile](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromfile)]  
   
- XML 데이터는 <xref:System.Windows.Data.ObjectDataProvider>를 사용하여 XAML 리소스로 저장할 수 있습니다.  전체 예제는 [L2DBForm.xaml 소스 코드](../Topic/L2DBForm.xaml%20Source%20Code.md)를 참조하십시오.  다음 샘플에서는 코드에서 데이터 컨텍스트를 개체 리소스로 설정하는 방법을 보여 줍니다.  
+ XML 데이터를 사용 하 여 XAML 리소스도 저장할 수 <xref:System.Windows.Data.ObjectDataProvider>합니다. 전체 예제는 [L2DBForm.xaml 소스 코드](http://msdn.microsoft.com/library/624e96d4-6d27-4195-8ac2-2f3835f6c57e)를 참조하세요. 다음 샘플에서는 코드가 데이터 컨텍스트를 개체 리소스로 설정하는 방법을 보여 줍니다.  
   
  [!code-csharp[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromxaml)]
  [!code-vb[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromxaml)]  
   
- <xref:System.Xml.Linq.XContainer.Element%2A> 및 <xref:System.Xml.Linq.XElement.Attribute%2A>에 매핑되는 동적 속성에서는 XAML 내에서의 유연성을 제공합니다.  또한 코드를 LINQ for XML 쿼리 결과에 바인딩할 수도 있습니다.  이 예제에서는 요소 값별로 정렬된 쿼리 결과에 바인딩됩니다.  
+ 동적 속성에 매핑되는 <xref:System.Xml.Linq.XContainer.Element%2A> 및 <xref:System.Xml.Linq.XElement.Attribute%2A> XAML 내에서 유연성을 제공 합니다. 코드는 LINQ for XML 쿼리의 결과에 바인딩될 수도 있습니다. 이 예제는 요소 값으로 정렬된 쿼리 결과에 바인딩됩니다.  
   
  [!code-csharp[XLinqExample#BindToResults](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#bindtoresults)]
  [!code-vb[XLinqExample#BindToResults](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#bindtoresults)]  
   
-## 참고 항목  
- [바인딩 소스 개요](../../../../docs/framework/wpf/data/binding-sources-overview.md)   
- [LINQ to XML을 사용한 WPF 데이터 바인딩 개요](../Topic/WPF%20Data%20Binding%20with%20LINQ%20to%20XML%20Overview.md)   
- [LINQ to XML을 사용한 WPF 데이터 바인딩 예제](../Topic/WPF%20Data%20Binding%20Using%20LINQ%20to%20XML%20Example.md)   
- [LINQ to XML 동적 속성](../Topic/LINQ%20to%20XML%20Dynamic%20Properties.md)
+## <a name="see-also"></a>참고 항목  
+ [바인딩 소스 개요](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
+ [LINQ to XML로 WPF 데이터 바인딩 개요](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)  
+ [LINQ to XML 예제를 사용한 WPF 데이터 바인딩](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)  
+ [LINQ to XML 동적 속성](/visualstudio/designers/linq-to-xml-dynamic-properties)

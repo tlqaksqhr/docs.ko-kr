@@ -1,222 +1,226 @@
 ---
-title: "연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 폼 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI 폼"
-  - "MDI 폼, 만들기"
-  - "MDI 폼, 연습"
-  - "MDI, 폼 만들기"
-  - "다중 문서 인터페이스 폼"
-  - "도구 모음[Windows Forms]"
-  - "ToolStrip 컨트롤[Windows Forms]"
-  - "ToolStripPanel 컨트롤[Windows Forms]"
+title: "연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 폼 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- toolbars [Windows Forms]
+- ToolStripPanel control [Windows Forms]
+- MDI [Windows Forms], creating forms
+- multiple document interface forms
+- MDI forms
+- ToolStrip control [Windows Forms]
+- MDI forms [Windows Forms], creating
+- MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bca5439f247951496d82c03b57ec1fa0e21a8271
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 폼 만들기
-<xref:System.Windows.Forms?displayProperty=fullName> 네임스페이스는 MDI\(다중 문서 인터페이스\) 응용 프로그램을 지원하고 <xref:System.Windows.Forms.MenuStrip> 컨트롤은 메뉴 병합을 지원합니다.  MDI 폼은 <xref:System.Windows.Forms.ToolStrip> 컨트롤일 수도 있습니다.  
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 폼 만들기
+<xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스는 MDI(다중 문서 인터페이스) 응용 프로그램을 지원하고 <xref:System.Windows.Forms.MenuStrip> 컨트롤은 메뉴 병합을 지원합니다. MDI 폼은 <xref:System.Windows.Forms.ToolStrip> 컨트롤일 수도 있습니다.  
   
- 이 연습에서는 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 MDI 폼과 함께 사용하는 방법을 보여 줍니다.  또한 이 폼은 자식 메뉴와의 메뉴 병합을 지원합니다.  이 연습에서는 다음과 같은 작업을 설명합니다.  
+ 이 연습에서는 사용 하는 방법을 보여 줍니다. <xref:System.Windows.Forms.ToolStripPanel> MDI 폼을 사용 하 여 컨트롤입니다. 폼은 자식 메뉴와 메뉴 병합도 지원합니다. 같은 작업을이 연습에서 설명 합니다.  
   
--   Windows Forms 프로젝트 만들기  
+-   Windows Forms 프로젝트를 만드는 중입니다.  
   
--   폼의 주 메뉴 만들기.  실제 메뉴 이름은 달라집니다.  
+-   폼에 대 한 주 메뉴 만들기 메뉴의 실제 이름 달라 집니다.  
   
--   <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 **도구 상자**에 추가  
+-   추가 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 **도구 상자**합니다.  
   
 -   자식 폼 만들기  
   
--   <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 Z 순서로 정렬  
+-   정렬 <xref:System.Windows.Forms.ToolStripPanel> z 순서를 기준으로 컨트롤입니다.  
   
- 연습을 마치면 메뉴 병합과 이동할 수 있는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 지원하는 MDI 폼이 완성됩니다.  
+ 작업을 완료 하는 경우 메뉴 병합 및 이동할 수 있는 지 원하는 MDI 폼 것 <xref:System.Windows.Forms.ToolStrip> 컨트롤입니다.  
   
- 이 항목의 코드를 단일 목록으로 복사하려면 [방법: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 폼 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)를 참조하십시오.  
+ 단일 목록으로이 항목의 코드를 복사 하려면 참조 [하는 방법: 메뉴 병합 및 ToolStrip 컨트롤 MDI 폼 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음과 같은 요건이 필요합니다.  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 연습을 완료하려면 다음 사항이 필요합니다.  
   
--   [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]가 설치되어 있는 컴퓨터에서 Windows Forms 응용 프로그램 프로젝트를 만들고 실행할 수 있는 충분한 권한이 있어야 합니다.  
+-   만들고 컴퓨터에 Windows Forms 응용 프로그램 프로젝트를 실행할 수 있는 충분 한 권한이 있는 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 가 설치 되어 있습니다.  
   
-## 프로젝트 만들기  
+## <a name="creating-the-project"></a>프로젝트 만들기  
  첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.  
   
-#### 프로젝트를 만들려면  
+#### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
-1.  MdiForm이라는 Windows 응용 프로그램 프로젝트를 만듭니다.  
+1.  호출 하는 Windows 응용 프로그램 프로젝트 만들기 **MdiForm**합니다.  
   
-     자세한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/ko-kr/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하십시오.  
+     자세한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)을 참조하세요.  
   
-2.  Windows Forms 디자이너에서 폼을 선택합니다.  
+2.  Windows Forms 디자이너에서 폼을 선택 합니다.  
   
-3.  속성 창에서 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 값을 `true`로 설정합니다.  
+3.  속성 창에서 설정의 값은 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 를 `true`합니다.  
   
-## 주 메뉴 만들기  
- 부모 MDI 폼에는 주 메뉴가 들어 있습니다.  주 메뉴에는 이름이 **창**인 메뉴 항목이 하나 있습니다.  **창** 메뉴 항목을 사용하여 자식 폼을 만들 수 있습니다.  자식 폼의 메뉴 항목은 주 메뉴에 병합됩니다.  
+## <a name="creating-the-main-menu"></a>주 메뉴 만들기  
+ MDI 부모 폼의 주 메뉴를 포함합니다. 주 메뉴에는 하나의 이라는 메뉴 항목이 **창**합니다. 와 **창** 메뉴 항목을 자식 폼을 만들 수 있습니다. 주 메뉴에 자식 폼의 메뉴 항목 병합 됩니다.  
   
-#### 주 메뉴를 만들려면  
+#### <a name="to-create-the-main-menu"></a>주 메뉴를 만들려면  
   
-1.  **도구 상자**에서 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 폼으로 끌어 옵니다.  
+1.  **도구 상자**를 끌어 한 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 폼으로 합니다.  
   
-2.  <xref:System.Windows.Forms.ToolStripMenuItem>을 <xref:System.Windows.Forms.MenuStrip> 컨트롤에 추가하고 이름을 창으로 지정합니다.  
+2.  추가 <xref:System.Windows.Forms.ToolStripMenuItem> 에 <xref:System.Windows.Forms.MenuStrip> 제어 하 고 이름을 **창**합니다.  
   
 3.  <xref:System.Windows.Forms.MenuStrip> 컨트롤을 선택합니다.  
   
-4.  속성 창에서 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 속성 값을 `ToolStripMenuItem1`로 설정합니다.  
+4.  속성 창에서 설정의 값은 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 속성을 `ToolStripMenuItem1`합니다.  
   
-5.  하위 항목을 **창** 메뉴 항목에 추가하고 이 하위 항목 이름을 새로 만들기로 지정합니다.  
+5.  하위 항목을 추가 **창** 메뉴 항목을 선택한 후 이름을 하위 항목 **새로**합니다.  
   
-6.  속성 창에서 **이벤트**를 클릭합니다.  
+6.  속성 창에서 클릭 **이벤트**합니다.  
   
-7.  <xref:System.Windows.Forms.ToolStripItem.Click> 이벤트를 두 번 클릭합니다.  
+7.  두 번 클릭 하 여 <xref:System.Windows.Forms.ToolStripItem.Click> 이벤트입니다.  
   
-     Windows Forms 디자이너가 <xref:System.Windows.Forms.ToolStripItem.Click> 이벤트의 이벤트 처리기를 생성합니다.  
+     Windows Forms 디자이너에 대 한 이벤트 처리기가 생성 된 <xref:System.Windows.Forms.ToolStripItem.Click> 이벤트입니다.  
   
-8.  다음 코드를 이벤트 처리기에 삽입합니다.  
+8.  이벤트 처리기에 다음 코드를 삽입 합니다.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#2)]  
   
-## 도구 상자에 ToolStripPanel 컨트롤 추가  
- MDI 폼이 있는 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용할 때는 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤이 있어야 합니다.  <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 **도구 상자**에 추가하여 Windows Forms 디자이너에서 MDI 폼을 만들어야 합니다.  
+## <a name="adding-the-toolstrippanel-control-to-the-toolbox"></a>ToolStripPanel 컨트롤을 도구 상자에 추가  
+ 사용 하는 경우 <xref:System.Windows.Forms.MenuStrip> 있어야 MDI 폼을 사용 하 여 컨트롤의 <xref:System.Windows.Forms.ToolStripPanel> 제어 합니다. 추가 해야 합니다는 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 **도구 상자** Windows Forms 디자이너에서 MDI 폼을 작성 합니다.  
   
-#### ToolStripPanel 컨트롤을 도구 상자에 추가하려면  
+#### <a name="to-add-the-toolstrippanel-control-to-the-toolbox"></a>ToolStripPanel 컨트롤을 도구 상자에 추가 하려면  
   
-1.  **도구 상자**를 연 다음 **모든 Windows Forms** 탭을 클릭하여 사용할 수 있는 Windows Forms 컨트롤을 표시합니다.  
+1.  열기는 **도구 상자**, 클릭 하 고는 **모든 Windows Forms** 탭을 사용할 수 있는 Windows Forms 컨트롤을 표시 합니다.  
   
-2.  마우스 오른쪽 단추를 클릭하여 바로 가기 메뉴를 열고 **항목 선택**을 선택합니다.  
+2.  바로 가기 메뉴를 열려면 마우스 오른쪽 단추로 클릭 하 고 선택 **항목 선택**합니다.  
   
-3.  **도구 상자 항목 선택** 대화 상자에서 **Name** 열을 아래로 스크롤하여 **ToolStripPanel**을 찾습니다.  
+3.  에 **도구 상자 항목 선택** 대화 상자에서 아래쪽으로 스크롤하여는 **이름** 열을 찾을 때까지 **ToolStripPanel**합니다.  
   
-4.  **ToolStripPanel** 옆의 확인란을 선택한 다음 **확인**을 클릭합니다.  
+4.  확인란을 선택 **ToolStripPanel**, 클릭 하 고 **확인**합니다.  
   
-     <xref:System.Windows.Forms.ToolStripPanel> 컨트롤이 **도구 상자**에 나타납니다.  
+     <xref:System.Windows.Forms.ToolStripPanel> 컨트롤이에 표시 되는 **도구 상자**합니다.  
   
-## 자식 폼 만들기  
- 이 절차에서는 고유한 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 가진 별도의 자식 폼 클래스를 정의합니다.  이 폼의 메뉴 항목은 부모 폼의 메뉴 항목과 병합됩니다.  
+## <a name="creating-a-child-form"></a>자식 폼 만들기  
+ 이 절차에서는 별도 자식 폼 클래스에는 자체를 정의 합니다 <xref:System.Windows.Forms.MenuStrip> 제어 합니다. 이 폼에 대 한 메뉴 항목 부모 폼의 병합 됩니다.  
   
-#### 자식 폼을 정의하려면  
+#### <a name="to-define-a-child-form"></a>자식 폼을 정의 하려면  
   
-1.  프로젝트에 `ChildForm`이라는 새 폼을 추가합니다.  
+1.  라는 새 폼을 추가 `ChildForm` 프로젝트에 있습니다.  
   
-     자세한 내용은 [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/ko-kr/3d7bb25f-fd90-47cf-9378-fa0d764686c1)를 참조하십시오.  
+     자세한 내용은 참조 [하는 방법: Windows Forms 프로젝트에 추가](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)합니다.  
   
-2.  **도구 상자**에서 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 자식 폼으로 끌어 옵니다.  
+2.  **도구 상자**를 끌어 한 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 자식 폼입니다.  
   
-3.  <xref:System.Windows.Forms.MenuStrip> 컨트롤의 스마트 태그 문자 모양\(![스마트 태그 문자 모양](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\)을 클릭한 다음 **항목 편집**을 선택합니다.  
+3.  클릭는 <xref:System.Windows.Forms.MenuStrip> 컨트롤의 스마트 태그 문자 모양 (![스마트 태그 문자 모양](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))를 선택한 후 **항목 편집**합니다.  
   
-4.  **항목 컬렉션 편집기** 대화 상자에서 이름이 ChildMenuItem인 새 <xref:System.Windows.Forms.ToolStripMenuItem>을 자식 메뉴에 추가합니다.  
+4.  에 **항목 컬렉션 편집기** 대화 상자에서 새 추가 <xref:System.Windows.Forms.ToolStripMenuItem> 라는 **ChildMenuItem** 하위 메뉴에 있습니다.  
   
-     자세한 내용은 [ToolStrip Items Collection Editor](http://msdn.microsoft.com/ko-kr/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)를 참조하십시오.  
+     자세한 내용은 참조 [ToolStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)합니다.  
   
-## 폼 테스트  
+## <a name="testing-the-form"></a>테스트 폼  
   
-#### 폼을 테스트하려면  
+#### <a name="to-test-your-form"></a>폼을 테스트 하려면  
   
-1.  F5 키를 눌러 폼을 컴파일하고 실행합니다.  
+1.  F5 키를 눌러를 컴파일 및 폼을 실행 합니다.  
   
-2.  **창** 메뉴 항목을 클릭하여 메뉴를 연 다음 **새로 만들기**를 클릭합니다.  
+2.  클릭는 **창** 메뉴 항목을 클릭 하 고 메뉴를 연 **새로**합니다.  
   
-     새 자식 폼이 폼의 MDI 클라이언트 영역에 만들어집니다.  자식 폼의 메뉴가 주 메뉴와 병합됩니다.  
+     새 자식 폼을 폼의 MDI 클라이언트 영역에서 만들어집니다. 자식 폼의 메뉴가 주 메뉴와 병합 됩니다.  
   
 3.  자식 폼을 닫습니다.  
   
-     자식 폼의 메뉴가 주 메뉴에서 제거됩니다.  
+     자식 폼의 메뉴가 주 메뉴에서 제거 됩니다.  
   
-4.  **새로 만들기**를 몇 차례 클릭합니다.  
+4.  클릭 **새로** 여러 번입니다.  
   
-     <xref:System.Windows.Forms.MenuStrip> 컨트롤의 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 속성이 할당되었기 때문에 **창** 메뉴 항목 아래에 자식 폼이 자동으로 나열됩니다.  
+     자식 폼 W가 자동으로 나열**창** 때문에 메뉴 항목의 <xref:System.Windows.Forms.MenuStrip> 컨트롤의 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 속성에 할당 됩니다.  
   
-## ToolStrip 지원 추가  
- 이 절차에서는 네 개의 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 MDI 부모 폼에 추가합니다.  각 <xref:System.Windows.Forms.ToolStrip> 컨트롤은 폼의 가장자리에 도킹되는 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤의 내부에 추가됩니다.  
+## <a name="adding-toolstrip-support"></a>ToolStrip 지원 추가  
+ 이 절차에서 추가한 4 <xref:System.Windows.Forms.ToolStrip> MDI 부모 폼에 컨트롤을 합니다. 각 <xref:System.Windows.Forms.ToolStrip> 내부 컨트롤에 추가 됩니다 한 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 폼의 가장자리에 도킹 됩니다.  
   
-#### ToolStrip 컨트롤을 MDI 부모 폼에 추가하려면  
+#### <a name="to-add-toolstrip-controls-to-the-mdi-parent-form"></a>ToolStrip 컨트롤 MDI 부모 폼을 추가 하려면  
   
-1.  **도구 상자**에서 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 폼으로 끌어 옵니다.  
+1.  **도구 상자**를 끌어 한 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 폼으로 합니다.  
   
-2.  <xref:System.Windows.Forms.ToolStripPanel> 컨트롤이 선택된 상태에서 **도구 상자**에 있는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 두 번 클릭합니다.  
+2.  와 <xref:System.Windows.Forms.ToolStripPanel> 선택 컨트롤을 두 번 클릭은 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 **도구 상자**합니다.  
   
-     <xref:System.Windows.Forms.ToolStrip> 컨트롤이 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤 내에 만들어집니다.  
+     A <xref:System.Windows.Forms.ToolStrip> 컨트롤에서 만드는 <xref:System.Windows.Forms.ToolStripPanel> 제어 합니다.  
   
 3.  <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 선택합니다.  
   
-4.  속성 창에서 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성 값을 <xref:System.Windows.Forms.DockStyle>로 변경합니다.  
+4.  속성 창에서 컨트롤의 값을 변경 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Left>합니다.  
   
-     <xref:System.Windows.Forms.ToolStripPanel> 컨트롤이 폼의 왼쪽, 주 메뉴 아래에 도킹됩니다.  MDI 클라이언트 영역의 크기가 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤에 맞게 조정됩니다.  
+     <xref:System.Windows.Forms.ToolStripPanel> 주 메뉴 아래 폼의 왼쪽에 도킹을 제어 합니다. MDI 클라이언트 영역에 맞게 조정 된 <xref:System.Windows.Forms.ToolStripPanel> 제어 합니다.  
   
-5.  1단계부터 4단계까지 반복합니다.  
+5.  1-4 단계를 반복 합니다.  
   
-     새 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 폼의 맨 위에 도킹합니다.  
+     새 도킹 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 폼의 맨 위로 이동 합니다.  
   
-     <xref:System.Windows.Forms.ToolStripPanel> 컨트롤이 주 메뉴 아래, 첫 번째 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤의 오른쪽에 도킹됩니다.  이 단계에서는 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤의 올바른 배치에 Z 순서가 중요함을 보여 줍니다.  
+     <xref:System.Windows.Forms.ToolStripPanel> 주 메뉴 아래 하지만 첫 번째의 오른쪽에 컨트롤 도킹 <xref:System.Windows.Forms.ToolStripPanel> 제어 합니다. 이 단계 올바른 배치에 z 순서의 중요성을 보여 줍니다. <xref:System.Windows.Forms.ToolStripPanel> 컨트롤입니다.  
   
-6.  두 개 이상의 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤에 대해 1\-4단계를 반복합니다.  
+6.  두 개 이상의 대해 1-4 단계를 반복 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤입니다.  
   
-     새 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 폼의 오른쪽 아래에 도킹합니다.  
+     새 도킹 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 폼의 아래쪽에 있습니다.  
   
-## ToolStripPanel 컨트롤을 Z 순서로 정렬  
- MDI 폼에 도킹된 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤의 위치는 Z 순서에서의 컨트롤 위치에 따라 결정됩니다.  컨트롤의 Z 순서는 문서 개요 창에서 쉽게 정렬할 수 있습니다.  
+## <a name="arranging-toolstrippanel-controls-by-z-order"></a>ToolStripPanel 컨트롤 Z 순서 정렬  
+ 도킹 된 위치 <xref:System.Windows.Forms.ToolStripPanel> MDI 폼의 컨트롤을 z-순서에서 컨트롤의 위치에 따라 결정 됩니다. 문서 개요 창에서 컨트롤의 z 순서를 쉽게 정렬할 수 있습니다.  
   
-#### ToolStripPanel 컨트롤을 Z 순서로 정렬하려면  
+#### <a name="to-arrange-toolstrippanel-controls-by-z-order"></a>Z 순서 ToolStripPanel 컨트롤을 정렬 하려면  
   
-1.  **보기** 메뉴에서 **다른 창**을 클릭한 다음 **문서 개요**를 클릭합니다.  
+1.  에 **보기** 메뉴를 클릭 **다른 창**, 클릭 하 고 **문서 개요**합니다.  
   
-     이전 절차에서 <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 정렬한 방법은 일반적인 방법이 아닙니다.  그 이유는 Z 순서가 올바르지 않기 때문입니다.  컨트롤의 Z 순서를 변경하려면 문서 개요 창을 사용합니다.  
+     배열을 프로그램 <xref:System.Windows.Forms.ToolStripPanel> 이전 절차에서 컨트롤은 표준이 아닙니다. 즉, z-순서 올바르지 않습니다. 컨트롤의 z 순서를 변경 하려면 문서 개요 창을 사용 합니다.  
   
-2.  문서 개요 창에서 **ToolStripPanel4**를 선택합니다.  
+2.  문서 개요 창에서 선택한 **ToolStripPanel4**합니다.  
   
-3.  **ToolStripPanel4**가 목록의 아래쪽에 나타날 때까지 아래쪽 화살표 단추를 반복해서 클릭합니다.  
+3.  아래쪽 화살표 단추를 클릭 때까지 반복 해 서 **ToolStripPanel4** 목록의 아래쪽에 있습니다.  
   
-     **ToolStripPanel4** 컨트롤이 폼의 아래쪽, 다른 컨트롤의 아래에 도킹됩니다.  
+     **ToolStripPanel4** 컨트롤이 다른 컨트롤 아래 폼의 아래쪽에 도킹 합니다.  
   
-4.  **ToolStripPanel2**를 선택합니다.  
+4.  선택 **ToolStripPanel2**합니다.  
   
-5.  아래쪽 화살표 단추를 한 번 클릭하여 컨트롤을 목록의 세 번째에 배치합니다.  
+5.  목록에서 세 번째 컨트롤을 이동 하려면 아래쪽 화살표 단추 한 번 클릭 합니다.  
   
-     **ToolStripPanel2** 컨트롤이 폼의 위쪽, 주 메뉴 아래, 다른 컨트롤의 위에 도킹됩니다.  
+     **ToolStripPanel2** 컨트롤 주 메뉴 아래 및 다른 컨트롤 위에 폼의 위쪽에 도킹 합니다.  
   
-6.  **문서 개요** 창에서 다양한 컨트롤을 선택한 다음 Z 순서의 다른 위치로 이동합니다.  Z 순서에 따른 도킹된 컨트롤의 배치 결과를 확인합니다.  Ctrl\+Z 또는 **편집** 메뉴의 **실행 취소**를 사용하여 변경 내용을 취소합니다.  
+6.  다양 한 컨트롤을 선택는 **문서 개요** 창이 z-순서에서 다른 위치로 이동 하 고 있습니다. Note z-순서 도킹 된 컨트롤의 배치에 미치는 영향입니다. CTRL + Z를 사용 하 여 또는 **실행 취소** 에 **편집** 변경 내용을 취소 하는 메뉴입니다.  
   
-## 검사점  
+## <a name="checkpoint"></a>검사점  
   
-#### 폼을 테스트하려면  
+#### <a name="to-test-your-form"></a>폼을 테스트 하려면  
   
-1.  F5 키를 눌러 폼을 컴파일하고 실행합니다.  
+1.  F5 키를 눌러를 컴파일 및 폼을 실행 합니다.  
   
-2.  <xref:System.Windows.Forms.ToolStrip> 컨트롤의 그립을 클릭한 다음 컨트롤을 폼의 다른 위치로 끌어 놓습니다.  
+2.  그립을 클릭 한 <xref:System.Windows.Forms.ToolStrip> 제어 하 고 양식에서 컨트롤을 다른 위치로 끕니다.  
   
-     <xref:System.Windows.Forms.ToolStripPanel> 컨트롤 간에 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 끌어 놓을 수 있습니다.  
+     끌 수는 <xref:System.Windows.Forms.ToolStrip> 하나에서 제어 <xref:System.Windows.Forms.ToolStripPanel> 다른 제어 합니다.  
   
-## 다음 단계  
- 이 연습에서는 <xref:System.Windows.Forms.ToolStrip> 컨트롤과 메뉴 병합을 사용하여 MDI 부모 폼을 만들었습니다.  <xref:System.Windows.Forms.ToolStrip> 패밀리 컨트롤을 다음과 같은 여러 용도로 사용할 수 있습니다.  
+## <a name="next-steps"></a>다음 단계  
+ 이 연습에서 사용 하 여 MDI 부모 폼을 만든 <xref:System.Windows.Forms.ToolStrip> 컨트롤과 메뉴 병합 합니다. 사용할 수는 <xref:System.Windows.Forms.ToolStrip> 패밀리 등과 같은 용도로 컨트롤:  
   
--   <xref:System.Windows.Forms.ContextMenuStrip>을 사용하여 컨트롤의 바로 가기 메뉴를 만듭니다.  자세한 내용은 [ContextMenu 구성 요소 개요](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)를 참조하십시오.  
+-   사용자 컨트롤에 대 한 바로 가기 메뉴 만들기 <xref:System.Windows.Forms.ContextMenuStrip>합니다. 자세한 내용은 참조 [ContextMenu 구성 요소 개요](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)합니다.  
   
--   자동으로 채워지는 표준 메뉴를 가진 폼을 만듭니다.  자세한 내용은 [연습: 폼에 표준 메뉴 항목 제공](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)을 참조하십시오.  
+-   자동으로 채워지는 표준 메뉴를 사용 하 여 폼을 만든 합니다. 자세한 내용은 참조 [연습: 폼에 표준 메뉴 항목 제공](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)합니다.  
   
--   전문적인 모양을 갖춘 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 만들 수 있습니다.  자세한 내용은 [방법: 응용 프로그램에 대한 ToolStrip 렌더러 설정](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md)을 참조하십시오.  
+-   지정 하면 <xref:System.Windows.Forms.ToolStrip> 전문적인 모양 제어 합니다. 자세한 내용은 참조 [하는 방법: 응용 프로그램에 대 한 ToolStrip 렌더러 설정](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md)합니다.  
   
-## 참고 항목  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- [방법: MDI 상위 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [방법: MDI 자식 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [방법: MDI 드롭다운 메뉴에 MenuStrip 삽입](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ [방법: MDI 상위 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [방법: MDI 자식 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [방법: MDI 드롭다운 메뉴에 MenuStrip 삽입](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
  [ToolStrip 컨트롤](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
