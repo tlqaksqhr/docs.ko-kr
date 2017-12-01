@@ -1,38 +1,19 @@
 ---
 title: "필드(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- fields [C#]
+helpviewer_keywords: fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: acf4ade68235a196fd6d2f3c6c71279748f3dd71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8eef9bb644a28c69a1db59dcba3c12c9e3fa86b0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fields-c-programming-guide"></a>필드(C# 프로그래밍 가이드)
 *필드*는 [클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md)에서 직접 선언되는 모든 형식의 변수입니다. 필드는 포함하는 형식의 *멤버*입니다.  
@@ -45,22 +26,22 @@ ms.lasthandoff: 07/28/2017
   
  필드는 필드의 액세스 수준을 지정한 다음 필드의 형식, 필드의 이름순으로 지정하여 클래스 블록에서 선언됩니다. 예:  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
  개체의 필드에 액세스하려면 `objectname.fieldname`와 같이 개체 이름과 필드 이름 뒤에 마침표를 추가합니다. 예:  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
  필드를 선언할 때 대입 연산자를 사용하여 필드에 초기 값을 지정할 수 있습니다. 예를 들어 `day` 필드를 `"Monday"`에 자동으로 할당하려면 다음 예제와 같이 `day`를 선언합니다.  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
  필드는 개체 인스턴스에 대한 생성자를 호출 하기 직전에 초기화됩니다. 생성자가 필드의 값을 할당하면 필드 선언 중에 지정된 모든 값을 덮어씁니다. 자세한 내용은 [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)을 참조하세요.  
   
 > [!NOTE]
 >  필드 이니셜라이저는 다른 인스턴스 필드를 참조할 수 없습니다.  
   
- 필드는 [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) 또는 `protected internal`로 표시할 수 있습니다. 이러한 액세스 한정자는 클래스 사용자가 필드에 액세스 하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
+ 로 필드를 표시할 수 있습니다 [공용](../../../csharp/language-reference/keywords/public.md), [개인](../../../csharp/language-reference/keywords/private.md), [보호](../../../csharp/language-reference/keywords/protected.md), [내부](../../../csharp/language-reference/keywords/internal.md), [내부 보호](../../../csharp/language-reference/keywords/protected-internal.md) 또는 [보호 된 개인](../../../csharp/language-reference/keywords/private-protected.md)합니다. 이러한 액세스 한정자는 클래스 사용자가 필드에 액세스 하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
   
  필요에 따라 필드를 [static](../../../csharp/language-reference/keywords/static.md)으로 선언할 수 있습니다. 그러면 클래스의 인스턴스가 없는 경우에도 언제든지 호출자가 필드를 사용할 수 있습니다. 자세한 내용은 [정적 클래스 및 정적 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  
   
@@ -70,10 +51,9 @@ ms.lasthandoff: 07/28/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
- [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
  [추상/봉인된 클래스 및 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-

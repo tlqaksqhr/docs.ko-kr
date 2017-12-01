@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
+ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 33b22ab80f9b4d42975f2c41c880543c615a3e01
-ms.openlocfilehash: c66f1b2b85d377c84712c0ad73682cdeeb7249fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-glossary"></a>.NET 용어
 
 이 용어집의 주 용도는 .NET 설명서에서 정의 없이 자주 나타나는 선택한 용어 및 머리글자어의 의미를 명확히 나타내는 것입니다.
@@ -31,15 +29,15 @@ Ahead-Of-Time 컴파일러입니다.
 
 .NET Framework와 함께 제공되는 원래 ASP.NET 구현입니다.
 
-경우에 따라 ASP.NET은 ASP.NET Core를 포함하여 두 ASP.NET 구현을 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. 
+경우에 따라 ASP.NET은 ASP.NET Core를 포함하여 두 ASP.NET 구현을 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. 참조를 ASP.NET 4.x를 명확히 하려면를 사용 하지 않는 ASP.NET 두 구현 모두 의미 합니다. 
 
-[ASP.NET](/aspnet/#pivot=aspnet)을 참조하세요.
+참조 [ASP.NET 설명서](/aspnet/#pivot=aspnet)합니다.
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 .NET Core를 기반으로 하는 ASP.NET의 플랫폼 간 고성능 오픈 소스 구현입니다.
 
-[ASP.NET Core](/aspnet/#pivot=core)를 참조하세요.
+참조 [ASP.NET Core 설명서](/aspnet/#pivot=core)합니다.
 
 ## <a name="assembly"></a>어셈블리
 
@@ -278,5 +276,4 @@ IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 응용 프로그램
 [.NET Core](../core/index.md)  
 [ASP.NET 개요](/aspnet/index#pivot=aspnet)  
 [ASP.NET Core 개요](/aspnet/index#pivot=core)  
-
 

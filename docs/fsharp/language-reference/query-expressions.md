@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 360733d81f049cd4356ecc47a27f97c3ec3a402a
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="query-expressions"></a>쿼리 식
 
@@ -93,7 +93,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
     <th>설명</th>
   </tr>
   <tr>
-  <td>`contains`</td>
+  <td><code>contains</code></td>
 <td>선택한 요소에서 지정 된 요소를 포함 하는지 여부를 결정 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
@@ -108,7 +108,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 
 <tr>
-  <td>`count`</td><td>선택 된 요소의 수를 반환합니다.<br/><br/>
+  <td><code>count</code></td><td>선택 된 요소의 수를 반환합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -118,7 +118,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`last`</td><td>지금까지 선택 하는 것의 마지막 요소를 선택 합니다.<br/><br/>
+<td><code>last</code></td><td>지금까지 선택 하는 것의 마지막 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -127,7 +127,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`lastOrDefault`</td><td>요소가 없는 경우에 지금까지 선택 된 또는 기본값의 마지막 요소를 선택 합니다.<br/><br/>
+<td><code>lastOrDefault</code></td><td>요소가 없는 경우에 지금까지 선택 된 또는 기본값의 마지막 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -137,7 +137,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOne`</td><td>지금까지 선택 된 단일, 특정 요소를 선택 합니다. 요소가 여러 개 있는 경우 예외가 throw 됩니다.<br/><br/>
+<td><code>exactlyOne</code></td><td>지금까지 선택 된 단일, 특정 요소를 선택 합니다. 요소가 여러 개 있는 경우 예외가 throw 됩니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -148,7 +148,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOneOrDefault`</td><td>해당 요소가 없는 경우에 지금까지 선택 된 또는 기본값의 단일, 특정 요소를 선택 합니다.<br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td>해당 요소가 없는 경우에 지금까지 선택 된 또는 기본값의 단일, 특정 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -159,7 +159,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`headOrDefault`</td><td>시퀀스에 요소가 없는 경우에 지금까지 선택 된 또는 기본값의 첫 번째 요소를 선택 합니다.<br/><br/>
+<td><code>headOrDefault</code></td><td>시퀀스에 요소가 없는 경우에 지금까지 선택 된 또는 기본값의 첫 번째 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -169,7 +169,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`select`</td><td>지금까지 선택 된 요소의 각 프로젝션 합니다.<br/><br/>
+<td><code>select</code></td><td>지금까지 선택 된 요소의 각 프로젝션 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -178,7 +178,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`where`</td><td>지정된 된 조건자에 따라 요소를 선택 합니다.<br/><br/>
+<td><code>where</code></td><td>지정된 된 조건자에 따라 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -188,7 +188,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minBy`</td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 최소 결과 값을 반환 합니다.<br/><br/>
+<td><code>minBy</code></td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 최소 결과 값을 반환 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -197,7 +197,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxBy`</td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 최대 결과 값을 반환 합니다.<br/><br/>
+<td><code>maxBy</code></td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 최대 결과 값을 반환 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -206,7 +206,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupBy`</td><td>지금까지 지정된 된 키 선택기에 따라 선택한 요소를 그룹화 합니다.<br/><br/>
+<td><code>groupBy</code></td><td>지금까지 지정된 된 키 선택기에 따라 선택한 요소를 그룹화 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -216,7 +216,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortBy`</td><td>지정된 된 정렬 키가 지금까지 오름차순 선택한 요소를 정렬 합니다.<br/><br/>
+<td><code>sortBy</code></td><td>지정된 된 정렬 키가 지금까지 오름차순 선택한 요소를 정렬 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -226,7 +226,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByDescending`</td><td>지정된 된 정렬 키가 지금까지 내림차순 선택한 요소를 정렬 합니다.<br/><br/>
+<td><code>sortByDescending</code></td><td>지정된 된 정렬 키가 지금까지 내림차순 선택한 요소를 정렬 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -236,7 +236,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenBy`</td><td>지정된 된 정렬 키가 지금까지 오름차순 선택한 요소의 정렬 수행 합니다. 이 연산자는 뒤에 사용할 수 있습니다는 `sortBy`, `sortByDescending`, `thenBy`, 또는 `thenByDescending`합니다.<br/><br/>
+<td><code>thenBy</code></td><td>지정된 된 정렬 키가 지금까지 오름차순 선택한 요소의 정렬 수행 합니다. 이 연산자는 뒤에 사용할 수 있습니다는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -248,7 +248,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByDescending`</td><td>지정된 된 정렬 키가 지금까지 내림차순 선택한 요소의 정렬 수행 합니다. 이 연산자는 뒤에 사용할 수 있습니다는 `sortBy`, `sortByDescending`, `thenBy`, 또는 `thenByDescending`합니다.<br/><br/>
+<td><code>thenByDescending</code></td><td>지정된 된 정렬 키가 지금까지 내림차순 선택한 요소의 정렬 수행 합니다. 이 연산자는 뒤에 사용할 수 있습니다는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -260,7 +260,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupValBy`</td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 지정된 된 키에 따라 요소를 그룹화 합니다.<br/><br/>
+<td><code>groupValBy</code></td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 지정된 된 키에 따라 요소를 그룹화 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -270,7 +270,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`join`</td><td>두 개의 일치 하는 키에 따라 선택 된 값 집합을 연관 시킵니다. = 주위 키의 순서는 조인 식에 로그인 하는 중요 합니다. 모든 조인 후 줄이 분할 된 경우에 `-&gt;` 기호, 들여쓰기 식인 써야 이상 키워드 뿌리 `for`합니다.<br/><br/>
+<td><code>join</code></td><td>두 개의 일치 하는 키에 따라 선택 된 값 집합을 연관 시킵니다. = 주위 키의 순서는 조인 식에 로그인 하는 중요 합니다. 모든 조인 후 줄이 분할 된 경우에 <code>-&gt;</code> 기호, 들여쓰기 식인 써야 이상 키워드 뿌리 <code>for</code>합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -281,7 +281,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupJoin`</td><td>두 개의 일치 하는 키에 따라 선택 된 값 집합을 상호 연결 하 고 결과 그룹화 합니다. = 주위 키의 순서는 조인 식에 로그인 하는 중요 합니다.<br/><br/>
+<td><code>groupJoin</code></td><td>두 개의 일치 하는 키에 따라 선택 된 값 집합을 상호 연결 하 고 결과 그룹화 합니다. = 주위 키의 순서는 조인 식에 로그인 하는 중요 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -295,7 +295,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`leftOuterJoin`</td><td>두 개의 일치 하는 키에 따라 선택 된 값 집합을 상호 연결 하 고 결과 그룹화 합니다. 모든 그룹을 선택 하지 않으면 기본값은 단일 그룹 대신 사용 됩니다. = 주위 키의 순서는 조인 식에 로그인 하는 중요 합니다.<br/><br/>
+<td><code>leftOuterJoin</code></td><td>두 개의 일치 하는 키에 따라 선택 된 값 집합을 상호 연결 하 고 결과 그룹화 합니다. 모든 그룹을 선택 하지 않으면 기본값은 단일 그룹 대신 사용 됩니다. = 주위 키의 순서는 조인 식에 로그인 하는 중요 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -307,7 +307,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumByNullable`</td><td>지금까지 선택 된 각 요소에 대 한 null 허용 값을 선택 하 고 이러한 값의 합계를 반환 합니다. 있는 경우 null을 허용 하지 않는 값이 무시 됩니다.<br/><br/>
+<td><code>sumByNullable</code></td><td>지금까지 선택 된 각 요소에 대 한 null 허용 값을 선택 하 고 이러한 값의 합계를 반환 합니다. 있는 경우 null을 허용 하지 않는 값이 무시 됩니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -316,7 +316,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minByNullable`</td><td>지금까지 선택 된 각 요소에 대 한 null 허용 값을 선택 하 고 이러한 값의 최소값을 반환 합니다. 있는 경우 null을 허용 하지 않는 값이 무시 됩니다.<br/><br/>
+<td><code>minByNullable</code></td><td>지금까지 선택 된 각 요소에 대 한 null 허용 값을 선택 하 고 이러한 값의 최소값을 반환 합니다. 있는 경우 null을 허용 하지 않는 값이 무시 됩니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -325,7 +325,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxByNullable`</td><td>지금까지 선택 된 각 요소에 대 한 null 허용 값을 선택 하 고 이러한 값의 최대값을 반환 합니다. 있는 경우 null을 허용 하지 않는 값이 무시 됩니다.<br/><br/>
+<td><code>maxByNullable</code></td><td>지금까지 선택 된 각 요소에 대 한 null 허용 값을 선택 하 고 이러한 값의 최대값을 반환 합니다. 있는 경우 null을 허용 하지 않는 값이 무시 됩니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -334,7 +334,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageByNullable`</td><td>지금까지 선택 된 각 요소에 대 한 null 허용 값을 선택 하 고 이러한 값의 평균을 반환 합니다. 있는 경우 null을 허용 하지 않는 값이 무시 됩니다.<br/><br/>
+<td><code>averageByNullable</code></td><td>지금까지 선택 된 각 요소에 대 한 null 허용 값을 선택 하 고 이러한 값의 평균을 반환 합니다. 있는 경우 null을 허용 하지 않는 값이 무시 됩니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -343,7 +343,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageBy`</td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 이러한 값의 평균을 반환 합니다.<br/><br/>
+<td><code>averageBy</code></td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 이러한 값의 평균을 반환 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -352,7 +352,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`distinct`</td><td>지금까지 선택 된 요소에서 고유 요소를 선택 합니다.<br/><br/>
+<td><code>distinct</code></td><td>지금까지 선택 된 요소에서 고유 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -363,7 +363,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exists`</td><td>지금까지 선택한 모든 요소 조건을 충족 하는지 확인 합니다.<br/><br/>
+<td><code>exists</code></td><td>지금까지 선택한 모든 요소 조건을 충족 하는지 확인 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -376,7 +376,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`find`</td><td>지정된 된 조건을 충족 하는 지금까지 선택한 첫 번째 요소를 선택 합니다.<br/><br/>
+<td><code>find</code></td><td>지정된 된 조건을 충족 하는 지금까지 선택한 첫 번째 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -385,7 +385,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`all`</td><td>지금까지 선택 된 모든 요소가 조건을 만족 하는지 여부를 결정 합니다.<br/><br/>
+<td><code>all</code></td><td>지금까지 선택 된 모든 요소가 조건을 만족 하는지 여부를 결정 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -394,7 +394,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`head`</td><td>지금까지 선택 된 첫 번째 요소를 선택 합니다.<br/><br/>
+<td><code>head</code></td><td>지금까지 선택 된 첫 번째 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -403,7 +403,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`nth`</td><td>지금까지 이러한 선택 된 적절 한 지정된 된 인덱스에 요소를 선택합니다.<br/><br/>
+<td><code>nth</code></td><td>지금까지 이러한 선택 된 적절 한 지정된 된 인덱스에 요소를 선택합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -412,7 +412,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skip`</td><td>지금까지 선택 된 요소의 지정된 된 수 무시 한 다음 나머지 요소를 선택 합니다.<br/><br/>
+<td><code>skip</code></td><td>지금까지 선택 된 요소의 지정된 된 수 무시 한 다음 나머지 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -421,7 +421,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skipWhile`</td><td>지정된 된 조건이 true 시퀀스의 요소를 무시 하 다음 나머지 요소를 선택 합니다.<br/><br/>
+<td><code>skipWhile</code></td><td>지정된 된 조건이 true 시퀀스의 요소를 무시 하 다음 나머지 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -431,7 +431,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumBy`</td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 이러한 값의 합계를 반환 합니다.<br/><br/>
+<td><code>sumBy</code></td><td>지금까지 선택 된 각 요소에 대 한 값을 선택 하 고 이러한 값의 합계를 반환 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -440,7 +440,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`take`</td><td>지금까지 선택한에서 지정 된 수의 연속 요소를 선택합니다.<br/><br/>
+<td><code>take</code></td><td>지금까지 선택한에서 지정 된 수의 연속 요소를 선택합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -450,7 +450,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`takeWhile`</td><td>으로 지정된 된 조건이 true 고 나머지 요소를 건너뛰고 다음 시퀀스에서 요소를 선택 합니다.<br/><br/>
+<td><code>takeWhile</code></td><td>으로 지정된 된 조건이 true 고 나머지 요소를 건너뛰고 다음 시퀀스에서 요소를 선택 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -459,7 +459,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullable`</td><td>지정한 null 허용 정렬 키가 지금까지 오름차순 선택한 요소를 정렬 합니다.<br/><br/>
+<td><code>sortByNullable</code></td><td>지정한 null 허용 정렬 키가 지금까지 오름차순 선택한 요소를 정렬 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -469,7 +469,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullableDescending`</td><td>지정한 null 허용 정렬 키가 지금까지 내림차순 선택한 요소를 정렬 합니다.<br/><br/>
+<td><code>sortByNullableDescending</code></td><td>지정한 null 허용 정렬 키가 지금까지 내림차순 선택한 요소를 정렬 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -479,7 +479,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullable`</td><td>지정한 null 허용 정렬 키가 지금까지 오름차순 선택한 요소의 정렬 수행 합니다. 이 연산자 바로 뒤에 사용 될 수 있습니다는 `sortBy`, `sortByDescending`, `thenBy`, 또는 `thenByDescending`, 또는 null을 허용 변형 합니다.<br/><br/>
+<td><code>thenByNullable</code></td><td>지정한 null 허용 정렬 키가 지금까지 오름차순 선택한 요소의 정렬 수행 합니다. 이 연산자 바로 뒤에 사용 될 수 있습니다는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>, 또는 null을 허용 변형 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -490,7 +490,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullableDescending`</td><td>지정한 null 허용 정렬 키가 지금까지 내림차순 선택한 요소의 정렬 수행 합니다. 이 연산자 바로 뒤에 사용 될 수 있습니다는 `sortBy`, `sortByDescending`, `thenBy`, 또는 `thenByDescending`, 또는 null을 허용 변형 합니다.<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>지정한 null 허용 정렬 키가 지금까지 내림차순 선택한 요소의 정렬 수행 합니다. 이 연산자 바로 뒤에 사용 될 수 있습니다는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>, 또는 null을 허용 변형 합니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -546,7 +546,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>`EXISTS`
+<td><code>EXISTS</code>
 </br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
@@ -680,7 +680,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`IN`지정 된 값 집합<br/>
+<code>IN</code>지정 된 값 집합<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -703,7 +703,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`와 `TOP`을 참조하세요.<br/>
+<code>LIKE</code>와 <code>TOP</code>을 참조하세요.<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -721,7 +721,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`패턴으로 집합과 일치 합니다.<br/>
+<code>LIKE</code>패턴으로 집합과 일치 합니다.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -738,7 +738,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`와 배제 패턴 집합입니다.<br/>
+<code>LIKE</code>와 배제 패턴 집합입니다.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -757,7 +757,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`하나에서 필드를 하지만 다른 필드를 선택 합니다.<br/>
+<code>LIKE</code>하나에서 필드를 하지만 다른 필드를 선택 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -772,7 +772,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td>`LIKE`부분 문자열을 검색 합니다.<br/>
+</td></tr><tr><td><code>LIKE</code>부분 문자열을 검색 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -789,7 +789,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-간단한 `JOIN` 두 개의 테이블과 합니다.<br/>
+간단한 <code>JOIN</code> 두 개의 테이블과 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -807,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`LEFT JOIN`두 개의 테이블과 합니다.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>두 개의 테이블과 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +826,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`JOIN`사용`COUNT`<br/>
+</td></tr><tr><td><code>JOIN</code>사용<code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -844,7 +844,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`DISTINCT`<br/>
+</td></tr><tr><td><code>DISTINCT</code><br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT StudentID FROM CourseSelection
 </code></pre>
@@ -877,7 +877,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`BETWEEN`<br/>
+</td></tr><tr><td><code>BETWEEN</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age BETWEEN 10 AND 15
@@ -893,7 +893,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`OR`<br/>
+</td></tr><tr><td><code>OR</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -909,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`OR`순서 사용<br/>
+</td></tr><tr><td><code>OR</code>순서 사용<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -927,7 +927,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`TOP``OR`, 및 순서 지정 합니다.<br/>
+</td></tr><tr><td><code>TOP</code><code>OR</code>, 및 순서 지정 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -949,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`UNION`두 쿼리의 합니다.<br/>
+</td></tr><tr><td><code>UNION</code>두 쿼리의 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -998,7 +998,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td>`CASE`조건입니다.<br/>
+</td></tr><tr><td><code>CASE</code>조건입니다.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age

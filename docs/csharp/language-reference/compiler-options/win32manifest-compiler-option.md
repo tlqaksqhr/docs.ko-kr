@@ -1,42 +1,23 @@
 ---
 title: "-win32manifest(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32manifest
-dev_langs:
-- CSharp
+f1_keywords: /win32manifest
 helpviewer_keywords:
 - /win32manifest compiler option [C#]
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 40b1fa1f9aa465a56eccaf5fff5cf7bb59144e85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 938317fdf0c56469b85b1231a47f83e9c2a7d0f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest(C# 컴파일러 옵션)
 프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 응용 프로그램 매니페스트 파일을 식별하려면 **/win32manifest** 옵션을 사용합니다.  
@@ -57,7 +38,7 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  이 옵션과 [/win32res(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 옵션은 함께 사용할 수 없습니다. 같은 명령줄에서 두 옵션을 모두 사용하려고 하면 빌드 오류가 발생합니다.  
   
- 요청된 실행 수준을 지정하는 응용 프로그램 매니페스트가 없는 응용 프로그램은 Windows Vista의 사용자 계정 컨트롤 기능 아래에서 파일/레지스트리 가상화의 적용을 받습니다. 가상화에 대한 자세한 내용은 [Windows Vista 개발자 스토리: UAC(사용자 계정 컨트롤)에 대한 Windows Vista 응용 프로그램 개발 요구 사항](http://go.microsoft.com/fwlink/?LinkId=95452)을 참조하세요.  
+ 매니페스트는 응용 프로그램이 있는 응용 프로그램을 지정 실행 수준을 파일/레지스트리 가상화 Windows 사용자 계정 컨트롤 기능 적용 됩니다. 자세한 내용은 참조 [사용자 계정 컨트롤](/windows/access-protection/user-account-control/user-account-control-overview)합니다.  
   
  다음 조건 중 하나라도 참인 경우 응용 프로그램에 가상화가 적용됩니다.  
   
@@ -90,7 +71,6 @@ ms.lasthandoff: 07/28/2017
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [-nowin32manifest(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+ [/nowin32manifest (C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

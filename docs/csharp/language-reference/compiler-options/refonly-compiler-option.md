@@ -1,30 +1,24 @@
 ---
 title: "-refonly(C# 컴파일러 옵션)"
-ms.date: 2017-07-08
+ms.date: 07/08/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /refonly
-dev_langs:
-- CSharp
+f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81a2252314ef51b5dc01fddc081eb881aa4431a7
-ms.openlocfilehash: af99f7565a43dd28b6271611bc8690e7a2e51482
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="refonly-c-compiler-options"></a>/refonly(C# 컴파일러 옵션)
 
-**/refonly** /refonly 옵션은 구현 어셈블리 대신 참조 어셈블리가 기본 출력으로 출력되어야 함을 나타냅니다. `/refonly` 매개 변수는 참조 어셈블리가 실행될 수 없을 때 PDB 출력을 자동으로 사용하지 않도록 설정합니다.
+**/refonly** 옵션 참조 어셈블리를 대신 구현 어셈블리를 기본 출력으로 출력 해야 함을 나타냅니다. `/refonly` 매개 변수는 참조 어셈블리가 실행될 수 없을 때 PDB 출력을 자동으로 사용하지 않도록 설정합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -49,6 +43,5 @@ ms.lasthandoff: 08/16/2017
 `/refonly` 및 [`/refout`](refout-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
 
 ## <a name="see-also"></a>참고 항목
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

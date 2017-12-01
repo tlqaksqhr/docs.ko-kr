@@ -1,34 +1,35 @@
 ---
-title: "방법: 어셈블리를 사용하여 XSLT 변환 수행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "방법: 어셈블리를 사용하여 XSLT 변형 수행"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: f236296d604bc465973d17d63883e7b212b7f02d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 어셈블리를 사용하여 XSLT 변환 수행
-XSLT 컴파일러\(xsltc.exe\)에서는 XSLT 스타일시트를 컴파일하여 어셈블리를 생성합니다.  그런 다음 어셈블리를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=fullName> 메서드로 직접 전달할 수 있습니다.  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>방법: 어셈블리를 사용하여 XSLT 변형 수행
+XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 어셈블리를 생성합니다. 그런 다음 어셈블리를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드로 직접 전달할 수 있습니다.  
   
-### XML 및 XSLT 파일을 로컬 컴퓨터에 복사하려면  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>XML 및 XSLT 파일을 로컬 컴퓨터에 복사하려면  
   
 -   XSLT 파일을 로컬 컴퓨터에 복사하고 이름을 Transform.xsl로 지정합니다.  
   
-    ```  
+    ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
       xmlns:msxsl="urn:schemas-microsoft-com:xslt"  
       xmlns:user="urn:my-scripts">  
@@ -95,7 +96,7 @@ XSLT 컴파일러\(xsltc.exe\)에서는 XSLT 스타일시트를 컴파일하여 
   
 -   XML 파일을 로컬 컴퓨터에 복사하고 이름을 `books.xml`로 지정합니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0"?>  
     <catalog>  
        <book id="bk101">  
@@ -136,9 +137,9 @@ XSLT 컴파일러\(xsltc.exe\)에서는 XSLT 스타일시트를 컴파일하여 
     </catalog>  
     ```  
   
-### 스크립트가 활성화된 스타일시트를 컴파일하려면  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>스크립트가 활성화된 스타일시트를 컴파일하려면  
   
-1.  명령줄에서 다음 명령을 실행하면 이름이 `Transform.dll` 및 `Transform_Script1.dll`인 두 개의 어셈블리가 만들어집니다.  이것이 기본 동작이며, 아무 것도 지정하지 않으면 클래스 및 어셈블리 이름은 기본 스타일시트 이름으로 지정됩니다.  
+1.  명령줄에서 다음 명령을 실행하면 이름이 `Transform.dll` 및 `Transform_Script1.dll`인 두 개의 어셈블리가 만들어집니다. 이것이 기본 동작이며, 아무 것도 지정하지 않으면 클래스 및 어셈블리 이름은 기본 스타일시트 이름으로 지정됩니다.  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -150,11 +151,11 @@ XSLT 컴파일러\(xsltc.exe\)에서는 XSLT 스타일시트를 컴파일하여 
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### 코드를 컴파일할 때 컴파일된 어셈블리를 참조로 포함하려면  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>코드를 컴파일할 때 컴파일된 어셈블리를 참조로 포함하려면  
   
 1.  Visual Studio의 솔루션 탐색기에서 참조를 추가하거나 명령줄을 사용하여 어셈블리를 포함할 수 있습니다.  
   
-2.  C\#을 사용하는 명령줄의 경우 다음을 사용합니다.  
+2.  C#을 사용하는 명령줄의 경우 다음을 사용합니다.  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
@@ -166,7 +167,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### 사용자 코드에서 컴파일된 어셈블리를 사용하려면  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a>사용자 코드에서 컴파일된 어셈블리를 사용하려면  
   
 1.  다음 예제에서는 컴파일된 스타일시트를 사용하여 XSLT 변환을 실행하는 방법을 보여 줍니다.  
   
@@ -185,10 +186,10 @@ xslt.Load(typeof(Transform))
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- 으로 대체합니다.  Assembly.Load 메서드에 대한 자세한 내용은 <xref:System.Reflection.Assembly.Load%2A>를 참조하세요.  
+ 으로 대체합니다. Assembly.Load 메서드에 대한 자세한 내용은 <xref:System.Reflection.Assembly.Load%2A>를 참조하세요.  
   
-## 참고 항목  
- <xref:System.Xml.Xsl.XslCompiledTransform>   
- [XSLT 컴파일러\(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)   
- [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)   
- [csc.exe를 사용한 명령줄 빌드](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
+ [XSLT 컴파일러 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+ [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

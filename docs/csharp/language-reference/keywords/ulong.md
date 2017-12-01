@@ -1,41 +1,22 @@
 ---
 title: "ulong(C# 참조)"
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ulong_CSharpKeyword
 - ulong
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- ulong keyword [C#]
+helpviewer_keywords: ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2058d9f6a228b13938fe08d7e2fb11e3b9f4600a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c2da253e4da7a5d6cfa71116e4fcba7816441e92
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ulong-c-reference"></a>ulong(C# 참조)
 
@@ -43,26 +24,30 @@ ms.lasthandoff: 07/28/2017
   
 |형식|범위|크기|.NET Framework 형식|  
 |----------|-----------|----------|-------------------------|  
-|`ulong`|0 ~ 18,446,744,073,709,551,615|부호 없는 64비트 정수|<xref:System.UInt64?displayProperty=fullName>|  
+|`ulong`|0 ~ 18,446,744,073,709,551,615|부호 없는 64비트 정수|<xref:System.UInt64?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>리터럴  
 
-10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `ulong` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `ulong` 범위를 벗어나는 경우(즉 <xref:System.UInt64.MinValue?displayProperty=fullName>보다 작거나 <xref:System.UInt64.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `ulong` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `ulong` 범위를 벗어나는 경우(즉 <xref:System.UInt64.MinValue?displayProperty=nameWithType>보다 작거나 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>보다 큰 경우) 컴파일 오류가 발생합니다. 
 
 다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 7,934,076,125와 같은 정수가 `ulong` 값에 할당됩니다.  
   
-[!code-cs[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
+[!code-csharp[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
 
 > [!NOTE] 
 > `0x` 또는 `0X` 접두사를 사용하여 16진수 리터럴을 나타내고, `0b` 또는 `0B` 접두사를 사용하여 이진 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다. 
 
-C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기호로 사용하여 가독성을 향상할 수도 있습니다.
+부터 C# 7, 몇 가지 기능이 추가 된 가독성을 향상 시키기 합니다. 
+ - C# 7.0 밑줄 문자를 사용할 수 있습니다. `_`,으로 숫자 구분 기호입니다.
+ - C# 7.2 허용 `_` 접두사 뒤에 대 한 이진 또는 16 진수 리터럴, 자리 구분 기호로 사용할 수 있습니다. 10 진수 리터럴은 선행 밑줄이에 허용 되지 않습니다.
 
-[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+몇 가지 예는 다음과 같습니다.
+
+[!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- 형식을 나타내는 접미사가 정수 리터럴에 포함되어 있을 수도 있습니다. `UL` 또는 `ul` 접미사는 숫자 리터럴을 `ulong` 값으로 명확하게 식별합니다. 리터럴 값이 <xref:System.Int64.MaxValue?displayProperty=fullName>를 초과할 경우 `L` 접미사는 `ulong`을 나타냅니다. 또한 리터럴 값이 <xref:System.UInt32.MaxValue?displayProperty=fullName>를 초과할 경우 `U` 또는 `ulong` 접미사는 `u`을 나타냅니다. 다음 예제에서는 `ul` 접미사를 사용하여 정수(long)를 나타냅니다.
+ 형식을 나타내는 접미사가 정수 리터럴에 포함되어 있을 수도 있습니다. `UL` 또는 `ul` 접미사는 숫자 리터럴을 `ulong` 값으로 명확하게 식별합니다. 리터럴 값이 <xref:System.Int64.MaxValue?displayProperty=nameWithType>를 초과할 경우 `L` 접미사는 `ulong`을 나타냅니다. 또한 리터럴 값이 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>를 초과할 경우 `U` 또는 `ulong` 접미사는 `u`을 나타냅니다. 다음 예제에서는 `ul` 접미사를 사용하여 정수(long)를 나타냅니다.
  
-[!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
+[!code-csharp[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
 정수 리터럴에 접미사가 없는 경우 해당 형식은 값이 표현될 수 있는 다음 형식 중 첫 번째 형식입니다. 
 
@@ -115,12 +100,11 @@ ulong y = (ulong)3.0;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.UInt64>   
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.UInt64>  
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

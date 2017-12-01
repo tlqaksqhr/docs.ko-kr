@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1785c222238a58893edf71352839b40ea8db29f7
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 208ea77318d67900eb059606b8ecd8e0e3b203a0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 및 번외 릴리스
 .NET Framework는 기존의 데스크톱 및 웹 응용 프로그램뿐만 아니라 Windows Phone 및 Windows 스토어 앱과 같은 서로 다른 플랫폼을 수용하고 코드 재사용을 최대화하는 방향으로 발전하고 있습니다. 정기적인 .NET Framework 릴리스 이외에 새로운 기능인 OOB(Out Of Band)도 릴리스하여 플랫폼 간 개발을 향상시키거나 새 기능을 도입합니다. 이 항목에서는 .NET Framework 및 해당 OOB 릴리스의 향후 방향에 대해 설명합니다.  
@@ -30,7 +28,7 @@ ms.lasthandoff: 07/28/2017
  응용 프로그램에서 OOB 기능을 사용하면 OOB 어셈블리가 응용 프로그램 패키지와 함께 배포되므로 사용자는 응용 프로그램을 실행하기 위해 최신 버전의 .NET Framework를 설치할 필요가 없습니다.  
   
 ## <a name="how-oob-packages-are-distributed"></a>OOB 패키지 분산 방식  
- 핵심 CLR(공용 언어 런타임) 구성 요소에 대한 OOB 릴리스는 오픈 소스 Visual Studio 확장인 [NuGet 패키지 관리자](http://nuget.codeplex.com/)를 통해 제공됩니다. NuGet을 사용하면 Visual Studio의 솔루션 탐색기에서 간단하게 라이브러리를 찾아보고 해당 라이브러리를 .NET Framework 프로젝트에 추가할 수 있습니다. NuGet은 Visual Studio 2012부터 Visual Studio의 모든 버전에 포함되어 있습니다. NuGet이 설치되어 있는지 확인하려면 Visual Studio **도구** 메뉴에서 **라이브러리 패키지 관리자**를 찾습니다. NuGet이 설치되어 있지 않은 경우  
+핵심 공용 언어 런타임 (CLR) 구성 요소에 대 한 OOB 릴리스를 통해 제공 되는 [NuGet](https://www.nuget.org/)은.NET에 대 한 패키지 관리자입니다. NuGet을 사용하면 Visual Studio의 솔루션 탐색기에서 간단하게 라이브러리를 찾아보고 해당 라이브러리를 .NET Framework 프로젝트에 추가할 수 있습니다. NuGet은 Visual Studio 2012부터 Visual Studio의 모든 버전에 포함되어 있습니다. NuGet이 설치되어 있는지 확인하려면 Visual Studio **도구** 메뉴에서 **라이브러리 패키지 관리자**를 찾습니다. NuGet이 설치되어 있지 않은 경우  
   
 1.  Visual Studio 메뉴 모음에서 **도구**, **확장명 및 업데이트**를 선택합니다(Visual Studio 2010에서는 **확장명 관리자** 선택.)  
   
@@ -66,4 +64,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [시작](../../../docs/framework/get-started/index.md)
-

@@ -1,45 +1,26 @@
 ---
 title: "-baseaddress(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /dllbase
-dev_langs:
-- CSharp
+f1_keywords: /dllbase
 helpviewer_keywords:
 - baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 - -baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7cd3269754f783ab8b26683f5215aa81825673e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 91193ae794957b5045a225614d6322e86d18d459
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="baseaddress-c-compiler-options"></a>/baseaddress(C# 컴파일러 옵션)
-**/baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다. 이 옵션을 사용하는 시기와 이유에 대한 자세한 내용은 [Improving Application Startup Time](http://go.microsoft.com/fwlink/?LinkId=107043)(응용 프로그램 시작 시간 향상)과 [Larry Osterman's WebLog](http://go.microsoft.com/fwlink/?LinkId=107044)를 참조하세요.  
+**/baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다. 이 옵션을 사용 하는 이유 및 시기에 대 한 자세한 내용은 참조 [Larry Osterman 웹 로그](http://go.microsoft.com/fwlink/?LinkId=107044)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,7 +52,6 @@ ms.lasthandoff: 07/28/2017
      프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=fullName>   
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>  
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

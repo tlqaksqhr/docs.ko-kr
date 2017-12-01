@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
+ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
-ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
@@ -34,7 +32,11 @@ ms.lasthandoff: 08/17/2017
 1. 명령 프롬프트에 [dotnet new console](../../core/tools/dotnet-new.md)을 입력하여 새로운 .NET Core 프로젝트를 만듭니다.
 1. 예제의 코드를 복사한 후 코드 편집기에 붙여 넣습니다.
 1. 명령줄에서 [dotnet restore](../../core/tools/dotnet-restore.md) 명령을 입력하여 프로젝트의 종속성을 로드하거나 복원합니다.
+
+  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 1. [dotnet run](../../core/tools/dotnet-run.md) 명령을 입력하여 예제를 컴파일하고 실행합니다.
+
 
 ## <a name="background-what-is-inheritance"></a>배경 지식: 상속이란?
 
@@ -54,15 +56,15 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 - [개인](../language-reference/keywords/private.md) 멤버는 기본 클래스에 중첩된 파생 클래스에서만 표시됩니다. 그렇지 않으면 파생 클래스에서 표시되지 않습니다. 다음 예제에서 `A.B`는 `A`에서 파생되는 중첩 클래스이고 `C`는 `A`에서 파생됩니다. 개인 `A.value` 필드는 A.B에 표시됩니다. 그러나 `C.GetValue` 메서드에서 주석을 제거하고 예제를 컴파일하려고 하면 컴파일러 오류 CS0122: "보호 수준 때문에 'A.value'에 액세스할 수 없습니다."가 표시됩니다.
 
-  [!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
 - [Protected](../language-reference/keywords/protected.md) 멤버는 파생 클래스에서만 표시됩니다.
 
-- [Internal](../language-reference/keywords/protected.md) 멤버는 기본 클래스와 동일한 어셈블리에 있는 파생 클래스에서만 표시됩니다. 기본 클래스와는 다른 어셈블리에 있는 파생 클래스에서는 표시되지 않습니다.
+- [Internal](../language-reference/keywords/internal.md) 멤버는 기본 클래스와 동일한 어셈블리에 있는 파생 클래스에서만 표시됩니다. 기본 클래스와는 다른 어셈블리에 있는 파생 클래스에서는 표시되지 않습니다.
 
-- [Public] (../language-reference/keywords/protected.md) 멤버는 파생 클래스에서 표시되고 파생 클래스의 공용 인터페이스에 속합니다. 상속된 Public 멤버는 파생 클래스에 정의된 것처럼 호출할 수 있습니다. 다음 예제에서 클래스 `A`는 `Method1`이라는 메서드를 정의하고 클래스 `B`는 클래스 `A`에서 상속합니다. 그런 다음 이 예제에서는 마치 `B`에 대한 인스턴스 메서드인 것처럼 `Method1`을 호출합니다.
+- [공용](../language-reference/keywords/public.md) 멤버가 파생된 클래스에서 볼 수 있으며 파생된 클래스의 공용 인터페이스의 일부입니다. 상속된 Public 멤버는 파생 클래스에 정의된 것처럼 호출할 수 있습니다. 다음 예제에서 클래스 `A`는 `Method1`이라는 메서드를 정의하고 클래스 `B`는 클래스 `A`에서 상속합니다. 그런 다음 이 예제에서는 마치 `B`에 대한 인스턴스 메서드인 것처럼 `Method1`을 호출합니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
 파생 클래스는 대체 구현을 제공하여 상속된 멤버를 *재정의*할 수도 있습니다. 멤버를 재정의하기 위해서는 기본 클래스의 멤버가 [virtual](../language-reference/keywords/virtual.md) 키워드로 표시되어야 합니다. 기본적으로 기본 클래스 멤버는 `virtual`로 표시되지 않으며 재정의할 수 없습니다. 다음 예제와 같이 비가상 멤버를 재정의하려고 하면 컴파일러 오류 CS0506: "<member>: 상속된 ‘<member>’ 멤버는 virtual, abstract 또는 override로 표시되지 않았으므로 재정의할 수 없습니다.”가 표시됩니다.
 
@@ -117,11 +119,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 암시적 상속의 의미를 살펴보기 위해 빈 클래스 정의에 해당하는 새 클래스 `SimpleClass`를 정의해 보겠습니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
 그런 후 리플렉션(형식이 메타데이터를 검사하여 해당 형식에 대한 정보 획득)을 사용하여 `SimpleClass` 형식에 속하는 멤버의 목록을 가져올 수 있습니다. `SimpleClass` 클래스에서 어떤 멤버도 정의하지 않았지만 예제의 출력에는 실제로 9개의 멤버가 있는 것으로 나타납니다. 이러한 멤버 중 하나는 C# 컴파일러에서 `SimpleClass` 형식에 대해 자동으로 제공하는 매개 변수 없는(또는 기본) 생성자입니다. 나머지 8개 멤버는 .NET 형식 시스템의 모든 클래스 및 인터페이스가 마지막에 암시적으로 상속하는 형식인 <xref:System.Object>의 멤버입니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 <xref:System.Object> 클래스에서 암시적으로 상속되므로 다음 메서드를 `SimpleClass` 클래스에서 사용할 수 있습니다.
 
@@ -137,9 +139,9 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 보호된 <xref:System.Object.MemberwiseClone%2A> 메서드: 현재 개체의 단순 복제를 만듭니다.
 
-암시적 상속으로 인해, `SimpleClass` 개체에서 상속된 모든 멤버를 실제로 `SimpleClass` 클래스에 정의된 멤버인 것처럼 호출할 수 있습니다. 예를 들어 다음 예제에서는 `SimpleClass` 가 <xref:System.Object> 에서 상속하는 `SimpleClass.ToString` 메서드를 호출합니다.
+암시적 상속으로 인해, `SimpleClass` 개체에서 상속된 모든 멤버를 실제로 `SimpleClass` 클래스에 정의된 멤버인 것처럼 호출할 수 있습니다. 예를 들어 다음 예제에서는 `SimpleClass`가 <xref:System.Object>에서 상속하는 `SimpleClass.ToString` 메서드를 호출합니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
 다음 표에는 C#으로 만들 수 있는 형식 및 이러한 형식이 암시적으로 상속하는 형식 범주가 나와 있습니다. 각 기본 형식은 암시적으로 파생된 형식에 대한 상속을 통해 다른 멤버 집합을 사용할 수 있게 합니다.
 
@@ -157,13 +159,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 > [!NOTE]
 > 클래스 또는 구조체는 하나 이상의 인터페이스를 구현할 수 있습니다. 인터페이스 구현은 종종 단일 상속을 위한 해결 방법 또는 구조체에 상속을 사용하는 방법으로 제공되지만, 인터페이스 및 해당 구현 형식 사이에서 상속과는 다른 관계(“~할 수 있다(can do)” 관계)를 나타내는 데 사용됩니다. 인터페이스는 해당 인터페이스를 구현 형식에서 사용 가능하게 만드는 기능 일부(예: 같은지 테스트하는 기능, 개체를 비교하거나 정렬하는 기능 또는 문화권별 구문 분석 및 서식 지정을 지원하는 기능)를 정의합니다.
 
-"~이다(is a)"는 형식과 해당 형식의 특정 인스턴스화 사이의 관계를 나타내기도 합니다. 다음 예제에서 `Automobile`은 세 가지 고유한 읽기 전용 속성, 즉 자동차의 제조업체인 `Make`, 자동차의 종류인 `Model`, 제조 연도인 `Year`를 갖는 클래스입니다. `Automobile` 클래스는 해당 인수가 속성 값에 할당되는 생성자를 가지며, <xref:System.Object.ToString%2A?displayProperty=fullName> 메서드를 재정의하여 `Automobile` 클래스가 아닌 `Automobile` 인스턴스를 고유하게 식별하는 문자열을 생성합니다.
+"~이다(is a)"는 형식과 해당 형식의 특정 인스턴스화 사이의 관계를 나타내기도 합니다. 다음 예제에서 `Automobile`은 세 가지 고유한 읽기 전용 속성, 즉 자동차의 제조업체인 `Make`, 자동차의 종류인 `Model`, 제조 연도인 `Year`를 갖는 클래스입니다. `Automobile` 클래스는 해당 인수가 속성 값에 할당되는 생성자를 가지며, <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드를 재정의하여 `Automobile` 클래스가 아닌 `Automobile` 인스턴스를 고유하게 식별하는 문자열을 생성합니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
 이 경우에서는 특정 자동차 제조업체 및 모델을 나타내기 위해 상속에 의존하지 않아야 합니다. 예를 들어 Packard Motor Car Company에서 제조한 자동차임을 나타내기 위해 `Packard` 형식을 정의할 필요가 없습니다. 대신 다음 예제와 같이 해당 클래스 생성자에 해당 값을 전달한 상태로 `Automobile` 개체를 만들어 이러한 사실을 나타낼 수 있습니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
 상속을 기준으로 하는 ~이다(is a) 관계는 기본 클래스와 기본 클래스에 추가 멤버를 더하거나 기본 클래스에 없는 추가 기능을 필요로 하는 파생 클래스에 가장 잘 적용됩니다.
 
@@ -199,9 +201,9 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   이 예제에서는 파생 클래스를 `sealed`로 표시할 것입니다.
 
-다음 예제에서는 `Publication` 클래스에 대한 소스 코드와 `Publication.PublicationType` 속성이 반환하는 `PublicationType` 열거형을 보여 줍니다. <xref:System.Object> 에서 상속하는 멤버 외에 `Publication` 클래스는 다음과 같은 고유한 멤버 및 멤버 재정의를 정의합니다:
+다음 예제에서는 `Publication` 클래스에 대한 소스 코드와 `Publication.PublicationType` 속성이 반환하는 `PublicationType` 열거형을 보여 줍니다. <xref:System.Object>에서 상속하는 멤버 외에 `Publication` 클래스는 다음과 같은 고유한 멤버 및 멤버 재정의를 정의합니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
 - 생성자
 
@@ -234,7 +236,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - `ToString` 메서드 재정의
 
-  형식이 <xref:System.Object.ToString%2A?displayProperty=fullName> 메서드를 재정의하지 않으면 한 인스턴스를 다른 인스턴스와 구분하는 데 별로 도움이 되지 않는 형식의 정규화된 이름을 반환합니다. `Publication` 클래스는 <xref:System.Object.ToString%2A?displayProperty=fullName> 을 재정의하여 `Title` 속성의 값을 반환합니다.
+  형식이 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드를 재정의하지 않으면 한 인스턴스를 다른 인스턴스와 구분하는 데 별로 도움이 되지 않는 형식의 정규화된 이름을 반환합니다. `Publication` 클래스는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 을 재정의하여 `Title` 속성의 값을 반환합니다.
 
 다음 그림에서는 기본 `Publication` 클래스와 암시적으로 상속된 <xref:System.Object> 클래스 간 관계를 보여 줍니다.
 
@@ -244,7 +246,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 `Book` 클래스는 책을 특수한 출판문 형식으로 나타냅니다. 다음 예제에서는 `Book` 클래스에 대한 소스 코드를 보여 줍니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
 `Publication`에서 상속하는 멤버 외에 `Book` 클래스는 다음과 같은 고유한 멤버 및 멤버 재정의를 정의합니다.
 
@@ -264,11 +266,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - `SetPrice` 메서드: `bookPrice` 및 `ISOCurrencySymbol` 필드의 값을 설정합니다. 이러한 값은 `Price` 및 `Currency` 속성에서 반환됩니다.
 
-- `ToString` 메서드(`Publication`에서 상속), <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 및 <xref:System.Object.GetHashCode%2A> 메서드(<xref:System.Object>에서 상속)에 대해 재정의합니다.
+- `ToString` 메서드(`Publication`에서 상속), <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 및 <xref:System.Object.GetHashCode%2A> 메서드(<xref:System.Object>에서 상속)에 대해 재정의합니다.
 
-  재정의되지 않으면 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 메서드는 참조 같음 여부를 테스트합니다. 즉, 두 개체 변수는 같은 개체를 참조하는 경우 동일한 것으로 간주됩니다. 반면에 `Book` 클래스의 경우 두 `Book` 개체는 동일한 ISBN을 가질 경우 동일합니다.
+  재정의되지 않으면 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드는 참조 같음 여부를 테스트합니다. 즉, 두 개체 변수는 같은 개체를 참조하는 경우 동일한 것으로 간주됩니다. 반면에 `Book` 클래스의 경우 두 `Book` 개체는 동일한 ISBN을 가질 경우 동일합니다.
 
-  <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 메서드를 재정의할 경우 런타임이 효율적인 검색을 위해 해시된 컬렉션에 항목을 저장하는 데 사용하는 값을 반환하는 <xref:System.Object.GetHashCode%2A> 메서드도 재정의해야 합니다. 해시 코드는 같음 테스트와 일치하는 값을 반환해야 합니다. 두 `Book` 개체의 ISBN 속성이 같으면 `true`를 반환하도록 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>를 재정의했으므로 `ISBN` 속성이 반환하는 문자열의 <xref:System.String.GetHashCode%2A> 메서드를 호출하여 계산된 해시 코드를 반환합니다.
+  <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드를 재정의할 경우 런타임이 효율적인 검색을 위해 해시된 컬렉션에 항목을 저장하는 데 사용하는 값을 반환하는 <xref:System.Object.GetHashCode%2A> 메서드도 재정의해야 합니다. 해시 코드는 같음 테스트와 일치하는 값을 반환해야 합니다. 두 `Book` 개체의 ISBN 속성이 같으면 `true`를 반환하도록 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>를 재정의했으므로 `ISBN` 속성이 반환하는 문자열의 <xref:System.String.GetHashCode%2A> 메서드를 호출하여 계산된 해시 코드를 반환합니다.
 
 다음 그림에서는 `Book` 클래스와 해당 기본 클래스인 `Publication` 클래스 간 관계를 보여 줍니다.
 
@@ -276,7 +278,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 이제 다음과 같이 `Book` 개체를 인스턴스화하고, 고유 및 상속된 멤버를 둘 다 호출하고, 형식 `Publication` 또는 형식 `Book`의 매개 변수를 요구하는 메서드에 인수로 전달할 수 있습니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>추상 기본 클래스 및 파생 클래스 디자인
 <a name="abstract"></a>
@@ -285,20 +287,19 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 예를 들어 닫힌 2차원 기하 도형 각각에 2개의 속성, 즉 도형의 내부 크기를 나타내는 area 속성과 도형 가장자리의 거리를 나타내는 perimeter 속성이 포함되어 있습니다. 그러나 이러한 속성이 계산되는 방식은 전적으로 도형에 따라 결정됩니다. 예를 들어 원의 둘레(또는 원주)를 계산하는 공식은 삼각형의 둘레를 계산하는 공식과 완전히 다릅니다.
 
-다음 예제에서는 두 속성 `Area` 및 `Perimeter`를 정의하는 `Shape`라는 추상 기본 클래스를 정의합니다. 클래스를 [abstract](../language-reference/keywords/abstract.md) 키워드로 표시하는 것 외에, 각 인스턴스 멤버도 [abstract](../language-reference/keywords/abstract.md) 키워드로 표시됩니다. 이 경우 `Shape` 도 정규화된 이름은 아닌 형식의 이름을 반환하도록 <xref:System.Object.ToString%2A?displayProperty=fullName> 메서드를 재정의합니다. 아울러 두 정적 멤버 `GetArea` 및 `GetPerimeter`를 정의합니다. 이러한 정적 멤버는 호출자가 파생 클래스 인스턴스의 면적 및 둘레를 쉽게 검색할 수 있도록 합니다. 파생 클래스의 인스턴스를 이러한 메서드 중 하나로 전달하면 런타임은 파생 클래스의 메서드 재정의를 호출합니다.
+다음 예제에서는 두 속성 `Area` 및 `Perimeter`를 정의하는 `Shape`라는 추상 기본 클래스를 정의합니다. 클래스를 [abstract](../language-reference/keywords/abstract.md) 키워드로 표시하는 것 외에, 각 인스턴스 멤버도 [abstract](../language-reference/keywords/abstract.md) 키워드로 표시됩니다. 이 경우 `Shape` 도 정규화된 이름은 아닌 형식의 이름을 반환하도록 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 아울러 두 정적 멤버 `GetArea` 및 `GetPerimeter`를 정의합니다. 이러한 정적 멤버는 호출자가 파생 클래스 인스턴스의 면적 및 둘레를 쉽게 검색할 수 있도록 합니다. 파생 클래스의 인스턴스를 이러한 메서드 중 하나로 전달하면 런타임은 파생 클래스의 메서드 재정의를 호출합니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
 그러면 `Shape`에서 특정 도형을 나타내는 일부 클래스를 파생할 수 있습니다. 다음 예제에서는 3개의 클래스인 `Triangle`, `Rectangle` 및 `Circle`을 정의합니다. 각각은 해당 특정 도형에 고유한 수식을 사용하여 면적 및 둘레를 계산합니다. 일부 파생 클래스는 나타내는 도형마다 고유한 `Rectangle.Diagonal` 및 `Circle.Diameter`와 같은 속성도 정의합니다.
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
 다음 예제에서는 `Shape`에서 파생된 개체를 사용합니다. 또한 `Shape`에서 파생된 개체의 배열을 인스턴스화하고 반환 `Shape` 속성 값을 래핑하는 `Shape` 클래스의 정적 메서드를 호출합니다. 런타임에서는 파생 형식의 재정의된 속성에서 값을 검색합니다. 또한 이 예제에서는 배열의 각 `Shape` 개체를 해상 파생 형식으로 캐스팅하고, 캐스팅이 성공하면 `Shape`의 해당 특정 하위 클래스 속성을 검색합니다. 
 
-[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
 ## <a name="see-also"></a>참고 항목
 
 [클래스 및 개체](../tour-of-csharp/classes-and-objects.md)   
 [상속(C# 프로그래밍 가이드)](../programming-guide/classes-and-structs/inheritance.md)
-

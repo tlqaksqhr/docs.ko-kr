@@ -8,30 +8,26 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
+ms.openlocfilehash: f79ae387b123527b3795a2e12a68bd153b308f81
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: fe9d044efae87f212c620b9fa8c02221ca475d71
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
-
-# <a name="install-the-net-framework-on-windows-xp"></a>Windows XP에 .NET Framework 설치
+# <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP 및 Windows Server 2003에서.NET Framework를 설치 합니다.
 
 > [!NOTE]
-> Windows XP는 Microsoft에서 더 이상 지원되지 않습니다. 지원되며 최신 버전의 .NET Framework를 지원하는 Windows 10으로 업그레이드하는 것이 좋습니다. 이 문서는 유용한 문제 해결 가이드로만 제공됩니다.
+> Windows XP는 Microsoft에서 더 이상 지원되지 않습니다. .NET Framework의 최신 버전을 포함 하 고 지원 되는 Windows 10으로 업그레이드 하는 것이 좋습니다. 이 문서는 유용한 문제 해결 가이드로만 제공됩니다.
 
-Windows XP에서 앱을 실행하려면 .NET Framework가 필요할 수 있습니다. 다음 지침이 도움이 될 수 있습니다. 지침은 필요한 .NET Framework 버전에 따라 다릅니다.
+.NET Framework가 Windows에서 많은 응용 프로그램을 실행 하려면 필요 합니다. 설치 하려면 다음 지침을 사용할 수 있습니다. 응용 프로그램을 실행 하 고 컴퓨터에 다음 대화 상자를 표시 한 후이 페이지에 도달한 메시지가 될 수 있습니다.
 
-## <a name="net-framework-45-and-later"></a>.NET Framework 4.5 이상
+![이 응용 프로그램을 시작할 수 없습니다.](./media/this-application-could-not-be-started.png)
 
-Windows XP에는 .NET Framework 4.5 이상을 설치할 수 없습니다. 이후 버전의 .NET Framework를 사용하려면 이후 Windows 버전으로 업그레이드해야 합니다.
-
-.NET Framework 4.7은 [Windows 10 크리에이터스 업데이트](https://www.microsoft.com/software-download/windows10)에 포함됩니다.
+이러한 지침은 필요한.NET Framework 버전을 설치 하는 데 도움이 됩니다. [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) 은 최신 버전입니다. Windows XP 및 Windows Server 2003에서 지원 되지 않습니다. 에 포함 되어는 [Windows 10 년 작성자 업데이트](https://www.microsoft.com/software-download/windows10) 및 [Windows Server 2016 버전 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)합니다.
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-Windows XP에는 [.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834)을 설치할 수 있습니다. .NET Framework 4.0.3을 사용하려면 먼저 [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834)를 설치해야 합니다. 이러한 .NET Framework 버전은 둘 다 Microsoft에서 더 이상 지원되지 않습니다.
+[.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834) 최신 지원 되는 버전이.NET Framework Windows XP 및 Windows Server 2003에서 합니다. .NET Framework 4.0.3을 사용하려면 먼저 [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834)를 설치해야 합니다. 이러한 .NET Framework 버전은 둘 다 Microsoft에서 더 이상 지원되지 않습니다.
 
 ## <a name="net-framework-4"></a>.NET Framework 4
 
@@ -43,7 +39,8 @@ Windows XP에는 [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213
 
 .NET Framework 3.5는 .NET Framework 1.0~3.5용으로 빌드된 응용 프로그램을 실행하는 데 사용될 수 있습니다.
 
-## <a name="help"></a>도움말
+## <a name="see-also"></a>참고 항목
 
-설치된 .NET Framework의 정확한 버전을 확인할 수 없는 경우 [Microsoft에 지원을 문의](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework)할 수 있습니다.
-
+[.NET Framework 다운로드](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
+[차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)   
+[개발자를 위한.NET Framework를 설치 합니다.](guide-for-developers.md)

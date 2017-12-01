@@ -1,33 +1,34 @@
 ---
-title: "스타일시트 매개 변수 및 확장 개체의 XsltArgumentList | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "스타일시트 매개 변수 및 확장명 개체의 XsltArgumentList"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: d4741551b1e6dd2694a0bd65e65a15953f808e59
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 스타일시트 매개 변수 및 확장 개체의 XsltArgumentList
-<xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT\(Extensible Stylesheet Language for Transformations\) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다.  이러한 매개 변수와 확장 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>스타일시트 매개 변수 및 확장명 개체의 XsltArgumentList
+<xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT(Extensible Stylesheet Language for Transformations) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 및 <xref:System.Xml.Xsl.XsltArgumentList> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다.  <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT 변환을 수행할 수 있습니다.  자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)를 참조하세요.  
+>  <xref:System.Xml.Xsl.XslTransform> 및 <xref:System.Xml.Xsl.XsltArgumentList> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT 변환을 수행할 수 있습니다. 참조 [XslCompiledTransform 클래스를 사용 하 여](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [마이그레이션 XslTransform 클래스에서](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) 자세한 정보에 대 한 합니다.  
   
- <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT 매개 변수와 XSLT 확장 개체가 포함되어 있습니다.  이러한 매개 변수와 확장 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
+ <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
   
  포함 스크립트를 사용하는 대신 개체를 전달하면 다음과 같은 이점을 활용할 수 있습니다.  
   
@@ -39,31 +40,31 @@ caps.handback.revision: 3
   
 -   <xref:System.Xml.XPath.XPathNodeIterator>를 사용하여 스타일시트에 결과 트리 조각을 전달할 수 있습니다.  
   
-## XSLT 스타일시트 매개 변수  
- <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList>에 XSLT 매개 변수를 추가합니다.  그러면 정규화된 이름과 네임스페이스 URI\(Uniform Resource Identifier\)가 매개 변수 개체와 연결됩니다.  
+## <a name="xslt-style-sheet-parameters"></a>XSLT 스타일시트 매개 변수  
+ <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다. 그러면 정규화된 이름과 네임스페이스 URI(Uniform Resource Identifier)가 매개 변수 개체와 연결됩니다.  
   
- 매개 변수 개체는 W3C\(World Wide Web 컨소시엄\) 형식과 일치해야 합니다.  다음 표에서는 해당하는 W3C 형식과 해당 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스\(형식\), 그리고 W3C 형식이 XPath\(XML Path Language\) 형식인지, 또는 XSLT 형식인지를 보여 줍니다.  
+ 매개 변수 개체는 W3C(World Wide Web 컨소시엄) 형식과 일치해야 합니다. 다음 표에서는 해당하는 W3C 형식과 해당 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스(형식), 그리고 W3C 형식이 XPath(XML Path Language) 형식인지, 또는 XSLT 형식인지를 보여 줍니다.  
   
-|W3C 형식|해당 .NET Framework 클래스\(형식\)|XPath 형식 또는 XSLT 형식|  
-|------------|---------------------------------|-------------------------|  
+|W3C 형식|해당.NET Framework 클래스 (형식)|XPath 형식 또는 XSLT 형식|  
+|--------------|----------------------------------------------|-----------------------------|  
 |문자열|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
 |숫자|System.Double|XPath|  
 |결과 트리 조각|System.Xml.XPath.XPathNavigator|XSLT|  
 |노드 집합|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- 매개 변수 개체가 위 클래스에 해당하지 않으면 Double 또는 String 형식이 적절히 적용됩니다.  Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 및 Decimal 형식은 Double 형식이 되며  기타 모든 형식은 `ToString` 메서드를 사용하여 String 형식이 됩니다.  
+ 매개 변수 개체가 위 클래스에 해당하지 않으면 Double 또는 String 형식이 적절히 적용됩니다. Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 및 Decimal 형식은 Double 형식이 되며 기타 모든 형식은 `ToString` 메서드를 사용하여 String 형식이 됩니다.  
   
-#### XSLT 매개 변수를 사용하려면 다음 작업을 수행해야 합니다.  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>XSLT 매개 변수를 사용하려면 다음 작업을 수행해야 합니다.  
   
-1.  <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>을 사용하여 <xref:System.Xml.Xsl.XsltArgumentList>를 만들고 개체를 추가합니다.  
+1.  <xref:System.Xml.Xsl.XsltArgumentList>을 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>를 만들고 개체를 추가합니다.  
   
 2.  스타일시트에서 매개 변수를 호출합니다.  
   
 3.  <xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.  
   
-### 예제  
- 다음 예제에서는 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 메서드를 사용하여 계산된 할인 기간을 유지하는 매개 변수를 만듭니다.  할인 기간은 주문 날짜로부터 20일 동안으로 계산됩니다.  
+### <a name="example"></a>예제  
+ 다음 예제에서는 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 메서드를 사용하여 계산된 할인 기간을 유지하는 매개 변수를 만듭니다. 할인 기간은 주문 날짜로부터 20일 동안으로 계산됩니다.  
   
 ```vb  
 Imports System  
@@ -104,7 +105,6 @@ Public class Sample
   
   End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -146,10 +146,10 @@ public class Sample
 }  
 ```  
   
-### 입력  
+### <a name="input"></a>입력  
  order.xml  
   
-```  
+```xml  
 <!--Represents a customer order-->  
 <order>  
   <book ISBN='10-861003-324'>  
@@ -165,7 +165,7 @@ public class Sample
   
  discount.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
   <xsl:param name="discount"/>  
   <xsl:template match="/">  
@@ -178,33 +178,33 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### 출력  
+### <a name="output"></a>출력  
   
-```  
+```xml  
 <order>  
    <total>36.9</total>   
    15% discount if paid by: 5/6/2001 5:01:15 PM   
 </order>  
 ```  
   
-## XSLT 확장 개체  
- <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList>에 XSLT 확장 개체를 추가합니다.  이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.  
+## <a name="xslt-extension-objects"></a>XSLT 확장 개체  
+ <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>에 XSLT 확장 개체를 추가합니다. 이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.  
   
- 개체가 추가될 때 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>의 호출자는 보안 정책에서 완전히 신뢰되어야 합니다.  호출자가 일부 신뢰되는 경우에는 추가 작업이 실패합니다.  
+ 개체가 추가될 때 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>의 호출자는 보안 정책에서 완전히 신뢰되어야 합니다. 호출자가 일부 신뢰되는 경우에는 추가 작업이 실패합니다.  
   
- 개체가 추가되더라도 성공적으로 실행된다고 보장할 수는 없습니다.  <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드가 호출되면 <xref:System.Xml.Xsl.XslTransform.Load%2A> 시 제공된 증명 정보에 따라 권한이 판별되어 해당 권한 집합이 전체 변환 프로세스에 지정됩니다.  확장 개체가 해당 권한 집합에 없는 권한을 요구하는 작업을 시작하려고 하면 예외가 throw됩니다.  
+ 개체가 추가되더라도 성공적으로 실행된다고 보장할 수는 없습니다. <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드가 호출되면 <xref:System.Xml.Xsl.XslTransform.Load%2A> 시 제공된 증명 정보에 따라 권한이 판별되어 해당 권한 집합이 전체 변환 프로세스에 지정됩니다. 확장 개체가 해당 권한 집합에 없는 권한을 요구하는 작업을 시작하려고 하면 예외가 throw됩니다.  
   
  확장 개체에서 반환된 데이터 형식은 네 가지 기본 XPath 데이터 형식인 숫자, 문자열, 부울 및 노드 집합 중 하나입니다.  
   
-#### XSLT 확장 개체를 사용하려면 다음 작업을 수행해야 합니다.  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>XSLT 확장 개체를 사용하려면 다음 작업을 수행해야 합니다.  
   
-1.  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList>를 만들고 확장 개체를 추가합니다.  
+1.  <xref:System.Xml.Xsl.XsltArgumentList>를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>를 만들고 확장 개체를 추가합니다.  
   
 2.  스타일시트에서 확장 개체를 호출합니다.  
   
 3.  <xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.  
   
-### 예제  
+### <a name="example"></a>예제  
  다음 예제에서는 반지름이 주어진 원의 원주를 계산합니다.  
   
 ```vb  
@@ -257,7 +257,6 @@ Public Class Sample
     End Function  
   End Class  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -315,10 +314,10 @@ public class Sample
 }  
 ```  
   
-### 입력  
+### <a name="input"></a>입력  
  number.xml  
   
-```  
+```xml  
 <?xml version='1.0'?>  
 <data>  
   <circle>  
@@ -332,7 +331,7 @@ public class Sample
   
  circle.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
     xmlns:myObj="urn:myObj">  
   
@@ -351,7 +350,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### 출력  
+### <a name="output"></a>출력  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -372,5 +371,5 @@ public class Sample
   
  `</circles>`  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

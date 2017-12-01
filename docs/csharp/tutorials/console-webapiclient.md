@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
+ms.openlocfilehash: bc74b644f432071dc2483e8df3e0938c9e9ee025
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 8c747f65dca44fcca25fe67dccaa897561eefcc7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
-
 # <a name="rest-client"></a>REST 클라이언트
 
 ## <a name="introduction"></a>소개
@@ -40,12 +38,12 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 응용 프로그램�
 ## <a name="create-the-application"></a>응용 프로그램 만들기
 첫 번째 단계에서는 새 응용 프로그램을 만듭니다. 명령 프롬프트를 열고 응용 프로그램에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 명령 프롬프트에 명령 `dotnet new console`을 입력합니다. 이렇게 하면 기본 "Hello World" 응용 프로그램에 대한 시작 파일이 만들어집니다.
 
-파일 수정을 시작하기 전에 간단한 Hello World 응용 프로그램을 실행하는 단계를 진행해 보겠습니다. 응용 프로그램을 만든 후에 명령 프롬프트에서 `dotnet restore`를 입력합니다. 이 명령은 NuGet 패키지 복원 프로세스를 실행합니다. NuGet은 .NET 패키지 관리자입니다. 이 명령은 프로젝트에 대한 누락된 종속성 중 하나를 다운로드합니다. 이 프로젝트는 새 프로젝트이므로 어떤 종속성도 없습니다. 따라서 처음 실행하면 .NET Core 프레임워크가 다운로드됩니다. 이 초기 단계 후에 새 종속 패키지를 추가하거나 종속성 버전을 업데이트할 때 `dotnet restore`를 실행하기만 하면 됩니다.  
+파일 수정을 시작하기 전에 간단한 Hello World 응용 프로그램을 실행하는 단계를 진행해 보겠습니다. 응용 프로그램을 만든 후 입력 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 명령 프롬프트입니다. 이 명령은 NuGet 패키지 복원 프로세스를 실행합니다. NuGet은 .NET 패키지 관리자입니다. 이 명령은 프로젝트에 대한 누락된 종속성 중 하나를 다운로드합니다. 이 프로젝트는 새 프로젝트이므로 어떤 종속성도 없습니다. 따라서 처음 실행하면 .NET Core 프레임워크가 다운로드됩니다. 이 초기 단계 후 하기만 하면 됩니다 실행 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 새 종속 패키지를 추가 하거나는 종속성 버전을 업데이트할 때.  
 
 패키지를 복원한 후 `dotnet build`를 실행합니다. 이렇게 하면 빌드 엔진이 실행되고 응용 프로그램이 만들어집니다. 마지막으로 `dotnet run`을 실행하여 응용 프로그램을 실행합니다.
 
 ## <a name="adding-new-dependencies"></a>새 종속성 추가
-.NET Core의 주요 디자인 목표 중 하나는 .NET Framework 설치의 크기를 최소화하는 것입니다. .NET Core 응용 프로그램 프레임워크에는 .NET Full Framework의 가장 일반적인 요소만 포함되어 있습니다. 응용 프로그램에 일부 기능을 위해 추가 라이브러리가 필요한 경우 C# 프로젝트(*.csproj) 파일에 해당 종속성을 추가합니다. 현재 예제에서는 응용 프로그램이 JSON 응답을 처리할 수 있도록 `System.Runtime.Serialization.Json` 패키지를 추가해야 합니다.
+.NET Core의 주요 디자인 목표 중 하나는 .NET Framework 설치의 크기를 최소화하는 것입니다. .NET Core 응용 프로그램 프레임워크에는 .NET Full Framework의 가장 일반적인 요소만 포함되어 있습니다. C# 프로젝트에 이러한 종속성을 추가할 응용 프로그램 기능 중 일부에 대 한 추가 라이브러리를 필요로 한다면 (\*.csproj) 파일입니다. 현재 예제에서는 응용 프로그램이 JSON 응답을 처리할 수 있도록 `System.Runtime.Serialization.Json` 패키지를 추가해야 합니다.
 
 `csproj` 프로젝트 파일을 엽니다. 파일의 첫 번째 줄은 다음과 같습니다.
 
@@ -62,13 +60,13 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 응용 프로그램�
 ```
 대부분의 코드 편집기는 이러한 라이브러리의 완성된 다양한 버전을 제공합니다. 일반적으로 추가하는 모든 패키지의 최신 버전을 사용하려고 할 것입니다. 그러나 모든 패키지의 버전이 일치하는지와 .NET Core 응용 프로그램 프레임워크의 버전도 일치하는지 확인해야 합니다.
 
-이러한 변경을 수행한 후에는 패키지가 시스템에 설치되도록 `dotnet restore`를 다시 실행해야 합니다.
+이러한 변경 내용을 변경한 후에 실행 해야 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 다시 시스템에 패키지가 설치 되어 있도록 합니다.
 
 ## <a name="making-web-requests"></a>웹 요청 수행
 이제 웹에서 데이터 검색을 시작할 준비가 되었습니다. 이 응용 프로그램에서는 [GitHub API](https://developer.github.com/v3/)에서 정보를 읽게 됩니다. [.NET Foundation](http://www.dotnetfoundation.org/) 상위 항목 아래에서 프로젝트에 대한 정보를 읽어 보겠습니다. 먼저 GitHub API에 대해 요청을 수행하여 프로젝트에 대한 정보를 검색합니다. 사용하게 될 끝점은 [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)입니다. 이러한 프로젝트에 대해 모든 정보를 검색하려고 하므로 HTTP GET 요청을 사용합니다.
 브라우저도 HTTP GET 요청을 사용하므로 해당 URL을 브라우저에 붙여 넣어 수신되고 처리 중인 정보를 볼 수 있습니다.
 
-@System.Net.Http.HttpClient 클래스를 사용하여 웹 요청을 수행합니다. 모든 최신 .NET API와 마찬가지로 @System.Net.Http.HttpClient 는 장기 실행되는 API에 대해 비동기 메서드만 지원합니다.
+<xref:System.Net.Http.HttpClient> 클래스를 사용하여 웹 요청을 수행합니다. 모든 최신 .NET API와 마찬가지로 <xref:System.Net.Http.HttpClient> 는 장기 실행되는 API에 대해 비동기 메서드만 지원합니다.
 먼저 비동기 메서드를 만들어 보겠습니다. 응용 프로그램의 기능을 빌드할 때 구현을 채웁니다. 먼저 프로젝트 디렉터리에서 `program.cs` 파일을 열고 `Program` 클래스에 다음 메서드를 추가합니다.
 
 ```csharp
@@ -78,7 +76,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-C# 컴파일러에서 @System.Threading.Tasks.Task 형식을 인식하도록 `using` 문을 `Main` 메서드 맨 위에 추가해야 합니다.
+C# 컴파일러에서 <xref:System.Threading.Tasks.Task> 형식을 인식하도록 `using` 문을 `Main` 메서드 맨 위에 추가해야 합니다.
 
 ```csharp
 using System.Threading.Tasks;
@@ -122,10 +120,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-이 첫 번째 버전은 dotnet foundation 조직의 모든 리포지토리 목록을 읽으라는 웹 요청을 수행합니다. (.NET Foundation의 gitHub ID는 'dotnet'임) 먼저, 새 @System.Net.Http.HttpClient 를 만듭니다. 이 개체는 요청 및 응답을 처리합니다. 다음에 나오는 몇 개의 줄은 이 요청에 대해 @System.Net.Http.HttpClient 를 설정합니다. 먼저 GitHub JSON 응답을 수락하도록 구성됩니다.
+이 첫 번째 버전은 dotnet foundation 조직의 모든 리포지토리 목록을 읽으라는 웹 요청을 수행합니다. (.NET Foundation의 gitHub ID는 'dotnet'임) 먼저, 새 <xref:System.Net.Http.HttpClient> 를 만듭니다. 이 개체는 요청 및 응답을 처리합니다. 다음에 나오는 몇 개의 줄은 이 요청에 대해 <xref:System.Net.Http.HttpClient> 를 설정합니다. 먼저 GitHub JSON 응답을 수락하도록 구성됩니다.
 이 형식은 단순히 JSON입니다. 다음 줄은 이 개체의 모든 요청에 사용자 에이전트 헤더를 추가합니다. 이러한 두 가지 헤더는 GitHub 서버 코드에서 확인되며 GitHub에서 정보를 검색하는 데 필요합니다.
 
-@System.Net.Http.HttpClient 를 구성한 후에는 웹 요청을 수행하고 응답을 검색합니다. 이 첫 번째 버전에서는 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname> 편의 메서드를 사용합니다. 이 편의 메서드는 웹 요청을 수행하는 작업을 시작한 다음, 요청이 반환될 때 응답 스트림을 읽고 해당 스트림에서 콘텐츠를 추출합니다. 응답의 본문은 @System.String 으로 반환됩니다. 작업이 완료되면 이 문자열을 사용할 수 있습니다. 
+<xref:System.Net.Http.HttpClient> 를 구성한 후에는 웹 요청을 수행하고 응답을 검색합니다. 이 첫 번째 버전에서는 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 편의 메서드를 사용합니다. 이 편의 메서드는 웹 요청을 수행하는 작업을 시작한 다음, 요청이 반환될 때 응답 스트림을 읽고 해당 스트림에서 콘텐츠를 추출합니다. 응답의 본문은 <xref:System.String> 으로 반환됩니다. 작업이 완료되면 이 문자열을 사용할 수 있습니다. 
 
 이 메서드의 마지막 두 줄은 해당 작업을 대기하고 콘솔에 응답을 출력합니다.
 앱을 빌드한 다음 실행합니다. `ProcessRepositories`에는 `await` 연산자가 포함되므로 이제 빌드 경고는 사라집니다. 길게 표시되는 JSON 형식 텍스트를 볼 수 있습니다.   
@@ -152,7 +150,7 @@ namespace WebAPIClient
 JSON serializer는 사용되는 클래스 형식에 포함되지 않은 정보를 무시합니다.
 이 특징 때문에 JSON 패킷의 필드 일부에만 작용하는 형식을 보다 쉽게 만들 수 있습니다.
 
-이제 형식을 만들었으므로 deserialize를 수행해 보겠습니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer 개체를 만들어야 합니다. 이 개체는 검색하는 JSON 패킷에 필요한 CLR 형식을 알고 있어야 합니다. GitHub의 패킷에는 리포지토리 시퀀스가 포함되어 있으므로 `List<repo>`가 올바른 형식입니다. `ProcessRepositories` 메서드에 다음 줄을 추가합니다.
+이제 형식을 만들었으므로 deserialize를 수행해 보겠습니다. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 개체를 만들어야 합니다. 이 개체는 검색하는 JSON 패킷에 필요한 CLR 형식을 알고 있어야 합니다. GitHub의 패킷에는 리포지토리 시퀀스가 포함되어 있으므로 `List<repo>`가 올바른 형식입니다. `ProcessRepositories` 메서드에 다음 줄을 추가합니다.
 
 ```csharp
 var serializer = new DataContractJsonSerializer(typeof(List<repo>));
@@ -165,16 +163,16 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 ```
 
-다음으로, serializer를 사용하여 JSON을 C# 개체로 변환합니다. `ProcessRepositories` 메서드의 @System.Net.Http.HttpClient.GetStringAsync(System.String) 호출을 다음 두 줄로 바꿉니다.
+다음으로, serializer를 사용하여 JSON을 C# 개체로 변환합니다. 호출을 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 에 프로그램 `ProcessRepositories` 메서드 다음의 두 줄으로:
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
 var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 ```
 
-이제 @System.Net.Http.HttpClient.GetStringAsync(System.String) 대신 @System.Net.Http.HttpClient.GetStreamAsync(System.String) 를 사용하게 됩니다. serializer는 해당 소스로 문자열 대신 스트림을 사용합니다. 위의 두 번째 줄에서 사용되는 C# 언어의 몇 가지 기능에 대해 설명해 보겠습니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 의 인수는 `await` 식입니다. 지금까지는 대입문의 일부로만 볼 수 있었지만 Await 식은 코드의 거의 모든 위치에 나올 수 있습니다.
+지금 사용 하는 알림 <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> 대신 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>합니다. serializer는 해당 소스로 문자열 대신 스트림을 사용합니다. 위의 두 번째 줄에서 사용되는 C# 언어의 몇 가지 기능에 대해 설명해 보겠습니다. 에 대 한 인수 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> 는 `await` 식입니다. 지금까지는 대입문의 일부로만 볼 수 있었지만 Await 식은 코드의 거의 모든 위치에 나올 수 있습니다.
 
-둘째로 `as` 연산자는 컴파일 타임 형식 `object`에서 `List<repo>`로 변환합니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 선언은 <xref:System.Object?displayProperty=fullName> 형식의 개체로 반환됨을 선언합니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 는 사용자가 생성 시에 지정한 형식을 반환합니다(이 자습서에서는 `List<repo>`). 변환이 성공하지 못하면 `as` 연산자는 예외를 throw하는 대신 `null`을 계산합니다.
+둘째로 `as` 연산자는 컴파일 타임 형식 `object`에서 `List<repo>`로 변환합니다. 선언 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> 형식의 개체를 반환 하는지 선언 <xref:System.Object?displayProperty=nameWithType>합니다. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)>형식을 반환 하는 것을 생성할 때 지정한 (`List<repo>` 이 자습서에서는). 변환이 성공하지 못하면 `as` 연산자는 예외를 throw하는 대신 `null`을 계산합니다.
 
 이 섹션이 거의 완료되었습니다. JSON을 C# 개체로 변환했으므로 각 리포지토리의 이름을 표시해 보겠습니다. 다음 줄을
 
@@ -202,7 +200,7 @@ foreach (var repo in repositories)
 <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
 ```
 
-파일을 저장한 후 `dotnet restore`를 실행하여 이 패키지를 검색합니다.
+실행 파일을 저장 한 후 `dotnet restore` ([참고 참조](#dotnet-restore-note))이이 패키지를 검색할 수 있습니다.
 
 다음으로 `repo.cs` 파일을 엽니다. 이름을 파스칼식 대/소문자를 사용하도록 이름을 변경하고 `Repository`라고 정확히 입력합니다. 여전히 JSON 'repo' 노드를 이 형식에 매핑하려고 하므로 `DataContract` 특성을 클래스 선언에 추가해야 합니다. 이 특성의 `Name` 속성을 이 형식에 매핑되는 JSON 노드의 이름으로 설정합니다.
 
@@ -211,7 +209,7 @@ foreach (var repo in repositories)
 public class Repository
 ```
 
-@System.Runtime.Serialization.DataContractAttribute 는  @System.Runtime.Serialization 네임스페이스의 멤버이므로 파일 맨 위에 해당 `using` 문을 추가해야 합니다.
+<xref:System.Runtime.Serialization.DataContractAttribute> 는  <xref:System.Runtime.Serialization> 네임스페이스의 멤버이므로 파일 맨 위에 해당 `using` 문을 추가해야 합니다.
 
 ```csharp
 using System.Runtime.Serialization;
@@ -227,7 +225,7 @@ var serializer = new DataContractJsonSerializer(typeof(List<Repository>));
 var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
 ```
 
-다음으로 @System.Runtime.Serialization.DataMemberAttribute 클래스를 사용하여 `name` 필드를 동일하게 변경해 보겠습니다. repo.cs에서 `name` 필드의 선언을 다음과 같이 변경합니다.
+다음으로 <xref:System.Runtime.Serialization.DataMemberAttribute> 클래스를 사용하여 `name` 필드를 동일하게 변경해 보겠습니다. repo.cs에서 `name` 필드의 선언을 다음과 같이 변경합니다.
 
 ```csharp
 [DataMember(Name="name")]
@@ -309,7 +307,7 @@ public Uri Homepage { get; set; }
 public int Watchers { get; set; }
 ```
 
-이러한 속성은 기본적으로 문자열 형식(JSON 패킷에 포함된 형식)을 대상 형식으로 변환합니다. @System.Uri 형식은 생소할 수 있습니다. 이 형식은 URI 또는 이 경우에는 URL을 나타냅니다. `Uri` 및 `int` 형식의 경우 JSON 패킷에 대상 형식으로 변환되지 않는 데이터가 포함되어 있으면 serialization 작업은 예외를 throw합니다.
+이러한 속성은 기본적으로 문자열 형식(JSON 패킷에 포함된 형식)을 대상 형식으로 변환합니다. <xref:System.Uri> 형식은 생소할 수 있습니다. 이 형식은 URI 또는 이 경우에는 URL을 나타냅니다. `Uri` 및 `int` 형식의 경우 JSON 패킷에 대상 형식으로 변환되지 않는 데이터가 포함되어 있으면 serialization 작업은 예외를 throw합니다.
 
 이러한 데이터를 추가한 경우에는 해당 요소를 표시하도록 `Main` 메서드를 업데이트합니다.
 
@@ -330,14 +328,14 @@ foreach (var repo in repositories)
 2016-02-08T21:27:00Z
 ```
 
-해당 형식은 표준 .NET @System.DateTime 형식을 따르지 않습니다. 따라서 사용자 지정 변환 메서드를 작성해야 합니다. 또한 `Repository` 클래스 사용자에게 원시 문자열이 노출되는 것을 원하지 않을 것입니다. 특성도 이러한 작업을 제어하는 데 도움이 될 수 있습니다. 먼저 `Repository` 클래스에서 날짜/시간에 대한 문자열 표현을 포함할 `private` 속성을 정의합니다.
+해당 형식은 표준 .NET <xref:System.DateTime> 형식을 따르지 않습니다. 따라서 사용자 지정 변환 메서드를 작성해야 합니다. 또한 `Repository` 클래스 사용자에게 원시 문자열이 노출되는 것을 원하지 않을 것입니다. 특성도 이러한 작업을 제어하는 데 도움이 될 수 있습니다. 먼저 `Repository` 클래스에서 날짜/시간에 대한 문자열 표현을 포함할 `private` 속성을 정의합니다.
 
 ```csharp
 [DataMember(Name="pushed_at")]
 private string JsonDate { get; set; }
 ```
 
-`DataMember` 특성은 공용 멤버가 아니어도 처리되어야 함을 serializer에 알려줍니다. 다음에는 문자열을 유효한 @System.DateTime 개체로 변환한 후 해당 @System.DateTime: 을 반환하는 공용 읽기 전용 속성을 작성해야 합니다.
+`DataMember` 특성은 공용 멤버가 아니어도 처리되어야 함을 serializer에 알려줍니다. 유효한 문자열을 변환 하는 공용 읽기 전용 속성을 작성 해야 하는 다음으로 <xref:System.DateTime> 개체를 반환 하는 <xref:System.DateTime>:
 
 ```csharp
 [IgnoreDataMember]
@@ -350,9 +348,9 @@ public DateTime LastPush
 }
 ```
 
-위의 새 구문을 살펴 보겠습니다. `IgnoreDataMember` 특성은 이 형식을 임의 JSON 개체에 쓰거나 이 개체에서 읽지 않아야 함을 serializer에 알려줍니다. 이 속성은 `get` 접근자만 포함합니다. `set` 접근자가 없습니다. 바로 C#에서 *읽기 전용* 속성을 정의하는 방식입니다. (C#에서 *쓰기 전용* 속성을 만들 수 있지만 해당 값은 제한됩니다.) @System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider) 메서드는 제공된 날짜 형식을 사용하여 문자열을 구문 분석하고 @System.DateTime 개체를 만들고, `CultureInfo` 개체를 사용하여 `DateTime`에 메타데이터를 더 추가합니다. 구문 분석 작업이 실패하는 경우 속성 접근자가 예외를 throw합니다.
+위의 새 구문을 살펴 보겠습니다. `IgnoreDataMember` 특성은 이 형식을 임의 JSON 개체에 쓰거나 이 개체에서 읽지 않아야 함을 serializer에 알려줍니다. 이 속성은 `get` 접근자만 포함합니다. `set` 접근자가 없습니다. 바로 C#에서 *읽기 전용* 속성을 정의하는 방식입니다. (C#에서 *쓰기 전용* 속성을 만들 수 있지만 해당 값은 제한됩니다.) <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> 메서드 문자열을 구문 분석 하 고 만듭니다는 <xref:System.DateTime> 추가 메타 데이터를 추가 하 고 제공 된 날짜 형식을 사용 하 여 개체는 `DateTime` 를 사용 하는 `CultureInfo` 개체입니다. 구문 분석 작업이 실패하는 경우 속성 접근자가 예외를 throw합니다.
 
-@System.Globalization.CultureInfo.InvariantCulture 를 사용하려면 `repo.cs`의 `using` 문에 @System.Globalization 네임스페이스를 추가해야 합니다.
+<xref:System.Globalization.CultureInfo.InvariantCulture> 를 사용하려면 `repo.cs`의 `using` 문에 <xref:System.Globalization> 네임스페이스를 추가해야 합니다.
 
 ```csharp
 using System.Globalization;
@@ -370,4 +368,5 @@ Console.WriteLine(repo.LastPush);
 
 이 자습서에서는 웹 요청을 수행하고, 결과를 구문 분석하고, 해당 결과의 속성을 표시하는 방법을 알아보았습니다. 또한 프로젝트에 종속성으로 새 패키지를 추가했습니다. 개체 지향 기술을 지원하는 C# 언어의 일부 기능을 확인했습니다.
 
-
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

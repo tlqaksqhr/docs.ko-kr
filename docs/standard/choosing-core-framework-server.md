@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
+ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: fe2c7ff4055779a000b68a68333f3e4d06381410
-ms.openlocfilehash: aa06ff8253f22c5c867d4ba12c0a132269e04a97
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/21/2017
 
 응용 프로그램(웹/서비스)이 여러 플랫폼 (Windows, Linux 및 macOS)에서 실행되어야 하는 경우 .NET Core를 사용합니다.
 
-.NET Core는 앞에서 언급한 운영 체제를 개발 워크스테이션으로 지원합니다. Visual Studio는 Windows 및 Mac용 IDE(통합 개발 환경)를 제공합니다. 또한 macOS, Linux 및 Windows에서 실행되는 Visual Studio Code를 사용할 수 있습니다. Visual Studio Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 지원합니다. Sublime, Emacs 및 VI 같은 대부분의 타사 편집기는 .NET Core에서 작동합니다. 이러한 타사 편집기는 [Omnisharp](http://www.omnisharp.net/)를 사용하여 편집기 IntelliSense를 가져옵니다. 어떤 코드 편집기도 사용하지 않고, 지원되는 모든 플랫폼에서 사용할 수 있는 [.NET Core CLI 도구](../core/tools/index.md)를 직접 사용할 수도 있습니다.
+.NET Core는 앞에서 언급한 운영 체제를 개발 워크스테이션으로 지원합니다. Visual Studio에서는 Windows와 macOS는 통합 개발 환경 (IDE)를 제공 합니다. 또한 macOS, Linux 및 Windows에서 실행되는 Visual Studio Code를 사용할 수 있습니다. Visual Studio Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 지원합니다. Sublime, Emacs 및 VI 같은 대부분의 타사 편집기는 .NET Core에서 작동합니다. 이러한 타사 편집기는 [Omnisharp](http://www.omnisharp.net/)를 사용하여 편집기 IntelliSense를 가져옵니다. 어떤 코드 편집기도 사용하지 않고, 지원되는 모든 플랫폼에서 사용할 수 있는 [.NET Core CLI 도구](../core/tools/index.md)를 직접 사용할 수도 있습니다.
 
 ### <a name="microservices-architecture"></a>마이크로 서비스 아키텍처
 
@@ -107,10 +106,9 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Contai
 일부 Microsoft 또는 타사 플랫폼에서는 .NET Core를 지원하지 않습니다. 예를 들어 Service Fabric Stateful Reliable Services 및 Service Fabric Reliable Actors와 같은 일부 Azure Services에는 .NET Framework가 필요합니다. 일부 다른 서비스에서는 .NET Core에서 사용할 수 없는 SDK를 제공합니다. 현재 Azure Services는 모두 .NET Core를 사용하므로 이 상황은 전환되고 있습니다. 그 동안에는 클라이언트 SDK 대신 상응하는 REST API를 항상 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
- [ASP.NET 및 ASP.NET Core 중에서 선택](/aspnet/core/choose-aspnet-framework)   
- [.NET Core 가이드](../core/index.md)   
- [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)   
- [Docker 가이드의 .NET Framework](../framework/docker/index.md)   
- [.NET 구성 요소 개요](components.md)   
+ [ASP.NET 및 ASP.NET Core 중에서 선택](/aspnet/core/choose-aspnet-framework)  
+ [.NET Core 가이드](../core/index.md)  
+ [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)  
+ [Docker 가이드의 .NET Framework](../framework/docker/index.md)  
+ [.NET 구성 요소 개요](components.md)  
  [.NET 마이크로 서비스. 컨테이너화된 .NET 응용 프로그램을 위한 아키텍처](microservices-architecture/index.md)
-

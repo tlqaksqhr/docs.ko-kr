@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
+ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 23d83f0402e35bc4bed31ef59a6fff0e28e01d35
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="reducing-package-dependencies-with-projectjson"></a>project.json으로 패키지 종속성 감소
 
 이 문서에서는 `project.json` 라이브러리를 작성할 때 패키지 종속성을 줄이는 방법에 대해 알아야 할 내용을 다룹니다. 이 문서를 마칠 때는 필요한 종속성만을 사용하도록 라이브러리를 작성하는 방법을 이해하게 될 것입니다. 
@@ -32,11 +30,12 @@ ms.lasthandoff: 07/28/2017
 현재로서는 패키지 참조를 잘라내는 공식 `dotnet` 명령이 없습니다.  이 작업을 수동으로 수행해야 합니다.  일반적인 프로세스는 다음과 같습니다.
 
 1. `project.json`의 `dependencies` 섹션에서 `NETStandard.Library` 버전 `1.6.0`을 참조합니다.
-2. 명령줄에서 `dotnet restore`로 패키지를 복원합니다.
+2. 사용 하 여 패키지를 복원 `dotnet restore` ([참고](#dotnet-restore-note)) 명령줄에서.
 3. `project.lock.json` 파일을 검사하고 `NETSTandard.Library` 섹션을 찾습니다.  파일의 시작 부분에 있습니다.
 4. `dependencies` 아래에 나열된 모든 패키지를 복사합니다.
 5. `.NETStandard.Library` 참조를 제거하고 복사된 패키지로 교체합니다.
 6. 필요 없는 패키지에 대한 참조를 제거합니다.
+
 
 다음 방법 중 하나를 사용하여 필요 없는 패키지를 알아낼 수 있습니다.
 
@@ -61,7 +60,7 @@ ms.lasthandoff: 07/28/2017
 }
 ```
 
-그런 다음 `dotnet restore`로 패키지를 복원하고, `project.lock.json` 파일을 검사하고, `NETSTandard.Library`에 대해 복원된 모든 패키지를 찾습니다.
+사용 하 여 패키지를 복원 하는 다음으로 `dotnet restore` ([참고 참조](#dotnet-restore-note)), 검사는 `project.lock.json` 파일, 및 복원에 대 한 모든 패키지를 찾을 `NETSTandard.Library`합니다.
 
 다음은 `netstandard1.0`을 대상으로 할 때 `project.lock.json` 파일의 관련 섹션이 어떤 모양인지를 보여줍니다.
 
@@ -158,3 +157,5 @@ ms.lasthandoff: 07/28/2017
 
 이제 `NETStandard.Library` 메타패키지에 의존하는 경우 공간을 덜 차지하게 되었습니다.
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -6,12 +6,11 @@ ms.author: johalex
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 16a72edde39e4857dbdfb400f195deb9975f993c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 84f1eaf5fbfcdf8d1dd1b90545f9236e2daedd15
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows에서 .NET Core의 필수 구성 요소
 
@@ -39,9 +38,9 @@ ms.lasthandoff: 08/14/2017
 
 ## <a name="net-core-dependencies"></a>.NET Core 종속성
 
-Windows 10 및 Windows Server 2016보다 이전 버전의 Windows에서 실행하는 경우.NET core는 Visual C++ 재배포 가능 패키지가 필요합니다. 이 종속성은 .NET Core 설치 관리자에 의해 자동으로 설치됩니다.
+이전 Windows 10 및 Windows Server 2016 버전의 Windows 버전에서 실행 하는 경우.NET core 1.1 및 이전 버전에서 Visual c + + 재배포 가능 패키지가 필요 합니다. 이 종속성은 .NET Core 설치 관리자에 의해 자동으로 설치됩니다.
 
-다음과 같은 경우에는 [Microsoft Visual C++ 2015 재배포 가능 패키지 업데이트 3](https://www.microsoft.com/en-us/download/details.aspx?id=52685)을 수동으로 설치해야 합니다.
+다음과 같은 경우에는 [Microsoft Visual C++ 2015 재배포 가능 패키지 업데이트 3](https://www.microsoft.com/download/details.aspx?id=52685)을 수동으로 설치해야 합니다.
 
    * [설치 관리자 스크립트](./tools/dotnet-install-script.md)를 사용하여 .NET Core 설치.
    * 자체 포함된 .NET Core 응용 프로그램 배포.
@@ -95,4 +94,3 @@ Visual Studio에서 .NET Core 1.x 앱을 개발하려면 **기타 도구 집합*
      > * **Microsoft Visual Studio 정보** 대화 상자에서 버전 번호를 확인합니다.
 >     * .NET Core 2.x 앱의 경우 Visual Studio 2017 버전 15.3(26730.01) 이상.
 >     * .NET Core 1.x 앱의 경우 Visual Studio 2017 버전 15.0(26228.04) 이상.
-

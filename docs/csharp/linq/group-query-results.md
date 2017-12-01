@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
+ms.openlocfilehash: ca68cf96a2c27bbd1999d5445c14fc93e8e2566c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1c1639651699afbe5fb768db26b98a9b2d734315
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="group-query-results"></a>쿼리 결과 그룹화
 
@@ -37,52 +35,51 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  이 항목의 모든 예제에는 다음 도우미 클래스 및 데이터 소스가 사용됩니다.  
   
- [!code-cs[csProgGuideLINQ#15](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#15](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_1.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 요소의 단일 속성을 그룹 키로 사용하여 소스 요소를 그룹화하는 방법을 보여 줍니다. 이 경우 키는 학생의 성인 `string`입니다. 키에 부분 문자열을 사용할 수도 있습니다. 그룹화 작업에는 형식에 대한 기본 같음 비교자가 사용됩니다.  
   
  `StudentClass` 클래스에 다음 메서드를 붙여넣습니다. `Main` 메서드에서 호출 문을 `sc.GroupBySingleProperty()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#17](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#17](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_2.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 개체의 속성이 아닌 다른 항목을 그룹 키에 사용하여 소스 요소를 그룹화하는 방법을 보여 줍니다. 이 예제에서 키는 학생 성의 첫 번째 문자입니다.  
   
- `StudentClass` 클래스에 다음 메서드를 붙여넣습니다. `Main` 메서드에서 호출 문을 `sc.GroupBySubstring()`으로 변경합니다.  
+ `StudentClass` 클래스에 다음 메서드를 붙여넣습니다. `Main` 메서드에서 호출 문을 `sc.GroupBySubstring()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#18](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_3.cs)]  
+ [!code-csharp[csProgGuideLINQ#18](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_3.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 숫자 범위를 그룹 키로 사용하여 소스 요소를 그룹화하는 방법을 보여 줍니다. 그런 다음 쿼리는 이름과 성 및 학생이 속한 백분위수 범위만 포함된 무명 형식으로 결과를 프로젝션합니다. 결과를 표시하는 데 완전한 `Student` 개체를 사용할 필요가 없으므로 무명 형식이 사용됩니다. `GetPercentile`은 학생의 평균 점수를 기준으로 백분위수를 계산하는 도우미 함수입니다. 이 메서드는 0~10 사이의 정수를 반환합니다.  
   
- [!code-cs[csProgGuideLINQ#50](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_4.cs)]  
+ [!code-csharp[csProgGuideLINQ#50](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_4.cs)]  
   
  `StudentClass` 클래스에 다음 메서드를 붙여넣습니다. `Main` 메서드에서 호출 문을 `sc.GroupByRange()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#19](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_5.cs)]  
+ [!code-csharp[csProgGuideLINQ#19](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_5.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 부울 비교 식을 사용하여 소스 요소를 그룹화하는 방법을 보여 줍니다. 이 예제에서는 부울 식은 학생의 평균 시험 점수가 75보다 큰지 테스트합니다. 이전 예제처럼 완전한 소스 요소가 필요하지 않으므로 결과는 무명 형식으로 프로젝션됩니다. 무명 형식의 속성은 `Key` 멤버에 대한 속성이 되고 쿼리가 실행될 때 이름으로 액세스할 수 있습니다.  
   
- `StudentClass` 클래스에 다음 메서드를 붙여넣습니다. `Main` 메서드에서 호출 문을 `sc.GroupByBoolean()`으로 변경합니다.  
+ `StudentClass` 클래스에 다음 메서드를 붙여넣습니다. `Main` 메서드에서 호출 문을 `sc.GroupByBoolean()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#20](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_6.cs)]  
+ [!code-csharp[csProgGuideLINQ#20](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_6.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 무명 형식을 사용하여 여러 값이 포함된 키를 캡슐화하는 방법을 보여 줍니다. 이 예제에서 첫 번째 키 값은 학생 성의 첫 번째 문자입니다. 두 번째 키 값은 첫 번째 시험에서 학생의 점수가 85보다 큰지 여부를 지정하는 부울입니다. 키의 속성을 기준으로 그룹 순서를 지정할 수 있습니다.  
   
  `StudentClass` 클래스에 다음 메서드를 붙여넣습니다. `Main` 메서드에서 호출 문을 `sc.GroupByCompositeKey()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#21](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_7.cs)]  
+ [!code-csharp[csProgGuideLINQ#21](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_7.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Linq.Enumerable.GroupBy%2A>   
- <xref:System.Linq.IGrouping%602>   
- [LINQ 쿼리 식](index.md)   
- [group 절](../language-reference/keywords/group-clause.md)   
- [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)   
- [그룹화 작업에서 하위 쿼리 수행](perform-a-subquery-on-a-grouping-operation.md)   
- [중첩 그룹 만들기](create-a-nested-group.md)   
+ <xref:System.Linq.Enumerable.GroupBy%2A>  
+ <xref:System.Linq.IGrouping%602>  
+ [LINQ 쿼리 식](index.md)  
+ [group 절](../language-reference/keywords/group-clause.md)  
+ [익명 형식](../programming-guide/classes-and-structs/anonymous-types.md)  
+ [그룹화 작업에서 하위 쿼리 수행](perform-a-subquery-on-a-grouping-operation.md)  
+ [중첩된 그룹 만들기](create-a-nested-group.md)  
  [데이터 그룹화](../programming-guide/concepts/linq/grouping-data.md)
-

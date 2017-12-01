@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
+ms.openlocfilehash: b0d4082d020da782b334a5b3999905f7de744e64
+ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f31aeb3c07a75059a4f8cd9392dcea31eb5bf41
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/28/2017
 ---
-
 # <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>.NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법
 
 이 문서에서는 .NET Core 라이브러리 및 앱의 패키지 버전에 대해 알아야 할 내용을 다룹니다.
@@ -51,7 +49,7 @@ ms.lasthandoff: 07/28/2017
 
 ### <a name="why-does-this-matter"></a>이것이 왜 문제가 될까요?
 
-.NET Core 1.0과 함께 제공된 것으로 종속성을 고정하면 해당 패키지가 모두 함께 작동하는 것이 보장됩니다.  이렇게 고정되지 않은 패키지를 사용할 경우 작동이 보장되지 않습니다.
+.NET Core 1.0와 함께 어떤 배에 종속성을 수정 하는 경우 이러한 패키지는 모두 함께 작동 하 게 됩니다. 이렇게 고정되지 않은 패키지를 사용할 경우 작동이 보장되지 않습니다.
 
 ### <a name="scenarios"></a>시나리오
 
@@ -59,11 +57,11 @@ ms.lasthandoff: 07/28/2017
 
 `NETStandard.Library`**에만 종속되어 있나요** **?**
 
-이 경우 `NETStandard.Library` 패키지를 버전 `1.6`으로 고정해야 합니다.  이것은 조정된 메타패키지이므로 패키지 종료도 1.0으로 고정됩니다.
+따라서 문제를 해결 해야 하는 경우 프로그램 `NETStandard.Library` 패키지를 버전 `1.6`합니다.  이것은 조정된 메타패키지이므로 패키지 종료도 1.0으로 고정됩니다.
 
 `Microsoft.NETCore.App`**에만 종속되어 있나요** **?**
 
-이 경우 `Microsoft.NETCore.App` 패키지를 버전 `1.0.0`으로 고정해야 합니다.  이것은 조정된 메타패키지이므로 패키지 종료도 1.0으로 고정됩니다.
+따라서 문제를 해결 해야 하는 경우 프로그램 `Microsoft.NETCore.App` 패키지를 버전 `1.0.0`합니다.  이것은 조정된 메타패키지이므로 패키지 종료도 1.0으로 고정됩니다.
 
 **당신은 [트리밍](../deploying/reducing-dependencies.md) 프로그램** `NETStandard.Library` **또는** `Microsoft.NETCore.App` **metapackage 종속성?**
 
@@ -86,4 +84,3 @@ ms.lasthandoff: 07/28/2017
 [모든 런타임 패키지 및 1.0에 대한 해당 버전을 나열합니다](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 
 [모든 .NET Core 응용 프로그램 패키지 및 1.0에 대한 해당 버전을 나열합니다](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).
-

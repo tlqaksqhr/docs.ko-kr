@@ -4,23 +4,22 @@ description: "Windows, Linux 및 macOS에서 .NET Core 응용 프로그램을 �
 keywords: .NET, .NET Core
 author: johalex
 ms.author: johalex
-ms.date: 08/14/2017
+ms.date: 09/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
+ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1f016b73a375c5ab63bba28accf57c5572d581c8
-ms.openlocfilehash: 694800954134888a511a90f069f55004bb2a2dce
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
 .NET Core는 [Windows](#windows), [Linux](#linux) 및 [macOS/OS X](#os-x--macos)에서 실행됩니다.
 
-## <a name="windows"></a>Windows
+## <a name="windows"></a>창
 
 [Windows](https://www.microsoft.com/net/core#windows)에 .NET Core를 설치합니다. 
 
@@ -38,21 +37,14 @@ ms.lasthandoff: 08/29/2017
 
 ## <a name="linux"></a>Linux
 
-사용 중인 배포판/버전에 따라 .NET Core를 설치합니다.
-
-* [Red Hat Enterprise Linux 7](https://www.microsoft.com/net/core#linuxredhat)
-* [Ubuntu 14.04, 16.04, 16.10, 17.04 및 Linux Mint 17, 18](https://www.microsoft.com/net/core#linuxubuntu)
-* [Debian 8.2+, 8.7+, 9](https://www.microsoft.com/net/core#linuxdebian)
-* [Fedora 24, 25, 26](https://www.microsoft.com/net/core#linuxfedora)
-* [CentOS 7.1 및 Oracle Linux 7.1](https://www.microsoft.com/net/core#linuxcentos)
-* [SLES(SUSE Enterprise Linux) 12 SP2, openSUSE 42.1, 42.2](https://www.microsoft.com/net/core#linuxopensuse)
+.NET Core에 설치 [Linux](https://www.microsoft.com/net/core#linuxredhat)합니다.
 
 다음 단계별 자습서에 따라 .NET Core 앱 개발을 시작할 수 있습니다.
 
 * [명령줄을 사용하여 .NET Core 시작](tutorials/using-with-xplat-cli.md) - [.NET Core 플랫폼 간 CLI(명령줄 인터페이스)](tools/index.md)로 모든 코드 편집기를 사용합니다.
 * [Get started with Visual Studio Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)(Ubuntu에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작) - 이 [Channel9](https://channel9.msdn.com) 비디오는 Microsoft의 경량 플랫폼 간 코드 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 설치하고 사용하여 Ubuntu 14.04의 .NET Core에서 첫 번째 콘솔 응용 프로그램을 만드는 방법을 보여 줍니다.
 
-.NET Core는 위의 설치 링크에 나열된 Linux 배포판 및 버전에서 지원됩니다.
+참조는 [Linux 개발을 위한 필수 구성 요소](linux-prerequisites.md) 지원 되는 Linux 배포판 및 버전의 목록에 대 한 항목입니다.
 
 ## <a name="os-x--macos"></a>OS X/macOS
 
@@ -67,4 +59,3 @@ ms.lasthandoff: 08/29/2017
 * [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](tutorials/using-on-mac-vs-full-solution.md) - 이 자습서에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 전체 .NET Core 솔루션을 빌드하는 방법을 보여 줍니다.
 
 지원되는 OS X/macOS 버전 목록은 [macOS 개발을 위한 필수 구성 요소](macos-prerequisites.md) 항목을 참조하세요.
-

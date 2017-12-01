@@ -1,35 +1,36 @@
 ---
-title: "XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ebe8a55cd5dd80be10553948c7765f81429c0957
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사
-<xref:System.Xml.Schema.XmlSchemaCollection>을 사용하여 XSD\(XML 스키마 정의 언어\) 스키마에 대해 XML 문서의 유효성을 검사할 수 있습니다.  <xref:System.Xml.Schema.XmlSchemaCollection>은 스키마를 컬렉션에 저장함으로써 유효성을 검사할 때마다 메모리에 로드되지 않으므로 성능이 향상됩니다.  스키마가 스키마 컬렉션에 있을 경우 `schemaLocation` 특성을 사용하여 컬렉션에서 스키마를 찾을 수 있습니다.  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사
+<xref:System.Xml.Schema.XmlSchemaCollection>을 사용하여 XSD(XML 스키마 정의 언어) 스키마에 대해 XML 문서의 유효성을 검사할 수 있습니다. <xref:System.Xml.Schema.XmlSchemaCollection>은 스키마를 컬렉션에 저장함으로써 유효성을 검사할 때마다 메모리에 로드되지 않으므로 성능이 향상됩니다. 스키마가 스키마 컬렉션에 있을 경우 `schemaLocation` 특성을 사용하여 컬렉션에서 스키마를 찾을 수 있습니다.  
   
 > [!IMPORTANT]
->  이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다.  <xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)를 참조하세요.  
+>  이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. 에 대 한 자세한 내용은 <xref:System.Xml.Schema.XmlSchemaSet> 클래스 참조 [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)합니다.  
   
  다음 예제에서는 데이터 파일의 루트 요소를 보여 줍니다.  
   
-```  
+```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
     xmlns="urn:bookstore-schema"  
     elementFormDefault="qualified"  
@@ -58,7 +59,7 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- <xref:System.Xml.Schema.XmlSchemaCollection>에 대한 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 메서드에 `namespaceURI` 속성을 추가할 때 일반적으로 `targetNamespace` 특성을 사용합니다.  <xref:System.Xml.Schema.XmlSchemaCollection>에 스키마를 추가하기 전에 null 참조를 지정할 수 있습니다.  네임스페이스가 없는 스키마에는 빈 문자열\(""\)을 사용해야 합니다.  <xref:System.Xml.Schema.XmlSchemaCollection>에는 네임스페이스가 없는 스키마가 한 개만 있을 수 있습니다.  
+ `targetNamespace`에 대한 `namespaceURI` 메서드에 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 속성을 추가할 때 일반적으로 <xref:System.Xml.Schema.XmlSchemaCollection> 특성을 사용합니다. <xref:System.Xml.Schema.XmlSchemaCollection>에 스키마를 추가하기 전에 null 참조를 지정할 수 있습니다. 네임스페이스가 없는 스키마에는 빈 문자열("")을 사용해야 합니다. <xref:System.Xml.Schema.XmlSchemaCollection>에는 네임스페이스가 없는 스키마가 한 개만 있을 수 있습니다.  
   
  다음 코드 예제에서는 XML 스키마 HeadCount.xsd를 <xref:System.Xml.Schema.XmlSchemaCollection>에 추가하고 HeadCount.xml의 유효성을 검사합니다.  
   
@@ -133,7 +134,7 @@ namespace ValidationSample
   
  다음에서는 유효성을 검사할 입력 파일 HeadCount.xml의 내용을 요약합니다.  
   
-```  
+```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
 <hc:HeadCount xmlns:hc='xsdHeadCount'>  
    <Name>Waldo Pepper</Name>  
@@ -143,7 +144,7 @@ namespace ValidationSample
   
  다음에서는 유효성을 검사할 XML 스키마 파일 HeadCount.xsd의 내용을 요약합니다.  
   
-```  
+```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
    <xs:element name='HeadCount' type="HEADCOUNT"/>  
    <xs:complexType name="HEADCOUNT">  
@@ -155,7 +156,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- 다음 코드 예제에서는 <xref:System.Xml.XmlTextReader>를 사용하는 <xref:System.Xml.XmlValidatingReader>를 만듭니다.  XML 스키마 sample4.xsd에 대해 입력 파일 sample4.xml의 유효성을 검사합니다.  
+ 다음 코드 예제에서는 <xref:System.Xml.XmlValidatingReader>를 사용하는 <xref:System.Xml.XmlTextReader>를 만듭니다. XML 스키마 sample4.xsd에 대해 입력 파일 sample4.xml의 유효성을 검사합니다.  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -181,7 +182,7 @@ while(vr.Read()) {
   
  다음에서는 유효성을 검사할 입력 파일 sample4.xml의 내용을 요약합니다.  
   
-```  
+```xml  
 <datatypes xmlns="datatypesTest">  
     <number>  
         <number_1>123</number_1>  
@@ -191,7 +192,7 @@ while(vr.Read()) {
   
  다음에서는 유효성을 검사할 XML 스키마 파일 sample4.xsd의 내용을 요약합니다.  
   
-```  
+```xml  
 <xs:schema   
     xmlns:xs="http://www.w3.org/2001/XMLSchema"   
     xmlns:tns="datatypesTest"   
@@ -214,8 +215,8 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## 참고 항목  
- <xref:System.Xml.XmlParserContext>   
- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=fullName>   
- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=fullName>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Xml.XmlParserContext>  
+ <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
+ <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
  [XmlSchemaCollection 스키마 컴파일](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

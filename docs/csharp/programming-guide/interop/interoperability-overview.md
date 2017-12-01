@@ -1,12 +1,9 @@
 ---
 title: "상호 운용성 개요(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - COM interop
 - C# language, interoperability
@@ -14,29 +11,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: de7ff105de85392fd4b8b342f26e67e89d0d9b96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c817dcd9073a5a1d4aeee558bf53d50566bbb472
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>상호 운용성 개요(C# 프로그래밍 가이드)
 이 항목에서는 C# 관리 코드와 비관리 코드 간의 상호 운용성을 사용하도록 설정하는 방법을 설명합니다.  
@@ -81,10 +63,9 @@ ms.lasthandoff: 07/28/2017
  자세한 내용은 [.NET Framework 구성 요소를 COM에 노출](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) 및 [예제 COM 클래스](../../../csharp/programming-guide/interop/example-com-class.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Interop 성능 향상](http://go.microsoft.com/fwlink/?LinkId=99564)   
- [COM Interop 소개](http://go.microsoft.com/fwlink/?LinkId=112406)   
- [관리 코드와 비관리 코드 간의 마샬링](http://go.microsoft.com/fwlink/?LinkId=112398)   
- [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)   
- [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
+ [Interop 성능 향상](http://go.microsoft.com/fwlink/?LinkId=99564)  
+ [COM Interop 소개](http://go.microsoft.com/fwlink/?LinkId=112406)  
+ [관리 코드와 관리 되지 않는 코드 마샬링](http://go.microsoft.com/fwlink/?LinkId=112398)  
+ [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)  
+ [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-

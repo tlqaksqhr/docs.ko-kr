@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: aba9547bcd96b9e8038bc973aa9ef971bb82f698
-ms.openlocfilehash: 891c783429c069d7c807a9c31aff45d02f518eee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>.NET Framework로 클라이언트 응용 프로그램 개발
 사용자의 컴퓨터나 장치에서 로컬로 실행되는 .NET Framework를 사용하여 Windows 기반 응용 프로그램을 개발하는 여러 가지 방법이 있습니다. 이 섹션에는 WPF(Windows Presentation Foundation) 또는 Windows Forms를 사용하여 Windows 기반 응용 프로그램을 만드는 방법을 설명하는 항목이 포함되어 있습니다. 그러나 .NET Framework를 사용하여 dnpq 응용 프로그램을 만들고 Windows 스토어 및 Windows Phone 스토어를 통해 사용할 수 있는 컴퓨터 또는 장치용 클라이언트 응용 프로그램을 만들 수 있습니다.  
@@ -62,9 +60,8 @@ ms.lasthandoff: 09/01/2017
  ASP.NET을 사용하여 웹앱을 개발할 수 있는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [이식 가능한 클래스 라이브러리](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)   
- [개요](../../docs/framework/get-started/overview.md)   
- [개발 가이드](../../docs/framework/development-guide.md)   
- [방법: Windows 데스크톱 응용 프로그램 만들기](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)   
+ [이식 가능한 클래스 라이브러리](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
+ [개요](../../docs/framework/get-started/overview.md)  
+ [개발 가이드](../../docs/framework/development-guide.md)  
+ [방법: Windows 데스크톱 응용 프로그램 만들기](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
  [Windows 서비스 응용 프로그램](../../docs/framework/windows-services/index.md)
-

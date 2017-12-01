@@ -1,12 +1,9 @@
 ---
 title: "Visual Basic 프로그래머를 위한 추가 리소스"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, additional resources
 - Help
@@ -19,29 +16,14 @@ helpviewer_keywords:
 - support, Visual Studio sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4f37aaffa33d618a54ea56252b7183f9bce1ed7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ebc788f629e011dff88c1db119ce25a3829e009
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="additional-resources-for-visual-basic-programmers"></a>Visual Basic 프로그래머를 위한 추가 리소스
 다음 웹 사이트에서는 관련 지침과 일반적인 문제에 대한 대답을 제공합니다.  
@@ -63,7 +45,7 @@ ms.lasthandoff: 07/28/2017
 |용어|정의|  
 |----------|----------------|  
 |[Code Gallery](http://code.msdn.microsoft.com/)(코드 갤러리)|샘플 응용 프로그램과 기타 리소스를 다운로드하고 개발자 커뮤니티와 공유할 수 있습니다.|  
-|[CodePlex](http://www.codeplex.com/)|열려 있는 소스 소프트웨어 프로젝트를 호스팅합니다. CodePlex를 통해 오픈 소스 소프트웨어를 찾거나 새 프로젝트를 만들어 공유할 수 있습니다.|  
+|[GitHub](http://www.github.com/)|열려 있는 소스 소프트웨어 프로젝트를 호스팅합니다. GitHub 오픈 소스 소프트웨어를 찾거나 새 프로젝트를 다른 사람과 공유할를 만드는 데 사용할 수 있습니다.|  
 |[Visual Basic 코드 샘플](http://msdn.microsoft.com/vbasic/ms789074)|Visual Basic의 응용 프로그램, 웹 및 데이터 샘플을 제공합니다.|  
   
 ### <a name="forums"></a>포럼  
@@ -106,6 +88,5 @@ ms.lasthandoff: 07/28/2017
 |[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|DevX 포럼에서 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 새로운 기능에 대해 토론할 수 있는 포럼을 제공합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [시작](../../visual-basic/getting-started/index.md)   
+ [시작](../../visual-basic/getting-started/index.md)  
  [의견 보내기](/visualstudio/ide/talk-to-us)
-

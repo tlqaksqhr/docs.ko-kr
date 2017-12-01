@@ -3,16 +3,15 @@ title: "dotnet run 명령 - .NET Core CLI"
 description: "dotnet run 명령은 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -74,6 +73,10 @@ dotnet myapp.dll
 
 지정된 [프레임워크](../../standard/frameworks.md)를 사용하여 앱을 빌드하고 실행합니다. 프레임워크는 프로젝트 파일에 지정되어야 합니다.
 
+`--force`
+
+마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 삭제 같습니다 *project.assets.json*합니다.
+
 `-h|--help`
 
 명령에 대한 간단한 도움말을 출력합니다.
@@ -85,6 +88,10 @@ dotnet myapp.dll
 `--no-build`
 
 실행하기 전에 프로젝트를 빌드하지 않습니다.
+
+`--no-dependencies`
+
+프로젝트 간(P2P) 참조를 사용하여 프로젝트를 복원할 경우 참조가 아닌 루트 프로젝트를 복원하세요.
 
 `--no-launch-profile`
 
@@ -142,4 +149,3 @@ dotnet myapp.dll
 현재 디렉터리에 있는 프로젝트를 실행합니다. `--` 인수가 사용되므로 이 예제의 `--help` 인수는 응용 프로그램에 전달됩니다.
 
 `dotnet run --configuration Release -- --help`
-

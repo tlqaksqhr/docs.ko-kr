@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 9c3b6f189f1a2564662af89961c9363f025ae8c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a45e04c4368406255736312503e19de95ed12150
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>SendParameters 및 ReceiveParameters 활동의 기본 사용법
 이 샘플에서는 <xref:System.ServiceModel.Activities.SendParametersContent> 및 <xref:System.ServiceModel.Activities.ReceiveParametersContent> 활동의 사용 방법을 보여 줍니다. 서비스에서는 문자열 인수를 받는 하나의 작업을 노출하고 해당 입력을 클라이언트에 다시 보냅니다. 이 샘플에서는 이러한 메시징 활동의 매개 변수를 설정하는 방법을 보여 줍니다.  
@@ -38,6 +38,4 @@ ms.lasthandoff: 10/18/2017
   
 3.  그 다음 [solution base directory]\EchoWorkflowClient\bin\debug에 생성된 EchoWorkflowClient 응용 프로그램을 실행합니다.  
   
-4.  클라이언트에서 서비스에 대한 Echo 작업을 호출하고 결과를 출력합니다. 완료되면 Enter 키를 눌러 클라이언트와 서비스를 차례로 종료합니다.  
-  
-## <a name="see-also"></a>참고 항목
+4.  클라이언트에서 서비스에 대한 Echo 작업을 호출하고 결과를 출력합니다. 완료되면 Enter 키를 눌러 클라이언트와 서비스를 차례로 종료합니다.

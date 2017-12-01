@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
+ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c71aee3dbfb6544973e1527955ca03deb6b569f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체
 
@@ -74,6 +73,8 @@ ms.lasthandoff: 07/28/2017
     - 포함하는 클래스 또는 포함하는 클래스에서 파생된 클래스로만 액세스가 제한됨
 * `private`
     - 이 클래스로만 액세스가 제한됨
+* `private protected`
+    - 동일한 어셈블리 포함 형식 내에서에서 파생 된 클래스 또는 클래스에 대해서만 액세스
 
 ## <a name="type-parameters"></a>형식 매개 변수
 
@@ -140,7 +141,7 @@ static 한정자 없이 선언된 필드는 인스턴스 필드를 정의합니�
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-*매개 변수 배열*은 다양한 개수의 인수가 메서드에 전달되도록 허용합니다. 매개 변수 배열은 `params` 한정자를 사용하여 선언됩니다. 메서드의 마지막 매개 변수만 매개 변수 배열일 수 있으며 매개 변수 배열의 형식은 1차원 배열 형식이어야 합니다. `@System.Console` 클래스의 Write 및 WriteLine 메서드는 매개 변수 배열 사용의 좋은 예입니다. 이러한 메서드는 다음과 같이 선언됩니다.
+*매개 변수 배열*은 다양한 개수의 인수가 메서드에 전달되도록 허용합니다. 매개 변수 배열은 `params` 한정자를 사용하여 선언됩니다. 메서드의 마지막 매개 변수만 매개 변수 배열일 수 있으며 매개 변수 배열의 형식은 1차원 배열 형식이어야 합니다. <xref:System.Console?displayProperty=nameWithType> 클래스의 Write 및 WriteLine 메서드는 매개 변수 배열 사용의 좋은 예입니다. 이러한 메서드는 다음과 같이 선언됩니다.
 
 [!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
@@ -301,4 +302,3 @@ set 접근자는 value라는 단일 매개 변수를 가지며 반환 형식이 
 >[!div class="step-by-step"]
 [이전](statements.md)
 [다음](structs.md)
-

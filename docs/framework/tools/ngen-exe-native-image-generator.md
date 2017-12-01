@@ -5,15 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - Native Image Generator
 - images [.NET Framework], native
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: af79c4309dfd048562b2ee14a71c6da791040397
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 75c329c2d57e1731c1f3cd0d34f680c3706763ce
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 네이티브 이미지 생성기(Ngen.exe)는 관리되는 응용 프로그램의 성능을 향상시키는 도구입니다. Ngen.exe는 컴파일된 프로세서별 컴퓨터 코드가 포함된 파일인 네이티브 이미지를 만들어서 로컬 컴퓨터의 네이티브 이미지 캐시에 설치합니다. 런타임은 JIT(Just-In-Time) 컴파일러를 사용하지 않고 캐시의 네이티브 이미지를 사용하여 원본 어셈블리를 컴파일할 수 있습니다.  
@@ -89,7 +86,7 @@ ngen /? | /help
 |`uninstall` [`assemblyName` | `assemblyPath`] [`scenarios`] [`config`]|네이티브 이미지 캐시에서 어셈블리에 대한 네이티브 이미지와 그 종속성을 삭제합니다.<br /><br /> 단일 이미지와 그 종속성을 제거하려면 해당 이미지를 설치할 때 사용한 것과 동일한 명령줄 인수를 사용합니다. **참고:** [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 `uninstall` * 동작이 더 이상 지원되지 않습니다.|  
 |`update` [`/queue`]|무효화된 네이티브 이미지를 업데이트합니다.<br /><br /> `/queue`를 지정하면 네이티브 이미지 서비스에 대한 업데이트가 큐에 대기합니다. 업데이트는 항상 우선 순위 3에서 예약되므로 컴퓨터가 유휴 상태일 때 실행됩니다.|  
 |`display` [`assemblyName` | `assemblyPath`]|어셈블리에 대한 네이티브 이미지와 그 종속성의 상태를 표시합니다.<br /><br /> 인수를 지정하지 않은 경우 네이티브 이미지 캐시에 있는 모든 것이 표시됩니다.|  
-|`executeQueuedItems` [`1``&#124;``2``&#124;``3`]<br /><br /> 또는<br /><br /> `eqi` [1|2|3]|큐에 대기한 컴파일 작업을 실행합니다.<br /><br /> 우선 순위를 지정하면 우선 순위가 크거나 같은 컴파일 작업이 실행됩니다. 우선 순위를 지정하지 않으면 큐에 대기한 컴파일 작업이 모두 실행됩니다.|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> 또는<br /><br /> `eqi` [1|2|3]|큐에 대기한 컴파일 작업을 실행합니다.<br /><br /> 우선 순위를 지정하면 우선 순위가 크거나 같은 컴파일 작업이 실행됩니다. 우선 순위를 지정하지 않으면 큐에 대기한 컴파일 작업이 모두 실행됩니다.|  
 |`queue` {`pause` | `continue` | `status`}|네이티브 이미지 서비스를 일시 중지하거나 일시 중지된 서비스를 계속 수행할 수 있도록 하거나 서비스 상태를 쿼리합니다.|  
   
 <a name="ArgumentTable"></a>   
@@ -144,20 +141,20 @@ ngen /? | /help
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터는 Ngen.exe로 생성되는 네이티브 이미지는 부분 신뢰로 실행되는 응용 프로그램에 더 이상 로드할 수 없습니다. 대신, JIT(Just-In-Time) 컴파일러가 호출됩니다.  
   
- Ngen.exe는 `install` 동작 및 해당하는 모든 종속성에 대한 `assemblyname` 인수로 지정된 네이티브 이미지를 생성합니다. 어셈블리 매니페스트의 참조로 종속성을 확인할 수 있습니다. 종속성을 별도로 설치해야 하는 경우는 응용 프로그램에서 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 메서드를 호출하는 것과 같은 방법으로 리플렉션을 사용하여 종속성을 로드하는 경우밖에 없습니다.  
+ Ngen.exe는 `install` 동작 및 해당하는 모든 종속성에 대한 `assemblyname` 인수로 지정된 네이티브 이미지를 생성합니다. 어셈블리 매니페스트의 참조로 종속성을 확인할 수 있습니다. 종속성을 별도로 설치해야 하는 경우는 응용 프로그램에서 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드를 호출하는 것과 같은 방법으로 리플렉션을 사용하여 종속성을 로드하는 경우밖에 없습니다.  
   
 > [!IMPORTANT]
->  네이티브 이미지에 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 메서드를 사용하지 마세요. 이 메서드로 로드된 이미지는 실행 컨텍스트의 다른 어셈블리에서 사용할 수 없습니다.  
+>  네이티브 이미지에 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드를 사용하지 마세요. 이 메서드로 로드된 이미지는 실행 컨텍스트의 다른 어셈블리에서 사용할 수 없습니다.  
   
  Ngen.exe에서는 종속성 개수가 유지됩니다. 예를 들어 네이티브 이미지 캐시에 `MyAssembly.exe` 및 `YourAssembly.exe`가 모두 설치되어 있고 이 두 가지 모두에 `OurDependency.dll`에 대한 참조가 있는 경우, `MyAssembly.exe`를 제거해도 `OurDependency.dll`은 제거되지 않고 `YourAssembly.exe`도 제거할 때만 제거됩니다.  
   
- 전역 어셈블리 캐시에 어셈블리에 대한 네이티브 이미지를 생성 중인 경우 해당 표시 이름을 지정합니다. <xref:System.Reflection.Assembly.FullName%2A?displayProperty=fullName>을 참조하세요.  
+ 전역 어셈블리 캐시에 어셈블리에 대한 네이티브 이미지를 생성 중인 경우 해당 표시 이름을 지정합니다. <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>을 참조하세요.  
   
  Ngen.exe에서 생성되는 네이티브 이미지는 응용 프로그램 도메인 간에 공유할 수 있습니다. 즉, 응용 프로그램 도메인 간에 어셈블리를 공유해야 하는 응용 프로그램 시나리오에서는 Ngen.exe를 사용할 수 있습니다. 도메인 중립성을 지정하려면  
   
 -   <xref:System.LoaderOptimizationAttribute> 특성을 응용 프로그램에 적용합니다.  
   
--   새 응용 프로그램 도메인에 대한 설치 정보를 만드는 경우 <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=fullName> 속성을 설정합니다.  
+-   새 응용 프로그램 도메인에 대한 설치 정보를 만드는 경우 <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=nameWithType> 속성을 설정합니다.  
   
  같은 어셈블리를 여러 응용 프로그램 도메인으로 로드할 때 항상 도메인 중립 코드를 사용합니다. 네이티브 이미지가 공유 도메인으로 로드된 후 비공유 응용 프로그램 도메인으로 로드되면 사용할 수 없습니다.  
   
@@ -289,7 +286,7 @@ ngen /? | /help
   
 <a name="DependencyHint"></a>   
 ### <a name="specifying-a-binding-hint-for-a-dependency"></a>종속성에 대한 바인딩 힌트 지정  
- <xref:System.Runtime.CompilerServices.DependencyAttribute>를 어셈블리에 적용하여 지정된 종속성이 로드될 가능성을 나타냅니다. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName>는 하드 바인딩이 적합함을, <xref:System.Runtime.CompilerServices.LoadHint.Default>는 종속성에 대한 기본값을 사용해야 함을, <xref:System.Runtime.CompilerServices.LoadHint.Sometimes>는 하드 바인딩이 적합하지 않음을 나타냅니다.  
+ <xref:System.Runtime.CompilerServices.DependencyAttribute>를 어셈블리에 적용하여 지정된 종속성이 로드될 가능성을 나타냅니다. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>는 하드 바인딩이 적합함을, <xref:System.Runtime.CompilerServices.LoadHint.Default>는 종속성에 대한 기본값을 사용해야 함을, <xref:System.Runtime.CompilerServices.LoadHint.Sometimes>는 하드 바인딩이 적합하지 않음을 나타냅니다.  
   
  아래 코드에서는 두 개의 종속성이 있는 어셈블리에 대한 특성을 보여 줍니다. 첫 번째 종속성(Assembly1)은 하드 바인딩에 적합한 후보이며 두 번째 종속성(Assembly2)은 적합하지 않은 후보입니다.  
   
@@ -315,10 +312,10 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="AssemblyHint"></a>   
 ### <a name="specifying-a-default-binding-hint-for-an-assembly"></a>어셈블리에 대한 기본 바인딩 힌트 지정  
- 기본 바인딩 힌트는 어셈블리에 대한 종속성이 있는 응용 프로그램이 즉시 자주 사용하는 어셈블리에만 필요합니다. 하드 바인딩을 사용하도록 지정할 이러한 어셈블리에 <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute>를 사용하여 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName>를 적용합니다.  
+ 기본 바인딩 힌트는 어셈블리에 대한 종속성이 있는 응용 프로그램이 즉시 자주 사용하는 어셈블리에만 필요합니다. 하드 바인딩을 사용하도록 지정할 이러한 어셈블리에 <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute>를 사용하여 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>를 적용합니다.  
   
 > [!NOTE]
->  <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> 이외의 값이 있는 특성을 적용하면 특성을 전혀 적용하지 않았을 때와 효과가 동일하므로 이 범주에 속하지 않는 .dll 어셈블리에 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName>를 적용할 이유는 없습니다.  
+>  <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> 이외의 값이 있는 특성을 적용하면 특성을 전혀 적용하지 않았을 때와 효과가 동일하므로 이 범주에 속하지 않는 .dll 어셈블리에 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>를 적용할 이유는 없습니다.  
   
  Microsoft는 <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute>를 사용하여 하드 바인딩이 mscorlib.dll과 같은 .NET Framework의 소수 어셈블리에 대한 기본값이 되도록 지정합니다.  
   
@@ -388,11 +385,13 @@ using namespace System::Runtime::CompilerServices;
   
  그러나 `BypassNGenAttribute`는 .NET Framework 클래스 라이브러리의 형식으로 정의되어 있지 않습니다. 코드에서 이 특성을 사용하려면 먼저 다음과 같이 정의해야 합니다.  
   
- [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)] [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
+ [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)]
+ [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
   
  그런 다음 메서드별로 특성을 적용할 수 있습니다. 다음 예제에서는 네이티브 이미지 생성기에 `ExampleClass.ToJITCompile` 메서드에 대한 네이티브 이미지를 생성하지 말아야 한다고 지시합니다.  
   
- [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)] [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]  
+ [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)]
+ [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]  
   
 ## <a name="examples"></a>예제  
  다음 명령은 현재 디렉터리에 있는 `ClientApp.exe`에 대한 네이티브 이미지를 생성하고 그 이미지를 네이티브 이미지 캐시에 저장합니다. 어셈블리에 대해 구성 파일이 존재하는 경우 Ngen.exe는 해당 파일을 사용합니다. 또한 `ClientApp.exe`에서 참조하는 모든 .dll 파일에 대한 네이티브 이미지가 생성됩니다.  
@@ -414,7 +413,7 @@ ngen install c:\myfiles\MyAssembly.exe
 > [!NOTE]
 >  이것은 응용 프로그램 기준이 현재 디렉터리로 설정된 .NET Framework 버전 1.0 및 1.1의 Ngen.exe 동작이 바뀐 것입니다.  
   
- 예를 들어, 어셈블리에서 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 메서드를 사용하여 .dll 파일을 로드하면 종속성이 참조 없이 어셈블리에 포함될 수 있습니다. `/ExeConfig` 옵션을 사용하는 경우 응용 프로그램 어셈블리에 대한 구성 정보를 사용하여 그러한 .dll 파일의 네이티브 이미지를 만들 수 있습니다. 다음 명령은 `MyLib.dll,`에서 구성 정보를 사용하여 `MyApp.exe`의 네이티브 이미지를 생성합니다.  
+ 예를 들어, 어셈블리에서 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드를 사용하여 .dll 파일을 로드하면 종속성이 참조 없이 어셈블리에 포함될 수 있습니다. `/ExeConfig` 옵션을 사용하는 경우 응용 프로그램 어셈블리에 대한 구성 정보를 사용하여 그러한 .dll 파일의 네이티브 이미지를 만들 수 있습니다. 다음 명령은 `MyLib.dll,`에서 구성 정보를 사용하여 `MyApp.exe`의 네이티브 이미지를 생성합니다.  
   
 ```  
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe  
@@ -594,10 +593,9 @@ ngen executeQueuedItems
  .NET Framework 버전 2.0에서 네이티브 이미지 서비스와의 유일한 상호 작용은 명령줄 도구 Ngen.exe를 통해 수행됩니다. 설치 스크립트의 명령줄 도구를 사용하여 네이티브 이미지 서비스에 대한 작업을 큐에 대기시키고 서비스와 상호 작용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [네이티브 이미지 서비스](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)   
- [네이티브 이미지 작업](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)   
- [도구](../../../docs/framework/tools/index.md)   
- [관리되는 실행 프로세스](../../../docs/standard/managed-execution-process.md)   
- [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [네이티브 이미지 서비스](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)  
+ [네이티브 이미지 작업](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)  
+ [도구](../../../docs/framework/tools/index.md)  
+ [관리되는 실행 프로세스](../../../docs/standard/managed-execution-process.md)  
+ [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
