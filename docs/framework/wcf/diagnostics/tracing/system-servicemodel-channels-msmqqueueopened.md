@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 282e108a-73b0-499d-8b9e-e37d1198dda6
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f8d0d610770fcbd61830ca3863b5b9fef11b5771
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e38ec991929593741303e64b3383b8ac4fdb2a78
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqqueueopened"></a><span data-ttu-id="a53a8-102">System.ServiceModel.Channels.MsmqQueueOpened</span><span class="sxs-lookup"><span data-stu-id="a53a8-102">System.ServiceModel.Channels.MsmqQueueOpened</span></span>
-<span data-ttu-id="a53a8-103">System.ServiceModel.Channels.MsmqQueueOpened</span><span class="sxs-lookup"><span data-stu-id="a53a8-103">System.ServiceModel.Channels.MsmqQueueOpened</span></span>  
+# <a name="systemservicemodelchannelsmsmqqueueopened"></a><span data-ttu-id="d38db-102">System.ServiceModel.Channels.MsmqQueueOpened</span><span class="sxs-lookup"><span data-stu-id="d38db-102">System.ServiceModel.Channels.MsmqQueueOpened</span></span>
+<span data-ttu-id="d38db-103">System.ServiceModel.Channels.MsmqQueueOpened</span><span class="sxs-lookup"><span data-stu-id="d38db-103">System.ServiceModel.Channels.MsmqQueueOpened</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a53a8-104">설명</span><span class="sxs-lookup"><span data-stu-id="a53a8-104">Description</span></span>  
- <span data-ttu-id="a53a8-105">MSMQ 큐가 열렸습니다.</span><span class="sxs-lookup"><span data-stu-id="a53a8-105">MSMQ queue opened.</span></span>  
+## <a name="description"></a><span data-ttu-id="d38db-104">설명</span><span class="sxs-lookup"><span data-stu-id="d38db-104">Description</span></span>  
+ <span data-ttu-id="d38db-105">MSMQ 큐가 열렸습니다.</span><span class="sxs-lookup"><span data-stu-id="d38db-105">MSMQ queue opened.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a53a8-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a53a8-106">See Also</span></span>  
- [<span data-ttu-id="a53a8-107">추적</span><span class="sxs-lookup"><span data-stu-id="a53a8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a53a8-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="a53a8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a53a8-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="a53a8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d38db-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d38db-106">See Also</span></span>  
+ [<span data-ttu-id="d38db-107">추적</span><span class="sxs-lookup"><span data-stu-id="d38db-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d38db-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="d38db-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d38db-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="d38db-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

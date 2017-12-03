@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c388f68d-2c6d-4d68-bc2b-0d63b99fccf1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 81eae385c9fa5eaec7e9252214a34b8b177ec84c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ea2e6ba9b4f8b4f578480e403a0dcc7cc3a1d8a2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationservicehoststoppedservice"></a><span data-ttu-id="b6e39-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppedService</span><span class="sxs-lookup"><span data-stu-id="b6e39-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppedService</span></span>
-<span data-ttu-id="b6e39-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppedService</span><span class="sxs-lookup"><span data-stu-id="b6e39-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppedService</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationservicehoststoppedservice"></a><span data-ttu-id="b2310-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppedService</span><span class="sxs-lookup"><span data-stu-id="b2310-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppedService</span></span>
+<span data-ttu-id="b2310-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppedService</span><span class="sxs-lookup"><span data-stu-id="b2310-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStoppedService</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b6e39-104">설명</span><span class="sxs-lookup"><span data-stu-id="b6e39-104">Description</span></span>  
- <span data-ttu-id="b6e39-105">ComPlus: 서비스를 중지했습니다.</span><span class="sxs-lookup"><span data-stu-id="b6e39-105">ComPlus: Stopped service.</span></span>  
+## <a name="description"></a><span data-ttu-id="b2310-104">설명</span><span class="sxs-lookup"><span data-stu-id="b2310-104">Description</span></span>  
+ <span data-ttu-id="b2310-105">ComPlus: 서비스를 중지했습니다.</span><span class="sxs-lookup"><span data-stu-id="b2310-105">ComPlus: Stopped service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6e39-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b6e39-106">See Also</span></span>  
- [<span data-ttu-id="b6e39-107">추적</span><span class="sxs-lookup"><span data-stu-id="b6e39-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="b6e39-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="b6e39-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="b6e39-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="b6e39-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b2310-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b2310-106">See Also</span></span>  
+ [<span data-ttu-id="b2310-107">추적</span><span class="sxs-lookup"><span data-stu-id="b2310-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b2310-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="b2310-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b2310-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="b2310-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

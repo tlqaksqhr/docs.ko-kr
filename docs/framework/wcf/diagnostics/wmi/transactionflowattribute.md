@@ -10,19 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0a9c8674-29f7-4f14-aa1f-dc2644ca57e4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2eb7be7fb1acbfb9ccd46aee341e001156795ebc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e33bd0e5e399b2c531503986582bd155cd2cf08f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="transactionflowattribute"></a><span data-ttu-id="1b52e-102">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="1b52e-102">TransactionFlowAttribute</span></span>
-<span data-ttu-id="1b52e-103">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="1b52e-103">TransactionFlowAttribute</span></span>  
+# <a name="transactionflowattribute"></a><span data-ttu-id="b93d2-102">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="b93d2-102">TransactionFlowAttribute</span></span>
+<span data-ttu-id="b93d2-103">TransactionFlowAttribute</span><span class="sxs-lookup"><span data-stu-id="b93d2-103">TransactionFlowAttribute</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b52e-104">구문</span><span class="sxs-lookup"><span data-stu-id="1b52e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b93d2-104">구문</span><span class="sxs-lookup"><span data-stu-id="b93d2-104">Syntax</span></span>  
   
 ```  
 class TransactionFlowAttribute : Behavior  
@@ -31,24 +31,24 @@ class TransactionFlowAttribute : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="1b52e-105">메서드</span><span class="sxs-lookup"><span data-stu-id="1b52e-105">Methods</span></span>  
- <span data-ttu-id="1b52e-106">TransactionFlowAttribute 클래스는 메서드를 정의하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1b52e-106">The TransactionFlowAttribute class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="b93d2-105">메서드</span><span class="sxs-lookup"><span data-stu-id="b93d2-105">Methods</span></span>  
+ <span data-ttu-id="b93d2-106">TransactionFlowAttribute 클래스는 메서드를 정의하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b93d2-106">The TransactionFlowAttribute class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="1b52e-107">속성</span><span class="sxs-lookup"><span data-stu-id="1b52e-107">Properties</span></span>  
- <span data-ttu-id="1b52e-108">TransactionFlowAttribute 클래스에는 다음과 같은 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b52e-108">The TransactionFlowAttribute class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="b93d2-107">속성</span><span class="sxs-lookup"><span data-stu-id="b93d2-107">Properties</span></span>  
+ <span data-ttu-id="b93d2-108">TransactionFlowAttribute 클래스에는 다음과 같은 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b93d2-108">The TransactionFlowAttribute class has the following property:</span></span>  
   
-### <a name="transactionflowoption"></a><span data-ttu-id="1b52e-109">TransactionFlowOption</span><span class="sxs-lookup"><span data-stu-id="1b52e-109">TransactionFlowOption</span></span>  
- <span data-ttu-id="1b52e-110">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="1b52e-110">Data type: string</span></span>  
+### <a name="transactionflowoption"></a><span data-ttu-id="b93d2-109">TransactionFlowOption</span><span class="sxs-lookup"><span data-stu-id="b93d2-109">TransactionFlowOption</span></span>  
+ <span data-ttu-id="b93d2-110">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="b93d2-110">Data type: string</span></span>  
   
- <span data-ttu-id="1b52e-111">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="1b52e-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="b93d2-111">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="b93d2-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="1b52e-112">트랜잭션이 이동할지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1b52e-112">Indicates whether transactions flow.</span></span>  
+ <span data-ttu-id="b93d2-112">트랜잭션이 이동할지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b93d2-112">Indicates whether transactions flow.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b52e-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1b52e-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b93d2-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b93d2-113">Requirements</span></span>  
   
-|<span data-ttu-id="1b52e-114">MOF</span><span class="sxs-lookup"><span data-stu-id="1b52e-114">MOF</span></span>|<span data-ttu-id="1b52e-115">Servicemodel.mof에 선언되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b52e-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="b93d2-114">MOF</span><span class="sxs-lookup"><span data-stu-id="b93d2-114">MOF</span></span>|<span data-ttu-id="b93d2-115">Servicemodel.mof에 선언되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b93d2-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="1b52e-116">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="1b52e-116">Namespace</span></span>|<span data-ttu-id="1b52e-117">root\ServiceModel에 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b52e-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="b93d2-116">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="b93d2-116">Namespace</span></span>|<span data-ttu-id="b93d2-117">root\ServiceModel에 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b93d2-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="1b52e-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1b52e-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b93d2-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b93d2-118">See Also</span></span>  
  <xref:System.ServiceModel.TransactionFlowAttribute>

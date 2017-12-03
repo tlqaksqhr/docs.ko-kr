@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cb4173c5-476b-40d9-aa5c-19d95e98a51d
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8cc69c86ca73db180ea797d1018ca49bf21f8448
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 43ce0200a48ec9b470b7ec98f447b6e37512d06f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsnoexistingtransportmanager"></a><span data-ttu-id="36fc5-102">System.ServiceModel.Channels.NoExistingTransportManager</span><span class="sxs-lookup"><span data-stu-id="36fc5-102">System.ServiceModel.Channels.NoExistingTransportManager</span></span>
-<span data-ttu-id="36fc5-103">System.ServiceModel.Channels.NoExistingTransportManager</span><span class="sxs-lookup"><span data-stu-id="36fc5-103">System.ServiceModel.Channels.NoExistingTransportManager</span></span>  
+# <a name="systemservicemodelchannelsnoexistingtransportmanager"></a><span data-ttu-id="4207c-102">System.ServiceModel.Channels.NoExistingTransportManager</span><span class="sxs-lookup"><span data-stu-id="4207c-102">System.ServiceModel.Channels.NoExistingTransportManager</span></span>
+<span data-ttu-id="4207c-103">System.ServiceModel.Channels.NoExistingTransportManager</span><span class="sxs-lookup"><span data-stu-id="4207c-103">System.ServiceModel.Channels.NoExistingTransportManager</span></span>  
   
-## <a name="description"></a><span data-ttu-id="36fc5-104">설명</span><span class="sxs-lookup"><span data-stu-id="36fc5-104">Description</span></span>  
- <span data-ttu-id="36fc5-105">지정된 URI에 대해 기존 전송 관리자가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="36fc5-105">No existing transport manager was found for the specified URI.</span></span>  
+## <a name="description"></a><span data-ttu-id="4207c-104">설명</span><span class="sxs-lookup"><span data-stu-id="4207c-104">Description</span></span>  
+ <span data-ttu-id="4207c-105">지정된 URI에 대해 기존 전송 관리자가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4207c-105">No existing transport manager was found for the specified URI.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36fc5-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="36fc5-106">See Also</span></span>  
- [<span data-ttu-id="36fc5-107">추적</span><span class="sxs-lookup"><span data-stu-id="36fc5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="36fc5-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="36fc5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="36fc5-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="36fc5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="4207c-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4207c-106">See Also</span></span>  
+ [<span data-ttu-id="4207c-107">추적</span><span class="sxs-lookup"><span data-stu-id="4207c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="4207c-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="4207c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="4207c-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="4207c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

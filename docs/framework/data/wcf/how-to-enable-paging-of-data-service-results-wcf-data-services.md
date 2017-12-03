@@ -14,29 +14,29 @@ dev_langs:
 helpviewer_keywords: paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6bf267cdc4ab3ec3bdc82a3da52cef21ef1d6b2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9156ddbe9482683660524898aa0c6ce3673cd75f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a><span data-ttu-id="bc893-102">방법: 데이터 서비스 결과의 페이징 사용(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="bc893-102">How to: Enable Paging of Data Service Results (WCF Data Services)</span></span>
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="bc893-103">를 사용하면 데이터 서비스 쿼리에서 반환되는 엔터티 수를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc893-103"> enables you to limit the number of entities returned by a data service query.</span></span> <span data-ttu-id="bc893-104">페이지 제한은 서비스가 초기화될 때 호출되는 메서드에서 정의되며 각 엔터티 집합에 대해 별도로 설정될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc893-104">Page limits are defined in the method that is called when the service is initialized and can be set separately for each entity set.</span></span>  
+# <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a><span data-ttu-id="562aa-102">방법: 데이터 서비스 결과의 페이징 사용(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="562aa-102">How to: Enable Paging of Data Service Results (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="562aa-103">를 사용하면 데이터 서비스 쿼리에서 반환되는 엔터티 수를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="562aa-103"> enables you to limit the number of entities returned by a data service query.</span></span> <span data-ttu-id="562aa-104">페이지 제한은 서비스가 초기화될 때 호출되는 메서드에서 정의되며 각 엔터티 집합에 대해 별도로 설정될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="562aa-104">Page limits are defined in the method that is called when the service is initialized and can be set separately for each entity set.</span></span>  
   
- <span data-ttu-id="bc893-105">페이징을 사용하도록 설정하면 피드의 최종 항목에 다음 데이터 페이지에 대한 링크가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="bc893-105">When paging is enabled, the final entry in the feed contains a link to the next page of data.</span></span> <span data-ttu-id="bc893-106">자세한 내용은 참조 [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bc893-106">For more information, see [Configuring the Data Service](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="562aa-105">페이징을 사용하도록 설정하면 피드의 최종 항목에 다음 데이터 페이지에 대한 링크가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="562aa-105">When paging is enabled, the final entry in the feed contains a link to the next page of data.</span></span> <span data-ttu-id="562aa-106">자세한 내용은 참조 [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="562aa-106">For more information, see [Configuring the Data Service](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="bc893-107">이 항목에서는 데이터 서비스를 수정하여 반환된 `Customers` 및 `Orders` 엔터티 집합의 페이징을 사용하도록 설정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bc893-107">This topic shows how to modify a data service to enable paging of returned `Customers` and `Orders` entity sets.</span></span> <span data-ttu-id="bc893-108">이 항목의 예제에서는 Northwind 샘플 데이터 서비스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="bc893-108">The example in this topic uses the Northwind sample data service.</span></span> <span data-ttu-id="bc893-109">이 서비스를 완료할 때 만드는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bc893-109">This service is created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="562aa-107">이 항목에서는 데이터 서비스를 수정하여 반환된 `Customers` 및 `Orders` 엔터티 집합의 페이징을 사용하도록 설정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="562aa-107">This topic shows how to modify a data service to enable paging of returned `Customers` and `Orders` entity sets.</span></span> <span data-ttu-id="562aa-108">이 항목의 예제에서는 Northwind 샘플 데이터 서비스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="562aa-108">The example in this topic uses the Northwind sample data service.</span></span> <span data-ttu-id="562aa-109">이 서비스를 완료할 때 만드는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="562aa-109">This service is created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-### <a name="how-to-enable-paging-of-returned-customers-and-orders-entity-sets"></a><span data-ttu-id="bc893-110">반환된 Customers 및 Orders 엔터티 집합의 페이징을 사용하도록 설정하는 방법</span><span class="sxs-lookup"><span data-stu-id="bc893-110">How to enable paging of returned Customers and Orders entity sets</span></span>  
+### <a name="how-to-enable-paging-of-returned-customers-and-orders-entity-sets"></a><span data-ttu-id="562aa-110">반환된 Customers 및 Orders 엔터티 집합의 페이징을 사용하도록 설정하는 방법</span><span class="sxs-lookup"><span data-stu-id="562aa-110">How to enable paging of returned Customers and Orders entity sets</span></span>  
   
--   <span data-ttu-id="bc893-111">데이터 서비스 코드에서 `InitializeService` 함수의 자리 표시자 코드를 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="bc893-111">In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:</span></span>  
+-   <span data-ttu-id="562aa-111">데이터 서비스 코드에서 `InitializeService` 함수의 자리 표시자 코드를 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="562aa-111">In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:</span></span>  
   
      [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind.svc.cs#dataserviceconfigpaging)]
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
-## <a name="see-also"></a><span data-ttu-id="bc893-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bc893-112">See Also</span></span>  
- [<span data-ttu-id="bc893-113">지연 콘텐츠 로드</span><span class="sxs-lookup"><span data-stu-id="bc893-113">Loading Deferred Content</span></span>](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
- [<span data-ttu-id="bc893-114">방법: 페이지 단위 결과 로드</span><span class="sxs-lookup"><span data-stu-id="bc893-114">How to: Load Paged Results</span></span>](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="562aa-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="562aa-112">See Also</span></span>  
+ [<span data-ttu-id="562aa-113">지연 콘텐츠 로드</span><span class="sxs-lookup"><span data-stu-id="562aa-113">Loading Deferred Content</span></span>](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [<span data-ttu-id="562aa-114">방법: 페이지 단위 결과 로드</span><span class="sxs-lookup"><span data-stu-id="562aa-114">How to: Load Paged Results</span></span>](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)

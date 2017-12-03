@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b6638cd0-2e72-4634-863d-2621e46ede50
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ab03cd75e84b5a606d3ac307711017492c6f93da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1861844fda0eb347122abb93c60f56aa84e714a3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqsessiongramsent"></a><span data-ttu-id="24699-102">System.ServiceModel.Channels.MsmqSessiongramSent</span><span class="sxs-lookup"><span data-stu-id="24699-102">System.ServiceModel.Channels.MsmqSessiongramSent</span></span>
-<span data-ttu-id="24699-103">System.ServiceModel.Channels.MsmqSessiongramSent</span><span class="sxs-lookup"><span data-stu-id="24699-103">System.ServiceModel.Channels.MsmqSessiongramSent</span></span>  
+# <a name="systemservicemodelchannelsmsmqsessiongramsent"></a><span data-ttu-id="d4e06-102">System.ServiceModel.Channels.MsmqSessiongramSent</span><span class="sxs-lookup"><span data-stu-id="d4e06-102">System.ServiceModel.Channels.MsmqSessiongramSent</span></span>
+<span data-ttu-id="d4e06-103">System.ServiceModel.Channels.MsmqSessiongramSent</span><span class="sxs-lookup"><span data-stu-id="d4e06-103">System.ServiceModel.Channels.MsmqSessiongramSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="24699-104">설명</span><span class="sxs-lookup"><span data-stu-id="24699-104">Description</span></span>  
- <span data-ttu-id="24699-105">MSMQ 전송 세션을 보냈습니다.</span><span class="sxs-lookup"><span data-stu-id="24699-105">MSMQ transport session sent.</span></span>  
+## <a name="description"></a><span data-ttu-id="d4e06-104">설명</span><span class="sxs-lookup"><span data-stu-id="d4e06-104">Description</span></span>  
+ <span data-ttu-id="d4e06-105">MSMQ 전송 세션을 보냈습니다.</span><span class="sxs-lookup"><span data-stu-id="d4e06-105">MSMQ transport session sent.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24699-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="24699-106">See Also</span></span>  
- [<span data-ttu-id="24699-107">추적</span><span class="sxs-lookup"><span data-stu-id="24699-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="24699-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="24699-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="24699-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="24699-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d4e06-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d4e06-106">See Also</span></span>  
+ [<span data-ttu-id="d4e06-107">추적</span><span class="sxs-lookup"><span data-stu-id="d4e06-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d4e06-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="d4e06-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d4e06-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="d4e06-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

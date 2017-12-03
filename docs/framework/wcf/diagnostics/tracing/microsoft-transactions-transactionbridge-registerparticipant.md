@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8888fd0a-d454-4123-88de-fa3290102306
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4c7eb6eb7e27b5643db15efe6669ab7020900a74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6cc897ac40d059f19f799ac24919536217cbfc18
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="microsofttransactionstransactionbridgeregisterparticipant"></a><span data-ttu-id="d5ca9-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span><span class="sxs-lookup"><span data-stu-id="d5ca9-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span></span>
-<span data-ttu-id="d5ca9-103">WS-Atomic Transaction 프로토콜 서비스가 제어 프로토콜에 참가자를 등록했습니다.</span><span class="sxs-lookup"><span data-stu-id="d5ca9-103">The WS-Atomic Transaction protocol service successfully registered a participant for a control protocol.</span></span>  
+# <a name="microsofttransactionstransactionbridgeregisterparticipant"></a><span data-ttu-id="ce089-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span><span class="sxs-lookup"><span data-stu-id="ce089-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span></span>
+<span data-ttu-id="ce089-103">WS-Atomic Transaction 프로토콜 서비스가 제어 프로토콜에 참가자를 등록했습니다.</span><span class="sxs-lookup"><span data-stu-id="ce089-103">The WS-Atomic Transaction protocol service successfully registered a participant for a control protocol.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d5ca9-104">설명</span><span class="sxs-lookup"><span data-stu-id="d5ca9-104">Description</span></span>  
- <span data-ttu-id="d5ca9-105">로컬 트랜잭션 관리자가 2PC(2단계 커밋) 프로토콜에 참가자 등록 요청을 승인했을 때 추적됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5ca9-105">Traced when the local Transaction Manager has successfully acknowledged a Register request from a participant for a 2pc protocol.</span></span>  
+## <a name="description"></a><span data-ttu-id="ce089-104">설명</span><span class="sxs-lookup"><span data-stu-id="ce089-104">Description</span></span>  
+ <span data-ttu-id="ce089-105">로컬 트랜잭션 관리자가 2PC(2단계 커밋) 프로토콜에 참가자 등록 요청을 승인했을 때 추적됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce089-105">Traced when the local Transaction Manager has successfully acknowledged a Register request from a participant for a 2pc protocol.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5ca9-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d5ca9-106">See Also</span></span>  
- [<span data-ttu-id="d5ca9-107">추적</span><span class="sxs-lookup"><span data-stu-id="d5ca9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d5ca9-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="d5ca9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d5ca9-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="d5ca9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ce089-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ce089-106">See Also</span></span>  
+ [<span data-ttu-id="ce089-107">추적</span><span class="sxs-lookup"><span data-stu-id="ce089-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ce089-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="ce089-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ce089-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="ce089-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cc53c0a0-62e0-4295-be0b-a1df6966ecea
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bce5f12f6e038525c77624ee765ff54e06708dda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 59aba07a244109c77f11fcb74b456d7f3441ca8e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelportsharingportsharingduplicatedpipe"></a><span data-ttu-id="1db66-102">System.ServiceModel.PortSharing.PortSharingDuplicatedPipe</span><span class="sxs-lookup"><span data-stu-id="1db66-102">System.ServiceModel.PortSharing.PortSharingDuplicatedPipe</span></span>
-<span data-ttu-id="1db66-103">System.ServiceModel.PortSharing.PortSharingDuplicatedPipe</span><span class="sxs-lookup"><span data-stu-id="1db66-103">System.ServiceModel.PortSharing.PortSharingDuplicatedPipe</span></span>  
+# <a name="systemservicemodelportsharingportsharingduplicatedpipe"></a><span data-ttu-id="7f85d-102">System.ServiceModel.PortSharing.PortSharingDuplicatedPipe</span><span class="sxs-lookup"><span data-stu-id="7f85d-102">System.ServiceModel.PortSharing.PortSharingDuplicatedPipe</span></span>
+<span data-ttu-id="7f85d-103">System.ServiceModel.PortSharing.PortSharingDuplicatedPipe</span><span class="sxs-lookup"><span data-stu-id="7f85d-103">System.ServiceModel.PortSharing.PortSharingDuplicatedPipe</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1db66-104">설명</span><span class="sxs-lookup"><span data-stu-id="1db66-104">Description</span></span>  
- <span data-ttu-id="1db66-105">명명된 파이프가 복제되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1db66-105">A named pipe was successfully duplicated.</span></span>  
+## <a name="description"></a><span data-ttu-id="7f85d-104">설명</span><span class="sxs-lookup"><span data-stu-id="7f85d-104">Description</span></span>  
+ <span data-ttu-id="7f85d-105">명명된 파이프가 복제되었습니다.</span><span class="sxs-lookup"><span data-stu-id="7f85d-105">A named pipe was successfully duplicated.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1db66-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1db66-106">See Also</span></span>  
- [<span data-ttu-id="1db66-107">추적</span><span class="sxs-lookup"><span data-stu-id="1db66-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="1db66-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="1db66-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="1db66-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="1db66-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="7f85d-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7f85d-106">See Also</span></span>  
+ [<span data-ttu-id="7f85d-107">추적</span><span class="sxs-lookup"><span data-stu-id="7f85d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="7f85d-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="7f85d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="7f85d-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="7f85d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

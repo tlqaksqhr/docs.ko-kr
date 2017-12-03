@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5d543c68-1fd2-4512-a219-baf698136ef0
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b4d1b18b0020faf85420bd7a62cc9b90e0241f1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 945ee0ea6746dac16f25f1225e11f1b4dd28347d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodeldiagnosticsthrowingexception"></a><span data-ttu-id="907b3-102">System.ServiceModel.Diagnostics.ThrowingException</span><span class="sxs-lookup"><span data-stu-id="907b3-102">System.ServiceModel.Diagnostics.ThrowingException</span></span>
-<span data-ttu-id="907b3-103">System.ServiceModel.Diagnostics.ThrowingException</span><span class="sxs-lookup"><span data-stu-id="907b3-103">System.ServiceModel.Diagnostics.ThrowingException</span></span>  
+# <a name="systemservicemodeldiagnosticsthrowingexception"></a><span data-ttu-id="5f436-102">System.ServiceModel.Diagnostics.ThrowingException</span><span class="sxs-lookup"><span data-stu-id="5f436-102">System.ServiceModel.Diagnostics.ThrowingException</span></span>
+<span data-ttu-id="5f436-103">System.ServiceModel.Diagnostics.ThrowingException</span><span class="sxs-lookup"><span data-stu-id="5f436-103">System.ServiceModel.Diagnostics.ThrowingException</span></span>  
   
-## <a name="description"></a><span data-ttu-id="907b3-104">설명</span><span class="sxs-lookup"><span data-stu-id="907b3-104">Description</span></span>  
- <span data-ttu-id="907b3-105">예외를 throw하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="907b3-105">Throwing an exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="5f436-104">설명</span><span class="sxs-lookup"><span data-stu-id="5f436-104">Description</span></span>  
+ <span data-ttu-id="5f436-105">예외를 throw하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5f436-105">Throwing an exception.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="907b3-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="907b3-106">See Also</span></span>  
- [<span data-ttu-id="907b3-107">추적</span><span class="sxs-lookup"><span data-stu-id="907b3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="907b3-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="907b3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="907b3-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="907b3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5f436-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5f436-106">See Also</span></span>  
+ [<span data-ttu-id="5f436-107">추적</span><span class="sxs-lookup"><span data-stu-id="5f436-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5f436-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="5f436-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5f436-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="5f436-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

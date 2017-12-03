@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8371b9180fec9877ac58026c26fb60c8ccdaa752
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 741968e160683ab38f79effdfa0bdf56053cfb93
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltworkflowcontrolendpointgt"></a><span data-ttu-id="dd72d-102">&lt;workflowControlEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="dd72d-102">&lt;workflowControlEndpoint&gt;</span></span>
-<span data-ttu-id="dd72d-103">이 구성 요소는 워크플로 인스턴스의 실행(만들기, 실행, 일시 중단, 종료 등)을 제어하기 위한 표준 끝점을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="dd72d-103">This configuration element defines a standard endpoint for controlling the execution of workflow instances (create, run, suspend, terminate, etc).</span></span>  
+# <a name="ltworkflowcontrolendpointgt"></a><span data-ttu-id="18ff9-102">&lt;workflowControlEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="18ff9-102">&lt;workflowControlEndpoint&gt;</span></span>
+<span data-ttu-id="18ff9-103">이 구성 요소는 워크플로 인스턴스의 실행(만들기, 실행, 일시 중단, 종료 등)을 제어하기 위한 표준 끝점을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="18ff9-103">This configuration element defines a standard endpoint for controlling the execution of workflow instances (create, run, suspend, terminate, etc).</span></span>  
   
-<span data-ttu-id="dd72d-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="dd72d-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="dd72d-105">\<d a r d ></span><span class="sxs-lookup"><span data-stu-id="dd72d-105">\<standardEndpoints></span></span>  
+<span data-ttu-id="18ff9-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="18ff9-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="18ff9-105">\<d a r d ></span><span class="sxs-lookup"><span data-stu-id="18ff9-105">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd72d-106">구문</span><span class="sxs-lookup"><span data-stu-id="dd72d-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18ff9-106">구문</span><span class="sxs-lookup"><span data-stu-id="18ff9-106">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -37,23 +37,23 @@ ms.lasthandoff: 10/18/2017
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dd72d-107">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="dd72d-107">Attributes and Elements</span></span>  
- <span data-ttu-id="dd72d-108">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="dd72d-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="18ff9-107">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="18ff9-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="18ff9-108">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="18ff9-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dd72d-109">특성</span><span class="sxs-lookup"><span data-stu-id="dd72d-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="18ff9-109">특성</span><span class="sxs-lookup"><span data-stu-id="18ff9-109">Attributes</span></span>  
   
-|<span data-ttu-id="dd72d-110">특성</span><span class="sxs-lookup"><span data-stu-id="dd72d-110">Attribute</span></span>|<span data-ttu-id="dd72d-111">설명</span><span class="sxs-lookup"><span data-stu-id="dd72d-111">Description</span></span>|  
+|<span data-ttu-id="18ff9-110">특성</span><span class="sxs-lookup"><span data-stu-id="18ff9-110">Attribute</span></span>|<span data-ttu-id="18ff9-111">설명</span><span class="sxs-lookup"><span data-stu-id="18ff9-111">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="dd72d-112">name</span><span class="sxs-lookup"><span data-stu-id="dd72d-112">name</span></span>|<span data-ttu-id="dd72d-113">표준 끝점의 구성 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="dd72d-113">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="dd72d-114">이 이름은 서비스 끝점의 `endpointConfiguration` 특성에서 표준 끝점을 해당 구성에 연결하기 위해 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="dd72d-114">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
+|<span data-ttu-id="18ff9-112">name</span><span class="sxs-lookup"><span data-stu-id="18ff9-112">name</span></span>|<span data-ttu-id="18ff9-113">표준 끝점의 구성 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="18ff9-113">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="18ff9-114">이 이름은 서비스 끝점의 `endpointConfiguration` 특성에서 표준 끝점을 해당 구성에 연결하기 위해 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="18ff9-114">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="dd72d-115">자식 요소</span><span class="sxs-lookup"><span data-stu-id="dd72d-115">Child Elements</span></span>  
- <span data-ttu-id="dd72d-116">없음</span><span class="sxs-lookup"><span data-stu-id="dd72d-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="18ff9-115">자식 요소</span><span class="sxs-lookup"><span data-stu-id="18ff9-115">Child Elements</span></span>  
+ <span data-ttu-id="18ff9-116">없음</span><span class="sxs-lookup"><span data-stu-id="18ff9-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="dd72d-117">부모 요소</span><span class="sxs-lookup"><span data-stu-id="dd72d-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="18ff9-117">부모 요소</span><span class="sxs-lookup"><span data-stu-id="18ff9-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="dd72d-118">요소</span><span class="sxs-lookup"><span data-stu-id="dd72d-118">Element</span></span>|<span data-ttu-id="dd72d-119">설명</span><span class="sxs-lookup"><span data-stu-id="dd72d-119">Description</span></span>|  
+|<span data-ttu-id="18ff9-118">요소</span><span class="sxs-lookup"><span data-stu-id="18ff9-118">Element</span></span>|<span data-ttu-id="18ff9-119">설명</span><span class="sxs-lookup"><span data-stu-id="18ff9-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="dd72d-120">\<d a r d ></span><span class="sxs-lookup"><span data-stu-id="dd72d-120">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="dd72d-121">하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 끝점인 표준 끝점의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="dd72d-121">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="18ff9-120">\<d a r d ></span><span class="sxs-lookup"><span data-stu-id="18ff9-120">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="18ff9-121">하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 끝점인 표준 끝점의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="18ff9-121">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="dd72d-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dd72d-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="18ff9-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="18ff9-122">See Also</span></span>  
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>

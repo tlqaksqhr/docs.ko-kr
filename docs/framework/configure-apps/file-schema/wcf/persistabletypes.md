@@ -10,21 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4d255097-45f0-4a04-945e-41d9bcfe8c54
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f0b816e43ec211738a47c6141e7544cb6588f82d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eea4b8352f2e7166890ef28112877b04e5ed8e18
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltpersistabletypesgt"></a><span data-ttu-id="18dbc-102">&lt;persistableTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="18dbc-102">&lt;persistableTypes&gt;</span></span>
-<span data-ttu-id="18dbc-103">이 섹션에는 `persistableType` 요소 컬렉션이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="18dbc-103">This section contains a collection of `persistableType` elements.</span></span>  
+# <a name="ltpersistabletypesgt"></a><span data-ttu-id="ef936-102">&lt;persistableTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="ef936-102">&lt;persistableTypes&gt;</span></span>
+<span data-ttu-id="ef936-103">이 섹션에는 `persistableType` 요소 컬렉션이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef936-103">This section contains a collection of `persistableType` elements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18dbc-104">참고 항목</span><span class="sxs-lookup"><span data-stu-id="18dbc-104">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ef936-104">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ef936-104">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>  
- [<span data-ttu-id="18dbc-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="18dbc-105">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [<span data-ttu-id="18dbc-106">COM + 응용 프로그램과 통합</span><span class="sxs-lookup"><span data-stu-id="18dbc-106">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="18dbc-107">방법: COM + 서비스 설정 구성</span><span class="sxs-lookup"><span data-stu-id="18dbc-107">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [<span data-ttu-id="ef936-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="ef936-105">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [<span data-ttu-id="ef936-106">COM + 응용 프로그램과 통합</span><span class="sxs-lookup"><span data-stu-id="ef936-106">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [<span data-ttu-id="ef936-107">방법: COM + 서비스 설정 구성</span><span class="sxs-lookup"><span data-stu-id="ef936-107">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

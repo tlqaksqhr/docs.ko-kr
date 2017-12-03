@@ -9,26 +9,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d95c6d3768a26a8db92bf54bb454b350ced03d7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df8f990f4a51ea93008d00f785d4763a5537ea2e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltaddgt-of-ltparticipantsgt"></a><span data-ttu-id="006d4-102">&lt;participants&gt;의 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="006d4-102">&lt;add&gt; of &lt;participants&gt;</span></span>
-<span data-ttu-id="006d4-103">런타임에서 내보내지는 추적 레코드를 수신하는 추적 참가자를 직접 구성하고 구성된 방식대로 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-103">Configure a tracking participant that listens to the tracking records being emitted from the runtime directly and process them in whatever way it was configured.</span></span> <span data-ttu-id="006d4-104">여기에는 특정 출력(예: 파일, 콘솔, ETW)에 쓰기, 레코드 처리/집계 또는 필요한 기타 조합이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
+# <a name="ltaddgt-of-ltparticipantsgt"></a><span data-ttu-id="aa8bd-102">&lt;participants&gt;의 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="aa8bd-102">&lt;add&gt; of &lt;participants&gt;</span></span>
+<span data-ttu-id="aa8bd-103">런타임에서 내보내지는 추적 레코드를 수신하는 추적 참가자를 직접 구성하고 구성된 방식대로 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-103">Configure a tracking participant that listens to the tracking records being emitted from the runtime directly and process them in whatever way it was configured.</span></span> <span data-ttu-id="aa8bd-104">여기에는 특정 출력(예: 파일, 콘솔, ETW)에 쓰기, 레코드 처리/집계 또는 필요한 기타 조합이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
   
- <span data-ttu-id="006d4-105">워크플로 추적 및 추적 참가자에 대 한 자세한 내용은 참조 하십시오. [워크플로 추적 및 트레이싱](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) 및 [추적 참가자](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span></span>  
+ <span data-ttu-id="aa8bd-105">워크플로 추적 및 추적 참가자에 대 한 자세한 내용은 참조 하십시오. [워크플로 추적 및 트레이싱](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) 및 [추적 참가자](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span></span>  
   
-<span data-ttu-id="006d4-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="006d4-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="006d4-107">\<추적 ></span><span class="sxs-lookup"><span data-stu-id="006d4-107">\<tracking></span></span>  
-<span data-ttu-id="006d4-108">\<참가자 ></span><span class="sxs-lookup"><span data-stu-id="006d4-108">\<participants></span></span>  
-<span data-ttu-id="006d4-109">\<add></span><span class="sxs-lookup"><span data-stu-id="006d4-109">\<add></span></span>  
+<span data-ttu-id="aa8bd-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="aa8bd-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="aa8bd-107">\<추적 ></span><span class="sxs-lookup"><span data-stu-id="aa8bd-107">\<tracking></span></span>  
+<span data-ttu-id="aa8bd-108">\<참가자 ></span><span class="sxs-lookup"><span data-stu-id="aa8bd-108">\<participants></span></span>  
+<span data-ttu-id="aa8bd-109">\<add></span><span class="sxs-lookup"><span data-stu-id="aa8bd-109">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="006d4-110">구문</span><span class="sxs-lookup"><span data-stu-id="006d4-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa8bd-110">구문</span><span class="sxs-lookup"><span data-stu-id="aa8bd-110">Syntax</span></span>  
   
 ```xml
 <tracking>
@@ -38,37 +38,37 @@ ms.lasthandoff: 11/21/2017
 </tracking>   
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="006d4-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="006d4-111">Attributes and Elements</span></span>  
- <span data-ttu-id="006d4-112">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="aa8bd-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="aa8bd-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="aa8bd-112">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="006d4-113">특성</span><span class="sxs-lookup"><span data-stu-id="006d4-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="aa8bd-113">특성</span><span class="sxs-lookup"><span data-stu-id="aa8bd-113">Attributes</span></span>  
   
-|<span data-ttu-id="006d4-114">요소</span><span class="sxs-lookup"><span data-stu-id="006d4-114">Element</span></span>|<span data-ttu-id="006d4-115">설명</span><span class="sxs-lookup"><span data-stu-id="006d4-115">Description</span></span>|  
+|<span data-ttu-id="aa8bd-114">요소</span><span class="sxs-lookup"><span data-stu-id="aa8bd-114">Element</span></span>|<span data-ttu-id="aa8bd-115">설명</span><span class="sxs-lookup"><span data-stu-id="aa8bd-115">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="006d4-116">name</span><span class="sxs-lookup"><span data-stu-id="006d4-116">name</span></span>|<span data-ttu-id="006d4-117">추적 참가자의 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-117">A string that specifies the name of a tracking participant.</span></span>|  
-|<span data-ttu-id="006d4-118">profileName</span><span class="sxs-lookup"><span data-stu-id="006d4-118">profileName</span></span>|<span data-ttu-id="006d4-119">추적 참가자가 구독하는 추적 레코드를 정의하는 추적 프로필의 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-119">A string that specifies the name of the tracking profile which defines the tracking records the tracking participant has subscribed to.</span></span>|  
-|<span data-ttu-id="006d4-120">형식</span><span class="sxs-lookup"><span data-stu-id="006d4-120">type</span></span>|<span data-ttu-id="006d4-121">추적 참가자의 형식을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-121">A string that specifies the type of a tracking participant.</span></span>|  
+|<span data-ttu-id="aa8bd-116">name</span><span class="sxs-lookup"><span data-stu-id="aa8bd-116">name</span></span>|<span data-ttu-id="aa8bd-117">추적 참가자의 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-117">A string that specifies the name of a tracking participant.</span></span>|  
+|<span data-ttu-id="aa8bd-118">profileName</span><span class="sxs-lookup"><span data-stu-id="aa8bd-118">profileName</span></span>|<span data-ttu-id="aa8bd-119">추적 참가자가 구독하는 추적 레코드를 정의하는 추적 프로필의 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-119">A string that specifies the name of the tracking profile which defines the tracking records the tracking participant has subscribed to.</span></span>|  
+|<span data-ttu-id="aa8bd-120">형식</span><span class="sxs-lookup"><span data-stu-id="aa8bd-120">type</span></span>|<span data-ttu-id="aa8bd-121">추적 참가자의 형식을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-121">A string that specifies the type of a tracking participant.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="006d4-122">자식 요소</span><span class="sxs-lookup"><span data-stu-id="006d4-122">Child Elements</span></span>  
- <span data-ttu-id="006d4-123">없음</span><span class="sxs-lookup"><span data-stu-id="006d4-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="aa8bd-122">자식 요소</span><span class="sxs-lookup"><span data-stu-id="aa8bd-122">Child Elements</span></span>  
+ <span data-ttu-id="aa8bd-123">없음</span><span class="sxs-lookup"><span data-stu-id="aa8bd-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="006d4-124">부모 요소</span><span class="sxs-lookup"><span data-stu-id="006d4-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="aa8bd-124">부모 요소</span><span class="sxs-lookup"><span data-stu-id="aa8bd-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="006d4-125">요소</span><span class="sxs-lookup"><span data-stu-id="006d4-125">Element</span></span>|<span data-ttu-id="006d4-126">설명</span><span class="sxs-lookup"><span data-stu-id="006d4-126">Description</span></span>|  
+|<span data-ttu-id="aa8bd-125">요소</span><span class="sxs-lookup"><span data-stu-id="aa8bd-125">Element</span></span>|<span data-ttu-id="aa8bd-126">설명</span><span class="sxs-lookup"><span data-stu-id="aa8bd-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="006d4-127">\<참가자 ></span><span class="sxs-lookup"><span data-stu-id="006d4-127">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="006d4-128">추적 참가자의 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-128">A list of tracking participants</span></span>|  
+|[<span data-ttu-id="aa8bd-127">\<참가자 ></span><span class="sxs-lookup"><span data-stu-id="aa8bd-127">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="aa8bd-128">추적 참가자의 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-128">A list of tracking participants</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="006d4-129">설명</span><span class="sxs-lookup"><span data-stu-id="006d4-129">Remarks</span></span>  
- <span data-ttu-id="006d4-130">추적 참가자는 워크플로에서 내보내지는 추적 데이터를 가져오고 이 데이터를 다른 미디어에 저장하기 위해 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-130">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="006d4-131">마찬가지로 추적 레코드에 대한 모든 사후 처리를 추적 참가자 내에서 수행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-131">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aa8bd-129">설명</span><span class="sxs-lookup"><span data-stu-id="aa8bd-129">Remarks</span></span>  
+ <span data-ttu-id="aa8bd-130">추적 참가자는 워크플로에서 내보내지는 추적 데이터를 가져오고 이 데이터를 다른 미디어에 저장하기 위해 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-130">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="aa8bd-131">마찬가지로 추적 레코드에 대한 모든 사후 처리를 추적 참가자 내에서 수행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-131">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
- <span data-ttu-id="006d4-132">여러 추적 참가자가 추적 이벤트를 동시에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-132">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="006d4-133">각 추적 참가자는 서로 다른 추적 프로필과 연결될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-133">Each tracking participant can be associated with a different tracking profile.</span></span>  
+ <span data-ttu-id="aa8bd-132">여러 추적 참가자가 추적 이벤트를 동시에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-132">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="aa8bd-133">각 추적 참가자는 서로 다른 추적 프로필과 연결될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-133">Each tracking participant can be associated with a different tracking profile.</span></span>  
   
- <span data-ttu-id="006d4-134">ETW 세션에 추적 레코드를 작성하는 표준 추적 참가자가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-134">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="006d4-135">추적 참가자는 워크플로 서비스에서 구성 파일에 추적별 동작을 추가하여 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-135">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="006d4-136">ETW 추적 참가자를 사용하여 이벤트 뷰어에서 추적 레코드를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-136">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="006d4-137">표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-137">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
+ <span data-ttu-id="aa8bd-134">ETW 세션에 추적 레코드를 작성하는 표준 추적 참가자가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-134">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="aa8bd-135">추적 참가자는 워크플로 서비스에서 구성 파일에 추적별 동작을 추가하여 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-135">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="aa8bd-136">ETW 추적 참가자를 사용하여 이벤트 뷰어에서 추적 레코드를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-136">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="aa8bd-137">표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-137">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="006d4-138">예제</span><span class="sxs-lookup"><span data-stu-id="006d4-138">Example</span></span>  
- <span data-ttu-id="006d4-139">다음 구성 예제에서는 Web.config 파일에서 구성되는 표준 ETW 추적 참가자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-139">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
+## <a name="example"></a><span data-ttu-id="aa8bd-138">예제</span><span class="sxs-lookup"><span data-stu-id="aa8bd-138">Example</span></span>  
+ <span data-ttu-id="aa8bd-139">다음 구성 예제에서는 Web.config 파일에서 구성되는 표준 ETW 추적 참가자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-139">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- <span data-ttu-id="006d4-140">ETW 추적 참가자에서 ETW에 추적 레코드를 쓰기 위해 사용 하는 공급자 Id에 정의 된  **\<진단 >** 섹션.</span><span class="sxs-lookup"><span data-stu-id="006d4-140">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="006d4-141">추적 참가자에는 구독하는 추적 레코드를 지정하기 위해 연결된 프로필이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-141">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="006d4-142">이 정의한는 **profileName** 특성에는  **\<추가 >** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-142">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="006d4-143">추적 참가자에 추가 되 고, 정의 되 면는  **\<etwTracking >** 서비스 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-143">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="006d4-144">이렇게 하면 선택된 추적 참가자가 워크플로 인스턴스의 확장에 추가되어 추적 레코드를 받기 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="006d4-144">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
+ <span data-ttu-id="aa8bd-140">ETW 추적 참가자에서 ETW에 추적 레코드를 쓰기 위해 사용 하는 공급자 Id에 정의 된  **\<진단 >** 섹션.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-140">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="aa8bd-141">추적 참가자에는 구독하는 추적 레코드를 지정하기 위해 연결된 프로필이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-141">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="aa8bd-142">이 정의한는 **profileName** 특성에는  **\<추가 >** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-142">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="aa8bd-143">추적 참가자에 추가 되 고, 정의 되 면는  **\<etwTracking >** 서비스 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-143">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="aa8bd-144">이렇게 하면 선택된 추적 참가자가 워크플로 인스턴스의 확장에 추가되어 추적 레코드를 받기 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="aa8bd-144">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
 ```xml  
 <configuration>   
@@ -95,9 +95,9 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="006d4-145">참고 항목</span><span class="sxs-lookup"><span data-stu-id="006d4-145">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="aa8bd-145">참고 항목</span><span class="sxs-lookup"><span data-stu-id="aa8bd-145">See Also</span></span>  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
  <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
  <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
- [<span data-ttu-id="006d4-146">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="006d4-146">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="006d4-147">추적 참가자</span><span class="sxs-lookup"><span data-stu-id="006d4-147">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+ [<span data-ttu-id="aa8bd-146">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="aa8bd-146">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="aa8bd-147">추적 참가자</span><span class="sxs-lookup"><span data-stu-id="aa8bd-147">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

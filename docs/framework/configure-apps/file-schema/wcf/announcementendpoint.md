@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d49ea0b2dbabd5e747d912b76e493559b2a96ee7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5458149a68273a62b1636dec0da4d9494fb63a99
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltannouncementendpointgt"></a><span data-ttu-id="aa896-102">&lt;announcementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="aa896-102">&lt;announcementEndpoint&gt;</span></span>
-<span data-ttu-id="aa896-103">이 구성 요소는 고정 알림 계약이 있는 표준 끝점을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-103">This configuration element defines a standard endpoint with a fixed announcement contract.</span></span> <span data-ttu-id="aa896-104">서비스에서는 선택적으로 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림 메시지를 보내 가용성을 알릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-104">A service can optionally announce its availability by sending an online and offline announcement message when it is opened or closed respectively.</span></span> <span data-ttu-id="aa896-105">A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 에 알림 끝점을 지정 하는 서비스는 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 공지를 수행 하려면 AnnouncementClient 사용 하 여 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-105">A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service specifies the announcement endpoints in the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element and uses the AnnouncementClient to perform the announcements.</span></span> <span data-ttu-id="aa896-106">다른 서비스에서 알림 역할을 실제로 수신 하려는 클라이언트는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ; 서비스를 해당 클라이언트에 대 한 알림 끝점을 구성 해야 하므로 [ \<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) 섹션.</span><span class="sxs-lookup"><span data-stu-id="aa896-106">A client wishing to listen for the announcement from other service is actually acting as a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service; thus you have to configure the announcement endpoints for that client in the [\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) section.</span></span>  
+# <a name="ltannouncementendpointgt"></a><span data-ttu-id="92070-102">&lt;announcementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="92070-102">&lt;announcementEndpoint&gt;</span></span>
+<span data-ttu-id="92070-103">이 구성 요소는 고정 알림 계약이 있는 표준 끝점을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="92070-103">This configuration element defines a standard endpoint with a fixed announcement contract.</span></span> <span data-ttu-id="92070-104">서비스에서는 선택적으로 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림 메시지를 보내 가용성을 알릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="92070-104">A service can optionally announce its availability by sending an online and offline announcement message when it is opened or closed respectively.</span></span> <span data-ttu-id="92070-105">A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 에 알림 끝점을 지정 하는 서비스는 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 공지를 수행 하려면 AnnouncementClient 사용 하 여 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="92070-105">A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service specifies the announcement endpoints in the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element and uses the AnnouncementClient to perform the announcements.</span></span> <span data-ttu-id="92070-106">다른 서비스에서 알림 역할을 실제로 수신 하려는 클라이언트는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ; 서비스를 해당 클라이언트에 대 한 알림 끝점을 구성 해야 하므로 [ \<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) 섹션.</span><span class="sxs-lookup"><span data-stu-id="92070-106">A client wishing to listen for the announcement from other service is actually acting as a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service; thus you have to configure the announcement endpoints for that client in the [\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) section.</span></span>  
   
-<span data-ttu-id="aa896-107">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="aa896-107">\<system.ServiceModel></span></span>  
-<span data-ttu-id="aa896-108">\<d a r d ></span><span class="sxs-lookup"><span data-stu-id="aa896-108">\<standardEndpoints></span></span>  
+<span data-ttu-id="92070-107">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="92070-107">\<system.ServiceModel></span></span>  
+<span data-ttu-id="92070-108">\<d a r d ></span><span class="sxs-lookup"><span data-stu-id="92070-108">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa896-109">구문</span><span class="sxs-lookup"><span data-stu-id="aa896-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92070-109">구문</span><span class="sxs-lookup"><span data-stu-id="92070-109">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -39,28 +39,28 @@ ms.lasthandoff: 10/18/2017
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="aa896-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="aa896-110">Attributes and Elements</span></span>  
- <span data-ttu-id="aa896-111">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="92070-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="92070-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="92070-111">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="92070-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="aa896-112">특성</span><span class="sxs-lookup"><span data-stu-id="aa896-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="92070-112">특성</span><span class="sxs-lookup"><span data-stu-id="92070-112">Attributes</span></span>  
   
-|<span data-ttu-id="aa896-113">특성</span><span class="sxs-lookup"><span data-stu-id="aa896-113">Attribute</span></span>|<span data-ttu-id="aa896-114">설명</span><span class="sxs-lookup"><span data-stu-id="aa896-114">Description</span></span>|  
+|<span data-ttu-id="92070-113">특성</span><span class="sxs-lookup"><span data-stu-id="92070-113">Attribute</span></span>|<span data-ttu-id="92070-114">설명</span><span class="sxs-lookup"><span data-stu-id="92070-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="aa896-115">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="aa896-115">discoveryVersion</span></span>|<span data-ttu-id="aa896-116">WS-Discovery 프로토콜의 두 버전 중 하나를 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-116">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="aa896-117">유효한 값은 WSDiscovery11 및 WSDiscoveryApril2005입니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-117">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="aa896-118">이 값은 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-118">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
-|<span data-ttu-id="aa896-119">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="aa896-119">maxAnnouncementDelay</span></span>|<span data-ttu-id="aa896-120">검색 프로토콜이 Hello 메시지가 전송될 때까지 대기하는 최대 지연 값을 지정하는 Timespan 값입니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-120">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="aa896-121">메시지는 전송되기 전에 0에서 이 특성에 지정된 값 사이의 임의 시간 값 동안 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-121">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="aa896-122">이 특성은 네트워크에 장애가 발생했다가 모든 서비스가 동시에 온라인 상태로 복구되는 경우에 네트워크 폭주가 발생하는 것을 방지하기 위해 임의의 짧은 지연 간격을 설정하기 위해 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-122">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
-|<span data-ttu-id="aa896-123">name</span><span class="sxs-lookup"><span data-stu-id="aa896-123">name</span></span>|<span data-ttu-id="aa896-124">표준 끝점의 구성 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-124">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="aa896-125">이 이름은 서비스 끝점의 `endpointConfiguration` 특성에서 표준 끝점을 해당 구성에 연결하기 위해 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-125">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
+|<span data-ttu-id="92070-115">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="92070-115">discoveryVersion</span></span>|<span data-ttu-id="92070-116">WS-Discovery 프로토콜의 두 버전 중 하나를 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="92070-116">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="92070-117">유효한 값은 WSDiscovery11 및 WSDiscoveryApril2005입니다.</span><span class="sxs-lookup"><span data-stu-id="92070-117">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="92070-118">이 값은 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="92070-118">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
+|<span data-ttu-id="92070-119">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="92070-119">maxAnnouncementDelay</span></span>|<span data-ttu-id="92070-120">검색 프로토콜이 Hello 메시지가 전송될 때까지 대기하는 최대 지연 값을 지정하는 Timespan 값입니다.</span><span class="sxs-lookup"><span data-stu-id="92070-120">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="92070-121">메시지는 전송되기 전에 0에서 이 특성에 지정된 값 사이의 임의 시간 값 동안 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="92070-121">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="92070-122">이 특성은 네트워크에 장애가 발생했다가 모든 서비스가 동시에 온라인 상태로 복구되는 경우에 네트워크 폭주가 발생하는 것을 방지하기 위해 임의의 짧은 지연 간격을 설정하기 위해 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="92070-122">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
+|<span data-ttu-id="92070-123">name</span><span class="sxs-lookup"><span data-stu-id="92070-123">name</span></span>|<span data-ttu-id="92070-124">표준 끝점의 구성 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="92070-124">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="92070-125">이 이름은 서비스 끝점의 `endpointConfiguration` 특성에서 표준 끝점을 해당 구성에 연결하기 위해 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="92070-125">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="aa896-126">자식 요소</span><span class="sxs-lookup"><span data-stu-id="aa896-126">Child Elements</span></span>  
- <span data-ttu-id="aa896-127">없음</span><span class="sxs-lookup"><span data-stu-id="aa896-127">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="92070-126">자식 요소</span><span class="sxs-lookup"><span data-stu-id="92070-126">Child Elements</span></span>  
+ <span data-ttu-id="92070-127">없음</span><span class="sxs-lookup"><span data-stu-id="92070-127">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="aa896-128">부모 요소</span><span class="sxs-lookup"><span data-stu-id="aa896-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="92070-128">부모 요소</span><span class="sxs-lookup"><span data-stu-id="92070-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="aa896-129">요소</span><span class="sxs-lookup"><span data-stu-id="aa896-129">Element</span></span>|<span data-ttu-id="aa896-130">설명</span><span class="sxs-lookup"><span data-stu-id="aa896-130">Description</span></span>|  
+|<span data-ttu-id="92070-129">요소</span><span class="sxs-lookup"><span data-stu-id="92070-129">Element</span></span>|<span data-ttu-id="92070-130">설명</span><span class="sxs-lookup"><span data-stu-id="92070-130">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="aa896-131">\<d a r d ></span><span class="sxs-lookup"><span data-stu-id="aa896-131">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="aa896-132">하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 끝점인 표준 끝점의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-132">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="92070-131">\<d a r d ></span><span class="sxs-lookup"><span data-stu-id="92070-131">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="92070-132">하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 끝점인 표준 끝점의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="92070-132">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="aa896-133">예제</span><span class="sxs-lookup"><span data-stu-id="aa896-133">Example</span></span>  
- <span data-ttu-id="aa896-134">다음 예제에서는 http 및 peernet을 통해 알림 메시지를 수신하는 클라이언트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="aa896-134">The following example demonstrates a client listening for announcements messages over http and peernet.</span></span>  
+## <a name="example"></a><span data-ttu-id="92070-133">예제</span><span class="sxs-lookup"><span data-stu-id="92070-133">Example</span></span>  
+ <span data-ttu-id="92070-134">다음 예제에서는 http 및 peernet을 통해 알림 메시지를 수신하는 클라이언트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="92070-134">The following example demonstrates a client listening for announcements messages over http and peernet.</span></span>  
   
 ```xml  
 <services>  
@@ -88,5 +88,5 @@ ms.lasthandoff: 10/18/2017
 </standardEndpoints>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="aa896-135">참고 항목</span><span class="sxs-lookup"><span data-stu-id="aa896-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="92070-135">참고 항목</span><span class="sxs-lookup"><span data-stu-id="92070-135">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>
