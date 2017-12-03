@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b458c0491ec91cd528b40fb19e93b7948f8c059a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 바인딩
 바인딩은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 끝점이 다른 끝점과 통신하는 방법을 지정합니다. 가장 기본적으로 바인딩은 HTTP 또는 TCP와 같은 사용할 전송을 지정해야 합니다. 바인딩을 통해 보안 및 트랜잭션 지원과 같은 다른 특징을 설정할 수도 있습니다.  

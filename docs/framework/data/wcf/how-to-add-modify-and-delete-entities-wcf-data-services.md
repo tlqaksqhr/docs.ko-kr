@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ffe239a068e4edc974b6a24af1ae486809163a00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9e41502fee9cfa272b154f6ddaf0e6a41a482bc7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>방법: 엔터티 추가, 수정 및 삭제(WCF Data Services)
 와 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 있습니다 수 만들기, 업데이트 및 삭제 데이터 서비스에서 엔터티 데이터에 있는 개체에 해당 하는 동작을 수행 하 여는 <xref:System.Data.Services.Client.DataServiceContext>합니다. 자세한 내용은 참조 [데이터 서비스 업데이트](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)합니다.  

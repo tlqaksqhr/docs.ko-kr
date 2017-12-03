@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 888f0af14e31c432cd4ad737232a22ed6f079a3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e66c26c12f3f62ee61e02e16318e747793ff927
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="defining-wcf-data-services"></a>WCF Data Services 정의
 이 섹션을 만들고 구성 하는 방법을 설명 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 으로 데이터를 노출 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조 데이터 서비스를 만드는 데 필요한 기본 단계 [서비스로 데이터 노출](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)합니다.  

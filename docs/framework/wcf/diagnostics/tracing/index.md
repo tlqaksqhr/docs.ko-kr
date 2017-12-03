@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e0a291e3ca277bc58f69b8016c523b383b3cece8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="tracing"></a>추적
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서는 오류 모니터링 및 분석을 위한 응용 프로그램 계측 및 진단 데이터를 제공합니다. 응용 프로그램의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다. 종단 간 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.  

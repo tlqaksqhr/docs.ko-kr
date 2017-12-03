@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 37d32d938f49d0767594e0f141d5a463ad5fc95f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 22fc561d7df9bbd81bf19d351af2d07bc6b51237
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-the-data-service"></a>데이터 서비스 만들기
 이 작업을 사용 하는 샘플 데이터 서비스 만듭니다 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 노출 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Northwind 샘플 데이터베이스를 기반으로 하는 피드입니다. 작업에 필요한 기본 단계는 다음과 같습니다.  

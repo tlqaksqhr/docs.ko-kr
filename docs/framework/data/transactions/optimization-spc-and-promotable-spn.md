@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 66f60ba31983a6cfbfda0238d80a6e8ad81d30ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38c3d10eaefe4608084a5e5f6ad417446200799b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화
 이 항목에서는 <xref:System.Transactions> 인프라가 제공하는 성능 최적화 메커니즘에 대해 설명합니다.  

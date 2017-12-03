@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d868881a3ff5c79f1f003881f58c726ebf25385e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 384274b127e04004117cbb2f6d5f7764c3212d0b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>방법: 일괄 처리로 쿼리 실행(WCF Data Services)
 사용 하 여는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 단일 일괄 처리에서 데이터 서비스에 대해 둘 이상의 쿼리를 실행할 수 있습니다. 자세한 내용은 참조 [일괄 처리 작업](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)합니다.  

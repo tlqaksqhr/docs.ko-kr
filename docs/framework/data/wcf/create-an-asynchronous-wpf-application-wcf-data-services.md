@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 351812d632a394612e8ea241b7fea388066b4199
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52e952abc6f1b47d9caf7a5583bb591c51a70dde
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>방법: 비동기 Windows Presentation Foundation 응용 프로그램 만들기(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 데이터 서비스에서 가져온 데이터를 WPF(Windows Presentation Framework) 응용 프로그램의 UI 요소에 바인딩할 수 있습니다. 자세한 내용은 참조 [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)합니다. 데이터 서비스에 대 한 작업은 응용 프로그램을 계속 하려면는 데이터 서비스 요청에 대 한 응답을 기다리는 동안 응답 수를 비동기식으로 실행할 수도 있습니다. 데이터 서비스에 비동기적으로 액세스하려면 Silverlight용 응용 프로그램이 필요합니다. 자세한 내용은 참조 [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)합니다.  

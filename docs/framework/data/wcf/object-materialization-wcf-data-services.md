@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f671d3b41e0812916d1db342c211f2db6456ede3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a8f20023e158b388ddd71e518ebcaa48c214252c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="object-materialization-wcf-data-services"></a>개체 구체화(WCF Data Services)
 사용 하는 경우는 **서비스 참조 추가** 대화 상자를 사용 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] .NET Framework 기반 클라이언트 응용 프로그램에서 피드를 해당 하는 데이터 클래스가 피드에서 노출 하는 데이터 모델의 각 엔터티 형식에 대해 생성 됩니다. 자세한 내용은 참조 [데이터 서비스 클라이언트 라이브러리 생성](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)합니다. 쿼리에서 반환되는 엔터티 데이터는 이러한 생성된 클라이언트 데이터 서비스 클래스 중 하나의 인스턴스로 구체화됩니다. 병합 옵션 및 추적 된 개체에 대 한 id 확인에 대 한 정보를 참조 하십시오. [데이터 서비스 컨텍스트 관리](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)합니다.  

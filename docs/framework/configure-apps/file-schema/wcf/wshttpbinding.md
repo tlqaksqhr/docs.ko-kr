@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
 caps.latest.revision: "30"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1368b4a677e5cce7b666c94a6f3ddd919e72f7c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53e189b761ccd1c3cee75d4afa81291e02082684
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 비이중 서비스 계약에 적합한 안전하고 신뢰할 수 있으며 상호 운용할 수 있는 바인딩을 정의합니다. 이 바인딩은 안정성을 위해 WS-Reliable Messaging 사양을 구현하고, 메시지 보안 및 인증을 위해 WS-Security 사양을 구현합니다. 전송은 HTTP이며 메시지 인코딩은 Text/XML 인코딩입니다.  

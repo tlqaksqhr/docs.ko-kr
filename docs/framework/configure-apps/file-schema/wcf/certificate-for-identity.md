@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a9eabd25712136ef98f452cc15470bce1893527e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8d847def6268881cbd288fe9b3ba89de9403b41d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltcertificategt-for-ltidentitygt"></a>&lt;identity&gt;에 대한 &lt;certificate&gt;
 클라이언트에 서버의 유효성을 검사하는 데 사용되는 X.509 인증서를 지정합니다.  

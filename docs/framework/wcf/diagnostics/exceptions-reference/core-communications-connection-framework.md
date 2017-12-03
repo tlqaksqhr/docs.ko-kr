@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61ee00e1-896d-47c8-942f-1db28ac89cdc
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c485c05c1c54a19a102a8378dc79c908a29aa658
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 878d2b01ee22d339115925e101f7349ecd5207bd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="core-communications-connection-framework"></a>핵심 통신: 연결 프레임워크
 이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 연결 프레임워크에서 생성된 모든 예외를 보여 줍니다.  

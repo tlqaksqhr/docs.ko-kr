@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 480cdb83248dc1cf9dd90c0f654aa4f269318c4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4decb820f012d3f4b2a9855cd08701f14dcc5431
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-services-using-configuration-files"></a>구성 파일을 사용하여 서비스 구성
 구성 파일을 사용하여 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 구성하면 디자인 타임 대신 배포 시 끝점 및 서비스 동작 데이터를 제공할 수 있습니다. 이 항목에서는 사용할 수 있는 기본 기술에 대해 간략하게 설명합니다.  

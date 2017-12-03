@@ -14,14 +14,14 @@ helpviewer_keywords:
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3c9486427660de792091297d2426c970cfe47bc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42683acdfe2e63d59a13496b210f83fb97c02de7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="analytic-tracing-with-etw"></a>ETW를 사용한 분석 추적
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 분석 추적을 사용하면 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스를 실행하는 동안 진단 정보를 캡처할 수 있습니다. 프로덕션 환경에서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스 문제를 해결할 수 있도록 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 스택의 주요 시점에[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 분석 추적 이벤트를 내보냅니다. 분석 추적은 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 서비스에 미치는 영향을 최소화는 프로덕션 서버의 성능에 호스팅하는 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 매우 효율적으로 내보내지므로 이벤트 추적에 대 한 ETW (Windows) 세션에 따라 서비스입니다.  

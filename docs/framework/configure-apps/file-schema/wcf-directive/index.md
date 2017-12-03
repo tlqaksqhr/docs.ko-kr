@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b86f690848795b3e7880de42cc0860ec19b9cb9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f91e4ac7b74b0ee3ab92e8ae59fe0f20e8f66287
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-directive-syntax"></a>WCF 지시문 구문
 컴파일러를 리디렉션하기 위해 .svc 파일의 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 지시문에서 사용하는 설정을 지정합니다. 각 지시문에는 해당 지시문에만 관련되는 하나 이상의 특성(값과 쌍을 이룸)이 포함됩니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에는 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 지시문만 있습니다.  

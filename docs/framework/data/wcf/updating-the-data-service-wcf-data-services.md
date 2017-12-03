@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9c86e755d35a57090941551de43aedd07c8f1f0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d51508abf27038e27b4a9d356c726bc8e15cb321
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>데이터 서비스 업데이트(WCF Data Services)
 사용 하는 경우는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드, 라이브러리 클라이언트 데이터 서비스 클래스의 인스턴스로 피드의 항목 변환 합니다. 이러한 데이터 서비스 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 사용하여 추적됩니다. 클라이언트는 <xref:System.Data.Services.Client.DataServiceContext>의 메서드를 사용하여 보고하는 엔터티의 변경 내용을 추적합니다. 클라이언트는 이러한 메서드를 사용하여 추가된 엔터티와 삭제된 엔터티를 추적하고 속성 값 또는 엔터티 인스턴스 간의 관계에 대한 변경 내용도 추적할 수 있습니다. 이렇게 추적된 변경 내용은 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 호출할 때 REST 기반 작업으로 데이터 서비스에 전송됩니다.  

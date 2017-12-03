@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0f0ff1bed93d534dea3a407f4923e13856d761d1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ba6f46fb8c16b00f1e63be94b0a6ef300d56d6d2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>방법: Windows Presentation Foundation 요소에 데이터 바인딩(WCF Data Services)
 와 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 같은 Windows Presentation Foundation (WPF) 요소를 바인딩할 수는 <xref:System.Windows.Controls.ListBox>' 또는 <xref:System.Windows.Controls.ComboBox> 의 인스턴스로 <xref:System.Data.Services.Client.DataServiceCollection%601>를 유지 하는 컨트롤에서 발생 한 이벤트를 처리 하는 <xref:System.Data.Services.Client.DataServiceContext> 변경 내용과 동기화 컨트롤의 데이터를 하려고 합니다. 자세한 내용은 참조 [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)합니다.  

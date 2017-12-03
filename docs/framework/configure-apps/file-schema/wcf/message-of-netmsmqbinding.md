@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f3b03fcce02c51563ed006e62a3f77f76bede777
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d91d97a27c06e8e6e3ab624c45c6853b1cc23e8f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;의 &lt;message&gt;
 이 `netMsmqBinding` 바인딩에 대한 SOAP 메시지 보안 설정을 정의합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |특성|설명|  
 |---------------|-----------------|  
 |algorithmSuite|MSMQ 전송을 통해 전송되는 메시지에 메시지 기반 보안을 적용하는 데 사용되는 메시지 암호화 및 키 랩 알고리즘을 설정합니다.<br /><br /> 기본값은 `Aes256`입니다. 이 특성은 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 형식입니다.|  
-|clientCredentialType|MSMQ 전송을 통해 전송되는 메시지에 대해 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None: 따라서 서비스와 익명 클라이언트가 상호 작용할 수 있습니다. 서비스와 클라이언트 모두 자격 증명이 필요하지 않습니다.<br />-Windows:이 통해 될 Windows 자격 증명의 인증 된 컨텍스트에서 SOAP 교환이. 이 설정은 항상 Kerberos 기반 인증을 수행합니다.<br />-UserName:이 통해 요구 하는 서비스에서 UserName 자격 증명을 사용 하 여 클라이언트를 인증 하는 합니다. 자격 증명이 예에서 사용 하 여 지정 해야 합니다는 `clientCredentials` 동작 **주의:** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 다이제스트 키를 파생 암호를 사용 하 고 메시지 보안에 이러한 키를 사용 하 여 암호를 전송 하는 것을 지원 하지 않습니다.   따라서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 UserName 자격 증명을 사용할 때 교환에 보호를 적용합니다. 이 모드에서는 `clientCredential` 동작 및 `serviceCertificate`를 사용하여 클라이언트에 서비스 인증서를 지정해야 합니다. <br /><br /> -인증서:이 통해 서비스 요구할 수 있는 인증서를 사용 하 여 클라이언트 인증입니다. 이 경우 `clientCredentials` 동작을 사용하여 클라이언트 자격 증명을 지정해야 합니다. 이 경우 `clientCredentials`를 지정하여 `serviceCertificate` 동작을 통해 서비스 자격 증명을 지정해야 합니다.<br />-CardSpace: 이렇게 하면 요구 하는 서비스에서 CardSpace를 사용 하 여 클라이언트를 인증 하는 합니다. `serviceCertiifcate` 동작에 `clientCredential`가 제공되어야 합니다.<br /><br /> 기본값은 `Windows`입니다. 이 특성은 <xref:System.ServiceModel.MessageCredentialType> 형식입니다.|  
+|clientCredentialType|MSMQ 전송을 통해 전송되는 메시지에 대해 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None: 따라서 서비스와 익명 클라이언트가 상호 작용할 수 있습니다. 서비스와 클라이언트 모두 자격 증명이 필요하지 않습니다.<br />-Windows:이 통해 될 Windows 자격 증명의 인증 된 컨텍스트에서 SOAP 교환이. 이 설정은 항상 Kerberos 기반 인증을 수행합니다.<br />-UserName:이 통해 요구 하는 서비스에서 UserName 자격 증명을 사용 하 여 클라이언트를 인증 하는 합니다. 자격 증명이 예에서 사용 하 여 지정 해야 합니다는 `clientCredentials` 동작 **주의:** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 다이제스트 키를 파생 암호를 사용 하 고 메시지 보안에 이러한 키를 사용 하 여 암호를 전송 하는 것을 지원 하지 않습니다. 따라서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 UserName 자격 증명을 사용할 때 교환에 보호를 적용합니다. 이 모드에서는 `clientCredential` 동작 및 `serviceCertificate`를 사용하여 클라이언트에 서비스 인증서를 지정해야 합니다. <br /><br /> -인증서:이 통해 서비스 요구할 수 있는 인증서를 사용 하 여 클라이언트 인증입니다. 이 경우 `clientCredentials` 동작을 사용하여 클라이언트 자격 증명을 지정해야 합니다. 이 경우 `clientCredentials`를 지정하여 `serviceCertificate` 동작을 통해 서비스 자격 증명을 지정해야 합니다.<br />-CardSpace: 이렇게 하면 요구 하는 서비스에서 CardSpace를 사용 하 여 클라이언트를 인증 하는 합니다. `serviceCertiifcate` 동작에 `clientCredential`가 제공되어야 합니다.<br /><br /> 기본값은 `Windows`입니다. 이 특성은 <xref:System.ServiceModel.MessageCredentialType> 형식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  

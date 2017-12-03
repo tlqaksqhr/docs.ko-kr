@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 75200cc6aca424befe068a9dd718c6cc76492a91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 70c94d38a50425c702e382edcd7290cba3d61e91
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>방법: 사용자 지정 클라이언트 ID 검증 도구 만들기
 *identity* 의 기능 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트가 서비스의 예상된 id를 사전에 지정 하는 데 사용 합니다. 서버가 클라이언트에 자신을 인증할 때마다 이 ID와 비교하여 ID가 검사됩니다. (참조에 대 한 id 및 작동 방법 설명은 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  

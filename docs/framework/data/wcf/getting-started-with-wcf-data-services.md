@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 124e0fe04293c52fb152ef76e7f93f00c679c9f8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 75cb32ac55bfa397d12f4ec514488f6b2a159e3d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Data Services로 시작
 이 섹션의 항목 신속 하 게 이해 하는 데 도움이 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 및 사용 하는 방법을 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 노출 하 고 소비 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기본 기술에는 설명 하 여 피드입니다. 이 섹션에서는 두 개념 콘텐츠 및 [퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) 자습서입니다.  

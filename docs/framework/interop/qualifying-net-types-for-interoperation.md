@@ -1,12 +1,8 @@
 ---
 title: "상호 운용할 .NET 형식의 정규화"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -16,24 +12,23 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b6487c151f49f6084977deb600e7f93e5eb7acee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 165536656f0de6b53680565bee93f0bb8d607d48
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>상호 운용할 .NET 형식의 정규화
 어셈블리에서 형식을 COM 응용 프로그램으로 노출하려는 경우 디자인 타임에 COM interop의 요구 사항을 고려하세요. 다음 지침을 준수하면 관리되는 형식(클래스, 인터페이스, 구조체 및 열거형)이 COM 형식과 원활하게 통합됩니다.  
   
 -   클래스에서 인터페이스를 명시적으로 구현해야 합니다.  
   
-     COM interop에서 클래스의 모든 멤버와 기본 클래스의 멤버를 포함하는 인터페이스를 자동으로 생성하는 메커니즘을 제공하지만 명시적 인터페이스를 제공하는 것이 훨씬 좋습니다. 자동으로 생성된 인터페이스는 클래스 인터페이스라고 합니다. 지침은 [클래스 인터페이스 소개](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)를 참조하세요.  
+     COM interop에서 클래스의 모든 멤버와 기본 클래스의 멤버를 포함하는 인터페이스를 자동으로 생성하는 메커니즘을 제공하지만 명시적 인터페이스를 제공하는 것이 훨씬 좋습니다. 자동으로 생성된 인터페이스는 클래스 인터페이스라고 합니다. 지침을 참조 하십시오. [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)합니다.  
   
-     IDL(Interface Definition Language) 또는 이와 동등한 사항을 사용할 필요 없이 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# 및 C++를 사용하여 코드에 인터페이스 정의를 통합할 수 있습니다. 구문에 대한 세부 정보는 언어 문서를 참조하세요.  
+     언어 IDL (인터페이스 정의) 또는 이와 동등한을 사용 하는 대신 코드에서 인터페이스 정의 통합 하는 Visual Basic, C# 및 c + +를 사용할 수 있습니다. 구문에 대한 세부 정보는 언어 문서를 참조하세요.  
   
 -   관리되는 형식은 public이어야 합니다.  
   

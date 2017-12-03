@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e296cc2d8960280c6af278a79eaeaa3984f07eff
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 718f3c8fd2d6ed3434f7231e3ccaf8cf1a663875
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-channel-level-programming"></a>서비스 채널 수준 프로그래밍
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 관련 개체 모델을 사용하지 않고 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 서비스 응용 프로그램을 작성하는 방법에 대해 설명합니다.  

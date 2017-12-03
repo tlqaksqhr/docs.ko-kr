@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 63a8c92713ee452da2439475ac526229d1e5741c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 24f1bc22e088c0198ec8a8f8183611d2b43941b5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="determining-service-operation-duration"></a>서비스 작업 기간 확인
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 응용 프로그램에 분석 추적이 사용하도록 설정되어 있으면 이벤트 로그를 검사하여 서비스 작업의 실행 기간을 손쉽게 확인할 수 있습니다.  이 항목에서는 서비스 작업을 완료하는 데 소요되는 시간을 확인하는 방법을 보여 줍니다.  

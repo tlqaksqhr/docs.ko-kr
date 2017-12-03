@@ -18,14 +18,14 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e31f14d59bb2ac7caa233ff60c60eb944ee5bbbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 12820b6b2b864bfd00474abc118fe9b346b51bc5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="feed-customization-wcf-data-services"></a>피드 사용자 지정(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]사용 하 여는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 데이터 피드로 노출할 수 있습니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]데이터 피드의 Atom 및 JSON JavaScript Object Notation () 형식을 지원합니다. Atom 피드를 사용 하는 경우 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티 및 HTTP 메시지의 본문에 포함 될 수 있는 XML 형식으로의 관계와 같은 데이터를 직렬화 하는 표준 방법을 제공 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]엔터티에 포함 된 데이터 및 Atom 요소 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 참조 [OData: 원자 형식](http://go.microsoft.com/fwlink/?LinkID=185794)합니다.  

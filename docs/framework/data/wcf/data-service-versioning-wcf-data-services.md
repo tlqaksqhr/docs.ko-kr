@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 228b8d40b14781496b2c71a715008e8bf9caf86b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 545096292f34566b4bb6c3c44bb20ddac426af26
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>데이터 서비스 버전 관리(WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 클라이언트가 데이터 모델을 기반으로 하는 Uri를 사용 하 여 리소스 그룹으로 데이터에 액세스할 수 있도록 데이터 서비스를 만들 수 있습니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 서비스 작업의 정의도 지원합니다. 이러한 데이터 서비스는 비즈니스 요구 사항의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 기존 데이터 서비스를 변경한 경우 새 버전의 데이터 서비스를 정의할 것인지 그리고 기존 클라이언트 응용 프로그램에 미치는 영향을 최소화할 최선의 방법을 고려해야 합니다. 이 항목에서는 새 버전의 데이터 서비스를 만드는 방법 및 시기에 대한 지침을 제공합니다. 또한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 다른 버전의 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜을 지원하는 클라이언트 및 데이터 서비스 간의 교환을 처리하는 방식에 대해 설명합니다.  

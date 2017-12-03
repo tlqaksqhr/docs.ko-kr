@@ -16,14 +16,14 @@ helpviewer_keywords:
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 71df440ee9234071d0ab21cc3c18c5b080279bf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 754c938242035549b9deb94a2fe3b975b1384fc0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="defining-and-specifying-faults"></a>오류 정의 및 지정
 SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달하고 양방향인 경우 상호 운용 가능한 방식으로 클라이언트에서 서비스로 전달합니다. 이 항목에서는 사용자 지정 오류 내용을 정의하는 시간과 방법에 대해 설명하고 이들을 반환할 수 있는 작업을 지정합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]서비스 또는 이중 클라이언트가 그러한 오류와 클라이언트 또는 서비스 응용 프로그램에서 이러한 오류를 처리 하는 방법을 보낼 수, 참조 [송신 및 수신 오류](../../../docs/framework/wcf/sending-and-receiving-faults.md)합니다. 오류 처리에 대 한 개요 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램 참조 [지정 및 계약 및 서비스에서 처리 오류](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  

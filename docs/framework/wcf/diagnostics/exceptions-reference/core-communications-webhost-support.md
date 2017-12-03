@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 034c501f-96f9-4ef7-9602-3ac21788fd3e
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6697df69f7397514972e64d6845298c090af379f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 707b97c49d6a6f5262719e91f8cb38fe7da53601
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="core-communications-webhost-support"></a>핵심 통신: Webhost 지원
 이 항목에서는 Webhost 지원에 의해 생성된 모든 예외를 보여 줍니다.  

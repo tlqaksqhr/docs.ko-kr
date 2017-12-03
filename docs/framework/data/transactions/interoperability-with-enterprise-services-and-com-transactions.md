@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 14763de8861c06072f7f13928caa3327e9d7ff42
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6e9537f9ad25fe9a077b657f418c5b69d768818c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>엔터프라이즈 서비스 및 COM+ 트랜잭션과의 상호 운용성
 <xref:System.Transactions> 네임스페이스는 이 네임스페이스를 사용하여 만든 트랜잭션 개체와 COM+를 통해 만든 트랜잭션 간의 상호 운용성을 지원합니다.  

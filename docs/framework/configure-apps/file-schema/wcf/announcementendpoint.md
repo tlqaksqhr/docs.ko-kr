@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d49ea0b2dbabd5e747d912b76e493559b2a96ee7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5458149a68273a62b1636dec0da4d9494fb63a99
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
 이 구성 요소는 고정 알림 계약이 있는 표준 끝점을 정의합니다. 서비스에서는 선택적으로 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림 메시지를 보내 가용성을 알릴 수 있습니다. A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 에 알림 끝점을 지정 하는 서비스는 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 공지를 수행 하려면 AnnouncementClient 사용 하 여 요소입니다. 다른 서비스에서 알림 역할을 실제로 수신 하려는 클라이언트는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ; 서비스를 해당 클라이언트에 대 한 알림 끝점을 구성 해야 하므로 [ \<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) 섹션.  

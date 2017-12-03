@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d37f752e0a36835f91e01b7c092b654eeba2b8ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 33f576b177ddb66d6145e0b1a5d0d104346640ee
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="end-to-end-tracing-scenarios"></a>종단 간 추적 시나리오
 이 단원에는 추적에 사용하는 다양한 시나리오를 설명하는 항목이 있습니다.  

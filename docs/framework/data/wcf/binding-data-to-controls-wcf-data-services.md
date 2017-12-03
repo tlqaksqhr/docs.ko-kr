@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9e0d7ed9fdae7731fd4b023dcad656ebcdcf280f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca580801e6bb8786071ec705d4a86d367b02f622
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>컨트롤에 데이터 바인딩(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 `ComboBox`, `ListView` 등의 컨트롤을 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스 인스턴스에 바인딩할 수 있습니다. <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스에서 상속되는 이 컬렉션에는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드의 데이터가 포함됩니다. 이 클래스는 항목이 추가 또는 제거될 때 알림을 제공하는 동적 데이터 컬렉션을 나타냅니다. 인스턴스를 사용 하는 경우 <xref:System.Data.Services.Client.DataServiceCollection%601> 데이터 바인딩에 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 개체에서 추적 되는지 확인 하 여 이러한 이벤트를 처리 하는 클라이언트 라이브러리는 <xref:System.Data.Services.Client.DataServiceContext> 바인딩된 UI 요소의 데이터와 동기화 된 상태로 유지 합니다.  

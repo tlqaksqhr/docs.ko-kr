@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 134de9fce41ccdcd9c26277c6a52d67823199da3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c05cc5947a36bbe8573c5308cdfbbe3f6c990815
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서는 개발자가 구성 파일 또는 코드를 사용하여 서비스를 구성할 수 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서는 서비스를 코드로 구성할 수도 있습니다. 이전 버전 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)](4.0 이하)의 경우 자체 호스팅 시나리오에서 코드로 서비스를 구성하기가 쉬웠으며 <xref:System.ServiceModel.ServiceHost> 클래스를 사용하여 ServiceHost.Open을 호출하기 전에 끝점 및 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 직접 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 자체 호스팅 서비스와 웹 호스팅 서비스를 모두 코드로 구성할 수 있는 더욱 손쉬운 방법을 제공합니다.  

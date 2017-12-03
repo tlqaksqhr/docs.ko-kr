@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: be3e2fec5d6859b38ae149e50fd1fe82838d8e08
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d615d4e1da86ef2a23563f25f6976099daedf10e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="features-provided-by-systemtransactions"></a>System.Transactions에서 제공하는 기능
 이 섹션에서는 <xref:System.Transactions> 네임스페이스에서 제공하는 기능을 사용하여 고유한 트랜잭션 응용 프로그램과 리소스 관리자를 작성하는 방법에 대해 설명합니다. 특히 이 섹션에서는 하나 또는 여러 참석자가 있는 트랜잭션(로컬 또는 분산)을 만들고 이에 참여하는 방법에 대해 설명합니다.  

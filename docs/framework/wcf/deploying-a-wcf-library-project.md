@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 04567b0b06ef5c8f105e866e150bfaa221d64057
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dbddd99125e8615640ca39d091e92cdde87c9faf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="deploying-a-wcf-library-project"></a>WCF 라이브러리 프로젝트 배포
 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스 라이브러리 프로젝트를 배포하는 방법에 대해 설명합니다.  

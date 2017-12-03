@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ccdecb1aae193ffecdd6ec1d4eae4289f6ac7eb9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9a2d856aad069a5e532ba893185b6222ee1db0f0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="event-logging-in-wcf"></a>WCF에서 이벤트 로깅
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서는 Windows 이벤트 로그에 있는 내부 이벤트를 추적합니다.  

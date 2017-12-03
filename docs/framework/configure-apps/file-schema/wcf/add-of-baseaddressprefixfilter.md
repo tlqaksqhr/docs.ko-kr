@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7d4c509a710637e335f80257fb3984f164d83a51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bd0a0d7fc5a83c78a56df796714e70e2e2a61767
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt;의 &lt;add&gt;
 IIS(인터넷 정보 서비스)에서 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 응용 프로그램을 호스트할 때 적합한 IIS 바인딩을 선택하기 위한 메커니즘을 제공할 통과 필터를 지정하는 구성 요소를 나타냅니다.  

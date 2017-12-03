@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 865fbf4195b9005e4fbc9ebf6b1e3140b11df85d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52fe7e777cfea04b6da2a04c0badfe92b2a0a756
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="reflection-provider-wcf-data-services"></a>리플렉션 공급자(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 Entity Framework를 통해 데이터 모델의 데이터를 노출할 뿐 아니라 엔터티 기반 모델에 엄격하게 정의되지 않은 데이터를 노출할 수 있습니다. 리플렉션 공급자는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식을 반환하는 클래스의 데이터를 노출합니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 리플렉션을 사용하여 이러한 클래스의 데이터 모델을 유추하고 리소스에 대한 주소 기반 쿼리를 노출된 <xref:System.Linq.IQueryable%601> 형식에 대한 LINQ(Language-Integrated Query) 기반 쿼리로 변환할 수 있습니다.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a131574e0e3de8507a91807d5de2899238c14628
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 바인딩 개요
 바인딩은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스의 끝점에 연결하기 위해 필요한 통신 세부 사항을 지정하는 데 사용되는 개체입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스의 각 끝점에 대해 바인딩을 올바로 지정해야 합니다. 이 항목에서는 바인딩이 정의하는 통신 세부 사항의 형식, 바인딩의 요소, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 포함되는 바인딩 및 끝점에 대해 바인딩을 지정할 수 있는 방법을 간략하게 설명합니다.  

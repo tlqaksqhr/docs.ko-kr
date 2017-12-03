@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a43e7fc6ebc4101586b67b0982b16cefbfff2d35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 599b420dee2e1d19c85a078ac358a9249ca055ed
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>지연 콘텐츠 로드(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 기본적으로 쿼리에서 반환되는 데이터 양을 제한합니다. 그러나 필요한 경우 데이터 서비스에서 관련 엔터티, 페이징 응답 데이터 및 이진 데이터 스트림을 포함한 추가 데이터를 명시적으로 로드할 수 있습니다. 이 항목에서는 이러한 지연된 콘텐츠를 응용 프로그램에 로드하는 방법을 설명합니다.  

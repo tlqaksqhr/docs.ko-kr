@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 883ae318e32493013f009f3580ef102e4d39b3e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 27bcccab90c4627f2c9a1d241af3b1833ae13a18
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;certificateReference&gt;의 &lt;ID&gt;
 X.509 인증서 유효성 검사의 설정을 지정합니다. 이 ID를 가진 끝점과 연결되는 보안 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 클라이언트는 서버가 나타내는 클레임이 이 ID를 생성하는 데 사용된 ID 클레임을 포함함을 확인합니다.  

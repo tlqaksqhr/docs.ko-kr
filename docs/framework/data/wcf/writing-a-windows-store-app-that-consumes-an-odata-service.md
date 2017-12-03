@@ -11,14 +11,14 @@ ms.topic: article
 dev_langs: csharp
 ms.assetid: 9917a0e9-ec93-49e5-a366-fd39b892eb8b
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0c1e2b9092abd54fd62848f58e2385bee5058553
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eeee9dcf27d63f5bc40dfdfce1ff7d8104060b6a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>OData 서비스를 사용하는 Windows 스토어 앱 작성
 Windows 8에는 응용 프로그램의 새로운 종류: Windows 스토어 응용 프로그램입니다. 완전히 새로운 모양과 느낌의 Windows 스토어 앱은 다양한 장치에서 실행되며 Windows 스토어에서 구할 수 있습니다. 이 항목에서는 OData 서비스, 특히 NetFlix Catalog OData 서비스를 사용하는 Windows 스토어 앱을 작성하는 방법을 설명합니다. Windows 스토어 앱에 대 한 자세한 내용은 읽으십시오 [Windows 스토어 앱 시작](http://msdn.microsoft.com/library/windows/apps/br211386.aspx)합니다.  
