@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cf4d40bce37dea65f2a27421de736779e467e728
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9da2addce9c837499783664bb3b1417d30b937b0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="basic-http-service"></a>기본 HTTP 서비스
 이 샘플에는 HTTP 및 RPC 기반 서비스-일반적으로 "POX" (Plain Old XML) 서비스 라고 하를 사용 하 여 구현 하는 방법을 보여 줍니다는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델입니다. 이 샘플은 자체 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 서비스(Service.cs)와 서비스를 만들고 호출하는 콘솔 응용 프로그램(Program.cs)의 두 구성 요소로 구성되어 있습니다.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 73b7fd7564fea065167978deaad21bb533dbef0c
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 679a6a30e72e18547a04007c58c82d5f121893d0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-versioning"></a>서비스 버전 관리
 서비스 및 서비스가 노출하는 끝점은 비즈니스 요구의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다. 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]의 버전 관리를 고려하는 방법에 대해 설명합니다.  

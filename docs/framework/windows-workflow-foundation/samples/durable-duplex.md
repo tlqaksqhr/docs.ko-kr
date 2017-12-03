@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d8beae85b2cee8956efd160b8540e76f04dd7ee7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 014604262952d3aef3676318042ae3c96dc07c89
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="durable-duplex"></a>영속 이중
 이 샘플에서는 [!INCLUDE[wf](../../../../includes/wf-md.md)]에서 메시징 활동을 사용하여 영속 이중 메시지 교환을 설정하고 구성하는 방법을 보여 줍니다. 영속 이중 메시지 교환은 오랜 기간 동안 발생하는 양방향 메시지 교환입니다. 메시지 교환 수명 주기는 통신 채널 수명 주기와 서비스 인스턴스의 메모리 내 수명 주기보다 길 수 있습니다.  

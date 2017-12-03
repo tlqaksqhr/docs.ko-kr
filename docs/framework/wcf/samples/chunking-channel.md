@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 414f350b7fe70cae196ad056f96a158da8128dd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2fe0ad62a55c6536b0054aa23ac556b896b02be4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="chunking-channel"></a>청크 채널
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 큰 메시지를 보낼 경우 일반적으로 이러한 메시지를 버퍼링하는 데 사용되는 메모리 양을 제한하는 것이 바람직합니다. 가능한 한 가지 솔루션은 본문에 대량의 데이터가 있다고 가정하고 메시지 본문을 스트리밍하는 것입니다. 그러나 일부 프로토콜에서는 전체 메시지를 버퍼링해야 합니다. 이와 같은 두 가지 예로 신뢰할 수 있는 메시징과 보안을 들 수 있습니다. 가능한 또 다른 솔루션은 큰 메시지를 청크라는 더 작은 메시지로 나누고 이러한 청크를 한 번에 하나씩 보낸 다음 받는 쪽에서 큰 메시지를 다시 구성하는 것입니다. 응용 프로그램은 이 청크 및 청크 취소를 직접 수행하거나 사용자 지정 채널을 사용하여 수행할 수 있습니다. 이 Chunking Channel 샘플에서는 사용자 지정 프로토콜이나 계층화된 채널을 사용하여 임의 크기의 메시지를 청크 및 청크 취소하는 방법을 보여 줍니다.  

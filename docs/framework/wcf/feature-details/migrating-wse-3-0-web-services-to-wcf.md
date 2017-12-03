@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ea8bbbcb6241e632075e8ebeb29bbdd3d681dae0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c97279b553a615feda1dd3a195ad033744d82983
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 웹 서비스를 WCF로 마이그레이션
 WSE 3.0 웹 서비스를 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]로 마이그레이션하면 성능이 향상되고 추가 전송, 추가 보안 시나리오 및 WS-* 사양이 지원됩니다. WSE 3.0에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션된 웹 서비스는 2배에서 4배까지 성능이 향상됩니다. 지 원하는 전송에 대 한 자세한 내용은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 참조 [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다. 지 원하는 시나리오의 목록은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 참조 [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)합니다. 지 원하는 사양 목록은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 참조 [웹 서비스 프로토콜 상호 운용성 가이드](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)합니다.  

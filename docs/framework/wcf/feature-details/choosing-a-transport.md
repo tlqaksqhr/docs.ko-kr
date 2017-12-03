@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 612ca77c46288df2c78c25b3af241ee4cce333b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="choosing-a-transport"></a>전송 선택
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 포함된 3개의 주요 전송인 HTTP, TCP 및 명명된 파이프 사이의 선택 기준에 대해 설명합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 MSMQ라고도 하는 메시지 큐 전송도 포함되지만, 이 문서에서는 메시지 큐에 대해 설명하지 않습니다.  

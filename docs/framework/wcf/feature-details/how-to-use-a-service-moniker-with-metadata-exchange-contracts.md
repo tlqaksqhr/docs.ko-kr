@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed6ce9b87a5e2d8945a57110c02cce8024439f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>방법: 메타데이터 교환 계약을 통해 서비스 모니커 사용
 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 개발한 후 처음부터 이러한 서비스를 호출하거나 Visual Basic 6.0 응용 프로그램을 호출하도록 결정할 수 있습니다. 한 메서드는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 어셈블리를 생성하고, 어셈블리를 COM에 등록하고, GAC에 어셈블리를 설치한 다음 Visual Basic 코드에서 COM 형식을 참조합니다. 응용 프로그램을 배포하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 어셈블리도 배포해야 합니다. 사용자는 WCF 클라이언트 어셈블리를 COM에 등록하고 GAC에 배치해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] COM Interop를 사용하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 어셈블리에 의존하지 않고 동일한 서비스 호출을 수행할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모니커를 사용하면 서비스 모니커가 서비스에 대한 형식 정보를 추출하는 데 사용하는 Mex(메타데이터 교환) 끝점 URI를 지정하여 Visual Basic, VBScript, VBA(Visual Basic for Applications) 등의 COM 호환 언어에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 수 있습니다. 이 항목에서는 Mex 끝점을 지정하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모니커를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 시작 샘플을 호출하는 방법에 대해 설명합니다.  

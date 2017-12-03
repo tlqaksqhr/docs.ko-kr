@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 caps.latest.revision: "45"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4ebc3c349e0eedcbe20f126f5252dadf8a6b8096
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb32d1c9c0c0922dae27b2933259df9470cceeba
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF 웹 HTTP 프로그래밍 모델 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로그래밍 모델에서는 WEB HTTP 서비스를 빌드하는 데 필요한 기본 요소를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 서비스는 웹 브라우저를 비롯한 광범위한 클라이언트에서 액세스할 수 있게 디자인된 것으로, 다음과 같은 고유한 요구 사항이 있습니다.  

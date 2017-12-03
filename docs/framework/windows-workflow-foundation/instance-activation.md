@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: de2152e557ccfe19c47247e2501f2e2d62253e81
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d33e809a0db0b812cf7311d7b5686d9125e80976
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="instance-activation"></a>인스턴스 활성화
 SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 지속성 데이터베이스에서 실행 가능하거나 활성화 가능한 워크플로 인스턴스를 검색하는 내부 작업를 실행합니다. 실행 가능한 워크플로 인스턴스를 발견하면 해당 인스턴스를 활성화할 수 있는 워크플로 호스트에 알려 줍니다. 인스턴스 저장소에서 활성화 가능한 워크플로 인스턴스를 발견하면 워크플로 호스트를 활성화하여 워크플로 인스턴스를 실행하는 일반 호스트에 알려 줍니다. 이 항목의 다음 단원에서는 인스턴스 활성화 프로세스에 대해 자세히 설명합니다.  

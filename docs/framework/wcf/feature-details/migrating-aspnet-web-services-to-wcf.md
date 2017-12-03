@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e2051de2c0cef9a31337b320c347bb7d85dbadae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ca1eb73842f3f7dac5557c1eafff637396d317a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET 웹 서비스를 WCF로 마이그레이션
 ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 위한 도구뿐 아니라 인터넷 정보 서비스(IIS) 내 호스팅 서비스에 대한 기능도 제공합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 .NET Framework 클래스 라이브러리, 도구 및 호스팅 기능을 제공하여 소프트웨어 엔터티가 웹 서비스에서 사용하는 프로토콜을 포함하여 모든 프로토콜을 사용하여 통신할 수 있도록 합니다.  ASP.NET 웹 서비스를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션하면 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]만의 새로운 기능 및 향상된 기능을 활용할 수 있습니다.  

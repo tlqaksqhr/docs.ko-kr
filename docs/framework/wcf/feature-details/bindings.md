@@ -14,14 +14,14 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22b7b8f568b3350972ace128fdc3164c4f3ba179
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communication Foundation 바인딩
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 응용 프로그램 소프트웨어를 작성하는 방법과 그러한 소프트웨어가 다른 소프트웨어와 통신하는 방법을 구분합니다. 바인딩은 클라이언트와 서비스 간에 통신하는 데 필요한 전송, 인코딩 및 프로토콜 세부 정보를 지정하는 데 사용됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 바인딩을 사용하여 끝점의 기본 연결 표시를 생성하므로 통신 당사자들이 대부분의 바인딩 상세 정보에 동의해야 합니다. 이를 수행하는 가장 쉬운 방법은 서비스 클라이언트가 서비스 끝점에서 사용하는 동일한 바인딩을 사용하는 것입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이 작업을 수행 하 [구성 Windows Communication Foundation 서비스 및 클라이언트에 대 한 바인딩을 사용 하 여](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)합니다.  

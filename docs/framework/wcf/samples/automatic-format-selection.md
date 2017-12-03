@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5c3465611fcf418e194c44815c765f8823d8ad83
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 92934e9e9e8cbd38a7f00b1c7846d3e1b8dba583
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="automatic-format-selection"></a>자동 포맷 선택
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 사용하여 선택 영역 자동 서식 지정(XML 또는 JSON)을 사용하도록 설정하는 방법과 작업 코드에서 형식을 명시적으로 설정하는 방법을 보여 줍니다.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cc0736b0c13f286b999fc0e098a45364141945da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c54ce56cccffa350479d0dd4dcec130ddd004764
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 고성능 통신을 위한 새로운 TCP 기반 네트워크 프로토콜(net.tcp://)을 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 여러 사용자 프로세스 간에 net.tcp 포트를 공유할 수 있는 새 시스템 구성 요소인 Net.TCP Port Sharing Service도 제공합니다.  

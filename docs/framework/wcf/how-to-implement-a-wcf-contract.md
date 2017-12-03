@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
 caps.latest.revision: "38"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6c8ef9d97d9ed76175c0ca4c4d5ba40ca401f8f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eabb1ed36ff6f653361a64960e4d02037ab42980
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>방법: Windows Communication Foundation 서비스 계약 구현
 이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와 이 서비스를 호출할 수 있는 클라이언트를 만드는 데 필요한 6가지 작업 중 두 번째입니다. 전체 7 개 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  

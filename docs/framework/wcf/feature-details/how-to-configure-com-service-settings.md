@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7cbe038b55358ec8607d54b67861ef1743c2e301
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fa497567c5cf380d7764499991ad9e7e95a5cbe0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-configure-com-service-settings"></a>방법: COM+ 서비스 설정 구성
 COM+ 서비스 구성 도구를 사용하여 응용 프로그램 인터페이스를 추가하거나 제거하면 응용 프로그램의 구성 파일에서 웹 서비스 구성이 업데이트됩니다. COM + 호스팅 모드 Application.config 파일은 응용 프로그램 루트 디렉터리에 배치 (%PROGRAMFILES%\ComPlus 응용 프로그램\\값이 기본값 {appid}). 웹 호스팅 모드에서는 지정된 vroot 디렉터리에 Web.config 파일이 있습니다.  

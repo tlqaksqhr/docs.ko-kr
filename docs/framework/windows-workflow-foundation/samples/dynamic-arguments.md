@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fe6de5ec72edf752261beb5621f19772a1df150e
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 582f8815bd121199e564af7d1806f2e76f4595cd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="dynamic-arguments"></a>Dynamic 인수
 이 샘플에서는 활동 작성자가 아니라 활동 소비자에 의해 인수가 정의되는 활동을 구현하는 방법을 보여 줍니다. 이를 위해 런타임에서 활동의 메타데이터가 생성되는 방식을 재정의합니다.  

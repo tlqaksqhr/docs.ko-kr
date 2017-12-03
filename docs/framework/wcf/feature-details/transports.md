@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 115e2a69c7d990c7d4c59634644fb557e83ad405
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9275f1812111365ed6b0fb3be6957cd9ca883fdf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation의 전송
 전송 계층은 채널 스택의 최하위 수준에 있습니다. HTTP, HTTPS, TCP 및 명명된 파이프가 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 사용되는 기본 전송입니다. 이 단원의 항목에서는 이러한 전송 중에서 특정 전송을 선택하여 구성하고 조정 속성을 설정하는 방법에 대해 설명합니다.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: abcff14c-f047-4195-ba26-d27f4a82c24e
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 16251bcf5ceb9660fc4854c8e46bc376de9f01ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a3cdc10b7ed801b6a9b2dcb62dae5d5d6746c66
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="persisting-a-workflow-application"></a>워크플로 응용 프로그램 유지
 이 샘플에서는 <xref:System.Activities.WorkflowApplication>을 실행하고, 유휴 상태가 되면 언로드한 다음, 다시 로드하여 실행을 계속하는 방법을 보여 줍니다.  

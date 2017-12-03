@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8b0e8aa1dfe2e7a737e88530a206739eef39b2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cc98a6c6b0e8b552a7bf04d3fc1a97b41883677
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting"></a>호스팅
 이 단원의 항목에서는 서비스 호스팅에 대해 설명합니다. 서비스 또는 관리 되는 응용 프로그램에 인터넷 정보 서비스 (IIS), WAS Windows Process Activation Service (), Windows Server AppFabric, Windows 서비스에 의해 호스팅될 수-이 옵션은 라고도 *자체 호스팅*합니다.  

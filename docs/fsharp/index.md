@@ -1,40 +1,38 @@
 ---
 title: "F# 가이드"
-description: "F # 프로그래밍 언어에 대 한.NET 함수형 프로그래밍에 대 한 기본 지원을 제공 하는 오픈 소스 언어에 알아봅니다."
+description: "F #,.NET에서 실행 되는 함수형 프로그래밍 언어에 알아봅니다."
 keywords: .NET, .NET Core
 author: jackfoxy
 ms.author: phcart
-ms.date: 06/20/2016
+ms.date: 12/01/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 4ddd77cef6cf70a63f1af81359d82eda27a01593
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 45f5d2ca794ccea7a35cf6c0bf9d58a3e6500453
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="f-guide"></a>F# 가이드
 
-F#은 개체 지향 및 명령형 프로그래밍에 대한 지원과 함께 함수형 프로그래밍에 대한 최상의 지원을 제공하는 .NET용 플랫폼 간 오픈 소스 프로그래밍 언어입니다.  Visual F# 컴파일러 및 도구는 F# 프로그래밍 언어에 대한 Microsoft의 구현 및 도구이며 F#을 .NET의 최고 구성원으로 만듭니다.
+F #은.NET에서 실행 되는 함수형 프로그래밍 언어입니다.  함수형 프로그래밍 구문을 지원 외에 개체 프로그래밍 기능을 포함 합니다.  개체 지향 기능을 사용한 함수형 프로그래밍의이 하이브리드 하면 F # 모든 태스크에 대 한 실용적인 언어 있습니다.
 
 ## <a name="if-youre-new-to-f"></a>F #을 처음 접하는 경우 #
 
-F #에 익숙하지 않다면로 시작는 [둘러보기의 F #](tour.md) 언어의 개요를 볼 수 있습니다.
-
-살펴보는 것이 좋습니다는 [고급 값으로 함수](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Progamming](introduction-to-functional-programming/index.md)--> F #을 사용한 작업에 필수적인 함수형 프로그래밍 개념에 알아보려면 합니다.
-
-[자습서](tutorials/getting-started/index.md)에서는 언어의 다양한 기술 수준 및 기능에 대한 단계별 지침을 제공합니다.
+F #에 익숙하지 않다면로 시작는 [둘러보기의 F #](tour.md) 언어의 개요 및 그 프로그래밍 개념 중 일부를 가져옵니다.  Visual Studio를 사용 하 여 자습서 프로젝트 템플릿에 동일한 콘텐츠를 포함 합니다.
 
 ## <a name="if-youre-experienced-with-f"></a>F #을 사용한 경험이 있는 경우 #
 
-F#에 대해 잘 알고 있는 경우 언어의 각 측면을 철저히 설명하고 다양한 코드 샘플로 보완하는 [언어 참조](language-reference/index.md)에서 많은 용례를 찾아볼 수 있습니다.  [F# 주요 라이브러리 참조](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)에서도 많은 용례를 확인할 수 있습니다.  F # 핵심 라이브러리 참조가에 이러한 현재 문서와 MSDN 떨어진 곳에 결국 이동 합니다.
+F # 관련 방식을 하거나 특정 언어 구문에 대 한 자세한 참조는 [언어 참조](language-reference/index.md)합니다.  F # 언어의 모든 기능에 대 한 철저 한이 가이드가.입니다.
+
+또한는 [F # 핵심 라이브러리 참조가](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) FSharp.Core, F #의 일부인 핵심 라이브러리에 대 한 학습을 위한 중요 한 리소스입니다.
 
 ## <a name="the-f-software-foundation"></a>F# Software Foundation
 
-Microsoft가 F# 언어 및 Visual F# 도구의 주요 개발자이지만 독립 기관인 FSSF(F# Software Foundation)에서도 F#을 지원합니다.
+Microsoft 기본 개발자의 F # 언어와 해당 도구 이지만, F #는 또한 뒷받침 되며는 독립적인 foundation는 F # 소프트웨어 Foundation (FSSF).
 
 F# Software Foundation의 임무는 F# 프로그래밍 언어를 홍보하고 보호하고 발전시키며, F# 프로그래머의 다양한 국제 커뮤니티의 성장을 지원하고 용이하게 만드는 것입니다.
 

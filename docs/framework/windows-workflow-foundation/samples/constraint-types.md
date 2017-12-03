@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b6b246e6-1130-4698-9625-c5c42abcbfed
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d42be018b6a92237b5914c180d329138fb95e7dc
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cd73776aebb571fad732f554d6a96c1611506e8c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="constraint-types"></a>제약 조건 형식
 이 샘플에서는 워크플로에 제약 조건을 적용하는 서로 다른 두 가지 방법을 보여 줍니다. 그 중 하나는 활동 내부에서(빌드) 적용하는 방법이고, 다른 하나는 활동 외부에서(정책) 적용하는 방법입니다. 이 시나리오에서는 타사 소프트웨어 회사의 활동 작성자가 두 인수 사이의 관계에 대한 유효성을 검사하려는 경우를 가정합니다. 이 경우 비용이 금액을 초과하지 않아야 합니다. 이는 일반적인 유효성 검사 빌드 제약 조건입니다.  

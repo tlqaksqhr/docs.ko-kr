@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0b40b93b33e57bf15b7ab614405ccffa44abb8df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 688637ae54e92296d103a681715dd491ba8782ba
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="implementing-service-contracts"></a>서비스 계약 구현
 서비스는 클라이언트에서 사용할 수 있는 기능을 하나 이상의 끝점에 노출하는 클래스입니다. 서비스를 만들려면 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 계약을 구현하는 클래스를 작성합니다. 이 작업은 두 가지 방법 중 한 가지로 수행할 수 있습니다. 계약을 인터페이스로 따로 정의한 다음 해당 인터페이스를 구현하는 클래스를 만들 수 있습니다. 또는 클래스 자체에 <xref:System.ServiceModel.ServiceContractAttribute> 특성을 두고 서비스 클라이언트에서 사용할 수 있는 메서드에 <xref:System.ServiceModel.OperationContractAttribute> 특성을 두어 클래스와 계약을 직접 만들 수도 있습니다.  

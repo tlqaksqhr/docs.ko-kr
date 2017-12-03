@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bf9b6eed2ce4270c9faecc27cb4626a155eb4a6c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8e60708ecf5ae7ed15b42e982b9ae40c00d72ecc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>방법: 구성에서 서비스 끝점 만들기
 끝점은 클라이언트에게 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스가 제공하는 기능에 대한 액세스를 제공합니다. 상대 및 절대 끝점 주소 조합을 사용하여 끝점을 하나 이상 정의할 수 있으며, 서비스 끝점을 정의하지 않는 경우에는 런타임이 기본적으로 일부 끝점을 자동으로 제공합니다. 이 항목에서는 상대 주소와 절대 주소를 모두 포함하는 구성 파일을 사용해 끝점을 추가하는 방법을 보여 줍니다.  

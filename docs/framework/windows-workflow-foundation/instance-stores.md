@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c78e5ff1310951defdfaa38a9b63aacb9c27872b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c794c6e20b479ea4686caba29704f8851d108432
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="instance-stores"></a>인스턴스 저장소
 인스턴스 저장소는 인스턴스의 논리적 컨테이너입니다. 이 저장소는 인스턴스 데이터와 메타데이터가 저장되는 장소입니다. 인스턴스 저장소가 전용 물리적 저장소를 의미하지는 않습니다. 인스턴스 저장소는 지속적인 정보를 SQL Server 데이터베이스에 포함시키거나 지속적이 아닌 정보를 메모리에 포함시킬 수 있습니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]는 워크플로에서 인스턴스 데이터 및 메타데이터를 SQL Server 2005 또는 SQL Server 2008 데이터베이스에 유지할 수 있는 인스턴스 저장소의 구체적인 구현인 SQL 워크플로 인스턴스 저장소와 함께 제공됩니다. 또한 Windows Server AppFabric은 인스턴스 저장소의 구체적인 구현을 제공합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server App Fabric 인스턴스 스토어, 쿼리 및 제어 공급자](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409)합니다.  

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5adcf8e6e992d0ae6f6de487b8e671a0b2db16f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d47add27fb1170ae1bc14b99342ea0222be3549
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 두 가지 다른 serialization 기술을 사용하여 응용 프로그램의 데이터를 클라이언트와 서비스 간에 전송되는 XML로 바꿀 수 있습니다. 이 프로세스를 serialization이라고 합니다.  

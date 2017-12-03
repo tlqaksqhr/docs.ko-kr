@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
 caps.latest.revision: "60"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c5583956e206194e7c457f9e4162660a6f1c59b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ea5cd7f8510836b17a20b523dc2455611cdb2382
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="system-provided-bindings"></a>시스템 제공 바인딩
 바인딩은 끝점과 통신할 때 사용할 통신 메커니즘을 지정하고 끝점에 연결하는 방법을 나타냅니다. 바인딩에 다음과 같은 요소가 포함됩니다.  

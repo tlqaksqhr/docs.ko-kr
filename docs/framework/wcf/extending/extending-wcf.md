@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3faa09a550bdc32437aeac864f09ec7711bdaf97
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a3d436690108158cfd7675cf00788a564b8a1dc6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extending-wcf"></a>WCF 확장
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 런타임 구성 요소를 수정하고 확장하여 서비스 기반 응용 프로그램을 정확하게 제어하고 확장할 수 있습니다. 이 섹션의 항목에서는 확장성 아키텍처에 대해 자세히 설명합니다. 기본 프로그래밍에 대 한 자세한 내용은 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  

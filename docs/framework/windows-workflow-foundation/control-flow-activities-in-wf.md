@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 825f2487a89805365d3376986af0b0d098c20bca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d5312012a74f5e11b02c0191dc00fa23fb25a73a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="control-flow-activities-in-wf"></a>WF의 흐름 제어 활동
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 워크플로 내의 실행 흐름 제어를 위한 다양한 활동을 제공합니다. `Switch` 및 `If`와 같은 활동은 프로그래밍 환경(예: [!INCLUDE[csprcs](../../../includes/csprcs-md.md)])에서와 비슷한 흐름 제어 구조를 구현하지만, `Pick`과 같은 활동은 새 프로그래밍 구조를 모델링합니다.  

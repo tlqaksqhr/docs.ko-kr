@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 51280fdb4ba78f4a129fb75b3810df87aaecccaa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ccf6243657e0a1fe9222a03ef113261339a18298
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transactions-in-wcf"></a>WCF에서 트랜잭션
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 트랜잭션 기능을 사용하면 여러 구성 요소가 동시에 데이터 작업에 참여할 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  

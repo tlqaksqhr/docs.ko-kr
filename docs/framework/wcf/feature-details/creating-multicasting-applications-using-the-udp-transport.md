@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3a743f7da4984c5b434de6cedb44bd4c9d9382cf
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3dde7dc8b051c4238203173bd009a8f71dd9c6c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP 전송을 사용하여 멀티캐스트 응용 프로그램 만들기
 멀티캐스트 응용 프로그램은 점대점 연결을 설정하지 않고도 작은 메시지를 많은 수신자에게 동시에 보냅니다. 그러한 응용 프로그램은 신뢰성보다 속도를 강조합니다. 달리 말해, 특정 메시지가 실제로 수신되었는지를 보장하는 것보다 데이터를 적시에 보내는 것이 더 중요합니다. WCF는 이제 <xref:System.ServiceModel.UdpBinding>을 사용한 멀티캐스트 응용 프로그램 작성을 지원합니다. 이 전송은 서비스에서 작은 메시지를 많은 클라이언트에 동시에 보내야 할 때 유용합니다. 이러한 서비스의 예로는 주식 시세 응용 프로그램이 있습니다.  

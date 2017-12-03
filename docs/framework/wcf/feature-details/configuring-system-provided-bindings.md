@@ -14,14 +14,14 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c26a4f804f99fda637937bfa5ddaef218c15ede7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 91994fc31e4b0f30d575cd43ad44e66dcdb0a7f0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-system-provided-bindings"></a>시스템 제공 바인딩 구성
 바인딩은 끝점과 통신할 때 사용할 통신 메커니즘을 지정하고 끝점에 연결하는 방법을 나타냅니다. 바인딩은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 채널이 필수 통신 기능을 제공하기 위해 계층화되는 방식을 정의하는 요소로 구성됩니다. 바인딩에는 다음 세 가지 형식의 요소가 있습니다.  

@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
 caps.latest.revision: "28"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ee08f226492d7cb2327ac49ba57ac8bf24a57a07
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42c6390fb2bd39a0003beecbbe10cd72a38ed63d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-specify-client-credential-values"></a>방법: 클라이언트 자격 증명 값 지정
 서비스는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]를 사용하여 클라이언트가 서비스를 인증하는 방법을 지정할 수 있습니다. 예를 들면 서비스는 클라이언트가 인증서를 사용하여 인증하도록 규정할 수 있습니다.  

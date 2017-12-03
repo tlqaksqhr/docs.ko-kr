@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bfebf11d66ded668d7c0892d11adde76e0a42c01
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89c929e71a2d64673f158f81c85d04c3443800ac
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기
 이 태스크에서는 WPF 응용 프로그램 Visual Studio 템플릿을 사용하여 빈 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 응용 프로그램을 만들고 해당 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 어셈블리에 대한 참조를 추가합니다.  

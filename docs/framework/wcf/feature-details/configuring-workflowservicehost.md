@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2c2400347dabc5136b83cc087aa5ed735a8d4ce9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7853aabe8efc4536473b3430508cdbf0ad7985fe
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost 구성
 이 섹션에서는 간단한 "방법"는의 여러 기능을 구성 하는 방법에 간략하게 설명 하는 항목은 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 구성에서 클래스입니다. 이러한 항목에서는 워크플로 서비스 관련 구성에 대해 설명합니다. 다른 모든 구성은 일반적인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 동일한 방식으로 수행됩니다.  

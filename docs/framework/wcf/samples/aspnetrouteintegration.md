@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b54de1c495dee466475979db7e6ba8d8ff9cf55b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a942a26ad239233f13ee8791d1178fb47573e710
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 이 샘플에서는 ASP.NET 경로를 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 서비스를 호스팅하는 방법을 보여 줍니다. [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) 샘플이이 시나리오의 자체 호스팅된 버전을 표시 하 고 심층에서 서비스 구현에 설명 합니다. 이 항목에서는 ASP.NET 통합 기능을 중점적으로 설명합니다. ASP.NET 라우팅에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 <xref:System.Web.Routing>을 참조하십시오.  

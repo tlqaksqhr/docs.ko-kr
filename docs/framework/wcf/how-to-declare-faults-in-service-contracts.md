@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1ebfe56a0e073534840ce81eebb64ce3f5db48a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f53f8396dc16f9f4538b772d376287cc1695ff47
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>방법: 서비스 계약에 오류 선언
 관리 코드에서 오류 조건이 발생하면 예외가 throw됩니다. 그러나 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램에서는 서비스 계약에 SOAP 오류를 선언하여 서비스 계약이 클라이언트에 반환되는 오류 정보를 지정합니다. 예외 및 오류 간의 관계의 개요를 참조 하십시오. [지정 및 계약 및 서비스에서 처리 오류](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  

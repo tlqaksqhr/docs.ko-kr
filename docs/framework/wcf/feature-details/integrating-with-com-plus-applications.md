@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8901530061837556bcb26f7b55539f5a2a791391
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02e0fbf7c8b6ddfe0d722575042b4cbc82ba9bb3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="integrating-with-com-applications"></a>COM+ 응용 프로그램과 통합
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 분산 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. COM+에서 호스팅되는 구성 요소 기반 응용 프로그램 논리에 상당한 노력을 기울인 경우 기존 논리를 다시 작성하지 않고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 기존 논리를 확장할 수 있습니다. 이 단원의 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 함께 COM+를 사용하는 방법에 대해 설명합니다.  

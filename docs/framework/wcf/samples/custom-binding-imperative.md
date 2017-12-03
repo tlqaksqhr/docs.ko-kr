@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed463a22d011af0428cb5c18f7ac8c75a6fca44c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 556f38ac6cbc3f4f279d238c592da2c72d84264f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-binding-imperative"></a>사용자 지정 바인딩 명령
 이 샘플에서는 명령 코드를 작성하여 구성 파일이나 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 생성한 클라이언트를 사용하지 않고 사용자 지정 바인딩을 정의하고 사용하는 방법을 보여 줍니다. 이 샘플에서는 HTTP 전송에서 제공하는 기능과 신뢰할 수 있는 세션 채널을 조합하여 신뢰할 수 있는 HTTP 기반 바인딩을 만듭니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다.  

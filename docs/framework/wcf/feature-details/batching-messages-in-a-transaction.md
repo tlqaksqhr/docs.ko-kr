@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2aa633d2e89612549d1dbe6703e80f4a5e713bf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d9effe9b44a8e6f786103162930852de80ab4f8d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="batching-messages-in-a-transaction"></a>트랜잭션에서 메시지 일괄 처리
 대기 중인 응용 프로그램은 트랜잭션을 사용하여 정확하고 안정적인 메시지 배달을 수행합니다. 트랜잭션은 비용이 많이 드는 작업이나 메시지 처리량을 상당히 줄일 수 있습니다. 메시지 처리량을 향상시키기 위한 한가지 방법은 응용 프로그램이 단일 트랜잭션 내에서 여러 메시지를 읽고 처리하는 것입니다. 성능이 좋아질수록 복구 작업도 늘어납니다. 즉, 일괄 처리하는 메시지 수가 증가하면 트랜잭션이 롤백 되는 경우 필요한 복구 작업의 크기도 증가합니다. 트랜잭션 및 세션에서 일괄 처리하는 메시지 사이에는 차이가 있습니다. A *세션* 은 단일 응용 프로그램에 의해 처리 되 고 하나의 단위로 커밋되는 관련된 메시지의 그룹화 합니다. 세션은 일반적으로 관련 메시지 그룹을 함께 처리해야 하는 경우 사용됩니다. 이러한 예로 온라인 쇼핑 웹 사이트를 들 수 있습니다. *일괄 처리* 관련 없는 메시지를 메시지 처리량을 증가 하는 방법, 여러 처리 하는 데 사용 됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]세션은 참조 [세션의 대기 중인 메시지 그룹화](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)합니다. 또한 일괄 처리하는 메시지는 하나의 응용 프로그램에 의해 처리되고 하나의 단위로 커밋되지만 일괄 처리하는 메시지 간에 관계가 없을 수 있습니다. 한 트랜잭션의 메시지를 일괄 처리하는 것이 응용 프로그램이 실행되는 방법을 변경하지 않는 가장 적절한 방법입니다.  

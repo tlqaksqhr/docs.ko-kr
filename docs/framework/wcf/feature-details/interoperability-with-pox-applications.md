@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6dbdd72dce196ea58550cff956a7b0e6fe0b1a73
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cf05e3327d7c99d333ab4be045e3f72e6f2a8a3f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="interoperability-with-pox-applications"></a>POX 응용 프로그램과의 상호 운용성
 "Plain Old XML" (POX) 응용 프로그램은 SOAP 봉투 내에 포함 되지 않은 XML 응용 프로그램 데이터만 포함 하는 원시 HTTP 메시지를 교환 하 여 통신 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 POX 메시지를 사용하는 서비스 및 클라이언트 모두를 제공할 수 있습니다. 서비스의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 POX 메시지를 보내고 받는 스크립팅 언어 및 웹 브라우저와 같은 클라이언트에 끝점을 노출하는 서비스를 구현할 수 있습니다. 클라이언트의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 프로그래밍 모델을 사용하여 POX 기반 서비스와 통신하는 클라이언트를 구현할 수 있습니다.  

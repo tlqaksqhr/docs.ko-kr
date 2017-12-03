@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f92fcc76-0806-4c84-9d63-7aae0d3899de
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36eb5940fa1d869948a94fcbbb1945aea1c534ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: abdc2a1cca721450a780f81ff8795fc4e648453f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="metadata-extensibility"></a>메타데이터 확장성
 이 단원에는 사용자 지정 메타데이터를 보여 주는 샘플이 포함되어 있습니다.  

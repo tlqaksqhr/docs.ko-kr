@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d3a1e0a966fcd5d89cc30456b46a11ae7d54731e
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9d553ed4f335cc58c3c857d63de9b37cc8d6033c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="bookmarks"></a>책갈피
 이 샘플에서는 책갈피를 만들어 외부 입력을 받는 사용자 지정 활동을 작성하는 방법을 보여 줍니다. 이 샘플에는 워크플로에서 사용자 지정 활동을 사용하며 실행 중인 워크플로 인스턴스와 연결된 책갈피를 검색하고 다시 시작하는 방법을 보여 주는 기본적인 콘솔 응용 프로그램도 포함되어 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]책갈피, 참조 [책갈피](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)합니다.  

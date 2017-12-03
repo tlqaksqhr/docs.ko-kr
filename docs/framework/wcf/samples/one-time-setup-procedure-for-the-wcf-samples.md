@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 caps.latest.revision: "83"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7f2cb8d8376447de12f324719e39f575df8f33a3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b699a9af286287f1cdd1aa224afd3f8c41dd90d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 대부분의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플은 IIS(인터넷 정보 서비스)에서 호스팅되고 공용 가상 디렉터리에서 실행됩니다. 이 일회 설치 절차에서는 디스크; 폴더를 만듭니다. 명명 된 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.  

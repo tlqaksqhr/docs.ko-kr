@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
 caps.latest.revision: "41"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d7c74648a249ec833f2b0fc8b8f5eea9247dc364
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d4a460adfb8076f5d2c0fe273511e6de80be4ec
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-demux"></a>사용자 지정 Demux
 이 샘플에서는 MSMQ 메시지 헤더는 서로 다른 서비스 작업에 매핑할 수 있는 방법을 보여 줍니다. 있도록 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 사용 하는 서비스 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 에서처럼 하나의 서비스 작업을 사용 하 여 제한 되지 않습니다는 [메시지 큐에 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) 및 [메시지 큐에 Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) 샘플입니다.  

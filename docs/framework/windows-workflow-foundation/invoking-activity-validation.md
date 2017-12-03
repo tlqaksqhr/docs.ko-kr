@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 752137d5e917e22d5c24e78b45714db1fa06b2a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f089abdf4c534a5016185e5a6f52067f46693604
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="invoking-activity-validation"></a>활동 유효성 검사 호출
 활동 유효성 검사를 사용하면 활동을 실행하기 이전에 활동 구성 오류를 식별하여 보고할 수 있습니다. Workflow Designer에서 워크플로를 수정하면 유효성 검사가 수행되어 Workflow Designer에 유효성 검사 오류 또는 경고가 표시됩니다. 워크플로를 호출하면 런타임에도 유효성 검사가 수행되며 유효성 검사 오류가 발생할 경우 기본 유효성 검사 논리에 따라 <xref:System.Activities.InvalidWorkflowException>이 throw됩니다. [!INCLUDE[wf](../../../includes/wf-md.md)]는 활동의 유효성을 명시적으로 검사하기 위해 워크플로 응용 프로그램 및 도구 개발자가 사용할 수 있는 <xref:System.Activities.Validation.ActivityValidationServices> 클래스를 제공합니다. 이 항목에서는 <xref:System.Activities.Validation.ActivityValidationServices>를 사용하여 활동 유효성 검사를 수행하는 방법에 대해 설명합니다.  

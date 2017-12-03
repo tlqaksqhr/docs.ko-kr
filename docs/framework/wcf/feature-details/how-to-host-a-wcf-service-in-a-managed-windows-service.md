@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 01f6ce27a05c11ddf4662609bf98730df5ddfda3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e8572541e0bf9ddcfb93939c177b5cb8c440b41
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>방법: 관리되는 Windows 서비스에서 WCF 서비스 호스팅
 이 항목에서는 Windows 서비스에 의해 호스팅되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 관리되는 Windows 서비스 호스팅 옵션을 통해 사용할 수 있는 시나리오는 메시지가 활성화되지 않은 보안 환경의 IIS(인터넷 정보 서비스) 외부에서 호스팅되는 장기 실행 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다. 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.  

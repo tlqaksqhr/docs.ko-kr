@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0c913896611ea4b336f7626b21f9fe959ef4fd09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 455dec4adefc479433945f9f9b02708c23437991
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="selecting-a-credential-type"></a>자격 증명 형식 선택
 *자격 증명* 데이터는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 요구 된 id 또는 기능을 설정 하기 위해 사용 합니다. 예를 들어 여권은 정부에서 국가나 지역의 시민권을 입증하기 위해 발급하는 자격 증명입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자격 증명은 사용자 이름 토큰 및 X.509 인증서 같은 여러 형식을 사용할 수 있습니다. 이 항목에서는 자격 증명, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자격 증명이 사용되는 방법 및 응용 프로그램에 맞는 자격 증명을 선택하는 방법에 대해 설명합니다.  

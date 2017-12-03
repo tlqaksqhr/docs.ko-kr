@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
 caps.latest.revision: "51"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 81e149292757b320d4c29975de1abb69eb1f8b9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a24f1bd921de848cb75a2c9f35fa3dd279bc741
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation 정의
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 는 서비스 지향 응용 프로그램을 만드는 데 사용되는 프레임워크입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]를 사용하면 데이터를 비동기 메시지로 서비스 끝점 간에 전송할 수 있습니다. 서비스 끝점은 IIS에서 호스팅하는 계속 사용 가능한 서비스의 일부분일 수도 있고 응용 프로그램에서 호스팅되는 서비스일 수도 있습니다. 또한 끝점은 서비스 끝점에서 데이터를 요청하는 서비스의 클라이언트일 수 있습니다. 메시지는 XML로 전송되는 한 문자나 단어처럼 간단할 수도 있고 이진 데이터 스트림처럼 복잡할 수도 있습니다. 다음은 몇 가지 샘플 시나리오입니다.  

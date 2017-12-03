@@ -13,14 +13,14 @@ helpviewer_keywords:
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e9934d198b8f3e30a4dc350c968263851ebeab1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a64c72a8f69abc220a311c2a204074ea83d0f58
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>방법: Net.TCP Port Sharing Service 사용
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 Net.TCP Port Sharing Service라고 하는 Windows 서비스를 사용하여 여러 프로세스에서 TCP 포트를 공유할 수 있습니다. 이 서비스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 일부로 설치되지만 보안 예방 조치로 서비스가 기본적으로 활성화되지 않기 때문에 처음 사용하기 전에 수동으로 활성화해야 합니다. 이 항목에서는 MMC(Microsoft Management Console) 스냅인을 사용하여 Net TCP Port Sharing Service를 구성하는 방법에 대해 설명합니다.  

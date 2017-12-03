@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 caps.latest.revision: "39"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4f791d6cd5b16b77a407130fe9c887fbd6f09b8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e44ded58e7c48fae281030b5757d0d891d5600e6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>기본적인 Windows Communication Foundation 개념
 이 문서에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 아키텍처에 대해 간략하게 설명합니다. 또한 핵심 개념 및 이러한 개념이 서로 어떻게 연결되는지에 대해 설명합니다. 가장 간단한 버전을 만드는 방법에 대 한 자습서에 대 한는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 클라이언트, 참조 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다. 자세한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 프로그래밍 참조 [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  

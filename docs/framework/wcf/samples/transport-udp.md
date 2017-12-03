@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 caps.latest.revision: "48"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ae7df5531abf2efcb7ba0059da1d8393e5a3f7c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fc30a755278251ac9e06f2ddd56e2c369b950af4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transport-udp"></a>전송: UDP
 UDP Transport 샘플에서는 UDP 유니캐스트 및 멀티캐스트를 사용자 지정 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송으로 구현하는 방법을 보여 줍니다. 이 샘플에서는 채널 프레임워크를 사용하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모범 사례에 따라 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 사용자 지정 전송을 만드는 권장 절차에 대해 설명합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  

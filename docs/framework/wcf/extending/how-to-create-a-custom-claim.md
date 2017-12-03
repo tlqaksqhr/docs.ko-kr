@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e1e85d1815d1fbde25e1963a54cce8f02f5344a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f0cc23d5b6720d78afdc1acd50a2b84b76b977e9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-custom-claim"></a>방법: 사용자 지정 클레임 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 ID 모델 인프라에서는 기본 제공 클레임 형식 및 권한 집합에 해당 형식과 권한으로 <xref:System.IdentityModel.Claims.Claim> 인스턴스를 만드는 도우미 기능을 제공합니다. 이러한 기본 제공 클레임은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 기본적으로 지원하는 클라이언트 자격 증명 형식에 있는 정보를 모델링합니다. 일반적으로 기본 제공 클레임으로 충분하지만 일부 응용 프로그램에는 사용자 지정 클레임이 필요할 수 있습니다. 클레임은 클레임 형식, 클레임이 적용되는 리소스 및 해당 리소스에 대해 어설션되는 권한으로 구성됩니다. 이 항목에서는 사용자 지정 클레임을 만드는 방법에 대해 설명합니다.  

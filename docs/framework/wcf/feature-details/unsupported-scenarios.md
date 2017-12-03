@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 caps.latest.revision: "43"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a518f1bc6019aea0667f6be018e06bbcf36e6e9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 여러 가지 이유로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 일부 특정 보안 시나리오를 지원하지 않습니다. 예를 들어, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition에서는 SSPI 또는 Kerberos 인증 프로토콜을 구현하지 않으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 해당 플랫폼에서 Windows 인증을 통한 서비스 실행을 지원하지 않습니다. Windows XP Home Edition에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 실행할 경우 사용자 이름/암호 및 HTTP/HTTPS 통합 인증과 같은 다른 인증 메커니즘이 지원됩니다.  

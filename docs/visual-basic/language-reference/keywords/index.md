@@ -17,17 +17,17 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7ee4d12659dd6da8c5290134c48d280692a496f4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 35a40d6dfb6c66183afb0f3a2980a3b7863353fa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
 다음 표에는 모든 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 키워드가 나와 있습니다.  
   
 ## <a name="reserved-keywords"></a>예약 키워드  
- 다음 키워드는 *예약*되어 있습니다. 즉, 이러한 키워드를 변수 또는 프로시저와 같은 프로그래밍 요소의 이름으로 사용할 수 없습니다. 이름을 대괄호(`[``]`)로 묶으면 이 제한을 무시할 수 있습니다. 자세한 내용은 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)에서 "이스케이프 이름"을 참조하세요.  
+ 다음 키워드는 *예약*되어 있습니다. 즉, 이러한 키워드를 변수 또는 프로시저와 같은 프로그래밍 요소의 이름으로 사용할 수 없습니다. 이름을 대괄호(`[]`)로 묶으면 이 제한을 무시할 수 있습니다. 자세한 내용은 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)에서 "이스케이프 이름"을 참조하세요.  
   
 > [!NOTE]
 >  이스케이프 이름을 사용하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 이스케이프 이름을 사용하지 않는 것이 좋습니다.  

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e4c273e674fb7cb0f2801d9858d598baab5973a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ec8b7f37dc7f04a7ddb2c6373b50e98fe41cf98
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>방법: 이중 계약을 사용하여 서비스 액세스
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 한 가지 특징은 이중 메시지 패턴을 사용하는 서비스를 만들 수 있다는 점입니다. 이 패턴을 사용하면 서비스에서 콜백을 통해 클라이언트와 통신할 수 있습니다. 이 항목에서는 콜백 인터페이스를 구현하는 클라이언트 클래스에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 만드는 단계를 보여 줍니다.  

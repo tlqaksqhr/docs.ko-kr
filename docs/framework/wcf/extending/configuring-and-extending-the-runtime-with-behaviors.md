@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: aab2d1d8c676a70b0fb4cfa80a16d52cd6f8b800
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7eb8e0853adbc24deb43fc1006804d7707d9a4b8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>동작을 사용하여 런타임 구성 및 확장
 동작을 사용하면 기본 동작을 수정하거나, 서비스 구성에 대한 검사 및 유효성 검사를 수행하는 사용자 지정 확장을 추가하거나, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 및 서비스 응용 프로그램에서의 런타임 동작을 수정할 수 있습니다. 이 항목에서는 동작 인터페이스에 대해 설명하고 이를 구현하는 방법 및 프로그래밍 방식이나 구성 파일을 통해 서비스 응용 프로그램의 서비스 설명 또는 클라이언트 응용 프로그램의 끝점에 추가하는 방법에 대해 설명합니다. 시스템 제공 동작을 사용 하는 방법에 대 한 자세한 내용은 참조 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) 및 [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)합니다.  

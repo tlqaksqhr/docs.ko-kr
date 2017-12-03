@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 85f523b80e109e2c2c5333f5337444716cb67143
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 180367920eb6f900fbb6b234b94f3b3a2c7fe52f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
 클라이언트 응용 프로그램은 서비스와 통신할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 채널 개체를 만들고 구성 및 사용해야 합니다. [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체 만들기 및 사용에 관련 된 단계에 대 한 개요를 제공 합니다.  

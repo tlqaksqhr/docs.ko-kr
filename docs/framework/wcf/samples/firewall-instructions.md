@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0aac3a161b0482bad1a32f5223d2031402a632cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38d1f0f6bf9245048f21bbe1cb0aa6a0b8d768dd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="firewall-instructions"></a>방화벽 지침
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플이 작동할 수 있도록 방화벽에서 몇 가지 포트나 프로그램을 사용할 수 있도록 설정해야 합니다. 대부분의 샘플은 8000-8003 범위의 포트와 포트 9000을 사용하여 통신합니다. 방화벽은 기본적으로 켜져 있어 이러한 포트에 액세스하지 못하도록 합니다. 샘플에 대해 방화벽을 사용하려면 요구 사항 및 보안 환경에 따라 다음 절차 중 하나를 완료합니다.  

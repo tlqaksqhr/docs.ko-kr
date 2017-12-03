@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 521cdb66-98cb-4ad1-b706-370788a43485
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9334739ccf917979e69eea426ea3c901120837c1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2cee42de74609cbfc793822471655d88b32d9ce
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="services"></a>서비스
 이 단원에는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 서비스 기능을 보여 주는 샘플에 대한 링크가 포함되어 있습니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  <xref:System.ServiceModel.Activities.SendReply> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 메시징 활동을 사용하여 예상된 오류와 예기치 않은 오류를 보내거나 받는 방법을 보여 줍니다.  
   
  [SendParameters 및 ReceiveParameters 활동의 기본 사용법](../../../../docs/framework/windows-workflow-foundation/samples/basic-usage-of-sendparameters-and-receiveparameters-activities.md)  
- 사용을 보여주는 <!--zz <xref:System.ServiceModel.Activities.SendParameters> --> `System.ServiceModel.Activities.SendParameters` 및 <!--zz <xref:System.ServiceModel.Activities.ReceiveParameters> --> `System.ServiceModel.Activities.ReceiveParameters` 활동입니다.  
+ 사용을 보여주는 <!--zz <xref:System.ServiceModel.Activities.SendParameters> --> `System.ServiceModel.Activities.SendParameters` 및 <!--zz <xref:System.ServiceModel.Activities.ReceiveParameters> --> `System.ServiceModel.Activities.ReceiveParameters` 활동입니다.
   
  [기본적인 XAML 전용 서비스](../../../../docs/framework/windows-workflow-foundation/samples/basic-xaml-only-service.md)  
  XAML로만 구성된 서비스를 만드는 방법을 보여 줍니다.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36003933a9fb49fe4fe4f0b677ee584066d415ac
-ms.sourcegitcommit: ea1fd4ff4c36169fc722ef263e24884c5cd431a2
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6da9c2e251a6592bb0af039d552d02e7e4fd3fd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>검색 알림 및 알림 클라이언트
 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 검색 기능을 사용하면 구성 요소가 자신의 가용성을 알릴 수 있습니다. 이렇게 구성된 경우 서비스는 Hello 및 Bye 알림을 보냅니다. 클라이언트 또는 기타 구성 요소는 이러한 알림 메시지를 수신 대기하고 이에 대해 동작을 수행할 수 있습니다. 이 기능은 클라이언트가 서비스를 인식하는 또 다른 방법을 제공합니다. 알림 기능은 여러 가지 용도로 사용됩니다. 예를 들어 서비스가 빈번하게 네트워크에 들어왔다가 나가는 경우 알림을 사용하는 것이 서비스를 검색하는 것보다 더 효율적일 수 있습니다. 이 방법을 사용하면 네트워크 트래픽이 줄어들고 클라이언트가 알림을 받는 즉시 해당 서비스가 있는지 여부를 알 수 있습니다.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0948c7447bcfd32ad666072ce6f74b1f6fd8aed8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 21cbeff554be6da77ce28e87b7f82ffdd58f542d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="message-security-in-wcf"></a>WCF의 메시지 보안
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 보안을 제공하는 두 가지 주요 모드(`Transport` 및 `Message`)와 그 둘을 조합하는 세 번째 모드(`TransportWithMessageCredential`)가 있습니다. 이 항목에서는 메시지 보안과 메시지 보안을 사용하는 이유에 대해 설명합니다.  

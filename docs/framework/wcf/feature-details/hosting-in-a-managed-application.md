@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 30d531d436937bf5183ac0c28d59425ea71762e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e6543f1faec5d3298c9a2b825b3a016eb5e7d09
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-in-a-managed-application"></a>관리되는 응용 프로그램에서의 호스팅
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램에서 호스팅할 수 있습니다. 자체 호스팅 서비스는 배포하는 데 최소한의 인프라를 필요로 하기 때문에 가장 유연한 호스팅 옵션입니다. 그러나 관리되는 응용 프로그램이 IIS(인터넷 정보 서비스) 및 Windows 서비스와 같은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 다른 호스팅 옵션에 대한 고급 호스팅 및 관리 기능을 제공하지 않기 때문에 가장 약한 호스팅 옵션이기도 합니다.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ba41bd63f1dc23441cc7f265a8b1339d0b1194d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8dbaa6f3df2bd4dcbde199f867686b3e05ae235f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 특성 및 ServiceDescription 참조
 *설명 트리에* 형식의 계층 구조는 (부터는 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> 클래스) 함께 서비스의 모든 측면을 설명 하는 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 설명 트리를 사용하여 유효한 서비스 런타임 빌드하고, WSDL(Web Services Description Language), XSD(XML 스키마 정의 언어) 및 클라이언트가 서비스에 연결하고 사용하는 데 사용할 수 있는 서비스에 대한 정책 어설션(메타데이터)을 게시하거나 다양한 코드 및 설명 트리 값에 대한 구성 파일 표현을 생성합니다.  

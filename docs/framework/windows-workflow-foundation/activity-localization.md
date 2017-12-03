@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8ee7bc16-e609-469a-a3e8-8062952e2676
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f7746e2ffc61db6d7863e243396f6d1bba315150
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 18856fe11d95d5b54bc580b83eae35badb4d86e6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="activity-localization"></a>활동 지역화
 워크플로 응용 프로그램 및 구성 요소가 다른 문화권과 언어로 지역화될 가능성이 있는 경우 다시 컴파일하지 않고 지역화할 수 있도록 리소스 문자열을 사용해야 합니다.  

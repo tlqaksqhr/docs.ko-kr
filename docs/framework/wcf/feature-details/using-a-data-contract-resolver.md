@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dc28086e0e4489df5594c4b1ce5ec16cea9b1e61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 46a532b45024321a6885fa3e45d172c054d18c1c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-a-data-contract-resolver"></a>데이터 계약 확인자 사용
 데이터 계약 확인자를 사용하면 알려진 형식을 동적으로 구성할 수 있습니다. 알려진 형식은 데이터 계약에 필요하지 않은 형식을 serialize하거나 deserialize할 때 필요합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)서비스에서 메타데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다. 알려진 형식은 일반적으로 정적으로 지정됩니다. 즉, 작업을 구현하는 동안 작업이 받을 수 있는 가능한 형식을 모두 알고 있어야 합니다. 이에 해당하지 않고 알려진 형식을 동적으로 지정하는 기능이 중요한 시나리오도 있습니다.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 41357c9a039414ac692bac69337b2963d5c6b341
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 29ca4041e24a99546dfb665b0ce9e695732442d4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-transfer-and-serialization"></a>데이터 전송 및 Serialization
 연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다. 서비스 또는 클라이언트 개발자는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 데이터 및 데이터 serialization을 처리하는 방식을 알고 있어야 유지 관리가 효율적이고 쉬운 응용 프로그램을 만들 수 있습니다.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7e859f0eddf93191a01230508742c0777ec73751
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9e91889947a17f8cba66d822b857e1c8bc875cab
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>방법: 등록 없이 Windows Communication Foundation 서비스 모니커 사용
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에 연결하여 통신하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 응용 프로그램에 서비스 주소, 바인딩 구성 및 서비스 계약에 대한 세부 정보가 있어야 합니다.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5efe784f434ff357120343061c1c4b9447cc8cd1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1ba33dff4be8ae3e75ee4d1873feeb4d5e5944b7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 호스트
 이 샘플은 제네릭 ReadLine 호스트입니다. 포함된 `ReadLine` 활동(또는 문자열을 사용하여 다시 시작된 책갈피에서 데이터를 가져오는 활동과 같은 기타 활동)을 사용하여 워크플로를 로드하고 실행할 수 있습니다. `WriteLine` 활동의 출력이나 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 확장에 기록하는 내용은 호스트 창에 표시됩니다. 유휴 상태인 인스턴스에 사용할 수 있는 책갈피는 콤보 상자에 나타납니다. 책갈피를 선택하고 텍스트를 입력한 다음 책갈피 다시 시작 단추를 누르면 워크플로 실행이 계속됩니다. 선택한 워크플로를 취소하거나 중단하거나 종료할 수도 있습니다. 기본적으로 지속성이 설정되어 있으므로, 호스트를 종료하고 다시 가져올 수 있으며 인스턴스 목록은 데이터베이스에 저장된 인스턴스로 채워집니다. 추적 기능은 활동 수준에 자세한 추적을 추가하는 옵션을 사용하여 <xref:System.Activities.WorkflowApplication> 수준 이벤트를 호스트에 출력하는 데 사용됩니다.   

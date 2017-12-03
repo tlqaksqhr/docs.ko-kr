@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c58d09c11618e19f29311d54cc413a74e40a3725
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-feature-details"></a>WCF 기능 정보
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하면 응용 프로그램의 메시징 기능을 제어할 수 있습니다. 이 섹션의 항목에서는 사용 가능한 기능에 대해 자세히 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]기본 프로그래밍, 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  

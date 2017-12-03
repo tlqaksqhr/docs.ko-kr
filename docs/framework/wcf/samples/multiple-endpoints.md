@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
 caps.latest.revision: "31"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3b7e3a6da177c381bafe3adee16be36ceba50616
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6595184219ac87ef1d490308bcd927f57fa0a3ba
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="multiple-endpoints"></a>다중 끝점
 Multiple Endpoints 샘플은 서비스에서 여러 끝점을 구성하는 방법과 클라이언트에서 각 끝점과 통신하는 방법을 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 서비스 구성은 `ICalculator` 계약을 지원하지만 각각 다른 바인딩을 사용하여 다른 주소에 있는 두 개의 끝점을 정의하기 위해 수정되었습니다. 클라이언트 구성과 코드는 두 서비스 끝점 모두와 통신하기 위해 수정되었습니다.  

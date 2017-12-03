@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6092db3ffd5d282fbb67b9d84cea8e88e1af7206
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 912694eb07a5f95b42f3a0f0cf39f25db1313e69
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>워크플로의 취소 동작 모델링
 워크플로 내에서 활동을 취소할 수도 있고(예: <xref:System.Activities.Statements.Parallel>의 평가 결과가 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A>일 때 완료되지 않은 분기를 `true` 활동을 사용하여 취소하는 경우), 호스트가  <xref:System.Activities.WorkflowApplication.Cancel%2A>을 호출하는 경우에는 워크플로 외부에서 활동을 취소할 수도 있습니다. 취소 처리를 위해 워크플로 작성자는 <xref:System.Activities.Statements.CancellationScope> 활동 또는 <xref:System.Activities.Statements.CompensableActivity> 활동을 사용하거나 취소 논리를 제공하는 사용자 지정 활동을 만들 수 있습니다. 이 항목에서는 워크플로의 취소에 대해 간략하게 설명합니다.  

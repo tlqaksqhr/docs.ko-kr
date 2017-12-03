@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ad4e5af26291c210f4f46f20e5b9585e3e095ae7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-workflow-services"></a>워크플로 서비스 호스팅
 워크플로 서비스가 들어오는 메시지에 응답하기 위해서는 해당 워크플로 서비스를 호스팅해야 합니다. 워크플로 서비스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시징 인프라를 사용하기 때문에 비슷한 방식으로 호스팅됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 마찬가지로 워크플로 서비스는 모든 관리되는 응용 프로그램, IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Services)에서 호스팅할 수 있습니다. 또한 워크플로 서비스는 Windows Server AppFabric에서 호스팅할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric 참조 [Windows Server App Fabric 설명서](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=196494), 및 [AppFabric 호스팅 개념](http://go.microsoft.com/fwlink/?LinkId=196495)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]호스트 하는 여러 가지 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 참조 [호스팅 서비스](../../../../docs/framework/wcf/hosting-services.md)합니다.  

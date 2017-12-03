@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 51d12f091100e73a87b0c7203db1fbf1eeed77bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6e41a3cc65df5576c538864aa9e1fe1aacbe7e94
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="retrieving-metadata"></a>메타데이터 검색
 메타데이터 검색은 WS-MEX(WS-MetadataExchange) 메타데이터 끝점 또는 HTTP/GET 메타데이터 끝점 같은 메타데이터 끝점에서 메타데이터를 요청 및 검색하는 프로세스입니다.  

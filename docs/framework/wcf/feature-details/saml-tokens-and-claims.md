@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 093b2e8c3a6bad476bc294db733de3e706c38af7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4e1d797b7c86f57f4f9cf4d604e264d3534a79bf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 토큰 및 클레임
 SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩니다. 기본적으로 SAML 토큰 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 페더레이션된 보안 시나리오에 사용 되는 *발급 된 토큰*합니다.  

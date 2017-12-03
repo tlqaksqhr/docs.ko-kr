@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f26038aba792d8b5dd51d1b47156adcfe4882121
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2538a9c483b949dfef1c60bd2225f5daf4e01117
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-lifetime"></a>사용자 지정 수명
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 확장을 작성하여 공유 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 인스턴스를 위한 사용자 지정 수명 서비스를 제공하는 방법을 보여 줍니다.  

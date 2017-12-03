@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fd45d9522d40c0760c3aa231b6a0f07c9bcbc9af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ab9a894ad57a5324d466e0eb94e49e2cf6104a19
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>메시지 교환 패턴 선택
 결정 하는 사용자 지정 전송을 작성 하는 첫 번째 단계는 *메시지 교환 패턴* (즉, Mep)는 개발 중인 채널에 대 한 필요 합니다. 이 항목에서는 사용 가능한 옵션과 여러 가지 요구 사항에 대해 설명합니다. 이에 설명 된 채널 개발 작업 목록에서 첫 번째 작업이 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  

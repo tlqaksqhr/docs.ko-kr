@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 26babd473ca78d6b55ada6c0505ec2f94214448b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 850432b21d971055ce51b247482db3fc7b94e41b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 및 WSDL 참조
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 WSDL(웹 서비스 기술 언어) 문서를 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에 매핑하는 방법을 설명합니다.  

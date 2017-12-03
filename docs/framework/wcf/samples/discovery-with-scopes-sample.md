@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 97bf047f26b95cdd4ac4a40e6b2284ec170442bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 184c4a5c31969ee060f72d937ab02af733340ca4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="discovery-with-scopes-sample"></a>범위 샘플을 사용한 검색
 이 샘플에서는 범위를 사용하여 검색 가능한 끝점을 분류하는 방법과 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 사용하여 끝점에 대한 비동기 검색을 수행하는 방법을 보여 줍니다. 이 샘플의 서비스에서는 끝점 검색 동작을 추가하고 이를 사용하여 끝점에 범위를 추가하고 끝점의 검색 기능을 제어하여 각 끝점에 대한 검색을 사용자 지정하는 방법을 보여 줍니다. 이 샘플의 클라이언트에서는 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 만들고 <xref:System.ServiceModel.Discovery.FindCriteria>에 범위를 추가하는 방식으로 검색 매개 변수를 세부적으로 조정하여 범위를 포함하는 방법을 보여 줍니다. 이 샘플에서는 클라이언트가 종료 조건을 추가하여 응답을 제한하는 방법도 보여 줍니다.  

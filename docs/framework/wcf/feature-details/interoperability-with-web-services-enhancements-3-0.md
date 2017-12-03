@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2a50f8f36eb8116f7890ba6eda3fcbb3b2e940c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ec7014afbc9007deda93be8c8117b136ab5f554
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Web Services Enhancements 3.0과의 상호 운용성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트와 서비스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 서비스가 WS-Addressing 사양의 2004년 8월 버전을 사용하도록 구성된 경우 Microsoft .NET 클라이언트 및 서비스용 WSE(Web Services Enhancements) 3.0과 유선 수준으로 호환됩니다.  

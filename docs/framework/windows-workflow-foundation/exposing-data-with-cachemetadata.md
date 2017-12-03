@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: aea620d740b7b95747395821d622f267943352da
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 26c68c24ad525d077d26f0b7bd917a936372e0a5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata를 사용하여 데이터 노출
 작업을 실행하기 전에 워크플로 런타임은 실행을 유지하는 데 필요한 모든 작업 정보를 얻습니다. 워크플로 런타임은 <xref:System.Activities.Activity.CacheMetadata%2A> 메서드를 실행하는 동안 이 정보를 가져옵니다. 이 메서드의 기본 구현에서는 실행 시 작업에서 노출하는 모든 공용 인수, 변수 및 자식 작업을 런타임에 제공합니다. 작업에서 보다 많은 정보를 런타임에 제공해야 하는 경우(예: 전용 멤버 또는 작업에서 예약될 작업) 이 메서드를 재정의하여 제공할 수 있습니다.  

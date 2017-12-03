@@ -14,14 +14,14 @@ helpviewer_keywords:
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fda50f14d9003b81f93840571b8b27f874f7730b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c9b083180870e451816b54dddc10068ca7ec5db
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-discovery"></a>WCF 검색
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 WS-Discovery 프로토콜을 사용하여 런타임에 상호 운용 가능한 방식으로 서비스를 검색할 수 있도록 하는 지원 기능을 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 멀티캐스트 메시지를 사용하여 네트워크 또는 검색 프록시 서버에 자신의 사용 가능 여부를 알릴 수 있습니다. 클라이언트 응용 프로그램은 네트워크나 검색 프록시 서버를 검색하여 일련의 조건을 만족하는 서비스를 찾습니다. 이 단원의 항목에서는 이 기능의 프로그램 모델에 대한 개요와 자세한 설명을 제공합니다.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e0362673ebb7d686822fae594b3a41435ceb9a4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 67b9e239c8b60511caf3989c0b3a1a5d6dcc9b26
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="generating-data-type-classes-from-xml"></a>XML에서 데이터 형식 클래스 생성
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 XML에서 데이터 형식 클래스를 생성하는 새 기능이 포함되어 있습니다. 이 항목에서는.NET 블로그 RSS 피드에 대 한 데이터 형식을 자동으로 생성 하는 방법에 설명 합니다.  

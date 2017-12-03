@@ -14,14 +14,14 @@ helpviewer_keywords:
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f51ad4a228de0a4a2fae0fb325d045bb09263b3d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 32e7cb3a340865530b6a8d76609eb246184363b0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF 웹 HTTP 프로그래밍 모델
 개발자는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델을 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 작업을 비 SOAP 끝점에 노출시킬 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  

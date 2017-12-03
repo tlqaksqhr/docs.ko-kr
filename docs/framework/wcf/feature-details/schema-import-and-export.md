@@ -17,14 +17,14 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c0c6d4917cc34021381e30d45b50b225b6aa4d18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a65f2c1daaac7e0e795412d666bb7d15e639361
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="schema-import-and-export"></a>스키마 가져오기 및 내보내기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 에는 새로운 serialization 엔진인 <xref:System.Runtime.Serialization.DataContractSerializer>가 포함되어 있습니다. `DataContractSerializer`는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체와 XML을 양방향으로 변환합니다. 이 serializer 이외에도, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 관련 스키마를 가져오고 내보내는 메커니즘이 있습니다. *스키마* serializer 생성 하거나 deserializer가 액세스할 수 있는 XML 형태에, 정규화 되 고 컴퓨터가 읽을 수 있는 설명입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 여러 타사 플랫폼과 상호 운용할 수 있는 W3C(World Wide Web 컨소시엄) XSD(XML 스키마 정의 언어)를 스키마 표현으로 사용합니다.  

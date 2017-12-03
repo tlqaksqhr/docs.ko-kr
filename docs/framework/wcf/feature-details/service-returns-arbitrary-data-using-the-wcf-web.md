@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 64179a559986f11fa263fac7fe680ddd9bea809c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8e1d808d4daf91b5ff89b05cab8359c90090f293
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기
 서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 경우 이것이 서비스 작업을 데이터 형식에서 지원 되지 않습니다를 반환 해야 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]합니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 프로그래밍 모델을 사용하여 이러한 서비스를 만드는 방법에 대해 설명합니다. 이 서비스에는 스트림을 반환하는 하나의 작업이 있습니다.  

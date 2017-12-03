@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c0e2dbd255a1fbadbd5dd4cd7e676b75e659fe2a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3fd8b59cd69807928b1a441d1bfb57f82d072288
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="operation-formatter-and-operation-selector"></a>작업 포맷터와 작업 선택기
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 확장 지점을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 예상하는 것과 다른 형식의 메시지 데이터를 허용하는 방법을 보여 줍니다. 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 포맷터 예상 아래에 포함 시킬 메서드 매개 변수는 `soap:body` 요소입니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  

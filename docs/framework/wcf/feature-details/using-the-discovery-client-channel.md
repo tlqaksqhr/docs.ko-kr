@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 655885aa392420cc0f35955e6146fd6a1f8e50d7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f012cc43d7160b737e5a9a5d4ceb5e50e91d07a1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-the-discovery-client-channel"></a>Discovery 클라이언트 채널 사용
 WCF 클라이언트 응용 프로그램을 작성하는 경우 호출할 서비스의 끝점 주소를 알아야 합니다. 대부분의 경우 서비스의 끝점 주소를 미리 알 수 없거나 시간 경과에 따라 서비스의 주소가 변경됩니다. Discovery 클라이언트 채널을 사용하면 WCF 클라이언트 응용 프로그램을 작성하고 호출할 서비스를 설명할 수 있습니다. 그러면 클라이언트 채널이 자동으로 프로브 요청을 보냅니다. 서비스가 응답하면 Discovery 클라이언트 채널은 프로브 응답에서 서비스의 끝점 주소를 검색하고 이를 사용하여 서비스를 호출합니다.  

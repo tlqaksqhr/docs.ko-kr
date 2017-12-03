@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 11ffdca834ba267fdd10ecb968699615089c6170
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a8b6b10fbd9815280f8dcbb1d061363bef544a29
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML의 WPF 및 WF 통합
 이 샘플에서는 단일 XAML 문서에 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 및 [!INCLUDE[wf](../../../../includes/wf-md.md)] 기능을 사용하는 응용 프로그램을 만드는 방법을 보여 줍니다. 이를 수행하기 위해 이 샘플에는 [!INCLUDE[wf](../../../../includes/wf-md.md)] 및 XAML 확장성이 사용됩니다.  

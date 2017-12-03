@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7d8fea550d0def93cf1d86b9d4a7d6b09afaf90d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2e9d851d083f0b3a1bd00bafe5b0805a55635158
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="simplified-configuration"></a>단순화된 구성
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 구성하는 것은 복잡한 태스크일 수 있습니다. 다양한 옵션이 있을 수 있고 경우에 따라 필요한 설정을 확인하는 것이 쉽지 않을 수도 있습니다. 구성 파일을 사용하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스가 더 유연해지지만 문제의 원인을 찾기가 그만큼 더 어려울 수 있습니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 이러한 문제를 해결하고 서비스 구성의 크기와 복잡성을 줄일 수 있는 방법을 제공합니다.  

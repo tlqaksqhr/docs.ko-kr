@@ -13,14 +13,14 @@ helpviewer_keywords:
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ce846d5637c6d49b4a3b1c6f28ae533e4900f696
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6cba37a82174ab255cb6814e296154485fbdd54c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>방법: 서명을 확인하는 데 사용되는 인증 기관 인증서 체인 지정(WCF)
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 X.509 인증서를 사용하여 서명된 SOAP 메시지를 받으면 기본적으로 X.509 인증서가 신뢰할 수 있는 인증 기관에서 발급된 것인지 확인합니다. 이렇게 하려면 인증서 저장소를 찾고 해당 인증 기관의 인증서가 신뢰할 수 있는 것으로 지정되었는지 확인합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 이러한 결정을 하려면 올바른 인증서 저장소에 인증 기관 인증서 체인을 설치해야 합니다.  

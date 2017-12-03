@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c00368f466e151466bdf30a89dffe6baa9b57a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF 확장에 대한 사용자 지정 메타데이터 가져오기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메타데이터 가져오기는 해당 메타데이터에서 서비스 또는 해당 구성 요소 부분의 추상적 표현을 생성하는 프로세스입니다. 예를 들면, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스, <xref:System.ServiceModel.Channels.Binding> 인스턴스 또는 <xref:System.ServiceModel.Description.ContractDescription> 인스턴스를 서비스의 WSDL 문서에서 가져올 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 서비스 메타데이터를 가져오려면 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 추상 클래스의 구현을 사용합니다. <xref:System.ServiceModel.Description.MetadataImporter> 클래스에서 파생되는 형식은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 WS-Policy 가져오기 논리를 사용하는 메타데이터 형식 가져오기에 대한 지원을 구현합니다.  

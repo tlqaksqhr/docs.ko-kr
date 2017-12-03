@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 caps.latest.revision: "31"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c0d3cd2f53b81ae6114baa3c7eedd899126ed579
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4cafff46d31ed9a5737dbb74acecab96b1f1a1e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-services"></a>서비스 호스팅
 활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스는 관리 코드를 지원하는 모든 Windows 프로세스에서 실행할 수 있게 디자인되었습니다.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6231d6e4b6562aafbb5b6bd88b65b66f44469023
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 91b03e29c2841434d4222f59ae62028bf2431a84
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="exporting-and-importing-metadata"></a>메타데이터 내보내기 및 가져오기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메타데이터 내보내기는 서비스 끝점을 설명하여 클라이언트에서 서비스 사용 방법을 이해할 수 있도록 병렬의 표준화된 표현으로 나타내는 프로세스입니다. 서비스 메타데이터 가져오기는 서비스 메타데이터에서 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스 또는 부분을 생성하는 프로세스입니다.  

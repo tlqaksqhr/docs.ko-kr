@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6334a5b866d239dc5f961ce4f1c89eac5b6ed3b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 에는 새로운 serialization 엔진인 <xref:System.Runtime.Serialization.DataContractSerializer>가 포함되어 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  또한[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에는 도우미 serializer인 <xref:System.Runtime.Serialization.NetDataContractSerializer>가 있습니다. <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 형식 이름을 serialize된 데이터의 일부로 내보내므로 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] serializer와 유사합니다. 그리고 serialize 측과 deserialize 측에서 동일한 형식을 공유할 때 사용됩니다. <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 모두 공통 기본 클래스인 <xref:System.Runtime.Serialization.XmlObjectSerializer>에서 파생됩니다.  
   
 > [!WARNING]
->  <xref:System.Runtime.Serialization.DataContractSerializer> 는 20 미만의 16진수 값이 있는 제어 문자를 포함하는 문자열을 XML 엔터티로 serialize합니다. 이 경우 WCF 클라이언트가 아닌 클라이언트가 이러한 데이터를 WCF 서비스로 보내는 문제가 발생할 수 있습니다.  
+>  <xref:System.Runtime.Serialization.DataContractSerializer> 는 20 미만의 16진수 값이 있는 제어 문자를 포함하는 문자열을 XML 엔터티로 serialize합니다. WCF 서비스에 이러한 데이터를 보낼 때이 아닌 WCF 클라이언트에 문제가 인해 수 있습니다.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>DataContractSerializer 인스턴스 만들기  
  <xref:System.Runtime.Serialization.DataContractSerializer> 의 인스턴스를 구성하는 작업은 중요한 단계입니다. 구성한 후에는 어떤 설정도 변경할 수 없습니다.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a8fd5058179d9e7974e725d69bb2bf0740ab7f00
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5587300edf739eedb99084735eda81538ab61ef7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT 및 방화벽 작업
 네트워크 연결의 클라이언트와 서버에 통신을 위한 직접 및 열린 경로가 없는 경우가 자주 발생합니다. 패킷은 네트워크의 중간 컴퓨터와 끝점 컴퓨터 모두에서 필터링, 라우트, 분석 및 변환됩니다. NAT(Network Address Translation) 및 방화벽은 네트워크 통신에 참여할 수 있는 일반적인 중간 응용 프로그램의 예입니다.  

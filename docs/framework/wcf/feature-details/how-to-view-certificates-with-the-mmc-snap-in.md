@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 43925a301d4f0d2ca1a852912255be49dd330ae5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5981e68ebe2870870fff5e92e87d7582ac2c42b5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>방법: MMC 스냅인을 사용하여 인증서 보기
 일반적인 자격 증명 형식은 X.509 인증서입니다. 보안된 서비스 또는 클라이언트를 만들 때 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>과 같은 메서드를 사용하여 클라이언트 또는 서비스 자격 증명으로 사용할 인증서를 지정할 수 있습니다. 메서드에는 인증서를 저장할 저장소 및 인증서를 검색할 때 사용할 값과 같은 여러 매개 변수가 필요합니다. 다음 절차에서는 적절한 인증서를 찾기 위해 컴퓨터에서 저장소를 검사하는 방법을 보여 줍니다. 인증서 지문의 찾을 예제를 보려면 [하는 방법: 인증서의 지문을 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.  

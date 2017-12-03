@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
 caps.latest.revision: "28"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 537e86b4eb43864e9a27d5a8a485ea5cb752833d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 30fc31055563db75512639bf7fb3b9119be280e6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-duplex-contract"></a>방법: 이중 계약 만들기
 이 항목에서는 이중(양방향) 계약을 사용하는 메서드를 만드는 기본 단계를 보여 줍니다. 이중 계약을 사용하면 클라이언트와 서버가 각각 독립적으로 통신하므로 서로 호출을 시작할 수 있습니다. 이중 계약은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에서 사용할 수 있는 세 가지 메시지 패턴 중 하나입니다. 다른 두 가지 메시지 패턴은 단방향과 요청-회신입니다. 이중 계약은 클라이언트와 서버 간 두 개의 단방향 계약으로 구성되며, 메서드 호출을 상호 관련시키지 않아도 됩니다. 서비스가 클라이언트에 세부 정보를 쿼리하거나 클라이언트에서 이벤트를 명시적으로 발생시킬 때 이러한 종류의 계약을 사용합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]이중 계약에 대 한 클라이언트 응용 프로그램을 만드는 참조 [하는 방법: 이중 계약와 함께 Access Services](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)합니다. 작업 예제에 대 한 참조는 [이중](../../../../docs/framework/wcf/samples/duplex.md) 샘플.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d2367f4fe4ebe576eb9a5e2f707eb043e5ee7ccb
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 726ce98f3fe11bbc3cd13d90cdae335c0741efe6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="formatting-messages-in-workflow-services"></a>워크플로 서비스에서 메시지 서식 지정
 이 샘플에서는 메시징 활동(WF 서비스)에서 여러 가지 사용자 형식을 사용하는 방법을 보여 줍니다. 샘플 서비스는 간단한 비용 승인 서비스이며 세 가지 작업을 노출합니다. `ApproveExpense`는 데이터 계약 형식을 사용하며 알려진 형식을 사용하는 방법을 보여줍니다. 작업은 비용 금액을 기준으로 `true` 또는 `false`를 반환합니다. `ApprovePO`XmlSerializer 형식을 사용 하 고 반환 `true` 또는 `false` 은 비용 금액에 따라 합니다.`ApprovedVendor` 메시지 계약 형식을 사용 하 고 반환 `true` 또는 `false` 승인 된 공급 업체 목록에 있는 경우 또는 요청 (재무 부서의 모든 공급 업체를 사용할 수 있음)는 재무 부서에서 온 경우.  

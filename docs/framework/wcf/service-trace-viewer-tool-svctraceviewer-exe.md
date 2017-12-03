@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
 caps.latest.revision: "55"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 29a5ae7fa8cbfd3b5a9812918428b8965398a483
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7832060a29ceb2dc58feac9ce2fc97f58caf70f0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer 도구(SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Trace Viewer 도구를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 생성한 진단 추적을 분석할 수 있습니다. Service Trace Viewer는 로그의 추적 메시지를 쉽게 병합하고, 보고, 필터링하는 방법을 제공하므로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 문제를 진단하고, 복구하며, 확인할 수 있습니다.  

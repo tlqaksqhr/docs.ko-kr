@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22dcace51b2c73193356450b4b210d1c1a899e28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="supported-deployment-scenarios"></a>지원되는 배포 시나리오
 부분 신뢰 응용 프로그램에서 사용할 수 있는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 기능의 하위 집합은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하는 시나리오의 일부 요구 사항에 맞게 디자인되었습니다. 서버의 경우, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 는 보안상의 이유로 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 보통 신뢰 권한 집합에서 타사 응용 프로그램을 실행하는 인터넷 범위의 공유 호스팅 공급자 요구 사항을 충족합니다. 클라이언트의 경우에는 신뢰할 수 없는 사이트에서 데스크톱 응용 프로그램을 원활하고 안전하게 배포할 수 있도록 해주는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ClickOnce 배포 [또는](http://go.microsoft.com/fwlink/?LinkId=83712) 의 XAML 브라우저 응용 프로그램 기술과 같은 배포 기술의 요구 사항을 충족하도록 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]부분 신뢰 지원이 디자인되었습니다.  

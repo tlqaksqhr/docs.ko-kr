@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dda6e063744b8a745c5f4be576344ff2823de267
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0a19c7e8dec9587816d78be8bea58fc4ca366d5e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="content-based-correlation"></a>내용 기반 상관 관계
 워크플로 서비스가 클라이언트 및 기타 서비스와 통신할 때 교환되는 메시지에는 해당 메시지를 특정 인스턴스와 고유하게 연결하는 데 사용할 수 있는 데이터가 있을 수 있습니다. 내용 기반 상관 관계는 메시지에 있는 이 데이터(예: 고객 번호 또는 주문 ID)를 사용하여 메시지를 적절한 워크플로 인스턴스에 라우트합니다. 이 항목에서는 워크플로에서 내용 기반 상관 관계를 사용하는 방법에 대해 설명합니다.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 346dc5f06fd5f655426d8f41164a9a2f24acdb5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b282a098e53666bcb17d3c619633edba8f06c248
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 [!INCLUDE[wf](../../../includes/wf-md.md)]의 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 Workflow Designer 환경의 몇 가지 향상된 기능을 포함하여 새로운 여러 기능이 도입되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 10/18/2017
   
  다음 스크린 샷에서는 `WriteLine`의 `Body`에 있는 `NoPersistScope` 활동을 보여 줍니다.  
   
- ![자동 &#45; 저장 위치 서라운드](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![자동 & #45; 저장 위치 서라운드](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  다음 스크린 샷에서는 두 번째 `Sequence`이 첫 번째 항목 아래에 놓였을 때 `Body`에 자동으로 만들어진 `WriteLine` 활동을 보여 줍니다.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 10/18/2017
   
  활동을 순서도 노드와 상태 간 연결로 끌어 와 다른 두 노드 사이에 노드를 자동으로 삽입할 수도 있습니다. 다음 스크린 샷에서는 도구 상자의 활동을 끌어다 놓을 수 있는 강조 표시된 연결선을 보여 줍니다.  
   
- ![자동 &#45; insert 처리 활동을 끌기 위한](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![자동 & #45; insert 처리 활동을 끌기 위한](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  자동 연결 및 자동 삽입은 재호스트된 디자이너에서 지원됩니다.  
   

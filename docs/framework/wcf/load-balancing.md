@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d068332d5dc51e6e0e5a713b29c4eb45c4e51598
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 699a770e1ff1ec8cebf904a72338f400236b737a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="load-balancing"></a>부하 분산
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램의 용량을 높이는 한 가지 방법은 이러한 응용 프로그램을 부하가 분산된 서버 팜에 배포하여 확장하는 것입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서는 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치와 하드웨어 기반의 부하 분산 장치 등 표준 부하 분산 기술을 사용하여 부하를 분산할 수 있습니다.  

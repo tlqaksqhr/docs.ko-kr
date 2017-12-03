@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d54c8bd4c6a73b9ff5b4066832b557041d7dec0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9eaf7f8bd4d477b08cda16ca544f240a417f6b21
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="tracking-events-reference"></a>추적 이벤트 참조
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]의 워크플로는 다양한 수명 단계를 거치면서 실행되는 동안 추적 이벤트를 발생시킵니다. 호스트는 이 이벤트의 알림을 신청하여 수명 중에 워크플로 진행 상태를 계속 업데이트할 수 있습니다. 이 단원에서는 발생하는 추적 이벤트를 설명합니다.  

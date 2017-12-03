@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f8ba94fc-27e0-4d8e-8f85-50a6d2a3cd43
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fd93e2672851cc0111af6610ade70aebab14442d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48a5d2e1d8c5381f322ea1b6ffc9022853683efc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="host-lock-renewal-period"></a>호스트 잠금 갱신 기간
 **호스트 잠금 갱신 기간** SQL 워크플로 인스턴스 저장소의 속성을 사용 하면 호스트가 워크플로 인스턴스에서 잠금을 갱신 하는 기간을 지정할 수 있습니다. 잠금은 호스트 잠금 갱신 기간 + 30초 동안 유효한 상태로 유지됩니다. 호스트가 이 기간 내에 잠금을 갱신(대여 연장)하지 못하면 잠금이 만료되고 지속성 공급자가 인스턴스 잠금을 해제합니다. 이 속성의 값은 "h:mm: ss" 형태의 TimeSpan 형식입니다. 허용 되는 최소값은 "00: 00:01" (1 초)입니다. 이 속성의 기본값은 "00: 00:30" (30 초)입니다.  

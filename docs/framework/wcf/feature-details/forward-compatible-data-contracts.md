@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d7a0153533ce5ec748c6396676988fcdc73eae6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ef25e349ca6245ff3247f3a136d9a950d03d81d5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="forward-compatible-data-contracts"></a>이후 버전과 호환되는 데이터 계약
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 데이터 계약 시스템의 특징은 시간에 따라 변경되지 않는 방법으로 계약을 개발할 수 있다는 점입니다. 즉, 이전 버전의 데이터 계약을 가진 클라이언트가 새 버전의 동일한 데이터 계약을 가진 서비스와 통신할 수 있거나, 새 버전의 데이터 계약을 가진 클라이언트가 이전 버전의 동일한 데이터 계약과 통신할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][모범 사례: 데이터 계약 버전 관리](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)합니다.  

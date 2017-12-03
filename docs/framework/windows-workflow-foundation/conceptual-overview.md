@@ -12,14 +12,14 @@ helpviewer_keywords:
 - WF [WF], concepts
 ms.assetid: 2a5c0ac2-813f-4a7b-83ac-9e5cb85e0640
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7d9c3d7d0e50fabfd5c82737c00a58fa3bc8da4f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aef97889abdd2ad4d2d6ff7978140ae09f75565b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-workflow-conceptual-overview"></a>Windows Workflow 개념적 개요
 이 단원의 항목에서는 [!INCLUDE[wf](../../../includes/wf-md.md)]의 배경이 되는 보다 큰 개념에 대해 설명합니다.  

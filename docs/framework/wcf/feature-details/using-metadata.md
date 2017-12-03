@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 599fdb099a1c22e28ce36527a43a66430cfc2e4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c0a7d5390681e7270381df109601d269f12a707a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-metadata"></a>메타데이터 사용
 서비스 메타데이터에는 시스템에서 읽을 수 있는 서비스에 대한 설명이 포함되어 있습니다. 서비스 끝점, 바인딩, 계약, 작업 및 메시지에 대한 설명이 서비스 메타데이터에 포함됩니다. 이러한 서비스 메타데이터는 서비스를 사용하도록 자동으로 클라이언트를 생성하거나, 서비스 설명을 구현하거나 클라이언트의 바인딩을 동적으로 업데이트하는 등의 다양한 목적에 사용할 수 있습니다.  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 90f2b1e73a24b0f732eaba4422faa9a1dcc15135
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fbab05c3a6b630f3ba191ff9e4903b9c44823aad
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="version-tolerant-serialization"></a>버전 독립적 Serialization
 .NET Framework의 버전 1.0과 1.1에서는 버전이 다른 응용 프로그램에서 재사용할 수 있는 serialize 가능한 형식을 만드는 작업에 문제가 있었습니다. 추가 필드를 추가하여 형식을 수정하면 다음 문제가 발생합니다.  

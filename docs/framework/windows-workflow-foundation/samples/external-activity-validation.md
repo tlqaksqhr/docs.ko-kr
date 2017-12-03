@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f45d4ffc04b206db0dfefbdbbe683146e09c767f
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6ebc79fa582a32ccc252e6c22b9b223870da7e44
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="external-activity-validation"></a>외부 활동 유효성 검사
 이 샘플에서는 직접 작성하지 않은 기본 제공 활동에 유효성 검사 논리를 추가하는 방법을 보여 줍니다. 유효성 검사 논리는 워크플로에 있는 모든 <xref:System.Activities.Statements.If> 활동의 <xref:System.Activities.Statements.If.Then%2A> 속성이 설정되거나 <xref:System.Activities.Statements.If.Else%2A> 속성이 설정되도록 적용하는 것으로 구성됩니다. 또한 유효성 검사 논리에는 워크플로에 있는 모든 <xref:System.Activities.Statements.Pick> 활동에 둘 이상의 분기가 있는지 확인하고, 그렇지 않은 경우 경고를 생성하는 것도 포함됩니다.  

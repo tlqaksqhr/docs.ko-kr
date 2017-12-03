@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3366ab851c6e6b66a5df94bdb24baad4ae0c8d14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 156960a6594f5475e339b36e5dabf46f26d13d62
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF 웹 HTTP 오류 처리
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 오류 처리를 사용하면 HTTP 상태 코드를 지정하고 작업과 동일한 형식(예: XML 또는 JSON)을 사용하여 오류 정보를 반환하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 서비스에서 오류를 반환할 수 있습니다.  

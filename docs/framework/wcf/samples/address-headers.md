@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19a7291ce13221e85b49c6ef97c6b375b8b71014
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8d46dac29157455f736e30515f4bc6b277b63694
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="address-headers"></a>주소 헤더
 Address Headers 샘플은 클라이언트가 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 참조 매개 변수를 서비스에 전달할 수 있는 방법을 보여 줍니다.  

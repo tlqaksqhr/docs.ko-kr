@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b9f836a7-68f4-4e7e-a3cc-a1bae5d775d6
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 64e925640f5bc90f80a21d555fc8eca9ca01cc82
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: acec310e6e4b97cbcefbdd86d55ce8c4e6b238af
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-and-net-framework-client-profile"></a>WCF 및 .NET Framework 클라이언트 프로필
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)]은 전체 프레임워크가 필요하지 않은 클라이언트를 위해 디자인된 전체 .Net Framework의 약식 버전입니다. 클라이언트 프레임워크에서는 일부 Windows Communication Foundation이 지원되지 않습니다.  

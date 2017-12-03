@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19dfb8d6a75496cf193831c1d9e6e71ee6bb1a7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="channel-model-overview"></a>채널 모델 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 채널 스택은 메시지를 처리하는 하나 이상의 채널로 계층화된 통신 스택입니다. 스택의 맨 아래에는 채널 스택을 TCP, HTTP, SMTP 및 기타 다른 유형의 전송과 같은 기본 전송에 적용하는 전송 채널이 있습니다. 채널은 메시지를 보내고 받기 위한 하위 수준의 프로그래밍 모델을 제공합니다. 이러한 프로그래밍 모델에서는 몇 가지 인터페이스와 총체적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 모델이라고 하는 기타 형식을 사용합니다. 이 항목에서는 채널 셰이프, 서비스에서의 기본 채널 수신기 생성 및 클라이언트에서의 채널 팩터리 생성에 대해 설명합니다.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
 caps.latest.revision: "35"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 765e531530342af5cf0fccfb759626341103114a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 407fa758c6564c3b7a5a8573acef1b6e181399d2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="default-message-contract"></a>기본 메시지 계약
 Default Message Contract 샘플에서는 사용자 지정 사용자 정의 메시지를 서비스 작업에 전달하고 전달받는 서비스를 보여 줍니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 인터페이스는 형식화 되지 않은 서비스를 구현 하는 합니다. 더하기, 빼기, 곱하기 및 나누기에서 사용에 대 한 개별 서비스 작업 대신는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md),이 샘플에는 피연산자와 연산자를 모두 포함 하 고 반환 하는 사용자 지정 메시지 전달 산술 계산의 결과입니다.  

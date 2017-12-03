@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 02bad6b5c7460655f4d3a5851e4e74d7de12111f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 377c2425ff1647c43687aa0a5d9584930cb6b1c2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="securing-peer-channel-applications"></a>피어 채널 응용 프로그램 보안
 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]의 다른 바인딩과 마찬가지로 `NetPeerTcpBinding`은 기본적으로 보안을 사용하며 전송 및 메시지 기반 보안(또는 둘 다)을 제공합니다. 이 항목에서는 이러한 두 가지 보안 형식에 대해 설명합니다. 보안 형식은 바인딩 사양의 보안 모드 태그(<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)로 지정됩니다.  

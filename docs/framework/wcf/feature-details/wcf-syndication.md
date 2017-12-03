@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 51cf7c6e4db1ee0ff68bcc7fccb46fd643f04bf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 14f2aa18b1fba92f5559b463d90dcfb5b34e2a3f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-syndication"></a>WCF 배포
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 Atom, RSS 또는 기타 사용자 지정 형식의 배포 피드를 쉽게 사용하는 것이 지원되므로 이러한 배포 피드를 읽고 만들 수 있을 뿐만 아니라 서비스 끝점에서 노출할 수 있습니다. 이 단원의 항목에서는 배포에 대한 이 프로그래밍 모델에 대해 자세히 설명합니다.  

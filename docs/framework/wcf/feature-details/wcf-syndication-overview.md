@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 629ec17ea01ec29480f15f5921d09e7497e9f8c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-syndication-overview"></a>WCF 배포 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 배포 피드를 노출하기 위한 지원을 제공합니다. 배포는 서버가 피드라고 하는 상호 운용 가능한 형식의 일부 응용 프로그램 데이터를 노출하는 응용 프로그램 통합 메커니즘입니다. 피드는 일부 피드 수준 메타데이터(제목, 만든 이, URL 및 기타 메타데이터)와 일련의 피드 항목으로 구성된 응용 프로그램 데이터 컬렉션입니다. 피드 내에서 피드 항목은 일반적으로 역순으로 시간 순서가 지정됩니다. 피드 항목은 표준 항목 수준 메타데이터 집합(제목 URL, 작성일, 범주 및 기타 항목 수준 메타데이터)과 임의 크기의 응용 프로그램별 데이터로 구성됩니다. 가장 일반적인 유형의 배포 피드 두 가지는 RSS(Really Simple Syndication) 2.0 및 Atom 1.0이며 두 가지 모두 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원됩니다.  

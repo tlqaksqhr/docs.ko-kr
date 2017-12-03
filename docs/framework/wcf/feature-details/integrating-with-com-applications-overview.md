@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4e995fc66a925cb0ebe272c9dceca1ba63b9459d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM 응용 프로그램과 통합 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 관리 코드 개발자에게 연결된 응용 프로그램을 만들 수 있는 풍부한 환경을 제공합니다. 하지만 관리되지 않는 COM 기반 코드에 이미 상당한 투자를 하여 마이그레이션을 원하지 않을 시에는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 모니커를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 서비스를 기존 코드에 바로 통합할 수도 있습니다. 서비스 모니커는 Office VBA, Visual Basic 6.0 또는 Visual C++ 6.0과 같은 다양한 범위의 COM 기반 개발 환경에서 사용할 수 있습니다.  

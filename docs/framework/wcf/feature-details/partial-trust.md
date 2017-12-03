@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 489b1587-9909-4d0e-8c1a-5e83c8f8292b
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f3febf1f3703377806493c8067b50c149bce0108
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 893b8bb58c9d78d6880f95f2490c55c7d9e27483
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="partial-trust"></a>부분 신뢰
 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]부터는 부분적으로 신뢰하는 호출자가 <xref:System.ServiceModel>, <xref:System.Runtime.Serialization> 및 <xref:System.ServiceModel.Web>에서 구현된 public 형식 및 메서드에 액세스할 수 있습니다. 이 단원에서는 낮은 CAS(코드 액세스 보안) 권한으로 실행되는 응용 프로그램에 사용할 수 있는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 기능의 제한된 하위 집합 및 부분 신뢰 응용 프로그램 내에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 사용을 지원하는 시나리오에 대해 설명합니다.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1493728809721c125b371e0d2ade2050b4909e5d
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5c13da32e304e54d1826c6dd4ad83d5fbb17702a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-contracts-in-workflow"></a>워크플로에서 계약 사용
 서비스를 구현하는 경우 서비스를 설명하는 많은 계약과 서비스가 보내고 받는 데이터를 정의합니다. 이러한 데이터는 데이터 계약 및 메시지 계약 정의로 표현되기 때문에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 워크플로 서비스에서는 데이터 계약과 메시지 계약을 서비스 설명의 일부로 사용합니다. 서비스 자체에서는 서비스의 작업을 설명하기 위해 메타데이터(WSDL 형식)를 노출합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 서비스 계약과 작업 계약을 사용하여 서비스와 서비스가 지원하는 작업을 정의합니다. 그러나 워크플로 서비스에서는 이러한 계약이 비즈니스 프로세스 자체의 일부이기 때문에 계약 유추라고 하는 프로세스에 의해 메타데이터로 노출됩니다.  

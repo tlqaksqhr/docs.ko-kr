@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c1ecdf6c3c8df4c6e69f0877ed8797cb0ac1a25b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42f86762bf40f5c8358b8772548c082844eae1ae
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>구성 파일에서 검색 구성
 검색에 사용되는 구성 설정에는 네 가지 기본 그룹이 있습니다. 이 항목에서는 각 그룹에 대해 간략하게 설명하고 이러한 그룹을 구성하는 방법을 보여 줍니다. 아래에 나오는 각 단원은 각 영역에 대해 보다 자세히 설명하는 문서로 연결됩니다.  

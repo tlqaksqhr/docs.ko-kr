@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a527f1be-4e37-4beb-9a95-291480d19627
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1314f003b2ce8e6af90009fe2bb85ff8d5543727
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b30f984455afbffd08ead8ebf1aa3aafc140956
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>JSON 및 기타 데이터 전송 형식에 대한 지원
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX(Asynchronous JavaScript and XML) 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.  

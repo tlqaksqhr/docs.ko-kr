@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
 caps.latest.revision: "31"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e36666b72d14bbe257cd6ced8a35c360659a91dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 01c1bc2d202080349db32452adfe549d7a6dd3cc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="session"></a>세션
 Session 샘플에서는 세션이 필요한 계약을 구현하는 방법을 보여 줍니다. 세션에서는 여러 작업을 수행하기 위한 컨텍스트를 제공합니다. 그러면 서비스에서 상태를 특정 세션에 연결하여 이후의 작업에서 이전 작업의 상태를 사용할 수 있게 만들 수 있습니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 계산기 서비스를 구현 하는 합니다. `ICalculator` 계약은 실행 결과를 유지하면서 일련의 산술 작업을 수행할 수 있도록 수정되었습니다. 이 기능은 `ICalculatorSession` 계약에 의해 정의됩니다. 서비스에서는 계산 수행을 위해 여러 서비스 작업이 호출되는 동안 클라이언트의 상태를 유지 관리합니다. 클라이언트에서는 `Result()`를 호출하여 현재 결과를 검색하고 `Clear()`를 호출하여 결과를 0으로 지울 수 있습니다.  

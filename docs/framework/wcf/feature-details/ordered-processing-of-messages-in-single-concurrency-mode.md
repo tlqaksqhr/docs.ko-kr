@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a1acf4c3edb51500c2ead2e4ba33c6d3cc9c953f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c677ed869c0e5dd0df1288de48668ba403df5aa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>단일 동시성 모델에서 메시지의 순서 지정 처리
 WCF 보장 하지 않습니다 메시지 처리 되는 순서에 대 한 기본 채널은 세션 하지 않는 한 합니다.  예를 들어, MsmqInputChannel 하지 않는 세션 채널을 사용 하는 WCF 서비스 메시지의 순차적 처리 되지 것입니다. 개발자에 주문 처리 동작을 사용할 수는 있지만 세션을 사용 하지 않으려는 있는 경우도 있습니다. 이 항목에서는 서비스가 단일 동시성 모델에서 실행되고 있을 때 이 동작을 구성하는 방법을 설명합니다.  

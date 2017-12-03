@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3069dfbde9fedc0a0c89d8f55ba1adcc852d5c24
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 33387a9b155a471209039e5977bc7134b1439ff3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>방법: WAS에서 WCF 서비스 호스팅
 이 항목에서는 WAS(Windows Process Activation Service)에서 호스팅되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. WAS는 HTTP가 아닌 전송 프로토콜에서 사용하는 IIS(Internet Information Services) 기능의 일반화인 새 프로세스 활성화 서비스입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 수신기 어댑터 인터페이스를 사용하여 TCP, 명명된 파이프, 메시지 큐 등과 같은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 HTTP가 아닌 프로토콜을 통해 수신되는 활성화 요청을 통신합니다.  

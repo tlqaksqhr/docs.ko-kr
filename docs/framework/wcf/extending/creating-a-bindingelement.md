@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6fa68698c6c343b29ca39e66150753502cb8f673
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement 만들기
 바인딩 및 바인딩 요소(각각 <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>를 확장하는 개체)에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램 모델이 채널 팩터리 및 채널 수신기와 연결됩니다. 바인딩으로 설정 하지 않고 사용자 지정 채널을 사용 하 여 프로그래밍이 필요 채널 수준에서에 설명 된 대로 [서비스 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) 및 [클라이언트 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)합니다. 이 항목에서는에서 채널을 사용 하 여 사용할 수 있도록 최소 요구 사항을 설명 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], 개발은 <xref:System.ServiceModel.Channels.BindingElement> 채널 및의 4 단계에 설명 된 대로 응용 프로그램에서 사용에 대 한 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  
