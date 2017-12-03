@@ -9,20 +9,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 24284565-c68b-40bf-b7f1-e148d151a6fc
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9a459e6df0e030f4e17bb73461d8fa790a61787e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5202f69ac3f5408091d73f2ae39f92659a991740
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="custom-tracking-records"></a><span data-ttu-id="c24a1-102">사용자 지정 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="c24a1-102">Custom Tracking Records</span></span>
-<span data-ttu-id="c24a1-103">이 항목에서는 사용자 지정 추적 레코드를 만들고 이 레코드와 함께 내보내질 데이터로 이 레코드를 채우는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c24a1-103">This topic demonstrates how to create custom tracking records and populate them with data to be emitted along with the records.</span></span>  
+# <a name="custom-tracking-records"></a><span data-ttu-id="d9ecd-102">사용자 지정 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="d9ecd-102">Custom Tracking Records</span></span>
+<span data-ttu-id="d9ecd-103">이 항목에서는 사용자 지정 추적 레코드를 만들고 이 레코드와 함께 내보내질 데이터로 이 레코드를 채우는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d9ecd-103">This topic demonstrates how to create custom tracking records and populate them with data to be emitted along with the records.</span></span>  
   
-## <a name="emitting-custom-tracking-records"></a><span data-ttu-id="c24a1-104">사용자 지정 추적 레코드 내보내기</span><span class="sxs-lookup"><span data-stu-id="c24a1-104">Emitting Custom Tracking Records</span></span>  
- <span data-ttu-id="c24a1-105">다음 예제에 표시된 것처럼 코드 활동에서 사용자 지정 추적 레코드를 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c24a1-105">Custom tracking records can be emitted from a code activity as shown in the following example.</span></span>  
+## <a name="emitting-custom-tracking-records"></a><span data-ttu-id="d9ecd-104">사용자 지정 추적 레코드 내보내기</span><span class="sxs-lookup"><span data-stu-id="d9ecd-104">Emitting Custom Tracking Records</span></span>  
+ <span data-ttu-id="d9ecd-105">다음 예제에 표시된 것처럼 코드 활동에서 사용자 지정 추적 레코드를 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d9ecd-105">Custom tracking records can be emitted from a code activity as shown in the following example.</span></span>  
   
 ```  
 protected override void Execute(CodeActivityContext context)  
@@ -34,8 +34,8 @@ protected override void Execute(CodeActivityContext context)
 }  
 ```  
   
- <span data-ttu-id="c24a1-106"><xref:System.Activities.Tracking.CustomTrackingRecord>에서 <xref:System.Activities.NativeActivityContext.Track%2A> 메서드를 호출하여 코드 활동에서 `ActvityContext`를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="c24a1-106">A <xref:System.Activities.Tracking.CustomTrackingRecord> is emitted in a code activity by invoking the <xref:System.Activities.NativeActivityContext.Track%2A> method on the `ActvityContext`.</span></span>  
+ <span data-ttu-id="d9ecd-106"><xref:System.Activities.Tracking.CustomTrackingRecord>에서 <xref:System.Activities.NativeActivityContext.Track%2A> 메서드를 호출하여 코드 활동에서 `ActvityContext`를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="d9ecd-106">A <xref:System.Activities.Tracking.CustomTrackingRecord> is emitted in a code activity by invoking the <xref:System.Activities.NativeActivityContext.Track%2A> method on the `ActvityContext`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c24a1-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c24a1-107">See Also</span></span>  
- [<span data-ttu-id="c24a1-108">Windows Server App Fabric 모니터링</span><span class="sxs-lookup"><span data-stu-id="c24a1-108">Windows Server App Fabric Monitoring</span></span>](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [<span data-ttu-id="c24a1-109">App Fabric로 응용 프로그램 모니터링</span><span class="sxs-lookup"><span data-stu-id="c24a1-109">Monitoring Applications with App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a><span data-ttu-id="d9ecd-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d9ecd-107">See Also</span></span>  
+ [<span data-ttu-id="d9ecd-108">Windows Server App Fabric 모니터링</span><span class="sxs-lookup"><span data-stu-id="d9ecd-108">Windows Server App Fabric Monitoring</span></span>](http://go.microsoft.com/fwlink/?LinkId=201273)  
+ [<span data-ttu-id="d9ecd-109">App Fabric로 응용 프로그램 모니터링</span><span class="sxs-lookup"><span data-stu-id="d9ecd-109">Monitoring Applications with App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkId=201275)

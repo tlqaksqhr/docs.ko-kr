@@ -10,21 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a237be3f6e4d59cbaa2d3c0144eaeb4369748ecd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42b5621275b9d27983619d18990e3d8e22c4e9db
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-configure-tracking-with-workflowservicehost"></a><span data-ttu-id="ca4b7-102">방법: WorkflowServiceHost를 사용하여 추적 구성</span><span class="sxs-lookup"><span data-stu-id="ca4b7-102">How to: Configure Tracking with WorkflowServiceHost</span></span>
-<span data-ttu-id="ca4b7-103">이 항목에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 호스트되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로에 대해 추적을 구성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-103">This topic explains how to configure tracking for a [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] workflow hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="ca4b7-104">이러한 추적 기능은 Web.config 파일에서 서비스 동작을 지정하여 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-104">It is configured through a Web.config file by specifying a service behavior.</span></span>  
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a><span data-ttu-id="5ebef-102">방법: WorkflowServiceHost를 사용하여 추적 구성</span><span class="sxs-lookup"><span data-stu-id="5ebef-102">How to: Configure Tracking with WorkflowServiceHost</span></span>
+<span data-ttu-id="5ebef-103">이 항목에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 호스트되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로에 대해 추적을 구성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-103">This topic explains how to configure tracking for a [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] workflow hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="5ebef-104">이러한 추적 기능은 Web.config 파일에서 서비스 동작을 지정하여 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-104">It is configured through a Web.config file by specifying a service behavior.</span></span>  
   
-### <a name="configure-tracking-in-configuration"></a><span data-ttu-id="ca4b7-105">구성에서 추적 구성</span><span class="sxs-lookup"><span data-stu-id="ca4b7-105">Configure Tracking in Configuration</span></span>  
+### <a name="configure-tracking-in-configuration"></a><span data-ttu-id="5ebef-105">구성에서 추적 구성</span><span class="sxs-lookup"><span data-stu-id="5ebef-105">Configure Tracking in Configuration</span></span>  
   
-1.  <span data-ttu-id="ca4b7-106">다음 예제와 같이 구성 파일에서 <<xref:System.Activities.Tracking.EtwTrackingParticipant>> 요소를 사용하여 `behavior`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-106">Add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <`behavior`> element in a configuration file, as shown in the following example.</span></span>  
+1.  <span data-ttu-id="5ebef-106">다음 예제와 같이 구성 파일에서 <<xref:System.Activities.Tracking.EtwTrackingParticipant>> 요소를 사용하여 `behavior`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-106">Add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <`behavior`> element in a configuration file, as shown in the following example.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/21/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="ca4b7-107">위의 샘플에서 사용하는 구성은 단순화된 구성입니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-107">The preceding configuration sample is using simplified configuration.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="ca4b7-108">[구성을 간소화](../../../../docs/framework/wcf/simplified-configuration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-108"> [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).</span></span>  
+    >  <span data-ttu-id="5ebef-107">위의 샘플에서 사용하는 구성은 단순화된 구성입니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-107">The preceding configuration sample is using simplified configuration.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="5ebef-108">[구성을 간소화](../../../../docs/framework/wcf/simplified-configuration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-108"> [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).</span></span>  
   
-     <span data-ttu-id="ca4b7-109">위의 구성 샘플에서는 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가하고 추적 프로필 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-109">The preceding configuration sample adds a <xref:System.Activities.Tracking.EtwTrackingParticipant> and specifies a tracking profile name.</span></span> <span data-ttu-id="ca4b7-110">추적 프로필은 <`trackingProfile`> 요소 내의 <`tracking`> 요소에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-110">Tracking profiles are created in a <`trackingProfile`> element within a <`tracking`> element.</span></span> <span data-ttu-id="ca4b7-111">추적 프로필에는 추적 참가자가 런타임에 워크플로 인스턴스 상태가 변경될 때 발생하는 워크플로 이벤트를 구독할 수 있도록 허용하는 추적 쿼리가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-111">The tracking profile contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="ca4b7-112">다음 예제에서는 추적 프로필을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-112">The following example shows how to create a tracking profile.</span></span>  
+     <span data-ttu-id="5ebef-109">위의 구성 샘플에서는 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가하고 추적 프로필 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-109">The preceding configuration sample adds a <xref:System.Activities.Tracking.EtwTrackingParticipant> and specifies a tracking profile name.</span></span> <span data-ttu-id="5ebef-110">추적 프로필은 <`trackingProfile`> 요소 내의 <`tracking`> 요소에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-110">Tracking profiles are created in a <`trackingProfile`> element within a <`tracking`> element.</span></span> <span data-ttu-id="5ebef-111">추적 프로필에는 추적 참가자가 런타임에 워크플로 인스턴스 상태가 변경될 때 발생하는 워크플로 이벤트를 구독할 수 있도록 허용하는 추적 쿼리가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-111">The tracking profile contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="5ebef-112">다음 예제에서는 추적 프로필을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-112">The following example shows how to create a tracking profile.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -60,25 +60,25 @@ ms.lasthandoff: 11/21/2017
     </system.serviceModel>  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="ca4b7-113">참조 추적 프로필을 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-113"> tracking profiles, see [Tracking Profiles](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5ebef-113">참조 추적 프로필을 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-113"> tracking profiles, see [Tracking Profiles](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="ca4b7-114">일반적으로 추적 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-114"> tracking in general, see [Workflow Tracking and Tracing](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span></span>  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5ebef-114">일반적으로 추적 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-114"> tracking in general, see [Workflow Tracking and Tracing](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span></span>  
   
-### <a name="configure-tracking-in-code"></a><span data-ttu-id="ca4b7-115">코드에서 추적 구성</span><span class="sxs-lookup"><span data-stu-id="ca4b7-115">Configure Tracking in Code</span></span>  
+### <a name="configure-tracking-in-code"></a><span data-ttu-id="5ebef-115">코드에서 추적 구성</span><span class="sxs-lookup"><span data-stu-id="5ebef-115">Configure Tracking in Code</span></span>  
   
-1.  <span data-ttu-id="ca4b7-116">다음 예제와 같이 코드에서 <xref:System.Activities.Tracking.EtwTrackingParticipant> 동작을 사용하여 <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-116">Add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> behavior in code, as shown in the following example.</span></span>  
+1.  <span data-ttu-id="5ebef-116">다음 예제와 같이 코드에서 <xref:System.Activities.Tracking.EtwTrackingParticipant> 동작을 사용하여 <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-116">Add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> behavior in code, as shown in the following example.</span></span>  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  
     ```  
   
-     <span data-ttu-id="ca4b7-117">위의 코드 샘플에서는 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가하고 추적 프로필 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-117">The preceding code sample adds a <xref:System.Activities.Tracking.EtwTrackingParticipant> and specifies a tracking profile name.</span></span> <span data-ttu-id="ca4b7-118">추적 프로필은 이전 단원에 표시된 것과 같이 <`trackingProfile`> 요소 내의 <`tracking`> 요소에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-118">Tracking profiles are created in a <`trackingProfile`> element within a <`tracking`> element as shown in the previous section.</span></span>  
+     <span data-ttu-id="5ebef-117">위의 코드 샘플에서는 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가하고 추적 프로필 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-117">The preceding code sample adds a <xref:System.Activities.Tracking.EtwTrackingParticipant> and specifies a tracking profile name.</span></span> <span data-ttu-id="5ebef-118">추적 프로필은 이전 단원에 표시된 것과 같이 <`trackingProfile`> 요소 내의 <`tracking`> 요소에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-118">Tracking profiles are created in a <`trackingProfile`> element within a <`tracking`> element as shown in the previous section.</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="ca4b7-119">참조 추적 프로필을 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-119"> tracking profiles, see [Tracking Profiles](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5ebef-119">참조 추적 프로필을 [추적 프로필](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-119"> tracking profiles, see [Tracking Profiles](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="ca4b7-120">일반적으로 추적 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-120"> tracking in general, see [Workflow Tracking and Tracing](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span></span> <span data-ttu-id="ca4b7-121">프로그래밍 방식으로 추적 구성의 예에 대 한 참조 [워크플로에 대 한 추적 구성](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ca4b7-121">For an example of configuring tracking programmatically see [Configuring Tracking for a Workflow](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5ebef-120">일반적으로 추적 참조 [워크플로 추적 및 트레이싱](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-120"> tracking in general, see [Workflow Tracking and Tracing](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span></span> <span data-ttu-id="5ebef-121">프로그래밍 방식으로 추적 구성의 예에 대 한 참조 [워크플로에 대 한 추적 구성](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5ebef-121">For an example of configuring tracking programmatically see [Configuring Tracking for a Workflow](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca4b7-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ca4b7-122">See Also</span></span>  
- [<span data-ttu-id="ca4b7-123">WCF 서비스에 대 한 간소화 된 구성</span><span class="sxs-lookup"><span data-stu-id="ca4b7-123">Simplified Configuration for WCF Services</span></span>](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- [<span data-ttu-id="ca4b7-124">워크플로 서비스</span><span class="sxs-lookup"><span data-stu-id="ca4b7-124">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="ca4b7-125">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="ca4b7-125">Tracking Profiles</span></span>](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="5ebef-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5ebef-122">See Also</span></span>  
+ [<span data-ttu-id="5ebef-123">WCF 서비스에 대 한 간소화 된 구성</span><span class="sxs-lookup"><span data-stu-id="5ebef-123">Simplified Configuration for WCF Services</span></span>](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
+ [<span data-ttu-id="5ebef-124">워크플로 서비스</span><span class="sxs-lookup"><span data-stu-id="5ebef-124">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="5ebef-125">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="5ebef-125">Tracking Profiles</span></span>](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -10,33 +10,33 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a9797330cf983ed67d3bc07a7984d47454adcb49
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d8e0ce4a171e9bc57ef28aef1fe2761907acc73c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="accessing-identity-information-inside-a-workflow-service"></a><span data-ttu-id="6b1f8-102">워크플로 서비스 내에서 ID 정보 액세스</span><span class="sxs-lookup"><span data-stu-id="6b1f8-102">Accessing Identity Information inside a Workflow Service</span></span>
-<span data-ttu-id="6b1f8-103">워크플로 서비스 내에서 ID 정보에 액세스하려면 사용자 지정 실행 속성에서 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 인터페이스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-103">To access identity information inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="6b1f8-104"><xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 메서드에서 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext>를 액세스하여 ID 정보에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-104">In the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method you can access the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> to access identity information.</span></span> <span data-ttu-id="6b1f8-105">이 항목에서는 이 실행 속성을 구현하고 런타임에 이 속성을 <xref:System.ServiceModel.Activities.Receive> 작업에 노출할 사용자 지정 작업을 구현하는 과정을 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-105">This topic will walk you through implementing this execution property, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> activity at runtime.</span></span>  <span data-ttu-id="6b1f8-106">사용자 지정 활동에는 동일한 동작을 구현 합니다는 <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` 때를 제외 하 고 활동은 <xref:System.ServiceModel.Activities.Receive> 내부에 배치 되는 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 호출 되 고 id 정보가 검색 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-106">The custom activity will implement the same behavior as a <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the identity information will be retrieved.</span></span>  
+# <a name="accessing-identity-information-inside-a-workflow-service"></a><span data-ttu-id="a152e-102">워크플로 서비스 내에서 ID 정보 액세스</span><span class="sxs-lookup"><span data-stu-id="a152e-102">Accessing Identity Information inside a Workflow Service</span></span>
+<span data-ttu-id="a152e-103">워크플로 서비스 내에서 ID 정보에 액세스하려면 사용자 지정 실행 속성에서 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 인터페이스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-103">To access identity information inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="a152e-104"><xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 메서드에서 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext>를 액세스하여 ID 정보에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-104">In the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method you can access the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> to access identity information.</span></span> <span data-ttu-id="a152e-105">이 항목에서는 이 실행 속성을 구현하고 런타임에 이 속성을 <xref:System.ServiceModel.Activities.Receive> 작업에 노출할 사용자 지정 작업을 구현하는 과정을 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-105">This topic will walk you through implementing this execution property, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> activity at runtime.</span></span>  <span data-ttu-id="a152e-106">사용자 지정 활동에는 동일한 동작을 구현 합니다는 <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` 때를 제외 하 고 활동은 <xref:System.ServiceModel.Activities.Receive> 내부에 배치 되는 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 호출 되 고 id 정보가 검색 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-106">The custom activity will implement the same behavior as a <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the identity information will be retrieved.</span></span>  
   
-### <a name="implement-ireceivemessagecallback"></a><span data-ttu-id="6b1f8-107">IReceiveMessageCallback 구현</span><span class="sxs-lookup"><span data-stu-id="6b1f8-107">Implement IReceiveMessageCallback</span></span>  
+### <a name="implement-ireceivemessagecallback"></a><span data-ttu-id="a152e-107">IReceiveMessageCallback 구현</span><span class="sxs-lookup"><span data-stu-id="a152e-107">Implement IReceiveMessageCallback</span></span>  
   
-1.  <span data-ttu-id="6b1f8-108">빈 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-108">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
+1.  <span data-ttu-id="a152e-108">빈 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-108">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
   
-2.  <span data-ttu-id="6b1f8-109">`Service`라는 새 콘솔 응용 프로그램을 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-109">Add a new console application called `Service` to the solution.</span></span>  
+2.  <span data-ttu-id="a152e-109">`Service`라는 새 콘솔 응용 프로그램을 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-109">Add a new console application called `Service` to the solution.</span></span>  
   
-3.  <span data-ttu-id="6b1f8-110">다음 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-110">Add references to the following assemblies:</span></span>  
+3.  <span data-ttu-id="a152e-110">다음 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-110">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="6b1f8-111">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="6b1f8-111">System.Runtime.Serialization</span></span>  
+    1.  <span data-ttu-id="a152e-111">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="a152e-111">System.Runtime.Serialization</span></span>  
   
-    2.  <span data-ttu-id="6b1f8-112">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6b1f8-112">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="a152e-112">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a152e-112">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="6b1f8-113">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="6b1f8-113">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="a152e-113">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="a152e-113">System.ServiceModel.Activities</span></span>  
   
-4.  <span data-ttu-id="6b1f8-114">다음 예제와 같이 `AccessIdentityCallback`이라는 새 클래스를 추가하고 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-114">Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
+4.  <span data-ttu-id="a152e-114">다음 예제와 같이 `AccessIdentityCallback`이라는 새 클래스를 추가하고 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-114">Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
   
     ```csharp  
     class AccessIdentityCallback : IReceiveMessageCallback  
@@ -58,13 +58,13 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-     <span data-ttu-id="6b1f8-115">이 코드에서는 메서드에 전달된 <xref:System.ServiceModel.OperationContext>를 사용하여 ID 정보에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-115">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.</span></span>  
+     <span data-ttu-id="a152e-115">이 코드에서는 메서드에 전달된 <xref:System.ServiceModel.OperationContext>를 사용하여 ID 정보에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-115">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.</span></span>  
   
-### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="6b1f8-116">기본 작업을 구현하여 NativeActivityContext에 IReceiveMessageCallback 구현 추가</span><span class="sxs-lookup"><span data-stu-id="6b1f8-116">Implement a Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
+### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="a152e-116">기본 작업을 구현하여 NativeActivityContext에 IReceiveMessageCallback 구현 추가</span><span class="sxs-lookup"><span data-stu-id="a152e-116">Implement a Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
   
-1.  <span data-ttu-id="6b1f8-117"><xref:System.Activities.NativeActivity>라는 `AccessIdentityScope`에서 파생된 새 클래스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-117">Add a new class derived from <xref:System.Activities.NativeActivity> called `AccessIdentityScope`.</span></span>  
+1.  <span data-ttu-id="a152e-117"><xref:System.Activities.NativeActivity>라는 `AccessIdentityScope`에서 파생된 새 클래스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-117">Add a new class derived from <xref:System.Activities.NativeActivity> called `AccessIdentityScope`.</span></span>  
   
-2.  <span data-ttu-id="6b1f8-118">자식 작업, 변수, 현재 작업 인덱스 및 <xref:System.Activities.CompletionCallback> 콜백을 추적하기 위해 로컬 변수를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-118">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
+2.  <span data-ttu-id="a152e-118">자식 작업, 변수, 현재 작업 인덱스 및 <xref:System.Activities.CompletionCallback> 콜백을 추적하기 위해 로컬 변수를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-118">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
   
     ```  
     public sealed class AccessIdentityScope : NativeActivity  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-3.  <span data-ttu-id="6b1f8-119">생성자를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-119">Implement the constructor</span></span>  
+3.  <span data-ttu-id="a152e-119">생성자를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-119">Implement the constructor</span></span>  
   
     ```  
     public AccessIdentityScope() : base()  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-4.  <span data-ttu-id="6b1f8-120">`Activities` 및 `Variables` 속성을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-120">Implement the `Activities` and `Variables` properties.</span></span>  
+4.  <span data-ttu-id="a152e-120">`Activities` 및 `Variables` 속성을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-120">Implement the `Activities` and `Variables` properties.</span></span>  
   
     ```  
     public Collection<Activity> Activities  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-5.  <span data-ttu-id="6b1f8-121"><xref:System.Activities.NativeActivity.CacheMetadata%2A>를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-121">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
+5.  <span data-ttu-id="a152e-121"><xref:System.Activities.NativeActivity.CacheMetadata%2A>를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-121">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
   
     ```  
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-6.  <span data-ttu-id="6b1f8-122"><xref:System.Activities.NativeActivity.Execute%2A>를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-122">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
+6.  <span data-ttu-id="a152e-122"><xref:System.Activities.NativeActivity.Execute%2A>를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-122">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
   
     ```  
     protected override void Execute(NativeActivityContext context)  
@@ -149,11 +149,11 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-### <a name="implement-the-workflow-service"></a><span data-ttu-id="6b1f8-123">워크플로 서비스 구현</span><span class="sxs-lookup"><span data-stu-id="6b1f8-123">Implement the workflow service</span></span>  
+### <a name="implement-the-workflow-service"></a><span data-ttu-id="a152e-123">워크플로 서비스 구현</span><span class="sxs-lookup"><span data-stu-id="a152e-123">Implement the workflow service</span></span>  
   
-1.  <span data-ttu-id="6b1f8-124">기존 열 `Program` 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-124">Open the existing `Program` class.</span></span>  
+1.  <span data-ttu-id="a152e-124">기존 열 `Program` 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-124">Open the existing `Program` class.</span></span>  
   
-2.  <span data-ttu-id="6b1f8-125">다음 상수를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-125">Define the following constants:</span></span>  
+2.  <span data-ttu-id="a152e-125">다음 상수를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-125">Define the following constants:</span></span>  
   
     ```  
     class Program  
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-3.  <span data-ttu-id="6b1f8-126">워크플로 서비스를 만드는 `GetWorkflowService`라는 정적 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-126">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
+3.  <span data-ttu-id="a152e-126">워크플로 서비스를 만드는 `GetWorkflowService`라는 정적 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-126">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
   
     ```  
     static Activity GetServiceWorkflow()  
@@ -202,7 +202,7 @@ ms.lasthandoff: 11/28/2017
      }  
     ```  
   
-4.  <span data-ttu-id="6b1f8-127">기존 `Main` 메서드에서 워크플로 서비스를 호스트합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-127">In the existing `Main` method, host the workflow service.</span></span>  
+4.  <span data-ttu-id="a152e-127">기존 `Main` 메서드에서 워크플로 서비스를 호스트합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-127">In the existing `Main` method, host the workflow service.</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -223,19 +223,19 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-### <a name="implement-a-workflow-client"></a><span data-ttu-id="6b1f8-128">워크플로 클라이언트 구현</span><span class="sxs-lookup"><span data-stu-id="6b1f8-128">Implement a workflow client</span></span>  
+### <a name="implement-a-workflow-client"></a><span data-ttu-id="a152e-128">워크플로 클라이언트 구현</span><span class="sxs-lookup"><span data-stu-id="a152e-128">Implement a workflow client</span></span>  
   
-1.  <span data-ttu-id="6b1f8-129">`Client`라는 콘솔 응용 프로그램 프로젝트를 새로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-129">Create a new console application project called `Client`.</span></span>  
+1.  <span data-ttu-id="a152e-129">`Client`라는 콘솔 응용 프로그램 프로젝트를 새로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-129">Create a new console application project called `Client`.</span></span>  
   
-2.  <span data-ttu-id="6b1f8-130">다음 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-130">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="a152e-130">다음 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-130">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="6b1f8-131">System.Activities</span><span class="sxs-lookup"><span data-stu-id="6b1f8-131">System.Activities</span></span>  
+    1.  <span data-ttu-id="a152e-131">System.Activities</span><span class="sxs-lookup"><span data-stu-id="a152e-131">System.Activities</span></span>  
   
-    2.  <span data-ttu-id="6b1f8-132">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6b1f8-132">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="a152e-132">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a152e-132">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="6b1f8-133">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="6b1f8-133">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="a152e-133">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="a152e-133">System.ServiceModel.Activities</span></span>  
   
-3.  <span data-ttu-id="6b1f8-134">생성된 Program.cs 파일을 열고 `GetClientWorkflow`라는 정적 메서드를 추가하여 클라이언트 워크플로를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-134">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
+3.  <span data-ttu-id="a152e-134">생성된 Program.cs 파일을 열고 `GetClientWorkflow`라는 정적 메서드를 추가하여 클라이언트 워크플로를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-134">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
   
     ```  
     static Activity GetClientWorkflow()  
@@ -289,7 +289,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-4.  <span data-ttu-id="6b1f8-135">다음 호스팅 코드를 `Main()` 메서드에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-135">Add the following hosting code to the `Main()` method.</span></span>  
+4.  <span data-ttu-id="a152e-135">다음 호스팅 코드를 `Main()` 메서드에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-135">Add the following hosting code to the `Main()` method.</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -302,8 +302,8 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-## <a name="example"></a><span data-ttu-id="6b1f8-136">예제</span><span class="sxs-lookup"><span data-stu-id="6b1f8-136">Example</span></span>  
- <span data-ttu-id="6b1f8-137">다음은 이 항목에서 사용되는 전체 소스 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-137">Here is a complete listing of the source code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="a152e-136">예제</span><span class="sxs-lookup"><span data-stu-id="a152e-136">Example</span></span>  
+ <span data-ttu-id="a152e-137">다음은 이 항목에서 사용되는 전체 소스 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="a152e-137">Here is a complete listing of the source code used in this topic.</span></span>  
   
 ```  
 // AccessIdentityCallback.cs  
@@ -583,7 +583,7 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6b1f8-138">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6b1f8-138">See Also</span></span>  
- [<span data-ttu-id="6b1f8-139">워크플로 서비스</span><span class="sxs-lookup"><span data-stu-id="6b1f8-139">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="6b1f8-140">OperationContext 액세스</span><span class="sxs-lookup"><span data-stu-id="6b1f8-140">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
- [<span data-ttu-id="6b1f8-141">명령형 코드를 사용하여 워크플로, 활동 및 식 작성</span><span class="sxs-lookup"><span data-stu-id="6b1f8-141">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a><span data-ttu-id="a152e-138">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a152e-138">See Also</span></span>  
+ [<span data-ttu-id="a152e-139">워크플로 서비스</span><span class="sxs-lookup"><span data-stu-id="a152e-139">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="a152e-140">OperationContext 액세스</span><span class="sxs-lookup"><span data-stu-id="a152e-140">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [<span data-ttu-id="a152e-141">명령형 코드를 사용하여 워크플로, 활동 및 식 작성</span><span class="sxs-lookup"><span data-stu-id="a152e-141">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
