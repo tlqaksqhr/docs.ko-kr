@@ -16,11 +16,11 @@ caps.latest.revision: "36"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 106ab093a277645dd54e39686a7dd5fa5c0e029e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ab02ada92e06333cc7ec2ea3ae832c48d3e16ec
+ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 비슷한 데이터는 컬렉션으로 저장 및 조작하면 보다 효율적으로 처리할 수 있는 경우가 많습니다. <xref:System.Array?displayProperty=nameWithType> 클래스 또는 <xref:System.Collections>, <xref:System.Collections.Generic> 및 <xref:System.Collections.Concurrent>, System.Collections.Immutable 네임스페이스의 클래스를 사용하여 컬렉션의 개별 요소 또는 일정 범위의 요소를 추가, 제거 및 수정할 수 있습니다.  
@@ -63,17 +63,16 @@ ms.lasthandoff: 10/18/2017
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>컬렉션 선택  
  일반적으로는 제네릭 컬렉션을 사용해야 합니다. 다음 표에는 몇 가지 일반적인 컬렉션 시나리오와 이러한 시나리오에서 사용할 수 있는 컬렉션 클래스에 대해 설명합니다. 제네릭 컬렉션을 처음 사용하는 경우 이 표의 내용을 참조하여 작업에 가장 적합한 제네릭 컬렉션을 선택할 수 있습니다.  
-<!-- todo: All code-formatted API refs in the table need to be changed into links -->  
 |수행할 작업|제네릭 컬렉션 옵션|제네릭이 아닌 컬렉션 옵션|스레드로부터 안전하거나 변경할 수 없는 컬렉션 옵션|  
 |-|-|-|-|  
-|키별로 빠르게 조회할 수 있도록 항목을 키/값 쌍으로 저장|<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>|<xref:System.Collections.Hashtable><br /><br /> (키의 해시 코드를 기준으로 구성되는 키/값 쌍 컬렉션)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType><br /><br /> `ImmutableDictionary(TKey, TValue) Class`|  
-|인덱스별로 항목 액세스|<xref:System.Collections.Generic.List%601?displayProperty=nameWithType>|<xref:System.Array?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ArrayList?displayProperty=nameWithType>|`ImmutableList(T) Class`<br /><br /> `ImmutableArray Class`|  
-|FIFO(선입 선출) 방식으로 항목 사용|<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>|<xref:System.Collections.Queue?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType><br /><br /> `ImmutableQueue(T) Class`|  
-|LIFO(후입 선출) 방식으로 데이터 사용|<xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>|<xref:System.Collections.Stack?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType><br /><br /> `ImmutableStack(T) Class`|  
-|순서대로 항목 액세스|<xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>|권장 사항 없음|권장 사항 없음|  
-|항목을 컬렉션에 추가하거나 컬렉션에서 제거할 때 알림이 표시됩니다. (<xref:System.ComponentModel.INotifyPropertyChanged> 및 <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> 구현)|<xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>|권장 사항 없음|권장 사항 없음|  
-|정렬된 컬렉션|<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>|<xref:System.Collections.SortedList?displayProperty=nameWithType>|`ImmutableSortedDictionary(TKey, TValue) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
-|수학 함수용 집합|<xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType><br /><br /> <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>|권장 사항 없음|`ImmutableHashSet(T) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
+|키별로 빠르게 조회할 수 있도록 항목을 키/값 쌍으로 저장|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (키의 해시 코드를 기준으로 구성되는 키/값 쌍 컬렉션)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
+|인덱스별로 항목 액세스|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
+|FIFO(선입 선출) 방식으로 항목 사용|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
+|LIFO(후입 선출) 방식으로 데이터 사용|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  
+|순서대로 항목 액세스|<xref:System.Collections.Generic.LinkedList%601>|권장 사항 없음|권장 사항 없음|  
+|항목을 컬렉션에 추가하거나 컬렉션에서 제거할 때 알림이 표시됩니다. (<xref:System.ComponentModel.INotifyPropertyChanged> 및 <xref:System.Collections.Specialized.INotifyCollectionChanged> 구현)|<xref:System.Collections.ObjectModel.ObservableCollection%601>|권장 사항 없음|권장 사항 없음|  
+|정렬된 컬렉션|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
+|수학 함수용 집합|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|권장 사항 없음|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
 <a name="BKMK_RelatedTopics"></a>   
 ## <a name="related-topics"></a>관련 항목  
