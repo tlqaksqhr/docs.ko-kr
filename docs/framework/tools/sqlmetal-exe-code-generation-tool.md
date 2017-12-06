@@ -17,14 +17,14 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 caps.latest.revision: "43"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fa4cf7baa3ca3ba19a733438920357034e8de193
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c54f304117c86066e18bfb40f3b3640819647ac0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe(코드 생성 도구)
 SqlMetal 명령줄 도구는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]구성 요소에 사용할 코드 및 매핑을 생성합니다. 이 항목의 뒷부분에 나오는 옵션을 적용하면 SqlMetal을 통해 다음을 포함하는 다양한 작업을 수행할 수 있습니다.  
@@ -144,5 +144,5 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>참고 항목  
  [방법: Visual Basic 또는 C#에서 개체 모델 생성](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- [LINQ to SQL에서에서 코드 생성](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [LINQ to SQL에서 코드 생성](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [외부 매핑](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

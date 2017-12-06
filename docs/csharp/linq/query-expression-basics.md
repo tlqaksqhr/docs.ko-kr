@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: dbb77f57c7f3484930e1639da501ab828e1c2070
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7a1cf9eea4c5d75c6bcb6d2f0d5f68a07e3158d0
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="query-expression-basics"></a>쿼리 식 기본 사항
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csrefQueryExpBasics#50](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_6.cs)]  
   
- 반면에 다음 두 예제는 쿼리 변수가 아닌 변수가 각각을 통해 쿼리로 초기화된다는 것을 보여 줍니다. 이들은 결과를 저장하기 때문에 쿼리 변수가 아닙니다.  
+ 반면에 다음 두 예제는 각각의 변수가 쿼리로 초기화되더라도 쿼리 변수가 아닌 변수를 보여 줍니다. 이들은 결과를 저장하기 때문에 쿼리 변수가 아닙니다.  
   
  [!code-csharp[csrefQueryExpBasics#51](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_7.cs)]  
   
@@ -178,5 +178,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../programming-guide/index.md)  
  [LINQ 쿼리 식](index.md)  
- [쿼리 키워드 (LINQ)](../language-reference/keywords/query-keywords.md)  
+ [쿼리 키워드(LINQ)](../language-reference/keywords/query-keywords.md)  
  [표준 쿼리 연산자 개요](../programming-guide/concepts/linq/standard-query-operators-overview.md)
