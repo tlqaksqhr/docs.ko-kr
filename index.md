@@ -1,18 +1,19 @@
 ---
 layout: HubPage
-hide_bc: true
+hide_bc: True
 title: ".NET 설명서"
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 9e0f22f00ea2ef0e3919768a36410a5025300f6d
-ms.lasthandoff: 04/08/2017
-
+description: "C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 응용 프로그램을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요."
+ms.openlocfilehash: 6817628e110d59b3d5b7c8e52fa2d5cc7cac4cd7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/02/2017
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/net/tutorials/csharp/getting-started">
+                <a href="/dotnet/csharp/quick-starts">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/08/2017
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-1.1">
+                <a href="/dotnet/api/?view=netcore-2.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -86,8 +87,8 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/welcome">.NET이란?</a></h3>
-                                                <p><a href="/dotnet/standard/getting-started">시작</a></p>
+                                                <h3><a href="/dotnet/standard/">.NET 가이드</a></h3>
+                                                <p><a href="/dotnet/standard/get-started">시작</a></p>
                                                 <p><a href="/dotnet/standard/tour">.NET 둘러보기</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET 아키텍처 개념</a></p>
                                             </div>
@@ -106,10 +107,11 @@ ms.lasthandoff: 04/08/2017
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/core">.NET Core 가이드</a></h3>
-                                                <p><a href="/dotnet/core/getting-started">시작</a></p>
+                                                <p><a href="/dotnet/core/get-started">시작</a></p>
                                                 <p><a href="/dotnet/core/tutorials">자습서</a></p>
                                                 <p><a href="/dotnet/core/porting">.NET Framework에서 이식</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
+                                                <p><a href="/ef/core/index">EF Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -127,7 +129,7 @@ ms.lasthandoff: 04/08/2017
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/framework/">.NET Framework 가이드</a></h3>
                                                 <p><a href="/dotnet/framework/get-started/">시작</a></p>
-                                                <p><a href="/dotnet/framework/development-guide">자습서</a></p>
+                                                <p><a href="/dotnet/framework/development-guide">개발 가이드</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">클라이언트 개발</a></p>
                                                 <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
                                             </div>
@@ -166,6 +168,7 @@ ms.lasthandoff: 04/08/2017
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">C# 가이드</a></h3>
+                                                <p><a href="/dotnet/csharp/quick-starts">빠른 시작</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">시작</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">C# 둘러보기</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">C# 언어 참조</a></p>
@@ -215,7 +218,7 @@ ms.lasthandoff: 04/08/2017
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">.NET 문서 및 샘플에 참여</a></p>
-                                    <p><a href="https://docs.microsoft.com/en-us/dotnet/project-json">Visual Studio 2015/project.json 버전 설명서 찾기</a></p>
+                                    <p><a href="/dotnet/project-json">Visual Studio 2015/project.json 버전 설명서 찾기</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -273,7 +276,7 @@ ms.lasthandoff: 04/08/2017
                                             <div class="cardText">
                                                 <a href="https://www.asp.net/learn">
                                                     <h3>ASP.NET이란?</h3>
-                                                    <p>ASP.NET 웹 플랫폼에 대해 알아봅니다.</p>
+                                                    <p>ASP.NET 웹 응용 프로그램을 빌드하는 방법을 알아봅니다.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -329,7 +332,7 @@ ms.lasthandoff: 04/08/2017
                                             </div>
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>macOS의 ASP.NET 및 VS 코드</h3>
+                                                    <h3>macOS 및 Visual Studio Code의 ASP.NET</h3>
                                                     <p>macOS에서 Visual Studio 코드를 사용하여 ASP.NET Core 앱을 설정, 빌드 및 배포하는 방법을 알아봅니다.</p>
                                                 </a>
                                             </div>
@@ -371,7 +374,7 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/documentation/articles/cloud-services-dotnet-get-started">
+                                                <a href="/azure/cloud-services/cloud-services-dotnet-get-started">
                                                     <h3>Azure Cloud Services 및 ASP.NET</h3>
                                                     <p>Azure에서 클라우드 서비스를 구성, 모니터링 및 크기 조정하는 방법에 대해 알아봅니다.</p>
                                                 </a>
@@ -409,7 +412,7 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/documentation/services/storage/">
+                                                <a href="https://docs.microsoft.com/azure/storage/">
                                                     <h3>Azure 저장소</h3>
                                                     <p>Azure Storage에 대해 알아보고 Azure Blob, 테이블, 큐 및 파일을 사용하여 응용 프로그램을 만드는 방법을 알아봅니다.</p>
                                                 </a>
@@ -597,7 +600,7 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="http://docs.cryengine.com/display/CEPROG/CE%23+Programming">
+                                                <a href="http://docs.cryengine.com/display/CEPROG/C%23+Programming">
                                                 <h3>CRYENGINE</h3>
                                                 <p>CRYENGINE을 사용하여 C#에서 게임을 빌드하는 방법을 알아봅니다.</p>
                                                 </a>
@@ -652,4 +655,3 @@ ms.lasthandoff: 04/08/2017
         </ul>
     </div>
 </div>
-
