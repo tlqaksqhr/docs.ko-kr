@@ -217,7 +217,7 @@ return result;
 
 <span data-ttu-id="cdda6-251">이 유형의 주사위를 컬렉션에 추가하려면 먼저 백분위수 주사위를 나타내는 형식을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="cdda6-251">To add this kind of die to your collection, first define a type to represent the percentile die:</span></span>
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 <span data-ttu-id="cdda6-252">그런 다음 새 형식에 대한 `case` 일치 식을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cdda6-252">Then, add a `case` match expression for the new type:</span></span>
 
