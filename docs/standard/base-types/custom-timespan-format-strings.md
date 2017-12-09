@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customparseexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customparseexample1.vb#2)]  
   
-<span data-ttu-id="62a50-117"><a name="table"></a>다음 표에서 사용자 지정 날짜 및 시간 형식 지정자를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="62a50-117"><a name="table"></a> The following table describes the custom date and time format specifiers.</span></span>  
+<a name="table"></a><span data-ttu-id="62a50-117">다음 표에서 사용자 지정 날짜 및 시간 형식 지정자를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="62a50-117">The following table describes the custom date and time format specifiers.</span></span>  
   
 |<span data-ttu-id="62a50-118">형식 지정자</span><span class="sxs-lookup"><span data-stu-id="62a50-118">Format specifier</span></span>|<span data-ttu-id="62a50-119">설명</span><span class="sxs-lookup"><span data-stu-id="62a50-119">Description</span></span>|<span data-ttu-id="62a50-120">예제</span><span class="sxs-lookup"><span data-stu-id="62a50-120">Example</span></span>|  
 |----------------------|-----------------|-------------|  

@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="66fe4-102">가비지 컬렉션 기본 사항</span><span class="sxs-lookup"><span data-stu-id="66fe4-102">Fundamentals of Garbage Collection</span></span>
-<span data-ttu-id="66fe4-103"><a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="66fe4-103"><a name="top"></a> In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="66fe4-104">가비지 수집은 다음과 같은 이점을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="66fe4-104">It provides the following benefits:</span></span>  
+<a name="top"></a> <span data-ttu-id="66fe4-103">CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="66fe4-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="66fe4-104">가비지 수집은 다음과 같은 이점을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="66fe4-104">It provides the following benefits:</span></span>  
   
 -   <span data-ttu-id="66fe4-105">응용 프로그램을 개발할 때 메모리를 해제할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="66fe4-105">Enables you to develop your application without having to free memory.</span></span>  
   

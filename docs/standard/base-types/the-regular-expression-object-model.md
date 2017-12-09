@@ -52,7 +52,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="bcec5-102">Regular Expression 개체 모델</span><span class="sxs-lookup"><span data-stu-id="bcec5-102">The Regular Expression Object Model</span></span>
-<span data-ttu-id="bcec5-103"><a name="introduction"></a>이 항목에서는.NET 정규식을 사용한 작업에 사용 되는 개체 모델에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="bcec5-103"><a name="introduction"></a> This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="bcec5-104">여기에는 다음 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bcec5-104">It contains the following sections:</span></span>  
+<a name="introduction"></a><span data-ttu-id="bcec5-103">이 항목에서는.NET 정규식을 사용한 작업에 사용 되는 개체 모델에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="bcec5-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="bcec5-104">여기에는 다음 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bcec5-104">It contains the following sections:</span></span>  
   
 -   [<span data-ttu-id="bcec5-105">정규식 엔진</span><span class="sxs-lookup"><span data-stu-id="bcec5-105">The Regular Expression Engine</span></span>](#Engine)  
   

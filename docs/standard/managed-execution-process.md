@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="managed-execution-process"></a><span data-ttu-id="05797-102">관리되는 실행 프로세스</span><span class="sxs-lookup"><span data-stu-id="05797-102">Managed Execution Process</span></span>
-<span data-ttu-id="05797-103"><a name="introduction"></a> 관리되는 실행 프로세스에는 이 항목의 뒷부분에서 설명하는 다음 단계가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="05797-103"><a name="introduction"></a> The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
+<a name="introduction"></a> <span data-ttu-id="05797-103">관리되는 실행 프로세스에는 이 항목의 뒷부분에서 설명하는 다음 단계가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="05797-103">The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
   
 1.  <span data-ttu-id="05797-104">[컴파일러 선택](#choosing_a_compiler).</span><span class="sxs-lookup"><span data-stu-id="05797-104">[Choosing a compiler](#choosing_a_compiler).</span></span>  
   

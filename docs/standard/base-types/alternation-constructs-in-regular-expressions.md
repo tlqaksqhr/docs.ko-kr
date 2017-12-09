@@ -31,7 +31,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="e5c6d-102">정규식의 교체 구문</span><span class="sxs-lookup"><span data-stu-id="e5c6d-102">Alternation Constructs in Regular Expressions</span></span>
-<span data-ttu-id="e5c6d-103"><a name="top"></a> 교체 구문은 either/or 또는 조건부 일치를 허용하도록 정규식을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="e5c6d-103"><a name="top"></a> Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="e5c6d-104">.NET에서는 다음 세 가지 교체 구문을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="e5c6d-104">.NET supports three alternation constructs:</span></span>  
+<a name="top"></a> <span data-ttu-id="e5c6d-103">교체 구문은 either/or 또는 조건부 일치를 허용하도록 정규식을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="e5c6d-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="e5c6d-104">.NET에서는 다음 세 가지 교체 구문을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="e5c6d-104">.NET supports three alternation constructs:</span></span>  
   
 -   [<span data-ttu-id="e5c6d-105">&#124;를 사용한 패턴 일치</span><span class="sxs-lookup"><span data-stu-id="e5c6d-105">Pattern matching with &#124;</span></span>](#Either_Or)  
   

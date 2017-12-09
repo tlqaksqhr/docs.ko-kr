@@ -132,7 +132,7 @@ Next [ counter ]
   
  <span data-ttu-id="ca327-193">기본값 `step` 는 1입니다.</span><span class="sxs-lookup"><span data-stu-id="ca327-193">The default value of `step` is 1.</span></span>  
   
-###  <span data-ttu-id="ca327-194"><a name="BKMK_Counter"></a>카운터 인수</span><span class="sxs-lookup"><span data-stu-id="ca327-194"><a name="BKMK_Counter"></a> Counter Argument</span></span>  
+###  <a name="BKMK_Counter"></a><span data-ttu-id="ca327-194">카운터 인수</span><span class="sxs-lookup"><span data-stu-id="ca327-194">Counter Argument</span></span>  
  <span data-ttu-id="ca327-195">다음 표에서 여부 `counter` 전체 범위가 지정 된 새 지역 변수를 정의 `For…Next` 루프입니다.</span><span class="sxs-lookup"><span data-stu-id="ca327-195">The following table indicates whether `counter` defines a new local variable that’s scoped to the entire `For…Next` loop.</span></span> <span data-ttu-id="ca327-196">이 결정에 따라 다릅니다. `datatype` 있는지 여부와 `counter` 이미 정의 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ca327-196">This determination depends on whether `datatype` is present and whether `counter` is already defined.</span></span>  
   
 |<span data-ttu-id="ca327-197">`datatype` 존재?</span><span class="sxs-lookup"><span data-stu-id="ca327-197">Is `datatype` present?</span></span>|<span data-ttu-id="ca327-198">`counter` 이미 정의 되어 있습니까?</span><span class="sxs-lookup"><span data-stu-id="ca327-198">Is `counter` already defined?</span></span>|<span data-ttu-id="ca327-199">결과 (여부 `counter` 전체 범위가 지정 된 새 지역 변수를 정의 `For...Next` 루프)</span><span class="sxs-lookup"><span data-stu-id="ca327-199">Result (whether `counter` defines a new local variable that’s scoped to the entire `For...Next` loop)</span></span>|  

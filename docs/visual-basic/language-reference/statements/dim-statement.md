@@ -251,7 +251,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  <span data-ttu-id="d68ea-219">배열 리터럴에 대 한 자세한 내용은 참조 [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d68ea-219">For more information about array literals, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
-##  <span data-ttu-id="d68ea-220"><a name="default"></a>기본 데이터 형식 및 값</span><span class="sxs-lookup"><span data-stu-id="d68ea-220"><a name="default"></a> Default Data Types and Values</span></span>  
+##  <a name="default"></a><span data-ttu-id="d68ea-220">기본 데이터 형식 및 값</span><span class="sxs-lookup"><span data-stu-id="d68ea-220">Default Data Types and Values</span></span>  
  <span data-ttu-id="d68ea-221">다음 테이블에는 `Dim` 문에서 데이터 형식과 이니셜라이저를 지정하는 다양한 조합의 결과에 대한 설명이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d68ea-221">The following table describes the results of various combinations of specifying the data type and initializer in a `Dim` statement.</span></span>  
   
 |<span data-ttu-id="d68ea-222">데이터 형식 지정 여부</span><span class="sxs-lookup"><span data-stu-id="d68ea-222">Data type specified?</span></span>|<span data-ttu-id="d68ea-223">이니셜라이저 지정 여부</span><span class="sxs-lookup"><span data-stu-id="d68ea-223">Initializer specified?</span></span>|<span data-ttu-id="d68ea-224">예제</span><span class="sxs-lookup"><span data-stu-id="d68ea-224">Example</span></span>|<span data-ttu-id="d68ea-225">결과</span><span class="sxs-lookup"><span data-stu-id="d68ea-225">Result</span></span>|  
