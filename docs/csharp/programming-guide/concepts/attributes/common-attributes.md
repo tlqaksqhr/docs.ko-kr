@@ -28,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [<span data-ttu-id="901f9-107">호출자 정보 특성</span><span class="sxs-lookup"><span data-stu-id="901f9-107">Caller Info Attributes</span></span>](#CallerInfo)  
   
-##  <span data-ttu-id="901f9-108"><a name="Global"></a> 전역 특성</span><span class="sxs-lookup"><span data-stu-id="901f9-108"><a name="Global"></a> Global Attributes</span></span>  
+##  <a name="Global"></a> <span data-ttu-id="901f9-108">전역 특성</span><span class="sxs-lookup"><span data-stu-id="901f9-108">Global Attributes</span></span>  
  <span data-ttu-id="901f9-109">대부분의 특성은 클래스나 메서드와 같은 특정 언어 요소에 적용되지만 일부 특성은 전체 어셈블리나 모듈에 적용되는 전역 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-109">Most attributes are applied to specific language elements such as classes or methods; however, some attributes are global—they apply to an entire assembly or module.</span></span> <span data-ttu-id="901f9-110">예를 들어 다음과 같이 <xref:System.Reflection.AssemblyVersionAttribute> 특성을 사용하여 버전 정보를 어셈블리에 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-110">For example, the <xref:System.Reflection.AssemblyVersionAttribute> attribute can be used to embed version information into an assembly, like this:</span></span>  
   
 ```csharp  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|<span data-ttu-id="901f9-152">어셈블리 매니페스트에 대한 어셈블리 구성(예: 정품 또는 디버그)을 지정하는 사용자 지정 특성을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-152">Defines a custom attribute that specifies an assembly configuration (such as retail or debug) for an assembly manifest.</span></span>|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|<span data-ttu-id="901f9-153">어셈블리 매니페스트에 대한 친숙한 기본 별칭을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-153">Defines a friendly default alias for an assembly manifest</span></span>|  
   
-##  <span data-ttu-id="901f9-154"><a name="Obsolete"></a> 사용되지 않는 특성</span><span class="sxs-lookup"><span data-stu-id="901f9-154"><a name="Obsolete"></a> Obsolete Attribute</span></span>  
+##  <a name="Obsolete"></a> <span data-ttu-id="901f9-154">사용되지 않는 특성</span><span class="sxs-lookup"><span data-stu-id="901f9-154">Obsolete Attribute</span></span>  
  <span data-ttu-id="901f9-155">`Obsolete` 특성은 프로그램 엔터티를 더 이상 사용이 권장되지 않는 항목으로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-155">The `Obsolete` attribute marks a program entity as one that is no longer recommended for use.</span></span> <span data-ttu-id="901f9-156">나중에 사용되지 않음으로 표시된 엔터티를 사용할 때마다 특성 구성 방법에 따라 경고나 오류가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-156">Each use of an entity marked obsolete will subsequently generate a warning or an error, depending on how the attribute is configured.</span></span> <span data-ttu-id="901f9-157">예:</span><span class="sxs-lookup"><span data-stu-id="901f9-157">For example:</span></span>  
   
 ```csharp  
@@ -119,7 +119,7 @@ b.NewMethod();
   
  <span data-ttu-id="901f9-165">`Obsolete` 특성은 단일 사용 특성이고 특성을 허용하는 모든 엔터티에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-165">The `Obsolete` attribute is a single-use attribute and can be applied to any entity that allows attributes.</span></span> <span data-ttu-id="901f9-166">`Obsolete`는 <xref:System.ObsoleteAttribute>의 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-166">`Obsolete` is an alias for <xref:System.ObsoleteAttribute>.</span></span>  
   
-##  <span data-ttu-id="901f9-167"><a name="Conditional"></a> 조건부 특성</span><span class="sxs-lookup"><span data-stu-id="901f9-167"><a name="Conditional"></a> Conditional Attribute</span></span>  
+##  <a name="Conditional"></a> <span data-ttu-id="901f9-167">조건부 특성</span><span class="sxs-lookup"><span data-stu-id="901f9-167">Conditional Attribute</span></span>  
  <span data-ttu-id="901f9-168">`Conditional` 특성을 사용하면 메서드 실행이 전처리 식별자에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-168">The `Conditional` attribute makes the execution of a method dependent on a preprocessing identifier.</span></span> <span data-ttu-id="901f9-169">`Conditional` 특성은 <xref:System.Diagnostics.ConditionalAttribute>의 별칭이고 메서드 또는 특성 클래스에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-169">The `Conditional` attribute is an alias for <xref:System.Diagnostics.ConditionalAttribute>, and can be applied to a method or an attribute class.</span></span>  
   
  <span data-ttu-id="901f9-170">이 예제에서 `Conditional`은 프로그램 관련 진단 정보 표시를 사용하거나 사용하지 않도록 설정하는 메서드에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-170">In this example, `Conditional` is applied to a method to enable or disable the display of program-specific diagnostic information:</span></span>  
@@ -224,7 +224,7 @@ class SampleClass
 }  
 ```  
   
-##  <span data-ttu-id="901f9-185"><a name="CallerInfo"></a> 호출자 정보 특성</span><span class="sxs-lookup"><span data-stu-id="901f9-185"><a name="CallerInfo"></a> Caller Info Attributes</span></span>  
+##  <a name="CallerInfo"></a> <span data-ttu-id="901f9-185">호출자 정보 특성</span><span class="sxs-lookup"><span data-stu-id="901f9-185">Caller Info Attributes</span></span>  
  <span data-ttu-id="901f9-186">호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-186">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="901f9-187">소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-187">You can obtain the file path of the source code, the line number in the source code, and the member name of the caller.</span></span>  
   
  <span data-ttu-id="901f9-188">멤버 호출자 정보를 얻으려면 선택적 매개 변수에 적용되는 특성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-188">To obtain member caller information, you use attributes that are applied to optional parameters.</span></span> <span data-ttu-id="901f9-189">각 선택적 매개 변수는 기본값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-189">Each optional parameter specifies a default value.</span></span> <span data-ttu-id="901f9-190">다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="901f9-190">The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:</span></span>  

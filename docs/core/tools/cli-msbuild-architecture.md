@@ -72,4 +72,4 @@ ms.lasthandoff: 10/18/2017
 
 <span data-ttu-id="9be1c-148">이 규칙에서 주목할 만한 예외는 `new` 및 `run` 명령으로 MSBuild 대상으로 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="9be1c-148">The notable exception to this rule are `new` and `run` commands, as they have not been implemented as MSBuild targets.</span></span>
 
-<span data-ttu-id="9be1c-149"><a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span><span class="sxs-lookup"><span data-stu-id="9be1c-149"><a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span></span>
+<a name="dotnet-restore-note"></a> <span data-ttu-id="9be1c-149">[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span><span class="sxs-lookup"><span data-stu-id="9be1c-149">[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span></span>

@@ -65,7 +65,7 @@ public static System.Collections.IEnumerable SomeNumbers()
 > [!NOTE]
 >  <span data-ttu-id="819d4-124">단순 반복기 예제를 제외한 이 항목의 모든 예제에 대해 `System.Collections` 및 `System.Collections.Generic` 네임스페이스에 대한 [using](../../../csharp/language-reference/keywords/using-directive.md) 지시문을 포함하세요.</span><span class="sxs-lookup"><span data-stu-id="819d4-124">For all examples in this topic except the Simple Iterator example, include [using](../../../csharp/language-reference/keywords/using-directive.md) directives for the `System.Collections` and `System.Collections.Generic` namespaces.</span></span>  
   
-##  <span data-ttu-id="819d4-125"><a name="BKMK_SimpleIterator"></a> 단순 반복기</span><span class="sxs-lookup"><span data-stu-id="819d4-125"><a name="BKMK_SimpleIterator"></a> Simple Iterator</span></span>  
+##  <a name="BKMK_SimpleIterator"></a> <span data-ttu-id="819d4-125">단순 반복기</span><span class="sxs-lookup"><span data-stu-id="819d4-125">Simple Iterator</span></span>  
  <span data-ttu-id="819d4-126">다음 예제에는 [for](../../../csharp/language-reference/keywords/for.md) 루프 내에 단일 `yield return` 문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-126">The following example has a single `yield return` statement that is inside a [for](../../../csharp/language-reference/keywords/for.md) loop.</span></span> <span data-ttu-id="819d4-127">`Main`에서 `foreach` 문 본문을 반복할 때마다 다음 `yield return` 문으로 진행하는 반복기 함수에 대한 호출이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-127">In `Main`, each iteration of the `foreach` statement body creates a call to the iterator function, which proceeds to the next `yield return` statement.</span></span>  
   
 ```csharp  
@@ -93,7 +93,7 @@ public static System.Collections.Generic.IEnumerable<int>
 }  
 ```  
   
-##  <span data-ttu-id="819d4-128"><a name="BKMK_CollectionClass"></a> 컬렉션 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="819d4-128"><a name="BKMK_CollectionClass"></a> Creating a Collection Class</span></span>  
+##  <a name="BKMK_CollectionClass"></a> <span data-ttu-id="819d4-128">컬렉션 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="819d4-128">Creating a Collection Class</span></span>  
  <span data-ttu-id="819d4-129">다음 예제에서 `DaysOfTheWeek` 클래스는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하며, <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-129">In the following example, the `DaysOfTheWeek` class implements the <xref:System.Collections.IEnumerable> interface, which requires a <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span> <span data-ttu-id="819d4-130">컴파일러는 `GetEnumerator` 메서드를 암시적으로 호출하며, <xref:System.Collections.IEnumerator>가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-130">The compiler implicitly calls the `GetEnumerator` method, which returns an <xref:System.Collections.IEnumerator>.</span></span>  
   
  <span data-ttu-id="819d4-131">`GetEnumerator` 메서드는 `yield return` 문을 사용하여 각 문자열을 한 번에 하나씩 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-131">The `GetEnumerator` method returns each string one at a time by using the `yield return` statement.</span></span>  
@@ -222,7 +222,7 @@ public class Zoo : IEnumerable
 }  
 ```  
   
-##  <span data-ttu-id="819d4-135"><a name="BKMK_GenericList"></a> 제네릭 목록과 함께 반복기 사용</span><span class="sxs-lookup"><span data-stu-id="819d4-135"><a name="BKMK_GenericList"></a> Using Iterators with a Generic List</span></span>  
+##  <a name="BKMK_GenericList"></a> <span data-ttu-id="819d4-135">제네릭 목록과 함께 반복기 사용</span><span class="sxs-lookup"><span data-stu-id="819d4-135">Using Iterators with a Generic List</span></span>  
  <span data-ttu-id="819d4-136">다음 예제에서 `Stack(Of T)` 제네릭 클래스는 <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-136">In the following example, the `Stack(Of T)` generic class implements the <xref:System.Collections.Generic.IEnumerable%601> generic interface.</span></span> <span data-ttu-id="819d4-137">`Push` 메서드는 `T` 형식의 배열에 값을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-137">The `Push` method assigns values to an array of type `T`.</span></span> <span data-ttu-id="819d4-138"><xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드는 `yield return` 문을 사용하여 배열 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-138">The <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method returns the array values by using the `yield return` statement.</span></span>  
   
  <span data-ttu-id="819d4-139">제네릭 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드뿐 아니라 제네릭이 아닌 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드도 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-139">In addition to the generic <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method, the non-generic <xref:System.Collections.IEnumerable.GetEnumerator%2A> method must also be implemented.</span></span> <span data-ttu-id="819d4-140"><xref:System.Collections.Generic.IEnumerable%601>이 <xref:System.Collections.IEnumerable>에서 상속하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-140">This is because <xref:System.Collections.Generic.IEnumerable%601> inherits from <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="819d4-141">제네릭이 아닌 구현은 제네릭 구현을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-141">The non-generic implementation defers to the generic implementation.</span></span>  
@@ -339,7 +339,7 @@ public class Stack<T> : IEnumerable<T>
 }  
 ```  
   
-##  <span data-ttu-id="819d4-145"><a name="BKMK_SyntaxInformation"></a> 구문 정보</span><span class="sxs-lookup"><span data-stu-id="819d4-145"><a name="BKMK_SyntaxInformation"></a> Syntax Information</span></span>  
+##  <a name="BKMK_SyntaxInformation"></a> <span data-ttu-id="819d4-145">구문 정보</span><span class="sxs-lookup"><span data-stu-id="819d4-145">Syntax Information</span></span>  
  <span data-ttu-id="819d4-146">반복기는 메서드 또는 `get` 접근자로 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-146">An iterator can occur as a method or `get` accessor.</span></span> <span data-ttu-id="819d4-147">이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 종료자에서는 반복기가 발생할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-147">An iterator cannot occur in an event, instance constructor, static constructor, or static finalizer.</span></span>  
   
  <span data-ttu-id="819d4-148">`yield return` 문의 식 형식에서 반복기의 반환 형식으로 암시적 변환이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-148">An implicit conversion must exist from the expression type in the `yield return` statement to the return type of the iterator.</span></span>  
@@ -348,7 +348,7 @@ public class Stack<T> : IEnumerable<T>
   
  <span data-ttu-id="819d4-150">C#에서 "yield"는 예약어가 아니며 `return` 또는 `break` 키워드 앞에서 사용되는 경우에만 특별한 의미가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-150">In C#, "yield" is not a reserved word and has special meaning only when it is used before a `return` or `break` keyword.</span></span>  
   
-##  <span data-ttu-id="819d4-151"><a name="BKMK_Technical"></a> 기술 구현</span><span class="sxs-lookup"><span data-stu-id="819d4-151"><a name="BKMK_Technical"></a> Technical Implementation</span></span>  
+##  <a name="BKMK_Technical"></a> <span data-ttu-id="819d4-151">기술 구현</span><span class="sxs-lookup"><span data-stu-id="819d4-151">Technical Implementation</span></span>  
  <span data-ttu-id="819d4-152">반복기를 메서드로 작성하는 경우에도 컴파일러는 실제로 상태 시스템인 중첩 클래스로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-152">Although you write an iterator as a method, the compiler translates it into a nested class that is, in effect, a state machine.</span></span> <span data-ttu-id="819d4-153">이 클래스는 클라이언트 코드의 `foreach` 루프가 계속되는 한 반복기의 위치를 추적합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-153">This class keeps track of the position of the iterator as long the `foreach` loop in the client code continues.</span></span>  
   
  <span data-ttu-id="819d4-154">컴파일러의 용도를 확인하려면 Ildasm.exe 도구를 사용하여 반복기 메서드에 대해 생성되는 Microsoft Intermediate Language 코드를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-154">To see what the compiler does, you can use the Ildasm.exe tool to view the Microsoft intermediate language code that is generated for an iterator method.</span></span>  
@@ -361,7 +361,7 @@ public class Stack<T> : IEnumerable<T>
   
  <span data-ttu-id="819d4-161">자세한 내용은 [C# 언어 사양](../../../csharp/language-reference/language-specification/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="819d4-161">For additional information, see the [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
   
-##  <span data-ttu-id="819d4-162"><a name="BKMK_UseOfIterators"></a> 반복기 사용</span><span class="sxs-lookup"><span data-stu-id="819d4-162"><a name="BKMK_UseOfIterators"></a> Use of Iterators</span></span>  
+##  <a name="BKMK_UseOfIterators"></a> <span data-ttu-id="819d4-162">반복기 사용</span><span class="sxs-lookup"><span data-stu-id="819d4-162">Use of Iterators</span></span>  
  <span data-ttu-id="819d4-163">반복기를 사용하면 복잡한 코드를 사용하여 목록 시퀀스를 채워야 하는 경우 `foreach` 루프의 단순성을 유지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-163">Iterators enable you to maintain the simplicity of a `foreach` loop when you need to use complex code to populate a list sequence.</span></span> <span data-ttu-id="819d4-164">이 기능은 다음을 수행하려는 경우에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-164">This can be useful when you want to do the following:</span></span>  
   
 -   <span data-ttu-id="819d4-165">첫 번째 `foreach` 루프 반복 후 목록 시퀀스를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="819d4-165">Modify the list sequence after the first `foreach` loop iteration.</span></span>  

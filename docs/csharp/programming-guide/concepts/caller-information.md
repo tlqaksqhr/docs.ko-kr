@@ -61,7 +61,7 @@ public void TraceMessage(string message,
   
  <span data-ttu-id="9eb0b-126">선택적 인수를 명시적으로 제공하여 호출자 정보를 제어하거나 호출자 정보를 숨길 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9eb0b-126">You can explicitly supply the optional arguments to control the caller information or to hide caller information.</span></span>  
   
-###  <span data-ttu-id="9eb0b-127"><a name="MEMBERNAMES"></a> 멤버 이름</span><span class="sxs-lookup"><span data-stu-id="9eb0b-127"><a name="MEMBERNAMES"></a> Member Names</span></span>  
+###  <a name="MEMBERNAMES"></a> <span data-ttu-id="9eb0b-127">멤버 이름</span><span class="sxs-lookup"><span data-stu-id="9eb0b-127">Member Names</span></span>  
  <span data-ttu-id="9eb0b-128">`CallerMemberName` 특성을 사용하여 멤버 이름을 호출된 메서드에 대한 `String` 인수로 지정하는 것을 피할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9eb0b-128">You can use the `CallerMemberName` attribute to avoid specifying the member name as a `String` argument to the called method.</span></span> <span data-ttu-id="9eb0b-129">이 기술을 사용하여 **이름 바꾸기 리팩터링**이 `String` 값을 변경하지 못하는 문제를 피합니다.</span><span class="sxs-lookup"><span data-stu-id="9eb0b-129">By using this technique, you avoid the problem that **Rename Refactoring** doesn't change the `String` values.</span></span> <span data-ttu-id="9eb0b-130">이 이점은 다음 작업에 특히 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="9eb0b-130">This benefit is especially useful for the following tasks:</span></span>  
   
 -   <span data-ttu-id="9eb0b-131">추적 및 진단 루틴 사용.</span><span class="sxs-lookup"><span data-stu-id="9eb0b-131">Using tracing and diagnostic routines.</span></span>  

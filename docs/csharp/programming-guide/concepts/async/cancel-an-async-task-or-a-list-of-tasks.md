@@ -25,7 +25,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <span data-ttu-id="83859-106">예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="83859-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-##  <span data-ttu-id="83859-107"><a name="BKMK_CancelaTask"></a> 작업 취소</span><span class="sxs-lookup"><span data-stu-id="83859-107"><a name="BKMK_CancelaTask"></a> Cancel a Task</span></span>  
+##  <a name="BKMK_CancelaTask"></a> <span data-ttu-id="83859-107">작업 취소</span><span class="sxs-lookup"><span data-stu-id="83859-107">Cancel a Task</span></span>  
  <span data-ttu-id="83859-108">첫 번째 예제에서는 **취소** 단추를 단일 다운로드 작업에 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="83859-108">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="83859-109">응용 프로그램이 콘텐츠를 다운로드하는 동안 단추를 선택하면 다운로드가 취소됩니다.</span><span class="sxs-lookup"><span data-stu-id="83859-109">If you choose the button while the application is downloading content, the download is canceled.</span></span>  
   
 ### <a name="downloading-the-example"></a><span data-ttu-id="83859-110">예제 다운로드</span><span class="sxs-lookup"><span data-stu-id="83859-110">Downloading the Example</span></span>  
@@ -146,7 +146,7 @@ ms.lasthandoff: 11/21/2017
     Download canceled.  
     ```  
   
-##  <span data-ttu-id="83859-140"><a name="BKMK_CancelaListofTasks"></a> 작업 목록 취소</span><span class="sxs-lookup"><span data-stu-id="83859-140"><a name="BKMK_CancelaListofTasks"></a> Cancel a List of Tasks</span></span>  
+##  <a name="BKMK_CancelaListofTasks"></a> <span data-ttu-id="83859-140">작업 목록 취소</span><span class="sxs-lookup"><span data-stu-id="83859-140">Cancel a List of Tasks</span></span>  
  <span data-ttu-id="83859-141">이전 예제를 확장하여 같은 `CancellationTokenSource` 인스턴스를 각 작업과 연결하는 방식으로 여러 작업을 취소할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="83859-141">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="83859-142">**취소** 단추를 선택하면 아직 완료되지 않은 모든 작업이 취소됩니다.</span><span class="sxs-lookup"><span data-stu-id="83859-142">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>  
   
 ### <a name="downloading-the-example"></a><span data-ttu-id="83859-143">예제 다운로드</span><span class="sxs-lookup"><span data-stu-id="83859-143">Downloading the Example</span></span>  
@@ -259,7 +259,7 @@ ms.lasthandoff: 11/21/2017
     Downloads canceled.  
     ```  
   
-##  <span data-ttu-id="83859-164"><a name="BKMK_CompleteExamples"></a> 전체 예제</span><span class="sxs-lookup"><span data-stu-id="83859-164"><a name="BKMK_CompleteExamples"></a> Complete Examples</span></span>  
+##  <a name="BKMK_CompleteExamples"></a> <span data-ttu-id="83859-164">전체 예제</span><span class="sxs-lookup"><span data-stu-id="83859-164">Complete Examples</span></span>  
  <span data-ttu-id="83859-165">다음 섹션에는 각각의 이전 예제에 대한 코드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="83859-165">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="83859-166"><xref:System.Net.Http>에 대한 참조를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="83859-166">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
   
  <span data-ttu-id="83859-167">[Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 프로젝트를 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="83859-167">You can download the projects from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046).</span></span>  

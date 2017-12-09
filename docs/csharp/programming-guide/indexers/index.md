@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="34300-125">예를 들어 인덱서는 2차원 배열에 액세스하는 경우 둘 이상의 정식 매개 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34300-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-##  <span data-ttu-id="34300-126"><a name="BKMK_RelatedSections"></a> 관련 섹션</span><span class="sxs-lookup"><span data-stu-id="34300-126"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a> <span data-ttu-id="34300-126">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="34300-126">Related Sections</span></span>  
   
 -   [<span data-ttu-id="34300-127">인덱서 사용</span><span class="sxs-lookup"><span data-stu-id="34300-127">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

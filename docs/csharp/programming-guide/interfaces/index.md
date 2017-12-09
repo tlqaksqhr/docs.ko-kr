@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
  [<span data-ttu-id="ab3dc-155">방법: 두 인터페이스의 멤버를 명시적으로 구현</span><span class="sxs-lookup"><span data-stu-id="ab3dc-155">How to: Explicitly Implement Members of Two Interfaces</span></span>](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
  <span data-ttu-id="ab3dc-156">상속을 포함하는 인터페이스 멤버를 명시적으로 구현하는 방법에 대한 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ab3dc-156">Provides an example of how to explicitly implement members of interfaces with inheritance.</span></span>  
   
-##  <span data-ttu-id="ab3dc-157"><a name="BKMK_RelatedSections"></a>관련 단원</span><span class="sxs-lookup"><span data-stu-id="ab3dc-157"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a><span data-ttu-id="ab3dc-157">관련 단원</span><span class="sxs-lookup"><span data-stu-id="ab3dc-157">Related Sections</span></span>  
   
 -   [<span data-ttu-id="ab3dc-158">인터페이스 속성</span><span class="sxs-lookup"><span data-stu-id="ab3dc-158">Interface Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
