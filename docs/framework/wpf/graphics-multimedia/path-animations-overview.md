@@ -26,7 +26,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="path-animations-overview"></a><span data-ttu-id="4b7d2-102">경로 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="4b7d2-102">Path Animations Overview</span></span>
-<span data-ttu-id="4b7d2-103"><a name="introduction"></a> 이 항목에서는 기하학적 경로를 사용하여 출력 값을 생성할 수 있도록 하는 경로 애니메이션을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="4b7d2-103"><a name="introduction"></a> This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="4b7d2-104">경로 애니메이션은 복잡한 경로를 따라 개체를 이동하고 회전하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="4b7d2-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  
+<a name="introduction"></a> <span data-ttu-id="4b7d2-103">이 항목에서는 기하학적 경로를 사용하여 출력 값을 생성할 수 있도록 하는 경로 애니메이션을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="4b7d2-103">This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="4b7d2-104">경로 애니메이션은 복잡한 경로를 따라 개체를 이동하고 회전하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="4b7d2-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a><span data-ttu-id="4b7d2-105">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="4b7d2-105">Prerequisites</span></span>  

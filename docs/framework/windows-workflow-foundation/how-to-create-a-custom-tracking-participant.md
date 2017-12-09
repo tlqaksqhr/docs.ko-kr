@@ -37,7 +37,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="cf445-116">작성 하 고 응용 프로그램 실행</span><span class="sxs-lookup"><span data-stu-id="cf445-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <span data-ttu-id="cf445-117"><a name="BKMK_CustomTrackingParticipant"></a>사용자 지정 추적 참가자를 만들려면</span><span class="sxs-lookup"><span data-stu-id="cf445-117"><a name="BKMK_CustomTrackingParticipant"></a> To create the custom tracking participant</span></span>  
+###  <a name="BKMK_CustomTrackingParticipant"></a><span data-ttu-id="cf445-117">사용자 지정 추적 참가자를 만들려면</span><span class="sxs-lookup"><span data-stu-id="cf445-117">To create the custom tracking participant</span></span>  
   
 1.  <span data-ttu-id="cf445-118">마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 에 **솔루션 탐색기** 선택 **추가**, **클래스**합니다.</span><span class="sxs-lookup"><span data-stu-id="cf445-118">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="cf445-119">형식 `StatusTrackingParticipant` 에 **이름** 고 클릭 **추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="cf445-119">Type `StatusTrackingParticipant` into the **Name** box, and click **Add**.</span></span>  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="cf445-127">추적 프로필이 지정되어 있지 않은 경우 기본 추적 프로필이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf445-127">When no tracking profile is specified, the default tracking profile is used.</span></span> <span data-ttu-id="cf445-128">기본 추적 프로필이 사용될 경우 모든 `ActivityStates`에 대해 추적 레코드가 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="cf445-128">When the default tracking profile is used, tracking records are emitted for all `ActivityStates`.</span></span> <span data-ttu-id="cf445-129">여기서는 `WriteLine` 활동의 수명 주기 동안 텍스트를 한 번만 캡처하면 되므로 `ActivityStates.Executing` 상태의 텍스트만 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="cf445-129">Because we only need to capture the text one time during the lifecycle of the `WriteLine` activity, we only extract the text from the `ActivityStates.Executing` state.</span></span> <span data-ttu-id="cf445-130">[추적 프로필을 만들고 추적 참가자를 등록 하](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)를 지정 하는 추적 프로필이 만들어질 `WriteLine` `ActivityStates.Executing` 추적 레코드가 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="cf445-130">In [To create the tracking profile and register the tracking participant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), a tracking profile is created that specifies that only `WriteLine` `ActivityStates.Executing` tracking records are emitted.</span></span>  
   
-###  <span data-ttu-id="cf445-131"><a name="BKMK_TrackingProfile"></a>추적 프로필을 만들고 추적 참가자를 등록 하려면</span><span class="sxs-lookup"><span data-stu-id="cf445-131"><a name="BKMK_TrackingProfile"></a> To create the tracking profile and register the tracking participant</span></span>  
+###  <a name="BKMK_TrackingProfile"></a><span data-ttu-id="cf445-131">추적 프로필을 만들고 추적 참가자를 등록 하려면</span><span class="sxs-lookup"><span data-stu-id="cf445-131">To create the tracking profile and register the tracking participant</span></span>  
   
 1.  <span data-ttu-id="cf445-132">마우스 오른쪽 단추로 클릭 **WorkflowHostForm** 에 **솔루션 탐색기** 선택 **코드 보기**합니다.</span><span class="sxs-lookup"><span data-stu-id="cf445-132">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
@@ -234,7 +234,7 @@ ms.lasthandoff: 12/02/2017
         // Workflow lifecycle handlers...  
     ```  
   
-###  <span data-ttu-id="cf445-137"><a name="BKMK_DisplayTracking"></a>추적 정보를 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="cf445-137"><a name="BKMK_DisplayTracking"></a> To display the tracking information</span></span>  
+###  <a name="BKMK_DisplayTracking"></a><span data-ttu-id="cf445-137">추적 정보를 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="cf445-137">To display the tracking information</span></span>  
   
 1.  <span data-ttu-id="cf445-138">마우스 오른쪽 단추로 클릭 **WorkflowHostForm** 에 **솔루션 탐색기** 선택 **코드 보기**합니다.</span><span class="sxs-lookup"><span data-stu-id="cf445-138">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
@@ -329,7 +329,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="cf445-142"><a name="BKMK_BuildAndRun"></a>작성 하 고 응용 프로그램 실행</span><span class="sxs-lookup"><span data-stu-id="cf445-142"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="cf445-142">작성 하 고 응용 프로그램 실행</span><span class="sxs-lookup"><span data-stu-id="cf445-142">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="cf445-143">Ctrl+Shift+B를 눌러 응용 프로그램을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="cf445-143">Press Ctrl+Shift+B to build the application.</span></span>  
   

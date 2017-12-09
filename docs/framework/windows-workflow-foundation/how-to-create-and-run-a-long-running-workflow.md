@@ -52,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="36c6a-121">작성 하 고 응용 프로그램 실행</span><span class="sxs-lookup"><span data-stu-id="36c6a-121">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
-###  <span data-ttu-id="36c6a-122"><a name="BKMK_CreatePersistenceDatabase"></a>지 속성 데이터베이스를 만들려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-122"><a name="BKMK_CreatePersistenceDatabase"></a> To create the persistence database</span></span>  
+###  <a name="BKMK_CreatePersistenceDatabase"></a><span data-ttu-id="36c6a-122">지 속성 데이터베이스를 만들려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-122">To create the persistence database</span></span>  
   
 1.  <span data-ttu-id="36c6a-123">예를 들어 로컬 서버에 연결을 SQL Server Management Studio를 열고 **. \SQLEXPRESS**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-123">Open SQL Server Management Studio and connect to the local server, for example **.\SQLEXPRESS**.</span></span> <span data-ttu-id="36c6a-124">마우스 오른쪽 단추로 클릭는 **데이터베이스** 노드를 선택 하 여 로컬 서버에 **새 데이터베이스**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-124">Right-click the **Databases** node on the local server, and select **New Database**.</span></span> <span data-ttu-id="36c6a-125">새 데이터베이스의 이름을 **WF45GettingStartedTutorial**다른 모든 값을 그대로 사용 하 고 선택 **확인**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-125">Name the new database **WF45GettingStartedTutorial**, accept all other values, and select **OK**.</span></span>  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/02/2017
     > [!WARNING]
     >  <span data-ttu-id="36c6a-136">앞의 두 단계는 올바른 순서대로 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-136">It is important to perform the previous two steps in the correct order.</span></span> <span data-ttu-id="36c6a-137">쿼리를 순서에 맞지 않게 실행하면 오류가 발생하고 지속성 데이터베이스가 올바르게 구성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-137">If the queries are executed out of order, errors occur and the persistence database is not configured correctly.</span></span>  
   
-###  <span data-ttu-id="36c6a-138"><a name="BKMK_AddReference"></a>DurableInstancing 어셈블리에 대 한 참조를 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-138"><a name="BKMK_AddReference"></a> To add the reference to the DurableInstancing assemblies</span></span>  
+###  <a name="BKMK_AddReference"></a><span data-ttu-id="36c6a-138">DurableInstancing 어셈블리에 대 한 참조를 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-138">To add the reference to the DurableInstancing assemblies</span></span>  
   
 1.  <span data-ttu-id="36c6a-139">마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 에 **솔루션 탐색기** 선택 **참조 추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-139">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Add Reference**.</span></span>  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/02/2017
   
 3.  <span data-ttu-id="36c6a-142">옆의 확인란 **검색 결과** 및 **System.Runtime.DurableInstancing** 에서 **검색 결과** 목록으로 이동한 클릭**확인**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-142">Check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list, and click **OK**.</span></span>  
   
-###  <span data-ttu-id="36c6a-143"><a name="BKMK_CreateForm"></a>워크플로 호스트 폼을 만들려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-143"><a name="BKMK_CreateForm"></a> To create the workflow host form</span></span>  
+###  <a name="BKMK_CreateForm"></a><span data-ttu-id="36c6a-143">워크플로 호스트 폼을 만들려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-143">To create the workflow host form</span></span>  
   
 > [!NOTE]
 >  <span data-ttu-id="36c6a-144">이 절차에서는 폼을 수동으로 추가 및 구성하는 방법을 단계별로 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-144">The steps in this procedure describe how to add and configure the form manually.</span></span> <span data-ttu-id="36c6a-145">필요한 경우 자습서용 솔루션 파일을 다운로드하고 프로젝트에 전체 폼을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-145">If desired, you can download the solution files for the tutorial and add the completed form to the project.</span></span> <span data-ttu-id="36c6a-146">자습서 파일을 다운로드 하려면 참조 [Windows Workflow Foundation (WF45)-초보자를 위한 자습서](http://go.microsoft.com/fwlink/?LinkID=248976)합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-146">To download the tutorial files, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span> <span data-ttu-id="36c6a-147">파일 다운로드 되 면 마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 선택 **참조 추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-147">Once the files are downloaded, right-click **NumberGuessWorkflowHost** and choose **Add Reference**.</span></span> <span data-ttu-id="36c6a-148">에 대 한 참조를 추가 **System.Windows.Forms** 및 **System.Drawing**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-148">Add a reference to **System.Windows.Forms** and **System.Drawing**.</span></span> <span data-ttu-id="36c6a-149">이러한 참조는에서 새 폼을 추가 하는 경우 자동으로 추가 됩니다는 **추가**, **새 항목** 메뉴 되지만 폼을 가져온 경우 수동으로 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-149">These references are added automatically if you add a new form from the **Add**, **New Item** menu, but must be added manually when importing a form.</span></span> <span data-ttu-id="36c6a-150">참조가 추가 되 면 마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 에 **솔루션 탐색기** 선택 **추가**, **기존 항목**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-150">Once the references are added, right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Existing Item**.</span></span> <span data-ttu-id="36c6a-151">찾아는 `Form` 프로젝트 파일의 폴더 **WorkflowHostForm.cs** (또는 **WorkflowHostForm.vb**)를 클릭 하 고 **추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-151">Browse to the `Form` folder in the project files, select **WorkflowHostForm.cs** (or **WorkflowHostForm.vb**), and click **Add**.</span></span> <span data-ttu-id="36c6a-152">폼을 가져오는 경우 다음 섹션으로 건너뛸 수 [폼의 도우미 메서드와 속성을 추가 하려면](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-152">If you choose to import the form, then you can skip down to the next section, [To add the properties and helper methods of the form](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).</span></span>  
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/02/2017
   
  <span data-ttu-id="36c6a-235">![WF45 자습서 워크플로 호스트 폼을 시작 하기](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span><span class="sxs-lookup"><span data-stu-id="36c6a-235">![WF45 Getting Started Tutorial Workflow Host Form](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span></span>  
   
-###  <span data-ttu-id="36c6a-236"><a name="BKMK_AddHelperMethods"></a>폼의 도우미 메서드와 속성을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-236"><a name="BKMK_AddHelperMethods"></a> To add the properties and helper methods of the form</span></span>  
+###  <a name="BKMK_AddHelperMethods"></a><span data-ttu-id="36c6a-236">폼의 도우미 메서드와 속성을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-236">To add the properties and helper methods of the form</span></span>  
  <span data-ttu-id="36c6a-237">이 단원의 단계에서는 숫자 추측 워크플로의 실행 및 다시 시작을 지원하도록 폼 UI를 구성하는 속성 및 도우미 메서드를 폼 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-237">The steps in this section add properties and helper methods to the form class that configure the UI of the form to support running and resuming number guess workflows.</span></span>  
   
 1.  <span data-ttu-id="36c6a-238">마우스 오른쪽 단추로 클릭 **WorkflowHostForm** 에 **솔루션 탐색기** 선택 **코드 보기**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-238">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
@@ -431,7 +431,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="36c6a-258"><a name="BKMK_ConfigureWorkflowApplication"></a>인스턴스 저장소, 워크플로 수명 주기 처리기 및 확장을 구성 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-258"><a name="BKMK_ConfigureWorkflowApplication"></a> To configure the instance store, workflow lifecycle handlers, and extensions</span></span>  
+###  <a name="BKMK_ConfigureWorkflowApplication"></a><span data-ttu-id="36c6a-258">인스턴스 저장소, 워크플로 수명 주기 처리기 및 확장을 구성 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-258">To configure the instance store, workflow lifecycle handlers, and extensions</span></span>  
   
 1.  <span data-ttu-id="36c6a-259">폼 클래스에 `ConfigureWorkflowApplication` 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-259">Add a `ConfigureWorkflowApplication` method to the form class.</span></span>  
   
@@ -700,7 +700,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="36c6a-277"><a name="BKMK_WorkflowVersionMap"></a>시작 및 여러 워크플로 유형을 다시 시작을 사용 하도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-277"><a name="BKMK_WorkflowVersionMap"></a> To enable starting and resuming multiple workflow types</span></span>  
+###  <a name="BKMK_WorkflowVersionMap"></a><span data-ttu-id="36c6a-277">시작 및 여러 워크플로 유형을 다시 시작을 사용 하도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-277">To enable starting and resuming multiple workflow types</span></span>  
  <span data-ttu-id="36c6a-278">워크플로 인스턴스를 다시 시작하려면 호스트에서 워크플로 정의를 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-278">In order to resume a workflow instance, the host has to provide the workflow definition.</span></span> <span data-ttu-id="36c6a-279">이 자습서에는 세 가지 워크플로 유형이 있으며 이후 자습서 단계에서는 이러한 유형의 여러 버전을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-279">In this tutorial there are three workflow types, and subsequent tutorial steps introduce multiple versions of these types.</span></span> <span data-ttu-id="36c6a-280">호스트 응용 프로그램에서는 `WorkflowIdentity`를 통해 식별 정보를 지속형 워크플로 인스턴스에 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-280">`WorkflowIdentity` provides a way for a host application to associate identifying information with a persisted workflow instance.</span></span> <span data-ttu-id="36c6a-281">이 단원의 단계에서는 유틸리티 클래스를 만들어 지속형 워크플로 인스턴스의 워크플로 ID를 해당 워크플로 정의에 쉽게 매핑할 수 있도록 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-281">The steps in this section demonstrate how to create a utility class to assist with mapping the workflow identity from a persisted workflow instance to the corresponding workflow definition.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="36c6a-282">`WorkflowIdentity` 버전 관리, 참조 [및 버전 관리를 사용 하 여 WorkflowIdentity](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-282"> `WorkflowIdentity` and versioning, see [Using WorkflowIdentity and Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).</span></span>  
   
 1.  <span data-ttu-id="36c6a-283">마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 에 **솔루션 탐색기** 선택 **추가**, **클래스**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-283">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="36c6a-284">형식 `WorkflowVersionMap` 에 **이름** 상자 한 클릭 **추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-284">Type `WorkflowVersionMap` into the **Name** box and click **Add**.</span></span>  
@@ -817,7 +817,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="36c6a-287">`WorkflowVersionMap`에는 이 자습서에서 사용하는 세 개의 워크플로 정의에 매핑되며 다음 단원에서 워크플로가 시작 및 다시 시작될 때 사용되는 세 개의 워크플로 ID가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-287">`WorkflowVersionMap` contains three workflow identities that map to the three workflow definitions from this tutorial and is used in the following sections when workflows are started and resumed.</span></span>  
   
-###  <span data-ttu-id="36c6a-288"><a name="BKMK_StartWorkflow"></a>새 워크플로 시작 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-288"><a name="BKMK_StartWorkflow"></a> To start a new workflow</span></span>  
+###  <a name="BKMK_StartWorkflow"></a><span data-ttu-id="36c6a-288">새 워크플로 시작 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-288">To start a new workflow</span></span>  
   
 1.  <span data-ttu-id="36c6a-289">`Click`에 대한 `NewGame` 처리기를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-289">Add a `Click` handler for `NewGame`.</span></span> <span data-ttu-id="36c6a-290">처리기를 추가 하려면 전환 **디자인 보기** 양식과 두 번 클릭에 대 한 `NewGame`합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-290">To add the handler, switch to **Design View** for the form, and double-click `NewGame`.</span></span> <span data-ttu-id="36c6a-291">`NewGame_Click` 처리기가 추가되고 폼의 뷰가 코드 뷰로 전환됩니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-291">A `NewGame_Click` handler is added and the view switches to code view for the form.</span></span> <span data-ttu-id="36c6a-292">이 단추를 클릭할 때마다 새 워크플로가 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-292">Whenever the user clicks this button a new workflow is started.</span></span>  
   
@@ -1012,7 +1012,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="36c6a-303"><a name="BKMK_ResumeWorkflow"></a>워크플로 다시 시작 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-303"><a name="BKMK_ResumeWorkflow"></a> To resume a workflow</span></span>  
+###  <a name="BKMK_ResumeWorkflow"></a><span data-ttu-id="36c6a-303">워크플로 다시 시작 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-303">To resume a workflow</span></span>  
   
 1.  <span data-ttu-id="36c6a-304">`Click`에 대한 `EnterGuess` 처리기를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-304">Add a `Click` handler for `EnterGuess`.</span></span> <span data-ttu-id="36c6a-305">처리기를 추가 하려면 전환 **디자인 보기** 양식과 두 번 클릭에 대 한 `EnterGuess`합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-305">To add the handler, switch to **Design View** for the form, and double-click `EnterGuess`.</span></span> <span data-ttu-id="36c6a-306">이 단추를 클릭할 때마다 워크플로가 다시 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-306">Whenever the user clicks this button a workflow is resumed.</span></span>  
   
@@ -1228,7 +1228,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="36c6a-318"><a name="BKMK_TerminateWorkflow"></a>워크플로 종료 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-318"><a name="BKMK_TerminateWorkflow"></a> To terminate a workflow</span></span>  
+###  <a name="BKMK_TerminateWorkflow"></a><span data-ttu-id="36c6a-318">워크플로 종료 하려면</span><span class="sxs-lookup"><span data-stu-id="36c6a-318">To terminate a workflow</span></span>  
   
 1.  <span data-ttu-id="36c6a-319">`Click`에 대한 `QuitGame` 처리기를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-319">Add a `Click` handler for `QuitGame`.</span></span> <span data-ttu-id="36c6a-320">처리기를 추가 하려면 전환 **디자인 보기** 양식과 두 번 클릭에 대 한 `QuitGame`합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-320">To add the handler, switch to **Design View** for the form, and double-click `QuitGame`.</span></span> <span data-ttu-id="36c6a-321">이 단추를 클릭할 때마다 현재 선택된 워크플로가 종료됩니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-321">Whenever the user clicks this button the currently selected workflow is terminated.</span></span>  
   
@@ -1302,7 +1302,7 @@ ms.lasthandoff: 12/02/2017
     wfApp.Terminate("User resigns.");  
     ```  
   
-###  <span data-ttu-id="36c6a-327"><a name="BKMK_BuildAndRun"></a>작성 하 고 응용 프로그램 실행</span><span class="sxs-lookup"><span data-stu-id="36c6a-327"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="36c6a-327">작성 하 고 응용 프로그램 실행</span><span class="sxs-lookup"><span data-stu-id="36c6a-327">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="36c6a-328">두 번 클릭 **Program.cs** (또는 **Module1.vb**)에서 **솔루션 탐색기** 코드를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="36c6a-328">Double-click **Program.cs** (or **Module1.vb**) in **Solution Explorer** to display the code.</span></span>  
   

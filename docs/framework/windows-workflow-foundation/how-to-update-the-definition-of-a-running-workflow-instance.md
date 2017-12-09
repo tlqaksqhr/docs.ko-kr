@@ -49,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="416d8-117">이전 버전의 워크플로 시작 하도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <span data-ttu-id="416d8-118"><a name="BKMK_CreateProject"></a>CreateUpdateMaps 프로젝트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="416d8-118"><a name="BKMK_CreateProject"></a> To create the CreateUpdateMaps project</span></span>  
+###  <a name="BKMK_CreateProject"></a><span data-ttu-id="416d8-118">CreateUpdateMaps 프로젝트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="416d8-118">To create the CreateUpdateMaps project</span></span>  
   
 1.  <span data-ttu-id="416d8-119">마우스 오른쪽 단추로 클릭 **WF45GettingStartedTutorial** 에 **솔루션 탐색기** 선택 **추가**, **새 프로젝트**합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="416d8-143"><a name="BKMK_StateMachine"></a>StateMachineNumberGuessWorkflow를 업데이트</span><span class="sxs-lookup"><span data-stu-id="416d8-143"><a name="BKMK_StateMachine"></a> To update StateMachineNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_StateMachine"></a><span data-ttu-id="416d8-143">StateMachineNumberGuessWorkflow를 업데이트</span><span class="sxs-lookup"><span data-stu-id="416d8-143">To update StateMachineNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="416d8-144">`CreateStateMachineUpdateMap`(또는 `Program`) 클래스에 `Module1`을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>  
   
@@ -426,7 +426,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="416d8-151"><a name="BKMK_Flowchart"></a>FlowchartNumberGuessWorkflow를 업데이트</span><span class="sxs-lookup"><span data-stu-id="416d8-151"><a name="BKMK_Flowchart"></a> To update FlowchartNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Flowchart"></a><span data-ttu-id="416d8-151">FlowchartNumberGuessWorkflow를 업데이트</span><span class="sxs-lookup"><span data-stu-id="416d8-151">To update FlowchartNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="416d8-152">`CreateFlowchartUpdateMethod`(또는 `Program`) 클래스에 다음 `Module1`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="416d8-153">이 메서드는 `CreateStateMachineUpdateMap`과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="416d8-154">이 메서드는 먼저 `StartUpdate`를 호출하고 순서도 워크플로 정의를 업데이트한 다음 업데이트 맵과 업데이트된 워크플로 정의를 저장하는 것으로 작업을 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -540,7 +540,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="416d8-155"><a name="BKMK_Sequential"></a>SequentialNumberGuessWorkflow를 업데이트</span><span class="sxs-lookup"><span data-stu-id="416d8-155"><a name="BKMK_Sequential"></a> To update SequentialNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Sequential"></a><span data-ttu-id="416d8-155">SequentialNumberGuessWorkflow를 업데이트</span><span class="sxs-lookup"><span data-stu-id="416d8-155">To update SequentialNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="416d8-156">`CreateSequentialUpdateMethod`(또는 `Program`) 클래스에 다음 `Module1`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="416d8-157">이 메서드는 다른 두 개의 메서드와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="416d8-158">이 메서드는 먼저 `StartUpdate`를 호출하고 순차 워크플로 정의를 업데이트한 다음 업데이트 맵과 업데이트된 워크플로 정의를 저장하는 것으로 작업을 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -620,7 +620,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="416d8-159"><a name="BKMK_CreateUpdateMaps"></a>빌드하고 CreateUpdateMaps 응용 프로그램을 실행 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-159"><a name="BKMK_CreateUpdateMaps"></a> To build and run the CreateUpdateMaps application</span></span>  
+###  <a name="BKMK_CreateUpdateMaps"></a><span data-ttu-id="416d8-159">빌드하고 CreateUpdateMaps 응용 프로그램을 실행 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-159">To build and run the CreateUpdateMaps application</span></span>  
   
 1.  <span data-ttu-id="416d8-160">`Main` 메서드를 업데이트하고 다음 세 개의 메서드 호출을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="416d8-161">이러한 메서드는 다음 단원에서 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-161">These methods are added in the following sections.</span></span> <span data-ttu-id="416d8-162">각 메서드는 해당 숫자 추측 워크플로를 업데이트하고 업데이트를 설명하는 `DynamicUpdateMap`을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>  
   
@@ -654,7 +654,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="416d8-166">업데이트 맵이 만들어지고 워크플로 정의가 업데이트된 후 다음 단계는 업데이트된 정의를 포함하는 업데이트된 워크플로 어셈블리를 빌드하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>  
   
-###  <span data-ttu-id="416d8-167"><a name="BKMK_BuildAssembly"></a>업데이트 된 워크플로 어셈블리를 빌드</span><span class="sxs-lookup"><span data-stu-id="416d8-167"><a name="BKMK_BuildAssembly"></a> To build the updated workflow assembly</span></span>  
+###  <a name="BKMK_BuildAssembly"></a><span data-ttu-id="416d8-167">업데이트 된 워크플로 어셈블리를 빌드</span><span class="sxs-lookup"><span data-stu-id="416d8-167">To build the updated workflow assembly</span></span>  
   
 1.  <span data-ttu-id="416d8-168">[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]의 두 번째 인스턴스를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-168">Open a second instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -685,7 +685,7 @@ ms.lasthandoff: 12/02/2017
   
 12. <span data-ttu-id="416d8-185">이름 바꾸기 **NumberGuessWorkflowActivities.dll** 를 **NumberGuessWorkflowActivities_v15.dll**, 복사는 **PreviousVersions** 에서만든폴더를[하는 방법: 여러 버전의 워크플로-여-를 함께 호스트](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
-###  <span data-ttu-id="416d8-186"><a name="BKMK_UpdateWorkflowVersionMap"></a>WorkflowVersionMap을 새 버전으로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-186"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap with the new versions</span></span>  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a><span data-ttu-id="416d8-186">WorkflowVersionMap을 새 버전으로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-186">To update WorkflowVersionMap with the new versions</span></span>  
   
 1.  <span data-ttu-id="416d8-187">다시 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]의 초기 인스턴스로 전환합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-187">Switch back to the initial instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -1072,7 +1072,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  <span data-ttu-id="416d8-195">Ctrl+Shift+B를 눌러 프로젝트를 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-195">Press CTRL+SHIFT+B to build the project.</span></span>  
   
-###  <span data-ttu-id="416d8-196"><a name="BKMK_ApplyUpdate"></a>동적 업데이트를 적용 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-196"><a name="BKMK_ApplyUpdate"></a> To apply the dynamic updates</span></span>  
+###  <a name="BKMK_ApplyUpdate"></a><span data-ttu-id="416d8-196">동적 업데이트를 적용 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-196">To apply the dynamic updates</span></span>  
   
 1.  <span data-ttu-id="416d8-197">마우스 오른쪽 단추로 클릭 **WF45GettingStartedTutorial** 에 **솔루션 탐색기** 선택 **추가**, **새 프로젝트**합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -1447,7 +1447,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="416d8-261">**검사: SequentialNumberGuessWorkflow; 버전 2.0.0.0 =** </span><span class="sxs-lookup"><span data-stu-id="416d8-261">**Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
 <span data-ttu-id="416d8-262">**계속 하려면 아무 키나를 누르십시오...**</span><span class="sxs-lookup"><span data-stu-id="416d8-262">**Press any key to continue . . .**</span></span>  
   
-###  <span data-ttu-id="416d8-263"><a name="BKMK_BuildAndRun"></a>업데이트 된 워크플로로 응용 프로그램을 실행 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-263"><a name="BKMK_BuildAndRun"></a> To run the application with the updated workflows</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="416d8-263">업데이트 된 워크플로로 응용 프로그램을 실행 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-263">To run the application with the updated workflows</span></span>  
   
 1.  <span data-ttu-id="416d8-264">마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 에 **솔루션 탐색기** 선택 **시작 프로젝트로 설정**합니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-264">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>  
   
@@ -1482,7 +1482,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="416d8-291">**1과 10 사이의 숫자를 입력 하십시오.** </span><span class="sxs-lookup"><span data-stu-id="416d8-291">**Please enter a number between 1 and 10** </span></span>  
 <span data-ttu-id="416d8-292">**6이 올바릅니다. 4 결과적으로 맞습니다.**</span><span class="sxs-lookup"><span data-stu-id="416d8-292">**6 is correct. You guessed it in 4 turns.**</span></span>  
   
-###  <span data-ttu-id="416d8-293"><a name="BKMK_StartPreviousVersions"></a>이전 버전의 워크플로 시작 하도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-293"><a name="BKMK_StartPreviousVersions"></a> To enable starting previous versions of the workflows</span></span>  
+###  <a name="BKMK_StartPreviousVersions"></a><span data-ttu-id="416d8-293">이전 버전의 워크플로 시작 하도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="416d8-293">To enable starting previous versions of the workflows</span></span>  
  <span data-ttu-id="416d8-294">업데이트할 워크플로가 모두 실행된 경우 이전 버전의 워크플로를 시작하도록 `NumberGuessWorkflowHost` 응용 프로그램을 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-294">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>  
   
 1.  <span data-ttu-id="416d8-295">두 번 클릭 **WorkflowHostForm** 에 **솔루션 탐색기**, 선택는 **WorkflowType** 콤보 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="416d8-295">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>  

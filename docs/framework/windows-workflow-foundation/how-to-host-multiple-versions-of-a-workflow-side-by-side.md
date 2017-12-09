@@ -50,7 +50,7 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  <span data-ttu-id="c24e4-119">초보자를 위한 자습서의 각 단계는 이전 단계를 바탕으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="c24e4-120">이전 단계를 완료 하지 않은 경우에에서 자습서의 전체 버전을 다운로드할 수 있습니다 [Windows Workflow Foundation (WF45)-초보자를 위한 자습서](http://go.microsoft.com/fwlink/?LinkID=248976)합니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-###  <span data-ttu-id="c24e4-121"><a name="BKMK_BackupCopy"></a>NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-121"><a name="BKMK_BackupCopy"></a> To make a copy of the NumberGuessWorkflowActivities project</span></span>  
+###  <a name="BKMK_BackupCopy"></a><span data-ttu-id="c24e4-121">NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
   
 1.  <span data-ttu-id="c24e4-122">열기는 **WF45GettingStartedTutorial** 에서 솔루션 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 열려 있지 않으면입니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-122">Open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] if it is not open.</span></span>  
   
@@ -73,10 +73,10 @@ ms.lasthandoff: 12/02/2017
   
 9. <span data-ttu-id="c24e4-135">다시 열어는 **WF45GettingStartedTutorial** 에서 솔루션 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-135">Re-open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
-###  <span data-ttu-id="c24e4-136"><a name="BKMK_UpdateWorkflows"></a>워크플로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-136"><a name="BKMK_UpdateWorkflows"></a> To update the workflows</span></span>  
+###  <a name="BKMK_UpdateWorkflows"></a><span data-ttu-id="c24e4-136">워크플로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-136">To update the workflows</span></span>  
  <span data-ttu-id="c24e4-137">이 단원에서는 워크플로 정의를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="c24e4-138">즉, 사용자의 추측에 대한 피드백을 제공하는 두 개의 `WriteLine` 활동을 업데이트하고, 숫자가 추측된 후 게임에 대한 추가 정보를 제공하는 새로운 `WriteLine` 활동을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>  
   
-####  <span data-ttu-id="c24e4-139"><a name="BKMK_UpdateStateMachine"></a>StateMachine 워크플로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-139"><a name="BKMK_UpdateStateMachine"></a> To update the StateMachine workflow</span></span>  
+####  <a name="BKMK_UpdateStateMachine"></a><span data-ttu-id="c24e4-139">StateMachine 워크플로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-139">To update the StateMachine workflow</span></span>  
   
 1.  <span data-ttu-id="c24e4-140">**솔루션 탐색기**아래는 **NumberGuessWorkflowActivities** 두 번 클릭 **StateMachineNumberGuessWorkflow.xaml**합니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <span data-ttu-id="c24e4-148"><a name="BKMK_UpdateFlowchart"></a>순서도 워크플로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-148"><a name="BKMK_UpdateFlowchart"></a> To update the Flowchart workflow</span></span>  
+####  <a name="BKMK_UpdateFlowchart"></a><span data-ttu-id="c24e4-148">순서도 워크플로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-148">To update the Flowchart workflow</span></span>  
   
 1.  <span data-ttu-id="c24e4-149">**솔루션 탐색기**아래는 **NumberGuessWorkflowActivities** 두 번 클릭 **FlowchartNumberGuessWorkflow.xaml**합니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <span data-ttu-id="c24e4-155"><a name="BKMK_UpdateSequential"></a>순차 워크플로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-155"><a name="BKMK_UpdateSequential"></a> To update the Sequential workflow</span></span>  
+####  <a name="BKMK_UpdateSequential"></a><span data-ttu-id="c24e4-155">순차 워크플로 업데이트 하려면</span><span class="sxs-lookup"><span data-stu-id="c24e4-155">To update the Sequential workflow</span></span>  
   
 1.  <span data-ttu-id="c24e4-156">**솔루션 탐색기**아래는 **NumberGuessWorkflowActivities** 두 번 클릭 **SequentialNumberGuessWorkflow.xaml**합니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <span data-ttu-id="c24e4-161"><a name="BKMK_UpdateWorkflowVersionMap"></a>이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트.</span><span class="sxs-lookup"><span data-stu-id="c24e4-161"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap to include the previous workflow versions</span></span>  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a><span data-ttu-id="c24e4-161">이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트.</span><span class="sxs-lookup"><span data-stu-id="c24e4-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>  
   
 1.  <span data-ttu-id="c24e4-162">두 번 클릭 **WorkflowVersionMap.cs** (또는 **WorkflowVersionMap.vb**)에서 고 **NumberGuessWorkflowHost** 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>  
   
@@ -558,7 +558,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="c24e4-172"><a name="BKMK_BuildAndRun"></a>작성 하 고 응용 프로그램 실행</span><span class="sxs-lookup"><span data-stu-id="c24e4-172"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="c24e4-172">작성 하 고 응용 프로그램 실행</span><span class="sxs-lookup"><span data-stu-id="c24e4-172">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="c24e4-173">Ctrl+Shift+B를 눌러 응용 프로그램을 빌드하고 Ctrl+F5를 눌러 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="c24e4-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>  
   

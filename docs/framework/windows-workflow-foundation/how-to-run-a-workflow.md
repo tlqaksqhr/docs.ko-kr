@@ -146,7 +146,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]  
   
-##  <span data-ttu-id="b5801-159"><a name="BKMK_ToRunTheApplication"></a> 응용 프로그램을 빌드하고 실행하려면</span><span class="sxs-lookup"><span data-stu-id="b5801-159"><a name="BKMK_ToRunTheApplication"></a> To build and run the application</span></span>  
+##  <a name="BKMK_ToRunTheApplication"></a> <span data-ttu-id="b5801-159">응용 프로그램을 빌드하고 실행하려면</span><span class="sxs-lookup"><span data-stu-id="b5801-159">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="b5801-160">**솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="b5801-160">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Set as StartUp Project**.</span></span>  
   

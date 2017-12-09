@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/11/2017
 ---
 # <a name="what39s-new-in-wpf-version-45"></a><span data-ttu-id="cd9b4-102">WPF 버전 4.5의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="cd9b4-102">What&#39;s New in WPF Version 4.5</span></span>
-<span data-ttu-id="cd9b4-103"><a name="introduction"></a>이 항목에서는 새로운 기능과 향상 된 기능에 대 한 정보 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 버전 4.5입니다.</span><span class="sxs-lookup"><span data-stu-id="cd9b4-103"><a name="introduction"></a> This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  
+<a name="introduction"></a><span data-ttu-id="cd9b4-103">이 항목에서는 새로운 기능과 향상 된 기능에 대 한 정보 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 버전 4.5입니다.</span><span class="sxs-lookup"><span data-stu-id="cd9b4-103">This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  
   
  <span data-ttu-id="cd9b4-104">이 항목에는 다음과 같은 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cd9b4-104">This topic contains the following sections:</span></span>  
   

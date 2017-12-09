@@ -117,7 +117,7 @@ ms.lasthandoff: 12/02/2017
     go  
     ```  
   
-##  <span data-ttu-id="82d6e-119"><a name="InstancePromotedProperties"></a>[System.Activities.DurableInstancing.InstancePromotedProperties] 뷰</span><span class="sxs-lookup"><span data-stu-id="82d6e-119"><a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
+##  <a name="InstancePromotedProperties"></a><span data-ttu-id="82d6e-119">[System.Activities.DurableInstancing.InstancePromotedProperties] 뷰</span><span class="sxs-lookup"><span data-stu-id="82d6e-119">[System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
   
 |<span data-ttu-id="82d6e-120">열 이름</span><span class="sxs-lookup"><span data-stu-id="82d6e-120">Column Name</span></span>|<span data-ttu-id="82d6e-121">열 유형</span><span class="sxs-lookup"><span data-stu-id="82d6e-121">Column Type</span></span>|<span data-ttu-id="82d6e-122">설명</span><span class="sxs-lookup"><span data-stu-id="82d6e-122">Description</span></span>|  
 |-----------------|-----------------|-----------------|  

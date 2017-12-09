@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="dependency-property-value-precedence"></a><span data-ttu-id="f573e-102">종속성 속성 값 우선 순위</span><span class="sxs-lookup"><span data-stu-id="f573e-102">Dependency Property Value Precedence</span></span>
-<span data-ttu-id="f573e-103"><a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 작업 방식이 종속성 속성 값에 영향을 주는 방식을 설명하고 속성 시스템의 일면이 속성의 유효 값이 적용되는 우선 순위에 관해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f573e-103"><a name="introduction"></a> This topic explains how the workings of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] property system can affect the value of a dependency property, and describes the precedence by which aspects of the property system apply to the effective value of a property.</span></span>  
+<a name="introduction"></a> <span data-ttu-id="f573e-103">이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 작업 방식이 종속성 속성 값에 영향을 주는 방식을 설명하고 속성 시스템의 일면이 속성의 유효 값이 적용되는 우선 순위에 관해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f573e-103">This topic explains how the workings of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] property system can affect the value of a dependency property, and describes the precedence by which aspects of the property system apply to the effective value of a property.</span></span>  
     
   
 <a name="prerequisites"></a>   
