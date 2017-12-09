@@ -71,7 +71,7 @@ End Function
 > [!NOTE]
 >  <span data-ttu-id="3f164-127">단순 반복기 예제를 제외 하 고 항목의 모든 예에 대 한 포함 [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 에 대 한 문을 `System.Collections` 및 `System.Collections.Generic` 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-127">For all examples in the topic except the Simple Iterator example, include [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statements for the `System.Collections` and `System.Collections.Generic` namespaces.</span></span>  
   
-##  <span data-ttu-id="3f164-128"><a name="BKMK_SimpleIterator"></a> 단순 반복기</span><span class="sxs-lookup"><span data-stu-id="3f164-128"><a name="BKMK_SimpleIterator"></a> Simple Iterator</span></span>  
+##  <a name="BKMK_SimpleIterator"></a> <span data-ttu-id="3f164-128">단순 반복기</span><span class="sxs-lookup"><span data-stu-id="3f164-128">Simple Iterator</span></span>  
  <span data-ttu-id="3f164-129">다음 예제에는 단일 `Yield` 문 내에 있는 한 [에 대 한... 다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프입니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-129">The following example has a single `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop.</span></span> <span data-ttu-id="3f164-130">`Main`에서 `For Each` 문 본문을 반복할 때마다 다음 `Yield` 문으로 진행하는 반복기 함수에 대한 호출이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-130">In `Main`, each iteration of the `For Each` statement body creates a call to the iterator function, which proceeds to the next `Yield` statement.</span></span>  
   
 ```vb  
@@ -96,7 +96,7 @@ As System.Collections.Generic.IEnumerable(Of Integer)
 End Function  
 ```  
   
-##  <span data-ttu-id="3f164-131"><a name="BKMK_CollectionClass"></a> 컬렉션 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="3f164-131"><a name="BKMK_CollectionClass"></a> Creating a Collection Class</span></span>  
+##  <a name="BKMK_CollectionClass"></a> <span data-ttu-id="3f164-131">컬렉션 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="3f164-131">Creating a Collection Class</span></span>  
  <span data-ttu-id="3f164-132">다음 예제에서 `DaysOfTheWeek` 클래스는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하며, <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-132">In the following example, the `DaysOfTheWeek` class implements the <xref:System.Collections.IEnumerable> interface, which requires a <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span> <span data-ttu-id="3f164-133">컴파일러는 `GetEnumerator` 메서드를 암시적으로 호출하며, <xref:System.Collections.IEnumerator>가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-133">The compiler implicitly calls the `GetEnumerator` method, which returns an <xref:System.Collections.IEnumerator>.</span></span>  
   
  <span data-ttu-id="3f164-134">`GetEnumerator` 메서드를 사용 하 여 한 번에 하나의 각 문자열을 반환는 `Yield` 문, 및 `Iterator` 한정자는 함수 선언에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-134">The `GetEnumerator` method returns each string one at a time by using the `Yield` statement, and  an `Iterator` modifier is in the function declaration.</span></span>  
@@ -221,7 +221,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <span data-ttu-id="3f164-138"><a name="BKMK_TryBlocks"></a>Try 블록</span><span class="sxs-lookup"><span data-stu-id="3f164-138"><a name="BKMK_TryBlocks"></a> Try Blocks</span></span>  
+##  <a name="BKMK_TryBlocks"></a><span data-ttu-id="3f164-138">Try 블록</span><span class="sxs-lookup"><span data-stu-id="3f164-138">Try Blocks</span></span>  
  <span data-ttu-id="3f164-139">Visual Basic에서는 `Yield` 의 문에서 `Try` 블록는 [시도 중... Catch 하는 중... Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-139">Visual Basic allows a `Yield` statement in the `Try` block of a [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span> <span data-ttu-id="3f164-140">A `Try` 블록은 `Yield` 문의 `Catch` 을 차단 하 고 있을 수 있습니다는 `Finally` 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-140">A `Try` block that has a `Yield` statement can have `Catch` blocks, and can have a `Finally` block.</span></span>  
   
  <span data-ttu-id="3f164-141">다음 예제에서는 포함 `Try`, `Catch`, 및 `Finally` 반복기 함수를 차단 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-141">The following example includes `Try`, `Catch`, and `Finally` blocks in an iterator function.</span></span> <span data-ttu-id="3f164-142">`Finally` 반복기 함수에는 블록이 실행 하기 전에 `For Each` 반복 완료 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-142">The `Finally` block in the iterator function executes before the `For Each` iteration finishes.</span></span>  
@@ -261,7 +261,7 @@ End Function
   
  <span data-ttu-id="3f164-144">경우는 `For Each` 본문 (반복기 메서드에) 하는 대신 예외를 throw 한 `Catch` 블록에 반복기 함수가 실행 되지 않으며 하지만 `Finally` 반복기 함수에는 블록이 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-144">If the `For Each` body (instead of the iterator method) throws an exception, a `Catch` block in the iterator function is not executed, but a `Finally` block in the iterator function is executed.</span></span> <span data-ttu-id="3f164-145">A `Catch` 반복기 함수 내의 블록 반복기 함수 내에서 발생 하는 예외만을 catch 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-145">A `Catch` block inside an iterator function catches only exceptions that occur inside the iterator function.</span></span>  
   
-##  <span data-ttu-id="3f164-146"><a name="BKMK_AnonymousMethods"></a>무명 메서드</span><span class="sxs-lookup"><span data-stu-id="3f164-146"><a name="BKMK_AnonymousMethods"></a> Anonymous Methods</span></span>  
+##  <a name="BKMK_AnonymousMethods"></a><span data-ttu-id="3f164-146">무명 메서드</span><span class="sxs-lookup"><span data-stu-id="3f164-146">Anonymous Methods</span></span>  
  <span data-ttu-id="3f164-147">Visual Basic의 경우 익명 함수 반복기 함수가 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-147">In Visual Basic, an anonymous function can be an iterator function.</span></span> <span data-ttu-id="3f164-148">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-148">The following example illustrates this.</span></span>  
   
 ```vb  
@@ -311,7 +311,7 @@ End Function
   
  <span data-ttu-id="3f164-151">유효성 검사에 반복기 함수가 안에 대신 있으면의 첫 번째 반복이 시작 될 때까지 유효성 검사를 수행할 수 없습니다는 `For Each` 본문입니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-151">If validation is instead inside the iterator function, the validation cannot be performed until the start of the first iteration of the `For Each` body.</span></span>  
   
-##  <span data-ttu-id="3f164-152"><a name="BKMK_GenericList"></a> 제네릭 목록과 함께 반복기 사용</span><span class="sxs-lookup"><span data-stu-id="3f164-152"><a name="BKMK_GenericList"></a> Using Iterators with a Generic List</span></span>  
+##  <a name="BKMK_GenericList"></a> <span data-ttu-id="3f164-152">제네릭 목록과 함께 반복기 사용</span><span class="sxs-lookup"><span data-stu-id="3f164-152">Using Iterators with a Generic List</span></span>  
  <span data-ttu-id="3f164-153">다음 예제에서 `Stack(Of T)` 제네릭 클래스는 <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-153">In the following example, the `Stack(Of T)` generic class implements the <xref:System.Collections.Generic.IEnumerable%601> generic interface.</span></span> <span data-ttu-id="3f164-154">`Push` 메서드는 `T` 형식의 배열에 값을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-154">The `Push` method assigns values to an array of type `T`.</span></span> <span data-ttu-id="3f164-155"><xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드는 `Yield` 문을 사용하여 배열 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-155">The <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method returns the array values by using the `Yield` statement.</span></span>  
   
  <span data-ttu-id="3f164-156">제네릭 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드뿐 아니라 제네릭이 아닌 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드도 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-156">In addition to the generic <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method, the non-generic <xref:System.Collections.IEnumerable.GetEnumerator%2A> method must also be implemented.</span></span> <span data-ttu-id="3f164-157"><xref:System.Collections.Generic.IEnumerable%601>이 <xref:System.Collections.IEnumerable>에서 상속하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-157">This is because <xref:System.Collections.Generic.IEnumerable%601> inherits from <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="3f164-158">제네릭이 아닌 구현은 제네릭 구현을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-158">The non-generic implementation defers to the generic implementation.</span></span>  
@@ -421,7 +421,7 @@ Public Class Stack(Of T)
 End Class  
 ```  
   
-##  <span data-ttu-id="3f164-162"><a name="BKMK_SyntaxInformation"></a> 구문 정보</span><span class="sxs-lookup"><span data-stu-id="3f164-162"><a name="BKMK_SyntaxInformation"></a> Syntax Information</span></span>  
+##  <a name="BKMK_SyntaxInformation"></a> <span data-ttu-id="3f164-162">구문 정보</span><span class="sxs-lookup"><span data-stu-id="3f164-162">Syntax Information</span></span>  
  <span data-ttu-id="3f164-163">반복기는 메서드 또는 `get` 접근자로 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-163">An iterator can occur as a method or `get` accessor.</span></span> <span data-ttu-id="3f164-164">반복기는 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 소멸자에서 발생할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-164">An iterator cannot occur in an event, instance constructor, static constructor, or static destructor.</span></span>  
   
  <span data-ttu-id="3f164-165">`Yield` 문의 식 형식에서 반복기의 반환 형식으로 암시적 변환이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-165">An implicit conversion must exist from the expression type in the `Yield` statement to the return type of the iterator.</span></span>  
@@ -430,7 +430,7 @@ End Class
   
  <span data-ttu-id="3f164-167">Visual Basic의 경우 "생성"가 예약어와에 사용 되는 경우에 특별 한 의미가 있는 `Iterator` 메서드 또는 `get` 접근자입니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-167">In Visual Basic, "Yield" is not a reserved word and has special meaning only when it is used in an `Iterator` method or `get` accessor.</span></span>  
   
-##  <span data-ttu-id="3f164-168"><a name="BKMK_Technical"></a> 기술 구현</span><span class="sxs-lookup"><span data-stu-id="3f164-168"><a name="BKMK_Technical"></a> Technical Implementation</span></span>  
+##  <a name="BKMK_Technical"></a> <span data-ttu-id="3f164-168">기술 구현</span><span class="sxs-lookup"><span data-stu-id="3f164-168">Technical Implementation</span></span>  
  <span data-ttu-id="3f164-169">반복기를 메서드로 작성하는 경우에도 컴파일러는 실제로 상태 시스템인 중첩 클래스로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-169">Although you write an iterator as a method, the compiler translates it into a nested class that is, in effect, a state machine.</span></span> <span data-ttu-id="3f164-170">이 클래스는 클라이언트 코드의 `For Each...Next` 루프가 계속되는 한 반복기의 위치를 추적합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-170">This class keeps track of the position of the iterator as long the `For Each...Next` loop in the client code continues.</span></span>  
   
  <span data-ttu-id="3f164-171">컴파일러의 용도를 확인하려면 Ildasm.exe 도구를 사용하여 반복기 메서드에 대해 생성되는 Microsoft Intermediate Language 코드를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-171">To see what the compiler does, you can use the Ildasm.exe tool to view the Microsoft intermediate language code that is generated for an iterator method.</span></span>  
@@ -443,7 +443,7 @@ End Class
   
  <span data-ttu-id="3f164-178">자세한 내용은 참조는 [Visual Basic 언어 사양](../../../visual-basic/reference/language-specification/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-178">For additional information, see the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).</span></span>  
   
-##  <span data-ttu-id="3f164-179"><a name="BKMK_UseOfIterators"></a> 반복기 사용</span><span class="sxs-lookup"><span data-stu-id="3f164-179"><a name="BKMK_UseOfIterators"></a> Use of Iterators</span></span>  
+##  <a name="BKMK_UseOfIterators"></a> <span data-ttu-id="3f164-179">반복기 사용</span><span class="sxs-lookup"><span data-stu-id="3f164-179">Use of Iterators</span></span>  
  <span data-ttu-id="3f164-180">반복기를 사용하면 복잡한 코드를 사용하여 목록 시퀀스를 채워야 하는 경우 `For Each` 루프의 단순성을 유지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-180">Iterators enable you to maintain the simplicity of a `For Each` loop when you need to use complex code to populate a list sequence.</span></span> <span data-ttu-id="3f164-181">이 기능은 다음을 수행하려는 경우에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-181">This can be useful when you want to do the following:</span></span>  
   
 -   <span data-ttu-id="3f164-182">첫 번째 `For Each` 루프 반복 후 목록 시퀀스를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="3f164-182">Modify the list sequence after the first `For Each` loop iteration.</span></span>  

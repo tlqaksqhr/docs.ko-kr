@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="e22c5-111">.NET Framework 4 이상 및 Excel의 다른 버전이 설치된 두 번째 컴퓨터</span><span class="sxs-lookup"><span data-stu-id="e22c5-111">A second computer on which the .NET Framework 4 or higher and a different version of Excel are installed.</span></span>  
   
-##  <span data-ttu-id="e22c5-112"><a name="BKMK_createapp"></a> 여러 버전의 Microsoft Office와 함께 작동 하는 응용 프로그램을 만들려면</span><span class="sxs-lookup"><span data-stu-id="e22c5-112"><a name="BKMK_createapp"></a> To create an application that works with multiple versions of Microsoft Office</span></span>  
+##  <a name="BKMK_createapp"></a> <span data-ttu-id="e22c5-112">여러 버전의 Microsoft Office와 함께 작동 하는 응용 프로그램을 만들려면</span><span class="sxs-lookup"><span data-stu-id="e22c5-112">To create an application that works with multiple versions of Microsoft Office</span></span>  
   
 1.  <span data-ttu-id="e22c5-113">Excel이 설치되어 있는 컴퓨터에서 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="e22c5-113">Start Visual Studio on a computer on which Excel is installed.</span></span>  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
 9. <span data-ttu-id="e22c5-131">Ctrl+F5를 눌러 프로젝트를 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="e22c5-131">Press CTRL+F5 to build and run the project.</span></span> <span data-ttu-id="e22c5-132">예제 코드에서 지정한 위치에 Excel 통합 문서가 만들어졌는지 확인합니다(C:\SampleFolder\SampleWorkbook.xls).</span><span class="sxs-lookup"><span data-stu-id="e22c5-132">Verify that an Excel workbook has been created at the location specified in the example code: C:\SampleFolder\SampleWorkbook.xls.</span></span>  
   
-##  <span data-ttu-id="e22c5-133"><a name="BKMK_publishapp"></a> 다른 버전의 Microsoft Office가 설치된 컴퓨터에 응용 프로그램을 게시하려면</span><span class="sxs-lookup"><span data-stu-id="e22c5-133"><a name="BKMK_publishapp"></a> To publish the application to a computer on which a different version of Microsoft Office is installed</span></span>  
+##  <a name="BKMK_publishapp"></a> <span data-ttu-id="e22c5-133">다른 버전의 Microsoft Office가 설치된 컴퓨터에 응용 프로그램을 게시하려면</span><span class="sxs-lookup"><span data-stu-id="e22c5-133">To publish the application to a computer on which a different version of Microsoft Office is installed</span></span>  
   
 1.  <span data-ttu-id="e22c5-134">이 연습에서 만든 프로젝트를 Visual Studio에서 엽니다.</span><span class="sxs-lookup"><span data-stu-id="e22c5-134">Open the project created by this walkthrough in Visual Studio.</span></span>  
   

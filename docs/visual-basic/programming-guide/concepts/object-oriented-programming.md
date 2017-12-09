@@ -278,7 +278,7 @@ Dim sampleObject = New SampleClass With
 
 - [<span data-ttu-id="8e96a-215">개체 이니셜라이저: 명명된 형식과 익명 형식</span><span class="sxs-lookup"><span data-stu-id="8e96a-215">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <span data-ttu-id="8e96a-216"><a name="Static"></a>공유 클래스 및 멤버</span><span class="sxs-lookup"><span data-stu-id="8e96a-216"><a name="Static"></a> Shared Classes and Members</span></span>  
+###  <a name="Static"></a><span data-ttu-id="8e96a-216">공유 클래스 및 멤버</span><span class="sxs-lookup"><span data-stu-id="8e96a-216">Shared Classes and Members</span></span>  
  <span data-ttu-id="8e96a-217">클래스의 공유 멤버에는 속성, 프로시저 또는 클래스의 모든 인스턴스에서 공유 되는 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="8e96a-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="8e96a-218">정의 하려면 공유 멤버:</span><span class="sxs-lookup"><span data-stu-id="8e96a-218">To define a shared member:</span></span>  

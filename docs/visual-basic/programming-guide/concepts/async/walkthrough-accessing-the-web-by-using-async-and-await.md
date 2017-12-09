@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="prerequisites"></a><span data-ttu-id="dd169-122">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="dd169-122">Prerequisites</span></span>  
  <span data-ttu-id="dd169-123">Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-123">Visual Studio 2012 or later must be installed on your computer.</span></span> <span data-ttu-id="dd169-124">자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=235233)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dd169-124">For more information, see the [Microsoft website](http://go.microsoft.com/fwlink/?LinkId=235233).</span></span>  
   
-###  <span data-ttu-id="dd169-125"><a name="CreateWPFApp"></a> WPF 응용 프로그램을 만들려면</span><span class="sxs-lookup"><span data-stu-id="dd169-125"><a name="CreateWPFApp"></a> To create a WPF application</span></span>  
+###  <a name="CreateWPFApp"></a> <span data-ttu-id="dd169-125">WPF 응용 프로그램을 만들려면</span><span class="sxs-lookup"><span data-stu-id="dd169-125">To create a WPF application</span></span>  
   
 1.  <span data-ttu-id="dd169-126">Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-126">Start Visual Studio.</span></span>  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="dd169-131">**솔루션 탐색기**에 새 프로젝트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-131">The new project appears in **Solution Explorer**.</span></span>  
   
 ##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <span data-ttu-id="dd169-132"><a name="MainWindow"></a> 간단한 WPF MainWindow를 디자인하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-132"><a name="MainWindow"></a> To design a simple WPF MainWindow</span></span>  
+###  <a name="MainWindow"></a> <span data-ttu-id="dd169-132">간단한 WPF MainWindow를 디자인하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-132">To design a simple WPF MainWindow</span></span>  
   
 1.  <span data-ttu-id="dd169-133">Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-133">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="dd169-145">WPF XAML 디자이너에 대한 자세한 내용은 [XAML 디자이너를 사용하여 UI 만들기](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dd169-145">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>  
   
 ##  <a name="BKMK_AddReference"></a>   
-###  <span data-ttu-id="dd169-146"><a name="AddRef"></a> 참조를 추가하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-146"><a name="AddRef"></a> To add a reference</span></span>  
+###  <a name="AddRef"></a> <span data-ttu-id="dd169-146">참조를 추가하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-146">To add a reference</span></span>  
   
 1.  <span data-ttu-id="dd169-147">**솔루션 탐색기**에서 프로젝트의 이름을 강조 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-147">In **Solution Explorer**, highlight your project's name.</span></span>  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/21/2017
 6.  <span data-ttu-id="dd169-153">**확인** 단추를 선택하여 대화 상자를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-153">Choose the **OK** button to close the dialog box.</span></span>  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <span data-ttu-id="dd169-154"><a name="ImportsState"></a>필요한 Import 문 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-154"><a name="ImportsState"></a> To add necessary Imports statements</span></span>  
+###  <a name="ImportsState"></a><span data-ttu-id="dd169-154">필요한 Import 문 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-154">To add necessary Imports statements</span></span>  
   
 1.  <span data-ttu-id="dd169-155">**솔루션 탐색기**, MainWindow.xaml.vb에 대 한 바로 가기 메뉴를 열고 선택한 후 **코드 보기**합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-155">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ##  <a name="BKMK_CreatSynchApp"></a>   
-###  <span data-ttu-id="dd169-157"><a name="synchronous"></a> 동기식 응용 프로그램을 만들려면</span><span class="sxs-lookup"><span data-stu-id="dd169-157"><a name="synchronous"></a> To create a synchronous application</span></span>  
+###  <a name="synchronous"></a> <span data-ttu-id="dd169-157">동기식 응용 프로그램을 만들려면</span><span class="sxs-lookup"><span data-stu-id="dd169-157">To create a synchronous application</span></span>  
   
 1.  <span data-ttu-id="dd169-158">디자인 창 MainWindow.xaml 두 번 클릭은 **시작** 를 만드는 단추는 `startButton_Click` MainWindow.xaml.vb의 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-158">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
   
@@ -231,7 +231,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ##  <a name="BKMK_TestSynchSol"></a>   
-###  <span data-ttu-id="dd169-167"><a name="testSynch"></a> 동기 솔루션을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-167"><a name="testSynch"></a> To test the synchronous solution</span></span>  
+###  <a name="testSynch"></a> <span data-ttu-id="dd169-167">동기 솔루션을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-167">To test the synchronous solution</span></span>  
   
 1.  <span data-ttu-id="dd169-168">F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-168">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
@@ -257,7 +257,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="dd169-170">개수를 표시하려면 몇 초 정도 걸릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-170">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="dd169-171">이 시간 동안 UI 스레드는 차단되어 요청한 리소스가 다운로드될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-171">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="dd169-172">따라서 **시작** 단추를 선택한 후에도 표시 창을 이동, 최대화, 최소화할 수 없으며 닫을 수도 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-172">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="dd169-173">이러한 작업은 바이트 개수가 나타나기 시작할 때까지 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-173">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="dd169-174">웹 사이트가 응답하지 않는 경우 실패한 사이트를 표시하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-174">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="dd169-175">대기를 중지하고 프로그램을 닫는 것도 어렵습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-175">It is difficult even to stop waiting and close the program.</span></span>  
   
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <span data-ttu-id="dd169-176"><a name="GetURLContents"></a> GetURLContents를 비동기 메서드로 변환하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-176"><a name="GetURLContents"></a> To convert GetURLContents to an asynchronous method</span></span>  
+###  <a name="GetURLContents"></a> <span data-ttu-id="dd169-176">GetURLContents를 비동기 메서드로 변환하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-176">To convert GetURLContents to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="dd169-177">동기 솔루션을 비동기 솔루션으로 변환하려면 `GetURLContents`에서 시작하는 것이 가장 좋습니다. <xref:System.Net.HttpWebRequest> 메서드 <xref:System.Net.HttpWebRequest.GetResponse%2A> 및 <xref:System.IO.Stream> 메서드 <xref:System.IO.Stream.CopyTo%2A> 호출은 응용 프로그램이 웹에 액세스하는 위치이기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-177">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="dd169-178">.NET Framework는 두 메서드의 비동기 버전을 제공하여 변환을 쉽게 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-178">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>  
   
@@ -339,7 +339,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="dd169-220">몇 가지 변경 작업을 통해 `GetURLContents`가 비동기 메서드로 변환되었습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-220">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>  
   
 ##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <span data-ttu-id="dd169-221"><a name="SumPageSizes"></a> SumPageSizes를 비동기 메서드로 변환하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-221"><a name="SumPageSizes"></a> To convert SumPageSizes to an asynchronous method</span></span>  
+###  <a name="SumPageSizes"></a> <span data-ttu-id="dd169-221">SumPageSizes를 비동기 메서드로 변환하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-221">To convert SumPageSizes to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="dd169-222">`SumPageSizes`에 대한 이전 절차의 단계를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-222">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="dd169-223">먼저 `GetURLContents` 호출을 비동기 호출로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-223">First, change the call to `GetURLContents` to an asynchronous call.</span></span>  
   
@@ -379,7 +379,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="dd169-235">`SumPageSizes`가 `SumPageSizesAsync`로 변환되었습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-235">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>  
   
 ##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <span data-ttu-id="dd169-236"><a name="startButton"></a> startButton_Click을 비동기 메서드로 변환하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-236"><a name="startButton"></a> To convert startButton_Click to an asynchronous method</span></span>  
+###  <a name="startButton"></a> <span data-ttu-id="dd169-236">startButton_Click을 비동기 메서드로 변환하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-236">To convert startButton_Click to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="dd169-237">이벤트 처리기에서 호출된 메서드의 이름을 `SumPageSizes`에서 `SumPageSizesAsync`로 변경하지 않은 경우 지금 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-237">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>  
   
@@ -425,7 +425,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="dd169-249">동기에서 비동기 처리로 프로젝트 변환이 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-249">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>  
   
 ##  <a name="BKMK_testAsynchSolution"></a>   
-###  <span data-ttu-id="dd169-250"><a name="testAsynch"></a> 비동기 솔루션을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-250"><a name="testAsynch"></a> To test the asynchronous solution</span></span>  
+###  <a name="testAsynch"></a> <span data-ttu-id="dd169-250">비동기 솔루션을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="dd169-250">To test the asynchronous solution</span></span>  
   
 1.  <span data-ttu-id="dd169-251">F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-251">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
@@ -436,7 +436,7 @@ ms.lasthandoff: 11/21/2017
     -   <span data-ttu-id="dd169-259">가장 중요한 점은 다운로드하는 동안 UI 스레드가 차단되지 않는다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-259">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="dd169-260">웹 리소스를 다운로드하고, 개수를 계산하고, 표시하는 동안 창을 이동하거나 크기를 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-260">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="dd169-261">웹 사이트 중 하나가 속도가 느리거나 응답하지 않는 경우 **닫기** 단추(오른쪽 위 모서리에 있는 빨간색 필드의 x)를 선택하여 작업을 취소할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-261">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>  
   
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <span data-ttu-id="dd169-262"><a name="GetURLContentsAsync"></a> GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꾸려면</span><span class="sxs-lookup"><span data-stu-id="dd169-262"><a name="GetURLContentsAsync"></a> To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
+###  <a name="GetURLContentsAsync"></a> <span data-ttu-id="dd169-262">GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꾸려면</span><span class="sxs-lookup"><span data-stu-id="dd169-262">To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
   
 1.  <span data-ttu-id="dd169-263">.NET Framework 4.5는 사용할 수 있는 다양한 비동기 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-263">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="dd169-264">그 중 하나인 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>가 바로 이 연습에 필요한 기능을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-264">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="dd169-265">이전 절차에서 만든 `GetURLContentsAsync` 메서드 대신 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-265">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>  
   
@@ -461,7 +461,7 @@ ms.lasthandoff: 11/21/2017
   
      <span data-ttu-id="dd169-271">이 버전의 프로젝트 동작은 "비동기 솔루션을 테스트하려면" 절차에서 설명한 동작과 일치해야 하지만 사용자의 노력은 훨씬 줄어듭니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-271">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>  
   
-##  <span data-ttu-id="dd169-272"><a name="BKMK_CompleteCodeExamples"></a> 예제</span><span class="sxs-lookup"><span data-stu-id="dd169-272"><a name="BKMK_CompleteCodeExamples"></a> Example</span></span>  
+##  <a name="BKMK_CompleteCodeExamples"></a> <span data-ttu-id="dd169-272">예제</span><span class="sxs-lookup"><span data-stu-id="dd169-272">Example</span></span>  
  <span data-ttu-id="dd169-273">다음 코드는 직접 작성한 `GetURLContentsAsync` 메서드를 사용하여 동기 솔루션에서 비동기 솔루션으로 변환하는 전체 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-273">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="dd169-274">원래의 동기 솔루션과 매우 유사해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dd169-274">Notice that it strongly resembles the original, synchronous solution.</span></span>  
   
 ```vb  
