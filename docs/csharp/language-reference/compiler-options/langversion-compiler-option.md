@@ -13,11 +13,11 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d034958b14c54540aa175a23067d47bd5d850bab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="langversion-c-compiler-options"></a>/langversion (C# 컴파일러 옵션)
 컴파일러가 선택한 C# 언어 사양에 포함된 구문만 허용하도록 합니다.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/21/2017
  [C# 언어 사양 참조](../../../csharp/language-reference/language-specification/index.md): .NET Foundation  
  C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) 정보 기술 - C# 언어 사양: ISO 카탈로그  
  C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) 정보 기술 - C# 언어 사양: ISO 카탈로그  
- C# 2.0 [c042926_ISO_IEC_23270_2006 (E).zip](http://go.microsoft.com/fwlink/?LinkId=144406) ISO/IEC 23270:2006(PDF 형식): ISO 자유롭게 사용할 수 있는 표준  
+ C# 2.0 [c042926_ISO_IEC_23270_2006 (E).zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip) ISO/IEC 23270:2006(PDF 형식): ISO 자유롭게 사용할 수 있는 표준  
  C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C# 언어 사양 버전 3.0: Microsoft Corporation  
  C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) 표준 ECMA-334 네 번째 버전    
  C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/download/details.aspx?id=7029) C# 언어 사양 버전 5.0: Microsoft Corporation  
