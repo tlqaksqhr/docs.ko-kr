@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="security-etw-events"></a><span data-ttu-id="a79d6-102">보안 ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="a79d6-102">Security ETW Events</span></span>
-<span data-ttu-id="a79d6-103"><a name="top"></a> 보안 이벤트는 강력한 이름 확인 및 Authenticode 확인 중에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="a79d6-103"><a name="top"></a> Security events are raised during strong name verification and Authenticode verification.</span></span>  
+<a name="top"></a> <span data-ttu-id="a79d6-103">보안 이벤트는 강력한 이름 확인 및 Authenticode 확인 중에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="a79d6-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  
   
  <span data-ttu-id="a79d6-104">이 범주는 다음 이벤트로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="a79d6-104">This category consists of the following events:</span></span>  
   

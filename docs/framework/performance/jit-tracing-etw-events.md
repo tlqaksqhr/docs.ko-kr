@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="jit-tracing-etw-events"></a><span data-ttu-id="9ecb4-102">JIT 추적 ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-102">JIT Tracing ETW Events</span></span>
-<span data-ttu-id="9ecb4-103"><a name="top"></a> 이들 이벤트는 JIT(Just-In-Time) 인라인 처리 및 JIT 마무리 호출의 성공 또는 실패와 관련된 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-103"><a name="top"></a> These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  
+<a name="top"></a> <span data-ttu-id="9ecb4-103">이들 이벤트는 JIT(Just-In-Time) 인라인 처리 및 JIT 마무리 호출의 성공 또는 실패와 관련된 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-103">These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  
   
  <span data-ttu-id="9ecb4-104">JIT 추적 이벤트는 다음 두 범주로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-104">JIT tracing events consist of the following two categories:</span></span>  
   

@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-pool-etw-events"></a><span data-ttu-id="b49a4-102">스레드 풀 ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="b49a4-102">Thread Pool ETW Events</span></span>
-<span data-ttu-id="b49a4-103"><a name="top"></a> 이러한 이벤트는 작업자 스레드 및 I/O 스레드에 대한 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="b49a4-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
+<a name="top"></a> <span data-ttu-id="b49a4-103">이러한 이벤트는 작업자 스레드 및 I/O 스레드에 대한 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="b49a4-103">These events collect information about worker and I/O threads.</span></span>  
   
  <span data-ttu-id="b49a4-104">스레드 풀 이벤트에는 다음과 같은 두 그룹이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b49a4-104">There are two groups of thread pool events:</span></span>  
   

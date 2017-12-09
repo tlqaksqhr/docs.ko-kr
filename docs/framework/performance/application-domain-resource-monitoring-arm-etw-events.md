@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a><span data-ttu-id="fb186-102">ARM(응용 프로그램 도메인 리소스 모니터링) ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="fb186-102">Application Domain Resource Monitoring (ARM) ETW Events</span></span>
-<span data-ttu-id="fb186-103"><a name="top"></a> 이들 이벤트는 응용 프로그램 도메인 상태에 대한 자세한 진단 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fb186-103"><a name="top"></a> These events provide detailed diagnostic information about the state of an application domain.</span></span> <span data-ttu-id="fb186-104">이들 이벤트를 사용하거나 응용 프로그램 도메인 리소스 모니터링(ARM) 기능을 사용하여 같은 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb186-104">You can use these events or use the application domain resource monitoring (ARM) feature to obtain the same information.</span></span>  
+<a name="top"></a> <span data-ttu-id="fb186-103">이들 이벤트는 응용 프로그램 도메인 상태에 대한 자세한 진단 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fb186-103">These events provide detailed diagnostic information about the state of an application domain.</span></span> <span data-ttu-id="fb186-104">이들 이벤트를 사용하거나 응용 프로그램 도메인 리소스 모니터링(ARM) 기능을 사용하여 같은 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb186-104">You can use these events or use the application domain resource monitoring (ARM) feature to obtain the same information.</span></span>  
   
  <span data-ttu-id="fb186-105">이 범주는 다음 이벤트로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="fb186-105">This category consists of the following events:</span></span>  
   

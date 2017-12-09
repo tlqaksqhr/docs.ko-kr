@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="garbage-collection-etw-events"></a><span data-ttu-id="fdfcb-102">가비지 컬렉션 ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="fdfcb-102">Garbage Collection ETW Events</span></span>
-<span data-ttu-id="fdfcb-103"><a name="top"></a> 이들 이벤트는 가비지 수집과 관련된 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="fdfcb-103"><a name="top"></a> These events collect information pertaining to garbage collection.</span></span> <span data-ttu-id="fdfcb-104">가비지 수집 수행 횟수, 가비지 수집 중에 해제된 메모리 양 등을 판별하는 작업을 포함하여 진단과 디버깅에 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fdfcb-104">They help in diagnostics and debugging, including determining how many times garbage collection was performed, how much memory was freed during garbage collection, and so on.</span></span>  
+<a name="top"></a> <span data-ttu-id="fdfcb-103">이들 이벤트는 가비지 수집과 관련된 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="fdfcb-103">These events collect information pertaining to garbage collection.</span></span> <span data-ttu-id="fdfcb-104">가비지 수집 수행 횟수, 가비지 수집 중에 해제된 메모리 양 등을 판별하는 작업을 포함하여 진단과 디버깅에 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fdfcb-104">They help in diagnostics and debugging, including determining how many times garbage collection was performed, how much memory was freed during garbage collection, and so on.</span></span>  
   
  <span data-ttu-id="fdfcb-105">이 범주는 다음 이벤트로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="fdfcb-105">This category consists of the following events:</span></span>  
   

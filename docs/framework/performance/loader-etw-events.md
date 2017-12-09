@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="loader-etw-events"></a><span data-ttu-id="e424d-102">로더 ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="e424d-102">Loader ETW Events</span></span>
-<span data-ttu-id="e424d-103"><a name="top"></a> 이들 이벤트는 응용 프로그램 도메인, 어셈블리 및 모듈 로드 및 언로드와 관련된 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="e424d-103"><a name="top"></a> These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  
+<a name="top"></a> <span data-ttu-id="e424d-103">이들 이벤트는 응용 프로그램 도메인, 어셈블리 및 모듈 로드 및 언로드와 관련된 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="e424d-103">These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  
   
  <span data-ttu-id="e424d-104">모든 로더 이벤트는 `LoaderKeyword` (0x8) 키워드에서 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="e424d-104">All loader events are raised under the `LoaderKeyword` (0x8) keyword.</span></span> <span data-ttu-id="e424d-105">`DCStart` 및 `DCEnd` 이벤트는 `StartRundown`/`EndRundown`이 사용되는 `LoaderRundownKeyword`(0x8)에서 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="e424d-105">The `DCStart` and the `DCEnd` events are raised under `LoaderRundownKeyword` (0x8) with `StartRundown`/`EndRundown` enabled.</span></span> <span data-ttu-id="e424d-106">자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e424d-106">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   

@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-etw-events"></a><span data-ttu-id="7845f-102">Interop ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="7845f-102">Interop ETW Events</span></span>
-<span data-ttu-id="7845f-103"><a name="top"></a> Interop 이벤트는 MSIL(Microsoft Intermediate Language) 스텁 생성 및 캐싱에 대한 정보를 캡처합니다.</span><span class="sxs-lookup"><span data-stu-id="7845f-103"><a name="top"></a> Interop events capture information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
+<a name="top"></a> <span data-ttu-id="7845f-103">Interop 이벤트는 MSIL(Microsoft Intermediate Language) 스텁 생성 및 캐싱에 대한 정보를 캡처합니다.</span><span class="sxs-lookup"><span data-stu-id="7845f-103">Interop events capture information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
   
  <span data-ttu-id="7845f-104">이 범주는 다음 이벤트로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="7845f-104">This category consists of the following events:</span></span>  
   
