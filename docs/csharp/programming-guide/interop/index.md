@@ -13,11 +13,11 @@ ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
 caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5822f2e4e120f476d925520f0681055f058e3df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2965543066b0846a6a4f8a3199590049947122f2
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="interoperability-c-programming-guide"></a>상호 운용성(C# 프로그래밍 가이드)
 상호 운용성은 비관리 코드에 대한 기존 투자를 보존하고 활용할 수 있도록 합니다. CLR(공용 언어 런타임)의 제어 하에서 실행되는 코드를 *관리 코드*라고 하고, CLR 외부에서 실행되는 코드를 *비관리 코드*라고 합니다. COM, COM+, C++ 구성 요소, ActiveX 구성 요소 및 Microsoft Win32 API는 비관리 코드의 예입니다.  
@@ -49,5 +49,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)  
+ [비관리 코드와의 상호 운용](../../../../docs/framework/interop/index.md)  
  [연습: Office 프로그래밍](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
