@@ -14,11 +14,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 10213597fa65c44a56b30c37e2e6f4e732d96954
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 프로젝트를 시퀀스로 실행되는 프로시저 시리즈로 시각화할 수 있지만 실제로 대부분의 프로그램은 이벤트 구동 방식을 따릅니다. 즉, 실행 흐름은 *이벤트*라는 외부 발생 요인에 의해 결정됩니다.  
@@ -113,5 +113,5 @@ ms.lasthandoff: 10/18/2017
 |[방법: 메모리를 절약하는 사용자 지정 이벤트 선언](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|이벤트가 처리될 때만 메모리를 사용하는 사용자 지정 이벤트를 정의하는 방법을 보여 줍니다.|  
 |[Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|상속된 구성 요소의 이벤트 처리기에서 발생하는 일반적인 문제에 대해 설명합니다.|  
 |[이벤트](../../../../standard/events/index.md)|[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 이벤트 모델 개요를 제공합니다.|  
-|[Windows Forms에서 이벤트 처리기 만들기](https://msdn.microsoft.com/library/dacysss4.aspx)|Windows Forms 개체와 관련된 이벤트로 작업하는 방법을 설명합니다.|  
+|[Windows Forms에서 이벤트 처리기 만들기](../../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows Forms 개체와 관련된 이벤트로 작업하는 방법을 설명합니다.|  
 |[대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Visual Basic의 대리자에 대해 간략하게 설명합니다.|

@@ -18,18 +18,18 @@ ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4f206310be9fb00606ff351722eb1cf491b1c693
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3c46799dea71a727b47a79f9fc108d676b253513
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>방법: LINQ 쿼리 결과를 특정 형식으로 반환(Visual Basic)
 통합 언어 쿼리 (LINQ)을 사용 하면 쉽게 데이터베이스 정보에 액세스 하 고 쿼리를 실행할 수 있습니다. LINQ 쿼리는 기본적으로 익명 형식으로 개체의 목록을 반환 합니다. 쿼리에서 사용 하 여 특정 형식의 목록을 반환 하도록 지정할 수도 있습니다는 `Select` 절.  
   
  다음 예제에서는 SQL Server 데이터베이스에 대 한 쿼리를 수행 하 고 특정 명명 된 형식으로 결과 프로젝션 하는 새 응용 프로그램을 만드는 방법을 보여 줍니다. 자세한 내용은 참조 [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) 및 [Select 절](../../../../visual-basic/language-reference/queries/select-clause.md)합니다.  
   
- 이 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 개발 컴퓨터에 Northwind 샘플 데이터베이스가 없는 경우에서 다운로드할 수 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088) 웹 사이트입니다. 자세한 내용은 [샘플 데이터베이스 다운로드](https://msdn.microsoft.com/library/bb399411)합니다.  
+ 이 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 개발 컴퓨터에 Northwind 샘플 데이터베이스가 없는 경우에서 다운로드할 수 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088) 웹 사이트입니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -86,5 +86,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [쿼리](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [DataContext 메서드 (O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

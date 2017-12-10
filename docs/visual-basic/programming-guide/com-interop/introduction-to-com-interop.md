@@ -14,11 +14,11 @@ ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 81a9d0fc7036ff1b821c46687541311f26113212
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 13df7dc6b325b97411b910c0fc8e05e65a332dc5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 소개(Visual Basic)
 구성 요소 개체 모델 (COM)에 다른 구성 요소를 응용 프로그램을 호스트 하는 기능을 노출 하는 개체 수 있습니다. COM 개체, 기본 windows 수 년에 대 한 프로그래밍 된 하는 동안 공용 언어 런타임 (CLR)에 대 한 설계 된 응용 프로그램에는 다양 한 이점을 제공 합니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
  [연습: COM 개체를 사용한 상속 구현](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)  
+ [비관리 코드와의 상호 운용](../../../../docs/framework/interop/index.md)  
  [상호 운용성 문제 해결](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [어셈블리 및 전역 어셈블리 캐시](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Tlbimp.exe(형식 라이브러리 가져오기)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  

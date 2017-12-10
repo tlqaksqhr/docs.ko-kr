@@ -13,18 +13,18 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31f458f884bb7d1aad64657244e2e0278d713c20
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="deployment-considerations-entity-framework"></a>배포 고려 사항(Entity Framework)
 이 항목에서는 데이터 액세스를 위해 ADO.NET Entity Framework를 사용하는 응용 프로그램 배포에 대한 정보를 제공합니다. Entity Framework에 대 한 자세한 내용은 참조 [시작](../../../../../docs/framework/data/adonet/ef/getting-started.md)합니다.  
   
  Entity Framework에서는 Visual Studio에서 개발을 용이하게 하는 통합된 도구 집합을 제공합니다. 자세한 내용은 참조 [ADO.NET 엔터티 데이터 모델 도구](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)합니다. 이 항목에서 Entity Framework 기반 응용 프로그램을 배포하기 위해 특정 기술을 사용하는 방법을 설명하지는 않습니다.  
   
- Visual Studio에서는 ClickOnce 배포와 같은 응용 프로그램 배포에 대한 기능을 제공합니다. 자세한 내용은 참조 [응용 프로그램 배포 및 구성 요소](https://msdn.microsoft.com/library/wtzawcsz) Visual Studio 설명서에 있습니다.  
+ Visual Studio에서는 ClickOnce 배포와 같은 응용 프로그램 배포에 대한 기능을 제공합니다. 자세한 내용은 참조 [응용 프로그램 배포 및 구성 요소](/visualstudio/deployment/deploying-applications-services-and-components) Visual Studio 설명서에 있습니다.  
   
  Entity Framework를 사용하는 응용 프로그램을 배포할 때 다음 사항을 고려해야 합니다.  
   

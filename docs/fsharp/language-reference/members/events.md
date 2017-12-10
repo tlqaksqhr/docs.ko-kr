@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 28b588f2-0c9e-4c0d-babf-901ed934638a
-ms.openlocfilehash: 43ff52134093acbd670d48ea83d40f1e9eb377c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9465f33bac6fa8234f684ddefe24cbe4d6c71028
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="events"></a>이벤트
 
@@ -182,7 +182,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>참고 항목
 [멤버](index.md)
 
-[이벤트 처리 및 발생](https://msdn.microsoft.com/library/edzehd2t.aspx)
+[이벤트 처리 및 발생](../../../../docs/standard/events/index.md)
 
 [람다 식:는 `fun` 키워드](../functions/lambda-expressions-the-fun-keyword.md)
 

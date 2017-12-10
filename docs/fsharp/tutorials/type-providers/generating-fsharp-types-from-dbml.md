@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>연습: DBML 파일에서 F# 형식 생성
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 API 참조 링크 MSDN을 이동 합니다.  docs.microsoft.com API 참조가 완전하지 않습니다.
 
-이 연습에서는 F # 3.0에 대 한 스키마 정보 인코딩된.dbml 파일에 있는 경우 데이터베이스에서 데이터에 대 한 종류를 만드는 방법을 설명 합니다. LINQ to SQL 데이터베이스 스키마를 나타내기 위해이 파일 형식을 사용 합니다. 개체 관계 (O/R) 디자이너를 사용 하 여 Visual Studio에서 LINQ to SQL 스키마 파일을 생성할 수 있습니다. 자세한 내용은 참조 [O/R 디자이너 개요](https://msdn.microsoft.com/library/bb384511.aspx) 및 [LINQ to SQL에서에서 코드 생성](https://msdn.microsoft.com/library/bb386976)합니다.
+이 연습에서는 F # 3.0에 대 한 스키마 정보 인코딩된.dbml 파일에 있는 경우 데이터베이스에서 데이터에 대 한 종류를 만드는 방법을 설명 합니다. LINQ to SQL 데이터베이스 스키마를 나타내기 위해이 파일 형식을 사용 합니다. 개체 관계 (O/R) 디자이너를 사용 하 여 Visual Studio에서 LINQ to SQL 스키마 파일을 생성할 수 있습니다. 자세한 내용은 참조 [O/R 디자이너 개요](https://msdn.microsoft.com/library/bb384511.aspx) 및 [LINQ to SQL에서에서 코드 생성](../../../../docs/framework/data/adonet/sql/linq/index.md)합니다.
 
 데이터베이스 태그 언어 (DBML) 형식 공급자를 사용 하면 컴파일 타임에 정적 연결 문자열을 지정 하지 않아도 데이터베이스 스키마에 따라 형식을 사용 하는 코드를 작성할 수 있습니다. 다른 데이터베이스, 다른 자격 증명 또는 응용 프로그램을 개발 하는 데 1 보다 다양 한 연결 문자열은 최종 응용 프로그램과 사용 합니다 가능성에 대 한 허용 해야 하는 경우에 유용할 수 있습니다. 컴파일 타임에 사용할 수 있는 데이터베이스를 직접 연결 하는 경우이 동일한 데이터베이스와 결국 빌드된 응용 프로그램에서 사용할 자격 증명도 SQLDataConnection 형식 공급자를 사용할 수 있습니다. 자세한 내용은 참조 [연습: 형식 공급자를 사용 하 여 SQL 데이터베이스에 액세스](accessing-a-sql-database.md)합니다.
 

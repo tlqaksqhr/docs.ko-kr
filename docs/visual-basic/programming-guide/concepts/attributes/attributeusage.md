@@ -12,11 +12,11 @@ ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aef00d201c3dea82f67395bee0d85f8989afa01e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 29d227cf50fe23d5619bf5fb6f9a598ea78ef077
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 사용자 지정 특성 클래스를 사용하는 방법을 결정합니다. `AttributeUsage`는 새 특성 적용 방법을 제어하기 위해 사용자 지정 특성 정의에 적용할 수 있는 특성입니다. 기본 설정은 명시적으로 적용될 경우 다음과 같이 표시됩니다.  
@@ -174,7 +174,7 @@ A2
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)  
- [특성](https://msdn.microsoft.com/library/5x6cd29c)  
+ [특성](../../../../../docs/standard/attributes/index.md)  
  [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [특성(Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [사용자 지정 특성 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  

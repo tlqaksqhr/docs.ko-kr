@@ -14,11 +14,11 @@ ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fa9fca7f0590846f60577787aa476539a2c872a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cdbd8edaefba4554e8de92cb600f045dc39f780
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt; 는 오버 로드 하므로 CLS 규격이 아닙니다 &lt;proceduresignature2&gt; 에서 배열 매개 변수 형식의 배열 또는 배열 매개 변수 형식의 차수만 다른
 프로시저 또는 속성으로 표시 되어 `<CLSCompliant(True)>` 때 다른 프로시저 또는 속성을 재정의 하 고 매개 변수 목록은 간의 유일한 차이점은 중첩 수준의 가변된 배열 또는 배열의 차수입니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
   
- 두 번째 선언에는 원래 1 차원 매개 변수 변경 `arrayParam` 배열의 배열에 있습니다. 세 번째 선언 변경 내용 `arrayParam` 를 2 차원 배열 (rank 2). Visual Basic에서는 이러한 변경 중 하나에 의해서만 달라를 오버 로드를 허용 하는 동안 이러한 오버 로드와 호환 되지 않는 [언어 독립성 및 언어 독립적 구성 요소](https://msdn.microsoft.com/library/12a7a7h3) (CLS).  
+ 두 번째 선언에는 원래 1 차원 매개 변수 변경 `arrayParam` 배열의 배열에 있습니다. 세 번째 선언 변경 내용 `arrayParam` 를 2 차원 배열 (rank 2). Visual Basic에서는 이러한 변경 중 하나에 의해서만 달라를 오버 로드를 허용 하는 동안 이러한 오버 로드와 호환 되지 않는 [언어 독립성 및 언어 독립적 구성 요소](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS).  
   
  <xref:System.CLSCompliantAttribute> 를 프로그래밍 요소에 적용하는 경우 특성의 `isCompliant` 매개 변수를 `True` 또는 `False` 로 설정하여 준수 여부를 나타냅니다. 이 매개 변수에는 기본값이 없으며 값을 제공해야 합니다.  
   

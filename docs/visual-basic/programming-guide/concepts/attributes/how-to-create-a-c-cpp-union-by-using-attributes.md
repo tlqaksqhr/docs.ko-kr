@@ -12,11 +12,11 @@ ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: eb25f8e8664bf0c99fd19dd66031fcb5ba8dd799
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bcb5291737a9f4763f680daaf625c58d308423f8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>방법: 특성 (Visual Basic)를 사용 하 여 C/c + + 공용 구조체 만들기
 특성을 사용하면 메모리에서 구조체가 레이아웃되는 방식을 사용자 지정할 수 있습니다. 예를 들어 `StructLayout(LayoutKind.Explicit)` 및 `FieldOffset` 특성을 사용하여 C/C++에서 공용 구조체로 알려진 항목을 만들 수 있습니다.  
@@ -79,7 +79,7 @@ Structure TestExplicit
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)  
- [특성](https://msdn.microsoft.com/library/5x6cd29c)  
+ [특성](../../../../../docs/standard/attributes/index.md)  
  [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [특성(Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [사용자 지정 특성 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  

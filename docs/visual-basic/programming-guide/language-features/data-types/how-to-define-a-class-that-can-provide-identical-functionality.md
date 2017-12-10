@@ -35,11 +35,11 @@ ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7cc2563f193fba9f9e30fcdfd5ea2766be16ba63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c81d1f795b0c27f2eaf07832f2c1276b626f5ce1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의(Visual Basic)
 여러 데이터 형식에 대해 동일한 기능을 제공하는 개체를 만들 수 있는 클래스를 정의할 수 있습니다. 이렇게 하려면 정의에 하나 이상의 *형식 매개 변수* 를 지정합니다. 그러면 클래스는 여러 데이터 형식을 사용하는 개체의 템플릿 역할을 할 수 있습니다. 이 방법으로 정의된 클래스를 *제네릭 클래스*라고 합니다.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Visual Basic의 제네릭 형식](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [언어 독립성 및 언어 독립적 구성 요소](https://msdn.microsoft.com/library/12a7a7h3)  
+ [언어 독립성 및 언어 독립적 구성 요소](../../../../../docs/standard/language-independence-and-language-independent-components.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [형식 목록](../../../../visual-basic/language-reference/statements/type-list.md)  
  [방법: 제네릭 클래스 사용](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  

@@ -12,11 +12,11 @@ ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4781e7ee60017455796d460d8d7bddb9f7c49676
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f536d4c420f24241a4b5f36094dad2f6c335f1d6
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="common-attributes-visual-basic"></a>공통 특성 (Visual Basic)
 이 항목에서는 Visual Basic 프로그램에 가장 일반적으로 사용 되는 특성에 설명 합니다.  
@@ -267,6 +267,6 @@ End Structure
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)  
- [특성](https://msdn.microsoft.com/library/5x6cd29c)  
+ [특성](../../../../../docs/standard/attributes/index.md)  
  [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [리플렉션을 사용하여 특성 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

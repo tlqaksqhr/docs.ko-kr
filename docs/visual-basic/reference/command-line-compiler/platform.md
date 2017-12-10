@@ -14,11 +14,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4d52ade26bc249625a77720fe05ad9c1ab58b04f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4177b9da15bb89f37a7b3cbb27937e09d1c12635
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="platform-visual-basic"></a>/platform(Visual Basic)
 출력 파일을 실행할 수 있는 CLR(공용 언어 런타임) 플랫폼 버전을 지정합니다.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 -   `/platform:anycpu32bitpreferred`로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.  
   
- 64 비트 버전의 Windows에서 실행 되도록 응용 프로그램을 개발 하는 방법에 대 한 자세한 내용은 참조 [64 비트 응용 프로그램](https://msdn.microsoft.com/library/ms241064)합니다.  
+ 64 비트 버전의 Windows에서 실행 되도록 응용 프로그램을 개발 하는 방법에 대 한 자세한 내용은 참조 [64 비트 응용 프로그램](../../../../docs/framework/64-bit-apps.md)합니다.  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>Visual Studio IDE에서 /platform을 설정하려면  
   

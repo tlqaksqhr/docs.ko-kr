@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 691b65280b958edcf8e856ee6df793e0b7b05184
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>선언된 요소 이름(Visual Basic)
 선언 된 모든 요소 이름이 라고도 *식별자*는 코드는 참조 하는 데 사용 하는 하 합니다.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
  `xyz$wv`  
   
 > [!CAUTION]
->  밑줄로 시작 하는 요소 이름 (`_`)의 일부가 [언어 독립성 및 언어 독립적 구성 요소](https://msdn.microsoft.com/library/12a7a7h3) (CLS), 하므로 CLS 규격 코드에서 해당 이름을 정의 하는 구성 요소를 사용할 수 없습니다. 그러나 다른 위치에서 요소 이름에 밑줄은 CLS 규격이 합니다.  
+>  밑줄로 시작 하는 요소 이름 (`_`)의 일부가 [언어 독립성 및 언어 독립적 구성 요소](../../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), 하므로 CLS 규격 코드에서 해당 이름을 정의 하는 구성 요소를 사용할 수 없습니다. 그러나 다른 위치에서 요소 이름에 밑줄은 CLS 규격이 합니다.  
   
 ### <a name="name-length-guidelines"></a>이름 길이 지침  
  명확히 요소의 특성을 식별 하는 동안 사용자 이름은 최대한 단축 해야 합니다. 이 코드의 가독성을 높일 수 및 줄 길이 소스 파일 크기를 줄입니다.  

@@ -14,16 +14,16 @@ ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d45da3b061dff0f82c1155daf5724033261bbdaa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 16c12ee6c4f6efa20b9bab5ccf10077496b931ac
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="type-lttypenamegt-is-not-cls-compliant"></a>형식 &lt;typename&gt; CLS 규격이 아닙니다
 변수, 속성 또는 함수 반환는 CLS 호환 되지 않는 데이터 형식으로 선언 됩니다.  
   
- 과 호환 되도록 응용 프로그램에 대 한는 [언어 독립성 및 언어 독립적 구성 요소](https://msdn.microsoft.com/library/12a7a7h3) (CLS) CLS 규격 형식만 사용 해야 합니다.  
+ 과 호환 되도록 응용 프로그램에 대 한는 [언어 독립성 및 언어 독립적 구성 요소](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS) CLS 규격 형식만 사용 해야 합니다.  
   
  다음 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 데이터 형식은 CLS 규격이 아닙니다.  
   

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: bcba1e5d1cae1c610525c51bdbdd54088359e79a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-f-development-environment-features"></a>Visual F# 개발 환경 기능
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |보안 (신뢰 수준 변경)|아니요||
 
 ## <a name="code-and-text-editor-features"></a>코드 및 텍스트 편집기 기능
-Visual studio 코드 및 텍스트 편집기의 다음 기능은 F #에서 사용할 수 있습니다. Visual Studio 및 텍스트 편집기의 기능에 코드를 편집 하는 방법에 대 한 일반 정보를 참조 하십시오. [코드 및 텍스트 편집기에서 코드 작성](https://msdn.microsoft.com/library/efc4xwkb.aspx)합니다.
+Visual studio 코드 및 텍스트 편집기의 다음 기능은 F #에서 사용할 수 있습니다. Visual Studio 및 텍스트 편집기의 기능에 코드를 편집 하는 방법에 대 한 일반 정보를 참조 하십시오. [코드 및 텍스트 편집기에서 코드 작성](/visualstudio/ide/writing-code-in-the-code-and-text-editor)합니다.
 
 |기능|설명|F #에서 지원?|
 |-------|-----------|----------------|
@@ -58,18 +58,18 @@ Visual studio 코드 및 텍스트 편집기의 다음 기능은 F #에서 사�
 |붙여넣을 때 서식 자동|표준 들여쓰기 및 스타일을 사용 하 여 코드의 서식을 다시 지정 합니다.|아니요|
 |책갈피|편집기에서 위치를 저장할 수 있습니다.|예|
 |들여쓰기를 변경|선택한 줄 들여쓰거나 들여쓰기입니다.|예|
-|[텍스트 찾기 및 바꾸기](https://msdn.microsoft.com/library/139eef4h.aspx)|파일, 프로젝트 또는 솔루션을 검색 하 고 잠재적으로 텍스트를 변경할 수 있습니다.|예|
+|[텍스트 찾기 및 바꾸기](/visualstudio/ide/finding-and-replacing-text)|파일, 프로젝트 또는 솔루션을 검색 하 고 잠재적으로 텍스트를 변경할 수 있습니다.|예|
 |.NET Framework API에 대 한 정의로 이동|에.NET Framework API 커서가.NET Framework 메타 데이터에서 생성 된 코드에 표시 됩니다.|아니요|
 |사용자 지정 API에 대 한 정의로 이동|커서가 있는 경우에 엔터티가 정의 되어 있는 프로그램 코드의 위치에 커서를 이동, 정의 된 프로그램 엔터티.|예|
 |줄 이동|줄 번호에 따라 파일의 특정 줄으로 이동할 수 있습니다.|예|
 |파일의 맨 위에 탐색 모음|위치로 이동, 코드에서 by, 예를 들어 함수 이름 수 있습니다.|예|
-|개요 참조 [개요](https://msdn.microsoft.com/library/td6a5x4s.aspx)합니다.|보다 간단한 보기를 만드는 코드 섹션을 축소할 수 있습니다.|예|
+|개요 참조 [개요](/visualstudio/ide/outlining)합니다.|보다 간단한 보기를 만드는 코드 섹션을 축소할 수 있습니다.|예|
 |공백을 탭으로|공백을 탭으로 변환 합니다.|예|
 |유형 색 지정|특별 한 색에서 정의 된 형식 이름을 보여 줍니다.|예|
 |빠른 찾기입니다. 빠른 찾기, 찾기 및 바꾸기 창을 참조 하십시오.|파일 또는 프로젝트에서 검색할 수 있습니다.|예|
 
 ## <a name="intellisense-features"></a>IntelliSense 기능
-다음 표에서 요약 IntelliSense 기능을 지원 하 고 F #에서 지원 되지 않습니다. IntelliSense에 대 한 일반 정보를 참조 하십시오. [IntelliSense를 사용 하 여](https://msdn.microsoft.com/library/hcw1s69b.aspx)합니다.
+다음 표에서 요약 IntelliSense 기능을 지원 하 고 F #에서 지원 되지 않습니다. IntelliSense에 대 한 일반 정보를 참조 하십시오. [IntelliSense를 사용 하 여](/visualstudio/ide/using-intellisense)합니다.
 
 |기능|설명|F #에서 지원?|
 |-------|-----------|----------------|
@@ -108,10 +108,10 @@ F # 코드의 리팩터링 Visual Studio 2012에서 지원 되지 않습니다.
 |호출 계층 구조|코드에서 호출 하는 함수의 중첩된 구조를 표시 합니다.|아니요|
 |코드 메트릭|줄 수와 같은 사용자 코드에 대 한 정보를 수집합니다.|아니요|
 |클래스 뷰|프로젝트에서 코드의 형식 기반 보기를 제공합니다.|아니요|
-|[오류 목록 창](https://msdn.microsoft.com/library/33df3b7a.aspx)|코드에서 오류 목록을 보여 줍니다.|예|
+|[오류 목록 창](/visualstudio/ide/reference/error-list-window)|코드에서 오류 목록을 보여 줍니다.|예|
 |[F# Interactive](../tutorials/fsharp-interactive/index.md)|코드 입력 (또는 복사, 붙여넣기) F # 하 고 프로젝트의 빌드와 관계 없이 즉시 실행할 수 있습니다. F # Interactive 읽기, 평가, 인쇄 루프 (REPL)입니다.|예|
 |개체 브라우저|어셈블리에서 형식을 볼 수 있습니다.|F # 유형은 컴파일된 어셈블리에 표시 된 대로 표시 되지 않습니다 작성 한 대로 정확 하 게 합니다. F # 형식 컴파일된 표현이 탐색할 수 있지만 F #에서 표시 된 대로 형식을 볼 수 없습니다.|
-|[출력 창](https://msdn.microsoft.com/library/3hk6fby3.aspx)|빌드 출력을 표시 합니다.|예|
+|[출력 창](/visualstudio/ide/reference/output-window)|빌드 출력을 표시 합니다.|예|
 |성능 분석|코드의 성능을 측정 하기 위한 도구를 제공 합니다.|예|
 |속성 창|표시 하 고 포커스가 있는 개발 환경에서 개체의 속성을 편집할 수 있습니다.|예|
 |[서버 탐색기](https://msdn.microsoft.com/library/x603htbk.aspx)|다양 한 서버 리소스와 상호 작용 하는 방법을 제공 합니다.|예|

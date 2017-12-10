@@ -14,11 +14,11 @@ ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 887e84843201c64f7dd7b056b5e31d5ccd91bf23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f7c5ffa255ba9ac2f062ea52eb3471659e0192b
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="keycontainer"></a>T:System.Reflection.AssemblyKeyNameAttribute
 어셈블리에 강력한 이름을 지정하는 키 쌍의 키 컨테이너 이름을 지정합니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)을 사용하여 암호화 정보를 컴파일러에 전달할 수도 있습니다. 부분 서명된 어셈블리가 필요한 경우 [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)을 사용합니다.  
   
- 참조 [and using strong-named Assemblies](https://msdn.microsoft.com/library/xwb8f617) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
+ 참조 [and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
   
 > [!NOTE]
 >  `/keycontainer` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 경우에 사용할 수는 있습니다.  

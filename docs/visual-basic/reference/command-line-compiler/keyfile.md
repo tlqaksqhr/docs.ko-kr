@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 33c9bdf3cf055ea005542f8b2471963b16c16122
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="keyfile"></a>T:System.Reflection.AssemblyKeyFileAttribute
 어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  키 파일에는 공개 키만 포함될 수 있습니다.  
   
- 참조 [and using strong-named Assemblies](https://msdn.microsoft.com/library/xwb8f617) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
+ 참조 [and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
   
 > [!NOTE]
 >  `/keyfile` 옵션 내에서 사용할 수 없는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 개발 환경; 명령줄에서 컴파일할 경우에 사용 가능 합니다.  

@@ -14,11 +14,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 87c87852024412b7a7ed55a2c429842ce75a13a8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 6a64eaba75128a3844847fbf803c86c2d700db72
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop(Visual Basic)
 COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요소에 노출하고 응용 프로그램을 호스트할 수 있습니다. 오늘날 대부분의 소프트웨어에는 COM 개체가 포함됩니다. 새 응용 프로그램에는 .NET 어셈블리가 제일 나은 선택이지만 때로는 COM 개체를 채택해야 할 수 있습니다. 이 섹션에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 COM 개체를 만들고 사용하는 작업에 관련된 일부 문제를 설명합니다.  
@@ -55,7 +55,7 @@ COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요
  기존 COM 개체를 새 개체의 기반으로 사용하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)  
+ [비관리 코드와의 상호 운용](../../../../docs/framework/interop/index.md)  
  공용 언어 런타임에서 제공하는 상호 운용성 서비스를 설명합니다.  
   
  [.NET Framework에 COM 구성 요소 노출](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
@@ -64,5 +64,5 @@ COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요
  [.NET Framework 구성 요소를 COM에 노출](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  COM에서 관리되는 형식의 준비 및 사용을 설명합니다.  
   
- [Interop 특성 적용](https://msdn.microsoft.com/library/d4w8x20h)  
+ [Interop 특성 적용](../../../../docs/framework/interop/applying-interop-attributes.md)  
  비관리 코드를 사용할 때 사용할 수 있는 특성을 설명합니다.

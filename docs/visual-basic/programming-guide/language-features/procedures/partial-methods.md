@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="partial-methods-visual-basic"></a>부분 메서드(Visual Basic)
 부분 메서드는 개발자가 코드를 사용자 지정 논리를 삽입할 수를 사용 합니다. 일반적으로 코드는 디자이너에서 생성 된 클래스의 일부입니다. 부분 메서드는 코드 생성기에 의해 만들어진 partial 클래스에 정의 된 하 고 변경 된 내용이 알림을 제공 하 여 일반적으로 사용 됩니다. 사용 개발자는 변경에 따른에서 사용자 지정 동작을 지정할 수 있습니다.  
@@ -83,5 +83,5 @@ End Sub
  [Sub 프로시저](./sub-procedures.md)  
  [선택적 매개 변수](./optional-parameters.md)  
  [부분](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [LINQ to SQL에서에서 코드 생성](https://msdn.microsoft.com/library/bb399400)  
- [부분 메서드를 사용 하 여 비즈니스 논리 추가](https://msdn.microsoft.com/library/bb546176)
+ [LINQ to SQL에서 코드 생성](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [부분 메서드를 사용 하 여 비즈니스 논리 추가](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

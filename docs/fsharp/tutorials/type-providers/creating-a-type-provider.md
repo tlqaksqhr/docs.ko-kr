@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a1d6315c2546de12e85efdd06cf2520605cb6e91
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tutorial-creating-a-type-provider"></a>자습서: 형식 공급자 만들기
 
@@ -169,7 +169,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 대신, Visual Studio를 열고, 디버그 메뉴를 열고, 선택 `Debug/Attach to process…`, 및 다른 연결 `devenv` 스크립트를 편집 하는 프로세스입니다. 이 메서드를 사용 하 여 대화형으로 식을 전체 IntelliSense 및 기타 기능) (사용 하 여 두 번째 인스턴스를 입력 하 여 형식 공급자에서 특정 논리를 보다 쉽게 지정할 수 있습니다.
 
-생성 된 코드의에서 오류를 확인 하는 데를 디버깅 하는 내 코드만 해제할 수 있습니다. 사용 하도록 설정 하거나이 기능을 사용 하지 않도록 설정 하는 방법에 대 한 정보를 참조 하십시오. [디버거로 코드 탐색](https://msdn.microsoft.com/library/y740d9d3.aspx)합니다. 첫째 예외를 열어 알림도 설정할 수는 또한는 `Debug` 메뉴를 선택한 다음 `Exceptions` 또는를 열려면 Ctrl + Alt + E 키를 선택 하 여는 `Exceptions` 대화 상자. 해당 대화 상자에서 아래 `Common Language Runtime Exceptions`, 선택는 `Thrown` 확인란 합니다.
+생성 된 코드의에서 오류를 확인 하는 데를 디버깅 하는 내 코드만 해제할 수 있습니다. 사용 하도록 설정 하거나이 기능을 사용 하지 않도록 설정 하는 방법에 대 한 정보를 참조 하십시오. [디버거로 코드 탐색](/visualstudio/debugger/navigating-through-code-with-the-debugger)합니다. 첫째 예외를 열어 알림도 설정할 수는 또한는 `Debug` 메뉴를 선택한 다음 `Exceptions` 또는를 열려면 Ctrl + Alt + E 키를 선택 하 여는 `Exceptions` 대화 상자. 해당 대화 상자에서 아래 `Common Language Runtime Exceptions`, 선택는 `Thrown` 확인란 합니다.
 
 
 ### <a name="implementation-of-the-type-provider"></a>형식 공급자의 구현

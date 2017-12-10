@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c26b6124-ceaa-471c-9dc9-861b4dfa332a
-ms.openlocfilehash: 4f525b2b750c2ce42230c61aa0e72f957739b206
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 69b73983a91bc6c7cc38fa34484a3c89fc01858f
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="external-functions"></a>외부 함수
 
@@ -53,7 +53,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-네이티브 코드와의 상호 운용성 라고 *플랫폼 호출* 및 CLR의 기능입니다. 자세한 내용은 [비관리 코드 상호 운용](https://msdn.microsoft.com/library/sd10k43k.aspx)을 참조하세요. 해당 섹션의 정보는 F #에 적용 됩니다.
+네이티브 코드와의 상호 운용성 라고 *플랫폼 호출* 및 CLR의 기능입니다. 자세한 내용은 [비관리 코드 상호 운용](../../../../docs/framework/interop/index.md)을 참조하세요. 해당 섹션의 정보는 F #에 적용 됩니다.
 
 
 ## <a name="see-also"></a>참고 항목

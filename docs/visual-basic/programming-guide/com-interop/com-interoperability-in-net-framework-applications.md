@@ -15,11 +15,11 @@ ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d9347f7771e0e86f9a19cbec94ef59dcf1bdb250
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 28ec54dc062d4fdea4836b0ecc8699982dace623
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 응용 프로그램의 COM 상호 운용성(Visual Basic)
 동일한 응용 프로그램에서 COM 개체와.NET Framework 개체를 사용 하려는 경우 개체가 메모리에 존재 하는 방식에서 차이 해결 해야 합니다. 관리 되는 메모리에 있는.NET Framework 개체-공용 언어 런타임에 의해 제어 하는 메모리-필요에 따라 런타임에 의해 이동 될 수 있습니다. COM 개체는 관리 되지 않는 메모리에 있으며 다른 메모리 위치로 이동 될 수 없습니다. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 이러한 상호 작용을 제어 하는 도구를 관리 및 구성 요소 관리 되지 않는 리소스를 제공 합니다. 관리 코드에 대 한 자세한 내용은 참조 [공용 언어 런타임](../../../standard/clr.md)합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 10/22/2017
  [COM Interop 래퍼 오류](/cpp/misc/com-interop-wrapper-error)  
  프로젝트 시스템에서 특정 구성 요소에 대 한 COM 상호 운용성 래퍼를 만들 수 없는 경우 결과 및 옵션에 설명 합니다.  
   
- [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)  
+ [비관리 코드와의 상호 운용](../../../../docs/framework/interop/index.md)  
  간략하게 관리 코드와 관리 되지 않는 코드 상호 작용 문제 중 일부를 설명 하 고 추가 정보에 대 한 링크를 제공 합니다.  
   
  [COM 래퍼](../../../framework/interop/com-wrappers.md)  

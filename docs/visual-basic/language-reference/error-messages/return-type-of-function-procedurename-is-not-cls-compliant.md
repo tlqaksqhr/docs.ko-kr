@@ -14,16 +14,16 @@ ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 16670521ec09ae9cab28bf6ca4705c131fd84701
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 14adc6f8f2d89713bd681a1d55e4801b930cf642
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>함수 &#39;의 반환 형식 &lt;procedurename&gt;&#39; CLS 규격이 아닙니다
 A `Function` 절차로 표시 되어 `<CLSCompliant(True)>` 로 표시 된 형식을 반환 하지만 `<CLSCompliant(False)>`은 표시 되지 않았거나, 비규격 형식 이므로 사용할 수 없는 합니다.  
   
- 프로시저가 [언어 독립성 및 언어 독립적 구성 요소](https://msdn.microsoft.com/library/12a7a7h3)(CLS)와 호환되려면 CLS 규격 형식만 사용해야 합니다. 이는 매개 변수 형식, 반환 형식 및 모든 로컬 변수 형식에 적용됩니다.  
+ 프로시저가 [언어 독립성 및 언어 독립적 구성 요소](../../../../docs/standard/language-independence-and-language-independent-components.md)(CLS)와 호환되려면 CLS 규격 형식만 사용해야 합니다. 이는 매개 변수 형식, 반환 형식 및 모든 로컬 변수 형식에 적용됩니다.  
   
  다음 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 데이터 형식은 CLS 규격이 아닙니다.  
   

@@ -14,16 +14,16 @@ ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 358abd338d3ce780c2f0aae7aa8efb53e57b477c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2811958df5bd0b023a2ce3b02abf85b5a23c58f6
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a>비 CLS 규격 &lt;membername&gt; CLS 규격 인터페이스에서는 허용 되지 않습니다
 속성, 프로시저 또는 인터페이스의 이벤트로 표시 되어 `<CLSCompliant(True)>` 인터페이스 자체로 표시 되 면 `<CLSCompliant(False)>` 되거나 표시 되지 않습니다.  
   
- 과 호환 되도록 인터페이스는 [언어 독립성 및 언어 독립적 구성 요소](https://msdn.microsoft.com/library/12a7a7h3) (CLS) 모든 해당 멤버 규정을 준수 해야 합니다.  
+ 과 호환 되도록 인터페이스는 [언어 독립성 및 언어 독립적 구성 요소](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS) 모든 해당 멤버 규정을 준수 해야 합니다.  
   
  <xref:System.CLSCompliantAttribute> 를 프로그래밍 요소에 적용하는 경우 특성의 `isCompliant` 매개 변수를 `True` 또는 `False` 로 설정하여 준수 여부를 나타냅니다. 이 매개 변수에는 기본값이 없으며 값을 제공해야 합니다.  
   

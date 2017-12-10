@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c797cf0b-5953-4053-8626-0558e9eaf10f
-ms.openlocfilehash: 0857418141a2383795d736fd507fcab5dbeaba24
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4bc9861f489eb068ca58656ab4ee9d43e8d212d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="compiler-options"></a>컴파일러 옵션
 
@@ -81,4 +81,4 @@ ms.lasthandoff: 10/18/2017
 |제목|설명|
 |-----|-----------|
 |[F# Interactive 옵션](../tutorials/fsharp-interactive/fsharp-interactive-options.md)|F # 인터프리터에 의해 지원 되는 명령줄 옵션 설명 fsi.exe 합니다.|
-|[프로젝트 속성 참조](https://msdn.microsoft.com/library/16satcwx.aspx)|UI 빌드 옵션을 제공 하는 프로젝트 속성 페이지를 포함 하 여 프로젝트에 대해 설명 합니다.|
+|[프로젝트 속성 참조](/visualstudio/ide/reference/project-properties-reference)|UI 빌드 옵션을 제공 하는 프로젝트 속성 페이지를 포함 하 여 프로젝트에 대해 설명 합니다.|

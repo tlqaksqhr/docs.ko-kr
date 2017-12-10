@@ -14,11 +14,11 @@ ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c42e351808281d90eafdb6e61a3f1736ef15c9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dc457a1a32048441f82976488158f223e7e3e087
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="delaysign"></a>T:System.Reflection.AssemblyDelaySignAttribute
 어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  사용 하 여 예를 들어 `/delaysign+`, 조직 내에서 개발자 테스터를 전역 어셈블리 캐시에 등록 하 고 사용할 수 있는 어셈블리의 서명 되지 않은 테스트 버전을 배포할 수 있습니다. 어셈블리에 대 한 작업 완료 되 면 회사의 개인 키에 대 한 사용자 어셈블리에 완전히 서명할 수 있습니다. 이 작업의 공개, 모든 개발자가 어셈블리에 작업할 수 있도록 허용 하면서 회사의 개인 키를 보호 합니다.  
   
- 참조 [and using strong-named Assemblies](https://msdn.microsoft.com/library/xwb8f617) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
+ 참조 [and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
   
 ### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>Visual Studio에서 /delaysign을 설정 하려면 통합 개발 환경  
   

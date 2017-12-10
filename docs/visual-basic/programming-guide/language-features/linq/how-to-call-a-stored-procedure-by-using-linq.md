@@ -16,18 +16,18 @@ ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7fb2d119d56cb643ebc1b43894952a6323e5e06e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 943bf4c80d88633cad857896381efcbef69683cc
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 저장 프로시저 호출(Visual Basic)
 통합 언어 쿼리 (LINQ) 쉽게 데이터베이스 개체와 같은 저장 프로시저를 포함 하 여 데이터베이스 정보에 액세스할 수 있습니다.  
   
  다음 예제에는 SQL Server 데이터베이스의 저장된 프로시저를 호출 하는 응용 프로그램을 만드는 방법을 보여 줍니다. 샘플은 데이터베이스에 두 개의 다른 저장된 프로시저를 호출 하는 방법을 보여 줍니다. 각 프로시저 쿼리의 결과 반환합니다. 하나의 프로시저 입력된 매개 변수를 사용 하 고 다른 프로시저 매개 변수를 사용 하지 않는 합니다.  
   
- 이 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 개발 컴퓨터에 Northwind 샘플 데이터베이스가 없는 경우에서 다운로드할 수 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088) 웹 사이트입니다. 자세한 내용은 [샘플 데이터베이스 다운로드](https://msdn.microsoft.com/library/bb399411)합니다.  
+ 이 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 개발 컴퓨터에 Northwind 샘플 데이터베이스가 없는 경우에서 다운로드할 수 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088) 웹 사이트입니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -79,6 +79,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [쿼리](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [DataContext 메서드 (O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
  [방법: 저장된 프로시저를 할당 업데이트, 삽입 및 삭제 (O/R 디자이너)를 수행 합니다.](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

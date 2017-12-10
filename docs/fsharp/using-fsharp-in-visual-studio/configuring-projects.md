@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: d2a92f725c40443c8dc6af593d28deccd3ee88de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Visual Studio에서 프로젝트 구성
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |`Build`|[빌드 페이지, 프로젝트 디자이너 &#40; C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|코드 컴파일 방식을 제어할 수 있습니다.|
 |`Build Events`|[빌드 이벤트 페이지, 프로젝트 디자이너 &#40; C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|이전 또는 이후에 컴파일 실행할 명령을 지정할 수 있습니다.|
 |`Debug`|[프로젝트 디자이너, 디버그 페이지](https://msdn.microsoft.com/library/2wcdezs5.aspx)|디버깅 하는 동안 응용 프로그램을 실행 하는 방법을 제어할 수 있습니다. 이 포함 및 사용 하 여 응용 프로그램의 시작 디렉터리 무엇 인지 명령줄과 특수 디버깅 네이티브 코드 및 SQL과 같이 활성화 하 시겠습니까 모드입니다.|
-|`Reference Paths`|[프로젝트의 참조 관리](https://msdn.microsoft.com/library/ez524kew.aspx)|코드에 종속 된 어셈블리를 검색할 위치를 지정할 수 있습니다.|
+|`Reference Paths`|[프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)|코드에 종속 된 어셈블리를 검색할 위치를 지정할 수 있습니다.|
 
 ## <a name="f-specific-settings"></a>F #-특정 설정
 다음 표에서 F #에 관련 된 설정을 요약 되어 있습니다.
