@@ -11,11 +11,11 @@ ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 450fb922079ca6737b8db7754f25435b9c3b884b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9274b585c2fecf53b94d94f9bdfdaf4a47f1041
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>방법: 특성을 사용하여 C/C++ 공용 구조체 만들기(C#)
 특성을 사용하면 메모리에서 구조체가 레이아웃되는 방식을 사용자 지정할 수 있습니다. 예를 들어 `StructLayout(LayoutKind.Explicit)` 및 `FieldOffset` 특성을 사용하여 C/C++에서 공용 구조체로 알려진 항목을 만들 수 있습니다.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)  
- [특성](https://msdn.microsoft.com/library/5x6cd29c)  
+ [특성](../../../../../docs/standard/attributes/index.md)  
  [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [특성(C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [사용자 지정 특성 만들기(C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  

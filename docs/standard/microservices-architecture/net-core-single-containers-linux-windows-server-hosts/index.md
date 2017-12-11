@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 73d733a45837d047319312ea7b2e558a02b39eba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: a50c2ad3183c80fd76e6db042674e49367d7ffc9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Linux 또는 Windows Nano 서버 호스트에 단일 컨테이너 기반 .NET Core 웹 응용 프로그램 배포
 
@@ -119,6 +118,8 @@ services:
   command: /bin/bash -c "dotnet restore ./eShopWeb.sln && dotnet publish  ./eShopWeb.sln -c Release -o ./obj/Docker/publish"
 ```
 
+**참고**: .NET Core 2.0부터는 dotnet publish가 실행되면 자동으로 dotnet restore 명령이 실행됩니다.
+
 이 이미지는 ASP.NET Core 빌드 이미지입니다. 해당 이미지에는 응용 프로그램을 빌드하고 필수 이미지를 만들기 위한 SDK와 빌드 도구가 포함됩니다. 이 파일을 사용하여 **docker-compose** 프로젝트를 실행하면 이미지에서 컨테이너가 빌드된 후 해당 컨테이너에서 응용 프로그램의 이미지가 빌드됩니다. docker-compose 파일을 명령줄의 일부로 지정하여 Docker 컨테이너에서 응용 프로그램을 빌드한 다음 시작하면 됩니다.
 
 다른 응용 프로그램을 실행할 때와 같이 Visual Studio에서 **docker-compose** 프로젝트를 시작 프로젝트로 선택한 다음 Ctrl+F5(디버그하려면 F5 키)를 눌러 Docker 컨테이너에서 응용 프로그램을 실행할 수 있습니다. **docker-compose** 프로젝트를 시작하면 Visual Studio는 docker-compose.yml 파일, docker-compose.override.yml 파일 및 docker-compose.vs.\* 파일 중 하나를 사용하여 **docker-compose**를 실행합니다. 응용 프로그램이 시작되면 Visual Studio에서는 브라우저가 시작됩니다.
@@ -145,4 +146,3 @@ Docker 지원을 추가하는 마법사는 실행 중인 Docker 프로세스와 
 
 >[!div class="step-by-step"]
 [이전] (../docker-application-development-process/docker-app-development-workflow.md) [다음] (../containerize-net-framework-applications/index.md)
-

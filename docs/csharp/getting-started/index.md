@@ -12,12 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
+ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: c2e2408b2d7a02a1a75965f32888d240bafae0f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="get-started-with-c"></a>C# 시작 #
 
@@ -72,5 +71,4 @@ ms.lasthandoff: 09/02/2017
     C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.
 
 ## <a name="see-also"></a>참고 항목
- [Visual Studio를 사용하여 Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) [초급 개발자 학습 센터](http://go.microsoft.com/fwlink/?LinkId=123826)
-
+ [Visual Studio를 사용하여 Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

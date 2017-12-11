@@ -9,11 +9,11 @@ ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 548409d3f632213f3ff1de0a27a70b9f42b18332
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9da65958ce827fab642f4a6310d0c68dfb951a6
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>방법: 파생 클래스에서 기본 클래스 이벤트 발생(C# 프로그래밍 가이드)
 다음 간단한 예제에서는 파생 클래스에서도 발생할 수 있도록 기본 클래스에서 이벤트를 선언하는 표준 방법을 보여 줍니다. 이 패턴은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리의 Windows Forms 클래스에서 광범위하게 사용됩니다.  
@@ -31,4 +31,4 @@ ms.lasthandoff: 11/21/2017
  [이벤트](../../../csharp/programming-guide/events/index.md)  
  [대리자](../../../csharp/programming-guide/delegates/index.md)  
  [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [Windows Forms에서 이벤트 처리기 만들기](https://msdn.microsoft.com/library/dacysss4.aspx)
+ [Windows Forms에서 이벤트 처리기 만들기](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

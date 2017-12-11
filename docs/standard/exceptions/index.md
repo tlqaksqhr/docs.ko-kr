@@ -17,16 +17,15 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d44996042d167c029291f2b454dc1a22cfbcfb4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>.NET의 예외 처리 및 Throw
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/05/2017
 
 예외란 프로그램 실행 중 발생한 모든 오류 상태 또는 예기치 못한 동작입니다. 예외는 사용 중인 코드 또는 호출한 코드(예: 공유 라이브러리)의 오류, 사용 불가능한 운영 체제 리소스, 런타임에서 발생한 예기치 못한 상황(예: 확인할 수 없는 코드) 등에 의해 throw될 수 있습니다. 사용 중인 응용 프로그램이 이러한 일부 상황으로부터 복구될 수 있지만 복구될 수 없는 경우도 있습니다. 대부분의 응용 프로그램 예외로부터는 복구할 수 있지만 대부분의 런타임 예외로부터는 복구할 수 없습니다.
 
-.NET에서 예외는 [System.Exception](xref:System.Exception) 클래스에서 상속받은 개체입니다. 예외는 문제가 발생한 코드 영역에서 throw됩니다. 예외는 응용 프로그램에서 해당 예외를 처리하거나 프로그램이 종료될 때까지 스택으로 전달됩니다.
+.NET에서 예외는 <xref:System.Exception?displayProperty=nameWithType> 클래스에서 상속되는 개체입니다. 예외는 문제가 발생한 코드 영역에서 throw됩니다. 예외는 응용 프로그램에서 해당 예외를 처리하거나 프로그램이 종료될 때까지 스택으로 전달됩니다.
 
 ## <a name="exceptions-vs-traditional-error-handling-methods"></a>예외 대 일반적인 오류 처리 방법
 
@@ -58,13 +57,13 @@ ms.lasthandoff: 09/05/2017
 
 | 예외 형식 | 기본 형식 | 설명 | 예제 |
 | -------------- | --------- | ----------- | ------- |
-| @System.Exception | @System.Object | 모든 예외의 기본 클래스. | 없음(이 예외의 파생된 클래스 사용). |
-| @System.IndexOutOfRangeException | @System.Exception | 배열이 올바르지 않게 인덱싱된 경우에만 런타임에서 발생됩니다. | 유효 범위를 벗어난 배열 인덱싱: `arr[arr.Length+1]` |
-| @System.NullReferenceException | @System.Exception | null 개체가 참조되는 경우에만 런타임에서 발생됩니다. | `object o = null; o.ToString();` |
-| @System.InvalidOperationException | @System.Exception | 잘못된 상태에 있는 경우에 메서드에서 발생됩니다. | 기본 컬렉션에서 Item을 제거한 후 `Enumerator.GetNext()` 호출 |
-| @System.ArgumentException | @System.Exception | 모든 인수 예외에 대한 기본 클래스. | 없음(이 예외의 파생된 클래스 사용). |
-| @System.ArgumentNullException | @System.Exception | 인수에 Null을 허용하지 않는 메서드에서 발생됩니다. | `String s = null; "Calculate".IndexOf (s);` |
-| @System.ArgumentOutOfRangeException | @System.Exception | 인수가 지정된 범위에 있는지 확인하는 메서드에서 발생됩니다. | `String s = "string"; s.Substring(s.Length+1);` |
+| <xref:System.Exception> | <xref:System.Object> | 모든 예외의 기본 클래스. | 없음(이 예외의 파생된 클래스 사용). |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | 배열이 올바르지 않게 인덱싱된 경우에만 런타임에서 발생됩니다. | 유효 범위를 벗어난 배열 인덱싱: `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | <xref:System.Exception> | null 개체가 참조되는 경우에만 런타임에서 발생됩니다. | `object o = null; o.ToString();` |
+| <xref:System.InvalidOperationException> | <xref:System.Exception> | 잘못된 상태에 있는 경우에 메서드에서 발생됩니다. | 기본 컬렉션에서 Item을 제거한 후 `Enumerator.GetNext()` 호출 |
+| <xref:System.ArgumentException> | <xref:System.Exception> | 모든 인수 예외에 대한 기본 클래스. | 없음(이 예외의 파생된 클래스 사용). |
+| <xref:System.ArgumentNullException> | <xref:System.Exception> | 인수에 Null을 허용하지 않는 메서드에서 발생됩니다. | `String s = null; "Calculate".IndexOf (s);` |
+| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | 인수가 지정된 범위에 있는지 확인하는 메서드에서 발생됩니다. | `String s = "string"; s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>참고 항목
 
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/05/2017
 * [예외에 대한 모범 사례](best-practices-for-exceptions.md)
 
 .NET에서 예외가 작동하는 방식을 자세히 알아보려면 [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)(모든 개발자가 런타임 예외에 대해 알아야 할 사항)을 참조하세요.
-

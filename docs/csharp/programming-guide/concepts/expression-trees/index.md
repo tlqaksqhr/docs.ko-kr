@@ -1,30 +1,21 @@
 ---
 title: "식 트리(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 250da307d024b1011e1fb04cd84eb25e41af3fa8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be37183163a3747f861cbda7fd7867640ba382a2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="expression-trees-c"></a>식 트리(C#)
 식 트리는 `x < y` 등의 이진 연산이나 메서드 호출과 같이 각 노드가 식인 트리 형식 데이터 구조의 코드를 표시합니다.  
@@ -165,10 +156,9 @@ Console.WriteLine(expr.Compile()(4));
  자세한 내용은 [방법: 식 트리 실행(C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Linq.Expressions>   
- [방법: 식 트리 실행(C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
- [방법: 식 트리 수정(C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)   
- [람다 식](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [동적 언어 런타임 개요](https://msdn.microsoft.com/library/dd233052)   
+ <xref:System.Linq.Expressions>  
+ [방법: 식 트리 실행(C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+ [방법: 식 트리 수정(C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
+ [람다 식](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [동적 언어 런타임 개요](https://msdn.microsoft.com/library/dd233052)  
  [프로그래밍 개념(C#)](../../../../csharp/programming-guide/concepts/index.md)
-

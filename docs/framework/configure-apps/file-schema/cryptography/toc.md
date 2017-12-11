@@ -3,7 +3,7 @@
 ## [<cryptoClass> 요소](cryptoclass-element.md)
 ## [<cryptographySettings> 요소](cryptographysettings-element.md)
 ## [<cryptoNameMapping> 요소](cryptonamemapping-element.md)
-## [<mscorlib>암호화 설정에 대 한 요소](mscorlib-element-for-cryptography-settings.md)
+## <mscorlib>암호화 설정에 대한 [ 요소](mscorlib-element-for-cryptography-settings.md)
 ## [<nameEntry> 요소](nameentry-element.md)
 ## [<oidEntry> 요소](oidentry-element.md)
 ## [<oidMap> 요소](oidmap-element.md)

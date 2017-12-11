@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
 <xref:System.IO> 네임스페이스의 클래스는 드라이브, 파일 및 디렉터리 작업에 사용됩니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **검색**. 쿼리할 수 있으며 스트림에서 현재 위치를 수정할 수 있습니다.  
   
- 자세한 내용은 [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9)을 참조하세요.  
+ 자세한 내용은 [Composing Streams](../../../../../docs/standard/io/composing-streams.md)을 참조하세요.  
   
 ## <a name="types-of-streams"></a>스트림의 형식  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 스트림은 <xref:System.IO.Stream> 클래스로 표시되며, 이는 다른 모든 스트림에 대한 추상 클래스를 형성합니다. <xref:System.IO.Stream> 클래스의 인스턴스를 직접 만들 수는 없지만, 이 인스턴스가 구현하는 클래스 중 하나를 사용해야 합니다.  
@@ -65,13 +65,13 @@ ms.lasthandoff: 11/21/2017
   
 |후|참조|
 |---|---|   
-|데이터 파일 읽기 및 쓰기|[방법: 새로 만든 데이터 파일 읽기 및 쓰기](https://msdn.microsoft.com/library/36b93480.aspx)|  
-|파일에서 텍스트 읽기|[방법: 파일의 텍스트 읽기](https://msdn.microsoft.com/library/db5x7c0d.aspx)|  
-|파일에 텍스트 쓰기|[방법: 파일에 텍스트 쓰기](https://msdn.microsoft.com/library/6ka1wd3w.aspx)|  
-|문자열에서 문자 읽기|[방법: 문자열에서 문자 읽기](https://msdn.microsoft.com/library/9yyz8a6c.aspx)|  
-|문자열에 문자 쓰기|[방법: 문자열에 문자 쓰기](https://msdn.microsoft.com/library/z4kzt0dd.aspx)|  
-|데이터 암호화|[데이터 암호화](https://msdn.microsoft.com/library/as0w18af.aspx)|  
-|데이터 암호 해독|[데이터 해독](https://msdn.microsoft.com/library/te15te69.aspx)|  
+|데이터 파일 읽기 및 쓰기|[방법: 새로 만든 데이터 파일 읽기 및 쓰기](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|파일에서 텍스트 읽기|[방법: 파일의 텍스트 읽기](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|파일에 텍스트 쓰기|[방법: 파일에 텍스트 쓰기](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|문자열에서 문자 읽기|[방법: 문자열에서 문자 읽기](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
+|문자열에 문자 쓰기|[방법: 문자열에 문자 쓰기](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
+|데이터 암호화|[데이터 암호화](../../../../../docs/standard/security/encrypting-data.md)|  
+|데이터 암호 해독|[데이터 해독](../../../../../docs/standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>파일 액세스 및 특성  
  <xref:System.IO.FileStream> 클래스의 생성자가 사용하는 플래그가 포함된 <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> 및 <xref:System.IO.FileShare> 열거형을 사용하여 파일을 만들고 열고 공유하는 방법을 제어할 수 있습니다. 예를 들어 새 <xref:System.IO.FileStream>을 열거나 만들 때 <xref:System.IO.FileMode> 열거형을 사용하면 추가하기 위해 파일을 열지 여부, 지정된 파일이 없을 경우 새 파일을 만들지 여부, 파일을 덮어쓸지 여부 등을 지정할 수 있습니다.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
 |후|참조|  
 |---|---|
-|로그 파일 열기 및 텍스트 추가|[방법: 로그 파일 열기 및 추가](https://msdn.microsoft.com/library/3zc0w663.aspx)|  
+|로그 파일 열기 및 텍스트 추가|[방법: 로그 파일 열기 및 추가](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |파일의 특성 확인|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>파일 사용 권한  
@@ -95,19 +95,19 @@ ms.lasthandoff: 11/21/2017
   
 |후|참조|
 |---|---|  
-|격리된 저장소 만들기|[방법: 격리된 저장소의 저장소 가져오기](https://msdn.microsoft.com/library/k48a6h13.aspx)|  
-|격리된 저장소 열거|[방법: 격리된 저장소의 저장소 열거](https://msdn.microsoft.com/library/c3dy613a.aspx)|  
-|격리된 저장소 삭제|[방법: 격리된 저장소에서 저장소 삭제](https://msdn.microsoft.com/library/5w71t104.aspx)|  
-|격리된 저장소에서 파일 또는 디렉터리 만들기|[방법: 격리된 저장소에 파일 및 디렉터리 만들기](https://msdn.microsoft.com/library/6h2ws3ft.aspx)|  
-|격리된 저장소에서 파일 찾기|[방법: 격리된 저장소의 기존 파일 및 디렉터리 찾기](https://msdn.microsoft.com/library/zd5e2z84.aspx)|  
-|격리된 저장소에서 파일 읽기 또는 쓰기|[방법: 격리된 저장소의 파일 읽기 및 쓰기](https://msdn.microsoft.com/library/xf96a1wz.aspx)|  
-|격리된 저장소에서 파일 또는 디렉터리 삭제|[방법: 격리된 저장소의 파일 및 디렉터리 삭제](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
+|격리된 저장소 만들기|[방법: 격리된 저장소의 저장소 가져오기](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|격리된 저장소 열거|[방법: 격리된 저장소의 저장소 열거](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|격리된 저장소 삭제|[방법: 격리된 저장소에서 저장소 삭제](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|격리된 저장소에서 파일 또는 디렉터리 만들기|[방법: 격리된 저장소에 파일 및 디렉터리 만들기](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|격리된 저장소에서 파일 찾기|[방법: 격리된 저장소의 기존 파일 및 디렉터리 찾기](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|격리된 저장소에서 파일 읽기 또는 쓰기|[방법: 격리된 저장소의 파일 읽기 및 쓰기](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|격리된 저장소에서 파일 또는 디렉터리 삭제|[방법: 격리된 저장소의 파일 및 디렉터리 삭제](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>파일 이벤트  
  <xref:System.IO.FileSystemWatcher> 구성 요소를 사용하면 네트워크 액세스 권한이 있는 컴퓨터나 시스템의 파일 및 디렉터리에서 변경 내용을 관찰할 수 있습니다. 예를 들어 파일이 수정되는 경우 변경이 발생했다는 경고를 사용자에게 보낼 수 있습니다. 변경이 일어나는 경우 하나 이상의 이벤트가 발생하고, 버퍼에 저장되고, 처리를 위해 <xref:System.IO.FileSystemWatcher> 구성 요소로 전달됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [스트림 작성](https://msdn.microsoft.com/library/e4y2dch9)  
+ [스트림 작성](../../../../../docs/standard/io/composing-streams.md)  
  [파일 및 스트림 I/O](https://msdn.microsoft.com/library/k3352a4t)  
  [비동기 파일 I/O](https://msdn.microsoft.com/library/kztecsys)  
  [.NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

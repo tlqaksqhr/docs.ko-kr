@@ -1,5 +1,5 @@
 ---
-title: "C# 7-C# 가이드의 새로운 기능"
+title: "C# 7의 새로운 기능 - C# 가이드"
 description: "C# 언어의 새 버전 7에서 제공되는 새로운 기능을 간단히 살펴봅니다."
 keywords: "C#, .NET, .NET Core, 최신 기능, 새로운 기능"
 author: BillWagner
@@ -10,21 +10,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: f98039404789e8886154e04c4b97a21741c4d885
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-7"></a>C# 7의 새로운 기능
 
 C# 7에서는 C# 언어에 많은 새로운 기능을 추가합니다.
-* [`out`변수](#out-variables)
+* [`out` 변수](#out-variables)
     - `out` 값을 사용되는 메서드에 대한 인수로 인라인으로 선언할 수 있습니다.
 * [튜플](#tuples)
     - 여러 public 필드가 포함된 간단한 명명되지 않은 형식을 만들 수 있습니다. 컴파일러 및 IDE 도구는 이러한 형식의 의미 체계를 이해합니다.
 * [삭제](#discards)
-    - 삭제는 할당 된 값에 대 한 중요 하지 않으면 때 할당에 사용 되는 임시, 쓰기 전용 변수입니다. 튜플 및 사용자 정의 형식을 제거 하기 때 뿐만 아니라 메서드를 호출할 때 특히 유용 `out` 매개 변수입니다.
+    - 삭제는 할당된 값에 신경 쓰지 않을 때 할당에서 사용되는 임시 쓰기 전용 변수입니다. 매개 변수는 `out` 매개 변수를 사용하여 메서드를 호출할 때뿐만 아니라 튜플 및 사용자 정의 형식을 분해할 때 특히 유용합니다.
 * [패턴 일치](#pattern-matching)
     - 임의 형식 및 해당 형식의 멤버 값에 따라 분기 논리를 만들 수 있습니다.
 * [`ref` local 및 return](#ref-locals-and-returns)
@@ -82,30 +82,30 @@ return result;
 > 새 튜플 기능을 사용하려면 <xref:System.ValueTuple> 형식이 필요합니다.
 > 형식을 포함하지 않는 플랫폼에서 사용하려면 NuGet 패키지 [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)을 추가해야 합니다.
 >
-> 이는 프레임워크에서 제공되는 형식을 사용하는 다른 언어 기능과 비슷합니다. 예제에 포함 되어 `async` 및 `await` 의존는 `INotifyCompletion` 인터페이스 및에 의존 하는 LINQ `IEnumerable<T>`합니다. 그러나 .NET이 점점 더 플랫폼 독립적으로 되면서 배달 메커니즘도 변하고 있습니다. .NET Framework가 언어 컴파일러와 동일한 주기로 제공되지 않을 수도 있습니다. 새로운 언어 기능이 새 형식을 사용하는 경우 해당 형식은 언어 기능이 제공될 때 NuGet 패키지로 제공됩니다. 이러한 새로운 형식이 .NET Standard API에 추가되고 프레임워크의 일부로 제공되면, NuGet 패키지 요구 사항이 제거됩니다.
+> 이는 프레임워크에서 제공되는 형식을 사용하는 다른 언어 기능과 비슷합니다. 예를 들어 `async` 및 `await`는 `INotifyCompletion` 인터페이스를 사용하고 LINQ는 `IEnumerable<T>`을 사용합니다. 그러나 .NET이 점점 더 플랫폼 독립적으로 되면서 배달 메커니즘도 변하고 있습니다. .NET Framework가 언어 컴파일러와 동일한 주기로 제공되지 않을 수도 있습니다. 새로운 언어 기능이 새 형식을 사용하는 경우 해당 형식은 언어 기능이 제공될 때 NuGet 패키지로 제공됩니다. 이러한 새로운 형식이 .NET Standard API에 추가되고 프레임워크의 일부로 제공되면, NuGet 패키지 요구 사항이 제거됩니다.
 
 C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구조체에 대한 다양한 구문을 제공합니다. 하지만 다양한 구문에는 이점이 거의 없는데 추가 작업이 필요한 경우가 있습니다. 일반적으로 두 개 이상의 데이터 요소가 포함된 간단한 구조체가 필요한 메서드를 작성할 수 있습니다. 이러한 시나리오를 지원하기 위해 *튜플*이 C#에 추가되었습니다. 튜플은 데이터 멤버를 나타내는 여러 필드가 포함된 간단한 데이터 구조입니다.
 필드는 유효성이 검사되지 않고 자체 메서드를 정의할 수 없습니다.
 
 > [!NOTE]
-> 튜플 된 C# 7, 이전에서 사용할 수는 있지만 없습니다 효율적 언어 지원이 없습니다.
-> 즉,으로 튜플 요소를 참조할 수만 `Item1`, `Item2` 등입니다. C# 7에서는 새, 보다 효율적인 튜플 형식을 사용 하 여 튜플의 필드에 대 한 의미 체계 이름을 수 있는 튜플에 대 한 언어 지원 합니다.
+> 튜플은 C# 7 이전부터 사용할 수 있었지만 비효율적이었고 언어 지원이 없었습니다.
+> 즉, 튜플 요소는 `Item1`, `Item2` 등으로만 참조될 수 있었습니다. C# 7은 새롭고 보다 효율적인 튜플 유형을 사용하여 튜플의 필드에 대해 의미론적 이름을 사용할 수 있는 튜플에 대한 언어 지원을 소개합니다.
 
 각 멤버를 값에 할당하여 튜플을 만들 수 있습니다.
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-할당 구성원으로 포함 하는 튜플을 만듭니다는 `Item1` 및 `Item2`, 동일한 방식으로 사용할 수 있는 <xref:System.Tuple> 각 튜플의 멤버에 의미 체계 이름을 제공 하는 튜플을 만드는 데 구문을 변경할 수 있습니다.
+이 할당은 멤버가 `Item1` 및 `Item2`이고 <xref:System.Tuple>과 동일한 방식으로 사용할 수 있는 튜플을 생성합니다. 구문을 변경하여 의미론적 이름을 튜플의 각 멤버에 제공하는 튜플을 만들 수 있습니다.
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 
-`namedLetters` 튜플에는 `Alpha` 및 `Beta`라는 필드가 포함됩니다. 이러한 이름은 컴파일 타임에만 존재 하며 런타임에 리플렉션을 사용 하 여 튜플 검사 하는 예를 들어 보존 되지 않습니다.
+`namedLetters` 튜플에는 `Alpha` 및 `Beta`라는 필드가 포함됩니다. 이러한 이름은 컴파일 시간에만 존재하며 런타임 시 반영을 통해 튜플을 검사하는 경우 등을 위해 보존되지 않습니다.
 
 튜플 할당에서 할당의 오른쪽에 필드의 이름을 지정할 수도 있습니다.
 
 [!code-csharp[ImplicitNamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#06_ImplicitNamedTuple "Implicitly named tuple")]
 
-할당의 왼쪽 및 오른쪽 면에 있는 필드에 대 한 이름을 지정할 수 있습니다.
+할당의 왼쪽 및 오른쪽에서 모두 필드의 이름을 지정할 수 있습니다.
 
 [!code-csharp[NamedTupleConflict](../../../samples/snippets/csharp/new-in-7/program.cs#07_NamedTupleConflict "Named tuple conflict")]
 
@@ -149,25 +149,25 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 
 [튜플 항목](../tuples.md)에서 튜플에 대해 자세히 알아볼 수 있습니다.
 
-## <a name="discards"></a>삭제
+## <a name="discards"></a>버림
 
-경우에 종종 튜플을 제거 하기 또는 메서드를 호출 `out` 매개 변수를 중요 하지 않으면 하 고 사용 하지 않을 값을 갖는 변수를 정의 하기. C#에 대 한 지원을 추가 *삭제* 이 시나리오를 처리할 수 있습니다. 삭제는 쓰기 전용 변수 이름을 가진 `_` (밑줄); 모든 단일 변수를 삭제 하려면 해당 값을 할당할 수 있습니다. 삭제는 할당 되지 않은 변수와; 같습니다. 할당 문은 외에도 무시 코드에서 사용할 수 없습니다.
+종종 튜플을 분해하거나 `out` 매개 변수로 메서드를 호출할 때 값을 신경 쓰지 않고 사용하지 않을 변수를 정의해야 합니다. C#은 *버림*에 대한 지원을 추가하여 이 시나리오를 처리합니다. 무시는 이름이 `_`(밑줄 문자)인 쓰기 전용 변수입니다. 단일 변수에 버리려는 모든 값을 할당할 수 있습니다. 버림은 할당 문과 별도로 분리되는 할당되지 않은 변수와 같습니다. 코드에서 버림을 사용할 수 없습니다.
 
-삭제는 다음과 같은 시나리오에서 지원 됩니다.
+다음 시나리오에서는 버림이 지원되지 않습니다.
 
-* 때 튜플 또는 사용자 정의 형식을 제거 하기.
+* 튜플이나 사용자 정의 형식을 분해할 때.
 
-* 메서드를 호출할 때 [아웃](../language-reference/keywords/out.md) 매개 변수입니다.
+* [out](../language-reference/keywords/out.md) 매개 변수로 메서드를 호출할 때.
 
-* 패턴 일치 작업을는 [은](../language-reference/keywords/is.md) 및 [전환](../language-reference/keywords/switch.md) 문.
+* [is](../language-reference/keywords/is.md) 및 [switch](../language-reference/keywords/switch.md) 문을 사용한 패턴 일치 작업에서.
 
-* 독립 실행형 식별자로 명시적으로 하려는 경우는 삭제로 할당의 값을 식별 합니다.
+* 할당 값을 버림으로 명시적으로 지정할 때 독립 실행형 식별자인 경우.
 
-다음 예제에서는 정의 `QueryCityDataForYears` 두 여러 연도 대 한 도시에 대 한 데이터를 포함 하는 6 튜플을 반환 하는 메서드. 예제에서 메서드 호출 메서드에 의해 반환 되는 두 모집단 값만를 우려 하을 하므로 튜플의 해체 되 면 삭제 하는 대로 튜플의 나머지 값을 처리 합니다.
+다음 예제는 서로 다른 2년 동안 도시에 대한 데이터를 포함한 6 튜플을 반환하는 `QueryCityDataForYears` 메서드를 정의합니다. 예제의 메서드 호출은 메서드에 의해 반환된 두 개의 채우기 값에만 관련되어 있으므로 튜플을 해체할 때 튜플의 나머지 값을 버림으로 처리합니다.
 
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-자세한 내용은 참조 [삭제](../discards.md)합니다.
+자세한 내용은 [버림](../discards.md)을 참조하세요.
  
 ## <a name="pattern-matching"></a>패턴 일치
 
@@ -175,15 +175,15 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 
 패턴 일치는 `is` 식과 `switch` 식을 지원합니다. 각 식을 통해 개체 및 관련 속성을 검사하여 해당 개체가 검색된 패턴을 충족하는지 확인할 수 있습니다. `when` 키워드를 사용하여 패턴에 대한 추가 규칙을 지정합니다.
 
-### <a name="is-expression"></a>`is`식
+### <a name="is-expression"></a>`is` 식
 
-`is` 패턴 식 친숙 한 확장 `is` 연산자는 형식 이외의 개체를 쿼리할 수 있습니다.
+`is` 패턴 식은 친숙한 `is` 연산자를 확장하여 형식을 넘어서서 개체를 쿼리합니다.
 
 먼저 간단한 시나리오를 살펴보겠습니다. 패턴 일치 식을 통해 관련되지 않은 형식을 사용하는 알고리즘을 단순화하는 기능을 이 시나리오에 추가합니다. 먼저 많은 주사위 굴리기의 합계를 계산하는 메서드를 살펴봅니다.
 
 [!code-csharp[SumDieRolls](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#14_SumDieRolls "Sum die rolls")]
 
-두 개 이상의 주사위를 굴리는 경우 주사위 굴리기의 합계를 확인해야 합니다. 입력 시퀀스의 일부는 단일 숫자가 아닌 여러 결과일 수 있습니다.
+여러 개의 주사위를 굴리는 경우 주사위 굴리기의 합계를 빠르게 확인해야 합니다. 입력 시퀀스의 일부는 단일 숫자가 아닌 여러 결과일 수 있습니다.
 
 [!code-csharp[SumDieRollsWithGroups](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#15_SumDieRollsWithGroups "Sum die rolls with groups")]
 
@@ -203,7 +203,7 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 
 [!code-csharp[SwitchWithConstants](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#17_SwitchWithConstants "Switch with constants")]
 
-위의 코드는 `0`에 대한 사례를 `int`의 특수 사례로 추가하고 입력이 없는 경우 `null`을 특수 사례로 추가합니다. 이것은 스위치 패턴 식의 한 가지 중요한 새로운 기능을 보여 줍니다. 이제 `case` 식의 순서는 중요하지 않습니다. `0` 사례는 일반적인 `int` 사례 앞에 와야 합니다. 그렇지 않으면 값이 `0`인 경우에도 일치시킬 첫 번째 패턴이 `int` 사례가 됩니다. 실수로 나중의 경우 이미 처리 되도록 일치 식의 순서를 컴파일러에서 플래그를 지정 하 고 오류를 생성 합니다.
+위의 코드는 `0`에 대한 사례를 `int`의 특수 사례로 추가하고 입력이 없는 경우 `null`을 특수 사례로 추가합니다. 이것은 스위치 패턴 식의 한 가지 중요한 새로운 기능을 보여 줍니다. 이제 `case` 식의 순서는 중요하지 않습니다. `0` 사례는 일반적인 `int` 사례 앞에 와야 합니다. 그렇지 않으면 값이 `0`인 경우에도 일치시킬 첫 번째 패턴이 `int` 사례가 됩니다. 일치 식의 순서를 잘못 지정하여 나중 사례가 이미 처리되었다면 컴파일러는 여기에 플래그를 지정하고 오류를 생성합니다.
 
 이런 동일한 동작을 통해 빈 입력 시퀀스에 대한 특수 사례가 가능해집니다.
 요소가 포함된 `IEnumerable` 항목에 대한 사례가 일반적인 `IEnumerable` 사례 앞에 나타나야 함을 알 수 있습니다.
@@ -215,9 +215,9 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 > [!NOTE]
 > 두 개의 10면 백분위수 주사위는 0~99의 모든 숫자를 나타낼 수 있습니다. 하나의 주사위에는 `00`, `10`, `20`, ... `90`이 표시된 면이 있습니다. 다른 주사위에는 `0`, `1`, `2`, ... `9`가 표시된 면이 있습니다. 두 주사위 값을 더하면 0~99의 모든 숫자를 얻을 수 있습니다.
 
-이 유형의 주사위를 컬렉션에 추가하려면 먼저 백분위수 주사위를 나타내는 형식을 정의합니다.
+이 유형의 주사위를 컬렉션에 추가하려면 먼저 백분위수 주사위를 나타내는 형식을 정의합니다. `TensDigit` 속성은 `0`, `10`, `20`, 최대 `90` 값을 저장합니다.
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 그런 다음 새 형식에 대한 `case` 일치 식을 추가합니다.
 
@@ -277,14 +277,14 @@ public static ref int Find2(int[,] matrix, Func<int, bool> predicate)
 
 이제 위 예제의 두 번째 `WriteLine` 문은 매트릭스의 저장소가 수정되었음을 나타내는 `24` 값을 출력합니다. 지역 변수는 `ref` 한정자로 선언되었고 `ref` return을 사용합니다. `ref` 변수는 선언될 때 초기화해야 합니다. 선언과 초기화를 분할할 수 없습니다.
 
-C# 언어에 잘못 사용 하면 보호 하는 다른 세 가지 규칙은 `ref` 지역 및 반환 합니다.
+C# 언어에는 `ref` local 및 return을 잘못 사용하는 경우를 방지하는 세 가지 다른 규칙이 있습니다.
 
-* 표준 메서드 반환 값을 할당할 수 없습니다는 `ref` 지역 변수입니다.
+* 표준 메서드 반환 값을 `ref` 로컬 변수에 할당할 수 없습니다.
     - 이로 인해 `ref int i = sequence.Count();` 같은 문이 허용되지 않습니다.
 * 메서드 실행보다 길게 수명이 연장되지 않는 변수로 `ref`를 반환할 수는 없습니다.
-    - 즉, 지역 변수 또는 변수 비슷한 범위에 대 한 참조를 반환할 수 없습니다.
-* `ref`지역 및 반환 비동기 메서드와 함께 사용할 수 없습니다.
-    - 컴파일러는 비동기 메서드가 반환 될 때 참조 되는 변수의 해당 최종 값으로 설정한 경우 알 수 없습니다.
+    - 이는 지역 변수 또는 비슷한 범위의 변수에 대한 참조를 반환할 수 없음을 의미합니다.
+* `ref` local 및 return은 비동기 메서드와 함께 사용할 수 없습니다.
+    - 컴파일러는 비동기 메서드가 반환될 때 참조된 변수가 최종 값으로 설정되었는지 여부를 알 수 없습니다.
 
 ref local 및 ref return을 추가하면 값을 복사하거나 역참조 작업을 여러 번 수행하는 경우를 방지하여 더 효율적인 알고리즘이 가능해집니다. 
 
@@ -366,7 +366,7 @@ C#에서 `throw`는 항상 문이었습니다. `throw`는 식이 아닌 문이�
 [!code-csharp[UsingValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#30_UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> NuGet 패키지를 추가 해야 [ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) 사용 하려면는 <xref:System.Threading.Tasks.ValueTask%601> 유형입니다.
+> <xref:System.Threading.Tasks.ValueTask%601> 형식을 사용하려면 NuGet 패키지 [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)를 추가해야 합니다.
 
 간단한 최적화는 이전에 `Task`가 사용된 위치에서 `ValueTask`를 사용하는 것입니다. 그러나 추가 최적화를 직접 수행하려는 경우 비동기 작업에서 결과를 캐시하고 후속 호출에서 결과를 다시 사용할 수 있습니다. `ValueTask` 구조체에는 기존 비동기 메서드의 반환 값에서 `ValueTask`를 생성할 수 있도록 `Task` 매개 변수가 포함된 생성자가 있습니다.
 

@@ -1,0 +1,6 @@
+# [소개](index.md)
+## [기존 앱 Azure IaaS 리프트 앤 시프트](lift-and-shift-existing-apps-azure-iaas.md)
+## [관계형 데이터베이스를 Azure로 마이그레이션](migrate-your-relational-databases-to-azure.md)
+## [기존 앱 DevOps 리프트 앤 시프트](lift-and-shift-existing-apps-devops/)
+## [연습 및 기술 시작 개요](walkthroughs-technical-get-started-overview.md)
+## [결론](conclusions.md)

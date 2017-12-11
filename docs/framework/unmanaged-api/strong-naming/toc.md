@@ -1,4 +1,4 @@
-# [강력한 이름 지정](index.md)
+# [강력한 이름](index.md)
 ## [GetHashFromAssemblyFile 함수](gethashfromassemblyfile-function.md)
 ## [GetHashFromAssemblyFileW 함수](gethashfromassemblyfilew-function.md)
 ## [GetHashFromBlob 함수](gethashfromblob-function.md)

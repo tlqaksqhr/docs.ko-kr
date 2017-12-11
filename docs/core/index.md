@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
+ms.openlocfilehash: 54540b8a1fc0ceaf68dfb3fcbb04fefae2296695
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
-ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-guide"></a>.NET Core 가이드
 
 > 간단한 .NET Core 응용 프로그램을 만드는 방법을 알아보려면 ["시작" 자습서](get-started.md)를 확인하세요. 첫 번째 앱을 만들고 실행하는 데 몇 분밖에 걸리지 않습니다.
@@ -43,9 +41,9 @@ ms.lasthandoff: 08/07/2017
 
 ### <a name="languages"></a>언어
 
-C# 및 F# 언어(Visual Basic은 곧 제공 예정)를 사용하여 .NET Core에 대한 응용 프로그램 및 라이브러리를 작성할 수 있습니다. 컴파일러는 .NET Core에서 실행되며, 실행되는 모든 위치에서 .NET Core를 개발할 수 있습니다. 일반적으로 컴파일러는 직접 사용하지 않고 SDK 도구를 통해 간접적으로 사용합니다.
+C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 응용 프로그램 및 라이브러리를 작성할 수 있습니다. 컴파일러는 .NET Core에서 실행되며, 실행되는 모든 위치에서 .NET Core를 개발할 수 있습니다. 일반적으로 컴파일러는 직접 사용하지 않고 SDK 도구를 통해 간접적으로 사용합니다.
 
-C# 및 F# 컴파일러와 .NET Core 도구는 Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text 및 Vim을 포함한 여러 텍스트 편집기 및 IDE에 통합되어 즐겨찾는 코딩 환경 및 OS에서 .NET Core 개발을 옵션으로 만들 수 있습니다. 이 통합은 [OmniSharp 프로젝트](http://www.omnisharp.net/)의 적합한 담당자에 의해 부분적으로 제공됩니다.
+C#, Visual Basic 및 F# 컴파일러와 .NET Core 도구는 Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text 및 Vim을 포함한 여러 텍스트 편집기 및 IDE에 통합되어 즐겨찾는 코딩 환경 및 OS에서 .NET Core 개발을 옵션으로 만들 수 있습니다. 이 통합은 [OmniSharp 프로젝트](http://www.omnisharp.net/)의 적합한 담당자에 의해 부분적으로 제공됩니다.
 
 ### <a name="net-apis-and-compatibility"></a>.NET API 및 호환성
 
@@ -153,4 +151,3 @@ Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX는 [Microsoft.Win32
 - **플랫폼** -- Mono는 여러 플랫폼 및 CPU를 지원합니다.
 - **오픈 소스** -- Mono와 .NET Core 둘 다 MIT 라이선스를 사용하며 .NET Foundation 프로젝트입니다.
 - **포커스** -- 최근 몇 년 간 Mono의 주요 포커스는 모바일 플랫폼인 반면 .NET Core의 포커스는 클라우드 워크로드입니다.
-

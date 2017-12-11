@@ -1,12 +1,9 @@
 ---
 title: "형식(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - value types [C#]
 - reference types [C#]
@@ -17,30 +14,14 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 1352d817241ad4dd42747dcd3a6bfbaf71f9cf25
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: d5dfee413f459c5b38b30ac9116d73e828f3aa17
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 ## <a name="types-variables-and-values"></a>형식, 변수 및 값  
@@ -62,7 +43,7 @@ ms.lasthandoff: 09/25/2017
   
  컴파일러는 형식 정보를 사용하여 코드에서 수행되는 모든 작업이 *형식이 안전*한지 확인합니다. 예를 들어 [int](../../../csharp/language-reference/keywords/int.md) 형식의 변수를 선언할 경우 컴파일러를 통해 더하기 및 빼기 작업에서 변수를 사용할 수 있습니다. [bool](../../../csharp/language-reference/keywords/bool.md) 형식의 변수에 대해 같은 작업을 수행하려고 하면 컴파일러는 다음 예제와 같이 오류를 생성합니다.  
   
- [!code-cs[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
 > [!NOTE]
 >  C 및 C++ 개발자는 C#에서 [bool](../../../csharp/language-reference/keywords/bool.md)이 [int](../../../csharp/language-reference/keywords/int.md)로 변환될 수 없음을 알고 있습니다.  
@@ -72,11 +53,11 @@ ms.lasthandoff: 09/25/2017
 ### <a name="specifying-types-in-variable-declarations"></a>변수 선언에서 형식 지정  
  프로그램에서 변수나 상수를 선언할 때 컴파일러가 형식을 유추하게 하려면 형식을 지정하거나 [var](../../../csharp/language-reference/keywords/var.md) 키워드를 사용해야 합니다. 다음 예제에서는 기본 제공 숫자 형식 및 복잡한 사용자 정의 형식을 둘 다 사용하는 일부 변수 선언을 보여 줍니다.  
   
- [!code-cs[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
   
  메서드 매개 변수 및 반환 값의 형식은 메서드 시그니처에서 지정됩니다. 다음 시그니처는 입력 인수로 [int](../../../csharp/language-reference/keywords/int.md)가 필요하고 문자열을 반환하는 메서드를 보여 줍니다.  
   
- [!code-cs[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
   
  변수가 선언된 후에는 새 형식으로 다시 선언될 수 없고 선언된 형식과 호환되지 않는 값이 할당될 수 없습니다. 예를 들어 [int](../../../csharp/language-reference/keywords/int.md)를 선언하고 [true](../../../csharp/language-reference/keywords/true-literal.md)의 부울 값을 여기에 할당할 수 있습니다. 그러나 값은 새 변수에 할당되거나 메서드 인수로 전달될 경우 다른 형식으로 변환할 수 있습니다. 데이터 손실을 일으키지 않는 *형식 변환*은 컴파일러에서 자동으로 수행됩니다. 데이터 손실을 일으킬 수 있는 변환의 경우 소스 코드에 *캐스트*가 있어야 합니다.  
   
@@ -127,13 +108,13 @@ char c = 'Z';
   
  [struct](../../../csharp/language-reference/keywords/struct.md) 키워드를 사용하여 고유한 사용자 지정 값 형식을 만듭니다. 일반적으로 구조체는 다음 예제와 같이 소규모 관련 변수 집합의 컨테이너로 사용됩니다.  
   
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
   
  구조체에 대한 자세한 내용은 [구조체](../../../csharp/programming-guide/classes-and-structs/structs.md)를 참조하세요. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)][CTS(공용 형식 시스템)](../../../standard/base-types/common-type-system.md)를 참조하세요.  
   
  값 형식의 다른 범주는 [enum](../../../csharp/language-reference/keywords/enum.md)입니다. 열거형은 명명된 정수 상수 집합을 정의합니다. 예를 들어 .NET Framework 클래스 라이브러리의 <xref:System.IO.FileMode?displayProperty=nameWithType> 열거형에는 파일을 여는 방법을 지정하는 명명된 상수 정수 집합이 포함됩니다. 이 패턴은 다음 예제와 같이 정의됩니다.  
  
- [!code-cs[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
   
  `System.IO.FileMode.Create` 상수 값은 2입니다. 그러나 이 이름은 소스 코드를 읽는 사람에게 훨씬 더 의미가 있습니다. 따라서 상수 리터럴 숫자 대신 열거형을 사용하는 것이 더 좋습니다. 자세한 내용은 <xref:System.IO.FileMode?displayProperty=nameWithType>을 참조하십시오.  
   
@@ -156,7 +137,7 @@ IMyInterface iface = new MyClass();
   
  모든 배열은 해당 요소가 값 형식이더라도 참조 형식입니다. 배열은 <xref:System.Array?displayProperty=nameWithType> 클래스에서 암시적으로 파생되지만 다음 예제와 같이 C#에서 제공하는 단순한 구문을 사용하여 배열을 선언하고 사용할 수 있습니다.  
   
- [!code-cs[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]  
+ [!code-csharp[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]  
   
  참조 형식은 상속을 완벽하게 지원합니다. 클래스를 만들 때 [sealed](../../../csharp/language-reference/keywords/sealed.md)로 정의되지 않은 기타 인터페이스 또는 클래스에서 상속될 수 있고 기타 클래스는 직접 만든 클래스에서 상속되고 가상 메서드를 재정의할 수 있습니다. 클래스를 직접 만드는 방법에 대한 자세한 내용은 [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)를 참조하세요. 상속 및 가상 메서드에 대한 자세한 내용은 [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)을 참조하세요.  
   
@@ -165,7 +146,7 @@ IMyInterface iface = new MyClass();
   
  리터럴은 형식화되고 모든 형식이 궁극적으로 <xref:System.Object?displayProperty=nameWithType>에서 파생되기 때문에 다음과 같은 코드를 작성하고 컴파일할 수 있습니다.  
   
- [!code-cs[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
   
 ## <a name="generic-types"></a>제네릭 형식  
  클라이언트 코드가 형식의 인스턴스를 만들 때 제공하는 실제 형식(*구체적 형식*)에 대한 자리 표시자로 사용되는 하나 이상의 *형식 매개 변수*를 사용하여 형식을 선언할 수 있습니다. 해당 형식을 *제네릭 형식*이라고 합니다. 예를 들어 .NET Framework 형식 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>에는 변환을 통해 이름 *T*가 제공되는 하나의 형식 매개 변수가 있습니다. 형식의 인스턴스를 만들 때 목록에 포함될 개체의 형식(예: 문자열)을 지정합니다.  
@@ -208,8 +189,7 @@ stringList.Add(4);
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [XML 데이터 형식 변환](../../../standard/data/xml/conversion-of-xml-data-types.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [XML 데이터 형식 변환](../../../standard/data/xml/conversion-of-xml-data-types.md)  
  [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)
-

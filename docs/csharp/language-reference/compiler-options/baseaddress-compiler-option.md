@@ -13,14 +13,14 @@ ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7cd3269754f783ab8b26683f5215aa81825673e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f8cc5e19565a0e5044626c4fb8eb9d684fbe0a73
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="baseaddress-c-compiler-options"></a>/baseaddress(C# 컴파일러 옵션)
-**/baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다. 이 옵션을 사용 하는 이유 및 시기에 대 한 자세한 내용은 참조 [Larry Osterman 웹 로그](http://go.microsoft.com/fwlink/?LinkId=107044)합니다.  
+**/baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다. 이 옵션을 사용하는 시기와 이유에 대한 자세한 내용은 [Larry Osterman's WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   

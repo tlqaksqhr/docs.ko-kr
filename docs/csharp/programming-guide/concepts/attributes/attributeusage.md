@@ -11,11 +11,11 @@ ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 81e7440279a2d7dfa801394ee0e9af6181da3c13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributeusage-c"></a>AttributeUsage(C#)
 사용자 지정 특성 클래스를 사용하는 방법을 결정합니다. `AttributeUsage`는 새 특성 적용 방법을 제어하기 위해 사용자 지정 특성 정의에 적용할 수 있는 특성입니다. 기본 설정은 명시적으로 적용될 경우 다음과 같이 표시됩니다.  
@@ -148,7 +148,7 @@ A2
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)  
- [특성](https://msdn.microsoft.com/library/5x6cd29c)  
+ [특성](../../../../../docs/standard/attributes/index.md)  
  [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [특성](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [사용자 지정 특성 만들기(C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  

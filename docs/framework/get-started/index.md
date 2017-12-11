@@ -1,30 +1,23 @@
 ---
 title: ".NET Framework 시작"
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 66e581e04aa0c3d33fb1ef9a7f4163d131f625bf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: 327aad36a560a772e9ddb4d8d721c2545f800151
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 시작
 
 .NET Framework는 .NET Framework를 대상으로 하는 앱을 관리하는 런타임 실행 환경입니다. .NET Framework는 메모리 관리 및 기타 시스템 서비스를 제공하는 공용 언어 런타임과 프로그래머가 모든 주요 앱 개발 영역에서 강력하고 신뢰할 수 있는 코드를 활용할 수 있게 하는 광범위한 클래스 라이브러리로 구성됩니다.
@@ -46,7 +39,7 @@ ms.lasthandoff: 08/05/2017
 
 - 버전 호환성. 거의 예외 없이 .NET Framework의 특정 버전을 사용하여 개발한 앱은 이후 버전에서 수정하지 않고 실행할 수 있습니다.
 
-- Side-by-Side 실행. .NET Framework를 사용하면 동일한 컴퓨터에 여러 버전의 공용 언어 런타임이 존재하도록 허용함으로써 버전 충돌을 해결할 수 있습니다. 즉, 여러 버전의 앱이 공존할 수 있으며 앱이 해당 앱을 빌드한 .NET Framework 버전에서 실행될 수 있습니다. Side-by-Side 실행은 .NET Framework 버전 그룹 1.0/1.1, 2.0/3.0/3.5 및 4/4.5.x/4.6.x/4.7에 적용됩니다.
+- Side-by-Side 실행. .NET Framework를 사용하면 동일한 컴퓨터에 여러 버전의 공용 언어 런타임이 존재하도록 허용함으로써 버전 충돌을 해결할 수 있습니다. 즉, 여러 버전의 앱이 공존할 수 있으며 앱이 해당 앱을 빌드한 .NET Framework 버전에서 실행될 수 있습니다. Side-by-Side 실행은 .NET Framework 버전 그룹 1.0/1.1, 2.0/3.0/3.5 및 4/4.5.x/4.6.x/4.7.x에 적용됩니다.
 
 - 멀티 타기팅. 개발자는 [.NET 표준](~/docs/standard/net-standard.md)을 대상으로 지정하여 Windows 7, Windows 8, Windows 8.1, Windows 10, Windows Phone 및 Xbox 360과 같은 여러 .NET Framework 플랫폼에서 작동하는 어셈블리를 만들 수 있습니다.
 
@@ -61,7 +54,7 @@ Windows 운영 체제를 사용하는 경우 .NET Framework가 이미 컴퓨터�
 
 - 사용 중인 앱이 특정 .NET Framework 버전을 사용하는 경우 해당 버전을 제거하면 앱이 손상될 수 있습니다.
 
-- 일부 .NET Framework 버전은 이전 버전의 내부 업데이트입니다. 예를 들어 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]는 버전 2.0의 In-place 업데이트이고 .NET Framework 4.7은 버전 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1 및 4.6.2의 내부 업데이트입니다. 자세한 내용은 [.NET Framework 버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)을 참조하십시오.
+- 일부 .NET Framework 버전은 이전 버전의 내부 업데이트입니다. 예를 들어 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]는 버전 2.0의 In-place 업데이트이고 .NET Framework 4.7.1은 버전 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 및 4.7의 내부 업데이트입니다. 자세한 내용은 [.NET Framework 버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)을 참조하십시오.
 
 .NET Framework를 제거하려는 경우에는 항상 제어판의 **프로그램 및 기능**을 사용하여 제거합니다. .NET Framework 버전을 수동으로 제거해서는 안 됩니다.
 
@@ -74,7 +67,7 @@ Windows 운영 체제를 사용하는 경우 .NET Framework가 이미 컴퓨터�
 
 .NET Framework 앱 또는 구성 요소를 개발하려면 다음과 같이 하세요.
 
-1. 운영 체제에 사전 설치되지 않은 경우, 앱의 대상이 되는 .NET Framework 버전을 설치합니다. 최신 프로덕션 버전은 .NET Framework 4.7입니다. .NET Framework 4.7은 Windows 10 크리에이터스 업데이트에 사전 설치되어 있지만 이전 버전의 Windows 운영 체제에서는 다운로드 가능합니다. .NET Framework 시스템 요구 사항은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오. 다른 버전의 .NET Framework 설치에 대한 자세한 내용은 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오. 추가 .NET Framework 패키지는 대역 외로 릴리스됩니다. 즉, 모든 일반 또는 예약된 릴리스 주기를 벗어난 롤링 방식으로 릴리스됩니다. 이러한 패키지에 대한 자세한 내용은 [.NET Framework 및 번외 릴리스](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오.
+1. 운영 체제에 사전 설치되지 않은 경우, 앱의 대상이 되는 .NET Framework 버전을 설치합니다. 최신 프로덕션 버전은 .NET Framework 4.7.1입니다. .NET Framework 4.7.1은 Windows 10 Fall Creators Update에 사전 설치되어 있지만 이전 버전의 Windows 운영 체제에서는 다운로드 가능합니다. .NET Framework 시스템 요구 사항은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오. 다른 버전의 .NET Framework 설치에 대한 자세한 내용은 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오. 추가 .NET Framework 패키지는 대역 외로 릴리스됩니다. 즉, 모든 일반 또는 예약된 릴리스 주기를 벗어난 롤링 방식으로 릴리스됩니다. 이러한 패키지에 대한 자세한 내용은 [.NET Framework 및 번외 릴리스](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오.
 
 2. 앱을 개발하는 데 사용하는 .NET Framework에서 지원하는 언어를 선택합니다. Microsoft의 Visual Basic, C#, Visual F# 및C++/CLI를 포함한 많은 언어를 사용할 수 있습니다. (.NET Framework용 앱을 개발할 수 있는 프로그래밍 언어는 [CLI(공용 언어 인프라) 사양](http://go.microsoft.com/fwlink/?LinkId=199862)을 준수합니다.)
 
@@ -99,4 +92,3 @@ Windows 운영 체제를 사용하는 경우 .NET Framework가 이미 컴퓨터�
 [새로운 기능](../../../docs/framework/whats-new/index.md)   
 [.NET API 브라우저](/dotnet/api/)   
 [개발 가이드](../../../docs/framework/development-guide.md)
-

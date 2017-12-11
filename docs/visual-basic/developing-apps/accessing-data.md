@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da2fb9171a6b09ad94cea62877445bcb77c521ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic 응용 프로그램에서 데이터에 액세스
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에는 데이터에 액세스하는 응용 프로그램 개발을 지원하기 위한 여러 가지 새로운 기능이 포함됩니다. [데이터 소스 창](/visualstudio/data-tools/add-new-data-sources)에서 양식으로 항목을 끌어 Windows 응용 프로그램에 대한 데이터 바인딩된 양식을 만듭니다. **데이터 소스 창**에서 기존 컨트롤로 항목을 끌어 컨트롤을 데이터에 바인딩합니다.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 10/18/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Visual Basic에서 LINQ를 사용하는 방법을 설명하는 항목의 링크를 제공합니다.  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에 대한 정보를 제공합니다. 프로그래밍 예제를 포함합니다.  
   
  [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)(Visual Studio의 LINQ to SQL 도구)  
- 응용 프로그램에서 [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) 개체 모델을 만드는 방법에 대한 항목의 링크를 제공합니다.  
+ 응용 프로그램에서 [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md) 개체 모델을 만드는 방법에 대한 항목의 링크를 제공합니다.  
   
  [n 계층 응용 프로그램에서 데이터 집합 작업](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  다중 계층 데이터 응용 프로그램을 만드는 방법에 대한 항목의 링크를 제공합니다.  
