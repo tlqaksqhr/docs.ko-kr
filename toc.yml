@@ -13,9 +13,18 @@
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
           items:
-            - name: .NET 마이크로 서비스 -- 컨테이너화된 .NET 응용 프로그램을 위한 아키텍처
+            - name: 현대식 ASP.NET 웹 응용 프로그램 전자책
+              tocHref: /dotnet/standard/modern-web-apps-azure-architecture/
+              topicHref: /dotnet/standard/modern-web-apps-azure-architecture/index
+            - name: .NET 마이크로 서비스 - 아키텍처 전자책
               tocHref: /dotnet/standard/microservices-architecture/
               topicHref: /dotnet/standard/microservices-architecture/index
+            - name: .NET 앱 현대화 전자책
+              tocHref: /dotnet/standard/modernize-with-azure-and-containers/
+              topicHref: /dotnet/standard/modernize-with-azure-and-containers/index
+            - name: .NET 마이크로 서비스 - DevOps 전자책
+              tocHref: /dotnet/standard/containerized-lifecycle-architecture/
+              topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
             - name: 비동기 프로그래밍 패턴
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
@@ -232,7 +241,7 @@
                   topicHref: /dotnet/framework/unmanaged-api/authenticode/index
                 - name: 디버깅(관리되지 않는 API 참조)
                   tocHref: /dotnet/framework/unmanaged-api/debugging/
-                  topicHref: /dotnet/framework/unmanaged-api/debuggin/index
+                  topicHref: /dotnet/framework/unmanaged-api/debugging/index
                 - name: 진단 기호 저장소(관리되지 않는 API 참조)
                   tocHref: /dotnet/framework/unmanaged-api/diagnostics/
                   topicHref: /dotnet/framework/unmanaged-api/diagnostics/index
@@ -341,6 +350,9 @@
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
+            - name: 빠른 시작
+              tocHref: /dotnet/csharp/quick-starts/
+              topicHref: /dotnet/csharp/quick-starts/index
             - name: 시작
               tocHref: /dotnet/csharp/getting-started/
               topicHref: /dotnet/csharp/getting-started/index
@@ -348,8 +360,8 @@
               tocHref: /dotnet/csharp/tutorials/
               topicHref: /dotnet/csharp/tutorials/index
             - name: 둘러보기
-              tocHref: /dotnet/csharp/tour/
-              topicHref: /dotnet/csharp/tour/index
+              tocHref: /dotnet/csharp/tour-of-csharp/
+              topicHref: /dotnet/csharp/tour-of-csharp/index
             - name: 새로운 기능
               tocHref: /dotnet/csharp/whats-new/
               topicHref: /dotnet/csharp/whats-new/index
@@ -380,7 +392,7 @@
                   topicHref: /dotnet/csharp/programming-guide/events/index
                 - name: 예외 및 예외 처리
                   tocHref: /dotnet/csharp/programming-guide/exceptions/
-                  topicHref: /dotnet/csharp/programming-guide/èxceptions/index
+                  topicHref: /dotnet/csharp/programming-guide/exceptions/index
                 - name: 파일 시스템 및 레지스트리
                   tocHref: /dotnet/csharp/programming-guide/file-system/
                   topicHref: /dotnet/csharp/programming-guide/file-system/index
@@ -395,7 +407,7 @@
                   topicHref: /dotnet/csharp/programming-guide/interfaces/index
                 - name: 상호 운용성
                   tocHref: /dotnet/csharp/programming-guide/interop/
-                  topicHref: /dotnet/csharp/programming-guide/ìnterop/index
+                  topicHref: /dotnet/csharp/programming-guide/interop/index
                 - name: LINQ
                   tocHref: /dotnet/csharp/programming-guide/linq/
                   topicHref: /dotnet/csharp/programming-guide/linq/index
@@ -426,7 +438,7 @@
                       topicHref: /dotnet/csharp/programming-guide/concepts/covariance-contravariance/index
                     - name: 식 트리
                       tocHref: /dotnet/csharp/programming-guide/concepts/expression-trees/
-                      topicHref: /dotnet/csharp/programming-guide/concepts/èxpression-trees/index
+                      topicHref: /dotnet/csharp/programming-guide/concepts/expression-trees/index
                     - name: LINQ
                       tocHref: /dotnet/csharp/programming-guide/concepts/linq/
                       topicHref: /dotnet/csharp/programming-guide/concepts/linq/index
@@ -501,7 +513,7 @@
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/attributes/index
                 - name: 식 트리
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/
-                  topicHref: /dotnet/visual-basic/programming-guide/concepts/èxpression-trees/index
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/index
                 - name: LINQ
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/linq/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/linq/index
@@ -558,7 +570,7 @@
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/procedures/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/procedures/index
                 - name: 문자열
-                  tocHref: /dotnet/visual-basic/programming-guide/language-features/`strings/
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/strings/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/strings/index
                 - name: 변수
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/variables/

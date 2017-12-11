@@ -9,6 +9,7 @@
 ### [버전 독립적 serialization](version-tolerant-serialization.md)
 ### [serialization 지침](serialization-guidelines.md)
 ### [방법: 직렬화된 데이터 청크](how-to-chunk-serialized-data.md)
+### [방법: 표준.NET 개체가 직렬화 가능한지 확인](how-to-determine-if-netstandard-object-is-serializable.md)
 ## [XML 및 SOAP serialization](xml-and-soap-serialization.md)
 ### [방법: 파생 클래스의 serialization 제어](how-to-control-serialization-of-derived-classes.md)
 ### [XML serialization 소개](introducing-xml-serialization.md)

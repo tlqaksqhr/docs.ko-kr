@@ -4,6 +4,7 @@
 ### [문자열 조작 메서드 유형](types-of-string-manipulation-methods.md)
 ### [Nothing 및 문자열](nothing-and-strings.md)
 ### [문화권이 문자열에 영향을 주는 방식](how-culture-affects-strings.md)
+### [보간된 문자열](interpolated-strings.md)
 ### [0부터 시작하는 문자열 액세스와 1부터 시작하는 문자열 액세스 비교](zero-based-vs-one-based-string-access.md)
 ## [방법: StringBuilder를 사용하여 문자열 만들기](how-to-create-strings-using-a-stringbuilder.md)
 ## [방법: 문자열 내에서 검색](how-to-search-within-a-string.md)

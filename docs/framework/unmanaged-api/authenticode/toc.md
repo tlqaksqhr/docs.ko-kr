@@ -6,5 +6,5 @@
 ## [CertFreeAuthenticodeTimestamperInfo 함수](certfreeauthenticodetimestamperinfo-function.md)
 ## [CertTimestampAuthenticodeLicense 함수](certtimestampauthenticodelicense-function.md)
 ## [CertVerifyAuthenticodeLicense 함수](certverifyauthenticodelicense-function.md)
-## [AXL_AUTHENTICODE_SIGNER_INFO 구조](axl-authenticode-signer-info-structure.md)
-## [AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조](axl-authenticode-timestamper-info-structure.md)
+## [AXL_AUTHENTICODE_SIGNER_INFO 구조체](axl-authenticode-signer-info-structure.md)
+## [AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조체](axl-authenticode-timestamper-info-structure.md)
