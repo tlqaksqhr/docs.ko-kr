@@ -1,6 +1,6 @@
 ---
 title: "액세스 가능성 수준(C# 참조)"
-ms.date: 07/20/2015
+ms.date: 12/06/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.topic: article
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 77124554d7a0b38414e154e024aceddbfffcfbd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessibility-levels-c-reference"></a>액세스 가능성 수준(C# 참조)
+
 액세스 한정자 [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) 또는 [private](../../../csharp/language-reference/keywords/private.md)을 사용하여 멤버에 대한 다음 선언된 액세스 가능성 수준 중 하나를 지정합니다.  
   
 |선언된 액세스 가능성|의미|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 11/21/2017
 |`internal`|액세스가 현재 어셈블리로 제한됩니다.|  
 |`protected internal`|액세스가 현재 어셈블리 또는 포함하는 클래스에서 파생된 형식으로 제한됩니다.|  
 |`private`|액세스가 포함하는 형식으로 제한됩니다.|  
-|`private protected`|액세스가 포함 하는 클래스 또는 포함 하는 현재 어셈블리 내의 클래스에서 파생 된 형식으로 제한 합니다.|  
+|`private protected`|액세스가 포함하는 클래스 또는 현재 어셈블리 내의 포함하는 클래스에서 파생된 형식으로 제한됩니다. C# 7.2부터 사용할 수 있습니다. |  
   
- 하나의 액세스 한정자를 사용할 수는 멤버 또는 형식을 제외 하 고 사용 하는 경우는 `protected internal` 또는 `private protected` 조합 합니다.  
+ `protected internal` 또는 `private protected` 조합을 사용할 경우를 제외하고 멤버 또는 형식에는 액세스 한정자가 하나만 허용됩니다.  
   
  네임스페이스에는 액세스 한정자가 허용되지 않습니다. 네임스페이스에는 액세스 제한이 없습니다.  
   

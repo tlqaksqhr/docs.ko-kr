@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>확장명 메서드(C# 프로그래밍 가이드)
 확장명 메서드를 사용하면 새 파생 형식을 만들거나 다시 컴파일하거나 원래 형식을 수정하지 않고도 기존 형식에 메서드를 "추가"할 수 있습니다. 확장 메서드는 특수한 종류의 정적 메서드이지만 확장 형식의 인스턴스 메서드인 것처럼 호출됩니다. C#, F# 및 Visual Basic에서 작성된 클라이언트 코드의 경우 확장명 메서드를 호출하는 것과 형식에 실제로 정의된 메서드를 호출하는 데는 명백한 차이가 없습니다.  
@@ -84,14 +84,14 @@ using System.Linq;
   
 -   확장 메서드는 네임스페이스 수준에서 범위로 가져옵니다. 예를 들어 `Extensions`라는 단일 네임스페이스에 확장 메서드를 포함하는 여러 개의 정적 클래스가 있는 경우 `using Extensions;` 지시문을 통해 모두 범위로 가져옵니다.  
   
- 구현된 클래스 라이브러리의 경우 어셈블리의 버전 번호가 증가되는 것을 방지하기 위해 확장 메서드를 사용해서는 안 됩니다. 소스 코드를 소유하고 있는 라이브러리에 중요 기능을 추가하려는 경우 어셈블리 버전 관리를 위한 표준 .NET Framework 지침을 따라야 합니다. 자세한 내용은 [어셈블리 버전 관리](https://msdn.microsoft.com/library/51ket42z)를 참조하세요.  
+ 구현된 클래스 라이브러리의 경우 어셈블리의 버전 번호가 증가되는 것을 방지하기 위해 확장 메서드를 사용해서는 안 됩니다. 소스 코드를 소유하고 있는 라이브러리에 중요 기능을 추가하려는 경우 어셈블리 버전 관리를 위한 표준 .NET Framework 지침을 따라야 합니다. 자세한 내용은 [어셈블리 버전 관리](../../../../docs/framework/app-domains/assembly-versioning.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [병렬 프로그래밍 샘플 (여기에 여러 확장 메서드 예제)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [병렬 프로그래밍 샘플(많은 예제 확장 메서드 포함)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [표준 쿼리 연산자 개요](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [변환 규칙 예를 들어 매개 변수에 대 한 영향](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [언어 간 상호 운용성 확장 메서드](http://go.microsoft.com/fwlink/?LinkId=112386)  
+ [인스턴스 매개 변수의 변환 규칙 및 그에 따른 영향](http://go.microsoft.com/fwlink/?LinkId=112385)  
+ [언어 간 확장 메서드 상호 운용성](http://go.microsoft.com/fwlink/?LinkId=112386)  
  [확장 메서드 및 대리자 변환](http://go.microsoft.com/fwlink/?LinkId=112387)  
  [확장 메서드 바인딩 및 오류 보고](http://go.microsoft.com/fwlink/?LinkId=112388)
