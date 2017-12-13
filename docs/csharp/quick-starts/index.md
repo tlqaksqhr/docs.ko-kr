@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: af7b04969519cce49e9d753993245e1347f596d4
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-starts"></a>C# 빠른 시작 #
 
@@ -36,13 +36,13 @@ Hello World 단원 다음에 나오는 모든 빠른 시작은 온라인 브라�
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[분기 및 루프](branches-and-loops.yml)
 
-[분기 및 루프](branches-and-loops.yml) 빠른 시작에서는 변수에 저장된 값에 따라 코드의 여러 경로를 선택하는 기본 사항을 설명합니다. 프로그램에서 결정하고 여러 작업을 선택하는 방법에 대한 기본 사항인 제어 흐름의 기본 사항에 대해 알아봅니다. 이 빠른 시작은 [컴퓨터에서 로컬로 실행](branches-and-loops-local.md)할 수도 있습니다.
+[분기 및 루프](branches-and-loops.yml) 빠른 시작에서는 변수에 저장된 값에 따라 코드 실행의 여러 경로를 선택하는 기본 사항을 설명합니다. 프로그램에서 결정하고 여러 작업을 선택하는 방법에 대한 기본 사항인 제어 흐름의 기본 사항에 대해 알아봅니다. 이 빠른 시작은 [컴퓨터에서 로컬로 실행](branches-and-loops-local.md)할 수도 있습니다.
 
 이 시작 단원에서는 [Hello World](hello-world.yml) 및 [C#의 숫자](numbers-in-csharp.yml) 단원을 완료했다고 가정합니다.
 
 ## <a name="list-collectionlist-collectionyml"></a>[목록 컬렉션](list-collection.yml)
 
-[목록 컬렉션](list-collection.yml) 단원에서는 데이터 시퀀스를 저장하는 목록 컬렉션 형식을 살펴봅니다. 항목을 추가 및 제거하고, 항목을 검색하고, 항목을 제거하고, 목록을 정렬하는 방법을 배웁니다. 여러 종류의 목록을 살펴봅니다. 이 빠른 시작은 [컴퓨터에서 로컬로 실행](arrays-and-collections.md)할 수도 있습니다.
+[목록 컬렉션](list-collection.yml) 단원에서는 데이터 시퀀스를 저장하는 목록 컬렉션 형식을 살펴봅니다. 항목을 추가 및 제거하고, 항목을 검색하고, 목록을 정렬하는 방법을 배웁니다. 여러 종류의 목록을 살펴봅니다. 이 빠른 시작은 [컴퓨터에서 로컬로 실행](arrays-and-collections.md)할 수도 있습니다.
 
 이 빠른 시작에서는 위에 나열된 빠른 시작을 완료했다고 가정합니다.
 
