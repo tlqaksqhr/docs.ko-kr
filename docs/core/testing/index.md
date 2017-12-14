@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.openlocfilehash: 666c06b236ad870c5c683749ab57d4488b4b8a39
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: 780c2655b6d6a660939fb79ea58bec463ec97aa9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 유닛 테스트
 
@@ -34,15 +34,18 @@ ms.lasthandoff: 12/01/2017
 
 .NET Core 프로젝트의 단위 테스트에 대한 자세한 내용은 다음을 참조하세요.
 
-.NET Core에 대한 단위 테스트 프로젝트는 [C#](../../csharp/index.md), [F#](../../fsharp/index.md) 및 [Visual Basic](../../visual-basic/index.md)에 지원됩니다. 또한 [xUnit](http://xunit.github.io) 및 [MSTest](https://github.com/Microsoft/vstest-docs) 중에서 선택할 수 있습니다.
+.NET Core에 대한 단위 테스트 프로젝트는 [C#](../../csharp/index.md), [F#](../../fsharp/index.md) 및 [Visual Basic](../../visual-basic/index.md)에 지원됩니다. 또한 [xUnit](http://xunit.github.io), [NUnit](http://nunit.org) 및 [MSTest](https://github.com/Microsoft/vstest-docs) 중에서 선택할 수 있습니다.
 
 다음 연습에서 이러한 조합에 관해 알아볼 수 있습니다.
 
 * .NET Core CLI와 함께 [*XUnit* 및 *C#*을 사용하여 단위 테스트 만들기](unit-testing-with-dotnet-test.md)
+* .NET Core CLI와 함께 [*NUnit* 및 *C#*을 사용하여 단위 테스트 만들기](unit-testing-with-nunit.md)
 * .NET Core CLI와 함께 [*MSTest* 및 *C#*을 사용하여 단위 테스트 만들기](unit-testing-with-mstest.md)
 * .NET Core CLI와 함께 [*XUnit* 및 *F#*을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-dotnet-test.md)
+* .NET Core CLI와 함께 [*NUnit* 및 *F#*을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-nunit.md)
 * .NET Core CLI와 함께 [*MSTest* 및 *F#*을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-mstest.md)
 * .NET Core CLI와 함께 [*XUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-dotnet-test.md)
+* .NET Core CLI와 함께 [*NUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-nunit.md)
 * .NET Core CLI와 함께 [*MSTest* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-mstest.md)
 
 클래스 라이브러리 및 단위 테스트 라이브러리에 대해 다른 언어를 선택할 수 있습니다. 위에서 참조된 연습을 혼합하고 일치시켜 방법을 알 수 있습니다.
