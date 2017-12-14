@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b6d24356841e8b385bef47bcba0e5694b48240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>연습: XAML을 사용하여 단추 만들기
 애니메이션된 단추에서 사용 하기 위해 만드는 방법을 설명 하는이 연습의 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램입니다. 이 연습에서는 스타일 및 서식 파일을 사용 하 여 코드 재사용 및 단추 선언에서 단추 논리 분리를 허용 하는 사용자 지정된 단추 리소스를 만듭니다. 이 연습은 전체 코드를 작성은 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/21/2017
     </Application>  
     ```  
   
-     리소스를 정의 하 여 리소스 범위가 결정 됩니다. 에 대 한 리소스 정의 `Application.Resoureses` 는 app.xaml 파일에서 파일을 통해 리소스를 응용 프로그램의 모든 위치에서 사용할 수 있습니다. 리소스의 범위를 정의 하는 방법에 대 한 자세한 참조 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  
+     리소스를 정의 하 여 리소스 범위가 결정 됩니다. 에 대 한 리소스 정의 `Application.Resources` 는 app.xaml 파일에서 파일을 통해 리소스를 응용 프로그램의 모든 위치에서 사용할 수 있습니다. 리소스의 범위를 정의 하는 방법에 대 한 자세한 참조 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  
   
 2.  **스타일을 만들고 정의 된 기본 속성 값:** 다음 태그를 추가 `Application.Resources` 블록입니다. 이 태그를 만듭니다는 <xref:System.Windows.Style> 응용 프로그램 설정의 모든 단추에 적용 되는 <xref:System.Windows.FrameworkElement.Width%2A> 90으로 단추의 및 <xref:System.Windows.FrameworkElement.Margin%2A> 10:  
   
@@ -328,7 +328,7 @@ ms.lasthandoff: 11/21/2017
   
      F5 키를 눌러 응용 프로그램을 실행 하 고 단추 중 하나를 클릭 합니다. 포커스를 여전히 있기 때문에 클릭 한 후 단추가 강조 표시 된에 유지 된다는 것을 확인 합니다. 다른 단추를 클릭 하면 마지막이를 손실 하는 동안 새 단추 포커스를 얻습니다.  
   
-4.  **에 대 한 애니메이션 추가** <xref:System.Windows.UIElement.MouseEnter> **및** <xref:System.Windows.UIElement.MouseLeave> **:** 다음 일부 애니메이션 트리거를 추가 했습니다.   내에 다음 태그를 추가 `ControlTemplate.Triggers` 블록입니다.  
+4.  **에 대 한 애니메이션 추가** <xref:System.Windows.UIElement.MouseEnter> **및** <xref:System.Windows.UIElement.MouseLeave> **:** 다음 일부 애니메이션 트리거를 추가 했습니다. 내에 다음 태그를 추가 `ControlTemplate.Triggers` 블록입니다.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  
