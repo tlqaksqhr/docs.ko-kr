@@ -16,11 +16,11 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms에 사용할 수 있는 컨트롤
 다음은 사전순 목록 컨트롤 및 Windows Forms에서 사용할 수 있는 구성 요소입니다. 이 섹션에서 다루는 Windows Forms 컨트롤 외에 Windows Forms에 ActiveX 및 사용자 지정 컨트롤을 추가할 수 있습니다. 여기에 나열된 목록에서 사용자가 필요한 컨트롤을 찾을 수 없는 경우 직접 만들 수도 있습니다. 자세한 내용은 [디자인할 때 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)을 참조하십시오. 필요한 컨트롤을 선택하는 방법에 대한 자세한 내용은 [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)을 참조하십시오.  
@@ -83,9 +83,8 @@ ms.lasthandoff: 10/18/2017
  [ErrorProvider 구성 요소](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
  사용자에게 영향을 주지 않는 방식으로 오류 정보를 표시합니다.  
   
- "FileDialog 클래스"  
- 파일 대화 상자에 대한 기본 클래스 기능을 제공합니다.  
-  
+ [FileDialog 클래스](../../../../docs/framework/winforms/controls/filedialog-class.md) 파일 대화 상자에 대 한 기본 클래스 기능을 제공 합니다.
+
  [FlowLayoutPanel 컨트롤](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
  가로 또는 세로로 해당 내용을 동적으로 펼쳐지는 패널을 나타냅니다.  
   
@@ -173,8 +172,7 @@ ms.lasthandoff: 10/18/2017
  [SaveFileDialog 구성 요소](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  저장할 파일 및 저장 위치를 선택합니다.  
   
- SoundPlayer 클래스"  
- 응용 프로그램에 소리를 쉽게 포함할 수 있습니다.  
+ [SoundPlayer 클래스](../../../../docs/framework/winforms/controls/soundplayer-class.md) 응용 프로그램에서 소리를 쉽게 포함할 수 있습니다.
   
  [SplitContainer 컨트롤](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  사용자가 고정된 컨트롤의 크기를 조정할 수 있습니다.  

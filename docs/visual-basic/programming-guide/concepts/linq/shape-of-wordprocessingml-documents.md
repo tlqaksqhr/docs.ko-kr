@@ -12,11 +12,11 @@ ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f29ed78062337c7036ada2405fa610ff1f883feb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5809e8148e7ac426b876ad11948878ee0bfcd016
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>(Visual Basic) WordprocessingML 문서의 모양
 이 항목에서는 WordprocessingML 문서의 XML 모양에 대해 소개합니다.  
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="microsoft-office-formats"></a>Microsoft Office 형식  
  2007 Microsoft Office system의 기본 파일 형식은 Office Open XML(일반적으로 Open XML이라고 함)입니다. Open XML은 Ecma 표준이며 현재 ISO-IEC 표준 과정을 거치고 있는 XML 기반 형식입니다. Open XML에 있는 워드 프로세서 파일의 마크업 언어를 WordprocessingML이라고 합니다. 이 자습서에서는 WordprocessingML 소스 파일을 예제의 입력으로 사용합니다.  
   
- Microsoft Office 2003을 사용하는 경우 Word, Excel 및 PowerPoint 2007 파일 형식용 Microsoft Office 호환 기능 팩을 설치했으면 Office Open XML 형식으로 문서를 저장할 수 있습니다.  
+ Microsoft Office 2003을 사용 하는 경우에 Word, Excel 및 PowerPoint 2007 파일 형식용에 대 한 Microsoft Office 호환 기능 팩을 설치한 경우 Office Open XML 형식에서 문서를 저장할 수 있습니다.  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>WordprocessingML 문서의 모양  
  먼저 WordprocessingML 문서의 모양을 이해해야 합니다. WordprocessingML 문서에는 문서의 단락이 포함된 `w:body`라는 본문 요소가 들어 있습니다. 각 단락에는 `w:r`이라는 텍스트 실행이 하나 이상 포함되어 있습니다. 각 텍스트 실행에는 `w:t`라는 텍스트가 하나 이상 포함되어 있습니다.  

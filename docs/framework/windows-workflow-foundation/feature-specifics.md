@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: e60ed6fb2fb85faa1d2d744bf29e40d3eaa639c3
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]에서는 Windows Workflow Foundation에 많은 기능을 추가합니다. 이 문서에서는 여러 새로운 기능을 설명하고 이러한 기능이 유용할 수 있는 시나리오에 대한 세부 정보를 제공합니다.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/02/2017
   
 -   메시지를 그룹화하는 데 사용되는 상관 관계의 예로 메시지를 그룹화하는 요청-회신 상관 관계가 있습니다.  
   
-    -   <xref:System.ServiceModel.Activities.Receive> 작업에서 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> 속성을 클릭하고 위의 첫 번째 단계에서 만든 CorrelationHandle을 사용하여 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>를 추가합니다.  
+    -   에 <xref:System.ServiceModel.Activities.Receive> 활동을 클릭 하는 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> 속성 추가 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> 위의 1 단계에서 만든 CorrelationHandle을 사용 하 여 합니다.  
   
     -   만들기는 <xref:System.ServiceModel.Activities.SendReply> 마우스 오른쪽 단추로 클릭 하 여 활동의 <xref:System.ServiceModel.Activities.Receive> "SendReply 만들기"를 클릭 하 고 있습니다. 워크플로에서 <xref:System.ServiceModel.Activities.Receive> 작업 뒤에 이 작업을 붙여 넣습니다.  
   
@@ -180,9 +180,9 @@ ms.lasthandoff: 12/02/2017
   
 -   샘플:  
   
-    -   [오류 TryCatch를 사용 하 여 Flowchart 활동에서 처리](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    -   [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    -   [FlowChart와 Pick을 함께 사용 하는 StateMachine 시나리오](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [FlowChart와 Pick을 함께 사용하는 StateMachine 시나리오](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
   
     -   [채용 프로세스](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/02/2017
   
 -   샘플:  
   
-    -   [메서드 호출](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
   
 -   디자이너 설명서: [InvokeMethod 활동 디자이너](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
@@ -258,9 +258,9 @@ ms.lasthandoff: 12/02/2017
   
 -   샘플:  
   
-    1.  [오류 TryCatch를 사용 하 여 Flowchart 활동에서 처리](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    1.  [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    2.  [절차 작업을 사용 하 여](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+    2.  [절차 작업 사용](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   
 -   디자이너 설명서: [오류 처리 활동 디자이너](/visualstudio/workflow-designer/error-handling-activity-designers)  
   

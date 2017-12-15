@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework용 SqlClient에서 알려진 문제
 이 단원에서는 .NET Framework Data Provider for SQL Server(SqlClient)와 관련된 알려진 문제에 대해 설명합니다.  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  특정 데이터베이스 동작은 데이터베이스로 설정된 호환성 수준에 따라 달라집니다. `ProviderManifestToken` 특성이 2005로 설정되어 있고 SQL Server 버전은 2005지만 데이터베이스의 호환성 수준이 "80"(SQL Server 2000)으로 설정된 경우 생성된 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]에서 SQL Server 2005를 대상으로 지정하지만 호환성 수준 설정으로 인해 예상대로 실행되지 않을 수 있습니다. 예를 들어, ORDER BY 목록의 열 이름이 선택기의 열 이름과 일치하는 경우 정렬 정보가 손실될 수 있습니다.  
   
 ## <a name="nested-queries-in-projection"></a>프로젝션의 중첩 쿼리  
- 프로젝션 절의 중첩 쿼리는 서버의 Cartesian 제품 쿼리로 변환될 수 있습니다. SLQ Server를 비롯한 일부 백엔드 서버에서는 이로 인해 TempDB 테이블이 매우 커질 수 있으므로 서버 성능이 저하될 수 있습니다.  
+ 프로젝션 절의 중첩 쿼리는 서버의 Cartesian 제품 쿼리로 변환될 수 있습니다. SLQ Server를 비롯 한 일부 백엔드 서버에서이 수로 인해 TempDB 테이블이 매우 커질 수 있습니다. 서버 성능이 저하될 수 있습니다.  
   
  다음은 프로젝션 절의 중첩 쿼리 예제입니다.  
   
@@ -70,5 +70,5 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 서버에서 생성된 GUID 형식 ID 값을 지원하지만 공급자에서 행이 삽입된 이후 서버에서 생성된 ID 값을 반환하는 기능을 지원해야 합니다. 부터는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005 년에서 서버 생성 GUID 형식을 반환할 수 있습니다는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 를 통해 데이터베이스는 [OUTPUT 절](http://go.microsoft.com/fwlink/?LinkId=169400) 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Entity Framework 용 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [알려진된 문제 및 linq에서 to Entities의 고려 사항](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+ [Entity Framework용 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
+ [LINQ to Entities에서 알려진 문제 및 고려 사항](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

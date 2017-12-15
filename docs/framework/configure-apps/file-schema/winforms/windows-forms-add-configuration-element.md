@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 367ca30c577cbb4ed7fed130bdcbd4faac2d46c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms 구성 요소를 추가합니다.
 
@@ -113,7 +113,7 @@ Windows Forms 응용 프로그램의 높은 DPI 지원을 사용해에 자세한
 
 ### <a name="single-pass-scaling"></a>한 번 통과 크기 조정
 
-사용자 인터페이스의 인지 되는 응답성에 영향을 단일 또는 다중 pass 크기 조정 및 사용자의 시각적 모양을 인터페이스 요소 처럼 크기가 조정 됩니다. .NET Framework 4.7 이상에서는 Windows Forms 단일 패스 크기 조정을 사용 합니다. .NET Framework의 이전 버전에서는 크기 조정 필요 이상 인해 일부 컨트롤 크기를 조정할 수 있는 여러 과정을 통해 수행할 되었습니다. 한 번 통과 배율는 사용할 수 이전 동작에 종속 되는 앱입니다.  
+단일 또는 다중 pass 배율 영향을 줍니다 사용자 인터페이스의 인지 되는 응답성, 사용자 인터페이스 요소의 모양으로 크기가 조정 됩니다. .NET Framework 4.7 이상에서는 Windows Forms 단일 패스 크기 조정을 사용 합니다. .NET Framework의 이전 버전에서는 크기 조정 필요 이상 인해 일부 컨트롤 크기를 조정할 수 있는 여러 과정을 통해 수행할 되었습니다. 한 번 통과 배율는 사용할 수 이전 동작에 종속 되는 앱입니다.  
 
 ## <a name="see-also"></a>참고 항목
  

@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="weak-event-patterns"></a>약한 이벤트 패턴
 응용 프로그램에서 있기 이벤트 소스에 연결 된 처리기를 조정 하 여 처리기는 소스에 연결 하는 수신기 개체 소멸 되지 것입니다. 이 경우 메모리 누수가 발생할 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]특정 이벤트에 대 한 전용된 관리자 클래스를 제공 하 고 해당 이벤트에 대 한 수신기에 인터페이스를 구현 하 여이 문제를 해결 하는 데 사용할 수 있는 디자인 패턴을 소개 합니다. 이 디자인 패턴 이라고는 *취약 한 이벤트 패턴*합니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 |--------------|-----------------------|  
 |기존 취약 한 이벤트 관리자 클래스를 사용 하 여|구독 하려는 이벤트에 해당 하는 경우 <xref:System.Windows.WeakEventManager>, 기존 취약 한 이벤트 관리자를 사용 합니다. WPF와 함께 제공 되는 취약 한 이벤트 관리자의 목록에 대 한 참조의 상속 계층 구조는 <xref:System.Windows.WeakEventManager> 클래스입니다. 그러나 Note, 되므로 다른 인증 방법 중 하나를 선택 해야 것 WPF와 함께 제공 되는 비교적 취약 한 이벤트 관리자가 없음을 합니다.|  
 |일반 약한 이벤트 관리자 클래스를 사용 하 여|일반을 사용 하 여 <xref:System.Windows.WeakEventManager%602> 기존 <xref:System.Windows.WeakEventManager> 을 사용할 수 없는 쉽게를 구현 하는 방법을 원하고 없는 우려 효율성에 대 한 합니다. 제네릭 <xref:System.Windows.WeakEventManager%602> 에서 기존 또는 사용자 지정 취약 한 이벤트 관리자 보다 덜 효율적입니다. 예를 들어 제네릭 클래스는 이벤트의 이름이 지정 된 이벤트를 검색 하기 위해 더 많은 리플렉션을 수행 합니다. 또한 제네릭을 사용 하 여 이벤트를 등록 하려면 코드 <xref:System.Windows.WeakEventManager%602> 더 기존를 사용 하 여 보다 자세한 정보 또는 사용자 지정은 <xref:System.Windows.WeakEventManager>합니다.|  
-|취약 한 사용자 지정 이벤트 관리자 클래스 만들기|사용자 지정 만들기 <xref:System.Windows.WeakEventManager> 때 기존 있습니다 <xref:System.Windows.WeakEventManager> 사용할 수 없으면 효율성을 극대화 하 고 있습니다. 사용자 지정을 사용 하 여 <xref:System.Windows.WeakEventManager> 구독할 이벤트는 더 효율적 이지만 시작 부분에 더 많은 코드 작성의 비용 발생 시 키 지 않습니다.|  
+|취약 한 사용자 지정 이벤트 관리자 클래스 만들기|사용자 지정 만들기 <xref:System.Windows.WeakEventManager> 기존 <xref:System.Windows.WeakEventManager> 사용할 수 없으면 효율성을 극대화 하 고 있습니다. 사용자 지정을 사용 하 여 <xref:System.Windows.WeakEventManager> 구독할 이벤트는 더 효율적 이지만 시작 부분에 더 많은 코드 작성의 비용 발생 시 키 지 않습니다.|  
   
  다음 섹션에는 취약 한 이벤트 패턴을 구현 하는 방법을 설명 합니다.  이 논의의 목적에 대 한 이벤트를 구독할 다음과 같은 특징이 있습니다.  
   
