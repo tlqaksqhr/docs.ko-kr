@@ -22,7 +22,7 @@ ms.lasthandoff: 11/21/2017
   
 |Key|값|  
 |---------|-----------|  
-|A|수|  
+|A|We|  
 |A|think|  
 |A|that|  
 |B|Linq|  
