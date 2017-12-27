@@ -11,11 +11,11 @@ ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c1ccbfd71baff50a8055cd89ddecf47bd35cac9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 19820cd20ea87720968298aad8edef69d2bd1603
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 문서의 모양(C#)
 이 항목에서는 WordprocessingML 문서의 XML 모양에 대해 소개합니다.  

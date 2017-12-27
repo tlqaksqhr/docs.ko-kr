@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1800eb5c69e2436d89f4abd3b519902c5724e411
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
@@ -37,14 +37,14 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="linux"></a>Linux
 
-.NET Core에 설치 [Linux](https://www.microsoft.com/net/core#linuxredhat)합니다.
+[Linux](https://www.microsoft.com/net/core#linuxredhat)에 .NET Core를 설치합니다.
 
 다음 단계별 자습서에 따라 .NET Core 앱 개발을 시작할 수 있습니다.
 
 * [명령줄을 사용하여 .NET Core 시작](tutorials/using-with-xplat-cli.md) - [.NET Core 플랫폼 간 CLI(명령줄 인터페이스)](tools/index.md)로 모든 코드 편집기를 사용합니다.
 * [Get started with Visual Studio Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)(Ubuntu에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작) - 이 [Channel9](https://channel9.msdn.com) 비디오는 Microsoft의 경량 플랫폼 간 코드 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 설치하고 사용하여 Ubuntu 14.04의 .NET Core에서 첫 번째 콘솔 응용 프로그램을 만드는 방법을 보여 줍니다.
 
-참조는 [Linux 개발을 위한 필수 구성 요소](linux-prerequisites.md) 지원 되는 Linux 배포판 및 버전의 목록에 대 한 항목입니다.
+지원되는 Linux 배포판 및 버전 목록은 [Linux 개발을 위한 필수 조건](linux-prerequisites.md) 항목을 참조하세요.
 
 ## <a name="os-x--macos"></a>OS X/macOS
 

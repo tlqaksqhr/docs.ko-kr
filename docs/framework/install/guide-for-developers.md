@@ -14,17 +14,17 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46e79e67b5d6f088eb2a0fb39e6f4f10c6ed8549
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
 .NET은 Windows에서 실행되는 대부분의 앱에서 필수적인 요소이며, 해당 앱이 실행되는 데 필요한 공통적인 기능을 제공합니다. 개발자를 위해 .NET Framework에서는 시각적으로 멋진 사용자 환경 및 원활하고 안전한 통신이 가능한 앱을 구축하기 위한 포괄적이고 일관적인 프로그래밍 모델을 제공합니다.  
 
-이 문서에서는 컴퓨터에 .NET Framework 4.5부터 [!INCLUDE[net_current](../../../includes/net-current-version.md)]까지 모든 .NET Framework 버전을 설치할 수 있는 링크를 제공합니다. 개발자는 이러한 링크를 앱과 함께 .NET Framework를 다운로드하고 재배포하기 위해 사용할 수 있습니다.
+이 문서에서는 컴퓨터에 .NET Framework 4.5부터 [!INCLUDE[net_current](../../../includes/net-current-version.md)]까지 모든 .NET Framework 버전을 설치할 수 있는 링크를 제공합니다. 개발자는 이러한 링크를 앱과 함께 .NET Framework를 다운로드하고 재배포하기 위해 사용할 수 있습니다. 앱과 함께 .NET Framework 버전을 배포하는 방법에 대한 자세한 내용은 [개발자를 위한 .NET Framework 배포 가이드](../deployment/deployment-guide-for-developers.md)를 참조하세요.
 
 > [!NOTE]
 > 이 항목은 시스템에 .NET Framework를 설치하거나 응용 프로그램과 함께 .NET Framework를 설치하려는 개발자를 대상으로 합니다. .NET Framework 설치에 관심이 있는 사용자는 [Windows 10 및 Windows Server 2016에 .NET Framework 설치](on-windows-10.md)와 같은 특정 운영 체제에 .NET Framework를 설치하는 방법을 설명하는 개별 항목을 참조하세요.  

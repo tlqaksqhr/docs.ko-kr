@@ -10,24 +10,24 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-start-collections"></a>C# 빠른 시작: 컬렉션 #
 
-이 빠른 시작에서는 C# 언어 및의 기본 사항을 소개는 <xref:System.Collections.Generic.List%601> 클래스입니다.
+이 빠른 시작에서는 C# 언어 및 <xref:System.Collections.Generic.List%601> 클래스의 기본 사항을 소개합니다.
 
-이 빠른 시작에서는 개발에 사용할 수 있습니다를 가질 수 있습니다. .NET 항목 [10 분 후에 시작](https://www.microsoft.com/net/core) Mac, PC 또는 Linux 로컬 개발 환경 설정에 대 한 지침이 있습니다.
+이 빠른 시작에서는 개발에 사용할 수 있는 컴퓨터가 있다고 예상합니다. .NET 항목 [Get Started in 10 minutes](https://www.microsoft.com/net/core)(10분 안에 시작)에는 Mac, PC 또는 Linux의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [로컬 빠른 시작 소개](local-environment.md)에 자세한 정보에 대한 링크와 함께 있습니다.
 
 ## <a name="a-basic-list-example"></a>기본 목록 예제입니다.
 
 **list-quickstart**라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console`을 실행합니다.
 
 > [!NOTE]
-> 방금 완료 한 경우 [10 분 후에.NET 시작](https://www.microsoft.com/net)를 사용 하 여 방금 만든 myApp 응용 프로그램을 유지할 수 있습니다.
+> [Get started with .NET in 10 minutes](https://www.microsoft.com/net)(10분 안에 .NET 시작)를 방금 완료한 경우에는 방금 만든 myApp 응용 프로그램을 계속 사용할 수 있습니다.
  
 편집기에서 **Program.cs**를 열고 기존 코드를 다음으로 바꿉니다.
 
@@ -210,7 +210,7 @@ foreach(var item in fibonacciNumbers)
 > 이 섹션에만 집중하려면 `WorkingWithStrings();`를 호출하는 코드를 주석으로 처리할 수 있습니다. `// WorkingWithStrings();`처럼 호출 앞에 `/` 문자를 두 개 배치합니다. 
 
 ## <a name="challenge"></a>과제
-이 단원과 이전 단원에서 학습한 내용을 함께 적용할 수 있는지 확인하세요. 피보나치 수를 사용하여 지금까지 빌드한 내용을 확장합니다. 코드를 작성하여 시퀀스에서 처음 20개 수를 생성합니다.
+이 단원과 이전 단원에서 학습한 개념을 함께 적용할 수 있는지 확인하세요. 피보나치 수를 사용하여 지금까지 빌드한 내용을 확장합니다. 코드를 작성하여 시퀀스에서 처음 20개 수를 생성합니다. (힌트: 20번째 피보나치 수는 6765입니다.)
 
 ## <a name="complete-challenge"></a>과제 완료
 
@@ -218,6 +218,6 @@ foreach(var item in fibonacciNumbers)
 
 루프의 각 반복을 통해 목록의 마지막 두 정수를 사용하고, 더하고, 해당 값을 목록에 추가합니다. 목록에 20개의 항목이 추가될 때까지 루프가 반복됩니다.
 
-축, 목록 빠른 시작을 완료 했습니다. 계속 진행할 수 있습니다는 [클래스 소개](introduction-to-classes.md) 사용자 고유의 개발 환경에서 빠른 시작 합니다.
+축하합니다. 목록 빠른 시작을 완료했습니다. 사용자의 개발 환경에서 [클래스 소개](introduction-to-classes.md) 빠른 시작을 계속할 수 있습니다.
 
 [.NET 가이드](../../standard/index.md)의 [컬렉션](../../standard/collections/index.md) 항목에서 `List` 형식에 대해 더 자세히 학습할 수 있습니다. 다른 많은 컬렉션 형식에 대해서도 학습합니다.

@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
@@ -62,7 +62,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 - [Internal](../language-reference/keywords/internal.md) 멤버는 기본 클래스와 동일한 어셈블리에 있는 파생 클래스에서만 표시됩니다. 기본 클래스와는 다른 어셈블리에 있는 파생 클래스에서는 표시되지 않습니다.
 
-- [공용](../language-reference/keywords/public.md) 멤버가 파생된 클래스에서 볼 수 있으며 파생된 클래스의 공용 인터페이스의 일부입니다. 상속된 Public 멤버는 파생 클래스에 정의된 것처럼 호출할 수 있습니다. 다음 예제에서 클래스 `A`는 `Method1`이라는 메서드를 정의하고 클래스 `B`는 클래스 `A`에서 상속합니다. 그런 다음 이 예제에서는 마치 `B`에 대한 인스턴스 메서드인 것처럼 `Method1`을 호출합니다.
+- [Public](../language-reference/keywords/public.md) 멤버는 파생 클래스에서 표시되고 파생 클래스의 공용 인터페이스에 속합니다. 상속된 Public 멤버는 파생 클래스에 정의된 것처럼 호출할 수 있습니다. 다음 예제에서 클래스 `A`는 `Method1`이라는 메서드를 정의하고 클래스 `B`는 클래스 `A`에서 상속합니다. 그런 다음 이 예제에서는 마치 `B`에 대한 인스턴스 메서드인 것처럼 `Method1`을 호출합니다.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
@@ -179,7 +179,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 기본 `Publication` 클래스에 포함할 멤버, `Publication` 멤버가 메서드 구현을 제공할지 여부 또는 `Publication`이 파생 클래스에 대한 템플릿으로 사용되는 추상 기본 클래스인지 여부.
 
-  이 경우 `Publication` 클래스는 메서드 구현을 제공합니다. [추상 기본 클래스 및 해당 파생 클래스 디자인](#abstract) 섹션에는 추상 기본 클래스를 사용하여 파생 클래스가 재정의해야 하는 메서드를 정의하는 예제가 포함되어 있습니다. 파생 클래스는 파생 형식에 적합한 모든 구현을 자유롭게 제공할 수 있습니다.
+  이 경우 `Publication` 클래스는 메서드 구현을 제공합니다. [추상 기본 클래스 및 파생 클래스 디자인](#abstract) 섹션에는 추상 기본 클래스를 사용하여 파생 클래스가 재정의해야 하는 메서드를 정의하는 예제가 포함되어 있습니다. 파생 클래스는 파생 형식에 적합한 모든 구현을 자유롭게 제공할 수 있습니다.
 
   코드를 다시 사용하는 기능(즉, 여러 파생 클래스가 기본 클래스 메서드의 선언 및 구현을 공유하며 재정의할 필요가 없음)은 비추상 기본 클래스의 장점입니다. 따라서 일부 또는 대부분의 특수화된 `Publication` 형식에서 코드를 공유할 가능성이 높은 경우 `Publication`에 멤버를 추가해야 합니다. 이 작업을 효율적으로 수행하지 못하면 기본 클래스에서 단일 구현을 수행하는 것이 아니라, 파생 클래스에서 주로 동일한 멤버 구현을 제공해야 합니다. 여러 위치에서 중복된 코드를 유지해야 하면 버그가 발생하기 쉬워집니다.
 
