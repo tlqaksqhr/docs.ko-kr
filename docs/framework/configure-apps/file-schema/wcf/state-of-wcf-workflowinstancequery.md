@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d6edb83370f36b73955ab9d619c8b956f36a007e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: edb6cc424be51e03b3c34182a2b456a9658e2bc7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a>WCF의 &lt;state&gt;, &lt;workflowInstanceQuery&gt;
 추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션을 나타냅니다.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/02/2017
 |Terminated|워크플로 인스턴스가 종료됩니다.|  
 |Unsuspended|워크플로 인스턴스의 일시 중단이 해제됩니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 구성은 이 쿼리를 사용하여 `Started` 인스턴스 상태에 대한 워크플로 인스턴스 수준 추적 레코드를 구독합니다.  
   
 ```xml  

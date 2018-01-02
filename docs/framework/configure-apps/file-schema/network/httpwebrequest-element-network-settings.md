@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 0a4490870cb12ff221f75b043f01baad9b5c7c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dadb2d7635f132b44d6fca8c56f53b847ffb1ff9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; 요소 (네트워크 설정)
 웹 요청 매개 변수를 사용자 지정합니다.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 큰 값을 지정 하는 방법을 보여 줍니다. 일반적인 최대 헤더 길이 보다 합니다.  
   
 ```xml  

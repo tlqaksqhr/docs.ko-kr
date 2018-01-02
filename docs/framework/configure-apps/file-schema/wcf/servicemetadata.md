@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4e88c6e5f03cef83e640fbca7434d10f82653f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26dd46cc8915dffdafe211a33ea80e8e46d5acf5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 서비스 메타데이터 및 관련 정보의 게시를 지정합니다.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/02/2017
 </behaviors>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 서비스를 사용 하 여 메타 데이터를 노출 하는 \<serviceMetadata > 요소입니다. 또한 `IMetadataExchange` 계약을 WS-MetadataExchange(MEX) 프로토콜의 구현으로 노출하도록 끝점을 구성합니다. 예제에서는 `mexHttpBinding`에 해당하는 편의 표준 바인딩인 `wsHttpBinding`을 `None`으로 설정된 보안 모드와 함께 사용합니다. "mex"의 상대 주소는 끝점에 사용되는데, 이를 서비스의 기본 주소와 비교하여 확인하는 경우 끝점 주소가 http://localhost/servicemodelsamples/service.svc/mex가 됩니다.  
   
 ```xml
@@ -134,4 +135,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
  [보안 동작](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [메타 데이터 게시 동작](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+ [메타데이터 게시 동작](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3ce884c19d205df4727dcce96ffdf34144ff1dd6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 69c96698b309a789b4527c76e1fe8b8b99811a19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 신뢰 당사자 (RP)의 식별자를 허용 하는 Uri의 집합을 지정 합니다. 허용 되는 대상 Uri 중 하나에 대해 범위가 지정 되지 않는 한 토큰을 허용 하지 않습니다.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  사용은 `<audienceUris>` 의 자식 요소로 요소는 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소, 되지 않지만 이전 버전과 호환성을 위해 계속 지원 됩니다. 설정에는 `<securityTokenHandlerConfiguration>` 요소에서 재정의 된 `<identityConfiguration>` 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 XML에는 응용 프로그램에 대해 허용 가능한 대상 그룹 Uri를 구성 하는 방법을 보여 줍니다. 이 예제에서는 단일 URI를 구성 합니다. 이 URI에 대해 범위가 지정 된 토큰 수락, 다른 항목을 모두 거부 됩니다.  
   
 ```xml  

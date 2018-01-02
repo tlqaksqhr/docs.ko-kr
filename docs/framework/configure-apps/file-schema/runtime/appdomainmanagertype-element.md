@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 56d68efe176540ba82ec7b86f35678905ebc970b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcfdd9bcd1aa458aad705d4ab129646e746d63b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltappdomainmanagertypegt-element"></a>&lt;appDomainManagerType&gt; 요소
 기본 응용 프로그램 도메인용 응용 프로그램 도메인 관리자로 사용되는 유형을 지정합니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  이 구성 요소는 에서만 사용할 수는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 이상.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 프로세스의 기본 응용 프로그램 도메인에 대 한 응용 프로그램 도메인 관리자 임을 지정 하는 방법을 보여 줍니다는 `MyMgr` 에 입력 된 `AdMgrExample` 어셈블리입니다.  
   
 ```xml  

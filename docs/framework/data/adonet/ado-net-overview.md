@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e18115e460bf546c2fd6263e4671457a3da68f65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-overview"></a>ADO.NET 개요
 ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server 및 XML과 같은 데이터 소스에 대한 일관성 있는 액세스를 제공합니다. 데이터 공유 소비자 응용 프로그램은 ADO.NET을 통해 이러한 데이터 소스에 연결하여 포함된 데이터를 검색, 처리 및 업데이트할 수 있습니다.  
@@ -32,7 +33,7 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
   
  **개인정보취급방침**: System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll 및 System.Data.DataSetExtensions.dll 어셈블리는 그렇지 않습니다 사용자의 개인 데이터와 private이 아닌 데이터를 구분 합니다.  이러한 어셈블리는 사용자의 개인 데이터를 수집, 저장 및 전송하지 않습니다. 하지만 타사 응용 프로그램에서 이러한 어셈블리를 사용하여 사용자의 개인 데이터를 수집, 저장 및 전송할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ADO.NET 아키텍처](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
  ADO.NET의 구조와 구성 요소에 대해 간략하게 설명합니다.  
   
@@ -42,13 +43,13 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
  [LINQ 및 ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  LINQ(Language-Integrated Query)가 ADO.NET에 어떻게 구현되었는지 설명하고 관련 항목에 대한 링크를 제공합니다.  
   
- [.NET framework 데이터 공급자](../../../../docs/framework/data/adonet/data-providers.md)  
+ [.NET Framework 데이터 공급자](../../../../docs/framework/data/adonet/data-providers.md)  
  ADO.NET에 포함된 하나 이상의 .NET Framework 데이터 공급자에 대한 디자인 개요를 제공합니다.  
   
  [ADO.NET 데이터 집합](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  `DataSet` 디자인 및 구성 요소의 개요를 제공합니다.  
   
- [ADO.NET에서 Side-by-side-실행](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ [ADO.NET에서 Side-by-Side 실행](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
  ADO.NET 버전의 차이를 설명하고 이 차이가 side-by-side 실행 및 응용 프로그램 호환성에 미치는 영향에 대해 살펴봅니다.  
   
  [ADO.NET 코드 예제](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  

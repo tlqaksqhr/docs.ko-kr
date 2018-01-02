@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 735733fc33a21c2f275c1ea9894c43558f01626e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9d2a71e44db2d6e85ae730f4603bf191f54525c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt; 요소
 
@@ -90,7 +91,7 @@ ms.lasthandoff: 10/18/2017
   
   에 값을 추가 하는 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 키 컴퓨터에서 실행 되는 모든 앱에 영향을 줍니다. 에 값을 추가 하는 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 키 현재 사용자가을 실행 하는 모든 앱에 영향을 줍니다. 컴퓨터를 여러 사용자 계정으로 구성 된 경우 현재 사용자가을 실행 하는 앱만 영향을 받는 값으로 다른 사용자에 대 한 레지스트리 키에 추가 하지 않으면 합니다. 추가 `<useLegacyJit>` 요소 구성 파일에 있는 경우 레지스트리 설정을 재정의 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
 다음 구성 파일 새 64 비트 JIT 컴파일러는 컴파일을 사용 하지 않도록 설정 하 고 대신 레거시 64 비트 JIT 컴파일러를 사용 하 여 합니다.  
   

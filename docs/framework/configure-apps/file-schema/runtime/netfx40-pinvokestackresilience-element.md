@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e77e43ed9d7520cbbcf453d067a49de3a86de3f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b17816ee6134dc6b3074256093c0cba07419baf5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnetfx40pinvokestackresiliencegt-element"></a>&lt;NetFx40_PInvokeStackResilience&gt; 요소
 런타임이 잘못된 플랫폼 호출 선언을 실행 시간에 자동으로 수정할지를 지정합니다. 자동 수정을 수행하는 경우 관리 코드와 비관리 코드 간 전환 속도가 느려집니다.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-file"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일에만 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 잘못 된 복원 기능 향상된을 선택 하도록 플랫폼 호출 사이의 느린 전환 비용 응용 프로그램에 대 한 선언 관리 및 비관리 코드 합니다.  
   
 ```xml  

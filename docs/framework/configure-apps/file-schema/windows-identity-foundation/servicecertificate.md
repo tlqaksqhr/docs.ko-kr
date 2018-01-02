@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 177639b973bf8c597bc8b994d37c99647c72feb8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1373d1e95a0e569f5e5cf433d305d008b4daf838
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicecertificategt"></a>&lt;serviceCertificate&gt;
 암호화 및 토큰 암호 해독 하는 데 사용 되는 X.509 인증서를 구성 합니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/18/2017
 |-------------|-----------------|  
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|구성 하는 설정이 포함 된 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 XML에서는 \<serviceCertificate > 요소입니다. XML에서 가져온 것은 `CustomToken` 샘플.  
   
 ```xml  

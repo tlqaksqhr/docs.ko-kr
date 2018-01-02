@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c466d7f7f00d7fd2358f0d5d71c0b705f316f66f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7175cf55df6bb735367effa8f806a472b9ce5ea6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt; 요소
 서비스 공개에 사용되는 서비스 끝점에 대한 바인딩, 계약 및 주소 속성을 지정합니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<서비스 >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|클라이언트가 연결할 수 있는 끝점의 목록을 정의하는 구성 섹션입니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  서비스 끝점 구성의 예제입니다.  
   
 ```xml  

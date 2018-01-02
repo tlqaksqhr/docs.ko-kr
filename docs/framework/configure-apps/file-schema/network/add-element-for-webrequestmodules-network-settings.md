@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: fd407f77e75bce4bdbc37acd5f28bbe39f92d564
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b7d2c0f52ea42fcb98be149ab005cd67c2db46a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;추가&gt; webRequestModules (네트워크 설정)에 대 한 요소
 응용 프로그램에 사용자 지정 웹 요청 모듈을 추가합니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 HTTP에 대 한 사용자 지정 웹 요청 모듈을 등록 합니다. 지정된 된 모듈에 대 한 올바른 값으로 PublicKeyToken 및 버전에 대 한 값 바꿔야 합니다.  
   
 ```xml  

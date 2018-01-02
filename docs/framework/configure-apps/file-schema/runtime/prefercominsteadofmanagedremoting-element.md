@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7aed6baa227b2bdf90c26f02d38ee67c1ffbbda1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad60d73e30bf02fd52f9c8f3bd707b571959bdd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; 요소
 여부를 런타임에서 COM interop를 사용 원격 서비스 대신 모든 호출에 대 한 응용 프로그램 도메인 경계를 지정 합니다.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
  이러한 두 가지 동작 응용 프로그램 도메인 경계 사용 COM에서 관리 되는 개체 및 원격 서비스 대신 COM interop 사이 COM에 대 한 모든 호출 인터페이스 있는지 확인 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 격리 경계를 넘어 런타임에서 COM을 사용 하도록 지정 하는 방법을 interop 보여 줍니다.  
   
 ```xml  

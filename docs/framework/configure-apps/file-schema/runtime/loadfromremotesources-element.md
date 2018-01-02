@@ -16,11 +16,12 @@ caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 959073381ef936fa7c0b248419c8529deaee969f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efb968d40e54c7552fba0a592e759f9e83c92309
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; 요소
 부여할지 여부를 원격 원본에서 어셈블리가 완전 신뢰를 지정 합니다.  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-file"></a>구성 파일  
  이 요소는 일반적으로 응용 프로그램 구성 파일에서 사용하지만 컨텍스트에 따라 다른 구성 파일에서도 사용할 수 있습니다. 자세한 내용은 문서 참조 [자세한 암시적 사용의 CAS 정책: loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839) .NET 보안 블로그에서.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 원격 원본에서 응용 프로그램에 완전 신뢰를 부여 하는 방법을 보여 줍니다.  
   
 ```xml  

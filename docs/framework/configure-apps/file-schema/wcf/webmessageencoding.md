@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9629ecbe744ac1f4bbd44e22ac42a3e81fff27a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b3b5a8ff5fdf9e3da8824e7eb9443f71613899dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 바인딩에 사용될 경우 일반 텍스트 XML, JSON(JavaScript Object Notation) 메시지 인코딩 및 "원시" 이진 콘텐츠를 읽고 쓸 수 있게 합니다.  
@@ -74,7 +75,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
   
  기본 복잡성 제약 조건을 사용 하 여 설정 됩니다는 [ \<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) DOS (서비스)의 서비스 거부를 방지 하기 위해 요소를 메시지 복잡성을 사용 하 여 끝점 처리를 계속 사용 하려면 공격 리소스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <webMessageEncoding   

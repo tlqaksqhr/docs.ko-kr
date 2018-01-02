@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f5247d0ccfd2ceec641ff29d29b889a55c1a5e12
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 249cb8419d4f032c37a922c9aa640f02f6efbd56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 집합 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑
 스키마에서는 요소에 대 한 key 제약 조건을 지정 하거나 사용 하 여 특성 수는 **키** 요소입니다. KEY 제약 조건이 지정된 요소 또는 특성은 모든 스키마 인스턴스에서 고유한 값을 가져야 하며 null 값을 가져서는 안 됩니다.  
@@ -89,6 +90,6 @@ TableName: customers
  값은 **ConstraintName** 속성은 **UniqueConstraint** 에 **데이터 집합** 의 값이는 **msdata:ConstraintName** 에 지정 된 특성의 **키** 스키마의 요소입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 집합 제약 조건에 XML 스키마 (XSD) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [XML 스키마 (XSD)에서 데이터 집합 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [XSD(XML 스키마)에서 데이터 집합 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

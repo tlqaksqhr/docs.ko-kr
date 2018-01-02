@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7f679cdf65d30b47037c1d94a1e7fb6eba3572c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11ca23427460ed4c469fc45e43f3b32e4ec5eb25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 기술 옵션 및 지침
 ADO.NET 데이터 플랫폼은 여러 릴리스에 걸쳐 만들어진 전략으로, 개발자가 개념적 엔터티 데이터 모델을 기반으로 프로그래밍할 수 있도록 하여 필요한 코딩 및 유지 관리 작업을 줄일 수 있도록 합니다. 이 플랫폼에는 ADO.NET Entity Framework와 관련 기술이 포함됩니다.  
@@ -29,7 +30,7 @@ ADO.NET 데이터 플랫폼은 여러 릴리스에 걸쳐 만들어진 전략으
  EDM(엔터티 데이터 모델)은 응용 프로그램 데이터를 엔터티 집합 및 관계로 정의하는 디자인 사양입니다. 이 모델의 데이터는 응용 프로그램 경계 간의 데이터 프로그래밍 기능 및 개체 관계형 매핑을 지원합니다.  
   
 ### <a name="object-services"></a>개체 서비스(Object Services)  
- 개체 서비스를 사용하면 프로그래머가 CLR(공용 언어 런타임) 클래스 집합을 통해 개념적 모델과 상호 작용할 수 있습니다. 이러한 클래스는 개념적 모델에서 자동으로 생성되거나, 개념적 모델의 구조를 반영하도록 독립적으로 개발될 수 있습니다. 또한 개체 서비스는 상태 관리, 변경 내용 추적, ID 확인, 관계 로드 및 탐색, 데이터베이스 수정 내용에 개체 변경 내용 전파, Entity SQL 쿼리 작성 지원 등의 서비스를 포함하여 Entity Framework를 지원하는 인프라도 제공합니다. 자세한 내용은 참조 [개체 서비스 개요 (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038)합니다.  
+ 개체 서비스를 사용하면 프로그래머가 CLR(공용 언어 런타임) 클래스 집합을 통해 개념적 모델과 상호 작용할 수 있습니다. 이러한 클래스는 개념적 모델에서 자동으로 생성되거나, 개념적 모델의 구조를 반영하도록 독립적으로 개발될 수 있습니다. 또한 개체 서비스는 상태 관리, 변경 내용 추적, ID 확인, 관계 로드 및 탐색, 데이터베이스 수정 내용에 개체 변경 내용 전파, Entity SQL 쿼리 작성 지원 등의 서비스를 포함하여 Entity Framework를 지원하는 인프라도 제공합니다. 자세한 내용은 [개체 서비스 개요(Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038)를 참조하세요.  
   
 ### <a name="linq-to-entities"></a>LINQ to Entities  
  LINQ to Entities는 개발자가 LINQ 식과 LINQ 표준 쿼리 연산자를 사용하여 Entity Framework 개체 컨텍스트에 대한 강력한 형식의 쿼리를 만들 수 있도록 구현된 LINQ(Language-Integrated Query)입니다. LINQ to Entities를 사용하면 개발자가 Microsoft SQL Server 및 타사 데이터베이스 간의 매우 유연한 개체 관계형 매핑을 사용하여 개념적 모델로 작업할 수 있습니다. 자세한 내용은 참조 [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)합니다.  

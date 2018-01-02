@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 25d504afd7945718f08dd5f2bf92d7ea33037a11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd86bc2f58bc216f741c32a51925d3f4f8ef47df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt; 요소
 바인딩 실패를 검색 하 여 어셈블리를 찾지 못했기 때문에 발생 하는 캐싱을 사용 하지 않도록 지정 합니다.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
 -   하나 이상의 버전을 로드 하려고 하는 어셈블리의 검색 경로에 있지만 요청 하는 특정 버전 그 안에 없는 경우, 올바른 버전 검색 경로로 이동 하는 경우에 이후에 해당 버전을 로드 하는 데 실패 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 검색 하 여 어셈블리를 찾지 못했기 때문에 발생 하는 어셈블리 바인딩 실패 캐싱은 해제 하는 방법을 보여 줍니다.  
   
 ```xml  

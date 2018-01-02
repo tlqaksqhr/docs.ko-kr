@@ -12,11 +12,12 @@ ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7bcf425f345a3153a83cc60e76d87b3c32d83dbe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 145a2a5cc23758c9fd2211c2da7fee0bbd736f0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configsections-element-for-configuration"></a>\<configSections > 요소에 대 한 \<구성 >
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/18/2017
 
 이 요소가 구성 파일에 포함 된 경우의 첫 번째 자식 요소 여야 합니다는  **\<구성 >** 요소입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 구성 섹션을 정의 하 고 해당 섹션에 대 한 설정을 정의 하는 방법을 보여 줍니다.
 

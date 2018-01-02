@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83244e1df239110d86367423b91458aefb5d07a5
-ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
+ms.workload: dotnet
+ms.openlocfilehash: 9cc68f4be869a4773b8a6b932d1f6363855fe584
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -117,7 +118,7 @@ ms.lasthandoff: 12/15/2017
   
  라이브러리 개발자 라이브러리의 이후 버전에서 도입 되거나 변경 된 기능을 취소 하기 위해 호출자를 허용 하려면 사용자 지정 스위치 정의할 수도 있습니다. 자세한 내용은 <xref:System.AppContext> 클래스를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `AppContextSwitchOverrides` 단일 응용 프로그램 호환성 스위치를 정의 하는 요소 `Switch.System.Globalization.NoAsyncCurrentCulture`, 비동기 메서드 호출에 스레드를 넘어서 전달에서 culture에 맞지 않는 합니다.  
   
 ```xml  

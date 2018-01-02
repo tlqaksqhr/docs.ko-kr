@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4991fc65a48d620d30d09c44f1a30c2d1839071e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pipeline-development"></a>파이프라인 개발
 추가 기능 파이프라인에는 서로 통신 하는 호스트 응용 프로그램 및 해당 추가 기능을 사용 해야 하는 파이프라인 세그먼트의 경로입니다.  

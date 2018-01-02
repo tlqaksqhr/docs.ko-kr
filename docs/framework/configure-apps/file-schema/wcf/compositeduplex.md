@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 292067daacc9319c144e9d0f2da9f27ca2fcf5b1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 80c8f3954cccbce8e93ab9d8c516fdfd6c7bff10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcompositeduplexgt"></a>&lt;compositeDuplex&gt;
 서비스에서 클라이언트에 메시지를 돌려 보낼 수 있도록 클라이언트가 서비스에 대한 끝점을 공개해야 할 때 사용되는 바인딩 요소를 정의합니다.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/02/2017
   
  서비스에서 접속하여 연결을 설정하려면 클라이언트가 주소를 공개해야 합니다. 이 클라이언트 주소는 `clientBaseAddress` 특성을 사용하여 제공합니다. WCF(Windows Communication Foundation)에서는 ClientBaseAddress를 사용자가 명시적으로 설정하지 않은 경우 자동으로 생성됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <compositeDuplex clientBaseAddress="http://www.contoso.com" />  

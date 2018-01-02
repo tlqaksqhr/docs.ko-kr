@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61c8d8451e271e756fce6f83a4f8b8fd4c8b9f77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 689dfae90baffa3e9895258d1635c7840d8df6b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicegt"></a>&lt;서비스&gt;
 `service` 요소에는 WCF(Windows Communication Foundation) 서비스 설정이 포함되어 있습니다. 이 요소에는 서비스를 공개하는 끝점도 포함되어 있습니다.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
   
  각 서비스는 하나 이상의 끝점을 노출하는데, 여기에는 자체 주소 및 바인딩이 있습니다. 구성 파일 내에서 사용되는 모든 바인딩은 파일 범위 내에서 정의되어야 합니다. 바인딩은 `name` 및 `bindingConfiguration` 특성 조합을 통해 끝점에 연결됩니다. `name` 특성은 바인딩이 정의된 섹션에 대해 설명합니다. `bindingConfiguration` 특성은 바인딩 섹션 내에서 사용되는 구성을 정의합니다. 바인딩 섹션에서는 여러 개의 구성을 정의할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  서비스 구성의 예제입니다.  
   
 ```xml  

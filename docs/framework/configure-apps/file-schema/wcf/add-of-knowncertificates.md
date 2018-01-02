@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30b3216842b602745ad40d1743175350aba78296
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 91a7174f98de2e2a5dd7eea738f51c3c6b9a1371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltknowncertificatesgt"></a>&lt;knownCertificates&gt;의 &lt;add&gt;
 알려진 인증서 컬렉션에 X.509 인증서를 추가합니다.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 12/02/2017
   
  이 구성 요소를 사용 하는 자세한 방법은 뿐만 아니라 페더레이션된 서비스에서 인증에 대 한 클라이언트에 필요한 조건, 참조 [하는 방법: 페더레이션 서비스에서 자격 증명 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)합니다. 페더레이션된 시나리오에 대 한 자세한 내용은 참조 [페더레이션 및 발급 된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 모든 STS 인증서에 대해 리포지토리에 인증서를 추가합니다.  
   
 ```xml  
@@ -135,6 +136,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>  
  [\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)  
  [인증서 작업](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [페더레이션 및 발급 된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [페더레이션 및 발급된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [서비스 및 클라이언트 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bffe7cbf3cadf072a8bab88555b069983d262e38
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 83c1bf4beb244b72d2fe3d82d749ff6ae6723baf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a>워크플로의 &lt;behaviors&gt;
 이 요소에 포함 된 **serviceBehaviors** 컬렉션입니다.  컬렉션의 각 요소는 워크플로 서비스에서 사용하는 동작 요소를 정의합니다. 각 동작 요소는 고유한으로 식별 되 **이름** 특성입니다.  
@@ -54,4 +55,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Configuration.BehaviorsSection>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [구성 하 고 런타임 동작을 확장](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [동작을 사용하여 런타임 구성 및 확장](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

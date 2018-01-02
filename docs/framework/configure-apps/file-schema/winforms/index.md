@@ -11,11 +11,12 @@ ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b83f00f82de727812c5737915a6dc35ec98e4734
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f2d83f5dcf6fa93ceba4d670470bd768a2ee1f88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Forms 구성 섹션
 Windows Forms 구성 설정을 통해 Windows Forms 앱에서 다중 모니터 지원, 높은 DPI 지원 및 기타 사용자 정의된 구성 설정 등의 사용자 지정된 응용 프로그램 설정에 대한 정보를 저장하고 검색할 수 있습니다.
@@ -52,7 +53,7 @@ Windows Forms 응용 프로그램 구성 설정은 응용 프로그램 구성 �
 ---------|---------|
 [\<구성>](../configuration-element.md) | 공용 언어 런타임 및 Windows Forms 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 .NET Framework 4.7부터는 `<System.Windows.Forms.ApplicationConfigurationSection>` 요소를 사용하여 Windows Forms 응용 프로그램을 구성해 최신 .NET Framework 릴리스에 추가된 기능을 활용할 수 있습니다. 
 

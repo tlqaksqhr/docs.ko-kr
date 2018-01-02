@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f0c708c19761f6086e1b5c2fdd15904c76fe3de9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e36019cd6d010e25292fa50ed3bf795dfca15f73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 서비스 작업 중에 보안 이벤트의 감사를 사용하도록 하는 설정을 지정합니다.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 |auditLogLocation|감사 로그의 위치를 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -Default: 보안 이벤트가 기록 됩니다 응용 프로그램 로그에 Windows XP에서 및 이벤트 로그에 Windows Server 2003 및 Windows Vista에서.<br />-응용 프로그램: 감사 이벤트가 응용 프로그램 이벤트 로그에 기록 됩니다.<br />-보안: 감사 이벤트가 보안 이벤트 로그에 기록 됩니다.<br /><br /> 기본값은 Default입니다. 자세한 내용은 <xref:System.ServiceModel.AuditLogLocation>을 참조하세요.|  
 |suppressAuditFailure|감사 로그에 쓰기 실패를 표시하지 않기 위한 동작을 지정하는 부울 값입니다.<br /><br /> 응용 프로그램은 감사 로그 쓰기 실패에 대해 알림을 받아야 합니다. 해당 응용 프로그램에 감사 실패 처리 기능이 없는 경우 감사 로그에 쓰기 실패를 표시하지 않으려면 이 특성을 사용해야 합니다.<br /><br /> 이 특성이 `true`이면 감사 이벤트 쓰기 시도로 인해 발생한 OutOfMemoryException, StackOverFlowException, ThreadAbortException 및 ArgumentException 이외의 예외는 시스템에 의해 처리되며 응용 프로그램으로 전파되지 않습니다. 이 특성이 `false`이면 감사 이벤트 쓰기 시도로 인해 발생한 모든 예외가 응용 프로그램까지 전달됩니다.<br /><br /> 기본값은 `true`입니다.|  
 |serviceAuthorizationAuditLevel|감사 로그에 기록되는 인증 이벤트의 형식을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None: 서비스 인증 이벤트의 감사 안 수행 됩니다.<br />-Success: 성공적인 서비스 권한 부여 이벤트만 감사 됩니다.<br />-오류: 실패 서비스 권한 부여 이벤트만 감사 됩니다.<br />-둘 다 SuccessAndFailure: 성공 및 실패 서비스 권한 부여 이벤트만 감사 됩니다.<br /><br /> 기본값은 None입니다. 자세한 내용은 <xref:System.ServiceModel.AuditLevel>을 참조하세요.|  
-|messageAuthenticationAuditLevel|기록되는 메시지 인증 감사 이벤트 형식을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None: 감사 이벤트가 생성 됩니다.<br />-Success: 성공적인 보안 (메시지 시그니처 유효성 검사, 암호화 및 토큰 유효성 검사를 포함 한 전체 유효성) 이벤트만 기록 됩니다.<br />-오류: 실패 한 이벤트만 기록 됩니다.<br />-둘 다 SuccessAndFailure: 성공 및 실패 이벤트가 기록 됩니다.<br /><br /> 기본값은 None입니다. 자세한 내용은 <xref:System.ServiceModel.AuditLevel>을 참조하십시오.|  
+|messageAuthenticationAuditLevel|기록되는 메시지 인증 감사 이벤트 형식을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None: 감사 이벤트가 생성 됩니다.<br />-Success: 성공적인 보안 (메시지 시그니처 유효성 검사, 암호화 및 토큰 유효성 검사를 포함 한 전체 유효성) 이벤트만 기록 됩니다.<br />-오류: 실패 한 이벤트만 기록 됩니다.<br />-둘 다 SuccessAndFailure: 성공 및 실패 이벤트가 기록 됩니다.<br /><br /> 기본값은 None입니다. 자세한 내용은 <xref:System.ServiceModel.AuditLevel>을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
  서비스 권한 부여 감사 이벤트는 서비스 권한 부여 관리자가 내린 권한 부여 결정을 포함합니다. 이 이벤트는 클라이언트 ID와 함께 권한 부여의 성공 여부, 메시지가 보내진 끝점, 메시지와 연결된 동작, 들어오는 메시지에서 생성된 권한 부여 컨텍스트의 식별자 및 액세스 결정을 내린 권한 부여 관리자의 형식에 대한 정보를 제공합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <system.serviceModel>  

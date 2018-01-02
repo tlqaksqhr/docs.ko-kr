@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb2f567b47f66b378cc6e0a5d5e96441ea65c1ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4e8c9530097593f1694af67396773fc32d5534d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;serviceCertificate&gt; 요소의 &lt;authentication&gt;
 SSL/TLS 협상을 사용하여 가져온 서비스 인증서를 인증하기 위해 클라이언트 프록시에서 사용하는 설정을 지정합니다.  
@@ -88,7 +89,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
   
  `revocationMode` 특성은 해지를 위해 인증서를 검사하는 방법을 지정합니다. 기본값은 `online`이며, 이는 인증서가 해지를 위해 자동으로 검사됨을 나타냅니다. 자세한 내용은 참조 [인증서 작업](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 작업을 수행합니다. 먼저 도메인 이름이 www.contoso.com인 끝점과 HTTP 프로토콜을 통해 통신할 때 클라이언트가 사용할 서비스 인증서를 지정합니다. 그런 다음 인증 중에 사용되는 해지 모드 및 저장소 위치를 지정합니다.  
   
 ```xml  
@@ -114,7 +115,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>  
  [보안 동작](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [인증서 작업](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [방법: 사용자 지정 인증서 유효성 검사기를 사용 하는 서비스 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ [방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
  [\<인증 >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
  [클라이언트에 보안 설정](../../../../../docs/framework/wcf/securing-clients.md)  
- [서비스 및 클라이언트 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

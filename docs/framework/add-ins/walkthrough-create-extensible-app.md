@@ -22,11 +22,12 @@ caps.latest.revision: "32"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6609f30844421f94965fbe05114db96ed8edbb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>연습: 확장 가능한 응용 프로그램 만들기
 이 연습에는 추가 기능에 대 한 간단한 계산기 기능을 수행 하는 파이프라인을 만드는 방법을 설명 합니다. 실제 시나리오; 보여 주지 않습니다. 대신, 파이프라인 및 방법을 추가 기능에서 서비스를 제공할 수는 호스트의 기본 기능을 보여 줍니다.  
@@ -367,4 +368,4 @@ ms.lasthandoff: 11/21/2017
  [연습: 호스트와 추가 기능 간에 컬렉션 전달](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
  [파이프라인 개발 요구 사항](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
  [계약, 뷰 및 어댑터](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)
+ [파이프라인 개발](../../../docs/framework/add-ins/pipeline-development.md)

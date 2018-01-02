@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a2653a94992440b747371c5d8a7b9daa66b3e3ab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 26fbae0474253dc9792a0290a36dd52044d148b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataviews"></a>데이터 보기
 <xref:System.Data.DataView>는 데이터 바인딩 응용 프로그램에서 자주 사용되는 기능으로, 이 기능을 사용하면 <xref:System.Data.DataTable>에 저장되어 있는 데이터에 대해 서로 다른 뷰를 만들 수 있습니다. 사용 하는 **DataView**를 여러 정렬 순서로 테이블의 데이터를 노출할 수 있습니다 및 행 상태 또는 필터 식을 기준으로 데이터를 필터링 할 수 있습니다.  
@@ -28,20 +29,20 @@ ms.lasthandoff: 10/18/2017
   
  사용할 수 있습니다는 <xref:System.Data.DataView.DataViewManager%2A> 에 있는 모든 테이블에 대 한 뷰 설정을 관리할 수는 **DataSet**합니다. **DataViewManager** 각 테이블에 대 한 기본 뷰 설정을 관리할 수 있는 편리한 방법을 제공 합니다. 컨트롤의 둘 이상의 테이블을 바인딩하는 경우는 **DataSet**바인딩할는 **DataViewManager** 것이 좋습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DataView 만들기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  만드는 방법에 설명 된 **DataView** 에 대 한는 **DataTable**합니다.  
   
  [데이터 정렬 및 필터링](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  속성을 설정 하는 방법에 설명 된 **DataView** 특정 정렬 순서로 데이터를 반환 하거나 특정 필터 조건에 맞는 데이터 행의 하위 집합을 반환 하도록 합니다.  
   
- [Datarow 및 Datarowview](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
+ [DataRow 및 DataRowView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
  에 의해 노출 된 데이터에 액세스 하는 방법에 설명 된 **DataView**합니다.  
   
  [행 찾기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
  특정 행을 확인 하는 방법에 설명 된 **DataView**합니다.  
   
- [Childview 및 관계](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
+ [ChildView 및 관계](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
  사용 하 여 부모-자식 관계에서 데이터의 뷰를 만드는 방법에 설명 된 **DataView**합니다.  
   
  [데이터 보기 수정](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  

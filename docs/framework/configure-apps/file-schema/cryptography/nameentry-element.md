@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 507c71b5c13deeb7c1a81b6a4dd9604c3bd919f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7c9a4b4532d98b7dfc2484dab1bb57e5a26fa392
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnameentrygt-element"></a>&lt;r y&gt; 요소
 클래스 이름을 알고리즘 이름에 매핑하며, 이를 통해 하나의 클래스가 여러 이름을 가질 수 있습니다.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>설명  
  **이름** 특성에는 추상 클래스 중 하나의 이름을 수는 <xref:System.Security.Cryptography> 네임 스페이스입니다. 호출 하는 경우는 **만들기** 추상 암호화 클래스에 메서드, 추상 클래스 이름에 전달 되는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> 메서드. **CreateFromName** 으로 나타내는 형식의 인스턴스를 반환 된 **클래스** 특성입니다. 경우는 **이름** 특성은 짧은 이름 rsa, RSA, 같은 이름을 사용할 수 있습니다를 호출할 때는 **CreateFromName** 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는  **\<r y >** 암호화 클래스를 참조 하 고 런타임을 구성 하는 요소입니다. "RSA" 문자열을 전달할 수 있습니다는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드 및 사용법은 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 반환 하는 메서드는 `MyCryptoRSAClass` 개체입니다.  
   
 ```xml  

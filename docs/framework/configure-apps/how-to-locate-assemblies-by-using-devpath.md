@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 70448f7ce4c00274dde14bace603e5c8852bf148
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4ee4200a67ef9d9d123be3bc32b02ac61512d23b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>방법: DEVPATH를 사용하여 어셈블리 찾기
 개발자가 작성 하는 공유 어셈블리를 여러 응용 프로그램으로 제대로 작동 하는지 확인 수도 있습니다. 지속적으로 개발 주기 동안 어셈블리를 전역 어셈블리 캐시에 저장, 대신 개발자 어셈블리에 대 한 빌드 출력 디렉터리를 가리키는 DEVPATH 환경 변수를 만들 수 있습니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
   
  다음 예제에서는 런타임에서 DEVPATH 환경 변수로 지정 된 디렉터리에서 어셈블리를 검색 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <configuration>  

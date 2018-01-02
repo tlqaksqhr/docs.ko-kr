@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e910333084aae9e47153cfe3ee4b5cd943a37f71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2c53886458b4c6e2867e1f9fddd4ab50b199c660
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 클레임 유형을 지정 하는 설정의 <xref:System.Security.Principal.IIdentity.Name%2A> 속성입니다. 클레임 유형을 검색 하기 위해 사용 되는 <xref:System.Security.Claims.Claim> 의 컬렉션에서 <xref:System.Security.Claims.ClaimsIdentity> 에서 반환 된 개체는 <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> 이 토큰 처리기의 메서드. 일치 하는 클레임 값의 이름으로 설정 됩니다는 <xref:System.Security.Principal.IIdentity> 토큰 처리기에서 생성 합니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/18/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|값|에 사용할 클레임의 클레임 형식을 나타내는 URI를 지정 하는 문자열은 <xref:System.Security.Principal.IIdentity.Name%2A> 속성입니다. 필수 요소.|  
+|값|에 사용할 클레임의 클레임 형식을 나타내는 URI를 지정 하는 문자열은 <xref:System.Security.Principal.IIdentity.Name%2A> 속성입니다. 필수.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>설명  
  `<nameClaimType>` 요소 집합에서 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> 속성 때는 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> 개체 구성에서 초기화 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  

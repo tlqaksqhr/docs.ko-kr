@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: abcb6d1b5f9dbb7a866b55628aabfe996a0a747c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 510896c6993008f30e7eacf2628ae4cceadea7e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; 요소
 가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  이 요소는 가비지 수집 스레드만 적용 됩니다. 런타임에서 모든 CPU 그룹 사용자 스레드를 분산 시킬 수 있도록,도 설정 해야는 [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 여러 CPU 그룹에 대 한 가비지 컬렉션을 사용 하는 방법을 보여 줍니다.  
   
 ```xml  

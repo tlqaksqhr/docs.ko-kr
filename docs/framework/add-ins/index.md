@@ -23,11 +23,12 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9bd09d0da70869ba193b414d8a2ce6c25cbb6b38
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-ins-and-extensibility"></a>추가 기능 및 확장성
 <a name="top"></a> 추가 기능은 호스트 응용 프로그램에 대한 확장명 기능이나 서비스를 제공합니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 에서는 개발자가 추가 기능을 개발하고 호스트 응용 프로그램에서 활성화하는 데 사용할 수 있는 프로그래밍 모델을 제공합니다. 모델은 이 작업을 위해 호스트와 추가 기능 간에 통신 파이프라인을 생성합니다. 모델은 <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>및 <xref:System.AddIn.Contract> 네임스페이스의 형식을 사용하여 구현됩니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75c3caa128018877b95824b4bad34aee331c4dab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1007abbb91787ed7be4fe3a7f8c1b0173191d60e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt;의 &lt;issuedTokenAuthentication&gt;
 서비스 자격 증명으로 발급된 사용자 지정 토큰을 지정합니다.  
@@ -107,5 +108,5 @@ certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
  <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>  
  <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>  
  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>  
- [서비스 및 클라이언트 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 521bbccd83f224cc824dae41309715d65472454e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7da2e1ac5c16f6e481c974794efceb12f102b1a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt; 요소
 부분 이름이 사용될 때 동적으로 로드되어야 하는 어셈블리의 전체 이름을 지정합니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  **fullName** 특성의 어셈블리 id는 4 개의 필드를 포함 해야 합니다: 이름, 버전, 공개 키 토큰 및 culture입니다. **partialName** 특성 어셈블리를 부분적으로 참조 해야 합니다. 어셈블리의 텍스트 이름 (가장 일반적인 경우), 이상 지정 해야 하지만 버전, 공개 키 토큰 또는 문화권 (또는 일부 4의 임의 조합)을 포함할 수도 있습니다. **partialName** 프로그램 호출에 지정 된 이름과 일치 해야 합니다. 예를 들어 지정할 수 없습니다 `"math"` 로 **partialName** 구성 파일 및 호출 특성 `Assembly.Load("math, Version=3.3.3.3")` 코드에서입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 논리적으로 호출을 변환 `Assembly.Load("math")` 에 `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`합니다.  
   
 ```xml  

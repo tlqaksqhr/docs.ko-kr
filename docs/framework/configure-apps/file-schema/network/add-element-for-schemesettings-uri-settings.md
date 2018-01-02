@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8ce4cc33d054e74fc9868a16764e744daf260c10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d617e78231bd0b9f4e332c4b7fbe58b78598868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;추가&gt; schemeSettings (Uri 설정)에 대 한 요소
 체계 이름에 대 한 스키마 설정을 추가합니다.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 사용 되는 구성을 <xref:System.Uri> http 체계에 대 한 퍼센트 인코딩 경로 구분 기호를 이스케이프 하지 않아도 되도록 지원 하기 위해 클래스입니다.  
   
 ```xml  

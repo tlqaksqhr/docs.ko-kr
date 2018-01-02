@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e4779baa24e172affad2ed5e04451ad791d7cdf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fd4e12d77380942204d37b59644c46aed3a0148
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 에 대 한 구성을 제공 된 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 |persistentCookiesOnPassiveRedirects|영구 쿠키 인증에 수행 되는 여부를 지정 합니다. 선택 사항입니다. 기본값은 "false", 쿠키를 발급 되지 않은 합니다.|  
 |passiveRedirectEnabled|자동으로 STS를 권한이 없는 요청을 리디렉션하는 WSFAM 사용 되는지 여부를 지정 합니다. 선택 사항입니다. 기본값은 "true", 권한이 없는 요청이 자동으로 리디렉션됩니다.|  
 |정책|로그인으로 요청에서 사용 하는 관련 정책의 위치를 지정 하는 URL입니다. 기본값은 빈 문자열입니다. Ws-federation 로그인 요청 wp 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 빈 문자열 지정 wp 매개 변수는 요청에 포함 되지 않습니다.|  
-|realm|요청 영역의 URI를 지정 합니다. (보안 토큰 서비스 (STS)에 RP (신뢰 당사자)를 식별 하는 URI입니다.) 요청 wtrealm Ws-federation 로그인 요청 매개 변수를 설정합니다. 필수 요소.|  
+|realm|요청 영역의 URI를 지정 합니다. (보안 토큰 서비스 (STS)에 RP (신뢰 당사자)를 식별 하는 URI입니다.) 요청 wtrealm Ws-federation 로그인 요청 매개 변수를 설정합니다. 필수.|  
 |회신|신뢰 당사자 (RP) 응용 프로그램을는 보안 토큰 서비스 (STS)에서 회신을 수신 하겠다고 주소를 식별 하는 URL입니다. Ws-federation 로그인 요청 wreply 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 빈 문자열 지정 wreply 매개 변수는 요청에 포함 되지 않습니다.|  
 |요청|토큰 발급 요청입니다. Ws-federation 로그인 요청 wreq 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 빈 문자열 지정 wreq 매개 변수는 요청에 포함 되지 않습니다. 요청에는 wreq 또는 wreqptr 매개 변수를 포함 하지 않고 STS 발급 토큰의 종류를 알고 있어야 한다는 것을 의미 합니다.|  
 |requestPtr|토큰 발급 요청의 위치를 지정 하는 URL입니다. 요청 wreqptr 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 빈 문자열 지정 wreqptr 매개 변수는 요청에 포함 되지 않습니다. 요청에는 wreq 또는 wreqptr 매개 변수를 포함 하지 않고 STS 발급 토큰의 종류를 알고 있어야 한다는 것을 의미 합니다.|  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
  `<wsFederation>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Services.Configuration.WSFederationElement> 클래스입니다. 자체 구성 개체도 표시 됩니다는 <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 클래스입니다. 단일 <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 에 설정 된 인스턴스는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 통해 액세스 되는 개체는 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 속성은 WSFAM에 대 한 구성을 제공 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  XML은 다음 한 `<wsFederation>` 는 WSFAM에 대 한 설정을 지정 하는 요소입니다.  
   
 > [!WARNING]

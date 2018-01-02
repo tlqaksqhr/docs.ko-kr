@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd787373b869c31727cfc0d027b6b98774b0d630
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a20061c551f5cb1a19c64a2f92b8180465f58eb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET의 연결 문자열
 .NET Framework 2.0에서는 연결 문자열 작성기 클래스에 새로운 키워드를 추가하는 기능을 비롯하여 연결 문자열로 작업하는 데 사용할 수 있는 새로운 기능을 지원합니다. 이러한 기능을 사용하여 런타임에 유효한 연결 문자열을 작성할 수 있습니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
  이러한 문제를 해결하기 위해 ADO.NET 2.0에서는 각 .NET Framework 데이터 공급자에 사용할 수 있는 새로운 연결 문자열 작성기가 도입되었습니다. 키워드는 속성으로 노출되므로 데이터 소스에 제출하기 전에 연결 문자열 구문의 유효성을 검사할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  `ConnectionStringBuilder` 클래스를 사용하여 런타임에 유효한 연결 문자열을 구성하는 방법을 보여 줍니다.  
   

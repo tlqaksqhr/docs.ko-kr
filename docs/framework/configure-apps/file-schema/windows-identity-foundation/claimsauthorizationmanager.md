@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 4b4d86204d5f7225f167be125ce017488c851e98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eb0475796a488489f4a32c820d1a92994237d7fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclaimsauthorizationmanagergt"></a>&lt;claimsAuthorizationManager&gt;
 들어오는 클레임에 대 한 클레임 권한 부여 관리자를 등록합니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/18/2017
   
  설정 하는이 요소는 <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> 속성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 XML 클레임 권한 부여에 대 한 구성을 부울 조합을 요청자에 게 리소스에 대해 작업을 수행할 수 있어야 하는 클레임을 지정 하며 각 리소스 작업 쌍으로 구성 정책을 구현 하는 관리자를 보여 줍니다. 이 정책을 사용할 수 있는 클레임 권한 부여 관리자를 구현 하는 코드에서 찾을 수 있습니다는 `ClaimsBasedAuthorization` 샘플.  
   
 ```xml  

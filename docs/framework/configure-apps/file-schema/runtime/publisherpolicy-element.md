@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 654887c870a7f620c52fa402d6324de39fdb2feb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d5f629dd347f63c8fb8e624c475bfb0ecf658f41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;l i c y&gt; 요소
 런타임이 게시자 정책을 적용할지를 지정합니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
  권한이 명시적으로 사용 하 여 게시자 정책을 무시 하려면 응용 프로그램에 대 한 필요는 [ \<예 = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) 응용 프로그램 구성 파일의 요소입니다. 설정 하 여 권한 부여는 <xref:System.Security.Permissions.SecurityPermissionFlag> 에 플래그는 <xref:System.Security.Permissions.SecurityPermission>합니다. 자세한 내용은 참조 [어셈블리 바인딩 리디렉션 보안 권한](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 어셈블리에 대 한 게시자 정책을 해제 `myAssembly`합니다.  
   
 ```xml  

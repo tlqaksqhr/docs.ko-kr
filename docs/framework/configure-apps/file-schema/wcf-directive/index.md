@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f91e4ac7b74b0ee3ab92e8ae59fe0f20e8f66287
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34ea3b412af75f136255c7e95cc4f321bafe075b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-directive-syntax"></a>WCF 지시문 구문
 컴파일러를 리디렉션하기 위해 .svc 파일의 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 지시문에서 사용하는 설정을 지정합니다. 각 지시문에는 해당 지시문에만 관련되는 하나 이상의 특성(값과 쌍을 이룸)이 포함됩니다. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에는 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 지시문만 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)  
  .svc 컴파일러에서 사용하는 페이지별 특성을 정의합니다. .svc 파일에만 사용할 수 있습니다.  
   

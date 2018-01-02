@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d4aa3343e7f3f60bbf6a57340d858c1ef12197bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d3a1214b4aecf56c9a6440e31459573a5922676
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt; 요소
 런타임 호스트가 응용 프로그램 도메인에 대한 구성 설정을 재정의할 수 있도록 허용하는 기본 동작을 사용하지 않도록 설정할지를 지정합니다.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
  사용 하는 대신는 `<disableFusionUpdatesFromADManager>` 요소인 레지스트리 설정을 만들어 또는 환경 변수를 설정 하 여 기본 동작을 비활성화할 수 있습니다. 레지스트리에서 라는 DWORD 값을 만듭니다 `COMPLUS_disableFusionUpdatesFromADManager` 아래 `HKCU\Software\Microsoft\.NETFramework` 또는 `HKLM\Software\Microsoft\.NETFramework`, 값을 1로 설정 합니다. 명령줄에서 환경 변수 설정 `COMPLUS_disableFusionUpdatesFromADManager` 1입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제를 사용 하 여 Fusion 설정을 재정의 하는 기능을 사용 하지 않도록 설정 하는 방법을 보여 줍니다는 `<disableFusionUpdatesFromADManager>` 요소입니다.  
   
 ```xml  

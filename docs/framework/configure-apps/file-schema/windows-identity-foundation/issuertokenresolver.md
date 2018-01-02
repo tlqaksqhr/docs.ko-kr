@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 02e2beb285cb0c4d88f98c3155ab5a3ff5e31e0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e859f99768eae5c931618d5902caf40dfad95d54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 토큰 처리기 컬렉션에 대 한 처리기가 사용 되는 발급자 토큰 확인자를 등록 합니다. 발급자 토큰 확인 자가 들어오는 토큰 및 메시지에 서명 토큰을 확인 하는 데 사용 됩니다.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|type|발급자 토큰 확인 자가 유형을 지정합니다. 중 하나 여야 합니다는 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 클래스 또는 형식에서 파생 되는 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 클래스입니다. 필수 요소.|  
+|type|발급자 토큰 확인 자가 유형을 지정합니다. 중 하나 여야 합니다는 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 클래스 또는 형식에서 파생 되는 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 클래스입니다. 필수.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  지정 하는 `<issuerTokenResolver>` 의 자식 요소로 요소는 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소, 되지 않지만 이전 버전과 호환성을 위해 계속 지원 됩니다. 설정에는 `<securityTokenHandlerConfiguration>` 요소에서 재정의 된 `<identityConfiguration>` 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 XML에서 파생 되는 사용자 지정 클래스를 기반으로 하는 발급자 토큰 확인자에 대 한 구성을 보여 줍니다 <xref:System.IdentityModel.Tokens.IssuerTokenResolver>합니다. 토큰 확인 자가 사용자 지정 구성 요소에서 초기화 된 대상 그룹 키 쌍의 사전 유지 관리 (`<AddAudienceKeyPair>`) 클래스에 정의 합니다. 클래스 재정의 <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> 이 요소를 처리 하기 위해 메서드. 재정의 다음 예에서 같습니다. 그러나 간단히 하기 위해 호출 하는 메서드 표시 되지 않습니다. 전체 예제를 참조 하십시오.는 `CustomToken` 샘플.  
   
 ```xml  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/18/2017
 </issuerTokenResolver>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)  

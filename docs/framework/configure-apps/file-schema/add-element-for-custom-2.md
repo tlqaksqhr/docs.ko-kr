@@ -12,11 +12,12 @@ ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e9dc671f0df9034410d20fdf69862884d6b3b300
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e29d0007820bb0218338394fe199e7acfd66344e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<추가 > NameValueSectionHandler 및 DictionarySectionHandler 요소
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/18/2017
 
 없음
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 사용자 지정 구성 섹션 정의 및 사용 하는 방법을 보여 주는 다음 예제는  **\<추가 >** 요소 섹션으로 설정을 적용 합니다.
 

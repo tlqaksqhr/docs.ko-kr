@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 33ef3ca88462595d81d269a92a643b43c9aea025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 26f3d4f0b272168083bed2bbe249532181a6db67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
 구성 기반 발급자 이름 레지스트리에서 사용 하는 신뢰할 수 있는 발급자 인증서 목록 구성 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
  `type` 특성의는 `<issuerNameRegistry>` 요소를 참조 해야 합니다는 <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> 에 대 한 클래스는 `<trustedIssuers>` 요소 유효 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 XML 기반 구성 발급자를 지정 하는 방법을 이름 레지스트리를 보여 줍니다.  
   
 ```xml  

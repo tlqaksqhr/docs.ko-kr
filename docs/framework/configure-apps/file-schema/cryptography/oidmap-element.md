@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: eab9be57b6f8fac5f208e39a6aaa8eb7be92558d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08f7eb8e4531d27586bede11bacf598e472b158f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; 요소
 클래스에 ASN.1 개체 식별자 (OID) 매핑을 포함합니다.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
 |`mscorlib`|포함 된 `cryptographySettings` 요소입니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는  **\<oidMap >** 해당 해시 알고리즘의 구현에 ripemd-160 해시 알고리즘에 대 한 OID의 매핑을 포함 하는 요소입니다.  
   
 ```xml  

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1aa848ebb21c4d0f52d471ff2451f9ec438ea36
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78b0cc2dd260b773c29b8684ab94bfaa0afffff2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 사용자 지정 바인딩의 SOAP 메시지 전송을 위한 HTTP 전송을 지정합니다.  

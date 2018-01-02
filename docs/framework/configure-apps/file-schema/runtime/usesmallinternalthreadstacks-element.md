@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2558423b412333a4d6ac9f650ad8ff3dab449d74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c96537cad59034578d1284f7dc432e5775f3730b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; 요소
 요청을 공용 언어 런타임 (CLR) 메모리를 줄이지 이러한 스레드에 대 한 기본 스택 크기를 사용 하는 대신 내부적으로 사용 하는 특정 스레드를 만들 때에 명시적 스택 크기를 지정 하 여 사용 합니다.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  이 구성 요소 거래 작은 가상 메모리 사용에 대 한 안정성 CLR 요청을 인식 하는 경우 스택 크기가 작은 스택 만들 수 있으므로 지정 오버플로가 발생할 가능성이 더 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 CLR 사용 하 여 명시적 스택 크기가 특정 내부적으로 사용 하는 스레드를 요청 하는 방법을 보여 줍니다.  
   
 ```xml  

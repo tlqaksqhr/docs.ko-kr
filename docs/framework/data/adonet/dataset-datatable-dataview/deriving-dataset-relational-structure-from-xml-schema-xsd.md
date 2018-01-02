@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0aae23c295401d4b9565c35d4d47c5ab913029d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3fcedf488a038f379bae26fd7da0f4bf027b2e55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)
 이 단원에서는 XSD(XML 스키마 정의 언어) 스키마 문서에서 `DataSet`의 관계형 스키마를 빌드하는 방법을 간략하게 설명합니다. 일반적으로 각각에 대해 `complexType` 스키마 요소의 자식 요소를 테이블에 생성 됩니다는 `DataSet`합니다. 테이블 구조는 복합 형식의 정의에 의해 결정됩니다. 테이블에서 생성 됩니다는 `DataSet` 스키마의 최상위 요소에 대 한 합니다. 그러나 테이블에만 만들어집니다 최상위 수준에 대 한 `complexType` 요소 때는 `complexType` 안에 다른 요소가 중첩 되어 `complexType` 는 요소인 경우 중첩 된 `complexType` 요소는에 매핑됩니다는 `DataTable` 내는 `DataSet`합니다.  
@@ -92,11 +93,11 @@ InStateCustomers (CustomerID , CompanyName, Phone)
 OutOfStateCustomers (CustomerID , CompanyName, Phone)  
 ```  
   
-## <a name="in-this-section"></a>단원 내용  
- [데이터 집합 제약 조건에 XML 스키마 (XSD) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  설명에서 고유 및 외래 키 제약 조건을 만드는 데 사용 되는 XML 스키마 요소는 `DataSet`합니다.  
   
- [XML 스키마 (XSD)에서 데이터 집합 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [XSD(XML 스키마)에서 데이터 집합 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  테이블 열 사이의 관계를 만드는 사용 되는 XML 스키마 요소에 설명 된 `DataSet`합니다.  
   
  [XML 스키마 제약 조건 및 관계](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  

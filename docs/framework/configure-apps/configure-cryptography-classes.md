@@ -20,16 +20,17 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 79eb9f9ef95dae24dd38fa93b137c9303815143b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 23bd6007beb870895316a565283ee7e7354c931b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-cryptography-classes"></a>암호화 클래스 구성
 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 컴퓨터 관리자는 기본 암호화 알고리즘 및.NET Framework와 적절 하 게 작성된 된 응용 프로그램에서 사용 하는 알고리즘 구현의 구성할 수 있습니다.  예를 들어 암호화 알고리즘의 자체 구현을 보유 정확해 구현에 구현에서 제공 하는 대신 기본은 [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]합니다. 암호화를 사용 하는 관리 되는 응용 프로그램에 특정 구현에 바인딩하려면 명시적으로 선택할 수, 있지만 암호화 구성 시스템을 사용 하 여 암호화 개체를 생성 하는 것이 좋습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [알고리즘 이름을 암호화 클래스에 매핑](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
  암호화 클래스에 알고리즘 이름을 매핑하는 방법에 설명 합니다.  
   

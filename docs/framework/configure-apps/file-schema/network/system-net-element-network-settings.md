@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d2eb903b8a84410aa08504c12e78a016d2368923
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6140a5a66d39cbee3c2a8477dcab88aaa717e745
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; 요소 (네트워크 설정)
 .NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>설명  
  [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 요소 클래스에 대 한 설정이 포함 되어는 <xref:System.Net> 및 관련 자식 네임 스페이스입니다. 설정을 인증 모듈, 연결 관리, 메일 설정, 프록시 서버 및 인터넷 호스트에서 정보를 받는 데 인터넷 요청 모듈을 구성합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 사용 하는 일반적인 구성에서는 <xref:System.Net> 클래스입니다.  
   
 ```xml  

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b36c52338754df0f4fd3c963848e36afeb140501
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d94d49fcb2c395de5172a730923dbe42f67cf35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt; 요소
 공용 언어 런타임 이벤트에 대해 ETW(Windows용 이벤트 추적)를 사용하도록 설정할지를 지정합니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |값|설명|  
 |-----------|-----------------|  
 |true|ETW를 사용 하도록 설정 합니다. Windows Vista 및 Windows Server 2008 운영 체제부터 Windows 버전에 대 한 기본값입니다.|  
-|false|ETW를 사용 하지 않도록 설정 합니다. 이전 버전의 Windows에 대 한 기본값입니다.|  
+|False|ETW를 사용 하지 않도록 설정 합니다. 이전 버전의 Windows에 대 한 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  ETW는 사용 하도록 설정 또는 레지스트리 설정을 사용 하 여 서버에 전체적으로 해제 수 있습니다. 참조 [.NET Framework 로깅 제어](../../../../../docs/framework/performance/controlling-logging.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 응용 프로그램에 대 한 ETW 추적을 사용 하는 방법을 보여 줍니다.  
   
 ```xml  

@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c31674f26724e575170be5698e8671ba156739f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 59c1c6be1f02477c7ad2d4c90d09173f9296d1e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩을 정의합니다.  
@@ -106,7 +107,7 @@ msmqIntegrationBinding
 ## <a name="remarks"></a>설명  
  Windows Communication Foundation (WCF) 응용 프로그램이 메시지를 전송 하 고 COM, MSMQ 네이티브 Api 또는에 정의 된 형식을 사용 하는 기존 MSMQ 응용 프로그램에서 메시지를 받을 수 있도록 하 여이 바인딩 요소를 사용할 수는 <xref:System.Messaging?displayProperty=nameWithType> 네임 스페이스 있습니다 이 구성 요소 메시지 영구 저장, 큐, 전송 보증을 해결할 수 있는 방법을 지정할 수 및 메시지를 보호 및 인증 방법을 사용할 수 있습니다. 자세한 내용은 참조 [하는 방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지를 교환](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <configuration>  

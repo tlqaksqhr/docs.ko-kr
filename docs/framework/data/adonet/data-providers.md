@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4c11b826a51cc4f1563729728626fb8041e31ee1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff16c00f1e0e87c9f046c1f5944e11a9111f6e1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 데이터 공급자
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 데이터베이스에 연결하고 명령을 실행하며 결과를 검색하는 데 사용됩니다. 검색된 결과는 곧바로 처리되거나 <xref:System.Data.DataSet> 에 저장되어 필요한 경우 사용자에게 노출되거나 여러 소스의 데이터와 함께 사용되거나 계층 간에 원격으로 사용됩니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 간단하여 데이터 소스와 사용자 코드 간에 최소의 계층을 만들며 기능 저하 없이 성능을 향상시킵니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |-------------------------------------------------------------------------------|-----------------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에 대한 데이터 액세스를 제공합니다. <xref:System.Data.SqlClient> 네임스페이스를 사용합니다.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|OLE DB를 사용하여 노출된 데이터 소스에서 사용합니다. <xref:System.Data.OleDb> 네임스페이스를 사용합니다.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC|OLE DB를 사용하여 노출된 데이터 소스에서 사용합니다. <xref:System.Data.Odbc> 네임스페이스를 사용합니다.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for ODBC|OLE DB를 사용하여 노출된 데이터 소스에서 사용합니다. <xref:System.Data.Odbc> 네임스페이스를 사용합니다.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle|Oracle 데이터 소스에서 사용합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle은 Oracle 클라이언트 소프트웨어 버전 8.1.7 이상을 지원하며 <xref:System.Data.OracleClient> 네임스페이스를 사용합니다.|  
 |EntityClient 공급자|EDM(엔터티 데이터 모델) 응용 프로그램에 대한 데이터 액세스를 제공합니다. <xref:System.Data.EntityClient> 네임스페이스를 사용합니다.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0|Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0에 대한 데이터 액세스를 제공합니다. [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) 네임스페이스를 사용합니다.|  
@@ -42,23 +43,23 @@ ms.lasthandoff: 11/21/2017
 |개체|설명|  
 |------------|-----------------|  
 |`Connection`|특정 데이터 소스에 연결합니다. 모든 `Connection` 개체의 기본 클래스는 <xref:System.Data.Common.DbConnection> 클래스입니다.|  
-|`Command`|데이터 소스에 대해 명령을 실행합니다. `Parameters` 를 노출하고 `Transaction` 의 `Connection`범위 내에서 실행할 수 있습니다. 모든 `Command` 개체의 기본 클래스는 <xref:System.Data.Common.DbCommand> 클래스입니다.|  
+|`Command`|데이터 소스에 대해 명령을 실행합니다. `Parameters`를 노출하고 `Transaction`의 `Connection` 범위 내에서 실행할 수 있습니다. 모든 `Command` 개체의 기본 클래스는 <xref:System.Data.Common.DbCommand> 클래스입니다.|  
 |`DataReader`|데이터 소스에서 앞으로만 이동 가능한 읽기 전용 데이터 스트림을 읽습니다. 모든 `DataReader` 개체의 기본 클래스는 <xref:System.Data.Common.DbDataReader> 클래스입니다.|  
-|`DataAdapter`|`DataSet` 을 채우고 업데이트 내용을 데이터 소스에 적용합니다. 모든 `DataAdapter` 개체의 기본 클래스는 <xref:System.Data.Common.DbDataAdapter> 클래스입니다.|  
+|`DataAdapter`|`DataSet`을 채우고 업데이트 내용을 데이터 소스에 적용합니다. 모든 `DataAdapter` 개체의 기본 클래스는 <xref:System.Data.Common.DbDataAdapter> 클래스입니다.|  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자에는 이 문서의 이전 표에 나와 있는 핵심 클래스뿐만 아니라 다음 표에 나열된 클래스도 포함되어 있습니다.  
   
 |개체|설명|  
 |------------|-----------------|  
 |`Transaction`|데이터 소스의 트랜잭션에 명령을 인리스트먼트합니다. 모든 `Transaction` 개체의 기본 클래스는 <xref:System.Data.Common.DbTransaction> 클래스입니다. ADO.NET에서는 <xref:System.Transactions> 네임스페이스에 있는 클래스를 사용하여 트랜잭션에 대한 지원을 제공합니다.|  
-|`CommandBuilder`|`DataAdapter` 의 명령 속성을 자동으로 생성하거나 저장 프로시저에서 매개 변수 정보를 파생하여 `Parameters` 개체의 `Command` 컬렉션을 채우는 도우미 개체입니다. 모든 `CommandBuilder` 개체의 기본 클래스는 <xref:System.Data.Common.DbCommandBuilder> 클래스입니다.|  
+|`CommandBuilder`|`DataAdapter`의 명령 속성을 자동으로 생성하거나 저장 프로시저에서 매개 변수 정보를 파생하여 `Parameters` 개체의 `Command` 컬렉션을 채우는 도우미 개체입니다. 모든 `CommandBuilder` 개체의 기본 클래스는 <xref:System.Data.Common.DbCommandBuilder> 클래스입니다.|  
 |`ConnectionStringBuilder`|`Connection` 개체에서 사용하는 연결 문자열의 내용을 간단히 만들고 관리할 수 있도록 하는 도우미 개체입니다. 모든 `ConnectionStringBuilder` 개체의 기본 클래스는 <xref:System.Data.Common.DbConnectionStringBuilder> 클래스입니다.|  
 |`Parameter`|명령과 저장 프로시저에 대한 입력, 출력 및 반환 값 매개 변수를 정의합니다. 모든 `Parameter` 개체의 기본 클래스는 <xref:System.Data.Common.DbParameter> 클래스입니다.|  
 |`Exception`|데이터 소스에서 오류가 발생하면 반환됩니다. 클라이언트에서 오류가 발생하는 경우 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 예외를 throw합니다. 모든 `Exception` 개체의 기본 클래스는 <xref:System.Data.Common.DbException> 클래스입니다.|  
 |`Error`|데이터 소스에서 반환한 경고 또는 오류에서 정보를 노출시킵니다.|  
 |`ClientPermission`|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자에 코드 액세스 보안 특성을 제공합니다. 모든 `ClientPermission` 개체의 기본 클래스는 <xref:System.Data.Common.DBDataPermission> 클래스입니다.|  
   
-## <a name="net-framework-data-provider-for-includessnoversionincludesssnoversion-mdmd-sqlclient"></a>.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient)  
+## <a name="net-framework-data-provider-for-includessnoversionincludesssnoversion-mdmd-sqlclient"></a>.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)](SqlClient)  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient)에서는 고유 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]와 통신합니다. 이 공급자는 OLE DB 또는 ODBC(Open Database Connectivity) 계층을 추가하지 않고 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 에 직접 액세스하도록 최적화되어 있어 간단하며 효율적으로 작동합니다. 다음은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 와 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB를 비교한 그림입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB는 연결 풀링 및 트랜잭션 서비스를 제공하는 OLE DB 서비스 구성 요소와 데이터 소스에 대한 OLE DB 공급자 모두를 통해 OLE DB 데이터 소스와 통신합니다.  
   
 > [!NOTE]

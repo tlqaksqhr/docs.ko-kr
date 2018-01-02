@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 740b08806dff65d3ce1b8de378138c2647944fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dadf0e07f5e3a9f9152ae7cd57c62721402bff0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; 요소에 대 한 &lt;런타임&gt;
 어셈블리에 대 한 식별 정보를 포함합니다.  
@@ -111,7 +112,7 @@ culture="assembly culture"/>
   
  구성 파일에 포함 하는 경우는 `<assemblyIdentity>` 없는 요소에 `processorArchitecture` 특성과 없이 요소 플랫폼과 일치 하는 요소가 포함 되지 않습니다는 `processorArchitecture` 특성을 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 어셈블리에 대 한 정보를 제공 하는 방법을 보여 줍니다.  
   
 ```xml  

@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3a01a64ab8828104e8404f7d4efdd7b37eea373e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f91b9fcd7ef9c9c616a7a41ced6be1cda365509
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt; 요소
 언어 공급자에 대 한 컴파일러 버전 특성을 지정합니다.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
  CodeDOM 코드 공급자 구현자를 취하는 생성자를 제공 하 여 사용자 지정 옵션을 처리할 수는 `providerOptions` 형식의 매개 변수 <xref:System.Collections.Generic.IDictionary%602>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 C# 코드 공급자의 버전 3.5를 사용할지를 지정 하는 방법을 보여 줍니다.  
   
 ```xml  

@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8b223ab6ab742c5b7d3b3d2f5640e99835afe268
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf2e041f9ae9661a9b6f8ecd5883ac7d1b0f0dec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemcodedomgt-element"></a>&lt;system.codedom&gt; 요소
 사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-file"></a>구성 파일  
  컴퓨터 구성 파일 및 응용 프로그램 구성 파일에서이 요소를 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 일반적인 컴파일러 구성을 보여 줍니다.  
   
 ```xml  

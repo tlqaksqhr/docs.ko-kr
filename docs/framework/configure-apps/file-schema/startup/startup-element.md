@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bd2356845c76e81ce2efe87bdf247de293d6115d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltstartupgt-element"></a>&lt;시작&gt; 요소
 공용 언어 런타임 시작 정보를 지정합니다.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 |`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
- **\<supportedRuntime >** 요소는 버전 1.1 이상 런타임에 사용 하 여 빌드된 모든 응용 프로그램에서 사용 되어야 합니다. 런타임 버전 1.0만 지원 하도록 작성 된 응용 프로그램을 사용 해야 합니다는  **\<requiredRuntime >** 요소입니다.  
+  **\<supportedRuntime >** 요소는 버전 1.1 이상 런타임에 사용 하 여 빌드된 모든 응용 프로그램에서 사용 되어야 합니다. 런타임 버전 1.0만 지원 하도록 작성 된 응용 프로그램을 사용 해야 합니다는  **\<requiredRuntime >** 요소입니다.  
   
  Microsoft Internet Explorer에서 호스팅되는 응용 프로그램에 대 한 시작 코드는 무시는  **\<시작 >** 요소와 해당 자식 요소입니다.  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  특성을 설정 `true` CLR 버전 1.1 또는 CLR 버전 2.0 효과적으로 프로세스에서-side-by-side 기능을 해제 하면 동일한 프로세스에 로드에서 방지 하 고 (참조 [COM Interop에 대 한-병렬 실행](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 파일에서 런타임 버전을 지정 하는 방법을 보여 줍니다.  
   
 ```xml  

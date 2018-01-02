@@ -12,11 +12,12 @@ ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: decf0ca5f9f743a2a2884c06777b7ee9d6d6a8ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 27b01120cb279dc23b3b081e35f17addc6d1897d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<제거 > NameValueSectionHandler 및 DictionarySectionHandler 요소
 
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/18/2017
 
 사용할 수는  **\<제거 >** 설정을 구성 파일 계층 구조에서 더 높은 수준에서 정의 된 응용 프로그램에서 제거할 요소입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 사용 하는 방법을 보여 주는 다음 예제는  **\<제거 >** 컴퓨터 구성 파일에 이전에 정의 된 설정을 제거 하는 응용 프로그램 구성 파일의 요소입니다.
 

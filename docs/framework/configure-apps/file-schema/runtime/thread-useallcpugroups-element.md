@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 187e391acf3b80a5ae2dfe795c4a3b397af815ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c574d6f5598616776e891ab282c703ce20bc6960
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt; 요소
 런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>설명  
  컴퓨터에 여러 CPU 그룹을이 요소를 사용 하도록 설정 하면 모든 CPU 그룹에서 관리 되는 스레드를 배포할 runtime 합니다. 이 기능을 사용 하려면도 설정 해야는 [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 모든 CPU 그룹에 가비지 컬렉션을 확장 하 고 모든 코어는 만들고 힙을 분산 때 고려 하는 요소입니다. 사용 하도록 설정 된 [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소 사용 하도록 설정 해야는 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 요소입니다. 이러한 요소가 활성화 되지 않은 경우 사용 하도록 설정 된 `<Thread_UseAllCpuGroups>` 요소에 영향을 주지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 여러 CPU 그룹에 대 한 지원을 사용 하도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  

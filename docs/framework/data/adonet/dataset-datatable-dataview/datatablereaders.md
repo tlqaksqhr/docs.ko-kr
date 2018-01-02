@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ed9094a036262bac2e101e7b4268aac2e66a0d10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0e3f3da6554239b4f04e244d3339a4280e1add85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatablereaders"></a>DataTableReader
 <xref:System.Data.DataTableReader>는 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet>의 내용을 하나 이상의 정방향 읽기 전용 결과 집합 형태로 제공합니다.  
@@ -26,11 +27,11 @@ ms.lasthandoff: 11/21/2017
   
  A **DataTableReader** 호출 하 여 만들어진 경우 여러 개의 결과 집합이 포함 될 수 있습니다 <xref:System.Data.DataSet.CreateDataReader%2A>합니다. 결과과 동일한 순서로 **Datatable** 에 **데이터 집합** 개체의 <xref:System.Data.DataSet.Tables%2A> 컬렉션입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DataReader 만들기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
  만드는 방법에 설명 된 **DataTableReader** 개체입니다.  
   
- [Datatable 탐색](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
+ [DataTable 탐색](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
  사용을 설명는 **읽기** 내용의 사이 이동 하는 메서드는 **DataTableReader**합니다.  
   
 ## <a name="see-also"></a>참고 항목  

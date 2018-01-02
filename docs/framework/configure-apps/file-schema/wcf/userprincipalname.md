@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 616eb07a76da93ff1019ea7e80b5ce3151e6e8a4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34bfaeb563bd4979bf29a5e45a60730eb38700b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 클라이언트에서 인증할 서비스의 UPN(User Principal Name)을 지정합니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>설명  
  이 ID를 가진 끝점과 연결되는 보안 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 클라이언트는 이 끝점에 대해 SSPI 인증을 사용할 때 UPN을 사용합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 구성 코드는 클라이언트에서 인증할 서비스의 UPN을 지정합니다.  
   
 ```xml  
@@ -68,5 +69,5 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  <xref:System.ServiceModel.UpnEndpointIdentity>  
- [서비스 Id 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [서비스 ID 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [\<identity >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

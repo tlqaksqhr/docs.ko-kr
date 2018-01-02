@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd7bad0734007b68fe6089a11b6b59d5d22e9954
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 594d0516a739986580d37e86eab32da14c359e99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="development-and-deployment-considerations"></a>개발 및 배포 고려 사항
 이 단원의 항목에서는 ADO.NET Entity Framework를 기반으로 하는 응용 프로그램을 개발하거나 배포할 때 고려해야 할 문제를 다룹니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [보안 고려 사항](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
   
  [성능 고려 사항](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a92a30ca5e2b95e7622bc145d837ac876955a8cb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5671ddce2ab733666f11e15ea2aeb3950c944992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltheadersgt-element"></a>&lt;headers&gt; 요소
 여기에는 로컬 발급자의 주소를 올바로 지정하는 데 필요한 주소 헤더 컬렉션이 포함됩니다. `add` 키워드를 사용하여 이 컬렉션에 헤더를 추가할 수 있습니다.  

@@ -12,11 +12,12 @@ ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2b00af6f7d735d5db8fd746205ba225253cad133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d080a7c63ddda0577e66d2e7ddd433c7fd5fdbd1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-element-for-appsettings"></a>\<추가 > 요소에 대 한 \<g s >
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/18/2017
 
 없음
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 응용 프로그램의 이름에 대 한 사용자 지정 구성 설정을 추가 하는 방법을 보여 줍니다.
 

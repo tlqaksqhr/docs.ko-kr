@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f8484fe902b356f7fae4e526bdaa5610bf7d7ac6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e4c854d9f7e1262a771dadc897878dac20a642e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltreliablesessiongt"></a>&lt;reliableSession&gt;
 WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 바인딩에 추가되면 그 결과로 만들어지는 채널에서 EOD(Exactly-Once Delivery) 보증을 지원할 수 있습니다.  
@@ -73,7 +74,7 @@ WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 
   
  자세한 내용은 참조 [신뢰할 수 있는 세션](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 다양한 전송 및 메시지 인코딩 요소, 특히 신뢰할 수 있는 세션 사용 등을 통해 사용자 지정 바인딩을 구성하는 방법을 보여 줍니다. 이렇게 하면 클라이언트 상태가 유지되며 차례로 배달 보증이 지정됩니다. 이 기능은 클라이언트 및 서비스의 응용 프로그램 구성 파일에서 구성됩니다. 예제에서는 서비스 구성을 보여 줍니다.  
   
 ```xml  

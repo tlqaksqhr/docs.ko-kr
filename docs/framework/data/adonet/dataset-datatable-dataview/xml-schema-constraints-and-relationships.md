@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a324c3b7f24d3395382067ea5581313af58e13f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 219b8173fdbfd84719733edc2f900511f58967d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 스키마 제약 조건 및 관계
 XML 스키마 정의 언어 (XSD) 스키마에서 제약 조건을 지정할 수 있습니다 (고유, key 및 keyref 제약 조건) 및 관계 (사용 하는 **msdata: relationship** 주석). 이 항목에서는 XML 스키마에 지정된 제약 조건과 관계를 해석하여 <xref:System.Data.DataSet>을 생성하는 방법을 설명합니다.  
@@ -197,5 +198,5 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
  중첩된 테이블을 참조 하는 keyref 제약 조건을 포함 하는 경우는 **msdata:IsNested = "true"** 주석을 **데이터 집합** keyref 제약 조건을 기반으로 하는 단일 중첩된 관계 만들어집니다 및 관련된 unique/key 제약 조건입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 스키마 (XSD)에서 데이터 집합 관계형 구조 파생](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

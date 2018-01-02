@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b1cca286fc967631c60aa02a1318fe24120e05b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 48f9eef329f5d2e0e751fd2a03b0d3af9ddc355c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltidentityconfigurationgt"></a>&lt;identityConfiguration&gt;
 서비스 수준 id 설정을 지정합니다.  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
 > -   [\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
 > -   [\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 "alternateConfiguration" 라는 id 구성을 만듭니다. Id 구성에는 기본 설정을 지정합니다.  
   
 ```xml  

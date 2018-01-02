@@ -13,13 +13,14 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6c9d5d8f2c90273b316379d3c2803835bab3faef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 36699b403241e9a5496e722e81c833be0ed63101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="-member-access-entity-sql"></a>입니다. (멤버 액세스)(Entity SQL)
+# <a name="-member-access-entity-sql"></a>이어야 합니다. (멤버 액세스)(Entity SQL)
 점 (.) 연산자는는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 멤버 액세스 연산자입니다. 멤버 액세스 연산자를 사용하여 구조 개념적 모델 형식 인스턴스의 속성 또는 필드 값을 구합니다.  
   
 ## <a name="syntax"></a>구문  

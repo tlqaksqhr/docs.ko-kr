@@ -14,11 +14,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53e189b761ccd1c3cee75d4afa81291e02082684
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4b453392e21079fe1042f3f07bd895bbcdad888
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 비이중 서비스 계약에 적합한 안전하고 신뢰할 수 있으며 상호 운용할 수 있는 바인딩을 정의합니다. 이 바인딩은 안정성을 위해 WS-Reliable Messaging 사양을 구현하고, 메시지 보안 및 인증을 위해 WS-Security 사양을 구현합니다. 전송은 HTTP이며 메시지 인코딩은 Text/XML 인코딩입니다.  
@@ -105,7 +106,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>설명  
  `WSHttpBinding`은 `BasicHttpBinding`과 비슷하지만 더 다양한 웹 서비스 기능을 제공합니다. BasicHttpBinding과 마찬가지로 HTTP 전송을 사용하며 메시지 보안을 제공하지만 다른 점은 트랜잭션, 신뢰할 수 있는 메시징, WS-Addressing도 가능하다는 것입니다. 이러한 기능은 기본적으로 또는 단일 제어 설정을 통해 활성화됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <configuration>  

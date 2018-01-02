@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7ab96ad43248517dca99bff176be7edfab8d3ced
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aef29e6107a2f441d8c1a6826b16f0f0c0b56973
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; 요소
 소스 또는 추적 요소가 참조할 수 있는 수신기가 포함되어 있습니다.  기본적으로이 수신기에 설치 된 모든 수신 하지 않음 하 고 런타임 시 이러한 수신기를 검색할 수 없으면입니다. 공유 수신기로 식별 된 수신기 이름으로 원본 또는 추적에 추가할 수 있습니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
  이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는 `<sharedListeners>` 수신기에 추가할 요소의 `console` 에 `Listeners` 컬렉션 모두에 대 한는 <xref:System.Diagnostics.TraceSource> 및 <xref:System.Diagnostics.Trace> 클래스입니다. 콘솔 추적 수신기에 대 한 호출을 통해 콘솔에 추적 정보를 쓰는 <xref:System.Diagnostics.TraceSource> 또는 <xref:System.Diagnostics.Trace>합니다.  
   
 ```xml  

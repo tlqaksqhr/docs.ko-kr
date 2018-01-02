@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9abe07c065dbea67c5ebc4a4490d9f88258130c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0014e0224221cd5143709ba0a5b38f10e457b494
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
 구성에서 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)를 사용 하 여 Ws-federation 프로토콜을 통해 인증을 페더레이션 합니다. 구성에서 <xref:System.Security.Claims.ClaimsAuthorizationManager> 사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클레임 기반 액세스 제어를 제공 하는 클래스입니다.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
  `<federationConfiguration>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> 클래스입니다. 자체 구성 개체도 표시 됩니다는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 클래스입니다. 단일 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 에 설정 된 인스턴스는 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 속성 하 고 응용 프로그램에 대 한 페더레이션된 구성을 제공 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  에서는 다음 XML는 `<federationConfiguration>` 요소는 WSFAM에 대 한 설정을 지정 하 고 지정 하는 기본 쿠키 처리기 (의 인스턴스는 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스) SAM에서 사용할 수 있습니다.  
   
 > [!WARNING]

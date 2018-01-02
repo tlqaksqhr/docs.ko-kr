@@ -20,11 +20,12 @@ caps.latest.revision: "70"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c4c64de42f82590e1e8dc24afa46f66c3efb35b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 547e6a5b800f1adf5ba9835470d2dd405ce97b14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltruntimegt-element"></a>&lt;런타임&gt; 요소
 응용 프로그램을 구성 하는 공용 언어 런타임에서 사용 되는 정보를 제공 합니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 255cd8518bd9c6c6c199c75aa32ca086c801d23f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a254b8a4de8f66cb0d051d246be2d07e905615a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;protocolMapping&gt;의 &lt;add&gt;
 전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 간의 기본 프로토콜 매핑을 나타냅니다 및 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 바인딩. 런타임에 기본 끝점을 만들 때 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 구성된 매핑을 확인하여 특정 기본 주소에 사용할 바인딩을 결정합니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 간의 기본 프로토콜 매핑을 정의 하기 위한 구성 섹션을 나타냅니다 및 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 바인딩.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 구성 예제는 machine.config 파일의 기본 프로토콜 매핑을 보여 줍니다. machine.config 파일을 수정하여 컴퓨터 수준에서 기본 매핑을 재정의할 수 있습니다. 또는 응용 프로그램 범위 내에서 기본 매핑을 재정의하려는 경우 해당 응용 프로그램 구성 파일 내에서 이 섹션을 재정의하고 개별 프로토콜 체계에 대한 매핑을 변경할 수 있습니다.  
   
 ```xml  

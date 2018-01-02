@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6ac64fee869ce58413e799f4217f009ef6ae91a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72868cb81c8abb988dd765f4b3ed68bf3c4a71da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges 및 RejectChanges
 데이터에 대 한 변경 내용의 정확성을 확인 한 후는 <xref:System.Data.DataTable>를 사용 하 여 변경 내용을 적용 수 있습니다는 <xref:System.Data.DataRow.AcceptChanges%2A> 메서드는 <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, 또는 <xref:System.Data.DataSet>, 하는 설정의 **현재** 행 값이 고 **원래** 값을 설정 합니다는 **RowState** 속성을 **Unchanged**합니다. 수락 하거나 변경 내용이 거부 된 모든 지웁니다 **RowError** 정보 및 설정의 **HasErrors** 속성을 **false**합니다. 또한, 변경 사항을 승인하거나 거부하면 데이터 소스에서 데이터를 업데이트하는 데도 영향을 줄 수 있습니다. 자세한 내용은 참조 [Dataadapter로 데이터 원본 업데이트](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)합니다.  

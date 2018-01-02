@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ca6debc4458c34e9f76b0bfaa0e2047ce0be2cae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 669811b20fd9980b6876683ec7eff4c235a676ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; 요소 (네트워크 설정)
 네트워킹 성능 카운터를 사용 하지 않도록 설정 하거나 사용 합니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> 속성의 현재 값을 가져오는 데 사용할 수는 **활성화** 해당 구성 파일에서 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  구성 하는 방법을 보여 주는 다음 예제는 <xref:System.Net> 및 관련 네임 스페이스 네트워킹 성능 카운터를 사용 하도록 합니다.  
   
 ```xml  

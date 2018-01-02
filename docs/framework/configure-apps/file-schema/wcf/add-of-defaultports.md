@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2aa63c7a5e730b2fb45f614cb2fe5f88444cee4a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1efe61bf5f4276836c65e9c81d316dc0664f3de2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;defaultPorts&gt;의 &lt;add&gt;
 클라이언트 응용 프로그램에서 수신하는 기본 통신 끝점입니다.  

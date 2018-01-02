@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c7ab16546ae85d1161f9e1323d74f17253edb7e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 254b3be8f270a9186377b264094c919314efb27f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt; 요소
 공용 언어 런타임이 별도 스레드에서 가비지 컬렉션을 실행하는지 여부를 지정합니다.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
  자세한 동시에 대 한 정보 및 백그라운드 가비지 수집의 "동시 가비지 수집" 섹션을 참조는 [가비지 수집 기본 사항](../../../../../docs/standard/garbage-collection/fundamentals.md) 항목입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 동시 가비지 컬렉션을 사용하도록 설정합니다.  
   
 ```xml  

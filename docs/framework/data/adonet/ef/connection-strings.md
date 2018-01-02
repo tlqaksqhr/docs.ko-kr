@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b141f7bb31374c403f8d802a5df2ff1329b1e079
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64f2d0fbc54900443046bd2c71215cc0928c8658
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings"></a>연결 문자열
 연결 문자열에는 데이터 공급자에서 데이터 소스에 매개 변수로 전달되는 초기화 정보가 있습니다. 연결 문자열 구문은 데이터 공급자에 따라 다르며 연결을 여는 동안 연결 문자열이 구문 분석됩니다. Entity Framework에서 사용하는 연결 문자열에는 Entity Framework를 지원하는 기본 ADO.NET 데이터 공급자에 연결하는 데 사용되는 정보가 들어 있습니다. 또한 필요한 모델 및 매핑 파일에 대한 정보도 들어 있습니다.  

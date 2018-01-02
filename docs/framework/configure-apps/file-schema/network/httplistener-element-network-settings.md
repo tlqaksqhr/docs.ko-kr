@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 14a758f1d69da4db8ed58809de20d3522ea7e4e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d880583016e6ccc0ae57fea10c35cb32726c93e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt; 요소 (네트워크 설정)
 사용 하는 매개 변수를 사용자 지정은 <xref:System.Net.HttpListener> 클래스입니다.  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> 속성의 현재 값을 가져오는 데 사용할 수는 **unescapeRequestUrl** 해당 구성 파일에서 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  구성 하는 방법을 보여 주는 다음 예제는 <xref:System.Net.HttpListener> 대신 변환 된 URI에서 원시 URI를 사용 하는 요청을 받을 때 클래스 `http.sys` 대 한 입력으로 <xref:System.Net.HttpListenerRequest.Url%2A> 속성입니다.  
   
 ```xml  

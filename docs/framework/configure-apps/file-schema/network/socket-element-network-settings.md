@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3d1adc163e889a0de6ad27347c8f122ac26d3524
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fefb8e119d428d86501e1c8cdd5eec5ef0809cbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;소켓&gt; 요소 (네트워크 설정)
 소켓 작업 완료 포트를 사용 하는지 여부를 지정 합니다.  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 완료 포트를 사용 해야 함을 지정 하는 방법을 지정 하 고 있는 기본 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> 제한 해야 합니다.  
   
 ```xml  

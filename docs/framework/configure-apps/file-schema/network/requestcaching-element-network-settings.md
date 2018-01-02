@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f2737e67fe1fe1e33b2600f448b02321f6ce1888
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35665bd79a14b74e192fed439e935936411d85c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; 요소 (네트워크 설정)
 네트워크 요청에 대 한 캐싱 메커니즘을 제어합니다.  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
 |-------------|-----------------|  
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 모든 캐싱을 사용 하지 않도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 356dd1531f093282a1a8463b7d697400f8b45862
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e5d26ab2ff3207b0905c33ba237bf71e623a103d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
 응용 프로그램에서 Windows Identity Foundation (WIF) 옵션을 사용 하도록 설정 하는 것에 대 한 구성을 제공 합니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>설명  
  추가 `<system.identityModel>` 섹션 서비스 또는 응용 프로그램이 Windows Identity Foundation (WIF)를 사용 하도록 구성 하려면 구성 파일입니다. `<system.identityModel>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  추가 하는 방법을 보여 주는 다음 예제는 `<system.identityModel>` 구성 파일에 섹션. 구성 섹션 및 네임 스페이스 선언을 추가 해야는 `<configSections>` 요소입니다. 추가 하 여는 `<system.IdentityModel>` 하나 이상의 id 구성을 지정 하려면 구성 파일 요소입니다.  
   
 ```xml  

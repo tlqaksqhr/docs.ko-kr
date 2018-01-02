@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec959a9eeea82c56d6a2ae5ec3a7befce67676e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 351f49c346cb8126cdd9d540a4db382bf5f4e721
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt;의 &lt;endpoint&gt;
 클라이언트에서 서버의 서비스 끝점과 연결하는 데 사용하는 채널 끝점의 contract, 바인딩 및 address 속성을 지정합니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<클라이언트 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|클라이언트가 연결할 수 있는 끝점의 목록을 정의하는 구성 섹션입니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이것은 채널 끝점 구성의 예제입니다.  
   
 ```xml  

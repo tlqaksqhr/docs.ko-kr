@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e457113eff471c620ccdbf78337d2013d7a62bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd760cf51aa0f3e89e49831b1aa165e62b321d20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>데이터 집합에 기존 제약 조건 추가
 **채우기** 의 메서드는 **DataAdapter** 채웁니다는 <xref:System.Data.DataSet> 는 테이블 열과 데이터 원본의 행만 하지만 제약 조건을 일반적으로 설정 하 여 데이터 원본에서 **채우기** 메서드는이 스키마 정보를 추가 하지 않습니다는 **DataSet** 기본적으로 합니다. 채우는 한 **데이터 집합** 데이터 소스의 기존 기본 키 제약 조건 정보로 호출할 수 있습니다는 **FillSchema** 의 메서드는 **DataAdapter**, 설정 또는 **MissingSchemaAction** 의 속성은 **DataAdapter** 를 **AddWithKey** 호출 하기 전에 **채우기**합니다. 이렇게 하면 해당 기본 키 제약 조건에는 **DataSet** 데이터 소스에서 반영 합니다. 외래 키 제약 조건 정보에 포함 되며에 표시 된 대로 명시적으로 만들어야 합니다 [DataTable 제약 조건](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)합니다.  
@@ -71,7 +72,7 @@ custAdapter.Fill(custDataSet, "Customers");
 >  경우는 **FillSchema** 의 메서드는 **OleDbDataAdapter** 개체를 여러 개의 결과 집합을 반환 하는 명령에 대 한 호출을 첫 번째 결과 집합의 스키마 정보만 반환 됩니다. 여러 결과 대 한 스키마 정보를 반환할가 사용 하 여를 집합 때는 **OleDbDataAdapter**를 지정 하는 것이 좋습니다.는 **MissingSchemaAction** 의 **AddWithKey** 호출할 때 스키마 정보를 가져오려면는 **채우기** 메서드.  
   
 ## <a name="see-also"></a>참고 항목  
- [Dataadapter 및 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

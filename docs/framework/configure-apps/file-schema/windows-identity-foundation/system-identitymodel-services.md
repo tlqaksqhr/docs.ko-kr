@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a5f0b6b207fbd51504149fd5c245f41ef89f17f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 03c2fa7fe65650b760937ef06b848152893e023b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemidentitymodelservicesgt"></a>&lt;system.identityModel.services&gt;
 Ws-federation 프로토콜을 사용 하 여 인증에 대 한 구성 섹션입니다.  
@@ -56,7 +57,7 @@ Ws-federation 프로토콜을 사용 하 여 인증에 대 한 구성 섹션입�
   
  `<system.identityModel.services>` 섹션으로 표시 됩니다는 <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> 클래스입니다. 자식 컬렉션 `<federationConfiguration>` 섹션에 구성 요소는으로 표시 됩니다는 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 XML에 추가 하는 방법을 보여 줍니다는 `<system.identityModel.services>` 구성 파일에 섹션. 둘 다에 대 한 섹션 선언을 추가 해야는 `<system.identityModel.services>` 섹션 및 `<system.identityModel>` 섹션. (추가 하는 경우는 `<system.identityModel.services>` 섹션을 추가 해야에 대 한 선언을 `<system.identityModel>` 기본 되도록 섹션 `<identityConfiguration>` 필요한 경우 런타임에서 섹션을 만들 수 있습니다.) 섹션 선언에 추가 된 후 페더레이션된 인증 설정을 구성할 수 있습니다는 `<system.identityModel.services>` 요소입니다.  
   
 ```xml  

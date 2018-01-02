@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a71b28a1653b72d212455e99f8aa0101bb74e7a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcd149b34282ef6ae21593e4549478bab91e0189
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET의 데이터 추적
 ADO.NET에는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC용 .NET 데이터 공급자를 비롯하여 ADO.NET <xref:System.Data.DataSet> 및 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 네트워크 프로토콜에서 지원되는 기본 제공 데이터 추적 기능이 추가되었습니다.  

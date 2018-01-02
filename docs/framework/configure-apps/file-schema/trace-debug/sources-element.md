@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 58e9ff8787916132406a7e63aff511c9fb221b73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7abe1f4a536d9f321e0a8b300f9542255433c030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsourcesgt-element"></a>&lt;소스&gt; 요소
 추적 메시지를 시작 하는 추적 소스를 지정 합니다.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>설명  
  이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는 `<sources>` 추적 소스를 추가할 요소의 `mySource` 명명 된 소스 스위치에 대 한 수준을 설정 하 고 `sourceSwitch`합니다. 콘솔 추적 수신기는 추적 정보를 콘솔에 작성 하는 추가 됩니다.  
   
 ```xml  

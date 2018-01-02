@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 32133d1b6fce619fb9990ab89820b7f19b6a5926
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5ff674cbbe0a5d52a4bc4b4de55e0ae3c49395d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-results"></a>쿼리 결과
 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리가 명령 트리로 변환되어 실행되고 나면 일반적으로 쿼리 결과가 다음 중 하나의 형태로 반환됩니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 520dfec180157c9a05c5fc3beb51b5fc17f9088b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9670cf0faa3e7f69b8f99b09fa26741991a60481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassertgt-element"></a>&lt;assert&gt; 요소
 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 메서드를 호출할 때 메시지 상자를 표시할지 여부를 지정합니다. 또한 메시지를 작성할 파일의 이름도 지정합니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>설명  
  두 특성 모두에  **\<assert >** 요소는 선택 사항입니다. 메시지를 쓸 파일을 지정 하지 않고 메시지 상자를 해제할 수 있습니다 또는 메시지 상자가 활성화 된 상태에서 메시지를 쓸 파일을 지정할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 호출 하는 경우 메시지 상자 표시를 해제 하는 방법을 보여 줍니다 **Debug.Assert** 에 메시지 쓰기 및 `c:\log.txt`합니다.  
   
 ```xml  

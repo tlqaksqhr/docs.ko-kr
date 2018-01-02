@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cb59eb6e2a5e831f603747b3e0f9435bd076fbf8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 636b7020a8728978ea13529382a822d99cd36f74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnetfx40legacysecuritypolicygt-element"></a>&lt;NetFx40_LegacySecurityPolicy&gt; 요소
 런타임이 레거시 CAS(코드 액세스 보안) 정책을 사용할지를 지정합니다.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-file"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일에만 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 응용 프로그램에 대 한 레거시 CAS 정책을 사용 하는 방법을 보여 줍니다.  
   
 ```xml  

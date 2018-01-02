@@ -13,23 +13,24 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 341723d44960d4eaf9d8338e3c266720816c0899
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58d04a3ba1d73d4236353ff4f08a747ac7b6f0cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable에서 데이터 조작
 <xref:System.Data.DataTable>에서 <xref:System.Data.DataSet>을 만든 후에는 데이터베이스에서 테이블을 사용할 때와 동일하게 작업을 수행할 수 있습니다. 테이블에서 데이터를 추가, 확인, 편집 및 삭제하고, 오류 및 이벤트를 모니터링하며, 테이블에서 데이터를 쿼리할 수 있습니다. 데이터를 수정할 때는 **DataTable**, 변경 내용을 정확 하 게 하 고 프로그래밍 방식으로 적용 하거나 변경 사항을 거부 여부 결정 하는지 여부를 확인할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DataTable에 데이터 추가](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md)  
  새 행을 만들어 테이블에 추가하는 방법을 설명합니다.  
   
  [DataTable에서 데이터 보기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/viewing-data-in-a-datatable.md)  
  원래 버전과 현재 버전의 데이터를 포함하여 행의 데이터에 액세스하는 방법을 설명합니다.  
   
- [Load 메서드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
+ [로드 메서드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
  사용을 설명는 **부하** 가 채울 메서드에 **DataTable** 행이 있는 합니다.  
   
  [DataTable 편집](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  

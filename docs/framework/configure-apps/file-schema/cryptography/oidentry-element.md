@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 12c3b87f1cec72798ea92357f34ecc25b7e6edcf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d6dfe38f8e632a31f7a20191678f1fff7fd88ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltoidentrygt-element"></a>&lt;r y&gt; 요소
 ASN.1 OID(개체 식별자)를 이름에 매핑합니다.  
@@ -65,7 +66,7 @@ ASN.1 OID(개체 식별자)를 이름에 매핑합니다.
 ## <a name="remarks"></a>설명  
  ASN.1 개체 식별자는 일부 암호화 형식에서 알고리즘을 식별 합니다. 개체 식별자를 확인 하는 알고리즘에 대 한 알아보기 쉬운 이름을 매핑하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는  **\<r y >** ripemd-160 해시 알고리즘에 대 한 개체 식별자를 해당 해시 알고리즘의 구현에 매핑하는 요소입니다.  
   
 ```xml  

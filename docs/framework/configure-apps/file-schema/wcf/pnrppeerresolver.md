@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 223a66dd21305a4cbb6bb434f553e821037e7cb0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0152dfaa498b84b6e8cfa277abe858cc24ad34cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 PNRP(피어 이름 확인 프로토콜)가 확인자로 사용되도록 지정합니다. PNRP가 기본 확인자이므로 이 요소는 선택적입니다.  
@@ -52,7 +53,7 @@ PNRP(피어 이름 확인 프로토콜)가 확인자로 사용되도록 지정�
 |-------------|-----------------|  
 |[\<바인딩 >](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <pnrpResolver resolverType="" />  

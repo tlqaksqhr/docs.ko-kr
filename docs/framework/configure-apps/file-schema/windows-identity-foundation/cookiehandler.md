@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 88e968d025c959ec33674a9d8edb5e63341433ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 302ccb3d95fc982ec7950dc7808dce61b263c481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
 구성에서 <xref:System.IdentityModel.Services.CookieHandler> 하는 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) 읽기 / 쓰기 쿠키를 사용 하 여 합니다.  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
  `<cookieHandler>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Services.CookieHandlerElement> 클래스입니다. 구성에 지정 된 쿠키 처리기는에서 사용할 수는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> 의 속성은 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 에 설정 하는 개체는 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 속성.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  XML은 다음 한 `<cookieHandler>` 요소입니다. 이 예제에서는 때문에 `mode` 특성 지정 하지 않으면, 기본 쿠키 처리기 SAM에서 사용 됩니다. 인스턴스는 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 클래스입니다. 때문에 `<chunkedCookieHandler>` 자식 요소를 지정 하지 않으면, 기본 청크 크기 사용 됩니다. HTTPS 됩니다 필요 하기 때문에 `requireSsl` 특성이 설정 되어 `false`합니다.  
   
 > [!WARNING]

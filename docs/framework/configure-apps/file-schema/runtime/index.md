@@ -17,11 +17,12 @@ caps.latest.revision: "49"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83323c02e726416e02895ef60be4c1073d41bdcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56346b562489b82800421e91201a76bf7f74e5b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-settings-schema"></a>런타임 설정 스키마
 런타임 설정은 공용 언어 런타임에서 .NET Framework를 대상으로 하는 응용 프로그램을 구성하는 데 사용됩니다.  

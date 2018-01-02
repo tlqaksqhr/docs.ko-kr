@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdafddcb05dd50f059c9f6804573beec085a4a2a
-ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
+ms.workload: dotnet
+ms.openlocfilehash: f4c4bd9901b053c96a260435c34ffa3ddd2c7283
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt; 요소 (캐시 설정)
 명명 된 구성 설정의 컬렉션을 지정 <xref:System.Runtime.Caching.MemoryCache> 인스턴스. <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> 속성 구성 설정의 컬렉션을 하나 이상에서 참조 `namedCaches` 구성 파일의 요소입니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/25/2017
   
  Name 특성을 "기본값"으로 설정 하면 요소의 기본 메모리 캐시 인스턴스를 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 설정 하 여 기본 캐시 항목 이름에는 캐시의 이름을 설정 하는 `name` 특성을 "default"입니다.  
   
  `cacheMemoryLimitMegabytes` 특성 및 `physicalMemoryPercentage` 특성은 0으로 설정됩니다. 이러한 특성을 0으로 설정 됨을 의미의 크기 자동 조정 추론은 <xref:System.Runtime.Caching.MemoryCache> 클래스 사용 됩니다. 캐시를 구현 하는 2 분 마다 절대 곡선과 백분율을 기준으로 메모리 제한에 대 한 현재 메모리 로드를 비교합니다.  

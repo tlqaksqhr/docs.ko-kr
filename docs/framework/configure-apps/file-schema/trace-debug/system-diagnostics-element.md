@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d336a0f733451cb28d8fe57af20585515b71ca4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e76f5ef38e29a1afc9f438abb37239d109876cc5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;system.diagnostics&gt; 요소
 메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 추적 스위치와 내부 추적 수신기를 포함 하는 방법을 보여 줍니다는  **\<system.diagnostics >** 요소입니다. `General` 로 설정 되어 추적 스위치는 <xref:System.Diagnostics.TraceLevel> 수준입니다. 추적 수신기 `myListener` 라는 파일을 만들어 `MyListener.log` 출력 파일에 씁니다.  
   
 > [!NOTE]

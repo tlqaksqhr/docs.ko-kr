@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4c90799ed2db061e8f42cde79804789eb8d2da0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 602359b713adfd4adf90d3e18f5f434d50c92ef4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltforceperformancecounteruniquesharedmemoryreadsgt-element"></a>&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; 요소
 PerfCounter.dll이 .NET Framework 버전 1.1 응용 프로그램에서 CategoryOptions 레지스트리 설정을 사용하여 성능 카운터 데이터를 범주별 공유 메모리에서 로드할지 또는 전역 메모리에서 로드할지를 결정하도록 지정합니다.  
@@ -76,7 +77,7 @@ enabled="true|false"/>
   
  메모리 누수 및 성능 카운터 메모리의 채우기를 0과 1 설정 될 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 지정 PerfCounter.dll 범주별 공유 메모리를 사용 해야 하는지 여부를 확인 하려면 CategoryOptions 레지스트리 항목을 참조 해야 하는 방법을 보여 줍니다.  
   
 ```xml  

@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bbb74d9a542833a96c61bcc09f6e4e5f0807843d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;추가&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;추적&gt;
 수신기를 추가 **수신기** 컬렉션입니다.  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|파일의 이름 하 여 <xref:System.Diagnostics.TextWriterTraceListener> 를 씁니다.|  
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|파일의 이름 하 여 <xref:System.Diagnostics.XmlWriterTraceListener> 를 씁니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 사용 하는 방법을 보여 줍니다.  **\<추가 >** 요소를 추가 하는 수신기 `MyListener` 및 `MyEventListener` 에 **수신기** 컬렉션입니다. `MyListener`라는 파일을 만들어 `MyListener.log` 출력 파일에 씁니다. `MyEventListener`이벤트 로그에 항목을 만듭니다.  
   
 ```xml  

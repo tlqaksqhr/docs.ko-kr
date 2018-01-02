@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9bdd16e02742baa14d1ebd11ea95591df7093705
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7469f06567ec8dab98592118ed392a680d4fb81a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicediscoverygt"></a>&lt;serviceDiscovery&gt;
 서비스 끝점의 검색 기능을 지정합니다.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>설명  
  이 구성 요소가 서비스의 동작 구성에 추가되는 경우 서비스의 모든 끝점을 검색할 수 있습니다. 사용 하 여 이러한 끝점의 검색 기능을 추가로 구성할 수 있습니다는 [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) 또는 [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) 자식 요소입니다. 사용 하 여는 [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) 끝점 구성을 서비스 공지 (온라인/Hello 및 Bye/오프 라인)를 보내는 데 사용할 수를 지정 하 여 공지를 구성 하는 섹션입니다. 사용 하 여는 [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) 섹션을 수동으로 검색 메시지를 수신할 끝점을 지정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 구성 예제에서는 CalculatorService를 검색할 수 있도록 지정하고 선택적으로 알림 끝점을 사용하도록 지정합니다.  
   
 ```xml  

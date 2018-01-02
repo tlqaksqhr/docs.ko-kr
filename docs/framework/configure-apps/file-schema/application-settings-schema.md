@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d93a18b17e0d6b8e413903fb84dc6b427d94f6af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3581c8079132de5f1faad4a01e6b43c8e4833316
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-schema"></a>응용 프로그램 설정 스키마
 
@@ -53,14 +54,14 @@ Windows Forms 응용 프로그램에서 응용 프로그램 설정을 사용 하
 
 | 특성        | 설명 |
 | ---------------- | ----------- |
-| **name**         | 필수 요소. 설정의 고유 ID입니다. Visual Studio를 통해 만든 설정은 이름으로 저장 됩니다 `ProjectName.Properties.Settings`합니다. |
-| **serializedAs** | 필수 요소. 값을 텍스트로 직렬화 하는 작업에 사용할 형식입니다. 올바른 값은 다음과 같습니다.<br><br>- `string`. 값을 사용 하 여 문자열 직렬화는 <xref:System.ComponentModel.TypeConverter>합니다.<br>- `xml`. 값은 XML serialization을 사용 하 여 serialize 됩니다.<br>- `binary`. 값은 이진 serialization을 사용 하 여 텍스트로 인코딩된 이진 형식으로 serialize 됩니다.<br />- `custom`. 설정 공급자가이 설정의 내재 된 지식이 직렬화 및 역직렬화 serialize 합니다. |
+| **name**         | 필수. 설정의 고유 ID입니다. Visual Studio를 통해 만든 설정은 이름으로 저장 됩니다 `ProjectName.Properties.Settings`합니다. |
+| **serializedAs** | 필수. 값을 텍스트로 직렬화 하는 작업에 사용할 형식입니다. 올바른 값은 다음과 같습니다.<br><br>- `string`. 값을 사용 하 여 문자열 직렬화는 <xref:System.ComponentModel.TypeConverter>합니다.<br>- `xml`. 값은 XML serialization을 사용 하 여 serialize 됩니다.<br>- `binary`. 값은 이진 serialization을 사용 하 여 텍스트로 인코딩된 이진 형식으로 serialize 됩니다.<br />- `custom`. 설정 공급자가이 설정의 내재 된 지식이 직렬화 및 역직렬화 serialize 합니다. |
 
 ## <a name="value-element"></a>\<값 > 요소
 
 이 요소는 설정의 값을 포함합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 두 개의 응용 프로그램 범위 설정 및 두 개의 사용자 범위 설정을 정의 하는 응용 프로그램 설정 파일을 보여 줍니다.
 

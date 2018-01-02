@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62c5cef51e125443d87c47f7f62dc76aa5d352b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>데이터 집합에서 XPath 쿼리 수행
 동기화 된 간의 관계 <xref:System.Data.DataSet> 및 <xref:System.Xml.XmlDataDocument> XML을 사용할 수 있습니다, XML 경로 언어 (XPath) 쿼리와 같은 액세스 서비스에는 **XmlDataDocument** 특정 기능을 수행할 수 있습니다 액세스할 때 보다 더 편리 하 게는 **DataSet** 직접 합니다. 예를 들어, 사용 하는 대신는 **선택** 의 메서드는 <xref:System.Data.DataTable> 있는 다른 테이블에는 관계를 탐색 하는 **데이터 집합**, XPath 쿼리를 수행할 수는 **XmlDataDocument**  와 동기화 하는 **데이터 집합**, 형태의 XML 요소의 목록을 가져올 수는 <xref:System.Xml.XmlNodeList>합니다. 노드는 **XmlNodeList**로 캐스팅 <xref:System.Xml.XmlElement> 노드에 전달 될 수는 **GetRowFromElement** 의 메서드는 **XmlDataDocument**일치 하는 반환 하려는 경우 <xref:System.Data.DataRow> 동기화 된 테이블의 행에 대 한 참조 **DataSet**합니다.  

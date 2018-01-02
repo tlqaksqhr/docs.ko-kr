@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: be98c93452c9c7a37ecad5b03f5160ea08f2c82e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ac7284fa418c1540582c40bd744e913ba31aa881
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
 토큰 처리기의 컬렉션에 대 한 구성을 제공합니다.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>설명  
  이 섹션에서는 속성 값에 대 한는 <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> 개체입니다. 서비스에 구성 된이 섹션에 구성 된 설정을 재정의 합니다. 이러한 설정 중 일부 처리기는 보안 토큰 처리기 컬렉션에 추가 될 때 지정 된 설정으로 재정의할 차례로 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <system.identityModel>  

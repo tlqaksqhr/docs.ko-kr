@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c88792663b07ace7250b6ee4065e60d6cfb90afd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34a814c14cc482bdf5deafceebae253da921736b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;지우기&gt; webRequestModules (네트워크 설정)에 대 한 요소
 응용 프로그램에서 등록 된 모든 웹 요청 모듈을 제거합니다.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 모든 웹 요청 모듈 지우고 HTTP에 대 한 웹 요청 모듈을 등록 합니다.  
   
 ```xml  

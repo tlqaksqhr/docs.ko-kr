@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2febd8582ded47827794762bf0fb842c8131666
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4e42b7449397bfe397cf9393ef774af5ba261856
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmessagelogginggt"></a>&lt;메시지 로깅&gt;
 이 요소는 WCF(Windows Communication Foundation)의 메시지 로깅 기능 설정을 정의합니다.  
@@ -111,7 +112,7 @@ ms.lasthandoff: 12/02/2017
 </system.diagnostics>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <messageLogging logEntireMessage="true"  

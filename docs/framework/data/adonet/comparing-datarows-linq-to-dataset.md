@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9f17a73d2d6349d4fc35668d7251877034e5e29f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5634a20c51dd86bd383286735ee094d8746615d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>DataRow 비교(LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]에는 소스 요소가 같은지 여부를 확인하는 다양한 집합 연산자가 정의되어 있습니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]에서는 다음과 같은 집합 연산자를 제공합니다.  
@@ -50,5 +51,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Data.DataRowComparer>  
- [데이터 집합으로 데이터를 로드합니다.](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [데이터를 데이터 집합에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [LINQ to DataSet 예제](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

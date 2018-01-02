@@ -12,11 +12,12 @@ ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e91c3d9693cf656a8c56c82d1997f74c2b3d64c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 57ee634c987d344d81f1ca099fe55e633bfbf659
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<지우기 > NameValueSectionHandler 및 DictionarySectionHandler 요소
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
 
 사용할 수 있습니다는  **\<지우기 >** 모든 설정이 구성 파일 계층 구조에서 더 높은 수준에서 정의 된 응용 프로그램에서 제거할 요소입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일을 정의 하 고 사용 하는 방법을 보여 줍니다.는  **\<지우기 >** 에 이전에 정의 된 섹션을 정리 하는 응용 프로그램 구성 파일의 요소는 컴퓨터 구성 파일입니다.
 

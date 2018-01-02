@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8b729f588d2195992b231661f7bb718240141fdd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5a141dd83cb7ef1271906871097eb68da174d22f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsessiontokenrequirementgt"></a>&lt;sessionTokenRequirement&gt;
 에 대 한 구성을 제공 된 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 클래스나 파생된 클래스입니다.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/18/2017
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|토큰 처리기 컬렉션에 지정 된 보안 토큰 처리기를 추가합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">           

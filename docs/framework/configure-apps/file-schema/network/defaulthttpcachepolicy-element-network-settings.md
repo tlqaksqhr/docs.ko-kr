@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f2db2fd10ca20209c21c8add71d8ee4f26951ca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 048d9a373c77e530bd352b3caa0e122b3833a5c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; 요소 (네트워크 설정)
 HTTP 캐싱이 활성 인지 여부와 기본 캐싱 정책은 설명에 대해 설명 합니다.  
@@ -73,7 +74,7 @@ HTTP 캐싱이 활성 인지 여부와 기본 캐싱 정책은 설명에 대해 
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 6 시간, 2 일의 최대 사용 기간 및 최대 부실 시간의 부여한 지 4 시간 동안 최소 새로 고침 시간을 지정 하는 방법을 보여 줍니다.  
   
 ```xml  

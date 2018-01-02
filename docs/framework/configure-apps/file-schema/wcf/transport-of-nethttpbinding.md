@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3128ac2f36d778bc502fe56b776a15c51f1fda69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8fe84a5ceb8871d4dfd172cbe90dda01350da687
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;의 &lt;transport&gt;
 HTTP 전송의 인증 매개 변수를 제어하는 속성을 정의합니다.  
@@ -90,7 +91,7 @@ HTTP 전송의 인증 매개 변수를 제어하는 속성을 정의합니다.
 |-------------|-----------------|  
 |[\<보안 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|에 대 한 보안 기능을 정의 [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 기본 바인딩이 있는 SSL 전송 보안을 사용하는 방법을 보여 줍니다. 기본적으로 기본 바인딩은 HTTP 통신을 지원합니다.  
   
 ```xml
@@ -127,7 +128,7 @@ HTTP 전송의 인증 매개 변수를 제어하는 속성을 정의합니다.
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
  <xref:System.ServiceModel.HttpTransportSecurity>  
- [서비스 및 클라이언트 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

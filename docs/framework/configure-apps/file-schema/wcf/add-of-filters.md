@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff083cfbcdfa772bb5904f4311d95e399c22c97e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b1ca0d5ae73d01e5bbb719f7bcc9a3f5a19fc291
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt;의 &lt;add&gt;
 로깅할 메시지 종류를 지정하는 XPath 필터입니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/02/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|필터|XPath 1.0 식에서 정의하는 XML 문서에 대한 쿼리를 지정하는 문자열입니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>을 참조하십시오.|  
+|필터|XPath 1.0 식에서 정의하는 XML 문서에 대한 쿼리를 지정하는 문자열입니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/02/2017
   
  다음은 SOAP 헤더 섹션이 있는 메시지만 기록하는 필터 구성 방법에 대한 예제입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 SOAP 헤더 섹션이 있는 메시지만 기록하는 필터 구성 방법에 대한 예제입니다.  
   
 ```xml  

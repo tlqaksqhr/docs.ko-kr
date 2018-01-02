@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cca48cec486cfdbb9bca2eba48847c25c35abe9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7a997ddffa2267cdeb9e54bb98d4122db254104d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 검색 기능, 범위 및 해당 메타데이터에 대한 사용자 지정 확장명 등 끝점에 대한 다양한 검색 설정을 지정합니다.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/02/2017
   
  이 구성 요소에 따라 달라 집니다.는 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 검색 기능의 서비스 수준 제어를 제공 하는 요소입니다. 이 의미 하는 경우이 요소의 설정이 무시 됩니다 [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 구성에 나타나지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 구성 예제에서는 필터링 범위 및 끝점에 게시되는 확장명 메타데이터를 지정합니다.  
   
 ```xml  

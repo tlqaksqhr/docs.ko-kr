@@ -22,11 +22,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bfea438ec19303c35ad9d7a2816cb7b9473a00c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dffff7fefa80f420e61045b21b0e0c1a170e2911
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 요소
 
@@ -60,10 +61,10 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="remarks"></a>설명
 
-**\<linkedConfiguration >** 요소 구성 요소 어셈블리에 대 한 서비스를 단순화 합니다. 어셈블리를 사용 하는 응용 프로그램의 구성 파일 하나 이상의 응용 프로그램에서 잘 알려진 위치에 있는 구성 파일을 포함 하는 어셈블리를 사용 하는 경우 사용할 수는  **\<linkedConfiguration >** 직접 구성 정보를 포함 하는 것 보다는 어셈블리 구성 파일을 포함 하는 요소입니다. 구성 요소 어셈블리를 서비스를 제공 하는 경우 어셈블리를 사용 하는 모든 응용 프로그램에 업데이트 된 구성 정보를 제공 일반적인 구성 파일을 업데이트 합니다.
+ **\<linkedConfiguration >** 요소 구성 요소 어셈블리에 대 한 서비스를 단순화 합니다. 어셈블리를 사용 하는 응용 프로그램의 구성 파일 하나 이상의 응용 프로그램에서 잘 알려진 위치에 있는 구성 파일을 포함 하는 어셈블리를 사용 하는 경우 사용할 수는  **\<linkedConfiguration >** 직접 구성 정보를 포함 하는 것 보다는 어셈블리 구성 파일을 포함 하는 요소입니다. 구성 요소 어셈블리를 서비스를 제공 하는 경우 어셈블리를 사용 하는 모든 응용 프로그램에 업데이트 된 구성 정보를 제공 일반적인 구성 파일을 업데이트 합니다.
 
 > [!NOTE]
-> **\<linkedConfiguration >** Windows-side-by-side 매니페스트도 응용 프로그램에 대 한 요소가 지원 되지 않습니다.
+>  **\<linkedConfiguration >** Windows-side-by-side 매니페스트도 응용 프로그램에 대 한 요소가 지원 되지 않습니다.
 
 연결 된 구성 파일의 사용을 통제 하는 다음 규칙:
 
@@ -75,11 +76,11 @@ ms.lasthandoff: 10/18/2017
 
 - 모든 연결 된 구성 파일의 동작과 비슷하지만 한 파일로 병합 됩니다는 `#include` C/c + +에서 지시문입니다.
 
-- **\<linkedConfiguration >** 요소를 응용 프로그램 구성 파일에만 사용할 수 있습니다.;에서 무시 됩니다 *Machine.config*합니다.
+-  **\<linkedConfiguration >** 요소를 응용 프로그램 구성 파일에만 사용할 수 있습니다.;에서 무시 됩니다 *Machine.config*합니다.
 
 - 순환 참조를 감지 하 여 종료 합니다. 즉, 하는 경우는  **\<linkedConfiguration >** 루프를 형성 하는 일련의 구성 파일의 요소, 루프 감지 되 고 중지 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에는 로컬 하드 디스크에서 구성 파일을 포함 하는 방법을 보여 줍니다.
 

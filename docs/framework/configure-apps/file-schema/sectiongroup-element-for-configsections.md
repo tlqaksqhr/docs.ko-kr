@@ -12,11 +12,12 @@ ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5c5c040a322c38da319f2e964519f94d761327e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 654a6e639a24120e1e0c993ebe36f14e75b46a12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > 요소에 대 한 \<configSections >
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/18/2017
 
 선언 섹션 그룹 구성 섹션에 대 한 컨테이너 태그 만들고 다른 사용자에 의해 정의 된 구성 섹션 이름과 충돌 하지 없는지 확인 합니다. 중첩할 수  **\<sectionGroup >** 요소는 서로 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에는 섹션 그룹에 있는 섹션을 선언 하 고 섹션 그룹을 선언 하는 방법을 보여 줍니다.
 

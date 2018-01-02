@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e43e79416ddb8862cbc6e52d9d449a02b123af83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f388369d4dc2e590473ad98189ade70b77551b10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 토큰 재생 캐시는 서비스 또는 보안 토큰 처리기 컬렉션에 등록합니다.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>설명  
  토큰 재생 캐시가 재생 된 토큰을 검색 하는 데 사용 됩니다. 토큰 재생 검색으로 사용 되는 [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) 또한 토큰에 대 한 최대 만료 시간을 지정 하는 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 XML에서는 토큰 재생된 검색에 대 한 사용자 지정 캐시의 구성을 보여 줍니다.  
   
 ```xml  

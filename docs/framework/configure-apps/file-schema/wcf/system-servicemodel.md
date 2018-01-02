@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 16a3b9b361048344993fdc338544b6b0ceb95387
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 02bf740794b1551d3b130922939dbb27e572578e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
 이 구성 섹션에는 모든 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ServiceModel 구성 요소가 포함됩니다.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/02/2017
   
  바인딩은 `name` 및 `bindingConfiguration` 특성을 조합하여 끝점에 연결됩니다. `binding` 특성은 바인딩이 정의된 섹션을 정의합니다. `bindingConfiguration` 특성은 바인딩 섹션에서 사용되는 구성된 바인딩을 정의합니다. 바인딩 섹션에서는 여러 개의 구성된 바인딩을 정의할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 WCF 구성 파일의 예제입니다.  
   
 ```xml  

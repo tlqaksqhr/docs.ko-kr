@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d171c2058a79476d99c5952cc6a697f126af81c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 635270a6461b573663b7719843d81ff2b23e63dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt; 요소
 작업 예외가 처리되지 않으면 실행 중인 프로세스를 종료할지를 지정합니다.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
 -   DWORD 레지스트리 설정 하 여 ThrowUnobservedTaskExceptions 값 = 1에서 찾아를\\합니다. NETFramework 키입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 응용 프로그램 구성 파일을 사용 하 여 작업의 예외를 throw를 사용 하도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 작업에서 관찰 되지 않은 예외가 throw 됩니다는 방법을 보여 줍니다. 코드가 제대로 작동 하려면 릴리스된 프로그램으로 실행 되어야 합니다.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]

@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3b02f97caeef2a560682e5746c6c24986d5a3ad2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff5acf8edcda68979c04f5e62237464ee6f040a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;필터&gt; 요소에 대 한 &lt;추가&gt; 에 대 한 &lt;수신기&gt; 에 대 한 &lt;소스&gt;
 추적 소스의 `Listeners` 컬렉션에 있는 수신기에 필터를 추가합니다.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
  이 요소는 응용 프로그램 구성 파일 및 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는 `<filter>` 수신기에 필터를 추가 하는 요소 `console` 에 `Listeners` 추적 소스에 대 한 컬렉션 `myTraceSource`, 필터 이벤트 수준으로 지정 `Error`합니다.  
   
 ```xml  

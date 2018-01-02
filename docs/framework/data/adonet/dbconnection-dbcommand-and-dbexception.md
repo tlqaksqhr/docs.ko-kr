@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f6fb5783ad8d0863ffcce0665795081c6f2041d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 82d2dec81429da43bf19e8673b56658ee9f4a2d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection, DbCommand 및 DbException
 <xref:System.Data.Common.DbProviderFactory>와 <xref:System.Data.Common.DbConnection>을 만든 다음 명령과 데이터 판독기를 사용하여 데이터 소스에서 데이터를 검색할 수 있습니다.  
@@ -74,7 +75,7 @@ finally
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Dbproviderfactory 가져오기](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
+ [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactory 가져오기](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
  [DbDataAdapter로 데이터 수정](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

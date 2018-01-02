@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 0baafcb53bf79a25618dad56c2dcf1412e48624b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0000e92c89920b05e0ffc93fab58fb0bd6ea6b13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;추가&gt; 요소에 대 한 &lt;namedCaches&gt;
 추가 `namedCache` 항목에는 `namedCaches` 메모리 내 캐시에 대 한 컬렉션입니다.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>설명  
  `add` 에 항목을 추가 하는 요소는 `namedCaches` 메모리 내 캐시에 대 한 컬렉션입니다. 사용할 수는 [지우기](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) 요소를 사용 하기 전에 `add` 요소를 분명히 다른 수의 명명 된 캐시는 컬렉션입니다. 이 요소는 Web.config 파일 및 machine.config 파일에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 기본값에 대 한 설정을 정의 하는 방법을 보여 줍니다. `namedCache` 항목을는 `namedCaches` 메모리 내 캐시에 대 한 컬렉션입니다.  
   
 ```xml  

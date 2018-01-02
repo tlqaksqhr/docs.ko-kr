@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d558bf6ac71a3a19fb8c28989fd9262e7a13f0f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5c7997b3ffc1a1c3a16372398f43e8f0d06aadee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;진단&gt;
 `diagnostics` 요소는 관리자가 런타임 검사 및 제어에 사용할 수 있는 설정을 정의합니다.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>설명  
  `diagnostics` 섹션에서는 어셈블리에 있는 모든 서비스의 진단 설정을 정의합니다. 어셈블리에 서비스가 하나만 있는 경우가 아니라면 서비스 수준에서 별도의 진단 설정을 정의할 수 없습니다. 해당 섹션의 요구 사항에 따라 특성이 설정됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <diagnostics wmiProviderEnabled="false"  

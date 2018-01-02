@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7cd561cf0e0a9e080b150bdaa412686126423c91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6231f362a30f4766ccf5a43d33fa0dc7257ad57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt; 요소
 공용 언어 런타임에서 문자열에 대 한 해시 코드를 계산할지 여부를 결정 한 응용 프로그램 도메인 단위로.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
  문자열 조회는 해시 테이블에서 일반적으로 o (1) 연산입니다. 그러나 많은 수의 충돌이 발생 하는 경우 조회 될 수 있습니다는 O (n<sup>2</sup>) 작업입니다. 사용할 수는 `<UseRandomizedStringHashAlgorithm>` 다시 해시 코드 계산 되는 키 데이터 입력에 기반 하는 경우에 특히 잠재적 충돌 수를 제한 하는 응용 프로그램 도메인, 임의의 해시 알고리즘을 생성 하는 구성 요소 사용자가 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 정의 `DisplayString` 개인 문자열 상수를 포함 하는 클래스 `s`, 해당 값은 "는 문자열입니다." 또한 포함는 `ShowStringHashCode` 문자열 값 및 메서드가 실행 되는 응용 프로그램 도메인의 이름과 함께 해시 코드를 표시 하는 메서드입니다.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]

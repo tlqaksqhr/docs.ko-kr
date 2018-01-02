@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: df4e7325a42db733fd6a7f5fbc9fe29c2cda4bd1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 70119b3067342dc9bc93e0fb8a43a3242f2dacc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; 요소 (웹 설정)
 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 경우 프로세스 전체 동작을 관리 하려면 ASP.NET에서 사용 되는 구성 설정을 지정 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 또는 이후 버전입니다.  
@@ -73,7 +74,7 @@ ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 경우 프로�
   
  `requestQueueLimit` 동일한 방식으로 작동 하는 설정을 `requestQueueLimit` 특성에는 [processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) ASP.NET 응용 프로그램에 대 한 Web.config 파일에 설정 된 요소입니다. 그러나는 `requestQueueLimit` aspnet.config 파일의 설정 재정의 `requestQueueLimit` Web.config 파일에서 설정 합니다. 즉, 두 특성이 모두 설정 된 경우 (기본적으로 true 이면)는 `requestQueueLimit` aspnet.config 파일에서 설정이 우선 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에는 다음과 같은 경우 aspnet.config 파일에서 ASP.NET 프로세스 수준 동작을 구성 하는 방법을 보여 줍니다.  
   
 -   응용 프로그램에서 호스트 되는 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 응용 프로그램 풀.  

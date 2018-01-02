@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 158aad6a6a11bb889df74e1222a8881a1c38803f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5497156862859b2a797f27150362ed3a0498849a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclaimtyperequirementsgt-for-ltmessagegt"></a>&lt;message&gt;의 &lt;claimTypeRequirements&gt;
 필요한 클레임 형식의 컬렉션을 지정합니다.  

@@ -12,11 +12,12 @@ ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cb59120d88816ea193bd8588b152d6b848b682d2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cebb9ba7ebeb483233276324289a4ddc5a0bc381
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="appsettings-element-for-configuration"></a>\<g s > 요소에 대 한 \<구성 >
 
@@ -55,13 +56,13 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="remarks"></a>설명
 
-**\<g s >** 데이터베이스 연결 문자열, 파일 경로, XML 웹 서비스 Url에 대 한 사용자 지정 구성 정보 등의 사용자 지정 응용 프로그램 구성 정보를 저장 하는 요소는 응용 프로그램입니다. 에 지정 된 키/값 쌍의  **\<appSettings >** 요소가 사용 하 여 코드에 액세스 하는 <xref:System.Configuration.ConfigurationSettings> 클래스입니다.
+ **\<g s >** 데이터베이스 연결 문자열, 파일 경로, XML 웹 서비스 Url에 대 한 사용자 지정 구성 정보 등의 사용자 지정 응용 프로그램 구성 정보를 저장 하는 요소는 응용 프로그램입니다. 에 지정 된 키/값 쌍의  **\<appSettings >** 요소가 사용 하 여 코드에 액세스 하는 <xref:System.Configuration.ConfigurationSettings> 클래스입니다.
 
 사용할 수는 **파일** 특성에  **\<g s >** 의 요소는 *Web.config* 및 응용 프로그램 구성 파일입니다. 추가 설정을 제공 하거나에 지정 된 설정을 재정의 하는 구성 파일을 지정 하는이 특성은  **\<g s >** 요소입니다. **파일** 특성은 사용자가 응용 프로그램 구성 파일에 지정 된 프로젝트 설정을 재정의 하려는 경우 처럼 소스 제어 팀 개발 시나리오에서 사용할 수 있습니다.
 
 지정 된 구성 파일의 **파일** 특성의 루트 노드에 있어야 합니다.  **\<g s >** 대신  **\<구성 >**.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 사용자 지정 응용 프로그램 설정을 정의하는 외부 응용 프로그램 설정 파일(*custom.config*)을 보여 줍니다.
 

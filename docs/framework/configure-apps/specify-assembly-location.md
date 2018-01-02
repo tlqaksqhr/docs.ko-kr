@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f747d921e9c131edaa8a1749c5adc5eae14623c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5f79ed7af91f2e54edbc2174da2afa1b3cb56557
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-an-assembly39s-location"></a>어셈블리 &#39; 지정 s 위치
 두 가지 방법으로 어셈블리의 위치를 지정할 수 있습니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
- **버전** 특성이 모두 강력한 이름의 어셈블리에 대 한 필요 하나 강력한 이름이 아닌 어셈블리에 대 한 생략 해야 합니다. **\<s e >** 요소를 사용 하려면는 **href** 특성입니다. 에서는 버전 범위를 지정할 수 없습니다는  **\<s e >** 요소입니다.  
+ **버전** 특성이 모두 강력한 이름의 어셈블리에 대 한 필요 하나 강력한 이름이 아닌 어셈블리에 대 한 생략 해야 합니다.  **\<s e >** 요소를 사용 하려면는 **href** 특성입니다. 에서는 버전 범위를 지정할 수 없습니다는  **\<s e >** 요소입니다.  
   
 > [!NOTE]
 >  강력한 이름이 지정 되지 않은 어셈블리에 대 한 코드 베이스 힌트를 제공 하는 경우 힌트는 응용 프로그램 기준 위치 또는 응용 프로그램 기본 디렉터리의 하위 디렉터리를 가리켜야 합니다.  

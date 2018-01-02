@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e15d5ebca489be07311c5ae2ed7f4201705e352b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f0645509410d0f383caef1a0917138468dc2101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-objects"></a>개체 작업
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 사용하면 엔터티 형식의 인스턴스인 형식화된 CLR(공용 언어 런타임) 개체로 표현된 데이터를 쿼리, 삽입, 업데이트 및 삭제할 수 있습니다. 엔터티 형식은 개념적 모델에서 정의된 엔터티를 나타냅니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 개념적 모델에서 정의된 엔터티와 관계를 데이터 소스에 매핑합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 다음을 수행 하는 기능을 제공: 개체로 데이터 소스에서 반환 된 데이터를 구체화; 개체에 대 한 변경 내용을 추적; 동시성을 처리; 개체 변경 내용을 데이터 소스에 다시 전파 되 고 컨트롤에 개체 바인딩.  

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b46d12ecebae17b7cfe2168b6313be45ad5b04d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9776e900015dad8bce8c16991b8ce0aeb6067812
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;되어 supportPortability&gt; 요소
 응용 프로그램 이식성을 위해 어셈블리를 동일하게 간주하는 기본 동작을 사용하지 않도록 설정함으로써, 응용 프로그램이 .NET Framework의 서로 다른 두 구현에서 같은 어셈블리를 참조할 수 있도록 지정합니다.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]
 >  정보를 전달 하는 공용 언어 런타임의 어셈블리 바인딩 논리를 컴파일러에 대 한 순서를 사용 해야 하는 `/appconfig` 컴파일러 옵션을이 요소를 포함 하는 app.config 파일의 위치를 지정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 응용 프로그램을.NET Framework 구현은 두 구현 모두에 존재 하는.NET Framework 어셈블리의 Silverlight 구현에 대 한.NET Framework에 대 한 참조가 있습니다. `/appconfig` 이 app.config 파일의 위치를 지정 컴파일러 옵션을 사용 해야 합니다.  
   
 ```xml  

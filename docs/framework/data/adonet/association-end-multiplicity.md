@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3d6071b2dfab4a1f057c9e04b84e1163fb0a53c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d66c141b83402b011fdebbb04c0b2a9adc5ec29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="association-end-multiplicity"></a>연결 End 복합성
 *연결 end 복합성* 수를 정의 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 의 한쪽 end에 있을 수 있는 인스턴스는 [연결](../../../../docs/framework/data/adonet/association-type.md)합니다.  

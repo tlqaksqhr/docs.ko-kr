@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a6eb2b152f2ab11bbe0e08ff1ad22f94d45057e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab66252ebc5b87c197b3e4ac7b6def9355e5f201
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemruntimeserializationgt"></a>&lt;system.runtime.serialization&gt;
 <xref:System.Runtime.Serialization> 네임스페이스 섹션의 루트 요소를 나타내며 <xref:System.Runtime.Serialization.DataContractSerializer>의 옵션을 설정하기 위한 요소를 포함합니다.  
@@ -64,4 +65,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.Serialization>  
  [데이터 계약 사용](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [데이터 계약 알려진된 형식](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [데이터 계약 알려진 형식](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

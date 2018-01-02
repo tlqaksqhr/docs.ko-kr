@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cbe5eda4487d8cbde671dd427bdfc90431d0599
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13ae0e8cc59adec0b4e4bd9f2cf4c7ea31811602
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltstategt-of-ltstatesgt"></a>&lt;states&gt;의 &lt;state&gt;
 추적 레코드를 내보내야 할 구독된 활동의 상태를 포함하는 구성 요소입니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3803d550fe345c6f485dd204cc119f8a927a3501
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet>은 테이블 컬렉션, 관계 및 제약 조건으로 구성되어 있습니다. Ado.net에서는 <xref:System.Data.DataTable> 개체의 테이블을 표시 하는 데 사용 됩니다는 **DataSet**합니다. A **DataTable** 하나의 테이블을 메모리 내 관계형 데이터를 나타내며 데이터에 로컬인는 합니다. .NET 기반 응용 프로그램은 상주 하지만 Microsoft SQL Server를 사용 하 여 같은 데이터 원본에서 채울 수 있습니다는 **DataAdapter** 자세한 내용은 참조 [DataAdapter에서 DataSet 채우기](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
   
  테이블에서 하나 이상의 관련 열을 사용하면 테이블 간에 부모-자식 관계를 만들 수 있습니다. 간의 관계를 만들면 **DataTable** 를 사용 하 여 개체는 <xref:System.Data.DataRelation>합니다. **DataRelation** 개체는 특정 행의 관련된 자식 또는 부모 행을 반환 하려면 사용할 수 있습니다. 자세한 내용은 참조 [Datarelation 추가](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DataTable 만들기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  만드는 방법을 설명는 **DataTable** 에 추가 하는 **DataSet**합니다.  
   

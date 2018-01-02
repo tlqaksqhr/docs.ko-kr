@@ -16,16 +16,17 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e551a09ef6dc778f5dfab9ba8cf263f803556f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0eb38eb764faa51524565e57826db17311fc5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-events"></a>연결 이벤트
 모든.NET Framework 데이터 공급자가 **연결** 데이터 원본에서 정보 메시지를 검색 하거나 여부를 확인 하려면 사용할 수 있는 두 개의 이벤트를 사용 하 여 개체의 상태는 **연결** 했습니다 읽기 전용 이므로 다음 표에서 설명의 이벤트는 **연결** 개체입니다.  
   
-|이벤트|설명|  
+|이벤트(event)|설명|  
 |-----------|-----------------|  
 |**InfoMessage**|정보 메시지가 데이터 소스에서 반환될 때 발생합니다. 정보 메시지는 예외가 throw되지 않는 데이터 소스의 메시지입니다.|  
 |**StateChange**|발생 경우의 상태는 **연결** 변경 합니다.|  

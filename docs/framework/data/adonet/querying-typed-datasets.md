@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd78b4f47d7f48d7b4cbacdf53140758a05b7869
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c232ca2888c957bea33d06c84a62b00fdc7fd80c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-typed-datasets"></a>형식화된 데이터 집합 쿼리
 응용 프로그램 디자인 타임에 <xref:System.Data.DataSet>의 스키마를 알고 있는 경우 <xref:System.Data.DataSet>을 사용할 때 형식화된 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]을 사용하는 것이 좋습니다. 형식화된 <xref:System.Data.DataSet>은 <xref:System.Data.DataSet>에서 파생된 클래스입니다. 따라서 <xref:System.Data.DataSet>의 모든 메서드, 이벤트 및 속성이 상속됩니다. 또한 형식화된 <xref:System.Data.DataSet>에서는 강력한 형식의 메서드, 이벤트 및 속성을 제공합니다. 즉, 컬렉션 기반의 메서드 대신 이름을 사용하여 테이블과 열에 액세스할 수 있습니다. 이렇게 하면 간단하고 이해하기 쉬운 쿼리를 만들 수 있습니다. 자세한 내용은 참조 [형식화 된 데이터 집합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)합니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
  형식화된 <xref:System.Data.DataSet>을 쿼리하려면 먼저 [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]에서 데이터 집합 디자이너를 사용하여 클래스를 생성해야 합니다.  자세한 내용은 [데이터 집합 만들기 및 구성](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 형식화된 <xref:System.Data.DataSet>에 대한 쿼리를 보여 줍니다.  
   
 ```csharp  

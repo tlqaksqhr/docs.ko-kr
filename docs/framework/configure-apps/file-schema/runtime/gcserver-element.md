@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 54142a75d178eb1c12e4b182df1dab9bff957ec6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 207aeb1f9faf9be6ac547d8dd8acc80e8a4cb42f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt; 요소
 공용 언어 런타임이 서버 가비지 컬렉션을 실행하는지 여부를 지정합니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  .NET Framework 4 및 이전 버전에서, 서버 가비지 수집이 사용되는 경우에는 동시 가비지 수집을 사용할 수 없습니다. [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]부터 서버 가비지 수집이 동시에 이루어집니다. 비 동시 가비지 수집을 사용 하려면 설정는 `<gcServer>` 요소를 `true` 및 [ \<gcConcurrent > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 를 `false`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 서버 가비지 컬렉션을 사용하도록 설정합니다.  
   
 ```xml  

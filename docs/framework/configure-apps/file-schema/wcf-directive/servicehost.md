@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7a0b077fb50149ad60034607eec413e774ee6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 027debb311a3f9547623b6dff778e82b7e475327
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicehost"></a>@ServiceHost
 서비스 호스트를 생성하는 데 사용되는 팩토리를 호스트할 서비스 및 .svc 파일에 제공된 호스팅 코드에 액세스하거나 이를 컴파일하는 데 필요한 다른 프로그래밍 요소에 연결합니다.  
@@ -65,7 +66,7 @@ CodeBehind = "CodeBehind"%>
   
  예를 들어, AJAX 사용 끝점을 사용할 수 있도록 `MyService`, 지정는 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 의 값에 대 한는 `Factory` 특성 기본값 대신 <xref:System.ServiceModel.Activation.ServiceHostFactory>에 [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 으로 지시문 다음 예제에 나와 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 <% @ServiceHost   

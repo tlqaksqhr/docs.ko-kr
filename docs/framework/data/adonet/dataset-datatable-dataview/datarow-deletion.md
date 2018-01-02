@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f9eb89d711cbf66f3b6816e597c14359be1f3639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7f20fdebe101665e681597db0c55b7ced7853f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datarow-deletion"></a>DataRow 삭제
 두 가지가 삭제 하는 데 사용할 수는 <xref:System.Data.DataRow> 에서 개체는 <xref:System.Data.DataTable> 개체:는 **제거** 의 메서드는 <xref:System.Data.DataRowCollection> 개체 및 <xref:System.Data.DataRow.Delete%2A> 의 메서드는 **DataRow**개체입니다. 반면는 <xref:System.Data.DataRowCollection.Remove%2A> 메서드 삭제는 **DataRow** 에서 **DataRowCollection**, <xref:System.Data.DataRow.Delete%2A> 메서드는 삭제할 행을 표시만 합니다. 응용 프로그램 호출 때 실제 제거는 **AcceptChanges** 메서드. <xref:System.Data.DataRow.Delete%2A>를 사용하면 행을 실제로 삭제하기 전에 삭제 표시된 행을 프로그래밍 방식으로 확인할 수 있습니다. 삭제 표시된 행의 <xref:System.Data.DataRow.RowState%2A> 속성은 <xref:System.Data.DataRow.Delete%2A>로 설정됩니다.  

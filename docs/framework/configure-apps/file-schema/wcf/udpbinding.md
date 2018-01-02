@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26ed0c9dd2c895d4a01536a5715c6235ff65df7b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f43462ac42c59407ae90f2d342a445a688e1b26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 <xref:System.ServiceModel.UdpBinding> 바인딩을 구성하는 데 사용되는 구성 요소입니다.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>설명  
  UdpBinding을 사용하면 WCF 서비스가 UDP 전송을 통해 통신할 수 있습니다. 여기서는 클라이언트는 서비스에 메시지를 보냅니다 응답을 기대 하지 다시 "fire and forget" 메시지 교환에 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <<xref:System.ServiceModel.UdpBinding>> 요소를 사용하여 `udpBinding`을 구성하는 방법을 보여 줍니다.  
   
 ```xml  

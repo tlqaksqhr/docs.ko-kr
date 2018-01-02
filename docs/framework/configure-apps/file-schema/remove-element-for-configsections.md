@@ -12,11 +12,12 @@ ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e6dfd1ac56070f55f30bd4bd093e1185486da295
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bf2cb49fbeb01ad176a1d24d711cebc97ba14004
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remove-element-for-configsections"></a>\<제거 > 요소에 대 한 \<configSections >
 
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/18/2017
 
 사용할 수는  **\<제거 >** 구성 파일 계층 구조에서 더 높은 수준에서 정의 된 응용 프로그램에서 섹션 및 섹션 그룹을 제거할 요소입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 사용 하는 방법을 보여 주는 다음 예제는  **\<제거 >** 컴퓨터 구성 파일에 이전에 정의 된 섹션을 제거할 응용 프로그램 구성 파일의 요소입니다.
 

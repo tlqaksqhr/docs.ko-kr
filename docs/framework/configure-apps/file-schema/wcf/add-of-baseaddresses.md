@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf417653652c2a0f28fe5c6491a7da9949678140
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 516c615248c95ef3107664b996f457fb80b46373
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltbaseaddressesgt"></a>&lt;baseAddresses&gt;의 &lt;add&gt;
 서비스 호스트에서 사용하는 기본 주소를 지정하는 구성 요소를 나타냅니다.  

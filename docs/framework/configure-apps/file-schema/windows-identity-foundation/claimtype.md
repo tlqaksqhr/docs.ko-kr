@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c4ee8833578b082f25c427b13d77072d1954197f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ae572ff3a8a2335a4259bdce2af5f6922fb0596f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclaimtypegt"></a>&lt;claimType&gt;
 들어오는 보안 토큰에 대 한 단일 옵션 또는 필요한 클레임을 지정합니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|type|클레임 형식입니다. 일반적으로 URI입니다. 필수 요소.|  
+|type|클레임 형식입니다. 일반적으로 URI입니다. 필수.|  
 |선택적|클레임 유형 선택 사항 인지를 지정 하는 부울 값입니다. 선택 사항입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f15466e5ae0421f400d80f66370cb60f75c83990
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae6fb19fe956d819337c7c06a0c5b58ac70c8327
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemservicemodelactivationgt"></a>&lt;system.serviceModel.activation&gt;
 이 구성 섹션은 SMSvcHost.exe 도구에 대한 구성 설정을 나타냅니다. 해당 구성 요소는 SMSvcHost.exe.config 파일에서 구성할 수 있습니다. 특히 여기에는 구성해야 하는 모든 시스템 수준의 설정이 포함됩니다.  

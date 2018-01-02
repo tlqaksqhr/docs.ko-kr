@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7446c43deff85e1a15288c0c847c9e3646870b72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="redirecting-assembly-versions"></a>어셈블리 버전 리디렉션
 .NET Framework 어셈블리, 타사 어셈블리 또는 고유의 앱 어셈블리로 컴파일 타임 바인딩 참조를 리디렉션할 수 있습니다. 게시자 정책, 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일 등을 통한 다양한 방법으로 여러 버전의 어셈블리를 사용하도록 응용 프로그램을 리디렉션할 수 있습니다. 이 문서에서는 .NET Framework에서 어셈블리 바인딩의 작동 방식과 구성 방법에 대해 설명합니다.  

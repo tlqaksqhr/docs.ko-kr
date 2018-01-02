@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fefbd3894063c0298a7ad5110ed6867408869107
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b29caeed4bf60a5a7ad723ffd46520a89a5bd87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="null-comparisons"></a>null 비교
 데이터 소스의 `null` 값은 값을 알 수 없음을 나타냅니다. [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서는 특정 계산이나 비교가 유효한 데이터 또는 Null이 아닌 데이터를 가진 행에서만 수행되도록 Null 값을 확인할 수 있습니다. 그러나 CLR Null 의미 체계는 데이터 소스의 Null 의미 체계와 다를 수 있습니다. 대부분의 데이터베이스는 세 개의 값으로 구성된 논리 버전을 사용하여 Null 비교를 처리합니다. 즉, Null 값에 대한 비교는 `true` 또는 `false`가 되지 않고 `unknown`이 됩니다. ANSI Null은 이렇게 구현되는 경우가 많지만 항상 그런 것은 아닙니다.  
@@ -57,4 +58,4 @@ WHERE h.ShipDate IS Null
  [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]지 원하는 컬렉션을 전달 하면 `IQueryable` 데이터베이스에서 집계 함수에 집계 작업이 수행 됩니다. 메모리에 수행된 된 쿼리의와 데이터베이스에서 수행 된 쿼리의 결과에 차이점이 있을 수 있습니다. 메모리 내 쿼리의 경우와 일치 하지 않는 경우 쿼리가 0을 반환 합니다. 데이터베이스에서 동일한 쿼리가 `null`을 반환합니다. 경우는 `null` 값이 LINQ 집계 함수로 전달 되는, 예외가 throw 됩니다. 허용 가능한 하도록 `null` 유형과 null 허용 형식으로 쿼리 결과 수신 하는 형식의 속성 값을 캐스팅 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [LINQ to Entities 쿼리 식](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+ [LINQ to Entities 쿼리의 식](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

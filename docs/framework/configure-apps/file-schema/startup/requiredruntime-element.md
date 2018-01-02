@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 633769573253d7516bc50f0210c30376e6aa230a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 12be2350cb123407b2f71d1f5f07e836ccddb9c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; 요소
 응용 프로그램에서 1.0 버전의 공용 언어 런타임만 지원하도록 지정합니다. 이 요소는 사용 되지 않으며 더 이상 사용 되지 않음을. [ `supportedRuntime` ](supportedruntime-element.md) 요소를 대신 사용 해야 합니다.
@@ -79,7 +80,7 @@ safemode="true|false"/>
 > [!NOTE]
 >  Microsoft Internet Explorer에서 호스팅되는 응용 프로그램에 대 한 시작 코드는 무시는 `<requiredRuntime>` 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 파일에서 런타임 버전을 지정 하는 방법을 보여 줍니다.  
   
 ```xml  

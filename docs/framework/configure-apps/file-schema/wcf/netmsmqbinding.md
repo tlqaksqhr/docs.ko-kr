@@ -13,11 +13,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74850690d6680ede24d880b846a75ef9464dcc2b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9f0c8f0d2f9ed2471fab2eda17c7d9f9be5b77c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 시스템 간 통신에 적합한 대기 중인 바인딩을 정의합니다.  
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>설명  
  `netMsmqBinding` 바인딩은 MSMQ(Microsoft Message Queuing)를 전송으로 활용하면서 큐에 대한 지원을 제공하며, 느슨하게 결합된 응용 프로그램, 실패 격리, 로드 조정 및 연결이 끊긴 작업을 지원할 수 있도록 합니다. 이러한 기능의 논의 알려면 [WCF의 큐](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <configuration>  

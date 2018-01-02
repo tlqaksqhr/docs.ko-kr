@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e3d5edc4f469b59ff787e500ad447fe0076c332c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ede928352c9e0f02f6ad4c27ce8f5347b868986
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typed-datasets"></a>형식화된 데이터 집합
 <xref:System.Data.DataSet>에서는 약한 형식의 변수를 통해 런타임에 바인딩하여 값에 액세스할 수도 있고 강력한 형식의 메타포를 통해 데이터에 액세스할 수도 있습니다. 테이블 및 열에 속하는 **DataSet** 알기 쉬운 이름을 사용 하 여 액세스할 수 있으며 강력한 형식의 변수입니다.  
@@ -26,11 +27,11 @@ ms.lasthandoff: 11/21/2017
   
  또한 강력한 형식의 **DataSet** 컴파일 타임에 올바른 형식으로 값에 대 한 액세스를 제공 합니다. 강력한 형식의 **DataSet**, 코드 실행 시간 보다는 컴파일된은 때 형식 불일치 오류가 발생 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [강력한 형식의 데이터 집합 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  만들고 강력한 형식의 사용 하는 방법에 설명 **DataSet**합니다.  
   
- [형식화 된 데이터 집합에 주석 지정](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
+ [형식화된 데이터 집합에 주석 지정](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  강력한 형식의 생성 하는 데 XML 스키마 정의 언어 (XSD) 스키마에 주석을 추가 하는 방법을 설명 **데이터 집합**, 부여할 **데이터 집합** 기본 스키마를 변경 하지 않고 요소 이름입니다.  
   
 ## <a name="see-also"></a>참고 항목  

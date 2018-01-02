@@ -15,11 +15,12 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5c38dc87d6015f0c814ea319c9353ea757478b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; 요소
 응용 프로그램이 지원하는 공용 언어 런타임 버전을 지정합니다. 이 요소는 .NET Framework 1.1 이상 버전으로 작성된 모든 응용 프로그램에서 사용되어야 합니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>설명  
 경우는  **\<supportedRuntime >** 요소가 응용 프로그램 구성 파일에 없다면, 응용 프로그램을 작성 하는 데 런타임 버전이 사용 됩니다.  
 
-**\<supportedRuntime >** 요소는 버전 1.1 이상 런타임에 사용 하 여 빌드된 모든 응용 프로그램에서 사용 되어야 합니다. 런타임 버전 1.0만 지원 하도록 작성 된 응용 프로그램을 사용 해야 합니다는 [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) 요소입니다.  
+ **\<supportedRuntime >** 요소는 버전 1.1 이상 런타임에 사용 하 여 빌드된 모든 응용 프로그램에서 사용 되어야 합니다. 런타임 버전 1.0만 지원 하도록 작성 된 응용 프로그램을 사용 해야 합니다는 [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) 요소입니다.  
   
 > [!NOTE]
 >  사용 하는 경우는 [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) 구성 파일을 지정 하려면 함수를 사용 해야 합니다는 `<requiredRuntime>` 모든 버전의 런타임에 대 한 요소입니다. `<supportedRuntime>` 사용할 때 요소는 무시 됩니다 [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)합니다.  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/21/2017
 |4.7|". NETFramework, Version = v4.7 "|
 |4.7.1|". NETFramework, Version = 4.7.1"|
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 파일에 지원되는 런타임 버전을 지정하는 방법을 보여줍니다. 구성 파일은 응용 프로그램에.NET Framework 4.7 대상으로 지정 함을 나타냅니다.  
   
 ```xml  

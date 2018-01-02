@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 60c7e53c11a23b242e71fdb3e0b7597ae9fbda18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a968d2d1abf6e77cddd9d0a0367822ee4f9723ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; 요소
 각 어셈블리에 대한 바인딩 정책 및 어셈블리 위치를 캡슐화합니다. 하나를 사용 하 여 `dependentAssembly` 각 어셈블리에 대 한 요소입니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 |`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 명의 어셈블리에 대 한 어셈블리 정보를 캡슐화 하는 방법을 보여 줍니다.  
   
 ```xml  

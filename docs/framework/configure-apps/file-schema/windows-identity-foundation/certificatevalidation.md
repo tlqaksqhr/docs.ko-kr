@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 778088f2e0508f5a80c29ae027b2442a80286795
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a5d31bce5f71e644b40b3aa7e7c0c1c8790cab6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
 토큰 처리기 인증서의 유효성을 검사 하기 위해 사용 하는 설정을 제어 합니다. 특정 처리기 자체적인 검사기로 구성 된 경우이 설정은 무시 됩니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>설명  
  A `<certificateValidation>` 에서 서비스 수준에서 요소를 지정할 수 있습니다는 `<identityConfiguration>` 요소 또는 보안 토큰 처리기 컬렉션 수준 아래에 `<securityTokenHandlerConfiguration>` 요소입니다. 서비스에 지정 된 토큰 처리기 컬렉션에 대 한 설정을 재정의 합니다. 일부 토큰 처리기에는 구성에서 인증서 유효성 검사 설정을 지정할 수 있습니다. 서비스 수준에서 및 보안 토큰 처리기 컬렉션에 개별 토큰 처리기의 설정을 지정 된 재정의합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```xml  
 <certificateValidation certificateValidationMode="PeerOrChainTrust"  

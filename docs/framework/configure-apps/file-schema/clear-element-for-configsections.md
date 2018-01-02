@@ -12,11 +12,12 @@ ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 70fc73c9e97274ac1165950038ee509fa8f2f9c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e48887cf7e227f463b92edd50f69746bbd8abd0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clear-element-for-configsections"></a>\<지우기 > 요소에 대 한 \<configSections >
 
@@ -50,9 +51,9 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="remarks"></a>설명
 
-**\<지우기 >** 요소 또는 구성 파일 계층 구조에서 더 높은 수준에서 현재 구성 파일에서 이전 정의 된 응용 프로그램에서 모든 섹션 및 섹션 그룹을 제거 합니다.
+ **\<지우기 >** 요소 또는 구성 파일 계층 구조에서 더 높은 수준에서 현재 구성 파일에서 이전 정의 된 응용 프로그램에서 모든 섹션 및 섹션 그룹을 제거 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일을 정의 하 고 사용 하는 방법을 보여 줍니다.는  **\<지우기 >** 에 이전에 정의 된 섹션을 정리 하는 응용 프로그램 구성 파일의 요소는 컴퓨터 구성 파일입니다.
 

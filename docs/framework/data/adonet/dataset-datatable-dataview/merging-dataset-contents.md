@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5f45addd61f275a0bba4b61552bb629bfc6ee7df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44d171cab4099436d7daea26def831f149b75b13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merging-dataset-contents"></a>데이터 집합 콘텐츠 병합
 <xref:System.Data.DataSet.Merge%2A> 메서드를 사용하여 <xref:System.Data.DataSet>, <xref:System.Data.DataTable> 또는 <xref:System.Data.DataRow> 배열의 내용을 기존 `DataSet`으로 병합할 수 있습니다. 새 데이터가 기존 `DataSet`으로 병합되는 방법은 몇 가지 요소 및 옵션에 따라 달라집니다.  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [Dataadapter 및 Datareader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapter 및 DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [ADO.NET에서 데이터 검색 및 수정](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Id 또는 일련 번호 값 검색](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ [ID 또는 일련 번호 값 검색](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

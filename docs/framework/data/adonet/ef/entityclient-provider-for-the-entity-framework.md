@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: eb6d8d4db676502b8c363a7d45407384333b3f22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1adaa5b116c579a6d74a950efbe3fc8c428c0ee3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework용 EntityClient 공급자
 EntityClient 공급자는 Entity Framework 응용 프로그램에서 개념적 모델에 설명된 데이터에 액세스하는 데 사용하는 데이터 공급자입니다. 개념적 모델에 대 한 정보를 참조 하십시오. [모델링 및 매핑](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)합니다. EntityClient는 다른 .NET Framework 데이터 공급자를 사용하여 데이터 소스에 액세스합니다. 예를 들어, EntityClient는 SQL Server 데이터베이스에 액세스할 때 .NET Framework Data Provider for SQL Server(SqlClient)를 사용합니다. SqlClient 공급자에 대 한 정보를 참조 하십시오. [Entity Framework 용 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)합니다. EntityClient 공급자는 <xref:System.Data.EntityClient> 네임스페이스에 구현되어 있습니다.  
@@ -52,26 +53,26 @@ EntityClient 공급자는 Entity Framework 응용 프로그램에서 개념적 �
   
  즉, 개념적 모델을 통해 노출 되는 데이터를 업데이트 하려면 참조 [하는 방법: Entity Framework에서 트랜잭션을 관리할](http://msdn.microsoft.com/en-us/4a55eb7f-f826-4a48-9df1-aebe2352ebef)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: EntityConnection 연결 문자열 작성](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
- [방법: PrimitiveType 결과 반환 하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [방법: PrimitiveType 결과를 반환하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [방법: StructuralType 결과를 반환하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
- [방법: RefType 결과 반환 하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
+ [방법: RefType 결과를 반환하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
   
- [방법: 복합 형식을 반환 하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
+ [방법: 복합 형식을 반환하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
   
- [방법: 중첩된 컬렉션을 반환 하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
+ [방법: 중첩된 컬렉션을 반환하는 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [방법: EntityCommand를 사용 하 여 매개 변수가 있는 Entity SQL 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [방법: EntityCommand를 사용하여 매개 변수가 있는 Entity SQL 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [방법: EntityCommand를 사용 하 여 매개 변수가 있는 저장된 프로시저 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [방법: EntityCommand를 사용하여 매개 변수가 있는 저장 프로시저 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
  [방법: 다형 쿼리 실행](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
- [방법:와 관계를 탐색는 연산자를 이동 합니다.](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
+ [방법: Navigate 연산자로 관계 탐색](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [연결 및 트랜잭션 관리](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
