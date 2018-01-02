@@ -13,20 +13,21 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a636fbe7457ab6f50909009cf89da59b29842039
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1018456dbfa83961e11c1f684e2c7c5c793cfc1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="other-canonical-functions"></a><span data-ttu-id="90bd4-102">기타 정식 함수</span><span class="sxs-lookup"><span data-stu-id="90bd4-102">Other Canonical Functions</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="90bd4-103">에는 비트, 집계, 수치, 날짜/시간, 문자열 등으로 분류되지 않는 정식 함수가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="90bd4-103"> includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.</span></span>  
+# <a name="other-canonical-functions"></a><span data-ttu-id="26872-102">기타 정식 함수</span><span class="sxs-lookup"><span data-stu-id="26872-102">Other Canonical Functions</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="26872-103">에는 비트, 집계, 수치, 날짜/시간, 문자열 등으로 분류되지 않는 정식 함수가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="26872-103"> includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.</span></span>  
   
- <span data-ttu-id="90bd4-104">다음 표에서는 기타 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="90bd4-104">The following table shows the other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+ <span data-ttu-id="26872-104">다음 표에서는 기타 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="26872-104">The following table shows the other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
-|<span data-ttu-id="90bd4-105">함수</span><span class="sxs-lookup"><span data-stu-id="90bd4-105">Function</span></span>|<span data-ttu-id="90bd4-106">설명</span><span class="sxs-lookup"><span data-stu-id="90bd4-106">Description</span></span>|  
+|<span data-ttu-id="26872-105">함수</span><span class="sxs-lookup"><span data-stu-id="26872-105">Function</span></span>|<span data-ttu-id="26872-106">설명</span><span class="sxs-lookup"><span data-stu-id="26872-106">Description</span></span>|  
 |--------------|-----------------|  
-|`NewGuid()`|<span data-ttu-id="90bd4-107">새 GUID를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="90bd4-107">Returns a new GUID.</span></span><br /><br /> <span data-ttu-id="90bd4-108">**예제**</span><span class="sxs-lookup"><span data-stu-id="90bd4-108">**Example**</span></span><br /><br /> `NewGuid()`|  
+|`NewGuid()`|<span data-ttu-id="26872-107">새 GUID를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="26872-107">Returns a new GUID.</span></span><br /><br /> <span data-ttu-id="26872-108">**예제**</span><span class="sxs-lookup"><span data-stu-id="26872-108">**Example**</span></span><br /><br /> `NewGuid()`|  
   
-## <a name="see-also"></a><span data-ttu-id="90bd4-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="90bd4-109">See Also</span></span>  
- [<span data-ttu-id="90bd4-110">정식 함수</span><span class="sxs-lookup"><span data-stu-id="90bd4-110">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a><span data-ttu-id="26872-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="26872-109">See Also</span></span>  
+ [<span data-ttu-id="26872-110">정식 함수</span><span class="sxs-lookup"><span data-stu-id="26872-110">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

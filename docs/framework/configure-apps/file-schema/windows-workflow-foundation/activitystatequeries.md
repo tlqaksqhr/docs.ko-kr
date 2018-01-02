@@ -12,24 +12,25 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 175089dad7809e412444681076163163bd6831e7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56845a0f596ca83f1abb31e481e38ccc3f808580
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltactivitystatequeriesgt"></a><span data-ttu-id="73e24-102">&lt;activityStateQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="73e24-102">&lt;activityStateQueries&gt;</span></span>
-<span data-ttu-id="73e24-103">워크플로 인스턴스를 구성하는 활동의 수명 주기 변경 내용을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="73e24-103">Represents a collection of queries that are used to track life cycle changes of the activities that make up a workflow instance.</span></span> <span data-ttu-id="73e24-104">예를 들어 다음 워크플로 인스턴스 내에서 "전자 메일 보내기" 활동이 완료 될 때마다 추적 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="73e24-104">For example, you may want to keep track of every time the "Send E-Mail" activity completes within a workflow instance.</span></span> <span data-ttu-id="73e24-105">추적 참가자가 활동 상태 레코드 개체를 구독하려면 이 쿼리가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="73e24-105">This query is necessary for a tracking participant to subscribe to activity state record objects.</span></span> <span data-ttu-id="73e24-106">구독하기 위해 사용 가능한 상태는 ActivityStates에서 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="73e24-106">The available states to subscribe to are specified in ActivityStates.</span></span>  
+# <a name="ltactivitystatequeriesgt"></a><span data-ttu-id="54889-102">&lt;activityStateQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="54889-102">&lt;activityStateQueries&gt;</span></span>
+<span data-ttu-id="54889-103">워크플로 인스턴스를 구성하는 활동의 수명 주기 변경 내용을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="54889-103">Represents a collection of queries that are used to track life cycle changes of the activities that make up a workflow instance.</span></span> <span data-ttu-id="54889-104">예를 들어 다음 워크플로 인스턴스 내에서 "전자 메일 보내기" 활동이 완료 될 때마다 추적 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="54889-104">For example, you may want to keep track of every time the "Send E-Mail" activity completes within a workflow instance.</span></span> <span data-ttu-id="54889-105">추적 참가자가 활동 상태 레코드 개체를 구독하려면 이 쿼리가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="54889-105">This query is necessary for a tracking participant to subscribe to activity state record objects.</span></span> <span data-ttu-id="54889-106">구독하기 위해 사용 가능한 상태는 ActivityStates에서 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="54889-106">The available states to subscribe to are specified in ActivityStates.</span></span>  
   
- <span data-ttu-id="73e24-107">추적 프로필 쿼리에 대 한 자세한 내용은 참조 하십시오. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="73e24-107">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="54889-107">추적 프로필 쿼리에 대 한 자세한 내용은 참조 하십시오. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="54889-107">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-<span data-ttu-id="73e24-108">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="73e24-108">\<system.serviceModel></span></span>  
-<span data-ttu-id="73e24-109">\<추적 ></span><span class="sxs-lookup"><span data-stu-id="73e24-109">\<tracking></span></span>  
-<span data-ttu-id="73e24-110">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="73e24-110">\<trackingProfile></span></span>  
-<span data-ttu-id="73e24-111">\<워크플로 ></span><span class="sxs-lookup"><span data-stu-id="73e24-111">\<workflow></span></span>  
-<span data-ttu-id="73e24-112">\<activityStateQueries ></span><span class="sxs-lookup"><span data-stu-id="73e24-112">\<activityStateQueries></span></span>  
+<span data-ttu-id="54889-108">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="54889-108">\<system.serviceModel></span></span>  
+<span data-ttu-id="54889-109">\<추적 ></span><span class="sxs-lookup"><span data-stu-id="54889-109">\<tracking></span></span>  
+<span data-ttu-id="54889-110">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="54889-110">\<trackingProfile></span></span>  
+<span data-ttu-id="54889-111">\<워크플로 ></span><span class="sxs-lookup"><span data-stu-id="54889-111">\<workflow></span></span>  
+<span data-ttu-id="54889-112">\<activityStateQueries ></span><span class="sxs-lookup"><span data-stu-id="54889-112">\<activityStateQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73e24-113">구문</span><span class="sxs-lookup"><span data-stu-id="73e24-113">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54889-113">구문</span><span class="sxs-lookup"><span data-stu-id="54889-113">Syntax</span></span>  
   
 ```xml
 <tracking>
@@ -52,26 +53,26 @@ ms.lasthandoff: 12/02/2017
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="73e24-114">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="73e24-114">Attributes and Elements</span></span>  
- <span data-ttu-id="73e24-115">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="73e24-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="54889-114">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="54889-114">Attributes and Elements</span></span>  
+ <span data-ttu-id="54889-115">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="54889-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="73e24-116">특성</span><span class="sxs-lookup"><span data-stu-id="73e24-116">Attributes</span></span>  
- <span data-ttu-id="73e24-117">없음</span><span class="sxs-lookup"><span data-stu-id="73e24-117">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="54889-116">특성</span><span class="sxs-lookup"><span data-stu-id="54889-116">Attributes</span></span>  
+ <span data-ttu-id="54889-117">없음</span><span class="sxs-lookup"><span data-stu-id="54889-117">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="73e24-118">자식 요소</span><span class="sxs-lookup"><span data-stu-id="73e24-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="54889-118">자식 요소</span><span class="sxs-lookup"><span data-stu-id="54889-118">Child Elements</span></span>  
   
-|<span data-ttu-id="73e24-119">요소</span><span class="sxs-lookup"><span data-stu-id="73e24-119">Element</span></span>|<span data-ttu-id="73e24-120">설명</span><span class="sxs-lookup"><span data-stu-id="73e24-120">Description</span></span>|  
+|<span data-ttu-id="54889-119">요소</span><span class="sxs-lookup"><span data-stu-id="54889-119">Element</span></span>|<span data-ttu-id="54889-120">설명</span><span class="sxs-lookup"><span data-stu-id="54889-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="73e24-121">\<activityStateQuery ></span><span class="sxs-lookup"><span data-stu-id="73e24-121">\<activityStateQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|<span data-ttu-id="73e24-122">활동 내에서 발생하는 오류의 처리를 추적하는 데 사용되는 쿼리입니다.</span><span class="sxs-lookup"><span data-stu-id="73e24-122">A query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="73e24-123">이 이벤트는 FaultHandler가 오류를 처리할 때마다 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="73e24-123">This event occurs each time a FaultHandler processes a fault.</span></span>|  
+|[<span data-ttu-id="54889-121">\<activityStateQuery ></span><span class="sxs-lookup"><span data-stu-id="54889-121">\<activityStateQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|<span data-ttu-id="54889-122">활동 내에서 발생하는 오류의 처리를 추적하는 데 사용되는 쿼리입니다.</span><span class="sxs-lookup"><span data-stu-id="54889-122">A query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="54889-123">이 이벤트는 FaultHandler가 오류를 처리할 때마다 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="54889-123">This event occurs each time a FaultHandler processes a fault.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="73e24-124">부모 요소</span><span class="sxs-lookup"><span data-stu-id="73e24-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="54889-124">부모 요소</span><span class="sxs-lookup"><span data-stu-id="54889-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="73e24-125">요소</span><span class="sxs-lookup"><span data-stu-id="73e24-125">Element</span></span>|<span data-ttu-id="73e24-126">설명</span><span class="sxs-lookup"><span data-stu-id="73e24-126">Description</span></span>|  
+|<span data-ttu-id="54889-125">요소</span><span class="sxs-lookup"><span data-stu-id="54889-125">Element</span></span>|<span data-ttu-id="54889-126">설명</span><span class="sxs-lookup"><span data-stu-id="54889-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="73e24-127">\<워크플로 ></span><span class="sxs-lookup"><span data-stu-id="73e24-127">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="73e24-128">로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소는 **activityDefinitionId** 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="73e24-128">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
+|[<span data-ttu-id="54889-127">\<워크플로 ></span><span class="sxs-lookup"><span data-stu-id="54889-127">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="54889-128">로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소는 **activityDefinitionId** 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="54889-128">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="73e24-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="73e24-129">See Also</span></span>  
- <span data-ttu-id="73e24-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="73e24-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection?displayProperty=nameWithType></span></span>       
- <span data-ttu-id="73e24-131"><xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="73e24-131"><xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType></span></span>       
- [<span data-ttu-id="73e24-132">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="73e24-132">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="73e24-133">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="73e24-133">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="54889-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="54889-129">See Also</span></span>  
+ <span data-ttu-id="54889-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="54889-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="54889-131"><xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="54889-131"><xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="54889-132">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="54889-132">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="54889-133">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="54889-133">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
