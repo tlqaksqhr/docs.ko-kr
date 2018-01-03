@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea7214e284754b1a2f5c8a7a68f19b1b94e02a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="method-etw-events"></a>메서드 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 메서드와 관련된 정보를 수집합니다. 이들 이벤트의 페이로드는 기호 확인을 위해 필요합니다. 또한 이들 이벤트는 메서드를 호출한 횟수와 같은 유용한 정보를 제공합니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`JITKeyword` (0x10) 런타임 공급자|정보(4)|  
-|`NGenKeyword` (0x20) 런타임 공급자|정보(4)|  
+|`NGenKeyword`(0x20) 런타임 공급자|정보(4)|  
 |`JitRundownKeyword` (0x10) 런다운 공급자|정보(4)|  
 |`NGENRundownKeyword` (0x20) 런다운 공급자|정보(4)|  
   
@@ -108,10 +109,10 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10) 런타임 공급자|자세한 정보 표시(5)|  
+|`JITKeyword`(0x10) 런타임 공급자|자세한 정보 표시(5)|  
 |`NGenKeyword` (0x20) 런타임 공급자|자세한 정보 표시(5)|  
-|`JitRundownKeyword` (0x10) 런다운 공급자|자세한 정보 표시(5)|  
-|`NGENRundownKeyword` (0x20) 런다운 공급자|자세한 정보 표시(5)|  
+|`JitRundownKeyword`(0x10) 런다운 공급자|자세한 정보 표시(5)|  
+|`NGENRundownKeyword`(0x20) 런다운 공급자|자세한 정보 표시(5)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -145,10 +146,10 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`JITKeyword` (0x10) 런타임 공급자|자세한 정보 표시(5)|  
+|`JITKeyword`(0x10) 런타임 공급자|자세한 정보 표시(5)|  
 |`NGenKeyword` (0x20) 런타임 공급자|자세한 정보 표시(5)|  
-|`JitRundownKeyword` (0x10) 런다운 공급자|자세한 정보 표시(5)|  
-|`NGENRundownKeyword` (0x20) 런다운 공급자|자세한 정보 표시(5)|  
+|`JitRundownKeyword`(0x10) 런다운 공급자|자세한 정보 표시(5)|  
+|`NGENRundownKeyword`(0x20) 런다운 공급자|자세한 정보 표시(5)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   

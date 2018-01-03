@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a028fcdfb6c85e456c8722decdb1bca8fd907a9f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 548606a0196012fdd21bf5512e8ea7b089c723ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-exception-handling"></a>예외 처리 보안
 Visual c + + 및 Visual Basic에서 스택 추가 필터 식을 전에 실행할 **마지막** 문. **catch** 블록에 연결 된 후 실행 되는 해당 필터는 **마지막** 문. 자세한 내용은 참조 [사용자 필터 예외](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)합니다. 이 섹션에서는이 순서에 따른 보안 위험을 검사 합니다. 다음 의사 코드 예제에서는 필터 문 순서를 보여 줍니다 및 **마지막** 문을 실행 합니다.  

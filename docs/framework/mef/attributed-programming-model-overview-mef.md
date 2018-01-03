@@ -15,11 +15,12 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 16ffe789635ee13c118c63c30ef255cc9b264a9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 565cd9384e150f707b2e5e72342579d95c3a096e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attributed-programming-model-overview-mef"></a>특성을 사용하는 프로그래밍 모델 개요(MEF)
 MEF(Managed Extensibility Framework)에서 *프로그래밍 모델* 은 MEF가 작동하는 개념 개체 집합을 정의하는 특정 방법입니다. 이러한 개념 개체에는 파트, 가져오기 및 내보내기가 포함됩니다. MEF에서는 이러한 개체를 사용하지만 이러한 개체를 표현해야 하는 방법을 지정하지는 않습니다. 따라서 사용자 지정 프로그래밍 모델을 비롯한 매우 다양한 프로그래밍 모델이 가능합니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15486a55fc15ba2cc3cc64db50f317b39dfd77bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework의 성능 카운터
 이 항목에서는 [성능 모니터](http://technet.microsoft.com/library/cc749249.aspx)에서 찾을 수 있는 성능 카운터 목록을 제공합니다.  
@@ -260,5 +261,5 @@ for (int i = 0; i < Array.Length; i++)
 |**Total Runtime Checks**|응용 프로그램이 시작된 이후 수행된 런타임 코드 액세스 보안 검사의 총수를 표시합니다. 런타임 코드 액세스 보안 검사는 호출자가 특정 권한을 요구하는 경우에 수행됩니다. 런타임 검사는 호출자에 의해 각 호출에서 수행되고 호출자의 현재 스레드 스택을 검사합니다. **Stack Walk Depth** 카운터와 함께 사용할 경우 이 카운터는 보안 검사에 대해 발생하는 성능 저하를 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
+ [성능 카운터](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [런타임 프로파일링](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

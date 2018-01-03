@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d25f8357f5b375792e8a05833e8397085cc27b23
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 976f1e4d8a149f8104325fd5d006d245afee04a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>데이터 서비스 쿼리(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 LINQ(Language-Integrated Query) 사용을 비롯한 익숙한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 프로그래밍 패턴을 사용하여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 받아 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.  
@@ -133,8 +134,8 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  <xref:System.Int32> 또는 <xref:System.Int64> 메서드를 호출하여 각각 <xref:System.Linq.Enumerable.Count%2A> 또는 <xref:System.Linq.Enumerable.LongCount%2A> 값으로 집합의 총 엔터티 수만 가져올 수도 있습니다. 이러한 메서드를 호출하면 <xref:System.Data.Services.Client.QueryOperationResponse%601>가 반환되지 않고 개수 값만 반환됩니다. 자세한 내용은 참조 [하는 방법:는 수의 엔터티 쿼리에서 반환 된 결정](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [쿼리 프로젝션](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [프로젝트 쿼리](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
   
  [개체 구체화](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
   
@@ -142,11 +143,11 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [방법: 데이터 서비스 쿼리 실행](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
- [방법: 데이터 서비스 쿼리를 쿼리 옵션 추가](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
+ [방법: 쿼리 옵션을 데이터 서비스 쿼리에 추가](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [방법: 쿼리가 반환 하는 엔터티의 수 확인](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [방법: 쿼리가 반환하는 엔터티의 수 확인](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [방법: 데이터 서비스 요청에 대 한 클라이언트 자격 증명을 지정 합니다.](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [방법: 데이터 서비스 요청에 대한 클라이언트 자격 증명 지정](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
  [방법: 클라이언트 요청의 헤더 설정](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   

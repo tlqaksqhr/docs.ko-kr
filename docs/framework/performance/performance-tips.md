@@ -18,17 +18,18 @@ caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.openlocfilehash: 93db69b67bfac3bcefbc818032aae64df0fd47b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: wiwagn
+ms.openlocfilehash: 60c25de889e5055241486078baf46657b6870afd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-performance-tips"></a>.NET 성능 팁
 *성능*이라는 용어는 일반적으로 프로그램의 실행 속도를 나타냅니다. 경우에 따라 소스 코드에서 특정 기본 규칙을 따라 실행 속도를 높일 수 있습니다. 일부 프로그램에서는 코드를 자세히 검사하고 프로파일러를 사용하여 최대한 빠르게 실행 중인지 확인하는 작업을 해야 합니다. 다른 프로그램에서는 코드가 작성된 대로 만족스럽게 실행되므로 이러한 최적화를 수행하지 않아도 됩니다. 이 문서에서는 성능이 떨어질 수 있는 몇 가지 일반적인 영역과 성능 향상 팁 및 추가 성능 항목에 대한 링크를 나열합니다. 성능 계획 및 측정에 대한 자세한 내용은 [성능](../../../docs/framework/performance/index.md)을 참조하세요.  
   
 ## <a name="boxing-and-unboxing"></a>boxing 및 unboxing  
- 예를 들어 <xref:System.Collections.ArrayList?displayProperty=nameWithType>와 같이 제네릭이 아닌 컬렉션 클래스에서 상당히 많은 횟수로 boxing되어야 하는 경우 값 형식을 사용하지 않는 것이 좋습니다. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>와 같은 제네릭 컬렉션을 사용하는 경우 값 형식을 boxing하지 않을 수 있습니다. Boxing 및 unboxing은 계산을 많이 해야 하는 프로세스입니다. 값 형식이 boxing되면 완전히 새로운 개체가 생성되어야 합니다. 이 작업은 단순 참조 할당보다 20배나 오래 걸립니다. unboxing 시 캐스팅 프로세스는 할당의 4배에 달하는 시간이 소요될 수 있습니다. 자세한 내용은 [Boxing 및 Unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md)을 참조하세요.  
+ 예를 들어 <xref:System.Collections.ArrayList?displayProperty=nameWithType>와 같이 제네릭이 아닌 컬렉션 클래스에서 상당히 많은 횟수로 boxing되어야 하는 경우 값 형식을 사용하지 않는 것이 좋습니다. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>와 같은 제네릭 컬렉션을 사용하는 경우 값 형식을 boxing하지 않을 수 있습니다. Boxing 및 unboxing은 계산을 많이 해야 하는 프로세스입니다. 값 형식이 boxing되면 완전히 새로운 개체가 생성되어야 합니다. 이 작업은 단순 참조 할당보다 20배나 오래 걸립니다. unboxing 시 캐스팅 프로세스는 할당의 4배에 달하는 시간이 소요될 수 있습니다. 자세한 내용은 [boxing 및 unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md)을 참조하세요.  
   
 ## <a name="strings"></a>문자열  
  예를 들어 연속 루프에서 다수의 문자열 변수를 연결하는 경우 C# [+ 연산자](~/docs/csharp/language-reference/operators/addition-operator.md) 또는 Visual Basic [연결 연산자](~/docs/visual-basic/language-reference/operators/concatenation-operators.md)가 아니라 <xref:System.Text.StringBuilder?displayProperty=nameWithType>를 대신 사용합니다. 자세한 내용은 [방법: 여러 문자열 연결](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md) 및 [Visual Basic의 연결 연산자](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)를 참조하세요.  

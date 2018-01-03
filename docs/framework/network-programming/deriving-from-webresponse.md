@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3f732f60afeba71d26391ba5fb6484ab7562654a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c0c70719e3f149ddf1f1e22cee8158e31fccf3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deriving-from-webresponse"></a>WebResponse에서 파생
 <xref:System.Net.WebResponse> 클래스는 .NET Framework 플러그형 프로토콜 모델에 적합한 프로토콜별 응답을 만들기 위한 기본 메서드 및 속성을 제공하는 추상 기본 클래스입니다. <xref:System.Net.WebRequest> 클래스를 사용하여 리소스의 데이터를 요청하는 응용 프로그램은 **WebResponse**로 응답을 받습니다. 프로토콜별 **WebResponse** 하위 항목은 **WebResponse** 클래스의 추상 멤버를 구현해야 합니다.  

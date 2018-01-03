@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-based-identity-model"></a>클레임 기반 ID 모델
 클레임 인식 응용 프로그램을 작성할 때 사용자 ID가 클레임 집합으로 응용 프로그램에 표시됩니다. 클레임 중 하나는 사용자 이름이고, 다른 하나는 전자 메일 주소일 수 있습니다. 외부 ID 시스템은 수신하는 ID 데이터가 신뢰할 수 있는 출처에서 제공되는 암호화 보증과 함께 각각의 요청을 작성한 사용자에 대해 파악하기 위해 필요한 모든 사항을 응용 프로그램에 제공하도록 구성됩니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="introduction-to-claims-based-identity"></a>클레임 기반 ID 소개  
  다음 용어와 개념은 ID에 대한 새로운 아키텍처를 이해하는 데 도움을 줍니다.  
   
-### <a name="identity"></a>ID  
+### <a name="identity"></a>클레임  
  WIF(Windows Identity Foundation)의 프로그래밍 모델을 설명하기 위해 보안을 유지할 시스템에서 사용자 또는 기타 일부 엔터티의 속성 집합을 나타내는 데 용어 “ID”를 사용합니다.  
   
 ### <a name="claim"></a>클레임  

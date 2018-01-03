@@ -17,57 +17,58 @@ caps.latest.revision: "61"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e521f07048e37533e052dc8a43fb2c522750f92a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 658c5aca3dc8d70400cdd26d9e0af1e253e175c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-types"></a>UI 자동화 컨트롤 형식
 **참고** 이 설명서는 관리 되는 사용 하려는.NET Framework 개발자를 위한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에 정의 된 클래스는 <xref:System.Windows.Automation> 네임 스페이스입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
   
  이 섹션에서는 컨트롤 형식에 대 한 지원에 대 한 정보 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [UI 자동화 컨트롤 형식 개요](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Button 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
- [Calendar 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
- [CheckBox 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
- [ComboBox 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
- [DataGrid 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
- [DataItem 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
- [Document 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
- [Edit 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
- [Group 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
- [Header 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
- [HeaderItem 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
- [Hyperlink 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
- [Image 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
- [List 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
- [ListItem 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
- [Menu 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
- [MenuBar 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
- [MenuItem 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
- [Pane 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
- [ProgressBar 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
- [RadioButton 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
- [ScrollBar 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
- [Separator 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
- [Slider 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
- [Spinner 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
- [SplitButton 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
- [StatusBar 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
- [Tab 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
- [TabItem 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
- [Table 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
- [Text 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
- [Thumb 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
- [TitleBar 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
- [ToolBar 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
- [ToolTip 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
- [Tree 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
- [TreeItem 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
- [Window 컨트롤 형식에 대 한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
+ [Button 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
+ [Calendar 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
+ [CheckBox 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
+ [ComboBox 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
+ [DataGrid 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
+ [DataItem 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
+ [Document 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
+ [Edit 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
+ [Group 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
+ [Header 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
+ [HeaderItem 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
+ [Hyperlink 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
+ [Image 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
+ [List 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
+ [ListItem 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
+ [Menu 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
+ [MenuBar 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
+ [MenuItem 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
+ [Pane 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
+ [ProgressBar 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
+ [RadioButton 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
+ [ScrollBar 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
+ [Separator 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
+ [Slider 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
+ [Spinner 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
+ [SplitButton 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
+ [StatusBar 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
+ [Tab 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
+ [TabItem 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
+ [Table 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
+ [Text 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
+ [Thumb 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
+ [TitleBar 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
+ [ToolBar 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
+ [ToolTip 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
+ [Tree 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
+ [TreeItem 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
+ [Window 컨트롤 형식에 대한 UI 자동화 지원](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Automation.ControlType>  

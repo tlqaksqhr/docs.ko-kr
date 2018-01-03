@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7f5dcdd969619526c52a9ae44014030a9f0c6dc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 키워드 및 수준
 <a name="top"></a> 범주 및 수준별로 ETW(Windows용 이벤트 추적) 이벤트를 필터링할 수 있습니다. 이벤트 [CLR ETW 키워드](#keywords)를 통해 범주별로 이벤트를 필터링할 수 있습니다. 런타임 및 런다운 공급자를 위해 여러 키워드를 조합하여 사용할 수 있습니다. [이벤트 수준](#levels) 은 플래그로 식별됩니다.  
@@ -89,12 +90,12 @@ ms.lasthandoff: 11/21/2017
   
 |키워드 및 플래그|응용 프로그램 도메인, 어셈블리, 모듈 로드/언로드 이벤트|메서드 로드/언로드 이벤트(동적 이벤트 제외)|동적 메서드 로드/소멸 이벤트|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|이벤트를 로드 및 언로드합니다.|없음.|없음.|  
+|`LoaderKeyword`|이벤트를 로드 및 언로드합니다.|없음.|없음|  
 |`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` 는 아무것도 추가하지 않음)|없음.|이벤트를 로드합니다.|이벤트를 로드 및 언로드합니다.|  
-|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|없음.|이벤트를 로드 및 언로드합니다.|이벤트를 로드 및 언로드합니다.|  
+|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|없음|이벤트를 로드 및 언로드합니다.|이벤트를 로드 및 언로드합니다.|  
 |`NGenKeyword`|없음.|없음.|해당 사항 없음.|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|없음.|이벤트를 로드합니다.|해당 사항 없음.|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|없음.|이벤트를 언로드합니다.|해당 사항 없음.|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|없음|이벤트를 로드합니다.|해당 사항 없음.|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|없음|이벤트를 언로드합니다.|해당 사항 없음.|  
   
  [맨 위로 이동](#top)  
   
@@ -103,12 +104,12 @@ ms.lasthandoff: 11/21/2017
   
 |키워드 및 플래그|응용 프로그램 도메인, 어셈블리, 모듈 DCStart/DCEnd 이벤트|메서드 DCStart/DCEnd 이벤트(동적 메서드 이벤트 포함)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` 이벤트|없음.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` 이벤트|없음.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|없음.|`DCStart` 이벤트|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|없음.|`DCEnd` 이벤트|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|없음.|`DCStart` 이벤트|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|없음.|`DCEnd` 이벤트|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` 이벤트|없음|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` 이벤트|없음|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트|  
   
  [맨 위로 이동](#top)  
   

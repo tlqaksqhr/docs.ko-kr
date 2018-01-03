@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c71f093bd663fb2622dbfc212671fad8f19ca4a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4ca35246b82ed4adc982b6e7b157398d230dabe4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize 메서드
 대상 프로세스를 사용 하는 포인터 형식을 바이트 단위로 크기를 가져옵니다. 이 메서드는 공용 언어 런타임 데이터 액세스 서비스에 의해 호출 됩니다.  

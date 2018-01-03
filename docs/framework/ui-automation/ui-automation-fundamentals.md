@@ -15,11 +15,12 @@ caps.latest.revision: "54"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 57fd183b042779d06274573db7b4569dbe6a54d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c87034827d0295578f9a7efe134d158291f87713
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-fundamentals"></a>UI 자동화 기본 사항
 > [!NOTE]
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/18/2017
   
  이 섹션에서는 높은 수준의 개요를 제공 된 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)  
  [UI 자동화 및 Microsoft Active Accessibility](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
  [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/18/2017
  [UI 자동화 속성 개요](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
  [UI 자동화 이벤트 개요](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
  [UI 자동화 보안 개요](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [자동화 된 테스트에 대 한 UI 자동화를 사용 하 여](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+ [자동화된 테스트를 위해 UI 자동화 사용](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Automation>  

@@ -18,11 +18,12 @@ caps.latest.revision: "62"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 96fab367bcec7f501e80f4533b2ee36e4cf86c77
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80bd85af56608563b7a3c49912ce31a5f6dd0744
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI 자동화 텍스트 패턴 방법 항목
 > [!NOTE]
@@ -30,10 +31,10 @@ ms.lasthandoff: 10/18/2017
   
  이 섹션에는 UI 자동화 텍스트 패턴을 사용 하는 방법을 설명 하는 항목이 포함 되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [UI 자동화를 사용 하 여 텍스트 상자에 콘텐츠 추가](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [UI 자동화를 사용 하 여 텍스트 찾기 및 강조](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [UI 자동화를 사용 하 여 텍스트 특성 가져오기](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [UI 자동화를 사용 하 여 혼합된 텍스트 특성 정보 가져오기](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [UI 자동화를 사용 하 여 텍스트 이동](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [UI 자동화를 사용 하 여 개체를 포함 하는 액세스](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+## <a name="in-this-section"></a>섹션 내용  
+ [UI 자동화를 사용하여 텍스트 상자에 콘텐츠 추가](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
+ [UI 자동화를 사용하여 텍스트 찾기 및 강조](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
+ [UI 자동화를 사용하여 텍스트 특성 가져오기](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
+ [UI 자동화를 사용하여 혼합 텍스트 특성 정보 가져오기](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [UI 자동화를 사용하여 텍스트 이동](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
+ [UI 자동화를 사용하여 포함 개체에 액세스](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)

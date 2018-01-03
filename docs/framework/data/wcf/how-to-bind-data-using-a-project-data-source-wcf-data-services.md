@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ee72f1c3eaf2c78a7cdff9b2a4db81ef0b767a2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94ca7614e6df2d82216fa869309dff2da8eee634
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>방법: 프로젝트 데이터 원본을 사용하여 데이터 바인딩(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 응용 프로그램에서 생성된 데이터 개체를 기반으로 하는 데이터 소스를 만들 수 있습니다. 사용 하 여 데이터 서비스에 대 한 참조를 추가 하면는 **서비스 참조 추가** 대화 상자에서 프로젝트 데이터 원본을 생성 된 클라이언트 데이터 클래스와 함께 만들어집니다. 데이터 서비스에서 노출하는 각 엔터티 집합에 대해 데이터 소스 하나가 만들어집니다. 이러한 데이터 원본 항목을 끌어 서비스에서 데이터를 표시 하는 폼을 만들 수는 **데이터 소스** 창에서 디자이너로 합니다. 이러한 항목은 데이터 소스에 바인딩된 컨트롤이 됩니다. 실행 하는 동안이 데이터 원본은 인스턴스에 바인딩되어는 <xref:System.Data.Services.Client.DataServiceCollection%601> 데이터 서비스에는 쿼리에 의해 반환 되는 개체에 채워지는 클래스입니다. 자세한 내용은 참조 [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)합니다.  

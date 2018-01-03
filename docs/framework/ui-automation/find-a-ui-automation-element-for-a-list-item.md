@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 16016f5e5b0ab9633f9f8e4ac662838dd7936b18
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a00019e5aaaefaddd94689bd192973d5d5ad175a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>목록 항목의 UI 자동화 요소 찾기
 > [!NOTE]
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
   
  이 항목에서는 검색 하는 방법을 보여 줍니다.는 <xref:System.Windows.Automation.AutomationElement> 항목의 인덱스 알려져 있는 경우 목록 내의 항목에 대 한 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 사용 하 여 목록에서 지정된 된 항목을 검색 하는 두 가지 방법으로 <xref:System.Windows.Automation.TreeWalker> 및 기타 사용 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>합니다.  
   
  첫 번째 하는 방법에 대 한 더 빠른 경향이 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 는 대 한 컨트롤, 완료 되지만 두 번째 빠릅니다 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 컨트롤입니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ebce514469c703c3740b4877fedc595ae5f61ad0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e190d2476d28c9ea5231f59a4fe43ec24b0f6cda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>Calendar 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]

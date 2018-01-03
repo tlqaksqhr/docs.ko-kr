@@ -15,16 +15,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8864e33fa281f69b72af12276ed31e5e543045ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c58c3aa5ca1ec2d8b3bc820b2b7a500604b4b7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ialink-interface"></a>IALink 인터페이스
 .NET Framework 어셈블리를 생성할 수 있습니다. 특히, 인터페이스는 다중 모듈 어셈블리에 대 한 어셈블리 매니페스트를 작성, 강력한 이름의 어셈블리를 서명 및 netmodule 만들기에 도움이 되는 메서드를 포함 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [AddFile Method1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
  [AddImport Method1](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  

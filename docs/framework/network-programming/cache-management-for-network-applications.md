@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b960942d17e402b333354bbd932cf63d11b1209f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 458a1e67e9ca4ff3a36f1b0c69fcc4bdc00be3e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cache-management-for-network-applications"></a>네트워크 응용 프로그램에 대한 캐시 관리
 이 항목 및 관련 하위 항목에서는 <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.FtpWebRequest> 클래스를 사용하여 얻은 리소스에 대한 캐싱을 설명합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
  보안 문제로 인해 중간 계층 시나리오에는 캐싱이 권장되지 **않습니다**.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)  
  캐시 정책이란 무엇이고 어떻게 정의하는지를 설명합니다.  
   

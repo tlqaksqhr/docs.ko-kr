@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 827825e4012b421caa4e05702a6f1a1b863ac69d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: defd2572d6f925cf557539983308b3b3e900eebd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 열거형
 MDA(관리 디버깅 도우미)가 실행된 스레드의 상태를 지정합니다.  

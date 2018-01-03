@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 919a789b1ae3e5900fe8bd79f5c8b127d81bb2e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dc9476b546ea55234c536a34416efc2bff0166de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pnrp-caches"></a>PNRP 캐시
 PNRP(피어 이름 확인 프로토콜) 캐시는 한 피어에서 유지 관리되며 알고리즘 방식으로 선택된 피어 끝점의 로컬 컬렉션입니다.  

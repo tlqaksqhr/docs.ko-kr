@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: d8b5d1dac39e36144ee3d7acdc0fbdf854e4235b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7a0f12070c31c79c0b45213b51cf3bd58596967
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>Pane 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  ![두 개의 창이 있는 애플릿 창의 스크린 샷](../../../docs/framework/ui-automation/media/uiauto-pane.GIF "uiauto_pane")  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 콘텐츠 뷰|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리-콘텐츠 뷰|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>창</li><li>Tree(스크롤 패턴)<br /><br /> <ul><li>TreeItem</li><li>창</li><li>Edit(스크롤 패턴)</li></ul></li></ul>|창<br />-트리 (스크롤 패턴)<br />-TreeItem<br />-... 창<br />-편집<br />-(스크롤 패턴)|  
   

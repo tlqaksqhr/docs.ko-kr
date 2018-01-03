@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1b6e63c0db9815c7bcfc32ec962e3f85362cce4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 712daba98667381650066b7a719dbfdd5224c143
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-how-to-topics"></a>네트워크 프로그래밍 방법 항목
 다음 목록에는 네트워크 프로그래밍 개념 문서에 나와 있는 방법 항목에 대한 링크가 들어 있습니다.  

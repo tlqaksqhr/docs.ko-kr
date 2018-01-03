@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d83062db41b5fa1485555de40be0a39a65e0459a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c0be76e93ab41860f7f3416d0baffe3e4daf84c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile 메서드
 만들 어셈블리의 이름을 할당 합니다. 바인딩되지 않은 모듈을 만들 때 사용에 대 한 되지 않습니다.  

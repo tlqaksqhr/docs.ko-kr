@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3dfd8b17e4ca01802651087ff20988744a411ed2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2a68f35dc5abb653514034cf0d30b62457b933de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="thread-pool-etw-events"></a>스레드 풀 ETW 이벤트
 <a name="top"></a> 이러한 이벤트는 작업자 스레드 및 I/O 스레드에 대한 정보를 수집합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -144,7 +145,7 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -165,7 +166,7 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -186,7 +187,7 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 10/18/2017
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   

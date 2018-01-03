@@ -15,16 +15,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cd350f7a215af4692bb2384012699812bc50528c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de0ff924e2c9ae20b9796fbcae2df0fd858295dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ialink2-interface"></a>IALink2 인터페이스
 보완은 [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) 와 같은 최신 메타 데이터 인터페이스에 작동 하는 메서드를 선언 하 여 [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)합니다. 또한 IALink2 원래 IALink 인터페이스를 통해 추가적인 사용 유연성을 제공 하는 메서드를 선언 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [AddFile2 메서드](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
   
  [EmitAssembly 메서드](../../../../docs/framework/unmanaged-api/alink/emitassembly-method.md)  

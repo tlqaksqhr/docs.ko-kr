@@ -21,11 +21,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d14c67daa387f06a3c7d6e43219991950bceb73e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6cd775ed31d0457308f86b3d5b6f40092bfa9690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-projections-wcf-data-services"></a>쿼리 프로젝션(WCF Data Services)
 프로젝션에는 메커니즘을 제공는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 엔터티의 특정 속성만 응답에서 반환 되는 지정 하 여 쿼리에서 반환 된 피드의 데이터 양을 줄일 수 있습니다. 자세한 내용은 참조 [OData: Select 시스템 쿼리 옵션 ($select)](http://go.microsoft.com/fwlink/?LinkId=186076)합니다.  

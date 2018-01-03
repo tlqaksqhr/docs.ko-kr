@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9e3ff6c4ec8febda93136c5ac88223b5baf80124
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a84fdb104296cf15b5f0d2d04f4ddd7ea1419643
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트
 작업 병렬 라이브러리 및 PLINQ는 둘 다 Windows Performance Analyzer와 같은 도구를 사용하여 응용 프로그램을 프로파일링하고 응용 프로그램 문제를 해결하는 데 사용할 수 있는 ETW(Windows용 이벤트 추적) 이벤트를 생성합니다. 그러나 대부분의 경우 병렬 응용 프로그램 코드를 프로파일링하는 가장 좋은 방법은 [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)]에서 [Concurrency 시각화](/visualstudio/profiling/concurrency-visualizer)를 사용하는 것입니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>사용자 데이터  
   
-|**Name**|**Type**|**설명**|  
+|**이름**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>사용자 데이터  
   
-|**Name**|**Type**|**설명**|  
+|**이름**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>사용자 데이터  
   
-|**Name**|**Type**|**설명**|  
+|**이름**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>사용자 데이터  
   
-|**Name**|**Type**|**설명**|  
+|**이름**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>사용자 데이터  
   
-|**Name**|**Type**|**설명**|  
+|**이름**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>사용자 데이터  
   
-|**Name**|**Type**|**설명**|  
+|**이름**|**Type**|**설명**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 TaskScheduler의 ID입니다.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|루프를 시작한 작업의 ID입니다.|  

@@ -17,11 +17,12 @@ caps.latest.revision: "39"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 079a778a3518e6632f429a261ee229db0b46d9b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03ebb5a8193d3376d40fa830f13ab9324846ba2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>서버 쪽 UI 자동화 공급자 구현
 > [!NOTE]
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  논리 부모에서 논리 자식으로, 그리고 형제 자식 사이에 탐색이 올바르게 처리되도록 팝업 창 및 해당 상위 항목에 대해 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> 을 구현합니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서 팝업 창을 발견하면 탐색이 기본값에서 재정의된다는 것을 인식하며 데스크톱의 자식 항목으로 발견된 경우에는 팝업 창으로 건너뜁니다. 대신, 조각을 통해서만 노드에 도달할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 팝업 창을 발견하면 탐색이 기본값에서 재정의된다는 것을 인식하며 데스크톱의 자식 항목으로 발견된 경우에는 팝업 창으로 건너뜁니다. 대신, 조각을 통해서만 노드에 도달할 수 있습니다.  
   
  부모 재지정은 컨트롤이 클래스의 창을 호스트할 수 있는 경우에는 적합하지 않습니다. 예를 들어 rebar는 모든 유형의 HWND를 밴드에서 호스트할 수 있습니다. 이런 경우를 처리하기 위해 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서는 다음 섹션의 설명대로 다른 형식의 HWND 재배치를 지원합니다.  
   

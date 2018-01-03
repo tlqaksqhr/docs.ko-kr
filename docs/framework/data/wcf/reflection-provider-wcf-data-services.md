@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52fe7e777cfea04b6da2a04c0badfe92b2a0a756
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-provider-wcf-data-services"></a>리플렉션 공급자(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 Entity Framework를 통해 데이터 모델의 데이터를 노출할 뿐 아니라 엔터티 기반 모델에 엄격하게 정의되지 않은 데이터를 노출할 수 있습니다. 리플렉션 공급자는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식을 반환하는 클래스의 데이터를 노출합니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 리플렉션을 사용하여 이러한 클래스의 데이터 모델을 유추하고 리소스에 대한 주소 기반 쿼리를 노출된 <xref:System.Linq.IQueryable%601> 형식에 대한 LINQ(Language-Integrated Query) 기반 쿼리로 변환할 수 있습니다.  
@@ -104,4 +105,4 @@ ms.lasthandoff: 12/02/2017
  Entity Framework는 기본적으로 지원되므로 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에 관계형 데이터를 사용하는 경우 이 데이터 공급자를 사용하는 것이 좋습니다. 그러나 리플렉션 공급자를 통해 데이터 서비스에 LINQ to SQL 클래스를 사용할 수 있습니다. <xref:System.Data.Linq.Table%601> 결과 집합에 메서드에 의해 반환 되는 <xref:System.Data.Linq.DataContext> LINQ to SQL 개체 관계형 디자이너 (O/R 디자이너) 구현에 의해 생성 된는 <xref:System.Linq.IQueryable%601> 인터페이스입니다. 이렇게 하면 리플렉션 공급자가 이러한 메서드에 액세스하고 생성된 LINQ to SQL 클래스를 사용하여 SQL Server에서 엔터티 데이터를 반환할 수 있습니다. 그러나 LINQ to SQL은 <xref:System.Data.Services.IUpdatable> 인터페이스를 구현하지 않으므로 기존 <xref:System.Data.Linq.DataContext> partial 클래스를 확장하여 <xref:System.Data.Services.IUpdatable> 구현을 추가하는 partial 클래스를 추가해야 합니다. 자세한 내용은 참조 [하는 방법: LINQ to SQL 데이터 원본을 사용 하 여 데이터 서비스 만들기](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+ [Data Services 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

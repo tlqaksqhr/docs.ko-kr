@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f452a32b209c30175f95aec7a8a90e0783c10086
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
 런타임 지시문(.rd.xml) 파일은 지정된 프로그램 요소를 리플렉션에 사용할 수 있는지 여부를 지정하는 XML 구성 파일입니다. 런타임 지시문 파일의 예는 다음과 같습니다.  
@@ -51,24 +52,24 @@ ms.lasthandoff: 11/21/2017
  [Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
  [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
@@ -81,9 +82,9 @@ ms.lasthandoff: 11/21/2017
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
  [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
@@ -95,24 +96,24 @@ ms.lasthandoff: 11/21/2017
  [Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
  [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
@@ -122,9 +123,9 @@ ms.lasthandoff: 11/21/2017
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.  
+ 이어야 합니다. . 이어야 합니다.  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80e36f6c60c4c305cad9176cd7f185d8b6d2fdf2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c29aa82143c34a229cee0a5b000657c9add22bd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName 함수
 제공된 된 관리 되는 개체 포인터를 사용 하는 형식의 이름을 가져옵니다.  

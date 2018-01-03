@@ -21,11 +21,12 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3471c4ad2d06443e0f05dc344be5f791817f2d2f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f012ea89fec0e64bc1639e6c47fb79249c25411a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 메서드
 어셈블리를 만듭니다. 어셈블리 파일을 제외한 다른 모든 파일이 닫혀 후이 메서드를 호출 합니다. 바인딩되지 않은 모듈을 만들 때이 메서드를 호출 하지 마십시오.  

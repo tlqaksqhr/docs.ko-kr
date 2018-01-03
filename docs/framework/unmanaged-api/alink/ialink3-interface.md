@@ -15,16 +15,17 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b2f38283e4944c4f24668fa243d628e80daeac55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f4c4e8222acaf290ea9298a59d2ae77b81d2c913
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ialink3-interface"></a>IALink3 인터페이스
 단일 메서드를 제공 `SetManifestFile`를 지정 하거나 링커가 어셈블리를 만들 때 사용 하는 매니페스트 파일을 다시 설정할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SetManifestFile 메서드](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
  지정 하거나 어셈블리를 만들 때 링커에서 사용 하는 매니페스트 파일을 다시 설정할 수 있습니다.  
   

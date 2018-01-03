@@ -15,11 +15,12 @@ caps.latest.revision: "80"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: efdd8624311ad6e3fe751d39d689e84663b4c61e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a0e4499816bd6cd4e2703d28d615a8732a0524e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility"></a>액세스 가능성
 > [!NOTE]
@@ -29,14 +30,14 @@ ms.lasthandoff: 10/18/2017
   
  이 문서에서는 관리 코드용 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]에 대해 설명합니다. C++의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 프로그래밍에 대한 자세한 내용은 [UI Automation for Win32 Applications](https://msdn.microsoft.com/library/ms726294.aspx)(Win32 응용 프로그램용 UI 자동화)를 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [접근성 모범 사례](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
  [UI 자동화 기본 사항](../../../docs/framework/ui-automation/index.md)  
  [관리 코드에 대한 UI 자동화 공급자](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
  [관리 코드에 대한 UI 자동화 클라이언트](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
  [UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
  [UI 자동화 텍스트 패턴](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
+ [UI 자동화 컨트롤 형식](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
  [UI 자동화 사양 및 커뮤니티 약속](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>관련 단원  

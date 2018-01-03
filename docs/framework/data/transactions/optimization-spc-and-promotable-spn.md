@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38c3d10eaefe4608084a5e5f6ad417446200799b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f85dabc8a447db13173a672db37b327ba4a9fe6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화
 이 항목에서는 <xref:System.Transactions> 인프라가 제공하는 성능 최적화 메커니즘에 대해 설명합니다.  
@@ -70,5 +71,5 @@ ms.lasthandoff: 12/02/2017
  하나의 일시적인 인 리스트 먼 및 없는 지속적인 인 리스트 먼 있으면 일시적인 인 리스트 먼 SPC 알림을 받습니다.  불안정 한 인리스트먼트 및 하나의 지속적인 인 리스트 먼 없으면 불안정 한 인리스트먼트에서 2PC를 수신 합니다. 완료되면 지속적인 인리스트먼트가 SPC를 받습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션 참여 구성원으로 리소스를 인 리스트 먼 트](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
- [1 단계 및 다중 단계에서 트랜잭션 커밋](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+ [리소스를 트랜잭션에 참가 요소로 등록](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [단일 단계 및 다단계 트랜잭션 커밋](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
