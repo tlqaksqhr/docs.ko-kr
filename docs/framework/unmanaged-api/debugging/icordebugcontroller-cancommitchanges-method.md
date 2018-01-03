@@ -21,14 +21,15 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dfb2266caba00c27a3e2c94f26e603b9e5dc806d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e884b17daae5dcbbcc12b8973738e537e2649454
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="ba729-102">ICorDebugController::CanCommitChanges 메서드</span><span class="sxs-lookup"><span data-stu-id="ba729-102">ICorDebugController::CanCommitChanges Method</span></span>
-<span data-ttu-id="ba729-103">`CanCommitChanges`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ba729-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="ba729-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="ba729-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="cd0c0-102">ICorDebugController::CanCommitChanges 메서드</span><span class="sxs-lookup"><span data-stu-id="cd0c0-102">ICorDebugController::CanCommitChanges Method</span></span>
+<span data-ttu-id="cd0c0-103">`CanCommitChanges`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cd0c0-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="cd0c0-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="cd0c0-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ba729-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ba729-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="cd0c0-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cd0c0-105">See Also</span></span>  
  

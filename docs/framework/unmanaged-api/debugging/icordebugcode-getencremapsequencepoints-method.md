@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 512a39f55fec7b7246fe5e20008af594028c89dc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 508979a63c2ab25ee3478dde490a5c3f7df14c73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="8e477-102">ICorDebugCode::GetEnCRemapSequencePoints 메서드</span><span class="sxs-lookup"><span data-stu-id="8e477-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="8e477-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="8e477-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="08444-102">ICorDebugCode::GetEnCRemapSequencePoints 메서드</span><span class="sxs-lookup"><span data-stu-id="08444-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="08444-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="08444-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8e477-104">구문</span><span class="sxs-lookup"><span data-stu-id="8e477-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08444-104">구문</span><span class="sxs-lookup"><span data-stu-id="08444-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -41,5 +42,5 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8e477-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8e477-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="08444-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="08444-105">See Also</span></span>  
  

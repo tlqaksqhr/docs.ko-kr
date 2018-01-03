@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 572a39652f5c48582bf09c109d0ab9c4874b37a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: da25bd0186570a63ffd789fc44d9ed7252657575
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="ca463-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes 메서드</span><span class="sxs-lookup"><span data-stu-id="ca463-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
-<span data-ttu-id="ca463-103">`SetPESymbolBytes`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ca463-103">`SetPESymbolBytes` is obsolete.</span></span> <span data-ttu-id="ca463-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="ca463-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="b3a2c-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes 메서드</span><span class="sxs-lookup"><span data-stu-id="b3a2c-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
+<span data-ttu-id="b3a2c-103">`SetPESymbolBytes`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b3a2c-103">`SetPESymbolBytes` is obsolete.</span></span> <span data-ttu-id="b3a2c-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="b3a2c-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca463-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ca463-105">See Also</span></span>  
- [<span data-ttu-id="ca463-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ca463-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b3a2c-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b3a2c-105">See Also</span></span>  
+ [<span data-ttu-id="b3a2c-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b3a2c-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

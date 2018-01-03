@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a0cad44706ae4fda7f55f06aea93cae24203b894
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 973feab63d0a741fddb8cc96e1d48e1ae5a33892
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="8cd2d-102">ICorDebugEditAndContinueSnapshot::GetMvid 메서드</span><span class="sxs-lookup"><span data-stu-id="8cd2d-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-<span data-ttu-id="8cd2d-103">`GetMvid`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2d-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="8cd2d-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="8cd2d-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="ce075-102">ICorDebugEditAndContinueSnapshot::GetMvid 메서드</span><span class="sxs-lookup"><span data-stu-id="ce075-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+<span data-ttu-id="ce075-103">`GetMvid`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ce075-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="ce075-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="ce075-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8cd2d-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8cd2d-105">See Also</span></span>  
- [<span data-ttu-id="8cd2d-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8cd2d-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ce075-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ce075-105">See Also</span></span>  
+ [<span data-ttu-id="ce075-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ce075-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

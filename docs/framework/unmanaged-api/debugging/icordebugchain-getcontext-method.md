@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 060789990b547f263f9d8b46765a02e531789d15
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9ec212bb0de60c0cdff6b3fe26d6d4f6261d78fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="0ccd2-102">ICorDebugChain::GetContext 메서드</span><span class="sxs-lookup"><span data-stu-id="0ccd2-102">ICorDebugChain::GetContext Method</span></span>
-<span data-ttu-id="0ccd2-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="0ccd2-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="1afc7-102">ICorDebugChain::GetContext 메서드</span><span class="sxs-lookup"><span data-stu-id="1afc7-102">ICorDebugChain::GetContext Method</span></span>
+<span data-ttu-id="1afc7-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="1afc7-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ccd2-104">구문</span><span class="sxs-lookup"><span data-stu-id="0ccd2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1afc7-104">구문</span><span class="sxs-lookup"><span data-stu-id="1afc7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  

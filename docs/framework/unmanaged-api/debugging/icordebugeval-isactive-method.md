@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a695bfc4b7575a1a56dfba3dca515321a07239cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b574d74de1e042ab50e52eb3bb2fe217801bf1eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugevalisactive-method"></a><span data-ttu-id="97c63-102">ICorDebugEval::IsActive 메서드</span><span class="sxs-lookup"><span data-stu-id="97c63-102">ICorDebugEval::IsActive Method</span></span>
-<span data-ttu-id="97c63-103">ICorDebugEval 개체가이 현재 실행 되 고 있는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="97c63-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  
+# <a name="icordebugevalisactive-method"></a><span data-ttu-id="5c1a3-102">ICorDebugEval::IsActive 메서드</span><span class="sxs-lookup"><span data-stu-id="5c1a3-102">ICorDebugEval::IsActive Method</span></span>
+<span data-ttu-id="5c1a3-103">ICorDebugEval 개체가이 현재 실행 되 고 있는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5c1a3-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97c63-104">구문</span><span class="sxs-lookup"><span data-stu-id="97c63-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c1a3-104">구문</span><span class="sxs-lookup"><span data-stu-id="5c1a3-104">Syntax</span></span>  
   
 ```  
 HRESULT IsActive (  
@@ -38,15 +39,15 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="97c63-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="97c63-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5c1a3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5c1a3-105">Parameters</span></span>  
  `pbActive`  
- <span data-ttu-id="97c63-106">[out] 이 평가 활성 상태 인지 여부를 나타내는 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="97c63-106">[out] Pointer to a value that indicates whether this evaluation is active.</span></span>  
+ <span data-ttu-id="5c1a3-106">[out] 이 평가 활성 상태 인지 여부를 나타내는 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="5c1a3-106">[out] Pointer to a value that indicates whether this evaluation is active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97c63-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="97c63-107">Requirements</span></span>  
- <span data-ttu-id="97c63-108">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="97c63-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c1a3-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5c1a3-107">Requirements</span></span>  
+ <span data-ttu-id="5c1a3-108">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5c1a3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97c63-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="97c63-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5c1a3-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5c1a3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="97c63-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="97c63-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5c1a3-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c1a3-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="97c63-111">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97c63-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="5c1a3-111">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c1a3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
