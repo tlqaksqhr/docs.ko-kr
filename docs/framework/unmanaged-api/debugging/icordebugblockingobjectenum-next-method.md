@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c05420a54d7a79198e235a39e578bedf296b4fe9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f2e2168ea1b03e5a2339baf019da59f1e83a71a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next 메서드
 지정된 된 수의 가져옵니다 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) 개체에서 현재 위치부터 시작 하는 열거형입니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 ```  
 HRESULT Next([in] ULONG  celt,  
              [out, size_is(celt), length_is(*pceltFetched)]  
-                           CorDebugBlockingOjbect values[],  
+                           CorDebugBlockingObject values[],  
              [out] ULONG *pceltFetched;  
 ```  
   

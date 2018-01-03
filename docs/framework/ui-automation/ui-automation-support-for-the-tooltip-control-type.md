@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 2040020ba32aed97c613260948f0772355c1287f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2a152c9c753262cc82995746f474b0c3dcde2b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>ToolTip 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
  다음 표에서는 도구 설명 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
   
-|컨트롤 패턴|지원|노트|  
+|컨트롤 패턴|Support(지원)|노트|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider>|종속|UI 항목을 클릭하여 닫을 수 있는 도구 설명은 WindowPattern을 지원해야 자동으로 닫을 수 있습니다.|  
 |<xref:System.Windows.Automation.Provider.ITextProvider>|종속|접근성 향상을 위해, 도구 설명은 Text 컨트롤 패턴을 지원할 수 있지만 반드시 필요한 것은 아닙니다. Text 컨트롤 패턴은 텍스트에 다양한 스타일과 특성(예: 색, 굵은 글꼴, 기울임꼴)이 있을 때 유용합니다.|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 표에서는 모든 도구 설명 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|Support(지원)|노트|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|종속|없음|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|종속|없음|  

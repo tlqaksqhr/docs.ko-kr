@@ -17,26 +17,27 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0293a20f5f735dd38b1d167ebc5057f645fa011a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8c20bb8a9841b5ebc7a4ca9b5463fe4c541c0a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-structures"></a>디버깅 구조체
 이 섹션에서는 디버깅 API에서 사용하는 관리되지 않는 구조체에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [CLR_DEBUGGING_VERSION 구조체](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)  
  디버깅용 CLR(공용 언어 런타임)의 제품 버전을 정의합니다.  
   
- [CodeChunkInfo 구조 1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
+ [CodeChunkInfo Structure1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
  메모리 내의 단일 코드 청크를 나타냅니다.  
   
  [CorDebugBlockingObject 구조체](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)  
  스레드를 차단하는 개체 및 스레드 차단 이유를 정의합니다.  
   
- [CorDebugEHClause 구조](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)  
+ [CorDebugEHClause 구조체](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)  
  지정된 IL(중간 언어) 부분에 대한 EH(예외 처리) 절을 나타냅니다.  
   
  [CorDebugExceptionObjectStackFrame 구조체](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  

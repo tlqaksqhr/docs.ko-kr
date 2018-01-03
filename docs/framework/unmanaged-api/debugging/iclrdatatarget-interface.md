@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6a40276b28f3d20428f0d7eb0556a762fdb56801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73966ffe89f0e84d5a516f20962472d900332faa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget 인터페이스
 공용 언어 런타임 (CLR)의 대상 항목과 상호 작용 하기 위한 메서드를 제공합니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |[GetThreadContext 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|지정한 식별자를 가진 스레드 컨텍스트에 대 한 포인터를 가져옵니다.|  
 |[GetTLSValue 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|스레드 로컬 저장소 (TLS)에 지정 된 스레드에 대 한 지정된 된 인덱스에 값을 가져옵니다.|  
 |[ReadVirtual 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|지정된 된 버퍼에 지정 된 가상 메모리 주소에서 데이터를 읽습니다.|  
-|[요청 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|구현에 의해 정의 된 대로 작업을 요청 하는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에서 호출 됩니다.|  
+|[Request 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|구현에 의해 정의 된 대로 작업을 요청 하는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에서 호출 됩니다.|  
 |[SetThreadContext 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|대상 프로세스에서 지정 된 스레드의 현재 컨텍스트를 설정합니다.|  
 |[SetTLSValue 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|대상 프로세스에서 지정 된 스레드의 스레드 로컬 저장소 (TLS)에 값을 설정합니다.|  
 |[WriteVirtual 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|지정 된 가상 메모리 주소에 지정된 된 버퍼에서 데이터를 씁니다.|  
