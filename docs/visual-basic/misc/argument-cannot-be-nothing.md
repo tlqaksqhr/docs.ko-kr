@@ -9,11 +9,11 @@ ms.assetid: 2abd995b-36a5-45f0-b3c1-6e0c3b31a875
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3a54cf0ed9e2b307174c1be0e853a920dfc94202
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5de506c4a24f787dbb9e2d96f0e9e228f7e92288
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-cannot-be-nothing"></a>인수는 Nothing일 수 없습니다.
 값이 있어야 하는 인수에 대해 null 값이 제공되었습니다.  
@@ -25,4 +25,4 @@ ms.lasthandoff: 10/18/2017
 -   값이 올바르게 계산되었는지 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [예외 문제 해결: System.NullReferenceException](http://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)
+ <xref:System.NullReferenceException>

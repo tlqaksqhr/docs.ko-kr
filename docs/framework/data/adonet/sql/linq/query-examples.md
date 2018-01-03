@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e7d7a0a1f641603887675ed0c1faebd5c06b273
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 91ff476ed8f6060975c6adc1fe01a6db9c199969
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-examples"></a>쿼리 예제
 이 단원에서는 일반적인 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 쿼리에 대한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 및 C# 예제를 제공합니다. [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자들은 샘플 단원에서 제공하는 샘플 솔루션에서 더 많은 예제를 찾아볼 수 있습니다. 자세한 내용은 참조 [샘플](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)합니다.  
@@ -25,14 +26,14 @@ ms.lasthandoff: 10/18/2017
 > [!IMPORTANT]
 >  *db* 의 코드 예제에는 대개 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서입니다. *db* 인스턴스의 것으로 간주 되는 *Northwind* 클래스에서 상속 하는 <xref:System.Data.Linq.DataContext>합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [집계 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
  <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A> 등의 사용 방법을 설명합니다.  
   
- [시퀀스의 첫 번째 요소를 반환 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/return-the-first-element-in-a-sequence.md)  
+ [시퀀스의 첫 번째 요소 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-first-element-in-a-sequence.md)  
  <xref:System.Linq.Enumerable.First%2A> 사용 예제를 제공합니다.  
   
- [반환 또는 시퀀스의 건너뛰기 요소](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
+ [시퀀스에서 요소 반환 또는 건너뛰기](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
  <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> 사용 예제를 제공합니다.  
   
  [시퀀스의 요소 정렬](../../../../../../docs/framework/data/adonet/sql/linq/sort-elements-in-a-sequence.md)  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/18/2017
  [시퀀스에서 중복 요소 제거](../../../../../../docs/framework/data/adonet/sql/linq/eliminate-duplicate-elements-from-a-sequence.md)  
  <xref:System.Linq.Enumerable.Distinct%2A> 사용 예제를 제공합니다.  
   
- [시퀀스의 일부 또는 모든 요소가 조건을 만족 하는 경우 확인](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
+ [시퀀스에서 일부 또는 모든 요소가 조건을 만족하는지 확인](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
  <xref:System.Linq.Enumerable.All%2A> 및 <xref:System.Linq.Enumerable.Any%2A> 사용 예제를 제공합니다.  
   
  [두 시퀀스 연결](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
@@ -53,13 +54,13 @@ ms.lasthandoff: 10/18/2017
  [두 시퀀스 간의 차집합 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
  <xref:System.Linq.Enumerable.Except%2A> 사용 예제를 제공합니다.  
   
- [두 시퀀스의 교집합을 반환 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
+ [두 시퀀스의 교집합 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
  <xref:System.Linq.Enumerable.Intersect%2A> 사용 예제를 제공합니다.  
   
- [두 시퀀스의 합집합을 반환 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)  
+ [두 시퀀스의 합집합 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)  
  <xref:System.Linq.Enumerable.Union%2A> 사용 예제를 제공합니다.  
   
- [시퀀스를 배열로 변환 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-an-array.md)  
+ [시퀀스를 배열로 변환](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-an-array.md)  
  <xref:System.Linq.Enumerable.ToArray%2A> 사용 예제를 제공합니다.  
   
  [제네릭 목록으로 시퀀스 변환](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-a-generic-list.md)  

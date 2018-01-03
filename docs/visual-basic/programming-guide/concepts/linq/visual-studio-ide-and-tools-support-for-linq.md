@@ -12,17 +12,17 @@ ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 887c4fc280b64f996faf10e247c4c0ee1f1d6793
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 83de1e4c95ecea749e0a93c5c596d5e6c044a4ef
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE 및 LINQ (Visual Basic)에 대 한 지원 되는 도구
 Visual Studio IDE(통합 개발 환경)는 LINQ 응용 프로그램 개발을 지원하는 다음과 같은 기능을 제공합니다.  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- 개체 관계형 디자이너에서 사용할 수 있는 비주얼 디자인 도구는 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) Visual Basic의 클래스를 생성 하는 기본 데이터베이스의 관계형 데이터를 표시 하는 응용 프로그램입니다. 자세한 내용은 [Visual Studio의 LINQ to SQL 도구](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 참조하세요.  
+ 개체 관계형 디자이너에서 사용할 수 있는 비주얼 디자인 도구는 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) Visual Basic의 클래스를 생성 하는 기본 데이터베이스의 관계형 데이터를 표시 하는 응용 프로그램입니다. 자세한 내용은 [Visual Studio의 LINQ to SQL 도구](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 참조하세요.  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal 명령줄 도구  
  SQLMetal은 LINQ to SQL 응용 프로그램에서 사용할 기존 데이터베이스로부터 클래스를 생성하기 위해 빌드 프로세스에서 사용할 수 있는 명령줄 도구입니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614)를 참조하세요.  

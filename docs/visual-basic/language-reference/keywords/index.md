@@ -17,11 +17,11 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 35a40d6dfb6c66183afb0f3a2980a3b7863353fa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
 다음 표에는 모든 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 키워드가 나와 있습니다.  
@@ -107,7 +107,6 @@ ms.lasthandoff: 12/02/2017
 |-----------|-----------------|  
 |[배열 요약](../../../visual-basic/language-reference/keywords/arrays-summary.md)|배열을 만들고, 정의 및 사용하는 데 사용되는 언어 요소를 나열합니다.|  
 |[Collection 개체 요약](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|컬렉션에 사용되는 언어 요소를 나열합니다.|  
-|[컴파일러 지시문 요약(Visual Basic)](http://msdn.microsoft.com/en-us/874dad02-d4a5-4a9d-8a48-0191a0ac794a)|컴파일러 동작을 제어하는 지시문을 나열합니다.|  
 |[제어 흐름 요약](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|프로시저 흐름 반복 및 제어에 사용되는 문을 나열합니다.|  
 |[변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)|숫자, 날짜, 시간 및 문자열을 변환하는 데 사용되는 함수를 나열합니다.|  
 |[데이터 형식 요약](../../../visual-basic/language-reference/keywords/data-types-summary.md)|데이터 형식을 나열합니다. 또한 데이터 형식 간에 변환하고 데이터 형식을 확인하는 데 사용되는 함수를 나열합니다.|  

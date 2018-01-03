@@ -13,23 +13,24 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1332bf297dae4baae62d2abd731d236ad49be4ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 298ff0c6bfc5bc251483de8e90e3a394a2337369
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-guide-linq-to-dataset"></a>프로그래밍 가이드(LINQ to DataSet)
 이 단원에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 프로그래밍에 대한 개념 정보와 예제를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [LINQ to DataSet에서 쿼리](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [LINQ to DataSet의 쿼리](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 작성하는 방법에 대한 정보를 제공합니다.  
   
  [데이터 집합 쿼리](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  <xref:System.Data.DataSet> 개체를 쿼리하는 방법을 설명합니다.  
   
- [Datarow 비교](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
+ [DataRow 비교](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
  <xref:System.Data.DataRowComparer> 개체를 사용하여 데이터 행을 비교하는 방법을 설명합니다.  
   
  [쿼리에서 DataTable 만들기](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  

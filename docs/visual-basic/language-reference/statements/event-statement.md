@@ -26,11 +26,11 @@ ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-statement"></a>Event 문
 사용자 정의된 이벤트를 선언합니다.  
@@ -69,22 +69,22 @@ End Event
 |`accessmodifier`|선택 사항입니다. 이벤트에 액세스할 수 있는 코드를 지정합니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [공용](../../../visual-basic/language-reference/modifiers/public.md)— 이벤트를 선언 하는 요소에 액세스할 수 있는 모든 코드에서 액세스할 수 있습니다.<br />-   [보호 된](../../../visual-basic/language-reference/modifiers/protected.md)-코드의 클래스 및 파생된 클래스에서 액세스할 수 있습니다.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— 동일한 어셈블리의 코드에에서 액세스할 수 있습니다.<br />-   [개인](../../../visual-basic/language-reference/modifiers/private.md)— 이벤트를 선언 하는 요소에만 코드에 액세스할 수 있습니다.<br /><br /> `Protected Friend`를 지정하면 이벤트의 클래스, 파생 클래스 또는 동일한 어셈블리의 코드에서 액세스하도록 할 수 있습니다.|  
 |`Shared`|선택 사항입니다. 이 이벤트가 클래스 또는 구조체의 특정 인스턴스와 연결되지 않도록 지정합니다.|  
 |`Shadows`|선택 사항입니다. 이 이벤트가 기본 클래스의 이름이 같은 프로그래밍 요소 또는 오버로드된 요소 집합을 다시 선언하고 숨김을 나타냅니다. 모든 종류의 선언된 요소를 다른 종류로 섀도잉할 수 있습니다.<br /><br /> 섀도잉된 요소는 섀도잉 요소에 액세스할 수 없는 위치를 제외하고 해당 요소를 섀도잉하는 파생 클래스 내에서 사용할 수 없습니다. 예를 들어 `Private` 요소가 기본 클래스 요소를 섀도잉하는 경우 `Private` 요소에 액세스할 수 있는 권한이 없는 코드는 기본 클래스 요소에 대신 액세스합니다.|  
-|`eventname`|필수 요소. 이벤트의 이름입니다. 표준 변수 명명 규칙을 따릅니다.|  
+|`eventname`|필수. 이벤트의 이름입니다. 표준 변수 명명 규칙을 따릅니다.|  
 |`parameterlist`|선택 사항입니다. 이 이벤트의 매개 변수를 나타내는 지역 변수 목록입니다. 묶어야는 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md) 괄호 안에 있습니다.|  
 |`Implements`|선택 사항입니다. 이 이벤트가 인터페이스의 이벤트를 구현함을 나타냅니다.|  
 |`implementslist`|`Implements`가 제공된 경우 필수입니다. 구현할 `Sub` 프로시저 목록입니다. 여러 프로시저는 다음과 같이 쉼표로 구분합니다.<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> 각 `implementedprocedure`에는 다음과 같은 구문과 요소가 있습니다.<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-필요합니다. 이 프로시저의 포함하는 클래스 또는 구조체에서 구현하는 인터페이스의 이름입니다.<br />-   `Definedname`-필요합니다. 프로시저가 `interface`에 정의되는 이름입니다. 이 이름은 이 프로시저가 정의된 프로시저를 구현하는 데 사용하는 이름인 `name`과 동일하지 않아도 됩니다.|  
-|`Custom`|필수 요소. `Custom`으로 선언된 이벤트는 사용자 지정 `AddHandler`, `RemoveHandler` 및 `RaiseEvent` 접근자를 정의해야 합니다.|  
+|`Custom`|필수. `Custom`으로 선언된 이벤트는 사용자 지정 `AddHandler`, `RemoveHandler` 및 `RaiseEvent` 접근자를 정의해야 합니다.|  
 |`delegatename`|선택 사항입니다. 이벤트 처리기 서명을 지정하는 대리자의 이름입니다.|  
-|`AddHandler`|필수 요소. `AddHandler` 접근자를 선언합니다. 이 접근자는 명시적으로 `AddHandler` 문을 사용하거나 암시적으로 `Handles` 절을 사용하여 이벤트 처리기가 추가될 때 실행할 문을 지정합니다.|  
-|`End AddHandler`|필수 요소. `AddHandler` 블록을 종료합니다.|  
-|`value`|필수 요소. 매개 변수 이름입니다.|  
-|`RemoveHandler`|필수 요소. `RemoveHandler` 접근자를 선언합니다. 이 접근자는 `RemoveHandler` 문을 사용하여 이벤트 처리기가 제거될 때 실행할 문을 지정합니다.|  
-|`End RemoveHandler`|필수 요소. `RemoveHandler` 블록을 종료합니다.|  
-|`RaiseEvent`|필수 요소. `RaiseEvent` 접근자를 선언합니다. 이 접근자는 `RaiseEvent` 문을 사용하여 이벤트가 발생될 때 실행할 문을 지정합니다. 일반적으로 `AddHandler` 및 `RemoveHandler` 접근자에서 유지 관리하는 대리자 목록을 호출합니다.|  
-|`End RaiseEvent`|필수 요소. `RaiseEvent` 블록을 종료합니다.|  
-|`delegatesignature`|필수 요소. `delegatename` 대리자에 필요한 매개 변수와 일치하는 매개 변수 목록입니다. 묶어야는 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md) 괄호 안에 있습니다.|  
+|`AddHandler`|필수. `AddHandler` 접근자를 선언합니다. 이 접근자는 명시적으로 `AddHandler` 문을 사용하거나 암시적으로 `Handles` 절을 사용하여 이벤트 처리기가 추가될 때 실행할 문을 지정합니다.|  
+|`End AddHandler`|필수. `AddHandler` 블록을 종료합니다.|  
+|`value`|필수. 매개 변수 이름입니다.|  
+|`RemoveHandler`|필수. `RemoveHandler` 접근자를 선언합니다. 이 접근자는 `RemoveHandler` 문을 사용하여 이벤트 처리기가 제거될 때 실행할 문을 지정합니다.|  
+|`End RemoveHandler`|필수. `RemoveHandler` 블록을 종료합니다.|  
+|`RaiseEvent`|필수. `RaiseEvent` 접근자를 선언합니다. 이 접근자는 `RaiseEvent` 문을 사용하여 이벤트가 발생될 때 실행할 문을 지정합니다. 일반적으로 `AddHandler` 및 `RemoveHandler` 접근자에서 유지 관리하는 대리자 목록을 호출합니다.|  
+|`End RaiseEvent`|필수. `RaiseEvent` 블록을 종료합니다.|  
+|`delegatesignature`|필수. `delegatename` 대리자에 필요한 매개 변수와 일치하는 매개 변수 목록입니다. 묶어야는 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md) 괄호 안에 있습니다.|  
 |`statements`|선택 사항입니다. `AddHandler`, `RemoveHandler`, 및 `RaiseEvent` 메서드의 본문을 포함하는 문입니다.|  
-|`End Event`|필수 요소. `Event` 블록을 종료합니다.|  
+|`End Event`|필수. `Event` 블록을 종료합니다.|  
   
 ## <a name="remarks"></a>설명  
  이벤트가 선언된 다음 `RaiseEvent` 문을 사용하여 이벤트를 발생시킵니다. 일반적인 이벤트는 다음 코드 조각에 표시된 대로 선언하고 발생시킬 수 있습니다.  
@@ -100,7 +100,7 @@ End Event
   
  대부분의 경우 이 항목의 구문 섹션에 있는 첫 번째 구문을 이벤트 선언에 사용할 수 있습니다. 그러나 일부 시나리오에서는 이벤트의 세부 동작을 더 많이 제어해야 합니다. 이 항목의 구문 섹션에 있는 마지막 구문에서는 `Custom` 키워드를 사용하여 사용자 지정 이벤트를 정의할 수 있도록 함으로써 해당 제어를 제공합니다. 사용자 지정 이벤트에서는 코드가 이벤트에서 이벤트 처리기를 추가하거나 제거할 때 또는 코드에서 이벤트를 발생시킬 때 수행되는 동작을 정확히 지정합니다. 예제를 보려면 [하는 방법: 절약 메모리를 사용자 지정 이벤트 선언](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) 및 [하는 방법: 선언 사용자 지정 이벤트를 차단을 방지](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 이벤트를 사용하여 10초부터 0초까지 카운트 다운합니다. 코드는 여러 가지 이벤트 관련 메서드, 속성 및 문을 보여 줍니다. 여기에는 `RaiseEvent` 문이 포함됩니다.  
   
  이벤트를 발생시키는 클래스는 이벤트 소스이고 이벤트를 처리하는 메서드는 이벤트 처리기입니다. 이벤트 소스는 생성되는 이벤트에 대해 여러 개의 처리기를 사용할 수 있습니다. 클래스에서 이벤트를 발생시키면 해당 이벤트는 개체의 해당 인스턴스에 대해 이벤트를 처리하도록 선택한 모든 클래스에서 발생됩니다.  
@@ -122,7 +122,7 @@ End Event
  단추를 클릭 하 고 이전 예제를 실행 하려면 F5 키를 눌러 **시작**합니다. 첫 번째 텍스트 상자에서 초를 카운트 다운하기 시작합니다. 전체 시간(10초)이 경과되면 첫 번째 텍스트 상자에 "Done"이 표시됩니다.  
   
 > [!NOTE]
->  `My.Application.DoEvents` 메서드는 폼과 같은 방식으로 이벤트를 처리하지 않습니다. 폼에서 이벤트를 직접 처리하도록 하려면 다중 스레딩을 사용할 수 있습니다. 자세한 내용은 참조 [스레딩](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)합니다.  
+>  `My.Application.DoEvents` 메서드는 폼과 같은 방식으로 이벤트를 처리하지 않습니다. 폼에서 이벤트를 직접 처리하도록 하려면 다중 스레딩을 사용할 수 있습니다. 자세한 내용은 참조 [스레딩](../../programming-guide/concepts/threading/index.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [RaiseEvent 문](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  

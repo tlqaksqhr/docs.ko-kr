@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3705db8b9d359ce83c6c47bef58de327745bed44
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de415a6282b1d27d803d448bd3225355c08e011b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server 공용 언어 런타임 통합
 SQL Server 2005에는 .NET Framework for Microsoft Windows의 CLR(공용 언어 런타임) 구성 요소가 통합되어 있습니다. 따라서 Microsoft Visual Basic .NET 및 Microsoft Visual C#을 비롯하여 모든 .NET Framework 언어를 사용하여 저장 프로시저, 트리거, 사용자 정의 형식, 사용자 정의 함수, 사용자 정의 집계 및 스트리밍 테이블 반환 함수를 작성할 수 있습니다. <xref:Microsoft.SqlServer.Server> 네임스페이스에는 관리 코드에서 Microsoft SQL Server 환경과 상호 작용할 수 있도록 하는 새로운 API(응용 프로그래밍 인터페이스) 집합이 들어 있습니다.  
@@ -30,7 +31,7 @@ SQL Server 2005에는 .NET Framework for Microsoft Windows의 CLR(공용 언어 
   
 1.  [공용 언어 런타임 (CLR) 통합 프로그래밍 개요](http://go.microsoft.com/fwlink/?LinkId=115240)  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SQL Server CLR 통합 소개](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
  SQL Server CLR 통합에 대해 소개합니다. 또한 추가 항목에 대한 링크도 제공합니다.  
   
@@ -49,7 +50,7 @@ SQL Server 2005에는 .NET Framework for Microsoft Windows의 CLR(공용 언어 
  [컨텍스트 연결](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
  컨텍스트 연결에 대해 설명합니다.  
   
- [ADO.NET의 SQL Server 프로세스-관련 동작](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
+ [ADO.NET의 SQL Server In-Process별 동작](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
  ADO.NET에 대한 SQL Server in-process 고유의 확장명 및 컨텍스트 연결에 대해 설명합니다. 또한 추가 항목에 대한 링크도 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  

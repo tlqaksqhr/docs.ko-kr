@@ -17,11 +17,11 @@ ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6b5da8e5eacacde9de5bdc54ef2d5e4d7f0d2653
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b02171b28034d676b7027e96c2c66e36be9ae604
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rootnamespace"></a>/rootnamespace
 모든 형식 선언에 대한 네임스페이스를 지정합니다.  
@@ -45,9 +45,9 @@ ms.lasthandoff: 11/21/2017
   
 |Visual Studio에서 /rootnamespace를 설정 하려면 통합 개발 환경|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.<br />2.  **응용 프로그램** 탭을 클릭합니다.<br />3.  값을 수정 된 **루트 Namespace** 상자입니다.|  
+|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **응용 프로그램** 탭을 클릭합니다.<br />3.  값을 수정 된 **루트 Namespace** 상자입니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `In.vb` 네임 스페이스의 모든 형식 선언을 포함 하 고 `mynamespace`합니다.  
   
 ```  

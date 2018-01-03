@@ -14,20 +14,21 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e66c26c12f3f62ee61e02e16318e747793ff927
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61b04be25f54ef22511f45b5752c3ccfa90d94ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-wcf-data-services"></a>WCF Data Services 정의
 이 섹션을 만들고 구성 하는 방법을 설명 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 으로 데이터를 노출 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]참조 데이터 서비스를 만드는 데 필요한 기본 단계 [서비스로 데이터 노출](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 제공하는 데이터 서비스 구성 옵션에 대해 설명합니다.  
   
- [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Data Services 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  데이터를 데이터 서비스로 노출하기 위한 공급자 모델에 대해 설명합니다.  
   
  [서비스 작업](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
  [인터셉터](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
  데이터 서비스에 대한 요청에서 사용자 지정 비즈니스 논리를 수행하는 인터셉터 메서드를 정의하는 방법에 대해 설명합니다.  
   
- [개발 및 WCF Data Services 배포](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
+ [WCF Data Services 개발 및 배포](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
  Visual Studio를 사용하여 데이터 서비스를 개발 및 배포하는 방법에 대해 설명합니다.  
   
  [WCF Data Services 보안](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  

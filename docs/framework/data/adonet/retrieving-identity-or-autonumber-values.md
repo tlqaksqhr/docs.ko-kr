@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1a689bb22fc5bb553084b9d1b1dc60e74e47970c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87da4a20430373d15e433ffa21c1e29bf560ebd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>ID 또는 일련 번호 값 검색
 관계형 데이터베이스에서 기본 키는 항상 고유한 값이 들어 있는 열 또는 열의 조합입니다. 기본 키 값을 알면 해당 값이 있는 행을 찾을 수 있습니다. SQL Server, Oracle 및 Microsoft Access/Jet 등과 같은 관계형 데이터베이스 엔진은 기본 키로 지정할 수 있는 자동 증분 열의 작성을 지원합니다. 이러한 값은 서버에 의해 행으로 생성되어 테이블에 추가됩니다. 이를 위해서는 SQL Server에서는 열의 identity 속성을 설정하고, Oracle에서는 시퀀스를 만들고, Microsoft Access에서는 AutoNumber 열을 만듭니다.  
@@ -106,7 +107,7 @@ WHERE ShipperID = SCOPE_IDENTITY();
 ## <a name="retrieving-microsoft-access-autonumber-values"></a>Microsoft Access Autonumber 값 검색  
  이 단원에는 Jet 4.0 데이터베이스에서 `Autonumber` 값을 검색하는 방법을 보여 주는 샘플이 있습니다. Jet 데이터베이스 엔진은 출력 매개 변수를 사용하거나 배치로 여러 개의 문을 실행하는 것을 지원하지 않으므로, 위에 설명한 기술을 사용하여 삽입된 행에 할당된 새 `Autonumber` 값을 반환할 수 없습니다. 그러나 코드를 추가할 수 있습니다는 `RowUpdated` @ 별도 SELECT를 실행 하는 이벤트 처리기@IDENTITY 새 검색 하는 문을 `Autonumber` 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예제에서는 `MissingSchemaAction.AddWithKey`를 사용하여 스키마 정보를 추가하는 대신 먼저 `DataTable`을 올바른 스키마로 구성한 다음 <xref:System.Data.OleDb.OleDbDataAdapter>를 호출하여 `DataTable`을 채웁니다. 이 경우는 **CategoryID** 열을 설정 하 여 0부터 시작 하는 삽입 된 각 행에 할당 된 값을 감소 시키기 위해 구성 된 <xref:System.Data.DataColumn.AutoIncrement%2A> 를 `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 0으로 및 <xref:System.Data.DataColumn.AutoIncrementStep%2A> 를-1입니다. 그런 다음 코드에서 두 개의 새 행을 추가하고 `GetChanges`를 사용하여 변경된 행을 `DataTable` 메서드로 전달된 새 `Update`에 추가합니다.  
   
  [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
@@ -541,7 +542,7 @@ class Program {
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Dataadapter 및 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [행 상태 및 행 버전](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  [AcceptChanges 및 RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  [데이터 집합 콘텐츠 병합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  

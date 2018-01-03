@@ -31,11 +31,11 @@ ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 009c5a383cc3296f7f92888a344fa265547f1077
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 문(Visual Basic)
 문 그룹을 지정한 횟수 만큼을 반복합니다.  
@@ -58,13 +58,13 @@ Next [ counter ]
 |----------|-----------------|  
 |`counter`|에 필요한는 `For` 문. 숫자 변수입니다. 루프 제어 변수입니다. 자세한 내용은 참조 [카운터 인수](#BKMK_Counter) 이 항목의 뒷부분에 나오는 합니다.|  
 |`datatype`|선택 사항입니다. 데이터 형식이 `counter`합니다. 자세한 내용은 참조 [카운터 인수](#BKMK_Counter) 이 항목의 뒷부분에 나오는 합니다.|  
-|`start`|필수 요소. 숫자 식입니다. `counter`의 초기 값입니다.|  
-|`end`|필수 요소. 숫자 식입니다. 최종 값 `counter`합니다.|  
+|`start`|필수. 숫자 식입니다. `counter`의 초기 값입니다.|  
+|`end`|필수. 숫자 식입니다. 최종 값 `counter`합니다.|  
 |`step`|선택 사항입니다. 숫자 식입니다. 양입니다 `counter` 루프가 반복 될 때마다 증가 합니다.|  
 |`statements`|선택 사항입니다. 사이 하나 이상의 문이 `For` 및 `Next` 지정한 횟수 만큼을 실행 하는 합니다.|  
 |`Continue For`|선택 사항입니다. 다음 루프 반복으로 제어를 전송 합니다.|  
 |`Exit For`|선택 사항입니다. 밖으로 제어를 전송에서 `For` 루프입니다.|  
-|`Next`|필수 요소. 정의 종료는 `For` 루프입니다.|  
+|`Next`|필수. 정의 종료는 `For` 루프입니다.|  
   
 > [!NOTE]
 >  `To` 카운터에 대 한 범위를 지정 하려면이 문을 키워드를 사용 합니다. 이 키워드를 사용할 수도 있습니다는 [선택... Case 문](../../../visual-basic/language-reference/statements/select-case-statement.md) 및 배열 선언 합니다. 배열 선언에 대 한 자세한 내용은 참조 [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  
@@ -164,17 +164,17 @@ Next [ counter ]
   
  `start`, `end`, 및 `step` 식의 형식으로 확대 되는 모든 데이터 형식으로 평가할 수 `counter`합니다. 에 대 한 사용자 정의 형식을 사용 하면 `counter`를 정의 해야 할 수 있습니다는 `CType` 변환 연산자의 종류를 `start`, `end`, 또는 `step` 유형과 `counter`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 제네릭 목록에서 모든 요소를 제거합니다. 대신는 [각각에 대해... 다음 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md), 예제에 나와 있는 `For`... `Next` 내림차순 반복 하는 문입니다. 이 예제에서는 때문에이 기술을 사용 하 여는 `removeAt` 메서드 더 낮은 인덱스 값을 제거 하는 요소 뒤 요소를 사용 하면 됩니다.  
   
  [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 사용 하 여 선언 하는 열거형 반복는 [Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md)합니다.  
   
  [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 문 매개 변수 사용에 대 한 연산자 오버 로드가 있는 클래스는 `+`, `-`, `>=`, 및 `<=` 연산자입니다.  
   
  [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
@@ -186,4 +186,4 @@ Next [ counter ]
  [Do...Loop 문](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
  [중첩 제어 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  [Exit 문](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [컬렉션](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+ [컬렉션](../../programming-guide/concepts/collections.md)

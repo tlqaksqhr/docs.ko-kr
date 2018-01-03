@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cb1f26ec1fb8e5344946938206bb2418eeb6cd2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0f76178d6b10e8253fd135c35504389e03d8acae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aggregate-queries"></a>집계 쿼리
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 `Average`, `Count`, `Max`, `Min` 및 `Sum` 집계 연산자가 지원됩니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 집계 연산자의 다음과 같은 특징에 유의하세요.  
@@ -34,11 +35,11 @@ ms.lasthandoff: 10/18/2017
   
  다음 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다. 자세한 내용은 참조 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [숫자 시퀀스에서 평균 값을 반환 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [숫자 시퀀스에서 평균 값 반환](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Average%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
- [시퀀스의 요소 수를 계산](../../../../../../docs/framework/data/adonet/sql/linq/count-the-number-of-elements-in-a-sequence.md)  
+ [시퀀스의 요소 수 계산](../../../../../../docs/framework/data/adonet/sql/linq/count-the-number-of-elements-in-a-sequence.md)  
  <xref:System.Linq.Enumerable.Count%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
  [숫자 시퀀스에서 최대값 찾기](../../../../../../docs/framework/data/adonet/sql/linq/find-the-maximum-value-in-a-numeric-sequence.md)  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/18/2017
  [숫자 시퀀스에서 최소값 찾기](../../../../../../docs/framework/data/adonet/sql/linq/find-the-minimum-value-in-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Min%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
- [숫자 시퀀스에서 값의 합계를 계산 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)  
+ [숫자 시퀀스에서 값의 합계 계산](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Sum%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
 ## <a name="related-sections"></a>관련 단원  

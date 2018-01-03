@@ -15,11 +15,11 @@ ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f783cc5b20c4fe6d7812a05a66cbc4cdfc0b9395
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 692681b21c243432ec8e7160bcc1eaa4e718d64d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optionstrict"></a>/optionstrict
 암시적 형식 변환을 제한 하는 엄격한 형식 의미 체계를 적용 합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  선택 사항입니다. `/optionstrict+` 옵션 암시적 형식 변환을 제한 합니다. 이 옵션의 기본값은 `/optionstrict-`합니다. `/optionstrict+` 옵션은 동일 `/optionstrict`합니다. 관대 한 형식 의미 체계를 모두 사용할 수 있습니다.  
   
  `custom`  
- 필수 요소. 엄격한 언어 의미 체계를 준수 하지 않을 때 경고를 표시 합니다.  
+ 필수. 엄격한 언어 의미 체계를 준수 하지 않을 때 경고를 표시 합니다.  
   
 ## <a name="remarks"></a>설명  
  때 `/optionstrict+` 가 적용 된 경우 확장 유형 변환만 암시적으로 만들 수 있습니다. 할당 하는 등의 형식 변환에 축소 변환을 암시적는 `Decimal` 형식 개체는 정수 형식 개체를, 오류로 보고 됩니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-set-optionstrict-in-the-visual-studio-ide"></a>/Optionstrict Visual Studio IDE에서 설정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. 에 **프로젝트** 메뉴를 클릭 하 여 **속성입니다.** 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. 에 **프로젝트** 메뉴를 클릭 하 여 **속성입니다.**   
   
 2.  **컴파일** 탭을 클릭합니다.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 -   참조 [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `Test.vb` 엄격한 형식 의미 체계를 사용 하 여 합니다.  
   
 ```  

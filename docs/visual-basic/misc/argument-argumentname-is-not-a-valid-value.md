@@ -9,11 +9,11 @@ ms.assetid: 38d937f1-3f81-4c15-834f-c4a2769a0011
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bcb485eb3b8cfba9243e3a8e366b6aca7e60e9d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cc7acb9e91b23ea87cf46fe2b3b15b062429526d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39ltargumentnamegt39-is-not-a-valid-value"></a>인수 &#39; &lt;argumentname&gt;&#39; 잘못 된 값
 인수의 값이 잘못되었습니다.  
@@ -26,4 +26,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [값 또는 참조로 인수 전달](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [매개 변수 Visual Basic의 메커니즘 변경 전달](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+

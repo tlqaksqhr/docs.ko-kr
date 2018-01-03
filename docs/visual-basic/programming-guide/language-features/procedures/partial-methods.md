@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 33e34c63988e74be2c22cb7b1358f5e8b04048c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial-methods-visual-basic"></a>부분 메서드(Visual Basic)
 부분 메서드는 개발자가 코드를 사용자 지정 논리를 삽입할 수를 사용 합니다. 일반적으로 코드는 디자이너에서 생성 된 클래스의 일부입니다. 부분 메서드는 코드 생성기에 의해 만들어진 partial 클래스에 정의 된 하 고 변경 된 내용이 알림을 제공 하 여 일반적으로 사용 됩니다. 사용 개발자는 변경에 따른에서 사용자 지정 동작을 지정할 수 있습니다.  
@@ -58,7 +58,7 @@ End Sub
   
  앞의 예제는 선언의 시그니처를 정확 하 게 복제 되지만 변형이 가능 합니다. 특히, 다른 한정자를 추가할 수와 같은 `Overloads` 또는 `Overrides`합니다. 하나의 `Overrides` 한정자는 허용 됩니다. 메서드 한정자에 대 한 자세한 내용은 참조 [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)합니다.  
   
-## <a name="use"></a>기능  
+## <a name="use"></a>사용  
  다른 모든를 호출 하는 것 처럼 부분 메서드를 호출 `Sub` 프로시저입니다. 메서드 구현 된 경우 인수 평가 되 고 메서드 본문이 실행 됩니다. 그러나 부분 메서드를 구현 하는 선택적 임을 고려해 야 합니다. 메서드가 구현 되지 않은 경우에이 호출이 아무 효과가 없으며 메서드에 인수로 전달 된 식은 계산 되지 않습니다.  
   
 ## <a name="example"></a>예제  
@@ -83,5 +83,5 @@ End Sub
  [Sub 프로시저](./sub-procedures.md)  
  [선택적 매개 변수](./optional-parameters.md)  
  [부분](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [LINQ to SQL에서 코드 생성](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [부분 메서드를 사용 하 여 비즈니스 논리 추가](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
+ [LINQ to SQL에서 코드 생성](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Partial 메서드를 사용하여 비즈니스 논리 추가](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

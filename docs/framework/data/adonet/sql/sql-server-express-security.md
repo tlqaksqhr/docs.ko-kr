@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2052656a524eafd7b9a137ac7d5006aba53fc075
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77658b1c4b40090b8e532f1a0566ecb927328d65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 보안
 Microsoft SQL Server Express Edition(SQL Server Express)은 Microsoft SQL Server를 기반으로 하며 대부분의 데이터베이스 엔진 기능을 지원합니다. 이 제품은 중요하지 않은 기능 및 네트워크 연결이 기본적으로 해제되어 있기 때문에 악의적인 사용자의 공격에 노출되는 영역이 적습니다.  

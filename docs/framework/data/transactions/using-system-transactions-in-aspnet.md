@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 321489a2b32bafe4a73f56e0a5dba20f5661bdc2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>ASP.NET에서 System.Transactions 사용
 이 항목에서는 <xref:System.Transactions> 응용 프로그램 내부에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 를 성공적으로 사용하는 방법에 대해 설명합니다.  
@@ -71,4 +72,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>참고 항목  
  [ASP.NET 신뢰 수준과 정책 파일](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
  [securityPolicy 요소 (ASP.NET 설정 스키마)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
- [트랜잭션 관리 확대](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+ [트랜잭션 관리 에스컬레이션](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

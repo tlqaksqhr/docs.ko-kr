@@ -11,11 +11,11 @@ ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 503d586c0515b4cb53f8ec5656e5fe765cc094a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd6c0b1fa422dc4ab659d8c59472e5c098c729bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iterator-visual-basic"></a>반복기(Visual Basic)
 지정 하는 함수 또는 `Get` 접근자가 반복기입니다.  
@@ -33,30 +33,28 @@ ms.lasthandoff: 11/21/2017
   
  반복기는 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 소멸자에서 발생할 수 없습니다.  
   
- 반복기는 익명 함수 될 수 있습니다. 자세한 내용은 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)를 참조하세요.  
+ 반복기는 익명 함수 될 수 있습니다. 자세한 내용은 [반복기](../../programming-guide/concepts/iterators.md)를 참조하세요.  
   
- 반복기에 대한 자세한 내용은 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)를 참조하세요.  
-  
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  `Iterator` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
 -   [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
   
 -   [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 반복기 함수를 보여 줍니다. 반복기 함수에는 `Yield` 문 내에 있는 한 [에 대 한... 다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프입니다. 각 반복에서 [각각에 대해](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문 본문에서 `Main` 에 대 한 호출을 만듭니다는 `Power` 반복기 함수입니다. 반복기 함수를 호출할 때마다 다음에 `Yield` 루프를 반복하는 도중에 `For…Next` 문이 실행됩니다.  
   
  [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제는 반복기인 `Get` 접근자에 대해 설명합니다. `Iterator` 한정자는 속성 선언에 있습니다.  
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
- 추가 예제를 참조 하십시오. [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)합니다.  
+ 추가 예제를 참조 하십시오. [반복기](../../programming-guide/concepts/iterators.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
- [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+ [반복기](../../programming-guide/concepts/iterators.md)  
  [Yield 문](../../../visual-basic/language-reference/statements/yield-statement.md)

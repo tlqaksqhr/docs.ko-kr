@@ -15,11 +15,11 @@ ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a6f602e0b0b23345bf1f5aae843bd44bd2642bc9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 62a9a4bf3428f3ee731e7ecc63be51dbf3076ee4
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optioncompare"></a>/optioncompare
 문자열 비교 방법을 지정합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-set-optioncompare-in-the-visual-studio-ide"></a>/Optioncompare Visual Studio IDE에서 설정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
   
 2.  **컴파일** 탭을 클릭합니다.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
 -   참조 [Option Compare 문](../../../visual-basic/language-reference/statements/option-compare-statement.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `ProjFile.vb` 컴파일하고 이진 문자열 비교를 사용 합니다.  
   
 ```  

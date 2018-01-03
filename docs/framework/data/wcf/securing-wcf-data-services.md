@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93638fc9287b3b44ec066c51b9599d991f9b046d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c45da4ec1fa5d111be19437dde54035a89f9162e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-wcf-data-services"></a>WCF Data Services에 보안 설정
 이 항목에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]을 지원하는 서비스에 액세스하는 응용 프로그램 및 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다. 또한 보안 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램을 만들기 위한 권장 사항도 따라야 합니다.  

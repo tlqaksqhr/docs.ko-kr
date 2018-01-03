@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5b1a306ba694d4bbfc4719fc728112964b1ce40f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>방법: 부호 없는 형식을 사용하는 Windows 함수 호출(Visual Basic)
 클래스, 모듈 또는 부호 없는 정수 형식의 멤버가 포함 된 구조를 사용 하는 경우이 멤버에 액세스할 수 있습니다 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/09/2017
     ```  
   
     > [!CAUTION]
-    >  `UInteger`, `ULong`, `UShort`, 및 `SByte` 데이터 형식이 다의 일부가 [언어 독립성 및 언어 독립적 구성 요소](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), 지므로 CLS 규격 코드 구성 요소를 사용할 수 없습니다는 사용 되 고  
+    >  `UInteger`, `ULong`, `UShort`, 및 `SByte` 데이터 형식이 다의 일부가 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS), 지므로 CLS 규격 코드 구성 요소를 사용할 수 없습니다는 사용 되 고  
   
     > [!IMPORTANT]
     >  Windows 응용 프로그램 프로그래밍 인터페이스 (API)와 같은 비관리 코드를 호출 하는 잠재적인 보안 위험에 코드를 제공 합니다.  

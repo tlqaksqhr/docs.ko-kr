@@ -9,11 +9,11 @@ ms.assetid: d1ab6767-8334-4d7c-bb99-c837a793ed69
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3a6c42d4e56031838a312b2ad22a9b37dd580efe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 24afc8b357ff68db2f23c6bd6382f5988f9eea83
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-in-the-range-of--32768-to-65535"></a>인수 &#39; &lt;argumentname&gt;&#39;-32768에서 65535 사이 여야 합니다
 인수 값이 -32,768에서 65,535 사이의 허용 범위를 벗어났습니다.  
@@ -26,4 +26,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [값 또는 참조로 인수 전달](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [Visual Basic 6.0 사용자를 위한 메커니즘을 전달 하는 매개 변수](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6cbb6d4c11c06c1771cb32021c6c148564a6034a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a316ae288d677a0ad5bd602399e27389839ef092
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Entity Framework 데이터 공급자 작성
 이 단원에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 이외의 데이터 소스를 지원하기 위해 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 공급자를 작성하는 방법을 설명합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]를 지원하는 공급자가 포함되어 있습니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="sample"></a>샘플  
  참조는 [Entity Framework 샘플 공급자](http://go.microsoft.com/fwlink/?LinkId=180616) 의 예는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 이외의 데이터 소스를 지 원하는 공급자는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SQL 생성](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
   
  [수정 SQL 생성](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  

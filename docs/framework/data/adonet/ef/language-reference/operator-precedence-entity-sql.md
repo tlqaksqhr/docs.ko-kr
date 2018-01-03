@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 484eedffeaffb625cd43352dadedb8c99fbc65ed
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bc8ebd235016a22792d98e1a966e8c1217e2823e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operator-precedence-entity-sql"></a>연산자 우선 순위(Entity SQL)
 경우는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에 여러 명의 연산자, 연산자 우선 순위가 연산 수행 순서를 결정 합니다. 실행 순서는 쿼리 결과에 상당한 영향을 미칠 수 있습니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
 |5|정렬|`< > <= >=`|  
 |6|같음|`= != <>`|  
 |7|조건부 AND|`and &&`|  
-|9|조건부 OR|`or &#124;&#124;`|  
+|8|조건부 OR|`or &#124;&#124;`|  
   
  식에 연산자 우선 순위 수준이 동일한 두 연산자가 있으면 쿼리 내의 위치를 기준으로 왼쪽에서 오른쪽으로 계산됩니다. 예를 들어, `x+y-z`는 `(x+y)-z`로 계산됩니다.  
   

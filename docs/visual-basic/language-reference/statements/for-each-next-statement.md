@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 문(Visual Basic)
 컬렉션의 각 요소에 대 한 문 그룹을 반복합니다.  
@@ -57,11 +57,11 @@ Next [ element ]
 |---|---|  
 |`element`|에 필요한는 `For Each` 문. 경우 선택 사항는 `Next` 문. 변수입니다. 컬렉션의 요소를 반복 하는 데 사용 합니다.|  
 |`datatype`|필요한 경우 `element` 이미 선언 되지 않습니다. 데이터 형식이 `element`합니다.|  
-|`group`|필수 요소. 컬렉션 형식 이거나 개체는 형식으로 사용 되는 변수입니다. 컬렉션을 참조 하는 `statements` 를 반복할 합니다.|  
+|`group`|필수. 컬렉션 형식 이거나 개체는 형식으로 사용 되는 변수입니다. 컬렉션을 참조 하는 `statements` 를 반복할 합니다.|  
 |`statements`|선택 사항입니다. 사이 하나 이상의 문이 `For Each` 및 `Next` 각 항목에 대해 실행 하는 `group`합니다.|  
 |`Continue For`|선택 사항입니다. 제어의 시작 부분에 전달 된 `For Each` 루프입니다.|  
 |`Exit For`|선택 사항입니다. 밖으로 제어를 전송에서 `For Each` 루프입니다.|  
-|`Next`|필수 요소. 정의 종료는 `For Each` 루프입니다.|  
+|`Next`|필수. 정의 종료는 `For Each` 루프입니다.|  
   
 ## <a name="simple-example"></a>간단한 예  
  사용 하 여 한 `For Each`... `Next` 컬렉션 또는 배열의 각 요소에 대 한 문 집합을 반복할 때 루프입니다.  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- 더 많은 예제를 참조 하십시오. [컬렉션](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) 및 [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  
+ 더 많은 예제를 참조 하십시오. [컬렉션](../../../standard/collections/index.md) 및 [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  
   
 ## <a name="nested-loops"></a>중첩된 루프  
  중첩할 수 `For Each` 서로 배치 하 여 루프입니다.  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- 자세한 내용은 참조 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [Yield 문을](../../../visual-basic/language-reference/statements/yield-statement.md), 및 [반복기](../../../visual-basic/language-reference/modifiers/iterator.md)합니다.  
+ 자세한 내용은 참조 [반복기](../../programming-guide/concepts/iterators.md), [Yield 문을](../../../visual-basic/language-reference/statements/yield-statement.md), 및 [반복기](../../../visual-basic/language-reference/modifiers/iterator.md)합니다.  
   
 ## <a name="technical-implementation"></a>기술 구현  
  경우는 `For Each`...`Next` Visual Basic, 문을 실행 한 번만 루프를 시작 하기 전에 컬렉션 자체를 평가 합니다. 문 블록 변경 되 면 `element` 또는 `group`, 이러한 변경 내용은 루프의 반복 영향을 주지 않습니다.  
@@ -165,12 +165,12 @@ End Sub
   
  **배열을 탐색 합니다.** 때문에 <xref:System.Array> 클래스가 구현 하는 <xref:System.Collections.IEnumerable> 인터페이스, 모든 배열 노출는 <xref:System.Array.GetEnumerator%2A> 메서드. 즉, 배열을으로 반복할 수 있는지는 `For Each`... `Next` 루프입니다. 그러나 배열 요소만 읽을 수 있습니다. 변경할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 C:\ 디렉터리에 있는 모든 폴더를 사용 하 여 나열 된 <xref:System.IO.DirectoryInfo> 클래스입니다.  
   
  [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 컬렉션 정렬 절차를 보여 줍니다. 이 예제에서는 인스턴스를 정렬 한 `Car` 에 저장 되어 있는 클래스는 <xref:System.Collections.Generic.List%601>합니다. `Car` 클래스는 <xref:System.IComparable%601.CompareTo%2A> 메서드가 구현되어야 하는 <xref:System.IComparable%601> 인터페이스를 구현합니다.  
   
  호출할 때마다는 <xref:System.IComparable%601.CompareTo%2A> 메서드 정렬에 사용 되는 단일 비교가 수행 합니다. `CompareTo` 메서드의 사용자 작성 코드는 다른 개체와 현재 개체의 각 비교에 대한 값을 반환합니다. 현재 개체가 다른 개체보다 작으면 반환되는 값이 0보다 작고, 현재 개체가 다른 개체보다 크면 0보다 크고, 같으면 0입니다. 이렇게 하면 보다 큼, 보다 작음 및 같음에 대한 조건을 코드에서 정의할 수 있습니다.  
@@ -180,7 +180,7 @@ End Sub
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
- [컬렉션](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [컬렉션](../../../standard/collections/index.md)  
  [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [루프 구조](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [While...End While 문](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  

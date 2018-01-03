@@ -14,11 +14,11 @@ ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04a1b16a10d2a3945d1efbe3a2bd0850f1da39fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ca2454f5c306b3defd1c885dfd59ee130f3e828
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>어셈블리 &#39;에 필요한 참조 &lt;assemblyidentity&gt;&#39; 포함 형식 &#39;&lt; typename&gt;&#39; 하지만 프로젝트 &#39; 사이의 모호성 때문 적합 한 참조를 찾을 수 없습니다&lt; projectname1&gt;&#39; 및 &#39;&lt; projectname2&gt;&#39;
 식은 프로젝트 외부에 정의된 클래스, 구조체, 인터페이스, 열거형 또는 대리자와 같은 형식을 사용합니다. 그러나 해당 형식을 정의하는 둘 이상의 어셈블리에 대한 프로젝트 참조가 있습니다.  
@@ -38,6 +38,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)  
  [선언된 요소 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [NIB 방법: 참조 추가 대화 상자를 사용하여 참조 추가 또는 제거](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+   
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)  
  [끊어진 참조 문제 해결](/visualstudio/ide/troubleshooting-broken-references)

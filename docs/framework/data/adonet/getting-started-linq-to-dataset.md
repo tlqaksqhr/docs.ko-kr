@@ -13,20 +13,21 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8197fefdfe54eae46aa4e593fd5014a4485f9a48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e9e7dc1200dcb3ca54cebaf42168930c49f3d63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-linq-to-dataset"></a>시작(LINQ to DataSet)
 이 단원에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 프로그래밍에 대한 기본 정보를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [LINQ to DataSet 개요](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에 대한 개념적인 개요를 설명합니다.  
   
- [데이터 집합으로 데이터를 로드합니다.](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [데이터를 데이터 집합에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  <xref:System.Data.DataSet>을 채우는 예제를 제공합니다. 이 예제에서는 <xref:System.Data.Common.DataAdapter>를 사용하여 데이터베이스에서 데이터를 검색합니다.  
   
  [샘플 데이터베이스 다운로드](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  

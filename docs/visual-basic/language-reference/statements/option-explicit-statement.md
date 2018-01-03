@@ -19,11 +19,11 @@ ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d39b3d7cf5096e3b263938d32e017eae5708e042
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f3d4c9cd3310e0ec3943c4e2b5e28be5b9a393db
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 문(Visual Basic)
 모든 변수는 파일에 명시적으로 강제 또는 암시적 선언을 변수의 허용 합니다.  
@@ -47,26 +47,26 @@ Option Explicit { On | Off }
  `Option Explicit` 문은 사용하는 경우 파일에서 다른 소스 코드 문 앞에 나와야 합니다.  
   
 > [!NOTE]
->  설정 `Option Explicit` 를 `Off` 없는 일반적으로 것이 좋습니다. 프로그램이 실행 될 때 예기치 않은 결과가 발생할 것 하나 이상의 위치에서 변수 이름을 잘못 입력 합니다.  
+>  설정 `Option Explicit` 를 `Off` 없는 일반적으로 것이 좋습니다. 하나 이상의 위치에서 변수 이름을 잘못 입력할 수 있습니다. 그러면 프로그램이 실행될 때 예기치 않은 결과가 발생할 수 있습니다.  
   
 ## <a name="when-an-option-explicit-statement-is-not-present"></a>Option Explicit 문 현재 없는 경우  
  소스 코드에 포함 되어 있지 않으면는 `Option Explicit` 문는 **Option Explicit** 에 설정 된 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우는 [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) 컴파일러 옵션을 사용 합니다.  
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>IDE에서 Option Explicit을 설정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
 2.  **컴파일** 탭을 클릭합니다.  
   
 3.  값을 설정는 **Option Explicit** 상자입니다.  
   
- 새 프로젝트를 만들 때는 **Option Explicit** 에 설정 된 **컴파일** 탭으로 설정 됩니다는 **Option Explicit** 에서 설정는 **VB 기본값**대화 상자. 에 액세스 하려면는 **VB 기본값** 대화 상자의 **도구** 메뉴를 클릭 하 여 **옵션**합니다. 에 **옵션** 대화 상자에서 **프로젝트 및 솔루션**, 클릭 하 고 **VB 기본값**합니다. 초기 기본 설정은 **VB 기본값** 은 `On`합니다.  
+ 새 프로젝트를 만들 때는 **Option Explicit** 에 설정 된 **컴파일** 탭으로 설정 됩니다는 **Option Explicit** 에서 설정는 **VB 기본값**대화 상자. 에 액세스 하려면는 **VB 기본값** 대화 상자의 **도구** 메뉴를 클릭 하 여 **옵션**합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. 초기 기본 설정은 **VB 기본값** 은 `On`합니다.  
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>명령줄에서 Option Explicit을 설정 하려면  
   
 -   포함 된 [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) 컴파일러 옵션에는 **vbc** 명령 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `Option Explicit` 문을 명시적으로 모든 변수 선언에 있습니다. 선언 되지 않은 변수를 사용 하려고 하면 컴파일 타임에 오류가 발생 합니다.  
   
  [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_1.vb)]  

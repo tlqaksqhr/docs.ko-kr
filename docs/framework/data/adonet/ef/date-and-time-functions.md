@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c3d47b4ced66a8826424cdbb75e5694fadb9038d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 559d6c8bf6abb0dd021784046b3161c799b58df4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="date-and-time-functions"></a>날짜 및 시간 함수
 .NET Framework Data Provider for SQL Server(SqlClient)에서는 `System.DateTime` 입력 값에 대해 연산을 수행하고 `string`, 숫자 또는 `System.DateTime` 값 결과를 반환하는 날짜 및 시간 함수를 제공합니다. 이 함수는 SqlClient를 사용할 때 사용 가능한 SqlServer 네임스페이스에 있습니다. 공급자의 네임스페이스 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자가 사용하는 접두사를 Entity Framework에서 찾을 수 있습니다. 다음 표에서는 SqlClient 날짜 및 시간 함수를 보여 줍니다.  
@@ -44,4 +45,4 @@ ms.lasthandoff: 10/18/2017
 |[날짜 및 시간 함수 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115908)|[날짜 및 시간 함수 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115909)|[날짜 및 시간 함수 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|  
   
 ## <a name="see-also"></a>참고 항목  
- [Entity Framework 함수에 대 한 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+ [Entity Framework용 SqlClient 기능](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

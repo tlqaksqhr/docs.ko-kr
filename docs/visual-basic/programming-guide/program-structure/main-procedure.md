@@ -16,11 +16,11 @@ ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90550ce3e62e4afbc94e2d383fa73db7178633d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic의 Main 프로시저
 모든 Visual Basic 응용 프로그램 호출 프로시저를 포함 해야 `Main`합니다. 이 절차는 사용 시작 지점 및 응용 프로그램에 대해 전체적으로 제어 됩니다. .NET Framework 호출 프로그램 `Main` 프로시저 응용 프로그램을 로드 하 고 제어를 전달 하도록 준비 되어 있습니다. Windows Forms 응용 프로그램을 만들 경우를 제외 작성 해야 합니다는 `Main` 자체적으로 실행 되는 응용 프로그램에 대 한 프로시저입니다.  
@@ -120,7 +120,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Array.Length%2A>  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>  
  [Visual Basic 프로그램의 구조](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- [NIB: Visual Basic 버전의 Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
  [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
  [공유](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  

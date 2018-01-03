@@ -12,16 +12,17 @@ caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 08002bf223d96d49cffb67ec744659747fa49e26
-ms.sourcegitcommit: 32f5e1db8755ed7dfac0b4ec764fa809e5a7548c
+ms.workload: dotnet
+ms.openlocfilehash: 0772e77d699d11e29d17770bb2c737247ed1771d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-upload-files-with-ftp"></a>방법: FTP를 사용하여 파일 업로드
 이 샘플은 파일을 FTP 서버에 업로드하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
 using System;  

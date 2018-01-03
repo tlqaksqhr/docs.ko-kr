@@ -15,11 +15,11 @@ ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6118ca5f73a0d446842c33859e0623032082bcd8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d804ce75929592675068fdc434a1ba7429fa5373
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctype-function-visual-basic"></a>CType 함수(Visual Basic)
 명시적으로 지정 된 데이터 형식, 개체, 구조체, 클래스 또는 인터페이스에는 식을 변환한 결과를 반환 합니다.  
@@ -59,7 +59,7 @@ CType(expression, typename)
 ## <a name="converting-dynamic-objects"></a>동적 개체 변환  
  동적 개체의 형식 변환을 사용 하는 사용자 지정 동적 변환을 수행한는 <xref:System.Dynamic.DynamicObject.TryConvert%2A> 또는 <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> 메서드. 동적 개체를 사용 하는 경우 사용 된 <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> 동적 개체를 변환 하는 메서드입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CType` 식으로 변환 하는 함수는 `Single` 데이터 형식입니다.  
   
  [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
@@ -73,4 +73,4 @@ CType(expression, typename)
  [변환 함수](../../../visual-basic/language-reference/functions/conversion-functions.md)  
  [Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md)  
  [방법: 변환 연산자 정의](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [.NET Framework의 형식 변환](http://msdn.microsoft.com/library/ba36154f-064c-47d3-9f05-72f93a7ca96d)
+ [.NET Framework의 형식 변환](../../../standard/base-types/type-conversion.md)

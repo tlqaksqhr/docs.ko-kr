@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b8eafeedd03097488b1493b5654db360eab94fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-security"></a>SQL Server 보안
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에는 보안 데이터베이스 응용 프로그램을 만들 수 있도록 지원하는 많은 기능이 있습니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  이 단원의 항목에서는 개발자와 관련이 있는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]의 보안 기능에 대해 간략히 설명하며, 이러한 항목에 대해 자세히 다루고 있는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서와 기타 리소스의 관련 항목으로 연결되는 링크를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]의 아키텍처와 보안 기능에 대해 설명합니다.  
   

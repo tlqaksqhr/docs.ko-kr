@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96304cdde766f264fcfbd0f4aa3cf168adf8422d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2891313c15b4003db5d50f2e9f2d461de9397dfc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>단일 단계 및 다단계 트랜잭션 커밋
 트랜잭션에 사용되는 각 리소스는 RM(리소스 관리자)에 의해 관리되고, RM의 작업은 TM(트랜잭션 관리자)에 의해 조정됩니다. [트랜잭션에서 참가자 인 리스트 먼 트 리소스](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) 리소스 (또는 여러 리소스) 트랜잭션에 참여할 수 있습니다 어떻게을 알아봅니다. 이 항목에서는 참여하는 리소스에서 트랜잭션 커밋을 조정하는 방법에 대해 설명합니다.  
@@ -119,5 +120,5 @@ public void InDoubt (Enlistment enlistment)
  단일 단계 커밋 프로토콜은 모든 업데이트가 명시적 코디네이션 없이 수행되므로 런타임에 보다 효율적입니다. 이 프로토콜에 대 한 자세한 내용은 참조 하십시오. [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용 하 여 최적화](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용 하 여 최적화](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [트랜잭션 참여 구성원으로 리소스를 인 리스트 먼 트](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+ [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [리소스를 트랜잭션에 참가 요소로 등록](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

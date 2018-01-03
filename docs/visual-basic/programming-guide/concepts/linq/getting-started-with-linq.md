@@ -18,16 +18,16 @@ ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 53087db3225ffd66be39a496057758cfc80d27b6
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 718eff92a2ba472661f0067e1766e63e0703178a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic에서 LINQ 시작
 이 섹션 개요, 예제 및 Visual Basic 및 LINQ (Language-Integrated Query)를 사용 하 고 이해 하는 데 도움이 되는 배경 정보를 포함 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [LINQ 쿼리 처음 작성](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
  기본 LINQ 쿼리를 작성 하는 세 단계를 설명: 데이터 소스를 쿼리를 작성 한 쿼리를 실행 합니다.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/09/2017
  [LINQ to DataSet 개요](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
  데이터 집합에는 LINQ의 개념적인 개요를 제공합니다.  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  LINQ SQL 기술에 설명 하 고 LINQ to SQL 사용 하는 데 도움이 되는 항목의 링크를 제공 합니다.  
   
  [LINQ에 대한 Visual Studio IDE 및 도구 지원(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  

@@ -21,11 +21,11 @@ ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a7882614b9663d1c38f137f7a69054d5bbd50b19
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 0bb55aecc1faafd812da212565a7a858c714e933
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic의 LINQ 소개
 LINQ(Language-Integrated Query)는 쿼리 기능을 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에 추가하고 모든 종류의 데이터로 작업할 때 간단하면서도 강력한 기능을 제공합니다. 처리될 쿼리를 데이터베이스에 보내거나 검색하고 있는 데이터의 형식마다 다른 쿼리 구문으로 작업하는 대신 LINQ에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어의 일부로 쿼리를 도입합니다. LINQ는 데이터의 형식에 관계없이 통합된 구문을 사용합니다.  
@@ -71,7 +71,7 @@ LINQ(Language-Integrated Query)는 쿼리 기능을 [!INCLUDE[vbprvb](~/includes
 |공급자|설명|  
 |---|---|  
 |LINQ to Objects|LINQ to Objects 공급자를 사용하면 메모리 내 컬렉션 및 배열을 쿼리할 수 있습니다. 개체가 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 지원하는 경우 LINQ to Objects 공급자를 사용하면 개체를 쿼리할 수 있습니다.<br /><br /> 모든 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로젝트의 경우 기본적으로 가져오는 <xref:System.Linq> 네임스페이스를 가져와서 LINQ to Objects 공급자를 사용하도록 설정할 수 있습니다.<br /><br /> LINQ to Objects 공급자에 대 한 자세한 내용은 참조 [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)합니다.|  
-|LINQ to SQL|LINQ to SQL 공급자를 사용하면 SQL Server 데이터베이스의 데이터를 쿼리하고 수정할 수 있습니다. 이렇게 하면 응용 프로그램의 개체 모델을 데이터베이스의 테이블 및 개체에 쉽게 매핑할 수 있습니다.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에는 O/R 디자이너(개체 관계형 디자이너)가 포함되어 있으므로 LINQ to SQL로 더 쉽게 작업할 수 있습니다. 이 디자이너는 데이터베이스의 개체에 매핑되는 응용 프로그램의 개체 모델을 만드는 데 사용됩니다. 또한 저장된 프로시저를 매핑하는 기능을 제공 및 함수를 O/R 디자이너는 <xref:System.Data.Linq.DataContext> 데이터베이스와의 통신을 관리 하 고 낙관적 동시성 검사에 대 한 상태를 저장 하는 개체입니다.<br /><br /> LINQ to SQL 공급자에 대 한 자세한 내용은 참조 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)합니다. 개체 관계형 디자이너에 대 한 자세한 내용은 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.|  
+|LINQ to SQL|LINQ to SQL 공급자를 사용하면 SQL Server 데이터베이스의 데이터를 쿼리하고 수정할 수 있습니다. 이렇게 하면 응용 프로그램의 개체 모델을 데이터베이스의 테이블 및 개체에 쉽게 매핑할 수 있습니다.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에는 O/R 디자이너(개체 관계형 디자이너)가 포함되어 있으므로 LINQ to SQL로 더 쉽게 작업할 수 있습니다. 이 디자이너는 데이터베이스의 개체에 매핑되는 응용 프로그램의 개체 모델을 만드는 데 사용됩니다. 또한 저장된 프로시저를 매핑하는 기능을 제공 및 함수를 O/R 디자이너는 <xref:System.Data.Linq.DataContext> 데이터베이스와의 통신을 관리 하 고 낙관적 동시성 검사에 대 한 상태를 저장 하는 개체입니다.<br /><br /> LINQ to SQL 공급자에 대 한 자세한 내용은 참조 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)합니다. 개체 관계형 디자이너에 대 한 자세한 내용은 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.|  
 |LINQ to XML|LINQ to XML 공급자를 사용하면 XML을 쿼리하고 수정할 수 있습니다. 메모리 내 XML을 수정하거나 XML을 파일에서 로드하고 파일에 저장할 수 있습니다.<br /><br /> 또한 LINQ to XML 공급자는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 코드에서 직접 XML을 작성하는 데 사용할 수 있는 XML 리터럴 및 XML 축 속성을 사용하도록 설정합니다. 자세한 내용은 참조 [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)합니다.|  
 |LINQ to DataSet|LINQ to DataSet 공급자에서 데이터를 쿼리 및 업데이트를 수는 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 데이터 집합입니다. 데이터 집합의 데이터를 쿼리, 집계 및 업데이트하는 기능을 단순화하고 확장하기 위해 데이터 집합을 사용하는 응용 프로그램에 LINQ의 기능을 추가할 수 있습니다.<br /><br /> 자세한 내용은 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)를 참조하세요.|  
   
@@ -82,7 +82,7 @@ LINQ(Language-Integrated Query)는 쿼리 기능을 [!INCLUDE[vbprvb](~/includes
   
  [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
- 이 예제는 그 자체로 유효한 쿼리이지만 쿼리는 쿼리 절을 더 추가하여 결과를 구체화할 때 훨씬 더 강력해집니다. 예를 들어 `Where` 절을 추가하여 하나 이상의 값을 기준으로 결과를 필터링할 수 있습니다. 쿼리 식은 코드 한 줄입니다. 추가 쿼리 절을 쿼리의 끝에 추가하기만 하면 됩니다. 여러 줄의 밑줄을 사용 하 여 가독성을 높이기 위해 텍스트는 쿼리를 중단할 수 있습니다 (\_) 줄 연속 문자입니다. 다음 코드 예제에서는 `Where` 절이 포함된 쿼리의 예를 보여 줍니다.  
+ 이 예제는 그 자체로 유효한 쿼리이지만 쿼리는 쿼리 절을 더 추가하여 결과를 구체화할 때 훨씬 더 강력해집니다. 예를 들어 `Where` 절을 추가하여 하나 이상의 값을 기준으로 결과를 필터링할 수 있습니다. 쿼리 식은 코드 한 줄입니다. 추가 쿼리 절을 쿼리의 끝에 추가하기만 하면 됩니다. 밑줄(_) 줄 연속 문자를 사용하여 여러 줄의 텍스트로 쿼리를 분할하는 방법으로 가독성을 높일 수 있습니다. 다음 코드 예제에서는 `Where` 절이 포함된 쿼리의 예를 보여 줍니다.  
   
  [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
   
@@ -173,7 +173,7 @@ LINQ(Language-Integrated Query)는 쿼리 기능을 [!INCLUDE[vbprvb](~/includes
 |[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|쿼리될 수 있으며 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 코드에서 XML을 첫 번째 클래스 데이터 개체로 포함할 수 있도록 하는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 XML 기능에 대해 설명합니다.|  
 |[쿼리](../../../../visual-basic/language-reference/queries/queries.md)|[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 사용할 수 있는 쿼리 절에 대한 참조 정보를 제공합니다.|  
 |[LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|LINQ에 대한 일반 정보, 프로그래밍 지침 및 샘플을 포함하고 있습니다.|  
-|[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)|LINQ to SQL에 대한 일반 정보, 프로그래밍 지침 및 샘플을 포함하고 있습니다.|  
+|[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|LINQ to SQL에 대한 일반 정보, 프로그래밍 지침 및 샘플을 포함하고 있습니다.|  
 |[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|LINQ to Objects에 대한 일반 정보, 프로그래밍 지침 및 샘플을 포함하고 있습니다.|  
 |[LINQ to ADO.NET(포털 페이지)](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|LINQ to [!INCLUDE[vstecado](~/includes/vstecado-md.md)]에 대한 일반 정보, 프로그래밍 지침 및 샘플의 링크를 포함하고 있습니다.|  
 |[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|LINQ to XML에 대한 일반 정보, 프로그래밍 지침 및 샘플을 포함하고 있습니다.|  
@@ -204,6 +204,6 @@ LINQ(Language-Integrated Query)는 쿼리 기능을 [!INCLUDE[vbprvb](~/includes
  [LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  [LINQ to DataSet 개요](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)(Visual Studio의 LINQ to SQL 도구)  
  [DataContext 메서드 (O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

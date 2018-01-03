@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 27a46a4dbb98d5c2bdcd30c485ae1b3b047a1a13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2513f5ce139d23750c977f4f12396415cc4d913b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 기능 및 ADO.NET
 이 단원의 항목에서는 ADO.NET을 사용하여 데이터베이스 응용 프로그램을 개발하는 데 사용할 수 있는 SQL Server 기능에 대해 설명합니다.  
@@ -28,17 +29,17 @@ ms.lasthandoff: 11/21/2017
   
 1.  [개발 (데이터베이스 엔진)](http://go.microsoft.com/fwlink/?LinkId=115245)  
   
-## <a name="in-this-section"></a>단원 내용  
- [SQL Server (ADO.NET)의 인스턴스를 열거](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [SQL Server의 인스턴스 열거(ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  SQL Server의 활성 인스턴스를 열거하는 방법을 설명합니다.  
   
- [SQL Server 용 공급자 통계](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
+ [SQL Server용 공급자 통계](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  SQL Server 런타임 통계 가져오기 기능 지원에 대해 설명합니다.  
   
  [SQL Server Express 사용자 인스턴스](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  SQL Server Express 사용자 인스턴스 지원에 대해 설명합니다.  
   
- [SQL Server의 데이터베이스 미러링](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
+ [SQL Server에서 데이터베이스 미러링](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
  데이터베이스 미러링 기능에 대해 설명합니다.  
   
  [SQL Server 공용 언어 런타임 통합](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
@@ -47,13 +48,13 @@ ms.lasthandoff: 11/21/2017
  [SQL Server에서 쿼리 알림](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  데이터 변경 시 .NET Framework 응용 프로그램에서 SQL Server로부터 알림을 요청하는 방법을 설명합니다.  
   
- [SQL Server에서의 스냅숏 격리](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
+ [SQL Server의 스냅숏 격리](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
  트랜잭션 응용 프로그램에서 블로킹을 줄이기 위해 디자인된 행 버전 관리 메커니즘인 스냅샷 격리 지원에 대해 설명합니다.  
   
- [고가용성, 재해 복구에 대 한 SqlClient 지원](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ [고가용성 및 재해 복구에 대한 SqlClient 지원](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  고가용성, 재해 복구(AlwaysOn) 가용성 그룹을 위한 SqlClient 지원에 대해 설명합니다.  
   
- [LocalDB에 대 한 SqlClient 지원](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
+ [LocalDB에 대한 SqlClient 지원](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  LocalDB 데이터베이스를 위한 SqlClient 지원에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  

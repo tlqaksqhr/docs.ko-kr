@@ -14,16 +14,17 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75cb32ac55bfa397d12f4ec514488f6b2a159e3d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f3593b6d7f8778ae8d74e779d3446403b99b655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Data Services로 시작
 이 섹션의 항목 신속 하 게 이해 하는 데 도움이 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 및 사용 하는 방법을 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 노출 하 고 소비 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기본 기술에는 설명 하 여 피드입니다. 이 섹션에서는 두 개념 콘텐츠 및 [퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) 자습서입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하여 데이터 서비스를 만드는 방법에 대해 설명합니다.  
   
  [서비스로 데이터 노출](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
  [데이터 서비스 리소스에 액세스](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
  사용 하는 방법을 설명 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다.  
   
- [데이터 서비스를 사용 하 여 클라이언트 응용 프로그램](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+ [클라이언트 응용 프로그램에서 데이터 서비스 사용](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
  사용 하는 방법에 설명 된 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework 클라이언트 응용 프로그램에서 피드입니다.  
   
  [빠른 시작](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  

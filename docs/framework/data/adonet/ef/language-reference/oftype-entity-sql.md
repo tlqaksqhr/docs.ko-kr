@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cd2660eb5fddd0c75b44d0796edce37c83865e81
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5b01097cdeba555fdc7435acd563f201f4d2ec8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE(Entity SQL)
 쿼리 식에서 특정 형식을 가진 개체 컬렉션을 반환합니다.  
@@ -69,7 +70,7 @@ OfType(executives, NamespaceName.Manager)
 |OFTYPE(Collection(ComplexType), ComplexType)|@FSHO2@throw|  
 |OFTYPE(Collection(RowType), RowType)|@FSHO2@throw|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 OFTYPE 연산자를 사용하여 Course 개체 컬렉션에서 OnsiteCourse 개체 컬렉션을 반환합니다. 쿼리는 [School 모델](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac)을 기반으로 합니다.  
   
  [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  

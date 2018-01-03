@@ -14,11 +14,11 @@ ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 054c05747491afb02601df00225a703560cbe91c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c7271018a93c97ed90dc272f7f5404c0f0a22d42
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39; &lt;식&gt;&#39; 형식 제약 조건으로 사용할 수 없습니다
 제약 조건 목록에 형식 매개 변수에 대한 유효한 제약 조건을 나타내지 않는 식이 포함되어 있습니다.  
@@ -53,4 +53,4 @@ ms.lasthandoff: 11/21/2017
  [Visual Basic의 제네릭 형식](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
  [값 형식과 참조 형식](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
  [선언된 요소 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [NIB 방법: 참조 추가 대화 상자를 사용하여 참조 추가 또는 제거](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+ 

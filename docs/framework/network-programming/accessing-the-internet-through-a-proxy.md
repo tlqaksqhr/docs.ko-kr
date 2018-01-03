@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 9e2be47cfd1ce56df7a0ad926166f8224a812449
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55bc8b3ef02238c217f03e8a3f0b554e13521e37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>프록시를 통해 인터넷 액세스
 사이트가 프록시를 사용하여 인터넷에 대한 액세스를 제공하는 경우 응용 프로그램이 웹 프록시와 통신할 수 있도록 프록시 인스턴스를 구성해야 합니다.  

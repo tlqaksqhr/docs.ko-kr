@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c50e8d64201a369ed76e328ee355201cbd45bca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf4c41906d67bc97547ea24af3dd30ed4fa998ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-sequences"></a>Oracle 시퀀스
 .NET Framework Data Provider for Oracle은 삽입을 수행한 후 <xref:System.Data.OracleClient.OracleDataAdapter>를 사용하여 서버에서 생성한 Oracle 시퀀스 키 값을 검색하는 작업을 지원합니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  SQL Server 및 ADO.NET을 사용 하 여 자동 증가 열을 만드는 방법에 대 한 자세한 내용은 참조 [검색 Id 또는 일련 번호 값](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md) 및 [AutoIncrement 열 만들기](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 C# 예제에서는 Oracle 데이터베이스에서 새 시퀀스 값을 검색하는 방법을 보여 줍니다. 이 예제는 새 행을 제출하는 데 사용된 INSERT INTO 쿼리의 시퀀스를 참조한 후 Oracle10g에 소개된 RETURNING 절을 사용하여 생성된 시퀀스 값을 반환합니다. 이 예제에서는 "자리 표시자" 기본 키 값을 생성하는 ADO.NET의 자동 증분 기능을 사용하여 일련의 보류된 새 행을 <xref:System.Data.DataTable>에 추가합니다. ADO.NET이 새 행에 대해 생성한 증분 값은 "자리 표시자"일 뿐입니다. 즉, 데이터베이스에서는 ADO.NET이 생성한 값과는 다른 값을 생성할 수도 있습니다.  
   
  이 예제에서는 보류된 삽입을 데이터베이스에 제출하기 전에 행 내용을 표시합니다. 그런 다음 이 코드에서는 새 <xref:System.Data.OracleClient.OracleDataAdapter> 개체를 만들고 이 개체의 <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> 및 <xref:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize%2A> 속성을 설정합니다. 또한 이 예제에서는 출력 매개 변수를 사용하여 서버에서 생성한 값을 반환하는 논리를 제공합니다. 그런 다음 업데이트를 실행하여 보류된 행을 제출하고 <xref:System.Data.DataTable>의 내용을 표시합니다.  

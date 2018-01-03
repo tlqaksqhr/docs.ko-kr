@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: c6c1b72048f1f7cb421e5a19d34c2c2dea5463ce
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5d131a032aa2747bda83874e8dd744588dfe07dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validating-issuer-name-registry"></a>발급자 이름 레지스트리 유효성 검사
 Windows Identity Foundation의 VINR(Validating Issuer Name Registry)을 사용하면 다중 테넌트 응용 프로그램에서 들어오는 토큰이 신뢰할 수 있는 테넌트 및 ID 공급자에 의해 발급되었는지 확인할 수 있습니다. 이 기능은 Microsoft Azure Active Directory에서 발급한 모든 토큰이 동일한 인증서를 사용하여 서명되므로 Microsoft Azure AD를 사용하는 다중 테넌트 응용 프로그램에 특히 유용합니다. 동일한 인증서를 사용함에 따라 동일한 지문을 보유하는 여러 테넌트의 요청을 구분하기 위해 응용 프로그램이 유효성 검사 논리를 수행하려면 각 테넌트에 대한 발급자 이름을 유지해야 합니다. VINR은 이러한 기능을 제공하며, 이를 통해 사용자가 사용자 지정 유효성 검사 논리를 추가하거나 발급자 레지스트리 데이터를 구성 파일 이외의 위치에 저장할 수 있습니다. 확장은 응용 프로그램의 WIF 파이프라인에 추가하거나 독립적으로 사용할 수 없습니다.  

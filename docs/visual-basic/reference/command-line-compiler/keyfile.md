@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e0be7d230f16750395aaceb3c94539546716b8fd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyfile"></a>T:System.Reflection.AssemblyKeyFileAttribute
 어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.  
@@ -31,10 +31,10 @@ ms.lasthandoff: 12/09/2017
   
 ## <a name="arguments"></a>인수  
  `file`  
- 필수 요소. 키가 포함 된 파일입니다. 파일 이름에 공백이 있으면 이름을 따옴표로 묶습니다 ("").  
+ 필수. 키가 포함 된 파일입니다. 파일 이름에 공백이 있으면 이름을 따옴표로 묶습니다 ("").  
   
 ## <a name="remarks"></a>설명  
- 컴파일러는 공개 키를 어셈블리 매니페스트에 삽입 한 다음 개인 키와 함께 최종 어셈블리에 서명 합니다. 키 파일을 생성 하려면 입력 `sn -k file` 명령줄에서. 자세한 내용은 [Sn.exe(강력한 이름 도구)](https://msdn.microsoft.com/library/k5b5tt23)를 참조하세요.  
+ 컴파일러는 공개 키를 어셈블리 매니페스트에 삽입 한 다음 개인 키와 함께 최종 어셈블리에 서명 합니다. 키 파일을 생성 하려면 입력 `sn -k file` 명령줄에서. 자세한 내용은 [Sn.exe (강력한 이름 도구)]을 참조 하십시오.[Sn.exe (강력한 이름 도구)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  사용 하 여 컴파일하면 `/target:module`, 키 파일의 이름이 모듈에 저장 되 고 있는 어셈블리를 컴파일할 때 만들어진 어셈블리 [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)합니다.  
   
@@ -46,12 +46,12 @@ ms.lasthandoff: 12/09/2017
   
  키 파일에는 공개 키만 포함될 수 있습니다.  
   
- 참조 [and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
+ 참조 [and using strong-named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
   
 > [!NOTE]
 >  `/keyfile` 옵션 내에서 사용할 수 없는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 개발 환경; 명령줄에서 컴파일할 경우에 사용 가능 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 소스 파일을 컴파일하 `Input.vb` 및 키 파일을 지정 합니다.  
   
 ```  

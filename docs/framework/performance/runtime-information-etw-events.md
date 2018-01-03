@@ -16,18 +16,19 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5262d778151cfe0a0d7ed1750e0b71d4c9214a64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-information-etw-events"></a>런타임 정보 ETW 이벤트
 이러한 ETW 이벤트에서는 SKU, 버전 번호, 런타임이 활성화된 방법, 시작하는 데 사용된 명령줄 매개 변수, GUID(해당되는 경우) 및 다른 관련 정보를 비롯한 런타임 관련 정보를 로깅합니다. 프로세스에서 여러 런타임이 실행되는 경우 해당 이벤트(ClrInstanceID)에서 제공한 정보를 통해 런타임이 명확해질 수 있습니다.  
   
  다음 표에서는 두 개의 런타임 정보 이벤트를 보여 줍니다. 이벤트는 임의 키워드 또는 마스크를 통해 발생할 수 있습니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트|이벤트 ID|공급자|설명|  
+|이벤트(event)|이벤트 ID|공급자|설명|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|런타임이 로드될 때 발생합니다.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|로드된 런타임을 열거합니다.|  

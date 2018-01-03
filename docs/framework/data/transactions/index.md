@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a6dcd11d34f0b81d6d3982ef1c6ab211d94818b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c66e982715d0f7f97e7a4faa92c2de57f3b1471
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-processing"></a>트랜잭션 처리 
 온라인 서점에서 책을 구입하는 경우 책과 교환하여 신용 지불 형식으로 돈을 지불합니다. 신용이 좋으면 일련의 관련된 작업을 통해 책을 구입할 수 있으며 서점은 돈을 받을 수 있습니다. 그러나 교환 중에 시리즈 중 하나의 작업이 실패하면 전체 교환이 실패합니다. 책을 구입할 수 없고 서점도 돈을 받을 수 없습니다.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/02/2017
   
  이 섹션에서는 트랜잭션 처리에 대한 일반 정보와 Microsoft .NET Framework를 사용하여 트랜잭션 응용 프로그램과 리소스 관리자를 작성하는 방법과 관련된 정보를 모두 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [트랜잭션 기본 사항](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  기본적인 트랜잭션 처리 용어와 개념을 소개합니다.  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: de0f11149c2ec587372b9e25f39f35f8552503c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75ab1e733915349c64742e1a9c1142cad988ade0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]을 사용하면 <xref:System.Data.DataSet> 개체에 캐시된 데이터를 쉽고 빠르게 쿼리할 수 있습니다. 특히, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]을 사용하면 별도의 쿼리 언어를 사용하는 대신 프로그래밍 언어 자체에서 쿼리를 작성할 수 있으므로 간편하게 쿼리할 수 있습니다. 이 기능은 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 제공되는 컴파일 타임 구문 검사, 정적 입력 및 IntelliSense 지원을 해당 쿼리에 사용할 수 있는 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 개발자에게 특히 유용합니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/21/2017
   
  ![LINQ to DataSet은 ADO.NET 공급자에 따라](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [시작](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
   
  [프로그래밍 가이드](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  

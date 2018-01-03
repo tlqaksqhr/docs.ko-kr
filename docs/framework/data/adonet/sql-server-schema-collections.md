@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c2f03065ee6f1292f72a33a72b1d43b1fed0c8f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 스키마 컬렉션
 Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉션뿐만 아니라 다른 스키마 컬렉션도 추가적으로 지원합니다. 지원되는 스키마 컬렉션은 현재 사용하고 있는 SQL Sever 버전에 따라 조금씩 다를 수 있습니다. 지원 되는 스키마 컬렉션의 목록을 확인 하려면 호출는 **GetSchema** 메서드를 인수 없이, 또는 "metadatacollections 라는" 스키마 컬렉션 이름입니다. 그러면 지원되는 스키마 컬렉션의 목록, 각자 지원하는 제약 조건 수 및 사용하는 식별자 부분 수가 포함된 <xref:System.Data.DataTable>이 반환됩니다.  
@@ -258,8 +259,8 @@ Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉
 |version_minor|개체|보조 버전 번호입니다.|  
 |version_build|개체|빌드 번호입니다.|  
 |version_revision|개체|수정 번호입니다.|  
-|culture_info|개체|이 UDT와 연관된 문화권 정보입니다.|  
-|public_key|개체|이 어셈블리에서 사용되는 공개 키입니다.|  
+|culture_info|Object|이 UDT와 연관된 문화권 정보입니다.|  
+|public_key|Object|이 어셈블리에서 사용되는 공개 키입니다.|  
 |is_fixed_length|부울|형식 길이가 항상 max_length와 같은지 여부를 지정합니다.|  
 |max_length|Int16|형식의 최대 길이(바이트)입니다.|  
 |Create_Date|DateTime|어셈블리가 만들어져 등록된 날짜입니다.|  

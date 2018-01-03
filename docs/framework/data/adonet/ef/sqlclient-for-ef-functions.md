@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 08526aeebd01196c064154a35df267b8040df796
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b580f0611d18b03ba831a3f5a3d0481bd27b0869
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>Entity Framework용 SqlClient 기능
 Entity Framework용 .NET Framework Data Provider for SQL Server(SqlClient)에서는 수치 및 집계 계산을 수행할 함수 집합과 `System.DateTime` 및 `string` 연산을 수행할 함수를 제공합니다. 이러한 함수는 `SQLServer` 네임스페이스에 있습니다.  
@@ -26,14 +27,14 @@ Entity Framework용 .NET Framework Data Provider for SQL Server(SqlClient)에서
   
  SQL Server 함수와 어떻게 정식 함수 지도 대 한 정보를 참조 하십시오. [개념적 모델 정식 SQL Server 함수 매핑](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [개념적 모델 정식 SQL Server 함수 매핑](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [개념적 모델 정식 함수와 SQL Server 함수 매핑](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
   
  [집계 함수](../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
  [날짜 및 시간 함수](../../../../../docs/framework/data/adonet/ef/date-and-time-functions.md)  
   
- [수치 연산 함수](../../../../../docs/framework/data/adonet/ef/mathematical-functions.md)  
+ [수학 함수](../../../../../docs/framework/data/adonet/ef/mathematical-functions.md)  
   
  [문자열 함수](../../../../../docs/framework/data/adonet/ef/string-functions.md)  
   

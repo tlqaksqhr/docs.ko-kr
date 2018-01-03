@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c713cc8e5f3d7e81b196820e0a25fde0018b6c80
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 07892869759ac5856b26099f2421caff1ebaf74d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-data-access"></a>보안 데이터 액세스
 보안 ADO.NET 코드를 쓰려면 내부 데이터 저장소 또는 데이터베이스에서 사용할 수 있는 보안 메커니즘을 알아야 합니다. 또한, 응용 프로그램에 포함된 다른 기능이나 구성 요소의 보안 문제도 고려해야 합니다.  
@@ -46,8 +47,8 @@ ms.lasthandoff: 11/21/2017
 |리소스|설명|  
 |--------------|-----------------|  
 |[DataAdapter 매개 변수](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|`DataAdapter`와 함께 매개 변수를 사용하는 방법에 대해 설명합니다.|  
-|[저장된 프로시저를 사용 하 여 데이터 수정](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|매개 변수를 지정하고 반환 값을 가져오는 방법에 대해 설명합니다.|  
-|[SQL Server에서 저장된 프로시저와 함께 권한 관리](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server 저장 프로시저를 사용하여 데이터 액세스를 캡슐화하는 방법에 대해 설명합니다.|  
+|[저장 프로시저로 데이터 수정](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|매개 변수를 지정하고 반환 값을 가져오는 방법에 대해 설명합니다.|  
+|[SQL Server에서 저장 프로시저를 사용하여 권한 관리](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server 저장 프로시저를 사용하여 데이터 액세스를 캡슐화하는 방법에 대해 설명합니다.|  
   
 ## <a name="script-exploits"></a>스크립트 악용  
  스크립트 악용은 웹 페이지에 삽입된 악의적 문자를 사용하는 또 다른 형태의 삽입 공격입니다. 브라우저에서는 삽입된 문자의 유효성을 검사하지 않고 문자를 페이지의 일부로 처리합니다.  

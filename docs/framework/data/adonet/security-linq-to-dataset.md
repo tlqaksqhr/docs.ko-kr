@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c0c919bb5be12005850b81059fc641f6f25b06bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f67ad1947d421a5221a34ad8392242e4d18039f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-linq-to-dataset"></a>보안(LINQ to DataSet)
 이 항목에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 보안 문제에 대해 설명합니다.  

@@ -14,11 +14,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2def27790a1727bda524b8c14a93f7b78127a569
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a2af80ddb558959171c255a61fae460729306e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM Interop를 사용하여 데이터 마샬링
 COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개체를 COM에 노출하는 기능을 모두 지원합니다. COM과의 데이터 마샬링 지원은 광범위하며 거의 항상 올바른 마샬링 동작을 제공합니다.  
@@ -31,7 +32,7 @@ COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개�
   
  다음 섹션에서는 마샬러에 추가 형식 정보를 수 있습니다 (또는 해야) 제공 하는 경우 interop 래퍼를 사용자 지정 하기 위한 프로세스를 설명 하는 항목을 연결 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
 [방법: 수동으로 래퍼 만들기](how-to-create-wrappers-manually.md)   
 관리 되는 소스 코드에서 수동으로 COM 래퍼를 만드는 방법을 설명 합니다. 
  

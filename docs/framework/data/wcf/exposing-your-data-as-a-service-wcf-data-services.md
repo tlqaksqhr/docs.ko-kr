@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c2d664166d9c0b750f6aecf9588a63b8705f0d1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 55e0bc058b92540c9b11965854d38e8d124e205c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>서비스로 데이터 노출(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]데이터를 노출 하는 서비스를 보다 쉽게 정의할 수 있도록 Visual Studio와 통합 되어 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 노출 하는 데이터 서비스 만들기는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 필요한 다음과 같은 기본 단계:  

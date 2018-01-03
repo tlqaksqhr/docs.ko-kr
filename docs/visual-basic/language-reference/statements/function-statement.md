@@ -35,11 +35,11 @@ ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 667ab7ceb54e1f339fd645883ca2686c0cbb72b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-statement-visual-basic"></a>Function 문(Visual Basic)
 선언 이름과 매개 변수를 정의 하는 코드는 `Function` 프로시저입니다.  
@@ -113,7 +113,7 @@ End Function
   
 -   `name`  
   
-     필수 요소. 프로시저의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
+     필수. 프로시저의 이름입니다. 참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
   
 -   `typeparamlist`  
   
@@ -143,8 +143,8 @@ End Function
   
     |파트|설명|  
     |---|---|  
-    |`interface`|필수 요소. 이 프로시저에 의해 구현 되는 인터페이스의 이름의 클래스 또는 구조체를 포함 합니다.|  
-    |`definedname`|필수 요소. 프로시저가 `interface`에 정의되는 이름입니다.|  
+    |`interface`|필수. 이 프로시저에 의해 구현 되는 인터페이스의 이름의 클래스 또는 구조체를 포함 합니다.|  
+    |`definedname`|필수. 프로시저가 `interface`에 정의되는 이름입니다.|  
   
 -   `Handles`  
   
@@ -162,8 +162,8 @@ End Function
   
     |파트|설명|  
     |---|---|  
-    |`eventvariable`|필수 요소. 개체 변수는 이벤트를 발생 시키는 구조체 또는 클래스의 데이터 형식으로 선언 합니다.|  
-    |`event`|필수 요소. 이 프로시저에서 처리 하는 이벤트의 이름입니다.|  
+    |`eventvariable`|필수. 개체 변수는 이벤트를 발생 시키는 구조체 또는 클래스의 데이터 형식으로 선언 합니다.|  
+    |`event`|필수. 이 프로시저에서 처리 하는 이벤트의 이름입니다.|  
   
 -   `statements`  
   
@@ -239,19 +239,19 @@ End Function
   
  반복기 함수의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, 또는 <xref:System.Collections.Generic.IEnumerator%601>합니다.  
   
- 자세한 내용은 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)를 참조하세요.  
+ 자세한 내용은 [반복기](../../programming-guide/concepts/iterators.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `Function` 이름, 매개 변수, 및의 본문을 형성 하는 코드를 선언 하는 문에 `Function` 프로시저입니다. `ParamArray` 한정자를 통해 함수에 가변 개수의 인수를 수락 합니다.  
   
  [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 앞의 예제에서 선언 된 함수를 호출 합니다.  
   
  [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서 `DelayAsync` 는 `Async``Function` 의 반환 형식이 있는 <xref:System.Threading.Tasks.Task%601>합니다. `DelayAsync`에는 정수를 반환하는 `Return` 문이 포함됩니다. 따라서 함수 선언의 `DelayAsync` 의 반환 형식이 있어야 `Task(Of Integer)`합니다. 반환 형식이 이기 `Task(Of Integer)`, 평가 `Await` 에 식을 `DoSomethingAsync` 정수가 생성 됩니다. 이 문에서이 확인할: `Dim result As Integer = Await delayTask`합니다.  
   
  `startButton_Click` 절차의 한 예로 `Async Sub` 프로시저입니다. 때문에 `DoSomethingAsync` 는 `Async` 함수, 작업에 대 한 호출에 대 한 `DoSomethingAsync` 기다려야, 다음 문과 같이: `Await DoSomethingAsync()`합니다. `startButton_Click``Sub` 프로시저 함께 정의 되어야 합니다는 `Async` 한정자 있기 때문에 `Await` 식입니다.  

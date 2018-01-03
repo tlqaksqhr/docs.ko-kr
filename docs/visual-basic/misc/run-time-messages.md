@@ -11,11 +11,11 @@ ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bceda3e102ec79bda6607d77c3b778f9a2014a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 37c88c7d88e01e6201a4679ae312e045c8cfab4a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 런타임 메시지
 이 섹션에는 런타임에 발생하는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 오류 메시지가 나와 있습니다.  
@@ -304,7 +304,7 @@ ms.lasthandoff: 11/21/2017
   
  [메서드 또는 데이터 멤버를 찾을 수 없습니다.](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
- [My.Application.Log에서 사용 가능한 디스크 공간의 크기를 확인할 수 없습니다.](../../visual-basic/misc/my-application-log-cannot-determine-the-amount-of-free-disk-space.md)  
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
  [명명 된 인수 '\<argumentname >' 여러 번 지정 했습니다.](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
@@ -559,5 +559,5 @@ ms.lasthandoff: 11/21/2017
  [현재 폴더 또는 하위 폴더 중 하나에 있는 경로를 지정해야 합니다.](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [NOTINBUILD 방법: Visual Basic 런타임 오류에 대 한 정보 가져오기](http://msdn.microsoft.com/en-us/22a7d0a6-b7d7-4c5d-971c-52ff0583c656)  
+   
  [오류 메시지](../../visual-basic/language-reference/error-messages/index.md)

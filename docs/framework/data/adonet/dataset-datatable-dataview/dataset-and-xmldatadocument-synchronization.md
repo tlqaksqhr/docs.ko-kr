@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 923a6b6cf1523c8a11cb509679443b9658e07ce5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: acc68fd36d2887e5e951f9ba5adc20e8cfd87fd2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>데이터 집합 및 XmlDataDocument 동기화
 ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용할 수 있습니다. 계층적으로 데이터에 액세스하기 위해 .NET Framework에서 사용 가능한 XML 클래스를 사용할 수 있습니다. 지금까지는 데이터의 이와 같은 두 가지 표현이 별도로 사용되어 왔습니다. 그러나.NET Framework에서는 통해 데이터의 관계형 및 계층적 표현에 대 한 실시간으로 동시 액세스는 **데이터 집합** 개체 및 <xref:System.Xml.XmlDataDocument> 개체를 각각.  
@@ -99,21 +100,21 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
   
  동기화 할 때는 **DataSet** 와 **XmlDataDocument**, 여부에 따라 결과가 달라질 수 있습니다 프로그램 <xref:System.Data.DataRelation> 개체의 중첩 합니다. 자세한 내용은 참조 [Datarelation 중첩](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [DataSet을 XmlDataDocument와 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [XmlDataDocument로 데이터 집합 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  강력한 형식의 동기화 하는 방법을 보여 줍니다 **데이터 집합**, 최소한의 스키마와 **XmlDataDocument**합니다.  
   
  [데이터 집합에서 XPath 쿼리 수행](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  내용에 대해 XPath 쿼리를 수행 하는 방법을 보여 줍니다는 **DataSet**합니다.  
   
- [XSLT 변환을 DataSet에 적용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [XSLT 변형을 DataSet에 적용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  내용에 XSLT 변환을 적용 하는 방법을 보여 줍니다는 **DataSet**합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  설명 방법을 **DataSet** 로드 하 고 유지의 내용을 포함 한 데이터 소스로 XML와 상호 작용 하는 **데이터 집합** XML 데이터로 합니다.  
   
- [Datarelation 중첩](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [DataRelation 중첩](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  중요 성과 중첩 **DataRelation** 의 콘텐츠를 나타내는 개체는 **DataSet** XML 데이터로 이러한 관계를 만드는 방법에 설명 합니다.  
   
  [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  

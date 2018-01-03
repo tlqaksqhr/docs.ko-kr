@@ -15,11 +15,11 @@ ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4400ee58214c8f9990d4b123e17ef0f6553a5a69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2df7fa743e72d12dcef1aa9be5ea43d24ef43cee
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optioninfer"></a>/optioninfer
 변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.  
@@ -44,11 +44,11 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE에서 /optioninfer를 설정하려면  
   
-1.  프로젝트를 선택 **솔루션 탐색기**합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. 자세한 내용은 참조 [NIB: 프로젝트 디자이너를 사용 하 여 프로젝트 속성 관리](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)합니다.  
+1.  프로젝트를 선택 **솔루션 탐색기**합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
 2.  에 **컴파일** 탭에서 값을 수정 된 **Option infer** 상자입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 지역 형식 유추를 사용하도록 설정한 상태로 `test.vb`를 컴파일합니다.  
   
 ```  

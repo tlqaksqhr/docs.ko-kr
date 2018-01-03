@@ -16,18 +16,19 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 24211e82633e41256a8c801000c4d3e17d9d8612
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c5f88ce69239c0ca601344362dc420205291cb74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-return-rowsets"></a>방법: 행 집합 반환
 이 예제에서는 데이터베이스의 행 집합을 반환하고 입력 매개 변수를 사용하여 결과를 필터링합니다.  
   
  사용 하는 행 집합을 반환 하는 저장된 프로시저를 실행 해도 *결과* 저장된 프로시저의 반환을 저장 하는 클래스입니다. 자세한 내용은 참조 [분석 LINQ to SQL 원본 코드](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 고객의 행을 반환하고 입력 매개 변수를 사용하여 고객의 도시가 "London"인 행만을 반환하는 저장 프로시저를 보여 줍니다. 예제에서는 열거 가능한 `CustomersByCityResult` 클래스로 간주합니다.  
   
 ```  
@@ -47,5 +48,5 @@ END
  [!code-vb[DLinqSprox#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#1)]  
   
 ## <a name="see-also"></a>참고 항목  
- [저장된 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

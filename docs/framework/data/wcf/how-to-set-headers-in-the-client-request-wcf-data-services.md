@@ -17,18 +17,19 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2eb85c2adacbe22defe821398168a3f20378acd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4e923966e3c2a84ad032e546733f00c7672536a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>방법: 클라이언트 요청의 헤더 설정(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하여 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]을 지원하는 데이터 서비스에 액세스할 때 클라이언트 라이브러리에서 데이터 서비스로 전송되는 요청 메시지의 필수 HTTP 헤더를 자동으로 설정합니다. 하지만 클라이언트 라이브러리는 데이터 서비스에 청구 기반 인증이나 쿠키가 필요한 경우와 같은 특정 상황에서 필요한 메시지 헤더를 설정하지 못합니다. 자세한 내용은 참조 [WCF Data Services 보안](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication)합니다. 이런 경우에는 전송하기 전에 요청 메시지의 메시지 헤더를 수동으로 설정해야 합니다. 이 항목의 예제에서는 데이터 서비스로 전송하기 전에 요청 메시지에 새로운 헤더를 추가하도록 <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> 이벤트를 처리하는 방법을 설명합니다.  
   
  이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 완료 하면이 서비스 및 클라이언트 데이터 클래스 생성 됩니다는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다. 사용할 수도 있습니다는 [Northwind 샘플 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=187426) 에 게시 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 이 샘플 데이터; 웹 사이트 서비스는 읽기 전용으로 설정 하 고 변경 내용을 저장 하려고 하면 오류가 발생 합니다. 샘플 데이터 서비스는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 웹 사이트는 익명 인증을 허용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Data.Services.Client.DataServiceContext.SendingRequest>이벤트에 대한 처리기를 등록한 다음 데이터 서비스에 대해 쿼리를 실행합니다.  
   
 > [!NOTE]
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
 [!code-csharp[Astoria Northwind Client#RegisterHeadersQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#registerheadersquery)]   
 [!code-vb[Astoria Northwind Client#RegisterHeadersQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#registerheadersquery)]
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 메서드가 <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> 이벤트를 처리하고 인증 헤더를 요청에 추가합니다.   
   
  [!code-csharp[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#onsendingrequest)]  

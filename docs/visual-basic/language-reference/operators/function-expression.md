@@ -14,11 +14,11 @@ ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1d9d1223b340b2172c12bd8c2f364e314e764b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb1790d363755fe9b8bd711409734f7c3a405f3e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-expression-visual-basic"></a>함수 식(Visual Basic)
 매개 변수 및 함수가 람다 식을 정의 하는 코드를 선언 합니다.  
@@ -38,8 +38,8 @@ End Function
 |용어|정의|  
 |---|---|  
 |`parameterlist`|선택 사항입니다. 이 절차의 매개 변수를 나타내는 로컬 변수 이름의 목록. 괄호는 목록이 비어 있는 경우에 있어야 합니다. 참조 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)합니다.|  
-|`expression`|필수 요소. 단일 식입니다. 식의 형식이 함수 반환 형식입니다.|  
-|`statements`|필수 요소. 문 목록을 사용 하 여 값을 반환 하는 `Return` 문. (참조 [Return 문](../../../visual-basic/language-reference/statements/return-statement.md).) 반환 값의 유형 함수의 반환 형식이입니다.|  
+|`expression`|필수. 단일 식입니다. 식의 형식이 함수 반환 형식입니다.|  
+|`statements`|필수. 문 목록을 사용 하 여 값을 반환 하는 `Return` 문. (참조 [Return 문](../../../visual-basic/language-reference/statements/return-statement.md).) 반환 값의 유형 함수의 반환 형식이입니다.|  
   
 ## <a name="remarks"></a>설명  
  A *람다 식을* 계산 하 고 값을 반환 하는 이름 없는 함수입니다. 람다 식을 사용할 수 있습니다 인수를 제외 하 고 대리자를 사용할 수는 아무 곳 이나 `RemoveHandler`합니다. 대리자 및 대리자와 람다 식 사용 하는 방법에 대 한 자세한 내용은 참조 [대리자 문을](../../../visual-basic/language-reference/statements/delegate-statement.md) 및 [완화 된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)합니다.  
@@ -61,24 +61,24 @@ End Function
   
 -   제네릭 매개 변수가 허용 되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제는 간단한 람다 식을 만드는 두 가지 방법을 보여 줍니다. 첫 번째 예제는 `Dim` 함수에 대 한 이름을 제공 합니다. 함수를 호출 하려면 매개 변수 값에 보냅니다.  
   
  [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
  [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  또는 선언 하 고 동시에 함수를 실행할 수 있습니다.  
   
  [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 인수를 증가 시키고 값을 반환 하는 람다 식의 예입니다. 함수에 대 한 두에서는 한 줄 및 여러 줄 람다 식 구문을 보여 줍니다. 더 많은 예제를 참조 하십시오. [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)합니다.  
   
  [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  람다 식의 쿼리 연산자의 여러 기반이 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], 메서드 기반 쿼리에 명시적으로 사용할 수 있습니다. 다음 예제에서는 일반적인 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 다음 메서드 형식을를 쿼리 합니다.  
   
 ```vb  
@@ -92,7 +92,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- 쿼리 메서드에 대 한 자세한 내용은 참조 하십시오. [쿼리](../../../visual-basic/language-reference/queries/queries.md)합니다. 표준 쿼리 연산자에 대 한 자세한 내용은 참조 [표준 쿼리 연산자 개요](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)합니다.  
+ 쿼리 메서드에 대 한 자세한 내용은 참조 하십시오. [쿼리](../../../visual-basic/language-reference/queries/queries.md)합니다. 표준 쿼리 연산자에 대 한 자세한 내용은 참조 [표준 쿼리 연산자 개요](../../programming-guide/concepts/linq/standard-query-operators-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  

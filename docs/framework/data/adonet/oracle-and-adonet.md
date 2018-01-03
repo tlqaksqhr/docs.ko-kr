@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c615c985f885734800b471ee31451cfb8a4c8500
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77d5c98c96bd4b6085c30b6d1dd713bd324fbad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-and-adonet"></a>Oracle 및 ADO.NET
 > [!NOTE]
@@ -46,20 +47,20 @@ using System.Data.OracleClient;
 csc /r:System.Data.OracleClient.dll  
 ```  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [시스템 요구 사항](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle을 사용하는 데 필요한 요구 사항 및 사용 과정에서 발생하는 몇 가지 알려진 문제점에 대해 설명합니다.  
   
- [Oracle Bfile](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
+ [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Oracle BFILE 데이터 형식 작업에 사용되는 <xref:System.Data.OracleClient.OracleBFile> 클래스에 대해 설명합니다.  
   
- [Oracle Lob](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ [Oracle LOB](../../../../docs/framework/data/adonet/oracle-lobs.md)  
  Oracle LOB 데이터 형식 작업에 사용되는 <xref:System.Data.OracleClient.OracleLob> 클래스에 대해 설명합니다.  
   
- [Oracle REF Cursor](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
  Oracle REF CURSOR 데이터 형식 지원에 대해 설명합니다.  
   
- [OracleTypes](../../../../docs/framework/data/adonet/oracletypes.md)  
+ [OracleType](../../../../docs/framework/data/adonet/oracletypes.md)  
  <xref:System.Data.OracleClient.OracleNumber> 및 <xref:System.Data.OracleClient.OracleString>을 비롯하여 Oracle 데이터 형식 작업에 사용할 수 있는 구조에 대해 설명합니다.  
   
  [Oracle 시퀀스](../../../../docs/framework/data/adonet/oracle-sequences.md)  
@@ -84,7 +85,7 @@ csc /r:System.Data.OracleClient.dll
  [SQL Server 및 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 관련 기능을 사용하는 방법에 대해 설명합니다.  
   
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 공급자 독립적인 코드를 쓸 수 있게 하는 일반 클래스에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  

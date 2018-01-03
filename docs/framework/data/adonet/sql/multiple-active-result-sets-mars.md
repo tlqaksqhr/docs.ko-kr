@@ -13,17 +13,18 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 545717c1aa620644203bf6adaa866cec3e8e7fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d44e6375209f6ad9c733d1c4412ee605b439d992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-active-result-sets-mars"></a>MARS(Multiple Active Result Sets)
 MARS(Multiple Active Result Sets)는 단일 연결에서 여러 배치를 실행할 수 있도록 하는 기능입니다. 이전 버전에서는 단일 연결에 대해 한 번에 하나의 배치만 실행할 수 있었습니다. MARS로 여러 배치를 실행한다고 해서 여러 작업을 동시에 실행할 수 있는 것은 아닙니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [다중 활성 결과 집합을 사용 하도록 설정](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [MARS(Multiple Active Result Sets) 사용](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
  SQL Server에서 MARS를 사용하는 방법에 대해 설명합니다.  
   
  [데이터 조작](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  

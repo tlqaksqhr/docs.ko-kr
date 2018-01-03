@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 192273c6d364cebe828965ed016eea81135602f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6710d3e9bf52ff10ee8dd545161f0858001f2c40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>방법: Visual Studio에서 LINQ to DataSet 프로젝트 만들기
 다양한 형식의 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 프로젝트에는 가져온 네임스페이스(Visual Basic) 또는 `using` 지시문(C#) 및 참조가 필요합니다. 적어도 System.Core.dll에 대한 참조와 `using`에 대한 <xref:System.Linq> 지시문이 있어야 합니다. 기본적으로 이들은 새 [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] 프로젝트를 만들면 제공됩니다. 또한 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에는 System.Data.dll 및 System.Data.DataSetExtensions.dll에 대한 참조와 `Imports`(Visual Basic) 또는 `using`(C#) 지시문이 필요합니다.  

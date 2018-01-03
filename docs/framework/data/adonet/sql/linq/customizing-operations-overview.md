@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7653ca137c93da5174e0ddcd1ced8bdfceaa9edc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9776daa28b0a7ffcd3b721f004f5b9a44dd09f48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-operations-overview"></a>작업 사용자 지정: 개요
 기본적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 매핑을 기반으로 하는 삽입, 업데이트 및 삭제 작업을 위한 동적 SQL을 생성합니다. 그러나 실제로는 사용자 고유의 비즈니스 논리를 추가하여 보안, 유효성 검사 등을 제공합니다.  
@@ -34,4 +35,4 @@ ms.lasthandoff: 10/18/2017
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 저장 프로시저 및 사용자 정의 함수의 사용을 지원합니다. 저장 프로시저는 작업을 사용자 지정하는 데 자주 사용됩니다. 자세한 내용은 [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [사용자 지정 삽입, 업데이트 및 삭제 작업](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+ [삽입, 업데이트 및 삭제 작업 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

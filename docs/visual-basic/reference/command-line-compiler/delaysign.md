@@ -14,11 +14,11 @@ ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dc457a1a32048441f82976488158f223e7e3e087
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: b4d29f99d0c375eebee0f477720cb9a22172dddb
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delaysign"></a>T:System.Reflection.AssemblyDelaySignAttribute
 어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다.  
@@ -40,11 +40,11 @@ ms.lasthandoff: 12/09/2017
   
  사용 하 여 예를 들어 `/delaysign+`, 조직 내에서 개발자 테스터를 전역 어셈블리 캐시에 등록 하 고 사용할 수 있는 어셈블리의 서명 되지 않은 테스트 버전을 배포할 수 있습니다. 어셈블리에 대 한 작업 완료 되 면 회사의 개인 키에 대 한 사용자 어셈블리에 완전히 서명할 수 있습니다. 이 작업의 공개, 모든 개발자가 어셈블리에 작업할 수 있도록 허용 하면서 회사의 개인 키를 보호 합니다.  
   
- 참조 [and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
+ 참조 [and using strong-named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
   
 ### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>Visual Studio에서 /delaysign을 설정 하려면 통합 개발 환경  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.  
+1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
   
 2.  **시그니처** 탭을 클릭합니다.  
   

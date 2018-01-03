@@ -1,6 +1,6 @@
 ---
 title: "F #을 사용한 명령줄 도구 시작"
-description: "F # 플랫폼 간.NET Core CLI를 사용 하는 방법에 알아봅니다."
+description: "플랫폼 간.NET Core CLI와 모든 OS (Windows, MacOS, Linux)에서 F #을 사용 하는 방법을 알아봅니다."
 keywords: "visual f#, f#, 함수형 프로그래밍, .NET, .NET Core"
 author: cartermp
 ms.author: phcart
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: a23d4861ce599f20f37ecd0564a0187e7b9b739f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4820a8a306bd478429b497a8b7c70ff170c1c655
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>F #으로.NET Core CLI 시작
 
-이 문서에서는 어떻게 시작할 수 있습니다를 사용 하 여 F #에서.NET Core와 설명 합니다. 콘솔 응용 프로그램에 의해 호출 되는 클래스 라이브러리와 다중 프로젝트 솔루션을 구축를 거치게 됩니다.
+이 문서에서는 어떻게 시작할 수 있습니다는 OS (Windows, macOS 등 또는 Linux)에서 F #.NET Core CLI를 사용 하 여 설명 합니다. 콘솔 응용 프로그램에 의해 호출 되는 클래스 라이브러리와 다중 프로젝트 솔루션을 구축를 거치게 됩니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

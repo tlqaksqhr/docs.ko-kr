@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 773547b097bad80e82350b473b6e59d0d84aa6dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f7118637671dbc18c1385b71cc492b5307a377c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="like-entity-sql"></a>LIKE(Entity SQL)
 특정 문자 `String`이 지정된 패턴과 일치하는지 여부를 결정합니다.  
@@ -49,7 +50,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
  다음 표에서는 패턴 `string`의 구문을 설명합니다.  
   
-|와일드카드 문자|설명|예제|  
+|와일드카드 문자|설명|예|  
 |------------------------|-----------------|-------------|  
 |%|문자 0개 이상으로 이루어진 임의의 `string`입니다.|`title like '%computer%'`단어 포함 된 모든 제목을 찾습니다 `"computer"` 는 제목에 있습니다.|  
 |_(밑줄)|임의의 단일 문자입니다.|`firstname like '_ean'`은 Dean이나 Sean처럼 `"ean`"으로 끝나면서 4문자로 이루어진 이름을 찾습니다.|  
@@ -75,7 +76,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
  이 검색 식에서 느낌표(!) 문자 바로 다음에 나오는 백분율(%) 와일드카드 문자는 와일드카드 문자가 아니라 리터럴로 취급됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 와일드카드 문자 및 대괄호(`[ ]`) 문자를 제외한 모든 문자를 이스케이프 문자로 사용할 수 있습니다. 이전의 예제에서 느낌표(!) 문자가 이스케이프 문자입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 두 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 LIKE 및 ESCAPE 연산자를 사용하여 특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다. 첫 번째 쿼리는 `Name`이라는 문자로 시작되는 `Down_`을 검색합니다. 이 쿼리에서는 밑줄(`_`)이 와일드카드 문자이므로 ESCAPE 옵션이 사용되었습니다. ESCAPE 옵션이 지정 하지 않고 쿼리 검색할 것 `Name` 단어로 시작 하는 값 `Down` 밑줄 문자를 제외한 모든 단일 문자입니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
 1.  절차에 따라 [하는 방법: PrimitiveType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)합니다.  

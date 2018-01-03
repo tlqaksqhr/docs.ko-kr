@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0c6db401f710c470ea890a7a7ac090fabef5d64c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e05ede0981a066abd72aafa81478d6c84342d18f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started"></a>시작
 사용 하 여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]를 사용할 수 있습니다는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 기술 SQL 액세스 하는 메모리 내 컬렉션에 액세스 하는 것 처럼 데이터베이스입니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: defdaa7f101c12e30e4e3f2b7f099685fa573fc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a20759300c44c8255427272cfa6034a877c4f6da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="string-functions"></a>문자열 함수
 .NET Framework Data Provider for SQL Server(SqlClient)에서는 입력 `String`에 대해 연산을 수행하고 `String` 또는 숫자 값 결과를 반환하는 `String` 함수를 제공합니다. 이 함수는 SqlClient를 사용할 때 사용 가능한 SqlServer 네임스페이스에 있습니다. 공급자의 네임스페이스 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자가 사용하는 접두사를 Entity Framework에서 찾을 수 있습니다.  
@@ -57,5 +58,5 @@ ms.lasthandoff: 11/21/2017
 |[문자열 함수 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115915)|[문자열 함수 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115916)|[문자열 함수 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115914)|  
   
 ## <a name="see-also"></a>참고 항목  
- [Entity Framework 함수에 대 한 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
- [Entity Framework 용 SqlClient에서 알려진된 문제](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)
+ [Entity Framework용 SqlClient 기능](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
+ [Entity Framework용 SqlClient에서 알려진 문제](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)

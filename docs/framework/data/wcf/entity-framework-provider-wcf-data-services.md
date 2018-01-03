@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26c054e3cc9dbf920ab280df43d97acdb90ca055
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc27663904371991855b2fe7d96b4a15827d1180
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework 공급자(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]와 마찬가지로 ADO.NET Entity Framework는 엔터티-관계 모델의 한 형식인 엔터티 데이터 모델을 기반으로 합니다. Entity Framework 변환 이라고 부르는 엔터티 데이터 모델의 구현에 대 한 작업의 *개념적 모델*, 데이터 원본에 대 한 동등한 작업으로 합니다. 따라서 Entity Framework는 관계형 데이터를 기반으로 하는 데이터 서비스에 적합한 공급자이며, Entity Framework를 지원하는 데이터 공급자가 있는 모든 데이터베이스를 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]와 함께 사용할 수 있습니다. 목록이 현재 Entity Framework를 지원 되는 데이터 원본에 대 한 참조 [Entity Framework 용 타사 공급자](http://go.microsoft.com/fwlink/?LinkId=143699)합니다.  
@@ -30,6 +31,6 @@ ms.lasthandoff: 12/02/2017
  Entity Framework에 대 한 자세한 참조 [Entity Framework 개요](../../../../docs/framework/data/adonet/ef/overview.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Data Services 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [리플렉션 공급자](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
  [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)

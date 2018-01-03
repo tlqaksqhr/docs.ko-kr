@@ -9,11 +9,11 @@ ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bca33cd4d0dc802e37bbf19e94d6181ba337e2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea9234a11dfb1c040ef58c38d9dfc8a4f71ccb96
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drive-39ltdrivenamegt39-not-found"></a>드라이브 &#39; &lt;drivename&gt;&#39; 찾을 수 없음
 드라이브를 찾을 수 없습니다. 네트워크 연결이 끊어졌거나, 액세스하려는 드라이브가 오프라인 상태이거나 존재하지 않습니다.  
@@ -30,4 +30,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)  
- [PAVEOVER 제품 기술 지원 및 접근성](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+

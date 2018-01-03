@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d078476e881c3823d7772a9db4cdbdb23dac8bb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8497f728019c97bb59162d39a9f77e34e4e6f3c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>ID 캐시에서 개체 검색
 이 항목은 <xref:System.Data.Linq.DataContext>에서 관리하는 ID 캐시에서 개체를 반환하는 LINQ to SQL 쿼리의 형식에 대해 설명합니다.  
@@ -76,6 +77,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [개체 Id](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
+ [개체 ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [개체 Id](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+ [개체 ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

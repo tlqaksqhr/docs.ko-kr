@@ -14,11 +14,11 @@ ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04b79b3d14a9c4a9f9721860cd1ed44032dfa5d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d472795affe0df098d1551daf51a2f0ae20723ba
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="warnaserror-visual-basic"></a>/warnaserror(Visual Basic)
 컴파일러에서 맨 처음 발견 되는 경고를 오류로 처리 하도록 합니다.  
@@ -48,20 +48,20 @@ ms.lasthandoff: 11/21/2017
   
 |/Warnaserror를 오류로 Visual Studio IDE에서 모든 경고를 처리 하도록 설정 하려면|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.<br />2.  **컴파일** 탭을 클릭합니다.<br />3.  있는지 확인은 **모든 경고를 해제** 확인란이 선택 되어 있습니다.<br />4.  확인 된 **모든 경고를 오류로 처리** 확인란 합니다.|  
+|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  있는지 확인은 **모든 경고를 해제** 확인란이 선택 되어 있습니다.<br />4.  확인 된 **모든 경고를 오류로 처리** 확인란 합니다.|  
   
 |/Warnaserror 특정 경고 Visual Studio IDE에서 오류를 처리 하도록 설정 하려면|  
 |---|  
 |1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.<br />2.  **컴파일** 탭을 클릭합니다.<br />3.  있는지 확인은 **모든 경고를 해제** 확인란이 선택 되어 있습니다.<br />4.  있는지 확인은 **모든 경고를 오류로 처리** 확인란이 선택 되어 있습니다.<br />5.  선택 **오류** 에서 **알림** 열 옆에 경고를 오류로 처리할지를 실행 합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `In.vb` 경고가의 첫 번째 오류를 표시 하려면 컴파일러를 안내 합니다.  
   
 ```  
 vbc /warnaserror in.vb  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `T2.vb` 만 사용 하지 않는 지역 변수 (42024)에 대 한 경고를 오류로 취급 하 고 있습니다.  
   
 ```  

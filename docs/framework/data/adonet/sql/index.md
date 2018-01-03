@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ab519f7881dd20c3fd9e2e08fef14591477d94a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 691423e2d5893e56e1ed2e7080e38cc9c23d854a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 및 ADO.NET
 이 단원에서는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)와 관련된 기능 및 동작에 대해 설명합니다.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  .NET Framework Data Provider for SQL Server를 사용하려면 응용 프로그램에서 <xref:System.Data.SqlClient> 네임스페이스를 참조해야 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SQL Server 보안](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  SQL Server 보안 기능에 대해 간략하게 설명하고 SQL Server를 대상으로 하는 안전한 ADO.NET 응용 프로그램을 만드는 시나리오를 제공합니다.  
   

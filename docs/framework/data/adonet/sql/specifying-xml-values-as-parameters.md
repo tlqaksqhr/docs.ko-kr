@@ -16,16 +16,17 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4d48cc329644873be268606409c154ffe832cd91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5957dee03d7f3cd54b3fdacd0d38dead5bbc077d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-xml-values-as-parameters"></a>XML 값을 매개 변수로 지정
 쿼리에 값이 XML 문자열인 매개 변수를 필요한 경우 개발자의 인스턴스를 사용 하 여 해당 값을 제공할 수는 **SqlXml** 데이터 형식입니다. 여기에 까다로운 기법이 적용되는 것은 아니며 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]의 XML 열은 다른 데이터 형식과 똑같은 방법으로 매개 변수 값을 받아들입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 콘솔 응용 프로그램에서 새 테이블을 만듭니다는 **AdventureWorks** 데이터베이스입니다. 새 테이블 열이 포함 **SalesID** 및 라는 XML 열 **SalesInfo**합니다.  
   
 > [!NOTE]

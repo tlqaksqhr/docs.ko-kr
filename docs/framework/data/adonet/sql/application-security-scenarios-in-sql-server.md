@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8576ba3ae26788076fedf71a1f8028afbd263378
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server의 응용 프로그램 보안 시나리오
 안전한 SQL Server 클라이언트 응용 프로그램을 만드는 방법이 정확하게 한 가지만 존재하지는 않습니다. 모든 응용 프로그램은 요구 사항, 배포 환경 및 사용자 집단에 따라 고유합니다. 초기에 배포했을 때에는 비교적 안전했던 응용 프로그램도 시간이 지남에 따라 안전하지 못할 수 있습니다. 앞으로 생길 수 있는 위협을 정확히 예측하는 것은 불가능합니다.  
@@ -44,14 +45,14 @@ ms.lasthandoff: 11/21/2017
   
  Windows 인증을 사용하는 경우에도 항상 `sa` 계정에 대해 강력한 암호를 할당하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
- [SQL Server에서 저장된 프로시저와 함께 권한 관리](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [SQL Server에서 저장 프로시저를 사용하여 권한 관리](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  저장 프로시저를 사용하여 권한을 관리하고 데이터 액세스를 제어하는 방법에 대해 설명합니다. 저장 프로시저 사용은 여러 보안 위협에 대응하는 효율적인 방법입니다.  
   
- [보안 SQL Server에서 동적 SQL 작성](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [SQL Server에서 동적 보안 SQL 작성](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  저장 프로시저를 사용하여 안전한 동적 SQL을 작성하는 기술에 대해 설명합니다.  
   
- [SQL Server에서 저장된 프로시저에 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [SQL Server에서 저장 프로시저에 서명](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  사용자가 직접 액세스할 수 없는 데이터를 사용할 수 있도록 인증서를 사용하여 저장 프로시저에 서명하는 방법에 대해 설명합니다. 호출자가 직접 수행할 권한이 없는 작업을 저장 프로시저에서 수행할 수 있습니다.  
   
  [SQL Server에서 가장으로 권한 사용자 지정](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
  [SQL Server에서 응용 프로그램 역할 만들기](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  응용 프로그램 역할의 특성과 기능에 대해 설명합니다.  
   
- [SQL Server에서 데이터베이스 간 액세스를 사용 하도록 설정](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [SQL Server에서 데이터베이스 간 액세스 활성화](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  보안을 위협하지 않고 데이터베이스 간 액세스를 허용하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  

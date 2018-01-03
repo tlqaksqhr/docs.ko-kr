@@ -18,11 +18,11 @@ ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2575598577820bd7a72fae2d9b8ba52978f5952d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6ba5ce4b009e0d8c675db07b56b9811c595ae2f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 문
 트리거는 이벤트 클래스, 폼 또는 문서의 모듈 수준에서 선언 되었습니다.  
@@ -35,7 +35,7 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>요소  
  `eventname`  
- 필수 요소. 트리거할 이벤트의 이름입니다.  
+ 필수. 트리거할 이벤트의 이름입니다.  
   
  `argumentlist`  
  선택 사항입니다. 변수, 배열, 또는 식의 쉼표로 구분 된 목록입니다. `argumentlist` 인수는 괄호로 묶어야 합니다. 인수가 없는 경우 괄호를 생략 해야 합니다.  
@@ -57,7 +57,7 @@ RaiseEvent eventname[( argumentlist )]
 > [!NOTE]
 >  사용자 지정 이벤트를 정의 하 여 이벤트의 기본 동작을 변경할 수 있습니다. 사용자 지정 이벤트에는 `RaiseEvent` 문은 이벤트의 호출 `RaiseEvent` 접근자입니다. 사용자 지정 이벤트에 대 한 자세한 내용은 참조 하십시오. [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 이벤트를 사용하여 10초부터 0초까지 카운트 다운합니다. 코드에 나와 있는 일부의 이벤트 관련 메서드, 속성 및 포함 하는 문을 `RaiseEvent` 문.  
   
  이벤트를 발생시키는 클래스는 이벤트 소스이고 이벤트를 처리하는 메서드는 이벤트 처리기입니다. 이벤트 소스는 생성되는 이벤트에 대해 여러 개의 처리기를 사용할 수 있습니다. 클래스에서 이벤트를 발생시키면 해당 이벤트는 개체의 해당 인스턴스에 대해 이벤트를 처리하도록 선택한 모든 클래스에서 발생됩니다.  
@@ -72,7 +72,7 @@ RaiseEvent eventname[( argumentlist )]
   
  [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `Form1`에 대한 코드에 다음 코드를 추가합니다. 교체와 같은 있을 수 있는 모든 중복 프로시저 `Form_Load`, 또는 `Button_Click`합니다.  
   
  [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
@@ -80,7 +80,7 @@ RaiseEvent eventname[( argumentlist )]
  앞의 예제를 실행 하 고 단추를 클릭 하려면 F5 키를 눌러 **시작**합니다. 첫 번째 텍스트 상자에서 초를 카운트 다운하기 시작합니다. 전체 시간(10초)이 경과되면 첫 번째 텍스트 상자에 "Done"이 표시됩니다.  
   
 > [!NOTE]
->  `My.Application.DoEvents` 메서드 이벤트를 처리 하지 동일한 방식으로 폼 마찬가지로 합니다. 이벤트를 직접 처리 하기를 사용할 수 있습니다 다중 스레딩을 합니다. 자세한 내용은 참조 [스레딩](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)합니다.  
+>  `My.Application.DoEvents` 메서드 이벤트를 처리 하지 동일한 방식으로 폼 마찬가지로 합니다. 이벤트를 직접 처리 하기를 사용할 수 있습니다 다중 스레딩을 합니다. 자세한 내용은 참조 [스레딩](../../programming-guide/concepts/threading/index.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [이벤트](../../../visual-basic/programming-guide/language-features/events/index.md)  

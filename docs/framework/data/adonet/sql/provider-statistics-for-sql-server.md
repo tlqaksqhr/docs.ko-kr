@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 54e9a3b6f72eee2246d2c76b10e01fe011435b3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87f3dfbb3af6e638207d68540217f7134b95c354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server용 공급자 통계
 .NET Framework 버전 2.0부터는 .NET Framework Data Provider for SQL Server에 런타임 통계가 지원됩니다. 유효한 연결 개체를 만든 후 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 개체의 <xref:System.Data.SqlClient.SqlConnection> 속성을 `True`로 설정하여 통계를 활성화해야 합니다. 통계를 활성화한 후에는 <xref:System.Collections.IDictionary> 개체의 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 메서드를 통해 <xref:System.Data.SqlClient.SqlConnection> 참조를 검색하여 통계를 "적시 스냅샷"으로 검토할 수 있습니다. 이름/값 쌍 사전 항목의 집합으로 목록을 열거합니다. 이러한 이름/값 쌍은 순서가 정해져 있지 않습니다. 언제라도 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 개체의 <xref:System.Data.SqlClient.SqlConnection> 메서드를 호출하여 카운터를 다시 설정할 수 있습니다. 통계 수집을 활성화하지 않으면 예외가 생성되지 않습니다. 또한 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>를 먼저 호출하지 않은 상태에서 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>를 호출한 경우 각 항목의 초기 값이 검색됩니다. 통계를 활성화하고 나서 잠시 동안 응용 프로그램을 실행했다가 통계를 비활성화하면 검색된 값은 통계가 사용되지 않은 지점까지 수집된 값을 반영합니다. 모든 통계 값은 각 연결 단위로 수집됩니다.  

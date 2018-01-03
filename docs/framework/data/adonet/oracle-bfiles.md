@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f48bd85559d55d9a1190310bcf13cd4a68625011
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 585245464ce3a2ef4b1da6ec2a7e2770af187876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 .NET Framework Data Provider for Oracle에는 Oracle <xref:System.Data.OracleClient.OracleBFile> 데이터 형식 작업에 사용되는 <xref:System.Data.OracleClient.OracleType.BFile> 클래스가 포함되어 있습니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  DIRECTORY 개체와 연관된 디렉터리에 위치하는 원본 파일 이름입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 C# 예제를 만드는 방법을 보여 줍니다.는 **BFILE** Oracle 테이블에 한 다음 형식으로 검색 한 **OracleBFile** 개체입니다. 예제를 사용 하는 <xref:System.Data.OracleClient.OracleDataReader> 개체 및 **OracleBFile** **Seek** 및 **읽기** 메서드. 이 샘플을 사용 하려면 먼저 만들어야 라는 디렉터리 "c:\\\bfiles"와 "MyFile.jpg" Oracle 서버에 명명 된 파일입니다.  
   
 ```csharp  

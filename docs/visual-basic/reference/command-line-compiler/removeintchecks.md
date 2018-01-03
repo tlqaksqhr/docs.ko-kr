@@ -17,11 +17,11 @@ ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e765f0007eea8e196b1a1b3b55b969c5b074b52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 917977d8e5e12c231370ab3c956aca9d96e8a8a8
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="removeintchecks"></a>/removeintchecks
 오버플로 오류 설정 하거나 해제 하는 정수 연산에 대 한 검사를 설정 합니다.  
@@ -40,9 +40,9 @@ ms.lasthandoff: 11/21/2017
   
 |Visual Studio에서 /removeintchecks를 설정 하려면 통합 개발 환경|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.<br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급** 단추를 클릭합니다.<br />4.  값을 수정 된 **정수 오버플로 검사 해제** 상자입니다.|  
+|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급** 단추를 클릭합니다.<br />4.  값을 수정 된 **정수 오버플로 검사 해제** 상자입니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `Test.vb` 정수 오버플로 오류 검사를 해제 합니다.  
   
 ```  

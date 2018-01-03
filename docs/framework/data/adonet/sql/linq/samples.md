@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 95bf64ce56b9e70317b2a51e3abf77ea6dbd7bc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9bd06e056a70e3cb97967a03604baf5dc9b4ff5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="samples"></a>샘플
 이 항목에서는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]에 대한 링크와 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 샘플 코드가 포함된 C# 솔루션을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  SampleQueries 솔루션의 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 버전  
  [예제 쿼리 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   

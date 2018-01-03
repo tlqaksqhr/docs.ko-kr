@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08296be1002ee50e18a45c546645f4cc117d6bb5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6711ef5591110c74a1da95358aac4d8a8da655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-wcf-data-services"></a>빠른 시작(WCF Data Services)
 이 빠른 시작을 사용 하면 익숙해지는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 및 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 일련의 항목에서는 지 원하는 작업을 통해 [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)합니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 퀵 스타트의 첫 번째 작업에서는 데이터 서비스를 만들어 Northwind 샘플 데이터베이스에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 노출하는 방법을 보여 줍니다. 이후 항목에서는 웹 브라우저를 사용하여 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 액세스하고 클라이언트 라이브러리를 사용하여 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 피드를 사용하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 클라이언트 응용 프로그램도 만듭니다.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 퀵 스타트를 수행하려면 다음 구성 요소를 설치해야 합니다.  
   
 -   [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  

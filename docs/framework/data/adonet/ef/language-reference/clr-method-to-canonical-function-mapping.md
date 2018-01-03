@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>정식 함수 매핑에 대한 CLR 메서드
 Entity Framework에서는 문자열 조작 및 수식 함수와 같이 다수의 데이터베이스 시스템이 공통적으로 가지고 있는 기능을 구현하는 일련의 정식 함수를 제공합니다. 따라서 개발자는 다양한 데이터베이스 시스템을 대상으로 작업할 수 있습니다. 이러한 정식 함수는 LINQ to Entities와 같은 쿼리 기술에서 호출하면 사용 중인 공급자에 해당하는 올바른 저장소 함수로 변환됩니다. 그러면 함수 호출이 다양한 데이터 소스에서 공통적인 형태로 표현될 수 있으며, 따라서 다수의 데이터 소스에서 일관적인 쿼리를 사용할 수 있습니다. 피연산자가 숫자 형식인 경우 비트 AND, OR, NOT 및 XOR 연산자도 정식 함수에 매핑됩니다. 부울 피연산자의 경우 비트 AND, OR, NOT 및 XOR 연산자는 피연산자의 논리 AND, OR, NOT 및 XOR 연산을 계산합니다. 자세한 내용은 참조 [정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)합니다.  

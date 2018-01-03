@@ -15,11 +15,11 @@ ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc2fbb044fc839aa24abf3dc1ea864457efb0653
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aaaa7460ade00ad4232807ce11ee125e270742bf
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>포함 된 interop 어셈블리 &#39;에 참조를 만들었습니다. &lt;assembly1&gt;&#39; 어셈블리 &#39;에서 해당 어셈블리에 간접 참조&lt; assembly2&gt;&#39;
 포함된 interop 어셈블리 ‘\<assembly1>’에 대한 참조는 해당 어셈블리에 대한 ‘\<assembly2>’ 어셈블리의 간접 참조로 인해 만들어졌습니다. 두 어셈블리 중 하나에서 ‘Embed Interop Types’ 속성을 변경하는 것이 좋습니다.  
@@ -39,4 +39,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [/link(Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)  
- [주 Interop 어셈블리를 사용한 프로그래밍](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)
+ [비관리 코드와의 상호 운용](../../../framework/interop/index.md)

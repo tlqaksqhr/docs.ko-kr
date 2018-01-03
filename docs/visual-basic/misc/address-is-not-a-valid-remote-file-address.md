@@ -8,11 +8,11 @@ ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9c9b527fafde8e221750fcda046bd7d17f251197
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b81c9a96ff90d429e5457283bbafb4ec3e021473
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;주소&gt; 올바른 원격 파일 주소가 아닙니다
 \<주소 > 올바른 원격 파일 주소가 아닙니다. 올바른 주소는 프로토콜, 경로 및 파일 이름을 포함해야 합니다.  
@@ -24,8 +24,7 @@ ms.lasthandoff: 11/21/2017
 -   지정한 주소를 확인하여 잘못된 부분을 확인하고 필요한 정보를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [My.Computer.Network.UploadFile 메서드](http://msdn.microsoft.com/en-us/5505ea3e-3dbd-460b-9f8f-62c84c0a4de6)  
- [My.Computer.Network.DownloadFile 메서드](http://msdn.microsoft.com/en-us/aeb7ed8f-1ac9-4242-ae57-9f35914eb329)  
- [방법: 파일 업로드](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
+ [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
  [방법: 파일 다운로드](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- [Visual Basic을 사용한.NET Framework의 네트워크 작업](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)
+

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c988f5ab5a342ad3282414634ca3bfc21f481ea5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9fab355da61ea7445e429cfc4e336a14b588e30c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-a-transactional-application"></a>트랜잭션 응용 프로그램 작성
 트랜잭션 응용 프로그램 프로그래머는 <xref:System.Transactions> 네임스페이스가 제공하는 두 가지 프로그래밍 모델을 활용하여 트랜잭션을 만들 수 있습니다. 사용 하 여 명시적 프로그래밍 모델을 사용할 수 있습니다는 <xref:System.Transactions.Transaction> 클래스 또는 트랜잭션을 관리 하는 자동으로 인프라에서 사용 하 여 암시적 프로그래밍 모델은 <xref:System.Transactions.TransactionScope> 클래스입니다. 개발에 대 한 암시적 트랜잭션 모델을 사용 하는 것이 좋습니다. 에 트랜잭션 범위를 사용 하는 방법에 자세한 정보를 확인할 수는 [암시적 트랜잭션은 트랜잭션 범위를 사용 하 여 구현](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) 항목입니다.  
@@ -28,11 +29,11 @@ ms.lasthandoff: 12/02/2017
 ### <a name="creating-a-transaction"></a>트랜잭션 만들기  
  <xref:System.Transactions> 네임스페이스에서는 트랜잭션을 만드는 두 가지 모델을 제공합니다. 이 모델에 대해서는 다음 항목에서 설명합니다.  
   
- [트랜잭션 범위를 사용 하 여 암시적 트랜잭션을 구현](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
+ [트랜잭션 범위를 사용하여 암시적 트랜잭션 구현](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
   
  <xref:System.Transactions> 네임스페이스가 <xref:System.Transactions.TransactionScope> 클래스를 사용하여 암시적 트랜잭션을 만드는 기능을 지원하는 방법에 대해 설명합니다.  
   
- [CommittableTransaction를 사용 하 여 명시적 트랜잭션을 구현](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
+ [CommittableTransaction을 사용하여 명시적 트랜잭션 구현](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
   
  <xref:System.Transactions> 네임스페이스가 <xref:System.Transactions.CommittableTransaction> 클래스를 사용하여 명시적 트랜잭션을 만드는 기능을 지원하는 방법에 대해 설명합니다.  
   

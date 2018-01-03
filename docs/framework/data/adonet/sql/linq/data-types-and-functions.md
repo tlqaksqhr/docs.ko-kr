@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 809fc9290070deb304c44018102874d6a56fdd11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af102a0d6ca8ec1092c8b0909a7817cb053ab6c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-types-and-functions"></a>데이터 형식 및 함수
 다음 표에 나열된 항목에서는 CLR(공용 언어 런타임)의 멤버, 구문 및 캐스트에 대한 LINQ to SQL의 지원 정보를 설명합니다. 지원되는 멤버와 구문은 LINQ to SQL 쿼리에 사용할 수 있습니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |[System.Object 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
 |[System.String 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
 |[System.TimeSpan 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|<xref:System.TimeSpan?displayProperty=nameWithType> 구조체의 멤버에 대한 LINQ to SQL의 지원 정보를 설명합니다.|  
-|[지원 되지 않는 기능](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 지원하지 않는 기능에 대해 설명합니다.|  
+|[지원되지 않는 기능](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 지원하지 않는 기능에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL-CLR 형식 불일치](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  

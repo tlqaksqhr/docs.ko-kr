@@ -13,11 +13,11 @@ ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6f0cf690b816d57dc4a2646eb82d649727d033a9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>연습: DataRepeater 컨트롤의 데이터 표시(Visual Studio)
 이 연습에서는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤의 바인딩된 데이터를 표시하는 작업을 처음부터 끝까지 보여 주는 기본 시나리오를 제공합니다.  
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/09/2017
 ## <a name="prerequisite"></a>필수 조건  
  이 연습을 수행하려면 Northwind 샘플 데이터베이스가 있어야 합니다.  
   
- 이 데이터베이스가 개발 컴퓨터에 없는 경우 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088)에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
+ 이 데이터베이스가 개발 컴퓨터에 없는 경우 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088)에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다.  
   
 ## <a name="overview"></a>개요  
  이 연습의 첫 번째 부분은 다음과 같은 네 가지 주요 작업으로 구성됩니다.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/09/2017
   
          또는  
   
-    -   **새 연결** 을 클릭하여 새 데이터 연결을 구성합니다. 자세한 내용은 [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/en-us/360c340d-e5a6-4a7e-a569-e95d500be43d)을 참조하십시오.  
+    -   **새 연결** 을 클릭하여 새 데이터 연결을 구성합니다. 자세한 내용은 참조 [새 연결 추가](/visualstudio/data-tools/add-new-connections)합니다.  
   
 5.  데이터베이스에 암호가 필요하면 중요한 데이터를 포함하는 옵션을 선택하고 **다음**을 클릭합니다.  
   

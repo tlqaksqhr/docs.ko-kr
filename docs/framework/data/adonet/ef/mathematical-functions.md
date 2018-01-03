@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8390f1e1822d7581ab0352a8c81acbc7ce545507
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea933d1e6c0245f3bc6cc2a0767b593957b0598a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mathematical-functions"></a>수학 함수
 .NET Framework Data Provider for SQL Server(SqlClient)에서는 인수로 제공된 입력 값에 대해 계산을 수행한 다음 숫자 값으로 된 결과를 반환하는 수치 연산 함수를 제공합니다. 이 함수는 SqlClient를 사용할 때 사용 가능한 SqlServer 네임스페이스에 있습니다. 공급자의 네임스페이스 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자가 사용하는 접두사를 Entity Framework에서 찾을 수 있습니다. 다음 표에서는 SqlClient 수치 함수에 대해 설명합니다.  
@@ -57,4 +58,4 @@ ms.lasthandoff: 10/18/2017
 |[수치 연산 함수 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115913)|[수치 연산 함수 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115911)|[수치 연산 함수 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=115912)|  
   
 ## <a name="see-also"></a>참고 항목  
- [Entity Framework 함수에 대 한 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+ [Entity Framework용 SqlClient 기능](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

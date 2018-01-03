@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98ac35edc458e370f2b7b9b116d2872d0db2da71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 270b3755901e3c5bc95352b5f3d07a338e73a90e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>리소스를 트랜잭션에 참가 요소로 등록
 트랜잭션에 참여하는 각 리소스는 RM(리소스 관리자)에 의해 관리되고, RM의 작업은 TM(트랜잭션 관리자)에 의해 조정됩니다. 코디네이션은 트랜잭션 관리자를 통해 트랜잭션에 참여한 구독자에게 제공되는 알림을 통해 수행됩니다.  
@@ -58,5 +59,5 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Transactions.Transaction> 클래스는 PSPE(승격 가능한 단일 단계 인리스트먼트)를 참여시키는 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 메서드도 제공합니다. 이 메서드를 사용하면 지속적인 RM(리소스 관리자)이 트랜잭션을 호스팅하고 "소유"할 수 있으며, 필요한 경우 MSDTC에서 관리하도록 나중에 해당 트랜잭션을 에스컬레이션할 수 있습니다. 이 대 한 자세한 내용은 참조 하십시오. [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용 하 여 최적화](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용 하 여 최적화](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [1 단계 및 다중 단계에서 트랜잭션 커밋](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+ [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [단일 단계 및 다단계 트랜잭션 커밋](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

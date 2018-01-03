@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 18403ac8237b1e129ec07e0271ff75194d944855
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe3005b3dbfa1a2f0018dd7b6049ab65d68b8e40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-counters-in-adonet"></a>성능 카운터(ADO.NET)
 ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient>를 모두 지원하는 성능 카운터에 대한 확장된 지원이 추가되었습니다. 이전 버전의 ADO.NET에서 사용 가능한 <xref:System.Data.SqlClient> 성능 카운터는 더 이상 사용되지 않는 대신 이 항목에 설명할 새 성능 카운터로 대체되었습니다. ADO.NET 성능 카운터를 사용하여 응용 프로그램 상태와 응용 프로그램에서 사용하는 연결 리소스를 모니터링할 수 있습니다. 성능 카운터는 Windows 성능 카운터를 사용하여 모니터링하거나 <xref:System.Diagnostics.PerformanceCounter> 네임스페이스의 <xref:System.Diagnostics> 클래스를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.  
@@ -67,7 +68,7 @@ ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClien
 > [!NOTE]
 >  이 예제에서는 샘플을 사용 하 여 **AdventureWorks** 에 포함 된 데이터베이스 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]합니다. 이 샘플 코드에 제공된 연결 문자열에서는 인스턴스 이름이 SqlExpress인 데이터베이스가 로컬 컴퓨터에 설치되어 있고 사용 가능하며 연결 문자열에 제공된 문자열과 일치하는 SQL Server 로그인을 만들었다고 가정합니다. Windows 인증만 허용하는 기본 보안 설정을 사용하여 서버를 구성하는 경우 SQL Server 로그인을 활성화해야 할 수도 있습니다. 사용자 환경에 맞게 연결 문자열을 수정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```vb  
 Option Explicit On  

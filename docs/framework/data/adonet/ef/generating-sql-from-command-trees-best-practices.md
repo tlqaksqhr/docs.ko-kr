@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 06d2711d9dac203645c127fa86581a9888db3cb1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d94090eadaa634d1cc2912bf60c987c47c1b6a5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>명령 트리에서 SQL 생성 - 최선의 방법
 출력 쿼리 명령 트리는 SQL로 표현 가능한 쿼리를 유사하게 모델링합니다. 그러나 출력 명령 트리에서 SQL을 생성할 때 공급자 작성기에 대한 특정한 공통적 문제가 있습니다. 이 항목에서는 이러한 문제에 대해 설명하며, 그 다음 항목에서는 동일한 공급자가 이러한 문제를 처리하는 방법을 보여 줍니다.  

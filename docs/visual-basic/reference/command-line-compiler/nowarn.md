@@ -14,11 +14,11 @@ ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8da27ea2f9f0a4d370928d70cda1a796b822d97c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d1eafe8d7ccd6f2c71b754dadc343518948e7146
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nowarn"></a>/nowarn
 컴파일러에서 경고를 생성하지 않도록 합니다.  
@@ -44,16 +44,16 @@ ms.lasthandoff: 11/21/2017
   
 |Visual Studio에서 /nowarn을 설정 하려면 통합 개발 환경|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.<br />2.  **컴파일** 탭을 클릭합니다.<br />3.  선택 된 **모든 경고를 해제** 확인란 모든 경고를 비활성화 합니다.<br />     또는<br />     특정 경고를 사용 하지 않으려면 **None** 경고 옆의 드롭다운 목록에서 합니다.|  
+|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  선택 된 **모든 경고를 해제** 확인란 모든 경고를 비활성화 합니다.<br />     또는<br />     특정 경고를 사용 하지 않으려면 **None** 경고 옆의 드롭다운 목록에서 합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `T2.vb` 모든 경고를 표시 하지 않습니다.  
   
 ```  
 vbc /nowarn t2.vb  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `T2.vb` 를 사용 하지 않는 지역 변수 (42024)에 대 한 경고를 표시 하지 않습니다.  
   
 ```  

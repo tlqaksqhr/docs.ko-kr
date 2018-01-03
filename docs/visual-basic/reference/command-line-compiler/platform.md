@@ -14,11 +14,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4177b9da15bb89f37a7b3cbb27937e09d1c12635
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-visual-basic"></a>/platform(Visual Basic)
 출력 파일을 실행할 수 있는 CLR(공용 언어 런타임) 플랫폼 버전을 지정합니다.  
@@ -71,19 +71,17 @@ ms.lasthandoff: 12/09/2017
   
 -   `/platform:anycpu32bitpreferred`로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.  
   
- 64 비트 버전의 Windows에서 실행 되도록 응용 프로그램을 개발 하는 방법에 대 한 자세한 내용은 참조 [64 비트 응용 프로그램](../../../../docs/framework/64-bit-apps.md)합니다.  
+ 64 비트 버전의 Windows에서 실행 되도록 응용 프로그램을 개발 하는 방법에 대 한 자세한 내용은 참조 [64 비트 응용 프로그램](../../../framework/64-bit-apps.md)합니다.  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>Visual Studio IDE에서 /platform을 설정하려면  
   
 1.  **솔루션 탐색기**, 프로젝트를 선택 열고는 **프로젝트** 메뉴를 차례로 클릭 **속성**합니다.  
   
-     자세한 내용은 참조 [NIB: 프로젝트 디자이너를 사용 하 여 프로젝트 속성 관리](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)합니다.  
-  
 2.  에 **컴파일** 탭을 선택 하거나 선택을 취소는 **32 비트 선호** 확인란 또는 **대상 CPU** 목록에서 값을 선택 합니다.  
   
      자세한 내용은 참조 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `/platform` 컴파일러 옵션을 사용하는 방법을 보여 줍니다.  
   
 ```  

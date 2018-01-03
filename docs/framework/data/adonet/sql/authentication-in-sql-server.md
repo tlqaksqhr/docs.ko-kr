@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e3b597d04ee53a094d9c50dff406f57e5fd57b00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c462b7c2e888ed0f6394435e0de2131e26dbef08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 모드를 지원합니다.  

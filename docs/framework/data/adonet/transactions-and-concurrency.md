@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4e06f54ed27a555daa30f16f452cd03c8e188a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4301a232e2b38d44ecb288e76439742f7fe4d58f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-and-concurrency"></a>트랜잭션 및 동시성
 트랜잭션은 패키지로 실행되는 하나의 명령 또는 명령 그룹으로 구성됩니다. 트랜잭션을 사용하여 여러 작업을 하나의 작업 단위로 통합할 수 있습니다. 또한 트랜잭션의 한 지점에서 오류가 발생하는 경우 모든 업데이트를 이전 트랜잭션 상태로 롤백할 수 있습니다.  
@@ -31,11 +32,11 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]과 Oracle 간의 트랜잭션 같은 여러 리소스 관리자가 관련된 트랜잭션에는 분산 트랜잭션이 필요합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [로컬 트랜잭션](../../../../docs/framework/data/adonet/local-transactions.md)  
  데이터베이스에 대해 트랜잭션을 수행하는 방법을 설명합니다.  
   
- [분산된 트랜잭션](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [분산 트랜잭션](../../../../docs/framework/data/adonet/distributed-transactions.md)  
  ADO.NET에서 분산 트랜잭션을 수행하는 방법을 설명합니다.  
   
  [SQL Server와의 System.Transactions 통합](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
@@ -48,6 +49,6 @@ ms.lasthandoff: 11/21/2017
  [트랜잭션 기본 사항](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  [데이터 소스에 연결](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Dataadapter 및 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

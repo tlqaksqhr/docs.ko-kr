@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4792967bb21912e475c32c0f37149b89a838b133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 232f57890e70e5be0ec60408587a622fafd1ba7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>기본 동작 재정의에서 개발자의 책임
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]다음 요구 사항을 적용 하지 않는 않지만 이러한 요구 사항을 만족 하지 않으면 동작이 정의 되지 않습니다.  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/18/2017
 -   마지막으로 재정의 메서드는 지정된 작업을 수행해야 합니다. 즉시 로드, 지연된 로드 및 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]와 같은 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 작업의 의미가 구현되려면 재정의 메서드에서 해당 서비스를 제공해야 합니다. 예를 들어 데이터베이스의 내용을 확인하지 않고 빈 컬렉션만 반환하는 로드 재정의는 데이터 불일치를 발생시킬 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [사용자 지정 삽입, 업데이트 및 삭제 작업](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+ [삽입, 업데이트 및 삭제 작업 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

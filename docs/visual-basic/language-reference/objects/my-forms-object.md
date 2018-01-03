@@ -13,17 +13,17 @@ ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a5aa7af1f07a29660335d968c1ecc17be5f8beec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myforms-object"></a>My.Forms 개체
 현재 프로젝트에 선언 된 각 Windows form의 인스턴스에 액세스 하기 위한 속성을 제공 합니다.  
   
 ## <a name="remarks"></a>설명  
- `My.Forms` 개체는 현재 프로젝트에 각 폼의 인스턴스를 제공 합니다. 속성의 이름 속성에 액세스 하는 폼의 이름과 같습니다. 프로젝트에 폼을 추가 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Windows Forms 프로젝트에 추가](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)합니다.  
+ `My.Forms` 개체는 현재 프로젝트에 각 폼의 인스턴스를 제공 합니다. 속성의 이름 속성에 액세스 하는 폼의 이름과 같습니다.   
   
  제공한 폼에 액세스할 수 있습니다는 `My.Forms` 한정 하지 않고 폼의 이름을 사용 하 여 개체입니다. 동일 하기 때문에 속성 이름에서 폼의 형식 이름으로, 이렇게 하면 기본 인스턴스가 이전의 처럼 폼에 액세스할 수 있습니다. 예를 들어 `My.Forms.Form1.Show`은 `Form1.Show`와 같습니다.  
   
@@ -48,12 +48,12 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  일반적으로 `Is` 또는 `IsNot` 연산자에는 비교를 수행 하는 속성의 값을 읽을 수 있습니다. 그러나 현재 저장 하는 경우 `Nothing`, 속성 폼의 새 인스턴스를 만들고 다음 해당 인스턴스를 반환 합니다. Visual Basic 컴파일러의 속성을 처리 하는 반면는 `My.Forms` 알리고 다르게 개체는 `Is` 또는 `IsNot` 연산자를 해당 값을 변경 하지 않고 속성의 상태를 확인 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 기본 제목을 변경 `SidebarMenu` 폼입니다.  
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
- 이 예제가 작동 하려면 프로젝트 라는 폼 있어야 `SidebarMenu`합니다. 자세한 내용은 참조 [하는 방법: Windows Forms 프로젝트에 추가](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)합니다.  
+ 이 예제가 작동 하려면 프로젝트 라는 폼 있어야 `SidebarMenu`합니다.  
   
  이 코드는 Windows 응용 프로그램 프로젝트에만 작동 합니다.  
   
@@ -76,7 +76,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Form.Close%2A>  
  [개체](../../../visual-basic/language-reference/objects/index.md)  
- [방법: Windows Forms 프로젝트에 추가](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)  
  [Is 연산자](../../../visual-basic/language-reference/operators/is-operator.md)  
  [IsNot 연산자](../../../visual-basic/language-reference/operators/isnot-operator.md)  
  [응용 프로그램 폼 액세스](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

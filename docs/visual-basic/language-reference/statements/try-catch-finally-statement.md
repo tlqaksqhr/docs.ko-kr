@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally 문(Visual Basic)
 코드 실행 하는 동안 코드 블록에서 발생할 수 있는 일부 또는 모든 가능한 오류를 처리 하는 방법을 제공 합니다.  
@@ -137,7 +137,7 @@ End Try
 ## <a name="iterators"></a>반복기  
  반복기 함수 또는 `Get` 접근자 컬렉션 사용자 지정 반복을 수행 합니다. 반복기를 사용 하 여 한 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) 문을 한 번에 하나씩 컬렉션의 각 요소를 반환 합니다. 반복기 함수를 사용 하 여 호출 된 [각각에 대해... 다음 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)합니다.  
   
- A `Yield` 문 내에 있을 수는 `Try` 블록입니다. A `Try` 포함 된 블록은 `Yield` 문의 `Catch` 을 차단 하 고 있을 수 있습니다는 `Finally` 블록입니다. "Visual Basic에서 시도 블록" 섹션을 참조 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7) 예에 대 한 합니다.  
+ A `Yield` 문 내에 있을 수는 `Try` 블록입니다. A `Try` 포함 된 블록은 `Yield` 문의 `Catch` 을 차단 하 고 있을 수 있습니다는 `Finally` 블록입니다. "Visual Basic에서 시도 블록" 섹션을 참조 [반복기](../../programming-guide/concepts/iterators.md) 예에 대 한 합니다.  
   
  A `Yield` 문 내에 있을 수 없습니다는 `Catch` 블록 또는 `Finally` 블록입니다.  
   
@@ -150,29 +150,29 @@ End Try
   
  이러한 부분 신뢰 상황에서 입력할 필요가 `Process.Start` 문을 별도의 `Sub`합니다. 에 대 한 초기 호출에서 `Sub` 실패 합니다. 이 통해 `Try...Catch` 를 catch 하기 전에 `Sub` 포함 된 `Process.Start` 시작 되 고 보안 예외가 발생 했습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 구조는 `Try...Catch...Finally` 문.  
   
  [!code-vb[VbVbalrStatements#86](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_3.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CreateException` 메서드가 throw 한 `NullReferenceException`합니다. 예외를 생성 하는 코드에 속하지 않는 한 `Try` 블록입니다. 따라서는 `CreateException` 메서드 예외를 처리 하지 않습니다. `RunSample` 메서드 예외를 처리할지 않습니다에 대 한 호출에서 `CreateException` 방법은에 `Try` 블록입니다.  
   
  예제에 포함 되어 `Catch` 에서 정렬 된 여러 유형의 예외에 대 한 문을 가장 일반적인 가장 구체적인 합니다.  
   
  [!code-vb[VbVbalrStatements#91](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_4.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는 `Catch When` 문을 조건 식에 필터를 적용 합니다. 조건부 식이 `True`의 코드는 `Catch` 블록이 실행 됩니다.  
   
  [!code-vb[VbVbalrStatements#92](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_5.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에는 `Try…Catch` 에 포함 된 문에 `Try` 블록입니다. 내부 `Catch` 있는 예외를 throw 하는 블록의 `InnerException` 속성이 원래 예외를 설정 합니다. 외부 `Catch` 블록 자체 예외 및 내부 예외를 보고 합니다.  
   
  [!code-vb[VbVbalrStatements#93](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_6.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 비동기 메서드에 대한 예외 처리를 보여 줍니다. 비동기 작업에 적용 되는 예외를 catch 하는 `Await` 해당 식을 `Try` 호출자 및 예외 블록에 들어갈는 `Catch` 블록입니다.  
   
  예제에서 `Throw New Exception` 줄의 주석 처리를 제거하여 예외 처리를 보여 줍니다. 예외에 들어갈는 `Catch` 차단 작업의 `IsFaulted` 속성이로 설정 되어 `True`, 및 작업의 `Exception.InnerException` 예외에 속성이 설정 되어 있습니다.  
@@ -181,7 +181,7 @@ End Try
   
  [!code-vb[csAsyncExceptions#1](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_7.vb)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 여러 작업에서 여러 예외가 발생할 수 있는 경우 예외 처리를 보여 줍니다. `Try` 블록에는 `Await` 작업에 대 한 식을 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 반환 합니다. 세 가지 작업을 하는 경우 작업이 완료 될 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 적용 조건이 완료 합니다.  
   
  세 작업에서 각각 예외가 발생합니다. `Catch` 블록에 있는 예외를 반복는 `Exception.InnerExceptions` 태스크의 속성은 `Task.WhenAll` 반환 합니다.  
@@ -194,5 +194,5 @@ End Try
  [Exit 문](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [On Error 문](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [코드 조각 사용에 대한 모범 사례](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [예외 처리](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
+ [예외 처리](../../../standard/parallel-programming/exception-handling-task-parallel-library.md)  
  [Throw 문](../../../visual-basic/language-reference/statements/throw-statement.md)

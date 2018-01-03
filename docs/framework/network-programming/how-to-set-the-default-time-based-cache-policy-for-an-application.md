@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ae864b5f22f469d9a60b9faba90a5a66c65e8172
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d5166090a0682b71f74565e666c96ddadb7c6c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>방법: 응용 프로그램에 대해 시간 기반 캐시 정책 설정
 기본 시간 기반 캐시 정책을 사용하면 [http://www.ietf.org](http://www.ietf.org/)에서 제공되는 RFC 2616의 섹션 13 및 14에 정의된 캐시 동작 및 캐시된 리소스와 함께 전송된 헤더를 통해 정의된 캐시 동작이 응용 프로그램에 나타날 수 있습니다. 이것은 대부분의 응용 프로그램에서 적절한 캐시 동작입니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  정책 개체를 응용 프로그램 도메인의 기본값으로 설정합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 섹션의 두 가지 예제는 동일한 정책을 생성합니다.  
   
  다음 예제에서는 기본 시간 기반 정책을 만들고 이 정책을 응용 프로그램 도메인의 기본값으로 설정합니다.  

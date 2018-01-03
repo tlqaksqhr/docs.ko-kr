@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9119b6db6b1d3c2099af3c7bdbe042ced4dca94e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>매개 변수 및 매개 변수 데이터 형식 구성
 Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 값을 전달하여 형식 검사 및 유효성 검사 기능을 제공합니다. 명령 텍스트와 달리 매개 변수 입력은 실행 코드가 아니라 리터럴 값으로 처리됩니다. 따라서 매개 변수화된 명령을 사용하면 공격자가 서버의 보안을 손상시키는 명령을 SQL 문에 삽입하는 "SQL 삽입" 공격을 막을 수 있습니다.  
@@ -115,7 +116,7 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
  다음 예제에서는 `Northwind` 샘플 데이터베이스에 있는 SQL Server 저장 프로시저를 호출하는 방법을 보여 줍니다. 이 저장 프로시저는 이름이 `dbo.SalesByCategory` 이고, 데이터 형식이 `@CategoryName` 인 `nvarchar(15)`이라는 입력 매개 변수를 포함합니다. 이 코드는 using 블록 내에 새 <xref:System.Data.SqlClient.SqlConnection> 을 만들어 프로시저가 종료될 때 연결이 삭제되도록 합니다. <xref:System.Data.SqlClient.SqlCommand> 와 <xref:System.Data.SqlClient.SqlParameter> 개체가 만들어지고 해당 속성이 설정됩니다. <xref:System.Data.SqlClient.SqlDataReader> 가 `SqlCommand` 를 실행한 후 저장 프로시저에서 결과 집합을 반환하고 콘솔 창에 출력을 표시합니다.  
   
 > [!NOTE]
->  `SqlCommand` 와 `SqlParameter` 개체를 만든 다음 별도의 문에서 속성을 설정하는 대신 오버로드된 생성자 중 하나를 사용하여 단일 문에서 여러 속성을 설정하는 방법을 사용할 수도 있습니다.  
+>  `SqlCommand`와 `SqlParameter` 개체를 만든 다음 별도의 문에서 속성을 설정하는 대신 오버로드된 생성자 중 하나를 사용하여 단일 문에서 여러 속성을 설정하는 방법을 사용할 수도 있습니다.  
   
  [!code-csharp[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/VB/source.vb#1)]  

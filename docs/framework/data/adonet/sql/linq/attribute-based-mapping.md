@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a8397c106ec45d9e6e1e9ec513536142d3048bd7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2ee0e87c801e15a54229e559ce65cabf5f474a61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attribute-based-mapping"></a>특성 기반 매핑
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server 데이터베이스를 매핑하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 특성을 적용 하거나 또는 외부 매핑 파일을 사용 하 여 개체 모델입니다. 이 항목에서는 특성 기반 접근 방법에 대해 간략하게 설명합니다.  
@@ -150,7 +151,7 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|문자열|데이터베이스에 있는 이름과 동일|테이블, 열 등의 이름을 지정합니다.|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|문자열|공용 접근자|기본 저장소 필드의 이름을 지정합니다.|  
   
- 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute>을 참조하십시오.  
+ 자세한 내용은 <xref:System.Data.Linq.Mapping.DataAttribute>을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

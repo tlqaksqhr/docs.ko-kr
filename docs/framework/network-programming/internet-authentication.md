@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fbf25ae866b338d2f1ac0ea11570e0d535e9137c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-authentication"></a>인터넷 인증
 <xref:System.Net> 클래스는 표준 인터넷 인증 방법인 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증뿐 아니라 직접 만들 수 있는 사용자 지정 방법을 포함한 다양한 클라이언트 인증 메커니즘을 지원합니다.  
@@ -49,6 +50,6 @@ ms.lasthandoff: 11/21/2017
  일부 인증 체계에서는 리소스에 대한 요청을 먼저 만들지 않고 사용자를 인증할 수 있습니다. 응용 프로그램은 리소스에서 사용자를 사전 인증하여 서버에 대한 하나 이상의 왕복을 제거하는 방식으로 시간을 단축할 수 있습니다. 또는 나중에 사용자에게 더 빨리 응답할 수 있도록 프로그램 시작 중에 인증을 수행할 수 있습니다. 사전 인증을 사용하는 인증 체계는 <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> 속성을 **true**로 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [기본 및 다이제스트 인증](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [기본 인증 및 다이제스트 인증](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
  [NTLM 및 Kerberos 인증](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
  [네트워크 프로그래밍의 보안](../../../docs/framework/network-programming/security-in-network-programming.md)
