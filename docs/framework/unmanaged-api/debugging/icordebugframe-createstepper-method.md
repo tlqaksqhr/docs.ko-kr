@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a6f575febc488d01700c32198d4c00916dd5e249
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 93f6741a030e72406fb8099c6373896d14cb9332
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugframecreatestepper-method"></a><span data-ttu-id="c99e3-102">ICorDebugFrame::CreateStepper 메서드</span><span class="sxs-lookup"><span data-stu-id="c99e3-102">ICorDebugFrame::CreateStepper Method</span></span>
-<span data-ttu-id="c99e3-103">디버거에서이 ICorDebugFrame 기준으로 단계별 실행 작업을 수행할 수 있도록 스텝을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c99e3-103">Gets a stepper that allows the debugger to perform stepping operations relative to this ICorDebugFrame.</span></span>  
+# <a name="icordebugframecreatestepper-method"></a><span data-ttu-id="e415e-102">ICorDebugFrame::CreateStepper 메서드</span><span class="sxs-lookup"><span data-stu-id="e415e-102">ICorDebugFrame::CreateStepper Method</span></span>
+<span data-ttu-id="e415e-103">디버거에서이 ICorDebugFrame 기준으로 단계별 실행 작업을 수행할 수 있도록 스텝을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e415e-103">Gets a stepper that allows the debugger to perform stepping operations relative to this ICorDebugFrame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c99e3-104">구문</span><span class="sxs-lookup"><span data-stu-id="c99e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e415e-104">구문</span><span class="sxs-lookup"><span data-stu-id="e415e-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateStepper (  
@@ -38,18 +39,18 @@ HRESULT CreateStepper (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c99e3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c99e3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e415e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e415e-105">Parameters</span></span>  
  `ppStepper`  
- <span data-ttu-id="c99e3-106">[out] 디버거는 현재 프레임을 기준으로 단계별 실행 작업을 수행할 수 있도록 ICorDebugStepper 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c99e3-106">[out] A pointer to the address of an ICorDebugStepper object that allows the debugger to perform stepping operations relative to the current frame.</span></span>  
+ <span data-ttu-id="e415e-106">[out] 디버거는 현재 프레임을 기준으로 단계별 실행 작업을 수행할 수 있도록 ICorDebugStepper 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="e415e-106">[out] A pointer to the address of an ICorDebugStepper object that allows the debugger to perform stepping operations relative to the current frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c99e3-107">설명</span><span class="sxs-lookup"><span data-stu-id="c99e3-107">Remarks</span></span>  
- <span data-ttu-id="c99e3-108">프레임 활성 상태 이면 해당 단계가 완료 되기 전에 프레임으로 돌아가려면 스텝 퍼 개체 일반적으로 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="c99e3-108">If the frame is not active, the stepper object will typically have to return to the frame before the step is completed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e415e-107">설명</span><span class="sxs-lookup"><span data-stu-id="e415e-107">Remarks</span></span>  
+ <span data-ttu-id="e415e-108">프레임 활성 상태 이면 해당 단계가 완료 되기 전에 프레임으로 돌아가려면 스텝 퍼 개체 일반적으로 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="e415e-108">If the frame is not active, the stepper object will typically have to return to the frame before the step is completed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c99e3-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c99e3-109">Requirements</span></span>  
- <span data-ttu-id="c99e3-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c99e3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e415e-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e415e-109">Requirements</span></span>  
+ <span data-ttu-id="e415e-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e415e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c99e3-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c99e3-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e415e-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e415e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c99e3-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c99e3-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e415e-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e415e-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c99e3-113">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c99e3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e415e-113">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e415e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bca3631f9c7a8f6ec3d145f8573241642cb1b1c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b2be2e198007e15a0bae3ba0d3dd0cf1cf9983c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugenumgetcount-method"></a><span data-ttu-id="db8b1-102">ICorDebugEnum::GetCount 메서드</span><span class="sxs-lookup"><span data-stu-id="db8b1-102">ICorDebugEnum::GetCount Method</span></span>
-<span data-ttu-id="db8b1-103">열거형에서 항목의 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="db8b1-103">Gets the number of items in the enumeration.</span></span>  
+# <a name="icordebugenumgetcount-method"></a><span data-ttu-id="c5772-102">ICorDebugEnum::GetCount 메서드</span><span class="sxs-lookup"><span data-stu-id="c5772-102">ICorDebugEnum::GetCount Method</span></span>
+<span data-ttu-id="c5772-103">열거형에서 항목의 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c5772-103">Gets the number of items in the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db8b1-104">구문</span><span class="sxs-lookup"><span data-stu-id="db8b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5772-104">구문</span><span class="sxs-lookup"><span data-stu-id="c5772-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCount (  
@@ -38,15 +39,15 @@ HRESULT GetCount (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="db8b1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="db8b1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c5772-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c5772-105">Parameters</span></span>  
  `pcelt`  
- <span data-ttu-id="db8b1-106">[out] 열거형에는 항목 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="db8b1-106">[out] A pointer to the number of items in the enumeration.</span></span>  
+ <span data-ttu-id="c5772-106">[out] 열거형에는 항목 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c5772-106">[out] A pointer to the number of items in the enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db8b1-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="db8b1-107">Requirements</span></span>  
- <span data-ttu-id="db8b1-108">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="db8b1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5772-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c5772-107">Requirements</span></span>  
+ <span data-ttu-id="c5772-108">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c5772-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db8b1-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="db8b1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c5772-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c5772-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="db8b1-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="db8b1-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c5772-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c5772-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="db8b1-111">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db8b1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c5772-111">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5772-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38ffd8fdaef4e84e0499d8f60a8a9ced7e8e8931
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: efb0dab023839f1d6cf216ce0b27dd8c45cf9d98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="c8415-102">ICorDebugEditAndContinueErrorInfo::GetString 메서드</span><span class="sxs-lookup"><span data-stu-id="c8415-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
-<span data-ttu-id="c8415-103">`GetString`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c8415-103">`GetString` is obsolete.</span></span> <span data-ttu-id="c8415-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="c8415-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="c5bfd-102">ICorDebugEditAndContinueErrorInfo::GetString 메서드</span><span class="sxs-lookup"><span data-stu-id="c5bfd-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
+<span data-ttu-id="c5bfd-103">`GetString`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c5bfd-103">`GetString` is obsolete.</span></span> <span data-ttu-id="c5bfd-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="c5bfd-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8415-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c8415-105">See Also</span></span>  
- [<span data-ttu-id="c8415-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c8415-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="c5bfd-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c5bfd-105">See Also</span></span>  
+ [<span data-ttu-id="c5bfd-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c5bfd-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
