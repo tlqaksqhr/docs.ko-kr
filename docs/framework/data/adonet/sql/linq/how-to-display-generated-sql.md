@@ -16,19 +16,20 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 523a6cbd0174da4c294e5fd2ab2d0217fc63cb5c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8ee5af338b0cbb979e923ba17f69bca2c6c64bc2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-display-generated-sql"></a><span data-ttu-id="63dd1-102">방법: 생성된 SQL 표시</span><span class="sxs-lookup"><span data-stu-id="63dd1-102">How to: Display Generated SQL</span></span>
-<span data-ttu-id="63dd1-103"><xref:System.Data.Linq.DataContext.Log%2A> 속성을 사용하여 쿼리에 대해 생성된 SQL 코드를 보고 프로세스를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="63dd1-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="63dd1-104">이러한 접근 방식은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기능을 이해하고 특정 문제를 디버깅하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="63dd1-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
+# <a name="how-to-display-generated-sql"></a><span data-ttu-id="c12f9-102">방법: 생성된 SQL 표시</span><span class="sxs-lookup"><span data-stu-id="c12f9-102">How to: Display Generated SQL</span></span>
+<span data-ttu-id="c12f9-103"><xref:System.Data.Linq.DataContext.Log%2A> 속성을 사용하여 쿼리에 대해 생성된 SQL 코드를 보고 프로세스를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c12f9-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="c12f9-104">이러한 접근 방식은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기능을 이해하고 특정 문제를 디버깅하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="c12f9-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="63dd1-105">예제</span><span class="sxs-lookup"><span data-stu-id="63dd1-105">Example</span></span>  
- <span data-ttu-id="63dd1-106">다음 예제에서는 <xref:System.Data.Linq.DataContext.Log%2A> 속성을 사용하여 코드를 실행하기 전에 콘솔 창에 SQL 코드를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="63dd1-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="63dd1-107">이 속성은 쿼리, 삽입, 업데이트 및 삭제 명령과 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="63dd1-107">You can use this property with query, insert, update, and delete commands.</span></span>  
+## <a name="example"></a><span data-ttu-id="c12f9-105">예</span><span class="sxs-lookup"><span data-stu-id="c12f9-105">Example</span></span>  
+ <span data-ttu-id="c12f9-106">다음 예제에서는 <xref:System.Data.Linq.DataContext.Log%2A> 속성을 사용하여 코드를 실행하기 전에 콘솔 창에 SQL 코드를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="c12f9-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="c12f9-107">이 속성은 쿼리, 삽입, 업데이트 및 삭제 명령과 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c12f9-107">You can use this property with query, insert, update, and delete commands.</span></span>  
   
- <span data-ttu-id="63dd1-108">콘솔 창의 줄은 다음 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 또는 C# 코드를 실행할 때 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="63dd1-108">The lines from the console window are what you see when you execute the [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] or C# code that follows.</span></span>  
+ <span data-ttu-id="c12f9-108">콘솔 창의 줄은 다음 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 또는 C# 코드를 실행할 때 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="c12f9-108">The lines from the console window are what you see when you execute the [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] or C# code that follows.</span></span>  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -52,5 +53,5 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="63dd1-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="63dd1-109">See Also</span></span>  
- [<span data-ttu-id="63dd1-110">디버깅 지원</span><span class="sxs-lookup"><span data-stu-id="63dd1-110">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="c12f9-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c12f9-109">See Also</span></span>  
+ [<span data-ttu-id="c12f9-110">디버깅 지원</span><span class="sxs-lookup"><span data-stu-id="c12f9-110">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

@@ -13,47 +13,48 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1332bf297dae4baae62d2abd731d236ad49be4ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 298ff0c6bfc5bc251483de8e90e3a394a2337369
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="programming-guide-linq-to-dataset"></a><span data-ttu-id="f84cb-102">프로그래밍 가이드(LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="f84cb-102">Programming Guide (LINQ to DataSet)</span></span>
-<span data-ttu-id="f84cb-103">이 단원에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 프로그래밍에 대한 개념 정보와 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-103">This section provides conceptual information and examples for programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
+# <a name="programming-guide-linq-to-dataset"></a><span data-ttu-id="e170d-102">프로그래밍 가이드(LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="e170d-102">Programming Guide (LINQ to DataSet)</span></span>
+<span data-ttu-id="e170d-103">이 단원에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 프로그래밍에 대한 개념 정보와 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-103">This section provides conceptual information and examples for programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f84cb-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="f84cb-104">In This Section</span></span>  
- [<span data-ttu-id="f84cb-105">LINQ to DataSet에서 쿼리</span><span class="sxs-lookup"><span data-stu-id="f84cb-105">Queries in LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
- <span data-ttu-id="f84cb-106">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 작성하는 방법에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-106">Provides information about how to write [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] queries.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e170d-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="e170d-104">In This Section</span></span>  
+ [<span data-ttu-id="e170d-105">LINQ to DataSet의 쿼리</span><span class="sxs-lookup"><span data-stu-id="e170d-105">Queries in LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
+ <span data-ttu-id="e170d-106">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 작성하는 방법에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-106">Provides information about how to write [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] queries.</span></span>  
   
- [<span data-ttu-id="f84cb-107">데이터 집합 쿼리</span><span class="sxs-lookup"><span data-stu-id="f84cb-107">Querying DataSets</span></span>](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- <span data-ttu-id="f84cb-108"><xref:System.Data.DataSet> 개체를 쿼리하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-108">Describes how to query <xref:System.Data.DataSet> objects.</span></span>  
+ [<span data-ttu-id="e170d-107">데이터 집합 쿼리</span><span class="sxs-lookup"><span data-stu-id="e170d-107">Querying DataSets</span></span>](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ <span data-ttu-id="e170d-108"><xref:System.Data.DataSet> 개체를 쿼리하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-108">Describes how to query <xref:System.Data.DataSet> objects.</span></span>  
   
- [<span data-ttu-id="f84cb-109">Datarow 비교</span><span class="sxs-lookup"><span data-stu-id="f84cb-109">Comparing DataRows</span></span>](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
- <span data-ttu-id="f84cb-110"><xref:System.Data.DataRowComparer> 개체를 사용하여 데이터 행을 비교하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-110">Describes how to use the <xref:System.Data.DataRowComparer> object to compare data rows.</span></span>  
+ [<span data-ttu-id="e170d-109">DataRow 비교</span><span class="sxs-lookup"><span data-stu-id="e170d-109">Comparing DataRows</span></span>](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
+ <span data-ttu-id="e170d-110"><xref:System.Data.DataRowComparer> 개체를 사용하여 데이터 행을 비교하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-110">Describes how to use the <xref:System.Data.DataRowComparer> object to compare data rows.</span></span>  
   
- [<span data-ttu-id="f84cb-111">쿼리에서 DataTable 만들기</span><span class="sxs-lookup"><span data-stu-id="f84cb-111">Creating a DataTable From a Query</span></span>](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
- <span data-ttu-id="f84cb-112">만들기에 대 한 정보를 제공는 <xref:System.Data.DataTable> 에서 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 사용 하 여 쿼리는 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="f84cb-112">Provides information about creating a <xref:System.Data.DataTable> from a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query by using the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method.</span></span>  
+ [<span data-ttu-id="e170d-111">쿼리에서 DataTable 만들기</span><span class="sxs-lookup"><span data-stu-id="e170d-111">Creating a DataTable From a Query</span></span>](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
+ <span data-ttu-id="e170d-112">만들기에 대 한 정보를 제공는 <xref:System.Data.DataTable> 에서 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 사용 하 여 쿼리는 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="e170d-112">Provides information about creating a <xref:System.Data.DataTable> from a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query by using the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method.</span></span>  
   
- [<span data-ttu-id="f84cb-113">방법: CopyToDataTable 구현\<T > 제네릭 형식 T가 DataRow 아닙니다</span><span class="sxs-lookup"><span data-stu-id="f84cb-113">How to: Implement CopyToDataTable\<T> Where the Generic Type T Is Not a DataRow</span></span>](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
- <span data-ttu-id="f84cb-114">제네릭 매개 변수 T가 `CopyToDataTable<T>` 형식이 아닌 사용자 지정 <xref:System.Data.DataRow> 메서드를 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-114">Describes how to implement a custom `CopyToDataTable<T>` method where the generic parameter T is not of type <xref:System.Data.DataRow>.</span></span>  
+ [<span data-ttu-id="e170d-113">방법: CopyToDataTable 구현\<T > 제네릭 형식 T가 DataRow 아닙니다</span><span class="sxs-lookup"><span data-stu-id="e170d-113">How to: Implement CopyToDataTable\<T> Where the Generic Type T Is Not a DataRow</span></span>](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ <span data-ttu-id="e170d-114">제네릭 매개 변수 T가 `CopyToDataTable<T>` 형식이 아닌 사용자 지정 <xref:System.Data.DataRow> 메서드를 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-114">Describes how to implement a custom `CopyToDataTable<T>` method where the generic parameter T is not of type <xref:System.Data.DataRow>.</span></span>  
   
- [<span data-ttu-id="f84cb-115">제네릭 Field 및 SetField 메서드</span><span class="sxs-lookup"><span data-stu-id="f84cb-115">Generic Field and SetField Methods</span></span>](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
- <span data-ttu-id="f84cb-116">제네릭 <xref:System.Data.DataRowExtensions.Field%2A> 및 <xref:System.Data.DataRowExtensions.SetField%2A> 메서드에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-116">Provides information about the generic <xref:System.Data.DataRowExtensions.Field%2A> and <xref:System.Data.DataRowExtensions.SetField%2A> methods.</span></span>  
+ [<span data-ttu-id="e170d-115">제네릭 Field 및 SetField 메서드</span><span class="sxs-lookup"><span data-stu-id="e170d-115">Generic Field and SetField Methods</span></span>](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
+ <span data-ttu-id="e170d-116">제네릭 <xref:System.Data.DataRowExtensions.Field%2A> 및 <xref:System.Data.DataRowExtensions.SetField%2A> 메서드에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-116">Provides information about the generic <xref:System.Data.DataRowExtensions.Field%2A> and <xref:System.Data.DataRowExtensions.SetField%2A> methods.</span></span>  
   
- [<span data-ttu-id="f84cb-117">데이터 바인딩 및 LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="f84cb-117">Data Binding and LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- <span data-ttu-id="f84cb-118"><xref:System.Data.DataView> 개체를 사용한 데이터 바인딩에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-118">Describes databinding using the <xref:System.Data.DataView> object.</span></span>  
+ [<span data-ttu-id="e170d-117">데이터 바인딩 및 LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="e170d-117">Data Binding and LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
+ <span data-ttu-id="e170d-118"><xref:System.Data.DataView> 개체를 사용한 데이터 바인딩에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-118">Describes databinding using the <xref:System.Data.DataView> object.</span></span>  
   
- [<span data-ttu-id="f84cb-119">LINQ to DataSet 쿼리 디버깅</span><span class="sxs-lookup"><span data-stu-id="f84cb-119">Debugging LINQ to DataSet Queries</span></span>](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
- <span data-ttu-id="f84cb-120">디버깅 및 문제 해결에 대 한 정보를 제공 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리 합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-120">Provides information about debugging and troubleshooting [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] queries.</span></span>  
+ [<span data-ttu-id="e170d-119">LINQ to DataSet 쿼리 디버깅</span><span class="sxs-lookup"><span data-stu-id="e170d-119">Debugging LINQ to DataSet Queries</span></span>](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
+ <span data-ttu-id="e170d-120">디버깅 및 문제 해결에 대 한 정보를 제공 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리 합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-120">Provides information about debugging and troubleshooting [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] queries.</span></span>  
   
- [<span data-ttu-id="f84cb-121">보안</span><span class="sxs-lookup"><span data-stu-id="f84cb-121">Security</span></span>](../../../../docs/framework/data/adonet/security-linq-to-dataset.md)  
- <span data-ttu-id="f84cb-122">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 보안 문제를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-122">Describes security issues in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
+ [<span data-ttu-id="e170d-121">보안</span><span class="sxs-lookup"><span data-stu-id="e170d-121">Security</span></span>](../../../../docs/framework/data/adonet/security-linq-to-dataset.md)  
+ <span data-ttu-id="e170d-122">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]의 보안 문제를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-122">Describes security issues in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
   
- [<span data-ttu-id="f84cb-123">LINQ to DataSet 예제</span><span class="sxs-lookup"><span data-stu-id="f84cb-123">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- <span data-ttu-id="f84cb-124">[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 연산자를 사용하는 쿼리 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f84cb-124">Provides query examples that use the [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] operators.</span></span>  
+ [<span data-ttu-id="e170d-123">LINQ to DataSet 예제</span><span class="sxs-lookup"><span data-stu-id="e170d-123">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ <span data-ttu-id="e170d-124">[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 연산자를 사용하는 쿼리 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e170d-124">Provides query examples that use the [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] operators.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="f84cb-125">참조</span><span class="sxs-lookup"><span data-stu-id="f84cb-125">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e170d-125">참조</span><span class="sxs-lookup"><span data-stu-id="e170d-125">Reference</span></span>  
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Data.DataView>  
   
-## <a name="see-also"></a><span data-ttu-id="f84cb-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f84cb-126">See Also</span></span>  
- [<span data-ttu-id="f84cb-127">LINQ to ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f84cb-127">LINQ to ADO.NET</span></span>](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
- [<span data-ttu-id="f84cb-128">빌드에 없음: LINQ 일반 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="f84cb-128">NOT IN BUILD: LINQ General Programming Guide</span></span>](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
- [<span data-ttu-id="f84cb-129">LINQ 프레임 워크</span><span class="sxs-lookup"><span data-stu-id="f84cb-129">LINQ Framework</span></span>](http://msdn.microsoft.com/en-us/897ea0fc-40db-4694-bbe5-7dd339d5bf94)
+## <a name="see-also"></a><span data-ttu-id="e170d-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e170d-126">See Also</span></span>  
+ [<span data-ttu-id="e170d-127">LINQ to ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e170d-127">LINQ to ADO.NET</span></span>](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [<span data-ttu-id="e170d-128">빌드에 없음: LINQ 일반 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="e170d-128">NOT IN BUILD: LINQ General Programming Guide</span></span>](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
+ [<span data-ttu-id="e170d-129">LINQ 프레임 워크</span><span class="sxs-lookup"><span data-stu-id="e170d-129">LINQ Framework</span></span>](http://msdn.microsoft.com/en-us/897ea0fc-40db-4694-bbe5-7dd339d5bf94)

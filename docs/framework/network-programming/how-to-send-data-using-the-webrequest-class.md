@@ -18,18 +18,19 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2102fce150f512a49093eb2b214258ac35e276e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b4cc524b3b3c1dbe42f3fe3926ed44c1e917e871
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-send-data-using-the-webrequest-class"></a><span data-ttu-id="b7d6c-102">방법: WebRequest 클래스를 사용하여 데이터 보내기</span><span class="sxs-lookup"><span data-stu-id="b7d6c-102">How to: Send Data Using the WebRequest Class</span></span>
-<span data-ttu-id="b7d6c-103">다음 프로시저에서는 서버에 데이터를 보내는 데 사용되는 단계를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-103">The following procedure describes the steps used to send data to a server.</span></span> <span data-ttu-id="b7d6c-104">이 프로시저는 일반적으로 웹 페이지에 데이터를 게시하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-104">This procedure is commonly used to post data to a Web page.</span></span>  
+# <a name="how-to-send-data-using-the-webrequest-class"></a><span data-ttu-id="3e79e-102">방법: WebRequest 클래스를 사용하여 데이터 보내기</span><span class="sxs-lookup"><span data-stu-id="3e79e-102">How to: Send Data Using the WebRequest Class</span></span>
+<span data-ttu-id="3e79e-103">다음 프로시저에서는 서버에 데이터를 보내는 데 사용되는 단계를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-103">The following procedure describes the steps used to send data to a server.</span></span> <span data-ttu-id="3e79e-104">이 프로시저는 일반적으로 웹 페이지에 데이터를 게시하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-104">This procedure is commonly used to post data to a Web page.</span></span>  
   
-### <a name="to-send-data-to-a-host-server"></a><span data-ttu-id="b7d6c-105">호스트에 데이터를 보내려면</span><span class="sxs-lookup"><span data-stu-id="b7d6c-105">To send data to a host server</span></span>  
+### <a name="to-send-data-to-a-host-server"></a><span data-ttu-id="3e79e-105">호스트에 데이터를 보내려면</span><span class="sxs-lookup"><span data-stu-id="3e79e-105">To send data to a host server</span></span>  
   
-1.  <span data-ttu-id="b7d6c-106">스크립트 또는 ASP.NET 페이지와 같이 데이터를 허용하는 리소스의 URI를 통해 <xref:System.Net.WebRequest.Create%2A>를 호출하여 <xref:System.Net.WebRequest> 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-106">Create a <xref:System.Net.WebRequest> instance by calling <xref:System.Net.WebRequest.Create%2A> with the URI of the resource that accepts data, for example, a script or ASP.NET page.</span></span>  
+1.  <span data-ttu-id="3e79e-106">스크립트 또는 ASP.NET 페이지와 같이 데이터를 허용하는 리소스의 URI를 통해 <xref:System.Net.WebRequest.Create%2A>를 호출하여 <xref:System.Net.WebRequest> 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-106">Create a <xref:System.Net.WebRequest> instance by calling <xref:System.Net.WebRequest.Create%2A> with the URI of the resource that accepts data, for example, a script or ASP.NET page.</span></span>  
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/");  
@@ -40,9 +41,9 @@ ms.lasthandoff: 11/21/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="b7d6c-107">.NET Framework에서는 “http:”, “https:”, “ftp:” 및 “file:”으로 시작하는 URI에 대해 **WebRequest** 및 **WebResponse**에서 파생된 프로토콜별 클래스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-107">The .NET Framework provides protocol-specific classes derived from **WebRequest** and **WebResponse** for URIs that begin with "http:", "https:'', "ftp:", and "file:".</span></span> <span data-ttu-id="b7d6c-108">다른 프로토콜을 사용하는 리소스에 액세스하려면 **WebRequest** 및 **WebResponse**에서 파생되는 프로토콜별 클래스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-108">To access resources using other protocols, you must implement protocol-specific classes that derive from **WebRequest** and **WebResponse**.</span></span> <span data-ttu-id="b7d6c-109">자세한 내용은 [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-109">For more information, see [Programming Pluggable Protocols](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .</span></span>  
+    >  <span data-ttu-id="3e79e-107">.NET Framework에서는 “http:”, “https:”, “ftp:” 및 “file:”으로 시작하는 URI에 대해 **WebRequest** 및 **WebResponse**에서 파생된 프로토콜별 클래스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-107">The .NET Framework provides protocol-specific classes derived from **WebRequest** and **WebResponse** for URIs that begin with "http:", "https:'', "ftp:", and "file:".</span></span> <span data-ttu-id="3e79e-108">다른 프로토콜을 사용하는 리소스에 액세스하려면 **WebRequest** 및 **WebResponse**에서 파생되는 프로토콜별 클래스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-108">To access resources using other protocols, you must implement protocol-specific classes that derive from **WebRequest** and **WebResponse**.</span></span> <span data-ttu-id="3e79e-109">자세한 내용은 [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3e79e-109">For more information, see [Programming Pluggable Protocols](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .</span></span>  
   
-2.  <span data-ttu-id="b7d6c-110">**WebRequest**에서 필요한 속성 값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-110">Set any property values that you need in the **WebRequest**.</span></span> <span data-ttu-id="b7d6c-111">예를 들어 인증을 사용하도록 설정하려면 **Credentials** 속성을 <xref:System.Net.NetworkCredential> 클래스의 인스턴스로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-111">For example, to enable authentication, set the **Credentials** property to an instance of the <xref:System.Net.NetworkCredential> class.</span></span>  
+2.  <span data-ttu-id="3e79e-110">**WebRequest**에서 필요한 속성 값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-110">Set any property values that you need in the **WebRequest**.</span></span> <span data-ttu-id="3e79e-111">예를 들어 인증을 사용하도록 설정하려면 **Credentials** 속성을 <xref:System.Net.NetworkCredential> 클래스의 인스턴스로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-111">For example, to enable authentication, set the **Credentials** property to an instance of the <xref:System.Net.NetworkCredential> class.</span></span>  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     <span data-ttu-id="b7d6c-112">대부분의 경우 데이터를 보내는 데는 **WebRequest** 인스턴스 자체로 충분합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-112">In most cases, the **WebRequest** instance itself is sufficient to send data.</span></span> <span data-ttu-id="b7d6c-113">그러나 프로토콜별 속성을 설정해야 할 경우 **WebRequest**를 프로토콜별 형식으로 캐스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-113">However, if you need to set protocol-specific properties, you must cast the **WebRequest** to the protocol-specific type.</span></span> <span data-ttu-id="b7d6c-114">예를 들어 <xref:System.Net.HttpWebRequest>의 HTTP 관련 속성에 액세스하려면 **WebRequest**를 **HttpWebRequest** 참조로 캐스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-114">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebRequest>, cast the **WebRequest** to an **HttpWebRequest** reference.</span></span> <span data-ttu-id="b7d6c-115">다음 코드 예제에서는 HTTP 관련 <xref:System.Net.HttpWebRequest.UserAgent%2A> 속성을 설정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-115">The following code example shows how to set the HTTP-specific <xref:System.Net.HttpWebRequest.UserAgent%2A> property.</span></span>  
+     <span data-ttu-id="3e79e-112">대부분의 경우 데이터를 보내는 데는 **WebRequest** 인스턴스 자체로 충분합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-112">In most cases, the **WebRequest** instance itself is sufficient to send data.</span></span> <span data-ttu-id="3e79e-113">그러나 프로토콜별 속성을 설정해야 할 경우 **WebRequest**를 프로토콜별 형식으로 캐스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-113">However, if you need to set protocol-specific properties, you must cast the **WebRequest** to the protocol-specific type.</span></span> <span data-ttu-id="3e79e-114">예를 들어 <xref:System.Net.HttpWebRequest>의 HTTP 관련 속성에 액세스하려면 **WebRequest**를 **HttpWebRequest** 참조로 캐스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-114">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebRequest>, cast the **WebRequest** to an **HttpWebRequest** reference.</span></span> <span data-ttu-id="3e79e-115">다음 코드 예제에서는 HTTP 관련 <xref:System.Net.HttpWebRequest.UserAgent%2A> 속성을 설정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-115">The following code example shows how to set the HTTP-specific <xref:System.Net.HttpWebRequest.UserAgent%2A> property.</span></span>  
   
     ```csharp  
     ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
     Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
     ```  
   
-3.  <span data-ttu-id="b7d6c-116">요청을 통해 데이터를 보내도록 허용하는 프로토콜 메서드를 지정합니다(예: HTTP **POST** 메서드).</span><span class="sxs-lookup"><span data-stu-id="b7d6c-116">Specify a protocol method that permits data to be sent with a request, such as the HTTP **POST** method.</span></span>  
+3.  <span data-ttu-id="3e79e-116">요청을 통해 데이터를 보내도록 허용하는 프로토콜 메서드를 지정합니다(예: HTTP **POST** 메서드).</span><span class="sxs-lookup"><span data-stu-id="3e79e-116">Specify a protocol method that permits data to be sent with a request, such as the HTTP **POST** method.</span></span>  
   
     ```csharp  
     request.Method = "POST";  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
     request.Method = "POST"  
     ```  
   
-4.  <span data-ttu-id="b7d6c-117">**ContentLength** 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-117">Set the **ContentLength** property.</span></span>  
+4.  <span data-ttu-id="3e79e-117">**ContentLength** 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-117">Set the **ContentLength** property.</span></span>  
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  <span data-ttu-id="b7d6c-118">**ContentType** 속성을 적절한 값으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-118">Set the **ContentType** property to an appropriate value.</span></span>  
+5.  <span data-ttu-id="3e79e-118">**ContentType** 속성을 적절한 값으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-118">Set the **ContentType** property to an appropriate value.</span></span>  
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  <span data-ttu-id="b7d6c-119"><xref:System.Net.WebRequest.GetRequestStream%2A> 메서드를 호출하여 요청 데이터를 포함하는 스트림을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-119">Get the stream that holds request data by calling the <xref:System.Net.WebRequest.GetRequestStream%2A> method.</span></span>  
+6.  <span data-ttu-id="3e79e-119"><xref:System.Net.WebRequest.GetRequestStream%2A> 메서드를 호출하여 요청 데이터를 포함하는 스트림을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-119">Get the stream that holds request data by calling the <xref:System.Net.WebRequest.GetRequestStream%2A> method.</span></span>  
   
     ```csharp  
     Stream dataStream = request.GetRequestStream ();  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
     Stream dataStream = request.GetRequestStream ()  
     ```  
   
-7.  <span data-ttu-id="b7d6c-120">이 메서드에서 반환된 <xref:System.IO.Stream> 개체에 데이터를 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-120">Write the data to the <xref:System.IO.Stream> object returned by this method.</span></span>  
+7.  <span data-ttu-id="3e79e-120">이 메서드에서 반환된 <xref:System.IO.Stream> 개체에 데이터를 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-120">Write the data to the <xref:System.IO.Stream> object returned by this method.</span></span>  
   
     ```csharp  
     dataStream.Write (byteArray, 0, byteArray.Length);  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/21/2017
     dataStream.Write (byteArray, 0, byteArray.Length)  
     ```  
   
-8.  <span data-ttu-id="b7d6c-121">**Stream.Close** 메서드를 호출하여 요청 스트림을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-121">Close the request stream by calling the **Stream.Close** method.</span></span>  
+8.  <span data-ttu-id="3e79e-121">**Stream.Close** 메서드를 호출하여 요청 스트림을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-121">Close the request stream by calling the **Stream.Close** method.</span></span>  
   
     ```csharp  
     dataStream.Close ();  
@@ -122,7 +123,7 @@ ms.lasthandoff: 11/21/2017
     dataStream.Close ()  
     ```  
   
-9. <span data-ttu-id="b7d6c-122"><xref:System.Net.WebRequest.GetResponse%2A>를 호출하여 요청을 서버에 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-122">Send the request to the server by calling <xref:System.Net.WebRequest.GetResponse%2A>.</span></span> <span data-ttu-id="b7d6c-123">이 메서드는 서버 응답을 포함하는 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-123">This method returns an object containing the server's response.</span></span> <span data-ttu-id="b7d6c-124">반환된 <xref:System.Net.WebResponse> 개체의 형식은 요청 URI 구성표에 따라 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-124">The returned <xref:System.Net.WebResponse> object's type is determined by the scheme of the request's URI.</span></span>  
+9. <span data-ttu-id="3e79e-122"><xref:System.Net.WebRequest.GetResponse%2A>를 호출하여 요청을 서버에 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-122">Send the request to the server by calling <xref:System.Net.WebRequest.GetResponse%2A>.</span></span> <span data-ttu-id="3e79e-123">이 메서드는 서버 응답을 포함하는 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-123">This method returns an object containing the server's response.</span></span> <span data-ttu-id="3e79e-124">반환된 <xref:System.Net.WebResponse> 개체의 형식은 요청 URI 구성표에 따라 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-124">The returned <xref:System.Net.WebResponse> object's type is determined by the scheme of the request's URI.</span></span>  
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -133,9 +134,9 @@ ms.lasthandoff: 11/21/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="b7d6c-125"><xref:System.Net.WebResponse> 개체가 필요 없게 되면 <xref:System.Net.WebResponse.Close%2A> 메서드를 호출하여 개체를 닫아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-125">After you are finished with a <xref:System.Net.WebResponse> object, you must close it by calling the <xref:System.Net.WebResponse.Close%2A> method.</span></span> <span data-ttu-id="b7d6c-126">또는 응답 개체에서 응답 스트림을 이미 가져온 경우 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드를 호출하여 스트림을 닫을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-126">Alternatively, if you have gotten the response stream from the response object, you can close the stream by calling the <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b7d6c-127">응답이나 스트림을 닫지 않으면 응용 프로그램이 서버에 대한 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-127">If you do not close the response or the stream, your application can run out of connections to the server and become unable to process additional requests.</span></span>  
+    >  <span data-ttu-id="3e79e-125"><xref:System.Net.WebResponse> 개체가 필요 없게 되면 <xref:System.Net.WebResponse.Close%2A> 메서드를 호출하여 개체를 닫아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-125">After you are finished with a <xref:System.Net.WebResponse> object, you must close it by calling the <xref:System.Net.WebResponse.Close%2A> method.</span></span> <span data-ttu-id="3e79e-126">또는 응답 개체에서 응답 스트림을 이미 가져온 경우 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드를 호출하여 스트림을 닫을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-126">Alternatively, if you have gotten the response stream from the response object, you can close the stream by calling the <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="3e79e-127">응답이나 스트림을 닫지 않으면 응용 프로그램이 서버에 대한 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-127">If you do not close the response or the stream, your application can run out of connections to the server and become unable to process additional requests.</span></span>  
   
-10. <span data-ttu-id="b7d6c-128">**WebResponse**의 속성에 액세스하거나 **WebResponse**를 프로토콜별 인스턴스로 캐스팅하여 프로토콜별 속성을 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-128">You can access the properties of the **WebResponse** or cast the **WebResponse** to a protocol-specific instance to read protocol-specific properties.</span></span> <span data-ttu-id="b7d6c-129">예를 들어 <xref:System.Net.HttpWebResponse>의 HTTP 관련 속성에 액세스하려면 **WebResponse**를 **HttpWebResponse** 참조로 캐스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-129">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebResponse>, cast the **WebResponse** to an **HttpWebResponse** reference.</span></span>  
+10. <span data-ttu-id="3e79e-128">**WebResponse**의 속성에 액세스하거나 **WebResponse**를 프로토콜별 인스턴스로 캐스팅하여 프로토콜별 속성을 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-128">You can access the properties of the **WebResponse** or cast the **WebResponse** to a protocol-specific instance to read protocol-specific properties.</span></span> <span data-ttu-id="3e79e-129">예를 들어 <xref:System.Net.HttpWebResponse>의 HTTP 관련 속성에 액세스하려면 **WebResponse**를 **HttpWebResponse** 참조로 캐스팅해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-129">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebResponse>, cast the **WebResponse** to an **HttpWebResponse** reference.</span></span>  
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/21/2017
     Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
     ```  
   
-11. <span data-ttu-id="b7d6c-130">서버에서 전송된 응답 데이터를 포함하는 스트림을 가져오려면 **WebResponse**의 <xref:System.Net.WebResponse.GetResponseStream%2A> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-130">To get the stream containing response data sent by the server, call the <xref:System.Net.WebResponse.GetResponseStream%2A> method of the **WebResponse**.</span></span>  
+11. <span data-ttu-id="3e79e-130">서버에서 전송된 응답 데이터를 포함하는 스트림을 가져오려면 **WebResponse**의 <xref:System.Net.WebResponse.GetResponseStream%2A> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-130">To get the stream containing response data sent by the server, call the <xref:System.Net.WebResponse.GetResponseStream%2A> method of the **WebResponse**.</span></span>  
   
     ```csharp  
     Stream data = response.GetResponseStream;  
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/21/2017
     Dim data As Stream = response.GetResponseStream  
     ```  
   
-12. <span data-ttu-id="b7d6c-131">응답에서 데이터를 읽은 후 **Stream.Close** 메서드를 사용하여 응답 스트림을 닫거나 **WebResponse.Close** 메서드를 사용하여 응답을 닫아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-131">After reading the data from the response, you must either close the response stream using the **Stream.Close** method or close the response using the **WebResponse.Close** method.</span></span> <span data-ttu-id="b7d6c-132">응답 스트림 및 **WebResponse**에서 둘 다 **Close** 메서드를 호출할 필요가 없지만 호출해도 문제가 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b7d6c-132">It is not necessary to call the **Close** method on both the response stream and the **WebResponse**, but doing so is not harmful.</span></span>  
+12. <span data-ttu-id="3e79e-131">응답에서 데이터를 읽은 후 **Stream.Close** 메서드를 사용하여 응답 스트림을 닫거나 **WebResponse.Close** 메서드를 사용하여 응답을 닫아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-131">After reading the data from the response, you must either close the response stream using the **Stream.Close** method or close the response using the **WebResponse.Close** method.</span></span> <span data-ttu-id="3e79e-132">응답 스트림 및 **WebResponse**에서 둘 다 **Close** 메서드를 호출할 필요가 없지만 호출해도 문제가 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3e79e-132">It is not necessary to call the **Close** method on both the response stream and the **WebResponse**, but doing so is not harmful.</span></span>  
   
     ```csharp  
     response.Close();  
@@ -165,7 +166,7 @@ ms.lasthandoff: 11/21/2017
     response.Close()  
     ```  
   
-## <a name="example"></a><span data-ttu-id="b7d6c-133">예제</span><span class="sxs-lookup"><span data-stu-id="b7d6c-133">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3e79e-133">예</span><span class="sxs-lookup"><span data-stu-id="3e79e-133">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -264,9 +265,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b7d6c-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b7d6c-134">See Also</span></span>  
- [<span data-ttu-id="b7d6c-135">인터넷 요청 만들기</span><span class="sxs-lookup"><span data-stu-id="b7d6c-135">Creating Internet Requests</span></span>](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [<span data-ttu-id="b7d6c-136">네트워크에서 스트림 사용</span><span class="sxs-lookup"><span data-stu-id="b7d6c-136">Using Streams on the Network</span></span>](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [<span data-ttu-id="b7d6c-137">프록시를 통해 인터넷 액세스</span><span class="sxs-lookup"><span data-stu-id="b7d6c-137">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [<span data-ttu-id="b7d6c-138">데이터 요청</span><span class="sxs-lookup"><span data-stu-id="b7d6c-138">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)  
- [<span data-ttu-id="b7d6c-139">방법: WebRequest 클래스를 사용하여 데이터 요청</span><span class="sxs-lookup"><span data-stu-id="b7d6c-139">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+## <a name="see-also"></a><span data-ttu-id="3e79e-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3e79e-134">See Also</span></span>  
+ [<span data-ttu-id="3e79e-135">인터넷 요청 만들기</span><span class="sxs-lookup"><span data-stu-id="3e79e-135">Creating Internet Requests</span></span>](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [<span data-ttu-id="3e79e-136">네트워크에서 스트림 사용</span><span class="sxs-lookup"><span data-stu-id="3e79e-136">Using Streams on the Network</span></span>](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [<span data-ttu-id="3e79e-137">프록시를 통해 인터넷 액세스</span><span class="sxs-lookup"><span data-stu-id="3e79e-137">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [<span data-ttu-id="3e79e-138">데이터 요청</span><span class="sxs-lookup"><span data-stu-id="3e79e-138">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)  
+ [<span data-ttu-id="3e79e-139">방법: WebRequest 클래스를 사용하여 데이터 요청</span><span class="sxs-lookup"><span data-stu-id="3e79e-139">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)

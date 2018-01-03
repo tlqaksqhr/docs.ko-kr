@@ -16,22 +16,23 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e53566f1311fa969dcb9c44f31664bd34b422e46
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 343cf07ead03ccba82606d918a3a5d0106f5b0e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="0a694-102">방법: LINQ to SQL 명령 표시</span><span class="sxs-lookup"><span data-stu-id="0a694-102">How to: Display LINQ to SQL Commands</span></span>
-<span data-ttu-id="0a694-103"><xref:System.Data.Linq.DataContext.GetCommand%2A>를 사용하여 SQL 명령 및 기타 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="0a694-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
+# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="eba24-102">방법: LINQ to SQL 명령 표시</span><span class="sxs-lookup"><span data-stu-id="eba24-102">How to: Display LINQ to SQL Commands</span></span>
+<span data-ttu-id="eba24-103"><xref:System.Data.Linq.DataContext.GetCommand%2A>를 사용하여 SQL 명령 및 기타 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="eba24-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0a694-104">예제</span><span class="sxs-lookup"><span data-stu-id="0a694-104">Example</span></span>  
- <span data-ttu-id="0a694-105">다음 예제에서는 콘솔 창에 쿼리로부터의 출력, 생성된 SQL 명령, 명령 형식 및 연결 형식이 차례로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a694-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
+## <a name="example"></a><span data-ttu-id="eba24-104">예</span><span class="sxs-lookup"><span data-stu-id="eba24-104">Example</span></span>  
+ <span data-ttu-id="eba24-105">다음 예제에서는 콘솔 창에 쿼리로부터의 출력, 생성된 SQL 명령, 명령 형식 및 연결 형식이 차례로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="eba24-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
  [!code-vb[DLinqDebuggingSupport#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#3)]  
   
- <span data-ttu-id="0a694-106">다음과 같이 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a694-106">Output appears as follows:</span></span>  
+ <span data-ttu-id="eba24-106">다음과 같이 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="eba24-106">Output appears as follows:</span></span>  
   
 ```  
 Customers from London:  
@@ -58,5 +59,5 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0a694-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0a694-107">See Also</span></span>  
- [<span data-ttu-id="0a694-108">디버깅 지원</span><span class="sxs-lookup"><span data-stu-id="0a694-108">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="eba24-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="eba24-107">See Also</span></span>  
+ [<span data-ttu-id="eba24-108">디버깅 지원</span><span class="sxs-lookup"><span data-stu-id="eba24-108">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
