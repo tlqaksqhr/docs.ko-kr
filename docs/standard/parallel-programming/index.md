@@ -14,11 +14,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e061508b6b74e81b79ab7d53b0277afd38072635
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 554de5d65929afc03b57bdc604ceeb6ac35362d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-programming-in-net"></a>.NET으로 병렬 프로그래밍
 여러 개인용 컴퓨터 및 워크스테이션에는 코어, 즉 CPU가 2개 또는 4개 있기 때문에 다중 스레드가 동시에 실행될 수 있습니다. 가까운 미래에 컴퓨터의 코어 수는 대폭 증가할 것으로 예상됩니다. 현재 및 미래의 하드웨어를 활용하기 위해 코드를 병렬화하여 작업을 여러 프로세스에 분산할 수 있습니다. 이전의 병렬화에서는 스레드 및 잠금에 대한 저수준 조작이 필요했습니다. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 및 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 새로운 런타임, 새로운 클래스 라이브러리 형식 및 새로운 진단 도구를 제공하여 병렬 프로그래밍에 대한 지원이 향상되었습니다. 이러한 기능은 병렬 개발을 단순화하기 때문에 개발자는 스레드 또는 스레드 풀을 직접 건드릴 필요 없이 효율적이고 세부적이고 확장명 가능한 병렬 코드를 자연스러운 언어로 작성할 수 있습니다. 다음 그림에서는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]의 병렬 프로그래밍 아키텍처에 대한 간략한 개요를 제공합니다.  

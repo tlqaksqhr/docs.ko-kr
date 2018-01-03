@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8c36d3577d46136d98b3cbcc9aefd19b30960a0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a408cbfd085f0693ab27087b529fe0ee296225b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-client-technologies-in-the-net-framework"></a>.NET Framework의 일반 클라이언트 기술
 이 단원에서는 클라이언트 응용 프로그램에서 사용하는 다양한 기술을 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [조작 및 관성](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
  Microsoft WPF(Windows Presentation Foundation) 또는 Microsoft XNA 같은 다양한 UI 프레임워크에서 조작 및 관성 프로세서 클래스를 사용하는 방법을 설명합니다.  
   

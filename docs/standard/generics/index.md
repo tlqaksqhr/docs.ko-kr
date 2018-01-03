@@ -36,11 +36,14 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 510d7f30853496409caccab69e68f55a6638319e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generics-in-the-net-framework"></a>.NET Framework의 제네릭
 <a name="top"></a> 제네릭을 사용하면 메서드, 클래스, 구조체 또는 인터페이스를 사용 대상인 정확한 데이터 형식에 맞게 조정할 수 있습니다. 예를 들어 모든 형식의 키와 값을 허용하는 <xref:System.Collections.Hashtable> 클래스를 사용하는 대신 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스를 사용하고 키에 허용되는 형식과 값에 허용되는 형식을 지정할 수 있습니다. 제네릭의 이점으로는 향상된 코드 다시 사용 가능성과 형식 안전성 등이 있습니다.  
@@ -87,9 +90,9 @@ ms.lasthandoff: 10/18/2017
   
 -   일반 용어인 *제네릭 형식* 에는 생성된 형식과 제네릭 형식 정의가 모두 포함됩니다.  
   
--   제네릭 형식 매개 변수의*공 분산(covariance)* 및 *반공변성(contravariance)* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (반공변성(contravariance)) than a target constructed type. 공변성(Covariance) 및 반공변성(Contravariance)을 전체적으로 *차이*라고 합니다. 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
+-   제네릭 형식 매개 변수의*공 분산(covariance)* 및 *반공변성(contravariance)* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (반공변성(contravariance)) than a target constructed type. 공 분산과 반공 분산을 통칭하여 *가변성(variance)*이라고 합니다. 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
   
--   *제약 조건* 은 제네릭 형식 매개 변수에 적용되는 제한입니다. 예를 들어 형식 인스턴스의 순서를 지정할 수 있도록 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 제네릭 인터페이스를 구현하는 형식으로 형식 매개 변수를 제한할 수 있습니다. 또한 참조 형식 또는 값 형식이거나 특정 기본 클래스 또는 기본 생성자를 포함하는 형식으로 형식 매개 변수를 제한할 수도 있습니다. 제네릭 형식의 사용자는 제약 조건을 충족하지 않는 형식 인수를 대체할 수 없습니다.  
+-   *제약 조건*은 제네릭 형식 매개 변수에 대해 적용되는 제한 사항입니다. 예를 들어 형식 인스턴스의 순서를 지정할 수 있도록 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 제네릭 인터페이스를 구현하는 형식으로 형식 매개 변수를 제한할 수 있습니다. 또한 참조 형식 또는 값 형식이거나 특정 기본 클래스 또는 기본 생성자를 포함하는 형식으로 형식 매개 변수를 제한할 수도 있습니다. 제네릭 형식의 사용자는 제약 조건을 충족하지 않는 형식 인수를 대체할 수 없습니다.  
   
 -   *제네릭 메서드 정의* 는 두 개의 매개 변수 목록(제네릭 형식 매개 변수 목록 및 정식 매개 변수 목록)을 포함하는 메서드입니다. 형식 매개 변수는 다음 코드에 나와 있는 것처럼 정식 매개 변수의 형식 또는 반환 형식으로 표시될 수 있습니다.  
   

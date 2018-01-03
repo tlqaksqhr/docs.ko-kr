@@ -17,16 +17,19 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d6b1c760fb8667850d4f4e88ca8fe5bcf0b0a662
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7746d53748260610a7f0e33611dd672fd644d269
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="working-with-base-types-in-net"></a>.NET의 기본 형식 작업
 이 섹션에서는 형식 지정, 변환 및 일반 작업을 포함하여 .NET 기본 형식 작업에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [.NET Framework의 형식 변환](../../../docs/standard/base-types/type-conversion.md)  
  형식 간에 변환하는 방법을 설명합니다.  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/18/2017
  [문자열 조작](../../../docs/standard/base-types/manipulating-strings.md)  
  문자열을 조작하고 형식을 지정하는 방법을 설명합니다.  
   
- [문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)  
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
  문자열을 .NET Framework 형식으로 변환하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  

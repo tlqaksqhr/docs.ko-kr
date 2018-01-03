@@ -13,11 +13,12 @@ ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 531da21d69f13a212eecb7b079fbf90bd7c8e681
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-guide"></a>.NET Framework 가이드
 
@@ -40,7 +41,7 @@ Windows와 함께 .NET Framework를 사용하면 .NET Framework 응용 프로그
 
 .NET Framework 다운로드에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [새로운 기능](../../docs/framework/whats-new/index.md)  
 최신 버전의 .NET Framework에 새로 추가된 주요 기능과 변경 내용에 대해 설명합니다. 사용되지 않는 형식 및 멤버의 목록을 제공하고 이전 .NET Framework 버전에서 응용 프로그램을 마이그레이션하는 방법에 대한 지침을 제공합니다.  

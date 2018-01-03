@@ -20,11 +20,14 @@ caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
 파일 및 스트림 I/O(입/출력)는 저장 매체로 데이터를 전송하거나 저장 매체로부터 데이터를 전송 받습니다. .NET Framework에서 [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) 네임스페이스는 데이터 스트림과 파일에서 읽기 및 쓰기를 동기적 및 비동기적으로 사용하는 형식을 포함합니다. 이러한 네임스페이스는 파일의 압축 및 압축 풀기 기능을 수행하는 형식 및 파이프 및 직렬 포트를 통한 통신을 가능하도록 하는 형식을 포함합니다.  
@@ -125,7 +128,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="isolated-storage"></a>격리된 저장소  
  격리된 저장소는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 저장소 메커니즘입니다. 저장소는 사용자, 어셈블리 및 도메인(옵션)에 의해 격리된 가상 파일 시스템을 제공합니다. 격리된 저장소는 응용 프로그램에 사용자 파일을 액세스할 수 있는 권한이 없는 경우 특히 유용합니다. 컴퓨터의 보안 정책에 의해 제어되는 방식으로 응용 프로그램에 대한 설정이나 파일을 저장할 수 있습니다.  
   
- 격리된 저장소는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에 사용할 수 없습니다. 대신에, [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 네임스페이스의 응용 프로그램 데이터 클래스를 사용합니다. 자세한 내용은 Windows 개발자 센터에서 [응용 프로그램 데이터](http://go.microsoft.com/fwlink/?LinkId=229175)를 참조하세요.  
+ 격리된 저장소는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에 사용할 수 없습니다. 대신에, [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 네임스페이스의 응용 프로그램 데이터 클래스를 사용합니다. 자세한 내용은 Windows 개발자 센터에서 [응용 프로그램 데이터](http://go.microsoft.com/fwlink/?LinkId=229175) 를 참조하세요.  
   
  다음의 클래스는 격리된 저장소를 구현할 때 자주 사용됩니다.  
   

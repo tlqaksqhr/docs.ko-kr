@@ -4,11 +4,14 @@ description: "Azure 클라우드 및 Windows 컨테이너를 사용하여 기존
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 6c1bbbcd99c2abee43a789fddf4546e7ee8d3380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 08bf7da36714b2c18d96659814bb11df6d9b26fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="lift-and-shift-existing-apps-devops"></a>기존 앱 DevOps 리프트 앤 시프트
 > 비전: 기존 .NET Framework 응용 프로그램을 클라우드 DevOps 지원 응용 프로그램에 리프트 앤 시프트하여 배포 민첩성을 대폭 개선함으로써 더 빠르게 배송하고 앱 배송 비용을 낮출 수 있습니다.

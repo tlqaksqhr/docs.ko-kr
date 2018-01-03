@@ -18,11 +18,12 @@ caps.latest.revision: "65"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 777c78a1ee296fd92d48547aeb53a083afa95b28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2615c7b8c75f7736bbf8334512790d0a5c43c8d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
 .NET Framework 도구를 사용하면 .NET Framework를 대상으로 하는 응용 프로그램 및 구성 요소를 보다 쉽게 만들고 배포하고 관리할 수 있습니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  일부 도구는 32비트 컴퓨터 또는 64비트 컴퓨터 전용입니다. 컴퓨터에 적절한 버전의 도구를 실행하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  모듈 또는 리소스 파일로부터 어셈블리 매니페스트가 있는 파일을 생성합니다.  
   

@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 22a2eb72dc06a644171c143a61698e661d2c66c6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 .NET Framework에서 XML 인식 응용 프로그램을 쉽게 작성할 수 있도록 하는 종합적이고 통합된 클래스 집합을 제공합니다. 다음 네임스페이스의 클래스에서는 XML 구문 분석 및 작성, 메모리에서의 XML 데이터 편집, 데이터 유효성 검사 및 XSLT 변형을 지원합니다.  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/18/2017
   
 -   **ADO.NET과의 통합** XML 클래스 및 [ADO.NET](../../../../docs/framework/data/adonet/index.md)은 관계형 데이터와 XML을 하나로 결합하도록 긴밀히 통합되어 있습니다. <xref:System.Data.DataSet> 클래스는 데이터베이스에서 파생된 데이터의 메모리 내 캐시입니다. <xref:System.Data.DataSet> 클래스에서는 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스를 사용하여 XML을 읽고 쓰며, 내부 관계형 스키마 구조를 XSD(XML 스키마)로 유지할 수 있을 뿐 아니라 XML 문서의 스키마 구조를 예측할 수도 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [XML 처리 옵션](../../../../docs/standard/data/xml/xml-processing-options.md)  
  XML 데이터를 처리하는 옵션에 대해 설명합니다.  
   

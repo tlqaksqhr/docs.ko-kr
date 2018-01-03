@@ -21,11 +21,14 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7e176ebf6660e1c517e5ef7a505c259666bb30a0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>.NET Framework 응용 프로그램 전역화 및 지역화
 하나 이상의 언어로 지역화할 수 있는 응용 프로그램을 포함하여 [지역화 대비 응용 프로그램](http://msdn.microsoft.com/goglobal/bb978433.aspx)의 개발에는 전역화, 지역화 가능성 검토 및 지역화의 세 가지 단계가 포함됩니다.  
@@ -49,7 +52,7 @@ ms.lasthandoff: 10/18/2017
   
  추가 정보는 [글로벌 개발자 센터 방문](http://go.microsoft.com/fwlink/?LinkId=235015)을 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [전역화](../../../docs/standard/globalization-localization/globalization.md)  
  문화권과 언어에 중립적인 응용 프로그램을 디자인하고 코딩하는 것을 포함하여 지역화 대비 응용 프로그램을 만드는 첫 번째 단계를 설명합니다.  
   
