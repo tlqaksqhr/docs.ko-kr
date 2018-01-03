@@ -12,18 +12,18 @@ ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6e9665d7e381dbc7d9cec4fba4ab423ba0ade0c5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: ee31d85214fba474db8a3f7499d867cc09bd41a0
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expression-trees-visual-basic"></a>식 트리(Visual Basic)
 식 트리는 `x < y` 등의 이진 연산이나 메서드 호출과 같이 각 노드가 식인 트리 형식 데이터 구조의 코드를 표시합니다.  
   
  식 트리로 표시되는 코드를 컴파일하고 실행할 수 있습니다. 이렇게 하면 실행 가능한 코드를 동적으로 수정하고, 다양한 데이터베이스에서 LINQ 쿼리를 실행하고, 동적 쿼리를 만들 수 있습니다. LINQ의 식 트리에 대한 자세한 내용은 [How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)(방법: 식 트리를 사용하여 동적 쿼리 빌드(Visual Basic))를 참조하세요.  
   
- 식 트리는 동적 언어와 .NET Framework 간에 상호 운용성을 제공하고 컴파일러 작성기가 MSIL(Microsoft Intermediate Language) 대신 식 트리를 내보낼 수 있도록 DLR(동적 언어 런타임)에서도 사용됩니다. DLR에 대한 자세한 내용은 [동적 언어 런타임 개요](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)를 참조하세요.  
+ 식 트리는 동적 언어와 .NET Framework 간에 상호 운용성을 제공하고 컴파일러 작성기가 MSIL(Microsoft Intermediate Language) 대신 식 트리를 내보낼 수 있도록 DLR(동적 언어 런타임)에서도 사용됩니다. DLR에 대한 자세한 내용은 [동적 언어 런타임 개요](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)를 참조하세요.  
   
  익명 람다 식을 기준으로 C# 또는 Visual Basic 컴파일러가 식 트리를 자동으로 만들도록 할 수도 있고 <xref:System.Linq.Expressions> 네임스페이스를 사용하여 식 트리를 수동으로 만들 수도 있습니다.  
   
@@ -155,5 +155,5 @@ Console.WriteLine(expr.Compile()(4))
  [방법: 식 트리 (Visual Basic)를 실행 합니다.](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
  [방법: 식 트리 (Visual Basic)를 수정 합니다.](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
  [람다 식](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [동적 언어 런타임 개요](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ [동적 언어 런타임 개요](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
  [프로그래밍 개념(Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)
