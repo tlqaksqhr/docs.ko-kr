@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a8f6f1cd79cd56995fabe974331dd3b3dd3aad22
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e6b5c76e6db5750efce529ef5c5eb2388128a8b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wif-guidelines"></a><span data-ttu-id="fe08c-102">WIF 지침</span><span class="sxs-lookup"><span data-stu-id="fe08c-102">WIF Guidelines</span></span>
--   [<span data-ttu-id="fe08c-103">WIF 3.5를 사용하여 빌드된 응용 프로그램을 WIF 4.5로 마이그레이션하는 지침</span><span class="sxs-lookup"><span data-stu-id="fe08c-103">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
+# <a name="wif-guidelines"></a><span data-ttu-id="cdcf6-102">WIF 지침</span><span class="sxs-lookup"><span data-stu-id="cdcf6-102">WIF Guidelines</span></span>
+-   [<span data-ttu-id="cdcf6-103">WIF 3.5를 사용하여 빌드된 응용 프로그램을 WIF 4.5로 마이그레이션하는 지침</span><span class="sxs-lookup"><span data-stu-id="cdcf6-103">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
   
--   [<span data-ttu-id="fe08c-104">WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑</span><span class="sxs-lookup"><span data-stu-id="fe08c-104">Namespace Mapping between WIF 3.5 and WIF 4.5</span></span>](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+-   [<span data-ttu-id="cdcf6-104">WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑</span><span class="sxs-lookup"><span data-stu-id="cdcf6-104">Namespace Mapping between WIF 3.5 and WIF 4.5</span></span>](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fe08c-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fe08c-105">See Also</span></span>  
- [<span data-ttu-id="fe08c-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="fe08c-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
+## <a name="see-also"></a><span data-ttu-id="cdcf6-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cdcf6-105">See Also</span></span>  
+ [<span data-ttu-id="cdcf6-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="cdcf6-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)

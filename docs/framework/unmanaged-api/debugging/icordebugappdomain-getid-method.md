@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5a8dcbc1fd710513b2b27e92f4d2e1e1b5c72092
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8b151d5b0774576e98da5845e5c7afc24ada0001
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="7cde9-102">ICorDebugAppDomain::GetId 메서드</span><span class="sxs-lookup"><span data-stu-id="7cde9-102">ICorDebugAppDomain::GetId Method</span></span>
-<span data-ttu-id="7cde9-103">응용 프로그램 도메인의 고유 식별자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="7cde9-103">Gets the unique identifier of the application domain.</span></span>  
+# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="a2b5e-102">ICorDebugAppDomain::GetId 메서드</span><span class="sxs-lookup"><span data-stu-id="a2b5e-102">ICorDebugAppDomain::GetId Method</span></span>
+<span data-ttu-id="a2b5e-103">응용 프로그램 도메인의 고유 식별자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="a2b5e-103">Gets the unique identifier of the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7cde9-104">구문</span><span class="sxs-lookup"><span data-stu-id="7cde9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2b5e-104">구문</span><span class="sxs-lookup"><span data-stu-id="a2b5e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID (  
@@ -38,18 +39,18 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7cde9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7cde9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a2b5e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a2b5e-105">Parameters</span></span>  
  `pId`  
- <span data-ttu-id="7cde9-106">[out] 응용 프로그램 도메인의 고유 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="7cde9-106">[out] The unique identifier of the application domain.</span></span>  
+ <span data-ttu-id="a2b5e-106">[out] 응용 프로그램 도메인의 고유 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="a2b5e-106">[out] The unique identifier of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7cde9-107">설명</span><span class="sxs-lookup"><span data-stu-id="7cde9-107">Remarks</span></span>  
- <span data-ttu-id="7cde9-108">응용 프로그램 도메인에 대 한 식별자는 포함 하는 프로세스 내에서 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="7cde9-108">The identifier for the application domain is unique within the containing process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a2b5e-107">설명</span><span class="sxs-lookup"><span data-stu-id="a2b5e-107">Remarks</span></span>  
+ <span data-ttu-id="a2b5e-108">응용 프로그램 도메인에 대 한 식별자는 포함 하는 프로세스 내에서 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="a2b5e-108">The identifier for the application domain is unique within the containing process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7cde9-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7cde9-109">Requirements</span></span>  
- <span data-ttu-id="7cde9-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7cde9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2b5e-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a2b5e-109">Requirements</span></span>  
+ <span data-ttu-id="a2b5e-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a2b5e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7cde9-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7cde9-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a2b5e-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a2b5e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7cde9-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7cde9-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a2b5e-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2b5e-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7cde9-113">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cde9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a2b5e-113">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2b5e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

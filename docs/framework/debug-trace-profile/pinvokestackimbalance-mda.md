@@ -21,35 +21,36 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b33a3edc5780ecf07e7809ca327a304d748110f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9da05a84568a6168ed9f450afa48aa6864ed575
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="pinvokestackimbalance-mda"></a><span data-ttu-id="41fbc-102">pInvokeStackImbalance MDA</span><span class="sxs-lookup"><span data-stu-id="41fbc-102">pInvokeStackImbalance MDA</span></span>
-<span data-ttu-id="41fbc-103">`pInvokeStackImbalance` MDA(관리 디버깅 도우미)는 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성에 지정된 호출 규칙과 관리되는 서명의 매개 변수 선언을 기준으로 CLR에서 플랫폼 호출 후의 스택 깊이가 예상 스택 깊이와 일치하지 않음을 감지할 때 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-103">The `pInvokeStackImbalance` managed debugging assistant (MDA) is activated when the CLR detects that the stack depth after a platform invoke call does not match the expected stack depth, given the calling convention specified in the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute as well as the declaration of the parameters in the managed signature.</span></span>  
+# <a name="pinvokestackimbalance-mda"></a><span data-ttu-id="9de8a-102">pInvokeStackImbalance MDA</span><span class="sxs-lookup"><span data-stu-id="9de8a-102">pInvokeStackImbalance MDA</span></span>
+<span data-ttu-id="9de8a-103">`pInvokeStackImbalance` MDA(관리 디버깅 도우미)는 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성에 지정된 호출 규칙과 관리되는 서명의 매개 변수 선언을 기준으로 CLR에서 플랫폼 호출 후의 스택 깊이가 예상 스택 깊이와 일치하지 않음을 감지할 때 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-103">The `pInvokeStackImbalance` managed debugging assistant (MDA) is activated when the CLR detects that the stack depth after a platform invoke call does not match the expected stack depth, given the calling convention specified in the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute as well as the declaration of the parameters in the managed signature.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="41fbc-104">`pInvokeStackImbalance` MDA는 32비트 x86 플랫폼에 대해서만 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-104">The `pInvokeStackImbalance` MDA is implemented only for 32-bit x86 platforms.</span></span>  
+>  <span data-ttu-id="9de8a-104">`pInvokeStackImbalance` MDA는 32비트 x86 플랫폼에 대해서만 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-104">The `pInvokeStackImbalance` MDA is implemented only for 32-bit x86 platforms.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="41fbc-105">.NET Framework 버전 3.5에서는 `pInvokeStackImbalance` MDA가 기본적으로 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-105">In the .NET Framework version 3.5, the `pInvokeStackImbalance` MDA is disabled by default.</span></span> <span data-ttu-id="41fbc-106">Visual Studio 2005와 함께 .NET Framework 버전 3.5를 사용하는 경우 **디버그** 메뉴에서 **예외**를 클릭할 때 표시되는 **예외** 대화 상자의 **관리 디버깅 도우미** 목록에 `pInvokeStackImbalance` MDA가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-106">When you use the .NET Framework version 3.5 with Visual Studio 2005, the `pInvokeStackImbalance` MDA will appear in the **Managed Debugging Assistants** list in the **Exceptions** dialog box (which is displayed when you click **Exceptions** on the **Debug** menu).</span></span> <span data-ttu-id="41fbc-107">그러나 `pInvokeStackImbalance`에 대해 **Throw됨** 확인란을 선택하거나 선택 취소해도 MDA가 사용하거나 사용하지 않도록 설정되지는 않습니다. MDA가 활성화될 때 Visual Studio에서 예외를 발생시키는지 여부만 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-107">However, selecting or clearing the **Thrown** check box for `pInvokeStackImbalance` does not enable or disable the MDA; it only controls whether Visual Studio throws an exception when the MDA is activated.</span></span>  
+>  <span data-ttu-id="9de8a-105">.NET Framework 버전 3.5에서는 `pInvokeStackImbalance` MDA가 기본적으로 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-105">In the .NET Framework version 3.5, the `pInvokeStackImbalance` MDA is disabled by default.</span></span> <span data-ttu-id="9de8a-106">Visual Studio 2005와 함께 .NET Framework 버전 3.5를 사용하는 경우 **디버그** 메뉴에서 **예외**를 클릭할 때 표시되는 **예외** 대화 상자의 **관리 디버깅 도우미** 목록에 `pInvokeStackImbalance` MDA가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-106">When you use the .NET Framework version 3.5 with Visual Studio 2005, the `pInvokeStackImbalance` MDA will appear in the **Managed Debugging Assistants** list in the **Exceptions** dialog box (which is displayed when you click **Exceptions** on the **Debug** menu).</span></span> <span data-ttu-id="9de8a-107">그러나 `pInvokeStackImbalance`에 대해 **Throw됨** 확인란을 선택하거나 선택 취소해도 MDA가 사용하거나 사용하지 않도록 설정되지는 않습니다. MDA가 활성화될 때 Visual Studio에서 예외를 발생시키는지 여부만 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-107">However, selecting or clearing the **Thrown** check box for `pInvokeStackImbalance` does not enable or disable the MDA; it only controls whether Visual Studio throws an exception when the MDA is activated.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="41fbc-108">증상</span><span class="sxs-lookup"><span data-stu-id="41fbc-108">Symptoms</span></span>  
- <span data-ttu-id="41fbc-109">응용 프로그램이 플랫폼 호출을 수행할 때나 이후에 액세스 위반 또는 메모리 손상을 발견합니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-109">An application encounters an access violation or memory corruption when making or following a platform invoke call.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="9de8a-108">증상</span><span class="sxs-lookup"><span data-stu-id="9de8a-108">Symptoms</span></span>  
+ <span data-ttu-id="9de8a-109">응용 프로그램이 플랫폼 호출을 수행할 때나 이후에 액세스 위반 또는 메모리 손상을 발견합니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-109">An application encounters an access violation or memory corruption when making or following a platform invoke call.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="41fbc-110">원인</span><span class="sxs-lookup"><span data-stu-id="41fbc-110">Cause</span></span>  
- <span data-ttu-id="41fbc-111">플랫폼 호출의 관리되는 서명이 호출되는 메서드의 관리되지 않는 서명과 일치하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-111">The managed signature of the platform invoke call might not match the unmanaged signature of the method being called.</span></span>  <span data-ttu-id="41fbc-112">이 불일치는 관리되는 서명에서 올바른 개수의 매개 변수를 선언하지 않았거나 매개 변수에 대해 적절한 크기를 지정하지 않아서 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-112">This mismatch can be caused by the managed signature not declaring the correct number of parameters or not specifying the appropriate size for the parameters.</span></span>  <span data-ttu-id="41fbc-113"><xref:System.Runtime.InteropServices.DllImportAttribute> 특성에 지정될 수 있는 호출 규칙이 관리되지 않는 호출 규칙과 일치하지 않아 MDA가 활성화될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-113">The MDA can also activate because the calling convention, possibly specified by the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute, does not match the unmanaged calling convention.</span></span>  
+## <a name="cause"></a><span data-ttu-id="9de8a-110">원인</span><span class="sxs-lookup"><span data-stu-id="9de8a-110">Cause</span></span>  
+ <span data-ttu-id="9de8a-111">플랫폼 호출의 관리되는 서명이 호출되는 메서드의 관리되지 않는 서명과 일치하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-111">The managed signature of the platform invoke call might not match the unmanaged signature of the method being called.</span></span>  <span data-ttu-id="9de8a-112">이 불일치는 관리되는 서명에서 올바른 개수의 매개 변수를 선언하지 않았거나 매개 변수에 대해 적절한 크기를 지정하지 않아서 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-112">This mismatch can be caused by the managed signature not declaring the correct number of parameters or not specifying the appropriate size for the parameters.</span></span>  <span data-ttu-id="9de8a-113"><xref:System.Runtime.InteropServices.DllImportAttribute> 특성에 지정될 수 있는 호출 규칙이 관리되지 않는 호출 규칙과 일치하지 않아 MDA가 활성화될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-113">The MDA can also activate because the calling convention, possibly specified by the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute, does not match the unmanaged calling convention.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="41fbc-114">해결</span><span class="sxs-lookup"><span data-stu-id="41fbc-114">Resolution</span></span>  
- <span data-ttu-id="41fbc-115">관리되는 플랫폼 호출 서명과 호출 규칙을 검토하여 기본 대상의 서명 및 호출 규칙과 일치하는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-115">Review the managed platform invoke signature and calling convention to confirm it matches the signature and calling convention of the native target.</span></span>  <span data-ttu-id="41fbc-116">관리되는 측면과 관리되지 않는 측면 둘 다에서 호출 규칙을 명시적으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-116">Try explicitly specifying the calling convention on both the managed and unmanaged sides.</span></span> <span data-ttu-id="41fbc-117">가능성은 적지만 관리되지 않는 컴파일러의 버그와 같은 다른 이유로 관리되지 않는 함수에서 스택 불균형이 발생했을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-117">It is also possible, although not as likely, that the unmanaged function unbalanced the stack for some other reason, such as a bug in the unmanaged compiler.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="9de8a-114">해결</span><span class="sxs-lookup"><span data-stu-id="9de8a-114">Resolution</span></span>  
+ <span data-ttu-id="9de8a-115">관리되는 플랫폼 호출 서명과 호출 규칙을 검토하여 기본 대상의 서명 및 호출 규칙과 일치하는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-115">Review the managed platform invoke signature and calling convention to confirm it matches the signature and calling convention of the native target.</span></span>  <span data-ttu-id="9de8a-116">관리되는 측면과 관리되지 않는 측면 둘 다에서 호출 규칙을 명시적으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-116">Try explicitly specifying the calling convention on both the managed and unmanaged sides.</span></span> <span data-ttu-id="9de8a-117">가능성은 적지만 관리되지 않는 컴파일러의 버그와 같은 다른 이유로 관리되지 않는 함수에서 스택 불균형이 발생했을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-117">It is also possible, although not as likely, that the unmanaged function unbalanced the stack for some other reason, such as a bug in the unmanaged compiler.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="41fbc-118">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="41fbc-118">Effect on the Runtime</span></span>  
- <span data-ttu-id="41fbc-119">모든 플랫폼 호출이 CLR에서 최적화되지 않은 경로를 사용하도록 강제합니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-119">Forces all platform invoke calls to take the nonoptimized path in the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="9de8a-118">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="9de8a-118">Effect on the Runtime</span></span>  
+ <span data-ttu-id="9de8a-119">모든 플랫폼 호출이 CLR에서 최적화되지 않은 경로를 사용하도록 강제합니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-119">Forces all platform invoke calls to take the nonoptimized path in the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="41fbc-120">출력</span><span class="sxs-lookup"><span data-stu-id="41fbc-120">Output</span></span>  
- <span data-ttu-id="41fbc-121">MDA 메시지는 스택 불균형을 발생시키는 플랫폼 호출 메서드 호출의 이름을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-121">The MDA message gives the name of the platform invoke method call that is causing the stack imbalance.</span></span>  <span data-ttu-id="41fbc-122">`SampleMethod` 메서드의 플랫폼 호출 샘플 메시지는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="41fbc-122">A sample message of a platform invoke call on method `SampleMethod` is:</span></span>  
+## <a name="output"></a><span data-ttu-id="9de8a-120">출력</span><span class="sxs-lookup"><span data-stu-id="9de8a-120">Output</span></span>  
+ <span data-ttu-id="9de8a-121">MDA 메시지는 스택 불균형을 발생시키는 플랫폼 호출 메서드 호출의 이름을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-121">The MDA message gives the name of the platform invoke method call that is causing the stack imbalance.</span></span>  <span data-ttu-id="9de8a-122">`SampleMethod` 메서드의 플랫폼 호출 샘플 메시지는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9de8a-122">A sample message of a platform invoke call on method `SampleMethod` is:</span></span>  
   
 ```  
 A call to PInvoke function 'SampleMethod' has unbalanced the stack.   
@@ -58,7 +59,7 @@ the unmanaged target signature. Check that the calling convention and
 parameters of the PInvoke signature match the target unmanaged signature.  
 ```  
   
-## <a name="configuration"></a><span data-ttu-id="41fbc-123">구성</span><span class="sxs-lookup"><span data-stu-id="41fbc-123">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="9de8a-123">구성</span><span class="sxs-lookup"><span data-stu-id="9de8a-123">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -68,7 +69,7 @@ parameters of the PInvoke signature match the target unmanaged signature.
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="41fbc-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="41fbc-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="9de8a-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9de8a-124">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="41fbc-125">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="41fbc-125">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="41fbc-126">interop 마샬링</span><span class="sxs-lookup"><span data-stu-id="41fbc-126">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="9de8a-125">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="9de8a-125">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="9de8a-126">interop 마샬링</span><span class="sxs-lookup"><span data-stu-id="9de8a-126">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

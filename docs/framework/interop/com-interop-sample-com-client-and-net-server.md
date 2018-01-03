@@ -19,17 +19,18 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c26b3b538517c216aa31b2cfa0c6174a9b76ab1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7bf7bed76503f9ee0919826d39fe3df502a55511
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="8616e-102">COM Interop 샘플: COM 클라이언트 및 .NET 서버</span><span class="sxs-lookup"><span data-stu-id="8616e-102">COM Interop Sample: COM Client and .NET Server</span></span>
-<span data-ttu-id="8616e-103">이 샘플에서는 담보 대출 계산을 수행하는 [COM 클라이언트](#cpconcominteropsamplecomclientnetserveranchor1) 및 [.NET 서버](#cpconcominteropsamplecomclientnetserveranchor2)의 상호 운용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8616e-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="8616e-104">이 예제에서 클라이언트는 관리되는 `Loan` 클래스 인스턴스를 만들고 호출한 다음 4개의 인수(4개 중 하나는 0임)를 인스턴스에 전달하고 계산 내용을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="8616e-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="8616e-105">이 샘플의 코드 예제는 이 섹션 전반에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8616e-105">Code examples from this sample appear throughout this section.</span></span>  
+# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="cb1f0-102">COM Interop 샘플: COM 클라이언트 및 .NET 서버</span><span class="sxs-lookup"><span data-stu-id="cb1f0-102">COM Interop Sample: COM Client and .NET Server</span></span>
+<span data-ttu-id="cb1f0-103">이 샘플에서는 담보 대출 계산을 수행하는 [COM 클라이언트](#cpconcominteropsamplecomclientnetserveranchor1) 및 [.NET 서버](#cpconcominteropsamplecomclientnetserveranchor2)의 상호 운용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cb1f0-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="cb1f0-104">이 예제에서 클라이언트는 관리되는 `Loan` 클래스 인스턴스를 만들고 호출한 다음 4개의 인수(4개 중 하나는 0임)를 인스턴스에 전달하고 계산 내용을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="cb1f0-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="cb1f0-105">이 샘플의 코드 예제는 이 섹션 전반에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb1f0-105">Code examples from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## <a name="com-client"></a><span data-ttu-id="8616e-106">COM 클라이언트</span><span class="sxs-lookup"><span data-stu-id="8616e-106">COM Client</span></span>  
+## <a name="com-client"></a><span data-ttu-id="cb1f0-106">COM 클라이언트</span><span class="sxs-lookup"><span data-stu-id="cb1f0-106">COM Client</span></span>  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -96,7 +97,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## <a name="net-server"></a><span data-ttu-id="8616e-107">.NET 서버</span><span class="sxs-lookup"><span data-stu-id="8616e-107">.NET Server</span></span>  
+## <a name="net-server"></a><span data-ttu-id="cb1f0-107">.NET 서버</span><span class="sxs-lookup"><span data-stu-id="cb1f0-107">.NET Server</span></span>  
   
 ```vb  
 Imports System  
@@ -397,5 +398,5 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8616e-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8616e-108">See Also</span></span>  
- [<span data-ttu-id="8616e-109">.NET Framework 구성 요소를 COM에 노출</span><span class="sxs-lookup"><span data-stu-id="8616e-109">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+## <a name="see-also"></a><span data-ttu-id="cb1f0-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cb1f0-108">See Also</span></span>  
+ [<span data-ttu-id="cb1f0-109">.NET Framework 구성 요소를 COM에 노출</span><span class="sxs-lookup"><span data-stu-id="cb1f0-109">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
