@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5d2f2ea73da2273ff6f0abb725ec3e3fb8ca79ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 821e19f9078f65941c1826c55abcfafb730fe0da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback 인터페이스
 콜백을 아파트 내에서 수행 하기 위한 메서드를 제공 합니다. *아파트* 는 같은 스레드 액세스 요구 사항을 공유 하는 개체에 대 한 프로세스 내에서 논리적 컨테이너입니다.  

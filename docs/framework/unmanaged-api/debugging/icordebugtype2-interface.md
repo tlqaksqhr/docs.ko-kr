@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 658dd1541a1de852c3c001cc7fbb7954f6c7590f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8d44514586a2e91dad3486b6dc04c26946148885
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 인터페이스
 ICorDebugType 인터페이스의 기본 형식 또는 복합 (사용자 정의) 형식을 형식 식별자를 검색 하는 확장 합니다.  
@@ -40,7 +41,7 @@ ICorDebugType 인터페이스의 기본 형식 또는 복합 (사용자 정의) 
 > [!NOTE]
 >  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 조각에서는 [ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) 메서드.  
   
 ```  

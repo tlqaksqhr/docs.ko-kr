@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a6195b53d11877c6b7b2a52c3fd8d194dfb51810
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc34c3a1049a24a27fae4d13288efbd5a98a4dc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote 인터페이스
 시작할 수 있거나 원격 대상 프로세스에 관리되는 디버거를 연결할 수 있는 기능을 제공합니다.  
@@ -64,8 +65,8 @@ interface ICorDebugRemote : IUnknown
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Icordebugremote:: Createprocessex 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|관리 되는 디버깅에 대 한 원격 컴퓨터에서 프로세스를 만듭니다.|  
-|[Icordebugremote:: Debugactiveprocessex 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|디버거에서 원격 컴퓨터에서 프로세스를 시작합니다.|  
+|[ICorDebugRemote::CreateProcessEx 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|관리 되는 디버깅에 대 한 원격 컴퓨터에서 프로세스를 만듭니다.|  
+|[ICorDebugRemote::DebugActiveProcessEx 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|디버거에서 원격 컴퓨터에서 프로세스를 시작합니다.|  
   
 ## <a name="remarks"></a>설명  
  현재이 기능은 원격 Macintosh 컴퓨터에서 실행 되는 Silverlight 기반 응용 프로그램 대상 디버깅에 대해서만 지원 됩니다.  

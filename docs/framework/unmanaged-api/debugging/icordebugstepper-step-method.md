@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 914773adefd2ed4c1aa98310fd27a0cbc829bf49
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f921725d6794f08530a537462208264ced1dc089
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step 메서드
 한 단계씩 실행 하려면 필요에 따라 하 고 포함 스레드를 통해이 ICorDebugStepper로 인해 스레드 내에서 호출 된 함수를 통해 단일 단계를 계속 합니다.  
