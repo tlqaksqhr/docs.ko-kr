@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b57250d8ad5ce6734e84908cca8a5052016abc18
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 442101464b603438e4b08b69cdca4a5679d18471
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxabortedbycontext"></a><span data-ttu-id="acf9b-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span><span class="sxs-lookup"><span data-stu-id="acf9b-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span></span>
-<span data-ttu-id="acf9b-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span><span class="sxs-lookup"><span data-stu-id="acf9b-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxabortedbycontext"></a><span data-ttu-id="91784-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span><span class="sxs-lookup"><span data-stu-id="91784-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span></span>
+<span data-ttu-id="91784-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span><span class="sxs-lookup"><span data-stu-id="91784-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span></span>  
   
-## <a name="description"></a><span data-ttu-id="acf9b-104">설명</span><span class="sxs-lookup"><span data-stu-id="acf9b-104">Description</span></span>  
- <span data-ttu-id="acf9b-105">ComPlus: COM+ 컨텍스트에 의해 트랜잭션이 중단되었습니다.</span><span class="sxs-lookup"><span data-stu-id="acf9b-105">ComPlus: Transaction aborted by COM+ context.</span></span>  
+## <a name="description"></a><span data-ttu-id="91784-104">설명</span><span class="sxs-lookup"><span data-stu-id="91784-104">Description</span></span>  
+ <span data-ttu-id="91784-105">ComPlus: COM+ 컨텍스트에 의해 트랜잭션이 중단되었습니다.</span><span class="sxs-lookup"><span data-stu-id="91784-105">ComPlus: Transaction aborted by COM+ context.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="acf9b-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="acf9b-106">See Also</span></span>  
- [<span data-ttu-id="acf9b-107">추적</span><span class="sxs-lookup"><span data-stu-id="acf9b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="acf9b-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="acf9b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="acf9b-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="acf9b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="91784-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="91784-106">See Also</span></span>  
+ [<span data-ttu-id="91784-107">추적</span><span class="sxs-lookup"><span data-stu-id="91784-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="91784-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="91784-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="91784-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="91784-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

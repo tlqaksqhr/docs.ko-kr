@@ -13,21 +13,22 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48d9a170254f927f7d2438dedc3fe576de4b5ebd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9cb985577bb6f77d1baa68a105b23ae2d1292354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelservicethrottlelimitreached"></a><span data-ttu-id="551c0-102">System.ServiceModel.ServiceThrottleLimitReached</span><span class="sxs-lookup"><span data-stu-id="551c0-102">System.ServiceModel.ServiceThrottleLimitReached</span></span>
-<span data-ttu-id="551c0-103">System.ServiceModel.ServiceThrottleLimitReached</span><span class="sxs-lookup"><span data-stu-id="551c0-103">System.ServiceModel.ServiceThrottleLimitReached</span></span>  
+# <a name="systemservicemodelservicethrottlelimitreached"></a><span data-ttu-id="b625d-102">System.ServiceModel.ServiceThrottleLimitReached</span><span class="sxs-lookup"><span data-stu-id="b625d-102">System.ServiceModel.ServiceThrottleLimitReached</span></span>
+<span data-ttu-id="b625d-103">System.ServiceModel.ServiceThrottleLimitReached</span><span class="sxs-lookup"><span data-stu-id="b625d-103">System.ServiceModel.ServiceThrottleLimitReached</span></span>  
   
-## <a name="description"></a><span data-ttu-id="551c0-104">설명</span><span class="sxs-lookup"><span data-stu-id="551c0-104">Description</span></span>  
- <span data-ttu-id="551c0-105">MaxConcurrentCalls/Instances/Sessions 스로틀 중 하나에 도달하여 메시지가 대기 중입니다.</span><span class="sxs-lookup"><span data-stu-id="551c0-105">One of the MaxConcurrentCalls/Instances/Sessions throttle was reached and a message is being queued.</span></span>  
+## <a name="description"></a><span data-ttu-id="b625d-104">설명</span><span class="sxs-lookup"><span data-stu-id="b625d-104">Description</span></span>  
+ <span data-ttu-id="b625d-105">MaxConcurrentCalls/Instances/Sessions 스로틀 중 하나에 도달하여 메시지가 대기 중입니다.</span><span class="sxs-lookup"><span data-stu-id="b625d-105">One of the MaxConcurrentCalls/Instances/Sessions throttle was reached and a message is being queued.</span></span>  
   
- <span data-ttu-id="551c0-106">이 추적을 사용하면 예상/실제 프로덕션 부하를 기반으로 스로틀 값을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="551c0-106">You can use this trace to adjust the throttle values based on expected and actual production load.</span></span>  
+ <span data-ttu-id="b625d-106">이 추적을 사용하면 예상/실제 프로덕션 부하를 기반으로 스로틀 값을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b625d-106">You can use this trace to adjust the throttle values based on expected and actual production load.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="551c0-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="551c0-107">See Also</span></span>  
- [<span data-ttu-id="551c0-108">추적</span><span class="sxs-lookup"><span data-stu-id="551c0-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="551c0-109">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="551c0-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="551c0-110">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="551c0-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b625d-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b625d-107">See Also</span></span>  
+ [<span data-ttu-id="b625d-108">추적</span><span class="sxs-lookup"><span data-stu-id="b625d-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b625d-109">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="b625d-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b625d-110">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="b625d-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0aa921206819c54ff0c27b267d3bf42b1552c495
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e099ae79c4051f7af6b73c045263f3a2744cd361
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcannotbeimportedincurrentformat"></a><span data-ttu-id="84f61-102">System.ServiceModel.CannotBeImportedInCurrentFormat</span><span class="sxs-lookup"><span data-stu-id="84f61-102">System.ServiceModel.CannotBeImportedInCurrentFormat</span></span>
-<span data-ttu-id="84f61-103">System.ServiceModel.CannotBeImportedInCurrentFormat</span><span class="sxs-lookup"><span data-stu-id="84f61-103">System.ServiceModel.CannotBeImportedInCurrentFormat</span></span>  
+# <a name="systemservicemodelcannotbeimportedincurrentformat"></a><span data-ttu-id="deeef-102">System.ServiceModel.CannotBeImportedInCurrentFormat</span><span class="sxs-lookup"><span data-stu-id="deeef-102">System.ServiceModel.CannotBeImportedInCurrentFormat</span></span>
+<span data-ttu-id="deeef-103">System.ServiceModel.CannotBeImportedInCurrentFormat</span><span class="sxs-lookup"><span data-stu-id="deeef-103">System.ServiceModel.CannotBeImportedInCurrentFormat</span></span>  
   
-## <a name="description"></a><span data-ttu-id="84f61-104">설명</span><span class="sxs-lookup"><span data-stu-id="84f61-104">Description</span></span>  
- <span data-ttu-id="84f61-105">제공된 스키마를 이 형식으로 가져올 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="84f61-105">The given schema cannot be imported in this format.</span></span>  
+## <a name="description"></a><span data-ttu-id="deeef-104">설명</span><span class="sxs-lookup"><span data-stu-id="deeef-104">Description</span></span>  
+ <span data-ttu-id="deeef-105">제공된 스키마를 이 형식으로 가져올 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="deeef-105">The given schema cannot be imported in this format.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84f61-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="84f61-106">See Also</span></span>  
- [<span data-ttu-id="84f61-107">추적</span><span class="sxs-lookup"><span data-stu-id="84f61-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="84f61-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="84f61-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="84f61-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="84f61-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="deeef-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="deeef-106">See Also</span></span>  
+ [<span data-ttu-id="deeef-107">추적</span><span class="sxs-lookup"><span data-stu-id="deeef-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="deeef-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="deeef-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="deeef-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="deeef-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

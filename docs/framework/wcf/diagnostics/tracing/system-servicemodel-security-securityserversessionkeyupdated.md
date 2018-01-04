@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3d34ef9c88cb3db6afc0a01fa5bda3580c529ef9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b05d1c898fe3a0292eb667e2269008aac0451280
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityserversessionkeyupdated"></a><span data-ttu-id="89010-102">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span><span class="sxs-lookup"><span data-stu-id="89010-102">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span></span>
-<span data-ttu-id="89010-103">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span><span class="sxs-lookup"><span data-stu-id="89010-103">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span></span>  
+# <a name="systemservicemodelsecuritysecurityserversessionkeyupdated"></a><span data-ttu-id="8ab2d-102">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span><span class="sxs-lookup"><span data-stu-id="8ab2d-102">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span></span>
+<span data-ttu-id="8ab2d-103">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span><span class="sxs-lookup"><span data-stu-id="8ab2d-103">System.ServiceModel.Security.SecurityServerSessionKeyUpdated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="89010-104">설명</span><span class="sxs-lookup"><span data-stu-id="89010-104">Description</span></span>  
- <span data-ttu-id="89010-105">서버에서 보안 세션 키를 업데이트했습니다.</span><span class="sxs-lookup"><span data-stu-id="89010-105">The security session key was updated by the server.</span></span>  
+## <a name="description"></a><span data-ttu-id="8ab2d-104">설명</span><span class="sxs-lookup"><span data-stu-id="8ab2d-104">Description</span></span>  
+ <span data-ttu-id="8ab2d-105">서버에서 보안 세션 키를 업데이트했습니다.</span><span class="sxs-lookup"><span data-stu-id="8ab2d-105">The security session key was updated by the server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89010-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="89010-106">See Also</span></span>  
- [<span data-ttu-id="89010-107">추적</span><span class="sxs-lookup"><span data-stu-id="89010-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="89010-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="89010-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="89010-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="89010-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8ab2d-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8ab2d-106">See Also</span></span>  
+ [<span data-ttu-id="8ab2d-107">추적</span><span class="sxs-lookup"><span data-stu-id="8ab2d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="8ab2d-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="8ab2d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="8ab2d-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="8ab2d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

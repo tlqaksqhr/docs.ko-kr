@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8e16107cd2a342b10684d09edfa85ef561d200ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd1d742adb4ddc3e02dcbdc0683d6e088b98a0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritysessionredirectapplied"></a><span data-ttu-id="32d56-102">System.ServiceModel.Security.SecuritySessionRedirectApplied</span><span class="sxs-lookup"><span data-stu-id="32d56-102">System.ServiceModel.Security.SecuritySessionRedirectApplied</span></span>
-<span data-ttu-id="32d56-103">System.ServiceModel.Security.SecuritySessionRedirectApplied</span><span class="sxs-lookup"><span data-stu-id="32d56-103">System.ServiceModel.Security.SecuritySessionRedirectApplied</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionredirectapplied"></a><span data-ttu-id="4c677-102">System.ServiceModel.Security.SecuritySessionRedirectApplied</span><span class="sxs-lookup"><span data-stu-id="4c677-102">System.ServiceModel.Security.SecuritySessionRedirectApplied</span></span>
+<span data-ttu-id="4c677-103">System.ServiceModel.Security.SecuritySessionRedirectApplied</span><span class="sxs-lookup"><span data-stu-id="4c677-103">System.ServiceModel.Security.SecuritySessionRedirectApplied</span></span>  
   
-## <a name="description"></a><span data-ttu-id="32d56-104">설명</span><span class="sxs-lookup"><span data-stu-id="32d56-104">Description</span></span>  
- <span data-ttu-id="32d56-105">클라이언트 보안 세션이 리디렉션되었습니다.</span><span class="sxs-lookup"><span data-stu-id="32d56-105">The client security session was redirected.</span></span>  
+## <a name="description"></a><span data-ttu-id="4c677-104">설명</span><span class="sxs-lookup"><span data-stu-id="4c677-104">Description</span></span>  
+ <span data-ttu-id="4c677-105">클라이언트 보안 세션이 리디렉션되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4c677-105">The client security session was redirected.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32d56-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="32d56-106">See Also</span></span>  
- [<span data-ttu-id="32d56-107">추적</span><span class="sxs-lookup"><span data-stu-id="32d56-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="32d56-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="32d56-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="32d56-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="32d56-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="4c677-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4c677-106">See Also</span></span>  
+ [<span data-ttu-id="4c677-107">추적</span><span class="sxs-lookup"><span data-stu-id="4c677-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="4c677-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="4c677-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="4c677-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="4c677-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: befb15a97dee3ac2f420e5b7a7592e252c8966d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 948d18677dee3e0586292bb40d1498ace49be72b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritysessionabortedfaultsendfailure"></a><span data-ttu-id="c2da2-102">System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure</span><span class="sxs-lookup"><span data-stu-id="c2da2-102">System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure</span></span>
-<span data-ttu-id="c2da2-103">System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure</span><span class="sxs-lookup"><span data-stu-id="c2da2-103">System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionabortedfaultsendfailure"></a><span data-ttu-id="01ef6-102">System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure</span><span class="sxs-lookup"><span data-stu-id="01ef6-102">System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure</span></span>
+<span data-ttu-id="01ef6-103">System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure</span><span class="sxs-lookup"><span data-stu-id="01ef6-103">System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c2da2-104">설명</span><span class="sxs-lookup"><span data-stu-id="c2da2-104">Description</span></span>  
- <span data-ttu-id="c2da2-105">오류를 중단한 보안 세션을 클라이언트로 보내는 데 실패했습니다.</span><span class="sxs-lookup"><span data-stu-id="c2da2-105">Failure to send security session that aborted the fault to the client.</span></span>  
+## <a name="description"></a><span data-ttu-id="01ef6-104">설명</span><span class="sxs-lookup"><span data-stu-id="01ef6-104">Description</span></span>  
+ <span data-ttu-id="01ef6-105">오류를 중단한 보안 세션을 클라이언트로 보내는 데 실패했습니다.</span><span class="sxs-lookup"><span data-stu-id="01ef6-105">Failure to send security session that aborted the fault to the client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2da2-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c2da2-106">See Also</span></span>  
- [<span data-ttu-id="c2da2-107">추적</span><span class="sxs-lookup"><span data-stu-id="c2da2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c2da2-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="c2da2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c2da2-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="c2da2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="01ef6-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="01ef6-106">See Also</span></span>  
+ [<span data-ttu-id="01ef6-107">추적</span><span class="sxs-lookup"><span data-stu-id="01ef6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="01ef6-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="01ef6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="01ef6-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="01ef6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

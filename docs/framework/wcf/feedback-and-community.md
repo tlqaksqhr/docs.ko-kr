@@ -16,13 +16,14 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 40973353a0057bcd23c76c03eb1ce6406c95aca6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75ae86f399c525176c41dec5265c282adfd41652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="feedback-and-community"></a><span data-ttu-id="ac424-102">사용자 의견 및 커뮤니티</span><span class="sxs-lookup"><span data-stu-id="ac424-102">Feedback and Community</span></span>
-<span data-ttu-id="ac424-103">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 또는 [!INCLUDE[infocard](../../../includes/infocard-md.md)] 설명서에 대한 의견과 제안 사항을 보내 주시면 감사하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="ac424-103">We appreciate your comments and concerns about the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] or [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentation.</span></span> <span data-ttu-id="ac424-104">SDK의 각 페이지 아래쪽에는 "이 항목에 대한 의견을 Microsoft에 보내 주세요."라는 문장이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ac424-104">On the bottom of every page in the SDK is the sentence "Send comments about this topic to Microsoft."</span></span> <span data-ttu-id="ac424-105">"의견" 링크를 클릭하여 특정 항목에 대한 의견이나 제안 사항을 보내 주세요.</span><span class="sxs-lookup"><span data-stu-id="ac424-105">Click the "comments" link to send your views or suggestions about the specific topic.</span></span>  
+# <a name="feedback-and-community"></a><span data-ttu-id="6e3e0-102">사용자 의견 및 커뮤니티</span><span class="sxs-lookup"><span data-stu-id="6e3e0-102">Feedback and Community</span></span>
+<span data-ttu-id="6e3e0-103">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 또는 [!INCLUDE[infocard](../../../includes/infocard-md.md)] 설명서에 대한 의견과 제안 사항을 보내 주시면 감사하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="6e3e0-103">We appreciate your comments and concerns about the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] or [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentation.</span></span> <span data-ttu-id="6e3e0-104">SDK의 각 페이지 아래쪽에는 "이 항목에 대한 의견을 Microsoft에 보내 주세요."라는 문장이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6e3e0-104">On the bottom of every page in the SDK is the sentence "Send comments about this topic to Microsoft."</span></span> <span data-ttu-id="6e3e0-105">"의견" 링크를 클릭하여 특정 항목에 대한 의견이나 제안 사항을 보내 주세요.</span><span class="sxs-lookup"><span data-stu-id="6e3e0-105">Click the "comments" link to send your views or suggestions about the specific topic.</span></span>  
   
- <span data-ttu-id="ac424-106">자세한 정보를 찾고 하거나 관심 있는 다른 사람과 기술을 공유 하려면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], 시도 [MSDN Windows Communication Foundation 포럼](http://go.microsoft.com/fwlink/?LinkId=186463)합니다.</span><span class="sxs-lookup"><span data-stu-id="ac424-106">If you are looking for more information, or want to share techniques with others who are interested in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], try the [MSDN Windows Communication Foundation forum](http://go.microsoft.com/fwlink/?LinkId=186463).</span></span>
+ <span data-ttu-id="6e3e0-106">자세한 정보를 찾고 하거나 관심 있는 다른 사람과 기술을 공유 하려면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], 시도 [MSDN Windows Communication Foundation 포럼](http://go.microsoft.com/fwlink/?LinkId=186463)합니다.</span><span class="sxs-lookup"><span data-stu-id="6e3e0-106">If you are looking for more information, or want to share techniques with others who are interested in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], try the [MSDN Windows Communication Foundation forum](http://go.microsoft.com/fwlink/?LinkId=186463).</span></span>

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b815ba5d8d96fb20520a0b72b64d43119d7ff51b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ad53a921572e2d8cdef3548794682bb5ebde2dde
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationtlbimportfromassembly"></a><span data-ttu-id="ca497-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly</span><span class="sxs-lookup"><span data-stu-id="ca497-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly</span></span>
-<span data-ttu-id="ca497-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly</span><span class="sxs-lookup"><span data-stu-id="ca497-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationtlbimportfromassembly"></a><span data-ttu-id="02080-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly</span><span class="sxs-lookup"><span data-stu-id="02080-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly</span></span>
+<span data-ttu-id="02080-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly</span><span class="sxs-lookup"><span data-stu-id="02080-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ca497-104">설명</span><span class="sxs-lookup"><span data-stu-id="ca497-104">Description</span></span>  
- <span data-ttu-id="ca497-105">ComPlus: 형식 라이브러리 가져오기: 어셈블리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ca497-105">ComPlus: Type library import: using assembly.</span></span>  
+## <a name="description"></a><span data-ttu-id="02080-104">설명</span><span class="sxs-lookup"><span data-stu-id="02080-104">Description</span></span>  
+ <span data-ttu-id="02080-105">ComPlus: 형식 라이브러리 가져오기: 어셈블리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="02080-105">ComPlus: Type library import: using assembly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca497-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ca497-106">See Also</span></span>  
- [<span data-ttu-id="ca497-107">추적</span><span class="sxs-lookup"><span data-stu-id="ca497-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ca497-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="ca497-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ca497-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="ca497-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="02080-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="02080-106">See Also</span></span>  
+ [<span data-ttu-id="02080-107">추적</span><span class="sxs-lookup"><span data-stu-id="02080-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="02080-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="02080-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="02080-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="02080-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

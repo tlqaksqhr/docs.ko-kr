@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2c23cc244b01f6aa9edcce67fea2f82e2706bb10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 223fa509bd5ae3d260fa173f98fb18b67f7422a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityidentitydeterminationsuccess"></a><span data-ttu-id="2472d-102">System.ServiceModel.Security.SecurityIdentityDeterminationSuccess</span><span class="sxs-lookup"><span data-stu-id="2472d-102">System.ServiceModel.Security.SecurityIdentityDeterminationSuccess</span></span>
-<span data-ttu-id="2472d-103">System.ServiceModel.Security.SecurityIdentityDeterminationSuccess</span><span class="sxs-lookup"><span data-stu-id="2472d-103">System.ServiceModel.Security.SecurityIdentityDeterminationSuccess</span></span>  
+# <a name="systemservicemodelsecuritysecurityidentitydeterminationsuccess"></a><span data-ttu-id="41e69-102">System.ServiceModel.Security.SecurityIdentityDeterminationSuccess</span><span class="sxs-lookup"><span data-stu-id="41e69-102">System.ServiceModel.Security.SecurityIdentityDeterminationSuccess</span></span>
+<span data-ttu-id="41e69-103">System.ServiceModel.Security.SecurityIdentityDeterminationSuccess</span><span class="sxs-lookup"><span data-stu-id="41e69-103">System.ServiceModel.Security.SecurityIdentityDeterminationSuccess</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2472d-104">설명</span><span class="sxs-lookup"><span data-stu-id="2472d-104">Description</span></span>  
- <span data-ttu-id="2472d-105">EndpointAddress에 대해 ID를 확인했습니다.</span><span class="sxs-lookup"><span data-stu-id="2472d-105">An identity was determined for an EndpointAddress.</span></span>  
+## <a name="description"></a><span data-ttu-id="41e69-104">설명</span><span class="sxs-lookup"><span data-stu-id="41e69-104">Description</span></span>  
+ <span data-ttu-id="41e69-105">EndpointAddress에 대해 ID를 확인했습니다.</span><span class="sxs-lookup"><span data-stu-id="41e69-105">An identity was determined for an EndpointAddress.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2472d-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2472d-106">See Also</span></span>  
- [<span data-ttu-id="2472d-107">추적</span><span class="sxs-lookup"><span data-stu-id="2472d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="2472d-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="2472d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="2472d-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="2472d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="41e69-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="41e69-106">See Also</span></span>  
+ [<span data-ttu-id="41e69-107">추적</span><span class="sxs-lookup"><span data-stu-id="41e69-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="41e69-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="41e69-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="41e69-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="41e69-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

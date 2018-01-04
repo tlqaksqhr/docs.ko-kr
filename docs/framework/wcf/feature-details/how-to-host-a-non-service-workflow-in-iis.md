@@ -13,42 +13,43 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-host-a-non-service-workflow-in-iis"></a><span data-ttu-id="8bd93-102">방법: IIS에서 서비스가 아닌 워크플로 호스팅</span><span class="sxs-lookup"><span data-stu-id="8bd93-102">How to: Host a non-service workflow in IIS</span></span>
-<span data-ttu-id="8bd93-103">워크플로 서비스가 아닌 워크플로는 IIS/WAS에서 호스트될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-103">Workflows that are not workflow services can be hosted under IIS/WAS.</span></span> <span data-ttu-id="8bd93-104">이는 다른 사람이 작성한 워크플로를 호스트해야 하는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-104">This is useful when you need to host a workflow written by somebody else.</span></span> <span data-ttu-id="8bd93-105">Workflow Designer를 다시 호스트하고 사용자가 워크플로를 직접 만들 수 있도록 허용하는 경우를 예로 들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-105">For example, if you rehost the workflow designer and allow users to create their own workflows.</span></span>  <span data-ttu-id="8bd93-106">IIS에서 서비스가 아닌 워크플로를 호스트하면 프로세스 재활용, 유휴 상태이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화와 같은 기능이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-106">Hosting non-service workflows in IIS provides support for features like process recycling, idle shutdown, process health monitoring, and message-based activation.</span></span> <span data-ttu-id="8bd93-107">IIS에서 호스트되는 워크플로 서비스에는 <xref:System.ServiceModel.Activities.Receive> 활동이 포함되고 IIS에서 메시지가 수신되면 서비스가 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-107">Workflow services hosted in IIS contain <xref:System.ServiceModel.Activities.Receive> activities and are activated when a message is received by IIS.</span></span> <span data-ttu-id="8bd93-108">서비스가 아닌 워크플로에는 메시징 활동이 포함되지 않으며 기본적으로 메시지 전송을 통해 활성화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-108">Non-service workflows do not contain messaging activities, and by default cannot be activated by sending a message.</span></span>  <span data-ttu-id="8bd93-109"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>에서 클래스를 파생하고 워크플로 인스턴스를 만드는 작업이 포함된 서비스 계약을 정의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-109">You must derive a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> and define a service contract that contains operations to create an instance of the workflow.</span></span> <span data-ttu-id="8bd93-110">이 항목에서는 간단한 워크플로 만드는에서 워크플로 활성화 하기 위해 클라이언트가 사용할 수는 서비스 계약을 정의 및에서 클래스를 파생 하는 과정을 안내 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 워크플로 만들기 요청에 대 한 수신 하도록 서비스 계약을 사용 하 여입니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-110">This topic will walk you through creating a simple workflow, defining a service contract a client can use to activate the workflow, and deriving a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> which uses the service contract to listen for workflow creating requests.</span></span>  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a><span data-ttu-id="e3afe-102">방법: IIS에서 서비스가 아닌 워크플로 호스팅</span><span class="sxs-lookup"><span data-stu-id="e3afe-102">How to: Host a non-service workflow in IIS</span></span>
+<span data-ttu-id="e3afe-103">워크플로 서비스가 아닌 워크플로는 IIS/WAS에서 호스트될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-103">Workflows that are not workflow services can be hosted under IIS/WAS.</span></span> <span data-ttu-id="e3afe-104">이는 다른 사람이 작성한 워크플로를 호스트해야 하는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-104">This is useful when you need to host a workflow written by somebody else.</span></span> <span data-ttu-id="e3afe-105">Workflow Designer를 다시 호스트하고 사용자가 워크플로를 직접 만들 수 있도록 허용하는 경우를 예로 들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-105">For example, if you rehost the workflow designer and allow users to create their own workflows.</span></span>  <span data-ttu-id="e3afe-106">IIS에서 서비스가 아닌 워크플로를 호스트하면 프로세스 재활용, 유휴 상태이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화와 같은 기능이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-106">Hosting non-service workflows in IIS provides support for features like process recycling, idle shutdown, process health monitoring, and message-based activation.</span></span> <span data-ttu-id="e3afe-107">IIS에서 호스트되는 워크플로 서비스에는 <xref:System.ServiceModel.Activities.Receive> 활동이 포함되고 IIS에서 메시지가 수신되면 서비스가 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-107">Workflow services hosted in IIS contain <xref:System.ServiceModel.Activities.Receive> activities and are activated when a message is received by IIS.</span></span> <span data-ttu-id="e3afe-108">서비스가 아닌 워크플로에는 메시징 활동이 포함되지 않으며 기본적으로 메시지 전송을 통해 활성화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-108">Non-service workflows do not contain messaging activities, and by default cannot be activated by sending a message.</span></span>  <span data-ttu-id="e3afe-109"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>에서 클래스를 파생하고 워크플로 인스턴스를 만드는 작업이 포함된 서비스 계약을 정의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-109">You must derive a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> and define a service contract that contains operations to create an instance of the workflow.</span></span> <span data-ttu-id="e3afe-110">이 항목에서는 간단한 워크플로 만드는에서 워크플로 활성화 하기 위해 클라이언트가 사용할 수는 서비스 계약을 정의 및에서 클래스를 파생 하는 과정을 안내 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 워크플로 만들기 요청에 대 한 수신 하도록 서비스 계약을 사용 하 여입니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-110">This topic will walk you through creating a simple workflow, defining a service contract a client can use to activate the workflow, and deriving a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> which uses the service contract to listen for workflow creating requests.</span></span>  
   
-### <a name="create-a-simple-workflow"></a><span data-ttu-id="8bd93-111">간단한 워크플로 만들기</span><span class="sxs-lookup"><span data-stu-id="8bd93-111">Create a simple workflow</span></span>  
+### <a name="create-a-simple-workflow"></a><span data-ttu-id="e3afe-111">간단한 워크플로 만들기</span><span class="sxs-lookup"><span data-stu-id="e3afe-111">Create a simple workflow</span></span>  
   
-1.  <span data-ttu-id="8bd93-112">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]라는 비어 있는 새 `CreationEndpointTest` 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-112">Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.</span></span>  
+1.  <span data-ttu-id="e3afe-112">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]라는 비어 있는 새 `CreationEndpointTest` 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-112">Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.</span></span>  
   
-2.  <span data-ttu-id="8bd93-113">`SimpleWorkflow`라는 새 WCF 워크플로 서비스 응용 프로그램 프로젝트를 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-113">Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution.</span></span> <span data-ttu-id="8bd93-114">Workflow Designer가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-114">The workflow designer will open.</span></span>  
+2.  <span data-ttu-id="e3afe-113">`SimpleWorkflow`라는 새 WCF 워크플로 서비스 응용 프로그램 프로젝트를 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-113">Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution.</span></span> <span data-ttu-id="e3afe-114">Workflow Designer가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-114">The workflow designer will open.</span></span>  
   
-3.  <span data-ttu-id="8bd93-115">ReceiveRequest 및 SendResponse 활동을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-115">Delete the ReceiveRequest and SendResponse activities.</span></span> <span data-ttu-id="8bd93-116">이러한 활동은 워크플로를 워크플로 서비스로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-116">These activities are what makes a workflow a workflow service.</span></span> <span data-ttu-id="8bd93-117">워크플로 서비스로 작업하는 것이 아니므로 이러한 활동이 더 이상 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-117">Since we are not working with a workflow service, we no longer need them.</span></span>  
+3.  <span data-ttu-id="e3afe-115">ReceiveRequest 및 SendResponse 활동을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-115">Delete the ReceiveRequest and SendResponse activities.</span></span> <span data-ttu-id="e3afe-116">이러한 활동은 워크플로를 워크플로 서비스로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-116">These activities are what makes a workflow a workflow service.</span></span> <span data-ttu-id="e3afe-117">워크플로 서비스로 작업하는 것이 아니므로 이러한 활동이 더 이상 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-117">Since we are not working with a workflow service, we no longer need them.</span></span>  
   
-4.  <span data-ttu-id="8bd93-118">시퀀스 활동을 "Sequential Workflow" DisplayName을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-118">Set the DisplayName for the sequence activity to "Sequential Workflow".</span></span>  
+4.  <span data-ttu-id="e3afe-118">시퀀스 활동을 "Sequential Workflow" DisplayName을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-118">Set the DisplayName for the sequence activity to "Sequential Workflow".</span></span>  
   
-5.  <span data-ttu-id="8bd93-119">Service1.xamlx의 이름을 Workflow1.xamlx로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-119">Rename Service1.xamlx to Workflow1.xamlx.</span></span>  
+5.  <span data-ttu-id="e3afe-119">Service1.xamlx의 이름을 Workflow1.xamlx로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-119">Rename Service1.xamlx to Workflow1.xamlx.</span></span>  
   
-6.  <span data-ttu-id="8bd93-120">Sequence 활동 외부에서 디자이너를 클릭 하 고 Name 및 ConfigurationName 속성을 "workflow1"로 설정</span><span class="sxs-lookup"><span data-stu-id="8bd93-120">Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"</span></span>  
+6.  <span data-ttu-id="e3afe-120">Sequence 활동 외부에서 디자이너를 클릭 하 고 Name 및 ConfigurationName 속성을 "workflow1"로 설정</span><span class="sxs-lookup"><span data-stu-id="e3afe-120">Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"</span></span>  
   
-7.  <span data-ttu-id="8bd93-121"><xref:System.Activities.Statements.WriteLine> 활동을 <xref:System.Activities.Statements.Sequence>로 끌어 옵니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-121">Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>.</span></span> <span data-ttu-id="8bd93-122"><xref:System.Activities.Statements.WriteLine> 에서 활동을 확인할 수 있습니다는 **기본 형식** 도구 상자의 섹션.</span><span class="sxs-lookup"><span data-stu-id="8bd93-122">The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox.</span></span> <span data-ttu-id="8bd93-123">설정의 <xref:System.Activities.Statements.WriteLine.Text%2A> 의 속성은 <xref:System.Activities.Statements.WriteLine> 활동을 "Hello, world"입니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-123">Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".</span></span>  
+7.  <span data-ttu-id="e3afe-121"><xref:System.Activities.Statements.WriteLine> 활동을 <xref:System.Activities.Statements.Sequence>로 끌어 옵니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-121">Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>.</span></span> <span data-ttu-id="e3afe-122"><xref:System.Activities.Statements.WriteLine> 에서 활동을 확인할 수 있습니다는 **기본 형식** 도구 상자의 섹션.</span><span class="sxs-lookup"><span data-stu-id="e3afe-122">The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox.</span></span> <span data-ttu-id="e3afe-123">설정의 <xref:System.Activities.Statements.WriteLine.Text%2A> 의 속성은 <xref:System.Activities.Statements.WriteLine> 활동을 "Hello, world"입니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-123">Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".</span></span>  
   
-     <span data-ttu-id="8bd93-124">그러면 워크플로가 다음 다이어그램과 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-124">The workflow should now look like the following diagram.</span></span>  
+     <span data-ttu-id="e3afe-124">그러면 워크플로가 다음 다이어그램과 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-124">The workflow should now look like the following diagram.</span></span>  
   
-     <span data-ttu-id="8bd93-125">![간단한 워크플로](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span><span class="sxs-lookup"><span data-stu-id="8bd93-125">![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span></span>  
+     <span data-ttu-id="e3afe-125">![간단한 워크플로](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span><span class="sxs-lookup"><span data-stu-id="e3afe-125">![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span></span>  
   
-### <a name="create-the-workflow-creation-service-contract"></a><span data-ttu-id="8bd93-126">워크플로 생성 서비스 계약 만들기</span><span class="sxs-lookup"><span data-stu-id="8bd93-126">Create the workflow creation service contract</span></span>  
+### <a name="create-the-workflow-creation-service-contract"></a><span data-ttu-id="e3afe-126">워크플로 생성 서비스 계약 만들기</span><span class="sxs-lookup"><span data-stu-id="e3afe-126">Create the workflow creation service contract</span></span>  
   
-1.  <span data-ttu-id="8bd93-127">`Shared`라는 새 클래스 라이브러리 프로젝트를 `CreationEndpointTest` 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-127">Add a new class library project called `Shared` to the `CreationEndpointTest` solution.</span></span>  
+1.  <span data-ttu-id="e3afe-127">`Shared`라는 새 클래스 라이브러리 프로젝트를 `CreationEndpointTest` 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-127">Add a new class library project called `Shared` to the `CreationEndpointTest` solution.</span></span>  
   
-2.  <span data-ttu-id="8bd93-128">System.ServiceModel.dll, System.Configuration 및 System.ServiceModel.Activities에 대한 참조를 `Shared` 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-128">Add a reference to System.ServiceModel.dll, System.Configuration, and System.ServiceModel.Activities to the `Shared` project.</span></span>  
+2.  <span data-ttu-id="e3afe-128">System.ServiceModel.dll, System.Configuration 및 System.ServiceModel.Activities에 대한 참조를 `Shared` 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-128">Add a reference to System.ServiceModel.dll, System.Configuration, and System.ServiceModel.Activities to the `Shared` project.</span></span>  
   
-3.  <span data-ttu-id="8bd93-129">Class1.cs 파일의 이름을 IWorkflowCreation.cs로 바꾸고 다음 코드를 이 파일에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-129">Rename the Class1.cs file to IWorkflowCreation.cs and the following code to the file.</span></span>  
+3.  <span data-ttu-id="e3afe-129">Class1.cs 파일의 이름을 IWorkflowCreation.cs로 바꾸고 다음 코드를 이 파일에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-129">Rename the Class1.cs file to IWorkflowCreation.cs and the following code to the file.</span></span>  
   
     ```  
     using System;  
@@ -72,11 +73,11 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-     <span data-ttu-id="8bd93-130">이 계약은 두 작업을 정의합니다. 두 작업 모두 방금 만든 서비스가 아닌 워크플로의 새 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-130">This contract defines two operations both create a new instance of the non-service workflow you just created.</span></span> <span data-ttu-id="8bd93-131">한 작업은 생성된 인스턴스 ID를 사용하여 새 인스턴스를 만들고 다른 작업은 새 워크플로 인스턴스의 인스턴스 ID를 지정할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-131">One creates a new instance with a generated instance ID and the other allows you to specify the instance ID for the new workflow instance.</span></span>  <span data-ttu-id="8bd93-132">두 방법 모두 새 워크플로 인스턴스에 매개 변수를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-132">Both methods allow you to pass in parameters to the new workflow instance.</span></span> <span data-ttu-id="8bd93-133">이 계약에서 노출 될는 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 클라이언트가 서비스가 아닌 워크플로의 새 인스턴스를 만들 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-133">This contract will be exposed by the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to allow clients to create new instances of a non-service workflow.</span></span>  
+     <span data-ttu-id="e3afe-130">이 계약은 두 작업을 정의합니다. 두 작업 모두 방금 만든 서비스가 아닌 워크플로의 새 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-130">This contract defines two operations both create a new instance of the non-service workflow you just created.</span></span> <span data-ttu-id="e3afe-131">한 작업은 생성된 인스턴스 ID를 사용하여 새 인스턴스를 만들고 다른 작업은 새 워크플로 인스턴스의 인스턴스 ID를 지정할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-131">One creates a new instance with a generated instance ID and the other allows you to specify the instance ID for the new workflow instance.</span></span>  <span data-ttu-id="e3afe-132">두 방법 모두 새 워크플로 인스턴스에 매개 변수를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-132">Both methods allow you to pass in parameters to the new workflow instance.</span></span> <span data-ttu-id="e3afe-133">이 계약에서 노출 될는 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 클라이언트가 서비스가 아닌 워크플로의 새 인스턴스를 만들 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-133">This contract will be exposed by the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to allow clients to create new instances of a non-service workflow.</span></span>  
   
-### <a name="derive-a-class-from-workflowhostingendpoint"></a><span data-ttu-id="8bd93-134">WorkflowHostingEndpoint에서 클래스 파생</span><span class="sxs-lookup"><span data-stu-id="8bd93-134">Derive a class from WorkflowHostingEndpoint</span></span>  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a><span data-ttu-id="e3afe-134">WorkflowHostingEndpoint에서 클래스 파생</span><span class="sxs-lookup"><span data-stu-id="e3afe-134">Derive a class from WorkflowHostingEndpoint</span></span>  
   
-1.  <span data-ttu-id="8bd93-135">라는 새 클래스 추가 `CreationEndpoint` 에서 파생 된 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 에 `Shared` 프로젝트.</span><span class="sxs-lookup"><span data-stu-id="8bd93-135">Add a new class called `CreationEndpoint` derived from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to the `Shared` project.</span></span>  
+1.  <span data-ttu-id="e3afe-135">라는 새 클래스 추가 `CreationEndpoint` 에서 파생 된 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 에 `Shared` 프로젝트.</span><span class="sxs-lookup"><span data-stu-id="e3afe-135">Add a new class called `CreationEndpoint` derived from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to the `Shared` project.</span></span>  
   
     ```  
     using System;  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-2.  <span data-ttu-id="8bd93-136"><xref:System.Uri>라는 로컬 정적 `defaultBaseUri` 변수를 `CreationEndpoint` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-136">Add a local static <xref:System.Uri> variable called `defaultBaseUri` to the `CreationEndpoint` class.</span></span>  
+2.  <span data-ttu-id="e3afe-136"><xref:System.Uri>라는 로컬 정적 `defaultBaseUri` 변수를 `CreationEndpoint` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-136">Add a local static <xref:System.Uri> variable called `defaultBaseUri` to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public class CreationEndpoint : WorkflowHostingEndpoint  
@@ -104,7 +105,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-3.  <span data-ttu-id="8bd93-137">`CreationEndpoint` 클래스에 다음 생성자를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-137">Add the following constructor to the `CreationEndpoint` class.</span></span> <span data-ttu-id="8bd93-138">기본 생성자 호출에는 `IWorkflowCreation` 서비스 계약을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-138">Notice we specify the `IWorkflowCreation` service contract in the call to the base constructor.</span></span>  
+3.  <span data-ttu-id="e3afe-137">`CreationEndpoint` 클래스에 다음 생성자를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-137">Add the following constructor to the `CreationEndpoint` class.</span></span> <span data-ttu-id="e3afe-138">기본 생성자 호출에는 `IWorkflowCreation` 서비스 계약을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-138">Notice we specify the `IWorkflowCreation` service contract in the call to the base constructor.</span></span>  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -113,7 +114,7 @@ ms.lasthandoff: 12/02/2017
        }  
     ```  
   
-4.  <span data-ttu-id="8bd93-139">`CreationEndpoint` 클래스에 다음 기본 생성자를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-139">Add the following default constructor to the `CreationEndpoint` class.</span></span>  
+4.  <span data-ttu-id="e3afe-139">`CreationEndpoint` 클래스에 다음 기본 생성자를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-139">Add the following default constructor to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public CreationEndpoint()  
@@ -123,7 +124,7 @@ ms.lasthandoff: 12/02/2017
        }  
     ```  
   
-5.  <span data-ttu-id="8bd93-140">`DefaultBaseUri` 클래스에 정적 `CreationEndpoint` 속성을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-140">Add a static `DefaultBaseUri` property to the `CreationEndpoint` class.</span></span> <span data-ttu-id="8bd93-141">이 속성은 기본적인 기본 URI가 제공되지 않은 경우 기본 URI를 저장하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-141">This property will be used to hold a default base URI if one is not provided.</span></span>  
+5.  <span data-ttu-id="e3afe-140">`DefaultBaseUri` 클래스에 정적 `CreationEndpoint` 속성을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-140">Add a static `DefaultBaseUri` property to the `CreationEndpoint` class.</span></span> <span data-ttu-id="e3afe-141">이 속성은 기본적인 기본 URI가 제공되지 않은 경우 기본 URI를 저장하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-141">This property will be used to hold a default base URI if one is not provided.</span></span>  
   
     ```  
     static Uri DefaultBaseUri  
@@ -141,7 +142,7 @@ ms.lasthandoff: 12/02/2017
      }  
     ```  
   
-6.  <span data-ttu-id="8bd93-142">만들기 끝점에 사용할 기본 바인딩을 가져오는 다음 메서드를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-142">Create the following method to get the default binding to use for the creation endpoint.</span></span>  
+6.  <span data-ttu-id="e3afe-142">만들기 끝점에 사용할 기본 바인딩을 가져오는 다음 메서드를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-142">Create the following method to get the default binding to use for the creation endpoint.</span></span>  
   
     ```  
     //defaults to NetNamedPipeBinding  
@@ -151,7 +152,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-7.  <span data-ttu-id="8bd93-143">워크플로 인스턴스 ID를 반환하도록 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-143">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> method to return the workflow instance ID.</span></span> <span data-ttu-id="8bd93-144">경우는 `Action` 경우 빈 GUID를 반환 하는 "만들기"로 `Action` 헤더가 "CreateWithInstanceId" 반환 메서드에 전달 된 GUID로 끝납니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-144">If the `Action` header ends with "Create" return an empty GUID, if the `Action` header ends with "CreateWithInstanceId" return the GUID passed into the method.</span></span> <span data-ttu-id="8bd93-145">그 외의 경우에는 <xref:System.InvalidOperationException>을 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-145">Otherwise, throw an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="8bd93-146">이러한 `Action` 헤더는 `IWorkflowCreation` 서비스 계약에 정의된 두 작업에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-146">These `Action` headers correspond to the two operations defined in the `IWorkflowCreation` service contract.</span></span>  
+7.  <span data-ttu-id="e3afe-143">워크플로 인스턴스 ID를 반환하도록 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-143">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> method to return the workflow instance ID.</span></span> <span data-ttu-id="e3afe-144">경우는 `Action` 경우 빈 GUID를 반환 하는 "만들기"로 `Action` 헤더가 "CreateWithInstanceId" 반환 메서드에 전달 된 GUID로 끝납니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-144">If the `Action` header ends with "Create" return an empty GUID, if the `Action` header ends with "CreateWithInstanceId" return the GUID passed into the method.</span></span> <span data-ttu-id="e3afe-145">그 외의 경우에는 <xref:System.InvalidOperationException>을 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-145">Otherwise, throw an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="e3afe-146">이러한 `Action` 헤더는 `IWorkflowCreation` 서비스 계약에 정의된 두 작업에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-146">These `Action` headers correspond to the two operations defined in the `IWorkflowCreation` service contract.</span></span>  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -173,7 +174,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-8.  <span data-ttu-id="8bd93-147"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A>를 만들고 워크플로의 모든 인수를 추가한 다음 클라이언트에 인스턴스 ID를 보내고 <xref:System.ServiceModel.Activities.WorkflowCreationContext>를 반환하도록 <xref:System.ServiceModel.Activities.WorkflowCreationContext> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-147">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> method to create a <xref:System.ServiceModel.Activities.WorkflowCreationContext> and add any arguments for the workflow, send the instance ID to the client, and then return the <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span></span>  
+8.  <span data-ttu-id="e3afe-147"><xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A>를 만들고 워크플로의 모든 인수를 추가한 다음 클라이언트에 인스턴스 ID를 보내고 <xref:System.ServiceModel.Activities.WorkflowCreationContext>를 반환하도록 <xref:System.ServiceModel.Activities.WorkflowCreationContext> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-147">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> method to create a <xref:System.ServiceModel.Activities.WorkflowCreationContext> and add any arguments for the workflow, send the instance ID to the client, and then return the <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span></span>  
   
     ```  
     protected override WorkflowCreationContext OnGetCreationContext(object[] inputs, OperationContext operationContext, Guid instanceId, WorkflowHostingResponseContext responseContext)  
@@ -201,11 +202,11 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a><span data-ttu-id="8bd93-148">WorkflowCreationEndpoint를 구성할 수 있도록 표준 끝점 요소 만들기</span><span class="sxs-lookup"><span data-stu-id="8bd93-148">Create a standard endpoint element to allow you to configure the WorkflowCreationEndpoint</span></span>  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a><span data-ttu-id="e3afe-148">WorkflowCreationEndpoint를 구성할 수 있도록 표준 끝점 요소 만들기</span><span class="sxs-lookup"><span data-stu-id="e3afe-148">Create a standard endpoint element to allow you to configure the WorkflowCreationEndpoint</span></span>  
   
-1.  <span data-ttu-id="8bd93-149">`CreationEndpoint` 프로젝트에서 Shared에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-149">Add a reference to Shared in the `CreationEndpoint` project</span></span>  
+1.  <span data-ttu-id="e3afe-149">`CreationEndpoint` 프로젝트에서 Shared에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-149">Add a reference to Shared in the `CreationEndpoint` project</span></span>  
   
-2.  <span data-ttu-id="8bd93-150">`CreationEndpointElement`에서 파생된 <xref:System.ServiceModel.Configuration.StandardEndpointElement>라는 새 클래스를 `CreationEndpoint` 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-150">Add a new class called `CreationEndpointElement`, derived from <xref:System.ServiceModel.Configuration.StandardEndpointElement> to the `CreationEndpoint` project.</span></span> <span data-ttu-id="8bd93-151">이 클래스는 web.config 파일의 `CreationEndpoint`를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-151">This class will represent a `CreationEndpoint` in a web.config file.</span></span>  
+2.  <span data-ttu-id="e3afe-150">`CreationEndpointElement`에서 파생된 <xref:System.ServiceModel.Configuration.StandardEndpointElement>라는 새 클래스를 `CreationEndpoint` 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-150">Add a new class called `CreationEndpointElement`, derived from <xref:System.ServiceModel.Configuration.StandardEndpointElement> to the `CreationEndpoint` project.</span></span> <span data-ttu-id="e3afe-151">이 클래스는 web.config 파일의 `CreationEndpoint`를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-151">This class will represent a `CreationEndpoint` in a web.config file.</span></span>  
   
     ```  
     using System;  
@@ -223,7 +224,7 @@ ms.lasthandoff: 12/02/2017
        }  
     ```  
   
-3.  <span data-ttu-id="8bd93-152">끝점의 형식을 반환하기 위해 `EndpointType`이라는 속성을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-152">Add a property called `EndpointType` to return the type of the endpoint.</span></span>  
+3.  <span data-ttu-id="e3afe-152">끝점의 형식을 반환하기 위해 `EndpointType`이라는 속성을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-152">Add a property called `EndpointType` to return the type of the endpoint.</span></span>  
   
     ```  
     protected override Type EndpointType  
@@ -232,7 +233,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-4.  <span data-ttu-id="8bd93-153"><xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> 메서드를 재정의하고 새 `CreationEndpoint`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-153">Override the <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> method and return a new `CreationEndpoint`.</span></span>  
+4.  <span data-ttu-id="e3afe-153"><xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> 메서드를 재정의하고 새 `CreationEndpoint`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-153">Override the <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> method and return a new `CreationEndpoint`.</span></span>  
   
     ```  
     protected override ServiceEndpoint CreateServiceEndpoint(ContractDescription contractDescription)  
@@ -241,7 +242,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-5.  <span data-ttu-id="8bd93-154"><xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 및 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 메서드를 오버로드합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-154">Overload the <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, and <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> methods.</span></span> <span data-ttu-id="8bd93-155">이러한 메서드는 정의되어야 하며 이러한 메서드에 코드를 추가할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-155">These methods just need to be defined, you do not need to add any code to them.</span></span>  
+5.  <span data-ttu-id="e3afe-154"><xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 및 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 메서드를 오버로드합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-154">Overload the <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, and <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> methods.</span></span> <span data-ttu-id="e3afe-155">이러한 메서드는 정의되어야 하며 이러한 메서드에 코드를 추가할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-155">These methods just need to be defined, you do not need to add any code to them.</span></span>  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -261,7 +262,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-6.  <span data-ttu-id="8bd93-156">`CreationEndpoint`의 컬렉션 클래스를 `CreationEndpoint` 프로젝트의 CreationEndpointElement.cs 파일에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-156">Add the collection class for `CreationEndpoint` to the CreationEndpointElement.cs file in the `CreationEndpoint` project.</span></span> <span data-ttu-id="8bd93-157">이 클래스는 web.config 파일에 많은 `CreationEndpoint` 인스턴스를 저장하기 위해 구성에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-157">This class is used by configuration to hold a number of `CreationEndpoint` instances in a web.config file.</span></span>  
+6.  <span data-ttu-id="e3afe-156">`CreationEndpoint`의 컬렉션 클래스를 `CreationEndpoint` 프로젝트의 CreationEndpointElement.cs 파일에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-156">Add the collection class for `CreationEndpoint` to the CreationEndpointElement.cs file in the `CreationEndpoint` project.</span></span> <span data-ttu-id="e3afe-157">이 클래스는 web.config 파일에 많은 `CreationEndpoint` 인스턴스를 저장하기 위해 구성에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-157">This class is used by configuration to hold a number of `CreationEndpoint` instances in a web.config file.</span></span>  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -269,17 +270,17 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-7.  <span data-ttu-id="8bd93-158">솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-158">Build the solution.</span></span>  
+7.  <span data-ttu-id="e3afe-158">솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-158">Build the solution.</span></span>  
   
-### <a name="host-the-workflow-in-iis"></a><span data-ttu-id="8bd93-159">IIS에서 워크플로 호스팅</span><span class="sxs-lookup"><span data-stu-id="8bd93-159">Host the workflow in IIS</span></span>  
+### <a name="host-the-workflow-in-iis"></a><span data-ttu-id="e3afe-159">IIS에서 워크플로 호스팅</span><span class="sxs-lookup"><span data-stu-id="e3afe-159">Host the workflow in IIS</span></span>  
   
-1.  <span data-ttu-id="8bd93-160">IIS에서 `MyCreationEndpoint`라는 새 응용 프로그램을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-160">Create a new application called `MyCreationEndpoint` in IIS.</span></span>  
+1.  <span data-ttu-id="e3afe-160">IIS에서 `MyCreationEndpoint`라는 새 응용 프로그램을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-160">Create a new application called `MyCreationEndpoint` in IIS.</span></span>  
   
-2.  <span data-ttu-id="8bd93-161">Workflow Designer에서 생성된 workflow1.xaml 파일을 응용 프로그램 디렉터리에 복사하고 workflow1.xamlx로 이름을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-161">Copy the workflow1.xaml file generated by the workflow designer to the application directory and rename it to workflow1.xamlx.</span></span>  
+2.  <span data-ttu-id="e3afe-161">Workflow Designer에서 생성된 workflow1.xaml 파일을 응용 프로그램 디렉터리에 복사하고 workflow1.xamlx로 이름을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-161">Copy the workflow1.xaml file generated by the workflow designer to the application directory and rename it to workflow1.xamlx.</span></span>  
   
-3.  <span data-ttu-id="8bd93-162">shared.dll 및 CreationEndpoint.dll 파일을 응용 프로그램의 bin 디렉터리에 복사합니다(bin 디렉터리가 없는 경우 만들어야 함).</span><span class="sxs-lookup"><span data-stu-id="8bd93-162">Copy the shared.dll and CreationEndpoint.dll files to the application’s bin directory (create the bin directory if it is not present).</span></span>  
+3.  <span data-ttu-id="e3afe-162">shared.dll 및 CreationEndpoint.dll 파일을 응용 프로그램의 bin 디렉터리에 복사합니다(bin 디렉터리가 없는 경우 만들어야 함).</span><span class="sxs-lookup"><span data-stu-id="e3afe-162">Copy the shared.dll and CreationEndpoint.dll files to the application’s bin directory (create the bin directory if it is not present).</span></span>  
   
-4.  <span data-ttu-id="8bd93-163">`CreationEndpoint` 프로젝트에서 Web.config 파일의 내용을 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-163">Replace the contents of the Web.config file in the `CreationEndpoint` project with the following code.</span></span>  
+4.  <span data-ttu-id="e3afe-163">`CreationEndpoint` 프로젝트에서 Web.config 파일의 내용을 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-163">Replace the contents of the Web.config file in the `CreationEndpoint` project with the following code.</span></span>  
   
     ```xaml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -290,7 +291,7 @@ ms.lasthandoff: 12/02/2017
     </configuration>  
     ```  
   
-5.  <span data-ttu-id="8bd93-164">`<system.web>` 요소 뒤에 다음 구성 코드를 추가하여 `CreationEndpoint`를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-164">After the `<system.web>` element, register `CreationEndpoint` by adding the following configuration code.</span></span>  
+5.  <span data-ttu-id="e3afe-164">`<system.web>` 요소 뒤에 다음 구성 코드를 추가하여 `CreationEndpoint`를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-164">After the `<system.web>` element, register `CreationEndpoint` by adding the following configuration code.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -304,9 +305,9 @@ ms.lasthandoff: 12/02/2017
     </system.serviceModel>  
     ```  
   
-     <span data-ttu-id="8bd93-165">이렇게 하면 `CreationEndpointCollection` 클래스가 등록되므로 web.config 파일에서 `CreationEndpoint`를 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-165">This registers the `CreationEndpointCollection` class so you can configure a `CreationEndpoint` in a web.config file.</span></span>  
+     <span data-ttu-id="e3afe-165">이렇게 하면 `CreationEndpointCollection` 클래스가 등록되므로 web.config 파일에서 `CreationEndpoint`를 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-165">This registers the `CreationEndpointCollection` class so you can configure a `CreationEndpoint` in a web.config file.</span></span>  
   
-6.  <span data-ttu-id="8bd93-166">추가 `<service>` 요소 (후의 \</extensions > 태그)와 `CreationEndpoint` 들어오는 메시지를 수신 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-166">Add a `<service>` element (after the \</extensions> tag) with a `CreationEndpoint` which will listen for incoming messages.</span></span>  
+6.  <span data-ttu-id="e3afe-166">추가 `<service>` 요소 (후의 \</extensions > 태그)와 `CreationEndpoint` 들어오는 메시지를 수신 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-166">Add a `<service>` element (after the \</extensions> tag) with a `CreationEndpoint` which will listen for incoming messages.</span></span>  
   
     ```xml  
     <services>  
@@ -317,7 +318,7 @@ ms.lasthandoff: 12/02/2017
         </services>  
     ```  
   
-7.  <span data-ttu-id="8bd93-167">추가 \<동작 > 요소 (후의  \< /서비스 > 태그) 서비스 메타 데이터를 사용 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-167">Add a \<behaviors> element (after the \</services> tag) to enable service metadata.</span></span>  
+7.  <span data-ttu-id="e3afe-167">추가 \<동작 > 요소 (후의  \< /서비스 > 태그) 서비스 메타 데이터를 사용 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-167">Add a \<behaviors> element (after the \</services> tag) to enable service metadata.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -329,19 +330,19 @@ ms.lasthandoff: 12/02/2017
         </behaviors>  
     ```  
   
-8.  <span data-ttu-id="8bd93-168">IIS 응용 프로그램 디렉터리에 web.config를 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-168">Copy the web.config to your IIS application directory.</span></span>  
+8.  <span data-ttu-id="e3afe-168">IIS 응용 프로그램 디렉터리에 web.config를 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-168">Copy the web.config to your IIS application directory.</span></span>  
   
-9. <span data-ttu-id="8bd93-169">Internet Explorer를 시작하고 http://localhost/MyCreationEndpoint/Workflow1.xamlx로 이동하여 만들기 끝점이 작동하고 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-169">Test to see if the creation endpoint is working by starting Internet Explorer and browsing to http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span></span> <span data-ttu-id="8bd93-170">Internet Explorer는 다음 화면을 표시해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-170">Internet Explorer should display the following screen:</span></span>  
+9. <span data-ttu-id="e3afe-169">Internet Explorer를 시작하고 http://localhost/MyCreationEndpoint/Workflow1.xamlx로 이동하여 만들기 끝점이 작동하고 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-169">Test to see if the creation endpoint is working by starting Internet Explorer and browsing to http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span></span> <span data-ttu-id="e3afe-170">Internet Explorer는 다음 화면을 표시해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-170">Internet Explorer should display the following screen:</span></span>  
   
-     <span data-ttu-id="8bd93-171">![서비스 테스트](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span><span class="sxs-lookup"><span data-stu-id="8bd93-171">![Testing the service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span></span>  
+     <span data-ttu-id="e3afe-171">![서비스 테스트](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span><span class="sxs-lookup"><span data-stu-id="e3afe-171">![Testing the service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span></span>  
   
-### <a name="create-a-client-that-will-call-the-creationendpoint"></a><span data-ttu-id="8bd93-172">CreationEndpoint를 호출할 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="8bd93-172">Create a client that will call the CreationEndpoint.</span></span>  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a><span data-ttu-id="e3afe-172">CreationEndpoint를 호출할 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="e3afe-172">Create a client that will call the CreationEndpoint.</span></span>  
   
-1.  <span data-ttu-id="8bd93-173">새 콘솔 응용 프로그램을 `CreationEndpointTest` 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-173">Add a new Console application to the `CreationEndpointTest` solution.</span></span>  
+1.  <span data-ttu-id="e3afe-173">새 콘솔 응용 프로그램을 `CreationEndpointTest` 솔루션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-173">Add a new Console application to the `CreationEndpointTest` solution.</span></span>  
   
-2.  <span data-ttu-id="8bd93-174">System.ServiceModel.dll, System.ServiceModel.Activities 및 `Shared`에 대한 참조를 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-174">Add references to System.ServiceModel.dll, System.ServiceModel.Activities, and the `Shared` project.</span></span>  
+2.  <span data-ttu-id="e3afe-174">System.ServiceModel.dll, System.ServiceModel.Activities 및 `Shared`에 대한 참조를 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-174">Add references to System.ServiceModel.dll, System.ServiceModel.Activities, and the `Shared` project.</span></span>  
   
-3.  <span data-ttu-id="8bd93-175">에 `Main` 메서드 만들기는 <xref:System.ServiceModel.ChannelFactory%601> 형식의 `IWorkflowCreation` 호출 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-175">In the `Main` method create a <xref:System.ServiceModel.ChannelFactory%601> of type `IWorkflowCreation` and call <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span></span> <span data-ttu-id="8bd93-176">이렇게 하면 프록시가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-176">This will return a proxy.</span></span> <span data-ttu-id="8bd93-177">이 프록시에서 `Create`를 호출하여 IIS에서 호스트된 워크플로 인스턴스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-177">You can then call `Create` on that proxy to create the workflow instance hosted under IIS:</span></span>  
+3.  <span data-ttu-id="e3afe-175">에 `Main` 메서드 만들기는 <xref:System.ServiceModel.ChannelFactory%601> 형식의 `IWorkflowCreation` 호출 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-175">In the `Main` method create a <xref:System.ServiceModel.ChannelFactory%601> of type `IWorkflowCreation` and call <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span></span> <span data-ttu-id="e3afe-176">이렇게 하면 프록시가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-176">This will return a proxy.</span></span> <span data-ttu-id="e3afe-177">이 프록시에서 `Create`를 호출하여 IIS에서 호스트된 워크플로 인스턴스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-177">You can then call `Create` on that proxy to create the workflow instance hosted under IIS:</span></span>  
   
     ```  
     using System.Text;  
@@ -373,17 +374,17 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-4.  <span data-ttu-id="8bd93-178">CreationEndpointClient를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-178">Run the CreationEndpointClient.</span></span> <span data-ttu-id="8bd93-179">출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-179">The output should look like the following:</span></span>  
+4.  <span data-ttu-id="e3afe-178">CreationEndpointClient를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-178">Run the CreationEndpointClient.</span></span> <span data-ttu-id="e3afe-179">출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-179">The output should look like the following:</span></span>  
   
     ```Output  
     Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="8bd93-180">워크플로가 콘솔 출력이 없는 IIS에서 실행되고 있기 때문에 워크플로의 출력은 표시되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-180">You will not see the output of the workflow because it is running under IIS which has no console output.</span></span>  
+    >  <span data-ttu-id="e3afe-180">워크플로가 콘솔 출력이 없는 IIS에서 실행되고 있기 때문에 워크플로의 출력은 표시되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-180">You will not see the output of the workflow because it is running under IIS which has no console output.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8bd93-181">예제</span><span class="sxs-lookup"><span data-stu-id="8bd93-181">Example</span></span>  
- <span data-ttu-id="8bd93-182">다음은 이 샘플의 전체 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-182">The following is the complete code for this sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="e3afe-181">예</span><span class="sxs-lookup"><span data-stu-id="e3afe-181">Example</span></span>  
+ <span data-ttu-id="e3afe-182">다음은 이 샘플의 전체 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-182">The following is the complete code for this sample.</span></span>  
   
 ```xaml  
 <!-— workflow1.xamlx -->  
@@ -680,14 +681,14 @@ namespace CreationClient
 }  
 ```  
   
- <span data-ttu-id="8bd93-183">`IWorkflowCreation`을 구현하는 서비스를 구현하지 않기 때문에 이 예제가 혼동스러울 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-183">This example may seem confusing because you never implement a service that implements `IWorkflowCreation`.</span></span> <span data-ttu-id="8bd93-184">이는 `CreationEndpoint`가 이러한 구현 작업을 대신 수행하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="8bd93-184">This is because the `CreationEndpoint` does this for you.</span></span>  
+ <span data-ttu-id="e3afe-183">`IWorkflowCreation`을 구현하는 서비스를 구현하지 않기 때문에 이 예제가 혼동스러울 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-183">This example may seem confusing because you never implement a service that implements `IWorkflowCreation`.</span></span> <span data-ttu-id="e3afe-184">이는 `CreationEndpoint`가 이러한 구현 작업을 대신 수행하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="e3afe-184">This is because the `CreationEndpoint` does this for you.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8bd93-185">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8bd93-185">See Also</span></span>  
- [<span data-ttu-id="8bd93-186">워크플로 서비스</span><span class="sxs-lookup"><span data-stu-id="8bd93-186">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="8bd93-187">인터넷 정보 서비스에서 호스팅</span><span class="sxs-lookup"><span data-stu-id="8bd93-187">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [<span data-ttu-id="8bd93-188">인터넷 정보 서비스 호스팅을 위한 최선의 방법</span><span class="sxs-lookup"><span data-stu-id="8bd93-188">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [<span data-ttu-id="8bd93-189">인터넷 정보 서비스 호스팅 지침</span><span class="sxs-lookup"><span data-stu-id="8bd93-189">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [<span data-ttu-id="8bd93-190">Windows 워크플로 아키텍처</span><span class="sxs-lookup"><span data-stu-id="8bd93-190">Windows Workflow Architecture</span></span>](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
- [<span data-ttu-id="8bd93-191">WorkflowHostingEndpoint 다시 시작 책갈피</span><span class="sxs-lookup"><span data-stu-id="8bd93-191">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
- [<span data-ttu-id="8bd93-192">워크플로 디자이너 재호스트</span><span class="sxs-lookup"><span data-stu-id="8bd93-192">Rehosting the Workflow Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [<span data-ttu-id="8bd93-193">Windows 워크플로 개요</span><span class="sxs-lookup"><span data-stu-id="8bd93-193">Windows Workflow Overview</span></span>](../../../../docs/framework/windows-workflow-foundation/overview.md)
+## <a name="see-also"></a><span data-ttu-id="e3afe-185">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e3afe-185">See Also</span></span>  
+ [<span data-ttu-id="e3afe-186">워크플로 서비스</span><span class="sxs-lookup"><span data-stu-id="e3afe-186">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="e3afe-187">인터넷 정보 서비스에서 호스팅</span><span class="sxs-lookup"><span data-stu-id="e3afe-187">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [<span data-ttu-id="e3afe-188">인터넷 정보 서비스 호스팅을 위한 최선의 방법</span><span class="sxs-lookup"><span data-stu-id="e3afe-188">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [<span data-ttu-id="e3afe-189">인터넷 정보 서비스 호스팅 지침</span><span class="sxs-lookup"><span data-stu-id="e3afe-189">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [<span data-ttu-id="e3afe-190">Windows 워크플로 아키텍처</span><span class="sxs-lookup"><span data-stu-id="e3afe-190">Windows Workflow Architecture</span></span>](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [<span data-ttu-id="e3afe-191">WorkflowHostingEndpoint 다시 시작 책갈피</span><span class="sxs-lookup"><span data-stu-id="e3afe-191">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [<span data-ttu-id="e3afe-192">워크플로 디자이너 재호스트</span><span class="sxs-lookup"><span data-stu-id="e3afe-192">Rehosting the Workflow Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [<span data-ttu-id="e3afe-193">Windows 워크플로 개요</span><span class="sxs-lookup"><span data-stu-id="e3afe-193">Windows Workflow Overview</span></span>](../../../../docs/framework/windows-workflow-foundation/overview.md)

@@ -13,33 +13,34 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92e75f8f23bb0bc6d11e9bb6fd6e83c35559b847
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e01f24af2b6853c7a43377bc0b7f7d338195472
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transactional-support-in-systemservicemodel"></a><span data-ttu-id="9fa4b-102">System.ServiceModel의 트랜잭션 지원</span><span class="sxs-lookup"><span data-stu-id="9fa4b-102">Transactional Support in System.ServiceModel</span></span>
-<span data-ttu-id="9fa4b-103">이 단원의 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 제공하는 트랜잭션 기능에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa4b-103">The topics in this section describe the transactional functionalities [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] provides.</span></span>  
+# <a name="transactional-support-in-systemservicemodel"></a><span data-ttu-id="6c3aa-102">System.ServiceModel의 트랜잭션 지원</span><span class="sxs-lookup"><span data-stu-id="6c3aa-102">Transactional Support in System.ServiceModel</span></span>
+<span data-ttu-id="6c3aa-103">이 단원의 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 제공하는 트랜잭션 기능에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3aa-103">The topics in this section describe the transactional functionalities [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] provides.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9fa4b-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="9fa4b-104">In This Section</span></span>  
- [<span data-ttu-id="9fa4b-105">ServiceModel 트랜잭션 특성</span><span class="sxs-lookup"><span data-stu-id="9fa4b-105">ServiceModel Transaction Attributes</span></span>](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
- <span data-ttu-id="9fa4b-106"><xref:System.ServiceModel> 서비스에 대한 트랜잭션의 동작을 구성할 수 있는 두 가지 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 특성에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa4b-106">Describes the two standard <xref:System.ServiceModel> attributes that enable you to configure the behavior of transactions for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="6c3aa-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="6c3aa-104">In This Section</span></span>  
+ [<span data-ttu-id="6c3aa-105">ServiceModel 트랜잭션 특성</span><span class="sxs-lookup"><span data-stu-id="6c3aa-105">ServiceModel Transaction Attributes</span></span>](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
+ <span data-ttu-id="6c3aa-106"><xref:System.ServiceModel> 서비스에 대한 트랜잭션의 동작을 구성할 수 있는 두 가지 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 특성에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3aa-106">Describes the two standard <xref:System.ServiceModel> attributes that enable you to configure the behavior of transactions for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [<span data-ttu-id="9fa4b-107">ServiceModel 트랜잭션 구성</span><span class="sxs-lookup"><span data-stu-id="9fa4b-107">ServiceModel Transaction Configuration</span></span>](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
- <span data-ttu-id="9fa4b-108">서비스에 대한 트랜잭션을 활성화하는 데 사용할 수 있는 다양한 구성 설정에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa4b-108">Describes the various configuration settings that can be used to enable transaction for a service.</span></span>  
+ [<span data-ttu-id="6c3aa-107">ServiceModel 트랜잭션 구성</span><span class="sxs-lookup"><span data-stu-id="6c3aa-107">ServiceModel Transaction Configuration</span></span>](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
+ <span data-ttu-id="6c3aa-108">서비스에 대한 트랜잭션을 활성화하는 데 사용할 수 있는 다양한 구성 설정에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3aa-108">Describes the various configuration settings that can be used to enable transaction for a service.</span></span>  
   
- [<span data-ttu-id="9fa4b-109">트랜잭션 흐름 사용</span><span class="sxs-lookup"><span data-stu-id="9fa4b-109">Enabling Transaction Flow</span></span>](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
- <span data-ttu-id="9fa4b-110">트랜잭션 흐름을 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa4b-110">Describes how to enable transaction flow.</span></span>  
+ [<span data-ttu-id="6c3aa-109">트랜잭션 흐름 사용</span><span class="sxs-lookup"><span data-stu-id="6c3aa-109">Enabling Transaction Flow</span></span>](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
+ <span data-ttu-id="6c3aa-110">트랜잭션 흐름을 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3aa-110">Describes how to enable transaction flow.</span></span>  
   
- [<span data-ttu-id="9fa4b-111">방법: 트랜잭션 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="9fa4b-111">How to: Create a Transactional Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-transactional-service.md)  
- <span data-ttu-id="9fa4b-112">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 트랜잭션 서비스를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9fa4b-112">Demonstrates how to create a transactional service in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
+ [<span data-ttu-id="6c3aa-111">방법: 트랜잭션 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="6c3aa-111">How to: Create a Transactional Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-transactional-service.md)  
+ <span data-ttu-id="6c3aa-112">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 트랜잭션 서비스를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6c3aa-112">Demonstrates how to create a transactional service in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [<span data-ttu-id="9fa4b-113">트랜잭션 응용 프로그램 진단</span><span class="sxs-lookup"><span data-stu-id="9fa4b-113">Diagnosing Transactional Applications</span></span>](../../../../docs/framework/wcf/feature-details/diagnosing-transactional-applications.md)  
- <span data-ttu-id="9fa4b-114">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 관리 및 진단 기능을 사용하여 트랜잭션 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa4b-114">Describes how to use the management and diagnostics feature in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to troubleshoot your transactional application.</span></span>  
+ [<span data-ttu-id="6c3aa-113">트랜잭션 응용 프로그램 진단</span><span class="sxs-lookup"><span data-stu-id="6c3aa-113">Diagnosing Transactional Applications</span></span>](../../../../docs/framework/wcf/feature-details/diagnosing-transactional-applications.md)  
+ <span data-ttu-id="6c3aa-114">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 관리 및 진단 기능을 사용하여 트랜잭션 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3aa-114">Describes how to use the management and diagnostics feature in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to troubleshoot your transactional application.</span></span>  
   
- [<span data-ttu-id="9fa4b-115">COM + 및 ServiceModel의 트랜잭션 비교</span><span class="sxs-lookup"><span data-stu-id="9fa4b-115">Comparing Transactions in COM+ and ServiceModel</span></span>](../../../../docs/framework/wcf/feature-details/comparing-transactions-in-com-and-servicemodel.md)  
- <span data-ttu-id="9fa4b-116"><xref:System.ServiceModel> 네임스페이스가 제공하는 특성을 사용하여 트랜잭션 COM+ 서비스의 동작을 시뮬레이션하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa4b-116">Describes how to simulate the behavior of a transactional COM+ service using the attributes provided by the <xref:System.ServiceModel> namespace.</span></span>  
+ [<span data-ttu-id="6c3aa-115">COM+ 및 ServiceModel의 트랜잭션 비교</span><span class="sxs-lookup"><span data-stu-id="6c3aa-115">Comparing Transactions in COM+ and ServiceModel</span></span>](../../../../docs/framework/wcf/feature-details/comparing-transactions-in-com-and-servicemodel.md)  
+ <span data-ttu-id="6c3aa-116"><xref:System.ServiceModel> 네임스페이스가 제공하는 특성을 사용하여 트랜잭션 COM+ 서비스의 동작을 시뮬레이션하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3aa-116">Describes how to simulate the behavior of a transactional COM+ service using the attributes provided by the <xref:System.ServiceModel> namespace.</span></span>  
   
- [<span data-ttu-id="9fa4b-117">엔터프라이즈 통합 서비스 트랜잭션 구성 요소</span><span class="sxs-lookup"><span data-stu-id="9fa4b-117">Integrating Enterprise Services Transactional Components</span></span>](../../../../docs/framework/wcf/feature-details/integrating-enterprise-services-transactional-components.md)  
- <span data-ttu-id="9fa4b-118">엔터프라이즈 서비스를 사용하는 코드와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 통합하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa4b-118">Describes how to integrate your [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services with code that uses enterprise service.</span></span>
+ [<span data-ttu-id="6c3aa-117">엔터프라이즈 서비스 트랜잭션 구성 요소 통합</span><span class="sxs-lookup"><span data-stu-id="6c3aa-117">Integrating Enterprise Services Transactional Components</span></span>](../../../../docs/framework/wcf/feature-details/integrating-enterprise-services-transactional-components.md)  
+ <span data-ttu-id="6c3aa-118">엔터프라이즈 서비스를 사용하는 코드와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 통합하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3aa-118">Describes how to integrate your [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services with code that uses enterprise service.</span></span>
