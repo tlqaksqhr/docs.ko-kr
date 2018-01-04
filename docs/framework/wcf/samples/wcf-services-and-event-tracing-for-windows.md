@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ed3b7b370ed6b1d9a900579ff0e6f1b0a22290c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows용 WCF 서비스 및 이벤트 추척
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 분석 추적을 사용하여 ETW(Windows용 이벤트 추적)의 이벤트를 내보내는 방법을 보여 줍니다. 분석 추적은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 스택에서 주요 시점에 내보내는 이벤트로서, 프로덕션 환경에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 문제를 해결하는 데 사용할 수 있습니다.  

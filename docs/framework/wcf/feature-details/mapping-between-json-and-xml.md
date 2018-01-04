@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9bf104af8c88413298412d3ec3a29cd934558e2d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON과 XML 간의 매핑
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>에서 생성된 판독기 및 작성기는 JSON(JavaScript Object Notation) 콘텐츠를 통해 XML API를 제공합니다. JSON은 JavaScript 개체 리터럴의 하위 집합을 사용하여 데이터를 인코딩합니다. 이 팩터리에서 생성된 판독기와 작성기는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 또는 <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>을 사용하여 <xref:System.ServiceModel.WebHttpBinding> 응용 프로그램에서 JSON 콘텐츠를 보내고 받을 때도 사용됩니다.  

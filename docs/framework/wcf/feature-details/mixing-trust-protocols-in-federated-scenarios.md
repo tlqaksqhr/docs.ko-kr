@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007dec81766423ea2826e98ae0b6b399a1508f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>페더레이션 시나리오에서 혼합 트러스트 프로토콜
 페더레이션 클라이언트가 트러스트 버전이 다른 서비스 및 STS(보안 토큰 서비스)와 통신하는 시나리오가 있을 수 있습니다. 서비스 WSDL에 STS와 버전이 다른 WS-Trust 요소가 있는 `RequestSecurityTokenTemplate` 어설션이 포함될 수 있습니다. 이 경우 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트는 `RequestSecurityTokenTemplate`에서 수신한 WS-Trust 요소를 STS 트러스트 버전과 일치하도록 변환합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 일치하지 않는 트러스트 버전을 표준 바인딩용으로만 처리합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 인식되는 모든 표준 알고리즘 매개 변수가 표준 바인딩에 포함됩니다. 이 항목에서는 서비스와 STS 간의 다양한 트러스트 설정을 사용한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 동작에 대해 설명합니다.  

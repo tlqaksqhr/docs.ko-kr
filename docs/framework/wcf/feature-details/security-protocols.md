@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 25a6e333b81b337ad0c34de0c0ae097a5cff5601
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b7f5d064f49553ca64b72bec0e7c0dd4dc74d13b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-protocols"></a>보안 프로토콜
 Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징 보안 요구 사항을 포함하는 Web Services Security 메커니즘을 제공합니다. 이 단원에서는 다음 웹 서비스 보안 프로토콜에 대한 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 세부 정보(<xref:System.ServiceModel.Channels.SecurityBindingElement>에서 구현)를 제공합니다.  

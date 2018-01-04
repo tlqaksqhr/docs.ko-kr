@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f93b1e9fdb1569507937c5381b157204ac88f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-state-changes"></a>상태 변경 이해
 이 항목에서는 채널에 있는 상태와 전이, 채널 상태의 구조 지정에 사용되는 형식, 그리고 구현 방법에 대해 설명합니다.  
@@ -153,7 +154,7 @@ ms.lasthandoff: 12/02/2017
 |Closing|예|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Closing|아니요|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Closed|예|이전에 명시적인 Abort 호출로 개체가 닫힌 경우 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>. 개체에서 Close를 호출하면 <xref:System.ObjectDisposedException?displayProperty=nameWithType>이 throw됩니다.|  
-|닫힘|아니요|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Closed|아니요|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Faulted|N/A|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>시간 초과  

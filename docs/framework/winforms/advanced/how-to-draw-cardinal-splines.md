@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c47ff269cb1c367abee0be197fdc80485fb37b97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64661bbdcb267e2f2ce33b8a8db2ab2aac9a86f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-cardinal-splines"></a>방법: 카디널 스플라인 그리기
 카디널 스플라인 주어진된 점의 집합을 통해 원활 하 게 전달 되는 곡선입니다. 카디널 스플라인 그리기, 하려면 만듭니다는 <xref:System.Drawing.Graphics> 개체를 가리키는 배열 주소 전달는 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드.  

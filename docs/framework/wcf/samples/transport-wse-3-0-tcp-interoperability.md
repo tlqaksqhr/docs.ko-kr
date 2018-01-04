@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50bd1492c4e2e8941a77f344c04414a763390e89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0 TCP Interoperability
 WSE 3.0 TCP Interoperability Transport 샘플에서는 TCP 이중 세션을 사용자 지정 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송으로 구현하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에서는 이 사용자 지정 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송을 빌드하는 방법을 설명합니다.  

@@ -18,11 +18,12 @@ caps.latest.revision: "42"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9a6ba021688094afcbbb176cf03fb3e4b4c10df7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindings-and-security"></a>바인딩 및 보안
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 포함된 시스템 제공 바인딩은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 신속하게 프로그래밍하기 위한 방법을 제공합니다. 한 가지 예외를 통해 모든 바인딩의 기본 보안 스키마가 활성화됩니다. 이 항목은 보안 요구 사항에 적합한 바인딩을 선택하는 데 도움을 줍니다.  
@@ -235,8 +236,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [서비스 및 클라이언트 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [자격 증명 유형 선택](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [사용자 지정 바인딩 사용 하는 보안 기능](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [자격 증명 형식 선택](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [사용자 지정 바인딩을 사용하는 보안 기능](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [보안 동작](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Windows Server App Fabric에 대 한 보안 모델](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

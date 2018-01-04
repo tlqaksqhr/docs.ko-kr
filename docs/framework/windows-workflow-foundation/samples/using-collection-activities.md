@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be7615441f29046fc1a469e3cace86267fc6c031
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57c4c720e910762a303fc4987166f22960c2f03b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-collection-activities"></a>컬렉션 활동 사용
 이 샘플에서는 <xref:System.Activities.Statements.AddToCollection%601> 인터페이스를 구현하는 클래스를 사용하여 <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601>, <xref:System.Activities.Statements.RemoveFromCollection%601> 및 <xref:System.Collections.ICollection> 컬렉션 활동을 사용하는 방법과 컬렉션을 반복하여 컬렉션의 각 요소 내용을 출력하는 사용자 지정 활동을 만드는 방법을 보여 줍니다. `PrintCollection`이라는 사용자 지정 활동은 `Numbers`라는 컬렉션의 항목 멤버를 콘솔에 출력합니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 |솔루션|설명|기본 파일|  
 |-|-|-|  
 |CodedWorkflow|컬렉션 활동을 프로그래밍 방식으로 호출하는 방법을 보여 주는 샘플 클라이언트 응용 프로그램입니다.|**PrintCollection.cs**: 콘솔에 컬렉션의 모든 항목이 인쇄 하는 도우미 활동입니다.<br /><br /> **Program.cs**: 프로그래밍 방식으로 일련의 컬렉션 활동이 포함 되 고이 실행 하는 시퀀스 활동을 작성 합니다.|  
-|DesignerWorkflow|컬렉션 활동을 Workflow Designer에서 선언적으로 사용하는 방법을 보여 주는 샘플 클라이언트 응용 프로그램입니다.|**CollectionWorkflow.xaml**: 컬렉션 활동을 사용 하는 디자이너를 통해 선언적으로 만든 워크플로입니다.<br /><br /> **PrintCollection.cs**: 콘솔에 컬렉션의 모든 항목이 인쇄 하는 도우미 활동입니다.<br /><br /> **Program.cs**: CollectionWorkflow.xaml에서 설명 하는 워크플로 호출 합니다.|  
+|DesignerWorkflow|컬렉션 활동을 워크플로 디자이너에서 선언적으로 사용하는 방법을 보여 주는 샘플 클라이언트 응용 프로그램입니다.|**CollectionWorkflow.xaml**: 컬렉션 활동을 사용 하는 디자이너를 통해 선언적으로 만든 워크플로입니다.<br /><br /> **PrintCollection.cs**: 콘솔에 컬렉션의 모든 항목이 인쇄 하는 도우미 활동입니다.<br /><br /> **Program.cs**: CollectionWorkflow.xaml에서 설명 하는 워크플로 호출 합니다.|  
   
  이 데모에서는 `Numbers`이라는 사용자 정의된 활동을 통해 `PrintCollection` 컬렉션의 항목 멤버가 콘솔에 출력됩니다.  
   

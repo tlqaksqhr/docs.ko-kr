@@ -13,11 +13,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26a47e6ea0d93d81275d7b3b87c88d0d3ab595df
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 빌드
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 또는 Visual Studio 2010을 사용 하 여 예제를 빌드할 수 있습니다는 **msbuild** 명령줄에서 명령을 합니다. 이 항목에서는 이 두 절차를 모두 설명합니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8e35634f60ff68a07c199cf6f3893e741b631a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-overview"></a>전송 보안 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 전송 보안 메커니즘은 사용 중인 바인딩과 전송에 따라 결정됩니다. 예를 들어 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용할 경우 전송은 HTTP이며, 전송 보안을 위한 기본 메커니즘은 HTTPS라고 알려진 HTTP를 통한 SSL(Secure Sockets Layer)입니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 시스템 제공 바인딩에 사용되는 주요 전송 보안 메커니즘에 대해 설명합니다.  

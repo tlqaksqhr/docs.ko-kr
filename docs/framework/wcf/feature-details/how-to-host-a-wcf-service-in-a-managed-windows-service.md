@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8572541e0bf9ddcfb93939c177b5cb8c440b41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>방법: 관리되는 Windows 서비스에서 WCF 서비스 호스팅
 이 항목에서는 Windows 서비스에 의해 호스팅되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 관리되는 Windows 서비스 호스팅 옵션을 통해 사용할 수 있는 시나리오는 메시지가 활성화되지 않은 보안 환경의 IIS(인터넷 정보 서비스) 외부에서 호스팅되는 장기 실행 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다. 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.  
@@ -136,7 +137,7 @@ ms.lasthandoff: 12/02/2017
   
 3.  서비스를 변경하려면 먼저 서비스를 중지하고 제거해야 합니다. 서비스를 중지 SCM에서 서비스를 마우스 오른쪽 단추로 클릭 하 고 "중지"를 선택 하려면 또는 **형식 net stop WCFWindowsServiceSample** 명령 프롬프트입니다. Windows 서비스를 중지한 다음 클라이언트를 실행할 경우 클라이언트가 서비스에 액세스하려고 할 때 <xref:System.ServiceModel.EndpointNotFoundException> 예외가 발생합니다. Windows 서비스 유형 제거에 **installutil /u bin\service.exe** 명령 프롬프트입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 항목에서 사용되는 전체 코드 목록입니다.  
   
  [!code-csharp[c_HowTo_HostInNTService#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#8)]
@@ -146,6 +147,6 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [단순화된 구성](../../../../docs/framework/wcf/simplified-configuration.md)  
- [관리 되는 응용 프로그램에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
+ [관리되는 응용 프로그램에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
  [서비스 호스팅](../../../../docs/framework/wcf/hosting-services.md)  
  [Windows Server App Fabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=201276)

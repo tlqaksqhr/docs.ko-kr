@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 353c1ce4688442513417ee03bfecd3cee3db3d62
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 68d6e156612ce707aa678b6589510b710b73e38a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Discovery 개체 모델
 WCF Discovery는 런타임에 검색 가능한 서비스와 이러한 서비스를 찾아서 사용하는 클라이언트를 작성할 수 있는 통합된 프로그래밍 모델을 제공하는 일련의 형식으로 구성되어 있습니다.  

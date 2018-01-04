@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 669c6be6756d79b30266c9fda0909fedc71aeae3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista, Windows Server 2003 및 Windows XP의 큐 기능 차이점
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], [!INCLUDE[wv](../../../../includes/wv-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 간 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 큐 기능의 차이점에 대해 요약합니다.  
@@ -45,5 +46,5 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[wv](../../../../includes/wv-md.md)]의 MSMQ에서는 원격 트랜잭션 읽기를 지원합니다. 이를 통해 큐에서 읽기를 수행하는 응용 프로그램을 큐가 호스팅된 컴퓨터와 다른 컴퓨터에 호스팅할 수 있습니다. 이 기능을 사용하면 중앙의 큐에서 읽기를 수행하는 서비스 팜을 구성하여 시스템의 전체적인 처리량을 높일 수 있습니다. 또한 메시지를 읽거나 처리하는 동안 오류가 발생하면 트랜잭션을 롤백하여 나중에 처리할 수 있도록 메시지를 큐에 남길 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [배달 못 한 편지 큐를 사용 하 여 메시지 전송 오류 처리](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

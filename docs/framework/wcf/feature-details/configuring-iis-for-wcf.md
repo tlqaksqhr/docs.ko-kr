@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd4bf1a97a544730714c46c1ba6f7f102166da35
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 511f5177e1b9d2660daf887cc13728aed2c9de0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Windows Communication Foundation에 대해 Internet Information Services 7.0 구성
 IIS(인터넷 정보 서비스) 7.0은 필요한 구성 요소를 선택적으로 설치할 수 있는 모듈형 디자인입니다. 이러한 디자인은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에 도입된 새로운 매니페스트 기반의 컴포넌트화 기술을 바탕으로 합니다. [!INCLUDE[iisver](../../../../includes/iisver-md.md)]에는 개별적으로 설치할 수 있는 40개 이상의 독립 실행형 기능 구성 요소가 있습니다. 따라서 IT 전문가는 필요에 따라 편리하게 설치를 사용자 지정할 수 있습니다. 이 항목에서는 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]을 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]와 함께 사용할 수 있도록 구성하는 방법과 필요한 구성 요소를 결정하는 방법에 대해 설명합니다.  
@@ -81,6 +82,6 @@ IIS(인터넷 정보 서비스) 7.0은 필요한 구성 요소를 선택적으�
   
 ## <a name="see-also"></a>참고 항목  
  [WAS Activation 아키텍처](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
- [WCF와 함께 사용 하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [방법: 설치 하 고 WCF Activation 구성 요소 구성](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
+ [WCF와 함께 사용하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
+ [방법: WCF Activation 구성 요소 설치 및 구성](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
  [Windows Server App Fabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=201276)

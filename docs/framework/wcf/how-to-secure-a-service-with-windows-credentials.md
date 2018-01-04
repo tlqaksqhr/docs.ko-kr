@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 09e15fcb1f18a91961ee77a57dd8eed80f3faf6a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a5225f25ca921407d64f579bbc7c204917ff260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>방법: Windows 자격 증명을 사용하여 서비스에 보안 설정
 이 항목에서는 전송 보안에서 사용 하도록 설정 하는 방법을 보여 줍니다.는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 Windows 도메인에 있으며 동일한 도메인에 클라이언트에서 호출 됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]이 시나리오에서는 참조 [Windows 인증과 함께 전송 보안](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)합니다. 샘플 응용 프로그램에 대 한 참조는 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플.  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-csharp[c_secureWindowsClient#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#2)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[c_SecureWindowsService#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#0)]  
   
  [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 

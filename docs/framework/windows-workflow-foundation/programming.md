@@ -16,16 +16,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd42299a217cef6125f348d47e0a5216f9e8205f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ad763512a4f39f2d0b2e2f03b052de5b8dcc031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation 프로그래밍
 이 단원에는 능숙한 [!INCLUDE[wf](../../../includes/wf-md.md)] 프로그래머가 되기 위해 이해해야 할 기본 항목 모음이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [워크플로 디자인](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  워크플로 개발에 사용되는 흐름 제어 패러다임을 설명합니다.  
   

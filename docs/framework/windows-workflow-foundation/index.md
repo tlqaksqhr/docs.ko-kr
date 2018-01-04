@@ -15,16 +15,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fded7335c616bdc4b98074f2734948a9ad000e9a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6b61f5ae7d0e7f3102e0566fb1a6eff3ca072d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 이 단원에서는 [!INCLUDE[wf](../../../includes/wf-md.md)]의 프로그래밍 모델, 샘플 및 도구에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows 워크플로 설명서에 대한 안내](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
  숙련도(초보자부터 고급 사용자까지)와 요구 사항에 따라 추천되는 읽기 항목입니다.  
   

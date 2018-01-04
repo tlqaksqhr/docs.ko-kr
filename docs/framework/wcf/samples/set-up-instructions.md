@@ -16,16 +16,17 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e88737d50b24f524e4a33fd51ee16678c1928b1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cfbd4769d1fc974369093e3b5253f9853a9ef730
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-instructions"></a>설치 지침
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 실행하는 데 필요한 서비스를 설정하는 방법에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 샘플을 설치하는 단계를 간략하게 설명합니다.  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
  [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  IIS 설정에 필요한 단계를 간략하게 설명합니다.  
   
- [인터넷 정보 서비스 (IIS) 서버 인증서 설치 지침](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
+ [IIS(인터넷 정보 서비스) 서버 인증서 설치 지침](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
  IIS의 서버 인증서를 설치하는 과정을 간략하게 설명합니다.  
   
  [가상 디렉터리 설치 지침](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/02/2017
  [피어 투 피어 서비스 사용](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
  피어 투 피어 메시징 서비스용으로 기본 제공되는 확인자인 Windows 피어 투 피어 구성 요소를 설치하는 단계를 간략하게 설명합니다.  
   
- [메시지 큐 (MSMQ) 설치](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [메시지 큐(MSMQ) 설치](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  메시지 큐를 설치하는 단계를 간략하게 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  

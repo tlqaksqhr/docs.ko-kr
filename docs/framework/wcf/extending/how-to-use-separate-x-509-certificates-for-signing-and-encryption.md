@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 312a4b854cb527e63d6866247d4147720ce0710c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 944e9974ac5cb84aa0dd7e732c35752cb4ea749e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>방법: 서명 및 암호화에 별도의 X.509 인증서 사용
 이 항목에서는 클라이언트와 서비스에서 메시지 서명 및 암호화에 서로 다른 인증서를 사용하기 위한 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 구성 방법에 대해 설명합니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07c4b4c24d6a5e075f342b186a8123a3e0f19119
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ba62c44ecf72df7faaed77f54f07ecd88157c6d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-wsdl-publication"></a>사용자 지정 WSDL 게시
 이 샘플을 통해 다음을 수행하는 방법을 알 수 있습니다.  
@@ -209,7 +210,7 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
 }  
 ```  
   
- 그런 다음, 코드가 생성되면 시스템에서 적절한 컨텍스트 정보를 전달하여 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 및 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> 메서드를 호출합니다. 샘플에서는 사용자 지정 WSDL 주석의 서식을 지정하고 CodeDom에 주석으로 삽입합니다.  
+ 그런 다음, 코드가 생성되면 시스템에서 적절한 컨텍스트 정보를 전달하여 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 및 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> 메서드를 호출합니다. 샘플에서는 사용자 지정 WSDL 주석의 서식을 지정하고 CodeDOM에 주석으로 삽입합니다.  
   
 ```  
 public void GenerateContract(ServiceContractGenerationContext context)  

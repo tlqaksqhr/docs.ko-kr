@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5897d107fc27b56ffd1eb476dff1fa1d507f5de5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 248202e07d3b74f5d71b40155ae8f617f7ed15ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-and-receiving-faults"></a>오류 보내기 및 받기
 SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달하고 이중 클라이언트의 경우에는 상호 운용 가능한 방식으로 클라이언트에서 서비스로 전달합니다. 일반적으로 서비스는 사용자 지정 오류 내용을 정의하고 이들을 반환할 수 있는 작업을 지정합니다. (자세한 내용은 참조 [정 및 오류 지정](../../../docs/framework/wcf/defining-and-specifying-faults.md).) 이 항목에서는 해당 오류 조건이 발생한 경우 서비스 또는 이중 클라이언트가 그러한 오류를 보낼 수 있는 방법과 클라이언트 또는 서비스 응용 프로그램이 이러한 오류를 처리하는 방법에 대해 설명합니다. 오류 처리에 대 한 개요 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램 참조 [지정 및 계약 및 서비스에서 처리 오류](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  
@@ -117,5 +118,5 @@ SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달
  <xref:System.ServiceModel.FaultException>  
  <xref:System.ServiceModel.FaultException%601>  
  <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
- [예상 되는 예외](../../../docs/framework/wcf/samples/expected-exceptions.md)  
- [사용 하 여 문 사용 하 여 문제를 방지합니다.](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+ [예상되는 예외](../../../docs/framework/wcf/samples/expected-exceptions.md)  
+ [문 사용 시 문제 회피](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)

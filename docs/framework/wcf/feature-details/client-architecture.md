@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e749594d7a37b89d5dbf02013b2f667d923af7ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6418c3b5c82ac42fb7e6d3ce85913896a3f76442
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-architecture"></a>클라이언트 아키텍처
 응용 프로그램은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 개체를 사용하여 서비스 작업을 호출합니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 채널 및 이러한 요소와 기본 채널 아키텍처와의 관계에 대해 설명합니다. 기본적인 개요에 대 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 개체 참조 [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]채널 계층 참조 [채널 계층 확장](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)합니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 935f3fe168ebafd7a62c54d2aec1c8336a31a54a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c57469b61a12ff5043632cf2b6f4fe3a8a53d56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-generated-client-code"></a>생성된 클라이언트 코드 이해
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트 응용 프로그램을 빌드하는 데 사용할 클라이언트 응용 프로그램 구성 파일과 클라이언트 코드를 생성합니다. 이 항목에서는 표준 서비스 계약 시나리오를 위해 생성된 코드 예제를 간략히 살펴 봅니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)를 참조하세요.  

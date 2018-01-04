@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5f61eb200c141f95b24fec1a424ce7b92d8559cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-wcf-security"></a>WCF 보안 프로그래밍
 이 항목에서는 보안 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 사용되는 기본 프로그래밍 작업에 대해 설명합니다. 이 항목에서는 인증, 기밀성 및 무결성을 이라고 통칭 *전송 보안*합니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어);를 설명 하지 권한 부여에 대 한 자세한 내용은 참조 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)합니다.  

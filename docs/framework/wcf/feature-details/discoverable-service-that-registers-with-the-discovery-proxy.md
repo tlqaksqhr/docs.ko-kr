@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffe4a94328d2728ca936425a58d4d641922356a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>방법: 검색 프록시에 등록할 검색 가능한 서비스 구현
 이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 두 번째 항목입니다. 이전 항목에서 [하는 방법: 검색 프록시를 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), 검색 프록시를 구현 합니다. 이 항목에서는 검색 프록시에 알림 메시지([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 `Hello`)를 보내는 `Bye` 서비스를 만듭니다. 이러한 알림 메시지는 서비스가 검색 프록시에 해당 서비스를 등록하거나 등록 취소하는 데 사용됩니다.  
@@ -166,7 +167,7 @@ ms.lasthandoff: 12/02/2017
   
  검색 가능한 서비스의 구현을 완료했습니다. 계속 진행 하 [하는 방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램을 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 항목에서 사용되는 전체 코드 목록입니다.  
   
 ```csharp  
@@ -295,6 +296,6 @@ namespace Microsoft.Samples.Discovery
 ```  
 
 ## <a name="see-also"></a>참고 항목  
- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [WCF 검색](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  [방법: 검색 프록시 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램을 구현 합니다.](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+ [방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 응용 프로그램 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fdbd6260cc435094b499b9e4f3b7bf02f32e27a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c8984016f1f8ad77ab41aa49f8bcc2583406a465
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-contracts"></a>서비스 계약
 이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 서비스 계약을 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [이중](../../../../docs/framework/wcf/samples/duplex.md)  
  이중 계약을 정의하고 구현하는 방법을 보여 줍니다.  
   

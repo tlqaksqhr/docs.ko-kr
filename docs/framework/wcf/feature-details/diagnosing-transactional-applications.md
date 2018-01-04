@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15bb435269ca67e8de67e8e768e98d5832556f02
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0826881bac88f2bfa933ae71b798186dafc55303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnosing-transactional-applications"></a>트랜잭션 응용 프로그램 진단
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 관리 및 진단 기능을 사용하여 트랜잭션 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.  

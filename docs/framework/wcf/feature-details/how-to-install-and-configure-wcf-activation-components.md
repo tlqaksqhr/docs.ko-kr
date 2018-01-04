@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee57276efda7edcc464c300e2f1d100b6a7c9109
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>방법: WCF Activation 구성 요소 설치 및 구성
 이 항목에서는 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 HTTP 네트워크 프로토콜을 통해 통신하지 않는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스팅하도록 WAS라고도 하는 Windows Process Activation Service를 설정하는 데 필요한 단계에 대해 설명합니다. 다음 단원에서는 이 구성 단계에 대해 간략히 설명합니다.  
@@ -111,6 +112,6 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [TCP 활성화](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [MSMQ 정품 인증](../../../../docs/framework/wcf/samples/msmq-activation.md)  
+ [MSMQ 활성화](../../../../docs/framework/wcf/samples/msmq-activation.md)  
  [NamedPipe 활성화](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
  [Windows Server App Fabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=201276)

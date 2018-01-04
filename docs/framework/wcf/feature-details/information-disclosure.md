@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf20f11e7077c981e73aa087c654b9cf0c87bcb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf47ce71c70ab9054b1417bab7ae05d9c029188
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="information-disclosure"></a>정보 공개
 정보 공개를 사용하여 공격자가 시스템에 대해 유용한 정보를 얻을 수 있습니다. 따라서 항상 노출하려는 정보의 내용과 악의가 있는 사용자가 사용해도 되는지 여부를 고려합니다. 다음은 가능한 정보 공개 공격을 나열하고 각 공격에 대한 완화 방안을 제공합니다.  
@@ -68,8 +69,8 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
 ## <a name="see-also"></a>참고 항목  
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [권한 상승 문제점](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [변조](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
+ [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
  [재생 공격](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

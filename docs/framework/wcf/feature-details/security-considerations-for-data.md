@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 98bce70d7092a8ce9b9244479f7ff6d999bb0825
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-data"></a>데이터에 대한 보안 고려 사항
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 데이터를 처리할 때는 여러 가지 위협 범주를 고려해야 합니다. 다음 표에는 데이터 처리와 관련하여 가장 중요한 위협 클래스가 나열되어 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 는 이러한 위협을 완화하는 도구를 제공합니다.  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/21/2017
  MTOM 메시지 인코더에는 또한 `MaxBufferSize` 설정이 있습니다. 표준 바인딩을 사용하는 경우 이 설정은 자동으로 전송 수준 `MaxBufferSize` 값으로 설정됩니다. 그러나 MTOM 메시지 인코더 바인딩 요소를 사용하여 사용자 지정 바인딩을 생성하는 경우에는 `MaxBufferSize` 속성을 스트리밍을 사용할 때 안전한 값으로 설정해야 합니다.  
   
 ## <a name="xml-based-streaming-attacks"></a>XML 기반 스트리밍 공격  
- `MaxBufferSize` 만으로는 스트리밍이 예상되는 경우에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 버퍼링이 적용되는 것을 막기에 부족합니다. 예를 들어, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML 판독기는 새 요소를 읽기 시작할 때 항상 전체 XML 요소 시작 태그를 버퍼링합니다. 이렇게 하면 네임스페이스와 특성이 올바르게 처리됩니다. `MaxReceivedMessageSize` 가 크게(예: 큰 파일을 직접 디스크로 스트리밍하는 시나리오가 가능하도록) 구성된 경우 메시지 본문 전체가 거대한 XML 요소 시작 태그인 악의적인 메시지가 구성될 수 있습니다. 이 메시지를 읽으려고 하면 <xref:System.OutOfMemoryException>이 발생합니다. 여러 가능한 XML 기반 서비스 거부 공격을 모두을 완화할 수 있습니다이 항목의 뒷부분에 나오는 "안전한 XML 사용" 섹션에 설명 된 XML 판독기 할당량을 사용 하 여 중 하나입니다. 스트리밍을 사용할 때는 이러한 할당량을 모두 설정하는 것이 특히 중요합니다.  
+ `MaxBufferSize` 만으로는 스트리밍이 예상되는 경우에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 버퍼링이 적용되는 것을 막기에 부족합니다. 예를 들어, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML 판독기는 새 요소를 읽기 시작할 때 항상 전체 XML 요소 시작 태그를 버퍼링합니다. 이렇게 하면 네임스페이스와 특성이 올바르게 처리됩니다. `MaxReceivedMessageSize`가 크게(예: 큰 파일을 직접 디스크로 스트리밍하는 시나리오가 가능하도록) 구성된 경우 메시지 본문 전체가 거대한 XML 요소 시작 태그인 악의적인 메시지가 구성될 수 있습니다. 이 메시지를 읽으려고 하면 <xref:System.OutOfMemoryException>이 발생합니다. 여러 가능한 XML 기반 서비스 거부 공격을 모두을 완화할 수 있습니다이 항목의 뒷부분에 나오는 "안전한 XML 사용" 섹션에 설명 된 XML 판독기 할당량을 사용 하 여 중 하나입니다. 스트리밍을 사용할 때는 이러한 할당량을 모두 설정하는 것이 특히 중요합니다.  
   
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>스트리밍과 버퍼링 프로그래밍 모델 혼합  
  동일한 서비스에서 스트리밍과 비스트리밍 프로그래밍 모델을 혼합하여 사용하는 경우 여러 가지 공격이 발생할 수 있습니다. <xref:System.IO.Stream> 을 받는 작업과 일부 사용자 정의 형식의 배열을 받는 작업의 두 가지 작업이 있는 서비스 계약을 가정할 수 있습니다. 또한 첫 번째 작업에서 큰 스트림을 처리할 수 있도록 `MaxReceivedMessageSize` 가 큰 값으로 설정되었다고 가정합니다. 그러나 이 경우 용량이 큰 메시지가 두 번째 작업으로도 전송될 수 있으며 작업이 호출되기 전에 deserializer가 데이터를 메모리에 배열로 버퍼링할 수 있습니다. 그러면 deserializer에서 작업에 사용하는 메시지 본문의 크기가 `MaxBufferSize` 할당량으로 제한되지 않아 서비스 거부 공격이 발생할 수 있습니다.  
@@ -215,7 +216,7 @@ ms.lasthandoff: 11/21/2017
   
 -   형식에 적용되는<xref:System.Runtime.Serialization.KnownTypeAttribute> 특성.  
   
--   형식 목록을 반환하는 메서드를 지정하는`KnownTypeAttribute` 특성.  
+-   형식 목록을 반환하는 메서드를 지정하는 `KnownTypeAttribute` 특성.  
   
 -   `ServiceKnownTypeAttribute` 특성.  
   
@@ -264,7 +265,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.SerializableAttribute> 특성으로 표시된 레거시 형식은 주의해서 사용해야 합니다. 이 중에는 신뢰할 수 있는 데이터용으로만 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting에 사용하도록 디자인된 것이 많습니다. 이 특성으로 표시된 기존 형식은 상태 안전을 고려하지 않은 디자인일 가능성이 있습니다.  
   
--   상태 안전에 관해서는 데이터의 존재를 보장하기 위해 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 특성의 `DataMemberAttribute` 속성을 사용하지 마십시오. 데이터는 항상 `null`, `zero`또는 `invalid`일 수 있습니다.  
+-   상태 안전에 관해서는 데이터의 존재를 보장하기 위해 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 특성의 `DataMemberAttribute` 속성을 사용하지 마십시오. 데이터는 항상 `null`, `zero` 또는 `invalid`일 수 있습니다.  
   
 -   신뢰할 수 없는 데이터 소스에서 deserialize된 개체 그래프를 먼저 검사하지 않고 신뢰해서는 안 됩니다. 각 개체의 상태가 일관되어도 개체 그래프 전체는 그렇지 않을 수 있습니다. 또한 개체 그래프 유지 모드가 사용하지 않도록 설정되어 있더라도 deserialize된 그래프에 같은 개체에 대한 참조가 여러 개 있거나 순환 참조가 있을 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
@@ -351,7 +352,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="a-note-on-components"></a>구성 요소 참조  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 는 유연하며 사용자 지정이 가능한 시스템입니다. 이 항목에 있는 내용의 대부분에서는 가장 일반적인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 사용 시나리오를 중점적으로 다루었습니다. 그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 다른 방식으로 다양하게 제공하는 구성 요소를 작성해야 하는 경우도 있습니다. 이러한 구성 요소를 사용하는 경우의 보안 영향에 대해 알아야 합니다. 특히 다음과 같습니다.  
   
--   XML 판독기를 사용해야 하는 경우에는 다른 판독기 대신 <xref:System.Xml.XmlDictionaryReader> 클래스에서 제공하는 판독기를 사용합니다. 안전한 판독기는 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>또는 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 메서드를 사용하여 만들어집니다. <xref:System.Xml.XmlReader.Create%2A> 메서드를 사용하지 마십시오. 판독기는 항상 안전한 할당량으로 구성해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에 있는 serialization 엔진은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공되는 보안 XML 판독기를 사용하는 경우에만 안전합니다.  
+-   XML 판독기를 사용해야 하는 경우에는 다른 판독기 대신 <xref:System.Xml.XmlDictionaryReader> 클래스에서 제공하는 판독기를 사용합니다. 안전한 판독기는 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>또는 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 메서드를 사용하여 만들어집니다. <xref:System.Xml.XmlReader.Create%2A> 메서드를 사용하지 마십시오. 판독기는 항상 안전한 할당량으로 구성해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 있는 serialization 엔진은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공되는 보안 XML 판독기를 사용하는 경우에만 안전합니다.  
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> 를 사용하여 신뢰할 수 없는 데이터를 deserialize할 때는 항상 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> 속성을 설정해야 합니다.  
   
@@ -367,4 +368,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.XmlDictionaryReader>  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [데이터 계약 알려진된 형식](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [데이터 계약 알려진 형식](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

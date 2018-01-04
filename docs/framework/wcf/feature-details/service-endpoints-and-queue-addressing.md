@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2c8b85c2920133e21e7659ca0c27e28ab4a8eae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 끝점 및 큐 주소 지정
 이 항목에서는 클라이언트가 큐에서 읽는 서비스에 주소를 지정하는 방법 및 서비스 끝점이 큐에 매핑되는 방법을 설명합니다. 다음 그림은 기본 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 대기 중인 응용 프로그램 배포를 보여 줍니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
   
  net.msmq: / / \< *호스트 이름*> / [개인 /] \< *큐 이름*>  
   
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
 -   \<*호스트 이름*> 대상 큐를 호스팅하는 컴퓨터의 이름입니다.  
   
@@ -115,4 +116,4 @@ ms.lasthandoff: 12/02/2017
  `MsmqIntegrationBinding`과 함께 net.msmq:// 주소 지정을 사용할 수 없습니다. `MsmqIntegrationBinding`이 자유 형식의 MSMQ 형식 이름 주소 지정을 지원하므로 이 바인딩을 통해 MSMQ의 멀티캐스트 및 메일 그룹 기능을 사용하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 사용할 수 있습니다. 한 가지 예외의 경우는 `CustomDeadLetterQueue`을 사용할 때 `MsmqIntegrationBinding`를 지정하는 것입니다. 이 경우 net.msmq:// 형식이어야 하며, `NetMsmqBinding`을 사용하여 지정하는 방법과 비슷합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [큐에 대기 중인된 응용 프로그램 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [대기 중인 응용 프로그램 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

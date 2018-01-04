@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7104aa2fee49a21dab7fcc8392a9d4bb291203fe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c6a3f95f2ecea342072de010a6cee51069f755fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-service-data-partitioning"></a>방법: 서비스 데이터 분할
 이 항목에서는 동일한 대상 서비스의 여러 인스턴스에서 메시지를 분할하는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 일반적으로 서비스 데이터 분할은 더 좋은 품질의 서비스를 제공하기 위해 서비스의 크기를 조정해야 하는 경우나 다양한 고객의 요청을 특정 방식으로 처리해야 하는 경우에 사용됩니다. 예를 들어 우수 또는 "골드" 고객의 메시지는 일반 고객의 메시지 보다 더 높은 우선 순위로 처리 해야 합니다.  
@@ -108,7 +109,7 @@ ms.lasthandoff: 10/18/2017
     </behaviors>  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 구성 파일의 전체 목록입니다.  
   
 ```xml  

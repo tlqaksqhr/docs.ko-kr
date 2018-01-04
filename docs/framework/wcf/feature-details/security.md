@@ -17,18 +17,19 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 38f62a6ccc0c9291f3963173475f99d5800feb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f2314c8def27bac9e64685d2af3cdd7639332f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 보안
 이 단원의 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안 기능과 이러한 보안 기능을 사용하여 메시지의 보안을 유지하는 방법에 대해 설명합니다.  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric과 보안을 참조 하십시오. [Windows Server AppFabric 보안 모델](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 보안 기능을 설명합니다.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/18/2017
  [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  사용자 지정 보안 바인딩을 만드는 방법을 보여 주는 항목을 비롯한 바인딩의 보안 지향적인 뷰입니다.  
   
- [서비스 및 클라이언트 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 기능을 사용하여 메시지의 보안을 유지하는 방법을 설명합니다.  
   
  [인증](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/18/2017
  [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  보안 구현을 사용하여 일반적인 인증 시나리오를 설명합니다.  
   
- [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [페더레이션 및 발급된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  페더레이션 기본 사항 및 페더레이션 서버와 통신하는 클라이언트를 만드는 방법을 설명합니다.  
   
  [부분 신뢰](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/18/2017
  [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  보안 이벤트를 감사하는 방법을 설명합니다.  
   
- [보안 지침 및 모범 사례](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [보안 지침 및 최선의 방법](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  보안 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 만드는 데 필요한 지침입니다.  
   
 ## <a name="reference"></a>참조  

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edb53e6cd234a059ebd3e7ddff9aaa258ae6027b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8d9b63e4cb056cf72f2e7b4796883f3fc2873a49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-security"></a>피어 채널 보안
 피어 채널에서는 다양한 메시징에 따라 여러 배포 응용 프로그램 형식을 사용할 수 있습니다. 일부 예제에는 인터넷 범위의 콘텐츠 배포가 포함되며, 이를 통해 신뢰할 수 있는 소스는 미디어 또는 소프트웨어 업데이트와 같은 콘텐츠를 배포하고, 친구 그룹은 음악과 사진을 교환하며, 동료 팀은 하나의 문서를 공동으로 편집할 수 있습니다. 이러한 각각의 시나리오에는 고유 보안 모델이 필요합니다. 피어 채널 보안 모델은 이러한 시나리오를 설명하고, 여러 ID, 인증 및 권한 부여 모델 각각의 요구에 대해 안전한 보안 모델을 제공하기 위해 디자인되었습니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cb3b38a2587105a786a16aee7ecf424a5a23294
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 455929144f771128ca070cd02e65c919ce4c741f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>방법: 코드를 사용하여 서비스에 대한 메타데이터 게시
 이 항목은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스의 메타데이터 게시를 설명하는 두 가지 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 코드를 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/02/2017
   
 11. Internet Explorer를 사용하여 서비스의 기본 주소(이 샘플에서는 http://localhost:8001/MetadataSample)를 찾아 메타데이터 게시가 설정되어 있는지 확인합니다. 웹 페이지의 맨 위에 "간단한 서비스"라는 메시지가 표시되고 바로 아래에 "서비스를 만들었습니다."라는 메시지가 표시됩니다. 그렇지 않으면 "이 서비스에 대한 메타데이터 게시는 현재 사용할 수 없습니다."라는 메시지가 결과 페이지의 맨 위에 표시됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 코드에 서비스의 메타데이터를 게시하는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 구현을 보여 줍니다.  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
@@ -99,6 +100,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>참고 항목  
  [방법: 관리되는 응용 프로그램에서 WCF 서비스 호스트](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
  [자체 호스팅](../../../../docs/framework/wcf/samples/self-host.md)  
- [메타 데이터 아키텍처 개요](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [메타 데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [방법: 구성 파일을 사용 하 여 서비스에 대 한 메타 데이터를 게시 합니다.](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+ [메타데이터 아키텍처 개요](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [방법: 구성 파일을 사용하여 서비스의 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

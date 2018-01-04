@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 441b3a72d5b0a9e63d6093bc130335801503489e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad5e459e7dc070b9412de860048c840f677421f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 보안을 위한 최선의 방법
 다음 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 보안 응용 프로그램을 만들 때 고려할 최선의 방법이 나열되어 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]보안 참조 [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), 및 [메타 데이터의 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)합니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
  전달 공격 NTLM의 개요,로 이동 [http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571)합니다.  
   
 ## <a name="always-revert-after-impersonation"></a>가장 후 항상 되돌리기  
- 클라이언트의 가장을 사용하도록 설정한 API를 사용하는 경우, 원래 ID로 되돌려야 합니다. 예를 들어 <xref:System.Security.Principal.WindowsIdentity> 및 <xref:System.Security.Principal.WindowsImpersonationContext>를 사용하는 경우에는 다음 코드에서처럼 C# `using` 문 또는 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` 문을 사용합니다. <xref:System.Security.Principal.WindowsImpersonationContext> 클래스는 <xref:System.IDisposable> 인터페이스를 구현하므로 코드가 `using` 블록을 벗어나면 CLR(공용 언어 런타임)은 원래 ID로 자동으로 되돌아갑니다.  
+ 클라이언트의 가장을 사용하도록 설정한 API를 사용하는 경우, 원래 ID로 되돌려야 합니다. 예를 들어, 사용 하는 경우는 <xref:System.Security.Principal.WindowsIdentity> 및 <xref:System.Security.Principal.WindowsImpersonationContext>, C#을 사용 하 여 `using` 문 또는 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] `Using` 다음 코드와 같이 문을 합니다. <xref:System.Security.Principal.WindowsImpersonationContext> 클래스는 <xref:System.IDisposable> 인터페이스를 구현하므로 코드가 `using` 블록을 벗어나면 CLR(공용 언어 런타임)은 원래 ID로 자동으로 되돌아갑니다.  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
@@ -69,5 +70,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- [메타 데이터의 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+ [데이터에 대한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

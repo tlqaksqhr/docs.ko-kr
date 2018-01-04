@@ -14,11 +14,12 @@ caps.latest.revision: "58"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 062167742a70307949624066b8607a37d5c7ed71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c69f79d8629acee80a2e59346032e7733ec37dea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>방법: Windows Communication Foundation 서비스 계약 정의
 이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 필요한 6가지 작업 중 첫 번째 작업입니다. 모든 6 가지 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 12/02/2017
      이 계약은 온라인 계약을 정의합니다. `ICalculator` 인터페이스에는 <xref:System.ServiceModel.ServiceContractAttribute> 특성이 표시되어 있습니다. 이 특성은 계약 이름을 명확히 나타내는 데 사용하는 네임스페이스를 정의합니다. 각 계산기 연산에는 <xref:System.ServiceModel.OperationContractAttribute> 특성이 표시되어 있습니다.  
   
     > [!NOTE]
-    >  특성을 사용하여 인터페이스, 멤버 또는 클래스에 주석을 달 때 특성 이름에서 "특성" 부분을 삭제할 수 있습니다. 따라서 <xref:System.ServiceModel.ServiceContractAttribute>는 `[ServiceContract]`(C#의 경우) 또는 `<ServiceContract>`(Visual Basic의 경우)가 됩니다.  
+    >  특성을 사용하여 인터페이스, 멤버 또는 클래스에 주석을 달 때 특성 이름에서 "특성" 부분을 생략할 수 있습니다. 따라서 <xref:System.ServiceModel.ServiceContractAttribute>는 `[ServiceContract]`(C#의 경우) 또는 `<ServiceContract>`(Visual Basic의 경우)가 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.ServiceContractAttribute>  

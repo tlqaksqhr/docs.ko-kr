@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b14aa97f1483b3c69bfecfa0b625e590c0c37836
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 124bf59f29ff04e643200edf686f79f573937a03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-format-selection"></a>고급 포맷 선택
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 확장하여 나가는 응답의 새로운 형식을 지원하는 방법을 보여 줍니다. 또한 이 샘플에서는 T4 템플릿을 사용하여 응답을 XHTML 페이지로 반환하고, 뷰 스타일 프로그래밍 모델을 구현하는 방법을 보여 줍니다.  

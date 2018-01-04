@@ -19,18 +19,19 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d1952632b29450a441d3cf0c7d66bffc000ea5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6cec2356159b59e58ac6785a2988df7b2fac0e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-and-drawing-paths"></a>경로 구성 및 그리기
 경로 시퀀스의 기본 그래픽 (선, 사각형, 곡선, 텍스트 및 like)를 조작 하 고 하나의 단위로 그릴 수 있습니다. 경로 나눌 수 있으며 *수치* 열려 있거나 닫힌 합니다. 도형 여러 기본 요소를 포함할 수 있습니다.  
   
  호출 하 여 패스를 그릴 수는 <xref:System.Drawing.Graphics.DrawPath%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스를 호출 하 여 경로 채울 수는 <xref:System.Drawing.Graphics.FillPath%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 선, 곡선 및 도형으로 그림 만들기](../../../../docs/framework/winforms/advanced/how-to-create-figures-from-lines-curves-and-shapes.md)  
  사용 하는 방법을 보여 줍니다.는 <xref:System.Drawing.Drawing2D.GraphicsPath> 에 그림을 만듭니다.  
   

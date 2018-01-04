@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b89453b427e6a9552416f95c488f0c2a575b5cb4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d44805021f0070109ce67f28126d59d36e4175f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coordinate-systems-and-transformations"></a>좌표계 및 변형
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]변형할 수 있도록 전역 변환 및 페이지 변환을 제공 (회전, 크기 조정, 변환, 및 등) 사용자가 그린 항목입니다. 두 개의 변환에서는 다양 한 좌표 시스템에서에서 작동 하도록 수도 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [좌표계 형식](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
  좌표계 및 변환 소개합니다.  
   

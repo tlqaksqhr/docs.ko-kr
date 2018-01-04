@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7774af6c1531e48be29351299555a650548687f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-interceptor"></a>사용자 지정 메시지 인터셉터
 이 샘플에서는 채널 확장성 모델의 사용 방법을 보여 줍니다. 특히 채널 팩터리 및 채널 수신기를 만드는 사용자 지정 바인딩 요소를 구현하여 런타임 스택의 특정 지점에서 들어오고 보내는 모든 메시지를 가로채는 방법을 보여 줍니다. 또한 이 샘플에는 이 사용자 지정 팩터리의 사용을 보여 주는 클라이언트와 서버도 포함되어 있습니다.  
@@ -144,7 +145,7 @@ Server dropped a message.
 Press ENTER to shut down client  
 ```  
   
- 클라이언트가 서로 다른 10가지 풍속을 서비스에 보고하지만, 그 중 절반에만 특수 헤더를 붙입니다.  
+ 클라이언트가 서로 다른 10가지 풍속을 서비스에 보고하지만, 그 중 절반에만 특수 헤더를 태그합니다.  
   
  서비스에서는 다음과 같이 출력됩니다.  
   

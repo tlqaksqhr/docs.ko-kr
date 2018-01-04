@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b60b31133a3721611285b5b4caa93d3c34e193f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01e841e76c4a6cf06169113422921367d671ea98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-schemas-from-classes"></a>클래스에서 스키마 내보내기
 데이터 계약 모델에 사용되는 클래스에서 XSD(XML 스키마 정의 언어) 스키마를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractExporter> 클래스를 사용합니다. 이 항목에서는 스키마를 만드는 프로세스에 대해 설명합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="the-export-process"></a>내보내기 프로세스  
  스키마 내보내기 프로세스는 하나 이상의 형식으로 시작되고 해당 형식의 XML 프로젝션을 설명하는 <xref:System.Xml.Schema.XmlSchemaSet> 를 생성합니다.  
   
- `XmlSchemaSet` 는 XSD 스키마 문서 집합을 나타내는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]SOM(Schema Object Model)의 일부입니다. `XmlSchemaSet`에서 XSD 문서를 만들려면 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 클래스의 `XmlSchemaSet` 속성에서 스키마 컬렉션을 사용합니다. 그런 다음 <xref:System.Xml.Schema.XmlSchema> 를 사용하여 각 <xref:System.Xml.Serialization.XmlSerializer>개체를 serialize합니다.  
+ `XmlSchemaSet`는 XSD 스키마 문서 집합을 나타내는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SOM(Schema Object Model)의 일부입니다. `XmlSchemaSet`에서 XSD 문서를 만들려면 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 클래스의 `XmlSchemaSet` 속성에서 스키마 컬렉션을 사용합니다. 그런 다음 <xref:System.Xml.Schema.XmlSchema> 를 사용하여 각 <xref:System.Xml.Serialization.XmlSerializer>개체를 serialize합니다.  
   
 #### <a name="to-export-schemas"></a>스키마를 내보내려면  
   

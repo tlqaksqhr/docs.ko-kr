@@ -21,18 +21,19 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4af2664851ed0903a362a4b88edf1db9bb042dfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a7cae1284fbcabf70976866338ba37c6ee5710e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>방법: 불투명 및 반투명 브러시를 사용하여 그리기
 셰이프를 채울 때 <xref:System.Drawing.Brush> 개체를 <xref:System.Drawing.Graphics> 클래스의 채우기 메서드 중 하나에 전달해야 합니다. <xref:System.Drawing.SolidBrush.%23ctor%2A> 생성자의 매개 변수 중 하나는 <xref:System.Drawing.Color> 개체입니다. 불투명 셰이프를 채우려면 색의 알파 구성 요소를 255로 설정합니다. 반투명 셰이프를 채우려면 알파 구성 요소를 1에서 254 사이의 임의 값으로 설정합니다.  
   
  반투명 셰이프를 채우면 셰이프 색이 배경색과 혼합됩니다. 알파 구성 요소는 셰이프 색과 배경색을 혼합하는 방법을 지정합니다. 알파 값이 0에 가까우면 배경색에 더 많은 가중치가 적용되고 알파 값이 255에 가까우면 셰이프 색에 더 많은 가중치가 적용됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 비트맵을 그린 다음 이 비트맵과 겹치는 세 개의 타원을 채웁니다. 첫 번째 타원은 알파 구성 요소 255를 사용하므로 불투명합니다. 두 번째 및 세 번째 타원은 알파 구성 요소 128을 사용하므로 반투명합니다. 타원을 통과하는 배경 이미지를 볼 수 있습니다. <xref:System.Drawing.Graphics.CompositingQuality%2A> 속성을 설정하는 호출은 감마 보정과 함께 세 번째 타원에 대한 혼합이 수행되도록 합니다.  
   
  다음 그림에서는 다음 코드의 출력을 보여 줍니다.  

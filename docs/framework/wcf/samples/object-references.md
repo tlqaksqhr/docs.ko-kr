@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e734f7909265b4e811b462f81d471b24b6330d6a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a86b442ffeeeb77a0c124b9b3e3441ba24d68e4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-references"></a>개체 참조
 이 샘플에서는 서버와 클라이언트 간에 개체를 참조로 전달하는 방법을 보여 줍니다. 샘플에서는 시뮬레이션 된 *소셜 네트워크*합니다. 인맥 네트워크는 친구 목록을 포함하는 `Person` 클래스로 구성되며, 이 목록의 친구는 `Person` 클래스의 인스턴스이며 자체적으로도 친구 목록을 가지고 있습니다. 이를 기반으로 개체 그래프가 생성됩니다. 서비스는 이러한 인맥 네트워크에 대한 작업을 노출합니다.  
@@ -125,4 +126,4 @@ public List<Person> GetCommonFriends(List<Person> people)
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- [상호 운용 가능한 개체 참조](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)
+ [상호 운영 가능한 개체 참조](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

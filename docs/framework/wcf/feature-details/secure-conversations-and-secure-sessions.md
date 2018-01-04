@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 6647ef8124279e9fc0b3049beb5c87f887125dfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d519640c40daf248a01a19f0450f3aea8de6cc04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>보안 대화 및 보안 세션
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 특징은 서로를 인증하고 암호화 및 디지털 서명 프로세스에 동의하는 두 개의 끝점 사이에 보안 세션을 설정하는 기능입니다. 예를 들어, 서비스 끝점은 인증을 위해 X.509 인증서에 기반한 보안 토큰을 보낼 클라이언트 끝점이 필요할 수 있습니다. 클라이언트가 인증되면 서비스 끝점은 세션 내의 모든 후속 메시지 보안을 설정하는 데 사용되는 클라이언트에게 SCT(보안 컨텍스트 토큰)를 다시 반환합니다. 이 보안 세션을 설정하면 SCT에 대칭 키가 포함되기 때문에 두 개의 끝점 간에 교환되는 메시지 집합이 훨씬 효율적일 수 있습니다. X.509 인증서가 기준으로 하는 비대칭 키는 디지털 서명을 생성하거나 데이터 집합을 암호화할 때 대칭 키보다 훨씬 더 많은 계산 능력이 필요합니다.  

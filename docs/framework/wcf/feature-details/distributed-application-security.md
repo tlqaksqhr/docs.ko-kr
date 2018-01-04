@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 842ce0efefcc026ad33d9be3b2b681fcfc9c0b59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributed-application-security"></a>분산 응용 프로그램 보안
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안은 전송 보안, 액세스 제어 및 감사의 세 가지 주 기능 영역으로 분류됩니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 |설정|설명|  
 |-------------|-----------------|  
 |없음|클라이언트가 자격 증명을 제공할 필요가 없음을 지정합니다. 익명 클라이언트로 변환됩니다.|  
-|기본|기본 인증을 지정합니다.  자세한 내용은 RFC2617, 참조 "[HTTP 인증: 기본 및 다이제스트 인증](http://go.microsoft.com/fwlink/?LinkId=88313)."|  
+|Basic|기본 인증을 지정합니다.  자세한 내용은 RFC2617, 참조 "[HTTP 인증: 기본 및 다이제스트 인증](http://go.microsoft.com/fwlink/?LinkId=88313)."|  
 |Digest|다이제스트 인증을 지정합니다.  자세한 내용은 RFC2617, 참조 "[HTTP 인증: 기본 및 다이제스트 인증](http://go.microsoft.com/fwlink/?LinkId=88313)."|  
 |Ntlm|Windows 도메인에서 SSPI 협상을 사용하여 Windows 인증을 지정합니다.<br /><br /> SSPI 협상은 Kerberos 프로토콜 또는 NTLM(NT LanMan)을 사용합니다.|  
 |Windows|Windows 도메인에서 SSPI를 사용하여 Windows 인증을 지정합니다. SSPI는 Kerberos 프로토콜 또는 NTLM을 인증 서비스로 선택합니다.<br /><br /> SSPI는 Kerberos 프로토콜을 먼저 시도한 다음 실패하면 NTLM을 사용합니다.|  

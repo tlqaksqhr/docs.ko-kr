@@ -12,16 +12,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4b890b80880638fae62c1ae79f8d2f436ef309
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 368e6a4514eafdf4d3c5b38c5e31ff21e56f67e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL 워크플로 인스턴스 저장소의 속성
 이 단원의 항목에서는 SQL 워크플로 인스턴스 저장소의 속성에 대해 자세히 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [인스턴스 인코딩 옵션](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
   

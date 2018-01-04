@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b929765580f392b5fbd825a9c14bdc6f53c1e96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 988216447e47345b6d863de6e46d0de9a025f068
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-internet-information-services"></a>인터넷 정보 서비스에서의 호스팅
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 호스팅에 대한 한 가지 옵션은 IIS(인터넷 정보 서비스) 응용 프로그램 내부에 있습니다. 이 호스팅 모델은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 및 ASP.NET 웹 서비스(ASMX) 웹 서비스에서 사용되는 모델과 비슷합니다.  
@@ -66,9 +67,9 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 응용 프로그램 플랫폼에서 제공하는 기능을 최대한 활용할 수 있는 서비스의 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환 모드에서 단계적으로 호스트될 수 있습니다. 이러한 기능의 논의 알려면 [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ServiceHostFactory를 사용 하 여 호스팅](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
- [인터넷 정보 서비스에서 호스팅되는 WCF 서비스 배포](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
+ [ServiceHostFactory를 사용하여 호스팅 확장](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
+ [인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
  [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
  [인터넷 정보 서비스 호스팅을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Windows Communication Foundation에 대 한 인터넷 정보 서비스 7.0 구성](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  
+ [Windows Communication Foundation에 대해 Internet Information Services 7.0 구성](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  
  [Windows Server App Fabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe09e2c91df0c25f070e06a39ce5e94a54062a20
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션
 이 항목에서는 기본 ASP.NET AJAX 서비스를 해당 AJAX 사용 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스로 마이그레이션하는 절차에 대해 간략하게 설명합니다. 동일한 기능의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 버전 ASP.NET AJAX 서비스를 만드는 방법을 보여 줍니다. 그런 다음 두 서비스를 병행하여 사용하거나 ASP.NET AJAX 서비스를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스로 대체하여 사용할 수 있습니다.  
@@ -120,7 +121,7 @@ ms.lasthandoff: 12/02/2017
   
 11. `WCFHello.svc/HelloWorld` 및 `Service1.aspx/HelloWorld` 끝점은 현재 기능적으로 동일 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 항목에서 간략히 설명된 절차에서 얻어진 코드는 다음 예제에 나와 있습니다.  
   
 ```  
@@ -223,4 +224,4 @@ d.Add("two", 2);
 |이스케이프된 문자|항상 이스케이프 슬래시(/)가 포함되고, "\n"과 같이 이스케이프되지 않은 잘못된 JSON 문자는 사용할 수 없습니다.|DateTime 값에 이스케이프 슬래시(/)가 포함됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 구성을 사용 하 여 ASP.NET AJAX 끝점 추가](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+ [방법: 구성을 사용하여 ASP.NET AJAX 끝점 추가](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

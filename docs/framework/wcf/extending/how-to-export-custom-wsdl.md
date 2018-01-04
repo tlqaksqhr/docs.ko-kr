@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ca34f04fe4ffa53bcb9bd85e5a6f3aa69b96465
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d4b34cc564dea5f189de29c9425c840ec96c80fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-custom-wsdl"></a>방법: 사용자 지정 WSDL 내보내기
 이 항목에서는 사용자 지정 WSDL 정보를 내보내는 방법에 대해 설명합니다. 이 작업을 수행하려면 서비스에서 생성되는 WSDL에 사용자 지정 정보를 추가할 `WsdlDocumentationAttribute`라는 새 코드 특성을 정의합니다.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/02/2017
                 }  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 `WsdlDocumentationAttribute` 클래스의 전체 구현을 보여 줍니다.  
   
 ```  
@@ -206,4 +207,4 @@ return lines;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [메타 데이터](../../../../docs/framework/wcf/feature-details/metadata.md)
+ [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)

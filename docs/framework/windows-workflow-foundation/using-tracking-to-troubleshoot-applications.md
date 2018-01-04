@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>추적을 사용하여 응용 프로그램 문제 해결
 [!INCLUDE[wf](../../../includes/wf-md.md)]을 사용하면 워크플로 관련 정보를 추적하여 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 응용 프로그램 또는 서비스의 실행에 대한 세부 정보를 제공할 수 있습니다. [!INCLUDE[wf2](../../../includes/wf2-md.md)] 호스트는 워크플로 인스턴스 실행 중에 워크플로 이벤트를 캡처할 수 있습니다. 워크플로에서 오류나 예외가 생성되면 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 추적 세부 정보를 사용하여 처리 문제를 해결할 수 있습니다.  

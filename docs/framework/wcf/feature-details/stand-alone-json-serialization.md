@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>독립 실행형 JSON Serialization
 JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실행되는 JavaScript 코드에 의해 사용되도록 특별히 디자인된 데이터 형식이며 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 만든 ASP.NET AJAX 서비스에 의해 사용되는 기본 데이터 형식입니다.  
@@ -271,4 +272,4 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  serializer는 유효한 XML 이름이 아닌 키 이름을 XML 인코딩합니다. 예를 들어 "123" 이름 가진 데이터 멤버는 인코딩된 이름을 갖게와 같은 "_x0031\__x0032\__x0033\_" 있으므로 "123"은 잘못 된 XML 요소 이름 (숫자로 시작)입니다. XML 이름에 유효하지 않은 일부 국제 문자 집합이 포함되는 경우에도 비슷한 상황이 발생할 수 있습니다. 참조에 대 한 설명은이 XML의 JSON 처리에이 영향 [JSON 간 매핑 및 XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [전송 형식 JSON 및 기타 데이터에 대 한 지원](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [JSON 및 기타 데이터 전송 형식에 대한 지원](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

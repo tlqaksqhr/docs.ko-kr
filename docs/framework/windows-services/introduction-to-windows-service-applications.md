@@ -31,11 +31,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d24daf5520c7bfe74c09abc24a4260266e5b9c1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 서비스 응용 프로그램 소개
 Microsoft Windows 서비스, 이전의 NT 서비스를 사용 하 여 자신의 Windows 세션에서 실행 되 긴 실행 가능한 응용 프로그램을 만들 수 있습니다. 이러한 서비스 자동으로 시작 되는 컴퓨터를 부팅할 때 일시 중지 및 다시 시작 하 고 사용자 인터페이스를 표시 하지 않습니다. 이러한 기능은 동일한 컴퓨터에서 작업 하는 다른 사용자와 방해 하지 않는 장기 실행 기능이 필요할 때마다 또는 서버에서 사용 하기에 적합 서비스를 확인 합니다. 로그온 한 사용자와에서 다른 특정 사용자 계정 또는 기본 컴퓨터 계정의 보안 컨텍스트에서 서비스를 실행할 수 있습니다. 서비스 및 Windows 세션에 대 한 자세한 내용은 Windows SDK 설명서를 참조 합니다.  
@@ -80,7 +81,7 @@ Microsoft Windows 서비스, 이전의 NT 서비스를 사용 하 여 자신의 
 ## <a name="services-and-the-servicecontroller-component"></a>서비스 및 ServiceController 구성 요소  
  <xref:System.ServiceProcess.ServiceController> 구성 요소가 설치 된 서비스에 연결 하 고의 상태를 관리 하는 데 사용, 사용 하 여 한 <xref:System.ServiceProcess.ServiceController> 구성 요소 및 서비스 중지, 일시 중지 및 계속의 작동을 시작 서비스에 사용자 지정 명령을 보냅니다. 그러나 않아도 사용 하는 <xref:System.ServiceProcess.ServiceController> 서비스 응용 프로그램을 만들 때 구성 요소입니다. 실제로 대부분의 경우에 프로그램 <xref:System.ServiceProcess.ServiceController> 구성 요소 서비스를 정의 하는 Windows 서비스 응용 프로그램에서 별도 응용 프로그램에 있어야 합니다.  
   
- 자세한 내용은 <xref:System.ServiceProcess.ServiceController>을 참조하십시오.  
+ 자세한 내용은 <xref:System.ServiceProcess.ServiceController>을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -94,6 +95,6 @@ Microsoft Windows 서비스, 이전의 NT 서비스를 사용 하 여 자신의 
  [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
  [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)  
- [방법: Windows 서비스 응용 프로그램 디버그](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [연습: 구성 요소 디자이너에는 Windows 서비스 응용 프로그램 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- [방법: 서비스 응용 프로그램에 설치 관리자를 추가 합니다.](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+ [방법: Windows 서비스 응용 프로그램 디버깅](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [방법: 서비스 응용 프로그램에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

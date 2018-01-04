@@ -17,11 +17,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14020e62e936ae6a9acad25c6c24d937feb150af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
 일반적으로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 빌드할 때 개발자는 데이터 구조 및 serialization 문제에 특히 주의를 기울여야 하지만 데이터가 전달되는 메시지의 구조에 대해서는 주의를 기울이지 않아도 됩니다. 이러한 응용 프로그램의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [데이터 전송 서비스 계약에 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  

@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd717b24eaf161145249e175425bd5296f3ef727
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리
 대기 중인 메시지를 배달하지 못할 수 있습니다. 이러한 실패 메시지는 배달 못 한 편지 큐에 기록됩니다. 네트워크 오류, 삭제된 큐, 꽉 찬 큐, 인증 오류 또는 정시 배달 실패와 같은 이유로 인해 배달 실패가 발생할 수 있습니다.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/02/2017
   
  `ReceiveErrorHandling`이 `Reject`로 설정된 경우 사용자 지정 배달 못 한 편지 큐에서 메시지를 읽으면 포이즌 메시지가 배달 못 한 시스템 큐에 저장됩니다. 배달 못 한 시스템 큐에서 메시지를 읽는 경우 메시지가 손실/삭제됩니다. MSMQ에서 배달 못 한 시스템 큐의 거부로 인해 메시지가 손실/삭제됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 배달 못 한 편지 큐를 만드는 방법 및 이를 사용하여 만료된 메시지를 처리하는 방법을 보여 줍니다. 예제를 기반으로 하는 예제 [하는 방법: WCF 끝점으로 메시지 큐에 대기를 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)합니다. 다음 예제에서는 각 응용 프로그램의 배달 못 한 편지 큐를 사용하는 주문 처리 서비스에 클라이언트 코드를 작성하는 방법을 보여 줍니다. 또한 예제에서는 배달 못 한 편지 큐에서 메시지를 처리하는 방법을 보여 줍니다.  
   
  다음은 각 응용 프로그램의 배달 못 한 편지 큐를 지정하는 클라이언트의 코드입니다.  
@@ -85,5 +86,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [큐 개요](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [방법: 대기 중인 WCF 끝점으로 메시지를 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [방법: 대기 중인 메시지와 WCF 끝점 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

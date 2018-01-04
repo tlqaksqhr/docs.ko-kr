@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4a1dfb2f517496cab1dcc2a57be3082c7c6f1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e4f1f3f9e840ba422e327792ec2b0554fad45902
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-instance-context"></a>영속 인스턴스 컨텍스트
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 런타임을 사용자 지정하여 영속 인스턴스 컨텍스트를 사용하는 방법을 보여 줍니다. 여기서는 SQL Server 2005를 백업 저장소(이 경우 SQL Server 2005 Express)로 사용합니다. 사용자 지정 저장소 메커니즘에 액세스하는 방법도 제공합니다.  
@@ -401,7 +402,7 @@ public class ShoppingCart : IShoppingCart
  }  
 ```  
   
- 클라이언트 응용 프로그램에서는 사용자 지정 바인딩을 사용하여 채널 스택에 DurableInstanceContextChannel을 추가해야 합니다. 구성 파일에서 선언적으로 채널을 구성하려면 바인딩 요소 섹션을 바인딩 요소 확장 컬렉션에 추가해야 합니다.  
+ 클라이언트 응용 프로그램에서는 사용자 지정 바인딩을 사용하여 채널 스택에 DurableInstanceContextChannel을 추가해야 합니다. 구성 파일에서 선언적으로 채널을 구성하려면 바인딩 요소 섹션을 바인딩 요소 확장명 컬렉션에 추가해야 합니다.  
   
 ```xml  
 <system.serviceModel>  

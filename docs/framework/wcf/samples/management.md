@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06fb93e30467ce890be11826329f678e1d720b39
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fa1fb42ba09b1c4e855e3c05e80418d7e278614
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="management"></a>관리
 이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 관리를 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [WCF 서비스와 Windows 용 이벤트 추적](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [WCF 서비스 및 Windows용 이벤트 추적](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 분석 추적을 사용하여 ETW(Windows용 이벤트 추적)의 이벤트를 내보내는 방법을 보여 줍니다.  
   
  [WCF 분석 추적](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
  [PII 보안 잠금](../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스의 여러 보안 관련 기능을 제어하는 방법을 보여 줍니다.  
   
- [성능 카운터를 사용 하 여](../../../../docs/framework/wcf/samples/using-performance-counters.md)  
+ [성능 카운터 사용](../../../../docs/framework/wcf/samples/using-performance-counters.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 성능 카운터에 액세스하는 방법과 사용자 정의 성능 카운터를 만드는 방법을 보여 줍니다.  
   
  [추적 및 메시지 로깅](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)  

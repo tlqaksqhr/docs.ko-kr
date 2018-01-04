@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 13f6bd17e1295ea72f25710d7ae5e2803c94aad1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 284805f8ca1fb9778dc6bccd9807fa86dc7e2d77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-setup-issues"></a>설치 문제 해결
 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 설치 문제를 해결하는 방법을 설명합니다.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/02/2017
  문제를 해결 하려면 사용 하 여가이 문제는 [워크플로 서비스 등록 도구 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) 와 `/c` 컴퓨터에서 IIS 스크립트 맵을 구성 하는 스위치입니다. [워크플로 서비스 등록 도구 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) %windir%\Microsoft.NET\framework\v3.5\ 또는 %windir%\Microsoft.NET\framework64\v3.5\에서 찾을 수  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’ 어셈블리에서 ‘System.ServiceModel.Activation.HttpModule’ 형식을 로드할 수 없습니다.  
- 이 오류는 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]을 설치한 다음 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] HTTP 활성화를 사용하도록 설정한 경우에 발생합니다. 이 문제를 해결하려면 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 명령 프롬프트에서 다음 명령줄을 실행합니다.  
+ 이 오류가 발생 하는 경우 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 가 설치 되어 다음 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] HTTP 활성화가 사용 합니다. 이 문제를 해결하려면 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 명령 프롬프트에서 다음 명령줄을 실행합니다.  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

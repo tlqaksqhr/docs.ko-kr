@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 87965b8802dd770d6977154ab805889838e9c5e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 975014007ed57cc7e4b1035972923f61753c6d4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="token-provider"></a>Token Provider
 이 샘플에서는 사용자 지정 토큰 공급자를 구현하는 방법을 보여 줍니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 토큰 공급자는 보안 인프라에 자격 증명을 제공하는 데 사용됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 기본 자격 증명 관리자 토큰 공급자를 제공합니다. 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자를 제공합니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
   
 -   사용자 지정 토큰을 빌드하고 있는 경우  
   
- 이 샘플에서는 사용자의 입력을 다른 형식을 변환하는 사용자 지정 토큰 공급자를 빌드하는 방법을 보여 줍니다.  
+ 이 샘플에서는 사용자의 입력을 다른 형식을 변형하는 사용자 지정 토큰 공급자를 빌드하는 방법을 보여 줍니다.  
   
  즉, 이 샘플에서는 다음 방법을 보여 줍니다.  
   

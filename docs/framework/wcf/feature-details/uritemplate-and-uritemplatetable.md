@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 및 UriTemplateTable
 웹 개발자는 서비스가 응답하는 URI의 셰이프 및 레이아웃을 설명할 수 있어야 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 개발자가 URI를 제어할 수 있는 두 가지 새 클래스가 추가되었습니다. <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 URI 기반 디스패치 엔진의 기초를 형성합니다. 이러한 클래스를 자체적으로 사용하면 개발자가 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 구현하지 않고도 URI 매핑 메커니즘과 템플릿을 활용할 수 있습니다.  
@@ -347,4 +348,4 @@ Console.WriteLine("Bound URI: {0}", boundUri);
  [WCF 웹 HTTP 프로그래밍 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  [UriTemplate 테이블](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [UriTemplate 테이블 디스패처 샘플](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+ [UriTemplate 테이블 디스패처](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

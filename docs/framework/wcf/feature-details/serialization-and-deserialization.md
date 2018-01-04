@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 에는 새로운 serialization 엔진인 <xref:System.Runtime.Serialization.DataContractSerializer>가 포함되어 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -213,7 +214,7 @@ ms.lasthandoff: 12/02/2017
 >  단계별 serialization을 사용하면 스키마에 유효하지 않은 XML이 생성될 수 있습니다.  
   
 ## <a name="deserialization"></a>Deserialization  
- 다음과 같은 정보는 <xref:System.Runtime.Serialization.XmlObjectSerializer>및 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 포함하여, <xref:System.Runtime.Serialization.NetDataContractSerializer> 에서 상속되는 모든 클래스에 적용됩니다.  
+ 다음과 같은 정보는 <xref:System.Runtime.Serialization.XmlObjectSerializer> 및 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 포함하여, <xref:System.Runtime.Serialization.NetDataContractSerializer>에서 상속되는 모든 클래스에 적용됩니다.  
   
  개체를 deserialize하는 가장 기본적인 방법은 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 메서드 오버로드 중 하나를 호출하는 것입니다. 그리고 세 개의 오버로드가 있는데, 이 각 오버로드는 <xref:System.Xml.XmlDictionaryReader>, `XmlReader`또는 `Stream`을 사용하여 읽기 위한 오버로드입니다. `Stream` 오버로드는 할당량으로 보호되지 않고 신뢰할 수 있는 데이터를 읽는 데만 사용해야 하는 텍스트 <xref:System.Xml.XmlDictionaryReader> 를 만듭니다.  
   
@@ -275,4 +276,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.NetDataContractSerializer>  
  <xref:System.Runtime.Serialization.XmlObjectSerializer>  
  [이진 serialization](../../../../docs/standard/serialization/binary-serialization.md)  
- [데이터 계약 Serializer에서 지 원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+ [데이터 계약 직렬 변환기에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

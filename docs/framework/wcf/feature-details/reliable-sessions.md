@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53bb63fbbcf92650085514118a5e9464ab2dea30
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-sessions"></a>신뢰할 수 있는 세션
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 
 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에서 신뢰할 수 있는 세션을 사용하려면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 신뢰할 수 있는 세션을 기본적으로 또는 선택 사항으로 지원하는 시스템 제공 바인딩 중 하나를 사용하거나 이러한 세션을 지원하는 사용자 지정 바인딩을 직접 만듭니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [신뢰할 수 있는 세션 개요](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)   
 신뢰할 수 있는 세션, 사용 시기, 신뢰할 수 있는 세션을 지원하는 다른 바인딩 및 그러한 바인딩의 작동 방식에 대해 설명합니다.

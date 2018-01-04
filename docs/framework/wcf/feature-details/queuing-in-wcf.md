@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1364aa4284bcc858a9164f78e14daecc1a3ad54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queuing-in-wcf"></a>WCF의 큐
 이 단원에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 대기 중인 통신을 사용하는 방법에 대해 설명합니다.  
@@ -115,13 +116,13 @@ ms.lasthandoff: 12/02/2017
 ### <a name="sample-code"></a>샘플 코드  
  MSMQ를 사용하는 WCF 서비스를 작성하는 방법에 대한 단계별 지침은 다음 항목을 참조하세요.  
   
--   [방법: WCF 끝점을 사용 하 여 메시지를 교환 하 고 메시지의 큐 응용 프로그램](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [방법: 대기 중인 WCF 끝점으로 메시지를 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [방법: 대기 중인 메시지와 WCF 끝점 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  WCF에서 MSMQ 사용을 보여 주는 전체 코드 샘플은 다음 항목을 참조하세요.  
   
--   [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+-   [트랜잭션된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
   
 -   [일시 대기 통신](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
@@ -131,12 +132,12 @@ ms.lasthandoff: 12/02/2017
   
 -   [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md)  
   
--   [트랜잭션 된 일괄 처리](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+-   [트랜잭션된 일괄 처리](../../../../docs/framework/wcf/samples/transacted-batching.md)  
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [메시지 큐에 대 한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+-   [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [큐에 대기 중인된 응용 프로그램 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [대기 중인 응용 프로그램 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

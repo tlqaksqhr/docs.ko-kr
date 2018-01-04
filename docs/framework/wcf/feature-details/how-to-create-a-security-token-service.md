@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: bfb1acc5c1c665ebd410b0a49e8f357e5b9458f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53ae64af0612cb905a2342491761b1e27ef19c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-security-token-service"></a>방법: 보안 토큰 서비스 만들기
 보안 토큰 서비스에서는 WS-Trust 사양에 정의된 프로토콜을 구현합니다. 이 프로토콜은 보안 토큰의 발행, 갱신, 취소 및 유효성 검사를 위한 메시지 형식 및 메시지 교환 패턴을 정의합니다. 지정된 보안 토큰 서비스에서는 하나 이상의 이러한 기능을 제공합니다. 이 항목에서는 가장 일반적인 시나리오인 토큰 발급 구현에 대해 살펴봅니다.  
@@ -130,7 +131,7 @@ ms.lasthandoff: 11/21/2017
   
  이러한 여러 값은 클라이언트에 반환되는 응답 메시지로 serialize됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  보안 토큰 서비스에 대 한 전체 코드를 참조 하십시오. [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
@@ -141,4 +142,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.IdentityModel.Tokens.SamlAssertion>  
  <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>  
  <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>  
- [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)
+ [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)

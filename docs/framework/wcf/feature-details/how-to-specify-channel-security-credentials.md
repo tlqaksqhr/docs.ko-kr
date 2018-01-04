@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>방법: 채널 보안 자격 증명 지정
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 모니커를 사용하여 COM 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 수 있습니다. 대부분의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서는 클라이언트가 인증 및 권한 부여를 위한 자격 증명을 지정해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 경우 관리되는 코드 또는 응용 프로그램 구성 파일에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 경우 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정할 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
@@ -150,6 +151,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)  
  [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

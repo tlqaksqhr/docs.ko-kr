@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf05e3327d7c99d333ab4be045e3f72e6f2a8a3f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8cb7e209397e593ae1fd81c2bc2552e54a32adf0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperability-with-pox-applications"></a>POX 응용 프로그램과의 상호 운용성
 "Plain Old XML" (POX) 응용 프로그램은 SOAP 봉투 내에 포함 되지 않은 XML 응용 프로그램 데이터만 포함 하는 원시 HTTP 메시지를 교환 하 여 통신 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 POX 메시지를 사용하는 서비스 및 클라이언트 모두를 제공할 수 있습니다. 서비스의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 POX 메시지를 보내고 받는 스크립팅 언어 및 웹 브라우저와 같은 클라이언트에 끝점을 노출하는 서비스를 구현할 수 있습니다. 클라이언트의 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 프로그래밍 모델을 사용하여 POX 기반 서비스와 통신하는 클라이언트를 구현할 수 있습니다.  

@@ -13,23 +13,24 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 99c7c0e02d82b9c7d05ab04cd8896449f8a7de89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: abc6aafc5b7676a76db3416d8c88b25a836d21ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contracts"></a>데이터 계약
 이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 데이터 계약을 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [기본 데이터 계약](../../../../docs/framework/wcf/samples/basic-data-contract.md)  
  데이터 계약을 구현하는 방법을 보여 줍니다.  
   
  [DataContractSerializer 샘플](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
  데이터 계약 클래스에 대한 일반 serialization 및 deserialization 서비스를 수행하는 <xref:System.Runtime.Serialization.DataContractSerializer>를 보여 줍니다.  
   
- [알려진된 형식](../../../../docs/framework/wcf/samples/known-types.md)  
+ [알려진 형식](../../../../docs/framework/wcf/samples/known-types.md)  
  데이터 계약에서 파생된 형식의 정보를 지정하는 방법을 보여 줍니다.  
   
  [개체 참조](../../../../docs/framework/wcf/samples/object-references.md)  

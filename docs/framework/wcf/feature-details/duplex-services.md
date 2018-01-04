@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5c7cb9d963e56c6a6e06421afdb14427440643c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 08fcb852977272d593229abea426abc8bf9b7e48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="duplex-services"></a>이중 서비스
 이중 서비스 계약은 양쪽 끝점에서 메시지를 다른 사용자에게 독립적으로 전송할 수 있는 메시지 교환 패턴입니다. 따라서 이중 서비스에서는 클라이언트 끝점으로 메시지를 보내 이벤트와 비슷한 동작을 제공할 수 있습니다. 이중 통신은 클라이언트가 서비스에 연결할 때 이루어지며, 서비스에서 클라이언트로 메시지를 다시 보낼 수 있는 채널을 제공합니다. 이중 서비스의 이벤트와 비슷한 동작은 세션 내에서만 작동합니다.  
@@ -97,4 +98,4 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
 ## <a name="see-also"></a>참고 항목  
  [이중](../../../../docs/framework/wcf/samples/duplex.md)  
  [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [방법: 채널 팩터리를 만들어 만들기 및 관리 채널을 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+ [방법: 채널 팩터리를 만들어 채널을 만들고 관리하는 데 사용](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

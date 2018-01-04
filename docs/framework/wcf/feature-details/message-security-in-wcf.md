@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21cbeff554be6da77ce28e87b7f82ffdd58f542d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-in-wcf"></a>WCF의 메시지 보안
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 보안을 제공하는 두 가지 주요 모드(`Transport` 및 `Message`)와 그 둘을 조합하는 세 번째 모드(`TransportWithMessageCredential`)가 있습니다. 이 항목에서는 메시지 보안과 메시지 보안을 사용하는 이유에 대해 설명합니다.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 12/02/2017
 -   XML 수준 보안 메커니즘과 WS-Security 사양 지원을 구현해야 합니다. 이로 인해 상호 운용성이 저하될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [서비스 및 클라이언트 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [전송 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [방법: 사용 하 여 전송 보안 및 메시지 자격 증명](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [방법: 전송 보안 및 메시지 자격 증명 사용](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [Microsoft Patterns and Practices, 3 장: 구현 전송 및 메시지 계층 보안](http://go.microsoft.com/fwlink/?LinkId=88897)

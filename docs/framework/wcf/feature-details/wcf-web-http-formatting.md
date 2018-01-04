@@ -9,11 +9,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43732c6c2effd38b8bfdb49c1a5fbf8275eb15e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-formatting"></a>WCF 웹 HTTP 형식 지정
 WCF 웹 HTTP 프로그래밍 모델을 사용하면 서비스 작업의 응답을 반환하는 데 사용할 수 있는 가장 적절한 형식을 동적으로 결정할 수 있습니다. 적절한 형식을 결정하는 데 지원되는 방법은 자동 형식 지정과 명시적 형식 지정, 두 가지가 있습니다.  

@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 57682ce5486bc3b7ce1c0db525c7948b1c6a00cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4769a44358dc19c9897c6d6ee29f0c7b8426ed7b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>방법: 런타임에 비트맵 만들기
 이 예제에서는 만들고에 그리는 데는 <xref:System.Drawing.Bitmap> 개체 하 고는 기존 Windows Forms에 표시 <xref:System.Windows.Forms.PictureBox> 제어 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[System.Drawing.CreateBitmapAtRuntime#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CreateBitmapAtRuntime/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.CreateBitmapAtRuntime#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CreateBitmapAtRuntime/VB/Form1.vb#1)]  
   

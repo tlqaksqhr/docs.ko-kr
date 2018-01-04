@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f44a6380d2bca4ad831c590920e09ab93610c4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows Process Activation Service에서의 호스팅
 WAS(Windows Process Activation Service)는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스트하는 응용 프로그램이 포함된 작업자 프로세스의 활성화 및 수명을 관리합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 메시지 기반 활성화를 지원하고 지정된 컴퓨터에서 여러 응용 프로그램을 호스트하는 기능을 제공하는 호스팅 환경에서 Net.TCP와 같은 HTTP 프로토콜 및 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
@@ -62,7 +63,7 @@ net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint
   
 ## <a name="see-also"></a>참고 항목  
  [WAS Activation 아키텍처](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
- [WCF와 함께 사용 하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [방법: 설치 하 고 WCF Activation 구성 요소 구성](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
+ [WCF와 함께 사용하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
+ [방법: WCF Activation 구성 요소 설치 및 구성](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
  [방법: WAS에서 WCF 서비스 호스트](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
  [Windows Server App Fabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=201276)

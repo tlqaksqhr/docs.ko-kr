@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8dbaa6f3df2bd4dcbde199f867686b3e05ae235f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 특성 및 ServiceDescription 참조
 *설명 트리에* 형식의 계층 구조는 (부터는 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> 클래스) 함께 서비스의 모든 측면을 설명 하는 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 설명 트리를 사용하여 유효한 서비스 런타임 빌드하고, WSDL(Web Services Description Language), XSD(XML 스키마 정의 언어) 및 클라이언트가 서비스에 연결하고 사용하는 데 사용할 수 있는 서비스에 대한 정책 어설션(메타데이터)을 게시하거나 다양한 코드 및 설명 트리 값에 대한 구성 파일 표현을 생성합니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/02/2017
   
 |ServiceBehaviorAttribute 속성|영향을 받은 설명 트리 값|  
 |---------------------------------------|-------------------------------------|  
-|이름|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
 |네임스페이스|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
 |IgnoreExtensionDataObject|모든 작업에 대해 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> 속성을 설정합니다.|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/02/2017
 |IsOneWay|<xref:System.ServiceModel.Description.MessageDescription>에서 단일 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>으로 매핑됩니다.|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|이름|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 및 가능한 자식 보호 수준입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]보호 수준 계층 참조 [보호 수준 이해](../../../../docs/framework/wcf/understanding-protection-level.md)합니다.|  
 |ReplyAction|계약/콜백 계약에 따른 출력 메시지 또는 입력 메시지에 대한 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>입니다.|  
   
@@ -65,18 +66,18 @@ ms.lasthandoff: 12/02/2017
 |----------------------------------|-------------------------------------|  
 |작업|계약/콜백 계약에 따른 <xref:System.ServiceModel.Description.FaultDescription.Action%2A>입니다.|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
-|이름|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |네임스페이스|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
   
 |DataContractFormatAttribute 값|영향을 받은 설명 트리 값|  
 |---------------------------------------|-------------------------------------|  
-|기능|<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 값이 작업의 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>에서 설정됩니다.|  
+|사용|<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 값이 작업의 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>에서 설정됩니다.|  
   
 |XmlSerializerFormatAttribute 값|영향을 받은 설명 트리 값|  
 |----------------------------------------|-------------------------------------|  
 |스타일|이 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 속성이 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.|  
-|기능|<xref:System.ServiceModel.XmlSerializerFormatAttribute>가 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.|  
+|사용|<xref:System.ServiceModel.XmlSerializerFormatAttribute>가 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.|  
   
 |TransactionFlowAttribute 값|영향을 받은 설명 트리 값|  
 |------------------------------------|-------------------------------------|  
@@ -92,14 +93,14 @@ ms.lasthandoff: 12/02/2017
 |----------------------------------|-------------------------------------|  
 |Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|이름|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |네임스페이스|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute 값|영향을 받은 설명 트리 값|  
 |--------------------------------------|-------------------------------------|  
-|이름|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |네임스페이스|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |순서|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
@@ -108,18 +109,18 @@ ms.lasthandoff: 12/02/2017
 |---------------------------------------|-------------------------------------|  
 |행위자|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
-|이름|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
 |네임스페이스|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
 |Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
   
 |MessagePropertyAttribute 값|영향을 받은 설명 트리 값|  
 |------------------------------------|-------------------------------------|  
-|이름|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
 |MessageParameterAttribute 값|영향을 받은 설명 트리 값|  
 |-------------------------------------|-------------------------------------|  
-|이름|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]설명 트리 값은 메타 데이터로 변환 되 참조 [ServiceDescription 및 WSDL 참조](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)합니다.  
   

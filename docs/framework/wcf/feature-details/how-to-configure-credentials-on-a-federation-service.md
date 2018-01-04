@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb5e3cc0e33947f1797e283461738f96b6d4a8b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 243dbd73d60577cbda2d8cf4fad1fd2e510d87ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>방법: 페더레이션 서비스에서 자격 증명 구성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 다음과 같은 기본 절차를 통해 페더레이션 서비스를 만들 수 있습니다.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  필요한 경우 설정 합니다는 `samlSerializer` 특성에는 <`issuedTokenAuthentication`> 요소를 사용자 지정의 형식 이름 <xref:System.IdentityModel.Tokens.SamlSerializer> 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>의속성을 코드로 설정합니다.  
   
  [!code-csharp[C_FederatedService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedservice/cs/source.cs#2)]
@@ -84,9 +85,9 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>참고 항목  
  [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)  
  [페더레이션 및 트러스트](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
- [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [방법: 사용 안 함 보안 WSFederationHttpBinding에서 세션](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [SecurityBindingElement 인증 모드](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

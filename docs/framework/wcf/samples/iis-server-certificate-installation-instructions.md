@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0d035e703b79eb184bf06e3e75255e2f987c170
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cfb168ae60765a57017aaec6bdedaf796491f602
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>IIS(인터넷 정보 서비스) 서버 인증서 설치 지침
 IIS(인터넷 정보 서비스)와 안전하게 통신하는 샘플을 실행하려면 서버 인증서를 만들어 설치해야 합니다.  
@@ -42,7 +43,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 4.  클릭는 **서버 인증서** 단추입니다. 웹 서버 인증서 마법사가 시작됩니다.  
   
-5.  마법사에서 필요한 작업을 완료합니다. 인증서를 할당하는 옵션을 선택합니다. 표시된 인증서 목록에서 ServiceModelSamples-HTTPS-Server 인증서를 선택합니다.  
+5.  마법사를 완료합니다. 인증서를 할당하는 옵션을 선택합니다. 표시된 인증서 목록에서 ServiceModelSamples-HTTPS-Server 인증서를 선택합니다.  
   
      ![IIS 인증서 마법사](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   

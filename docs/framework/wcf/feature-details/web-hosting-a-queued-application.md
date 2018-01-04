@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79b35fc63fa34bf6de462bad3c18d857215cbfa1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-hosting-a-queued-application"></a>대기 중인 응용 프로그램 웹 호스팅
 WAS(Windows Process Activation Service)는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스트하는 응용 프로그램이 포함된 작업자 프로세스의 활성화 및 수명을 관리합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스가 메시지 기반 활성화를 지원하고 지정된 컴퓨터에서 많은 응용 프로그램을 호스트하는 기능을 제공하는 호스팅 환경에서 HTTP 및 비-HTTP 프로토콜(예: net.msmq 및 msmq.formatname)을 모두 사용할 수 있습니다.  

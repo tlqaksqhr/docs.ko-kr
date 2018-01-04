@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5657b48a648603f24e89c0eebd1285ed9a505e54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a32c16067446459817e9943c2d729a67373a0333
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Reliable Messaging 프로토콜 버전 1.0
 이 항목에서는 HTTP 전송을 사용하여 상호 운용에 필요한 WS-ReliableMessaging February 2005(버전 1.0) 프로토콜의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 구현 정보에 대해 설명합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 이 항목에서 설명한 제약 조건 및 확인된 내용과 함께 WS-Reliable Messaging 사양을 따릅니다. WS-ReliableMessaging 버전 1.0 프로토콜은 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 이상에서 구현됩니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/02/2017
 |------------|---------------|  
 |wsrm|http://schemas.xmlsoap.org/ws/2005/02/rm|  
 |netrm|http://schemas.microsoft.com/ws/2006/05/rm|  
-|초|http://www.w3.org/2003/05/soap-envelope|  
+|s|http://www.w3.org/2003/05/soap-envelope|  
 |wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
 |wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/02/2017
   
 -   B1101: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 개시자가 `CreateSequence` 메시지에서 선택적 Expires 요소를 생성하지 않거나 `CreateSequence` 메시지에 `Offer` 요소가 포함된 경우 `Expires` 요소에서 선택적 `Offer` 요소를 생성하지 않습니다.  
   
--   B1102: `CreateSequence` 메시지에 액세스하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`Responder`는 두 `Expires` 요소가 모두 존재하는 경우 이러한 요소를 보내고 받지만 해당 값을 사용하지 않습니다.  
+-   B1102:에 액세스할 때는 `CreateSequence` 메시지는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `Responder` 둘 다 받을 `Expires` 존재 않지만 해당 값을 사용 하지 않는 경우 요소입니다.  
   
  WS-Reliable Messaging은 `Offer` 메커니즘을 사용하여 세션을 형성하는 상호 관련된 두 개의 역방향 시퀀스를 설정합니다.  
   
@@ -284,7 +285,7 @@ ms.lasthandoff: 12/02/2017
   
 -   B3001: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `wsrm:RMAssertion` WS-Policy Assertion을 `wsdl:binding` 요소에 연결합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 `wsdl:binding` 및 `wsdl:port` 요소에 대한 두 개 첨부 파일을 모두 지원합니다.  
   
--   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WS-Reliable Messaging 어설션의 다음과 같은 선택적 속성을 지원하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableMessagingBindingElement`에서 이러한 속성에 대한 제어를 제공합니다.  
+-   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ws-reliable Messaging 어설션의 다음과 같은 선택적 속성을 지원 하 고를 제어에 제공 된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableMessagingBindingElement`:  
   
     -   `wsrm:InactivityTimeout`  
   

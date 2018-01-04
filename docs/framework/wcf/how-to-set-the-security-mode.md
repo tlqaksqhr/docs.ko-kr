@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 595999bfa7d3472fc31274a0c9652af5416d2da5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84fa0e6b20f3d2b75d3182f64ddc9c70ef661f10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-security-mode"></a>방법: 보안 모드 설정
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 보안에는 대부분의 미리 정의된 바인딩에서 발견되는 전송, 메시지, "메시지 자격 증명을 사용한 전송"의 세 가지 일반 보안 모드가 있습니다. 두 개의 추가 모드는 두 바인딩에만 해당됩니다. 즉, "전송-자격 증명만" 모드는 <xref:System.ServiceModel.BasicHttpBinding>에서 사용되고, "모두" 모드는 <xref:System.ServiceModel.NetMsmqBinding>에서 사용됩니다. 그러나 이 항목에서는 세 가지 일반 보안 모드(<xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)에 대해 중점적으로 설명합니다.  
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [방법: SSL 인증서로 포트 구성](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [방법: 사용 하 여 전송 보안 및 메시지 자격 증명](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [방법: 전송 보안 및 메시지 자격 증명 사용](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [전송 보안](../../../docs/framework/wcf/feature-details/transport-security.md)  
  [메시지 보안](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [보안 개요](../../../docs/framework/wcf/feature-details/security-overview.md)  

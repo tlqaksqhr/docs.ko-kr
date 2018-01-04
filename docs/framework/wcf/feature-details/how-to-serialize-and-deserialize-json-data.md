@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4fd768a3a254616dc5dd8b5127ec7f794b71159
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: deb02217b5d2a79cdf90d511658657f642ca1fc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>방법: JSON 데이터 Serialize 및 Deserialize
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.  
@@ -97,7 +98,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
     Console.WriteLine(p2.age);  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // Create a User object and serialize it to a JSON stream.  
@@ -150,4 +151,4 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
   
 ## <a name="see-also"></a>참고 항목  
  [독립 실행형 JSON Serialization](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
- [전송 형식 JSON 및 기타 데이터에 대 한 지원](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [JSON 및 기타 데이터 전송 형식에 대한 지원](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

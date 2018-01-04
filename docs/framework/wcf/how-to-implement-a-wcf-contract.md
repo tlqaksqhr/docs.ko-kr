@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eabb1ed36ff6f653361a64960e4d02037ab42980
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bf590b2f508cc6661b5acb045a7d66b38ed169c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>방법: Windows Communication Foundation 서비스 계약 구현
 이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와 이 서비스를 호출할 수 있는 클라이언트를 만드는 데 필요한 6가지 작업 중 두 번째입니다. 전체 7 개 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.  
@@ -128,7 +129,7 @@ ms.lasthandoff: 12/02/2017
   
      각 메서드는 계산기 연산을 구현하고 더 쉬운 테스트를 위해 일부 텍스트를 콘솔에 씁니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 계약을 정의하는 인터페이스와 인터페이스 구현을 모두 보여 줍니다.  
   
 ```csharp

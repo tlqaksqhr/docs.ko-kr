@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 515f91baf48f68ba0c1cb32e00152bf025fe7323
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-proxy-sample"></a>Discovery Proxy 샘플
 이 샘플에서는 검색 프록시를 구현하여 기존 서비스에 대한 정보를 저장하는 방법과 클라이언트가 해당 프록시에서 정보를 쿼리하는 방법을 보여 줍니다. 이 샘플은 다음의 세 프로젝트로 구성되어 있습니다.  

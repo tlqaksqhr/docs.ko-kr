@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42c6390fb2bd39a0003beecbbe10cd72a38ed63d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-client-credential-values"></a>방법: 클라이언트 자격 증명 값 지정
 서비스는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]를 사용하여 클라이언트가 서비스를 인증하는 방법을 지정할 수 있습니다. 예를 들면 서비스는 클라이언트가 인증서를 사용하여 인증하도록 규정할 수 있습니다.  
@@ -108,7 +109,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.ClientBase%601>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>  
  [WCF 보안 프로그래밍](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [자격 증명 유형 선택](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [자격 증명 형식 선택](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [인증서 작업](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

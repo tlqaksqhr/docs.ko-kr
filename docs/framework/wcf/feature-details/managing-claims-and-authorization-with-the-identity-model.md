@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID 모델을 사용하여 클레임 및 권한 부여 관리
 권한 부여는 컴퓨터 리소스를 변경하거나 보거나 컴퓨터 리소스에 액세스할 수 있는 사용 권한이 있는 엔터티를 확인하는 프로세스입니다. 예를 들어 비즈니스에서 관리자만 직원 파일에 액세스할 수 있습니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 권한 부여 처리를 수행하기 위한 두 가지 메커니즘을 지원합니다. 첫 번째 메커니즘을 사용하면 기존의 CLR(공용 언어 런타임) 구문을 사용하여 권한 부여를 제어할 수 있습니다. 두 번째는 이라는 클레임 기반 모델은 *Id 모델*합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 ID 모델을 사용하여 들어오는 메시지에서 클레임을 만듭니다. ID 모델 클래스는 사용자 지정 권한 부여 체계의 새 클레임 형식을 지원하도록 확장할 수 있습니다. 이 항목에서는 ID 모델 기능의 주요 프로그래밍 개념에 대한 개요와 이 기능에서 사용되는 매우 중요한 클래스의 목록을 제공합니다.  
@@ -181,11 +182,11 @@ ms.lasthandoff: 12/02/2017
  <xref:System.IdentityModel.Tokens>  
  <xref:System.IdentityModel.Selectors>  
  [클레임 및 토큰](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [클레임 및 리소스에 대 한 액세스 거부](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
+ [클레임 및 리소스 액세스 거부](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
  [클레임 만들기 및 리소스 값](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
  [방법: 사용자 지정 클레임 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
  [방법: 클레임 비교](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
  [방법: 사용자 지정 권한 부여 정책 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

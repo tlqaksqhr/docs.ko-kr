@@ -13,17 +13,18 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2d3a35839aaf980331b3b84181027d9c170c619d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-extensibility"></a>보안 확장성
 이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 사용자 지정 보안을 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [영 속 제공 된 토큰 공급자](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [영속 제공된 토큰 공급자](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
  사용자 지정 클라이언트가 발급한 토큰 공급자를 구현하는 방법을 보여 줍니다.  
   
  [SAML 토큰 공급자](../../../../docs/framework/wcf/samples/saml-token-provider.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88d9b6b8b4aa1d551e292057e0fecf746b17cecd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 81aa47747d27f135c270959f2c8abf03c522bf87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>방법: .NET Framework 4에서 실행되는 IIS에서 .NET Framework 3.5를 사용하여 작성한 WCF 서비스 호스팅
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]를 실행하는 컴퓨터에서 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]로 작성된 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 서비스를 호스팅하면 다음 텍스트와 함께 <xref:System.ServiceModel.ProtocolException>이 발생할 수 있습니다.  

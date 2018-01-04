@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73ec25ab5376841b2970fedf17ad1de176923f16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f74a0f9d7a39d7d5ccb97d7f4ef022b32bbf4fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 통합
 IIS(인터넷 정보 서비스)에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스팅하는 경우 가상 디렉터리에 .svc 파일을 저장합니다. 이 .svc 파일은 사용할 서비스 호스트 팩터리와 함께 서비스를 구현하는 클래스를 지정합니다. 서비스를 요청할 때는 http://contoso.com/EmployeeServce.svc와 같은 URI를 사용하여 .svc 파일을 지정합니다. REST 서비스를 작성하는 프로그래머에게는 이러한 유형의 URI가 적합하지 않을 수 있습니다. REST 서비스의 URI는 특정 리소스를 지정하며 일반적으로 확장명을 포함하지 않습니다. <xref:System.Web.Routing> 통합 기능을 사용하면 확장이 없는 URI에 응답하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 서비스를 호스팅할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]라우팅 참조 [ASP.NET 라우팅](http://go.microsoft.com/fwlink/?LinkId=184660) 및 [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) 샘플.  

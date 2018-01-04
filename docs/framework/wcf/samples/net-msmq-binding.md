@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d52b71fe783764dcdbf5acd2ffe0e0ee1e7e56d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3f6282dfbf5e67f91167e5abf0640641000994d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-msmq-binding"></a>Net MSMQ 바인딩
 이 단원에는 끝점 요소의 MSMQ 바인딩 특성을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [트랜잭션된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
  MSMQ(메시지 큐)를 사용하여 큐에 있는 트랜잭션된 통신을 수행하는 방법을 보여 줍니다.  
   
  [일시 대기 통신](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
  [배달 못 한 편지 큐](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
  배달에 실패한 메시지를 처리하는 방법을 보여 줍니다.  
   
- [포이즌 메시지 처리에서 MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)  
+ [MSMQ 4.0에서 포이즌 메시지 처리](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)  
  MSMQ 4.0을 사용하여 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다.  
   
  [세션 및 큐](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
@@ -41,13 +42,13 @@ ms.lasthandoff: 12/02/2017
  [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md)  
  MSMQ를 통해 트랜잭션된 대기 중인 양방향 통신을 수행하는 방법을 보여 줍니다.  
   
- [트랜잭션 된 일괄 처리](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+ [트랜잭션된 일괄 처리](../../../../docs/framework/wcf/samples/transacted-batching.md)  
  MSMQ(메시지 큐)를 사용하여 트랜잭션된 읽기를 일괄 처리하는 방법을 보여 줍니다.  
   
  [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
  HTTP를 통해 MSMQ(메시지 큐)를 사용하여 큐에 있는 트랜잭션된 통신을 수행하는 방법을 보여 줍니다.  
   
- [메시지 큐에 대 한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+ [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
  MSMQ를 통해 서버의 X.509v3 인증서를 사용하는 서버 인증을 요구하고 클라이언트에 대해 X.509v3 인증서 인증과 함께 WS-Security를 사용하는 응용 프로그램을 구현하는 방법을 보여 줍니다.  
   
  [ReceiveContext 제품 생성기](../../../../docs/framework/wcf/samples/receivecontext-enabled-wcf-channels.md)  

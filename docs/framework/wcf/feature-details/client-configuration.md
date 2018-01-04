@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35dc7ad932ea114e2751fa86ceb757dc795795f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ece2585287f6e2767e64c2ec03c75adcfe161c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-configuration"></a>클라이언트 구성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 구성을 사용하여 클라이언트에서 서비스 끝점에 연결하는 데 사용하는 클라이언트 끝점의 "ABC" 속성인 계약, 바인딩 동작 및 주소를 지정할 수 있습니다. [ \<클라이언트 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) 요소에는 [ \<끝점 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) 해당 특성이 끝점 Abc를 구성 하는 데는 요소입니다. 이러한 특성에 대해서는 이 항목의 "끝점 구성" 단원에 설명되어 있습니다.  

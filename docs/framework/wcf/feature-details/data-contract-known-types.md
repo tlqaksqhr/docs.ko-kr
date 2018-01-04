@@ -20,11 +20,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cdb9e539d16b874ffd37b8e381757594561386e7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 사용하면 고려 사항에 포함해야 하는 형식을 deserialization을 수행하는 동안 미리 지정할 수 있습니다. 작업 예제는 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 예제를 참조하십시오.  
@@ -183,6 +184,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Object>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>  
- [알려진된 형식](../../../../docs/framework/wcf/samples/known-types.md)  
+ [알려진 형식](../../../../docs/framework/wcf/samples/known-types.md)  
  [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [서비스 계약 디자인](../../../../docs/framework/wcf/designing-service-contracts.md)

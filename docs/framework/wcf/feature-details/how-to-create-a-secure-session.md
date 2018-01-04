@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f2393209352f18eb25b9837ca1ad8ca2746b91d6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cd4f91ef5389dd4b8ecb63c1148d3a86918f2d10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-secure-session"></a>방법: 보안 세션 만들기
 제외 된 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 바인딩의 시스템 제공 바인딩은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지 보안을 사용 하는 경우 보안 세션을 자동으로 사용 합니다.  

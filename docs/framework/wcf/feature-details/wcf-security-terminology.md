@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 386e58c5b04ed82f9ee42c7f04eacd4610c2a598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-security-terminology"></a>WCF 보안 용어
 보안을 설명할 때 사용되는 일부 용어는 생소할 수 있습니다. 이 항목에서는 일부 보안 용어에 대해 간략하게 설명하며, 모든 항목을 포괄적으로 설명하지는 않습니다.  
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/21/2017
  개인 키  
  공개 키 알고리즘에 사용되는 키 쌍의 암호 부분입니다. 개인 키는 일반적으로 대칭 세션 키를 암호화하거나, 메시지에 디지털 서명을 하거나, 해당 공개 키로 암호화된 메시지를 해독하는 데 사용됩니다. "공개 키"를 참조하십시오.  
   
- 프로세스  
+ process  
  응용 프로그램이 실행되는 보안 컨텍스트입니다. 일반적으로 보안 컨텍스트는 사용자와 연관되므로, 지정된 프로세스에서 실행 중인 모든 응용 프로그램은 소유자의 권한을 사용합니다.  
   
  공개/개인 키 쌍  

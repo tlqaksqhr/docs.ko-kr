@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8b07b23f4428053964fa33150c4300645242f918
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7d99ada67255d0ced8bbabc2ab6fc645e6ba9e35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF 보안의 암호화 유연성
 이 샘플에서는 표준/사용자 지정 알고리즘을 통해 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 및 서비스에서 암호화 agile 구현을 제공하도록 지정하는 방법을 보여 줍니다. 이 샘플은 다음 프로젝트로 구성되어 있습니다.  

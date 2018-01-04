@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54ce56cccffa350479d0dd4dcec130ddd004764
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 고성능 통신을 위한 새로운 TCP 기반 네트워크 프로토콜(net.tcp://)을 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 여러 사용자 프로세스 간에 net.tcp 포트를 공유할 수 있는 새 시스템 구성 요소인 Net.TCP Port Sharing Service도 제공합니다.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
  Net.TCP Port Sharing Service에서는 응용 프로그램과 네트워크 간의 처리 계층을 제공하지만 포트 공유를 사용하는 응용 프로그램의 경우 네트워크에서 직접 수신 대기하고 있는 것처럼 보안이 설정되어 있어야 합니다. 특히 포트 공유를 사용하는 응용 프로그램은 응용 프로그램이 실행되는 프로세스 권한을 평가해야 합니다. 네트워크 통신에 필요한 프로세스 권한의 최소 집합으로 실행되는 기본 제공 Network Service 계정을 사용하여 응용 프로그램을 실행해 보세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Net.TCP Port Sharing Service를 구성 합니다.](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
+ [Net.TCP Port Sharing Service 구성](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
  [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [방법: 포트 공유 사용 하도록 WCF 서비스 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
- [방법: Net.TCP Port Sharing Service를 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+ [방법: 포트 공유를 사용하도록 WCF 서비스 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
+ [방법: Net.TCP Port Sharing Service 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46aa2f9a4ed152bfc861bb02ed2d8c6429694764
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 39ae1be025e3b888fff8b46ebbc45832c218dda7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>FlowChart와 Pick을 함께 사용하는 StateMachine 시나리오
 이 샘플에서는 <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Pick> 활동을 함께 사용하여 간단한 스톱워치 시나리오를 구현하는 방법을 보여 줍니다. 이 샘플에서는 Pick 활동 내의 Receive 및 Send를 사용하여 스톱워치 이벤트를 수신 대기합니다.  

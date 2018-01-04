@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ad417ee61026f6573f19e70409511e0b28e4d78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b7653e05fff241f05836624ff02273fb8c24ef6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+의 카디널 스플라인
 카디널 스플라인에 더 큰 곡선을 형성 하는 개별 곡선 시퀀스입니다. 스플라인을은 포인트와 장력 매개 변수 배열에 의해 지정 됩니다. 카디널 스플라인; 배열에서 각 지점 매끄럽게 통과 날카로운 모퉁이가 없고 및 곡선의 다듬기에 급격 한 변경 내용이 없습니다. 다음 그림의 점과 집합의 각 요소를 통해 전달 되는 카디널 스플라인을 집합을 보여 줍니다.  

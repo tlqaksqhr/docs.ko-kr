@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ca1eb73842f3f7dac5557c1eafff637396d317a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f90f7dd508e2ff4058b787fc29d152abc18f24fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET 웹 서비스를 WCF로 마이그레이션
 ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 위한 도구뿐 아니라 인터넷 정보 서비스(IIS) 내 호스팅 서비스에 대한 기능도 제공합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 .NET Framework 클래스 라이브러리, 도구 및 호스팅 기능을 제공하여 소프트웨어 엔터티가 웹 서비스에서 사용하는 프로토콜을 포함하여 모든 프로토콜을 사용하여 통신할 수 있도록 합니다.  ASP.NET 웹 서비스를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션하면 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]만의 새로운 기능 및 향상된 기능을 활용할 수 있습니다.  
@@ -46,8 +47,8 @@ ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 
  이 단원에서는 이러한 옵션에 대해 자세히 설명하고, ASP.NET 웹 서비스를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]와 비교하여, ASP.NET 웹 서비스 코드를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션하는 방법에 대한 지침을 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Windows Communication Foundation 채택 예상: 이후의 마이그레이션을 용이 하 게 함](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  
- [Windows Communication Foundation 채택 예상: 이후의 통합 감속/가속](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
+ [Windows Communication Foundation 채택 예상: 이후의 마이그레이션을 용이하게 함](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  
+ [Windows Communication Foundation 채택 예상: 이후의 통합을 용이하게 함](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
  [Windows Communication Foundation 채택](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)  
- [WCF 기반 의도적으로 사용 되는 표준을 ASP.NET 웹 서비스 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
- [ASP.NET 웹 서비스 개발을 기반으로 wcf 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+ [용도와 사용되는 표준을 기반으로 ASP.NET 웹 서비스와 WCF 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
+ [개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

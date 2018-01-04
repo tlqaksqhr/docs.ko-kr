@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f338eff156646a2df063da84eead274a34a39159
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF의 보안 동작
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 동작은 런타임 동작을 서비스 수준 또는 끝점 수준에서 수정합니다. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] 동작 일반적으로 참조 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *보안 동작* 감사 로그 및 자격 증명, 인증, 권한 부여에 대 한 제어를 허용 합니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  

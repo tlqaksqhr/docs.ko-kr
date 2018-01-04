@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 156960a6594f5475e339b36e5dabf46f26d13d62
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c5f397d50a5a97801241afd8e64abf2e56b05dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF 웹 HTTP 오류 처리
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 오류 처리를 사용하면 HTTP 상태 코드를 지정하고 작업과 동일한 형식(예: XML 또는 JSON)을 사용하여 오류 정보를 반환하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 서비스에서 오류를 반환할 수 있습니다.  

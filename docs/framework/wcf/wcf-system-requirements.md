@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65f5c2e8ac0a767d3ecc4d270ac9280a8cc78bfc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 81f79691424bb48679605e385785bd7bf11b4db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-system-requirements"></a>WCF 시스템 요구 사항
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]는 분산 응용 프로그램을 만드는 데 사용되는 통신 인프라입니다. 다음 목록에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]를 실행하는 데 필요한 요구 사항을 보여 줍니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae7ed7b1d01420c8e542d9ecce577995e927adc3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-schema-to-generate-classes"></a>스키마를 가져와 클래스 생성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 사용할 수 있는 스키마에서 클래스를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractImporter> 클래스를 사용합니다. 이 항목에서는 프로세스와 변형에 대해 설명합니다.  

@@ -17,16 +17,17 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-feature-details"></a>WCF 기능 정보
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하면 응용 프로그램의 메시징 기능을 제어할 수 있습니다. 이 섹션의 항목에서는 사용 가능한 기능에 대해 자세히 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]기본 프로그래밍, 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  워크플로 서비스를 만들고 구성하는 방법에 대해 설명합니다.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
  [피어 투 피어 네트워킹](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  피어 서비스 및 클라이언트를 만드는 방법에 대해 설명합니다.  
   
- [메타 데이터](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)  
  메타데이터 구조 및 형식에 대해 설명합니다.  
   
  [클라이언트](../../../../docs/framework/wcf/feature-details/clients.md)  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
  [AJAX 통합 및 JSON 지원](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 AJAX 클라이언트에 작업을 노출할 수 있도록 ASP.NET AJAX(Asynchronous JavaScript and XML) 및 JSON(JavaScript Object Notation) 데이터 형식에 대한 지원을 설명합니다.  
   
- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [WCF 검색](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  WS-Discovery 프로토콜을 사용하여 런타임에 상호 운용 가능한 방식으로 서비스를 검색할 수 있도록 하는 지원 기능에 대해 설명합니다.  
   
  [라우팅](../../../../docs/framework/wcf/feature-details/routing.md)  

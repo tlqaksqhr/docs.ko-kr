@@ -19,16 +19,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8a2d5a13cac97063bf2a04969928c859a5954d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c020e5f7306e73ee97dff0b492b04b5a153059cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-fill-open-figures"></a>방법: 열린 그림 채우기
 전달 하 여 경로 채울 수는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체는 <xref:System.Drawing.Graphics.FillPath%2A> 메서드. <xref:System.Drawing.Graphics.FillPath%2A> 메서드는 현재 경로 대해 설정 된 채우기 모드 (대체 또는 굴곡)에 따라 경로 입력 합니다. 경로 열린 그림이, 경로 해당 종료 된 경우에 따라 채워집니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]시작 점으로 끝점에서 직선 그리기 하 여 그림을 닫습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에는 하나의 열린 그림 (호) 및 하나의 폐쇄형된 도형 (: 타원)에 포함 된 경로 만듭니다. <xref:System.Drawing.Graphics.FillPath%2A> 채워지는 기본 채우기 모드, 즉에 따라 경로 <xref:System.Drawing.Drawing2D.FillMode.Alternate>합니다.  
   
  다음 그림에서는 예제 코드의 출력을 보여 줍니다. 경로가 입력 됩니다 (에 따라 <xref:System.Drawing.Drawing2D.FillMode.Alternate>) 열린 그림을 시작 점으로 끝점에서 직선으로 종료 된 경우에 따라 합니다.  

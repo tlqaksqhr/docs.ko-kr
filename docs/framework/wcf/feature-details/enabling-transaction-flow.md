@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b5d0b90ed28928e734089265cb8c58839b6d0cd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-transaction-flow"></a>트랜잭션 흐름 사용
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 트랜잭션 흐름을 제어하기 위한 매우 유연성 있는 옵션을 제공합니다. 특성 및 구성을 조합하여 서비스의 트랜잭션 흐름 설정을 나타낼 수 있습니다.  
@@ -44,10 +45,10 @@ ms.lasthandoff: 12/02/2017
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
 |필수|true|WS-AT|트랜잭션이 상호 운용할 수 있는 WS-AT 형식으로 이동해야 합니다.|  
 |필수|true|OleTransactions|트랜잭션이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 형식으로 이동해야 합니다.|  
-|필수|false|해당 없음|이 구성이 잘못되었으므로 사용할 수 없습니다.|  
+|필수|False|적용할 수 없음|이 구성이 잘못되었으므로 사용할 수 없습니다.|  
 |Allowed|true|WS-AT|트랜잭션이 상호 운용할 수 있는 WS-AT 형식으로 이동할 수 있습니다.|  
 |Allowed|true|OleTransactions|트랜잭션이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 형식으로 이동할 수 있습니다.|  
-|Allowed|false|모든 값|트랜잭션이 이동하지 않습니다.|  
+|Allowed|False|모든 값|트랜잭션이 이동하지 않습니다.|  
 |NotAllowed|모든 값|모든 값|트랜잭션이 이동하지 않습니다.|  
   
  다음 표에서는 메시지 처리 결과를 요약하여 설명합니다.  

@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd6d3e24becfe1cf8a30d6006087fe74e9487fbe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0d4c3a91d69fd7adc863c6e947b72aa9134c376b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="behaviors"></a>동작
 이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 동작을 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [동시성](../../../../docs/framework/wcf/samples/concurrency.md)  
  <xref:System.ServiceModel.ServiceBehaviorAttribute> 열거형과 함께 <xref:System.ServiceModel.ConcurrencyMode>를 사용하여 서비스 인스턴스가 메시지를 순차적으로 처리하는지, 동시에 처리하는지를 제어하는 방법을 보여 줍니다.  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
  [인스턴스 만들기](../../../../docs/framework/wcf/samples/instancing.md)  
  클라이언트 요청에 응답하여 서비스 클래스의 인스턴스가 만들어지는 방식을 제어하는 인스턴스 만들기 동작 설정을 보여 줍니다.  
   
- [메타 데이터 게시 동작](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
+ [메타데이터 게시 동작](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
  서비스의 기능을 게시하는 메타데이터를 제어하는 방법을 보여 줍니다.  
   
  [서비스 트랜잭션 동작](../../../../docs/framework/wcf/samples/service-transaction-behavior.md)  

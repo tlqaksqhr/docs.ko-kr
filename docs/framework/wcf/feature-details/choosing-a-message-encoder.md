@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 743e8cdf1a10efb7b99d6c6dcfcff611df6fbf4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb8ba8145d371a8773d860e88f073bcc5b732f1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-encoder"></a>메시지 인코더 선택
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 포함된 메시지 인코더인 이진, 텍스트 및 MTOM(Message Transmission Optimization Mechanism)의 선택 조건에 대해 설명합니다.  

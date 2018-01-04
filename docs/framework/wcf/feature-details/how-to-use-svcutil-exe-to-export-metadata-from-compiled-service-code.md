@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b6998333c3e49b24ad5bb96f36be65af94b6033
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e50ddaa5a9fe5038ef167c4a53f9600eda0f027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기
 Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비스, 계약 및 데이터 형식에 대한 메타데이터를 내보낼 수 있습니다.  
@@ -85,7 +86,7 @@ Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 단순 서비스 구현 및 구성에 대한 메타데이터를 생성하는 방법을 보여 줍니다.  
   
  서비스 계약에 대한 메타데이터를 내보내려면  
@@ -174,4 +175,4 @@ public class MyService : IPersonFinder
   
 ## <a name="see-also"></a>참고 항목  
  [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [내보내기 및 메타 데이터 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+ [메타데이터 내보내기 및 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

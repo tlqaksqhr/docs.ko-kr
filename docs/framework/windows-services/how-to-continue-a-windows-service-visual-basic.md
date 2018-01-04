@@ -18,16 +18,17 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 28dbbf2376416a340ad7853c026b2f763f695dcb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73b16a5e5834f7279ae551d4e7efd26cc86c1d07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>방법: Windows 서비스 계속(Visual Basic)
 사용 하 여이 예제는 <xref:System.ServiceProcess.ServiceController> 로컬 컴퓨터에서 IIS 관리 서비스를 계속 하려면 구성 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#13](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#13)]  
   
@@ -59,4 +60,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceProcess.ServiceController>  
  <xref:System.ServiceProcess.ServiceControllerStatus>  
- [방법: Windows 서비스 (Visual Basic)를 일시 중지](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+ [방법: Windows 서비스 일시 중지(Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

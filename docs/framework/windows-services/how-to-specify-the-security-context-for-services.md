@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 50a9c6ff7f02cda4475aa5390181fa5d410af161
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ce65358f6d63414dbe6798d3cc2464ee2741980
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>방법: 서비스에 대한 보안 컨텍스트 지정
 기본적으로 서비스에 로그인 한 사용자의 다른 보안 컨텍스트에서 실행 됩니다. 기본 시스템 계정의 컨텍스트에서 실행 되는 서비스 호출 `LocalSystem`는 서로 다른 액세스 권한을 부여 시스템 리소스에는 사용자입니다. 서비스 실행 해야 하는 다른 사용자 계정을 지정 하려면이 동작을 변경할 수 있습니다.  
@@ -55,5 +56,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [방법: 서비스 응용 프로그램에 설치 관리자를 추가 합니다.](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [방법: 서비스 응용 프로그램에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
  [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)

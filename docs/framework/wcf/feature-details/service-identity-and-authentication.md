@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19ff205fd1e76a5d2ee787522cc5d94916b0c11c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b741e421a8773e1a4b2d2ab7da5e119073e861ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-identity-and-authentication"></a>서비스 ID 및 인증
 서비스의 *끝점 id*서비스 설명 언어 WSDL (웹 서비스)에서 생성 된 값입니다. 모든 클라이언트에 전파되는 이 값은 서비스를 인증하는 데 사용합니다. 클라이언트가 끝점에 대한 통신을 시작하고 서비스가 클라이언트에 대해 인증되면 클라이언트는 끝점 ID 값과 끝점 인증 프로세스에서 반환된 실제 값을 비교합니다. 두 값이 일치하는 경우 클라이언트는 예상 서비스 끝점에 연결됩니다. 이 역할에 대 한 보호 *피싱* 하면 클라이언트가 악성 서비스에서 호스팅된 끝점에 리디렉션되지 않도록 하 여 합니다.  
@@ -122,10 +123,10 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]바인딩 요소의 사용자 지정 바인딩에 대 한 올바르게 스택를 참조 하는 방법 [Creating User-Defined 바인딩](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]으로 사용자 지정 바인딩을 만들기는 <xref:System.ServiceModel.Channels.SecurityBindingElement>, 참조 [하는 방법: 지정 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩을 만들려면](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [방법: 지정된 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
- [방법: 사용자 지정 클라이언트 Id 검증 도구 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- [자격 증명 유형 선택](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ [방법: 사용자 지정 클라이언트 ID 검증 도구 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [자격 증명 형식 선택](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [사용자 정의 바인딩 만들기](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)  

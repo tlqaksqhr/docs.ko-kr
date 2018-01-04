@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9cd9e5c4f978eb6e8492d9bd6c90a32f87cfbce9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 응용 프로그램을 보려면 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하세요. 가장을 사용하는 방법에 대한 예제는 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)을 참조하십시오.  
@@ -102,10 +103,10 @@ ms.lasthandoff: 12/02/2017
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|동작|  
 |---------------------------|------------------------------------------------|--------------|  
-|필수|해당 없음|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 가 호출자를 가장합니다.|  
-|Allowed|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 가 호출자를 가장하지 않습니다.|  
-|Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 가 호출자를 가장합니다.|  
-|NotAllowed|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 가 호출자를 가장하지 않습니다.|  
+|필수|N/A|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 가 호출자를 가장합니다.|  
+|Allowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 가 호출자를 가장하지 않습니다.|  
+|Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 호출자를 가장합니다.|  
+|NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 호출자를 가장하지 않습니다.|  
 |NotAllowed|true|허용되지 않습니다. <xref:System.InvalidOperationException> 이 throw됩니다.|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Windows 자격 증명 및 캐시된 토큰 가장에서 가져온 가장 수준  
@@ -121,12 +122,12 @@ ms.lasthandoff: 12/02/2017
   
  다음 표에는 캐시된 토큰을 통해 가장할 때 서비스를 통해 가져오는 가장 수준이 지정되어 있습니다.  
   
-|`AllowedImpersonationLevel` 값|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
+|`AllowedImpersonationLevel` 값|서비스의 `SeImpersonatePrivilege` 포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Anonymous|예|해당 없음|가장|  
+|Anonymous|예|N/A|가장|  
 |Anonymous|아니요|해당 없음|ID|  
-|ID|해당 없음|해당 없음|ID|  
-|가장|예|해당 없음|가장|  
+|ID|N/A|N/A|ID|  
+|가장|예|N/A|가장|  
 |가장|아니요|해당 없음|ID|  
 |위임|예|예|위임|  
 |위임|예|아니요|가장|  
@@ -137,17 +138,17 @@ ms.lasthandoff: 12/02/2017
   
 |`AllowedImpersonationLevel`|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|해당 없음|예|예|위임|  
-|해당 없음|예|아니요|가장|  
+|N/A|예|예|위임|  
+|N/A|예|아니요|가장|  
 |해당 없음|아니요|해당 없음|ID|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U 기반 가장에서 가져온 가장 수준  
   
 |서비스의 `SeTcbPrivilege`포함 여부|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|예|예|해당 없음|가장|  
+|예|예|N/A|가장|  
 |예|아니요|해당 없음|ID|  
-|아니요|해당 없음|해당 없음|ID|  
+|아니요|N/A|N/A|ID|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Windows 계정에 클라이언트 인증서 매핑  
  클라이언트가 인증서를 사용하여 자신을 서비스에 인증하고 서비스에서 Active Directory를 통해 클라이언트를 기존 계정에 매핑하도록 할 수 있습니다. 다음 XML에서는 인증서를 매핑하도록 서비스를 구성하는 방법을 보여 줍니다.  
@@ -229,7 +230,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  <xref:System.ServiceModel.Security.WindowsClientCredential>  
  <xref:System.ServiceModel.ChannelFactory%601>  
  <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
- [전송 보안으로 가장 사용](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [전송 보안을 통해 가장 사용](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  [클라이언트 가장](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
  [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
  [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

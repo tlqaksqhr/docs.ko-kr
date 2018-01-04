@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 03ee173d25600be437f322d232b791543831df80
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 99d091e5ef0998a3818609b7d52ecd62a609eeb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>방법: WebSocket을 통해 통신하는 WCF 서비스 만들기
 WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> 바인딩을 사용하여 WebSocket에서 통신할 수 있습니다.  WebSocket은 <xref:System.ServiceModel.NetHttpBinding>에서 서비스 계약이 콜백 계약을 정의한다고 판단할 때 사용됩니다. 이 항목은 WebSocket에서 통신하기 위해 <xref:System.ServiceModel.NetHttpBinding>을 사용하는 WCF 서비스와 클라이언트를 구현하는 방법을 설명합니다.  
@@ -170,7 +171,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
   
          클라이언트 구성에서 특별한 작업이 필요하지 않습니다. `NetHttpBinding`을 사용하여 클라이언트 측 끝점을 지정하기만 하면 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 항목에서 사용되는 전체 코드입니다.  
   
 ```csharp  

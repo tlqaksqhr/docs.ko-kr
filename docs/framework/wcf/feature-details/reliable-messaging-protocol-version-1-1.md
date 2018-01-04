@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 586e26825bd01947706bb26061ef1b8879fecb4c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67df8b539109d7e4dafcbc42ad7679643767021a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Reliable Messaging 프로토콜 버전 1.1
 이 항목에서는 HTTP 전송을 사용하여 상호 운용에 필요한 WS-ReliableMessaging February 2007(버전 1.1) 프로토콜의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 구현 정보에 대해 설명합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 이 항목에서 설명한 제약 조건 및 확인된 내용과 함께 WS-ReliableMessaging 사양을 따릅니다. 부터는 Ws-reliablemessaging 1.1 프로토콜을 구현 하는 참고는 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/02/2017
 |-|-|  
 |wsrm|http://docs.oasis-open.org/ws-rx/wsrm/200702|  
 |netrm|http://schemas.microsoft.com/ws/2006/05/rm|  
-|초|http://www.w3.org/2003/05/soap-envelope|  
+|s|http://www.w3.org/2003/05/soap-envelope|  
 |wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
 |wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
 |wsrmp|http://docs.oasis-open.org/ws-rx/wsrmp/200702|  
@@ -381,7 +382,7 @@ Example TerminateSequenceResponse message:
   
 -   B3006: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 항상 `wsrmp:ExactlyOnce` 배달 보증을 지정합니다.  
   
--   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 WS-ReliableMessaging 어설션의 다음과 같은 속성을 생성하고 읽으며 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableSessionBindingElement`에서 이러한 속성을 제어합니다.  
+-   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 생성 하 고 및 WS-RELIABLE Messaging 어설션의 다음과 같은 속성을 읽고,에서 제어를 제공는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableSessionBindingElement`:  
   
     -   `netrmp:InactivityTimeout`  
   

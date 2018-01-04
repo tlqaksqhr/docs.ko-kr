@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f03734babf27ac4350580e7bed03645f3049c956
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>방법: WSFederationHttpBinding 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> 클래스 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 구성에서) 페더레이션된 서비스를 노출 하기 위한 메커니즘을 제공 합니다. 즉, 보안 토큰 서비스에서 발급된 보안 토큰을 사용하여 클라이언트가 인증해야 하는 서비스입니다. 이 항목에서는 코드와 구성 둘 다에서 <xref:System.ServiceModel.WSFederationHttpBinding>을 설정하는 방법을 보여 줍니다. 바인딩을 만들고 나면 해당 바인딩을 사용하도록 끝점을 설정할 수 있습니다.  
@@ -108,7 +109,7 @@ ms.lasthandoff: 12/02/2017
   
 16. 클라이언트와 서비스 둘 다에서 선택적 요소입니다. `<claimTypeRequirements>` 요소를 `<message>` 요소의 자식으로 추가합니다. 필수 및 선택적 클레임을 지정 추가 하 여 서비스를 사용 하 [ \<추가 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md) 요소를 사용 하 여 `<claimTypeRequirements>` 요소 및 지정 된 클레임 형식는 `claimType` 특성입니다. `isOptional` 특성을 설정하여 지정된 클레임이 필수 또는 선택적 요소인지 지정합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 샘플에서는 명령적으로 `WSFederationHttpBinding`을 설정하는 코드를 보여 줍니다.  
   
  [!code-csharp[c_FederationBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federationbinding/cs/source.cs#2)] 
@@ -116,5 +117,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [방법: 사용 안 함 보안 WSFederationHttpBinding에서 세션](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+ [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

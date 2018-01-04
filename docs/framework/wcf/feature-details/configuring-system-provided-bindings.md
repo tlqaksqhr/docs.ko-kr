@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91994fc31e4b0f30d575cd43ad44e66dcdb0a7f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e77cf5cc271e86c02e8355dde6f721fe7751416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-system-provided-bindings"></a>시스템 제공 바인딩 구성
 바인딩은 끝점과 통신할 때 사용할 통신 메커니즘을 지정하고 끝점에 연결하는 방법을 나타냅니다. 바인딩은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 채널이 필수 통신 기능을 제공하기 위해 계층화되는 방식을 정의하는 요소로 구성됩니다. 바인딩에는 다음 세 가지 형식의 요소가 있습니다.  
@@ -63,9 +64,9 @@ ms.lasthandoff: 12/02/2017
   
 |바인딩|상호 운용성|보안 모드(기본값)|세션<br /><br /> (기본값)|트랜잭션|이중|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, Mixed|None, (None)|(None)|해당 없음|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|None, Transport, (Message), Mixed|(None), Transport, Reliable Session|(None), 예|해당 없음|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|None, Transport, (Message), Mixed|(None), Transport, Reliable Session|(None), 예|해당 없음|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, Mixed|None, (None)|(None)|N/A|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|None, Transport, (Message), Mixed|(None), Transport, Reliable Session|(None), 예|N/A|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|None, Transport, (Message), Mixed|(None), Transport, Reliable Session|(None), 예|N/A|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|None, (Message)|(Reliable Session)|(None), 예|예|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|None, (Message), Mixed|(None), Reliable Session|(None), 예|아니요|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|None, (Message), Mixed|(None), Reliable Session|(None), 예|아니요|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 12/02/2017
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|None,<br /><br /> (Transport)|None, (Transport)|(None), 예|예|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|None, Message, (Transport), Both|(None)|(None), 예|아니요|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|None, Message, (Transport), Mixed|(None)|(None)|예|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|None, (Transport)|(None)|(None), 예|해당 없음|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|None, (Transport)|(None)|(None), 예|N/A|  
   
  다음 표에서는 앞의 표에서 볼 수 있는 기능에 대해 설명합니다.  
   

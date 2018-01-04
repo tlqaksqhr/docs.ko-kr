@@ -12,11 +12,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 944f8d7c015d2522ae4fb8f0805ca6a40d494a75
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d162635a82027d1aaa46545dabad3e103d0f339c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-and-implementing-custom-activities"></a>사용자 지정 활동 디자인 및 구현
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 시스템 제공 활동을 복합 활동으로 어셈블하거나 <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> 또는 <xref:System.Activities.NativeActivity>에서 파생된 새 형식을 만들어 사용자 지정 활동을 만듭니다. 이 단원에서는 이 메서드 중 하나를 사용하여 사용자 지정 활동을 만드는 방법에 대해 설명합니다.  
@@ -24,7 +25,7 @@ ms.lasthandoff: 12/02/2017
 > [!IMPORTANT]
 >  기본적으로 사용자 지정 활동은 Workflow Designer에 활동 이름과 함께 간단한 사각형으로 표시됩니다. 워크플로 디자이너에서 활동이 표시되는 모양을 사용자 지정하려면 사용자 지정 디자이너도 만들어야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][사용자 지정 활동 디자이너와 템플릿을 사용 하 여](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [활동 제작 옵션](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)  
  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서 사용할 수 있는 제작 스타일에 대해 설명합니다.  
   

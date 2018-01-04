@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56b6252188854374b9e0eddd7aca53daba6f6086
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 094c962e2576653fc8c9de4c0dece912fcaa07f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation-overview"></a>상관 관계 개요
 상관 관계는 워크플로 서비스 메시지를 서로 연결하거나 응용 프로그램 상태와 연결하는 메커니즘입니다. 예를 들어 응답을 초기 요청과 연결하거나 특정 주문 ID를 주문 처리 워크플로의 지속된 상태와 연결할 수 있습니다. 이 항목에서는 상관 관계에 대해 간략하게 설명하고 이 단원의 다른 항목에서는 각 상관 관계 형식에 대해 자세히 설명합니다.  
@@ -37,6 +38,6 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [내용 기반 상관 관계](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
- [상호 관련 된 계산기](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
+ [상호 관련된 계산기](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [영 속 이중 &#91; WF 샘플 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
  [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)

@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2428aead99f387d4fffe3d583b9843cb7492c1ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee7c5320caa3b7704813b94d4ddfbf1ce0fecf96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>명령 코드를 사용하여 워크플로, 활동 및 식 작성
 워크플로 정의는 구성된 활동 개체의 트리입니다. XAML을 수동으로 편집하거나 Workflow Designer를 사용하여 XAML을 생성하는 등 여러 가지 방법으로 이 활동 트리를 정의할 수 있습니다. 하지만 XAML 사용은 필수 사항이 아닙니다. 프로그래밍 방식으로 워크플로 정의를 만들 수도 있습니다. 이 항목에서는 코드를 사용하여 워크플로 정의, 활동 및 식을 만드는 방법을 간략히 설명합니다. 코드를 사용 하 여 XAML 워크플로 작업의 예 참조 [직렬화 워크플로 및 활동 xaml](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)합니다.  

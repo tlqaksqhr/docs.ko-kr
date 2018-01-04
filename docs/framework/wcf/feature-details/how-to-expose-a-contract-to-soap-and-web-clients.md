@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c04da670c84aaecf3587e6620c70e94c6b7350e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>방법: SOAP 및 웹 클라이언트에 계약 공개
 기본적으로 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 SOAP 클라이언트에 대해서만 끝점을 사용할 수 있도록 합니다. [하는 방법: 기본 WCF 웹 HTTP 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), 비 SOAP 클라이언트를 끝점 사용할 수 있습니다. 동일한 계약을 웹 끝점 및 SOAP 끝점으로 모두 사용해야 하는 경우가 있습니다. 이 항목에서는 이 작업을 수행하는 방법을 보여 줍니다.  
@@ -100,7 +101,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[htSoapWeb#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#9)]
      [!code-vb[htSoapWeb#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#9)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 항목에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[htSoapWeb#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#13)]

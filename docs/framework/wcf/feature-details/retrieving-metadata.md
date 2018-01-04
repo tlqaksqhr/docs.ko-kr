@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e41a3cc65df5576c538864aa9e1fe1aacbe7e94
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bfc96c585ba55fbf63283d7cb23fae5b364b0465
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-metadata"></a>메타데이터 검색
 메타데이터 검색은 WS-MEX(WS-MetadataExchange) 메타데이터 끝점 또는 HTTP/GET 메타데이터 끝점 같은 메타데이터 끝점에서 메타데이터를 요청 및 검색하는 프로세스입니다.  
@@ -31,14 +32,14 @@ ms.lasthandoff: 12/02/2017
   
  기본적으로 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 인스턴스는 하나의 <xref:System.ServiceModel.ChannelFactory> 인스턴스에 연결됩니다. <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 가상 메서드를 재정의하여 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>에서 사용하는 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> 인스턴스를 변경하거나 바꿀 수 있습니다. 마찬가지로 <xref:System.Net.HttpWebRequest> 가상 메서드를 재정의하여 HTTP/GET 요청을 만들기 위해 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>에서 사용하는 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> 인스턴스를 변경하거나 바꿀 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [방법: Svcutil.exe를 사용 하 여 메타 데이터 문서를 다운로드 하려면](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [방법: Svcutil.exe를 사용하여 메타데이터 문서 다운로드](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
  Svcutil.exe를 사용하여 메타데이터 문서를 다운로드하는 방법을 보여 줍니다.  
   
- [방법: MetadataResolver를 사용 하 여 동적으로 바인딩 메타 데이터 가져오기](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ [방법: MetadataResolver를 사용하여 동적으로 바인딩 메타데이터 가져오기](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>를 사용하여 바인딩 메타데이터를 런타임에 동적으로 가져오는 방법을 보여 줍니다.  
   
- [방법: MetadataExchangeClient를 사용 하 여 메타 데이터를 검색 합니다.](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
+ [방법: MetadataExchangeClient를 사용하여 메타데이터 검색](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
  <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 클래스를 사용하여 파일에 기록하거나 다른 용도로 사용할 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> 개체가 있는 <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> 개체에 메타데이터 파일을 다운로드하는 방법을 보여 줍니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -8,11 +8,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 806e31f3d5c0998e7a30dfbb9d1fdec9a1a50269
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 193f8ce60d8675832955b0e153af7f61b28d2707
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-wf-samples"></a>WF(Windows Workflow) 샘플
 이 샘플에서는 [!INCLUDE[wf](../../../../includes/wf-md.md)]의 다양한 측면에 대한 지침을 제공합니다.  

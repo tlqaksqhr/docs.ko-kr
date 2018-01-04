@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd37e88c581638e5ae11d85803fa3a970b4c8409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe에서 반환된 오류 코드 해석
 이 항목에서는 WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)에서 생성한 모든 오류 코드 및 수행할 동작을 나열합니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 |5|입력한 포트가 범위를 벗어났습니다. 값은 1에서 65535 사이의 범위 내에 있어야 합니다.|오류 메시지에 표시된 대로 `-port:<portNum>`<br /><br /> 명령줄 옵션을 수정합니다.|  
 |6|명령줄에 잘못된 끝점 인증서가 지정되었습니다.  인증서를 찾을 수 없거나 인증서가 확인 과정을 통과하지 못했습니다.|`-endpointCert` 명령줄 옵션을 수정합니다. 인증서에 개인 키가 있는지, 인증서를 ClientAuthentication 및 ServerAuthentication 모두에 사용할 수 있는지, 인증서가 LocalMachine\MY 인증서 저장소에 설치되어 있는지 그리고 인증서를 완전히 신뢰할 수 있는지 확인합니다.|  
 |7|명령줄에 잘못된 계정 인증서가 지정되었습니다.|`-accountsCerts` 명령줄 옵션을 수정합니다. 지정한 인증서가 잘못 지정되었거나 해당 인증서를 찾을 수 없습니다.|  
-|9|기본 시간 제한이 1초에서 3600초 사이의 범위를 벗어나 지정되었습니다.|표시된 대로 올바른 기본 시간 제한 값을 입력합니다.|  
+|8|기본 시간 제한이 1초에서 3600초 사이의 범위를 벗어나 지정되었습니다.|표시된 대로 올바른 기본 시간 제한 값을 입력합니다.|  
 |10|레지스트리에 액세스하는 동안 예기치 않은 오류가 발생했습니다.|실행 가능한 항목에 대한 오류 메시지 및 오류 코드를 확인합니다.|  
 |11|레지스트리에 쓸 수 없습니다.|오류 메시지에 나열된 키가 WsatConfig.exe가 실행된 계정의 레지스트리 액세스를 지원할 수 있는지 확인합니다.|  
 |12|인증서 저장소에 액세스하는 동안 예기치 않은 오류가 발생했습니다.|반환된 오류 코드를 사용하여 적절한 시스템 오류에 매핑합니다.|  

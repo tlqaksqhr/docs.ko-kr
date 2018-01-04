@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 1721417b8d1fc799e6af5d09762ee852d9fbfb03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-services-programmatically"></a>방법: 프로그래밍 방식으로 서비스 작성
 Windows 서비스 프로젝트 템플릿을 사용 하지 않도록 선택 상속 및 기타 인프라 요소를 설정 하 여 사용자 고유의 서비스를 작성할 수 있습니다. 서비스를 프로그래밍 방식으로 만드는 경우 서식 파일을 처리할 수 있는 몇 가지 단계를 수행 해야 합니다.  
@@ -82,6 +83,6 @@ Windows 서비스 프로젝트 템플릿을 사용 하지 않도록 선택 상�
 ## <a name="see-also"></a>참고 항목  
  [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [방법: 서비스 응용 프로그램에 설치 관리자를 추가 합니다.](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [방법: 서비스에 대 한 정보를 기록 합니다.](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [연습: 구성 요소 디자이너에는 Windows 서비스 응용 프로그램 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+ [방법: 서비스 응용 프로그램에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [방법: 서비스에 대한 정보 로깅](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68edbf5a2c96893bdf0e3a7a923084adea9e3c21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-resource-service"></a>기본 리소스 서비스
 이 샘플에서는 검색, 추가, 삭제 및 대체 작업을 지원하는 고객 컬렉션을 노출하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 사용하여 HTTP 기반 서비스를 구현하는 방법을 보여 줍니다. 이 샘플은 자체 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 서비스(Service.cs)와 서비스를 만들고 호출하는 콘솔 응용 프로그램(program.cs)의 두 구성 요소로 구성되어 있습니다.  
@@ -50,4 +51,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md)  
- [선택 영역 자동 서식 지정](../../../../docs/framework/wcf/samples/automatic-format-selection.md)
+ [자동 포맷 선택](../../../../docs/framework/wcf/samples/automatic-format-selection.md)

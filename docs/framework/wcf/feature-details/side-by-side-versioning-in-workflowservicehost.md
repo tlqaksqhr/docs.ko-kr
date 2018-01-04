@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3629778ded2b690f8169223101d89cb551e1449
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db8f79fcdc1398b891933f5fef9f07410e5de11e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost에서 Side-by-side 버전 관리
 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에 소개된 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] side-by-side 버전 관리는 단일 끝점에서 여러 버전의 워크플로 서비스를 호스팅하는 기능을 제공합니다. 제공된 side-by-side 기능을 사용하여 워크플로 서비스를 구성할 수 있습니다. 그러면 기존 정의를 사용하여 실행 중인 인스턴스를 완료하는 동시에, 새 워크플로 정의를 사용하여 워크플로 서비스의 새 인스턴스를 만들 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하는 워크플로 서비스 side-by-side 실행에 대해 대략적으로 설명합니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.Activities.Receive>에 주 버전에 없는 <xref:System.ServiceModel.Activities.SendReply> 또는 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 작업이 없어야 하며 작업 계약과 일치해야 합니다.  
   
--   고유한 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>가 있어야 합니다. 하나의 워크플로 정의만 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>를 가질 수 있습니다.  
+-   고유한 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>가 있어야 합니다. 워크플로 정의 하나만 있을 수는 `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>합니다.  
   
  일부 변경 내용은 허용됩니다. 다음 항목은 버전간 다를 수 있습니다.  
   

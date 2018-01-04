@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 544e505dd182d331179d9a6d3da4815b849fdd95
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-protocols-version-10"></a>트랜잭션 프로토콜 버전 1.0
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 버전 1은 WS-Atomic Transaction 및 WS-Coordination 프로토콜의 버전 1.0을 구현합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]버전 1.1에서 참조 [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)합니다.  
@@ -111,7 +112,7 @@ ms.lasthandoff: 12/02/2017
   
  B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 이중 HTTPS 바인딩을 사용 하 여 (에 설명 된 [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 활성화 메시지에 대 한 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
- 8단원 WS-Atomic Transaction 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
+ 8단원 WS-Atomic 트랜잭션 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
   
 -   R1222: 코디네이터는 `CreateCoordinationContext`를 수신하는 즉시 연관된 비밀 `SecurityContextToken`로 `STx`을 발급해야 합니다. 이 토큰은 WS-Trust 사양을 따르는 `t:IssuedTokens` 헤더의 내부로 반환됩니다.  
   

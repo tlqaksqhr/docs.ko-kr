@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ef0886fe5319d2ddd8c4c4be1b61f629f2aa6f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-architectural-overview"></a>데이터 전송 아키텍처 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 는 일종의 메시징 인프라입니다. WCF는 메시지를 받고, 처리하고, 추가 작업을 위해 사용자 코드로 디스패치하거나, 사용자 코드에서 제공된 데이터로부터 메시지를 생성하고 이 메시지를 대상에 전달할 수 있습니다. 고급 개발자를 대상으로 한 이 항목에서는 메시지 및 포함된 데이터를 처리하기 위한 아키텍처에 대해 설명합니다. 데이터를 주고 받는 방법을 보다 간단하게, 작업에 초점을 두고 설명하는 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조하십시오.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 12/02/2017
  `Message` 클래스가 본문을 나타내는 XML 데이터와 함께 반드시 버퍼를 포함하지는 않습니다. 논리적으로는 `Message` 가 XML Infoset을 포함하지만, 이 Infoset은 동적으로 생성될 수 있으며, 메모리에 물리적으로 존재하지는 않습니다.  
   
 ### <a name="putting-data-into-the-message-body"></a>데이터를 메시지 본문에 넣기  
- 데이터를 메시지 본문에 넣기 위한 일관된 메커니즘은 없습니다. <xref:System.ServiceModel.Channels.Message> 클래스에는 추상 메서드인 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29>가 있으며, 이 메서드는 <xref:System.Xml.XmlDictionaryWriter>를 사용합니다. <xref:System.ServiceModel.Channels.Message> 클래스의 각 서브클래스는 이 메서드를 재정의하고, 해당 콘텐츠를 작성하는 기능을 담당합니다. 메시지 본문은 `OnWriteBodyContent` 를 생성하는 XML Infoset을 논리적으로 포함합니다. 다음 `Message` 서브클래스 예제를 참조하십시오.  
+ 데이터를 메시지 본문에 넣기 위한 일관된 메커니즘은 없습니다. <xref:System.ServiceModel.Channels.Message> 클래스에는 추상 메서드인 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29>가 있으며, 이 메서드는 <xref:System.Xml.XmlDictionaryWriter>를 사용합니다. <xref:System.ServiceModel.Channels.Message> 클래스의 각 서브클래스는 이 메서드를 재정의하고, 해당 콘텐츠를 작성하는 기능을 담당합니다. 메시지 본문은 `OnWriteBodyContent`를 생성하는 XML Infoset을 논리적으로 포함합니다. 다음 `Message` 서브클래스 예제를 참조하십시오.  
   
  [!code-csharp[c_DataArchitecture#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#2)]
  [!code-vb[c_DataArchitecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#2)]  
@@ -88,9 +89,9 @@ ms.lasthandoff: 12/02/2017
   
 |메시지 유형|메시지의 본문 데이터|쓰기(OnWriteBodyContents) 구현|읽기(OnGetReaderAtBodyContents) 구현|  
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
-|비스트리밍 프로그래밍 모델에서 만들어진 나가는 메시지|메시지 작성에 필요한 데이터(예: serialize하는 데 필요한 개체 및 <xref:System.Runtime.Serialization.DataContractSerializer> 인스턴스)*|저장된 데이터를 기반으로 메시지를 작성하는 사용자 지정 논리(예: `WriteObject` 의 `DataContractSerializer` 호출. 단 이 serializer를 사용 중인 경우)*|`OnWriteBodyContents`를 호출하고, 결과를 버퍼링하고, 버퍼를 통해 XML 판독기를 반환|  
-|스트리밍된 프로그래밍 모델에서 만들어진 나가는 메시지|작성할 데이터가 포함된 `Stream` *|<xref:System.Xml.IStreamProvider> 메커니즘을 사용하여 저장된 스트림에서 가져온 데이터 작성*|`OnWriteBodyContents`를 호출하고, 결과를 버퍼링하고, 버퍼를 통해 XML 판독기를 반환|  
-|스트리밍 채널 스택에서 들어오는 메시지|네트워크를 통해 `Stream` 와 함께 들어오는 데이터를 나타내는 <xref:System.Xml.XmlReader> 개체|`XmlReader` 를 사용하여 저장된 `WriteNode`로부터 콘텐츠 작성|저장된 `XmlReader`반환|  
+|비스트리밍 프로그래밍 모델에서 만들어진 나가는 메시지|메시지 작성에 필요한 데이터(예: serialize하는 데 필요한 개체 및 <xref:System.Runtime.Serialization.DataContractSerializer> 인스턴스)*|저장된 데이터를 기반으로 메시지를 작성하는 사용자 지정 논리(예: `WriteObject`의 `DataContractSerializer` 호출. 단 이 serializer를 사용 중인 경우)*|`OnWriteBodyContents`를 호출하고, 결과를 버퍼링하고, 버퍼를 통해 XML 판독기를 반환|  
+|스트리밍된 프로그래밍 모델에서 만들어진 나가는 메시지|작성할 데이터가 포함된 `Stream`*|<xref:System.Xml.IStreamProvider> 메커니즘을 사용하여 저장된 스트림에서 가져온 데이터 작성*|`OnWriteBodyContents`를 호출하고, 결과를 버퍼링하고, 버퍼를 통해 XML 판독기를 반환|  
+|스트리밍 채널 스택에서 들어오는 메시지|네트워크를 통해 `Stream` 와 함께 들어오는 데이터를 나타내는 <xref:System.Xml.XmlReader> 개체|`XmlReader`를 사용하여 저장된 `WriteNode`로부터 콘텐츠 작성|저장된 `XmlReader`반환|  
 |스트리밍되지 않은 채널 스택에서 들어오는 메시지|`XmlReader` 와 함께 본문 데이터가 포함된 버퍼|`XmlReader` 를 사용하여 저장된 `WriteNode`로부터 콘텐츠를 작성합니다.|저장된 lang 반환|  
   
  \*이 항목에서 직접 구현 되지 않습니다 `Message` 하위 클래스의 서브 클래스에는 <xref:System.ServiceModel.Channels.BodyWriter> 클래스입니다. 에 대 한 자세한 내용은 <xref:System.ServiceModel.Channels.BodyWriter>, 참조 [메시지 클래스를 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)합니다.  
@@ -144,7 +145,7 @@ ms.lasthandoff: 12/02/2017
   
  앞에서 설명한 대로 일부 예제만 제공하기 위해서도 다양한 동작이 있을 수 있습니다. 이러한 동작으로는 다양한 프로토콜을 통한 네트워크 패킷 주고받기, 데이터베이스의 메시지 읽기 또는 쓰기, 메시지 큐에서 메시지 대기시키기 또는 제거하기 등이 있습니다. 이러한 모든 동작에는 한 가지 공통점이 있습니다. 즉, 보내기, 받기, 읽기, 쓰기, 큐에 대기시키기 또는 큐에서 제거하기 등을 수행할 수 있는 실제 바이트 그룹과 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`Message` 인스턴스 간의 변형이 필요합니다. `Message` 를 바이트 그룹으로 변환하는 프로세스를 *인코딩*이라 하며, 바이트 그룹으로부터 `Message` 를 만드는 역 프로세스를 *디코딩*이라 합니다.  
   
- 대부분의 전송 채널은 *메시지 인코더* 라는 구성 요소를 사용하여 인코딩 및 디코딩 작업을 수행합니다. 메시지 인코더는 <xref:System.ServiceModel.Channels.MessageEncoder> 클래스의 서브클래스입니다. `MessageEncoder` 는 다양한 `ReadMessage` 및 `WriteMessage` 메서드 오버로드를 포함하여 `Message` 와 바이트 그룹 사이에서 변환합니다.  
+ 대부분의 전송 채널은 *메시지 인코더* 라는 구성 요소를 사용하여 인코딩 및 디코딩 작업을 수행합니다. 메시지 인코더는 <xref:System.ServiceModel.Channels.MessageEncoder> 클래스의 서브클래스입니다. `MessageEncoder`는 다양한 `ReadMessage` 및 `WriteMessage` 메서드 오버로드를 포함하여 `Message`와 바이트 그룹 사이에서 변환합니다.  
   
  보내는 쪽에서는 버퍼링 전송 채널이 상위 채널로부터 `Message` 개체를 받아서 `WriteMessage`로 전달합니다. 버퍼링 전송 채널은 바이트 배열을 다시 가져온 다음 이를 사용하여 해당 동작(예: 이러한 바이트를 유효한 TCP 패킷으로 패키지화하고 올바른 대상으로 이를 보냄)을 수행합니다. 스트리밍 전송 채널은 먼저 `Stream` 을 만든 다음(예: 나가는 TCP 연결을 통해), 메시지를 작성하는 적합한 `Stream` 오버로드로 보내기 위해 필요한 `Message` 과 `WriteMessage` 를 모두 전달합니다.  
   
@@ -188,7 +189,7 @@ ms.lasthandoff: 12/02/2017
  이 방법을 사용하면 <xref:System.Xml.IStreamProvider.GetStream> 을 호출하고 스트리밍된 데이터를 작성할 때 XML 작성기를 선택할 수 있습니다. 예를 들어 텍스트 및 이진 XML 작성기는 이를 즉각 호출하고 시작 및 끝 태그 사이에서 스트리밍된 콘텐츠를 작성합니다. MTOM 작성기는 메시지의 적절한 일부를 쓸 준비가 되면 나중에 <xref:System.Xml.IStreamProvider.GetStream> 을 호출할지 결정할 수 있습니다.  
   
 ## <a name="representing-data-in-the-service-framework"></a>서비스 프레임워크에서 데이터 표시  
- 이 항목의 "기본 아키텍처" 단원에서 설명한 대로 서비스 프레임워크는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 의 일부이며 메시지에 대해 사용자 정의 프로그래밍 모델과 실제 `Message` 인스턴스 간의 변환을 담당합니다. 일반적으로 메시지 교환은 서비스 프레임워크에서 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 특성과 함께 표시된 <xref:System.ServiceModel.OperationContractAttribute> 메서드로 나타납니다. 메서드는 일부 매개 변수에서 사용할 수 있으며, 반환 값 또는 out 매개 변수(또는 둘 다)를 반환할 수 있습니다. 서비스 쪽에서는 입력 매개 변수가 들어오는 메시지를 나타내며, 반환 값 및 out 매개 변수는 나가는 메시지를 나타냅니다. 클라이언트 쪽에서는 그 반대입니다. 매개 변수 및 해당 반환 값을 사용하여 메시지를 설명하는 프로그래밍 모델은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)에서 자세하게 설명합니다. 이 단원에서는 간략한 개요만 제공합니다.  
+ 이 항목의 "기본 아키텍처" 단원에서 설명한 대로 서비스 프레임워크는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 일부이며 메시지에 대해 사용자 정의 프로그래밍 모델과 실제 `Message` 인스턴스 간의 변환을 담당합니다. 일반적으로 메시지 교환은 서비스 프레임워크에서 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 특성과 함께 표시된 <xref:System.ServiceModel.OperationContractAttribute> 메서드로 나타납니다. 메서드는 일부 매개 변수에서 사용할 수 있으며, 반환 값 또는 out 매개 변수(또는 둘 다)를 반환할 수 있습니다. 서비스 쪽에서는 입력 매개 변수가 들어오는 메시지를 나타내며, 반환 값 및 out 매개 변수는 나가는 메시지를 나타냅니다. 클라이언트 쪽에서는 그 반대입니다. 매개 변수 및 해당 반환 값을 사용하여 메시지를 설명하는 프로그래밍 모델은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)에서 자세하게 설명합니다. 이 단원에서는 간략한 개요만 제공합니다.  
   
 ## <a name="programming-models"></a>프로그래밍 모델  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 프레임워크는 메시지를 설명하기 위해 다음과 같이 다섯 가지의 서로 다른 프로그래밍 모델을 지원합니다.  
@@ -212,7 +213,7 @@ ms.lasthandoff: 12/02/2017
  `SetDesiredTemperature` 예제에서는 양방향 메시지 교환 패턴을 설명합니다. 작업에서 메시지가 반환되지만 비어 있습니다. 작업에서 오류를 반환할 수 있습니다. "Lightbulb 설정" 예제에서 메시지 교환 패턴은 단방향이므로 설명을 위해 나가는 메시지가 없습니다. 이 경우 서비스는 클라이언트로 반환되는 모든 상태를 통신할 수 없습니다.  
   
 ### <a name="2-using-the-message-class-directly"></a>2. Message 클래스 직접 사용  
- 작업 계약에서 직접 <xref:System.ServiceModel.Channels.Message> 클래스(또는 해당 서브클래스 중 하나)를 사용할 수 있습니다. 이 경우에는 서비스 프레임워크가 추가 처리 없이 작업에서 채널 스택으로, 또는 그 반대로 `Message` 를 전달합니다.  
+ 작업 계약에서 직접 <xref:System.ServiceModel.Channels.Message> 클래스(또는 해당 서브클래스 중 하나)를 사용할 수 있습니다. 이 경우에는 서비스 프레임워크가 추가 처리 없이 작업에서 채널 스택으로, 또는 그 반대로 `Message`를 전달합니다.  
   
  `Message` 를 직접 사용하는 두 가지 주요 사례가 있습니다. 사용자의 메시지를 설명하기에 충분한 유연성을 제공하는 다른 프로그래밍 모델이 없을 때 이를 고급 시나리오에 사용할 수 있습니다. 예를 들어 메시지 헤더가 될 파일의 속성과 메시지 본문이 될 파일의 내용으로 메시지를 설명하기 위해 디스크의 파일을 사용할 수 있습니다. 그런 다음, 다음과 유사한 항목을 만들 수 있습니다.  
   
@@ -277,9 +278,9 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 는 매개 변수 및 메시지 부분의 serialize와 deserialize를 위해 "즉시 사용할 수 있는" 두 가지 serialization 기술, 즉, <xref:System.Runtime.Serialization.DataContractSerializer> 및 `XmlSerializer`를 지원합니다. 그뿐 아니라 사용자 지정 serializer도 작성할 수 있습니다. 그러나 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 의 다른 부분(예: 제네릭 `GetBody` 메서드 또는 SOAP 오류 serialization)은 <xref:System.Runtime.Serialization.XmlObjectSerializer> 서브클래스(<xref:System.Runtime.Serialization.DataContractSerializer> 가 아닌 <xref:System.Runtime.Serialization.NetDataContractSerializer>및 <xref:System.Xml.Serialization.XmlSerializer>)만 사용하도록 제한되거나, 심지어 <xref:System.Runtime.Serialization.DataContractSerializer>만 사용하도록 하드 코드될 수도 있습니다.  
   
- `XmlSerializer` 는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진입니다. `DataContractSerializer` 는 새 데이터 계약 프로그래밍 모델을 이해하는 새 serialization 엔진입니다. `DataContractSerializer` 가 기본 선택되며, `XmlSerializer` 를 사용할지 여부는 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 특성을 사용하여 작업별로 지정할 수 있습니다.  
+ `XmlSerializer`는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진입니다. `DataContractSerializer` 는 새 데이터 계약 프로그래밍 모델을 이해하는 새 serialization 엔진입니다. `DataContractSerializer` 가 기본 선택되며, `XmlSerializer` 를 사용할지 여부는 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 특성을 사용하여 작업별로 지정할 수 있습니다.  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 및 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 는 `DataContractSerializer` 와 `XmlSerializer`각각에 대해 메시지 포맷터에서의 플러그 인을 담당하는 작업 동작입니다. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 동작은 실제로 <xref:System.Runtime.Serialization.XmlObjectSerializer>를 비롯하여 <xref:System.Runtime.Serialization.NetDataContractSerializer> 에서 파생되는 모든 serializer와 함께 작동할 수 있습니다. 자세한 내용은 독립 실행형 Serialization 사용에 설명되어 있습니다. 해당 동작은 `CreateSerializer` 가상 메서드 오버로드 중 하나를 호출하여 serializer를 가져옵니다. 다른 serializer를 플러그 인하려면 새 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 서브클래스를 만들고, 두 `CreateSerializer` 오버로드를 모두 재정의합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [서비스 계약에서 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

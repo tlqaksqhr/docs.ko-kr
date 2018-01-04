@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 75191aa28be76da549d38403c4a6f019c6f54bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-with-metadata"></a>메타데이터 관련 보안 고려 사항
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메타데이터 기능을 사용하는 경우 서비스 메타데이터를 게시, 검색 및 사용하면 보안에 어떠한 영향이 있는지 검토합니다.  
@@ -49,5 +50,5 @@ ms.lasthandoff: 11/21/2017
  서비스의 응용 프로그램 구성 파일은 메타데이터 게시 방법과 게시 여부를 제어할 수 있습니다. 적절한 ACL로 응용 프로그램 구성 파일을 보호하여 공격자가 이러한 설정을 수정할 수 없도록 하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 메타 데이터 끝점 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
+ [방법: 메타데이터 끝점 보안 설정](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
  [보안](../../../../docs/framework/wcf/feature-details/security.md)

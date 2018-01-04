@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0fcd6662c0f8899b6830dc8e06cee4f56b5ff906
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a64a8a4ab6212a5e83b59fd7523df9cd875e7b87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="1035---runtimetransactionset"></a>1035 - RuntimeTransactionSet
 ## <a name="properties"></a>속성  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  런타임 트랜잭션이 작업 '%1', DisplayName가 설정한: '%2', InstanceId: '%3'.  실행에만 작업 '%4', DisplayName: '%5', InstanceId: '%6'.  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  

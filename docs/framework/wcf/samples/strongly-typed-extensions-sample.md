@@ -13,18 +13,19 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6f6a1d205a0e8443d7dc81da53855a1b7920def
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9928b6a63f30e111d0e84ae6d83b730ae15eedce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strongly-typed-extensions-sample"></a>강력한 형식 확장명 샘플
 이 샘플에서는 예를 들기 위해 <xref:System.ServiceModel.Syndication.SyndicationFeed> 클래스를 사용하지만 이 샘플에 나온 패턴은 확장 데이터를 지원하는 모든 배포 클래스에서 사용할 수 있습니다.  
   
  배포 개체 모델(<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem> 및 관련 클래스)은 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 및 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 속성을 사용하여 확장 데이터에 대한 자유로운 형식의 액세스를 지원합니다. 이 샘플에서는 특정 응용 프로그램 관련 확장을 강력한 형식의 속성으로 사용할 수 있게 하는 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>의 사용자 지정 파생 클래스를 구현하여 확장 데이터에 대해 강력한 형식의 액세스를 제공하는 방법을 보여 줍니다.  
   
- 한 예로 이 샘플에서는 제안된 Atom Threading Extensions RFC에 정의된 확장 요소를 구현하는 방법을 보여 줍니다. 이 샘플은 데모용으로만 사용되며 제안된 사양을 전체 구현할 용도는 아닙니다.  
+ 한 예로 이 샘플에서는 제안된 Atom Threading Extensions RFC에 정의된 확장명 요소를 구현하는 방법을 보여 줍니다. 이 샘플은 데모용으로만 사용되며 제안된 사양을 전체 구현할 용도는 아닙니다.  
   
 ## <a name="sample-xml"></a>샘플 XML  
  다음 XML 예제에서는 추가 `<in-reply-to>` 확장 요소가 포함된 Atom 1.0 항목을 보여 줍니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b367b5133cd765fe7e160cd2706589c1773eeb59
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-find-and-findcriteria"></a>찾기 및 FindCriteria
 찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다. 찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다. 지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]검색 메시지 참조는 [Ws-discovery 사양의](http://go.microsoft.com/fwlink/?LinkID=122347)합니다.  
@@ -75,8 +76,8 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Discovery 클라이언트 채널을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [검색 클라이언트 채널 사용](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [범위를 사용한 검색](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  [비동기 찾기](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [기본](../../../../docs/framework/wcf/samples/basic-sample.md)

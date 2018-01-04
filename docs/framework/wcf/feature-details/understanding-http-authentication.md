@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b41e47ae4067ac52cc747d675ec5231f25b1352
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-http-authentication"></a>HTTP 인증 이해
 인증은 클라이언트가 리소스에 액세스할 자격이 있는지 여부를 식별하는 프로세스입니다. HTTP 프로토콜에서는 보안 리소스에 대한 액세스를 협상하기 위해 인증을 지원합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/02/2017
 |인증 스키마|설명|  
 |---------------------------|-----------------|  
 |Anonymous|익명 요청에는 인증 정보가 포함되어 있지 않습니다. 이는 모든 사용자에게 리소스에 대한 액세스 권한을 것과 같습니다.|  
-|기본|Basic 인증에서는 클라이언트의 사용자 이름 및 암호를 포함하는 Base64로 인코딩된 문자열을 보냅니다. Base64는 암호화 형식이 아니므로 사용자 이름 및 암호를 일반 텍스트로 보내는 것과 동일하다고 간주해야 합니다. 리소스를 보호해야 하는 경우 Basic 인증이 아닌 인증 스키마를 사용하는 것이 좋습니다.|  
+|Basic|Basic 인증에서는 클라이언트의 사용자 이름 및 암호를 포함하는 Base64로 인코딩된 문자열을 보냅니다. Base64는 암호화 형식이 아니므로 사용자 이름 및 암호를 일반 텍스트로 보내는 것과 동일하다고 간주해야 합니다. 리소스를 보호해야 하는 경우 Basic 인증이 아닌 인증 스키마를 사용하는 것이 좋습니다.|  
 |Digest|다이제스트 인증은 Basic 인증을 대체하기 위한 시도/응답 스키마입니다. 서버 라고 하는 임의의 데이터의 문자열을 보냅니다는 *nonce* 을 시도로 클라이언트를 합니다. 클라이언트에서는 추가 정보 중에서 사용자 이름, 암호 및 nonce를 포함하는 해시를 사용하여 응답합니다. 이러한 교환 과정에서 발생하는 복잡성 및 데이터 해시 때문에 Digest 인증 스키마를 사용하는 사용자의 자격 증명을 도용하거나 재사용하기는 다른 경우보다 어렵습니다.<br /><br /> 다이제스트 인증의 경우 Windows 도메인 계정을 사용해야 합니다. 다이제스트 *영역* Windows 도메인 이름입니다. 따라서 같이 Windows 도메인을 Windows XP Home Edition, 다이제스트 인증을 지원 하지 않는 운영 체제에서 실행 하는 서버를 사용할 수 없습니다. 반대로 Windows 도메인을 지원하지 않는 운영 체제에서 클라이언트를 실행하는 경우 인증하는 동안 도메인 계정을 명시적으로 지정해야 합니다.|  
 |NTLM|NTLM(NT LAN Manager) 인증은 다이제스트 인증의 보다 안전한 변형인 시도/응답 스키마입니다. NTLM에서는 Windows 자격 증명을 사용하여 인코딩되지 않은 사용자 이름 및 암호 대신 시도 데이터를 변형합니다. NTLM 인증의 경우 클라이언트와 서버 간 다중 교환이 필요합니다. 서버 및 개입된 모든 프록시에서는 인증을 성공적으로 완료하기 위해 영구 연결을 지원해야 합니다.|  
 |Negotiate|Negotiate 인증의 경우 사용 가능 여부에 따라 Kerberos 프로토콜 및 NTLM 인증 중 하나를 자동으로 선택합니다. Kerberos 프로토콜이 사용 가능하면 먼저 사용되고, 그렇지 않으면 NTLM이 사용됩니다. Kerberos 인증은 NTLM에 비해 크게 향상되었습니다. Kerberos 인증은 NTLM보다 빠르고, 상호 인증을 사용할 수 있으며 원격 시스템에 자격 증명을 위임할 수 있습니다.|  
@@ -47,5 +48,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [전송 보안 개요](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [전송 보안으로 가장 사용](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [전송 보안을 통해 가장 사용](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>웹 서비스 프로토콜 상호 운용성 가이드
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 다양한 웹 서비스 프로토콜을 구현합니다. 이러한 프로토콜의 대부분에는 구현자가 결정하는 여러 가지 옵션과 확장 지점이 포함되어 있습니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 구현하는 웹 서비스 프로토콜의 목록을 제공합니다. 이 단원의 다른 항목에서는 지원되는 각 프로토콜의 구현에 대해 자세히 설명합니다.  
@@ -111,7 +112,7 @@ ms.lasthandoff: 12/02/2017
 -   [기본 보안 프로필 1.0 초안](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>참고 항목  
- [웹 서비스 시스템 제공 상호 운용성 바인딩에서 지 원하는 프로토콜](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [시스템 제공 상호 운용성 바인딩에서 지원하는 웹 서비스 프로토콜](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
  [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  [WSDL 및 정책](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  

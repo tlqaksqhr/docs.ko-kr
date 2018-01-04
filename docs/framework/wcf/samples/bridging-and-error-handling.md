@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc809b75a965107594f7b2aa8a78d412bf284d8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84a7d3385d89d4308e6a75d303a567fb4d7b22d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bridging-and-error-handling"></a>브리징과 오류 처리
 이 샘플에서는 서로 다른 바인딩을 사용하는 클라이언트와 서비스 간의 브리징 통신에 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 라우팅 서비스를 사용하는 방법을 보여 줍니다. 또한 장애 조치 시나리오에 백업 서비스를 사용하는 방법도 보여 줍니다. 라우팅 서비스는 응용 프로그램에 내용 기반 라우터를 손쉽게 포함할 수 있게 해 주는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구성 요소입니다. 이 샘플에서는 라우팅 서비스를 사용하여 통신하도록 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator 샘플을 조정합니다.  

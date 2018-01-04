@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29e4fb590733392ebae10fe1ad18781653c0d202
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: caff90b66007310c7b3ad24f2f084cc2282a7021
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-service-host-extensibility"></a>워크플로 서비스 호스트 확장명
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 워크플로 서비스를 호스트하는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스를 제공합니다. 이 클래스는 관리되는 응용 프로그램의 워크플로 서비스나 Windows 서비스를 자체 호스트할 때 사용되며, IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 워크플로 서비스를 호스트할 때도 사용됩니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스는 사용자 지정 확장을 추가하고, 유휴 동작을 변경하고, 서비스가 아닌 워크플로(메시징 작업을 사용하지 않는 워크플로)를 호스트할 수 있는 확장 지점을 제공합니다.  
@@ -60,4 +61,4 @@ host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action =
   
 ## <a name="see-also"></a>참고 항목  
  [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [메시징 활동](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+ [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d2b5b6d4a671a3eb281f49dd60fd3c00ee76f8a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>방법: 메타데이터 교환 계약을 통해 서비스 모니커 사용
 새 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 개발한 후 처음부터 이러한 서비스를 호출하거나 Visual Basic 6.0 응용 프로그램을 호출하도록 결정할 수 있습니다. 한 메서드는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 어셈블리를 생성하고, 어셈블리를 COM에 등록하고, GAC에 어셈블리를 설치한 다음 Visual Basic 코드에서 COM 형식을 참조합니다. 응용 프로그램을 배포하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 어셈블리도 배포해야 합니다. 사용자는 WCF 클라이언트 어셈블리를 COM에 등록하고 GAC에 배치해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] COM Interop를 사용하면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 어셈블리에 의존하지 않고 동일한 서비스 호출을 수행할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모니커를 사용하면 서비스 모니커가 서비스에 대한 형식 정보를 추출하는 데 사용하는 Mex(메타데이터 교환) 끝점 URI를 지정하여 Visual Basic, VBScript, VBA(Visual Basic for Applications) 등의 COM 호환 언어에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 호출할 수 있습니다. 이 항목에서는 Mex 끝점을 지정하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모니커를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 시작 샘플을 호출하는 방법에 대해 설명합니다.  
@@ -50,5 +51,5 @@ ms.lasthandoff: 12/02/2017
     >  모니커의 형식이 잘못되었거나 서비스를 사용할 수 없는 경우 `GetObject`를 호출하면 "구문이 잘못되었습니다."라는 오류가 반환됩니다.  이 오류가 발생하면 사용하고 있는 모니커가 올바르고 서비스를 사용할 수 있는지 확인하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 등록 없이 Windows Communication Foundation 서비스 모니커를 사용 하 여](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
+ [방법: 등록 없이 Windows Communication Foundation 서비스 모니커 사용](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
  [방법: WSDL 계약을 통해 서비스 모니커 사용](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

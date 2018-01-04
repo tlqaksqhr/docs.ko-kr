@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e22763f78d8a40ced4350a93a1f1833e19aac17f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>데이터 계약의 컬렉션 형식
 *컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 경우 이러한 목록은 배열이나 여러 형식(제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>또는 <xref:System.Collections.ArrayList>)을 사용하여 나타낼 수 있습니다. 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.  
@@ -279,7 +280,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  목록 컬렉션에서는 다음 표에 있는 것과 같은 경우만 지원됩니다.  
   
-|참조된 형식|참조된 형식으로 구현된 인터페이스|예제|처리되는 형식|  
+|참조된 형식|참조된 형식으로 구현된 인터페이스|예|처리되는 형식|  
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(매개 변수 수에는 제한 없음)|제네릭이 아닌 형식|`MyType : IList`<br /><br /> 또는<br /><br /> `MyType<T> : IList`<br /><br /> 여기서 T= `int`|`Object` 의 폐쇄형 제네릭 형식(예: `IList<object>`)|  
 |제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(컬렉션 형식과 일치하지 않아도 되는 임의의 수의 매개 변수)|폐쇄형 제네릭 형식|`MyType : IList<string>`<br /><br /> 또는<br /><br /> `MyType<T> : IList<string>` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IList<string>`)|  
@@ -294,7 +295,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  사전 컬렉션에서는 다음 표에 있는 것과 같은 경우만 지원됩니다.  
   
-|참조된 형식|참조된 형식으로 구현된 인터페이스|예제|처리되는 형식|  
+|참조된 형식|참조된 형식으로 구현된 인터페이스|예|처리되는 형식|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(매개 변수 수에는 제한 없음)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 또는<br /><br /> `MyType<T> : IDictionary` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IDictionary<object,object>`)|  
 |폐쇄형 제네릭 형식(여러 개의 매개 변수)|<xref:System.Collections.Generic.IDictionary%602>, 폐쇄형|`MyType<T> : IDictionary<string, bool>`여기서 T =`int`|폐쇄형 제네릭 형식(예: `IDIctionary<string,bool>`)|  

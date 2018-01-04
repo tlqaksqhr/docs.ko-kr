@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd96404adea7fb8e7d59dcea322b2d3832f2bfe4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: df2a7a78e876ec3228491569c918ad9add2e080d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replay-attacks"></a>재생 공격
 A *재생 공격* 는 공격자가 두 당사자 간에 메시지 스트림을 복사 하 고 하나 이상의 당사자에 게 스트림을 재생 하는 경우에 발생 합니다. 완화되지 않은 경우 공격을 받기 쉬운 컴퓨터는 스트림을 올바른 메시지로 처리하여 항목에 대한 중복 주문과 같은 잘못된 결과의 범위에 있게 됩니다.  
@@ -48,8 +49,8 @@ A *재생 공격* 는 공격자가 두 당사자 간에 메시지 스트림을 �
   
 ## <a name="see-also"></a>참고 항목  
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [정보 공개 문제점](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [권한 상승 문제점](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [변조](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+ [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

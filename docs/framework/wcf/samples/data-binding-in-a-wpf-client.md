@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7306c58f04483d0e4230b39b05cbebc3de857736
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 55e60aaba0ebba57668f91d692ce774bd0ef0115
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Wndows Presentation Foundation 클라이언트에서 데이터 바인딩
 이 샘플에서는 WPF(Windows Presentation Foundation) 클라이언트에서 데이터 바인딩을 사용하는 방법을 보여 줍니다. 이 샘플에서는 클라이언트에 반환될 앨범 배열을 무작위로 생성하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 사용합니다. 각 앨범에는 이름, 가격 및 앨범 트랙 목록이 있습니다. 앨범 트랙에는 이름과 기간이 있습니다. 서비스에 의해 반환되는 정보는 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 클라이언트가 제공하는 UI(사용자 인터페이스)에 자동으로 바인딩됩니다.  

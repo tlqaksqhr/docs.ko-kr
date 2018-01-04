@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef77df0681f7177a3b006b84d5ed3b60b7954555
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e6c592e387668a51e44fd0ffc8987757c63b4e69
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extended-protection-policy"></a>확장된 보호 정책
 확장된 보호는 MITM(Man-In-The-Middle, 메시지 가로채기) 공격을 방지하기 위한 보안 이니셔티브입니다. MITM 공격은 공격자가 클라이언트의 자격 증명을 가로채 서버로 전달하는 보안 위협입니다.  

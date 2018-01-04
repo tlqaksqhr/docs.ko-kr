@@ -13,23 +13,24 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef396a909b26110267b03f42728589640c7e2242
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f733aaf62d37f9c8ca853a0958e627a4f354121d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-binding"></a>WS 바인딩
 이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 Windows 서비스 바인딩을 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [WS 트랜잭션 흐름](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  
  클라이언트에서 조정하는 트랜잭션의 사용법과 WS-Atomic Transaction 또는 OleTransactions 프로토콜을 사용하는 트랜잭션 흐름의 클라이언트 및 서버 옵션을 보여 줍니다.  
   
  [WS 2007 페더레이션 HTTP 바인딩](../../../../docs/framework/wcf/samples/ws-2007-federation-http-binding.md)  
  <xref:System.ServiceModel.WS2007FederationHttpBinding>의 사용법을 보여 줍니다.  
   
- [WS 다중 Http](../../../../docs/framework/wcf/samples/ws-dual-http.md)  
+ [WS 이중 Http](../../../../docs/framework/wcf/samples/ws-dual-http.md)  
  `WSDualHttpBinding` 바인딩을 구성하는 방법을 보여 줍니다.  
   
  [MTOM 인코딩](../../../../docs/framework/wcf/samples/mtom-encoding.md)  

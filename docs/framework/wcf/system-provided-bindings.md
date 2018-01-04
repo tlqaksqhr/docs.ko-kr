@@ -14,11 +14,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea5cd7f8510836b17a20b523dc2455611cdb2382
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-provided-bindings"></a>시스템 제공 바인딩
 바인딩은 끝점과 통신할 때 사용할 통신 메커니즘을 지정하고 끝점에 연결하는 방법을 나타냅니다. 바인딩에 다음과 같은 요소가 포함됩니다.  
@@ -64,8 +65,8 @@ ms.lasthandoff: 12/02/2017
   
 |바인딩|상호 운용성|보안(기본값)|세션<br /><br /> (기본값)|트랜잭션|이중|인코딩(기본값)|스트리밍<br /><br /> (기본값)|  
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, Mixed|(None)|(None)|해당 없음|Text, (MTOM)|예<br /><br /> (buffered)|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (Message), Mixed|(None), Reliable Session, Security Session|(None), 예|해당 없음|(Text), MTOM|아니요|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, Mixed|(None)|(None)|N/A|Text, (MTOM)|예<br /><br /> (buffered)|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (Message), Mixed|(None), Reliable Session, Security Session|(None), 예|N/A|(Text), MTOM|아니요|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Message), None|(Reliable Session), Security Session|(None), 예|예|(Text), MTOM|아니요|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Message), Mixed, None|(None), Reliable Session, Security Session|(None), 예|아니요|(Text), MTOM|아니요|  
 |<xref:System.ServiceModel.NetHttpBinding>|.NET|(None), Transport, Message, TransportWithMessageCredential, TransportCredentialOnly|다음의 참고를 참조하십시오.|없음|다음의 참고를 참조하십시오.|(이진), 텍스트, MTOM|예(버퍼링됨)|  
@@ -74,11 +75,11 @@ ms.lasthandoff: 12/02/2017
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transport), None|None, (Transport)|(None), 예|예|이항|예<br /><br /> (buffered)|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Message, (Transport), None|(None), Transport|None, (예)|아니요|이항|아니요|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|(Transport)|(None)|(None)|예||아니요|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transport)|(None)|None, (예)|해당 없음|해당 없음|아니요|  
-|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(None), Transport, Message, Mixed|(None)|(None)|해당 없음|Text, (MTOM)|예<br /><br /> (buffered)|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transport)|(None)|None, (예)|N/A|N/A|아니요|  
+|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(None), Transport, Message, Mixed|(None)|(None)|N/A|Text, (MTOM)|예<br /><br /> (buffered)|  
 |<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transport), Message, None, Mixed|(Transport), Reliable Session, Security Session|(None), 예|예|이항|예<br /><br /> (buffered)|  
-|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (Message), Mixed|(None), Reliable Session, Security Session|(None), 예|해당 없음|Text, (MTOM)|아니요|  
-|<xref:System.ServiceModel.UdpBinding>|.NET **참고:** 이 바인딩 구현 표준 SOAP-over-UDP 사양을 구현 하 여 상호 운용성을 구현할 수 있습니다.|(None)|(None)|(None)|해당 없음|(Text)|아니요|  
+|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (Message), Mixed|(None), Reliable Session, Security Session|(None), 예|N/A|Text, (MTOM)|아니요|  
+|<xref:System.ServiceModel.UdpBinding>|.NET **참고:** 이 바인딩 구현 표준 SOAP-over-UDP 사양을 구현 하 여 상호 운용성을 구현할 수 있습니다.|(None)|(None)|(None)|N/A|(Text)|아니요|  
   
 > [!IMPORTANT]
 >  <xref:System.ServiceModel.NetHttpBinding>은 HTTP 또는 WebSocket 서비스를 사용하도록 디자인된 바인딩이며 기본적으로 이진 인코딩을 사용합니다. <xref:System.ServiceModel.NetHttpBinding>은 해당 바인딩이 HTTP 요청-회신 계약에 사용되는지 이중 계약에 사용되는지를 검색하고 그에 맞게 동작을 변경합니다. 요청-회신에는 HTTP가 사용되고 이중 계약에는 WebSocket이 사용됩니다. 사용 하 여이 동작을 재정의할 수 있습니다는 <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>--> `System.ServiceModel.NetHttpBinding.WebSocketTransportUsage` 바인딩 설정을: 허용-기본값 이므로 위에서 설명한 것 처럼 동작 합니다. NotAllowed-을 사용 하는 Websocket이 차단 합니다. 이 설정을 사용 하 여 이중 계약을 사용 하려고 하면 예외가 발생 합니다. 필수-이 설정은 Websocket 요청-회신 계약에도 사용할 수 있습니다. NetHttpBinding은 HTTP 모드 및 WebSocket 모드에서 신뢰할 수 있는 세션을 지원합니다. WebSocket 모드에서는 세션이 전송에 의해 제공됩니다.  

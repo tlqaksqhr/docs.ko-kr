@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8a2f0883a2d83ad5b3c1a2a3dd6c7e016583af7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc7af813f7fff422a2513c58c9e3cba6376de060
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>방법: Windows Server AppFabric을 사용하여 워크플로 서비스 호스팅
 AppFabric에서 워크플로 서비스를 호스팅하는 것은 IIS/WAS에서 호스팅하는 것과 유사합니다. 유일한 차이점은 AppFabric에서 워크플로 서비스의 배포, 모니터링 및 관리를 위해 제공하는 도구입니다. 이 항목에서는에서 만든 워크플로 서비스는 [장기 실행 워크플로 서비스를 만드는](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)합니다. 이 항목에서는 워크플로 서비스를 만드는 방법을 안내하며, AppFabric을 사용하여 워크플로 서비스를 호스팅하는 방법을 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric 참조 [Windows Server App Fabric 문서](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)합니다. 아래의 단계를 완료하기 전에 Windows Server AppFabric이 설치되어 있는지 확인합니다.  인터넷 정보 서비스 (inetmgr.exe)를이 열고를 수행 하려면 서버 이름을 클릭는 **연결** 사이트를 클릭 하 고 클릭 **기본 웹 사이트**합니다. 화면 오른쪽에 있는 섹션이 표시 되어야 **App Fabric**합니다. 이 섹션(오른쪽 창의 맨 위에 있음)이 없으면 AppFabric이 설치되지 않은 것입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric 설치 참조 [설치 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136)합니다.  

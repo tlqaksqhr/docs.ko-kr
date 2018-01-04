@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 구성할 수 있지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 모든 보안 옵션을 구성할 때 완벽한 유연성을 제공하지는 않는 여러 시스템 제공 바인딩이 포함되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 바인딩을 만들 참조 [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
   
 7.  결과 사용자 지정 바인딩은 표준 <xref:System.ServiceModel.WSHttpBinding>과 동일한 특징을 많이 공유합니다. 메시지 수준 보안 및 Windows 자격 증명을 지정하지만 보안 세션은 사용하지 않도록 설정하고, 서비스 자격 증명은 대역 외로 지정되어야 하며, 서명을 암호화하지 않습니다. 마지막 항목은 4단계에서처럼 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 속성의 설정을 통해서만 제어할 수 있습니다. 다른 두 가지는 표준 바인딩의 설정을 사용하여 제어할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 예제에서는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 사용하는 사용자 지정 바인딩을 만들기 위한 완전한 함수를 제공합니다.  

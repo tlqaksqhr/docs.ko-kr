@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edc9e285faab064b8552263bd48e6d2ad43d5ec2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce650c931e94c76c669ee99068d2356f4b2ec32f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pick-activity"></a>선택 활동
 <xref:System.Activities.Statements.Pick> 활동은 해당 처리기 앞에 있는 이벤트 트리거 집합의 모델링을 단순화합니다.  <xref:System.Activities.Statements.Pick> 활동은 <xref:System.Activities.Statements.PickBranch> 활동 컬렉션을 포함합니다. 여기서 각 <xref:System.Activities.Statements.PickBranch>는 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 활동과 <xref:System.Activities.Statements.PickBranch.Action%2A> 활동의 쌍입니다.  실행 시간에 모든 분기에 대한 트리거가 병렬로 실행됩니다.  트리거 하나가 완료되면 그에 상응하는 작업이 실행되고 다른 모든 트리거가 취소됩니다.  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<xref:System.Activities.Statements.Pick> 활동의 동작은 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]<xref:System.Workflow.Activities.ListenActivity> 활동과 유사합니다.  

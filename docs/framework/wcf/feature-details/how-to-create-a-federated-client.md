@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87d29a53bc33ecd114e3315475984cbf04ce17c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-federated-client"></a>방법: 페더레이션 클라이언트 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에 대 한 클라이언트 만들기는 *페더레이션 서비스* 세 개의 주요 단계로 구성 됩니다.  
@@ -150,7 +151,7 @@ ms.lasthandoff: 12/02/2017
     </scopedCertificates>  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 샘플에서는 코드에 <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 클래스의 인스턴스를 구성합니다.  
   
  [!code-csharp[c_FederatedClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedclient/cs/source.cs#2)]
@@ -171,10 +172,10 @@ ms.lasthandoff: 12/02/2017
 >  제공된 URI로 범위가 지정된 인증서에 대한 클라이언트 개념은 이러한 URI에서 끝점을 노출하는 서비스로 아웃바운드 호출하는 응용 프로그램에만 적용됩니다. 서버에서 반환 된 컬렉션에 구성 된 발급 된 토큰에 서명 하는 데 사용 되는 인증서에는 적용 되지 않습니다는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 클래스입니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [방법: 사용 안 함 보안 WSFederationHttpBinding에서 세션](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [메타 데이터의 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [방법: 메타 데이터 끝점 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+ [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [방법: 메타데이터 끝점 보안 설정](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

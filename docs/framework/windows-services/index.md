@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 2912568e967c8c6096842b1b4f24eac88318dffb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-windows-service-applications"></a>Windows 서비스 응용 프로그램 개발
 Microsoft를 사용 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK를 쉽게 만들 수 있습니다 서비스 서비스로 설치 하는 응용 프로그램을 만들어 합니다. 이 유형의 응용 프로그램에는 Windows 서비스를 라고 합니다. Framework 기능을 사용 있습니다 수는 서비스를 만들, 설치, 시작, 중지 및 그렇지 않은 경우의 동작을 제어 합니다.  
@@ -33,11 +34,11 @@ Microsoft를 사용 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] �
 > [!WARNING]
 >  C + +에 대 한 Windows 서비스 템플릿은 Visual Studio 2010에 포함 되지 않았습니다. Windows 서비스를 만들려면 Visual C# 또는 Visual Basic, 필요한 경우 기존 c + + 코드 상호 작용할 수에서 관리 코드에서 서비스를 만들 수 있습니다 또는 네이티브 c + +에서를 사용 하 여 Windows 서비스를 만들 수는 [ATL프로젝트마법사](/cpp/atl/reference/atl-project-wizard).  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  서비스 및 서비스 응용 프로그램 다른 공통 프로젝트 형식에서 어떻게 다른 지의 수명을 Windows 서비스 응용 프로그램에 대 한 개요를 제공 합니다.  
   
- [연습: 구성 요소 디자이너에는 Windows 서비스 응용 프로그램 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
  서비스를 만드는 예제를 제공 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 및 Visual C#입니다.  
   
  [서비스 응용 프로그램 프로그래밍 아키텍처](../../../docs/framework/windows-services/service-application-programming-architecture.md)  

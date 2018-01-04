@@ -13,23 +13,24 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f1f0be7d3080e7e33100c4718d7f8db25a4f87b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25743d5a3ab222f8fb4fde84b72021c233ec73f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic"></a>Basic
 이 단원에는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 기본 기능을 보여 주는 샘플 단원이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 일반 서비스와 일반 클라이언트를 구현하는 방법을 보여 줍니다.  
   
  [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
  AJAX(Asynchronous JavaScript and XML)를 보여 줍니다.  
   
- [바인딩](../../../../docs/framework/wcf/samples/binding.md)  
+ [Binding](../../../../docs/framework/wcf/samples/binding.md)  
  끝점 요소의 바인딩 특성을 사용하는 방법을 보여 줍니다.  
   
  [클라이언트](../../../../docs/framework/wcf/samples/client.md)  

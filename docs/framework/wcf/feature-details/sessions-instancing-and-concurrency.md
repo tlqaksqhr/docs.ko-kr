@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44aebb701eb7222773c030994fbaa9c0109dce70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-instancing-and-concurrency"></a>세션, 인스턴스 및 동시성
 *세션* 은 두 개의 끝점 사이에 전송된 모든 메시지의 상관 관계입니다. *인스턴스 만들기* 는 사용자 정의 서비스 개체와 관련 <xref:System.ServiceModel.InstanceContext> 개체의 수명 제어를 의미합니다. *동시성* 은 <xref:System.ServiceModel.InstanceContext> 에서 동시에 실행되는 스레드 수의 제어를 의미하는 용어입니다.  

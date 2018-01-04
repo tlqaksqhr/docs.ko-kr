@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 261d6e41ca79ca245b104513a92306ab8833c905
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-schema-reference"></a>데이터 계약 스키마 참조
 이 항목에서는 XML serialization에 대한 CLR(공용 언어 런타임) 형식을 설명하기 위해 <xref:System.Runtime.Serialization.DataContractSerializer> 에서 사용하는 XSD(XML 스키마) 하위 집합에 대해 설명합니다.  
@@ -533,7 +534,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 형식 매핑  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 은 `ISerializable` 버전 1.0에서 지속성이나 데이터 전송을 위해 개체를 serialize하는 일반 메커니즘으로 새로 추가되었습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 을 구현하고 응용 프로그램 간에 전달할 수 있는 다양한 `ISerializable` 형식이 있습니다. `DataContractSerializer` 는 기본적으로 `ISerializable` 클래스에 대한 지원을 제공합니다. `DataContractSerializer` 는 형식의 QName(정규화된 이름)에 의해서만 달라지는 효율적인 속성 컬렉션인 `ISerializable` 구현 스키마 형식을 매핑합니다. 예를 들어, `DataContractSerializer` 는 <xref:System.Exception> 을 http://schemas.datacontract.org/2004/07/System 네임스페이스에서 다음 XSD 형식에 매핑합니다.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 은 `ISerializable` 버전 1.0에서 지속성이나 데이터 전송을 위해 개체를 serialize하는 일반 메커니즘으로 새로 추가되었습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 을 구현하고 응용 프로그램 간에 전달할 수 있는 다양한 `ISerializable` 형식이 있습니다. `DataContractSerializer` 는 기본적으로 `ISerializable` 클래스에 대한 지원을 제공합니다. `DataContractSerializer`는 형식의 QName(정규화된 이름)에 의해서만 달라지는 효율적인 속성 컬렉션인 `ISerializable` 구현 스키마 형식을 매핑합니다. 예를 들어, `DataContractSerializer` 는 <xref:System.Exception> 을 http://schemas.datacontract.org/2004/07/System 네임스페이스에서 다음 XSD 형식에 매핑합니다.  
   
 ```xml  
 <xs:complexType name="Exception">  

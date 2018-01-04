@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23daee4b8e7cd1fcf7ec7f085fb40d788aa5e556
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 XML 기반 통신 인프라입니다. XML 데이터에 정의 된 표준 텍스트 형식으로 인코딩되어 일반적으로 하기 때문에 [XML 1.0 사양](http://go.microsoft.com/fwlink/?LinkId=94838)관계, 설계자 및 시스템 개발자가 일반적으로 염려 하는 전송 된 메시지의 통신 사용 공간 (또는 크기)에서 네트워크 및 XML의 텍스트 기반 인코딩과 이진 데이터의 효율적인 전송을 위한 특별히 고려해 야 할 제기 됩니다.  

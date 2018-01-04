@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcda7f9edc741e8f0c9c56214119255ca2777d77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 541770db6b9cc624fd08ab4db275bc63fa5deca9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channels-extensibility"></a>채널 확장성
 이 단원에는 사용자 지정 채널을 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [로컬 채널](../../../../docs/framework/wcf/samples/local-channel.md)  
  동일한 응용 프로그램 도메인 내에서 통신하는 데 사용되는 로컬 채널인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송 채널을 보여 줍니다.  
   

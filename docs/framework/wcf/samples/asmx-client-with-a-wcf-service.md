@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f4c89e6382b5edd0ca295fde8f498fe97bdb64d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF 서비스를 사용한 ASMX 클라이언트
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 서비스를 만든 다음 ASMX 클라이언트와 같은 비[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서 서비스에 액세스하는 방법을 보여 줍니다.  

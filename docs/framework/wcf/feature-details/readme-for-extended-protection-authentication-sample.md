@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3981a0d0c82b8bc35536a9afd702e753fcf07db5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 78e787c129c0161e8730472124ee4162e2d1ba9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>인증에 대한 확장된 보호 ReadMe 샘플
 확장 된 보호는 공격자 (에서 "man에서-들기")는 클라이언트의 자격 증명을 가로채 고 하는 클라이언트의 의도 된 서버에서 보안 리소스에 액세스 하는 데 사용 중간자 개입 (mitm 메시지) 공격 으로부터 보호 하려면 보안 이니셔티브입니다.  

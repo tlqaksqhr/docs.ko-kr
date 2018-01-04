@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c8cf38e65bbc917720b1a1c5b604d81ca536c14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 751fe96caa2be63e925b3107fa2c198b523bef72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 호환성
 이 샘플에서는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 호환 모드를 사용하도록 설정하는 방법을 보여 줍니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환 모드에서 실행되는 서비스는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 파이프라인에 완전히 참여하고 파일/URL 권한 부여, 세션 상태 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 클래스와 같은 <xref:System.Web.HttpContext> 기능을 활용할 수 있습니다. <xref:System.Web.HttpContext> 클래스는 쿠키, 세션 및 기타 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 기능에 대한 액세스를 허용합니다. 이 모드에서는 바인딩에 HTTP 전송이 사용되고 서비스 자체가 IIS에서 호스트되어야 합니다.  
