@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 968dd4210e13e301ba2f0ca24617df23706cefc0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3726ccdebf310d831fb0d7ea21fab011293f6d99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경
 모양을 제어 하는 문서 및 해당 요소의 html에서 스타일을 사용할 수 있습니다. <xref:System.Windows.Forms.HtmlDocument>및 <xref:System.Windows.Forms.HtmlElement> 지원 <xref:System.Windows.Forms.HtmlElement.Style%2A> 는 다음과 같은 형식의 스타일 문자열을 사용 하는 속성:  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/22/2017
   
 7.  프로젝트를 실행합니다. 커서를 첫 번째 실행 `DIV` 코드의 결과를 관찰 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에 대 한 전체 코드를 보여 줍니다.는 `StyleGenerator` 기존 스타일 값을 구문 분석 하는 클래스 지원 추가, 변경 및 스타일을 제거 하 고 요청된 된 변경 포함 된 새 스타일 값을 반환 합니다.  
   
  [!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]

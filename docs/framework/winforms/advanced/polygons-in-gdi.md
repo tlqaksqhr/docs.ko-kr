@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 740a454873976e407843c417a7b09e5a5218398d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 26068ab72473a541b1f16aeb2a1f0d43ec7a7313
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="polygons-in-gdi"></a>GDI+의 다각형
 다각형은 세 개 이상의 직선 면으로 폐쇄형된 도형입니다. 예를 들어 삼각형 세 면 있는 다각형 사각형은 네 면 있는 다각형 있고, 오각형은 5 면 합니다. 다음 그림에는 여러 다각형과 보여 줍니다.  

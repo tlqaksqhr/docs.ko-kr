@@ -21,14 +21,15 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ae03cbd8828f61011f8d806be32b5827d77b22a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cf917dc2af256cdd0f3a0c579f86847e1bf4f1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enumerate-system-fonts"></a>방법: 시스템 글꼴 열거
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 시스템 글꼴 컬렉션에서 글꼴을 열거 하는 방법을 보여 줍니다. 각각의 글꼴 패밀리 이름을 <xref:System.Windows.Media.FontFamily> 내 <xref:System.Windows.Media.Fonts.SystemFontFamilies%2A> 콤보 상자에 항목으로 추가 됩니다.  
   
  [!code-csharp[TextOverview#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextOverview/CSharp/Window1.xaml.cs#100)]

@@ -12,17 +12,18 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e27a16519acf567903579fafe90da3cd0a8bbf3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e3069e97a1696b37d56728eb86161cc2487dfdfa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-grid-extensibliity"></a>속성 표 확장성
 개발자는 디자이너 내에서 지정된 활동을 선택할 경우 표시되는 속성 표를 사용자 지정할 수 있으므로 이를 통해 다양한 편집 환경을 만들 수 있습니다. 이 샘플에서는 이러한 작업을 수행하는 방식을 보여 줍니다.  
   
 ## <a name="demonstrates"></a>세부 항목  
- Workflow Designer 속성 표 확장성  
+ 워크플로 디자이너 속성 표 확장성  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

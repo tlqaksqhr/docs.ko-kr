@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15f2d1492148a4b00a4b96844f546a4dc968eef6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0de3b8596bc06c79f391141ef85fec65ac343d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>방법: MenuStrip에 옵션 단추 표시(Windows Forms)
 옵션 단추, 라디오 단추 라고도 한 번에 하나씩만 선택할 수 있다는 점을 제외 하 고 확인란을 선택 하는 것과 비슷합니다. 기본적으로 있지만 <xref:System.Windows.Forms.ToolStripMenuItem> 클래스 옵션 단추 동작을 제공 하지 않습니다는 클래스에서 메뉴 항목에 대 한 옵션 단추 동작을 구현 하는 사용자 지정할 수 있는 확인란 동작을 제공는 <xref:System.Windows.Forms.MenuStrip> 제어 합니다.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 제공 전체 `ToolStripRadioButtonMenuItem` 클래스 및 <xref:System.Windows.Forms.Form> 클래스 및 `Program` 클래스 옵션 단추 동작을 보여 줍니다.  
   
  [!code-csharp[ToolStripRadioButtonMenuItem#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#000)]

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72af16b7dcb7709dd132a3748a454eda57acc168
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec53957a61806239fdd41761de6e172681b7497b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Windows Forms Timer 구성 & # 39의 제한 사항; s Interval 속성
 Windows Forms <xref:System.Windows.Forms.Timer> 구성 요소에는 <xref:System.Windows.Forms.Timer.Interval%2A> 타이머 이벤트와 다음 사이 경과 하는 시간 (밀리초)의 수를 지정 하는 속성입니다. 타이머를 계속 수신 하는 구성 요소 비활성화 되어 있지 않으면는 <xref:System.Windows.Forms.Timer.Tick> 거의 같은 시간 간격으로 이벤트입니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70bf241865eef3366444e1b4dc20c19adaff983e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 42773e29d7071c5bc5f3d5de3660c9891788b422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에 편집 모드 지정
 기본적으로 사용자의 현재 내용을 편집할 수 있습니다 <xref:System.Windows.Forms.DataGridView> 에서 직접 입력 하거나 F2 키를 눌러 텍스트 상자 셀입니다. 다음 조건이 모두 충족 될 경우에 편집 모드에 셀 전환:  

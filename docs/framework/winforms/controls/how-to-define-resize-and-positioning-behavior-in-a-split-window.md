@@ -20,18 +20,19 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: db4a99c7dae7783e8ea51f43ad51fcd2214997e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed78a49119c87c52a07cc2ade030e66087d3f420
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>방법: 분할 창에서 크기 조정 및 위치 지정 동작 정의
 패널의는 <xref:System.Windows.Forms.SplitContainer> 컨트롤에 중점을 두 잘 되 고 크기를 조정 하 고 사용자가 조작 합니다. 그러나 프로그래밍 방식으로 제어 하는 분할 하려는 됩니다 때 됩니다-여기서 배치 하 고 이동할 수 정도를 합니다.  
   
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 속성 및 속성에는 <xref:System.Windows.Forms.SplitContainer> 제어 요구에 맞게 사용자 인터페이스의 동작을 보다 정밀 하 게 제어를 제공 합니다. 이러한 속성은 다음 표에 나열 됩니다.  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 속성|키보드 또는 마우스를 사용 하 여 이동 가능한 분할자 인지 여부를 확인 합니다.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 속성|이동할 수 있는 분할 막대를 왼쪽 또는 위쪽 가장자리에서 픽셀 거리를 결정합니다.|  

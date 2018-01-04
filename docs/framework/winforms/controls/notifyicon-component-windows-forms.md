@@ -22,16 +22,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56c0991bfbe8c190c06a7907cf04fa4576435864
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: eef312d7e7883e86bcbaa4dfb9733d567139fad9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon 구성 요소(Windows Forms)
 Windows Forms `NotifyIcon` 사용자 인터페이스가 백그라운드에서 실행 하 고 그렇지 않으면 선택할 수도 있는 프로세스에 대 한 구성 요소 작업 표시줄의 상태 알림 영역에서 아이콘을 표시 합니다. 예를 들어 작업 표시줄의 상태 알림 영역에서 아이콘을 클릭하여 액세스할 수 있는 바이러스 방지 프로그램이 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [NotifyIcon 구성 요소 개요](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)  
  일반적인 개념을 소개는 `NotifyIcon` 사용자가 사용자 인터페이스를 갖지 않는 백그라운드에서 실행 되는 프로세스에 대 한 아이콘을 볼 수 있는 구성 합니다.  
   

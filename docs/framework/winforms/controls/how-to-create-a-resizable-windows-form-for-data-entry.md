@@ -22,16 +22,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51e844dc49f75e2f27ad5bbaf9176e71f6e3388a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d81f47d0a8ba48d18eaf2973d5810672a9aba1b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>방법: 데이터를 입력할 수 있는 크기 조정 가능한 Windows Form 만들기
 좋은 레이아웃은 부모 폼의 크기 변경에 제대로 대응합니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 통해 폼의 레이아웃을 정렬하면 폼 크기가 변경될 때 일관된 방식으로 컨트롤의 크기를 조정하고 배치할 수 있습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 컨트롤의 콘텐츠 변경으로 인해 레이아웃이 변경되는 경우에도 유용합니다. 이 절차에서 설명하는 프로세스는 Visual Studio 환경 내에서 수행할 수 있습니다.  또한 [연습: 데이터를 입력할 수 있는 크기 조정 가능한 Windows Form 만들기](http://msdn.microsoft.com/library/991eahec\(v=vs.110\))를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 통해 사용자가 폼 크기를 조정할 때 제대로 대응하는 레이아웃을 작성하는 방법을 보여 줍니다. 또한 지역화에 제대로 대응하는 레이아웃을 보여 줍니다.  
   
  [!code-cpp[System.Windows.Forms.TableLayoutPanel.DataEntryForm#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.DataEntryForm/cpp/basicdataentryform.cpp#1)]

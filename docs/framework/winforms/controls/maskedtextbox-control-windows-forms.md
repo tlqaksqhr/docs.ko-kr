@@ -19,16 +19,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 668d1b2184c2ae3e089c9996854eef9c28b5a5f4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f4e1beb6311604de5d0c59a29de2d1b6c50c2993
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox 컨트롤(Windows Forms)
 이 항목에 대 한 다른 사용자에 게 연결 된 `MaskedTextBox` 제어 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [연습: MaskedTextBox 컨트롤 사용](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
  주요 기능을 보여 줍니다는 `MaskedTextBox` 제어 합니다.  
   

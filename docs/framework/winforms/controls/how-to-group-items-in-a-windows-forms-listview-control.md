@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c22134513c2c6a3ff2bc621e68f546b7bcc93ba9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b12b7126e03f6a6c8363c69a607f4961f13120ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 그룹화
 그룹화 기능을 통해는 <xref:System.Windows.Forms.ListView> 컨트롤을 그룹에 관련된 항목 집합을 표시할 수 있습니다. 이러한 그룹은 화면에서 그룹 제목을 포함 하는 가로 그룹 머리글에 의해 분리 됩니다. 사용할 수 있습니다 <xref:System.Windows.Forms.ListView> 날짜, 또는 다른 논리적 그룹화 하 여 항목을 사전순으로 그룹화 하 여 큰 목록 보다 쉽게 탐색 하기 위해 그룹입니다. 다음 그림에서는 일부 그룹화 된 항목을 보여 줍니다.  
@@ -38,7 +39,7 @@ ListView 그룹화 된 항목
  그룹화를 사용 하려면 먼저 디자이너에서 또는 프로그래밍 방식으로 그룹 하나 이상 만들어야 합니다. 그룹을 정의한 후 할당할 수 있습니다 <xref:System.Windows.Forms.ListView> 항목 그룹입니다. 이동할 수도 있습니다 항목 그룹에서 다른 프로그래밍 방식으로 합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ListView>그룹에 대해서만 사용할 수 있는 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] 응용 프로그램 호출 하는 경우는 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 메서드. 이전 버전의 운영 체제 그룹과 관련 된 코드가 아무 효과도 없습니다 및 그룹이 표시 되지 않습니다. 자세한 내용은 <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>을 참조하십시오.  
+>  <xref:System.Windows.Forms.ListView>그룹에 대해서만 사용할 수 있는 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] 응용 프로그램 호출 하는 경우는 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 메서드. 이전 버전의 운영 체제 그룹과 관련 된 코드가 아무 효과도 없습니다 및 그룹이 표시 되지 않습니다. 자세한 내용은 <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>을 참조하세요.  
   
 ### <a name="to-add-groups"></a>그룹을 추가 하려면  
   

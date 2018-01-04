@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb60b1fde9ffadca20cc84a2739955c8687ed0b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 47cae789fb816286a9a22b87a2a86638c7876bda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>방법: Windows Forms 간에 컨트롤 복사
 컨트롤 같은 양식으로, 프로젝트 내에서 다른 폼으로 또는 다른 솔루션에서 사용 하기 위해 클립보드에 복사할 수 있습니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4584b74cd7a394f7dd04d0cfba150b907ca7c82
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7515f34858ef6f4b0495ac6fc545ae498d45c7f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-transformations-to-scale-colors"></a>변형을 사용하여 색의 비율 조정
 크기 조정 변환을 숫자는 네 가지 구성 요소 중 하나 이상을 곱합니다. 다음 테이블에 확장을 나타내는 색 매트릭스 항목이 제공 됩니다.  

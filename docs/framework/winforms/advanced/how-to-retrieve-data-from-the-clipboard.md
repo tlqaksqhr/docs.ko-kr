@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c2f71c6738f19e70826b95626377097de0cd9b3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c009efe743865896341da268bd14bf24158df46d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>방법: 클립보드에서 데이터 검색
 <xref:System.Windows.Forms.Clipboard> 클래스 Windows 운영 체제 클립보드 기능와 상호 작용 하는 데 사용할 수 있는 메서드를 제공 합니다. 많은 응용 프로그램 데이터에 대 한 임시 저장소로 클립보드를 사용 합니다. 예를 들어 워드 프로세서 잘라내기 / 붙여넣기 작업 중 클립보드를 사용합니다. 클립보드 정보에서 응용 프로그램 간에 전송 하는 데 도움이 됩니다.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  사용 된 <xref:System.Windows.Forms.Clipboard.GetData%2A> 메서드에 사용자 지정 형식 이름 합니다. 이 메서드는 영어로 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]합니다.  
   
-     미리 정의 된 형식 이름으로 사용할 수도 있습니다는 <xref:System.Windows.Forms.Clipboard.SetData%2A> 메서드. 자세한 내용은 <xref:System.Windows.Forms.DataFormats>을 참조하십시오.  
+     미리 정의 된 형식 이름으로 사용할 수도 있습니다는 <xref:System.Windows.Forms.Clipboard.SetData%2A> 메서드. 자세한 내용은 <xref:System.Windows.Forms.DataFormats>을 참조하세요.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  

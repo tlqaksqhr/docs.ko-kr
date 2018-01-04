@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02638ab59c0ba1c0eb0f8090be118b3d5a9111f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 738ca9670635f78e8cb04318b192127184766c3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>방법: Windows Forms ErrorProvider 구성 요소를 사용하여 폼 유효성에 대한 오류 아이콘 표시
 Windows Forms를 사용 하 여 <xref:System.Windows.Forms.ErrorProvider> 구성 요소는 사용자가 잘못 된 데이터를 입력할 때 오류 아이콘을 표시 합니다. 간에 이동 하 여 유효성 검사 코드를 호출할 폼에 두 개 이상의 컨트롤이 있어야 합니다.  

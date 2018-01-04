@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e6b815be85576f037e0f24668c44756b95abd6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7a29b7224a3f4b692fdfb3afaf58d9744bafcc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행
 Windows Forms 응용 프로그램에 대 한 폼과 컨트롤을 구성할 때에 반복 해 서 수행 하는 많은 작업이 있습니다. 일반적으로 수행된 하는 작업 중 일부입니다.  

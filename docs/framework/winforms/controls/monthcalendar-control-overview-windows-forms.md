@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dba245df31ad14150e57188c95ab3a980ae8d3db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a22667e4227067dfbf0baaad1838ab520e0ac7e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 보고 설정할 날짜 정보는 사용자를 위한 직관적인 그래픽 인터페이스를 제공 합니다. 달력을 표시 하는 컨트롤: 선택한 범위를 강조 표시 하는 날짜, 요일 일 요일별으로 나열 된 해당 월의 번호가 매겨진된 날짜를 포함 하는 표입니다. 월 캡션 어느 한 쪽에 있는 화살표 단추를 클릭 하 여 다른 월을 선택할 수 있습니다. 달리 <xref:System.Windows.Forms.DateTimePicker> 컨트롤을이 컨트롤을 사용 하 여 둘 이상의 날짜를 선택할 수 있습니다. 에 대 한 자세한 내용은 <xref:System.Windows.Forms.DateTimePicker> 제어, 참조 [DateTimePicker 컨트롤](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)합니다.  

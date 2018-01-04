@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d0f1ec3f1fe0b078da92c93cbb928075d7d462c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서의 기본 키보드 및 마우스 처리
 다음 표에서 사용자 수와 상호 작용 하는 방법을 설명는 <xref:System.Windows.Forms.DataGridView> 키보드와 마우스를 통해 제어 합니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |End |현재 행의 마지막 셀으로 포커스를 이동합니다.|  
 |Page Down|완벽 하 게 표시 되는 행의 개수로 컨트롤을 아래로 스크롤합니다. 열을 변경 하지 않고 마지막 완벽 하 게 표시 되는 행에서 포커스를 이동 합니다.|  
 |Page Up|컨트롤을 완벽 하 게 표시 되는 행 수 만큼 위로 스크롤합니다. 열을 변경 하지 않고 표시 되는 첫 번째 행에 포커스를 이동 합니다.|  
-|Tab 키|경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `false`, 현재 행에서 다음 셀으로 포커스를 이동 합니다. 포커스가 행의 마지막 셀에 이미 있으면 다음 행의 첫 번째 셀으로 포커스를 이동 합니다. 컨트롤의 마지막 셀에 포커스가 있으면 부모 컨테이너의 탭 순서의 다음 컨트롤로 포커스를 이동 합니다.<br /><br /> 경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `true`, 부모 컨테이너의 탭 순서의 다음 컨트롤로 포커스를 이동 합니다.|  
+|Tab|경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `false`, 현재 행에서 다음 셀으로 포커스를 이동 합니다. 포커스가 행의 마지막 셀에 이미 있으면 다음 행의 첫 번째 셀으로 포커스를 이동 합니다. 컨트롤의 마지막 셀에 포커스가 있으면 부모 컨테이너의 탭 순서의 다음 컨트롤로 포커스를 이동 합니다.<br /><br /> 경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `true`, 부모 컨테이너의 탭 순서의 다음 컨트롤로 포커스를 이동 합니다.|  
 |Shift+Tab|경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `false`, 현재 행의 이전 셀으로 포커스를 이동 합니다. 포커스가 행의 첫 번째 셀에 이미 있으면 이전 행의 마지막 셀으로 포커스를 이동 합니다. 컨트롤의 첫 번째 셀에 포커스가 있으면 포커스가 부모 컨테이너의 탭 순서에서 이전 컨트롤로 이동 합니다.<br /><br /> 경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `true`, 부모 컨테이너의 탭 순서에서 이전 컨트롤로 포커스를 이동 합니다.|  
 |Ctrl+Tab|경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `false`, 부모 컨테이너의 탭 순서의 다음 컨트롤로 포커스를 이동 합니다.<br /><br /> 경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `true`, 현재 행에서 다음 셀으로 포커스를 이동 합니다. 포커스가 행의 마지막 셀에 이미 있으면 다음 행의 첫 번째 셀으로 포커스를 이동 합니다. 컨트롤의 마지막 셀에 포커스가 있으면 부모 컨테이너의 탭 순서의 다음 컨트롤로 포커스를 이동 합니다.|  
 |Ctrl+Shift+Tab|경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `false`, 부모 컨테이너의 탭 순서에서 이전 컨트롤로 포커스를 이동 합니다.<br /><br /> 경우는 <xref:System.Windows.Forms.DataGridView.StandardTab%2A> 속성 값은 `true`, 현재 행의 이전 셀으로 포커스를 이동 합니다. 포커스가 행의 첫 번째 셀에 이미 있으면 이전 행의 마지막 셀으로 포커스를 이동 합니다. 컨트롤의 첫 번째 셀에 포커스가 있으면 포커스가 부모 컨테이너의 탭 순서에서 이전 컨트롤로 이동 합니다.|  

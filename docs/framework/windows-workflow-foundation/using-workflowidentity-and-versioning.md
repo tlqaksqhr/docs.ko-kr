@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7378609d056ded8602df827254248cf8a0476e59
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 02620abf421256b53fb5919b39f441f7346a2e7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity 및 버전 관리 사용
 <xref:System.Activities.WorkflowIdentity>는 워크플로 응용 프로그램 개발자에게 이름 및 <xref:System.Version>을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 응용 프로그램 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 이 항목에서는 <xref:System.Activities.WorkflowIdentity> 호스팅과 함께 <xref:System.Activities.WorkflowApplication>를 사용하는 방법을 간단하게 설명합니다. 워크플로 서비스에서 워크플로 정의의-병렬 실행에 대 한 자세한 내용은 참조 [WorkflowServiceHost에서 Side-by-side 버전 관리](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)합니다. 동적 업데이트에 대 한 자세한 내용은 참조 [동적 업데이트](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)합니다.  

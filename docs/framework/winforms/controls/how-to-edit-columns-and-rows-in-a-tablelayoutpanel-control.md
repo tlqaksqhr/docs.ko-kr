@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84dbcfcbad30f9ef08548874c5e68ed658aa0914
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75b83a2d7475f1a01d80c82013dac519edc4de08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>방법: TableLayoutPanel 컨트롤에서 열과 행 편집
 컬렉션 편집기를 사용할 수 있습니다는 <xref:System.Windows.Forms.TableLayoutPanel> 라는 컨트롤의 **열 및 행 스타일** 행과 컨트롤의 열을 편집 하려면 대화 상자.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  클릭는 **삽입** 단추를 목록에서 행 또는 현재 선택 된 항목 앞에 열을 추가 합니다.  
   
-7.  행 또는 열을 추가 하는 경우 선택 된 **크기 형식** 새로운 행 또는 열에 대 한 합니다. 자세한 내용은 <xref:System.Windows.Forms.SizeType>을 참조하십시오.  
+7.  행 또는 열을 추가 하는 경우 선택 된 **크기 형식** 새로운 행 또는 열에 대 한 합니다. 자세한 내용은 <xref:System.Windows.Forms.SizeType>을 참조하세요.  
   
 8.  행 또는 열을 제거 하려면 클릭는 **제거** 에서 현재 선택 된 항목을 삭제 단추는 **멤버** 목록입니다.  
   

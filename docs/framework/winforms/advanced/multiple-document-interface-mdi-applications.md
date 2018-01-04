@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c122931b0a00f487ddab07550913988462cfd50e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 74735afcb1d6be319ad5d497615a3b725a4d5574
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>MDI 응용 프로그램
 (Mdi 다중) 다중 문서 인터페이스 응용 프로그램을 사용 하는 별도 창에 표시 되는 각 문서와 같은 시간에 여러 문서를 표시할 수 있습니다. MDI 응용 프로그램 창 또는 문서 간 전환에 대 한 하위 메뉴가 있는 창 메뉴 항목이 있는 경우가 많습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
 > [!NOTE]
 >  Windows Forms에서 MDI 폼 및 단일 문서 인터페이스 (SDI) 창 간에 몇 가지 동작 차이점이 있습니다. `Opacity` 속성 MDI 자식 폼의 모양에 영향을 주지 않습니다. 또한는 <xref:System.Windows.Forms.Form.CenterToParent%2A> 메서드 MDI 자식 폼의 동작에 영향을 주지 않습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: MDI 상위 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
  MDI 응용 프로그램 내에서 여러 문서에 대 한 컨테이너를 만들기 위한 지침을 제공 합니다.  
   

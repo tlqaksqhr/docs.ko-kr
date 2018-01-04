@@ -17,16 +17,17 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-content"></a>유동 콘텐츠
 호스팅에 대 한 적합 한 유동 콘텐츠를 만들기 위한 구성 요소를 제공 하는 유동 콘텐츠 요소는 <xref:System.Windows.Documents.FlowDocument>합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [TextElement 콘텐츠 모델 개요](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [테이블 개요](../../../../docs/framework/wpf/advanced/table-overview.md)  

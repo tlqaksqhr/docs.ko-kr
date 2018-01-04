@@ -17,16 +17,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1078488ca1443b4e2336386eff1ac3a117a71501
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3149a0629fab704dbcae92095b3ef62dc5f9c36c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls"></a>Windows Forms 컨트롤
 Windows Forms 응용 프로그램의 사용자 인터페이스를 디자인하고 수정할 때는 컨트롤을 추가하고 정렬하고 배치해야 합니다. 컨트롤은 폼 개체에 포함된 개체입니다. 각 컨트롤 형식은 컨트롤을 특정 목적에 적합하게 만들어주는 자체적인 속성, 메서드 및 이벤트 집합을 갖습니다. 디자이너에서 컨트롤을 조작하고 런타임에 동적으로 컨트롤을 추가하는 코드를 작성할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms에 컨트롤 넣기](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
  폼의 컨트롤 배치와 관련된 링크를 제공합니다.  
   

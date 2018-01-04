@@ -15,16 +15,17 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f0ff080218b459625bb98803216fae88c3aadd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8e4df7bac45abe367f985167b354b515f247ae90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fonts-how-to-topics"></a>글꼴 방법 항목
 이 섹션의 항목에 포함 된 글꼴 기능을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [시스템 글꼴 열거](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
  [FontSizeConverter 클래스 사용](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
   

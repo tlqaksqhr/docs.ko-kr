@@ -17,14 +17,15 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33a2e7200a1154bbe79190809511401e6f12b370
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 378dac360e94d07bf8475286559e6aeed5321bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink-overviews"></a>디지털 잉크 개요
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [잉크 시작](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
   [잉크 수집](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
   [필기 인식](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  

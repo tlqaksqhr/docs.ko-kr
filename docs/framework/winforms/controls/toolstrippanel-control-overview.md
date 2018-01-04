@@ -17,18 +17,19 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bed2f4cbdc2f7d2e2647e39163959aaf42ae8bab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7976e4641f5bda02d6569ab17e7f1de139c59a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel 컨트롤 개요
 A <xref:System.Windows.Forms.ToolStripPanel> 배치 및 래프팅 할 단일 영역을 제공 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤입니다. 여러 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 따라 가로 또는 세로로 쌓입니다는 <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> 의 <xref:System.Windows.Forms.ToolStripPanel>합니다.  
   
 ### <a name="important-toolstrippanel-members"></a>중요 한 ToolStripPanel 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripPanel.Orientation%2A>|가로 또는 세로 방향을 나타내는 값을 가져오거나 설정 합니다.는 <xref:System.Windows.Forms.ToolStripPanel>합니다.|  
 |<xref:System.Windows.Forms.ToolStripPanel.Renderer%2A>|가져오거나는 <xref:System.Windows.Forms.ToolStripRenderer> 의 모양을 사용자 지정 하는 데 사용 된 <xref:System.Windows.Forms.ToolStripPanel>합니다.|  

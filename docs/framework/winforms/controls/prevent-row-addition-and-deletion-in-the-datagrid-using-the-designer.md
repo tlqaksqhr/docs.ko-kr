@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5b463bcc517caf6ce1937768d78b472f75e88ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b7671c3629830de871585dacc1afa89dde14ec50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 행 추가 및 삭제 금지
 때때로 사용자가 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 새 데이터 행을 입력하거나 기존 행을 삭제하지 않도록 방지하려고 합니다. 새 행을 컨트롤의 아래쪽에 있는 새 레코드에 대 한 특수 행에 입력 합니다. 행 추가 해제 하면 새 레코드에 대 한 행이 표시 되지 않습니다. 그런 다음 가능 컨트롤 완전히 읽기 전용 행 삭제와 셀 편집을 사용 하지 않도록 설정 하 여 합니다.  

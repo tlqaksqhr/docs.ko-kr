@@ -18,16 +18,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6660cf0c7de11058aeb70c7f61cd3239dd7f0f04
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2183954363c03064d9d41480bb63e32cca58b857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView 컨트롤(Windows Forms)
 Windows Forms `TreeView` 컨트롤은 Windows 운영 체제에서 Windows 탐색기 기능의 왼쪽 창에 파일 및 폴더가 표시되는 방식과 같은 노드 계층 구조를 표시합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [TreeView 컨트롤 개요](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   

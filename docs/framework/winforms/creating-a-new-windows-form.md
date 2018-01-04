@@ -16,16 +16,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f373696f4d3a92f15ab7c8641e02303da4a54e6d
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.workload: dotnet
+ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-new-windows-form"></a>새 Windows Form 만들기
 이 항목에는 첫 번째 Windows Forms 응용 프로그램을 만드는 방법을 설명하는 항목의 링크가 포함되어 있습니다. 또한 이 섹션의 항목에서는 Windows Forms 응용 프로그램을 만들 때 알고 있어야 하는 일부 기본 용어와 지침을 소개합니다. Windows Forms 응용 프로그램에 대 한 자세한 내용을 보려면, 이벤트 및 이벤트 처리 및 사용자 입력을 처리 하는 방법에 사용할 수는 컨트롤에 관련된 항목 목록을 참조 하십시오.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms 좌표](../../../docs/framework/winforms/windows-forms-coordinates.md)합니다.  
  클라이언트 좌표와 화면 좌표를 설명합니다.  
   

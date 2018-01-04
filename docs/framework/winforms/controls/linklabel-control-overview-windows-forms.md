@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0cb01c0fc5503a5bf16e1f191d87ae90907ec816
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73bbd04b9ef5d2d0c5457dafb794435b3a4db380
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤 Windows Forms 응용 프로그램에 웹 스타일 링크를 추가할 수 있습니다. 사용할 수는 <xref:System.Windows.Forms.LinkLabel> 사용할 수 있는 모든 항목에 대 한 제어는 <xref:System.Windows.Forms.Label> 제어 하는 데 있습니다; 또한 파일, 폴더 또는 웹 페이지에 대 한 링크로 텍스트의 일부를 설정할 수 있습니다.  

@@ -12,23 +12,24 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfd3075ef58114d50be07e4070cfaa4492408e83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ec3fe498bc76c5fe7221d14c8af219420037c14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic"></a>Basic
 이 단원에서는 기본적인 [!INCLUDE[wf](../../../../includes/wf-md.md)] 기능을 보여 주는 샘플을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [기본 제공 활동](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [기본 제공 작업](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
  기본 제공 활동 라이브러리를 사용하는 샘플이 들어 있습니다.  
   
  [보정](../../../../docs/framework/windows-workflow-foundation/samples/compensation-samples.md)  
  보정을 보여 주는 샘플이 들어 있습니다.  
   
- [사용자 지정 활동](../../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)  
+ [사용자 지정 작업](../../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)  
  사용자 지정 활동을 만드는 방법을 보여 주는 샘플이 들어 있습니다.  
   
  [디자이너](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
  [마이그레이션](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
  이전 버전의 [!INCLUDE[wf](../../../../includes/wf-md.md)]를 사용하여 만든 워크플로를 마이그레이션하는 방법을 보여 주는 샘플이 들어 있습니다.  
   
- [지 속성](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
+ [지속성](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
  워크플로를 영구적인 매체에 유지하는 방법을 보여 주는 샘플이 들어 있습니다.  
   
  [규칙 샘플](../../../../docs/framework/windows-workflow-foundation/samples/rules-samples.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d46c27e57a7d71992a0b1378e0987a2c48a66ab6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e34c86d63cc4d9eb2d6ba08466e72086719d880a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar 컨트롤(Windows Forms)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
   
  Windows Forms <xref:System.Windows.Forms.ProgressBar> 컨트롤은 가로 막대에 정렬 된 사각형의 적절 한 수를 표시 하 여 작업의 진행률을 나타냅니다. 작업이 완료 되 면 막대가 채워집니다. 진행률 표시줄 방법의 표시를 사용자에 게 일반적으로 사용 되는 연장 하거나 작업이 완료 될 때까지 기다려야 하-큰 파일을 로드할 때.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ProgressBar 컨트롤 개요](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
  일반적인 개념을 소개는 <xref:System.Windows.Forms.ProgressBar> 컨트롤 작업의 진행률을 그래픽으로 표시할 수 있습니다.  
   

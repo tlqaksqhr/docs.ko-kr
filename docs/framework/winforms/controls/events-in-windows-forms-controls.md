@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e568dd7fadea8af399a63aa95347f368b4e13a54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2dba74214fe439e09d1855f7ab248c075bd8257c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-in-windows-forms-controls"></a>Windows Forms 컨트롤의 이벤트
 Windows Forms 컨트롤의 60 개 이상의 이벤트 상속 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다. 여기에 <xref:System.Windows.Forms.Control.Paint> 이벤트는 컨트롤을 그릴 수 있도록,와 같은 창에 표시와 관련 된 이벤트는 <xref:System.Windows.Forms.Control.Resize> 및 <xref:System.Windows.Forms.Control.Layout> 이벤트 및 하위 수준 마우스 및 키보드 이벤트입니다. 일부 하위 수준 이벤트에서 합성 됩니다 <xref:System.Windows.Forms.Control> 와 같은 의미 이벤트로 <xref:System.Windows.Forms.Control.Click> 및 <xref:System.Windows.Forms.Control.DoubleClick>합니다. 상속 된 이벤트에 대 한 세부 정보를 참조 하십시오. <xref:System.Windows.Forms.Control>합니다.  

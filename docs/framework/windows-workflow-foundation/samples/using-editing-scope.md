@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd0752502bdbd7da9d749ae4f71ea869a4c1ec95
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6f20ff0577e43106886f5910b8f6a69578d1b3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-editing-scope"></a>편집 범위 사용
 이 샘플에서는 단일 원자 단위에서 실행 취소될 수 있도록 일련의 변경 내용을 일괄 처리하는 방법을 보여 줍니다. 기본적으로 활동 디자이너 작성자가 수행하는 동작은 실행 취소/다시 실행 시스템에 자동으로 통합됩니다.  

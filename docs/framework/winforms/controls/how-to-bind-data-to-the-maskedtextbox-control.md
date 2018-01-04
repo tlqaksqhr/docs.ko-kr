@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 995a466801337b5bbbf69c5c07f693b6d57c1d98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cb3fd4038634969d34be4514f4d314cf5d7513e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>방법: MaskedTextBox 컨트롤에 데이터 바인딩
 데이터를 바인딩할 수 있습니다는 <xref:System.Windows.Forms.MaskedTextBox> 다른 Windows Forms 컨트롤에 경우와 마찬가지로 제어 합니다. 그러나 데이터베이스의 데이터 형식 마스크 정의 필요한 형식이 일치 하지 않는 데이터의 서식을 다시 지정 해야 합니다. 다음 절차를 사용 하 여 수행 하는 방법을 보여 줍니다는 <xref:System.Windows.Forms.Binding.Format> 및 <xref:System.Windows.Forms.Binding.Parse> 의 이벤트는 <xref:System.Windows.Forms.Binding> 클래스를 별도 전화 번호를 표시 및 편집할 수 있는 단일 필드로 확장 데이터베이스 필드에 전화 합니다.  
@@ -240,7 +241,7 @@ ms.lasthandoff: 10/22/2017
   
 9. 샘플을 실행합니다. 데이터를 편집 하 고 사용 하 여는 **이전** 및 **다음** 데이터가 올바르게 유지 되어 있는지 확인 하려면 단추는 <xref:System.Data.DataSet>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 이전 절차를 완료 한 결과를 나열 하는 전체 코드입니다.  
   
  [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]

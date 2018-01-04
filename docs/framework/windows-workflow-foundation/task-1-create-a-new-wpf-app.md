@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89c929e71a2d64673f158f81c85d04c3443800ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a207b09ff7124bb161678627f365a6fa4021a38d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기
 이 태스크에서는 WPF 응용 프로그램 Visual Studio 템플릿을 사용하여 빈 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 응용 프로그램을 만들고 해당 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 어셈블리에 대한 참조를 추가합니다.  

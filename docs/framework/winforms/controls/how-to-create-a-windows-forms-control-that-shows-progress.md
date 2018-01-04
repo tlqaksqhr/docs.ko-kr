@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55b3879b894658c9a649004348a198d004040af3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76ce5cd67b66dea47f5bd12e78bb27179b391257
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기
 다음 코드 예제에서는 사용자에게 수준 또는 응용 프로그램의 진행률을 표시하는 데 사용할 수 있는 `FlashTrackBar`이라는 사용자 지정 컨트롤을 보여 줍니다. 그라데이션을 사용하여 진행률을 시각적으로 나타냅니다.  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `FlashTrackBar` 컨트롤은 `FlashTrackBarValueEditor` 및 `FlashTrackBarDarkenByEditor`이라는 두 개의 UI 형식 편집기를 정의하며 이는 다음 코드 목록에 표시됩니다. `HostApp` 클래스는 Windows Form에소 `FlashTrackBar` 컨트롤을 사용합니다.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]

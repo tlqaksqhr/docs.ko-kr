@@ -19,16 +19,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 213929e52f08fff19eb7641092789501c31648e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ddf17a9e96389abd23c860380613ac492b9ab134
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기(Windows Forms)
 설정 하는 경우는 <xref:System.Windows.Forms.ToolStrip.Stretch%2A> 속성의는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 `true`, 해당 컨테이너를 끝까지 채웁니다 컨트롤과 해당 컨테이너 크기를 조정할 때의 크기를 조정 합니다. 이 구성에서는 하면 유용할 수와 같은 컨트롤에서 항목을 스트레치 하는 <xref:System.Windows.Forms.ToolStripTextBox>, 사용 가능한 공간 및 컨트롤 크기를 조정할 때의 크기를 조정 합니다. 이러한 늘이기, 예를 들어 경우 유용 모양 및 동작 Microsoft® Internet Explorer의 주소 표시줄 유사 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  파생 된 클래스를 제공 하는 다음 코드 예제에서는 <xref:System.Windows.Forms.ToolStripTextBox> 호출 `ToolStripSpringTextBox`합니다. 이 클래스는 재정의 <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> 부모의 사용 가능한 너비를 계산 하는 메서드 <xref:System.Windows.Forms.ToolStrip> 후 다른 모든 항목의 결합 된 너비를 뺀 값을 제어 합니다. 이 코드 예제도 제공 합니다. 한 <xref:System.Windows.Forms.Form> 클래스 및 `Program` 클래스 새 동작을 보여 줍니다.  
   
  [!code-csharp[ToolStripSpringTextBox#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]

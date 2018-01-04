@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf46a3d5207f3414bc8abd5fd7bdb904e91f07d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 291ceb32d7128a63ba9a251ce916c18adb100100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 구성 요소 개요
 <xref:System.Windows.Forms.BindingSource> 구성 요소는 내부 데이터 소스에 컨트롤을 바인딩하는 프로세스를 간소화하도록 설계되었습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩하는 다른 컨트롤에 대한 통로 및 데이터 소스 역할을 합니다. 내부 데이터 목록에 명령을 전달하는 동안 폼의 데이터 연결에 대한 추상화를 제공합니다. 또한 구성 요소 자체가 데이터 소스 역할을 하도록 데이터를 직접 추가할 수 있습니다.  

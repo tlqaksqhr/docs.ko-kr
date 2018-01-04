@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f231a4e43723ce3ea73831086ed54e9ee08c1a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d01c31cce9aa6ae6d87773fc8e616e0e08bbd8c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="variables-and-arguments"></a>변수 및 인수
 [!INCLUDE[wf](../../../includes/wf-md.md)]에서 변수는 데이터 저장소를 나타내고 인수는 활동 내부와 외부로 흐르는 데이터 흐름을 나타냅니다. 활동에는 인수 집합이 있으며 인수는 활동의 시그니처를 구성합니다. 또한 활동은 개발자가 워크플로 디자인 중에 변수를 추가하거나 제거할 수 있는 변수 목록을 유지할 수 있습니다. 인수는 값을 반환하는 식을 사용하여 바인딩됩니다.  

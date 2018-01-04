@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b0a3286cbcaa0eebf59500582a749804b5e1b8ba
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3438fe2f1c3a6fc40efda0ff2583208f38bf7d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-graphics"></a>그래픽 개요
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]응용 프로그래밍 인터페이스 (API)는 Microsoft Windows 운영 체제의 하위 시스템을 구성 하는입니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]화면과 프린터에 정보를 표시 하는 일을 담당 합니다. 이름에서 알 수 있듯이, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 이전 버전의 Windows에 포함된 그래픽 장치 인터페이스인 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]의 후속 프로그램입니다.  

@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe6e8563b19ef18b89ad970f3ca35bf5f0782a32
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 0e4ed36740cd7e9478be3b4a7187329fb092c821
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>방법: 지정된 위치에 텍스트 그리기
 사용자 지정 그리기를 수행 하는 경우 지정된 된 위치 에서부터 단일 가로 줄의 텍스트를 그릴 수 있습니다. 사용 하 여 이런이 방식으로 텍스트를 그릴 수 있습니다는 <xref:System.Drawing.Graphics.DrawString%2A> 의 메서드를 오버 로드는 <xref:System.Drawing.Graphics> 클래스를 사용 하는 <xref:System.Drawing.Point> 또는 <xref:System.Drawing.PointF> 매개 변수입니다. <xref:System.Drawing.Graphics.DrawString%2A> 방법을 사용 하려면 한 <xref:System.Drawing.Brush> 및<xref:System.Drawing.Font>  

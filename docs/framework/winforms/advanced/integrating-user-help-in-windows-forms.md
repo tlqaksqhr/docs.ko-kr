@@ -20,18 +20,19 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7ec4d32c5f025cb3e48b1403387273268d83fb8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9563ce0ca95a728cc1a9aaa219fbc9fea2cd7153
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Windows Forms에 사용자 도움말 통합
 필수적 이지만 되지만 흔히 간과 되 끝점이 Windows 기반 응용 프로그램을 구축 하는 도움말 시스템을 것이 사용자가 혼동 하는 중에 도움을 요청 합니다. Windows Forms에는 두 가지 유형의 도움말 지원, 각각에서 제공 되는 [HelpProvider 구성 요소](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)합니다. 첫 번째 사용자를 HTML 이나 HTML 도움말 1의 도움말 파일을 가리키는 포함 됩니다. *x* 또는 큰 형식입니다. 두 번째 표시할 수 간략 한 "설명 된 설명"-개별 컨트롤; Help를 입력 합니다. 이 대화 상자에서 특히 유용 합니다. 두 가지 유형의 도움말 고 동일한 폼에서 사용할 수 있습니다.  
   
  또한는 [ToolTip 구성 요소](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md) 는 Windows Forms에서 컨트롤에 대 한 개별 도움말을 제공 하는 데 사용할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows 응용 프로그램에서 도움말 제공](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)  
  사용 하는 방법에 설명 된 `HelpProvider` 도움말 시스템에서 파일에 컨트롤을 연결 하는 구성 요소입니다.  
   

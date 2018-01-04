@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ca18b35b90b028054e68a0a14fecc819a6c20b9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 967b4a0e883338c756aceef37d11edecfb978527
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>내게 필요한 옵션 지침을 지원하는 Windows Forms 컨트롤의 속성
 표준 Windows Forms 도구 상자에서 컨트롤에 키보드 포커스 노출을 노출 및 화면 요소를 포함 하 여 내게 필요한 옵션 지침을 여러 지원 합니다.  

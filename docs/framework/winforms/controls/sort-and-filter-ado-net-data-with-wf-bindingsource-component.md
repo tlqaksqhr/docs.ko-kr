@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46947e314394d56b5ef0439f33910bb493012db3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 310f90c7b95d74f1fab8ab2e9871d6c1a0937c52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링
 정렬 및 필터링 기능을 노출할 수 <xref:System.Windows.Forms.BindingSource> 를 통해 제어는 <xref:System.Windows.Forms.BindingSource.Sort%2A> 및 <xref:System.Windows.Forms.BindingSource.Filter%2A> 속성입니다. 기본 데이터 원본이 때 간단한 정렬을 적용할 수 있습니다는 <xref:System.ComponentModel.IBindingList>, 및 고급 데이터 원본 경우를 정렬 및 필터링을 적용할 수는 <xref:System.ComponentModel.IBindingListView>합니다. <xref:System.Windows.Forms.BindingSource.Sort%2A> 속성 해야 표준 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 구문: 데이터 원본의 데이터의 열 이름을 나타내는 문자열 뒤 `ASC` 또는 `DESC` 목록을 오름차순 또는 내림차순으로 정렬할지 여부를 나타냅니다. 고급 정렬 또는 각 열 쉼표 구분 기호가 구분 하 여 여러 열 정렬을 설정할 수 있습니다. <xref:System.Windows.Forms.BindingSource.Filter%2A> 속성은 문자열 식을 사용 합니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에 Northwind 샘플 데이터베이스의 Customers 테이블에서 데이터를 로드 한 <xref:System.Windows.Forms.DataGridView> 를 제어 하 고 필터링 하 고 표시 된 데이터를 정렬 합니다.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]

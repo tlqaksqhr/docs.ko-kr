@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f052283b743d5f1a7ed9d2bb6576390e5343dcae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 414a7972550558b40403b7f4cbfd9a49194666be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>PrintDocument 구성 요소 개요(Windows Forms)
 Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) 구성 요소는 인쇄 대상 및 Windows 기반 응용 프로그램 내에서 문서를 인쇄하는 기능을 설명하는 속성을 설정하는 데 사용됩니다. 모든 문서 인쇄 측면의 제어에 포함되도록 [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) 구성 요소와 함께 사용할 수 있습니다.  

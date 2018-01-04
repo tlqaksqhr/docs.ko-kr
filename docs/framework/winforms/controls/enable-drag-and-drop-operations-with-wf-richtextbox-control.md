@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91739643aaa2d7fe3ea302d0d35edabbae0ab14f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8497f0c13fece9c6a2b3ca2d1d2df0d427c605e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤에서 끌어서 놓기 작업 사용
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌어서 놓기 작업은 <xref:System.Windows.Forms.RichTextBox.DragEnter> 및 <xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트를 처리하여 수행됩니다. 따라서 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하면 끌어서 놓기 작업이 매우 간단합니다.  

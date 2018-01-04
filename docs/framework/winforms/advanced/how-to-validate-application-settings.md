@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-application-settings"></a>방법: 응용 프로그램 설정 유효성 검사
 이 항목에서는 응용 프로그램 설정이 유지되기 전에 유효성을 검사하는 방법을 설명합니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 표에 설명된 대로 사용할 이벤트는 설정의 유효성을 검사해야 하는 경우에 따라 다릅니다.  
   
-|이벤트|발생 및 사용|  
+|이벤트(event)|발생 및 사용|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|설정 속성 그룹을 초기 로드한 이후에 발생합니다.<br /><br /> 이 이벤트를 사용하여 전체 속성 그룹 초기 값을 응용 프로그램 내에서 사용하기 전에 유효성을 검사합니다.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|단일 설정 속성의 값이 변경되기 전에 발생합니다.<br /><br /> 이 이벤트를 사용하여 단일 속성을 변경하기 전에 유효성을 검사합니다. 해당 작업 및 선택 항목에 관한 즉각적인 피드백을 사용자에게 제공할 수 있습니다.|  

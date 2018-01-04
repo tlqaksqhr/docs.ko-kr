@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 313867b76d569fb98b1bd5d46c658763d0020726
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 443611afa2fd2deafb3268a1bcd15a55c36fffe9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 셀, 행 및 열 프로그래밍
 이 섹션에서는 셀, 행 및 열 개체를 관련 된 다양 한 프로그래밍 작업을 보여 주는 항목을 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows Forms DataGridView 컨트롤에서 개별 셀에 도구 설명 추가](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  처리 하는 방법에 설명 된 <xref:System.Windows.Forms.DataGridView.CellFormatting> 개별 셀에 대 한 다양 한 도구 설명을 제공 하는 이벤트입니다.  
   

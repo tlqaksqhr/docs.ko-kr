@@ -16,16 +16,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: af751c31de87ef2a299e66c82bc66e9f0b540fce
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2e051fa13eee9a9110654d8791d83b2ff51cbdb8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip 구성 요소(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolTip> 구성 요소는 사용자가 컨트롤을 가리킬 때 텍스트를 표시합니다. 도구 설명은 모든 컨트롤에 연결될 수 있습니다. 이 컨트롤의 사용 예: 폼의 공간을 절약하기 위해 단추에 작은 아이콘을 표시하고 도구 설명을 사용하여 단추의 기능을 설명할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ToolTip 구성 요소 개요](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
  사용자가 컨트롤을 마우스로 가리킬 때 텍스트를 볼 수 있게 해주는 <xref:System.Windows.Forms.ToolTip> 구성 요소의 일반적인 개념을 소개합니다.  
   

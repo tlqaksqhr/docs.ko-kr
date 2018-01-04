@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1936426b44ed667d03e4881e66a081d5097a2880
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8b2d02e1513a0d8a3c31e4a13c9599666a4122a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-adjust-spacing-between-paragraphs"></a>방법: 단락 사이 간격 조정
 이 예제에는 조정 하거나 한 유동 콘텐츠를 제거 하는 방법을 보여 줍니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
   
  두 개의 여백 중 더 큰 것이 아니라 두 배가 하는 인접 한 두 단락에 대 한 여백 "축소 됩니다"를 확인 하는 것이 유용 합니다. 따라서 인접 한 두 단락은 각각 20 픽셀 및 40 픽셀의 여백, 단락 사이의 간격은 40 픽셀, 두 개의 여백 값 중 더 큰 숫자입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 스타일을 사용 하 여 모든 여백을 설정 하려면 <xref:System.Windows.Documents.Paragraph> 의 요소는 <xref:System.Windows.Documents.FlowDocument> 를 **0**, 단락 사이 공백의 효과적으로 제거는 <xref:System.Windows.Documents.FlowDocument>합니다.  
   
  [!code-xaml[BlockSnippets#_ParagraphSpacingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_paragraphspacingxaml)]

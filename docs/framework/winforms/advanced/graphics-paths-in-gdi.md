@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e027228ea1cc047f213c28ac3a4984c2f0227c5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 022a591a1d646b154c2bd59a2f2ab21b78b9dbda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+의 그래픽 경로
 경로 선, 사각형 및 간단한 곡선을 결합 하 여 구성 됩니다. 설명한 대로 [벡터 그래픽 개요](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) 다음과 같은 기본 빌딩 블록 그림 그리기에 대 한 가장 유용한 입증 되었습니다.  

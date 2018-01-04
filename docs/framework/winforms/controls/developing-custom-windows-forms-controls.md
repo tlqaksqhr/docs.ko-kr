@@ -16,16 +16,17 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89be7e347556c8ec34296044f17fbfd4450bc127
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d2f15dc4bb3bd4a6d1163823509f0f2c2bf2c11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발
 Windows Forms 컨트롤은 사용자 인터페이스 기능을 캡슐화하고 클라이언트 측 Windows 기반 응용 프로그램에서 사용되는 재사용 가능한 구성 요소입니다. Windows Forms은 바로 사용할 수 있는 많은 컨트롤을 제공할 뿐만 아니라 고유한 컨트롤을 개발하기 위한 인프라도 제공합니다. 기존 컨트롤을 결합 또는 확장하거나 고유한 사용자 지정 컨트롤을 작성할 수 있습니다. 이 섹션에서는 Windows Forms 컨트롤을 개발하는 데 도움이 되는 배경 정보 및 샘플을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms에서 컨트롤 사용 개요](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
  Windows Forms 응용 프로그램에 있는 컨트롤 사용의 필수 요소를 요약해서 설명합니다.  
   

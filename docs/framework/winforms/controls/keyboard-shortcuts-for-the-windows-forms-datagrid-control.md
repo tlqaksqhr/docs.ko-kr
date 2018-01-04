@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ac73652d5f017fe43d1745866de38cd7eeccf8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3e80281f3a89737f060804aa5237705386232763
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows Forms DataGrid 컨트롤을 위한 바로 가기 키
 > [!NOTE]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 |현재 행의 첫 번째 셀으로 이동 합니다.|홈|  
 |현재 행에서 셀을 마지막으로 이동 합니다.|End |  
 |현재 셀의에서 문자를 강조 표시 하 고 줄의 끝 부분에 삽입 지점 위치를 지정 합니다. 셀을 두 번 클릭 하는 것과 같습니다.|F2|  
-|셀에 포커스가 있으면 행의 다음 셀으로 이동 합니다.<br /><br /> 포커스가 행의 마지막 셀에 있으면 행의 첫 번째 자식 테이블 링크로 확장 합니다.<br /><br /> 자식 링크에 포커스가 있는 경우에 다음 자식 링크를 이동 합니다.<br /><br /> 마지막 자식 링크에 포커스가 있으면 다음 행의 첫 번째 셀으로 이동 합니다.|Tab 키|  
+|셀에 포커스가 있으면 행의 다음 셀으로 이동 합니다.<br /><br /> 포커스가 행의 마지막 셀에 있으면 행의 첫 번째 자식 테이블 링크로 확장 합니다.<br /><br /> 자식 링크에 포커스가 있는 경우에 다음 자식 링크를 이동 합니다.<br /><br /> 마지막 자식 링크에 포커스가 있으면 다음 행의 첫 번째 셀으로 이동 합니다.|Tab|  
 |포커스가 셀에 있는 경우 이전 행의 셀으로 이동 합니다.<br /><br /> 포커스가 행의 첫 번째 셀에 있으면 이전 행의 마지막 확장 된 자식 테이블 링크로 이동 하거나 이전 행의 셀을 마지막으로 이동 합니다.<br /><br /> 자식 링크에 포커스가 있으면 이전 자식 링크를 이동 합니다.<br /><br /> 첫 번째 자식 링크에 포커스가 있으면 이전 행의 셀 마지막으로 이동 합니다.|Shift+Tab|  
 |탭 순서의 다음 컨트롤로 이동 합니다.|Ctrl+Tab|  
 |탭 순서에서 이전 컨트롤로 이동 합니다.|Ctrl+Shift+Tab|  

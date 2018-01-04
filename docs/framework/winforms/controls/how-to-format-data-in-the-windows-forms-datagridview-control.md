@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49d5172b2638a7ac3a6a7bf005932ba4b3f9aba3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4be8ce245fdc17c55c03adb3d1e50f93b4e2a7e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 데이터 형식 지정
 다음 절차를 사용 하 여 셀 값의 기본 형식을 보여 줍니다.는 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> 의 속성을 <xref:System.Windows.Forms.DataGridView> 컨트롤 및 컨트롤의 특정 열입니다. 고급 데이터 형식에 대 한 정보를 참조 하십시오. [하는 방법: Windows Forms DataGridView 컨트롤에서 사용자 지정 데이터 형식](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)합니다.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#072](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#072)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#072](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#072)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#070](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#070)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#070](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#070)]  
   

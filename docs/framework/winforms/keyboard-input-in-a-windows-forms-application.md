@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9d0c50fe8f99df471376d31a2258912c870dd37
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 256fb961c01b17c21613fe4ec60b8e7f68c2d8f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 키보드 입력
 Windows Forms는 표준 키보드 이벤트를 사용 하면 특정 키 누름에 응답 하 고 차단, 수정 및 응용 프로그램 폼에서 키 누름을 사용할 및 수준을 제어 하는 방법을 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [키보드 입력 작동 방식](../../../docs/framework/winforms/how-keyboard-input-works.md)  
  키보드 메시지 처리 되 고 키보드 이벤트로 변환 되는 방법을 설명 합니다.  
   

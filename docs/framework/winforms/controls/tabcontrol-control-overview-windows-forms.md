@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 707fb08e487acc8a585e9fe9a246e7485d5e2749
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04407ca8ddb51658ffd9cc4078d8f545c08e9312
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.TabControl>은 파일 캐비닛의 폴더 집합에 노트북 또는 레이블의 구분선과 같은 여러 탭을 표시합니다. 탭에는 사진 및 기타 컨트롤이 포함될 수 있습니다. 탭 컨트롤 종류의 Windows 운영 체제에서 제어판의 표시 속성 등에서 자주 표시 되는 다중 페이지 대화 상자를 생성 하기 위해 사용할 수 있습니다. 또한는 <xref:System.Windows.Forms.TabControl> 그룹 관련된 속성을 설정 하는 데 사용 되는 속성 페이지를 만드는 데 사용할 수 있습니다.  

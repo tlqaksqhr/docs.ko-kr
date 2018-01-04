@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6db621912e76d24b05c8dcdca7f1d3f4e62c2838
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기
 다음 절차에서는 Microsoft Outlook으로 사용 되는 비슷한 다중 창 사용자 인터페이스 만들어집니다는 **폴더** 목록은 **메시지** 창 및 **미리보기** 창. 이 정렬은 주로 폼에 컨트롤을 도킹을 통해 얻습니다.  

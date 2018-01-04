@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52726a770e33bec4b5ec9b24f33deb44ed6379b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fabe176ade1ae94a20100162ab7ab6fadfb2999f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a>방법: OpenFileDialog 구성 요소를 사용하여 파일 열기
 <xref:System.Windows.Forms.OpenFileDialog> 구성 요소에는 사용자가 자신의 컴퓨터 또는 네트워크에 있는 모든 컴퓨터의 폴더를 탐색 하 고 하나 이상의 파일을 선택 하려면 허용 합니다. 대화 상자에서 사용자가 선택한 파일의 경로와 이름을 반환합니다.  

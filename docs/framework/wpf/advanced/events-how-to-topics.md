@@ -15,16 +15,17 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37a811f8c3d4e7da82c24fa8f2147ee4cafe64c6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd08efff930b2ddb8b985376992dd895067cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-how-to-topics"></a>이벤트 방법 항목
 이 섹션의 항목에는 WPF에서 이벤트를 사용 하는 방법을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [코드를 사용하여 이벤트 처리기 추가](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
  [라우트된 이벤트 처리](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
  [사용자 지정 라우트된 이벤트 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  

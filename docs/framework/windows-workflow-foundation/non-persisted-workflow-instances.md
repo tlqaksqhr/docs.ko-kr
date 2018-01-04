@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a7dd9e0ccc29c81426064110eda3e00d2f27b99
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 54ed92ee666a55b52db22abbbe46922189b3f8fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="non-persisted-workflow-instances"></a>비지속형 워크플로 인스턴스
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에 상태를 유지하는 워크플로의 새 인스턴스가 만들어지면 서비스 호스트에서는 인스턴스 저장소에 해당 서비스에 대한 항목을 만듭니다. 이후 워크플로 인스턴스가 처음으로 유지될 때 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>는 현재 인스턴스 상태를 저장합니다. 워크플로가 Windows Process Activation Service에서 호스트되는 경우에는 인스턴스가 처음으로 유지될 때 서비스 배포 데이터도 인스턴스 저장소에 기록됩니다.  

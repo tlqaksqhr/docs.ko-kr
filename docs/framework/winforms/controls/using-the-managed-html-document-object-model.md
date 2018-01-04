@@ -14,16 +14,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff1004248e709b4b4913b90eb81f0726ab390c54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 876cee67f917291214d6ea8b9abf7d2975c1fd25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-managed-html-document-object-model"></a>관리되는 HTML 문서 개체 모델 사용
 관리 되는 HTML 문서 개체 모델 (DOM) 기반으로 하는 래퍼를 제공는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Internet Explorer에서 노출 하는 HTML 클래스에 대 한 합니다. 이러한 클래스를 사용 하 여 HTML 페이지에서 호스트를 조작는 <xref:System.Windows.Forms.WebBrowser> 컨트롤 또는 처음부터 새 페이지를 만들 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 관리되는 HTML 문서 개체 모델에 액세스](../../../../docs/framework/winforms/controls/how-to-access-the-managed-html-document-object-model.md)  
  유효한 인스턴스를 가져오는 방법에 설명 <xref:System.Windows.Forms.HtmlDocument> Windows Forms 응용 프로그램에서 또는 <xref:System.Windows.Forms.UserControl> Internet Explorer에서 호스트 합니다.  
   

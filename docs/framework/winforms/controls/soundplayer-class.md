@@ -15,18 +15,19 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6fccf64215c38a3aee0b367866dd2371b483b0a7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5379da3361a8a4b2115f46d0d2db80a565f6bfc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soundplayer-class"></a>SoundPlayer 클래스
 `SoundPlayer` 클래스를 사용하여 응용 프로그램에 소리를 쉽게 포함할 수 있습니다.  
   
  <xref:System.Media.SystemSounds> 클래스를 사용하여 경고음을 포함한 일반적인 시스템 소리를 재생할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SoundPlayer 클래스 개요](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
  클래스 및 일반적으로 사용되는 해당 속성, 메서드 및 이벤트를 소개합니다.  
   

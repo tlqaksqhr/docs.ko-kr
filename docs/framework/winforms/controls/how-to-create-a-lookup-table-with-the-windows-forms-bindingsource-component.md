@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 27c1c6cd0e617c0940a734e7e16a3ec5d12f920d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 324e4ed290b98d2268dd82fa55b81deaeb849770
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 조회 테이블 만들기
 조회 테이블은 관련 테이블의 레코드에서 데이터를 표시하는 열이 포함된 데이터 테이블입니다. 다음 절차에서는 <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용하여 부모에서 자식 테이블로의 외래 키 관계로 필드를 표시합니다.  

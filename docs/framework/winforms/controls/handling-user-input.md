@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c3da2c4661acdb358c38fb871de70fd470f7991
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0102bab4fad3b224100ae054f572d9b07102fc15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-user-input"></a>사용자 입력 처리
 이 항목에서 제공 하는 기본 키보드 및 마우스 이벤트를 설명 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다. 이벤트를 처리할 경우 컨트롤 작성자는 이벤트에 대리자를 연결하는 대신 보호된 `On`*EventName* 메서드를 재정의해야 합니다. 이벤트의 검토는 [구성 요소에서 이벤트 발생](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0)을 참조하세요.  

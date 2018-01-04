@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 006cafafdf8e3c3f4da77394d6155fa52e113b58
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 08b55bc2bd5af78eb6c3d0f5adce3ec39d288a9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component"></a>BindingSource 구성 요소
 컨트롤에 바인딩할 데이터 소스를 캡슐화합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
   
  둘째, <xref:System.Windows.Forms.BindingSource> 구성 요소는 강력한 형식의 데이터 소스로 사용될 수 있습니다. <xref:System.Windows.Forms.BindingSource.Add%2A> 메서드를 통해 <xref:System.Windows.Forms.BindingSource> 구성 요소에 형식을 추가하면 해당 형식의 목록이 만들어집니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [BindingSource 구성 요소 개요](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
  데이터 소스를 컨트롤에 바인딩할 수 있게 해주는 <xref:System.Windows.Forms.BindingSource> 구성 요소의 일반적인 개념을 소개합니다.  
   

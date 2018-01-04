@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 438243d16d8031d99e27993cadb44fd58bbec0b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a9514d845580bfe921fefa5f4a249c5a905d03d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Graphics 개체의 상태 관리
 <xref:System.Drawing.Graphics> 의 핵심 클래스는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다. 아무 것도 그리지, 가져와야는 <xref:System.Drawing.Graphics> 개체 속성을 설정 하 고 해당 메서드를 호출할 <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, 등).  
@@ -47,7 +48,7 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
   
 -   품질 설정  
   
--   변환  
+-   변형  
   
 -   클립 영역  
   
@@ -76,7 +77,7 @@ graphics.SmoothingMode = SmoothingMode.HighSpeed;
 graphics.DrawEllipse(pen, 0, 150, 200, 100);  
 ```  
   
-### <a name="transformations"></a>변환  
+### <a name="transformations"></a>변형  
  A <xref:System.Drawing.Graphics> 개체를 유지 관리 하 여 그린 모든 항목에 적용 되는 두 개의 변환 (월드 및 페이지) <xref:System.Drawing.Graphics> 개체입니다. 모든 관계 변환 전역 변환에 저장할 수 있습니다. 3x3 유사 변환에는 크기 조정, 회전, 반사, 기울이기 및 변환 하는 기능이 포함 됩니다. 페이지 변환 크기를 조정 하 고 단위 (예를 들어 인치로 픽셀)를 변경 하는 데 사용할 수 있습니다. 자세한 내용은 참조 [좌표계 및 변형](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)합니다.  
   
  다음 예제에서는 설정의 월드 및 페이지 변환을 <xref:System.Drawing.Graphics> 개체입니다. 월드 변형은 30도 회전으로 설정 됩니다. 페이지 변형을 설정 하 여 두 번째 인스턴스에 전달 되는 좌표 <xref:System.Drawing.Graphics.DrawEllipse%2A> 픽셀 대신 밀리미터도 처리 됩니다. 코드에서는 두 개의 동일한 호출을는 <xref:System.Drawing.Graphics.DrawEllipse%2A> 메서드. 첫 번째에 세계 변형이 적용 <xref:System.Drawing.Graphics.DrawEllipse%2A> 호출과 두 가지 변환은 모두 (월드 및 페이지)는 두 번째에 적용 됩니다 <xref:System.Drawing.Graphics.DrawEllipse%2A> 호출 합니다.  

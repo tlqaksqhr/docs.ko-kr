@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c4d7f2f19c8d156f86513ac7138bccd59ae3b7fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-windows-services"></a>방법: Windows 서비스 만들기
 서비스를 만들 때 호출 하는 Visual Studio 프로젝트 템플릿을 사용할 수 있습니다 **Windows 서비스**합니다. 이 템플릿은 적절한 클래스 및 네임스페이스를 참조하고, 서비스의 기본 클래스에서 상속을 설정하고, 개발자가 재정의할 가능성이 높은 여러 메서드를 재정의하여 대부분의 작업을 자동으로 수행합니다.  
@@ -79,9 +80,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [방법: 프로그래밍 방식으로 서비스 작성](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
- [방법: 서비스 응용 프로그램에 설치 관리자를 추가 합니다.](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [방법: 서비스에 대 한 정보를 기록 합니다.](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [방법: 서비스 응용 프로그램에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [방법: 서비스에 대한 정보 로깅](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
  [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)  
- [방법: 서비스에 대 한 보안 컨텍스트 지정](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
+ [방법: 서비스에 대한 보안 컨텍스트 지정](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
  [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [연습: 구성 요소 디자이너에는 Windows 서비스 응용 프로그램 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+ [연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

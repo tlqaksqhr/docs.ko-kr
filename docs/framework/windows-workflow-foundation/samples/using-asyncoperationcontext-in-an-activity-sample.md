@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5fce0160f98b5af5476b5e647763d79e94fb4e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5aa36c3173e4e20d063f93b3583d063057b9bac7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-asyncoperationcontext-in-an-activity-sample"></a>Using AsyncOperationContext in an Activity 샘플
 이 샘플에서는 <xref:System.Activities.CodeActivity>를 사용하여 워크플로 외부에서 비동기적으로 작업을 수행하는 사용자 지정 <xref:System.Activities.AsyncCodeActivityContext>를 개발하는 방법을 보여 줍니다.  

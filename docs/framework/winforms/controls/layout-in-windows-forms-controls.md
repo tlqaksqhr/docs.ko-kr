@@ -18,16 +18,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6244b21c2729df3bfe5899a4f4970f4b48030057
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9112269da02bd7eff9838509673db7adbc3fb53
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="layout-in-windows-forms-controls"></a>Windows Forms 컨트롤의 레이아웃
 폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. <xref:System.Windows.Forms?displayProperty=nameWithType> 네임 스페이스는 여러 레이아웃 도구를 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [AutoSize 속성 개요](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
  설명의 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성 및 레이아웃에서의 역할입니다.  
   
