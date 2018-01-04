@@ -21,18 +21,19 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9d53cf3e54e4a0a0de3207ea59a67f3493f5e88
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 177b3034e9afc71a8ecc899364cc4911ef42a1a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-visual-inheritance"></a>Windows Forms 시각적 상속
 경우에 따라 프로젝트에서 이전 프로젝트에서 작성한 것과 비슷한 폼을 필요로 하는지 결정할 수 있습니다. 또는 이후에 프로젝트 내에서 다시 사용할 워터마크나 특정 컨트롤 레이아웃 등의 설정이 포함되고 반복마다 원본 폼 템플릿에 대한 수정이 포함된 기본적인 폼을 만들려고 할 수 있습니다. 폼 상속을 사용하면 기본 폼을 만든 다음 기본 폼을 상속하고 필요한 모든 원래 설정을 유지하면서 수정할 수 있습니다.  
   
  프로그래밍 방식으로 또는 시각적 상속 선택을 사용하여 파생 클래스 폼을 만들 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows Forms 상속](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
  코드에 상속된 폼을 만들도록 지시합니다.  
   

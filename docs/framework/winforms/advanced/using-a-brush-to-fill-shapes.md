@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 057bc7bbfb9c1653fd4857ccc43fb6fc324e4c92
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15c68f2772357da0828bae367a80f1324b89a5bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>브러시를 사용하여 도형 채우기
 A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> 개체가 닫힌 도형의 내부를 채우는 데 사용 됩니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]몇 가지 채우기 스타일 정의: 단색, 빗살 무늬, 이미지 질감 및 색 그라데이션을 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 단색으로 도형 채우기](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
  단색 브러시 도형을 채우는 데 사용 하는 방법을 설명 합니다.  
   

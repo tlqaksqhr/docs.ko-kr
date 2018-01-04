@@ -15,16 +15,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eccefd35e34ec2909cee81561576f8792e50e4e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a78c7a76c907e4b6d49963c76cfe98c099a391d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="putting-controls-on-windows-forms"></a>Windows Forms에 컨트롤 넣기
 응용 프로그램의 필요에 따라 Windows Forms에 넣을 수 있는 컨트롤의 다양 한 가지가 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  컨트롤을 폼에 연결 하기 위한 지침을 제공 합니다.  
   

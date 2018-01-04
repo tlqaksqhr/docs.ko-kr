@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6193e4cc86a470f046c220dc21150e0fc0bf792a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b671910ac77b7456492cab871ace3abb61ac7fd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩
 바인딩할 수 있습니다는 <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.ListBox> 데이터베이스에서 데이터를 찾아보는 등의 작업을 수행 하는 데이터에 새 데이터를 입력 하거나 기존 데이터를 편집 합니다.  

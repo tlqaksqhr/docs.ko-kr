@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52cead578ad03052b5734c5b7a5b5a897dd48732
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8cc06a81c879e6ebd50c4eb6a70590c28cc43f6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="b233zier-splines-in-gdi"></a>B &#233; zier GDI +의 곡선 스플라인
 점이 4 개로 지정 된 곡선을 베 지 어 스플라인을: 두 끝점 (p1 및 p2) 및 두 개의 제어점 (c1, c2). 곡선 p 1에서 시작 되 고 p 2에서 끝납니다. 곡선의 제어점 통해서도 전달 되지 않지만 제어점 자석과 곡선 특정 방향으로 가져와서 곡률 하는 방식에 영향을 주는 역할을 합니다. 다음 그림에서는 해당 끝점 및 제어점 함께 베 지 어 곡선을 보여 줍니다.  

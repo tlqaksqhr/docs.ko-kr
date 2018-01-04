@@ -20,18 +20,19 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1d6a790f8a43f4ea2f9d3ad2cdb282186554da6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 18d54da2c24d592b6fb6b53be10824c85682f9db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>방법: 데이터 바인딩된 Windows Forms DataGridView 컨트롤에서 열 자동 생성
 다음 코드 예제에 바인딩된 데이터 원본에서 열을 표시 하는 방법을 보여 줍니다는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 경우는 <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> 속성 값은 `true` (기본값) 이면는 <xref:System.Windows.Forms.DataGridViewColumn> 데이터 원본 테이블의 각 열에 대해 생성 됩니다.  
   
  경우는 <xref:System.Windows.Forms.DataGridView> 컨트롤에 이미 열 설정 하는 경우는 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> 속성, 기존의 바인딩된 열 데이터 원본에 열이 비교 되며 일치 하는 항목이 때마다 유지 합니다. 바인딩되지 않은 열은 항상 유지 됩니다. 바인딩된 열을 일치 하는 데이터 소스에서 제거 됩니다. 컨트롤에서 일치 하지 않는 데이터 원본의 열을 새로 생성할 <xref:System.Windows.Forms.DataGridViewColumn> 의 끝에 추가 되는 개체는 <xref:System.Windows.Forms.DataGridView.Columns%2A> 컬렉션입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#020](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#020)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#020](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#020)]  
   

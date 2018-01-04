@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfb1d09fc8bc52a03576054197488dff0aacf841
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 90083692c2415ed6c1117185474d6bbaa9d1963b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>작업 3: 도구 상자 및 PropertyGrid 창 만들기
 이 작업을 만듭니다는 **도구 상자** 및 **PropertyGrid** 창에는 다시 호스트 된 추가 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]합니다.  
@@ -114,7 +115,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  F5 키를 눌러 솔루션을 빌드하고 실행합니다. **도구 상자**, 워크플로 디자인 캔버스 및 **PropertyGrid** 창이 모두 표시 됩니다, 그리고 및를 끌 때는 <xref:System.Activities.Statements.Assign> 활동 또는 <xref:System.Activities.Statements.Sequence> 활동을 디자인 캔버스로 강조 표시 된 활동에 따라 속성 표가 업데이트 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이제 MainWindow.xaml.cs 파일에 다음 코드가 들어 있어야 합니다.  
   
 ```  

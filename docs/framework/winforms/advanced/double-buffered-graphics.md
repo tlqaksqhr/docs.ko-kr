@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89413e0958366dd39c62bfaedb7e36471123bc22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7e4445b0a729eb1f826d17340db02f0c56149b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="double-buffered-graphics"></a>이중 버퍼링 그래픽
 깜박임은 그래픽을 프로그래밍할 때 일반적으로 발생하는 문제입니다. 여러 개의 복잡한 그리기 작업이 필요한 그래픽 작업에서 렌더링된 이미지가 깜박이거나 그렇지 않고 의도하지 않은 모양이 나타날 수 있습니다. 이러한 문제를 해결하기 위해 .NET Framework에서 이중 버퍼링에 대한 액세스를 제공합니다.  

@@ -17,16 +17,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93b514cab277ca167046ace6defa3440d276e35b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 841327a7ac39d0af3924ff83e563f4fafa311332
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider 구성 요소(Windows Forms)
 Windows Forms `HelpProvider` 구성 요소는 HTML 도움말 1.x 도움말 파일(HTML Help Workshop으로 생성된 .chm 파일 또는 .htm 파일)을 Windows 기반 응용 프로그램에 연결하는 데 사용됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [HelpProvider 구성 요소 개요](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
  HTML 도움말 파일을 Windows 기반 응용 프로그램에 연결할 수 있게 해주는 `HelpProvider` 구성 요소의 일반적인 개념을 소개합니다.  
   

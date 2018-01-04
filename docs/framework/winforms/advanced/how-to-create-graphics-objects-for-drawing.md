@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72f1af49a5c64395e018707d1f71cc0feaa2d22c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d4b626d3d87c6537b74b6d28e086303474ea2c3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>방법: 그리는 데 필요한 그래픽 개체 만들기
 선 및 모양을 그릴 수 있습니다, 전에 텍스트를 렌더링 하거나 이미지를 조작으로 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 만들어야 할 한 <xref:System.Drawing.Graphics> 개체입니다. <xref:System.Drawing.Graphics> 개체가 나타내는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그리기 화면, 및는 그래픽 이미지를 만드는 데 사용 되는 개체입니다.  
@@ -175,7 +176,7 @@ ms.lasthandoff: 11/21/2017
   
      자세한 내용은 다음 항목을 참조하세요.  
   
-    |렌더링 하려면|참조|  
+    |렌더링 하려면|보기|  
     |---------------|---------|  
     |선|[방법: Windows Form에 선 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
     |도형|[방법: 윤곽선이 있는 도형 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  

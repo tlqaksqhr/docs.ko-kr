@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 64384e3c283b6596e36d5b2bd583a304faf080b4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 084e8ff21e308cc20b633719dd31809b96b3c79a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>관리 GDI+에서 이미지 인코더 및 디코더 사용
 <xref:System.Drawing> 네임 스페이스는 제공 된 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. 이미지 인코더를 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 디스크에 메모리에서 이미지를 작성할 수 있습니다. 이미지 디코더를 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 메모리에 디스크에서 이미지를 로드할 수 있습니다. 데이터를 변환 하는 인코더는 <xref:System.Drawing.Image> 또는 <xref:System.Drawing.Bitmap> 개체를 지정 된 디스크 파일 형식입니다. 데이터 원본에 디스크 파일에 데이터를 해석 하는 디코더는 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체입니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/22/2017
   
  다음 항목에서는 인코더 및 디코더 더 자세하게에서 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 설치된 인코더 나열](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
  컴퓨터에서 사용할 수 있는 인코더 나열 하는 방법을 설명 합니다.  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b47e55461610d2cc4bf85c839ddb1bef937d69e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 589735156ad4d6d639c2449d6bd693e2b3a32d50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider 구성 요소 개요(Windows Forms)
 Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) 구성 요소는 폼 또는 컨트롤에서 사용자 입력의 유효성을 검사 하는 데 사용 됩니다. 일반적으로 폼에서 사용자 입력 유효성 검사 또는 데이터 집합의 오류 표시와 함께에서 사용 됩니다. 오류 공급자 방법이 더 나은 오류 메시지를 메시지 상자에 표시 이므로 메시지 상자가 해제 되 면 오류 메시지가 더 이상 표시 합니다. <xref:System.Windows.Forms.ErrorProvider> 오류 아이콘을 표시 하는 구성 요소 (![ErrorProvider 아이콘](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) 텍스트 상자; 위에 마우스 포인터를 놓을 때와 같이 관련 컨트롤 옆에 도구 설명이 나타납니다 오류 아이콘, 오류 메시지 문자열을 표시 합니다.  

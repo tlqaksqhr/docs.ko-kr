@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6657556ffb49c19e6ffc3ef5462de341a93112b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 685a62b885469a9cac8884cc045b67bac02bea80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-information-and-windows-forms"></a>시스템 정보 및 Windows Forms
 경우에 따라 코드에서 결정을 내리기 위해서는 응용 프로그램에서 실행 되는 컴퓨터에 대 한 정보를 수집 해야 합니다. 예를 들어만 특정 네트워크 도메인;에 연결 하는 경우에 적용할 수 있는 함수를 할 수 있습니다. 이 경우 도메인을 확인 하 고 도메인 스위치가 없을 경우 함수를 사용 하지 않도록 설정 하는 방법에 해야 합니다.  

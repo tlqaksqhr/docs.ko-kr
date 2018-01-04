@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e45ddcec4459e376a5dab4eec36e51cc2e5e49c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 형식
 <xref:System.Windows.Forms.DataGridView> 컨트롤 형식을 사용 하 여 여러 열 해당 정보를 표시 하 고 사용자가 정보를 수정 하거나 추가할 수 있도록 합니다.  

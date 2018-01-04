@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb63c48831e19ce3cbb166e899aeee8b6a331839
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75f8a96b77ffcd40a51cf484f50032f7f2e44309
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 현재 셀 가져오기 및 설정
 와 상호 작용은 <xref:System.Windows.Forms.DataGridView> 를 프로그래밍 방식으로 발견 된 셀을 현재 활성 필요 합니다. 현재 셀을 변경 하려면 할 수도 있습니다. 이러한 작업을 수행할 수 있습니다는 <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> 속성입니다.  

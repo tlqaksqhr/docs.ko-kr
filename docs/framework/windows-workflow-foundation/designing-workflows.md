@@ -13,16 +13,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 24bcc7377cad408d2cfe4c9e0f3fb60fe4b0327b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 15e2a70b89c3ea42442262cc41c03e78de596ffe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-workflows"></a>워크플로 디자인
 이 단원의 항목에서는 워크플로 개발에 사용되는 흐름 제어 패러다임에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [순서도 워크플로](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
  익숙한 순서도 패러다임을 사용하여 워크플로를 만드는 방법을 보여 줍니다.  
   

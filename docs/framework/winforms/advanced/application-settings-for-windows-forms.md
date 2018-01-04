@@ -17,16 +17,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 382d20c66728869ce006c35a1e44e3a56217e1c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 63248009497152a41a6313a50ed6e7544ac62cbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows Forms에 대한 응용 프로그램 설정
 Windows Forms의 응용 프로그램 설정 기능을 사용하면 클라이언트에서 사용자 지정 응용 프로그램과 사용자 기본 설정을 쉽게 만들고 저장 및 유지 관리할 수 있습니다. 응용 프로그램 설정을 통해 데이터베이스 연결 문자열과 같은 응용 프로그램 데이터뿐 아니라 도구 모음 위치 및 가장 최근에 사용한 목록과 같은 사용자별 데이터도 저장할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [응용 프로그램 설정 개요](~/docs/framework/winforms/advanced/application-settings-overview.md)  
  응용 프로그램 및 사용자를 대신하여 설정 데이터를 만들고 저장하는 방법을 설명합니다.  
   

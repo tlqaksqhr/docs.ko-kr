@@ -18,16 +18,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eebd0f36fbf1bf3bfc37b8fa836d318a9b8ac007
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c70e1a88384041a2a1d958e48c672a961752202b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능
 많은 기본 동작 `DataGridView` 단일 속성을 설정 하 여 셀, 행 및 열을 수정할 수 있습니다. 이 단원의 항목에서는 이러한 기능 중 가장 일반적으로 사용 중 몇 가지를 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows Forms DataGridView 컨트롤에서 열 숨기기](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  특정 열의 컨트롤에 표시 되는 것을 방지 하는 방법을 설명 합니다.  
   

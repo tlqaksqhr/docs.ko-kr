@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6fe8fb972f8080bbffeed5db2063d8c0484aec4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c14da85b377b3ef80d6accbc8b0319959a75bcd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-wpf-controls"></a>WPF 컨트롤 사용
 Windows Forms 기반 응용 프로그램에서 Windows Presentation Foundation (WPF) 컨트롤을 사용할 수 있습니다. 이러한 옵션은 두 가지 서로 다른 뷰 기술, 상호 운용 되 원활 하 게 합니다.  
@@ -29,7 +30,7 @@ Windows Forms 기반 응용 프로그램에서 Windows Presentation Foundation (
   
  WPF 기반 응용 프로그램에서 Windows Forms 컨트롤을 사용할 수도 있습니다. 자세한 내용은 참조 [WPF 디자이너](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 디자인 타임에 ElementHost 컨트롤 복사하여 붙여넣기](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
  Windows Form에 Windows Presentation Foundation 컨트롤을 복사 하는 방법을 보여 줍니다.  
   

@@ -16,16 +16,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5efd63e971ea3ae2fa5cfd03a148fa453130c646
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77bd9884681c632f0faa9279f63aea6eabfe076e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhancing-windows-forms-applications"></a>Windows Forms 응용 프로그램 강화
 Windows Forms에는 사용자의 특정 요구에 맞게 Windows 기반 응용 프로그램을 향상시키는 데 사용할 수 있는 다양한 기능이 포함되어 있습니다. 다음 항목에서는 이러한 기능과 사용 방법을 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  Windows Forms에서 그래픽 인터페이스를 사용하는 방법을 설명하고 보여 주는 항목의 링크를 포함합니다.  
   

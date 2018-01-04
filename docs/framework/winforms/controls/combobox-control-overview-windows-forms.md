@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 979a410020ab6e3a1f2c15dcee52b062eb00c1ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 801ebb97c6ee52ce52bbb8f96a07d55e68ca6f1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox-control-overview-windows-forms"></a>ComboBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용 하는 드롭다운 콤보 상자에 데이터를 표시 합니다. 기본적으로는 <xref:System.Windows.Forms.ComboBox> 두 부분에 나와 있는: 위쪽 부분은 사용자가 목록 항목을 입력할 수 있게 하는 텍스트 상자가 있습니다. 두 번째 부분에 있는 사용자 수 하나를 선택 하는 항목의 목록을 표시 하는 목록 상자입니다. 콤보 상자의 다른 스타일에 자세한 내용은 참조 [Windows Forms ComboBox Instead of ListBox를 사용 하는 경우](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)합니다.  

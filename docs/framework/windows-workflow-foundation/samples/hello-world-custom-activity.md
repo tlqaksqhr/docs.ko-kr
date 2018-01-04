@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b717a5448a32eea3957e1e7e45c4dfc2f8801775
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 155726e5cd65c2f31a3205a8d18f662b66fb40e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hello-world-custom-activity"></a>Hello World 사용자 지정 활동
 이 샘플에서는 간단한 사용자 지정 활동을 만드는 방법을 비롯하여 [!INCLUDE[wf](../../../../includes/wf-md.md)]의 몇 가지 주요 기능을 보여 줍니다. 이러한 기능에는 C#으로 사용자 지정 활동을 만들고 `in` 및 `out` 인수(<xref:System.Activities.InArgument> 및 <xref:System.Activities.OutArgument>)를 사용하는 기능이 포함됩니다.  

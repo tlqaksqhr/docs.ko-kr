@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac74e50eb6558c38d46714dd7bfe0cfd61133ac8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7bbae29cea265fbc4cd92213066198b3f721c01d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>방법: Windows Forms의 ToolStrip 컨트롤에 자동 완성 기능 활성화
 다음 절차에서는 <xref:System.Windows.Forms.ToolStripLabel> 와 <xref:System.Windows.Forms.ToolStripComboBox> 를 삭제할 수 있습니다 방문한 웹 사이트와 같은 최근에 항목 목록이 표시 합니다. 목록의 항목 중 하나의 첫 번째 문자를 일치 하는 문자를 입력 하는 경우의 항목이 즉시 표시 됩니다.  

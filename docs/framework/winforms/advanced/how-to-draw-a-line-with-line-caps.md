@@ -21,16 +21,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e2d5a5aba4a7634e0ea8480aa9744a5a7b9721d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4048757e11724aa1e175d8b18c47f48d22d807e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>방법: 선 끝이 있는 선 그리기
 선 끝을 호출 하는 여러 셰이프 중 하나에 시작 또는 끝 줄을 그릴 수 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]화살촉이 라운드, 사각형, 다이아몬드 등 여러 선 끝을 지원합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  선 끝 줄 (시작 cap), (end cap) 줄의 끝 또는 대시 (대시 cap) 파선의 시작에 대 한를 지정할 수 있습니다.  
   
  다음 예제에서는 다른 쪽 끝에서 둥근 단면 화살촉이 한쪽 끝에 선을 그립니다. 그림에는 결과 선을 나타냅니다.  

@@ -22,16 +22,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb5a57f8bcbdc1edad78dcd48ad495a187bbb44a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: edd31ec5b9d94ac1791fb0f2a73522fdf4178627
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>방법: 텍스트에 앤티 앨리어싱 사용
 *앤티 앨리어싱* 그려지는 그래픽 및 텍스트의 모양을 가독성을 향상 시키는 거친 다듬기 가리킵니다. 관리 되는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 클래스, 낮은 품질의 텍스트와 고품질 앤티 앨리어싱된 텍스트를 렌더링할 수 있습니다. 일반적으로 더 높은 품질 렌더링은 낮은 품질로 렌더링할 보다 처리 시간이 오래 합니다. 텍스트 품질 수준을 설정 하려면 설정는 <xref:System.Drawing.Graphics.TextRenderingHint%2A> 속성은 <xref:System.Drawing.Graphics> 의 요소 중 하나에 <xref:System.Drawing.Text.TextRenderingHint> 열거형  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 두 개의 다른 품질 설정 사용 하 여 텍스트를 그립니다.  
   
  다음 그림은 코드의 출력 예제 코드를 보여 줍니다.  

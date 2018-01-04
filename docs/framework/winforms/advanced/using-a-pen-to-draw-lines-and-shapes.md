@@ -18,16 +18,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0913dc2745e1b244e4b03c0e6b946441a401c5b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 35f43316e2535aae6622ccf7952f649cdb92fc81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>펜을 사용하여 선과 도형 그리기
 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` 개체를 선 세그먼트, 곡선 및 도형 윤곽선을 그립니다. 이 섹션에서는 *줄* 선분만 의미를 지정 하지 않는 한, 이러한 항목 중 하나를 참조 합니다. 색, 너비, 맞춤 및 해당 펜을 사용 하 여 그리는 선의 스타일을 제어 하는 펜의 속성을 설정 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 펜을 사용하여 선 그리기](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
  선을 그리는 방법을 설명 합니다.  
   

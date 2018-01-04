@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60da29b60d2b9b5b98c76a0a9c3ae73ac9142bbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6c9273102dc8e8f0fe6be3e31d0f0b6e570c7af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>방법: 색 매트릭스를 사용하여 단색으로 변형
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]제공 된 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. <xref:System.Drawing.Image>및 <xref:System.Drawing.Bitmap> 개체는 32 비트 숫자 각 픽셀의 색을 저장 합니다: 각각 빨강, 녹색, 파랑 및 알파에 8 비트입니다. 네 개의 구성 요소가 0부터 농도가 없음을 나타내고 255 전체 강도 나타내는 0부터 255 까지의 숫자입니다. 알파 구성 요소는 색상의 투명도 지정 합니다.: 0은 완전히 투명 하며, 255은 완전히 불투명 합니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
  행렬 및 변환의 자세한 논의 알려면 [좌표계 및 변형](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 모두 한 가지 색상 (0.2, 0.0, 0.4, 1.0) 및 이전 단락에 설명 된 변환을 적용 하는 이미지입니다.  
   
  다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지 및 변형 된 이미지를 보여 줍니다.  

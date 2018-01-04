@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ca0bab0d10f8bc8c08e441b7e92f5f938d65dac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>방법: 스레드로부터 안전한 방식으로 Windows Forms 컨트롤 호출
 Windows Forms 응용 프로그램의 성능을 개선하기 위해 다중 스레딩을 사용하는 경우에는 스레드로부터 안전한 방식으로 컨트롤을 호출할 수 있습니다.  
@@ -103,7 +104,7 @@ private:
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 에서는 스레드로부터 안전하지 않은 방식으로 컨트롤에 액세스하는 경우를 검색할 수 있습니다. 디버거에서 응용 프로그램을 실행할 때 컨트롤을 만든 스레드가 아닌 다른 스레드가 해당 컨트롤을 호출하려고 하면 디버거에서 <xref:System.InvalidOperationException> 이 발생하고 " *컨트롤 이름* 컨트롤이 자신이 만들어진 스레드가 아닌 스레드에서 액세스되었습니다." 메시지가 표시됩니다.  
   
- 이 예외는 안전하지 않은 액세스를 안정적으로 확인할 수 있도록 디버깅 중에 발생하며 가끔 런타임에 발생하는 경우도 있습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 이전 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]버전을 사용하여 작성한 응용 프로그램을 디버그할 때 이 예외가 표시될 수 있습니다. 이 문제는 표시되는 경우 해결하는 것이 좋지만 <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> 속성을 `false`로 설정하면 비활성화할 수 있습니다. 이렇게 하면 컨트롤이 Visual Studio.NET 2003 및 [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)]에서 실행되는 것처럼 실행됩니다.  
+ 이 예외는 안전하지 않은 액세스를 안정적으로 확인할 수 있도록 디버깅 중에 발생하며 가끔 런타임에 발생하는 경우도 있습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 이전 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 버전을 사용하여 작성한 응용 프로그램을 디버그할 때 이 예외가 표시될 수 있습니다. 이 문제는 표시되는 경우 해결하는 것이 좋지만 <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> 속성을 `false`로 설정하면 비활성화할 수 있습니다. 이렇게 하면 컨트롤이 Visual Studio.NET 2003 및 [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)]에서 실행되는 것처럼 실행됩니다.  
   
 > [!NOTE]
 >  폼에서 ActiveX 컨트롤을 사용하는 경우 디버거에서 실행 시 크로스 스레드 <xref:System.InvalidOperationException> 이 발생할 수 있습니다. 이 예외가 발생하면 ActiveX 컨트롤이 다중 스레딩을 지원하지 않습니다. Windows Forms에서 ActiveX 컨트롤을 사용하는 방법에 대한 자세한 내용은 [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)를 참조하세요. Visual Studio를 사용하는 경우 Visual Studio 호스팅 프로세스를 사용하지 않도록 설정하여 이 예외를 방지할 수 있습니다( [How to: Disable the Hosting Process](/visualstudio/ide/how-to-disable-the-hosting-process)참조).  
@@ -410,7 +411,7 @@ private:
   
  <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 이벤트를 사용하여 백그라운드 작업의 진행률을 보고할 수도 있습니다. 해당 이벤트가 통합되어 있는 예제를 보려면 <xref:System.ComponentModel.BackgroundWorker>를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 단추 세 개와 텍스트 상자 하나가 포함된 폼으로 구성되는 완전한 Windows Forms 응용 프로그램입니다. 첫 번째 단추는 안전하지 않은 크로스 스레드 액세스를, 두 번째 단추는 <xref:System.Windows.Forms.Control.Invoke%2A>를 사용하는 안전한 액세스를, 세 번째 단추는 <xref:System.ComponentModel.BackgroundWorker>를 사용하는 안전한 액세스를 보여 줍니다.  
   
 > [!NOTE]

@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c3c0122eceab8b59bed15391e076863c5a2f144
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56e87d6d873ba69e3ee9fe788025d66f4a55a4ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu 구성 요소(Windows Forms)
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  Windows Forms `ContextMenu` 구성 요소를 쉽게 액세스할 수 있는 바로 가기 메뉴의 선택 된 개체와 관련 된 자주 사용 되는 명령 제공 하기 위해 사용 됩니다. 바로 가기 메뉴 항목은 자주 응용 프로그램에서 다른 곳에 나타나는 기본 메뉴 항목의 하위 집합입니다. 마우스 오른쪽 단추로 클릭 하 여 바로 가기 메뉴는 일반적으로 사용할 수 있습니다. Windows Forms에서 다른 컨트롤 영역과 연결 되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ContextMenu 구성 요소 개요](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
  일반적인 개념을 소개는 `ContextMenu` 사용자가 선택한 개체와 연결 된 자주 사용 되는 명령의 메뉴를 만들 수 있는 구성 요소입니다.  
   

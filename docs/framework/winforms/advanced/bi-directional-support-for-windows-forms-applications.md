@@ -13,11 +13,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 09ed8b59e9682b45f3f3720335686002761f7bce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms 응용 프로그램에 대한 양방향 지원
 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]를 사용하여 아랍어 및 히브리어와 같은 양방향(오른쪽에서 왼쪽) 언어를 지원하는 Windows 기반 응용 프로그램을 만들 수 있습니다. 여기에는 표준 폼, 대화 상자, MDI 폼 및 이러한 폼에서 사용할 수 있는 모든 컨트롤(즉, <xref:System.Windows.Forms.Control> 네임스페이스의 모든 개체)이 포함됩니다.  

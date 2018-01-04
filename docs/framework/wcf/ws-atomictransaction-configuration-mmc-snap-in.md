@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 66e6114b5fca84188f69be8d16782d5fdc1588cb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 구성 MMC 스냅인
 WS-AtomicTransaction 구성 MMC 스냅인은 로컬 및 원격 시스템에서 WS-AtomicTransaction 설정의 일부분을 구성하는 데 사용됩니다.  
@@ -97,6 +98,6 @@ regasm.exe /codebase WsatUI.dll
  [!INCLUDE[crabout](../../../includes/crabout-md.md)]추적 및 로깅, 참조 [관리 및 진단](../../../docs/framework/wcf/diagnostics/index.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Ws-atomic Transaction 지원 구성](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  
+ [WS-Atomic Transaction 지원 구성](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  
  [WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
  [관리 및 진단](../../../docs/framework/wcf/diagnostics/index.md)

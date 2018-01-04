@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fffc934bbbd1fc707e0bf5c0afbf79a40fc8c633
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-2-host-the-workflow-designer"></a>작업 2: 워크플로 디자이너 호스팅
 이 항목에서는 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 응용 프로그램에서 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 인스턴스를 호스트하는 절차를 설명합니다.  

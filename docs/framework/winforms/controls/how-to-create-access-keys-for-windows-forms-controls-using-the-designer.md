@@ -26,11 +26,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19c47c21526ca6e7aa4046a1853f3d1743438d17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53f9c46b282de795d6212f962f7296f76385aed2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에 대한 선택키 만들기
 *선택 키* 은 메뉴, 메뉴 항목 또는 예: 단추 컨트롤의 레이블 텍스트에 밑줄이 그어진된 문자. "단추를 클릭"는 미리 정의 된 선택 키와 함께에서 ALT 키를 눌러 사용자 수 있습니다. 예를 들어, 단추는 폼을 인쇄 하는 프로시저를 실행 하는 경우 일부 이므로 해당 `Text` "Print" 추가 앰퍼샌드 (&) "P" 하면 문자 "P"에 밑줄이 단추 텍스트의 런타임 시 문자 앞에 속성을 설정 합니다. 사용자는 ALT + P를 눌러 단추와 연결 된 명령을 실행할 수 있습니다. 포커스를 받을 수 없는 컨트롤에 대 한 선택 키를 사용할 수 없습니다.  

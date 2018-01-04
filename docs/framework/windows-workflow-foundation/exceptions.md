@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 545049900ec632aaaf3955656bcd93e845b094de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions"></a>예외
 워크플로에서 <xref:System.Activities.Statements.TryCatch> 활동을 사용하여 워크플로 실행 중에 발생하는 예외를 처리할 수 있습니다. 이러한 예외를 처리하거나 <xref:System.Activities.Statements.Rethrow> 활동을 사용하여 다시 throw할 수 있습니다. <xref:System.Activities.Statements.TryCatch.Finally%2A> 섹션의 활동은 <xref:System.Activities.Statements.TryCatch.Try%2A> 섹션 또는 <xref:System.Activities.Statements.TryCatch.Catches%2A> 섹션이 완료되면 실행됩니다. 워크플로 호스팅하는 <xref:System.Activities.WorkflowApplication> 인스턴스를 사용할 수도 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 이벤트 처리기에서 처리 되지 않은 예외를 처리 하는 <xref:System.Activities.Statements.TryCatch> 활동입니다.  

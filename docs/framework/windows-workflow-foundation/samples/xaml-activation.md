@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ac691e3d24e3526b43a6818fbe6bbb33a3375a7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 53665f39c6c0c7e5c7956912b05e3fd80659ddcb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-activation"></a>XAML Activation
 이 샘플에서는 IIS에서 선언적 워크플로를 호스트하는 방법을 보여 줍니다. 샘플은 하나의 작업이 있는 `EchoService`라는 기본 워크플로입니다.  

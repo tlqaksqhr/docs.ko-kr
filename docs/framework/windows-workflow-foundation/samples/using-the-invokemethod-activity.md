@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba0c2333c14eaebdb6409323bb6b92aa2b29d2ec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c5d3f6734f9d6a3b0e2279b2bb6cca71141c8f5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-invokemethod-activity"></a>InvokeMethod 활동 사용
 이 샘플에 사용 하는 방법을 보여 줍니다는 <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) public 클래스의 공용 메서드를 호출 하는 활동입니다. <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) 활동 하면 워크플로에서 개체에 대해 메서드를 호출, 매개 변수를 전달, 반환 값을 제네릭 메서드의 형식을 지정 하는 메서드는 동기적 있는지 여부를 지정 하거나 비동기입니다. 

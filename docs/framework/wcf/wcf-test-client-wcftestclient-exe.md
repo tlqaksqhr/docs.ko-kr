@@ -13,11 +13,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 868e76b39156dc2fff85da2afe3501e39faf8812
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28098a4e598d1c3bede3b05e3afe1001c3944d42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 테스트 클라이언트(WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 테스트 클라이언트(WcfTestClient.exe)는 사용자가 테스트 매개 변수를 입력하고, 해당 입력 내용을 서비스에 전송하고, 서비스에서 돌려보내는 응답을 보는 데 사용할 수 있는 GUI 도구입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트와 이 도구를 함께 사용하면 서비스를 매끄럽게 테스트할 수 있습니다.  

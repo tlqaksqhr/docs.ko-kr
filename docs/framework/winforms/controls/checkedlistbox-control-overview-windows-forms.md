@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b2bb7251b87356361844e075831c95885879476
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c606406fb47d6297e70bfa3db5fc17631969e4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckedListBox> 확장은 <xref:System.Windows.Forms.ListBox> 제어 합니다. 거의 모든 작업 목록 상자는와 목록에서 항목 옆에 있는 확인 표시를 표시할 수을 수행 합니다. 다른 차이점 두 컨트롤은 목록 상자 지원만 확인 하는 <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>;는 검사 목록 상자 항목을 하나만 포함할 수 있습니다 또는 모두 선택 합니다. 선택한 항목 폼에 강조 표시 하 고 있는 선택한 항목 같지는 않습니다 참고 합니다.  

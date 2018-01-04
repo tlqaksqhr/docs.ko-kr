@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b244930f0837d3b1d548e0f7a8c77dd80e1ce039
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 61fb11b79459da14384af974dbc403024faa377f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>방법: Windows Forms TabControl의 모양 변경
 속성을 사용 하 여 Windows Forms에서 탭의 모양을 변경할 수는 <xref:System.Windows.Forms.TabControl> 및 <xref:System.Windows.Forms.TabPage> 컨트롤의 개별 탭을 구성 하는 개체입니다. 이러한 속성을 설정 하 여 탭에 이미지를 표시, 표시 하거나 수 있습니다 가로 대신 세로로 탭, 여러 행의 탭이 표시 하 고 사용 하도록 설정 탭을 프로그래밍 방식으로 사용 하지 않도록 설정 합니다.  

@@ -18,16 +18,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d87d1968b2a605a45f9cb0a918e6345679aa9c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 514f4e4835a047c8c340c0026aa5b59f6f3f7822
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker 컨트롤(Windows Forms)
 Windows Forms `DateTimePicker` 컨트롤 날짜 또는 시간 목록에서 단일 항목을 선택할 수 있습니다. 두 부분으로 표시 되는 날짜를 표시할 때: 텍스트와 목록 옆에서 아래쪽 화살표를 클릭할 때 표시 되는 모눈에 표시 된 날짜와 드롭 다운 목록입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DateTimePicker 컨트롤 개요](../../../../docs/framework/winforms/controls/datetimepicker-control-overview-windows-forms.md)  
  일반적인 개념을 소개는 `DateTimePicker` 컨트롤 사용자가 날짜 또는 시간 목록에서 단일 항목을 선택할 수 있습니다.  
   

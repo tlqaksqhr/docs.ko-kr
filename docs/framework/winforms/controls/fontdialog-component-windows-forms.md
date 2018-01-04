@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e92ce3e74ee4da518b78f8ab4ac5015a50a547b1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 97f2db18737578087f4db151669d6d3b05cf3598
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog 구성 요소(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 미리 구성된 대화 상자입니다. 동일 **글꼴** Windows 운영 체제에 의해 노출 되는 대화 상자. 상속 되는 구성 요소는 <xref:System.Windows.Forms.CommonDialog> 클래스입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [FontDialog 구성 요소 개요](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
  일반적인 개념을 소개는 <xref:System.Windows.Forms.FontDialog> 미리 구성 된 대화 상자를 표시 하는 데 사용할 수 있는 구성 요소입니다. 글꼴 및 설정을 조작 하 여 대화 상자를 사용할 수 있습니다.  
   

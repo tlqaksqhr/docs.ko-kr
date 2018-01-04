@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37d8571624272f62c6ce327b0ed25e082c5cf713
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c92048374941f735568bcd758ed475eba78b81e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>방법: 기능별로 Windows Forms RadioButton 컨트롤 그룹화
 Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤은 사용자에 게 제공 요소가 포함 된 프로시저 또는 개체에 할당 수 하나만 있는 두 개 이상의 설정 설계 되어 있습니다. 예를 들어 그룹 <xref:System.Windows.Forms.RadioButton> 컨트롤은 주문에 대 한 패키지 운송 업체의을 표시할 수는 있지만 운송 업체 중 하나에 사용 됩니다. 따라서 하나의 <xref:System.Windows.Forms.RadioButton> 한 번에 선택할 수 있습니다, 기능 그룹의 일부인 경우에 합니다.  

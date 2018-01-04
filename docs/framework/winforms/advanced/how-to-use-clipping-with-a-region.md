@@ -19,16 +19,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b57ffa91a41900e10aa921bd42509b1288134ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 281ae701bc3e5cee38952a05474360019f76a665
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>방법: 영역을 사용하여 클리핑
 속성 중 하나는 <xref:System.Drawing.Graphics> 클래스는 클립 영역입니다. 이 수행한 모든 그리기는 주어진 <xref:System.Drawing.Graphics> 개체의 클립 영역으로 제한 됩니다. <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 클립 영역을 설정할 수 있습니다는 <xref:System.Drawing.Graphics.SetClip%2A> 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 다각형으로 구성 된 경로 생성 합니다. 다음 코드는 해당 경로에 따라 영역을 생성 합니다. 지역에 전달 되는 <xref:System.Drawing.Graphics.SetClip%2A> 의 메서드는 <xref:System.Drawing.Graphics> 개체를 반복한 다음 두 개의 문자열 그려집니다.  
   
  다음 그림에는 잘린된 문자열 보여 줍니다.  

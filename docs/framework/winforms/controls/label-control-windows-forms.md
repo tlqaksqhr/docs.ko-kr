@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90a870c71bc7e5d853049d363c27a29d00be3f6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 76c02e3ae30bc3699b6fcddc07709d4b419d2a7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="label-control-windows-forms"></a>Label 컨트롤(Windows Forms)
 > [!IMPORTANT]
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   
  Windows Forms <xref:System.Windows.Forms.Label> 컨트롤은 텍스트 또는 사용자가 편집할 수 없는 이미지를 표시 하는 데 사용 됩니다. 양식에서 개체를 식별 하는 데 사용 됩니다-컨트롤에 대 한 설명을 처리 해를 클릭 한 경우 예를 들어 제공 하거나 런타임에 이벤트 또는 응용 프로그램에서 프로세스에 대 한 응답에 정보를 표시 합니다. 때문에 <xref:System.Windows.Forms.Label> 컨트롤이 포커스를 받을 수 없습니다, 다른 컨트롤에 대 한 선택 키를 만드는 사용할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Label 컨트롤 개요](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   

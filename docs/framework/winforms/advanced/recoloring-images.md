@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7f6f432742c966e3f17a7b7fa84628f24109d08e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c55c27c09a60e5ac5dd8f2fc6ef9372d4390621d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="recoloring-images"></a>이미지 다시 칠하기
 이미지 색을 조정 하는 과정은 다시 칠하기 합니다. 다시 칠하기의 몇 가지 예는 한 가지 색 다른를 조정 하는 다른 색을 기준으로 색의 강도, 밝기 또는 모든 색의 대비 조정 및 회색 음영으로 변환 변경 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 색 매트릭스를 사용하여 단색으로 변형](../../../../docs/framework/winforms/advanced/how-to-use-a-color-matrix-to-transform-a-single-color.md)  
  색 매트릭스를 사용 하 여 색 변환에 대해 설명 합니다.  
   

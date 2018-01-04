@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 550ef4951cc7d5b0a9b25c5e7d038588b0a911f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f157ea4afcaccfffde548c26a440fa6686c87aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Forms에 대한 ClickOnce 배포
 다음 항목에서는 Windows Forms 응용 프로그램을 클라이언트 컴퓨터에 쉽게 배포하는 데 사용되는 기술인 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]를 설명합니다.  

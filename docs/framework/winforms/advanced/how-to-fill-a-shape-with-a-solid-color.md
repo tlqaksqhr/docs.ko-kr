@@ -19,16 +19,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb3e160392a903083386d9942f8e2cfe31ee89a4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f016404feeac47c5f77527b8baa68d70742d4763
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>방법: 단색으로 도형 채우기
 만들기를 단색으로 도형 채우기는 <xref:System.Drawing.SolidBrush> 개체를 다음 전달할 <xref:System.Drawing.SolidBrush> 개체의 채우기 메서드 중 하나에 대 한 인수로 <xref:System.Drawing.Graphics> 클래스입니다. 다음 예제에서는 빨간색으로 타원을 채우는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 <xref:System.Drawing.SolidBrush.%23ctor%2A> 생성자는 <xref:System.Drawing.Color> 인수로 개체입니다. 사용 되는 값은 <xref:System.Drawing.Color.FromArgb%2A> 메서드 색의 알파, 빨간색, 녹색 및 파랑 구성 요소를 나타냅니다. 이러한 값을 각각 0-255 사이에 있어야 합니다. 첫 번째 255 나타내며 색은 완전히 불투명 한 두 번째 255 빨강 구성 요소의 농도가 임을 나타냅니다. 두 개의 0 있는지 녹색 및 파랑 구성 요소 둘 다가 0의 강도 나타냅니다.  
   
  4 개의 숫자 (0, 0, 100, 60)에 전달 되는 <xref:System.Drawing.Graphics.FillEllipse%2A> 메서드는 타원에 대 한 경계 사각형의 크기와 위치를 지정 합니다. 사각형의 왼쪽 위 모퉁이 (0, 0), 100, 너비 및 높이 60입니다.  

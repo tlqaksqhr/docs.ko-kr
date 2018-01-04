@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa2da4bdc593296ff72251284bc04eb8552c999f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e85101524b641a8abd11d0e8c6291635ed8e5dca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog 구성 요소(Windows Forms)
 Windows Forms `FolderBrowserDialog` 구성 요소는 사용자 수 및 폴더를 선택 찾아보거나 새로 만들려면 새 인터페이스를 표시 합니다. 보완 하는 [OpenFileDialog 구성 요소](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) 파일을 선택 하 고 검색에 사용 되는 구성 요소입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [FolderBrowserDialog 구성 요소 개요(Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   

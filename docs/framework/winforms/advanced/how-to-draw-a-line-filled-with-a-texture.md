@@ -20,16 +20,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33374a16e6fee80dd45227acd4c5860d5bfc4545
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0aaba7981dc68bf7bdfe6dbd45685e61f7b763a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>방법: 질감으로 채워진 선 그리기
 단색으로 선 대신, 질감으로 줄을 그릴 수 있습니다. 선 및 곡선 질감으로을 그리려면 만듭니다는 <xref:System.Drawing.TextureBrush> 개체를 전달 하는 <xref:System.Drawing.TextureBrush> 개체를 한 <xref:System.Drawing.Pen.%23ctor%2A> 생성자입니다. 펜의 스트로크 바둑판식으로 배열 된 질감의 특정 픽셀에서 확인 되 면 펜 선 또는 곡선 그리면 및 질감 브러시와 연결 된 비트맵 평면 (눈에 보이지 않게) 타일에 사용 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 한 <xref:System.Drawing.Bitmap> 개체 파일에서 `Texture1.jpg`합니다. 해당 비트맵 생성에 사용 되는 <xref:System.Drawing.TextureBrush> 개체 및 <xref:System.Drawing.TextureBrush> 개체를 생성 하는 데 사용 됩니다는 <xref:System.Drawing.Pen> 개체입니다. 에 대 한 호출 <xref:System.Drawing.Graphics.DrawImage%2A> 왼쪽 위 모퉁이가 인 비트맵을 그립니다 (0, 0). 에 대 한 호출 <xref:System.Drawing.Graphics.DrawEllipse%2A> 사용 하 여는 <xref:System.Drawing.Pen> 질감된 타원을 그릴 개체입니다.  
   
  다음 그림에서는 비트맵 및 질감된 타원을 보여 줍니다.  

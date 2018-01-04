@@ -20,16 +20,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4697ef7a74916bcc7b922f265262a83b8f0316d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e4d5bfb445ce6ed37ad1dc63d92fde833ac9870
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>방법: Windows Forms 컨트롤에서 특성 적용
 구성 요소 및 디자인 환경와 제대로 상호 작용 하 고 런타임 시 올바르게 실행 하는 컨트롤을 개발 하려면 클래스와 멤버에 특성을 올바르게 적용 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 사용자 지정 컨트롤에 여러 특성을 사용 하는 방법을 보여 줍니다. 컨트롤에는 간단한 로깅 기능을 보여 줍니다. 데이터 원본에 의해 전송 되는 값을 표시 컨트롤을 데이터 원본에 바인딩되면는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 값에 지정 된 값을 초과 하는 경우는 `Threshold` 속성에는 `ThresholdExceeded` 이벤트가 발생 합니다.  
   
  `AttributesDemoControl` 값을 기록는 `LogEntry` 클래스입니다. `LogEntry` 클래스는 템플릿 클래스를 기록 하는 형식 매개 변수가 있다는 것을 의미 합니다. 예를 들어 경우는 `AttributesDemoControl` 형식의 로깅 값은 `float`, 각 `LogEntry` 인스턴스를 선언 하 고 다음과 같이 사용 합니다.  

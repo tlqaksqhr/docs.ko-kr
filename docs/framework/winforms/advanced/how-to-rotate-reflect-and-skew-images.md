@@ -20,16 +20,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eaa6286731d196dad387e1648644ca3e8103da03
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 163af74d27adcb7ec720a54bfd969bd704f7b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>방법: 이미지 회전, 반사 및 기울이기
 있습니다 수 회전, 반사 및 기울이기 이미지 원본 이미지의 왼쪽 위, 오른쪽 위 및 왼쪽 아래 모퉁이 대 한 대상 지점을 지정 하 여 합니다. 세 개의 대상 지점 평행 사변형에 원본 사각형이 이미지 매핑되는 3x3 유사 변형을 결정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  예를 들어, 원본 이미지는 왼쪽 위 모퉁이에 있는 사각형 (0, 0)에서 오른쪽 위 모서리 (100, 0) 및 왼쪽 아래 모퉁이에 (0, 50). 이제 이러한 매핑 한다고 가정 3 개를 가리킵니다 대상 점은 다음과 같습니다.  
   
 |원래 지점|대상 지점|  

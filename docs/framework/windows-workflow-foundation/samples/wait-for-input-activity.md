@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d877c147a19635782b652d96031644b3be42448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wait-for-input-activity"></a>입력 대기 활동
 이 샘플은 워크플로에 명명된 책갈피를 만드는 방법을 보여 줍니다. [!INCLUDE[wf](../../../../includes/wf-md.md)]에서는 선언적 책갈피 작성을 위한 활동을 제공하지 않습니다. 따라서 워크플로에 책갈피가 필요하면 책갈피를 만드는 사용자 지정 활동을 작성해야 합니다. 이 샘플에 정의되어 있는 `WaitForInput` 활동에서 이러한 기능을 제공하므로 사용자가 워크플로 내에 선언적으로 책갈피를 만들 수 있습니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
   
  이 활동에는 디자이너를 바인딩하고, 업데이트 가능한 제네릭 인수 기능을 추가하고, 기본 제네릭 형식을 문자열로 설정하기 위한 세 가지 특성이 적용됩니다. 이 활동에는 다음 표에 나열된 것과 같은 인수도 있습니다.  
   
-|**Name**|**Type**|**설명**|  
+|**이름**|**Type**|**설명**|  
 |-|-|-|  
 |TResult|제네릭 인수(TResult)|책갈피의 형식입니다. 이는 책갈피를 다시 시작할 때 책갈피에 전달할 데이터의 형식입니다.|  
 |BookmarkName|InArgument\<문자열 >|책갈피의 이름입니다.|  

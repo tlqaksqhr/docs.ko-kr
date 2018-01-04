@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e12f39a63a4f81e6deec4512a4e18ad2bda7e5e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7600ae42194b3333c404d217c2605a226df99e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="power-management-in-windows-forms"></a>Windows Forms의 전원 관리
 Windows Forms 응용 프로그램에 Windows 운영 체제에서 전원 관리 기능을 활용을 걸릴 수 있습니다. 응용 프로그램 컴퓨터의 전원 상태를 모니터링 하 고는 상태 변경이 발생할 때 작업을 수행할 수 있습니다. 예를 들어 응용 프로그램이 노트북 컴퓨터에서 실행 되는 경우 컴퓨터의 배터리 충전 특정 수준에 해당 하는 경우 응용 프로그램에서 특정 기능을 비활성화 하는 것이 좋습니다.  

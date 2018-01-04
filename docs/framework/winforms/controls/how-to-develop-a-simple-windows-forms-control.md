@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 941bcb3d69a80ff415cb76d69414ad25e3a8c76d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>방법: 간단한 Windows Forms 컨트롤 개발
 이 섹션에서는 사용자 지정 Windows Forms 컨트롤을 작성하는 주요 단계를 설명합니다. 이 연습에서 개발 된 간단한 컨트롤의 맞춤을 사용 하는 <xref:System.Windows.Forms.Control.Text%2A> 변경할 속성입니다. 이벤트를 발생시키거나 처리하지 않습니다.  

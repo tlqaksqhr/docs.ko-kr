@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: babf3d235f4cca61ad6d0e5fdc4e6b6146c7d060
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 355a5842348aa4395d1841d0343080ddef634456
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-control-painting-and-rendering"></a>사용자 지정 컨트롤 그리기 및 렌더링
 사용자 지정 그리기 컨트롤의.NET Framework로 쉽게 수행할 수 있는 여러 복잡 한 작업 중 하나입니다. 사용자 지정 컨트롤을 작성할 때 컨트롤의 그래픽 모양에 대 한 많은 옵션이 있습니다. 상속 되는 컨트롤을 작성 하는 경우는 `Control`, 컨트롤의 그래픽 표현을 렌더링할 수 있는 코드를 제공 해야 합니다. 상속 하 여 사용자 정의 컨트롤을 만드는 경우는 `UserControl`, 상속 되는지 또는 Windows Forms 컨트롤 중 하나에서 있습니다는 표준 그래픽 표시를 재정의 그래픽 코드를 제공 합니다. 구성 요소 컨트롤에 대 한 사용자 지정 렌더링을 제공 하려는 경우는 `UserControl` 제작 하는, 옵션은 더욱 제한 되지만 광범위 한 컨트롤 및 응용 프로그램에 대 한 그래픽 기능을 계속 사용할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms 컨트롤 렌더링](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
  컨트롤을 표시 하는 논리를 프로그래밍 하는 방법을 보여 줍니다.  
   

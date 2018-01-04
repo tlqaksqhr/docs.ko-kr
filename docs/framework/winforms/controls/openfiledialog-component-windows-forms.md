@@ -16,16 +16,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d7e9540c933a53bd4692aa09850a96977bfb6b9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ee8666ca70d12e1198e34a11dcd429568e07201e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog 구성 요소(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.OpenFileDialog> 구성 요소는 미리 구성된 대화 상자입니다. 동일 **열려 있는 파일** Windows 운영 체제에 의해 노출 되는 대화 상자. <xref:System.Windows.Forms.CommonDialog> 클래스에서 상속됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [OpenFileDialog 구성 요소 개요](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
  사용자가 파일을 여는 데 사용할 수 있는 미리 구성된 대화 상자를 표시할 수 있는 <xref:System.Windows.Forms.OpenFileDialog> 구성 요소의 일반적인 개념을 소개합니다.  
   

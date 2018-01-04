@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 988dbef057b5980ac3f23b88c39669706d44557e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extract-wf-data-using-tracking"></a>추적을 사용하여 WF 데이터 추출
 이 샘플에서는 워크플로 추적을 사용하여 활동에서 워크플로 변수와 인수를 추출하는 방법을 보여 줍니다. 또한 여기에서는 추적 레코드에 주석을 추가하고 사용자 지정 추적 레코드 내의 데이터 페이로드를 추출하는 방법도 보여 줍니다. 이 샘플에서 워크플로의 데이터를 추출하는 데는 ETW(Event Tracing for Windows) 추적 참가자가 사용됩니다.  

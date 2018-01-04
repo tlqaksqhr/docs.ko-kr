@@ -17,18 +17,19 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f901377af4faf907a9640c6931d10fc1710aa71a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d038790f47ab405504faed7fb8a1bc7948c9ea82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel 컨트롤(Windows Forms)
 `FlowLayoutPanel` 컨트롤은 수평 또는 수직 방향으로 내용을 정렬합니다. 컨트롤 내용을 한 행에서 다음 행으로 또는 한 열에서 다음 열로 줄 바꿈할 수 있습니다. 또는 컨트롤 내용이 줄 바꿈되는 대신 잘릴 수 있습니다.  
   
  이 섹션의 항목에서는 `FlowLayoutPanel` 기능을 응용 프로그램에 빌드할 수 있게 해주는 개념 및 기술을 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [FlowLayoutPanel 컨트롤 개요](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)  
  가로나 세로 방향으로 진행되는 레이아웃을 만들 수 있게 해주는 `FlowLayoutPanel` 컨트롤의 일반적인 개념을 소개합니다.  
   

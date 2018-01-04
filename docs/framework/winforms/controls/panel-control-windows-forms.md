@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f5187d457e39993413ab6c281433ab604bc384fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eae4b64f2a632330b1b72f3ec5786884c272967c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel-control-windows-forms"></a>Panel 컨트롤(Windows Forms)
 Windows Forms `Panel` 컨트롤은 다른 컨트롤에 대 한 식별 가능한 그룹화를 제공 하는 데 사용 됩니다. 일반적으로 폼 함수로 세분화 하 패널을 사용 합니다. `Panel` 제어는 비슷합니다는 <xref:System.Windows.Forms.GroupBox> 제어; 그러나만 `Panel` 컨트롤에서 스크롤 막대를 가질 수 있습니다 및만 해당는 <xref:System.Windows.Forms.GroupBox> 컨트롤 캡션을 표시 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Panel 컨트롤 개요](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   

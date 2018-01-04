@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 781daeb43a952ef25e73edd577fa17c61b02b426
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd04a44e6f6e3df26a643a8937e20e232e7471a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시
 [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) 구성 요소에 글꼴을 선택 하 고 가중치와 크기 같은 표시 요소를 변경할 사용자를 허용 합니다.  

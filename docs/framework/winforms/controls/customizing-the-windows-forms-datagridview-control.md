@@ -16,18 +16,19 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d1246a8052af19057f7aa9d6729e34203177f8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 348651784ef2b4d99679038a1875fc6650688a6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤 사용자 지정
 `DataGridView` 컨트롤은 모양과 해당 셀, 행 및 열의 기본 동작 (모양 및 느낌)를 조정 하는 데 사용할 수 있는 몇 가지 속성을 제공 합니다. 기능 이외에 특별 한 요구 사항이 있으면는 <xref:System.Windows.Forms.DataGridViewCellStyle> 클래스, 있지만 수 또한 소유자 그리기 컨트롤에 대 한 구현 하거나 사용자 지정 셀, 열 및 행을 만들어 기능을 확장 합니다.  
   
  그릴 셀 및 행 직접 다양 한 처리할 수 있습니다 `DataGridView` 그리기 이벤트입니다. 를 기존 기능을 수정 하거나 새로운 기능을 제공 하려면 기존에서 파생 된 형식을 사용자를 만들 수 있습니다 `DataGridViewCell`, `DataGridViewColumn`, 및 `DataGridViewRow` 형식입니다. 또한 선택한 셀이 편집 모드일 때 컨트롤을 표시 하는 파생된 형식을 만들면 새 편집 기능을 제공할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
  처리 하는 방법에 설명 된 <xref:System.Windows.Forms.DataGridView.CellPainting> 셀을 수동으로 그리기 위해 이벤트입니다.  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 066cf358e43dabb3b952b32ecec34ca77c6e8c38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e152c525550554082d7d6c38a972ccc150adabb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>방법: 글꼴 패밀리 및 글꼴 만들기
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]글꼴 패밀리에 글꼴 서체 하지만 다양 한 스타일을 그룹화합니다. 예를 들어 Arial 글꼴 패밀리에는 다음 글꼴을 포함 되어 있습니다.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
  텍스트를 그릴 수 전에 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 생성 해야는 <xref:System.Drawing.FontFamily> 개체 및 <xref:System.Drawing.Font> 개체입니다. <xref:System.Drawing.FontFamily> 개체 지정 (예: Arial) 서체 및 <xref:System.Drawing.Font> 개체 크기, 스타일 및 단위를 지정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 일반 스타일 Arial 글꼴 크기는 16 픽셀을 생성합니다. 다음 코드에서에 전달 되는 첫 번째 인수는 <xref:System.Drawing.Font.%23ctor%2A> 생성자는는 <xref:System.Drawing.FontFamily> 개체입니다. 두 번째 인수는 네 번째 인수에 의해 식별 된 단위로 측정 되는 글꼴의 크기를 지정 합니다. 세 번째 인수는 스타일을 식별 합니다.  
   
  <xref:System.Drawing.GraphicsUnit.Pixel>멤버인는 <xref:System.Drawing.GraphicsUnit> 열거형 및 <xref:System.Drawing.FontStyle.Regular> 의 구성원은 <xref:System.Drawing.FontStyle> 열거형입니다.  

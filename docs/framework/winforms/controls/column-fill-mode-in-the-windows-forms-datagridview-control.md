@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a15f5a95510e7a1ffc4dfcdce00243f205c03eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a76ab083e8697d53f84a7c6e5ff4a91d6ceaebe1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 채우기 모드
 열 채우기 모드에는 <xref:System.Windows.Forms.DataGridView> 컨트롤이 사용 가능한 표시 영역의 너비를 채우도록 열 크기를 자동으로 조정합니다. 각 열의 너비를 해당 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 속성 값과 같거나 더 크게 유지해야 하는 경우 컨트롤이 가로 스크롤 막대를 표시하지 않습니다.  

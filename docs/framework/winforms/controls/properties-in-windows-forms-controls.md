@@ -17,18 +17,19 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5de09635fb92b46a2c0f89427ad03449de6bd53
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8d645a321319bf54ca0cc4f142c343420eb1f30e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-in-windows-forms-controls"></a>Windows Forms 컨트롤의 속성
 Windows Forms 컨트롤 속성 폼을 여러 기본 클래스를 상속 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다. 여기에 속성 같은 <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>, 및 다른 많은 요인을 합니다. 상속 된 속성에 대 한 세부 정보를 참조 하십시오. <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다.  
   
  컨트롤에서 상속된 속성을 재정의하고 새 속성을 정의할 수도 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [속성 정의](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
  사용자 지정 컨트롤 또는 구성 요소에 대한 속성을 구현하는 방법 및 속성을 디자인 환경으로 통합하는 방법을 보여 줍니다.  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10a0ef4e7fd8514245a7659dd515d8f363a716ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8bbc17b8344fca496dcf8f4077a69b6db1453c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리
 보간 모드는 <xref:System.Drawing.Graphics> 방식에 영향을 미칩니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 이미지 크기를 조절 (까지 확장 및 축소) 합니다. <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형 다음 목록에 표시 되는 다음과 같은 몇 가지 보간 모드를 정의 합니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  보간 모드를 설정 하려면의 멤버 중 하나를 할당 된 <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형을는 <xref:System.Drawing.Graphics.InterpolationMode%2A> 속성의는 <xref:System.Drawing.Graphics> 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 이미지를 그립니다 하 고 세 가지 서로 다른 보간 모드를 사용 하 여 이미지를 감소 합니다.  
   
  다음 그림에서는 원본 이미지와 세 개의 더 작은 이미지를 보여 줍니다.  

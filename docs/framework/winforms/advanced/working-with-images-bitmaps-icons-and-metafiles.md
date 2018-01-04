@@ -20,16 +20,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53dc25d6a23c5cdbba1c640905eadbdc6b1acb71
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 29c8a4ef0a495d63c0263262857002f09d8c885a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>이미지, 비트맵, 아이콘 및 메타파일 사용
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 래스터 이미지 작업을 위한 `Bitmap` 클래스와 벡터 이미지 작업을 위한 `Metafile` 클래스를 제공합니다. `Bitmap` 및 `Metafile` 클래스는 둘 다 `Image` 클래스에서 상속됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 화면에 기존 비트맵 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
  비트맵을 로드하고 그리는 방법을 설명합니다.  
   

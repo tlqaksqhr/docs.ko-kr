@@ -12,18 +12,19 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c01b39a8f21011bb45a1d73fcf44df76d5bf6fb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ba0308505f54b7c96259af5d797dd7c1957e6a92
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rehosting-the-workflow-designer"></a>워크플로 디자이너 재호스트
 워크플로 만들기, 수정, 모니터링을 위해 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 외부 환경에서 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]를 다시 호스트할 수 있습니다.  
   
  <xref:System.Activities.Presentation.WorkflowDesigner> 형식은 캔버스, 속성표 및 기타 요소의 래퍼이며 기본 프로그래밍 모델을 노출하여 대부분의 디자이너 다시 호스팅 시나리오를 처리합니다. <xref:System.Activities.Presentation.WorkflowDesigner> 응용 프로그램 내부에 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]를 호스트하는 것은 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]에 대한 일반적인 재호스팅 시나리오입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
   
  [작업 2: 워크플로 디자이너 호스트](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)  

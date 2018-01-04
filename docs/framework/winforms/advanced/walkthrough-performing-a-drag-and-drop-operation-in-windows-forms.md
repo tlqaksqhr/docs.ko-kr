@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe2b54123e117f21f3bda7bc78bc9c5b45fc9ae3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 173af57f1ec5d9ed14afc0ef5d6ddd391e15d534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>연습: Windows Forms에서 끌어서 놓기 작업 수행
 Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 하려면 처리 해야 일련의 이벤트, 특히는 <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, 및 <xref:System.Windows.Forms.Control.DragDrop> 이벤트입니다. 이러한 이벤트의 이벤트 인수에서 제공하는 정보를 사용하면 끌어서 놓기 작업을 쉽게 구현할 수 있습니다.  
@@ -69,7 +70,7 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
   
 1.  설정의 <xref:System.Windows.Forms.Control.AllowDrop%2A> 속성을 true로 합니다.  
   
-2.  에 `DragEnter` 삭제가 발생을 컨트롤에 대 한 이벤트 끌고 있는 데이터 형식이 적합 한지 확인 (이 경우 <xref:System.Windows.Forms.Control.Text%2A>). 이 코드는 다음 값에 삭제가 발생할 때 나타나는 효과 설정의 <xref:System.Windows.Forms.DragDropEffects> 열거형입니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>을 참조하십시오.  
+2.  에 `DragEnter` 삭제가 발생을 컨트롤에 대 한 이벤트 끌고 있는 데이터 형식이 적합 한지 확인 (이 경우 <xref:System.Windows.Forms.Control.Text%2A>). 이 코드는 다음 값에 삭제가 발생할 때 나타나는 효과 설정의 <xref:System.Windows.Forms.DragDropEffects> 열거형입니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>을 참조하세요.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -93,9 +94,9 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
     ```  
   
     > [!NOTE]
-    >  직접 정의할 수 <xref:System.Windows.Forms.DataFormats> 으로 직접 개체를 지정 하 여는 <xref:System.Object> 의 매개 변수는 <xref:System.Windows.Forms.DataObject.SetData%2A> 메서드. 이 작업을 수행할 때 지정된 개체는 직렬화(serialize)할 수 있어야 합니다. 자세한 내용은 <xref:System.Runtime.Serialization.ISerializable>을 참조하십시오.  
+    >  직접 정의할 수 <xref:System.Windows.Forms.DataFormats> 으로 직접 개체를 지정 하 여는 <xref:System.Object> 의 매개 변수는 <xref:System.Windows.Forms.DataObject.SetData%2A> 메서드. 이 작업을 수행할 때 지정된 개체는 직렬화(serialize)할 수 있어야 합니다. 자세한 내용은 <xref:System.Runtime.Serialization.ISerializable>을 참조하세요.  
   
-3.  에 <xref:System.Windows.Forms.Control.DragDrop> 삭제가 발생을 사용 하 여 컨트롤에 대 한 이벤트는 <xref:System.Windows.Forms.DataObject.GetData%2A> 끌고 있는 데이터를 검색 하는 메서드입니다. 자세한 내용은 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>을 참조하십시오.  
+3.  에 <xref:System.Windows.Forms.Control.DragDrop> 삭제가 발생을 사용 하 여 컨트롤에 대 한 이벤트는 <xref:System.Windows.Forms.DataObject.GetData%2A> 끌고 있는 데이터를 검색 하는 메서드입니다. 자세한 내용은 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>을 참조하세요.  
   
      다음 예제에는 <xref:System.Windows.Forms.TextBox> 컨트롤은 컨트롤 (삭제가 발생할 위치)에 있습니다. 코드 집합은 <xref:System.Windows.Forms.Control.Text%2A> 의 속성은 <xref:System.Windows.Forms.TextBox> 끌고 있는 데이터와 같도록 제어 합니다.  
   

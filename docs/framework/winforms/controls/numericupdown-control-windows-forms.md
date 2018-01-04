@@ -20,16 +20,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c674fec227e765213edfe2f2827543024cceac7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0d57bccb12bfa9b0b193967a5a2ce3830dd6ef7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown 컨트롤(Windows Forms)
 Windows Forms `NumericUpDown` 컨트롤은 사용자가 클릭하여 값을 조정할 수 있는 텍스트 상자와 화살표 쌍의 조합처럼 보입니다. 이 컨트롤은 선택 목록에서 하나의 숫자 값을 표시하고 설정합니다. 사용자는 위로 이동 또는 아래로 이동 단추를 클릭하거나, 위쪽 또는 아래쪽 화살표 키를 누르거나, 숫자를 입력하여 숫자를 늘리거나 줄일 수 있습니다. 위쪽 화살표 키를 클릭하면 최대값으로 이동하고, 아래쪽 화살표 키를 클릭하면 최소값으로 이동합니다. 이러한 종류의 컨트롤이 유용하게 사용되는 예는 음악 플레이어의 볼륨 컨트롤입니다. 숫자 up-down 컨트롤은 일부 Windows 제어판 응용 프로그램에서 사용됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [NumericUpDown 컨트롤 개요](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)  
  사용자가 숫자 값 목록에서 찾아보고 선택할 수 있는 `NumericUpDown` 컨트롤의 일반적인 개념을 소개합니다.  
   

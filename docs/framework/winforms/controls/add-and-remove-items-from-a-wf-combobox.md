@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96f18f02f82b0e7f9f517890ec963b43fa8d8f60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거
 항목 목록 상자에서 Windows Forms 콤보 상자에 추가할 수 또는 이러한 컨트롤을 다양 한 데이터 원본에 바인딩될 수 때문에 다양 한 방식으로 목록 상자를 확인 합니다. 그러나이 항목은 가장 간단한 방법을 보여 줍니다 이루어지며 데이터 바인딩이 없습니다. 표시 되는 항목은 일반적으로 문자열입니다. 그러나 모든 개체를 사용할 수 있습니다. 컨트롤에 표시 되는 텍스트 개체의 반환 값은 `ToString` 메서드.  

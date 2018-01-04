@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c730f4ea5a83efcfad15d181ac182fbd232690cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ce11db2d01f8938d0f97a3c0526c65a7c9740fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>HScrollBar 및 VScrollBar 컨트롤(Windows Forms)
 Windows Forms 스크롤 막대 컨트롤을 통해 응용 프로그램 또는 컨트롤 내에서 가로로 또는 세로로 스크롤하여 긴 항목 목록이나 대용량 정보를 쉽게 탐색할 수 있습니다. 스크롤 막대는 Windows 인터페이스의 공통 인터페이스입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [HScrollBar 및 VScrollBar 컨트롤 개요](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
  사용자가 대용량 정보를 가로로 및 세로로 스크롤할 수 있게 하는 <xref:System.Windows.Forms.HScrollBar> 및 <xref:System.Windows.Forms.VScrollBar> 컨트롤의 일반적인 개념을 소개합니다.  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 678b9ad5e8f9b40f927a35e98973cabc831c5cf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4f545cf4689a2c8058e77f4b4721788ffb0e7247
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>방법: 버퍼링된 그래픽 수동 관리
 더 많은 고급 이중 버퍼링 시나리오를 사용할 수 있습니다는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 이중 버퍼링 논리를 구현 하는 클래스입니다. 할당 및 개별 그래픽 버퍼를 관리 하는 일을 담당 하는 클래스는 <xref:System.Drawing.BufferedGraphicsContext> 클래스입니다. 모든 응용 프로그램에는 자체 기본 <xref:System.Drawing.BufferedGraphicsContext> 기본 이중 버퍼링 해당 응용 프로그램의 모든 관리입니다. 호출 하 여이 인스턴스에 대 한 참조를 검색할 수 있습니다는 <xref:System.Drawing.BufferedGraphicsManager.Current%2A>합니다.  

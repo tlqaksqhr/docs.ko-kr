@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7bd296fb8a761527e132aecfed9310208f56222
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f31f0b247c882b8ccba84930f7e21f5eea088a35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>방법: Windows Forms NumericUpDown 컨트롤을 사용하여 숫자 값 설정 및 반환
 Windows Forms의 숫자 값 <xref:System.Windows.Forms.NumericUpDown> 컨트롤 따라 사용자가 해당 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 속성입니다. 다른 속성의 경우와 마찬가지로 컨트롤의 값에 대 한 조건부 검사를 작성할 수 있습니다. 한 번의 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 속성이 설정 되어,이 경우에 작업을 수행 하는 코드를 작성 하 여 직접 조정할 수 있습니다 또는 호출할 수 있습니다는 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 및 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 메서드.  

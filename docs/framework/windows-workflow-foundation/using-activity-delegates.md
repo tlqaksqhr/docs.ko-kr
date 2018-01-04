@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de37cc2a366d4a69130c68b09de78caa58cf67fc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-activity-delegates"></a>활동 대리자 사용
 작업 대리자를 사용하면 활동 작성자는 활동 사용자가 활동 기반 처리기를 제공할 수 있는 특정 시그니처가 있는 콜백을 노출할 수 있습니다. 두 가지 형식의 작업 대리자를 사용할 수 있습니다. <xref:System.Activities.ActivityAction%601>은 반환 값이 없는 작업 대리자를 정의하는 데 사용되고 <xref:System.Activities.ActivityFunc%601>은 반환 값이 있는 작업 대리자를 정의하는 데 사용됩니다.  
@@ -66,4 +67,4 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   
 ## <a name="see-also"></a>참고 항목  
- [Activityaction 노출 및 호출](../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)
+ [ActivityAction 노출 및 호출](../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)

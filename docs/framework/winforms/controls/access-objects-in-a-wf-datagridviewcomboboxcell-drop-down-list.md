@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0fac2e73e76ad49a5b1ce6942f3ae2b4c0584e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d0f4eb14fbb459f6844053507d1eb4f0a46cede3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록의 개체 액세스
 와 같은 <xref:System.Windows.Forms.ComboBox> 컨트롤의 <xref:System.Windows.Forms.DataGridViewComboBoxColumn> 및 <xref:System.Windows.Forms.DataGridViewComboBoxCell> 형식을 사용 하면 임의의 개체를 드롭 다운 목록에 추가할 수 있습니다. 이 기능을 별도 컬렉션에 해당 하는 개체를 저장 하지 않고 드롭다운 목록에 복잡 한 상태를 나타낼 수 있습니다.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  전체 예제 드롭 다운 목록에서 비즈니스 개체의 사용을 보여 줍니다. 예제에서는 한 <xref:System.Windows.Forms.DataGridView> 컨트롤의 컬렉션에 바인딩된 `Task` 개체입니다. 각 `Task` 개체에는 `AssignedTo` 나타내는 속성을는 `Employee` 해당 작업에 현재 할당 된 개체입니다. `Assigned To` 열에 표시 됩니다는 `Name` 직원, 또는 "할당 되지 않은" 경우 각 속성 값이 지정 된 `Task.AssignedTo` 속성 값은 `null`합니다.  
   
  이 예제에서는의 동작을 보려면 다음 단계를 수행 합니다.  

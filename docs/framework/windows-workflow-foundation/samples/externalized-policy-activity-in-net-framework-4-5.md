@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 468d0ca5f4afa4e84b69f58887672ffcf1a14fa6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9dc86cd8ff3cce31e67c146e099f70181ad1e33a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5의에서 표면화 된 정책 작업
 이 샘플에서는 ExternalizedPolicy4 활동을 통해 기존를 실행 하는 방법을 보여 줍니다. [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> 개체 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) WF 3.5에서 제공 되는 규칙 엔진을 사용 하 여 직접 합니다. 이 활동을 사용하여 기존 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 열고 실행할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WF 3.5 규칙 엔진 Windows Workflow Foundation의 일부로 포함 된 읽으십시오 [Windows Workflow Foundation 규칙 엔진 소개](http://go.microsoft.com/fwlink/?LinkId=166079)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]마이그레이션 규칙을 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 에 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에서 마이그레이션 지침을 읽어 보십시오 [마이그레이션 지침](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.  

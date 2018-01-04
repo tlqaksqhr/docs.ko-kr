@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17cbdebfa6cbb0cacacd923de4bd22125c812938
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7993345a39a24c770fdd717580d428968dae836
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-list-installed-decoders"></a>방법: 설치된 디코더 나열
 응용 프로그램에서 특정 이미지 파일 형식을 읽을 수 있는지 확인 하는 컴퓨터에서 사용할 수 있는 이미지 디코더를 나열할 수도 있습니다. <xref:System.Drawing.Imaging.ImageCodecInfo> 클래스를 제공 된 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 정적 메서드를 이미지 디코더를 사용할 수를 확인할 수 있습니다. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>배열을 반환 <xref:System.Drawing.Imaging.ImageCodecInfo> 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 설치 된 디코더 목록 및 해당 속성 값을 출력합니다.  
   
  [!code-csharp[UsingImageEncodersDecoders#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#2)]

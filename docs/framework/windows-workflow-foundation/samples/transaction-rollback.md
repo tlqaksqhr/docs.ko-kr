@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aaebbb7fa2e6e0420243c32cb70c64092ea86fa7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 85ae459a8e79beba9ecffb16476b37468aeb632e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-rollback"></a>트랜잭션 롤백
 이 샘플에서는 앰비언트 <xref:System.Activities.NativeActivity>에 액세스하여 앰비언트 트랜잭션을 가져와서 명시적으로 롤백하는 사용자 지정 <xref:System.Activities.RuntimeTransactionHandle>를 만드는 방법을 보여 줍니다.  

@@ -23,16 +23,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7a0f80785ee923874379a206b344db6a8c80055
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f72ba017870bfccbb7c0e404c57cab77a96ab8b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>방법: WebBrowser 컨트롤을 사용하여 인쇄
 다음 코드 예제에서는 사용 하는 방법을 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 표시 하지 않고 웹 페이지를 인쇄 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[WebBrowserMisc#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#10)]
  [!code-vb[WebBrowserMisc#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#10)]  
   

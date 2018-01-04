@@ -17,18 +17,19 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 763ce6d47b0fe40eb2d27b2e062d46cfd9e1b8a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68335627f18a65cb7922170dda6584eb383a0e66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 컨트롤
 <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolStripContainer>를 사용하여 기본 제공 래프팅(도킹된 경우 도구 영역 내에서 가로 또는 세로 공간 공유)을 지원합니다.  
   
  이 섹션의 항목에서는 <xref:System.Windows.Forms.ToolStripContainer> 기능을 응용 프로그램에 빌드하는 데 사용할 수 있는 개념 및 기술을 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ToolStripContainer 컨트롤 개요](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
  Windows Forms <xref:System.Windows.Forms.ToolStripContainer> 컨트롤의 용도와 주요 개념을 설명하는 항목을 제공합니다.  
   

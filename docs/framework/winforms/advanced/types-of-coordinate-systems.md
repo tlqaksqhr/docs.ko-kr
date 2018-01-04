@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be89584ee8e7a82c405bf8664bfad18ced6d989a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-coordinate-systems"></a>좌표계 형식
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]세 개의 좌표 공간을 사용 하 여: 세계, 페이지 및 장치입니다. 세계 좌표 모델링할 특정 그래픽 영역을 사용 하는 좌표 및 좌표를.NET Framework의 메서드에 전달 합니다. 페이지 좌표 폼 또는 컨트롤과 같은 그리기 화면에서 사용 하는 좌표계를 가리킵니다. 장치 좌표는 화면이 나 용지 같은 항목이 그려지는 물리적 장치에서 사용 하는 좌표입니다. 호출을 수행 하면 `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, 전달 하는 지점은 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드-`(0, 0)` 및 `(160, 80)`-세계 좌표 공간에서 됩니다. 하기 전에 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 화면에 줄을 그릴 수, 좌표 변환의 순서를 통해 전달 합니다. 월드 변형을 호출 하는 하나의 변환 페이지 좌표 세계 좌표를 변환 하 고 다른 변환에 페이지 변환을 통해 장치 좌표로 변환 합니다.  

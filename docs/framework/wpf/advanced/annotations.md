@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad5825c63672f0cadd30b7a57d81427407e5097e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67f0a1f4a032a5175406dedcf282ed695f58e51e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotations"></a>주석
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]문서 주석을 달도 록 문서 콘텐츠를 지 원하는 컨트롤을 보기를 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [주석 개요](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
   [주석 스키마](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
   
