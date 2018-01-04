@@ -13,32 +13,33 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007bc3b38ef5b635a85e4c13f9bc9a6424fc36ad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 85e6dae6b8358799370079c52c3d04e7c3221b80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="dd4e0-102">서비스: Security Validation and Authentication Failures Per Second</span><span class="sxs-lookup"><span data-stu-id="dd4e0-102">Service: Security Validation and Authentication Failures Per Second</span></span>
-<span data-ttu-id="dd4e0-103">카운터 이름: Security Validation and Authentication Failures Per Second</span><span class="sxs-lookup"><span data-stu-id="dd4e0-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
+# <a name="service-security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="48a4a-102">서비스: Security Validation and Authentication Failures Per Second</span><span class="sxs-lookup"><span data-stu-id="48a4a-102">Service: Security Validation and Authentication Failures Per Second</span></span>
+<span data-ttu-id="48a4a-103">카운터 이름: Security Validation and Authentication Failures Per Second</span><span class="sxs-lookup"><span data-stu-id="48a4a-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="dd4e0-104">설명</span><span class="sxs-lookup"><span data-stu-id="dd4e0-104">Description</span></span>  
- <span data-ttu-id="dd4e0-105">이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="dd4e0-106">이러한 문제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="48a4a-104">설명</span><span class="sxs-lookup"><span data-stu-id="48a4a-104">Description</span></span>  
+ <span data-ttu-id="48a4a-105">이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다.</span><span class="sxs-lookup"><span data-stu-id="48a4a-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="48a4a-106">이러한 문제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="48a4a-106">Such problems include:</span></span>  
   
--   <span data-ttu-id="dd4e0-107">클라이언트 토큰을 메시지에서 읽을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-107">Client token cannot be read from the message.</span></span>  
+-   <span data-ttu-id="48a4a-107">클라이언트 토큰을 메시지에서 읽을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="48a4a-107">Client token cannot be read from the message.</span></span>  
   
--   <span data-ttu-id="dd4e0-108">클라이언트 토큰에서 인증에 실패했습니다(예: 잘못된 암호).</span><span class="sxs-lookup"><span data-stu-id="dd4e0-108">Client token has failed authentication (for example, bad password).</span></span>  
+-   <span data-ttu-id="48a4a-108">클라이언트 토큰에서 인증에 실패했습니다(예: 잘못된 암호).</span><span class="sxs-lookup"><span data-stu-id="48a4a-108">Client token has failed authentication (for example, bad password).</span></span>  
   
--   <span data-ttu-id="dd4e0-109">서명 확인에 실패했습니다(예: 메시지 변조).</span><span class="sxs-lookup"><span data-stu-id="dd4e0-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
+-   <span data-ttu-id="48a4a-109">서명 확인에 실패했습니다(예: 메시지 변조).</span><span class="sxs-lookup"><span data-stu-id="48a4a-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
--   <span data-ttu-id="dd4e0-110">메시지가 이전 메시지와 중복됩니다. 이러한 현상은 재생 공격 중에 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+-   <span data-ttu-id="48a4a-110">메시지가 이전 메시지와 중복됩니다. 이러한 현상은 재생 공격 중에 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a4a-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   <span data-ttu-id="dd4e0-111">해독 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-111">A decryption failure has occurred.</span></span>  
+-   <span data-ttu-id="48a4a-111">해독 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="48a4a-111">A decryption failure has occurred.</span></span>  
   
--   <span data-ttu-id="dd4e0-112">일부 필수 요소(예: 타임스탬프 또는 암호화된 데이터 블록)가 메시지에 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+-   <span data-ttu-id="48a4a-112">일부 필수 요소(예: 타임스탬프 또는 암호화된 데이터 블록)가 메시지에 없습니다.</span><span class="sxs-lookup"><span data-stu-id="48a4a-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   <span data-ttu-id="dd4e0-113">TLSNEGO/SPNEGO 핸드셰이크 중에 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
+-   <span data-ttu-id="48a4a-113">TLSNEGO/SPNEGO 핸드셰이크 중에 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="48a4a-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
   
- <span data-ttu-id="dd4e0-114">이 카운터는 성능 카운터 형식 [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), 값은 다음과 같은 수식으로 계산</span><span class="sxs-lookup"><span data-stu-id="dd4e0-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula,</span></span>  
+ <span data-ttu-id="48a4a-114">이 카운터는 성능 카운터 형식 [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), 값은 다음과 같은 수식으로 계산</span><span class="sxs-lookup"><span data-stu-id="48a4a-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula,</span></span>  
   
- <span data-ttu-id="dd4e0-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="dd4e0-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="48a4a-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="48a4a-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

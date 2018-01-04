@@ -13,14 +13,15 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e415bcdd366dc0899ce50cef7cf669a3208f564b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b963ba88772f223ebdd1f4aa86832879f3010940
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="154fc-102">끝점: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="154fc-102">Endpoint: Calls Outstanding</span></span>
-<span data-ttu-id="154fc-103">카운터 이름: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="154fc-103">Counter Name: Calls Outstanding</span></span>  
+# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="01709-102">끝점: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="01709-102">Endpoint: Calls Outstanding</span></span>
+<span data-ttu-id="01709-103">카운터 이름: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="01709-103">Counter Name: Calls Outstanding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="154fc-104">설명</span><span class="sxs-lookup"><span data-stu-id="154fc-104">Description</span></span>  
- <span data-ttu-id="154fc-105">이 끝점에 대한 진행 중인 호출 수입니다.</span><span class="sxs-lookup"><span data-stu-id="154fc-105">Number of in-progress calls to this endpoint.</span></span>
+## <a name="description"></a><span data-ttu-id="01709-104">설명</span><span class="sxs-lookup"><span data-stu-id="01709-104">Description</span></span>  
+ <span data-ttu-id="01709-105">이 끝점에 대한 진행 중인 호출 수입니다.</span><span class="sxs-lookup"><span data-stu-id="01709-105">Number of in-progress calls to this endpoint.</span></span>

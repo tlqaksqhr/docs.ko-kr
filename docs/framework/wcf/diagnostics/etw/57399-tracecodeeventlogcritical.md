@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c8e04d630bdafec6c6aa83230b375d077d4eb2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 279ffd4465a4ae359f7bd732d5b538ad090149b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="57399---tracecodeeventlogcritical"></a><span data-ttu-id="ae621-102">57399 - TraceCodeEventLogCritical</span><span class="sxs-lookup"><span data-stu-id="ae621-102">57399 - TraceCodeEventLogCritical</span></span>
-## <a name="properties"></a><span data-ttu-id="ae621-103">속성</span><span class="sxs-lookup"><span data-stu-id="ae621-103">Properties</span></span>  
+# <a name="57399---tracecodeeventlogcritical"></a><span data-ttu-id="b9c62-102">57399 - TraceCodeEventLogCritical</span><span class="sxs-lookup"><span data-stu-id="b9c62-102">57399 - TraceCodeEventLogCritical</span></span>
+## <a name="properties"></a><span data-ttu-id="b9c62-103">속성</span><span class="sxs-lookup"><span data-stu-id="b9c62-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="ae621-104">ID</span><span class="sxs-lookup"><span data-stu-id="ae621-104">ID</span></span>|<span data-ttu-id="ae621-105">57399</span><span class="sxs-lookup"><span data-stu-id="ae621-105">57399</span></span>|  
-|<span data-ttu-id="ae621-106">키워드가</span><span class="sxs-lookup"><span data-stu-id="ae621-106">Keywords</span></span>|<span data-ttu-id="ae621-107">인프라</span><span class="sxs-lookup"><span data-stu-id="ae621-107">Infrastructure</span></span>|  
-|<span data-ttu-id="ae621-108">수준</span><span class="sxs-lookup"><span data-stu-id="ae621-108">Level</span></span>|<span data-ttu-id="ae621-109">위험</span><span class="sxs-lookup"><span data-stu-id="ae621-109">Critical</span></span>|  
-|<span data-ttu-id="ae621-110">채널</span><span class="sxs-lookup"><span data-stu-id="ae621-110">Channel</span></span>|<span data-ttu-id="ae621-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="ae621-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="b9c62-104">ID</span><span class="sxs-lookup"><span data-stu-id="b9c62-104">ID</span></span>|<span data-ttu-id="b9c62-105">57399</span><span class="sxs-lookup"><span data-stu-id="b9c62-105">57399</span></span>|  
+|<span data-ttu-id="b9c62-106">키워드가</span><span class="sxs-lookup"><span data-stu-id="b9c62-106">Keywords</span></span>|<span data-ttu-id="b9c62-107">인프라</span><span class="sxs-lookup"><span data-stu-id="b9c62-107">Infrastructure</span></span>|  
+|<span data-ttu-id="b9c62-108">수준</span><span class="sxs-lookup"><span data-stu-id="b9c62-108">Level</span></span>|<span data-ttu-id="b9c62-109">위험</span><span class="sxs-lookup"><span data-stu-id="b9c62-109">Critical</span></span>|  
+|<span data-ttu-id="b9c62-110">채널</span><span class="sxs-lookup"><span data-stu-id="b9c62-110">Channel</span></span>|<span data-ttu-id="b9c62-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="b9c62-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="ae621-112">설명</span><span class="sxs-lookup"><span data-stu-id="ae621-112">Description</span></span>  
- <span data-ttu-id="ae621-113">이 이벤트는 TraceCodeEventLogCritical 시에 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="ae621-113">This event is emitted on TraceCodeEventLogCritical.</span></span>  
+## <a name="description"></a><span data-ttu-id="b9c62-112">설명</span><span class="sxs-lookup"><span data-stu-id="b9c62-112">Description</span></span>  
+ <span data-ttu-id="b9c62-113">이 이벤트는 TraceCodeEventLogCritical 시에 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="b9c62-113">This event is emitted on TraceCodeEventLogCritical.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="ae621-114">메시지</span><span class="sxs-lookup"><span data-stu-id="ae621-114">Message</span></span>  
- <span data-ttu-id="ae621-115">EventLog에 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="ae621-115">Wrote to the EventLog.</span></span>  
+## <a name="message"></a><span data-ttu-id="b9c62-114">메시지</span><span class="sxs-lookup"><span data-stu-id="b9c62-114">Message</span></span>  
+ <span data-ttu-id="b9c62-115">EventLog에 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="b9c62-115">Wrote to the EventLog.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="ae621-116">설명</span><span class="sxs-lookup"><span data-stu-id="ae621-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="b9c62-116">설명</span><span class="sxs-lookup"><span data-stu-id="b9c62-116">Details</span></span>

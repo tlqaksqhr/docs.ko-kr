@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d6ed6f7975ba16aa90dd892f06b9b0c73b8ead37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3459db437c5dbeba55cd18629c180a4da819403f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-calls"></a><span data-ttu-id="8eb3b-102">서비스: Calls</span><span class="sxs-lookup"><span data-stu-id="8eb3b-102">Service: Calls</span></span>
-<span data-ttu-id="8eb3b-103">카운터 이름: Calls</span><span class="sxs-lookup"><span data-stu-id="8eb3b-103">Counter Name: Calls.</span></span>  
+# <a name="service-calls"></a><span data-ttu-id="edda3-102">서비스: Calls</span><span class="sxs-lookup"><span data-stu-id="edda3-102">Service: Calls</span></span>
+<span data-ttu-id="edda3-103">카운터 이름: Calls</span><span class="sxs-lookup"><span data-stu-id="edda3-103">Counter Name: Calls.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8eb3b-104">설명</span><span class="sxs-lookup"><span data-stu-id="8eb3b-104">Description</span></span>  
- <span data-ttu-id="8eb3b-105">이 서비스에 대한 호출 수입니다.</span><span class="sxs-lookup"><span data-stu-id="8eb3b-105">Number of calls to this service.</span></span>
+## <a name="description"></a><span data-ttu-id="edda3-104">설명</span><span class="sxs-lookup"><span data-stu-id="edda3-104">Description</span></span>  
+ <span data-ttu-id="edda3-105">이 서비스에 대한 호출 수입니다.</span><span class="sxs-lookup"><span data-stu-id="edda3-105">Number of calls to this service.</span></span>

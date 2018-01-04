@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 365ed993be6c21567090b51fd41b551240abd1e1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 489b2526ab91f03f420b7db6237d3e9cce62241f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="reliable-messaging-sessions-faulted"></a><span data-ttu-id="87812-102">Reliable Messaging Sessions Faulted</span><span class="sxs-lookup"><span data-stu-id="87812-102">Reliable Messaging Sessions Faulted</span></span>
-<span data-ttu-id="87812-103">카운터 이름: Reliable Messaging Sessions Faulted</span><span class="sxs-lookup"><span data-stu-id="87812-103">Counter Name: Reliable Messaging Sessions Faulted.</span></span>  
+# <a name="reliable-messaging-sessions-faulted"></a><span data-ttu-id="5cda1-102">Reliable Messaging Sessions Faulted</span><span class="sxs-lookup"><span data-stu-id="5cda1-102">Reliable Messaging Sessions Faulted</span></span>
+<span data-ttu-id="5cda1-103">카운터 이름: Reliable Messaging Sessions Faulted</span><span class="sxs-lookup"><span data-stu-id="5cda1-103">Counter Name: Reliable Messaging Sessions Faulted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="87812-104">설명</span><span class="sxs-lookup"><span data-stu-id="87812-104">Description</span></span>  
- <span data-ttu-id="87812-105">이 서비스에서 오류가 발생한 신뢰할 수 있는 메시징 세션의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="87812-105">Number of reliable messaging sessions that are faulted in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="5cda1-104">설명</span><span class="sxs-lookup"><span data-stu-id="5cda1-104">Description</span></span>  
+ <span data-ttu-id="5cda1-105">이 서비스에서 오류가 발생한 신뢰할 수 있는 메시징 세션의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="5cda1-105">Number of reliable messaging sessions that are faulted in this service.</span></span>
