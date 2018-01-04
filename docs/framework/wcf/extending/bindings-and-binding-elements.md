@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39615c7a74d30ebd5f316988704992b49982c4a4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindings-and-binding-elements"></a>바인딩 및 바인딩 요소
 바인딩은 라고 하는 특수 구성 요소의 컬렉션입니다 *바인딩 요소의*, 클라이언트 때마다 서비스 런타임에 의해 평가 되 또는 서비스 끝점이 생성 되 고 있습니다. 한 바인딩 내에 있는 바인딩 요소의 형식과 순서는 끝점 채널 스택에서 프로토콜 및 전송 채널의 선택 및 스택 순서를 결정합니다.  

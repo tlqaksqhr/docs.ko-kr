@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: c9d0c81d715b2e876fe8144d4cff198f3321a22e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9d24e517a8fd63a3363d080ebbabf2c1e3306b76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-filters"></a>사용자 지정 필터
 사용자 지정 필터를 사용하면 시스템 제공 메시지 필터를 사용하여 정의할 수 없는 일치 논리를 정의할 수 있습니다. 예를 들어 특정 메시지 요소를 해시한 다음 값을 검사하여 필터가 true를 반환하는지 아니면 false를 반환하는지를 확인하는 사용자 지정 필터를 만들 수 있습니다.  
@@ -64,7 +65,7 @@ public class MyMessageFilter: MessageFilter
   
  프로덕션 환경에서 사용자 지정 필터를 사용하기 전에 성능 테스트를 실행하여 필터에서 메시지를 평가하는 데 소요되는 평균 시간을 확인해야 합니다. 필터 테이블에 사용되는 다른 필터의 평균 처리 시간을 조합하면 클라이언트 응용 프로그램에서 지정하는 최대 제한 시간 값을 정확하게 확인할 수 있습니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  사용자 지정 필터에서 라우팅 서비스를 사용 하기 위해 추가 해야를 필터 테이블 형식의 새 필터 항목을 지정 하 여 "Custom" 메시지 필터의 정규화 된 형식 이름 및 어셈블리의 이름입니다.  다른 MessageFilter와 마찬가지로 사용자 지정 필터의 생성자에게 전달될 filterData 문자열을 지정할 수 있습니다.  
   
  다음 예제에서는 라우팅 서비스에서 사용자 지정 필터를 사용하는 방법을 보여 줍니다.  

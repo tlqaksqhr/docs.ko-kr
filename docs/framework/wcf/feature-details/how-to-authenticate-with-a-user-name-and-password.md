@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31e05709465e429445a2ebdafae719c24d316c8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1554e8594a611aa75876d14ee7ad0689932372e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>방법: 사용자 이름 및 암호를 사용하여 인증
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 활성화하여 Windows 도메인 사용자 이름 및 암호로 클라이언트를 인증하는 방법을 소개합니다. 여기에서는 실행 중이면서 자체 호스팅된 서비스가 있는 것으로 가정합니다. 기본 자체 호스팅된 WCF 서비스 참조를 만드는 예제를 보려면 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)합니다. 이 항목은 코드에 서비스가 구성된 것으로 가정합니다. 확인 하려는 경우 구성 파일을 사용 하 여 비슷한 서비스 구성의 예 참조 [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
@@ -99,6 +100,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
  <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>  
  <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>  
- [기본 인증과 함께 전송 보안](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
- [분산된 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [기본 인증을 사용하는 전송 보안](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

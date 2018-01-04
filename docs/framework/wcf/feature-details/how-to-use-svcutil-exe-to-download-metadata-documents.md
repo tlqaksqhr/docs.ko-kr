@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6868bbecd83305c07e0b547d0102d7bca48d41f8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 571465ab483aef3e3e663b9f82974f35e100c73e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>방법: Svcutil.exe를 사용하여 메타데이터 문서 다운로드
 Svcutil.exe를 사용하면 실행 중인 서비스에서 메타데이터를 다운로드하여 로컬 파일에 저장할 수 있습니다. HTTP 및 HTTPS URL 체계에 대 한 Svcutil.exe에서 Ws-metadataexchange를 사용 하 여 메타 데이터를 검색 하려고 하 고 [XML 웹 서비스 검색](http://go.microsoft.com/fwlink/?LinkId=94950)합니다. 기타 URL 스키마의 경우 Svcutil.exe에서 WS-MetadataExchange만 사용합니다.  
@@ -49,7 +50,7 @@ Svcutil.exe를 사용하면 실행 중인 서비스에서 메타데이터를 다
   
  이 도구를 사용 하 여 메타 데이터 다운로드 하는 방법에 대 한 추가 옵션에 대 한 참조 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령은 실행 중인 서비스에서 메타데이터 문서를 다운로드합니다.  
   
 ```  

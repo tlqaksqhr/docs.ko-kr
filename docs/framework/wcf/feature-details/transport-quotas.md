@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4de910e2e66bc480abefe228bd183fe95270fb69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-quotas"></a>전송 할당량
 전송 할당량은 연결이 과도한 리소스를 사용하는 경우를 결정하는 정책 메커니즘입니다. 할당량은 할당량 값을 초과하면 추가 리소스를 사용하지 못하도록 설정된 절대 한계입니다. 전송 할당량은 악의적이거나 의도하지 않은 서비스 거부 공격을 방지합니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
   
  각 할당량 설정에는 형식, 최소값 및 기본값이 있습니다. 할당량의 최대값은 형식에 의해 제한됩니다. 시스템 제한으로 인해 할당량을 최대값으로 설정할 수 없는 경우도 있습니다.  
   
-|이름|형식|최소<br /><br /> 값|기본값<br /><br /> 값|설명|  
+|이름|형식|최소<br /><br /> 값|기본<br /><br /> 값|설명|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1틱|5 초|처음에 읽는 동안 프리앰블을 보내기 위해 연결을 기다리는 최대 시간입니다. 이 데이터는 인증이 발생되기 전에 수신됩니다. 일반적으로 이 설정은 `ReceiveTimeout` 할당량 값보다 상당히 작습니다.|  
 |`CloseTimeout`|TimeSpan|0|1분|전송에서 예외가 발생되기 전에 연결을 닫을 때까지 기다리는 최대 시간입니다.|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>바인딩 요소에서 전송 할당량 제어  
  바인딩 요소를 통한 전송 할당량 설정은 전송 동작 제어 시 뛰어난 유연성을 제공합니다. Close, Open, Receive 및 Send 작업에 대한 기본 시간 제한은 채널 작성 시 바인딩에서 가져옵니다.  
   
-|이름|HTTP|TCP/IP|명명된 파이프|  
+|name|HTTP|TCP/IP|명명된 파이프|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="controlling-transport-quotas-from-the-binding"></a>바인딩에서 전송 할당량 제어  
  바인딩을 통한 전송 할당량 설정에서는 가장 일반적인 할당량 값에 대한 액세스를 제공하는 동시에 선택할 수 있는 간단한 할당량 집합을 제공합니다.  
   
-|이름|HTTP|TCP/IP|명명된 파이프|  
+|name|HTTP|TCP/IP|명명된 파이프|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  

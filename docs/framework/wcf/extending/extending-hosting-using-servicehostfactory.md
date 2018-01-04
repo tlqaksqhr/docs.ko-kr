@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05cce66a1b03bee91672cd65bae78305c290c410
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a7bcd2e0ba68499cad63ec47918fd2bd6bd80d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>ServiceHostFactory를 사용하여 호스팅 확장명
 <xref:System.ServiceModel.ServiceHost>에서 서비스를 호스트하기 위한 표준 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] API는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 아키텍처의 확장 지점입니다. 사용자는 일반적으로 <xref:System.ServiceModel.ServiceHost>을 사용하여 서비스를 열기 전에 기본 끝점을 명령적으로 추가하거나 동작을 수정하도록 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening>을 재지정하기 위해 <xref:System.ServiceModel.Description.ServiceDescription>에서 호스트 클래스를 파생할 수 있습니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3ef21d4ab431ea4e1e1ac0392b3f088a7053c80
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 496c1191ebb55181ddb999a5a4327d5ff699828c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-to-peer-networking"></a>피어 투 피어 네트워킹
 피어 채널은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 제공되는 P2P(피어 투 피어) 다자간 통신 기술입니다. 피어 채널은 응용 프로그램 개발자에게 안전하고 확장 가능한 메시지 기반 P2P 통신 채널을 제공합니다. 피어 채널을 활용할 수 있는 다자간 응용 프로그램의 대표적인 예로 여러 사용자가 서버 없이 피어 투 피어 방식으로 서로 채트하는 대화방 같은 공동 작업 응용 프로그램을 들 수 있습니다. 피어 채널은 소비자 및 기업 시나리오 모두에서 P2P 공동 작업, 콘텐츠 배포, 부하 분산 및 분산 처리를 가능하게 합니다.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/02/2017
   
  다음 단원에는 피어 투 피어 네트워킹에 대한 정보와 피어 채널 클래스를 사용하여 피어가 활성화된 네트워크 응용 프로그램을 만드는 데 대한 정보가 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [피어 채널 시나리오](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md): 게시/구독 메시징, 공동 작업, 분산 처리 및 게임과 같은 피어 채널 Api에서 지 원하는 개발 시나리오에 설명 합니다.  
   
  [피어 채널 개념](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md): 설명 피어 메시, 피어 노드, 피어 채널 보안 및 피어 확인자입니다.  

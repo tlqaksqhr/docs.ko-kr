@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72e111340fc01df3def2fcb1d5360b00720af2f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>방법: 기본 WCF 웹 HTTP 서비스 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 웹 끝점을 노출하는 서비스를 만들 수 있습니다. 웹 끝점은 XML 또는 JSON으로 데이터를 보내며 SOAP 봉투가 없습니다. 이 항목에서는 이러한 끝점을 노출하는 방법을 보여 줍니다.  
@@ -110,7 +111,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[htBasicService#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#9)]
      [!code-vb[htBasicService#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#9)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[htBasicService#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#10)]

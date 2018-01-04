@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e44d0ecf6afb81928d83ea925f836f8b6927d97
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="elevation-of-privilege"></a>권한 높이기
 *권한 상승 문제점* 이상의 처음 부여 된 권한이 제공 되는 공격자가 권한 부여 결과입니다. 예를 들어 "읽기 전용" 권한의 권한 집합을 갖는 공격자는 권한 집합이 "읽기 및 쓰기"를 포함하도록 권한을 상승시킵니다.  
@@ -94,8 +95,8 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [정보 공개 문제점](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [재생 공격](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
  [변조](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+ [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

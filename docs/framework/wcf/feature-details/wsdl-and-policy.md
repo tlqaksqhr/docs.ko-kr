@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f502d24f98c9229d064be3de0e0edc081664dd03
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wsdl-and-policy"></a>WSDL 및 정책
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, WS-Policy 및 WS-PolicyAttachment 구현 세부 정보와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 소개된 추가 WS-Policy 어설션 및 WSDL 1.1 확장에 대해 다룹니다.  

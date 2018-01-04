@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7cb5e30cd4c8c5bf59c45b5e38d766990275b7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-names"></a>데이터 계약 이름
 때때로 클라이언트와 서비스는 동일한 형식을 공유하지 않습니다. 그래도 양쪽의 데이터 계약이 동일하면 서로 데이터를 전달할 수 있습니다. [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) 데이터 계약 및 데이터 멤버 이름에 따라 및 따라서 메커니즘은 형식 및 멤버 이름에 매핑할 수 제공 됩니다. 이 항목에서는 이름을 만들 때 데이터 계약의 이름 지정 규칙 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 인프라의 기본 동작 규칙에 대해 설명합니다.  

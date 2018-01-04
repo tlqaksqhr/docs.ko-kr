@@ -13,18 +13,19 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9208a73f6a35e4c05ab9be612491f3f7db792a5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF 확장에 대한 사용자 지정 메타데이터 가져오기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메타데이터 가져오기는 해당 메타데이터에서 서비스 또는 해당 구성 요소 부분의 추상적 표현을 생성하는 프로세스입니다. 예를 들면, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스, <xref:System.ServiceModel.Channels.Binding> 인스턴스 또는 <xref:System.ServiceModel.Description.ContractDescription> 인스턴스를 서비스의 WSDL 문서에서 가져올 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 서비스 메타데이터를 가져오려면 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 추상 클래스의 구현을 사용합니다. <xref:System.ServiceModel.Description.MetadataImporter> 클래스에서 파생되는 형식은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 WS-Policy 가져오기 논리를 사용하는 메타데이터 형식 가져오기에 대한 지원을 구현합니다.  
   
  사용자 지정 메타데이터는 시스템에서 제공한 메타데이터 가져오기에서 가져올 수 없는 XML 요소로 구성됩니다. 일반적으로 여기에 사용자 지정 WSDL 확장 및 사용자 지정 정책 어설션이 포함됩니다.  
   
- 이 단원에서는 사용자 지정 WSDL 확장 및 정책 어설션을 가져오는 방법에 대해 설명합니다. 가져오기 프로세스 자체에 대해 중점적으로 설명하지는 않습니다. 내보내기 및 가져오기는 메타 데이터 또는 시스템에서 지 원하는 사용자 지정 인지에 관계 없이 메타 데이터 형식을 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [내보내기 및 가져오기는 메타 데이터](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)합니다.  
+ 이 단원에서는 사용자 지정 WSDL 확장명 및 정책 어설션을 가져오는 방법에 대해 설명합니다. 가져오기 프로세스 자체에 대해 중점적으로 설명하지는 않습니다. 내보내기 및 가져오기는 메타 데이터 또는 시스템에서 지 원하는 사용자 지정 인지에 관계 없이 메타 데이터 형식을 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [내보내기 및 가져오기는 메타 데이터](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)합니다.  
   
 ## <a name="overview"></a>개요  
  <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 형식은 <xref:System.ServiceModel.Description.MetadataImporter>에 포함된 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 추상 클래스의 구현입니다. <xref:System.ServiceModel.Description.WsdlImporter> 형식은 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> 개체에 번들로 제공되는 연결된 정책과 함께 WSDL 메타데이터를 가져옵니다. 기본 가져오기가 인식하지 않는 정책 어설션 및 WSDL 확장은 가져올 등록된 사용자 지정 정책 및 WSDL 가져오기로 전달됩니다. 일반적으로 가져오기는 사용자 정의 바인딩 요소를 지원하거나 가져온 계약을 수정하도록 구현됩니다.  
@@ -60,5 +61,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 사용자 지정 WSDL 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
- [방법: 사용자 지정 정책 어설션의 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
- [방법: ServiceContractGenerator에 대 한 확장을 작성 합니다.](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+ [방법: 사용자 지정 정책 어설션 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
+ [방법: ServiceContractGenerator에 대한 확장명 쓰기](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

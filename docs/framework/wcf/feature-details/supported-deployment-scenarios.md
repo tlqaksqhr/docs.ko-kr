@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-deployment-scenarios"></a>지원되는 배포 시나리오
 부분 신뢰 응용 프로그램에서 사용할 수 있는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 기능의 하위 집합은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하는 시나리오의 일부 요구 사항에 맞게 디자인되었습니다. 서버의 경우, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 는 보안상의 이유로 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 보통 신뢰 권한 집합에서 타사 응용 프로그램을 실행하는 인터넷 범위의 공유 호스팅 공급자 요구 사항을 충족합니다. 클라이언트의 경우에는 신뢰할 수 없는 사이트에서 데스크톱 응용 프로그램을 원활하고 안전하게 배포할 수 있도록 해주는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ClickOnce 배포 [또는](http://go.microsoft.com/fwlink/?LinkId=83712) 의 XAML 브라우저 응용 프로그램 기술과 같은 배포 기술의 요구 사항을 충족하도록 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]부분 신뢰 지원이 디자인되었습니다.  

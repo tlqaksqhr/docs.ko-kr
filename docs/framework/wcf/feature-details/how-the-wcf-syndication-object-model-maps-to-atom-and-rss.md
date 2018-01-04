@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c5b310fbda189cfffe74767c9d77ac86481afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 배포 서비스를 개발할 때 다음 클래스를 사용하여 피드 및 항목을 만듭니다.  
@@ -412,4 +413,4 @@ ms.lasthandoff: 12/02/2017
  [배포 아키텍처](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
  [방법: 기본 RSS 피드 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
  [방법: 기본 Atom 피드 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [방법: 두 Atom로 피드 공개 및 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+ [방법: Atom 및 RSS로 피드 공개](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

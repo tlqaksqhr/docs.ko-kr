@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b388a7517dbab8d30df51bfffac0058ded04bda
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7661cf3c0f13ebf2f077318e022e8f5fd115e2a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>방법: 권한을 부여하는 동안 메타데이터 요청 허용
 사용자 지정 인증을 수행하는 동안 메타데이터를 처리하도록 요청을 허용해야 할 수 있습니다. 다음 항목에서는 이러한 요청의 유효성을 검사하는 단계에 대해 설명합니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  확장성 지점을 사용하여 클래스를 채택합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 메서드의 재정의를 보여 줍니다.  
   
  [!code-csharp[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/cs/source.cs#1)]
@@ -47,4 +48,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
  [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [클레임 및 권한 부여 Id 모델 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+ [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

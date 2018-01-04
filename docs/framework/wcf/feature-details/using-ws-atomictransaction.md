@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12e6e2be3e01ea920b45cce7a27814dd19c00935
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 124c5dc0f6db94ae459fe140bd7a4290aa56e04a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-ws-atomictransaction"></a>WS-AtomicTransaction 사용
 WS-AT(WS-AtomicTransaction)는 상호 운용 가능 트랜잭션 프로토콜입니다. 이 프로토콜을 사용하면 웹 서비스 메시지를 통해 분산 트랜잭션 흐름을 만들 수 있고 유형이 다른 트랜잭션 인프라 간에 상호 운용이 가능한 방식으로 이를 조정할 수 있습니다. 그리고 WS-AT에서는 2단계의 커밋 프로토콜을 사용하여 분산 응용 프로그램, 트랜잭션 관리자 및 리소스 관리자 간의 원자 단위 결과를 도출합니다.  
@@ -36,4 +37,4 @@ WS-AT(WS-AtomicTransaction)는 상호 운용 가능 트랜잭션 프로토콜입
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 서버와 클라이언트를 작성하는 경우에는 WS-AT를 사용할 필요가 없습니다. 대신 활성화된 `NetTcpBinding` 특성을 가진 `TransactionFlow`의 기본 설정을 사용할 수 있습니다. 여기에는 `OleTransactions` 프로토콜이 대신 사용됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)합니다. 타사 기술을 기반으로 구축한 웹 서비스로 트랜잭션을 이동하는 경우에는 WS-AT를 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Ws-atomic Transaction 지원 구성](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+ [WS-Atomic Transaction 지원 구성](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

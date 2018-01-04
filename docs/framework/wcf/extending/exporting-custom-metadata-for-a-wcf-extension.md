@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abe0bd7b08d254e97eef74ad1a99b1bcf6dd997e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF 확장에 대한 사용자 지정 메타데이터 내보내기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메타데이터 내보내기는 서비스 끝점을 설명하여 클라이언트에서 서비스 사용 방법을 이해할 수 있도록 병렬의 표준화된 표현으로 나타내는 프로세스입니다. 사용자 지정 메타데이터는 시스템에서 제공한 메타데이터 내보내기에서 내보낼 수 없는 XML 요소로 구성됩니다. 일반적으로 여기에는 사용자 정의 동작 및 바인딩 요소에 대한 사용자 지정 WSDL 요소를 비롯하여 바인딩 및 계약의 기능과 요구 사항에 대한 정책 어설션이 포함됩니다.  
@@ -53,5 +54,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 사용자 지정 WSDL 내보내기](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [방법: 사용자 지정 정책 어설션을 내보내려면](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
- [WCF 확장에 대 한 사용자 지정 메타 데이터 가져오기](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+ [방법: 사용자 지정 정책 어설션 내보내기](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
+ [WCF 확장에 대한 사용자 지정 메타데이터 가져오기](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

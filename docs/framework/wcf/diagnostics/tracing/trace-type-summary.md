@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c1570832e5f179b6d2685ad33fad743c9530bb16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fe4222ac124174341a28035c955a2a9bef4a167c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-type-summary"></a>추적 형식 요약
 [Source Levels](http://go.microsoft.com/fwlink/?LinkID=94943) 다양 한 추적 수준을 정의: 중요, 오류, 경고, 정보 및 Verbose에 대 한 설명 제공는 `ActivityTracing` 플래그의 출력을 토글하 경계와 동작 전송 이벤트를 추적 합니다.  
@@ -32,11 +33,11 @@ ms.lasthandoff: 12/02/2017
 |오류|복구할 수 있는 오류|  
 |경고|알림 메시지|  
 |정보|중요하지 않은 문제|  
-|Verbose|추적 디버깅|  
+|자세히|추적 디버깅|  
 |시작|처리의 논리 단위 시작|  
 |일시 중단|처리의 논리 단위 일시 중단|  
 |다시 시작|처리의 논리 단위 다시 시작|  
-|중지|처리의 논리 단위 중지|  
+|Stop|처리의 논리 단위 중지|  
 |전송|상관 관계 ID의 변경|  
   
  동작은 위의 추적 형식의 조합으로 정의됩니다.  

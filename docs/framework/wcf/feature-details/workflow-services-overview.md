@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df3f52ef7b3620b67a00cf4f5eb731a4d0b98208
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-services-overview"></a>워크플로 서비스 개요
 워크플로 서비스는 워크플로를 사용하여 구현되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기반 서비스입니다. 워크플로 서비스는 메시징 작업을 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지를 보내고 받는 워크플로입니다. .NET Framework 4.5에서는 워크플로 내에서 메시지를 보내고 받을 수 있는 다양한 메시징 작업을 제공합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]메시징 활동 및 다른 메시지 교환 패턴을 구현 하는 수 방법 참조 [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)합니다.  

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e1d797b7c86f57f4f9cf4d604e264d3534a79bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 토큰 및 클레임
 SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩니다. 기본적으로 SAML 토큰 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 페더레이션된 보안 시나리오에 사용 되는 *발급 된 토큰*합니다.  
@@ -57,9 +58,9 @@ SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
  <xref:System.IdentityModel.Claims.ClaimSet>  
  [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)  
- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [클레임 및 권한 부여 Id 모델 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+ [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  [클레임 및 토큰](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
  [클레임 만들기 및 리소스 값](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
  [방법: 사용자 지정 클레임 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

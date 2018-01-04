@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-an-anonymous-client"></a>익명 클라이언트를 사용하는 메시지 보안
 다음 시나리오에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 메시지 보안에 의해 보호되는 클라이언트와 서비스를 보여 줍니다. 이 디자인은 전송 보안 대신 메시지 보안을 사용하여 나중에 보다 다양한 클레임 기반 모델을 지원할 수 있도록 하는 것을 목적으로 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]권한 부여에 대 한 다양 한 클레임을 사용 하 여, 참조 [관리 클레임 및 권한 부여 Id 모델](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)합니다.  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [분산된 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [익명 메시지 보안](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [메시지 보안 익명](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Windows Server App Fabric에 대 한 보안 모델](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

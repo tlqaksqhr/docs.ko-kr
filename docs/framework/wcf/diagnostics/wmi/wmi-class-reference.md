@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-class-reference"></a>WMI 클래스 참조
 이 섹션에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] WMI 공급자가 노출하는 모든 WMI 클래스를 보여 줍니다.  
@@ -25,20 +26,20 @@ ms.lasthandoff: 12/02/2017
 ## <a name="accessing-wmi-instances"></a>WMI 인스턴스에 액세스  
  WMI 개체 참조에 나열된 모든 클래스는 Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation 및 Endpoint를 제외하고 직접 인스턴스화할 수 없습니다. 다른 인스턴스에 액세스하려면 앞에서 설명한 최상위 클래스의 속성에 액세스합니다. 예를 들어 Endpoint 인스턴스 -> Binding -> BindingElements에서 TransportBindingElement 인스턴스에 액세스할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
   
  [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)  
   
  [AspNetCompatibilityRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/aspnetcompatibilityrequirementsattribute.md)  
   
- [Asymmetricsecuritybindingelement가](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
+ [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
  "Behavior 클래스"  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
- [바인딩](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
+ [Binding](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
   
  [BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
   
@@ -56,13 +57,13 @@ ms.lasthandoff: 12/02/2017
   
  [ConnectionOrientedTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/connectionorientedtransportbindingelement.md)  
   
- [계약](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
+ [Contract](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
   
  [CustomBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/custombindingelement.md)  
   
  [DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
   
- [끝점](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
+ [Endpoint](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
   
  [HttpsTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/httpstransportbindingelement.md)  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 12/02/2017
   
  [SecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
   
- [서비스](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
+ [Service](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
   
  [ServiceAppDomain](../../../../../docs/framework/wcf/diagnostics/wmi/serviceappdomain.md)  
   
@@ -156,9 +157,9 @@ ms.lasthandoff: 12/02/2017
   
  [TransactionFlowBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transactionflowbindingelement.md)  
   
- [바인딩에 transportbindingelement가](../../../../../docs/framework/wcf/diagnostics/wmi/transportbindingelement.md)  
+ [TransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transportbindingelement.md)  
   
- [Transportsecuritybindingelement가](../../../../../docs/framework/wcf/diagnostics/wmi/transportsecuritybindingelement.md)  
+ [TransportSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transportsecuritybindingelement.md)  
   
  [UseManagedPresentationBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/usemanagedpresentationbindingelement.md)  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dbc09bd409dc106046d6c5e51dae8932c9eba326
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-resolvers"></a>피어 확인자
 메시에 연결하려면 피어 노드에 다른 노드의 IP 주소가 필요합니다. IP 주소를 가져오려면 메시 ID를 사용하고 해당 메시 ID로 등록된 노드에 해당하는 주소 목록을 반환하는 확인자 서비스에 연결합니다. 확인자는 메시의 각 노드가 서비스에 등록되게 하여 만드는 등록된 주소 목록을 유지합니다.  
@@ -44,8 +45,8 @@ ms.lasthandoff: 12/02/2017
   
  사용자 지정 해결 프로그램을 구현 하는 방법의 데모를 보려면 참조 [피어 채널 사용자 지정 피어 확인자](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [Custompeerresolverservice: 클라이언트 등록](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [CustomPeerResolverService: 클라이언트 등록 내부](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [피어 채널 개념](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  

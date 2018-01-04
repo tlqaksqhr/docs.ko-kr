@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램을 ASP.NET 웹 서비스처럼 프로그래밍하고 구성하며 동작을 모방하도록 할 수 있는 ASP.NET 호환 모드 옵션이 있습니다. 다음 단원에서는 ASP.NET 웹 서비스와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 응용 프로그램을 개발하는 데 필요한 사항을 기반으로 이 두 가지 기술을 비교합니다.  
@@ -761,4 +762,4 @@ public void Receive(Message input)
  ASP.NET 구성 언어를 사용하여 개별 서비스의 문화권을 지정할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 ASP.NET 호환 모드인 경우를 제외하고 이러한 구성 설정을 지원하지 않습니다. ASP.NET 호환 모드를 사용하지 않는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 지역화하려면 서비스 유형을 문화권별 어셈블리로 컴파일하고 각 문화권별 어셈블리가 별도의 문화권별 끝점을 갖도록 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [WCF 기반 의도적으로 사용 되는 표준을 ASP.NET 웹 서비스 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+ [용도와 사용되는 표준을 기반으로 ASP.NET 웹 서비스와 WCF 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

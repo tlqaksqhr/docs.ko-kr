@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 20e9fd7bd962adb20d2c4bc394012603c7e0f2ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-filters"></a>방법: 필터 사용
 이 항목에서는 여러 필터를 사용하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 regularCalc와 roundingCalc라는 두 계산기 서비스 구현으로 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 한 서비스에서 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 응용 프로그램은 서비스의 반올림 버전을 사용할 것인지 여부를 지정해야 합니다. 서비스 기본 설정이 지정되지 않으면 메시지는 두 서비스 사이에서 부하 분산됩니다. 두 서비스에 의해 노출되는 연산은 다음과 같습니다.  
@@ -235,7 +236,7 @@ ms.lasthandoff: 10/18/2017
     </behaviors>  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 구성 파일의 전체 목록입니다.  
   
 ```xml  

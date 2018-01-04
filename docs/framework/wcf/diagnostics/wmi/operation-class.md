@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 492a3cb4b11706bfabc42976fb1adfad24a2279a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 54566bc452baa2e02cef7d8d13d29fcd5864c95c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operation-class"></a>Operation 클래스
 작업  
@@ -104,7 +105,7 @@ class Operation
   
  작업의 메서드 서명입니다.  
   
-### <a name="name"></a>이름  
+### <a name="name"></a>name  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  

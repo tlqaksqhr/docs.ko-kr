@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0345b1fc46cc53604cabbdeeec0f67c6f9b77d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: af43baabfe979baa5c6fd7010c8be4dc72a3be9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-import-custom-wsdl"></a>방법: 사용자 지정 WSDL 가져오기
 이 항목에서는 사용자 지정 WSDL을 가져오는 방법에 대해 설명합니다. 사용자 지정 WSDL을 처리하려면 <xref:System.ServiceModel.Description.IWsdlImportExtension> 인터페이스를 구현해야 합니다.  
@@ -88,6 +89,6 @@ ms.lasthandoff: 12/02/2017
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [메타 데이터](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [내보내기 및 메타 데이터 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
+ [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [메타데이터 내보내기 및 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
  [사용자 지정 WSDL 게시](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)

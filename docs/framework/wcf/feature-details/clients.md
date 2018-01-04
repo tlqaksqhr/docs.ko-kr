@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70e38e3fe1a07613b0e5b219922c95cdc3bcda41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37125ed8211578e221b24e6aed1fc57b2fc0f518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clients"></a>클라이언트
 이 단원의 항목에서는 클라이언트 아키텍처, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에 액세스하는 방법, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 구성하는 방법 및 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에 대한 보안 고려 사항에 대해 다룹니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [WCF 클라이언트 아키텍처](../../../../docs/framework/wcf/feature-details/client-architecture.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 아키텍처에 대해 설명합니다.  
   

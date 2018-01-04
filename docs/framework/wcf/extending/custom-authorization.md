@@ -13,20 +13,21 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d065f4af7476e90c789c0647b1944aa50b5af5fc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 35994b76498d9287f5f0c22c024afc176d1f9260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-authorization"></a>사용자 지정 권한 부여
 권한 부여는 리소스 및 작업에 대한 액세스를 제어하는 프로세스입니다. 이 단원의 항목을 참조하여 서로 다른 클레임 형식 또는 정책을 구현하도록 만들 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 사용자 지정 권한 부여 정책 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
  사용자 지정 정책을 만드는 방법에 대해 설명합니다.  
   
- [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  사용자 지정 관리자를 만드는 방법에 대해 설명합니다.  
   
  [방법: 사용자 지정 클레임 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
  [방법: 클레임 비교](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
  클레임을 비교하는 방법에 대해 설명합니다.  
   
- [방법: 사용자 지정 보안 주체 Id 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
+ [방법: 사용자 지정 보안 주체 ID 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
  <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom>이 사용자 지정 권한 부여 정책 및 사용자 지정 보안 주체와 함께 사용되는 시나리오를 보여 줍니다.  
   
 ## <a name="reference"></a>참조  

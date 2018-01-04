@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 973a70fdb655ab069d6ecdafd0e017324720e57a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-filter"></a>필터 선택
 라우팅 서비스를 구성할 때는 올바른 메시지 필터를 선택하고 수신하는 메시지와 정확히 일치하도록 메시지 필터를 구성해야 합니다. 선택한 필터가 과도하게 광범위하거나 올바르게 구성되지 않은 경우 메시지가 잘못 라우트됩니다. 필터가 너무 제한적인 경우에는 일부 메시지에 유효한 경로가 제공되지 않을 수 있습니다.  
@@ -147,4 +148,4 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
 ## <a name="see-also"></a>참고 항목  
  [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [방법: 필터를 사용 합니다.](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+ [방법: 필터 사용](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

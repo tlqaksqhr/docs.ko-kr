@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 937e879fc6104f06234ab5201eae8e330dbb68f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 51a42e9b954fba7ccd58d74248fb65dc2b57a76b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>방법: 기본 Atom 피드 만들기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 배포 피드를 노출하는 서비스를 만들 수 있습니다. 이 항목에서는 Atom 배포 피드를 노출하는 배포 서비스를 만드는 방법에 대해 설명합니다.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[htAtomBasic#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/snippets.cs#11)]
      [!code-vb[htAtomBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/snippets.vb#11)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[htAtomBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#12)]

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0938b98a3f079d03653df55f10c26a4a62db5bf3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc0e954ae5cadbe7e70cd8a83d3d5841f4e0d142
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS 및 WAS에서 구성 기반 활성화
 일반적으로 IIS(인터넷 정보 서비스)나 WAS(Windows Process Activation Service)에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스팅할 때는 .svc 파일을 제공해야 합니다. .svc 파일에는 서비스 이름과 선택적 사용자 지정 서비스 호스트 팩터리가 포함되어 있습니다. 이 추가 파일을 사용하면 관리 효율성이 떨어지지만 구성 기반 활성화 기능을 사용하면 .svc 파일이 필요 없기 때문에 이로 인한 관리 효율성 저하도 발생하지 않습니다.  

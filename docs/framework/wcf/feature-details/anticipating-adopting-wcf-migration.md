@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ecac6917d47604aa66e9cdc0d845e76ad2de5d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76770eff76a7a641ee853f314b5d2c14a56737c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation 채택 예상: 이후의 마이그레이션을 용이하게 함
 향후 새로운 ASP.NET 응용 프로그램을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 더 쉽게 마이그레이션하려면 앞에서 설명한 권장 사항과 다음 권장 사항을 따라야 합니다.  
@@ -135,4 +136,4 @@ throw new SoapException(
 -   서비스 리소스에 대한 액세스 권한을 부여할 때 ASP.NET 2.0 역할 공급자를 사용할 것을 고려해 보세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Windows Communication Foundation 채택 예상: 이후의 통합 감속/가속](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+ [Windows Communication Foundation 채택 예상: 이후의 통합을 용이하게 함](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

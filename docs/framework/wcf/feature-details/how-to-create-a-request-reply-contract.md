@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79ef7b899adfb068a03e41cf0f3aa29f34f27b88
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f86679d38b8d1a1d6443c1aac37cfa75f426e402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>방법: 요청-회신 계약 만들기
 요청-회신 계약에서는 회신을 반환하는 메서드를 지정합니다. 회신은 이 계약 조건 하의 요청에 따라 전송되고 상호 관련되어야 합니다. 메서드가 회신을 반환하지 않는 경우(C#에서는 `void`, Visual Basic에서는 `Sub`)에도 인프라에서 빈 메시지를 만들어 호출자에게 보냅니다. 빈 회신 메시지가 전송되지 않도록 하려면 작업에 대한 단방향 계약을 사용합니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  선택 사항입니다. 빈 회신 메시지가 전송되지 않도록 하려면 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 속성의 값을 `true`로 설정합니다. 기본적으로 모든 작업은 요청-회신 계약 하에서 수행됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 `Add` 및 `Subtract` 메서드를 제공하는 계산기 서비스에 대한 계약을 정의합니다. `Multiply` 메서드는 <xref:System.ServiceModel.OperationContractAttribute> 클래스에 의해 표시되지 않으므로 계약의 일부가 아니며, 따라서 클라이언트에 액세스할 수 없습니다.  
   
 ```

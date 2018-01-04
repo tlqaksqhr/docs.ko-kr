@@ -17,17 +17,18 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3d436690108158cfd7675cf00788a564b8a1dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c84f25dfd5d3066f9c5d0b62bc0b28bc98c283d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-wcf"></a>WCF 확장
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 런타임 구성 요소를 수정하고 확장하여 서비스 기반 응용 프로그램을 정확하게 제어하고 확장할 수 있습니다. 이 섹션의 항목에서는 확장성 아키텍처에 대해 자세히 설명합니다. 기본 프로그래밍에 대 한 자세한 내용은 참조 [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [확장 ServiceHost 및 서비스 모델 계층](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [ServiceHost 및 서비스 모델 계층 확장](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
  서비스 모델 계층은 기본 채널에서 들어오는 메시지를 끌어와서 응용 프로그램 코드에서 이를 메서드 호출로 변환하여 결과를 다시 호출자에게 보내는 역할을 합니다.  서비스 모델 확장은 디스패처 기능, 사용자 지정 동작, 메시지 및 매개 변수 가로채기 그리고 다른 확장명 기능이 포함된 통신 동작 및 기능 또는 실행을 수정하거나 구현합니다.  
   
  [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)  
@@ -39,10 +40,10 @@ ms.lasthandoff: 12/02/2017
  [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 보안은 전송 보안(무결성, 기밀성 및 인증), 액세스 제어(권한 부여) 및 감사로 구성됩니다. `IdentityModel` 네임스페이스에 있는 클래스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 액세스 제어에 사용합니다. 보안 아키텍처를 이해하면 사용자 지정 액세스 제어 시스템을 수용할 사용자 지정 클레임 형식을 만들 수 있습니다.  
   
- [메타 데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
+ [메타데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메타데이터 시스템은 서비스 기반 응용 프로그램 구현에 필요한 메타데이터를 나타내는 클래스 및 인터페이스 그룹입니다. 클래스를 수정 또는 확장하거나 인터페이스를 구현 및 구성하여 WSDL(웹 서비스 기술 언어) 확장이나 사용자 지정 WS-PolicyAttachments 어설션 같은 사용자 지정 메타데이터를 내보내고 가져옵니다.  
   
- [인코더 및 Serializer 확장](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
+ [인코더 및 직렬 변환기 확장](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  인코더 및 serializer는 데이터를 다른 형식으로 변환합니다. 이 섹션의 항목에서는 제공된 클래스를 특별한 요구 사항에 맞게 확장하는 방법에 대해 설명합니다.  
   
 ## <a name="reference"></a>참조  

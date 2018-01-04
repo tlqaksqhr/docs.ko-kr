@@ -16,11 +16,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbf0df6e4fbf62ab0e7ec8c741a0f3be01c35ef
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6491faa6134c1e80e07294d8f888200c04fa8704
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>방법: 관리되는 응용 프로그램에서 WCF 서비스 호스팅
 관리되는 응용 프로그램 내에서 서비스를 호스팅하려면 관리되는 응용 프로그램 코드 내에 서비스에 대한 코드를 포함하고, 코드에서 명령적으로, 구성을 통해 선언적으로 또는 기본 끝점을 사용해 서비스에 대한 끝점을 정의한 다음 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만듭니다.  
@@ -92,7 +93,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  두 번 클릭 **SayHello** 아래는 **내 서비스 프로젝트** 노드. 사용자 이름을 입력 된 **값** 열에는 **요청** 목록으로 이동한 클릭 **Invoke**합니다. 회신 메시지에 표시 된 **응답** 목록입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.ServiceModel.ServiceHost> 개체를 만들어 `HelloWorldService` 형식의 서비스를 호스팅한 다음 <xref:System.ServiceModel.ICommunicationObject.Open%2A>에서 <xref:System.ServiceModel.ServiceHost> 메서드를 호출합니다. 기본 주소는 코드에서 제공되고 메타데이터 게시가 사용하도록 설정되며 기본 끝점이 사용됩니다.  
   
  [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]

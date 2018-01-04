@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d8dadf09434778bc32bb75c5eff5ff4cb0494373
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b061f9395c3917c196030678ede007071e681027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extended-protection-for-authentication-overview"></a>인증에 대한 확장된 보호 개요
 인증에 대한 보호를 강화하면 공격자가 클라이언트의 자격 증명을 가로채서 서버로 전달하는 MITM(Man-In-The-Middle) 공격을 방지할 수 있습니다.  

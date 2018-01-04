@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc42aa130ce5da05739af43d287441d1644d55c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-architecture-overview"></a>메타데이터 아키텍처 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]은 서비스 메타데이터의 내보내기, 게시, 검색 및 가져오기를 위한 풍부한 인프라를 제공합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 Svcutil.exe와 같은 도구가 서비스 액세스를 위해 클라이언트 코드에 자동으로 액세스할 수 있도록 메타데이터를 사용하여 서비스의 끝점과 상호 작용하는 방법을 설명합니다.  
@@ -98,10 +99,10 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Description>  
- [메타 데이터 형식](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- [내보내기 및 메타 데이터 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [메타 데이터 게시](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [메타 데이터 검색](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [메타 데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [메타 데이터의 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [메타 데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+ [메타데이터 형식](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
+ [메타데이터 내보내기 및 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
+ [메타데이터 게시](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
+ [메타데이터 검색](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [메타데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

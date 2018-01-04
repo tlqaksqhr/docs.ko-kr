@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 13b3d19c8e71d7bd6a37362b1ac1b5e23e8ff24a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7989996f7ed64ba4b85ddc1ca01538ec05e99e1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enumeration-types-in-data-contracts"></a>데이터 계약의 열거형 형식
 데이터 계약 모델에 열거형을 표현할 수 있습니다. 이 항목에서는 프로그래밍 모델을 설명하는 여러 예를 살펴봅니다.  
@@ -108,4 +109,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [서비스 계약에서 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

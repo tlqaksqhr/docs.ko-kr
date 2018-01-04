@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1826157ca2214a7f2fa0201d15bc4b7ca1b255c2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f8d8b05bcb897cfb7371b1d5353b6fd0e7949b08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uritemplate-table-sample"></a>UriTemplate 테이블 샘플
 <xref:System.UriTemplateTable> 클래스는 `UriTemplate` 인스턴스 집합으로 작업할 수 있도록 사전과 비슷한 연결 테이블 구조체를 제공합니다. 특정 URI(Uniform Resource Identifier)를 테이블의 모든 템플릿에 대해 효율적으로 일치시킬 수 있으며 일치한 템플릿과 연결된 데이터를 검색할 수 있습니다.  
@@ -46,5 +47,5 @@ ms.lasthandoff: 12/02/2017
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateTable`  
   
 ## <a name="see-also"></a>참고 항목  
- [UriTemplate 테이블 디스패처 샘플](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
+ [UriTemplate 테이블 디스패처](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)

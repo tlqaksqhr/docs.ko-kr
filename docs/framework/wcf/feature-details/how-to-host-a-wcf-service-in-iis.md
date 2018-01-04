@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 934b5d16cdea7026e0e7874cf04ab53c8fbdf58e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b23d3f69d52299fcf3ca8b5ff56d0c4673026b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>방법: IIS에서의 WCF 서비스 호스팅
 이 항목에서는 IIS(인터넷 정보 서비스)에서 호스팅되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 항목에서는 사용자가 IIS에 대해 잘 알고 있으며 IIS 관리 도구를 사용해 IIS 응용 프로그램을 만들고 관리하는 방법을 이해하고 있다고 가정합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]IIS 참조 [인터넷 정보 서비스](http://go.microsoft.com/fwlink/?LinkId=132449)합니다. IIS 환경에서 실행되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 프로세스 재활용, 유휴 상태이면 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화 같은 모든 IIS 기능을 사용합니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 응용 프로그램의 일부로 작성하지 않아도 됩니다. HTTP 전송을 사용하는 경우에만 IIS 호스팅을 사용할 수 있습니다.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/02/2017
   
 11. 서비스가 올바르게 호스팅되는지 확인하려면 Internet Explorer 인스턴스를 열고 서비스 URL인 `http://localhost/IISHostedCalc/Service.svc`로 이동합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 IIS에서 호스팅되는 계산기 서비스에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[C_HowTo_HostInIIS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#1)] 

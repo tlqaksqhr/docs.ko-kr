@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 57983e667f3cca5d8f68a0f2355182b8756e3ceb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2e571e8526581269cedb65b83c9ea0d8a81e280
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-and-tokens"></a>클레임 및 토큰
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 지원되는 기본 토큰으로부터 만드는 다양한 클레임 형식에 대해 설명합니다.  
@@ -78,4 +79,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Claims.Rights>  
  <xref:System.IdentityModel.Claims.ClaimTypes>  
- [클레임 및 권한 부여 Id 모델 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+ [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

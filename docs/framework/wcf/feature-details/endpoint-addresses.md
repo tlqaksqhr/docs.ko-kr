@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-addresses"></a>끝점 주소
 모든 끝점에는 해당 끝점을 찾아서 식별하는 데 사용되는 연결된 주소가 있습니다. 이 주소는 주로 끝점의 위치를 지정하는 URI(Uniform Resource Identifier)로 구성됩니다. 끝점 주소는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로그래밍 모델에 <xref:System.ServiceModel.EndpointAddress> 클래스로 표시됩니다. 이 클래스에는 한 끝점에서 다른 끝점과 메시지를 교환할 때 상대 끝점을 인증할 수 있도록 하는 선택적 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 속성과 서비스에 연결하는 데 필요한 다른 SOAP 헤더를 정의하는 선택적 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 속성 집합이 포함되어 있습니다. 선택적 헤더는 서비스 끝점을 확인하거나 상호 작용하는 데 필요한 추가적인 자세한 주소 지정 정보를 제공합니다. 끝점 주소는 통신 중에 WS-Addressing EPR(끝점 참조)로 표시됩니다.  
@@ -149,4 +150,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [끝점 주소 지정](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+ [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

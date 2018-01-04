@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: afc1e0def03040acaa5cffe3f67339a61cda7d5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e778b48b3ff00c3053992f8e754f674cd7705ece
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-a-certificate-client"></a>인증서 클라이언트를 사용하는 메시지 보안
 다음 시나리오에서는 메시지 보안 모드를 사용하여 보호되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클라이언트 및 서비스를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)합니다.  
@@ -155,6 +156,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Windows Server App Fabric에 대 한 보안 모델](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

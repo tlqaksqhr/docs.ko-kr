@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2d618fee858a9a3b864d4213c940cd28fd5e1be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4ccab2f885a6e177cb81cce153aa92c457b4fb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>WCF(Windows Communication Foundation) 샘플
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 다양한 측면에 대한 지침을 제공합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/02/2017
   
  독립 실행형 버전의 설명서 및 도움말 뷰어를 설치 하려면 다운로드는 [Microsoft Windows SDK v 7.1](http://go.microsoft.com/fwlink/?LinkID=194146)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [기본](../../../../docs/framework/wcf/samples/basic.md)  
  기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기능을 보여 주는 샘플을 제공합니다.  
   

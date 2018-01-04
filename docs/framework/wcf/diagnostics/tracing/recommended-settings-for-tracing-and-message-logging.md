@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1894ee59b6120abfe4cb216baba086fcd1650f77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bca09510a73a74b039ec18934c0be39629c4ce39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>추적 및 메시지 로깅에 권장되는 설정
 이 항목에서는 다른 운영 환경에 권장되는 추적 및 메시지 로깅 설정에 대해 설명합니다.  
@@ -123,4 +124,4 @@ logman stop mytrace -ets
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Windows Management Instrumentation를 사용 하 여 진단에 대 한](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+ [진단에 WMI(Windows Management Instrumentation) 사용](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

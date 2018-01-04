@@ -14,14 +14,15 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23cfa64aa698643f30409119e162b815e58e2379
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-clients"></a>클라이언트 확장
-호출 응용 프로그램에서 서비스 모델 계층은 응용 프로그램 코드의 메서드 호출을 아웃바운드 메시지로 변환하고, 이를 기본 채널에 제공하며, 결과를 다시 응용 프로그램 코드의 반환 값 및 out 매개 변수로 변환한 후 결과를 다시 호출자에게 반환하는 역할을 합니다. 서비스 모델 확장은 클라이언트 또는 디스패처 기능, 사용자 지정 동작, 메시지 및 매개 변수 가로채기 그리고 다른 확장 기능이 포함된 통신 동작 및 기능 또는 실행을 수정하거나 구현합니다.  
+호출 응용 프로그램에서 서비스 모델 계층은 응용 프로그램 코드의 메서드 호출을 아웃바운드 메시지로 변환하고, 이를 기본 채널에 제공하며, 결과를 다시 응용 프로그램 코드의 반환 값 및 out 매개 변수로 변환한 후 결과를 다시 호출자에게 반환하는 역할을 합니다. 서비스 모델 확장은 클라이언트 또는 디스패처 기능, 사용자 지정 동작, 메시지 및 매개 변수 가로채기 그리고 다른 확장명 기능이 포함된 통신 동작 및 기능 또는 실행을 수정하거나 구현합니다.  
   
  이 항목에서는 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 클라이언트 응용 프로그램에서 <xref:System.ServiceModel.Dispatcher.ClientOperation> 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클래스를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트의 기본 실행 동작을 수정하는 방법과 메시지, 매개 변수 또는 반환 값을 채널 계층에서 보내거나 검색하기 이전 또는 이후에 이를 가로채거나 수정하는 방법에 대해 설명합니다. 서비스 런타임을 확장 하는 방법에 대 한 자세한 내용은 참조 [디스패처 확장](../../../../docs/framework/wcf/extending/extending-dispatchers.md)합니다. 동작을 수정 하 고 사용자 지정 개체를 클라이언트 런타임에 삽입 하는 방법에 대 한 자세한 내용은 참조 [구성 하 고 런타임 동작을 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)합니다.  
   
@@ -127,4 +128,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Dispatcher.ClientRuntime>  
  <xref:System.ServiceModel.Dispatcher.ClientOperation>  
  [방법: 클라이언트에서 메시지 검사 또는 수정](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
- [방법: 검사 하거나 매개 변수를 수정 합니다.](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+ [방법: 매개 변수 검사 또는 수정](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

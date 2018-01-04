@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e27ee5f2e1b2ad042fd8c0104e89b99eb5e4bc96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 522d4d39df6df62a6bed2fdc9f6d72df1193faca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adopting-windows-communication-foundation"></a>Windows Communication Foundation 채택
 ASP.NET을 사용하여 개발된 기존 응용 프로그램을 계속 유지 관리하면서 새 개발을 위해 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하도록 선택할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 모든 시나리오에서 .NET Framework로 빌드된 응용 프로그램과 통신을 용이하게 하기 위한 가장 적절한 선택이며 ASP.NET이 해결할 수 없는 광범위한 소프트웨어 통신 문제 해결을 위한 표준 도구로써 역할을 수행할 수 있습니다.  
@@ -35,6 +36,6 @@ ASP.NET을 사용하여 개발된 기존 응용 프로그램을 계속 유지 �
  기존 ASP.NET 웹 서비스를 WCF로 마이그레이션하는 방법에 대 한 전체 분석을 참조 하십시오 [ASP.NET 웹 서비스와 Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkID=71761)합니다. 이 단원에서는 ASP.NET 웹 서비스의 메타데이터에서 호환되는 WCF 서비스를 구현하는 방법 및 ASP.NET 웹 서비스와 클라이언트 코드를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 메타 데이터 검색 및 규격 서비스 구현](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
- [방법: Windows Communication Foundation에 ASP.NET 웹 서비스 코드 마이그레이션](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
+ [방법: 메타데이터 검색 및 규격 서비스 구현](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [방법: ASP.NET 웹 서비스 코드를 Windows Communication Foundation으로 마이그레이션](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
  [방법: ASP.NET 웹 서비스 클라이언트 코드를 Windows Communication Foundation으로 마이그레이션](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

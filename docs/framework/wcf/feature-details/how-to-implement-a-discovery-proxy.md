@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90713d1779566448547265d6487c113abdc84e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>방법: 검색 프록시 구현
 이 항목에서는 검색 프록시를 구현하는 방법을 설명합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]검색 기능을 사용 하 여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], 참조 [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)합니다. 검색 프록시는 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스를 만들어 구현할 수 있습니다. 이 샘플에서는 많은 다른 지원 클래스가 정의되고 사용됩니다. `OnResolveAsyncResult`, `OnFindAsyncResult` 및 `AsyncResult` 이러한 클래스는 <xref:System.IAsyncResult> 인터페이스를 구현합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> 참조 [System.IAsyncResult 인터페이스](xref:System.IAsyncResult)합니다.
@@ -329,7 +330,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
- OnBegin.. / OnEnd.. 메서드는 후속 검색 작업에 대한 논리를 제공합니다. 예를 들어 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 및 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 메서드는 검색 프록시에 대한 찾기 논리를 구현합니다. 검색 프록시가 프로브 메시지를 받으면 클라이언트에 응답을 보내기 위해 이러한 메서드가 실행됩니다. 찾기 논리는 원하는 대로 수정할 수 있습니다. 예를 들어 찾기 작업의 일부로 알고리즘 또는 응용 프로그램별 XML 메타데이터 구문 분석을 통해 사용자 지정 범위 일치를 통합할 수 있습니다.  
+ OnBegin. / OnEnd. 메서드는 후속 검색 작업에 대한 논리를 제공합니다. 예를 들어 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 및 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 메서드는 검색 프록시에 대한 찾기 논리를 구현합니다. 검색 프록시가 프로브 메시지를 받으면 클라이언트에 응답을 보내기 위해 이러한 메서드가 실행됩니다. 찾기 논리는 원하는 대로 수정할 수 있습니다. 예를 들어 찾기 작업의 일부로 알고리즘 또는 응용 프로그램별 XML 메타데이터 구문 분석을 통해 사용자 지정 범위 일치를 통합할 수 있습니다.  
   
 ### <a name="to-implement-the-asyncresult-class"></a>AsyncResult 클래스를 구현하려면  
   
@@ -560,7 +561,7 @@ ms.lasthandoff: 12/02/2017
   
  검색 프록시의 구현을 완료했습니다. 계속 진행 하 [하는 방법: 검색 프록시에 등록 하는 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 항목에서 사용되는 전체 코드 목록입니다.  
   
 ```  
@@ -988,7 +989,7 @@ namespace Microsoft.Samples.Discovery
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [방법: 검색 프록시에 등록 하는 검색 가능한 서비스를 구현 합니다.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- [방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램을 구현 합니다.](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [방법: 검색 프록시에 등록할 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 응용 프로그램 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
  [방법: 검색 프록시 테스트](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

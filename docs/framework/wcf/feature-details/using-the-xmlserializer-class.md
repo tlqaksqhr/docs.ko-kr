@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d47add27fb1170ae1bc14b99342ea0222be3549
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 두 가지 다른 serialization 기술을 사용하여 응용 프로그램의 데이터를 클라이언트와 서비스 간에 전송되는 XML로 바꿀 수 있습니다. 이 프로세스를 serialization이라고 합니다.  
@@ -219,6 +220,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [서비스 계약에서 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [방법: 시작 시간의 WCF 클라이언트 응용 프로그램 XmlSerializer를 사용 하 여 개선](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+ [방법: XmlSerializer를 사용하여 WCF 클라이언트 응용 프로그램의 시작 시간 개선](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

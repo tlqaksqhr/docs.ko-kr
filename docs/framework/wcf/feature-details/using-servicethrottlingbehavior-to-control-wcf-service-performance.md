@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ead2990285f10400cfae11c21bce76a5b6c362f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2b7e00e70bab0c5652bbc721d582a1b276e6a3fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>ServiceThrottlingBehavior를 사용하여 WCF 서비스 성능 제어
 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> 클래스는 응용 프로그램 수준에서 생성되는 인스턴스 또는 세션의 수를 제한하기 위해 사용할 수 있는 속성을 노출합니다. 이 동작을 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램의 성능을 세밀하게 조정할 수 있습니다.  

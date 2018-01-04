@@ -13,22 +13,23 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c47d1408bde53fb006fe6a5392ac1f0c86afe1f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cd73af407b6cac238f8a22b13c7598aa0d27b1c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-considerations"></a>성능 고려 사항
 응용 프로그램을 빌드할 때 성능 고려 사항은 항상 중요합니다. 이 단원에는 성능 및 보안과 관련된 항목이 들어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [클레임 및 권한 부여 Id 모델 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  클레임 컬렉션에서 클레임을 찾는 데 필요한 가장 빠른 메커니즘을 설명합니다.  
   
  [디지털 서명의 암호화](../../../../docs/framework/wcf/feature-details/encryption-of-digital-signatures.md)  
  디지털 서명 암호화에서 성능 저하를 추가하는 방법과 이를 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보안에 대 한 모범 사례](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
+ [보안을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)

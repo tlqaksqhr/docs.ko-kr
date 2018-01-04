@@ -13,11 +13,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f36d944814adaf4a90a04715c60f2fe732cb544a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="partial-trust-feature-compatibility"></a>부분 신뢰 기능 호환성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 는 부분 신뢰 환경에서 실행되는 경우 기능의 제한된 하위 집합을 지원합니다. 부분 신뢰에서 지원되는 기능은 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 항목에서 설명한 대로 특정 시나리오 집합을 바탕으로 설계되었습니다.  
@@ -167,12 +168,12 @@ ms.lasthandoff: 12/02/2017
  부분 신뢰 환경에서 지원되지 않는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기능을 사용할 경우 런타임에 예외가 발생할 수 있습니다.  
   
 ## <a name="unlisted-features"></a>목록에 없는 기능  
- 부분 신뢰 환경에서 실행할 때 사용할 수 없는 정보 또는 작업 부분을 검색하는 가장 좋은 방법은 리소스에 액세스하거나 `try` 블록 내의 작업을 수행한 다음 오류를 `catch` 하는 것입니다. 추적 파일에 중복 오류가 발생하는 것을 방지하기 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서는 첫 번째 보안 실패 후 리소스 또는 작업 추적을 사용하지 않습니다. 처음으로 리소스에 액세스하거나 작업을 수행할 때 실패한 각 리소스 액세스에 대해 한 가지 예외 추적이 있습니다.  
+ 부분 신뢰 환경에서 실행할 때 사용할 수 없는 정보 또는 작업 부분을 검색하는 가장 좋은 방법은 리소스에 액세스하거나 `try` 블록 내의 작업을 수행한 다음 오류를 `catch` 하는 것입니다. 추적 파일에 중복 오류가 발생하는 것을 방지하기 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 첫 번째 보안 실패 후 리소스 또는 작업 추적을 사용하지 않습니다. 처음으로 리소스에 액세스하거나 작업을 수행할 때 실패한 각 리소스 액세스에 대해 한 가지 예외 추적이 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
  <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [지원 되는 배포 시나리오](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [부분 신뢰에 대 한 유용한 정보](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+ [지원되는 배포 시나리오](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
+ [부분 신뢰를 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

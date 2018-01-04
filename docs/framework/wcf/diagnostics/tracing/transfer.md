@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 539a926e5f378f77553b308245acbf33ebb325d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 83bb76cc46d72f3d368de20669391c3e7f24a0f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transfer"></a>전송
 이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 동작 추적 모델의 전송에 대해 설명합니다.  

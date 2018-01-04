@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4a18289fcc5f6dfd68f13a006223d5870d3cd4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-workflow-services"></a>워크플로 서비스 호스팅
 워크플로 서비스가 들어오는 메시지에 응답하기 위해서는 해당 워크플로 서비스를 호스팅해야 합니다. 워크플로 서비스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시징 인프라를 사용하기 때문에 비슷한 방식으로 호스팅됩니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 마찬가지로 워크플로 서비스는 모든 관리되는 응용 프로그램, IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Services)에서 호스팅할 수 있습니다. 또한 워크플로 서비스는 Windows Server AppFabric에서 호스팅할 수 있습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric 참조 [Windows Server App Fabric 설명서](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=196494), 및 [AppFabric 호스팅 개념](http://go.microsoft.com/fwlink/?LinkId=196495)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]호스트 하는 여러 가지 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 참조 [호스팅 서비스](../../../../docs/framework/wcf/hosting-services.md)합니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
  워크플로 서비스를 정의 하는.xamlx 파일을 포함 해야 합니다는 <`Service`>에서 파생 된 형식을 포함 하는 루트 요소 또는 루트 요소 <xref:System.Workflow.ComponentModel.Activity>합니다. .xamlx 파일은 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 작업 템플릿을 사용하거나 WCF 워크플로 서비스 템플릿을 사용할 때 만들어집니다.  
   
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Windows Server AppFabric에서 워크플로 서비스 호스팅  
- Windows Server AppFabric에서 워크플로 서비스를 호스팅하는 것은 IIS/WAS에서 호스팅하는 것과 동일합니다. 유일한 차이점은 Windows Server AppFabric이 설치된다는 것입니다. Windows Server AppFabric은 PowerShell cmdlet뿐만 아니라 인터넷 정보 서비스 관리자에 추가되는 도구도 제공합니다. 이러한 도구를 사용하면 워크플로 서비스와 WCF 서비스의 배포, 관리 및 추적을 간단하게 수행할 수 있습니다. 입니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric 참조 [Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037)  
+ Windows Server AppFabric에서 워크플로 서비스를 호스팅하는 것은 IIS/WAS에서 호스팅하는 것과 동일합니다. 유일한 차이점은 Windows Server AppFabric이 설치된다는 것입니다. Windows Server AppFabric은 PowerShell cmdlet뿐만 아니라 인터넷 정보 서비스 관리자에 추가되는 도구도 제공합니다. 이러한 도구를 사용하면 워크플로 서비스와 WCF 서비스의 배포, 관리 및 추적을 간단하게 수행할 수 있습니다. 이어야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric 참조 [Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037)  
   
 ## <a name="referencing-custom-activities"></a>사용자 지정 작업 참조  
  사용자 지정 활동에 대 한 참조를 추가 해야는 <`Assemblies`> 아래의 <`System.Web.Compilation`> 응용 프로그램 도메인에 로드 된 XAML 역직렬 변환기가 형식을 찾을 수 있도록 합니다. 이러한 설정은 응용 프로그램 수준에서 만들거나 컴퓨터의 모든 응용 프로그램에 설정을 적용해야 하는 경우 루트 Web.config에서 만들 수 있습니다.  

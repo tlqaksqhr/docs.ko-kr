@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1cfce32a7e7099a601c76874c8ca951488335fc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>방법: 사용자 지정 정책 어설션 내보내기
 정책 어설션은 서비스 끝점의 기능 및 요구 사항에 대해 설명합니다. 서비스 응용 프로그램은 서비스 메타데이터에서 사용자 지정 정책 어설션을 사용하여 끝점, 바인딩 또는 계약 사용자 지정 정보에 대해 클라이언트 응용 프로그램과 통신할 수 있습니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 통신 중인 기능이나 요구 사항에 따라 끝점, 작업 또는 메시지 제목의 WSDL 바인딩에 연결된 정책 식으로 어설션을 내보낼 수 있습니다.  
@@ -62,4 +63,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Description.IPolicyImportExtension>  
  <xref:System.ServiceModel.Description.IPolicyExportExtension>  
- [방법: 사용자 지정 정책 어설션의 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+ [방법: 사용자 지정 정책 어설션 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

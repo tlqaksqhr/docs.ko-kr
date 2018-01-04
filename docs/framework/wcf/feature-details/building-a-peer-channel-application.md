@@ -13,23 +13,24 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1d533a1f559044caf3bc711e9401b75703254bc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d3ca06c2e702ef64a05834116e1c89b4872b32b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-a-peer-channel-application"></a>피어 채널 응용 프로그램 빌드
 다음 단원에서는 피어 채널 응용 프로그램 개발에 대한 안내 자료를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [NetTcpBinding 응용 프로그램을 피어 채널 응용 프로그램으로 변환](../../../../docs/framework/wcf/feature-details/converting-a-nettcpbinding-application-to-a-peer-channel-application.md)  
  NetTcpBinding 응용 프로그램을 피어 채널 응용 프로그램으로 변환하는 방법에 대해 설명합니다.  
   
  [메시지 분포 제한](../../../../docs/framework/wcf/feature-details/limiting-message-distribution.md)  
  홉 수, 메시지 전파 필터, 로컬 필터 또는 직접 연결을 사용하여 전체 메시에서 메시지가 전달되는 방법에 대해 설명하고 접근 방식을 선택하기 위한 일반적인 지침을 제공합니다.  
   
- [온라인 및 오프 라인 상태를 추가합니다.](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
+ [온라인 및 오프라인 상태 추가](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
  <xref:System.ServiceModel.IOnlineStatus> 인터페이스를 사용하여 피어 채널 연결의 온라인 및 오프라인 상태에 대한 특정 세부 정보를 모니터링하는 방법에 대해 설명합니다.  
   
  [피어 채널 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  

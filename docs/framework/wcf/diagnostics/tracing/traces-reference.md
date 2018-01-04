@@ -13,16 +13,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f5996dd1bca3afcaf39ad1e5b57cbe3fafd063be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 15b4add8e40d59c86c1cc9c53fd58eed8788935d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="traces-reference"></a>추적 참조
 이 섹션에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에 의해 생성된 모든 추적을 보여 줍니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  `Administration`  
   
  [System.ServiceModel.Administration.WmiPut](../../../../../docs/framework/wcf/diagnostics/tracing/system-servicemodel-administration-wmiput.md)  

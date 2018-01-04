@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ 응용 프로그램과 통합 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 분산 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. COM+에서 호스트되는 구성 요소 기반 응용 프로그램 논리를 이미 사용 중이면 기존 논리를 다시 작성하지 않고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 기존 논리를 확장할 수 있습니다. 일반 시나리오는 웹 서비스를 통해 기존 COM+ 또는 엔터프라이즈 서비스 비즈니스 논리를 노출하려는 경우입니다.  
@@ -112,4 +113,4 @@ ms.lasthandoff: 12/02/2017
  통합 응용 프로그램에서는 COM+ 프로세스 재활용 기능을 사용할 수 없습니다. 프로세스 재활용을 사용하도록 응용 프로그램이 구성되고 구성 요소가 COM+ 호스팅 프로세스로 실행되는 경우 서비스가 시작되지 않습니다. 웹 호스팅 In-Process 모드를 사용하는 서비스는 프로세스 재활용 설정이 적용되지 않으므로 이 요구 사항에 포함되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [COM 응용 프로그램 개요와 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [COM 응용 프로그램과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

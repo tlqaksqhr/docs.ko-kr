@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b136565730c1b3175abff8b057a69acc6609a44d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aafa15129e4a131c5f50eb3296a87fc141e1bda6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>방법: AJAX 사용 WCF 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트 만들기
 이 항목에서는 Visual Studio 2008을 사용하여 AJAX 사용 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트를 만드는 방법을 보여 줍니다. 서비스 및 클라이언트 코드의 경우 절차 단원에서 서비스 및 클라이언트를 만드는 단계에 대해 설명한 다음 예제 단원에서 설명합니다.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 12/02/2017
   
 1.  Ctrl +F5를 사용하여 서비스 및 웹 클라이언트를 시작합니다. 클릭는 **Price for 3 Grilled Sandwiches** 예상된 출력 "3.75"를 생성 하는 단추입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에는 WCFService.svc.cs 파일에 포함된 서비스 코드 및 Default.aspx 파일에 포함된 클라이언트 코드가 있습니다.  
   
 ```  

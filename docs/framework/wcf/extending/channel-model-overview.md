@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-model-overview"></a>채널 모델 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 채널 스택은 메시지를 처리하는 하나 이상의 채널로 계층화된 통신 스택입니다. 스택의 맨 아래에는 채널 스택을 TCP, HTTP, SMTP 및 기타 다른 유형의 전송과 같은 기본 전송에 적용하는 전송 채널이 있습니다. 채널은 메시지를 보내고 받기 위한 하위 수준의 프로그래밍 모델을 제공합니다. 이러한 프로그래밍 모델에서는 몇 가지 인터페이스와 총체적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널 모델이라고 하는 기타 형식을 사용합니다. 이 항목에서는 채널 셰이프, 서비스에서의 기본 채널 수신기 생성 및 클라이언트에서의 채널 팩터리 생성에 대해 설명합니다.  
@@ -86,4 +87,4 @@ ms.lasthandoff: 12/02/2017
 |[상태 변경 이해](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|<xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> 인터페이스 모델 상태가 채널에서 어떻게 바뀌는지에 대해 설명합니다.|  
 |[메시지 교환 패턴 선택](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|채널에서 지원할 수 있는 여섯 가지의 기본 메시지 교환 패턴에 대해 설명합니다.|  
 |[예외 및 오류 처리](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|사용자 지정 채널에서 오류 및 예외를 처리하는 방법에 대해 설명합니다.|  
-|[구성 및 메타 데이터 지원](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|응용 프로그램 모델에서 사용자 지정 채널을 사용할 수 있도록 지원하는 방법과 바인딩 및 바인딩 요소를 사용하여 메타데이터를 가져오거나 내보내는 방법에 대해 설명합니다.|
+|[구성 및 메타데이터 지원](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|응용 프로그램 모델에서 사용자 지정 채널을 사용할 수 있도록 지원하는 방법과 바인딩 및 바인딩 요소를 사용하여 메타데이터를 가져오거나 내보내는 방법에 대해 설명합니다.|

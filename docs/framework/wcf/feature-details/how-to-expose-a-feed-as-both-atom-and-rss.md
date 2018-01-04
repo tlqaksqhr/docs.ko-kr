@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2dad8fe137cfc495d1edc6936d13830861e1654e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6584f71450917669024c965c121edebb7dffc677
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>방법: Atom 및 RSS로 피드 공개
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 배포 피드를 노출하는 서비스를 만들 수 있습니다. 이 항목에서는 Atom 1.0 및 RSS 2.0을 사용하여 배포 피드를 노출하는 배포 서비스를 만드는 방법을 설명합니다. 이 서비스는 배포 형식 중 하나를 반환할 수 있는 하나의 끝점을 노출합니다. 편의를 위해 이 샘플에서 사용되는 서비스는 자체 호스트됩니다. 프로덕션 환경에서 이 형식의 서비스는 IIS 또는 WAS에서 호스트됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]서로 다른 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 참조 호스팅 옵션을 [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)합니다.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[htAtomRss#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/snippets.cs#11)]
      [!code-vb[htAtomRss#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#11)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[htAtomRss#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#12)]  

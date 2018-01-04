@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a64c72a8f69abc220a311c2a204074ea83d0f58
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>방법: Net.TCP Port Sharing Service 사용
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 Net.TCP Port Sharing Service라고 하는 Windows 서비스를 사용하여 여러 프로세스에서 TCP 포트를 공유할 수 있습니다. 이 서비스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 일부로 설치되지만 보안 예방 조치로 서비스가 기본적으로 활성화되지 않기 때문에 처음 사용하기 전에 수동으로 활성화해야 합니다. 이 항목에서는 MMC(Microsoft Management Console) 스냅인을 사용하여 Net TCP Port Sharing Service를 구성하는 방법에 대해 설명합니다.  
@@ -41,8 +42,8 @@ ms.lasthandoff: 12/02/2017
   
 5.  서비스 목록으로 돌아가려면 클릭는 **확인**를 하 고 MMC 콘솔을 종료 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ## <a name="see-also"></a>참고 항목  
  [Net.TCP 포트 공유](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- [Net.TCP Port Sharing Service를 구성 합니다.](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+ [Net.TCP Port Sharing Service 구성](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

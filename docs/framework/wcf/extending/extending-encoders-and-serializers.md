@@ -13,16 +13,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 274efaec0efa2aed12689013db2ad70a2e32c1f9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3dcf0765e025209abdadb850711fb373716b6edb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-encoders-and-serializers"></a>인코더 및 Serializer 확장
 이 단원의 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serialization 시스템을 확장하는 방법에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
  데이터 계약 서로게이트 클래스를 사용하여 serialization, deserialization, 스키마 내보내기 및 스키마 가져오기를 사용자 지정할 수 있는 방법에 대해 설명합니다.  
   

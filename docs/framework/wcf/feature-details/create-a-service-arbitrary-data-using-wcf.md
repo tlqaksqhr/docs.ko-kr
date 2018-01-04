@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7f868f02f309401c60737af8a69434d175eee1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기
 서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 서비스 작업이 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원되지 않는 형식으로 데이터를 반환해야 하는 경우가 그렇습니다. 이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 프로그래밍 모델을 사용하여 임의의 데이터를 받는 서비스를 만드는 방법에 대해 설명합니다.  
@@ -133,7 +134,7 @@ ms.lasthandoff: 12/02/2017
     host.Close();  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
 ```csharp  

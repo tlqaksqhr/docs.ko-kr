@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3154080682d406598b47122c64cc856ff8cb1f15
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be460249ed877b2f67f2d153c2aea4a3cc4d2b37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-secure-sessions"></a>보안 세션에 대한 보안 고려 사항
 보안 세션 구현 시 보안에 영향을 주는 다음 항목에 대해 고려해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]보안 고려 사항 참조 [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) 및 [보안에 대 한 유용한](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)합니다.  
@@ -31,6 +32,6 @@ ms.lasthandoff: 11/21/2017
  즉, 사용자 지정 토큰이 파생되게 하려면 해당 절 형식을 `SecurityTokenReference` 요소 내에 래핑해야 합니다. 파생을 해제하는 옵션도 있지만 키를 파생시키는 것이 기본값입니다. 키를 래핑하지 못하면 파생 키 토큰을 serialize하는 작업이 성공하지만 이를 deserialize하면 예외가 throw됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 사용 안 함 보안 WSFederationHttpBinding에서 세션](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [보안에 대 한 모범 사례](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
+ [보안을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

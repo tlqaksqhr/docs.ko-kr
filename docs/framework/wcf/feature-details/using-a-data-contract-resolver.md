@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46a532b45024321a6885fa3e45d172c054d18c1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28bba68c985191b69fea3b7ab85812917a827b30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-data-contract-resolver"></a>데이터 계약 확인자 사용
 데이터 계약 확인자를 사용하면 알려진 형식을 동적으로 구성할 수 있습니다. 알려진 형식은 데이터 계약에 필요하지 않은 형식을 serialize하거나 deserialize할 때 필요합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 는 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)서비스에서 메타데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다. 알려진 형식은 일반적으로 정적으로 지정됩니다. 즉, 작업을 구현하는 동안 작업이 받을 수 있는 가능한 형식을 모두 알고 있어야 합니다. 이에 해당하지 않고 알려진 형식을 동적으로 지정하는 기능이 중요한 시나리오도 있습니다.  
@@ -98,6 +99,6 @@ SerializerBehavior.DataContractResolver = new MyCustomerResolver();
  서비스에 적용할 수 있는 특성을 구현하여 데이터 계약 확인자를 선언적으로 지정할 수 있습니다.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) 샘플. "Knownassembly" 특성을 구현 하는이 샘플에서 서비스의 동작을 사용자 지정 데이터 계약 확인자를 추가 하 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 계약 알려진된 형식](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [데이터 계약 알려진 형식](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [DataContractSerializer 샘플](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
  [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

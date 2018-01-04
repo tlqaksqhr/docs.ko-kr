@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 240901f4fa04a2468d5964821680506ea117bf7f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b7d305adf1810832016cdafbb60fc025f17e0786
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-net-remoting-applications-to-wcf"></a>.NET Remoting 응용 프로그램을 WCF로 마이그레이션
 **이 항목은 이전 버전의 기존 응용 프로그램과의 호환성을 위해 유지되며 새로운 개발에 권장되지 않는 레거시 기술과 관련된 것입니다. 분산 응용 프로그램은 이제 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]을 사용하여 개발해야 합니다.**  

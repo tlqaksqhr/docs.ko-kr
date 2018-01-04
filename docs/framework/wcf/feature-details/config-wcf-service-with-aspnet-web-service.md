@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ed4bf8e86e727505d48e85bb55a88452217c76b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4bd1dce4128e6f25294525f10226d98f732cd4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>방법: ASP.NET 웹 서비스 클라이언트와 상호 운용하도록 WCF 서비스 구성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 서비스 클라이언트와 상호 운용 가능하도록 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 서비스 끝점을 구성하려면 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 형식을 서비스 끝점의 바인딩 형식으로 사용합니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  서비스에 대해 HTTP/GET 메타데이터 끝점을 사용합니다. 자세한 내용은 참조는 [하는 방법: 구성 파일을 사용 하 여 서비스에 대 한 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제 코드에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 서비스 클라이언트와 호환되는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 끝점을 코드 또는 구성 파일에 추가하는 방법을 보여 줍니다.  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
@@ -58,9 +59,9 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 코드에서 서비스 끝점 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
- [방법: 코드를 사용 하 여 서비스에 대 한 메타 데이터를 게시 합니다.](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [방법: 코드를 사용하여 서비스에 대한 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
  [방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
  [방법: 구성에서 서비스 끝점 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
- [방법: 구성 파일을 사용 하 여 서비스에 대 한 메타 데이터를 게시 합니다.](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [방법: 구성 파일을 사용하여 서비스의 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  [전송 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [메타 데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+ [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)

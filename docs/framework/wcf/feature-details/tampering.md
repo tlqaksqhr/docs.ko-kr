@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ab38de1fb2a932fefd4e37cbfab3d9bfbea616
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6ee041de1a9e009ca68ecc8bba8bc2fa06ba6ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tampering"></a>변조
 *변조* 은 변경, 메시지 또는 메시지를 배달 하 고 메시지 변경된 의도 된 것 이외의 용도로 사용 하는 작업입니다.  
@@ -31,8 +32,8 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [정보 공개 문제점](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [권한 상승 문제점](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
+ [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
  [재생 공격](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

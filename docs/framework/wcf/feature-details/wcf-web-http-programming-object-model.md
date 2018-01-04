@@ -13,11 +13,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5300f22ba1cb44016fee64be4e85120da45a3edf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF 웹 HTTP 프로그래밍 개체 모델
 WCF WEB HTTP 프로그래밍 모델을 사용하는 개발자는 SOAP 없이 기본 HTTP 요청을 통해 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 서비스를 노출할 수 있습니다. WCF WEB HTTP 프로그래밍 모델은 기존 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장성 모델 위에 빌드되며 다음과 같은 클래스를 정의합니다.  

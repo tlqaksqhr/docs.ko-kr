@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b5817ded29836bcc6c998aaf293a7b2fd99170c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aba045456d61b5ad687f1030dca3c26b083cdb58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>세션의 대기 중인 메시지 그룹화
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 단일 수신 응용 프로그램에서 처리하도록 관련 메시지 집합을 그룹화할 수 있는 세션을 제공합니다. 세션의 일부인 메시지는 동일한 트랜잭션의 일부여야 합니다. 모든 메시지가 동일한 트랜잭션의 일부이므로, 하나의 메시지가 처리되지 않으면 전체 세션이 롤백됩니다. 세션은 배달 못 한 편지 큐 및 포이즌 큐와 관련하여 유사하게 동작합니다. 세션에 대해 구성된 대기 중인 바인딩에 대해 설정된 TTL(Time to Live) 속성은 세션에 전체적으로 적용됩니다. TTL이 만료되기 전에 세션에 있는 메시지 중 일부만 전송된 경우 전체 세션이 배달 못 한 편지 큐에 배치됩니다. 마찬가지로 세션에 있는 메시지가 응용 프로그램 큐에서 응용 프로그램으로 전송되지 못하면 전체 세션이 포이즌 큐(사용 가능한 경우)에 배치됩니다.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 닫습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 예제에서는 `IProcessOrder` 서비스와 이 서비스를 사용하는 클라이언트에 대한 코드를 제공합니다. 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 대기 중인 세션을 사용하여 그룹화 동작을 제공하는 방법을 보여 줍니다.  

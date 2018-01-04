@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91b03e29c2841434d4222f59ae62028bf2431a84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-and-importing-metadata"></a>메타데이터 내보내기 및 가져오기
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 메타데이터 내보내기는 서비스 끝점을 설명하여 클라이언트에서 서비스 사용 방법을 이해할 수 있도록 병렬의 표준화된 표현으로 나타내는 프로세스입니다. 서비스 메타데이터 가져오기는 서비스 메타데이터에서 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스 또는 부분을 생성하는 프로세스입니다.  
@@ -52,21 +53,21 @@ ms.lasthandoff: 12/02/2017
 ## <a name="error-handling"></a>오류 처리  
  <xref:System.ServiceModel.Description.MetadataExporter> 및 <xref:System.ServiceModel.Description.MetadataImporter> 형식은 각각 도구를 구현할 때 사용할 수 있는 내보내기 및 가져오기 프로세스 중에 발생한 오류 및 경고 메시지의 컬렉션이 포함될 수 있는 `Errors` 속성을 노출합니다.  
   
- 일반적으로 <xref:System.ServiceModel.Description.WsdlImporter> 형식은 가져오기 프로세스 중에 catch된 예외에 대해 예외를 throw하고, 해당 오류를 해당 `Errors` 속성에 추가합니다. 그러나 <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>, <xref:System.ServiceModel.Description.WsdlImporter.ImportAllBindings%2A>, <xref:System.ServiceModel.Description.WsdlImporter.ImportAllEndpoints%2A> <xref:System.ServiceModel.Description.WsdlImporter.ImportEndpoints%2A> 메서드는 이러한 예외를 throw하지 않으므로 `Errors` 속성을 확인하여 이러한 메서드를 호출할 때 문제가 발생하는지 확인합니다.  
+ 일반적으로 <xref:System.ServiceModel.Description.WsdlImporter> 형식은 가져오기 프로세스 중에 catch된 예외에 대해 예외를 throw하고, 해당 오류를 해당 `Errors` 속성에 추가합니다. 그러나 <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>, <xref:System.ServiceModel.Description.WsdlImporter.ImportAllBindings%2A>, <xref:System.ServiceModel.Description.WsdlImporter.ImportAllEndpoints%2A><xref:System.ServiceModel.Description.WsdlImporter.ImportEndpoints%2A> 메서드는 이러한 예외를 throw하지 않으므로 `Errors` 속성을 확인하여 이러한 메서드를 호출할 때 문제가 발생하는지 확인합니다.  
   
  <xref:System.ServiceModel.Description.WsdlExporter> 형식은 내보내기 프로세스 중에 catch된 예외를 다시 throw합니다. 이러한 예외는 `Errors` 속성에서 오류로 캡처되지 않습니다. <xref:System.ServiceModel.Description.WsdlExporter>가 예외를 throw하면 오류 상태에 있게 되므로 다시 사용할 수 없습니다. 작업에서 와일드카드 동작을 사용해서 작업을 내보낼 수 없는 경우와 중복 바인딩 이름이 발생하는 경우, <xref:System.ServiceModel.Description.WsdlExporter>가 경고를 해당 `Errors` 속성에 추가합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [방법: 서비스 끝점으로 메타 데이터 가져오기](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [방법: 서비스 끝점으로 메타데이터 가져오기](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  다운로드한 메타데이터를 설명 개체로 가져오는 방법에 대해 설명합니다.  
   
- [방법: 서비스 끝점에서 메타 데이터 내보내기](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [방법: 서비스 끝점에서 메타데이터 내보내기](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  설명 개체를 메타데이터로 내보내는 방법에 대해 설명합니다.  
   
  [ServiceDescription 및 WSDL 참조](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  설명 개체와 WSDL 간 매핑에 대해 설명합니다.  
   
- [방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드에서 메타 데이터 내보내기](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)기  
  Svcutil.exe를 사용하여 컴파일된 어셈블리에 있는 서비스, 계약 및 데이터 형식에 대한 메타데이터를 내보내는 방법에 대해 설명합니다.  
   
  [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -78,5 +79,5 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
 ## <a name="see-also"></a>참고 항목  
- [WCF 확장에 대 한 사용자 지정 메타 데이터 내보내기](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
- [WCF 확장에 대 한 사용자 지정 메타 데이터 가져오기](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+ [WCF 확장에 대한 사용자 지정 메타데이터 내보내기](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
+ [WCF 확장에 대한 사용자 지정 메타데이터 가져오기](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

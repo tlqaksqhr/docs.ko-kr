@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12913a9afc0003b041b260379a55e469273c5910
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-way-services"></a>단방향 서비스
 서비스 작업의 기본 동작은 요청-회신 패턴입니다. 요청-회신 패턴의 경우 서비스 작업이 `void` 메서드로 코드에 표현된 경우에도 클라이언트에서 회신 메시지를 기다립니다. 단방향 작업을 사용하는 경우 하나의 메시지만 전송됩니다. 수신자는 회신 메시지를 보내지 않으며 발신자도 메시지를 기다리지 않습니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5894a8b5d4d0873a231927498a8d1e2c4e18afd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-control-endpoint"></a>워크플로 제어 끝점
 개발자는 워크플로 제어 끝점을 사용하여 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하여 호스팅되는 워크플로 인스턴스를 원격으로 제어할 수 있는 제어 작업을 호출할 수 있습니다. 이 기능은 일시 중단, 다시 시작 및 종료 같은 제어 작업을 프로그래밍 방식으로 수행하는 데 사용될 수 있습니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/02/2017
  활성  
  워크플로 인스턴스가 완료됨 상태에 도달하기 전이고 일시 중단됨 상태에 있지 않는 상태입니다. 이 상태 동안에는 워크플로 인스턴스가 실행되어 응용 프로그램 메시지를 처리합니다.  
   
- Suspended  
+ 일시 중단됨  
  이 상태 동안에는 실행이 시작되지 않았거나 부분적으로 실행된 동작이 있는 경우에도 워크플로 인스턴스가 실행되지 않습니다.  
   
  완료  

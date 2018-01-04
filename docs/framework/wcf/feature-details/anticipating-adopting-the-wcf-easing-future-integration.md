@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6e5363da872d3902c12713bd19f5820370428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8dbb50af9d5655a76abb3827cd2f512eab0fd662
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation 채택 예상: 이후의 통합을 용이하게 함
 현재 ASP.NET을 사용하고 있으며 나중에 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용할 계획인 경우에 이 항목에서는 새 ASP.NET 웹 서비스를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램과 함께 사용하는 방법에 대한 지침을 제공합니다.  
@@ -54,4 +55,4 @@ public interface IEcho
  IIS(인터넷 정보 서비스)에서 제공하는 인증 옵션은 사용하지 마십시오. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트에서는 이를 지원하지 않습니다. 서비스 보안이 필요한 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공하는 옵션을 사용하십시오. 이러한 옵션은 더 풍부하며 표준 프로토콜을 기반으로 하기 때문입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Windows Communication Foundation 채택 예상: 이후의 마이그레이션을 용이 하 게 함](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+ [Windows Communication Foundation 채택 예상: 이후의 마이그레이션을 용이하게 함](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

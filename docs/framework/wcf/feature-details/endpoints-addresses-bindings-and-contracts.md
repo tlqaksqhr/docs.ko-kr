@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c0b13ee48ed729d89f4b4b506e3608abe7e82b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>끝점: 주소, 바인딩 및 계약
 와 모든 통신은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 통해 발생 된 *끝점* 서비스의 합니다. 끝점은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 제공하는 기능에 대한 클라이언트 액세스를 제공합니다.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="defining-endpoints"></a>끝점 정의  
  구성을 통해 코드를 명령적으로 또는 선언적으로 사용하여 서비스의 끝점을 지정할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: 구성에서 서비스 끝점을 만드는](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) 및 [하는 방법: 코드에서 서비스 끝점을 만드는](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  이 단원에서는 바인딩, 끝점 및 주소의 용도에 대해 설명하고 바인딩 및 끝점을 구성하는 방법과 `ClientVia` 동작 및 `ListenUri` 속성을 사용하는 방법을 보여 줍니다.  
   
  [주소](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
@@ -94,7 +95,7 @@ ms.lasthandoff: 12/02/2017
  [방법: 코드에서 서비스 끝점 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  코드에서 서비스 끝점을 만드는 방법에 대해 설명합니다.  
   
- [방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드 유효성 검사](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드 유효성 검사](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  사용 하 여 서비스를 호스팅하지 않고 서비스 구현 및 구성에 오류를 검색 하는 방법에 설명 된 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

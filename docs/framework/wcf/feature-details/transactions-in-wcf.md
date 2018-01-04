@@ -16,23 +16,24 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6243657e0a1fe9222a03ef113261339a18298
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84b2a869b8a10a45c195cb64e95b82492e2d18c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-in-wcf"></a>WCF에서 트랜잭션
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 트랜잭션 기능을 사용하면 여러 구성 요소가 동시에 데이터 작업에 참여할 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Communication Foundation 트랜잭션 개요](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공하는 트랜잭션 기능의 개요입니다.  
   
  [트랜잭션 모델](../../../../docs/framework/wcf/feature-details/transaction-models.md)  
  Microsoft에서 제공하는 다양한 트랜잭션 프로그래밍 모델을 비교합니다.  
   
- [Ws-atomictransaction 사용](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
+ [WS-AtomicTransaction 사용](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 구현되는 상호 운용 가능한 트랜잭션 전파 프로토콜인 WS-AT(WS-AtomicTransaction)에 대해 설명합니다.  
   
  [System.ServiceModel의 트랜잭션 지원](../../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  

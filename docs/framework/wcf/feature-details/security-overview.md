@@ -16,11 +16,12 @@ caps.latest.revision: "37"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74a2e5c15b25dc9958b74ddeb0abf9adcad10bc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-overview"></a>보안 개요
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 SOAP 메시지 기반의 분산 프로그래밍 플랫폼이므로 데이터 보호를 위해서는 클라이언트와 서비스 간의 메시지 보안을 설정해야 합니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 기존 보안 인프라와 SOAP 메시지의 승인 보안 표준에 기반하여 보안 메시지를 교환할 수 있는 융통성과 상호 운용성을 모두 갖춘 플랫폼을 제공합니다.  
@@ -112,12 +113,12 @@ ms.lasthandoff: 11/21/2017
  [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)  
  [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [서비스 및 클라이언트 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [인증](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [페더레이션 및 발급된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [보안 지침 및 모범 사례](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [보안 지침 및 최선의 방법](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  [구성 파일을 사용하여 서비스 구성](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [끝점 만들기 개요](../../../../docs/framework/wcf/endpoint-creation-overview.md)  

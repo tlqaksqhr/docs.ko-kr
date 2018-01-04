@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f66821f38e8915ee93cf5b1b77dd75e32662121
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 88495e42a57790b75c096235cda65cbedbf86a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>에서는 메타데이터 끝점을 서비스에 추가할 수 있도록 지원합니다. 이러한 메타 데이터 끝점에서 URL HTTP GET 요청에 응답할 수는 `?wsdl` querystring 및 Ws-metadataexchange (MEX) 사양에 정의 된 대로 Ws-transfer GET 요청을 합니다. MEX 끝점은 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 계약을 구현합니다.  
@@ -39,6 +40,6 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)  
- [Ws-metadataexchange 바인딩](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
- [방법: 구성 사용자 지정 Ws-metadata 교환 바인딩을](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
- [방법: 검색이 아닌 MEX 바인딩을 통해 메타 데이터](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+ [WS-MetadataExchange 바인딩](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
+ [방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
+ [방법: MEX가 아닌 바인딩을 통해 메타데이터 검색](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

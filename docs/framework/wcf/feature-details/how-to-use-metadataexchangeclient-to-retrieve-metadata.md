@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cccbf343acc74b3e0da0f55e497f19ca15e27892
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 119e23c5834fdc646a793a4e84f191a37bca2f63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>방법: MetadataExchangeClient를 사용하여 메타데이터 검색
 WS-MetadataExchange(MEX) 프로토콜을 사용하여 메타데이터를 다운로드하려면 <xref:System.ServiceModel.Description.MetadataExchangeClient> 클래스를 사용합니다. 검색된 메타데이터 파일은 <xref:System.ServiceModel.Description.MetadataSet> 개체로 반환됩니다. 반환된 <xref:System.ServiceModel.Description.MetadataSet> 개체에는 <xref:System.ServiceModel.Description.MetadataSection> 개체의 컬렉션이 들어 있으며, 각 개체에는 특정 메타데이터 언어와 식별자가 포함되어 있습니다. 반환된 메타데이터는 파일로 작성할 수 있으며, 반환된 메타데이터에 WSDL(웹 서비스 기술 언어) 문서가 있는 경우에는 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하여 메타데이터를 가져올 수 있습니다.  
@@ -37,7 +38,7 @@ WS-MetadataExchange(MEX) 프로토콜을 사용하여 메타데이터를 다운�
   
 3.  <xref:System.ServiceModel.Description.MetadataSet> 메서드 중 하나를 호출하여, 검색된 메타데이터가 들어 있는 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 개체를 구합니다. <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 생성 시 주소를 명시적으로 지정한 경우에는 인수를 사용하지 않는 <xref:System.ServiceModel.Description.MetadataExchangeClient> 오버로드만 사용할 수 있음에 유의하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 <xref:System.ServiceModel.Description.MetadataExchangeClient>를 사용하여 메타데이터 파일을 다운로드하고 열거하는 방법을 보여 줍니다.  
 
  [!code-csharp[MetadataResolver#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#3)]  

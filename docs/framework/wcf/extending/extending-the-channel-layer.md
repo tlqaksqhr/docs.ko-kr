@@ -14,16 +14,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f9d14183092b70f0bbe1ce8894f10369aa46c31
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5a1a1bb0b1f2c5e6b42ee793f18f5ad442b1fe8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-channel-layer"></a>채널 계층 확장
 채널 계층은 클라이언트 및 서비스 간의 메시지 교환을 담당합니다. 채널 확장은 보안과 같은 새 프로토콜 기능 또는 SOAP 메시지를 전달하기 위한 새 네트워크 전송 구현과 같은 전송 기능을 구현할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md)  
  채널의 정의, 제공하는 기능 및 서비스와 클라이언트 응용 프로그램 모두에서 작동하는 방법에 대해 높은 수준의 개요를 제공합니다.  
   

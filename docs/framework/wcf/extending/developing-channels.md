@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 231948af1a0bfe7840ffbde2ab162ceea33698ca
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 42c89ae71078a3ddfbe7e85273a6f62879781c80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-channels"></a>채널 개발
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램 계층과 함께 사용할 수 있는 프로토콜 또는 전송 채널을 개발하려면 몇 가지 단계를 거쳐야 합니다. 이 항목에서는 이러한 단계에 대해 설명하고 자세한 내용을 참조할 수 있는 구체적인 항목을 알려 줍니다. 이 항목에서 설명 하는 다양 한 형식과 채널 모델을 이해 하려면 참조 [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md)합니다. 전체 전송 채널 샘플을 보려면 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)합니다.  

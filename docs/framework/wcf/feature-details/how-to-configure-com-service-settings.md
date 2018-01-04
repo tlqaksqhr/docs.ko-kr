@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa497567c5cf380d7764499991ad9e7e95a5cbe0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-com-service-settings"></a>방법: COM+ 서비스 설정 구성
 COM+ 서비스 구성 도구를 사용하여 응용 프로그램 인터페이스를 추가하거나 제거하면 응용 프로그램의 구성 파일에서 웹 서비스 구성이 업데이트됩니다. COM + 호스팅 모드 Application.config 파일은 응용 프로그램 루트 디렉터리에 배치 (%PROGRAMFILES%\ComPlus 응용 프로그램\\값이 기본값 {appid}). 웹 호스팅 모드에서는 지정된 vroot 디렉터리에 Web.config 파일이 있습니다.  
@@ -26,7 +27,7 @@ COM+ 서비스 구성 도구를 사용하여 응용 프로그램 인터페이스
 > [!NOTE]
 >  메시지 서명을 사용하여 클라이언트와 서버 사이에서 메시지가 변조되지 않도록 보호해야 합니다. 또한 메시지 또는 전송 계층 암호화를 사용하여 클라이언트와 서버 간의 메시지에서 정보가 공개되지 않도록 보호해야 합니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에서와 마찬가지로 스로틀을 사용하여 동시 호출 수, 연결 수, 인스턴스 수 및 보류 중인 작업의 수를 제한해야 합니다. 이렇게 하면 리소스를 과도하게 사용하지 않도록 방지할 수 있습니다. 스로틀 동작은 서비스 구성 파일 설정을 통해 지정됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 인터페이스를 구현하는 구성 요소를 고려해 볼 수 있습니다.  
   
 ```  
@@ -106,4 +107,4 @@ public interface IFinancesContract : IDisposable
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [COM + 응용 프로그램과 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+ [COM+ 응용 프로그램과 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

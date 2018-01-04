@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11d5b00113f9b44d1d77d00dd541bc602afcb405
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 검색 가능하게 만드는 방법에 대해 설명하며, 에 기반 하는 고 [자체 호스트](http://go.microsoft.com/fwlink/?LinkId=145523) 샘플.  
@@ -229,7 +230,7 @@ ms.lasthandoff: 12/02/2017
     Press <ENTER> to exit.  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 이 샘플의 코드 목록입니다. 이 코드에 기반 하므로 [자체 호스트](http://go.microsoft.com/fwlink/?LinkId=145523) 샘플에 변경 된 파일이 나열 됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]자체 호스팅 샘플 참조 [설치 지침은](http://go.microsoft.com/fwlink/?LinkId=145522)합니다.  
   
 ```csharp  
@@ -351,5 +352,5 @@ namespace DiscoveryClientApp
 ```  
 
 ## <a name="see-also"></a>참고 항목  
- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [WCF Discovery 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+ [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [WCF 검색 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

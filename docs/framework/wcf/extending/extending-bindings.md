@@ -14,16 +14,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 692e51fc6276fbee0c1764c0040a251fe32b2c9f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d0be5e799137d24c2d6e53f4b6846007f3a2a79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-bindings"></a>바인딩 확장명
 바인딩은 끝점에 연결하는 데 필요한 전송, 인코딩 및 프로토콜을 지정합니다. 바인딩 확장명 및 사용자 지정 바인딩은 응용 프로그램 기능을 지원하는 데 필요한 사용자 지정 통신 기능을 구현합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
@@ -36,4 +37,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="related-sections"></a>관련 단원  
  [BindingElement 만들기](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)  
   
- [구성 및 메타 데이터 지원](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
+ [구성 및 메타데이터 지원](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)

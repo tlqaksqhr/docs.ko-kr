@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc4d6e3bb20cbe005ad7ce21ed37fe57c5d3466b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
 전송 보안을 사용하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 클래스에 자체 호스트된 <xref:System.ServiceModel.WSHttpBinding> 서비스를 만드는 경우에는 X.509 인증서로 포트도 구성해야 합니다. 자체 호스트된 서비스를 만들지 않는 경우에는 IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
@@ -133,7 +134,7 @@ ms.lasthandoff: 12/02/2017
     Netsh http delete sslcert ipport=0.0.0.0:8005  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 전송 보안에 설정된 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용하여 자체 호스트된 서비스를 만드는 방법을 보여 줍니다. 응용 프로그램을 만들 때에는 주소에 포트 번호를 지정합니다.  
   
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]

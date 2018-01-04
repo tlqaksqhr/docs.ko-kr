@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>라우팅 시나리오
 라우팅 서비스는 폭넓은 사용자 지정이 가능하지만 새 구성을 처음부터 만드는 경우 효율적인 라우팅 논리를 디자인하기란 어려운 일입니다.  다만 대부분의 라우팅 서비스 구성에 해당되는 몇 가지 일반적인 시나리오는 있습니다. 이러한 시나리오가 사용자의 특정 구성에 바로 적용되지는 않겠지만 이러한 시나리오를 처리하도록 라우팅 서비스를 구성하는 방법을 이해하면 라우팅 서비스를 더 잘 이해할 수 있습니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/18/2017
 ### <a name="protocol-bridging"></a>프로토콜 브리징  
  서로 다른 SOAP 프로토콜 사이에서 메시지를 라우트하는 경우 라우팅 서비스는 WCF API를 사용하여 메시지의 프로토콜을 다른 프로토콜로 변환합니다. 이 동작은 라우팅 서비스에 의해 노출되는 서비스 끝점이 메시지가 라우트되는 클라이언트 끝점과 다른 프로토콜을 사용하는 경우 자동으로 발생합니다. 사용되는 프로토콜이 표준이 아닌 경우 이 동작을 비활성화할 수 있지만 그러면 사용자가 직접 브리징 코드를 제공해야 합니다.  
   
- 입니다. 라우팅 서비스를 사용 하 여 프로토콜 사이 메시지를 변환 하는 예제를 보려면는 [브리징 및 오류 처리](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) 샘플.  
+ 이어야 합니다. 라우팅 서비스를 사용 하 여 프로토콜 사이 메시지를 변환 하는 예제를 보려면는 [브리징 및 오류 처리](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) 샘플.  
   
 ### <a name="error-handling"></a>오류 처리  
  분산 환경에서는 일시적인 네트워크 또는 통신 오류가 종종 발생합니다. 라우팅 서비스와 같은 매개 서비스가 없는 경우 이러한 오류를 처리하는 데 따르는 부담은 클라이언트 응용 프로그램의 몫입니다. 클라이언트 응용 프로그램에 네트워크 또는 통신 오류가 발생할 경우 재시도를 수행하기 위한 특정 논리 및 대체 위치에 대한 정보가 포함되지 않은 경우 사용자는 메시지가 대상 서비스에 의해 성공적으로 처리될 때까지 여러 차례 메시지를 전송해야 하는 시나리오에 직면할 수 있습니다. 이 경우 응용 프로그램이 불안정한 것으로 인식되어 고객 불만족으로 이어질 수 있습니다.  
@@ -76,10 +77,10 @@ ms.lasthandoff: 10/18/2017
   
  오류 처리를 구성 하는 데 사용 하는 단계에 대 한 참조 [How To: Error Handling](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)합니다. 오류 처리 구현 예 참조는 [브리징 및 오류 처리](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) 및 [고급 오류 처리](../../../../docs/framework/wcf/samples/advanced-error-handling.md) 샘플입니다.  
   
-### <a name="in-this-section"></a>단원 내용  
+### <a name="in-this-section"></a>섹션 내용  
  [방법: 서비스 버전 관리](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [방법: 서비스 데이터 분](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [방법: 서비스 데이터 분할](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
  [방법: 동적 업데이트](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4cafff46d31ed9a5737dbb74acecab96b1f1a1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-services"></a>서비스 호스팅
 활성화할 서비스는 서비스를 만들고 컨텍스트와 수명을 제어하는 런타임 환경에 호스팅해야 합니다. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스는 관리 코드를 지원하는 모든 Windows 프로세스에서 실행할 수 있게 디자인되었습니다.  
@@ -76,5 +77,5 @@ ms.lasthandoff: 12/02/2017
  [서비스 계약 구현](../../../docs/framework/wcf/implementing-service-contracts.md)  
  [방법: IIS에서 WCF 서비스 호스트](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  [방법: WAS에서 WCF 서비스 호스트](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [방법: 관리 되는 Windows 서비스에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [방법: 관리되는 Windows 서비스에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
  [방법: 관리되는 응용 프로그램에서 WCF 서비스 호스트](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

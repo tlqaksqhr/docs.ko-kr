@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08ebb19cb7fab8221ac1eb534777afffa0bad328
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 트랜잭션 특성
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 <xref:System.ServiceModel> 서비스에 대한 트랜잭션의 동작을 구성할 수 있는 세 가지 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 특성의 속성을 제공합니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>은 기본 서비스 인스턴스가 트랜잭션 완료 시 해제되는지 여부를 지정합니다. 이 속성의 기본값은 `true`입니다. 다음 인바운드 메시지는 이전 인스턴스의 트랜잭션별 상태를 무시하면서 새 기본 인스턴스를 만듭니다. 서비스 인스턴스를 릴리스하는 것은 서비스가 수행하는 내부 작업이며, 클라이언트가 설정한 기존 연결 또는 세션에는 영향을 주지 않습니다. 이 기능은 COM+가 제공하는 Just-In-Time 활성화 기능에 해당합니다. 속성이 `true`이면 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>는 <xref:System.ServiceModel.ConcurrencyMode.Single>과 같아야 합니다. 그렇지 않으면 서비스는 시작하는 동안 유효하지 않은 구성의 유효성 검사 예외를 throw합니다.  
   
--   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>은 서비스 내의 트랜잭션에 사용하도록 격리 수준을 지정합니다. 이 속성은 <xref:System.Transactions.IsolationLevel> 값 중 하나를 사용합니다. 로컬 격리 수준 속성이 <xref:System.Transactions.IsolationLevel.Unspecified>가 아닌 경우 들어오는 트랜잭션의 격리 수준은 이 로컬 속성의 설정과 일치해야 합니다. 그렇지 않으면 들어오는 트랜잭션은 거부되며 오류가 클라이언트로 보내집니다. <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>가 `true`이고 이동한 트랜잭션이 없을 경우, 이 속성은 로컬로 만들어진 트랜잭션에 사용할 <xref:System.Transactions.IsolationLevel> 값을 결정합니다. <xref:System.Transactions.IsolationLevel>이 <xref:System.Transactions.IsolationLevel.Unspecified>이면 <xref:System.Transactions.IsolationLevel><xref:System.Transactions.IsolationLevel.Serializable>이 사용됩니다.  
+-   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>은 서비스 내의 트랜잭션에 사용하도록 격리 수준을 지정합니다. 이 속성은 <xref:System.Transactions.IsolationLevel> 값 중 하나를 사용합니다. 로컬 격리 수준 속성이 <xref:System.Transactions.IsolationLevel.Unspecified>가 아닌 경우 들어오는 트랜잭션의 격리 수준은 이 로컬 속성의 설정과 일치해야 합니다. 그렇지 않으면 들어오는 트랜잭션은 거부되며 오류가 클라이언트로 보내집니다. <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>가 `true`이고 이동한 트랜잭션이 없을 경우, 이 속성은 로컬로 만들어진 트랜잭션에 사용할 <xref:System.Transactions.IsolationLevel> 값을 결정합니다. 경우 <xref:System.Transactions.IsolationLevel> 로 설정 된 <xref:System.Transactions.IsolationLevel.Unspecified>, <xref:System.Transactions.IsolationLevel> <xref:System.Transactions.IsolationLevel.Serializable> 사용 됩니다.  
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>은 서비스에서 만들어진 새 트랜잭션이 완료되어야 하는 시간을 지정합니다. 이 시간에 도달했는데도 트랜잭션이 완료되지 않으면 트랜잭션이 중단됩니다. <xref:System.TimeSpan>은 <xref:System.Transactions.TransactionScope>가 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>로 설정되고 새 트랜잭션이 만들어진 작업에 대한 `true` 시간 제한으로 사용됩니다. 시간 제한은 트랜잭션을 만든 시점으로부터 2단계 커밋 프로토콜의 1단계를 완료할 때까지의 최대 허용 기간입니다. <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 속성과 `transactionTimeout` 구성 설정 사이에서 항상 더 낮은 값이 시간 제한 값으로 사용됩니다.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 180367920eb6f900fbb6b234b94f3b3a2c7fe52f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e011eb2f22abdc06a35fb7f656e180a4537245d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
 클라이언트 응용 프로그램은 서비스와 통신할 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 또는 채널 개체를 만들고 구성 및 사용해야 합니다. [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체 만들기 및 사용에 관련 된 단계에 대 한 개요를 제공 합니다.  
@@ -105,9 +106,9 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [이중 서비스](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [방법: 단방향으로 서비스에 액세스 하 고 요청-회신 계약](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [방법: 이중 계약을 사용 하 여 서비스에 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [방법: WSE 3.0 액세스 서비스](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [방법: 단방향 및 요청-회신 계약을 사용하여 서비스 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [방법: 이중 계약을 사용하여 서비스 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [방법: WSE 3.0 서비스 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
  [방법: ChannelFactory 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
  [방법: 비동기적으로 서비스 작업 호출](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
  [중간 계층 클라이언트 응용 프로그램](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

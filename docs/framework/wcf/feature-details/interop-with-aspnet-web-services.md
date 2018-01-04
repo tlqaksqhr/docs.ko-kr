@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd30b2d62d3ecf21027c0225490da6f31113cb07
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef174f457114003e5b2783b50040424d9a96945c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET 웹 서비스와의 상호 운용성
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스와 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 서비스 간의 상호 운용성은 두 기술을 사용하여 구현된 서비스가 WS-I Basic Profile 1.1 사양을 준수하도록 함으로써 실현할 수 있습니다. WS-I Basic Profile 1.1을 준수하는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 시스템 제공 바인딩인 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]을 사용하여 <xref:System.ServiceModel.BasicHttpBinding> 클라이언트와 상호 운용 가능합니다.  
@@ -66,4 +67,4 @@ public class Service : IEcho
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: ASP.NET 웹 서비스 클라이언트와 상호 운용 하도록 WCF 서비스 구성](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+ [방법: ASP.NET 웹 서비스 클라이언트와 상호 운용하도록 WCF 서비스 구성](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

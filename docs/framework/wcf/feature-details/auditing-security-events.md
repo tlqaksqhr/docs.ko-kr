@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 933f62e1921fe12255965567bbec0faf651e0ba2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="auditing-security-events"></a>보안 이벤트 감사
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 만든 응용 프로그램은 감사 기능을 사용하여 보안 이벤트(성공, 실패 또는 둘 다)를 기록할 수 있습니다. 이벤트는 Windows의 시스템 이벤트 로그에 기록되며 이벤트 뷰어를 사용하여 검사할 수 있습니다.  

@@ -14,25 +14,26 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98efc62a133b86ab71e34671bc6385a5a94897ea
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cd5c84250349f4adaaac68a302d771280328a4e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX 통합 및 JSON 지원
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 AJAX 클라이언트에 작업을 노출할 수 있도록 ASP.NET AJAX(Asynchronous JavaScript and XML) 및 JSON(JavaScript Object Notation) 데이터 형식을 지원합니다. AJAX 클라이언트는 JavaScript 코드를 실행하고, HTTP 요청을 사용하여 이러한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에 액세스하는 웹 페이지입니다. 이 단원의 항목에서는 이러한 지원에 대한 정보와 이러한 지원을 구현하는 방법에 대한 정보를 제공합니다.  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET AJAX와의 통합을 ASP.NET 2.0과 함께 참조 [ASP.NET AJAX 개요](http://go.microsoft.com/fwlink/?LinkId=96725)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [ASP.NET AJAX 용 WCF 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [ASP.NET AJAX용 WCF 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
  AJAX 끝점을 자동으로 구성하는 서비스 호스트를 생성하도록 사용자 지정된 서비스 호스트 팩터리를 사용하거나 구성을 통해 적합한 AJAX 끝점을 추가하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 AJAX 클라이언트에 노출시킬 수 있는 방법에 대해 설명합니다.  
   
- [ASP.NET 하지 않고 WCF AJAX 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
+ [ASP.NET을 사용하지 않고 WCF AJAX 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
  ASP.NET을 사용하지 않고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 만드는 방법에 대해 설명합니다.  
   
- [전송 형식 JSON 및 기타 데이터에 대 한 지원](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
+ [JSON 및 기타 데이터 전송 형식에 대한 지원](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
  ASP.NET AJAX 서비스와의 메시징에 XML 대신 일반적으로 사용되는 JSON 형식의 지원에 대해 설명합니다.  
   
  [방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15c018dfe3afdee05cc3d6ae1e605090d970536f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a79503b8f0d56402b2e32b4f54e7f7b143a1f92
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-nodes"></a>피어 노드
 PeerNode는 피어 채널 메시에 있는 단일 끝점입니다. 응용 프로그램에는 서로 다른 메시에 참가하는 여러 개의 피어 노드가 있을 수 있습니다. 예를 들어 피어 투 피어 채팅 응용 프로그램은 별개의 두 메시 즉, 학교 친구와 채팅을 위한 메시와 직장 동료와 채팅을 위한 메시의 일부일 수 있습니다.  

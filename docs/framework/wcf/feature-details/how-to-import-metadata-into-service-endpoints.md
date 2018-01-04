@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: afc08d08a8843460972daf259027475cbbc10b66
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2fa1831885eb24effc5f4267c208b8bffa9f0b75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>방법: 서비스 끝점으로 메타데이터 가져오기
 이 항목에 정의 된 서비스를 사용 하 여 서비스 끝점의 컬렉션으로 메타 데이터를 가져오는 방법에 설명 된 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 이 항목에서는 서비스에서 메타데이터를 가져온 다음 서비스에 `Add` 메서드를 호출하는 클라이언트 응용 프로그램을 만든 방법을 보여 줍니다.  
@@ -48,5 +49,5 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>참고 항목  
- [메타 데이터](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)  
  [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)

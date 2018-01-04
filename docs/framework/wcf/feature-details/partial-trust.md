@@ -13,21 +13,22 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 893b8bb58c9d78d6880f95f2490c55c7d9e27483
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac76f092d5583519220d2d1b7a8d6d1bbb665632
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="partial-trust"></a>부분 신뢰
 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]부터는 부분적으로 신뢰하는 호출자가 <xref:System.ServiceModel>, <xref:System.Runtime.Serialization> 및 <xref:System.ServiceModel.Web>에서 구현된 public 형식 및 메서드에 액세스할 수 있습니다. 이 단원에서는 낮은 CAS(코드 액세스 보안) 권한으로 실행되는 응용 프로그램에 사용할 수 있는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 기능의 제한된 하위 집합 및 부분 신뢰 응용 프로그램 내에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 사용을 지원하는 시나리오에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [지원 되는 배포 시나리오](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [지원되는 배포 시나리오](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 실행할 주요 부분 신뢰 시나리오에 대해 설명합니다.  
   
  [부분 신뢰 기능 호환성](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md)  
  부분 신뢰에 사용할 수 없는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 기능에 대해 설명합니다.  
   
- [부분 신뢰에 대 한 유용한 정보](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)  
+ [부분 신뢰를 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)  
  부분 신뢰 응용 프로그램에서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하기 위한 최선의 방법이 포함되어 있습니다.

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b93460fd6d331b43b49f10cf78fc8863ca1d8d88
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: baf43f2bfa2175062c57f73e45835c251ac5769e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-aspnet-web-service-client-code-to-the-windows-communication-foundation"></a>방법: ASP.NET 웹 서비스 클라이언트 코드를 Windows Communication Foundation으로 마이그레이션
 다음 절차에서는 ASP.NET 웹 서비스 클라이언트 코드를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]로 마이그레이션하기 위해 수행해야 하는 전체 단계에 대해 설명합니다.  
@@ -39,4 +40,4 @@ ms.lasthandoff: 12/02/2017
 6.  테스트 집합을 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: Windows Communication Foundation에 ASP.NET 웹 서비스 코드 마이그레이션](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)
+ [방법: ASP.NET 웹 서비스 코드를 Windows Communication Foundation으로 마이그레이션](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)

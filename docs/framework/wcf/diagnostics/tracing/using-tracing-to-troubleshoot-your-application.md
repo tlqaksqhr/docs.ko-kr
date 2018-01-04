@@ -13,23 +13,24 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddb199ff1d83bef64735dd1425ec955dda83140d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fb46ad5fe95405c78baf3173a982969e0e7092fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>추적을 사용하여 응용 프로그램 문제 해결
 이 단원에는 추적을 사용하여 응용 프로그램 문제를 해결할 수 있는 방법에 대해 설명하는 항목이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [추적 및 메시지 로깅에 대 한 권장된 설정](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [추적 및 메시지 로깅에 권장되는 설정](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
  프로덕션 환경 및 디버깅 환경의 제안된 설정에 대해 설명합니다.  
   
  [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  Service Trace Viewer 도구를 사용하여 추적 데이터를 보고, 상호 연결하고 분석하는 방법에 대해 설명합니다.  
   
- [중요 한 추적](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
+ [중요한 추적](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서 내보낸 주요 추적을 나열합니다.  
   
  [클라이언트에서의 디버깅](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  

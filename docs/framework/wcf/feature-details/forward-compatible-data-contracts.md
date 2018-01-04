@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef25e349ca6245ff3247f3a136d9a950d03d81d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ffd4a09de508a2353af356863f9e4f41fc253e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="forward-compatible-data-contracts"></a>이후 버전과 호환되는 데이터 계약
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 데이터 계약 시스템의 특징은 시간에 따라 변경되지 않는 방법으로 계약을 개발할 수 있다는 점입니다. 즉, 이전 버전의 데이터 계약을 가진 클라이언트가 새 버전의 동일한 데이터 계약을 가진 서비스와 통신할 수 있거나, 새 버전의 데이터 계약을 가진 클라이언트가 이전 버전의 동일한 데이터 계약과 통신할 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][모범 사례: 데이터 계약 버전 관리](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)합니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/02/2017
   
  특정 형식의 라운드트립을 사용하려면 형식이 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현해야 합니다. 인터페이스에는 속성 중 하나인 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>가 포함되어 있습니다(<xref:System.Runtime.Serialization.ExtensionDataObject> 형식 반환). 속성은 현재 버전에서는 알 수 없는 이후 버전 데이터 계약의 모든 데이터를 저장합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 데이터 계약은 이후 변경 사항에 대해 이후 버전과 호환되지 않습니다.  
   
  [!code-csharp[C_DataContract#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#7)]

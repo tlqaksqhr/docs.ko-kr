@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5229c872c4843df916cf538b7f2e88e451dc6b9d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87e3df31060a9c71e0b2868aa34373bca221fa79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>COM+ 및 ServiceModel의 트랜잭션 비교
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 네임스페이스가 제공하는 <xref:System.ServiceModel> 특성을 사용하여 트랜잭션 COM+ 서비스의 동작을 시뮬레이션하는 방법에 대해 설명합니다.  

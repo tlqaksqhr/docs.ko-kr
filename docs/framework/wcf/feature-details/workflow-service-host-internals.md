@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf12cac374759c1cb45a7086ac771a982758e78f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6761c044f166105a2e463d0f89ed0b3813d4b97a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-service-host-internals"></a>워크플로 서비스 호스트 내부 기능
 <xref:System.ServiceModel.WorkflowServiceHost>에서는 워크플로 서비스에 대한 호스트를 제공합니다. 들어오는 메시지를 수신 대기하여 적절한 워크플로 서비스 인스턴스로 라우팅하고 유휴 워크플로의 언로드 및 유지를 제어하는 등의 작업을 담당합니다. 이 항목에서는 WorkflowServiceHost가 들어오는 메시지를 처리하는 방법을 설명합니다.  
@@ -64,6 +65,6 @@ ms.lasthandoff: 12/02/2017
  [워크플로 서비스 호스팅](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
  [워크플로 제어 끝점](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
  [워크플로 관리 끝점 샘플](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- [방법: 워크플로 구성 WorkflowServiceHost로 예외 동작을 처리 하지 않음](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+ [방법: WorkflowServiceHost를 사용하여 워크플로의 처리되지 않은 예외 동작 구성](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
  [장기 실행 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
  [워크플로 유지](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

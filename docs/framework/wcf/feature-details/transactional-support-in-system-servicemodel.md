@@ -13,16 +13,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92e75f8f23bb0bc6d11e9bb6fd6e83c35559b847
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e01f24af2b6853c7a43377bc0b7f7d338195472
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>System.ServiceModel의 트랜잭션 지원
 이 단원의 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 제공하는 트랜잭션 기능에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ServiceModel 트랜잭션 특성](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
  <xref:System.ServiceModel> 서비스에 대한 트랜잭션의 동작을 구성할 수 있는 두 가지 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 특성에 대해 설명합니다.  
   
@@ -38,8 +39,8 @@ ms.lasthandoff: 12/02/2017
  [트랜잭션 응용 프로그램 진단](../../../../docs/framework/wcf/feature-details/diagnosing-transactional-applications.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 관리 및 진단 기능을 사용하여 트랜잭션 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.  
   
- [COM + 및 ServiceModel의 트랜잭션 비교](../../../../docs/framework/wcf/feature-details/comparing-transactions-in-com-and-servicemodel.md)  
+ [COM+ 및 ServiceModel의 트랜잭션 비교](../../../../docs/framework/wcf/feature-details/comparing-transactions-in-com-and-servicemodel.md)  
  <xref:System.ServiceModel> 네임스페이스가 제공하는 특성을 사용하여 트랜잭션 COM+ 서비스의 동작을 시뮬레이션하는 방법에 대해 설명합니다.  
   
- [엔터프라이즈 통합 서비스 트랜잭션 구성 요소](../../../../docs/framework/wcf/feature-details/integrating-enterprise-services-transactional-components.md)  
+ [엔터프라이즈 서비스 트랜잭션 구성 요소 통합](../../../../docs/framework/wcf/feature-details/integrating-enterprise-services-transactional-components.md)  
  엔터프라이즈 서비스를 사용하는 코드와 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 통합하는 방법에 대해 설명합니다.

@@ -17,11 +17,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309d19ee75f506ab781703ebe1068d6d90d9c47c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa20edd8fa43fb1e6a28f7b1ec18f83fedd96bca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-creation-overview"></a>끝점 만들기 개요
 와 모든 통신은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 통해 발생 된 *끝점* 서비스의 합니다. 끝점은 클라이언트에게 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 제공하는 기능에 대한 액세스를 제공합니다. 이 단원에서는 끝점의 구조에 대해 설명하고 구성 및 코드에서 끝점을 정의하는 방법을 간략하게 설명합니다.  

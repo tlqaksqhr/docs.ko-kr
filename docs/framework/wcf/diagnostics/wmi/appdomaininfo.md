@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76fee9673514287dd120a215fc843e4d995e68c0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ed5053dd69628a9f5ff7318ce7fe772f42de6e24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 응용 프로그램 도메인 정보  
@@ -90,7 +91,7 @@ class AppDomainInfo
   
  System.Wmi.MessageLogging 추적 소스를 수신 대기하는 컬렉션 추적 수신기입니다.  
   
-### <a name="name"></a>이름  
+### <a name="name"></a>name  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  

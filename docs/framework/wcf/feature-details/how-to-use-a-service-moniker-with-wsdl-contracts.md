@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c44b09f512a7625360ca5036316d03a4602c5186
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7c36ac73ced510c1ba3b7e16c71f764c46d6c8f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>방법: WSDL 계약을 통해 서비스 모니커 사용
 완전히 독립된 COM Interop 클라이언트가 필요한 경우가 있습니다. 호출하려는 서비스에서 MEX 끝점을 노출하지 않을 수도 있고 WCF 클라이언트 DLL이 COM interop에 등록되지 않을 수도 있습니다. 이 경우 서비스를 설명하는 WSDL 파일을 만들어 WCF 서비스 모니커에 전달할 수 있습니다. 이 항목에서는 WCF WSDL 모니커를 사용하여 WCF 시작 샘플을 호출하는 방법에 대해 설명합니다.  
@@ -68,4 +69,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [COM 응용 프로그램 개요와 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [COM 응용 프로그램과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

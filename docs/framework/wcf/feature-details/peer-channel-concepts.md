@@ -13,16 +13,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b56fe2aaf958e6a94f9562629ca320901307e0f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0802c8f92a240d04e8eb764a83cd40a8fefc0d40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-concepts"></a>피어 채널 개념
 이 단원에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Peer Channel을 구성하는 개념에 대해 간단하게 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [피어 메시](../../../../docs/framework/wcf/feature-details/peer-meshes.md): 피어 채널을 사용 하 여 만든 메시의 특징을 설명 합니다.  
   
  [피어 노드](../../../../docs/framework/wcf/feature-details/peer-nodes.md): 피어 노드에 대해 설명 합니다.  
