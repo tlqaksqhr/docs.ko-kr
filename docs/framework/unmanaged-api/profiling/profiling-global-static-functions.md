@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4da4509a6e8b87490cee076b403f3fa525de91e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 66f22557dd6020ff5040d5aaf76cb12e9ae9965c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-global-static-functions"></a>프로파일링 전역 정적 함수
 이 섹션에서는 프로 파일링 API를 사용 하는 관리 되지 않는 API 함수를 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 ## <a name="net-framework-version-1-profiling-functions"></a>.NET framework 버전 1 프로 파일링 함수  
  [FunctionEnter 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
@@ -79,10 +80,10 @@ ms.lasthandoff: 10/18/2017
  에 전달 될 수 있는 핸들을 제공 하 고 현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출이 수행 하려고 하는 프로파일러에 알립니다 [icorprofilerinfo3:: Getfunctiontailcall3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) 스택 프레임을 검색할 수 있습니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [프로 파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [프로파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
- [프로 파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
   
- [프로 파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
+ [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
   
- [프로 파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+ [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

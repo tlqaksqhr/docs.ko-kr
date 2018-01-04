@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c19047f03279b1284ea8b5b8f99785cfaff5146
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d7d62526a6ac9bb06a7de8287c9687933402bfb8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW 함수
 유니코드 문자열에 의해 지정 된 파일의 내용에 대 한 해시를 생성 합니다.  

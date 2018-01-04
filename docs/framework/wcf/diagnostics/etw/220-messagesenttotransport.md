@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7bc3b784dca090ed768711728a054782e06c7b10
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d391d7bb8276f4b20d831acd59aa8a78db38995c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="220---messagesenttotransport"></a>220 - MessageSentToTransport
 ## <a name="properties"></a>속성  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 |||  
 |-|-|  
 |ID|220|  
-|키워드가|EndToEndMonitoring, 문제 해결, ServiceModel|  
+|키워드|EndToEndMonitoring, 문제 해결, ServiceModel|  
 |수준|정보|  
 |채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  디스패처가 전송에 메시지를 보냈습니다. Correlation ID == '%1'.  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  

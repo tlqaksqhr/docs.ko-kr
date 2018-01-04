@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db1152e82edde34dc8dbaba09f20b9f769dffbca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 이 항목에서는 쓰기 진단 도구 분석 하는 Windows 스토어 응용 프로그램 내에서 실행 되는 코드를 관리 하는 경우에 대해 생각 하는 데 필요한 사항 설명 합니다.  또한 Windows 스토어 앱에 대해 실행 하면 작업을 계속 하도록 기존 개발 도구를 수정 하는 지침을 제공 합니다.  이 정보를 이해 하는 것이 좋습니다 Windows 데스크톱 응용 프로그램을 올바르게 실행 하는 도구 수정 하는 이제 관심 있는 진단 도구에서이 API를 이미 사용 중인 공용 언어 런타임 프로 파일링 API에 익숙한 경우 Windows 스토어 앱에 대해 올바르게를 실행 합니다.  
@@ -429,7 +430,7 @@ GetAppContainerFolderPath(acSid, out acDir);
  **Windows 스토어 앱**  
  -   [파일 액세스 및 사용 권한 (Windows 런타임 앱](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)  
   
--   [개발자 라이선스 가져오기](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)  
+-   [개발자 라이선스 얻기](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)  
   
 -   [IPackageDebugSettings 인터페이스](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)  
   

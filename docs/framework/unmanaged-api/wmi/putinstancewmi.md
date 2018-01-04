@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b7a4ffce4789fb59d84778d02b41910c974216bd
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: b1996103eea87562226537f9aa90dc337c56313c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 함수
 만들거나 기존 클래스의 인스턴스를 업데이트 합니다. 인스턴스는 WMI 리포지토리에 기록 됩니다. 

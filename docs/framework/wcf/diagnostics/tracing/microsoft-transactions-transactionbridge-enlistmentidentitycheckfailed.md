@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05f20e90c372148a175ac49244a4df0dc32ffc89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89328fd0d4305c1f7572a8bb41e3793624110ce8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a>Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed
 들어오는 메시지 발신자의 ID가 인리스먼트의 끝점 참조에서 파생된 ID와 일치하지 않습니다.  
@@ -30,5 +31,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [추적을 사용 하 여 응용 프로그램 문제를 해결 하려면](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

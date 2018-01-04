@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a84b671725ab41bc3287f184406ebec381f0a554
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-data-contract-versioning"></a>최선의 방법: 데이터 계약 버전 관리
 이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]항목을 참조 하는 데이터 계약 [를 사용 하 여 데이터 계약](../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
@@ -113,5 +114,5 @@ ms.lasthandoff: 12/02/2017
  [데이터 계약 사용](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [데이터 계약 버전 관리](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
  [데이터 계약 이름](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [이후 버전과 호환 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [이후 버전과 호환되는 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
  [버전 독립적 Serialization 콜백](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

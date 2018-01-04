@@ -14,18 +14,19 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de970bf27fdf3365daa0ac515852a68d01a246eb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 857ec77e54d6a55bde1a94fd9fd5758ef7a24309
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-services"></a>서비스 구성
 서비스 계약을 디자인하고 구현했으면 서비스를 구성할 준비가 되었습니다. 여기서 서비스를 찾을 수 있는 주소, 메시지를 보내고 받는 데 사용하는 전송 및 메시지 인코딩, 서비스에 필요한 보안 형식 지정 등 서비스가 클라이언트에 노출되는 방법을 정의하고 사용자 지정할 수 있습니다.  
   
  여기서 사용되는 구성은 코드에서 명령적으로 또는 구성 파일을 사용하여 끝점 주소, 사용된 전송 및 보안 체계 지정 같은 서비스의 다양한 측면을 정의하고 사용자 지정할 수 있는 모든 방식이 포함됩니다. 실제로 구성 작성은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램을 프로그래밍하는 과정의 주요 부분입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [단순화된 구성](../../../docs/framework/wcf/simplified-configuration.md)  
  [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]부터 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성 요구 사항을 간소화하는 새로운 기본 구성 모델이 함께 제공됩니다. 특정 서비스에 대해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 구성을 제공하지 않으면 런타임이 기본 끝점, 바인딩 및 동작을 사용해 서비스를 자동으로 구성합니다.  
   

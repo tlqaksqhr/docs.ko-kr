@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6030b1ad1dc3953137d3b068be1bceb99975a5f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce62eb348cb57ce6137c58fbc50a32e829980c0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monitoring-service-operation-failures"></a>서비스 작업 오류 모니터링
 응용 프로그램에 분석 추적을 사용하도록 설정된 경우 이벤트 뷰어에서 서비스 오류를 쉽게 모니터링할 수 있습니다.  이 항목에서는 서비스 작업이 실패한 경우를 확인하는 방법과 오류가 발생한 원인을 확인하는 방법을 보여 줍니다.  

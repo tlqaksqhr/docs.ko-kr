@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d7918a369b5a5656fa2e059bdaaf6c211bd022c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-overview"></a>프로파일링 개요
 <a name="top"></a>프로파일러는 다른 응용 프로그램의 실행을 모니터링 하는 도구입니다. CLR(공용 언어 런타임) 프로파일러는 프로 파일링 API를 사용하여 CLR에서 메시지를 받고 보내는 함수로 구성된 DLL(동적 연결 라이브러리)입니다. 프로파일러 DLL은 런타임에 CLR에 의해 로드됩니다.  
@@ -237,8 +238,8 @@ ms.lasthandoff: 10/18/2017
   
 |제목|설명|  
 |-----------|-----------------|  
-|[프로 파일링 환경 설정](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|프로파일러를 초기화하고, 이벤트 알림을 설정하고, Windows 서비스를 프로파일링하는 방법을 설명합니다.|  
-|[프로 파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|프로파일링 API에서 사용하는 관리되지 않는 인터페이스를 설명합니다.|  
-|[프로 파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|프로파일링 API에서 사용하는 관리되지 않는 전역 정적 함수를 설명합니다.|  
-|[프로 파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|프로파일링 API에서 사용하는 관리되지 않는 열거형을 설명합니다.|  
-|[프로 파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|프로파일링 API에서 사용하는 관리되지 않는 구조체를 설명합니다.|
+|[프로파일링 환경 설정](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|프로파일러를 초기화하고, 이벤트 알림을 설정하고, Windows 서비스를 프로파일링하는 방법을 설명합니다.|  
+|[프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|프로파일링 API에서 사용하는 관리되지 않는 인터페이스를 설명합니다.|  
+|[프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|프로파일링 API에서 사용하는 관리되지 않는 전역 정적 함수를 설명합니다.|  
+|[프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|프로파일링 API에서 사용하는 관리되지 않는 열거형을 설명합니다.|  
+|[프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|프로파일링 API에서 사용하는 관리되지 않는 구조체를 설명합니다.|

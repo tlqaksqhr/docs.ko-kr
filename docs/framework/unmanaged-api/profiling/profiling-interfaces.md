@@ -17,16 +17,17 @@ caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5c0423f9c8b01c1289e1107c0c16c59968a6e2a4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4f8c2a5ce5e1231c55f598e48d14bec896a4b5f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-interfaces"></a>프로파일링 인터페이스
 이 섹션에서는 CLR(공용 언어 런타임)에서 실행되는 프로그램을 프로파일링하는 데 사용할 수 있는 관리되지 않는 인터페이스에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ICLRProfiling 인터페이스](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-interface.md)  
  제공 된 [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) 프로파일러를 실행 중인 프로세스에 연결할 수 있도록 하는 방법입니다.  
   
@@ -94,10 +95,10 @@ ms.lasthandoff: 10/18/2017
  제공 된 [Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) 새 Microsoft MSIL (intermediate language) 함수 본문에 메모리를 할당 하는 메서드.  
   
 ## <a name="related-sections"></a>관련 단원  
- [프로 파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [프로파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
- [프로 파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
+ [프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
   
- [프로 파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
+ [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
   
- [프로 파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+ [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

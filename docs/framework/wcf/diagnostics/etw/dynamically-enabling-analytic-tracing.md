@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4984cb7fd89b69f0006c5294c24184bd8d1f1d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 18dda3f63a12a9f9a2320f413137943e5864ad27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>동적으로 분석 추적을 사용하도록 설정
 Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Windows)를 사용하여 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 모든 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스의 경우 응용 프로그램의 Web.config 파일을 수정하거나 서비스를 다시 시작하지 않고도 분석 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 그러면 응용 프로그램을 중지하지 않고도 추적 이벤트를 내보낼 수 있습니다.  
@@ -51,4 +52,4 @@ Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Window
 |`WCFMessageLogging`|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 메시지 로깅 이벤트입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [WCF Services and Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+ [WCF 서비스 및 Windows용 이벤트 추적](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

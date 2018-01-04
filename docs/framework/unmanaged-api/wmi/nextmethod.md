@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d9b14424bb914be3ba127670e1b6490f79854d6e
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 6b886b3ecbd1d5b5b8d212846b2bd8291fa43909
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nextmethod-function"></a>NextMethod 함수
 에 대 한 호출으로 시작 하는 열거형의 다음 메서드를 검색 [BeginMethodEnumeration](beginmethodenumeration.md)합니다.  
@@ -74,7 +75,7 @@ HRESULT NextMethod (
 
 호출 하 여 열거형 시퀀스를 시작 하는 호출자에 게는 [BeginMethodEnumeration](beginmethodenumeration.md) 함수 및 함수 반환 될 때까지 다음 [NextMethod] 함수를 호출 `WBEM_S_NO_MORE_DATA`합니다. 호출자가 호출 하 여 시퀀스를 완료 하는 필요에 따라 [EndMethodEnumeration](endmethodenumeration.md)합니다. 호출자에 게 해지할 수 있습니다 열거형 초기 호출 하 여 [EndMethodEnumeration](endmethodenumeration.md) 언제 든 지 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 C + + 예제에 대 한 참조는 [IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx) 메서드.
 

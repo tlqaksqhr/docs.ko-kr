@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a4103a0103a334a0e5eace32d8fcf1b365917b8
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 22bcf2731ff682bf538858fc66a7a94be7f5d7df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 함수
 열거형의 현재 위치를 유지 하는 열거자의 논리적 복사본을 만듭니다.  
@@ -81,7 +82,7 @@ HRESULT CloneEnumWbemClassObject (
 
 함수 호출에 실패 하는 경우 호출 하 여 추가 오류 정보를 얻을 수 있습니다는 [GetErrorInfo](geterrorinfo.md) 함수입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 예를 들어 참조는 [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) 메서드.
 

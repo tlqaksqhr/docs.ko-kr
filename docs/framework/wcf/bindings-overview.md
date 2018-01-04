@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 바인딩 개요
 바인딩은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스의 끝점에 연결하기 위해 필요한 통신 세부 사항을 지정하는 데 사용되는 개체입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스의 각 끝점에 대해 바인딩을 올바로 지정해야 합니다. 이 항목에서는 바인딩이 정의하는 통신 세부 사항의 형식, 바인딩의 요소, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 포함되는 바인딩 및 끝점에 대해 바인딩을 지정할 수 있는 방법을 간략하게 설명합니다.  

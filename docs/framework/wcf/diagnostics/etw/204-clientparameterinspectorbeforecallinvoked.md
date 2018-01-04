@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b30e53803692b7127d63a67b2c2c4178dc645db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2a25315a6008be69aeb534b8bf26c0e813c00c01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="204---clientparameterinspectorbeforecallinvoked"></a>204 - ClientParameterInspectorBeforeCallInvoked
 ## <a name="properties"></a>속성  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 |||  
 |-|-|  
 |ID|204|  
-|키워드가|문제 해결, ServiceModel|  
+|키워드|문제 해결, ServiceModel|  
 |수준|정보|  
 |채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  디스패처가 '%1' 형식의 ClientParameterInspector에 대해 'BeforeCall'을 호출했습니다.  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  

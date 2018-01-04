@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7868a0c0ba5abb880af201ce73b35f5ffed6f223
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 7d8e6bb24eb471d807af2493f82b6be4f644124f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 함수
 열거형에 대 한 호출을 시작한 종료는 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 함수입니다.  

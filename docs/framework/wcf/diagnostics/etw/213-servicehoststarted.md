@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc12626263e21f5fd7310157dcdafe327e6d17a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a83cb1cfb87b562add1a791de5a651b563d63d4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="213---servicehoststarted"></a>213 - ServiceHostStarted
 ## <a name="properties"></a>속성  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 |||  
 |-|-|  
 |ID|213|  
-|키워드가|EndToEndMonitoring, HealthMonitoring, 문제 해결, ServiceHost|  
+|키워드|EndToEndMonitoring, HealthMonitoring, 문제 해결, ServiceHost|  
 |수준|LogAlways|  
 |채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  ServiceHost 시작: '%1'.  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  

@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7f42878c146d478d5183342c3a743f3bd208008b
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 함수
 이벤트를 수신 하는 쿼리를 실행 합니다. 호출이 즉시 반환 하 고 호출자에 게 도착 했을 때 반환 된 이벤트에 대 한 열거자를 폴링할 수 있습니다. 쿼리를 취소 반환 된 열거자를 해제 합니다.  

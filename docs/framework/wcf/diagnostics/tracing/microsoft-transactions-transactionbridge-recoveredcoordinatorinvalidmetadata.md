@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2150fdac79123222150995175fbb6a9c3a1401b7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e6681850fdc13a56e245d1362c2af4a38be6e6cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgerecoveredcoordinatorinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata
 코디네이터 복구 로그 항목에 있는 끝점 참조에 잘못되었거나 호환되지 않는 메타데이터가 있습니다.  
@@ -30,5 +31,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [추적을 사용 하 여 응용 프로그램 문제를 해결 하려면](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b87c608097f9bd59c474b200c14aab92410c19d1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1ca7c46906e7ffc5e325bdb1f345e52e1a2167e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationservicestart"></a>System.ServiceModel.Activation.ServiceStart
 System.ServiceModel.Activation.ServiceStart  
@@ -27,5 +28,5 @@ System.ServiceModel.Activation.ServiceStart
   
 ## <a name="see-also"></a>참고 항목  
  [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [추적을 사용 하 여 응용 프로그램 문제를 해결 하려면](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

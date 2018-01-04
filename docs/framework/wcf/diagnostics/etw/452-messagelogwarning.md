@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd509ad0bc8e6f3bcd407cfc01b4c4d920733d1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28ca619fe629358084bc2b1c388fc0cd8167354e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="452---messagelogwarning"></a>452 - MessageLogWarning
 ## <a name="properties"></a>속성  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 |||  
 |-|-|  
 |ID|452|  
-|키워드가|문제 해결, WCFMessageLogging|  
+|키워드|문제 해결, WCFMessageLogging|  
 |수준|경고|  
 |채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  %1  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  

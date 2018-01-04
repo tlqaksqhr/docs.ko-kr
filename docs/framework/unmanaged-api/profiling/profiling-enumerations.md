@@ -17,16 +17,17 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2e0b539c8e455040cc97f37f75476b0efe796abb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84ac67b35bdbf686edb2fa35cc651aad4c19516b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-enumerations"></a>프로파일링 열거형
 이 섹션에서는 프로파일링 API에서 사용하는 관리되지 않는 열거형에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [COR_PRF_CLAUSE_TYPE 열거형](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md)  
  코드에서 방금 시작되거나 끝난 예외 절 형식을 나타냅니다.  
   
@@ -79,10 +80,10 @@ ms.lasthandoff: 10/18/2017
  관리 코드에서 비관리 코드로 전환 또는 그 반대의 경우로 전환하는 이유를 나타냅니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [프로 파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [프로파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
- [프로 파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
   
- [프로 파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
+ [프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
   
- [프로 파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+ [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

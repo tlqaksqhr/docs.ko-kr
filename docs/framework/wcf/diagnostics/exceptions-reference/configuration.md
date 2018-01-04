@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3eee9f955ca75d799b9e5384e47df527934a595f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bfd61ea70fcae443d4a76403ed6c10c874407c4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration"></a>구성
 이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 구성에 의해 생성된 모든 예외를 보여 줍니다.  
@@ -28,14 +29,14 @@ ms.lasthandoff: 12/02/2017
 |-------------------|---------------------|  
 |ConfigBindingCannotBeConfigured|서비스 끝점에 대한 바인딩은 구성할 수 없습니다.|  
 |ConfigElementKeyNull|특정 구성 요소 키는 null일 수 없습니다.|  
-|ConfigExtensionTypeNotRegisteredInCollection|특정 확장 형식이 특정 확장 컬렉션에 등록되지 않았습니다.|  
+|ConfigExtensionTypeNotRegisteredInCollection|특정 확장명 형식이 특정 확장명 컬렉션에 등록되지 않았습니다.|  
 |ConfigIndexOutOfRange|특정 특성 값이 범위를 벗어났습니다.|  
 |ConfigInvalidBindingConfigurationName|특정 구성에 특정 이름을 가진 바인딩이 없습니다.|  
 |ConfigInvalidBindingName|특정 구성에 특정 이름을 가진 바인딩이 없습니다. 이 값은 바인딩에 사용할 수 없습니다.|  
 |ConfigInvalidCommonEndpointBehaviorType|특정 동작 확장은 특정 형식을 구현하지 않기 때문에 일반 끝점 동작에 추가할 수 없습니다.|  
 |ConfigInvalidCommonServiceBehaviorType|특정 동작 확장은 특정 형식을 구현하지 않기 때문에 일반 서비스 동작에 추가할 수 없습니다.|  
 |ConfigInvalidEndpointBehaviorType|기본 동작 형식이 IServiceBehavior 인터페이스를 구현하지 않기 때문에 특정 동작 확장을 특정 끝점 동작에 추가할 수 없습니다.|  
-|ConfigInvalidExtensionType|특정 형식은 컬렉션에서 사용하려면 특정 확장에서 파생되어야 합니다.|  
+|ConfigInvalidExtensionType|특정 형식은 컬렉션에서 사용하려면 특정 확장명에서 파생되어야 합니다.|  
 |ConfigInvalidServiceBehaviorType|기본 동작 형식이 IServiceBehavior 인터페이스를 구현하지 않기 때문에 동작 확장을 특정 이름을 가진 서비스 동작에 추가할 수 없습니다.|  
 |ConfigMessageEncodingAlreadyInBinding|특정 메시지 인코딩 요소를 추가할 수 없습니다. 다른 메시지 인코딩 요소가 특정 바인딩에 이미 있습니다. 각 바인딩에 대해 메시지 인코딩 요소가 하나만 존재할 수 있습니다.|  
 |ConfigNoExtensionCollectionAssociatedWithType|특정 형식의 확장과 연결된 확장 컬렉션을 찾을 수 없습니다.|  

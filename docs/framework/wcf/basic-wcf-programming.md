@@ -19,16 +19,17 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83404a56de68de8f8aec271c28e9896c4fa8702b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dfcd0a09f247077f299d8b9c14a07bdc667245b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-wcf-programming"></a>기본 WCF 프로그래밍
 이 단원에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만들기 위한 기본 사항에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [기본 프로그래밍 수명 주기](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 클라이언트 응용 프로그램 디자인, 빌드 및 배포에 대한 수명 주기를 설명합니다.  
   

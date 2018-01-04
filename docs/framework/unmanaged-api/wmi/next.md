@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c198a9f9507af583f4718c636cd00c9d65a25695
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: e59ef3f65b75a91708dc65f7d4e3d811dc2d3f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="next-function"></a>Next 함수
 에 대 한 호출으로 시작 하는 열거형에서 다음 속성을 검색 [BeginEnumeration](beginenumeration.md)합니다.  

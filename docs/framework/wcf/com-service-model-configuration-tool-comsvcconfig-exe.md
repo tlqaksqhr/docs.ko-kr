@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 322268f5b11a5078545ae120440f91d327d6a615
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40e7644ade32f245772a8971cf0693683b980952
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)
 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하면 COM+ 인터페이스를 웹 서비스로 노출하도록 구성할 수 있습니다.  
@@ -105,4 +106,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: COM + 서비스 모델 구성 도구를 사용 하 여](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+ [방법: COM+ 서비스 모델 구성 도구 사용](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

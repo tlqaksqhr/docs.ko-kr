@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 19a4102796da7a5692eb5b9b459a6a95ff7409f9
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: b796771b07dee28470d37ca3e4292c0a244e056b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 함수
 지정 된 선택 조건을 충족 하는 지정된 된 클래스의 인스턴스를 반환 하는 열거자를 반환 합니다. 

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56cfe60c221062e3ad7ae1b8cbdc9b135e6fa2e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b24d54930a29a24dab97ce403c2808fb74b8cbfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="301---userdefinederroroccurred"></a>301 - UserDefinedErrorOccurred
 ## <a name="properties"></a>속성  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 |||  
 |-|-|  
 |ID|301|  
-|키워드가|문제 해결, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
+|키워드|문제 해결, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
 |수준|오류|  
 |채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
   
@@ -35,10 +36,10 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  이름:'%1', 참조:'%2', 페이로드:%3  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
-|이름|`xs:string`|이벤트의 사용자 정의 이름입니다.|  
+|name|`xs:string`|이벤트의 사용자 정의 이름입니다.|  
 |HostReference|`xs:string`|웹 호스팅 서비스의 경우 이 필드는 웹 계층의 서비스를 고유하게 식별합니다. 해당 형식으로 정의 됩니다 ' 웹 Site Name Application Virtual Path &#124; 서비스의 가상 경로 &#124; ServiceName'. 예: ' 기본 웹 사이트/CalculatorApplication #124;/CalculatorService.svc &#124; CalculatorService'.|  
 |Payload|`xs:string`|이벤트의 사용자 정의 페이로드입니다.|

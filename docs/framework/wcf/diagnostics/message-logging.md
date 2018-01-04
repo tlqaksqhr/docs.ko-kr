@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a771cbc22febf966fec2cf608a9b59204fc6e51a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-logging"></a>메시지 로깅
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 오프라인에서 사용할 수 있도록 들어오는 메시지와 나가는 메시지를 로깅할 수 있습니다. 메시지 로깅을 사용하면 메시지와 메시지 본문의 모양을 확인할 수 있습니다. 특히 이 로깅 형식을 사용하면 전달된 인수 및 수신하는 끝점에서 XML로 표현된 인수가 어떻게 표시되는지를 확인할 수 있습니다. 또한 메시지를 수신된 그대로 로깅하면 잘못된 형식의 메시지를 진단하고 메시지가 도착한 방법을 확인할 수 있습니다. 사용된 보안 토큰, 암호화되고 서명된 부분 및 그대로 유지된 부분을 확인할 수도 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [메시지 흐름 개요](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
  이 항목에서는 이벤트 로그 메시지를 클라이언트 및 서비스 이벤트에 대응하는 방법에 대해 설명합니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
   
  이 항목에서는 메시지 로그를 볼 수 있는 방법에 대해 설명합니다.  
   
- [메시지 로깅에 대 한 보안 문제](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
+ [메시지 로깅에 대한 보안 고려 사항](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
  이 항목에서는 메시지 로깅에 의해 생성된 이벤트뿐 아니라 중요한 데이터가 메시지 로그에서 노출되지 않도록 보호하는 방법에 대해 설명합니다.  
   

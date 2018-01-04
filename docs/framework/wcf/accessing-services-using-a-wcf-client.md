@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8698e0657de31d78699df478da5e716bf831fc4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF 클라이언트를 사용하여 서비스 액세스
 서비스를 만들고 나면 다음 단계로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 프록시를 만듭니다. 클라이언트 응용 프로그램은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 프록시를 사용하여 서비스와 통신합니다. 클라이언트 응용 프로그램은 일반적으로 서비스의 메타데이터를 가져와서 서비스 호출에 사용할 수 있는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트 코드를 생성합니다.  
@@ -65,7 +66,7 @@ Svcutil.exe <file1 [,file2]>
 ## <a name="add-service-reference-in-visual-studio"></a>Visual Studio의 서비스 참조 추가  
  WCF 클라이언트 프록시를 포함 하 고 선택 됩니다 프로젝트 마우스 오른쪽 단추로 클릭 실행 중일 때 서비스 **서비스 참조 추가**합니다. 에 **서비스 참조 추가 대화 상자** 형식을 호출 하 고 클릭 하려는 서비스 URL에는 **이동** 단추입니다. 대화 상자에 지정한 주소에서 사용할 수 있는 서비스 목록이 표시됩니다. 서비스 계약 및 사용 가능한 작업 참조 생성된 된 코드에 대 한 네임 스페이스를 지정 하 고, 클릭를 두 번 클릭은 **확인** 단추입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 서비스에 대해 만들어진 서비스 계약을 보여 줍니다.  
   
 ```csharp
@@ -194,11 +195,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [방법: 이중 계약을 사용 하 여 서비스에 액세스](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [방법: 이중 계약을 사용하여 서비스 액세스](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
  [방법: 비동기적으로 서비스 작업 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [방법: 단방향으로 서비스에 액세스 하 고 요청-회신 계약](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [방법: WSE 3.0 액세스 서비스](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [생성 된 클라이언트 코드 이해](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- [방법: 시작 시간의 WCF 클라이언트 응용 프로그램 XmlSerializer를 사용 하 여 개선](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
+ [방법: 단방향 및 요청-회신 계약을 사용하여 서비스 액세스](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [방법: WSE 3.0 서비스 액세스](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [생성된 클라이언트 코드 이해](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
+ [방법: XmlSerializer를 사용하여 WCF 클라이언트 응용 프로그램의 시작 시간 개선](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
  [클라이언트 런타임 동작 지정](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
  [클라이언트 동작 구성](../../../docs/framework/wcf/configuring-client-behaviors.md)

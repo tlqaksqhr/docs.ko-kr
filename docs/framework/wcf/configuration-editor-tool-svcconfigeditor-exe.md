@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a301e23ead8e52273ed4fe7a503f1fe11e2f1348
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Configuration Editor 도구(SvcConfigEditor.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Configuration Editor (SvcConfigEditor.exe)를 사용하면 관리자와 개발자가 그래픽 사용자 인터페이스를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스의 구성 설정을 만들고 수정할 수 있습니다. 이 도구를 사용하면 XML 구성 파일을 직접 편집하지 않고도 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 바인딩, 동작, 서비스 및 진단에 대한 설정을 관리할 수 있습니다.  

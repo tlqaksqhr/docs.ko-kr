@@ -17,16 +17,17 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 35a8e5bce0263c78d99e4530d01a9a9cad3e913e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2c4ad879c486fa39c739ccb3d1da76d64082144d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-enumerations"></a>메타데이터 열거형
 이 섹션에서는 메타데이터 API에서 사용하는 관리되지 않는 열거형에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [AssemblyFlags 열거형](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)  
  어셈블리의 런타임 기능을 설명하는 값을 포함합니다.  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/18/2017
  메서드에 대한 메타데이터를 설명하는 값을 포함합니다.  
   
  [CorMethodImpl 열거형](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)  
- 메서드 구현 함수를 설명하는 값을 포함합니다.  
+ 메서드 구현 기능을 설명하는 값을 포함합니다.  
   
  [CorMethodSemanticsAttr 열거형](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md)  
  메서드와 관련 속성 또는 이벤트 간의 관계를 설명하는 값을 포함합니다.  
@@ -166,10 +167,10 @@ ms.lasthandoff: 10/18/2017
  사용 하는 상수를 지정 [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) 공용 언어 런타임을 초기화할 때.  
   
 ## <a name="related-sections"></a>관련 단원  
- [메타 데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+ [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
- [메타 데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [메타데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
- [메타 데이터 구조](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
+ [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
   
- [메타 데이터 공용 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+ [메타데이터 공용 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 64e43165b34b74540931b308100c9ca942946bcf
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 7e97ffcf44a738234f67d9736382c46c42e5b61e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="putmethod-function"></a>PutMethod 함수
 메서드를 만듭니다.
@@ -87,7 +88,7 @@ HRESULT PutMethod (
 
 각 속성에는 [__Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx) 개체 이외의 클래스 `ReturnValue` 있어야는 **ID** 한정자, 매개 변수가 나타나는 순서를 식별 하는 숫자 값을 0부터 시작 합니다. 동일한 두 개의 매개 변수가 없는 가질 수 있습니다 **ID** 값 및 아니요 **ID** 값을 건너뛸 수 있습니다. 두 조건 중 하나가 발생 하는 경우는 `PutMethod` 함수에서 반환 `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 예를 들어 참조는 [IWbemClassObject::PutMethod](https://msdn.microsoft.com/library/aa391456(v=vs.85).aspx) 메서드.
 

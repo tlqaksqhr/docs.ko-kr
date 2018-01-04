@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33f576b177ddb66d6145e0b1a5d0d104346640ee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4980beca761a4c49c39e92c6c73a7bc1a5038b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing-scenarios"></a>종단 간 추적 시나리오
 이 단원에는 추적에 사용하는 다양한 시나리오를 설명하는 항목이 있습니다.  
@@ -32,22 +33,22 @@ ms.lasthandoff: 12/02/2017
   
 -   사용자 활동 ID 전파  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [작업 목록](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
   
--   [동작 ID 전파](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
+-   [작업 ID 전파](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
   
--   [HTTP, TCP 또는 명명 된 파이프를 사용 하는 동기 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+-   [HTTP, TCP 또는 명명된 파이프를 사용하는 동기 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
--   [HTTP, TCP 또는 명명 된 파이프를 사용 하는 비동기 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+-   [HTTP, TCP 또는 명명된 파이프를 사용하는 비동기 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
--   [메시지 보안의 동작 추적](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
+-   [메시지 보안의 작업 추적](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
   
 -   [MSMQ](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
   
--   [COM +](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
+-   [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [추적을 사용 하 여 응용 프로그램 문제를 해결 하려면](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [종단 간 추적](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

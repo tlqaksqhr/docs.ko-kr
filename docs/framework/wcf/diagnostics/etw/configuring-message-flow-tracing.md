@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfac12fc0c5fbaabf612bbd8cc950f93a59a54c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-message-flow-tracing"></a>메시지 흐름 추적 구성
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 작업 추적을 사용하도록 설정하면 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 스택을 통해 논리 작업에 종단 간 작업 ID가 할당됩니다. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]에는 메시지 흐름 추적이라고 하는 ETW(Event Tracing for Windows)와 함께 작동하는 이 기능의 더 높은 성능 버전이 있습니다. 이 기능을 사용하도록 설정하면 종단 간 작업 ID가 들어오는 메시지에서 가져와 지고(비어 있는 경우 들어오는 메시지에 할당됨) 메시지가 채널을 통해 디코딩된 후 내보내지는 모든 추적 이벤트에 전파됩니다. 이 기능을 사용하면 다른 서비스의 추적 로그를 사용하여 메시지 흐름을 다시 생성할 수 있습니다.  

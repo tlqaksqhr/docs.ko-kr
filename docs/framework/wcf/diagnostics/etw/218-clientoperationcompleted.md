@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d5b6fcc1c7ec4dd2f2c008e9d8bcfb58b2b4991
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 974fde79d8b24c17928fa4ff38bb9d35d6b5a815
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="218---clientoperationcompleted"></a>218 - ClientOperationCompleted
 ## <a name="properties"></a>속성  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  클라이언트가 '%2' 계약과 연결된 '%1' 작업 실행을 완료했습니다. 메시지가 '%3'(으)로 전송되었습니다.  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  

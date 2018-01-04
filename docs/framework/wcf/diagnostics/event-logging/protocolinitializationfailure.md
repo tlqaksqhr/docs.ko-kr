@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9946b29019474ad147b08a373d93b5bfe647648a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 177eb6298b45f074833fe0b3c7f45ceaba25a5e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="protocolinitializationfailure"></a>ProtocolInitializationFailure
 Id: 142  
@@ -27,7 +28,7 @@ Id: 142
  범주: TransactionBridge  
   
 ## <a name="description"></a>설명  
- 이 이벤트는 WS-Atomic Transaction 프로토콜 서비스가 초기화되지 않았음을 나타냅니다. 따라서 WS-Atomic Transaction 기능을 사용하도록 설정할 수 없습니다. 이 이벤트는 프로토콜 ID, 프로토콜 이름, 예외, 프로세스 이름 및 프로세스 ID를 나열합니다. 입니다.  
+ 이 이벤트는 WS-Atomic Transaction 프로토콜 서비스가 초기화되지 않았음을 나타냅니다. 따라서 WS-Atomic Transaction 기능을 사용하도록 설정할 수 없습니다. 이 이벤트는 프로토콜 ID, 프로토콜 이름, 예외, 프로세스 이름 및 프로세스 ID를 나열합니다. 이어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [이벤트 로깅](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  

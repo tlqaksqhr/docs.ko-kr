@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81eb778d70722cb44fa8dd4bc3f1152a12d87199
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d67bb810ced381749dca0dc698ca405bb59cfb0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>핵심 통신: HTTP/HTTPS 전송 채널
 이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 전송 HTTP/HTTPS 채널에 의해 생성된 모든 예외를 보여 줍니다.  

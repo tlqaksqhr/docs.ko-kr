@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b4e101c4e9e5812c32b85029e9c24d983cb5e5d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7385d34ac2ed0357e964e992a88f96a6a89b1a26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="205---operationinvoked"></a>205 - OperationInvoked
 ## <a name="properties"></a>속성  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 |||  
 |-|-|  
 |ID|205|  
-|키워드가|문제 해결, ServiceModel|  
+|키워드|문제 해결, ServiceModel|  
 |수준|정보|  
 |채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  OperationInvoker가 '%1' 메서드를 호출했습니다. 호출자 정보: '%2'.  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  

@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6c4ad979a3a662618ab62b52d63bda3dbb1e71b9
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 09d3edc74b34688d5cc36e688f634850cfb60910
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="put-function"></a>Put 함수
 명명된 된 속성을 새 값으로 설정합니다.
@@ -86,7 +87,7 @@ HRESULT Put (
 
 사용 하 여는 `vtType` CIM 클래스 정의에서 새 속성을 만들 때에 매개 변수 및 `pVal` 은 `null` 가리키는 또는 `VARIANT` 형식의 `VT_NULL`합니다. 이 경우에 `vType` 매개 변수 속성의 CIM 형식을 지정 합니다. 다른 모든 경우에 `vtType` 0 이어야 합니다. `vtType`0 이어야 기본 개체 인스턴스 라면 (경우에 `Val` 은 `null`) 속성의 형식이 고정 되어 있고 변경할 수 없습니다.   
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 예를 들어 참조는 [IWbemClassObject::Put](https://msdn.microsoft.com/library/aa391455(v=vs.85).aspx) 메서드.
 

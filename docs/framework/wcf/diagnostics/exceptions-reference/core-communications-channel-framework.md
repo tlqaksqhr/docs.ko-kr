@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49045f0eada8638d352b907e30123eb84f13305e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9a615368f0559e76eddf83f991ee7e66e6278f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="core-communications-channel-framework"></a>핵심 통신: 채널 프레임워크
 이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 채널 프레임워크에서 생성된 모든 예외를 보여 줍니다.  
