@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1b52f70c4323227bbbd91047a82efcf1a89abec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a60e47193c069abc584007f27d0d1e5ecf1ee35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelshttpchannelresponseaborted"></a><span data-ttu-id="c0326-102">System.ServiceModel.Channels.HttpChannelResponseAborted</span><span class="sxs-lookup"><span data-stu-id="c0326-102">System.ServiceModel.Channels.HttpChannelResponseAborted</span></span>
-<span data-ttu-id="c0326-103">HTTP를 통해 응답 메시지를 보내지 못했습니다.</span><span class="sxs-lookup"><span data-stu-id="c0326-103">Failed to send a response message over HTTP.</span></span>  
+# <a name="systemservicemodelchannelshttpchannelresponseaborted"></a><span data-ttu-id="29d39-102">System.ServiceModel.Channels.HttpChannelResponseAborted</span><span class="sxs-lookup"><span data-stu-id="29d39-102">System.ServiceModel.Channels.HttpChannelResponseAborted</span></span>
+<span data-ttu-id="29d39-103">HTTP를 통해 응답 메시지를 보내지 못했습니다.</span><span class="sxs-lookup"><span data-stu-id="29d39-103">Failed to send a response message over HTTP.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c0326-104">설명</span><span class="sxs-lookup"><span data-stu-id="c0326-104">Description</span></span>  
- <span data-ttu-id="c0326-105">이 경고 수준 추적은 HTTP 채널 응답이 중단되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c0326-105">This warning level trace indicates that an HTTP channel response was aborted.</span></span> <span data-ttu-id="c0326-106">이 추적의 추가 정보는 Abort 메서드에 전달된 메시지나 이유를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="c0326-106">Additional information in this trace will reveal the reason or the message passed to the Abort method.</span></span>  
+## <a name="description"></a><span data-ttu-id="29d39-104">설명</span><span class="sxs-lookup"><span data-stu-id="29d39-104">Description</span></span>  
+ <span data-ttu-id="29d39-105">이 경고 수준 추적은 HTTP 채널 응답이 중단되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="29d39-105">This warning level trace indicates that an HTTP channel response was aborted.</span></span> <span data-ttu-id="29d39-106">이 추적의 추가 정보는 Abort 메서드에 전달된 메시지나 이유를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="29d39-106">Additional information in this trace will reveal the reason or the message passed to the Abort method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0326-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c0326-107">See Also</span></span>  
- [<span data-ttu-id="c0326-108">추적</span><span class="sxs-lookup"><span data-stu-id="c0326-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c0326-109">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="c0326-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c0326-110">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="c0326-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="29d39-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="29d39-107">See Also</span></span>  
+ [<span data-ttu-id="29d39-108">추적</span><span class="sxs-lookup"><span data-stu-id="29d39-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="29d39-109">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="29d39-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="29d39-110">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="29d39-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

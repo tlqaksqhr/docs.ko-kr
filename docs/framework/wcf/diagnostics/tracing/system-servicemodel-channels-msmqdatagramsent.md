@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c75f4519820b88c7eaa0d2e51787b9581be00b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa1129c88ae43ad4b3cc8313501def8cb9be4286
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqdatagramsent"></a><span data-ttu-id="4075d-102">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="4075d-102">System.ServiceModel.Channels.MsmqDatagramSent</span></span>
-<span data-ttu-id="4075d-103">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="4075d-103">System.ServiceModel.Channels.MsmqDatagramSent</span></span>  
+# <a name="systemservicemodelchannelsmsmqdatagramsent"></a><span data-ttu-id="c607f-102">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="c607f-102">System.ServiceModel.Channels.MsmqDatagramSent</span></span>
+<span data-ttu-id="c607f-103">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="c607f-103">System.ServiceModel.Channels.MsmqDatagramSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4075d-104">설명</span><span class="sxs-lookup"><span data-stu-id="4075d-104">Description</span></span>  
- <span data-ttu-id="4075d-105">MSMQ 데이터그램 메시지를 보냈습니다.</span><span class="sxs-lookup"><span data-stu-id="4075d-105">MSMQ datagram message sent.</span></span>  
+## <a name="description"></a><span data-ttu-id="c607f-104">설명</span><span class="sxs-lookup"><span data-stu-id="c607f-104">Description</span></span>  
+ <span data-ttu-id="c607f-105">MSMQ 데이터그램 메시지를 보냈습니다.</span><span class="sxs-lookup"><span data-stu-id="c607f-105">MSMQ datagram message sent.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4075d-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4075d-106">See Also</span></span>  
- [<span data-ttu-id="4075d-107">추적</span><span class="sxs-lookup"><span data-stu-id="4075d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4075d-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="4075d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4075d-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="4075d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c607f-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c607f-106">See Also</span></span>  
+ [<span data-ttu-id="c607f-107">추적</span><span class="sxs-lookup"><span data-stu-id="c607f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c607f-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="c607f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c607f-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="c607f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

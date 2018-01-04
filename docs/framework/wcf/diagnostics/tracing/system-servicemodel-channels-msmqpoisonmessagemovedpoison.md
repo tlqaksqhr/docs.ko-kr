@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a172855b117d590c220266598c62d732b2a134f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 244dbc0a8466ac9494a57365fce705cb003ce08a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqpoisonmessagemovedpoison"></a><span data-ttu-id="c2d56-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="c2d56-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>
-<span data-ttu-id="c2d56-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="c2d56-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>  
+# <a name="systemservicemodelchannelsmsmqpoisonmessagemovedpoison"></a><span data-ttu-id="f68f9-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="f68f9-102">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>
+<span data-ttu-id="f68f9-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span><span class="sxs-lookup"><span data-stu-id="f68f9-103">System.ServiceModel.Channels.MsmqPoisonMessageMovedPoison</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c2d56-104">설명</span><span class="sxs-lookup"><span data-stu-id="c2d56-104">Description</span></span>  
- <span data-ttu-id="c2d56-105">포이즌 메시지를 포이즌 하위 큐로 이동했습니다.</span><span class="sxs-lookup"><span data-stu-id="c2d56-105">Poison message moved to the poison sub-queue.</span></span>  
+## <a name="description"></a><span data-ttu-id="f68f9-104">설명</span><span class="sxs-lookup"><span data-stu-id="f68f9-104">Description</span></span>  
+ <span data-ttu-id="f68f9-105">포이즌 메시지를 포이즌 하위 큐로 이동했습니다.</span><span class="sxs-lookup"><span data-stu-id="f68f9-105">Poison message moved to the poison sub-queue.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2d56-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c2d56-106">See Also</span></span>  
- [<span data-ttu-id="c2d56-107">추적</span><span class="sxs-lookup"><span data-stu-id="c2d56-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c2d56-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="c2d56-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c2d56-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="c2d56-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f68f9-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f68f9-106">See Also</span></span>  
+ [<span data-ttu-id="f68f9-107">추적</span><span class="sxs-lookup"><span data-stu-id="f68f9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f68f9-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="f68f9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f68f9-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="f68f9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
