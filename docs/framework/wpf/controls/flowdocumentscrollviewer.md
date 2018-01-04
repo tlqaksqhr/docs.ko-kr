@@ -17,19 +17,20 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0009c4397beddcc68e3c51fb5cceeb1bec99fe8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c6bc480208c94d7b531466627b70f5261e9468a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flowdocumentscrollviewer"></a><span data-ttu-id="880da-102">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="880da-102">FlowDocumentScrollViewer</span></span>
-<span data-ttu-id="880da-103"><xref:System.Windows.Controls.FlowDocumentScrollViewer> 컨트롤 보는 데 사용 됩니다 <xref:System.Windows.Documents.FlowDocument> 스크롤 컨테이너의 콘텐츠입니다.</span><span class="sxs-lookup"><span data-stu-id="880da-103">The <xref:System.Windows.Controls.FlowDocumentScrollViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content in a scrolling container.</span></span> <span data-ttu-id="880da-104">와 대비 <xref:System.Windows.Controls.FlowDocumentPageViewer>, 콘텐츠 페이지 단위로를 보는입니다.</span><span class="sxs-lookup"><span data-stu-id="880da-104">Contrast with <xref:System.Windows.Controls.FlowDocumentPageViewer>, which views content on a per page basis.</span></span>  
+# <a name="flowdocumentscrollviewer"></a><span data-ttu-id="5920b-102">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="5920b-102">FlowDocumentScrollViewer</span></span>
+<span data-ttu-id="5920b-103"><xref:System.Windows.Controls.FlowDocumentScrollViewer> 컨트롤 보는 데 사용 됩니다 <xref:System.Windows.Documents.FlowDocument> 스크롤 컨테이너의 콘텐츠입니다.</span><span class="sxs-lookup"><span data-stu-id="5920b-103">The <xref:System.Windows.Controls.FlowDocumentScrollViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content in a scrolling container.</span></span> <span data-ttu-id="5920b-104">와 대비 <xref:System.Windows.Controls.FlowDocumentPageViewer>, 콘텐츠 페이지 단위로를 보는입니다.</span><span class="sxs-lookup"><span data-stu-id="5920b-104">Contrast with <xref:System.Windows.Controls.FlowDocumentPageViewer>, which views content on a per page basis.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="880da-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="880da-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5920b-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5920b-105">See Also</span></span>  
  <xref:System.Windows.Controls.FlowDocumentReader>  
  <xref:System.Windows.Controls.FlowDocumentPageViewer>  
  <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
- [<span data-ttu-id="880da-106">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="880da-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="880da-107">유동 문서 개요</span><span class="sxs-lookup"><span data-stu-id="880da-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [<span data-ttu-id="5920b-106">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="5920b-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="5920b-107">유동 문서 개요</span><span class="sxs-lookup"><span data-stu-id="5920b-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

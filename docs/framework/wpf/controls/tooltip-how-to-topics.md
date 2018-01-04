@@ -17,25 +17,26 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad3fd6a1bdecf9d6187f3592fe4771bbb0b0e98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 214fdff11b5b64c78b2719e66813b5210884e318
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="tooltip-how-to-topics"></a><span data-ttu-id="a8c3b-102">도구 설명 방법 항목</span><span class="sxs-lookup"><span data-stu-id="a8c3b-102">ToolTip How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="a8c3b-103">단원 내용</span><span class="sxs-lookup"><span data-stu-id="a8c3b-103">In This Section</span></span>  
- [<span data-ttu-id="a8c3b-104">도구 설명 배치</span><span class="sxs-lookup"><span data-stu-id="a8c3b-104">Position a ToolTip</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
-  [<span data-ttu-id="a8c3b-105">BetweenShowDelay 속성 사용</span><span class="sxs-lookup"><span data-stu-id="a8c3b-105">Use the BetweenShowDelay Property</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
+# <a name="tooltip-how-to-topics"></a><span data-ttu-id="2be6e-102">도구 설명 방법 항목</span><span class="sxs-lookup"><span data-stu-id="2be6e-102">ToolTip How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="2be6e-103">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="2be6e-103">In This Section</span></span>  
+ [<span data-ttu-id="2be6e-104">도구 설명 배치</span><span class="sxs-lookup"><span data-stu-id="2be6e-104">Position a ToolTip</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
+  [<span data-ttu-id="2be6e-105">BetweenShowDelay 속성 사용</span><span class="sxs-lookup"><span data-stu-id="2be6e-105">Use the BetweenShowDelay Property</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="a8c3b-106">참조</span><span class="sxs-lookup"><span data-stu-id="a8c3b-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2be6e-106">참조</span><span class="sxs-lookup"><span data-stu-id="2be6e-106">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   
  <xref:System.Windows.Controls.ToolTipService>  
   
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="a8c3b-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="a8c3b-107">Related Sections</span></span>  
- [<span data-ttu-id="a8c3b-108">팝업 개요</span><span class="sxs-lookup"><span data-stu-id="a8c3b-108">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="2be6e-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="2be6e-107">Related Sections</span></span>  
+ [<span data-ttu-id="2be6e-108">팝업 개요</span><span class="sxs-lookup"><span data-stu-id="2be6e-108">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
   
- [<span data-ttu-id="a8c3b-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="a8c3b-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [<span data-ttu-id="2be6e-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="2be6e-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

@@ -17,19 +17,20 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81217c3ce9ee9f29b92ad63cb94c61bf6a316b0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b59711d308d267cb30be134e4fd35bbb69f8ebc5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="dockpanel"></a><span data-ttu-id="d6d37-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="d6d37-102">DockPanel</span></span>
-<span data-ttu-id="d6d37-103"><xref:System.Windows.Controls.DockPanel> 요소 레이아웃 컨테이너의 가장자리를 따라 자식 콘텐츠의 위치를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d6d37-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
+# <a name="dockpanel"></a><span data-ttu-id="bb6ff-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="bb6ff-102">DockPanel</span></span>
+<span data-ttu-id="bb6ff-103"><xref:System.Windows.Controls.DockPanel> 요소 레이아웃 컨테이너의 가장자리를 따라 자식 콘텐츠의 위치를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb6ff-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d6d37-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="d6d37-104">In This Section</span></span>  
- [<span data-ttu-id="d6d37-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="d6d37-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="bb6ff-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="bb6ff-104">In This Section</span></span>  
+ [<span data-ttu-id="bb6ff-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="bb6ff-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d6d37-106">참조</span><span class="sxs-lookup"><span data-stu-id="d6d37-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="bb6ff-106">참조</span><span class="sxs-lookup"><span data-stu-id="bb6ff-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -44,9 +45,9 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="d6d37-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d6d37-107">Related Sections</span></span>  
- [<span data-ttu-id="d6d37-108">레이아웃</span><span class="sxs-lookup"><span data-stu-id="d6d37-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="bb6ff-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="bb6ff-107">Related Sections</span></span>  
+ [<span data-ttu-id="bb6ff-108">레이아웃</span><span class="sxs-lookup"><span data-stu-id="bb6ff-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="d6d37-109">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="d6d37-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="bb6ff-109">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="bb6ff-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="d6d37-110">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="d6d37-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="bb6ff-110">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="bb6ff-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

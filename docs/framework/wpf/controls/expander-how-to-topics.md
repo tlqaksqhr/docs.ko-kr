@@ -17,20 +17,21 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d926970046b96029ee253c10a5abcc8b8e0602bc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 885cd77ed3d65fdb1173b695c50b9d6d26a8acb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="expander-how-to-topics"></a><span data-ttu-id="05d04-102">Expander 방법 항목</span><span class="sxs-lookup"><span data-stu-id="05d04-102">Expander How-to Topics</span></span>
-<span data-ttu-id="05d04-103">이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.Expander> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="05d04-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
+# <a name="expander-how-to-topics"></a><span data-ttu-id="7b233-102">Expander 방법 항목</span><span class="sxs-lookup"><span data-stu-id="7b233-102">Expander How-to Topics</span></span>
+<span data-ttu-id="7b233-103">이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.Expander> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b233-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="05d04-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="05d04-104">In This Section</span></span>  
- [<span data-ttu-id="05d04-105">ScrollViewer가 있는 Expander 만들기</span><span class="sxs-lookup"><span data-stu-id="05d04-105">Create an Expander with a ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-create-an-expander-with-a-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7b233-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="7b233-104">In This Section</span></span>  
+ [<span data-ttu-id="7b233-105">ScrollViewer가 있는 Expander 만들기</span><span class="sxs-lookup"><span data-stu-id="7b233-105">Create an Expander with a ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-create-an-expander-with-a-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="05d04-106">참조</span><span class="sxs-lookup"><span data-stu-id="05d04-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7b233-106">참조</span><span class="sxs-lookup"><span data-stu-id="7b233-106">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="05d04-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="05d04-107">Related Sections</span></span>  
- [<span data-ttu-id="05d04-108">Expander 개요</span><span class="sxs-lookup"><span data-stu-id="05d04-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="7b233-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="7b233-107">Related Sections</span></span>  
+ [<span data-ttu-id="7b233-108">Expander 개요</span><span class="sxs-lookup"><span data-stu-id="7b233-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)

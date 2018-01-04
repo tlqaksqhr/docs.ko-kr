@@ -17,21 +17,22 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11ea55c807bdf939d2cca6fb90591f814361ce96
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a1236755a3df5074387652049847e979653eefcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="dockpanel-how-to-topics"></a><span data-ttu-id="e7e72-102">DockPanel 방법 항목</span><span class="sxs-lookup"><span data-stu-id="e7e72-102">DockPanel How-to Topics</span></span>
-<span data-ttu-id="e7e72-103">이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.DockPanel> 레이아웃 컨테이너의 가장자리를 따라 자식 요소를 배치 하는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e7e72-103">The topics in this section describe how to use the <xref:System.Windows.Controls.DockPanel> element to position child elements along the edge of a layout container.</span></span>  
+# <a name="dockpanel-how-to-topics"></a><span data-ttu-id="dd7d4-102">DockPanel 방법 항목</span><span class="sxs-lookup"><span data-stu-id="dd7d4-102">DockPanel How-to Topics</span></span>
+<span data-ttu-id="dd7d4-103">이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.DockPanel> 레이아웃 컨테이너의 가장자리를 따라 자식 요소를 배치 하는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="dd7d4-103">The topics in this section describe how to use the <xref:System.Windows.Controls.DockPanel> element to position child elements along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e7e72-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="e7e72-104">In This Section</span></span>  
- [<span data-ttu-id="e7e72-105">Dock 값 가져오기 또는 설정</span><span class="sxs-lookup"><span data-stu-id="e7e72-105">Get or Set a Dock Value</span></span>](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
- [<span data-ttu-id="e7e72-106">DockPanel 만들기</span><span class="sxs-lookup"><span data-stu-id="e7e72-106">Create a DockPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [<span data-ttu-id="e7e72-107">DockPanel 요소를 사용하여 공간 분할</span><span class="sxs-lookup"><span data-stu-id="e7e72-107">Partition Space by Using the DockPanel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="dd7d4-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="dd7d4-104">In This Section</span></span>  
+ [<span data-ttu-id="dd7d4-105">Dock 값 가져오기 또는 설정</span><span class="sxs-lookup"><span data-stu-id="dd7d4-105">Get or Set a Dock Value</span></span>](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
+ [<span data-ttu-id="dd7d4-106">DockPanel 만들기</span><span class="sxs-lookup"><span data-stu-id="dd7d4-106">Create a DockPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
+ [<span data-ttu-id="dd7d4-107">DockPanel 요소를 사용하여 공간 분할</span><span class="sxs-lookup"><span data-stu-id="dd7d4-107">Partition Space by Using the DockPanel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="e7e72-108">참조</span><span class="sxs-lookup"><span data-stu-id="e7e72-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="dd7d4-108">참조</span><span class="sxs-lookup"><span data-stu-id="dd7d4-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -46,9 +47,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="e7e72-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="e7e72-109">Related Sections</span></span>  
- [<span data-ttu-id="e7e72-110">레이아웃</span><span class="sxs-lookup"><span data-stu-id="e7e72-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="dd7d4-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="dd7d4-109">Related Sections</span></span>  
+ [<span data-ttu-id="dd7d4-110">레이아웃</span><span class="sxs-lookup"><span data-stu-id="dd7d4-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="e7e72-111">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="e7e72-111">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="dd7d4-111">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="dd7d4-111">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="e7e72-112">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="e7e72-112">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="dd7d4-112">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="dd7d4-112">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

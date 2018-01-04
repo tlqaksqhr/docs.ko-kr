@@ -17,35 +17,36 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98b0d38ab78bb36337461495cc6e8e782160617a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1f937232119281f4e94dcee9013546a56a67265
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listview-how-to-topics"></a><span data-ttu-id="138e3-102">ListView 방법 항목</span><span class="sxs-lookup"><span data-stu-id="138e3-102">ListView How-to Topics</span></span>
-<span data-ttu-id="138e3-103">이 섹션의 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Controls.ListView> 컨트롤에 데이터 항목 집합을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="138e3-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
+# <a name="listview-how-to-topics"></a><span data-ttu-id="fd68e-102">ListView 방법 항목</span><span class="sxs-lookup"><span data-stu-id="fd68e-102">ListView How-to Topics</span></span>
+<span data-ttu-id="fd68e-103">이 섹션의 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Controls.ListView> 컨트롤에 데이터 항목 집합을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd68e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="138e3-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="138e3-104">In This Section</span></span>  
- [<span data-ttu-id="138e3-105">헤더를 클릭하면 GridView 열 정렬</span><span class="sxs-lookup"><span data-stu-id="138e3-105">Sort a GridView Column When a Header Is Clicked</span></span>](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [<span data-ttu-id="138e3-106">ListView의 사용자 지정 뷰 모드 만들기</span><span class="sxs-lookup"><span data-stu-id="138e3-106">Create a Custom View Mode for a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [<span data-ttu-id="138e3-107">템플릿을 사용하여 GridView 사용 ListView의 스타일 지정</span><span class="sxs-lookup"><span data-stu-id="138e3-107">Use Templates to Style a ListView That Uses GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [<span data-ttu-id="138e3-108">끌어 온 GridView 열 머리글의 스타일 만들기</span><span class="sxs-lookup"><span data-stu-id="138e3-108">Create a Style for a Dragged GridView Column Header</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [<span data-ttu-id="138e3-109">GridView를 사용하여 ListView 콘텐츠 표시</span><span class="sxs-lookup"><span data-stu-id="138e3-109">Display ListView Contents by Using a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [<span data-ttu-id="138e3-110">ListView에서 트리거를 사용하여 선택한 항목의 스타일 지정</span><span class="sxs-lookup"><span data-stu-id="138e3-110">Use Triggers to Style Selected Items in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [<span data-ttu-id="138e3-111">CheckBox를 사용하여 ListViewItems 만들기</span><span class="sxs-lookup"><span data-stu-id="138e3-111">Create ListViewItems with a CheckBox</span></span>](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [<span data-ttu-id="138e3-112">GridViewRowPresenter를 사용하여 데이터 표시</span><span class="sxs-lookup"><span data-stu-id="138e3-112">Display Data by Using GridViewRowPresenter</span></span>](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [<span data-ttu-id="138e3-113">GridView를 구현하는 ListView의 항목 그룹화</span><span class="sxs-lookup"><span data-stu-id="138e3-113">Group Items in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="138e3-114">GridView를 구현하는 ListView 행의 스타일 지정</span><span class="sxs-lookup"><span data-stu-id="138e3-114">Style a Row in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="138e3-115">ListView에 있는 열의 가로 맞춤 변경</span><span class="sxs-lookup"><span data-stu-id="138e3-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [<span data-ttu-id="138e3-116">ListView의 각 항목에 대한 MouseDoubleClick 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="138e3-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fd68e-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="fd68e-104">In This Section</span></span>  
+ [<span data-ttu-id="fd68e-105">헤더를 클릭하면 GridView 열 정렬</span><span class="sxs-lookup"><span data-stu-id="fd68e-105">Sort a GridView Column When a Header Is Clicked</span></span>](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [<span data-ttu-id="fd68e-106">ListView의 사용자 지정 뷰 모드 만들기</span><span class="sxs-lookup"><span data-stu-id="fd68e-106">Create a Custom View Mode for a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [<span data-ttu-id="fd68e-107">템플릿을 사용하여 GridView 사용 ListView의 스타일 지정</span><span class="sxs-lookup"><span data-stu-id="fd68e-107">Use Templates to Style a ListView That Uses GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [<span data-ttu-id="fd68e-108">끌어 온 GridView 열 머리글의 스타일 만들기</span><span class="sxs-lookup"><span data-stu-id="fd68e-108">Create a Style for a Dragged GridView Column Header</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [<span data-ttu-id="fd68e-109">GridView를 사용하여 ListView 콘텐츠 표시</span><span class="sxs-lookup"><span data-stu-id="fd68e-109">Display ListView Contents by Using a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
+ [<span data-ttu-id="fd68e-110">ListView에서 트리거를 사용하여 선택한 항목의 스타일 지정</span><span class="sxs-lookup"><span data-stu-id="fd68e-110">Use Triggers to Style Selected Items in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [<span data-ttu-id="fd68e-111">CheckBox를 사용하여 ListViewItems 만들기</span><span class="sxs-lookup"><span data-stu-id="fd68e-111">Create ListViewItems with a CheckBox</span></span>](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
+ [<span data-ttu-id="fd68e-112">GridViewRowPresenter를 사용하여 데이터 표시</span><span class="sxs-lookup"><span data-stu-id="fd68e-112">Display Data by Using GridViewRowPresenter</span></span>](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [<span data-ttu-id="fd68e-113">GridView를 구현하는 ListView의 항목 그룹화</span><span class="sxs-lookup"><span data-stu-id="fd68e-113">Group Items in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="fd68e-114">GridView를 구현하는 ListView 행의 스타일 지정</span><span class="sxs-lookup"><span data-stu-id="fd68e-114">Style a Row in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="fd68e-115">ListView에 있는 열의 가로 맞춤 변경</span><span class="sxs-lookup"><span data-stu-id="fd68e-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [<span data-ttu-id="fd68e-116">ListView의 각 항목에 대한 MouseDoubleClick 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="fd68e-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
-## <a name="reference"></a><span data-ttu-id="138e3-117">참조</span><span class="sxs-lookup"><span data-stu-id="138e3-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fd68e-117">참조</span><span class="sxs-lookup"><span data-stu-id="fd68e-117">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.ListViewItem>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="138e3-118">관련 단원</span><span class="sxs-lookup"><span data-stu-id="138e3-118">Related Sections</span></span>  
- [<span data-ttu-id="138e3-119">ListView 개요</span><span class="sxs-lookup"><span data-stu-id="138e3-119">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="fd68e-118">관련 단원</span><span class="sxs-lookup"><span data-stu-id="fd68e-118">Related Sections</span></span>  
+ [<span data-ttu-id="fd68e-119">ListView 개요</span><span class="sxs-lookup"><span data-stu-id="fd68e-119">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)

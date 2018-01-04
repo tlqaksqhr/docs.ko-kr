@@ -19,27 +19,28 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4beb386528829bace92be6add471b87fb434d74
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2c2776bda3cebfbe0d614666ce234c10a1ab466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="bitmap-effects"></a><span data-ttu-id="91028-102">비트맵 효과</span><span class="sxs-lookup"><span data-stu-id="91028-102">Bitmap Effects</span></span>
-<span data-ttu-id="91028-103">이 섹션의 항목을 사용 하 여 비트맵 이미지 시각 효과 적용 하는 방법에 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="91028-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="bitmap-effects"></a><span data-ttu-id="66f82-102">비트맵 효과</span><span class="sxs-lookup"><span data-stu-id="66f82-102">Bitmap Effects</span></span>
+<span data-ttu-id="66f82-103">이 섹션의 항목을 사용 하 여 비트맵 이미지 시각 효과 적용 하는 방법에 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="66f82-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="91028-104">에 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 이후 버전의 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="91028-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="91028-105">사용 하려는 경우는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스, 사용 되지 않음 예외가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="91028-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="91028-106">클래스 대신에는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는는 <xref:System.Windows.Media.Effects.Effect> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="91028-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="91028-107">대부분의 경우에는 <xref:System.Windows.Media.Effects.Effect> 클래스는 훨씬 더 빨라집니다.</span><span class="sxs-lookup"><span data-stu-id="91028-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
+>  <span data-ttu-id="66f82-104">에 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 이후 버전의 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="66f82-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="66f82-105">사용 하려는 경우는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스, 사용 되지 않음 예외가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="66f82-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="66f82-106">클래스 대신에는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는는 <xref:System.Windows.Media.Effects.Effect> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="66f82-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="66f82-107">대부분의 경우에는 <xref:System.Windows.Media.Effects.Effect> 클래스는 훨씬 더 빨라집니다.</span><span class="sxs-lookup"><span data-stu-id="66f82-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="91028-108">단원 내용</span><span class="sxs-lookup"><span data-stu-id="91028-108">In This Section</span></span>  
- [<span data-ttu-id="91028-109">비트맵 효과 개요</span><span class="sxs-lookup"><span data-stu-id="91028-109">Bitmap Effects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="66f82-108">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="66f82-108">In This Section</span></span>  
+ [<span data-ttu-id="66f82-109">비트맵 효과 개요</span><span class="sxs-lookup"><span data-stu-id="66f82-109">Bitmap Effects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="91028-110">참조</span><span class="sxs-lookup"><span data-stu-id="91028-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="66f82-110">참조</span><span class="sxs-lookup"><span data-stu-id="66f82-110">Reference</span></span>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
   
  <xref:System.Windows.Media.Effects>  
   
-## <a name="related-sections"></a><span data-ttu-id="91028-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="91028-111">Related Sections</span></span>  
- [<span data-ttu-id="91028-112">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="91028-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="66f82-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="66f82-111">Related Sections</span></span>  
+ [<span data-ttu-id="66f82-112">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="66f82-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [<span data-ttu-id="91028-113">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="91028-113">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [<span data-ttu-id="66f82-113">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="66f82-113">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

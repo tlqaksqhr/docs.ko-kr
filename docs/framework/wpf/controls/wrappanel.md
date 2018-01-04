@@ -18,16 +18,17 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fcef86bb9cb0ee2cb038b4737af3f54f8c505b31
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e13ad75ca7c6b027ea1423e13934228a2ace4c2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wrappanel"></a><span data-ttu-id="447cf-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="447cf-102">WrapPanel</span></span>
-<span data-ttu-id="447cf-103"><xref:System.Windows.Controls.WrapPanel> 요소에서 왼쪽에서 오른쪽, 내용을 포함 하는 상자의 가장자리에 다음 줄으로 자식 요소를 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="447cf-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
+# <a name="wrappanel"></a><span data-ttu-id="7c995-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="7c995-102">WrapPanel</span></span>
+<span data-ttu-id="7c995-103"><xref:System.Windows.Controls.WrapPanel> 요소에서 왼쪽에서 오른쪽, 내용을 포함 하는 상자의 가장자리에 다음 줄으로 자식 요소를 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c995-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="447cf-104">참조</span><span class="sxs-lookup"><span data-stu-id="447cf-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7c995-104">참조</span><span class="sxs-lookup"><span data-stu-id="7c995-104">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -42,9 +43,9 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="447cf-105">관련 단원</span><span class="sxs-lookup"><span data-stu-id="447cf-105">Related Sections</span></span>  
- [<span data-ttu-id="447cf-106">레이아웃</span><span class="sxs-lookup"><span data-stu-id="447cf-106">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="7c995-105">관련 단원</span><span class="sxs-lookup"><span data-stu-id="7c995-105">Related Sections</span></span>  
+ [<span data-ttu-id="7c995-106">레이아웃</span><span class="sxs-lookup"><span data-stu-id="7c995-106">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="447cf-107">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="447cf-107">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="7c995-107">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="7c995-107">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="447cf-108">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="447cf-108">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="7c995-108">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="7c995-108">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

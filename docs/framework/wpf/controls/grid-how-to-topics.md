@@ -17,25 +17,26 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4288c2d9847edb38cec4d79e73ea713d3ab031f3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 50820c87948fa9e1d81126a00b1b989e01242303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="grid-how-to-topics"></a><span data-ttu-id="a2d39-102">Grid 방법 항목</span><span class="sxs-lookup"><span data-stu-id="a2d39-102">Grid How-to Topics</span></span>
-<span data-ttu-id="a2d39-103">이 섹션의 항목 사용 하 여 요소를 배치 하는 방법에 설명 된 <xref:System.Windows.Controls.Grid> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="a2d39-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
+# <a name="grid-how-to-topics"></a><span data-ttu-id="7acae-102">Grid 방법 항목</span><span class="sxs-lookup"><span data-stu-id="7acae-102">Grid How-to Topics</span></span>
+<span data-ttu-id="7acae-103">이 섹션의 항목 사용 하 여 요소를 배치 하는 방법에 설명 된 <xref:System.Windows.Controls.Grid> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="7acae-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a2d39-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="a2d39-104">In This Section</span></span>  
- [<span data-ttu-id="a2d39-105">Grid를 사용하여 표준 UI 대화 상자 빌드</span><span class="sxs-lookup"><span data-stu-id="a2d39-105">Build a Standard UI Dialog Box by Using Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [<span data-ttu-id="a2d39-106">복잡한 모눈 만들기</span><span class="sxs-lookup"><span data-stu-id="a2d39-106">Create a Complex Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [<span data-ttu-id="a2d39-107">Grid 요소 만들기</span><span class="sxs-lookup"><span data-stu-id="a2d39-107">Create a Grid Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [<span data-ttu-id="a2d39-108">GridLengthConverter 개체 만들기 및 사용</span><span class="sxs-lookup"><span data-stu-id="a2d39-108">Create and Use a GridLengthConverter Object</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [<span data-ttu-id="a2d39-109">ColumnDefinitionsCollections 및 RowDefinitionsCollections를 사용하여 열 및 행 조작</span><span class="sxs-lookup"><span data-stu-id="a2d39-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [<span data-ttu-id="a2d39-110">Grid의 자식 요소 위치 지정</span><span class="sxs-lookup"><span data-stu-id="a2d39-110">Position the Child Elements of a Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [<span data-ttu-id="a2d39-111">모눈 간 크기 조정 속성 공유</span><span class="sxs-lookup"><span data-stu-id="a2d39-111">Share Sizing Properties Between Grids</span></span>](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7acae-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="7acae-104">In This Section</span></span>  
+ [<span data-ttu-id="7acae-105">Grid를 사용하여 표준 UI 대화 상자 빌드</span><span class="sxs-lookup"><span data-stu-id="7acae-105">Build a Standard UI Dialog Box by Using Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [<span data-ttu-id="7acae-106">복잡한 모눈 만들기</span><span class="sxs-lookup"><span data-stu-id="7acae-106">Create a Complex Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
+ [<span data-ttu-id="7acae-107">Grid 요소 만들기</span><span class="sxs-lookup"><span data-stu-id="7acae-107">Create a Grid Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
+ [<span data-ttu-id="7acae-108">GridLengthConverter 개체 만들기 및 사용</span><span class="sxs-lookup"><span data-stu-id="7acae-108">Create and Use a GridLengthConverter Object</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [<span data-ttu-id="7acae-109">ColumnDefinitionsCollections 및 RowDefinitionsCollections를 사용하여 열 및 행 조작</span><span class="sxs-lookup"><span data-stu-id="7acae-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [<span data-ttu-id="7acae-110">Grid의 자식 요소 위치 지정</span><span class="sxs-lookup"><span data-stu-id="7acae-110">Position the Child Elements of a Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
+ [<span data-ttu-id="7acae-111">모눈 간 크기 조정 속성 공유</span><span class="sxs-lookup"><span data-stu-id="7acae-111">Share Sizing Properties Between Grids</span></span>](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="reference"></a><span data-ttu-id="a2d39-112">참조</span><span class="sxs-lookup"><span data-stu-id="a2d39-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7acae-112">참조</span><span class="sxs-lookup"><span data-stu-id="7acae-112">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -50,9 +51,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="a2d39-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="a2d39-113">Related Sections</span></span>  
- [<span data-ttu-id="a2d39-114">레이아웃</span><span class="sxs-lookup"><span data-stu-id="a2d39-114">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="7acae-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="7acae-113">Related Sections</span></span>  
+ [<span data-ttu-id="7acae-114">레이아웃</span><span class="sxs-lookup"><span data-stu-id="7acae-114">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="a2d39-115">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="a2d39-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="7acae-115">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="7acae-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="a2d39-116">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="a2d39-116">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="7acae-116">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="7acae-116">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

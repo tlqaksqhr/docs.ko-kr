@@ -19,174 +19,175 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 957559cbc88855700471cc457f76d69ef5a296d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3afc0d2eabb7554d64a40863b182a6edefe169f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a><span data-ttu-id="467b4-102">연습: 혼합 응용 프로그램에서 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="467b4-102">Walkthrough: Binding to Data in Hybrid Applications</span></span>
-<span data-ttu-id="467b4-103">컨트롤에 데이터 소스 바인딩 반드시 기본 데이터에 액세스할 수 있는 사용자가 제공 하는 데 사용 하 든 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-103">Binding a data source to a control is essential for providing users with access to underlying data, whether you are using [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] or [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="467b4-104">이 연습에서는 둘 다 포함 하는 하이브리드 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-104">This walkthrough shows how you can use data binding in hybrid applications that include both [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controls.</span></span>  
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a><span data-ttu-id="4babe-102">연습: 혼합 응용 프로그램에서 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="4babe-102">Walkthrough: Binding to Data in Hybrid Applications</span></span>
+<span data-ttu-id="4babe-103">컨트롤에 데이터 소스 바인딩 반드시 기본 데이터에 액세스할 수 있는 사용자가 제공 하는 데 사용 하 든 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-103">Binding a data source to a control is essential for providing users with access to underlying data, whether you are using [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] or [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="4babe-104">이 연습에서는 둘 다 포함 하는 하이브리드 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-104">This walkthrough shows how you can use data binding in hybrid applications that include both [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controls.</span></span>  
   
- <span data-ttu-id="467b4-105">이 연습에서 설명하는 작업은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-105">Tasks illustrated in this walkthrough include:</span></span>  
+ <span data-ttu-id="4babe-105">이 연습에서 설명하는 작업은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-105">Tasks illustrated in this walkthrough include:</span></span>  
   
--   <span data-ttu-id="467b4-106">프로젝트 만들기.</span><span class="sxs-lookup"><span data-stu-id="467b4-106">Creating the project.</span></span>  
+-   <span data-ttu-id="4babe-106">프로젝트 만들기.</span><span class="sxs-lookup"><span data-stu-id="4babe-106">Creating the project.</span></span>  
   
--   <span data-ttu-id="467b4-107">데이터 템플릿 정의</span><span class="sxs-lookup"><span data-stu-id="467b4-107">Defining the data template.</span></span>  
+-   <span data-ttu-id="4babe-107">데이터 템플릿 정의</span><span class="sxs-lookup"><span data-stu-id="4babe-107">Defining the data template.</span></span>  
   
--   <span data-ttu-id="467b4-108">폼 레이아웃 지정</span><span class="sxs-lookup"><span data-stu-id="467b4-108">Specifying the form layout.</span></span>  
+-   <span data-ttu-id="4babe-108">폼 레이아웃 지정</span><span class="sxs-lookup"><span data-stu-id="4babe-108">Specifying the form layout.</span></span>  
   
--   <span data-ttu-id="467b4-109">데이터 바인딩 지정</span><span class="sxs-lookup"><span data-stu-id="467b4-109">Specifying data bindings.</span></span>  
+-   <span data-ttu-id="4babe-109">데이터 바인딩 지정</span><span class="sxs-lookup"><span data-stu-id="4babe-109">Specifying data bindings.</span></span>  
   
--   <span data-ttu-id="467b4-110">상호 운용성을 사용하여 데이터 표시</span><span class="sxs-lookup"><span data-stu-id="467b4-110">Displaying data by using interoperation.</span></span>  
+-   <span data-ttu-id="4babe-110">상호 운용성을 사용하여 데이터 표시</span><span class="sxs-lookup"><span data-stu-id="4babe-110">Displaying data by using interoperation.</span></span>  
   
--   <span data-ttu-id="467b4-111">프로젝트에 데이터 소스 추가</span><span class="sxs-lookup"><span data-stu-id="467b4-111">Adding the data source to the project.</span></span>  
+-   <span data-ttu-id="4babe-111">프로젝트에 데이터 소스 추가</span><span class="sxs-lookup"><span data-stu-id="4babe-111">Adding the data source to the project.</span></span>  
   
--   <span data-ttu-id="467b4-112">데이터 소스에 바인딩</span><span class="sxs-lookup"><span data-stu-id="467b4-112">Binding to the data source.</span></span>  
+-   <span data-ttu-id="4babe-112">데이터 소스에 바인딩</span><span class="sxs-lookup"><span data-stu-id="4babe-112">Binding to the data source.</span></span>  
   
- <span data-ttu-id="467b4-113">이 연습에서 설명 하는 작업의 전체 코드 목록을 보려면 [하이브리드 응용 프로그램 샘플의 데이터 바인딩](http://go.microsoft.com/fwlink/?LinkID=159983)합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-113">For a complete code listing of the tasks illustrated in this walkthrough, see [Data Binding in Hybrid Applications Sample](http://go.microsoft.com/fwlink/?LinkID=159983).</span></span>  
+ <span data-ttu-id="4babe-113">이 연습에서 설명 하는 작업의 전체 코드 목록을 보려면 [하이브리드 응용 프로그램 샘플의 데이터 바인딩](http://go.microsoft.com/fwlink/?LinkID=159983)합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-113">For a complete code listing of the tasks illustrated in this walkthrough, see [Data Binding in Hybrid Applications Sample](http://go.microsoft.com/fwlink/?LinkID=159983).</span></span>  
   
- <span data-ttu-id="467b4-114">작업을 완료하면 혼합 응용 프로그램의 데이터 바인딩 기능을 이해하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-114">When you are finished, you will have an understanding of data binding features in hybrid applications.</span></span>  
+ <span data-ttu-id="4babe-114">작업을 완료하면 혼합 응용 프로그램의 데이터 바인딩 기능을 이해하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-114">When you are finished, you will have an understanding of data binding features in hybrid applications.</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="467b4-115">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="467b4-115">Prerequisites</span></span>  
- <span data-ttu-id="467b4-116">이 연습을 완료하려면 다음 구성 요소가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-116">You need the following components to complete this walkthrough:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="4babe-115">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="4babe-115">Prerequisites</span></span>  
+ <span data-ttu-id="4babe-116">이 연습을 완료하려면 다음 구성 요소가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-116">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="467b4-117">.</span><span class="sxs-lookup"><span data-stu-id="467b4-117">.</span></span>  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="4babe-117">.</span><span class="sxs-lookup"><span data-stu-id="4babe-117">.</span></span>  
   
--   <span data-ttu-id="467b4-118">Microsoft SQL Server에서 실행 되는 Northwind 샘플 데이터베이스에 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-118">Access to the Northwind sample database running on Microsoft SQL Server.</span></span>  
+-   <span data-ttu-id="4babe-118">Microsoft SQL Server에서 실행 되는 Northwind 샘플 데이터베이스에 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-118">Access to the Northwind sample database running on Microsoft SQL Server.</span></span>  
   
-## <a name="creating-the-project"></a><span data-ttu-id="467b4-119">프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="467b4-119">Creating the Project</span></span>  
+## <a name="creating-the-project"></a><span data-ttu-id="4babe-119">프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="4babe-119">Creating the Project</span></span>  
   
-#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="467b4-120">프로젝트를 만들고 설정하려면</span><span class="sxs-lookup"><span data-stu-id="467b4-120">To create and set up the project</span></span>  
+#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="4babe-120">프로젝트를 만들고 설정하려면</span><span class="sxs-lookup"><span data-stu-id="4babe-120">To create and set up the project</span></span>  
   
-1.  <span data-ttu-id="467b4-121">이라는 WPF 응용 프로그램 프로젝트 만들기 `WPFWithWFAndDatabinding`합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-121">Create a WPF Application project named `WPFWithWFAndDatabinding`.</span></span>  
+1.  <span data-ttu-id="4babe-121">이라는 WPF 응용 프로그램 프로젝트 만들기 `WPFWithWFAndDatabinding`합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-121">Create a WPF Application project named `WPFWithWFAndDatabinding`.</span></span>  
   
-2.  <span data-ttu-id="467b4-122">솔루션 탐색기에서 다음 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-122">In Solution Explorer, add references to the following assemblies.</span></span>  
+2.  <span data-ttu-id="4babe-122">솔루션 탐색기에서 다음 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-122">In Solution Explorer, add references to the following assemblies.</span></span>  
   
-    -   <span data-ttu-id="467b4-123">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="467b4-123">WindowsFormsIntegration</span></span>  
+    -   <span data-ttu-id="4babe-123">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="4babe-123">WindowsFormsIntegration</span></span>  
   
-    -   <span data-ttu-id="467b4-124">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="467b4-124">System.Windows.Forms</span></span>  
+    -   <span data-ttu-id="4babe-124">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="4babe-124">System.Windows.Forms</span></span>  
   
-3.  <span data-ttu-id="467b4-125">MainWindow.xaml의 열은 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-125">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
+3.  <span data-ttu-id="4babe-125">MainWindow.xaml의 열은 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-125">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-4.  <span data-ttu-id="467b4-126">에 <xref:System.Windows.Window> 요소를 다음 추가 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 네임 스페이스 매핑.</span><span class="sxs-lookup"><span data-stu-id="467b4-126">In the <xref:System.Windows.Window> element, add the following [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] namespaces mapping.</span></span>  
+4.  <span data-ttu-id="4babe-126">에 <xref:System.Windows.Window> 요소를 다음 추가 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 네임 스페이스 매핑.</span><span class="sxs-lookup"><span data-stu-id="4babe-126">In the <xref:System.Windows.Window> element, add the following [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] namespaces mapping.</span></span>  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  <span data-ttu-id="467b4-127">기본 이름을 <xref:System.Windows.Controls.Grid> 요소 `mainGrid` 할당 하 여는 <xref:System.Windows.FrameworkElement.Name%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-127">Name the default <xref:System.Windows.Controls.Grid> element `mainGrid` by assigning the <xref:System.Windows.FrameworkElement.Name%2A> property.</span></span>  
+5.  <span data-ttu-id="4babe-127">기본 이름을 <xref:System.Windows.Controls.Grid> 요소 `mainGrid` 할당 하 여는 <xref:System.Windows.FrameworkElement.Name%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-127">Name the default <xref:System.Windows.Controls.Grid> element `mainGrid` by assigning the <xref:System.Windows.FrameworkElement.Name%2A> property.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
-## <a name="defining-the-data-template"></a><span data-ttu-id="467b4-128">데이터 템플릿 정의</span><span class="sxs-lookup"><span data-stu-id="467b4-128">Defining the Data Template</span></span>  
- <span data-ttu-id="467b4-129">고객의 마스터 목록은에 표시 되는 <xref:System.Windows.Controls.ListBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-129">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="467b4-130">다음 코드 예제에서는 정의 <xref:System.Windows.DataTemplate> 라는 개체 `ListItemsTemplate` 의 시각적 트리를 제어 하는 <xref:System.Windows.Controls.ListBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-130">The following code example defines a <xref:System.Windows.DataTemplate> object named `ListItemsTemplate` that controls the visual tree of the <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="467b4-131">이 <xref:System.Windows.DataTemplate> 에 할당 되는 <xref:System.Windows.Controls.ListBox> 컨트롤의 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-131">This <xref:System.Windows.DataTemplate> is assigned to the <xref:System.Windows.Controls.ListBox> control's <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property.</span></span>  
+## <a name="defining-the-data-template"></a><span data-ttu-id="4babe-128">데이터 템플릿 정의</span><span class="sxs-lookup"><span data-stu-id="4babe-128">Defining the Data Template</span></span>  
+ <span data-ttu-id="4babe-129">고객의 마스터 목록은에 표시 되는 <xref:System.Windows.Controls.ListBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-129">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="4babe-130">다음 코드 예제에서는 정의 <xref:System.Windows.DataTemplate> 라는 개체 `ListItemsTemplate` 의 시각적 트리를 제어 하는 <xref:System.Windows.Controls.ListBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-130">The following code example defines a <xref:System.Windows.DataTemplate> object named `ListItemsTemplate` that controls the visual tree of the <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="4babe-131">이 <xref:System.Windows.DataTemplate> 에 할당 되는 <xref:System.Windows.Controls.ListBox> 컨트롤의 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-131">This <xref:System.Windows.DataTemplate> is assigned to the <xref:System.Windows.Controls.ListBox> control's <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property.</span></span>  
   
-#### <a name="to-define-the-data-template"></a><span data-ttu-id="467b4-132">데이터 템플릿을 정의하려면</span><span class="sxs-lookup"><span data-stu-id="467b4-132">To define the data template</span></span>  
+#### <a name="to-define-the-data-template"></a><span data-ttu-id="4babe-132">데이터 템플릿을 정의하려면</span><span class="sxs-lookup"><span data-stu-id="4babe-132">To define the data template</span></span>  
   
--   <span data-ttu-id="467b4-133">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-133">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="4babe-133">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-133">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
-## <a name="specifying-the-form-layout"></a><span data-ttu-id="467b4-134">폼 레이아웃 지정</span><span class="sxs-lookup"><span data-stu-id="467b4-134">Specifying the Form Layout</span></span>  
- <span data-ttu-id="467b4-135">폼의 레이아웃은 세 개의 행과 세 개의 열이 있는 그리드로 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-135">The layout of the form is defined by a grid with three rows and three columns.</span></span> <span data-ttu-id="467b4-136"><xref:System.Windows.Controls.Label>Customers 테이블의 각 열을 식별 하는 컨트롤이 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-136"><xref:System.Windows.Controls.Label> controls are provided to identify each column in the Customers table.</span></span>  
+## <a name="specifying-the-form-layout"></a><span data-ttu-id="4babe-134">폼 레이아웃 지정</span><span class="sxs-lookup"><span data-stu-id="4babe-134">Specifying the Form Layout</span></span>  
+ <span data-ttu-id="4babe-135">폼의 레이아웃은 세 개의 행과 세 개의 열이 있는 그리드로 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-135">The layout of the form is defined by a grid with three rows and three columns.</span></span> <span data-ttu-id="4babe-136"><xref:System.Windows.Controls.Label>Customers 테이블의 각 열을 식별 하는 컨트롤이 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-136"><xref:System.Windows.Controls.Label> controls are provided to identify each column in the Customers table.</span></span>  
   
-#### <a name="to-set-up-the-grid-layout"></a><span data-ttu-id="467b4-137">그리드 레이아웃을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="467b4-137">To set up the Grid layout</span></span>  
+#### <a name="to-set-up-the-grid-layout"></a><span data-ttu-id="4babe-137">그리드 레이아웃을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="4babe-137">To set up the Grid layout</span></span>  
   
--   <span data-ttu-id="467b4-138">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-138">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="4babe-138">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-138">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
-#### <a name="to-set-up-the-label-controls"></a><span data-ttu-id="467b4-139">레이블 컨트롤을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="467b4-139">To set up the Label controls</span></span>  
+#### <a name="to-set-up-the-label-controls"></a><span data-ttu-id="4babe-139">레이블 컨트롤을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="4babe-139">To set up the Label controls</span></span>  
   
--   <span data-ttu-id="467b4-140">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-140">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="4babe-140">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-140">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
-## <a name="specifying-data-bindings"></a><span data-ttu-id="467b4-141">데이터 바인딩 지정</span><span class="sxs-lookup"><span data-stu-id="467b4-141">Specifying Data Bindings</span></span>  
- <span data-ttu-id="467b4-142">고객의 마스터 목록은에 표시 되는 <xref:System.Windows.Controls.ListBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-142">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="467b4-143">첨부 된 `ListItemsTemplate` 바인딩하는 <xref:System.Windows.Controls.TextBlock> 컨트롤을 `ContactName` 데이터베이스에서 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-143">The attached `ListItemsTemplate` binds a <xref:System.Windows.Controls.TextBlock> control to the `ContactName` field from the database.</span></span>  
+## <a name="specifying-data-bindings"></a><span data-ttu-id="4babe-141">데이터 바인딩 지정</span><span class="sxs-lookup"><span data-stu-id="4babe-141">Specifying Data Bindings</span></span>  
+ <span data-ttu-id="4babe-142">고객의 마스터 목록은에 표시 되는 <xref:System.Windows.Controls.ListBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-142">The master list of customers is displayed in a <xref:System.Windows.Controls.ListBox> control.</span></span> <span data-ttu-id="4babe-143">첨부 된 `ListItemsTemplate` 바인딩하는 <xref:System.Windows.Controls.TextBlock> 컨트롤을 `ContactName` 데이터베이스에서 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-143">The attached `ListItemsTemplate` binds a <xref:System.Windows.Controls.TextBlock> control to the `ContactName` field from the database.</span></span>  
   
- <span data-ttu-id="467b4-144">몇 개에 각 고객 레코드의 세부 정보가 표시 됩니다 <xref:System.Windows.Controls.TextBox> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-144">The details of each customer record are displayed in several <xref:System.Windows.Controls.TextBox> controls.</span></span>  
+ <span data-ttu-id="4babe-144">몇 개에 각 고객 레코드의 세부 정보가 표시 됩니다 <xref:System.Windows.Controls.TextBox> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-144">The details of each customer record are displayed in several <xref:System.Windows.Controls.TextBox> controls.</span></span>  
   
-#### <a name="to-specify-data-bindings"></a><span data-ttu-id="467b4-145">데이터 바인딩을 지정하려면</span><span class="sxs-lookup"><span data-stu-id="467b4-145">To specify data bindings</span></span>  
+#### <a name="to-specify-data-bindings"></a><span data-ttu-id="4babe-145">데이터 바인딩을 지정하려면</span><span class="sxs-lookup"><span data-stu-id="4babe-145">To specify data bindings</span></span>  
   
--   <span data-ttu-id="467b4-146">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-146">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="4babe-146">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-146">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
-     <span data-ttu-id="467b4-147"><xref:System.Windows.Data.Binding> 바인딩 클래스는 <xref:System.Windows.Controls.TextBox> 컨트롤을 데이터베이스에 적절 한 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-147">The <xref:System.Windows.Data.Binding> class binds the <xref:System.Windows.Controls.TextBox> controls to the appropriate fields in the database.</span></span>  
+     <span data-ttu-id="4babe-147"><xref:System.Windows.Data.Binding> 바인딩 클래스는 <xref:System.Windows.Controls.TextBox> 컨트롤을 데이터베이스에 적절 한 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-147">The <xref:System.Windows.Data.Binding> class binds the <xref:System.Windows.Controls.TextBox> controls to the appropriate fields in the database.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
   
-## <a name="displaying-data-by-using-interoperation"></a><span data-ttu-id="467b4-148">상호 운용성을 사용하여 데이터 표시</span><span class="sxs-lookup"><span data-stu-id="467b4-148">Displaying Data by Using Interoperation</span></span>  
- <span data-ttu-id="467b4-149">에 해당 하 고 선택한 고객 주문이 표시 되는지는 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 라는 컨트롤 `dataGridView1`합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-149">The orders corresponding to the selected customer are displayed in a <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> control named `dataGridView1`.</span></span> <span data-ttu-id="467b4-150">`dataGridView1` 컨트롤이 코드 숨김 파일에서 데이터 원본에 바인딩되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-150">The `dataGridView1` control is bound to the data source in the code-behind file.</span></span> <span data-ttu-id="467b4-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> 이 부모 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> control is the parent of this [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
+## <a name="displaying-data-by-using-interoperation"></a><span data-ttu-id="4babe-148">상호 운용성을 사용하여 데이터 표시</span><span class="sxs-lookup"><span data-stu-id="4babe-148">Displaying Data by Using Interoperation</span></span>  
+ <span data-ttu-id="4babe-149">에 해당 하 고 선택한 고객 주문이 표시 되는지는 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 라는 컨트롤 `dataGridView1`합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-149">The orders corresponding to the selected customer are displayed in a <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> control named `dataGridView1`.</span></span> <span data-ttu-id="4babe-150">`dataGridView1` 컨트롤이 코드 숨김 파일에서 데이터 원본에 바인딩되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-150">The `dataGridView1` control is bound to the data source in the code-behind file.</span></span> <span data-ttu-id="4babe-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> 이 부모 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-151">A <xref:System.Windows.Forms.Integration.WindowsFormsHost> control is the parent of this [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
   
-#### <a name="to-display-data-in-the-datagridview-control"></a><span data-ttu-id="467b4-152">DataGridView 컨트롤에 데이터를 표시하려면</span><span class="sxs-lookup"><span data-stu-id="467b4-152">To display data in the DataGridView control</span></span>  
+#### <a name="to-display-data-in-the-datagridview-control"></a><span data-ttu-id="4babe-152">DataGridView 컨트롤에 데이터를 표시하려면</span><span class="sxs-lookup"><span data-stu-id="4babe-152">To display data in the DataGridView control</span></span>  
   
--   <span data-ttu-id="467b4-153">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-153">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
+-   <span data-ttu-id="4babe-153">다음 XAML을 복사는 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-153">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element's declaration.</span></span>  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
-## <a name="adding-the-data-source-to-the-project"></a><span data-ttu-id="467b4-154">프로젝트에 데이터 소스 추가</span><span class="sxs-lookup"><span data-stu-id="467b4-154">Adding the Data Source to the Project</span></span>  
- <span data-ttu-id="467b4-155">와 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], 프로젝트에 데이터 소스를 쉽게 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-155">With [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], you can easily add a data source to your project.</span></span> <span data-ttu-id="467b4-156">이 절차에서는 강력한 형식의 데이터 집합을 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-156">This procedure adds a strongly typed data set to your project.</span></span> <span data-ttu-id="467b4-157">선택한 각 테이블에 대한 테이블 어댑터 같은 여러 가지 다른 지원 클래스도 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-157">Several other support classes, such as table adapters for each of the chosen tables, are also added.</span></span>  
+## <a name="adding-the-data-source-to-the-project"></a><span data-ttu-id="4babe-154">프로젝트에 데이터 소스 추가</span><span class="sxs-lookup"><span data-stu-id="4babe-154">Adding the Data Source to the Project</span></span>  
+ <span data-ttu-id="4babe-155">와 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], 프로젝트에 데이터 소스를 쉽게 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-155">With [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], you can easily add a data source to your project.</span></span> <span data-ttu-id="4babe-156">이 절차에서는 강력한 형식의 데이터 집합을 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-156">This procedure adds a strongly typed data set to your project.</span></span> <span data-ttu-id="4babe-157">선택한 각 테이블에 대한 테이블 어댑터 같은 여러 가지 다른 지원 클래스도 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-157">Several other support classes, such as table adapters for each of the chosen tables, are also added.</span></span>  
   
-#### <a name="to-add-the-data-source"></a><span data-ttu-id="467b4-158">데이터 소스를 추가하려면</span><span class="sxs-lookup"><span data-stu-id="467b4-158">To add the data source</span></span>  
+#### <a name="to-add-the-data-source"></a><span data-ttu-id="4babe-158">데이터 소스를 추가하려면</span><span class="sxs-lookup"><span data-stu-id="4babe-158">To add the data source</span></span>  
   
-1.  <span data-ttu-id="467b4-159">**데이터** 메뉴 선택 **새 데이터 소스 추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-159">From the **Data** menu, select **Add New Data Source**.</span></span>  
+1.  <span data-ttu-id="4babe-159">**데이터** 메뉴 선택 **새 데이터 소스 추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-159">From the **Data** menu, select **Add New Data Source**.</span></span>  
   
-2.  <span data-ttu-id="467b4-160">에 **데이터 소스 구성 마법사**, 데이터 집합을 사용 하 여 Northwind 데이터베이스에 대 한 연결을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-160">In the **Data Source Configuration Wizard**, create a connection to the Northwind database by using a dataset.</span></span> <span data-ttu-id="467b4-161">자세한 내용은 참조 [하는 방법: 데이터베이스의 데이터에 연결](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-161">For more information, see [How to: Connect to Data in a Database](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span></span>  
+2.  <span data-ttu-id="4babe-160">에 **데이터 소스 구성 마법사**, 데이터 집합을 사용 하 여 Northwind 데이터베이스에 대 한 연결을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-160">In the **Data Source Configuration Wizard**, create a connection to the Northwind database by using a dataset.</span></span> <span data-ttu-id="4babe-161">자세한 내용은 참조 [하는 방법: 데이터베이스의 데이터에 연결](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-161">For more information, see [How to: Connect to Data in a Database](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).</span></span>  
   
-3.  <span data-ttu-id="467b4-162">메시지가 면는 **데이터 소스 구성 마법사**, 연결 문자열을 저장 `NorthwindConnectionString`합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-162">When you are prompted by the **Data Source Configuration Wizard**, save the connection string as `NorthwindConnectionString`.</span></span>  
+3.  <span data-ttu-id="4babe-162">메시지가 면는 **데이터 소스 구성 마법사**, 연결 문자열을 저장 `NorthwindConnectionString`합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-162">When you are prompted by the **Data Source Configuration Wizard**, save the connection string as `NorthwindConnectionString`.</span></span>  
   
-4.  <span data-ttu-id="467b4-163">데이터베이스 개체 선택 하는 메시지가 때 선택 된 `Customers` 및 `Orders` 테이블과 생성 된 데이터 집합 이름을 `NorthwindDataSet`합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-163">When you are prompted to choose your database objects, select the `Customers` and `Orders` tables, and name the generated data set `NorthwindDataSet`.</span></span>  
+4.  <span data-ttu-id="4babe-163">데이터베이스 개체 선택 하는 메시지가 때 선택 된 `Customers` 및 `Orders` 테이블과 생성 된 데이터 집합 이름을 `NorthwindDataSet`합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-163">When you are prompted to choose your database objects, select the `Customers` and `Orders` tables, and name the generated data set `NorthwindDataSet`.</span></span>  
   
-## <a name="binding-to-the-data-source"></a><span data-ttu-id="467b4-164">데이터 소스에 바인딩</span><span class="sxs-lookup"><span data-stu-id="467b4-164">Binding to the Data Source</span></span>  
- <span data-ttu-id="467b4-165"><xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> 구성 요소는 응용 프로그램의 데이터 원본에 대 한 일관 된 인터페이스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-165">The <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> component provides a uniform interface for the application's data source.</span></span> <span data-ttu-id="467b4-166">데이터 소스에 바인딩은 코드 숨김 파일에서 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-166">Binding to the data source is implemented in the code-behind file.</span></span>  
+## <a name="binding-to-the-data-source"></a><span data-ttu-id="4babe-164">데이터 소스에 바인딩</span><span class="sxs-lookup"><span data-stu-id="4babe-164">Binding to the Data Source</span></span>  
+ <span data-ttu-id="4babe-165"><xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> 구성 요소는 응용 프로그램의 데이터 원본에 대 한 일관 된 인터페이스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-165">The <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> component provides a uniform interface for the application's data source.</span></span> <span data-ttu-id="4babe-166">데이터 소스에 바인딩은 코드 숨김 파일에서 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-166">Binding to the data source is implemented in the code-behind file.</span></span>  
   
-#### <a name="to-bind-to-the-data-source"></a><span data-ttu-id="467b4-167">데이터 소스에 바인딩하려면</span><span class="sxs-lookup"><span data-stu-id="467b4-167">To bind to the data source</span></span>  
+#### <a name="to-bind-to-the-data-source"></a><span data-ttu-id="4babe-167">데이터 소스에 바인딩하려면</span><span class="sxs-lookup"><span data-stu-id="4babe-167">To bind to the data source</span></span>  
   
-1.  <span data-ttu-id="467b4-168">MainWindow.xaml.vb 또는 MainWindow.xaml.cs라는 코드 숨김 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-168">Open the code-behind file, which is named MainWindow.xaml.vb or MainWindow.xaml.cs.</span></span>  
+1.  <span data-ttu-id="4babe-168">MainWindow.xaml.vb 또는 MainWindow.xaml.cs라는 코드 숨김 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-168">Open the code-behind file, which is named MainWindow.xaml.vb or MainWindow.xaml.cs.</span></span>  
   
-2.  <span data-ttu-id="467b4-169">다음 코드를 복사는 `MainWindow` 클래스 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-169">Copy the following code into the `MainWindow` class definition.</span></span>  
+2.  <span data-ttu-id="4babe-169">다음 코드를 복사는 `MainWindow` 클래스 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-169">Copy the following code into the `MainWindow` class definition.</span></span>  
   
-     <span data-ttu-id="467b4-170">이 코드에서는 선언는 <xref:System.Windows.Forms.BindingSource> 구성 요소와 데이터베이스에 연결 하는 연관 된 도우미 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-170">This code declares the <xref:System.Windows.Forms.BindingSource> component and associated helper classes that connect to the database.</span></span>  
+     <span data-ttu-id="4babe-170">이 코드에서는 선언는 <xref:System.Windows.Forms.BindingSource> 구성 요소와 데이터베이스에 연결 하는 연관 된 도우미 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-170">This code declares the <xref:System.Windows.Forms.BindingSource> component and associated helper classes that connect to the database.</span></span>  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]  
   
-3.  <span data-ttu-id="467b4-171">다음 코드를 생성자에 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-171">Copy the following code into the constructor.</span></span>  
+3.  <span data-ttu-id="4babe-171">다음 코드를 생성자에 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-171">Copy the following code into the constructor.</span></span>  
   
-     <span data-ttu-id="467b4-172">이 코드를 만들고 초기화는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-172">This code creates and initializes the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
+     <span data-ttu-id="4babe-172">이 코드를 만들고 초기화는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-172">This code creates and initializes the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
      [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]  
   
-4.  <span data-ttu-id="467b4-173">MainWindow.xaml을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-173">Open MainWindow.xaml.</span></span>  
+4.  <span data-ttu-id="4babe-173">MainWindow.xaml을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-173">Open MainWindow.xaml.</span></span>  
   
-5.  <span data-ttu-id="467b4-174">디자인 보기 또는 XAML 보기에서 선택 된 <xref:System.Windows.Window> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-174">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>  
+5.  <span data-ttu-id="4babe-174">디자인 보기 또는 XAML 보기에서 선택 된 <xref:System.Windows.Window> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-174">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>  
   
-6.  <span data-ttu-id="467b4-175">속성 창에서 클릭 된 **이벤트** 탭 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-175">In the Properties window, click the **Events** tab.</span></span>  
+6.  <span data-ttu-id="4babe-175">속성 창에서 클릭 된 **이벤트** 탭 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-175">In the Properties window, click the **Events** tab.</span></span>  
   
-7.  <span data-ttu-id="467b4-176">두 번 클릭 하 여 <xref:System.Windows.FrameworkElement.Loaded> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-176">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
+7.  <span data-ttu-id="4babe-176">두 번 클릭 하 여 <xref:System.Windows.FrameworkElement.Loaded> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-176">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
   
-8.  <span data-ttu-id="467b4-177">다음 코드를 복사는 <xref:System.Windows.FrameworkElement.Loaded> 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-177">Copy the following code into the <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>  
+8.  <span data-ttu-id="4babe-177">다음 코드를 복사는 <xref:System.Windows.FrameworkElement.Loaded> 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-177">Copy the following code into the <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>  
   
-     <span data-ttu-id="467b4-178">이 코드에서는 할당는 <xref:System.Windows.Forms.BindingSource> 데이터 컨텍스트로 구성 요소 정보를 표시 하 고는 `Customers` 및 `Orders` 어댑터 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-178">This code assigns the <xref:System.Windows.Forms.BindingSource> component as the data context and populates the `Customers` and `Orders` adapter objects.</span></span>  
+     <span data-ttu-id="4babe-178">이 코드에서는 할당는 <xref:System.Windows.Forms.BindingSource> 데이터 컨텍스트로 구성 요소 정보를 표시 하 고는 `Customers` 및 `Orders` 어댑터 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-178">This code assigns the <xref:System.Windows.Forms.BindingSource> component as the data context and populates the `Customers` and `Orders` adapter objects.</span></span>  
   
      [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
      [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]  
   
-9. <span data-ttu-id="467b4-179">다음 코드를 복사는 `MainWindow` 클래스 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-179">Copy the following code into the `MainWindow` class definition.</span></span>  
+9. <span data-ttu-id="4babe-179">다음 코드를 복사는 `MainWindow` 클래스 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-179">Copy the following code into the `MainWindow` class definition.</span></span>  
   
-     <span data-ttu-id="467b4-180">이 메서드를 처리는 <xref:System.Windows.Data.CollectionView.CurrentChanged> 이벤트 및 데이터 바인딩을 현재 항목을 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-180">This method handles the <xref:System.Windows.Data.CollectionView.CurrentChanged> event and updates the current item of the data binding.</span></span>  
+     <span data-ttu-id="4babe-180">이 메서드를 처리는 <xref:System.Windows.Data.CollectionView.CurrentChanged> 이벤트 및 데이터 바인딩을 현재 항목을 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-180">This method handles the <xref:System.Windows.Data.CollectionView.CurrentChanged> event and updates the current item of the data binding.</span></span>  
   
      [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
   
-10. <span data-ttu-id="467b4-181">F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="467b4-181">Press F5 to build and run the application.</span></span>  
+10. <span data-ttu-id="4babe-181">F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="4babe-181">Press F5 to build and run the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="467b4-182">참고 항목</span><span class="sxs-lookup"><span data-stu-id="467b4-182">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4babe-182">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4babe-182">See Also</span></span>  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="467b4-183">WPF 디자이너</span><span class="sxs-lookup"><span data-stu-id="467b4-183">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
- [<span data-ttu-id="467b4-184">하이브리드 응용 프로그램 샘플에서 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="467b4-184">Data Binding in Hybrid Applications Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159983)  
- [<span data-ttu-id="467b4-185">연습: WPF에서 Windows Forms 복합 컨트롤 호스팅</span><span class="sxs-lookup"><span data-stu-id="467b4-185">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [<span data-ttu-id="467b4-186">연습: Windows Forms에서 WPF 복합 컨트롤 호스팅</span><span class="sxs-lookup"><span data-stu-id="467b4-186">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+ [<span data-ttu-id="4babe-183">WPF 디자이너</span><span class="sxs-lookup"><span data-stu-id="4babe-183">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="4babe-184">하이브리드 응용 프로그램 샘플에서 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="4babe-184">Data Binding in Hybrid Applications Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159983)  
+ [<span data-ttu-id="4babe-185">연습: WPF에서 Windows Forms 복합 컨트롤 호스팅</span><span class="sxs-lookup"><span data-stu-id="4babe-185">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="4babe-186">연습: Windows Forms에서 WPF 복합 컨트롤 호스팅</span><span class="sxs-lookup"><span data-stu-id="4babe-186">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

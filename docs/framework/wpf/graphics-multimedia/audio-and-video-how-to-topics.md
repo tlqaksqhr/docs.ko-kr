@@ -17,30 +17,31 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bea43192d7f9a5bd875914633118dd6609c7804b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a013eac5b3306339c82abaa62f97e4aad7d8ed76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="4169b-102">오디오 및 비디오 방법 항목</span><span class="sxs-lookup"><span data-stu-id="4169b-102">Audio and Video How-to Topics</span></span>
-<span data-ttu-id="4169b-103">다음 항목을 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.MediaElement> 응용 프로그램에서 오디오 및 비디오 콘텐츠에 통합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4169b-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
+# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="7de32-102">오디오 및 비디오 방법 항목</span><span class="sxs-lookup"><span data-stu-id="7de32-102">Audio and Video How-to Topics</span></span>
+<span data-ttu-id="7de32-103">다음 항목을 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.MediaElement> 응용 프로그램에서 오디오 및 비디오 콘텐츠에 통합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7de32-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4169b-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="4169b-104">In This Section</span></span>  
- [<span data-ttu-id="4169b-105">방법: 요소를 동적으로 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="4169b-105">How to: Add an Element Dynamically</span></span>](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419)  
- [<span data-ttu-id="4169b-106">MediaElement 제어(재생, 일시 중지, 정지, 볼륨 및 속도)</span><span class="sxs-lookup"><span data-stu-id="4169b-106">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [<span data-ttu-id="4169b-107">Storyboard를 사용하여 MediaElement 제어</span><span class="sxs-lookup"><span data-stu-id="4169b-107">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [<span data-ttu-id="4169b-108">사용자 이벤트를 사용하여 미디어 재생 트리거</span><span class="sxs-lookup"><span data-stu-id="4169b-108">Trigger Media Playback with a User Event</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [<span data-ttu-id="4169b-109">미디어 재생 반복</span><span class="sxs-lookup"><span data-stu-id="4169b-109">Repeat Media Playback</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [<span data-ttu-id="4169b-110">애니메이션이 있는 미디어 재생</span><span class="sxs-lookup"><span data-stu-id="4169b-110">Play Media with Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [<span data-ttu-id="4169b-111">MediaElement에서 변환 사용</span><span class="sxs-lookup"><span data-stu-id="4169b-111">Use Transforms on a MediaElement</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7de32-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="7de32-104">In This Section</span></span>  
+ [<span data-ttu-id="7de32-105">방법: 요소를 동적으로 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="7de32-105">How to: Add an Element Dynamically</span></span>](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419)  
+ [<span data-ttu-id="7de32-106">MediaElement 제어(재생, 일시 중지, 정지, 볼륨 및 속도)</span><span class="sxs-lookup"><span data-stu-id="7de32-106">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [<span data-ttu-id="7de32-107">Storyboard를 사용하여 MediaElement 제어</span><span class="sxs-lookup"><span data-stu-id="7de32-107">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [<span data-ttu-id="7de32-108">사용자 이벤트를 사용하여 미디어 재생 트리거</span><span class="sxs-lookup"><span data-stu-id="7de32-108">Trigger Media Playback with a User Event</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
+ [<span data-ttu-id="7de32-109">미디어 재생 반복</span><span class="sxs-lookup"><span data-stu-id="7de32-109">Repeat Media Playback</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
+ [<span data-ttu-id="7de32-110">애니메이션이 있는 미디어 재생</span><span class="sxs-lookup"><span data-stu-id="7de32-110">Play Media with Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
+ [<span data-ttu-id="7de32-111">MediaElement에서 변환 사용</span><span class="sxs-lookup"><span data-stu-id="7de32-111">Use Transforms on a MediaElement</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
   
-## <a name="reference"></a><span data-ttu-id="4169b-112">참조</span><span class="sxs-lookup"><span data-stu-id="4169b-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7de32-112">참조</span><span class="sxs-lookup"><span data-stu-id="7de32-112">Reference</span></span>  
  <xref:System.Windows.Controls.MediaElement>  
   
  <xref:System.Windows.Media.MediaPlayer>  
   
  <xref:System.Windows.Media.MediaTimeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="4169b-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="4169b-113">Related Sections</span></span>  
- [<span data-ttu-id="4169b-114">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="4169b-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="7de32-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="7de32-113">Related Sections</span></span>  
+ [<span data-ttu-id="7de32-114">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="7de32-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

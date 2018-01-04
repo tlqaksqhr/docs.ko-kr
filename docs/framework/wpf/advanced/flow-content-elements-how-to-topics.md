@@ -17,36 +17,37 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e58fbb6a577354f862d4b4d79e947e7618bd75a0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 472bb286f57701342be82d4a981714236e147932
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="f5ed6-102">유동 콘텐츠 요소 방법 항목</span><span class="sxs-lookup"><span data-stu-id="f5ed6-102">Flow Content Elements How-to Topics</span></span>
-<span data-ttu-id="f5ed6-103">이 섹션의 항목에는 다양 한 유동 콘텐츠 요소 및 관련된 기능을 사용 하 여 일반적인 작업을 수행 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5ed6-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  
+# <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="73863-102">유동 콘텐츠 요소 방법 항목</span><span class="sxs-lookup"><span data-stu-id="73863-102">Flow Content Elements How-to Topics</span></span>
+<span data-ttu-id="73863-103">이 섹션의 항목에는 다양 한 유동 콘텐츠 요소 및 관련된 기능을 사용 하 여 일반적인 작업을 수행 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="73863-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f5ed6-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="f5ed6-104">In This Section</span></span>  
- [<span data-ttu-id="f5ed6-105">단락 사이 간격 조정</span><span class="sxs-lookup"><span data-stu-id="f5ed6-105">Adjust Spacing Between Paragraphs</span></span>](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
- [<span data-ttu-id="f5ed6-106">프로그래밍 방식으로 표 작성</span><span class="sxs-lookup"><span data-stu-id="f5ed6-106">Build a Table Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [<span data-ttu-id="f5ed6-107">프로그래밍 방식으로 콘텐츠의 FlowDirection 변경</span><span class="sxs-lookup"><span data-stu-id="f5ed6-107">Change the FlowDirection of Content Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [<span data-ttu-id="f5ed6-108">프로그래밍 방식으로 TextWrapping 속성 변경</span><span class="sxs-lookup"><span data-stu-id="f5ed6-108">Change the TextWrapping Property Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [<span data-ttu-id="f5ed6-109">XAML로 테이블 정의</span><span class="sxs-lookup"><span data-stu-id="f5ed6-109">Define a Table with XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [<span data-ttu-id="f5ed6-110">텍스트 입력 체계 변경</span><span class="sxs-lookup"><span data-stu-id="f5ed6-110">Alter the Typography of Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [<span data-ttu-id="f5ed6-111">텍스트 잘라내기 사용</span><span class="sxs-lookup"><span data-stu-id="f5ed6-111">Enable Text Trimming</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [<span data-ttu-id="f5ed6-112">프로그래밍 방식으로 요소를 텍스트에 삽입</span><span class="sxs-lookup"><span data-stu-id="f5ed6-112">Insert an Element Into Text Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [<span data-ttu-id="f5ed6-113">Blocks 속성을 통한 유동 콘텐츠 요소 조작</span><span class="sxs-lookup"><span data-stu-id="f5ed6-113">Manipulate Flow Content Elements through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [<span data-ttu-id="f5ed6-114">Inlines 속성을 통한 유동 콘텐츠 요소 조작</span><span class="sxs-lookup"><span data-stu-id="f5ed6-114">Manipulate Flow Content Elements through the Inlines Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [<span data-ttu-id="f5ed6-115">Blocks 속성을 통한 FlowDocument 조작</span><span class="sxs-lookup"><span data-stu-id="f5ed6-115">Manipulate a FlowDocument through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [<span data-ttu-id="f5ed6-116">Columns 속성을 통해 테이블의 열 조작</span><span class="sxs-lookup"><span data-stu-id="f5ed6-116">Manipulate a Table's Columns through the Columns Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [<span data-ttu-id="f5ed6-117">RowGroups 속성을 통한 테이블의 행 그룹 조작</span><span class="sxs-lookup"><span data-stu-id="f5ed6-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [<span data-ttu-id="f5ed6-118">유동 콘텐츠 요소 사용</span><span class="sxs-lookup"><span data-stu-id="f5ed6-118">Use Flow Content Elements</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [<span data-ttu-id="f5ed6-119">FlowDocument 열 구분 속성 사용</span><span class="sxs-lookup"><span data-stu-id="f5ed6-119">Use FlowDocument Column-Separating Attributes</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+## <a name="in-this-section"></a><span data-ttu-id="73863-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="73863-104">In This Section</span></span>  
+ [<span data-ttu-id="73863-105">단락 사이 간격 조정</span><span class="sxs-lookup"><span data-stu-id="73863-105">Adjust Spacing Between Paragraphs</span></span>](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
+ [<span data-ttu-id="73863-106">프로그래밍 방식으로 표 작성</span><span class="sxs-lookup"><span data-stu-id="73863-106">Build a Table Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
+ [<span data-ttu-id="73863-107">프로그래밍 방식으로 콘텐츠의 FlowDirection 변경</span><span class="sxs-lookup"><span data-stu-id="73863-107">Change the FlowDirection of Content Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [<span data-ttu-id="73863-108">프로그래밍 방식으로 TextWrapping 속성 변경</span><span class="sxs-lookup"><span data-stu-id="73863-108">Change the TextWrapping Property Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
+ [<span data-ttu-id="73863-109">XAML로 테이블 정의</span><span class="sxs-lookup"><span data-stu-id="73863-109">Define a Table with XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
+ [<span data-ttu-id="73863-110">텍스트 입력 체계 변경</span><span class="sxs-lookup"><span data-stu-id="73863-110">Alter the Typography of Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
+ [<span data-ttu-id="73863-111">텍스트 잘라내기 사용</span><span class="sxs-lookup"><span data-stu-id="73863-111">Enable Text Trimming</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
+ [<span data-ttu-id="73863-112">프로그래밍 방식으로 요소를 텍스트에 삽입</span><span class="sxs-lookup"><span data-stu-id="73863-112">Insert an Element Into Text Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
+ [<span data-ttu-id="73863-113">Blocks 속성을 통한 유동 콘텐츠 요소 조작</span><span class="sxs-lookup"><span data-stu-id="73863-113">Manipulate Flow Content Elements through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [<span data-ttu-id="73863-114">Inlines 속성을 통한 유동 콘텐츠 요소 조작</span><span class="sxs-lookup"><span data-stu-id="73863-114">Manipulate Flow Content Elements through the Inlines Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [<span data-ttu-id="73863-115">Blocks 속성을 통한 FlowDocument 조작</span><span class="sxs-lookup"><span data-stu-id="73863-115">Manipulate a FlowDocument through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [<span data-ttu-id="73863-116">Columns 속성을 통해 테이블의 열 조작</span><span class="sxs-lookup"><span data-stu-id="73863-116">Manipulate a Table's Columns through the Columns Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [<span data-ttu-id="73863-117">RowGroups 속성을 통한 테이블의 행 그룹 조작</span><span class="sxs-lookup"><span data-stu-id="73863-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [<span data-ttu-id="73863-118">유동 콘텐츠 요소 사용</span><span class="sxs-lookup"><span data-stu-id="73863-118">Use Flow Content Elements</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
+ [<span data-ttu-id="73863-119">FlowDocument 열 구분 속성 사용</span><span class="sxs-lookup"><span data-stu-id="73863-119">Use FlowDocument Column-Separating Attributes</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
   
-## <a name="reference"></a><span data-ttu-id="f5ed6-120">참조</span><span class="sxs-lookup"><span data-stu-id="f5ed6-120">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="73863-120">참조</span><span class="sxs-lookup"><span data-stu-id="73863-120">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.Inline>  
   
-## <a name="related-sections"></a><span data-ttu-id="f5ed6-121">관련 단원</span><span class="sxs-lookup"><span data-stu-id="f5ed6-121">Related Sections</span></span>  
- [<span data-ttu-id="f5ed6-122">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="f5ed6-122">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="73863-121">관련 단원</span><span class="sxs-lookup"><span data-stu-id="73863-121">Related Sections</span></span>  
+ [<span data-ttu-id="73863-122">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="73863-122">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

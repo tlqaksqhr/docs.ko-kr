@@ -23,17 +23,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a7a2d3f2ee1be613cf10efe913b21d4b04912c9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 815efbe0a4adcacddeb4c1a70cc3c1fef21fed05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="9f8ab-102">방법: 응용 프로그램 세션 간의 응용 프로그램 범위 속성 유지 및 복원</span><span class="sxs-lookup"><span data-stu-id="9f8ab-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
-<span data-ttu-id="9f8ab-103">이 예제에는 응용 프로그램은 다음 경우에 응용 프로그램 범위의 속성 시작 복원 하는 방법 및 응용 프로그램이 종료 될 때 응용 프로그램 범위의 속성을 유지 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9f8ab-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
+# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="1e8d9-102">방법: 응용 프로그램 세션 간의 응용 프로그램 범위 속성 유지 및 복원</span><span class="sxs-lookup"><span data-stu-id="1e8d9-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
+<span data-ttu-id="1e8d9-103">이 예제에는 응용 프로그램은 다음 경우에 응용 프로그램 범위의 속성 시작 복원 하는 방법 및 응용 프로그램이 종료 될 때 응용 프로그램 범위의 속성을 유지 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1e8d9-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9f8ab-104">예제</span><span class="sxs-lookup"><span data-stu-id="9f8ab-104">Example</span></span>  
- <span data-ttu-id="9f8ab-105">응용 프로그램 범위 속성을 유지 하 고 격리 된 저장소에서 복원 하는 응용 프로그램.</span><span class="sxs-lookup"><span data-stu-id="9f8ab-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="9f8ab-106">격리 된 저장소에 파일 액세스 권한 없이 응용 프로그램에서 안전 하 게 사용할 수 있는 보호 된 저장소 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="9f8ab-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  
+## <a name="example"></a><span data-ttu-id="1e8d9-104">예</span><span class="sxs-lookup"><span data-stu-id="1e8d9-104">Example</span></span>  
+ <span data-ttu-id="1e8d9-105">응용 프로그램 범위 속성을 유지 하 고 격리 된 저장소에서 복원 하는 응용 프로그램.</span><span class="sxs-lookup"><span data-stu-id="1e8d9-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="1e8d9-106">격리 된 저장소에 파일 액세스 권한 없이 응용 프로그램에서 안전 하 게 사용할 수 있는 보호 된 저장소 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="1e8d9-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  
   
  [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
 [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  

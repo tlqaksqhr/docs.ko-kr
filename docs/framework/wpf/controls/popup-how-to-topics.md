@@ -17,21 +17,22 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6853b915cb133b2ea1cbc0579f3eb59e1e956f5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: dfe53e4782fda95142a9eaa8ab10227f5353612b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="popup-how-to-topics"></a><span data-ttu-id="5206e-102">팝업 방법 항목</span><span class="sxs-lookup"><span data-stu-id="5206e-102">Popup How-to Topics</span></span>
-<span data-ttu-id="5206e-103">이 섹션의 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤을 현재 응용 프로그램 창 위에 배치 되는 별도 창에 콘텐츠를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="5206e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup-how-to-topics"></a><span data-ttu-id="eeaca-102">팝업 방법 항목</span><span class="sxs-lookup"><span data-stu-id="eeaca-102">Popup How-to Topics</span></span>
+<span data-ttu-id="eeaca-103">이 섹션의 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤을 현재 응용 프로그램 창 위에 배치 되는 별도 창에 콘텐츠를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="eeaca-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5206e-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="5206e-104">In This Section</span></span>  
- [<span data-ttu-id="5206e-105">팝업에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5206e-105">Animate a Popup</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [<span data-ttu-id="5206e-106">사용자 지정 팝업 위치 지정</span><span class="sxs-lookup"><span data-stu-id="5206e-106">Specify a Custom Popup Position</span></span>](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+## <a name="in-this-section"></a><span data-ttu-id="eeaca-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="eeaca-104">In This Section</span></span>  
+ [<span data-ttu-id="eeaca-105">팝업에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="eeaca-105">Animate a Popup</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
+ [<span data-ttu-id="eeaca-106">사용자 지정 팝업 위치 지정</span><span class="sxs-lookup"><span data-stu-id="eeaca-106">Specify a Custom Popup Position</span></span>](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
   
-## <a name="reference"></a><span data-ttu-id="5206e-107">참조</span><span class="sxs-lookup"><span data-stu-id="5206e-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="eeaca-107">참조</span><span class="sxs-lookup"><span data-stu-id="eeaca-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="5206e-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="5206e-108">Related Sections</span></span>  
- [<span data-ttu-id="5206e-109">팝업 개요</span><span class="sxs-lookup"><span data-stu-id="5206e-109">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="eeaca-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="eeaca-108">Related Sections</span></span>  
+ [<span data-ttu-id="eeaca-109">팝업 개요</span><span class="sxs-lookup"><span data-stu-id="eeaca-109">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)

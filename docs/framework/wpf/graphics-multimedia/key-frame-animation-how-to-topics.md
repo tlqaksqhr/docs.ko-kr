@@ -17,36 +17,37 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9803b6182ed21c25b0bb3a54cecd246587da7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d42c65207cd6bec7f6af6936589cb86745028e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="38b7b-102">키 프레임 애니메이션 방법 항목</span><span class="sxs-lookup"><span data-stu-id="38b7b-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="38b7b-103">이 섹션의 항목에는 두 속성 값, 컨트롤 보간 보다 더 애니메이션 효과를 주는 키 프레임 애니메이션을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="38b7b-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="5059c-102">키 프레임 애니메이션 방법 항목</span><span class="sxs-lookup"><span data-stu-id="5059c-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="5059c-103">이 섹션의 항목에는 두 속성 값, 컨트롤 보간 보다 더 애니메이션 효과를 주는 키 프레임 애니메이션을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5059c-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="38b7b-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="38b7b-104">In This Section</span></span>  
- [<span data-ttu-id="38b7b-105">키 프레임을 사용하여 개체에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-106">키 프레임을 사용하여 부울에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-107">키 프레임을 사용하여 Double에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-108">키 프레임을 사용하여 매트릭스에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-109">키 프레임을 사용하여 점에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-110">키 프레임을 사용하여 사각형에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-111">키 프레임을 사용하여 문자열에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-112">키 프레임을 사용하여 색에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-113">키 프레임을 사용하여 크기 변경에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-114">키 프레임을 사용하여 테두리 두께에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="38b7b-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="38b7b-115">키 프레임 애니메이션 타이밍 제어</span><span class="sxs-lookup"><span data-stu-id="38b7b-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5059c-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="5059c-104">In This Section</span></span>  
+ [<span data-ttu-id="5059c-105">키 프레임을 사용하여 개체에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-106">키 프레임을 사용하여 부울에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-107">키 프레임을 사용하여 Double에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-108">키 프레임을 사용하여 매트릭스에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-109">키 프레임을 사용하여 점에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-110">키 프레임을 사용하여 사각형에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-111">키 프레임을 사용하여 문자열에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-112">키 프레임을 사용하여 색에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-113">키 프레임을 사용하여 크기 변경에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-114">키 프레임을 사용하여 테두리 두께에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="5059c-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="5059c-115">키 프레임 애니메이션 타이밍 제어</span><span class="sxs-lookup"><span data-stu-id="5059c-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="38b7b-116">참조</span><span class="sxs-lookup"><span data-stu-id="38b7b-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5059c-116">참조</span><span class="sxs-lookup"><span data-stu-id="5059c-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="38b7b-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="38b7b-117">See Also</span></span>  
- [<span data-ttu-id="38b7b-118">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="38b7b-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="38b7b-119">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="38b7b-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="38b7b-120">키 프레임 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="38b7b-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="5059c-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5059c-117">See Also</span></span>  
+ [<span data-ttu-id="5059c-118">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="5059c-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="5059c-119">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="5059c-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="5059c-120">키 프레임 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="5059c-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

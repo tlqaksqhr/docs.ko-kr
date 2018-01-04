@@ -17,24 +17,25 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8991a8f839520196addc235c4731246e448dcfa8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cd1cc6914a8bd22d1cc8787a45328716a6c4c97f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listbox-how-to-topics"></a><span data-ttu-id="ad7c4-102">ListBox 방법 항목</span><span class="sxs-lookup"><span data-stu-id="ad7c4-102">ListBox How-to Topics</span></span>
-<span data-ttu-id="ad7c4-103">이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.ListBox> 컨트롤을 선택할 수 있는 항목 목록을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad7c4-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
+# <a name="listbox-how-to-topics"></a><span data-ttu-id="9c5fb-102">ListBox 방법 항목</span><span class="sxs-lookup"><span data-stu-id="9c5fb-102">ListBox How-to Topics</span></span>
+<span data-ttu-id="9c5fb-103">이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.ListBox> 컨트롤을 선택할 수 있는 항목 목록을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c5fb-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ad7c4-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="ad7c4-104">In This Section</span></span>  
- [<span data-ttu-id="ad7c4-105">데이터에 ListBox 바인딩</span><span class="sxs-lookup"><span data-stu-id="ad7c4-105">Bind a ListBox to Data</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
- [<span data-ttu-id="ad7c4-106">ListBoxItem 가져오기</span><span class="sxs-lookup"><span data-stu-id="ad7c4-106">Get a ListBoxItem</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [<span data-ttu-id="ad7c4-107">방법: ItemsControl에 데이터 추가</span><span class="sxs-lookup"><span data-stu-id="ad7c4-107">How to: Add Data to an ItemsControl</span></span>](http://msdn.microsoft.com/en-us/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
- [<span data-ttu-id="ad7c4-108">ListBox의 스크롤 성능 개선</span><span class="sxs-lookup"><span data-stu-id="ad7c4-108">Improve the Scrolling Performance of a ListBox</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9c5fb-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9c5fb-104">In This Section</span></span>  
+ [<span data-ttu-id="9c5fb-105">데이터에 ListBox 바인딩</span><span class="sxs-lookup"><span data-stu-id="9c5fb-105">Bind a ListBox to Data</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
+ [<span data-ttu-id="9c5fb-106">ListBoxItem 가져오기</span><span class="sxs-lookup"><span data-stu-id="9c5fb-106">Get a ListBoxItem</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
+ [<span data-ttu-id="9c5fb-107">방법: ItemsControl에 데이터 추가</span><span class="sxs-lookup"><span data-stu-id="9c5fb-107">How to: Add Data to an ItemsControl</span></span>](http://msdn.microsoft.com/en-us/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
+ [<span data-ttu-id="9c5fb-108">ListBox의 스크롤 성능 개선</span><span class="sxs-lookup"><span data-stu-id="9c5fb-108">Improve the Scrolling Performance of a ListBox</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="ad7c4-109">참조</span><span class="sxs-lookup"><span data-stu-id="ad7c4-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9c5fb-109">참조</span><span class="sxs-lookup"><span data-stu-id="9c5fb-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   
  <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="ad7c4-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="ad7c4-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="9c5fb-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="9c5fb-110">Related Sections</span></span>

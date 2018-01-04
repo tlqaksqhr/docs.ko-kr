@@ -17,24 +17,25 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3e5e732fc52ed2ea4109c75e851f278f9a15e14
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d3dda23a9fd7b6c501f3f1d8222bfdea8f31fb10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="checkbox"></a><span data-ttu-id="39f7c-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="39f7c-102">CheckBox</span></span>
-<span data-ttu-id="39f7c-103">사용할 수 있습니다는 <xref:System.Windows.Controls.CheckBox> 에 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 응용 프로그램을 나타내는 사용자를 선택 하거나 선택을 취소할 수 있는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="39f7c-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="39f7c-104">단일 확인란을 사용할 수 있습니다 또는 두 개 이상의 확인란을 그룹화 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39f7c-104">You can use a single check box or you can group two or more check boxes.</span></span>  
+# <a name="checkbox"></a><span data-ttu-id="c474d-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="c474d-102">CheckBox</span></span>
+<span data-ttu-id="c474d-103">사용할 수 있습니다는 <xref:System.Windows.Controls.CheckBox> 에 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 응용 프로그램을 나타내는 사용자를 선택 하거나 선택을 취소할 수 있는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="c474d-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="c474d-104">단일 확인란을 사용할 수 있습니다 또는 두 개 이상의 확인란을 그룹화 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c474d-104">You can use a single check box or you can group two or more check boxes.</span></span>  
   
- <span data-ttu-id="39f7c-105">다음 그래픽에서는의 다양 한 상태는 <xref:System.Windows.Controls.CheckBox>합니다.</span><span class="sxs-lookup"><span data-stu-id="39f7c-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
+ <span data-ttu-id="c474d-105">다음 그래픽에서는의 다양 한 상태는 <xref:System.Windows.Controls.CheckBox>합니다.</span><span class="sxs-lookup"><span data-stu-id="c474d-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
   
- <span data-ttu-id="39f7c-106">![CheckBox 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="39f7c-106">![CheckBox states](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
-<span data-ttu-id="39f7c-107">다양 한 상태의 CheckBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="39f7c-107">CheckBox controls in different states</span></span>  
+ <span data-ttu-id="c474d-106">![CheckBox 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="c474d-106">![CheckBox states](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
+<span data-ttu-id="c474d-107">다양 한 상태의 CheckBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="c474d-107">CheckBox controls in different states</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="39f7c-108">참조</span><span class="sxs-lookup"><span data-stu-id="39f7c-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c474d-108">참조</span><span class="sxs-lookup"><span data-stu-id="c474d-108">Reference</span></span>  
  <xref:System.Windows.Controls.CheckBox>  
   <xref:System.Windows.Controls.RadioButton>  
   <xref:System.Windows.Controls.Primitives.ButtonBase>  
   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="39f7c-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="39f7c-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c474d-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="c474d-109">Related Sections</span></span>

@@ -19,23 +19,24 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ace9058a7f495a9cc2cf64398fd91338b7200f3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fbe50f6a282f93ca4f0a2e2be74dbcefa604014
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="geometries"></a><span data-ttu-id="52caa-102">Geometry</span><span class="sxs-lookup"><span data-stu-id="52caa-102">Geometries</span></span>
-<span data-ttu-id="52caa-103"><xref:System.Windows.Media.Geometry>렌더링 하는 데 사용 하는 다양 한 클래스는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 그래픽 개체, 적중 테스트 및 클리핑 영역을 정의</span><span class="sxs-lookup"><span data-stu-id="52caa-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
+# <a name="geometries"></a><span data-ttu-id="3a6ea-102">Geometry</span><span class="sxs-lookup"><span data-stu-id="3a6ea-102">Geometries</span></span>
+<span data-ttu-id="3a6ea-103"><xref:System.Windows.Media.Geometry>렌더링 하는 데 사용 하는 다양 한 클래스는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 그래픽 개체, 적중 테스트 및 클리핑 영역을 정의</span><span class="sxs-lookup"><span data-stu-id="3a6ea-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="52caa-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="52caa-104">In This Section</span></span>  
- [<span data-ttu-id="52caa-105">경로 태그 구문</span><span class="sxs-lookup"><span data-stu-id="52caa-105">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [<span data-ttu-id="52caa-106">Geometry 개요</span><span class="sxs-lookup"><span data-stu-id="52caa-106">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [<span data-ttu-id="52caa-107">방법 항목</span><span class="sxs-lookup"><span data-stu-id="52caa-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3a6ea-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="3a6ea-104">In This Section</span></span>  
+ [<span data-ttu-id="3a6ea-105">경로 태그 구문</span><span class="sxs-lookup"><span data-stu-id="3a6ea-105">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [<span data-ttu-id="3a6ea-106">Geometry 개요</span><span class="sxs-lookup"><span data-stu-id="3a6ea-106">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="3a6ea-107">방법 항목</span><span class="sxs-lookup"><span data-stu-id="3a6ea-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="52caa-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="52caa-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3a6ea-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3a6ea-108">See Also</span></span>  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="52caa-109">2차원 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="52caa-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="52caa-110">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="52caa-110">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="52caa-111">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="52caa-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="3a6ea-109">2차원 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="3a6ea-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="3a6ea-110">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="3a6ea-110">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="3a6ea-111">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="3a6ea-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

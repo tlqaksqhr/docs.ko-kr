@@ -18,28 +18,29 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7bebc19f06044ca2360d7f0c48d5ab1c51c1b62
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a0f55a8811380abd32f4c25fe83c16e62616f283
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="resources-wpf"></a><span data-ttu-id="a3c10-102">리소스(WPF)</span><span class="sxs-lookup"><span data-stu-id="a3c10-102">Resources (WPF)</span></span>
-<span data-ttu-id="a3c10-103">리소스는 응용 프로그램의 여러 위치에서 다시 사용할 수 있는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a3c10-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="a3c10-104">WPF는 다양 한 유형의 리소스를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="a3c10-104">WPF supports different types of resources.</span></span> <span data-ttu-id="a3c10-105">이러한 리소스는 주로 두 가지 유형의 리소스: XAML 리소스 및 리소스 데이터 파일.</span><span class="sxs-lookup"><span data-stu-id="a3c10-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="a3c10-106">XAML 리소스의 예로 브러시 및 스타일을 들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3c10-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="a3c10-107">리소스 데이터 파일은 응용 프로그램에 필요한 실행 파일이 아닌 데이터 파일.</span><span class="sxs-lookup"><span data-stu-id="a3c10-107">Resource data files are non-executable data files that an application needs.</span></span>  
+# <a name="resources-wpf"></a><span data-ttu-id="9a861-102">리소스(WPF)</span><span class="sxs-lookup"><span data-stu-id="9a861-102">Resources (WPF)</span></span>
+<span data-ttu-id="9a861-103">리소스는 응용 프로그램의 여러 위치에서 다시 사용할 수 있는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="9a861-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="9a861-104">WPF는 다양 한 유형의 리소스를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="9a861-104">WPF supports different types of resources.</span></span> <span data-ttu-id="9a861-105">이러한 리소스는 주로 두 가지 유형의 리소스: XAML 리소스 및 리소스 데이터 파일.</span><span class="sxs-lookup"><span data-stu-id="9a861-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="9a861-106">XAML 리소스의 예로 브러시 및 스타일을 들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a861-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="9a861-107">리소스 데이터 파일은 응용 프로그램에 필요한 실행 파일이 아닌 데이터 파일.</span><span class="sxs-lookup"><span data-stu-id="9a861-107">Resource data files are non-executable data files that an application needs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a3c10-108">단원 내용</span><span class="sxs-lookup"><span data-stu-id="a3c10-108">In This Section</span></span>  
- [<span data-ttu-id="a3c10-109">XAML 리소스</span><span class="sxs-lookup"><span data-stu-id="a3c10-109">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [<span data-ttu-id="a3c10-110">WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일</span><span class="sxs-lookup"><span data-stu-id="a3c10-110">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [<span data-ttu-id="a3c10-111">WPF의 Pack URI</span><span class="sxs-lookup"><span data-stu-id="a3c10-111">Pack URIs in WPF</span></span>](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9a861-108">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9a861-108">In This Section</span></span>  
+ [<span data-ttu-id="9a861-109">XAML 리소스</span><span class="sxs-lookup"><span data-stu-id="9a861-109">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [<span data-ttu-id="9a861-110">WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일</span><span class="sxs-lookup"><span data-stu-id="9a861-110">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
+ [<span data-ttu-id="9a861-111">WPF의 Pack URI</span><span class="sxs-lookup"><span data-stu-id="9a861-111">Pack URIs in WPF</span></span>](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a><span data-ttu-id="a3c10-112">참조</span><span class="sxs-lookup"><span data-stu-id="a3c10-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9a861-112">참조</span><span class="sxs-lookup"><span data-stu-id="9a861-112">Reference</span></span>  
  <xref:System.Windows.ResourceDictionary>  
   
- [<span data-ttu-id="a3c10-113">StaticResource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="a3c10-113">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [<span data-ttu-id="9a861-113">StaticResource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="9a861-113">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
   
- [<span data-ttu-id="a3c10-114">DynamicResource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="a3c10-114">DynamicResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [<span data-ttu-id="9a861-114">DynamicResource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="9a861-114">DynamicResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
   
- [<span data-ttu-id="a3c10-115">x:Key 지시문</span><span class="sxs-lookup"><span data-stu-id="a3c10-115">x:Key Directive</span></span>](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [<span data-ttu-id="9a861-115">x:Key 지시문</span><span class="sxs-lookup"><span data-stu-id="9a861-115">x:Key Directive</span></span>](../../../../docs/framework/xaml-services/x-key-directive.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="a3c10-116">관련 단원</span><span class="sxs-lookup"><span data-stu-id="a3c10-116">Related Sections</span></span>  
- [<span data-ttu-id="a3c10-117">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="a3c10-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="9a861-116">관련 단원</span><span class="sxs-lookup"><span data-stu-id="9a861-116">Related Sections</span></span>  
+ [<span data-ttu-id="9a861-117">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="9a861-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)

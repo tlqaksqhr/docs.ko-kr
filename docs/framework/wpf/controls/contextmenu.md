@@ -18,24 +18,25 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5098672b52f54ac618731a7007758a5dd516379
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a917a74650893aa7e8a4a10758aab48e164b822
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="contextmenu"></a><span data-ttu-id="f5f20-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="f5f20-102">ContextMenu</span></span>
-<span data-ttu-id="f5f20-103"><xref:System.Windows.Controls.ContextMenu> 표시 하는 컨트롤을 사용 하면 한 <xref:System.Windows.Controls.Menu> 컨트롤의 컨텍스트에 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f20-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="f5f20-104">일반적으로 <xref:System.Windows.Controls.ContextMenu> 에 노출 되는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 또는 키보드의 메뉴 단추를 마우스 오른쪽 단추를 통해 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f20-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
+# <a name="contextmenu"></a><span data-ttu-id="c7495-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="c7495-102">ContextMenu</span></span>
+<span data-ttu-id="c7495-103"><xref:System.Windows.Controls.ContextMenu> 표시 하는 컨트롤을 사용 하면 한 <xref:System.Windows.Controls.Menu> 컨트롤의 컨텍스트에 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7495-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="c7495-104">일반적으로 <xref:System.Windows.Controls.ContextMenu> 에 노출 되는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 또는 키보드의 메뉴 단추를 마우스 오른쪽 단추를 통해 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7495-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
   
- <span data-ttu-id="f5f20-105">다음 그림은 한 <xref:System.Windows.Controls.ContextMenu> 두 개의 서로 다른 상태에: 기본 상태와 열려 있는 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="f5f20-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="f5f20-106">기본 상태에서 컨트롤 축소 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5f20-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="f5f20-107">부모 메뉴의 위에 마우스 오른쪽 단추를 누르면 컨트롤을 확장 하 고 메뉴 항목이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5f20-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
+ <span data-ttu-id="c7495-105">다음 그림은 한 <xref:System.Windows.Controls.ContextMenu> 두 개의 서로 다른 상태에: 기본 상태와 열려 있는 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="c7495-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="c7495-106">기본 상태에서 컨트롤 축소 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7495-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="c7495-107">부모 메뉴의 위에 마우스 오른쪽 단추를 누르면 컨트롤을 확장 하 고 메뉴 항목이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7495-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
   
- <span data-ttu-id="f5f20-108">![ContextMenu 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="f5f20-108">![ContextMenu states](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
-<span data-ttu-id="f5f20-109">다양 한 상태의 ContextMenu</span><span class="sxs-lookup"><span data-stu-id="f5f20-109">ContextMenu in different states</span></span>  
+ <span data-ttu-id="c7495-108">![ContextMenu 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="c7495-108">![ContextMenu states](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
+<span data-ttu-id="c7495-109">다양 한 상태의 ContextMenu</span><span class="sxs-lookup"><span data-stu-id="c7495-109">ContextMenu in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f5f20-110">단원 내용</span><span class="sxs-lookup"><span data-stu-id="f5f20-110">In This Section</span></span>  
- [<span data-ttu-id="f5f20-111">ContextMenu 개요</span><span class="sxs-lookup"><span data-stu-id="f5f20-111">ContextMenu Overview</span></span>](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c7495-110">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="c7495-110">In This Section</span></span>  
+ [<span data-ttu-id="c7495-111">ContextMenu 개요</span><span class="sxs-lookup"><span data-stu-id="c7495-111">ContextMenu Overview</span></span>](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="f5f20-112">참조</span><span class="sxs-lookup"><span data-stu-id="f5f20-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c7495-112">참조</span><span class="sxs-lookup"><span data-stu-id="c7495-112">Reference</span></span>  
  <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="f5f20-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="f5f20-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c7495-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="c7495-113">Related Sections</span></span>

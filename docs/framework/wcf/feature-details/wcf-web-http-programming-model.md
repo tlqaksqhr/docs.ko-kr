@@ -17,39 +17,40 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32e7cb3a340865530b6a8d76609eb246184363b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wcf-web-http-programming-model"></a><span data-ttu-id="7333c-102">WCF 웹 HTTP 프로그래밍 모델</span><span class="sxs-lookup"><span data-stu-id="7333c-102">WCF Web HTTP Programming Model</span></span>
-<span data-ttu-id="7333c-103">개발자는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델을 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 작업을 비 SOAP 끝점에 노출시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model allows developers to expose [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service operations to non-SOAP endpoints.</span></span> <span data-ttu-id="7333c-104">이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-104">The topics in this section examine the feature in detail.</span></span>  
+# <a name="wcf-web-http-programming-model"></a><span data-ttu-id="9894c-102">WCF 웹 HTTP 프로그래밍 모델</span><span class="sxs-lookup"><span data-stu-id="9894c-102">WCF Web HTTP Programming Model</span></span>
+<span data-ttu-id="9894c-103">개발자는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델을 통해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스 작업을 비 SOAP 끝점에 노출시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model allows developers to expose [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service operations to non-SOAP endpoints.</span></span> <span data-ttu-id="9894c-104">이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-104">The topics in this section examine the feature in detail.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7333c-105">단원 내용</span><span class="sxs-lookup"><span data-stu-id="7333c-105">In This Section</span></span>  
- [<span data-ttu-id="7333c-106">WCF 웹 HTTP 프로그래밍 모델 개요</span><span class="sxs-lookup"><span data-stu-id="7333c-106">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- <span data-ttu-id="7333c-107">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-107">Provides an overview of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9894c-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9894c-105">In This Section</span></span>  
+ [<span data-ttu-id="9894c-106">WCF 웹 HTTP 프로그래밍 모델 개요</span><span class="sxs-lookup"><span data-stu-id="9894c-106">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ <span data-ttu-id="9894c-107">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-107">Provides an overview of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model.</span></span>  
   
- [<span data-ttu-id="7333c-108">WCF 웹 HTTP 프로그래밍 개체 모델</span><span class="sxs-lookup"><span data-stu-id="7333c-108">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- <span data-ttu-id="7333c-109">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델 및 해당 모델의 작동 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-109">Discusses the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model and how it works.</span></span>  
+ [<span data-ttu-id="9894c-108">WCF 웹 HTTP 프로그래밍 개체 모델</span><span class="sxs-lookup"><span data-stu-id="9894c-108">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ <span data-ttu-id="9894c-109">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 웹 HTTP 프로그래밍 모델 및 해당 모델의 작동 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-109">Discusses the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model and how it works.</span></span>  
   
- [<span data-ttu-id="7333c-110">방법: 기본 WCF 웹 HTTP 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="7333c-110">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- <span data-ttu-id="7333c-111">비 SOAP 끝점을 노출시키는 기본 서비스를 작성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-111">Describes how to write a basic service that exposes a non-SOAP endpoint.</span></span>  
+ [<span data-ttu-id="9894c-110">방법: 기본 WCF 웹 HTTP 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="9894c-110">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ <span data-ttu-id="9894c-111">비 SOAP 끝점을 노출시키는 기본 서비스를 작성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-111">Describes how to write a basic service that exposes a non-SOAP endpoint.</span></span>  
   
- [<span data-ttu-id="7333c-112">방법: SOAP 및 웹 클라이언트에 계약 공개</span><span class="sxs-lookup"><span data-stu-id="7333c-112">How to: Expose a Contract to SOAP and Web Clients</span></span>](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
- <span data-ttu-id="7333c-113">SOAP 및 비 SOAP 클라이언트 모두에 대해 동일한 계약을 노출시키는 기본 서비스를 작성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-113">Describes how to write a basic service that exposes the same contract to both SOAP and non-SOAP clients.</span></span>  
+ [<span data-ttu-id="9894c-112">방법: SOAP 및 웹 클라이언트에 계약 공개</span><span class="sxs-lookup"><span data-stu-id="9894c-112">How to: Expose a Contract to SOAP and Web Clients</span></span>](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ <span data-ttu-id="9894c-113">SOAP 및 비 SOAP 클라이언트 모두에 대해 동일한 계약을 노출시키는 기본 서비스를 작성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-113">Describes how to write a basic service that exposes the same contract to both SOAP and non-SOAP clients.</span></span>  
   
- [<span data-ttu-id="7333c-114">UriTemplate 및 UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="7333c-114">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- <span data-ttu-id="7333c-115"><xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>을 사용하여 URI를 제어하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-115">Describes how to control URIs using <xref:System.UriTemplate> and <xref:System.UriTemplateTable>.</span></span>  
+ [<span data-ttu-id="9894c-114">UriTemplate 및 UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="9894c-114">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ <span data-ttu-id="9894c-115"><xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>을 사용하여 URI를 제어하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-115">Describes how to control URIs using <xref:System.UriTemplate> and <xref:System.UriTemplateTable>.</span></span>  
   
- [<span data-ttu-id="7333c-116">WCF 웹 HTTP 서비스에 대 한 캐싱 지원</span><span class="sxs-lookup"><span data-stu-id="7333c-116">Caching Support for WCF Web HTTP Services</span></span>](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
- <span data-ttu-id="7333c-117">WCF 웹 HTTP 서비스의 캐시 동작을 지정하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-117">Describes how to specify caching behavior for a WCF Web HTTP service.</span></span>  
+ [<span data-ttu-id="9894c-116">WCF 웹 HTTP 서비스에 대한 캐싱 지원</span><span class="sxs-lookup"><span data-stu-id="9894c-116">Caching Support for WCF Web HTTP Services</span></span>](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
+ <span data-ttu-id="9894c-117">WCF 웹 HTTP 서비스의 캐시 동작을 지정하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-117">Describes how to specify caching behavior for a WCF Web HTTP service.</span></span>  
   
- [<span data-ttu-id="7333c-118">WCF 웹 HTTP 형식 지정</span><span class="sxs-lookup"><span data-stu-id="7333c-118">WCF Web HTTP Formatting</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
- <span data-ttu-id="7333c-119">WCF 웹 HTTP 서비스의 응답 형식을 지정하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-119">Describes how to specify the format of the response from a WCF Web HTTP service.</span></span>  
+ [<span data-ttu-id="9894c-118">WCF 웹 HTTP 형식 지정</span><span class="sxs-lookup"><span data-stu-id="9894c-118">WCF Web HTTP Formatting</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
+ <span data-ttu-id="9894c-119">WCF 웹 HTTP 서비스의 응답 형식을 지정하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-119">Describes how to specify the format of the response from a WCF Web HTTP service.</span></span>  
   
- [<span data-ttu-id="7333c-120">WCF 웹 HTTP 오류 처리</span><span class="sxs-lookup"><span data-stu-id="7333c-120">WCF Web HTTP Error Handling</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
- <span data-ttu-id="7333c-121">HTTP 상태 코드 및 추가 사용자 정의 오류 데이터를 비롯하여 WCF 웹 클라이언트에 오류를 반환하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-121">Describes how to return errors to WCF Web clients including HTTP status codes and additional user-defined error data.</span></span>  
+ [<span data-ttu-id="9894c-120">WCF 웹 HTTP 오류 처리</span><span class="sxs-lookup"><span data-stu-id="9894c-120">WCF Web HTTP Error Handling</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
+ <span data-ttu-id="9894c-121">HTTP 상태 코드 및 추가 사용자 정의 오류 데이터를 비롯하여 WCF 웹 클라이언트에 오류를 반환하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-121">Describes how to return errors to WCF Web clients including HTTP status codes and additional user-defined error data.</span></span>  
   
- [<span data-ttu-id="7333c-122">WCF 서비스에서 REST 스타일 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="7333c-122">Calling a REST-style service from a WCF service</span></span>](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
- <span data-ttu-id="7333c-123">WCF 서비스 내부에서 REST 스타일 서비스를 호출하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7333c-123">Describes how to call a REST-style service from inside a WCF service.</span></span>
+ [<span data-ttu-id="9894c-122">WCF 서비스에서 REST 스타일 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="9894c-122">Calling a REST-style service from a WCF service</span></span>](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
+ <span data-ttu-id="9894c-123">WCF 서비스 내부에서 REST 스타일 서비스를 호출하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9894c-123">Describes how to call a REST-style service from inside a WCF service.</span></span>

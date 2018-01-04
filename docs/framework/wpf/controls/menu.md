@@ -17,27 +17,28 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d0939788210819279059729e21f9827124eb13f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ba9f7b729210224571d973519c08737ac386cfa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="menu"></a><span data-ttu-id="3b189-102">메뉴</span><span class="sxs-lookup"><span data-stu-id="3b189-102">Menu</span></span>
-<span data-ttu-id="3b189-103">A <xref:System.Windows.Controls.Menu> 계층적 명령 또는 이벤트 처리기와 관련 된 요소도 구성할 수 있는 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="3b189-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="3b189-104">각 <xref:System.Windows.Controls.Menu> 여러 개 포함할 수 <xref:System.Windows.Controls.MenuItem> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="3b189-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="3b189-105">각 <xref:System.Windows.Controls.MenuItem> 명령을 호출 하거나 호출할 수는 `Click` 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="3b189-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="3b189-106">A <xref:System.Windows.Controls.MenuItem> 여러 개 있을 수도 수 <xref:System.Windows.Controls.MenuItem> 자식, 하위 메뉴를 형성할으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b189-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  
+# <a name="menu"></a><span data-ttu-id="e63e6-102">메뉴</span><span class="sxs-lookup"><span data-stu-id="e63e6-102">Menu</span></span>
+<span data-ttu-id="e63e6-103">A <xref:System.Windows.Controls.Menu> 계층적 명령 또는 이벤트 처리기와 관련 된 요소도 구성할 수 있는 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="e63e6-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="e63e6-104">각 <xref:System.Windows.Controls.Menu> 여러 개 포함할 수 <xref:System.Windows.Controls.MenuItem> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="e63e6-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="e63e6-105">각 <xref:System.Windows.Controls.MenuItem> 명령을 호출 하거나 호출할 수는 `Click` 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="e63e6-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="e63e6-106">A <xref:System.Windows.Controls.MenuItem> 여러 개 있을 수도 수 <xref:System.Windows.Controls.MenuItem> 자식, 하위 메뉴를 형성할으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="e63e6-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  
   
- <span data-ttu-id="3b189-107">다음 그림은 메뉴 컨트롤의 세 가지 상태를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3b189-107">The following illustration shows the three different states of a menu control.</span></span> <span data-ttu-id="3b189-108">마우스 포인터가 같은 장치가 없는 위에 있을 때의 기본 상태는는 <xref:System.Windows.Controls.Menu>합니다.</span><span class="sxs-lookup"><span data-stu-id="3b189-108">The default state is when no device such as a mouse pointer is resting on the <xref:System.Windows.Controls.Menu>.</span></span> <span data-ttu-id="3b189-109">마우스 포인터를 올려 포커스 상태가 발생는 <xref:System.Windows.Controls.Menu> 누른된 상태 위에 마우스 단추를 클릭할 때 발생 하 고는 <xref:System.Windows.Controls.Menu>합니다.</span><span class="sxs-lookup"><span data-stu-id="3b189-109">The focus state occurs when the mouse pointer is hovering over the <xref:System.Windows.Controls.Menu> and pressed state occurs when a mouse button is clicked over the <xref:System.Windows.Controls.Menu>.</span></span>  
+ <span data-ttu-id="e63e6-107">다음 그림은 메뉴 컨트롤의 세 가지 상태를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e63e6-107">The following illustration shows the three different states of a menu control.</span></span> <span data-ttu-id="e63e6-108">마우스 포인터가 같은 장치가 없는 위에 있을 때의 기본 상태는는 <xref:System.Windows.Controls.Menu>합니다.</span><span class="sxs-lookup"><span data-stu-id="e63e6-108">The default state is when no device such as a mouse pointer is resting on the <xref:System.Windows.Controls.Menu>.</span></span> <span data-ttu-id="e63e6-109">마우스 포인터를 올려 포커스 상태가 발생는 <xref:System.Windows.Controls.Menu> 누른된 상태 위에 마우스 단추를 클릭할 때 발생 하 고는 <xref:System.Windows.Controls.Menu>합니다.</span><span class="sxs-lookup"><span data-stu-id="e63e6-109">The focus state occurs when the mouse pointer is hovering over the <xref:System.Windows.Controls.Menu> and pressed state occurs when a mouse button is clicked over the <xref:System.Windows.Controls.Menu>.</span></span>  
   
- <span data-ttu-id="3b189-110">![메뉴 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span><span class="sxs-lookup"><span data-stu-id="3b189-110">![Menu states](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span></span>  
-<span data-ttu-id="3b189-111">다양 한 상태의 메뉴</span><span class="sxs-lookup"><span data-stu-id="3b189-111">Menus in different states</span></span>  
+ <span data-ttu-id="e63e6-110">![메뉴 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span><span class="sxs-lookup"><span data-stu-id="e63e6-110">![Menu states](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span></span>  
+<span data-ttu-id="e63e6-111">다양 한 상태의 메뉴</span><span class="sxs-lookup"><span data-stu-id="e63e6-111">Menus in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3b189-112">단원 내용</span><span class="sxs-lookup"><span data-stu-id="3b189-112">In This Section</span></span>  
- [<span data-ttu-id="3b189-113">메뉴 개요</span><span class="sxs-lookup"><span data-stu-id="3b189-113">Menu Overview</span></span>](../../../../docs/framework/wpf/controls/menu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e63e6-112">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="e63e6-112">In This Section</span></span>  
+ [<span data-ttu-id="e63e6-113">메뉴 개요</span><span class="sxs-lookup"><span data-stu-id="e63e6-113">Menu Overview</span></span>](../../../../docs/framework/wpf/controls/menu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="3b189-114">참조</span><span class="sxs-lookup"><span data-stu-id="3b189-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e63e6-114">참조</span><span class="sxs-lookup"><span data-stu-id="e63e6-114">Reference</span></span>  
  <xref:System.Windows.Controls.Menu>  
   <xref:System.Windows.Controls.MenuItem>  
   <xref:System.Windows.Controls.Primitives.MenuBase>  
   <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="3b189-115">관련 단원</span><span class="sxs-lookup"><span data-stu-id="3b189-115">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="e63e6-115">관련 단원</span><span class="sxs-lookup"><span data-stu-id="e63e6-115">Related Sections</span></span>

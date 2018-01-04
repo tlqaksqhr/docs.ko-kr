@@ -19,32 +19,33 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61e2bc470641279b594b8f77eb924a47d8a063ac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a1b3e78bac5c388bbca4afa6354e5f9aee02c65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="properties-wpf"></a><span data-ttu-id="5d97f-102">속성(WPF)</span><span class="sxs-lookup"><span data-stu-id="5d97f-102">Properties (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="5d97f-103">에서는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성의 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5d97f-103"> provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="5d97f-104">일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다.</span><span class="sxs-lookup"><span data-stu-id="5d97f-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="5d97f-105">[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="5d97f-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
+# <a name="properties-wpf"></a><span data-ttu-id="c2d46-102">속성(WPF)</span><span class="sxs-lookup"><span data-stu-id="c2d46-102">Properties (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="c2d46-103">에서는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성의 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c2d46-103"> provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="c2d46-104">일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다.</span><span class="sxs-lookup"><span data-stu-id="c2d46-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="c2d46-105">[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="c2d46-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5d97f-106">단원 내용</span><span class="sxs-lookup"><span data-stu-id="5d97f-106">In This Section</span></span>  
- [<span data-ttu-id="5d97f-107">종속성 속성 개요</span><span class="sxs-lookup"><span data-stu-id="5d97f-107">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [<span data-ttu-id="5d97f-108">연결된 속성 개요</span><span class="sxs-lookup"><span data-stu-id="5d97f-108">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [<span data-ttu-id="5d97f-109">종속성 속성 콜백 및 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="5d97f-109">Dependency Property Callbacks and Validation</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
- [<span data-ttu-id="5d97f-110">사용자 지정 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="5d97f-110">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [<span data-ttu-id="5d97f-111">종속성 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="5d97f-111">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [<span data-ttu-id="5d97f-112">프레임워크 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="5d97f-112">Framework Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
- [<span data-ttu-id="5d97f-113">종속성 속성 값 우선 순위</span><span class="sxs-lookup"><span data-stu-id="5d97f-113">Dependency Property Value Precedence</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [<span data-ttu-id="5d97f-114">읽기 전용 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="5d97f-114">Read-Only Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [<span data-ttu-id="5d97f-115">속성 값 상속</span><span class="sxs-lookup"><span data-stu-id="5d97f-115">Property Value Inheritance</span></span>](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [<span data-ttu-id="5d97f-116">종속성 속성 보안</span><span class="sxs-lookup"><span data-stu-id="5d97f-116">Dependency Property Security</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [<span data-ttu-id="5d97f-117">DependencyObjects의 안전한 생성자 패턴</span><span class="sxs-lookup"><span data-stu-id="5d97f-117">Safe Constructor Patterns for DependencyObjects</span></span>](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
- [<span data-ttu-id="5d97f-118">컬렉션 형식 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="5d97f-118">Collection-Type Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [<span data-ttu-id="5d97f-119">XAML 로드 및 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="5d97f-119">XAML Loading and Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [<span data-ttu-id="5d97f-120">방법 항목</span><span class="sxs-lookup"><span data-stu-id="5d97f-120">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c2d46-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="c2d46-106">In This Section</span></span>  
+ [<span data-ttu-id="c2d46-107">종속성 속성 개요</span><span class="sxs-lookup"><span data-stu-id="c2d46-107">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="c2d46-108">연결된 속성 개요</span><span class="sxs-lookup"><span data-stu-id="c2d46-108">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
+ [<span data-ttu-id="c2d46-109">종속성 속성 콜백 및 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="c2d46-109">Dependency Property Callbacks and Validation</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
+ [<span data-ttu-id="c2d46-110">사용자 지정 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="c2d46-110">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [<span data-ttu-id="c2d46-111">종속성 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="c2d46-111">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [<span data-ttu-id="c2d46-112">프레임워크 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="c2d46-112">Framework Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
+ [<span data-ttu-id="c2d46-113">종속성 속성 값 우선 순위</span><span class="sxs-lookup"><span data-stu-id="c2d46-113">Dependency Property Value Precedence</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
+ [<span data-ttu-id="c2d46-114">읽기 전용 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="c2d46-114">Read-Only Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
+ [<span data-ttu-id="c2d46-115">속성 값 상속</span><span class="sxs-lookup"><span data-stu-id="c2d46-115">Property Value Inheritance</span></span>](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
+ [<span data-ttu-id="c2d46-116">종속성 속성 보안</span><span class="sxs-lookup"><span data-stu-id="c2d46-116">Dependency Property Security</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
+ [<span data-ttu-id="c2d46-117">DependencyObjects의 안전한 생성자 패턴</span><span class="sxs-lookup"><span data-stu-id="c2d46-117">Safe Constructor Patterns for DependencyObjects</span></span>](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
+ [<span data-ttu-id="c2d46-118">컬렉션 형식 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="c2d46-118">Collection-Type Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
+ [<span data-ttu-id="c2d46-119">XAML 로드 및 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="c2d46-119">XAML Loading and Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
+ [<span data-ttu-id="c2d46-120">방법 항목</span><span class="sxs-lookup"><span data-stu-id="c2d46-120">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="5d97f-121">참조</span><span class="sxs-lookup"><span data-stu-id="5d97f-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c2d46-121">참조</span><span class="sxs-lookup"><span data-stu-id="c2d46-121">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -53,13 +54,13 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="5d97f-122">관련 단원</span><span class="sxs-lookup"><span data-stu-id="5d97f-122">Related Sections</span></span>  
- [<span data-ttu-id="5d97f-123">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="5d97f-123">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="5d97f-124">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="5d97f-124">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="5d97f-125">기본 요소</span><span class="sxs-lookup"><span data-stu-id="5d97f-125">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="5d97f-126">요소 트리 및 serialization</span><span class="sxs-lookup"><span data-stu-id="5d97f-126">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="5d97f-127">이벤트</span><span class="sxs-lookup"><span data-stu-id="5d97f-127">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="5d97f-128">입력</span><span class="sxs-lookup"><span data-stu-id="5d97f-128">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="5d97f-129">리소스</span><span class="sxs-lookup"><span data-stu-id="5d97f-129">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="5d97f-130">WPF 콘텐츠 모델</span><span class="sxs-lookup"><span data-stu-id="5d97f-130">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [<span data-ttu-id="5d97f-131">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="5d97f-131">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="c2d46-122">관련 단원</span><span class="sxs-lookup"><span data-stu-id="c2d46-122">Related Sections</span></span>  
+ [<span data-ttu-id="c2d46-123">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="c2d46-123">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+  [<span data-ttu-id="c2d46-124">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="c2d46-124">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
+  [<span data-ttu-id="c2d46-125">기본 요소</span><span class="sxs-lookup"><span data-stu-id="c2d46-125">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
+  [<span data-ttu-id="c2d46-126">요소 트리 및 serialization</span><span class="sxs-lookup"><span data-stu-id="c2d46-126">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [<span data-ttu-id="c2d46-127">이벤트</span><span class="sxs-lookup"><span data-stu-id="c2d46-127">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
+  [<span data-ttu-id="c2d46-128">입력</span><span class="sxs-lookup"><span data-stu-id="c2d46-128">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
+  [<span data-ttu-id="c2d46-129">리소스</span><span class="sxs-lookup"><span data-stu-id="c2d46-129">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
+  [<span data-ttu-id="c2d46-130">WPF 콘텐츠 모델</span><span class="sxs-lookup"><span data-stu-id="c2d46-130">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
+  [<span data-ttu-id="c2d46-131">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="c2d46-131">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)

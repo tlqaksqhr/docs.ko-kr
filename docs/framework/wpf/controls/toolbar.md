@@ -17,29 +17,30 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6bc69beef04b41cda6baaab0f74d90bf5c5a78d8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 497687eef2d31260f9eaf8cfbf2e9eb0441fcfbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="toolbar"></a><span data-ttu-id="01c3f-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="01c3f-102">ToolBar</span></span>
-<span data-ttu-id="01c3f-103"><xref:System.Windows.Controls.ToolBar> 컨트롤은 명령 또는 해당 함수에서 일반적으로 관련 된 컨트롤의 그룹에 대 한 컨테이너입니다.</span><span class="sxs-lookup"><span data-stu-id="01c3f-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
+# <a name="toolbar"></a><span data-ttu-id="b6434-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="b6434-102">ToolBar</span></span>
+<span data-ttu-id="b6434-103"><xref:System.Windows.Controls.ToolBar> 컨트롤은 명령 또는 해당 함수에서 일반적으로 관련 된 컨트롤의 그룹에 대 한 컨테이너입니다.</span><span class="sxs-lookup"><span data-stu-id="b6434-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
   
- <span data-ttu-id="01c3f-104">다음 그림에서는 가로 및 세로 보여 <xref:System.Windows.Controls.ToolBar> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="01c3f-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
+ <span data-ttu-id="b6434-104">다음 그림에서는 가로 및 세로 보여 <xref:System.Windows.Controls.ToolBar> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="b6434-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
   
- <span data-ttu-id="01c3f-105">![가로 도구 모음](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="01c3f-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
-<span data-ttu-id="01c3f-106">가로 도구 모음</span><span class="sxs-lookup"><span data-stu-id="01c3f-106">Horizontal Toolbar</span></span>  
+ <span data-ttu-id="b6434-105">![가로 도구 모음](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="b6434-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
+<span data-ttu-id="b6434-106">가로 도구 모음</span><span class="sxs-lookup"><span data-stu-id="b6434-106">Horizontal Toolbar</span></span>  
   
- <span data-ttu-id="01c3f-107">![세로 도구 모음](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="01c3f-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
-<span data-ttu-id="01c3f-108">세로 도구 모음</span><span class="sxs-lookup"><span data-stu-id="01c3f-108">Vertical Toolbar</span></span>  
+ <span data-ttu-id="b6434-107">![세로 도구 모음](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="b6434-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
+<span data-ttu-id="b6434-108">세로 도구 모음</span><span class="sxs-lookup"><span data-stu-id="b6434-108">Vertical Toolbar</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="01c3f-109">단원 내용</span><span class="sxs-lookup"><span data-stu-id="01c3f-109">In This Section</span></span>  
- [<span data-ttu-id="01c3f-110">도구 모음 개요</span><span class="sxs-lookup"><span data-stu-id="01c3f-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [<span data-ttu-id="01c3f-111">ToolBar 컨트롤의 스타일 지정</span><span class="sxs-lookup"><span data-stu-id="01c3f-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b6434-109">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="b6434-109">In This Section</span></span>  
+ [<span data-ttu-id="b6434-110">도구 모음 개요</span><span class="sxs-lookup"><span data-stu-id="b6434-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
+  [<span data-ttu-id="b6434-111">ToolBar 컨트롤의 스타일 지정</span><span class="sxs-lookup"><span data-stu-id="b6434-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="01c3f-112">참조</span><span class="sxs-lookup"><span data-stu-id="01c3f-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b6434-112">참조</span><span class="sxs-lookup"><span data-stu-id="b6434-112">Reference</span></span>  
  <xref:System.Windows.Controls.ToolBar>  
   <xref:System.Windows.Controls.ToolBarTray>  
   
-## <a name="related-sections"></a><span data-ttu-id="01c3f-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="01c3f-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="b6434-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="b6434-113">Related Sections</span></span>

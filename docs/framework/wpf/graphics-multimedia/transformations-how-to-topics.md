@@ -19,28 +19,29 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a2ec81fa63b07a33f79a54b500ae3d7e62f367f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0159848e8add1f66ca7690c0fc692522102e74d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transformations-how-to-topics"></a><span data-ttu-id="ad8c6-102">변환 방법 항목</span><span class="sxs-lookup"><span data-stu-id="ad8c6-102">Transformations How-to Topics</span></span>
-<span data-ttu-id="ad8c6-103">이 섹션의 항목에는 개체에 다른 변환을 적용 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad8c6-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
+# <a name="transformations-how-to-topics"></a><span data-ttu-id="8cd3b-102">변환 방법 항목</span><span class="sxs-lookup"><span data-stu-id="8cd3b-102">Transformations How-to Topics</span></span>
+<span data-ttu-id="8cd3b-103">이 섹션의 항목에는 개체에 다른 변환을 적용 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cd3b-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ad8c6-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="ad8c6-104">In This Section</span></span>  
- [<span data-ttu-id="ad8c6-105">이벤트가 발생할 때 요소에 변환 적용</span><span class="sxs-lookup"><span data-stu-id="ad8c6-105">Apply a Transform to an Element When an Event Occurs</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [<span data-ttu-id="ad8c6-106">개체에 다중 변환 적용</span><span class="sxs-lookup"><span data-stu-id="ad8c6-106">Apply Multiple Transforms to an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
- [<span data-ttu-id="ad8c6-107">현재 위치에서 요소가 회전하도록 만들기</span><span class="sxs-lookup"><span data-stu-id="ad8c6-107">Make an Element Spin in Place</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
- [<span data-ttu-id="ad8c6-108">개체 회전</span><span class="sxs-lookup"><span data-stu-id="ad8c6-108">Rotate an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
- [<span data-ttu-id="ad8c6-109">요소 배율 조정</span><span class="sxs-lookup"><span data-stu-id="ad8c6-109">Scale an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
- [<span data-ttu-id="ad8c6-110">요소 기울이기</span><span class="sxs-lookup"><span data-stu-id="ad8c6-110">Skew an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
- [<span data-ttu-id="ad8c6-111">상대 값을 사용하여 변환 원점 지정</span><span class="sxs-lookup"><span data-stu-id="ad8c6-111">Specify the Origin of a Transform by Using Relative Values</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [<span data-ttu-id="ad8c6-112">요소 변환</span><span class="sxs-lookup"><span data-stu-id="ad8c6-112">Translate an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
- [<span data-ttu-id="ad8c6-113">MatrixTransform을 사용하여 사용자 지정 변환 만들기</span><span class="sxs-lookup"><span data-stu-id="ad8c6-113">Use a MatrixTransform to Create Custom Transforms</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8cd3b-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="8cd3b-104">In This Section</span></span>  
+ [<span data-ttu-id="8cd3b-105">이벤트가 발생할 때 요소에 변환 적용</span><span class="sxs-lookup"><span data-stu-id="8cd3b-105">Apply a Transform to an Element When an Event Occurs</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [<span data-ttu-id="8cd3b-106">개체에 다중 변환 적용</span><span class="sxs-lookup"><span data-stu-id="8cd3b-106">Apply Multiple Transforms to an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
+ [<span data-ttu-id="8cd3b-107">현재 위치에서 요소가 회전하도록 만들기</span><span class="sxs-lookup"><span data-stu-id="8cd3b-107">Make an Element Spin in Place</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
+ [<span data-ttu-id="8cd3b-108">개체 회전</span><span class="sxs-lookup"><span data-stu-id="8cd3b-108">Rotate an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
+ [<span data-ttu-id="8cd3b-109">요소 배율 조정</span><span class="sxs-lookup"><span data-stu-id="8cd3b-109">Scale an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
+ [<span data-ttu-id="8cd3b-110">요소 기울이기</span><span class="sxs-lookup"><span data-stu-id="8cd3b-110">Skew an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
+ [<span data-ttu-id="8cd3b-111">상대 값을 사용하여 변환 원점 지정</span><span class="sxs-lookup"><span data-stu-id="8cd3b-111">Specify the Origin of a Transform by Using Relative Values</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [<span data-ttu-id="8cd3b-112">요소 변환</span><span class="sxs-lookup"><span data-stu-id="8cd3b-112">Translate an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
+ [<span data-ttu-id="8cd3b-113">MatrixTransform을 사용하여 사용자 지정 변환 만들기</span><span class="sxs-lookup"><span data-stu-id="8cd3b-113">Use a MatrixTransform to Create Custom Transforms</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ad8c6-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ad8c6-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8cd3b-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8cd3b-114">See Also</span></span>  
  <xref:System.Windows.Media.Transform>  
- [<span data-ttu-id="ad8c6-115">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="ad8c6-115">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="ad8c6-116">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="ad8c6-116">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="ad8c6-117">레이아웃</span><span class="sxs-lookup"><span data-stu-id="ad8c6-117">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+ [<span data-ttu-id="8cd3b-115">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="8cd3b-115">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="8cd3b-116">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="8cd3b-116">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="8cd3b-117">레이아웃</span><span class="sxs-lookup"><span data-stu-id="8cd3b-117">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

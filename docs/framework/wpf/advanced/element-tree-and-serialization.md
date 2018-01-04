@@ -18,35 +18,36 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9ebc62926efc09eb45e51ca9a7bf08527568929
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 13affab3e1e6a1a732231763219e9b419ea7ea51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="element-tree-and-serialization"></a><span data-ttu-id="bea09-102">요소 트리 및 serialization</span><span class="sxs-lookup"><span data-stu-id="bea09-102">Element Tree and Serialization</span></span>
-<span data-ttu-id="bea09-103">WPF 프로그래밍 요소는 서로 트리 관계에 있는 형식으로 존재하는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="bea09-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="bea09-104">예를 들어, XAML에 만든 응용 프로그램 UI는 개체 트리로 개념화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bea09-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="bea09-105">요소 트리는 두 개의 개별적이지만 경우에 따라 병렬 상태인 트리로 나눌 수 있습니다. 즉, 논리적 트리와 시각적 트리입니다.</span><span class="sxs-lookup"><span data-stu-id="bea09-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="bea09-106">WPF의 Serialization에서는 이러한 두 트리의 상태 외에도 응용 프로그램의 상태를 저장하고, XAML로 파일에 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bea09-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
+# <a name="element-tree-and-serialization"></a><span data-ttu-id="b79fc-102">요소 트리 및 serialization</span><span class="sxs-lookup"><span data-stu-id="b79fc-102">Element Tree and Serialization</span></span>
+<span data-ttu-id="b79fc-103">WPF 프로그래밍 요소는 서로 트리 관계에 있는 형식으로 존재하는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="b79fc-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="b79fc-104">예를 들어, XAML에 만든 응용 프로그램 UI는 개체 트리로 개념화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b79fc-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="b79fc-105">요소 트리는 두 개의 개별적이지만 경우에 따라 병렬 상태인 트리로 나눌 수 있습니다. 즉, 논리적 트리와 시각적 트리입니다.</span><span class="sxs-lookup"><span data-stu-id="b79fc-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="b79fc-106">WPF의 Serialization에서는 이러한 두 트리의 상태 외에도 응용 프로그램의 상태를 저장하고, XAML로 파일에 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b79fc-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bea09-107">단원 내용</span><span class="sxs-lookup"><span data-stu-id="bea09-107">In This Section</span></span>  
- [<span data-ttu-id="bea09-108">WPF의 트리</span><span class="sxs-lookup"><span data-stu-id="bea09-108">Trees in WPF</span></span>](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [<span data-ttu-id="bea09-109">XamlWriter.Save의 serialization 제한</span><span class="sxs-lookup"><span data-stu-id="bea09-109">Serialization Limitations of XamlWriter.Save</span></span>](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
- [<span data-ttu-id="bea09-110">개체 트리에 없는 개체 요소 초기화</span><span class="sxs-lookup"><span data-stu-id="bea09-110">Initialization for Object Elements Not in an Object Tree</span></span>](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [<span data-ttu-id="bea09-111">방법 항목</span><span class="sxs-lookup"><span data-stu-id="bea09-111">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b79fc-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="b79fc-107">In This Section</span></span>  
+ [<span data-ttu-id="b79fc-108">WPF의 트리</span><span class="sxs-lookup"><span data-stu-id="b79fc-108">Trees in WPF</span></span>](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
+ [<span data-ttu-id="b79fc-109">XamlWriter.Save의 serialization 제한</span><span class="sxs-lookup"><span data-stu-id="b79fc-109">Serialization Limitations of XamlWriter.Save</span></span>](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
+ [<span data-ttu-id="b79fc-110">개체 트리에 없는 개체 요소 초기화</span><span class="sxs-lookup"><span data-stu-id="b79fc-110">Initialization for Object Elements Not in an Object Tree</span></span>](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
+ [<span data-ttu-id="b79fc-111">방법 항목</span><span class="sxs-lookup"><span data-stu-id="b79fc-111">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="bea09-112">참조</span><span class="sxs-lookup"><span data-stu-id="bea09-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b79fc-112">참조</span><span class="sxs-lookup"><span data-stu-id="b79fc-112">Reference</span></span>  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
-## <a name="related-sections"></a><span data-ttu-id="bea09-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="bea09-113">Related Sections</span></span>  
- [<span data-ttu-id="bea09-114">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="bea09-114">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="bea09-115">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="bea09-115">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="bea09-116">기본 요소</span><span class="sxs-lookup"><span data-stu-id="bea09-116">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="bea09-117">속성</span><span class="sxs-lookup"><span data-stu-id="bea09-117">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="bea09-118">이벤트</span><span class="sxs-lookup"><span data-stu-id="bea09-118">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="bea09-119">입력</span><span class="sxs-lookup"><span data-stu-id="bea09-119">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="bea09-120">리소스</span><span class="sxs-lookup"><span data-stu-id="bea09-120">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="bea09-121">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="bea09-121">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="bea09-122">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="bea09-122">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="b79fc-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="b79fc-113">Related Sections</span></span>  
+ [<span data-ttu-id="b79fc-114">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="b79fc-114">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+  [<span data-ttu-id="b79fc-115">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="b79fc-115">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
+  [<span data-ttu-id="b79fc-116">기본 요소</span><span class="sxs-lookup"><span data-stu-id="b79fc-116">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
+  [<span data-ttu-id="b79fc-117">속성</span><span class="sxs-lookup"><span data-stu-id="b79fc-117">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
+  [<span data-ttu-id="b79fc-118">이벤트</span><span class="sxs-lookup"><span data-stu-id="b79fc-118">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
+  [<span data-ttu-id="b79fc-119">입력</span><span class="sxs-lookup"><span data-stu-id="b79fc-119">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
+  [<span data-ttu-id="b79fc-120">리소스</span><span class="sxs-lookup"><span data-stu-id="b79fc-120">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
+  [<span data-ttu-id="b79fc-121">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="b79fc-121">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [<span data-ttu-id="b79fc-122">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="b79fc-122">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)

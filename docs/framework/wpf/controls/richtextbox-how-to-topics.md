@@ -17,23 +17,24 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f11a6c42aaf1ddc0d19cc54580cb44501b9307
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="32d5d-102">RichTextBox 방법 항목</span><span class="sxs-lookup"><span data-stu-id="32d5d-102">RichTextBox How-to Topics</span></span>
-<span data-ttu-id="32d5d-103">이 섹션에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제는 <xref:System.Windows.Controls.RichTextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="32d5d-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
+# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="a1e6e-102">RichTextBox 방법 항목</span><span class="sxs-lookup"><span data-stu-id="a1e6e-102">RichTextBox How-to Topics</span></span>
+<span data-ttu-id="a1e6e-103">이 섹션에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제는 <xref:System.Windows.Controls.RichTextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1e6e-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="32d5d-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="32d5d-104">In This Section</span></span>  
- [<span data-ttu-id="32d5d-105">RichTextBox에서 텍스트 콘텐츠 추출</span><span class="sxs-lookup"><span data-stu-id="32d5d-105">Extract the Text Content from a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
- [<span data-ttu-id="32d5d-106">프로그래밍 방식으로 RichTextBox의 선택 변경</span><span class="sxs-lookup"><span data-stu-id="32d5d-106">Change Selection in a RichTextBox Programmatically</span></span>](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
- [<span data-ttu-id="32d5d-107">RichTextBox 콘텐츠 저장, 로드 및 인쇄</span><span class="sxs-lookup"><span data-stu-id="32d5d-107">Save, Load, and Print RichTextBox Content</span></span>](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
- [<span data-ttu-id="32d5d-108">RichTextBox에서 사용자 지정 상황에 맞는 메뉴의 위치 지정</span><span class="sxs-lookup"><span data-stu-id="32d5d-108">Position a Custom Context Menu in a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [<span data-ttu-id="32d5d-109">방법: RichTextBox에 대 한 기본 콘텐츠 호스트를 대체 합니다.</span><span class="sxs-lookup"><span data-stu-id="32d5d-109">How to: Replace the Default Content Host for a RichTextBox</span></span>](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+## <a name="in-this-section"></a><span data-ttu-id="a1e6e-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="a1e6e-104">In This Section</span></span>  
+ [<span data-ttu-id="a1e6e-105">RichTextBox에서 텍스트 콘텐츠 추출</span><span class="sxs-lookup"><span data-stu-id="a1e6e-105">Extract the Text Content from a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [<span data-ttu-id="a1e6e-106">프로그래밍 방식으로 RichTextBox의 선택 변경</span><span class="sxs-lookup"><span data-stu-id="a1e6e-106">Change Selection in a RichTextBox Programmatically</span></span>](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
+ [<span data-ttu-id="a1e6e-107">RichTextBox 콘텐츠 저장, 로드 및 인쇄</span><span class="sxs-lookup"><span data-stu-id="a1e6e-107">Save, Load, and Print RichTextBox Content</span></span>](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
+ [<span data-ttu-id="a1e6e-108">RichTextBox에서 사용자 지정 상황에 맞는 메뉴의 위치 지정</span><span class="sxs-lookup"><span data-stu-id="a1e6e-108">Position a Custom Context Menu in a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+ [<span data-ttu-id="a1e6e-109">방법: RichTextBox에 대 한 기본 콘텐츠 호스트를 대체 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1e6e-109">How to: Replace the Default Content Host for a RichTextBox</span></span>](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
-## <a name="see-also"></a><span data-ttu-id="32d5d-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="32d5d-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a1e6e-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a1e6e-110">See Also</span></span>  
  <xref:System.Windows.Controls.TextBox>  
- [<span data-ttu-id="32d5d-111">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="32d5d-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="32d5d-112">유동 문서 개요</span><span class="sxs-lookup"><span data-stu-id="32d5d-112">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [<span data-ttu-id="a1e6e-111">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="a1e6e-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="a1e6e-112">유동 문서 개요</span><span class="sxs-lookup"><span data-stu-id="a1e6e-112">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

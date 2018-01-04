@@ -17,19 +17,20 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 468ba5546670a0aec6e1f6c59b7d19b83e6ff24f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 05bf330f17e5ebfb00037fae5dd8c44ce337322d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="scrollbar"></a><span data-ttu-id="2c796-102">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="2c796-102">ScrollBar</span></span>
-<span data-ttu-id="2c796-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> 이동 하 여 현재 보기 영역 밖에 있는 콘텐츠를 볼 수 있습니다는 <xref:System.Windows.Controls.Primitives.Thumb> 는 콘텐츠를 볼 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c796-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> allows you to view content that is outside of the current viewing area by sliding the <xref:System.Windows.Controls.Primitives.Thumb> to make the content visible.</span></span>  
+# <a name="scrollbar"></a><span data-ttu-id="86c67-102">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="86c67-102">ScrollBar</span></span>
+<span data-ttu-id="86c67-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> 이동 하 여 현재 보기 영역 밖에 있는 콘텐츠를 볼 수 있습니다는 <xref:System.Windows.Controls.Primitives.Thumb> 는 콘텐츠를 볼 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="86c67-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> allows you to view content that is outside of the current viewing area by sliding the <xref:System.Windows.Controls.Primitives.Thumb> to make the content visible.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2c796-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="2c796-104">In This Section</span></span>  
- [<span data-ttu-id="2c796-105">ScrollBar의 Thumb 크기 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="2c796-105">Customize the Thumb Size on a ScrollBar</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-thumb-size-on-a-scrollbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="86c67-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="86c67-104">In This Section</span></span>  
+ [<span data-ttu-id="86c67-105">ScrollBar의 Thumb 크기 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="86c67-105">Customize the Thumb Size on a ScrollBar</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-thumb-size-on-a-scrollbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="2c796-106">참조</span><span class="sxs-lookup"><span data-stu-id="2c796-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="86c67-106">참조</span><span class="sxs-lookup"><span data-stu-id="86c67-106">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>  

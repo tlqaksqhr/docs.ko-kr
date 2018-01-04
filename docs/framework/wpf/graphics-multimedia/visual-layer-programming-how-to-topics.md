@@ -18,26 +18,27 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4d52fab42dabeaa8ef51812308fe5807030184e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63efdae02dd14e1a2692ebb6ee00c7d56c8b04c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="b3a92-102">시각적 계층 프로그래밍 방법 항목</span><span class="sxs-lookup"><span data-stu-id="b3a92-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="b3a92-103">이 섹션의 항목에는 컴퍼지션 적중 테스트 및 하위 수준에 대 한 시각적 계층을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b3a92-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="16564-102">시각적 계층 프로그래밍 방법 항목</span><span class="sxs-lookup"><span data-stu-id="16564-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="16564-103">이 섹션의 항목에는 컴퍼지션 적중 테스트 및 하위 수준에 대 한 시각적 계층을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="16564-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b3a92-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="b3a92-104">In This Section</span></span>  
- [<span data-ttu-id="b3a92-105">시각적 요소의 오프셋 가져오기</span><span class="sxs-lookup"><span data-stu-id="b3a92-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="b3a92-106">시각적 요소의 그리기 콘텐츠 열거</span><span class="sxs-lookup"><span data-stu-id="b3a92-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="b3a92-107">시각적 요소의 기하 도형 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="b3a92-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="b3a92-108">기하 도형을 매개 변수로 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="b3a92-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="b3a92-109">Win32 호스트 컨테이너를 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="b3a92-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="b3a92-110">CompositionTarget을 사용하여 프레임별 간격에 렌더링</span><span class="sxs-lookup"><span data-stu-id="b3a92-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="16564-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="16564-104">In This Section</span></span>  
+ [<span data-ttu-id="16564-105">시각적 요소의 오프셋 가져오기</span><span class="sxs-lookup"><span data-stu-id="16564-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="16564-106">시각적 요소의 그리기 콘텐츠 열거</span><span class="sxs-lookup"><span data-stu-id="16564-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="16564-107">시각적 요소의 기하 도형 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="16564-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="16564-108">기하 도형을 매개 변수로 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="16564-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="16564-109">Win32 호스트 컨테이너를 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="16564-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="16564-110">CompositionTarget을 사용하여 프레임별 간격에 렌더링</span><span class="sxs-lookup"><span data-stu-id="16564-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b3a92-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b3a92-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="16564-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="16564-111">See Also</span></span>  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  
- [<span data-ttu-id="b3a92-112">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="b3a92-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="b3a92-113">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="b3a92-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="16564-112">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="16564-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="16564-113">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="16564-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

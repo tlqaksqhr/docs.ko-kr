@@ -24,20 +24,21 @@ caps.latest.revision: "97"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d7dce942499984c24f982e321d976982e404978
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4c2fb9d69e7b0ccfc2b87aea0cda5e7b4804f416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="31bd3-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="31bd3-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="31bd3-103">Visual Studio 2015의 WPF(Windows Presentation Foundation)는 Windows에서 최신 LOB(기간 업무) 데스크톱 응용 프로그램을 빌드할 수 있는 통합된 프로그래밍 모델을 개발자에게 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="31bd3-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="cd75a-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="cd75a-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="cd75a-103">Visual Studio 2015의 WPF(Windows Presentation Foundation)는 Windows에서 최신 LOB(기간 업무) 데스크톱 응용 프로그램을 빌드할 수 있는 통합된 프로그래밍 모델을 개발자에게 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="cd75a-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="31bd3-104">Mozilla Firefox 브라우저는 Microsoft Framework Assistant 확장을 비활성화합니다.</span><span class="sxs-lookup"><span data-stu-id="31bd3-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="31bd3-105">Firefox에서 확장을 제거하는 방법에 대한 내용은 [Firefox용 .NET Framework Assistant를 제거하는 방법](https://support.microsoft.com/en-us/kb/963707)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="31bd3-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
+>  <span data-ttu-id="cd75a-104">Mozilla Firefox 브라우저는 Microsoft Framework Assistant 확장을 비활성화합니다.</span><span class="sxs-lookup"><span data-stu-id="cd75a-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="cd75a-105">Firefox에서 확장을 제거하는 방법에 대한 내용은 [Firefox용 .NET Framework Assistant를 제거하는 방법](https://support.microsoft.com/en-us/kb/963707)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cd75a-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
   
- [<span data-ttu-id="31bd3-106">Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="31bd3-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="cd75a-106">Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="cd75a-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
   
- [<span data-ttu-id="31bd3-107">Visual Studio 및 Blend for Visual Studio에서 XAML 디자인</span><span class="sxs-lookup"><span data-stu-id="31bd3-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="cd75a-107">Visual Studio 및 Blend for Visual Studio에서 XAML 디자인</span><span class="sxs-lookup"><span data-stu-id="cd75a-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="31bd3-108">Visual Studio 가져오기</span><span class="sxs-lookup"><span data-stu-id="31bd3-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="cd75a-108">Visual Studio 가져오기</span><span class="sxs-lookup"><span data-stu-id="cd75a-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)

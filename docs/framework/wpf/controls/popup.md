@@ -19,25 +19,26 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4fecc763f1bc6e701869a2b3f46d44f80cc28ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 14a1848a27443e7fc5ae7a9ced754cf6d691ae19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="popup"></a><span data-ttu-id="31394-102">Popup</span><span class="sxs-lookup"><span data-stu-id="31394-102">Popup</span></span>
-<span data-ttu-id="31394-103"><xref:System.Windows.Controls.Primitives.Popup> 컨트롤 현재 응용 프로그램 창 위에 배치 되는 별도 창에서 콘텐츠를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="31394-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup"></a><span data-ttu-id="43963-102">Popup</span><span class="sxs-lookup"><span data-stu-id="43963-102">Popup</span></span>
+<span data-ttu-id="43963-103"><xref:System.Windows.Controls.Primitives.Popup> 컨트롤 현재 응용 프로그램 창 위에 배치 되는 별도 창에서 콘텐츠를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="43963-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
   
- <span data-ttu-id="31394-104">다음 그림에서는 한 <xref:System.Windows.Controls.Primitives.Popup> 제어와 관련 하 여 배치 되는 <xref:System.Windows.Controls.Button> 즉 부모입니다.</span><span class="sxs-lookup"><span data-stu-id="31394-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent.</span></span>  
+ <span data-ttu-id="43963-104">다음 그림에서는 한 <xref:System.Windows.Controls.Primitives.Popup> 제어와 관련 하 여 배치 되는 <xref:System.Windows.Controls.Button> 즉 부모입니다.</span><span class="sxs-lookup"><span data-stu-id="43963-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent.</span></span>  
   
- <span data-ttu-id="31394-105">![팝업 설명](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span><span class="sxs-lookup"><span data-stu-id="31394-105">![Popup illustration](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span></span>  
+ <span data-ttu-id="43963-105">![팝업 설명](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span><span class="sxs-lookup"><span data-stu-id="43963-105">![Popup illustration](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="31394-106">단원 내용</span><span class="sxs-lookup"><span data-stu-id="31394-106">In This Section</span></span>  
- [<span data-ttu-id="31394-107">팝업 개요</span><span class="sxs-lookup"><span data-stu-id="31394-107">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [<span data-ttu-id="31394-108">팝업 배치 동작</span><span class="sxs-lookup"><span data-stu-id="31394-108">Popup Placement Behavior</span></span>](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [<span data-ttu-id="31394-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="31394-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="43963-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="43963-106">In This Section</span></span>  
+ [<span data-ttu-id="43963-107">팝업 개요</span><span class="sxs-lookup"><span data-stu-id="43963-107">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
+ [<span data-ttu-id="43963-108">팝업 배치 동작</span><span class="sxs-lookup"><span data-stu-id="43963-108">Popup Placement Behavior</span></span>](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
+ [<span data-ttu-id="43963-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="43963-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="31394-110">참조</span><span class="sxs-lookup"><span data-stu-id="31394-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="43963-110">참조</span><span class="sxs-lookup"><span data-stu-id="43963-110">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="31394-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="31394-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="43963-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="43963-111">Related Sections</span></span>

@@ -19,17 +19,18 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4337cdf95324289ba5245812a22b444f538c2f31
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: daf8875801f9b20fe214e40364e6e367b8965938
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="frame"></a><span data-ttu-id="3e6e5-102">프레임</span><span class="sxs-lookup"><span data-stu-id="3e6e5-102">Frame</span></span>
-<span data-ttu-id="3e6e5-103"><xref:System.Windows.Controls.Frame> 컨트롤은 콘텐츠 내에서 콘텐츠 탐색을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="3e6e5-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="3e6e5-104"><xref:System.Windows.Controls.Frame>같은 루트 요소에서 호스팅될 수 <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, 또는 루트 요소에 속하는 콘텐츠 트리 내에서 아일랜드로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3e6e5-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
+# <a name="frame"></a><span data-ttu-id="386be-102">프레임</span><span class="sxs-lookup"><span data-stu-id="386be-102">Frame</span></span>
+<span data-ttu-id="386be-103"><xref:System.Windows.Controls.Frame> 컨트롤은 콘텐츠 내에서 콘텐츠 탐색을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="386be-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="386be-104"><xref:System.Windows.Controls.Frame>같은 루트 요소에서 호스팅될 수 <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, 또는 루트 요소에 속하는 콘텐츠 트리 내에서 아일랜드로 합니다.</span><span class="sxs-lookup"><span data-stu-id="386be-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="3e6e5-105">참조</span><span class="sxs-lookup"><span data-stu-id="3e6e5-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="386be-105">참조</span><span class="sxs-lookup"><span data-stu-id="386be-105">Reference</span></span>  
  <xref:System.Windows.Controls.Frame>  
   
-## <a name="related-sections"></a><span data-ttu-id="3e6e5-106">관련 단원</span><span class="sxs-lookup"><span data-stu-id="3e6e5-106">Related Sections</span></span>  
- [<span data-ttu-id="3e6e5-107">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="3e6e5-107">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="386be-106">관련 단원</span><span class="sxs-lookup"><span data-stu-id="386be-106">Related Sections</span></span>  
+ [<span data-ttu-id="386be-107">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="386be-107">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)

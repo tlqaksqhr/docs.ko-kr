@@ -17,21 +17,22 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f09c1aac387d26d44398331d62b25e588d4bbdc1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d9bec0b3edd6a5ab3997c42e3b8154f0c41531d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="control-customization"></a><span data-ttu-id="34b58-102">컨트롤 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="34b58-102">Control Customization</span></span>
-<span data-ttu-id="34b58-103">이 범주에서는 다양 한 기본 클래스, 인터페이스 및 기타 요소와 완벽 하 게 기능을 만드는 데 사용 되는 개념을 다룹니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="34b58-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
+# <a name="control-customization"></a><span data-ttu-id="85e60-102">컨트롤 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="85e60-102">Control Customization</span></span>
+<span data-ttu-id="85e60-103">이 범주에서는 다양 한 기본 클래스, 인터페이스 및 기타 요소와 완벽 하 게 기능을 만드는 데 사용 되는 개념을 다룹니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="85e60-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="34b58-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="34b58-104">In This Section</span></span>  
- [<span data-ttu-id="34b58-105">컨트롤 제작 개요</span><span class="sxs-lookup"><span data-stu-id="34b58-105">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [<span data-ttu-id="34b58-106">스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침</span><span class="sxs-lookup"><span data-stu-id="34b58-106">Guidelines for Designing Stylable Controls</span></span>](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
- [<span data-ttu-id="34b58-107">표시기(Adorner)</span><span class="sxs-lookup"><span data-stu-id="34b58-107">Adorners</span></span>](../../../../docs/framework/wpf/controls/adorners.md)  
- [<span data-ttu-id="34b58-108">Control 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="34b58-108">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [<span data-ttu-id="34b58-109">WPF 사용자 지정 컨트롤의 UI 자동화</span><span class="sxs-lookup"><span data-stu-id="34b58-109">UI Automation of a WPF Custom Control</span></span>](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
+## <a name="in-this-section"></a><span data-ttu-id="85e60-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="85e60-104">In This Section</span></span>  
+ [<span data-ttu-id="85e60-105">컨트롤 제작 개요</span><span class="sxs-lookup"><span data-stu-id="85e60-105">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [<span data-ttu-id="85e60-106">스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침</span><span class="sxs-lookup"><span data-stu-id="85e60-106">Guidelines for Designing Stylable Controls</span></span>](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
+ [<span data-ttu-id="85e60-107">표시기(Adorner)</span><span class="sxs-lookup"><span data-stu-id="85e60-107">Adorners</span></span>](../../../../docs/framework/wpf/controls/adorners.md)  
+ [<span data-ttu-id="85e60-108">Control 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="85e60-108">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="85e60-109">WPF 사용자 지정 컨트롤의 UI 자동화</span><span class="sxs-lookup"><span data-stu-id="85e60-109">UI Automation of a WPF Custom Control</span></span>](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a><span data-ttu-id="34b58-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="34b58-110">See Also</span></span>  
- [<span data-ttu-id="34b58-111">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="34b58-111">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="85e60-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="85e60-110">See Also</span></span>  
+ [<span data-ttu-id="85e60-111">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="85e60-111">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

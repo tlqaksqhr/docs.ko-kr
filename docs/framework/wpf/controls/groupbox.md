@@ -17,23 +17,24 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a2a32d198b0c06764ae648c943f168ece7668af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 33347f85f5e9d1f3e19a6631e51b19d5612cf5d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="groupbox"></a><span data-ttu-id="d69a6-102">GroupBox</span><span class="sxs-lookup"><span data-stu-id="d69a6-102">GroupBox</span></span>
-<span data-ttu-id="d69a6-103"><xref:System.Windows.Controls.GroupBox> 컨트롤은 한 <xref:System.Windows.Controls.HeaderedContentControl> 에 대 한 제목이 지정된 된 컨테이너를 제공 하는 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 콘텐츠입니다.</span><span class="sxs-lookup"><span data-stu-id="d69a6-103">The <xref:System.Windows.Controls.GroupBox> control is a <xref:System.Windows.Controls.HeaderedContentControl> that provides a titled container for [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] content.</span></span>  
+# <a name="groupbox"></a><span data-ttu-id="566ef-102">GroupBox</span><span class="sxs-lookup"><span data-stu-id="566ef-102">GroupBox</span></span>
+<span data-ttu-id="566ef-103"><xref:System.Windows.Controls.GroupBox> 컨트롤은 한 <xref:System.Windows.Controls.HeaderedContentControl> 에 대 한 제목이 지정된 된 컨테이너를 제공 하는 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 콘텐츠입니다.</span><span class="sxs-lookup"><span data-stu-id="566ef-103">The <xref:System.Windows.Controls.GroupBox> control is a <xref:System.Windows.Controls.HeaderedContentControl> that provides a titled container for [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] content.</span></span>  
   
- <span data-ttu-id="d69a6-104">다음 그림에서는 한 <xref:System.Windows.Controls.GroupBox> 를 포함 하는 <xref:System.Windows.Controls.TabControl> 및 <xref:System.Windows.Controls.Button> 내부에 <xref:System.Windows.Controls.StackPanel>합니다.</span><span class="sxs-lookup"><span data-stu-id="d69a6-104">The following illustration shows a <xref:System.Windows.Controls.GroupBox> that contains a <xref:System.Windows.Controls.TabControl> and a <xref:System.Windows.Controls.Button> that are enclosed in a <xref:System.Windows.Controls.StackPanel>.</span></span>  
+ <span data-ttu-id="566ef-104">다음 그림에서는 한 <xref:System.Windows.Controls.GroupBox> 를 포함 하는 <xref:System.Windows.Controls.TabControl> 및 <xref:System.Windows.Controls.Button> 내부에 <xref:System.Windows.Controls.StackPanel>합니다.</span><span class="sxs-lookup"><span data-stu-id="566ef-104">The following illustration shows a <xref:System.Windows.Controls.GroupBox> that contains a <xref:System.Windows.Controls.TabControl> and a <xref:System.Windows.Controls.Button> that are enclosed in a <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
- <span data-ttu-id="d69a6-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span><span class="sxs-lookup"><span data-stu-id="d69a6-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span></span>  
+ <span data-ttu-id="566ef-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span><span class="sxs-lookup"><span data-stu-id="566ef-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d69a6-106">단원 내용</span><span class="sxs-lookup"><span data-stu-id="d69a6-106">In This Section</span></span>  
- [<span data-ttu-id="d69a6-107">GruopBox 템플릿 정의</span><span class="sxs-lookup"><span data-stu-id="d69a6-107">Define a GroupBox Template</span></span>](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
+## <a name="in-this-section"></a><span data-ttu-id="566ef-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="566ef-106">In This Section</span></span>  
+ [<span data-ttu-id="566ef-107">GruopBox 템플릿 정의</span><span class="sxs-lookup"><span data-stu-id="566ef-107">Define a GroupBox Template</span></span>](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
   
-## <a name="reference"></a><span data-ttu-id="d69a6-108">참조</span><span class="sxs-lookup"><span data-stu-id="d69a6-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="566ef-108">참조</span><span class="sxs-lookup"><span data-stu-id="566ef-108">Reference</span></span>  
  <xref:System.Windows.Controls.GroupBox>  
   
-## <a name="related-sections"></a><span data-ttu-id="d69a6-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d69a6-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="566ef-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="566ef-109">Related Sections</span></span>

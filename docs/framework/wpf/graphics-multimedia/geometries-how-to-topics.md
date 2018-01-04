@@ -15,34 +15,35 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9540de6140a9dbfdb0d7dd4ab5d9e461caec5268
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0c75871074bc7e2bae4789a9f77525b9f09c61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="geometries-how-to-topics"></a><span data-ttu-id="4467d-102">Geometry 방법 항목</span><span class="sxs-lookup"><span data-stu-id="4467d-102">Geometries How-to Topics</span></span>
-<span data-ttu-id="4467d-103">이 섹션의 항목을 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Geometry> 응용 프로그램의 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
+# <a name="geometries-how-to-topics"></a><span data-ttu-id="f59dd-102">Geometry 방법 항목</span><span class="sxs-lookup"><span data-stu-id="f59dd-102">Geometries How-to Topics</span></span>
+<span data-ttu-id="f59dd-103">이 섹션의 항목을 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Geometry> 응용 프로그램의 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f59dd-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4467d-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="4467d-104">In This Section</span></span>  
- [<span data-ttu-id="4467d-105">EllipseGeometry에 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="4467d-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [<span data-ttu-id="4467d-106">ArcSegment 크기에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="4467d-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [<span data-ttu-id="4467d-107">복합 도형의 채우기 제어</span><span class="sxs-lookup"><span data-stu-id="4467d-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [<span data-ttu-id="4467d-108">결합된 기하 도형 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [<span data-ttu-id="4467d-109">복합 도형 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [<span data-ttu-id="4467d-110">입방형 3차원 곡선 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [<span data-ttu-id="4467d-111">LineGeometry를 사용하여 선 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [<span data-ttu-id="4467d-112">PathGeometry에 LineSegment 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [<span data-ttu-id="4467d-113">PathGeometry를 사용하여 도형 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [<span data-ttu-id="4467d-114">StreamGeometry를 사용하여 도형 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [<span data-ttu-id="4467d-115">정방형 3차원 곡선 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [<span data-ttu-id="4467d-116">타원형 원호 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="4467d-117">PathGeometry 내에 다중 하위 경로 만들기</span><span class="sxs-lookup"><span data-stu-id="4467d-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [<span data-ttu-id="4467d-118">RectangleGeometry를 사용하여 사각형 정의</span><span class="sxs-lookup"><span data-stu-id="4467d-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [<span data-ttu-id="4467d-119">사각형 기하 도형의 모퉁이 둥글게 하기</span><span class="sxs-lookup"><span data-stu-id="4467d-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f59dd-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="f59dd-104">In This Section</span></span>  
+ [<span data-ttu-id="f59dd-105">EllipseGeometry에 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="f59dd-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
+ [<span data-ttu-id="f59dd-106">ArcSegment 크기에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="f59dd-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
+ [<span data-ttu-id="f59dd-107">복합 도형의 채우기 제어</span><span class="sxs-lookup"><span data-stu-id="f59dd-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
+ [<span data-ttu-id="f59dd-108">결합된 기하 도형 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
+ [<span data-ttu-id="f59dd-109">복합 도형 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="f59dd-110">입방형 3차원 곡선 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
+ [<span data-ttu-id="f59dd-111">LineGeometry를 사용하여 선 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
+ [<span data-ttu-id="f59dd-112">PathGeometry에 LineSegment 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [<span data-ttu-id="f59dd-113">PathGeometry를 사용하여 도형 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [<span data-ttu-id="f59dd-114">StreamGeometry를 사용하여 도형 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
+ [<span data-ttu-id="f59dd-115">정방형 3차원 곡선 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
+ [<span data-ttu-id="f59dd-116">타원형 원호 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="f59dd-117">PathGeometry 내에 다중 하위 경로 만들기</span><span class="sxs-lookup"><span data-stu-id="f59dd-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [<span data-ttu-id="f59dd-118">RectangleGeometry를 사용하여 사각형 정의</span><span class="sxs-lookup"><span data-stu-id="f59dd-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [<span data-ttu-id="f59dd-119">사각형 기하 도형의 모퉁이 둥글게 하기</span><span class="sxs-lookup"><span data-stu-id="f59dd-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4467d-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4467d-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f59dd-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f59dd-120">See Also</span></span>  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="4467d-121">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="4467d-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="4467d-122">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="4467d-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="f59dd-121">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="f59dd-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="f59dd-122">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="f59dd-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

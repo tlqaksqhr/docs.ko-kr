@@ -17,27 +17,28 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="graphics"></a><span data-ttu-id="861e5-102">그래픽</span><span class="sxs-lookup"><span data-stu-id="861e5-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="861e5-103">제안은 멀티미디어, 벡터 그래픽, 애니메이션 및 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성 하는 개발자를 위한 콘텐츠 컴퍼지션에 대 한 지원을 통합 합니다.</span><span class="sxs-lookup"><span data-stu-id="861e5-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="214ff-102">그래픽</span><span class="sxs-lookup"><span data-stu-id="214ff-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="214ff-103">제안은 멀티미디어, 벡터 그래픽, 애니메이션 및 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성 하는 개발자를 위한 콘텐츠 컴퍼지션에 대 한 지원을 통합 합니다.</span><span class="sxs-lookup"><span data-stu-id="214ff-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="861e5-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="861e5-104">In This Section</span></span>  
- [<span data-ttu-id="861e5-105">비트맵 효과</span><span class="sxs-lookup"><span data-stu-id="861e5-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [<span data-ttu-id="861e5-106">브러시</span><span class="sxs-lookup"><span data-stu-id="861e5-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [<span data-ttu-id="861e5-107">그리기</span><span class="sxs-lookup"><span data-stu-id="861e5-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [<span data-ttu-id="861e5-108">기하 도형</span><span class="sxs-lookup"><span data-stu-id="861e5-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [<span data-ttu-id="861e5-109">이미지</span><span class="sxs-lookup"><span data-stu-id="861e5-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [<span data-ttu-id="861e5-110">도형</span><span class="sxs-lookup"><span data-stu-id="861e5-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [<span data-ttu-id="861e5-111">변환</span><span class="sxs-lookup"><span data-stu-id="861e5-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [<span data-ttu-id="861e5-112">그래픽 렌더링 레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="861e5-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="861e5-113">방법 항목</span><span class="sxs-lookup"><span data-stu-id="861e5-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="214ff-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="214ff-104">In This Section</span></span>  
+ [<span data-ttu-id="214ff-105">비트맵 효과</span><span class="sxs-lookup"><span data-stu-id="214ff-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
+ [<span data-ttu-id="214ff-106">브러시</span><span class="sxs-lookup"><span data-stu-id="214ff-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
+ [<span data-ttu-id="214ff-107">그리기</span><span class="sxs-lookup"><span data-stu-id="214ff-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
+ [<span data-ttu-id="214ff-108">기하 도형</span><span class="sxs-lookup"><span data-stu-id="214ff-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
+ [<span data-ttu-id="214ff-109">이미지</span><span class="sxs-lookup"><span data-stu-id="214ff-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
+ [<span data-ttu-id="214ff-110">도형</span><span class="sxs-lookup"><span data-stu-id="214ff-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
+ [<span data-ttu-id="214ff-111">변환</span><span class="sxs-lookup"><span data-stu-id="214ff-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
+ [<span data-ttu-id="214ff-112">그래픽 렌더링 레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="214ff-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="214ff-113">방법 항목</span><span class="sxs-lookup"><span data-stu-id="214ff-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="861e5-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="861e5-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="214ff-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="214ff-114">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="861e5-115">2차원 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="861e5-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="861e5-116">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="861e5-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="861e5-117">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="861e5-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="214ff-115">2차원 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="214ff-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="214ff-116">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="214ff-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="214ff-117">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="214ff-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

@@ -26,21 +26,22 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b26b2945f35e0ba96cc76e7bce460c06ab9887e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da061a85338e4a9afb530a2986942950b7dcc136
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transformations"></a><span data-ttu-id="11e26-102">변형</span><span class="sxs-lookup"><span data-stu-id="11e26-102">Transformations</span></span>
-<span data-ttu-id="11e26-103">변환 하는 데 회전, 크기 조정, 변환, 하거나 <xref:System.Windows.FrameworkElement> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="11e26-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="682cb-102">변형</span><span class="sxs-lookup"><span data-stu-id="682cb-102">Transformations</span></span>
+<span data-ttu-id="682cb-103">변환 하는 데 회전, 크기 조정, 변환, 하거나 <xref:System.Windows.FrameworkElement> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="682cb-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="11e26-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="11e26-104">In This Section</span></span>  
- [<span data-ttu-id="11e26-105">Transform 개요</span><span class="sxs-lookup"><span data-stu-id="11e26-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [<span data-ttu-id="11e26-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="11e26-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="682cb-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="682cb-104">In This Section</span></span>  
+ [<span data-ttu-id="682cb-105">Transform 개요</span><span class="sxs-lookup"><span data-stu-id="682cb-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="682cb-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="682cb-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="11e26-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="11e26-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="682cb-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="682cb-107">See Also</span></span>  
  <xref:System.Windows.Media.Transform>  
- [<span data-ttu-id="11e26-108">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="11e26-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="11e26-109">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="11e26-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="11e26-110">레이아웃</span><span class="sxs-lookup"><span data-stu-id="11e26-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+ [<span data-ttu-id="682cb-108">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="682cb-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="682cb-109">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="682cb-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="682cb-110">레이아웃</span><span class="sxs-lookup"><span data-stu-id="682cb-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

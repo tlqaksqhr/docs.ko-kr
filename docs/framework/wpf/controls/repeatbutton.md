@@ -17,23 +17,24 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56edfe456dcb97b1d9de906ee3e3d1d09bfcf109
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 94f6b89b4e23f2610bdc3c834279eeb3eb9c9815
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="repeatbutton"></a><span data-ttu-id="13c5e-102">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="13c5e-102">RepeatButton</span></span>
-<span data-ttu-id="13c5e-103"><xref:System.Windows.Controls.Primitives.RepeatButton> 는 비슷합니다는 <xref:System.Windows.Controls.Button>합니다.</span><span class="sxs-lookup"><span data-stu-id="13c5e-103">The <xref:System.Windows.Controls.Primitives.RepeatButton> is similar to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="13c5e-104">그러나 <xref:System.Windows.Controls.Primitives.RepeatButton> 요소 제어할 수 있습니다 시기 및 방법을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="13c5e-104">However, <xref:System.Windows.Controls.Primitives.RepeatButton> elements give you control over when and how the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event occurs.</span></span>  
+# <a name="repeatbutton"></a><span data-ttu-id="df68f-102">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="df68f-102">RepeatButton</span></span>
+<span data-ttu-id="df68f-103"><xref:System.Windows.Controls.Primitives.RepeatButton> 는 비슷합니다는 <xref:System.Windows.Controls.Button>합니다.</span><span class="sxs-lookup"><span data-stu-id="df68f-103">The <xref:System.Windows.Controls.Primitives.RepeatButton> is similar to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="df68f-104">그러나 <xref:System.Windows.Controls.Primitives.RepeatButton> 요소 제어할 수 있습니다 시기 및 방법을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="df68f-104">However, <xref:System.Windows.Controls.Primitives.RepeatButton> elements give you control over when and how the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event occurs.</span></span>  
   
- <span data-ttu-id="13c5e-105">다음 그림에는 반복 단추 컨트롤, 기본값, PointerFocused, 및-Pressed의 세 가지 상태의 예가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="13c5e-105">The following graphic shows an example of the three states of a repeat button control, Default, PointerFocused, and Pressed.</span></span> <span data-ttu-id="13c5e-106">기본 상태를 표시 하는 첫 번째 단추는 <xref:System.Windows.Controls.Primitives.RepeatButton>합니다.</span><span class="sxs-lookup"><span data-stu-id="13c5e-106">The first button shows the default state of the <xref:System.Windows.Controls.Primitives.RepeatButton>.</span></span> <span data-ttu-id="13c5e-107">두 번째 포커스를 받으면 마우스 포인터를 단추 위로 가져갈 때 단추의 모양을 변경 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="13c5e-107">The second shows how the appearance of the button changes when the mouse pointer hovers over the button, giving it focus.</span></span> <span data-ttu-id="13c5e-108">마지막 단추의 모양을 표시는 <xref:System.Windows.Controls.Primitives.RepeatButton> 컨트롤 위에 마우스 단추를 누를 때.</span><span class="sxs-lookup"><span data-stu-id="13c5e-108">The last button shows the appearance of the <xref:System.Windows.Controls.Primitives.RepeatButton> when the user presses the mouse button over the control.</span></span>  
+ <span data-ttu-id="df68f-105">다음 그림에는 반복 단추 컨트롤, 기본값, PointerFocused, 및-Pressed의 세 가지 상태의 예가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df68f-105">The following graphic shows an example of the three states of a repeat button control, Default, PointerFocused, and Pressed.</span></span> <span data-ttu-id="df68f-106">기본 상태를 표시 하는 첫 번째 단추는 <xref:System.Windows.Controls.Primitives.RepeatButton>합니다.</span><span class="sxs-lookup"><span data-stu-id="df68f-106">The first button shows the default state of the <xref:System.Windows.Controls.Primitives.RepeatButton>.</span></span> <span data-ttu-id="df68f-107">두 번째 포커스를 받으면 마우스 포인터를 단추 위로 가져갈 때 단추의 모양을 변경 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="df68f-107">The second shows how the appearance of the button changes when the mouse pointer hovers over the button, giving it focus.</span></span> <span data-ttu-id="df68f-108">마지막 단추의 모양을 표시는 <xref:System.Windows.Controls.Primitives.RepeatButton> 컨트롤 위에 마우스 단추를 누를 때.</span><span class="sxs-lookup"><span data-stu-id="df68f-108">The last button shows the appearance of the <xref:System.Windows.Controls.Primitives.RepeatButton> when the user presses the mouse button over the control.</span></span>  
   
- <span data-ttu-id="13c5e-109">![반복 단추 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span><span class="sxs-lookup"><span data-stu-id="13c5e-109">![Repeat button states](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span></span>  
-<span data-ttu-id="13c5e-110">일반적인 RepeatButton</span><span class="sxs-lookup"><span data-stu-id="13c5e-110">Typical RepeatButton</span></span>  
+ <span data-ttu-id="df68f-109">![반복 단추 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span><span class="sxs-lookup"><span data-stu-id="df68f-109">![Repeat button states](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span></span>  
+<span data-ttu-id="df68f-110">일반적인 RepeatButton</span><span class="sxs-lookup"><span data-stu-id="df68f-110">Typical RepeatButton</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="13c5e-111">단원 내용</span><span class="sxs-lookup"><span data-stu-id="13c5e-111">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="df68f-111">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="df68f-111">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="13c5e-112">참조</span><span class="sxs-lookup"><span data-stu-id="13c5e-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="df68f-112">참조</span><span class="sxs-lookup"><span data-stu-id="df68f-112">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="13c5e-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="13c5e-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="df68f-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="df68f-113">Related Sections</span></span>

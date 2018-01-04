@@ -17,23 +17,24 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9f53b291fb5a8f89c5e9ac15ffc082c976cdb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f80b73952dc8949aac7b9106ab42388ddf2b4d40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="canvas-how-to-topics"></a><span data-ttu-id="790b0-102">캔버스 방법 항목</span><span class="sxs-lookup"><span data-stu-id="790b0-102">Canvas How-to Topics</span></span>
-<span data-ttu-id="790b0-103">이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.Canvas> 요소 자식 요소의 절대 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="790b0-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
+# <a name="canvas-how-to-topics"></a><span data-ttu-id="3ff0c-102">캔버스 방법 항목</span><span class="sxs-lookup"><span data-stu-id="3ff0c-102">Canvas How-to Topics</span></span>
+<span data-ttu-id="3ff0c-103">이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.Canvas> 요소 자식 요소의 절대 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="3ff0c-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="790b0-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="790b0-104">In This Section</span></span>  
- [<span data-ttu-id="790b0-105">Border를 사용하여 Canvas의 내용 래핑</span><span class="sxs-lookup"><span data-stu-id="790b0-105">Wrap a Border Around the Content of a Canvas</span></span>](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [<span data-ttu-id="790b0-106">캔버스 위치 지정 속성 가져오기 또는 설정</span><span class="sxs-lookup"><span data-stu-id="790b0-106">Get or Set Canvas Positioning Properties</span></span>](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [<span data-ttu-id="790b0-107">캔버스 만들기 및 사용</span><span class="sxs-lookup"><span data-stu-id="790b0-107">Create and Use a Canvas</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [<span data-ttu-id="790b0-108">Canvas의 연결된 속성을 사용하여 자식 요소 배치</span><span class="sxs-lookup"><span data-stu-id="790b0-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [<span data-ttu-id="790b0-109">Thumb을 사용하여 캔버스 크기 조정</span><span class="sxs-lookup"><span data-stu-id="790b0-109">Resize a Canvas by Using a Thumb</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3ff0c-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="3ff0c-104">In This Section</span></span>  
+ [<span data-ttu-id="3ff0c-105">Border를 사용하여 Canvas의 내용 래핑</span><span class="sxs-lookup"><span data-stu-id="3ff0c-105">Wrap a Border Around the Content of a Canvas</span></span>](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [<span data-ttu-id="3ff0c-106">캔버스 위치 지정 속성 가져오기 또는 설정</span><span class="sxs-lookup"><span data-stu-id="3ff0c-106">Get or Set Canvas Positioning Properties</span></span>](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
+ [<span data-ttu-id="3ff0c-107">캔버스 만들기 및 사용</span><span class="sxs-lookup"><span data-stu-id="3ff0c-107">Create and Use a Canvas</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
+ [<span data-ttu-id="3ff0c-108">Canvas의 연결된 속성을 사용하여 자식 요소 배치</span><span class="sxs-lookup"><span data-stu-id="3ff0c-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [<span data-ttu-id="3ff0c-109">Thumb을 사용하여 캔버스 크기 조정</span><span class="sxs-lookup"><span data-stu-id="3ff0c-109">Resize a Canvas by Using a Thumb</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
   
-## <a name="reference"></a><span data-ttu-id="790b0-110">참조</span><span class="sxs-lookup"><span data-stu-id="790b0-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3ff0c-110">참조</span><span class="sxs-lookup"><span data-stu-id="3ff0c-110">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -48,9 +49,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="790b0-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="790b0-111">Related Sections</span></span>  
- [<span data-ttu-id="790b0-112">레이아웃</span><span class="sxs-lookup"><span data-stu-id="790b0-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="3ff0c-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="3ff0c-111">Related Sections</span></span>  
+ [<span data-ttu-id="3ff0c-112">레이아웃</span><span class="sxs-lookup"><span data-stu-id="3ff0c-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="790b0-113">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="790b0-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="3ff0c-113">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="3ff0c-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="790b0-114">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="790b0-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="3ff0c-114">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="3ff0c-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

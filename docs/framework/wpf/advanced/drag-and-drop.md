@@ -18,22 +18,23 @@ caps.latest.revision: "85"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d02a32eb2d27d6e8ace4e81703bfadbb3a1b1ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a051002fb0dda77ee2e8a5d8ef95ae3ebf24cc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="drag-and-drop"></a><span data-ttu-id="3593e-102">끌어서 놓기</span><span class="sxs-lookup"><span data-stu-id="3593e-102">Drag and Drop</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="3593e-103">매우 유연한 끌어서 놓기 인프라를 끌어서 놓기를 데이터 둘 다 지 원하는 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 뿐만 아니라 다른 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="3593e-103"> provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
+# <a name="drag-and-drop"></a><span data-ttu-id="5a04e-102">끌어서 놓기</span><span class="sxs-lookup"><span data-stu-id="5a04e-102">Drag and Drop</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="5a04e-103">매우 유연한 끌어서 놓기 인프라를 끌어서 놓기를 데이터 둘 다 지 원하는 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 뿐만 아니라 다른 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="5a04e-103"> provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3593e-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="3593e-104">In This Section</span></span>  
- [<span data-ttu-id="3593e-105">끌어서 놓기 개요</span><span class="sxs-lookup"><span data-stu-id="3593e-105">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [<span data-ttu-id="3593e-106">데이터 및 데이터 개체</span><span class="sxs-lookup"><span data-stu-id="3593e-106">Data and Data Objects</span></span>](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [<span data-ttu-id="3593e-107">연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용</span><span class="sxs-lookup"><span data-stu-id="3593e-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [<span data-ttu-id="3593e-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="3593e-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5a04e-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="5a04e-104">In This Section</span></span>  
+ [<span data-ttu-id="5a04e-105">끌어서 놓기 개요</span><span class="sxs-lookup"><span data-stu-id="5a04e-105">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
+ [<span data-ttu-id="5a04e-106">데이터 및 데이터 개체</span><span class="sxs-lookup"><span data-stu-id="5a04e-106">Data and Data Objects</span></span>](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
+ [<span data-ttu-id="5a04e-107">연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용</span><span class="sxs-lookup"><span data-stu-id="5a04e-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [<span data-ttu-id="5a04e-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="5a04e-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="3593e-109">참조</span><span class="sxs-lookup"><span data-stu-id="3593e-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5a04e-109">참조</span><span class="sxs-lookup"><span data-stu-id="5a04e-109">Reference</span></span>  
  <xref:System.Windows.DataFormat>  
   <xref:System.Windows.DataObject>  
   <xref:System.Windows.DragDrop>  
@@ -41,4 +42,4 @@ ms.lasthandoff: 10/18/2017
   <xref:System.Windows.DragEventHandler>  
   <xref:System.Windows.TextDataFormat>  
   
-## <a name="related-sections"></a><span data-ttu-id="3593e-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="3593e-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="5a04e-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="5a04e-110">Related Sections</span></span>

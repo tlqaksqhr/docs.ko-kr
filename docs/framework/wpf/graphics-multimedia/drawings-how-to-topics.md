@@ -21,25 +21,26 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a34c47b1e9b767d396bcdf8ec74c80aaab5f33d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5749378169c6f19f5b8041d3a99e0798e2b8a4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="drawings-how-to-topics"></a><span data-ttu-id="bfa8f-102">그리기 방법 항목</span><span class="sxs-lookup"><span data-stu-id="bfa8f-102">Drawings How-to Topics</span></span>
-<span data-ttu-id="bfa8f-103">이 섹션의 항목을 사용 하는 방법을 설명 <xref:System.Windows.Media.Drawing> 도형, 이미지 또는 텍스트를 그리는 데 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="bfa8f-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
+# <a name="drawings-how-to-topics"></a><span data-ttu-id="0ec75-102">그리기 방법 항목</span><span class="sxs-lookup"><span data-stu-id="0ec75-102">Drawings How-to Topics</span></span>
+<span data-ttu-id="0ec75-103">이 섹션의 항목을 사용 하는 방법을 설명 <xref:System.Windows.Media.Drawing> 도형, 이미지 또는 텍스트를 그리는 데 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="0ec75-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bfa8f-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="bfa8f-104">In This Section</span></span>  
- [<span data-ttu-id="bfa8f-105">Drawing에 GuidelineSet 적용</span><span class="sxs-lookup"><span data-stu-id="bfa8f-105">Apply a GuidelineSet to a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [<span data-ttu-id="bfa8f-106">합성 그리기 만들기</span><span class="sxs-lookup"><span data-stu-id="bfa8f-106">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [<span data-ttu-id="bfa8f-107">GeometryDrawing 만들기</span><span class="sxs-lookup"><span data-stu-id="bfa8f-107">Create a GeometryDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [<span data-ttu-id="bfa8f-108">ImageDrawing을 사용하여 이미지 그리기</span><span class="sxs-lookup"><span data-stu-id="bfa8f-108">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [<span data-ttu-id="bfa8f-109">VideoDrawing을 사용하여 미디어 재생</span><span class="sxs-lookup"><span data-stu-id="bfa8f-109">Play Media using a VideoDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [<span data-ttu-id="bfa8f-110">그림을 이미지 소스로 사용</span><span class="sxs-lookup"><span data-stu-id="bfa8f-110">Use a Drawing as an Image Source</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0ec75-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="0ec75-104">In This Section</span></span>  
+ [<span data-ttu-id="0ec75-105">Drawing에 GuidelineSet 적용</span><span class="sxs-lookup"><span data-stu-id="0ec75-105">Apply a GuidelineSet to a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [<span data-ttu-id="0ec75-106">합성 그리기 만들기</span><span class="sxs-lookup"><span data-stu-id="0ec75-106">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
+  [<span data-ttu-id="0ec75-107">GeometryDrawing 만들기</span><span class="sxs-lookup"><span data-stu-id="0ec75-107">Create a GeometryDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
+  [<span data-ttu-id="0ec75-108">ImageDrawing을 사용하여 이미지 그리기</span><span class="sxs-lookup"><span data-stu-id="0ec75-108">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
+  [<span data-ttu-id="0ec75-109">VideoDrawing을 사용하여 미디어 재생</span><span class="sxs-lookup"><span data-stu-id="0ec75-109">Play Media using a VideoDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
+  [<span data-ttu-id="0ec75-110">그림을 이미지 소스로 사용</span><span class="sxs-lookup"><span data-stu-id="0ec75-110">Use a Drawing as an Image Source</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a><span data-ttu-id="bfa8f-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bfa8f-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0ec75-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0ec75-111">See Also</span></span>  
  <xref:System.Windows.Media.Drawing>  
- [<span data-ttu-id="bfa8f-112">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="bfa8f-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="bfa8f-113">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="bfa8f-113">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="bfa8f-114">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="bfa8f-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="0ec75-112">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="0ec75-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="0ec75-113">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="0ec75-113">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="0ec75-114">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="0ec75-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

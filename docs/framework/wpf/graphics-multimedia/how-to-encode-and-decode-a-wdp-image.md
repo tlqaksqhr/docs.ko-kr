@@ -24,28 +24,29 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b97f730da7e2a305ad26b56a6ccdc14851355b5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 209db48bfc81b416b54f91918a10c0871eee88d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-encode-and-decode-a-wdp-image"></a><span data-ttu-id="5fb67-102">방법: WDP 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="5fb67-102">How to: Encode and Decode a WDP Image</span></span>
-<span data-ttu-id="5fb67-103">다음 예제에서는 암호 해독 하 고 인코딩하는 방법을 보여는 [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] 특정을 사용 하 여 이미지 <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> 및 <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="5fb67-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] image using the specific <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> and <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> objects.</span></span>  
+# <a name="how-to-encode-and-decode-a-wdp-image"></a><span data-ttu-id="4260b-102">방법: WDP 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="4260b-102">How to: Encode and Decode a WDP Image</span></span>
+<span data-ttu-id="4260b-103">다음 예제에서는 암호 해독 하 고 인코딩하는 방법을 보여는 [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] 특정을 사용 하 여 이미지 <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> 및 <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="4260b-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] image using the specific <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> and <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5fb67-104">예제</span><span class="sxs-lookup"><span data-stu-id="5fb67-104">Example</span></span>  
- <span data-ttu-id="5fb67-105">디코딩하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] 를 사용 하 여 이미지는 <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> 에서 <xref:System.Uri>합니다.</span><span class="sxs-lookup"><span data-stu-id="5fb67-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image using a <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> from a <xref:System.Uri>.</span></span>  
+## <a name="example"></a><span data-ttu-id="4260b-104">예</span><span class="sxs-lookup"><span data-stu-id="4260b-104">Example</span></span>  
+ <span data-ttu-id="4260b-105">디코딩하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] 를 사용 하 여 이미지는 <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> 에서 <xref:System.Uri>합니다.</span><span class="sxs-lookup"><span data-stu-id="4260b-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image using a <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> from a <xref:System.Uri>.</span></span>  
   
  [!code-cpp[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#1)]
  [!code-csharp[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#1)]
  [!code-vb[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/VB/WDPEncoderDecoder.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="5fb67-106">예제</span><span class="sxs-lookup"><span data-stu-id="5fb67-106">Example</span></span>  
- <span data-ttu-id="5fb67-107">인코딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapSource> 에 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] 를 사용 하 여 이미지는 <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>합니다.</span><span class="sxs-lookup"><span data-stu-id="5fb67-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image using a <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.</span></span>  
+## <a name="example"></a><span data-ttu-id="4260b-106">예</span><span class="sxs-lookup"><span data-stu-id="4260b-106">Example</span></span>  
+ <span data-ttu-id="4260b-107">인코딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapSource> 에 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] 를 사용 하 여 이미지는 <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>합니다.</span><span class="sxs-lookup"><span data-stu-id="4260b-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image using a <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.</span></span>  
   
  [!code-cpp[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#4)]
  [!code-csharp[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#4)]
  [!code-vb[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/VB/WDPEncoderDecoder.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="5fb67-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5fb67-108">See Also</span></span>  
- [<span data-ttu-id="5fb67-109">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="5fb67-109">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="4260b-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4260b-108">See Also</span></span>  
+ [<span data-ttu-id="4260b-109">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="4260b-109">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
