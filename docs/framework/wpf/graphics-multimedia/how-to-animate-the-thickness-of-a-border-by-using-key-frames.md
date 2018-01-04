@@ -17,16 +17,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08950b2b92bfcbd28472327f12a2ee49abfd9fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f255ff38ec7ee79f02a0cd40a3f0143c36e1c58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>방법: 키 프레임을 사용하여 테두리 두께에 애니메이션 효과 주기
 애니메이션 효과 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Control.BorderThickness%2A> 속성은 <xref:System.Windows.Controls.Border>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> 애니메이션 효과를 줄 클래스는 <xref:System.Windows.Controls.Control.BorderThickness%2A> 속성의는 <xref:System.Windows.Controls.Border>합니다. 이 애니메이션은 다음과 같은 방식으로 세 가지 키 프레임을 사용합니다.  
   
 1.  인스턴스를 사용 하 여 첫 번째 0.5 초 동안는 <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> 테두리의 두께 점진적으로 증가 하는 클래스입니다. 이 예제에서는 사용 <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> 값 사이의 선형 한 부드러운 증가 만들려고 합니다.  

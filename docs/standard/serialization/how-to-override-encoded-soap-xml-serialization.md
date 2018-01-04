@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de551372806c62de7f4ceca08b87b0eca207e4ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 759da973662e407313dbfd1d1d8ffb18881d154c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>방법: 인코딩된 SOAP XML Serialization 재정의
 [코드 예제](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/02/2017
   
 8.  개체를 serialize하거나 deserialize합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 파일을 두 가지 방법으로 serialize합니다. 우선 `XmlSerializer` 클래스의 동작을 재정의하지 않고 serialize하고, 두 번째로 동작을 재정의하여 serialize합니다. 예제에는 몇 개의 멤버가 있는 `Group`이라는 클래스가 포함됩니다. `SoapElementAttribute`와 같은 다양한 특성이 클래스 멤버에 적용되었습니다. 클래스가 `SerializeOriginal` 메서드로 serialize될 때 특성이 SOAP 메시지 내용을 제어합니다. `SerializeOverride` 메서드가 호출될 때 `XmlSerializer`의 동작은 다양한 특성을 만들고 `SoapAttributes`의 속성을 해당 특성으로 적절하게 설정하여 재정의됩니다.  
   
 ```csharp  

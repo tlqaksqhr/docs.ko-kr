@@ -15,16 +15,17 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9f75ed7436b5a4d333d6d82f35b8c1a5601f9b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cfdd416337a10797f374be566816ec61ca4ee3cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-how-to-topics"></a>탐색 방법 항목
 다음 항목에서는 사용 하는 방법을 보여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 탐색 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [페이지 함수 호출](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
   [Page 함수의 반환 값 가져오기](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
   [탐색 기록을 앞으로 또는 뒤로 탐색](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  

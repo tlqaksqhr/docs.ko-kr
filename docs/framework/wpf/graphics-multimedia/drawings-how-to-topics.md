@@ -21,16 +21,17 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a34c47b1e9b767d396bcdf8ec74c80aaab5f33d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5749378169c6f19f5b8041d3a99e0798e2b8a4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawings-how-to-topics"></a>그리기 방법 항목
 이 섹션의 항목을 사용 하는 방법을 설명 <xref:System.Windows.Media.Drawing> 도형, 이미지 또는 텍스트를 그리는 데 개체입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Drawing에 GuidelineSet 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
   [합성 그리기 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
   [GeometryDrawing 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  

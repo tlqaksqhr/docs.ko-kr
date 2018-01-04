@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7735e721917c5f78b791a200a670599fe3cff310
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d5d81497872e231fb1b235d9707b9a36505d3165
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows Forms 시작
 Windows forms에서 강력한 Windows 기반 응용 프로그램을 만들 수 있습니다. 다음 항목 데이터를 표시 하 고 사용자 입력을 처리 한 다음이 쉽고 향상 된 보안 응용 프로그램을 배포 하려면 Windows Forms의 강력한 기능을 사용 하는 방법을 자세히 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms 개요](../../../docs/framework/winforms/windows-forms-overview.md)  
  Windows Forms 및 스마트 클라이언트 응용 프로그램의 개요가 포함 되어 있습니다.  
   

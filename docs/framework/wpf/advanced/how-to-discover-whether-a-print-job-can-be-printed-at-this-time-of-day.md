@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ac89b8dce67c95c78a5dd46e591d84730a68346
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인
 인쇄 큐 항상 사용할 수 없는 하루 24 시간에 대 한 합니다. 하루 중 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성을 갖게 됩니다. 예를 들어 특정 부서 오후 5 시 이후에 단독으로 사용에 대 한 프린터를 예약 하 고이 기능을 사용할 수 있습니다. 해당 부서 사용 되는 다른 큐에서는 다른 부서에서 프린터를 처리 해야 합니다. 다른 부서에 대 한 큐 오후 5 시 이후에 사용할 수 없게 설정 됩니다, 그리고 부서에서 선호 하는 방식된에 대 한 큐 수로 설정 되어 동안 항상 사용 가능한 합니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 클래스에 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 의 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 원격으로 현재 시간에 지정된 된 큐에 지정된 된 인쇄 작업 인쇄할 수 있는지를 확인 하기 위한 수단을 제공 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 인쇄 작업 문제를 진단할 수 있는 샘플입니다.  
   
  이러한 종류의 기능에 대 한 두 가지 주요 단계는 다음과 같습니다.  

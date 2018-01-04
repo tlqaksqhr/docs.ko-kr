@@ -20,11 +20,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f51505a2b532da47591f2be4d767247c519aec40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f5f3bb1856a83309483119ded600396218b81fb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-styles-and-templates"></a>Control 스타일 및 템플릿
 Windows Presentation Foundation (WPF)의 컨트롤에는 한 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 표시 트리를 포함 하는 합니다. 구조와 컨트롤의 모양을 수정 하 여 변경할 수 있습니다는 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 합니다. 컨트롤의 시각적 트리의 부분만 바꿀 수 없으므로 설정 해야 하는 컨트롤의 시각적 트리를 변경 하는 <xref:System.Windows.Controls.Control.Template%2A> 을 새로운 전체 컨트롤의 속성 <xref:System.Windows.Controls.ControlTemplate>합니다.  
@@ -42,7 +43,7 @@ Windows Presentation Foundation (WPF)의 컨트롤에는 한 <xref:System.Window
 |Royale.NormalColor.xaml|Windows XP Media Center Edition 운영 체제|  
 |Aero.normalcolor.xaml|Windows Vista 운영 체제의 기본 테마|  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Button 스타일 및 템플릿](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
  [Calendar 스타일 및 템플릿](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
  [CheckBox 스타일 및 템플릿](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  

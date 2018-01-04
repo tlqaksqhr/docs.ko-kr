@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: af16d1e2c3ef683a6e3da4197a30af58d7758a0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 716de57574beef55d066a3bb121a6fc19a4959d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>방법: Windows Forms Timer 구성 요소를 사용하여 설정된 간격마다 프로시저 실행
 루프가 완료될 때까지 특정 시간 간격으로 실행되거나 설정된 시간 간격이 경과할 때 실행되는 프로시저를 만들려는 경우도 있습니다. <xref:System.Windows.Forms.Timer> 구성 요소는 이러한 프로시저를 가능하게 합니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  적절한 시간에 <xref:System.Windows.Forms.Timer.Enabled%2A> 속성을 `false`로 설정하여 프로시저가 다시 실행되지 않도록 중지합니다. 간격을 설정 `0` 타이머가 중지를 발생 하지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 첫 번째 코드 예제에서는 1초 증분으로 시간을 추적합니다. 폼의 <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Label> 및 <xref:System.Windows.Forms.Timer> 구성 요소를 사용합니다. <xref:System.Windows.Forms.Timer.Interval%2A> 속성은 1000(1초와 같음)으로 설정됩니다. <xref:System.Windows.Forms.Timer.Tick> 이벤트에서 레이블의 캡션은 현재 시간으로 설정됩니다. 단추를 클릭하면 <xref:System.Windows.Forms.Timer.Enabled%2A> 속성이 `false`로 설정되어 타이머가 레이블 캡션 업데이트를 중지합니다. 다음 코드 예제에서는 포함 하는 폼이 있어야는 <xref:System.Windows.Forms.Button> 라는 컨트롤 `Button1`, <xref:System.Windows.Forms.Timer> 라는 컨트롤 `Timer1`, 및 <xref:System.Windows.Forms.Label> 라는 컨트롤 `Label1`합니다.  
   
 ```vb  
@@ -158,7 +159,7 @@ private:
    }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 두 번째 코드 예제는 루프가 완료될 때까지 600밀리초마다 프로시저를 실행합니다. 다음 코드 예제에서는 포함 하는 폼이 있어야는 <xref:System.Windows.Forms.Button> 라는 컨트롤 `Button1`, <xref:System.Windows.Forms.Timer> 라는 컨트롤 `Timer1`, 및 <xref:System.Windows.Forms.Label> 라는 컨트롤 `Label1`합니다.  
   
 ```vb  

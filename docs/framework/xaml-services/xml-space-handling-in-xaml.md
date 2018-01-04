@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a5048cbad1d2ea914d041ac3c87a43223b208c3a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8b8356cdb47b6b834e8d9a6bb84b26445af6d865
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML의 xml:space 처리
 `xml:space` 특성은 object 요소 내에서 공백 처리 동작을 선언 하는 XML로 정의 된 특성입니다. 이 동작은 요소 내에 포함 된 모든 콘텐츠 (내부 텍스트)와 관련이 있는 `xml:space` 선언 되 고 범위 자식 요소를 합니다.  

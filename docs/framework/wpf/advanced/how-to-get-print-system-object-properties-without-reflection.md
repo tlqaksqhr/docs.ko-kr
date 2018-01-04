@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2f6015d25ee8868fe9b4c6dcf3bf145d413521e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d93919f691b51d5f177b074e5d9cef2c140458e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>방법: 리플렉션을 사용하지 않고 인쇄 시스템 개체 속성 가져오기
 개체에 속성 (및 해당 속성의 형식을)을 항목별로 정리할 리플렉션을 사용 하 여 응용 프로그램 성능이 느려질 수 있습니다. <xref:System.Printing.IndexedProperties> 네임 스페이스는 리플렉션을 사용 하 여이 정보를 가져올 수 있는 방법을 제공 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 작업을 수행 하는 단계는 다음과 같습니다.  
   
 1.  형식의 인스턴스를 만듭니다. 형식이 아래 예에서 <xref:System.Printing.PrintQueue> 와 함께 제공 되는 형식 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]에서 파생 되는 형식에 대해 거의 동일한 코드가 작동 해야 하지만 <xref:System.Printing.PrintSystemObject>합니다.  

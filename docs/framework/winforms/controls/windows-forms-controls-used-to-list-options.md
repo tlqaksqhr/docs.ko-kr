@@ -16,16 +16,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e1b26ec97f4b379e6b2d75a407408b8382bca52
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f43e8982dc9caaa57ffb6865bf9988243f42fa8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>옵션 목록 표시에 사용하는 Windows Forms 컨트롤
 옵션을 선택 목록과 함께 사용자에 게 제공 하려면 Windows Form에 다양 한 컨트롤을 추가할 수 있습니다. 따라 양을 제한 하려면 사용자의 입력으로 추가할 수 있습니다는 <xref:System.Windows.Forms.ListBox> 컨트롤은 <xref:System.Windows.Forms.ComboBox> 컨트롤 또는 <xref:System.Windows.Forms.CheckedListBox> 제어 합니다. 요구에 적합 한 최상의 컨트롤을 확인 하려면 다음 링크를 사용 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ListBox 대신 Windows Forms ComboBox를 사용해야 하는 경우](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  Windows Form의 제한 사항 요구에 따라 적절 한 목록 기반 컨트롤을 권장합니다.  
   

@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 389ba73c4509f41f6c2cf86363e59ea720eb3c9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="nested-types"></a>중첩 형식
 중첩된 형식은 바깥쪽 형식의 호출 하는 다른 형식의 범위 내에 정의 된 하는 형식이입니다. 중첩된 형식은 바깥쪽 형식의 모든 멤버 권한이 있습니다. 예를 들어 바깥쪽 형식의 모든 상위 항목에 정의 된 필드를 보호 및 바깥쪽 형식에 정의 된 전용 필드에 액세스를 권한이 있습니다.  

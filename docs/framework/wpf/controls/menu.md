@@ -17,11 +17,12 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d0939788210819279059729e21f9827124eb13f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ba9f7b729210224571d973519c08737ac386cfa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menu"></a>메뉴
 A <xref:System.Windows.Controls.Menu> 계층적 명령 또는 이벤트 처리기와 관련 된 요소도 구성할 수 있는 컨트롤입니다. 각 <xref:System.Windows.Controls.Menu> 여러 개 포함할 수 <xref:System.Windows.Controls.MenuItem> 컨트롤입니다. 각 <xref:System.Windows.Controls.MenuItem> 명령을 호출 하거나 호출할 수는 `Click` 이벤트 처리기입니다. A <xref:System.Windows.Controls.MenuItem> 여러 개 있을 수도 수 <xref:System.Windows.Controls.MenuItem> 자식, 하위 메뉴를 형성할으로 합니다.  
@@ -31,7 +32,7 @@ A <xref:System.Windows.Controls.Menu> 계층적 명령 또는 이벤트 처리�
  ![메뉴 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
 다양 한 상태의 메뉴  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [메뉴 개요](../../../../docs/framework/wpf/controls/menu-overview.md)  
   
 ## <a name="reference"></a>참조  

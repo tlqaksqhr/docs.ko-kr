@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3012afc118420a83c869785d26c28f1eee969cb3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87e821bd95679372fd169b7880e969fd10b5d03c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>방법: Firefox용 WPF 플러그 인 설치 여부 확인
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Firefox 사용에 대 한 플러그 인 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 및 느슨한 XAML 파일에서 Mozilla Firefox 브라우저에서 실행할 수 있습니다. 이 항목에서는 관리자 WPF Firefox에 대 한 플러그 인이 설치 되어 있는지 확인 하는 데 사용할 수 있는 JavaScript 및 HTML로 작성 된 스크립트를 제공 합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  설치, 배포 및 검색 하는 방법에 대 한 자세한 내용은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], 참조 [개발자를 위한.NET Framework 설치](../../../../docs/framework/install/guide-for-developers.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  경우는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 가 설치 된 클라이언트 컴퓨터가 사용 하는 WPF 플러그 인 Firefox에 대 한 합니다. 다음 예제 스크립트 Firefox에 대 한 WPF 플러그 인에 대 한 확인 하 고 적절 한 상태 메시지를 표시 합니다.  
   
 ```  

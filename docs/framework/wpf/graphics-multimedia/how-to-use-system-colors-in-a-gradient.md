@@ -16,16 +16,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 105e22588f68d999811f5482342d53851a4d25eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: acf0f2c63e0b176f28d611183aab1abecc8f1678
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>방법: 그라데이션에 시스템 색 사용
 그라데이션에서 시스템 색을 사용 하려면 사용는  *\<SystemColor >*색 및  *\<SystemColor >*ColorKey의 정적 속성은 <xref:System.Windows.SystemColors> 얻으려고 클래스는 표시 되는 색에 대 한 참조를  *\<SystemColor >* 시스템 색의 이름입니다. 사용 하 여는  *\<SystemColor >*자동 시스템 테마 변경 내용으로 업데이트 하는 동적 참조를 만들려는 ColorKey 속성입니다. 그렇지 않은 경우 사용 된  *\<SystemColor >*색 속성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 동적 시스템 색 리소스를 사용하여 그라데이션을 만듭니다.  
   
  [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemColorExample.xaml#graphicsmmdynamicsystemcolorgradientexamplewholepage)]  

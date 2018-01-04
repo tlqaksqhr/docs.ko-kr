@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5fa8cafdaf7856e95129f648da1d4b4ccb2f54eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b0b027aa34b310413fa02e81149292fabb40f79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>방법: Polyline 요소를 사용하여 다중선 그리기
 사용 하 여 일련의 연결 된 줄은 다중선 그리는 방법을 보여 주는이 예제는 <xref:System.Windows.Shapes.Polyline> 요소입니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 예제에서는 두 개의 그립니다 <xref:System.Windows.Shapes.Polyline> 내부 요소는 <xref:System.Windows.Controls.Canvas>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 지점에 대 한 유효한 구문은 공백으로 구분 된 목록 쉼표로 구분 된 x 및 y 좌표 쌍입니다.  
   
  [!code-xaml[drawingwithshapeelements#PolylineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  

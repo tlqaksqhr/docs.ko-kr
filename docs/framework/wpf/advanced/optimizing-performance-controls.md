@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-controls"></a>성능 최적화: 컨트롤
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에는 대부분의 Windows 응용 프로그램에 사용되는 일반적인 UI(사용자 인터페이스) 구성 요소가 다수 포함되어 있습니다. 이 항목에서는 UI의 성능을 향상시킬 수 있는 기술에 대해 설명합니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   설정 <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> 를 `false`합니다.  
   
--   설정 <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` 를 `false`합니다.    
+-   설정 <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` 를 `false`합니다.  
   
  항목 컨테이너를 가상화할 때 항목에 속한 항목 컨테이너와 관련된 추가 상태 정보가 있는지 여부를 고려해야 합니다. 이 경우 추가 상태를 저장해야 합니다. 예를 들어에 포함 된 항목을 할 수 있습니다는 <xref:System.Windows.Controls.Expander> 제어 및 <xref:System.Windows.Controls.Expander.IsExpanded%2A> 상태 항목 자체가 아니라 항목의 컨테이너에 바인딩되어 있습니다. 컨테이너에 새 항목의 현재 값에 대 한 다시 사용 되는 경우 <xref:System.Windows.Controls.Expander.IsExpanded%2A> 새 항목에 사용 됩니다. 또한 이전 항목 손실 올바른 <xref:System.Windows.Controls.Expander.IsExpanded%2A> 값입니다.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="controls-that-implement-performance-features"></a>성능 기능을 구현하는 컨트롤  
  다음 표에서는 데이터를 표시하는 일반적인 컨트롤 및 각 컨트롤에 성능 기능이 지원되는지 여부를 보여 줍니다.  이러한 기능을 설정하는 방법은 이전 섹션을 참조하세요.  
   
-|컨트롤|가상화|컨테이너 재활용|스크롤 지연|  
+|Control|가상화|컨테이너 재활용|스크롤 지연|  
 |-------------|--------------------|-------------------------|------------------------|  
 |<xref:System.Windows.Controls.ComboBox>|사용할 수 있음|사용할 수 있음|사용할 수 있음|  
 |<xref:System.Windows.Controls.ContextMenu>|사용할 수 있음|사용할 수 있음|사용할 수 있음|  

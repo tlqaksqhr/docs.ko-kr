@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4fc0cb9183fde33887a3e84bb30cc3f79892586e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bc298ad41884bfda84771a729990ebb4e6f776b7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-namespaces"></a>네임스페이스의 이름
 으로 다른 이름 지정 지침으로 목표 네임 스페이스의 이름을 지정할 때 만들어지고 충분 한 명확성 즉시 내용을 알 수 네임 스페이스의 내용을 가능성이 프레임 워크를 사용 하 여 프로그래머에 대 한 있습니다. 다음 템플릿 네임 스페이스 이름 지정에 대 한 일반적인 규칙을 지정 합니다.  

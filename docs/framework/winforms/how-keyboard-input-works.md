@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f45d01da6f9a851a0e51f9d614e84a3fba91e4d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-keyboard-input-works"></a>키보드 입력 작동 방식
 Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤트를 발생시켜 키보드 입력을 처리합니다. 대부분의 Windows Forms 응용 프로그램에서는 키보드 이벤트를 처리하여 키보드 입력을 단독으로 처리합니다. 그러나 키가 컨트롤에 도달하기 전에 키를 가로채는 등의 고급 키보드 입력 시나리오를 구현하려면 키보드 메시지가 작동하는 방식을 알아야 합니다. 이 항목에서는 Windows Forms에서 인식하는 키 데이터 형식을 설명하고 키보드 메시지가 라우팅되는 방법에 대한 개요를 설명합니다. 키보드 이벤트에 대한 자세한 내용은 [키보드 이벤트 사용](../../../docs/framework/winforms/using-keyboard-events.md)을 참조하세요.  
@@ -61,7 +62,7 @@ Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤
 ## <a name="processing-keyboard-messages"></a>키보드 메시지 전처리  
  키보드 메시지 도달 범위는 <xref:System.Windows.Forms.Control.WndProc%2A> 메서드는 재정의할 수 있는 메서드 집합에 의해 처리 된 폼 이나 컨트롤의 합니다. 이러한 각 방법의 반환을 <xref:System.Boolean> 키보드 메시지 처리 및 컨트롤에서 사용 된 있는지 여부를 지정 하는 값입니다. 이러한 메서드 중 한 메서드에서 `true`를 반환하면 메시지가 처리된 것으로 간주됩니다. 그러므로 컨트롤의 기본 또는 부모에 추가 처리를 위한 메시지를 전달하지 않습니다. 그렇지 않은 경우에는 메시지가 메시지 큐에 유지되고 컨트롤의 기본 또는 부모의 다른 메서드에서 처리됩니다. 다음 표에서는 키보드 메시지를 처리하는 메서드를 보여 줍니다.  
   
-|메서드|참고|  
+|메서드|노트|  
 |------------|-----------|  
 |<xref:System.Windows.Forms.Control.ProcessKeyMessage%2A>|받는 모든 키보드 메시지를 처리 하는이 메서드는 <xref:System.Windows.Forms.Control.WndProc%2A> 컨트롤의 메서드.|  
 |<xref:System.Windows.Forms.Control.ProcessKeyPreview%2A>|이 메서드는 키보드 메시지를 컨트롤의 부모에 보냅니다. 경우 <xref:System.Windows.Forms.Control.ProcessKeyPreview%2A> 반환 `true`, 그렇지 않으면 키 이벤트가 생성 됩니다 <xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A> 라고 합니다.|  

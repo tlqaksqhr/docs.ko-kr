@@ -22,11 +22,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1a3460b734d5bab6f5362fa9d3631e06821f6d49
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d489d4cf61adfe8550bd16b85cd658e0d545c861
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-type-members"></a>형식 멤버의 이름
 형식 멤버의 내용이: 메서드, 속성, 이벤트, 생성자 및 필드입니다. 다음 섹션에서는 형식 멤버 이름 지정에 대 한 지침을 설명 합니다.  

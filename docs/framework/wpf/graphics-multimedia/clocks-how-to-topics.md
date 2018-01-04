@@ -19,16 +19,17 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f6acbc61d68e32846e055125ad8042a9ea55db
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: bf4e6efe35234a6ea86b3b1af5561a1ceb10af18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clocks-how-to-topics"></a>Clock 방법 항목
 다음 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Media.Animation.Clock> 타이밍 상태 정보에 대 한 유지 관리 하는 개체는 <xref:System.Windows.Media.Animation.Timeline>합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [AnimationClock을 사용하여 속성에 애니메이션 효과 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
  [대화식으로 클록 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
  [동기적으로 클록 검색](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  

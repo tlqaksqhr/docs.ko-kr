@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ccb89b67b222c11695131a1aa8423b89df1c9a70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>기본 XAML 스키마 컨텍스트 및 WPF XAML 스키마 컨텍스트
 XAML 스키마 컨텍스트는 특정 XAML 어휘를 사용 하는 XAML 프로덕션 형식 매핑을 확인 하는 방법을, 어셈블리를 로드 하는 방법, 특정 어떻게 판독기 및 작성기를 포함 하 여 동작을 작성 하는 개체 상호 작용 하는 방법을 정규화 하는 개념적 엔터티 설정은 해석 됩니다. 이 항목에서는 CLR 형식 시스템을 기반으로 하는 연결 된 기본 XAML 스키마 컨텍스트 및.NET Framework XAML 서비스의 기능을 설명 합니다. 이 항목에서는 WPF에 사용 되는 XAML 스키마 컨텍스트를 설명 합니다.  

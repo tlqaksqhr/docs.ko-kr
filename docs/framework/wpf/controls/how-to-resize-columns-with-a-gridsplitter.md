@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c8299a3f4885618601c8087a61c21dc5d989813
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d68d829e5543b1c299668493c11b62ccb11d81af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>방법: GridSplitter로 열 크기 조정
 이 예제에는 세로 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.GridSplitter> 의 두 열 사이의 간격을 재배포 하려면는 <xref:System.Windows.Controls.Grid> 의 크기를 변경 하지 않고는 <xref:System.Windows.Controls.Grid>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **열의 가장자리를 오버레이하는 GridSplitter를 만드는 방법**  
   
  지정 하는 <xref:System.Windows.Controls.GridSplitter> 에 인접 한 열 크기를 조정 하는 <xref:System.Windows.Controls.Grid>설정는 <xref:System.Windows.Controls.Grid.Column%2A> 크기를 조정할 열 중 하나에 연결 된 속성입니다. 경우에 <xref:System.Windows.Controls.Grid> 에 둘 이상의 행이 설정는 <xref:System.Windows.Controls.Grid.RowSpan%2A> 연결 된 속성의 행 수입니다. 다음 설정의 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 속성을 <xref:System.Windows.HorizontalAlignment.Left> 또는 <xref:System.Windows.HorizontalAlignment.Right> (설정한 어떤 맞춤 크기를 조정 하려면 두 개의 열에 따라 다름). 마지막으로 설정 된 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 속성을 <xref:System.Windows.VerticalAlignment.Stretch>합니다.  

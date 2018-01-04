@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8caa253a3f17c58f542317de579c4f7832c4efac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 39bb29d36b6d81464b1213ebc0bf7aee6ceb5713
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sealing"></a>봉인
 개체 지향 프레임 워크의 기능 중 하나는 개발자가 확장 하 고 프레임 워크 디자이너에서 예기치 않은 방식으로 사용자 지정할 수 있습니다. 이 기능과 확장 가능한 디자인의 위험 합니다. 사용자 프레임 워크를 디자인할 때 즉,이 필요한 경우 확장성을 위해 신중 하 게 디자인 하 고는 것은 위험 확장성을 제한할 매우 중요 합니다.  
@@ -58,4 +61,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
  [확장성을 위한 디자인](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [봉인 되지 않은 클래스](../../../docs/standard/design-guidelines/unsealed-classes.md)
+ [봉인되지 않은 클래스](../../../docs/standard/design-guidelines/unsealed-classes.md)

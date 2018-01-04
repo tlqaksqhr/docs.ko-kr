@@ -17,16 +17,17 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c34bb03e27d223c09238f658563e8a368a0c6948
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6aee3d6161d5a20a55e05e86c8479b9182d4e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-how-to-topics"></a>Image 방법 항목
 이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.Image> 요소입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Image 요소 사용](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
   [이미지를 회색조로 변환](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
   [이미지 잘라내기](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  

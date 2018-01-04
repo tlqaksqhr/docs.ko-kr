@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d32dfe359d4f51403c5aaaae319fe4cb52eed3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 913cccadc90eaef589f42d097a14b1472c7129fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>파일 대화 상자의 사용자 지정 위치에 대한 알려진 폴더 GUID
 사용 하면 한 <xref:System.Guid> 지정 하는 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 알려진 폴더에 폴더를 추가 하는 경우는 <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 컬렉션입니다. 알려진 폴더 Guid 대/소문자 구분 하지 않으며에 KnownFolders.h 파일에 정의 되는 [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]합니다.  
@@ -179,7 +180,7 @@ ms.lasthandoff: 11/21/2017
  Programs  
  A77F5D77-2E2B-44C3-A6A2-ABA601054A51  
   
- 공용  
+ Public  
  DFDF76A2-C82A-4D63-906A-5644AC457385  
   
  PublicDesktop  

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63eb1b7aec0c65192f67035fc7bc624fa1d2ae81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> 컨트롤 표시 하 고 SQL 데이터베이스, LINQ 쿼리 또는 기타 바인딩할 수 있는 데이터 원본에서와 같은 서로 다른 여러 원본의 데이터를 편집할 수 있습니다. 자세한 내용은 [바인딩 소스 개요](../../../../docs/framework/wpf/data/binding-sources-overview.md)를 참조하세요.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |셀 및 행 선택 동작을 정의 합니다.|<xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 및 <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> 속성을 설정합니다.|  
 |헤더, 셀, 행의 시각적 모양을 사용자 지정|새 적용 <xref:System.Windows.Style> 에 <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.CellStyle%2A>, 또는 <xref:System.Windows.Controls.DataGrid.RowStyle%2A> 속성입니다.|  
 |크기 조정 옵션 설정|설정의 <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, 또는 <xref:System.Windows.FrameworkElement.MinWidth%2A> 속성입니다. 자세한 내용은 참조 [DataGrid 컨트롤의 크기 조정 옵션](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)합니다.|  
-|선택한 항목에 액세스|확인는 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> 가져올 선택된 된 셀 속성 및 <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> 선택 된 행을 가져올 속성입니다. 자세한 내용은 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>을 참조하십시오.|  
+|선택한 항목에 액세스|확인는 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> 가져올 선택된 된 셀 속성 및 <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> 선택 된 행을 가져올 속성입니다. 자세한 내용은 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>을 참조하세요.|  
 |최종 사용자 상호 작용을 사용자 지정|설정의 <xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>, 및 <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A> 속성입니다.|  
 |취소 또는 자동 생성 된 열 변경|처리는 <xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> 이벤트입니다.|  
 |열 고정|설정의 <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> 속성을 1로 설정 하 여 맨 왼쪽 위치로 이동 열은 <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> 속성을 0입니다.|  

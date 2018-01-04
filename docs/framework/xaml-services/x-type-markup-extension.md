@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ed0372349a08687fd83b0fc989cc4cb88c29d96c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xtype-markup-extension"></a>x:Type 태그 확장명
 CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기본 형식입니다.  
@@ -51,7 +52,7 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
 |||  
 |-|-|  
 |`prefix`|선택 사항입니다. 기본이 아닌 XAML 네임 스페이스에 매핑되는 접두사입니다. 접두사 지정 자주 필요는 없습니다. 설명 부분을 참조하세요.|  
-|`typeNameValue`|필수 요소. 현재 기본 XAML 네임 스페이스;에서 확인할 수 없는 형식 이름 지정 된 매핑된 접두사 경우 또는 `prefix` 를 제공 합니다.|  
+|`typeNameValue`|필수. 현재 기본 XAML 네임 스페이스;에서 확인할 수 없는 형식 이름 지정 된 매핑된 접두사 경우 또는 `prefix` 를 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
  `x:Type` 태그 확장은 비슷한 기능을는 `typeof()` 연산자 [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] 또는 `GetType` 연산자 [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]합니다.  

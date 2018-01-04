@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dc58845a78607090002467e3aa63d4c549ec116
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9778094eb098d1e119ef4ef0c25dd022130a11ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 구문
 <xref:System.Windows.PropertyPath> 개체가 지원 복잡 한 인라인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문을 사용 하는 다양 한 속성을 설정 하기 위한는 <xref:System.Windows.PropertyPath> 형식을 값으로. 이 항목 문서는 <xref:System.Windows.PropertyPath> 구문 되는 바인딩 및 애니메이션 구문에 적용 합니다.  

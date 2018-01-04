@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 가상 모드
 가상 모드 간의 상호 작용을 관리할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 제어 및 사용자 지정 데이터 캐시 합니다. 가상 모드를 구현 하려면 설정는 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성을 `true` 하 고이 항목에서 설명 하는 이벤트 중 하나 이상을 처리 합니다. 일반적으로 처리 합니다 적어도 `CellValueNeeded` 데이터 캐시에서 값 조회 컨트롤 수 있도록 하는 이벤트입니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 이벤트가 발생만 때는 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성이 `true`합니다.  
   
-|이벤트|설명|  
+|이벤트(event)|설명|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|컨트롤에서 표시 하기 위해 데이터 캐시에서 셀 값을 검색 하는 데 사용 합니다. 이 이벤트는 바인딩되지 않은 열에 셀에 대해서만 발생합니다.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|데이터 캐시에는 셀에 대 한 사용자 입력을 커밋하지 컨트롤에서 사용 합니다. 이 이벤트는 바인딩되지 않은 열에 셀에 대해서만 발생합니다.<br /><br /> 호출 된 <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> 메서드 외부의 캐시 된 값을 변경 하는 경우는 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 지정 된 컨트롤에 표시 되는지 확인 하 고 현재 유효한 모든 자동 크기 조정 모드를 적용 하는 이벤트 처리기입니다.|  

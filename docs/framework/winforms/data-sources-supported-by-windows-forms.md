@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b02e492d0357c80776df0a1d0bd01ce228fa0b04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms에서 지원하는 데이터 소스
 일반적으로 데이터 바인딩을 사용 되었습니다 응용 프로그램 내에서 데이터베이스에 저장 된 데이터를 활용 하려면. Windows Forms 데이터 바인딩, 최소한의 특정 요구를 충족으로 배열 및 컬렉션 등의 다른 구조에 있는 데이터와 데이터베이스에서 데이터를 액세스할 수 있습니다.  

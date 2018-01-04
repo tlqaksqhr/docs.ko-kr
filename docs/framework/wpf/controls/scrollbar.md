@@ -17,16 +17,17 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 468ba5546670a0aec6e1f6c59b7d19b83e6ff24f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 05bf330f17e5ebfb00037fae5dd8c44ce337322d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scrollbar"></a>ScrollBar
 A <xref:System.Windows.Controls.Primitives.ScrollBar> 이동 하 여 현재 보기 영역 밖에 있는 콘텐츠를 볼 수 있습니다는 <xref:System.Windows.Controls.Primitives.Thumb> 는 콘텐츠를 볼 수 있도록 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ScrollBar의 Thumb 크기 사용자 지정](../../../../docs/framework/wpf/controls/how-to-customize-the-thumb-size-on-a-scrollbar.md)  
   
 ## <a name="reference"></a>참조  

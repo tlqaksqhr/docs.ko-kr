@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c2d7cfcb228c492d2adbe614d0ed88a3b02bb68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9a876a818086e0d54251f53a1e8f83cc74a574ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-and-performance"></a>예외 및 성능
 예외와 관련 된 일반적인 문제 하나는 지속적으로 실패 하는 코드에 대 한 예외를 사용 하면 성능을 구현 됩니다 허용입니다. 이 유효한 중요 합니다. 예외를 throw 하는 멤버 성능이 현저히 저하 될 수 있습니다. 그러나, 오류 코드를 사용 하지 않도록 설정 하는 예외 지침을 따르면 엄격 하 게 하는 동안 좋은 성능을 얻을 수는 있습니다. 이 섹션에 설명 된 두 개의 패턴에는이 작업을 수행 하는 방법을 제안 합니다.  
@@ -82,4 +85,4 @@ public struct DateTime {
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
- [예외에 대 한 디자인 지침](../../../docs/standard/design-guidelines/exceptions.md)
+ [예외 디자인 지침](../../../docs/standard/design-guidelines/exceptions.md)

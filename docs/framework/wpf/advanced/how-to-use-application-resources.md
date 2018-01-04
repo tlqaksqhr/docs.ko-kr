@@ -16,16 +16,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23f49481806d386bece1ad0634dd635c9eaf51f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bac1fa1576e684a4b10f00310c08e4e7101a5df0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-application-resources"></a>방법: 응용 프로그램 리소스 사용
 이 예제에서는 응용 프로그램 리소스를 사용하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 응용 프로그램 정의 파일을 보여 줍니다. 리소스 섹션을 정의 하는 응용 프로그램 정의 파일 (에 대 한 값은 <xref:System.Windows.Application.Resources%2A> 속성). 응용 프로그램 수준에 정의된 리소스는 응용 프로그램의 일부인 다른 모든 페이지에 액세스할 수 있습니다. 이 경우 리소스는 선언된 스타일입니다. 이 예에서는 생략 내에 정의 된 컨트롤 템플릿 컨트롤 템플릿을 포함 하는 전체 스타일 시간이 오래 걸릴 수 있습니다, 때문에 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 스타일의 속성 setter입니다.  
   
  [!code-xaml[ResourcesApplication#PreTemplateResource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/app.xaml#pretemplateresource)]  

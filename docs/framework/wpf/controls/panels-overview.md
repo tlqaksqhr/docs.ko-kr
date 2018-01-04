@@ -20,11 +20,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f89ea3308d0e6cffc3ed50809f0e87e7ba854ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d25c6d9e4e6d067ad2107df2374329d84300c015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panels-overview"></a>Panel 개요
 <xref:System.Windows.Controls.Panel>요소는 요소의 렌더링을 제어 하는 구성 요소-크기 및 차원, 위치, 및 자식 콘텐츠를 정렬 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 다양 한 미리 정의 된 <xref:System.Windows.Controls.Panel> 요소 뿐만 아니라 사용자 지정을 생성 하는 기능 <xref:System.Windows.Controls.Panel> 요소입니다.  
@@ -254,7 +255,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="localizationglobalization-support"></a>지역화/세계화 지원  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 지역화 가능한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 만들기에 유용한 다양한 기능을 지원합니다.  
   
- 모든 panel 요소는 기본적으로 지원는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 동적으로 사용자의 언어 또는 로캘 설정에 따라 콘텐츠 흐름을 사용할 수 있는 속성입니다. 자세한 내용은 <xref:System.Windows.FrameworkElement.FlowDirection%2A>을 참조하십시오.  
+ 모든 panel 요소는 기본적으로 지원는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 동적으로 사용자의 언어 또는 로캘 설정에 따라 콘텐츠 흐름을 사용할 수 있는 속성입니다. 자세한 내용은 <xref:System.Windows.FrameworkElement.FlowDirection%2A>을 참조하세요.  
   
  <xref:System.Windows.Window.SizeToContent%2A> 응용 프로그램 개발자가 사용할 수 있는 메커니즘을 제공 하는 속성의 요구를 예상할 수 지역화 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. 사용 하는 <xref:System.Windows.SizeToContent.WidthAndHeight> 부모가이 속성의 값 <xref:System.Windows.Window> 항상 내용에 맞게 동적으로 크기를 조정 하 고 인공 높이 또는 너비 제한 제한 되지 않습니다.  
   

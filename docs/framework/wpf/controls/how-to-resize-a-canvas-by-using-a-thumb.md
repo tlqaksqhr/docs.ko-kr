@@ -22,16 +22,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 757745b24c8e9e281d243cd15a5351b01d3479ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c73509d58112e47f707e82243005bfdf9edca151
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>방법: Thumb을 사용하여 캔버스 크기 조정
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Primitives.Thumb> 컨트롤의 크기를 조정 하는 <xref:System.Windows.Controls.Canvas> 제어 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  <xref:System.Windows.Controls.Primitives.Thumb> 이동 하거나 모니터링 하 여 컨트롤 크기 조정에 사용할 수 있는 끌기 기능을 제공 하는 컨트롤의 <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>, <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> 및 <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> 의 이벤트는 <xref:System.Windows.Controls.Primitives.Thumb>합니다.  
   
  사용자 지정에 마우스 포인터를 일시 중지 하면 마우스 왼쪽된 단추를 눌러 끌기 작업을 시작할는 <xref:System.Windows.Controls.Primitives.Thumb> 제어 합니다. 끌기 작업에는 마우스 왼쪽된 단추를 누른 상태로 계속 됩니다. 끌기 작업 중의 <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> 두 번 이상 나타날 수 있습니다. 발생할 때마다는 <xref:System.Windows.Controls.Primitives.DragDeltaEventArgs> 마우스 위치에 변경에 해당 하는 위치 변경을 클래스를 제공 합니다. 사용자가 왼쪽된 마우스 단추를 놓으면 끌기 작업이 완료 됩니다. 끌기 작업만 새 좌표를 제공 합니다. 자동으로 이전 위치에서 <xref:System.Windows.Controls.Primitives.Thumb>합니다.  

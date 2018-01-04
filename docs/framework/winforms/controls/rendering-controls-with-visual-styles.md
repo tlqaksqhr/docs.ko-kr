@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e463e1571b33e8ed877bd79d980e2f24d336a7df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rendering-controls-with-visual-styles"></a>비주얼 스타일을 사용하여 컨트롤 렌더링
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 는 지원되는 운영 체제에서 비주얼 스타일을 사용하여 컨트롤 및 기타 Windows UI(사용자 인터페이스) 요소를 렌더링하는 것을 지원합니다. 이 항목에서는 운영 체제의 현재 비주얼 스타일로 컨트롤 및 기타 UI 요소를 렌더링하는 작업에 대한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 의 몇 가지 지원 수준에 대해 설명합니다.  

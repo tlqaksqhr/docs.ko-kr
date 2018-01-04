@@ -18,16 +18,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 322ac3e5ebfe2d820a4711d877396b9a1a2759a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 173be3048f7bf082db2eef2ea21eb1e0319f9a43
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-and-reference-a-resource"></a>방법: 리소스 정의 및 참조
 이 예제에서는 리소스를 정의 하 고 특성을 사용 하 여 참조 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 가지 유형의 리소스를 정의:는 <xref:System.Windows.Media.SolidColorBrush> 리소스 및 여러 <xref:System.Windows.Style> 리소스입니다. <xref:System.Windows.Media.SolidColorBrush> 리소스 `MyBrush` 각각 사용 하는 몇 가지 속성의 값을 제공 하는 데 사용 되는 <xref:System.Windows.Media.Brush> 값을 입력 합니다. <xref:System.Windows.Style> 리소스 `PageBackground`, `TitleText` 및 `Label` 각각 특정 컨트롤 형식의 대상으로 합니다. 해당 스타일 리소스 리소스 키에서 참조 하 고 설정 하는 데 사용 되는 스타일은 대상된 컨트롤에서 다양 한 속성을 설정는 <xref:System.Windows.FrameworkElement.Style%2A> 속성으로 정의 된 몇 가지 특정 컨트롤 요소의 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
  setter에 메모 속성 중 하나는 `Label` 스타일도 참조는 `MyBrush` 앞에서 정의한 리소스입니다. 이 일반적인 방법 이지만 중요 리소스 구문 분석 되 고 제공 된 순서 대로 리소스 사전에 입력 합니다. 리소스 사용 하는 경우 사전 내에서 발견 되는 순서로 요청도 [StaticResource 태그 확장](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) 다른 리소스 내에서 참조 하도록 합니다. 여기서 해당 리소스가 요청 보다 리소스 컬렉션 내에서 참조 하는 모든 리소스 이전 정의 되어 있는지 확인 합니다. 경우 필요에 따라 해결할 수 있습니다 리소스 참조의 엄격한 생성 순서를 사용 하 여 한 [DynamicResource 태그 확장](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) 를 런타임 시 리소스를 대신 참조 알고 있어야 하지만 하는이 DynamicResource 기술 성능 결과가 표시 됩니다. 자세한 내용은 참조 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  

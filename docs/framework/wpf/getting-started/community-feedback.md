@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cec4326c8ae93507ee94c0b9573e679c8584a77
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 82f176a5c4d0f3e371993c9b2273bb045fe6df1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-community-feedback"></a>WPF 커뮤니티 사용자 의견
 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 팀원 및 커뮤니티 리더가 생성한 블로그, 포럼 및 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] Product Feedback Center와 같이 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]에 대해 배우고, 토론하고 사용자 의견을 제공할 수 있는 다양한 커뮤니티 리소스를 표시합니다. 각 커뮤니티 리소스는 서로 다른 혜택을 제공합니다. 여기서 설명하는 이러한 혜택은 각 혜택을 통해 전체적인 커뮤니티 및 특히 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)]에서 최고의 응답을 확보할 수 있는 모범 사례 집합입니다.  

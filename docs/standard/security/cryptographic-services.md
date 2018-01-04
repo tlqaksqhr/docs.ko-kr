@@ -34,11 +34,14 @@ caps.latest.revision: "34"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cbea6ab0fcf72937bc936510a89593861115f287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 <a name="top"></a> 인터넷과 같은 공용 네트워크에서는 엔터티 간의 보안 통신 수단을 제공하지 않습니다. 이러한 네트워크를 통한 통신은 권한이 없는 제3자가 읽거나 심지어는 수정하기도 쉽습니다. 암호화는 데이터를 볼 수 없도록 보호하며 데이터가 수정되었는지 감지하는 방법을 제공하며 기타 보안상 위험한 채널을 통한 안전한 통신 수단 제공을 지원합니다. 예를 들어 데이터를 암호화된 상태로 전송하고 나중에 의도된 당사자가 해독하는 암호화 알고리즘을 사용하여 데이터를 암호화할 수 있습니다. 제3자가 암호화된 데이터를 가로채는 경우 해독하기 어렵습니다.  
@@ -219,7 +222,7 @@ ms.lasthandoff: 10/18/2017
   
  이러한 방법 중 어떠한 방법을 사용해도 일반 텍스트로 전송되는 Alice의 메시지를 다른 사람이 읽지 못하게 할 수는 없습니다. 일반적으로 완벽한 보안을 구현하려면 디지털 서명(메시지 서명)과 암호화가 필요합니다.  
   
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 에서는 해시 알고리즘을 구현하는 다음 클래스를 제공합니다.  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 해시 알고리즘을 구현하는 다음 클래스를 제공합니다.  
   
 -   <xref:System.Security.Cryptography.HMACSHA1>.  
   
@@ -250,7 +253,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="random_numbers"></a>   
 ## <a name="random-number-generation"></a>난수 생성  
- 난수 생성은 여러 암호화 작업에 필수적입니다. 예를 들어 암호화 키는 재현이 불가능하도록 가능한 한 무작위적이어야 합니다. 암호화 난수 생성기는 계산상 1/2 이상의 확률로 예측할 수 없는 출력을 생성해야 합니다. 따라서 어떠한 다음 출력 비트 예측 방법도 임의 추측보다 더 잘 예측할 수 없어야 합니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 의 클래스에서는 난수 생성기를 사용하여 암호화 키를 생성합니다.  
+ 난수 생성은 여러 암호화 작업에 필수적입니다. 예를 들어 암호화 키는 재현이 불가능하도록 가능한 한 무작위적이어야 합니다. 암호화 난수 생성기는 계산상 1/2 이상의 확률로 예측할 수 없는 출력을 생성해야 합니다. 따라서 어떠한 다음 출력 비트 예측 방법도 임의 추측보다 더 잘 예측할 수 없어야 합니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 클래스에서는 난수 생성기를 사용하여 암호화 키를 생성합니다.  
   
  <xref:System.Security.Cryptography.RNGCryptoServiceProvider> 클래스는 난수 생성기 알고리즘을 구현한 것입니다.  
   

@@ -17,16 +17,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b2f20754c8425149f73f10af773604539125adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2b01657088c388ad09037716278dc0788de2abb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>방법: 캔버스 위치 지정 속성 가져오기 또는 설정
 위치 지정 메서드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Canvas> 요소 자식 콘텐츠를 배치 합니다. 콘텐츠를 사용 하 여이 예제는 <xref:System.Windows.Controls.ListBoxItem> 를 나타내는 값을 값의 인스턴스로 변환 위치 지정 <xref:System.Double>, 위치 지정에 대 한 필수 인수는 합니다. 값 한 다음 다시 문자열로 변환 되어에 텍스트로 표시 되는 <xref:System.Windows.Controls.TextBlock> 사용 하 여 요소는 <xref:System.Windows.Controls.Canvas.GetLeft%2A> 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 한 <xref:System.Windows.Controls.ListBox> 11 개의 선택 가능한 요소 <xref:System.Windows.Controls.ListBoxItem> 요소입니다. <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> 이벤트 트리거는 `ChangeLeft` 이후 코드 블록이 정의 하는 사용자 지정 메서드입니다.  
   
  각 <xref:System.Windows.Controls.ListBoxItem> 나타냅니다는 <xref:System.Double> 인수 중 하나는 값을 하는 <xref:System.Windows.Controls.Canvas.SetLeft%2A> 방식의 <xref:System.Windows.Controls.Canvas> 허용 합니다. 사용 하려면는 <xref:System.Windows.Controls.ListBoxItem> 의 인스턴스를 나타내는 <xref:System.Double>를 먼저 변환 해야는 <xref:System.Windows.Controls.ListBoxItem> 을 올바른 데이터 형식입니다.  

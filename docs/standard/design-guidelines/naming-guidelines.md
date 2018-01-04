@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 40da7449c88eaaba92e34374c002c7e175b2ef16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 713a11f822dd30e77e6442c0bb082a40755b1832
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="naming-guidelines"></a>명명 지침
 일관성 있는 개발 프레임 워크의 명명 규칙의 집합을 따라 프레임 워크의 유용성에 대 한 주요 기여도 될 수 있습니다. 프레임 워크를에 광범위 하 게 분리 된 프로젝트에서 많은 개발자가 사용할 수 있습니다. 폼의 일관성을 벗어나는 프레임 워크 요소의 이름을 쉽게 이해할 수 및 각 요소의 기능을 제공 해야 합니다.  
@@ -34,11 +37,11 @@ ms.lasthandoff: 10/18/2017
   
  공개적으로 노출 되는 Api에 적용 하도록만 해야 하지만이 명명 규칙을 채택 하 고 코드 전체에서 보다 일관성 있는 명명 인해 일반 코드 개발 지침으로, (public 또는 protected 형식 및 멤버에 및 명시적으로 구현 된 인터페이스).  
   
-## <a name="in-this-section"></a>단원 내용  
- [대/소문자 표기 규칙](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [대/소문자 표기법](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
  [일반 명명 규칙](../../../docs/standard/design-guidelines/general-naming-conventions.md)  
- [어셈블리 및 Dll의 이름](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
- [네임 스페이스의 이름](../../../docs/standard/design-guidelines/names-of-namespaces.md)  
+ [어셈블리 및 DLL의 이름](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
+ [네임스페이스의 이름](../../../docs/standard/design-guidelines/names-of-namespaces.md)  
  [클래스, 구조체 및 인터페이스의 이름](../../../docs/standard/design-guidelines/names-of-classes-structs-and-interfaces.md)  
  [형식 멤버의 이름](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [매개 변수 이름 지정](../../../docs/standard/design-guidelines/naming-parameters.md)  

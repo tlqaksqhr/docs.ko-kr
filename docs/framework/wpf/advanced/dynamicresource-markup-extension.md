@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c80d975e756fab449c254b9e1d8d1bc99a25652e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f6c8500f9b9cd6d617789a2da3444519971ae81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 태그 확장
 에 대 한 값을 제공 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 정의 된 리소스에 대 한 참조가 되도록 지연 하 여 property 특성입니다. 해당 리소스에 대 한 조회 동작은 런타임에 조회과 같습니다.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`key`|요청된 된 리소스에 대 한 키입니다. 이 키는 처음 할당 된 [X:key 지시문](../../../../docs/framework/xaml-services/x-key-directive.md) 리소스 태그에 작성 되거나 변수로 제공 된 경우는 `key` 를 호출할 때 매개 변수 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> 코드에서 리소스를 만든 경우.|  
+|`key`|요청한 리소스의 키입니다. 이 키는 처음 할당 된 [X:key 지시문](../../../../docs/framework/xaml-services/x-key-directive.md) 리소스 태그에 작성 되거나 변수로 제공 된 경우는 `key` 를 호출할 때 매개 변수 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> 코드에서 리소스를 만든 경우.|  
   
 ## <a name="remarks"></a>설명  
  A `DynamicResource` 초기 컴파일 중에 임시 표현식은 만들고 때문 요청 된 리소스 값이 개체를 생성 하기 위해 실제로 필요할 때까지 리소스에 대 한 조회를 연기 합니다. 이 수 이후는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지가 로드 됩니다. 리소스 값 섹션은 현재 페이지 범위에서 시작 하는 모든 활성 리소스 사전에 대해 키 검색 및 컴파일에서 자리 표시자 식에 대 한 대체 됩니다.  

@@ -20,16 +20,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0e3be0a0b550f6fbbc9876709094d4a23abe1a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f8f80d93f9625ff962a3e3fab1f6647678ecf32f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>방법: 모눈 간 크기 조정 속성 공유
 이 예에서는 열 크기 조정 데이터를 공유 하는 방법을 보여 줍니다. and 간의 행 <xref:System.Windows.Controls.Grid> 일관 된 크기 조정 유지 하기 위해 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 개의 <xref:System.Windows.Controls.Grid> 부모의 자식 요소로 요소 <xref:System.Windows.Controls.DockPanel>합니다. <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> 연결 된 속성의 <xref:System.Windows.Controls.Grid> 부모에 정의 된 <xref:System.Windows.Controls.DockPanel>합니다.  
   
  이 예제에서는 두 개를 사용 하 여 속성 값을 조작 <xref:System.Windows.Controls.Button> 요소; 부울 속성 값의 각 요소 하나 나타냅니다. 경우는 <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> 속성 값으로 설정 됩니다 `true`의 각 행 이나 열 멤버는 <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A> 행 또는 열의 내용에 관계 없이 크기 조정 정보를 공유 합니다.  

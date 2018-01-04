@@ -20,16 +20,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abbbdce0ca12c4d8bdd12f616bf49c3d6f66f441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f0315bbd1d1a5ab2ae08d8bc1810e240cb6a5a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>방법: 라우트된 이벤트에 대한 클래스 처리 추가
 클래스 처리기 또는 경로의 지정 된 노드에서 인스턴스 처리기에 의해 라우트된 이벤트를 처리할 수 있습니다. 클래스 처리기 먼저 호출 되며 및 인스턴스 처리에서 이벤트를 억제 또는 기본 클래스에서 소유 하는 이벤트에 다른 이벤트 특정 동작을 클래스 구현에서 사용할 수 있습니다. 이 예제에는 클래스 처리기를 구현 하기 위한 밀접 한 관련이 있는 두 가지 기술을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에 따라 사용자 지정 클래스를 사용 하 여 <xref:System.Windows.Controls.Canvas> 패널입니다. 응용 프로그램의 기본 전제는 사용자 지정 클래스는 마우스 왼쪽된 단추 클릭을 차단 하 고 처리 된 것으로, 자식 요소 클래스 또는 인스턴스 처리기에서 호출 될 전에 표시를 포함 하 여 해당 자식 요소에 있는 동작을 소개 합니다.  
   
  <xref:System.Windows.UIElement> 클래스 처리에 있는 가상 메서드를 노출 하는 클래스는 <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> 단순히 이벤트를 재정의 하 여 이벤트입니다. 이것이 가상 메서드를 클래스의 계층 구조에서 사용할 수 있는 경우 클래스 처리를 구현 하는 가장 간단한 방법은입니다. 다음 코드는 <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A> 는 "MyEditContainer"에서 파생 된 구현 <xref:System.Windows.Controls.Canvas>합니다. 구현에서 이벤트 인수를 처리 하는 것으로 표시 하 고 기본 화면상의 변화는 소스 요소를 제공 하는 코드를 추가 합니다.  

@@ -20,18 +20,19 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 849082fc1b933c4172c0d22ec3c9c2a1644a32fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac69ec232485ebd3097f2db3b31d3fd43d0ccc99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>방법: Point4D 구조체가 서로 같은지 및 다른지 여부 테스트
 테스트 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Media3D.Point4D> 같음과 다름을 구조입니다.  
   
  다음 코드를 테스트 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Media3D.Point4D> 같음 및 같지 않음을 사용 하 여에 대 한 구조는 <xref:System.Windows.Media.Media3D.Point4D> 같음 메서드.  <xref:System.Windows.Media.Media3D.Point4D> 구조를 오버 로드 된 같음을 사용 하 여 같음 여부 테스트 (`==`) 연산자 오버 로드 된 같지 않은지를 사용 하 여 다른 지에 대 한 다음 (`!=`) 연산자를 마지막으로 <xref:System.Windows.Media.Media3D.Point3D> 구조와 <xref:System.Windows.Media.Media3D.Point4D> 구조 정적을 사용 하 여 같은지 확인 <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
   
 ## <a name="see-also"></a>참고 항목  

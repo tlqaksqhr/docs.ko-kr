@@ -20,11 +20,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 96dd3f0a3ed27a9e09c62f3ad4f450ced5a8e644
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 93dfc62df1c1d68e09a3734402924bbac1a074cb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>방법: 포함 된 표준 시간대 저장
 
@@ -66,7 +69,7 @@ ms.lasthandoff: 10/18/2017
 
 10. 사용 하는 **속성** Visual Studio 창에 표시 되도록.resx 파일의 **빌드 작업** 속성이로 설정 되어 **포함 리소스**합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 serialize 한 <xref:System.TimeZoneInfo> 중부 표준시를 나타내는 개체와 <xref:System.TimeZoneInfo> SerializedTimeZones.resx 라고 하는.NET XML 리소스 파일에 Palmer 스테이션, 남극 대륙 시간을 나타내는 개체입니다. 레지스트리에; 중부 표준시 정의 일반적으로 Palmer 스테이션 남극 대륙 사용자 지정 표준 시간대입니다.
 

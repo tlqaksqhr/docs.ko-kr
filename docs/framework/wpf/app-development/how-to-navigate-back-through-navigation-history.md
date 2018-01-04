@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c715bda86fe6a4a010d80000db89619fc8bf8b7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e3bfc809dbe76c17859cb3fcd83f8a293a24b308
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>방법: 탐색 기록을 통해 뒤로 탐색
 이 예제에는 탐색 기록 뒤에 항목을 탐색 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  에 호스트 된 콘텐츠에서 실행 되는 코드는 <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame> 사용 <xref:System.Windows.Navigation.NavigationService>, 또는 [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] 탐색 기록, 한 번에 하나의 항목을 통해 다시 이동할 수 있습니다.  
   
  탐색 다시 하나의 항목 필요를 검사 하 여 뒤로 탐색 기록의 항목이 있는지 검사는 **CanGoBack** 속성을 호출 하 여 하나의 항목을 뒤로 탐색 하기 전에 **GoBack** 메서드입니다. 이 다음 예에서 확인할 수 있습니다.  

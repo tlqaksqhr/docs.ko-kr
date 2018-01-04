@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 484aa47744de95c849b237112f1a383c2c2cb0b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87e3b1b63c8582a322f74659f03803d1dbb19621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-and-timing-system-overview"></a>애니메이션 및 타이밍 시스템 개요
 이 항목에서는 타이밍 시스템에 애니메이션을 사용 하는 방법을 설명 <xref:System.Windows.Media.Animation.Timeline>, 및 <xref:System.Windows.Media.Animation.Clock> 속성에 애니메이션을 적용 하는 클래스입니다.  

@@ -19,16 +19,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23d234d97d6b25394df87016f0671d86b10a2853
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e05163bcbafd360e0929fe784ff1111bd0663ef3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-erase-ink-on-a-custom-control"></a>방법: 사용자 지정 컨트롤에서 잉크 지우기
 <xref:System.Windows.Ink.IncrementalStrokeHitTester> 현재 그려진된 스트로크에 다른 획 교차 하는지 여부를 결정 합니다.  앱을 통해 컨트롤을 만드는 사용자가 스트로크 일부를 지울 수 유용, 방식에서 할 수 있는 사용자는 <xref:System.Windows.Controls.InkCanvas> 때는 <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> 로 설정 된 <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 일부 스트로크를 지울 수 있는 사용자 지정 컨트롤을 만듭니다.  이 예제는 초기화 될 때 잉크를 포함 하는 컨트롤을 만듭니다.  잉크를 수집 하는 컨트롤을 만들려면 참조 [잉크 입력 컨트롤을 만드는](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)합니다.  
   
  [!code-csharp[HowToEraseInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToEraseInk/CSharp/InkEraser.cs#1)]

@@ -17,18 +17,19 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdff5ebeb51daff4e8848e9a7c8282c2eee6f208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-icommandsource"></a>방법: ICommandSource 구현
 구현 하 여 명령 소스를 만드는 방법을 보여 주는이 예제 <xref:System.Windows.Input.ICommandSource>합니다.  명령 소스는 명령을 호출 하는 방법을 알고 있는 개체입니다.  <xref:System.Windows.Input.ICommandSource> 세 멤버를 노출 하는 인터페이스: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, 및 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>합니다.  <xref:System.Windows.Input.ICommandSource.Command%2A>호출 되는 명령이입니다. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> 명령 소스 명령을 처리 하는 메서드에 전달 되는 사용자 정의 데이터 형식입니다. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 명령이 실행 되는 개체입니다.  
   
  이 예제에서는 클래스가 만들어질 서브클래싱하는 <xref:System.Windows.Controls.Slider> 컨트롤과 구현 <xref:System.Windows.Input.ICommandSource>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]다양 한 구현 하는 클래스를 제공 <xref:System.Windows.Input.ICommandSource>와 같은 <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, 및 <xref:System.Windows.Controls.ListBoxItem>합니다.  명령 소스가 명령을 호출 하는 방법을 정의 합니다.   <xref:System.Windows.Controls.Button>및 <xref:System.Windows.Controls.MenuItem> 명령을 클릭할 때 호출 합니다.  A <xref:System.Windows.Controls.ListBoxItem> 명령을 두 번 클릭할 때 호출 합니다. 이러한 클래스에만 명령이 될 때 원본 자신의 <xref:System.Windows.Input.ICommandSource.Command%2A> 속성을 설정 합니다.  
   
  슬라이더를 이동 하면 명령을 호출이 예제에 대 한 더 정확 하 게 때는 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 속성을 변경 합니다.  

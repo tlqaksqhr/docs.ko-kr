@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 0b35c35be7351fdf45157153ce6ca55fc763c3ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의
 비즈니스 개체는 사용자 지정 형식을 정의 하거나 특정 프레임 워크에 대 한 종속성이 없는 유형이 때 참고할 수 XAML에 대 한 유용한 특정 있습니다. 이러한 사례를 따르는 경우.NET Framework XAML 서비스 XAML 판독기 및 XAML 작성기 수 형식의 XAML 특징을 검색 하 고 XAML 형식 시스템을 사용 하 여 XAML 노드 스트림의 적절 한 표현 합니다. 이 항목 형식 정의 멤버의 정의 및 CLR 형식 또는 멤버의 특성 설정에 대 한 모범 사례를 설명 합니다.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
   
  사용자 지정 형식의 XAML 지원에 대 한 관련 된 각 XAML 관련 특성의 목록을 보려면 [사용자 지정 형식 및 라이브러리에 대 한 CLR 특성 XAML-Related](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)합니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  사용자 지정 형식 사용 해야 태그 작성자가 사용자 지정 항목 유형이 있는 어셈블리와 CLR 네임 스페이스에 대 한 접두사를 매핑해야 합니다. 이 절차는이 항목에 문서화 되지 않습니다.  
   
 ## <a name="access-level"></a>액세스 수준  

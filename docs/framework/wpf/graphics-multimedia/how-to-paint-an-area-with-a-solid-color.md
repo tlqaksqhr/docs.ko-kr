@@ -17,18 +17,19 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cde7f7df5089806ffb3235393eacc855d137ee51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3a5fe948c3cc6088f238f1f8f53c26c5f1fa5b2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>방법: 단색으로 영역 그리기
 단색으로 영역을 그리는 데 사용할 수 있습니다는 미리 정의 된 시스템 브러시와 같은 <xref:System.Windows.Media.Brushes.Red%2A> 또는 <xref:System.Windows.Media.Brushes.Blue%2A>, 또는 새를 만들 수 있습니다 <xref:System.Windows.Media.SolidColorBrush> 설명 및 해당 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 알파, 빨간색, 녹색 및 파랑 값을 사용 하 합니다. XAML에서 16진수 표기법을 사용하여 단색으로 영역을 그릴 수도 있습니다.  
   
  다음 예에서는를 사용 하 여 각이 방법을 페인트는 <xref:System.Windows.Shapes.Rectangle> 파란색입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **미리 정의된 브러시 사용**  
   
  다음 예제에서 미리 정의 된 브러시를 사용 하 여 <xref:System.Windows.Media.Brushes.Blue%2A> 파란색 사각형을 그리는 데 합니다.  

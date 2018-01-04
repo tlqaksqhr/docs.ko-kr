@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>형식 디자인 지침
 CLR 관점에서는 두 가지 범주의 형식-참조 형식과 값 형식-하지만 프레임 워크 디자인에 대 한 토론을 목적으로 각각의 특정 디자인 규칙 자체에 더 많은 논리 그룹으로 형식 나눕니다.  
@@ -41,13 +44,13 @@ CLR 관점에서는 두 가지 범주의 형식-참조 형식과 값 형식-하�
   
  **✓ 않습니다** 각 형식이 관련 되지 않은 기능의 임의 컬렉션 뿐 아니라 관련된 멤버의 잘 정의 된 집합 지 확인 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [클래스 및 구조체 중에서 선택](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [클래스와 구조체 간의 선택](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
  [추상 클래스 디자인](../../../docs/standard/design-guidelines/abstract-class.md)  
  [정적 클래스 디자인](../../../docs/standard/design-guidelines/static-class.md)  
  [인터페이스 디자인](../../../docs/standard/design-guidelines/interface.md)  
  [구조체 디자인](../../../docs/standard/design-guidelines/struct.md)  
- [Enum 디자인](../../../docs/standard/design-guidelines/enum.md)  
+ [열거형 디자인](../../../docs/standard/design-guidelines/enum.md)  
  [중첩 형식](../../../docs/standard/design-guidelines/nested-types.md)  
  *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   

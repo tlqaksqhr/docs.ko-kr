@@ -16,16 +16,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d803989292e2fc6b0945c397df5ce32d318147fc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e025b42a72def81420de7d82dcf027405669ce78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-resources-in-localizable-applications"></a>방법: 지역화할 수 있는 응용 프로그램에서 리소스 사용
 지역화 맞게 것을 의미 한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 다른 culture입니다. 이렇게 하려면 제목, 캡션, 목록 상자 항목 등과 같은 텍스트를 번역해야 합니다. 번역을 쉽게 하기 위해 번역할 항목이 리소스 파일로 수집됩니다. 참조 [응용 프로그램 지역화](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md) 지역화에 리소스 파일을 만드는 방법에 대 한 내용은 합니다. 확인 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화할 수 있는 리소스 어셈블리를 지역화할 수 있는 모든 리소스를 만드는 데 필요한 개발자 응용 프로그램입니다. 다른 언어로 지역화 된 리소스 어셈블리 및 리소스 관리를 사용 하는 코드 숨김 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 를 로드 합니다. 에 필요한 파일 중 하나는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 프로젝트 파일 (.proj)입니다. 응용 프로그램에서 사용하는 모든 리소스는 프로젝트 파일에 포함되어야 합니다. 다음 코드 예제에서는 이를 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
   
  `<Resource Include="data\picture1.jpg"/>`  

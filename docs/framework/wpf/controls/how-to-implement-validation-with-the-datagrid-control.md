@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c611919b5702877db34e9a02e367312678a1b27
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78846e2b6a1d73e011441b0ccb46b8aad365d5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>방법: DataGrid 컨트롤을 사용하여 유효성 검사 구현
 <xref:System.Windows.Controls.DataGrid> 컨트롤 셀 및 행 수준에서 유효성 검사를 수행할 수 있습니다. 셀 수준 유효성 검사는 사용자는 값을 업데이트 하는 경우 바인딩된 데이터 개체의 각 속성에 유효성 검사 합니다. 행 수준 유효성 검사와 행에 변경 내용을 커밋할 때 전체 데이터 개체에 유효성 검사. 유효성 검사 오류에 대 한 사용자 지정된 시각적 피드백을 제공 하거나 기본 시각적 피드백을 사용할 수도 있는 <xref:System.Windows.Controls.DataGrid> 제어를 제공 합니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 셀 및 행 유효성 검사의 전체 데모를 제공합니다. `Course` 클래스를 구현 하는 샘플 데이터 개체를 제공 <xref:System.ComponentModel.IEditableObject> 트랜잭션을 지원 합니다. <xref:System.Windows.Controls.DataGrid> 컨트롤과 간의 상호 작용 <xref:System.ComponentModel.IEditableObject> 사용자가 ESC 키를 눌러 변경 내용이 되돌릴 수 있도록 합니다.  
   
 > [!NOTE]

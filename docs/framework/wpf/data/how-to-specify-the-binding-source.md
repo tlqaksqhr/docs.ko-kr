@@ -20,16 +20,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05f77e8939b9b81a9e3861df6a44bc3585a0a504
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 23a4c180eb62dd152f1ed24c01b8103ccf1ec562
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-binding-source"></a>방법: 바인딩 소스 지정
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져온 개체를 참조합니다. 이 항목에서는 바인딩 소스를 지정하는 여러 가지 방법을 설명합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  하나의 공용 소스에 여러 개의 속성을 바인딩하는 경우 `DataContext` 속성을 사용할 수 있습니다. 이 속성은 모든 데이터 바인딩된 속성이 공용 소스를 상속받게 되는 범위를 설정하는 편리한 방법을 제공합니다.  
   
  다음 예제에서 데이터 컨텍스트는 응용 프로그램의 루트 요소에 설정됩니다. 따라서 모든 자식 요소가 해당 데이터 컨텍스트를 상속받을 수 있습니다. 바인딩할 데이터는 사용자 지정 데이터 클래스, 즉 매핑과 `incomeDataSource`의 지정한 리소스 키를 통해 직접 참조되는 `NetIncome`에서 옵니다.  
@@ -49,9 +50,9 @@ ms.lasthandoff: 11/21/2017
   
 |속성|설명|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|이 속성을 사용하여 소스를 개체의 인스턴스로 설정합니다. 범위를 설정 하는 기능이 필요 하지 않은 경우 동일한 데이터 컨텍스트를 상속 하는 여러 가지 속성을 사용할 수 있습니다는 <xref:System.Windows.Data.Binding.Source%2A> 속성 대신는 `DataContext` 속성입니다. 자세한 내용은 <xref:System.Windows.Data.Binding.Source%2A>을 참조하십시오.|  
-|<xref:System.Windows.Data.Binding.RelativeSource%2A>|이는 바인딩 대상이 있는 위치와 상대적인 소스를 지정할 때 유용합니다. 이 속성을 사용할 수 있는 몇 가지 일반 시나리오 중 요소의 한 속성을 같은 요소의 다른 속성에 바인딩하거나 스타일 또는 템플릿에서 바인딩을 정의하는 경우가 이에 해당합니다. 자세한 내용은 <xref:System.Windows.Data.Binding.RelativeSource%2A>을 참조하십시오.|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|바인딩할 요소를 나타내는 문자열을 지정합니다. 이는 응용 프로그램에서 다른 요소의 속성에 바인딩하려고 할 때 유용합니다. 예를 들어, 사용 하려는 경우는 <xref:System.Windows.Controls.Slider> 응용 프로그램에서 다른 컨트롤의 높이 제어 하 바인딩할 경우 또는 <xref:System.Windows.Controls.ContentControl.Content%2A> 사용자 컨트롤의는 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 속성의 프로그램 <xref:System.Windows.Controls.ListBox> 제어 합니다. 자세한 내용은 <xref:System.Windows.Data.Binding.ElementName%2A>을 참조하십시오.|  
+|<xref:System.Windows.Data.Binding.Source%2A>|이 속성을 사용하여 소스를 개체의 인스턴스로 설정합니다. 범위를 설정 하는 기능이 필요 하지 않은 경우 동일한 데이터 컨텍스트를 상속 하는 여러 가지 속성을 사용할 수 있습니다는 <xref:System.Windows.Data.Binding.Source%2A> 속성 대신는 `DataContext` 속성입니다. 자세한 내용은 <xref:System.Windows.Data.Binding.Source%2A>을 참조하세요.|  
+|<xref:System.Windows.Data.Binding.RelativeSource%2A>|이는 바인딩 대상이 있는 위치와 상대적인 소스를 지정할 때 유용합니다. 이 속성을 사용할 수 있는 몇 가지 일반 시나리오 중 요소의 한 속성을 같은 요소의 다른 속성에 바인딩하거나 스타일 또는 템플릿에서 바인딩을 정의하는 경우가 이에 해당합니다. 자세한 내용은 <xref:System.Windows.Data.Binding.RelativeSource%2A>을 참조하세요.|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|바인딩할 요소를 나타내는 문자열을 지정합니다. 이는 응용 프로그램에서 다른 요소의 속성에 바인딩하려고 할 때 유용합니다. 예를 들어, 사용 하려는 경우는 <xref:System.Windows.Controls.Slider> 응용 프로그램에서 다른 컨트롤의 높이 제어 하 바인딩할 경우 또는 <xref:System.Windows.Controls.ContentControl.Content%2A> 사용자 컨트롤의는 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 속성의 프로그램 <xref:System.Windows.Controls.ListBox> 제어 합니다. 자세한 내용은 <xref:System.Windows.Data.Binding.ElementName%2A>을 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>  

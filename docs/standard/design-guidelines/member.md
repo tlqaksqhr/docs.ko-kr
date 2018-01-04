@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5df4ad5f6c947d8b3bf62c3bf7eb8426419e5f3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae69b77098c7f2e1de83eedd40cf0f0da9473326
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-design-guidelines"></a>멤버 디자인 지침
 메서드, 속성, 이벤트, 생성자 및 필드 통칭 하 여 멤버 라고 합니다. 멤버는 궁극적으로 기준인 프레임 워크 기능 프레임 워크의 최종 사용자에 게 노출 되는 방법입니다.  
@@ -31,14 +34,14 @@ ms.lasthandoff: 10/18/2017
   
  이 장에서 모든 형식의 멤버를 디자인할 때 따라야 할 기본 지침을 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [멤버 오버 로드](../../../docs/standard/design-guidelines/member-overloading.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [멤버 오버로드](../../../docs/standard/design-guidelines/member-overloading.md)  
  [속성 디자인](../../../docs/standard/design-guidelines/property.md)  
  [생성자 디자인](../../../docs/standard/design-guidelines/constructor.md)  
  [이벤트 디자인](../../../docs/standard/design-guidelines/event.md)  
  [필드 디자인](../../../docs/standard/design-guidelines/field.md)  
  [확장명 메서드](../../../docs/standard/design-guidelines/extension-methods.md)  
- [연산자 오버 로드](../../../docs/standard/design-guidelines/operator-overloads.md)  
+ [연산자 오버로드](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [매개 변수 디자인](../../../docs/standard/design-guidelines/parameter-design.md)  
  *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   

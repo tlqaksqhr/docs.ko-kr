@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7f959318c5991fea2df92ff8000e85345fb35ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 태그 확장
 정의 하 고 외부 어셈블리에서 로드 되는 리소스에 대 한 키를 참조 합니다. 그러면 리소스 조회는 클래스 또는 어셈블리에 명시적 리소스 사전 하지 않고 어셈블리의 대상 형식을 지정할 수 있습니다.  

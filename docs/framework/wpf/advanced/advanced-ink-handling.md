@@ -18,18 +18,19 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3b256b36affb310be3a59bbe1d058a3ff3a57b1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2ac7bb57f06f0d7021f3c060005033d25ec448b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-ink-handling"></a>고급 잉크 처리
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 와 함께 제공 되는 <xref:System.Windows.Controls.InkCanvas>, 수집 및 잉크 디스플레이 즉시 시작 하도록 응용 프로그램에 넣을 수 요소입니다. 그러나 경우는 <xref:System.Windows.Controls.InkCanvas> 제어는 충분히 상세 제어 수준을 제공 하지 않습니다, 사용자 고유의 잉크 컬렉션 및 잉크 렌더링 클래스를 사용 하 여 사용자 지정 하 여 더 높은 수준의 제어를 유지 관리할 수 있습니다 <xref:System.Windows.Input.StylusPlugIns>합니다.  
   
  <xref:System.Windows.Input.StylusPlugIns> 클래스를 통해 수준이 낮은 제어를 구현 하기 위한 메커니즘을 제공할 <xref:System.Windows.Input.Stylus> 입력 하 고 동적으로 잉크를 렌더링 합니다. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 클래스는 사용자 지정 동작을 구현 하 고 최적의 성능을 위해 스타일러스 장치에서 들어오는 데이터 스트림에 적용 하는 메커니즘을 제공 합니다. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>는 특수화 된 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, 즉 렌더링 잉크 데이터를 실시간으로 동적으로 사용자 지정할 수 있습니다는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 디지털 잉크 그립니다으로 즉시 <xref:System.Windows.Input.StylusPoint> "이동" 스타일러스에서에 표시 되도록 데이터는 생성 장치입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [잉크 렌더링 사용자 지정](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
   [스타일러스에서 입력 가로채기](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
   [잉크 입력 컨트롤 만들기](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  

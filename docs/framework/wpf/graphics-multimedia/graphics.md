@@ -17,16 +17,17 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics"></a>그래픽
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]제안은 멀티미디어, 벡터 그래픽, 애니메이션 및 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성 하는 개발자를 위한 콘텐츠 컴퍼지션에 대 한 지원을 통합 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [비트맵 효과](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
  [브러시](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
  [그리기](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  

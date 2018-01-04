@@ -17,16 +17,17 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4b2ee3956017e10da8adda52fa9a0ec31cb19ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec333fbc30374ff6f8e2e7674ab332644ff7aad0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-systemparameters"></a>방법: SystemParameters 사용
 이 예제에 액세스 하 고 속성을 사용 하는 방법을 보여 줍니다 <xref:System.Windows.SystemParameters> 스타일 하거나 단추를 사용자 지정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  시스템 리소스는 시스템 설정과 일관된 시각적 효과를 만들 수 있도록 몇 가지 시스템 기반 설정을 리소스로 노출합니다. <xref:System.Windows.SystemParameters>시스템 매개 변수 값 속성 및 값에 바인딩되는 시스템 리소스 키를 모두 포함 하는 클래스가입니다. 예를 들어 <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> 는 <xref:System.Windows.SystemParameters> 속성 값 및 <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> 해당 리소스 키입니다.  
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 멤버를 사용할 수 <xref:System.Windows.SystemParameters> 는 정적 속성 사용 또는 동적 리소스 참조 (정적 속성 값을 키로). 응용 프로그램이 실행되는 동안 시스템 기반 값을 자동으로 업데이트하려면 동적 리소스 참조를 사용하고 자동으로 업데이트하지 않으려면 정적 참조를 사용합니다. 리소스 키 접미사가 `Key` 속성 이름에 추가 합니다.  

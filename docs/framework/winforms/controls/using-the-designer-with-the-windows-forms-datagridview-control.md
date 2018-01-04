@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b29904954a593607a7872c0b59265bbf241dce98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9df10ecabc8f61c3ef984adb6466f195395fd181
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에 디자이너 사용
 Visual Studio에 대 한 디자이너 지원을 제공는 `DataGridView` 제어 코드를 작성 하지 않고도 여러 설정 작업을 수행할 수 있도록 합니다. 이러한 작업에는 열을 수정 하는 데이터 소스에 컨트롤 데이터를 표시 하는 데 사용 되는 바인딩 및 모양 및 컨트롤의 기본 동작을 조정 포함 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
  사용 하는 방법에 설명 된 **열 추가** 및 **열 편집** 을 채우고 columns 컬렉션 수정 대화 상자.  
   

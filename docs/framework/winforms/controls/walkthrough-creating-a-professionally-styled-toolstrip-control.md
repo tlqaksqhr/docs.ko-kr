@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0fbc03ad16bcc0d63a75df5478f7da8abbf19193
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>연습: 전문적인 스타일의 ToolStrip 컨트롤 만들기
 응용 프로그램을 제공할 수 있습니다 <xref:System.Windows.Forms.ToolStrip> 에서 파생 되는 고유한 클래스를 작성 하 여 전문적인 모양과 동작을 제어는 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 유형입니다.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |이름|`stackStrip`|  
+    |name|`stackStrip`|  
     |CanOverflow|`false`|  
     |도킹|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |글꼴|`Tahoma, 10pt, style=Bold`|  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |이름|`mailStackButton`|  
+    |name|`mailStackButton`|  
     |CheckOnClick|true|  
     |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  

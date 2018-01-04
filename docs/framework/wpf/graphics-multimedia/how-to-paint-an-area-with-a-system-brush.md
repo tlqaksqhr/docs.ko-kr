@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 355df3718d90768cdfa8bc9780c44c19eb4bf9bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87979c16d52262c665e2fb37fdf6d7550c5930c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>방법: 시스템 브러시로 영역 그리기
 <xref:System.Windows.SystemColors> 클래스와 같은 시스템 브러시, 색에 대 한 액세스를 제공 <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, 및 <xref:System.Windows.SystemColors.DesktopBrush%2A>합니다. 시스템 브러시는는 <xref:System.Windows.Media.SolidColorBrush> 개체를 지정된 된 시스템 색으로 영역을 그립니다. 시스템 브러시는 항상 단색을 생성하므로 그라데이션을 만드는 데는 사용할 수 없습니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  시스템 색은는 <xref:System.Windows.Media.Color> 브러시를 구성 하는 데 사용할 수 있는 구조입니다. 예를 들어 그라데이션을 설정 하 여 시스템 색을 사용 하 여 만들 수 있습니다는 <xref:System.Windows.Media.GradientStop.Color%2A> 의 속성을 <xref:System.Windows.Media.LinearGradientBrush> 개체의 그라데이션 중지점 합니다. 예를 들어 참조 [그라데이션에서 시스템 색을 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 동적 시스템 브러시 참조를 사용하여 단추의 배경색을 설정합니다.  
   
  [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorDesktopBrushKeyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemBrushExample.xaml#graphicsmmdynamicsystemcolordesktopbrushkeyexamplewholepage)]  

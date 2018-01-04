@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff0a4432f6de8458e89132bbf46bab7568a04b60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9f0623ed4c84247cc1759a203e3b95dd895cee2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expander-overview"></a>Expander 개요
 <xref:System.Windows.Controls.Expander> 컨트롤은 창을 유사한 헤더를 포함 하는 확장 가능한 영역에 콘텐츠를 제공 하는 방법을 제공 합니다.  

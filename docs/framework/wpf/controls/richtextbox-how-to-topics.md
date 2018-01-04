@@ -17,16 +17,17 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f11a6c42aaf1ddc0d19cc54580cb44501b9307
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox 방법 항목
 이 섹션에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제는 <xref:System.Windows.Controls.RichTextBox> 제어 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [RichTextBox에서 텍스트 콘텐츠 추출](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
  [프로그래밍 방식으로 RichTextBox의 선택 변경](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [RichTextBox 콘텐츠 저장, 로드 및 인쇄](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  

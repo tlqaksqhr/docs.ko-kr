@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c62bcb14f444490991b36dc21eb7676a67007906
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e67777b5568214dff889088708db166efc6ae4dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>방법: ListView의 사용자 지정 뷰 모드 만들기
 이 예제에는 사용자 지정을 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.ListView.View%2A> 에 대 한 모드는 <xref:System.Windows.Controls.ListView> 제어 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 해야 합니다는 <xref:System.Windows.Controls.ViewBase> 클래스에 대 한 사용자 지정 보기를 만들 때의 <xref:System.Windows.Controls.ListView> 제어 합니다. 다음 예제에서는 라고 하는 뷰 모드 `PlainView`에서 파생 되는 <xref:System.Windows.Controls.ViewBase> 클래스입니다.  
   
  [!code-csharp[ListViewCustomView#PlainView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/PlainView.cs#plainview)]

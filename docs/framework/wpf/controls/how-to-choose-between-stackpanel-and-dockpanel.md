@@ -22,16 +22,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 40d99e090a0599c98560e4102d18d35ee7174259
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0274a0f078c378a101bdf4a4ae456fd2ce9f4185
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>방법: StackPanel과 DockPanel 중 선택
 사용 하 여 중에서 선택 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.StackPanel> 또는 <xref:System.Windows.Controls.DockPanel> 의 콘텐츠를 스택 하는 <xref:System.Windows.Controls.Panel>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  하나를 사용할 수 있지만 <xref:System.Windows.Controls.DockPanel> 또는 <xref:System.Windows.Controls.StackPanel> 자식 요소를 스택 하는 두 컨트롤을 생성 하지 않을 동일한 결과입니다. 자식 요소를 배치 하는 순서에 있는 자식 요소의 크기 영향을 줄 수는 예를 들어 한 <xref:System.Windows.Controls.DockPanel> 아니라는 <xref:System.Windows.Controls.StackPanel>합니다. 이 다른 동작이 발생 하기 때문에 <xref:System.Windows.Controls.StackPanel> 에서 쌓는 방향으로 측정 <xref:System.Double>.<xref:System.Double.PositiveInfinity>소비량이 적어지지만 <xref:System.Windows.Controls.DockPanel> 만 사용할 수 있는 크기를 측정 합니다.  
   
  다음 예제에서는 이러한 주요 차이 <xref:System.Windows.Controls.DockPanel> 및 <xref:System.Windows.Controls.StackPanel>합니다.  

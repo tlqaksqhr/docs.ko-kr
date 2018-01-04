@@ -18,11 +18,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f9d0ff535d0784343b36d0b2df48b123ff3beef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-resources"></a>XAML 리소스
 리소스는 응용 프로그램의 여러 위치에서 다시 사용할 수 있는 개체입니다. 리소스의 예로는 브러시와 스타일이 있습니다. 이 개요에서는의 리소스를 사용 하는 방법을 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 만들 수 있고 하거나 코드 서로 바꿔 코드를 사용 하 여 리소스에 액세스 하면 및 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다. 자세한 내용은 참조 [리소스와 코드가](../../../../docs/framework/wpf/advanced/resources-and-code.md)합니다.  
@@ -134,7 +135,7 @@ ms.lasthandoff: 11/21/2017
   
 -   동적 리소스 참조에 의해 리소스를 요청 했지만 경우 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 및 찾을 수 없는 다음 동작 일반 속성 시스템에 따라 달라 지지만 일반적인 동작은 것 처럼 속성 설정은 작업이 발생 하지 않은 리소스가 있는 수준에서 합니다. 예를 들어, 평가할 수 없는 리소스를 사용하여 개별 단추 요소에서 배경을 설정하려고 하면 값 집합이 생기지 않지만, 속성 시스템 및 값 우선 순위의 다른 참가자로부터 유효 값을 여전히 가져올 수 있습니다. 예를 들어, 배경색은 로컬에 정의한 단추 스타일 또는 테마 스타일에서 여전히 가져올 수 있습니다. 테마 스타일이 정의하지 않은 속성의 경우, 실패한 리소스 평가 후 유효 값은 속성 메타데이터의 기본값에서 가져올 수 있습니다.  
   
-#### <a name="restrictions"></a>제한 사항  
+#### <a name="restrictions"></a>제한  
  동적 리소스 참조에는 몇 가지 주목할 만한 제한 사항이 있습니다. 다음 중 하나 이상이 참이어야 합니다.  
   
 -   설정 되는 속성에 속성 이어야 합니다는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>합니다. 속성으로 지원 되어야 합니다는 <xref:System.Windows.DependencyProperty>합니다.  

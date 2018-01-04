@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e38339eceef97c4d6f64dffdea9ac04c598b70a3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc2e9f81094d16030dbe4595a8132569edab782a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-windows-forms"></a>방법: Windows Forms 크기 조정
 여러가지 방법으로 Windows Form의 크기를 지정할 수 있습니다. <xref:System.Windows.Forms.Form.Size%2A> 속성에 대해 새 값을 설정하거나 <xref:System.Windows.Forms.Control.Height%2A> 또는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 개별적으로 조정하여 프로그래밍 방식으로 폼의 높이와 너비를 모두 변경할 수 있습니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용 중인 경우 Windows Forms 디자이너를 통해 크기를 변경할 수 있습니다. 또한 참조 [하는 방법: 크기 조정 Windows Forms 디자이너를 사용 하는](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\))합니다.  

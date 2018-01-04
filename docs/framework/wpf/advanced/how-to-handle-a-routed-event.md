@@ -19,16 +19,17 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83f59f2df9311f30995b18529a733a5569c85ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c491ff4e231d932b3714d2d059b52bad2502368c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-a-routed-event"></a>방법: 라우트된 이벤트 처리
 이 예제에서는 버블링 이벤트가 작동하는 방법과 라우트된 이벤트 데이터를 처리할 수 있는 처리기를 작성하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 요소는 요소 트리 구조로 정렬됩니다. 부모 요소는 초기에 요소 트리의 자식 요소에 의해 발생된 이벤트 처리에 참여할 수 있습니다. 이는 이벤트 라우팅으로 인해 가능합니다.  
   
  라우트된 이벤트는 일반적으로 두 가지 라우팅 전략(버블링 또는 터널링) 중 하나를 따릅니다. 이 예제에서는 버블링 이벤트 중점적으로 사용 하는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click?displayProperty=nameWithType> 라우팅의 작동 원리를 표시 하는 이벤트입니다.  

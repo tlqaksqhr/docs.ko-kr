@@ -16,18 +16,19 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 484419c05c3d607212ea6d565777cf49cbfdbc19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e9b746fe66635054dbd35463f727d28a8abd3d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>방법: TileBrush의 바둑판 크기 설정
 타일 크기를 설정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.TileBrush>합니다. 기본적으로는 <xref:System.Windows.Media.TileBrush> 완전히 사용자 칠하고 있는 영역을 채우는 한 분할을 생성 합니다. 설정 하 여이 동작을 재정의할 수는 <xref:System.Windows.Media.TileBrush.Viewport%2A> 및 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성입니다.  
   
  <xref:System.Windows.Media.TileBrush.Viewport%2A> 속성에 대 한 타일 크기를 지정 된 <xref:System.Windows.Media.TileBrush>합니다. 기본적으로 값은 <xref:System.Windows.Media.TileBrush.Viewport%2A> 속성은 그려지는 영역 크기를 기준으로 합니다. 확인 하는 <xref:System.Windows.Media.TileBrush.Viewport%2A> 는 절대 타일 크기를 지정 하는 속성 설정의 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성을 <xref:System.Windows.Media.BrushMappingMode.Absolute>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Windows.Media.ImageBrush>는 유형의 <xref:System.Windows.Media.TileBrush>, 타일을 사용 하 여 사각형을 그립니다. 이 예제에서는 각 타일을 출력 영역(사각형)의 50% x 50%로 설정합니다. 결과적으로 이미지 프로젝션 4개를 사용한 사각형이 그려집니다.  
   
  다음 그림에서는 예제가 생성하는 출력을 보여 줍니다.

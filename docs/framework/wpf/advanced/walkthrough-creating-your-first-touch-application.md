@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee85a5d8764fc27205cf09e1af43069b25096ef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 502fb9ae0c488f5f3e438a3ae0a7087538183f1b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>연습: 첫 응용 프로그램 만들기
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]터치에 응답 하도록 응용 프로그램이 있습니다. 예를 들어 하나를 사용 하 여 응용 프로그램 상호 작용할 수 있습니다 또는 터치 지원 장치 등이 연습에서는 사용자가을 이동할 수 있도록 응용 프로그램을 만듭니다 터치 스크린에 손가락 크기 조정 또는 터치를 사용 하 여 단일 개체를 회전 합니다.  

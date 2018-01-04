@@ -24,11 +24,12 @@ caps.latest.revision: "97"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d7dce942499984c24f982e321d976982e404978
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4c2fb9d69e7b0ccfc2b87aea0cda5e7b4804f416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
 Visual Studio 2015의 WPF(Windows Presentation Foundation)는 Windows에서 최신 LOB(기간 업무) 데스크톱 응용 프로그램을 빌드할 수 있는 통합된 프로그래밍 모델을 개발자에게 제공합니다.  

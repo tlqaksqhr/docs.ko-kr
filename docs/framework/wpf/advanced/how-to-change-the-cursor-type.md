@@ -19,18 +19,19 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41cd8c9cd647c7efbc4e6cf13517ed638245e51c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 31c59f4c90eed00775fc9fceaf872391faa93784
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-cursor-type"></a>방법: 커서 형식 변경
 변경 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Input.Cursor> 에서 특정 요소 및 응용 프로그램에 대 한 마우스 포인터의 합니다.  
   
  이 예제는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일 및 코드 숨김 파일입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  구성 된 사용자 인터페이스를 만들면는 <xref:System.Windows.Controls.ComboBox> 하 고 원하는 <xref:System.Windows.Input.Cursor>, 한 쌍의 <xref:System.Windows.Controls.RadioButton> 커서 변경만 단일 요소에 적용 됩니다 또는 전체 응용 프로그램에 적용 되는 개체 및 <xref:System.Windows.Controls.Border> 새 커서에 적용 되는 요소입니다.  
   
  [!code-xaml[cursors#ChangeCursorsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml#changecursorsxaml)]  

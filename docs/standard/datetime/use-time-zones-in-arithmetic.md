@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 16f90117353c490b0a6f7b7fe94730d90e797b35
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bcffc98d763c125ac44c1048a7c89c8f6a1e89f1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>방법: 표준 시간대를 사용 하 여 날짜 및 시간 산술 연산
 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 
 4. 호출 하 여 시간 측정 된 UTC에서 원래 시간 관련된 표준 시간대 변환는 <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> 메서드.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 중부 표준시 2008년 3월 9일 오전 1시 30분에 2시간 30분을 추가합니다. 30분 뒤인 2008년 3월 9일 오전 2시에 표준 시간대가 일광 절약 시간으로 전환됩니다. 이 예제에서는 이전 섹션의 네 단계를 수행하므로 결과 시간이 2008년 3월 9일 오전 5시로 올바르게 이전 코드와 유사합니다.
 

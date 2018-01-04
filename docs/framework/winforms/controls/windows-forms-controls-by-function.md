@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c49c42b02511fea66c88544bf689b2b05e788ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-by-function"></a>기능별 Windows Forms 컨트롤
 Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 제공 합니다. 다음 표에서 Windows Forms 컨트롤 및 일반 함수에 따라 구성 요소를 나열합니다. 또한 컨트롤이 여러 개 동일한 기능을 제공 하는 있는 권장된 컨트롤 대체 된 컨트롤에 대 한 메모 함께 나열 됩니다. 별도 후속 테이블에서 대체 컨트롤과 권장된 대신 사용할 함께 나열 됩니다.  
@@ -31,7 +32,7 @@ Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 
   
 ## <a name="recommended-controls-and-components-by-function"></a>권장된 된 제어 및 함수에 의해 구성 요소  
   
-|함수|컨트롤|설명|  
+|함수|Control|설명|  
 |--------------|-------------|-----------------|  
 |데이터 표시|<xref:System.Windows.Forms.DataGridView> 컨트롤|<xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터를 표시 하기 위한 사용자 지정 가능한 테이블을 제공 합니다. <xref:System.Windows.Forms.DataGridView> 클래스에는 셀, 행, 열 및 테두리는 사용자 지정할 수 있습니다. **참고:** 는 <xref:System.Windows.Forms.DataGridView> 에 누락 된 다양 한 기본 및 고급 기능을 제공 하는 컨트롤의 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 자세한 내용은 참조 [차이점 Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |데이터 바인딩 및 탐색|<xref:System.Windows.Forms.BindingSource>구성 요소|현재 항목 관리, 변경 알림 및 기타 서비스를 제공 하 여 데이터를 폼에 컨트롤 바인딩을 간소화 합니다.|  

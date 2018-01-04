@@ -16,16 +16,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d266d85e10ca8e77cd32338096cf3a3b761c188
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 610fa829b4d2c49d0c3ae760f5601610bd2a0c46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>방법: 슬라이더의 틱 사용자 지정
 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Slider> 눈금이 있는 컨트롤입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  <xref:System.Windows.Controls.Primitives.TickBar> 설정 하는 경우 표시는 <xref:System.Windows.Controls.Slider.TickPlacement%2A> 속성 이외의 값을 <xref:System.Windows.Controls.Primitives.TickPlacement.None>은 기본 값입니다.  
   
  만드는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Controls.Slider> 와 <xref:System.Windows.Controls.Primitives.TickBar> 는 눈금을 표시 합니다. <xref:System.Windows.Controls.Slider.TickPlacement%2A> 및 <xref:System.Windows.Controls.Slider.TickFrequency%2A> 속성 눈금 표시와 사이의 간격의 위치를 정의 합니다. 이동 하는 경우는 <xref:System.Windows.Controls.Primitives.Thumb>, 도구 설명의 값을 표시는 <xref:System.Windows.Controls.Slider>합니다. <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> 속성 도구 설명을 수행 하는 위치를 정의 합니다. <xref:System.Windows.Controls.Primitives.Thumb> 있기 때문에 이동 눈금 표시의 위치를 일치 <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> 로 설정 된 `true`합니다.  

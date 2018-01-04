@@ -19,16 +19,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47cafab505bcbab7008385393bbacf093e264cd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 399d6b8028b8715f38335089a723707657df4a98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>방법: 경로를 따라 개체에 애니메이션 효과 주기(포인트 애니메이션)
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.PointAnimationUsingPath> 애니메이션 효과를 줄 개체는 <xref:System.Windows.Point> 곡선된 경로 따라 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 이동는 <xref:System.Windows.Media.EllipseGeometry> 에 정의 된 경로 따라는 <xref:System.Windows.Media.PathGeometry>합니다. 타원 기 하 도형의 <xref:System.Windows.Media.EllipseGeometry.Center%2A> 속성을는 <xref:System.Windows.Point> ; 애니메이션 효과 주기 있습니다 타원 기를 이동 하려면 해당 위치를 지정, 값의 <xref:System.Windows.Media.EllipseGeometry.Center%2A> 속성입니다. 이 예제에서는 사용는 <xref:System.Windows.Media.Animation.PointAnimationUsingPath> 애니메이션 효과를 줄의 <xref:System.Windows.Media.EllipseGeometry> 개체의 <xref:System.Windows.Media.EllipseGeometry.Center%2A> 속성입니다.  
   
  [!code-xaml[PathAnimationGallery_snippet#PointAnimationUsingPathWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/pointanimationusingpathexample.xaml#pointanimationusingpathwholepage)]  

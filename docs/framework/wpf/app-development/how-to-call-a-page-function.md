@@ -20,16 +20,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0bc72b24b29a43e8aed073600ea863824c93ced6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ba1aa9c713d311bf1c6b42e8f72e89bb292927dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-call-a-page-function"></a>방법: 페이지 함수 호출
 페이지 함수를 호출 하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하 여 페이지 기능을 탐색할 수 있습니다는 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]것 처럼 때 페이지를 탐색할 수 있습니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
  [!code-csharp[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#navigatetoapagefunctionlikeapagecodebehind)]

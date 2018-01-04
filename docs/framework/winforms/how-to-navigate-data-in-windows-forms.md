@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c754bba18e93f63306701381f66af04b593c473
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d99d794164307cb22c5dfc89d6c9c227aa457a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>방법: Windows Forms에서 데이터 탐색
 Windows 응용 프로그램에서 데이터 원본의 레코드를 탐색 하는 가장 쉬운 방법은에 바인딩하는 것을 <xref:System.Windows.Forms.BindingSource> 구성 요소는 데이터 소스를 바인딩한 다음 컨트롤에는 <xref:System.Windows.Forms.BindingSource>합니다. 다음 기본 제공 탐색 메서드를 사용할 수 있습니다는 <xref:System.Windows.Forms.BindingSource> 이러한는 <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> 및 <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>합니다. 이러한 메서드를 사용 하는 조정는 <xref:System.Windows.Forms.BindingSource.Position%2A> 및 <xref:System.Windows.Forms.BindingSource.Current%2A> 의 속성은 <xref:System.Windows.Forms.BindingSource> 적절 하 게 합니다. 항목을 찾을 수 있고 설정 하 여 현재 항목으로 설정 하면는 <xref:System.Windows.Forms.BindingSource.Position%2A> 속성입니다.  

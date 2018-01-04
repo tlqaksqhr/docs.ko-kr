@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b603bbd86bb5eb12782ff8aff7797b73444b8518
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3b095b1ba918f0a6cf52afa2d559beb2b8c81bc2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>방법:.NET Framework 3.5 설치 여부 검색
 배포 하려면 관리자 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램을 대상으로 하는 시스템에서는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], 했는지 먼저 확인 해야 하는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 런타임이 있는지 합니다. 이 항목에서는 작성 된 스크립트 관리자가 결정 하는 데 사용할 수 있는 HTML/javascript 여부는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 는 시스템에 있습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  자세한 내용은 설치, 배포 및 검색에 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], 참조 [개발자를 위한.NET Framework 설치](../../../../docs/framework/install/guide-for-developers.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  경우는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 가 설치 된 MSI ".NET CLR" 및 버전 번호를 추가 UserAgent 문자열입니다. 다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다. 스크립트를 확인할 UserAgent 문자열을 검색 여부는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 설치 되 고 검색 결과에 상태 메시지를 표시 합니다.  
   
 > [!NOTE]

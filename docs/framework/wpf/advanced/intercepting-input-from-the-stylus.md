@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 611a2d2de56025e2f1b5add6106294834586f9af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intercepting-input-from-the-stylus"></a>스타일러스에서 입력 가로채기
 <xref:System.Windows.Input.StylusPlugIns> 통해 수준이 낮은 제어를 구현 하기 위한 메커니즘을 제공 하는 아키텍처 <xref:System.Windows.Input.Stylus> 입력을 디지털 잉크 만들 <xref:System.Windows.Ink.Stroke> 개체입니다. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 클래스는 사용자 지정 동작을 구현 하 고 최적의 성능을 위해 스타일러스 장치에서 가져온 데이터의 스트림에 적용 메커니즘을 제공 합니다.  

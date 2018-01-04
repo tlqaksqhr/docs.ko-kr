@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 806a62d57e1099bb9d7cdcca657be500c33b0df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 -   공용 필드에 바인딩할 수 없습니다.  
   
--   클래스에서 선언된 속성의 형식은 바인딩에 전달되는 형식입니다. 그러나 궁극적으로 바인딩에서 사용되는 형식은 바인딩 소스 속성의 형식이 아니라 바인딩 대상 속성의 형식에 따라 달라집니다. 형식이 다른 경우 사용자 지정 속성이 처음 바인딩에 전달되는 방법을 처리하는 변환기를 작성하는 것이 좋습니다. 자세한 내용은 <xref:System.Windows.Data.IValueConverter>을 참조하십시오.  
+-   클래스에서 선언된 속성의 형식은 바인딩에 전달되는 형식입니다. 그러나 궁극적으로 바인딩에서 사용되는 형식은 바인딩 소스 속성의 형식이 아니라 바인딩 대상 속성의 형식에 따라 달라집니다. 형식이 다른 경우 사용자 지정 속성이 처음 바인딩에 전달되는 방법을 처리하는 변환기를 작성하는 것이 좋습니다. 자세한 내용은 <xref:System.Windows.Data.IValueConverter>을 참조하세요.  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>전체 개체를 바인딩 소스로 사용  

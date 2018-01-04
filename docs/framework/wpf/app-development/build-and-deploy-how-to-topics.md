@@ -17,16 +17,17 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a34719cc0d54d55c2331a28a6cfb9cbaf7e4891
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c30c8e0399229cd58d09295e24258eb3e2275818
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="build-and-deploy-how-to-topics"></a>빌드 및 배포 방법 항목
 다음 항목에서는 다양 한 프로젝트 파일을 만드는 방법을 보여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 종류입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [IIS 5.0 및 IIS 6.0을 구성하여 WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
  [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
  [설치된 WPF 버전 확인](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  

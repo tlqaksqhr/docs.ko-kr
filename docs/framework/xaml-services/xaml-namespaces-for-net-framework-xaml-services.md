@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: e09279209bf3d6925b61d55d6988b5af658f5aab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 서비스의 XAML 네임스페이스
 XAML 네임 스페이스는 XML 네임 스페이스 정의 확장 하는 개념입니다. XML 네임 스페이스와 마찬가지로, 정의한 사용 하 여 XAML 네임 스페이스는 `xmlns` 태그에서 특성입니다. XAML 네임 스페이스는 XAML 노드 스트림 및 다른 XAML 서비스 Api에도 표시 합니다. 이 항목 XAML 네임 스페이스 개념을 정의 하 고 XAML 네임 스페이스를 정의할 수 있습니다 및 XAML 스키마 컨텍스트 및.NET Framework XAML 서비스의 다른 측면에서 사용 방법에 대해 설명 합니다.  

@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ba541b367e56a809fa444528dccd69860c4de46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8831566daca6ca36b40fbaaedbec9ff3ca8aaa99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>방법: 인쇄 대화 상자 호출
 응용 프로그램에서 인쇄 하는 기능을 제공 하려면 있습니다 간단히 만들고 열 수는 <xref:System.Windows.Controls.PrintDialog> 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  <xref:System.Windows.Controls.PrintDialog> 컨트롤은 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 구성 및 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 작업 제출을 위한 단일 진입점을 제공합니다. 컨트롤을 쉽게 사용 하 고 사용 하 여 인스턴스화할 수 있습니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 태그 또는 코드가 있습니다. 다음 예제에서 인쇄 하는 방법과 인스턴스화하고 코드에서 컨트롤을 여는 방법을 보여 줍니다. 또한 있는지 대화 상자는 사용자에 게 제공 페이지의 특정 범위를 설정할 때의 옵션을 확인 하는 방법을 보여 줍니다. 예제 코드는 c: 드라이브의 루트에 있는 파일 FixedDocumentSequence.xps 이라고 가정 합니다.  
   
  [!code-csharp[printdialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]

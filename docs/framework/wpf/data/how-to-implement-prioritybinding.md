@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9753462908928eaf177e100a16186826bf4828ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13b254867200897acad2868e396d152a5f9efcbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-prioritybinding"></a>방법: PriorityBinding 구현
 <xref:System.Windows.Data.PriorityBinding>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 바인딩의 목록을 지정 하 여 작동 합니다. 바인딩 목록은 가장 낮은 우선 순위를 높은 우선 순위에서 정렬 됩니다. 우선 순위가 높은 바인딩이 값을 반환 하는 경우 성공적으로 처리 될 때 다음는 없습니다 목록에 다른 바인딩을 처리할 필요가 있습니다. 우선 순위가 높은 바인딩이 평가할 오랜 시간이 걸리는 경우 수, 다음 우선 순위가 가장 높은 값을 성공적으로 반환 하는 더 높은 우선 순위의 바인딩 값을 성공적으로 반환 될 때까지 사용 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  설명 하기 위해 어떻게 <xref:System.Windows.Data.PriorityBinding> 작동는 `AsyncDataSource` 다음 세 가지 속성을 가진 개체가 생성 되었음을: `FastDP`, `SlowerDP`, 및 `SlowestDP`합니다.  
   
  get 접근자 `FastDP` 의 값을 반환 된 `_fastDP` 데이터 멤버입니다.  

@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2b960e52d8d7dca590411f1c5f096a6942e1ade9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6052e575b62994b54799cc1af88584f433b06ff8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>공용 XAML 언어 기본 형식에 대한 기본 제공 형식
 XAML 2009에서는 CLR(공용 언어 런타임) 및 다른 프로그래밍 언어에서 자주 사용되는 기본 형식인 여러 가지 데이터 형식에 대해 XAML 언어 수준 지원을 제공합니다. XAML 2009는 `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`및 `x:Array`같은 기본 형식에 대한 지원을 추가합니다.  
@@ -61,7 +62,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xboolean"></a>x:Boolean  
  CLR 백업의 경우 `x:Boolean` 기본 형식은 <xref:System.Boolean>에 해당합니다.  
   
- XAML은 `x:Boolean` 에 대한 값을 대/소문자 구분 없이 구문 분석합니다. 이때 `x:Bool` 로 대체할 수 없습니다. XAML 언어 사양 정의 대 한 참조 [ \[MS-XAML\] 섹션 5.2.17 및 5.4.11](http://go.microsoft.com/fwlink/?LinkId=114525)합니다.  
+ XAML은 `x:Boolean`에 대한 값을 대/소문자 구분 없이 구문 분석합니다. 이때 `x:Bool` 로 대체할 수 없습니다. XAML 언어 사양 정의 대 한 참조 [ \[MS-XAML\] 섹션 5.2.17 및 5.4.11](http://go.microsoft.com/fwlink/?LinkId=114525)합니다.  
   
 ### <a name="xchar"></a>x:Char  
  CLR 백업의 경우 `x:Char` 기본 형식은 <xref:System.Char>에 해당합니다.  
@@ -83,7 +84,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xsingle"></a>x:Single  
  CLR 백업의 경우 `x:Single` 기본 형식은 <xref:System.Single>에 해당합니다.  
   
- 숫자 값뿐만 아니라 `x:Single` 에 대한 텍스트 구문도 `Infinity`, `-Infinity`및 `NaN`토큰을 허용합니다. 이러한 토큰은 대/소문자를 구분하여 처리됩니다.  
+ 숫자 값뿐만 아니라 `x:Single`에 대한 텍스트 구문도 `Infinity`, `-Infinity` 및 `NaN` 토큰을 허용합니다. 이러한 토큰은 대/소문자를 구분하여 처리됩니다.  
   
  텍스트 구문의 첫 번째 문자가`x:Single` 또는 `e` 인 경우 `E`은 과학적 표기법 형식의 값을 지원할 수 있습니다.  
   
@@ -92,7 +93,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdouble"></a>x:Double  
  CLR 백업의 경우 `x:Double` 기본 형식은 <xref:System.Double>에 해당합니다.  
   
- 숫자 값뿐만 아니라 `x:Double` 에 대한 텍스트 구문도 `Infinity`, `-Infinity`및 `NaN`토큰을 허용합니다. 이러한 토큰은 대/소문자를 구분하여 처리됩니다.  
+ 숫자 값뿐만 아니라 `x:Double`에 대한 텍스트 구문도 `Infinity`, `-Infinity` 및 `NaN` 토큰을 허용합니다. 이러한 토큰은 대/소문자를 구분하여 처리됩니다.  
   
  `x:Double` 은 과학적 표기법 형식의 값을 지원할 수 있습니다. `e` 또는 `E` 문자를 사용하여 지수 부분을 나타냅니다.  
   
@@ -104,12 +105,12 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
  XAML 언어 사양 정의 대 한 참조 [ \[MS-XAML\] 섹션 5.2.11 및 5.4.5](http://go.microsoft.com/fwlink/?LinkId=114525)합니다.  
   
 ### <a name="xint32"></a>x:Int32  
- CLR 백업의 경우 `x:Int32` 기본 형식은 <xref:System.Int32>에 해당합니다. `x:Int32` 는 부호가 있는 것으로 처리됩니다. XAML에서는 텍스트 구문에 더하기(`+`) 부호가 없으면 부호 있는 양수 값을 의미합니다.  
+ CLR 백업의 경우 `x:Int32` 기본 형식은 <xref:System.Int32>에 해당합니다. `x:Int32`는 부호가 있는 것으로 처리됩니다. XAML에서는 텍스트 구문에 더하기(`+`) 부호가 없으면 부호 있는 양수 값을 의미합니다.  
   
  XAML 언어 사양 정의 대 한 참조 [ \[MS-XAML\] 섹션 5.2.12 및 5.4.6](http://go.microsoft.com/fwlink/?LinkId=114525)합니다.  
   
 ### <a name="xint64"></a>x:Int64  
- CLR 백업의 경우 `x:Int64` 기본 형식은 <xref:System.Int64>에 해당합니다. `x:Int64` 는 부호가 있는 것으로 처리됩니다. XAML에서는 텍스트 구문에 더하기(`+`) 부호가 없으면 부호 있는 양수 값을 의미합니다.  
+ CLR 백업의 경우 `x:Int64` 기본 형식은 <xref:System.Int64>에 해당합니다. `x:Int64`는 부호가 있는 것으로 처리됩니다. XAML에서는 텍스트 구문에 더하기(`+`) 부호가 없으면 부호 있는 양수 값을 의미합니다.  
   
  XAML 언어 사양 정의 대 한 참조 [ \[MS-XAML\] 섹션 5.2.13 및 5.4.7](http://go.microsoft.com/fwlink/?LinkId=114525)합니다.  
   

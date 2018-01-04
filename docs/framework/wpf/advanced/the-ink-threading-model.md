@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efbd05f88b962363e3b866fbf914f6d3a37823cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-ink-threading-model"></a>잉크 스레딩 모델
 잉크 Tablet pc의 이점 중 하나는 마치을 자주 쓰는 것 처럼 일반 펜 및 용지입니다.  태블릿 펜이를 위해은 마우스 사용자 쓰기도 잉크를 렌더링 하는 보다 훨씬 더 높은 속도로 입력된 데이터를 수집 합니다.  응용 프로그램의 사용자 인터페이스 (UI) 스레드는 차단 될 수 있으므로 수집 펜 데이터 및 잉크를 렌더링 하기 위한 충분 하지 않습니다.  이 해결 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 사용자가 잉크 때 두 개의 추가 스레드를 사용 하 합니다.  

@@ -14,16 +14,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e8692d356b1b20c7405b4478cef1d16c173389ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b7587a093b2b43856a05693bb785a0465211782
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>방법: GridSplitter 표시
 있는지 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.GridSplitter> 컨트롤에서 다른 컨트롤에 의해 숨겨지지 않은 <xref:System.Windows.Controls.Grid>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  <xref:System.Windows.Controls.Panel.Children%2A> 의 <xref:System.Windows.Controls.Grid> 컨트롤 태그 또는 코드에서 정의 된 순서 대로 렌더링 됩니다. <xref:System.Windows.Controls.GridSplitter>마지막 요소로 정의 하지 않는 경우 다른 컨트롤에서 컨트롤을 숨길 수 있습니다는 <xref:System.Windows.Controls.Panel.Children%2A> 컬렉션 또는 경우 제공 하는 다른 컨트롤에 더 높은 <xref:System.Windows.Controls.Panel.ZIndexProperty>합니다.  
   
  방지 하기 위해 숨겨진 <xref:System.Windows.Controls.GridSplitter> 컨트롤을 다음 중 하나를 수행 합니다.  

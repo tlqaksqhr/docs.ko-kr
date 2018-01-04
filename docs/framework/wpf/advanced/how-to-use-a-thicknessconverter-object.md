@@ -19,14 +19,15 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ce70dcd749f31d77061b4669d83d2e0b83726c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 311998595cb1584c276afc28510e1750c770ae93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>방법: ThicknessConverter 개체 사용
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  인스턴스를 만드는 방법을 보여 주는이 예제 <xref:System.Windows.ThicknessConverter> 테두리의 두께 변경 하는 데 사용 합니다.  
   
  이 예제에서는 라는 사용자 지정 메서드를 정의 `changeThickness`;이 메서드는 먼저의 내용을 변환는 <xref:System.Windows.Controls.ListBoxItem>별도 정의 된 대로 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일의 인스턴스로 <xref:System.Windows.Thickness>, 나중에 콘텐츠를 변환 하 고는 <xref:System.String>합니다. 이 메서드는 전달는 <xref:System.Windows.Controls.ListBoxItem> 에 <xref:System.Windows.ThicknessConverter> 을 변환 하는 개체는 <xref:System.Windows.Controls.ContentControl.Content%2A> 의 <xref:System.Windows.Controls.ListBoxItem> 인스턴스에 <xref:System.Windows.Thickness>합니다. 이 값은 다음의 값으로 다시 전달 되는 <xref:System.Windows.Controls.Border.BorderThickness%2A> 의 속성은 <xref:System.Windows.Controls.Border>합니다.  

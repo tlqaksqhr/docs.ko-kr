@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3f0a38c69dc286587e702b80ef4093bb98d78b5a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="usage-guidelines"></a>사용 지침
 이 섹션에는 공개적으로 액세스할 수 있는 Api에서 공용 형식 사용에 대 한 지침이 포함 되어 있습니다. 기본 제공 프레임 워크 형식 (예: 직렬화 특성) 및 일반 연산자 오버 로딩을 직접 사용을 다룹니다.  
@@ -28,12 +31,12 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  지침 및 다른 일반적인 방법에 대 한 추가 정보에 대 한.NET Framework의 기본 제공 형식 참조 다음에 대 한 참조 항목: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [배열](../../../docs/standard/design-guidelines/arrays.md)  
  [특성](../../../docs/standard/design-guidelines/attributes.md)  
  [컬렉션](/cpp/mfc/collections)  
  [serialization](../../../docs/standard/design-guidelines/serialization.md)  
- [System.Xml 사용](../../../docs/standard/design-guidelines/system-xml-usage.md)  
+ [System.Xml 사용법](../../../docs/standard/design-guidelines/system-xml-usage.md)  
  [같음 연산자](../../../docs/standard/design-guidelines/equality-operators.md)  
  *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   

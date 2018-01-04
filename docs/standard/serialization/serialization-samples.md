@@ -12,16 +12,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8db55e7206571fd09cb8a8ffe40992d135433919
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cae2d60e6997271ad32271d0e21dc0894def485e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>.NET Framework에 대한 serialization 샘플
 이 단원에서는 .NET Framework에서 개체를 serialize하는 방법을 보여 줍니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [기본 serialization 기술 샘플](../../../docs/standard/serialization/basic-serialization-technology-sample.md)  
  메모리의 개체 그래프를 스트림으로 serialize하는 방법을 보여 줍니다.  
   

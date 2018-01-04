@@ -17,11 +17,12 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c271d1c90d36832e36d042a83a0fdbcc6c79a14
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1ffb1a826bb37bddeefae9862e34f59096826685
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="label"></a>레이블
 <xref:System.Windows.Controls.Label>컨트롤의 정보는 일반적으로 제공 된 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다.  지금까지 <xref:System.Windows.Controls.Label> 만 텍스트 요소가 포함 되어 있는 하지만 없기 때문에 <xref:System.Windows.Controls.Label> 함께 제공 되는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 는 <xref:System.Windows.Controls.ContentControl>, 텍스트를 포함할 수 있습니다 또는 <xref:System.Windows.UIElement>합니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
   
  ![표시 속성 사용으로 레이블이 지정 된 표시](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 레이블의 대상 속성 설정](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>참조  

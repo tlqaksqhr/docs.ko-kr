@@ -16,16 +16,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 71feb0ecef7a6356c95b843fbc2657ad2e4a7996
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5f513cda540b3337f1510ee0c46419a12023bcb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>방법: 키 프레임을 사용하여 개체에 애니메이션 효과 주기
 이 예제는 개체에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Page.Background%2A> 속성은 <xref:System.Windows.Controls.Page> 키 프레임을 사용 하 여 제어 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 색 애니메이션 효과를 클래스에 대 한 변경의 <xref:System.Windows.Controls.Page.Background%2A> 속성의는 <xref:System.Windows.Controls.Page> 제어 합니다. 예제 애니메이션 배경 브러시를 정기적으로 변경합니다. 이 애니메이션에 사용 하 여는 <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> 클래스 세 개의 서로 다른 키 프레임을 만듭니다. 애니메이션 키 프레임을 사용 하 여 다음과 같은 방식:  
   
 1.  애니메이션 효과 인스턴스의 첫 번째 초 후에는 <xref:System.Windows.Media.LinearGradientBrush> 클래스입니다. 예제의이 섹션에서는 색을 빨간색 주황색 노랑에서 전환 되도록 배경색에 선형 그라데이션으로 표시할 적용 됩니다.  

@@ -12,11 +12,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ea06f1ce1d49b731a37d28a43626b05380a3718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33da3336cc78763de080eb21e3b84fd4cfdc7716
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-tools"></a>Serialization 도구
 이 단원에는 serialization 도구에 대한 자세한 설명이 들어 있습니다. 명령줄에서 모든 도구를 실행할 수 있습니다.  
@@ -24,7 +27,7 @@ ms.lasthandoff: 12/02/2017
 > [!IMPORTANT]
 >  .NET Framework 도구에서 제대로 작동되도록 하려면 Path, Include 및 Lib 환경 변수를 올바르게 설정해야 합니다. \<SDK>\v2.0\Bin 디렉터리에 저장된 SDKVars.bat를 실행하여 이러한 환경 변수를 설정합니다. SDKVars.bat를 모든 명령 셸에서 실행해야 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |도구|설명|  
 |----------|-----------------|  

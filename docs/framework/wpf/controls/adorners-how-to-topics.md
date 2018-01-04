@@ -15,16 +15,17 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 328ecec80670e112019364d6749c4c54a58ddf48
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f9c38e8cb466963d229b96e21f8149b7a4afaa7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adorners-how-to-topics"></a>표시기 방법 항목
 다음 예에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주기는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [표시기 구현](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
  [요소에 표시기 바인딩](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
  [패널의 자식 표시](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  

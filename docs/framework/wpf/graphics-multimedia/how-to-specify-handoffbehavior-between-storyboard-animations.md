@@ -16,16 +16,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 323ea563aec7bc7ad0abec2372e3af977c7e38eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 21d4a39b9cbd2ee563edd22818630c18658e1d6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>방법: Storyboard 애니메이션 간의 HandoffBehavior 지정
 이 예제에는 스토리 보드 애니메이션 간의 전달 동작을 지정 하는 방법을 보여 줍니다. <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> 속성 <xref:System.Windows.Media.Animation.BeginStoryboard> 지정 방법을 새 애니메이션 속성에 이미 적용 된 기존 애니메이션과 상호 작용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 개의 단추 위로 마우스 커서를 이동 하는 때를 확대 커지고 커서를 만듭니다. 단추 위로 마우스 커서를 신속 하 게 제거 하는 경우 첫 번째 작업이 완료 되기 전에 두 번째 애니메이션이 적용 됩니다. 간의 차이 볼 수 있는 다음과 같은 두 개의 애니메이션이 겹칠 때는 <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> 값 <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> 및 <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>합니다. 값이 <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> 애니메이션 값 간의 전환을 더 부드럽게 겹치는 애니메이션 결합 <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> 새 애니메이션이 즉시 겹치는 이전를 대체 하 게 합니다.  
   
  [!code-xaml[timingbehaviors_snip#HandoffBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/HandoffBehaviorExample.xaml#handoffbehaviorwholepage)]  

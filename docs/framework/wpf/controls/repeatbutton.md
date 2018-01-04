@@ -17,11 +17,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56edfe456dcb97b1d9de906ee3e3d1d09bfcf109
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 94f6b89b4e23f2610bdc3c834279eeb3eb9c9815
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="repeatbutton"></a>RepeatButton
 <xref:System.Windows.Controls.Primitives.RepeatButton> 는 비슷합니다는 <xref:System.Windows.Controls.Button>합니다. 그러나 <xref:System.Windows.Controls.Primitives.RepeatButton> 요소 제어할 수 있습니다 시기 및 방법을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트가 발생 합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  ![반복 단추 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
 일반적인 RepeatButton  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Primitives.RepeatButton>  

@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44574b5737873371f9a7bc9be2d851a8ae1e101b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-overview"></a>GridView 개요
 <xref:System.Windows.Controls.GridView>보기 모드에 대 한 보기 모드 중 하나는 <xref:System.Windows.Controls.ListView> 제어 합니다. <xref:System.Windows.Controls.GridView> 클래스와 해당 지원 클래스를 사용 하면 사용자 및 사용자가 일반적으로 대화형 열 머리글로 단추를 사용 하는 테이블에 항목 컬렉션을 볼 수 있습니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.GridView> 클래스 및 해당 사용에 간략하게 설명 합니다.  

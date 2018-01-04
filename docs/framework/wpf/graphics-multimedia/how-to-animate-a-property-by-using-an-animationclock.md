@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47df7aaad45000bc8c761a9bb9022d37e0f0828c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 145ff1be88f1af6692a8cf374e871479ed38d7bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>방법: AnimationClock을 사용하여 속성에 애니메이션 효과 적용
 사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Animation.Clock> 속성에 애니메이션 효과를 줄 개체입니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Media.Animation.Storyboard>개체 및 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 방법을 사용 하면 속성 애니메이션 효과를 직접 만들고 시계를 배포 하지 않고 (예제를 보려면 [속성 스토리 보드를 사용 하 여 애니메이션을 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) 및 [는 속성 없이 애니메이션을 적용 스토리 보드를 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)); 클럭은 만들고 자동으로 배포 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  만드는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.Animation.AnimationClock> 두 개의 비슷한 속성에 적용 합니다.  
   
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]

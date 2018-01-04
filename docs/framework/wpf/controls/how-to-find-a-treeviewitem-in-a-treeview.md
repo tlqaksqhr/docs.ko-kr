@@ -19,18 +19,19 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a231f5eae92bff8e3d525579dae865aaa0d7e496
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 696a9e2d92b9c44e4aedbcc200b41e5548cd7411
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>방법: TreeView에서 TreeViewItem 찾기
 <xref:System.Windows.Controls.TreeView> 컨트롤은 계층적 데이터를 표시 하는 편리한 방법을 제공 합니다. 경우에 <xref:System.Windows.Controls.TreeView> 데이터 소스에 바인딩된는 <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 속성 신속 하 게 선택한 데이터 개체를 검색할 수 있는 편리한 방법을 제공 합니다. 기본 데이터 개체를 사용 하는 일반적으로 좋습니다 하지만 프로그래밍 방식으로 포함 하는 데이터를 조작 해야 하는 경우에 따라 <xref:System.Windows.Controls.TreeViewItem>합니다. 예를 들어 프로그래밍 방식으로 확장 해야 할 수 있습니다는 <xref:System.Windows.Controls.TreeViewItem>에서 다른 항목을 선택 하거나는 <xref:System.Windows.Controls.TreeView>합니다.  
   
  찾을 <xref:System.Windows.Controls.TreeViewItem> 각 수준의 트래버스해야 합니다, 특정 데이터 개체를 포함 하는 <xref:System.Windows.Controls.TreeView>합니다. 항목에는 <xref:System.Windows.Controls.TreeView> 성능 향상을 위해 가상화 할 수 있습니다. 항목을 가상화 할 경우에도 해야 생각 한 <xref:System.Windows.Controls.TreeViewItem> 데이터 개체를 포함 하는지 여부를 확인 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ## <a name="description"></a>설명  
  다음 예제에서는 검색 한 <xref:System.Windows.Controls.TreeView> 특정 개체 및 개체의 포함 하는 반환에 대 한 <xref:System.Windows.Controls.TreeViewItem>합니다. 이 예제에서는 각 보장 <xref:System.Windows.Controls.TreeViewItem> 해당 자식 항목을 검색할 수 있도록 인스턴스화됩니다. 이 예에서는 경우에 사용할는 <xref:System.Windows.Controls.TreeView> 가상화 된 항목을 사용 하지 않습니다.  

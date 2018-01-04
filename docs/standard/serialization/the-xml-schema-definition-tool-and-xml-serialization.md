@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6bd462714ada242062c9e2e23f924868f5870ef8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 67451a30e5681718e5b9cdd07468ac5bf20322bc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML 스키마 정의 도구 및 XML Serialization
 XML 스키마 정의 도구([XML Schema Definition Tool(Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md))는 Windows® SDK(소프트웨어 개발 키트)의 일부로 .NET Framework 도구와 함께 설치됩니다. 이 도구는 주로 다음 두 가지 목적으로 디자인되었습니다.  

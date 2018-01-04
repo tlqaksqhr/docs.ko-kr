@@ -20,16 +20,17 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a759011425a3f09a7b91b728442f8e8ea7b92fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 428d8febe5a789f22eef97301fca3aa4b22f25b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>방법: 선택키가 있고 텍스트 줄 바꿈을 사용하는 컨트롤 만들기
 이 예제에서는 선택키가 있고 텍스트 배치를 지원하는 컨트롤을 만드는 방법을 보여 줍니다. 이 예제에서는 사용는 <xref:System.Windows.Controls.Label> 컨트롤을 이러한 개념을 설명 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **레이블에 텍스트 배치 추가**  
   
  <xref:System.Windows.Controls.Label> 컨트롤에 텍스트 줄 바꿈을 사용할 수 없습니다. 여러 줄로 줄 바꿈되는 레이블이 필요한 경우 텍스트 배치를 지원하는 다른 요소를 중첩시키고 해당 요소를 레이블 내부에 배치할 수 있습니다. 사용 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Controls.TextBlock> 여러 줄의 텍스트를 래핑하는 레이블 수 있도록 합니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5c46b8c64a26d83ba6d8f018b9a1f8ca8250a57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9da10e4eb6cf045c6c4936b76f847f21ea1495e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-skew-an-element"></a>방법: 요소 기울이기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.SkewTransform> 요소 중심 되도록 합니다. 전단이라고도 하는 기울이기는 일관되지 않은 방식으로 좌표 공간을 늘리는 변환입니다. 일반적인 용도 중 하나는 <xref:System.Windows.Media.SkewTransform> 시뮬레이션 하는 데는 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 깊이 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 개체입니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 예제에서는 45도 가로로 기울입니다는 <xref:System.Windows.Shapes.Rectangle> (0, 0)의 중심점부터 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-xaml[transformsSample#41](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
   
  다음 예제에서는 45도 가로로 기울입니다는 <xref:System.Windows.Shapes.Rectangle> (25, 25 로부터) 중심점부터 합니다.  

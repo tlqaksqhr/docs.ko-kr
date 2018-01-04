@@ -17,16 +17,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 209f2c5645758aba4d1e10fc36fe773faa975e6b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2c13a9c89bdcb149df61f26177ea8705e502402f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-improve-the-performance-of-a-treeview"></a>방법: TreeView의 성능 개선
 경우는 <xref:System.Windows.Controls.TreeView> 많은 항목이 포함 된 로드 하는 데 걸리는 시간의 양 사용자 인터페이스에 크게 지연 될 수 있습니다. 설정 하 여 로드 하는 시간을 향상 시킬 수 있습니다는 `VirtualizingStackPanel.IsVirtualizing` 연결 된 속성을 `true`합니다.  UI도 사용자가 스크롤할 때 응답 속도가 느려질 수 있습니다는 <xref:System.Windows.Controls.TreeView> 스크롤 막대의 엄지 단추를 끌거나 마우스 휠을 사용 하 여 합니다. 성능을 향상 시킬 수 있습니다는 <xref:System.Windows.Controls.TreeView> 사용자가을 설정 하 여를 스크롤할 때는 `VirtualizingStackPanel.VirtualizationMode` 연결 된 속성을 <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ## <a name="description"></a>설명  
 다음 예제에서는 한 <xref:System.Windows.Controls.TreeView> 로 설정 하는 `VirtualizingStackPanel.IsVirtualizing` 연결 된 속성을 true로 및 `VirtualizingStackPanel.VirtualizationMode` 연결 된 속성을 <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType> 성능을 최적화할 수 있습니다.  

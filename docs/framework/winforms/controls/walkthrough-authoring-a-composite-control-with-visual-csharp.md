@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d96705ed3f18c76a64c344ddec7a1cd4315e2e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 725dc47ce1bda753717c1aac813b8a692ce58001
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>연습: Visual C#에서 합성 컨트롤 제작 #
 복합 컨트롤은 사용자 지정 그래픽 인터페이스를 만들고 재사용할 수 있는 방법을 제공합니다. 복합 컨트롤은 기본적으로 시각적 표현이 있는 구성 요소입니다. 따라서 사용자 입력의 유효성을 검사하고 표시 속성을 수정하거나 작성자가 요구하는 다른 작업을 수행하여 기능을 확장할 수 있는 하나 이상의 Windows Forms 컨트롤, 구성 요소 또는 코드 블록으로 구성할 수 있습니다. 복합 컨트롤은 다른 컨트롤과 동일한 방식으로 Windows Forms에 배치할 수 있습니다. 이 연습의 첫 번째 부분에서는 `ctlClock`이라는 간단한 복합 컨트롤을 만듭니다. 두 번째 부분에서는 상속을 통해 `ctlClock`의 기능을 확장합니다.  
@@ -64,8 +65,8 @@ ms.lasthandoff: 11/21/2017
   
     |속성|다음으로 변경|  
     |--------------|---------------|  
-    |**Name**|`lblDisplay`|  
-    |**Text**|`(blank space)`|  
+    |**이름**|`lblDisplay`|  
+    |**텍스트**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -257,8 +258,8 @@ ms.lasthandoff: 11/21/2017
   
     |속성|설정|  
     |--------------|-------------|  
-    |**Name**|`lblAlarm`|  
-    |**Text**|**Alarm!**|  
+    |**이름**|`lblAlarm`|  
+    |**텍스트**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Visible**|`false`|  
   
@@ -329,8 +330,8 @@ ms.lasthandoff: 11/21/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|`btnAlarmOff`|  
-    |**Text**|**경보 사용 안 함**|  
+    |**이름**|`btnAlarmOff`|  
+    |**텍스트**|**경보 사용 안 함**|  
   
 3.  디자이너에서 **btnAlarmOff**를 두 번 클릭합니다.  
   
@@ -377,9 +378,9 @@ ms.lasthandoff: 11/21/2017
   
     |컨트롤|속성|값|  
     |-------------|--------------|-----------|  
-    |`label1`|**Text**|`(blank space)`|  
-    ||**Name**|`lblTest`|  
-    |`dateTimePicker1`|**Name**|`dtpTest`|  
+    |`label1`|**텍스트**|`(blank space)`|  
+    ||**이름**|`lblTest`|  
+    |`dateTimePicker1`|**이름**|`dtpTest`|  
     ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 10. 디자이너에서 **dtpTest**를 두 번 클릭합니다.  

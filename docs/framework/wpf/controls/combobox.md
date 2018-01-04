@@ -17,11 +17,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 628dd919ccb03b39a198f00ed092f24048ad9f5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0717e3b7f4dc72c2e5a75149b88f1f1d1285dad1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox> 컨트롤 옵션 목록이 있는 사용자에 게 표시 합니다. 목록이 표시 하 고 숨겨진 컨트롤 확장 되 고 축소 됩니다. 해당 기본 상태인 유일한 선택 표시 목록 축소 됩니다. 사용자 옵션의 전체 목록을 확인 하는 단추를 클릭 합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  ![콤보 상자 기본 및 눌린 상태의](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 축소 및 확장  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 한 ComboBoxItem 가져오기](http://msdn.microsoft.com/en-us/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>참조  

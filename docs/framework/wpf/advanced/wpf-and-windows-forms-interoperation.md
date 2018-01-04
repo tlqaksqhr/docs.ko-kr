@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d713a03469edc5d4c950c75c8094386372657486
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49a27fa04c28376dd5e627d2a80a180a5d81a3b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF 및 Windows Forms 상호 운용성
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서는 응용 프로그램 인터페이스를 만들기 위한 두 개의 서로 다른 아키텍처를 제공합니다. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> 네임 스페이스는 상호 운용 하는 일반적인 시나리오를 사용할 수 있는 클래스를 제공 합니다. 상호 운용성 기능을 구현 하는 두 가지 주요 클래스는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 및 <xref:System.Windows.Forms.Integration.ElementHost>합니다. 이 항목에서는 지원되는 상호 운용성 시나리오와 지원되지 않는 시나리오를 설명합니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="behavior"></a>동작  
  다음 테이블에서는 상호 운용성 동작을 설명합니다.  
   
-|동작|지원됨|지원되지 않음|  
+|동작|지원함|지원되지 않음|  
 |--------------|---------------|-------------------|  
 |투명도|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 렌더링에서는 투명도를 지원합니다. 부모 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤의 배경이 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 배경이 될 수 있습니다.|일부 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서는 투명도를 지원하지 않습니다. 예를 들어는 <xref:System.Windows.Forms.TextBox> 및 <xref:System.Windows.Forms.ComboBox> 컨트롤에서 호스트 될 때 투명 하 게 됩니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.|  
 |탭 이동|호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 탭 순서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기반 응용 프로그램에서 해당 컨트롤을 호스팅할 때와 동일합니다.<br /><br /> Tab 키와 Shift+Tab을 사용하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에서 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤로 탭을 이동하는 기능은 정상적으로 작동합니다.<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]이 있는 컨트롤을 <xref:System.Windows.Forms.Control.TabStop%2A> 속성 값이 `false` 컨트롤을 통해 사용자가 탭 포커스를 받지 않습니다.<br /><br /> -각 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤에는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A> 시기를 결정 하는 값은 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤이 포커스를 받이 됩니다.<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]컨트롤 내에 포함 된 한 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨테이너에 지정 된 순서에 따라는 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성입니다. 마지막 탭 인덱스에서 탭 이동하면 다음 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤(있는 경우)에 포커스를 둡니다. 기타 포커스 가능 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 없으면, 탭 순서에서 첫 번째에 있는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 탭 이동이 반환됩니다.<br />-   <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A>내에 있는 컨트롤에 대 한 값의 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 는 형제를 기준으로 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 에 포함 된 컨트롤에는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 합니다.<br />-   탭 이동은 컨트롤별 동작을 준수합니다. 예를 들어에서 TAB 키를 누르면는 <xref:System.Windows.Forms.TextBox> 된 컨트롤을 한 <xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A> 의 속성 값 `true` 탭이 포커스를 이동 하는 대신 텍스트 상자에 입력 합니다.|해당 사항 없음.|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 |시작 및 종료 이벤트|포함 된 잘못 포커스 <xref:System.Windows.Forms.Integration.ElementHost> 입력을 제어 하 고 종료 이벤트가 평소와 같이 단일에서 포커스가 변경 될 때 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 합니다.|다음 포커스 변경이 발생하면 시작 및 종료 이벤트는 발생하지 않습니다.<br /><br /> 외부 내부에는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 합니다.<br />내부에 외부는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 합니다.<br />-바깥쪽는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 합니다.<br />[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 호스트 되는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤을 한 <xref:System.Windows.Forms.Integration.ElementHost> 동일한 내에서 호스팅되는 컨트롤 <xref:System.Windows.Forms.Integration.WindowsFormsHost>합니다.|  
 |다중 스레딩|모든 종류의 다중 스레딩이 지원됩니다.|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기술에서는 단일 스레드 동시 모델을 가정합니다. 디버깅 중에 다른 스레드에서 프레임워크 개체를 호출하면 이 요구 사항을 적용하기 위해 예외가 발생합니다.|  
 |보안|모든 상호 운용성 시나리오에는 완전 신뢰가 필요합니다.|부분 신뢰에서는 상호 운용성 시나리오가 허용되지 않습니다.|  
-|접근성|모든 접근성 시나리오가 지원됩니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 모두 포함된 하이브리드 응용 프로그램에 사용될 때 보조 기술 제품이 올바르게 작동합니다.|해당 사항 없음.|  
+|액세스 가능성|모든 접근성 시나리오가 지원됩니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 모두 포함된 하이브리드 응용 프로그램에 사용될 때 보조 기술 제품이 올바르게 작동합니다.|해당 사항 없음.|  
 |클립보드|모든 클립보드 작업이 정상적으로 작동합니다. 이 작업에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 간에 잘라내기 및 붙여넣기가 포함됩니다.|해당 사항 없음.|  
 |끌어서 놓기 기능|끌어서 놓기 작업이 모두 정상적으로 작동합니다. 이 작업에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 간의 작업이 포함됩니다.|해당 사항 없음.|  
   
@@ -118,12 +119,12 @@ ms.lasthandoff: 11/21/2017
 ### <a name="behavior"></a>동작  
  다음 테이블에서는 상호 운용성 동작을 설명합니다.  
   
-|동작|지원됨|지원되지 않음|  
+|동작|지원함|지원되지 않음|  
 |--------------|---------------|-------------------|  
 |투명도|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 렌더링에서는 투명도를 지원합니다. 부모 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 배경이 호스팅된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤의 배경이 될 수 있습니다.|해당 사항 없음.|  
 |다중 스레딩|모든 종류의 다중 스레딩이 지원됩니다.|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기술에서는 단일 스레드 동시 모델을 가정합니다. 디버깅 중에 다른 스레드에서 프레임워크 개체를 호출하면 이 요구 사항을 적용하기 위해 예외가 발생합니다.|  
 |보안|모든 상호 운용성 시나리오에는 완전 신뢰가 필요합니다.|부분 신뢰에서는 상호 운용성 시나리오가 허용되지 않습니다.|  
-|접근성|모든 접근성 시나리오가 지원됩니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 모두 포함된 하이브리드 응용 프로그램에 사용될 때 보조 기술 제품이 올바르게 작동합니다.|해당 사항 없음.|  
+|액세스 가능성|모든 접근성 시나리오가 지원됩니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 모두 포함된 하이브리드 응용 프로그램에 사용될 때 보조 기술 제품이 올바르게 작동합니다.|해당 사항 없음.|  
 |클립보드|모든 클립보드 작업이 정상적으로 작동합니다. 이 작업에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 간에 잘라내기 및 붙여넣기가 포함됩니다.|해당 사항 없음.|  
 |끌어서 놓기 기능|끌어서 놓기 작업이 모두 정상적으로 작동합니다. 이 작업에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 간의 작업이 포함됩니다.|해당 사항 없음.|  
   

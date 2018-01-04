@@ -15,16 +15,17 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd3771e0fcbf83b00f52d78a5c63793dae116e4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7fea4c74fc837181e1b0a007fb83ddce1c4cd52a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="window-management-how-to-topics"></a>창 관리 방법 도움말 항목
 다음 항목에서는 관리 하는 방법을 보여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [콘텐츠에 맞게 자동으로 창 크기 조정](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
   [응용 프로그램의 모든 창 가져오기](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
   [기본 응용 프로그램 창 가져오기 및 설정](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  

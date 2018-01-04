@@ -17,16 +17,17 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11ea55c807bdf939d2cca6fb90591f814361ce96
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a1236755a3df5074387652049847e979653eefcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel 방법 항목
 이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.DockPanel> 레이아웃 컨테이너의 가장자리를 따라 자식 요소를 배치 하는 요소입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Dock 값 가져오기 또는 설정](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
  [DockPanel 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
  [DockPanel 요소를 사용하여 공간 분할](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  

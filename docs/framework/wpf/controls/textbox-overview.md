@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1116093ddcd95c99deac8a1e1b14fef3b0a458f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50e36192198c172843d79a4195e894b848f84c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-overview"></a>TextBox 개요
 <xref:System.Windows.Controls.TextBox> 클래스 표시 하거나 서식 없는 텍스트를 편집할 수 있습니다. 일반적인 용도 <xref:System.Windows.Controls.TextBox> 형태로 서식 없는 텍스트를 편집 합니다. 예를 들어 사용자의 이름, 전화 번호에 대 한 요청 양식 등 사용 <xref:System.Windows.Controls.TextBox> 텍스트 입력에 대 한 제어 합니다. 이 항목에서는 소개는 <xref:System.Windows.Controls.TextBox> 모두에서 사용 하는 방법의 예제를 제공 하 고 클래스 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="textbox-or-richtextbox"></a>TextBox 또는 RichTextBox?  
  둘 다 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.RichTextBox> 사용자가을 입력 텍스트를 허용 하지만 두 개의 서로 다른 시나리오에 사용 됩니다. A <xref:System.Windows.Controls.TextBox> 적은 시스템 리소스를 필요 없으면 <xref:System.Windows.Controls.RichTextBox> 없으므로 이상적인 경우에 일반 텍스트를 편집 해야 합니다. (예: 폼에 사용). A <xref:System.Windows.Controls.RichTextBox> 하는 것이 서식 있는 텍스트, 이미지, 테이블을 편집 하려면 사용자에 대 한 필요한 또는 기타 지원 되는 경우 콘텐츠입니다. 예를 들어, 문서, 문서 또는 서식, 필요한 블로그 편집 이미지, 등을 사용 하 여 훌륭하게 수행할는 <xref:System.Windows.Controls.RichTextBox>합니다. 아래 테이블의 기본 기능을 요약 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.TextBox>합니다.  
   
-|컨트롤|실시간 맞춤법 검사|상황에 맞는 메뉴|서식 명령 처럼 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument>이미지, 단락, 테이블 등과 같은 콘텐츠입니다.|  
+|Control|실시간 맞춤법 검사|상황에 맞는 메뉴|서식 명령 처럼 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument>이미지, 단락, 테이블 등과 같은 콘텐츠입니다.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|예|예|아니요|아니요.|  
 |<xref:System.Windows.Controls.RichTextBox>|예|예|예([RichTextBox 개요](../../../../docs/framework/wpf/controls/richtextbox-overview.md) 참조)|예([RichTextBox 개요](../../../../docs/framework/wpf/controls/richtextbox-overview.md) 참조)|  

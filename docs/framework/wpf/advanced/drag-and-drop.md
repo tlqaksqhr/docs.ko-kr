@@ -18,16 +18,17 @@ caps.latest.revision: "85"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d02a32eb2d27d6e8ace4e81703bfadbb3a1b1ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a051002fb0dda77ee2e8a5d8ef95ae3ebf24cc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop"></a>끌어서 놓기
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]매우 유연한 끌어서 놓기 인프라를 끌어서 놓기를 데이터 둘 다 지 원하는 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 뿐만 아니라 다른 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 응용 프로그램입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [끌어서 놓기 개요](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
  [데이터 및 데이터 개체](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
  [연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  

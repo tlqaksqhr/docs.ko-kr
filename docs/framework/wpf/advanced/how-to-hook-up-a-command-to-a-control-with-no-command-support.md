@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f38a6f900ee2b253708da4b63bdc2f474fa3ab1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 804c4ffd54a0f8cc94e8849a223b1af8b27a58b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>방법: 명령을 지원하지 않는 컨트롤에 명령 후크
 후크 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Input.RoutedCommand> 에 <xref:System.Windows.Controls.Control> 는 않는 하지 기본적으로 명령에 대 한 지원.  여러 소스에 명령을 후크하는 전체 샘플은 [Create a Custom RoutedCommand Sample](http://go.microsoft.com/fwlink/?LinkID=159980)(사용자 지정 RoutedCommand 만들기 샘플)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 응용 프로그램 프로그래머가 자주 접하게 되는 공용 명령의 라이브러리를 제공합니다.  클래스는 명령 라이브러리를 구성 하는: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, 및 <xref:System.Windows.Documents.EditingCommands>합니다.  
   
  정적 <xref:System.Windows.Input.RoutedCommand> 이러한 클래스를 구성 하는 개체 명령 논리를 제공 하지 않습니다.  사용 하 여 명령과와 연결 된 명령에 대 한 논리는 <xref:System.Windows.Input.CommandBinding>합니다.  많은 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기본적으로 명령은 라이브러리에서 명령 중 일부에 대 한 지원.  <xref:System.Windows.Controls.TextBox>예를 들어와 같은 다양 한 응용 프로그램 편집 명령을 지원 <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, 및 <xref:System.Windows.Input.ApplicationCommands.Undo%2A>합니다.  응용 프로그램 개발자는 이러한 명령을 컨트롤과 함께 사용하기 위해 별도로 해야 하는 작업은 없습니다.  경우는 <xref:System.Windows.Controls.TextBox> 가 명령 대상 명령이 실행 될 때 사용 하 여 명령을 처리할 수 있으므로 <xref:System.Windows.Input.CommandBinding> 컨트롤에 내장 되어 있습니다.  

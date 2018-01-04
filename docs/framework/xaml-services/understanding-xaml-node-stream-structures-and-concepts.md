@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ae5cfd6cdb557aff4910f38ea0fb7f4b54afbbb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML 노드 스트림 구조 및 개념 이해
 .NET Framework XAML 서비스에 구현된 XAML 판독기와 XAML 작성기는 XAML 노드 스트림의 디자인 개념을 기반으로 합니다. XAML 노드 스트림은 XAML 노드 집합의 개념화입니다. 이 개념화에서 XAML 프로세서는 한 번에 하나씩 XAML의 노드 관계 구조를 처리합니다. 언제든지 하나의 현재 레코드 또는 현재 위치만 열린 XAML 노드 스트림에 있으며 API는 대부분 해당 위치에서 사용할 수 있는 정보만 보고합니다. XAML 노드 스트림의 현재 노드는 개체, 멤버 또는 값으로 설명될 수 있습니다. XAML을 XAML 노드 스트림으로 처리하여 XAML 판독기는 XAML 작성기와 통신하고 XAML을 포함하는 경로 로드 또는 경로 저장 작업 중에 프로그램이 XAML 노드 스트림을 보거나, 상호 작용하거나, 콘텐츠를 변경할 수 있게 할 수 있습니다. XAML 판독기/작성기 API 디자인 및 XAML 노드 스트림 개념은 이전의 관련된 판독기/작성기 디자인 및 개념과 비슷합니다(예: [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] , <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스). 이 항목에서는 XAML 노드 스트림 개념과 XAML 노드 수준에서 XAML 표현과 상호 작용하는 루틴을 작성하는 방법을 설명합니다.  

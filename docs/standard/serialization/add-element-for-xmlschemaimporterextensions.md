@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd73d6dfe6659cd973054a14d0d4e5e73d3cd8d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc01f0ed6b5b1bac5131e6262db5d3a2847a65ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ltaddgt-element-for-ltxmlschemaimporterextensionsgt"></a>&lt;xmlSchemaImporterExtensions&gt;의 요소 &lt;add&gt;
 <xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용하는 형식을 추가합니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.  
@@ -36,14 +39,14 @@ ms.lasthandoff: 12/02/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
 |**name**|인스턴스를 찾는 데 사용되는 단순한 이름입니다.|  
-|**type**|필수 요소. 추가할 스키마 확장 클래스를 지정합니다. **type** 특성 값은 한 줄로 표시되어야 하며 정규화된 형식 이름을 포함해야 합니다. GAC(전역 어셈블리 캐시)에 추가되는 어셈블리에는 서명된 어셈블리의 버전, 문화권 및 공개 키 토큰도 포함되어 있어야 합니다.|  
+|**type**|필수. 추가할 스키마 확장 클래스를 지정합니다. **type** 특성 값은 한 줄로 표시되어야 하며 정규화된 형식 이름을 포함해야 합니다. GAC(전역 어셈블리 캐시)에 추가되는 어셈블리에는 서명된 어셈블리의 버전, 문화권 및 공개 키 토큰도 포함되어 있어야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -54,7 +57,7 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |\<xmlSchemaImporterExtensions>|<xref:System.Xml.Serialization.XmlSchemaImporter>에서 사용하는 형식을 포함합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 XmlSchemaImporter가 형식을 매핑할 때 사용할 수 있는 확장 형식을 추가합니다.  
   
 ```xml  

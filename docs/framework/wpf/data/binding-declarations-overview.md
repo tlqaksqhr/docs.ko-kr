@@ -23,11 +23,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28b139f6ea2aad41e4d733e8c622699f2474b3e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-declarations-overview"></a>바인딩 선언 개요
 이 항목에서는 바인딩을 선언할 수 있는 여러 가지 방법을 설명합니다.  

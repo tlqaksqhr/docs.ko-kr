@@ -19,16 +19,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86d1ababcb7a00496b59005b5e90f875511fefc4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebb74e1db2e63269f70a13ef8520ab1383ecae08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>방법: 데이터 수집의 기본 뷰 가져오기
 뷰는 동일한 데이터 수집을 정렬, 필터링 또는 그룹화 기준에 따라 다양 한 방법으로 볼 수 있도록 합니다. 모든 컬렉션에 바인딩 원본으로 컬렉션을 지정 하는 경우 실제 바인딩 원본으로 사용 되는 하나의 공유 기본 보기. 이 예제에는 컬렉션의 기본 보기를 가져오는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  보기를 만들려면 컬렉션에 대 한 개체 참조가 필요 합니다. 데이터 원본의 속성을 가져오거나 또는 바인딩 속성을 가져오거나 데이터 컨텍스트를 가져와 사용자 고유의 코드 숨김 개체를 참조 하 여이 데이터 개체를 가져올 수 있습니다. 가져오는 방법을 보여 주는이 예제는 <xref:System.Windows.FrameworkElement.DataContext%2A> 이 컬렉션에 대 한 보기를 직접 기본 컬렉션을 얻기 위해 데이터 개체 및 사용 합니다.  
   
  [!code-csharp[CollectionView#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionView/CSharp/Page1.xaml.cs#2)]

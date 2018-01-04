@@ -22,16 +22,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2341d2814e5bd42c652865c76d115defcc5b15b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f52801ee3704c13ec5213cfc54b6392baa97e245
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>방법: Storyboard를 사용하여 MediaElement 제어
 제어 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.MediaElement> 를 사용 하 여 한 <xref:System.Windows.Media.MediaTimeline> 에 <xref:System.Windows.Media.Animation.Storyboard>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 경우는 <xref:System.Windows.Media.MediaTimeline> 에 <xref:System.Windows.Media.Animation.Storyboard> 의 타이밍을 제어 하는 <xref:System.Windows.Controls.MediaElement>, 다른 기능과 동일 <xref:System.Windows.Media.Animation.Timeline> 애니메이션과 같은 개체입니다. 예를 들어는 <xref:System.Windows.Media.MediaTimeline> 사용 하 여 <xref:System.Windows.Media.Animation.Timeline> 같은 속성은 <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> 속성 시작 하는 시기를 지정 하는 <xref:System.Windows.Controls.MediaElement> (미디어 재생 시작)입니다. 또한 사용 하 여는 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성을 통해 지정 시간 <xref:System.Windows.Controls.MediaElement> 활성화 (미디어 재생 기간). 사용에 대 한 자세한 내용은 <xref:System.Windows.Media.Animation.Timeline> 개체와 <xref:System.Windows.Media.Animation.Storyboard>, 참조 [적기](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)합니다.  
   
  사용 하는 간단한 미디어 플레이어를 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.MediaTimeline> 재생을 제어할 수 있습니다. 미디어 플레이어에는 재생, 일시 중지, 다시 시작 하 고 단추를 중지 합니다. 플레이어 역시는 <xref:System.Windows.Controls.Slider> 역할 진행률 표시줄을 컨트롤입니다.  

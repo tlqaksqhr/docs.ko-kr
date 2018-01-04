@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76d0dcf63f9d8a66106f4bcdc52a2bf98c75cdc4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 41254d8f93174c896923b1c070e6bf9b5b7c863c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-outlined-text"></a>방법: 윤곽선이 있는 텍스트 만들기
 대부분의 경우 장식을의 텍스트 문자열에 추가할 때 프로그램 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 불연속 문자 또는 문자 모양의 컬렉션과 관련 된 텍스트를 사용 하는 응용 프로그램입니다. 예를 들어 만들고 하는 선형 그라데이션 브러시에 적용 된 <xref:System.Windows.Controls.Control.Foreground%2A> 속성은 <xref:System.Windows.Controls.TextBox> 개체입니다. 을 표시 하거나 텍스트 상자를 편집할 때 선형 그라데이션 브러시 현재 텍스트 문자열의 문자 집합에 자동으로 적용 됩니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/22/2017
  ![스트로크에 이미지 브러시가 적용 된 텍스트](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")  
 스트로크와 강조 표시에 적용된 이미지 브러시의 예  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  텍스트를 변환 하는 <xref:System.Windows.Media.Geometry> 는 사용 하 여 <xref:System.Windows.Media.FormattedText> 개체입니다. 이 개체를 만든 후 사용할 수 있습니다는 <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> 및 <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> 텍스트를 변환 하는 메서드 <xref:System.Windows.Media.Geometry> 개체입니다. 첫 번째 메서드는 서식 있는 텍스트;의 기 하 도형을 반환합니다. 두 번째 방법은 경계 상자의 서식 있는 텍스트의 기 하 도형을 반환 합니다. 다음 코드 예제에서는 만드는 방법을 보여 줍니다.는 <xref:System.Windows.Media.FormattedText> 개체 서식 있는 텍스트와 해당 경계 상자의의 기 하 도형이 검색할 수 있습니다.  
   
  [!code-csharp[OutlineTextControlViewer#CreateText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]

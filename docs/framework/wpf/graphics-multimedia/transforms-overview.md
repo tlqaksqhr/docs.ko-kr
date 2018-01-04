@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd4e0f65d404e70f441cf2918fd6c50e08ebec79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4992b5be4243d8d29b6075c0ad746494dc2eb168
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transforms-overview"></a>Transform 개요
 이 항목에서는 사용 하는 방법을 설명는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 회전, 크기 조정, 이동 하는 클래스 (변환) 및 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="transform-classes"></a>변환 클래스  
  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]다음과 같은 장점이 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 일반적인 변환 작업에 대 한 클래스:  
   
-|클래스|설명|예제|그림|  
+|클래스|설명|예|그림|  
 |-----------|-----------------|-------------|------------------|  
 |<xref:System.Windows.Media.RotateTransform>|지정 된 요소를 회전 <xref:System.Windows.Media.RotateTransform.Angle%2A>합니다.|[개체 회전](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![회전 그림](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
 |<xref:System.Windows.Media.ScaleTransform>|지정 된 요소 확장 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 및 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 금액입니다.|[요소 배율 조정](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![배율 조정 그림](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
  좀 더 복잡한 변환을 만들기 위해 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]에서는 다음 두 가지 클래스를 제공합니다.  
   
-|클래스|설명|예제|  
+|클래스|설명|예|  
 |-----------|-----------------|-------------|  
 |<xref:System.Windows.Media.TransformGroup>|여러 그룹화 <xref:System.Windows.Media.TransformGroup> 개체를 하나의 <xref:System.Windows.Media.Transform> 그런 다음 변환 속성에 적용할 수 있습니다.|[개체에 다중 변환 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|다른에서 제공 하지 않는 사용자 지정 변환을 만듭니다 <xref:System.Windows.Media.Transform> 클래스입니다. 사용 하는 경우는 <xref:System.Windows.Media.MatrixTransform>, 매트릭스를 직접 조작 합니다.|[MatrixTransform을 사용하여 사용자 지정 변환 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  

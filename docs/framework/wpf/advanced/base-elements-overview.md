@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 270388b8e3dda0342ba74187d8dc45616d0e769d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 52f0bb90d7eb61a199097813eb8313cd9c154f3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="base-elements-overview"></a>기본 요소 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에는 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 설명서에서 일반적으로 기본 요소 클래스라고 하는 네 가지 클래스에서 파생된 클래스가 많습니다. 이러한 클래스는 <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다. <xref:System.Windows.DependencyObject> 클래스도 관련 되는지, 둘 다의 공통 기본 클래스 이므로 <xref:System.Windows.UIElement> 및<xref:System.Windows.ContentElement>  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Media.Animation.Animatable>이 <xref:System.Windows.Freezable> 특히 애니메이션 컨트롤 계층에서에서 추가 하거나 일부 유틸리티 멤버 현재 애니메이션 적용된 속성을 구분할 수 있도록 되는 속성과 클래스를 파생 합니다.  
   
-### <a name="control"></a>컨트롤  
+### <a name="control"></a>Control  
  <xref:System.Windows.Controls.Control>컨트롤 또는 구성 요소는 기술에 따라 다양 표현 되는 개체의 형식에 대 한 원하는 기본 클래스가입니다. 일반적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 클래스는 UI 컨트롤을 직접 나타내거나 컨트롤 컴퍼지션에 밀접하게 참여하는 클래스입니다. 기본 기능은 <xref:System.Windows.Controls.Control> 컨트롤 템플릿 기능입니다.  
   
 ## <a name="see-also"></a>참고 항목  

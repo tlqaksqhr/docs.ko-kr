@@ -20,16 +20,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cdac074b873d3a627e6971d440fdd1f98952b08
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-security"></a>Windows Forms 보안
 Windows Forms 보안 모델 코드 기반 (보안 수준이 설정 되는 코드를 실행 하는 사용자에 관계 없이 코드에 대 한)을 제공 합니다. 에 컴퓨터 시스템에 이미 있을 수 있는 모든 보안 스키마 외에도입니다. 브라우저 (예: 영역을 기반으로 보안 Internet Explorer에서 사용할 수 있는) 또는 운영 체제 (예: Windows NT의 자격 증명 기반 보안용)를 포함할 수 있습니다 이러한.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms의 보안 개요](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
  Windows Forms 응용 프로그램에서 확인 하는 데 필요한 기본 단계 및.NET Framework 보안 모델은 안전 간략하게 설명 합니다.  
   

@@ -20,14 +20,15 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7e7cca5b6f7a0d5085e70c4ab6ac33ff83b75217
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5eacc5435e259c20c25b64d6e82c33d07338602a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-panel-element"></a>방법: 사용자 지정 패널 요소 만들기
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  기본 레이아웃 동작을 재정의 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Panel> 요소에서 파생 된 사용자 지정 레이아웃 요소를 만들고 <xref:System.Windows.Controls.Panel>합니다.  
   
  이 예제에서는 간단한 사용자 지정 정의 <xref:System.Windows.Controls.Panel> 라는 요소 `PlotPanel`, 자식 요소에 따라 두 하드 코드 된 x 및 y 좌표를 배치 하 합니다. 이 예제에서는 `x` 및 `y` 으로 설정 되어 `50`; 따라서 모든 자식 요소를 x 축과 y 해당 위치에 배치 축 합니다.  

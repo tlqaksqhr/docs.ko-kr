@@ -14,11 +14,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6884598e6b883ab5e6369be5f2f796a194c7f930
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b112cb1e383b092c1bcc4403e04938b3b83c5ecc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 컨트롤 아키텍처
 <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.ToolStripItem> 클래스 도구 모음, 상태 및 메뉴 항목을 표시 하기 위한 유연 하 고 확장 가능한 시스템을 제공 합니다. 이러한 클래스에 포함 된 모든는 <xref:System.Windows.Forms> "ToolStrip" 접두사는 네임 스페이스 및 이러한를 명명 된 일반적으로 (와 같은 <xref:System.Windows.Forms.ToolStripOverflow>) 또는 "Strip" 접미사와 함께 (같은 <xref:System.Windows.Forms.MenuStrip>).  
@@ -170,7 +171,7 @@ ToolStrip 개체 모델
   
 -   액세스 키가 처리 될 때 <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> 는 부여 되지 않습니다.  
   
-#### <a name="usage"></a>용도  
+#### <a name="usage"></a>사용법  
  다음과 같은 사용 패턴 관계가 <xref:System.Windows.Forms.ToolStrip> 레이아웃, 키보드 상호 작용 및 최종 사용자 동작:  
   
 -   조인는<xref:System.Windows.Forms.ToolStripPanel>  

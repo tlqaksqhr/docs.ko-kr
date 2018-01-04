@@ -17,11 +17,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6bc69beef04b41cda6baaab0f74d90bf5c5a78d8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 497687eef2d31260f9eaf8cfbf2e9eb0441fcfbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbar"></a>ToolBar
 <xref:System.Windows.Controls.ToolBar> 컨트롤은 명령 또는 해당 함수에서 일반적으로 관련 된 컨트롤의 그룹에 대 한 컨테이너입니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/18/2017
  ![세로 도구 모음](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
 세로 도구 모음  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [도구 모음 개요](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
   [ToolBar 컨트롤의 스타일 지정](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
   

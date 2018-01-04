@@ -26,11 +26,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bd85383cc27687974fbf3689793a60569a4f97a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-and-templating"></a>스타일 지정 및 템플릿
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿은 개발자와 디자이너가 시각적으로 눈에 띄는 효과를 만들고 제품에 대한 일관된 모양을 만들 수 있는 기능 모음(스타일, 템플릿, 트리거 및 스토리보드)을 나타냅니다. 개발자 및/또는 디자이너는 응용 프로그램에 따라 모양을 광범위하게 사용자 지정할 수 있지만 응용 프로그램 내에서 또는 응용 프로그램 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 이 모델을 제공합니다.  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="bindings-dynamic-resources-and-event-handlers"></a>바인딩, 동적 리소스 및 이벤트 처리기  
  `Setter.Value` 속성을 사용하여 [Binding 태그 확장](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) 또는 [DynamicResource 태그 확장](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)을 지정할 수 있습니다. 자세한 내용은 참조에 대 한 제공 된 예는 <xref:System.Windows.Setter.Value%2A?displayProperty=nameWithType> 속성입니다.  
   
- 지금까지 이 개요에서는 setter를 사용하여 속성 값을 설정하는 방법만 설명했습니다. 스타일에서 이벤트 처리기를 지정할 수도 있습니다. 자세한 내용은 <xref:System.Windows.EventSetter>을 참조하십시오.  
+ 지금까지 이 개요에서는 setter를 사용하여 속성 값을 설정하는 방법만 설명했습니다. 스타일에서 이벤트 처리기를 지정할 수도 있습니다. 자세한 내용은 <xref:System.Windows.EventSetter>을 참조하세요.  
   
 <a name="styling_datatemplates"></a>   
 ## <a name="data-templates"></a>데이터 템플릿  

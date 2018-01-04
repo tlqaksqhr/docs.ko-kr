@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="capitalization-conventions"></a>대/소문자 표기법
 지침에 사용 하기 위한 간단한 방법이 장 레이아웃을 만드는 경우, 형식, 멤버 및 매개 변수를 읽기 쉽게에 대 한 확인 식별자를 일관 되 게 적용 될 때.  
@@ -56,14 +59,14 @@ ms.lasthandoff: 11/21/2017
   
  다음 표에서 다양 한 유형의 식별자에 대 한 대/소문자 규칙을 설명합니다.  
   
-|식별자|대/소문자 구분|예제|  
+|식별자|대/소문자 구분|예|  
 |----------------|------------|-------------|  
 |네임스페이스|파스칼|`namespace System.Security { ... }`|  
 |형식|파스칼|`public class StreamReader { ... }`|  
 |인터페이스|파스칼|`public interface IEnumerable { ... }`|  
 |메서드|파스칼|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
 |속성|파스칼|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|이벤트|파스칼|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|이벤트(event)|파스칼|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |필드|파스칼|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |열거형 값|파스칼|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |매개 변수|카멜식 대 /|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  

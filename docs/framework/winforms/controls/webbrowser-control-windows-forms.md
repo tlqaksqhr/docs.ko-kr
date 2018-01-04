@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0a87c1cd87b21b10404ae4a19ee931cc5f69ece
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 65c92a64619ae993671f7669117e852994072047
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 컨트롤(Windows Forms)
 Windows Forms `WebBrowser` 컨트롤이 웹 페이지를 호스팅하고 웹 검색 응용 프로그램에 기능을 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [WebBrowser 컨트롤 개요](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   

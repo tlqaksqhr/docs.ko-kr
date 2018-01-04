@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 691487046e2a34dbf233dc4bc03e20f9ec245da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08cb39215ea1d9aff1cd7ecc125bd731f14a4d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>연습: 도구 상자에 자동으로 사용자 지정 구성 요소 채우기
 사용 중인 구성 요소는 현재 열려 있는 솔루션의 프로젝트에서 정의 된 경우 자동으로에 표시 됩니다는 **도구 상자**, 작업이 사용자가 필요 하지 않습니다. 수동으로 채울 수 있습니다는 **도구 상자** 를 사용 하 여 사용자 지정 구성 요소와는 [선택 도구 상자 항목 대화 상자 (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), 하지만 **도구 상자** 고려 솔루션에 있는 항목의 다음 특성을 모두의 출력을 빌드:  

@@ -20,11 +20,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7eda2b6761a825dcb2b24ae9f11b2e1262d7e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-document-overview"></a>유동 문서 개요
 유동 문서는 보기와 가독성을 최적화하도록 설계되었습니다. 유동 문서는 미리 정의된 하나의 레이아웃으로 설정되는 것이 아니라, 창 크기, 장치 해상도 및 선택적 사용자 기본 설정 등의 런타임 변수에 따라 동적으로 콘텐츠를 조정하고 리플로우합니다. 유동 문서에서는 페이지 매김 및 열과 같은 고급 문서 기능을 제공합니다. 이 항목에서는 유동 문서의 개요와 해당 문서를 작성하는 방법을 제공합니다.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 -   페이지 탐색 컨트롤: 문서의 보기 모드에서 페이지를 사용하면 페이지 탐색 컨트롤에 다음 페이지(아래쪽 화살표) 또는 이전 페이지(위쪽 화살표)로 이동하는 단추 외에도 현재 페이지 번호와 총 페이지 수 표시기도 포함되어 있습니다. 키보드 화살표 키를 사용하여 페이지 넘기기도 수행할 수 있습니다.  
   
--   확대/축소: 확대/축소 컨트롤을 사용하면 더하기 또는 빼기 단추를 클릭하여 각각 확대/축소 수준을 늘리거나 줄일 수 있습니다. 확대/축소 컨트롤에는 확대/축소 수준을 조정하는 슬라이더도 포함되어 있습니다. 자세한 내용은 <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>을 참조하십시오.  
+-   확대/축소: 확대/축소 컨트롤을 사용하면 더하기 또는 빼기 단추를 클릭하여 각각 확대/축소 수준을 늘리거나 줄일 수 있습니다. 확대/축소 컨트롤에는 확대/축소 수준을 조정하는 슬라이더도 포함되어 있습니다. 자세한 내용은 <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>을 참조하세요.  
   
  이러한 기능은 유동 콘텐츠를 호스트하는 데 사용되는 컨트롤을 통해 수정할 수 있습니다. 다음 섹션에서는 여러 다른 컨트롤에 대해 설명합니다.  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="flow-document-types"></a>유동 문서 형식  
  유동 문서 콘텐츠 표시 및 표시 방법은 유동 콘텐츠를 호스트하는 데 사용되는 개체에 따라 달라집니다. 유동 콘텐츠 보기를 지 원하는 컨트롤을 4 개의: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer>합니다. 이러한 컨트롤은 아래에서 간략하게 설명합니다.  
   
- **참고:** <xref:System.Windows.Documents.FlowDocument> 되므로 이러한 컨트롤 보기의 모든 직접 호스트 유동 콘텐츠를 해야 하는 한 <xref:System.Windows.Documents.FlowDocument> 흐름 콘텐츠 호스트할 수 있도록 합니다.  
+ **참고:** <xref:System.Windows.Documents.FlowDocument> 되므로 이러한 컨트롤 보기의 모든 직접 호스트 유동 콘텐츠를 해야 하는 한 <xref:System.Windows.Documents.FlowDocument> 흐름 콘텐츠 호스트할 수 있도록 합니다.
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
  <xref:System.Windows.Controls.FlowDocumentReader>사용자가 동적으로 단일 페이지 (페이지-에-) 보기 모드를 한 번에 두 페이지 (책 읽기 형식) 보기 모드 및 연속 스크롤 (바닥 없음) 보기 모드를 포함 하 여 다양 한 보기 모드 사이 선택할 수 있는 기능이 포함 되어 있습니다. 이러한 보기 모드에 대 한 자세한 내용은 참조 하십시오. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>합니다. 동적으로 다른 보기 모드 사이 전환 하는 기능이 필요 하지 않은 경우 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 간단한 유동 특정 보기 모드에서 수정 된 콘텐츠 뷰어를 제공 합니다.  

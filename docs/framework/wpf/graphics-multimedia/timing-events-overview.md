@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>타이밍 이벤트 개요
 이 항목에서는에서 사용할 수 있는 5 개의 타이밍 이벤트를 사용 하는 방법을 설명 <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 개체입니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="public-events"></a>Public 이벤트  
  <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 클래스는 모두 5 개의 타이밍 이벤트를 제공 합니다. 다음 표에는 이러한 이벤트와 해당 이벤트를 트리거하는 조건이 나와 있습니다.  
   
-|Event|트리거하는 대화형 작업|기타 트리거|  
+|이벤트(event)|트리거하는 대화형 작업|기타 트리거|  
 |-----------|--------------------------------------|--------------------|  
 |**Completed**|건너뛰어서 채우기|클록이 완료됩니다.|  
 |**CurrentGlobalSpeedInvalidated**|일시 중지, 다시 시작, 검색, 속도 비율 설정, 건너뛰어서 채우기, 중지|클록이 거꾸로 진행되거나, 가속되거나, 시작되거나, 중지됩니다.|  

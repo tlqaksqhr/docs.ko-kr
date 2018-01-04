@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: faa74e982fb114d041468c53dde2f978bb3faa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 태그 확장명 개요
 태그 확장은 기본 형식이 나 특정 XAML 형식이 아닌 값을 가져오기 위한 XAML 기술입니다. 특성 사용과 관련하여 태그 확장은 여는 중괄호 `{` 의 알려진 문자 시퀀스를 사용하여 태그 확장 범위를 시작하고 닫는 중괄호 `}` 를 사용하여 종료합니다. .NET Framework XAML 서비스를 사용하는 경우 System.Xaml 어셈블리에서 미리 정의된 몇 가지 XAML 언어 태그 확장을 사용할 수 있습니다. System.Xaml에 정의된 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 서브클래싱하고 고유한 태그 확장을 정의할 수도 있습니다. 또는 해당 프레임워크를 이미 참조하고 있는 경우 특정 프레임워크에 의해 정의된 태그 확장을 사용할 수 있습니다.  

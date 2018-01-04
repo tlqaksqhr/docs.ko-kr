@@ -17,16 +17,17 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-in-wpf-applications"></a>WPF 응용 프로그램의 창
 사용자가 windows 통해 응용 프로그램과 상호 작용 합니다. 창의 기본 목적은를 호스팅하고 콘텐츠를 표시 하는 것입니다. 창 호스트에 종속 되도록 데이터 형식에는 응용 프로그램에 대해 작동, 미디어, XAML Extensible Application Markup Language () 페이지, 웹 페이지, 문서, 데이터베이스 테이블 및 레코드 및 시스템 정보를 포함할 수 있는 콘텐츠 형식입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [WPF 창 개요](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
  [대화 상자 개요](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
  [방법 항목](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 9a445d7e730ecb743d5e4086ec682b12a7bf3ff9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25aac1d4478279561cbcdda6c1cf912c3c3b2cde
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>사용자 지정 형식 및 라이브러리에 대한 XAML 관련 CLR 특성
 이 항목에서는.NET Framework XAML 서비스에서 정의 된 공용 언어 런타임 (CLR) 특성을 설명 합니다. 또한 다른 CLR 특성.NET Framework에 정의 된 어셈블리 또는 형식에 대 한 응용 프로그램에 대 한 XAML 관련 시나리오를 설명 합니다. 이러한 CLR 특성으로 어셈블리, 형식 또는 멤버를 설정 하면 해당 형식과 관련 된 XAML 형식 시스템 정보를 제공 합니다. 정보 또는 사용 하 여.NET Framework XAML 서비스 XAML 노드 스트림을 직접 처리 하기 위한 전용된 XAML 판독기 및 XAML 작성기를 통해 모든 XAML 소비자에 게 제공 됩니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  **인수:** 단일 생성자 인수를 일치 하는 속성의 이름을 지정 하는 문자열입니다.  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute>지정 된 이름의 속성이 생성 정보를 제공 하 고 기본이 아닌 생성자 구문을 사용 하 여 개체를 초기화할 수 있습니다를 지정 합니다. 이 정보는 주로 XAML serialization용입니다. 자세한 내용은 <xref:System.Windows.Markup.ConstructorArgumentAttribute>을 참조하십시오.  
+ <xref:System.Windows.Markup.ConstructorArgumentAttribute>지정 된 이름의 속성이 생성 정보를 제공 하 고 기본이 아닌 생성자 구문을 사용 하 여 개체를 초기화할 수 있습니다를 지정 합니다. 이 정보는 주로 XAML serialization용입니다. 자세한 내용은 <xref:System.Windows.Markup.ConstructorArgumentAttribute>을 참조하세요.  
   
 ### <a name="contentpropertyattribute"></a>ContentPropertyAttribute  
  **참조 설명서:**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
@@ -160,7 +161,7 @@ ms.lasthandoff: 11/21/2017
   
  **인수:** 부울 값입니다. 특성의 의도 한 목적을 위해 사용 하는 경우이 항상로 지정할 수 `true`합니다.  
   
- 이 형식이 XAML 개체 그래프를 만드는 동안 하향식으로 빌드되는지 여부를 나타냅니다. 고급 개념은 밀접 한 관련이 있을 프로그래밍 모델의 정의입니다. 자세한 내용은 <xref:System.Windows.Markup.UsableDuringInitializationAttribute>을 참조하십시오.  
+ 이 형식이 XAML 개체 그래프를 만드는 동안 하향식으로 빌드되는지 여부를 나타냅니다. 고급 개념은 밀접 한 관련이 있을 프로그래밍 모델의 정의입니다. 자세한 내용은 <xref:System.Windows.Markup.UsableDuringInitializationAttribute>을 참조하세요.  
   
 ### <a name="valueserializerattribute"></a>ValueSerializerAttribute  
  **참조 설명서:**  <xref:System.Windows.Markup.ValueSerializerAttribute>  

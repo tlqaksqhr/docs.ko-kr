@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c092113f670c5799d98dcb13c9c713bbd1a47fb6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 73664df9c072189f11d451da46bc3019c8593ec9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-and-race-conditions"></a>보안 및 경합 상태
 중요 한 보안 허점 경합 상태에 의해 악용 가능성이 시킵니다. 여러 가지 방법으로이 발생할 수 있습니다. 다음에 나오는 하위 개발자 피해 야 하는 주요 문제 중 일부를 간략하게 설명 합니다.  

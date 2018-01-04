@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-ms.openlocfilehash: 9750e37647a3e382c7a8308c3ffede15729012d8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: adb2b0b3680c97582dfefda41c43735f9f09e6c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="functions"></a>함수
 
@@ -32,7 +32,7 @@ let [inline] function-name parameter-list [ : return-type ] = function-body
 let rec function-name parameter-list = recursive-function-body
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 *function-name*은 함수를 나타내는 식별자입니다. *parameter-list*는 공백으로 구분되는 연속 매개 변수로 구성됩니다. 매개 변수 섹션에 설명된 대로 각 매개 변수에 대해 명시적 형식을 지정할 수 있습니다. 특정 인수 형식을 지정하지 않으면 컴파일러가 함수 본문에서 형식을 유추하려고 합니다. *함수 본문*은 식으로 구성됩니다. 함수 본문을 구성하는 식은 일반적으로 여러 식으로 구성된 복합 식이며, 복합 식은 반환 값이 되는 최종 식으로 수렴됩니다. *반환 형식*은 그 뒤에 콜론이 나오며 선택 사항입니다. 반환 값의 형식을 명시적으로 지정하지 않으면 컴파일러가 최종 식에서 반환 형식을 결정합니다.
 
 간단한 함수 정의는 다음과 같습니다.
@@ -188,11 +188,11 @@ let result2 = Compose2 2
 // Pipelining
 // Pipeline operator
 // ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
-let Pipeline1 x = addOne <| timesTwo x
+let Pipeline2 x = addOne x |> timesTwo
 
 // Backward pipeline operator
 // ( <| ) : ('T -> 'U) -> 'T -> 'U
-let Pipeline2 x = addOne x |> timesTwo
+let Pipeline1 x = addOne <| timesTwo x
 
 // Result is 5
 let result3 = Pipeline1 2

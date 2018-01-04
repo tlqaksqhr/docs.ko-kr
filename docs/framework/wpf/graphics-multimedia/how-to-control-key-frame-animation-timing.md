@@ -19,18 +19,19 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bc3566cf25282749a09c5f2372cd1c81e3ce881
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 252da422ffb34e5865a29112e349e18d0f40327f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>방법: 키 프레임 애니메이션 타이밍 제어
 이 예제에는 내 키 프레임 애니메이션 키 프레임의 타이밍을 제어 하는 방법을 보여 줍니다. 마찬가지로 다른 애니메이션 키 프레임 애니메이션에는 한 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성입니다. 애니메이션의 지속 시간을 지정 하는 것 외에도 각 키 프레임에 할당 되어 해당 기간의 어떤 부분을 지정 해야 합니다. 지정 시간을 할당 하는 <xref:System.Windows.Media.Animation.KeyTime> 애니메이션의 각 키 프레임에 대 한 합니다.  
   
  <xref:System.Windows.Media.Animation.KeyTime> 때 키 프레임이 끝나는 시간 (키 프레임이 재생 되는 시간의 길이 지정 하지 않습니다)을 지정 하는 각 키 프레임에 대 한 합니다. 지정할 수 있습니다는 <xref:System.Windows.Media.Animation.KeyTime> 로 <xref:System.TimeSpan> 또는 백분율 값의 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 또는 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 특수 값입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 한 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 사각형을 화면에서 애니메이션을 적용할 합니다. 키 프레임의 키 시간으로 설정 되어 <xref:System.TimeSpan> 값입니다.  
   
  [!code-csharp[keyframes_snip#KeyTimesTimeSpanExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/KeyTimesExample.cs#keytimestimespanexample)]

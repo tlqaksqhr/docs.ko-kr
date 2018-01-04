@@ -17,18 +17,19 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06a515b266b2787c24e95b461075d9059e4311dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92037be2280eaa248951ff9bad82b7a1581a4fd9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>방법: XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩
 에 바인딩하는 방법을 보여 주는이 예제 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 사용 하 여 데이터는 <xref:System.Windows.Data.XmlDataProvider>합니다.  
   
  와 <xref:System.Windows.Data.XmlDataProvider>, 내부 응용 프로그램에서 데이터 바인딩을 통해 액세스할 수 있는 데이터의 모든 트리 수 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 노드. 즉, 한 <xref:System.Windows.Data.XmlDataProvider> 의 모든 트리를 사용 하는 편리한 방법을 제공 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 바인딩 소스로 노드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 데이터 변수로 직접 포함 되어는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *데이터 아일랜드* 내에서 <xref:System.Windows.FrameworkElement.Resources%2A> 섹션. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터 고립 영역은 `<x:XData>` 태그로 래핑되어야 하며, 항상 단일 루트 노드가 있어야 합니다. 이 예에서는 *인벤토리*입니다.  
   
 > [!NOTE]

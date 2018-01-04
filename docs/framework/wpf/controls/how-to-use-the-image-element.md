@@ -20,16 +20,17 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75177c8aae8964ebdc50ae94b2f3a6372991e2c6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 26beb6b0f5c446bbddd293e76ae79d062aa0fe48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-image-element"></a>방법: Image 요소 사용
 사용 하 여 응용 프로그램에서 이미지를 포함 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Image> 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 200픽셀 너비의 이미지를 렌더링하는 방법을 보여 줍니다. 이 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 예제에서는 특성 구문과 속성 태그 구문을 모두 사용하여 이미지를 정의합니다. 특성 구문 및 속성 구문에 대한 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요. A <xref:System.Windows.Media.Imaging.BitmapImage> 이미지의 원본 데이터를 정의 하는 데 사용 되 고 속성 태그 구문 예제에 대 한 명시적으로 정의 됩니다. 또한는 <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> 의 <xref:System.Windows.Media.Imaging.BitmapImage> 동일한 너비로 설정 된 <xref:System.Windows.FrameworkElement.Width%2A> 의 <xref:System.Windows.Controls.Image>합니다. 이렇게 하는 이유는 이미지 렌더링에 사용되는 메모리 양을 최소화하기 위해서입니다.  
   
 > [!NOTE]
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/22/2017
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 코드를 사용하여 200픽셀 너비의 이미지를 렌더링하는 방법을 보여 줍니다.  
   
 > [!NOTE]

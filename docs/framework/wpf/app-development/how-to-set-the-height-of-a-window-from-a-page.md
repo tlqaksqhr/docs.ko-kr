@@ -17,16 +17,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29de47eceae4b8927f2701ca0bbda2ecc7243919
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 002e75542c1dbbe1cfaa122898801dd5babf054f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a>방법: 페이지에서 창의 높이 설정
 창의 높이 설정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Page>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  A <xref:System.Windows.Controls.Page> 설정 하 여 해당 호스트 창의 높이 설정할 수 <xref:System.Windows.Controls.Page.WindowHeight%2A>합니다. 이 속성을 사용 하면는 <xref:System.Windows.Controls.Page> 에 없는 다음 호스팅하고 있는 창의 형식을 정확 하 게 알고 있습니다.  
   
 > [!NOTE]

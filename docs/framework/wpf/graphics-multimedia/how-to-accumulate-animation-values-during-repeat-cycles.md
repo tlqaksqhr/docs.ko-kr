@@ -16,16 +16,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4abe19f4548ed41eb19ae4dffb37b832a7df71d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 96a91856cdfcf1ca7ae87e8e571306170feecb7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>방법: 주기가 반복되는 동안 애니메이션 값 누적
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> 반복 주기에 대해 애니메이션 값을 누적 하는 속성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하 여는 <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> 반복 주기에 대해 애니메이션의 기본 값을 누적 하는 속성입니다. 예를 들어, 애니메이션 9 번 반복을 설정 하는 경우 (<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> = "9 x")와 10 %15부터 애니메이션 효과를 주는 속성을 설정 (= 10에서 = 15), 속성에 애니메이션 효과 10에서 15 15 두 번째 주기 동안 20-첫 번째 주기 동안 25 세 번째 주기 등과 하는 동안 20%에서 합니다. 따라서 각 애니메이션 주기가 기준 값으로 이전 애니메이션 주기에서 끝 값을 사용합니다.  
   
  사용할 수는 `IsCumulative` 가장 기본적인 애니메이션 및 대부분의 키 프레임 애니메이션 속성입니다. 자세한 내용은 참조 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) 및 [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)합니다.  

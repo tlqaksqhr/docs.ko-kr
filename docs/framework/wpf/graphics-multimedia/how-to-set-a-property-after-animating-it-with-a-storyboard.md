@@ -17,21 +17,22 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 357a9bb6c1a01b00e7f9bcfc17267797f20366b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>방법: Storyboard를 사용하여 애니메이션 효과를 적용한 후 속성 설정
 일부 경우 애니메이션이 적용 된 후에 속성의 값을 변경할 수 나타날 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션의 색을 적용 하는 데 사용 되는 <xref:System.Windows.Media.SolidColorBrush>합니다. 스토리 보드는 단추를 클릭할 때 트리거됩니다. <xref:System.Windows.Media.Animation.Timeline.Completed> 는 프로그램이 알림을 받을 수 있도록 이벤트를 처리 때는 <xref:System.Windows.Media.Animation.ColorAnimation> 완료 합니다.  
   
  [!code-xaml[timingbehaviors_snip#GraphicsMMButton1Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton1declaration)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이후에 <xref:System.Windows.Media.Animation.ColorAnimation> 완료 되 면 브러시의 색을 파란색을 변경 하려면 프로그램 시도 합니다.  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton1Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton1handler)]

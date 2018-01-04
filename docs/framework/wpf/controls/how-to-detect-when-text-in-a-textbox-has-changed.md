@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92fc8995ab75cc25bac3bb21b1646052822c3721
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2ef1da879026d8cbefd6ef1baeb6c315e0ea1c02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>방법: TextBox에서 텍스트가 변경되는 시점 감지
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> 메서드를 실행 하는 이벤트 때마다의 텍스트는 <xref:System.Windows.Controls.TextBox> 컨트롤이 변경 합니다.  
@@ -35,12 +36,12 @@ ms.lasthandoff: 11/21/2017
   
  **참고:** 이 이벤트가 발생할 때의 <xref:System.Windows.Controls.TextBox> 컨트롤이 만들어지고 처음 텍스트가 채워집니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  에 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 정의 하는 프로그램 <xref:System.Windows.Controls.TextBox> 을 제어는 <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> 이벤트 처리기 메서드 이름과 일치 하는 값을 가진 특성입니다.  
   
  [!code-xaml[TextBox_MiscCode#_TextChangedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  에 대 한 코드 숨김 클래스에는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 를 포함 하는 <xref:System.Windows.Controls.TextBox> 변경 내용을 모니터링 하려면 컨트롤 삽입 메서드를 호출할 때마다는 <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> 이벤트 발생 합니다.  이 메서드에 의해 실행 되는 것을 일치 하는 서명이 있어야 합니다.는 <xref:System.Windows.Controls.TextChangedEventHandler> 위임 합니다.  
   
  [!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]

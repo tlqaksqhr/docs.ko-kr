@@ -20,16 +20,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d1b81949d6d91420c828564debd311af47dfdfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b035f5922722a05759ff1e13514cc760a57d668
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-web-service"></a>방법: 웹 서비스 바인딩
 이 예제에는 웹 서비스 메서드 호출에서 반환 된 개체에 바인딩하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하 여이 예제는 [MSDN/TechNet 게시 시스템 (MTPS) 콘텐츠 서비스](http://go.microsoft.com/fwlink/?LinkId=95677) 지정된 된 문서에서 지 원하는 언어의 목록을 검색할 수 있습니다.  
   
  웹 서비스를 호출 하기 전에 그에 대 한 참조 해야 합니다. 사용 하 여 MTPS 서비스에 대 한 웹 참조를 만들려면 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], 다음 단계를 수행 합니다.  

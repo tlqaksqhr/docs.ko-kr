@@ -17,16 +17,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9577f9f08fa1d19aa214bda5a1aef997c2cfa2a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 30ee897efd01712bf4313da87e1050c5a16e4523
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>방법: 키 프레임을 사용하여 크기 변경에 애니메이션 효과 주기
 이 예제에서는 키 프레임을 사용하여 크기 변경에 애니메이션 효과를 주는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> 애니메이션 효과를 줄 클래스는 <xref:System.Windows.Media.ArcSegment.Size%2A> 속성의는 <xref:System.Windows.Media.ArcSegment>합니다. 이 애니메이션은 다음과 같은 방식으로 세 가지 키 프레임을 사용합니다.  
   
 1.  인스턴스를 사용 하 여 애니메이션의 첫 번째 0.5 초 동안는 <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> 클래스를 점차적으로 호의 크기를 늘립니다. 같은 키 프레임 선형 <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> 값 사이의 부드러운 선형 전환을 만듭니다.  

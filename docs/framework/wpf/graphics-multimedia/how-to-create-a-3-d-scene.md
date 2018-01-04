@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd84a95bf793b3da9970b605b2f02509e3938ab0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f52642a1764a7db01d4ca330f3bf25bdca10fa06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-3-d-scene"></a>방법: 3차원 장면 만들기
 이 예제에는 회전 된 플랫 용지의 처럼 보이는 3 차원 개체를 만드는 방법을 보여 줍니다. A <xref:System.Windows.Controls.Viewport3D> 다음 구성 요소와 함께이 간단한 3 차원 장면의 만드는 데 사용 됩니다.  
@@ -36,12 +37,12 @@ ms.lasthandoff: 10/22/2017
   
 -   사용 하 여 개체에서 효율적인 광원 만들어집니다 <xref:System.Windows.Media.Media3D.DirectionalLight>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  아래 코드에는 XAML에서 3 차원 장면의 만드는 방법을 보여 줍니다.  
   
  [!code-xaml[3DGallery_snip#Basic3DShapeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/Basic3DShapeExample.xaml#basic3dshapeexamplewholepage)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  아래 코드에는 프로시저 코드에서 동일한 3d 장면을 만드는 방법을 보여 줍니다.  
   
  [!code-csharp[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexamplewholepage)]

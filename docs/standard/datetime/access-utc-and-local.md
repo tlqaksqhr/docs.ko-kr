@@ -23,11 +23,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4538407bc66ad7974a9a4998c8e5d7ccb38fab4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 600dbb98264c4750db1ffb98b757ad191eaf4fe5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>방법: 미리 정의 된 UTC와 현지 표준 시간대 개체 액세스
 
@@ -45,7 +48,7 @@ ms.lasthandoff: 10/18/2017
 
 2. 할당 하는 대신는 <xref:System.TimeZoneInfo> 개체 변수에 속성에서 반환 되는 개체에 계속 액세스할 통해 현지 표준 시간대는 <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 속성입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 코드에서는 <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> 및 <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> 속성을 사용하여 시간을 미국 및 캐나다 동부 표준 시간대에서 변환하고 해당 표준 시간대 이름을 콘솔에 표시합니다.
 

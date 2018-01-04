@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ab9baca1103adf8de96204bdb1b3353a5456b94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae10153f31b79a220b84cae7a6525eca0ce0bd9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>방법: 사용자 지정 팝업 위치 지정
 에 대 한 사용자 지정 위치를 지정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Primitives.Popup> 제어는 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성이로 설정 된 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  때는 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성이 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>, <xref:System.Windows.Controls.Primitives.Popup> 호출의 정의 된 인스턴스는 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 위임 합니다. 대상 영역의 왼쪽된 위 모퉁이의 왼쪽된 위 모퉁이 기준으로 가능한 지점 집합을 반환 하는이 대리자는 <xref:System.Windows.Controls.Primitives.Popup>합니다. <xref:System.Windows.Controls.Primitives.Popup> 최상의 가시성을 제공 하는 지점에 배치 됩니다.  
   
  위치를 정의 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Controls.Primitives.Popup> 설정 하 여는 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성을 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>합니다. 만들고 할당 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 배치 하기 위해 대리자는 <xref:System.Windows.Controls.Primitives.Popup>합니다.  두 콜백 대리자 반환 <xref:System.Windows.Controls.Primitives.CustomPopupPlacement> 개체입니다.  경우는 <xref:System.Windows.Controls.Primitives.Popup> 화면 가장자리에 첫 번째 위치에 의해 숨겨져는 <xref:System.Windows.Controls.Primitives.Popup> 두 번째 위치에 배치 됩니다.  

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa22b011b895a20cefdcc5a7c9e6c1cd0531923
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bfd955b4153c7a2bc54d8b52ff1801541c3a7559
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>방법: Windows Forms에서 단일 이벤트 처리기에 여러 이벤트 연결
 응용 프로그램 디자인에서 있습니다 경우가 여러 이벤트에 대 한 단일 이벤트 처리기를 사용 하거나 동일한 절차를 수행 하는 여러 개의 이벤트가 포함 합니다. 예를 들어 것이 강력한 시간을 절약할에 메뉴 명령을 폼의 단추를 구현 하는 경우 동일한 기능으로 같은 이벤트를 발생 시킵니다. 사용 하거나 속성 창에 C#의 이벤트 보기를 사용 하 여이 작업을 수행할 수는 `Handles` 키워드 및 **클래스 이름** 및 **메서드 이름** Visual Basic 코드 편집기에서 드롭다운 상자입니다.  

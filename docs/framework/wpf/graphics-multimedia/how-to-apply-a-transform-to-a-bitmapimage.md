@@ -19,16 +19,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51be377005913464d94ca30521f787144e051b4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53141f2d411d544da738625200e09680d467ed6f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-a-transform-to-a-bitmapimage"></a>방법: BitmapImage에 변환 적용
 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Transform> 에 <xref:System.Windows.Media.Imaging.BitmapImage>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[ImagingSnippetGallery_procedural_snip#TransformedBitmapInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/TransformedBitmapExample.cs#transformedbitmapinline1)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#TransformedBitmapInline1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/TransformedBitmapExample.vb#transformedbitmapinline1)]  
   

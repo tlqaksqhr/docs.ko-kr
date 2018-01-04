@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f47f56e28064c852e5d8f721bdb3a0f73172c12a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="planning-for-application-performance"></a>응용 프로그램 성능 계획
 성공적인 성능 목표를 달성 성능 전략 개발 정도에 따라 다릅니다. 계획은 모든 제품 개발의 첫 번째 단계입니다. 이 항목에서는 성능이 현저히 전략을 개발 하기 위한 매우 간단한 몇 가지 규칙을 설명 합니다.  
@@ -49,6 +50,6 @@ ms.lasthandoff: 11/21/2017
  [2차원 그래픽 및 이미징](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [개체 동작](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
  [응용 프로그램 리소스](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [텍스트](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [기타 성능 권장 사항](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

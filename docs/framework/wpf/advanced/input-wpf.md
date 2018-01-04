@@ -17,16 +17,17 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-wpf"></a>입력 (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]여러 유형의 입력에 대 한 지원이 포함 됩니다. 이 입력에는 텍스트, 터치, 마우스, 명령, 포커스, 터치, 끌어서 놓기, 및 디지털 잉크 포함 됩니다. 이 섹션에서는 WPF의 입력에 관련 된 항목을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [입력 개요](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [명령 개요](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [포커스 개요](../../../../docs/framework/wpf/advanced/focus-overview.md)  

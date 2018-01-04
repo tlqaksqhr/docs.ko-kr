@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-management-overview"></a>응용 프로그램 관리 개요
 모든 응용 프로그램은 응용 프로그램 구현 및 관리에 적용하는 일반적인 기능 집합을 공유하는 경향이 있습니다. 이 항목에서는에서 기능의 개요는 <xref:System.Windows.Application> 만들고 응용 프로그램을 관리 하기 위한 클래스입니다.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |응용 프로그램 범위 속성 가져오기 및 설정|<xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType> 속성을 사용합니다.|  
 |응용 프로그램 상태 가져오기 및 저장|참조 [속성 유지 및 복원 응용 프로그램 범위 응용 프로그램 세션 간에](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)합니다.|  
 |리소스 파일, 콘텐츠 파일 및 원본 사이트 파일을 포함하여 비코드 데이터 파일 관리|참조 [WPF 응용 프로그램 리소스, 내용 및 데이터 파일](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)합니다.|  
-|독립 실행형 응용 프로그램의 창 관리|참조 [WPF Windows 개요](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)합니다.|  
+|독립 실행형 응용 프로그램의 창 관리|[WPF 창 개요](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)를 참조하세요.|  
 |탐색 추적 및 관리|참조 [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)합니다.|  
   
 <a name="The_Application_Definition"></a>   
@@ -330,7 +331,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- 종료 코드의 값을 감지 하 고, 처리 하 여 변경할 수 있습니다는 <xref:System.Windows.Application.Exit> 이벤트입니다. <xref:System.Windows.Application.Exit> 이벤트 처리기가 전달는 <xref:System.Windows.ExitEventArgs> 사용 하 여 종료 코드에 대 한 액세스를 제공 하는 <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> 속성입니다. 자세한 내용은 <xref:System.Windows.Application.Exit>을 참조하십시오.  
+ 종료 코드의 값을 감지 하 고, 처리 하 여 변경할 수 있습니다는 <xref:System.Windows.Application.Exit> 이벤트입니다. <xref:System.Windows.Application.Exit> 이벤트 처리기가 전달는 <xref:System.Windows.ExitEventArgs> 사용 하 여 종료 코드에 대 한 액세스를 제공 하는 <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> 속성입니다. 자세한 내용은 <xref:System.Windows.Application.Exit>을 참조하세요.  
   
 > [!NOTE]
 >  두 독립 실행형 응용 프로그램에서 종료 코드를 설정할 수 있습니다 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다. 에 대 한 종료 코드 값을 무시 하는 반면 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다.  

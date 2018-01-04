@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d55dc1330c21e7eb9f7cfd7f554234dccd6f274
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c642e6491722e9bfe35337d066e3870f5a70f38c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>방법: 자동 레이아웃을 사용하여 단추 만들기
 이 예제는 자동 레이아웃 방식을 사용하여 지역화 가능한 응용 프로그램에 단추를 만드는 방법을 설명합니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 두 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 예제에서는 단추; 영어 텍스트 한와 스페인어 텍스트를 인스턴스화하는 응용 프로그램을 만듭니다. 코드는 텍스트를 제외하고 동일합니다. 단추는 텍스트에 맞게 조정됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
  [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  

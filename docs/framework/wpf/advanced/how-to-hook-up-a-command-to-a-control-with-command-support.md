@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61148e1249f7bfcf319c3be4a30c706c5c4dc344
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8b190868b8718442966a22d7be14d976ec47f53b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>방법: 명령을 지원하는 컨트롤에 명령 후크
 후크 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Input.RoutedCommand> 에 <xref:System.Windows.Controls.Control> 는 기본적으로 지 원하는 명령에 대 한 합니다.  여러 소스에 명령을 후크하는 전체 샘플은 [Create a Custom RoutedCommand Sample](http://go.microsoft.com/fwlink/?LinkID=159980)(사용자 지정 RoutedCommand 만들기 샘플)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 응용 프로그램 프로그래머가 자주 접하게 되는 공용 명령의 라이브러리를 제공합니다.  클래스는 명령 라이브러리를 구성 하는: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, 및 <xref:System.Windows.Documents.EditingCommands>합니다.  
   
  정적 <xref:System.Windows.Input.RoutedCommand> 이러한 클래스를 구성 하는 개체 명령 논리를 제공 하지 않습니다.  사용 하 여 명령과와 연결 된 명령에 대 한 논리는 <xref:System.Windows.Input.CommandBinding>합니다.  일부 컨트롤에는 일부 명령에 대한 CommandBindings가 기본 제공되어 있습니다.  이 메커니즘을 사용하면 명령의 의미 체계를 동일하게 유지하면서 실제 구현을 변경할 수 있습니다.  A <xref:System.Windows.Controls.TextBox>, 예를 들어 처리는 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 다르게 명령을 컨트롤 이미지를 지원 하도록 설계 되어 있지만 항목을 붙여 의미의 기본 개념은 동일 하 게 유지 합니다.  명령 논리는 명령에 의해 제공될 수 없으나 대신 컨트롤 또는 응용 프로그램에 의해 제공되어야 합니다.  

@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7c3aacd0f08641c01200f0b1791a78413a306590
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 03d9eac41e693568da2d057bc1394c426df4c736
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="protected-members"></a>보호된 멤버
 단독으로 보호 된 멤버는 확장성을 제공 하지 않습니다 하지만 더 강력한 서브클래싱을 통해 확장성을 내릴 수 있습니다. 기본 공용 인터페이스를 불필요 하 게 하므로 복잡해 집니다 하지 않고 고급 사용자 지정 옵션을 표시 데 사용할 수 있습니다.  

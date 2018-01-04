@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61048a8db67986c55e1a1b07d62d5142069dd63e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>방법: ContextMenuOpening 이벤트 처리
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 는 기존 상황에 맞는 메뉴 표시 하기 전에를 설정 하 여 표시 되는 메뉴를 표시 하지 않는 조정 하거나 응용 프로그램에서 이벤트를 처리할 수 있습니다는 <xref:System.Windows.RoutedEventArgs.Handled%2A> 속성을 `true` 이벤트 데이터에서입니다. 설정에 대 한 일반적인 이유 <xref:System.Windows.RoutedEventArgs.Handled%2A> 를 `true` 새으로 완전 하 게 메뉴를 바꾸려면 데이터는 이벤트 <xref:System.Windows.Controls.ContextMenu> 개체, 경우에 따라 작업을 취소 하 고 새 열기를 시작 해야 합니다. 에 대 한 처리기를 작성 하는 경우는 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 이벤트를 알고 있어야 간의 타이밍 문제는 <xref:System.Windows.Controls.ContextMenu> 컨트롤과 열고 일반적 컨트롤에 대 한 상황에 맞는 메뉴의 위치를 지정 하는 일을 담당 하는 서비스입니다. 이 항목 열기 시나리오는 다양 한 상황에 맞는 메뉴에 대 한 코드 기술 중 일부를 보여 및 타이밍 문제에 제공 된 위치 하는 경우를 보여 줍니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
 -   완전히 기존 상황에 맞는 메뉴를 억제 하 고 상황에 맞는 메뉴 표시 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ## <a name="adjusting-the-menu-items-before-display"></a>먼저 호출한 다음 표시 메뉴 항목을 조정합니다.  
  기존 메뉴 항목을 조정은 매우 단순 하 고 아마도 가장 일반적인 시나리오입니다. 추가 하거나 응용 프로그램의 현재 상태 정보 또는 상황에 맞는 메뉴 요청 된 개체의 속성으로 사용할 수 있는 특정 상태 정보에 대 한 응답에서 상황에 맞는 메뉴 옵션 빼려는 하기 위해 이렇게 할 수 있습니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d18563c44381a276d15996dff3f9552c46833b4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bbd8bd7e36b7b773837b839e77ec88a8e7c8f0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>방법: 자동 레이아웃에 Grid 사용
 이 예제에서는 지역화할 수 있는 응용 프로그램을 만드는 자동 레이아웃 방법에서 그리드를 사용하는 방법을 설명합니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 표를 사용 하 여 일부 단추 및 텍스트 위치에 대 한 예입니다. 셀의 너비와 높이가로 설정 된 알림 `Auto`; 따라서 단추 이미지와 함께 포함 된 셀을 이미지에 맞게 조정 합니다. 때문에 <xref:System.Windows.Controls.Grid> 요소 내용에 맞게 지역화할 수 있는 응용 프로그램 디자인에 자동 레이아웃의 접근 하는 경우에 유용할 수 있습니다 조정할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 그리드를 사용하는 방법을 보여 줍니다.  
   
  [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  

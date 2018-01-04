@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ecb47efdd69730350cf98e1c7b1e49150ad324d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f4b42fd71dacb0071013067dc3c14add96c8aca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-coordinates"></a>Windows Forms 좌표
 Windows Form에 대 한 좌표계 장치 좌표를 기반으로 하며 Windows Forms에 그리기 하는 경우 측정값의 기본 단위는 장치 단위 (일반적으로 픽셀)입니다. X-좌표는 오른쪽으로, 위쪽에서 아래쪽 증가 y 좌표가 증가 화면의 점은 x 및 y 좌표 쌍에 의해 설명 합니다. 화면 출처의 위치는 화면 또는 클라이언트 좌표를 지정 하는 여부에 따라 달라 집니다.  

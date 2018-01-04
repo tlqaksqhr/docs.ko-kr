@@ -18,11 +18,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d93b60a4172f7acebb5c9ec533efdff9a61d959c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cb882dbdc8b394fe416b0e173129c745977566db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview"></a>TreeView
 <xref:System.Windows.Controls.TreeView> 컨트롤 계층 구조에서 축소 가능한 노드를 사용 하 여 정보를 표시 합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
  ![TreeView 설명](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [TreeView 개요](../../../../docs/framework/wpf/controls/treeview-overview.md)  
  [방법 항목](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
   

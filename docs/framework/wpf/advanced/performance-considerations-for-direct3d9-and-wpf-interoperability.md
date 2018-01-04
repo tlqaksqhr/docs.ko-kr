@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 886ef6c8c9df9d14b5c2a805da2e3948d5e55f69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8142125eae26b15f12652d28fdf0c34f19d49c4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항
 사용 하 여 Direct3D9 콘텐츠를 호스팅할 수는 <xref:System.Windows.Interop.D3DImage> 클래스입니다. Direct3D9 콘텐츠를 호스트 응용 프로그램의 성능 영향을 줄 수 있습니다. 이 항목에서는 Windows Presentation Foundation (WPF) 응용 프로그램에서 Direct3D9 콘텐츠를 호스트 하는 경우 성능을 최적화 하는 모범 사례를 설명 합니다. 이러한 최선의 방법을 사용 하는 방법이 <xref:System.Windows.Interop.D3DImage> 다중 모니터를 표시 하 고 Windows Vista, Windows XP를 사용 하는 모범 사례 및 합니다.  

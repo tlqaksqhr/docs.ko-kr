@@ -20,16 +20,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e87c5001a676bcda331d289c286cf6b3e87c136f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ba9566e9688984cc881a94e39b065fdadb4cc11
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-columns-and-rows-by-using-columndefinitionscollections-and-rowdefinitionscollections"></a>방법: ColumnDefinitionsCollections 및 RowDefinitionsCollections를 사용하여 열 및 행 조작
 메서드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ColumnDefinitionCollection> 및 <xref:System.Windows.Controls.RowDefinitionCollection> 추가, 지우기 또는 행 또는 열의 내용을 계산과 같은 동작을 수행 하는 클래스가 있습니다. 예를 들어, <xref:System.Windows.Controls.ColumnDefinitionCollection.Add%2A>, <xref:System.Windows.Controls.ColumnDefinitionCollection.Clear%2A>, 또는 <xref:System.Windows.Controls.ColumnDefinitionCollection.Count%2A> 에 포함 된 항목을 <xref:System.Windows.Controls.ColumnDefinition> 또는 <xref:System.Windows.Controls.RowDefinition>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 한 <xref:System.Windows.Controls.Grid> 인 요소는 <xref:System.Windows.FrameworkElement.Name%2A> 의 `grid1`합니다. <xref:System.Windows.Controls.Grid> 포함 한 <xref:System.Windows.Controls.StackPanel> 를 보유 하는 <xref:System.Windows.Controls.Button> 다른 수집 방법으로 제어 각 요소입니다. 클릭는 <xref:System.Windows.Controls.Button>, 코드 숨김 파일에서 메서드 호출을 활성화 합니다.  
   
  [!code-xaml[ColumnDefinitionsGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ColumnDefinitionsGrid/CSharp/Window1.xaml#1)]  

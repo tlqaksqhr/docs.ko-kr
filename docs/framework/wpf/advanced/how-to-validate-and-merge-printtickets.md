@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2c2929f37895f0dee5529a5bf90f84146585032
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5cf2091d50433bb936b3d4976d1c3eabea73edc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>방법: PrintTicket 유효성 검사 및 병합
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Schema](http://go.microsoft.com/fwlink/?LinkId=186397) 유연성이 있고 확장 가능 포함 <xref:System.Printing.PrintCapabilities> 및 <xref:System.Printing.PrintTicket> 요소입니다. 인쇄 장치의 기능을 전자 항목별로 정리 하 고 후자 지정이 장치가 문서, 개별 문서 또는 개별 페이지의 특정 시퀀스에 대해 이러한 기능을 어떻게 사용 해야 합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  이 문서에서는이 작업을 수행 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  아래의 간단한 예제에서 우리에 관심이 프린터 양면 인쇄를 지원할 수 있는지 여부 — 양면 인쇄 합니다. 주요 단계는 다음과 같습니다.  
   
 1.  가져오기는 <xref:System.Printing.PrintCapabilities> 개체는 <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> 메서드.  

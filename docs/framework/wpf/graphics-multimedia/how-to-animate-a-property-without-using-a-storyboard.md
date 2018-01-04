@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfc1de83c6c91e7a42c09b080b647aaf440e5a61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a1292dae3a6fc7e86387ecbe3bf2b1da6912cc0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>방법: Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기
 사용 하지 않고 속성에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard>합니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  속성에 로컬 애니메이션을 적용 하려면 사용 된 <xref:System.Windows.UIElement.BeginAnimation%2A> 메서드. 이 메서드는 두 개의 매개 변수:는 <xref:System.Windows.DependencyProperty> 애니메이션을 효과를 줄 속성 및 해당 속성에 적용할 애니메이션을 지정 하는 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  너비 및 배경 색 애니메이션 효과를 주는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Controls.Button>합니다.  
   
  [!code-cpp[animateproperty#11](../../../../samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]

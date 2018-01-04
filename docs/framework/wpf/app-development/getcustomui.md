@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f3c101ad13df9b99a2d872bac8783baed8b4b9a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 88c2873a5929e25335b0c6ef64f8121e31177ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getcustomui"></a>GetCustomUI
 구현 된 경우에 호스트에서 사용자 지정 진행률과 오류 메시지를 가져오려는 PresentationHost.exe에서 호출 됩니다.  

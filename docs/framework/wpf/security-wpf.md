@@ -24,11 +24,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b7abab8747272fcf23611539c29ab476c5bed48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a>개발 하는 경우 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램 보안 모델은 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 사용 권한 집합), Windows Installer (.msi) XCopy를 사용 하 여 배포 인지 여부 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 응용 프로그램 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 하 여 합니다. 자세한 내용은 참조 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  

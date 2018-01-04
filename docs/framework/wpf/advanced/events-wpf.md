@@ -18,16 +18,17 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda7f9497751356c4c650e7fb672f7721ec3dd09
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cf622066bbfca8260670ca139f4acfe9affca07e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-wpf"></a>이벤트(WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램의 요소 트리에 있는 다양한 리스너의 처리기를 호출할 수 있는 라우트된 이벤트를 소개합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [연결된 이벤트 개요](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
  [개체 수명 이벤트](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/22/2017
  [WPF 아키텍처](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
   [WPF의 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
   [기본 요소](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [요소 트리 및 serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [요소 트리 및 Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
   [속성](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
   [입력](../../../../docs/framework/wpf/advanced/input-wpf.md)  
   [리소스](../../../../docs/framework/wpf/advanced/resources-wpf.md)  

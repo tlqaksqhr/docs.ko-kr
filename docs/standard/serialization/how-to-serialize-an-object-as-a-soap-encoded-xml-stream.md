@@ -19,11 +19,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34d0529c302f08287f2714e056eb6a536f3b28ec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 863c79b36cd51b2e1e747169fd15a2358a1e6fee
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>방법: 개체를 SOAP 인코딩된 XML 스트림으로 Serialize
   
@@ -63,7 +66,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  `Serialize` 또는 `Deserialize` 메서드를 호출합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```vb  
 ' Serializes a class named Group as a SOAP message.  

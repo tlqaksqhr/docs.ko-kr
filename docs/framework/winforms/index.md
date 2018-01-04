@@ -17,16 +17,17 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2799bd6652c9f575be8758f47c9770d3fde93580
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms"></a>Windows Forms
 폼은 응용 프로그램의 기본 단위이므로 폼의 기능과 디자인을 고려해야 합니다. 폼은 기본적으로 개발자가 컨트롤을 통해 향상시켜 사용자 인터페이스를 만들고 코드를 통해 향상시켜 데이터를 조작하는 빈 슬레이트입니다. 이러한 목적을 위해 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]는 코드 작성을 돕는 IDE(통합 개발 환경) 및 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]로 작성된 다양한 컨트롤 집합을 제공합니다. 이러한 컨트롤의 기능을 코드로 보완하면 필요한 솔루션을 쉽고 빠르게 개발할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms 시작](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  Windows Forms의 기능을 활용하여 데이터를 표시하고, 사용자 입력을 처리하며, 쉽고 보다 강력한 보안으로 응용 프로그램을 배포하는 방법에 대한 항목의 링크를 제공합니다.  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7616a418b9f2f6b175b925e4385322c42546e9bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>방법: CompositionTarget을 사용하여 프레임별 간격에 렌더링
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진은 프레임 기반 애니메이션을 만들기 위한 다양한 기능을 제공합니다. 그러나 프레임당 렌더링을 좀 더 미세하게 제어해야 하는 응용 프로그램 시나리오도 있습니다. <xref:System.Windows.Media.CompositionTarget> 프레임별 콜백에 따라 사용자 지정 애니메이션을 만드는 기능을 제공 하는 개체입니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  사용 하 여 전체 코드 예제에 대 한 <xref:System.Windows.Media.CompositionTarget>, 참조 [CompositionTarget 샘플을 사용 하 여](http://go.microsoft.com/fwlink/?LinkID=160045)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  <xref:System.Windows.Media.CompositionTarget.Rendering> 이벤트가 발생 하는 동안는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 렌더링 프로세스입니다. 다음 예에서는 등록 하는 방법을 보여 줍니다.는 <xref:System.EventHandler> 정적 위임 <xref:System.Windows.Media.CompositionTarget.Rendering> 메서드를 <xref:System.Windows.Media.CompositionTarget>합니다.  
   
  [!code-csharp[CompositionTargetSample#CompositionTarget1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget1)]

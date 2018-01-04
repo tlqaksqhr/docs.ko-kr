@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42f208d10b1c111f98af3c803148590466baddf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-drawn-controls"></a>사용자가 그린 컨트롤
 .NET Framework 사용자 지정 컨트롤을 쉽게 개발 하는 기능을 제공 합니다. 코드에서 함께 바인딩된 표준 컨트롤 집합을 사용자 정의 컨트롤을 만들거나 위로 기초부터 사용자 고유의 컨트롤을 디자인할 수 있습니다. 기존 컨트롤에서 상속 되는 컨트롤을 만들고의 고유 기능에 추가 상속을 사용할 수 있습니다. 어떤 방법을 사용 하는.NET Framework를 그릴 만드는 모든 컨트롤에 대 한 사용자 지정 그래픽 인터페이스를 제공 합니다.  

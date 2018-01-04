@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f77afc8a0f2e6c110f4dc037c12ecc8b06908e60
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2318a42040388adfe327f9d0075754daa1aa22a6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>방법: 컴퓨터에 있는 표준 시간대를 열거 합니다.
 
@@ -54,7 +57,7 @@ ms.lasthandoff: 10/18/2017
 
 예제에서는 Windows 응용 프로그램에 대 한 그림을 제공 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 예제에서는 목록 상자에서 시스템에 정의 된 표준 시간대를 표시 하는 Windows 응용 프로그램을 시작 합니다. 이 예제에서는 다음의 값을 포함 하는 대화 상자를 표시는 <xref:System.TimeZoneInfo.DisplayName%2A> 사용자가 선택한 표준 시간대 개체의 속성입니다.
 

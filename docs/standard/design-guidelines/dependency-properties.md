@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21e2026e7ce0f2dcf1ffc9a328b1bb9630cd8fbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b9e60f3e941dd1d7d89675f4483ae940b039ba10
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dependency-properties"></a>종속성 속성
 종속성 속성 DP ()은 예를 들어 유형 변수 (필드)를 저장 하는 대신 속성 저장소의 해당 값을 저장 하는 일반 속성입니다.  
@@ -107,4 +110,4 @@ public class Grid {
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
- [일반적인 디자인 패턴](../../../docs/standard/design-guidelines/common-design-patterns.md)
+ [일반 디자인 패턴](../../../docs/standard/design-guidelines/common-design-patterns.md)

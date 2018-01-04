@@ -17,16 +17,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bc4dc0721ad0fb756a5449d0af65fd2aae22381
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37f4084b5874c49ed1de8d215d53767ab5a21c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styles-and-templates"></a>스타일 및 템플릿
 Windows Presentation Foundation (WPF) 스타일 및 템플릿 참조는 응용 프로그램, 문서 또는 사용자 인터페이스 (UI) 디자이너 시각적으로 뛰어난 응용 프로그램을 만들 수 있는 기능 (스타일, 템플릿, 트리거 및 스토리 보드)의 도구 모음 해당 제품에 대 한 특정 모양의 표준화 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
   [방법: ControlTemplate에서 생성된 요소 찾기](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
   

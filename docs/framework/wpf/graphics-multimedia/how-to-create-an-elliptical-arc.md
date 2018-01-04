@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eeb93cefd2e55e80f27922feab788698653f405e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e11f3e0035c00bbc280b658c0931d57c37524f93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-elliptical-arc"></a>방법: 타원형 원호 만들기
 이 예에서는 타원형 호를 그리는 방법을 보여 줍니다. 타원형 호를 만들려면 사용는 <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, 및 <xref:System.Windows.Media.ArcSegment> 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서 타원형 호가 그려집니다 (10100)에서 (200100). 원호의 <xref:System.Windows.Media.ArcSegment.Size%2A> 100 여 50 장치 독립적 픽셀의는 <xref:System.Windows.Media.ArcSegment.RotationAngle%2A> 45도 <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> 설정인 `true`, 및 <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> 의 <xref:System.Windows.Media.SweepDirection.Counterclockwise>합니다.  
   
  [xaml]  

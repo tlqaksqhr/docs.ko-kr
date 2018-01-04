@@ -16,11 +16,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 791b1b134717859a0e90914bf118fcf1dc3e1e4f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6f2bc9021ca376b7b27f74efed6866a907b480ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 제품을 한 언어로만 제공하면 잠재적 고객 기반이 전 세계 65억 인구의 극히 일부로만 제한됩니다. 전 세계를 대상으로 하는 응용 프로그램을 만들려는 경우 가장 뛰어나고 경제적으로 고객에게 다가갈 수 있는 방법 중 하나는 바로 제품의 비용 효율적인 지역화입니다.  
@@ -181,7 +182,7 @@ ms.lasthandoff: 10/22/2017
   
 |리소스 키|지역화 범주|값|  
 |-|-|-| 
-|Button_1:System.Windows.Controls.Button.$Content|단추|확인을 클릭합니다|  
+|Button_1:System.Windows.Controls.Button.$Content|단추|확인|  
 |Button_2:System.Windows.Controls.Button.$Content|단추|취소|  
 |Button_3:System.Windows.Controls.Button.$Content|단추|찾아보기...|  
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||  
@@ -193,7 +194,7 @@ ms.lasthandoff: 10/22/2017
   
 |리소스 키|지역화 범주|값|  
 |-|-|-| 
-|Button_1:System.Windows.Controls.Button.$Content|단추|확인을 클릭합니다|  
+|Button_1:System.Windows.Controls.Button.$Content|단추|확인|  
 |Button_2:System.Windows.Controls.Button.$Content|단추|Abbrechen|  
 |Button_3:System.Windows.Controls.Button.$Content|단추|Durchsuchen…|  
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||  
@@ -266,9 +267,9 @@ ms.lasthandoff: 10/22/2017
   
  이 주석은 TextBlock_1의 콘텐츠 및 LocBaml 도구의 경우 연결 됩니다 (참조 [응용 프로그램 지역화](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)), 출력.csv 파일의 TextBlock_1 행의 6 번째 열에서 볼 수 있습니다.  
   
-|리소스 키|범주|가독성|수정 가능성|설명|값|  
+|리소스 키|범주|가독성|수정 가능성|주석|값|  
 |-|-|-|-|-|-|  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|TRUE|TRUE|이 문자는 장식 규칙으로 사용됩니다.|&#124;|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|true|true|이 문자는 장식 규칙으로 사용됩니다.|&#124;|  
   
  다음 구문을 사용하여 주석을 요소의 속성 또는 콘텐츠에 배치할 수 있습니다.  
   
@@ -276,7 +277,7 @@ ms.lasthandoff: 10/22/2017
   
  **지역화 특성**  
   
- 개발자 또는 지역화 관리자는 지역화 담당자가 읽고 수정할 수 있는 컨트롤을 필요로 할 수 있습니다. 예를 들어 회사 이름이나 법적 고지문은 번역하지 않아야 할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 지역화 도구가 요소를 잠그거나, 숨기거나, 정렬할 때 사용할 수 있는 요소의 콘텐츠나 속성의 가독성, 수정 가능 여부 및 범주를 설정할 수 있는 특성을 제공합니다. 자세한 내용은 <xref:System.Windows.Localization.Attributes%2A>을 참조하십시오. 이 샘플의 목적상 LocBaml 도구는 이러한 특성의 값만 출력합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 모두 이러한 특성에 대해 기본값을 사용하지만 이를 재정의할 수 있습니다. 다음 예제에 대 한 기본 지역화 특성을 재정의 하는 예를 들어 `TextBlock_1` 지역화 담당자에 게 콘텐츠를 읽을 수 있지만 수정할 수 없도록 가져오거나 설정 합니다.  
+ 개발자 또는 지역화 관리자는 지역화 담당자가 읽고 수정할 수 있는 컨트롤을 필요로 할 수 있습니다. 예를 들어 회사 이름이나 법적 고지문은 번역하지 않아야 할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 지역화 도구가 요소를 잠그거나, 숨기거나, 정렬할 때 사용할 수 있는 요소의 콘텐츠나 속성의 가독성, 수정 가능 여부 및 범주를 설정할 수 있는 특성을 제공합니다. 자세한 내용은 <xref:System.Windows.Localization.Attributes%2A>을 참조하세요. 이 샘플의 목적상 LocBaml 도구는 이러한 특성의 값만 출력합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 모두 이러한 특성에 대해 기본값을 사용하지만 이를 재정의할 수 있습니다. 다음 예제에 대 한 기본 지역화 특성을 재정의 하는 예를 들어 `TextBlock_1` 지역화 담당자에 게 콘텐츠를 읽을 수 있지만 수정할 수 없도록 가져오거나 설정 합니다.  
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]  
   

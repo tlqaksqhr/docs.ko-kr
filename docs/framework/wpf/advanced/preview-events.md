@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04bdf32ea329ff25fd62255b4512d8a9d5703b8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preview-events"></a>미리 보기 이벤트
 이벤트를 터널링이 라고도 하는 미리 보기 이벤트는 라우트된 이벤트에서 이벤트를 발생 하 고 이벤트 데이터의 원본으로 보고 하는 요소에 대해 응용 프로그램 루트 경로 방향 전송 되는 위치입니다. 일부 이벤트 시나리오를 지원 하거나 미리 보기 이벤트; 요구 이 항목에서는 미리 보기 이벤트 있는, 응용 프로그램 또는 구성 요소 처리 방법을, 상황 및 사용자 지정 구성 요소 또는 클래스에서 미리 보기 이벤트를 만들 수 있는 적절 한 경우에 설명 합니다.  

@@ -19,16 +19,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e90f7f69aebf48bbc27321d3808468a2df49f793
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b27f8544a44a252eb1a1afd6e096f303360c14e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-a-command"></a>방법: 명령 사용
 다음 예제에서 명령을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  이 예제에서는 연결 하는 방법을 보여 줍니다는 <xref:System.Windows.Input.RoutedCommand> 에 <xref:System.Windows.Controls.Button>, 만들는 <xref:System.Windows.Input.CommandBinding>, 구현 하는 이벤트 처리기를 만들는 <xref:System.Windows.Input.RoutedCommand>합니다.  명령에 대 한 자세한 내용은 참조는 [명령 실행 개요](../../../../docs/framework/wpf/advanced/commanding-overview.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  코드의 첫 번째 섹션을 만듭니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)],으로 구성 되는 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.StackPanel>, 만듭니다는 <xref:System.Windows.Input.CommandBinding> 명령 처리기와 연결 하는 <xref:System.Windows.Input.RoutedCommand>합니다.  
   
  <xref:System.Windows.Input.ICommandSource.Command%2A> 의 속성은 <xref:System.Windows.Controls.Button> 연결 된는 <xref:System.Windows.Input.ApplicationCommands.Close%2A> 명령입니다.  

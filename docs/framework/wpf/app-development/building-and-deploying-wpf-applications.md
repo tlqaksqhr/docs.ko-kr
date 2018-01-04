@@ -18,11 +18,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de9740d74b87de7b81da10b458a7e935a427af98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6873de24e33876b7caaf9014ca7e9d6bc80375c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-and-deploying-wpf-applications"></a>WPF 응용 프로그램 빌드 및 배포
 빌드 및 배포 모델에서는 다음을 포함 하는 빌드하고 로컬 및 원격으로 응용 프로그램을 배포 하는 기능을 제공 합니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/22/2017
   
 -   ClickOnce 배포:.NET 게시 및 배포 시스템.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [WPF 응용 프로그램 빌드](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
  [WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
  [방법 항목](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  

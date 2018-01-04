@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48a28db24731f9aa248bb149c9f19a57cf76bbf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1eba92d764e73360b1cd58957ea5318c5b263b8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms에서 사용자 입력 유효성 검사
 사용자가 응용 프로그램에 데이터를 입력 하면 응용 프로그램에 사용 하기 전에 데이터가 유효한 지 확인 하는 것이 좋습니다. 특정 텍스트 필드 길이가 0 인 전화 번호 또는 다른 종류의 올바른 형식의 데이터 필드를 지정 하거나, 하거나 문자열에 데이터베이스의 보안을 손상 하기 위해 사용할 수 있는 안전 하지 않은 문자가 포함 되지 않도록 필요할 수 있습니다. Windows Forms 응용 프로그램에서 입력의 유효성을 검사 하는 여러 가지 방법을 제공 합니다.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>기본 암시적 유효성 검사 동작에 대 한 Windows Forms 컨트롤  
  다른 Windows Forms 컨트롤에 대 한 기본값은 다를 자신의 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 속성입니다. 다음 표에서 가장 일반적인 컨트롤과 해당 기본값을 보여 줍니다.  
   
-|컨트롤|기본 유효성 검사 동작|  
+|Control|기본 유효성 검사 동작|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  

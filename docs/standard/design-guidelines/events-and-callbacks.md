@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 217e9eae3540e0a20afd0888d24803285d6352b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 39dd4e31e84e455b72ce53bd8abffd650ce77dfc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="events-and-callbacks"></a>이벤트 및 콜백
 콜백을 대리자를 통해 사용자 코드로 콜백 하는 프레임 워크를 사용할 수 있는 확장성 지점입니다. 이러한 대리자는 대개 메서드의 매개 변수를 통해 프레임 워크에 전달 됩니다.  

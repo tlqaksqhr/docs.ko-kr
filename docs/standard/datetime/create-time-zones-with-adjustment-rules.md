@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 75e1867e810090bf35a0dfc7def5785747f94382
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eddc1d400f5f63cb2790fc4c660b70ebfdd0efc1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>방법: 조정 규칙에 표준 시간대 만들기
 
@@ -69,7 +72,7 @@ ms.lasthandoff: 10/18/2017
 
 7. 호출 된 <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> 새 표준 시간대를 인스턴스화하는 방법입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 다양 한 현재 1918에서 시간 간격에 대 한 조정 규칙을 포함 하는 United States에 대 한 중앙 표준 시간대를 정의 합니다.
 

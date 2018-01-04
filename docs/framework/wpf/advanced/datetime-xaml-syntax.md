@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55e261018e6c7b9fea9ad449c5e92a131df40807
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3010d3123e78a5e292c5ac78ef4894962fb8f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML 구문
 와 같은 일부 컨트롤 <xref:System.Windows.Controls.Calendar> 및 <xref:System.Windows.Controls.DatePicker>를 사용 하는 속성이 <xref:System.DateTime> 유형입니다. 일반적으로 런타임에 코드 숨김으로 이러한 컨트롤에 대해 초기 날짜 또는 시간을 지정하지만 XAML로 초기 날짜 또는 시간을 지정할 수 있습니다. WPF XAML 파서에 처리의 구문 분석 <xref:System.DateTime> 기본 제공 XAML 텍스트 구문을 사용 하 여 값입니다. 이 항목의 세부 사항을 설명는 <xref:System.DateTime> XAML 텍스트 구문입니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
   
  지정 하는 경우는 <xref:System.DateTime> XAML에서 교대로 사용할 수 있습니다는 형식 문자열 중 하나입니다.  
   
- 이 항목에 구체적으로 표시되지 않은 형식 및 형식 문자열을 사용할 수도 있습니다. 에 대 한 XAML 기술적으로 <xref:System.DateTime> 지정 되 고 WPF XAML 파서에서 구문 분석 된 값에 대 한 내부 호출을 사용 하 여 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>에 허용 되는 모든 문자열을 사용할 수 있습니다 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> XAML에 대 한 입력 합니다. 자세한 내용은 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>을 참조하십시오.  
+ 이 항목에 구체적으로 표시되지 않은 형식 및 형식 문자열을 사용할 수도 있습니다. 에 대 한 XAML 기술적으로 <xref:System.DateTime> 지정 되 고 WPF XAML 파서에서 구문 분석 된 값에 대 한 내부 호출을 사용 하 여 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>에 허용 되는 모든 문자열을 사용할 수 있습니다 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> XAML에 대 한 입력 합니다. 자세한 내용은 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>을 참조하세요.  
   
 > [!IMPORTANT]
 >  날짜/시간 XAML 구문을 사용 하 여 항상 `en-us` 로 <xref:System.Globalization.CultureInfo> 해당 기본 변환에 대 한 합니다. 이 영향을 받지 않는 <xref:System.Windows.FrameworkElement.Language%2A> 값 또는 `xml:lang` 해당 컨텍스트 없이 XAML 수준 특성 형식 변환 동작 때문에 xaml에서 값입니다. 일과 월이 표시되는 순서와 같은 문화적 차이로 인해 여기에 표시된 형식 문자열을 보간하지 마세요. 여기에 표시된 형식 문자열은 다른 문화권 설정에 관계없이 XAML을 구문 분석할 때 사용되는 정확한 형식 문자열입니다.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/18/2017
   
  `3/1/2010`  
   
- 자세한 내용은 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>을 참조하십시오.  
+ 자세한 내용은 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>을 참조하세요.  
   
 ### <a name="sortable-datetime-pattern-s"></a>정렬 가능한 DateTime 패턴("s")  
  다음 테이블에 정렬 가능한 나와 <xref:System.DateTime> XAML에서 패턴:  

@@ -17,16 +17,17 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdcda02a61f0114bfbbe5d5c411cb397cddcf683
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9944ff214a9dfe12b21e005c4e1998c249bf72b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>방법: 바인딩 방향 지정
 이 예제에서는 바인딩으로 바인딩 대상(대상) 속성만 업데이트되는지, 바인딩 소스(소스) 속성만 업데이트되는지 아니면 대상 속성과 소스 속성이 모두 업데이트되는지 여부를 지정하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 된 <xref:System.Windows.Data.Binding.Mode%2A> 바인딩의 방향을 지정 하는 속성입니다. 다음 열거 목록에서는 바인딩 업데이트에 사용할 수 있는 옵션을 보여 줍니다.  
   
 -   <xref:System.Windows.Data.BindingMode.TwoWay>대상 속성 또는 원본 속성이 변경 될 때마다 대상 속성 또는 속성을 업데이트 합니다.  

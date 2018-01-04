@@ -19,11 +19,12 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4fecc763f1bc6e701869a2b3f46d44f80cc28ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 14a1848a27443e7fc5ae7a9ced754cf6d691ae19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup"></a>Popup
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤 현재 응용 프로그램 창 위에 배치 되는 별도 창에서 콘텐츠를 표시 합니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
   
  ![팝업 설명](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [팝업 개요](../../../../docs/framework/wpf/controls/popup-overview.md)  
  [팝업 배치 동작](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
  [방법 항목](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  

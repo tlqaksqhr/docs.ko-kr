@@ -20,16 +20,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 393d1692526551b1eb9aa16f48d3c78c3cd6692f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 397ec40e2d8a0694e208296593687e9268546fc7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>방법: 인쇄 큐의 하위 집합 열거
 프린터의 회사 전체 집합을 관리 하는 정보 기술 (IT) 전문가가 직면 하는 일반적인 상황 특정 한 특성이 있는 프린터의 목록을 생성 하는 것입니다. 이 기능을 제공는 <xref:System.Printing.PrintServer.GetPrintQueues%2A> 의 메서드는 <xref:System.Printing.PrintServer> 개체 및 <xref:System.Printing.EnumeratedPrintQueueTypes> 열거형입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  아래 예제에서 코드는 먼저 나열 하려는 인쇄 대기열의 특성을 지정 하는 플래그의 배열을 만듭니다. 이 예제에서는 인쇄 큐 인쇄 서버에 로컬로 설치 되 고 공유를 찾고 있습니다. <xref:System.Printing.EnumeratedPrintQueueTypes> 열거형은 다양 한 비즈니스 가능성이 제공 합니다.  
   
  코드는 다음 만듭니다는 <xref:System.Printing.LocalPrintServer> 개체에서 파생 된 클래스 <xref:System.Printing.PrintServer>합니다. 로컬 인쇄 서버는 응용 프로그램이 실행 되는 컴퓨터.  

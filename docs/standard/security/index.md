@@ -18,16 +18,19 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7f8600da624ff75ce2dbd5c417f886d6b3b1ac37
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-in-the-net-framework"></a>.NET Framework의 보안
 공용 언어 런타임 및.NET Framework는 개발자가 쉽게 안전한 코드를 작성할 수 있게 해주고 시스템 관리자가 보호된 리소스에 액세스할 수 있도록 코드에 부여되는 권한을 사용자 지정할 수 있게 해주는 많은 유용한 클래스 및 서비스를 제공합니다. 또한 런타임 및 .NET Framework는 암호화 및 역할 기반 보안을 쉽게 사용할 수 있게 해주는 유용한 클래스 및 서비스를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [보안 변경 내용](../../../docs/framework/security/security-changes.md)  
  .NET Framework 보안 시스템과 관련된 중요 변경 내용을 설명합니다.  
   

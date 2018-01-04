@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daa4caac0046293e8b86a773bfffd46cf30e835b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d3b8f1ca1dbf7ba5452acffc62fdf0b655c9c12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>방법: 자식 Timeline을 사용하여 애니메이션 단순화
 자식을 사용 하 여 애니메이션을 단순화 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Animation.ParallelTimeline> 개체입니다. A <xref:System.Windows.Media.Animation.Storyboard> 는 유형의 <xref:System.Windows.Media.Animation.Timeline> 포함 된 타임 라인에 대 한 대상 정보를 제공 하는 합니다. 사용 하 여 한 <xref:System.Windows.Media.Animation.Storyboard> 개체 및 속성 정보를 포함 하 여 정보를 대상으로 하는 시간 표시 막대 수 있도록 합니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  **성능 참고 사항:** 중첩할 수 있지만 <xref:System.Windows.Media.Animation.Storyboard> 서로 timeline <xref:System.Windows.Media.Animation.ParallelTimeline>훨씬 더 적은 오버 헤드를 필요 하기 때문에 중첩에 적합 합니다. (의 <xref:System.Windows.Media.Animation.Storyboard> 클래스에서 상속 된 <xref:System.Windows.Media.Animation.ParallelTimeline> 클래스입니다.)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>참고 항목  

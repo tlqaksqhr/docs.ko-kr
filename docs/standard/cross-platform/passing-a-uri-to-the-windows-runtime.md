@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4ef77fb9e196abf046e0d4648a49b5d4d3fad47e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 78ba02fa227bd5c10337da0ef8b65ceab476c1ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>Windows 런타임에 URI 전달
 Windows 런타임 메서드는 절대 URI만 허용합니다. 상대 URI를 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 메서드에 전달하면 <xref:System.ArgumentException> 예외가 throw됩니다. 이유는 다음과 같습니다: 사용 하는 경우는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] .NET Framework 코드에서는 [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376) 로 표시 된 클래스 <xref:System.Uri?displayProperty=nameWithType> Intellisense에 있습니다. <xref:System.Uri?displayProperty=nameWithType> 클래스에는 상대 Uri를 허용 하지만 [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376) 클래스는 그렇지 않습니다. 이는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소에 노출하는 메서드의 경우에도 마찬가지입니다. 구성 요소가 URI를 사용하는 메서드를 노출하면 코드의 서명에 <xref:System.Uri?displayProperty=nameWithType>가 포함됩니다. 그러나 구성 요소의 사용자에 게는 시그니처에 [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)합니다. 구성 요소에 전달된 URI는 절대 URI여야 합니다.  

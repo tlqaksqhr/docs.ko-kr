@@ -24,11 +24,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: faff58f146aed7b309674157a5990cbce43dfb1f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ab1d7223299697a4be10ba5b35bc90b120603d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>방법: IIS 5.0 및 IIS 6.0을 구성하여 WPF 응용 프로그램 배포
 적절한 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 형식으로 구성된 경우 대부분의 웹 서버에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 배포할 수 있습니다. 기본적으로 [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)]는 이러한 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 형식으로 구성되지만 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]과 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]은 아닙니다.  

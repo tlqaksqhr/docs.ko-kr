@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f23a99418d585f43348cd155bc65a3c3e73742b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ea1f2edf4677e3a04e6dd007dcf0fef9137180fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>방법: 백그라운드 스레드를 사용하여 파일 검색
 <xref:System.ComponentModel.BackgroundWorker> 대체 하 고 기능을 추가 하는 구성 요소는 <xref:System.Threading> 네임 스페이스 있지만 <xref:System.Threading> 선택 하는 경우 네임 스페이스의 이전 버전과 호환성 및 이후 사용 유지 됩니다. 자세한 내용은 참조 [BackgroundWorker 구성 요소 개요](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)합니다.  

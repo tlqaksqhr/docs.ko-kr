@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15e24e0350071fabd32342402abdf497937ee90d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤과 연결 된 클래스 도구 모음, 상태 표시줄 및 메뉴에 사용자 인터페이스 요소를 결합 하기 위한 공통 프레임 워크를 제공 합니다. <xref:System.Windows.Forms.ToolStrip>컨트롤에 가로 또는 세로 공간을 공유할 수 있는 도구 모음에 내부 활성화 및 편집, 사용자 지정 레이아웃 및 래프팅 (rafting)을 포함 하는 풍부한 디자인 타임 환경을 제공 합니다.  
@@ -55,7 +56,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤과 연결 된 클�
   
 ### <a name="important-toolstrip-members"></a>중요 한 ToolStrip 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|부모 컨테이너의 가장자리를 가져오거나 설정 합니다.는 <xref:System.Windows.Forms.ToolStrip> 에 도킹 합니다.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|<xref:System.Windows.Forms.ToolStrip> 클래스를 통해 끌어서 놓기와 항목 다시 정렬을 전용으로 처리할지를 나타내는 값을 가져오거나 설정합니다.|  

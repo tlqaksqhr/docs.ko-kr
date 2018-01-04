@@ -17,16 +17,17 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4288c2d9847edb38cec4d79e73ea713d3ab031f3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 50820c87948fa9e1d81126a00b1b989e01242303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grid-how-to-topics"></a>Grid 방법 항목
 이 섹션의 항목 사용 하 여 요소를 배치 하는 방법에 설명 된 <xref:System.Windows.Controls.Grid> 요소입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Grid를 사용하여 표준 UI 대화 상자 빌드](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
  [복잡한 모눈 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
  [Grid 요소 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  

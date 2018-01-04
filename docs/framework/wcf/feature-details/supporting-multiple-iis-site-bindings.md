@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf2dbccd81b9c2e7b4ec78863d3de0227baedf92
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8dcd6a5e6204b1a629c1ee1e2ddfb9b263fa8054
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>여러 IIS 사이트 바인딩 지원
 IIS(인터넷 정보 서비스) 7.0에서 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 호스팅하는 경우 동일한 사이트에 대해 동일한 프로토콜을 사용하는 여러 기본 주소를 제공할 수 있습니다. 이렇게 하면 동일한 서비스에서 여러 다른 URI에 응답할 수 있습니다. 이는 http://www.contoso.com 및 http://contoso.com에서 수신 대기하는 서비스를 호스팅하거나 내부 사용자에 대한 기본 주소와 외부 사용자에 대한 별도의 기본 주소가 있는 서비스를 만들려는 경우에 유용합니다. 유용합니다(예: http://internal.contoso.com 및 http://www.contoso.com).  

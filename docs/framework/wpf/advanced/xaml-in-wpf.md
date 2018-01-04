@@ -17,16 +17,17 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74f5a19e891bf0b86f91fcbe4f6b59b4d6acc8bb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3735bfc7b759f48a9dc580210f3a6f1c89782d30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-in-wpf"></a>WPF의 XAML
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]선언적 응용 프로그램에 대 한 태그 언어 프로그래밍 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]aXAML 프로세서 구현에서 구현 하 고 XAML 언어 지원을 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식을 구현 되어 필요한 형식 XAML 표현에 대 한 지원을 제공할 수 있습니다. 일반적으로 대부분의를 만들 수 있습니다 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 태그에 응용 프로그램 UI입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [XAML 구문 정보](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
  [WPF의 코드 숨김 및 XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/22/2017
 ## <a name="related-sections"></a>관련 단원  
  [WPF 아키텍처](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
   [기본 요소](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [요소 트리 및 serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [요소 트리 및 Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
   [속성](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
   [이벤트](../../../../docs/framework/wpf/advanced/events-wpf.md)  
   [입력](../../../../docs/framework/wpf/advanced/input-wpf.md)  

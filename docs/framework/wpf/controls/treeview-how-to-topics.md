@@ -17,16 +17,17 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3619f26e8c447340e005c0d44be9018f2746f10
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4f1f042894f96cafc36944be7b18d5777e5f3c10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-how-to-topics"></a>TreeView 방법 항목
 이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.TreeView> 컨트롤 계층 구조에 정보를 표시 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [간단하거나 복잡한 TreeView 만들기](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
   [SelectedValue, SelectedValuePath 및 SelectedItem 사용](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
   [깊이를 확인할 수 없는 데이터에 TreeView 바인딩](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  

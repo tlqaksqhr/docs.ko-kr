@@ -19,11 +19,14 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db4f2ae40d25795b0e5f75ac3612f45834043dfa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: efb133d972427a9619581d0670268cba9fbd3ee6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>방법: 포함된 리소스에서 표준 시간대 복원
 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 
 4. 호출 하 여 표준 시간대 데이터를 deserialize는 <xref:System.TimeZoneInfo.FromSerializedString%2A> 메서드.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 deserialize는 <xref:System.TimeZoneInfo> 포함된 된.NET XML 리소스 파일에 저장 된 개체입니다.
 

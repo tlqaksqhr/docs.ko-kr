@@ -17,16 +17,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5a1b8cdc0544bfba3f708db40e8b9c593b45b35
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5f8133ffa7be9cb4e0600fc2681402d5e0f7471c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-return-a-dialog-box-result"></a>방법: 대화 상자 결과 반환 합니다.
 호출 하 여 열려 있는 창에 대 한 대화 상자 결과 검색 하는 방법을 보여 주는이 예제 <xref:System.Windows.Window.ShowDialog%2A>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  대화 상자를 닫기 전에 해당 <xref:System.Windows.Window.DialogResult%2A> 속성으로 <xref:System.Nullable%601> <xref:System.Boolean> 사용자 대화 상자를 닫은 방법을 나타내는 합니다. 이 값이 반환 하 여 <xref:System.Windows.Window.ShowDialog%2A> 클라이언트 코드를 확인 하 여 대화 상자를 닫은 방법을 고 따라서 결과 처리 하는 방법입니다.  
   
 > [!NOTE]

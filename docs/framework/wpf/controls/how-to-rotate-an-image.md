@@ -19,16 +19,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8b30b09aeb39123776ba5b0c27ae4ac3b062631
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 565f0fa2dd81237fae11a3d872238faff09f3d23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-an-image"></a>방법: 이미지 회전
 이미지를 사용 하 여 90도 회전 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> 속성은 <xref:System.Windows.Media.Imaging.BitmapImage>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-xaml[ImageElementExample_snip#TransformedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
   
  [!code-csharp[ImageElementExample_snip#TransformedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]

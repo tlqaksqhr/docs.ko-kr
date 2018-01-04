@@ -18,16 +18,17 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2c61c4fd5651b8915971f67addeb162aca50108
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 051f37b0a7098cad5ac43766877cd973ca86e5b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-wpf-applications"></a>WPF 응용 프로그램 호스팅
 WPF XAML 브라우저 응용 프로그램 (Xbap)는 웹 서버에 배포 하 고 브라우저에서 시작할 수 있는 리치 클라이언트 응용 프로그램. WPF 호스트 (PresentationHost.exe) 셸과 XBAP 및 XAML 파일에 대 한 MIME 처리기도 등록 됩니다. 따라서 XBAP 시작 될 때 WPF 호스트를 시작 하려면 Internet Explorer 알고 있습니다. Firefox 사용자 Firefox 호스트 Xbap 에서도를 사용할 수 있는 Firefox 추가 기능을 설치할 수 있습니다. XBAP은 WPF에서 제공 되는 호스팅 Api 기본 브라우저를 사용 하 여 기타 키는 브라우저 또는 독립 실행형 응용 프로그램에서 호스팅할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [WPF XAML 브라우저 응용 프로그램 개요](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
    [WPF 호스트(PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
   [.NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  

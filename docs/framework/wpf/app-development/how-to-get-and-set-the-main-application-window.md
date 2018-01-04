@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d6bca158172fd3fc31526287c6d4a9928a8ea0c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9aa02b0d5ff4456cf5ef86fa0d4f8431fe3d846b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>방법: 주 응용 프로그램 창 가져오기 및 설정
 이 예제에는 주 응용 프로그램 창 가져오기 및 설정 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  첫 번째 <xref:System.Windows.Window> 내에서 인스턴스화됩니다는 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램 자동으로 설정 되어 <xref:System.Windows.Application> 주 응용 프로그램 창으로 합니다. 첫 번째 <xref:System.Windows.Window> 되도록 인스턴스화된는 가능성이 가장 높은 수의 시작으로 지정 된 창 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (참조 <xref:System.Windows.Application.StartupUri%2A>).  
   
  첫 번째 <xref:System.Windows.Window> 도 코드를 사용 하 여 인스턴스화할 수 없습니다. 한 가지 예는 다음과 같은 응용 프로그램 시작 하는 동안 창을 엽니다.  

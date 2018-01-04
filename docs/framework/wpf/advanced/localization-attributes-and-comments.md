@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a603c854d389076d0054a43ebeb26f19145fa8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 85584c17675167d374c595aa26288f550a033efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localization-attributes-and-comments"></a>지역화 특성 및 주석
 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 소스 코드 내의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석은 속성이며 개발자에 의해 제공되어 지역화에 대한 규칙과 힌트를 제공합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석에는 두 가지 정보 집합(지역화 가능성 특성 및 자유 형식 지역화 주석)이 포함됩니다. 지역화 가능성 특성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 API가 사용하여 지역화할 리소스를 나타냅니다. 자유 형식 주석은 응용 프로그램 작성자가 포함하려고 하는 정보입니다.  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
 |--------------|-------------|  
 |없음|대상 값에 정의된 범주가 없습니다.|  
 |상속|대상 값은 부모로부터 해당 범주를 상속합니다.|  
-|Ignore|대상 값은 지역화 프로세스에서 무시됩니다. Ignore는 현재 값에만 영향을 줍니다. 자식 노드에 영향을 주지는 않습니다.|  
+|무시|대상 값은 지역화 프로세스에서 무시됩니다. Ignore는 현재 값에만 영향을 줍니다. 자식 노드에 영향을 주지는 않습니다.|  
 |NeverLocalize|현재 값을 지역화할 수 없습니다. 이 범주는 요소의 자식에 의해 상속됩니다.|  
   
 <a name="Localization_Comments"></a>   

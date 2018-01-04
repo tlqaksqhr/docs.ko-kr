@@ -17,16 +17,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c276e9da3eaaf786038a117532848364b03e9b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45f2a141b09c52085c13803b8d338fdc9eebf135
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-method"></a>방법: 메서드 바인딩
 다음 예제를 사용 하 여 메서드를 바인딩하는 방법을 보여 줍니다 <xref:System.Windows.Data.ObjectDataProvider>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예에서 `TemperatureScale`는 `ConvertTemp` 메서드가 있는 클래스입니다. 이 메서드에서는 두 개의 매개 변수(`double` 중 하나와 `enum` 형식 `TempType)` 중 하나)를 사용하고 지정된 값을 한 온도 눈금에서 다른 눈금으로 변환합니다. 다음 예제에서는 <xref:System.Windows.Data.ObjectDataProvider> 인스턴스화하는 데 사용 되는 `TemperatureScale` 개체입니다. `ConvertTemp` 메서드는 지정된 두 매개 변수를 사용하여 호출합니다.  
   
  [!code-xaml[BindToMethod#WindowResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#windowresources)]  

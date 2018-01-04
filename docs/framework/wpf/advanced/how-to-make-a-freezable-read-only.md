@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c407a2fcccfbda29ba23f63ba6ae71302c734d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa6d3f7109e8258dff0a07556bc8572f6071c961
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>방법: Freezable을 읽기 전용으로 설정
 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Freezable> 호출 하 여 읽기 전용 해당 <xref:System.Windows.Freezable.Freeze%2A> 메서드.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  이러한 조건이 `false` 에 대 한 프로그램 <xref:System.Windows.Freezable> 개체 하지 않으려는 수정 성능을 향상 시키는 것을 고려 하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 고정 한 <xref:System.Windows.Media.SolidColorBrush>의 형식인 <xref:System.Windows.Freezable> 개체입니다.  
   
  [!code-csharp[freezablesample_procedural#FreezeExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#freezeexample1)]

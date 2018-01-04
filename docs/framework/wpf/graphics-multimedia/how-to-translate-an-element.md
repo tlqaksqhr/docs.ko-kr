@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 222aebe0ffe3d2bb1d84002a2ad94b0b92ede15b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2f9b8363f0c3b9e0a9653dfc9864727c9460f695
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-translate-an-element"></a>방법: 요소 변환
 이 예제에서는 변환 (이동) 하는 요소를 사용 하 여는 <xref:System.Windows.Media.TranslateTransform>합니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/22/2017
   
  다음 예제에서는 한 <xref:System.Windows.Media.TranslateTransform> 요소 50 픽셀을 오른쪽 테이블과 50 픽셀 아래로 이동 하려면.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-xaml[transformsSample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
  전체 샘플을 보려면 [2차원 변환 샘플](http://go.microsoft.com/fwlink/?LinkID=158252)을 참조하세요.  

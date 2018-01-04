@@ -19,14 +19,15 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7fab2d0f7dfe94857a3c6c5cb6e8414360d3078e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9129b9c2776f46a719f42b74131b2b37146e930c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-dockpanel"></a>방법: DockPanel 만들기
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 만들고의 인스턴스를 사용 하 여 <xref:System.Windows.Controls.DockPanel> 코드를 사용 하 여 합니다. 이 예제에서는 5 개를 만들어 공간 분할 하는 방법을 보여 줍니다. <xref:System.Windows.Shapes.Rectangle> 요소 (도킹)를 배치 및 해당 부모 내 <xref:System.Windows.Controls.DockPanel>합니다. 기본 설정을 유지 하는 경우 마지막 사각형은 나머지 모든 할당 되지 않은 공간을 채웁니다.  
   
  [!code-csharp[DockPanelCode#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DockPanelCode/CSharp/DockPanel_Code.cs#1)]

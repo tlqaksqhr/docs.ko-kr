@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b54a99ab88e4cfa0569b2095a0be3750c91f244
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2c84d70fb8c05dc295fc807c9a59085c47d0f455
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-overloading"></a>멤버 오버로드
 멤버 오버 로드을 같은 형식의 매개 변수 형식이 나 개수 에서만 차이가 있지만 이름이 같은 둘 이상의 멤버를 만드는 것을 의미 합니다. 예를 들어 다음 표에 `WriteLine` 메서드가 오버 로드 됩니다.  

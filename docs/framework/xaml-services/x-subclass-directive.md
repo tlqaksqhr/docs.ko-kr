@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d620b59208b9dc852abee3dd2e4d6c58b223d70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 지시문
 XAML 태그 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니다. 기반으로 하는 partial 클래스를 만드는 대신 `x:Class`, 제공 된 `x:Class` 중간 클래스로 생성 한 다음 제공 된 파생된 클래스는 기반으로 해야 하 고 `x:Class`합니다.  
@@ -43,9 +44,9 @@ XAML 태그 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니
 |||  
 |-|-|  
 |`namespace`|선택 사항입니다. 포함 된 CLR 네임 스페이스 지정 `classname`합니다. 경우 `namespace` 점 (.) 지정 된 `namespace` 및 `classname`합니다.|  
-|`classname`|필수 요소. 로드 된 XAML 및 해당 XAML에 대 한 코드 숨김을 연결 하는 partial 클래스의 CLR 이름을 지정 합니다. 설명 부분을 참조하세요.|  
+|`classname`|필수. 로드 된 XAML 및 해당 XAML에 대 한 코드 숨김을 연결 하는 partial 클래스의 CLR 이름을 지정 합니다. 설명 부분을 참조하세요.|  
 |`subclassNamespace`|선택 사항입니다. 다를 수 있습니다 `namespace` 각 네임 스페이스는 다른 확인할 수 있는 경우. 포함 된 CLR 네임 스페이스 지정 `subclassName`합니다. 경우 `subclassName` 점 (.) 지정 된 `subclassNamespace` 및 `subclassName`합니다.|  
-|`subclassName`|필수 요소. 하위 클래스의 CLR 이름을 지정합니다.|  
+|`subclassName`|필수. 하위 클래스의 CLR 이름을 지정합니다.|  
   
 ## <a name="dependencies"></a>종속성  
  [X:class 지시문](../../../docs/framework/xaml-services/x-class-directive.md) 동일한 개체에도 제공 해야 하며 해당 개체에는 XAML 프로덕션의 루트 요소 이어야 합니다.  

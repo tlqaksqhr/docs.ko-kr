@@ -17,16 +17,17 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 877367098baf6e50b18ecfba2e6b20cdbe29313d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8b3fca74adb89ba46d2be2a4cba83cc5458396c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel-how-to-topics"></a>Panel 방법 항목
 이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.Panel> 요소 및 관련 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 요소에는 LayoutTransform을 적용](http://msdn.microsoft.com/en-us/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [사용자 지정 패널 요소 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [Panel의 OnRender 메서드 재정의](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  

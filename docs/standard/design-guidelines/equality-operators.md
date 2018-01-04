@@ -19,11 +19,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 55c0505f5a06dfc87897fa59e9d6083cbd63c8ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5aa37d2ee6b3b18d9decbc98bd1c427168e8ab35
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="equality-operators"></a>같음 연산자
 이 섹션 같음 연산자를 오버 로드에 대해 설명 하 고 가리키는 `operator==` 및 `operator!=` 같음 연산자입니다.  

@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58ef8c008eea4c10228ebb10ceadb5806dfbc0f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e58e49ecc852b87d03d4112208354e608248984
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>방법: 이벤트가 발생할 때 요소에 변환 적용
 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ScaleTransform> 이벤트가 발생 합니다. 여기에 표시된 개념은 다른 유형의 변환을 적용할 때 사용하는 것과 같습니다. 변환의 사용 가능한 형식에 대 한 자세한 내용은 참조는 <xref:System.Windows.Media.Transform> 클래스 또는 [변환 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)합니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 예제에서는 적용는 <xref:System.Windows.Media.ScaleTransform> 에 <xref:System.Windows.UIElement.RenderTransform%2A> 단추의 속성입니다. 며 단추 위로 마우스를 이동할 때는 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 및 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 의 속성은 <xref:System.Windows.Media.ScaleTransform> 로 설정 `2`, 단추가 더 커집니다. 마우스 포인터를 단추 밖 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 및 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 로 설정 `1`,이 경우 원래 크기로 되돌리려면 단추입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-xaml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
   
  [!code-csharp[ButtonTransform#1cb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml.cs#1cb)]

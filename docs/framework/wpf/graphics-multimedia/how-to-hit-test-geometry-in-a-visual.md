@@ -20,16 +20,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab125fe4031b5408eb202f21ce0fdf4314781f1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a990a43853e375c1c97f88dc6792932ad64c8d37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>방법: 시각적 요소의 기하 도형 적중 테스트
 하나 이상의 요소로 구성 된 시각적 개체에서 적중 횟수 테스트를 수행 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Geometry> 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 검색 하는 방법을 보여 줍니다.는 <xref:System.Windows.Media.DrawingGroup> 에서 사용 하는 시각적 개체는 <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> 메서드. 적중 횟수 테스트에 있는 각 그리기의 렌더링 된 콘텐츠에 대해 수행한 후의 <xref:System.Windows.Media.DrawingGroup> 기 하 도형을 적중 되었음을 확인 하려면.  
   
 > [!NOTE]

@@ -16,11 +16,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4dc6a35a0ff8586b91ab7d74abc182fa6002f88
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.workload: dotnet
+ms.openlocfilehash: 8de8725bc48f69cdd18100d90a1bc610caa7ecfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>WPF 버전 4.5의 새로운 기능
 <a name="introduction"></a>이 항목에서는 새로운 기능과 향상 된 기능에 대 한 정보 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 버전 4.5입니다.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/11/2017
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>동기적 및 비동기적으로 데이터 유효성 검사  
- <xref:System.ComponentModel.INotifyDataErrorInfo> 인터페이스 사용자 지정 유효성 검사 규칙을 구현 하 고 유효성 검사 결과 비동기적으로 노출 하는 데이터 엔터티 클래스를 사용 합니다. 또한 이 인터페이스는 사용자 지정 오류 개체, 속성당 여러 오류, 속성 간 오류 및 엔터티 수준 오류도 지원합니다.  자세한 내용은 <xref:System.ComponentModel.INotifyDataErrorInfo>을 참조하십시오.  
+ <xref:System.ComponentModel.INotifyDataErrorInfo> 인터페이스 사용자 지정 유효성 검사 규칙을 구현 하 고 유효성 검사 결과 비동기적으로 노출 하는 데이터 엔터티 클래스를 사용 합니다. 또한 이 인터페이스는 사용자 지정 오류 개체, 속성당 여러 오류, 속성 간 오류 및 엔터티 수준 오류도 지원합니다.  자세한 내용은 <xref:System.ComponentModel.INotifyDataErrorInfo>을 참조하세요.  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>데이터 바인딩 원본을 자동으로 업데이트  

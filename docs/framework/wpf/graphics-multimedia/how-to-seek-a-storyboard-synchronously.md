@@ -19,21 +19,22 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45d71dde85ea65e45a36b4f938e1fd5135cc0e00
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cb5f0203c80cc94d17fcfcd40ff4d79bf8ecdc85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-seek-a-storyboard-synchronously"></a>방법: 동기적으로 Storyboard 검색
 사용 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A> 의 메서드는 <xref:System.Windows.Media.Animation.Storyboard> 동기적으로 검색 된 스토리 보드 애니메이션 위치 하도록 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 샘플에 대한 XAML 태그입니다.  
   
  [!code-xaml[SeekStoryboard_snip#SeekStoryboardSynchronouslyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SeekStoryboard_snip/CSharp/SeekStoryboardSynchronouslyExample.xaml#seekstoryboardsynchronouslyexamplewholepage)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 위의 XAML 코드와 함께 사용되는 코드입니다.  
   
  [!code-csharp[SeekStoryboard_snip#SeekStoryboardSynchronouslyCodeBehindExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SeekStoryboard_snip/CSharp/SeekStoryboardSynchronouslyExample.xaml.cs#seekstoryboardsynchronouslycodebehindexamplewholepage)]

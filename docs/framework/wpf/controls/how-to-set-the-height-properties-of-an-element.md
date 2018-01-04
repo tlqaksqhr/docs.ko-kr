@@ -19,14 +19,15 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ae66e60375cfbc45a4f1e8834b6420bc5c0b70a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fc06eea281f7761abfae74edf1547fc914b5655a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>방법: 요소의 높이 속성 설정
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 시각적으로 렌더링에 4 개의 높이 관련 속성 중에서 동작의 차이점을 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  
   
  <xref:System.Windows.FrameworkElement> 클래스 요소 높이 특성을 설명 하는 네 가지 속성을 표시 합니다. 우선적으로 적용 하는 값은 다음과 같이 결정이 작업을 수행 하 고 이러한 네 가지 속성 충돌할 수 있습니다:는 <xref:System.Windows.FrameworkElement.MinHeight%2A> 값 우선는 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 에 우선 하는 값은 <xref:System.Windows.FrameworkElement.Height%2A> 값입니다. 네 번째 속성인 <xref:System.Windows.FrameworkElement.ActualHeight%2A>, 읽기 전용 이므로 레이아웃 프로세스와 상호 작용에 의해 결정 된 실제 높이 보고 합니다.  

@@ -17,14 +17,15 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1013b7567fbd80d8d1ee55ac81e00c7b29635bac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c790ec775740bf53e3c68a1c8834df9e13339c38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink-how-to-topics"></a>디지털 잉크 방법 항목
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [사용자 지정 컨트롤에서 잉크 선택](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
   [잉크 데이터에 사용자 지정 데이터 추가](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
   [사용자 지정 컨트롤에서 잉크 지우기](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  

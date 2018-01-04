@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 91cd9a03ad1acf61681ecfad0edb061802c4362c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5098db5131c2e47c0b73efaac51477ef3b107761
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-standard-exception-types"></a>표준 예외 형식 사용
 이 섹션에서는 프레임 워크 및 사용 세부 정보에서 제공 하는 표준 예외를 설명 합니다. 목록 완전 한 목록이 되지는 않습니다. 다른 프레임 워크 예외 형식의 사용에 대 한.NET Framework 참조 설명서를 참조 하십시오.  
@@ -73,4 +76,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
- [예외에 대 한 디자인 지침](../../../docs/standard/design-guidelines/exceptions.md)
+ [예외 디자인 지침](../../../docs/standard/design-guidelines/exceptions.md)

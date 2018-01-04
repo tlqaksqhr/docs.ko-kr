@@ -17,16 +17,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80621a12a4ccd5008a0331af005629d45f60abdf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4325fd3eb2e3d7179ddb5270d073c7ba5f0f383f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox 컨트롤(Windows Forms)
 Windows Forms `RichTextBox` 표시, 입력, 및 서식이 지정 된 텍스트를 조작 하기 위한 컨트롤을 사용 합니다. `RichTextBox` 모든 작업을 수행 하는 컨트롤의 <xref:System.Windows.Forms.TextBox> 컨트롤 포함 하지만 또한 글꼴, 색 및 링크를 표시, 파일, 실행 취소 및 편집 작업을 다시 실행에서 텍스트 및 포함된 이미지를 로드 및 지정 된 문자를 찾습니다. `RichTextBox` 컨트롤은 일반적으로 텍스트를 조작 하 고 Microsoft Word와 같은 워드 프로세싱 응용 프로그램과 유사한 기능을 표시 하는 데 사용 됩니다. 와 같은 <xref:System.Windows.Forms.TextBox> 컨트롤을는 `RichTextBox` 컨트롤; 스크롤 막대를 표시할 수 있습니다 하지만 달리는 <xref:System.Windows.Forms.TextBox> 컨트롤을 기본적으로 가로 및 세로 스크롤 막대를 표시 하 고 추가적인 스크롤 막대 설정 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [RichTextBox 컨트롤 개요](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)  
  일반적인 개념을 소개는 `RichTextBox` 사용자 입력을 허용 하는 컨트롤을 표시 및 서식 지정 옵션으로 텍스트를 조작 합니다.  
   

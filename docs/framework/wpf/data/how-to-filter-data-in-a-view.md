@@ -20,16 +20,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de51aa83af71027ce86909a15f3ceee58fb47814
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17b7fc68319552a7b31d5eaf7826146de5c41aa5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-filter-data-in-a-view"></a>방법: 뷰에서 데이터 필터링
 이 예에서는 뷰에서 데이터를 필터링 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  필터를 만들려면 필터링 논리를 제공 하는 메서드를 정의 합니다. 메서드는 콜백으로 사용 되 고 형식의 매개 변수를 허용 `object`합니다. 모든을 반환 하는 다음 메서드는 `Order` 개체와 `filled` 속성을 필터링 하는 개체의 나머지 부분 "아니요"로 설정 합니다.  
   
  [!code-csharp[SortFilter#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#2)]
