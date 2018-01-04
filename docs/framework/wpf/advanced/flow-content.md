@@ -17,22 +17,23 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flow-content"></a><span data-ttu-id="dc2f9-102">유동 콘텐츠</span><span class="sxs-lookup"><span data-stu-id="dc2f9-102">Flow Content</span></span>
-<span data-ttu-id="dc2f9-103">호스팅에 대 한 적합 한 유동 콘텐츠를 만들기 위한 구성 요소를 제공 하는 유동 콘텐츠 요소는 <xref:System.Windows.Documents.FlowDocument>합니다.</span><span class="sxs-lookup"><span data-stu-id="dc2f9-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+# <a name="flow-content"></a><span data-ttu-id="f5573-102">유동 콘텐츠</span><span class="sxs-lookup"><span data-stu-id="f5573-102">Flow Content</span></span>
+<span data-ttu-id="f5573-103">호스팅에 대 한 적합 한 유동 콘텐츠를 만들기 위한 구성 요소를 제공 하는 유동 콘텐츠 요소는 <xref:System.Windows.Documents.FlowDocument>합니다.</span><span class="sxs-lookup"><span data-stu-id="f5573-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dc2f9-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="dc2f9-104">In This Section</span></span>  
- [<span data-ttu-id="dc2f9-105">유동 문서 개요</span><span class="sxs-lookup"><span data-stu-id="dc2f9-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="dc2f9-106">TextElement 콘텐츠 모델 개요</span><span class="sxs-lookup"><span data-stu-id="dc2f9-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [<span data-ttu-id="dc2f9-107">테이블 개요</span><span class="sxs-lookup"><span data-stu-id="dc2f9-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [<span data-ttu-id="dc2f9-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="dc2f9-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f5573-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="f5573-104">In This Section</span></span>  
+ [<span data-ttu-id="f5573-105">유동 문서 개요</span><span class="sxs-lookup"><span data-stu-id="f5573-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="f5573-106">TextElement 콘텐츠 모델 개요</span><span class="sxs-lookup"><span data-stu-id="f5573-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
+ [<span data-ttu-id="f5573-107">테이블 개요</span><span class="sxs-lookup"><span data-stu-id="f5573-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
+ [<span data-ttu-id="f5573-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="f5573-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="dc2f9-109">참조</span><span class="sxs-lookup"><span data-stu-id="dc2f9-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f5573-109">참조</span><span class="sxs-lookup"><span data-stu-id="f5573-109">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.List>  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/22/2017
   <xref:System.Windows.Documents.Span>  
   <xref:System.Windows.Documents.ListItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="dc2f9-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="dc2f9-110">Related Sections</span></span>  
- [<span data-ttu-id="dc2f9-111">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="dc2f9-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="f5573-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="f5573-110">Related Sections</span></span>  
+ [<span data-ttu-id="f5573-111">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="f5573-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

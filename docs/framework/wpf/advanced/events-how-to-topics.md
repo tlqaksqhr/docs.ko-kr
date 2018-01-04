@@ -15,27 +15,28 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37a811f8c3d4e7da82c24fa8f2147ee4cafe64c6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd08efff930b2ddb8b985376992dd895067cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="events-how-to-topics"></a><span data-ttu-id="439f6-102">이벤트 방법 항목</span><span class="sxs-lookup"><span data-stu-id="439f6-102">Events How-to Topics</span></span>
-<span data-ttu-id="439f6-103">이 섹션의 항목에는 WPF에서 이벤트를 사용 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="439f6-103">The topics in this section describe how to use events in WPF.</span></span>  
+# <a name="events-how-to-topics"></a><span data-ttu-id="f3e09-102">이벤트 방법 항목</span><span class="sxs-lookup"><span data-stu-id="f3e09-102">Events How-to Topics</span></span>
+<span data-ttu-id="f3e09-103">이 섹션의 항목에는 WPF에서 이벤트를 사용 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3e09-103">The topics in this section describe how to use events in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="439f6-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="439f6-104">In This Section</span></span>  
- [<span data-ttu-id="439f6-105">코드를 사용하여 이벤트 처리기 추가</span><span class="sxs-lookup"><span data-stu-id="439f6-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [<span data-ttu-id="439f6-106">라우트된 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="439f6-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [<span data-ttu-id="439f6-107">사용자 지정 라우트된 이벤트 만들기</span><span class="sxs-lookup"><span data-stu-id="439f6-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [<span data-ttu-id="439f6-108">이벤트 처리기에서 소스 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="439f6-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [<span data-ttu-id="439f6-109">라우트된 이벤트에 대한 클래스 처리 추가</span><span class="sxs-lookup"><span data-stu-id="439f6-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f3e09-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="f3e09-104">In This Section</span></span>  
+ [<span data-ttu-id="f3e09-105">코드를 사용하여 이벤트 처리기 추가</span><span class="sxs-lookup"><span data-stu-id="f3e09-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
+ [<span data-ttu-id="f3e09-106">라우트된 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="f3e09-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
+ [<span data-ttu-id="f3e09-107">사용자 지정 라우트된 이벤트 만들기</span><span class="sxs-lookup"><span data-stu-id="f3e09-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
+ [<span data-ttu-id="f3e09-108">이벤트 처리기에서 소스 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="f3e09-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
+ [<span data-ttu-id="f3e09-109">라우트된 이벤트에 대한 클래스 처리 추가</span><span class="sxs-lookup"><span data-stu-id="f3e09-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="439f6-110">참조</span><span class="sxs-lookup"><span data-stu-id="439f6-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f3e09-110">참조</span><span class="sxs-lookup"><span data-stu-id="f3e09-110">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="439f6-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="439f6-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="f3e09-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="f3e09-111">Related Sections</span></span>

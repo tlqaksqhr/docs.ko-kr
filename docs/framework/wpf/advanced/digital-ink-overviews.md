@@ -17,17 +17,18 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33a2e7200a1154bbe79190809511401e6f12b370
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 378dac360e94d07bf8475286559e6aeed5321bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="digital-ink-overviews"></a><span data-ttu-id="30189-102">디지털 잉크 개요</span><span class="sxs-lookup"><span data-stu-id="30189-102">Digital Ink Overviews</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="30189-103">단원 내용</span><span class="sxs-lookup"><span data-stu-id="30189-103">In This Section</span></span>  
- [<span data-ttu-id="30189-104">잉크 시작</span><span class="sxs-lookup"><span data-stu-id="30189-104">Getting Started with Ink</span></span>](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
-  [<span data-ttu-id="30189-105">잉크 수집</span><span class="sxs-lookup"><span data-stu-id="30189-105">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
-  [<span data-ttu-id="30189-106">필기 인식</span><span class="sxs-lookup"><span data-stu-id="30189-106">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
-  [<span data-ttu-id="30189-107">잉크 저장</span><span class="sxs-lookup"><span data-stu-id="30189-107">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)  
-  [<span data-ttu-id="30189-108">잉크 개체 모델: Windows Forms 및 COM과 WPF</span><span class="sxs-lookup"><span data-stu-id="30189-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [<span data-ttu-id="30189-109">고급 잉크 처리</span><span class="sxs-lookup"><span data-stu-id="30189-109">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+# <a name="digital-ink-overviews"></a><span data-ttu-id="dae77-102">디지털 잉크 개요</span><span class="sxs-lookup"><span data-stu-id="dae77-102">Digital Ink Overviews</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="dae77-103">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="dae77-103">In This Section</span></span>  
+ [<span data-ttu-id="dae77-104">잉크 시작</span><span class="sxs-lookup"><span data-stu-id="dae77-104">Getting Started with Ink</span></span>](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
+  [<span data-ttu-id="dae77-105">잉크 수집</span><span class="sxs-lookup"><span data-stu-id="dae77-105">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
+  [<span data-ttu-id="dae77-106">필기 인식</span><span class="sxs-lookup"><span data-stu-id="dae77-106">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
+  [<span data-ttu-id="dae77-107">잉크 저장</span><span class="sxs-lookup"><span data-stu-id="dae77-107">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)  
+  [<span data-ttu-id="dae77-108">잉크 개체 모델: Windows Forms 및 COM과 WPF</span><span class="sxs-lookup"><span data-stu-id="dae77-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [<span data-ttu-id="dae77-109">고급 잉크 처리</span><span class="sxs-lookup"><span data-stu-id="dae77-109">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

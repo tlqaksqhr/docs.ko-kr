@@ -21,30 +21,31 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbfd7be17e2e9472afbd5ad00dad2ca104ee1854
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e9191778cdb8c57c5cf4628a072ea20fae532e81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="globalization-and-localization"></a><span data-ttu-id="b3c8f-102">전역화 및 지역화</span><span class="sxs-lookup"><span data-stu-id="b3c8f-102">Globalization and Localization</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="b3c8f-103">지역화 대비 응용 프로그램 개발에 대 한 광범위 한 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b3c8f-103"> provides extensive support for the development of world-ready applications.</span></span>  
+# <a name="globalization-and-localization"></a><span data-ttu-id="e565f-102">전역화 및 지역화</span><span class="sxs-lookup"><span data-stu-id="e565f-102">Globalization and Localization</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="e565f-103">지역화 대비 응용 프로그램 개발에 대 한 광범위 한 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e565f-103"> provides extensive support for the development of world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b3c8f-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="b3c8f-104">In This Section</span></span>  
- [<span data-ttu-id="b3c8f-105">WPF 전역화 및 지역화 개요</span><span class="sxs-lookup"><span data-stu-id="b3c8f-105">WPF Globalization and Localization Overview</span></span>](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [<span data-ttu-id="b3c8f-106">WPF의 전역화</span><span class="sxs-lookup"><span data-stu-id="b3c8f-106">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [<span data-ttu-id="b3c8f-107">자동 레이아웃 사용 개요</span><span class="sxs-lookup"><span data-stu-id="b3c8f-107">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [<span data-ttu-id="b3c8f-108">지역화 특성 및 주석</span><span class="sxs-lookup"><span data-stu-id="b3c8f-108">Localization Attributes and Comments</span></span>](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [<span data-ttu-id="b3c8f-109">WPF의 양방향 기능 개요</span><span class="sxs-lookup"><span data-stu-id="b3c8f-109">Bidirectional Features in WPF Overview</span></span>](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [<span data-ttu-id="b3c8f-110">방법 항목</span><span class="sxs-lookup"><span data-stu-id="b3c8f-110">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e565f-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="e565f-104">In This Section</span></span>  
+ [<span data-ttu-id="e565f-105">WPF 전역화 및 지역화 개요</span><span class="sxs-lookup"><span data-stu-id="e565f-105">WPF Globalization and Localization Overview</span></span>](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
+ [<span data-ttu-id="e565f-106">WPF의 전역화</span><span class="sxs-lookup"><span data-stu-id="e565f-106">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [<span data-ttu-id="e565f-107">자동 레이아웃 사용 개요</span><span class="sxs-lookup"><span data-stu-id="e565f-107">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
+ [<span data-ttu-id="e565f-108">지역화 특성 및 주석</span><span class="sxs-lookup"><span data-stu-id="e565f-108">Localization Attributes and Comments</span></span>](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
+ [<span data-ttu-id="e565f-109">WPF의 양방향 기능 개요</span><span class="sxs-lookup"><span data-stu-id="e565f-109">Bidirectional Features in WPF Overview</span></span>](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
+ [<span data-ttu-id="e565f-110">방법 항목</span><span class="sxs-lookup"><span data-stu-id="e565f-110">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="b3c8f-111">참조</span><span class="sxs-lookup"><span data-stu-id="b3c8f-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e565f-111">참조</span><span class="sxs-lookup"><span data-stu-id="e565f-111">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="b3c8f-112">XAML의 xml:lang 처리</span><span class="sxs-lookup"><span data-stu-id="b3c8f-112">xml:lang Handling in XAML</span></span>](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="e565f-112">XAML의 xml:lang 처리</span><span class="sxs-lookup"><span data-stu-id="e565f-112">xml:lang Handling in XAML</span></span>](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="b3c8f-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="b3c8f-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="e565f-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="e565f-113">Related Sections</span></span>
