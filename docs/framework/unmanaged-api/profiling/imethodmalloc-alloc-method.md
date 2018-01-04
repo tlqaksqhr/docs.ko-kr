@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ae0fa84c08cb8e366db36b6727a3058f24789801
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 26998e8b2e8648b4fb175f188540e7bc33c580c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc 메서드
 새 Microsoft MSIL (intermediate language) 함수 본문에 지정된 된 양의 메모리를 할당 하려고 시도 합니다.  

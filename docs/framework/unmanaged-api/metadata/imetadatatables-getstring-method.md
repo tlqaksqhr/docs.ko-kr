@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 687380d3a09a80db216aafbf1ee84c76e31bbf36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c2c0df58d1de7cc7c1eedfdea6c0e698cbd9cb48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString 메서드
 현재 참조 범위에서 테이블 열에서 지정된 된 인덱스에 문자열을 가져옵니다.  

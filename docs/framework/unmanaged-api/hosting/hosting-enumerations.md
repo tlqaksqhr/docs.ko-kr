@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f415b4f3062a83f97d2bf186981289cf16e555a4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cc6b5df39c9fad6182f0ee6e4ff95638e9aaf448
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-enumerations"></a>호스팅 열거형
 이 섹션에서는 호스팅 API에 사용 되는 관리 되지 않는 열거형을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [CLSID_RESOLUTION_FLAGS 열거형](../../../../docs/framework/unmanaged-api/hosting/clsid-resolution-flags-enumeration.md)  
  공용 언어 런타임 (CLR) 확인 하는 방법을 나타내는 값을 포함 한 `CLSID`합니다.  
   
@@ -122,6 +123,6 @@ ms.lasthandoff: 10/18/2017
   
  [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
   
- [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
+ [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
   
  [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

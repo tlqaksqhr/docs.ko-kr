@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c63a91683817311b8d644eb4285101e32eaea7f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-client-behaviors"></a>클라이언트 동작 구성
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서는 클라이언트 응용 프로그램 구성 파일의 `<behavior>` 섹션에 정의된 동작 구성을 참조하거나 호출 응용 프로그램에서 프로그래밍 방식으로 동작을 구성합니다. 이 항목에서는 두 접근 방식 모두에 대해 설명합니다.  

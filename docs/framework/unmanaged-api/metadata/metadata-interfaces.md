@@ -17,16 +17,17 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 638727dae1f0f32e5c92c0da7513719bd11ae8d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4043bdb7ea128e7ac34349dad8c51a0b247df71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-interfaces"></a>메타데이터 인터페이스
 이 섹션에서는 .NET Framework 형식, 메서드, 필드 등이 노출하는 메타데이터에 대한 액세스를 제공하는 관리되지 않는 인터페이스를 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
  동적 코드 컴파일에 대한 메서드를 제공합니다.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  형식 라이브러리를 메타데이터 서명에 매핑하고 서로 변환하는 메서드를 제공합니다.  
   
  [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser`는 사용되지 않습니다. 대신 `IMetaDataDispenserEx` 를 사용하세요.  
+ `IMetaDataDispenser`는 사용되지 않습니다. 대신 `IMetaDataDispenserEx`를 사용하세요.  
   
  [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  메타데이터를 만들거나 수정할 메모리 영역을 매핑하는 메서드를 제공합니다.  
@@ -82,10 +83,10 @@ ms.lasthandoff: 10/18/2017
  메타데이터 서명의 유효성을 검사하는 데 사용할 메서드를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [메타 데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [메타데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
- [메타 데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
   
- [메타 데이터 구조](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
+ [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
   
- [메타 데이터 공용 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+ [메타데이터 공용 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dbff3c39da2a18ab45f0ea03d1e1588aa61c7c3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 99dc183674abaff33047f070c14794150a8615f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclriocompletionmanager-interface"></a>ICLRIoCompletionManager 인터페이스
 구현 상태를 지정 된 I/O의 공용 언어 런타임 (CLR)에 알리기 위해 호스트를 허용 하는 콜백 메서드를 요청 합니다.  

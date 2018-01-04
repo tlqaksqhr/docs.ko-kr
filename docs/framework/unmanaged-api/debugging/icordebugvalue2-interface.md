@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f74a90952c6ac780c53441af472faeb999febbb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7611bfa0c06bc254a720ce9bc39935aa209d52e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 인터페이스
 "ICorDebugType" 개체에 대 한 지원을 제공 하는 "ICorDebugValue" 인터페이스를 확장 합니다.  

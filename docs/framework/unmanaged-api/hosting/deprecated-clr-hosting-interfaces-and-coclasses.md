@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4714183eb79a25639dae6824a1d27eb1ca6bb009
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a4410814669ed329e477fbad13dac60103b1ac0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>사용되지 않는 CLR 호스팅 인터페이스 및 Coclass
 이 섹션에서는 관리 되지 않은 인터페이스 설명 호스트 응용 프로그램에.NET Framework 버전 1.0 및 1.1에서에서 공용 언어 런타임 (CLR) 통합을 사용할 수 있습니다. 이러한 인터페이스는 런타임 프로세스에 로드 하기 위해 호스트에 대 한 메서드를 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  IAppDomainSetup  
  구성 하려면 호스트에 대 한 메서드를 제공는 <xref:System.AppDomain>합니다.  
   

@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 876dfabd835fa96fd3661f4e91eeb661ddaf9c30
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 823f2e0b542f5a9d8868cd3b71adb9a8cca4ec6a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-unmanaged-api-reference"></a>호스팅(관리되지 않는 API 참조)
 호스팅 API는 관리되지 않는 호스트가 CLR(공용 언어 런타임)을 응용 프로그램에 통합할 수 있게 해줍니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [호스팅 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
  호스팅 API가 사용하는 관리되지 않는 coclass를 설명합니다.  
   

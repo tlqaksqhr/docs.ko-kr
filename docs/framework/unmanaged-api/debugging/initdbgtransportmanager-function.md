@@ -22,11 +22,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f9f637589666af3723f11eb1f828d00be57793e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 37b849ed482f76692a63c70cbb0a3b9e1bacc8ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager 함수
 프로세스 및 런타임 열거형의 원격 대상에 연결할 전송 관리자를 초기화합니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4f23c8269c7dd7f85ad0f848c1dee2ed0bf903c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bdf76b95e80d5d4d96d2b5ed8236018147167905
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo 구조체
 참조 된 어셈블리에 대 한 자세한 정보를 제공 합니다.  

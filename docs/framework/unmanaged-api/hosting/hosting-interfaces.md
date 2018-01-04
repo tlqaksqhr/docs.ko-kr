@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a3cad92c204fa10f72d7a9a61460f1234206cb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 46208d6db716f7e1e7a443d958c059b22f74c46f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-interfaces"></a>호스팅 인터페이스
 이 섹션에서는 관리 되지 않은 인터페이스 설명 호스트 응용 프로그램에 공용 언어 런타임 (CLR)를 통합 하 사용할 수 있습니다.  
@@ -32,20 +33,20 @@ ms.lasthandoff: 10/18/2017
   
  [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 호스팅 인터페이스는.NET Framework 2.0 인터페이스 보다 우선 합니다.
   
-## <a name="in-this-section"></a>단원 내용  
- [사용 되지 않는 CLR 호스팅 인터페이스 및 Coclass](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [사용되지 않는 CLR 호스팅 인터페이스 및 Coclass](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
  .NET Framework 버전 1.0 및 1.1에서에서 도입 된 호스팅 인터페이스에 설명 합니다.  
   
  [CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
  .NET Framework 버전 2.0에에서 도입 된 호스팅 인터페이스에 설명 합니다.  
   
- [4 및 4.5.NET Framework에 추가 된 CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
+ [.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  에 도입 된 호스팅 인터페이스에 설명 된 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [호스팅 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
   
- [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
+ [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
   
  [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
   

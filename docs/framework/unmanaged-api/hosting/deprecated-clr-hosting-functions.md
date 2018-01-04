@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9530fecb4f2ca6f59d165e49c282320966fd2fa8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 985425ad44003f5971b21f107fad322f2123f6ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deprecated-clr-hosting-functions"></a>사용되지 않는 CLR 호스팅 함수
 이 섹션에서는 이전 버전의 호스팅 API에서 사용 되는 관리 되지 않는 전역 정적 함수를 설명 합니다.  
@@ -167,4 +168,4 @@ ms.lasthandoff: 10/18/2017
  관리 모듈 이미지가 유효성을 검사 하 고 로드 된 후에 운영 체제 로더를에 알립니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET framework 4 호스팅 전역 정적 함수](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 
+ [.NET Framework 4 호스팅 전역 정적 함수](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 

@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9cc4447424d1594f6fa86e07be659a6ba97f0427
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d999425be2bc5963aaa9f15b82bd951f6f564af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc 메서드
 호스트 힙에서 지정된 된 양의 메모리를 할당 하는 요청 수입니다.  

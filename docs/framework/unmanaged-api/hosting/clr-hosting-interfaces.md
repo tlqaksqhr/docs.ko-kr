@@ -17,18 +17,19 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3efdf649d0039f2eb6b39d5cb17c839b90e97508
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fd954419f46313a239ddf5a309a646e3d2f1b9bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 호스팅 인터페이스
 이 섹션에서는 관리 되지 않은 인터페이스 설명 호스트 응용 프로그램에 공용 언어 런타임 (CLR)를 통합 하 사용할 수 있습니다. 정보는.NET Framework 버전 2.0 이상 버전에 적용 됩니다. 이러한 인터페이스는 런타임 버전 1.0 및 1.1에에서 비해 더 많은 요소를 제어 하려면 호스트를 활성화 하 고 CLR 및 호스트의 실행 모델 많은 밀접 하 게 통합을 제공 합니다.  
   
  .NET Framework 버전 1.0 및 1.1에서는 호스팅 모델에서 특정 설정을 구성 하 고 이벤트 알림을 받을 수는 프로세스에 CLR을 로드 하는 관리 되지 않는 호스트를 사용 합니다. 그러나 일반적으로 호스트와 CLR에서에서 실행 되었습니다 독립적으로 해당 프로세스입니다. .NET Framework 버전 2.0 및 이후 버전에서는 새로운 추상화 계층을 다양 한 Win32 어셈블리의 형식에서 현재 제공 되는 리소스를 제공 하 고 호스트를 구성할 수 있는 기능 집합이 확장 호스트를 사용 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [IActionOnCLREvent 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
  등록 된 이벤트에 대 한 콜백을 수행 하는 메서드를 제공 합니다.  
   
@@ -195,8 +196,8 @@ ms.lasthandoff: 10/18/2017
  이식 가능한 실행 (PE) 이미지 유효성 검사 및 유효성 검사 오류를 보고에 대 한 메서드를 제공 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [사용 되지 않는 CLR 호스팅 인터페이스 및 Coclass](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
+ [사용되지 않는 CLR 호스팅 인터페이스 및 Coclass](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
  .NET Framework 버전 1.0 및 1.1에서에서 제공 하는 호스팅 인터페이스를 설명 하는 항목이 포함 되어 있습니다.  
   
- [4 및 4.5.NET Framework에 추가 된 CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
+ [.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  제공 하는 호스팅 인터페이스를 설명 하는 항목이 포함 되어는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.

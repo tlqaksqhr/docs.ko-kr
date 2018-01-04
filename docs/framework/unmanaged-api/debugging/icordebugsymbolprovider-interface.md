@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 96f5d897b1f426fd85fd274d5e56e8726b8cb892
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63823c535ad4d036dd5d539c8fe5381d350ccbe5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugsymbolprovider-interface"></a>ICorDebugSymbolProvider 인터페이스
 디버그 기호 정보를 검색하는 데 사용할 수 있는 메서드를 제공합니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b62e11f8237330122ccd2bd8775f8d113545dd95
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 856b4c42b018d6b1cefe6b61e21a15e7212f9541
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit 인터페이스
 생성, 수정 및 현재 정의 된 범위에서 어셈블리에 대 한 메타 데이터를 저장 하는 메서드를 제공 합니다. 메타 데이터 메모리에 저장 하거나 디스크에 저장 될 수 있습니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 |[GetSaveSize 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-getsavesize-method.md)|현재 범위에서 어셈블리의 예상된 이진 크기를 가져옵니다.|  
 |[GetTokenFromSig 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md)|지정한 메타 데이터 서명에 대 한 토큰을 가져옵니다.|  
 |[GetTokenFromTypeSpec 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md)|지정한 메타 데이터 서명 사용 하 여 형식에 대 한 메타 데이터를 토큰을 가져옵니다.|  
-|[병합 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)|병합 해야 하는 범위 목록에 지정된 된 가져오기 범위를 추가 합니다.|  
+|[Merge 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)|병합 해야 하는 범위 목록에 지정된 된 가져오기 범위를 추가 합니다.|  
 |[MergeEnd 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)|하나 이상의 이전 호출에 의해 지정 된 모든 메타 데이터 범위를 범위에 현재 병합 `IMetaDataEmit::Merge`합니다.|  
 |[Save 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-save-method.md)|지정된 된 주소에서 파일에는 현재 범위에서 모든 메타 데이터를 저장 합니다.|  
 |[SaveToMemory 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)|메모리의 지정된 된 영역을 현재 범위에서 모든 메타 데이터를 저장 합니다.|  
@@ -92,5 +93,5 @@ ms.lasthandoff: 11/21/2017
  **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [메타 데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+ [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
  [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15549f36be0373c89cb23230d11899a0385b0c70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c9b93c2bf31ad0b9655a08c72ac546eeacb007c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3308---clientbaseusinglocalchannelfactory"></a>3308 - ClientBaseUsingLocalChannelFactory
 ## <a name="properties"></a>속성  
@@ -35,4 +36,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  캐시에서 채널 팩터리를 사용 하지, 즉, 캐싱 사용 안 함 예를 들어  
   
-## <a name="details"></a>세부 정보
+## <a name="details"></a>설명

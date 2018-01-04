@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 07877ea0137ae6864113f3ecdbca010703781ada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7d2a295c4c35761d0a47e1690cd7b88387cecdb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum 인터페이스
 파일 또는 만들거나 있는 필요 없이 내부 공용 언어 런타임 (CLR)에 있는 어셈블리 id 데이터를 사용 하 여 스트림에 의해 참조 되는 어셈블리 집합을 조작 하는 호스트를 사용할 수 있는 메서드를 제공 합니다.  

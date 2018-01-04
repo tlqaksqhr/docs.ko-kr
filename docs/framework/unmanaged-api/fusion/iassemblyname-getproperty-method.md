@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6eae7cf2d6dabe9bad4912d6a97249f52464fe65
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3311cc79cd010f59d707283fa555a2ebf66e53db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty 메서드
 지정 된 속성 식별자가 참조 하는 속성에 대 한 포인터를 가져옵니다.  

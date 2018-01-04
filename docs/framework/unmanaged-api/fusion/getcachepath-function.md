@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 924482bf34d53d3d7144c4bae93a00a8f8d2ad4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 371dab83d7441681b9d6bd5723bcd8c3caadb50e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getcachepath-function"></a>GetCachePath 함수
 지정된 된 플래그를 사용 하 여 캐시 된 어셈블리에 경로 가져옵니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef30386342860633aed5f230ccfce13204e6973e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01d765ee2cee02b72984fee7d8cc3bb0a309d431
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="131---bufferpoolallocation"></a>131 - BufferPoolAllocation
 BufferPoolAllocation  
@@ -27,9 +28,9 @@ BufferPoolAllocation
 |||  
 |-|-|  
 |ID|131|  
-|키워드가|인프라|  
+|키워드|인프라|  
 |수준|Verbose|  
-|채널|DEBUG|  
+|채널|디버그|  
   
 ## <a name="description"></a>설명  
  BufferPool에서 버퍼용 메모리를 할당하면 이 이벤트를 내보냅니다.  
@@ -37,4 +38,4 @@ BufferPoolAllocation
 ## <a name="message"></a>메시지  
  풀에서 %1바이트를 할당하는 중입니다.  
   
-## <a name="details"></a>세부 정보
+## <a name="details"></a>설명

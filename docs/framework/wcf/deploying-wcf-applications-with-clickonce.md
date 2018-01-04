@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 714e8341c58e5337d8e45bf61b48137d33fa51b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e87e01c39c5f50ff3f4d4e9479a68e19cceb90f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-wcf-applications-with-clickonce"></a>ClickOnce를 사용하여 WCF 응용 프로그램 배포
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]를 사용하는 클라이언트 응용 프로그램은 ClickOnce 기술을 사용하여 배포할 수 있습니다. 클라이언트 응용 프로그램이 신뢰할 수 있는 인증서를 사용하여 디지털 방식으로 서명되는 경우, 이 기술을 통해 클라이언트 응용 프로그램은 코드 액세스 보안에서 제공하는 런타임 보안 보호의 이점을 활용할 수 있습니다. ClickOnce 응용 프로그램 서명에 사용되는 인증서는 신뢰할 수 있는 게시자 저장소에 있어야 하며, 클라이언트 컴퓨터의 로컬 보안 정책은 게시자의 인증서를 사용하여 서명된 응용 프로그램에 완전 신뢰 권한을 부여하도록 구성되어야 합니다.  

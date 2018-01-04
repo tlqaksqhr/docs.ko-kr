@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5652907abc17868414c554cb5c87b0856d2c5a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 819510c14bd67e7fcc739a19ea945f16b2a66c9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 구조체
 해당 버전 및 로캘, 프로세서, 및 운영 체제에 대 한 지원 수준을 포함 하 여 참조 된 어셈블리에 대 한 정보를 포함 합니다.  
@@ -70,6 +71,6 @@ typedef struct {
  **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [메타 데이터 구조](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
+ [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
  [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
  [OSINFO 구조체](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

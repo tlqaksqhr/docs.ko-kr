@@ -22,11 +22,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e13355078727a55c950bed795d3b01b6c7d52564
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62d43121efbc039b8fad0b78bed7ec4a655efabb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget 인터페이스
 참조 횟수를 제어, 프로세스, 열거 및 Macintosh Silverlight의 원격 대상에 연결 된 디버거에 연결 된 메모리를 해제 하는 메서드를 제공 합니다.  
@@ -56,9 +57,9 @@ class ICoreClrDebugTarget {
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Icoreclrdebugtarget:: Enumprocesses 메서드](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|원격 컴퓨터에서 실행 중인 프로세스를 열거합니다.|  
-|[Icoreclrdebugtarget:: Enumruntimes 메서드](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|원격 컴퓨터에서 지정된 된 프로세스의 공용 언어 런타임 (Clr)를 열거합니다.|  
-|[Icoreclrdebugtarget:: Freememory 메서드](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|이 클래스에서 열거형 메서드에 의해 할당 되는 메모리를 해제 합니다.|  
+|[ICoreClrDebugTarget::EnumProcesses 메서드](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|원격 컴퓨터에서 실행 중인 프로세스를 열거합니다.|  
+|[ICoreClrDebugTarget::EnumRuntimes 메서드](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|원격 컴퓨터에서 지정된 된 프로세스의 공용 언어 런타임 (Clr)를 열거합니다.|  
+|[ICoreClrDebugTarget::FreeMemory 메서드](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|이 클래스에서 열거형 메서드에 의해 할당 되는 메모리를 해제 합니다.|  
   
 ## <a name="remarks"></a>설명  
  현재이 기능은 원격 Macintosh 컴퓨터에서 실행 되는 Silverlight 기반 응용 프로그램 대상 디버깅에 대해서만 지원 됩니다.  

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 28ecba8b88ceadaf743f5c65bc6f257f7ef8cd60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fab9da8f7e63ad000595378f5bc36f3aadc2ac3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a>ICLRTaskManager::SetUILocale 메서드
 현재 실행 중인 작업에서 공용 언어 런타임을 (CLR) 사용자 인터페이스 (UI) 로캘 또는 culture 호스트가 수정 했음을 알립니다.  

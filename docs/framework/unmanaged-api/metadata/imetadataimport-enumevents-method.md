@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ba893d59f9f119ce2f7eaf1af4ce268b6534acd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed783cf80fb068656855c2c06ab814f665f1cede
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents 메서드
 지정한 TypeDef 토큰에 대한 이벤트 정의 토큰을 열거합니다.  

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 80e156cd92519fc78f2a3076d03b279b7a63c1d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 013629b5a3389fcb8da9368f7875bd1977ee9e20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum 메서드
 지정 된 핸들에 의해 식별 되는 열거자를 닫습니다.  

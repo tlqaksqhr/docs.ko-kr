@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5d229487bb09459bdc923128f4a3309412453c43
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3e7b5ed49b4769ba09d8d1f32ed4a66fa02e46be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle 인터페이스
 간접 참조에서 래핑 해제 값 방식 마샬링 개체에 대 한 방법을 제공합니다.  

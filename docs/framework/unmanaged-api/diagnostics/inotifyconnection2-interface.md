@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 773fa72f941d9128ae1ad97d44b5e89759fa17e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 272a747883c07c0d31a6cda62bec39f182b5e46c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 인터페이스
 등록 및 연결 알림 소스를 등록 취소 하기 위한 메서드를 선언 합니다.  

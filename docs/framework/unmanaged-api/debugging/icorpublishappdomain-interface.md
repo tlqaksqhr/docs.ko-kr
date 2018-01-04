@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e83a6e4ac64d4b47400a3cbb495169ae46298980
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe8851e0b6e521a293612c140ab8d23e579a6b28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain 인터페이스
 응용 프로그램 도메인을 나타내고 응용 프로그램 도메인에 대한 정보를 제공합니다.  

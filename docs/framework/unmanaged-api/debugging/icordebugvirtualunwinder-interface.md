@@ -13,18 +13,19 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d22fa926b300384b7f790468b1b3d0becafdb942
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 936df5c3d913a2ee5a1648906fb3ece2751d8ef5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvirtualunwinder-interface"></a>ICorDebugVirtualUnwinder 인터페이스
 스택 해제에 도움이 되는 메서드를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|이름|  
+|메서드|name|  
 |------------|----------|  
 |[GetContext 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-getcontext-method.md)|이 해제기의 현재 컨텍스트를 가져옵니다.|  
 |[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-next-method.md)|호출자의 컨텍스트로 이동합니다.|  

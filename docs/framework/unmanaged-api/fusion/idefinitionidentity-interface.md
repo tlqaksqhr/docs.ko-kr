@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a63436f107a2604fd5620854339447a4af254e52
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b074ae2a0a4e4e65f0402ff35888b557b00dd071
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity 인터페이스
 현재 범위에서 응용 프로그램을 정의 하는 코드의 고유한 시그니처를 나타냅니다.  

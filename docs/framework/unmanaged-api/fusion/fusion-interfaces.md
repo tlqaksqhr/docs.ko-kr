@@ -17,16 +17,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f1742025bed977dfd377a78db42df42c1bc43966
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9226eba1b9f03138180430b2abb960f43f4b4260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-interfaces"></a>Fusion 인터페이스
 이 섹션에서는 응용 프로그램의 리소스의 속성을 액세스 하 고 응용 프로그램에 대 한 이러한 리소스의 정확한 버전을 찾을 수는 fusion API를 사용 하는 관리 되지 않는 인터페이스를 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [IAppIdAuthority 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
  생성 하 고 응용 프로그램 id 및 참조에 대 한 키를 비교 하는 메서드를 제공 합니다.  
   

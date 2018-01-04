@@ -19,11 +19,12 @@ caps.latest.revision: "28"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d271a69847e3bd4dc972ed8e697b8cd15f049fb9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a12635e14b694b361e2877041588d7d9f08a4102
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 인터페이스
 특정 버전의 공용 언어 런타임 (CLR) 버전 번호에 따라 반환, 모든 설치 된 Clr 목록, 지정된 된 프로세스에 로드 되는 모든 런타임 목록, 어셈블리로 컴파일, 프로세스를 종료 하는 데 사용 된 CLR 버전을 검색 하는 메서드를 제공 합니다. 정상적인 런타임 종료 및 레거시 API 바인딩을 쿼리 합니다.  

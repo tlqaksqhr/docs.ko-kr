@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 29bbc78da38ca65b2c19c5f0d93a273ba3ac0da6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 26e826417e6fb48eb261278988bc7c351ee663aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum 메서드
 지정된 된 열거자에서 검색 된 열거형의 요소 수를 가져옵니다.  

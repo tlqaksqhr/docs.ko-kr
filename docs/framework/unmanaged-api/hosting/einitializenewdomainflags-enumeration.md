@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bee1c5086502a9675e8149e7d6c9bc72f573815c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fa5c9aa050e0f5e634c43080d9caa5011a126529
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags 열거형
 런타임에 응용 프로그램 도메인의 초기화에 대 한 정보를 제공 하기 위해 호스트를 있습니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e8a853ebfa84ab5517e34bd67ae38672fdacddf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e32570b381d6cab4326a13246dfe053b5032589
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-services"></a>서비스 배포
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램을 런타임 환경에 배포하는 방법에 대해 설명합니다.  

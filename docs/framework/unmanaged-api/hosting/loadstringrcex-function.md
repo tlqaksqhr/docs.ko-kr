@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3467ebcd0b821c2313f3535c5b594ef664546e4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b046387b5ae365ece694509b302f7ac3a7e066a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 함수
 HRESULT 값을 지정된 된 문화권에 대 한 적절 한 오류 메시지를 변환합니다.  
@@ -85,4 +86,4 @@ HRESULT LoadStringRCEx (
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  
  [LoadStringRC 함수](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
- [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+ [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
