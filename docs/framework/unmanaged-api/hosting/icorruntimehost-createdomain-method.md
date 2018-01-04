@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0da99f05b09d44338a5f4d695fb2a4114f0e1f30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe0adad8397f42716368691abbb1d1c303fced97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorruntimehostcreatedomain-method"></a><span data-ttu-id="d3223-102">ICorRuntimeHost::CreateDomain 메서드</span><span class="sxs-lookup"><span data-stu-id="d3223-102">ICorRuntimeHost::CreateDomain Method</span></span>
-<span data-ttu-id="d3223-103">응용 프로그램 도메인을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-103">Creates an application domain.</span></span> <span data-ttu-id="d3223-104">호출자가 형식의 인터페이스 포인터를 받을 <xref:System._AppDomain> 형식의 인스턴스로 <xref:System.AppDomain?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-104">The caller receives an interface pointer of type <xref:System._AppDomain> to an instance of type <xref:System.AppDomain?displayProperty=nameWithType>.</span></span>  
+# <a name="icorruntimehostcreatedomain-method"></a><span data-ttu-id="86c35-102">ICorRuntimeHost::CreateDomain 메서드</span><span class="sxs-lookup"><span data-stu-id="86c35-102">ICorRuntimeHost::CreateDomain Method</span></span>
+<span data-ttu-id="86c35-103">응용 프로그램 도메인을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-103">Creates an application domain.</span></span> <span data-ttu-id="86c35-104">호출자가 형식의 인터페이스 포인터를 받을 <xref:System._AppDomain> 형식의 인스턴스로 <xref:System.AppDomain?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-104">The caller receives an interface pointer of type <xref:System._AppDomain> to an instance of type <xref:System.AppDomain?displayProperty=nameWithType>.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3223-105">구문</span><span class="sxs-lookup"><span data-stu-id="d3223-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86c35-105">구문</span><span class="sxs-lookup"><span data-stu-id="86c35-105">Syntax</span></span>  
   
 ```  
 HRESULT CreateDomain (  
@@ -40,35 +41,35 @@ HRESULT CreateDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d3223-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d3223-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="86c35-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="86c35-106">Parameters</span></span>  
  `pwzFriendlyName`  
- <span data-ttu-id="d3223-107">[in] 도메인에 친숙 한 이름을 지정 하는 데 사용 되는 선택적 매개 변수</span><span class="sxs-lookup"><span data-stu-id="d3223-107">[in] An optional parameter used to give a friendly name to the domain.</span></span> <span data-ttu-id="d3223-108">이 이름은 도메인을 식별 하는 디버거 같은 사용자 인터페이스에 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-108">This friendly name can be displayed in user interfaces such as debuggers to identify the domain.</span></span>  
+ <span data-ttu-id="86c35-107">[in] 도메인에 친숙 한 이름을 지정 하는 데 사용 되는 선택적 매개 변수</span><span class="sxs-lookup"><span data-stu-id="86c35-107">[in] An optional parameter used to give a friendly name to the domain.</span></span> <span data-ttu-id="86c35-108">이 이름은 도메인을 식별 하는 디버거 같은 사용자 인터페이스에 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-108">This friendly name can be displayed in user interfaces such as debuggers to identify the domain.</span></span>  
   
  `pIdentityArray`  
- <span data-ttu-id="d3223-109">[in] 에 대 한 포인터의 선택적 배열 `IIdentity` 사용 권한 집합을 설정 하기 위해 보안 정책을 통해 매핑된 증명 정보를 나타내는 경우에 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-109">[in] An optional array of pointers to `IIdentity` instances that represent evidence mapped through security policy to establish a  permission set.</span></span> <span data-ttu-id="d3223-110">`IIdentity` 호출 하 여 개체를 가져올 수는 [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="d3223-110">An `IIdentity` object can be obtained by calling the [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) method.</span></span>  
+ <span data-ttu-id="86c35-109">[in] 에 대 한 포인터의 선택적 배열 `IIdentity` 사용 권한 집합을 설정 하기 위해 보안 정책을 통해 매핑된 증명 정보를 나타내는 경우에 합니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-109">[in] An optional array of pointers to `IIdentity` instances that represent evidence mapped through security policy to establish a  permission set.</span></span> <span data-ttu-id="86c35-110">`IIdentity` 호출 하 여 개체를 가져올 수는 [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="86c35-110">An `IIdentity` object can be obtained by calling the [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) method.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="d3223-111">[out] 형식의 인터페이스 포인터 <xref:System._AppDomain> 인스턴스에 <xref:System.AppDomain?displayProperty=nameWithType> 도메인 추가 제어를 위해 사용할 수 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-111">[out] An interface pointer of type <xref:System._AppDomain> to an instance of <xref:System.AppDomain?displayProperty=nameWithType> that can be used to further control the domain.</span></span>  
+ <span data-ttu-id="86c35-111">[out] 형식의 인터페이스 포인터 <xref:System._AppDomain> 인스턴스에 <xref:System.AppDomain?displayProperty=nameWithType> 도메인 추가 제어를 위해 사용할 수 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-111">[out] An interface pointer of type <xref:System._AppDomain> to an instance of <xref:System.AppDomain?displayProperty=nameWithType> that can be used to further control the domain.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d3223-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="d3223-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="86c35-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="86c35-112">Return Value</span></span>  
   
-|<span data-ttu-id="d3223-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d3223-113">HRESULT</span></span>|<span data-ttu-id="d3223-114">설명</span><span class="sxs-lookup"><span data-stu-id="d3223-114">Description</span></span>|  
+|<span data-ttu-id="86c35-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="86c35-113">HRESULT</span></span>|<span data-ttu-id="86c35-114">설명</span><span class="sxs-lookup"><span data-stu-id="86c35-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d3223-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="d3223-115">S_OK</span></span>|<span data-ttu-id="d3223-116">작업이 성공 했습니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-116">The operation was successful.</span></span>|  
-|<span data-ttu-id="d3223-117">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="d3223-117">S_FALSE</span></span>|<span data-ttu-id="d3223-118">작업을 완료 하지 못했습니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-118">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="d3223-119">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d3223-119">E_FAIL</span></span>|<span data-ttu-id="d3223-120">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-120">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="d3223-121">메서드가 E_FAIL을 반환 하는 경우 공용 언어 런타임 (CLR)을 하는 프로세스에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-121">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="d3223-122">호스팅 Api에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-122">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="d3223-123">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d3223-123">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d3223-124">CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-124">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="86c35-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="86c35-115">S_OK</span></span>|<span data-ttu-id="86c35-116">작업이 성공 했습니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-116">The operation was successful.</span></span>|  
+|<span data-ttu-id="86c35-117">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="86c35-117">S_FALSE</span></span>|<span data-ttu-id="86c35-118">작업을 완료 하지 못했습니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-118">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="86c35-119">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="86c35-119">E_FAIL</span></span>|<span data-ttu-id="86c35-120">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-120">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="86c35-121">메서드가 E_FAIL을 반환 하는 경우 공용 언어 런타임 (CLR)을 하는 프로세스에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-121">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="86c35-122">호스팅 Api에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-122">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="86c35-123">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="86c35-123">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="86c35-124">CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-124">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d3223-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d3223-125">Requirements</span></span>  
- <span data-ttu-id="d3223-126">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d3223-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86c35-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="86c35-125">Requirements</span></span>  
+ <span data-ttu-id="86c35-126">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="86c35-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3223-127">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d3223-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="86c35-127">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="86c35-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d3223-128">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="d3223-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="86c35-128">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="86c35-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d3223-129">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="d3223-129">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="86c35-129">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="86c35-129">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3223-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d3223-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="86c35-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="86c35-130">See Also</span></span>  
  <xref:System._AppDomain>  
  <xref:System.AppDomain>  
- [<span data-ttu-id="d3223-131">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d3223-131">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+ [<span data-ttu-id="86c35-131">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="86c35-131">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

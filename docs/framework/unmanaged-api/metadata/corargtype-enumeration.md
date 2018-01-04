@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 22034b575dee2840cb89b949f5c663df27cefc4b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dfc632849249c437769ce547b2b7facfd97333e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="b53c4-102">CorArgType 열거형</span><span class="sxs-lookup"><span data-stu-id="b53c4-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="b53c4-103">런타임 핸들의 네이티브 형식을 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="b53c4-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="c0f54-102">CorArgType 열거형</span><span class="sxs-lookup"><span data-stu-id="c0f54-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="c0f54-103">런타임 핸들의 네이티브 형식을 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="c0f54-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b53c4-104">구문</span><span class="sxs-lookup"><span data-stu-id="b53c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0f54-104">구문</span><span class="sxs-lookup"><span data-stu-id="c0f54-104">Syntax</span></span>  
   
 ```  
 typedef enum CorArgType {  
@@ -48,12 +49,12 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b53c4-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b53c4-105">Requirements</span></span>  
- <span data-ttu-id="b53c4-106">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b53c4-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0f54-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c0f54-105">Requirements</span></span>  
+ <span data-ttu-id="c0f54-106">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c0f54-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b53c4-107">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b53c4-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c0f54-107">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="c0f54-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="b53c4-108">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b53c4-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c0f54-108">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0f54-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b53c4-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b53c4-109">See Also</span></span>  
- [<span data-ttu-id="b53c4-110">메타 데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="b53c4-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="c0f54-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c0f54-109">See Also</span></span>  
+ [<span data-ttu-id="c0f54-110">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="c0f54-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -19,16 +19,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 52e027c5d2ead70bbd624fafe3021121557cd261
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a7973b8cbd49858daaf6f08d55c7d9f60f687a72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="etasktype-enumeration"></a><span data-ttu-id="5b4f4-102">ETaskType 열거형</span><span class="sxs-lookup"><span data-stu-id="5b4f4-102">ETaskType Enumeration</span></span>
-<span data-ttu-id="5b4f4-103">로 표시 되는 작업의 유형을 나타내는 값을 포함 한 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 또는 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
+# <a name="etasktype-enumeration"></a><span data-ttu-id="e80a4-102">ETaskType 열거형</span><span class="sxs-lookup"><span data-stu-id="e80a4-102">ETaskType Enumeration</span></span>
+<span data-ttu-id="e80a4-103">로 표시 되는 작업의 유형을 나타내는 값을 포함 한 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 또는 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b4f4-104">구문</span><span class="sxs-lookup"><span data-stu-id="5b4f4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e80a4-104">구문</span><span class="sxs-lookup"><span data-stu-id="e80a4-104">Syntax</span></span>  
   
 ```  
 typedef enum ETaskType {  
@@ -46,30 +47,30 @@ typedef enum ETaskType {
 } ETaskType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5b4f4-105">멤버</span><span class="sxs-lookup"><span data-stu-id="5b4f4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e80a4-105">멤버</span><span class="sxs-lookup"><span data-stu-id="e80a4-105">Members</span></span>  
   
-|<span data-ttu-id="5b4f4-106">멤버</span><span class="sxs-lookup"><span data-stu-id="5b4f4-106">Member</span></span>|<span data-ttu-id="5b4f4-107">설명</span><span class="sxs-lookup"><span data-stu-id="5b4f4-107">Description</span></span>|  
+|<span data-ttu-id="e80a4-106">멤버</span><span class="sxs-lookup"><span data-stu-id="e80a4-106">Member</span></span>|<span data-ttu-id="e80a4-107">설명</span><span class="sxs-lookup"><span data-stu-id="e80a4-107">Description</span></span>|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|<span data-ttu-id="5b4f4-108">인터페이스는 응용 프로그램 도메인 언로드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-108">The interface represents an application domain unloading task.</span></span>|  
-|`TT_DEBUGGERHELPER`|<span data-ttu-id="5b4f4-109">디버거 도우미 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-109">The interface represents a debugger helper task.</span></span>|  
-|`TT_FINALIZER`|<span data-ttu-id="5b4f4-110">종료자 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-110">The interface represents a finalizer task.</span></span>|  
-|`TT_GC`|<span data-ttu-id="5b4f4-111">가비지 수집 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-111">The interface represents a garbage collection task.</span></span>|  
-|`TT_THREADPOOL_GATE`|<span data-ttu-id="5b4f4-112">게이트 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-112">The interface represents a gate thread task.</span></span>|  
-|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="5b4f4-113">I/O 스레드 작업 또는 완료 포트 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
-|`TT_THREADPOOL_TIMER`|<span data-ttu-id="5b4f4-114">타이머 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-114">The interface represents a timer thread task.</span></span>|  
-|`TT_THREADPOOL_WAIT`|<span data-ttu-id="5b4f4-115">대기 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-115">The interface represents a wait thread task.</span></span>|  
-|`TT_THREADPOOL_WORKER`|<span data-ttu-id="5b4f4-116">작업자 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-116">The interface represents a worker thread task.</span></span>|  
-|`TT_UNKNOWN`|<span data-ttu-id="5b4f4-117">알 수 없는 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-117">The task is unknown.</span></span>|  
-|`TT_USER`|<span data-ttu-id="5b4f4-118">사용자 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-118">The interface represents a user task.</span></span>|  
+|`TT_ADUNLOAD`|<span data-ttu-id="e80a4-108">인터페이스는 응용 프로그램 도메인 언로드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-108">The interface represents an application domain unloading task.</span></span>|  
+|`TT_DEBUGGERHELPER`|<span data-ttu-id="e80a4-109">디버거 도우미 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-109">The interface represents a debugger helper task.</span></span>|  
+|`TT_FINALIZER`|<span data-ttu-id="e80a4-110">종료자 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-110">The interface represents a finalizer task.</span></span>|  
+|`TT_GC`|<span data-ttu-id="e80a4-111">가비지 수집 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-111">The interface represents a garbage collection task.</span></span>|  
+|`TT_THREADPOOL_GATE`|<span data-ttu-id="e80a4-112">게이트 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-112">The interface represents a gate thread task.</span></span>|  
+|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="e80a4-113">I/O 스레드 작업 또는 완료 포트 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
+|`TT_THREADPOOL_TIMER`|<span data-ttu-id="e80a4-114">타이머 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-114">The interface represents a timer thread task.</span></span>|  
+|`TT_THREADPOOL_WAIT`|<span data-ttu-id="e80a4-115">대기 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-115">The interface represents a wait thread task.</span></span>|  
+|`TT_THREADPOOL_WORKER`|<span data-ttu-id="e80a4-116">작업자 스레드 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-116">The interface represents a worker thread task.</span></span>|  
+|`TT_UNKNOWN`|<span data-ttu-id="e80a4-117">알 수 없는 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-117">The task is unknown.</span></span>|  
+|`TT_USER`|<span data-ttu-id="e80a4-118">사용자 작업을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-118">The interface represents a user task.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5b4f4-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5b4f4-119">Requirements</span></span>  
- <span data-ttu-id="5b4f4-120">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5b4f4-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e80a4-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e80a4-119">Requirements</span></span>  
+ <span data-ttu-id="e80a4-120">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e80a4-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b4f4-121">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5b4f4-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e80a4-121">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e80a4-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5b4f4-122">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5b4f4-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="e80a4-122">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e80a4-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5b4f4-123">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b4f4-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e80a4-123">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e80a4-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b4f4-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5b4f4-124">See Also</span></span>  
- [<span data-ttu-id="5b4f4-125">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="5b4f4-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="e80a4-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e80a4-124">See Also</span></span>  
+ [<span data-ttu-id="e80a4-125">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="e80a4-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

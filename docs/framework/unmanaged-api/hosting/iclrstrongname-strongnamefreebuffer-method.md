@@ -21,16 +21,17 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 72c2f976a1949ab6107e37f11989be4f17a738ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 378847ae8bfd1640401c51f75258affbd100cb22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iclrstrongnamestrongnamefreebuffer-method"></a><span data-ttu-id="a5999-102">ICLRStrongName::StrongNameFreeBuffer 메서드</span><span class="sxs-lookup"><span data-stu-id="a5999-102">ICLRStrongName::StrongNameFreeBuffer Method</span></span>
-<span data-ttu-id="a5999-103">와 같은 강력한 이름의 메서드에 대 한 이전 호출을 사용 하 여 할당 된 메모리를 확보 [iclrstrongname:: Strongnamegetpublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [iclrstrongname:: Strongnametokenfrompublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), 또는 [ Iclrstrongname:: Strongnamesignaturegeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a5999-103">Frees memory that was allocated with a previous call to a strong name method such as [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), or [ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span></span>  
+# <a name="iclrstrongnamestrongnamefreebuffer-method"></a><span data-ttu-id="07d15-102">ICLRStrongName::StrongNameFreeBuffer 메서드</span><span class="sxs-lookup"><span data-stu-id="07d15-102">ICLRStrongName::StrongNameFreeBuffer Method</span></span>
+<span data-ttu-id="07d15-103">와 같은 강력한 이름의 메서드에 대 한 이전 호출을 사용 하 여 할당 된 메모리를 확보 [iclrstrongname:: Strongnamegetpublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [iclrstrongname:: Strongnametokenfrompublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), 또는 [ Iclrstrongname:: Strongnamesignaturegeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="07d15-103">Frees memory that was allocated with a previous call to a strong name method such as [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), or [ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5999-104">구문</span><span class="sxs-lookup"><span data-stu-id="a5999-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07d15-104">구문</span><span class="sxs-lookup"><span data-stu-id="07d15-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameFreeBuffer (   
@@ -38,21 +39,21 @@ HRESULT StrongNameFreeBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a5999-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a5999-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="07d15-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="07d15-105">Parameters</span></span>  
  `pbMemory`  
- <span data-ttu-id="a5999-106">[in] 메모리를 해제에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="a5999-106">[in] A pointer to the memory to free.</span></span>  
+ <span data-ttu-id="07d15-106">[in] 메모리를 해제에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="07d15-106">[in] A pointer to the memory to free.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a5999-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="a5999-107">Return Value</span></span>  
- <span data-ttu-id="a5999-108">`S_OK`메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값 (참조 [일반적인 HRESULT 값](http://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="a5999-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="07d15-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="07d15-107">Return Value</span></span>  
+ <span data-ttu-id="07d15-108">`S_OK`메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값 (참조 [일반적인 HRESULT 값](http://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="07d15-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5999-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a5999-109">Requirements</span></span>  
- <span data-ttu-id="a5999-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a5999-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07d15-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="07d15-109">Requirements</span></span>  
+ <span data-ttu-id="07d15-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="07d15-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5999-111">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a5999-111">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="07d15-111">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="07d15-111">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="a5999-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="a5999-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="07d15-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="07d15-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a5999-113">**.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5999-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="07d15-113">**.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07d15-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5999-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a5999-114">See Also</span></span>  
- [<span data-ttu-id="a5999-115">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a5999-115">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="07d15-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="07d15-114">See Also</span></span>  
+ [<span data-ttu-id="07d15-115">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="07d15-115">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

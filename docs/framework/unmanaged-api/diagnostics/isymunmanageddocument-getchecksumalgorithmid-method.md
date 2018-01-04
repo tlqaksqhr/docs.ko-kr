@@ -21,28 +21,29 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 268951d70fec1096fc9cafaeeb6da3b83bc0acf2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 58fbb5ae13433e0faa47db1e1e49d086670e69d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="c36c3-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId 메서드</span><span class="sxs-lookup"><span data-stu-id="c36c3-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
-<span data-ttu-id="c36c3-103">체크섬이 없는 경우에 모두 0으로 GUID를 반환 하거나 체크섬 알고리즘 식별자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c36c3-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="10744-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId 메서드</span><span class="sxs-lookup"><span data-stu-id="10744-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
+<span data-ttu-id="10744-103">체크섬이 없는 경우에 모두 0으로 GUID를 반환 하거나 체크섬 알고리즘 식별자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="10744-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c36c3-104">구문</span><span class="sxs-lookup"><span data-stu-id="c36c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10744-104">구문</span><span class="sxs-lookup"><span data-stu-id="10744-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCheckSumAlgorithmId(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c36c3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c36c3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="10744-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="10744-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="c36c3-106">[out] 체크섬 알고리즘 식별자를 수신 하는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c36c3-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
+ <span data-ttu-id="10744-106">[out] 체크섬 알고리즘 식별자를 수신 하는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="10744-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c36c3-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="c36c3-107">Return Value</span></span>  
- <span data-ttu-id="c36c3-108">메서드가 성공 하면 S_OK입니다.</span><span class="sxs-lookup"><span data-stu-id="c36c3-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="10744-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="10744-107">Return Value</span></span>  
+ <span data-ttu-id="10744-108">메서드가 성공 하면 S_OK입니다.</span><span class="sxs-lookup"><span data-stu-id="10744-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c36c3-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c36c3-109">See Also</span></span>  
- [<span data-ttu-id="c36c3-110">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c36c3-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="10744-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="10744-109">See Also</span></span>  
+ [<span data-ttu-id="10744-110">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="10744-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

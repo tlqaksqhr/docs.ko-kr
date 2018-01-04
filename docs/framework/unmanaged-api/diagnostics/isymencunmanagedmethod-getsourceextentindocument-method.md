@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3cff81968926f608de8d28d730a00e79dc8b1c3b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6116ee89cb643cc0010ef2c8a463fa131777584e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="dccf9-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument 메서드</span><span class="sxs-lookup"><span data-stu-id="dccf9-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
-<span data-ttu-id="dccf9-103">가장 작은 가져옵니다 특정 문서에서 줄 및 메서드에 대 한 가장 큰 끝 줄을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="dccf9-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
+# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="b1119-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument 메서드</span><span class="sxs-lookup"><span data-stu-id="b1119-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
+<span data-ttu-id="b1119-103">가장 작은 가져옵니다 특정 문서에서 줄 및 메서드에 대 한 가장 큰 끝 줄을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1119-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dccf9-104">구문</span><span class="sxs-lookup"><span data-stu-id="dccf9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b1119-104">구문</span><span class="sxs-lookup"><span data-stu-id="b1119-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceExtentInDocument(  
@@ -39,21 +40,21 @@ HRESULT GetSourceExtentInDocument(
     [out] ULONG32* pendLine);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dccf9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="dccf9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b1119-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b1119-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="dccf9-106">[in] 문서에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="dccf9-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="b1119-106">[in] 문서에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b1119-106">[in] A pointer to the document.</span></span>  
   
  `pstartLine`  
- <span data-ttu-id="dccf9-107">[out] 에 대 한 포인터는 `ULONG32` 시작 줄을 받는입니다.</span><span class="sxs-lookup"><span data-stu-id="dccf9-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
+ <span data-ttu-id="b1119-107">[out] 에 대 한 포인터는 `ULONG32` 시작 줄을 받는입니다.</span><span class="sxs-lookup"><span data-stu-id="b1119-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="dccf9-108">[out] 에 대 한 포인터는 `ULONG32` 줄 끝을 받는입니다.</span><span class="sxs-lookup"><span data-stu-id="dccf9-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="b1119-108">[out] 에 대 한 포인터는 `ULONG32` 줄 끝을 받는입니다.</span><span class="sxs-lookup"><span data-stu-id="b1119-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dccf9-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="dccf9-109">Return Value</span></span>  
- <span data-ttu-id="dccf9-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="dccf9-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b1119-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="b1119-109">Return Value</span></span>  
+ <span data-ttu-id="b1119-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="b1119-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dccf9-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="dccf9-111">Requirements</span></span>  
- <span data-ttu-id="dccf9-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="dccf9-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b1119-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b1119-111">Requirements</span></span>  
+ <span data-ttu-id="b1119-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b1119-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dccf9-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dccf9-113">See Also</span></span>  
- [<span data-ttu-id="dccf9-114">ISymENCUnmanagedMethod 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dccf9-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b1119-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b1119-113">See Also</span></span>  
+ [<span data-ttu-id="b1119-114">ISymENCUnmanagedMethod 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b1119-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

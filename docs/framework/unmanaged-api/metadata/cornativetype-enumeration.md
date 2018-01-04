@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1c17abfc501b0d44981d2ed6cf7d69d60d9948b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6be442dd74f6a71494e140b76357be1bc9e1b747
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cornativetype-enumeration"></a><span data-ttu-id="95c51-102">CorNativeType 열거형</span><span class="sxs-lookup"><span data-stu-id="95c51-102">CorNativeType Enumeration</span></span>
-<span data-ttu-id="95c51-103">관리되지 않는 네이티브 형식을 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-103">Contains values that describe native unmanaged types.</span></span>  
+# <a name="cornativetype-enumeration"></a><span data-ttu-id="8dd78-102">CorNativeType 열거형</span><span class="sxs-lookup"><span data-stu-id="8dd78-102">CorNativeType Enumeration</span></span>
+<span data-ttu-id="8dd78-103">관리되지 않는 네이티브 형식을 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-103">Contains values that describe native unmanaged types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95c51-104">구문</span><span class="sxs-lookup"><span data-stu-id="95c51-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8dd78-104">구문</span><span class="sxs-lookup"><span data-stu-id="8dd78-104">Syntax</span></span>  
   
 ```  
 typedef enum CorNativeType {  
@@ -89,65 +90,65 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="95c51-105">멤버</span><span class="sxs-lookup"><span data-stu-id="95c51-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8dd78-105">멤버</span><span class="sxs-lookup"><span data-stu-id="8dd78-105">Members</span></span>  
   
-|<span data-ttu-id="95c51-106">멤버</span><span class="sxs-lookup"><span data-stu-id="95c51-106">Member</span></span>|<span data-ttu-id="95c51-107">설명</span><span class="sxs-lookup"><span data-stu-id="95c51-107">Description</span></span>|  
+|<span data-ttu-id="8dd78-106">멤버</span><span class="sxs-lookup"><span data-stu-id="8dd78-106">Member</span></span>|<span data-ttu-id="8dd78-107">설명</span><span class="sxs-lookup"><span data-stu-id="8dd78-107">Description</span></span>|  
 |------------|-----------------|  
-|`NATIVE_TYPE_END`|<span data-ttu-id="95c51-108">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-108">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VOID`|<span data-ttu-id="95c51-109">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-109">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="95c51-110">여기서 TRUE는 0이 아닌 및 FALSE는 4 바이트 부울 값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_I1`|<span data-ttu-id="95c51-111">부호 있는 8 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-111">A signed 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U1`|<span data-ttu-id="95c51-112">부호 없는 8 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-112">An unsigned 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I2`|<span data-ttu-id="95c51-113">부호 있는 16 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-113">A signed 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U2`|<span data-ttu-id="95c51-114">부호 없는 16 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-114">An unsigned 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I4`|<span data-ttu-id="95c51-115">부호 있는 32비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-115">A signed 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U4`|<span data-ttu-id="95c51-116">부호 없는 32비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-116">An unsigned 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I8`|<span data-ttu-id="95c51-117">부호 있는 64 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-117">A signed 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U8`|<span data-ttu-id="95c51-118">부호 없는 64 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-118">An unsigned 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_R4`|<span data-ttu-id="95c51-119">4 바이트 부동 소수점 숫자 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-119">A 4-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_R8`|<span data-ttu-id="95c51-120">8 바이트 부동 소수점 숫자 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-120">An 8-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="95c51-121">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-121">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="95c51-122">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-122">Obsolete.</span></span>|  
-|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="95c51-123">관리 되는 것에 해당 하는 숫자 COM 형식을 <xref:System.Decimal> 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
-|`NATIVE_TYPE_PTR`|<span data-ttu-id="95c51-124">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-124">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="95c51-125">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-125">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DATE`|<span data-ttu-id="95c51-126">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-126">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BSTR`|<span data-ttu-id="95c51-127">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-127">COM Interop.</span></span>|  
-|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="95c51-128">LPSTR 문자열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-128">An LPSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="95c51-129">LPWSTR 문자열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-129">An LPWSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="95c51-130">LPTSTR 문자열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-130">An LPTSTR string value.</span></span>|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="95c51-131">고정, 시스템에 정의 된 문자열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-131">A fixed, system-defined string value.</span></span>|  
-|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="95c51-132">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-132">Obsolete.</span></span>|  
-|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="95c51-133">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-133">COM Interop.</span></span>|  
-|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="95c51-134">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-134">COM Interop.</span></span>|  
-|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="95c51-135">네이티브 구조체 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-135">A native structure value.</span></span>|  
-|`NATIVE_TYPE_INTF`|<span data-ttu-id="95c51-136">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-136">COM Interop.</span></span>|  
-|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="95c51-137">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-137">COM Interop.</span></span>|  
-|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="95c51-138">고정 길이의 배열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-138">A fixed-length array value.</span></span>|  
-|`NATIVE_TYPE_INT`|<span data-ttu-id="95c51-139">네이티브 16 비트 부호 있는 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-139">A native 16-bit signed integer value.</span></span>|  
-|`NATIVE_TYPE_UINT`|<span data-ttu-id="95c51-140">기본 16 비트 부호 없는 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-140">A native 16-bit unsigned integer value.</span></span>|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="95c51-141">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="95c51-142">NATIVE_TYPE_STRUCT를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
-|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="95c51-143">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-143">COM Interop.</span></span>|  
-|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="95c51-144">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-144">COM Interop.</span></span>|  
-|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="95c51-145">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="95c51-146">BSTR 또는 ANSIBSTR 플랫폼에 따라 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
-|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="95c51-147">2 바이트 부울 값, 여기서 TRUE은-1이 고 FALSE는 0입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_FUNC`|<span data-ttu-id="95c51-148">함수 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-148">A function pointer.</span></span>|  
-|`NATIVE_TYPE_ASANY`|<span data-ttu-id="95c51-149">네이티브 형식에 대 한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-149">A reference to any native type.</span></span>|  
-|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="95c51-150">알 수 없는 형식의 멤버가 포함 된 배열에 대 한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-150">A reference to an array with members of an unspecified type.</span></span>|  
-|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="95c51-151">구조에 대 한 32 비트 정수 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-151">A 32-bit integer pointer to a structure.</span></span>|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="95c51-152">사용자 지정 마샬러 네이티브 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="95c51-153">이 뒤에 다음과 같은 형식의 문자열로 야: "네이티브 형식 이름/0 사용자 지정 마샬러는 이름/0 선택적 쿠키/0 형식" 또는 "{네이티브 입력 GUID} 0 사용자 지정 마샬러 형식 이름/0 선택적 쿠키/0 /"</span><span class="sxs-lookup"><span data-stu-id="95c51-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
-|`NATIVE_TYPE_ERROR`|<span data-ttu-id="95c51-154">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="95c51-155">ELEMENT_TYPE_I4 사용이 형식은 VT_HRESULT에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
-|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="95c51-156">네이티브 `IInspectable` 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-156">A native `IInspectable` type.</span></span>|  
-|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="95c51-157">네이티브 `HString`합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-157">A native `HString`.</span></span>|  
-|`NATIVE_TYPE_MAX`|<span data-ttu-id="95c51-158">잘못 된 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-158">An invalid value.</span></span>|  
+|`NATIVE_TYPE_END`|<span data-ttu-id="8dd78-108">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-108">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VOID`|<span data-ttu-id="8dd78-109">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-109">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="8dd78-110">여기서 TRUE는 0이 아닌 및 FALSE는 4 바이트 부울 값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_I1`|<span data-ttu-id="8dd78-111">부호 있는 8 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-111">A signed 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U1`|<span data-ttu-id="8dd78-112">부호 없는 8 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-112">An unsigned 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I2`|<span data-ttu-id="8dd78-113">부호 있는 16 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-113">A signed 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U2`|<span data-ttu-id="8dd78-114">부호 없는 16 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-114">An unsigned 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I4`|<span data-ttu-id="8dd78-115">부호 있는 32비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-115">A signed 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U4`|<span data-ttu-id="8dd78-116">부호 없는 32비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-116">An unsigned 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I8`|<span data-ttu-id="8dd78-117">부호 있는 64 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-117">A signed 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U8`|<span data-ttu-id="8dd78-118">부호 없는 64 비트 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-118">An unsigned 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_R4`|<span data-ttu-id="8dd78-119">4 바이트 부동 소수점 숫자 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-119">A 4-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_R8`|<span data-ttu-id="8dd78-120">8 바이트 부동 소수점 숫자 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-120">An 8-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="8dd78-121">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-121">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="8dd78-122">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-122">Obsolete.</span></span>|  
+|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="8dd78-123">관리 되는 것에 해당 하는 숫자 COM 형식을 <xref:System.Decimal> 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
+|`NATIVE_TYPE_PTR`|<span data-ttu-id="8dd78-124">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-124">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="8dd78-125">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-125">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DATE`|<span data-ttu-id="8dd78-126">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-126">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BSTR`|<span data-ttu-id="8dd78-127">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-127">COM Interop.</span></span>|  
+|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="8dd78-128">LPSTR 문자열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-128">An LPSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="8dd78-129">LPWSTR 문자열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-129">An LPWSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="8dd78-130">LPTSTR 문자열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-130">An LPTSTR string value.</span></span>|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="8dd78-131">고정, 시스템에 정의 된 문자열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-131">A fixed, system-defined string value.</span></span>|  
+|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="8dd78-132">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-132">Obsolete.</span></span>|  
+|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="8dd78-133">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-133">COM Interop.</span></span>|  
+|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="8dd78-134">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-134">COM Interop.</span></span>|  
+|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="8dd78-135">네이티브 구조체 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-135">A native structure value.</span></span>|  
+|`NATIVE_TYPE_INTF`|<span data-ttu-id="8dd78-136">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-136">COM Interop.</span></span>|  
+|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="8dd78-137">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-137">COM Interop.</span></span>|  
+|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="8dd78-138">고정 길이의 배열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-138">A fixed-length array value.</span></span>|  
+|`NATIVE_TYPE_INT`|<span data-ttu-id="8dd78-139">네이티브 16 비트 부호 있는 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-139">A native 16-bit signed integer value.</span></span>|  
+|`NATIVE_TYPE_UINT`|<span data-ttu-id="8dd78-140">기본 16 비트 부호 없는 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-140">A native 16-bit unsigned integer value.</span></span>|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="8dd78-141">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="8dd78-142">NATIVE_TYPE_STRUCT를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
+|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="8dd78-143">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-143">COM Interop.</span></span>|  
+|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="8dd78-144">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-144">COM Interop.</span></span>|  
+|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="8dd78-145">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="8dd78-146">BSTR 또는 ANSIBSTR 플랫폼에 따라 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
+|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="8dd78-147">2 바이트 부울 값, 여기서 TRUE은-1이 고 FALSE는 0입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_FUNC`|<span data-ttu-id="8dd78-148">함수 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-148">A function pointer.</span></span>|  
+|`NATIVE_TYPE_ASANY`|<span data-ttu-id="8dd78-149">네이티브 형식에 대 한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-149">A reference to any native type.</span></span>|  
+|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="8dd78-150">알 수 없는 형식의 멤버가 포함 된 배열에 대 한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-150">A reference to an array with members of an unspecified type.</span></span>|  
+|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="8dd78-151">구조에 대 한 32 비트 정수 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-151">A 32-bit integer pointer to a structure.</span></span>|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="8dd78-152">사용자 지정 마샬러 네이티브 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="8dd78-153">이 뒤에 다음과 같은 형식의 문자열로 야: "네이티브 형식 이름/0 사용자 지정 마샬러는 이름/0 선택적 쿠키/0 형식" 또는 "{네이티브 입력 GUID} 0 사용자 지정 마샬러 형식 이름/0 선택적 쿠키/0 /"</span><span class="sxs-lookup"><span data-stu-id="8dd78-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
+|`NATIVE_TYPE_ERROR`|<span data-ttu-id="8dd78-154">COM Interop 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="8dd78-155">ELEMENT_TYPE_I4 사용이 형식은 VT_HRESULT에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
+|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="8dd78-156">네이티브 `IInspectable` 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-156">A native `IInspectable` type.</span></span>|  
+|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="8dd78-157">네이티브 `HString`합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-157">A native `HString`.</span></span>|  
+|`NATIVE_TYPE_MAX`|<span data-ttu-id="8dd78-158">잘못 된 값입니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-158">An invalid value.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="95c51-159">요구 사항</span><span class="sxs-lookup"><span data-stu-id="95c51-159">Requirements</span></span>  
- <span data-ttu-id="95c51-160">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="95c51-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8dd78-159">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8dd78-159">Requirements</span></span>  
+ <span data-ttu-id="8dd78-160">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd78-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95c51-161">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="95c51-161">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="8dd78-161">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8dd78-161">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="95c51-162">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95c51-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8dd78-162">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8dd78-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95c51-163">참고 항목</span><span class="sxs-lookup"><span data-stu-id="95c51-163">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8dd78-163">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8dd78-163">See Also</span></span>  
  <xref:System.Runtime.InteropServices.UnmanagedType>  
- [<span data-ttu-id="95c51-164">메타 데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="95c51-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+ [<span data-ttu-id="8dd78-164">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="8dd78-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

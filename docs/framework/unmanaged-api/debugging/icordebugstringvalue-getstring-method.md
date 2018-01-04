@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 077f8488419cee434a8dc8266b0814dfd4196b03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2ff6472db835a1a535efc5e78b3a3274443fc669
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="49be6-102">ICorDebugStringValue::GetString 메서드</span><span class="sxs-lookup"><span data-stu-id="49be6-102">ICorDebugStringValue::GetString Method</span></span>
-<span data-ttu-id="49be6-103">이 ICorDebugStringValue이 참조 하는 문자열을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="49be6-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
+# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="f16bc-102">ICorDebugStringValue::GetString 메서드</span><span class="sxs-lookup"><span data-stu-id="f16bc-102">ICorDebugStringValue::GetString Method</span></span>
+<span data-ttu-id="f16bc-103">이 ICorDebugStringValue이 참조 하는 문자열을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f16bc-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49be6-104">구문</span><span class="sxs-lookup"><span data-stu-id="49be6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f16bc-104">구문</span><span class="sxs-lookup"><span data-stu-id="f16bc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetString (  
@@ -41,21 +42,21 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="49be6-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="49be6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f16bc-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f16bc-105">Parameters</span></span>  
  `cchString`  
- <span data-ttu-id="49be6-106">[in] `szString` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="49be6-106">[in] The size of the `szString` array.</span></span>  
+ <span data-ttu-id="f16bc-106">[in] `szString` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="f16bc-106">[in] The size of the `szString` array.</span></span>  
   
  `pcchString`  
- <span data-ttu-id="49be6-107">[out] 반환 된 문자 수에 대 한 포인터는 `szString` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="49be6-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
+ <span data-ttu-id="f16bc-107">[out] 반환 된 문자 수에 대 한 포인터는 `szString` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="f16bc-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
   
  `szString`  
- <span data-ttu-id="49be6-108">[out] 검색 된 문자열을 저장 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="49be6-108">[out] An array that stores the retrieved string.</span></span>  
+ <span data-ttu-id="f16bc-108">[out] 검색 된 문자열을 저장 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="f16bc-108">[out] An array that stores the retrieved string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49be6-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="49be6-109">Requirements</span></span>  
- <span data-ttu-id="49be6-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="49be6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f16bc-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f16bc-109">Requirements</span></span>  
+ <span data-ttu-id="f16bc-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f16bc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49be6-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="49be6-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f16bc-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f16bc-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="49be6-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="49be6-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f16bc-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f16bc-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="49be6-113">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49be6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f16bc-113">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f16bc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

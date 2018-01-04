@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 67057944705a1cecd1754c3c11da08725c9a93f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 059d896842c285bb071a25990ae9178c34ab802a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="corassemblyflags-enumeration"></a><span data-ttu-id="9d658-102">CorAssemblyFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="9d658-102">CorAssemblyFlags Enumeration</span></span>
-<span data-ttu-id="9d658-103">어셈블리 컴파일에 적용되는 메타데이터를 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-103">Contains values that describe the metadata applied to an assembly compilation.</span></span>  
+# <a name="corassemblyflags-enumeration"></a><span data-ttu-id="95dfb-102">CorAssemblyFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="95dfb-102">CorAssemblyFlags Enumeration</span></span>
+<span data-ttu-id="95dfb-103">어셈블리 컴파일에 적용되는 메타데이터를 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-103">Contains values that describe the metadata applied to an assembly compilation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d658-104">구문</span><span class="sxs-lookup"><span data-stu-id="9d658-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="95dfb-104">구문</span><span class="sxs-lookup"><span data-stu-id="95dfb-104">Syntax</span></span>  
   
 ```  
 typedef enum CorAssemblyFlags {  
@@ -57,35 +58,35 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9d658-105">멤버</span><span class="sxs-lookup"><span data-stu-id="9d658-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="95dfb-105">멤버</span><span class="sxs-lookup"><span data-stu-id="95dfb-105">Members</span></span>  
   
-|<span data-ttu-id="9d658-106">멤버</span><span class="sxs-lookup"><span data-stu-id="9d658-106">Member</span></span>|<span data-ttu-id="9d658-107">설명</span><span class="sxs-lookup"><span data-stu-id="9d658-107">Description</span></span>|  
+|<span data-ttu-id="95dfb-106">멤버</span><span class="sxs-lookup"><span data-stu-id="95dfb-106">Member</span></span>|<span data-ttu-id="95dfb-107">설명</span><span class="sxs-lookup"><span data-stu-id="95dfb-107">Description</span></span>|  
 |------------|-----------------|  
-|`afPublicKey`|<span data-ttu-id="9d658-108">어셈블리 참조는 전체, 해시 되지 않은 공개 키 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-108">Indicates that the assembly reference holds the full, unhashed public key.</span></span>|  
-|`afPA_None`|<span data-ttu-id="9d658-109">프로세서 아키텍처 지정 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-109">Indicates that the processor architecture is unspecified.</span></span>|  
-|`afPA_MSIL`|<span data-ttu-id="9d658-110">프로세서 아키텍처 중립 임을 나타냅니다 (PE32).</span><span class="sxs-lookup"><span data-stu-id="9d658-110">Indicates that the processor architecture is neutral (PE32).</span></span>|  
-|`afPA_x86`|<span data-ttu-id="9d658-111">프로세서 아키텍처 x86 (PE32) 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-111">Indicates that the processor architecture is x86 (PE32).</span></span>|  
-|`afPA_IA64`|<span data-ttu-id="9d658-112">프로세서 아키텍처 Itanium (PE32 +) 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-112">Indicates that the processor architecture is Itanium (PE32+).</span></span>|  
-|`afPA_AMD64`|<span data-ttu-id="9d658-113">프로세서 아키텍처 AMD X64 (PE32 +) 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-113">Indicates that the processor architecture is AMD X64 (PE32+).</span></span>|  
-|`afPA_ARM`|<span data-ttu-id="9d658-114">프로세서 아키텍처 ARM (PE32) 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-114">Indicates that the processor architecture is ARM (PE32).</span></span>|  
-|`afPA_NoPlatform`|<span data-ttu-id="9d658-115">어셈블리가 참조 어셈블리; 임을 나타냅니다. 즉, 모든 아키텍처에 적용 되지만 모든 아키텍처에서 실행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-115">Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture.</span></span> <span data-ttu-id="9d658-116">따라서 플래그는 동일 `afPA_Mask`합니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-116">Thus, the flag is the same as `afPA_Mask`.</span></span>|  
-|`afPA_Specified`|<span data-ttu-id="9d658-117">프로세서 아키텍처 플래그에 전파 해야 있는지 나타냅니다는 `AssemblyRef` 레코드입니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-117">Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.</span></span>|  
-|`afPA_Mask`|<span data-ttu-id="9d658-118">프로세서 아키텍처를 설명 하는 마스크입니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-118">A mask that describes the processor architecture.</span></span>|  
-|`afPA_FullMask`|<span data-ttu-id="9d658-119">프로세서 아키텍처 설명을 포함 되어 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-119">Specifies that the processor architecture description is included.</span></span>|  
-|`afPA_Shift`|<span data-ttu-id="9d658-120">프로세서 아키텍처 플래그 인덱스에서 시프트 횟수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-120">Indicates a shift count in the processor architecture flags to and from the index.</span></span>|  
-|`afEnableJITcompileTracking`|<span data-ttu-id="9d658-121">해당 값을 나타냅니다는 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 의 <xref:System.Diagnostics.DebuggableAttribute>합니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-121">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
-|`afDisableJITcompileOptimizer`|<span data-ttu-id="9d658-122">해당 값을 나타냅니다는 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 의 <xref:System.Diagnostics.DebuggableAttribute>합니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-122">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
-|`afRetargetable`|<span data-ttu-id="9d658-123">어셈블리가 다른 게시자의 어셈블리에 실행 시 대상이 될 수 있는지를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-123">Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.</span></span>|  
-|`afContentType_Mask`|<span data-ttu-id="9d658-124">콘텐츠 형식을 설명 하는 마스크입니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-124">A mask that describes the content type.</span></span>|  
-|`afContentType_Default`|<span data-ttu-id="9d658-125">기본 콘텐츠 형식을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-125">Indicates the default content type.</span></span>|  
-|`afContentType_WindowsRuntime`|<span data-ttu-id="9d658-126">나타냅니다는 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 콘텐츠 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-126">Indicates the [!INCLUDE[wrt](../../../../includes/wrt-md.md)] content type.</span></span>|  
+|`afPublicKey`|<span data-ttu-id="95dfb-108">어셈블리 참조는 전체, 해시 되지 않은 공개 키 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-108">Indicates that the assembly reference holds the full, unhashed public key.</span></span>|  
+|`afPA_None`|<span data-ttu-id="95dfb-109">프로세서 아키텍처 지정 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-109">Indicates that the processor architecture is unspecified.</span></span>|  
+|`afPA_MSIL`|<span data-ttu-id="95dfb-110">프로세서 아키텍처 중립 임을 나타냅니다 (PE32).</span><span class="sxs-lookup"><span data-stu-id="95dfb-110">Indicates that the processor architecture is neutral (PE32).</span></span>|  
+|`afPA_x86`|<span data-ttu-id="95dfb-111">프로세서 아키텍처 x86 (PE32) 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-111">Indicates that the processor architecture is x86 (PE32).</span></span>|  
+|`afPA_IA64`|<span data-ttu-id="95dfb-112">프로세서 아키텍처 Itanium (PE32 +) 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-112">Indicates that the processor architecture is Itanium (PE32+).</span></span>|  
+|`afPA_AMD64`|<span data-ttu-id="95dfb-113">프로세서 아키텍처 AMD X64 (PE32 +) 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-113">Indicates that the processor architecture is AMD X64 (PE32+).</span></span>|  
+|`afPA_ARM`|<span data-ttu-id="95dfb-114">프로세서 아키텍처 ARM (PE32) 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-114">Indicates that the processor architecture is ARM (PE32).</span></span>|  
+|`afPA_NoPlatform`|<span data-ttu-id="95dfb-115">어셈블리가 참조 어셈블리; 임을 나타냅니다. 즉, 모든 아키텍처에 적용 되지만 모든 아키텍처에서 실행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-115">Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture.</span></span> <span data-ttu-id="95dfb-116">따라서 플래그는 동일 `afPA_Mask`합니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-116">Thus, the flag is the same as `afPA_Mask`.</span></span>|  
+|`afPA_Specified`|<span data-ttu-id="95dfb-117">프로세서 아키텍처 플래그에 전파 해야 있는지 나타냅니다는 `AssemblyRef` 레코드입니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-117">Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.</span></span>|  
+|`afPA_Mask`|<span data-ttu-id="95dfb-118">프로세서 아키텍처를 설명 하는 마스크입니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-118">A mask that describes the processor architecture.</span></span>|  
+|`afPA_FullMask`|<span data-ttu-id="95dfb-119">프로세서 아키텍처 설명을 포함 되어 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-119">Specifies that the processor architecture description is included.</span></span>|  
+|`afPA_Shift`|<span data-ttu-id="95dfb-120">프로세서 아키텍처 플래그 인덱스에서 시프트 횟수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-120">Indicates a shift count in the processor architecture flags to and from the index.</span></span>|  
+|`afEnableJITcompileTracking`|<span data-ttu-id="95dfb-121">해당 값을 나타냅니다는 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 의 <xref:System.Diagnostics.DebuggableAttribute>합니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-121">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
+|`afDisableJITcompileOptimizer`|<span data-ttu-id="95dfb-122">해당 값을 나타냅니다는 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 의 <xref:System.Diagnostics.DebuggableAttribute>합니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-122">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
+|`afRetargetable`|<span data-ttu-id="95dfb-123">어셈블리가 다른 게시자의 어셈블리에 실행 시 대상이 될 수 있는지를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-123">Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.</span></span>|  
+|`afContentType_Mask`|<span data-ttu-id="95dfb-124">콘텐츠 형식을 설명 하는 마스크입니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-124">A mask that describes the content type.</span></span>|  
+|`afContentType_Default`|<span data-ttu-id="95dfb-125">기본 콘텐츠 형식을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-125">Indicates the default content type.</span></span>|  
+|`afContentType_WindowsRuntime`|<span data-ttu-id="95dfb-126">나타냅니다는 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 콘텐츠 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-126">Indicates the [!INCLUDE[wrt](../../../../includes/wrt-md.md)] content type.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9d658-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9d658-127">Requirements</span></span>  
- <span data-ttu-id="9d658-128">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9d658-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="95dfb-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="95dfb-127">Requirements</span></span>  
+ <span data-ttu-id="95dfb-128">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="95dfb-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9d658-129">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="9d658-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="95dfb-129">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="95dfb-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="9d658-130">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d658-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="95dfb-130">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95dfb-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d658-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9d658-131">See Also</span></span>  
- [<span data-ttu-id="9d658-132">메타 데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="9d658-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="95dfb-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="95dfb-131">See Also</span></span>  
+ [<span data-ttu-id="95dfb-132">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="95dfb-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

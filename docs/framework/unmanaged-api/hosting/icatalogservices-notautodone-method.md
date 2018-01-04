@@ -21,20 +21,21 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e04adddc51f4d43d32b9a30ffcbdc7dafe213c76
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bc654c30c40def337bd23e54eccd3e29cd0f81b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="b186a-102">ICatalogServices::NotAutodone 메서드</span><span class="sxs-lookup"><span data-stu-id="b186a-102">ICatalogServices::NotAutodone Method</span></span>
-<span data-ttu-id="b186a-103">이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b186a-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="e6b29-102">ICatalogServices::NotAutodone 메서드</span><span class="sxs-lookup"><span data-stu-id="e6b29-102">ICatalogServices::NotAutodone Method</span></span>
+<span data-ttu-id="e6b29-103">이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e6b29-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b186a-104">구문</span><span class="sxs-lookup"><span data-stu-id="b186a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6b29-104">구문</span><span class="sxs-lookup"><span data-stu-id="e6b29-104">Syntax</span></span>  
   
 ```  
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b186a-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b186a-105">See Also</span></span>  
- [<span data-ttu-id="b186a-106">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b186a-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="e6b29-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e6b29-105">See Also</span></span>  
+ [<span data-ttu-id="e6b29-106">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e6b29-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

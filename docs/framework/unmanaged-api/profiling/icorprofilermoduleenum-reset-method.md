@@ -21,32 +21,33 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 76c43a09b58d7e28c52bb048e33d8b79b2e206cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32fc5a6b32361b0d99dd10555d71873ac89cd7c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="4505e-102">ICorProfilerModuleEnum::Reset 메서드</span><span class="sxs-lookup"><span data-stu-id="4505e-102">ICorProfilerModuleEnum::Reset Method</span></span>
-<span data-ttu-id="4505e-103">이 열거자의이 커서를 시퀀스의 시작 위치로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="4505e-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="2ac63-102">ICorProfilerModuleEnum::Reset 메서드</span><span class="sxs-lookup"><span data-stu-id="2ac63-102">ICorProfilerModuleEnum::Reset Method</span></span>
+<span data-ttu-id="2ac63-103">이 열거자의이 커서를 시퀀스의 시작 위치로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="2ac63-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4505e-104">구문</span><span class="sxs-lookup"><span data-stu-id="4505e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ac63-104">구문</span><span class="sxs-lookup"><span data-stu-id="2ac63-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="4505e-105">설명</span><span class="sxs-lookup"><span data-stu-id="4505e-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ac63-105">설명</span><span class="sxs-lookup"><span data-stu-id="2ac63-105">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4505e-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4505e-106">Requirements</span></span>  
- <span data-ttu-id="4505e-107">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4505e-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ac63-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2ac63-106">Requirements</span></span>  
+ <span data-ttu-id="2ac63-107">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2ac63-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4505e-108">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4505e-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2ac63-108">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2ac63-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="4505e-109">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4505e-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2ac63-109">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ac63-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4505e-110">**.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4505e-110">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="2ac63-110">**.NET framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ac63-110">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4505e-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4505e-111">See Also</span></span>  
- [<span data-ttu-id="4505e-112">ICorProfilerModuleEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4505e-112">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
- [<span data-ttu-id="4505e-113">프로 파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4505e-113">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="2ac63-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2ac63-111">See Also</span></span>  
+ [<span data-ttu-id="2ac63-112">ICorProfilerModuleEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2ac63-112">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
+ [<span data-ttu-id="2ac63-113">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2ac63-113">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9da8dd44d5b87cd1c65b8b8837c9dd378039d332
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 59e36f9285f57b54935e40243e87d44b687686da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a><span data-ttu-id="e02ef-102">ICorProfilerCallback::ManagedToUnmanagedTransition 메서드</span><span class="sxs-lookup"><span data-stu-id="e02ef-102">ICorProfilerCallback::ManagedToUnmanagedTransition Method</span></span>
-<span data-ttu-id="e02ef-103">관리 코드에서 비관리 코드로 전환 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="e02ef-103">Notifies the profiler that a transition from managed code to unmanaged code has occurred.</span></span>  
+# <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a><span data-ttu-id="d4c1e-102">ICorProfilerCallback::ManagedToUnmanagedTransition 메서드</span><span class="sxs-lookup"><span data-stu-id="d4c1e-102">ICorProfilerCallback::ManagedToUnmanagedTransition Method</span></span>
+<span data-ttu-id="d4c1e-103">관리 코드에서 비관리 코드로 전환 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="d4c1e-103">Notifies the profiler that a transition from managed code to unmanaged code has occurred.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e02ef-104">구문</span><span class="sxs-lookup"><span data-stu-id="e02ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4c1e-104">구문</span><span class="sxs-lookup"><span data-stu-id="d4c1e-104">Syntax</span></span>  
   
 ```  
 HRESULT ManagedToUnmanagedTransition(  
@@ -38,26 +39,26 @@ HRESULT ManagedToUnmanagedTransition(
     [in] COR_PRF_TRANSITION_REASON reason);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e02ef-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e02ef-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d4c1e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d4c1e-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="e02ef-106">[in] 호출 되는 함수의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="e02ef-106">[in] The ID of the function that is being called.</span></span>  
+ <span data-ttu-id="d4c1e-106">[in] 호출 되는 함수의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="d4c1e-106">[in] The ID of the function that is being called.</span></span>  
   
  `reason`  
- <span data-ttu-id="e02ef-107">[in] 값은 [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) 전환 관리 코드에서 비관리 코드로 호출으로 인해 또는 관리 되는 함수에 의해 관리 되지 않는 호출에서 반환 된 오류로 인해 발생 했는지 여부를 나타내는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="e02ef-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.</span></span>  
+ <span data-ttu-id="d4c1e-107">[in] 값은 [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) 전환 관리 코드에서 비관리 코드로 호출으로 인해 또는 관리 되는 함수에 의해 관리 되지 않는 호출에서 반환 된 오류로 인해 발생 했는지 여부를 나타내는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="d4c1e-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into unmanaged code from managed code, or because of a return from a managed function called by an unmanaged one.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e02ef-108">설명</span><span class="sxs-lookup"><span data-stu-id="e02ef-108">Remarks</span></span>  
- <span data-ttu-id="e02ef-109">하는 경우의 값 `reason` COR_PRF_TRANSITION_CALL, 함수는 관리 되지 않는 함수는 됩니다 하지 컴파일된-just-in-time 컴파일러를 사용 하 여 ID가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e02ef-109">If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler.</span></span> <span data-ttu-id="e02ef-110">관리 되지 않는 함수 그와 관련 된 이름 및 몇 가지 메타 데이터와 같은 기본 정보를 갖고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e02ef-110">Unmanaged functions have basic information associated with them, such as a name and some metadata.</span></span> <span data-ttu-id="e02ef-111">암시적 플랫폼을 사용 하 여 관리 되지 않는 함수가 호출 되 면 호출 (PInvoke), 런타임에서 호출의 대상 및 값을 확인할 수 없습니다 `functionId` null이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e02ef-111">If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null.</span></span> <span data-ttu-id="e02ef-112">암시적 PInvoke에 대 한 자세한 내용은 참조 하십시오. [c + + Interop를 사용 하 여 (암시적 PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)합니다.</span><span class="sxs-lookup"><span data-stu-id="e02ef-112">For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d4c1e-108">설명</span><span class="sxs-lookup"><span data-stu-id="d4c1e-108">Remarks</span></span>  
+ <span data-ttu-id="d4c1e-109">하는 경우의 값 `reason` COR_PRF_TRANSITION_CALL, 함수는 관리 되지 않는 함수는 됩니다 하지 컴파일된-just-in-time 컴파일러를 사용 하 여 ID가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d4c1e-109">If the value of `reason` is COR_PRF_TRANSITION_CALL, the function ID is that of the unmanaged function, which will never have been compiled using the just-in-time compiler.</span></span> <span data-ttu-id="d4c1e-110">관리 되지 않는 함수 그와 관련 된 이름 및 몇 가지 메타 데이터와 같은 기본 정보를 갖고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4c1e-110">Unmanaged functions have basic information associated with them, such as a name and some metadata.</span></span> <span data-ttu-id="d4c1e-111">암시적 플랫폼을 사용 하 여 관리 되지 않는 함수가 호출 되 면 호출 (PInvoke), 런타임에서 호출의 대상 및 값을 확인할 수 없습니다 `functionId` null이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d4c1e-111">If the unmanaged function was called by using implicit platform invoke (PInvoke), the runtime cannot determine the destination of the call and the value of `functionId` will be null.</span></span> <span data-ttu-id="d4c1e-112">암시적 PInvoke에 대 한 자세한 내용은 참조 하십시오. [c + + Interop를 사용 하 여 (암시적 PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)합니다.</span><span class="sxs-lookup"><span data-stu-id="d4c1e-112">For more information on implicit PInvoke, see [Using C++ Interop (Implicit PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e02ef-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e02ef-113">Requirements</span></span>  
- <span data-ttu-id="e02ef-114">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e02ef-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4c1e-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d4c1e-113">Requirements</span></span>  
+ <span data-ttu-id="d4c1e-114">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d4c1e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e02ef-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e02ef-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d4c1e-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d4c1e-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e02ef-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e02ef-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d4c1e-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4c1e-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e02ef-117">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e02ef-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d4c1e-117">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4c1e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e02ef-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e02ef-118">See Also</span></span>  
- [<span data-ttu-id="e02ef-119">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e02ef-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="e02ef-120">UnmanagedToManagedTransition 메서드</span><span class="sxs-lookup"><span data-stu-id="e02ef-120">UnmanagedToManagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)  
- [<span data-ttu-id="e02ef-121">C++에서 명시적 PInvoke 사용(DllImport 특성)</span><span class="sxs-lookup"><span data-stu-id="e02ef-121">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+## <a name="see-also"></a><span data-ttu-id="d4c1e-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d4c1e-118">See Also</span></span>  
+ [<span data-ttu-id="d4c1e-119">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d4c1e-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [<span data-ttu-id="d4c1e-120">UnmanagedToManagedTransition 메서드</span><span class="sxs-lookup"><span data-stu-id="d4c1e-120">UnmanagedToManagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)  
+ [<span data-ttu-id="d4c1e-121">C++에서 명시적 PInvoke 사용(DllImport 특성)</span><span class="sxs-lookup"><span data-stu-id="d4c1e-121">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)

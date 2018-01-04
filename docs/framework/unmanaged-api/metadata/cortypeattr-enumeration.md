@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ab9ce555406dfeb16f99601e6b88af2395c91ae0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 501488c0ac03ebf508145572ed73163d7940bfbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cortypeattr-enumeration"></a><span data-ttu-id="389dd-102">CorTypeAttr 열거형</span><span class="sxs-lookup"><span data-stu-id="389dd-102">CorTypeAttr Enumeration</span></span>
-<span data-ttu-id="389dd-103">형식 메타데이터를 나타내는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-103">Contains values that indicate type metadata.</span></span>  
+# <a name="cortypeattr-enumeration"></a><span data-ttu-id="301ee-102">CorTypeAttr 열거형</span><span class="sxs-lookup"><span data-stu-id="301ee-102">CorTypeAttr Enumeration</span></span>
+<span data-ttu-id="301ee-103">형식 메타데이터를 나타내는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-103">Contains values that indicate type metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="389dd-104">구문</span><span class="sxs-lookup"><span data-stu-id="389dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="301ee-104">구문</span><span class="sxs-lookup"><span data-stu-id="301ee-104">Syntax</span></span>  
   
 ```  
 typedef enum CorTypeAttr {  
@@ -77,50 +78,50 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="389dd-105">멤버</span><span class="sxs-lookup"><span data-stu-id="389dd-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="301ee-105">멤버</span><span class="sxs-lookup"><span data-stu-id="301ee-105">Members</span></span>  
   
-|<span data-ttu-id="389dd-106">멤버</span><span class="sxs-lookup"><span data-stu-id="389dd-106">Member</span></span>|<span data-ttu-id="389dd-107">설명</span><span class="sxs-lookup"><span data-stu-id="389dd-107">Description</span></span>|  
+|<span data-ttu-id="301ee-106">멤버</span><span class="sxs-lookup"><span data-stu-id="301ee-106">Member</span></span>|<span data-ttu-id="301ee-107">설명</span><span class="sxs-lookup"><span data-stu-id="301ee-107">Description</span></span>|  
 |------------|-----------------|  
-|`tdVisibilityMask`|<span data-ttu-id="389dd-108">형식 표시 유형 정보에 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-108">Used for type visibility information.</span></span>|  
-|`tdNotPublic`|<span data-ttu-id="389dd-109">형식을 공용 범위에 있지 않음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-109">Specifies that the type is not in public scope.</span></span>|  
-|`tdPublic`|<span data-ttu-id="389dd-110">형식이 공용 범위에 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-110">Specifies that the type is in public scope.</span></span>|  
-|`tdNestedPublic`|<span data-ttu-id="389dd-111">형식을 공용 표시 유형으로 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-111">Specifies that the type is nested with public visibility.</span></span>|  
-|`tdNestedPrivate`|<span data-ttu-id="389dd-112">전용 표시 유형으로 유형을 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-112">Specifies that the type is nested with private visibility.</span></span>|  
-|`tdNestedFamily`|<span data-ttu-id="389dd-113">형식 패밀리 표시 유형으로 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-113">Specifies that the type is nested with family visibility.</span></span>|  
-|`tdNestedAssembly`|<span data-ttu-id="389dd-114">유형 어셈블리 표시 유형이 있는 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-114">Specifies that the type is nested with assembly visibility.</span></span>|  
-|`tdNestedFamANDAssem`|<span data-ttu-id="389dd-115">형식 패밀리 및 어셈블리 표시 유형으로 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-115">Specifies that the type is nested with family and assembly visibility.</span></span>|  
-|`tdNestedFamORAssem`|<span data-ttu-id="389dd-116">패밀리 또는 어셈블리 표시 유형으로 유형을 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-116">Specifies that the type is nested with family or assembly visibility.</span></span>|  
-|`tdLayoutMask`|<span data-ttu-id="389dd-117">유형에 대 한 레이아웃 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-117">Gets layout information for the type.</span></span>|  
-|`tdAutoLayout`|<span data-ttu-id="389dd-118">이 형식의 필드가 자동으로 배치 되는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-118">Specifies that the fields of this type are laid out automatically.</span></span>|  
-|`tdSequentialLayout`|<span data-ttu-id="389dd-119">이 형식의 필드가 순차적으로 레이아웃 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-119">Specifies that the fields of this type are laid out sequentially.</span></span>|  
-|`tdExplicitLayout`|<span data-ttu-id="389dd-120">해당 필드 레이아웃을 명시적으로 제공 됨을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-120">Specifies that field layout is supplied explicitly.</span></span>|  
-|`tdClassSemanticsMask`|<span data-ttu-id="389dd-121">유형에 대 한 의미 체계 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-121">Gets semantic information about the type.</span></span>|  
-|`tdClass`|<span data-ttu-id="389dd-122">형식을 클래스로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-122">Specifies that the type is a class.</span></span>|  
-|`tdInterface`|<span data-ttu-id="389dd-123">형식을 인터페이스로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-123">Specifies that the type is an interface.</span></span>|  
-|`tdAbstract`|<span data-ttu-id="389dd-124">형식을 추상으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-124">Specifies that the type is abstract.</span></span>|  
-|`tdSealed`|<span data-ttu-id="389dd-125">형식을 확장할 수 없습니다 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-125">Specifies that the type cannot be extended.</span></span>|  
-|`tdSpecialName`|<span data-ttu-id="389dd-126">특별 한 클래스 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-126">Specifies that the class name is special.</span></span> <span data-ttu-id="389dd-127">이름에 설명 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-127">Its name describes how.</span></span>|  
-|`tdImport`|<span data-ttu-id="389dd-128">형식을 가져오도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-128">Specifies that the type is imported.</span></span>|  
-|`tdSerializable`|<span data-ttu-id="389dd-129">유형이 직렬화 가능 인지 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-129">Specifies that the type is serializable.</span></span>|  
-|`tdWindowsRuntime`|<span data-ttu-id="389dd-130">이 형식이 임을 지정는 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-130">Specifies that this type is a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.</span></span>|  
-|`tdStringFormatMask`|<span data-ttu-id="389dd-131">문자열 인코딩 및 포맷 하는 방법에 대 한 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-131">Gets information about how strings are encoded and formatted.</span></span>|  
-|`tdAnsiClass`|<span data-ttu-id="389dd-132">이 형식은 LPTSTR ANSI로 해석 하는 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-132">Specifies that this type interprets an LPTSTR as ANSI.</span></span>|  
-|`tdUnicodeClass`|<span data-ttu-id="389dd-133">이 형식은 LPTSTR 유니코드로 해석 하는 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-133">Specifies that this type interprets an LPTSTR as Unicode.</span></span>|  
-|`tdAutoClass`|<span data-ttu-id="389dd-134">이 형식은 LPTSTR를 자동으로 해석 하는 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-134">Specifies that this type interprets an LPTSTR automatically.</span></span>|  
-|`tdCustomFormatClass`|<span data-ttu-id="389dd-135">비표준 인코딩 형식을 갖도록 지정 하 여 지정 된 대로 `CustomFormatMask`합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-135">Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.</span></span>|  
-|`tdCustomFormatMask`|<span data-ttu-id="389dd-136">이 마스크를 사용 하 여 네이티브 interop에 대 한 비표준 인코딩 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-136">Use this mask to get non-standard encoding information for native interop.</span></span> <span data-ttu-id="389dd-137">이러한 두 비트 값의 의미는 지정 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-137">The meaning of the values of these two bits is unspecified.</span></span>|  
-|`tdBeforeFieldInit`|<span data-ttu-id="389dd-138">지정 형식 정적 필드에 액세스 하려면 첫 번째 시도 하기 전에 초기화 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-138">Specifies that the type must be initialized before the first attempt to access a static field.</span></span>|  
-|`tdForwarder`|<span data-ttu-id="389dd-139">형식을 내보내도록 지정 하 고 형식 전달자입니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-139">Specifies that the type is exported, and a type forwarder.</span></span>|  
-|`tdReservedMask`|<span data-ttu-id="389dd-140">이 플래그와 아래 플래그는 공용 언어 런타임에 의해 내부적으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-140">This flag and the flags below are used internally by the common language runtime.</span></span>|  
-|`tdRTSpecialName`|<span data-ttu-id="389dd-141">공용 언어 런타임에서 이름 인코딩을 확인 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-141">Specifies that the common language runtime should check the name encoding.</span></span>|  
-|`tdHasSecurity`|<span data-ttu-id="389dd-142">연결 된 보안 형식을 갖도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-142">Specifies that the type has security associated with it.</span></span>|  
+|`tdVisibilityMask`|<span data-ttu-id="301ee-108">형식 표시 유형 정보에 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-108">Used for type visibility information.</span></span>|  
+|`tdNotPublic`|<span data-ttu-id="301ee-109">형식을 공용 범위에 있지 않음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-109">Specifies that the type is not in public scope.</span></span>|  
+|`tdPublic`|<span data-ttu-id="301ee-110">형식이 공용 범위에 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-110">Specifies that the type is in public scope.</span></span>|  
+|`tdNestedPublic`|<span data-ttu-id="301ee-111">형식을 공용 표시 유형으로 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-111">Specifies that the type is nested with public visibility.</span></span>|  
+|`tdNestedPrivate`|<span data-ttu-id="301ee-112">전용 표시 유형으로 유형을 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-112">Specifies that the type is nested with private visibility.</span></span>|  
+|`tdNestedFamily`|<span data-ttu-id="301ee-113">형식 패밀리 표시 유형으로 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-113">Specifies that the type is nested with family visibility.</span></span>|  
+|`tdNestedAssembly`|<span data-ttu-id="301ee-114">유형 어셈블리 표시 유형이 있는 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-114">Specifies that the type is nested with assembly visibility.</span></span>|  
+|`tdNestedFamANDAssem`|<span data-ttu-id="301ee-115">형식 패밀리 및 어셈블리 표시 유형으로 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-115">Specifies that the type is nested with family and assembly visibility.</span></span>|  
+|`tdNestedFamORAssem`|<span data-ttu-id="301ee-116">패밀리 또는 어셈블리 표시 유형으로 유형을 중첩 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-116">Specifies that the type is nested with family or assembly visibility.</span></span>|  
+|`tdLayoutMask`|<span data-ttu-id="301ee-117">유형에 대 한 레이아웃 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-117">Gets layout information for the type.</span></span>|  
+|`tdAutoLayout`|<span data-ttu-id="301ee-118">이 형식의 필드가 자동으로 배치 되는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-118">Specifies that the fields of this type are laid out automatically.</span></span>|  
+|`tdSequentialLayout`|<span data-ttu-id="301ee-119">이 형식의 필드가 순차적으로 레이아웃 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-119">Specifies that the fields of this type are laid out sequentially.</span></span>|  
+|`tdExplicitLayout`|<span data-ttu-id="301ee-120">해당 필드 레이아웃을 명시적으로 제공 됨을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-120">Specifies that field layout is supplied explicitly.</span></span>|  
+|`tdClassSemanticsMask`|<span data-ttu-id="301ee-121">유형에 대 한 의미 체계 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-121">Gets semantic information about the type.</span></span>|  
+|`tdClass`|<span data-ttu-id="301ee-122">형식을 클래스로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-122">Specifies that the type is a class.</span></span>|  
+|`tdInterface`|<span data-ttu-id="301ee-123">형식을 인터페이스로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-123">Specifies that the type is an interface.</span></span>|  
+|`tdAbstract`|<span data-ttu-id="301ee-124">형식을 추상으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-124">Specifies that the type is abstract.</span></span>|  
+|`tdSealed`|<span data-ttu-id="301ee-125">형식을 확장할 수 없습니다 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-125">Specifies that the type cannot be extended.</span></span>|  
+|`tdSpecialName`|<span data-ttu-id="301ee-126">특별 한 클래스 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-126">Specifies that the class name is special.</span></span> <span data-ttu-id="301ee-127">이름에 설명 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-127">Its name describes how.</span></span>|  
+|`tdImport`|<span data-ttu-id="301ee-128">형식을 가져오도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-128">Specifies that the type is imported.</span></span>|  
+|`tdSerializable`|<span data-ttu-id="301ee-129">유형이 직렬화 가능 인지 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-129">Specifies that the type is serializable.</span></span>|  
+|`tdWindowsRuntime`|<span data-ttu-id="301ee-130">이 형식이 임을 지정는 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-130">Specifies that this type is a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.</span></span>|  
+|`tdStringFormatMask`|<span data-ttu-id="301ee-131">문자열 인코딩 및 포맷 하는 방법에 대 한 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-131">Gets information about how strings are encoded and formatted.</span></span>|  
+|`tdAnsiClass`|<span data-ttu-id="301ee-132">이 형식은 LPTSTR ANSI로 해석 하는 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-132">Specifies that this type interprets an LPTSTR as ANSI.</span></span>|  
+|`tdUnicodeClass`|<span data-ttu-id="301ee-133">이 형식은 LPTSTR 유니코드로 해석 하는 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-133">Specifies that this type interprets an LPTSTR as Unicode.</span></span>|  
+|`tdAutoClass`|<span data-ttu-id="301ee-134">이 형식은 LPTSTR를 자동으로 해석 하는 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-134">Specifies that this type interprets an LPTSTR automatically.</span></span>|  
+|`tdCustomFormatClass`|<span data-ttu-id="301ee-135">비표준 인코딩 형식을 갖도록 지정 하 여 지정 된 대로 `CustomFormatMask`합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-135">Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.</span></span>|  
+|`tdCustomFormatMask`|<span data-ttu-id="301ee-136">이 마스크를 사용 하 여 네이티브 interop에 대 한 비표준 인코딩 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-136">Use this mask to get non-standard encoding information for native interop.</span></span> <span data-ttu-id="301ee-137">이러한 두 비트 값의 의미는 지정 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-137">The meaning of the values of these two bits is unspecified.</span></span>|  
+|`tdBeforeFieldInit`|<span data-ttu-id="301ee-138">지정 형식 정적 필드에 액세스 하려면 첫 번째 시도 하기 전에 초기화 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-138">Specifies that the type must be initialized before the first attempt to access a static field.</span></span>|  
+|`tdForwarder`|<span data-ttu-id="301ee-139">형식을 내보내도록 지정 하 고 형식 전달자입니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-139">Specifies that the type is exported, and a type forwarder.</span></span>|  
+|`tdReservedMask`|<span data-ttu-id="301ee-140">이 플래그와 아래 플래그는 공용 언어 런타임에 의해 내부적으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-140">This flag and the flags below are used internally by the common language runtime.</span></span>|  
+|`tdRTSpecialName`|<span data-ttu-id="301ee-141">공용 언어 런타임에서 이름 인코딩을 확인 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-141">Specifies that the common language runtime should check the name encoding.</span></span>|  
+|`tdHasSecurity`|<span data-ttu-id="301ee-142">연결 된 보안 형식을 갖도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-142">Specifies that the type has security associated with it.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="389dd-143">요구 사항</span><span class="sxs-lookup"><span data-stu-id="389dd-143">Requirements</span></span>  
- <span data-ttu-id="389dd-144">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="389dd-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="301ee-143">요구 사항</span><span class="sxs-lookup"><span data-stu-id="301ee-143">Requirements</span></span>  
+ <span data-ttu-id="301ee-144">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="301ee-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="389dd-145">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="389dd-145">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="301ee-145">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="301ee-145">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="389dd-146">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="389dd-146">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="301ee-146">**.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="301ee-146">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="389dd-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="389dd-147">See Also</span></span>  
- [<span data-ttu-id="389dd-148">메타 데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="389dd-148">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="301ee-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="301ee-147">See Also</span></span>  
+ [<span data-ttu-id="301ee-148">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="301ee-148">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

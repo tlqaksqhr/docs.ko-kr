@@ -19,16 +19,17 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d93002fe5460bfdb36d4e11c74410677b46a98d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50533ce25812ad49d538c5a6a6c814d7a9704053
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="userthread-structure"></a><span data-ttu-id="2f596-102">USER_THREAD 구조체</span><span class="sxs-lookup"><span data-stu-id="2f596-102">USER_THREAD Structure</span></span>
-<span data-ttu-id="2f596-103">디버거가 스레드에 대 한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2f596-103">Provides information to a debugger about a thread.</span></span> <span data-ttu-id="2f596-104">자세한 내용은 참조는 [inotifysource2:: Setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="2f596-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
+# <a name="userthread-structure"></a><span data-ttu-id="59d12-102">USER_THREAD 구조체</span><span class="sxs-lookup"><span data-stu-id="59d12-102">USER_THREAD Structure</span></span>
+<span data-ttu-id="59d12-103">디버거가 스레드에 대 한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="59d12-103">Provides information to a debugger about a thread.</span></span> <span data-ttu-id="59d12-104">자세한 내용은 참조는 [inotifysource2:: Setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="59d12-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2f596-105">구문</span><span class="sxs-lookup"><span data-stu-id="2f596-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59d12-105">구문</span><span class="sxs-lookup"><span data-stu-id="59d12-105">Syntax</span></span>  
   
 ```  
 typedef struct tagUSER_THREAD  
@@ -39,17 +40,17 @@ typedef struct tagUSER_THREAD
 } USER_THREAD;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2f596-106">멤버</span><span class="sxs-lookup"><span data-stu-id="2f596-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="59d12-106">멤버</span><span class="sxs-lookup"><span data-stu-id="59d12-106">Members</span></span>  
   
-|<span data-ttu-id="2f596-107">멤버</span><span class="sxs-lookup"><span data-stu-id="2f596-107">Member</span></span>|<span data-ttu-id="2f596-108">설명</span><span class="sxs-lookup"><span data-stu-id="2f596-108">Description</span></span>|  
+|<span data-ttu-id="59d12-107">멤버</span><span class="sxs-lookup"><span data-stu-id="59d12-107">Member</span></span>|<span data-ttu-id="59d12-108">설명</span><span class="sxs-lookup"><span data-stu-id="59d12-108">Description</span></span>|  
 |------------|-----------------|  
-|`pSidBuffer`|<span data-ttu-id="2f596-109">스레드 버퍼의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="2f596-109">Address of thread buffer.</span></span>|  
-|`dwSidLen`|<span data-ttu-id="2f596-110">스레드 버퍼의 바이트의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="2f596-110">Length of thread buffer, in bytes.</span></span>|  
-|`dwTid`|<span data-ttu-id="2f596-111">스레드 id입니다.</span><span class="sxs-lookup"><span data-stu-id="2f596-111">Thread ID.</span></span>|  
+|`pSidBuffer`|<span data-ttu-id="59d12-109">스레드 버퍼의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="59d12-109">Address of thread buffer.</span></span>|  
+|`dwSidLen`|<span data-ttu-id="59d12-110">스레드 버퍼의 바이트의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="59d12-110">Length of thread buffer, in bytes.</span></span>|  
+|`dwTid`|<span data-ttu-id="59d12-111">스레드 id입니다.</span><span class="sxs-lookup"><span data-stu-id="59d12-111">Thread ID.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2f596-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2f596-112">Requirements</span></span>  
- <span data-ttu-id="2f596-113">**헤더:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="2f596-113">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="59d12-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="59d12-112">Requirements</span></span>  
+ <span data-ttu-id="59d12-113">**헤더:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="59d12-113">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f596-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2f596-114">See Also</span></span>  
- [<span data-ttu-id="2f596-115">SetNotifyFilter 메서드</span><span class="sxs-lookup"><span data-stu-id="2f596-115">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)  
- [<span data-ttu-id="2f596-116">진단 기호 저장소 구조체</span><span class="sxs-lookup"><span data-stu-id="2f596-116">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a><span data-ttu-id="59d12-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="59d12-114">See Also</span></span>  
+ [<span data-ttu-id="59d12-115">SetNotifyFilter 메서드</span><span class="sxs-lookup"><span data-stu-id="59d12-115">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)  
+ [<span data-ttu-id="59d12-116">진단 기호 저장소 구조체</span><span class="sxs-lookup"><span data-stu-id="59d12-116">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
