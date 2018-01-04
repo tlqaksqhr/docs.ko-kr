@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing"></a>추적
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서는 오류 모니터링 및 분석을 위한 응용 프로그램 계측 및 진단 데이터를 제공합니다. 응용 프로그램의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다. 종단 간 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/02/2017
   
 -   추적 기능 오작동 시 Windows 오류 이벤트.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
   
  이 항목에서는 특정 요구를 충족하기 위해 여러 수준에서 추적을 구성할 수 있는 방법에 대해 설명합니다.  
@@ -37,11 +38,11 @@ ms.lasthandoff: 12/02/2017
   
  이 단원에서는 디버깅을 지원하기 위해 종단 간 상관 관계에 대한 동작 추적 및 전파를 사용할 수 있는 방법에 대해 설명합니다.  
   
- [추적을 사용 하 여 응용 프로그램 문제를 해결 하려면](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  이 단원에서는 응용 프로그램을 디버깅하기 위해 추적을 사용할 수 있는 방법에 대해 설명합니다.  
   
- [보안 고려 사항 및 추적에 대 한 유용한 팁](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [보안 고려 사항 및 추적에 대한 유용한 정보](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
   
  이 항목에서는 WebHost를 사용할 때의 유용한 팁뿐만 아니라 중요한 정보가 노출되지 않도록 보호할 수 있는 방법에 대해 설명합니다.  
   

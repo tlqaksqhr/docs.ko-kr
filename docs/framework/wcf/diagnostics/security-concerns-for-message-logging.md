@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 1f3d62e8b6771666dd3a55855ca0c5e41853f439
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-concerns-for-message-logging"></a>메시지 로깅에 대한 보안 고려 사항
 이 항목에서는 메시지 로깅에 의해 생성된 이벤트뿐 아니라 중요한 데이터가 메시지 로그에서 노출되지 않도록 보호하는 방법에 대해 설명합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 팁은 로그 파일의 내용이 실수로 노출되지 않도록 보호하는 데 도움이 될 수 있습니다.  
   
--   로그 파일이 웹 호스트 및 자체 호스트 시나리오 둘 다에서 ACL(액세스 제어 목록)을 통해 보호되는지 확인합니다.  
+-   로그 파일이 웹 호스트 및 자체 호스트 시나리오 둘 다에서 ACL(Access Control 목록)을 통해 보호되는지 확인합니다.  
   
 -   웹 요청을 사용하여 쉽게 제공될 수 없는 파일 확장명을 선택합니다. 예를 들어 .xml 파일 확장명을 사용하는 것은 안전하지 않습니다. 제공될 수 있는 확장명 목록을 보기 위해 IIS(인터넷 정보 서비스) 관리 설명서를 확인할 수 있습니다.  
   
@@ -121,4 +122,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [메시지 로깅](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [보안 고려 사항 및 추적에 대 한 유용한 팁](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+ [보안 고려 사항 및 추적에 대한 유용한 정보](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

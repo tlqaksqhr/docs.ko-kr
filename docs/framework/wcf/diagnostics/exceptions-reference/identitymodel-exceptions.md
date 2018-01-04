@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f38d09ef9b1ee2e620b42082a05c6832eec7c746
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 예외
 이 항목에서는 IdentityModel에 의해 생성된 모든 예외를 보여 줍니다.  
@@ -285,7 +286,7 @@ ms.lasthandoff: 12/02/2017
 |SAMLAttributeNamespaceAttributeRequired|SamlAttribute에 지정된 'Namespace'는 null이거나 길이가 0일 수 없습니다.|  
 |TraceCodeSpnegoServiceNegotiationCompleted|SpnegoTokenAuthenticator가 SSPI 협상을 완료했습니다.|  
 |TraceCodeSecurityServerSessionRenewalFaultSent|서버 보안 세션에서 클라이언트로 키 갱신 오류를 보냈습니다.|  
-|AlgorithmMismatchForTransform|변환을 위한 알고리즘에서 불일치가 발생했습니다.|  
+|AlgorithmMismatchForTransform|변형을 위한 알고리즘에서 불일치가 발생했습니다.|  
 |UserNameAuthenticationFailed|지정된 메커니즘을 사용하여 사용자 이름/암호를 인증하지 못했습니다. 사용자가 인증되지 않습니다.|  
 |SamlInvalidSigningToken|SamlAssertion이 프로토콜에 따라 확인되지 않은 토큰으로 서명되었습니다. X.509 인증서를 사용하는 경우에는 유효성 검사 기능을 검토하십시오.|  
 |TraceCodeSecurityServerSessionKeyUpdated|서버에서 보안 세션 키를 업데이트했습니다.|  
@@ -304,5 +305,5 @@ ms.lasthandoff: 12/02/2017
 |UnableToCreateKeyedHashAlgorithmFromSymmetricCrypto|지정된 대칭 암호화에서 지정된 알고리즘에 대한 keyedHashAlgorithm을 만들 수 없습니다.|  
 |SAMLAuthenticationStatementMissingAuthenticationMethod|SamlAuthenticationStatement에 대해 지정된 'AuthenticationMethod'는 null이거나 길이가 0일 수 없습니다.|  
 |TraceCodeSecurityImpersonationFailure|서버에서 보안 가장을 실행하지 못했습니다.|  
-|기본값|(기본값)|  
+|기본|(기본값)|  
 |UnsupportedNodeTypeInReader|지정된 이름을 가진 지정된 노드 형식이 지원되지 않습니다.|

@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3f9834e99fb7fa98e2f986a1ce5460aa387143f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-performance-counters"></a>WCF 성능 카운터
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에는 응용 프로그램의 성능을 측정하는 데 도움이 되는 다양한 성능 카운터가 있습니다.  
@@ -83,7 +84,7 @@ config.Save();
 ## <a name="types-of-performance-counters"></a>성능 카운터 형식  
  성능 카운터의 범위는 서비스, 끝점 및 작업의 세 가지 수준입니다.  
   
- WMI를 사용하여 성능 카운터 인스턴스의 이름을 검색할 수 있습니다. 예를 들면 다음과 같습니다.  
+ WMI를 사용하여 성능 카운터 인스턴스의 이름을 검색할 수 있습니다. 예를 들어 개체에 적용된  
   
 -   WMI를 통해 서비스 카운터 인스턴스 이름을 가져올 수 [서비스](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) 인스턴스의 "CounterInstanceName" 속성입니다.  
   

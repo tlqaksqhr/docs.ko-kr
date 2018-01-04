@@ -13,18 +13,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing"></a>종단 간 추적
 E2E(종단 간) 추적을 사용하면 개발자가 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 인프라에서 코드 실행을 추적하여 코드 경로가 실패한 원인을 조사하고 용량 계획 및 성능 분석을 위한 추적 정보를 제공할 수 있습니다. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서는 오류의 원인을 진단하는 데 도움이 되는 동작, 전송 및 전파의 세 가지 상관 관계 메커니즘을 제공합니다.  
   
  참조 [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) 목록은 한 종단 간 추적 시나리오 및의 해당 활동 및 디자인을 추적 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [활동](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): 설명의 동작 추적에서 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 추적 모델입니다.  
   
  [전송](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): 전송에 설명 된 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 모델을 추적 하 고 사용 하 여 끝점 내의 동작 상호 연결 하 합니다.  

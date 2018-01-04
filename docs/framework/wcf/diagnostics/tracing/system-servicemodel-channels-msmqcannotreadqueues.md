@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4a02f7ed78339e62d73b871088efa12f8277ac6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ce5d3c5965fa6bb0e3a740ab2908adf8e16975a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqcannotreadqueues"></a>System.ServiceModel.Channels.MsmqCannotReadQueues
 System.ServiceModel.Channels.MsmqCannotReadQueues  
@@ -27,5 +28,5 @@ System.ServiceModel.Channels.MsmqCannotReadQueues
   
 ## <a name="see-also"></a>참고 항목  
  [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [추적을 사용 하 여 응용 프로그램 문제를 해결 하려면](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

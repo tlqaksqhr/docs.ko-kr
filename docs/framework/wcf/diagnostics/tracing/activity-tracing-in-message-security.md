@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 60156e284c55d765de417fe891185d1aba720816
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: db9b05217bbbf91bfc3cd315801b4e511f82d04c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-tracing-in-message-security"></a>메시지 보안의 동작 추적
 이 항목에서는 보안 처리에 대한 동작 추적에 대해 설명합니다. 동작 추적은 다음과 같은 세 가지 단계로 발생합니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/18/2017
 ||보안 전송<br /><br /> (HTTPS, SSL) 및 보안 메시지 계층<br /><br /> (WSHTTP)|  
 |-|---------------------------------------------------------------------------------|  
 |메시지 암호화/해독 및 서명 인증 발생 시기|메시지를 수신했을 때|  
-|작업|클라이언트 및 서버의 ProcessAction 동작에서 추적을 내보냅니다.|  
+|활동|클라이언트 및 서버의 ProcessAction 동작에서 추적을 내보냅니다.|  
 |추적|-sendSecurityHeader (발신자):<br />-메시지에 서명<br />-요청 데이터를 암호화 합니다.<br />-receiveSecurityHeader (수신자):<br />-서명을 확인 하십시오.<br />-응답 데이터 해독<br />-인증|  
   
 > [!NOTE]
@@ -63,4 +64,4 @@ ms.lasthandoff: 10/18/2017
 ||권한 부여 발생 시기|작업|추적|  
 |-|-------------------------------------|----------------|------------|  
 |로컬(기본값)|서버에서 메시지가 해독된 후|서버의 ProcessAction 동작에서 추적을 내보냅니다.|사용자에게 권한이 부여되었습니다.|  
-|원격|서버에서 메시지가 해독된 후|ProcessAction 동작에 의해 호출된 새로운 동작에서 추적을 내보냅니다.|사용자에게 권한이 부여되었습니다.|
+|Remote|서버에서 메시지가 해독된 후|ProcessAction 동작에 의해 호출된 새로운 동작에서 추적을 내보냅니다.|사용자에게 권한이 부여되었습니다.|

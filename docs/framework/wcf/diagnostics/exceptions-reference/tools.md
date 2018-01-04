@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 174459c23bd6ecd336394146b6d91e265cb820d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tools"></a>도구
 이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 도구에 의해 생성된 모든 예외를 보여 줍니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
 |WrnNoServiceContractTypes|지정된 어셈블리에 대한 XmlSerializer 형식을 생성할 수 없습니다. 서비스 계약 형식을 찾을 수 없습니다.|  
 |WrnCouldNotLoadTypesFromReferenceAssemblyAt|지정된 위치에서 로드된 어셈블리의 형식을 로드하는 동안 오류가 발생했습니다. 어셈블리의 일부 형식은 로드할 수 없고 도구에 사용할 수 없습니다.|  
 |ErrDirectoryPointsToAFile|지정된 잘못된 값이 지정된 옵션에 전달되었습니다. 지정된 값은 파일 경로입니다.|  
-|오류|오류:|  
+|Error|오류:|  
 |ErrDuplicateReferenceValues|지정된 어셈블리가 지정된 옵션을 사용하여 두 번 로드되었습니다. 어셈블리는 한 번만 참조할 수 있습니다.|  
 |WrnNoXmlSerializerOperationBehavior|지정된 어셈블리에 대한 XmlSerializer를 생성할 수 없습니다. 해당 어셈블리의 서비스 계약에 XmlSerializerOperationBehavior가 포함된 작업이 없습니다.|  
 |ErrCannotCreateDirectory|지정된 디렉터리를 만들 수 없습니다.|  

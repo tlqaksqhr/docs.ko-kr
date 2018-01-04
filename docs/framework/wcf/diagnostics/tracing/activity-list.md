@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c3b478d88eff022d8cb28f4123291f4662644ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-list"></a>동작 목록
 이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에 정의된 모든 동작을 나열합니다.  
@@ -28,10 +29,10 @@ ms.lasthandoff: 12/02/2017
 ## <a name="servicemodel-activities"></a>ServiceModel 동작  
  다음 표에서는 주요 사용 시나리오의 모든 동작을 보여 줍니다.  
   
-|레이블|동작 이름|활동 유형|설명|  
+|레이블|작업 이름|활동 유형|설명|  
 |-----------|-------------------|-------------------|-----------------|  
 |A, M|앰비언트 동작|해당 없음(ServiceModel에 의해 제어되지 않음)|ServiceModel 코드를 호출하기 이전에 TLS에 해당 ID가 설정되어 있는 동작입니다(클라이언트측 또는 서버측).<br /><br /> 예: open이 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 클라이언트에서 호출되거나 serviceHost.open이 호출되는 동작|  
-|B|구성<br /><br /> ChannelFactory. ContractType : ‘[Type]’.|구성||  
+|B|구문<br /><br /> ChannelFactory. ContractType : ‘[Type]’.|구성||  
 |C|열기<br /><br /> [ClientBase &#124; ChannelFactory]입니다. ContractType : ‘[Type]’.|열기||  
 |I|[ClientBase &#124; 닫기 ChannelFactory]입니다. ContractType : ‘[Type]’.|닫기||  
 |M|ServiceHost를 구성합니다. ServiceType: ‘[Type]’.|구성||  
@@ -46,14 +47,14 @@ ms.lasthandoff: 12/02/2017
 ## <a name="security-activities"></a>보안 동작  
  다음 표에서는 보안과 관련된 모든 동작을 보여 줍니다.  
   
-|동작 이름|활동 유형|설명|  
+|작업 이름|활동 유형|설명|  
 |-------------------|-------------------|-----------------|  
 |보안 세션 설정|SetupSecurity|클라이언트측에만 있습니다. 인증 및 보안 컨텍스트 설정을 위한 모든 RST*/SCT 교환을 포함합니다. 경우 `propagateActivity` = `true`,이 동작이 서비스의 해당 프로세스 작업 RST와 병합 됩니다\*/SCT 활동입니다.|  
 |보안 세션 닫기|SetupSecurity|클라이언트측에 있습니다. 보안 세션을 닫기 위한 취소 메시지 교환을 포함합니다. 경우 `propagateActivity` = `true`,이 동작이 서비스에서 "취소" 작업 처리와 병합 됩니다.|  
   
  다음 표에서는 COM+와 관련된 모든 동작을 보여 줍니다.  
   
-|동작 이름|활동 유형|설명|  
+|작업 이름|활동 유형|설명|  
 |-------------------|-------------------|-----------------|  
 |COM+ 인스턴스 만들기|TransferToCOMPlus|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 코드의 COM+ 호출별로 하나의 동작 인스턴스|  
 |COM + 실행 \<작업 >|TransferToCOMPlus|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 코드의 COM+ 호출별로 하나의 동작 인스턴스|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="wmi-activities"></a>WMI 동작  
  다음 표에서는 WMI와 관련된 모든 동작을 보여 줍니다.  
   
-|동작 이름|활동 유형|설명|  
+|작업 이름|활동 유형|설명|  
 |-------------------|-------------------|-----------------|  
 |WMI 가져오기|WMIGetObject|사용자가 WMI에서 데이터를 검색하고 있습니다.|  
 |WMI 넣기|WmiPutInstance|사용자가 WMI로 데이터를 업데이트하고 있습니다.|

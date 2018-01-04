@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 382197f2a8d2375903f286dc5aa54ce5dc632bce
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity"></a>활동
 이 항목에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 추적 모델의 동작 추적에 대해 설명합니다. 동작은 실패의 범위를 줄이도록 돕는 처리 단위입니다. 동일한 동작에서 발생하는 오류는 직접적으로 관련됩니다. 예를 들어 메시지 암호 해독이 실패하면 작업이 실패합니다. 작업 실패와 메시지 암호 해독 실패 둘 다에 대한 추적은 동일한 동작에서 나타나며, 암호 해독 오류와 요청 오류 사이의 직접적인 상관 관계를 보여 줍니다.  
@@ -105,7 +106,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   메시지 수신 또는 처리에 의해 트리거된 동작은 추적 경계로 표시됩니다.  
   
--   동작은 동작을 나타내며 반드시 개체를 나타내지는 않습니다. 활동으로 해석할지 "이 발생 된 경우. 입니다. 입니다. (의미 있는 추적 내보내기가 발생할 때) 발생했습니다."로 해석되어야 합니다.  
+-   동작은 동작을 나타내며 반드시 개체를 나타내지는 않습니다. 활동으로 해석할지 "이 발생 된 경우. 이어야 합니다. 이어야 합니다. (의미 있는 추적 내보내기가 발생할 때) 발생했습니다."로 해석되어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  

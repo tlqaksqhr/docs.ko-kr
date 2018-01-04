@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d4e8eee0ebc3702445b41d1f81742d18dfa98d44
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c7a134a60656c6ee237203b69e1bce40656f13d2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsconnectionpoolcloseexception"></a>System.ServiceModel.Channels.ConnectionPoolCloseException
 이 연결 풀에서 연결을 닫는 동안 예외가 발생했습니다.  
@@ -27,5 +28,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [추적을 사용 하 여 응용 프로그램 문제를 해결 하려면](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

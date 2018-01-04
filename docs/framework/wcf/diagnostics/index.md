@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d26386a0669c92b1b21559474c8f5f61862e6de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="administration-and-diagnostics"></a>관리 및 진단
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 응용 프로그램 수명의 다양한 단계를 모니터링할 수 있도록 도와주는 다양한 기능을 제공합니다. 예를 들어 구성을 사용하여 배포 시 서비스와 클라이언트를 설정할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 응용 프로그램의 성능을 측정하는 데 도움이 되는 다양한 성능 카운터가 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WMI(Windows Management Instrumentation) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출합니다. 응용 프로그램이 실패하거나 실행을 잘못 시작할 때 이벤트 로그를 사용하여 중요한 이벤트가 발생했는지 여부를 확인할 수 있습니다. 메시지 로깅 및 추적을 사용하여 응용 프로그램의 종단 간에 발생한 이벤트를 확인할 수도 있습니다. 이러한 기능은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 올바르게 작동하지 않을 때 개발자 및 IT 전문가가 문제를 해결하는 데 도움이 됩니다.  
@@ -59,6 +60,6 @@ ms.lasthandoff: 12/02/2017
  [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [ServiceModel 등록 도구](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)  
  [추적](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Windows Management Instrumentation를 사용 하 여 진단에 대 한](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
+ [진단에 WMI(Windows Management Instrumentation) 사용](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
  [성능 카운터](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)  
  [Windows Communication Foundation 도구](../../../../docs/framework/wcf/tools.md)
