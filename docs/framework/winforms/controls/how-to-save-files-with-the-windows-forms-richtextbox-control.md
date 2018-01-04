@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d28aeaefca6f8aa13607f1c1e6f72557ef536754
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fece6685c1ac71d6ddc152e25c22010e6d579c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 파일 저장
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 여러 형식 중 하나에 표시 하는 정보를 쓸 수 있습니다.  
@@ -45,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 여러 형식 �
   
 -   OLE 개체의 텍스트 표현으로 일반 텍스트  
   
- 파일을 저장 하려면 호출 된 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 메서드. 사용할 수도 있습니다는 **SaveFile** 메서드를 데이터 스트림으로 저장 합니다. 자세한 내용은 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>을 참조하십시오.  
+ 파일을 저장 하려면 호출 된 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 메서드. 사용할 수도 있습니다는 **SaveFile** 메서드를 데이터 스트림으로 저장 합니다. 자세한 내용은 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>을 참조하세요.  
   
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>컨트롤의 내용을 파일에 저장 하려면  
   

@@ -12,11 +12,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92cc99a80c718811d0184a557efd38dd93fcc949
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f65d5d2f9bfee144f59d9ecf11cd26ab15113139
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>기능 &#39;.NET 4.5에서에서 Windows Workflow Foundation의 새로운 s
 [!INCLUDE[wf](../../../includes/wf-md.md)]의 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 새 활동, 디자이너 기능 및 워크플로 개발 모델과 같은 여러 가지 새로운 기능이 추가되었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 새로 추가된 워크플로 기능 중 다수는 재호스트된 Workflow Designer에서 지원됩니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]지원 되는 새로운 기능 참조 [다시 호스트 된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대 한 지원을](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]마이그레이션.NET 3.0 및 최신 버전을 사용 하려면.NET 3.5 워크플로 응용 프로그램 참조 [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다. 이 항목에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 새로 추가된 워크플로 기능에 대해 간략하게 설명합니다.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  형식은 serialization에 <xref:System.Runtime.Serialization.ISerializable> 또는 <xref:System.SerializableAttribute>를 사용하지 않으며, serialize되는 형식은 <xref:System.Runtime.Serialization.DataContractSerializer>를 지원해야 합니다.  
   
-6.  <xref:System.Activities.Expressions.LambdaValue%601>를 사용하는 식은 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>를 필요로 하므로 부분 신뢰 상태로 작동하지 않습니다. <xref:System.Activities.Expressions.LambdaValue%601>를 사용하는 워크플로에서는 해당 식을 <xref:System.Activities.CodeActivity%601>에서 파생된 활동으로 바꿔야 합니다. 입니다.  
+6.  <xref:System.Activities.Expressions.LambdaValue%601>를 사용하는 식은 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>를 필요로 하므로 부분 신뢰 상태로 작동하지 않습니다. <xref:System.Activities.Expressions.LambdaValue%601>를 사용하는 워크플로에서는 해당 식을 <xref:System.Activities.CodeActivity%601>에서 파생된 활동으로 바꿔야 합니다. 이어야 합니다.  
   
 7.  부분 신뢰 상태에서는 <xref:System.Activities.XamlIntegration.TextExpressionCompiler>나 Visual Basic에서 호스트되는 컴파일러를 사용하여 식을 컴파일할 수 없지만, 이전에 컴파일된 식은 실행할 수 있습니다.  
   

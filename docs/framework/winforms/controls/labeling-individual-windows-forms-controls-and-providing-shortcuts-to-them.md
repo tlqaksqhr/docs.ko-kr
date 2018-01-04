@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32aa83e69d1159b2afa376a7155c40e2a36d7684
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5e64a2a858b9506ec08beff728e23da0f817f170
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공
 Windows Forms에 추가된 컨트롤에는 사용자 환경을 더욱 특수화하는 데 사용되는 속성 및 메서드가 있습니다. 사용자의 요구에 맞게 사용자 인터페이스를 사용자 지정하는 것은 잘 설계된 Windows 응용 프로그램에 매우 중요합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
  컨트롤에 텍스트 레이블을 할당하는 방법을 설명합니다.  
   

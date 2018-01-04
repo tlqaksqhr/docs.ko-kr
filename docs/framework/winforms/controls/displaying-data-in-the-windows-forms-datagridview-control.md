@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 839a4fd8052578e32e4d46d10e07aa52a1f23d90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 193562b5dd00950ec483da94e2ea6ea059e88805
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 데이터 표시
 `DataGridView` 컨트롤은 다양 한 외부 데이터 원본에서에서 데이터를 표시 하는 데 사용 합니다. 또는 컨트롤에 행과 열을 추가 하 고 수동으로 데이터를 채웁니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  또한 표준 형식 (예: 통화 형식)를 사용 하 여 데이터를 표시 하거나 표시 (예: 음수 값에 대 한 배경색을 변경 하거나 바꿀 문자열 값이 필요한 데이터를 표시 해야 형식을 사용자 지정할 수 있습니다. 해당 이미지).  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
  컨트롤에 데이터를 채우기 위한 옵션에 설명 합니다.  
   

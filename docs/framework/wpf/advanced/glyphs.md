@@ -20,16 +20,17 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c384e9e77eeee29cf91cceca3863f54c0ad1654
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9737a006e7f3591defeaf7039236bd1768aa5361
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="glyphs"></a>문자 모양
 문자는 문자를 화면에 그릴 하위 수준 설명입니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]차단 하 고 텍스트를 포맷 한 후 유지 하려는 고객에 대 한 문자 모양에 대 한 직접 액세스를 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [GlyphRun 개체 및 Glyphs 요소 소개](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
   [문자 모양을 사용하여 텍스트 그리기](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
   

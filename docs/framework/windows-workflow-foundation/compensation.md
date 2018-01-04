@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 248af9c669687d0ab4d41f0ac93985d0d9a17678
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7dd56b41b7b661b58446219d426be1a19edba059
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensation"></a>보정
 [!INCLUDE[wf](../../../includes/wf-md.md)]의 보정은 이후에 오류가 발생할 경우 응용 프로그램에 정의된 논리에 따라 이전에 완료된 작업을 취소하거나 보정하는 메커니즘입니다. 이 단원에서는 워크플로에서 보정을 사용하는 방법에 대해 설명합니다.  
@@ -336,4 +337,4 @@ Activity wf = new Sequence()
  <xref:System.Activities.Statements.Compensate>  
  <xref:System.Activities.Statements.Confirm>  
  <xref:System.Activities.Statements.CompensationToken>  
- [보정 가능한 활동](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)
+ [보정 가능한 작업](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)

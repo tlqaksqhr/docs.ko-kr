@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f8e8851f40c4c5e5c1a9399e5dec1f56aa0a5509
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ac8a9c639099e952f6030f5625958dd2bf84757
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="usage-of-standard-endpoints"></a>표준 끝점 사용
 이 샘플에서는 서비스 구성 파일에서 표준 끝점을 사용하는 방법을 보여 줍니다. 표준 끝점을 사용하면 사용자는 주소, 바인딩 및 계약 조합을 설명하는 단일 속성과 끝점에 관련된 추가 속성을 사용하여 끝점 정의를 단순화할 수 있습니다. 이 샘플에서는 사용자 지정 표준 끝점을 정의 및 구현하는 방법과 끝점의 특정 속성을 정의하는 방법을 보여 줍니다.  

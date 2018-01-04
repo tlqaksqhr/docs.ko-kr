@@ -16,18 +16,19 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f172d28e5f03e1177db6ad1bd9e98f4c68267765
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e074229e4fe344633d277b77b6f7db881c154d8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 컨트롤 기술 요약(Windows Forms)
 이 항목에서는 `DataGridView` 제어 및 이를 사용하도록 지원하는 클래스에 대한 정보를 요약하여 설명합니다.  
   
  테이블 형식으로 데이터를 표시 해야 하는 경우가입니다. `DataGridView` 컨트롤은 표에 데이터를 표시 하기 위한 완벽 한 솔루션을 되도록 설계 되었습니다.  
   
-## <a name="keywords"></a>키워드가  
+## <a name="keywords"></a>키워드  
  DataGridView, BindingSource, 테이블, 셀, 데이터 바인딩, 가상 모드  
   
 ## <a name="namespaces"></a>네임스페이스  

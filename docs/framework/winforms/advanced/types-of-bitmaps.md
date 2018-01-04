@@ -31,11 +31,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b33e710e7f57e1a84372dc556d904e32584a75ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-bitmaps"></a>비트맵의 유형
 비트맵은 픽셀의 사각형 배열에서 각 픽셀의 색을 지정 하는 비트의 배열입니다. 각 픽셀에 사용 되는 비트 수는 해당 픽셀에 지정할 수 있는 색 수를 결정 합니다. 예를 들어 각 픽셀을 4 비트로 표시할 다음 지정된 된 픽셀 수 할당할 수 16 다른 색상 중 하나로 (2 ^4 = 16). 다음 표에서 비트의 지정 된 수로 표현 되는 픽셀을 지정할 수 있는 색 수가 몇 가지 예를 보여 줍니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 |1|2^1 = 2|  
 |2|2^2 = 4|  
 |4|2^4 = 16|  
-|9|2^8 = 256|  
+|8|2^8 = 256|  
 |16|2^16 = 65,536|  
 |24|2^24 = 16,777,216|  
   

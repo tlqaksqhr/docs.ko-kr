@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c8c02c920eda881f4a08925e3bff0567244e5c5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5eb019aed7fce267506ddb495609df5a80a8f8d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="non-generic-parallelforeach"></a>비제네릭 ParallelForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]도구 상자에 포함 하 여 제어 흐름 작업 집합이 제공 <xref:System.Activities.Statements.ParallelForEach%601>, 반복할 수 있도록는 <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` 컬렉션입니다.  

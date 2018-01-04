@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aaab8fca4693f6b253d48f066e644cc76637241
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="order-processing-with-policy"></a>정책을 사용한 주문 처리
 Order Processing Policy 샘플에서는 Windows WF(Workflow Foundation )의 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]에 도입된 몇 가지 주요 기능을 보여 줍니다. 다음은 WF 규칙 엔진에 새로 추가된 기능입니다.  

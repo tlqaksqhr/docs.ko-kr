@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4651ca9707dcf0fac2edea0f004275cfcf18cf2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e2b9c0a7b19df62867a4148b60e24b7d3ba9bcce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Windows Forms 컨트롤의 다중 스레딩
 대부분의 응용 프로그램을 만들면 사용자 인터페이스 (UI) 응답성 다른 스레드에서 시간이 많이 걸리는 작업을 수행 하 여 됩니다. 여러 가지 도구에 사용할 수 있는 다중 스레딩을 포함 하 여 Windows Forms 컨트롤은 <xref:System.Threading> 네임 스페이스는 <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> 메서드를 및 `BackgroundWorker` 구성 요소입니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/22/2017
 > [!NOTE]
 >  `BackgroundWorker` 대체 하 고 기능을 추가 하는 구성 요소는 <xref:System.Threading> 네임 스페이스 및 <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> 메서드도 있습니다; 그러나 이러한 됩니다 유지의 이전 버전과 호환성 및 이후 사용 하도록 선택할 수 있습니다. 자세한 내용은 참조 [BackgroundWorker 구성 요소 개요](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 스레드로부터 안전한 방식으로 Windows Forms 컨트롤 호출](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
  Windows Forms 컨트롤에 스레드로부터 안전한 호출을 수행 하는 방법을 보여 줍니다.  
   

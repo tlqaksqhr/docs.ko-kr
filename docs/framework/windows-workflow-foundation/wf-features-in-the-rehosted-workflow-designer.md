@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b282a098e53666bcb17d3c619633edba8f06c248
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 [!INCLUDE[wf](../../../includes/wf-md.md)]의 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 Workflow Designer 환경의 몇 가지 향상된 기능을 포함하여 새로운 여러 기능이 도입되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/02/2017
   
  다음 스크린 샷에서는 `WriteLine`의 `Body`에 있는 `NoPersistScope` 활동을 보여 줍니다.  
   
- ![자동 & #45; 저장 위치 서라운드](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![자동 &#45; 저장 위치 서라운드](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  다음 스크린 샷에서는 두 번째 `Sequence`이 첫 번째 항목 아래에 놓였을 때 `Body`에 자동으로 만들어진 `WriteLine` 활동을 보여 줍니다.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 12/02/2017
   
  활동을 순서도 노드와 상태 간 연결로 끌어 와 다른 두 노드 사이에 노드를 자동으로 삽입할 수도 있습니다. 다음 스크린 샷에서는 도구 상자의 활동을 끌어다 놓을 수 있는 강조 표시된 연결선을 보여 줍니다.  
   
- ![자동 & #45; insert 처리 활동을 끌기 위한](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![자동 &#45; insert 처리 활동을 끌기 위한](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  자동 연결 및 자동 삽입은 재호스트된 디자이너에서 지원됩니다.  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>XAML 파일의 별도 위치에 있는 뷰 상태  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 워크플로의 뷰 상태 정보가 XAML 파일을 통해 여러 다른 위치에 저장되었습니다. 따라서 개발자가 XAML을 직접 읽거나 뷰 상태 정보를 제거하는 코드를 작성하기에 불편했습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], XAML 파일에서 뷰 상태 정보가 XAML 파일에서 별도 요소로 serialize 됩니다.  개발자가 쉽게 찾 및 활동의 보기 상태 정보를 편집 하거나 제거할 수 뷰 상태 완전히 합니다.  
   
- 이 기능은 재호스트된 Workflow Designer에서 지원됩니다.  
+ 이 기능은 재호스트된 워크플로 디자이너에서 지원됩니다.  
   
 ### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>재호스트된 디자이너에서 Workflow 4.5 기능 사용  
  이전 버전과의 호환성을 유지하기 위해 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 포함된 새로운 기능 중 일부는 재호스트된 디자이너에서 기본적으로 사용되지 않도록 설정됩니다. 따라서 재호스트된 디자이너를 사용하는 기존 응용 프로그램은 최신 버전으로 업데이트해도 차단되지 않습니다. 재호스트된 디자이너에서 새로운 기능을 사용하려면 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A>을 ".Net Framework 4.5"로 설정하거나 <xref:System.Activities.Presentation.DesignerConfigurationService>의 개별 멤버를 설정하여 개별 기능을 사용하도록 설정합니다.  

@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20674a93459f42a793ddf5f7ee5dffb1fa122d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2db19d402f32bd43bb7053403428e8055755d017
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-disable-tab-pages"></a>방법: 탭 페이지 사용 안 함
 일부 경우에 Windows Forms 응용 프로그램 내에서 사용할 수 있는 데이터 액세스를 제한 합니다. 탭 컨트롤;의 탭 페이지에 표시 된 데이터가 있는 경우이 예로 들 수 있습니다. 관리자는 게스트 또는 하위 수준의 사용자 옵션을 원하는 탭 페이지의 정보에 있을 수 있습니다.  

@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28e6de46098a8309a17e0c264411f865fb9b1de2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility"></a>확장성
 이 단원에는 사용자 지정 확장성 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 다른 기능을 처리하는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [채널 확장성](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  사용자 지정 채널을 보여 줍니다.  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
  [메시지 인코더 확장성](../../../../docs/framework/wcf/samples/message-encoder-extensibility.md)  
  사용자 지정 메시지 인코딩을 보여 줍니다.  
   
- [메타 데이터 확장성](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
+ [메타데이터 확장성](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
  사용자 지정 메타데이터를 보여 줍니다.  
   
  [보안 확장성](../../../../docs/framework/wcf/samples/security-extensibility.md)  
@@ -65,10 +66,10 @@ ms.lasthandoff: 12/02/2017
  [DataContract 서로게이트](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  데이터 계약 서로게이트 클래스를 사용하여 serialization, deserialization, 스키마 내보내기 및 스키마 가져오기 등의 프로세스를 사용자 지정하는 방법을 보여 줍니다.  
   
- [오류 처리 및 보고에 대 한 제어 확장](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [오류 처리 및 오류 보고에 대한 제어 확장](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 사용하여 오류 처리 및 오류 보고에 대한 제어를 확장하는 방법을 보여 줍니다.  
   
- [메시지 검사자](../../../../docs/framework/wcf/samples/message-inspectors.md)  
+ [메시지 검사기](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  클라이언트 및 서비스 메시지 검사자를 구현 및 구성하는 방법을 보여 줍니다.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  

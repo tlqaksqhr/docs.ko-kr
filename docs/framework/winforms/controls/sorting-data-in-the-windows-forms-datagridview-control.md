@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4027f3ae604f2a3ff4996855fa6dd34d4de8ea2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2327c6d9696bc5fb54943eb8bbce9d4795a378b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 정렬
 기본적으로 사용자의 데이터를 정렬할 수는 `DataGridView` 텍스트 상자 열 머리글을 클릭 하 여 제어 합니다. 수정할 수 있습니다는 `SortMode` 사용자가 작업을 수행 하는 경우 다른 형식의 열을 정렬할 수 있도록 특정 열 속성입니다. 임의의 열 또는 여러 열으로 프로그래밍 방식으로 데이터를 정렬할 수 수도 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms DataGridView 컨트롤의 열 정렬 모드](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
  컨트롤의 데이터 정렬에 대 한 옵션에 설명 합니다.  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d617ce5b4e7222b60ce711e2e081e0bf3cb8065d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f74595ce672079db69fd36fb2b2eb982bc90b448
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-overview"></a>응용 프로그램 설정 개요
 이 항목은 응용 프로그램 및 사용자를 대신하여 설정 데이터를 만들고 저장하는 방법을 설명합니다.  

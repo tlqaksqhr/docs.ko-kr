@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ab199f390fa6a704ad3b3d2a17387d034cf2e57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7e3754df2930503e7e7a123ffdb4d4b787338c20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>방법: Windows Forms에서 맞춤선과 모눈을 사용하여 컨트롤 정렬
 레이아웃 기능을 사용 하 여 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], 컨트롤이 폼에 배치 될 위치를 정확 하 게 지정할 수 있습니다. 컨트롤을 폼에 추가 하거나 폼에서 이동한 행과 Windows Forms 디자이너 눈금의 열에 자동으로 정렬할 수 있습니다 또는 맞춤선 기능을 사용 하 여 컨트롤을 정렬할 수 있습니다.  

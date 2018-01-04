@@ -28,11 +28,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad6cd99a6399adea2e69cbf844b9f134d2e592e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a856090a76f484c21c1d9982d67e9fdf21e8451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>방법: Windows Forms Label 컨트롤을 사용하여 선택키 만들기
 Windows Forms <xref:System.Windows.Forms.Label> 다른 컨트롤에 대 한 선택 키를 정의 하려면 컨트롤을 사용할 수 있습니다. 레이블 컨트롤에 선택 키를 정의할 때 사용자 ALT 키와 탭 순서에서 그 다음에 오는 컨트롤에 포커스를 이동 하도록 지정한 문자를 누를 수 있습니다. 레이블 포커스를 받을 수 없는 때문에 포커스가 탭 순서의 다음 컨트롤로 자동으로 이동 합니다. 이 기술을 사용 하 여 액세스 키 입력란, 콤보 상자, 목록 상자 및 데이터 표를 할당 합니다.  

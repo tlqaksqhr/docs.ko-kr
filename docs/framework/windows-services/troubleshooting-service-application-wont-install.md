@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 82eb870761a7865385631cd9961ce99e0b0d3502
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 43c973d83d2d1b614cf0ce49ba8d4af24123b47e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-service-application-won39t-install"></a>문제 해결: 서비스 응용 프로그램 성공 &#39; t 설치
 서비스 응용 프로그램이 제대로 설치 되지 않을 경우 확인 되도록 하는 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 해당 서비스에 대 한 설치 관리자에 표시 된 대로 서비스 클래스의 속성을 같은 값으로 설정 되어 있습니다. 값 올바르게 설치 하기 위해 서비스에 대 한 순서 대로 두 인스턴스 모두에 동일 해야 합니다.  

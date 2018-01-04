@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 8137e41f92335849916dfc9e9ce72afeb186e73c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>방법: 서비스 응용 프로그램에 설치 관리자 추가
 Visual Studio 리소스에 연결 된 서비스 응용 프로그램을 설치할 수 있는 설치 구성 요소를 제공 합니다. 설치 구성 요소는 시스템을 설치 하는 것와를 서비스가 존재 하는지 확인 하 여 서비스 제어 관리자에서 개별 서비스를 등록 합니다. 서비스 응용 프로그램을 사용할 때 자동으로 프로젝트에 적절 한 설치 관리자를 추가 하려면 속성 창에서 링크를 선택할 수 있습니다.  
@@ -73,4 +74,4 @@ Visual Studio 리소스에 연결 된 서비스 응용 프로그램을 설치할
  [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
  [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)  
- [방법: 서비스에 대 한 보안 컨텍스트 지정](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+ [방법: 서비스에 대한 보안 컨텍스트 지정](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3dd2b4880ea61f5c3236a3e15ba1c939dbc2952
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3634d5c14b0d0fcc0113296dec4843585625698d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-service-host"></a>Windows Service 호스트
 이 샘플에서는 관리되는 Windows 서비스에서 호스팅되는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 보여 줍니다. Windows 서비스에서 서비스 애플릿을 사용 하 여 제어 됩니다 **제어판** 시스템 다시 부팅 후 자동으로 시작 되도록 구성할 수 있습니다. 이 샘플은 클라이언트 프로그램과 Windows 서비스 프로그램으로 구성됩니다. 서비스는 .exe 프로그램으로 구현되고 자체 호스팅 코드가 포함됩니다. WAS(Windows Process Activation Services) 또는 IIS(인터넷 정보 서비스) 등의 다른 호스팅 환경에서는 직접 호스팅 코드를 작성할 필요가 없습니다.  

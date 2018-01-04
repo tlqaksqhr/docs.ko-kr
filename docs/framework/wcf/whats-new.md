@@ -16,11 +16,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 362578e6e8066c0490e692d0cd9d637b05bb1fa0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fd36f012f614e08be131efb3791fd997d3668531
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>기능 &#39; Windows Communication Foundation 4.5의 새로운 s
 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에 새로 추가된 기능에 대해 설명합니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/02/2017
  WCF 4.5 응용 프로그램을 더 쉽게 개발하고 유지할 수 있도록 많은 작업이 이루어졌습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.  
   
 ### <a name="task-based-async-support"></a>작업 기반 비동기 지원  
- 기본적으로 서비스 참조를 추가하면 태스크 반환 비동기 서비스 작업 메서드가 생성됩니다. 이는 동기 및 비동기 메서드에 대해 수행됩니다. 따라서 새로운 태스크 기반 비동기 프로그래밍 모델을 사용하여 비동기적으로 서비스 작업을 호출할 수 있습니다. 생성된 프록시 메서드를 호출하면 WCF는 비동기 작업을 나타내는 태스크 개체를 생성하고 해당 태스크를 사용자에게 반환합니다. 작업이 완료 되는 작업을 완료 합니다.  비동기 작업을 구현 하는 경우에 작업 기반 비동기 작업으로 구현할 수 있습니다. 자세한 내용은 참조 하십시오 [동기 및 비동기 작업](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다.  
+ 기본적으로 서비스 참조를 추가하면 태스크 반환 비동기 서비스 작업 메서드가 생성됩니다. 이는 동기 및 비동기 메서드에 대해 수행됩니다. 따라서 새로운 작업 기반 비동기 프로그래밍 모델을 사용하여 비동기적으로 서비스 작업을 호출할 수 있습니다. 생성된 프록시 메서드를 호출하면 WCF는 비동기 작업을 나타내는 작업 개체를 생성하고 해당 작업를 사용자에게 반환합니다. 작업이 완료 되는 작업을 완료 합니다.  비동기 작업을 구현 하는 경우에 작업 기반 비동기 작업으로 구현할 수 있습니다. 자세한 내용은 참조 하십시오 [동기 및 비동기 작업](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다.  
   
 ### <a name="simplified-generated-configuration-files"></a>단순화되어 생성된 구성 파일  
  Visual Studio에 서비스 참조를 추가하거나 SvcUtil.exe 도구를 사용하면 클라이언트 구성 파일이 생성됩니다. 이전 버전의 WCF에서는 바인딩 속성 값이 기본값인 경우를 포함하여 모든 바인딩 속성 값이 이러한 구성 파일에 포함되었습니다. WCF 4.5에서는 생성된 구성 파일에 기본값이 아닌 값으로 설정된 바인딩 속성만 포함됩니다.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/02/2017
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 프로세서 수|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 전송용 프로세서 수<br /><br /> 4 \* SMSvcHost.exe 용 프로세서 수|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>[Net.TCP Port Sharing Service를 구성 합니다.](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 프로세서 수|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
-|receiveTimeout|SMSvcHost.exe|30초|[Net.TCP Port Sharing Service를 구성 합니다.](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|receiveTimeout|SMSvcHost.exe|30초|[Net.TCP Port Sharing Service 구성](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
   
 ## <a name="xml-editor-tooltips"></a>XML 편집기 도구 설명  
  WCF 서비스의 기존 및 새 개발자들이 서비스를 구성하는 데 도움이 되도록 이제 Visual Studio XML 편집기에서 서비스 구성 파일에 포함된 모든 구성 요소 및 해당 속성에 대한 도구 설명을 제공합니다.  

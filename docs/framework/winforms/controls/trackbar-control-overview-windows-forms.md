@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccea982c45ab22a4b2ab81bc80c16dd472144bbe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e62fc49a8a08c79138df080246b99b6fe891162e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.TrackBar> 많은 양의 정보를 통해 탐색 또는 시각적으로 숫자 설정을 조정 하는 것에 대 한 제어도 ("slider" 컨트롤) 사용 됩니다. <xref:System.Windows.Forms.TrackBar> 컨트롤에는 두 부분이:는 엄지 단추 라고도 슬라이더의 눈금 표시 합니다. 엄지 단추는 조정할 수 있는 일부입니다. 엄지 단추의 위치는 <xref:System.Windows.Forms.TrackBar.Value%2A> 속성입니다. 눈금 표시 되는 일정 한 간격을 두고 배치 되어 시각적 표시기입니다. Trackbar에서 가로 또는 세로로 정렬 될을 지정 하는 이동 합니다. 예를 들어 시스템에 대 한 커서 깜박임 마우스 속도 제어 하려면 트랙 표시줄을 사용할 수 있습니다.  

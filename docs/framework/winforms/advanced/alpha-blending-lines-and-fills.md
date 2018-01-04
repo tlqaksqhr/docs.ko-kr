@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b3c0ee3ec82d4d8447c43b7dc9b275591ebe890
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2a46efeccf9ab343ca0da07fad07138bd72e4e44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alpha-blending-lines-and-fills"></a>선 및 채우기 알파 혼합
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 색이 알파, 빨간색, 녹색 및 파란색에 대 한 8 비트는 32 비트 값입니다. 알파 값 색의 투명도 이면-범위 배경색으로 색 혼합 됩니다. 알파 값 범위는 0에서 255까지, 여기서 0 완전히 투명 한 색을 나타내는 경우 255 완전히 불투명 한 색을 나타냅니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/22/2017
   
  150 × 200 / 255 + 100 × (255 – 200) / 255 = 139  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 불투명 및 반투명 선 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)  
  알파 혼합 선을 그리는 방법을 보여 줍니다.  
   

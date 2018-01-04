@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 473cf67f01db8735eb3b32a7549296f827e66ef6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c026df631c2ac033594ea86887bb8440a6aa240a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>방법: 활성 MDI 자식 확인
 경우에 따라 현재 활성 자식 폼에 포커스가 있는 컨트롤에 작동 하는 명령을 제공 합니다. 예를 들어 자식 폼의 텍스트 상자에서 선택한 텍스트를 클립보드에 복사할 한다고 가정 합니다. 선택한 텍스트를 사용 하 여 클립보드에 복사 하는 프로시저를 만들면 됩니다는 <xref:System.Windows.Forms.Control.Click> 표준 편집 메뉴에서 메뉴 항목 복사본의 이벤트입니다.  

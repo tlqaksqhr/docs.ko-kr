@@ -21,11 +21,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba195656363b15407aed6a4da0ab804421a3d964
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기
 연결 된 사용자 지정 디자이너를 제작 하 여 사용자 지정 컨트롤에 대 한 디자인 타임 환경을 개선할 수 있습니다.  
@@ -467,7 +468,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#560](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#560)]  
   
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>사용자 지정 디자이너를 디자이너 동사를 추가합니다.  
- 디자이너 동사는 이벤트 처리기에 연결 된 메뉴 명령입니다. 디자이너 동사는 디자인 타임에 구성 요소의 바로 가기 메뉴에 추가 됩니다. 자세한 내용은 <xref:System.ComponentModel.Design.DesignerVerb>을 참조하십시오.  
+ 디자이너 동사는 이벤트 처리기에 연결 된 메뉴 명령입니다. 디자이너 동사는 디자인 타임에 구성 요소의 바로 가기 메뉴에 추가 됩니다. 자세한 내용은 <xref:System.ComponentModel.Design.DesignerVerb>을 참조하세요.  
   
  두 개의 디자이너 동사를 디자이너에 추가 됩니다: **테스트 실행** 및 **테스트 중지**합니다. 이러한 동사를 사용 하면의 런타임 동작을 볼 수 있습니다는 `MarqueeControl` 디자인 타임에 있습니다. 이러한 동사에 추가 되는 `MarqueeControlRootDesigner`합니다.  
   

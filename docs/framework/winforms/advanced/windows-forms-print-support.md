@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 029d5ed424061807cf04446cbb10424ae20afba2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 81f89ee41eb9f8b492ab12e30ae4580cdffbd8f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-print-support"></a>Windows Forms 인쇄 지원
 Windows Forms의 인쇄 이루어져 주로 사용 하는 [PrintDocument 구성 요소](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) 인쇄할 수 있도록 구성 요소 및 [PrintPreviewDialog 컨트롤](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md) 컨트롤 [PrintDialog 구성 요소](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) 및 [PageSetupDialog 구성 요소](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) 구성 요소를 Windows 운영 체제에 익숙한 사용자에 게 친숙 한 그래픽 인터페이스를 제공 합니다.  
@@ -32,7 +33,7 @@ Windows Forms의 인쇄 이루어져 주로 사용 하는 [PrintDocument 구성 
   
  Windows 기반 응용 프로그램에서 인쇄 하는 동안는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소 사용자에 게 인쇄 발생 하는 팩트 하 고 인쇄 작업을 취소할 수 있는 중단 인쇄 대화 상자 표시 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 표준 Windows Forms 인쇄 작업 만들기](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
  사용 하는 방법에 설명 된 <xref:System.Drawing.Printing.PrintDocument> Windows Form에서 인쇄 하는 구성 요소입니다.  
   

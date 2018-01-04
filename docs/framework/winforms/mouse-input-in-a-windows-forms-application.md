@@ -14,16 +14,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb45f22a037b459556f6de2e8cda0e025b621686
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 56b267222f8e22d9d411d744f67d93cde6ba17a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 마우스 입력
 Windows Forms에는 다양한 마우스 이벤트 및 사용자 지정된 마우스 커서, 마우스 캡처 및 끌어서 놓기 동작에 대한 추가 지원이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms에서 마우스 입력이 작동하는 방식](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)  
  마우스 이벤트에 대한 정보 및 마우스에 대한 현재 정보와 시스템 설정을 가져오는 방법을 제공합니다.  
   

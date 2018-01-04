@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d41d2f8419644d5ddcb15f49bbe895b0a3f1f2d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-clients"></a>클라이언트에 보안 설정
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서 서비스가 클라이언트에 대한 보안 요구 사항을 지시합니다. 즉, 서비스는 사용할 보안 모드 및 클라이언트가 자격 증명을 제공해야 하는지 여부를 지정합니다. 따라서 클라이언트 보안 설정 프로세스는 간단합니다. 서비스에서 가져온 메타데이터를 사용하여(게시된 경우) 클라이언트를 빌드하면 됩니다. 메타데이터는 클라이언트를 구성하는 방법을 지정합니다. 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 요구 사항에 맞는 자격 증명을 가져와야 합니다. 이 항목에서는 이 과정을 자세히 설명합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]참조는 보안 서비스를 만드는 [Services에 보안 설정](../../../docs/framework/wcf/securing-services.md)합니다.  
@@ -87,10 +88,10 @@ ms.lasthandoff: 11/21/2017
 #### <a name="setting-a-clientcredentials-value-in-code"></a>설정 된 \<clientCredentials > 코드에서 값  
  설정 하는 [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 값 코드에서 액세스 해야 합니다는 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 속성은 <xref:System.ServiceModel.ClientBase%601> 클래스입니다. 다음 표에 설명한 것처럼 속성은 다양한 자격 증명 형식에 액세스할 수 있는 <xref:System.ServiceModel.Description.ClientCredentials> 개체를 반환합니다.  
   
-|ClientCredential 속성|설명|참고|  
+|ClientCredential 속성|설명|노트|  
 |-------------------------------|-----------------|-----------|  
 |<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>을 반환합니다.|서비스에게 자신을 인증하기 위해 클라이언트가 제공하는 X.509 인증서를 나타냅니다.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|<xref:System.ServiceModel.Security.HttpDigestClientCredential>을 반환합니다.|HTTP digest 자격 증명을 나타냅니다. 자격 증명은 사용자 이름 및 암호에 대한 해시입니다.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|<xref:System.ServiceModel.Security.HttpDigestClientCredential>을 반환합니다.|HTTP 다이제스트 자격 증명을 나타냅니다. 자격 증명은 사용자 이름 및 암호에 대한 해시입니다.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|<xref:System.ServiceModel.Security.IssuedTokenClientCredential>을 반환합니다.|보안 토큰 서비스에서 발급한 사용자 지정 보안 토큰을 나타내며 일반적으로 페더레이션 시나리오에서 사용됩니다.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|<xref:System.ServiceModel.Security.PeerCredential>을 반환합니다.|Windows 도메인의 피어 메시 참가를 위해 사용할 피어 자격 증명을 나타냅니다.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>을 반환합니다.|out-of-band 협상에서 서비스가 제공하는 X.509 인증서를 나타냅니다.|  

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28f81efa3d9f63127ad9748aaba9ce3483246a69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2785b666039b9a8594e86cdd3a6fb25b9c382158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 기본 셀 스타일 및 데이터 형식 설정
 <xref:System.Windows.Forms.DataGridView> 제어를 사용 하면 기본 셀 스타일을 지정 하 고 셀 데이터 형식을 전체 컨트롤에 대 한, 특정 열에 대 한, 행 및 열 머리글에 대 한 대체 행 원장 효과를 만듭니다. 전체 컨트롤에 대해 설정 하는 기본 스타일은 기본적으로 열과 대체 행 스타일 설정 재정의 됩니다. 또한 개별 행 및 열에 대 한 코드에서 설정한 기본 스타일을 재정의 합니다.  

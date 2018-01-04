@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b16f87b73654a3faa7cc261c552bc48647ad2e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19868e282409180383fb6bef232082bee6b71f99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>방법: 모든 Windows Forms에 대한 모눈 옵션 설정
 작업 하는 데 사용 되는 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 개발 환경에서는 모든 폼과 프로젝트와 작업에 대 한 기본 설정을 Windows Forms 디자이너에서 설정할 수 있습니다.  

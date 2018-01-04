@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711d25c600c2144ad4b134984501f641be24ced2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ 관리 코드 정보
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 2차원 벡터 그래픽, 이미징 및 입력 체계를 제공하는 Windows 운영 체제의 일부입니다. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)](이전 버전의 Windows에 포함된 그래픽 장치 인터페이스)에서는 새로운 기능을 추가하고 기존 기능을 최적화하여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]가 향상되었습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
   
  이 섹션에서는 관리 코드를 사용하는 프로그래머를 위한 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API에 대한 정보를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [선, 곡선 및 도형](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  벡터 그래픽을 설명합니다.  
   

@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9627634f30ebdabe75ccfc7ff0ffa8fdd50655b9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5231813096413b66272b87aabd9adf0643c6e26d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linklabel-control-windows-forms"></a>LinkLabel 컨트롤(Windows Forms)
 Windows Forms `LinkLabel` 컨트롤을 사용 하면 Windows Forms 응용 프로그램에 웹 스타일 링크를 추가할 수 있습니다. 사용할 수는 `LinkLabel` 사용할 수 있는 모든 항목에 대 한 제어는 <xref:System.Windows.Forms.Label> 제어 하는 데 있습니다; 또한 개체 또는 웹 페이지에 대 한 링크로 텍스트의 일부를 설정할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [LinkLabel 컨트롤 개요](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   

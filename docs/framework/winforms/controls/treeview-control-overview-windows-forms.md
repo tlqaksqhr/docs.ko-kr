@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee285a7db058cd88843eb3addf207fb5c446dfa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9bbe8549268c2b67b67184966e938f7d62b766a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-control-overview-windows-forms"></a>TreeView 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤을 통해 Windows 운영 체제에서 Windows 탐색기 기능의 왼쪽 창에 파일 및 폴더가 표시되는 방식과 같은 노드 계층 구조를 사용자에게 표시할 수 있습니다. 트리 뷰의 각 노드에 라는 다른 노드가 포함 될 수 있습니다 *자식 노드*합니다. 부모 노드, 즉 자식 노드를 포함하는 노드를 확장명 또는 축소된 상태로 표시할 수 있습니다. 트리 뷰의 <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> 속성을 `true`로 설정하여 노드 옆에 확인란이 있는 트리 뷰를 표시할 수도 있습니다. 그런 다음 노드의 <xref:System.Windows.Forms.TreeNode.Checked%2A> 속성을 `true` 또는 `false`로 설정하여 프로그래밍 방식으로 노드를 선택하거나 선택 취소할 수 있습니다.  

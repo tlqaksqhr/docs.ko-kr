@@ -19,16 +19,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35f89bb5d87ef58c5ecda7be4cb9fb41da08e8a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0a32e6c1901f84c276c071402dac641d45566717
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-shear-colors"></a>방법: 색 전단
 기울이기 증가 또는 다른 색상 구성 요소에 비례 하는 양을 색상 구성 요소 감소 합니다. 예를 들어 빨강 구성 요소를 1/2 파랑의 값 만큼 늘리는 변환을 사용 하십시오. 이러한 변환에서 (0.7, 0.5, 1) (0.2, 0.5, 1) 색 될 것입니다. 새 빨강 구성은 0.2 + (1/2)(1) 0.7입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 구성 예제는 <xref:System.Drawing.Image> ColorBars4.bmp 파일에서 개체입니다. 다음 코드는 각 픽셀 이미지에 이전 단락에 설명 된 기울이기 변환을 적용 합니다.  
   
  다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지와 기울이기가 적용 된 이미지를 보여 줍니다.  

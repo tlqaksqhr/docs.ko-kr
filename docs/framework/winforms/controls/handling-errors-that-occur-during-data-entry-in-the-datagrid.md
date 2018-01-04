@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c602af6799da57fec904c87da7bed77c0040eff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 016a30e4b578ead199124d70cc12f240c74bf370
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리
 내부 데이터 저장소에서 오류를 처리 하는 것은 데이터 입력 응용 프로그램에 대 한 필수 기능입니다. Windows Forms <xref:System.Windows.Forms.DataGridView> 제어 작업을 편리 노출 하 여는 <xref:System.Windows.Forms.DataGridView.DataError> 데이터 저장소는 비즈니스 규칙 또는 제약 조건 위반을 감지할 때 발생 하는 이벤트입니다.  

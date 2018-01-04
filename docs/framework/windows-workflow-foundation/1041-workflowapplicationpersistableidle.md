@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b321f8c20fbd79b5e748601ee06f975dc75a7d56
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1efc32ed0304d5b0d222054e5c65abe279ef93ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="1041---workflowapplicationpersistableidle"></a>1041 - WorkflowApplicationPersistableIdle
 ## <a name="properties"></a>속성  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="message"></a>메시지  
  WorkflowApplication Id: '%1'는 유휴 상태로 지속 됩니다.  다음과 같은 조치가 취해집니다: %2입니다.  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  

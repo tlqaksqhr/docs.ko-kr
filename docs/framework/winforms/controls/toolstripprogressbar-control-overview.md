@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0db69185df691fe13781e5aed96dedee239d7c9d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ee73d87a65e9febed6ebd5ad981dcd548fc2404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 컨트롤 개요
 <xref:System.Windows.Forms.ToolStripProgressBar> 래프팅 (rafting) 및 모든 렌더링 기능이 결합 <xref:System.Windows.Forms.ToolStrip> 일반적인 프로세스 추적 기능을 사용 하 여 컨트롤입니다. A <xref:System.Windows.Forms.ToolStripProgressBar> 에서 가장 일반적으로 호스트 <xref:System.Windows.Forms.StatusStrip>, 의해서도 자주는 <xref:System.Windows.Forms.ToolStrip>합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/22/2017
   
 ### <a name="important-toolstripprogressbar-members"></a>중요 한 ToolStripProgressBar 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|각 간 지연 시간을 나타내는 값을 가져오거나 설정 합니다. <xref:System.Windows.Forms.ProgressBarStyle.Marquee> 밀리초 단위로 표시 업데이트 합니다.|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|이 대해 정의 된 범위의 상한 값을 가져오거나 설정 합니다. <xref:System.Windows.Forms.ToolStripProgressBar>합니다.|  

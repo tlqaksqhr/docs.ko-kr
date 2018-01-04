@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc0190747545e9325b62453bc79d163d3e566791
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 템플릿
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 템플릿은 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 서비스 및 해당 응용 프로그램을 신속하게 빌드하기 위해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 사용할 수 있는 미리 정의된 프로젝트 및 항목 템플릿입니다.  

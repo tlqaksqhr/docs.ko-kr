@@ -19,16 +19,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2caa77285ebe327adc690b26baeb58aa800627fb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 04d93203f98c91b0d5bbed5f833745a9bb9ab1d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lines-curves-and-shapes"></a>선, 곡선 및 도형
 벡터 그래픽 부분의 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선, 곡선 그리기를 그리기 및 도형 채우기 사용 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [벡터 그래픽 개요](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)  
  벡터 그래픽을 설명합니다.  
   

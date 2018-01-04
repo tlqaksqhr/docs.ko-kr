@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcb79525e557a66ed471bc38dcbdd444d75ba6b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f524bab55527bf9d3c744cb6f50d1df1fc9a2302
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>방법: Modifiers 및 GenerateMember 속성 사용
 Windows Form에는 구성 요소를 배치 하는 경우 두 속성은 디자인 환경에서 제공 됩니다: `GenerateMember` 및 `Modifiers`합니다. `GenerateMember` 속성 Windows Forms 디자이너 구성 요소에 대 한 멤버 변수를 생성 하는 시기를 지정 합니다. `Modifiers` 속성은 해당 멤버 변수에 할당 된 액세스 한정자입니다. 하는 경우의 값은 `GenerateMember` 속성은 `false`, 값은 `Modifiers` 속성이 적용 되지 않습니다.  

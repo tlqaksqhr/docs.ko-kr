@@ -20,16 +20,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f53dd2fdaa622e022f49c153b6dbc83030ae791
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1afe397a92ac6e79e84757baa0c41f6e0c54b7f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>방법: PropertyNameChanged 패턴 적용
 다음 코드 예제에서는 적용 하는 방법을 보여 줍니다.는 *PropertyName*패턴을 사용자 지정 컨트롤입니다. Windows Forms 데이터 바인딩 엔진에 사용 되는 사용자 지정 컨트롤을 구현 하는 경우이 패턴을 적용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[System.Windows.Forms.ChangeNotification#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ChangeNotification/CS/Form1.cs#3)]
  [!code-vb[System.Windows.Forms.ChangeNotification#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ChangeNotification/VB/Form1.vb#3)]  
   

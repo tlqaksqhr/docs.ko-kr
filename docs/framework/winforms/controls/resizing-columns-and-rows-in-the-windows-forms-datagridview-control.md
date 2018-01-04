@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3621b05f1faae671d93106f50dfef1311959e48e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1c11ca487003e57a499b3ff46178350e6aad404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 및 행 크기 조정
 `DataGridView` 컨트롤의 열 및 행의 크기 조정 동작을 사용자 지정 하기 위한 다양 한 옵션을 제공 합니다. 일반적으로 `DataGridView` 셀 크기를 조정 하지 않으면 해당 내용에 따라 합니다. 대신, 표시 된 값을 셀 보다 큰 잘립니다. 콘텐츠를 문자열로 표시 될 수를 셀 도구 설명에 표시 합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
   
  `DataGridView` 컨트롤은 속성, 메서드 및 사용자 지정 하거나 모든 이러한 사용자 조정 동작을 비활성화할 수 있도록 하는 이벤트를 제공 합니다. 또한 프로그래밍 방식으로 크기를 조정할 수 행, 열 및 해당 내용에 맞게 머리글 또는 내용이 변경 될 때마다 스스로 자동으로 조정 하도록 구성할 수 있습니다. 열을 자동으로 지정 하는 비율로 제어의 사용 가능한 너비를 분배할를 구성할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
  크기 조정 행, 열 및 헤더에 대 한 옵션을 설명합니다. 또한 크기 조정 관련 속성 및 메서드의에 대해 자세히 설명 하 고 일반적인 사용 시나리오에 설명 합니다.  
   

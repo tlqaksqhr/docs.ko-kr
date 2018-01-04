@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ce13ba3413c13ced7ff9a967e23d87622309feb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4e09448cb834453a4c8fce4494ab9fbb53eb0dc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>방법: Windows Forms ImageList 구성 요소를 사용하여 이미지 추가 또는 제거
 Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소가 일반적으로 이미지 되기 전에 채워집니다 컨트롤에 연결 됩니다. 그러나 추가 하 고는 컨트롤과 함께 이미지 목록을 연결한 후 이미지를 제거할 수 있습니다.  

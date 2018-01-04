@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5901113021deffd601b5325ff9a1b8912e74329d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7b6574e452faf4f0396f7633ba7f21519948262
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Windows Forms과 컨트롤에서 국가별 글꼴
 국가별 응용 프로그램에서 글꼴을 선택 하는 권장된 방법은 가능 글꼴 대체 (fallback)를 사용 하는 합니다. 글꼴 대체 방법 결정 된다는 문자 스크립트에 속해 있습니다.  

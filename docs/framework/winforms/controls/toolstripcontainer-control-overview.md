@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4abc783961177a55cdb81cefd21ed2d7aefb0620
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a1a4c9c77e1f347f95c0a5e17ab0d37e0013d6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripcontainer-control-overview"></a>ToolStripContainer 컨트롤 개요
 A <xref:System.Windows.Forms.ToolStripContainer> 왼쪽, 오른쪽, 위쪽 및 아래쪽 면 배치 및 래프팅 할 패널이 있습니다 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤입니다. 왼쪽 또는 오른쪽 <xref:System.Windows.Forms.ToolStripContainer>에 여러 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 배치하면 컨트롤이 세로로 쌓입니다. 위쪽 또는 아래쪽 <xref:System.Windows.Forms.ToolStripContainer>에 배치하면 가로로 쌓입니다. <xref:System.Windows.Forms.ToolStripContainer>의 가운데 <xref:System.Windows.Forms.ToolStripContentPanel>을 사용하여 기존 컨트롤을 폼에 배치할 수 있습니다.  
@@ -30,7 +31,7 @@ A <xref:System.Windows.Forms.ToolStripContainer> 왼쪽, 오른쪽, 위쪽 및 �
   
 ### <a name="important-toolstripcontainer-members"></a>중요 한 ToolStripContainer 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A>|아래쪽 패널 가져옵니다는 <xref:System.Windows.Forms.ToolStripContainer>합니다.|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>|나타내는 값을 가져오거나 여부의 아래쪽 패널에서 <xref:System.Windows.Forms.ToolStripContainer> 표시 됩니다.|  

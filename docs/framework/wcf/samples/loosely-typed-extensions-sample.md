@@ -13,14 +13,15 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 280445240dae215013069c65ab12b9e38227f5c1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e8861138f7763f413f06983bbfba5f6e0ec3c8b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loosely-typed-extensions-sample"></a>느슨한 형 확장명 샘플
-배포 개체 모델은 확장 데이터, 즉 배포 피드의 XML 표현에는 있지만 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>과 같은 클래스에서 명시적으로 노출되지 않는 정보로 작업할 수 있도록 풍부한 지원을 제공합니다. 이 샘플에서는 확장 데이터로 작업하는 기본적인 기술을 보여 줍니다.  
+배포 개체 모델은 확장 데이터, 즉 배포 피드의 XML 표현에는 있지만 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>과 같은 클래스에서 명시적으로 노출되지 않는 정보로 작업할 수 있도록 풍부한 지원을 제공합니다. 이 샘플에서는 확장명 데이터로 작업하는 기본적인 기술을 보여 줍니다.  
   
  이 샘플에서는 예를 들기 위해 <xref:System.ServiceModel.Syndication.SyndicationFeed> 클래스를 사용하지만 이 샘플에 나온 패턴은 확장명 데이터를 지원하는 다음과 같은 모든 배포 클래스에서 사용할 수 있습니다.  
   
@@ -74,7 +75,7 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
 -   `<xElementExtension>` 요소  
   
-## <a name="writing-extension-data"></a>확장 데이터 쓰기  
+## <a name="writing-extension-data"></a>확장명 데이터 쓰기  
  특성 확장은 다음 샘플 코드에서와 같이 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 컬렉션에 항목을 추가하여 만듭니다.  
   
 ```  

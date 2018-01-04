@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7df149ab75d2e3f1e9167f66ef8ec3c40b73c827
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>계약 및 서비스에서 오류 지정 및 처리
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램은 관리되는 예외 개체를 SOAP 오류 개체에 매핑하고 SOAP 오류 개체를 관리되는 예외 개체에 매핑하여 오류 상황을 처리합니다. 이 단원의 항목에서는 사용자 지정 SOAP 오류와 같은 오류 조건을 노출하도록 계약을 디자인하는 방법, 이러한 오류를 서비스 구현의 일부로 반환하는 방법 및 클라이언트가 이러한 오류를 catch하는 방법에 대해 설명합니다.  

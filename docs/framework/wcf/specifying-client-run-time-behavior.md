@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22d244fdc2c9fc3d3802e520d1fdd6f31bdc1c4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-client-run-time-behavior"></a>클라이언트 런타임 동작 지정
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와 마찬가지로 클라이언트 응용 프로그램에 맞게 런타임 동작을 수정하도록 구성될 수 있습니다. 세 가지 특성을 사용하여 클라이언트 런타임 동작을 지정할 수 있습니다. 이중 클라이언트 콜백 개체는 <xref:System.ServiceModel.CallbackBehaviorAttribute> 및 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 특성을 사용하여 런타임 동작을 수정할 수 있습니다. 다른 특성인 <xref:System.ServiceModel.Description.ClientViaBehavior>는 논리 대상과 직접 네트워크 대상을 구분하는 데 사용할 수 있습니다. 또한 이중 클라이언트 콜백 형식은 서비스측 동작 중 일부를 사용할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][서비스 런타임 동작 지정](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)합니다.  

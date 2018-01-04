@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 93849fc315409b769a06cdd216bbc86e83cf6155
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 39f805da7570b81ff1f6593e82f5d0a9310ee9c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pii-security-lockdown"></a>PII 보안 잠금
 이 샘플에서는 다음을 수행하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스의 여러 보안 관련 기능을 제어하는 방법을 보여 줍니다.  

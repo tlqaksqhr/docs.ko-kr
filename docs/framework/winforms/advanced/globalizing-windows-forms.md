@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a111a600230bda529362ac19969a8a4b7d32916
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2337de6889a92b295e0a4f3a88d2a5039e583508
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalizing-windows-forms"></a>Windows Forms 전역화
 *전역화* 디자인 하 고 여러 문화권에서 작동 하는 소프트웨어 제품을 개발 하는 프로세스입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [인코딩 및 Windows Forms 전역화](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md)  
  전체 유니코드 지원 및 그 의미를 설명합니다.  
   

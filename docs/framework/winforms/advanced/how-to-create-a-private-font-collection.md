@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3016fb9a1b1d8466137bcaddb0b885c02c399baf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8c0107b1ef1d5259835c6fb1666519d3fc06f4e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-private-font-collection"></a>방법: 개인 글꼴 컬렉션 만들기
 <xref:System.Drawing.Text.PrivateFontCollection> 클래스에서 상속 된 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스입니다. 사용할 수는 <xref:System.Drawing.Text.PrivateFontCollection> 응용 프로그램에 맞게 글꼴 집합을 유지 관리 하는 개체입니다. 개인 글꼴 컬렉션으로 설치 된 시스템 글꼴 컴퓨터에 설치 되지 않은 글꼴을 포함할 수 있습니다. 글꼴 파일을 개인 글꼴 컬렉션을 추가 하려면 호출는 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> 의 메서드는 <xref:System.Drawing.Text.PrivateFontCollection> 개체입니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  개인 글꼴 컬렉션에서 글꼴 패밀리 수가 않습니다 반드시 컬렉션에 추가 된 글꼴 파일의 개수와 다릅니다. 예를 들어 ArialBd.tff, Times.tff, TimesBd.tff 파일 컬렉션에 추가 가정 합니다. 됩니다 3 개의 파일 하지만 컬렉션에 있는 두 패밀리 Times.tff 및 TimesBd.tff 동일한 제품군에 속하므로.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 다음 세 개의 글꼴 파일을 추가 하는 <xref:System.Drawing.Text.PrivateFontCollection> 개체:  
   
 -   C:\\*systemroot*\Fonts\Arial.tff (굴림, 일반)  

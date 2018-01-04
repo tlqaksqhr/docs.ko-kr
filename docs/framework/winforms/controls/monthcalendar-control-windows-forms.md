@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d4823b7d7411b7896e723683b70021292dd989aa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2ed5ccd46a6563ced2cf5946304a36d0c204a00a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar 컨트롤(Windows Forms)
 Windows Forms `MonthCalendar` 컨트롤을 보고 설정할 날짜 정보는 사용자를 위한 직관적인 그래픽 인터페이스를 제공 합니다. 컨트롤의 열은 요일 아래에 나열 된 표를 표시 합니다. 월 캡션 어느 한 쪽에 있는 화살표 단추를 클릭 하 여 다른 월을 선택할 수 있습니다. 하지만 달리 <xref:System.Windows.Forms.DateTimePicker> 컨트롤을이 제어를 사용 하 여 날짜 범위를 선택할 수 있습니다는 <xref:System.Windows.Forms.DateTimePicker> 컨트롤을 사용 하면 시간을 설정할 수 있습니다 날짜 뿐 아니라 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [MonthCalendar 컨트롤 개요](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md)  
  일반적인 개념을 소개는 `MonthCalendar` 컨트롤 사용자가을 보고 응용 프로그램에 대 한 날짜 정보를 설정할 수 있습니다.  
   

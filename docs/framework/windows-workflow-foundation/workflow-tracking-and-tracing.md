@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3738b484321a9c6a3cbcb2a59854bb91770bf8bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c7383d899af741e4a6c85b40e2316a6b759aa416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-tracking-and-tracing"></a>워크플로 추적
 Windows Workflow 추적은 워크플로 실행을 쉽게 볼 수 있도록 디자인된 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 기능입니다. 이 기능은 워크플로 인스턴스 실행을 추적하기 위한 추적 인프라를 제공합니다. WF 추적 인프라는 실행 중에 주요 이벤트를 반영하여 레코드를 내보내기 위한 워크플로를 투명하게 계측합니다. 기본적으로 모든 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로에 이 기능을 사용할 수 있습니다. 추적을 수행하기 위해 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 워크플로를 변경할 필요는 없습니다. 받으려는 추적 데이터의 양만 결정하면 됩니다. 워크플로 인스턴스가 시작되거나 완료되면 처리 추적 레코드가 내보내집니다. 추적에서 워크플로 변수와 연결된 비즈니스 관련 데이터를 추출할 수도 있습니다. 예를 들어, 워크플로가 주문 처리 시스템을 나타내는 경우 <xref:System.Activities.Tracking.TrackingRecord> 개체와 함께 주문 ID를 추출할 수 있습니다. 일반적으로 WF 추적을 사용하면 워크플로 실행에서 진단 또는 비즈니스 분석에 쉽게 액세스할 수 있습니다.  
@@ -43,7 +44,7 @@ Windows Workflow 추적은 워크플로 실행을 쉽게 볼 수 있도록 디�
   
  ![워크플로 추적 인프라](../../../docs/framework/windows-workflow-foundation/media/wv.gif "WV")  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [추적 레코드](../../../docs/framework/windows-workflow-foundation/tracking-records.md)  
  워크플로 런타임이 내보내는 추적 레코드를 설명합니다.  
   

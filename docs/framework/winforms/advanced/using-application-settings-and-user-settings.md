@@ -16,18 +16,19 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-settings-and-user-settings"></a>응용 프로그램 설정 및 사용자 설정 사용
 .NET Framework 2.0 부터는 수 만들고 응용 프로그램 실행 세션 간에 유지 되는 값에 액세스 합니다. 이러한 값은 라고 *설정을*합니다. 설정에는 사용자 기본 설정을 나타낼 수 있습니다 또는 응용 프로그램의 중요 한 정보를 사용 해야 합니다. 예를 들어 일련의 응용 프로그램의 색 구성표에 대 한 사용자 기본 설정을 저장 하는 설정 만들 수 있습니다. 또는 응용 프로그램을 사용 하는 데이터베이스를 지정 하는 연결 문자열을 저장할 수 있습니다. 설정을 통해 개별 사용자의 기본 설정을 저장 하는 프로필을 만들려고 하 고 외부의 코드를 응용 프로그램에 중요 한 정보를 유지 하는 둘 다를 수 있습니다.  
   
  이 단원의 항목에서는 실행 시간 및 디자인 타임에 설정을 사용 하는 방법에 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 디자인 타임에 새 설정 만들기](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
   
  응용 프로그램에 대 한 새 설정을 만들려면 Visual Studio를 사용 하는 방법에 설명 합니다.  

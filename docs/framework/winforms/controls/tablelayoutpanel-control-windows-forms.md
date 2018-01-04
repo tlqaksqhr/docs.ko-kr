@@ -20,16 +20,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f8f949edcf637f4b56ab0bcfdd121c5cb29e543
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4205e39ad8ace594eb6b86c04e45c9685db559cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel 컨트롤(Windows Forms)
 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 해당 내용을 표에 정렬합니다. 레이아웃이 디자인 타임과 런타임에 모두 수행되므로 응용 프로그램 환경이 변경되면 동적으로 변경될 수 있습니다. 따라서 패널의 컨트롤이 비례적으로 크기를 조정할 수 있으므로 지역화로 인한 부모 컨트롤 크기 조정이나 텍스트 길이 변경과 같은 변경 내용에 응답할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [TableLayoutPanel 컨트롤 개요](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)  
  행과 열이 있는 레이아웃을 만들 수 있게 해주는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 일반적인 개념을 소개합니다.  
   

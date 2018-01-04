@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 172928af99f625de0d01d074493c39cfdcec0037
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0559920a78003fa5b77ef7e966aeed0cd553444f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-binding"></a>Net 바인딩
 이 단원에는 끝점 요소의 네트워크 바인딩 특성을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Net MSMQ 바인딩](../../../../docs/framework/wcf/samples/net-msmq-binding.md)  
  끝점 요소의 MSMQ 바인딩 특성을 사용하는 방법을 보여 줍니다.  
   

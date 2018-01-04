@@ -13,16 +13,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7fab7247540ba4e098a793adebab54ca4219e503
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e83661ba66ca6a71f26c11172902d5bc602a2f6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions-transactions-and-compensation"></a>예외, 트랜잭션 및 보정
 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서는 워크플로에서 런타임 오류 조건을 처리하는 다양한 메커니즘을 제공합니다. 워크플로에서는 예외 처리기, 트랜잭션, 취소 및 보정을 함께 사용하여 오류 조건을 정상적으로 처리 및 복구할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [예외](../../../docs/framework/windows-workflow-foundation/exceptions.md)  
  <xref:System.Activities.Statements.TryCatch> 활동을 사용하여 워크플로에서 예외를 처리하는 방법을 보여 줍니다.  
   

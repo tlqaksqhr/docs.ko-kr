@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3fd8b59cd69807928b1a441d1bfb57f82d072288
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operation-formatter-and-operation-selector"></a>작업 포맷터와 작업 선택기
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 확장 지점을 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 예상하는 것과 다른 형식의 메시지 데이터를 허용하는 방법을 보여 줍니다. 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 포맷터 예상 아래에 포함 시킬 메서드 매개 변수는 `soap:body` 요소입니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/02/2017
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>는 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 구현으로 설정됩니다.  
   
- 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 정확히 일치하는 주소 필터를 사용합니다. 들어오는 메시지의 URI는 작업 이름 접미사와, 그 뒤에 매개 변수 데이터가 포함된 쿼리 문자열로 구성되므로 끝점 동작은 주소 필터를 접미사 일치 필터가 되도록 변경합니다. 끝점 동작은 이를 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>를 사용합니다.  
+ 기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 정확히 일치하는 주소 필터를 사용합니다. 들어오는 메시지의 URI는 작업 이름 접미사와, 그 뒤에 매개 변수 데이터가 포함된 쿼리 문자열로 구성되므로 끝점 동작은 주소 필터를 접미사 일치 필터가 되도록 변경합니다. 사용 하 여는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 이 목적을 위해 합니다.  
   
 ### <a name="installing-operation-formatters"></a>작업 포맷터 설치  
  포맷터를 지정하는 작업 동작은 고유합니다. 이러한 동작은 모든 작업이 필요한 작업 포맷터를 만들 수 있도록 항상 기본적으로 구현됩니다. 그러나 이러한 동작은 단지 다른 작업 동작과 유사하게 보이며 다른 특성으로도 식별할 수 없습니다. 대체 동작을 설치하기 위해 구현에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 형식 로더에 의해 기본적으로 설치되는 특정 포맷터 동작을 찾아서 이를 대체하거나, 기본 동작 이후에 실행될 호환 동작을 추가해야 합니다.  

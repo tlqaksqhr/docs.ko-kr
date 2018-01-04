@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c136bd5bdacec04a011f728694550fb66ae6d897
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68bfe46462a374899a0782903804edea0e93f161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-input-mask"></a>방법: 입력 마스크 설정
 마스킹된 텍스트 상자 컨트롤은 있는 향상 된 텍스트 상자 컨트롤을 수락 하거나 거부 하는 사용자 입력은 선언적 구문을 지원 합니다. Mask 속성을 설정 하 여 응용 프로그램에 사용자 지정 유효성 검사 논리를 작성 하지 않고 허용 가능한 사용자 입력을 지정할 수 있습니다. 자세한 내용은 설명 부분을 참조 하십시오.는 <xref:System.Windows.Forms.MaskedTextBox> 클래스입니다.  

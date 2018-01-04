@@ -22,16 +22,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a7cde7e4ee81f6fdcb14e87d720b8578fd40c20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0e88dec7383b9907bb291eb29f6959f3192e274f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>방법: 런타임에 ToolStrip 렌더러 설정
 사용자 지정 `ProfessionalColorTable` 클래스를 만들어 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 모양을 사용자 지정할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 사용자 지정 `ProfessionalColorTable` 클래스를 만드는 방법을 보여 줍니다. 이 클래스는 <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 대한 그라데이션을 정의합니다.  
   
  이 코드 예제를 사용하려면 응용 프로그램을 컴파일 및 실행한 다음 **색 변경**을 클릭하여 사용자 지정 `ProfessionalColorTable` 클래스에서 정의된 그라데이션을 적용합니다.  

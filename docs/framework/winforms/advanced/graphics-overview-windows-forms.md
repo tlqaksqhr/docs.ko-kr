@@ -19,16 +19,17 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08ded27d60bdfcd9b9b1de4ba719c2f5b6018df1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c066b3c6c84d89a74b18e90ac3a6aa80c63a9b0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-overview-windows-forms"></a>그래픽 개요(Windows Forms)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]프로그래머가 장치 독립적인 응용 프로그램을 작성 하는 데 사용할 수 있는 그래픽 장치 인터페이스입니다. 서비스 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 일련의 관리 클래스를 통해 노출 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [그래픽 개요](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
  한 일반적인 개요를 제공 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다.  
   

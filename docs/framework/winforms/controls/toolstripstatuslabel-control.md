@@ -17,16 +17,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efdde6367d54d4cdc8d9992d2b3f44a366227069
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 14a3f4ba9f57718e3ae4a3751f44e6257a335cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel 컨트롤
 <xref:System.Windows.Forms.ToolStripStatusLabel> 의 표시 영역을 제공 된 <xref:System.Windows.Forms.StatusStrip> 텍스트, 이미지, 또는 둘 다에 대 한 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ToolStripStatusLabel 컨트롤 개요](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control-overview.md)  
  Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel> 컨트롤의 용도와 주요 개념을 설명하는 항목을 제공합니다.  
   

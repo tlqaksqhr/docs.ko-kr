@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 564d46cb2d72ac63962657b39146489aaafd6a5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 40461ddb3fdae8076df5290afe669a8eca9f6a8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>방법: 합성 모드를 사용하여 알파 혼합 조절
 다음과 같은 특성을 가진 오프 스크린 비트맵을 만들려고 하는 경우가 있을 수 있습니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  이러한 비트맵을 만들려면 빈 생성 <xref:System.Drawing.Bitmap> 개체를 생성 한 다음는 <xref:System.Drawing.Graphics> 해당 비트맵을 기반으로 하는 개체입니다. 합성 모드 설정에서 <xref:System.Drawing.Graphics> 개체 <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 한 <xref:System.Drawing.Graphics> 기반 개체는 <xref:System.Drawing.Bitmap> 개체입니다. 코드를 사용 하 여는 <xref:System.Drawing.Graphics> 개체와 두 개의 반투명 브러시 (알파 160 =) 페인트 하는 비트맵을 합니다. 코드에는 빨간색 타원과 반투명 브러시를 사용 하 여 녹색 타원을 채웁니다. 녹색 타원 겹치는 빨간색 타원 하지만 때문에 녹색에서 빨간색 혼합 되지는 않습니다의 합성 모드는 <xref:System.Drawing.Graphics> 개체로 설정 되어 <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>합니다.  
   
  코드는 화면에 두 번 비트맵을 그립니다: 한 번 흰색 배경 기반 및 컬러 배경에 한 번입니다. 두 타원의 일부인 경우 비트맵의 픽셀 160, 알파 구성 요소가 없으므로 줄임표는 화면의 배경색 배경색과 혼합 됩니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>그라데이션 브러시를 사용하여 도형 채우기
 셰이프를 채우는 효과와 그라데이션 브러시를 사용할 수 있습니다. 예를 들어는 가로 그라데이션을 셰이프를 채우는 모양의 왼쪽된 가장자리에서 맨 오른쪽으로 이동 하면 점진적으로 변경 하는 색으로 사용할 수 있습니다. 검정 왼쪽된 가장자리에 사각형을 가정해 보세요 (0, 0, 0 빨강, 녹색 및 파랑 구성 요소에 의해 표현 됨)는 오른쪽 가장자리 빨강 (255, 0, 0)는 및입니다. 사각형이 256 픽셀 너비 경우 각된 픽셀의 빨간색 구성 요소는 왼쪽에 픽셀의 빨간색 구성 요소 보다 1 큽니다 됩니다. 행에서 가장 왼쪽에 있는 픽셀의 색 구성 요소 (0, 0, 0), 두 번째 픽셀은 (1, 0, 0), 세 번째 픽셀에는 (2, 0, 0)은, 및 기타 등등을 오른쪽에 있는 픽셀의 색 구성 요소 (255, 0, 0)에 도달할 때까지 합니다. 이러한 방식된으로 색 값 색 그라데이션의 구성 합니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/22/2017
   
  ![그라데이션](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 선형 그라데이션 만들기](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
  사용 하 여 선형 그라데이션 만드는 방법을 보여 줍니다.는 <xref:System.Drawing.Drawing2D.LinearGradientBrush> 클래스입니다.  
   

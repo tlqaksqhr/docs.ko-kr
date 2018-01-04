@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89de6bcbb44ca70592697ccf891099446b230ce6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf6bb08dc6607bf6c5b9e283ce449b603cb38d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>독립형 진단 피드 샘플
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 사용하여 배포를 위한 RSS/ATOM 피드를 만드는 방법을 보여 줍니다. 기본 "Hello World" 프로그램에서는 개체 모델의 기본 사항 및 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스에 이 프로그램을 설정하는 방법을 보여 줍니다.  

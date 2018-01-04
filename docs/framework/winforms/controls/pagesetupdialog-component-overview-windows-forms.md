@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 082dbff66c8a0f06635936011f802c99b88e41df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd2162cd2b538b5c6277991fab0ce40762f6c07d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog 구성 요소 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PageSetupDialog> 구성 요소는 Windows 기반 응용 프로그램에서 인쇄를 위한 페이지 세부 정보를 설정 하는 데 사용 하는 미리 구성 된 대화 상자. 고유한 대화 상자를 구성 하는 대신 페이지 기본 설정을 지정 하려면 Windows 기반 응용 프로그램 간단한 솔루션으로 사용자에 대 한 내에서 사용 합니다. 테두리 및 여백, 머리글 및 바닥글 및 세로 또는 가로 방향 설정 하려면 사용자가 활성화할 수 있습니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 응용 프로그램을 만듭니다.  

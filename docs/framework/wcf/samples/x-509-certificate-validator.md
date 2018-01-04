@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e2d177045f82f9df5318a38c67a23d6b9fa2d268
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0717aae2c13c9fa5fcbf0ea47d344cac5675fbea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="x509-certificate-validator"></a>X.509 Certificate Validator
 이 샘플에서는 사용자 지정 X.509 인증서 유효성 검사기를 구현하는 방법을 보여 줍니다. 이 방법은 기본 제공되는 X.509 인증서 유효성 검사기 중에서 응용 프로그램의 요구 사항에 적절한 것이 없는 경우에 유용합니다. 이 샘플에서는 자체 발급된 인증서를 승인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다. 그런 인증서를 사용하여 클라이언트가 서비스에 인증합니다.  

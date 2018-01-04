@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65a9f5ca09fd93861df19af1ced86f7b74af93ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4147f00b9396609ae80091a02c3f7d2450db34f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trusted-facade-service"></a>신뢰된 외관 서비스
 이 시나리오 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 보안 인프라를 사용하여 한 서비스에서 다른 서비스로 호출자의 ID 정보를 이동하는 방법을 보여 줍니다.  

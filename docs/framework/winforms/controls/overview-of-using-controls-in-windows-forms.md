@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 499d5455be29572f3b45df7180d2d436ff53a1b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms에서 컨트롤 사용 개요
 이 항목 Windows Forms 응용 프로그램의 필수 요소에 설명 하 고 컨트롤을 사용 하는 Windows Forms 응용 프로그램의 이벤트를 처리 하는 간단한 예를 제공 합니다.  

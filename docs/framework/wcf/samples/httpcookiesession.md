@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72d6dcef2ac59fd63706d8d8c843f739575cf5cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c06efd7450afe93eaecca1e678eb6f8bf5de7a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널은 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스와 ASMX 클라이언트 또는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트와 ASMX 서비스 사이의 통신을 가능하게 합니다.  
@@ -114,7 +115,7 @@ InputQueue<RequestContext> requestQueue;
  이 샘플에서는 구성을 통해 샘플 채널을 노출하는 두 개의 클래스를 제공합니다. 첫 번째 클래스는 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>의 `HttpCookieSessionBindingElement`입니다 대량의 구현은 `HttpCookieSessionBindingConfigurationElement`로부터 파생되는 <xref:System.ServiceModel.Configuration.StandardBindingElement>에 위임됩니다. `HttpCookieSessionBindingConfigurationElement`에는 `HttpCookieSessionBindingElement`의 속성에 대응하는 속성이 있습니다.  
   
 ### <a name="binding-element-extension-section"></a>바인딩 요소 확장 섹션  
- `HttpCookieSessionBindingElementSection` 섹션은 구성 시스템에 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>을 노출하는 `HttpCookieSessionBindingElement`입니다. 몇 가지 재정의를 통해 구성 섹션 이름, 바인딩 요소의 형식 및 바인딩 요소를 만드는 방법을 정의합니다. 그러면 다음과 같이 구성 파일의 확장 섹션을 등록할 수 있습니다.  
+ `HttpCookieSessionBindingElementSection` 섹션은 구성 시스템에 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>을 노출하는 `HttpCookieSessionBindingElement`입니다. 몇 가지 재정의를 통해 구성 섹션 이름, 바인딩 요소의 형식 및 바인딩 요소를 만드는 방법을 정의합니다. 그러면 다음과 같이 구성 파일의 확장명 섹션을 등록할 수 있습니다.  
   
 ```xml  
 <configuration>        

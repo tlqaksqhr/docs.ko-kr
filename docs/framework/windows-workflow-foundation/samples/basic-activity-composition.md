@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8eb909ce50c5faebf48339b07e8565fcd7afc718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 047948552471b33af8690b526db7c416e87f897a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-activity-composition"></a>기본 활동 구성
 이 샘플에서는 사용자 지정 활동을 추가로 빌드하기 위해 사용자 지정 활동과 시스템 제공 활동을 구성하는 방법을 보여 줍니다.  

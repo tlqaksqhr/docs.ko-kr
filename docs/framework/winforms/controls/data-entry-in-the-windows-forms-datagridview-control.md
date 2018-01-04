@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d5f7763ac7b5923f0eaec757df13d675971789
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 399520738c53e149e7a5539a62a5d4599e26a8da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 입력
 `DataGridView` 컨트롤 사용자가 추가 또는 컨트롤의 데이터를 수정할 방식을 변경할 수 있는 여러 가지 기능을 제공 합니다. 예를 들어 가능 데이터 입력 보다 효율적인 새 행에 대 한 기본 값을 제공 하 고 오류 발생 시 사용자가 경고 하 여 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows Forms DataGridView 컨트롤에 편집 모드 지정](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
  사용자가 셀 편집 시작 방식을 변경 하는 방법을 설명 합니다.  
   

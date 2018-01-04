@@ -20,16 +20,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c20562cade6917a3426fe04861a05c4b6b0bd543
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7b5ef87762b08daa973237e7b3da1068640e08bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>방법: 이미지 질감으로 도형 채우기
 사용 하 여 질감으로 닫힌된 셰이프를 채울 수 있습니다는 <xref:System.Drawing.Image> 클래스 및 <xref:System.Drawing.TextureBrush> 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 이미지와 함께 타원을 채웁니다. 코드를 생성 한 <xref:System.Drawing.Image> 개체를 다음의 주소를 전달 <xref:System.Drawing.Image> 개체에 대 한 인수로 <xref:System.Drawing.TextureBrush.%23ctor%2A> 생성자입니다. 세 번째 문은 이미지, 크기를 조정 하 고 네 번째 문에서 조정 된 이미지의 반복된 복사본을 사용 하 여 타원을 채웁니다.  
   
  다음 코드에서는 <xref:System.Drawing.TextureBrush.Transform%2A> 속성을 그리기 전에 이미지에 적용 하는 변환에 포함 합니다. 원본 이미지에는의 640 픽셀 너비와 높이는 480 픽셀을 가정 합니다. 이미지를 75 × 75 가로 및 세로 크기 조정 값을 설정 하 여 축소 하는 변환 합니다.  

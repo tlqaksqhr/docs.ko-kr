@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd6c3011b234f9d281a68a51fa8d9ef9d610816c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 111fc6e4945998c99e63560afab6104f4daf89e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>방법: ListView 컨트롤에 검색 기능 추가
 에 있는 항목의 큰 목록으로 작업 하는 경우에 종종는 <xref:System.Windows.Forms.ListView> 사용자에 게 검색 기능을 제공 하려는 컨트롤을 합니다. <xref:System.Windows.Forms.ListView> 제어는 두 가지 방법으로이 기능을 제공: 텍스트 일치 및 위치를 검색 합니다.  

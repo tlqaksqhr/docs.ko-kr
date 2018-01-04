@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9df2866251e08b8989f8550d045b587c9de8d2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b610e499ff980d2e705ad855ae98c1d54ff412e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-read-image-metadata"></a>방법: 이미지 메타데이터 읽기
 일부 이미지 파일 이미지의 기능을 확인 읽을 수 있는 메타 데이터를 포함 합니다. 예를 들어 디지털 사진 제조업체와 이미지를 캡처하는 데 사용 하는 카메라 모델을 확인 하려면 읽을 수 있는 메타 데이터를 포함 될 수 있습니다. 와 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 기존 메타 데이터를 읽을 수 있습니다 및 이미지 파일에 새 메타 데이터를 쓸 수도 있습니다.  
@@ -56,12 +57,12 @@ ms.lasthandoff: 11/21/2017
 |4|32 비트 정수|  
 |5|두 배열 `Byte` 분수를 나타내는 개체를|  
 |6|사용되지 않음|  
-|7|정의 되지 않은|  
+|7|Undefined|  
 |8|사용되지 않음|  
-|9|`SLong`|  
+|10|`SLong`|  
 |10|`SRational`|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 코드 예제에서는 파일의 일곱 가지 메타 데이터 표시를 읽고 `FakePhoto.jpg`합니다. 목록에서 두 번째 (인덱스 1) 속성 항목에 <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 는 0x010F (주문자) 및 <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (ASCII로 인코딩된 바이트 배열)입니다. 코드 예제에서는 해당 속성 항목의 값을 표시합니다.  

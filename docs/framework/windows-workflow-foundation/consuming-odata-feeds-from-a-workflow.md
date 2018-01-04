@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c538ead434a7e5abe85f0d28ac7bf7edae98cbb8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>워크플로에서 OData 피드 사용
 WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 사용하여 웹 또는 인트라넷을 통해 데이터를 노출하고 사용하기 위해 Open Data Protocol(OData)을 사용하는 서비스를 만들 수 있도록 하는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 의 구성 요소입니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. HTTP 요청을 보내고 데이터 서비스에서 반환하는 OData 피드를 처리할 수 있는 응용 프로그램은 모두 OData 기반 데이터 서비스와 상호 작용할 수 있습니다. 또한 WCF Data Services에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 응용 프로그램에서 OData 피드를 사용할 때 보다 다양한 기능을 갖춘 프로그래밍 환경을 제공하는 클라이언트 라이브러리가 포함되어 있습니다. 이 항목에서는 클라이언트 라이브러리를 사용하거나 사용하지 않고 워크플로에서 OData 피드를 사용하는 방법에 대해 간략하게 설명합니다.  
@@ -98,7 +99,7 @@ WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 �
 **Ana Trujillo Emparedados y helados, Contact: Ana Trujillo**   
 **Antonio Moreno Taquería, Contact: Antonio Moreno**   
 **Around the Horn, Contact: Thomas Hardy**   
-**Berglunds snabbköp, Contact: Christina Berglund**   
+**Berglunds snabbköp, 연락처: 강미란 Berglund**   
 **...**    
 ## <a name="consuming-an-odata-feed-without-using-the-client-libraries"></a>클라이언트 라이브러리를 사용하지 않고 OData 피드 사용  
  OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 클라이언트 라이브러리를 사용할 때 이러한 URI가 자동으로 만들어지지만 클라이언트 라이브러리를 반드시 사용할 필요는 없습니다. 적절한 경우 클라이언트 라이브러리를 사용하지 않고 OData 서비스에 직접 액세스할 수 있습니다. 클라이언트 라이브러리를 사용하지 않는 경우 서비스의 위치와 원하는 데이터는 URI로 지정되며 결과가 HTTP 요청의 응답으로 반환됩니다. 그러면 이 원시 데이터를 원하는 방식으로 처리하거나 조작할 수 있습니다. OData 쿼리의 결과를 검색하는 한 가지 방법은 <xref:System.Net.WebClient> 클래스를 사용하는 것입니다. 이 예제에서는 ALFKI 키로 표현된 고객의 연락처 이름이 검색됩니다.  

@@ -12,16 +12,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3122119c84b747f74f753bb10a066aaa0cd0bf21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2b3037f6229c16ef6a5164cb0e7053f5993d2a9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application"></a>응용 프로그램
 이 단원에는 [!INCLUDE[wf](../../../../includes/wf-md.md)]의 워크플로 응용 프로그램과 관련된 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [문서 승인 프로세스](../../../../docs/framework/windows-workflow-foundation/samples/document-approval-process.md)  
  LOB(Line-Of-Business) 응용 프로그램에서 워크플로를 사용하는 방법을 보여 줍니다.  
   
@@ -34,5 +35,5 @@ ms.lasthandoff: 12/02/2017
  [시각적 워크플로 추적](../../../../docs/framework/windows-workflow-foundation/samples/visual-workflow-tracking.md)  
  메시징 활동과 워크플로 서비스로 호스트되는 두 개의 워크플로를 사용하여 비즈니스 프로세스를 구현하는 방법을 보여 줍니다.  
   
- [일시 중단 된 인스턴스 관리](../../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
+ [일시 중단된 인스턴스 관리](../../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
  일시 중단된 워크플로 인스턴스를 관리하는 방법을 보여 줍니다.

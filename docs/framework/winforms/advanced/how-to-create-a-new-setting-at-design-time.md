@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8a05b6f37f7686f18a6200e009aabe7eed5537
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04b86579f45c5a357f8759bf36ae41f7a5c6e98b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>방법: 디자인 타임에 새 설정 만들기
 설정 디자이너를 사용 하 여 디자인 타임에 새 설정을 만들 수 있습니다. 설정 디자이너는 새 설정을 만들고 이러한 설정에 대 한 속성을 지정할 수 있도록 표 스타일 인터페이스입니다. 이름, 값, 유형 및 새 설정에 대 한 범위를 지정 해야 합니다. 설정을 만든 후에 코드에서 액세스할 수 있습니다.  

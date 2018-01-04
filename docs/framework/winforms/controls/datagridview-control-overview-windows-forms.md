@@ -29,11 +29,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4209866f63931fb3d80f35e211bd5f9b35ed48bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d9cc6568813af866acaf20696b870bedc3099be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Forms.DataGridView> 컨트롤은 고도로 구성 가능 하며 확장 가능 하 고 여러 속성, 메서드 및 해당 모양 및 동작을 사용자 지정 하는 이벤트를 제공 합니다. 테이블 형식 데이터를 표시 하는 Windows Forms 응용 프로그램을 사용할 때는 <xref:System.Windows.Forms.DataGridView> 다른 대체 이전 컨트롤 (예를 들어 <xref:System.Windows.Forms.DataGrid>). 읽기 전용 값의 작은 눈금을 표시 하는 경우 또는 수백만 개의 레코드를 테이블을 편집 하는 사용자를 설정 하는 경우는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 쉽게 프로그래밍할, 메모리 효율적인 솔루션으로 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DataGridView 컨트롤 기술 요약](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
  요약 <xref:System.Windows.Forms.DataGridView> 개념 및 관련된 클래스의 사용을 제어 합니다.  
   

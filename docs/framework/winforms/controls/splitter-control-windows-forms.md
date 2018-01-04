@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b6a1438a48cd6cd21532a977dcf9cee69fd2cea
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2069d419d185cde366b463c5682f9d1395e551a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter 컨트롤(Windows Forms)
 Windows Forms `Splitter` 컨트롤은 실행된 시간에 도킹 된 컨트롤 크기를 조정 하는 데 사용 됩니다. `Splitter` 컨트롤은 Windows 탐색기와 서로 다른 시간에 너비가 다양 한 정보를 포함 하는 데이터 창 표시 하는 데이터의 길이 다양 한 컨트롤과 폼에 자주 사용 됩니다.  
@@ -29,7 +30,7 @@ Windows Forms `Splitter` 컨트롤은 실행된 시간에 도킹 된 컨트롤 �
 > [!NOTE]
 >  하지만 <xref:System.Windows.Forms.SplitContainer> 대체 하 고 여기에 새로운 기능이 추가 된 `Splitter` 이전 버전의 `Splitter` 선택 하는 경우 이전 버전과 호환성을 유지 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Splitter 컨트롤 개요](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   

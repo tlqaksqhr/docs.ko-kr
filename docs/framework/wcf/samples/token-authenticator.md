@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7404087117ec45e09495897905094690c01fbaa8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d635a1d5122319e228feb4d8a362b7609129c9de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="token-authenticator"></a>Token Authenticator
 이 샘플에서는 사용자 지정 토큰 인증자를 구현하는 방법을 보여 줍니다. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 토큰 인증자는 메시지와 함께 사용된 토큰의 유효성을 검사하여 일관성이 있는지 확인하고 토큰과 연관된 ID를 인증하는 데 사용됩니다.  

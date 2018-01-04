@@ -13,20 +13,21 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 541ddbcdaefc14c3b9915186761a7842959cd91e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 867d80ed54f4ee64f87938ac9af89e3e3b198d8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web"></a>웹
 이 단원에는 웹 호스팅 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [고급 포맷 선택](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 프로그래밍 모델을 확장하여 나가는 응답의 새로운 형식을 지원하는 방법을 보여 줍니다.  
   
- [선택 영역 자동 서식 지정](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
+ [자동 포맷 선택](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 웹 HTTP 프로그래밍 모델을 사용하여 선택 영역 자동 서식 지정(XML 또는 JSON)을 사용하도록 설정하는 방법과 작업 코드에서 형식을 명시적으로 설정하는 방법을 보여 줍니다.  
   
  [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md)  
@@ -53,5 +54,5 @@ ms.lasthandoff: 12/02/2017
  [UriTemplate 테이블](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
  <xref:System.UriTemplateTable> 인스턴스 집합으로 작업할 수 있도록 <xref:System.UriTemplate> 클래스에서 사전과 비슷한 연결 테이블 구조체를 제공하는 방법을 보여 줍니다.  
   
- [UriTemplate 테이블 디스패처 샘플](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
+ [UriTemplate 테이블 디스패처](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
  <xref:System.UriTemplateTable>을 사용하여 빌드한 기본 디스패치 엔진을 보여 줍니다. <xref:System.UriTemplateTable> 클래스의 일반적인 사용 시나리오에 해당됩니다.

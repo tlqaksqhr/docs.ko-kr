@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 422e95a105978749cc56dfe6601fb4518cc11509
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5254beb4c338d14d11922312c74dfe1962d88921
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Windows Workflow Foundation에서 사용되지 않는 형식
 .NET 4에서 워크플로 팀은 <xref:System.Activities> 네임스페이스에 완전히 새로운 워크플로 엔진을 제공했습니다. .NET 4.5 베타 릴리스에서 "WF 3"에 있는 형식의 대부분 표시 됩니다 <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, 및 <xref:System.Workflow.Runtime> 네임 스페이스 사용 되지 않는 것입니다.  

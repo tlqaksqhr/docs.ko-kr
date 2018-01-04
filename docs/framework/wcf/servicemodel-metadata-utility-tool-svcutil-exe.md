@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f2ef91986cb5ad31560c4a7f418218a168f1b2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata 유틸리티 도구(Svcutil.exe)
 ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비스 모델 코드를 생성하고, 서비스 모델 코드에서 메타데이터 문서를 생성하는 데 사용됩니다.  
@@ -35,11 +36,11 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
   
 |작업|항목|  
 |----------|-----------|  
-|실행 중인 서비스나 정적 메타데이터 문서에서 코드를 생성합니다.|[서비스 메타 데이터에서 WCF 클라이언트 생성](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
-|컴파일된 코드에서 메타데이터 문서를 내보냅니다.|[방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드에서 메타 데이터 내보내기](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
-|컴파일된 서비스 코드의 유효성을 검사합니다.|[방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드 유효성 검사](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
-|실행 중인 서비스에서 메타데이터 문서를 다운로드합니다.|[방법: Svcutil.exe를 사용 하 여 메타 데이터 문서를 다운로드 하려면](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
-|serialization 코드를 생성합니다.|[방법: 시작 시간의 WCF 클라이언트 응용 프로그램 XmlSerializer를 사용 하 여 개선](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
+|실행 중인 서비스나 정적 메타데이터 문서에서 코드를 생성합니다.|[서비스 메타데이터에서 WCF 클라이언트 생성](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
+|컴파일된 코드에서 메타데이터 문서를 내보냅니다.|[방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)기|  
+|컴파일된 서비스 코드의 유효성을 검사합니다.|[방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드 유효성 검사](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
+|실행 중인 서비스에서 메타데이터 문서를 다운로드합니다.|[방법: Svcutil.exe를 사용하여 메타데이터 문서 다운로드](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
+|serialization 코드를 생성합니다.|[방법: XmlSerializer를 사용하여 WCF 클라이언트 응용 프로그램의 시작 시간 개선](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
   
 > [!CAUTION]
 >  Svcutil에서는 매개 변수로 입력한 이름이 동일한 경우 디스크의 기존 파일을 덮어씁니다. 여기에는 코드 파일, 구성 또는 메타데이터 파일이 포함될 수 있습니다. 코드 및 구성 파일을 생성할 때 덮어쓰는 것을 방지하려면 `/mergeConfig` 스위치를 사용합니다.  
@@ -132,7 +133,7 @@ ServiceModel Metadata 유틸리티 도구는 메타데이터 문서에서 서비
 |/excludeType:\<유형 >|내보내기에서 제외할 형식의 정규화된 이름 또는 정규화된 어셈블리 이름을 지정합니다. 형식을 내보내기에서 제외하기 위해 서비스 또는 서비스 계약 집합에 대한 메타데이터를 내보내는 경우 이 옵션을 사용할 수 있습니다. 이 옵션은 `/dconly` 옵션과 함께 사용할 수 없습니다.<br /><br /> 여러 서비스가 포함된 단일 어셈블리가 있고, 각 서비스에서 XSD 이름이 같은 별도의 클래스를 사용하는 경우 이 스위치에 XSD 클래스 이름 대신 서비스 이름을 지정해야 합니다.<br /><br /> XSD 또는 데이터 계약 형식은 지원되지 않습니다.<br /><br /> 약식: `/et`|  
   
 ### <a name="service-validation"></a>서비스 유효성 검사  
- 유효성 검사는 서비스를 호스팅하지 않고 서비스 구현의 오류를 검색하는 데 사용될 수 있습니다. 유효성을 검사할 서비스를 나타내려면 `/serviceName` 옵션을 사용해야 합니다.  
+ 유효성 검사는 서비스를 호스트하지 않고 서비스 구현의 오류를 검색하는 데 사용될 수 있습니다. 유효성을 검사할 서비스를 나타내려면 `/serviceName` 옵션을 사용해야 합니다.  
   
  `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`  
   

@@ -17,16 +17,17 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b0c283c58f2c39087c3d08b235b9056040971330
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 395d1a8d0536445cc1bcbc33b13d40c2bfc27fc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink"></a>디지털 잉크
 디지털 잉크 사용을 설명 하는이 섹션의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. Tablet PC SDK에 있는 일반적으로, 디지털 잉크가 되었습니다 핵심 Windows Presentation Foundation에서에서 사용할 수 있습니다. 즉, Windows Presentation Foundation의 기능을 사용 하 여 이제 완전 한 Tablet PC 응용 프로그램을 개발할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [개요](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
   [방법 항목](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
   

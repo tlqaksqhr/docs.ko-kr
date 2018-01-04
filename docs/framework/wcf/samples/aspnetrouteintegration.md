@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a942a26ad239233f13ee8791d1178fb47573e710
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 이 샘플에서는 ASP.NET 경로를 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 서비스를 호스팅하는 방법을 보여 줍니다. [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) 샘플이이 시나리오의 자체 호스팅된 버전을 표시 하 고 심층에서 서비스 구현에 설명 합니다. 이 항목에서는 ASP.NET 통합 기능을 중점적으로 설명합니다. ASP.NET 라우팅에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 <xref:System.Web.Routing>을 참조하십시오.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
  클라이언트  
  서비스를 호출하는 콘솔 응용 프로그램 프로젝트입니다.  
   
- 공통  
+ Common  
  클라이언트 및 서비스에서 사용되는 `Customer` 형식이 포함된 공유 라이브러리입니다. 클라이언트 콘솔 응용 프로그램이 실행되면 클라이언트에서는 서비스로 요청을 보내고 응답의 관련 정보를 콘솔 창에 씁니다.  
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  

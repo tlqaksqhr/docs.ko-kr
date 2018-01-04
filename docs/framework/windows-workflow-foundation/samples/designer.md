@@ -12,17 +12,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f544a92aa0e8df154ba5e165ce9a940b6120950
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 532dc0a0ab765a90facd2fb8eae14a221dd3fe79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designer"></a>Designer
 이 단원에는 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 사용 방법을 보여 주는 샘플이 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [XAML 파일에 추가 하는 디자이너 뷰 상태를 제거 합니다.](../../../../docs/framework/windows-workflow-foundation/samples/removing-the-view-state-the-designer-adds-to-an-xaml-file.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [디자이너를 통해 XAML 파일에 추가된 뷰 상태 제거](../../../../docs/framework/windows-workflow-foundation/samples/removing-the-view-state-the-designer-adds-to-an-xaml-file.md)  
  <xref:System.Windows.Markup.XamlWriter>에서 파생되며 XAML 파일에서 뷰 상태를 제거하는 클래스를 만드는 방법을 보여 줍니다.  
   
  [프로그래밍 모델 항목 트리](../../../../docs/framework/windows-workflow-foundation/samples/programming-model-item-tree.md)  

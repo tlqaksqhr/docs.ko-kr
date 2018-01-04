@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ce4e6a62097fc673268f38a6db660b3bc9cba7b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3dbf95e54cbb2b6a729265ab39e99332d1cc1871
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>대화 상자 컨트롤 및 구성 요소(Windows Forms)
 다음 Windows Forms 컨트롤 및 구성 요소는 표준 대화 상자를 제공합니다. 각 대화 상자에서 사용할 수 있는 함수에 대한 자세한 내용은 링크를 참조하세요.  

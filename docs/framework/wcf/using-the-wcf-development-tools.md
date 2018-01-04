@@ -13,21 +13,22 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9532363adafd492ca35e10e6d20c788ddf5b1d17
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d253f38fab21496dd305cc67e7b6e84846579f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF 개발 도구 사용
-이 단원에서는 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 서비스를 개발하는 데 사용할 수 있는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 개발 도구에 대해 설명합니다.  
+이 섹션에서는 설명는 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 개발에 도움이 되는 개발 도구 프로그램 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]서비스입니다.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 템플릿을 기반으로 사용하여 서비스를 직접 신속하게 빌드한 다음 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트와 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 사용하여 서비스를 디버깅하고 테스트할 수 있습니다. 이러한 도구를 함께 사용하면 디버그 및 테스트를 원활하고 빠르게 수행할 수 있으며 초기 단계에서 호스팅 모델에 주력할 필요가 없습니다.  
+ 사용할 수는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 템플릿을 신속 하 게 빌드할 서비스를 기반으로 다음 사용 하 여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 자동 호스트 및 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 디버깅 하 고 서비스를 테스트 합니다. 이러한 도구를 함께 사용하면 디버그 및 테스트를 원활하고 빠르게 수행할 수 있으며 초기 단계에서 호스팅 모델에 주력할 필요가 없습니다.  
   
 ## <a name="the-wcf-developer-tools"></a>WCF 개발자 도구  
  [WCF Visual Studio 템플릿](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 미리 정의된 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 프로젝트 및 항목 템플릿을 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스와 관련 응용 프로그램을 신속하게 빌드할 수 있습니다.  
+ 미리 정의 된 사용할 수 있습니다 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 에서 프로젝트 및 항목 템플릿을 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 신속 하 게 빌드할 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 해당 응용 프로그램입니다.  
   
  [WCF 서비스 호스트(WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   

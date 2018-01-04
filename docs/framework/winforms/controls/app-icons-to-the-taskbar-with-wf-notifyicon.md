@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c31998885926e9a7372bcf3182d1c95f0b79d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d795df8e8b514345632491fd6afdd618c2f18ec2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 응용 프로그램 아이콘 추가
 Windows Forms <xref:System.Windows.Forms.NotifyIcon> 구성 요소 작업 표시줄의 상태 알림 영역에 단일 아이콘을 표시 합니다. 상태 영역에 여러 개의 아이콘을 표시 하려면 여러 있어야 <xref:System.Windows.Forms.NotifyIcon> 폼의 구성 요소입니다. 컨트롤에 대해 표시 되는 아이콘을 설정 하려면는 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 속성입니다. 코드를 작성할 수도 있습니다는 <xref:System.Windows.Forms.NotifyIcon.DoubleClick> 아이콘을 두 번 클릭할 때 특정 작업이 발생 하므로 이벤트 처리기입니다. 예를 들어 아이콘으로 표시 하는 백그라운드 프로세스를 구성 하려면 사용자에 대 한 표시 대화 상자를 만들 수 있습니다.  

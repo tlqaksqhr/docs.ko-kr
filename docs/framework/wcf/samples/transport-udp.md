@@ -13,11 +13,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc30a755278251ac9e06f2ddd56e2c369b950af4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-udp"></a>전송: UDP
 UDP Transport 샘플에서는 UDP 유니캐스트 및 멀티캐스트를 사용자 지정 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송으로 구현하는 방법을 보여 줍니다. 이 샘플에서는 채널 프레임워크를 사용하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모범 사례에 따라 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 사용자 지정 전송을 만드는 권장 절차에 대해 설명합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  
@@ -316,7 +317,7 @@ if (context.Endpoint.Binding is CustomBinding)
  구성을 통해 전송을 노출하려면 두 가지 구성 섹션을 구현해야 합니다. 첫 번째는 `BindingElementExtensionElement`의 `UdpTransportBindingElement`입니다. 이는 `CustomBinding` 구현이 해당 바인딩 요소를 참조하기 위해 필요합니다. 두 번째는 `Configuration`의 `SampleProfileUdpBinding`입니다.  
   
 ### <a name="binding-element-extension-element"></a>바인딩 요소 확장명 요소  
- `UdpTransportElement` 섹션은 구성 시스템에 `BindingElementExtensionElement`을 노출하는 `UdpTransportBindingElement`입니다. 몇 가지 기본 재정의를 통해 구성 섹션 이름, 바인딩 요소의 형식 및 바인딩 요소를 만드는 방법을 정의합니다. 그러면 다음 코드와 같이 구성 파일에 확장 섹션을 등록할 수 있습니다.  
+ `UdpTransportElement` 섹션은 구성 시스템에 `BindingElementExtensionElement`을 노출하는 `UdpTransportBindingElement`입니다. 몇 가지 기본 재정의를 통해 구성 섹션 이름, 바인딩 요소의 형식 및 바인딩 요소를 만드는 방법을 정의합니다. 그러면 다음 코드와 같이 구성 파일에 확장명 섹션을 등록할 수 있습니다.  
   
 ```xml
 <configuration>  

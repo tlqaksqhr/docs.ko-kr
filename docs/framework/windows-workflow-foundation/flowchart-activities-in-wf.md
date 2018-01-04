@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d84dc6f49eb7062313e3dcbc71efbb475041865d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 73203a1279594375c14e6a62e3790e02d8c30aea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowchart-activities-in-wf"></a>WF의 순서도 활동
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]는 순서도 내의 분기 및 실행을 제어하기 위한 여러 시스템 제공 활동을 제공합니다.  

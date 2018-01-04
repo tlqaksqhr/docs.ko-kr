@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 679a6a30e72e18547a04007c58c82d5f121893d0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-versioning"></a>서비스 버전 관리
 서비스 및 서비스가 노출하는 끝점은 비즈니스 요구의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다. 이 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]의 버전 관리를 고려하는 방법에 대해 설명합니다.  

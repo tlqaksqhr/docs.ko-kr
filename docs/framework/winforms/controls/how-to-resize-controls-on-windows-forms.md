@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84915ecf08c9ef5471ec3a48685893c42ef13013
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19997c206e118353c4b712ac8c5650cd71ed3a58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤의 크기 조정
 개별 컨트롤의 크기를 조정할 수 있고와 같은 동일한 또는 다른 종류의 여러 컨트롤을 크기 조정할 수 <xref:System.Windows.Forms.Button> 및 <xref:System.Windows.Forms.GroupBox> 컨트롤입니다.  

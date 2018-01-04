@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f7a425853c2416f390d28ca31dae3f415e23c54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9509cb2c6478cf82cebd696ab92cd69a7e5b4097
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-token"></a>Custom Token
 이 샘플에서는 사용자 지정 토큰 구현을 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 응용 프로그램에 추가하는 방법을 보여 줍니다. 이 예제에서는 클라이언트 신용 카드에 대한 정보를 서비스에 안전하게 전달하기 위해 `CreditCardToken`을 사용합니다. 이 토큰은 WS-Security 메시지 헤더로 전달되고 메시지 본문 및 다른 메시지 헤더와 함께 대칭 보안 바인딩 요소를 사용하여 서명 및 암호화됩니다. 이 방법은 기본 제공 토큰이 충분하지 않은 경우 유용합니다. 이 샘플에서는 기본 제공 토큰 중 하나를 사용하는 대신 사용자 지정 보안 토큰을 서비스에 제공하는 방법을 보여 줍니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.  

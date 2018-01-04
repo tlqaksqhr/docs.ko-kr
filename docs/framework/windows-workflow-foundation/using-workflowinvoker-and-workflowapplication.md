@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1e4bb05f1b5f14554ff5183b42bbc8884cb114f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 669e1bd1daeb8f2569a851e21d10f250d1bc2204
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker 및 WorkflowApplication 사용
 [!INCLUDE[wf](../../../includes/wf-md.md)]는 호스팅 워크플로의 여러 메서드를 제공합니다. <xref:System.Activities.WorkflowInvoker>는 메서드 호출과 같은 방식으로 워크플로를 호출하기 위한 간단한 방법을 제공하며, 지속성을 사용하지 않는 워크플로에만 사용될 수 있습니다. <xref:System.Activities.WorkflowApplication>은 수명 주기 이벤트 알림, 실행 제어, 책갈피 다시 시작 및 지속성을 비롯한 다양한 워크플로 실행 모델을 제공합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 메시징 활동에 대한 지원을 제공하며 주로 워크플로 서비스에 사용됩니다. 이 항목에서는 <xref:System.Activities.WorkflowInvoker> 및 <xref:System.Activities.WorkflowApplication>을 사용하는 워크플로 호스팅을 소개합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]사용 하 여 워크플로 호스팅 <xref:System.ServiceModel.Activities.WorkflowServiceHost>, 참조 [워크플로 서비스](../../../docs/framework/wcf/feature-details/workflow-services.md) 및 [호스팅 워크플로 서비스 개요](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)합니다.  

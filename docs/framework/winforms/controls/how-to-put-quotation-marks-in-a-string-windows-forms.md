@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a4141a27a3b195dbb747a827d2bd9426a948f83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 267a69b9470040dfc60f3c0b280b71e3f52dbc88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>방법: 문자열에 인용 부호 넣기(Windows Forms)
 경우에 따라 텍스트의 문자열에 따옴표(" ")를 배치하려고 합니다. 예:  

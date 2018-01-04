@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d52512ef98596e1e3d5f0acb3b1bbc0eebffe867
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf767813f965b2c52a5061f74bbf2fab4572791b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-uninstall-services"></a>방법: 서비스 설치 및 제거
 .NET Framework를 사용하여 Windows 서비스를 개발하는 경우에는 명령줄 유틸리티 InstallUtil.exe를 사용하여 서비스 응용 프로그램을 빠르게 설치할 수 있습니다. 사용자가 설치 및 제거할 수 있는 Windows 서비스를 릴리스하려는 개발자는 InstallShield를 사용해야 합니다. 참조 [Windows Installer 배포](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)합니다.  
@@ -74,5 +75,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>참고 항목  
  [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [방법: 서비스 응용 프로그램에 설치 관리자를 추가 합니다.](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [방법: 서비스 응용 프로그램에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
  [Installutil.exe(설치 관리자 도구)](../../../docs/framework/tools/installutil-exe-installer-tool.md)

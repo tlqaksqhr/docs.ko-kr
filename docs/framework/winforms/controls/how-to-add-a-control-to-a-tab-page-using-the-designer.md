@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5efe73f9d8ae2621cca075f77051cb9c7402e57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5be65fc562d5b4d80a57ab068d97d66ccb17b6e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>방법: 디자이너를 사용하여 탭 페이지에 컨트롤 추가
 Windows Forms를 사용 하는 <xref:System.Windows.Forms.TabControl> 조직화 방식으로 다른 컨트롤을 표시 하는 것입니다. 탭 페이지의 주요 부분에 그림을 표시 하려면 다음이 지침을 사용할 수 있습니다. 탭 페이지의 레이블이 부분에 아이콘을 추가 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Windows Forms TabControl의 모양 변경](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)합니다.  

@@ -12,16 +12,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9064f56dab2c7a2b36394f6f77ded77edc0b387b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d83731fcf9bde8642dcdc0291142885068d532b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>사용자 지정 활동 디자이너 및 템플릿 사용
 이 단원의 항목에서는 사용자 지정 활동 디자이너와 사용자 지정 활동 템플릿을 만드는 방법에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 사용자 지정 활동 디자이너 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)  
  워크플로에서 제공된 디자이너가 디자인 작업에 적합하지 않을 경우 사용자 지정 활동 디자이너를 만드는 방법에 대해 설명합니다.  
   
@@ -49,4 +50,4 @@ ms.lasthandoff: 12/02/2017
  [워크플로 디자이너 재호스트](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
   
 ## <a name="external-resources"></a>외부 리소스  
- [사용자 지정 활동](../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)
+ [사용자 지정 작업](../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)

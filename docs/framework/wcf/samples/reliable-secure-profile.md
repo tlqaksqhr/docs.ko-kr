@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 6b73565409e26456ad09067066455ef2459b2e3c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 89a6d5c2e485699a55c77797c34eaca2c9848c40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-secure-profile"></a>신뢰할 수 있는 보안 프로필
 이 샘플에서는 구성 하는 방법을 보여 줍니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 및 [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). 이 샘플의 구현을 설명는 [연결 만들기](http://go.microsoft.com/fwlink/?LinkId=178141) 함께 신뢰할 수 있는 메시징 및 선택적으로 구성 될 수 있는 채널에 보안 채널을 신뢰할 수 있는 보안 바인딩을 만드는 사양을 기반으로 rsp 구성 합니다.  

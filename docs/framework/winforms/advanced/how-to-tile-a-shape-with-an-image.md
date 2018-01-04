@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f825371d3849e96ace627e660fd7c59bd290185
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d8726322e9443042b76c28e7b4b22ebc51c871bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>방법: 도형에 이미지를 바둑판식으로 배열
 타일을 층을 서로 옆에 배치할 것 처럼 사각형 이미지 서로 인접 (타일) 도형 채우기 배치할 수 있습니다. 도형의 내부가 바둑판식으로 배열 하려면 질감 브러시를 사용 합니다. 생성할 때는 <xref:System.Drawing.TextureBrush> 개체 생성자에 전달 하는 인수 중 하나는 <xref:System.Drawing.Image> 개체입니다. 질감 브러시를 사용 하 여 도형의 내부를 그리는 경우 셰이프가이 이미지의 반복된 복사본으로 채워집니다.  

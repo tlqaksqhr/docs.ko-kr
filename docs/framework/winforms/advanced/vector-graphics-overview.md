@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7bb3247f531a0dac83657e118fb53ebaf708ec9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vector-graphics-overview"></a>벡터 그래픽 개요
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]좌표계에 선, 사각형 및 기타 도형을 그립니다. 좌표 시스템의 다양 한에서 선택할 수 있지만 기본 좌표계 x 축이 오른쪽에 y 축은 아래쪽을 향하고 왼쪽 위 모퉁이에 원점에 있습니다. 기본 좌표 시스템의 측정 단위 픽셀입니다.  

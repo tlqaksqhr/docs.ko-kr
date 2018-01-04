@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fed33544654e6929997567198c0f07346e715d1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 539335f86718d19f9dd2c7e8cc3cd068807ef7de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execution-properties"></a>실행 속성
 이 샘플에서는 사용자 지정 활동에 실행 속성을 정의하고 사용하는 방법을 보여 줍니다. 이 예제에서는 실행 속성에 따라 콘솔의 전경색이 결정됩니다. 예제 워크플로는 실행의 논리 경로(<xref:System.Activities.Statements.Parallel> 활동의 분기)가 달라지는 경우 <xref:System.Activities.Statements.Parallel> 활동의 분기 전반에서 활동이 인터리브 방식으로 실행되더라도 다른 콘솔 색이 유지되는 방식을 보여 줍니다.  

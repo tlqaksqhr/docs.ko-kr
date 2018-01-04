@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15bcd9295ba825b156668152b3f1addf538aa884
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-graphics-programming"></a>그래픽 프로그래밍 시작
 이 섹션에서는 사용 하 여 시작 하는 방법을 보여 줍니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Windows Forms 응용 프로그램에서입니다. 다음 항목에서는 여러 완료 하는 방법을 보여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그리고 도형 및 텍스트를 채우는 등의 작업입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 그리는 데 필요한 그래픽 개체 만들기](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
  만드는 방법을 보여 줍니다는 <xref:System.Drawing.Graphics> 그리기에 대 한 개체입니다.  
   

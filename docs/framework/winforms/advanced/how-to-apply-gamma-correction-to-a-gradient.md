@@ -19,16 +19,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2721a45381f2d0befe82d6d0db2630f3eae08d51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6321894c86f340154bd37f50e81ea8a58a2e0896
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-gamma-correction-to-a-gradient"></a>방법: 그라데이션에 감마 보정 적용
 브러시의 설정 하 여 선형 그라데이션 브러시에 대 한 감마 보정을 사용 하도록 설정할 수 있습니다 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `true`합니다. 감마 보정을 사용 하지 않도록 설정 하 여 수는 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `false`합니다. 감마 보정은 기본적으로 비활성화 되어 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  선형 그라데이션 브러시를 만들고 해당 브러시를 사용 하 여 두 개의 사각형에 맞게는 예제입니다. 첫 번째 사각형 감마 보정 하지 않고 채워지고 두 번째 사각형 감마 보정 채워집니다.  
   
  다음 그림에서는 두 개의 채워진된 사각형을 보여 줍니다. 감마 보정 없는 위쪽 사각형 중간에 어두운 나타납니다. 감마 보정 있는 아래 사각형 농도가 좀 더 균일에 나타납니다.  

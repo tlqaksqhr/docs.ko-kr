@@ -22,16 +22,17 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbcbc786c19ad1af74114915b0fd0689d466fcbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6d83ff69053a71626d0bf9a844d9e94235080d78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker 구성 요소
 `BackgroundWorker` 폼 이나 컨트롤을 작업을 비동기적으로 실행할 수 있도록 하는 구성 요소입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [BackgroundWorker 구성 요소 개요](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
  설명의 `BackgroundWorker` 구성 요소를 응용 프로그램의 주 UI 스레드와에서 다른 스레드에서 시간이 많이 걸리는 작업을 비동기적으로 ("백그라운드에서")를 실행 하는 기능을 제공 합니다.  
   

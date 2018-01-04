@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc7fd3d3012053d8c40edf5fdce8af45c62c98c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92b66d27683fad4adf0ed2179a5bb29ef6220e3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드
 <xref:System.Windows.Forms.DataGridView> 세 가지 모드로 컨트롤 데이터를 표시할 수 있습니다: 바인딩된, 언바운드 및 가상입니다. 요구 사항에 따라 가장 적합 한 모드를 선택 합니다.  

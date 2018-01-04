@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9081b47284b63315d950ef791389312df32815f8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d07a17c5ed4302657671e0247e44ac0ef6e75518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP 승인 채널
 HTTP 승인 채널은 서비스에서 들어오는 메시지를 수신할 때 승인을 자동으로 보내지 않고 들어오는 메시지를 승인하거나 거부할 수 있게 단방향 메시지 패턴을 변경하는 계층화된 채널의 예입니다. 또한 HTTP 승인 채널을 사용하면 서비스에서는 메시지가 처리될 것임을 비즈니스 수준에서 보장할 수 있을 때까지 승인을 지연시킬 수 있습니다.  

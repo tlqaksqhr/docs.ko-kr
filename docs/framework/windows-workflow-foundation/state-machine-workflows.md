@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d2f387ddc6671c640ce47759050f27dbdaf7146
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f28c0c4956c5e32dac204a99967ddd4b6352484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="state-machine-workflows"></a>상태 시스템 워크플로
 상태 시스템은 잘 알려진 프로그램 개발용 패러다임입니다. <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 기타 작업과 함께 <xref:System.Activities.Statements.Transition> 활동은 상태 시스템 워크플로 프로그램을 빌드하는 데 사용할 수 있습니다. 이 항목에서는 상태 시스템 워크플로를 만드는 방법에 대해 간략하게 설명합니다.  

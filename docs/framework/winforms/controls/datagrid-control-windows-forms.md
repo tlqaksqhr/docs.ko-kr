@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c60927451ad4350ef507f2e2a661bcfaab4ea788
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0ad5ba4bdd283e411c746906adfed53282c55b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid 컨트롤(Windows Forms)
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  `DataGrid` 컨트롤이 유효한 데이터 소스로 설정되면 컨트롤에 데이터를 자동으로 채우고 데이터의 모양에 기반하여 열과 행을 만듭니다. `DataGrid` 컨트롤은 단일 테이블 또는 테이블 집합 간의 계층 관계를 표시하는 데 사용할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DataGrid 컨트롤 개요](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
  `DataGrid` 컨트롤의 기본 기능을 설명합니다.  
   

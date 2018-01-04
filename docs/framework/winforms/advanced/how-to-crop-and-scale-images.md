@@ -19,16 +19,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8fb5d527cd1047197f370c4a9a9b1f8f33461653
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de905cf70013098a4282e3f4af092ccbea16ccfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-crop-and-scale-images"></a>방법: 이미지 자르기 및 배율 조정
 <xref:System.Drawing.Graphics> 클래스에는 일부의 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드 중 일부는 원본 및 대상 사각형 하는 매개 변수가 이미지 자르기 및 배율에 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 구성 예제는 <xref:System.Drawing.Image> 있는 Apple.gif 디스크 파일에서 개체입니다. 코드는 원래 크기로 전체 apple 이미지를 그립니다. 호출 된 <xref:System.Drawing.Graphics.DrawImage%2A> 의 메서드는 <xref:System.Drawing.Graphics> 원래 apple 이미지 보다 큰 대상 사각형에 apple 이미지의 일부를 그릴 개체입니다.  
   
  <xref:System.Drawing.Graphics.DrawImage%2A> 메서드 다섯 번째 및 여섯 번째 인수는 세 번째, 네 번째, 지정 된 원본 사각형을 확인 하 여 그리는 데 apple의 어떤 부분을 결정 합니다. 이 경우 apple 너비의 75% 및 높이의 75%로 잘립니다.  

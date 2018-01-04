@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abb29dc584bbede14adcb396df8cd37a894b6f2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d4b3f319d86dd463dabc8b71be7c76c7fef41f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-using-a-text-file"></a>텍스트 파일 사용 추적
 이 샘플에서는 사용자 지정 추적 참가자를 만들어 [!INCLUDE[wf](../../../../includes/wf-md.md)]에서 추적을 확장하는 방법을 보여 줍니다. 추적 참가자는 추적 레코드를 내보낼 때 런타임에서 추적 레코드를 받는 .NET Framework 클래스입니다. 시나리오에 필요한 대상에 추적 이벤트를 전송하는 추적 참가자를 만들 수 있습니다. 예를 들어 ETW(Windows용 이벤트 추적) 추적 참가자는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 일부로 제공됩니다. 이 샘플의 추적 참가자는 XML 형식의 레코드를 텍스트 파일에 기록합니다.  

@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3a00f286a4c12290326f17364092dc458632fca
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence-best-practices"></a>지속성 최선의 구현 방법
 이 문서에서는 워크플로 지속성과 관련된 워크플로 디자인 및 구성에 대한 최상의 방법을 설명합니다.  

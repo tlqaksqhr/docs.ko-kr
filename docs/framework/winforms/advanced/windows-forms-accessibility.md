@@ -16,16 +16,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94296e623407aad2fecb52b9e6ece7500778931b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 70eb72b8755b24e0ee91c2a77b562984422b0c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-accessibility"></a>Windows Forms 내게 필요한 옵션
 Windows Forms의 접근성 기능을 사용하면 다양한 사용자에게 응용 프로그램을 제공할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [연습: 내게 필요한 옵션이 지원되는 Windows 기반 응용 프로그램 만들기](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
  접근성을 늘리기 위해 지원해야 하는 모든 기능에 대해 설명합니다.  
   

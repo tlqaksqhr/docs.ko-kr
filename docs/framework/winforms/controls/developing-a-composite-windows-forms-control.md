@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da180f888031aace892efc770184be53e9341047
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b98ba10e1c865417b9e844c4d5c31334f763e1b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Windows Forms 복합 컨트롤 개발
 다른 Windows Forms 컨트롤을 결합하여 복합 Windows Forms 컨트롤을 개발할 수 있습니다. 파생 되는 복합 컨트롤 <xref:System.Web.UI.UserControl> 사용자 컨트롤 이라고 합니다. 기본 클래스 <xref:System.Windows.Forms.UserControl>은 자식 컨트롤에 대한 키보드 라우팅을 제공하므로 자식 컨트롤이 포커스를 받을 수 있습니다. 사용자 정의 컨트롤의 예제를 보려면는 <xref:System.Windows.Forms.UserControl> 샘플 [하는 방법: Windows Forms 컨트롤에서 특성 적용](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)합니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [방법: 복합 컨트롤 작성](http://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
   
--   [연습: Visual Basic에서 복합 컨트롤 제작](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+-   [연습: Visual Basic에서 합성 컨트롤 작성](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
 -   [연습: Visual C#에서 복합 컨트롤 제작](http://msdn.microsoft.com/en-us/f88481a8-c746-4a36-9479-374ce5f2e91f))  
   

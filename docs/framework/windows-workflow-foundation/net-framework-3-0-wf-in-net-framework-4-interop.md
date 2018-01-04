@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51f11beb474758f16c6de0c47444e0467cac8bec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e551a2a5253232ca7e504ea484601fb935901da4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용
 <xref:System.Activities.Statements.Interop> 활동은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로에서 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)](WF 3.5) 활동을 래핑하는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)](WF 4.5) 활동입니다. WF 3 활동은 단일 리프 활동이거나 전체 활동 트리입니다. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 활동의 실행(취소 및 예외 처리 포함)과 지속성은 실행 중인 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 인스턴스의 컨텍스트 내에서 발생합니다.  
@@ -64,4 +65,4 @@ ms.lasthandoff: 12/02/2017
 4.  WF 3 사용자 지정 활동은 WF 3 워크플로 런타임에서와 동일한 방식으로 상호 운용 환경에서 워크플로 큐를 사용하여 데이터에 액세스할 수 있습니다. 이때 사용자 지정 활동 코드를 변경할 필요가 없습니다. 호스트에서 데이터는 <xref:System.Activities.Bookmark>를 다시 시작하여 WF 3 워크플로 큐에 배치됩니다. 책갈피 이름은 <xref:System.IComparable> 워크플로 큐 이름의 문자열 형식입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET Framework 3.0 또는.NET Framework 3.5 활동을 사용 하 여.NET Framework 4.5 워크플로에서](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+ [.NET Framework 4.5 워크플로에서 .NET Framework 3.0 또는 .NET Framework 3.5 작업 사용](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
