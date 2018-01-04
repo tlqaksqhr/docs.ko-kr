@@ -12,32 +12,33 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fffc934bbbd1fc707e0bf5c0afbf79a40fc8c633
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="task-2-host-the-workflow-designer"></a><span data-ttu-id="3b64f-102">작업 2: 워크플로 디자이너 호스팅</span><span class="sxs-lookup"><span data-stu-id="3b64f-102">Task 2: Host the Workflow Designer</span></span>
-<span data-ttu-id="3b64f-103">이 항목에서는 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 응용 프로그램에서 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 인스턴스를 호스트하는 절차를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-103">This topic describes the procedure for hosting an instance of the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in a [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] application.</span></span>  
+# <a name="task-2-host-the-workflow-designer"></a><span data-ttu-id="3b797-102">작업 2: 워크플로 디자이너 호스팅</span><span class="sxs-lookup"><span data-stu-id="3b797-102">Task 2: Host the Workflow Designer</span></span>
+<span data-ttu-id="3b797-103">이 항목에서는 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 응용 프로그램에서 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 인스턴스를 호스트하는 절차를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-103">This topic describes the procedure for hosting an instance of the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in a [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] application.</span></span>  
   
- <span data-ttu-id="3b64f-104">절차는 구성의 **그리드** 디자이너에 포함 된 컨트롤의 인스턴스를 프로그래밍 방식으로 만듭니다는 <xref:System.Activities.Presentation.WorkflowDesigner> 기본값을 포함 하 <xref:System.Activities.Statements.Sequence> 활동을 제공 하기 디자이너 메타 데이터를 등록 합니다. 모든 기본 제공 활동 및 호스트에 대 한 디자이너 지원을 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 에 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-104">The procedure configures the **Grid** control that contains the designer, programmatically creates an instance of the <xref:System.Activities.Presentation.WorkflowDesigner> that contains a default <xref:System.Activities.Statements.Sequence> activity, registers the designer metadata to provide designer support for all built-in activities, and hosts the [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in the [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application.</span></span>  
+ <span data-ttu-id="3b797-104">절차는 구성의 **그리드** 디자이너에 포함 된 컨트롤의 인스턴스를 프로그래밍 방식으로 만듭니다는 <xref:System.Activities.Presentation.WorkflowDesigner> 기본값을 포함 하 <xref:System.Activities.Statements.Sequence> 활동을 제공 하기 디자이너 메타 데이터를 등록 합니다. 모든 기본 제공 활동 및 호스트에 대 한 디자이너 지원을 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 에 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-104">The procedure configures the **Grid** control that contains the designer, programmatically creates an instance of the <xref:System.Activities.Presentation.WorkflowDesigner> that contains a default <xref:System.Activities.Statements.Sequence> activity, registers the designer metadata to provide designer support for all built-in activities, and hosts the [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in the [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application.</span></span>  
   
-### <a name="to-host-the-workflow-designer"></a><span data-ttu-id="3b64f-105">워크플로 디자이너를 호스트하려면</span><span class="sxs-lookup"><span data-stu-id="3b64f-105">To host the workflow designer</span></span>  
+### <a name="to-host-the-workflow-designer"></a><span data-ttu-id="3b797-105">워크플로 디자이너를 호스트하려면</span><span class="sxs-lookup"><span data-stu-id="3b797-105">To host the workflow designer</span></span>  
   
-1.  <span data-ttu-id="3b64f-106">만든는 HostingApplication 열기 프로젝트 [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-106">Open the HostingApplication project you created in [Task 1: Create a New Windows Presentation Foundation Application](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).</span></span>  
+1.  <span data-ttu-id="3b797-106">만든는 HostingApplication 열기 프로젝트 [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-106">Open the HostingApplication project you created in [Task 1: Create a New Windows Presentation Foundation Application](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).</span></span>  
   
-2.  <span data-ttu-id="3b64f-107">[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]를 쉽게 사용할 수 있도록 창의 크기를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-107">Adjust the size of the window to make it easier to use the [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].</span></span> <span data-ttu-id="3b64f-108">이 위해 선택 **MainWindow** 디자이너를 표시 하려면 F4 키를 누릅니다.는 **속성** 창에는 **레이아웃** 섹션, 설정는 **너비** 값 600에 및 **높이** 350의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-108">To do this, select **MainWindow** in the designer, press F4 to display the **Properties** window, and, in the **Layout** section there, set the **Width** to a value of 600 and the **Height** to a value of 350.</span></span>  
+2.  <span data-ttu-id="3b797-107">[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]를 쉽게 사용할 수 있도록 창의 크기를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-107">Adjust the size of the window to make it easier to use the [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].</span></span> <span data-ttu-id="3b797-108">이 위해 선택 **MainWindow** 디자이너를 표시 하려면 F4 키를 누릅니다.는 **속성** 창에는 **레이아웃** 섹션, 설정는 **너비** 값 600에 및 **높이** 350의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-108">To do this, select **MainWindow** in the designer, press F4 to display the **Properties** window, and, in the **Layout** section there, set the **Width** to a value of 600 and the **Height** to a value of 350.</span></span>  
   
-3.  <span data-ttu-id="3b64f-109">선택 하 여 표 이름을 설정는 **그리드** 디자이너에서 패널 (안의 상자를 클릭는 **MainWindow**) 설정의 **이름** 맨 위에 있는 속성은  **속성** 을 "grid1"입니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-109">Set the grid name by selecting the **Grid** panel in the designer (click the box inside the **MainWindow**) and setting the **Name** property at the top of the **Properties** window to "grid1".</span></span>  
+3.  <span data-ttu-id="3b797-109">선택 하 여 표 이름을 설정는 **그리드** 디자이너에서 패널 (안의 상자를 클릭는 **MainWindow**) 설정의 **이름** 맨 위에 있는 속성은  **속성** 을 "grid1"입니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-109">Set the grid name by selecting the **Grid** panel in the designer (click the box inside the **MainWindow**) and setting the **Name** property at the top of the **Properties** window to "grid1".</span></span>  
   
-4.  <span data-ttu-id="3b64f-110">에 **속성** 창에서 줄임표를 클릭 (**...** ) 옆에 `ColumnDefinitions` 속성을 열고는 **컬렉션 편집기** 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="3b64f-110">In the **Properties** window, click the ellipsis (**…**) next to the `ColumnDefinitions` property to open the **Collection Editor** dialog box.</span></span>  
+4.  <span data-ttu-id="3b797-110">에 **속성** 창에서 줄임표를 클릭 (**...** ) 옆에 `ColumnDefinitions` 속성을 열고는 **컬렉션 편집기** 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="3b797-110">In the **Properties** window, click the ellipsis (**…**) next to the `ColumnDefinitions` property to open the **Collection Editor** dialog box.</span></span>  
   
-5.  <span data-ttu-id="3b64f-111">에 **컬렉션 편집기** 대화 상자를 클릭는 **추가** 단추를 세 번 레이아웃에 세 개의 열을 삽입 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-111">In the **Collection Editor** dialog box, click the **Add** button three times to insert three columns into the layout.</span></span> <span data-ttu-id="3b64f-112">첫 번째 열이 포함 됩니다는 **도구 상자**, 두 번째 열을 호스팅하는 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], 세 번째 열은 속성 검사자에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-112">The first column will contain the **Toolbox**, the second column will host the [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], and the third column will be used for the property inspector.</span></span>  
+5.  <span data-ttu-id="3b797-111">에 **컬렉션 편집기** 대화 상자를 클릭는 **추가** 단추를 세 번 레이아웃에 세 개의 열을 삽입 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-111">In the **Collection Editor** dialog box, click the **Add** button three times to insert three columns into the layout.</span></span> <span data-ttu-id="3b797-112">첫 번째 열이 포함 됩니다는 **도구 상자**, 두 번째 열을 호스팅하는 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], 세 번째 열은 속성 검사자에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-112">The first column will contain the **Toolbox**, the second column will host the [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], and the third column will be used for the property inspector.</span></span>  
   
-6.  <span data-ttu-id="3b64f-113">설정의 `Width` 가운데 열의 값으로 속성을 "4 *"입니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-113">Set the `Width` property of the middle column to the value "4*".</span></span>  
+6.  <span data-ttu-id="3b797-113">설정의 `Width` 가운데 열의 값으로 속성을 "4 *"입니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-113">Set the `Width` property of the middle column to the value "4*".</span></span>  
   
-7.  <span data-ttu-id="3b64f-114">**확인** 을 클릭하여 변경 내용을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-114">Click **OK** to save the changes.</span></span> <span data-ttu-id="3b64f-115">다음 XAML이 MainWindow.xaml 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-115">The following XAML is added to your MainWindow.xaml file:</span></span>  
+7.  <span data-ttu-id="3b797-114">**확인** 을 클릭하여 변경 내용을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-114">Click **OK** to save the changes.</span></span> <span data-ttu-id="3b797-115">다음 XAML이 MainWindow.xaml 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-115">The following XAML is added to your MainWindow.xaml file:</span></span>  
   
     ```xml  
     <Grid Name="grid1">  
@@ -49,9 +50,9 @@ ms.lasthandoff: 12/02/2017
     </Grid>  
     ```  
   
-8.  <span data-ttu-id="3b64f-116">**솔루션 탐색기**MainWindow.xaml을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-116">In **Solution Explorer**, right-click MainWindow.xaml and select **View Code**.</span></span> <span data-ttu-id="3b64f-117">다음 단계에 따라 코드를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-117">Modify the code by following these steps:</span></span>  
+8.  <span data-ttu-id="3b797-116">**솔루션 탐색기**MainWindow.xaml을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-116">In **Solution Explorer**, right-click MainWindow.xaml and select **View Code**.</span></span> <span data-ttu-id="3b797-117">다음 단계에 따라 코드를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-117">Modify the code by following these steps:</span></span>  
   
-    1.  <span data-ttu-id="3b64f-118">다음 네임스페이스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-118">Add the following namespaces:</span></span>  
+    1.  <span data-ttu-id="3b797-118">다음 네임스페이스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-118">Add the following namespaces:</span></span>  
   
         ```csharp  
         using System.Activities;  
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/02/2017
         using System.ComponentModel;  
         ```  
   
-    2.  <span data-ttu-id="3b64f-119"><xref:System.Activities.Presentation.WorkflowDesigner>의 인스턴스를 보관할 전용 멤버 필드를 선언하려면 `MainWindow`에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-119">To declare a private member field to hold an instance of the <xref:System.Activities.Presentation.WorkflowDesigner>, add the following code to the `MainWindow` class.</span></span>  
+    2.  <span data-ttu-id="3b797-119"><xref:System.Activities.Presentation.WorkflowDesigner>의 인스턴스를 보관할 전용 멤버 필드를 선언하려면 `MainWindow`에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-119">To declare a private member field to hold an instance of the <xref:System.Activities.Presentation.WorkflowDesigner>, add the following code to the `MainWindow` class.</span></span>  
   
         ```csharp  
         public partial class MainWindow : Window  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/02/2017
         }  
         ```  
   
-    3.  <span data-ttu-id="3b64f-120">다음 `AddDesigner` 메서드를 `MainWindow` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-120">Add the following `AddDesigner` method to the `MainWindow` class.</span></span> <span data-ttu-id="3b64f-121">구현 인스턴스를 만듭니다는 <xref:System.Activities.Presentation.WorkflowDesigner>, 추가 <xref:System.Activities.Statements.Sequence> 활동, 다음 grid1의 가운데 열에 배치 하 고 **그리드**합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-121">The implementation creates an instance of the <xref:System.Activities.Presentation.WorkflowDesigner>, adds a <xref:System.Activities.Statements.Sequence> activity to it, and places it in middle column of the grid1 **Grid**.</span></span>  
+    3.  <span data-ttu-id="3b797-120">다음 `AddDesigner` 메서드를 `MainWindow` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-120">Add the following `AddDesigner` method to the `MainWindow` class.</span></span> <span data-ttu-id="3b797-121">구현 인스턴스를 만듭니다는 <xref:System.Activities.Presentation.WorkflowDesigner>, 추가 <xref:System.Activities.Statements.Sequence> 활동, 다음 grid1의 가운데 열에 배치 하 고 **그리드**합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-121">The implementation creates an instance of the <xref:System.Activities.Presentation.WorkflowDesigner>, adds a <xref:System.Activities.Statements.Sequence> activity to it, and places it in middle column of the grid1 **Grid**.</span></span>  
   
         ```csharp  
         private void AddDesigner()  
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/02/2017
         }  
         ```  
   
-    4.  <span data-ttu-id="3b64f-122">디자이너 메타데이터를 등록하여 모든 기본 제공 활동에 대한 디자이너 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-122">Register the designer metadata to add designer support for all the  built-in activities.</span></span> <span data-ttu-id="3b64f-123">그러면 도구 상자의 활동을 <xref:System.Activities.Statements.Sequence>의 원래 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 활동으로 끌어 놓을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-123">This enables you to drop activities from the toolbox onto the original <xref:System.Activities.Statements.Sequence> activity in the [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].</span></span> <span data-ttu-id="3b64f-124">이렇게 하려면 `RegisterMetadata` 메서드를 `MainWindow` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-124">To do this, add the `RegisterMetadata` method to the `MainWindow` class.</span></span>  
+    4.  <span data-ttu-id="3b797-122">디자이너 메타데이터를 등록하여 모든 기본 제공 활동에 대한 디자이너 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-122">Register the designer metadata to add designer support for all the  built-in activities.</span></span> <span data-ttu-id="3b797-123">그러면 도구 상자의 활동을 <xref:System.Activities.Statements.Sequence>의 원래 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 활동으로 끌어 놓을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-123">This enables you to drop activities from the toolbox onto the original <xref:System.Activities.Statements.Sequence> activity in the [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].</span></span> <span data-ttu-id="3b797-124">이렇게 하려면 `RegisterMetadata` 메서드를 `MainWindow` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-124">To do this, add the `RegisterMetadata` method to the `MainWindow` class.</span></span>  
   
         ```csharp  
         private void RegisterMetadata()  
@@ -106,9 +107,9 @@ ms.lasthandoff: 12/02/2017
         }  
         ```  
   
-         [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="3b64f-125">참조 활동 디자이너를 등록 [하는 방법: 사용자 지정 활동 디자이너를 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-125"> registering activity designers, see [How to: Create a Custom Activity Designer](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).</span></span>  
+         [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="3b797-125">참조 활동 디자이너를 등록 [하는 방법: 사용자 지정 활동 디자이너를 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-125"> registering activity designers, see [How to: Create a Custom Activity Designer](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).</span></span>  
   
-    5.  <span data-ttu-id="3b64f-126">`MainWindow` 클래스 생성자에서 앞에서 선언한 메서드에 호출을 추가하여 디자이너 지원을 위한 메타데이터를 등록하고 <xref:System.Activities.Presentation.WorkflowDesigner>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-126">In the `MainWindow` class constructor, add calls to the methods declared previously to register the metadata for designer support and to create the <xref:System.Activities.Presentation.WorkflowDesigner>.</span></span>  
+    5.  <span data-ttu-id="3b797-126">`MainWindow` 클래스 생성자에서 앞에서 선언한 메서드에 호출을 추가하여 디자이너 지원을 위한 메타데이터를 등록하고 <xref:System.Activities.Presentation.WorkflowDesigner>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-126">In the `MainWindow` class constructor, add calls to the methods declared previously to register the metadata for designer support and to create the <xref:System.Activities.Presentation.WorkflowDesigner>.</span></span>  
   
         ```csharp  
         public MainWindow()  
@@ -124,13 +125,13 @@ ms.lasthandoff: 12/02/2017
         ```  
   
         > [!NOTE]
-        >  <span data-ttu-id="3b64f-127">`RegisterMetadata` 메서드는 <xref:System.Activities.Statements.Sequence> 활동을 포함한 기본 제공 활동의 디자이너 메타데이터를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-127">The `RegisterMetadata` method registers the designer metadata of built-in activities including the <xref:System.Activities.Statements.Sequence> activity.</span></span> <span data-ttu-id="3b64f-128">`AddDesigner` 메서드는 <xref:System.Activities.Statements.Sequence> 활동을 사용하기 때문에 `RegisterMetadata` 메서드를 먼저 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-128">Because the `AddDesigner` method uses the <xref:System.Activities.Statements.Sequence> activity, the `RegisterMetadata` method must be called first.</span></span>  
+        >  <span data-ttu-id="3b797-127">`RegisterMetadata` 메서드는 <xref:System.Activities.Statements.Sequence> 활동을 포함한 기본 제공 활동의 디자이너 메타데이터를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-127">The `RegisterMetadata` method registers the designer metadata of built-in activities including the <xref:System.Activities.Statements.Sequence> activity.</span></span> <span data-ttu-id="3b797-128">`AddDesigner` 메서드는 <xref:System.Activities.Statements.Sequence> 활동을 사용하기 때문에 `RegisterMetadata` 메서드를 먼저 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-128">Because the `AddDesigner` method uses the <xref:System.Activities.Statements.Sequence> activity, the `RegisterMetadata` method must be called first.</span></span>  
   
-9. <span data-ttu-id="3b64f-129">F5 키를 눌러 솔루션을 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-129">Press F5 to build and run the solution.</span></span>  
+9. <span data-ttu-id="3b797-129">F5 키를 눌러 솔루션을 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-129">Press F5 to build and run the solution.</span></span>  
   
-10. <span data-ttu-id="3b64f-130">참조 [작업 3: 도구 상자 및 PropertyGrid 창 만들기](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) 추가 하는 방법에 알아보려면 **도구 상자** 및 **PropertyGrid** 재 호스트 된 워크플로 디자이너를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b64f-130">See [Task 3: Create the Toolbox and PropertyGrid Panes](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) to learn how to add **Toolbox** and **PropertyGrid** support to your rehosted workflow designer.</span></span>  
+10. <span data-ttu-id="3b797-130">참조 [작업 3: 도구 상자 및 PropertyGrid 창 만들기](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) 추가 하는 방법에 알아보려면 **도구 상자** 및 **PropertyGrid** 재 호스트 된 워크플로 디자이너를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b797-130">See [Task 3: Create the Toolbox and PropertyGrid Panes](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) to learn how to add **Toolbox** and **PropertyGrid** support to your rehosted workflow designer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b64f-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3b64f-131">See Also</span></span>  
- [<span data-ttu-id="3b64f-132">워크플로 디자이너 재호스트</span><span class="sxs-lookup"><span data-stu-id="3b64f-132">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [<span data-ttu-id="3b64f-133">작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="3b64f-133">Task 1: Create a New Windows Presentation Foundation Application</span></span>](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [<span data-ttu-id="3b64f-134">작업 3: 도구 상자 및 PropertyGrid 창 만들기</span><span class="sxs-lookup"><span data-stu-id="3b64f-134">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+## <a name="see-also"></a><span data-ttu-id="3b797-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3b797-131">See Also</span></span>  
+ [<span data-ttu-id="3b797-132">워크플로 디자이너 재호스트</span><span class="sxs-lookup"><span data-stu-id="3b797-132">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [<span data-ttu-id="3b797-133">작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="3b797-133">Task 1: Create a New Windows Presentation Foundation Application</span></span>](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
+ [<span data-ttu-id="3b797-134">작업 3: 도구 상자 및 PropertyGrid 창 만들기</span><span class="sxs-lookup"><span data-stu-id="3b797-134">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

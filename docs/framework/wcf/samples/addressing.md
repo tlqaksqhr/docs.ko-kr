@@ -13,19 +13,20 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05fe983832eb3931549bbda5ee7db7c70766cd3c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 21339d071ac26f073d0495814744535bd84f3a22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="addressing"></a><span data-ttu-id="ebe94-102">주소 지정</span><span class="sxs-lookup"><span data-stu-id="ebe94-102">Addressing</span></span>
-<span data-ttu-id="ebe94-103">Addressing 샘플에서는 끝점 주소의 다양한 측면과 기능을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-103">The Addressing sample demonstrates various aspects and features of endpoint addresses.</span></span> <span data-ttu-id="ebe94-104">이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="ebe94-105">이 샘플에서 서비스는 자체 호스트됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-105">In this sample the service is self-hosted.</span></span> <span data-ttu-id="ebe94-106">서비스와 클라이언트는 모두 콘솔 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-106">Both the service and the client are console applications.</span></span> <span data-ttu-id="ebe94-107">서비스는 상대 및 절대 끝점 주소를 조합하여 여러 끝점을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-107">The service defines multiple endpoints using a combination of relative and absolute endpoint addresses.</span></span>  
+# <a name="addressing"></a><span data-ttu-id="05a98-102">주소 지정</span><span class="sxs-lookup"><span data-stu-id="05a98-102">Addressing</span></span>
+<span data-ttu-id="05a98-103">Addressing 샘플에서는 끝점 주소의 다양한 측면과 기능을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-103">The Addressing sample demonstrates various aspects and features of endpoint addresses.</span></span> <span data-ttu-id="05a98-104">이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="05a98-105">이 샘플에서 서비스는 자체 호스트됩니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-105">In this sample the service is self-hosted.</span></span> <span data-ttu-id="05a98-106">서비스와 클라이언트는 모두 콘솔 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-106">Both the service and the client are console applications.</span></span> <span data-ttu-id="05a98-107">서비스는 상대 및 절대 끝점 주소를 조합하여 여러 끝점을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-107">The service defines multiple endpoints using a combination of relative and absolute endpoint addresses.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ebe94-108">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="05a98-108">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="ebe94-109">서비스 구성 파일에는 기본 주소와 4개의 끝점이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-109">The service configuration file specifies a base address and four endpoints.</span></span> <span data-ttu-id="ebe94-110">기본 주소는 다음 샘플 구성에서처럼 service/host/baseAddresses 아래 add 요소를 사용하여 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-110">The base address is specified using the add element, under service/host/baseAddresses as demonstrated in the following sample configuration.</span></span>  
+ <span data-ttu-id="05a98-109">서비스 구성 파일에는 기본 주소와 4개의 끝점이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-109">The service configuration file specifies a base address and four endpoints.</span></span> <span data-ttu-id="05a98-110">기본 주소는 다음 샘플 구성에서처럼 service/host/baseAddresses 아래 add 요소를 사용하여 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-110">The base address is specified using the add element, under service/host/baseAddresses as demonstrated in the following sample configuration.</span></span>  
   
 ```xml  
 <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
 </service>  
 ```  
   
- <span data-ttu-id="ebe94-111">다음 샘플 구성에서와 같이 첫 번째 끝점 정의는 끝점 주소가 기본 주소와 URI 컴퍼지션 다음에 오는 상대 주소의 조합인 상대 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-111">The first endpoint definition shown in the following sample configuration specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of URI composition.</span></span>  
+ <span data-ttu-id="05a98-111">다음 샘플 구성에서와 같이 첫 번째 끝점 정의는 끝점 주소가 기본 주소와 URI 컴퍼지션 다음에 오는 상대 주소의 조합인 상대 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-111">The first endpoint definition shown in the following sample configuration specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of URI composition.</span></span>  
   
 ```xml
 <!-- Empty relative address specified:   
@@ -50,9 +51,9 @@ ms.lasthandoff: 12/02/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="ebe94-112">이 경우 상대 주소가 비어 있으므로("") 끝점 주소는 기본 주소와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-112">In this case, the relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="ebe94-113">실제 끝점 주소는 http://localhost:8000/servicemodelsamples/service입니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-113">The actual endpoint address is http://localhost:8000/servicemodelsamples/service.</span></span>  
+ <span data-ttu-id="05a98-112">이 경우 상대 주소가 비어 있으므로("") 끝점 주소는 기본 주소와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-112">In this case, the relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="05a98-113">실제 끝점 주소는 http://localhost:8000/servicemodelsamples/service입니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-113">The actual endpoint address is http://localhost:8000/servicemodelsamples/service.</span></span>  
   
- <span data-ttu-id="ebe94-114">두 번째 끝점 정의도 다음 샘플 구성에서처럼 상대 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-114">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="05a98-114">두 번째 끝점 정의도 다음 샘플 구성에서처럼 상대 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-114">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <!-- The relative address specified: use the base address -->  
@@ -63,9 +64,9 @@ ms.lasthandoff: 12/02/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="ebe94-115">상대 주소 "test"가 기본 주소에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-115">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="ebe94-116">실제 끝점 주소는 http://localhost:8000/servicemodelsamples/service/test입니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-116">The actual endpoint address is http://localhost:8000/servicemodelsamples/service/test.</span></span>  
+ <span data-ttu-id="05a98-115">상대 주소 "test"가 기본 주소에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-115">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="05a98-116">실제 끝점 주소는 http://localhost:8000/servicemodelsamples/service/test입니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-116">The actual endpoint address is http://localhost:8000/servicemodelsamples/service/test.</span></span>  
   
- <span data-ttu-id="ebe94-117">세 번째 끝점 정의는 다음 샘플 구성에서처럼 절대 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-117">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="05a98-117">세 번째 끝점 정의는 다음 샘플 구성에서처럼 절대 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-117">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -73,9 +74,9 @@ ms.lasthandoff: 12/02/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="ebe94-118">주소에서 기본 주소는 아무런 역할도 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-118">The base address plays no role in the address.</span></span> <span data-ttu-id="ebe94-119">실제 끝점 주소는 http://localhost:8001/hello/servicemodelsamples입니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-119">The actual endpoint address is http://localhost:8001/hello/servicemodelsamples.</span></span>  
+ <span data-ttu-id="05a98-118">주소에서 기본 주소는 아무런 역할도 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-118">The base address plays no role in the address.</span></span> <span data-ttu-id="05a98-119">실제 끝점 주소는 http://localhost:8001/hello/servicemodelsamples입니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-119">The actual endpoint address is http://localhost:8001/hello/servicemodelsamples.</span></span>  
   
- <span data-ttu-id="ebe94-120">네 번째 끝점 주소는 절대 주소 및 다른 전송(TCP)을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-120">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="ebe94-121">주소에서 기본 주소는 아무런 역할도 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-121">The base address plays no role in the address.</span></span> <span data-ttu-id="ebe94-122">실제 끝점 주소는 net.tcp://localhost:9000/servicemodelsamples/service입니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-122">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
+ <span data-ttu-id="05a98-120">네 번째 끝점 주소는 절대 주소 및 다른 전송(TCP)을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-120">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="05a98-121">주소에서 기본 주소는 아무런 역할도 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-121">The base address plays no role in the address.</span></span> <span data-ttu-id="05a98-122">실제 끝점 주소는 net.tcp://localhost:9000/servicemodelsamples/service입니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-122">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -89,9 +90,9 @@ ms.lasthandoff: 12/02/2017
 </service>  
 ```  
   
- <span data-ttu-id="ebe94-123">클라이언트는 4개의 서비스 끝점 하나에만 액세스하지만 이러한 서비스 끝점이 모두 해당 구성 파일에 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-123">The client accesses just one of the four service endpoints, but all four are defined in its configuration file.</span></span> <span data-ttu-id="ebe94-124">클라이언트는 `CalculatorProxy` 개체를 만들 때 끝점을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-124">The client selects an endpoint when it creates the `CalculatorProxy` object.</span></span> <span data-ttu-id="ebe94-125">구성 이름을 `CalculatorEndpoint1`부터 `CalculatorEndpoint4`까지 변경하여 각 끝점을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-125">By changing the configuration name from `CalculatorEndpoint1` through `CalculatorEndpoint4`, you can exercise each of the endpoints.</span></span>  
+ <span data-ttu-id="05a98-123">클라이언트는 4개의 서비스 끝점 하나에만 액세스하지만 이러한 서비스 끝점이 모두 해당 구성 파일에 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-123">The client accesses just one of the four service endpoints, but all four are defined in its configuration file.</span></span> <span data-ttu-id="05a98-124">클라이언트는 `CalculatorProxy` 개체를 만들 때 끝점을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-124">The client selects an endpoint when it creates the `CalculatorProxy` object.</span></span> <span data-ttu-id="05a98-125">구성 이름을 `CalculatorEndpoint1`부터 `CalculatorEndpoint4`까지 변경하여 각 끝점을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-125">By changing the configuration name from `CalculatorEndpoint1` through `CalculatorEndpoint4`, you can exercise each of the endpoints.</span></span>  
   
- <span data-ttu-id="ebe94-126">샘플을 실행하면 서비스는 각 끝점에 대한 주소, 바인딩 이름 및 계약 이름을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-126">When you run the sample, the service enumerates the address, binding name and contract name for each of its endpoints.</span></span> <span data-ttu-id="ebe94-127">ServiceHost의 관점에서 보면 MEX(메타데이터 교환) 끝점은 또 다른 끝점이므로 목록에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-127">The metadata exchange (MEX) endpoint is just another endpoint from the ServiceHost's perspective so it shows up in the list.</span></span>  
+ <span data-ttu-id="05a98-126">샘플을 실행하면 서비스는 각 끝점에 대한 주소, 바인딩 이름 및 계약 이름을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-126">When you run the sample, the service enumerates the address, binding name and contract name for each of its endpoints.</span></span> <span data-ttu-id="05a98-127">ServiceHost의 관점에서 보면 MEX(메타데이터 교환) 끝점은 또 다른 끝점이므로 목록에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-127">The metadata exchange (MEX) endpoint is just another endpoint from the ServiceHost's perspective so it shows up in the list.</span></span>  
   
 ```  
 Service endpoints:  
@@ -115,7 +116,7 @@ The service is ready.
 Press <ENTER> to terminate service.  
 ```  
   
- <span data-ttu-id="ebe94-128">클라이언트를 실행하면 작업 요청 및 응답이 서비스와 클라이언트 콘솔 창 모두에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-128">When you run the client, the operation requests and responses are displayed in both the service and client console windows.</span></span> <span data-ttu-id="ebe94-129">서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-129">Press ENTER in each console window to shut down the service and client.</span></span>  
+ <span data-ttu-id="05a98-128">클라이언트를 실행하면 작업 요청 및 응답이 서비스와 클라이언트 콘솔 창 모두에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-128">When you run the client, the operation requests and responses are displayed in both the service and client console windows.</span></span> <span data-ttu-id="05a98-129">서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-129">Press ENTER in each console window to shut down the service and client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -126,24 +127,24 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ebe94-130">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="ebe94-130">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="05a98-130">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="05a98-130">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="ebe94-131">수행 했는지 확인 하십시오.는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="05a98-131">수행 했는지 확인 하십시오.는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="ebe94-132">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="05a98-132">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="ebe94-133">지침에 따라 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="05a98-133">지침에 따라 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="ebe94-134">Svcutil.exe를 사용하여 이 샘플에 대한 구성을 다시 생성할 경우 클라이언트 구성에서 끝점 이름을 클라이언트 코드와 일치하도록 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-134">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
+    >  <span data-ttu-id="05a98-134">Svcutil.exe를 사용하여 이 샘플에 대한 구성을 다시 생성할 경우 클라이언트 구성에서 끝점 이름을 클라이언트 코드와 일치하도록 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-134">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ebe94-135">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-135">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ebe94-136">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="ebe94-136">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="05a98-135">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-135">The samples may already be installed on your machine.</span></span> <span data-ttu-id="05a98-136">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="05a98-136">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ebe94-137">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="ebe94-137">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ebe94-138">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebe94-138">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="05a98-137">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="05a98-137">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="05a98-138">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="05a98-138">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## <a name="see-also"></a><span data-ttu-id="ebe94-139">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ebe94-139">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05a98-139">참고 항목</span><span class="sxs-lookup"><span data-stu-id="05a98-139">See Also</span></span>

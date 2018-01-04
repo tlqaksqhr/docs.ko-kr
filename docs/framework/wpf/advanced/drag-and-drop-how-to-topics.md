@@ -15,22 +15,23 @@ caps.latest.revision: "80"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1d1fe4245c313a7aad003b1f268a2c46fed21ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80b9518a7bfff1057acc76831f7def1e66f3b11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="2a897-102">끌어서 놓기 방법 항목</span><span class="sxs-lookup"><span data-stu-id="2a897-102">Drag and Drop How-to Topics</span></span>
-<span data-ttu-id="2a897-103">다음 예에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주기는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 끌어서 놓기 프레임 워크입니다.</span><span class="sxs-lookup"><span data-stu-id="2a897-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
+# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="9b0d1-102">끌어서 놓기 방법 항목</span><span class="sxs-lookup"><span data-stu-id="9b0d1-102">Drag and Drop How-to Topics</span></span>
+<span data-ttu-id="9b0d1-103">다음 예에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주기는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 끌어서 놓기 프레임 워크입니다.</span><span class="sxs-lookup"><span data-stu-id="9b0d1-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2a897-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="2a897-104">In This Section</span></span>  
- [<span data-ttu-id="2a897-105">RichTextBox 컨트롤에 끌어 놓은 파일 열기</span><span class="sxs-lookup"><span data-stu-id="2a897-105">Open a File That is Dropped on a RichTextBox Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [<span data-ttu-id="2a897-106">데이터 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="2a897-106">Create a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [<span data-ttu-id="2a897-107">데이터 개체에 데이터 형식이 있는지 확인</span><span class="sxs-lookup"><span data-stu-id="2a897-107">Determine if a Data Format is Present in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [<span data-ttu-id="2a897-108">데이터 개체의 데이터 형식 나열</span><span class="sxs-lookup"><span data-stu-id="2a897-108">List the Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [<span data-ttu-id="2a897-109">특정 데이터 형식의 데이터 검색</span><span class="sxs-lookup"><span data-stu-id="2a897-109">Retrieve Data in a Particular Data Format</span></span>](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [<span data-ttu-id="2a897-110">데이터 개체에 여러 데이터 형식 저장</span><span class="sxs-lookup"><span data-stu-id="2a897-110">Store Multiple Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9b0d1-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9b0d1-104">In This Section</span></span>  
+ [<span data-ttu-id="9b0d1-105">RichTextBox 컨트롤에 끌어 놓은 파일 열기</span><span class="sxs-lookup"><span data-stu-id="9b0d1-105">Open a File That is Dropped on a RichTextBox Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [<span data-ttu-id="9b0d1-106">데이터 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="9b0d1-106">Create a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
+ [<span data-ttu-id="9b0d1-107">데이터 개체에 데이터 형식이 있는지 확인</span><span class="sxs-lookup"><span data-stu-id="9b0d1-107">Determine if a Data Format is Present in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [<span data-ttu-id="9b0d1-108">데이터 개체의 데이터 형식 나열</span><span class="sxs-lookup"><span data-stu-id="9b0d1-108">List the Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
+ [<span data-ttu-id="9b0d1-109">특정 데이터 형식의 데이터 검색</span><span class="sxs-lookup"><span data-stu-id="9b0d1-109">Retrieve Data in a Particular Data Format</span></span>](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
+ [<span data-ttu-id="9b0d1-110">데이터 개체에 여러 데이터 형식 저장</span><span class="sxs-lookup"><span data-stu-id="9b0d1-110">Store Multiple Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2a897-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2a897-111">See Also</span></span>  
- [<span data-ttu-id="2a897-112">끌어서 놓기 개요</span><span class="sxs-lookup"><span data-stu-id="2a897-112">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a><span data-ttu-id="9b0d1-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9b0d1-111">See Also</span></span>  
+ [<span data-ttu-id="9b0d1-112">끌어서 놓기 개요</span><span class="sxs-lookup"><span data-stu-id="9b0d1-112">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

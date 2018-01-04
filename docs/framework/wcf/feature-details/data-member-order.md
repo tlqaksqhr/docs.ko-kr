@@ -17,33 +17,34 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8a838b2dd2367bed3fb3ffa3248e67c23f7917d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 41eb191a08aba0f84a677087a3771b6d8e90efcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="data-member-order"></a><span data-ttu-id="bf2ca-102">데이터 멤버 순서</span><span class="sxs-lookup"><span data-stu-id="bf2ca-102">Data Member Order</span></span>
-<span data-ttu-id="bf2ca-103">일부 응용 프로그램에서는 serialize된 XML로 표시되는 데이터 순서와 같이 여러 데이터 멤버로부터 데이터가 전송 또는 수신되는 순서를 알고 있는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-103">In some applications, it is useful to know the order in which data from the various data members is sent or is expected to be received (such as the order in which data appears in the serialized XML).</span></span> <span data-ttu-id="bf2ca-104">이 순서는 경우에 따라 변경해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-104">Sometimes it may be necessary to change this order.</span></span> <span data-ttu-id="bf2ca-105">이 항목에서는 순서 지정 규칙에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-105">This topic explains the ordering rules.</span></span>  
+# <a name="data-member-order"></a><span data-ttu-id="8ab90-102">데이터 멤버 순서</span><span class="sxs-lookup"><span data-stu-id="8ab90-102">Data Member Order</span></span>
+<span data-ttu-id="8ab90-103">일부 응용 프로그램에서는 serialize된 XML로 표시되는 데이터 순서와 같이 여러 데이터 멤버로부터 데이터가 전송 또는 수신되는 순서를 알고 있는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-103">In some applications, it is useful to know the order in which data from the various data members is sent or is expected to be received (such as the order in which data appears in the serialized XML).</span></span> <span data-ttu-id="8ab90-104">이 순서는 경우에 따라 변경해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-104">Sometimes it may be necessary to change this order.</span></span> <span data-ttu-id="8ab90-105">이 항목에서는 순서 지정 규칙에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-105">This topic explains the ordering rules.</span></span>  
   
-## <a name="basic-rules"></a><span data-ttu-id="bf2ca-106">기본 규칙</span><span class="sxs-lookup"><span data-stu-id="bf2ca-106">Basic Rules</span></span>  
- <span data-ttu-id="bf2ca-107">데이터의 순서를 지정하는 기본 규칙은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-107">The basic rules for data ordering include:</span></span>  
+## <a name="basic-rules"></a><span data-ttu-id="8ab90-106">기본 규칙</span><span class="sxs-lookup"><span data-stu-id="8ab90-106">Basic Rules</span></span>  
+ <span data-ttu-id="8ab90-107">데이터의 순서를 지정하는 기본 규칙은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-107">The basic rules for data ordering include:</span></span>  
   
--   <span data-ttu-id="bf2ca-108">데이터 계약 형식이 상속 계층 구조의 일부이면 기본 형식의 데이터 멤버가 항상 첫 번째 순서입니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-108">If a data contract type is a part of an inheritance hierarchy, data members of its base types are always first in the order.</span></span>  
+-   <span data-ttu-id="8ab90-108">데이터 계약 형식이 상속 계층 구조의 일부이면 기본 형식의 데이터 멤버가 항상 첫 번째 순서입니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-108">If a data contract type is a part of an inheritance hierarchy, data members of its base types are always first in the order.</span></span>  
   
--   <span data-ttu-id="bf2ca-109">그 다음 순서는 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 특성 집합의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 갖고 있지 않은 현재 형식의 데이터 멤버(사전순)입니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-109">Next in order are the current type’s data members that do not have the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute set, in alphabetical order.</span></span>  
+-   <span data-ttu-id="8ab90-109">그 다음 순서는 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 특성 집합의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 갖고 있지 않은 현재 형식의 데이터 멤버(사전순)입니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-109">Next in order are the current type’s data members that do not have the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute set, in alphabetical order.</span></span>  
   
--   <span data-ttu-id="bf2ca-110">그리고 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 특성 집합의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 가진 데이터 멤버가 그 다음 순서입니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-110">Next are any data members that have the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute set.</span></span> <span data-ttu-id="bf2ca-111">이러한 멤버의 순서는 먼저 `Order` 속성 값으로 지정되고, 둘 이상의 멤버가 특정 `Order` 값을 갖고 있으면 사전순으로 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-111">These are ordered by the value of the `Order` property first and then alphabetically if there is more than one member of a certain `Order` value.</span></span> <span data-ttu-id="bf2ca-112">순서 값을 무시할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-112">Order values may be skipped.</span></span>  
+-   <span data-ttu-id="8ab90-110">그리고 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 특성 집합의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 가진 데이터 멤버가 그 다음 순서입니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-110">Next are any data members that have the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute set.</span></span> <span data-ttu-id="8ab90-111">이러한 멤버의 순서는 먼저 `Order` 속성 값으로 지정되고, 둘 이상의 멤버가 특정 `Order` 값을 갖고 있으면 사전순으로 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-111">These are ordered by the value of the `Order` property first and then alphabetically if there is more than one member of a certain `Order` value.</span></span> <span data-ttu-id="8ab90-112">순서 값을 무시할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-112">Order values may be skipped.</span></span>  
   
- <span data-ttu-id="bf2ca-113">사전순은 <xref:System.String.CompareOrdinal%2A> 메서드 호출로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-113">Alphabetical order is established by calling the <xref:System.String.CompareOrdinal%2A> method.</span></span>  
+ <span data-ttu-id="8ab90-113">사전순은 <xref:System.String.CompareOrdinal%2A> 메서드 호출로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-113">Alphabetical order is established by calling the <xref:System.String.CompareOrdinal%2A> method.</span></span>  
   
-## <a name="examples"></a><span data-ttu-id="bf2ca-114">예제</span><span class="sxs-lookup"><span data-stu-id="bf2ca-114">Examples</span></span>  
- <span data-ttu-id="bf2ca-115">다음과 같은 코드를 생각해 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-115">Consider the following code.</span></span>  
+## <a name="examples"></a><span data-ttu-id="8ab90-114">예제</span><span class="sxs-lookup"><span data-stu-id="8ab90-114">Examples</span></span>  
+ <span data-ttu-id="8ab90-115">다음과 같은 코드를 생각해 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-115">Consider the following code.</span></span>  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]
  [!code-vb[C_DataContractNames#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#4)]  
   
- <span data-ttu-id="bf2ca-116">XML은 다음과 유사하게 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="bf2ca-116">The XML produced is similar to the following.</span></span>  
+ <span data-ttu-id="8ab90-116">XML은 다음과 유사하게 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ab90-116">The XML produced is similar to the following.</span></span>  
   
 ```xml  
 <DerivedType>  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/02/2017
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bf2ca-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bf2ca-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8ab90-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8ab90-117">See Also</span></span>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
- [<span data-ttu-id="bf2ca-118">데이터 계약 동등성</span><span class="sxs-lookup"><span data-stu-id="bf2ca-118">Data Contract Equivalence</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [<span data-ttu-id="bf2ca-119">데이터 계약 사용</span><span class="sxs-lookup"><span data-stu-id="bf2ca-119">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+ [<span data-ttu-id="8ab90-118">데이터 계약 동등성</span><span class="sxs-lookup"><span data-stu-id="8ab90-118">Data Contract Equivalence</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [<span data-ttu-id="8ab90-119">데이터 계약 사용</span><span class="sxs-lookup"><span data-stu-id="8ab90-119">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

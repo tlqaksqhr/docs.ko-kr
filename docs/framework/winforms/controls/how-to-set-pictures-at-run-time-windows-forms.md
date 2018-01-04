@@ -24,20 +24,21 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 429c0c928d8bff4f837186040288d9447fc18687
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fd0e990b494bc0b7a3008f211aa6ded9e04d732
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a><span data-ttu-id="c0974-102">방법: 런타임에 그림 설정(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c0974-102">How to: Set Pictures at Run Time (Windows Forms)</span></span>
-<span data-ttu-id="c0974-103">Windows Forms에 표시 되는 이미지를 프로그래밍 방식으로 설정할 수 있습니다 <xref:System.Windows.Forms.PictureBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-103">You can programmatically set the image displayed by a Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a><span data-ttu-id="a2084-102">방법: 런타임에 그림 설정(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="a2084-102">How to: Set Pictures at Run Time (Windows Forms)</span></span>
+<span data-ttu-id="a2084-103">Windows Forms에 표시 되는 이미지를 프로그래밍 방식으로 설정할 수 있습니다 <xref:System.Windows.Forms.PictureBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-103">You can programmatically set the image displayed by a Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  
   
-### <a name="to-set-a-picture-programmatically"></a><span data-ttu-id="c0974-104">그림을 프로그래밍 방식으로 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="c0974-104">To set a picture programmatically</span></span>  
+### <a name="to-set-a-picture-programmatically"></a><span data-ttu-id="a2084-104">그림을 프로그래밍 방식으로 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="a2084-104">To set a picture programmatically</span></span>  
   
--   <span data-ttu-id="c0974-105">설정의 <xref:System.Windows.Forms.PictureBox.Image%2A> 사용 하 여 속성의 <xref:System.Drawing.Image.FromFile%2A> 의 메서드는 <xref:System.Drawing.Image> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-105">Set the <xref:System.Windows.Forms.PictureBox.Image%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image> class.</span></span>  
+-   <span data-ttu-id="a2084-105">설정의 <xref:System.Windows.Forms.PictureBox.Image%2A> 사용 하 여 속성의 <xref:System.Drawing.Image.FromFile%2A> 의 메서드는 <xref:System.Drawing.Image> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-105">Set the <xref:System.Windows.Forms.PictureBox.Image%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image> class.</span></span>  
   
-     <span data-ttu-id="c0974-106">아래 예제에서는 내 문서 폴더는 이미지의 위치에 대 한 설정 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-106">In the example below, the path set for the location of the image is the My Documents folder.</span></span> <span data-ttu-id="c0974-107">이 도구를 실행 하므로 대부분의 Windows 운영 체제 실행 컴퓨터는이 디렉터리를 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-107">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="c0974-108">또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 응용 프로그램을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-108">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="c0974-109">다음 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.PictureBox> 컨트롤이 이미 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-109">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
+     <span data-ttu-id="a2084-106">아래 예제에서는 내 문서 폴더는 이미지의 위치에 대 한 설정 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-106">In the example below, the path set for the location of the image is the My Documents folder.</span></span> <span data-ttu-id="a2084-107">이 도구를 실행 하므로 대부분의 Windows 운영 체제 실행 컴퓨터는이 디렉터리를 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-107">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="a2084-108">또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 응용 프로그램을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-108">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="a2084-109">다음 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.PictureBox> 컨트롤이 이미 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-109">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -75,9 +76,9 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a><span data-ttu-id="c0974-110">그래픽을 지우려면</span><span class="sxs-lookup"><span data-stu-id="c0974-110">To clear a graphic</span></span>  
+### <a name="to-clear-a-graphic"></a><span data-ttu-id="a2084-110">그래픽을 지우려면</span><span class="sxs-lookup"><span data-stu-id="a2084-110">To clear a graphic</span></span>  
   
--   <span data-ttu-id="c0974-111">첫째, 이미지를 사용 하 고 메모리를 해제 하 고 그래픽 선택을 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-111">First, release the memory being used by the image, and then clear the graphic.</span></span> <span data-ttu-id="c0974-112">나중에 가비지 수집 됩니다는 메모리를 확보 메모리 관리 문제가 되 면입니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-112">Garbage collection will free up the memory later if memory management becomes a problem.</span></span>  
+-   <span data-ttu-id="a2084-111">첫째, 이미지를 사용 하 고 메모리를 해제 하 고 그래픽 선택을 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-111">First, release the memory being used by the image, and then clear the graphic.</span></span> <span data-ttu-id="a2084-112">나중에 가비지 수집 됩니다는 메모리를 확보 메모리 관리 문제가 되 면입니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-112">Garbage collection will free up the memory later if memory management becomes a problem.</span></span>  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -103,14 +104,14 @@ ms.lasthandoff: 11/21/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="c0974-113">이유에 대 한 자세한 내용은 사용할지는 <xref:System.Drawing.Image.Dispose%2A> 이러한 방식으로 메서드 참조 [관리 되지 않는 리소스를 정리 하는](../../../../docs/standard/garbage-collection/unmanaged.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-113">For more information on why you should use the <xref:System.Drawing.Image.Dispose%2A> method in this way, see [Cleaning Up Unmanaged Resources](../../../../docs/standard/garbage-collection/unmanaged.md).</span></span>  
+    >  <span data-ttu-id="a2084-113">이유에 대 한 자세한 내용은 사용할지는 <xref:System.Drawing.Image.Dispose%2A> 이러한 방식으로 메서드 참조 [관리 되지 않는 리소스를 정리 하는](../../../../docs/standard/garbage-collection/unmanaged.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-113">For more information on why you should use the <xref:System.Drawing.Image.Dispose%2A> method in this way, see [Cleaning Up Unmanaged Resources](../../../../docs/standard/garbage-collection/unmanaged.md).</span></span>  
   
-     <span data-ttu-id="c0974-114">이 코드는 그래픽 디자인 타임에 컨트롤을 컨트롤에 로드 하는 경우에 이미지가 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0974-114">This code will clear the image even if a graphic was loaded into the control at design time.</span></span>  
+     <span data-ttu-id="a2084-114">이 코드는 그래픽 디자인 타임에 컨트롤을 컨트롤에 로드 하는 경우에 이미지가 삭제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a2084-114">This code will clear the image even if a graphic was loaded into the control at design time.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0974-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c0974-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a2084-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a2084-115">See Also</span></span>  
  <xref:System.Windows.Forms.PictureBox>  
  <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="c0974-116">PictureBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="c0974-116">PictureBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- [<span data-ttu-id="c0974-117">방법: 디자이너를 사용하여 그림 로드</span><span class="sxs-lookup"><span data-stu-id="c0974-117">How to: Load a Picture Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- [<span data-ttu-id="c0974-118">방법: 런타임에 그림의 크기 또는 위치 수정</span><span class="sxs-lookup"><span data-stu-id="c0974-118">How to: Modify the Size or Placement of a Picture at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- [<span data-ttu-id="c0974-119">PictureBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="c0974-119">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+ [<span data-ttu-id="a2084-116">PictureBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="a2084-116">PictureBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="a2084-117">방법: 디자이너를 사용하여 그림 로드</span><span class="sxs-lookup"><span data-stu-id="a2084-117">How to: Load a Picture Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [<span data-ttu-id="a2084-118">방법: 런타임에 그림의 크기 또는 위치 수정</span><span class="sxs-lookup"><span data-stu-id="a2084-118">How to: Modify the Size or Placement of a Picture at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ [<span data-ttu-id="a2084-119">PictureBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a2084-119">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

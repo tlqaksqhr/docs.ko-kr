@@ -18,30 +18,31 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32aa83e69d1159b2afa376a7155c40e2a36d7684
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5e64a2a858b9506ec08beff728e23da0f817f170
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a><span data-ttu-id="d7d10-102">개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공</span><span class="sxs-lookup"><span data-stu-id="d7d10-102">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>
-<span data-ttu-id="d7d10-103">Windows Forms에 추가된 컨트롤에는 사용자 환경을 더욱 특수화하는 데 사용되는 속성 및 메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7d10-103">Controls added to Windows Forms have properties and methods that are used to further specialize the user experience.</span></span> <span data-ttu-id="d7d10-104">사용자의 요구에 맞게 사용자 인터페이스를 사용자 지정하는 것은 잘 설계된 Windows 응용 프로그램에 매우 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="d7d10-104">Customizing your user interface to suit the needs of the user is extremely important for well-designed Windows applications.</span></span>  
+# <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a><span data-ttu-id="a49fe-102">개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공</span><span class="sxs-lookup"><span data-stu-id="a49fe-102">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>
+<span data-ttu-id="a49fe-103">Windows Forms에 추가된 컨트롤에는 사용자 환경을 더욱 특수화하는 데 사용되는 속성 및 메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a49fe-103">Controls added to Windows Forms have properties and methods that are used to further specialize the user experience.</span></span> <span data-ttu-id="a49fe-104">사용자의 요구에 맞게 사용자 인터페이스를 사용자 지정하는 것은 잘 설계된 Windows 응용 프로그램에 매우 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="a49fe-104">Customizing your user interface to suit the needs of the user is extremely important for well-designed Windows applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d7d10-105">단원 내용</span><span class="sxs-lookup"><span data-stu-id="d7d10-105">In This Section</span></span>  
- [<span data-ttu-id="d7d10-106">방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정</span><span class="sxs-lookup"><span data-stu-id="d7d10-106">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- <span data-ttu-id="d7d10-107">컨트롤에 텍스트 레이블을 할당하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d7d10-107">Describes how to assign a text label to a control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a49fe-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="a49fe-105">In This Section</span></span>  
+ [<span data-ttu-id="a49fe-106">방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정</span><span class="sxs-lookup"><span data-stu-id="a49fe-106">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ <span data-ttu-id="a49fe-107">컨트롤에 텍스트 레이블을 할당하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a49fe-107">Describes how to assign a text label to a control.</span></span>  
   
- [<span data-ttu-id="d7d10-108">방법: Windows Forms 컨트롤에서 표시하는 이미지 설정</span><span class="sxs-lookup"><span data-stu-id="d7d10-108">How to: Set the Image Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
- <span data-ttu-id="d7d10-109">이미지를 표시하도록 컨트롤을 구성하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d7d10-109">Explains how to configure a control to display images.</span></span>  
+ [<span data-ttu-id="a49fe-108">방법: Windows Forms 컨트롤에서 표시하는 이미지 설정</span><span class="sxs-lookup"><span data-stu-id="a49fe-108">How to: Set the Image Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
+ <span data-ttu-id="a49fe-109">이미지를 표시하도록 컨트롤을 구성하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a49fe-109">Explains how to configure a control to display images.</span></span>  
   
- [<span data-ttu-id="d7d10-110">방법: Windows Forms 컨트롤에 대한 선택키 만들기</span><span class="sxs-lookup"><span data-stu-id="d7d10-110">How to: Create Access Keys for Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- <span data-ttu-id="d7d10-111">미리 정의된 바로 가기 키를 만드는 방법에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d7d10-111">Gives information about creating predefined keyboard shortcuts.</span></span>  
+ [<span data-ttu-id="a49fe-110">방법: Windows Forms 컨트롤에 대한 선택키 만들기</span><span class="sxs-lookup"><span data-stu-id="a49fe-110">How to: Create Access Keys for Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ <span data-ttu-id="a49fe-111">미리 정의된 바로 가기 키를 만드는 방법에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="a49fe-111">Gives information about creating predefined keyboard shortcuts.</span></span>  
   
- [<span data-ttu-id="d7d10-112">Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공</span><span class="sxs-lookup"><span data-stu-id="d7d10-112">Providing Accessibility Information for Controls on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
- <span data-ttu-id="d7d10-113">컨트롤이 접근성 도구를 사용할 수 있게 하는 방법에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d7d10-113">Gives information about enabling your controls to work with accessibility aids.</span></span>  
+ [<span data-ttu-id="a49fe-112">Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공</span><span class="sxs-lookup"><span data-stu-id="a49fe-112">Providing Accessibility Information for Controls on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
+ <span data-ttu-id="a49fe-113">컨트롤이 접근성 도구를 사용할 수 있게 하는 방법에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="a49fe-113">Gives information about enabling your controls to work with accessibility aids.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="d7d10-114">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d7d10-114">Related Sections</span></span>  
- [<span data-ttu-id="d7d10-115">Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="d7d10-115">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
- <span data-ttu-id="d7d10-116">컨트롤로 수행할 수 있는 기타 기본 작업에 대한 링크입니다.</span><span class="sxs-lookup"><span data-stu-id="d7d10-116">Links to other basic things you can do with controls.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="a49fe-114">관련 단원</span><span class="sxs-lookup"><span data-stu-id="a49fe-114">Related Sections</span></span>  
+ [<span data-ttu-id="a49fe-115">Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a49fe-115">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="a49fe-116">컨트롤로 수행할 수 있는 기타 기본 작업에 대한 링크입니다.</span><span class="sxs-lookup"><span data-stu-id="a49fe-116">Links to other basic things you can do with controls.</span></span>  
   
- <span data-ttu-id="d7d10-117">참조도 [하는 방법: 액세스 키에 대 한 Windows Forms 컨트롤 사용 하 여 작성 디자이너](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [하는 방법: 디자이너를 사용 하 여 Windows Forms 컨트롤에서 텍스트 표시 설정](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [하는 방법: 이미지 설정 표시 하 여 Windows Forms 디자이너를 사용 하 여 컨트롤](http://msdn.microsoft.com/library/ms233656\(v=vs.110\))합니다.</span><span class="sxs-lookup"><span data-stu-id="d7d10-117">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).</span></span>
+ <span data-ttu-id="a49fe-117">참조도 [하는 방법: 액세스 키에 대 한 Windows Forms 컨트롤 사용 하 여 작성 디자이너](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [하는 방법: 디자이너를 사용 하 여 Windows Forms 컨트롤에서 텍스트 표시 설정](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [하는 방법: 이미지 설정 표시 하 여 Windows Forms 디자이너를 사용 하 여 컨트롤](http://msdn.microsoft.com/library/ms233656\(v=vs.110\))합니다.</span><span class="sxs-lookup"><span data-stu-id="a49fe-117">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).</span></span>
