@@ -17,13 +17,13 @@
 ### [.NET 마이크로 서비스: 컨테이너화된 .NET 응용 프로그램을 위한 아키텍처](standard/microservices-architecture/)
 ## [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](standard/choosing-core-framework-server.md)
 ## ["관리 코드"란?](standard/managed-code.md)
-### [자동 메모리 관리](standard/automatic-memory-management.md) 
+### [자동 메모리 관리](standard/automatic-memory-management.md)
 ## [CLR(공용 언어 런타임)](standard/clr.md)
 ## [언어 독립성](standard/language-independence.md)
 ### [언어 독립성 및 언어 독립적 구성 요소](standard/language-independence-and-language-independent-components.md)
 ## [프레임워크 라이브러리](standard/framework-libraries.md)
-### [클래스 라이브러리 개요](standard/class-library-overview.md)  
-### [기본 형식](standard/base-types/)  
+### [클래스 라이브러리 개요](standard/class-library-overview.md)
+### [기본 형식](standard/base-types/)
 ## [.NET 클래스 라이브러리](standard/class-libraries.md)
 ## [이식성 분석기](standard/portability-analyzer.md)
 ## [예외 처리 및 Throw](standard/exceptions/)
@@ -101,10 +101,15 @@
 ### [.NET Core 응용 프로그램에 대한 Docker 이미지 작성](core/docker/building-net-docker-images.md)
 ### [Docker용 Visual Studio Tools](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [단위 테스트](core/testing/index.md)
-### [dotnet 테스트 및 xUnit을 사용한 유닛 테스트](core/testing/unit-testing-with-dotnet-test.md)
-### [dotnet 테스트 및 MSTest를 사용한 유닛 테스트](core/testing/unit-testing-with-mstest.md)
-### [dotnet 테스트 및 xUnit을 사용한 F# 유닛 테스트](core/testing/unit-testing-fsharp-with-dotnet-test.md)
-### [dotnet 테스트 및 MSTest를 사용한 F# 유닛 테스트](core/testing/unit-testing-fsharp-with-mstest.md)
+### [xUnit을 사용한 C# 단위 테스트](core/testing/unit-testing-with-dotnet-test.md)
+### [NUnit을 사용한 C# 단위 테스트](core/testing/unit-testing-with-nunit.md)
+### [MSTest를 사용한 C# 단위 테스트](core/testing/unit-testing-with-mstest.md)
+### [xUnit을 사용한 F# 단위 테스트](core/testing/unit-testing-fsharp-with-dotnet-test.md)
+### [NUnit을 사용한 F# 단위 테스트](core/testing/unit-testing-fsharp-with-nunit.md)
+### [MSTest를 사용한 F# 단위 테스트](core/testing/unit-testing-fsharp-with-mstest.md)
+### [xUnit을 사용한 VB 단위 테스트](core/testing/unit-testing-visual-basic-with-dotnet-test.md)
+### [NUnit을 사용한 VB 단위 테스트](core/testing/unit-testing-visual-basic-with-nunit.md)
+### [MSTest를 사용한 VB 단위 테스트](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [선택적 단위 테스트 실행](core/testing/selective-unit-tests.md)
 ### [게시된 출력 단위 테스트](core/testing/unit-testing-published-output.md)
 ### [Visual Studio를 사용한 Live Unit Testing .NET Core 프로젝트](/visualstudio/test/live-unit-testing-start)
@@ -204,7 +209,7 @@
 ## [C# 둘러보기](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [C#의 새로운 기능](csharp/whats-new/index.md) 
+## [C#의 새로운 기능](csharp/whats-new/index.md)
 ### [C# 7.2의 새로운 기능](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1의 새로운 기능](csharp/whats-new/csharp-7-1.md)
 ### [C# 7의 새로운 기능](csharp/whats-new/csharp-7.md)
@@ -212,8 +217,6 @@
 ### [C# 버전 기록](csharp/whats-new/csharp-version-history.md)
 ### [언어와 프레임워크 간 관계](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
-<!--## [🔧 C# Interactive](csharp/interactive/)-->
-<!-- Do this section later, once master redirects are in place -->
 ## C# 개념
 ### [C# 형식 시스템](csharp/programming-guide/types/index.md)
 ### [네임스페이스](csharp/programming-guide/namespaces/index.md)
@@ -223,8 +226,7 @@
 ### [튜플](csharp/tuples.md)
 ### [튜플 및 기타 형식 분해](csharp/deconstruct.md)
 ### [인터페이스](csharp/programming-guide/interfaces/index.md)
-<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
-### [메서드](csharp/methods.md)
+#### [메서드](csharp/methods.md)
 #### [람다 식](csharp/lambda-expressions.md)
 ### [속성](csharp/properties.md)
 ### [인덱서](csharp/indexers.md)
@@ -242,7 +244,6 @@
 #### [대리자 및 이벤트를 구별](csharp/distinguish-delegates-events.md)
 ### [LINQ(Language-Integrated Query)](csharp/linq/)
 ### [비동기 프로그래밍](csharp/async.md)
-<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [패턴 일치](csharp/pattern-matching.md)
 ### [값 형식과 참조 의미 체계](csharp/reference-semantics-with-value-types.md)
 ### [식 트리](csharp/expression-trees.md)
@@ -254,11 +255,10 @@
 #### [식 변환](csharp/expression-trees-translating.md)
 #### [요약](csharp/expression-trees-summary.md)
 ### [기본 상호 운용성](csharp/programming-guide/interop/index.md)
-<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [코드 문서화](csharp/codedoc.md)
 ### [버전 관리](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
+## [.NET Compiler Platform SDK(Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 프로그래밍 가이드](csharp/programming-guide/)
 ## [언어 참조](csharp/language-reference/)
 ## [연습](csharp/walkthroughs.md)

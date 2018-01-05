@@ -17,40 +17,41 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30310b08f33d0f8c4b854635ba41565bce439c05
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3d2d3bd20a35f5d4b28f0ab4aaba02fdd19a3ee9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imaging-how-to-topics"></a><span data-ttu-id="b6a54-102">이미징 방법 항목</span><span class="sxs-lookup"><span data-stu-id="b6a54-102">Imaging How-to Topics</span></span>
-<span data-ttu-id="b6a54-103">이 섹션의 항목을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시 하거나 비트맵 이미지를 변경 하기 위해 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6a54-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
+# <a name="imaging-how-to-topics"></a><span data-ttu-id="c74fe-102">이미징 방법 항목</span><span class="sxs-lookup"><span data-stu-id="c74fe-102">Imaging How-to Topics</span></span>
+<span data-ttu-id="c74fe-103">이 섹션의 항목을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시 하거나 비트맵 이미지를 변경 하기 위해 합니다.</span><span class="sxs-lookup"><span data-stu-id="c74fe-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b6a54-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="b6a54-104">In This Section</span></span>  
- [<span data-ttu-id="b6a54-105">XAML에서 BitmapImage 사용</span><span class="sxs-lookup"><span data-stu-id="b6a54-105">Use a BitmapImage in XAML</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [<span data-ttu-id="b6a54-106">이미지를 축소판으로 로드</span><span class="sxs-lookup"><span data-stu-id="b6a54-106">Load an Image as a Thumbnail</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [<span data-ttu-id="b6a54-107">BitmapImage에 변환 적용</span><span class="sxs-lookup"><span data-stu-id="b6a54-107">Apply a Transform to a Bitmap Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [<span data-ttu-id="b6a54-108">시각적 대체에서 비트맵 만들기</span><span class="sxs-lookup"><span data-stu-id="b6a54-108">Create a Bitmap from a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [<span data-ttu-id="b6a54-109">시각적 요소를 이미지 파일로 인코딩</span><span class="sxs-lookup"><span data-stu-id="b6a54-109">Encode a Visual to an Image File</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [<span data-ttu-id="b6a54-110">새 BitmapSource 만들기</span><span class="sxs-lookup"><span data-stu-id="b6a54-110">Create a new BitmapSource</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [<span data-ttu-id="b6a54-111">여러 BitmapSource 개체 연결</span><span class="sxs-lookup"><span data-stu-id="b6a54-111">Chain BitmapSource Objects Together</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [<span data-ttu-id="b6a54-112">BitmapSource를 다른 PixelFormat으로 변환</span><span class="sxs-lookup"><span data-stu-id="b6a54-112">Convert a BitmapSource to a Different PixelFormat</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [<span data-ttu-id="b6a54-113">BitmapSource를 인덱싱된 픽셀 형식으로 변환</span><span class="sxs-lookup"><span data-stu-id="b6a54-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [<span data-ttu-id="b6a54-114">JPEG 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="b6a54-114">Encode and Decode a JPEG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [<span data-ttu-id="b6a54-115">BMP 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="b6a54-115">Encode and Decode a BMP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [<span data-ttu-id="b6a54-116">PNG 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="b6a54-116">Encode and Decode a PNG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [<span data-ttu-id="b6a54-117">WDP 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="b6a54-117">Encode and Decode a WDP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [<span data-ttu-id="b6a54-118">GIF 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="b6a54-118">Encode and Decode a GIF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [<span data-ttu-id="b6a54-119">TIFF 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="b6a54-119">Encode and Decode a TIFF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [<span data-ttu-id="b6a54-120">메타데이터를 비트맵에 쓰기</span><span class="sxs-lookup"><span data-stu-id="b6a54-120">Write Metadata to a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [<span data-ttu-id="b6a54-121">비트맵에서 메타데이터 읽기</span><span class="sxs-lookup"><span data-stu-id="b6a54-121">Read Metadata from a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c74fe-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="c74fe-104">In This Section</span></span>  
+ [<span data-ttu-id="c74fe-105">XAML에서 BitmapImage 사용</span><span class="sxs-lookup"><span data-stu-id="c74fe-105">Use a BitmapImage in XAML</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
+ [<span data-ttu-id="c74fe-106">이미지를 축소판으로 로드</span><span class="sxs-lookup"><span data-stu-id="c74fe-106">Load an Image as a Thumbnail</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
+ [<span data-ttu-id="c74fe-107">BitmapImage에 변환 적용</span><span class="sxs-lookup"><span data-stu-id="c74fe-107">Apply a Transform to a Bitmap Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [<span data-ttu-id="c74fe-108">시각적 대체에서 비트맵 만들기</span><span class="sxs-lookup"><span data-stu-id="c74fe-108">Create a Bitmap from a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
+ [<span data-ttu-id="c74fe-109">시각적 요소를 이미지 파일로 인코딩</span><span class="sxs-lookup"><span data-stu-id="c74fe-109">Encode a Visual to an Image File</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
+ [<span data-ttu-id="c74fe-110">새 BitmapSource 만들기</span><span class="sxs-lookup"><span data-stu-id="c74fe-110">Create a new BitmapSource</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
+ [<span data-ttu-id="c74fe-111">여러 BitmapSource 개체 연결</span><span class="sxs-lookup"><span data-stu-id="c74fe-111">Chain BitmapSource Objects Together</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
+ [<span data-ttu-id="c74fe-112">BitmapSource를 다른 PixelFormat으로 변환</span><span class="sxs-lookup"><span data-stu-id="c74fe-112">Convert a BitmapSource to a Different PixelFormat</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [<span data-ttu-id="c74fe-113">BitmapSource를 인덱싱된 픽셀 형식으로 변환</span><span class="sxs-lookup"><span data-stu-id="c74fe-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [<span data-ttu-id="c74fe-114">JPEG 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="c74fe-114">Encode and Decode a JPEG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
+ [<span data-ttu-id="c74fe-115">BMP 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="c74fe-115">Encode and Decode a BMP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
+ [<span data-ttu-id="c74fe-116">PNG 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="c74fe-116">Encode and Decode a PNG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
+ [<span data-ttu-id="c74fe-117">WDP 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="c74fe-117">Encode and Decode a WDP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
+ [<span data-ttu-id="c74fe-118">GIF 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="c74fe-118">Encode and Decode a GIF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
+ [<span data-ttu-id="c74fe-119">TIFF 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="c74fe-119">Encode and Decode a TIFF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
+ [<span data-ttu-id="c74fe-120">메타데이터를 비트맵에 쓰기</span><span class="sxs-lookup"><span data-stu-id="c74fe-120">Write Metadata to a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
+ [<span data-ttu-id="c74fe-121">비트맵에서 메타데이터 읽기</span><span class="sxs-lookup"><span data-stu-id="c74fe-121">Read Metadata from a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
   
-## <a name="reference"></a><span data-ttu-id="b6a54-122">참조</span><span class="sxs-lookup"><span data-stu-id="b6a54-122">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c74fe-122">참조</span><span class="sxs-lookup"><span data-stu-id="c74fe-122">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="b6a54-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b6a54-123">See Also</span></span>  
- [<span data-ttu-id="b6a54-124">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="b6a54-124">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c74fe-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c74fe-123">See Also</span></span>  
+ [<span data-ttu-id="c74fe-124">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="c74fe-124">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

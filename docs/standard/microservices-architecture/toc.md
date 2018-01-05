@@ -41,6 +41,7 @@
 ### [RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현](multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md)
 ### [이벤트 구독](multi-container-microservice-net-applications/subscribe-events.md)
 ### [ASP.NET Core 서비스 및 웹앱 테스트](multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md)
+### [IHostedService를 통해 마이크로 서비스에서 백그라운드 작업 구현](multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
 ## [DDD 및 CQRS 패턴을 사용하여 마이크로 서비스에서 비즈니스 복잡성 처리](microservice-ddd-cqrs-patterns/index.md)
 ### [마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용](microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md)
 ### [eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용](microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md)
