@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 181d61de62ec9560b46732ad304b4934d4f55fa2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 14c5e02ce5af03d063260af19e9dd1a970a93ab6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a>방법: 조정 규칙 하지 않고 표준 시간대 만들기
 
@@ -57,7 +60,7 @@ ms.lasthandoff: 10/18/2017
 
 5. 호출 된 <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> 새 표준 시간대를 인스턴스화하는 방법입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 모슨, 조정 규칙 없이 남극 대륙에 대 한 사용자 지정 표준 시간대를 정의 합니다.
 

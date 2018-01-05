@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: befbf9960afffcd30bc96863dcc00b4acad2c21a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8419a1e89d5e94b9868b0fd1fb81540253efca5d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} 이스케이프 시퀀스 / 태그 확장명
 특성 값에 대 한 XAML 이스케이프 시퀀스를 제공합니다. 이스케이프 시퀀스는 리터럴로 해석 될 특성에 이후 값을 허용 합니다.  

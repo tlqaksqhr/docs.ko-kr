@@ -17,18 +17,19 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec61fdedc78b785dccf2c235cd17fd20b6d5abc4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d29a572e2989ffb800434fdaab9756cb651c0816
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>방법: 상대 값을 사용하여 변환 원점 지정
 원본을 지정 하려면 상대 값을 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.UIElement.RenderTransform%2A> 에 적용 되는 <xref:System.Windows.FrameworkElement>합니다.  
   
  회전, 크기 조정, 또는 왜곡 시킬 때는 <xref:System.Windows.FrameworkElement> 를 사용 하 여는 <xref:System.Windows.UIElement.RenderTransform%2A> 요소의 왼쪽 위 모서리에 변환을 적용 하는 속성을 기본 설정입니다. 요소 중심에서 회전, 크기 조정 또는 기울이기를 수행하려면 변환의 중심을 요소의 중심으로 설정하여 보완할 수 있습니다. 그러나 해당 솔루션에서는 요소의 크기를 알고 있어야 합니다. 설정 하는 요소 중심에 변환을 적용 하는 보다 쉬운 방법은 해당 <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 속성 (0.5, 0.5) 변환 자체에 중심 값을 설정 하는 대신 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 한 <xref:System.Windows.Media.RotateTransform> 회전 하는 <xref:System.Windows.Controls.Button> 시계 방향으로 45도 합니다. 이 예제에서는 중심을 지정하지 않으므로 단추는 왼쪽 위 구석에 해당하는 점 (0,0)에 대해 회전합니다. <xref:System.Windows.Media.RotateTransform> 에 적용 되는 <xref:System.Windows.UIElement.RenderTransform%2A> 속성입니다.  
   
  다음 그림에서는 이어지는 예제의 변환 결과를 보여 줍니다.  

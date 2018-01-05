@@ -17,11 +17,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c957d4336527de8c11b763c31c1fdf0015b675b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2e634cdcff0b1b2968a3b64d8d05cb57feeddb51
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="arrays"></a>배열
 **✓ 않습니다** 공용 Api에서 배열을 통해 컬렉션을 사용 하는 것을 선호 합니다. [컬렉션](../../../docs/standard/design-guidelines/guidelines-for-collections.md) 섹션에서는 컬렉션 및 배열 중 하나를 선택 하는 방법에 대 한 세부 정보를 제공 합니다.  

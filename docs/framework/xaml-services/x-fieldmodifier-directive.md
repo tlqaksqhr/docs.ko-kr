@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 77745744c0da1e4b4425af6d8e4319faaf524908
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ed50dd2aff1702543789f06939f7c2bc4b3dd83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 지시문
 명명 된 개체 참조에 대 한 필드 정의 된 XAML 컴파일 동작을 수정 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 대신 액세스는 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 기본 동작입니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|*공용*|지정 하기 위해 전달 된 정확한 문자열 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 와 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 사용 되는 코드 숨김 프로그래밍 언어에 따라 달라 집니다. 설명 부분을 참조하십시오.|  
+|*공용*|지정 하기 위해 전달 된 정확한 문자열 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 와 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 사용 되는 코드 숨김 프로그래밍 언어에 따라 달라 집니다. 설명 부분을 참조하세요.|  
   
 ## <a name="dependencies"></a>종속성  
  XAML 프로덕션에 사용 하는 경우 `x:FieldModifier` 어디에서 든 지 해당 XAML 프로덕션의 루트 요소를 선언 해야 합니다는 [X:class 지시문](../../../docs/framework/xaml-services/x-class-directive.md)합니다.  

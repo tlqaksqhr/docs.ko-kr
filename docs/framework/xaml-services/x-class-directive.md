@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclass-directive"></a>x:Class 지시문
 XAML 태그 컴파일을 태그와 코드 숨김 클래스를 부분 가입을 구성 합니다. 별도 코드 파일에 코드 partial 클래스가 정의 되어는 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] 언어에서 반면 태그 partial 클래스는 일반적으로 XAML 컴파일하는 동안 코드를 생성 하 여 만듭니다.  
@@ -43,7 +44,7 @@ XAML 태그 컴파일을 태그와 코드 숨김 클래스를 부분 가입을 �
 |||  
 |-|-|  
 |`namespace`|선택 사항입니다. 지정 된 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 로 식별 되는 partial 클래스를 포함 하는 네임 스페이스 `classname`합니다. 경우 `namespace` 점 (.) 지정 된 `namespace` 및 `classname`합니다. 설명 부분을 참조하세요.|  
-|`classname`|필수 요소. 지정 된 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 로드 된 XAML 및 해당 XAML에 대 한 코드 숨김을 연결 하는 partial 클래스의 이름입니다.|  
+|`classname`|필수. 지정 된 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 로드 된 XAML 및 해당 XAML에 대 한 코드 숨김을 연결 하는 partial 클래스의 이름입니다.|  
   
 ## <a name="dependencies"></a>종속성  
  `x:Class`XAML 프로덕션의 루트 요소에만 지정할 수 있습니다. `x:Class`XAML 프로덕션에 부모가 있는 모든 개체에서 올바르지 않습니다. 자세한 내용은 참조 [ \[MS-XAML\] 섹션 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)합니다.  

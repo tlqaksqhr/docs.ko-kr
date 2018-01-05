@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 071ca1547898b80440e86df0e4cb9c0667e462ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76584e0d22b6e651dfd851675a72d1f0cb70feb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-assemblies-and-dlls"></a>어셈블리 및 DLL의 이름
 어셈블리는 배포 및 관리 코드 프로그램에 대 한 id의 단위입니다. 어셈블리 하나 이상의 파일에 걸쳐 있을 수 있습니다, 있지만 일반적으로 어셈블리가 매핑됩니다 DLL과 일 대 일로 합니다. 따라서이 섹션에서는 다음 어셈블리 명명 규칙으로 매핑할 수 있습니다만 DLL 명명 규칙을 설명 합니다.  

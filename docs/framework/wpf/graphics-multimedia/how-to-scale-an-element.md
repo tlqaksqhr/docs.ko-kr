@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23b3086452526e804bfdbe50bb0c134f33158f5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2bff810dc9b44b25db93c8565da27acc4f0ccc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-scale-an-element"></a>방법: 요소 배율 조정
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ScaleTransform> 요소를 확장할 수 있습니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 예제에서는 한 <xref:System.Windows.Media.ScaleTransform> 50-여-50의 크기를 두 배로 <xref:System.Windows.Shapes.Rectangle>합니다. <xref:System.Windows.Media.ScaleTransform> 둘 다에 대해 0 (기본값)의 값은 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A>합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-xaml[transformsSample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
   
  일반적으로 설정 <xref:System.Windows.Media.ScaleTransform.CenterX%2A> 및 <xref:System.Windows.Media.ScaleTransform.CenterY%2A> 의 크기가 조정 되는 개체의 센터로: (<xref:System.Windows.FrameworkElement.Width%2A>/2,  <xref:System.Windows.FrameworkElement.Height%2A> /2).  

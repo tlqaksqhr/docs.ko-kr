@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e3706747848dbcd29d4ed2e81d5b7447a127a653
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 251f1914b131c5deed194ad7f3fb068c1d9b27c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>방법: 모호한 시간 확인
 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 
 3. 호출 된 `static` (`Shared` Visual Basic.net에서) <xref:System.DateTime.SpecifyKind%2A> UTC 날짜 및 시간 값의 설정 하는 방법은 <xref:System.DateTime.Kind%2A> 속성을 <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에는 현지 표준 시간대의 표준 시간을 나타내는 것으로 가정 하 모호한 시간에서 UTC로 변환 하는 방법을 보여 줍니다.
 

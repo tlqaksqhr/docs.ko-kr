@@ -12,11 +12,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bb350d454d2fcb0f38d092240c98c1b87966be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 스키마 정의 도구(Xsd.exe)를 사용하면 XDR, XML 및 XSD 파일 또는 런타임 어셈블리의 클래스에서 XML 스키마 또는 공용 언어 런타임 클래스를 생성할 수 있습니다.  
@@ -236,5 +239,5 @@ xsd myAssembly.dll
  [도구](../../../docs/framework/tools/index.md)      
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
  [LINQ to DataSet 개요](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [형식화 된 데이터 집합 쿼리](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [형식화된 데이터 집합 쿼리](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

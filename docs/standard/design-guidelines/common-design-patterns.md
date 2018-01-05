@@ -16,16 +16,19 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dd2d78e675ebc67cc2e49f5bc7141558d462a3e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5b2c25728903e4a193a15e6586fffe528ecb7c7e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-design-patterns"></a>일반 디자인 패턴
 소프트웨어 패턴, 패턴 언어 및 패턴의 매우 광범위 한 주제를 해결 하는 antipatterns에 대 한 다양 한 문서가 있습니다. 따라서이 장에서 지침 및.NET Framework Api의 디자인에 자주 사용 되는 패턴의 매우 제한적인와 관련 된 토론을 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [종속성 속성](../../../docs/standard/design-guidelines/dependency-properties.md)  
  [삭제 패턴](../../../docs/standard/design-guidelines/dispose-pattern.md)  
  *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  

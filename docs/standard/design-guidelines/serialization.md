@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e63428400a7868b71a2d8e52637e4b22e4c44ee7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd6989e651f09a5e4d3354227a44b823b1b3ddcf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization"></a>Serialization
 Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식으로 변환는 프로세스입니다. 예를 들어 HTTP를 사용 하 고 대상 컴퓨터에서 deserialize 인터넷을 통해 전송을 개체를 serialize 할 수 있습니다.  

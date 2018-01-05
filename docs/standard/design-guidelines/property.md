@@ -16,11 +16,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 477b3b69ce1b8a3bb160e8e120885239e3d99e56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8f9c65dc6265daa793656177f066b97373f48ab8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="property-design"></a>속성 디자인
 속성 메서드 기술적으로 매우 유사 하지만는 해당 사용 시나리오 측면에서 매우 다릅니다. 이러한 스마트 필드도 이해 되어야 합니다. 필드가 호출 구문 및 메서드의 유연성을가지고 있습니다.  

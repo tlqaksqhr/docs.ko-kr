@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab8f86b66e92ea250fbe20e8bcb27e6706302db4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1a0d9f5fd32b5610e3d7b05455c7bd3c55b5b77e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-in-net"></a>.NET의 Serialization
 serialization은 지속시키거나 전송할 수 있는 형태로 개체 상태를 변환하는 프로세스입니다. serialization과 짝을 이루는 것은 스트림을 개체로 변환하는 deserialization입니다. 이 두 프로세스를 통해 데이터를 쉽게 저장하고 전송할 수 있습니다.  
@@ -33,7 +36,7 @@ serialization은 지속시키거나 전송할 수 있는 형태로 개체 상태
   
 -   XML serialization은 public 속성과 필드만 serialize하며 형식 정확도를 유지하지 않습니다. 데이터를 사용하는 응용 프로그램을 제한하지 않고 데이터를 제공하거나 사용하려고 할 때 유용합니다. XML은 공개 표준이기 때문에 웹을 통해 정보를 공유할 때 적합합니다. SOAP도 마찬가지로 공개 표준이어서 적합한 선택입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
 [serialization 방법 항목](../../../docs/standard/serialization/serialization-how-to-topics.md)  
 이 단원에 포함된 방법 항목에 대한 링크를 나열합니다.
   

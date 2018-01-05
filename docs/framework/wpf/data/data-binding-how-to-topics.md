@@ -17,16 +17,17 @@ caps.latest.revision: "81"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01966709941d9aa1f4d430e8eac4a5c6787e315b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5980673372e52255808bb1d04c804e86f2116100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-how-to-topics"></a>데이터 바인딩 방법 항목
 이 섹션의 항목에는 데이터에 바인딩할 요소 다양 한 형식의 공용 언어 런타임 (CLR) 개체 및 XML 데이터 원본에서에서 데이터 바인딩을 사용 하는 방법을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [단순 바인딩 만들기](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
  [바인딩 소스 지정](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
  [XAML의 바인딩에 사용할 수 있는 데이터 만들기](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
