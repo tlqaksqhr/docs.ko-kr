@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 005e78c32d49c8c1b204a3ac9376d943311868fd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0e2f268dc2ab1e2aebe2f51d733a59bd093329d5
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer 생성기 도구(Sgen.exe)
 XML Serializer 생성기에서 지정된 어셈블리의 형식에 대해 XML serialization 어셈블리를 만들면 지정된 형식의 개체를 serialize 또는 deserialize할 때 <xref:System.Xml.Serialization.XmlSerializer>의 시작 성능을 높일 수 있습니다.  
@@ -50,7 +50,7 @@ sgen [options]
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 ## <a name="remarks"></a>설명  
- XML Serializer 생성기를 사용하지 않을 경우, <xref:System.Xml.Serialization.XmlSerializer>는 응용 프로그램이 실행될 때마다 각 형식에 대해 serialization 코드 및 serialization 어셈블리를 생성합니다. XML serialization 시작 성능을 높이려면 Sgen.exe 도구를 사용하여 미리 어셈블리를 생성합니다. 그런 다음 응용 프로그램과 함께 이 어셈블리를 배포할 수 있습니다.  
+ XML Serializer 생성기를 사용하지 않을 경우, <xref:System.Xml.Serialization.XmlSerializer>는 응용 프로그램이 실행될 때마다 각 형식에 대해 serialization 코드 및 serialization 어셈블리를 생성합니다. XML serialization 시작 성능을 향상 시키기 위해 Sgen.exe 도구를 사용 하 여 해당 어셈블리를 미리 생성 하 합니다. 그런 다음 응용 프로그램과 함께 이 어셈블리를 배포할 수 있습니다.  
   
  XML Serializer 생성기는 해당 형식이 맨 처음 로드될 때 serialization 프로세스에서 성능 손실을 유발하지 않으므로, 서버와의 통신에서 XML Web services 프록시를 사용하는 클라이언트의 성능도 높일 수 있습니다.  
   
