@@ -7,172 +7,173 @@ ms.date: 12/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: ac1ff90cb97fa4802883e70b0abdf4e77b58dd65
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnetcore
+ms.openlocfilehash: 28cd05db0643097a7271fd0488354846598ba493
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="dotnet-pack"></a><span data-ttu-id="54f80-103">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="54f80-103">dotnet pack</span></span>
+# <a name="dotnet-pack"></a><span data-ttu-id="0105d-103">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="0105d-103">dotnet pack</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="54f80-104">이름</span><span class="sxs-lookup"><span data-stu-id="54f80-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="0105d-104">name</span><span class="sxs-lookup"><span data-stu-id="0105d-104">Name</span></span>
 
-<span data-ttu-id="54f80-105">`dotnet pack` - 코드를 NuGet 패키지로 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-105">`dotnet pack` - Packs the code into a NuGet package.</span></span>
+<span data-ttu-id="0105d-105">`dotnet pack` - 코드를 NuGet 패키지로 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-105">`dotnet pack` - Packs the code into a NuGet package.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="54f80-106">개요</span><span class="sxs-lookup"><span data-stu-id="54f80-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="0105d-106">개요</span><span class="sxs-lookup"><span data-stu-id="0105d-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="54f80-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="54f80-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="0105d-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="0105d-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies] [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="54f80-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="54f80-108">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="0105d-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="0105d-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="54f80-109">설명</span><span class="sxs-lookup"><span data-stu-id="54f80-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="0105d-109">설명</span><span class="sxs-lookup"><span data-stu-id="0105d-109">Description</span></span>
 
-<span data-ttu-id="54f80-110">`dotnet pack` 명령은 프로젝트를 빌드하고 NuGet 패키지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-110">The `dotnet pack` command builds the project and creates NuGet packages.</span></span> <span data-ttu-id="54f80-111">이 명령의 결과가 NuGet 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-111">The result of this command is a NuGet package.</span></span> <span data-ttu-id="54f80-112">`--include-symbols` 옵션이 있는 경우 디버그 기호를 포함하는 다른 패키지가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-112">If the `--include-symbols` option is present, another package containing the debug symbols is created.</span></span>
+<span data-ttu-id="0105d-110">`dotnet pack` 명령은 프로젝트를 빌드하고 NuGet 패키지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-110">The `dotnet pack` command builds the project and creates NuGet packages.</span></span> <span data-ttu-id="0105d-111">이 명령의 결과가 NuGet 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-111">The result of this command is a NuGet package.</span></span> <span data-ttu-id="0105d-112">`--include-symbols` 옵션이 있는 경우 디버그 기호를 포함하는 다른 패키지가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-112">If the `--include-symbols` option is present, another package containing the debug symbols is created.</span></span>
 
-<span data-ttu-id="54f80-113">압축된 프로젝트의 NuGet 종속성은 *.nuspec* 파일에 추가되므로 패키지를 설치할 때 적절히 확인됩니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-113">NuGet dependencies of the packed project are added to the *.nuspec* file, so they're properly resolved when the package is installed.</span></span> <span data-ttu-id="54f80-114">프로젝트 간 참조는 프로젝트 내에서 패키지되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-114">Project-to-project references aren't packaged inside the project.</span></span> <span data-ttu-id="54f80-115">현재 프로젝트 간 종속성이 있는 경우 프로젝트당 패키지가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-115">Currently, you must have a package per project if you have project-to-project dependencies.</span></span>
+<span data-ttu-id="0105d-113">압축된 프로젝트의 NuGet 종속성은 *.nuspec* 파일에 추가되므로 패키지를 설치할 때 적절히 확인됩니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-113">NuGet dependencies of the packed project are added to the *.nuspec* file, so they're properly resolved when the package is installed.</span></span> <span data-ttu-id="0105d-114">프로젝트 간 참조는 프로젝트 내에서 패키지되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-114">Project-to-project references aren't packaged inside the project.</span></span> <span data-ttu-id="0105d-115">현재 프로젝트 간 종속성이 있는 경우 프로젝트당 패키지가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-115">Currently, you must have a package per project if you have project-to-project dependencies.</span></span>
 
-<span data-ttu-id="54f80-116">`dotnet pack`은 기본적으로 프로젝트를 먼저 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-116">By default, `dotnet pack` builds the project first.</span></span> <span data-ttu-id="54f80-117">이렇게 하지 않으려면 `--no-build` 옵션을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-117">If you wish to avoid this behavior, pass the `--no-build` option.</span></span> <span data-ttu-id="54f80-118">이 옵션은 코드가 이미 빌드된 CI(연속 통합) 빌드 시나리오에서 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-118">This is often useful in Continuous Integration (CI) build scenarios where you know the code was previously built.</span></span>
+<span data-ttu-id="0105d-116">`dotnet pack`은 기본적으로 프로젝트를 먼저 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-116">By default, `dotnet pack` builds the project first.</span></span> <span data-ttu-id="0105d-117">이렇게 하지 않으려면 `--no-build` 옵션을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-117">If you wish to avoid this behavior, pass the `--no-build` option.</span></span> <span data-ttu-id="0105d-118">이 옵션은 코드가 이미 빌드된 CI(연속 통합) 빌드 시나리오에서 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-118">This is often useful in Continuous Integration (CI) build scenarios where you know the code was previously built.</span></span>
 
-<span data-ttu-id="54f80-119">압축 프로세스에 대한 `dotnet pack` 명령에 MSBuild 속성을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-119">You can provide MSBuild properties to the `dotnet pack` command for the packing process.</span></span> <span data-ttu-id="54f80-120">자세한 내용은 [NuGet 메타데이터 속성](csproj.md#nuget-metadata-properties) 및 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54f80-120">For more information, see [NuGet metadata properties](csproj.md#nuget-metadata-properties) and the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span> <span data-ttu-id="54f80-121">[예제](#examples) 섹션에서는 몇 가지 시나리오에 MSBuild /p 스위치를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-121">The [Examples](#examples) section shows how to use the MSBuild /p switch for a couple of different scenarios.</span></span>
+<span data-ttu-id="0105d-119">압축 프로세스에 대한 `dotnet pack` 명령에 MSBuild 속성을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-119">You can provide MSBuild properties to the `dotnet pack` command for the packing process.</span></span> <span data-ttu-id="0105d-120">자세한 내용은 [NuGet 메타데이터 속성](csproj.md#nuget-metadata-properties) 및 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0105d-120">For more information, see [NuGet metadata properties](csproj.md#nuget-metadata-properties) and the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span> <span data-ttu-id="0105d-121">[예제](#examples) 섹션에서는 몇 가지 시나리오에 MSBuild /p 스위치를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-121">The [Examples](#examples) section shows how to use the MSBuild /p switch for a couple of different scenarios.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="54f80-122">인수</span><span class="sxs-lookup"><span data-stu-id="54f80-122">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="0105d-122">인수</span><span class="sxs-lookup"><span data-stu-id="0105d-122">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="54f80-123">압축할 프로젝트입니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-123">The project to pack.</span></span> <span data-ttu-id="54f80-124">[csproj file](csproj.md) 파일 또는 디렉터리에 대한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-124">It's either a path to a [csproj file](csproj.md) or to a directory.</span></span> <span data-ttu-id="54f80-125">생략하면 현재 디렉터리로 기본 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-125">If omitted, it defaults to the current directory.</span></span>
+<span data-ttu-id="0105d-123">압축할 프로젝트입니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-123">The project to pack.</span></span> <span data-ttu-id="0105d-124">[csproj file](csproj.md) 파일 또는 디렉터리에 대한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-124">It's either a path to a [csproj file](csproj.md) or to a directory.</span></span> <span data-ttu-id="0105d-125">생략하면 현재 디렉터리로 기본 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-125">If omitted, it defaults to the current directory.</span></span>
 
-## <a name="options"></a><span data-ttu-id="54f80-126">옵션</span><span class="sxs-lookup"><span data-stu-id="54f80-126">Options</span></span>
+## <a name="options"></a><span data-ttu-id="0105d-126">옵션</span><span class="sxs-lookup"><span data-stu-id="0105d-126">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="54f80-127">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="54f80-127">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="0105d-127">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="0105d-127">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="54f80-128">빌드 구성을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-128">Defines the build configuration.</span></span> <span data-ttu-id="54f80-129">기본값은 `Debug`입니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-129">The default value is `Debug`.</span></span>
+<span data-ttu-id="0105d-128">빌드 구성을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-128">Defines the build configuration.</span></span> <span data-ttu-id="0105d-129">기본값은 `Debug`입니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-129">The default value is `Debug`.</span></span>
 
-<span data-ttu-id="54f80-130">`--force` 마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-130">`--force` Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="54f80-131">이것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-131">This is equivalent to deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="0105d-130">`--force` 마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-130">`--force` Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="0105d-131">이것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-131">This is equivalent to deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="54f80-132">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-132">Prints out a short help for the command.</span></span>
+<span data-ttu-id="0105d-132">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-132">Prints out a short help for the command.</span></span>
 
 `--include-source`
 
-<span data-ttu-id="54f80-133">NuGet 패키지에 소스 파일을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-133">Includes the source files in the NuGet package.</span></span> <span data-ttu-id="54f80-134">소스 파일은 `nupkg`의 `src` 폴더에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-134">The sources files are included in the `src` folder within the `nupkg`.</span></span>
+<span data-ttu-id="0105d-133">NuGet 패키지에 소스 파일을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-133">Includes the source files in the NuGet package.</span></span> <span data-ttu-id="0105d-134">소스 파일은 `nupkg`의 `src` 폴더에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-134">The sources files are included in the `src` folder within the `nupkg`.</span></span>
 
 `--include-symbols`
 
-<span data-ttu-id="54f80-135">기호 `nupkg`를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-135">Generates the symbols `nupkg`.</span></span>
+<span data-ttu-id="0105d-135">기호 `nupkg`를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-135">Generates the symbols `nupkg`.</span></span>
 
 `--no-build`
 
-<span data-ttu-id="54f80-136">압축하기 전에 프로젝트를 빌드하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-136">Doesn't build the project before packing.</span></span>
+<span data-ttu-id="0105d-136">압축하기 전에 프로젝트를 빌드하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-136">Doesn't build the project before packing.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="54f80-137">프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-137">Ignores project-to-project references and only restores the root project.</span></span>
+<span data-ttu-id="0105d-137">프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-137">Ignores project-to-project references and only restores the root project.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="54f80-138">명령을 실행할 때 암시적 복원을 수행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-138">Doesn't perform an implicit restore when running the command.</span></span>
+<span data-ttu-id="0105d-138">명령을 실행할 때 암시적 복원을 수행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-138">Doesn't perform an implicit restore when running the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="54f80-139">지정된 디렉터리에 빌드된 패키지를 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-139">Places the built packages in the directory specified.</span></span>
+<span data-ttu-id="0105d-139">지정된 디렉터리에 빌드된 패키지를 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-139">Places the built packages in the directory specified.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="54f80-140">패키지를 복원할 대상 런타임을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-140">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="54f80-141">RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54f80-141">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+<span data-ttu-id="0105d-140">패키지를 복원할 대상 런타임을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-140">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="0105d-141">RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0105d-141">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
 
 `-s|--serviceable`
 
-<span data-ttu-id="54f80-142">패키지에 서비스 가능 플래그를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-142">Sets the serviceable flag in the package.</span></span> <span data-ttu-id="54f80-143">자세한 내용은 [.NET 블로그: .NET 4.5.1에서 .NET NuGet 라이브러리에 대한 Microsoft 보안 업데이트를 지원함](https://aka.ms/nupkgservicing)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54f80-143">For more information, see [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing).</span></span>
+<span data-ttu-id="0105d-142">패키지에 서비스 가능 플래그를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-142">Sets the serviceable flag in the package.</span></span> <span data-ttu-id="0105d-143">자세한 내용은 [.NET 블로그: .NET 4.5.1에서 .NET NuGet 라이브러리에 대한 Microsoft 보안 업데이트를 지원함](https://aka.ms/nupkgservicing)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0105d-143">For more information, see [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing).</span></span>
 
 `--version-suffix <VERSION_SUFFIX>`
 
-<span data-ttu-id="54f80-144">프로젝트에서 `$(VersionSuffix)` MSBuild 속성에 대한 값을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-144">Defines the value for the `$(VersionSuffix)` MSBuild property in the project.</span></span>
+<span data-ttu-id="0105d-144">프로젝트에서 `$(VersionSuffix)` MSBuild 속성에 대한 값을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-144">Defines the value for the `$(VersionSuffix)` MSBuild property in the project.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="54f80-145">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-145">Sets the verbosity level of the command.</span></span> <span data-ttu-id="54f80-146">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-146">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="0105d-145">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-145">Sets the verbosity level of the command.</span></span> <span data-ttu-id="0105d-146">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-146">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="54f80-147">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="54f80-147">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="0105d-147">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="0105d-147">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="54f80-148">빌드 구성을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-148">Defines the build configuration.</span></span> <span data-ttu-id="54f80-149">기본값은 `Debug`입니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-149">The default value is `Debug`.</span></span>
+<span data-ttu-id="0105d-148">빌드 구성을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-148">Defines the build configuration.</span></span> <span data-ttu-id="0105d-149">기본값은 `Debug`입니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-149">The default value is `Debug`.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="54f80-150">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-150">Prints out a short help for the command.</span></span>
+<span data-ttu-id="0105d-150">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-150">Prints out a short help for the command.</span></span>
 
 `--include-source`
 
-<span data-ttu-id="54f80-151">NuGet 패키지에 소스 파일을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-151">Includes the source files in the NuGet package.</span></span> <span data-ttu-id="54f80-152">소스 파일은 `nupkg`의 `src` 폴더에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-152">The sources files are included in the `src` folder within the `nupkg`.</span></span>
+<span data-ttu-id="0105d-151">NuGet 패키지에 소스 파일을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-151">Includes the source files in the NuGet package.</span></span> <span data-ttu-id="0105d-152">소스 파일은 `nupkg`의 `src` 폴더에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-152">The sources files are included in the `src` folder within the `nupkg`.</span></span>
 
 `--include-symbols`
 
-<span data-ttu-id="54f80-153">기호 `nupkg`를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-153">Generates the symbols `nupkg`.</span></span>
+<span data-ttu-id="0105d-153">기호 `nupkg`를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-153">Generates the symbols `nupkg`.</span></span>
 
 `--no-build`
 
-<span data-ttu-id="54f80-154">압축하기 전에 프로젝트를 빌드하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-154">Doesn't build the project before packing.</span></span>
+<span data-ttu-id="0105d-154">압축하기 전에 프로젝트를 빌드하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-154">Doesn't build the project before packing.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="54f80-155">지정된 디렉터리에 빌드된 패키지를 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-155">Places the built packages in the directory specified.</span></span>
+<span data-ttu-id="0105d-155">지정된 디렉터리에 빌드된 패키지를 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-155">Places the built packages in the directory specified.</span></span>
 
 `-s|--serviceable`
 
-<span data-ttu-id="54f80-156">패키지에 서비스 가능 플래그를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-156">Sets the serviceable flag in the package.</span></span> <span data-ttu-id="54f80-157">자세한 내용은 [.NET 블로그: .NET 4.5.1에서 .NET NuGet 라이브러리에 대한 Microsoft 보안 업데이트를 지원함](https://aka.ms/nupkgservicing)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="54f80-157">For more information, see [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing).</span></span>
+<span data-ttu-id="0105d-156">패키지에 서비스 가능 플래그를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-156">Sets the serviceable flag in the package.</span></span> <span data-ttu-id="0105d-157">자세한 내용은 [.NET 블로그: .NET 4.5.1에서 .NET NuGet 라이브러리에 대한 Microsoft 보안 업데이트를 지원함](https://aka.ms/nupkgservicing)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0105d-157">For more information, see [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing).</span></span>
 
 `--version-suffix <VERSION_SUFFIX>`
 
-<span data-ttu-id="54f80-158">프로젝트에서 `$(VersionSuffix)` MSBuild 속성에 대한 값을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-158">Defines the value for the `$(VersionSuffix)` MSBuild property in the project.</span></span>
+<span data-ttu-id="0105d-158">프로젝트에서 `$(VersionSuffix)` MSBuild 속성에 대한 값을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-158">Defines the value for the `$(VersionSuffix)` MSBuild property in the project.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="54f80-159">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-159">Sets the verbosity level of the command.</span></span> <span data-ttu-id="54f80-160">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-160">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="0105d-159">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-159">Sets the verbosity level of the command.</span></span> <span data-ttu-id="0105d-160">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-160">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="54f80-161">예제</span><span class="sxs-lookup"><span data-stu-id="54f80-161">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="0105d-161">예제</span><span class="sxs-lookup"><span data-stu-id="0105d-161">Examples</span></span>
 
-<span data-ttu-id="54f80-162">현재 디렉터리에 있는 프로젝트를 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-162">Pack the project in the current directory:</span></span>
+<span data-ttu-id="0105d-162">현재 디렉터리에 있는 프로젝트를 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-162">Pack the project in the current directory:</span></span>
 
 `dotnet pack`
 
-<span data-ttu-id="54f80-163">`app1` 프로젝트를 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-163">Pack the `app1` project:</span></span>
+<span data-ttu-id="0105d-163">`app1` 프로젝트를 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-163">Pack the `app1` project:</span></span>
 
 `dotnet pack ~/projects/app1/project.csproj`
     
-<span data-ttu-id="54f80-164">현재 디렉터리에 있는 프로젝트를 압축하고 결과 패키지를 `nupkgs` 폴더에 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-164">Pack the project in the current directory and place the resulting packages into the `nupkgs` folder:</span></span>
+<span data-ttu-id="0105d-164">현재 디렉터리에 있는 프로젝트를 압축하고 결과 패키지를 `nupkgs` 폴더에 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-164">Pack the project in the current directory and place the resulting packages into the `nupkgs` folder:</span></span>
 
 `dotnet pack --output nupkgs`
 
-<span data-ttu-id="54f80-165">현재 디렉터리에 있는 프로젝트를 `nupkgs` 폴더로 압축하고 빌드 단계를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-165">Pack the project in the current directory into the `nupkgs` folder and skip the build step:</span></span>
+<span data-ttu-id="0105d-165">현재 디렉터리에 있는 프로젝트를 `nupkgs` 폴더로 압축하고 빌드 단계를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-165">Pack the project in the current directory into the `nupkgs` folder and skip the build step:</span></span>
 
 `dotnet pack --no-build --output nupkgs`
 
-<span data-ttu-id="54f80-166">*.csproj* 파일에서 프로젝트의 버전 접미사를 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`로 구성한 상태로 현재 프로젝트를 압축하고 결과 패키지 버전을 지정된 접미사로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-166">With the project's version suffix configured as `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` in the *.csproj* file, pack the current project and update the resulting package version with the given suffix:</span></span>
+<span data-ttu-id="0105d-166">*.csproj* 파일에서 프로젝트의 버전 접미사를 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`로 구성한 상태로 현재 프로젝트를 압축하고 결과 패키지 버전을 지정된 접미사로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-166">With the project's version suffix configured as `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` in the *.csproj* file, pack the current project and update the resulting package version with the given suffix:</span></span>
 
 `dotnet pack --version-suffix "ci-1234"`
 
-<span data-ttu-id="54f80-167">`PackageVersion` MSBuild 속성을 사용하여 패키지 버전을 `2.1.0`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-167">Set the package version to `2.1.0` with the `PackageVersion` MSBuild property:</span></span>
+<span data-ttu-id="0105d-167">`PackageVersion` MSBuild 속성을 사용하여 패키지 버전을 `2.1.0`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-167">Set the package version to `2.1.0` with the `PackageVersion` MSBuild property:</span></span>
 
 `dotnet pack /p:PackageVersion=2.1.0`
 
-<span data-ttu-id="54f80-168">특정 [대상 프레임워크](../../standard/frameworks.md)에 대한 프로젝트를 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="54f80-168">Pack the project for a specific [target framework](../../standard/frameworks.md):</span></span>
+<span data-ttu-id="0105d-168">특정 [대상 프레임워크](../../standard/frameworks.md)에 대한 프로젝트를 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="0105d-168">Pack the project for a specific [target framework](../../standard/frameworks.md):</span></span>
 
 `dotnet pack /p:TargetFrameworks=net45`

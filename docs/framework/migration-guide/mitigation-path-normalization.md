@@ -15,46 +15,47 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e30099e315f88bd051dca2e1f6c83d1bccc49569
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: edae357dad95a363926afbacc8e52355a1bcbd65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="mitigation-path-normalization"></a><span data-ttu-id="a69e0-102">완화: 경로 정규화</span><span class="sxs-lookup"><span data-stu-id="a69e0-102">Mitigation: Path Normalization</span></span>
-<span data-ttu-id="a69e0-103">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]을 대상으로 하는 앱부터, .NET Framework의 경로 정규화가 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  
+# <a name="mitigation-path-normalization"></a><span data-ttu-id="a85f7-102">완화: 경로 정규화</span><span class="sxs-lookup"><span data-stu-id="a85f7-102">Mitigation: Path Normalization</span></span>
+<span data-ttu-id="a85f7-103">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]을 대상으로 하는 앱부터, .NET Framework의 경로 정규화가 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  
   
-## <a name="what-is-path-normalization"></a><span data-ttu-id="a69e0-104">경로 정규화란?</span><span class="sxs-lookup"><span data-stu-id="a69e0-104">What is path normalization?</span></span>  
- <span data-ttu-id="a69e0-105">경로 정규화 중에는 대상 운영 체제의 올바른 경로에 맞게 경로 또는 파일을 식별하는 문자열이 수정됩니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-105">Normalizing a path involves modifying the string that identifies a path or file so that it conforms to a valid path on the target operating system.</span></span> <span data-ttu-id="a69e0-106">정규화에는 일반적으로 다음이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-106">Normalization typically involves:</span></span>  
+## <a name="what-is-path-normalization"></a><span data-ttu-id="a85f7-104">경로 정규화란?</span><span class="sxs-lookup"><span data-stu-id="a85f7-104">What is path normalization?</span></span>  
+ <span data-ttu-id="a85f7-105">경로 정규화 중에는 대상 운영 체제의 올바른 경로에 맞게 경로 또는 파일을 식별하는 문자열이 수정됩니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-105">Normalizing a path involves modifying the string that identifies a path or file so that it conforms to a valid path on the target operating system.</span></span> <span data-ttu-id="a85f7-106">정규화에는 일반적으로 다음이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-106">Normalization typically involves:</span></span>  
   
--   <span data-ttu-id="a69e0-107">구성 요소 및 디렉터리 구분 기호 정규화</span><span class="sxs-lookup"><span data-stu-id="a69e0-107">Canonicalizing component and directory separators.</span></span>  
+-   <span data-ttu-id="a85f7-107">구성 요소 및 디렉터리 구분 기호 정규화</span><span class="sxs-lookup"><span data-stu-id="a85f7-107">Canonicalizing component and directory separators.</span></span>  
   
--   <span data-ttu-id="a69e0-108">상대 경로에 현재 디렉터리 적용</span><span class="sxs-lookup"><span data-stu-id="a69e0-108">Applying the current directory to a relative path.</span></span>  
+-   <span data-ttu-id="a85f7-108">상대 경로에 현재 디렉터리 적용</span><span class="sxs-lookup"><span data-stu-id="a85f7-108">Applying the current directory to a relative path.</span></span>  
   
--   <span data-ttu-id="a69e0-109">경로의 상대 디렉터리(`.`) 또는 부모 디렉터리(`..`) 평가</span><span class="sxs-lookup"><span data-stu-id="a69e0-109">Evaluating the relative directory (`.`) or the parent directory (`..`) in a path.</span></span>  
+-   <span data-ttu-id="a85f7-109">경로의 상대 디렉터리(`.`) 또는 부모 디렉터리(`..`) 평가</span><span class="sxs-lookup"><span data-stu-id="a85f7-109">Evaluating the relative directory (`.`) or the parent directory (`..`) in a path.</span></span>  
   
--   <span data-ttu-id="a69e0-110">지정된 문자 자르기</span><span class="sxs-lookup"><span data-stu-id="a69e0-110">Trimming specified characters.</span></span>  
+-   <span data-ttu-id="a85f7-110">지정된 문자 자르기</span><span class="sxs-lookup"><span data-stu-id="a85f7-110">Trimming specified characters.</span></span>  
   
-## <a name="the-changes"></a><span data-ttu-id="a69e0-111">변경 내용</span><span class="sxs-lookup"><span data-stu-id="a69e0-111">The changes</span></span>  
- <span data-ttu-id="a69e0-112">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 하는 앱부터, 경로 정규화가 다음과 같이 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-112">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization has changed in the following ways:</span></span>  
+## <a name="the-changes"></a><span data-ttu-id="a85f7-111">변경 내용</span><span class="sxs-lookup"><span data-stu-id="a85f7-111">The changes</span></span>  
+ <span data-ttu-id="a85f7-112">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 하는 앱부터, 경로 정규화가 다음과 같이 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-112">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization has changed in the following ways:</span></span>  
   
--   <span data-ttu-id="a69e0-113">런타임은 운영 체제의 [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963\(v=vs.85\).aspx) 함수를 지연시켜 경로를 정규화합니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-113">The runtime defers to the operating system's [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963\(v=vs.85\).aspx) function to normalize paths.</span></span>  
+-   <span data-ttu-id="a85f7-113">런타임은 운영 체제의 [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963\(v=vs.85\).aspx) 함수를 지연시켜 경로를 정규화합니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-113">The runtime defers to the operating system's [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963\(v=vs.85\).aspx) function to normalize paths.</span></span>  
   
--   <span data-ttu-id="a69e0-114">정규화 중에 더 이상 디렉터리 세그먼트의 끝(예: 디렉터리 이름 끝의 공백)이 잘리지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-114">Normalization no longer involves trimming the end of directory segments (such as a space at the end of a directory name).</span></span>  
+-   <span data-ttu-id="a85f7-114">정규화 중에 더 이상 디렉터리 세그먼트의 끝(예: 디렉터리 이름 끝의 공백)이 잘리지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-114">Normalization no longer involves trimming the end of directory segments (such as a space at the end of a directory name).</span></span>  
   
--   <span data-ttu-id="a69e0-115">완전 신뢰의 장치 경로 구문(`\\.\` 포함) 지원 및 mscorlib.dll `\\?\`에서 파일 I/O API 지원</span><span class="sxs-lookup"><span data-stu-id="a69e0-115">Support for device path syntax in full trust, including  `\\.\` and, for file I/O APIs   in mscorlib.dll, `\\?\`.</span></span>  
+-   <span data-ttu-id="a85f7-115">완전 신뢰의 장치 경로 구문(`\\.\` 포함) 지원 및 mscorlib.dll `\\?\`에서 파일 I/O API 지원</span><span class="sxs-lookup"><span data-stu-id="a85f7-115">Support for device path syntax in full trust, including  `\\.\` and, for file I/O APIs   in mscorlib.dll, `\\?\`.</span></span>  
   
--   <span data-ttu-id="a69e0-116">런타임에서 장치 구문 경로가 유효한지 확인하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-116">The runtime does not validate device syntax paths.</span></span>  
+-   <span data-ttu-id="a85f7-116">런타임에서 장치 구문 경로가 유효한지 확인하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-116">The runtime does not validate device syntax paths.</span></span>  
   
--   <span data-ttu-id="a69e0-117">대체 데이터 스트림에 액세스하기 위해 장치 구문을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-117">The use of device syntax to access alternate data streams is supported.</span></span>  
+-   <span data-ttu-id="a85f7-117">대체 데이터 스트림에 액세스하기 위해 장치 구문을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-117">The use of device syntax to access alternate data streams is supported.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="a69e0-118">영향</span><span class="sxs-lookup"><span data-stu-id="a69e0-118">Impact</span></span>  
- <span data-ttu-id="a69e0-119">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상 버전을 대상으로 하는 앱의 경우 이러한 변경이 기본적으로 설정되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-119">For apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later, these changes are on  by default.</span></span> <span data-ttu-id="a69e0-120">이를 통해 메서드에서 이전에 액세스할 수 없는 경로에 액세스할 수 있게 되었으며 성능이 향상되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-120">They should improve performance while allowing methods to access previously inaccessible paths.</span></span>  
+## <a name="impact"></a><span data-ttu-id="a85f7-118">영향</span><span class="sxs-lookup"><span data-stu-id="a85f7-118">Impact</span></span>  
+ <span data-ttu-id="a85f7-119">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상 버전을 대상으로 하는 앱의 경우 이러한 변경이 기본적으로 설정되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-119">For apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later, these changes are on  by default.</span></span> <span data-ttu-id="a85f7-120">이를 통해 메서드에서 이전에 액세스할 수 없는 경로에 액세스할 수 있게 되었으며 성능이 향상되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-120">They should improve performance while allowing methods to access previously inaccessible paths.</span></span>  
   
- <span data-ttu-id="a69e0-121">[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 및 이전 버전을 대상으로 하지만 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상에서 실행되는 앱은 이러한 변경에 의해 영향을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-121">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] and earlier versions but are running under the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later are unaffected by this change.</span></span>  
+ <span data-ttu-id="a85f7-121">[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 및 이전 버전을 대상으로 하지만 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상에서 실행되는 앱은 이러한 변경에 의해 영향을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-121">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] and earlier versions but are running under the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later are unaffected by this change.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="a69e0-122">완화</span><span class="sxs-lookup"><span data-stu-id="a69e0-122">Mitigation</span></span>  
- <span data-ttu-id="a69e0-123">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상을 대상으로 하는 앱은 애플리케이션 구성 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 이 동작을 옵트아웃(Opt out)하고 레거시 정규화를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-123">Apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can opt out of this change and use legacy normalization by adding the following to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application configuration file:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="a85f7-122">완화</span><span class="sxs-lookup"><span data-stu-id="a85f7-122">Mitigation</span></span>  
+ <span data-ttu-id="a85f7-123">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상을 대상으로 하는 앱은 애플리케이션 구성 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 이 동작을 옵트아웃(Opt out)하고 레거시 정규화를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-123">Apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can opt out of this change and use legacy normalization by adding the following to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/18/2017
 </runtime>  
 ```  
   
- <span data-ttu-id="a69e0-124">[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 또는 이전 버전을 대상으로 하지만 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상이 실행되는 앱은 응용 프로그램 .configuration 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 경로 정규화에 대한 변경을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a69e0-124">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] or earlier but are running on the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can enable the changes to path normalization by adding the following line to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application .configuration file:</span></span>  
+ <span data-ttu-id="a85f7-124">[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 또는 이전 버전을 대상으로 하지만 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상이 실행되는 앱은 응용 프로그램 .configuration 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 경로 정규화에 대한 변경을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a85f7-124">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] or earlier but are running on the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can enable the changes to path normalization by adding the following line to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application .configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -70,5 +71,5 @@ ms.lasthandoff: 10/18/2017
 </runtime>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a69e0-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a69e0-125">See Also</span></span>  
- [<span data-ttu-id="a69e0-126">대상 다시 지정 변경 내용</span><span class="sxs-lookup"><span data-stu-id="a69e0-126">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a><span data-ttu-id="a85f7-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a85f7-125">See Also</span></span>  
+ [<span data-ttu-id="a85f7-126">대상 다시 지정 변경 내용</span><span class="sxs-lookup"><span data-stu-id="a85f7-126">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
