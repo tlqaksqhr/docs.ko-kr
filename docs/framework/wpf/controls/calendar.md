@@ -16,16 +16,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 857f6b3be1467ec54fd27c76679279c0d0960690
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04d602161a20e56395e978dfeeb7ec5e756af7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calendar"></a>일정
 달력 사용자를 시각적 일정 표시를 사용 하 여 날짜를 선택할 수 있습니다.  
   
- A <xref:System.Windows.Controls.Calendar> 컨트롤의 드롭다운 부분으로 또는 자체적으로 사용할 수는 <xref:System.Windows.Controls.DatePicker> 제어 합니다. 자세한 내용은 <xref:System.Windows.Controls.DatePicker>을 참조하십시오.  
+ A <xref:System.Windows.Controls.Calendar> 컨트롤의 드롭다운 부분으로 또는 자체적으로 사용할 수는 <xref:System.Windows.Controls.DatePicker> 제어 합니다. 자세한 내용은 <xref:System.Windows.Controls.DatePicker>을 참조하세요.  
   
  다음 그림은 두 개의 <xref:System.Windows.Controls.Calendar> 보여 한 하지 않고 제어 합니다.  
   

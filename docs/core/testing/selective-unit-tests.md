@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13d01272-bbf8-456c-a97a-560001d1a7f2
-ms.openlocfilehash: af832d04d2cba530a93710a90701ab119a66deef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: a650e971afd63171b0cc12f679d81bc222a609a5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="running-selective-unit-tests"></a>선택적 단위 테스트 실행
 
@@ -58,9 +59,9 @@ namespace MSTestNamespace
 
 | 식 | 결과 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTestClass1&#124;TestCategory=CategoryA"</code> | `FullyQualifiedName`에 `UnitTestClass1`이 **있거나** `TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTestClass1&#124;TestCategory=CategoryA"</code> | `FullyQualifiedName`에 `UnitTestClass1`**이** 있거나 `TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
 | `dotnet test --filter "FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA"` | `FullyQualifiedName`에 `UnitTestClass1`**이 있고** `TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA)&#124;Priority=1"</code> | `UnitTestClass1`을 포함하는 `FullyQualifiedName`**이 있고**`TestCategory`가 `CategoryA`**이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA)&#124;Priority=1"</code> | `UnitTestClass1`을 포함하는 `FullyQualifiedName`**이** 있고 `TestCategory`가 `CategoryA`**이거나** `Priority`가 1인 테스트를 실행합니다. |
 
 ## <a name="xunit"></a>xUnit
 
@@ -103,6 +104,6 @@ namespace XUnitNamespace
 
 | 식 | 결과 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | `FullyQualifiedName`에 `TestClass1`이 **있거나**`Category`가 `Nightly`인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | `FullyQualifiedName`에 `TestClass1`**이** 있거나 `Category`가 `Nightly`인 테스트를 실행합니다. |
 | `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | `FullyQualifiedName`에 `TestClass1`**이 있고** `Category`가 `Nightly`인 테스트를 실행합니다. |
 | <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | `TestClass1`을 포함하는 `FullyQualifiedName`**이 있고**`Category`가 `CategoryA`**이거나** `Priority`가 1인 테스트를 실행합니다. |

@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: dd3adbeebc0cc2a9e201bbe6492eb311f18a711d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 자동화 및 Microsoft Active Accessibility
 > [!NOTE]
@@ -170,7 +171,7 @@ ms.lasthandoff: 10/18/2017
   
  다음 상태는 대부분의 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 컨트롤 서버에서 구현되지 않았거나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 해당 항목이 없습니다.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 상태|주의|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 상태|설명|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  

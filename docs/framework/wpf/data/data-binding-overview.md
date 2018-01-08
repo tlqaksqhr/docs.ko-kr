@@ -21,11 +21,12 @@ caps.latest.revision: "78"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf731504022cb25e0cdeff5e0a557b67b987fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다. <xref:System.Windows.Controls.ContentControl>와 같은 s <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.ItemsControl>같은 <xref:System.Windows.Controls.ListBox> 및 <xref:System.Windows.Controls.ListView> 단일 데이터 항목의 스타일을 유연한 또는 데이터 항목의 컬렉션을 사용 하도록 기능이 기본 제공 합니다. 데이터를 기반으로 정렬, 필터 및 그룹 보기를 생성할 수 있습니다.  
@@ -266,7 +267,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 표에서 뷰 데이터 형식을 기본 컬렉션 뷰로 또는 만들어집니다 <xref:System.Windows.Data.CollectionViewSource> 소스 컬렉션 형식을 기반으로 합니다.  
   
-|소스 컬렉션 형식|컬렉션 뷰 형식|참고|  
+|소스 컬렉션 형식|컬렉션 뷰 형식|노트|  
 |----------------------------|--------------------------|-----------|  
 |<xref:System.Collections.IEnumerable>|내부 형식에 따라<xref:System.Windows.Data.CollectionView>|항목을 그룹화할 수 없습니다.|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|가장 빠릅니다.|  
@@ -358,7 +359,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[DataBindingLab#AuctionItemDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
   
- 이 두를 사용 하 여 <xref:System.Windows.DataTemplate>s, UI에 표시 된 것은는 [데이터 바인딩의?](#what_is_data_binding) 섹션. 해당 스크린 샷 알 수 있듯이 있을 뿐만 아니라 데이터의에서 넣으면 컨트롤 <xref:System.Windows.DataTemplate>s를 사용 하면 데이터에 대 한 매력적인 시각적 개체를 정의할 수 있습니다. 예를 들어 <xref:System.Windows.DataTrigger> 는 위의 <xref:System.Windows.DataTemplate> 에서 사용되므로 *HighLight* 값이 *SpecialFeatures*인 *AuctionItem*에는 주황색 테두리와 별모양이 함께 표시됩니다.  
+ 이 두를 사용 하 여 <xref:System.Windows.DataTemplate>s, UI에 표시 된 것은는 [데이터 바인딩의?](#what_is_data_binding) 섹션. 해당 스크린 샷 알 수 있듯이 있을 뿐만 아니라 데이터의에서 넣으면 컨트롤 <xref:System.Windows.DataTemplate>s를 사용 하면 데이터에 대 한 매력적인 시각적 개체를 정의할 수 있습니다. 예를 들어 <xref:System.Windows.DataTrigger>s ´ 위의 <xref:System.Windows.DataTemplate> 있도록 *AuctionItem*s *SpecialFeatures* 의 값 *강조 표시* 으로 표시 되는 주황색 테두리와 별입니다.  
   
  데이터 템플릿에 대한 자세한 내용은 [데이터 템플릿 개요](../../../../docs/framework/wpf/data/data-templating-overview.md)를 참조하세요.  
   

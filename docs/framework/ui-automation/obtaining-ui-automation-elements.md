@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f657d4289e46f84246059010a2f9550d1c831d3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e3f4b1583942b4dd29ca603bd880ba2acdcfd3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI 자동화 요소 가져오기
 > [!NOTE]
@@ -107,6 +108,6 @@ ms.lasthandoff: 11/21/2017
  정적 <xref:System.Windows.Automation.AutomationElement> 속성에서 포커스가 있는 컨트롤을 나타내는 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> 를 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [속성 조건에 따라 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [TreeWalker와 UI 자동화 요소 간 탐색](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [속성 조건을 기반으로 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
