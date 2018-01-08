@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 600a1bd57015c6a64a51bf99f3ded35a375e62fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-protocols"></a>메시징 프로토콜
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 채널 스택에서는 인코딩 및 전송 채널을 통해 내부 메시지 표현을 통신 형식으로 변환한 후 특정 전송을 사용하여 보냅니다. 웹 서비스 상호 운용성을 위해 사용되는 가장 일반적인 전송은 HTTP이고, 웹 서비스에 사용되는 가장 일반적인 인코딩은 XML 기반 SOAP 1.1, SOAP 1.2 및 MTOM(Message Transmission Optimization Mechanism)입니다.  
@@ -307,7 +308,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
 -   R3516: 끝점이 WSDL 1.1 SOAP 1.x HTTP 바인딩을 사용하고 `ReplyTo` 어설션은 연결되어 있지만 `[address]` 어설션은 연결되지 않은 정책 대안이 있는 경우 끝점에 보낸 요청 메시지에 `wsap:UsingAddressing` 속성이 "http://www.w3.org/2005/08/addressing/anonymous"인 `cdp:CompositeDuplex` 헤더가 있어야 합니다.  
   
- WS-addressing WSDL 사양에서는 세 개의 텍스트 값(required, optional, prohibited)을 가진`<wsaw:Anonymous/>`wsa:ReplyTo 요소를 추가하여`wsa:ReplyTo` 헤더(단원 3.2)에 대한 요구 사항을 나타냄으로써 비슷한 프로토콜 바인딩을 설명하려고 합니다. 그러나 해당 요소를 어설션으로 사용하여 대안 교차를 지원하려면 도메인별 확장이 필요하므로, 이러한 요소 정의는 WS-Policy 컨텍스트에서 어설션으로 사용할 수 없습니다. 또한 이러한 요소 정의는 통신 중인 끝점 동작과 반대로 `ReplyTo` 헤더 값을 나타내므로 HTTP 전송에만 해당됩니다.  
+ WS-addressing WSDL 사양에서는 세 개의 텍스트 값(required, optional, prohibited)을 가진 `<wsaw:Anonymous/>`wsa:ReplyTo 요소를 추가하여`wsa:ReplyTo` 헤더(단원 3.2)에 대한 요구 사항을 나타냄으로써 비슷한 프로토콜 바인딩을 설명하려고 합니다. 그러나 해당 요소를 어설션으로 사용하여 대안 교차를 지원하려면 도메인별 확장이 필요하므로, 이러한 요소 정의는 WS-Policy 컨텍스트에서 어설션으로 사용할 수 없습니다. 또한 이러한 요소 정의는 통신 중인 끝점 동작과 반대로 `ReplyTo` 헤더 값을 나타내므로 HTTP 전송에만 해당됩니다.  
   
 #### <a name="action-definition"></a>동작 정의  
  WS-Addressing 2004/08에서는 `wsa:Action` 요소에 대한 `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` 특성을 정의합니다. WS-ADDR10-WSDL(WS-Addressing 1.0 WSDL 바인딩)에서는 비슷한 특성인 `wsaw10:Action`을 정의합니다.  
