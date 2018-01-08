@@ -14,16 +14,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 28098a4e598d1c3bede3b05e3afe1001c3944d42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 테스트 클라이언트(WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 테스트 클라이언트(WcfTestClient.exe)는 사용자가 테스트 매개 변수를 입력하고, 해당 입력 내용을 서비스에 전송하고, 서비스에서 돌려보내는 응답을 보는 데 사용할 수 있는 GUI 도구입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 호스트와 이 도구를 함께 사용하면 서비스를 매끄럽게 테스트할 수 있습니다.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트(WcfTestClient.exe)는 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\에 있습니다.  
+ 일반적으로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트 (WcfTestClient.exe)는 다음 위치에: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE-커뮤니티 "Enterprise", "Professional" 또는 "커뮤니티" 중 하나일 수 있습니다 설치에 따라 Visual Studio 수준의 됩니다.
   
 ## <a name="scenarios-for-using-test-client"></a>테스트 클라이언트 사용 시나리오  
  다음 단원에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 테스트 클라이언트를 사용하여 개발 프로세스를 간소화할 수 있는 가장 일반적인 시나리오를 설명합니다.  

@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b7fd2b0ce2a8f5ab77fd654863a1e68baad6a41e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="transaction-fundamentals"></a>트랜잭션 기본 사항
 트랜잭션은 여러 작업을 함께 바인딩합니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 데이터베이스에 새 테이블을 만듭니다. 그런 다음 특수 개체를 호출하여 데이터를 수집하고 형식을 지정하여 새 테이블에 삽입합니다. 데이터를 채울 수 없는 경우 새 테이블을 만들지 않으려고 한다는 점에서 두 작업은 서로 관련이 있고 상호 종속적입니다. 단일 트랜잭션 범위 내에서 두 작업을 실행하면 두 작업 간의 연결이 적용됩니다. 두 번째 작업이 실패하면 첫 번째 작업이 새 테이블을 만들기 전의 지점으로 롤백됩니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Transactions>에서 제공하는 클래스를 사용하여 트랜잭션 응용 프로그램을 개발하는 경우 필요한 트랜잭션 종류나 관련된 트랜잭션 관리자에 대해 염려할 필요가 없습니다. <xref:System.Transactions> 인프라가 자동으로 이를 관리합니다.  
   
- 트랜잭션을 만들 때 트랜잭션에 적용되는 격리 수준을 지정할 수 있습니다. <xref:System.Transactions.IsolationLevel> 클래스에 의해 정의된 격리 수준에 따라 트랜잭션의 영향을 받는 데이터에 대한 다른 트랜잭션의 액세스 수준이 결정됩니다.  
+ 트랜잭션을 만들 때 트랜잭션에 적용되는 격리 수준을 지정할 수 있습니다. 에 정의 된 격리 수준인은 <xref:System.Transactions.IsolationLevel> 열거형 다른 트랜잭션에서 데이터에 영향을 주었을 사용자의 트랜잭션에서 액세스 수준을 결정 합니다.  
   
  ADO.NET을 사용 하 여 트랜잭션을 만들 수 있습니다 <xref:System.EnterpriseServices>, 또는에서 제공 하는 트랜잭션 프로그래밍 모델은 <xref:System.Transactions> 네임 스페이스입니다. [System.Transactions에 의해 제공 하는 기능](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) 사용 하 여 트랜잭션 응용 프로그램을 작성 하는 데 사용할 수 있는 기능을 알아봅니다는 <xref:System.Transactions> 네임 스페이스입니다.  
   

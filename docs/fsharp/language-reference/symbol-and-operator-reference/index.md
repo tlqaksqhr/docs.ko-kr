@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="symbol-and-operator-reference"></a>기호 및 연산자 참조
 
@@ -92,7 +92,7 @@ ms.lasthandoff: 10/18/2017
 |`>?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 "보다 큼" 연산을 계산합니다.<br /></li><ul/>|
 |`>>`|[함수](../functions/index.md)|<ul><li>두 함수를 작성합니다(정방향 컴퍼지션 연산자).<br /></li><ul/>|
 |`>>>`|[비트 연산자](bitwise-operators.md)|<ul><li>좌변의 수량 비트를 우변에 지정된 자릿수만큼 우변으로 시프트합니다.<br /></li><ul/>|
-|`>=`|[산술 연산자](arithmetic-operators.md)|<ul><li>우변이 좌변 이상이면 `true`를 반환하고 작으면 `false`를 반환합니다.<br /></li><ul/>|
+|`>=`|[산술 연산자](arithmetic-operators.md)|<ul><li>반환 `true` 좌 변이 우변과 오른쪽; 보다 크거나 같지 않으면, 반환 `false`합니다.<br /></li><ul/>|
 |`>=?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 "크거나 같음" 연산을 계산합니다.<br /></li><ul/>|
 |`?`|[매개 변수 및 인수](../parameters-and-arguments.md)|<ul><li>선택적 인수를 지정합니다.<br /></li><li>동적 메서드 및 속성 호출을 위한 연산자로 사용됩니다. 고유한 구현을 제공해야 합니다.<br /></li><ul/>|
 |`? ... <- ...`|추가 정보가 제공되지 않습니다.|<ul><li>동적 속성 설정 위한 연산자로 사용됩니다. 고유한 구현을 제공해야 합니다.<br /></li><ul/>|

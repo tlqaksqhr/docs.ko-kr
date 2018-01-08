@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6fe9bf8508c7281341121f4ab96e9ab8380639f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF 웹 HTTP 서비스에 대한 캐싱 지원
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]WCF 웹 HTTP 서비스에서 ASP.NET에서 이미 사용할 수 있는 선언적 캐싱 메커니즘을 사용할 수 있습니다. 이렇게 하면 WCF 웹 HTTP 서비스 작업의 응답을 캐시할 수 있습니다. 사용자가 캐시용으로 구성된 서비스에 HTTP GET을 보내면 ASP.NET이 캐시된 응답을 다시 보내고 서비스 메서드가 호출되지 않습니다. 캐시가 만료되면 다음에 사용자가 HTTP GET을 보낼 때 서비스 메서드가 호출되고 응답이 다시 한 번 캐시됩니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET 캐싱 참조 [ASP.NET Caching 개요](http://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -29,7 +29,8 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]에서는 캐시 프로필 이름을 지정할 수 있는 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>라는 새로운 특성을 제공합니다. 이 특성은 서비스 작업에 적용됩니다. 다음 예제에서는 서비스에 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>를 적용하여 ASP.NET 호환성을 사용하도록 설정하고 `GetCustomer` 작업을 캐시용으로 구성합니다. <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` 특성에 사용할 캐시 설정이 포함 된 캐시 프로필을 지정 합니다.  
   
 ```csharp
-[ServiceContract] AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]
+[ServiceContract] 
+[AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]
 public class Service
 {
     [WebGet(UriTemplate = "{id}")]
