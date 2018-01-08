@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 80429810a46438cdbf7cf2993e5f3b0779d300c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f015a8323079b4c63cc217826769316c44fa986d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows 스토어 앱에 대한 .NET Framework의 리플렉션
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 .NET Framework에는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 사용하기 위한 리플렉션 형식 및 멤버 집합이 포함되어 있습니다. 이러한 형식과 멤버는 전체 .NET Framework 및 [Windows 스토어 앱용 .NET](http://go.microsoft.com/fwlink/?LinkID=225700)에서 사용할 수 있습니다. 이 문서에서는 이러한 항목과 .NET Framework 4 이전 버전에 있는 해당 항목 간의 주요 차이점을 설명합니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="restrictions"></a>제한  
  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 일부 .NET Framework 형식 및 멤버에 대한 액세스는 제한됩니다. 예를 들어 <xref:System.Reflection.MethodInfo> 개체를 사용하여 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에 포함되지 않은 .NET Framework 메서드를 호출할 수 없습니다. 또한 <xref:System.Runtime.InteropServices.Marshal> 및 <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> 멤버처럼 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱의 컨텍스트 내에서 안전하게 간주되지 않는 특정 형식 및 멤버는 차단됩니다. 이 제한은 .NET Framework 형식 및 멤버에만 영향을 줍니다. 일반적인 방법으로 사용자 코드나 타사 코드를 호출할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]의 리플렉션 형식 및 멤버를 사용하여 상속된 메서드 및 속성을 비롯한 <xref:System.Globalization.Calendar> 형식의 메서드 및 속성을 검색합니다. 이 코드를 실행하려면 리플렉션 프로젝트에서 `textblock1`이라는 [Windows.UI.Xaml.Controls.Textblock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 컨트롤을 포함하는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 페이지에 대한 코드 파일에 코드를 붙여넣습니다. 다른 이름을 사용하여 프로젝트에 이 코드를 붙여넣는 경우 프로젝트와 일치하도록 네임스페이스 이름을 변경해야 합니다.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]

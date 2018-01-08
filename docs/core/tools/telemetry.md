@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
-ms.openlocfilehash: 34183792a235391f66fbec211ff00f06f85134fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 66ad63f0b2a2f62f34f0784b236d242f1d92066a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-cli-tools-telemetry"></a>.NET Core CLI 도구 원격 분석
 
@@ -86,11 +87,11 @@ ms.lasthandoff: 10/18/2017
 
 &#8225;일반적으로 *지리* 열에는 국가 이름이 표시됩니다. 경우에 따라 연구원이 남극에서 .NET Core를 사용하거나 위치 데이터가 정확하지 않아 남극 대륙이 이 열에 표시됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 | 타임스탬프      | 발생 | 명령 | 지리 | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| 4/16/2017 0:00 | 9           | 실행     | 우간다    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
+| 4/16/2017 0:00 | 8           | 실행     | 우간다    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
 
 ### <a name="datasets"></a>데이터 집합
 

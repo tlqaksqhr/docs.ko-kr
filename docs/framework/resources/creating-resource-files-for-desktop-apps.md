@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 555ef705dc485462dc209b090e5cdbee98983681
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>데스크톱 응용 프로그램용 리소스 파일 만들기
 문자열, 이미지 또는 개체 데이터와 같은 리소스를 리소스 파일에 포함하여 응용 프로그램에서 쉽게 사용할 수 있게 설정할 수 있습니다. .NET Framework에서는 리소스 파일을 만드는 다섯 가지 방법을 제공합니다.  
@@ -66,7 +67,7 @@ name2=value2
   
  .txt 및 .restext 파일의 리소스 파일 형식은 같습니다. .restext 파일 확장명은 단순히 텍스트 파일을 텍스트 기반 리소스 파일로 즉시 식별할 수 있도록 합니다.  
   
- 문자열 리소스는 *name/value* 쌍으로 나타납니다. 여기서 *name*은 리소스를 식별하는 문자열이고, *value*는 *name*을 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>과 같은 리소스 검색 메서드에 전달할 때 반환되는 리소스 문자열입니다. *name* 및 *value*는 등호(=)로 구분해야 합니다. 예를 들면 다음과 같습니다.  
+ 문자열 리소스는 *name/value* 쌍으로 나타납니다. 여기서 *name*은 리소스를 식별하는 문자열이고, *value*는 *name*을 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>과 같은 리소스 검색 메서드에 전달할 때 반환되는 리소스 문자열입니다. *name* 및 *value*는 등호(=)로 구분해야 합니다. 예:  
   
 ```  
 FileMenuName=File  

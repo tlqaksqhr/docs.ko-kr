@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: ae0611fdadabd6ab684f3f97995f3be3e348e648
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic 응용 프로그램에서 데이터에 액세스
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에는 데이터에 액세스하는 응용 프로그램 개발을 지원하기 위한 여러 가지 새로운 기능이 포함됩니다. [데이터 소스 창](/visualstudio/data-tools/add-new-data-sources)에서 양식으로 항목을 끌어 Windows 응용 프로그램에 대한 데이터 바인딩된 양식을 만듭니다. **데이터 소스 창**에서 기존 컨트롤로 항목을 끌어 컨트롤을 데이터에 바인딩합니다.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 12/09/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Visual Basic에서 LINQ를 사용하는 방법을 설명하는 항목의 링크를 제공합니다.  
   
- [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에 대한 정보를 제공합니다. 프로그래밍 예제를 포함합니다.  
   
  [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)(Visual Studio의 LINQ to SQL 도구)  
- 응용 프로그램에서 [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md) 개체 모델을 만드는 방법에 대한 항목의 링크를 제공합니다.  
+ 응용 프로그램에서 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) 개체 모델을 만드는 방법에 대한 항목의 링크를 제공합니다.  
   
  [n 계층 응용 프로그램에서 데이터 집합 작업](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  다중 계층 데이터 응용 프로그램을 만드는 방법에 대한 항목의 링크를 제공합니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/09/2017
  [데이터를 다시 데이터베이스에 저장](/visualstudio/data-tools/save-data-back-to-the-database)  
  응용 프로그램에서 데이터베이스로 업데이트된 데이터를 보내는 방법을 설명하는 페이지의 링크를 제공합니다.  
   
- [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
+ [ADO.NET](../../framework/data/adonet/index.md)  
  .NET Framework 프로그래머에게 데이터 액세스 서비스를 표시하는 ADO.NET 클래스에 대해 설명합니다.
 
  [Office 솔루션의 데이터](https://msdn.microsoft.com/library/xx069ybh)  

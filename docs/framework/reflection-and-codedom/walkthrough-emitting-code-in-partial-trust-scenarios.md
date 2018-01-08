@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 121dfd91d797aa03860abd4404ffe20113e70f85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 리플렉션 내보내기에는 완전 또는 부분 신뢰에서 동일한 API 집합이 사용되지만 일부 기능의 경우 부분적으로 신뢰할 수 있는 코드에 특수 권한이 필요합니다. 또한 리플렉션 내보내기에는 부분 신뢰와 함께 보안 투명 어셈블리에서 사용되도록 디자인된 익명으로 호스트되는 동적 메서드의 기능이 있습니다.  
@@ -190,7 +191,7 @@ ms.lasthandoff: 11/21/2017
     >  표시 유형 확인을 건너뛰는 제한된 기능은 익명으로 호스트된 동적 메서드의 기능입니다. 일반 동적 메서드가 JIT 표시 유형 확인을 건너뛸 경우 완전 신뢰가 부여되어야 합니다.  
   
 <a name="Example"></a>   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 코드 예제는 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 플래그를 사용하여 대상 멤버가 코드를 내보내는 어셈블리와 같거나 낮은 신뢰 수준에 있는 경우에만 익명으로 호스트된 동적 메서드가 JIT 표시 유형 확인을 건너뛰도록 하는 방법을 보여 줍니다.  

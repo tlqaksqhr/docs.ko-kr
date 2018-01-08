@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: babd0f6a9b1babf02677d6c6c41c664e0a6541b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fe5fbb5299c8e9c130538f99fe13081f8f26a55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 강력한 이름으로 어셈블리에 서명하는 여러 가지 방법이 있습니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  **서명** 탭을 선택합니다.  
   
-3.  **어셈블리 시그니처** 상자를 선택합니다.  
+3.  **어셈블리 서명** 상자를 선택합니다.  
   
 4.  **강력한 이름 키 파일 선택** 상자에서 **\<찾아보기…>**를 선택한 다음, 키 파일로 이동합니다. 새 키 파일을 만들려면 **\<새로 만들기…>**를 선택하고 **강력한 이름 키 만들기** 대화 상자에 이름을 입력합니다.  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
-     여기서  
+     다음은 각 문자에 대한 설명입니다.  
   
      *assemblyName*  
      어셈블리 링커가 내보낼 강력하게 서명된 어셈블리(.dll 또는.exe 파일)의 이름입니다.  

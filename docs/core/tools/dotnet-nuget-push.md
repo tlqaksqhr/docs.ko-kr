@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: dc4250ab7417c9f19babdf37c556daf7c3bd6a81
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload: dotnetcore
+ms.openlocfilehash: 52aac5ff1862397616287a77eac063582703d509
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>이름
+## <a name="name"></a>name
 
 `dotnet nuget push` - 서버에 패키지를 푸시하고 게시합니다.
 
@@ -102,7 +103,3 @@ ms.lasthandoff: 11/28/2017
 사용자 지정 구성 파일 *./config/My.Config*를 지정하여 기본 푸시 소스에 현재 디렉터리에 있는 모든 *.nupkg* 파일을 푸시합니다.
 
 `dotnet nuget push *.nupkg --config-file ./config/My.Config`
-
-기본 푸시 소스에 현재 디렉터리에 있는 모든 *.nupkg* 파일을 최대한 자세하게 푸시합니다.
-
-`dotnet nuget push *.nupkg --verbosity detailed`

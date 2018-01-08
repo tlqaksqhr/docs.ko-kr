@@ -11,11 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
-ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: mariaw
+ms.openlocfilehash: b92299279e57a0662f7438cad7c6009d53bda9ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 
 * [ASP.NET 및 웹](#asp-net-and-web)
 
-* [핵심](#core)
+* [코어](#core)
 
 * [Data](#data)
 
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/18/2017
 | **SharePoint 사이트** | `WSS_Minimal`이라는 사용자 지정 부분 신뢰 수준이 포함된 SharePoint 웹 사이트의 자식으로 배포된 ASP.NET 4 웹 사이트를 실행하려고 하면 다음 오류가 표시됩니다.<br><br>`Could not find permission set named 'ASP.Net'.` | 지금은 ASP.NET과 호환되는 SharePoint 버전이 없습니다. 따라서 ASP.NET 4 웹 사이트를 SharePoint 웹 사이트의 자식으로 실행해서는 안 됩니다. |
 | **XHTML 1.1 표준** | 새로운 웹 사이트에 XHTML 1.1 규격을 사용하기 위해 .NET Framework 4의 ASP.NET 컨트롤은 XHTML 1.1 규격 HTML을 생성합니다. `<system.Web>` 요소 내부의 Web.config 파일에서 다음 옵션을 사용하여 이 렌더링을 사용하도록 설정할 수 있습니다.<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>이 옵션은 기본적으로 4.0으로 설정됩니다. Visual Studio 2008에서 Visual Studio로 업그레이드되는 웹 프로젝트는 호환성을 위해 3.5 설정을 사용합니다. | 없음 |
 
-## <a name="core"></a>핵심
+## <a name="core"></a>코어
 
 ### <a name="general-features"></a>일반 기능
 

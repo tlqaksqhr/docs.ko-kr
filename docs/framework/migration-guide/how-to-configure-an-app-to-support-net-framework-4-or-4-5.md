@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>방법: .NET Framework 4 또는 4.5를 지원하도록 앱 구성
 CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서 관리 코드를 실행하기 위해서는 CLR을 시작하거나 *활성화*해야 합니다. 일반적으로 .NET Framework 응용 프로그램은 빌드된 CLR 버전에서 실행되지만 응용 프로그램 구성 파일(app.config 파일이라고도 함)을 사용하여 데스크톱 응용 프로그램에 대해 이 동작을 변경할 수 있습니다. 그러나 응용 프로그램 구성 파일을 사용하여 Windows 스토어 앱 또는 Windows Phone 앱에 대한 기본 활성화 동작을 변경할 수는 없습니다. 이 문서에서는 다른 버전의 .NET Framework에서 데스크톱 응용 프로그램을 실행하도록 설정하는 방법을 설명하고 버전 4 또는 4.5를 대상으로 하는 방법에 대한 예제를 제공합니다.  

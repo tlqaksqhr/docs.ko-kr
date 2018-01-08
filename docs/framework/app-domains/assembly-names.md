@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 624cc6ad264f32b9a43917d9bae751f57b4421a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da2137a9ab979d9e610d033324a87939a9777a97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-names"></a>어셈블리 이름
 어셈블리 이름은 메타데이터에 저장되고 어셈블리 범위 및 응용 프로그램에 의한 사용에 상당한 영향을 미칩니다. 강력한 이름의 어셈블리에는 어셈블리의 이름, 문화권, 공개 키 및 버전 번호가 포함된 정규화된 이름이 있습니다. 이 이름을 보통 표시 이름이라고 하고 로드된 어셈블리의 경우 <xref:System.Reflection.Assembly.FullName%2A> 속성을 사용하여 가져올 수 있습니다.  
@@ -32,7 +33,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
->  .NET Framework 버전 2.0에서는 어셈블리의 프로세서별 버전을 허용하기 위해 프로세서 아키텍처가 어셈블리 ID에 추가됩니다. 프로세서 아키텍처를 통해서만 ID가 다른 어셈블리의 버전을 만들 수 있습니다(예: 32비트 및 64비트 프로세서별 버전). 강력한 이름에는 프로세서 아키텍처가 필요하지 않습니다. 자세한 내용은 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>을 참조하십시오.  
+>  .NET Framework 버전 2.0에서는 어셈블리의 프로세서별 버전을 허용하기 위해 프로세서 아키텍처가 어셈블리 ID에 추가됩니다. 프로세서 아키텍처를 통해서만 ID가 다른 어셈블리의 버전을 만들 수 있습니다(예: 32비트 및 64비트 프로세서별 버전). 강력한 이름에는 프로세서 아키텍처가 필요하지 않습니다. 자세한 내용은 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>을 참조하세요.  
   
  이 예제에서 정규화된 이름은 `myTypes` 어셈블리에 공개 키 토큰과 함께 강력한 이름이 있고, 영어(미국)에 대한 문화권 값이 있고, 버전 번호 1.0.1234.0이 있음을 나타냅니다. 해당 프로세서 아키텍처는 "msil"이며, 이는 운영 체제 및 프로세서에 따라 32비트 코드 또는 64비트 코드로 JIT(Just-In-Time) 컴파일될 것임을 의미합니다.  
   

@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 2f421c72e8099a328fbc255d51f77a9cd0724e58
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="hosting-net-core"></a>.NET Core 호스트
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 10/18/2017
 
 이 문서에서는 네이티브 코드에서 .NET Core 런타임을 시작하고 초기 응용 프로그램 도메인(<xref:System.AppDomain>)을 만들고 관리 코드를 실행하는 데 필요한 단계에 대한 개요를 제공합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 호스트는 네이티브 응용 프로그램이기 때문에 이 자습서에서는 .NET Core를 호스트하는 C++ 응용 프로그램을 생성을 다룹니다. [Visual Studio](https://www.visualstudio.com/downloads/)에서 제공하는 C++ 개발 환경 같은 C++ 개발 환경이 필요합니다.
 

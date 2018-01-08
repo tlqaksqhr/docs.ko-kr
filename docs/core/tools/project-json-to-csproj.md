@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.openlocfilehash: 0f82e82c6a11220e24c85cef19bc131e12c77bf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 655f74def4d6163959d7dbbe605f7322fb0573c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/18/2017
 
 `buildOptions\outputName` 속성이 project.json에서 정의된 경우 `<AssemblyName>`에는 `<PackageId>`와 다른 값이 있습니다. 자세한 내용은 [기타 일반적인 빌드 옵션](#other-common-build-options)을 참조하세요.
 
-### <a name="version"></a>version
+### <a name="version"></a>버전
 
 ```json
 {

@@ -16,11 +16,12 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bb802df171990eca411dda37fc4743de15fc169
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 405503ac824ccf443d8ada7387d65e55876cb3e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
 매니페스트 생성 및 편집 도구(Mage.exe)는 응용 프로그램 매니페스트 및 배포 매니페스트의 생성과 편집을 지원하는 명령줄 도구입니다. Mage.exe는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램을 비롯한 Windows 기반 응용 프로그램에서도 실행할 수 있습니다.  
@@ -90,7 +91,7 @@ Mage [commands] [commandOptions]
 |**-pwd, -Password** `passwd`|디지털 인증서로 매니페스트에 서명하는 데 사용되는 암호입니다. **-CertFile** 옵션과 함께 사용해야 합니다.|  
 |**-t, -ToFile** `filePath`|생성 또는 수정된 파일의 출력 경로를 지정합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  Mage.exe에 대한 모든 인수는 대/소문자를 구분하지 않습니다. 명령 및 옵션의 앞에 대시(-) 또는 슬래시(/)를 사용할 수 있습니다.  
   
  **-Sign** 명령과 함께 사용되는 모든 인수는 언제든지 **-New** 또는 **-Update** 명령과도 함께 사용될 수 있습니다. 다음 두 명령은 서로 동일합니다.  

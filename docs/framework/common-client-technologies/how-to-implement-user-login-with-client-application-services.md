@@ -20,16 +20,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 909fbaa4e7dc1d384b5085d71cec346bde44cf14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2bf073b6db0a69cfda0c69ae34df0396f5dea35c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>방법: 클라이언트 응용 프로그램 서비스에서 사용자 로그인 구현
 클라이언트 응용 프로그램 서비스를 사용하면 기존의 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 프로필 서비스를 통해 사용자의 유효성을 검사할 수 있습니다. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 프로필 서비스를 설정하는 방법에 대한 자세한 내용은 [ASP.NET AJAX와 함께 양식 인증 사용](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)을 참조하세요.  
   
- 다음 절차에서는 응용 프로그램이 클라이언트 인증 서비스 공급자 중 하나를 사용하도록 구성된 경우 인증 서비스를 통해 사용자의 유효성을 검사하는 방법을 설명합니다. 자세한 내용은 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)을 참조하십시오.  
+ 다음 절차에서는 응용 프로그램이 클라이언트 인증 서비스 공급자 중 하나를 사용하도록 구성된 경우 인증 서비스를 통해 사용자의 유효성을 검사하는 방법을 설명합니다. 자세한 내용은 [방법: 클라이언트 응용 프로그램 서비스 구성](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)을 참조하세요.  
   
  일반적으로 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> 메서드를 통해 모든 유효성 검사를 수행합니다. 이 메서드는 구성된 인증 공급자를 통해 인증 서비스와의 상호 작용을 관리합니다. 자세한 내용은 [클라이언트 응용 프로그램 서비스 개요](../../../docs/framework/common-client-technologies/client-application-services-overview.md)를 참조하세요.  
   

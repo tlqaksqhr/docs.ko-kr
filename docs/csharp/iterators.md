@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="iterators"></a>반복기
 
@@ -171,7 +171,7 @@ private IEnumerable<int> IteratorMethod()
 
 ## <a name="deeper-dive-into-foreach"></a>`foreach` 심층 분석
 
-`foreach` 문은 `IEnumable<T>` 및 `IEnumerator<T>` 인터페이스를 사용하여 컬렉션의 모든 요소에서 반복하는 표준 관용구로 확장됩니다. 또한 개발자가 리소스를 제대로 관리하지 못해 발생하는 오류를 최소화합니다. 
+`foreach` 문은 `IEnumerable<T>` 및 `IEnumerator<T>` 인터페이스를 사용하여 컬렉션의 모든 요소에서 반복하는 표준 관용구로 확장됩니다. 또한 개발자가 리소스를 제대로 관리하지 못해 발생하는 오류를 최소화합니다. 
 
 컴파일러는 첫 번째 예제에 표시된 `foreach` 루프를 다음과 유사한 구문으로 변환합니다.
 

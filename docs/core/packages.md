@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.openlocfilehash: 1d46992d9f5666c87522630c7a4926aaac82475a
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.workload: dotnetcore
+ms.openlocfilehash: 599f46253a29db5dfd21d0d44ecf67654b6d2eb3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/30/2017
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET 표준
+### <a name="net-standard"></a>.NET Standard
 
 .NET 표준(대상 프레임워크 모니커: `netstandard`) 프레임워크는 [.NET 표준](../standard/net-standard.md)에 의해 정의되고 그 위에 빌드되는 API를 나타냅니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, .NET Core, .NET Framework 및 Mono/Xamarin 같은 .NET 표준 호환 런타임에서 지원됩니다. 이러한 각 런타임은 구현하는 API에 따라 .NET 표준 버전 집합을 지원합니다.
 

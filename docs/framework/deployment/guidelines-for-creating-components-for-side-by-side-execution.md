@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c914b566727d882939c23a982fad5db12985de5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Side-by-Side 실행용 구성 요소를 만들기 위한 지침
 다음 일반 지침에 따라 Side-by-Side 실행용으로 디자인된 관리되는 응용 프로그램 또는 구성 요소를 만듭니다.  
@@ -71,5 +72,5 @@ ms.lasthandoff: 11/21/2017
  [전역 어셈블리 캐시 도구(Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 사용하여 파일 버전 번호만 최신일 경우 어셈블리를 바꿀 수 있습니다. 일반적으로 설치 관리자는 어셈블리 버전 번호가 더 클 경우가 아니면 어셈블리를 통해 설치되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [병렬 실행](../../../docs/framework/deployment/side-by-side-execution.md)  
+ [Side-by-Side 실행](../../../docs/framework/deployment/side-by-side-execution.md)  
  [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

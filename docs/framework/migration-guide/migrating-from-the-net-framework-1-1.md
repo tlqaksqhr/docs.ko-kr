@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5757894a63ed556413147b8ef8c85c2d31ef11a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7d54fac935e7b1fad6b07a3a6cf2031dbca702cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1에서 마이그레이션
 [!INCLUDE[win7](../../../includes/win7-md.md)] 및 이후 버전의 Windows 운영 체제는 [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]을 지원하지 않습니다. 따라서 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 이상 운영 체제 버전에서 수정하지 않으면 [!INCLUDE[win7](../../../includes/win7-md.md)] 을 대상으로 하는 응용 프로그램이 실행되지 않습니다. 이 항목에서는 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 및 이후 버전의 Windows 운영 체제에서 [!INCLUDE[win7](../../../includes/win7-md.md)]을 대상으로 하는 응용 프로그램을 실행하는 데 필요한 단계에 대해 설명합니다. [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] 및 [!INCLUDE[win8](../../../includes/win8-md.md)]에 대한 자세한 내용은 [Windows 8 이상 버전에서 .NET Framework 1.1 앱 실행](../../../docs/framework/install/run-net-framework-1-1-apps.md)을 참조하세요.  

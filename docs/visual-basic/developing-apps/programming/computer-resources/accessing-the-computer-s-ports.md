@@ -14,16 +14,16 @@ ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e71e70734de24dab62f7fbad4359e3040d1cba51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: e50a1e1e849052dbc5da62f434539fab478bd26d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>컴퓨터 포트에 액세스(Visual Basic)
 `My.Computer.Ports` 개체는 컴퓨터의 직렬 포트에 액세스하기 위한 속성 및 메서드를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 사용할 수 있는 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  사용할 수 있는 직렬 포트를 표시하는 방법을 보여 줍니다.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 10/22/2017
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  `My.Computer.Ports` 개체와 해당 멤버를 설명합니다.  
   
- <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A>  
+ <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
  컴퓨터에 있는 직렬 포트의 이름 컬렉션을 가져오는 `SerialPortNames` 속성을 설명합니다.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  

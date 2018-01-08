@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0019931c0ebe2bfef7ce8db72b768f31ad67f938
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7505f44524ae8476842599b9dc4643128dea4bf2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치 관리자는 설치 과정에서 가능할 때마다 시스템이 다시 시작되지 않도록 [다시 시작 관리자](http://go.microsoft.com/fwlink/?LinkId=231425)를 사용합니다. 앱 설치 프로그램이 .NET Framework를 설치하는 경우 이 기능을 활용하기 위해 다시 시작 관리자와 인터페이스할 수 있습니다. 자세한 내용은 [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)를 참조하세요.  

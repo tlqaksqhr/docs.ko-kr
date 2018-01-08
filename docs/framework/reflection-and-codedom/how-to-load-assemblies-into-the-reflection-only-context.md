@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b1366107b7dca9b1a2128a91d4c9a66f72069e9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebf25ec707ddb238431ffad35156b3a8cec7e4b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>방법: 리플렉션 전용 컨텍스트에 어셈블리 로드
 리플렉션 전용 로드 컨텍스트를 사용하면 다른 플랫폼이나 다른 버전의 .NET Framework에 대해 컴파일된 어셈블리를 검사할 수 있습니다. 이 컨텍스트에 로드된 코드는 검사할 수만 있고 실행할 수 없습니다. 즉, 생성자를 실행할 수 없기 때문에 개체를 만들 수 없습니다. 코드를 실행할 수 없기 때문에 종속성이 자동으로 로드되지 않습니다. 종속성을 검사하려면 직접 로드해야 합니다.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  어셈블리에 또는 해당 내용에 적용되는 특성은 어셈블리에서 정의되거나, 리플렉션 전용 컨텍스트에 로드된 다른 어셈블리에서 정의될 수 있습니다. 특성이 정의되어 있는 위치를 미리 확인할 수는 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 리플렉션 전용 컨텍스트에 로드된 어셈블리에 적용된 특성을 검사하는 방법을 보여 줍니다.  
   
  이 코드 예제는 생성자 두 개와 속성 하나를 사용하여 사용자 지정 특성을 정의합니다. 어셈블리, 어셈블리에 선언된 형식, 형식의 메서드, 메서드의 매개 변수에 특성이 적용됩니다. 실행할 경우 어셈블리는 리플렉션 전용 컨텍스트에 자동으로 로드되고 어셈블리와 어셈블리에 포함된 형식 및 멤버에 적용된 사용자 지정 특성에 대한 정보를 표시합니다.  

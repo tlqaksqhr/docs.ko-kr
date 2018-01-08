@@ -15,11 +15,12 @@ ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a7dfefc144d9b0b46aeca01c219b22aaa34df8f
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.workload: dotnet
+ms.openlocfilehash: f206dd52f5fd6dc114ea35ce22df05e0fcff956c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/01/2017
 | 운영 체제 | 지원되는 버전 | OS가 사전 설치됨 | 별도로 설치 가능 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
 | Windows 10 Fall Creators Update | 32비트 및 64비트 | .NET Framework 4.7.1 | |
-| Windows 10 작성자 업데이트 | 32비트 및 64비트 | .NET Framework 4.7 | .NET Framework 4.7.1 | 
+| Windows 10 크리에이터스 업데이트 | 32비트 및 64비트 | .NET Framework 4.7 | .NET Framework 4.7.1 | 
 | Windows 10 1주년 업데이트 | 32비트 및 64비트 | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|.NET Framework 4.7<br/><br/>.NET Framework 4.7.1 |
 | Windows 10 11월 업데이트 | 32비트 및 64비트 | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
 | Windows 10 | 32비트 및 64비트 | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |

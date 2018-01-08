@@ -14,11 +14,12 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
-ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
+ms.workload: dotnet
+ms.openlocfilehash: cad3f3d813d6882b83a7e9db7ce212fba66e44ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/17/2017
   
 |.NET Framework 버전|개발자 설치|재배포 가능 설치|플랫폼 지원|  
 |----------------------------|----------------------------|----------------------------------|----------------------|  
-|**4.7.1**|[.NET Framework 4.7.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 웹 설치 관리자 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 오프라인 설치 관리자 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=852107)|포함된 운영 체제: <br/>Windows 10 Fall Creators Update<br/>Windows Server, 버전 1709<br /><br /> 설치 가능한 운영 체제:<br/> Windows 10 작성자 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)||
+|**4.7.1**|[.NET Framework 4.7.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 웹 설치 관리자 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 오프라인 설치 관리자 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=852107)|포함된 운영 체제: <br/>Windows 10 Fall Creators Update<br/>Windows Server, 버전 1709<br /><br /> 설치 가능한 운영 체제:<br/> Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)||
 |**4.7**|[NET Framework 4.7 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 웹 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 오프라인 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=825303)|포함된 운영 체제: <br/>Windows 10 크리에이터스 업데이트<br /><br /> 설치 가능한 운영 체제:<br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)||
 |**4.6.2**|[NET Framework 4.6.2 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 웹 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 오프라인 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=780601)|포함된 운영 체제: <br /> Windows 10 1주년 업데이트<br /><br /> 설치 가능한 운영 체제:<br /> Windows 10 11월 업데이트 <br/> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)|
 |**4.6.1**|[NET Framework 4.6.1 개발자 팩](http://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 웹 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 오프라인 설치 관리자의 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=671744)|설치 가능한 운영 체제:<br /> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조)|
@@ -181,7 +182,7 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
   
 다음 표에서는 지원되는 언어 목록을 보여 줍니다.  
   
-| 언어              | 문화권 |
+| 언어              | culture |
 | --------------------- | :-----: |
 | 아랍어                | ar      |
 | 체코어                 | cs      |
@@ -196,7 +197,7 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
 | 이탈리아어               | it      |
 | 일본어              | ja      |
 | 한국어                | ko      |
-| 노르웨이어             | no      |
+| 노르웨이어             | 아니요      |
 | 폴란드어                | pl      |
 | 포르투갈어(브라질)   | pt-BR   |
 | 포르투갈어(포르투갈) | pt-PT   |

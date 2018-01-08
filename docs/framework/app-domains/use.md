@@ -17,18 +17,19 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53180d5d3d9314c3f078ddca8f5c155b01981f4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eade3728c8a51785214cf3d8de53d8a64a668f1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-domains"></a>응용 프로그램 도메인 사용
 응용 프로그램 도메인은 공용 언어 런타임에 대한 격리 단위를 제공하고 프로세스 내에서 생성되고 실행됩니다. 응용 프로그램 도메인은 대개 런타임을 프로세스로 로드하고 응용 프로그램 도메인 내에서 사용자 코드를 실행하는 응용 프로그램인 런타임 호스트에서 만들어집니다. 런타임 호스트는 프로세스와 기본 응용 프로그램 도메인을 만들고 그 내부에서 관리 코드를 실행합니다. 런타임 호스트에는 ASP.NET, Microsoft Internet Explorer 및 Windows 셸이 포함됩니다.  
   
  대부분 응용 프로그램의 경우 자체적인 응용 프로그램 도메인을 만들 필요가 없습니다. 런타임 호스트에서 필요한 응용 프로그램 도메인을 만듭니다. 그러나 응용 프로그램이 코드를 분리하거나 DLL을 사용하고 언로드해야 할 경우 직접 추가적인 응용 프로그램 도메인을 만들고 구성할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 응용 프로그램 도메인 만들기](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
  응용 프로그램 도메인을 프로그래밍 방식으로 만드는 방법을 설명합니다.  
   

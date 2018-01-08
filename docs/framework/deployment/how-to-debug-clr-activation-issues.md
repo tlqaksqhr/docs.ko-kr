@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d923f97b6c3954f07467f9fbfe40913f427bb99
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fa8153fe680a8848ad19f32a2246d0f350c73c66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>방법: CLR 활성화 문제 디버깅
 응용 프로그램이 올바른 버전의 CLR(공용 언어 런타임)로 실행되도록 하는 데 문제가 있는 경우 CLR 활성화 로그를 보고 디버그할 수 있습니다. 이러한 로그는 응용 프로그램이 예상과 다른 CLR 버전을 로드하거나 CLR을 로드하지 않을 때 활성화 문제의 근본 원인을 파악하는 데 매우 유용할 수 있습니다. [.NET Framework 초기화 오류: 사용자 경험 관리](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)에서는 응용 프로그램에 대한 CLR이 없는 경우의 경험에 대해 설명합니다.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  CLR 활성화 로그는 CLR 활성화 및 CLR 호스팅 API 사용에 대한 많은 양의 데이터를 제공합니다. 이 데이터는 대부분 Microsoft 내부에서 사용되지만 일부 데이터는 이 문서의 설명과 같이 개발자에게도 유용할 수 있습니다.  
   
  로그는 CLR 호스팅 API가 호출된 순서를 반영합니다. 또한 컴퓨터에서 검색된 설치된 런타임 집합에 대한 유용한 데이터도 포함합니다. CLR 활성화 로그 형식 자체는 문서화되지 않지만 CLR 활성화 문제를 해결해야 하는 개발자를 지원하는 데 사용될 수 있습니다.  

@@ -28,11 +28,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90c8a2467d48a45fe333cd07e34bca5ecfa5d727
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f802abf6ed90a60b057b01589dcf32c2aa495676
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe(전역 어셈블리 캐시 도구)
 전역 어셈블리 캐시 도구를 사용하면 전역 어셈블리 캐시와 다운로드 캐시의 내용을 보고 조작할 수 있습니다.  
@@ -63,18 +64,18 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/i** *assemblyPath*|전역 어셈블리 캐시에 어셈블리를 설치합니다.|  
 |**/if** *assemblyPath*|전역 어셈블리 캐시에 어셈블리를 설치합니다. 동일한 이름의 어셈블리가 전역 어셈블리 캐시에 이미 있으면 해당 어셈블리를 덮어씁니다.<br /><br /> 이 옵션을 지정하는 것은 **/i** 및 **/f** 옵션을 함께 지정하는 것과 같습니다.|  
 |**/il** *assemblyListFile*|*assemblyListFile*에 지정된 하나 이상의 어셈블리를 전역 어셈블리 캐시에 설치합니다.|  
-|**/ir** *assemblyPath*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|어셈블리를 전역 어셈블리 캐시에 설치하고 어셈블리 수를 계산하는 참조를 추가합니다. 이 옵션과 함께 *assemblyPath*, *scheme*, *id* 및 *description* 매개 변수를 지정해야 합니다. 이러한 매개 변수에 대해 지정할 수 있는 유효한 값에 대한 설명은 **/r** 옵션을 참조하세요.<br /><br /> 이 옵션을 지정하는 것은 **/i** 및 **/r** 옵션을 함께 지정하는 것과 같습니다.|  
+|**/ir** *assemblyPath*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|어셈블리를 전역 어셈블리 캐시에 설치하고 어셈블리 수를 계산하는 참조를 추가합니다. 이 옵션과 함께 *assemblyPath*, *scheme*, *id* 및 *description* 매개 변수를 지정해야 합니다. 이러한 매개 변수에 대해 지정할 수 있는 유효한 값에 대한 설명은 **/r** 옵션을 참조하세요.<br /><br /> 이 옵션을 지정하는 것은 **/i** 및 **/r** 옵션을 함께 지정하는 것과 같습니다.|  
 |**/l** [*assemblyName*]|전역 어셈블리 캐시의 내용을 나열합니다. *assemblyName* 매개 변수를 지정하면 이 도구에서는 해당 이름과 일치하는 어셈블리만 나열합니다.|  
 |**/ldl**|다운로드된 파일 캐시의 내용을 나열합니다.|  
 |**/lr** [*assemblyName*]|모든 어셈블리와 해당 참조 횟수를 나열합니다. *assemblyName* 매개 변수를 지정하면 이 도구에서는 해당 이름 및 해당 참조 횟수와 일치하는 어셈블리만 나열합니다.|  
 |**/nologo**|Microsoft 시작 배너를 표시하지 않습니다.|  
-|**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|설치 또는 제거할 어셈블리에 대해 추적된 참조를 지정합니다. **/i**, **/il**, **/u** 또는 **/ul** 옵션과 함께 이 옵션을 지정합니다.<br /><br /> 어셈블리를 설치하려면 이 옵션과 함께 *assemblyPath*, *scheme*, *id* 및 *description* 매개 변수를 지정합니다. 어셈블리를 제거하려면 *assemblyName*, *scheme*, *id* 및 *description* 매개 변수를 지정합니다.<br /><br /> 어셈블리에 대한 참조를 제거하려면 어셈블리가 설치될 때 **/i** 및 **/r**(또는 **/ir**) 옵션으로 지정된 것과 동일한 *scheme*, *id* 및 *description* 매개 변수를 지정해야 합니다. 어셈블리를 제거할 때 해당 어셈블리가 제거할 마지막 참조이고 Windows Installer에 어셈블리에 대한 미해결 참조가 없으면 이 도구에서는 전역 어셈블리 캐시에서 어셈블리를 제거합니다.<br /><br /> *scheme* 매개 변수는 설치 스키마의 유형을 지정합니다. 다음 값 중 하나를 지정할 수 있습니다.<br /><br /> -   UNINSTALL_KEY: 설치 관리자에서 응용 프로그램을 Microsoft Windows의 [프로그램 추가/제거]에 추가하는 경우 이 값을 지정합니다. 이렇게 하면 HKLM\Software\Microsoft\Windows\CurrentVersion에 레지스트리 키가 추가되고 해당 응용 프로그램이 프로그램 추가/제거 제어판에 추가됩니다.<br />-   FILEPATH: 설치 관리자에서 응용 프로그램을 [프로그램 추가/제거]에 추가하지 않는 경우 이 값을 지정합니다.<br />-   OPAQUE: 설치 시나리오에 레지스트리 키 또는 파일 경로 제공이 적용되지 않는 경우 이 값을 지정합니다. 이 값을 사용하면 *id* 매개 변수에 대해 사용자 지정 정보를 지정할 수 있습니다.<br /><br /> *id* 매개 변수에 대해 지정할 값은 다음과 같이 *scheme* 매개 변수에 지정되는 값에 따라 결정됩니다.<br /><br /> -   *scheme* 매개 변수에 대해 UNINSTALL_KEY를 지정하는 경우 HKLM\Software\Microsoft\Windows\CurrentVersion 레지스트리 키에 설정된 응용 프로그램의 이름을 지정합니다. 예를 들어, 레지스트리 키가 HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp인 경우 *id* 매개 변수에 대해 MyApp을 지정합니다.<br />-   *scheme* 매개 변수에 대해 FILEPATH를 지정하는 경우 어셈블리를 설치하는 실행 파일의 전체 경로를 *id* 매개 변수로 지정합니다.<br />-   *scheme* 매개 변수에 대해 OPAQUE를 지정하는 경우 데이터의 모든 부분을 *id* 매개 변수로 제공할 수 있습니다. 데이터는 큰따옴표("")로 묶어서 지정해야 합니다.<br /><br /> *description* 매개 변수를 사용하면 설치할 응용 프로그램에 대한 설명 텍스트를 지정할 수 있습니다. 이 정보는 참조가 열거될 때 표시됩니다.|  
+|**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|설치 또는 제거할 어셈블리에 대해 추적된 참조를 지정합니다. **/i**, **/il**, **/u** 또는 **/ul** 옵션과 함께 이 옵션을 지정합니다.<br /><br /> 어셈블리를 설치하려면 이 옵션과 함께 *assemblyPath*, *scheme*, *id* 및 *description* 매개 변수를 지정합니다. 어셈블리를 제거하려면 *assemblyName*, *scheme*, *id* 및 *description* 매개 변수를 지정합니다.<br /><br /> 어셈블리에 대한 참조를 제거하려면 어셈블리가 설치될 때 **/i** 및 **/r**(또는 **/ir**) 옵션으로 지정된 것과 동일한 *scheme*, *id* 및 *description* 매개 변수를 지정해야 합니다. 어셈블리를 제거할 때 해당 어셈블리가 제거할 마지막 참조이고 Windows Installer에 어셈블리에 대한 미해결 참조가 없으면 이 도구에서는 전역 어셈블리 캐시에서 어셈블리를 제거합니다.<br /><br /> *scheme* 매개 변수는 설치 스키마의 유형을 지정합니다. 다음 값 중 하나를 지정할 수 있습니다.<br /><br /> -   UNINSTALL_KEY: 설치 관리자에서 응용 프로그램을 Microsoft Windows의 [프로그램 추가/제거]에 추가하는 경우 이 값을 지정합니다. 이렇게 하면 HKLM\Software\Microsoft\Windows\CurrentVersion에 레지스트리 키가 추가되고 해당 응용 프로그램이 프로그램 추가/제거 제어판에 추가됩니다.<br />-   FILEPATH: 설치 관리자에서 응용 프로그램을 [프로그램 추가/제거]에 추가하지 않는 경우 이 값을 지정합니다.<br />-   OPAQUE: 설치 시나리오에 레지스트리 키 또는 파일 경로 제공이 적용되지 않는 경우 이 값을 지정합니다. 이 값을 사용하면 *id* 매개 변수에 대해 사용자 지정 정보를 지정할 수 있습니다.<br /><br /> *id* 매개 변수에 대해 지정할 값은 다음과 같이 *scheme* 매개 변수에 지정되는 값에 따라 결정됩니다.<br /><br /> -   *scheme* 매개 변수에 대해 UNINSTALL_KEY를 지정하는 경우 HKLM\Software\Microsoft\Windows\CurrentVersion 레지스트리 키에 설정된 응용 프로그램의 이름을 지정합니다. 예를 들어, 레지스트리 키가 HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp인 경우 *id* 매개 변수에 대해 MyApp을 지정합니다.<br />-   *scheme* 매개 변수에 대해 FILEPATH를 지정하는 경우 어셈블리를 설치하는 실행 파일의 전체 경로를 *id* 매개 변수로 지정합니다.<br />-   *scheme* 매개 변수에 대해 OPAQUE를 지정하는 경우 데이터의 모든 부분을 *id* 매개 변수로 제공할 수 있습니다. 데이터는 큰따옴표("")로 묶어서 지정해야 합니다.<br /><br /> *description* 매개 변수를 사용하면 설치할 응용 프로그램에 대한 설명 텍스트를 지정할 수 있습니다. 이 정보는 참조가 열거될 때 표시됩니다.|  
 |**/silent**|모든 출력을 표시하지 않습니다.|  
 |**/u** *assemblyName*|전역 어셈블리 캐시에서 어셈블리를 제거합니다.|  
 |**/uf** *assemblyName*|어셈블리에 대한 모든 참조를 제거하여 지정된 어셈블리를 강제로 제거합니다.<br /><br /> 이 옵션을 지정하는 것은 **/u** 및 **/f** 옵션을 함께 지정하는 것과 같습니다. **참고:** Microsoft Windows Installer를 사용하여 설치한 어셈블리는 이 옵션으로 제거할 수 없습니다. 이 작업을 시도하면 오류 메시지가 표시됩니다.|  
 |**/ul** *assemblyListFile*|전역 어셈블리 캐시에서 *assemblyListFile*에 지정된 하나 이상의 어셈블리를 제거합니다.|  
 |**/u**[**ngen**] *assemblyName*|전역 어셈블리 캐시에서 지정된 어셈블리의 설치를 제거합니다. 지정된 어셈블리가 기존의 참조 횟수를 갖는 경우 이 도구에서는 해당 참조 횟수를 표시하고 전역 어셈블리 캐시에서 해당 어셈블리를 제거하지 않습니다. **참고:** .NET Framework 버전 2.0에서 `/ungen`은 지원되지 않습니다. 대신에 [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)의 `uninstall` 명령을 사용합니다. <br /><br /> .NET Framework 버전 1.0 및 1.1에서 **/ungen**을 지정하면 Gacutil.exe가 네이티브 이미지 캐시에서 어셈블리를 제거합니다. 이 캐시는 [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)를 사용하여 만들어진 어셈블리의 네이티브 이미지를 저장합니다.|  
-|**/ur** *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|전역 어셈블리 캐시에서 지정된 어셈블리의 참조를 제거합니다. 어셈블리에 대한 참조를 제거하려면 어셈블리가 설치될 때 **/i** 및 **/r**(또는 **/ir)** 옵션으로 지정된 것과 동일한 *scheme*, *id* 및 *description* 매개 변수를 지정해야 합니다. 이러한 매개 변수에 대해 지정할 수 있는 유효한 값에 대한 설명은 **/r** 옵션을 참조하세요.<br /><br /> 이 옵션을 지정하는 것은 **/u** 및 **/r** 옵션을 함께 지정하는 것과 같습니다.|  
+|**/ur** *assemblyName*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|전역 어셈블리 캐시에서 지정된 어셈블리의 참조를 제거합니다. 어셈블리에 대한 참조를 제거하려면 어셈블리가 설치될 때 **/i** 및 **/r**(또는 **/ir)** 옵션으로 지정된 것과 동일한 *scheme*, *id* 및 *description* 매개 변수를 지정해야 합니다. 이러한 매개 변수에 대해 지정할 수 있는 유효한 값에 대한 설명은 **/r** 옵션을 참조하세요.<br /><br /> 이 옵션을 지정하는 것은 **/u** 및 **/r** 옵션을 함께 지정하는 것과 같습니다.|  
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 ## <a name="remarks"></a>설명  

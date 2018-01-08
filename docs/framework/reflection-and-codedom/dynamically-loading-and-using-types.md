@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c3e2a8eac4383433888c324a3d36a6e62314462
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamically-loading-and-using-types"></a>동적으로 형식 로드 및 사용
 리플렉션은 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 및 JScript와 같은 언어 컴파일러에서 암시적 런타임에 바인딩을 구현하는 데 사용되는 인프라를 제공합니다. 바인딩은 고유하게 지정된 형식에 해당하는 선언(즉, 구현)을 찾는 프로세스입니다. 이 프로세스가 컴파일 시간이 아닌 런타임에 수행되는 경우 이를 런타임에 바인딩이라고 합니다. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]에서는 코드에서 암시적 런타임에 바인딩을 사용할 수 있고, Visual Basic 컴파일러는 리플렉션을 사용하여 개체 형식을 가져오는 도우미 메서드를 호출합니다. 인수가 도우미 메서드에 전달되면 런타임에 적절한 메서드가 호출됩니다. 이러한 인수는 메서드를 호출하는 인스턴스(개체), 호출된 메서드의 이름(문자열) 및 호출된 메서드에 전달된 인수(개체 배열)입니다.  
@@ -75,7 +76,7 @@ End Module
   
  **BindToMethod**는 호출할 <xref:System.Reflection.MethodBase>를 반환하거나 해당 호출이 가능하지 않은 경우 null 참조(Visual Basic의 경우 **Nothing**)를 반환합니다. **MethodBase** 반환 값은 일반적인 사례인 경우에도 *match* 매개 변수에 포함된 값 중 하나일 필요가 없습니다.  
   
- ByRef 인수가 있으면 호출자가 해당 인수를 되찾으려고 할 수 있습니다. 따라서 **BindToMethod**가 인수 배열을 조작한 경우 **Binder**를 사용하여 클라이언트가 인수 배열을 다시 원래 폼에 매핑할 수 있습니다. 이 작업을 위해 호출자는 인수 순서가 변경되지 않도록 보장해야 합니다. 인수가 이름으로 저장되면 **Binder**는 인수 배열을 다시 정렬하고 호출자는 이 순서를 인식합니다. 자세한 내용은 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>을 참조하십시오.  
+ ByRef 인수가 있으면 호출자가 해당 인수를 되찾으려고 할 수 있습니다. 따라서 **BindToMethod**가 인수 배열을 조작한 경우 **Binder**를 사용하여 클라이언트가 인수 배열을 다시 원래 폼에 매핑할 수 있습니다. 이 작업을 위해 호출자는 인수 순서가 변경되지 않도록 보장해야 합니다. 인수가 이름으로 저장되면 **Binder**는 인수 배열을 다시 정렬하고 호출자는 이 순서를 인식합니다. 자세한 내용은 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>을 참조하세요.  
   
  사용 가능한 멤버 집합은 형식 또는 기본 형식에 정의된 멤버입니다. <xref:System.Reflection.BindingFlags>가 지정되면 접근성이 있는 멤버가 집합에 반환됩니다. **BindingFlags.NonPublic**이 지정되지 않으면 바인더가 접근성 규칙을 적용해야 합니다. **Public** 또는 **NonPublic** 바인딩 플래그를 지정할 경우에는 **Instance** 또는 **Static** 바인딩 플래그도 지정해야 합니다. 그렇지 않으면 멤버가 반환되지 않습니다.  
   

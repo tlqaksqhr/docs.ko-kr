@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f894d032527611c036e41fff783b31920c354778
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 307347a1209a74c76e71c42a4cb9e3c3f814dee6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의
 첫 번째 절차에서는 두 개의 형식 매개 변수가 있는 간단한 제네릭 메서드를 만드는 방법 및 형식 매개 변수에 클래스 제약 조건, 인터페이스 제약 조건 및 특수 제약 조건을 적용하는 방법을 보여 줍니다.  
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  저장된 어셈블리를 참조하는 프로그램에서 내보낸 메서드를 호출할 수도 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 제네릭 메서드 `Factory`를 사용하여 제네릭이 아닌 형식 `DemoType`을 만듭니다. 이 메서드에는 두 개의 제네릭 형식 매개 변수가 있습니다. `TInput`은 입력 형식을 지정하고 `TOutput`은 출력 형식을 지정합니다. `TOutput` 형식 매개 변수는 `ICollection<TInput>`(Visual Basic에서는 `ICollection(Of TInput)`)을 매개 변수가 없는 생성자를 갖는 참조 형식으로 구현하도록 제한됩니다.  
   
  메서드에는 `TInput` 배열인 하나의 공식 매개 변수가 있습니다. 메서드는 입력 배열의 모든 요소를 포함하는 `TOutput` 인스턴스를 반환합니다. `TOutput`은 <xref:System.Collections.Generic.ICollection%601> 제네릭 인터페이스를 구현하는 제네릭 컬렉션 형식일 수 있습니다.  

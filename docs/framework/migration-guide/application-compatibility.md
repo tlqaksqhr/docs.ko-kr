@@ -19,11 +19,12 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e67fff19c4b187010b35519081f46e11effbad6c
-ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
+ms.workload: dotnet
+ms.openlocfilehash: 0144d75d7b158efb5ab205dfdd96884fb630eabc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework의 응용 프로그램 호환성
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/25/2017
     |   |   |
     |---|---|
     |주요함|다수의 앱에 영향을 주거나 코드를 대폭 수정해야 하는 중요한 변경 내용입니다.|
-    |사소함|소수의 앱에 영향을 주거나 코드를 약간만 수정해야 하는 변경 내용입니다.|
+    |부|소수의 앱에 영향을 주거나 코드를 약간만 수정해야 하는 변경 내용입니다.|
     |특별한 경우|매우 특별하고 일반적이지 않은 시나리오의 앱에 영향을 주는 변경 내용입니다.|
     |투명|응용 프로그램 개발자나 사용자에게 뚜렷한 영향을 주지 않는 변경 내용입니다.|
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/25/2017
 
 -   사용 가능한 진단의 ID
 
-## <a name="usage"></a>용도
+## <a name="usage"></a>사용법
 시작하려면 아래에서 호환성 변경 형식을 선택합니다.
 
 * [대상 다시 지정 변경 내용](./retargeting/index.md)

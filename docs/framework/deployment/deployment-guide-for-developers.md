@@ -12,11 +12,12 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 08716b0988e8c76144d8e0a3871c7c91f7419306
-ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
+ms.workload: dotnet
+ms.openlocfilehash: f4a67df0729a85149984f0a72be668cdcee30216
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)]까지의 모든 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -193,7 +194,7 @@ InstallAware는 단일 소스에서 Windows 앱(APPX), Windows Installer(MSI), �
 dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 ```
 
- 추가 명령줄 옵션을 사용하여 설치를 사용자 지정할 수 있습니다. 예를 들면 다음과 같습니다.
+ 추가 명령줄 옵션을 사용하여 설치를 사용자 지정할 수 있습니다. 예:
 
 - 사용자가 실행 중인 .NET Framework 응용 프로그램을 닫아 시스템이 다시 시작되는 경우를 최소화하려면 다음과 같이 Passive 모드를 설정하고 `/showrmui` 옵션을 사용합니다.
 
