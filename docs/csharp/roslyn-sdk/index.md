@@ -1,5 +1,5 @@
 ---
-title: .NET Compiler Platform SDK | Microsoft Docs
+title: .NET Compiler Platform SDK(Roslyn API)
 description: ".NET Compiler Platform SDK(Roslyn API라고도 함)를 사용하여 .NET 코드를 이해하고 오류를 찾고 이러한 오류를 수정하는 방법을 알아봅니다."
 keywords: "roslyn, 분석기, 코드 수정 사항"
 author: billwagner
@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 01553376cbfbcbafb74c836ea632342e23dfba0e
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: 8bebb739805f28bdc192aef7678e762d0aa51016
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
