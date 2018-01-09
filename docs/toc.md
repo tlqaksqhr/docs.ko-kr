@@ -257,6 +257,7 @@
 ### [기본 상호 운용성](csharp/programming-guide/interop/index.md)
 ### [코드 문서화](csharp/codedoc.md)
 ### [버전 관리](csharp/versioning.md)
+## [방법 C# 항목](csharp/how-to/index.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK(Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 프로그래밍 가이드](csharp/programming-guide/)
