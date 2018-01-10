@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>이식 가능한 클래스 라이브러리로 크로스 플랫폼 개발
 Visual Studio의 .NET Framework 이식 가능한 클래스 라이브러리 프로젝트 형식으로 Microsoft 플랫폼용 플랫폼 간 앱 및 라이브러리를 신속하고 쉽게 빌드할 수 있습니다.  
@@ -57,7 +57,7 @@ Visual Studio의 .NET Framework 이식 가능한 클래스 라이브러리 프�
   
 |Visual Studio SKU|이식 가능한 클래스 라이브러리 만들기 지원|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010, Professional, Premium 또는 Ultimate|예, 설치할 때의 [이식 가능한 라이브러리 도구](http://go.microsoft.com/fwlink/?LinkId=210823)합니다.|  
+|Visual Studio 2010, Professional, Premium 또는 Ultimate|예, 설치할 때의 [이식 가능한 라이브러리 도구](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2)합니다.|  
 |Visual Studio Express 2010 버전|아니요.|  
 |Visual Studio 2012 Professional, Premium 또는 Ultimate|예. 전화 지원에 대 한 설치는 [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772)합니다.|  
 |Visual Studio Express 2012 버전|아니요.|  
@@ -171,7 +171,7 @@ Visual Studio 2012의 대상 변경 대화 상자
   
  예를 들어, 이식 가능한 클래스 라이브러리에서는 Windows 8.1 및 Windows Phone 8.1이 대상인 경우에만 UI 관련 형식을 포함합니다. 또한, 이식 가능한 클래스 라이브러리를 도입하기 전에 릴리스된 플랫폼(예: Xbox, .NET Framework 4 및 Windows Phone 7)을 대상으로 하는 경우 한계에 도달할 수 있습니다. .NET Framework는 NuGet을 통해 패키지를 릴리스하여 이러한 이전 플랫폼의 일부에 대한 이식 가능한 클래스 라이브러리의 지원을 개선합니다. 자세한 내용과 NuGet 패키지 목록은 참조 [.NET Framework 및 번 외 릴리스](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)합니다.  
   
- 멤버가 이식 가능한 클래스 라이브러리에서 그리고 선택한 대상에 대해 지원되는 경우 IntelliSense의 프로젝트에 나타납니다. 또한, 이식 가능한 클래스 라이브러리 아이콘 ![이식 가능한 라이브러리에서 지 원하는](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") 에 있는 멤버 테이블에 표시 된 [.NETFramework클래스라이브러리](http://go.microsoft.com/fwlink/?LinkId=211358) 옆에 멤버를 지원 합니다. 예를 들어, 다음 멤버 테이블에서는 <xref:System.String.Chars%2A> 클래스의 <xref:System.String> 속성이 이식 가능한 클래스 라이브러리에서 지원됨을 보여줍니다.  
+ 멤버가 이식 가능한 클래스 라이브러리에서 그리고 선택한 대상에 대해 지원되는 경우 IntelliSense의 프로젝트에 나타납니다. 또한, 이식 가능한 클래스 라이브러리 아이콘 ![이식 가능한 라이브러리에서 지 원하는](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") 에 있는 멤버 테이블에 표시 된 [.NETFramework클래스라이브러리](https://msdn.microsoft.com/library/mt472912.aspx) 옆에 멤버를 지원 합니다. 예를 들어, 다음 멤버 테이블에서는 <xref:System.String.Chars%2A> 클래스의 <xref:System.String> 속성이 이식 가능한 클래스 라이브러리에서 지원됨을 보여줍니다.  
   
  ![지원 되는 멤버 아이콘](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 이식 가능한 클래스 라이브러리 아이콘  
