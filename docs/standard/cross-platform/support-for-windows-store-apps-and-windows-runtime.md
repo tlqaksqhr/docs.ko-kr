@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f11daa93aa4e1cbddd0fa0e9f065295f42c820d5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 [!INCLUDE[wrt](../../../includes/wrt-md.md)]와 함께 다양한 소프트웨어 개발 시나리오를 지원합니다. 이러한 시나리오는 다음 세 가지 범주로 구분됩니다.  
@@ -160,5 +160,5 @@ ms.lasthandoff: 12/23/2017
 |[C# 또는 Visual Basic을 사용 하 여 Windows 스토어 앱 용 로드맵](http://go.microsoft.com/fwlink/p/?LinkId=242212)|C# 또는 Visual Basic을 사용하여 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 개발하기 시작할 때 도움을 주기 위해 다양한 퀵 스타트 항목, 지침 및 모범 사례를 포함한 주요 리소스를 제공합니다. (Windows 개발자 센터)|  
 |[Windows 스토어 앱 개발 (VB / C# / c + + 및 XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|C# 또는 Visual Basic을 사용하여 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 개발하기 시작할 때 도움을 주기 위해 다양한 퀵 스타트 항목, 지침 및 모범 사례를 포함한 주요 리소스를 제공합니다. (Windows 개발자 센터)|  
 |[C# 및 Visual Basic로 Windows 런타임 구성 요소 만들기](http://go.microsoft.com/fwlink/p/?LinkId=238313)|.NET Framework를 사용하여 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소를 만드는 방법, JavaScript를 사용하여 Windows용으로 빌드한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱의 일부로 사용하는 방법 및 Visual Studio로 조합을 디버깅하는 방법을 설명합니다. (Windows 개발자 센터)|  
-|[Windows 런타임 참조](http://go.microsoft.com/fwlink/?LinkId=238319)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]에 대한 참조 문서입니다. (Windows 개발자 센터)|  
+|[Windows 런타임 참조](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]에 대한 참조 문서입니다. (Windows 개발자 센터)|  
 |[Windows 런타임에 URI 전달](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|관리 코드에서 URI를 [!INCLUDE[wrt](../../../includes/wrt-md.md)]로 전달할 때 발생할 수 있는 문제 및 이러한 문제를 방지하는 방법을 설명합니다.|

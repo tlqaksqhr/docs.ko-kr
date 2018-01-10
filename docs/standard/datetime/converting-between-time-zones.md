@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58ed01520a9bbed53d32fc10e48a479e68f6ef7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eabe0c1511e6fd42798f1a879e9e8d526d543a29
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="converting-times-between-time-zones"></a>표준 시간대 간 시간 변환
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="converting-to-coordinated-universal-time"></a>UTC로 변환
 
-UTC(협정 세계시)는 고정밀 원자 시간 표준입니다. 전세계의 표준 시간대가 UTC의 양 또는 음 오프셋으로 표시됩니다. 따라서 UTC는 어느 정도 표준 시간대에서 자유롭거나 중립적인 시간을 제공합니다. 컴퓨터 간에 날짜 및 시간의 이식성이 중요한 경우 UTC 시간을 사용하는 것이 좋습니다. (세부 정보 및 날짜와 시간을 사용 하 여 기타 모범 사례에 대 한 참조 [DateTime을 사용 하 여.NET Framework의 모범 사례 코딩](http://go.microsoft.com/fwlink/?LinkId=92342).) 개별 표준 시간대를 UTC로 변환하면 시간을 보다 쉽게 비교할 수 있습니다.
+UTC(협정 세계시)는 고정밀 원자 시간 표준입니다. 전세계의 표준 시간대가 UTC의 양 또는 음 오프셋으로 표시됩니다. 따라서 UTC는 어느 정도 표준 시간대에서 자유롭거나 중립적인 시간을 제공합니다. 컴퓨터 간에 날짜 및 시간의 이식성이 중요한 경우 UTC 시간을 사용하는 것이 좋습니다. (세부 정보 및 날짜와 시간을 사용 하 여 기타 모범 사례에 대 한 참조 [DateTime을 사용 하 여.NET Framework의 모범 사례 코딩](https://msdn.microsoft.com/library/ms973825.aspx).) 개별 표준 시간대를 UTC로 변환하면 시간을 보다 쉽게 비교할 수 있습니다.
 
 > [!NOTE]
 > Serialize 할 수도 있습니다는 <xref:System.DateTimeOffset> 구조를 명확 하 게 시간 단일 시점을 나타냅니다. 때문에 <xref:System.DateTimeOffset> 항상 특정 시점에에서 나타나는 관계에서는 시간이 UTC로, 개체는 UTC에서의 오프셋이 함께 날짜 및 시간 값을 저장 합니다.
@@ -74,7 +74,7 @@ throw 하는이 메서드는 <xref:System.ArgumentException> 경우는 <xref:Sys
 
 현지 시간을 UTC로 변환 하려면 다음에 나오는 "현지 시간을 변환 UTC" 섹션을 참조 합니다. 지정 하는 모든 표준 시간대의 시간을 UTC로 변환 하려면 호출 된 <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> 메서드. 이 메서드에서 사용하는 두 개의 매개 변수는 다음과 같습니다.
 
-* 변환할 UTC. 이어야 합니다.는 <xref:System.DateTime> 값 <xref:System.DateTime.Kind%2A> 속성이 <xref:System.DateTimeKind?displayProperty=nameWithType> 또는 <xref:System.DateTimeKind?displayProperty=nameWithType>합니다.
+* 변환할 UTC. 이어야 합니다.는 <xref:System.DateTime> 값 <xref:System.DateTime.Kind%2A> 속성이 `Unspecified` 또는 `Utc`합니다.
 
 * UTC를 변환한 값이 속하게 될 표준 시간대
 

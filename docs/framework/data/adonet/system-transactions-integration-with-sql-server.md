@@ -17,18 +17,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: 7765779187156866c20374b60a4b541d36ac9a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b56d61593aed1a0cdce2fd45d902d9f4ac00cda
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server와의 System.Transactions 통합
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 2.0에는 <xref:System.Transactions> 네임스페이스를 통해 액세스할 수 있는 트랜잭션 프레임워크가 추가되었습니다. 이 프레임워크는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]을 포함하여 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에 완전히 통합된 방식으로 트랜잭션을 노출시킵니다.  
   
  프로그래밍 기능이 향상된 것 외에도 <xref:System.Transactions> 및 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 이 함께 작동하여 트랜잭션 사용 시 최적화되도록 조정할 수 있습니다. 승격 가능한 트랜잭션이란 필요에 따라 완전 분산 트랜잭션으로 자동 승격될 수 있는 간단한(로컬) 트랜잭션입니다.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0부터 <xref:System.Data.SqlClient> 에서는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]사용 시 승격 가능한 트랜잭션이 지원됩니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 또한 승격 가능한 트랜잭션은 개발자의 개입 없이 자동으로 수행됩니다.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0부터 <xref:System.Data.SqlClient> 에서는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]사용 시 승격 가능한 트랜잭션이 지원됩니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 승격 가능한 트랜잭션은 자동 이며 개발자의 개입 없이 필요 합니다.  
   
  승격 가능한 트랜잭션은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 에서`SqlClient`Data Provider for SQL Server( [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)])를 사용할 때만 사용할 수 있습니다.  
   
