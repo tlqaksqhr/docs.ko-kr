@@ -1,7 +1,7 @@
 ---
 title: "&lt;AppContextSwitchOverrides&gt; 요소"
 ms.custom: 
-ms.date: 10/17/2017
+ms.date: 01/08/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9cc68f4be869a4773b8a6b932d1f6363855fe584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -79,6 +79,7 @@ ms.lasthandoff: 12/22/2017
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|로 설정 하면 `false`, FIPS가 설정 된 경우 Visual Studio를 사용 하 여 XAML 기반 워크플로 프로젝트를 디버깅할 수 있습니다. 없으면는 <xref:System.NullReferenceException> System.Activities 어셈블리의 메서드 호출에서 throw 됩니다.|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|MD5 또는 SHA1 디버거에서 워크플로 인스턴스에 대 한 체크섬을 사용 하는지 여부를 제어 합니다. | .NET Framework 4.7|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|컨트롤 여부는 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 메서드에서 예외가 throw 때는 <xref:System.Drawing.Icon> 개체에 PNG 프레임이 합니다. 자세한 내용은 [완화: 아이콘 개체의 PNG 프레임](~/docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md)을 참조하십시오.|.NET Framework 4.6|  
+|`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|컨트롤 여부의 성능을 <xref:System.Windows.Forms.PrintPreviewDialog> 네트워크 프린터에 대해 최적화 됩니다. 자세한 내용은 참조 [PrintPreviewDialog 컨트롤 개요](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)합니다.|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|비동기 작업 호출 스레드의 컨텍스트를 전달 하지 않는 있는지 여부를 제어 합니다. 자세한 내용은 참조 [CurrentCulture 및 CurrentUICulture 흐름 태스크에 걸쳐](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks)합니다.|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|컨트롤 여부는 <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> 메서드 클레임 유형을 마지막 DNS 항목만 일치 시 키 려 합니다. 자세한 내용은 [완화: X509CertificateClaimSet.FindClaims 메서드](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md)를 참조하십시오.|.NET Framework 4.6.1|  
 |`Switch.System.IO.BlockLongPaths`|컨트롤 있는지 여부를 보다 긴 경로 `MAX_PATH` (260 자)를 throw 한 <xref:System.IO.PathTooLongException>합니다. 자세한 내용은 참조 [긴 경로 지원](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support)합니다.|.NET Framework 4.6.2|  
