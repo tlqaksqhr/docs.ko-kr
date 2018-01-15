@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: f7b002c1439a95929ca177aeced91164430220c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d9498454cfee02e5749a7ed87783b5476469b8d
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="local-transactions"></a>로컬 트랜잭션
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 트랜잭션은 여러 작업을 바인딩하여 하나의 작업 단위로 실행하려는 경우에 사용합니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 응용 프로그램에서 주문 정보로 테이블을 업데이트합니다. 그런 다음, 응용 프로그램에서 재고 정보가 포함된 테이블을 업데이트하고 주문이 들어온 품목을 차변에 기입합니다. 이 작업에 실패 하면 다음 두 업데이트가 모두 롤백됩니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="determining-the-transaction-type"></a>트랜잭션 유형 결정  
  트랜잭션이 단일 단계 트랜잭션이 고 데이터베이스에서 직접 처리 되는 경우에 한 로컬 트랜잭션으로 간주 됩니다. 트랜잭션이는 트랜잭션 모니터로 조정 하 고 트랜잭션 확인에 2 단계 커밋 같은 오류 없이 안전한 메커니즘을 사용 하 여 분산된 트랜잭션이 되도록 간주 됩니다.  
   
- 각 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자에는 로컬 트랜잭션을 수행하기 위한 고유한 `Transaction` 개체가 있습니다. SQL Server 데이터베이스에서 트랜잭션을 수행해야 하는 경우 <xref:System.Data.SqlClient> 트랜잭션을 선택합니다. Oracle 트랜잭션의 경우 <xref:System.Data.OracleClient> 공급자를 사용합니다. 트랜잭션이 필요한 공급자 독립적인 코드를 작성하는 데 사용할 수 있는 새로운 <xref:System.Data.Common.DbTransaction> 클래스도 있습니다.  
+ 각 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자에는 로컬 트랜잭션을 수행하기 위한 고유한 `Transaction` 개체가 있습니다. SQL Server 데이터베이스에서 트랜잭션을 수행해야 하는 경우 <xref:System.Data.SqlClient> 트랜잭션을 선택합니다. Oracle 트랜잭션의 경우 <xref:System.Data.OracleClient> 공급자를 사용합니다. 또한는 <xref:System.Data.Common.DbTransaction> 트랜잭션이 필요한 공급자 독립적인 코드를 작성에 사용할 수 있는 클래스입니다.  
   
 > [!NOTE]
 >  트랜잭션은 서버에서 수행하는 것이 가장 효율적입니다. 명시적 트랜잭션을 폭넓게 사용하는 SQL Server 데이터베이스를 사용하는 경우 Transact-SQL BEGIN TRANSACTION 문을 사용하여 트랜잭션을 저장 프로시저로 작성하는 것이 좋습니다. 서버측 트랜잭션 수행에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하세요.  

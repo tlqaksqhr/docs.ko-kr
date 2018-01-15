@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="executing-expression-trees"></a>식 트리 실행
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/18/2017
 
 대부분의 경우 식과 해당 대리자 간에 간단한 매핑이 만들어집니다. 예를 들어 `Expression<Func<int>>`로 표시되는 식 트리는 `Func<int>` 형식의 대리자로 변환됩니다. 반환 형식 및 인수 목록을 사용하는 람다 식의 경우 람다 식으로 표시된 실행 코드의 대상 형식인 대리자 형식이 있습니다.
 
-`LamdbaExpression` 형식에는 식 트리를 실행 코드로 변환하는 데 사용되는 `Compile` 및 `CompileToMethod` 멤버가 포함됩니다. `Compile` 메서드는 대리자를 만듭니다. `ConmpileToMethod` 메서드는 식 트리의 컴파일된 출력을 나타내는 IL로 `MethodBuilder` 개체를 업데이트합니다. `CompileToMethod`는 .NET Core 프레임워크가 아니라 전체 데스크톱 프레임워크에서 사용할 수 있습니다.
+`LamdbaExpression` 형식에는 식 트리를 실행 코드로 변환하는 데 사용되는 `Compile` 및 `CompileToMethod` 멤버가 포함됩니다. `Compile` 메서드는 대리자를 만듭니다. `CompileToMethod` 메서드는 식 트리의 컴파일된 출력을 나타내는 IL로 `MethodBuilder` 개체를 업데이트합니다. `CompileToMethod`는 .NET Core 프레임워크가 아니라 전체 데스크톱 프레임워크에서 사용할 수 있습니다.
 
 필요에 따라 생성된 대리자 개체에 대한 기호 디버깅 정보를 수신하는 `DebugInfoGenerator`를 제공할 수도 있습니다. 그러면 식 트리를 대리자 개체로 변환하고 생성된 대리자에 대한 전체 디버깅 정보를 받을 수 있습니다.
 
