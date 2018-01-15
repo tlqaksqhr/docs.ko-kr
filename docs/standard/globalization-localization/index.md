@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e176ebf6660e1c517e5ef7a505c259666bb30a0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63f0e001280773c55f18f0604ca93986acbb9674
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>.NET Framework 응용 프로그램 전역화 및 지역화
 하나 이상의 언어로 지역화할 수 있는 응용 프로그램을 포함하여 [지역화 대비 응용 프로그램](http://msdn.microsoft.com/goglobal/bb978433.aspx)의 개발에는 전역화, 지역화 가능성 검토 및 지역화의 세 가지 단계가 포함됩니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/23/2017
   
  .NET Framework에서는 전 세계를 대상으로 지역화되는 응용 프로그램 개발을 위해 광범위한 지원을 제공합니다. 특히 .NET Framework 클래스 라이브러리의 많은 형식 멤버는 현재 사용자의 문화권 또는 지정된 문화권의 규약을 반영하는 값을 반환함으로써 전역화를 지원합니다. 또한 .NET Framework는 응용 프로그램 지역화 프로세스를 용이하게 하는 위성 어셈블리를 지원합니다.  
   
- 추가 정보는 [글로벌 개발자 센터 방문](http://go.microsoft.com/fwlink/?LinkId=235015)을 참조하세요.  
+ 자세한 내용은 [세계화 설명서](/globalization/)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [전역화](../../../docs/standard/globalization-localization/globalization.md)  
