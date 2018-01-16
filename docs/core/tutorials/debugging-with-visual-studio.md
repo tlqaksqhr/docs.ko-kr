@@ -1,21 +1,21 @@
 ---
-title: "Visual Studio 2017을 사용하여 C# Hello World 응용 프로그램 디버그"
-description: "Visual Studio 2017에서 C#으로 작성된 Hello World 앱을 디버그하는 방법을 알아봅니다."
+title: "Visual Studio 2017에서 C# 또는 Visual Basic Hello World .NET Core 응용 프로그램 디버깅"
+description: "Visual Studio 2017에서 C# 또는 Visual Basic으로 작성된 Hello World 앱을 디버그하는 방법을 알아봅니다."
 keywords: ".NET Core, .NET Core 콘솔 응용 프로그램, .NET Core 디버깅"
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 12/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
 ms.workload: dotnetcore
-ms.openlocfilehash: 3ab19566acb36cb96e0572931ba39f2ae99a3ca7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6c8e1de4e0053ae6f74dc6c74fe37b6d7661932e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 Hello World 응용 프로그램 디버그
 
@@ -33,17 +33,12 @@ ms.lasthandoff: 12/23/2017
 
 디버그 모드에서 프로그램을 실행하고 몇 가지 디버깅 기능을 수행합니다.
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. *중단점*은 중단점이 설정된 줄이 실행되기 *전에* 응용 프로그램 실행을 일시적으로 중단합니다. 
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
    코드 창의 왼쪽 여백에서 `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` 줄을 클릭하거나 해당 줄을 선택하고 **디버그** > **중단점 설정/해제** 메뉴 항목을 선택하여 줄에 중단점을 설정합니다. 다음 그림에서 볼 수 있듯이 Visual Studio에서는 중단점이 설정된 줄을 강조 표시하고 왼쪽 여백에 빨간색 원을 표시합니다.
 
    ![중단점이 설정된 Visual Studio 프로그램 창](./media/debugging-with-visual-studio/setbreakpoint.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-   코드 창의 왼쪽 여백에서 `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` 줄을 클릭하거나 해당 줄을 선택하고 **디버그** > **중단점 설정/해제** 메뉴 항목을 선택하여 줄에 중단점을 설정합니다. 다음 그림에서 볼 수 있듯이 Visual Studio에서는 중단점이 설정된 줄을 강조 표시하고 왼쪽 여백에 빨간색 원을 표시합니다.
-
-   <a name="visual-studio-program-window-with-breakpoint-setmediadebugging-with-visual-studiovb-setbreakpointpng"></a>![중단점이 설정된 Visual Studio 프로그램 창](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
----
 
 1. 도구 모음에서 녹색 화살표가 있는 **HelloWorld** 단추를 선택하거나 F5 키를 누르거나 **디버그** > **디버깅 시작**을 선택하여 프로그램을 디버그 모드에서 실행합니다.
 
@@ -51,36 +46,50 @@ ms.lasthandoff: 12/23/2017
 
 1. 중단점에 도달할 때와 `Console.WriteLine` 메서드가 실행되기 전에 프로그램 실행이 중지됩니다. **자동** 창에는 현재 줄 주위에서 사용되는 변수 값이 표시됩니다. **지역** 창(**지역** 탭을 클릭하여 볼 수 있음)에는 현재 실행 중인 메서드에 정의된 변수 값이 표시됩니다.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
    ![Visual Studio 응용 프로그램 창](./media/debugging-with-visual-studio/break.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-   <a name="visual-studio-application-windowmediadebugging-with-visual-studiovb-breakpng"></a>![Visual Studio 응용 프로그램 창](./media/debugging-with-visual-studio/vb-break.png)
----
 
 1. 변수 값을 변경하여 프로그램에 미치는 영향을 확인할 수 있습니다. **직접 실행 창**이 표시되지 않는 경우 **디버그** > **창** > **직접 실행** 메뉴 항목을 선택하여 표시합니다. **직접 실행 창**에서는 디버그하는 응용 프로그램을 조작할 수 있습니다.
 
 1. 변수 값을 대화형으로 변경할 수 있습니다. **직접 실행 창**에 `name = "Gracie"`를 입력하고 Enter 키를 누릅니다.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
-1. **직접 실행 창**에 `date = new DateTime(2016,11,01,11,59,00)`를 입력하고 Enter 키를 누릅니다.
+1. **직접 실행 창**에 `date = new DateTime(2016,11,01,11,59,00)`을 입력하고 Enter 키를 누릅니다.
 
    **직접 실행 창**에는 문자열 변수의 값과 <xref:System.DateTime> 값의 속성이 표시됩니다. 또한 변수 값이 **자동** 및 **지역** 창에서 업데이트됩니다.
 
    ![자동 창 및 직접 실행 창](./media/debugging-with-visual-studio/autosimmediate.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. **직접 실행 창**에 `currentDate = new DateTime(2016,11,01,11,59,00)`를 입력하고 Enter 키를 누릅니다.
-
-<!-- The **Immediate Window** displays the value of the string variable and the properties of the <xref:System.DateTime> value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
-
-   ![Autos window and Immediate Window](./media/debugging-with-visual-studio/vb-autosimmediate.png)
--->
----
 
 1. 도구 모음에서 **계속** 단추를 선택하거나 **디버그** > **계속** 메뉴 항목을 선택하여 프로그램을 계속 실행합니다. 콘솔 창에 표시되는 값은 **직접 실행 창**에서 변경한 값과 일치합니다.
 
    ![What is your name? 프롬프트에 형식화된 값 Jack과 Hello Gracie on 11/1/2016 at 11:59am을 차례로 표시하는 콘솔 창](./media/debugging-with-visual-studio/changed.png)
 
 1. 아무 키나 눌러 응용 프로그램을 끝내고 디버그 모드를 종료합니다.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+1. *중단점*은 중단점이 설정된 줄이 실행되기 *전에* 응용 프로그램 실행을 일시적으로 중단합니다. 
+
+   코드 창의 왼쪽 여백에서 `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` 줄을 클릭하거나 해당 줄을 선택하고 **디버그** > **중단점 설정/해제** 메뉴 항목을 선택하여 줄에 중단점을 설정합니다. 다음 그림에서 볼 수 있듯이 Visual Studio에서는 중단점이 설정된 줄을 강조 표시하고 왼쪽 여백에 빨간색 원을 표시합니다.
+
+   ![중단점이 설정된 Visual Studio 프로그램 창](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
+
+1. 도구 모음에서 녹색 화살표가 있는 **HelloWorld** 단추를 선택하거나 F5 키를 누르거나 **디버그** > **디버깅 시작**을 선택하여 프로그램을 디버그 모드에서 실행합니다.
+
+1. 프로그램 이름을 입력하라는 메시지가 표시되면 콘솔 창에 문자열을 입력하고 Enter 키를 누릅니다.
+
+1. 중단점에 도달할 때와 `Console.WriteLine` 메서드가 실행되기 전에 프로그램 실행이 중지됩니다. **자동** 창에는 현재 줄 주위에서 사용되는 변수 값이 표시됩니다. **지역** 창(**지역** 탭을 클릭하여 볼 수 있음)에는 현재 실행 중인 메서드에 정의된 변수 값이 표시됩니다.
+
+   ![Visual Studio 응용 프로그램 창](./media/debugging-with-visual-studio/vb-break.png)
+
+1. 변수 값을 변경하여 프로그램에 미치는 영향을 확인할 수 있습니다. **직접 실행 창**이 표시되지 않는 경우 **디버그** > **창** > **직접 실행** 메뉴 항목을 선택하여 표시합니다. **직접 실행 창**에서는 디버그하는 응용 프로그램을 조작할 수 있습니다.
+
+1. 변수 값을 대화형으로 변경할 수 있습니다. **직접 실행 창**에 `name = "Gracie"`를 입력하고 Enter 키를 누릅니다.
+
+1. **직접 실행 창**에 `currentDate = new DateTime(2016,11,01,11,59,00)`를 입력하고 Enter 키를 누릅니다.
+
+1. 도구 모음에서 **계속** 단추를 선택하거나 **디버그** > **계속** 메뉴 항목을 선택하여 프로그램을 계속 실행합니다. 콘솔 창에 표시되는 값은 **직접 실행 창**에서 변경한 값과 일치합니다.
+
+   ![직접 실행 창에 입력된, 변경된 값을 보여 주는 콘솔 창](./media/debugging-with-visual-studio/changed.png)
+
+1. 아무 키나 눌러 응용 프로그램을 끝내고 디버그 모드를 종료합니다.
+---
 
 ## <a name="setting-a-conditional-breakpoint"></a>조건부 중단점 설정
 
@@ -98,17 +107,6 @@ ms.lasthandoff: 12/23/2017
    ```csharp
    String.IsNullOrEmpty(name)
    ```
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. 중단점을 나타내는 빨간색 점을 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴에서 **조건**을 선택하여 **중단점 설정** 대화 상자를 엽니다. **조건** 확인란을 선택합니다.
-
-   ![중단점 설정 패널](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
-
-1. **조건식**에서 “e.g. x = 5”를 다음 코드로 바꿉니다.
-
-   ```vb
-   String.IsNullOrEmpty(name)
-   ```
----
 
    *name*에 값이 할당되지 않았거나 해당 값이 빈 문자열("")이기 때문에 `String.IsNullOrEmpty(name)` 메서드 호출이 `true`인 코드 조건을 테스트하고 있습니다. 문이 실행되기 전에 프로그램 실행을 중단하는 *적중 횟수* 또는 스레드 식별자, 프로세스 이름 또는 스레드 이름과 같은 특성을 기준으로 프로그램 실행을 중단하는 *필터 조건*을 지정할 수도 있습니다.
 
@@ -122,7 +120,6 @@ ms.lasthandoff: 12/23/2017
 
 1. **지역** 창을 선택합니다. 이 창에는 현재 실행 중인 메서드(프로그램의 `Main` 메서드)에 로컬인 변수 값이 표시됩니다. `name` 변수의 값은 `""` 또는 <xref:System.String.Empty?displayProperty=nameWithType>입니다.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. **직접 실행 창**에 다음 문을 입력하여 값이 빈 문자열인지 확인합니다. 결과는 `true`입니다.
 
    ```csharp
@@ -130,21 +127,47 @@ ms.lasthandoff: 12/23/2017
    ```
 
    ![문이 실행된 후 true 값을 반환하는 직접 실행 창](./media/debugging-with-visual-studio/emptystring.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. **직접 실행 창**에 다음 문을 입력하여 값이 빈 문자열인지 확인합니다. 결과는 `true`입니다.
-
-   ```vb
-   ? String.IsNullOrEmpty(name)
-   ```
-  ![문이 실행된 후 true 값을 반환하는 직접 실행 창](./media/debugging-with-visual-studio/vb-emptystring.png)
----
 
 1. 도구 모음에서 **계속** 단추를 선택하여 프로그램 실행을 계속합니다.
 
 1. 아무 키나 눌러 콘솔 창을 닫고 디버그 모드를 끝냅니다.
 
 1. 코드 창 왼쪽 여백에 있는 점을 클릭하거나 행을 선택하고 **디버그 > 중단점 설정/해제** 메뉴 항목을 선택하여 중단점을 지웁니다.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+1. 중단점을 나타내는 빨간색 점을 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴에서 **조건**을 선택하여 **중단점 설정** 대화 상자를 엽니다. **조건** 확인란을 선택합니다.
 
+   ![중단점 설정 패널](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+
+1. **조건식**에서 “e.g. x = 5”를 다음 코드로 바꿉니다.
+
+   ```vb
+   String.IsNullOrEmpty(name)
+   ```
+
+   *name*에 값이 할당되지 않았거나 해당 값이 빈 문자열("")이기 때문에 `String.IsNullOrEmpty(name)` 메서드 호출이 `True`인 코드 조건을 테스트하고 있습니다. 문이 실행되기 전에 프로그램 실행을 중단하는 *적중 횟수* 또는 스레드 식별자, 프로세스 이름 또는 스레드 이름과 같은 특성을 기준으로 프로그램 실행을 중단하는 *필터 조건*을 지정할 수도 있습니다.
+
+1. **닫기** 단추를 선택하여 대화 상자를 닫습니다.
+
+1. 디버그 모드에서 프로그램을 실행합니다.
+
+1. 콘솔 창에 이름을 입력하라는 메시지가 나타나면 Enter 키를 누릅니다.
+
+1. `name`이 `null` 또는 <xref:System.String.Empty?displayProperty=nameWithType>이라는 지정한 조건이 충족되었으므로 중단점에 도달한 후 `Console.WriteLine` 메서드가 실행되기 전에 프로그램 실행이 중지됩니다.
+
+1. **지역** 창을 선택합니다. 이 창에는 현재 실행 중인 메서드(프로그램의 `Main` 메서드)에 로컬인 변수 값이 표시됩니다. `name` 변수의 값은 `""` 또는 <xref:System.String.Empty?displayProperty=nameWithType>입니다.
+
+1. **직접 실행 창**에 다음 문을 입력하여 값이 빈 문자열인지 확인합니다. 결과는 `true`입니다.
+
+   ```vb
+   ? String.IsNullOrEmpty(name)
+   ```
+  ![문이 실행된 후 true 값을 반환하는 직접 실행 창](./media/debugging-with-visual-studio/vb-emptystring.png)
+
+1. 도구 모음에서 **계속** 단추를 선택하여 프로그램 실행을 계속합니다.
+
+1. 아무 키나 눌러 콘솔 창을 닫고 디버그 모드를 끝냅니다.
+
+1. 코드 창 왼쪽 여백에 있는 점을 클릭하거나 행을 선택하고 **디버그 > 중단점 설정/해제** 메뉴 항목을 선택하여 중단점을 지웁니다.
 ---
 ## <a name="stepping-through-a-program"></a>단계별 프로그램 실행
 
@@ -160,19 +183,8 @@ Visual Studio에서 프로그램을 한 줄씩 단계별로 실행하고 해당 
 1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. 이제 Visual Studio에서 다음에 실행될 줄을 강조 표시합니다. 그림에서 볼 수 있듯이 마지막 문과 이 문 사이의 코드를 실행하는 데는 1밀리초 미만이 소요되었습니다. `args`가 선언된 유일한 변수이며 콘솔 창은 여전히 비어 있습니다.
 
    ![Visual Studio 창](./media/debugging-with-visual-studio/stepinto2.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. 메뉴 모음에서 **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio에서 다음에 실행될 줄을 강조 표시하고 옆에 화살표를 표시합니다.
 
-   ![Visual Studio 창](./media/debugging-with-visual-studio/vb-stepinto1.png)
-
-   현재 프로그램에 명령줄 인수를 전달하지 않았으므로 **자동** 창에는 `args` 변수의 값이 빈 문자열 배열로 표시됩니다. 또한 Visual Studio에서는 빈 콘솔 창이 열려 있습니다.
-
-1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. 이제 Visual Studio에서 다음에 실행될 줄을 강조 표시합니다. 그림에서 볼 수 있듯이 마지막 문과 이 문 사이의 코드를 실행하는 데는 1밀리초 미만이 소요되었습니다. `args`가 선언된 유일한 변수이며 콘솔 창은 여전히 비어 있습니다.
-
-   ![Visual Studio 창](./media/debugging-with-visual-studio/vb-stepinto2.png)
----
-
-1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio는 `name` 변수 할당을 포함하는 문을 강조 표시합니다. **자동** 창에서는 `name`이 `null`(C#) 또는 `Nothing`(Visual Basic)으로 표시되고 콘솔 창에서는 문자열 “What is your name?”이 표시됩니다.
+1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio는 `name` 변수 할당을 포함하는 문을 강조 표시합니다. **자동** 창에서는 `name`이 `null`로 표시되고 콘솔 창에서는 문자열 "What is your name?"이 표시됩니다.
 
 1. 콘솔 창에 문자열을 입력하고 Enter 키를 눌러 프롬프트에 응답합니다. 콘솔은 응답하지 않게 되고 입력한 문자열이 콘솔 창에 표시되지 않지만 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 메서드는 사용자의 입력을 캡처합니다.
 
@@ -185,6 +197,31 @@ Visual Studio에서 프로그램을 한 줄씩 단계별로 실행하고 해당 
 1. **디버그** > **프로시저 나가기**를 선택하거나 Shift+F11을 누릅니다. 이렇게 하면 단계별 실행이 중지됩니다. 콘솔 창은 메시지를 표시하고 사용자가 키를 누르기를 기다립니다.
 
 1. 아무 키나 눌러 콘솔 창을 닫고 디버그 모드를 끝냅니다.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+1. 메뉴 모음에서 **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio에서 다음에 실행될 줄을 강조 표시하고 옆에 화살표를 표시합니다.
+
+   ![Visual Studio 창](./media/debugging-with-visual-studio/vb-stepinto1.png)
+
+   현재 프로그램에 명령줄 인수를 전달하지 않았으므로 **자동** 창에는 `args` 변수의 값이 빈 문자열 배열로 표시됩니다. 또한 Visual Studio에서는 빈 콘솔 창이 열려 있습니다.
+
+1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. 이제 Visual Studio에서 다음에 실행될 줄을 강조 표시합니다. 그림에서 볼 수 있듯이 마지막 문과 이 문 사이의 코드를 실행하는 데는 1밀리초 미만이 소요되었습니다. `args`가 선언된 유일한 변수이며 콘솔 창은 여전히 비어 있습니다.
+
+   ![Visual Studio 창](./media/debugging-with-visual-studio/vb-stepinto2.png)
+
+1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio는 `name` 변수 할당을 포함하는 문을 강조 표시합니다. **자동** 창에서는 `name`이 `Nothing`로 표시되고 콘솔 창에서는 문자열 "What is your name?"이 표시됩니다.
+
+1. 콘솔 창에 문자열을 입력하고 Enter 키를 눌러 프롬프트에 응답합니다. 콘솔은 응답하지 않게 되고 입력한 문자열이 콘솔 창에 표시되지 않지만 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 메서드는 사용자의 입력을 캡처합니다.
+
+1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio는 `date`(C#) 또는 `currentDate`(Visual Basic) 변수 할당을 포함하는 문을 강조 표시합니다. **자동** 창에는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값과 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 메서드 호출에 의해 반환된 값이 표시됩니다. 콘솔 창에는 콘솔이 입력을 요구할 때 입력된 문자열도 표시됩니다.
+
+1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. **자동** 창에는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성에 따라 할당된 이후의 `date` 변수 값이 표시됩니다. 콘솔 창은 변경되지 않습니다.
+
+1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio에서 <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> 메서드를 호출합니다. `date`(또는 `currentDate`) 및 `name` 변수 값이 **자동** 창에 표시되고 콘솔 창에는 서식 문자열이 표시됩니다.
+
+1. **디버그** > **프로시저 나가기**를 선택하거나 Shift+F11을 누릅니다. 이렇게 하면 단계별 실행이 중지됩니다. 콘솔 창은 메시지를 표시하고 사용자가 키를 누르기를 기다립니다.
+
+1. 아무 키나 눌러 콘솔 창을 닫고 디버그 모드를 끝냅니다.
+---
 
 ## <a name="building-a-release-version"></a>릴리스 버전 빌드
 
