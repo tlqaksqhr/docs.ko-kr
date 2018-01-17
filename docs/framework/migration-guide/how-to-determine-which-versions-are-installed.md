@@ -15,11 +15,12 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd5a8e8cc32037d45d95d544f6eae5097d0c468
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 사용자는 자신의 컴퓨터에 여러 버전의 .NET Framework를 설치하여 실행할 수 있습니다. 따라서 앱을 개발하거나 배포할 때는 사용자의 컴퓨터에 어떤 .NET Framework 버전이 설치되었는지 알아야 합니다. .NET Framework는 각 버전으로 식별되는 다음과 같은 2개의 주요 구성 요소로 구성됩니다.  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/21/2017
     |Windows 10 11월 업데이트 시스템: 394254<br /><br /> 모든 다른 OS 버전: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
     |Windows 10 1주년 업데이트: 394802<br /><br /> 모든 다른 OS 버전: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Windows 10 작성자 업데이트: 460798<br/><br/> 다른 모든 OS 버전: 460805 | .NET Framework 4.7 |
-    |Windows 10 작성자 업데이트 대체: 461308<br/><br/> 다른 모든 OS 버전에서: 461310 | .NET framework 4.7.1 |
+    |Windows 10 Fall Creators Update: 461308<br/><br/> 다른 모든 OS 버전: 461310 | .NET Framework 4.7.1 |
 <a name="net_c"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>코드로 레지스트리를 쿼리하여 .NET Framework 버전을 찾으려면(.NET Framework 1-4)
 
@@ -134,16 +135,16 @@ ms.lasthandoff: 11/21/2017
     |.NET Framework 4.5.1이 Windows 8.1과 함께 설치됨|378675|
     |.NET Framework 4.5.1이 Windows 8, Windows 7 SP1 또는 Windows Vista SP2에 설치됨|378758|
     |.NET Framework 4.5.2|379893|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]이 Windows 10과 함께 설치됨|393295|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]이 다른 모든 Windows OS 버전에 설치됨|393297|
-    |Windows 10에 설치된 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]이 다른 모든 Windows OS 버전에 설치됨|394271|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]이 Windows 10 1주년 업데이트에 설치됨|394802|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]이 다른 모든 Windows OS 버전에 설치됨|394806|
+    |.NET Framework 4.6이 Windows 10과 함께 설치됨|393295|
+    |.NET Framework 4.6이 다른 모든 Windows OS 버전에 설치됨|393297|
+    |.NET Framework 4.6.1이 Windows 10에 설치됨|394254|
+    |.NET Framework 4.6.1이 다른 모든 Windows OS 버전에 설치됨|394271|
+    |.NET Framework 4.6.2가 Windows 10 1주년 업데이트에 설치됨|394802|
+    |.NET Framework 4.6.2가 다른 모든 Windows OS 버전에 설치됨|394806|
     |.NET Framework 4.7이 Windows 10 크리에이터 업데이트에 설치됨|460798|
     |.NET Framework 4.7이 다른 모든 Windows OS 버전에 설치됨|460805|
-    |.NET framework 4.7.1에 Windows 10 년 작성자가 업데이트 설치|461308|
-    |.NET framework 4.7.1 다른 모든 Windows OS 버전에 설치|461310|
+    |Windows 10 Fall Creators Update에 설치된 .NET Framework 4.7.1|461308|
+    |.NET Framework 4.7.1이 다른 모든 Windows OS 버전에 설치됨|461310|
 
      다음 예제에서는 레지스트리에서 `Release` 값을 확인하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 이후 버전의 .NET Framework가 설치되어 있는지 확인합니다.
 
@@ -176,7 +177,7 @@ ms.lasthandoff: 11/21/2017
     |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
     |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
     |.NET Framework 4.7|460798|
-    |.NET framework 4.7.1|461308|
+    |.NET Framework 4.7.1|461308|
     
 <a name="clr_a"></a> 
 #### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Clrver 도구를 사용하여 현재 런타임 버전을 찾으려면
@@ -216,5 +217,5 @@ ms.lasthandoff: 11/21/2017
 
 ## <a name="see-also"></a>참고 항목
  [방법: 설치된 .NET Framework 업데이트 확인](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
- [개발자를 위한.NET Framework를 설치 합니다.](../../../docs/framework/install/guide-for-developers.md)  
+ [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)  
  [버전 및 종속성](~/docs/framework/migration-guide/versions-and-dependencies.md)

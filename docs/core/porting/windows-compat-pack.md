@@ -1,31 +1,32 @@
 ---
-title: "Windows 호환 기능 팩을 사용 하 여-.NET Core로 이식"
-description: "Windows 호환 기능 팩에 대 한 자세한 내용은 수 사용법.NET Core를 기존.NET Framework 코드를 이식 하 고"
-keywords: ".NET,.NET core, Windows, 호환성"
+title: ".NET Core로 이식 - Windows 호환 기능 팩 사용"
+description: "Windows 호환 기능 팩 및 이를 사용하여 기존 .NET Framework 코드를 .NET Core로 이식하는 방법에 대해 알아보기"
+keywords: ".NET, .NET Core, Windows, 호환성"
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 5094baee77aba4d1e148f807d842a4a2d3405cf7
-ms.sourcegitcommit: 86cf9b4c7104485a9870645705b9a1a4b6ca8e2b
+ms.workload: dotnetcore
+ms.openlocfilehash: 3b1fe02aad4f78499158ecb7fa9b8521cb7d992e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-the-windows-compatibility-pack"></a>Windows 호환 기능 팩을 사용 하 여
+# <a name="using-the-windows-compatibility-pack"></a>Windows 호환 기능 팩 사용
 
-.NET Core는 기존 코드를 이식할 때 개발자가 직면 하는 가장 일반적인 문제 중 하나는 Api 및.NET Framework에만 존재 하는 기술에 종속 되입니다. *Windows 호환 기능 팩* 되도록.NET Core 응용 프로그램 뿐만 아니라.NET 표준 라이브러리를 작성 합니다. 기존 코드에 대 한 실행 가능한 훨씬 더 다양 한 이러한 기술을 제공 하 려 합니다.
+개발자가 기존 코드를 .NET Core에 이식할 때 직면하는 가장 일반적인 문제 중 하나는 API 및 .NET Framework에만 존재하는 기술에 의존하는 것입니다. *Windows 호환 기능 팩*은 .NET Core 응용 프로그램 뿐만 아니라 .NET Standard 라이브러리를 빌드하는 것이 기존 코드에 더욱 실행 가능할 수 있도록 이러한 많은 기술을 제공하는 것에 대한 것입니다.
 
-이 패키지는 논리적 [표준.NET 2.0의 확장](../whats-new/index.md#api-changes-and-library-support) 크게 증가 API 집합 및 기존 코드가 컴파일되는지 수정이 거의 없습니다. 하지만 표준.NET에 대 한 약속을 유지 하기 위해 ("이는 모든.NET 구현이 제공 하는 Api 집합"), Windows Management Instrumentation (WMI), 레지스트리 등 모든 플랫폼에서 작동 하지 않을 기술이 포함 되어 있지이 또는 리플렉션 내보내기 Api입니다.
+이 패키지는 수정 없이 API 집합 및 기존 코드 컴파일을 크게 증가시키는 논리적 [.NET Standard 2.0의 확장](../whats-new/index.md#api-changes-and-library-support)입니다. 그러나 .NET Standard에 대한 약속을 지키기 위해("모든 .NET 구현이 제공하는 API의 집합") 레지스트리, WMI(Windows Management Instrumentation) 또는 리플렉션 내보내기 API와 같은 모든 플랫폼에서 작동할 수 없는 기술을 포함하지 않았습니다.
 
-*Windows 호환 기능 팩* .NET 표준 위에 배치 하 고만 Windows 있는 기술에 대 한 액세스를 제공 합니다. .NET Core 하지만 첫 번째 단계는 Windows에 머물도록 하는 계획으로 이동 하려는 고객에 특히 유용 합니다. 이 시나리오에서는 Windows 전용 기술을 사용할 수 없는 경우 0 아키텍처 이점을 마이그레이션 장애물만
+*Windows 호환 기능 팩*은 .NET Standard의 위에 있으며 Windows에만 해당하는 기술에 대한 액세스를 제공합니다. .NET Core로 이동하려고 하지만 첫 번째 단계로 Windows에 머물려는 고객에게 특히 유용합니다. 해당 시나리오에서 Windows 전용 기술을 사용할 수 없는 것은 아키텍처 이점이 없는 마이그레이션 장애물일 뿐입니다.
 
-## <a name="package-contents"></a>패키지 내용
+## <a name="package-contents"></a>패키지 콘텐츠
 
-*Windows 호환 기능 팩* NuGet 패키지를 통해 제공 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) .NET Core 또는 표준.NET을 대상으로 하는 프로젝트에서 참조할 수 있습니다.
+*Windows 호환 기능 팩*은 NuGet 패키지 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)를 통해 제공되며 .NET Core 또는 .NET Standard를 대상으로 하는 프로젝트에서 참조할 수 있습니다.
 
-약 20, 000 제공 Api를 다음과 같은 기술 영역에서 Windows 전용으로 플랫폼 간 Api를 포함 하 여:
+Windows 전용을 포함하는 약 20,000 개의 API와 다음과 같은 기술 영역에서 플랫폼 간 API를 제공합니다.
 
 * 코드 페이지
 * CodeDom
@@ -35,29 +36,29 @@ ms.lasthandoff: 11/16/2017
 * ODBC
 * 사용 권한
 * 포트
-* Windows 액세스 제어 목록 (ACL)
+* Windows ACL(액세스 제어 목록)
 * WCF(Windows Communication Foundation)
-* Windows 암호화
-* Windows 이벤트 로그
+* Windows Cryptography
+* Windows EventLog
 * WMI(Windows Management Instrumentation)
 * Windows 성능 카운터
 * Windows 레지스트리
 * Windows 런타임 캐싱
 * Windows 서비스
 
-자세한 내용은 참조는 [호환 기능 팩의 사양](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)합니다.
+자세한 내용은 [호환 기능 팩의 사양](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)을 참조하세요.
 
 ## <a name="get-started"></a>시작
 
-1. 이식 하기 전에 확인을 참조 하는 [포팅 프로세스](index.md)합니다.
+1. 이식하기 전에 [이식 프로세스](index.md)를 참조하세요.
 
-2. .NET Core 또는.NET 표준 기존 코드를 이식 하는 경우에 NuGet 패키지 설치 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)합니다.
+2. 기존 코드를 .NET Core 또는 .NET Standard로 이식하는 경우 NuGet 패키지 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)를 설치합니다.
 
-3. Windows에서 유지 하려는 경우 모든 설정 합니다.
+3. Windows에서 유지하려는 경우 모두 준비되었습니다.
 
-4. 사용 하 여 Linux 또는 macOS에서.NET Core 응용 프로그램 또는 표준.NET 라이브러리를 실행 하려는 경우는 [API 분석기](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) 찾을 플랫폼 간에 작동 하지 않는 Api 사용 합니다.
+4. Linux 또는 macOS에서 .NET Core 응용 프로그램 또는 .NET Standard 라이브러리를 실행하려는 경우 [API 분석기](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/)를 사용하여 플랫폼 간에 작동하지 않는 API의 사용량을 찾습니다.
 
-5. 이러한 Api의 사용을 제거, 플랫폼 간 대체 방법으로 바꾸려면 또는 같은 플랫폼 검사를 사용 하 여 보호:
+5. 이러한 API의 사용량을 제거하거나 플랫폼 간 대체 방법으로 바꾸거나 다음과 같은 플랫폼 검사를 사용하여 보호합니다.
 
     ```csharp
     private static string GetLoggingPath()
@@ -79,5 +80,5 @@ ms.lasthandoff: 11/16/2017
     }
     ```
 
-데모는 체크 아웃 된 [Windows 호환 기능 팩의 Channel 9 비디오](https://channel9.msdn.com/Events/Connect/2017/T123)합니다.
+데모의 경우 [Windows 호환 기능 팩의 Channel 9 비디오](https://channel9.msdn.com/Events/Connect/2017/T123)를 확인하세요.
 

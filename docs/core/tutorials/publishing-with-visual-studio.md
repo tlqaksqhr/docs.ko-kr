@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
-ms.openlocfilehash: a3e5bda5c99144c9ab5bbaf5e2f5566261af4813
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 40479d85f9b31fcc80e3d12537126941878a09a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 Hello World 응용 프로그램 게시
 
@@ -39,19 +40,19 @@ ms.lasthandoff: 10/18/2017
 
       * *HelloWorld.deps.json*
 
-         응용 프로그램의 런타임 종속성 파일입니다. .NET Core 구성 요소를 정의 하 고 (응용 프로그램을 포함 하는 동적 연결 라이브러리 포함) 라이브러리는 응용 프로그램을 실행 하는 데 필요한 키를 누릅니다. 자세한 내용은 참조 [런타임 구성 파일](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)합니다.
+         응용 프로그램의 런타임 종속성 파일입니다. 응용 프로그램을 실행하는 데 필요한 .NET Core 구성 요소 및 라이브러리(응용 프로그램을 포함하는 동적 연결 라이브러리 포함)를 정의합니다. 자세한 내용은 [ 런타임 구성 파일](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
  
       * *HelloWorld.dll*
 
-         응용 프로그램을 포함 하는 파일입니다. 입력 하 여 실행할 수 있는 동적 연결 라이브러리 이기는 `dotnet HelloWorld.dll` 콘솔 창에 명령 합니다. 
+         응용 프로그램을 포함하는 파일입니다. 콘솔 창에 `dotnet HelloWorld.dll` 명령을 입력하여 실행될 수 있는 동적 연결 라이브러리입니다. 
 
       * *HelloWorld.pdb*(배포에 대한 선택 사항)
 
-         디버그 기호를 포함 하는 파일입니다. 게시된 응용 프로그램 버전을 디버그해야 하는 경우에는 이 파일을 저장해야 하지만 그렇지 않으면 응용 프로그램과 함께 배포할 필요가 없습니다.
+         디버그 기호를 포함하는 파일입니다. 게시된 응용 프로그램 버전을 디버그해야 하는 경우에는 이 파일을 저장해야 하지만 그렇지 않으면 응용 프로그램과 함께 배포할 필요가 없습니다.
 
       * *HelloWorld.runtimeconfig.json*
 
-         응용 프로그램의 런타임 구성 파일입니다. 실행 되도록 응용 프로그램을 빌드한.NET Core의 버전을 식별 합니다. 자세한 내용은 참조 [런타임 구성 파일](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)합니다.  
+         응용 프로그램의 런타임 구성 파일입니다. 응용 프로그램이 실행되도록 빌드된 .NET Core의 버전을 식별합니다. 자세한 내용은 [ 런타임 구성 파일](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)을 참조하세요.  
 
    ![게시된 파일을 보여 주는 콘솔 창](media/publishing-with-visual-studio/publishedfiles.png)
 

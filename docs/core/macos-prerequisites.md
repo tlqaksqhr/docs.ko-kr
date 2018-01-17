@@ -9,13 +9,14 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 16f3cfd482bddfff1b9ad56e7ffe58ae2aed4980
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 5aac7566f532312c890bad07c901929ae826ece3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="prerequisites-for-net-core-on-macos"></a>MacOS에서.NET Core에 대 한 필수 구성 요소
+# <a name="prerequisites-for-net-core-on-macos"></a>macOS에서 .NET Core의 필수 구성 요소
 
 이 문서에서는 macOS 컴퓨터에서.NET Core 응용 프로그램을 개발, 배포 및 실행하기 위해 필요한 지원되는 macOS 버전 및 .NET Core 종속성을 보여 줍니다. 다음에 나오는 지원되는 OS 버전 및 종속성은 Mac에서 .NET Core 앱을 개발하기 위한 세 가지 방법, 즉 [즐겨 사용하는 편집기를 통한 명령줄](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/) 및 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)에 적용됩니다.
 
@@ -23,15 +24,15 @@ ms.lasthandoff: 10/27/2017
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-.NET core 2.x macOS의 다음 버전에서 지원 됩니다.
+.NET Core 2.x는 다음 macOS 버전에서 지원됩니다.
 
-* macOS 10.12 "시에라" 및 이상 버전
+* macOS 10.12 "Sierra" 이상 버전
 
 지원 OS 버전 중 .NET Core 2.x를 지원하는 운영 체제 및 수명 주기 정책 링크는 [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)(.NET Core 2.x가 지원되는 OS 버전)를 참조하세요.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-.NET core 1.x macOS의 다음 버전에서 지원 됩니다.
+.NET Core 1.x는 다음 macOS 버전에서 지원됩니다.
 
 * macOS 10.12 "Sierra"
 * macOS 10.11 "El Capitan"
@@ -64,13 +65,13 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit"></a>열려 있는 최대 파일 제한 증가
+## <a name="increase-the-maximum-open-file-limit"></a>열려 있는 최대 파일 제한 늘리기
 
-기본 파일 열기 제한 macOS에 프로젝트를 복원 하거나 단위 테스트를 실행 하는 등 일부.NET Core 작업에 대 한 충분 한 수 있습니다.
+macOS에서 열려 있는 기본 파일 제한은 프로젝트를 복원하거나 단위 테스트를 실행하는 등 일부 .NET Core 작업에 충분하지 않을 수 있습니다.
 
-다음이 단계를 수행 하 여이 제한을 늘릴 수 있습니다.
+다음 단계를 수행하여 이 제한을 늘릴 수 있습니다.
 
-1. 텍스트 편집기를 사용 하 여 새 파일을 만듭니다 _/Library/LaunchDaemons/limit.maxfiles.plist_, 해당 콘텐츠 파일을 저장 합니다.
+1. 텍스트 편집기를 사용하여 새 파일 _/Library/LaunchDaemons/limit.maxfiles.plist_를 만들고 이 콘텐츠로 파일을 저장합니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -96,13 +97,13 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 </plist>
 ```
 
-2. 터미널 창에서 다음 명령을 실행 합니다.
+2. 터미널 창에서 다음 명령을 실행합니다.
 
 ```console
 echo 'ulimit -n 2048' | sudo tee -a /etc/profile
 ```
 
-3. Mac이이 설정을 적용 하려면 다시 부팅 합니다.
+3. Mac을 다시 부팅하여 이 설정을 적용합니다.
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 

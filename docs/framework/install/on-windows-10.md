@@ -4,15 +4,16 @@ description: "Windows 10 또는 Windows Server 2016에서 .NET Framework를 설�
 author: rlander
 ms.author: mairaw
 keywords: ".Net Framework, 설치"
-ms.date: 11/17/2017
+ms.date: 12/20/2017
 ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net-framework
-ms.openlocfilehash: ff4867c74b4477a0407126833f30941426d4a33a
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.workload: dotnet
+ms.openlocfilehash: bd588dff62e5d4ac1c1059e697a07598ba272042
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Windows 10 및 Windows Server 2016에 .NET Framework 설치
 
@@ -27,7 +28,7 @@ Windows에서 많은 응용 프로그램을 실행하는 데 .NET Framework가 �
 .NET Framework 4.7.1에는 다음이 포함되어 있습니다.
 
 * [Windows 10 Fall Creators Update(버전 1709)](https://www.microsoft.com/software-download/windows10)
-* [Windows Server 2016(버전 1709)](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
+* [Windows Server, 버전 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
 
 > [!div class="button"]
 [.NET Framework 4.7.1 다운로드](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)

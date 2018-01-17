@@ -6,11 +6,12 @@ ms.author: johalex
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 16a72edde39e4857dbdfb400f195deb9975f993c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: fdbba188cf939ce3eb969a1f780e086fcf17da13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows에서 .NET Core의 필수 구성 요소
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="net-core-dependencies"></a>.NET Core 종속성
 
-이전 Windows 10 및 Windows Server 2016 버전의 Windows 버전에서 실행 하는 경우.NET core 1.1 및 이전 버전에서 Visual c + + 재배포 가능 패키지가 필요 합니다. 이 종속성은 .NET Core 설치 관리자에 의해 자동으로 설치됩니다.
+Windows 10 및 Windows Server 2016보다 이전 버전의 Windows에서 실행하는 경우.NET Core 1.1 이전은 Visual C++ 재배포 가능 패키지가 필요합니다. 이 종속성은 .NET Core 설치 관리자에 의해 자동으로 설치됩니다.
 
 다음과 같은 경우에는 [Microsoft Visual C++ 2015 재배포 가능 패키지 업데이트 3](https://www.microsoft.com/download/details.aspx?id=52685)을 수동으로 설치해야 합니다.
 

@@ -17,11 +17,12 @@ caps.latest.revision: "55"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: efdb4bec75d160acd212b763690bd7a473c35eed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e000d0efbd999d228e10a5df8e6368cbf22c5088
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll(SOS 디버깅 확장명)
 SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타임) 환경에 대한 정보를 제공하여 관리되는 프로그램을 Windows 디버거(WinDbg.exe)와 Visual Studio에서 쉽게 디버깅할 수 있습니다. 이 도구를 사용하려면 프로젝트에 관리되지 않는 디버깅을 활성화해야 합니다. SOS.dll은 .NET Framework와 함께 자동으로 설치됩니다. Visual Studio에서 SOS.dll을 사용하려면 [WDK(Windows 드라이버 키트)](http://msdn.microsoft.com/windows/hardware/hh852362)를 설치합니다.  
@@ -61,9 +62,9 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**DumpSigElem** \<*sigaddr*> \<*moduleaddr*>|서명 개체의 단일 요소를 표시합니다. 대부분의 경우 개별 서명 개체를 보려면 **DumpSig**를 사용해야 합니다. 그러나 어떤 방식으로든 서명이 손상된 경우 **DumpSigElem**을 사용하여 유효한 부분을 읽을 수 있습니다.|  
 |**DumpStackObjects** [**-verify**] [`top` *stack* [`bottom` *stack*]]<br /><br /> 또는<br /><br /> **DSO** [**-verify**] [`top` *stack* [`bottom` *stack*]]|현재 스택의 범위 내에 있는 관리되는 모든 개체를 표시합니다.<br /><br /> **-verify** 옵션은 개체 필드의 비정적 `CLASS` 필드 각각의 유효성을 검사합니다.<br /><br /> 지역 변수 및 매개 변수의 값을 확인하려면 스택 추적 명령(예: **K** 명령 및 **CLRStack** 명령)과 함께 **DumpStackObject** 명령을 사용합니다.|  
 |**DumpVC** \<*MethodTable address*> \<*Address*>|지정된 주소에 있는 값 클래스의 필드에 대한 정보를 표시합니다.<br /><br /> **MethodTable** 매개 변수를 사용하면 **DumpVC** 명령이 필드를 올바르게 해석할 수 있습니다. 값 클래스에는 첫 번째 필드로 메서드 테이블이 포함되지 않습니다.|  
-|**EEHeap** [**-gc**] [**-loader**]|내부 공용 언어 런타임 데이터 구조에서 사용되는 프로세스 메모리에 대한 정보를 표시합니다.<br /><br /> **-gc** 및 **-loader** 옵션은 이 명령의 출력을 가비지 수집기 또는 로더 데이터 구조로 제한합니다.<br /><br /> 가비지 컬렉션기에 대한 정보에는 관리되는 힙의 각 세그먼트 범위가 나열됩니다.  포인터가 **-gc**로 지정된 세그먼트 범위 내에 있으면 해당 포인터는 개체 포인터입니다.|  
+|**EEHeap** [**-gc**] [**-loader**]|내부 CLR 데이터 구조에서 사용되는 프로세스 메모리에 대한 정보를 표시합니다.<br /><br /> **-gc** 및 **-loader** 옵션은 이 명령의 출력을 가비지 수집기 또는 로더 데이터 구조로 제한합니다.<br /><br /> 가비지 컬렉션기에 대한 정보에는 관리되는 힙의 각 세그먼트 범위가 나열됩니다.  포인터가 **-gc**로 지정된 세그먼트 범위 내에 있으면 해당 포인터는 개체 포인터입니다.|  
 |**EEStack** [**-short**] [**-EE**]|프로세스의 모든 스레드에서 **DumpStack** 명령을 실행합니다.<br /><br /> **-EE** 옵션은 **DumpStack** 명령에 직접 전달됩니다. **-short** 매개 변수는 출력을 다음과 같은 종류의 스레드로 제한합니다.<br /><br /> 잠긴 스레드<br /><br /> 가비지 수집을 위해 중단된 스레드<br /><br /> 현재 관리 코드에 있는 스레드|  
-|**EEVersion**|공용 언어 런타임 버전을 표시합니다.|  
+|**EEVersion**|CLR 버전을 표시합니다.|  
 |**EHInfo** [\<*MethodDesc address*>] [\<*Code address*>]|지정된 메서드의 예외 처리 블록을 표시합니다.  이 명령은 절 블록(`try` 블록) 및 처리기 블록(`catch` 블록)의 코드 주소와 오프셋을 표시합니다.|  
 |**FAQ**|FAQ(질문과 대답)를 표시합니다.|  
 |**FinalizeQueue** [**-detail**] | [**-allReady**] [**-short**]|종료하도록 등록된 모든 개체를 표시합니다.<br /><br /> **-detail** 옵션은 정리해야 하는 모든 `SyncBlocks`와 정리를 기다리는 모든 `RuntimeCallableWrappers`(RCWs)에 대한 추가 정보를 표시합니다. 이러한 두 데이터 구조는 실행할 때 모두 종료자 스레드에서 캐시되고 정리됩니다.<br /><br /> `-allReady` 옵션은 가비지 컬렉션에 의해 이미 표시되거나 다음 가비지 컬렉션에 의해 표시될지 여부에 관계없이 종료할 준비가 된 모든 개체를 표시합니다. "종료 준비" 목록에 있는 개체는 더 이상 루트에 있지 않은 종료할 수 있는 개체입니다. 종료 가능한 큐에 있는 모든 개체가 여전히 루트인지 여부를 확인하기 때문에 이 옵션은 매우 많은 비용이 소요될 수 있습니다.<br /><br /> `-short` 옵션은 각 개체의 주소로 출력을 제한합니다. **-allReady**와 함께 사용하면 더 이상 루트가 아닌 종료자가 있는 개체를 모두 열거합니다. 독립적으로 사용되는 경우 종료 가능 및 "종료 준비" 큐에 모든 개체를 나열합니다.|  
@@ -95,7 +96,7 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**SyncBlk** [**-all** | \<*syncblk number*>]|지정된 `SyncBlock` 구조체나 모든 `SyncBlock` 구조체를 표시합니다.  인수를 전달하지 않으면 **SyncBlk** 명령은 스레드에서 소유하는 개체에 해당하는 `SyncBlock` 구조체를 표시합니다.<br /><br /> `SyncBlock` 구조체는 모든 개체에 대해 만들 필요가 없는 추가 정보를 포함하기 위한 컨테이너입니다. 이 구조체는 COM interop 데이터, 해시 코드 및 스레드로부터 안전한 작업에 대한 잠금 정보를 포함할 수 있습니다.|  
 |**ThreadPool**|큐에 대기 중인 작업 요청 수, 완료 포트 스레드 수 및 타이머 수를 비롯하여 관리되는 스레드 풀에 대한 정보를 표시합니다.|  
 |**Token2EE** \<*module name*> \<*token*>|지정된 모듈의 지정된 메타데이터 토큰을 `MethodTable` 구조체나 `MethodDesc` 구조체로 전환합니다.<br /><br /> module name 매개 변수에 `*`를 전달하면 로드된 모든 관리되는 모듈에서 해당 토큰이 매핑되는 대상을 확인할 수 있습니다. `mscorlib` 또는 `image00400000`과 같이 모듈의 디버거 이름을 전달할 수도 있습니다.|  
-|**Threads** [**-live**] [**-special**]|프로세스의 관리되는 모든 스레드를 표시합니다.<br /><br /> **Threads** 명령은 디버거 약식 ID, 공용 언어 런타임 스레드 ID 및 운영 체제 스레드 ID를 표시합니다.  또한 **Threads** 명령은 스레드가 실행 중인 응용 프로그램 도메인을 나타내는 Domain 열, COM 아파트 모드를 표시하는 APT 열 및 스레드에서 마지막으로 throw된 예외를 표시하는 Exception 열을 표시합니다.<br /><br /> **-live** 옵션은 라이브 스레드와 연결된 스레드를 표시합니다.<br /><br /> **-special** 옵션은 CLR에서 만들어진 모든 특수 스레드를 표시합니다. 특수 스레드에는 가비지 수집 스레드(동시 및 서버 가비지 수집), 디버거 도우미 스레드, 종료자 스레드, <xref:System.AppDomain> 언로드 스레드 및 스레드 풀 타이머 스레드가 포함됩니다.|  
+|**Threads** [**-live**] [**-special**]|프로세스의 관리되는 모든 스레드를 표시합니다.<br /><br /> **Threads** 명령은 디버거 약식 ID, CLR 스레드 ID 및 운영 체제 스레드 ID를 표시합니다.  또한 **Threads** 명령은 스레드가 실행 중인 응용 프로그램 도메인을 나타내는 Domain 열, COM 아파트 모드를 표시하는 APT 열 및 스레드에서 마지막으로 throw된 예외를 표시하는 Exception 열을 표시합니다.<br /><br /> **-live** 옵션은 라이브 스레드와 연결된 스레드를 표시합니다.<br /><br /> **-special** 옵션은 CLR에서 만들어진 모든 특수 스레드를 표시합니다. 특수 스레드에는 가비지 수집 스레드(동시 및 서버 가비지 수집), 디버거 도우미 스레드, 종료자 스레드, <xref:System.AppDomain> 언로드 스레드 및 스레드 풀 타이머 스레드가 포함됩니다.|  
 |**ThreadState \<** *State value field* **>**|스레드의 현재 상태를 표시합니다. `value` 매개 변수는 **Threads** 보고서 출력의 `State` 필드 값입니다.<br /><br /> 예제:<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|  
 |**TraverseHeap** [**-xml**] \<*filename*>|힙 정보를 CLR 프로파일러에서 인식할 수 있는 형식으로 지정된 파일에 씁니다. **-xml** 옵션을 사용하면 **TraverseHeap** 명령은 파일을 XML 형식으로 지정합니다.<br /><br /> CLR 프로파일러는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=67325)에서 다운로드할 수 있습니다.|  
 |**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*MethodDesc address*> &#124; \<*Code address*>|메서드의 `MethodDesc` 구조체 포인터나 메서드 본문 내의 코드 주소로 지정된 관리되는 메서드에 대해 주석이 지정된 디스어셈블리를 표시합니다. **U** 명령은 메타데이터 토큰을 이름으로 변환하는 주석과 함께 전체 메서드를 처음부터 끝까지 표시합니다.<br /><br /> **-gcinfo** 옵션을 사용하면 **U** 명령은 메서드의 `GCInfo` 구조체를 표시합니다.<br /><br /> **-ehinfo** 옵션은 메서드에 대한 예외 정보를 표시합니다. **EHInfo** 명령을 사용하여 이 정보를 얻을 수도 있습니다.<br /><br /> **-n** 옵션은 소스 파일 이름과 줄 번호의 표시를 사용하지 않습니다. 디버거에 옵션 SYMOPT_LOAD_LINES가 지정된 경우 SOS는 관리되는 모든 프레임에 대한 기호를 조회하고, 성공한 경우, 해당 소스 파일 이름과 줄 번호를 표시합니다. 이 동작을 비활성화하는 **-n** 옵션을 지정할 수 있습니다.|  
@@ -105,7 +106,7 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**VMStat**|가상 주소 공간의 요약 뷰를 제공합니다. 이 뷰에서는 해당 메모리에 적용된 각 보호 형식(사용 가능, 예약됨, 커밋됨, 전용, 매핑됨, 이미지)별로 정렬됩니다. TOTAL 열에는 AVERAGE 열에 BLK COUNT 열을 곱한 결과가 표시됩니다.|  
   
 ## <a name="remarks"></a>설명  
- SOS 디버깅 확장을 사용하면 공용 언어 런타임 내에서 실행되는 코드에 대한 정보를 볼 수 있습니다. 예를 들어, SOS 디버깅 확장을 사용하여 관리되는 힙에 대한 정보를 표시하고, 힙 손상을 찾고, 런타임에 사용되는 내부 데이터 형식을 표시하고, 런타임 내에서 실행되는 관리되는 모든 코드에 대한 정보를 볼 수 있습니다.  
+ SOS 디버깅 확장을 사용하면 CLR 내에서 실행되는 코드에 대한 정보를 볼 수 있습니다. 예를 들어, SOS 디버깅 확장을 사용하여 관리되는 힙에 대한 정보를 표시하고, 힙 손상을 찾고, 런타임에 사용되는 내부 데이터 형식을 표시하고, 런타임 내에서 실행되는 관리되는 모든 코드에 대한 정보를 볼 수 있습니다.  
   
  Visual Studio에서 SOS 디버깅 확장을 사용하려면 [WDK(Windows 드라이버 키트)](http://msdn.microsoft.com/windows/hardware/hh852362)를 설치합니다. Visual Studio에서 통합된 디버깅 환경에 대한 내용은 Windows 개발자 센터의 [디버깅 환경](http://msdn.microsoft.com/library/windows/hardware/hh406268.aspx)을 참조하세요.  
   

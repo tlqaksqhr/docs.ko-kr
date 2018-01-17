@@ -10,15 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker에서 호스트되는 마이크로 서비스
-
-## <a name="introduction"></a>소개
 
 이 자습서에서는 Docker 컨테이너에서 ASP.NET Core 마이크로 서비스를 빌드 및 배포하는 데 필요한 작업에 대해 설명합니다. 이 자습서를 진행하면서 다음을 익히게 됩니다.
 
@@ -56,7 +54,7 @@ Docker는 여러 Linux 배포판, macOS 또는 Windows에 설치할 수 있습�
 
 `npm install -g yo bower grunt-cli gulp`
 
-`-g` 옵션은 전역 설치임을 나타내므로 해당 도구를 시스템 전체에서 사용할 수 있습니다. (로컬 설치의 경우 패키지가 단일 프로젝트에 적용됨). 이러한 핵심 도구를 설치한 후 yeoman asp.net 템플릿 생성기를 설치해야 합니다.
+`-g` 옵션은 전역 설치임을 나타내므로 해당 도구를 시스템 전체에서 사용할 수 있습니다. (로컬 설치의 경우 패키지가 단일 프로젝트에 적용됨). 이러한 핵심 도구를 설치한 후 yeoman ASP.NET 템플릿 생성기를 설치해야 합니다.
 
 `npm install -g generator-aspnet`
 
@@ -113,7 +111,7 @@ Project.json에는 프로젝트에 대한 정보가 포함됩니다. 자주 사�
 
 응용 프로그램은 Startup.cs에서 구현됩니다. 이 파일에는 startup 클래스가 포함되어 있습니다.
 
-두 메서드는 asp.net core 인프라에서 응용 프로그램을 구성 및 실행하기 위해 호출됩니다. `ConfigureServices` 메서드는 이 응용 프로그램에 필요한 서비스에 대해 설명합니다. Lean 마이크로 서비스를 빌드하는 경우 어떤 종속성도 구성할 필요가 없습니다. `Configure` 메서드는 들어오는 HTTP 요청에 대한 처리기를 구성합니다. 템플릿은 텍스트 'Hello World!'를 포함하는 모든 요청에 응답하는 간단한 처리기를 생성합니다.
+두 메서드는 ASP.NET Core 인프라에서 응용 프로그램을 구성 및 실행하기 위해 호출됩니다. `ConfigureServices` 메서드는 이 응용 프로그램에 필요한 서비스에 대해 설명합니다. Lean 마이크로 서비스를 빌드하는 경우 어떤 종속성도 구성할 필요가 없습니다. `Configure` 메서드는 들어오는 HTTP 요청에 대한 처리기를 구성합니다. 템플릿은 텍스트 'Hello World!'를 포함하는 모든 요청에 응답하는 간단한 처리기를 생성합니다.
 
 ## <a name="build-a-microservice"></a>마이크로 서비스 빌드
 
@@ -259,7 +257,7 @@ RUN dotnet publish -c Release -o out
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-현재 디렉터리의 프로젝트 파일에 docker VM으로 복사되고 모든 패키지가 복원됩니다. dotnet CLI를 사용하면 Docker 이미지에 .NET Core SDK가 포함됩니다. 그런 다음 응용 프로그램의 나머지 부분이 복사되고 dotnet publish 명령이 응용 프로그램을 빌드하고 패키지합니다.
+현재 디렉터리의 프로젝트 파일에 Docker VM으로 복사되고 모든 패키지가 복원됩니다. dotnet CLI를 사용하면 Docker 이미지에 .NET Core SDK가 포함됩니다. 그런 다음 응용 프로그램의 나머지 부분이 복사되고 dotnet publish 명령이 응용 프로그램을 빌드하고 패키지합니다.
 
 파일의 마지막 줄은 응용 프로그램을 실행합니다.
 
@@ -279,7 +277,7 @@ obj/*
 out/*
 ```
 
-docker build 명령을 사용하여 이미지를 빌드합니다. 코드를 포함하는 디렉터리에서 다음 명령을 실행합니다.
+`docker build` 명령을 사용하여 이미지를 빌드합니다. 코드를 포함하는 디렉터리에서 다음 명령을 실행합니다.
 
 ```console
 docker build -t weather-microservice .
@@ -320,7 +318,7 @@ docker attach --sig-proxy=false hello-docker
 `--sig-proxy=false` 인수는 `Ctrl-C` 명령이 컨테이너 프로세스에 전송되지 않고 오히려 `docker attach` 명령을 중지함을 의미합니다. 마지막 인수는 `docker run` 명령에서 컨테이너에 지정된 이름입니다. 
 
 > [!NOTE]
-> 또한 docker 할당 컨테이너 ID를 사용하여 컨테이너를 나타낼 수도 있습니다. `docker run`에서 컨테이너의 이름을 지정하지 않은 경우 컨테이너 ID를 사용해야 합니다.
+> 또한 Docker 할당 컨테이너 ID를 사용하여 컨테이너를 나타낼 수도 있습니다. `docker run`에서 컨테이너의 이름을 지정하지 않은 경우 컨테이너 ID를 사용해야 합니다.
 
 브라우저를 열고 서비스로 이동합니다. 연결된 실행 중인 컨테이너에서 명령 창의 진단 메시지를 확인합니다.
 
@@ -348,6 +346,6 @@ docker rmi weather-microservice
 
 이 자습서에서는 ASP.NET Core 마이크로 서비스를 빌드하고 몇 가지 간단한 기능을 추가했습니다.
 
-해당 서비스에 대해 docker 컨테이너 이미지를 빌드하고 컴퓨터에서 해당 컨테이너를 실행했습니다. 터미널 창을 서비스에 연결하고 서비스에서 진단 메시지를 확인했습니다.
+해당 서비스에 대해 Docker 컨테이너 이미지를 빌드하고 컴퓨터에서 해당 컨테이너를 실행했습니다. 터미널 창을 서비스에 연결하고 서비스에서 진단 메시지를 확인했습니다.
 
 그 과정에서 C# 언어의 일부 기능이 사용되는 것을 확인했습니다.

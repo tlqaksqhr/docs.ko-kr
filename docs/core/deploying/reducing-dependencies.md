@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 858fc77d9652bfa59ed0bb3159260f40c76156a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>project.json으로 패키지 종속성 감소
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
 현재로서는 패키지 참조를 잘라내는 공식 `dotnet` 명령이 없습니다.  이 작업을 수동으로 수행해야 합니다.  일반적인 프로세스는 다음과 같습니다.
 
 1. `project.json`의 `dependencies` 섹션에서 `NETStandard.Library` 버전 `1.6.0`을 참조합니다.
-2. 사용 하 여 패키지를 복원 `dotnet restore` ([참고](#dotnet-restore-note)) 명령줄에서.
+2. 명령줄에서 `dotnet restore`([참고 참조](#dotnet-restore-note))로 패키지를 복원합니다.
 3. `project.lock.json` 파일을 검사하고 `NETSTandard.Library` 섹션을 찾습니다.  파일의 시작 부분에 있습니다.
 4. `dependencies` 아래에 나열된 모든 패키지를 복사합니다.
 5. `.NETStandard.Library` 참조를 제거하고 복사된 패키지로 교체합니다.
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/18/2017
 1. 시행착오.  패키지를 제거하고 복원하면서 여전히 컴파일되는지를 알아보고 이 프로세스를 반복합니다.
 2. 참조를 피킹하여 실제로 어떤 코드가 사용되는지를 알아보기 위해 [ILSpy](http://ilspy.net) 또는 [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) 같은 도구를 사용합니다.  그런 다음 사용 중인 형식에 해당하지 않는 패키지를 제거할 수 있습니다.
 
-## <a name="example"></a>예제 
+## <a name="example"></a>예 
 
 제네릭 컬렉션 형식에 추가 기능을 제공한 라이브러리를 작성했다고 가정해 보겠습니다.  그런 라이브러리는 `System.Collections` 같은 패키지에 종속되어야 하지만, `System.Net.Http` 같은 패키지에는 전혀 종속되지 않을 수 있습니다.  따라서 이 라이브러리에 필요한 것으로만 패키지 종속성을 잘라낼 수 있습니다.
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/18/2017
 }
 ```
 
-사용 하 여 패키지를 복원 하는 다음으로 `dotnet restore` ([참고 참조](#dotnet-restore-note)), 검사는 `project.lock.json` 파일, 및 복원에 대 한 모든 패키지를 찾을 `NETSTandard.Library`합니다.
+그런 다음 `dotnet restore`([참고 참조](#dotnet-restore-note))로 패키지를 복원하고, `project.lock.json` 파일을 검사하고, `NETSTandard.Library`에 대해 복원된 모든 패키지를 찾습니다.
 
 다음은 `netstandard1.0`을 대상으로 할 때 `project.lock.json` 파일의 관련 섹션이 어떤 모양인지를 보여줍니다.
 

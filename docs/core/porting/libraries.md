@@ -9,22 +9,23 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.openlocfilehash: 390d08332113a50b363bdbb71921bafd7e33e87d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="porting-to-net-core---libraries"></a>.NET Core로 이식 - 라이브러리
 
 이 문서에서는 플랫폼 간에 실행되도록 .NET Core에 라이브러리 코드를 이식하는 방법에 관해 설명합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 문서에서는 다음을 전제로 합니다.
 
 - 사용자가 Visual Studio 2017 이상을 사용합니다.
-  - .NET core는 이전 버전의 Visual Studio에서 지원 되지 않습니다.
+  - .NET Core는 이전 버전의 Visual Studio에서 지원되지 않습니다.
 - 사용자가 [권장 이식 프로세스](index.md)를 이해합니다.
 - 사용자가 [타사 종속성](third-party-deps.md)과 관련된 문제를 모두 해결했습니다.
 

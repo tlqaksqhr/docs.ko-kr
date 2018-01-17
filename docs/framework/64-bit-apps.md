@@ -17,11 +17,12 @@ caps.latest.revision: "53"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ee85512cde0ce50e6a5c34cc5f6acc531c24bc0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e968d64d02780eb8f8d404e533443c7663d3d60f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="64-bit-applications"></a>64비트 응용 프로그램
 응용 프로그램을 컴파일할 때 Windows 64비트 운영 체제에서 네이티브 응용 프로그램으로 실행되거나 WOW64(Windows 64비트 기반 Windows 32비트)를 통해 실행되도록 지정할 수 있습니다. WOW64는 32비트 응용 프로그램이 64비트 시스템에서 실행되도록 하는 호환성 환경입니다. WOW64는 Windows 운영 체제의 모든 64비트 버전에 포함됩니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
   
 -   `IntPtr`을 `Int32`로 캐스팅하는 코드.  
   
- 64 비트 CLR에서 실행 하는 32 비트 응용 프로그램을 포팅하는 방법에 대 한 자세한 내용은 참조 하십시오. [마이그레이션 32 비트 관리 코드를 64 비트](https://msdn.microsoft.com/library/ms973190.aspx)합니다.  
+ 64비트 CLR에서 실행되도록 32비트 응용 프로그램을 이식하는 방법에 대한 자세한 내용은 [32비트 관리 코드를 64비트로 마이그레이션](https://msdn.microsoft.com/library/ms973190.aspx)을 참조하세요.  
   
 ## <a name="general-64-bit-programming-information"></a>일반 64비트 프로그래밍 정보  
  64비트 프로그래밍에 대한 일반적인 정보는 다음 문서를 참조하세요.  

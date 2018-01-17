@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: dc9b45e21f15ad92304685a1aff6760f3406cee2
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 35038b3dae80958071a9615f7f131fca73513077
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -167,13 +167,13 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     DotNetCountLabel.Text = $"Number of .NETs on dotnetfoundation.org: {count}";
 
     NetworkProgressBar.IsEnabled = false;
-    NetworkProgressBar.Visbility = Visibility.Collapsed;
+    NetworkProgressBar.Visibility = Visibility.Collapsed;
 }
 ```
 
 ### <a name="waiting-for-multiple-tasks-to-complete"></a>여러 작업이 완료할 때까지 대기
 
-동시에 데이터의 여러 부분을 검색해야 하는 상황이 될 수 있습니다.  `Task` 두 메서드를 포함 하는 API `Task.WhenAll` 및 `Task.WhenAny` 비 블록 킹 대기 여러 백그라운드 작업을 수행 하는 비동기 코드를 작성할 수 있도록 허용 합니다.
+동시에 데이터의 여러 부분을 검색해야 하는 상황이 될 수 있습니다.  `Task` API에는 여러 백그라운드 작업에서 비차단 대기를 수행하는 비동기 코드를 작성할 수 있는 `Task.WhenAll` 및 `Task.WhenAny` 메서드가 포함됩니다.
 
 이 예제에서는 `userId` 집합에 대한 `User` 데이터를 확인하는 방법을 보여 줍니다.
 

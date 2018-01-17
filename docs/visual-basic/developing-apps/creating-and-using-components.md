@@ -9,11 +9,11 @@ ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic에서 구성 요소 만들기 및 사용
 *구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
@@ -32,8 +32,6 @@ ms.lasthandoff: 11/21/2017
 -   구성 요소가 값에 의해 마샬링되어야 하는 경우 <xref:System.ComponentModel.MarshalByValueComponent>에서 파생합니다.  
   
 -   단일 상속으로 인해 구성 요소가 기본 구현 중 하나에서 파생될 수 없는 경우 <xref:System.ComponentModel.IComponent>를 구현합니다.  
-  
- 디자인 타임 지원에 대한 자세한 내용은 [구성 요소의 디자인 타임 특성](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) 및 [디자인 타임 지원 확장](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)을 참조하세요.  
   
 ## <a name="component-classes"></a>구성 요소 클래스  
  <xref:System.ComponentModel> 네임스페이스는 구성 요소와 컨트롤의 런타임 및 디자인 타임 동작을 구현하는 데 사용되는 클래스를 제공합니다. 이 네임스페이스에는 특성 및 형식 변환기를 구현하고, 데이터 소스에 바인딩하고, 구성 요소 사용을 허가하기 위한 기본 클래스 및 인터페이스가 포함됩니다.  
@@ -65,22 +63,9 @@ ms.lasthandoff: 11/21/2017
 -   <xref:System.ComponentModel.PropertyDescriptor>. 속성에 대한 정보를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [클래스, 구성 요소 및 컨트롤](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- *구성 요소* 및 *컨트롤*을 정의하고 이들 항목과 클래스 간의 차이점을 설명합니다.  
-  
- [구성 요소 제작](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- 구성 요소를 시작하기 위한 로드맵입니다.  
-  
- [구성 요소 제작 연습](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- 구성 요소 프로그래밍에 대한 단계별 지침을 제공하는 항목의 링크입니다.  
-  
- [구성 요소 클래스](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
- 클래스를 구성 요소로 설정하는 작업, 구성 요소 기능을 표시하는 방법, 구성 요소에 대한 액세스 제어 및 구성 요소 인스턴스를 만드는 방법 제어를 설명합니다.  
-  
  [컨트롤 및 구성 요소 제작 문제 해결](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  일반적인 문제 해결 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: Windows Forms에서 디자인 타임 지원에 액세스](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
- [방법: 모양과 디자인 모드에서 컨트롤의 동작을 확장 합니다.](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
- [방법: 디자인 모드에서 컨트롤에 대한 사용자 지정 초기화 수행](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+ [방법: Windows Forms에서 디자인 타임 지원 액세스](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ 

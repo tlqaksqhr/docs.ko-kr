@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fd1477715bafa4e3455a3e476acbae3a098dbe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5067651a9cb30602a7318380d469b6f6381d8756
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-unload-an-application-domain"></a>방법: 응용 프로그램 도메인 언로드
 응용 프로그램 도메인 사용을 마쳤으면 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 메서드를 사용하여 언로드합니다. **Unload** 메서드는 지정된 응용 프로그램 도메인을 정상적으로 종료합니다. 언로드 프로세스 중에는 새 스레드가 응용 프로그램 도메인에 액세스할 수 없으며 모든 응용 프로그램 도메인 특정 데이터 구조가 비워집니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 예제에서는 `MyDomain`이라는 새 응용 프로그램 도메인을 만들고, 콘솔에 일부 정보를 출력한 다음, 해당 응용 프로그램 도메인을 언로드합니다. 이 코드에서는 언로드된 응용 프로그램 도메인의 이름을 콘솔에 출력하려고 합니다. 이 동작은 프로그램 끝에 있는 try/catch 문으로 처리되는 예외를 생성합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-cpp[System.AppDomain.Load#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source3.cpp#3)]
  [!code-csharp[System.AppDomain.Load#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source3.cs#3)]
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  

@@ -9,11 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>macOS에서 .NET Core 시작
 
@@ -80,7 +81,7 @@ dotnet add library package Newtonsoft.Json
 </ItemGroup>
 ```
 
-실행 [ `dotnet restore` ](../tools/dotnet-restore.md), ([참고 참조](#dotnet-restore-note)) 종속성을 복원 하 고 만듭니다는 *obj* 폴더 *라이브러리* 3 개 에 파일을 포함 하는 *project.assets.json* 파일:
+종속성을 복원하고 *library* 내에 *obj* 폴더를 만드는 [`dotnet restore`](../tools/dotnet-restore.md)([참고 참조](#dotnet-restore-note))를 실행합니다. 이 폴더 안에는 *project.assets.json* 파일을 비롯한 세 개의 파일이 들어 있습니다.
 
 ```console
 dotnet restore
@@ -194,7 +195,7 @@ dotnet sln add app/app.csproj
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-실행 `dotnet restore` ([참고 참조](#dotnet-restore-note)) 솔루션의 세 가지 프로젝트의 종속성을 복원 합니다. *Program.cs*를 열고 `Main` 메서드의 내용을 다음 줄로 바꿉니다.
+`dotnet restore`([참고 참조](#dotnet-restore-note))를 실행하여 솔루션에 있는 세 프로젝트의 종속성을 복원합니다. *Program.cs*를 열고 `Main` 메서드의 내용을 다음 줄로 바꿉니다.
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");

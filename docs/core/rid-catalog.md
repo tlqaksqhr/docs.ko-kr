@@ -6,11 +6,12 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 카탈로그
 
@@ -85,7 +86,7 @@ RID를 사용할 때는 RID에 대한 다음과 같은 몇 가지 고려 사항�
 RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. 새 값이 플랫폼에 정기적으로 추가됩니다.
 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
 
-.NET Core 2.0 SDK에서는 이식 가능 RID라는 개념을 도입합니다. 이식 가능 RID란 RID 그래프에 추가된 새 값인데 아직 특정 버전 또는 OS 배포에 연결되지 않은 값입니다. 여러 Linux 배포판을 처리할 때 특히 유용 합니다.
+.NET Core 2.0 SDK에서는 이식 가능 RID라는 개념을 도입합니다. 이식 가능 RID란 RID 그래프에 추가된 새 값인데 아직 특정 버전 또는 OS 배포에 연결되지 않은 값입니다. 이 값은 여러 Linux 배포를 다룰 때 매우 유용합니다.
 
 다음 목록에서는 각 OS에 사용되는 일반적인 RID를 보여 줍니다. `arm` 또는 `corert` 값은 다루지 않습니다.
 
@@ -111,7 +112,7 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
   - `win10-arm`
   - `win10-arm64`
 
-참조 [Windows에서.NET Core에 대 한 필수 구성 요소](windows-prerequisites.md) 자세한 정보에 대 한 합니다.
+자세한 내용은 [Windows에서 .NET Core의 필수 구성 요소](windows-prerequisites.md)를 참조하세요.
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -165,19 +166,19 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
   - `linuxmint.18-x64`
   - `linuxmint.18.1-x64`(.NET Core 2.0 이상 버전)
 
-참조 [Linux에서.NET Core에 대 한 필수 구성 요소](linux-prerequisites.md) 자세한 정보에 대 한 합니다.
+자세한 내용은 [Linux에서 .NET Core의 필수 구성 요소](linux-prerequisites.md)를 참조하세요.
 
-## <a name="macos-rids"></a>macOS Rid
+## <a name="macos-rids"></a>macOS RID
 
-macOS Rid 이전에 수행 된 "OSX" 브랜드를 사용 합니다.
+macOS RID는 이전 "OSX" 브랜딩을 사용합니다.
 
-- `osx-x64`(최소 버전은.NET core 2.0 또는 이후 버전 `osx.10.12-x64`)
+- `osx-x64`(.NET Core 2.0 이상 버전, 최소 버전은 `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
 - `osx.10.12-x64`(.NET Core 1.1 이상 버전)
 - `osx.10.13-x64`
 
-참조 [macOS에서.NET Core에 대 한 필수 구성 요소](macos-prerequisites.md) 자세한 정보에 대 한 합니다.
+자세한 내용은 [macOS에서 .NET Core의 필수 구성 요소](macos-prerequisites.md)를 참조하세요.
 
 ## <a name="android-rids-net-core-20-or-later-versions"></a>Android RID(.NET Core 2.0 이상 버전)
 

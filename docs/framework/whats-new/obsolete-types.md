@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 659028e56849af1404768afff2de3ae95fb3aba8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
 <a name="introduction"></a> 이 문서의 표에는 어셈블리에서 구성된 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 사용하지 않는 형식이 나열되어 있습니다. 사용하지 않는 형식과 각 어셈블리에서 권장되는 대체 형식의 목록을 보려면 다음 링크를 사용합니다. 이러한 형식은 사용되지 않으므로 해당 형식의 멤버도 모두 사용되지 않습니다. .NET Framework 클래스 라이브러리의 사용되지 않는 멤버에 대한 추가 목록은 [사용되지 않는 멤버](../../../docs/framework/whats-new/obsolete-members.md)를 참조하십시오.  
@@ -93,51 +94,51 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> 클래스는 사용되지 않습니다.|  
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음 System.Runtime.CompilerServices 네임스페이스의 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> 클래스를 대신 사용합니다.|  
 |<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|대체 API 사용 가능: <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 사용자 지정 특성을 대신 내보냅니다.|  
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType>를 사용하세요.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>|이 특성은 사용되지 않으며 이후 버전에서 제거됩니다.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>는 사용되지 않습니다.|  
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType>를 사용하세요.|  
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=nameWithType>|이 특성은 사용되지 않습니다. 응용 프로그램 도메인에서는 더 이상 IDispatch 호출의 활성화 컨텍스트 경계를 따르지 않습니다.|  
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> 를 사용하세요.|  
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>를 사용하세요.|  
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> 를 사용하세요.|  
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope>는 .NET 2.0 투명도 호환성을 위한 용도로만 사용됩니다.|  
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute>는 .NET 2.0 투명도 호환성을 위한 용도로만 사용됩니다. 대신 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>를 사용하십시오.|  
@@ -189,7 +190,7 @@ ms.lasthandoff: 11/21/2017
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> 를 사용하세요.|  
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>를 사용하세요.|  
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|DataBindings 편집은 속성 표가 아닌 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType>를 통해 시작되므로 이 형식은 사용하지 않는 것이 좋습니다.|  
 |<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=nameWithType>|DataBindings 편집은 속성 표가 아닌 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType>를 통해 시작되므로 이 형식은 사용하지 않는 것이 좋습니다.|  
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=nameWithType>|<xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=nameWithType> 및 <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=nameWithType>를 대신 사용하는 것이 좋습니다.|  
@@ -638,7 +639,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="VBCompat"></a>   
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>어셈블리: Microsoft.VisualBasic.Compatibility.dll  
-  Visual Basic 6에서 마이그레이션에 대 한 정보를 참조 하십시오. [Visual Basic 6.0 리소스 센터](https://msdn.microsoft.com/library/windows/desktop/ms788229)합니다.
+  Visual Basic 6에서 마이그레이션에 대한 정보는 [Visual Basic 6.0 리소스 센터](https://msdn.microsoft.com/library/windows/desktop/ms788229)를 참조하세요.
 |형식|메시지|  
 |----------|-------------|  
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|이 멤버는 사용되지 않습니다.|  

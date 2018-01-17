@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
@@ -62,33 +63,33 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="linux-distribution-dependencies"></a>Linux 배포 종속성
 
-다음 예제로 사용 됩니다. 정확한 버전 및 이름 선택한 Linux 분포로 약간 다를 수 있습니다.
+다음은 예제로 사용됩니다. 정확한 버전 및 이름은 선택한 Linux 배포에 따라 약간 다를 수 있습니다.
 
 ### <a name="ubuntu"></a>Ubuntu
 
 Ubuntu 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 
 * libunwind8
-* liblttng ust0
+* liblttng-ust0
 * libcurl3
 * libssl1.0.0
 * libuuid1
 * libkrb5
 * zlib1g
-* libicu52 (14.X)에 대 한
-* libicu55 (용 16.X)
-* libicu57 (용 17.X)
+* libicu52(14.X용)
+* libicu55(16.X용)
+* libicu57(17.X용)
 
 ### <a name="centos"></a>CentOS
 
 CentOS 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 
 * libunwind
-* lttng ust
+* lttng-ust
 * libcurl
-* openssl 라이브러리
+* openssl-libs
 * libuuid
-* 하려면 krb5 라이브러리
+* krb5-libs
 * libicu
 * zlib
 
@@ -105,7 +106,7 @@ Linux에는 두 가지 패키지 선택 항목이 있습니다.
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core 설치 관리자 스크립트를 사용하여 설치 스크립팅
 
-`dotnet-install` 스크립트는 CLI 도구 체인 및 공유 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. 스크립트를 다운로드할 수 있습니다: https://dot.net/v1/dotnet-install.sh
+`dotnet-install` 스크립트는 CLI 도구 체인 및 공유 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. https://dot.net/v1/dotnet-install.sh에서 스크립트를 다운로드할 수 있습니다.
 
 설치 관리자 bash 스크립트는 자동화 시나리오 및 비관리자 설치에 사용됩니다. 또한 이 스크립트는 PowerShell 스위치를 읽으므로 Linux/OS X 시스템에서 스크립트와 함께 사용할 수 있습니다.
 
@@ -211,6 +212,12 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 
 3. 원하는 버전의 호스트 패키지 피드를 설정합니다.
 
+   **Ubuntu 17.10**
+
+   ```bash
+   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
+   sudo apt-get update
+   ```
    **Ubuntu 17.04**
 
    ```bash
@@ -235,7 +242,7 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 4. .NET Core를 설치합니다.
 
    ```bash
-   sudo apt-get install dotnet-sdk-2.0.0
+   sudo apt-get install dotnet-sdk-2.1.3
    ```
 
 4. `dotnet --version` 명령을 실행하여 설치 성공을 증명합니다.

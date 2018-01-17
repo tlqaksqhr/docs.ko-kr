@@ -29,11 +29,12 @@ caps.latest.revision: "57"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: af79c4309dfd048562b2ee14a71c6da791040397
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b13da21709bb85ddf376f84df4fe2c7ae9f1a513
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 네이티브 이미지 생성기(Ngen.exe)는 관리되는 응용 프로그램의 성능을 향상시키는 도구입니다. Ngen.exe는 컴파일된 프로세서별 컴퓨터 코드가 포함된 파일인 네이티브 이미지를 만들어서 로컬 컴퓨터의 네이티브 이미지 캐시에 설치합니다. 런타임은 JIT(Just-In-Time) 컴파일러를 사용하지 않고 캐시의 네이티브 이미지를 사용하여 원본 어셈블리를 컴파일할 수 있습니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
  Windows 8에서는 [네이티브 이미지 작업](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)을 참조하세요.  
   
- Ngen.exe 및 네이티브 이미지 서비스 사용에 대한 자세한 내용은 [네이티브 이미지 서비스](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)를 참조하세요.  
+ Ngen.exe 및 네이티브 이미지 서비스 사용에 대한 자세한 내용은 [네이티브 이미지 서비스][Native Image Service]를 참조하세요.  
   
 > [!NOTE]
 >  .NET Framework 버전 1.0 및 1.1의 Ngen.exe 구문은 [네이티브 이미지 생성기(Ngen.exe) 레거시 구문](http://msdn.microsoft.com/en-us/5a69fc7a-103f-4afc-8ab4-606adcb46324)에 있습니다.  
@@ -104,7 +105,7 @@ ngen /? | /help
 |--------------|-----------------|  
 |`1`|네이티브 이미지는 유휴 시간을 기다리지 않고 즉시 생성 및 설치됩니다.|  
 |`2`|네이티브 이미지가 유휴 시간을 기다리지 않고 생성 후 설치되지만 모든 우선 순위 1 이후의 작업(및 해당 종속성)은 완료되었습니다.|  
-|`3`|네이티브 이미지는 네이티브 이미지 서비스에서 컴퓨터의 유휴 상태를 감지할 때 설치됩니다. [네이티브 이미지 서비스](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)를 참조하세요.|  
+|`3`|네이티브 이미지는 네이티브 이미지 서비스에서 컴퓨터의 유휴 상태를 감지할 때 설치됩니다. [네이티브 이미지 서비스][Native Image Service]를 참조하세요.|  
   
 <a name="ScenarioTable"></a>   
 ## <a name="scenarios"></a>시나리오  
@@ -133,7 +134,7 @@ ngen /? | /help
 |`/verbose`|디버깅에 대한 자세한 내용을 표시합니다. **참고:** 운영 체제 제한으로 인해 이 옵션은 Windows 98 및 Windows Millennium Edition에 대한 추가 정보를 표시하지 않습니다.|  
 |`/help`, `/?`|현재 릴리스의 명령 구문 및 옵션을 표시합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  Ngen.exe를 실행하려면 관리자 권한이 있어야 합니다.  
   
 > [!CAUTION]
@@ -321,7 +322,7 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="Deferred"></a>   
 ## <a name="deferred-processing"></a>처리 지연  
- 규모가 큰 응용 프로그램의 네이티브 이미지를 생성하는 데 시간이 많이 걸릴 수 있습니다. 마찬가지로 공유 구성 요소를 변경하거나 컴파일러 설정을 변경하려면 업데이트할 네이티브 이미지가 여러 개 필요합니다. `install` 및 `update` 작업에는 네이티브 이미지 서비스가 지연된 실행에 대한 작업을 큐에 대기시키는 `/queue`가 있습니다. 또한 Ngen.exe에는 서비스를 일부 제어하는 `queue` 및 `executeQueuedItems` 작업이 있습니다. 자세한 내용은 [네이티브 이미지 서비스](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)를 참조하세요.  
+ 규모가 큰 응용 프로그램의 네이티브 이미지를 생성하는 데 시간이 많이 걸릴 수 있습니다. 마찬가지로 공유 구성 요소를 변경하거나 컴파일러 설정을 변경하려면 업데이트할 네이티브 이미지가 여러 개 필요합니다. `install` 및 `update` 작업에는 네이티브 이미지 서비스가 지연된 실행에 대한 작업을 큐에 대기시키는 `/queue`가 있습니다. 또한 Ngen.exe에는 서비스를 일부 제어하는 `queue` 및 `executeQueuedItems` 작업이 있습니다. 자세한 내용은 [네이티브 이미지 서비스][Native Image Service]를 참조하세요.  
   
 <a name="JITCompilation"></a>   
 ## <a name="native-images-and-jit-compilation"></a>네이티브 이미지 및 JIT 컴파일  
@@ -427,7 +428,7 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe  
 ```  
   
- 전역 어셈블리 캐시에 어셈블리에 대한 네이티브 이미지를 만들려면 어셈블리의 표시 이름을 사용합니다. 예를 들면 다음과 같습니다.  
+ 전역 어셈블리 캐시에 어셈블리에 대한 네이티브 이미지를 만들려면 어셈블리의 표시 이름을 사용합니다. 예:  
   
 ```  
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,   
@@ -478,7 +479,7 @@ ngen display "myAssembly, version=1.0.0.0"
 ngen update  
 ```  
   
- 모든 이미지를 업데이트하려면 시간이 많이 걸릴 수 있습니다. `/queue` 옵션을 사용하여 네이티브 이미지 서비스에서 실행할 업데이트를 큐에 대기시킬 수 있습니다. `/queue` 옵션 및 설치 우선 순위에 대한 자세한 내용은 [네이티브 이미지 서비스](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)를 참조하세요.  
+ 모든 이미지를 업데이트하려면 시간이 많이 걸릴 수 있습니다. `/queue` 옵션을 사용하여 네이티브 이미지 서비스에서 실행할 업데이트를 큐에 대기시킬 수 있습니다. `/queue` 옵션 및 설치 우선 순위에 대한 자세한 내용은 [네이티브 이미지 서비스][Native Image Service]를 참조하세요.  
   
 ```  
 ngen update /queue  
@@ -519,7 +520,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   
  `install` 작업과 마찬가지로 확장명을 제공하려면 어셈블리가 포함된 디렉터리에서 Ngen.exe를 실행하거나 전체 경로를 지정해야 합니다.  
   
- 네이티브 이미지 서비스와 관련된 예제는 [네이티브 이미지 서비스](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)를 참조하세요.  
+ 네이티브 이미지 서비스와 관련된 예제는 [네이티브 이미지 서비스][Native Image Service]를 참조하세요.  
   
 ## <a name="native-image-task"></a>네이티브 이미지 작업  
  네이티브 이미지 작업은 네이티브 이미지를 생성 및 유지 관리하는 Windows 작업입니다. 네이티브 이미지 작업은 지원되는 시나리오에 대해 자동으로 네이티브 이미지를 생성 및 회수합니다. ([네이티브 이미지 만들기](http://msdn.microsoft.com/en-us/2bc8b678-dd8d-4742-ad82-319e9bf52418)를 참조하세요.) 또한 설치 관리자가 [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)를 사용하여 지연된 시간에 네이티브 이미지를 만들고 업데이트할 수 있게 합니다.  
@@ -531,7 +532,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |NET Framework NGEN v4.0.30319|예|예|  
 |NET Framework NGEN v4.0.30319 64|아니요|예|  
   
- Windows 8 이상에서 실행되는 경우 네이티브 이미지 작업은 .NET Framework 4.5 이상 버전에서 사용할 수 있습니다. 이전 버전의 Windows에서는 .NET Framework에서 [네이티브 이미지 서비스](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)를 사용합니다.  
+ Windows 8 이상에서 실행되는 경우 네이티브 이미지 작업은 .NET Framework 4.5 이상 버전에서 사용할 수 있습니다. 이전 버전의 Windows에서는 .NET Framework에서 [네이티브 이미지 서비스][Native Image Service]를 사용합니다.  
   
 ### <a name="task-lifetime"></a>작업 수명  
  일반적으로 Windows 작업 스케줄러는 매일 밤 컴퓨터가 유휴 상태일 때 네이티브 이미지 작업을 시작합니다. 작업은 응용 프로그램 설치 관리자가 큐에 대기한 지연된 작업, 지연된 네이티브 이미지 업데이트 요청 및 자동 이미지 생성을 모두 확인합니다. 작업은 처리 중인 작업 항목을 완료하고 종료됩니다. 작업이 실행되는 동안 컴퓨터 유휴 상태가 중지되면 작업이 중지됩니다.  
@@ -593,9 +594,9 @@ ngen executeQueuedItems
  .NET Framework 버전 2.0에서 네이티브 이미지 서비스와의 유일한 상호 작용은 명령줄 도구 Ngen.exe를 통해 수행됩니다. 설치 스크립트의 명령줄 도구를 사용하여 네이티브 이미지 서비스에 대한 작업을 큐에 대기시키고 서비스와 상호 작용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [네이티브 이미지 서비스](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)  
- [네이티브 이미지 작업](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)  
  [도구](../../../docs/framework/tools/index.md)  
  [관리되는 실행 프로세스](../../../docs/standard/managed-execution-process.md)  
  [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+[Native Image Service]: #native-image-service
