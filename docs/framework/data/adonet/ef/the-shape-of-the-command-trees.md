@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 13e2e154a96b46d630b6df11fe3ae024d799c8e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d7e2b25788b088d9da49bad206f8f2f11d0104a2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="the-shape-of-the-command-trees"></a>명령 트리의 모양
 SQL 생성 모듈은 지정된 입력 쿼리 명령 트리 식을 기반으로 특정 백엔드 SQL 쿼리를 생성하는 작업을 담당합니다. 이 단원에서는 쿼리 명령 트리의 특성, 속성 및 구조에 대해 설명합니다.  

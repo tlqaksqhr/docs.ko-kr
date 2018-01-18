@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 87406da2c591f9f3a8f47adb2029bf1e239cc64e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 358bc0428a53817e85d5a5e278d8da4e1a8b6927
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
 응용 프로그램 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. 사용 하 여 컴파일된 응용 프로그램의 소스 코드에는 암호화 되지 않은 연결 문자열을 볼 수는 [Ildasm.exe (IL 디스어셈블러)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 도구입니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 응용 프로그램을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 응용 프로그램 구성 파일에 저장하는 것이 좋습니다.  

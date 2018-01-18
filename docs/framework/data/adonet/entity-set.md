@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9d0cef0247c36f3c7819e37f8144635ebdbf610b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 050c73d3fd9146c8eee83baf1bd504acc18c8718
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-set"></a>엔터티 집합
 *엔터티 집합* 는 대 한 논리적 컨테이너의 인스턴스는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 및 해당 엔터티 형식에서 파생 된 유형의 인스턴스. (파생된 형식에 대 한 정보를 참조 하십시오. [엔터티 데이터 모델: 상속](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) 엔터티 형식과 엔터티 집합 간의 관계는 관계형 데이터베이스의 행과 테이블 간 관계와 유사합니다. 행과 마찬가지로 엔터티 형식은 데이터 구조를 설명하고, 테이블과 마찬가지로 엔터티 집합에는 지정된 구조의 인스턴스가 포함됩니다. 엔터티 집합은 데이터 모델링 구문이 아니며 데이터 구조를 설명하지 않습니다. 대신 엔터티 집합은 엔터티 형식 인스턴스를 그룹화하여 데이터 저장소에 매핑할 수 있도록 호스팅 또는 저장소 환경(예: 공용 언어 런타임 또는 SQL Server 데이터베이스)에 대한 구문을 제공합니다.  

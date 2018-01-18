@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 421a2bdbf2652880097fb1df3c9b63f38ac2bd10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6e6207087524a1ec1201511a91a810f02449e610
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-data-model-inheritance"></a>엔터티 데이터 모델: 상속
 (EDM (엔터티 데이터 모델)에 대 한 상속 지원 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md)합니다. EDM의 상속은 개체 지향 프로그래밍 언어의 클래스에 대한 상속과 유사합니다. 개체 지향 언어의 클래스와 함께 개념적 모델에서 정의한 엔터티 형식 처럼 (한 *파생 형식*) 다른 엔터티 형식에서 상속 되는 (의 *기본 형식*). 그러나 개체 지향 프로그래밍의 클래스와 달리 개념적 모델에서 파생 된 형식 항상 모든 상속 된 [속성](../../../../docs/framework/data/adonet/property.md) 및 [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md) 기본 형식입니다. 파생 형식에서 상속된 속성을 재정의할 수는 없습니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>예제  
  다음 다이어그램에서는 네 가지 엔터티 형식 `Book`, `FictionBook`, `Publisher` 및 `Author`가 포함된 개념적 모델을 보여 줍니다. `FictionBook` 엔터티 형식은 `Book` 엔터티 형식에서 상속되는 파생 형식입니다. `FictionBook` 형식은 `ISBN (Key)`, `Title` 및 `Revision` 속성을 상속하고 `Genre`라는 추가 속성을 정의합니다.  
   
- ![상속](../../../../docs/framework/data/adonet/media/inheritanceexample.gif "InheritanceExample")  
+ ![Inheritance](../../../../docs/framework/data/adonet/media/inheritanceexample.gif "InheritanceExample")  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 개념 스키마 정의 언어를 호출 하는 도메인 특정 언어 DSL ()를 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 위의 다이어그램에 표시된 `FictionBook` 형식에서 상속되는 엔터티 형식 `Book`을 정의합니다.  
   

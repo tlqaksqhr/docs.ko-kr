@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 37f96338868183e8bf0397d9c0d09719fa3f7049
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb6f8683ce49c8115b6dce477d0e61369d7abeef
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="creating-the-object-model"></a>개체 모델 만들기
 기존 데이터베이스에서 개체 모델을 만들어 해당 모델을 기본 상태로 사용할 수 있습니다. 또한 모델의 많은 부분과 동작을 사용자 지정할 수 있습니다.  

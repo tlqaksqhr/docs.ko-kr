@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 37dfeec82339ed4381d158b1bd5ac442223bfe50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a24b8fe5d0da4b3fa3a13db15bd91be83f102dcf
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>웹 서비스를 사용하는 LINQ to SQL N 계층
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]웹 서비스와 같이 느슨하게 결합 된 데이터 액세스 계층 (DAL)에서 중간 계층에서 사용 하도록 설계 되었습니다. 프레젠테이션 계층이 ASP.NET 웹 페이지인 경우에는 <xref:System.Web.UI.WebControls.LinqDataSource> 웹 서버 컨트롤을 사용하여 사용자 인터페이스와 중간 계층의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사이에 데이터 전송을 관리합니다. 그러나 프레젠테이션 계층이 ASP.NET 페이지가 아닌 경우에는 중간 계층과 프레젠테이션 계층 모두에서 데이터 serialization 및 deserialization을 관리하기 위해 추가적인 작업을 수행해야 합니다.  

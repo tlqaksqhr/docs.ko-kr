@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 43e937836911808789e2cad8affb395cc73ceb68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b32002b8bb9b1eaf7a72a8fac306ecdd5f2e5931
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="retrieving-binary-data"></a>이진 데이터 검색
 기본적으로는 **DataReader** 데이터의 전체 행을 사용할 수 있는 즉시 행으로 들어오는 데이터를 로드 합니다. 그러나 BLOB(Binary Large Object)는 단일 행에 포함할 수 없는 기가바이트 데이터를 포함할 수 있으므로 다르게 처리되어야 합니다. **Command.ExecuteReader** 메서드에 수행 하는 오버 로드는 <xref:System.Data.CommandBehavior> 의 기본 동작을 수정 하는 인수는 **DataReader**합니다. 전달할 수 <xref:System.Data.CommandBehavior.SequentialAccess> 에 **ExecuteReader** 의 기본 동작을 수정 하는 메서드는 **DataReader** 행의 데이터를 로드 하는 대신 해당 데이터를 로드 합니다 순차적으로 받으면 되도록 합니다. 이것은 BLOB 또는 기타 대형 데이터 구조를 로드하는 데 적합합니다. 이 동작은 데이터 소스에 따라 다를 수 있습니다. 예를 들어, Microsoft Access에서 BLOB를 반환할 경우에는 BLOB를 받을 때 데이터를 순서대로 로드하는 것이 아니라 전체 BLOB를 메모리에 로드합니다.  

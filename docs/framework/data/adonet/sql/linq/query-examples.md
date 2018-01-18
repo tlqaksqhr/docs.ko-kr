@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 91ff476ed8f6060975c6adc1fe01a6db9c199969
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b3aabf5a47088fa408547527c5f18fa69a48e02
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-examples"></a>쿼리 예제
 이 단원에서는 일반적인 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 쿼리에 대한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 및 C# 예제를 제공합니다. [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자들은 샘플 단원에서 제공하는 샘플 솔루션에서 더 많은 예제를 찾아볼 수 있습니다. 자세한 내용은 참조 [샘플](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)합니다.  

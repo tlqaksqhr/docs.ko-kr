@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: def78e45fa59fafbc6b8e5ffec7273f755e49d29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6865da677645a404e2116d1e7777106ed55223d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="comparison-expressions"></a>식 비교
 비교 식은 상수 값, 속성 값, 메서드 결과가 다른 값과 같은지, 같지 않은지, 다른 값보다 큰지, 작은지를 확인합니다. 특정 비교가 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]에 유효하지 않으면 예외가 throw됩니다. 암시적이든 명시적이든 모든 비교를 수행하려면 데이터 소스의 모든 구성 요소가 비교 가능한 항목이어야 합니다. 비교 식은 쿼리 결과를 제한하기 위해 `Where` 절에서 자주 사용됩니다.  

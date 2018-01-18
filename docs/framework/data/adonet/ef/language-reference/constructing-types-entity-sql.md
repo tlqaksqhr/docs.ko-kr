@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a10ac4f8b89259c7d5ff46ad99ad6c8a925726d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a6ae2334c879733e964014716c2b67e77f271d5
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="constructing-types-entity-sql"></a>형식 생성(Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]세 가지 종류의 생성자를 제공: 행 생성자, 명명 된 형식 생성자 및 컬렉션 생성자입니다.  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 754a13d62a8a3eb238799b46ae2304b84077140e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1c9d438840a0b9c15597177ca4e6d870d526756
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="model-defined-function"></a>모델 정의 함수
 A *모델 정의 함수* 는 개념적 모델에 정의 된 함수입니다. 모델 정의 함수의 본문을 단위로 [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), 규칙을 허용 하는 함수를 독립적으로 표현할 수에 대 한 또는 데이터 원본에서 지원 되는 언어입니다.  

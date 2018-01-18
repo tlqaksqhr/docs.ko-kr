@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 766f9388271687de626a5dbdbf39a48f36c1a474
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 637e1c2fe66bcfd31b0392076b8b1058d0008482
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>메서드 기반 쿼리 구문 예제: 집합 연산자(LINQ to DataSet)
 이 항목의 예제에 사용 하는 방법을 보여 주기는 <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, 및 <xref:System.Linq.Enumerable.Union%2A> 데이터 행 집합에 대해 값 기반 비교 연산을 수행 하는 연산자입니다.[ 데이터에는 데이터 집합 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) 참조 [Datarow 비교](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) 대 한 자세한 내용은 <xref:System.Data.DataRowComparer>합니다.  

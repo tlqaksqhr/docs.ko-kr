@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 040a45b5724bdc18c93a97f9fe9717be7543d641
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d37ea32ef1f73b84050cdd64ca026ac12813bbd2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>트랜잭션 및 대량 복사 작업
 대량 복사 작업을 격리된 작업이나 여러 단계로 이루어진 트랜잭션의 일부로 수행할 수 있습니다. 후자를 사용하면 다른 데이터베이스 작업(삽입, 업데이트, 삭제 등)을 수행하면서 같은 트랜잭션 내에서 둘 이상의 대량 복사 작업을 수행할 수 있을 뿐만 아니라 전체 트랜잭션을 커밋하거나 롤백할 수 있습니다.  

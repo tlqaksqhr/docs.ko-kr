@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: eba9e4462c1a71708173994dfb3efaf4199248c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b379f6eec503f5dffc5a01dd8f5cbc79e19b8c40
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>단독으로 저장 프로시저를 사용하여 작업 사용자 지정
 저장 프로시저만을 사용한 데이터 액세스는 일반적인 시나리오입니다.  

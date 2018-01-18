@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f7ab9d1043fdd1d4d78ec09390f227f297e471c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30425680333bfebddcd7a34ac1cd2a07b1556d91
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="handling-datatable-events"></a>DataTable 이벤트 처리
 <xref:System.Data.DataTable> 개체는 응용 프로그램에서 처리할 수 있는 일련의 이벤트를 제공합니다. 다음 표에서는 `DataTable` 이벤트에 대해 설명합니다.  

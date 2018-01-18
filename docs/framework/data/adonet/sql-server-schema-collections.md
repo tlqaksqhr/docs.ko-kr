@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 스키마 컬렉션
 Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉션뿐만 아니라 다른 스키마 컬렉션도 추가적으로 지원합니다. 지원되는 스키마 컬렉션은 현재 사용하고 있는 SQL Sever 버전에 따라 조금씩 다를 수 있습니다. 지원 되는 스키마 컬렉션의 목록을 확인 하려면 호출는 **GetSchema** 메서드를 인수 없이, 또는 "metadatacollections 라는" 스키마 컬렉션 이름입니다. 그러면 지원되는 스키마 컬렉션의 목록, 각자 지원하는 제약 조건 수 및 사용하는 식별자 부분 수가 포함된 <xref:System.Data.DataTable>이 반환됩니다.  
@@ -62,7 +62,7 @@ Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉
   
 |열 이름|데이터 형식|설명|  
 |----------------|--------------|-----------------|  
-|type_desc|문자열|인덱스 형식은 다음 중 하나입니다.<br /><br /> -HEAP<br />되지 클러스터<br />-비클러스터형<br />XML<br />공간|  
+|type_desc|문자열|인덱스 형식은 다음 중 하나입니다.<br /><br /> -   HEAP<br />되지 클러스터<br />-비클러스터형<br />-   XML<br />공간|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -86,9 +86,9 @@ Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉
 |SPECIFIC_CATALOG|문자열|카탈로그의 특정 이름입니다.|  
 |SPECIFIC_SCHEMA|문자열|스키마의 특정 이름입니다.|  
 |SPECIFIC_NAME|문자열|카탈로그의 특정 이름입니다.|  
-|ROUTINE_CATALOG와|문자열|저장 프로시저가 속하는 카탈로그입니다.|  
+|ROUTINE_CATALOG|문자열|저장 프로시저가 속하는 카탈로그입니다.|  
 |ROUTINE_SCHEMA|문자열|저장 프로시저를 포함하는 스키마입니다.|  
-|ROUTINE_NAME과|문자열|저장 프로시저의 이름입니다.|  
+|ROUTINE_NAME|문자열|저장 프로시저의 이름입니다.|  
 |ROUTINE_TYPE|문자열|저장 프로시저에 대해서는 PROCEDURE를 반환하고 함수에 대해서는 FUNCTION을 반환합니다.|  
 |CREATED|DateTime|프로시저가 만들어진 시간입니다.|  
 |LAST_ALTERED|DateTime|프로시저가 마지막으로 수정된 시간입니다.|  

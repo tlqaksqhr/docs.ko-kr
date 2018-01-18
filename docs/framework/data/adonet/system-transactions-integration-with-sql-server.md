@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3b56d61593aed1a0cdce2fd45d902d9f4ac00cda
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server와의 System.Transactions 통합
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 2.0에는 <xref:System.Transactions> 네임스페이스를 통해 액세스할 수 있는 트랜잭션 프레임워크가 추가되었습니다. 이 프레임워크는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]을 포함하여 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에 완전히 통합된 방식으로 트랜잭션을 노출시킵니다.  

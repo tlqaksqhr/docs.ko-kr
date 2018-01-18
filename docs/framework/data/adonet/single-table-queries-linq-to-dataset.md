@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 103c7cde61350a1efaf0784964c3f31cc7d55e4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ac58f5e98113150123b152dad8d2cc25c61cf97
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>단일 클래스 쿼리(LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]쿼리 작업을 구현 하는 데이터 원본에는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스입니다. <xref:System.Data.DataTable> 클래스에는 두 인터페이스가 구현되어 있지 않으므로 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 쿼리의 <xref:System.Data.DataTable> 절에서 `From`을 소스로 사용하려면 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 메서드를 호출해야 합니다.  

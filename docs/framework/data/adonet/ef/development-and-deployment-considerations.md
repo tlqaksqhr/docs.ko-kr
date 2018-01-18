@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 594d0516a739986580d37e86eab32da14c359e99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6c494354532ffdeffdc714f748c5b009511443a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="development-and-deployment-considerations"></a>개발 및 배포 고려 사항
 이 단원의 항목에서는 ADO.NET Entity Framework를 기반으로 하는 응용 프로그램을 개발하거나 배포할 때 고려해야 할 문제를 다룹니다.  

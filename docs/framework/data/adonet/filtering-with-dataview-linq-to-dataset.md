@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d578c36500af6f388e63ad921a4dbb8acac225f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f1eb878bcc38d8bbeed42638cc5ccda230f60f1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView로 필터링(LINQ to DataSet)
 특정 조건을 사용하여 데이터를 필터링한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다. <xref:System.Data.DataView>에서는 데이터를 필터링하여 특정 필터 조건을 충족하는 데이터 행의 하위 집합을 반환하는 여러 가지 방법을 제공합니다. 문자열 기반 하는 것 외에도 필터링 기능 <xref:System.Data.DataView> 사용 하는 기능도 제공 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 필터링 조건에 대 한 식입니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]문자열 기반 필터링 보다 훨씬 더 복잡 하 고 강력한 필터링 작업에 대 한 식을 사용 합니다.  

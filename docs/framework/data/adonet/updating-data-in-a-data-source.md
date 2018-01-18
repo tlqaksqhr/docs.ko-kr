@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c83b137f0de5ee165d110706dc286d13a084427c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c611e2d7c4c1de17588ba5220124db55bca2764
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="updating-data-in-a-data-source"></a>데이터 원본에서 데이터 업데이트
 INSERT, UPDATE 또는 DELETE와 같이 데이터를 수정하는 SQL 문은 행을 반환하지 않습니다. 마찬가지로 대부분의 저장 프로시저도 동작을 수행하기는 하지만 행을 반환하지는 않습니다. 행을 반환 하지 않는 명령을 실행 하려면 만듭니다는 **명령** 개체를 적절 한 SQL 명령으로는 및 **연결**를 비롯 한 모든 필수 **매개 변수**합니다. 사용 하 여 명령을 실행의 **ExecuteNonQuery** 의 메서드는 **명령** 개체입니다.  

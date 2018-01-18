@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="common-schema-collections"></a>공용 스키마 컬렉션
 공통 스키마 컬렉션은 각 .NET Framework 관리 공급자를 통해 구현되는 스키마 컬렉션입니다. 호출 하 여 지원 되는 스키마 컬렉션의 목록을 확인 하려면.NET Framework 관리 공급자를 쿼리할 수 있습니다는 **GetSchema** 메서드를 인수 없이, 또는 "metadatacollections 라는" 스키마 컬렉션 이름을 사용 합니다. 그러면 지원되는 스키마 컬렉션의 목록, 각자 지원하는 제약 조건 수 및 사용하는 식별자 부분 수가 포함된 <xref:System.Data.DataTable>이 반환됩니다. 이 컬렉션은 필요한 모든 열을 설명합니다. 공급자는 필요에 따라 열을 추가할 수 있습니다. 예를 들어, `SqlClient` 및 `OracleClient`는 ParameterName 을 Restrictions 컬렉션에 추가합니다.  

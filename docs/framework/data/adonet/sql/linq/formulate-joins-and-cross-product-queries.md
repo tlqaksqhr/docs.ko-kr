@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b21bee335c5856c961c5abc21ad03c5d1f2c2307
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f652f25d04480afb3df1f623347eee23d3ed258
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>방법: 조인 및 교차곱 쿼리 작성
 다음 예제에서는 여러 테이블의 결과를 결합하는 방법을 보여 줍니다.  

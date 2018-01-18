@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e05ede0981a066abd72aafa81478d6c84342d18f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cea3468732367a7c179528601327f0110c0e38c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="getting-started"></a>시작
 사용 하 여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]를 사용할 수 있습니다는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 기술 SQL 액세스 하는 메모리 내 컬렉션에 액세스 하는 것 처럼 데이터베이스입니다.  

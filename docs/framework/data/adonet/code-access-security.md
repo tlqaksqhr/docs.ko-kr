@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 754c380972d79343eab83b9e862e478798218ffc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2181682fcdf0468a978dd939dbbcbb4a18cdd38b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="code-access-security-and-adonet"></a>코드 액세스 보안 및 ADO.NET
 .NET Framework는 역할 기반 보안과 CAS(코드 액세스 보안)를 제공합니다. 두 보안 기능 모두 CLR(공용 언어 런타임)이 제공하는 공용 인프라를 사용하여 구현되었습니다. 비관리 코드의 경우 대부분의 응용 프로그램은 사용자 또는 보안 주체 권한으로 실행됩니다. 결과적으로 높은 권한을 가진 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행하면 컴퓨터 시스템과 개인 데이터가 손상될 수 있습니다.  

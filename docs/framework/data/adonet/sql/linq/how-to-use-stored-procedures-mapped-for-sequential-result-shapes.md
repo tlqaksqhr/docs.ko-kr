@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 227fe2c777d23172caba5f290d9626552af4747a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a136876d358a94bf1b61540c93d10aea42a9798b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>방법: 순차적 결과 도형에 매핑된 저장 프로시저 사용
 이러한 종류의 저장 프로시저에서는 두 개 이상의 결과 도형을 만들지만 결과가 반환되는 순서를 사용자가 알 수 있습니다. 이러한 시나리오와 반대로 사용자가 반환 순서를 모르는 시나리오에 대한 자세한 내용은 참조 [하는 방법: 사용 하 여 여러 결과 도형에 대 한 저장 프로시저 매핑된](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)합니다.  

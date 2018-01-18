@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: cc482e2508dedde88e40390b4e4ce3edcab8189d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71524de2edbedb24cacc6727654aac5be0a48bb7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter 이벤트 처리
 ADO.NET <xref:System.Data.Common.DataAdapter>는 데이터 소스의 데이터가 변경되었을 때 응답하는 데 사용할 수 있는 세 가지 이벤트를 제공합니다. 다음 표에서는 `DataAdapter` 이벤트를 보여 줍니다.  

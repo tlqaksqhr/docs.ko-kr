@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: acc68fd36d2887e5e951f9ba5adc20e8cfd87fd2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9cdfdf01b950d13ba77f76b126fe6d2ff430ef07
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>데이터 집합 및 XmlDataDocument 동기화
 ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용할 수 있습니다. 계층적으로 데이터에 액세스하기 위해 .NET Framework에서 사용 가능한 XML 클래스를 사용할 수 있습니다. 지금까지는 데이터의 이와 같은 두 가지 표현이 별도로 사용되어 왔습니다. 그러나.NET Framework에서는 통해 데이터의 관계형 및 계층적 표현에 대 한 실시간으로 동시 액세스는 **데이터 집합** 개체 및 <xref:System.Xml.XmlDataDocument> 개체를 각각.  

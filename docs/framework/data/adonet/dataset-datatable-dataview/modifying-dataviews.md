@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 921707b07f1e8c8a9208df7de74512325f3027d2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c31f256bb86f007a9d083370d116464607cde236
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modifying-dataviews"></a>데이터 보기 수정
 <xref:System.Data.DataView>를 사용하여 원본 테이블의 데이터 행을 추가, 삭제 또는 수정할 수 있습니다. 사용 하는 기능은 **DataView** 의 세 가지 부울 속성 중 하나를 설정 하 여 제어 되는 원본 테이블에 데이터를 수정 하는 **DataView**합니다. 이러한 속성에는 <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> 및 <xref:System.Data.DataView.AllowDelete%2A>가 있습니다. 으로 설정 되어 **true** 기본적으로 합니다.  

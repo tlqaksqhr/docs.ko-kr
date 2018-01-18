@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8807564cb9acf8c50aed43ee11441ebdfbbcea78
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09d4d1e6d2e69d805c316f60e6d6e91d094e68cb
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="grouppartition-entity-sql"></a>GROUPPARTITION(Entity SQL)
 집계가 관련된 현재 그룹 파티션에서 예측된 인수 값의 컬렉션을 반환합니다. `GroupPartition` 집계는 그룹 기반 집계이며 컬렉션 기반 형식을 포함하지 않습니다.  

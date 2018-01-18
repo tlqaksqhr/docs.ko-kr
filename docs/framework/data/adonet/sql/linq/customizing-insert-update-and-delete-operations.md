@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 99a87a3d0dfabb053ca05644e0b3e53361821b9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa12b26723c3c97e45f75ae951a7496025fde5a9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>삽입, 업데이트 및 삭제 작업을 사용자 지정
 기본적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 동적 SQL을 생성하여 삽입, 읽기, 업데이트 및 삭제 작업을 수행합니다. 그러나 실제로는 대개 비즈니스 요구에 맞게 응용 프로그램을 사용자 지정합니다.  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4aefa7bf9d70f704d24ecd60d4958c96ed412eaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6398edb34a2389b113970444d98eec33f4833b93
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="paging-entity-sql"></a>페이징(Entity SQL)
 사용 하 여 물리적 페이징을 수행할 수 있습니다는 [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) 및 [제한](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) 하위 절은 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 절. 결정적인 방법으로 물리적 페이징을 수행하려면 SKIP과 LIMIT를 사용해야 합니다. 비 결정적인 방법으로 결과의 행 수를 제한 하려는 경우 사용 해야 [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)합니다. TOP과 SKIP/LIMIT는 함께 사용할 수 없습니다.  

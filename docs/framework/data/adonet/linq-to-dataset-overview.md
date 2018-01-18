@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0295ff475367b0867ff0a5b0dd85f7a686e343bc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet 개요
 <xref:System.Data.DataSet>은 가장 많이 사용되는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 구성 요소 중 하나이며 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 기반이 되는 연결되지 않은 프로그래밍 모델의 주요 요소이고 다양한 데이터 소스의 데이터를 명시적으로 캐시하는 데 사용할 수 있습니다. 프레젠테이션 계층의 경우 <xref:System.Data.DataSet>은 데이터 바인딩을 위해 GUI 컨트롤과 밀접하게 통합됩니다. 중간 계층의 경우 데이터의 관계 모양을 유지하는 캐시를 제공하고 빠르고 간단한 쿼리 및 계층 탐색 서비스를 포함합니다. 데이터베이스에 대한 요청 수를 줄이는 가장 일반적인 방법은 중간 계층에서 <xref:System.Data.DataSet>을 캐시 작업에 사용하는 것입니다. 예를 들어 데이터 구동 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 응용 프로그램을 가정해 봅시다. 응용 프로그램 데이터의 많은 부분은 자주 바뀌지 않으면서 세션이나 사용자를 통해 일반적으로 사용됩니다. 이 데이터를 웹 서버의 메모리에 유지하면 데이터베이스에 대한 요청의 수가 줄어서 사용자의 상호 작용 속도가 높아질 수 있습니다. 또 다른 유용한 측면에서 <xref:System.Data.DataSet> 응용 프로그램 공간으로 하나 이상의 데이터 원본에서 데이터의 하위 집합을 가져오는 데 응용 프로그램 수 있다는 점입니다. 이 경우 응용 프로그램에서는 메모리 내 데이터를 조작하는 동시에 관계 모양을 유지할 수 있습니다.  

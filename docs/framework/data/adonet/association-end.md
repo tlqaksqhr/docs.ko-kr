@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 53e52a09533f3e1ead240ec3284371603c82ce53
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffa768f50b3a80c22b4c84cffaf42897193a7d9f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="association-end"></a>연결 End
 *연결 end* 식별 하는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 의 한쪽 끝에는 [연결](../../../../docs/framework/data/adonet/association-type.md) 및 엔터티 수는 연결의 해당 end에 있을 수 있는 인스턴스를 입력 합니다. 연결 End는 연결의 일부로 정의되고 연결에는 정확히 두 개의 연결 End가 있어야 합니다. [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md) 다른 연결의 한 end에서 탐색할 수 있도록 합니다.  

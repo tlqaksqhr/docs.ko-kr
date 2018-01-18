@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee6109e497c0fda59169b394287db9abd4b3d76a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3a11b4dfde2afcf738f125a1fd7324ceff74669
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="boolean-data-types"></a>Boolean 데이터 형식
 부울 연산자는 단락(short-circuiting) 동작이 변환되지 않는 것을 제외하고 CLR(공용 언어 런타임)에서 예상대로 동작합니다. 예를 들어 Visual Basic `AndAlso` 연산자는 `And` 연산자와 같이 동작합니다. C# `&&` 연산자는 `&` 연산자와 같이 동작합니다.  
@@ -29,8 +29,8 @@ ms.lasthandoff: 12/22/2017
 |------------------|---------|  
 |[And 연산자](~/docs/visual-basic/language-reference/operators/and-operator.md)|[& 연산자](~/docs/csharp/language-reference/operators/and-operator.md)|  
 |[AndAlso 연산자](~/docs/visual-basic/language-reference/operators/andalso-operator.md)|[&& 연산자](~/docs/csharp/language-reference/operators/conditional-and-operator.md)|  
-|[Or 연산자](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; 연산자](~/docs/csharp/language-reference/operators/or-operator.md)|  
-|[OrElse 연산자](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124; &#124; 연산자](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
+|[Or 연산자](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; Operator](~/docs/csharp/language-reference/operators/or-operator.md)|  
+|[OrElse 연산자](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124;&#124; Operator](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
 |[Xor 연산자](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[^ 연산자](~/docs/csharp/language-reference/operators/xor-operator.md)|  
 |[Not 연산자](~/docs/visual-basic/language-reference/operators/not-operator.md)|[! 연산자](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
   

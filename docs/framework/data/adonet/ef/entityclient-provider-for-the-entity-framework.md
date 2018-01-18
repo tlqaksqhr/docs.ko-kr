@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1adaa5b116c579a6d74a950efbe3fc8c428c0ee3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eaccace7a333903e236107a72dbc17e19dc8d48a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework용 EntityClient 공급자
 EntityClient 공급자는 Entity Framework 응용 프로그램에서 개념적 모델에 설명된 데이터에 액세스하는 데 사용하는 데이터 공급자입니다. 개념적 모델에 대 한 정보를 참조 하십시오. [모델링 및 매핑](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)합니다. EntityClient는 다른 .NET Framework 데이터 공급자를 사용하여 데이터 소스에 액세스합니다. 예를 들어, EntityClient는 SQL Server 데이터베이스에 액세스할 때 .NET Framework Data Provider for SQL Server(SqlClient)를 사용합니다. SqlClient 공급자에 대 한 정보를 참조 하십시오. [Entity Framework 용 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)합니다. EntityClient 공급자는 <xref:System.Data.EntityClient> 네임스페이스에 구현되어 있습니다.  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e70f553d-4622-4627-928e-1aa2ee605d8e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 853bf55f96be3adeba11ff14e36fd56631536b69
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a7f95f7432fdac00a34e7d878ef979656a7af4e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-generation-in-the-sample-provider"></a>샘플 공급자의 SQL 생성
 [Entity Framework 샘플 공급자](http://go.microsoft.com/fwlink/?LinkId=180616) 새 구성 요소가 지 원하는 ADO.NET 데이터 공급자는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]합니다.  샘플 공급자는 SQL Server 2005 데이터베이스와 작동하며 System.Data.SqlClient ADO.NET 2.0 데이터 공급자에 대한 래퍼로 구현됩니다.  

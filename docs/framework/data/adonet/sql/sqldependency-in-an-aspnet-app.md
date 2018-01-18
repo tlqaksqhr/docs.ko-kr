@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8c63118db5333158feb596a534e01f922473cd7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3481d0f0be5a52b33125e2a92849f402cce82d93
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 응용 프로그램에서 SqlDependency
 이 단원의 예제에서는 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 개체를 활용하여 <xref:System.Web.Caching.SqlCacheDependency>를 간접적으로 사용하는 방법을 보여 줍니다. <xref:System.Web.Caching.SqlCacheDependency> 개체에서는 <xref:System.Data.SqlClient.SqlDependency>를 사용하여 알림을 수신하고 캐시를 올바르게 업데이트합니다.  

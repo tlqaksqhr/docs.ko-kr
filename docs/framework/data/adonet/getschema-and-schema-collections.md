@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d982964b596528b091f5367edd38e0cee5f923c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c622dde5e73c84c3b317ffc2652c79632be89e2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema 및 Schema 컬렉션
 **연결** 각.NET Framework 관리 공급자 구현에 클래스는 **GetSchema** 메서드는 현재 연결 되어 있는 데이터베이스에 대 한 스키마 정보를 검색 하는 데 사용 되 고 반환 된 스키마 정보는 **GetSchema** 의 형태로 제공 메서드는 <xref:System.Data.DataTable>합니다. **GetSchema** 메서드는 스키마 컬렉션이 반환 되도록 지정 하 고 반환 될 정보의 양을 제한 하기 위한 선택적 매개 변수를 제공 하는 오버 로드 메서드입니다.  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 43fb2d8e42aeae5340874ab082f33257b197eac3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 035d619574707ec7944c80b95d5b7a6ea0de1899
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="executing-a-command"></a>명령 실행
 .NET Framework에 포함된 각 .NET Framework 데이터 공급자에는 <xref:System.Data.Common.DbCommand>에서 상속되는 고유 명령 개체가 있습니다. .NET Framework Data Provider for OLE DB에는 <xref:System.Data.OleDb.OleDbCommand> 개체가 있고, .NET Framework Data Provider for SQL Server에는 <xref:System.Data.SqlClient.SqlCommand> 개체가 있으며, .NET Framework Data Provider for ODBC와 .NET Framework Data Provider for Oracle에는 각각 <xref:System.Data.Odbc.OdbcCommand> 개체와 <xref:System.Data.OracleClient.OracleCommand> 개체가 있습니다. 이러한 각 개체는 명령의 유형 및 원하는 반환 값을 기준으로 명령 실행을 위한 메서드를 노출합니다. 다음 표에는 이러한 명령 및 해당 반환 값이 나와 있습니다.  

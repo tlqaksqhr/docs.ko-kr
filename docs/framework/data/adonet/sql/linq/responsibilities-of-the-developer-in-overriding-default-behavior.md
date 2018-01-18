@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 232f57890e70e5be0ec60408587a622fafd1ba7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7de5dbcad14ebfd253ba99f03a8d77e768f29941
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>기본 동작 재정의에서 개발자의 책임
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]다음 요구 사항을 적용 하지 않는 않지만 이러한 요구 사항을 만족 하지 않으면 동작이 정의 되지 않습니다.  

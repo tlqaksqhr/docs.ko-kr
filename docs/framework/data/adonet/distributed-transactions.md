@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6bc9a754325f7d01ee36622a23efde1cbc7c4812
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-transactions"></a>분산 트랜잭션
 트랜잭션은 하나의 단위로 성공(커밋)하거나 실패(중단)한 관련 작업의 집합입니다. A *분산 트랜잭션을* 은 여러 리소스에 영향을 주는 트랜잭션입니다. 분산 트랜잭션을 커밋하는 경우 모든 참가자는 데이터의 모든 변경 내용이 영구적으로 유지된다는 것을 보증해야 합니다. 시스템 작동이 중단되거나 다른 예측할 수 없는 이벤트가 발생해도 변경 내용이 지속되어야 합니다. 참가자 중 하나라도 이러한 보증을 이행하지 못하면 전체 트랜잭션이 실패하게 되며 트랜잭션 범위 내의 모든 데이터 변경 내용이 롤백됩니다.  

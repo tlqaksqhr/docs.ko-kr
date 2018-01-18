@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 99b5af9f33fa92c6e635ee0190893e377724d970
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 스트리밍 지원
 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]와 응용 프로그램 간의 스트리밍 지원([!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]의 새로운 기능)을 통해 서버 측의 구조화되지 않은 데이터(문서, 이미지 및 미디어 파일)가 지원됩니다. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터베이스는 BLOB(Binary Large Object)를 저장할 수 있지만 BLOB를 검색할 때 많은 메모리가 사용될 수 있습니다.  

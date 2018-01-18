@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fe3005b3dbfa1a2f0018dd7b6049ab65d68b8e40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 729c9d5d6841b5cfcae175d8984302ac816ed8b8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="performance-counters-in-adonet"></a>성능 카운터(ADO.NET)
 ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient>를 모두 지원하는 성능 카운터에 대한 확장된 지원이 추가되었습니다. 이전 버전의 ADO.NET에서 사용 가능한 <xref:System.Data.SqlClient> 성능 카운터는 더 이상 사용되지 않는 대신 이 항목에 설명할 새 성능 카운터로 대체되었습니다. ADO.NET 성능 카운터를 사용하여 응용 프로그램 상태와 응용 프로그램에서 사용하는 연결 리소스를 모니터링할 수 있습니다. 성능 카운터는 Windows 성능 카운터를 사용하여 모니터링하거나 <xref:System.Diagnostics.PerformanceCounter> 네임스페이스의 <xref:System.Diagnostics> 클래스를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.  

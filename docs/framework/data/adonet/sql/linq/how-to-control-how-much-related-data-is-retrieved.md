@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b35c6e4bcb316823a42dc8501fa08df5a87f3275
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3beb6f6b019535e273df7103e2e22f1be669797a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>방법: 관련 데이터 검색의 양 제어
 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 메서드를 사용하여 동시에 검색되어야 하는 주 대상과 관련된 데이터를 지정합니다. 예를 들어 고객 주문에 대한 정보가 필요한 경우 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>를 사용하여 주문 정보와 고객 정보가 검색되었는지 확인합니다. 이 접근 방법은 두 가지 정보에 대한 데이터베이스에서 원트립만의 결과입니다.  

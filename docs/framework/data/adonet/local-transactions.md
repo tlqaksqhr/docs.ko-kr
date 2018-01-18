@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5d9498454cfee02e5749a7ed87783b5476469b8d
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.openlocfilehash: 3d7865675871bafb527bb9ee85de1f96e9847402
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="local-transactions"></a>로컬 트랜잭션
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 트랜잭션은 여러 작업을 바인딩하여 하나의 작업 단위로 실행하려는 경우에 사용합니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 응용 프로그램에서 주문 정보로 테이블을 업데이트합니다. 그런 다음, 응용 프로그램에서 재고 정보가 포함된 테이블을 업데이트하고 주문이 들어온 품목을 차변에 기입합니다. 이 작업에 실패 하면 다음 두 업데이트가 모두 롤백됩니다.  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ef6fa9099f08502392ea28c686824c0f3485fd88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f78cd816be7a4c68853a25f89859bbe2452bb9c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server에서 소유권 및 사용자와 스키마 분리
 SQL Server 보안의 주요 개념은 개체 소유자에게 취소할 수 없는 개체 관리 권한이 있다는 것입니다. 개체 소유자의 권한을 제거할 수 없으며 사용자가 데이터베이스의 개체를 소유하는 경우 데이터베이스에서 사용자를 삭제할 수 없습니다.  

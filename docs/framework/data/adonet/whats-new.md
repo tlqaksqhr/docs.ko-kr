@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3944fb6d68ed054feb8d7ddec149745b78810ee2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 64858f89a569be3056f878561f8031f16830f81d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="what39s-new-in-adonet"></a>기능 &#39; ADO.NET의 새로운 s
 다음은 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]의 새로운 기능입니다.  

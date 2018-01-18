@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 63e2ee9dffb041ede094afd43428660af4b9f450
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8ec97e0d083ccdd17a97db571d58aae9afbeea8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>방법: 테이블 반환 사용자 정의 함수 사용
 테이블 반환 함수에서는 여러 결과 모양을 반환할 수 있는 저장 프로시저와 달리 단일 행 집합을 반환합니다. 테이블 반환 함수의 반환 형식은 `Table`이기 때문에 테이블을 사용할 수 있는 SQL의 위치인 어디에나 테이블 반환 함수를 사용할 수 있습니다. 또한 테이블 반환 함수를 테이블로 처리할 수 있습니다.  

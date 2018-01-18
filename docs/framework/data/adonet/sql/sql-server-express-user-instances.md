@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9cd5dc57a9e7d164ec7ca1ebcc1e6d2cc2a5a6cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 55f3393c84ec08d3c3944552ac2bed7d15dd025f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 사용자 인스턴스
 Microsoft SQL Server Express Edition(SQL Server Express)은 .NET Framework Data Provider for SQL Server(`SqlClient`)를 사용하는 경우에만 사용 가능한 기능인 사용자 인스턴스를 지원합니다. 사용자 인스턴스는 부모 인스턴스에서 생성된 별도의 SQL Server Express 데이터베이스 엔진 인스턴스입니다. 로컬 컴퓨터에서 관리자가 아닌 사용자는 사용자 인스턴스를 사용하여 SQL Server Express 데이터베이스에 연결할 수 있습니다. 각 인스턴스는 사용자당 하나의 인스턴스를 기준으로 개인 사용자의 보안 컨텍스트 내에서 실행됩니다.  
@@ -69,7 +69,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> 및 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> 속성을 사용하여 런타임에 연결 문자열을 빌드할 수도 있습니다.  
+>  사용할 수도 있습니다는 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> 및 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> 속성에서 연결 문자열을 작성할 실행 시간입니다.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>사용 하는 &#124; DataDirectory &#124; 대체 문자열  
  ADO.NET 2.0에서는 `AttachDbFileName`(파이프 기호 안에 포함됨) 대체 문자열이 도입되어 `|DataDirectory|`이 확장되었습니다. `DataDirectory`는 `AttachDbFileName`과 함께 사용되어 데이터 파일의 상대 경로를 나타내기 때문에 개발자가 전체 경로를 지정할 필요 없이 데이터 소스의 상대 경로를 기반으로 연결 문자열을 만들 수 있습니다.  

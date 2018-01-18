@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 249cb8419d4f032c37a922c9aa640f02f6efbd56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b999e6b1d6d73f107b7e1f4cb0d7e14c099a1f6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 집합 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑
 스키마에서는 요소에 대 한 key 제약 조건을 지정 하거나 사용 하 여 특성 수는 **키** 요소입니다. KEY 제약 조건이 지정된 요소 또는 특성은 모든 스키마 인스턴스에서 고유한 값을 가져야 하며 null 값을 가져서는 안 됩니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 |특성 이름|설명|  
 |--------------------|-----------------|  
 |**msdata:ConstraintName**|이 특성을 지정하면 해당 값이 제약 조건 이름으로 사용됩니다. 그렇지 않은 경우는 **이름** 특성에서 제약 조건 이름의 값을 제공 합니다.|  
-|**msdata: primarykey**|경우 `PrimaryKey="true"` 가 있으면는 **IsPrimaryKey** 제약 조건 속성이로 설정 되어 **true**, 있기 때문에 기본 키입니다. **AllowDBNull** 열 속성이로 설정 되어 **false**이므로 기본 키는 null 값을 가질 수 없습니다.|  
+|**msdata:PrimaryKey**|경우 `PrimaryKey="true"` 가 있으면는 **IsPrimaryKey** 제약 조건 속성이로 설정 되어 **true**, 있기 때문에 기본 키입니다. **AllowDBNull** 열 속성이로 설정 되어 **false**이므로 기본 키는 null 값을 가질 수 없습니다.|  
   
  Key 제약 조건을 지정 하는 스키마를 변환 매핑 프로세스에서는 포함 된 테이블에 unique 제약 조건을 만듭니다는 **AllowDBNull** 열 속성이로 설정 **false** 각 열에 제약 조건입니다. **IsPrimaryKey** unique 제약 조건의 속성이 **false** 지정 하기 전 까지는 `msdata:PrimaryKey="true"` 에 **키** 요소입니다. 이것은 `PrimaryKey="true"`인 스키마의 UNIQUE 제약 조건에도 마찬가지로 적용됩니다.  
   

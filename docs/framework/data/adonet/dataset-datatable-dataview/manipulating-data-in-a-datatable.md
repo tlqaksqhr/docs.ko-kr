@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 58d04a3ba1d73d4236353ff4f08a747ac7b6f0cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb4ecf8996836fde443216f1d9225e8f113b0b7f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable에서 데이터 조작
 <xref:System.Data.DataTable>에서 <xref:System.Data.DataSet>을 만든 후에는 데이터베이스에서 테이블을 사용할 때와 동일하게 작업을 수행할 수 있습니다. 테이블에서 데이터를 추가, 확인, 편집 및 삭제하고, 오류 및 이벤트를 모니터링하며, 테이블에서 데이터를 쿼리할 수 있습니다. 데이터를 수정할 때는 **DataTable**, 변경 내용을 정확 하 게 하 고 프로그래밍 방식으로 적용 하거나 변경 사항을 거부 여부 결정 하는지 여부를 확인할 수 있습니다.  

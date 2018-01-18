@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 20031092f5109fef1bf7167eccab949e2e7c5b39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 형식 불일치
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 개체 모델과 SQL Server 간의 변환을 대부분 자동화합니다. 하지만 정확한 변환이 불가능한 경우도 있습니다. 공용 언어 런타임 (CLR) 형식 및 SQL Server 데이터베이스 형식 간의 주요 이러한 불일치는 다음 섹션에 요약 되어 있습니다. 특정 형식 매핑과 함수로 변환 하는 방법에 대 한 자세한 정보를 볼 수 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) 및 [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)합니다.  
@@ -44,7 +44,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **부울**합니다. 이 형식은 1비트 또는 더 큰 숫자나 문자열로 매핑될 수 있습니다. 리터럴은 동일한 값으로 계산되는 식(예: SQL의 `1=1`과 CLS의 `True`)에 매핑할 수 있습니다.  
   
-    -   **TimeSpan**합니다. 이 형식은 두 `DateTime` 값의 차이를 나타내며 SQL Server의 `timestamp`에 대응되지 않습니다. 일부 경우에는 CLR의 <xref:System.TimeSpan?displayProperty=nameWithType>이 SQL Server의 `TIME` 형식에 매핑될 수 있습니다. SQL Server의 `TIME` 형식은 24시간 미만의 양수 값을 나타낼 때만 사용되지만 CLR의 <xref:System.TimeSpan>은 나타낼 수 있는 범위가 넓습니다.  
+    -   **TimeSpan**. 이 형식은 두 `DateTime` 값의 차이를 나타내며 SQL Server의 `timestamp`에 대응되지 않습니다. 일부 경우에는 CLR의 <xref:System.TimeSpan?displayProperty=nameWithType>이 SQL Server의 `TIME` 형식에 매핑될 수 있습니다. SQL Server의 `TIME` 형식은 24시간 미만의 양수 값을 나타낼 때만 사용되지만 CLR의 <xref:System.TimeSpan>은 나타낼 수 있는 범위가 넓습니다.  
   
     > [!NOTE]
     >  [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]의 SQL Server 관련 <xref:System.Data.SqlTypes> 형식은 이러한 비교에 포함되지 않습니다.  

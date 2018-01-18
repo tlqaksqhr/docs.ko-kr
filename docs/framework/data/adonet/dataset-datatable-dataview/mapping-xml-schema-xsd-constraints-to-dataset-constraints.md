@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8ac310542ba9dea360acbc2a0fbcbb07b7a8d6fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f403dc974e4fe67d239688f587061cd23a8deff6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
 XSD(XML 스키마 정의 언어)를 사용하여 요소와 특성에서 제약 조건을 지정할 수 있습니다. XML 스키마에서 관계형 스키마에 매핑하는 경우는 <xref:System.Data.DataSet>, XML 스키마 제약 조건을 테이블 및 열 내에서 적절 한 관계형 제약 조건에 매핑되는 **데이터 집합**합니다.  

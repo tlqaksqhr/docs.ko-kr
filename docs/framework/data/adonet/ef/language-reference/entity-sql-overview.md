@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f77e3a5d0073cb13d1904f802c4d6760fc52caa9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37390d97325d6532624cd6ffe14c2d6c37ba2084
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-sql-overview"></a>Entity SQL 개요
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]에서 개념적 모델을 쿼리하는 데 사용할 수 있는 SQL 유사 언어입니다. 개념적 모델 엔터티 및 관계로, 데이터를 표시 하 고 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 이러한 엔터티 및 관계 SQL을 사용한 사용자에 게 친숙 되는 형식으로 쿼리할 수 있습니다.  

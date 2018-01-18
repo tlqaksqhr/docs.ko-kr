@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fa73b8bf872cbed10b606c1fc60e8e8087f1c39f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d769eca17a45449505e1df96e1cbde584e42d65e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>방법: 개체 메서드로 모델 정의 함수 호출
 이 항목에서는 모델 정의 함수를 <xref:System.Data.Objects.ObjectContext> 개체의 메서드 또는 사용자 지정 클래스의 정적 메서드로 호출하는 방법에 대해 설명합니다. A *모델 정의 함수* 는 개념적 모델에 정의 된 함수입니다. 이 항목의 절차에서는 이러한 함수를 LINQ to Entities 쿼리에서 호출하는 대신 직접 호출하는 방법에 대해 설명합니다. Linq에서 to Entities 쿼리에서 모델 정의 함수를 호출 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 쿼리에 Call Model-Defined 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)합니다.  

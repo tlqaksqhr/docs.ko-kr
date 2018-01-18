@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4870e5f3a71f51cb788eae1aa2a1884f5084ad40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65042cecc5a6841ffb9b74e471cb9f237d15373f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manipulating-data"></a>데이터 조작
 MARS(Multiple Active Result Sets)가 도입되기 전까지 개발자는 다중 연결이나 서버측 커서를 사용하여 특정 시나리오를 해결해야 했습니다. 또한 트랜잭션 상황에서 여러 개의 연결이 사용 되 던 때 바인딩된 연결 (으로 **sp_getbindtoken** 및 **sp_bindsession**) 필요 했습니다. 다음 시나리오에서는 다중 연결 대신 MARS 사용 연결을 사용하는 방법을 보여 줍니다.  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5276697ebdc065965d970afc4ac2ef6be61c8f20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3700e4010176abed05677043469476fe34cd564c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 집합 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
 XML 스키마 정의 언어 (XSD) 스키마에는 **고유** 요소는 요소나 특성에 고유성 제약 조건을 지정 합니다. XML 스키마를 관계형 스키마로 변환하는 과정에서, XML 스키마의 요소나 특성에 지정된 UNIQUE 제약 조건은 생성된 해당 <xref:System.Data.DataTable>에 있는 <xref:System.Data.DataSet>의 UNIQUE 제약 조건에 매핑됩니다.  
@@ -28,7 +28,7 @@ XML 스키마 정의 언어 (XSD) 스키마에는 **고유** 요소는 요소나
 |특성 이름|설명|  
 |--------------------|-----------------|  
 |**msdata:ConstraintName**|이 특성을 지정하면 해당 값이 제약 조건 이름으로 사용됩니다. 그렇지 않은 경우는 **이름** 특성에서 제약 조건 이름의 값을 제공 합니다.|  
-|**msdata: primarykey**|경우 `PrimaryKey="true"` 에 **고유** , unique 제약 조건을 사용 요소가 만들어집니다는 **IsPrimaryKey** 속성이로 설정 **true**합니다.|  
+|**msdata:PrimaryKey**|경우 `PrimaryKey="true"` 에 **고유** , unique 제약 조건을 사용 요소가 만들어집니다는 **IsPrimaryKey** 속성이로 설정 **true**합니다.|  
   
  다음 예제에서는 사용 하는 XML 스키마는 **고유** 고유성 제약 조건을 지정 하는 요소입니다.  
   

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a20061c551f5cb1a19c64a2f92b8180465f58eb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6737b451a0ccb42dfb83dda487e351a9fafde398
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET의 연결 문자열
 .NET Framework 2.0에서는 연결 문자열 작성기 클래스에 새로운 키워드를 추가하는 기능을 비롯하여 연결 문자열로 작업하는 데 사용할 수 있는 새로운 기능을 지원합니다. 이러한 기능을 사용하여 런타임에 유효한 연결 문자열을 작성할 수 있습니다.  

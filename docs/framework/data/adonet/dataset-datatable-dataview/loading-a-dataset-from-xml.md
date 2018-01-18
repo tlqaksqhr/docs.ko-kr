@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ebbe1addf47bc76903e362cfb353ade359a1c8ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d0c98224b8b508fec5fe584388872757a9dfdf3
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML에서 데이터 집합 로드
 ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부터 만들 수 있습니다. 또한, .NET Framework를 사용하면 XML로부터 로드할 정보와 <xref:System.Data.DataSet>의 스키마나 관계형 구조를 만드는 방법을 매우 융통성 있게 선택할 수 있습니다.  
@@ -33,7 +33,7 @@ ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부
 |옵션|설명|  
 |------------|-----------------|  
 |**자동**|이 값이 기본값입니다. XML을 검사하고 다음 순서에 따라 가장 적합한 옵션을 선택합니다.<br /><br /> -XML이 DiffGram 이면 경우 **DiffGram** 사용 됩니다.<br />If는 <xref:System.Data.DataSet> 스키마가 포함 된 XML에 인라인 스키마 또는 **ReadSchema** 사용 됩니다.<br />If는 <xref:System.Data.DataSet> 스키마는 XML에 인라인 스키마가 포함 되어 있지 않습니다 **InferSchema** 사용 됩니다.<br /><br /> 읽는 중인 XML의 형식을 알고 있는 경우 최상의 성능을 것이 좋습니다 명시적으로 설정 하는 **XmlReadMode**않고 하기 보다는 **자동** 기본값입니다.|  
-|**읽으려면**|모든 인라인 스키마를 읽은 다음 데이터와 스키마를 로드합니다.<br /><br /> <xref:System.Data.DataSet>에 이미 스키마가 있으면 인라인 스키마의 새 테이블이 <xref:System.Data.DataSet>에 있는 기존 스키마에 추가됩니다. 인라인 스키마의 모든 테이블이 <xref:System.Data.DataSet>에 이미 있으면 예외가 throw됩니다. 사용 하 여 기존 테이블의 스키마를 수정할 수 없습니다 **XmlReadMode.ReadSchema**합니다.<br /><br /> <xref:System.Data.DataSet>에 스키마도 없고 인라인 스키마도 없으면 데이터를 읽지 않습니다.<br /><br /> 인라인 스키마는 XSD(XML 스키마 정의 언어) 스키마를 사용하여 정의할 수 있습니다. XML 스키마로 인라인 스키마를 작성 하는 방법에 대 한 세부 정보를 참조 하십시오. [파생 된 데이터 집합 관계형 구조에서 XSD (XML 스키마)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)합니다.|  
+|**ReadSchema**|모든 인라인 스키마를 읽은 다음 데이터와 스키마를 로드합니다.<br /><br /> <xref:System.Data.DataSet>에 이미 스키마가 있으면 인라인 스키마의 새 테이블이 <xref:System.Data.DataSet>에 있는 기존 스키마에 추가됩니다. 인라인 스키마의 모든 테이블이 <xref:System.Data.DataSet>에 이미 있으면 예외가 throw됩니다. 사용 하 여 기존 테이블의 스키마를 수정할 수 없습니다 **XmlReadMode.ReadSchema**합니다.<br /><br /> <xref:System.Data.DataSet>에 스키마도 없고 인라인 스키마도 없으면 데이터를 읽지 않습니다.<br /><br /> 인라인 스키마는 XSD(XML 스키마 정의 언어) 스키마를 사용하여 정의할 수 있습니다. XML 스키마로 인라인 스키마를 작성 하는 방법에 대 한 세부 정보를 참조 하십시오. [파생 된 데이터 집합 관계형 구조에서 XSD (XML 스키마)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)합니다.|  
 |**IgnoreSchema**|모든 인라인 스키마를 무시하고 데이터를 기존 <xref:System.Data.DataSet> 스키마로 로드합니다. 기존 스키마와 일치하지 않는 모든 데이터는 삭제됩니다. <xref:System.Data.DataSet>에 스키마가 없으면 데이터를 로드하지 않습니다.<br /><br /> 데이터가 DiffGram 이면 경우 **IgnoreSchema** 동일한 기능이 **DiffGram** *합니다.*|  
 |**InferSchema**|모든 인라인 스키마를 무시하며 XML 데이터의 구조마다 스키마를 유추한 다음 데이터를 로드합니다.<br /><br /> <xref:System.Data.DataSet>에 이미 스키마가 있으면 기존 테이블에 열을 추가하여 현재 스키마를 확장합니다. 기존 테이블이 없으면 테이블이 추가되지 않습니다. 유추된 테이블이 다른 네임스페이스로 이미 존재하거나 유추된 열이 기존 열과 충돌하면 예외가 throw됩니다.<br /><br /> 자세한 방법에 대 한 내용은 **ReadXmlSchema** 스키마를 유추는 XML 문서에서 참조 [유추 데이터 집합 관계형 구조 XML에서](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)합니다.|  
 |**DiffGram**|DiffGram을 읽은 다음 해당 데이터를 현재 스키마에 추가합니다. **DiffGram** 은 새 행의 고유 식별자 값과 일치 하는 기존 행을 병합 합니다. 이 항목의 맨 뒤에 나오는 "XML로부터 데이터 병합"을 참조하세요. Diffgram에 대 한 자세한 내용은 참조 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)합니다.|  

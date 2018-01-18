@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 50fe660a84dcb75c12655f2b60c7e5969a07a839
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74c07a2f873d715bd82fba19499b36e8ed305dcc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime 메서드
 다음과 같은 LINQ to SQL 지원 메서드, 연산자 및 속성을 LINQ to SQL 쿼리에 사용할 수 있습니다. 메서드, 연산자 또는 속성이 지원되지 않는 경우 LINQ to SQL에서는 해당 멤버를 SQL Server에서 실행하기 위해 변환할 수 없습니다. 이러한 멤버를 코드에 사용할 수 있지만 쿼리를 Transact-SQL로 변환하기 전이나 데이터베이스에서 결과가 검색된 후에 반드시 평가해야 합니다.  

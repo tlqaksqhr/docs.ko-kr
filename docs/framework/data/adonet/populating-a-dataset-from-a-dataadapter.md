@@ -13,18 +13,18 @@ dev_langs:
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6df0b6a06240a5f59c888ddcfb2b34764fd888fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter에서 데이터 집합 채우기
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet>은 데이터 소스에 독립적으로 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. `DataSet`은 테이블 및 제약 조건과 테이블 간의 관계를 포함하는 완전한 데이터 집합을 나타냅니다. `DataSet` 은 데이터 소스에 독립적입니다. 따라서 `DataSet` 은 응용 프로그램에 대해 로컬인 데이터뿐 아니라 여러 데이터 소스의 데이터도 포함할 수 있습니다. 기존 데이터 소스와의 상호 작용은 `DataAdapter`를 통해 제어됩니다.  
+[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet>은 데이터 소스에 독립적으로 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. `DataSet` 은 테이블 및 제약 조건과 테이블 간의 관계를 포함하는 완전한 데이터 집합을 나타냅니다. `DataSet` 은 데이터 소스에 독립적입니다. 따라서 `DataSet` 은 응용 프로그램에 대해 로컬인 데이터뿐 아니라 여러 데이터 소스의 데이터도 포함할 수 있습니다. 기존 데이터 소스와의 상호 작용은 `DataAdapter`를 통해 제어됩니다.  
   
  `SelectCommand` 의 `DataAdapter` 속성은 데이터 소스에서 데이터를 검색하는 `Command` 개체입니다. `InsertCommand`의 `UpdateCommand`, `DeleteCommand` 및 `DataAdapter` 속성은 `Command` 의 데이터에 대한 수정 내용에 따라 데이터 소스의 데이터에 대한 업데이트를 관리하는 `DataSet`개체입니다. 이러한 속성에 보다 자세히 설명 되어 [Dataadapter로 데이터 원본 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)합니다.  
   

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a782969502509cb766e3a1d38222118a352dc3db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: beec0aba34bc38ba310aa87dadeeaa4b41c82649
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connection-string-builders"></a>연결 문자열 작성기
 이전 버전의 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]컴파일 시간 실행 시 잘못 된 키워드가 생성 되도록 연결 된 문자열 값이 발생 하지 않은 있는 연결 문자열의 검사는 <xref:System.ArgumentException>합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 각각 다른 연결 문자열 키워드 구문을 지원하므로 수동으로 유효한 연결 문자열을 구성하는 것이 어렵습니다. 이 문제를 해결하기 위해 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0에는 각 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자에 사용할 수 있는 새로운 연결 문자열 작성기가 추가되었습니다. 각 데이터 공급자에는 <xref:System.Data.Common.DbConnectionStringBuilder>에서 상속되는 강력한 형식의 연결 문자열 작성기 클래스가 있습니다. 다음 표에는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자와 그와 관련된 연결 문자열 작성기 클래스가 나와 있습니다.  

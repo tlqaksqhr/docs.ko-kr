@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 58129cf690d4d46cda1e59671ae1423b8a64163f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38bdc4d41e4b42f2dccaf059d84f6b8b45967ff5
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server에서 저장 프로시저를 사용하여 권한 관리
 데이터베이스 주변을 방어하는 여러 줄을 작성하는 한 가지 방법은 저장 프로시저 또는 사용자 정의 함수를 사용하여 모든 데이터 액세스를 구현하는 것입니다. 테이블과 같은 원본 개체에 대한 모든 권한을 취소하거나 거부하고 저장 프로시저에 EXECUTE 권한을 부여합니다. 그러면 효율적으로 데이터 및 데이터베이스 개체 주변에 보안 경계를 만듭니다.  

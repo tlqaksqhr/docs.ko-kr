@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 08c66309d4c789acc0f2ddf6159a11c5fb963e80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1c8a518dd3f8bc4c1123099522ad4a4f452c78f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet 쿼리 디버깅
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]은 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 코드 디버깅을 지원합니다. 그러나 몇 가지 디버깅 차이점 있습니다 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 코드 및 비-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 관리 코드입니다. 대부분의 디버깅 기능을 사용할 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 문, 단계별 실행, 중단점 설정 및 디버거 창에 표시 된 결과 보기를 포함 합니다. 지연된 쿼리 실행에는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 코드를 디버깅할 때 고려해야 하는 몇 가지 의도하지 않은 결과가 발생할 수 있으며 편집하며 계속하기 사용과 관련된 몇 가지 제한이 있습니다. 이 항목에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]이 아닌 관리 코드와 비교하여 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에 고유한 디버깅 특성에 대해 설명합니다.  

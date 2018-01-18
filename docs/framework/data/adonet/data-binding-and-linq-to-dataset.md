@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: efaa9f3e72af6f5ed948b974920564188ae42b44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2da2bc39fc1a2df7dd440292b2abc8e7113c8033
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>데이터 바인딩 및 LINQ to DataSet
 *데이터 바인딩* 응용 프로그램 UI와 비즈니스 논리 사이의 연결을 설정 하는 프로세스입니다. 바인딩 설정이 올바르고 데이터가 적절한 알림을 제공하는 경우 데이터 값이 변경될 때 데이터에 바인딩된 요소에 변경 사항이 자동으로 반영됩니다. <xref:System.Data.DataSet>은 포함된 데이터 소스에 관계없이 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 내 표현입니다. ADO.NET 2.0 <xref:System.Data.DataView>는 <xref:System.Data.DataTable>에 저장된 데이터를 정렬하고 필터링하는 데 사용됩니다. 이 기능은 데이터 바인딩 응용 프로그램에서 자주 사용됩니다. <xref:System.Data.DataView>를 사용하여 테이블의 데이터를 여러 정렬 순서로 노출시킬 수 있으며, 행 상태에 따라 또는 필터 식을 기준으로 데이터를 필터링할 수 있습니다. 에 대 한 자세한 내용은 <xref:System.Data.DataView> 개체, 참조 [데이터 보기](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)합니다.  

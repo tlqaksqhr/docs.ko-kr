@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 07892869759ac5856b26099f2421caff1ebaf74d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 428dd4cfb9533dbf57b984c8bc1c557f37bb7d15
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="secure-data-access"></a>보안 데이터 액세스
 보안 ADO.NET 코드를 쓰려면 내부 데이터 저장소 또는 데이터베이스에서 사용할 수 있는 보안 메커니즘을 알아야 합니다. 또한, 응용 프로그램에 포함된 다른 기능이나 구성 요소의 보안 문제도 고려해야 합니다.  

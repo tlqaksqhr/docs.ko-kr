@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8c28dee75d5371da50dec1d3b73ec6c305176582
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b1250d616ad5835fccd1a3acbf0b8a759c34181
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>데이터 집합 콘텐츠를 XML 데이터로 작성
 ADO.NET에서는 해당 스키마의 사용 여부와 관계없이 <xref:System.Data.DataSet>을 XML 표현으로 작성할 수 있습니다. 스키마 정보가 XML과 함께 인라인에 포함된 경우에는 XSD(XML 스키마 정의 언어)를 사용하여 작성됩니다. 이 스키마에는 <xref:System.Data.DataSet>의 테이블 정의와 관계 및 제약 조건 정의가 포함됩니다.  
@@ -47,7 +47,7 @@ string xmlDS = custDS.GetXml();
 |XmlWriteMode 옵션|설명|  
 |-------------------------|-----------------|  
 |**IgnoreSchema**|<xref:System.Data.DataSet>의 현재 내용을 XML 스키마 없이 XML 데이터로 작성합니다. 이 값이 기본값입니다.|  
-|**쓰려면**|<xref:System.Data.DataSet>의 현재 내용을 인라인 XML 스키마와 동일한 관계형 구조를 가진 XML 데이터로 작성합니다.|  
+|**WriteSchema**|<xref:System.Data.DataSet>의 현재 내용을 인라인 XML 스키마와 동일한 관계형 구조를 가진 XML 데이터로 작성합니다.|  
 |**DiffGram**|원래 및 현재 값을 포함하여 전체 <xref:System.Data.DataSet>을 DiffGram으로 작성합니다. 자세한 내용은 참조 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)합니다.|  
   
  XML 표현을 작성 하는 경우는 <xref:System.Data.DataSet> 포함 된 **DataRelation** 개체는 관련된 된 부모 요소 내에 중첩 된 각 관계의 자식 행을 결과 XML 설정할 가장 수 있습니다. 이를 위해 설정는 **Nested** 의 속성은 **DataRelation** 를 **true** 추가 하는 경우는 **DataRelation** 는 를<xref:System.Data.DataSet>. 자세한 내용은 참조 [Datarelation 중첩](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)합니다.  
@@ -82,7 +82,7 @@ xmlSW.Close();
 |**요소**|이 값이 기본값입니다. 열이 XML 요소로 작성되며, 이 때 ColumnName이 요소의 이름이 되고 열의 내용은 요소의 텍스트로 작성됩니다. 예:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**특성**|열이 현재 행에 대한 XML 요소의 XML 특성으로 작성되며, 이 때 특성의 이름은 ColumnName이며 열의 내용은 특성의 값으로 작성됩니다. 예:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|열의 내용이 현재 행에 대한 XML 요소의 텍스트로 작성됩니다. 예:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> **SimpleContent** 가 있는 테이블의 열에 대해 설정할 수 없습니다 **요소** 열 또는 중첩된 관계입니다.|  
-|**숨김**|열이 XML 출력으로 작성되지 않습니다.|  
+|**Hidden**|열이 XML 출력으로 작성되지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  

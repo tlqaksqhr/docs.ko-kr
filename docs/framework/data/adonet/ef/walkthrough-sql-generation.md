@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c3d952c2a9e8f1199fa8ef4b6181dabcfbcc4012
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 272d0b8bc58094737d157abfff9f3f026a0f5953
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="walkthrough-sql-generation"></a>연습: SQL 생성
 이 항목에서는에서 SQL 생성이 생기는 [샘플 공급자](http://go.microsoft.com/fwlink/?LinkId=180616)합니다. 다음 Entity SQL 쿼리는 샘플 공급자에 포함된 모델을 사용합니다.  
@@ -119,11 +119,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 ## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>SQL 생성의 첫 번째 단계: 식 트리 방문  
  다음 그림에서는 방문자의 비어 있는 초기 상태를 보여 줍니다.  이 항목 전반에서는 연습에 대한 설명과 관련된 속성만 표시됩니다.  
   
- ![다이어그램](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
   
  Project 노드를 방문하면 VisitInputExpression이 입력(Join4)을 통해 호출되어 VisitJoinExpression 메서드에 의한 Join4의 방문을 트리거합니다. Join4가 맨 위의 조인이기 때문에 IsParentAJoin은 false를 반환하고 새 SqlSelectStatement(SelectStatement0)가 만들어져 SELECT 문 스택에 제공됩니다. 또한 새 범위(scope0)가 기호 테이블에 입력됩니다. 조인의 첫 번째(왼쪽) 입력을 방문하기 전에 'true'가 IsParentAJoin 스택에 제공됩니다. Join4의 왼쪽 입력인 Join1을 방문하기 직전의 방문자의 상태가 다음 그림에 표시되어 있습니다.  
   
- ![다이어그램](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
   
  조인 방문 메서드가 Join4를 통해 호출되면 IsParentAJoin이 true이므로 현재 SELECT 문인 SelectStatement0를 다시 사용합니다. 새 범위(scope1)가 입력됩니다. 왼쪽 자식인 Extent1을 방문하기 전에 또 다른 true가 IsParentAJoin 스택에 제공됩니다.  
   
@@ -131,11 +131,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Join1의 오른쪽 입력을 방문하기 전에 "LEFT OUTER JOIN"이 SelectStatement0의 FROM 절에 추가됩니다. 오른쪽 입력이 Scan 식이기 때문에 true가 다시 IsParentAJoin 스택에 제공됩니다. 오른쪽 입력을 방문하기 전의 상태가 다음 그림에 표시되어 있습니다.  
   
- ![다이어그램](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")  
   
  오른쪽 입력은 왼쪽 입력과 동일한 방식으로 처리됩니다. 오른쪽 입력을 방문한 후의 상태가 다음 그림에 표시되어 있습니다.  
   
- ![다이어그램](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
  다음으로, "false"가 IsParentAJoin 스택에 제공되고 조인 조건 Var(Extent1).CategoryID == Var(Extent2).CategoryID가 처리됩니다. 기호 테이블에서 조회한 후 Var(Extenent1)이 <symbol_Extent1>로 확인됩니다. 인스턴스가 단순한 기호로 Var(Extent1) 처리 한 결과로으로 확인 되므로 합니다. CategoryID과 함께 SqlBuilder \<symbol1 >. " CategoryID "가 반환 됩니다. 마찬가지로 비교의 다른 쪽이 처리되며, 조인 조건을 방문한 결과가 SelectStatement1의 FROM 절에 추가되고 "false" 값이 IsParentAJoin 스택에서 제공됩니다.  
   
@@ -145,13 +145,13 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  처리할 다음 노드는 Join4의 두 번째 자식인 Join3입니다. Join3이 오른쪽 자식이므로 "false"가 IsParentAJoin 스택에 제공됩니다. 이 시점에서 방문자의 상태가 다음 그림에 나와 있습니다.  
   
- ![다이어그램](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
  Join3에 대해 IsParentAJoin은 false를 반환하고 새 SqlSelectStatement(SelectStatement1)를 시작하여 스택에 제공해야 합니다. 이전의 조인을 처리할 때와 마찬가지로 처리가 계속되며 새 범위가 스택에 제공되고 자식이 처리됩니다. 왼쪽 자식이 익스텐트(Extent3)이고 오른쪽 자식이 조인(Join2)이며, 이 오른쪽 자식 역시 새 SqlSelectStatement(SelectStatement2)를 시작해야 합니다. Join2의 자식도 익스텐트이며 SelectStatement2로 집계됩니다.  
   
  Join2를 방문한 직후, 사후 처리(ProcessJoinInputResult)가 수행되기 전의 방문자의 상태가 다음 그림에 표시되어 있습니다.  
   
- ![다이어그램](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
   
  위의 그림에서 SelectStatement2는 스택에서 제공되었지만 아직 부모에 의해 사후 처리되지 않았기 때문에 자유 부동으로 표시되어 있습니다. SelectStatement2는 부모의 FROM 부분에 추가되어야 하지만 SELECT 절이 없으면 완전한 SQL 문이 아닙니다. 따라서 이 시점에서 기본 열(입력에 의해 생성된 모든 열)이 AddDefaultColumns 메서드에 의해 선택 목록에 추가됩니다. AddDefaultColumns는 FromExtents에서 기호를 반복하여 각 기호에 대해 범위로 가져온 모든 열을 추가합니다. 단순한 기호의 경우 기호 형식을 확인하여 추가할 모든 속성을 검색하고, AllColumnNames 사전을 열 이름으로 채웁니다. 완성된 SelectStatement2가 SelectStatement1의 FROM 절에 추가됩니다.  
   
@@ -165,7 +165,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Join4의 조인 조건은 유사하게 처리됩니다. 맨 위의 프로젝트를 처리한 VisitInputExpression 메서드에 제어가 반환됩니다. 반환된 SelectStatement0의 FromExtents를 살펴보면, 입력이 조인으로 식별되며 원래 익스텐트를 제거하고 조인 기호만 포함된 새 익스텐트로 바꿉니다. 기호 테이블도 업데이트되고 그 다음으로 Project의 Projection 부분이 처리됩니다. 속성 확인과 조인 익스텐트 평면화는 앞에서 설명한 바와 같습니다.  
   
- ![다이어그램](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")  
   
  마지막으로 다음 SqlSelectStatement가 생성됩니다.  
   

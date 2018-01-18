@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ac0e595140c11039d5a30f0e1f40c75e4a898002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c4a77e2a27d65ada6767811ea80722c3a90962c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="method-based-query-syntax-examples-element-operators"></a>메서드 기반 쿼리 구문 예제: ELEMENT 연산자
 이 항목의 예제에 사용 하는 방법을 보여 주기는 <xref:System.Linq.Enumerable.First%2A> 메서드 쿼리를는 [AdventureWorks Sales 모델](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) 메서드 기반 쿼리 구문을 사용 하 여 합니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  

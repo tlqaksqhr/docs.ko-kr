@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 876ebeb5568ffff0a10aa5a54ce96c256d237d86
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6090221981c8aaa894f94ebb7910659a1dbf210c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="large-udts"></a>큰 UDT
 개발자는 UDT(사용자 정의 형식)를 통해 SQL Server 데이터베이스에 CLR(공용 언어 런타임) 개체를 저장하여 서버의 스칼라 형식 시스템을 확장할 수 있습니다. UDT에는 단일 SQL Server 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과는 달리 여러 요소 및 동작이 포함될 수 있습니다.  

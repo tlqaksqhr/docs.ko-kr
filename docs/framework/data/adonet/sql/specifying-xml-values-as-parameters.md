@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5957dee03d7f3cd54b3fdacd0d38dead5bbc077d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7514d2d19b6691fc5a25e17e7ad483d108fe4aa2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>XML 값을 매개 변수로 지정
 쿼리에 값이 XML 문자열인 매개 변수를 필요한 경우 개발자의 인스턴스를 사용 하 여 해당 값을 제공할 수는 **SqlXml** 데이터 형식입니다. 여기에 까다로운 기법이 적용되는 것은 아니며 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]의 XML 열은 다른 데이터 형식과 똑같은 방법으로 매개 변수 값을 받아들입니다.  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d588ad393d6077d5b6e5279a1212f69da9a7d64c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5d52fd3326448c428dac16c210321889f83ea23
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>시퀀스에서 요소 반환 또는 건너뛰기
 <xref:System.Linq.Queryable.Take%2A> 연산자를 사용하여 지정된 수의 시퀀스 요소를 반환한 다음 나머지는 건너뜁니다.  

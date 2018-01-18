@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f04d487f032bb8a5f36f3bd7d77ee3e7be480e27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3fc3b4b2fdbec6c527f6240460a263f40e683177
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="initialization-expressions"></a>초기화 식
 초기화 식은 새 개체를 초기화합니다. 최신 C# 3.0 및 Visual Basic 9.0 초기화 식을 포함하여 대부분의 초기화 식이 지원됩니다. LINQ to Entities 쿼리를 통해 다음 형식을 초기화하고 반환할 수 있습니다.  

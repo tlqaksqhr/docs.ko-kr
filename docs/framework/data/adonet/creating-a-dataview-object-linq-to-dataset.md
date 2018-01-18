@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b8a4a1f0dc004957b64e3adb5d106c2cd4f413a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 895f692bc07e8e48904e0829e322788f2aa45337
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView 개체 만들기(LINQ to DataSet)
 <xref:System.Data.DataView> 컨텍스트에서 두 가지 방법으로 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만들 수 있습니다. <xref:System.Data.DataView>에 대한 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 사용하거나 형식화되었거나 형식화되지 않은 <xref:System.Data.DataTable>을 사용하여 <xref:System.Data.DataTable>를 만들 수 있습니다. 두 경우 모두 만듭니다는 <xref:System.Data.DataView> 중 하나를 사용 하 여는 <xref:System.Data.DataTableExtensions.AsDataView%2A> ; 확장 메서드 <xref:System.Data.DataView> 는에서 직접 생성할 수는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 컨텍스트.  

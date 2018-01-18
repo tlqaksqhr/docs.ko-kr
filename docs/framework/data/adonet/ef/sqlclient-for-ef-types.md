@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b04a7199fefc5df93d5e3472163d16c66e9279c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 50898395dcba9e33544cae63208b352c7a6fb6f4
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Entity FrameworkTypes용 SqlClient
 .NET Framework Data Provider for SQL Server(SqlClient) 공급자 매니페스트 파일에는 공급자 기본 형식의 목록, 각 형식의 패싯, 개념적 모델과 저장소 모델 기본 형식 간의 매핑, 개념적 모델과 저장소 모델 기본 형식 간의 승격과 변환 규칙이 포함되어 있습니다.  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b5389f4ea65af9160fe5cf077b62fd075fb89b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae67c80e4637281a26b15d7faa2dbdbe7171ba1c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="external-mapping"></a>외부 매핑
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]지원 *외부 매핑*을 사용 하 여 별도 XML 파일을 데이터베이스의 데이터 모델 및 개체 모델 사이의 매핑을 지정 하는 프로세스입니다. 외부 매핑 파일을 사용하면 다음과 같은 장점이 있습니다.  

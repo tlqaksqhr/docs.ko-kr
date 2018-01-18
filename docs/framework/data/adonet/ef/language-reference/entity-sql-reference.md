@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 58f30c4c2c220660b62b03ea4eb052bd2cf015eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-sql-reference"></a>엔터티 SQL 참조
 이 단원에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 참조 항목이 포함되어 있습니다. 이 항목에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 작업이 요약되고 범주별로 그룹화되어 있습니다.  
@@ -60,9 +60,9 @@ ms.lasthandoff: 12/22/2017
 |[&#91; 하지 &#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|쿼리 식이 null인지 여부를 결정합니다.|  
 |[<(보다 작음)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.|  
 |[<=(작거나 같음)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작거나 같은지 여부를 결정합니다.|  
-|[&#91; 하지 &#93; 사이](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.|  
+|[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.|  
 |[!=(같지 않음)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값과 다른지 여부를 결정합니다.|  
-|[&#91; 하지 &#93; 와 같은](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다.|  
+|[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다.|  
   
 ## <a name="logical-and-case-expression-operators"></a>논리 및 Case 식 연산자  
  논리 연산자는 조건의 진위 여부를 테스트합니다. CASE 식은 부울 식 집합을 계산하여 결과를 결정합니다. 다음 표에서는 논리 및 CASE 식 연산자를 보여 줍니다.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 12/22/2017
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|다중값 컬렉션에서 요소를 추출합니다.|  
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|EXCEPT 피연산자 오른쪽 쿼리 식에서 반환되지 않은 모든 고유한 값 컬렉션을 EXCEPT 피연산자 왼쪽에 있는 쿼리 식에서 반환합니다.|  
-|[&#91; 하지 &#93; 존재](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|컬렉션이 비어 있는지 확인합니다.|  
+|[&#91;NOT&#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|컬렉션이 비어 있는지 확인합니다.|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|여러 컬렉션의 컬렉션을 하나의 결합된 컬렉션으로 변환합니다.|  
 |[&#91; 하지 &#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|컬렉션에 일치하는 값이 있는지 여부를 확인합니다.|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|INTERSECT 피연산자의 왼쪽과 오른쪽에 있는 두 쿼리 식에서 반환된 고유한 값의 컬렉션을 반환합니다.|  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: b9070a12-1094-44d6-bb87-a23b50bcb0af
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 02b32157fe88bddfd9a777042f6da87aa48ca551
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1912526d98dc7872470953e1bf61b72db191de5
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>DataView에서 DataRowView 컬렉션 쿼리
 <xref:System.Data.DataView>는 <xref:System.Data.DataRowView> 개체의 열거할 수 있는 컬렉션을 노출합니다. <xref:System.Data.DataRowView>는 <xref:System.Data.DataRow>의 사용자 지정 뷰를 나타내고 컨트롤에 해당 <xref:System.Data.DataRow>의 특정 버전을 표시합니다. <xref:System.Data.DataRow>와 같은 컨트롤을 통해서는 <xref:System.Windows.Forms.DataGridView>의 한 버전만 표시할 수 있습니다. <xref:System.Data.DataRow>의 <xref:System.Data.DataRowView> 속성을 통해 <xref:System.Data.DataRowView.Row%2A>에 의해 노출되는 <xref:System.Data.DataRowView>에 액세스할 수 있습니다. <xref:System.Data.DataRowView>를 사용하여 값을 보는 경우 <xref:System.Data.DataView.RowStateFilter%2A> 속성에 따라 원본 <xref:System.Data.DataRow>에서 노출되는 행 버전이 결정됩니다. 사용 하 여 다른 행 버전에 액세스 하는 방법에 대 한 내용은 <xref:System.Data.DataRow>, 참조 [행 상태 및 행 버전](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)합니다. <xref:System.Data.DataRowView>에 의해 노출되는 <xref:System.Data.DataView> 개체의 컬렉션은 열거할 수 있으므로 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]을 사용하여 쿼리할 수 있습니다.  

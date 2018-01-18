@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ff16c00f1e0e87c9f046c1f5944e11a9111f6e1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec484bc544f2889d6f37055cb9863b4806ec20c8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 데이터 공급자
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 데이터베이스에 연결하고 명령을 실행하며 결과를 검색하는 데 사용됩니다. 검색된 결과는 곧바로 처리되거나 <xref:System.Data.DataSet> 에 저장되어 필요한 경우 사용자에게 노출되거나 여러 소스의 데이터와 함께 사용되거나 계층 간에 원격으로 사용됩니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 간단하여 데이터 소스와 사용자 코드 간에 최소의 계층을 만들며 기능 저하 없이 성능을 향상시킵니다.  

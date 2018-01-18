@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: af102a0d6ca8ec1092c8b0909a7817cb053ab6c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 188609e1bb6e5ec3a51aa4411e23742c42d691c9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-types-and-functions"></a>데이터 형식 및 함수
 다음 표에 나열된 항목에서는 CLR(공용 언어 런타임)의 멤버, 구문 및 캐스트에 대한 LINQ to SQL의 지원 정보를 설명합니다. 지원되는 멤버와 구문은 LINQ to SQL 쿼리에 사용할 수 있습니다.  

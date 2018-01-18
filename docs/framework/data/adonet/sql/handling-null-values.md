@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8467d1748cec216c01756049d889ea29f02c3c7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="handling-null-values"></a>Null 값 처리
 관계형 데이터베이스에서 null 값은 열의 값이 없거나 알 수 없을 때 사용됩니다. null은 빈 문자열(문자 또는 datetime 데이터 형식의 경우)도 아니고 0 값(숫자 데이터 형식의 경우)도 아닙니다. ANSI SQL-92 사양에서는 모든 null이 일관성 있게 처리되도록 모든 데이터 형식에 대해 null이 동일해야 함을 규정하고 있습니다. <xref:System.Data.SqlTypes> 네임스페이스에서는 <xref:System.Data.SqlTypes.INullable> 인터페이스를 구현함으로써 null 의미 체계를 제공합니다. <xref:System.Data.SqlTypes>의 각 데이터 형식마다 해당 데이터 형식의 인스턴스에 할당할 수 있는 고유의 `IsNull` 속성과 `Null` 값이 있습니다.  
@@ -129,7 +129,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>SqlTypes 및 CLR 형식을 사용하여 Null 값 비교  
- null 값을 비교할 때는 `Equals` 메서드가 <xref:System.Data.SqlTypes>에서 null 값을 평가하는 방식과 CLR 형식을 사용하는 방식을 비교하여 그 차이를 반드시 알아야 합니다. 모든 <xref:System.Data.SqlTypes>`Equals` 메서드에서는 null 값을 평가하는 데 데이터베이스 의미 체계를 사용합니다. 하나의 값 또는 두 값 모두 null이면 비교 결과는 null입니다. 한편, 두 `Equals`에 대해 CLR <xref:System.Data.SqlTypes> 메서드를 사용하면 둘 다 null인 경우 결과는 true입니다. 이는 CLR `String.Equals` 메서드와 같은 인스턴스 메서드 사용과 정적/공유 메서드인 `SqlString.Equals` 사용 간의 차이를 나타냅니다.  
+ null 값을 비교할 때는 `Equals` 메서드가 <xref:System.Data.SqlTypes>에서 null 값을 평가하는 방식과 CLR 형식을 사용하는 방식을 비교하여 그 차이를 반드시 알아야 합니다. 모든는 <xref:System.Data.SqlTypes> `Equals` null 값을 평가 하는 데 데이터베이스 의미 체계를 사용 하는 방법: 값 중 하나 또는 모두 null 이면 비교 결과 null입니다. 한편, 두 `Equals`에 대해 CLR <xref:System.Data.SqlTypes> 메서드를 사용하면 둘 다 null인 경우 결과는 true입니다. 이는 CLR `String.Equals` 메서드와 같은 인스턴스 메서드 사용과 정적/공유 메서드인 `SqlString.Equals` 사용 간의 차이를 나타냅니다.  
   
  다음 예제에서는 각각의 `SqlString.Equals` 메서드와 `String.Equals` 메서드에 null 값 쌍이 전달된 후 빈 문자열 쌍이 전달될 때 두 메서드의 결과 차이를 보여 줍니다.  
   

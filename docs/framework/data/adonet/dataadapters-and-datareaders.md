@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6d071622862a645d11ea8228574f81d5f8c3e6e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a7ce8787dec2f80ba04bef08c5ac355a907feaf
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 및 DataReader
 ADO.NET을 사용 하 여 **DataReader** 를 데이터베이스에서 데이터의 읽기 전용, 정방향 전용 스트림을 검색 합니다. 쿼리 실행 되 고 요청할 때까지 클라이언트의 네트워크 버퍼에 저장 된 결과 반환 합니다. 사용 하 여는 **읽기** 의 메서드는 **DataReader**합니다. 사용 하는 **DataReader** 가능한 즉시 데이터를 검색 하 고 기본적으로 응용 프로그램 성능을 향상 시킬 수 시스템 오버 헤드를 줄여 메모리에 한 번에 하나의 행을 저장 합니다.  

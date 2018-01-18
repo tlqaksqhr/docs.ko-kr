@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee356fc3e7d6e1279e0cba8014d6d285620add3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 생성기(EdmGen.exe)
 EdmGen.exe는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 모델 및 매핑 파일 작업에 사용되는 명령줄 도구입니다. EdmGen.exe 도구를 사용하여 다음을 수행할 수 있습니다.  
@@ -54,26 +54,26 @@ EdmGen /mode:choice [options]
   
 |옵션|설명|  
 |------------|-----------------|  
-|`/p[roject]:`\<문자열 >|사용할 프로젝트 이름을 지정합니다. 프로젝트 이름은 네임스페이스 설정, 모델 및 매핑 파일 이름, 개체 소스 파일 이름, 뷰 생성 소스 파일 이름의 기본값으로 사용됩니다. 엔터티 컨테이너 이름으로 설정 됩니다 \<프로젝트 > 컨텍스트.|  
-|`/prov[ider]:`\<문자열 >|저장소 모델(.ssdl) 파일을 생성하는 데 사용할 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 데이터 공급자의 이름입니다. 기본 공급자는 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|  
+|`/p[roject]:`\<string>|사용할 프로젝트 이름을 지정합니다. 프로젝트 이름은 네임스페이스 설정, 모델 및 매핑 파일 이름, 개체 소스 파일 이름, 뷰 생성 소스 파일 이름의 기본값으로 사용됩니다. 엔터티 컨테이너 이름으로 설정 됩니다 \<프로젝트 > 컨텍스트.|  
+|`/prov[ider]:`\<string>|저장소 모델(.ssdl) 파일을 생성하는 데 사용할 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 데이터 공급자의 이름입니다. 기본 공급자는 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|  
 |`/c[onnectionstring]:`\<연결 문자열 >|데이터 소스에 연결하는 데 사용되는 문자열을 지정합니다.|  
-|`/incsdl:`\<파일 >|.csdl 파일 또는 .csdl 파일이 있는 디렉터리를 지정합니다. 몇 개의 디렉터리나 .csdl 파일을 지정할 수 있도록 이 인수를 여러 번 지정할 수 있습니다. 여러 디렉터리를 지정하면 개념적 모델이 몇 개의 파일에 분할되어 있을 때 클래스(`/mode:EntityClassGeneration`) 또는 뷰(`/mode:ViewGeneration`)를 생성하는 데 유용할 수 있습니다. 여러 모델(`/mode:ValidateArtifacts`)의 유효성을 검사하려는 경우에도 유용할 수 있습니다.|  
-|`/refcsdl:`\<파일 >|소스 .csdl 파일의 참조를 확인하는 데 사용되는 추가 .csdl 파일을 지정합니다. 소스 .csdl 파일은 `/incsdl` 옵션으로 지정된 파일입니다. `/refcsdl` 파일에는 소스 .csdl 파일이 종속된 형식이 들어 있습니다. 이 인수를 여러 번 지정할 수 있습니다.|  
-|`/inmsl:`\<파일 >|.msl 파일 또는 .msl 파일이 있는 디렉터리를 지정합니다. 몇 개의 디렉터리나 .msl 파일을 지정할 수 있도록 이 인수를 여러 번 지정할 수 있습니다. 여러 디렉터리를 지정하면 개념적 모델이 몇 개의 파일에 분할되어 있을 때 뷰(`/mode:ViewGeneration`)를 생성하는 데 유용할 수 있습니다. 여러 모델(`/mode:ValidateArtifacts`)의 유효성을 검사하려는 경우에도 유용할 수 있습니다.|  
-|`/inssdl:`\<파일 >|.ssdl 파일 또는 .ssdl 파일이 있는 디렉터리를 지정합니다. 몇 개의 디렉터리나 .ssdl 파일을 지정할 수 있도록 이 인수를 여러 번 지정할 수 있습니다. 여러 모델`(/mode:ValidateArtifacts)`의 유효성을 검사하려는 경우에 유용할 수 있습니다.|  
-|`/outcsdl:`\<파일 >|만들 .csdl 파일의 이름을 지정합니다.|  
-|`/outmsl:`\<파일 >|만들 .msl 파일의 이름을 지정합니다.|  
-|`/outssdl:`\<파일 >|만들 .ssdl 파일의 이름을 지정합니다.|  
-|`/outobjectlayer:`\<파일 >|.csdl 파일에서 생성된 개체가 포함되는 소스 코드 파일의 이름을 지정합니다.|  
-|`/outviews:`\<파일 >|생성된 뷰가 포함되는 소스 코드 파일의 이름을 지정합니다.|  
-|`/language:`[VB &#124; CSharp]|생성되는 소스 코드 파일의 언어를 지정합니다. 기본 언어는 C#입니다.|  
-|`/namespace:`\<문자열 >|사용할 모델 네임스페이스를 지정합니다. 네임스페이스는 `/mode:FullGeneration` 또는 `/mode:FromSSDLGeneration`을 실행할 때 .csdl 파일에서 설정됩니다. `/mode:EntityClassGeneration`을 실행할 때는 네임스페이스가 사용되지 않습니다.|  
-|`/entitycontainer:`\<문자열 >|생성되는 모델 및 매핑 파일의 `<EntityContainer>` 요소에 적용할 이름을 지정합니다.|  
+|`/incsdl:`\<file>|.csdl 파일 또는 .csdl 파일이 있는 디렉터리를 지정합니다. 몇 개의 디렉터리나 .csdl 파일을 지정할 수 있도록 이 인수를 여러 번 지정할 수 있습니다. 여러 디렉터리를 지정하면 개념적 모델이 몇 개의 파일에 분할되어 있을 때 클래스(`/mode:EntityClassGeneration`) 또는 뷰(`/mode:ViewGeneration`)를 생성하는 데 유용할 수 있습니다. 여러 모델(`/mode:ValidateArtifacts`)의 유효성을 검사하려는 경우에도 유용할 수 있습니다.|  
+|`/refcsdl:`\<file>|소스 .csdl 파일의 참조를 확인하는 데 사용되는 추가 .csdl 파일을 지정합니다. 소스 .csdl 파일은 `/incsdl` 옵션으로 지정된 파일입니다. `/refcsdl` 파일에는 소스 .csdl 파일이 종속된 형식이 들어 있습니다. 이 인수를 여러 번 지정할 수 있습니다.|  
+|`/inmsl:`\<file>|.msl 파일 또는 .msl 파일이 있는 디렉터리를 지정합니다. 몇 개의 디렉터리나 .msl 파일을 지정할 수 있도록 이 인수를 여러 번 지정할 수 있습니다. 여러 디렉터리를 지정하면 개념적 모델이 몇 개의 파일에 분할되어 있을 때 뷰(`/mode:ViewGeneration`)를 생성하는 데 유용할 수 있습니다. 여러 모델(`/mode:ValidateArtifacts`)의 유효성을 검사하려는 경우에도 유용할 수 있습니다.|  
+|`/inssdl:`\<file>|.ssdl 파일 또는 .ssdl 파일이 있는 디렉터리를 지정합니다. 몇 개의 디렉터리나 .ssdl 파일을 지정할 수 있도록 이 인수를 여러 번 지정할 수 있습니다. 여러 모델`(/mode:ValidateArtifacts)`의 유효성을 검사하려는 경우에 유용할 수 있습니다.|  
+|`/outcsdl:`\<file>|만들 .csdl 파일의 이름을 지정합니다.|  
+|`/outmsl:`\<file>|만들 .msl 파일의 이름을 지정합니다.|  
+|`/outssdl:`\<file>|만들 .ssdl 파일의 이름을 지정합니다.|  
+|`/outobjectlayer:`\<file>|.csdl 파일에서 생성된 개체가 포함되는 소스 코드 파일의 이름을 지정합니다.|  
+|`/outviews:`\<file>|생성된 뷰가 포함되는 소스 코드 파일의 이름을 지정합니다.|  
+|`/language:`[VB&#124;CSharp]|생성되는 소스 코드 파일의 언어를 지정합니다. 기본 언어는 C#입니다.|  
+|`/namespace:`\<string>|사용할 모델 네임스페이스를 지정합니다. 네임스페이스는 `/mode:FullGeneration` 또는 `/mode:FromSSDLGeneration`을 실행할 때 .csdl 파일에서 설정됩니다. `/mode:EntityClassGeneration`을 실행할 때는 네임스페이스가 사용되지 않습니다.|  
+|`/entitycontainer:`\<string>|생성되는 모델 및 매핑 파일의 `<EntityContainer>` 요소에 적용할 이름을 지정합니다.|  
 |`/pl[uralize]`|개념적 모델의 `Entity`, `EntitySet` 및 `NavigationProperty` 이름에 영어의 단수 및 복수 규칙을 적용합니다. 이 옵션은 다음 동작을 수행합니다.<br /><br /> -모든 확인 `EntityType` 이름을 단 수 화 합니다.<br />-모든 확인 `EntitySet` 이름을 복수화 합니다.<br />-각각에 대해 `NavigationProperty` 를 최대 하나의 엔터티를 반환 하는 이름을 단 수 있도록 합니다.<br />-각각에 대해 `NavigationProperty` 를 둘 이상의 엔터티를 반환 하는 경우 이름을 복수화 합니다.|  
 |`/SupressForeignKeyProperties or /nofk`|외래 키 열이 개념적 모델의 엔터티 형식에 대한 스칼라 속성으로 노출되지 않도록 합니다.|  
 |`/help` 또는 `?`|이 도구의 명령 구문 및 옵션을 표시합니다.|  
 |`/nologo`|저작권 메시지가 표시되지 않도록 합니다.|  
-|`/targetversion:`\<문자열 >|생성된 코드를 컴파일하는 데 사용할 .NET Framework 버전입니다. 지원되는 버전은 4 및 4.5입니다. 기본값은 4입니다.|  
+|`/targetversion:` \<string>|생성된 코드를 컴파일하는 데 사용할 .NET Framework 버전입니다. 지원되는 버전은 4 및 4.5입니다. 기본값은 4입니다.|  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: EdmGen.exe를 사용하여 모델 생성 및 파일 매핑](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  

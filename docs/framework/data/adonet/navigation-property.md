@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: dc980a2c61be736e2c1d8e52d8f13d0ea5ed09f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5af52532dc534d793e7e8ce72a08c2f7229569b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="navigation-property"></a>탐색 속성(navigation property)
 A *탐색 속성* 은 선택적 속성에는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 하나씩 탐색할 수 있게 해 주는 [끝](../../../../docs/framework/data/adonet/association-end.md) 의 [연결](../../../../docs/framework/data/adonet/association-type.md) 를 다른 쪽 끝입니다. 다른 달리 [속성](../../../../docs/framework/data/adonet/property.md), 탐색 속성은 데이터를 전달 하지 않습니다.  

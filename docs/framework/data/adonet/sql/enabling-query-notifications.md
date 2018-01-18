@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 473f1ca54d54a1d852edaed424729778e5a7513d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c7b02ba7959a5cfc2205222655460026847c3098
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="enabling-query-notifications"></a>쿼리 알림 사용
 쿼리 알림을 사용하는 응용 프로그램에는 공통적인 요구 사항이 적용됩니다. SQL 쿼리 알림을 지원하도록 데이터 소스를 올바르게 구성해야 하며, 사용자는 올바른 클라이언트측 및 서버측 권한을 가지고 있어야 합니다.  

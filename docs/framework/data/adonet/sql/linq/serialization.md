@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 60f73644a047230a590e75f095575cf85140f3a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 02a8b9bf587f19fec25e629e11c0108e5994e3ba
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="serialization"></a>Serialization
 이 항목에서는 설명 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능입니다. 디자인 타임에 코드 생성 도중 serialization을 추가하는 방법과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 클래스의 런타임 serialization 동작에 대한 정보가 제공됩니다.  

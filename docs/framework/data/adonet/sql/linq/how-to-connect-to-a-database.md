@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d03dc5a3775ee9396573d58637c32f824760768f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5447ce64803405668a2d486c7b3071b5ff923cb
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-connect-to-a-database"></a>방법: 데이터베이스의 데이터에 연결
 <xref:System.Data.Linq.DataContext>는 데이터베이스에 연결하여 개체를 검색하고 변경 내용을 데이터베이스로 다시 전송하는 주 통로입니다. <xref:System.Data.Linq.DataContext> [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]을 사용하는 것처럼 <xref:System.Data.SqlClient.SqlConnection>를 사용합니다. 실제로 <xref:System.Data.Linq.DataContext>는 사용자가 지정한 연결 또는 연결 문자열을 통해 초기화됩니다. 자세한 내용은 참조 [DataContext 메서드 (O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)합니다.  

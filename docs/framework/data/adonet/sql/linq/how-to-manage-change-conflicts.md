@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cd292c51-a3d1-4c6f-8d8e-04323c36054e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3059adbc9cd2c67035d5f6579e292df80cd87ef3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: caacb4c3b877ce6bf7ba11001f602a76ad7f9734
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-manage-change-conflicts"></a>방법: 변경 내용 충돌 관리
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]검색, 평가 및 동시성 충돌을 해결할 수 있도록 Api의 컬렉션을 제공 합니다.  

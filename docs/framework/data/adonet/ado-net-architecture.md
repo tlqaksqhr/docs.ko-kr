@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2916321ff51f335b40a2cc4eef90cdccdfc25bda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1f09901ef6eb30fe3f43ee19ab17ceaaa2b78e8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adonet-architecture"></a>ADO.NET 아키텍처
 기존의 데이터 처리는 연결 기반의 2계층 모델에 의존해 왔습니다. 그러나 다중 계층 아키텍처를 사용하는 데이터 처리가 증가함에 따라 프로그래머는 연결되지 않은 방법으로 전환하여 응용 프로그램의 확장성을 개선하고 있습니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 다이어그램은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자와 `DataSet` 간의 관계를 보여 줍니다.  
   
- ![ADO.Net 그래픽](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 ADO.NET 아키텍처  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>DataReader 또는 DataSet 선택  

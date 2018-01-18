@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>매개 변수 및 매개 변수 데이터 형식 구성
 Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 값을 전달하여 형식 검사 및 유효성 검사 기능을 제공합니다. 명령 텍스트와 달리 매개 변수 입력은 실행 코드가 아니라 리터럴 값으로 처리됩니다. 따라서 매개 변수화된 명령을 사용하면 공격자가 서버의 보안을 손상시키는 명령을 SQL 문에 삽입하는 "SQL 삽입" 공격을 막을 수 있습니다.  
@@ -57,7 +57,7 @@ Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 �
   
 |.NET Framework 형식|DbType|SqlDbType|OleDbType|OdbcType|OracleType|  
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
-|<xref:System.Boolean>|부울|비트|부울|비트|Byte|  
+|<xref:System.Boolean>|Boolean|비트|부울|비트|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
 |byte[]|이항|VarBinary`.` 바이트 배열이 VarBinary의 최대 크기 보다 큰 8000 바이트이 암시적 변환은 수행 되지 것입니다. 8000 바이트 보다 큰 바이트 배열을에 대 한 명시적으로 설정 된 <xref:System.Data.SqlDbType>합니다.|VarBinary|이항|Raw|  
 |<xref:System.Char>|``|char에서 <xref:System.Data.SqlDbType> 을 유추하는 것은 지원되지 않습니다.|Char|Char|Byte|  

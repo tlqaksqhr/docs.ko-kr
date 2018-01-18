@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a30adbc060ead6eb1805f85bd563021ba7530c36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="standard-query-operator-translation"></a>표준 쿼리 연산자 변환
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 표준 쿼리 연산자를 SQL 명령으로 변환합니다. 데이터베이스의 쿼리 프로세서는 SQL 변환에 대 한 실행 의미 체계를 결정합니다.  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fadb149e92b65988b8f9f322752bc63e1ee65f19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6efca83c6d3157e7fc4ff0e49ad32cab7cee9251
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server에서 대량 복사 작업
 Microsoft SQL Server 라는 명령줄 유틸리티가 포함 되어 **bcp** 에 대 한 신속 하 게 대량으로 테이블이 나 SQL Server 데이터베이스의 뷰로 큰 파일을 복사 합니다. <xref:System.Data.SqlClient.SqlBulkCopy> 클래스를 사용하면 이와 유사한 기능을 제공하는 관리 코드 솔루션을 작성할 수 있습니다. INSERT 문 같은 다른 방법으로도 SQL Server 테이블에 데이터를 로드할 수 있지만 <xref:System.Data.SqlClient.SqlBulkCopy>는 다른 방법에 비해 성능이 크게 뛰어납니다.  

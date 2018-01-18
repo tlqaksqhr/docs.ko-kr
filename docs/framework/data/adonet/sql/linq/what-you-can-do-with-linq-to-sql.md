@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70e783c0ad6b13097aaa1912f1338714a1f43f73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8393866d8a13121913348404edd8e356f691b7e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL을- 사용하여 할 수 있는 작업
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 SQL 개발자가 필요로 하는 모든 주요 기능을 지원합니다. 정보를 쿼리하고 테이블에 정보를 삽입, 업데이트 및 삭제할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[DLinqGettingStarted#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#3)]
  [!code-vb[DLinqGettingStarted#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#3)]  
   
-## <a name="deleting"></a>삭제  
+## <a name="deleting"></a>삭제하는 중  
  항목을 `Delete` 하려면 항목이 속해 있는 컬렉션에서 항목을 제거한 다음 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 에서 <xref:System.Data.Linq.DataContext> 를 호출하여 변경 내용을 커밋합니다.  
   
 > [!NOTE]

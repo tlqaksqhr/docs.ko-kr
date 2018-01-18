@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b3d90579e28fde40d461bdb511d797e5d7f6f179
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3f1ed66ed7caf2272ca27097dc9a838bec7d0ae
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server에서 저장 프로시저에 서명
 인증서나 비대칭 키를 사용하여 저장 프로시저에 서명할 수 있습니다. 이 기능은 권한을 소유권 체인을 통해 상속할 수 없거나 동적 SQL과 같이 소유권 체인이 끊어진 시나리오를 위해 디자인되었습니다. 인증서에 매핑된 사용자를 만들고 저장 프로시저에서 액세스해야 하는 개체에 대한 인증서 사용자 권한을 부여할 수 있습니다.  

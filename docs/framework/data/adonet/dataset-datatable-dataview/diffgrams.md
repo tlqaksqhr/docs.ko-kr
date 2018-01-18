@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6166cae86d2956ae3eec28b98fe0af864f6b708b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81cf30367808a3f198514c0d72fa86a617a5ff13
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형식입니다. <xref:System.Data.DataSet>은 DiffGram 형식을 사용하여 자신의 내용을 로드하고 유지시키며 네트워크 연결을 통한 전송을 위해 이 내용을 serialize합니다. 경우는 <xref:System.Data.DataSet> 필요한 모든 정보를 정확 하 게 다시의 내용을 통해 스키마 하지의 DiffGram 채우는 DiffGram으로 작성 되는 <xref:System.Data.DataSet>, 둘 다에서 열 값을 포함 하는 **원래** 및 **현재** 행 버전, 행 오류 정보 및 행 순서입니다.  
@@ -81,10 +81,10 @@ DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형
  **\<**  ***DataInstance***  **>**  
  이 요소의 이름을 ***DataInstance***,이 설명서에서 설명 용으로 사용 됩니다. A ***DataInstance*** 요소 나타냅니다는 <xref:System.Data.DataSet> 또는 행을 한 <xref:System.Data.DataTable>합니다. 대신 *DataInstance*, 요소에는의 이름만 포함 되는 <xref:System.Data.DataSet> 또는 <xref:System.Data.DataTable>합니다. 이 DiffGram 형식의 블록에는 수정 여부에 관계없이 현재 데이터가 들어 있습니다. 요소 또는 수정 된 행으로 식별 되는 **diffgr: haschanges** 주석입니다.  
   
- **\<diffgr: 하기 전에 >**  
+ **\<diffgr:before>**  
  이 DiffGram 블록 형식에는 행의 원래 버전이 포함됩니다. 이 블록의 요소는 요소에 일치는 ***DataInstance*** 사용 하 여는 **diffgr: id** 주석입니다.  
   
- **\<diffgr:errors >**  
+ **\<diffgr:errors>**  
  특정 행에 대 한 오류 정보를 포함 하는이 DiffGram 형식의이 블록에는 ***DataInstance*** 블록입니다. 이 블록의 요소는 요소에 일치는 ***DataInstance*** 사용 하 여는 **diffgr: id** 주석입니다.  
   
 ## <a name="diffgram-annotations"></a>DiffGram 주석  
@@ -96,7 +96,7 @@ DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형
 |----------------|-----------------|  
 |**ID**|요소와 쌍으로 연결 하는 데 사용 된  **\<diffgr: 하기 전에 >** 및  **\<diffgr:errors >** 블록의 요소에는  **\<**  ***DataInstance***  **>**  블록입니다. 와 값의 **diffgr: id** 주석 양식에 있는 *[TableName] [RowIdentifier]*합니다. 예: `<Customers diffgr:id="Customers1">`|  
 |**parentId**|요소를 식별 하는  **\<**  ***DataInstance***  **>**  블록은 현재 요소의 부모 요소입니다. 와 값의 **diffgr: parentid** 주석 양식에 있는 *[TableName] [RowIdentifier]*합니다. 예: `<Orders diffgr:parentId="Customers1">`|  
-|**hasChanges**|행을 식별 하는  **\<**  ***DataInstance***  **>**  수정 된 것을 차단 합니다. **hasChanges** 주석은 다음 두 값 중 하나일 수 있습니다.<br /><br /> **삽입**<br /> 식별 된 **Added** 행입니다.<br /><br /> **수정**<br /> 식별 한 **Modified** 포함 된 행은 **원래** 행 버전이  **\<diffgr: 하기 전에 >** 블록입니다. **Deleted** 행는 **원래** 행 버전에는  **\<diffgr: 하기 전에 >** 블록 있지만 에주석이달린요소가없습니다 **\<**  ***DataInstance***  **>**  블록입니다.|  
+|**hasChanges**|행을 식별 하는  **\<**  ***DataInstance***  **>**  수정 된 것을 차단 합니다. **hasChanges** 주석은 다음 두 값 중 하나일 수 있습니다.<br /><br /> **inserted**<br /> 식별 된 **Added** 행입니다.<br /><br /> **modified**<br /> 식별 한 **Modified** 포함 된 행은 **원래** 행 버전이  **\<diffgr: 하기 전에 >** 블록입니다. **Deleted** 행는 **원래** 행 버전에는  **\<diffgr: 하기 전에 >** 블록 있지만 에주석이달린요소가없습니다 **\<**  ***DataInstance***  **>**  블록입니다.|  
 |**hasErrors**|행을 식별 하는  **\<**  ***DataInstance***  **>**  블록와 함께 한 **RowError**합니다. Error 요소에 배치 되는  **\<diffgr:errors >** 블록입니다.|  
 |**오류**|텍스트가 표시는 **RowError** 특정 요소에 대 한는  **\<diffgr:errors >** 블록입니다.|  
   
@@ -105,7 +105,7 @@ DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형
 |주석|설명|  
 |----------------|-----------------|  
 |**RowOrder**|원래 데이터의 행 순서를 유지하며 특정 <xref:System.Data.DataTable>에 있는 행의 인덱스를 식별합니다.|  
-|**숨김**|있는 것으로 열을 식별 하는 **ColumnMapping** 속성이로 설정 **MappingType.Hidden**합니다. 특성의 형식으로 기록 됩니다 **msdata: 숨겨진** *[ColumnName]*= "*값*"입니다. 예: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`<br /><br /> 데이터가 있는 숨겨진 열만 DiffGram 특성으로 작성됩니다. 데이터가 없는 숨겨진 열은 무시됩니다.|  
+|**Hidden**|있는 것으로 열을 식별 하는 **ColumnMapping** 속성이로 설정 **MappingType.Hidden**합니다. 특성의 형식으로 기록 됩니다 **msdata: 숨겨진** *[ColumnName]*= "*값*"입니다. 예: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`<br /><br /> 데이터가 있는 숨겨진 열만 DiffGram 특성으로 작성됩니다. 데이터가 없는 숨겨진 열은 무시됩니다.|  
   
 ## <a name="sample-diffgram"></a>샘플 DiffGram  
  다음은 DiffGram 형식의 예제입니다. 이 예제에서는 변경 사항이 커밋되기 전에 테이블에 있는 행을 업데이트한 결과를 보여 줍니다. CustomerID가 "ALFKI"인 행이 수정되었지만 업데이트되지는 않았습니다. 결과적으로, 한 **현재** 인 행을 **diffgr: id** "Customers1"에서는  **\<**  ***DataInstance***  **>**  블록 및 **원래** 인 행을 **diffgr: id** "Customers1"에서는  **\<diffgr: 하기 전에 >**블록입니다. "ANATR" 인 CustomerID 행는 **RowError**주석으로 추가 되므로 `diffgr:hasErrors="true"` 있으면 다음에 관련된 요소가  **\<diffgr:errors >** 블록입니다.  

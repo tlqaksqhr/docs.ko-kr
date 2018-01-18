@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2ee0e87c801e15a54229e559ce65cabf5f474a61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a7a66b165e5bcfc605842b96295ae1721e7b3af5
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="attribute-based-mapping"></a>특성 기반 매핑
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server 데이터베이스를 매핑하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 특성을 적용 하거나 또는 외부 매핑 파일을 사용 하 여 개체 모델입니다. 이 항목에서는 특성 기반 접근 방법에 대해 간략하게 설명합니다.  

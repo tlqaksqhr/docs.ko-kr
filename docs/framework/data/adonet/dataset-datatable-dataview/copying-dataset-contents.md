@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d8f9eac80d7a6679e7b3717446e79caf54a5fed3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bdeb462955816a53372719bf374f7d4b55aa7f18
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="copying-dataset-contents"></a>데이터 집합 콘텐츠 복사
 복사본을 만들 수는 <xref:System.Data.DataSet> 하면 원래 데이터는 영향을 주지 않고 데이터로 작업 하거나 사용할 수 있도록에서 데이터의 하위 집합으로는 **데이터 집합**합니다. 복사 하는 경우는 **DataSet**를 할 수 있습니다.  

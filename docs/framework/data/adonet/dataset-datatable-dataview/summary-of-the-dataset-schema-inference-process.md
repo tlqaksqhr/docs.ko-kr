@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b66426e0d63d2d9b4a9345a0f431a88125a8d34d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 63ab866785f1fea66ed72fa17589a5be790fcdaa
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>데이터 집합 스키마 유추 프로세스 요약
 유추 과정에서는 우선 XML 문서에서 테이블로 유추될 요소를 결정합니다. 그런 다음 남아 있는 XML에서 해당 테이블의 열을 결정합니다. 중첩된 테이블인 경우에는 유추 과정에서 중첩된 <xref:System.Data.DataRelation> 및 <xref:System.Data.ForeignKeyConstraint> 개체를 생성합니다.  

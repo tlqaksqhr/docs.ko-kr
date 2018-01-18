@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="architecture-and-design"></a>아키텍처 및 디자인
 SQL 생성 모듈은 [샘플 공급자](http://go.microsoft.com/fwlink/?LinkId=180616) 명령 트리를 나타내는 식 트리 방문자로 구현 됩니다. 생성은 식 트리에 대한 단일 패스로 수행됩니다.  
@@ -29,7 +29,7 @@ SQL 생성 모듈은 [샘플 공급자](http://go.microsoft.com/fwlink/?LinkId=1
   
 -   별칭의 이름을 바꾸려면 이름을 바꾸는 동안 충돌을 방지하기 위해 사용되는 모든 별칭을 식별해야 합니다. SqlBuilder에서 이름 바꾸기 선택을 지연하려면 Symbol 개체를 사용하여 이름을 바꿀 후보인 열을 나타냅니다.  
   
- ![다이어그램](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  첫 번째 단계에서는 식 트리를 방문하는 동안 식이 SqlSelectStatement로 그룹화되고 조인이 평면화되며 조인 별칭이 평면화됩니다. 이 단계 중에 Symbol 개체는 이름을 바꿀 수 있는 열 또는 입력 별칭을 나타냅니다.  
   
@@ -63,7 +63,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- Sqlselectstatement는 "SELECT... 모양의 정식 SQL SELECT 문 보낸 사람.. WHERE... 기준으로 그룹화 하는 중... ORDER BY "입니다.  
+ Sqlselectstatement는 "SELECT... 모양의 정식 SQL SELECT 문 FROM  .. WHERE... 기준으로 그룹화 하는 중... ORDER BY "입니다.  
   
  각 SQL 절은 StringBuilder에 의해 표현됩니다. 또한 Distinct가 지정되었는지 여부와 문이 맨 위에 있는지 여부를 추적합니다. 문이 맨 위에 없는 경우 문에 TOP 절이 없으면 ORDER BY 절이 생략됩니다.  
   

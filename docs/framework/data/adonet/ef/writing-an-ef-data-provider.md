@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a316ae288d677a0ad5bd602399e27389839ef092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 80f425f6e2a9d583ec221b91ae9bb2cd2604ff54
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Entity Framework 데이터 공급자 작성
 이 단원에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 이외의 데이터 소스를 지원하기 위해 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 공급자를 작성하는 방법을 설명합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]를 지원하는 공급자가 포함되어 있습니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 -   개념적 모델을 통해 메타데이터(예: 테이블 및 뷰)를 노출합니다.  
   
- ![b42a7a5c &#45; 0ac0 &#45; 4911 &#45; 86be &#45; 0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
+ ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>샘플  
  참조는 [Entity Framework 샘플 공급자](http://go.microsoft.com/fwlink/?LinkId=180616) 의 예는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 이외의 데이터 소스를 지 원하는 공급자는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]합니다.  

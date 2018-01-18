@@ -11,15 +11,15 @@ ms.topic: article
 dev_langs: vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e6c6ce0b722d901e38b728a710e3c49848fb918a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a54eda8d96468d4506a5f7dafc342fa5ff128c2a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="the-load-method"></a>로드 메서드
 <xref:System.Data.DataTable.Load%2A> 메서드를 사용하여 데이터 소스의 행과 함께 <xref:System.Data.DataTable>을 로드할 수 있습니다. 이 가장 간단한 형태의 단일 매개 변수를 허용 하는 오버 로드 된 메서드는 **DataReader**합니다. 이 양식에서 단순히 로드는 **DataTable** 행이 있는 합니다. 선택적으로 지정할 수는 **LoadOption** 매개 변수 데이터를 추가 하는 방법을 제어 하는 **DataTable**합니다.  

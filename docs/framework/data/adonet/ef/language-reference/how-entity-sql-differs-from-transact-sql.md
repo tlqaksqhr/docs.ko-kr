@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 90c3b7d639ea6fafd570b44ee40c0567e264ea91
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f80ec1ac51dded1f91d1a18c4d4e24836cf92cd
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL과 Transact-SQL의 차이점
 이 항목 간의 차이점을 설명 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 및 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]합니다.  
@@ -161,7 +161,7 @@ select a, sum(t.b) from T as t group by t.a as a
 ```  
   
 ## <a name="order-by-clause-usage"></a>ORDER BY 절 사용법  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서는 ORDER BY 절을 맨 위의 SELECT . FROM . WHERE 블록에서만 지정할 수 있습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 중첩된 ORDER BY 식을 사용할 수 있으며, 이는 쿼리 내 임의의 위치에 올 수 있습니다. 그러나 중첩 쿼리 내의 순서는 유지되지 않습니다.  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서는 ORDER BY 절을 맨 위의 SELECT .. FROM . WHERE 블록에서만 지정할 수 있습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 중첩된 ORDER BY 식을 사용할 수 있으며, 이는 쿼리 내 임의의 위치에 올 수 있습니다. 그러나 중첩 쿼리 내의 순서는 유지되지 않습니다.  
   
 ```  
 -- The following query will order the results by the last name  

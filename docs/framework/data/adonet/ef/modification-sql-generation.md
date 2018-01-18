@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4ed5c6fd4e8bdbf148a57401163936631236b46b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modification-sql-generation"></a>수정 SQL 생성
 이 단원에서는 SQL:1999 규격 데이터베이스 공급자에 대한 수정 SQL 생성 모듈을 개발하는 방법에 대해 설명합니다. 이 모듈은 수정 명령 트리를 적절한 SQL INSERT, UPDATE 또는 DELETE 문으로 변환하는 작업을 담당합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  DbModificationCommandTree 및 구현 과정에서 생성 되는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 항상 단일 행 작업을 나타냅니다. 이 단원에서는 .NET Framework 버전 3.5에서 이러한 형식과 관련 제약 조건에 대해 설명합니다.  
   
- ![다이어그램](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree에는 수정 작업의 대상 집합을 나타내는 Target 속성이 있습니다. Target의 Expression 속성은 입력 집합을 정의하며 항상 DbScanExpression입니다.  DbScanExpression 테이블 또는 뷰를 나타낼 수 있습니다 또는 데이터 집합이 정의 된 쿼리를 통해 메타 데이터 속성 "정의 쿼리"는 대상의 경우 null이 아닌.  
   

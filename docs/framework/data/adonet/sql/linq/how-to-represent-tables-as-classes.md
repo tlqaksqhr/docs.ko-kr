@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 27e3d21e42dbf841768e2a68ccbfff62368500bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30bdb3334b574053595565e94993563959f49694
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-represent-tables-as-classes"></a>방법: 클래스로 테이블 표현
 사용 하 여는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> 특성을 데이터베이스 테이블과 연결 된 엔터티 클래스로 클래스를 지정 합니다.  

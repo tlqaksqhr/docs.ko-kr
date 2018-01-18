@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ab7a60b4195f3d8976a61e3909682b3748e30341
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>DataTable에서 데이터 보기
 내용에 액세스할 수 있습니다는 <xref:System.Data.DataTable> 를 사용 하 여는 **행** 및 **열** 의 컬렉션은 **DataTable**합니다. 사용할 수도 있습니다는 <xref:System.Data.DataTable.Select%2A> 에 있는 데이터의 하위 집합을 반환 하는 메서드는 **DataTable** 검색 조건을 포함 하 여 기준에 따라 정렬 순서 및 행 상태입니다. 또한 사용할 수는 <xref:System.Data.DataRowCollection.Find%2A> 의 메서드는 **DataRowCollection** 기본 키 값을 사용 하 여 특정 행을 검색할 때.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 |**추가**|새 행|  
 |**없음**|없음|  
 |**OriginalRows**|변경되지 않거나 삭제된 행을 포함하는 원래 행|  
-|**변경 되지 않은**|변경되지 않은 행|  
+|**Unchanged**|변경되지 않은 행|  
   
  다음 예제에서는 **데이터 집합** 만 사용 하는 행 인 있도록 개체가 필터링 **DataViewRowState** 로 설정 된 **CurrentRows**합니다.  
   

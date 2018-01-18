@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e41eb1168774a5ebfc17147f65901de0e432789f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b814715782710994f18163ccfcd3db342199145
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML에서 데이터 집합 스키마 정보 로드
 스키마는 <xref:System.Data.DataSet> (해당 테이블, 열, 관계 및 제약 조건) 정의할 수 있습니다, 프로그래밍 방식으로 개발한는 **채우기** 또는 **FillSchema** 의 메서드는 <xref:System.Data.Common.DataAdapter>, 또는에서 로드 된 프로그램 XML 문서입니다. 로드할 **데이터 집합** 스키마 정보는 XML 문서에서 사용할 수 있습니다는 **ReadXmlSchema** 또는 **InferXmlSchema** 의 메서드는 **데이터집합**. **ReadXmlSchema** 로드 하거나 유추할 수 있습니다 **DataSet** XML 스키마 정의 언어 (XSD) 스키마 또는 인라인 XML 스키마는 XML 문서를 포함 하는 문서에서 스키마 정보입니다. **InferXmlSchema** 지정한 특정 XML 네임 스페이스를 무시 하는 동안 XML 문서에서 스키마를 유추할 수 있습니다.  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f5e9b375d8d1ec6c6de3ff758a01fd8d53daca8c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 703b6ebc1eb985cd40eb1ff57660f96f1693c35a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>방법: EntityCommand를 사용하여 매개 변수가 있는 Entity SQL 쿼리 실행
 이 항목에서는 실행 하는 방법을 보여 줍니다.는 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 를 사용 하 여 매개 변수가 있는 쿼리는 <xref:System.Data.EntityClient.EntityCommand> 개체입니다.  

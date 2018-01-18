@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 44bd1672c6423277fa90eee98ce954e7c1c5334e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e99ff801894149a2324638bfacbc1d32ee937e0a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>DataAdapter로 데이터 원본 업데이트
 `Update`의 <xref:System.Data.Common.DataAdapter> 메서드를 호출하면 <xref:System.Data.DataSet>의 변경 내용이 데이터 소스에 다시 적용됩니다. `Update` 메서드는 `Fill` 메서드와 마찬가지로 `DataSet`의 인스턴스, 선택적 <xref:System.Data.DataTable> 개체 또는 `DataTable` 이름을 인수로 사용합니다. `DataSet` 인스턴스는 변경 내용을 포함하는 `DataSet`이며 `DataTable`은 변경 내용을 검색할 테이블을 식별합니다. `DataTable`을 지정하지 않으면 `DataTable`의 첫 번째 `DataSet`이 사용됩니다.  

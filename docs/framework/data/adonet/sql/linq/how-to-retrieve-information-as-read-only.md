@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 04a20a06cd8ed8785b37bdc604a817b475f93873
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7144863e43ec816ad2359c6c48f6d38babb3b46
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>방법: 읽기 전용으로 정보 검색
 데이터를 변경하지 않으려면 읽기 전용 결과를 검색하여 쿼리의 성능을 향상시킬 수 있습니다.  

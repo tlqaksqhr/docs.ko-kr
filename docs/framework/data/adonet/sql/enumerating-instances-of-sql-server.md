@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 679196a6cc21705c8cc07e373a928f3c77c6befb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b0a81fd9b92e626b52c5a74c65798ddedbd94a9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server의 인스턴스 열거(ADO.NET)
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]에서는 응용 프로그램이 현재 네트워크 내에 있는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 인스턴스를 찾는 것을 허용합니다. <xref:System.Data.Sql.SqlDataSourceEnumerator> 클래스에서는 응용 프로그램 개발자에게 이 정보를 노출시켜 표시되는 모든 서버에 대한 정보가 포함된 <xref:System.Data.DataTable>을 제공합니다. 이 반환 된 테이블에서 사용 가능한 모든 서버를 포함 하는 드롭다운 목록을 확장 및 사용자가 새 연결을 만들려고 할 때 제공 되는 목록과 일치 하는 네트워크에서 사용할 수 있는 서버 인스턴스의 목록을 포함는 **연결 속성** 대화 상자. 표시되는 결과가 항상 완전하지는 않습니다.  
@@ -56,10 +56,10 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 |Column|설명|  
 |------------|-----------------|  
-|**서버 이름**|서버의 이름입니다.|  
-|**인스턴스 이름**|서버 인스턴스의 이름입니다. 서버가 기본 인스턴스로 실행 중인 경우에는 비어 있습니다.|  
+|**ServerName**|서버의 이름입니다.|  
+|**InstanceName**|서버 인스턴스의 이름입니다. 서버가 기본 인스턴스로 실행 중인 경우에는 비어 있습니다.|  
 |**IsClustered**|서버가 클러스터의 일부인지 여부를 나타냅니다.|  
-|**Version**|서버의 버전입니다. 예:<br /><br /> -9.00. x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0. x x ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50. x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0. x x ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
+|**Version**|서버의 버전입니다. 예:<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
   
 ## <a name="enumeration-limitations"></a>열거 제한  
  사용 가능한 모든 서버가 나열되거나 나열되지 않을 수 있습니다. 이 목록은 시간 제한 및 네트워크 트래픽 등의 요인에 따라 달라질 수 있습니다. 따라서 두 개를 연속해서 호출해도 목록이 서로 다를 수 있습니다. 동일한 네트워크의 서버만 나열됩니다. 브로드캐스트 패킷은 일반적으로 라우터를 순회하지 않기 때문에 나열된 서버를 표시하지 않을 수는 있지만 여러 호출에서 안정적입니다.  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fc821aeb1fb7812b3a858bf901e91ccc625f142a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0834e23c4530e2800eae0d0088b6701d02dd2a1a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter로 데이터 수정
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> 개체의 <xref:System.Data.Common.DbProviderFactory> 메서드를 사용하면 팩터리를 만들 때 지정한 기본 데이터 공급자에 대해 강력한 형식의 <xref:System.Data.Common.DbDataAdapter> 개체를 얻을 수 있습니다. 그런 다음 <xref:System.Data.Common.DbCommandBuilder>를 사용하여 데이터를 <xref:System.Data.DataSet>에서 데이터 소스로 삽입하고, 업데이트하고, 삭제하는 명령을 만들 수 있습니다.  
