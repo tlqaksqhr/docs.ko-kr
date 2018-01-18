@@ -10,77 +10,77 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 91ff476ed8f6060975c6adc1fe01a6db9c199969
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b3aabf5a47088fa408547527c5f18fa69a48e02
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="query-examples"></a><span data-ttu-id="01291-102">쿼리 예제</span><span class="sxs-lookup"><span data-stu-id="01291-102">Query Examples</span></span>
-<span data-ttu-id="01291-103">이 단원에서는 일반적인 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 쿼리에 대한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 및 C# 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-103">This section provides [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# examples of typical [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries.</span></span> <span data-ttu-id="01291-104">[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자들은 샘플 단원에서 제공하는 샘플 솔루션에서 더 많은 예제를 찾아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="01291-104">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can find many more examples in a sample solution available in the Samples section.</span></span> <span data-ttu-id="01291-105">자세한 내용은 참조 [샘플](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-105">For more information, see [Samples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).</span></span>  
+# <a name="query-examples"></a><span data-ttu-id="5bb31-102">쿼리 예제</span><span class="sxs-lookup"><span data-stu-id="5bb31-102">Query Examples</span></span>
+<span data-ttu-id="5bb31-103">이 단원에서는 일반적인 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 쿼리에 대한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 및 C# 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-103">This section provides [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# examples of typical [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries.</span></span> <span data-ttu-id="5bb31-104">[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]를 사용하는 개발자들은 샘플 단원에서 제공하는 샘플 솔루션에서 더 많은 예제를 찾아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-104">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can find many more examples in a sample solution available in the Samples section.</span></span> <span data-ttu-id="5bb31-105">자세한 내용은 참조 [샘플](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-105">For more information, see [Samples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="01291-106">*db* 의 코드 예제에는 대개 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서입니다.</span><span class="sxs-lookup"><span data-stu-id="01291-106">*db* is often used in code examples in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation.</span></span> <span data-ttu-id="01291-107">*db* 인스턴스의 것으로 간주 되는 *Northwind* 클래스에서 상속 하는 <xref:System.Data.Linq.DataContext>합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-107">*db* is assumed to be an instance of a *Northwind* class, which inherits from <xref:System.Data.Linq.DataContext>.</span></span>  
+>  <span data-ttu-id="5bb31-106">*db* 의 코드 예제에는 대개 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서입니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-106">*db* is often used in code examples in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation.</span></span> <span data-ttu-id="5bb31-107">*db* 인스턴스의 것으로 간주 되는 *Northwind* 클래스에서 상속 하는 <xref:System.Data.Linq.DataContext>합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-107">*db* is assumed to be an instance of a *Northwind* class, which inherits from <xref:System.Data.Linq.DataContext>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="01291-108">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="01291-108">In This Section</span></span>  
- [<span data-ttu-id="01291-109">집계 쿼리</span><span class="sxs-lookup"><span data-stu-id="01291-109">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
- <span data-ttu-id="01291-110"><xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A> 등의 사용 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-110">Describes how to use <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, and so forth.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5bb31-108">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="5bb31-108">In This Section</span></span>  
+ [<span data-ttu-id="5bb31-109">집계 쿼리</span><span class="sxs-lookup"><span data-stu-id="5bb31-109">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
+ <span data-ttu-id="5bb31-110"><xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A> 등의 사용 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-110">Describes how to use <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, and so forth.</span></span>  
   
- [<span data-ttu-id="01291-111">시퀀스의 첫 번째 요소 반환</span><span class="sxs-lookup"><span data-stu-id="01291-111">Return the First Element in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-first-element-in-a-sequence.md)  
- <span data-ttu-id="01291-112"><xref:System.Linq.Enumerable.First%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-112">Provides examples of using <xref:System.Linq.Enumerable.First%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-111">시퀀스의 첫 번째 요소 반환</span><span class="sxs-lookup"><span data-stu-id="5bb31-111">Return the First Element in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-first-element-in-a-sequence.md)  
+ <span data-ttu-id="5bb31-112"><xref:System.Linq.Enumerable.First%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-112">Provides examples of using <xref:System.Linq.Enumerable.First%2A>.</span></span>  
   
- [<span data-ttu-id="01291-113">시퀀스에서 요소 반환 또는 건너뛰기</span><span class="sxs-lookup"><span data-stu-id="01291-113">Return Or Skip Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- <span data-ttu-id="01291-114"><xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-114">Provides examples of using <xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-113">시퀀스에서 요소 반환 또는 건너뛰기</span><span class="sxs-lookup"><span data-stu-id="5bb31-113">Return Or Skip Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
+ <span data-ttu-id="5bb31-114"><xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-114">Provides examples of using <xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A>.</span></span>  
   
- [<span data-ttu-id="01291-115">시퀀스의 요소 정렬</span><span class="sxs-lookup"><span data-stu-id="01291-115">Sort Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sort-elements-in-a-sequence.md)  
- <span data-ttu-id="01291-116"><xref:System.Linq.Enumerable.OrderBy%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-116">Provides examples of using <xref:System.Linq.Enumerable.OrderBy%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-115">시퀀스의 요소 정렬</span><span class="sxs-lookup"><span data-stu-id="5bb31-115">Sort Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sort-elements-in-a-sequence.md)  
+ <span data-ttu-id="5bb31-116"><xref:System.Linq.Enumerable.OrderBy%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-116">Provides examples of using <xref:System.Linq.Enumerable.OrderBy%2A>.</span></span>  
   
- [<span data-ttu-id="01291-117">시퀀스의 요소 그룹화</span><span class="sxs-lookup"><span data-stu-id="01291-117">Group Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/group-elements-in-a-sequence.md)  
- <span data-ttu-id="01291-118"><xref:System.Linq.Enumerable.GroupBy%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-118">Provides examples of using <xref:System.Linq.Enumerable.GroupBy%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-117">시퀀스의 요소 그룹화</span><span class="sxs-lookup"><span data-stu-id="5bb31-117">Group Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/group-elements-in-a-sequence.md)  
+ <span data-ttu-id="5bb31-118"><xref:System.Linq.Enumerable.GroupBy%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-118">Provides examples of using <xref:System.Linq.Enumerable.GroupBy%2A>.</span></span>  
   
- [<span data-ttu-id="01291-119">시퀀스에서 중복 요소 제거</span><span class="sxs-lookup"><span data-stu-id="01291-119">Eliminate Duplicate Elements from a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/eliminate-duplicate-elements-from-a-sequence.md)  
- <span data-ttu-id="01291-120"><xref:System.Linq.Enumerable.Distinct%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-120">Provides examples of using <xref:System.Linq.Enumerable.Distinct%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-119">시퀀스에서 중복 요소 제거</span><span class="sxs-lookup"><span data-stu-id="5bb31-119">Eliminate Duplicate Elements from a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/eliminate-duplicate-elements-from-a-sequence.md)  
+ <span data-ttu-id="5bb31-120"><xref:System.Linq.Enumerable.Distinct%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-120">Provides examples of using <xref:System.Linq.Enumerable.Distinct%2A>.</span></span>  
   
- [<span data-ttu-id="01291-121">시퀀스에서 일부 또는 모든 요소가 조건을 만족하는지 확인</span><span class="sxs-lookup"><span data-stu-id="01291-121">Determine if Any or All Elements in a Sequence Satisfy a Condition</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
- <span data-ttu-id="01291-122"><xref:System.Linq.Enumerable.All%2A> 및 <xref:System.Linq.Enumerable.Any%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-122">Provides examples of using <xref:System.Linq.Enumerable.All%2A> and <xref:System.Linq.Enumerable.Any%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-121">시퀀스에서 일부 또는 모든 요소가 조건을 만족하는지 확인</span><span class="sxs-lookup"><span data-stu-id="5bb31-121">Determine if Any or All Elements in a Sequence Satisfy a Condition</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
+ <span data-ttu-id="5bb31-122"><xref:System.Linq.Enumerable.All%2A> 및 <xref:System.Linq.Enumerable.Any%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-122">Provides examples of using <xref:System.Linq.Enumerable.All%2A> and <xref:System.Linq.Enumerable.Any%2A>.</span></span>  
   
- [<span data-ttu-id="01291-123">두 시퀀스 연결</span><span class="sxs-lookup"><span data-stu-id="01291-123">Concatenate Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- <span data-ttu-id="01291-124"><xref:System.Linq.Enumerable.Concat%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-124">Provides examples of using <xref:System.Linq.Enumerable.Concat%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-123">두 시퀀스 연결</span><span class="sxs-lookup"><span data-stu-id="5bb31-123">Concatenate Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
+ <span data-ttu-id="5bb31-124"><xref:System.Linq.Enumerable.Concat%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-124">Provides examples of using <xref:System.Linq.Enumerable.Concat%2A>.</span></span>  
   
- [<span data-ttu-id="01291-125">두 시퀀스 간의 차집합 반환</span><span class="sxs-lookup"><span data-stu-id="01291-125">Return the Set Difference Between Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- <span data-ttu-id="01291-126"><xref:System.Linq.Enumerable.Except%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-126">Provides examples of using <xref:System.Linq.Enumerable.Except%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-125">두 시퀀스 간의 차집합 반환</span><span class="sxs-lookup"><span data-stu-id="5bb31-125">Return the Set Difference Between Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
+ <span data-ttu-id="5bb31-126"><xref:System.Linq.Enumerable.Except%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-126">Provides examples of using <xref:System.Linq.Enumerable.Except%2A>.</span></span>  
   
- [<span data-ttu-id="01291-127">두 시퀀스의 교집합 반환</span><span class="sxs-lookup"><span data-stu-id="01291-127">Return the Set Intersection of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- <span data-ttu-id="01291-128"><xref:System.Linq.Enumerable.Intersect%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-128">Provides examples of using <xref:System.Linq.Enumerable.Intersect%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-127">두 시퀀스의 교집합 반환</span><span class="sxs-lookup"><span data-stu-id="5bb31-127">Return the Set Intersection of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
+ <span data-ttu-id="5bb31-128"><xref:System.Linq.Enumerable.Intersect%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-128">Provides examples of using <xref:System.Linq.Enumerable.Intersect%2A>.</span></span>  
   
- [<span data-ttu-id="01291-129">두 시퀀스의 합집합 반환</span><span class="sxs-lookup"><span data-stu-id="01291-129">Return the Set Union of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)  
- <span data-ttu-id="01291-130"><xref:System.Linq.Enumerable.Union%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-130">Provides examples of using <xref:System.Linq.Enumerable.Union%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-129">두 시퀀스의 합집합 반환</span><span class="sxs-lookup"><span data-stu-id="5bb31-129">Return the Set Union of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)  
+ <span data-ttu-id="5bb31-130"><xref:System.Linq.Enumerable.Union%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-130">Provides examples of using <xref:System.Linq.Enumerable.Union%2A>.</span></span>  
   
- [<span data-ttu-id="01291-131">시퀀스를 배열로 변환</span><span class="sxs-lookup"><span data-stu-id="01291-131">Convert a Sequence to an Array</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-an-array.md)  
- <span data-ttu-id="01291-132"><xref:System.Linq.Enumerable.ToArray%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-132">Provides examples of using <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-131">시퀀스를 배열로 변환</span><span class="sxs-lookup"><span data-stu-id="5bb31-131">Convert a Sequence to an Array</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-an-array.md)  
+ <span data-ttu-id="5bb31-132"><xref:System.Linq.Enumerable.ToArray%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-132">Provides examples of using <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>  
   
- [<span data-ttu-id="01291-133">제네릭 목록으로 시퀀스 변환</span><span class="sxs-lookup"><span data-stu-id="01291-133">Convert a Sequence to a Generic List</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-a-generic-list.md)  
- <span data-ttu-id="01291-134"><xref:System.Linq.Enumerable.ToList%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-134">Provides examples of using <xref:System.Linq.Enumerable.ToList%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-133">제네릭 목록으로 시퀀스 변환</span><span class="sxs-lookup"><span data-stu-id="5bb31-133">Convert a Sequence to a Generic List</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-a-generic-list.md)  
+ <span data-ttu-id="5bb31-134"><xref:System.Linq.Enumerable.ToList%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-134">Provides examples of using <xref:System.Linq.Enumerable.ToList%2A>.</span></span>  
   
- [<span data-ttu-id="01291-135">제네릭 IEnumerable로 형식 변환</span><span class="sxs-lookup"><span data-stu-id="01291-135">Convert a Type to a Generic IEnumerable</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)  
- <span data-ttu-id="01291-136"><xref:System.Linq.Enumerable.AsEnumerable%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-136">Provides examples of using <xref:System.Linq.Enumerable.AsEnumerable%2A>.</span></span>  
+ [<span data-ttu-id="5bb31-135">제네릭 IEnumerable로 형식 변환</span><span class="sxs-lookup"><span data-stu-id="5bb31-135">Convert a Type to a Generic IEnumerable</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)  
+ <span data-ttu-id="5bb31-136"><xref:System.Linq.Enumerable.AsEnumerable%2A> 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-136">Provides examples of using <xref:System.Linq.Enumerable.AsEnumerable%2A>.</span></span>  
   
- [<span data-ttu-id="01291-137">조인 및 교차곱 쿼리 작성</span><span class="sxs-lookup"><span data-stu-id="01291-137">Formulate Joins and Cross-Product Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
- <span data-ttu-id="01291-138">`from`, `where` 및 `select` 절에서 외래 키 탐색 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-138">Provides examples of using foreign-key navigation in the `from`, `where`, and `select` clauses.</span></span>  
+ [<span data-ttu-id="5bb31-137">조인 및 교차곱 쿼리 작성</span><span class="sxs-lookup"><span data-stu-id="5bb31-137">Formulate Joins and Cross-Product Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
+ <span data-ttu-id="5bb31-138">`from`, `where` 및 `select` 절에서 외래 키 탐색 사용 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-138">Provides examples of using foreign-key navigation in the `from`, `where`, and `select` clauses.</span></span>  
   
- [<span data-ttu-id="01291-139">프로젝션 작성</span><span class="sxs-lookup"><span data-stu-id="01291-139">Formulate Projections</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- <span data-ttu-id="01291-140">결합의 예제를 제공 `select` 과 기타 기능 (예를 들어 *익명 형식*) 쿼리 투영을 만드는 합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-140">Provides examples of combining `select` with other features (for example, *anonymous types*) to form query projections.</span></span>  
+ [<span data-ttu-id="5bb31-139">프로젝션 작성</span><span class="sxs-lookup"><span data-stu-id="5bb31-139">Formulate Projections</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
+ <span data-ttu-id="5bb31-140">결합의 예제를 제공 `select` 과 기타 기능 (예를 들어 *익명 형식*) 쿼리 투영을 만드는 합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-140">Provides examples of combining `select` with other features (for example, *anonymous types*) to form query projections.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="01291-141">관련 단원</span><span class="sxs-lookup"><span data-stu-id="01291-141">Related Sections</span></span>  
- [<span data-ttu-id="01291-142">표준 쿼리 연산자 개요</span><span class="sxs-lookup"><span data-stu-id="01291-142">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- <span data-ttu-id="01291-143">표준 쿼리 연산자의 개념을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-143">Explains the concept of standard query operators.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="5bb31-141">관련 단원</span><span class="sxs-lookup"><span data-stu-id="5bb31-141">Related Sections</span></span>  
+ [<span data-ttu-id="5bb31-142">표준 쿼리 연산자 개요</span><span class="sxs-lookup"><span data-stu-id="5bb31-142">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ <span data-ttu-id="5bb31-143">표준 쿼리 연산자의 개념을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-143">Explains the concept of standard query operators.</span></span>  
   
- [<span data-ttu-id="01291-144">쿼리 개념</span><span class="sxs-lookup"><span data-stu-id="01291-144">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- <span data-ttu-id="01291-145">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용 개념이 쿼리에 어떻게 적용되는지 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-145">Explains how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses concepts that apply to queries.</span></span>  
+ [<span data-ttu-id="5bb31-144">쿼리 개념</span><span class="sxs-lookup"><span data-stu-id="5bb31-144">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ <span data-ttu-id="5bb31-145">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용 개념이 쿼리에 어떻게 적용되는지 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-145">Explains how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses concepts that apply to queries.</span></span>  
   
- [<span data-ttu-id="01291-146">프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="01291-146">Programming Guide</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- <span data-ttu-id="01291-147">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 관련 프로그래밍 개념을 설명하는 항목에 대한 포털을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01291-147">Provides a portal to topics that explain programming concepts related to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>
+ [<span data-ttu-id="5bb31-146">프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="5bb31-146">Programming Guide</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ <span data-ttu-id="5bb31-147">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 관련 프로그래밍 개념을 설명하는 항목에 대한 포털을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5bb31-147">Provides a portal to topics that explain programming concepts related to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>

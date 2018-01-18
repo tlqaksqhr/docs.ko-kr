@@ -10,34 +10,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a9bd06e056a70e3cb97967a03604baf5dc9b4ff5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae481527ae4a7a978b183444a053bf773e369099
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="samples"></a><span data-ttu-id="afd0f-102">샘플</span><span class="sxs-lookup"><span data-stu-id="afd0f-102">Samples</span></span>
-<span data-ttu-id="afd0f-103">이 항목에서는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]에 대한 링크와 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 샘플 코드가 포함된 C# 솔루션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="afd0f-103">This topic provides links to the [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# solutions that contain [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sample code.</span></span>  
+# <a name="samples"></a><span data-ttu-id="7aa0a-102">샘플</span><span class="sxs-lookup"><span data-stu-id="7aa0a-102">Samples</span></span>
+<span data-ttu-id="7aa0a-103">이 항목에서는 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]에 대한 링크와 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 샘플 코드가 포함된 C# 솔루션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7aa0a-103">This topic provides links to the [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# solutions that contain [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sample code.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="afd0f-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="afd0f-104">In This Section</span></span>  
- <span data-ttu-id="afd0f-105">SampleQueries 솔루션의 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 버전</span><span class="sxs-lookup"><span data-stu-id="afd0f-105">[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] version of the SampleQueries solution</span></span>  
- [<span data-ttu-id="afd0f-106">예제 쿼리 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="afd0f-106">Sample Queries (Visual Basic)</span></span>](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7aa0a-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="7aa0a-104">In This Section</span></span>  
+ <span data-ttu-id="7aa0a-105">SampleQueries 솔루션의 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 버전</span><span class="sxs-lookup"><span data-stu-id="7aa0a-105">[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] version of the SampleQueries solution</span></span>  
+ [<span data-ttu-id="7aa0a-106">예제 쿼리 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7aa0a-106">Sample Queries (Visual Basic)</span></span>](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
- <span data-ttu-id="afd0f-107">SampleQueries 솔루션의 C # 버전</span><span class="sxs-lookup"><span data-stu-id="afd0f-107">C# version of the SampleQueries solution</span></span>  
- [<span data-ttu-id="afd0f-108">LINQ C# 샘플 솔루션</span><span class="sxs-lookup"><span data-stu-id="afd0f-108">LINQ C# Samples Solution</span></span>](http://msdn.microsoft.com/en-us/23852e6b-b9a9-4a06-aedb-b27a5930ed74)  
+ <span data-ttu-id="7aa0a-107">SampleQueries 솔루션의 C # 버전</span><span class="sxs-lookup"><span data-stu-id="7aa0a-107">C# version of the SampleQueries solution</span></span>  
+ [<span data-ttu-id="7aa0a-108">LINQ C# 샘플 솔루션</span><span class="sxs-lookup"><span data-stu-id="7aa0a-108">LINQ C# Samples Solution</span></span>](http://msdn.microsoft.com/en-us/23852e6b-b9a9-4a06-aedb-b27a5930ed74)  
   
- <span data-ttu-id="afd0f-109">다음 단계를 수행하여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드와 응용 프로그램의 추가 예제를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="afd0f-109">Follow these steps to find additional examples of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] code and applications:</span></span>  
+ <span data-ttu-id="7aa0a-109">다음 단계를 수행하여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드와 응용 프로그램의 추가 예제를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="7aa0a-109">Follow these steps to find additional examples of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] code and applications:</span></span>  
   
--   <span data-ttu-id="afd0f-110">Microsoft Docs에서 특정 문제에 대 한 검색입니다.</span><span class="sxs-lookup"><span data-stu-id="afd0f-110">Search for specific issues on Microsoft Docs.</span></span>  
+-   <span data-ttu-id="7aa0a-110">Microsoft Docs에서 특정 문제에 대 한 검색입니다.</span><span class="sxs-lookup"><span data-stu-id="7aa0a-110">Search for specific issues on Microsoft Docs.</span></span>  
   
--   <span data-ttu-id="afd0f-111">에 참여는 [LINQ 포럼](http://go.microsoft.com/fwlink/?LinkId=76488)전문가 함께 보다 복잡 한 주제를 자세히 논의할 수 있는, 합니다.</span><span class="sxs-lookup"><span data-stu-id="afd0f-111">Participate in the [LINQ Forum](http://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.</span></span>  
+-   <span data-ttu-id="7aa0a-111">에 참여는 [LINQ 포럼](http://go.microsoft.com/fwlink/?LinkId=76488)전문가 함께 보다 복잡 한 주제를 자세히 논의할 수 있는, 합니다.</span><span class="sxs-lookup"><span data-stu-id="7aa0a-111">Participate in the [LINQ Forum](http://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.</span></span>  
   
--   <span data-ttu-id="afd0f-112">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 및 C# 코드 예제를 통해 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 기술에 대해 자세히 설명하는 백서를 학습합니다.</span><span class="sxs-lookup"><span data-stu-id="afd0f-112">Study the white paper that details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# code examples.</span></span> <span data-ttu-id="afd0f-113">자세한 내용은 참조 [LINQ to SQL: 관계형 데이터에 대 한 쿼리.NET Language-Integrated](http://go.microsoft.com/fwlink/?LinkId=93205)합니다.</span><span class="sxs-lookup"><span data-stu-id="afd0f-113">For more information, see [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205).</span></span>  
+-   <span data-ttu-id="7aa0a-112">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 및 C# 코드 예제를 통해 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 기술에 대해 자세히 설명하는 백서를 학습합니다.</span><span class="sxs-lookup"><span data-stu-id="7aa0a-112">Study the white paper that details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# code examples.</span></span> <span data-ttu-id="7aa0a-113">자세한 내용은 참조 [LINQ to SQL: 관계형 데이터에 대 한 쿼리.NET Language-Integrated](http://go.microsoft.com/fwlink/?LinkId=93205)합니다.</span><span class="sxs-lookup"><span data-stu-id="7aa0a-113">For more information, see [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="afd0f-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="afd0f-114">See Also</span></span>  
- [<span data-ttu-id="afd0f-115">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="afd0f-115">LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [<span data-ttu-id="afd0f-116">LINQ to SQL 연습</span><span class="sxs-lookup"><span data-stu-id="afd0f-116">LINQ to SQL Walkthroughs</span></span>](http://msdn.microsoft.com/en-us/308e66ac-f704-4e00-9b4e-7af0045a2374)
+## <a name="see-also"></a><span data-ttu-id="7aa0a-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7aa0a-114">See Also</span></span>  
+ [<span data-ttu-id="7aa0a-115">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="7aa0a-115">LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [<span data-ttu-id="7aa0a-116">LINQ to SQL 연습</span><span class="sxs-lookup"><span data-stu-id="7aa0a-116">LINQ to SQL Walkthroughs</span></span>](http://msdn.microsoft.com/en-us/308e66ac-f704-4e00-9b4e-7af0045a2374)

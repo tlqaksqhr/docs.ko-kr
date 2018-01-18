@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9d6b29da-b363-4930-ba57-989f9d6dbf3f
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 03ba224e5ece99951a88c28e097cfa127438c0d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd1817807c2aec9551df140d8dca8191555c37ea
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="ssdl-specification"></a><span data-ttu-id="564f2-102">SSDL 사양</span><span class="sxs-lookup"><span data-stu-id="564f2-102">SSDL Specification</span></span>
-<span data-ttu-id="564f2-103">[msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) Entity Framework 콘텐츠의 기본 위치는 이제 사이트가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="564f2-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="ssdl-specification"></a><span data-ttu-id="36865-102">SSDL 사양</span><span class="sxs-lookup"><span data-stu-id="36865-102">SSDL Specification</span></span>
+<span data-ttu-id="36865-103">[msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) Entity Framework 콘텐츠의 기본 위치는 이제 사이트가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="36865-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="564f2-104">이제이 항목에 대 한 콘텐츠를 다음 페이지에서 사용할 수: [SSDL 사양](http://msdn.microsoft.com/data/jj652016)합니다.</span><span class="sxs-lookup"><span data-stu-id="564f2-104">The content for this topic is now available on the following page: [SSDL Specification](http://msdn.microsoft.com/data/jj652016).</span></span>
+ <span data-ttu-id="36865-104">이제이 항목에 대 한 콘텐츠를 다음 페이지에서 사용할 수: [SSDL 사양](http://msdn.microsoft.com/data/jj652016)합니다.</span><span class="sxs-lookup"><span data-stu-id="36865-104">The content for this topic is now available on the following page: [SSDL Specification](http://msdn.microsoft.com/data/jj652016).</span></span>
