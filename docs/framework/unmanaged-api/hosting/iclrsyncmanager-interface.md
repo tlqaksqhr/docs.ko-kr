@@ -20,35 +20,35 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5406a7a2912554552697c11fd7aa7a2c0e643fa0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f75a9b532e91966d6b0be9ac6602080eac896ed8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="iclrsyncmanager-interface"></a><span data-ttu-id="1a306-102">ICLRSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1a306-102">ICLRSyncManager Interface</span></span>
-<span data-ttu-id="1a306-103">요청 된 작업에 대 한 정보를 가져오려면 호스트가 동기화 구현에서 교착 상태를 감지 하는 데 사용할 수 있는 메서드를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a306-103">Defines methods that allow the host to get information about requested tasks and to detect deadlocks in its synchronization implementation.</span></span>  
+# <a name="iclrsyncmanager-interface"></a><span data-ttu-id="dcf6b-102">ICLRSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dcf6b-102">ICLRSyncManager Interface</span></span>
+<span data-ttu-id="dcf6b-103">요청 된 작업에 대 한 정보를 가져오려면 호스트가 동기화 구현에서 교착 상태를 감지 하는 데 사용할 수 있는 메서드를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcf6b-103">Defines methods that allow the host to get information about requested tasks and to detect deadlocks in its synchronization implementation.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1a306-104">메서드</span><span class="sxs-lookup"><span data-stu-id="1a306-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="dcf6b-104">메서드</span><span class="sxs-lookup"><span data-stu-id="dcf6b-104">Methods</span></span>  
   
-|<span data-ttu-id="1a306-105">메서드</span><span class="sxs-lookup"><span data-stu-id="1a306-105">Method</span></span>|<span data-ttu-id="1a306-106">설명</span><span class="sxs-lookup"><span data-stu-id="1a306-106">Description</span></span>|  
+|<span data-ttu-id="dcf6b-105">메서드</span><span class="sxs-lookup"><span data-stu-id="dcf6b-105">Method</span></span>|<span data-ttu-id="dcf6b-106">설명</span><span class="sxs-lookup"><span data-stu-id="dcf6b-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1a306-107">CreateRWLockOwnerIterator 메서드</span><span class="sxs-lookup"><span data-stu-id="1a306-107">CreateRWLockOwnerIterator Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md)|<span data-ttu-id="1a306-108">공용 언어 런타임 (CLR) 판독기 및 작성기 잠금에 대해 대기 중인 작업의 집합을 결정 하는 데 호스트에 대 한 반복기를 만들도록 요청 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a306-108">Requests that the common language runtime (CLR) create an iterator for the host to use to determine the set of tasks waiting on a reader-writer lock.</span></span>|  
-|[<span data-ttu-id="1a306-109">DeleteRWLockOwnerIterator 메서드</span><span class="sxs-lookup"><span data-stu-id="1a306-109">DeleteRWLockOwnerIterator Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md)|<span data-ttu-id="1a306-110">CLR로 호출 하 여 생성 된 반복기 손상 요청 `CreateRWLockOwnerIterator`합니다.</span><span class="sxs-lookup"><span data-stu-id="1a306-110">Requests that the CLR destroy an iterator that was created by a call to `CreateRWLockOwnerIterator`.</span></span>|  
-|[<span data-ttu-id="1a306-111">GetMonitorOwner 메서드</span><span class="sxs-lookup"><span data-stu-id="1a306-111">GetMonitorOwner Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md)|<span data-ttu-id="1a306-112">지정 된 모니터를 소유 하는 작업을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1a306-112">Gets the task that owns the specified monitor.</span></span>|  
-|[<span data-ttu-id="1a306-113">GetRWLockOwnerNext 메서드</span><span class="sxs-lookup"><span data-stu-id="1a306-113">GetRWLockOwnerNext Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md)|<span data-ttu-id="1a306-114">현재 판독기 / 작성기 잠금을 기다리고 있는 다음 작업을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1a306-114">Gets the next task that is waiting on the current reader-writer lock.</span></span>|  
+|[<span data-ttu-id="dcf6b-107">CreateRWLockOwnerIterator 메서드</span><span class="sxs-lookup"><span data-stu-id="dcf6b-107">CreateRWLockOwnerIterator Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md)|<span data-ttu-id="dcf6b-108">공용 언어 런타임 (CLR) 판독기 및 작성기 잠금에 대해 대기 중인 작업의 집합을 결정 하는 데 호스트에 대 한 반복기를 만들도록 요청 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcf6b-108">Requests that the common language runtime (CLR) create an iterator for the host to use to determine the set of tasks waiting on a reader-writer lock.</span></span>|  
+|[<span data-ttu-id="dcf6b-109">DeleteRWLockOwnerIterator 메서드</span><span class="sxs-lookup"><span data-stu-id="dcf6b-109">DeleteRWLockOwnerIterator Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md)|<span data-ttu-id="dcf6b-110">CLR로 호출 하 여 생성 된 반복기 손상 요청 `CreateRWLockOwnerIterator`합니다.</span><span class="sxs-lookup"><span data-stu-id="dcf6b-110">Requests that the CLR destroy an iterator that was created by a call to `CreateRWLockOwnerIterator`.</span></span>|  
+|[<span data-ttu-id="dcf6b-111">GetMonitorOwner 메서드</span><span class="sxs-lookup"><span data-stu-id="dcf6b-111">GetMonitorOwner Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md)|<span data-ttu-id="dcf6b-112">지정 된 모니터를 소유 하는 작업을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="dcf6b-112">Gets the task that owns the specified monitor.</span></span>|  
+|[<span data-ttu-id="dcf6b-113">GetRWLockOwnerNext 메서드</span><span class="sxs-lookup"><span data-stu-id="dcf6b-113">GetRWLockOwnerNext Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md)|<span data-ttu-id="dcf6b-114">현재 판독기 / 작성기 잠금을 기다리고 있는 다음 작업을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="dcf6b-114">Gets the next task that is waiting on the current reader-writer lock.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1a306-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1a306-115">Requirements</span></span>  
- <span data-ttu-id="1a306-116">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1a306-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dcf6b-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="dcf6b-115">Requirements</span></span>  
+ <span data-ttu-id="dcf6b-116">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="dcf6b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1a306-117">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1a306-117">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="dcf6b-117">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dcf6b-117">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1a306-118">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="1a306-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dcf6b-118">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="dcf6b-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1a306-119">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1a306-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dcf6b-119">**.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dcf6b-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1a306-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1a306-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="dcf6b-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dcf6b-120">See Also</span></span>  
  <xref:System.Threading.Thread>  
- [<span data-ttu-id="1a306-121">IHostSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1a306-121">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [<span data-ttu-id="1a306-122">관리 되는 관리 되지 않는 스레딩</span><span class="sxs-lookup"><span data-stu-id="1a306-122">Managed and Unmanaged Threading</span></span>](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)  
- [<span data-ttu-id="1a306-123">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1a306-123">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [<span data-ttu-id="dcf6b-121">IHostSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dcf6b-121">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+ [<span data-ttu-id="dcf6b-122">관리 되는 관리 되지 않는 스레딩</span><span class="sxs-lookup"><span data-stu-id="dcf6b-122">Managed and Unmanaged Threading</span></span>](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
+ [<span data-ttu-id="dcf6b-123">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dcf6b-123">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

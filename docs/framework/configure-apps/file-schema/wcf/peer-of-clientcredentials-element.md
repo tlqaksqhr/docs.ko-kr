@@ -14,23 +14,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: accd6c261a393da3ffcffd261d6603d20b8fcb3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c3479b52c6e06b7b9ebd69d46780e8dca70d2ef7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltpeergt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="9f4b3-102">&lt;clientCredentials&gt; 요소의 &lt;peer&gt;</span><span class="sxs-lookup"><span data-stu-id="9f4b3-102">&lt;peer&gt; of &lt;clientCredentials&gt; Element</span></span>
-<span data-ttu-id="9f4b3-103">피어 투 피어 클라이언트를 인증할 때 사용하는 자격 증명을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9f4b3-103">Specifies credentials used when authenticating peer-to-peer clients.</span></span>  
+# <a name="ltpeergt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="2ad6b-102">&lt;clientCredentials&gt; 요소의 &lt;peer&gt;</span><span class="sxs-lookup"><span data-stu-id="2ad6b-102">&lt;peer&gt; of &lt;clientCredentials&gt; Element</span></span>
+<span data-ttu-id="2ad6b-103">피어 투 피어 클라이언트를 인증할 때 사용하는 자격 증명을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2ad6b-103">Specifies credentials used when authenticating peer-to-peer clients.</span></span>  
   
- <span data-ttu-id="9f4b3-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="9f4b3-105">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-105">\<behaviors></span></span>  
-<span data-ttu-id="9f4b3-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-106">\<endpointBehaviors></span></span>  
-<span data-ttu-id="9f4b3-107">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-107">\<behavior></span></span>  
-<span data-ttu-id="9f4b3-108">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-108">\<clientCredentials></span></span>  
-<span data-ttu-id="9f4b3-109">\<피어 ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-109">\<peer></span></span>  
+ <span data-ttu-id="2ad6b-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2ad6b-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2ad6b-105">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="2ad6b-105">\<behaviors></span></span>  
+<span data-ttu-id="2ad6b-106">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="2ad6b-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="2ad6b-107">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="2ad6b-107">\<behavior></span></span>  
+<span data-ttu-id="2ad6b-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="2ad6b-108">\<clientCredentials></span></span>  
+<span data-ttu-id="2ad6b-109">\<peer></span><span class="sxs-lookup"><span data-stu-id="2ad6b-109">\<peer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f4b3-110">구문</span><span class="sxs-lookup"><span data-stu-id="9f4b3-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ad6b-110">구문</span><span class="sxs-lookup"><span data-stu-id="2ad6b-110">Syntax</span></span>  
   
 ```xml  
 <peer>  
@@ -40,30 +40,30 @@ ms.lasthandoff: 12/22/2017
 </peer>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9f4b3-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="9f4b3-111">Attributes and Elements</span></span>  
- <span data-ttu-id="9f4b3-112">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9f4b3-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2ad6b-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="2ad6b-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="2ad6b-112">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2ad6b-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9f4b3-113">특성</span><span class="sxs-lookup"><span data-stu-id="9f4b3-113">Attributes</span></span>  
- <span data-ttu-id="9f4b3-114">없음</span><span class="sxs-lookup"><span data-stu-id="9f4b3-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2ad6b-113">특성</span><span class="sxs-lookup"><span data-stu-id="2ad6b-113">Attributes</span></span>  
+ <span data-ttu-id="2ad6b-114">없음</span><span class="sxs-lookup"><span data-stu-id="2ad6b-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="9f4b3-115">자식 요소</span><span class="sxs-lookup"><span data-stu-id="9f4b3-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2ad6b-115">자식 요소</span><span class="sxs-lookup"><span data-stu-id="2ad6b-115">Child Elements</span></span>  
   
-|<span data-ttu-id="9f4b3-116">요소</span><span class="sxs-lookup"><span data-stu-id="9f4b3-116">Element</span></span>|<span data-ttu-id="9f4b3-117">설명</span><span class="sxs-lookup"><span data-stu-id="9f4b3-117">Description</span></span>|  
+|<span data-ttu-id="2ad6b-116">요소</span><span class="sxs-lookup"><span data-stu-id="2ad6b-116">Element</span></span>|<span data-ttu-id="2ad6b-117">설명</span><span class="sxs-lookup"><span data-stu-id="2ad6b-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9f4b3-118">\<인증서 ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-118">\<certificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|<span data-ttu-id="9f4b3-119">피어 투 피어 클라이언트의 메시지를 서명 및 암호화하는 데 사용하는 X.509 인증서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9f4b3-119">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span> <span data-ttu-id="9f4b3-120">이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9f4b3-120">.</span></span>|  
-|[<span data-ttu-id="9f4b3-121">\<peerAuthentication ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-121">\<peerAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|<span data-ttu-id="9f4b3-122">피어 클라이언트에 대한 인증 옵션을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9f4b3-122">Specifies authentication options for peer clients.</span></span>|  
-|[<span data-ttu-id="9f4b3-123">\<messageSenderAuthentication ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-123">\<messageSenderAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|<span data-ttu-id="9f4b3-124">메시지 발신자에 대한 인증 옵션을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9f4b3-124">Specifies authentication options for message senders.</span></span>|  
+|[<span data-ttu-id="2ad6b-118">\<certificate></span><span class="sxs-lookup"><span data-stu-id="2ad6b-118">\<certificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|<span data-ttu-id="2ad6b-119">피어 투 피어 클라이언트의 메시지를 서명 및 암호화하는 데 사용하는 X.509 인증서를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2ad6b-119">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span> <span data-ttu-id="2ad6b-120">이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ad6b-120">.</span></span>|  
+|[<span data-ttu-id="2ad6b-121">\<peerAuthentication></span><span class="sxs-lookup"><span data-stu-id="2ad6b-121">\<peerAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|<span data-ttu-id="2ad6b-122">피어 클라이언트에 대한 인증 옵션을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2ad6b-122">Specifies authentication options for peer clients.</span></span>|  
+|[<span data-ttu-id="2ad6b-123">\<messageSenderAuthentication></span><span class="sxs-lookup"><span data-stu-id="2ad6b-123">\<messageSenderAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|<span data-ttu-id="2ad6b-124">메시지 발신자에 대한 인증 옵션을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2ad6b-124">Specifies authentication options for message senders.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="9f4b3-125">부모 요소</span><span class="sxs-lookup"><span data-stu-id="9f4b3-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2ad6b-125">부모 요소</span><span class="sxs-lookup"><span data-stu-id="2ad6b-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="9f4b3-126">요소</span><span class="sxs-lookup"><span data-stu-id="9f4b3-126">Element</span></span>|<span data-ttu-id="9f4b3-127">설명</span><span class="sxs-lookup"><span data-stu-id="9f4b3-127">Description</span></span>|  
+|<span data-ttu-id="2ad6b-126">요소</span><span class="sxs-lookup"><span data-stu-id="2ad6b-126">Element</span></span>|<span data-ttu-id="2ad6b-127">설명</span><span class="sxs-lookup"><span data-stu-id="2ad6b-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9f4b3-128">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="9f4b3-128">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="9f4b3-129">클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9f4b3-129">Specifies the credentials used to authenticate a client to a service.</span></span>|  
+|[<span data-ttu-id="2ad6b-128">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="2ad6b-128">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="2ad6b-129">클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2ad6b-129">Specifies the credentials used to authenticate a client to a service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9f4b3-130">설명</span><span class="sxs-lookup"><span data-stu-id="9f4b3-130">Remarks</span></span>  
- <span data-ttu-id="9f4b3-131">이 구성 요소는 피어 노드가 메시에서 다른 노드로부터 인증을 얻는 데 사용하는 자격 증명과 피어 노드가 다른 피어 노드를 인증하는 데 사용하는 인증 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9f4b3-131">This configuration element specifies the credentials that a peer node uses to authenticate itself to other nodes in the mesh, as well as authentication settings that a peer node uses to authenticate other peer nodes.</span></span> <span data-ttu-id="9f4b3-132">자세한 내용은 참조 [피어 채널 메시지 인증](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95) 및 [피어 채널 응용 프로그램 보안](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9f4b3-132">For more information, see [Peer Channel Message Authentication](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95) and [Securing Peer Channel Applications](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ad6b-130">설명</span><span class="sxs-lookup"><span data-stu-id="2ad6b-130">Remarks</span></span>  
+ <span data-ttu-id="2ad6b-131">이 구성 요소는 피어 노드가 메시에서 다른 노드로부터 인증을 얻는 데 사용하는 자격 증명과 피어 노드가 다른 피어 노드를 인증하는 데 사용하는 인증 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2ad6b-131">This configuration element specifies the credentials that a peer node uses to authenticate itself to other nodes in the mesh, as well as authentication settings that a peer node uses to authenticate other peer nodes.</span></span> <span data-ttu-id="2ad6b-132">자세한 내용은 참조 [피어 채널 메시지 인증](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95) 및 [피어 채널 응용 프로그램 보안](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2ad6b-132">For more information, see [Peer Channel Message Authentication](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95) and [Securing Peer Channel Applications](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f4b3-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9f4b3-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2ad6b-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2ad6b-133">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>  
  <xref:System.ServiceModel.Security.PeerCredential>  
- [<span data-ttu-id="9f4b3-134">피어 투 피어 네트워킹</span><span class="sxs-lookup"><span data-stu-id="9f4b3-134">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [<span data-ttu-id="9f4b3-135">클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="9f4b3-135">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
- [<span data-ttu-id="9f4b3-136">피어 채널 메시지 인증</span><span class="sxs-lookup"><span data-stu-id="9f4b3-136">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [<span data-ttu-id="9f4b3-137">피어 채널 사용자 지정 인증</span><span class="sxs-lookup"><span data-stu-id="9f4b3-137">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [<span data-ttu-id="9f4b3-138">피어 채널 응용 프로그램 보안</span><span class="sxs-lookup"><span data-stu-id="9f4b3-138">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [<span data-ttu-id="9f4b3-139">서비스 및 클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="9f4b3-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [<span data-ttu-id="2ad6b-134">피어 투 피어 네트워킹</span><span class="sxs-lookup"><span data-stu-id="2ad6b-134">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [<span data-ttu-id="2ad6b-135">클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="2ad6b-135">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="2ad6b-136">피어 채널 메시지 인증</span><span class="sxs-lookup"><span data-stu-id="2ad6b-136">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [<span data-ttu-id="2ad6b-137">피어 채널 사용자 지정 인증</span><span class="sxs-lookup"><span data-stu-id="2ad6b-137">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [<span data-ttu-id="2ad6b-138">피어 채널 응용 프로그램 보안</span><span class="sxs-lookup"><span data-stu-id="2ad6b-138">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
+ [<span data-ttu-id="2ad6b-139">서비스 및 클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="2ad6b-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
