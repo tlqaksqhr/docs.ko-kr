@@ -14,11 +14,11 @@ ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7090142f940ae42f554fc0ba16bcc80d8537e38a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c36cdcaf8d2db0b08e262d6ba8ff2bb774fb233
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bugreport"></a>/bugreport
 버그 보고서를 파일로 작성할 때는 사용할 수 있는 파일을 만듭니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 |용어|정의|  
 |---|---|  
-|`file`|필수 요소. 버그 보고서를 포함 하는 파일의 이름입니다. 파일 이름을 따옴표로 묶습니다 ("")는 이름에 공백이 포함 하는 경우.|  
+|`file`|필수. 버그 보고서를 포함 하는 파일의 이름입니다. 파일 이름을 따옴표로 묶습니다 ("")는 이름에 공백이 포함 하는 경우.|  
   
 ## <a name="remarks"></a>설명  
  다음 정보에 추가 됩니다 `file`:  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  `/bugreport` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 가능 하다는 명령줄에서 컴파일할 때만 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 컴파일합니다 `T2.vb` 파일에 모든 버그 보고 정보를 저장 하 고 `Problem.txt`합니다.  
   
 ```  
@@ -72,4 +72,4 @@ vbc /bugreport:problem.txt t2.vb
  [/debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)  
  [/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)  
  [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [securityPolicy (ASP.NET 설정 스키마)에 대 한 trustLevel 요소](http://msdn.microsoft.com/en-us/729ab04c-03da-4ee5-86b1-be9d08a09369)
+ [securityPolicy (ASP.NET 설정 스키마)에 대 한 trustLevel 요소](http://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)

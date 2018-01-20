@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>연습: 전문적인 스타일의 ToolStrip 컨트롤 만들기
 응용 프로그램을 제공할 수 있습니다 <xref:System.Windows.Forms.ToolStrip> 에서 파생 되는 고유한 클래스를 작성 하 여 전문적인 모양과 동작을 제어는 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 유형입니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
  단일 목록으로이 항목의 코드를 복사 하려면 참조 [하는 방법: 전문적인 스타일의 ToolStrip 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **솔루션 탐색기**, 선택한 언어에 따라 이름이 "UserControl1.cs" 또는 "UserControl1.vb", 원본 파일을 삭제 하 여 프로젝트의 기본 컨트롤을 삭제 합니다.  
   
-     자세한 내용은 참조 [NIB: 방법: 제거, 삭제 및 항목 제외](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)합니다.  
+     자세한 내용은 참조 [NIB: 방법: 제거, 삭제 및 항목 제외](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)합니다.  
   
 3.  새로 추가 <xref:System.Windows.Forms.UserControl> 항목의 **StackViewLibrary** 프로젝트. 새 소스 파일의 기본 이름 지정 `StackView`합니다.  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/22/2017
     |ImageTransparentColor|`238, 238, 238`|  
     |여백|`0, 0, 0, 0`|  
     |안쪽 여백|`3, 3, 3, 3`|  
-    |텍스트|**메일**|  
+    |텍스트|**Mail**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  세 개의 추가 대 한 7 단계를 반복 <xref:System.Windows.Forms.ToolStripButton> 컨트롤입니다.  
@@ -132,7 +132,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  이름 바꾸기는 `mailStackButton_Click` 이벤트 처리기를 `stackButton_Click`합니다.  
   
-     자세한 내용은 참조 [하는 방법: (Visual Basic) 식별자 이름 바꾸기](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)합니다.  
+     자세한 내용은 참조 [하는 방법: (Visual Basic) 식별자 이름 바꾸기](http://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)합니다.  
   
 9. 에 다음 코드를 삽입은 `stackButton_Click` 이벤트 처리기입니다.  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 12. 10과 11에 대 한 단계를 반복 하는 `contactsStackButton` 및 `tasksStackButton` 컨트롤입니다.  
   
 ## <a name="defining-icons"></a>아이콘 정의  
- 각 `StackView` 단추에 연결 된 아이콘입니다. 편의 위해 각 아이콘으로 표현 되는 Base64 인코딩 문자열 하기 전에 deserialize 되는 한 <xref:System.Drawing.Bitmap> 에서 만들어집니다. 프로덕션 환경에서 리소스로 바운딩되어야 비트맵 데이터를 저장 하 고 Windows Forms 디자이너에 아이콘이 나타납니다. 자세한 내용은 참조 [하는 방법: Windows Forms에 배경 이미지 추가](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff)합니다.  
+ 각 `StackView` 단추에 연결 된 아이콘입니다. 편의 위해 각 아이콘으로 표현 되는 Base64 인코딩 문자열 하기 전에 deserialize 되는 한 <xref:System.Drawing.Bitmap> 에서 만들어집니다. 프로덕션 환경에서 리소스로 바운딩되어야 비트맵 데이터를 저장 하 고 Windows Forms 디자이너에 아이콘이 나타납니다. 자세한 내용은 참조 [하는 방법: Windows Forms에 배경 이미지 추가](http://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)합니다.  
   
 #### <a name="to-define-icons"></a>아이콘을 정의 하려면  
   

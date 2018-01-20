@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ee0f555fc1e3412032e0a7dda3a747bbfef6f4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01bc858aeeff750baa3f54e813dea5c9779143f8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.  
   
-\<시스템입니다. ServiceModel >  
-\<바인딩 >  
-\<netHttpBinding >  
+\<system.ServiceModel>  
+\<bindings>  
+\<netHttpBinding>  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -75,7 +75,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
   
 |요소|설명|  
 |-------------|-----------------|  
-|\<netHttpBinding >|NetHttpBinding을 지정합니다.|  
+|\<netHttpBinding>|NetHttpBinding을 지정합니다.|  
   
 ## <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는 \<webSocketSettings > 요소입니다.  
@@ -103,5 +103,5 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<바인딩 >](../../../../../docs/framework/misc/binding.md)
+ [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

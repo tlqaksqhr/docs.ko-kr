@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-sessions"></a>세션 사용
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램에서 *세션* 은 메시지 그룹을 대화에 연결합니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 세션은 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램에서 사용할 수 있는 세션 개체와 다르며, 다른 동작을 지원하고 다른 방법으로 제어됩니다. 이 항목에서는 세션이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램에서 사용할 수 있는 기능과 그 사용 방법에 대해 설명합니다.  
@@ -147,7 +147,7 @@ ms.lasthandoff: 12/22/2017
  계약의 <xref:System.ServiceModel.SessionMode> 열거형과 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성 간에 상호 작용이 있으며, 이를 통해 채널과 특정 서비스 개체 간의 연결을 제어합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][세션, 인스턴스 및 동시성](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)합니다.  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext 개체 공유  
- 또한 해당 연결을 직접 수행하여 <xref:System.ServiceModel.InstanceContext> 개체와 연결된 세션 기반 채널 또는 호출을 제어할 수도 있습니다. 전체 예제는 [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)를 참조하세요.  
+ 또한 해당 연결을 직접 수행하여 <xref:System.ServiceModel.InstanceContext> 개체와 연결된 세션 기반 채널 또는 호출을 제어할 수도 있습니다. 전체 예제를 참조 하십시오. [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)합니다.  
   
 ## <a name="sessions-and-streaming"></a>세션 및 스트리밍  
  전송할 데이터가 많은 경우 버퍼링을 수행하고 메모리 내에서 메시지 전체를 처리하는 기본 동작 대신 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 의 스트리밍 전송 모드를 사용할 수 있습니다. 세션 기반 바인딩을 통해 스트리밍 호출이 수행될 경우 예기치 못한 동작이 발생할 수 있습니다. 모든 스트리밍 호출은 사용 중인 바인딩이 세션을 사용하도록 구성된 경우에도 세션을 지원하지 않는 하나의 채널(데이터그램 채널)을 통해 수행됩니다. 여러 클라이언트에서 세션 기반 바인딩을 통해 동일한 서비스 개체에 대한 스트리밍 호출을 수행하고, 서비스 개체의 동시성 모드가 단일 모드로 설정되고, 서비스 개체의 인스턴스 컨텍스트 모드가 `PerSession`으로 설정된 경우, 모든 호출은 데이터그램 채널을 통해 수행되므로 한 번에 하나의 호출만 처리됩니다. 하나 이상의 클라이언트의 제한 시간이 초과될 수 있습니다. 이 문제는 서비스 개체의 `InstanceContextMode` 를 `PerCall` 로 설정하거나 동시성 모드를 다중 모드로 설정하여 해결할 수 있습니다.  

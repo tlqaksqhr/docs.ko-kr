@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ab5d1bd8116c2f5c07c9e91bbf0a5168c6d075d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba83265b8bd533101fcde785566b9774df588c46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-scenarios-wcf-data-services"></a>응용 프로그램 시나리오(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]시나리오의 핵심 집합으로 데이터 제공 및 사용에 대 한 지원 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이 항목에서는 이 시나리오와 관련된 항목으로 연결됩니다.  
@@ -48,11 +48,11 @@ ms.lasthandoff: 12/22/2017
 -   [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Silverlight 기반 클라이언트 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용합니다.  
- -   [WCF Data Services(Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services(Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [방법: 컨트롤 (WCF 데이터 서비스/Silverlight)에 데이터 서비스 데이터 바인딩](http://msdn.microsoft.com/en-us/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [방법: 컨트롤 (WCF 데이터 서비스/Silverlight)에 데이터 서비스 데이터 바인딩](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  AJAX 기반 클라이언트 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용합니다.  
  -   [클라이언트 응용 프로그램에서 데이터 서비스 사용](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services(Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services(Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
  노출 하 고 사용 된 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 액세스 하 고 스트림으로 변경 하는 이진 대형 개체입니다.  
  -   [스트리밍 공급자](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

@@ -14,17 +14,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5c645b493a1ffb99f4d60f8011bc05f275b5d10f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 002d4411e4fee10044ea5dc1d04d7a29cdcd6584
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="privacy-and-data-security"></a>개인 정보 및 데이터 보안
 ADO.NET 응용 프로그램의 중요한 정보를 안전하게 보호하고 관리하는 방법은 응용 프로그램을 만드는 데 사용된 기본 제품 및 기술에 따라 다릅니다. ADO.NET은 데이터 보안이나 암호화를 위한 서비스를 직접적으로 제공하지 않습니다.  
   
 ## <a name="cryptography-and-hash-codes"></a>암호화 및 해시 코드  
- ADO.NET 응용 프로그램에서 .NET Framework <xref:System.Security.Cryptography> 네임스페이스의 클래스를 사용하면 권한이 없는 제3자가 데이터를 읽거나 수정할 수 없도록 할 수 있습니다. 이 중 일부 클래스는 관리되지 않는 Microsoft CryptoAPI에 대한 래퍼이지만 나머지는 관리되는 구현입니다. [암호화 서비스](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781) 이 항목에서는.NET Framework의 암호화에 대해 간략하게 설명, 고 암호화가 구현 하는 방법 및 특정 암호화 작업 수행 하는 방법에 대해 설명 합니다.  
+ ADO.NET 응용 프로그램에서 .NET Framework <xref:System.Security.Cryptography> 네임스페이스의 클래스를 사용하면 권한이 없는 제3자가 데이터를 읽거나 수정할 수 없도록 할 수 있습니다. 이 중 일부 클래스는 관리되지 않는 Microsoft CryptoAPI에 대한 래퍼이지만 나머지는 관리되는 구현입니다. [암호화 서비스](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781) 이 항목에서는.NET Framework의 암호화에 대해 간략하게 설명, 고 암호화가 구현 하는 방법 및 특정 암호화 작업 수행 하는 방법에 대해 설명 합니다.  
   
  데이터를 암호화한 다음 해독할 수 있는 암호화와 달리 데이터 해시는 단방향 프로세스입니다. 데이터 해시는 데이터가 변경되지 않았음을 확인하여 훼손되지 않도록 하려는 경우에 유용합니다. 즉, 입력 문자열이 동일하면 해시 알고리즘에서는 항상 손쉽게 비교할 수 있는 동일한 짧은 출력 값을 생성합니다. [해시 코드와 데이터 무결성 보장](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) 생성 해시 값을 확인 하는 방법에 대해 설명 합니다.  
   

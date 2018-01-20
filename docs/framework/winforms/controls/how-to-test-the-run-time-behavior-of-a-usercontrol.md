@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9ccf386acd50338f1743bbf8f6be38b3267a7103
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48b7c47a14f27439c60280a5c4202e9f4af76397
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>방법: UserControl의 런타임 동작 테스트
 개발 하는 경우는 <xref:System.Windows.Forms.UserControl>, 런타임 동작을 테스트 해야 합니다. 별도 Windows 기반 응용 프로그램 프로젝트를 만들고 테스트 폼에 컨트롤을 배치할 수 있지만이 절차는 불편 합니다. 빠르고 간편 하 게 사용 하는 것은 **UserControl Test Container** Visual Studio에서 제공 합니다. 이 테스트 컨테이너는 Windows 컨트롤 라이브러리 프로젝트에서 직접 시작합니다.  
@@ -33,14 +33,14 @@ ms.lasthandoff: 12/22/2017
 >  로드 테스트 컨테이너에 대 한 프로그램 <xref:System.Windows.Forms.UserControl>, 컨트롤에는 하나 이상의 공용 생성자가 있어야 합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 > [!NOTE]
 >  Visual c + + 컨트롤을 사용 하 여 테스트할 수 없습니다는 **UserControl Test Container**합니다.  
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>UserControl의 런타임 동작을 테스트 하려면  
   
-1.  호출 하는 Windows 컨트롤 라이브러리 프로젝트를 만들 **컨트롤**합니다. 자세한 내용은 참조 [Windows 컨트롤 라이브러리 템플릿](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4)합니다.  
+1.  호출 하는 Windows 컨트롤 라이브러리 프로젝트를 만들 **컨트롤**합니다. 자세한 내용은 참조 [Windows 컨트롤 라이브러리 템플릿](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)합니다.  
   
 2.  에 **Windows Forms 디자이너**를 끌어 한 <xref:System.Windows.Forms.Label> 에서 제어는 **도구 상자** 컨트롤의 디자인 화면으로 합니다.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  테스트 컨테이너를 닫습니다.  
   
-7.  다른 사용자 정의 컨트롤을 추가 **컨트롤** 프로젝트. 자세한 내용은 참조 [NIB: 방법: 프로젝트에 기존 항목 추가](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)합니다.  
+7.  다른 사용자 정의 컨트롤을 추가 **컨트롤** 프로젝트. 자세한 내용은 참조 [NIB: 방법: 프로젝트에 기존 항목 추가](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)합니다.  
   
 8.  에 **Windows Forms 디자이너**를 끌어 한 <xref:System.Windows.Forms.Button> 에서 제어는 **도구 상자** 컨트롤의 디자인 화면으로 합니다.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-test-user-controls-from-another-project"></a>다른 프로젝트에서 사용자 컨트롤을 테스트 하려면  
   
-1.  호출 하는 Windows 컨트롤 라이브러리 프로젝트를 만들 **TestContainerExample2**합니다. 자세한 내용은 참조 [Windows 컨트롤 라이브러리 템플릿](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4)합니다.  
+1.  호출 하는 Windows 컨트롤 라이브러리 프로젝트를 만들 **TestContainerExample2**합니다. 자세한 내용은 참조 [Windows 컨트롤 라이브러리 템플릿](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)합니다.  
   
 2.  에 **Windows Forms 디자이너**를 끌어 한 <xref:System.Windows.Forms.RadioButton> 에서 제어는 **도구 상자** 컨트롤의 디자인 화면으로 합니다.  
   
@@ -82,4 +82,4 @@ ms.lasthandoff: 12/22/2017
  [방법: 복합 컨트롤 작성](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [연습: Visual Basic에서 합성 컨트롤 작성](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  [연습: Visual C#에서 합성 컨트롤 작성](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [사용자 정의 컨트롤 디자이너가](http://msdn.microsoft.com/en-us/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+ [사용자 정의 컨트롤 디자이너가](http://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

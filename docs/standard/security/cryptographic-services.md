@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 <a name="top"></a> 인터넷과 같은 공용 네트워크에서는 엔터티 간의 보안 통신 수단을 제공하지 않습니다. 이러한 네트워크를 통한 통신은 권한이 없는 제3자가 읽거나 심지어는 수정하기도 쉽습니다. 암호화는 데이터를 볼 수 없도록 보호하며 데이터가 수정되었는지 감지하는 방법을 제공하며 기타 보안상 위험한 채널을 통한 안전한 통신 수단 제공을 지원합니다. 예를 들어 데이터를 암호화된 상태로 전송하고 나중에 의도된 당사자가 해독하는 암호화 알고리즘을 사용하여 데이터를 암호화할 수 있습니다. 제3자가 암호화된 데이터를 가로채는 경우 해독하기 어렵습니다.  
@@ -206,7 +206,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Alice는 일반 텍스트 메시지와 해시된 메시지(디지털 서명)를 Bob에게 보냅니다. Bob은 메시지를 받아 해시하고 자신의 해시 값과 Alice로부터 받은 해시 값을 비교합니다. 해시 값이 동일하면 메시지가 변경되지 않은 것입니다. 값이 동일하지 않으면 Alice가 메시지를 작성한 후 해당 메시지가 변경된 것입니다.  
   
-     하지만 이 방법이 보낸 사람의 신뢰성을 보장하지는 않습니다. 다른 사람이 Alice를 가장하여 Bob에게 메시지를 보낼 수도 있습니다. Alice와 Bob이 동일한 해시 알고리즘을 사용하여 메시지에 서명할 수 있는데 이때 Bob은 메시지와 해당 서명이 일치한다는 사실만 확인하면 됩니다. 이는 메시지 가로채기(man-in-the-middle) 공격의 한 가지 형태입니다. 자세한 내용은 [NIB: CNG(Cryptography Next Generation) 보안 통신 예제](http://msdn.microsoft.com/en-us/8048e94e-054a-417b-87c6-4f5e26710e6e) 를 참조하세요.  
+     하지만 이 방법이 보낸 사람의 신뢰성을 보장하지는 않습니다. 다른 사람이 Alice를 가장하여 Bob에게 메시지를 보낼 수도 있습니다. Alice와 Bob이 동일한 해시 알고리즘을 사용하여 메시지에 서명할 수 있는데 이때 Bob은 메시지와 해당 서명이 일치한다는 사실만 확인하면 됩니다. 이는 메시지 가로채기(man-in-the-middle) 공격의 한 가지 형태입니다. 참조 [NIB: 암호화 CNG (Next Generation) 보안 통신 예제](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) 자세한 정보에 대 한 합니다.  
   
 -   Alice가 비보안 공용 채널을 통해 Bob에게 일반 텍스트 메시지를 보냅니다. 그리고 보안 개인 채널을 통해 Bob에게 해시된 메시지를 보냅니다. Bob은 일반 텍스트 메시지를 받아 해시하고, 이 해시를 개인 채널로 교환된 해시와 비교합니다. 해시가 일치하면 Bob은 다음 두 가지 사실을 알게 됩니다.  
   

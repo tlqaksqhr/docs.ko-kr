@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: caafafe1efb7715722fddf8df79f6e84dd01ece7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a71d450753fca7d2b3535233f7528c442ec0532a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>ADO.NET의 SQL Server In-Process별 동작
 in-process에만 사용되는 ADO.NET에 대한 주요 기능 확장은 <xref:Microsoft.SqlServer.Server> 네임스페이스에서 확인할 수 있으며, <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext>, <xref:Microsoft.SqlServer.Server.SqlDataRecord> 등 네 가지가 있습니다.  
@@ -30,5 +30,5 @@ in-process에만 사용되는 ADO.NET에 대한 주요 기능 확장은 <xref:Mi
 1.  [ADO.NET에 SQL Server In-process 전용 확장](http://go.microsoft.com/fwlink/?LinkId=115403)  
   
 ## <a name="see-also"></a>참고 항목  
- [관리 코드에서 SQL Server 2005 개체 만들기](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [관리 코드에서 SQL Server 2005 개체 만들기](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

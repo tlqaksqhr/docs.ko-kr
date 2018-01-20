@@ -18,11 +18,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 638c768e4abd199aa52bc85582305ffaf405fe87
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing"></a>라우팅
 이 단원의 항목에서는 라우팅 서비스에 대해 설명합니다. 라우팅 서비스는 내용 기반 라우팅을 구성하고, 프로토콜 브리징을 설정하고, 통신 오류를 처리하고, 런타임에 라우팅 논리를 동적으로 업데이트하는 데 사용할 수 있는 구성 가능한 제네릭 SOAP 매개자입니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [라우팅 서비스](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  라우팅 서비스의 기능에 대해 간략하게 설명합니다.  
   
- [라우팅 서비스](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [라우팅 서비스](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  라우팅 서비스의 기능에 대해 설명합니다.  
   
  [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4fceebbd3da7a0643e744d80a55cb1c953eba3bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 210f8ff8840f579d352cc579f80f38488b998c5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-tips-and-tricks"></a>애니메이션에 대한 유용한 정보
 애니메이션을 사용할 때 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], 팁의 여러 가지 및 애니메이션을 만들 수 있는 방법을 더 잘 수행 불만 저장 합니다.  
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/22/2017
   
  애니메이션을 제거하는 방법에는 여러 가지가 있습니다. 다음 기술에 속하는 애니메이션이 제거를 사용할 수는 <xref:System.Windows.Media.Animation.Storyboard>합니다.  
   
--   제거 하는 <xref:System.Windows.Media.Animation.Storyboard> 이벤트 트리거를 시작, 참조 [하는 방법: 스토리 보드 제거](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee)합니다.  
+-   제거 하는 <xref:System.Windows.Media.Animation.Storyboard> 이벤트 트리거를 시작, 참조 [하는 방법: 스토리 보드 제거](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)합니다.  
   
 -   코드 제거를 사용 하는 <xref:System.Windows.Media.Animation.Storyboard>, 참조는 <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> 메서드.  
   

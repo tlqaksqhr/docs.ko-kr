@@ -21,21 +21,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d9075c93181b68828a307924259a9170c046baa6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab92f7a56173ec71642d0cc09f3f81e9859533b4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>방법: Windows Forms에 컨트롤 추가
 대부분의 폼은 폼의 화면에 컨트롤을 추가 하 여 사용자 인터페이스 (UI)를 정의 하도록 설계 되었습니다. A *제어* 폼 정보를 표시 하거나 사용자 입력을 허용 하는 데에 구성 요소입니다. 컨트롤에 대 한 자세한 내용은 참조 [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ### <a name="to-draw-a-control-on-a-form"></a>폼에 컨트롤을 그리려면  
   
-1.  폼을 엽니다. 자세한 내용은 참조 [하는 방법: Windows Forms 디자이너에 표시](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)합니다.  
+1.  폼을 엽니다. 자세한 내용은 참조 [하는 방법: Windows Forms 디자이너에 표시](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)합니다.  
   
 2.  에 **도구 상자**를 폼에 추가 하려면 컨트롤을 클릭 합니다.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-drag-a-control-to-a-form"></a>폼에 컨트롤을 끌어를  
   
-1.  폼을 엽니다. 자세한 내용은 참조 [하는 방법: Windows Forms 디자이너에 표시](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)합니다.  
+1.  폼을 엽니다. 자세한 내용은 참조 [하는 방법: Windows Forms 디자이너에 표시](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)합니다.  
   
 2.  에 **도구 상자**를 클릭 하는 컨트롤을 폼으로 끕니다.  
   

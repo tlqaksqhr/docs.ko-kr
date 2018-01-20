@@ -12,11 +12,11 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 42ed9866f168c06e8641ace712da58e953951676
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 응용 프로그램 기초(Visual Basic)
 중요 한 부분이 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 사용자의 컴퓨터에서 로컬로 실행 되는 Windows Forms 응용 프로그램을 만들 수 있습니다. Windows Forms를 사용 하 여 응용 프로그램 및 사용자 인터페이스를 만들려면 Visual Studio를 사용할 수 있습니다. Windows Forms 응용 프로그램의 클래스 기반는 <xref:System.Windows.Forms> 네임 스페이스입니다.  
@@ -50,9 +50,9 @@ ms.lasthandoff: 12/21/2017
   
  이러한 기능을 사용 하는 방법에 대 한 단계별 정보는 다음 도움말 항목을 참조 하십시오.  
   
-|후|참조|  
+|대상|보기|  
 |--------|---------|  
-|새 Windows Forms 응용 프로그램을 만듭니다[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[연습: 간단한 Windows Form 만들기](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|새 Windows Forms 응용 프로그램을 만듭니다[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[연습: 간단한 Windows Form 만들기](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |폼에서 컨트롤 사용|[방법: Windows Forms에 컨트롤 추가](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |사용 하 여 그래픽 만들기<xref:System.Drawing>|[그래픽 프로그래밍 시작](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |사용자 지정 컨트롤 만들기|[방법: UserControl 클래스에서 상속](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  이러한 기능을 사용 하는 방법에 대 한 단계별 정보는 다음 도움말 항목을 참조 하십시오.  
   
-|후|참조|  
+|대상|보기|  
 |--------|---------|  
 |사용 하 여 <xref:System.Windows.Forms.BindingSource> 구성 요소|[방법: 디자이너를 사용하여 Windows Forms 컨트롤에 BindingSource 구성 요소 바인딩](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |작업할 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 데이터 원본|[방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/21/2017
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]에 대한 전체 개요는 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)를 참조하세요. 이러한 기능을 사용 하는 방법에 대 한 단계별 정보는 다음 도움말 항목을 참조 하십시오.  
   
-|후|참조|  
+|대상|보기|  
 |--------|---------|  
 |응용 프로그램 배포[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: ClickOnce 응용 프로그램 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |업데이트는 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 배포|[방법: ClickOnce 응용 프로그램에 대한 업데이트 관리](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  이러한 기능을 사용 하는 방법에 대 한 단계별 정보는 다음 도움말 항목을 참조 하십시오.  
   
-|후|참조|  
+|대상|보기|  
 |--------|---------|  
 |폼의 내용을 인쇄합니다|[방법: Windows Forms의 그래픽 인쇄](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Windows Forms 보안에 대한 자세한 정보|[Windows Forms의 보안 개요](../../../framework/winforms/security-in-windows-forms-overview.md)|  

@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c78c1d90e10a45245f53f1db0b6400fa0a91d81b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6725741e6e0e67f3d26dc3bc1e83a57f6fcd430
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmexhttpsbindinggt"></a>&lt;mexHttpsBinding&gt;
 HTTPS를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바인딩의 설정을 지정합니다.  
   
- \<시스템입니다. ServiceModel >  
-\<바인딩 >  
-\<mexHttpsBinding >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<mexHttpsBinding>  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,7 @@ HTTPS를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -61,7 +61,7 @@ HTTPS를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<바인딩 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 바인딩은 기본적으로 인증서를 사용하여 전송 수준에서 보안을 지원할 수 있는 `WSHttpBinding` 바인딩입니다. 구성 및 메타 데이터 끝점을 사용 하는 방법에 대 한 자세한 내용은 참조 [하는 방법:는 사용자 지정 Ws-metadata Exchange 바인딩 구성](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [하는 방법: 검색 메타 데이터를 통해가 아닌 MEX 바인딩을](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md), 및 샘플 [메타 데이터 끝점을 보호 하는 사용자 지정](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)합니다.  
@@ -77,5 +77,5 @@ HTTPS를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바
  [메타데이터](../../../../../docs/framework/wcf/feature-details/metadata.md)  
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<바인딩 >](../../../../../docs/framework/misc/binding.md)
+ [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d2a444440af9dfaa2b084a55db9348fa48df7b54
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>고가용성 및 재해 복구에 대한 SqlClient 지원
 이 항목에서는 고가용성, 재해 복구, AlwaysOn 가용성 그룹에 대한 SqlClient 지원([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]에 추가됨)에 대해 설명합니다.  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012에는 AlwaysOn 가용성 그룹 기능이 추가되었습니다. AlwaysOn 가용성 그룹에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하세요.  
@@ -41,6 +41,9 @@ ms.lasthandoff: 01/17/2018
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+
+> [!NOTE]
+>  설정 `MultiSubnetFailover` 를 `true` 으로 필요 하지 않습니다 [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) 또는 이후 버전입니다.
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover를 사용하여 연결  
  `MultiSubnetFailover=True` 2012 가용성 그룹 수신기 또는 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 장애 조치 클러스터 인스턴스에 연결할 때 항상 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]를 지정합니다. `MultiSubnetFailover`를 사용하면 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012의 장애 조치 클러스터 인스턴스 또는 모든 가용성 그룹에 대해 신속하게 장애 조치를 수행하고 단일 및 다중 서브넷 AlwaysOn 토폴로지에 대한 장애 조치에 걸리는 시간을 많이 줄일 수 있습니다. 다중 서브넷 장애 조치가 수행되는 동안 클라이언트는 병렬로 연결을 시도합니다. 서브넷 장애 조치가 수행되는 동안 적극적으로 TCP 연결을 다시 시도합니다.  

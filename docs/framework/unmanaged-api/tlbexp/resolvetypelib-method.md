@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b668610f50c32373790130def17928b8b3b3d8b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72d1cedbfc1a1ec6c3588a7b0be9cf657d7369fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 메서드
 정규화 된 경로 반환 하 여 형식 라이브러리의 단순한 이름을 확인 합니다.  
@@ -45,7 +45,7 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>매개 변수  
  `bstrSimpleName`  
- [in] A [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) 형식 라이브러리의 단순한 이름을 포함 하 합니다.  
+ [in] A [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) 형식 라이브러리의 단순한 이름을 포함 하 합니다.  
   
  `tlbid`  
  [in] 레지스트리에서 형식 라이브러리에 할당 된 GUID입니다.  
@@ -60,20 +60,20 @@ HRESULT ResolveTypeLib(
  [in] 형식 라이브러리의 부 버전 번호입니다. 버전에 대 한 예를 들어 *x.y*, 부 버전 번호는 *y*합니다.  
   
  `syskind`  
- [in] A [SYSKIND](http://msdn.microsoft.com/en-us/662048b2-59a8-48ca-9e4f-2f9a5306faa1) 운영 환경을 식별 하는 플래그입니다. 일반적인 값은 SYS_WIN32 및 SYS_WIN64입니다.  
+ [in] A [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) 운영 환경을 식별 하는 플래그입니다. 일반적인 값은 SYS_WIN32 및 SYS_WIN64입니다.  
   
  `pbstrResolvedTlbName`  
- [out] 에 대 한 포인터는 [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) 에 명명 된 형식 라이브러리의 전체 경로 포함 하는 `bstrSimpleName` 매개 변수입니다.  
+ [out] 에 대 한 포인터는 [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) 에 명명 된 형식 라이브러리의 전체 경로 포함 하는 `bstrSimpleName` 매개 변수입니다.  
   
 ## <a name="remarks"></a>설명  
  `ResolveTypeLib` 메서드는 [LoadTypeLibWithResolver 함수](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) 중 [Tlbexp.exe (형식 라이브러리 내보내기)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 처리 합니다.  
   
- 이 인터페이스의 사용자 지정 구현을 반환 해야 합니다는 [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) 에 명명 된 형식 라이브러리의 전체 경로 포함 하는 `bstrSimpleName` 매개 변수입니다.  
+ 이 인터페이스의 사용자 지정 구현을 반환 해야 합니다는 [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) 에 명명 된 형식 라이브러리의 전체 경로 포함 하는 `bstrSimpleName` 매개 변수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
   
- **헤더:** TlbRef.idl, TlbRef.h  
+ **Header:** TlbRef.idl, TlbRef.h  
   
  **라이브러리:** TlbRef.lib  
   
@@ -81,4 +81,4 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>참고 항목  
  [Tlbexp 도우미 함수](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](http://msdn.microsoft.com/en-us/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)

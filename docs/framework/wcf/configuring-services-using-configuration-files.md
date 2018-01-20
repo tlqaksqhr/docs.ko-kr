@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>구성 파일을 사용하여 서비스 구성
 구성 파일을 사용하여 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 구성하면 디자인 타임 대신 배포 시 끝점 및 서비스 동작 데이터를 제공할 수 있습니다. 이 항목에서는 사용할 수 있는 기본 기술에 대해 간략하게 설명합니다.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="the-services-element"></a>\<서비스 > 요소  
  `services` 요소에는 응용 프로그램에서 호스트하는 모든 서비스에 대한 사양이 포함됩니다. [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]의 간소화된 구성 모델부터 이 섹션은 선택 사항입니다.  
   
- [\<서비스 >](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
 ### <a name="the-service-element"></a>\<서비스 > 요소  
  각 서비스에는 다음 특성이 있습니다.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `behaviorConfiguration`. `behavior` 요소에 있는 `behaviors` 요소 중 하나의 이름을 지정합니다. 지정한 동작은 서비스에서 가장을 허용할지 여부와 같은 작업을 제어합니다. 해당 값이 빈 이름이거나 `behaviorConfiguration` 이 제공되지 않으면 기본 서비스 동작 집합이 서비스에 추가됩니다.  
   
--   [\<서비스 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+-   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<끝점 > 요소  
  각 끝점에는 다음 특성으로 표시되는 주소, 바인딩 및 계약이 필요합니다.  
@@ -101,19 +101,19 @@ ms.lasthandoff: 12/22/2017
   
 -   `contract`. 계약을 정의하는 인터페이스를 지정합니다. 이 특성은 `name` 요소의 `service` 특성으로 지정된 CLR(공통 언어 런타임)에 구현된 인터페이스입니다.  
   
--   [\<끝점 > 요소 참조](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<끝점 > 요소 참조](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>\<바인딩 > 요소  
  `bindings` 요소에는 서비스에 정의된 끝점에서 사용할 수 있는 모든 바인딩에 대한 사양이 포함됩니다.  
   
- [\<바인딩 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>\<바인딩 > 요소  
  `binding` 에 포함 된 요소는 `bindings` 요소는 시스템 제공 바인딩 중 하나가 발생 될 수 있습니다 (참조 [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)) 또는 사용자 지정 바인딩을 (참조 [사용자 지정 바인딩을](../../../docs/framework/wcf/extending/custom-bindings.md)). `binding` 요소에는 `name` 요소의 `bindingConfiguration` 특성에 지정된 끝점과 바인딩을 연관시키는 `endpoint` 특성이 있습니다. 이름을 지정하지 않는 경우 이 바인딩은 해당 바인딩 형식의 기본값에 해당합니다.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] , [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]서비스와 클라이언트를 구성 참조 [Windows Communication Foundation 응용 프로그램 구성](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)합니다.  
   
- [\<바인딩 >](../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>\<동작 > 요소  
  서비스의 동작을 정의하는 `behavior` 요소에 대한 컨테이너 요소입니다.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="the-behavior-element"></a>\<동작 > 요소  
  각 `behavior` 요소는 `name` 특성으로 식별되며 <`throttling`>과 같은 시스템 제공 동작이나 사용자 지정 동작을 제공합니다. 이름을 지정하지 않는 경우 이 동작 요소는 기본 서비스 또는 끝점 동작에 해당합니다.  
   
- [\<동작 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>바인딩 및 동작 구성 사용 방법  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 에서는 구성에 있는 참조 시스템을 사용하여 끝점 간의 구성을 쉽게 공유할 수 있습니다. 구성 값을 끝점에 직접 할당하는 대신 바인딩 관련 구성 값은 `bindingConfiguration` 섹션의 `<binding>` 요소로 그룹화됩니다. 바인딩 구성은 바인딩에 대한 설정의 명명된 그룹입니다. 끝점은 이름별로 `bindingConfiguration` 을 참조할 수 있습니다.  
@@ -274,6 +274,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [단순화된 구성](../../../docs/framework/wcf/simplified-configuration.md)  
- [Windows Communication Foundation 응용 프로그램 구성](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<서비스 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<바인딩 >](../../../docs/framework/misc/binding.md)
+ [Windows Communication Foundation 응용 프로그램 구성](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)

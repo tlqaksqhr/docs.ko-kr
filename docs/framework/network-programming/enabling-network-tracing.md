@@ -22,11 +22,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: c4957e3ec6891dbee207c7aac5fcf1564ecd0af5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f6a23ce156941291fe499b6402061639569815c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="enabling-network-tracing"></a>네트워크 추적 사용
 네트워크 추적은 메서드 호출에 대한 정보와 관리되는 응용 프로그램에서 생성된 네트워크 트래픽 정보에 대한 액세스를 제공합니다. 응용 프로그램에서 네트워크 추적을 사용하도록 설정하려면 다음 작업을 완료해야 합니다.  
@@ -58,4 +58,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>참고 항목  
  [네트워크 추적 해석](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework의 네트워크 추적](../../../docs/framework/network-programming/network-tracing.md)  
- [계측 및 추적 소개](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [계측 및 추적 소개](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 21d4a39b9cbd2ee563edd22818630c18658e1d6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d11c559679b67c22eeed87893bf2e362084034c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>방법: Storyboard 애니메이션 간의 HandoffBehavior 지정
 이 예제에는 스토리 보드 애니메이션 간의 전달 동작을 지정 하는 방법을 보여 줍니다. <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> 속성 <xref:System.Windows.Media.Animation.BeginStoryboard> 지정 방법을 새 애니메이션 속성에 이미 적용 된 기존 애니메이션과 상호 작용 합니다.  
@@ -35,5 +35,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Media.Animation.BeginStoryboard>  
  <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>  
  [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [애니메이션 및 타이밍](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [애니메이션 및 타이밍](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

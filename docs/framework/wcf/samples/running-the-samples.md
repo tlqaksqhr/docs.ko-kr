@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 실행
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플을 단일 컴퓨터 또는 다중 컴퓨터 구성에서 실행할 수 있습니다. 샘플은 단일 컴퓨터 구성에서 실행할 준비가 된 상태로 제공됩니다. 다중 컴퓨터 구성에서는 샘플의 구성 파일 설정을 수정해야 합니다. 다음 절차에서는 단일 컴퓨터 및 다중 컴퓨터 구성에서 샘플을 실행하는 방법에 대해 설명합니다. IIS(인터넷 정보 서비스) 및 자체 호스팅 샘플에서 호스트되는 서비스에 적용되는 단계가 약간씩 다릅니다. 대부분의 샘플은 IIS에서 호스트됩니다. 이러한 샘플이 호스트되는 방법에 대한 자세한 내용은 샘플 추가 정보를 참조하세요.  
@@ -30,13 +30,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>단일 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  서비스가 IIS에 의해 호스트될 경우 브라우저에서 http://localhost/servicemodelsamples/service.svc 주소를 입력하여 서비스에 액세스할 수 있는지 확인합니다. 확인 페이지가 응답으로 표시됩니다. 확인 페이지가 표시 되지 않으면 참조 [문제 해결 팁](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)합니다.  
+1.  서비스가 IIS에 의해 호스트될 경우 브라우저에서 http://localhost/servicemodelsamples/service.svc 주소를 입력하여 서비스에 액세스할 수 있는지 확인합니다. 확인 페이지가 응답으로 표시됩니다. 확인 페이지가 표시 되지 않으면 참조 [문제 해결 팁](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)합니다.  
   
 2.  서비스가 자체 호스트될 경우 언어별 폴더의 \service\bin에서 Service.exe를 실행합니다. 서비스 콘솔 창에 서비스 동작이 표시됩니다.  
   
 3.  \Client\bin에서 Client.exe를 실행\\, 언어별 폴더의 합니다. 클라이언트 콘솔 창에 클라이언트 동작이 표시됩니다.  
   
-4.  클라이언트와 서비스가 통신할 수 없는 경우 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)을 참조하세요.  
+4.  클라이언트와 서비스가 통신할 수 없는 경우 참조 [문제 해결 팁](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)합니다.  
   
 ### <a name="to-run-the-sample-across-machines"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
@@ -92,5 +92,5 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [그룹에 컴퓨터에서 샘플을 실행합니다.](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
- [문제 해결 팁](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)
+ [그룹에 컴퓨터에서 샘플을 실행합니다.](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
+ [문제 해결 팁](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

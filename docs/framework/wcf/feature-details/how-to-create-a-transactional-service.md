@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fd0812125c63a5a89cf8a87f0ca72cf9a9f168d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>방법: 트랜잭션 서비스 만들기
 이 샘플에서는 트랜잭션 서비스 만들기의 다양한 측면과 함께, 클라이언트에서 시작한 트랜잭션을 사용하여 서비스 작업을 조정하는 방법을 보여 줍니다.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-3.  트랜잭션 컨텍스트를 이동하도록 지정하고 이 작업에 사용할 프로토콜을 지정하여 구성 파일에서 바인딩을 구성합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel 트랜잭션 구성](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)합니다. 특히 바인딩 형식은 끝점 요소의 `binding` 특성에서 지정합니다. [ \<끝점 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소를 포함 한 `bindingConfiguration` 이라는 바인딩 구성을 참조 하는 특성 `transactionalOleTransactionsTcpBinding`다음 샘플 구성에 표시 된 것 처럼 합니다.  
+3.  트랜잭션 컨텍스트를 이동하도록 지정하고 이 작업에 사용할 프로토콜을 지정하여 구성 파일에서 바인딩을 구성합니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel 트랜잭션 구성](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)합니다. 특히 바인딩 형식은 끝점 요소의 `binding` 특성에서 지정합니다. [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소를 포함 한 `bindingConfiguration` 이라는 바인딩 구성을 참조 하는 특성 `transactionalOleTransactionsTcpBinding`다음 샘플 구성에 표시 된 것 처럼 합니다.  
   
     ```xml  
     <service name="CalculatorService">  

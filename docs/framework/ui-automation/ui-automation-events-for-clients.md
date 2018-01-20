@@ -17,11 +17,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 30aac15a4394a8008e2c1f89dce76dd134acf7b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8486f8c8eaa586f6f81ea895fd22c96801b3594b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-events-for-clients"></a>클라이언트용 UI 자동화 이벤트
 > [!NOTE]
@@ -72,4 +72,4 @@ ms.lasthandoff: 12/22/2017
  [UI 자동화 이벤트 구독](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
  [UI 자동화 이벤트 개요](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
  [UI 자동화 속성 개요](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [TrackFocus 샘플](http://msdn.microsoft.com/en-us/4a91c0af-6bb5-4d38-a743-cf136f268fc9)
+ [TrackFocus 샘플](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9)

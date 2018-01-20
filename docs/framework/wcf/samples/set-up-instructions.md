@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cfbd4769d1fc974369093e3b5253f9853a9ef730
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14163ecca60e516f7e88d4e453e8f4addd960340
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-up-instructions"></a>설치 지침
 이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스를 실행하는 데 필요한 서비스를 설정하는 방법에 대해 설명합니다.  
@@ -55,4 +55,4 @@ ms.lasthandoff: 12/22/2017
  메시지 큐를 설치하는 단계를 간략하게 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [문제 해결 팁](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)
+ [문제 해결 팁](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

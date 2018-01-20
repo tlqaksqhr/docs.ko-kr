@@ -12,11 +12,11 @@ ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b52323cb5c7049f87b27c24a987fcb7ba1834b6a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 320d9c88bde76ec27fa23c97de78122d88cb6824
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework 참조 정보(Visual Basic)
 이 항목에서는 작동 하는 방법에 대 한 정보에 대 한 링크는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리입니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
  [도구](../../framework/tools/index.md)  
  개발, 구성 및.NET Framework 기술을 사용 하 여 응용 프로그램을 배포 하는 데 사용할 수 있는 도구에 설명 합니다.  
   
- [.NET Framework 샘플](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ [.NET Framework 샘플](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  .NET Framework 기술을 보여 주는 예제 응용 프로그램에 대 한 링크를 제공 합니다.  
   
  [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)  

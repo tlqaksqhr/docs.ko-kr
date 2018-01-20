@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc0f887743e9e129319ca9241203905670334cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포함된 항목 목록을 표시합니다. 목록 뷰를 사용하여 Windows 탐색기의 오른쪽 창과 같은 사용자 인터페이스를 만들 수 있습니다. 컨트롤에 4 개의 보기 모드: LargeIcon, SmallIcon, 목록 및 세부 정보입니다.  
@@ -55,7 +55,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포
   
  <xref:System.Windows.Forms.ListView.Activation%2A> 속성 동작 유형을 목록에서 항목을 활성화 하기 위해 사용자를 수행 해야 결정: 옵션은 <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, 및 <xref:System.Windows.Forms.ItemActivation.TwoClick>합니다. <xref:System.Windows.Forms.ItemActivation.OneClick>활성화 된 항목을 활성화 하려면 한 번의 클릭이 필요 합니다. <xref:System.Windows.Forms.ItemActivation.TwoClick>정품 인증을 사용 해야; 항목을 활성화 하려면 두 번 클릭 항목 텍스트의 색을 변경 하는 한 번의 클릭 합니다. <xref:System.Windows.Forms.ItemActivation.Standard>활성화 사용자를 두 번 클릭 하면 항목이 활성화를 이어야 하는데 항목의 모양을 변경 되지 않습니다.  
   
- <xref:System.Windows.Forms.ListView> 그룹화, tile 보기 및 삽입 표시를 포함 하 여 Windows XP 플랫폼에서도 지 원하는 비주얼 스타일 및 기타 기능을 사용할 수 있는 컨트롤입니다. 자세한 내용은 참조 [Windows XP 기능 및 Windows Forms 컨트롤](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)합니다.  
+ <xref:System.Windows.Forms.ListView> 그룹화, tile 보기 및 삽입 표시를 포함 하 여 Windows XP 플랫폼에서도 지 원하는 비주얼 스타일 및 기타 기능을 사용할 수 있는 컨트롤입니다. 자세한 내용은 참조 [Windows XP 기능 및 Windows Forms 컨트롤](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Forms.ListView>  

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 55f3393c84ec08d3c3944552ac2bed7d15dd025f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 사용자 인스턴스
 Microsoft SQL Server Express Edition(SQL Server Express)은 .NET Framework Data Provider for SQL Server(`SqlClient`)를 사용하는 경우에만 사용 가능한 기능인 사용자 인스턴스를 지원합니다. 사용자 인스턴스는 부모 인스턴스에서 생성된 별도의 SQL Server Express 데이터베이스 엔진 인스턴스입니다. 로컬 컴퓨터에서 관리자가 아닌 사용자는 사용자 인스턴스를 사용하여 SQL Server Express 데이터베이스에 연결할 수 있습니다. 각 인스턴스는 사용자당 하나의 인스턴스를 기준으로 개인 사용자의 보안 컨텍스트 내에서 실행됩니다.  
@@ -157,7 +157,7 @@ private static void OpenSqlConnection()
   
 -   공유 데이터가 필요하지 않은 단일 사용자 응용 프로그램.  
   
--   ClickOnce 배포. .NET Framework 2.0 이상 및 SQL Server Express가 이미 대상 컴퓨터에 설치되어 있는 경우, ClickOnce 동작의 결과로 다운로드된 설치 패키지를 관리자가 아닌 사용자가 설치하여 사용할 수 있습니다. SQL Server Express가 설치의 일부인 경우 관리자는 SQL Server Express를 설치해야 합니다. 자세한 내용은 참조 [ClickOnce 배포에 대 한 Windows Forms 응용 프로그램](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df)합니다.  
+-   ClickOnce 배포. .NET Framework 2.0 이상 및 SQL Server Express가 이미 대상 컴퓨터에 설치되어 있는 경우, ClickOnce 동작의 결과로 다운로드된 설치 패키지를 관리자가 아닌 사용자가 설치하여 사용할 수 있습니다. SQL Server Express가 설치의 일부인 경우 관리자는 SQL Server Express를 설치해야 합니다. 자세한 내용은 참조 [ClickOnce 배포에 대 한 Windows Forms 응용 프로그램](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)합니다.  
   
 -   Windows 인증을 사용하는 전용 ASP.NET 호스팅. 단일 SQL Server Express 인스턴스를 인트라넷에 호스트할 수 있습니다. 응용 프로그램에서는 가장이 아닌 ASPNET Windows 계정을 사용하여 연결합니다. 모든 응용 프로그램이 동일한 사용자 인스턴스를 공유하여 각 사용자에 대해 격리되지 않는 타사 또는 공유 호스팅 시나리오에서는 사용자 인스턴스를 사용하면 안 됩니다.  
   

@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fe3f0caa8f23a3b68f1017254a770af766f83f81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7cc7b09211bc9168bbab85105a0574dc142542ba
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="annotations-overview"></a>주석 개요
 종이 문서에 메모나 설명을 적는 것은 당연하게 받아들이는 매우 일반적인 행동입니다. 이러한 메모나 설명은 나중에 참조하기 위해 관심 있는 항목을 강조 표시하거나 정보를 첨부하기 위해 문서에 추가하는 "주석"입니다. 인쇄된 문서에 메모를 적는 것은 간단하고 일반적이지만 전자 문서에 개인적인 주석을 추가하는 기능은 대개 가능하더라도 매우 제한적입니다.  
@@ -86,4 +86,4 @@ ms.lasthandoff: 12/22/2017
  [ContextMenu 개요](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [명령 개요](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [방법: MenuItem에 명령 추가](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)
+ [방법: MenuItem에 명령 추가](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

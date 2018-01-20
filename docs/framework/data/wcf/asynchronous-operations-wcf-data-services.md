@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 18e8be0668fa13c43f31d5314cacf91165ba8519
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79112878141fd791c2fba183d2d1fec9f1b7044
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>비동기 작업(WCF Data Services)
 웹 응용 프로그램의 경우 내부 네트워크 내에서 실행되는 응용 프로그램보다 클라이언트와 서버 간에 보다 긴 대기 시간을 허용해야 합니다. 응용 프로그램의 성능과 사용자 환경을 최적화하려면 웹을 통해 <xref:System.Data.Services.Client.DataServiceContext> 서버에 액세스할 때 <xref:System.Data.Services.Client.DataServiceQuery%601> 및 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클래스의 비동기 메서드를 사용하는 것이 좋습니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Data.Services.Client.DataServiceContext>에 개체 변경 내용 저장|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>비동기 작업에 대한 스레딩 고려 사항  
- 다중 스레드 응용 프로그램에서 비동기 작업의 콜백으로 등록 된 대리자가 호출 되지 않습니다 반드시 호출 하는 데 사용 된 동일한 스레드에서 *시작* 메서드를 초기 요청을 만듭니다. 특정 스레드에서 콜백을 호출 해야 여기서 응용 프로그램에서 명시적으로 마샬링해야 실행은 *끝* 메서드를 원하는 스레드에 응답 처리 합니다. 예를 들어, WPF(Windows Presentation Foundation) 기반 응용 프로그램과 Silverlight 기반 응용 프로그램에서는 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 개체의 <xref:System.Windows.Threading.Dispatcher> 메서드를 사용하여 응답을 UI 스레드로 다시 마샬링해야 합니다. 자세한 내용은 참조 [(WCF 데이터 서비스/Silverlight) 데이터 서비스 쿼리](http://msdn.microsoft.com/en-us/3a7cdc07-c37e-4da2-b98b-c3763fd0970b)합니다.  
+ 다중 스레드 응용 프로그램에서 비동기 작업의 콜백으로 등록 된 대리자가 호출 되지 않습니다 반드시 호출 하는 데 사용 된 동일한 스레드에서 *시작* 메서드를 초기 요청을 만듭니다. 특정 스레드에서 콜백을 호출 해야 여기서 응용 프로그램에서 명시적으로 마샬링해야 실행은 *끝* 메서드를 원하는 스레드에 응답 처리 합니다. 예를 들어, WPF(Windows Presentation Foundation) 기반 응용 프로그램과 Silverlight 기반 응용 프로그램에서는 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 개체의 <xref:System.Windows.Threading.Dispatcher> 메서드를 사용하여 응답을 UI 스레드로 다시 마샬링해야 합니다. 자세한 내용은 참조 [(WCF 데이터 서비스/Silverlight) 데이터 서비스 쿼리](http://msdn.microsoft.com/library/3a7cdc07-c37e-4da2-b98b-c3763fd0970b)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

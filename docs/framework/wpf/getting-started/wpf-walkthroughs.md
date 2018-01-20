@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-walkthroughs"></a>WPF 연습
 연습에서는 일반 시나리오에 대 한 단계별 지침을 제공 합니다. 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/22/2017
   
 |제목|설명|  
 |-----------|-----------------|  
-|[연습: WPF 디자이너 간단한 WPF 응용 프로그램 빌드](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|간단한 WPF 응용 프로그램을 빌드하는 방법을 보여 줍니다.는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.|  
-|[연습: 동적 레이아웃 만들기](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|사용 하 여 동적 레이아웃을 만드는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Grid> 패널 컨트롤입니다.|  
-|[연습: WPF 디자이너를 사용 하 여 크기 조정 가능한 응용 프로그램 만들기](http://msdn.microsoft.com/en-us/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|런타임 시 사용자가 크기를 조정할 수 있는 창 레이아웃을 만드는 방법을 보여 줍니다.|  
-|[연습: WPF 디자이너를 사용 하 여 바인딩 데이터 만들기](http://msdn.microsoft.com/en-us/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|사용 하는 방법을 보여 줍니다.는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 컨트롤에 데이터를 연결 하는 데이터 바인딩을 만들 수 있습니다.|  
-|[연습: 디자이너에서 데이터에 바인딩하는 DesignInstance 사용](http://msdn.microsoft.com/en-us/a4d3747a-bd43-42bc-b66d-477856a6769c)|사용 하는 방법을 보여 줍니다.는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 런타임에 할당 된 데이터 컨텍스트에 대 한 디자인 타임에 데이터 바인딩을 만들 수 있습니다.|  
+|[연습: WPF 디자이너 간단한 WPF 응용 프로그램 빌드](http://msdn.microsoft.com/library/2d412231-dbdf-4e69-b060-4f2b246c2027)|간단한 WPF 응용 프로그램을 빌드하는 방법을 보여 줍니다.는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.|  
+|[연습: 동적 레이아웃 만들기](http://msdn.microsoft.com/library/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|사용 하 여 동적 레이아웃을 만드는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Grid> 패널 컨트롤입니다.|  
+|[연습: WPF 디자이너를 사용 하 여 크기 조정 가능한 응용 프로그램 만들기](http://msdn.microsoft.com/library/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|런타임 시 사용자가 크기를 조정할 수 있는 창 레이아웃을 만드는 방법을 보여 줍니다.|  
+|[연습: WPF 디자이너를 사용 하 여 바인딩 데이터 만들기](http://msdn.microsoft.com/library/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|사용 하는 방법을 보여 줍니다.는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 컨트롤에 데이터를 연결 하는 데이터 바인딩을 만들 수 있습니다.|  
+|[연습: 디자이너에서 데이터에 바인딩하는 DesignInstance 사용](http://msdn.microsoft.com/library/a4d3747a-bd43-42bc-b66d-477856a6769c)|사용 하는 방법을 보여 줍니다.는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 런타임에 할당 된 데이터 컨텍스트에 대 한 디자인 타임에 데이터 바인딩을 만들 수 있습니다.|  
   
 ## <a name="wpf-walkthroughs"></a>WPF 연습  
   
@@ -61,4 +61,4 @@ ms.lasthandoff: 12/22/2017
   
 |제목|설명|  
 |-----------|-----------------|  
-|[Visual Studio 연습](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Visual Studio에서 프로그래밍의 모든 영역에 대 한 연습 관련된 목록을 제공합니다.|
+|[Visual Studio Walkthroughs](http://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Visual Studio에서 프로그래밍의 모든 영역에 대 한 연습 관련된 목록을 제공합니다.|

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d64f873a8cbdd76ac25ae8f16b02f10de568fe02
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d1630226701dae8ddb51f939cebb38bf04f524c2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="clr-triggers"></a>CLR 트리거
 트리거는 언어 이벤트가 실행될 때 자동으로 실행되는 특수한 형식의 저장 프로시저입니다. Microsoft SQL Server가 .NET Framework CLR(공용 언어 런타임)과 통합됨에 따라 .NET Framework 언어를 사용하여 CLR 트리거를 만들 수 있습니다.  
@@ -30,5 +30,5 @@ ms.lasthandoff: 01/17/2018
 1.  [CLR 트리거](http://go.microsoft.com/fwlink/?LinkId=115397)  
   
 ## <a name="see-also"></a>참고 항목  
- [관리 코드에서 SQL Server 2005 개체 만들기](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [관리 코드에서 SQL Server 2005 개체 만들기](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 157b5648af4ef429a73fe71a924e15ad3973f7f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-objects"></a>개체에 대한 마샬링
 <xref:System.Object?displayProperty=nameWithType>로 형식화된 매개 변수와 필드는 비관리 코드에 다음 형식 하나로 표시할 수 있습니다.  
@@ -153,7 +153,7 @@ struct ObjectHolder {
 ### <a name="marshaling-system-types-to-variant"></a>변형에 시스템 형식 마샬링  
  다음 표에서는 관리 개체 형식 및 해당 COM 변형 형식을 보여 줍니다. 이러한 형식은 호출되는 메서드의 시그니처가 <xref:System.Object?displayProperty=nameWithType> 형식인 경우에만 변환됩니다.  
   
-|개체 형식|COM 변형 형식|  
+|개체 유형|COM 변형 형식|  
 |-----------------|----------------------|  
 |Null 개체 참조(Visual Basic의 경우 **Nothing**).|**VT_EMPTY**|  
 |<xref:System.DBNull?displayProperty=nameWithType>|**VT_NULL**|  
@@ -330,7 +330,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  다음 표에서는 변형 및 개체에 대한 전파 규칙을 간략하게 설명합니다.  
   
-|시작|후|변경 내용이 다시 전파됨|  
+|시작|대상|변경 내용이 다시 전파됨|  
 |----------|--------|-----------------------------|  
 |**변형**  *v*|**개체**  *o*|Never|  
 |**개체**  *o*|**변형**  *v*|Never|  
@@ -342,5 +342,5 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="see-also"></a>참고 항목  
  [기본 마샬링 동작](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Blittable 형식 및 비 Blittable 형식](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [방향 특성](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [방향 특성](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [복사 및 고정](../../../docs/framework/interop/copying-and-pinning.md)

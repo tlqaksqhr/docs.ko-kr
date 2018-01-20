@@ -20,18 +20,18 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 207aeb1f9faf9be6ac547d8dd8acc80e8a4cb42f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46aae3ad287c2626123cf3f513fc72bc1acdd06e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt; 요소
 공용 언어 런타임이 서버 가비지 컬렉션을 실행하는지 여부를 지정합니다.  
   
  \<configuration>  
-\<런타임 >  
-\<gcServer >  
+\<runtime>  
+\<gcServer>  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -91,4 +91,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
  [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [방법: 동시 가비지 수집을 사용 하지 않도록 설정](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+ [방법: 동시 가비지 수집을 사용 하지 않도록 설정](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)

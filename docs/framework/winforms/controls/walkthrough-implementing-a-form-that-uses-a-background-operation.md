@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c12892c4761f0158153c87464066dd727c83bfc3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aaee6f1d650e6af57ab05ad56b5578e094ee50ef
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>연습: 백그라운드 작업을 사용하는 폼 구현
 완료 하는 데 오랜 시간이 걸리는 작업이 있으며 및 하지 않으려는 경우 사용자 인터페이스 (UI) 응답 하지 않거나 사용할 수 있습니다 "중지"는 <xref:System.ComponentModel.BackgroundWorker> 다른 스레드에서 작업을 실행 하는 클래스입니다.  
@@ -51,14 +51,14 @@ ms.lasthandoff: 12/22/2017
  이 예제에 사용된 전체 코드 목록은 [방법: 백그라운드 작업을 사용하는 폼 구현](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)을 참조하세요.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ## <a name="creating-the-project"></a>프로젝트 만들기  
  첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.  
   
 #### <a name="to-create-a-form-that-uses-a-background-operation"></a>백그라운드 작업을 사용하는 폼을 만들려면  
   
-1.  `BackgroundWorkerExample`이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
+1.  `BackgroundWorkerExample`이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
   
 2.  **솔루션 탐색기**에서 **Form1**을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **이름 바꾸기**를 선택합니다. 파일 이름을 `FibonacciCalculator`로 변경합니다. 코드 요소 '`Form1`'에 대한 모든 참조 이름을 변경할지 묻는 메시지가 표시되면 **예** 단추를 클릭합니다.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  첫 번째 이름 바꾸기 <xref:System.Windows.Forms.Button> 제어 `startAsyncButton` 설정 하 고는 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `Start Async`합니다. 두 번째 이름 바꾸기 <xref:System.Windows.Forms.Button> 제어 `cancelAsyncButton`를 설정 하 고는 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `Cancel Async`합니다. 설정의 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 `false`합니다.  
   
-6.  둘 다에 대해 이벤트 처리기를 만들고는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트입니다. 자세한 내용은 [방법: 디자이너를 사용하여 이벤트 처리기 만들기](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)를 참조하세요.  
+6.  둘 다에 대해 이벤트 처리기를 만들고는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트입니다. 자세한 내용은 [방법: 디자이너를 사용하여 이벤트 처리기 만들기](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)를 참조하세요.  
   
 7.  끌어서는 <xref:System.Windows.Forms.Label> 에서 제어는 **도구 상자** 폼 하 고 이름을 `resultLabel`합니다.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>비동기 이벤트 처리기를 구현하려면  
   
-1.  에 **속성** 창와는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 선택한 상태에서 클릭는 **이벤트** 단추입니다. 두 번 클릭는 <xref:System.ComponentModel.BackgroundWorker.DoWork> 및 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 이벤트를 이벤트 처리기를 만듭니다. 이벤트 처리기를 사용하는 방법에 대한 자세한 내용은 [방법: 디자이너를 사용하여 이벤트 처리기 만들기](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)를 참조하세요.  
+1.  에 **속성** 창와는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 선택한 상태에서 클릭는 **이벤트** 단추입니다. 두 번 클릭는 <xref:System.ComponentModel.BackgroundWorker.DoWork> 및 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 이벤트를 이벤트 처리기를 만듭니다. 이벤트 처리기를 사용하는 방법에 대한 자세한 내용은 [방법: 디자이너를 사용하여 이벤트 처리기 만들기](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)를 참조하세요.  
   
 2.  사용자 폼에서 `ComputeFibonacci`라는 새 메서드를 만듭니다. 이 메서드는 실제 작업을 수행하며 백그라운드에서 실행됩니다. 이 코드는 피보나치 알고리즘의 재귀적 구현을 보여 줍니다. 이는 매우 비효율적이며, 큰 숫자를 완성하는 데 기하급수적으로 긴 시간이 소요됩니다. 여기서는 응용 프로그램에서 오랜 지연을 유발할 수 있는 작업을 보여 주기 위해 설명 용도로 사용됩니다.  
   
@@ -178,7 +178,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ComponentModel.BackgroundWorker>  
  [관리되는 스레딩을 구현하는 최선의 방법](../../../../docs/standard/threading/managed-threading-best-practices.md)  
  [구성 요소에서 다중 스레딩](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [빌드에 없음: Visual Basic의 다중 스레딩](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [빌드에 없음: Visual Basic의 다중 스레딩](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [방법: 배경 작업을 사용하는 양식 구현](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  [연습: 백그라운드에서 작업 실행](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  [BackgroundWorker 구성 요소](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

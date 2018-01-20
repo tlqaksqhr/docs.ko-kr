@@ -33,11 +33,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 283faabf0f23df2650f8d87fdebae1102b83235d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4af28280de24f3e25362f18985c209b1a2f29523
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework의 구성 파일 스키마
 
@@ -86,10 +86,10 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="related-sections"></a>관련 단원
 
-[원격 설정 스키마](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) 원격을 구현하는 클라이언트 및 서버 응용 프로그램을 구성하는 요소에 대해 설명합니다.
+[원격 설정 스키마](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) 원격을 구현하는 클라이언트 및 서버 응용 프로그램을 구성하는 요소에 대해 설명합니다.
 
 [ASP.NET 설정 스키마](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) ASP.NET 웹 응용 프로그램의 동작을 제어하는 요소에 대해 설명합니다.
 
-[웹 서비스 설정 스키마](http://msdn.microsoft.com/en-us/f84d6d55-1add-4eb7-ae46-33df5833ea2e) ASP.NET 웹 서비스와 해당 클라이언트의 동작을 제어하는 요소에 대해 설명합니다.
+[웹 서비스 설정 스키마](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) ASP.NET 웹 서비스와 해당 클라이언트의 동작을 제어하는 요소에 대해 설명합니다.
 
-[.NET Framework 앱 구성](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) .NET Framework에서 보안, 어셈블리 바인딩 및 원격을 구성하는 방법에 대해 설명합니다.
+[.NET Framework 앱 구성](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) .NET Framework에서 보안, 어셈블리 바인딩 및 원격을 구성하는 방법에 대해 설명합니다.

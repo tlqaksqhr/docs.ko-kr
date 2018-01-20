@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e3123df62e66354b35da26bbda894c5828136d05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86258ae472a39451359dec7e6bfe7fe2e5b4d0c5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-and-timing-how-to-topics"></a>애니메이션 및 타이밍 방법 항목
 다음 항목을 사용 하는 방법을 보여 줍니다는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애니메이션, 타이밍 시스템 응용 프로그램에서 합니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  [From, To 및 By를 사용하여 애니메이션 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [이름 범위 정의](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
  [클록 상태가 변경될 때 알림 받기](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [방법: 스토리 보드를 제거 합니다.](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee)  
+ [방법: 스토리 보드를 제거 합니다.](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [애니메이션 반복](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [Storyboard 검색](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
  [동기적으로 Storyboard 검색](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  

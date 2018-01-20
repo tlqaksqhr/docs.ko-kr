@@ -21,14 +21,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 947ac4f8783b388135cf9e8147bb48eda93cfa08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 446e0f830e916e7f4118a7374c66f238a60fda02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>방법: 컨트롤에 대한 도구 상자 비트맵 제공
-컨트롤에 대 한 특수 아이콘에 표시 하려는 경우는 **도구 상자**를 사용 하 여 특정 이미지를 지정할 수 있습니다는 <xref:System.Drawing.ToolboxBitmapAttribute>합니다. 이 클래스는 *특성*이라는 다른 클래스에 연결할 수 있는 특수한 유형의 클래스입니다. 특성에 대한 자세한 내용은 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]의 [빌드에 없음: Visual Basic의 특성 개요](http://msdn.microsoft.com/en-us/0d0cff64-892d-4f57-83bd-bef388553d4f) 및 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]의 [특성](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)을 참조하세요.  
+컨트롤에 대 한 특수 아이콘에 표시 하려는 경우는 **도구 상자**를 사용 하 여 특정 이미지를 지정할 수 있습니다는 <xref:System.Drawing.ToolboxBitmapAttribute>합니다. 이 클래스는 *특성*이라는 다른 클래스에 연결할 수 있는 특수한 유형의 클래스입니다. 특성에 대한 자세한 내용은 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]의 [빌드에 없음: Visual Basic의 특성 개요](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) 및 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]의 [특성](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)을 참조하세요.  
   
  사용 하는 <xref:System.Drawing.ToolboxBitmapAttribute>, 16x16 픽셀 비트맵에 대 한 경로 파일 이름을 나타내는 문자열을 지정할 수 있습니다. 그런 다음 이 비트맵은 **도구 상자**에 추가될 때 컨트롤 옆에 표시됩니다. 지정할 수 있습니다는 <xref:System.Type>, 해당 형식과 연결 된 비트맵 로드 되는 경우. 둘 다 지정 하는 경우는 <xref:System.Type> 하 고 지정 된 형식에 포함 된 어셈블리에서 문자열 매개 변수로 지정 된 이름의 이미지 리소스에 대 한 문자열로 컨트롤 검색는 <xref:System.Type> 매개 변수입니다.  
   

@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3c6427254aeec1a9e272579665fcd9893daa2316
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b452dd686286ba0ddf648ee532e67a0c121f66eb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-reference-net-types-from-com"></a>방법: COM에서 .NET 형식 참조
 클라이언트 및 서버 코드의 관점에서 COM과 .NET Framework의 차이점은 크게 눈에 띄지 않습니다. Microsoft Visual Basic 클라이언트는 개체 메서드와 구문, 속성 및 필드를 정확히 다른 COM 개체인 것처럼 노출하는 개체 브라우저에서 .NET 개체를 볼 수 있습니다.  
@@ -54,5 +54,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>참고 항목  
  [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [COM에 어셈블리 등록](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [.NET 개체를 호출합니다.](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [COM 액세스를 위해 응용 프로그램 배포](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
+ [.NET 개체를 호출합니다.](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
+ [COM 액세스를 위해 응용 프로그램 배포](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)

@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 1bd25dd0444c428e000371abe494e62b258eaa63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2593df04b93db17f9ca61a98b21aaec1d534d46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>어셈블리 바인딩 리디렉션 보안 권한
 응용 프로그램 구성 파일에서 어셈블리 바인딩을 명시적으로 리디렉션하려면 보안 권한이 필요합니다. 이는 .NET Framework 어셈블리와 타사 어셈블리의 리디렉션 모두에 적용됩니다. 설정 하 여 권한 부여는 <xref:System.Security.Permissions.SecurityPermissionFlag> 에 플래그는 <xref:System.Security.Permissions.SecurityPermission>합니다. 관리 되는 어셈블리 기본적으로 권한이 없습니다.  
@@ -36,12 +36,12 @@ ms.lasthandoff: 12/22/2017
 |----------|-----------------------------------|  
 |신뢰할 수 있는 영역 (로컬 컴퓨터)|**ON**|  
 |인트라넷 영역|**ON**|  
-|인터넷 영역|**해제**|  
-|신뢰할 수 없는 영역|**해제**|  
+|인터넷 영역|**OFF**|  
+|신뢰할 수 없는 영역|**OFF**|  
   
  관리자 또는 제한 지정된 된 컴퓨터의 특정 시나리오를 지원 하도록 이러한 보안 설정을 변경할 수 있습니다. 변경 하기 위한 도구도 **이러한** 플래그 설정을 기본;에서 관리자가 수동으로 편집 해야 Security.config 파일 사용자의 컴퓨터에 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [게시자 정책 파일 및-병렬 실행](http://msdn.microsoft.com/en-us/97a042be-4d72-40c3-91c0-76fd36bdf133)  
+ [게시자 정책 파일 및-병렬 실행](http://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
  [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [Side-by-Side 실행](../../../docs/framework/deployment/side-by-side-execution.md)

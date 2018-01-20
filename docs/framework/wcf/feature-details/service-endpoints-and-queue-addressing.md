@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 끝점 및 큐 주소 지정
 이 항목에서는 클라이언트가 큐에서 읽는 서비스에 주소를 지정하는 방법 및 서비스 끝점이 큐에 매핑되는 방법을 설명합니다. 다음 그림은 기본 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 대기 중인 응용 프로그램 배포를 보여 줍니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 큐 주소 지정은 다음 패턴을 기반으로 합니다.  
   
- net.msmq: / / \< *호스트 이름*> / [개인 /] \< *큐 이름*>  
+ net.msmq: // \<*host-name*> / [private/] \<*queue-name*>  
   
  다음은 각 문자에 대한 설명입니다.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [private]는 선택 사항입니다. 개인 큐인 대상 큐에 주소를 지정할 때 사용됩니다. 공개 큐에 주소를 지정하려면 private를 지정하지 않아야 합니다. MSMQ 경로와 달리 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URI 형식에는 "$"가 없습니다.  
   
--   \<*큐 이름은*> 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. 따라서 \< *큐 이름*> = \< *큐 이름*> [; *queue 이름 하위*].  
+-   \<*큐 이름은*> 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
   
  예제 1: abc atadatum.com 컴퓨터에서 호스팅된 개인 큐 PurchaseOrders에 주소를 지정하는 경우 URI는 net.msmq://abc.adatum.com/private/PurchaseOrders입니다.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  큐 주소는 메시지를 읽을 수신기에 의해 수신 대기 URI로 사용됩니다. 즉, 큐 주소는 TCP 소켓의 수신 대기 포트에 해당합니다.  
   
- 큐에서 읽는 끝점에서는 ServiceHost를 열 때 이전에 지정한 같은 체계를 사용하여 큐의 주소를 지정해야 합니다. 예제를 보려면 [Net MSMQ 바인딩](../../../../docs/framework/wcf/samples/net-msmq-binding.md) 및 [메시지 큐 통합 바인딩 예제](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)합니다.  
+ 큐에서 읽는 끝점에서는 ServiceHost를 열 때 이전에 지정한 같은 체계를 사용하여 큐의 주소를 지정해야 합니다. 예제를 보려면 [Net MSMQ 바인딩](../../../../docs/framework/wcf/samples/net-msmq-binding.md) 및 [메시지 큐 통합 바인딩 예제](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)합니다.  
   
 ### <a name="multiple-contracts-in-a-queue"></a>큐의 여러 계약  
  큐의 메시지는 서로 다른 계약을 구현할 수 있습니다. 이 경우 다음 중 하나가 충족되어야 모든 메시지를 읽고 처리할 수 있습니다.  
@@ -83,9 +83,9 @@ ms.lasthandoff: 12/22/2017
   
 |WCF URI 기반 큐 주소|Active Directory 속성 사용|큐 전송 프로토콜 속성|결과 MSMQ 형식 이름|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<컴퓨터 이름 >/개인/abc|False(기본값)|Native(기본값)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<컴퓨터 이름 >/개인/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
-|Net.msmq://\<컴퓨터 이름 >/개인/abc|True|네이티브|PUBLIC=some-guid(큐의 GUID)|  
+|Net.msmq://\<machine-name>/private/abc|False(기본값)|Native(기본값)|DIRECT=OS:machine-name\private$\abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|True|네이티브|PUBLIC=some-guid(큐의 GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>배달 못 한 편지 큐 또는 포이즌 메시지 큐에서 메시지 읽기  
  대상 큐의 하위 큐인 포이즌 메시지 큐에서 메시지를 읽으려면 하위 큐의 주소가 있는 `ServiceHost`를 엽니다.  
@@ -98,14 +98,14 @@ ms.lasthandoff: 12/22/2017
   
  사용자 지정 배달 못 한 편지 큐를 사용할 때 배달 못 한 편지 큐가 로컬 컴퓨터에 있어야 합니다. 따라서 배달 못 한 편지 큐의 URI는 다음 형식으로 제한됩니다.  
   
- net.msmq: //localhost/ [개인 /] \< *사용자 지정 배달 못 한 편지-큐-이름 간*> 합니다.  
+ net.msmq: //localhost/ [private/]  \<*custom-dead-letter-queue-name*>.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 받은 모든 메시지에 현재 수신 중인 특정 큐로 주소가 지정되었는지 확인합니다. 메시지의 대상 큐가 메시지가 있는 큐와 일치하지 않으면 서비스가 메시지를 처리하지 않습니다. 이 경우 배달 못 한 편지 큐의 메시지를 다른 곳으로 배달해야 하므로 배달 못 한 편지 큐를 수신하는 서비스가 주소를 지정해야 하는 문제가 있습니다. 배달 못 한 편지 큐에서 또는 포이즌 큐에서 메시지를 읽으려면 `ServiceBehavior` 매개 변수를 포함하는 <xref:System.ServiceModel.AddressFilterMode.Any>를 사용해야 합니다. 예를 들어 참조 [배달 못 한 편지 큐](../../../../docs/framework/wcf/samples/dead-letter-queues.md)합니다.  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 및 서비스 주소 지정  
  `MsmqIntegrationBinding`은 기존 MSMQ 응용 프로그램과의 통신에 사용됩니다. 기존 MSMQ 응용 프로그램과의 상호 운용성을 쉽게 하기 위해 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 형식 이름 주소 지정만을 지원합니다. 따라서 이 바인딩을 사용하여 보낸 메시지는 URI 체계를 따라야 합니다.  
   
- msmq.formatname:\<*MSMQ 형식 이름*>>  
+ msmq.formatname:\<*MSMQ-format-name*>>  
   
  이 MSMQ 형식 이름에서 MSMQ로 지정 된 형식인 [메시지 큐에 대 한](http://go.microsoft.com/fwlink/?LinkId=94837)합니다.  
   

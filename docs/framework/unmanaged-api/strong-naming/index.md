@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>강력한 이름 지정(관리되지 않는 API 참조)
 강력한 이름 API에는 클라이언트를를 강력한 이름 어셈블리에 대 한 서명을 관리할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  강력한 이름을 사용하여 어셈블리에 서명하면 어셈블리 매니페스트를 포함하는 파일에 공개 키 암호화가 추가됩니다. 강력한 이름 서명을 사용 하면 이름 고유성 이름 스푸핑을 방지 하 고 참조를 확인할 때 고유 id를 가진 호출자에 게 제공 합니다. 그러나 신뢰 되지 수준은 강력한 이름으로 연결 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [강력한 이름 지정 전역 정적 함수](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [강력한 이름 지정 전역 정적 함수](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  강력한 이름 API를 사용 하는 관리 되지 않는 전역 정적 함수를 설명 합니다.  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [StrongNameTokenFromPublicKey 함수](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  공개 키를 나타내는 토큰을 가져옵니다. 부터 사용 되지 않는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.  
   
- [강력한 이름 지정 구조](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [강력한 이름 지정 구조](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  강력한 이름 어셈블리에 대 한 서명을 관리 하는 강력한 이름 API를 사용 하는 관리 되지 않는 구조를 설명...  
   
  [PublicKeyBlob 구조체](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

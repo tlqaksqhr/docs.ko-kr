@@ -12,11 +12,11 @@ ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 45dfc4dd4ab42c3ce8edd7e41b7b0401bb0db672
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c2f80eb8a0fbc655143ca02ead5f6f46f102918
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>비동기 응용 프로그램 (Visual Basic)에서 재진입 처리
 앱에 비동기 코드를 포함하는 경우 완료되기 전에 비동기 작업을 다시 입력하는 것을 나타내는 재입력을 고려하고 방지할 수 있어야 합니다. 재입력 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 발생할 수 있습니다.  
@@ -67,7 +67,7 @@ TOTAL bytes returned:  890591
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
 2. msdn.microsoft.com/library/aa578028.aspx               205273  
 6. msdn.microsoft.com/library/ms404677.aspx               197325  
-3. msdn.microsoft.com/en-us/library/jj155761.aspx                29019  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
 7. msdn.microsoft.com                                            42972  
 4. msdn.microsoft.com/library/hh290140.aspx               117152  
 8. msdn.microsoft.com/library/ff730837.aspx               146159  

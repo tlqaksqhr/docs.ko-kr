@@ -18,11 +18,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5f79ed7af91f2e54edbc2174da2afa1b3cb56557
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cfe8752ce3a562e1e4b576c63b56ff56255ff62
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-assembly39s-location"></a>어셈블리 &#39; 지정 s 위치
 두 가지 방법으로 어셈블리의 위치를 지정할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   사용 하는 [ \<조사 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소입니다.  
   
- 사용할 수도 있습니다는 [.NET Framework 구성 도구 (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) 어셈블리 위치를 지정 하거나 어셈블리를 조사 공용 언어 런타임에 대 한 위치를 지정 합니다.  
+ 사용할 수도 있습니다는 [.NET Framework 구성 도구 (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) 어셈블리 위치를 지정 하거나 어셈블리를 조사 공용 언어 런타임에 대 한 위치를 지정 합니다.  
   
 ## <a name="using-the-codebase-element"></a>사용 하 여 \<s e > 요소  
  사용할 수는  **\<s e >** 도 어셈블리 버전을 리디렉션하는 컴퓨터 구성 또는 게시자 정책 파일에만 요소입니다. 런타임에서 어셈블리 버전을 사용 하 여 결정을 버전을 결정 하는 파일의 코드 베이스 설정을 적용 됩니다. 코드 베이스가 없습니다 지정 하는 경우 런타임에서 어셈블리에 대 한 일반적인 방법으로 찾습니다. 자세한 내용은 참조 [런타임에서 어셈블리를 찾는 방법을](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)합니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- **버전** 특성이 모두 강력한 이름의 어셈블리에 대 한 필요 하나 강력한 이름이 아닌 어셈블리에 대 한 생략 해야 합니다.  **\<s e >** 요소를 사용 하려면는 **href** 특성입니다. 에서는 버전 범위를 지정할 수 없습니다는  **\<s e >** 요소입니다.  
+ **버전** 특성이 모두 강력한 이름의 어셈블리에 대 한 필요 하나 강력한 이름이 아닌 어셈블리에 대 한 생략 해야 합니다. **\<s e >** 요소를 사용 하려면는 **href** 특성입니다. 에서는 버전 범위를 지정할 수 없습니다는  **\<s e >** 요소입니다.  
   
 > [!NOTE]
 >  강력한 이름이 지정 되지 않은 어셈블리에 대 한 코드 베이스 힌트를 제공 하는 경우 힌트는 응용 프로그램 기준 위치 또는 응용 프로그램 기본 디렉터리의 하위 디렉터리를 가리켜야 합니다.  
@@ -80,4 +80,4 @@ ms.lasthandoff: 12/22/2017
  [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [.NET Framework 앱 구성](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [.NET Framework 앱 구성](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

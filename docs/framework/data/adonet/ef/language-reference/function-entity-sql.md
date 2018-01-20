@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 957c31d3262e5c97d576d444748bd1979aee0ce0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 308a1c72706b0896ac45c39ff1c6b746861debb1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="function-entity-sql"></a>함수(Entity SQL)
 Entity SQL 쿼리 명령의 범위에서 함수를 정의합니다.  
@@ -72,7 +72,7 @@ FUNCTION function-name
   
  `A()`  
   
- 자세한 내용은 [방법: 사용자 정의 함수 호출](http://msdn.microsoft.com/en-us/ad131b86-8b4e-4747-8605-d4fc64fb9d02)을 참조하세요.  
+ 자세한 내용은 참조 [하는 방법: 사용자 정의 함수를 호출](http://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)합니다.  
   
  함수는 모델 자체에서도 선언할 수 있습니다. 모델에서 선언된 함수는 명령에서 인라인으로 선언된 함수와 동일한 방식으로 실행됩니다. 자세한 내용은 참조 [사용자 정의 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)합니다.  
   

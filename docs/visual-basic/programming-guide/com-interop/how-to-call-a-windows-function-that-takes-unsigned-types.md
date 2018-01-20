@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>방법: 부호 없는 형식을 사용하는 Windows 함수 호출(Visual Basic)
 클래스, 모듈 또는 부호 없는 정수 형식의 멤버가 포함 된 구조를 사용 하는 경우이 멤버에 액세스할 수 있습니다 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]합니다.  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/21/2017
     >  Windows 응용 프로그램 프로그래밍 인터페이스 (API)와 같은 비관리 코드를 호출 하는 잠재적인 보안 위험에 코드를 제공 합니다.  
   
     > [!IMPORTANT]
-    >  Windows API를 호출 하려면 비관리 코드 권한이 있습니다. 자세한 내용은 참조 <xref:System.Security.Permissions.SecurityPermission> 및 [코드 액세스 권한](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675)합니다.  
+    >  Windows API를 호출 하려면 비관리 코드 권한이 있습니다. 자세한 내용은 참조 <xref:System.Security.Permissions.SecurityPermission> 및 [코드 액세스 권한](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 형식](../../../visual-basic/language-reference/data-types/data-type-summary.md)  

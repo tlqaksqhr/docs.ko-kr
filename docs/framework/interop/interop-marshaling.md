@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interop-marshaling"></a>Interop 마샬링
 <a name="top"></a> Interop 마샬링은 호출 중 관리되는 메모리와 관리되지 않는 메모리 간에 메서드 인수와 반환 값을 통해 데이터를 전달하는 방법을 제어합니다. Interop 마샬링은 공용 언어 런타임 마샬링 서비스에서 수행하는 런타임 작업입니다.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  C# 클라이언트의 스레드를 STA로 설정한 후 MTA COM 구성 요소를 호출하려면 아파트 간 마샬링이 필요합니다.  
   
- 아파트 모델을 명시적으로 선택하는 방법에 대한 자세한 내용은 [관리되는 스레딩과 관리되지 않는 스레딩](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)을 참조하세요.  
+ 아파트 모델을 명시적으로 선택하는 방법에 대한 자세한 내용은 [관리되는 스레딩과 관리되지 않는 스레딩](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)을 참조하세요.  
   
  [맨 위로 이동](#top)  
   
@@ -145,7 +145,7 @@ ms.lasthandoff: 12/22/2017
  ![SOAP 또는 TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
 SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호출  
   
- [서비스 구성 요소](http://msdn.microsoft.com/en-us/f109ee24-81ad-4d99-9892-51ac6f34978c)와 COM 간의 호출과 같은 관리되지 않는 일부 호출은 SOAP를 채널로 사용할 수 있습니다.  
+ [서비스 구성 요소](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c)와 COM 간의 호출과 같은 관리되지 않는 일부 호출은 SOAP를 채널로 사용할 수 있습니다.  
   
  [맨 위로 이동](#top)  
   
@@ -159,10 +159,10 @@ SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호�
 |[COM Interop를 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|COM 래퍼를 사용자 지정하여 마샬링 동작을 변경하는 방법을 설명합니다.|  
 |[방법: 관리 코드 DCOM을 WCF로 마이그레이션](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM에서 WCF로 마이그레이션하는 방법을 설명합니다.|  
 |[방법: HRESULT 및 예외 매핑](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|사용자 지정 예외를 HRESULT에 매핑하는 방법을 설명하고 각 HRESULT와 .NET Framework에 있는 해당 예외 클래스 간의 전체 매핑을 제공합니다.|  
-|[제네릭 형식을 통한 상호 운용](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|COM 상호 운용성을 위해 제네릭 형식을 사용할 때 지원되는 작업을 설명합니다.|  
+|[제네릭 형식을 통한 상호 운용](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|COM 상호 운용성을 위해 제네릭 형식을 사용할 때 지원되는 작업을 설명합니다.|  
 |[비관리 코드와의 상호 운용](../../../docs/framework/interop/index.md)|공용 언어 런타임에서 제공하는 상호 운용성 서비스를 설명합니다.|  
-|[고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|COM 구성 요소를 .NET Framework 응용 프로그램으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.|  
-|[상호 운용을 위한 디자인 고려 사항](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|통합된 COM 구성 요소를 작성하기 위한 팁을 제공합니다.|  
+|[고급 COM 상호 운용성](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|COM 구성 요소를 .NET Framework 응용 프로그램으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.|  
+|[상호 운용을 위한 디자인 고려 사항](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|통합된 COM 구성 요소를 작성하기 위한 팁을 제공합니다.|  
   
  [맨 위로 이동](#top)  
   

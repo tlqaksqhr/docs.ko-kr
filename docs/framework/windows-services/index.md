@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-windows-service-applications"></a>Windows 서비스 응용 프로그램 개발
 Microsoft를 사용 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK를 쉽게 만들 수 있습니다 서비스 서비스로 설치 하는 응용 프로그램을 만들어 합니다. 이 유형의 응용 프로그램에는 Windows 서비스를 라고 합니다. Framework 기능을 사용 있습니다 수는 서비스를 만들, 설치, 시작, 중지 및 그렇지 않은 경우의 동작을 제어 합니다.  
@@ -57,5 +57,5 @@ Microsoft를 사용 하 여 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] �
  <xref:System.ServiceProcess.ServiceInstaller>  
  기능을 설명는 <xref:System.ServiceProcess.ServiceInstaller> 클래스와 함께 사용 하는 <xref:System.ServiceProcess.ServiceProcessInstaller> 클래스 설치 하 고 서비스를 제거 합니다.  
   
- [NIB 템플릿에서 프로젝트 만들기](http://msdn.microsoft.com/en-us/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [NIB 템플릿에서 프로젝트 만들기](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  프로젝트 선택 하는 방법과이 장의에 사용 되는 형식입니다.

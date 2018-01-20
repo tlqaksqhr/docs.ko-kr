@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 190e64945658f81400c2cc68beff82ccc38144f5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 100def5fdf531527705fb0c1aebdc20674e0ce60
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="secure-client-applications"></a>안전한 클라이언트 응용 프로그램
 일반적으로 응용 프로그램은 데이터 손실을 야기하거나 시스템을 손상시킬 수 있는 취약성으로부터 보호되어야 하는 다양한 부분으로 구성됩니다. 안전한 사용자 인터페이스를 만들면 공격자가 데이터나 시스템 리소스에 액세스하기 전에 이를 차단함으로써 여러 가지 문제를 예방할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/17/2018
  [Windows Forms 및 관리되지 않는 응용 프로그램](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Windows Forms 응용 프로그램에서 관리되지 않는 응용 프로그램과 상호 작용하는 방법에 대해 설명합니다.  
   
- [ClickOnce 배포에 대 한 Windows Forms 응용 프로그램](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ [ClickOnce 배포에 대 한 Windows Forms 응용 프로그램](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
  Windows Forms 응용 프로그램에서 `ClickOnce` 배포를 사용하는 방법 및 이와 관련된 보안 문제에 대해 설명합니다.  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET 및 XML Web Services  
@@ -62,23 +62,23 @@ ms.lasthandoff: 01/17/2018
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[NIB: ASP.NET 보안](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)|ASP.NET 응용 프로그램의 보안을 유지하는 방법을 설명합니다.|  
-|[ASP.NET을 사용 하 여 만든 XML 웹 서비스 보안](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)|ASP.NET 웹 서비스의 보안을 구현하는 방법을 설명합니다.|  
+|[NIB: ASP.NET 보안](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|ASP.NET 응용 프로그램의 보안을 유지하는 방법을 설명합니다.|  
+|[ASP.NET을 사용 하 여 만든 XML 웹 서비스 보안](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|ASP.NET 웹 서비스의 보안을 구현하는 방법을 설명합니다.|  
 |[스크립트 악용 개요](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|악의적인 문자를 웹 페이지에 삽입하려고 시도하는 스크립트 기반 공격을 차단하는 방법에 대해 설명합니다.|  
-|[ASP.NET 웹 응용 프로그램에 대 한 보안 사례 NIB: 기본](http://msdn.microsoft.com/en-us/94a52ab8-731d-417e-b997-721baf43df38)|일반 보안 관련 정보와 추가 정보에 대한 링크를 제공합니다.|  
+|[ASP.NET 웹 응용 프로그램에 대 한 보안 사례 NIB: 기본](http://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|일반 보안 관련 정보와 추가 정보에 대한 링크를 제공합니다.|  
   
 ## <a name="remoting"></a>원격 통신  
  .NET Remoting을 사용하면 응용 프로그램 구성 요소가 모두 한 컴퓨터에 있는지 또는 전 세계에 분산되어 있는지 여부에 관계없이 다양한 영역에 배포되는 응용 프로그램을 쉽게 만들 수 있습니다. 같은 컴퓨터 또는 해당 네트워크를 통해 연결할 수 있는 다른 모든 컴퓨터에 있는 다른 프로세스의 개체를 사용하는 클라이언트 응용 프로그램을 빌드할 수 있습니다. 또한 .NET Remoting을 사용하면 동일한 프로세스에 있는 다른 응용 프로그램 도메인과 통신할 수도 있습니다.  
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[원격 응용 프로그램의 구성](http://msdn.microsoft.com/en-us/92c0c097-d984-4315-835b-7490ecdf1097)|자주 발생하는 문제를 피할 수 있도록 원격 응용 프로그램을 구성하는 방법에 대해 설명합니다.|  
-|[원격 서비스의 보안](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add)|인증 및 암호화에 대해 설명하고 원격 통신과 관련한 추가 보안 항목을 제공합니다.|  
+|[원격 응용 프로그램의 구성](http://msdn.microsoft.com/library/92c0c097-d984-4315-835b-7490ecdf1097)|자주 발생하는 문제를 피할 수 있도록 원격 응용 프로그램을 구성하는 방법에 대해 설명합니다.|  
+|[원격 서비스의 보안](http://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|인증 및 암호화에 대해 설명하고 원격 통신과 관련한 추가 보안 항목을 제공합니다.|  
 |[보안 및 원격 서비스 고려 사항](../../../../docs/framework/misc/security-and-remoting-considerations.md)|보호되는 개체 및 응용 프로그램 도메인 간의 보안 문제에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [데이터 액세스 전략에 대 한 권장 사항](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [데이터 액세스 전략에 대 한 권장 사항](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [응용 프로그램 보안](/visualstudio/ide/securing-applications)  
  [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

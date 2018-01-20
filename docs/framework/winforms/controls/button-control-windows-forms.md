@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 085ef918b2828dc754f5b91e0ad61262ce7d8c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4f9720f26458f3dd9cb2411d123fa830b20f3fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="button-control-windows-forms"></a>Button 컨트롤(Windows Forms)
 사용자는 Windows Forms `Button` 컨트롤을 클릭하여 작업을 수행할 수 있습니다. `Button` 컨트롤은 텍스트와 이미지를 둘 다 표시할 수 있습니다. 단추를 클릭하면 눌렀다 놓는 것처럼 표시됩니다.  
@@ -52,4 +52,4 @@ ms.lasthandoff: 12/22/2017
  [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  
   
- 또한 참조 [대화 상자에 사용자 입력](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55) 및 [하는 방법: 대화 상자 닫기 및 사용자 입력 유지](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d)합니다.
+ 또한 참조 [대화 상자에 사용자 입력](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) 및 [하는 방법: 대화 상자 닫기 및 사용자 입력 유지](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d)합니다.

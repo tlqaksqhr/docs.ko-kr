@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d61dbe2051109273a8616336e0efb46f7bd20864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 94a024081acfcf4b1926f485c6dbfc2f394b418c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 쿼리에서 표준 쿼리 연산자
 쿼리에는 데이터 소스에서 검색하려는 정보를 지정합니다. 또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다. LINQ에서는 쿼리에서 사용할 수 있는 표준 쿼리 메서드 집합을 제공합니다. 이러한 메서드의 대부분 시퀀스;에서 동작 시퀀스의 해당 형식이 구현 하는 개체는이 컨텍스트에서 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스입니다. 표준 쿼리 연산자 쿼리 기능에는 필터링, 프로젝션, 집계, 정렬, 그룹화, 페이징 등이 포함됩니다. 자주 사용되는 표준 쿼리 연산자 중 일부는 전용 키워드 구문이 있어서 쿼리 식 구문을 사용하여 호출할 수 있습니다. 쿼리 식은 메서드 기반 방법과는 다른, 가독성이 더 우수한 쿼리 표현 방법입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다. 목록이 같은 쿼리 식 절을 사용할 수 있는 표준 쿼리 연산자에 대 한 참조 [표준 쿼리 연산자 개요](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)합니다.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/17/2018
 |`Sum`|@FSHO2@null을 반환합니다.|@FSHO2@null을 반환합니다.|시퀀스의 null이 아닌 값의 합계를 반환합니다.|숫자 값 시퀀스의 합계를 계산합니다.|  
   
 ## <a name="type-methods"></a>형식 메서드  
- 형식 변환과 테스트를 다루는 두 LINQ 메서드는 모두 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]의 컨텍스트에서 지원됩니다. 즉 해당 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 형식에 매핑되는 형식만 지원됩니다. 이러한 형식의 목록을 참조 하십시오. [개념적 모델 형식 (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4)합니다. 형식 메서드는 `Convert` 및 `OfType`입니다.  
+ 형식 변환과 테스트를 다루는 두 LINQ 메서드는 모두 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]의 컨텍스트에서 지원됩니다. 즉 해당 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 형식에 매핑되는 형식만 지원됩니다. 이러한 형식의 목록을 참조 하십시오. [개념적 모델 형식 (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)합니다. 형식 메서드는 `Convert` 및 `OfType`입니다.  
   
  `OfType`은 엔터티 형식에 대해 지원됩니다. `Convert`는 개념적 모델 기본 형식에 대해 지원됩니다.  C# `is` 및 `as` 메서드 역시 지원됩니다.  
   

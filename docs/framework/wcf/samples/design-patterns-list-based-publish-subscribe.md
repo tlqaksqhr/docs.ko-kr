@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b54982439f621ea504c91c264dde002751ec9185
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f5d9b334aae1607f4fb46e0b41155b50eb95a46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>디자인 패턴: 목록 기반 게시-구독
 이 샘플에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로그램으로 구현된 목록 기반 게시-구독 패턴을 보여 줍니다.  
@@ -135,7 +135,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  \Datasource\bin에서 Datasource.exe를 실행\\, 언어별 폴더의 합니다. 데이터 소스 동작이 콘솔 창에 표시됩니다. 데이터 소스에서 서비스로 정보를 보내면 각 클라이언트로 전달되어야 합니다.  
   
-4.  클라이언트, 데이터 원본 및 서비스 프로그램 통신할 수 없는 경우 참조 [문제 해결 팁](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)합니다.  
+4.  클라이언트, 데이터 원본 및 서비스 프로그램 통신할 수 없는 경우 참조 [문제 해결 팁](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)합니다.  
   
 ### <a name="to-run-the-sample-across-machines"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   

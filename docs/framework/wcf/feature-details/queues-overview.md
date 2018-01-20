@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="queues-overview"></a>큐 개요
 이 단원에서는 큐를 사용하는 통신의 일반 개념과 핵심 개념을 소개합니다. 뒤의 단원에서는 여기서 설명한 큐의 개념이 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 명시되는 방법에 대해 자세히 설명합니다.  
@@ -91,6 +91,6 @@ ms.lasthandoff: 12/22/2017
  [일시 대기 통신](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Windows Communication Foundation에서 메시지 큐로](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [메시지 큐(MSMQ) 설치](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [메시지 큐 통합 바인딩 예제](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [메시지 큐 통합 바인딩 예제](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [메시지 큐에서 indows Communication Foundation으로](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

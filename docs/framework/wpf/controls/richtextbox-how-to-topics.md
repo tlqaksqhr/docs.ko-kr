@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4375803ab51b139a66ac789f0670fce1e5f64682
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox 방법 항목
 이 섹션에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제는 <xref:System.Windows.Controls.RichTextBox> 제어 합니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
  [프로그래밍 방식으로 RichTextBox의 선택 변경](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [RichTextBox 콘텐츠 저장, 로드 및 인쇄](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [RichTextBox에서 사용자 지정 상황에 맞는 메뉴의 위치 지정](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [방법: RichTextBox에 대 한 기본 콘텐츠 호스트를 대체 합니다.](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [방법: RichTextBox에 대 한 기본 콘텐츠 호스트를 대체 합니다.](http://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Controls.TextBox>  

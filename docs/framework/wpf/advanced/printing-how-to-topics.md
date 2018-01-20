@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd76921059222c9c5b8958ce8e1761a3f04cb037
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="printing-how-to-topics"></a>인쇄 방법 항목
 이 섹션의 항목에는 인쇄를 사용 하는 방법을 보여 줍니다 및에 포함 된 인쇄 시스템 관리 기능 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 및 새로운 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  [인쇄 큐의 하위 집합 열거](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  특정 한 특성이 있는 프린터의 목록을 생성 하기 위한 지침입니다.  
   
- [NOTINBUILD: 방법: 인쇄 스키마를 확장 하 고 새 인쇄 시스템 클래스 만들기](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD: 방법: 인쇄 스키마를 확장 하 고 새 인쇄 시스템 클래스 만들기](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  확장 된 설명은 어떻게 관리 코드 프로그래머 전문 인쇄 장치나 않거나 최신 기능을 사용 하는 프린터에 인쇄 스키마를 확장할 수 있습니다.  
   
  [리플렉션을 사용하지 않고 인쇄 시스템 개체 속성 가져오기](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  

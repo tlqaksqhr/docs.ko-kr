@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0267020f7e7a52e92b05a0bda0ee397e5c3393fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize
 사용자 지정 컨트롤 노출 하는 속성으로 컬렉션 경우도 있습니다. 이 연습에서는 사용 하는 방법을 보여 줍니다.는 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> 디자인 타임에 컬렉션을 serialize 하는 방법을 제어 하는 클래스입니다. 적용 된 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 컬렉션 속성에 값을 입력 하면 속성을 serialize 합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  단일 목록으로이 항목의 코드를 복사 하려면 참조 [하는 방법: serialize 할 컬렉션의 표준 형식과 DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
@@ -47,9 +47,9 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>직렬화 가능 컬렉션을 사용 하 여 컨트롤을 만들려면  
   
-1.  라는 Windows 컨트롤 라이브러리 프로젝트 만들기 `SerializationDemoControlLib`합니다. 자세한 내용은 참조 [Windows 컨트롤 라이브러리 템플릿](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4)합니다.  
+1.  라는 Windows 컨트롤 라이브러리 프로젝트 만들기 `SerializationDemoControlLib`합니다. 자세한 내용은 참조 [Windows 컨트롤 라이브러리 템플릿](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)합니다.  
   
-2.  이름 바꾸기 `UserControl1` 를 `SerializationDemoControl`합니다. 자세한 내용은 참조 [하는 방법: 식별자 이름 바꾸기](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724)합니다.  
+2.  이름 바꾸기 `UserControl1` 를 `SerializationDemoControl`합니다. 자세한 내용은 참조 [하는 방법: 식별자 이름 바꾸기](http://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724)합니다.  
   
 3.  에 **속성** 창의 설정의 값은 <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> 속성을 `10`합니다.  
   

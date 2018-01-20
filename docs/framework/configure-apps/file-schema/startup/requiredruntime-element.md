@@ -21,18 +21,18 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 12be2350cb123407b2f71d1f5f07e836ccddb9c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e864eec2ddf51d5cc88110654f6c23f146938d5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; 요소
 응용 프로그램에서 1.0 버전의 공용 언어 런타임만 지원하도록 지정합니다. 이 요소는 사용 되지 않으며 더 이상 사용 되지 않음을. [ `supportedRuntime` ](supportedruntime-element.md) 요소를 대신 사용 해야 합니다.
   
  \<configuration>  
-\<시작 >  
-\<requiredRuntime >  
+\<startup>  
+\<requiredRuntime>  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ safemode="true|false"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -94,4 +94,4 @@ safemode="true|false"/>
 ## <a name="see-also"></a>참고 항목  
  [시작 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 사용할 런타임 버전 지정](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> 사용할 런타임 버전 지정](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

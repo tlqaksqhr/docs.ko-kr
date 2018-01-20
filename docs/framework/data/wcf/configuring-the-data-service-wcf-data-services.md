@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ff15e43156293a3bdd4c48b82fba224444d1885a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d9dd82926385ee97b05694d954b94d7821a1e638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>데이터 서비스 구성(WCF Data Services)
 와 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 노출 하는 데이터 서비스를 만들 수 있습니다 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다. 이러한 피드의 데이터는 다양한 데이터 소스에서 제공될 수 있습니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]데이터 공급자를 사용 하 여이 데이터를 노출 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드입니다. 이러한 공급자에는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자, 리플렉션 공급자 및 사용자 지정 데이터 서비스 공급자 인터페이스의 집합이 포함됩니다. 공급자 구현은 서비스에 대한 데이터 모델을 정의합니다. 자세한 내용은 참조 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
 |경로/동작|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원 안 함|<xref:System.Data.Services.EntitySetRights.WriteAppend>|지원 안 함|  
-|`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge>|해당 없음|<xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
+|`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge>|N/A|<xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원 안 함|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge> 또는 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> 및<br /><br /> `Orders``:` 및<xref:System.Data.Services.EntitySetRights.WriteAppend>|지원 안 함|  
 |`/Customers('ALFKI')/Orders(10643)`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteDelete>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge>|지원 안 함|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Orders(10643)/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteDelete><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> 및 <xref:System.Data.Services.EntitySetRights.WriteMerge><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.WriteAppend> 및 <xref:System.Data.Services.EntitySetRights.ReadSingle>|지원 안 함|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원 안 함|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|지원 안 함|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> 및<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|지원 안 함|지원 안 함|지원 안 함|지원 안 함|  
   
- <sup>1</sup> 이 예제에서는 `Address` 복합 형식 속성을 나타내는 `Customers` 라는 속성이 엔터티 `StreetAddress`합니다. Northwind 데이터 서비스에서 사용되는 모델은 이 복합 형식을 명시적으로 정의하지 않습니다. 데이터 모델이 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자를 사용하여 정의된 경우 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 도구를 사용하여 이러한 복합 형식을 정의할 수 있습니다. 자세한 내용은 참조 [하는 방법: 만들기 및 수정 하는 복합 형식](http://msdn.microsoft.com/en-us/afb8e206-0ffe-4597-b6d4-6ab566897e1d)합니다.  
+ <sup>1</sup> 이 예제에서는 `Address` 복합 형식 속성을 나타내는 `Customers` 라는 속성이 엔터티 `StreetAddress`합니다. Northwind 데이터 서비스에서 사용되는 모델은 이 복합 형식을 명시적으로 정의하지 않습니다. 데이터 모델이 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자를 사용하여 정의된 경우 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 도구를 사용하여 이러한 복합 형식을 정의할 수 있습니다. 자세한 내용은 참조 [하는 방법: 만들기 및 수정 하는 복합 형식](http://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d)합니다.  
   
  <sup>2</sup> binary large object (BLOB)을 반환 하는 속성은이 경우에 미디어 링크 항목인 엔터티에 속한 미디어 리소스로 정의 될 때이 URI는 지원 `Customers`합니다. 자세한 내용은 참조 [스트리밍 공급자](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)합니다.  
   

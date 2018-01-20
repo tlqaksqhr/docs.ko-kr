@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ffc74fdbec204b798ee93a8ee2c91db992a83cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 대부분의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플은 IIS(인터넷 정보 서비스)에서 호스팅되고 공용 가상 디렉터리에서 실행됩니다. 이 일회 설치 절차에서는 디스크; 폴더를 만듭니다. 명명 된 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  경우 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 설치 되지 않은 운영 체제가 Windows Server 2008 SP2 또는 이상 버전에서는 설치 [핫픽스 251798](http://go.microsoft.com/fwlink/?LinkId=184693)합니다.  
   
-4.  다음 명령을 실행합니다. 이러한 명령은 실행 해야 하는 이유에 대 한 자세한 내용은 참조 하십시오. [IIS 호스팅된 서비스가 실패 하면](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)합니다.  
+4.  다음 명령을 실행합니다. 이러한 명령은 실행 해야 하는 이유에 대 한 자세한 내용은 참조 하십시오. [IIS 호스팅된 서비스가 실패 하면](http://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)합니다.  
   
     > [!WARNING]
     >  IIS가 다시 설치된 경우 다음 명령을 다시 실행해야 합니다.  

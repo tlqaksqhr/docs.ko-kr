@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 065a3bcd64500323de7bc37c5896b13acb459fb1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 75d78c505c81ce688e0ba0110c76712c71db1c4f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET 응용 프로그램 보안
 보안 ADO.NET 응용 프로그램을 작성하려면 사용자 입력의 유효성을 확인하지 않는 것과 같은 일반적인 코딩 문제를 피하는 것 외에도 여러 부분을 고려해야 합니다. 데이터에 액세스하는 응용 프로그램에는 공격자가 중요한 데이터를 검색, 조작 또는 파괴하는 데 악용할 수 있는 여러 잠재적인 오류 지점이 있습니다. 따라서 응용 프로그램 디자인 단계의 위협 모델링 과정에서부터 최종 배포와 진행 중인 유지 관리에 이르기까지 보안의 모든 측면을 이해해야 합니다.  
@@ -53,10 +53,10 @@ ms.lasthandoff: 01/17/2018
  [보안](../../../../docs/standard/security/index.md)  
  .NET Framework에서 보안의 여러 가지 측면에 대해 설명하는 항목의 링크가 들어 있습니다.  
   
- [보안 도구](http://msdn.microsoft.com/en-us/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [보안 도구](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  보안 정책을 보호하고 관리하는 .NET Framework 도구입니다.  
   
- [안전한 응용 프로그램을 만들기 위한 리소스](http://msdn.microsoft.com/en-us/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [안전한 응용 프로그램을 만들기 위한 리소스](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  보안 응용 프로그램 만들기에 대한 항목의 링크를 제공합니다.  
   
  [보안 관련 참조 목록](/visualstudio/ide/security-bibliography)  

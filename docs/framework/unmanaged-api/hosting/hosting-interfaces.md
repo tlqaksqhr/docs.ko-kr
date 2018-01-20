@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 46208d6db716f7e1e7a443d958c059b22f74c46f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4fb24db8ad5b1ff92eadee139ddf10c044488f7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hosting-interfaces"></a>호스팅 인터페이스
 이 섹션에서는 관리 되지 않은 인터페이스 설명 호스트 응용 프로그램에 공용 언어 런타임 (CLR)를 통합 하 사용할 수 있습니다.  
@@ -54,4 +54,4 @@ ms.lasthandoff: 12/22/2017
   
  [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)  
   
- [런타임 호스트](http://msdn.microsoft.com/en-us/99d9246a-b994-4fe5-985c-8588d1d59998)
+ [런타임 호스트](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)

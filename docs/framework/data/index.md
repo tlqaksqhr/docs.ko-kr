@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework의 데이터 및 모델링
 이 단원에서는 ADO.NET, LINQ(Language Integrated Query), WCF Data Services 및 XML을 사용하여 데이터에 액세스하는 방법에 대한 정보를 제공합니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  ADO.NET 아키텍처에 대해 설명하고, ADO.NET 클래스를 사용하여 응용 프로그램 데이터를 관리하는 방법과 Microsoft SQL Server, OLE DB 데이터 소스 및 XML을 포함하는 데이터 소스와 상호 작용하는 방법에 대해 설명합니다.  
   
- [LINQ 포털](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [LINQ 포털](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  LINQ(Language-Integrated Query) 관련 설명서에 대한 링크를 제공합니다.  
   
  [트랜잭션 처리](../../../docs/framework/data/transactions/index.md)  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  [XML 문서 및 데이터](../../../docs/standard/data/xml/index.md)  
  .NET Framework에서 XML 문서 및 데이터로 작업하는 종합적이고 통합된 클래스 집합에 대한 개요를 제공합니다.  
   
- [XML 표준 참조](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
+ [XML 표준 참조](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Microsoft에서 지원하는 XML 표준에 대한 참조 정보를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  

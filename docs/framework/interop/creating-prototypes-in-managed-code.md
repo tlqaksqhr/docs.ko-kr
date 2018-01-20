@@ -29,11 +29,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9a85da0d1714c263b446c88b7c18e934817aea94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>관리 코드에서 프로토타입 만들기
 이 항목에서는 관리되지 않는 함수에 액세스하는 방법을 설명하고 관리 코드에서 메서드 정의에 주석을 다는 여러 특성 필드를 소개합니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)을 참조하세요.  
@@ -107,7 +107,7 @@ using namespace System::Runtime::InteropServices;
 ### <a name="platform-invoke-examples"></a>플랫폼 호출 예제  
  이 섹션의 플랫폼 호출 샘플에서는 스택 워크 한정자와 함께 `RegistryPermission` 특성을 사용하는 방법을 보여 줍니다.  
   
- 다음 코드 예제에서는 <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` 및 `PermitOnly` 한정자가 무시됩니다.  
+ 다음 코드 예제에서는 <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny`, 및 `PermitOnly` 한정자는 무시 됩니다.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -235,7 +235,7 @@ interface IDemandStubsItf
  [진입점 지정](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [문자 집합 지정](../../../docs/framework/interop/specifying-a-character-set.md)  
  [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)  
- [플랫폼 호출 보안 고려 사항](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
+ [플랫폼 호출 보안 고려 사항](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
  [DLL 함수 식별](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
  [DLL 함수가 포함된 클래스 만들기](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [DLL 함수 호출](../../../docs/framework/interop/calling-a-dll-function.md)

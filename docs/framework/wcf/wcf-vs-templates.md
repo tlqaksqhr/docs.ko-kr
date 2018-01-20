@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 템플릿
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 템플릿은 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 서비스 및 해당 응용 프로그램을 신속하게 빌드하기 위해 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 사용할 수 있는 미리 정의된 프로젝트 및 항목 템플릿입니다.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  기존 프로젝트가 웹 프로젝트인 경우 서비스 호스트 파일(service1.svc)도 만들어집니다.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF 서비스 프로젝트 및 항목 템플릿.  
- 이러한 템플릿은 웹 서비스처럼 액세스 가능한 워크플로인 워크플로 서비스를 호스트하는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 만듭니다. XAML 또는 필수 프로그래밍 모델에 대한 별도의 템플릿이 존재합니다. 이 템플릿을 사용하여 순차 또는 상태 시스템 워크플로를 만들 수 있습니다. 이러한 워크플로 형식에 대 한 자세한 내용은 참조 하십시오. [Windows Workflow Foundation 자습서](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]워크플로 프로젝트 만들기, 참조 [레거시 워크플로 프로젝트 만들기](/visualstudio/workflow-designer/creating-legacy-workflow-projects)합니다.  
+ 이러한 템플릿은 웹 서비스처럼 액세스 가능한 워크플로인 워크플로 서비스를 호스트하는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스를 만듭니다. XAML 또는 필수 프로그래밍 모델에 대한 별도의 템플릿이 존재합니다. 이 템플릿을 사용하여 순차 또는 상태 시스템 워크플로를 만들 수 있습니다. 이러한 워크플로 형식에 대 한 자세한 내용은 참조 하십시오. [Windows Workflow Foundation 자습서](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]워크플로 프로젝트 만들기, 참조 [레거시 워크플로 프로젝트 만들기](/visualstudio/workflow-designer/creating-legacy-workflow-projects)합니다.  
   
  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 디자이너는 XOML 형식 워크플로를 코드 기반 워크플로 대신 사용할 때 더 빠르게 반응합니다. 만들어지는 기본 워크플로 형식은 XOML 워크플로입니다.  
   

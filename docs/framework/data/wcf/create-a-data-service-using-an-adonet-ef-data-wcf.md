@@ -17,14 +17,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>방법: ADO.NET Entity Framework 데이터 원본을 사용하여 데이터 서비스 만들기(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서는 엔터티 데이터를 데이터 서비스로 노출합니다. 이 엔터티 데이터는 데이터 소스가 관계형 데이터베이스일 때 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]에 의해 제공됩니다. 이 항목에서는 기존 데이터베이스를 기반으로 하는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 웹 응용 프로그램에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 기반 데이터 모델을 만들고 이 데이터 모델을 사용하여 새 데이터 서비스를 만드는 방법을 보여 줍니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서는 엔터티 데이터를 데이터 서비스로 노출합니다. 이 엔터티 데이터에서 제공 되는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 때 데이터 소스는 관계형 데이터베이스입니다. 이 항목에서는 기존 데이터베이스를 기반으로 하는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 웹 응용 프로그램에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 기반 데이터 모델을 만들고 이 데이터 모델을 사용하여 새 데이터 서비스를 만드는 방법을 보여 줍니다.  
   
  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 프로젝트 외부에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 모델을 생성할 수 있는 명령줄 도구도 제공합니다. 자세한 내용은 참조 [하는 방법: 모델 및 매핑 파일 생성을 사용 하 여 EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)합니다.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 9. 클릭 **마침** 마법사를 완료 합니다.  
   
-     특정 데이터베이스를 기반으로 하는 기본 데이터 모델이 만들어집니다. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]에서는 데이터 모델을 사용자 지정할 수 있습니다. 자세한 내용은 [작업](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb)을 참조하세요.  
+     특정 데이터베이스를 기반으로 하는 기본 데이터 모델이 만들어집니다. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]에서는 데이터 모델을 사용자 지정할 수 있습니다. 자세한 내용은 [작업](http://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb)을 참조하세요.  
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>새 데이터 모델을 사용하여 데이터 서비스를 만들려면  
   

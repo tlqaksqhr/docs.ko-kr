@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1946f2b4a2cef8946eb05f995150fafada954d09
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="composing-nested-entity-sql-queries"></a>중첩 Entity SQL 쿼리 작성
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 다양한 기능을 가진 언어입니다. 빌딩 블록 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 는 식입니다. 기존 SQL과 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 탭 형식의 결과 집합에 국한 되지 않음: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 리터럴, 매개 변수 또는 중첩된 식을 가질 수 있는 복잡 한 식 작성을 지원 합니다. 식에서 값을 매개 변수화 또는 다른 식으로 구성 수 있습니다.  
@@ -57,7 +57,7 @@ UNION ALL
 FROM … );  
 ```  
   
- 다음 예제에서는 식에 올바르게 중첩 하는 방법을 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [하는 방법: 공용 구조체의 두 쿼리 정렬](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313)합니다.  
+ 다음 예제에서는 식에 올바르게 중첩 하는 방법을 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [하는 방법: 공용 구조체의 두 쿼리 정렬](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)합니다.  
   
 ## <a name="nested-queries-in-projection"></a>프로젝션의 중첩 쿼리  
  프로젝션 절의 중첩 쿼리는 서버의 Cartesian 제품 쿼리로 변환될 수 있습니다. SLQ Server를 비롯한 일부 백엔드 서버에서는 이로 인해 TempDB 테이블이 매우 커질 수 있으므로 서버 성능이 저하될 수 있습니다.  

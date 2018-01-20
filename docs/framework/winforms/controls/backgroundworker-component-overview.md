@@ -28,11 +28,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a2e49c9c3a8f2b133337ee3c153841a7daeff178
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96fc5e1929589321872ba30d8c3821b4fd47ca8b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 구성 요소 개요
 일반적으로 수행하는 작업 중에는 실행 시간이 오래 걸릴 수 있는 것들이 많습니다. 예를 들면 다음과 같습니다.  
@@ -71,5 +71,5 @@ ms.lasthandoff: 12/22/2017
  사용 하 여 대 한 자세한 내용은 <xref:System.ComponentModel.BackgroundWorker> 클래스를 참조 하십시오. [하는 방법: 백그라운드에서 작업 실행](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [빌드에 없음: Visual Basic의 다중 스레딩](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [빌드에 없음: Visual Basic의 다중 스레딩](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [방법: 배경 작업을 사용하는 양식 구현](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)

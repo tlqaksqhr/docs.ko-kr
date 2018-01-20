@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>방법: 게시자 정책 만들기
 어셈블리 공급 업체 응용 프로그램이 업그레이드 된 어셈블리와 함께 게시자 정책 파일을 포함 하 여 최신 버전의 어셈블리를 사용 해야 명시할 수 있습니다. 게시자 정책 파일이 어셈블리 리디렉션 및 코드 베이스 설정을 지정 하 고 응용 프로그램 구성 파일과 같은 형식을 사용 합니다. 게시자 정책 파일을 어셈블리로 컴파일되고 전역 어셈블리 캐시에 배치 됩니다.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  명령 프롬프트에서 다음 명령을 입력 합니다.  
   
-     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/platform:** *processorArchitecture*  
+     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      이 명령에서  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
     -   *publisherPolicyAssemblyFile* 인수는이 명령 결과인 게시자 정책 어셈블리의 이름입니다. 어셈블리 파일 이름 형식을 따라야 합니다.  
   
-         **정책입니다.** *majorNumber* **합니다.** *minorNumber* **합니다.** *mainAssemblyName* **.dll**  
+         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   *keyPairFile* 인수는 키 쌍을 포함 하는 파일의 이름입니다. 어셈블리와 동일한 키 쌍을 사용 하 여 게시자 정책 어셈블리에 서명 해야 합니다.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  명령 프롬프트에서 다음 명령을 입력 합니다.  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      다음 명령은 추가 `policy.1.0.myAssembly.dll` 전역 어셈블리 캐시에 있습니다.  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/22/2017
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [응용 프로그램 구성](../../../docs/framework/configure-apps/index.md)  
- [.NET Framework 앱 구성](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [.NET Framework 앱 구성](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [런타임 설정 스키마](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)  
  [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

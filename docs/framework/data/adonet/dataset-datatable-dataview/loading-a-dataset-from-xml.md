@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d0c98224b8b508fec5fe584388872757a9dfdf3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML에서 데이터 집합 로드
 ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부터 만들 수 있습니다. 또한, .NET Framework를 사용하면 XML로부터 로드할 정보와 <xref:System.Data.DataSet>의 스키마나 관계형 구조를 만드는 방법을 매우 융통성 있게 선택할 수 있습니다.  
   
- 채우는 한 <xref:System.Data.DataSet> XML에서 데이터를 사용 하 여는 **ReadXml** 의 메서드는 <xref:System.Data.DataSet> 개체입니다. **ReadXml** 메서드는 파일, 스트림, 읽습니다 또는 **XmlReader**, 소스 XML와 선택적 인수로 사용 **XmlReadMode** 인수입니다. (에 대 한 자세한 내용은 **XmlReader**, 참조 [NIB: XmlTextReader 사용 하 여 XML 데이터 읽기](http://msdn.microsoft.com/en-us/762c069b-b50c-41b8-936e-39eacfb0d540).) **ReadXml** 메서드를 XML 스트림 또는 문서와 부하의 내용을 읽습니다는 <xref:System.Data.DataSet> 데이터를 사용 합니다. 관계형 스키마 생성는 <xref:System.Data.DataSet> 에 따라는 **XmlReadMode** 관계형 스키마가 있는지 여부 및 지정 합니다.  
+ 채우는 한 <xref:System.Data.DataSet> XML에서 데이터를 사용 하 여는 **ReadXml** 의 메서드는 <xref:System.Data.DataSet> 개체입니다. **ReadXml** 메서드는 파일, 스트림, 읽습니다 또는 **XmlReader**, 소스 XML와 선택적 인수로 사용 **XmlReadMode** 인수입니다. (에 대 한 자세한 내용은 **XmlReader**, 참조 [NIB: XmlTextReader 사용 하 여 XML 데이터 읽기](http://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) **ReadXml** 메서드를 XML 스트림 또는 문서와 부하의 내용을 읽습니다는 <xref:System.Data.DataSet> 데이터를 사용 합니다. 관계형 스키마 생성는 <xref:System.Data.DataSet> 에 따라는 **XmlReadMode** 관계형 스키마가 있는지 여부 및 지정 합니다.  
   
  다음 표에서 설명에 대 한 옵션은 **XmlReadMode** 인수입니다.  
   

@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="pipeline-development"></a>파이프라인 개발
 추가 기능 파이프라인에는 서로 통신 하는 호스트 응용 프로그램 및 해당 추가 기능을 사용 해야 하는 파이프라인 세그먼트의 경로입니다.  
@@ -41,18 +41,18 @@ ms.lasthandoff: 12/22/2017
   
  개별 응용 프로그램 도메인에는 호스트와 추가 기능을 로드 하는 경우 추가 기능에 범위에서 호스트 응용 프로그램의 범위를 구분 하는 격리 경계를 해야 합니다. 계약은 호스트와 추가 기능 응용 프로그램 도메인에 로드 된 어셈블리에만입니다. 호스트와 추가 기능을 각 계약 메서드의 해당 보기에만 참조 하십시오. 계약에서 추상화 계층으로 구분 됩니다.  
   
- 파이프라인 세그먼트를 개발 하려면 디렉터리 구조에 포함 될 만들어야 합니다. 개발 요구 사항 및 범위 지침에 대 한 자세한 내용은 참조 [파이프라인 개발 요구 사항](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
+ 파이프라인 세그먼트를 개발 하려면 디렉터리 구조에 포함 될 만들어야 합니다. 개발 요구 사항 및 범위 지침에 대 한 자세한 내용은 참조 [파이프라인 개발 요구 사항](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
   
  다음 그림은 파이프라인 세그먼트를 구성 하는 형식을 나타냅니다. 그림에 표시 된 형식의 이름이 임의적 이지만 정보 저장소를 생성 하는 방법으로 검색할 수 있도록 호스트와 호스트를 제외 하 고 모든 형식 보기 특성이 추가 기능에 필요 합니다.  
   
  ![추가 &#45; 형식에 대 한 필수 특성이 있는 모델. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 추가 기능 파이프라인 형식  
   
- 다음 표에서 추가 기능을 활성화 하는 데 파이프라인 세그먼트에 설명 합니다. 이러한 세그먼트에 대 한 자세한 내용은 참조 [계약, 뷰 및 어댑터](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)합니다.  
+ 다음 표에서 추가 기능을 활성화 하는 데 파이프라인 세그먼트에 설명 합니다. 이러한 세그먼트에 대 한 자세한 내용은 참조 [계약, 뷰 및 어댑터](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)합니다.  
   
 |파이프라인 세그먼트|설명|  
 |----------------------|-----------------|  
-|Host|응용 프로그램 어셈블리의 추가 기능 인스턴스를 만듭니다.|  
+|호스트|응용 프로그램 어셈블리의 추가 기능 인스턴스를 만듭니다.|  
 |추가 기능의 호스트 뷰|호스트 응용 프로그램의 뷰를 개체 형식 및 추가 기능으로 통신 하는 데 사용 되는 메서드를 나타냅니다. [호스트] 보기는 추상 기본 클래스 또는 인터페이스입니다.|  
 |호스트 측 어댑터|계약에서 메서드를 변경 하는 하나 또는 그 이상의 클래스가 있는 어셈블리입니다.<br /><br /> 이 파이프라인 세그먼트를 사용 하 여 식별 되는 <xref:System.AddIn.Pipeline.HostAdapterAttribute> 특성입니다.<br /><br /> 다중 모듈 어셈블리가 지원 되지 않습니다.|  
 |계약|파생 된 인터페이스는 <xref:System.AddIn.Contract.IContract> 정의 하는 인터페이스 형식을 호스트와 해당 추가 기능에서 간에 통신 하기 위한 프로토콜입니다.<br /><br /> 이 파이프라인 세그먼트를 설정 하 여 식별 되는 <xref:System.AddIn.Pipeline.AddInContractAttribute> 특성입니다.|  
@@ -89,14 +89,14 @@ ms.lasthandoff: 12/22/2017
   
      계산기 추가 기능에 호스트에 대 한 더하기, 빼기, 곱하기 및 나누기 계산을 수행 하는 설명 합니다.  
   
--   [연습: 호스트 변경으로 이전 버전과 호환성을 사용 하도록 설정](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [연습: 호스트 변경으로 이전 버전과 호환성을 사용 하도록 설정](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      계산기 추가 기능을 향상 된 계산 기능 및 첫 번째는 계산기 추가 기능으로 호환성을 유지 하는 방법을 설명 합니다.  
   
--   [연습: 호스트와 추가 기능 간에 컬렉션 전달](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [연습: 호스트와 추가 기능 간에 컬렉션 전달](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      서 점 시나리오를 사용 하 여 파이프라인을 통해 데이터 컬렉션을 전달 하는 방법을 설명 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [파이프라인 시나리오 추가 기능을](http://msdn.microsoft.com/en-us/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [파이프라인 시나리오 추가 기능을](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [추가 기능 및 확장성](../../../docs/framework/add-ins/index.md)

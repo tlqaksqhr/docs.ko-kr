@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 데이터 서비스에서 BLOB(Binary Large Object) 데이터를 노출할 수 있습니다. 이 이진 데이터는 비디오 및 오디오 스트림, 이미지, 문서 파일 또는 다른 형식의 이진 미디어를 나타낼 수 있습니다. 데이터 모델의 엔터티에 이진 속성이 하나 이상 포함되어 있는 경우 데이터 서비스가 이 이진 데이터를 응답 피드의 항목 안에 base-64로 인코딩하여 반환합니다. 로드 하 고 이런이 방식으로 큰 이진 데이터를 직렬화 하는 작업 성능이 저하 될 수 있으므로 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 속한 엔터티와 독립적으로 이진 데이터를 검색 하기 위한 메커니즘을 정의 합니다. 이 작업은 엔터티의 이진 데이터를 하나 이상의 데이터 스트림으로 구분하여 수행됩니다.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
  자세한 내용은 참조 [스트리밍 메시지 전송](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) 및 [전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다.  
   
- 기본적으로 인터넷 정보 서비스(IIS)는 요청 크기를 4MB로 제한합니다. IIS에서 실행 하는 경우 스트림을 4MB 보다 큰를 수신 하 여 데이터 서비스를 사용 하려면 설정 해야는 `maxRequestLength` 특성에는 [) (httpRuntime Element (ASP.NET 설정 스키마)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) 에 `<system.web />` 구성 섹션으로 다음 예제에 나와 있습니다.  
+ 기본적으로 인터넷 정보 서비스(IIS)는 요청 크기를 4MB로 제한합니다. IIS에서 실행 하는 경우 스트림을 4MB 보다 큰를 수신 하 여 데이터 서비스를 사용 하려면 설정 해야는 `maxRequestLength` 특성에는 [) (httpRuntime Element (ASP.NET 설정 스키마)](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) 에 `<system.web />` 구성 섹션으로 다음 예제에 나와 있습니다.  
   
   
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 또는 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 메서드를 구현하는 경우 메서드 매개 변수로 제공되는 eTag 및 Content-Type 값을 사용해야 합니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 공급자 구현에서 eTag 또는 Content-Type 헤더를 설정하지 마세요.  
   
--   기본적으로 클라이언트는 청크된 HTTP Transfer-Encoding을 사용하여 큰 이진 스트림을 보냅니다. 때문에 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 개발 서버는 이러한 종류의 인코딩을 지원 하지 않습니다, 큰 이진 스트림을 받아들여야 하는 스트리밍 데이터 서비스를 호스팅하려면이 웹 서버를 사용할 수 없습니다. 대 한 자세한 내용은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 개발 서버 참조 [ASP.NET 웹 프로젝트에 대 한 Visual Studio의 웹 서버](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328)합니다.  
+-   기본적으로 클라이언트는 청크된 HTTP Transfer-Encoding을 사용하여 큰 이진 스트림을 보냅니다. 때문에 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 개발 서버는 이러한 종류의 인코딩을 지원 하지 않습니다, 큰 이진 스트림을 받아들여야 하는 스트리밍 데이터 서비스를 호스팅하려면이 웹 서버를 사용할 수 없습니다. 대 한 자세한 내용은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 개발 서버 참조 [ASP.NET 웹 프로젝트에 대 한 Visual Studio의 웹 서버](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328)합니다.  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>버전 관리 요구 사항  

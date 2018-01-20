@@ -15,17 +15,17 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: ecbbaac0023ca528967abe2cb60c3d790772fb2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cdd9b91ba7ff9b1e431f7d9107e72df084ba8af3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extending-security"></a>보안 확장
 새 클레임 형식 및 사용자 지정 토큰을 적용하기 위해 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]의 보안 인프라를 확장할 수 있습니다. 이 단원의 각 항목에서는 이를 수행하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [보안 아키텍처](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)  
+ [보안 아키텍처](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 시스템의 아키텍처에 대해 설명합니다.  
   
  [사용자 지정 자격 증명 및 자격 증명 유효성 검사](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  

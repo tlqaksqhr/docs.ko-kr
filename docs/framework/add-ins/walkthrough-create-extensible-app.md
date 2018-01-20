@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>연습: 확장 가능한 응용 프로그램 만들기
 이 연습에는 추가 기능에 대 한 간단한 계산기 기능을 수행 하는 파이프라인을 만드는 방법을 설명 합니다. 실제 시나리오; 보여 주지 않습니다. 대신, 파이프라인 및 방법을 추가 기능에서 서비스를 제공할 수는 호스트의 기본 기능을 보여 줍니다.  
@@ -52,11 +52,11 @@ ms.lasthandoff: 12/22/2017
   
 -   호스트 응용 프로그램을 실행 합니다.  
   
- 이 파이프라인만 serializable 형식 전달 (<xref:System.Double> 및 <xref:System.String>), 호스트와 추가 기능 사이입니다. 복잡 한 데이터 형식의 컬렉션을 전달 하는 방법을 보여 주는 예제를 보려면 [연습: 호스트 간에 컬렉션 전달 및 추가 기능](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)합니다.  
+ 이 파이프라인만 serializable 형식 전달 (<xref:System.Double> 및 <xref:System.String>), 호스트와 추가 기능 사이입니다. 복잡 한 데이터 형식의 컬렉션을 전달 하는 방법을 보여 주는 예제를 보려면 [연습: 호스트 간에 컬렉션 전달 및 추가 기능](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)합니다.  
   
  4 개의 산술 연산의 개체 모델을 정의 하는이 파이프라인에 대 한 계약: 추가, 빼기, 곱하기 및 나누기입니다. 예: 2 + 2를 계산 하는 수식으로 호스트를 추가 기능을 제공 하 고 추가 기능을 호스트에 결과 반환 합니다.  
   
- 버전 2는 계산기 추가 기능에 추가 계산 기능을 제공 하 고 버전 관리를 보여 줍니다. 에 설명 되어 [연습: 내용은 이전 버전과 호환성 활성화](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)합니다.  
+ 버전 2는 계산기 추가 기능에 추가 계산 기능을 제공 하 고 버전 관리를 보여 줍니다. 에 설명 되어 [연습: 내용은 이전 버전과 호환성 활성화](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)합니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 진행하려면 먼저 다음 작업을 수행해야 합니다.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 2.  솔루션 이름을 `CalculatorV1`합니다.  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>파이프라인 디렉터리 구조 만들기  
- 추가 기능 모델에는 지정 된 디렉터리 구조에 배치 될 파이프라인 세그먼트 어셈블리 필요 합니다. 파이프라인 구조에 대 한 자세한 내용은 참조 [파이프라인 개발 요구 사항](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
+ 추가 기능 모델에는 지정 된 디렉터리 구조에 배치 될 파이프라인 세그먼트 어셈블리 필요 합니다. 파이프라인 구조에 대 한 자세한 내용은 참조 [파이프라인 개발 요구 사항](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
   
 #### <a name="to-create-the-pipeline-directory-structure"></a>파이프라인 디렉터리 구조를 만들려면  
   
@@ -92,10 +92,10 @@ ms.lasthandoff: 12/22/2017
       HostSideAdapters  
     ```  
   
-     응용 프로그램 폴더;에 파이프라인 폴더 구조를 배치할 필요는 없습니다. 편의 위해서만 여기 수행 됩니다. 적절 한 단계에서 파이프라인 폴더 구조를 다른 위치에 있으면 코드를 변경 하는 방법을 설명 합니다. 디렉터리 요구 사항에 파이프라인의 설명을 참조 [파이프라인 개발 요구 사항](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
+     응용 프로그램 폴더;에 파이프라인 폴더 구조를 배치할 필요는 없습니다. 편의 위해서만 여기 수행 됩니다. 적절 한 단계에서 파이프라인 폴더 구조를 다른 위치에 있으면 코드를 변경 하는 방법을 설명 합니다. 디렉터리 요구 사항에 파이프라인의 설명을 참조 [파이프라인 개발 요구 사항](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
   
     > [!NOTE]
-    >  `CalcV2` 폴더는이 연습에서 사용 되지 않으므로 자리 표시자 [연습: 내용은 이전 버전과 호환성 활성화](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)합니다.  
+    >  `CalcV2` 폴더는이 연습에서 사용 되지 않으므로 자리 표시자 [연습: 내용은 이전 버전과 호환성 활성화](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)합니다.  
   
 ## <a name="creating-the-contract-and-views"></a>계약 및 뷰 만들기  
  이 파이프라인에 있는 계약 세그먼트 정의 `ICalc1Contract` 네 가지 메서드를 정의 하는 인터페이스: `add`, `subtract`, `multiply`, 및 `divide`합니다.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 12/22/2017
   
      System.AddIn.Contract.dll  
   
-     탐색기  
+     System.AddIn.dll  
   
 3.  **솔루션 탐색기**에 새로 추가 되는 기본 클래스 제외 **클래스 라이브러리** 프로젝트.  
   
@@ -166,7 +166,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **솔루션 탐색기**에 다음 어셈블리에 대 한 참조 추가 `Calc1AddInSideAdapter` 프로젝트:  
   
-     탐색기  
+     System.AddIn.dll  
   
      System.AddIn.Contract.dll  
   
@@ -204,7 +204,7 @@ ms.lasthandoff: 12/22/2017
   
  이 파이프라인에 추가 기능에 서비스를 제공 호스트와 형식 흐름 호스트에 추가 기능에서 합니다. 형식이 없습니다. 추가 기능에 대 한 호스트를 이동 하므로 뷰 계약으로 변환 하는 어댑터를 포함할 필요는 없습니다.  
   
- 수명 관리를 구현 하려면 사용을 <xref:System.AddIn.Pipeline.ContractHandle> 계약 수명 토큰을 연결할 개체입니다. 실행 되도록 수명 관리를 위해이 핸들에 대 한 참조를 유지 해야 합니다. 토큰이 적용 되 면 더 이상 사용 되 고 가비지 수집을 사용할 수 있도록 때 추가 기능 시스템 개체의 삭제할 수 있었기 때문에 없는 추가 프로그래밍이 필요 합니다. 자세한 내용은 [수명 관리](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)를 참조하세요.  
+ 수명 관리를 구현 하려면 사용을 <xref:System.AddIn.Pipeline.ContractHandle> 계약 수명 토큰을 연결할 개체입니다. 실행 되도록 수명 관리를 위해이 핸들에 대 한 참조를 유지 해야 합니다. 토큰이 적용 되 면 더 이상 사용 되 고 가비지 수집을 사용할 수 있도록 때 추가 기능 시스템 개체의 삭제할 수 있었기 때문에 없는 추가 프로그래밍이 필요 합니다. 자세한 내용은 참조 [수명 관리](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)합니다.  
   
 #### <a name="to-create-the-host-side-adapter"></a>호스트 측 어댑터를 만들려면  
   
@@ -212,7 +212,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **솔루션 탐색기**에 다음 어셈블리에 대 한 참조 추가 `Calc1HostSideAdapter` 프로젝트:  
   
-     탐색기  
+     System.AddIn.dll  
   
      System.AddIn.Contract.dll  
   
@@ -339,7 +339,7 @@ ms.lasthandoff: 12/22/2017
     |Calc1HVA|MyApp|  
   
     > [!NOTE]
-    >  응용 프로그램 폴더 이외의 위치에 파이프라인 폴더 구조를 결정 한 경우 그에 따라 테이블에 표시 된 경로 수정 해야 합니다. 디렉터리 요구 사항에 파이프라인의 설명을 참조 [파이프라인 개발 요구 사항](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
+    >  응용 프로그램 폴더 이외의 위치에 파이프라인 폴더 구조를 결정 한 경우 그에 따라 테이블에 표시 된 경로 수정 해야 합니다. 디렉터리 요구 사항에 파이프라인의 설명을 참조 [파이프라인 개발 요구 사항](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
   
 2.  Visual Studio 솔루션을 빌드합니다.  
   
@@ -348,7 +348,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  변경 되지 않은 경우 **로컬 복사** 를 **False** 에 대 한는 `Calc1AddInView` 프로젝트 참조에는 `AddInCalcV1` 프로젝트 로더 컨텍스트 문제에서 하지 것입니다 추가 기능에 있는 것입니다.  
   
-     파이프라인에 배포 하는 방법에 대 한 정보를 참조 하십시오. [파이프라인 개발 요구 사항](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
+     파이프라인에 배포 하는 방법에 대 한 정보를 참조 하십시오. [파이프라인 개발 요구 사항](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)합니다.  
   
 ## <a name="running-the-host-application"></a>호스트 응용 프로그램 실행  
  이제 호스트를 실행 하 고 추가 기능을 상호 작용할 준비가 되었습니다.  
@@ -364,8 +364,8 @@ ms.lasthandoff: 12/22/2017
 4.  형식 **종료** 누릅니다는 **Enter** 키를 응용 프로그램을 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [연습: 호스트 변경으로 이전 버전과 호환성을 사용 하도록 설정](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [연습: 호스트와 추가 기능 간에 컬렉션 전달](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [파이프라인 개발 요구 사항](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [계약, 뷰 및 어댑터](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [연습: 호스트 변경으로 이전 버전과 호환성을 사용 하도록 설정](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [연습: 호스트와 추가 기능 간에 컬렉션 전달](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+ [파이프라인 개발 요구 사항](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+ [계약, 뷰 및 어댑터](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [파이프라인 개발](../../../docs/framework/add-ins/pipeline-development.md)

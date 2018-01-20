@@ -17,11 +17,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ae0b692c99f6682c6854292c230490637ad45727
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71b2e95076edbda3a67a84c9185d8b689c158e12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="enabling-jit-attach-debugging"></a>JIT 연결 디버깅 설정
 오류가 발생한 경우 JIT 연결 디버깅은 디버거를 프로세스에 연결하는 방법을 설명하는 데 사용되는 구문이고, 오류가 발생하지 않은 경우 특정 메서드 또는 함수에 의해 트리거될 수 있습니다.  
@@ -47,4 +47,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>참고 항목  
  [디버깅, 추적 및 프로파일링](../../../docs/framework/debug-trace-profile/index.md)  
  [쉽게 디버깅할 수 있도록 이미지 만들기](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- [프로파일링 설정](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [프로파일링 설정](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

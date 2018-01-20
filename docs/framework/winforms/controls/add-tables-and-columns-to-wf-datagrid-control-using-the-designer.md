@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 48471427baccfa9fb8e7c3aedbb9576ab0d34243
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc310303c7edb968b43f4d529782979024e8e73
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가
 > [!NOTE]
@@ -30,10 +30,10 @@ ms.lasthandoff: 12/22/2017
   
  Windows Forms에서 데이터를 표시할 수 있습니다 <xref:System.Windows.Forms.DataGrid> 컨트롤에 테이블과 열을 만들어서 <xref:System.Windows.Forms.DataGridTableStyle> 개체에 추가 하는 <xref:System.Windows.Forms.GridTableStylesCollection> 통해 액세스할 수 있는 개체는 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성입니다. 에 지정 된 모든 데이터 테이블의 내용을 표시 하는 각 테이블 스타일의 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 의 속성은 <xref:System.Windows.Forms.DataGridTableStyle>합니다. 기본적으로 테이블 스타일 열 스타일을 지정 하지 않으면 해당 데이터 테이블 안의 모든 열 표시 됩니다. 추가 하 여 표시할 테이블에서 열을 제한할 수 있습니다 <xref:System.Windows.Forms.DataGridColumnStyle> 개체를 <xref:System.Windows.Forms.GridColumnStylesCollection>를 통해 액세스할는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 각 속성 <xref:System.Windows.Forms.DataGridTableStyle>합니다.  
   
- 다음 절차를 필요는 **Windows 응용 프로그램** 포함 하는 폼을 사용 하 여 프로젝트는 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 이러한 프로젝트를 설정 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [하는 방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다. 기본적으로 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> 내에 **도구 상자**합니다. 추가 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 도구 상자에 항목 추가](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0)합니다.  
+ 다음 절차를 필요는 **Windows 응용 프로그램** 포함 하는 폼을 사용 하 여 프로젝트는 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 이러한 프로젝트를 설정 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [하는 방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다. 기본적으로 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> 내에 **도구 상자**합니다. 추가 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 도구 상자에 항목 추가](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>DataGrid 컨트롤 디자이너에 테이블을 추가 하려면  
   

@@ -14,16 +14,16 @@ ms.assetid: 9c042880-aa16-432e-9ccb-cd00abda9ae3
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c799794b319843b0239ce9589e0c556c603c8617
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9def5da754d9075a8b498ac80e624caae5c97b96
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>방법: Visual Basic에서 StringBuilder를 사용하여 문자열 만들기
 사용 하 여 여러 개의 짧은 문자열에서 긴 문자열을 구성 하는이 예제는 <xref:System.Text.StringBuilder> 클래스입니다. <xref:System.Text.StringBuilder> 클래스 보다 더 효율적입니다.는 `&=` 많은 문자열을 연결 하기 위한 연산자입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 인스턴스는 <xref:System.Text.StringBuilder> 클래스, 1, 000 문자열 해당 인스턴스에 추가 하 고 다음 문자열 표현을 반환 합니다.  
   
  [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-strings-using-a-stringbuilder_1.vb)]  
@@ -34,4 +34,4 @@ ms.lasthandoff: 11/21/2017
  [문자열](../../../../visual-basic/programming-guide/language-features/strings/index.md)  
  [새 문자열 만들기](../../../../standard/base-types/creating-new.md)  
  [문자열 조작](../../../../standard/base-types/manipulating-strings.md)  
- [문자열 샘플](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)
+ [문자열 샘플](http://msdn.microsoft.com/library/be9e82a3-dc95-4aaa-9396-61b66e467e02)

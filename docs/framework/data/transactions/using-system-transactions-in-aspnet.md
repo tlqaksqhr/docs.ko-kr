@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c94cd0a6cdddc4b49a59d6420d2ec28864285aa8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>ASP.NET에서 System.Transactions 사용
 이 항목에서는 <xref:System.Transactions> 응용 프로그램 내부에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 를 성공적으로 사용하는 방법에 대해 설명합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 </PermissionSet>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 은 [securityPolicy 요소(ASP.NET 설정 스키마)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)이 부여되지 않은 경우 응용 프로그램 도메인 내에서만 트랜잭션을 사용할 수 있습니다(이 경우 보호되는 리소스는 시스템 메모리뿐임).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 보안 정책 참조 [securityPolicy 요소 (ASP.NET 설정 스키마)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)합니다.  
   
 ## <a name="dynamic-compilation"></a>동적 컴파일  
  액세스 시 동적으로 컴파일되는 <xref:System.Transactions> 응용 프로그램에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 를 가져오고 사용하려면 <xref:System.Transactions> 어셈블리에 대한 참조를 구성 파일에 넣어야 합니다. 특히 기본 루트 **Web.config**/**compilation** / **assemblies** 섹션 아래에 참조를 추가해야 합니다. 다음은 이에 대한 예입니다.  
@@ -67,9 +67,9 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [compilation 요소의 assemblies 요소에 대한 add 요소(ASP.NET 설정 스키마)](http://msdn.microsoft.com/en-us/602197e8-108d-4249-b752-ba2a318f75e4)이 부여되지 않은 경우 응용 프로그램 도메인 내에서만 트랜잭션을 사용할 수 있습니다(이 경우 보호되는 리소스는 시스템 메모리뿐임).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][요소 (ASP.NET 설정 스키마) 컴파일에 대 한 어셈블리에 대 한 추가](http://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ASP.NET 신뢰 수준과 정책 파일](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [securityPolicy 요소 (ASP.NET 설정 스키마)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
+ [securityPolicy 요소 (ASP.NET 설정 스키마)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
  [트랜잭션 관리 에스컬레이션](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

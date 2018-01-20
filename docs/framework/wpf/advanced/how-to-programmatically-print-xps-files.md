@@ -20,16 +20,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 402568a78ccb2f56c6adb108536edfb121440642
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58e617fb04ecaba45ed655dc650459e89453dd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>방법: 프로그래밍 방식으로 XPS 파일 인쇄
 한 오버 로드를 사용할 수 있습니다는 <xref:System.Printing.PrintQueue.AddJob%2A> 인쇄 하려면 메서드 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 는 여는 파일을 <xref:System.Windows.Controls.PrintDialog> 또는 원칙적으로 모든 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 전혀 합니다.  
   
- 인쇄할 수 있습니다 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 다를 사용 하 여 파일 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 및 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 의 메서드는 <xref:System.Windows.Xps.XpsDocumentWriter>합니다. 이에 대한 자세한 내용은 [XPS 문서를 인쇄](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c)합니다.  
+ 인쇄할 수 있습니다 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 다를 사용 하 여 파일 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 및 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 의 메서드는 <xref:System.Windows.Xps.XpsDocumentWriter>합니다. 이에 대한 자세한 내용은 [XPS 문서를 인쇄](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c)합니다.  
   
  다른 방법으로 인쇄 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 사용 하는 것은 <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> 또는 <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> 의 메서드는 <xref:System.Windows.Controls.PrintDialog> 제어 합니다. [인쇄 호출 대화 상자](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)를 참조하세요.  
   
@@ -75,8 +75,8 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](http://www.microsoft.com/xps)  
- [XPS 문서를 인쇄합니다.](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
- [관리 되는 관리 되지 않는 스레딩](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)  
+ [XPS 문서를 인쇄합니다.](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
+ [관리 되는 관리 되지 않는 스레딩](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
  [isXPS.exe(isXPS 규칙 도구)](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)  
  [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [인쇄 개요](../../../../docs/framework/wpf/advanced/printing-overview.md)

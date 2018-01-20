@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 03ebb5a8193d3376d40fa830f13ab9324846ba2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d25f561444cd672e8842711025f4299c375d6bb4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>서버 쪽 UI 자동화 공급자 구현
 > [!NOTE]
@@ -187,5 +187,5 @@ ms.lasthandoff: 12/22/2017
  [UI 자동화 공급자에서 이벤트 발생](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
  [UI 자동화 조각 공급자에서 탐색 사용](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
  [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [단순 공급자 샘플](http://msdn.microsoft.com/en-us/c10a6255-e8dc-494b-a051-15111b47984a)  
- [조각 공급자 샘플](http://msdn.microsoft.com/en-us/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+ [단순 공급자 샘플](http://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
+ [조각 공급자 샘플](http://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

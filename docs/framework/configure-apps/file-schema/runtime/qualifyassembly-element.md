@@ -21,19 +21,19 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7da2e1ac5c16f6e481c974794efceb12f102b1a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7dd24ae9e5659deff7ddbe4183c70d5b442542cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt; 요소
 부분 이름이 사용될 때 동적으로 로드되어야 하는 어셈블리의 전체 이름을 지정합니다.  
   
  \<configuration>  
-\<런타임 >  
-\<assemblyBinding >  
-\<qualifyAssembly >  
+\<runtime>  
+\<assemblyBinding>  
+\<qualifyAssembly>  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>참고 항목  
  [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [런타임에서 어셈블리를 찾는 방법](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB: 부분 어셈블리 참조](http://msdn.microsoft.com/en-us/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+ [NIB: 부분 어셈블리 참조](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

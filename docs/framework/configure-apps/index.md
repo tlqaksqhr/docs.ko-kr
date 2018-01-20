@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 32607c853506ae7339057893c10fd9931e5823be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
 .NET Framework에서 개발자와 관리자는 구성 파일을 통해 응용 프로그램이 실행되는 방식을 유연하게 제어할 수 있습니다. 구성 파일은 필요에 따라 변경할 수 있는 XML 파일입니다. 관리자는 응용 프로그램에서 액세스할 수 있는 보호되는 리소스와 응용 프로그램에서 사용할 어셈블리 버전 그리고 원격 응용 프로그램과 개체의 위치를 제어할 수 있습니다. 개발자는 설정을 구성 파일에 저장할 수 있으므로, 설정이 변경될 때마다 매번 응용 프로그램을 다시 컴파일할 필요가 없습니다. 이 단원에서는 응용 프로그램 구성과 유용성에 대해 설명합니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="machine-configuration-files"></a>컴퓨터 구성 파일  
- 컴퓨터 구성 파일인 Machine.config 에는 전체 컴퓨터에 적용되는 설정이 포함되어 있습니다. 이 파일은 %*런타임 설치 경로*%\Config 디렉터리에 있습니다. Machine.config는 컴퓨터 전반의 어셈블리 바인딩, 기본 제공 [원격 채널](http://msdn.microsoft.com/en-us/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18) 및 ASP.NET에 대한 구성 설정을 포함합니다.  
+ 컴퓨터 구성 파일인 Machine.config 에는 전체 컴퓨터에 적용되는 설정이 포함되어 있습니다. 이 파일은 %*런타임 설치 경로*%\Config 디렉터리에 있습니다. Machine.config는 컴퓨터 전반의 어셈블리 바인딩, 기본 제공 [원격 채널](http://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18) 및 ASP.NET에 대한 구성 설정을 포함합니다.  
   
  구성 시스템은 먼저 컴퓨터 구성 파일에서 [**\<appSettings>** 요소](~/docs/framework/configure-apps/file-schema/appsettings/index.md)를 찾아본 후 개발자가 정의한 다른 구성 섹션에서 찾아봅니다. 그런 다음 응용 프로그램 구성 파일에서 찾아봅니다. 컴퓨터 구성 파일을 지속적으로 관리하려면 이러한 설정을 응용 프로그램 구성 파일에 넣는 것이 가장 좋습니다. 그러나 컴퓨터 구성 파일에 설정을 넣으면 시스템을 유지 관리하기가 더 쉬울 수 있습니다. 예를 들어, 클라이언트 및 서버 응용 프로그램이 모두 사용하는 타사 제품의 구성 요소를 가지고 있을 경우에는 이 구성 요소의 설정을 한 곳에 두는 것이 더 용이합니다. 이 때 설정을 넣을 적합한 위치는 컴퓨터 구성 파일이며, 이럴 경우 동일한 설정을 서로 다른 두 파일에 둘 필요가 없습니다.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET에서 호스팅되는 응용 프로그램.  
   
-     ASP.NET 구성 파일에 대한 자세한 내용은 [ASP.NET 구성 설정](http://msdn.microsoft.com/en-us/116608f3-c03d-4413-9fc7-978703e18b0f)을 참조하세요.  
+     ASP.NET 구성 파일에 대한 자세한 내용은 [ASP.NET 구성 설정](http://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f)을 참조하세요.  
   
 -   Internet Explorer에서 호스팅되는 응용 프로그램.  
   
@@ -133,9 +133,9 @@ ms.lasthandoff: 12/22/2017
  [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)  
  [어셈블리 위치 지정](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [구성 파일을 사용 하 여 원격 개체를 등록 하는 중](http://msdn.microsoft.com/en-us/bc503ee1-c811-4f82-9525-470343326adc)  
+ [구성 파일을 사용 하 여 원격 개체를 등록 하는 중](http://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
  [ASP.NET 웹 사이트 관리](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB: 보안 정책 관리](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
+ [NIB: 보안 정책 관리](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
  [Caspol.exe(코드 액세스 보안 정책 도구)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
  [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [원격 개체](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)
+ [원격 개체](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)

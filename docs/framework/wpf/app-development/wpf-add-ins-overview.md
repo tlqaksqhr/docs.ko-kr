@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 추가 기능 개요
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에는 개발자가 추가 기능 확장성을 지원하는 응용 프로그램을 만드는 데 사용할 수 있는 추가 기능 모델이 포함되어 있습니다. 이 추가 기능 모델을 사용하면 응용 프로그램 기능과 통합하고 이 기능을 확장하는 추가 기능을 만들 수 있습니다. 일부 시나리오에서는 응용 프로그램에서 추가 기능을 통해 제공되는 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]도 표시해야 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]가 이러한 시나리오를 가능하게 하는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 추가 기능 모델을 보강하는 방법, 그 기반이 되는 아키텍처, 해당 이점 및 한계를 보여줍니다.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   에 <xref:System.SerializableAttribute> 특성이 적용 합니다.  
   
 > [!NOTE]
->  원격으로 사용 가능한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체 만들기에 대한 자세한 내용은 [개체를 원격으로 사용 가능하도록 설정](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)을 참조하세요.  
+>  원격으로 사용 가능한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체 만들기에 대한 자세한 내용은 [개체를 원격으로 사용 가능하도록 설정](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)을 참조하세요.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 형식은 원격으로 사용할 수 없습니다. 문제점을 해결하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 추가 기능 모델을 확장하여 추가 기능을 통해 만들어진 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 호스트 응용 프로그램에서 표시할 수 있게 합니다. 이 지원은가 제공 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 두 유형을 통해:는 <xref:System.AddIn.Contract.INativeHandleContract> 인터페이스 및 두 개의 정적 메서드를 구현한는 <xref:System.AddIn.Pipeline.FrameworkElementAdapters> 클래스: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 및 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>합니다. 상위 수준에서는 대략적으로 이러한 형식과 메서드가 다음과 같은 방식으로 사용됩니다.  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [추가 기능 및 확장성](../../../../docs/framework/add-ins/index.md)  
  [응용 프로그램 도메인](../../../../docs/framework/app-domains/application-domains.md)  
- [.NET framework Remoting 개요](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [원격 가능 개체 만들기](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [.NET framework Remoting 개요](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [원격 가능 개체 만들기](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [방법 항목](../../../../docs/framework/wpf/app-development/how-to-topics.md)

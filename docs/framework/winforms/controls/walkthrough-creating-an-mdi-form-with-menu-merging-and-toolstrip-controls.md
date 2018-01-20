@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b170c3e3311dbbfb070a66107bd4f22407647bae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3e0538151c19eb47f8a51330b7f2c06818d1e73f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 폼 만들기
 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스는 MDI(다중 문서 인터페이스) 응용 프로그램을 지원하고 <xref:System.Windows.Forms.MenuStrip> 컨트롤은 메뉴 병합을 지원합니다. MDI 폼은 <xref:System.Windows.Forms.ToolStrip> 컨트롤일 수도 있습니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
  단일 목록으로이 항목의 코드를 복사 하려면 참조 [하는 방법: 메뉴 병합 및 ToolStrip 컨트롤 MDI 폼 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  호출 하는 Windows 응용 프로그램 프로젝트 만들기 **MdiForm**합니다.  
   
-     자세한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)을 참조하세요.  
+     자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
   
 2.  Windows Forms 디자이너에서 폼을 선택 합니다.  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  라는 새 폼을 추가 `ChildForm` 프로젝트에 있습니다.  
   
-     자세한 내용은 참조 [하는 방법: Windows Forms 프로젝트에 추가](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)합니다.  
+     자세한 내용은 참조 [하는 방법: Windows Forms 프로젝트에 추가](http://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1)합니다.  
   
 2.  **도구 상자**를 끌어 한 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 자식 폼입니다.  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  에 **항목 컬렉션 편집기** 대화 상자에서 새 추가 <xref:System.Windows.Forms.ToolStripMenuItem> 라는 **ChildMenuItem** 하위 메뉴에 있습니다.  
   
-     자세한 내용은 참조 [ToolStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)합니다.  
+     자세한 내용은 참조 [ToolStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)합니다.  
   
 ## <a name="testing-the-form"></a>테스트 폼  
   

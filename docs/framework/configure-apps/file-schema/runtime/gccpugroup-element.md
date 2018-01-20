@@ -17,18 +17,18 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 510896c6993008f30e7eacf2628ae4cceadea7e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dcead28d7bf66e0626a0108015add4f22c5fa476
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; 요소
 가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.  
   
  \<configuration>  
-\<런타임 >  
-\<GCCpuGroup >  
+\<runtime>  
+\<GCCpuGroup>  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -84,5 +84,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>참고 항목  
  [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [방법: 동시 가비지 수집을 사용 하지 않도록 설정](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [방법: 동시 가비지 수집을 사용 하지 않도록 설정](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [워크스테이션 및 서버 가비지 수집](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

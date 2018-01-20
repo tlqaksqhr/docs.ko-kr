@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 62e86f2adfbe8f8aac000d653e955555c7def750
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc81fa247f21448a4ccbd62baccb72c0ec14bb31
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-position-a-tooltip"></a>방법: 도구 설명 배치
 이 예제에서는 화면에 도구 설명의 위치를 지정 하는 방법을 보여 줍니다.  
@@ -74,4 +74,4 @@ Placement, PlacementRectangle, 및 오프셋 속성을 사용 하 여 ToolTip �
  <xref:System.Windows.Controls.ToolTipService>  
  [방법 항목](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
  [도구 설명 개요](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
- [ContextMenuService 및 ToolTipService 사용](http://msdn.microsoft.com/en-us/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
+ [ContextMenuService 및 ToolTipService 사용](http://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)

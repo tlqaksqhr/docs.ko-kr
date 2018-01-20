@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c6b31aacfb95452cc86b5359cbec4946e85eac4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ad64588727584a9b3de0a95e9bad252a3fb0581
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Forms 및 관리되지 않는 응용 프로그램 개요
 Windows Forms 응용 프로그램과 컨트롤은 관리되지 않는 응용 프로그램과 상호 운용될 수 있지만 몇 가지 주의할 사항이 있습니다. 다음 섹션에서는 Windows Forms 응용 프로그램과 컨트롤이 지원하는 시나리오 및 구성과 지원하지 않는 시나리오 및 구성을 설명합니다.  
@@ -70,7 +70,7 @@ Windows Forms 응용 프로그램과 컨트롤은 관리되지 않는 응용 프
  [Windows Forms 및 관리되지 않는 응용 프로그램](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
  [.NET Framework 응용 프로그램의 COM 상호 운용성](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [COM 상호 운용성 샘플](http://msdn.microsoft.com/en-us/09c38567-6380-4d70-848a-e896a4ca05f4)  
+ [COM 상호 운용성 샘플](http://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)  
  [Aximp.exe(Windows Forms ActiveX 컨트롤 가져오기)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
  [.NET Framework 구성 요소를 COM에 노출](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [COM에서 사용할 어셈블리의 패키징](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  

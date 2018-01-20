@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 61e1dbdcf919ee6aa2150e6a57cb88a8aa859efe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3d34c60a5c2cae5abaa6763b935f6d11a29a39e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework 구성 요소를 COM에 노출
 .NET 형식을 작성하고 비관리 코드에서 해당 형식을 사용하는 것은 개발자들에게 독특한 활동입니다. 이 섹션에서는 COM 클라이언트와 통합되는 관리 코드를 작성하기 위한 몇 가지 팁을 설명합니다.  
@@ -51,11 +51,11 @@ ms.lasthandoff: 12/22/2017
   
      COM 개발자는 현재 사용하는 동일한 도구와 기술을 통해 어셈블리에서 형식을 참조할 수 있습니다.  
   
-3.  [.NET 개체를 호출합니다](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33).  
+3.  [.NET 개체를 호출합니다](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33).  
   
      COM 개발자는 관리되는 형식에서 메서드를 호출하는 동일한 방법으로 .NET 개체에서 메서드를 호출할 수 있습니다. 예를 들어 COM **CoCreateInstance** API는 .NET 개체를 활성화합니다.  
   
-4.  [COM 액세스를 위해 응용 프로그램을 배포합니다](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce).  
+4.  [COM 액세스를 위해 응용 프로그램을 배포합니다](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce).  
   
      강력한 이름의 어셈블리는 전역 어셈블리 캐시에 설치할 수 있고 게시자의 시그니처가 필요합니다. 강력한 이름이 아닌 어셈블리는 클라이언트의 응용 프로그램 디렉터리에 설치해야 합니다.  
   

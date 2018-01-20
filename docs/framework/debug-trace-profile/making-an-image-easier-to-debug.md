@@ -18,11 +18,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e05af51010e92586a9f1de423f6304ea8db78168
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="making-an-image-easier-to-debug"></a>쉽게 디버깅할 수 있도록 이미지 만들기
 비관리 코드를 컴파일할 때 IDE 스위치 또는 명령줄 옵션을 설정하여 디버깅할 실행 가능 이미지를 구성할 수 있습니다. 예를 들어 Visual C++에서 /**Zi** 명령줄 옵션을 사용하여 디버그 기호 파일(확장 확장자는 .pdb)을 생성하도록 요청할 수 있습니다. 마찬가지로 /**Od** 명령줄 옵션을 사용하면 최적화를 사용하지 않게 설정하도록 컴파일러에 지시합니다. 결과적으로 코드가 더 느리게 실행되지만, 디버그하기가 쉬워지므로 이 옵션은 필수여야 합니다.  
@@ -67,4 +67,4 @@ AllowOptimize=0
 ## <a name="see-also"></a>참고 항목  
  [디버깅, 추적 및 프로파일링](../../../docs/framework/debug-trace-profile/index.md)  
  [JIT 연결 디버깅 설정](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- [프로파일링 설정](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [프로파일링 설정](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

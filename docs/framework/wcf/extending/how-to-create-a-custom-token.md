@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3b423158cc3c38e92897d0dc5e48c22cf28396ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0aeed7e1beac1a290aebec46a356952ddf994ed7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>방법: 사용자 지정 토큰 만들기
 이 항목에서는 <xref:System.IdentityModel.Tokens.SecurityToken> 클래스를 사용하여 사용자 지정 보안 토큰을 만들고 사용자 지정 보안 토큰 공급자 및 인증자를 사용하여 통합하는 방법에 대해 설명합니다. 전체 코드 예제에 대 한 참조는 [사용자 지정 토큰](../../../../docs/framework/wcf/samples/custom-token.md) 샘플.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  보안 토큰을 나타내는 클래스에 대한 자세한 내용은 <xref:System.IdentityModel.Tokens> 네임스페이스를 참조하십시오.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]자격 증명, 보안 토큰 관리자 및 공급자 및 인증자 클래스 참조 [보안 아키텍처](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]자격 증명, 보안 토큰 관리자 및 공급자 및 인증자 클래스 참조 [보안 아키텍처](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)합니다.  
   
 ## <a name="procedures"></a>절차  
  클라이언트 응용 프로그램에 보안 인프라에 대한 신용 카드 정보를 지정할 수 있는 방법이 제공되어야 합니다. 이 정보는 사용자 지정 클라이언트 자격 증명 클래스를 통해 응용 프로그램에서 사용할 수 있습니다. 첫 번째 단계에서는 사용자 지정 클라이언트 자격 증명에 대한 신용 카드 정보를 나타내는 클래스를 만듭니다.  
@@ -176,4 +176,4 @@ ms.lasthandoff: 12/22/2017
  [연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [보안 아키텍처](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [보안 아키텍처](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="drawing-formatted-text"></a>서식 있는 텍스트 그리기
 이 항목에서는의 기능에 대 한 개요는 <xref:System.Windows.Media.FormattedText> 개체입니다. 이 개체는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서 텍스트를 그리기 위한 하위 수준의 컨트롤을 제공합니다.  
@@ -96,7 +96,7 @@ FormattedText 메서드를 사용하여 표시된 텍스트
  ![텍스트의 pathgeometry를 따르는 구](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 텍스트의 PathGeometry를 따르는 구  
   
- 자세한 내용은 [방법: 텍스트의 PathGeometry 애니메이션 만들기](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)를 참조하세요.  
+ 자세한 내용은 [방법: 텍스트의 PathGeometry 애니메이션 만들기](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)를 참조하세요.  
   
  으로 변환 된 후 서식 있는 텍스트에 대 한 다양 하 게 활용할 수 있습니다는 <xref:System.Windows.Media.PathGeometry> 개체입니다. 예를 들어 내부에 표시되도록 비디오를 클리핑할 수 있습니다.  
   
@@ -139,4 +139,4 @@ FormattedText 메서드를 사용하여 표시된 텍스트
  [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [WPF의 입력 체계](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [윤곽선이 있는 텍스트 만들기](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [방법: 텍스트의 PathGeometry 애니메이션 만들기](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)
+ [방법: 텍스트의 PathGeometry 애니메이션 만들기](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms에서 지원하는 데이터 소스
 일반적으로 데이터 바인딩을 사용 되었습니다 응용 프로그램 내에서 데이터베이스에 저장 된 데이터를 활용 하려면. Windows Forms 데이터 바인딩, 최소한의 특정 요구를 충족으로 배열 및 컬렉션 등의 다른 구조에 있는 데이터와 데이터베이스에서 데이터를 액세스할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
  Windows Forms 공용 속성에 데이터 바인딩 컨트롤 속성을 사용 하 여 개체의 인스턴스에 대해 지원 된 <xref:System.Windows.Forms.Binding> 유형입니다. 또한 Windows Forms에서는 바인딩 목록 기반 컨트롤을와 같은 한 <xref:System.Windows.Forms.ListControl> 인스턴스에 개체에는 <xref:System.Windows.Forms.BindingSource> 사용 됩니다.  
   
  배열 또는 컬렉션  
- 을 데이터 원본으로 작동 하려면 목록을 구현 해야는 <xref:System.Collections.IList> 하나, 인터페이스 예의 인스턴스가 있는 배열을 것은 <xref:System.Array> 클래스입니다. 배열에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 한 배열의 개체 만들기 (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3)합니다.  
+ 을 데이터 원본으로 작동 하려면 목록을 구현 해야는 <xref:System.Collections.IList> 하나, 인터페이스 예의 인스턴스가 있는 배열을 것은 <xref:System.Array> 클래스입니다. 배열에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 한 배열의 개체 만들기 (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)합니다.  
   
  일반적으로 사용 해야 <xref:System.ComponentModel.BindingList%601> 데이터 바인딩에 대 한 개체의 목록을 만들 때. <xref:System.ComponentModel.BindingList%601>제네릭 버전의는 <xref:System.ComponentModel.IBindingList> 인터페이스입니다. <xref:System.ComponentModel.IBindingList> 확장 인터페이스는 <xref:System.Collections.IList> 속성, 메서드 및 양방향 데이터 바인딩을에 필요한 이벤트를 추가 하 여 인터페이스입니다.  
   

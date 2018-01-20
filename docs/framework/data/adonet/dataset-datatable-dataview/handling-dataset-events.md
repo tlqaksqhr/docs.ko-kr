@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6c87e805bd710b49ce805af8223cddb5c7036c50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 820d93529fc12f3eeacd730cc66ec85ffd560ff9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="handling-dataset-events"></a>데이터 집합 이벤트 처리
 <xref:System.Data.DataSet> 개체는 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>및 <xref:System.Data.DataSet.MergeFailed>의 세 가지 이벤트를 제공합니다.  
@@ -62,7 +62,7 @@ private static void DataSetMergeFailed(
  `DataSet` 은 <xref:System.ComponentModel.MarshalByValueComponent> 메서드와 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 이벤트를 모두 노출하는 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> 클래스에서 파생됩니다. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> 이벤트 구성 요소에서 삭제 된 이벤트를 수신할 이벤트 처리기를 추가 합니다. 사용할 수는 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> 의 이벤트는 `DataSet` 실행 하려는 경우 때 코드는 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 메서드를 호출 합니다. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>사용 하는 리소스를 해제는 <xref:System.ComponentModel.MarshalByValueComponent>합니다.  
   
 > [!NOTE]
->  `DataSet` 및 `DataTable` 개체에서 상속 <xref:System.ComponentModel.MarshalByValueComponent> 및 지원에서 <xref:System.Runtime.Serialization.ISerializable> 원격 제어를 위한 인터페이스입니다. 이 두 개체는 원격으로 연결할 수 있는 유일한 ADO.NET 개체입니다. 자세한 내용은 [Remote Objects](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)을 참조하세요.  
+>  `DataSet` 및 `DataTable` 개체에서 상속 <xref:System.ComponentModel.MarshalByValueComponent> 및 지원에서 <xref:System.Runtime.Serialization.ISerializable> 원격 제어를 위한 인터페이스입니다. 이 두 개체는 원격으로 연결할 수 있는 유일한 ADO.NET 개체입니다. 자세한 내용은 참조 [원격 개체](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)합니다.  
   
  작업할 때 사용할 수 있는 다른 이벤트에 대 한 내용은 `DataSet`, 참조 [DataTable 이벤트 처리](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) 및 [DataAdapter 이벤트 처리](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)합니다.  
   

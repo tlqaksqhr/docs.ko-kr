@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0db7b9677b5c8c415b6d0b3f49bd149c06843a33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030183e77a141036416a3bcb8a4c4018df0a7e65
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>연습: ElementHost 컨트롤을 사용하여 속성 매핑
 이 연습에서는 사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 매핑할 속성 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 해당 속성에 호스팅 속성 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소입니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
-1.  만들기는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 라는 응용 프로그램 프로젝트 `PropertyMappingWithElementHost`합니다. 자세한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)을 참조하세요.  
+1.  만들기는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 라는 응용 프로그램 프로젝트 `PropertyMappingWithElementHost`합니다. 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
   
 2.  솔루션 탐색기에서 다음에 대 한 참조를 추가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리입니다.  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Windows Forms 디자이너에서 `Form1`을 엽니다. 에 대 한 이벤트 처리기를 추가 하려면 폼을 두 번 클릭은 <xref:System.Windows.Forms.Form.Load> 이벤트입니다.  
   
-5.  폼의에 대 한 이벤트 처리기를 추가 하 고 Windows Forms 디자이너로 돌아갑니다 <xref:System.Windows.Forms.Control.Resize> 이벤트입니다. 자세한 내용은 참조 [하는 방법: 디자이너를 사용 이벤트 처리기 만들기](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)합니다.  
+5.  폼의에 대 한 이벤트 처리기를 추가 하 고 Windows Forms 디자이너로 돌아갑니다 <xref:System.Windows.Forms.Control.Resize> 이벤트입니다. 자세한 내용은 참조 [하는 방법: 디자이너를 사용 이벤트 처리기 만들기](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)합니다.  
   
 6.  선언 된 <xref:System.Windows.Forms.Integration.ElementHost> 필드에 `Form1` 클래스입니다.  
   
@@ -153,5 +153,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [Windows Forms 및 WPF 속성 매핑](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [WPF 디자이너](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF 디자이너](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

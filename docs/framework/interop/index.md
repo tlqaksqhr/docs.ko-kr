@@ -1,12 +1,8 @@
 ---
 title: "비관리 코드와의 상호 운용"
-ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/17/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -17,47 +13,53 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f475877bcb7a794d1a58ef9202735e016363678b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38c569633304ed9e6f86e7a04ef7b0dfa79b6704
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interoperating-with-unmanaged-code"></a>비관리 코드와의 상호 운용
-.NET Framework를 기반으로 COM 구성 요소, COM+ 서비스, 외부 형식 라이브러리 및 여러 가지 운영 체제 서비스와 상호 작용할 수 있습니다. 관리 개체 모델과 관리되지 않는 개체 모델 간에는 데이터 형식, 메서드 시그니처 및 오류 처리 메커니즘이 달라집니다. .NET Framework 구성 요소와 비관리 코드 간에 상호 운용을 간소화하고 마이그레이션 경로를 줄이기 위해 공용 언어 런타임은 클라이언트 및 서버에서 둘 다 이러한 개체 모델의 차이점을 숨깁니다.  
-  
- 런타임 제어를 기반으로 실행되는 코드를 관리 코드라고 합니다. 이와 달리 런타임 외부에서 실행되는 코드를 비관리 코드라고 합니다. 비관리 코드로는 COM 구성 요소, ActiveX 인터페이스, Win32 API 함수 등이 있습니다.  
-  
-## <a name="in-this-section"></a>섹션 내용  
- [비관리 코드와의 상호 운용 방법 항목](http://msdn.microsoft.com/en-us/ec21c6e1-e233-4cd9-95ae-b9b9cf807f9d)  
- 비관리 코드와의 상호 운영에 대한 개념 설명서에 나오는 모든 방법 항목에 대한 링크를 제공합니다.  
-  
- [.NET Framework에 COM 구성 요소 노출](../../../docs/framework/interop/exposing-com-components.md)  
- .NET Framework 응용 프로그램에서 COM 구성 요소를 사용하는 방법을 설명합니다.  
-  
- [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- COM 응용 프로그램에서 .NET Framework 구성 요소를 사용하는 방법을 설명합니다.  
-  
- [관리되지 않는 DLL 함수 사용](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- 플랫폼 호출을 사용하여 관리되지 않는 DLL 함수를 호출하는 방법을 설명합니다.  
-  
- [상호 운용을 위한 디자인 고려 사항](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
- 통합된 COM 구성 요소를 작성하기 위한 팁을 제공합니다.  
-  
- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)  
- COM interop 및 플랫폼 호출에 대한 마샬링을 설명합니다.  
-  
- [방법: HRESULT 및 예외 매핑](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)  
- 실행과 HRESULT 간 매핑을 설명합니다.  
-  
- [제네릭 형식을 통한 상호 운용](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)  
- COM interop에서 사용될 경우 제네릭 형식의 동작을 설명합니다.  
-  
-## <a name="related-sections"></a>관련 단원  
- [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- COM 구성 요소를 .NET Framework 응용 프로그램으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.
+
+.NET Framework를 기반으로 COM 구성 요소, COM+ 서비스, 외부 형식 라이브러리 및 여러 가지 운영 체제 서비스와 상호 작용할 수 있습니다. 관리 개체 모델과 관리되지 않는 개체 모델 간에는 데이터 형식, 메서드 시그니처 및 오류 처리 메커니즘이 달라집니다. .NET Framework 구성 요소와 비관리 코드 간에 상호 운용을 간소화하고 마이그레이션 경로를 줄이기 위해 공용 언어 런타임은 클라이언트 및 서버에서 둘 다 이러한 개체 모델의 차이점을 숨깁니다.
+
+런타임 제어를 기반으로 실행되는 코드를 관리 코드라고 합니다. 이와 달리 런타임 외부에서 실행되는 코드를 비관리 코드라고 합니다. 비관리 코드로는 COM 구성 요소, ActiveX 인터페이스, Win32 API 함수 등이 있습니다.
+
+## <a name="in-this-section"></a>단원 내용
+
+[.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)  
+.NET Framework 응용 프로그램에서 COM 구성 요소를 사용하는 방법을 설명합니다.
+
+[.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)  
+COM 응용 프로그램에서 .NET Framework 구성 요소를 사용하는 방법을 설명합니다.
+
+[관리되지 않는 DLL 함수 사용](consuming-unmanaged-dll-functions.md)  
+플랫폼 호출을 사용하여 관리되지 않는 DLL 함수를 호출하는 방법을 설명합니다.
+
+[interop 마샬링](interop-marshaling.md)  
+COM interop 및 플랫폼 호출에 대한 마샬링을 설명합니다.
+
+[방법: HRESULT 및 예외 매핑](how-to-map-hresults-and-exceptions.md)  
+실행과 HRESULT 간 매핑을 설명합니다.
+
+[COM 래퍼](com-wrappers.md)  
+COM interop에서 제공 하는 래퍼를 설명 합니다.
+
+[동일 형식 및 포함된 Interop 형식](type-equivalence-and-embedded-interop-types.md)  
+어셈블리에 COM 형식에 대 한 형식 정보는 포함 하는 방법 및 공용 언어 런타임 포함 된 COM 형식 일치를 확인 하는 방법을 설명 합니다.
+
+[방법: Tlbimp.exe를 사용하여 주 Interop 어셈블리 생성](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+사용 하 여 주 interop 어셈블리를 생성 하는 방법에 설명 *Tlbimp.exe* (형식 라이브러리 가져오기).
+
+[방법: 주 Interop 어셈블리 등록](how-to-register-primary-interop-assemblies.md)  
+프로젝트에서 참조할 수는 주 interop 어셈블리를 등록 하는 방법을 설명 합니다.
+
+[등록이 필요 없는 COM interop](registration-free-com-interop.md)  
+COM interop는 Windows 레지스트리를 사용 하지 않고 구성 요소를 활성화할 수 방법을 설명 합니다.
+
+[방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성](configure-net-framework-based-com-components-for-reg.md)  
+응용 프로그램 매니페스트를 만드는 방법 및 작성 및 구성 요소 매니페스트를 포함 하는 방법을 설명 합니다.

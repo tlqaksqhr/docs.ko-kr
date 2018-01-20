@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 358bc0428a53817e85d5a5e278d8da4e1a8b6927
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
 응용 프로그램 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. 사용 하 여 컴파일된 응용 프로그램의 소스 코드에는 암호화 되지 않은 연결 문자열을 볼 수는 [Ildasm.exe (IL 디스어셈블러)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 도구입니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 응용 프로그램을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 응용 프로그램 구성 파일에 저장하는 것이 좋습니다.  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/17/2018
  <xref:System.Configuration> 네임스페이스에서는 프로그래밍 방식으로 구성을 설정하는 클래스를 제공합니다. <xref:System.Configuration.ConfigurationManager> 클래스에서는 시스템, 응용 프로그램 및 사용자 구성 파일에 대한 액세스를 제공합니다. ASP.NET 응용 프로그램을 만드는 경우 사용할 수 있습니다는 <xref:System.Web.Configuration.WebConfigurationManager> 클래스에 있는 같은 ASP.NET 응용 프로그램에 고유한 설정에 액세스할 수 있도록 하는 동안 동일한 기능을 제공 하는  **\< system.web >**합니다.  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> 네임스페이스에는 데이터를 암호화하고 해독하는 추가 옵션을 제공하는 클래스가 들어 있습니다. 보호되는 구성을 사용하여 처리할 수 없는 암호화 서비스가 필요한 경우 이러한 클래스를 사용합니다. 이러한 클래스 중 일부는 관리되지 않는 Microsoft CryptoAPI에 대한 래퍼이지만 나머지는 완전하게 관리되는 구현 클래스입니다. 자세한 내용은 [암호화 서비스](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781)를 참조하세요.  
+>  <xref:System.Security.Cryptography> 네임스페이스에는 데이터를 암호화하고 해독하는 추가 옵션을 제공하는 클래스가 들어 있습니다. 보호되는 구성을 사용하여 처리할 수 없는 암호화 서비스가 필요한 경우 이러한 클래스를 사용합니다. 이러한 클래스 중 일부는 관리되지 않는 Microsoft CryptoAPI에 대한 래퍼이지만 나머지는 완전하게 관리되는 구현 클래스입니다. 자세한 내용은 [암호화 서비스](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781)를 참조하세요.  
   
 ### <a name="appconfig-example"></a>App.config 예제  
  이 예제에서는 암호화를 전환 하는 **connectionStrings** 섹션는 **app.config** Windows 응용 프로그램에 대 한 파일입니다. 이 예제의 프로시저에서는 응용 프로그램 이름을 인수로 사용합니다(예: "MyApplication.exe"). **app.config** 파일 암호화 한 다음 이름이 "myapplication.exe.config"인 실행 파일이 포함 된 폴더에 복사 합니다.  
@@ -178,7 +178,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- 자세한 내용은 ASP.NET 응용 프로그램 보안에 대 한 참조 [NIB: ASP.NET 보안](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d) 및 [를 한 눈에 ASP.NET 2.0 보안 사례](http://go.microsoft.com/fwlink/?LinkId=59997) ASP.NET 개발자 센터에서.  
+ 자세한 내용은 ASP.NET 응용 프로그램 보안에 대 한 참조 [NIB: ASP.NET 보안](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) 및 [를 한 눈에 ASP.NET 2.0 보안 사례](http://go.microsoft.com/fwlink/?LinkId=59997) ASP.NET 개발자 센터에서.  
   
 ## <a name="see-also"></a>참고 항목  
  [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)  

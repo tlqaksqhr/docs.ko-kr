@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-sql-reference"></a>엔터티 SQL 참조
 이 단원에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 참조 항목이 포함되어 있습니다. 이 항목에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 작업이 요약되고 범주별로 그룹화되어 있습니다.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/17/2018
 |[! (논리적 NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|논리적 NOT|  
 |[&#124; &#124; (논리적 OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|논리적 OR|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|부울 식 집합을 계산하여 결과를 확인합니다.|  
-|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|결과 [때](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998) true로 평가 될 때 절.|  
+|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|결과 [때](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) true로 평가 될 때 절.|  
   
 ## <a name="query-operators"></a>쿼리 연산자  
  쿼리 연산자는 엔터티 데이터를 반환하는 쿼리 식을 정의하는 데 사용됩니다. 다음 표에서는 쿼리 연산자를 보여 줍니다.  

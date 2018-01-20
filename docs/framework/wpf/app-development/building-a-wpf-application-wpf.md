@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1e8773b0b99e6394dcc3675b21f4a9454444b617
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF 응용 프로그램 빌드(WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 실행 파일(.exe), 라이브러리(.dll) 또는 두 어셈블리 형식의 조합으로 빌드할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 빌드하는 방법과 빌드 프로세스의 주요 단계에 대해 설명합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   MSBuild(Microsoft Build Engine). 응용 프로그램에 코드 및 XAML 파일 외에 MSBuild 프로젝트 파일이 포함되어야 합니다. 자세한 내용은 "MSBuild"를 참조하세요.  
   
--   Visual Studio. Visual Studio는 MSBuild를 사용하여 WPF 응용 프로그램을 컴파일하고 UI를 만들기 위한 비주얼 디자이너를 포함하는 통합 개발 환경입니다. 자세한 내용은 [Visual Studio에서 응용 프로그램 개발](http://msdn.microsoft.com/en-us/97490c1b-a247-41fb-8f2c-bc4c201eff68) 및 [WPF 디자이너](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)를 참조하세요.  
+-   Visual Studio. Visual Studio는 MSBuild를 사용하여 WPF 응용 프로그램을 컴파일하고 UI를 만들기 위한 비주얼 디자이너를 포함하는 통합 개발 환경입니다. 자세한 내용은 [Visual Studio에서 응용 프로그램 개발](http://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68) 및 [WPF 디자이너](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)를 참조하세요.  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF 빌드 파이프라인  

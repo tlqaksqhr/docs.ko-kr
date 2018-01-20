@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3a56a3fa5ed8d470216e9c96b53e1ea21762bd2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기
 이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 응용 프로그램 코드로부터 사용자 지정 자격 증명을 사용하는 방법을 보여 줍니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.Description.ClientCredentials> 및 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 모두 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 반환에 대한 계약을 정의하는 추상 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스로부터 상속됩니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]에 적합 하 게 하 고 자격 증명 클래스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 아키텍처 참조 [보안 아키텍처](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]에 적합 하 게 하 고 자격 증명 클래스는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안 아키텍처 참조 [보안 아키텍처](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)합니다.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 제공되는 기본 구현은 시스템 제공 자격 증명 형식을 지원하고, 이러한 자격 증명 형식을 처리할 수 있는 보안 토큰 관리자를 만듭니다.  
   

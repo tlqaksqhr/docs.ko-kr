@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 969ab4f3c63571488c66c8a505df3969fcd788e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-automationid-property"></a>AutomationID 속성 사용
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>영구 경로를 사용하여 이전에 식별된 AutomationElement로 돌아가기  
   
--   간단한 테스트 스크립트에서 견고한 레코드 및 재생 유틸리티에 이르기까지, 클라이언트 응용 프로그램은 파일 열기 대화 상자 또는 메뉴 항목 등과 같이 현재 인스턴스화되지 않아서 UI 자동화 트리에 존재하지 않는 요소에 액세스해야 할 수 있습니다. 이러한 요소는 AutomationID, 컨트롤 패턴 및 이벤트 수신기와 같은 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 속성을 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 작업의 특정 시퀀스를 재현하거나 “재생”해야만 인스턴스화할 수 있습니다. 참조 [스크립트 생성기 샘플 테스트](http://msdn.microsoft.com/en-us/028467fd-2980-4691-9522-0131dcef23a0) 사용 하는 예제에 대 한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 사용자와 상호 작용에 따라 테스트 스크립트를 생성 하는 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]합니다.  
+-   간단한 테스트 스크립트에서 견고한 레코드 및 재생 유틸리티에 이르기까지, 클라이언트 응용 프로그램은 파일 열기 대화 상자 또는 메뉴 항목 등과 같이 현재 인스턴스화되지 않아서 UI 자동화 트리에 존재하지 않는 요소에 액세스해야 할 수 있습니다. 이러한 요소는 AutomationID, 컨트롤 패턴 및 이벤트 수신기와 같은 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 속성을 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 작업의 특정 시퀀스를 재현하거나 “재생”해야만 인스턴스화할 수 있습니다. 참조 [스크립트 생성기 샘플 테스트](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) 사용 하는 예제에 대 한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 사용자와 상호 작용에 따라 테스트 스크립트를 생성 하는 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]합니다.  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9776e900015dad8bce8c16991b8ce0aeb6067812
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 52ef9cce9ee28c6329f688bb9ac751f0f9016657
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;되어 supportPortability&gt; 요소
 응용 프로그램 이식성을 위해 어셈블리를 동일하게 간주하는 기본 동작을 사용하지 않도록 설정함으로써, 응용 프로그램이 .NET Framework의 서로 다른 두 구현에서 같은 어셈블리를 참조할 수 있도록 지정합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 |값|설명|  
 |-----------|-----------------|  
 |true|지정된 된.NET Framework 어셈블리의 구현 간의 이식성에 대 한 지원을 사용 하도록 설정 합니다. 이 값이 기본값입니다.|  
-|false|지정된 된.NET Framework 어셈블리의 구현 간의 이식성에 대 한 지원을 사용 하지 않도록 설정 합니다. 그러면 응용 프로그램을 지정된 된 어셈블리의 여러 구현에 대 한 참조가 있습니다.|  
+|False|지정된 된.NET Framework 어셈블리의 구현 간의 이식성에 대 한 지원을 사용 하지 않도록 설정 합니다. 그러면 응용 프로그램을 지정된 된 어셈블리의 여러 구현에 대 한 참조가 있습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -89,4 +89,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [/appconfig (C# 컴파일러 옵션)](http://msdn.microsoft.com/library/ee523958.aspx)  
- [.NET framework 어셈블리 통합 개요](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+ [.NET framework 어셈블리 통합 개요](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

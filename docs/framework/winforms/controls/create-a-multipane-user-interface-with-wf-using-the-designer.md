@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6cfd9f258aa7c43f4c98e475c40af7fe7d9c286b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1752691b3cc6809f1a5da54a01e81de2d4037d19
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms으로 다중 창 사용자 인터페이스 만들기
 다음 절차에서는 Microsoft Outlook으로 사용 되는 비슷한 다중 창 사용자 인터페이스 만들어집니다는 **폴더** 목록은 **메시지** 창 및 **미리보기** 창. 이 정렬은 주로 폼에 컨트롤을 도킹을 통해 얻습니다.  
@@ -34,11 +34,11 @@ ms.lasthandoff: 12/22/2017
  내에서 모든 컨트롤을 배치 하면이 사용자 인터페이스를 만들려면는 <xref:System.Windows.Forms.SplitContainer> 포함 되는 제어는 <xref:System.Windows.Forms.TreeView> 왼쪽 패널에서 제어 합니다. 오른쪽 패널은 <xref:System.Windows.Forms.SplitContainer> 두 번째 컨트롤에 포함 되어 <xref:System.Windows.Forms.SplitContainer> 보호로 <xref:System.Windows.Forms.ListView> 컨트롤 위의 <xref:System.Windows.Forms.RichTextBox> 제어 합니다. 이러한 <xref:System.Windows.Forms.SplitContainer> 독립 폼에서 다른 컨트롤의 크기를 조정 컨트롤을 사용 합니다. 자신만의 사용자 지정 사용자 인터페이스를 파악 하려면이 절차에 설명 된 기술을 적용할 수도 있습니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>디자인 타임에 Outlook 스타일 사용자 인터페이스를 만들려면  
   
-1.  새 Windows 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
+1.  새 Windows 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
   
 2.  끌어서는 <xref:System.Windows.Forms.SplitContainer> 에서 제어는 **도구 상자** 양식입니다. 에 **속성** 창에서 설정 된 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>합니다.  
   

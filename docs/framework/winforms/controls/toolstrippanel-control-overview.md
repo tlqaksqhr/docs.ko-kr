@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c7976e4641f5bda02d6569ab17e7f1de139c59a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d376b5df4fabf63a87be04eca01136e22b3e3f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel 컨트롤 개요
 A <xref:System.Windows.Forms.ToolStripPanel> 배치 및 래프팅 할 단일 영역을 제공 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤입니다. 여러 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 따라 가로 또는 세로로 쌓입니다는 <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> 의 <xref:System.Windows.Forms.ToolStripPanel>합니다.  
@@ -41,4 +41,4 @@ A <xref:System.Windows.Forms.ToolStripPanel> 배치 및 래프팅 할 단일 영
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Forms.ToolStripContainer>  
  <xref:System.Windows.Forms.ToolStripContentPanel>  
- [ToolStrip 샘플](http://msdn.microsoft.com/en-us/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+ [ToolStrip 샘플](http://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)

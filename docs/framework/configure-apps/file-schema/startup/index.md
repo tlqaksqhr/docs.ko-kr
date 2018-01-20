@@ -18,11 +18,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 0536197d4cb8b30d99f514d8066e94bf84bffdf3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f344139fd7d7c84aa75ab5e17b6312f3b0c3e031
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="startup-settings-schema"></a>시작 설정 스키마
 시작 설정은 응용 프로그램을 실행해야 하는 공용 언어 런타임의 버전을 지정합니다.  
@@ -35,4 +35,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 사용할 런타임 버전 지정](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> 사용할 런타임 버전 지정](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

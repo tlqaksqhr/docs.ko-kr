@@ -21,17 +21,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;시작&gt; 요소
 공용 언어 런타임 시작 정보를 지정합니다.  
   
  \<configuration>  
-\<시작 >  
+\<startup>  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |`useLegacyV2RuntimeActivationPolicy`|선택적 특성입니다.<br /><br /> 사용 여부를 지정 된 [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] 런타임 정품 인증 정책 사용 하는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 정품 인증 정책.|  
   
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 특성  
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy Attribute  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 |`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
-  **\<supportedRuntime >** 요소는 버전 1.1 이상 런타임에 사용 하 여 빌드된 모든 응용 프로그램에서 사용 되어야 합니다. 런타임 버전 1.0만 지원 하도록 작성 된 응용 프로그램을 사용 해야 합니다는  **\<requiredRuntime >** 요소입니다.  
+ **\<supportedRuntime >** 요소는 버전 1.1 이상 런타임에 사용 하 여 빌드된 모든 응용 프로그램에서 사용 되어야 합니다. 런타임 버전 1.0만 지원 하도록 작성 된 응용 프로그램을 사용 해야 합니다는  **\<requiredRuntime >** 요소입니다.  
   
  Microsoft Internet Explorer에서 호스팅되는 응용 프로그램에 대 한 시작 코드는 무시는  **\<시작 >** 요소와 해당 자식 요소입니다.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
  이 특성은 응용 프로그램이 같은 레거시 활성화 경로 사용 하는 경우에 유용는 [CorBindToRuntimeEx 함수](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), 이전 버전에서 clr 버전 4를 활성화 하려면 이러한 경로 중이 고 또는 응용 프로그램이 없는 경우 사용 하 여 작성 된 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 하지만 이전 버전의.NET Framework로 빌드된 혼합 모드 어셈블리에 대 한 종속성을 포함 합니다. 이러한 시나리오에서는 값을 특성 설정 `true`합니다.  
   
 > [!NOTE]
->  특성을 설정 `true` CLR 버전 1.1 또는 CLR 버전 2.0 효과적으로 프로세스에서-side-by-side 기능을 해제 하면 동일한 프로세스에 로드에서 방지 하 고 (참조 [COM Interop에 대 한-병렬 실행](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
+>  특성을 설정 `true` CLR 버전 1.1 또는 CLR 버전 2.0 효과적으로 프로세스에서-side-by-side 기능을 해제 하면 동일한 프로세스에 로드에서 방지 하 고 (참조 [COM Interop에 대 한-병렬 실행](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
 ## <a name="example"></a>예  
  다음 예제에서는 구성 파일에서 런타임 버전을 지정 하는 방법을 보여 줍니다.  
@@ -102,6 +102,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>참고 항목  
  [시작 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 사용할 런타임 버전 지정](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [COM Interop에 대 한-병렬 실행](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver> 사용할 런타임 버전 지정](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [COM Interop에 대 한-병렬 실행](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [In-Process Side-by-Side 실행](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

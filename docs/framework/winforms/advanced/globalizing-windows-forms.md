@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2337de6889a92b295e0a4f3a88d2a5039e583508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa21433979d955603c67bc2822676f56e855d098
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="globalizing-windows-forms"></a>Windows Forms 전역화
 *전역화* 디자인 하 고 여러 문화권에서 작동 하는 소프트웨어 제품을 개발 하는 프로세스입니다.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [연습: Windows Forms 지역화](http://msdn.microsoft.com/library/y99d1cd3\(v=vs.110\))  
   
--   [연습: 지역화에 대 한 비율을 조정 하는 레이아웃 만들기](http://msdn.microsoft.com/en-us/library/7k9fa71y\(v=vs.110\))  
+-   [연습: 지역화에 대 한 비율을 조정 하는 레이아웃 만들기](http://msdn.microsoft.com/library/7k9fa71y\(v=vs.110\))  
   
 -   [방법: 양방향 Windows Forms 용 메시지 상자 만들기](http://msdn.microsoft.com/library/k1689bxh\(v=vs.110\))  
   

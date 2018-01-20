@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: acc6bee115548ca1f3ba676c4d09b83d4f40e52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fcd56e1563b1fcd400d3c1d68b2675efaac3200
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>UI 자동화를 사용하여 표의 콘텐츠 노출
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  다음 코드 예제를 가져오는 방법을 보여 줍니다는 <xref:System.Windows.Automation.AutomationElement> 테이블 셀의 내용을 나타내는; 행 및 열 머리글 정보 행 및 열 인덱스, 행 및 열 범위 등 셀 속성은 가져올 수도 있습니다. 포커스 변경 이벤트 처리기를 사용 하 여 구현 하는 테이블 형식 컨트롤의 키보드 탐색을 시뮬레이션 하는이 예제 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]합니다. 각 테이블 항목에 대 한 정보는 포커스 변경 이벤트에 노출 됩니다.  
   
 > [!NOTE]
->  포커스가 변경 전역 데스크톱 이벤트와 되므로 테이블 밖에 포커스 변경 이벤트를 필터링 해야 합니다. 참조는 [TrackFocus 샘플](http://msdn.microsoft.com/en-us/4a91c0af-6bb5-4d38-a743-cf136f268fc9) 관련된 구현에 대 한 합니다.  
+>  포커스가 변경 전역 데스크톱 이벤트와 되므로 테이블 밖에 포커스 변경 이벤트를 필터링 해야 합니다. 참조는 [TrackFocus 샘플](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) 관련된 구현에 대 한 합니다.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

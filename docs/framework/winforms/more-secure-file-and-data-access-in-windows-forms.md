@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14d003c36fd3733c329aad1362c01e91f108ec2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms의 파일 및 데이터 액세스 추가 보안
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 리소스 및 데이터 보호를 위해 권한을 사용합니다. 응용 프로그램이 데이터를 일거나 쓸 수 있는 위치는 응용 프로그램에 부여된 권한에 따라 달라집니다. 응용 프로그램이 부분 신뢰 환경에서 실행되는 경우 데이터에 대한 액세스 권한이 없거나 데이터에 액세스하는 방법을 변경해야 할 수 있습니다.  
@@ -362,7 +362,7 @@ public void Write()
 ## <a name="database-access"></a>데이터베이스 액세스  
  데이터베이스에 액세스하는 데 필요한 권한은 데이터베이스 공급자에 따라 다릅니다. 그러나 적절한 권한으로 실행 중인 응용 프로그램만 데이터 연결을 통해 데이터베이스에 액세스할 수 있습니다. 데이터베이스에 액세스 하는 데 필요한 사용 권한에 대 한 자세한 내용은 참조 [코드 액세스 보안 및 ADO.NET](../../../docs/framework/data/adonet/code-access-security.md)합니다.  
   
- 부분 신뢰로 응용 프로그램을 실행하려 하므로 데이터베이스에 직접 액세스할 수 없는 경우 데이터에 액세스하는 대체 방법으로 웹 서비스를 사용할 수 있습니다. 웹 서비스는 네트워크를 통해 프로그래밍 방식으로 액세스할 수 있는 소프트웨어입니다. 웹 서비스를 통해 응용 프로그램은 코드 그룹 영역 간에 데이터를 공유할 수 있습니다. 기본적으로 로컬 인트라넷 및 인터넷 영역의 응용 프로그램에는 동일한 서버에서 호스트된 웹 서비스를 호출할 수 있게 해주는 원본 사이트 액세스 권한이 부여됩니다. 자세한 내용은 참조 [ASP.NET AJAX의 웹 서비스](http://msdn.microsoft.com/en-us/8290e543-7eff-47a4-aace-681f3c07229b) 또는 [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx)합니다.  
+ 부분 신뢰로 응용 프로그램을 실행하려 하므로 데이터베이스에 직접 액세스할 수 없는 경우 데이터에 액세스하는 대체 방법으로 웹 서비스를 사용할 수 있습니다. 웹 서비스는 네트워크를 통해 프로그래밍 방식으로 액세스할 수 있는 소프트웨어입니다. 웹 서비스를 통해 응용 프로그램은 코드 그룹 영역 간에 데이터를 공유할 수 있습니다. 기본적으로 로컬 인트라넷 및 인터넷 영역의 응용 프로그램에는 동일한 서버에서 호스트된 웹 서비스를 호출할 수 있게 해주는 원본 사이트 액세스 권한이 부여됩니다. 자세한 내용은 참조 [ASP.NET AJAX의 웹 서비스](http://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) 또는 [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx)합니다.  
   
 ## <a name="registry-access"></a>레지스트리 액세스  
  <xref:System.Security.Permissions.RegistryPermission> 클래스는 운영 체제 레지스트리에 대한 액세스를 제어합니다. 기본적으로 로컬에서 실행 중인 응용 프로그램만 레지스트리에 액세스할 수 있습니다.  <xref:System.Security.Permissions.RegistryPermission>은 레지스트리 액세스 시도 권한만 응용 프로그램에 부여합니다. 운영 체제가 여전히 레지스트리에 대한 보안을 적용하므로 액세스가 성공한다는 보장은 없습니다.  

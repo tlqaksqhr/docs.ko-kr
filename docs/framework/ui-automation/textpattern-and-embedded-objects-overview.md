@@ -19,11 +19,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 0b08bb2b4d9cdb5e90582fbce280a03f6fc04d13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 및 포함 개체 개요
 > [!NOTE]
@@ -149,7 +149,7 @@ Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 �
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> 매개 변수는 (0, 0)|테이블 셀의 내용을 나타내는 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다. 이 예제에서 요소는 텍스트 컨트롤입니다.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 여기서 <xref:System.Windows.Automation.AutomationElement> 는 이전 `GetItem` 메서드에서 반환되는 개체입니다.|이미지 범위를 반환 ![포함 된 이미지 예제](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")합니다.|  
 |이전<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> 메서드에서 반환되는 개체에 대한 `RangeFromChild` 입니다.|테이블 셀을 나타내는 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다. 이 예제에서 요소는 TableItemPattern을 지원하는 텍스트 컨트롤입니다.|  
-|이전 `GetEnclosingElement` 메서드에서 반환되는 개체에 대한 <xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>입니다.|테이블을 나타내는 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다.|  
+|이전<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> 메서드에서 반환되는 개체에 대한 `GetEnclosingElement` 입니다.|테이블을 나타내는 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다.|  
 |이전<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> 메서드에서 반환되는 개체에 대한 `GetEnclosingElement` 입니다.|텍스트 공급자 자체를 나타내는 <xref:System.Windows.Automation.AutomationElement> 를 반환합니다.|  
   
  **예제 2 - 셀의 텍스트 콘텐츠 가져오기**  
@@ -157,7 +157,7 @@ Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 �
 |호출되는 메서드|결과|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> 매개 변수는 (1,1)|테이블 셀의 내용을 나타내는 <xref:System.Windows.Automation.AutomationElement>를 반환합니다. 이 예제에서 요소는 텍스트 컨트롤입니다.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 여기서 <xref:System.Windows.Automation.AutomationElement>는 이전 `GetItem` 메서드에서 반환되는 개체입니다.|"Y"를 반환합니다.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 여기서 <xref:System.Windows.Automation.AutomationElement> 는 이전 `GetItem` 메서드에서 반환되는 개체입니다.|"Y"를 반환합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Automation.TextPattern>  
@@ -167,4 +167,4 @@ Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 �
  [UI 자동화를 사용하여 포함 개체에 액세스](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [UI 자동화를 사용하여 표의 콘텐츠 노출](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [UI 자동화를 사용하여 텍스트 이동](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern 검색 및 선택 샘플](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [TextPattern 검색 및 선택 샘플](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

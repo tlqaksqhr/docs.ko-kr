@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 006727e70c58834a4e628f584a28302a62363844
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1ac5e83d6daf9654c541dcd8a748717be3ed05d0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-and-soap-serialization"></a>XML 및 SOAP Serialization
 XML serialization은 개체의 public 필드와 속성 또는 메서드의 매개 변수와 반환 값을 특정 XSD(XML 스키마 정의 언어) 문서와 일치하는 XML 스트림으로 변환(serialize)합니다. XML serialization을 사용하면 저장이나 전송을 위해 직렬 형식(이 경우 XML)으로 변환되는 public 속성 및 필드가 있는 강력한 형식의 클래스가 만들어집니다.  
@@ -93,10 +93,10 @@ XML serialization은 개체의 public 필드와 속성 또는 메서드의 매�
  <xref:System.Xml.Serialization.XmlSchemaImporter> 클래스에서 사용하는 형식을 추가합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [고급 개발 기술](http://msdn.microsoft.com/en-us/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
+ [고급 개발 기술](http://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
  .NET Framework의 복잡한 개발 작업 및 기술에 대한 자세한 내용을 볼 수 있는 링크를 제공합니다.  
   
- [ASP.NET 및 XML Web Service 클라이언트를 사용하여 만든 XML Web Services](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [ASP.NET 및 XML Web Service 클라이언트를 사용하여 만든 XML Web Services](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  ASP.NET을 사용하여 XML Web services를 프로그래밍하는 방법을 설명하는 항목을 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  

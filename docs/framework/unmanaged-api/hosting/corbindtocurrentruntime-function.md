@@ -22,16 +22,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9568d9420c686d5a906fb7f90570fe6a1d12046d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fed8829f8f14833724d1770273ff905d6f5eabf
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 함수
 XML 파일에 저장 된 버전 정보를 사용 하 여 공용 언어 런타임 (CLR) 프로세스를 로드 합니다. XML 파일의 형식은 표준 응용 프로그램 구성 파일에 모델링 됩니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.  
   
- 이 함수에 더 이상 사용 되지는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. 참조 [공용 언어 런타임 프로세스에 로드](http://msdn.microsoft.com/en-us/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f)합니다.  
+ 이 함수에 더 이상 사용 되지는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다. 참조 [공용 언어 런타임 프로세스에 로드](http://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ HRESULT CorBindToCurrentRuntime (
   
  **헤더:** MSCorEE.h  
   
- **라이브러리:** MSCorEE.dll  
+ **Library:** MSCorEE.dll  
   
  **.NET framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1eab181ec63da5f0494ce5c4acabe6c6f868be15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4e34049ef54cd6d161e381bf92818b5f3531c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 이 샘플에서는 동일한 시스템에서 프로세스 간 통신을 제공하는 `netNamedPipeBinding` 바인딩을 보여 줍니다. 이름이 지정된 파이프는 시스템 간에 작동하지 않습니다. 이 샘플에 따라는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스입니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 에 지정 된 바인딩 유형은 `binding` 특성에는[\<끝점 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) 다음 샘플 구성 에서처럼 요소:  
+ 클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 에 지정 된 바인딩 유형은 `binding` 특성에는[\<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 다음 샘플 구성 에서처럼 요소:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

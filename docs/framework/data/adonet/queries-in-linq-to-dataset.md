@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 906e92e0e440c7f4d9fb5d385cb36a341b45df17
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7e07da38f7a75226d48ef84cc8d2dafd48f6e795
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet에서 쿼리
 쿼리는 데이터 소스에서 데이터를 검색하는 식입니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것과 같이 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 따라서 개발자는 쿼리하는 데이터 소스나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]는 다양한 데이터 소스 및 형식에 사용할 수 있는 간단하고 일관된 모델을 제공합니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 쿼리에서는 항상 프로그래밍 개체를 사용합니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/17/2018
   
  값 시퀀스를 반환하는 쿼리의 경우 쿼리 변수 자체에는 쿼리 결과가 저장되지 않고 쿼리 명령만 저장됩니다. 쿼리 실행은 `foreach` 또는 `For Each` 루프에서 쿼리 변수가 반복될 때까지 지연됩니다. 이 라고 *지연 된 실행*; 즉, 쿼리가 실행 된 쿼리가 구성 된 후 일정 시간입니다. 즉, 원하는 때에 언제라도 쿼리를 실행할 수 있습니다. 예를 들어, 이 기능은 다른 응용 프로그램에서 업데이트되는 데이터베이스가 있을 때 유용합니다. 사용자의 응용 프로그램에서 최신 정보를 검색하는 쿼리를 만든 다음 쿼리를 반복적으로 실행하여 업데이트된 정보를 항상 반환할 수 있습니다.  
   
- 값 시퀀스를 반환하는 지연된 쿼리와는 달리 singleton 값을 반환하는 쿼리는 즉시 실행됩니다. singleton 쿼리의 예로는 <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> 및 <xref:System.Linq.Enumerable.First%2A>가 있습니다. singleton 결과를 계산하려면 쿼리 결과가 필요하므로 이러한 쿼리는 즉시 실행됩니다. 예를 들어, 쿼리 결과의 평균을 구하려면 평균 함수에 사용할 입력 데이터를 얻기 위해 쿼리를 실행해야 합니다. 또한 쿼리에서 <xref:System.Linq.Enumerable.ToList%2A> 또는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드를 사용하여 singleton 값을 생성하지 않는 쿼리를 즉시 실행할 수도 있습니다. 쿼리 결과를 캐시하려는 경우 즉시 실행을 적용하는 이러한 기술을 유용하게 사용할 수 있습니다. 쿼리 지연 된 실행과 즉시 쿼리 실행에 대 한 자세한 내용은 참조 [LINQ 시작](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)합니다.  
+ 값 시퀀스를 반환하는 지연된 쿼리와는 달리 singleton 값을 반환하는 쿼리는 즉시 실행됩니다. singleton 쿼리의 예로는 <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> 및 <xref:System.Linq.Enumerable.First%2A>가 있습니다. singleton 결과를 계산하려면 쿼리 결과가 필요하므로 이러한 쿼리는 즉시 실행됩니다. 예를 들어, 쿼리 결과의 평균을 구하려면 평균 함수에 사용할 입력 데이터를 얻기 위해 쿼리를 실행해야 합니다. 또한 쿼리에서 <xref:System.Linq.Enumerable.ToList%2A> 또는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드를 사용하여 singleton 값을 생성하지 않는 쿼리를 즉시 실행할 수도 있습니다. 쿼리 결과를 캐시하려는 경우 즉시 실행을 적용하는 이러한 기술을 유용하게 사용할 수 있습니다. 쿼리 지연 된 실행과 즉시 쿼리 실행에 대 한 자세한 내용은 참조 [LINQ 시작](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)합니다.  
   
 ## <a name="queries"></a>쿼리  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리는 쿼리 식 구문과 메서드 기반 쿼리 구문이라는 두 가지 구문 형식으로 만들 수 있습니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 ### <a name="query-expression-syntax"></a>쿼리 식 구문  
  쿼리 식은 선언적 쿼리 구문입니다. 이 구문을 사용하면 C# 또는 Visual Basic에서 SQL에서와 비슷한 형식으로 쿼리를 작성할 수 있습니다. 쿼리 식 구문을 사용하면 최소한의 코드로 데이터 소스에 대해 복잡한 필터링, 정렬 및 그룹화 작업을 수행할 수 있습니다. 자세한 내용은 참조 [LINQ 쿼리 식](http://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4) 및 [기본 쿼리 작업 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다.  
   
- 쿼리 식 구문은 C# 3.0과 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]의 새로운 기능입니다. 그러나 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에서는 쿼리 식 구문을 자체적으로 인식하지 못합니다. 따라서 컴파일 타임에 쿼리 식은 CLR에서 인식할 수 있는 메서드 호출로 변환됩니다. 이러한 메서드는 라고 하는 *표준 쿼리 연산자*합니다. 개발자는 쿼리 구문을 사용하는 대신 메서드 구문을 사용하여 표준 쿼리 연산자를 직접 호출할 수도 있습니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요. 표준 쿼리 연산자를 사용 하는 방법에 대 한 자세한 내용은 참조 [빌드에 없음: LINQ 일반 프로그래밍 가이드](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049)합니다.  
+ 쿼리 식 구문은 C# 3.0과 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]의 새로운 기능입니다. 그러나 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에서는 쿼리 식 구문을 자체적으로 인식하지 못합니다. 따라서 컴파일 타임에 쿼리 식은 CLR에서 인식할 수 있는 메서드 호출로 변환됩니다. 이러한 메서드는 라고 하는 *표준 쿼리 연산자*합니다. 개발자는 쿼리 구문을 사용하는 대신 메서드 구문을 사용하여 표준 쿼리 연산자를 직접 호출할 수도 있습니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요. 표준 쿼리 연산자를 사용 하는 방법에 대 한 자세한 내용은 참조 [빌드에 없음: LINQ 일반 프로그래밍 가이드](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)합니다.  
   
  다음 예제에서는 <xref:System.Linq.Enumerable.Select%2A>를 사용하여 `Product` 테이블의 모든 행을 반환하고 제품 이름을 표시합니다.  
   

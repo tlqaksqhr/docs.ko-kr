@@ -9,11 +9,11 @@ ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f51ba41f39f16f3429796f15533a6fb2a0049d45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 151b7434ab38f9a17344f15f0f0abef83f78e8cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a>레지스트리 키 &#39; &lt;keyname&gt;&#39; 만들 수 없습니다
 지정된 레지스트리 키를 만들 수 없습니다. 보안 권한이 없기 때문일 수 있습니다.  
@@ -24,4 +24,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [레지스트리 요약](../../visual-basic/language-reference/keywords/registry-summary.md)  
- [Visual basic.NET 레지스트리 액세스 변경](http://msdn.microsoft.com/en-us/b58f7687-f4db-448a-a865-07f62fd16fb2)
+ [Visual basic.NET 레지스트리 액세스 변경](http://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)

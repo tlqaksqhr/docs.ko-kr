@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 502fb9ae0c488f5f3e438a3ae0a7087538183f1b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 08f4004329d15b527a889cd7b437a7f18278fc79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>연습: 첫 응용 프로그램 만들기
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]터치에 응답 하도록 응용 프로그램이 있습니다. 예를 들어 하나를 사용 하 여 응용 프로그램 상호 작용할 수 있습니다 또는 터치 지원 장치 등이 연습에서는 사용자가을 이동할 수 있도록 응용 프로그램을 만듭니다 터치 스크린에 손가락 크기 조정 또는 터치를 사용 하 여 단일 개체를 회전 합니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-application"></a>응용 프로그램을 만들려면  
   
-1.  Visual Basic 또는 Visual C#에서 `BasicManipulation`이라는 새 WPF 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: 새 WPF 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)를 참조하세요.  
+1.  Visual Basic 또는 Visual C#에서 `BasicManipulation`이라는 새 WPF 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: 새 WPF 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)를 참조하세요.  
   
 2.  MainWindow.xaml의 내용을 다음 XAML로 바꿉니다.  
   

@@ -19,17 +19,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 1f91b9fcd7ef9c9c616a7a41ced6be1cda365509
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f28b7b43f2f782744a0dbc81bd0b91bbbcd8abba
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt; 요소
 언어 공급자에 대 한 컴파일러 버전 특성을 지정합니다.  
   
  \<구성 요소 >  
-\<system.codedom 요소 >  
+\<system.codedom Element>  
 \<컴파일러 요소 >  
 \<컴파일러 > 요소  
 \<providerOption > 요소  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -105,4 +105,4 @@ ms.lasthandoff: 12/22/2017
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<컴파일러 > 요소](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [정규화된 형식 이름 지정](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [요소 (ASP.NET 설정 스키마) 컴파일에 대 한 컴파일러에 대 한 컴파일러](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [요소 (ASP.NET 설정 스키마) 컴파일에 대 한 컴파일러에 대 한 컴파일러](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

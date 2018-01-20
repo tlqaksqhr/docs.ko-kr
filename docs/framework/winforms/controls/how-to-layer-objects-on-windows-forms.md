@@ -24,17 +24,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f042816b912a0de643dd1d0f66ddba6d5eff7df2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d956ae8fb643d616bc0e5dc514f21ca95fa50a48
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>방법: Windows Forms에서 개체 계층화
 복잡 한 사용자 인터페이스를 만들거나 여러 문서 MDI (인터페이스) 폼을 사용할 때 컨트롤과 보다 복잡 한 UI (사용자 인터페이스) 자식 폼 계층화 하려는 경우가 많습니다. 이동 하 고 컨트롤 및 windows 그룹의 컨텍스트 내에서 한 추적을 z 순서를 조작 합니다. *Z 순서* 폼의 z 축 (깊이)와 함께 폼에 컨트롤의 시각적 계층은 합니다. Z 순서 맨 아래에 있는 창에는 다른 모든 창과 겹칩니다. 다른 모든 창과 z 순서 맨 아래에 있는 창을 위에 표시 합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ### <a name="to-layer-controls-at-design-time"></a>디자인 타임에 레이어 컨트롤에  
   

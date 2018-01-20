@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: accbc05018644e3ead4ee0c08f44ec39cad8f036
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c43c195411b07467f1041ecc5ed55239a1327dc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services 리소스
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 개략적으로 소개하는 항목을 다음 위치에서 찾을 수 있습니다. 이들 항목 중 상당수에는 자세한 정보가 포함된 관련 항목 링크가 제공됩니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  [응용 프로그램 시나리오](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  만드는 작업 기반 방법을 제공 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 및 응용 프로그램에 액세스 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다.  
   
- [Visual Studio 및.NET Framework 용어집](http://msdn.microsoft.com/en-us/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [Visual Studio 및.NET Framework 용어집](http://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
  사용 되는 용어를 포함 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 및 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 설명서입니다.  
   
 ## <a name="external-resources"></a>외부 리소스  

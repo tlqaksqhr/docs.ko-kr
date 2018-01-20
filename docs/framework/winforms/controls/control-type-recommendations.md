@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a126d3b21ddd4bd31e168726c3538de21fb7d956
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-type-recommendations"></a>컨트롤 형식 권장 사항
 .NET Framework는 새 컨트롤을 개발 및 구현하는 기능을 제공합니다. 익숙한 사용자 정의 컨트롤뿐 아니라 이제 고유한 그리기를 수행하는 사용자 지정 컨트롤을 작성할 수 있으며 상속을 통해 기존 컨트롤의 기능을 확장할 수도 있습니다. 만들 컨트롤 형식을 결정하기 어려울 수 있습니다. 이 섹션에서는 상속할 수 있는 다양한 컨트롤 형식 간의 차이점을 요약하고 프로젝트에 대해 선택할 형식과 관련된 고려 사항을 제공합니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [연습: Visual C#을 사용하여 Windows Forms 컨트롤에서 상속](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+-   [연습: Visual C#을 사용하여 Windows Forms 컨트롤에서 상속](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
 -   [방법: 컨트롤에 대한 도구 상자 비트맵 제공](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [연습: Visual Basic에서 합성 컨트롤 작성](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [연습: Visual C#에서 합성 컨트롤 작성](http://msdn.microsoft.com/en-us/library/a6h7e207\(v=vs.110\))  
+-   [연습: Visual C#에서 합성 컨트롤 작성](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
 -   [연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

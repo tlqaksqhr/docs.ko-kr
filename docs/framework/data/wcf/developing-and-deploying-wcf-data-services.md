@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 34fd9bc3bf16446505caf12c6cfa4192ffb391c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>WCF Data Services 개발 및 배포
 이 항목에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 개발 및 배포에 대한 정보를 제공합니다. 에 대 한 자세한 기본 정보에 대 한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], 참조 [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) 및 [개요](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)합니다.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
     -   이 서버는 로컬 컴퓨터에서만 액세스할 수 있습니다.  
   
-    -   이 서버는 HTTP 메시지의 기본 포트인 특정 포트(포트 80 제외)와 `localhost` 에서 수신 대기합니다. 자세한 내용은 [Visual Studio의 ASP.NET 웹 프로젝트에 대한 웹 서버](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328)를 참조하세요.  
+    -   이 서버는 HTTP 메시지의 기본 포트인 특정 포트(포트 80 제외)와 `localhost` 에서 수신 대기합니다. 자세한 내용은 [Visual Studio의 ASP.NET 웹 프로젝트에 대한 웹 서버](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328)를 참조하세요.  
   
     -   이 서버는 현재 사용자 계정의 컨텍스트에서 데이터 서비스를 실행합니다. 예를 들어, 관리자 수준의 사용자로 실행 중인 경우 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 개발 서버에서 실행되는 데이터 서비스는 관리자 수준의 권한을 가집니다. 따라서 데이터 서비스가 IIS 서버에 배포된 리소스 중 액세스 권한이 없는 리소스에도 액세스할 수 있습니다.  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
 -   일반적인 작업을 수행할 때보다 데이터 서비스를 디버깅할 때 데이터 서비스에서 발생하는 오류에 대한 자세한 정보가 필요할 수 있습니다. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 에서 <xref:System.Data.Services.DataServiceConfiguration> 속성을 `true` 로 설정하고 데이터 서비스 클래스에서 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 특성의 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 속성을 `true`로 설정하여 데이터 서비스에서 추가 오류 정보를 가져올 수 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 은 [WCF Data Services 디버깅](http://go.microsoft.com/fwlink/?LinkId=201868)게시물을 참조하세요. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 에서 추적 기능을 설정하여 HTTP 메시징 계층에서 발생하는 예외를 확인할 수도 있습니다. 자세한 내용은 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)을 참조하세요.  
   
--   일반적으로 데이터 서비스는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 프로젝트로 개발되지만 데이터 서비스를 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]웹 사이트 프로젝트로 만들 수도 있습니다. 두 가지 프로젝트 유형의 차이점에 대한 정보는 [NIB: 웹 응용 프로그램 프로젝트와 Visual Studio의 웹 사이트 프로젝트 비교](http://msdn.microsoft.com/en-us/2861815e-f5a2-4378-a2f8-b8a86dc012f5)를 참조하세요.  
+-   일반적으로 데이터 서비스는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 프로젝트로 개발되지만 데이터 서비스를 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 에서 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]웹 사이트 프로젝트로 만들 수도 있습니다. 두 가지 프로젝트 유형의 차이점에 대 한 정보를 참조 하십시오. [NIB: 웹 응용 프로그램 프로젝트와 Visual Studio에서 웹 사이트 프로젝트 비교](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)합니다.  
   
 -   **에서** 새 항목 추가 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]대화 상자를 사용하여 데이터 서비스를 만들면 데이터 서비스는 IIS에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 에 의해 호스트됩니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 및 IIS가 데이터 서비스의 기본 호스트지만 다른 호스팅 옵션도 지원됩니다. 자세한 내용은 참조 [데이터 서비스 호스팅](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)합니다.  
   
@@ -102,9 +102,9 @@ ms.lasthandoff: 12/22/2017
   
     -   **ASP.NET 웹 응용 프로그램을 위한 배포 기술**  
   
-        -   [웹 배포 패키지](http://msdn.microsoft.com/en-us/1f9713c8-9540-494c-b80d-9893b970ad6f)  
+        -   [웹 배포 패키지](http://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)  
   
-        -   [One-Click 게시(One-Click Publishing)](http://msdn.microsoft.com/en-us/59226246-99ad-4aec-975d-7c61e8a8911c)  
+        -   [One-click 게시](http://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)  
   
     -   **ASP.NET 웹 사이트를 위한 배포 기술**  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 12/22/2017
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 응용 프로그램에 대한 배포 옵션 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 은 [Visual Studio 및 ASP.NET에 대한 웹 배포 개요](http://msdn.microsoft.com/en-us/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)를 참조하세요.  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]배포 옵션에 대 한 프로그램 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 참조 [Visual Studio 및 ASP.NET에 대 한 웹 배포 개요](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)합니다.  
   
     > [!TIP]
     >  데이터 서비스를 IIS에 배포하기 전에 IIS가 실행 중인 웹 서버로의 배포를 테스트했는지 확인해야 합니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.  
@@ -126,7 +126,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="deployment-considerations"></a>배포 고려 사항  
  데이터 서비스를 배포할 때 다음 사항을 고려해야 합니다.  
   
--   [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자를 사용하는 데이터 서비스를 배포하여 SQL Server 데이터베이스에 액세스하는 경우 데이터 서비스 배포와 함께 데이터 구조, 데이터 또는 둘 다를 전파해야 할 수 있습니다. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 는 대상 데이터베이스에서 이 작업을 수행하기 위해 스크립트(.sql 파일)를 자동으로 만들 수 있으며, 이러한 스크립트는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램의 웹 배포 패키지에 포함할 수 있습니다. 자세한 내용은 [NIB: 방법: 웹 응용 프로그램 프로젝트를 통해 데이터베이스 배포](http://msdn.microsoft.com/en-us/683b33f1-8a3d-45cf-af6e-61ab50fc518b)를 참조하세요. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 사이트의 경우에는 **의** 데이터베이스 게시 마법사 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]를 사용하여 이 작업을 수행할 수 있습니다. 자세한 내용은 [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)을 참조하세요.  
+-   [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자를 사용하는 데이터 서비스를 배포하여 SQL Server 데이터베이스에 액세스하는 경우 데이터 서비스 배포와 함께 데이터 구조, 데이터 또는 둘 다를 전파해야 할 수 있습니다. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 는 대상 데이터베이스에서 이 작업을 수행하기 위해 스크립트(.sql 파일)를 자동으로 만들 수 있으며, 이러한 스크립트는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램의 웹 배포 패키지에 포함할 수 있습니다. 자세한 내용은 참조 [NIB: 방법:는 데이터베이스와 웹 응용 프로그램 프로젝트를 배포](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)합니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 사이트의 경우에는 **의** 데이터베이스 게시 마법사 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]를 사용하여 이 작업을 수행할 수 있습니다. 자세한 내용은 [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)을 참조하세요.  
   
 -   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 에는 기본 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 구현이 포함되기 때문에 Windows Server AppFabric을 사용하여 Windows Server에서 실행되는 IIS에 배포된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용하여 데이터 서비스를 모니터링[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 은 [Windows Server AppFabric으로 WCF Data Services 추적](http://go.microsoft.com/fwlink/?LinkID=202005)게시물을 참조하십시오.  
   

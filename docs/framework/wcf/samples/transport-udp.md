@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transport-udp"></a>전송: UDP
 UDP Transport 샘플에서는 UDP 유니캐스트 및 멀티캐스트를 사용자 지정 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송으로 구현하는 방법을 보여 줍니다. 이 샘플에서는 채널 프레임워크를 사용하고 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모범 사례에 따라 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 사용자 지정 전송을 만드는 권장 절차에 대해 설명합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  
@@ -405,7 +405,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP 테스트 서비스 및 클라이언트  
- 이 샘플 전송을 사용하기 위한 테스트 코드는 UdpTestService 및 UdpTestClient 디렉터리에 있습니다. 서비스 코드는 두 가지 테스트로 구성됩니다. 하나는 코드에서 바인딩 및 끝점을 설정하고, 다른 하나는 구성을 통해 바인딩 및 끝점을 설정합니다. 두 테스트 모두 두 개의 끝점을 사용합니다. 한 끝점을 사용 하 여는 `SampleUdpProfileBinding` 와 [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) 로 설정 `true`합니다. 다른 끝점은 `UdpTransportBindingElement`가 포함된 사용자 지정 바인딩을 사용합니다. 이 사용 하는 `SampleUdpProfileBinding` 와 [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) 로 설정 `false`합니다. 두 테스트 모두 서비스를 만들고 각 바인딩에 끝점을 추가하며 서비스를 연 다음 서비스를 닫기 전에 사용자가 Enter 키를 누를 때까지 기다립니다.  
+ 이 샘플 전송을 사용하기 위한 테스트 코드는 UdpTestService 및 UdpTestClient 디렉터리에 있습니다. 서비스 코드는 두 가지 테스트로 구성됩니다. 하나는 코드에서 바인딩 및 끝점을 설정하고, 다른 하나는 구성을 통해 바인딩 및 끝점을 설정합니다. 두 테스트 모두 두 개의 끝점을 사용합니다. 한 끝점을 사용 하 여는 `SampleUdpProfileBinding` 와 [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) 로 설정 `true`합니다. 다른 끝점은 `UdpTransportBindingElement`가 포함된 사용자 지정 바인딩을 사용합니다. 이 사용 하는 `SampleUdpProfileBinding` 와 [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) 로 설정 `false`합니다. 두 테스트 모두 서비스를 만들고 각 바인딩에 끝점을 추가하며 서비스를 연 다음 서비스를 닫기 전에 사용자가 Enter 키를 누를 때까지 기다립니다.  
   
  서비스 테스트 응용 프로그램을 시작하면 다음과 같이 출력되어야 합니다.  
   

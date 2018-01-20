@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c894d431aa31e32b4a8cb7ff02d39d5aa5e95381
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 응용 프로그램 개요
 <a name="introduction"></a>
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>새 XBAP(XAML 브라우저 응용 프로그램) 만들기  
- 새 XBAP 프로젝트를 만드는 가장 간단한 방법은 [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]을 사용하는 것입니다. 새 프로젝트를 만들려면 템플릿 목록에서 **WPF 브라우저 응용 프로그램**을 선택합니다. 자세한 내용은 [방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)를 참조하세요.  
+ 새 XBAP 프로젝트를 만드는 가장 간단한 방법은 [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]을 사용하는 것입니다. 새 프로젝트를 만들려면 템플릿 목록에서 **WPF 브라우저 응용 프로그램**을 선택합니다. 자세한 내용은 [방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)를 참조하세요.  
   
  XBAP 프로젝트를 실행하면 독립 실행형 창이 아닌 브라우저 창에서 열립니다. [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]에서 XBAP를 디버깅하면 응용 프로그램이 인터넷 영역 권한으로 실행되므로 해당 권한을 초과하는 경우 보안 예외가 throw됩니다. 자세한 내용은 [보안](../../../../docs/framework/wpf/security-wpf.md) 및 [WPF 부분 신뢰 보안](../../../../docs/framework/wpf/wpf-partial-trust-security.md)을 참조하세요.  
   

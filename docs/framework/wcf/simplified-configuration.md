@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3ff1dee5a57b0c134c25631ce5c694b1b6b2c006
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="simplified-configuration"></a>단순화된 구성
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 구성하는 것은 복잡한 태스크일 수 있습니다. 다양한 옵션이 있을 수 있고 경우에 따라 필요한 설정을 확인하는 것이 쉽지 않을 수도 있습니다. 구성 파일을 사용하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스가 더 유연해지지만 문제의 원인을 찾기가 그만큼 더 어려울 수 있습니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 이러한 문제를 해결하고 서비스 구성의 크기와 복잡성을 줄일 수 있는 방법을 제공합니다.  
@@ -126,5 +126,5 @@ ms.lasthandoff: 12/22/2017
  [서비스에 대한 바인딩 구성](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [시스템 제공 바인딩 구성](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [서비스 구성](../../../docs/framework/wcf/configuring-services.md)  
- [Windows Communication Foundation 응용 프로그램 구성](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Windows Communication Foundation 응용 프로그램 구성](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [코드로 WCF 서비스 구성](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

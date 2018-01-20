@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 428d8febe5a789f22eef97301fca3aa4b22f25b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8ef62b06e97e5db22fde0085e21d7a998bfdf22
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>방법: 선택키가 있고 텍스트 줄 바꿈을 사용하는 컨트롤 만들기
 이 예제에서는 선택키가 있고 텍스트 배치를 지원하는 컨트롤을 만드는 방법을 보여 줍니다. 이 예제에서는 사용는 <xref:System.Windows.Controls.Label> 컨트롤을 이러한 개념을 설명 합니다.  
@@ -48,4 +48,4 @@ ms.lasthandoff: 12/22/2017
  [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 레이블의 대상 속성 설정](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+ [방법: 레이블의 대상 속성 설정](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

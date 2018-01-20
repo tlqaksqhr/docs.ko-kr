@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfdc102a5aeb2e3eaccde28a8ce57a1878141e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버깅
 사용자 지정 컨트롤을 만들 때는 경우 종종 있습니다의 디자인 타임 동작을 디버깅 하기 위해 필요 합니다. 사용자 지정 컨트롤에 대 한 사용자 지정 디자이너를 제작 하는 경우 특히 유용 합니다. 자세한 내용은 참조 [연습:는 Windows Forms 제어 하는 이점은의 Visual Studio 디자인 타임 기능을 만드는](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)합니다.  
@@ -55,14 +55,14 @@ ms.lasthandoff: 12/22/2017
  작업을 완료 하는 경우 사용자 지정 컨트롤의 디자인 타임 동작을 디버깅 하는 데 필요한 작업을 이해를 해야 합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ## <a name="creating-the-project"></a>프로젝트 만들기  
  첫 번째 단계는 응용 프로그램 프로젝트를 만드는 것입니다. 사용자 지정 컨트롤을 호스트 하는 응용 프로그램을 빌드하려면이 프로젝트를 사용 합니다.  
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
--   "DebuggingExample" 이라는 Windows 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
+-   "DebuggingExample" 이라는 Windows 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
   
 ## <a name="creating-a-control-library-project"></a>컨트롤 라이브러리 프로젝트 만들기  
  컨트롤 라이브러리 프로젝트를 만들고 사용자 지정 컨트롤을 설정 하는 다음 단계가입니다.  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/22/2017
   
 1.  추가 **Windows 컨트롤 라이브러리** 프로젝트를 솔루션입니다.  
   
-2.  새로 추가 **UserControl** 항목 DebugControlLibrary 프로젝트. 자세한 내용은 참조 [NIB: 방법: 새 프로젝트 항목 추가](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)합니다. 새 소스 파일 "DebugControl"의 기본 이름을 지정 합니다.  
+2.  새로 추가 **UserControl** 항목 DebugControlLibrary 프로젝트. 자세한 내용은 참조 [NIB: 방법: 새 프로젝트 항목 추가](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)합니다. 새 소스 파일 "DebugControl"의 기본 이름을 지정 합니다.  
   
-3.  사용 하는 **솔루션 탐색기**, 코드 파일의 기본 이름으로를 삭제 하 여 프로젝트의 기본 컨트롤 삭제 "`UserControl1`"입니다. 자세한 내용은 참조 [NIB: 방법: 제거, 삭제 및 항목 제외](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)합니다.  
+3.  사용 하는 **솔루션 탐색기**, 코드 파일의 기본 이름으로를 삭제 하 여 프로젝트의 기본 컨트롤 삭제 "`UserControl1`"입니다. 자세한 내용은 참조 [NIB: 방법: 제거, 삭제 및 항목 제외](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)합니다.  
   
 4.  솔루션을 빌드합니다.  
   
@@ -186,4 +186,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>참고 항목  
  [연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  [방법: 디자인 타임 서비스에 액세스](http://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [방법: Windows Forms에서 디자인 타임 지원에 액세스](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+ [방법: Windows Forms에서 디자인 타임 지원 액세스](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

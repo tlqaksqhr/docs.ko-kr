@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ab311974b1fe8cbc2707ee0818806d6264a1573
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="context-exchange-correlation"></a>컨텍스트 교환 상관 관계
 컨텍스트 상관 관계에 설명 된 컨텍스트 교환 메커니즘에 따라는 [.NET 컨텍스트 교환 프로토콜 사양](http://go.microsoft.com/fwlink/?LinkId=166059)합니다. 컨텍스트 상관 관계는 잘 알려진 컨텍스트 헤더나 쿠키를 사용하여 메시지를 올바른 인스턴스와 연결합니다. 컨텍스트 상관 관계를 사용하려면 <xref:System.ServiceModel.BasicHttpContextBinding>에 제공된 끝점에서 <xref:System.ServiceModel.WSHttpContextBinding>, <xref:System.ServiceModel.NetTcpContextBinding> 또는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 같은 컨텍스트 기반 바인딩을 사용해야 합니다. 이 항목에서는 워크플로 서비스의 메시징 작업에 컨텍스트 상관 관계를 사용하는 방법에 대해 설명합니다.  
@@ -109,6 +109,6 @@ Send request2 = new Send
 };  
 ```  
   
- 위에 나온 예제들에서는 컨텍스트 상관 관계가 명시적으로 구성되었습니다. 클라이언트 워크플로도 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에서 호스팅되지 않는 경우 해당 작업이 <xref:System.ServiceModel.Activities.CorrelationScope> 작업 내에 포함되어 있지 않으면 상관 관계를 명시적으로 구성해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]컨텍스트 상관 관계 참조는 [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) 샘플.  
+ 위에 나온 예제들에서는 컨텍스트 상관 관계가 명시적으로 구성되었습니다. 클라이언트 워크플로도 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에서 호스팅되지 않는 경우 해당 작업이 <xref:System.ServiceModel.Activities.CorrelationScope> 작업 내에 포함되어 있지 않으면 상관 관계를 명시적으로 구성해야 합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]컨텍스트 상관 관계 참조는 [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) 샘플.  
   
  워크플로 서비스를 호출하는 클라이언트가 워크플로가 아닌 경우 해당 클라이언트가 첫 번째 호출에서 반환되는 컨텍스트를 워크플로 서비스에 명시적으로 다시 전달한다면 워크플로 서비스를 반복하여 호출할 수 있습니다. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]에서 서비스 참조를 추가하여 생성된 프록시는 기본적으로 이 컨텍스트를 저장하고 전달합니다.

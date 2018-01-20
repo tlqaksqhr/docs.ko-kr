@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 428dd4cfb9533dbf57b984c8bc1c557f37bb7d15
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c26854af585fc026ba9abee77bc3b8a95bcaba79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="secure-data-access"></a>보안 데이터 액세스
 보안 ADO.NET 코드를 쓰려면 내부 데이터 저장소 또는 데이터베이스에서 사용할 수 있는 보안 메커니즘을 알아야 합니다. 또한, 응용 프로그램에 포함된 다른 기능이나 구성 요소의 보안 문제도 고려해야 합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/17/2018
 |리소스|설명|  
 |--------------|-----------------|  
 |[연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)|보호되는 구성을 사용하여 연결 문자열을 암호화하는 것과 같이 연결 정보를 보호하는 기술과 최상의 보안 방법에 대해 설명합니다.|  
-|[데이터 액세스 전략에 대 한 권장 사항](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.|  
+|[데이터 액세스 전략에 대 한 권장 사항](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.|  
 |[연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)|런타임에 사용자 입력을 기반으로 연결 문자열을 만드는 방법에 대해 설명합니다.|  
 |[SQL Server 보안 개요](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server 보안 아키텍처에 대해 설명합니다.|  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/17/2018
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[COM + 역할 기반 보안 및.NET Framework](http://msdn.microsoft.com/en-us/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|COM+ 보안 서비스를 사용하여 관리 코드를 통합하는 방법에 대해 설명합니다.|  
+|[COM + 역할 기반 보안 및.NET Framework](http://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|COM+ 보안 서비스를 사용하여 관리 코드를 통합하는 방법에 대해 설명합니다.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>비관리 코드와의 상호 운용  
  .NET Framework는 비관리 코드와의 상호 작용을 위해 COM 구성 요소, COM+ 서비스, 외부 형식 라이브러리, 다양한 운영 체제 서비스 등을 제공합니다. 비관리 코드를 사용하려면 관리 코드에 대한 보안 경계 외부로 나가야 합니다. 코드와 코드를 호출하는 다른 코드 모두에 비관리 코드 권한(<xref:System.Security.Permissions.SecurityPermission> 플래그가 지정된 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>)이 있어야 합니다. 비관리 코드로 인해 응용 프로그램에 의도하지 않았던 보안상 취약한 부분이 생길 수 있습니다. 따라서 꼭 필요한 경우가 아니면 비관리 코드와의 상호 운용 작업은 피하는 것이 좋습니다.  
@@ -99,12 +99,12 @@ ms.lasthandoff: 01/17/2018
 |리소스|설명|  
 |--------------|-----------------|  
 |[비관리 코드와의 상호 운용](../../../../docs/framework/interop/index.md)|COM 구성 요소를 .NET Framework에 노출하는 방법과 .NET Framework 구성 요소를 COM에 노출하는 방법에 대해 설명하는 항목을 제공합니다.|  
-|[고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|주 interop 어셈블리, 스레딩 및 사용자 지정 마샬링 등에 대해 설명하는 고급 항목을 제공합니다.|  
+|[고급 COM 상호 운용성](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|주 interop 어셈블리, 스레딩 및 사용자 지정 마샬링 등에 대해 설명하는 고급 항목을 제공합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 보안](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [데이터 액세스 전략에 대 한 권장 사항](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [데이터 액세스 전략에 대 한 권장 사항](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

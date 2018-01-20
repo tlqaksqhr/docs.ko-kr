@@ -1,5 +1,5 @@
 ---
-title: "&lt;loadFromRemoteSources&gt; 요소"
+title: '&lt;loadFromRemoteSources&gt; Element'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,21 +17,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: efb968d40e54c7552fba0a592e759f9e83c92309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13b42405a0faf721c46476aadaa0cff8163883c1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; 요소
+# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; Element
 부여할지 여부를 원격 원본에서 어셈블리가 완전 신뢰를 지정 합니다.  
   
 > [!NOTE]
->  Visual Studio 프로젝트의 오류 목록 또는 빌드 오류가 오류 메시지로 인해이 항목에 연결 하 고 된 경우 참조 [하는 방법: Visual Studio에서 웹의 어셈블리를 사용 하 여](http://msdn.microsoft.com/en-us/d8635b63-89a0-41aa-90f4-f351b2111070)합니다.  
+>  Visual Studio 프로젝트의 오류 목록 또는 빌드 오류가 오류 메시지로 인해이 항목에 연결 하 고 된 경우 참조 [하는 방법: Visual Studio에서 웹의 어셈블리를 사용 하 여](http://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)합니다.  
   
  \<configuration>  
-\<런타임 >  
-\<loadFromRemoteSources >  
+\<runtime>  
+\<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   

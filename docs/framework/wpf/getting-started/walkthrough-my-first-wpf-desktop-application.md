@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
 이 연습에서는 개발에 대 한 소개는 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 대부분에 공통 된 요소를 포함 하는 응용 프로그램 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 태그, 코드 숨김, 응용 프로그램 정의 컨트롤, 레이아웃 데이터 바인딩 및 스타일입니다. 
@@ -56,7 +56,7 @@ Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내�
 ## <a name="creating-the-application-project"></a>응용 프로그램 프로젝트 만들기  
  이 섹션에서는 응용 프로그램 정의, 두 페이지 및 이미지를 포함하는 응용 프로그램 인프라를 만듭니다. 
   
-1. Visual Basic 또는 Visual C#에서 `ExpenseIt`이라는 새 WPF 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: 새 WPF 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)를 참조하세요. 
+1. Visual Basic 또는 Visual C#에서 `ExpenseIt`이라는 새 WPF 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: 새 WPF 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)를 참조하세요. 
   
     > [!NOTE]
     >  이 연습에서는 <xref:System.Windows.Controls.DataGrid> .NET Framework 4에서 사용할 수 있는 컨트롤입니다. 프로젝트의 대상.NET Framework 4 있는지 이상 이어야 합니다. 자세한 내용은 참조[하는 방법:.NET Framework의 버전을 대상](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)합니다. 
@@ -115,7 +115,7 @@ Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내�
 ## <a name="adding-files-to-the-application"></a>응용 프로그램에 파일 추가  
  이 섹션에서는 응용 프로그램에 두 페이지와 이미지를 추가합니다. 
   
-1. 프로젝트에 새 페이지 (WPF) 추가 `ExpenseItHome.xaml`합니다. 자세한 내용은 참조 [하는 방법: WPF 프로젝트에 새 항목 추가](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad)합니다. 
+1. 프로젝트에 새 페이지 (WPF) 추가 `ExpenseItHome.xaml`합니다. 자세한 내용은 참조 [하는 방법: WPF 프로젝트에 새 항목 추가](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad)합니다. 
   
      이 페이지는 응용 프로그램이 시작될 때 표시되는 첫 번째 페이지입니다. 이 페이지에서는 사용자가 비용 보고서를 표시할 사람을 선택할 수 있는 사람 목록을 보여줍니다. 
   
@@ -171,7 +171,7 @@ Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내�
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. watermark.png라는 이미지를 프로젝트에 추가합니다. 고유 이미지를 만들거나 샘플 코드에서 파일을 복사할 수 있습니다. 자세한 내용은 참조 [NIB: 방법: 프로젝트에 기존 항목 추가](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)합니다. 
+10. watermark.png라는 이미지를 프로젝트에 추가합니다. 고유 이미지를 만들거나 샘플 코드에서 파일을 복사할 수 있습니다. 자세한 내용은 참조 [NIB: 방법: 프로젝트에 기존 항목 추가](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)합니다. 
 
 ## <a name="building-and-running-the-application"></a>빌드 및 응용 프로그램 실행  
  이 섹션에서는 응용 프로그램을 빌드하고 실행합니다. 
@@ -280,7 +280,7 @@ Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내�
   
 1. ExpenseItHome.xaml을 엽니다. 
   
-2. 추가 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 를 이벤트 처리기는 <xref:System.Windows.Controls.Button> 요소입니다. 자세한 내용은 참조 [하는 방법: 간단한 이벤트 처리기를 만들](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480)합니다. 
+2. 추가 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 를 이벤트 처리기는 <xref:System.Windows.Controls.Button> 요소입니다. 자세한 내용은 참조 [하는 방법: 간단한 이벤트 처리기를 만들](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)합니다. 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   

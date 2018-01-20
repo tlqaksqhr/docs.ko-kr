@@ -22,11 +22,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 자동화 및 화면 크기 조정
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     이 함수를 사용하면 전체 프로세스 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]가 인식되므로 프로세스에 속하는 모든 창이 실제 크기로 유지됩니다. 예를 들어 [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)에서, 강조 표시 사각형을 구성하는 4개의 창은 논리적 좌표가 아닌 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 가져온 물리적 좌표에 있습니다. 샘플에서 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]가 인식되지 않으면 강조 표시가 데스크톱의 논리적 좌표에 그려지며, 그에 따라 96 이외의 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 환경에서 배치가 잘못될 수 있습니다.  
+     이 함수를 사용하면 전체 프로세스 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]가 인식되므로 프로세스에 속하는 모든 창이 실제 크기로 유지됩니다. 에 [강조 표시 샘플](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), 강조 표시 사각형을 구성 하는 네 개의 창이 예를 들어, 다음 위치에서 가져온 물리적 좌표에 있습니다 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], 논리적 좌표가 아닌 합니다. 샘플에서 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]가 인식되지 않으면 강조 표시가 데스크톱의 논리적 좌표에 그려지며, 그에 따라 96 이외의 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 환경에서 배치가 잘못될 수 있습니다.  
   
 2.  커서 좌표를 가져오려면 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `GetPhysicalCursorPos`를 호출합니다. 다음 예제에서는 이 함수를 선언하고 사용하는 방법을 보여 줍니다.  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  사용하는 응용 프로그램에서 비 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]인식 응용 프로그램과 직접 크로스 프로세스 통신을 수행하는 경우 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `PhysicalToLogicalPoint` 및 `LogicalToPhysicalPoint`를 사용하여 논리적 좌표와 물리적 좌표 간을 변환했을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [강조 표시 샘플](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

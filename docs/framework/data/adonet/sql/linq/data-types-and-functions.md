@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 188609e1bb6e5ec3a51aa4411e23742c42d691c9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f9f97f0ae0a75dd15edcb2256d991e987388f1ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-types-and-functions"></a>데이터 형식 및 함수
 다음 표에 나열된 항목에서는 CLR(공용 언어 런타임)의 멤버, 구문 및 캐스트에 대한 LINQ to SQL의 지원 정보를 설명합니다. 지원되는 멤버와 구문은 LINQ to SQL 쿼리에 사용할 수 있습니다.  
@@ -45,4 +45,4 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>참고 항목  
  [SQL-CLR 형식 불일치](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Visual Studio에서.NET framework 클래스 라이브러리](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)
+ [Visual Studio에서.NET framework 클래스 라이브러리](http://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

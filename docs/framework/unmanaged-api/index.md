@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d86cf65dfb3637dbacfeff0cf2b5f48b12c49212
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unmanaged-api-reference"></a>관리되지 않는 API 참조
 이 섹션에는 런타임 호스트, 컴파일러, 디스어셈블러, 난독 처리기, 디버거, 프로파일러 등의 관리 코드 관련 응용 프로그램에서 사용할 수 있는 관리되지 않는 API에 대한 정보가 포함되어 있습니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  [상수](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  CorSym.idl에 정의된 상수에 대해 설명합니다.  
   
- [사용자 지정 인터페이스 특성](http://msdn.microsoft.com/en-us/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [사용자 지정 인터페이스 특성](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  COM(구성 요소 개체 모델) 사용자 지정 인터페이스 특성에 대해 설명합니다.  
   
  [디버깅](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -73,4 +73,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-sections"></a>관련 단원  
  [개발 가이드](../../../docs/framework/development-guide.md)  
   
- [.NET Framework에 대한 고급 정보](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [.NET Framework에 대한 고급 정보](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

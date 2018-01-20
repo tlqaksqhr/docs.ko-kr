@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 874bd286ec7dbafb95df1726fdc902b0ab7716e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms의 추가 보안 고려 사항
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 보안 설정으로 인해 부분적으로 신뢰할 수 있는 환경에서는 로컬 컴퓨터에서와는 다르게 응용 프로그램이 실행될 수 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 여러 가지 중에서도 파일 시스템, 네트워크 및 관리되지 않는 API와 같은 중요한 로컬 리소스에 대한 액세스를 제한합니다. 보안 설정은 Microsoft Win32 API 또는 보안 시스템에서 확인할 수 없는 기타 API를 호출하는 기능에 영향을 줍니다. 또한 파일, 데이터 액세스, 인쇄를 비롯한 응용 프로그램의 다른 측면에도 영향을 줍니다. 부분 신뢰 환경에서의 파일 및 데이터 액세스에 대한 자세한 내용은 [Windows Forms의 파일 및 데이터 액세스 추가 보안](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)을 참조하세요. 부분 신뢰 환경에서의 인쇄에 대한 자세한 내용은 [Windows Forms의 인쇄 추가 보안](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)을 참조하세요.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|약간의 제한을 받으면서 클립보드를 사용할 수 있습니다. 복사 또는 잘라내기 명령 작업과 같이 클립보드에 데이터를 넣는 기능은 제한을 받지 않습니다. 텍스트 상자와 같이 붙여넣기를 허용하는 내장 컨트롤은 클립보드 데이터를 받아들일 수 있지만 사용자 정의 컨트롤은 프로그래밍 방식으로 클립보드에서 데이터를 읽을 수는 없습니다.|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.NoClipboard>|클립보드를 사용할 수 없습니다.|  
   
- 기본적으로 로컬 인트라넷 영역 받는 <xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard> 액세스 및 인터넷 영역 받는 <xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard> 액세스 합니다. 이것은 응용 프로그램에서 클립보드에 데이터를 복사할 수 있지만 프로그래밍 방식으로 클립보드에 데이터를 붙여넣거나 클립보드에서 데이터를 읽을 수는 없다는 것을 의미합니다. 이러한 제한으로 인해 신뢰 수준이 완전 신뢰가 아닌 프로그램은 다른 응용 프로그램이 클립보드에 복사한 내용을 읽을 수 없습니다. 응용 프로그램에 클립보드에 대한 모든 액세스가 필요하지만 해당 권한이 없을 경우에는 응용 프로그램의 권한을 높여야 합니다. 권한 높이기에 대한 자세한 내용은 [일반 보안 정책 관리](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)를 참조하세요.  
+ 기본적으로 로컬 인트라넷 영역 받는 <xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard> 액세스 및 인터넷 영역 받는 <xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard> 액세스 합니다. 이것은 응용 프로그램에서 클립보드에 데이터를 복사할 수 있지만 프로그래밍 방식으로 클립보드에 데이터를 붙여넣거나 클립보드에서 데이터를 읽을 수는 없다는 것을 의미합니다. 이러한 제한으로 인해 신뢰 수준이 완전 신뢰가 아닌 프로그램은 다른 응용 프로그램이 클립보드에 복사한 내용을 읽을 수 없습니다. 응용 프로그램에 클립보드에 대한 모든 액세스가 필요하지만 해당 권한이 없을 경우에는 응용 프로그램의 권한을 높여야 합니다. 권한 높이기에 대한 자세한 내용은 [일반 보안 정책 관리](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)를 참조하세요.  
   
 ## <a name="window-manipulation"></a>창 조작  
  <xref:System.Security.Permissions.UIPermission> 클래스에는 또한 창 조작 및 기타 UI 관련 작업 및 연결 된 수행할 수 있는 권한을 제어 <xref:System.Security.Permissions.UIPermissionWindow> 열거형 값의 액세스 수준을 나타냅니다. 다음 표에서는 가능한 권한 수준을 보여 줍니다.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 |구성 요소|멤버|  
 |---------------|------------|  
 |<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A> 메서드<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A>속성<br />-   `Exit` 메서드<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A> 메서드<br />-   <xref:System.Windows.Forms.Application.ThreadException>이벤트|  
-|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> 메서드|  
+|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ method<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> 메서드|  
 |<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A> 메서드<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A> 메서드<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A> 메서드<br />-   <xref:System.Windows.Forms.Control.WndProc%2A> 메서드|  
 |<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A>메서드<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> 메서드|  
 |<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow>클래스|  
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
  응용 프로그램을 요청 해야 경우 응용 프로그램에 비관리 코드를 호출할 수 있는 권한이 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 권한 또는 있습니다 기능을 구현 하는 다른 방법을 고려해 야; 대부분의 경우에서 Windows Forms는 Win32 API에 대 한 관리 되는 대체 방법을 제공 함수입니다. 이러한 대안이 없는 상황에서 비관리 코드에 액세스해야 할 경우에는 응용 프로그램의 권한을 높여야 합니다.  
   
- 비관리 코드를 호출할 수 있는 권한을 부여하면 응용 프로그램이 거의 모든 작업을 수행할 수 있습니다. 따라서 비관리 코드를 호출할 수 있는 권한은 신뢰할 수 있는 소스의 응용 프로그램에만 부여해야 합니다. 또는 응용 프로그램에 따라 비관리 코드를 호출하는 기능을 옵션으로 지정하거나 완전 신뢰 환경에서만 이 기능을 사용하도록 할 수 있습니다. 위험한 권한에 대한 자세한 내용은 [위험한 권한 및 정책 관리](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)를 참조하세요. 권한 높이기에 대한 자세한 내용은 [NIB: 일반 보안 정책 관리](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)를 참조하세요.  
+ 비관리 코드를 호출할 수 있는 권한을 부여하면 응용 프로그램이 거의 모든 작업을 수행할 수 있습니다. 따라서 비관리 코드를 호출할 수 있는 권한은 신뢰할 수 있는 소스의 응용 프로그램에만 부여해야 합니다. 또는 응용 프로그램에 따라 비관리 코드를 호출하는 기능을 옵션으로 지정하거나 완전 신뢰 환경에서만 이 기능을 사용하도록 할 수 있습니다. 위험한 권한에 대한 자세한 내용은 [위험한 권한 및 정책 관리](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)를 참조하세요. 권한 높이기에 대한 자세한 내용은 [NIB: 일반 보안 정책 관리](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows Forms의 파일 및 데이터 액세스 추가 보안](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  

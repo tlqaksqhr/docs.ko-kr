@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 819bb9dc9817050e45a39331361dd5489692f0b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e583acee6309b6f8145cf8567cff12cea1c237e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID를 디자인 타임에 지정할 수 있습니다. 클라이언트와 서비스 간의 핸드셰이크 프로세스에서 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 인프라는 필요한 서비스 ID가 이 요소 값과 일치하여 인증될 수 있는지 확인합니다. 자세한 내용은 참조 [서비스 Id 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
- \<시스템입니다. ServiceModel >  
-\<클라이언트 >  
-\<끝점 >  
+ \<system.ServiceModel>  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -65,12 +65,12 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<사용자 지정 >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|netPeerTcpBinding에 대한 사용자 지정 피어 확인자를 지정합니다.|  
-|[\<끝점 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)|다양한 형식의 끝점을 구성합니다.|  
-|[\<발급자 >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|페더레이션 서비스에 대한 STS(보안 토큰 서비스)를 지정합니다.|  
-|[\<issuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|페더레이션 서비스의 STS(보안 토큰 서비스)에 대한 메타데이터 끝점을 지정합니다.|  
-|[\<r s >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|사용자 지정 바인딩에서 발급된 토큰에 대한 매개 변수를 정의합니다.|  
-|[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|로컬 STS(보안 토큰 서비스)를 지정합니다.|  
+|[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|netPeerTcpBinding에 대한 사용자 지정 피어 확인자를 지정합니다.|  
+|[\<endpoint>](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|다양한 형식의 끝점을 구성합니다.|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|페더레이션 서비스에 대한 STS(보안 토큰 서비스)를 지정합니다.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|페더레이션 서비스의 STS(보안 토큰 서비스)에 대한 메타데이터 끝점을 지정합니다.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|사용자 지정 바인딩에서 발급된 토큰에 대한 매개 변수를 정의합니다.|  
+|[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|로컬 STS(보안 토큰 서비스)를 지정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

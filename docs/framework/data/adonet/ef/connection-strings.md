@@ -14,18 +14,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c83c1883d00db1da8f0e7945d9cda5f2eb3f56a0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings"></a>연결 문자열
 연결 문자열에는 데이터 공급자에서 데이터 소스에 매개 변수로 전달되는 초기화 정보가 있습니다. 연결 문자열 구문은 데이터 공급자에 따라 다르며 연결을 여는 동안 연결 문자열이 구문 분석됩니다. Entity Framework에서 사용하는 연결 문자열에는 Entity Framework를 지원하는 기본 ADO.NET 데이터 공급자에 연결하는 데 사용되는 정보가 들어 있습니다. 또한 필요한 모델 및 매핑 파일에 대한 정보도 들어 있습니다.  
   
  연결 문자열은 EntityClient 공급자가 모델 및 매핑 메타데이터에 액세스하고 데이터 소스에 연결할 때 사용됩니다. <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>의 <xref:System.Data.EntityClient.EntityConnection> 속성을 통해 연결 문자열에 액세스하거나 설정할 수 있습니다. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 클래스를 사용하여 프로그래밍 방식으로 연결 문자열의 매개 변수를 생성하거나 액세스할 수 있습니다. 자세한 내용은 참조 [하는 방법: EntityConnection 연결 문자열 작성](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)합니다.  
   
- [엔터티 데이터 모델 도구](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527) 응용 프로그램의 구성 파일에 저장 된 연결 문자열을 생성 합니다. <xref:System.Data.Objects.ObjectContext>는 개체 쿼리를 만들 때 이 연결 정보를 자동으로 검색합니다. <xref:System.Data.EntityClient.EntityConnection> 인스턴스에서 사용하는 <xref:System.Data.Objects.ObjectContext>은 <xref:System.Data.Objects.ObjectContext.Connection%2A> 속성에서 액세스할 수 있습니다. 자세한 내용은 참조 [관리 연결 및 트랜잭션](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)합니다.  
+ [엔터티 데이터 모델 도구](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) 응용 프로그램의 구성 파일에 저장 된 연결 문자열을 생성 합니다. <xref:System.Data.Objects.ObjectContext>는 개체 쿼리를 만들 때 이 연결 정보를 자동으로 검색합니다. <xref:System.Data.EntityClient.EntityConnection> 인스턴스에서 사용하는 <xref:System.Data.Objects.ObjectContext>은 <xref:System.Data.Objects.ObjectContext.Connection%2A> 속성에서 액세스할 수 있습니다. 자세한 내용은 참조 [관리 연결 및 트랜잭션](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)합니다.  
   
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수  
  연결 문자열 형식은 키/값 매개 변수 쌍의 세미콜론으로 구분된 목록입니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/17/2018
 |`Metadata`|`Name` 키워드를 지정하지 않은 경우에 필요합니다. 메타데이터와 매핑 정보를 검색할 대상 디렉터리, 파일 및 리소스 위치에 대한 파이프로 구분된 목록입니다. 예를 들면 다음과 같습니다.<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> 파이프 구분 기호 양쪽의 공백은 무시됩니다.<br /><br /> 이 키워드는 `Name` 키워드와 함께 사용할 수 없습니다.|  
 |`Name`|응용 프로그램에서는 필수 키워드/값 연결 문자열 값을 제공하는 응용 프로그램 구성 파일에 연결 이름을 선택적으로 지정할 수 있습니다. 이 경우에는 연결 문자열에 이름을 직접 지정할 수 없습니다. `Name` 키워드는 구성 파일에 사용할 수 없습니다.<br /><br /> `Name` 키워드가 엔터티 연결 문자열에 포함되어 있지 않은 경우 Provider 키워드에 대해 비어 있지 않은 값이 필요합니다.<br /><br /> 이 키워드는 다른 모든 연결 문자열 키워드와 함께 사용할 수 없습니다.|  
   
- 다음은에 대 한 연결 문자열의 예는 [AdventureWorks Sales 모델](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) 응용 프로그램 구성 파일에 저장 합니다.  
+ 다음은에 대 한 연결 문자열의 예는 [AdventureWorks Sales 모델](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) 응용 프로그램 구성 파일에 저장 합니다.  
   
   
   
@@ -121,5 +121,5 @@ Metadata=.\
 ## <a name="see-also"></a>참고 항목  
  [데이터 공급자 작업](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [배포 고려 사항](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [연결 및 트랜잭션 관리](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [연결 및 트랜잭션 관리](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [연결 문자열](../../../../../docs/framework/data/adonet/connection-strings.md)

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>끝점 주소 지정
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와의 모든 통신은 해당 통신의 끝점을 통해 수행됩니다. 각 <xref:System.ServiceModel.Description.ServiceEndpoint>에는 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 및 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>가 포함되어 있습니다. 계약은 사용할 수 있는 작업을 지정합니다. 바인딩은 서비스와 통신하는 방법을 지정하고 주소는 서비스를 찾을 위치를 지정합니다. 모든 끝점에는 고유한 주소가 있어야 합니다. 끝점 주소는 서비스 주소를 표시하는 URI(Uniform Resource Identifier)가 포함된 <xref:System.ServiceModel.EndpointAddress> 클래스, 서비스의 보안 ID를 표시하는 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 및 선택적 <xref:System.ServiceModel.EndpointAddress.Headers%2A>의 컬렉션에 의해 표시됩니다. 선택적 헤더는 끝점을 확인하거나 상호 작용하는 데 필요한 자세한 주소 지정 정보를 제공합니다. 예를 들어 헤더는 들어오는 메시지를 처리하는 방법, 끝점이 회신 메시지를 보내야 하는 위치 또는 여러 인스턴스를 사용할 수 있는 경우 특정 사용자의 들어오는 메시지를 처리하는 데 사용할 서비스 인스턴스를 나타낼 수 있습니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  IIS를 사용하여 호스팅하는 경우 사용자는 <xref:System.ServiceModel.ServiceHost> 인스턴스를 직접 관리하지 않습니다. IIS에서 호스팅하는 경우 기본 주소는 항상 서비스의 .svc 파일에 지정된 주소입니다. 따라서 IIS에서 호스팅되는 서비스 끝점에는 상대 끝점 주소를 사용해야 합니다. 정규화된 끝점 주소를 제공할 경우 서비스 배포 시 오류가 발생할 수 있습니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][인터넷 정보 서비스에서 호스팅되는 WCF 서비스 배포](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)합니다.  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>구성에서 끝점 주소 정의  
- 사용 하 여 구성 파일에서 끝점을 정의 하는 [ \<끝점 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
+ 사용 하 여 구성 파일에서 끝점을 정의 하는 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   

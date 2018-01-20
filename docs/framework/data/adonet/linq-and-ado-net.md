@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d55185153e3d03ddb2b1726ed25566d6b5f396ae
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b020b3df627fcb220f4227d76fdf8eb3d60e80e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ 및 ADO.NET
 오늘날 많은 비즈니스 개발자는 2개 이상의 프로그래밍 언어를 사용해야 합니다. 하나는 비즈니스 논리와 프레젠테이션 계층을 위한 상위 수준 언어(예: [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 또는 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)])이고 다른 하나는 데이터베이스와 상호 작용하는 쿼리 언어(예: [!INCLUDE[tsql](../../../../includes/tsql-md.md)])입니다. 따라서 효과적으로 작업을 수행하려면 여러 언어에 능숙해야 하며 개발 환경에서 언어 불일치 문제도 발생하게 됩니다. 예를 들어, 데이터 액세스 API를 사용하여 데이터베이스에 대한 쿼리를 실행하는 응용 프로그램에서는 따옴표를 사용하여 쿼리를 문자열 리터럴로 지정합니다. 이 쿼리 문자열은 컴파일러에서 인식되지 않으므로 잘못된 구문, 참조되는 열이나 행이 실제로 있는지 여부 등의 오류가 검사되지 않습니다. 쿼리 매개 변수에 대한 형식 검사뿐 아니라 `IntelliSense` 지원도 제공되지 않습니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/17/2018
   
  ![LINQ to ADO.NET 개요](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
   
- LINQ 언어 기능에 대 한 일반적인 정보를 참조 하십시오. [LINQ 소개](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)합니다. 응용 프로그램에 LINQ를 사용 하는 방법에 대 한 정보를 참조 하십시오.는 [빌드에 없음: LINQ 일반 프로그래밍 가이드](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049), 포함 된 자세한 정보를 LINQ 기술을 사용 하는 방법에 대 한 합니다.  
+ LINQ 언어 기능에 대 한 일반적인 정보를 참조 하십시오. [LINQ 소개](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)합니다. 응용 프로그램에 LINQ를 사용 하는 방법에 대 한 정보를 참조 하십시오.는 [빌드에 없음: LINQ 일반 프로그래밍 가이드](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049), 포함 된 자세한 정보를 LINQ 기술을 사용 하는 방법에 대 한 합니다.  
   
  다음 단원에서는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 및 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]에 대한 자세한 정보를 제공합니다.  
   

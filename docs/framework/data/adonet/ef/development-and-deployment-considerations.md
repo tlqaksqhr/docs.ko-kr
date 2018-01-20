@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e6c494354532ffdeffdc714f748c5b009511443a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6d0d1a4a604549f18e48d690753451be4c98f280
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="development-and-deployment-considerations"></a>개발 및 배포 고려 사항
 이 단원의 항목에서는 ADO.NET Entity Framework를 기반으로 하는 응용 프로그램을 개발하거나 배포할 때 고려해야 할 문제를 다룹니다.  
@@ -36,4 +36,4 @@ ms.lasthandoff: 01/17/2018
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [시작](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [ADO.NET 엔터티 데이터 모델 도구](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)
+ [ADO.NET 엔터티 데이터 모델 도구](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

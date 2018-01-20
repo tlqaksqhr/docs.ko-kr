@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 13b254867200897acad2868e396d152a5f9efcbd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e6ab8826f2298a8660a85d739fbe3456374b476
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-prioritybinding"></a>방법: PriorityBinding 구현
 <xref:System.Windows.Data.PriorityBinding>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 바인딩의 목록을 지정 하 여 작동 합니다. 바인딩 목록은 가장 낮은 우선 순위를 높은 우선 순위에서 정렬 됩니다. 우선 순위가 높은 바인딩이 값을 반환 하는 경우 성공적으로 처리 될 때 다음는 없습니다 목록에 다른 바인딩을 처리할 필요가 있습니다. 우선 순위가 높은 바인딩이 평가할 오랜 시간이 걸리는 경우 수, 다음 우선 순위가 가장 높은 값을 성공적으로 반환 하는 더 높은 우선 순위의 바인딩 값을 성공적으로 반환 될 때까지 사용 됩니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  get 접근자 `SlowestDP` 의 값을 반환 하기 전에 5 초 동안 대기는 `_slowestDP` 데이터 멤버입니다.  
   
 > [!NOTE]
->  이 예제는 예시용입니다. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 지침 속성 필드 집합 보다 더 느린 대량 주문 인을 정의 하는 것이 좋습니다. 자세한 내용은 참조 [NIB: 메서드와 속성 사이의 선택](http://msdn.microsoft.com/en-us/55825e8f-7e2e-448a-9505-7217cc91b1af)합니다.  
+>  이 예제는 예시용입니다. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 지침 속성 필드 집합 보다 더 느린 대량 주문 인을 정의 하는 것이 좋습니다. 자세한 내용은 참조 [NIB: 메서드와 속성 사이의 선택](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)합니다.  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

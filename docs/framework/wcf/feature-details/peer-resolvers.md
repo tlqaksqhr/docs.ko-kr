@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peer-resolvers"></a>피어 확인자
 메시에 연결하려면 피어 노드에 다른 노드의 IP 주소가 필요합니다. IP 주소를 가져오려면 메시 ID를 사용하고 해당 메시 ID로 등록된 노드에 해당하는 주소 목록을 반환하는 확인자 서비스에 연결합니다. 확인자는 메시의 각 노드가 서비스에 등록되게 하여 만드는 등록된 주소 목록을 유지합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  로컬 및 임시 네트워크에 사용자 지정 확인자를 사용하는 경우 링크-로컬 또는 임시 네트워크를 사용하거나 지원하는 응용 프로그램이 연결 시 사용할 단일 링크-로컬 주소를 선택하는 논리를 포함하는 것이 좋습니다. 이렇게 하면 여러 개의 링크-로컬 주소가 있는 컴퓨터로 인해 발생하는 혼동을 방지할 수 있습니다. 이에 따라 피어 채널은 한 번에 하나의 링크-로컬 주소 사용만 지원합니다. `ListenIpAddress`의 <xref:System.ServiceModel.NetPeerTcpBinding> 속성을 사용하여 이 주소를 지정할 수 있습니다.  
   
- 사용자 지정 해결 프로그램을 구현 하는 방법의 데모를 보려면 참조 [피어 채널 사용자 지정 피어 확인자](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)합니다.  
+ 사용자 지정 해결 프로그램을 구현 하는 방법의 데모를 보려면 참조 [피어 채널 사용자 지정 피어 확인자](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [CustomPeerResolverService: 클라이언트 등록 내부](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

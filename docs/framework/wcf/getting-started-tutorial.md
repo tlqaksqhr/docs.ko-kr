@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>초보자를 위한 자습서
 이 단원에 포함된 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 프로그래밍 기능에 대해 간략하게 설명합니다. 이 항목 아래쪽에 나열된 순서대로 진행하세요. 이 자습서를 수행하면 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 클라이언트 응용 프로그램을 만드는 데 필요한 단계에 대한 기초적인 이해를 할 수 있습니다. 서비스는 하나 이상의 끝점을 노출하며 각 끝점은 하나 이상의 서비스 작업을 노출합니다. *끝점* 서비스의 서비스를 찾을 수 있는, 클라이언트는 서비스 및 기능을 정의 하는 계약와 통신 하는 방법을 설명 하는 정보를 포함 하는 바인딩을 주소를 지정 합니다. 클라이언트에 서비스에서 제공 합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  실행 하는 경우 [!INCLUDE[wv](../../../includes/wv-md.md)] 시작 해야 Windows 운영 체제의 이후 버전 또는 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 시작 메뉴로 이동 하 고 Visual Studio 2011을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 **관리자 권한으로 실행**합니다. 항상 있습니다 수 바로 가기를 만드는 바로 가기를 마우스 오른쪽 단추로 클릭, 속성을 선택 하는 관리자 권한으로 Visual Studio 2011을 시작 하는 **호환성** 탭을 확인는 **관리자로이프로그램을실행합니다.** 확인란을 선택 합니다. 이 바로 가기로 Visual Studio 2011을 시작하면 프로그램이 항상 관리자 권한으로 실행됩니다.  
   
- 하드 디스크에 다운로드할 수 있는 및 실행에서 항목을 참조 하는 샘플 응용 프로그램에 대 한 [Windows Communication Foundation 샘플](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)합니다. 이 항목에서 참조, 특히는 [시작](../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
+ 하드 디스크에 다운로드할 수 있는 및 실행에서 항목을 참조 하는 샘플 응용 프로그램에 대 한 [Windows Communication Foundation 샘플](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)합니다. 이 항목에서 참조, 특히는 [시작](../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
   
  서비스와 클라이언트를 만들기에 대 한 자세한 내용은 참조 하십시오. [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>관련 단원  
- [Windows Communication Foundation 샘플](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation 샘플](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [기본 프로그래밍 수명 주기](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

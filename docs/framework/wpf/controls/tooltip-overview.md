@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c945d23def3bbf6284e7e0db95d391066256df6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tooltip-overview"></a>도구 설명 개요
 도구 설명 같은 요소를 위로 마우스 포인터를 놓을 때 표시 되는 작은 팝업 창인은는 <xref:System.Windows.Controls.Button>합니다. 이 항목에서는 도구 설명을 소개하고 도구 설명 콘텐츠를 만들고 사용자 지정하는 방법을 설명합니다.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>ToolTipService의 시간 간격 속성 사용  
  <xref:System.Windows.Controls.ToolTipService> 클래스는 시간을 표시 하는 도구 설명을 설정할 수 있습니다에 대 한 다음 속성을 제공: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, 및 <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>합니다.  
   
- 사용 하 여는 <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> 및 <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> 지연 시간을 지정 하려면 속성 짧은 전에 <xref:System.Windows.Controls.ToolTip> 표시 시간을 지정 하 고는 <xref:System.Windows.Controls.ToolTip> 계속 표시 됩니다. 자세한 내용은 [How to: Delay the Display of a ToolTip](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7)(방법: ToolTip 표시 지연)을 참조하세요.  
+ 사용 하 여는 <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> 및 <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> 지연 시간을 지정 하려면 속성 짧은 전에 <xref:System.Windows.Controls.ToolTip> 표시 시간을 지정 하 고는 <xref:System.Windows.Controls.ToolTip> 계속 표시 됩니다. 자세한 내용은 [How to: Delay the Display of a ToolTip](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7)(방법: ToolTip 표시 지연)을 참조하세요.  
   
  <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> 속성 마우스 포인터를 빠르게 이동 하면 서로 다른 컨트롤에 대 한 도구 설명 초기 지연 없이 표시할지 여부를 결정 합니다. 에 대 한 자세한 내용은 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> 속성 참조 [BetweenShowDelay 속성을 사용 하 여](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)합니다.  
   

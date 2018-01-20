@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1fa9592dd6f2f0cb3f6fc70f0cc5843ee3b76403
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b1e3a91c4943a4f052d8136eaf32c0c431dd4924
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="introduction-to-wpf-in-visual-studio-2015"></a>Visual Studio 2015에서의 WPF 소개
 Visual Studio 2015의 WPF(Windows Presentation Foundation)는 Windows에서 최신 LOB(기간 업무) 데스크톱 응용 프로그램을 빌드할 수 있는 통합된 프로그래밍 모델을 개발자에게 제공합니다.  
@@ -42,6 +42,6 @@ Visual Studio 2015의 WPF(Windows Presentation Foundation)는 Windows에서 최�
   
  [WPF 소개](/visualstudio/designers/introduction-to-wpf)  
   
- [.NET Framework의 WPF](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)  
+ [.NET Framework의 WPF](https://msdn.microsoft.com/library/ms754130\(v=vs.100\).aspx)  
   
  [Visual Studio 가져오기](https://www.visualstudio.com/features/wpf-vs)

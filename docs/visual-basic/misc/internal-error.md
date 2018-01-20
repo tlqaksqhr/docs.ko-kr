@@ -9,11 +9,11 @@ ms.assetid: 21266dbb-f4a1-4c5d-a646-27909cf53248
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cfe21db37f5df9fc6657b44b652e7997e851f52d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c4023233e588da83d37c061b77cf7cb8988fd6e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="internal-error-visual-basic"></a>내부 오류(Visual Basic)
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 내부 오작동이 발생했습니다.  
@@ -24,4 +24,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [On Error 문](../../visual-basic/language-reference/statements/on-error-statement.md)  
- [메서드를 발생 시킵니다 (Err 개체)](http://msdn.microsoft.com/en-us/80ffe307-57f1-4ef5-92d7-8ae7b6ec3f42)
+ [메서드를 발생 시킵니다 (Err 개체)](http://msdn.microsoft.com/library/80ffe307-57f1-4ef5-92d7-8ae7b6ec3f42)

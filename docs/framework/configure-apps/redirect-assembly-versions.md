@@ -20,11 +20,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="redirecting-assembly-versions"></a>어셈블리 버전 리디렉션
 .NET Framework 어셈블리, 타사 어셈블리 또는 고유의 앱 어셈블리로 컴파일 타임 바인딩 참조를 리디렉션할 수 있습니다. 게시자 정책, 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일 등을 통한 다양한 방법으로 여러 버전의 어셈블리를 사용하도록 응용 프로그램을 리디렉션할 수 있습니다. 이 문서에서는 .NET Framework에서 어셈블리 바인딩의 작동 방식과 구성 방법에 대해 설명합니다.  
@@ -170,7 +170,7 @@ ms.lasthandoff: 12/22/2017
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [응용 프로그램 구성](../../../docs/framework/configure-apps/index.md)  
- [.NET Framework 앱 구성](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [.NET Framework 앱 구성](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [런타임 설정 스키마](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)  
  [방법: 게시자 정책 만들기](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

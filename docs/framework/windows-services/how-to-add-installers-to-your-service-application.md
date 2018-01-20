@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15487d4311f896aa09c1c7712292058086a49b50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>방법: 서비스 응용 프로그램에 설치 관리자 추가
 Visual Studio 리소스에 연결 된 서비스 응용 프로그램을 설치할 수 있는 설치 구성 요소를 제공 합니다. 설치 구성 요소는 시스템을 설치 하는 것와를 서비스가 존재 하는지 확인 하 여 서비스 제어 관리자에서 개별 서비스를 등록 합니다. 서비스 응용 프로그램을 사용할 때 자동으로 프로젝트에 적절 한 설치 관리자를 추가 하려면 속성 창에서 링크를 선택할 수 있습니다.  
@@ -39,7 +39,7 @@ Visual Studio 리소스에 연결 된 서비스 응용 프로그램을 설치할
  서비스를 제대로 설치 되도록 설치 관리자 내에서 특별 한 코딩이 할 필요가 없습니다. 그러나 설치 프로세스에 특별 한 기능을 추가 해야 할 경우 설치 관리자의 내용을 수정 해야 경우에 따라 합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ### <a name="to-add-installers-to-your-service-application"></a>서비스 응용 프로그램에 설치 관리자를 추가 하려면  
   

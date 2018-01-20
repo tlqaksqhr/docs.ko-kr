@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기
 연결 된 사용자 지정 디자이너를 제작 하 여 사용자 지정 컨트롤에 대 한 디자인 타임 환경을 개선할 수 있습니다.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  전체 코드 목록을 보려면 [하는 방법: Windows Forms 제어 하는 이점은의 디자인 타임 기능을 만드는](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
--   "MarqueeControlTest." 라는 Windows Forms 응용 프로그램 프로젝트 만들기 자세한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)을 참조하세요.  
+-   "MarqueeControlTest." 라는 Windows Forms 응용 프로그램 프로젝트 만들기 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
   
 ## <a name="creating-a-control-library-project"></a>컨트롤 라이브러리 프로젝트 만들기  
  다음 단계는 컨트롤 라이브러리 프로젝트를 만드는 것입니다. 새 사용자 지정 컨트롤 및 해당 해당 사용자 지정 디자이너를 만듭니다.  
@@ -95,11 +95,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  Windows Forms 컨트롤 라이브러리 프로젝트를 솔루션에 추가 합니다. "MarqueeControlLibrary" 프로젝트 이름을  
   
-2.  사용 하 여 **솔루션 탐색기**, 선택한 언어에 따라 이름이 "UserControl1.cs" 또는 "UserControl1.vb", 원본 파일을 삭제 하 여 프로젝트의 기본 컨트롤을 삭제 합니다. 자세한 내용은 참조 [NIB: 방법: 제거, 삭제 및 항목 제외](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)합니다.  
+2.  사용 하 여 **솔루션 탐색기**, 선택한 언어에 따라 이름이 "UserControl1.cs" 또는 "UserControl1.vb", 원본 파일을 삭제 하 여 프로젝트의 기본 컨트롤을 삭제 합니다. 자세한 내용은 참조 [NIB: 방법: 제거, 삭제 및 항목 제외](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)합니다.  
   
 3.  새로 추가 <xref:System.Windows.Forms.UserControl> 항목의 `MarqueeControlLibrary` 프로젝트. 새 소스 파일 "MarqueeControl"의 기본 이름 지정  
   
-4.  사용 하 여 **솔루션 탐색기**에서 새 폴더 만들기는 `MarqueeControlLibrary` 프로젝트. 자세한 내용은 참조 [NIB: 방법: 새 프로젝트 항목 추가](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)합니다. 새 폴더를 이름을 지정 "" 디자인 중"입니다.  
+4.  사용 하 여 **솔루션 탐색기**에서 새 폴더 만들기는 `MarqueeControlLibrary` 프로젝트. 자세한 내용은 참조 [NIB: 방법: 새 프로젝트 항목 추가](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)합니다. 새 폴더를 이름을 지정 "" 디자인 중"입니다.  
   
 5.  마우스 오른쪽 단추로 클릭는 **디자인** 폴더는 새 클래스를 추가 합니다. 소스 파일 "MarqueeControlRootDesigner"의 기본 이름 지정  
   

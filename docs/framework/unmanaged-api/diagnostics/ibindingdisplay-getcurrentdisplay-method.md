@@ -22,11 +22,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7013b07d0ebf2709d6c2b6f791960a8e7d35d678
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cce7638bfe6ffe0d4b5f7f9a64aaff0c59c860cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay 메서드
 현재 바인딩 표시 정보를 반환합니다.  
@@ -46,7 +46,7 @@ HRESULT GetCurrentDisplay (
 ## <a name="remarks"></a>설명  
  [ibindingdisplay:: Initializeforprocess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) 메서드 이전에 성공 했습니다 해야 프로그램은 디버거에서 중지 되어야 합니다.  
   
- 호출자는 반환 된 할당을 취소 해야 `SAFEARRAY` 메모리를 사용 하 여 [SafeArrayDestroy](http://msdn.microsoft.com/en-us/fc94f7e7-b903-4c78-905c-54df1f8d13fa)합니다.  
+ 호출자는 반환 된 할당을 취소 해야 `SAFEARRAY` 메모리를 사용 하 여 [SafeArrayDestroy](http://msdn.microsoft.com/library/fc94f7e7-b903-4c78-905c-54df1f8d13fa)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  

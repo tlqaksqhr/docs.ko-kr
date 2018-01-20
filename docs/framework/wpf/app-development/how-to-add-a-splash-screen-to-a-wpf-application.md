@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ed9669479a3854c843716a1aeb37f7701ea7d7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 121cbc1c07ea8f6458df81d861aea3f8e1f91086
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>방법: WPF 응용 프로그램에 시작 화면 추가
 이 항목에서는 시작 창에 추가 하는 방법을 보여 줍니다. 또는 *시작 화면*, Windows Presentation Foundation (WPF) 응용 프로그램에 있습니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  만들기 또는 시작 화면에 대 한 사용 하려는 이미지를 찾습니다. Windows Imaging 구성 요소 (WIC)에서 지원 되는 모든 이미지 형식을 사용할 수 있습니다. 예를 들어, BMP, GIF, JPEG, PNG 또는 TIFF 형식을 사용할 수 있습니다.  
   
-2.  WPF 응용 프로그램 프로젝트에 이미지 파일을 추가 합니다. 자세한 내용은 참조 [NIB: 방법: 프로젝트에 기존 항목 추가](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)합니다.  
+2.  WPF 응용 프로그램 프로젝트에 이미지 파일을 추가 합니다. 자세한 내용은 참조 [NIB: 방법: 프로젝트에 기존 항목 추가](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)합니다.  
   
 3.  솔루션 탐색기에서 이미지를 선택 합니다.  
   
@@ -61,4 +61,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.SplashScreen>  
- [NIB: 방법: 프로젝트에 기존 항목 추가](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+ [NIB: 방법: 프로젝트에 기존 항목 추가](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)

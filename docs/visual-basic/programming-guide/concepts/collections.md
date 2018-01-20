@@ -11,11 +11,11 @@ ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aac9ed655982ff4618e0bdb7fd2af16aaa546719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0ea3b45803bc37f35d516260a57db422827f1e1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-visual-basic"></a>컬렉션 (Visual Basic)
 대부분의 응용 프로그램의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다. 개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.  
@@ -244,7 +244,7 @@ End Class
   
  제네릭 컬렉션을 사용 해야 가능 하면 항상는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임 스페이스 또는 <xref:System.Collections.Concurrent> 네임 스페이스는 Visual Basic 대신 `Collection` 클래스입니다.  
   
- 자세한 내용은 <xref:Microsoft.VisualBasic.Collection>을 참조하십시오.  
+ 자세한 내용은 <xref:Microsoft.VisualBasic.Collection>을 참조하세요.  
   
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>키/값 쌍의 컬렉션 구현   
@@ -470,7 +470,7 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>사용자 지정 컬렉션 정의  
- <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하여 컬렉션을 정의할 수 있습니다. 자세한 내용은 참조 하십시오. [컬렉션 열거](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f)합니다.  
+ <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하여 컬렉션을 정의할 수 있습니다. 자세한 내용은 참조 하십시오. [컬렉션 열거](http://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f)합니다.  
   
  사용자 지정 컬렉션을 정의할 수도 있지만, 일반적으로 이 항목의 앞부분에 있는 [컬렉션 종류](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)에서 설명한 .NET Framework에 포함된 컬렉션을 대신 사용하는 것이 좋습니다.  
   
@@ -547,7 +547,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iterators  
+##  <a name="iterators"></a>반복기  
  *반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 반복기를 사용 하 여 한 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) 문을 한 번에 하나씩 컬렉션의 각 요소를 반환 합니다.  
   
  사용 하 여 반복기를 호출는 [각각에 대해... 다음](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문. 각각의 `For Each` 루프의 반복이 반복기를 호출합니다. `Yield` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  
@@ -585,7 +585,7 @@ End Function
  [LINQ to Objects(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [PLINQ(병렬 LINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [컬렉션 및 데이터 구조](../../../standard/collections/index.md)  
- [컬렉션 만들기 및 조작](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [컬렉션 만들기 및 조작](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md)  
  [컬렉션 내에서 비교 및 정렬](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [제네릭 컬렉션 사용 기준](../../../standard/collections/when-to-use-generic-collections.md)

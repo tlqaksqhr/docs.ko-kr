@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="add-ins-and-extensibility"></a>추가 기능 및 확장성
 <a name="top"></a> 추가 기능은 호스트 응용 프로그램에 대한 확장명 기능이나 서비스를 제공합니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 에서는 개발자가 추가 기능을 개발하고 호스트 응용 프로그램에서 활성화하는 데 사용할 수 있는 프로그래밍 모델을 제공합니다. 모델은 이 작업을 위해 호스트와 추가 기능 간에 통신 파이프라인을 생성합니다. 모델은 <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>및 <xref:System.AddIn.Contract> 네임스페이스의 형식을 사용하여 구현됩니다.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="discovery-and-activation"></a>검색 및 활성화  
  정보 저장소에서 발견된 추가 기능을 나타내는 컬렉션의 토큰을 사용하여 추가 기능을 활성화할 수 있습니다. 추가 기능은 추가 기능의 호스트 뷰를 정의하는 형식을 검색하여 찾습니다. 추가 기능을 정의하는 형식을 기준으로 특정 추가 기능을 찾을 수도 있습니다. 정보 저장소는 파이프라인 저장소와 추가 기능 저장소라는 두 개의 캐시 파일로 구성됩니다.  
   
- 정보 저장소를 업데이트 및 다시 빌드하는 방법에 대한 자세한 내용은 [추가 기능 검색](http://msdn.microsoft.com/en-us/5d268dde-11df-4c4d-a022-f58d88bbc421)을 참조하세요. 추가 기능을 활성화하는 방법에 대한 자세한 내용은 [추가 기능 활성화](http://msdn.microsoft.com/en-us/bedcbcdf-5964-4215-b5f3-3299798b2b3f) 및 [방법: 다양한 격리 및 보안으로 추가 기능 활성화](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5)를 참조하세요.  
+ 업데이트 및 정보 저장소를 다시 작성 하는 방법에 대 한 정보를 참조 하십시오. [추가 기능 검색](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421)합니다. 추가 기능을 활성화 하는 방법에 대 한 정보를 참조 하십시오. [추가 기능 활성화](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) 및 [하는 방법: 다양 한 격리 및 보안을 사용 하 여 추가 기능을 활성화](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)합니다.  
   
 ### <a name="isolation-levels-and-external-processes"></a>격리 수준 및 외부 프로세스  
  추가 기능 모델은 추가 기능과 해당 호스트 간에 또는 추가 기능 간에 여러 수준의 격리를 지원합니다. 최소 격리부터 시작하여 이러한 수준은 다음과 같습니다.  
@@ -96,10 +96,10 @@ ms.lasthandoff: 12/22/2017
   
 -   각 추가 기능이 외부 프로세스에서 배타적으로 고유한 응용 프로그램 도메인에 로드됩니다. 이는 가장 격리된 시나리오입니다.  
   
- 외부 프로세스를 사용하는 방법에 대한 자세한 내용은 [방법: 다양한 격리 및 보안으로 추가 기능 활성화](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5)를 참조하세요.  
+ 외부 프로세스를 사용 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 다양 한 격리 및 보안을 사용 하 여 추가 기능을 활성화](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)합니다.  
   
 ### <a name="lifetime-management"></a>수명 관리  
- 추가 기능 모델은 응용 프로그램 도메인 및 프로세스 경계에 걸쳐 있으므로 가비지 수집만으로는 개체를 해제하고 확보하기에 충분하지 않습니다. 추가 기능 모델은 토큰 및 참조 횟수를 사용하며 일반적으로 추가 프로그래밍이 필요하지 않은 수명 관리 메커니즘을 제공합니다. 자세한 내용은 [수명 관리](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)를 참조하세요.  
+ 추가 기능 모델은 응용 프로그램 도메인 및 프로세스 경계에 걸쳐 있으므로 가비지 수집만으로는 개체를 해제하고 확보하기에 충분하지 않습니다. 추가 기능 모델은 토큰 및 참조 횟수를 사용하며 일반적으로 추가 프로그래밍이 필요하지 않은 수명 관리 메커니즘을 제공합니다. 자세한 내용은 참조 [수명 관리](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)합니다.  
   
  [맨 위로 이동](#top)  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/22/2017
 |제목|설명|  
 |-----------|-----------------|  
 |[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|호스트 응용 프로그램과 추가 기능 간의 세그먼트 통신 파이프라인을 설명합니다. 파이프라인을 생성하는 방법 및 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 세그먼트를 파이프라인에 배포하는 방법을 설명하는 코드 예제를 연습 항목에서 제공합니다.|  
-|[응용 프로그램 도메인 및 어셈블리](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|보안, 안정성 및 버전 관리를 위한 격리 경계를 제공하는 응용 프로그램 도메인과 어셈블리 간의 관계를 설명합니다.|  
+|[응용 프로그램 도메인 및 어셈블리](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|보안, 안정성 및 버전 관리를 위한 격리 경계를 제공하는 응용 프로그램 도메인과 어셈블리 간의 관계를 설명합니다.|  
   
  [맨 위로 이동](#top)  
   

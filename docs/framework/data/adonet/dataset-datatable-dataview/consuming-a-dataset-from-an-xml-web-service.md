@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2f60a26d94734dacaba7e540c0584c8eb1ada803
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 316bebfec652987351e64368c3b7c0155011fe8e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Service에서 데이터 집합 사용
 <xref:System.Data.DataSet>은 인터넷에서 데이터 전송을 쉽게 할 수 있도록 비연결 디자인으로 설계되었습니다. **DataSet** 는 "직렬화"에 대 한 입력으로 지정할 수 있습니다 되거나의 콘텐츠를 스트리밍하는 데 필요한 추가 코딩 없이 XML 웹 서비스에서 출력 된 **데이터 집합** XML 웹 서비스에서 클라이언트와 백에. **데이터 집합** DiffGram 형식을 사용 하 여 XML 스트림을으로 암시적으로 변환, 네트워크를 통해 보내고 다음으로 XML 스트림에서 재구성는 **데이터 집합** 수신측에 있습니다. 이렇게 하여 간단하고 융통성 있는 방법으로 XML Web services를 사용하여 관계형 데이터를 전송하고 반환할 수 있습니다. DiffGram 형식에 대 한 자세한 내용은 참조 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)합니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/17/2018
  다음 예제에는 XML 웹 서비스 및 사용 하는 클라이언트를 만드는 방법을 보여 줍니다는 **DataSet** 모든 업데이트를 다시 원래 데이터 원본에 해당 관계형 데이터 (수정 된 데이터 포함)를 전송 하 고 있습니다.  
   
 > [!NOTE]
->  XML Web services를 만들 때는 항상 보안 측면을 고려하는 것이 좋습니다. XML 웹 서비스를 보안에 대 한 정보를 참조 하십시오. [보안 XML 웹 서비스를 사용 하 여 ASP.NET을 만든](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)합니다.  
+>  XML Web services를 만들 때는 항상 보안 측면을 고려하는 것이 좋습니다. XML 웹 서비스를 보안에 대 한 정보를 참조 하십시오. [보안 XML 웹 서비스를 사용 하 여 ASP.NET을 만든](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)합니다.  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>DataSet을 반환하고 사용하는 XML Web services를 만들려면  
   
@@ -277,5 +277,5 @@ ms.lasthandoff: 01/17/2018
  [DataAdapter에서 데이터 집합 채우기](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  [DataAdapter로 데이터 원본 업데이트](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [DataAdapter 매개 변수](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [웹 서비스 설명 언어 도구 (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [웹 서비스 설명 언어 도구 (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

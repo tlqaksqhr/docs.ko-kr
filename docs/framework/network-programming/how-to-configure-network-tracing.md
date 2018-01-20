@@ -22,11 +22,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4a6b277b2676409bebc059637daca5681b853f03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b58887dc2614ab31a422eb74ce8d0805cf8153bf
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-network-tracing"></a>방법: 네트워크 추적 구성
 응용 프로그램 또는 컴퓨터 구성 파일은 형식과 네트워크 추적의 내용을 결정하는 설정을 유지합니다. 이 절차를 수행하기 전에 추적이 활성화되어야 합니다. 추적을 사용하는 방법에 대한 자세한 내용은 [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)을 참조하세요.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
  `<switches>` 블록에 이름을 추가할 때, 추적 출력에는 이름과 관련된 일부 메서드에서 가져온 정보가 포함됩니다. 다음 표에서는 출력에 대해 설명합니다.  
   
-|이름|출력되는 위치|  
+|name|출력되는 위치|  
 |----------|-----------------|  
 |`System.Net.Sockets`|<xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient> 및 <xref:System.Net.Dns> 클래스의 일부 공용 메서드|  
 |`System.Net`|<xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest> 및 <xref:System.Net.FtpWebResponse> 클래스의 일부 공용 메서드와 SSL 디버그 정보(잘못된 인증서, 누락된 발급자 목록 및 클라이언트 인증서 오류)|  
@@ -110,4 +110,4 @@ ms.lasthandoff: 12/22/2017
  [네트워크 추적 해석](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework의 네트워크 추적](../../../docs/framework/network-programming/network-tracing.md)  
  [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [계측 및 추적 소개](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [계측 및 추적 소개](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

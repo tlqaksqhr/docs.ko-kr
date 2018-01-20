@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6615abdf621217baa7ced4211bfa19abac944be9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 40414f39a1b84e7d07086d0634898de5171db590
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>방법: 주 Interop 어셈블리 등록
 클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의하는 방법에 대한 자세한 내용은 [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)를 참조하세요.  
@@ -58,6 +58,6 @@ regasm CompanyA.UtilLib.dll
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [주 Interop 어셈블리를 사용한 프로그래밍](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)  
- [주 Interop 어셈블리 찾기](http://msdn.microsoft.com/en-us/d6768e4b-cd80-414d-a4f8-05d979eb393b)  
- [기본 Interop 어셈블리 재배포](http://msdn.microsoft.com/en-us/e76384f0-d631-474c-bdbd-13884cba0265)
+ [주 Interop 어셈블리를 사용한 프로그래밍](http://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e)  
+ [주 Interop 어셈블리 찾기](http://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b)  
+ [기본 Interop 어셈블리 재배포](http://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265)

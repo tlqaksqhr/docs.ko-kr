@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="endpoint-addresses"></a>끝점 주소
 모든 끝점에는 해당 끝점을 찾아서 식별하는 데 사용되는 연결된 주소가 있습니다. 이 주소는 주로 끝점의 위치를 지정하는 URI(Uniform Resource Identifier)로 구성됩니다. 끝점 주소는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 프로그래밍 모델에 <xref:System.ServiceModel.EndpointAddress> 클래스로 표시됩니다. 이 클래스에는 한 끝점에서 다른 끝점과 메시지를 교환할 때 상대 끝점을 인증할 수 있도록 하는 선택적 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 속성과 서비스에 연결하는 데 필요한 다른 SOAP 헤더를 정의하는 선택적 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 속성 집합이 포함되어 있습니다. 선택적 헤더는 서비스 끝점을 확인하거나 상호 작용하는 데 필요한 추가적인 자세한 주소 지정 정보를 제공합니다. 끝점 주소는 통신 중에 WS-Addressing EPR(끝점 참조)로 표시됩니다.  
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/22/2017
   
 -   코드에서는 <xref:System.ServiceModel.Channels.AddressHeader> 클래스를 사용하여 사용자 지정 주소 헤더를 만든 다음 <xref:System.ServiceModel.EndpointAddress> 생성에 사용합니다.  
   
--   사용자 지정 구성에서 [ \<헤더 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) 의 자식으로 지정 되는 [ \<끝점 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
+-   사용자 지정 구성에서 [ \<헤더 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) 의 자식으로 지정 되는 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
   
  일반적으로 구성을 사용하면 배포 후에 헤더를 변경할 수 있으므로 구성을 사용하는 것이 코드를 사용하는 것보다 낫습니다.  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 12/22/2017
   
 -   코드에서는 <xref:System.ServiceModel.Description.ClientViaBehavior> 클래스를 끝점의 동작 컬렉션에 추가하여 사용자 지정 수신 대기 주소를 지정합니다.  
   
--   구성에서 지정 된 사용자 지정 수신 대기 주소는 `ListenUri` 서비스의 특성 [ \<끝점 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
+-   구성에서 지정 된 사용자 지정 수신 대기 주소는 `ListenUri` 서비스의 특성 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
   
 ### <a name="custom-soap-address-filter"></a>사용자 지정 SOAP 주소 필터  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A>는 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 속성과 함께 사용되어 끝점의 SOAP 주소 필터(<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)를 정의합니다. 기본적으로 이 필터는 들어오는 메시지에 끝점의 URI와 일치하는 `To` 메시지 헤더가 있는지, 모든 필수 끝점 헤더가 메시지에 있는지 확인합니다.  

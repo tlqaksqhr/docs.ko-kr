@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c6826a9b214e7507c63752a8a990116b88dda09d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5451599a5421149a7dc99ced6a42bb8220af247a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-wrappers-manually"></a>방법: 수동으로 래퍼 만들기
 관리 소스 코드에서 COM 형식을 수동으로 선언하도록 결정할 경우 기존 IDL(Interface Definition Language) 파일 또는 형식 라이브러리에서 시작하는 것이 좋습니다. IDL 파일이 없거나 형식 라이브러리 파일을 생성할 수 없으면 관리되는 선언을 만들고 결과 어셈블리를 형식 라이브러리에 내보내는 방식으로 COM 형식을 시뮬레이트할 수 있습니다.  
@@ -36,11 +36,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  IDL 파일 또는 형식 라이브러리 파일이 있다고 가정하고 사용자 지정 RCW에 포함할 클래스와 인터페이스를 결정합니다. 응용 프로그램에서 직접적으로나 간접적으로 사용하지 않을 형식을 제외할 수 있습니다.  
   
-2.  소스 파일을 CLS 규격 언어로 만들고 형식을 선언합니다. 가져오기 변환 프로세스에 대한 자세한 내용은 [형식 라이브러리와 어셈블리 간 변환 요약](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)을 참조하세요. 사실상 사용자 지정 RCW를 만들면 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)에서 제공된 형식 변환 활동을 수동으로 수행하는 것입니다. 이 섹션 뒤에 나오는 예제에서는 IDL 또는 형식 라이브러리 파일에 있는 형식과 C# 코드에서 이 형식에 해당하는 형식을 보여 줍니다.  
+2.  소스 파일을 CLS 규격 언어로 만들고 형식을 선언합니다. 가져오기 변환 프로세스에 대한 자세한 내용은 [형식 라이브러리와 어셈블리 간 변환 요약](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)을 참조하세요. 사실상 사용자 지정 RCW를 만들면 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)에서 제공된 형식 변환 활동을 수동으로 수행하는 것입니다. 이 섹션 뒤에 나오는 예제에서는 IDL 또는 형식 라이브러리 파일에 있는 형식과 C# 코드에서 이 형식에 해당하는 형식을 보여 줍니다.  
   
 3.  선언이 완료되면 다른 관리 소스 코드를 컴파일할 때 파일을 컴파일합니다.  
   
-4.  Tlbimp.exe로 가져온 형식처럼 일부 형식에는 코드에 직접 추가할 수 있는 추가적인 정보가 필요합니다. 자세한 내용은 [방법: interop 어셈블리 편집](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)을 참조하세요.  
+4.  Tlbimp.exe로 가져온 형식처럼 일부 형식에는 코드에 직접 추가할 수 있는 추가적인 정보가 필요합니다. 자세한 내용은 [방법: interop 어셈블리 편집](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)을 참조하세요.  
   
 ## <a name="example"></a>예  
  다음 코드에서는 IDL의 `ISATest` 인터페이스와 `SATest` 클래스 및 C# 소스 코드에서 이들 항목에 해당하는 형식의 예를 보여 줍니다.  
@@ -108,9 +108,9 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [런타임 호출 가능 래퍼 사용자 지정](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)  
- [COM 데이터 형식](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
- [방법: Interop 어셈블리 편집](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)  
- [형식 라이브러리를 어셈블리로 변환 요약](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [런타임 호출 가능 래퍼 사용자 지정](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)  
+ [COM 데이터 형식](http://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061)  
+ [방법: Interop 어셈블리 편집](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)  
+ [형식 라이브러리를 어셈블리로 변환 요약](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe(형식 라이브러리 내보내기)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)

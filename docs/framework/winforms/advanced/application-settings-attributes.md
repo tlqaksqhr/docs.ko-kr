@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4255356d4e50f3e8be28024f29701e0e9c010473
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2ed0a0393f505d0126508e574b1cd9abe138866
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-settings-attributes"></a>응용 프로그램 설정 특성
 응용 프로그램 설정 아키텍처는 응용 프로그램 설정 래퍼 클래스 또는 해당 개별 속성에 적용할 수 있는 여러 특성을 제공 합니다. 이러한 특성은 맞게 사용자 지정 래퍼 명시 된 요구 사항에 기능을 조절 하려면 응용 프로그램 설정 인프라 종종 특별히 설정 공급자에 의해 런타임 시 검사 합니다.  
@@ -52,4 +52,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  [응용 프로그램 설정 아키텍처](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [방법: 응용 프로그램 설정 만들기](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)
+ [방법: 응용 프로그램 설정 만들기](http://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

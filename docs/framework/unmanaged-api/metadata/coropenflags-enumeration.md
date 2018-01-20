@@ -20,11 +20,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 39645de71913baeaa39524e1cae081de9cac3442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4447f648277576169c9004d1880283728639c8f3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 열거형
 매니페스트 파일을 열 때 메타데이터 동작을 제어하는 플래그 값을 포함합니다.  
@@ -62,7 +62,7 @@ typedef enum CorOpenFlags
 |`ofCacheImage`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
 |`ofManifestMetadata`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
 |`ofReadOnly`|읽기, 및에 대 한 파일을 열 수 있는지 나타냅니다에 대 한 호출 `QueryInterface` 에 대 한 프로그램 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) 만들 수 없습니다.|  
-|`ofTakeOwnership`|에 대 한 호출을 사용 하 여 메모리가 할당 된 나타냅니다 [CoTaskMemAlloc](http://msdn.microsoft.com/en-us/c4cb588d-9482-4f90-a92e-75b604540d5c) 메타 데이터에서 해제 합니다.|  
+|`ofTakeOwnership`|에 대 한 호출을 사용 하 여 메모리가 할당 된 나타냅니다 [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) 메타 데이터에서 해제 합니다.|  
 |`ofNoTypeLib`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
 |`ofNoTransform`|.winmd 파일의 자동 변환을 사용하지 않도록 설정해야 함을 나타냅니다. 즉, Windows 런타임 형식에서 .NET Framework 형식으로의 프로젝션을 사용하지 않도록 설정해야 합니다. 자세한 내용은 참조 [아래 고급.NET 및 Windows Runtime](http://msdn.microsoft.com/magazine/jj651569.aspx)합니다.|  
 |`ofReserved1`|내부용으로 예약됩니다.|  

@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 978cb7dcfd132ea253fcb5f13174e14c7341f11a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6dc6ad423010cf881c62e2c22570c080cad6a1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="guidelines-and-best-practices"></a>지침 및 최선의 구현 방법
 이 단원의 항목에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만들기 위한 지침을 제공합니다.  
@@ -57,6 +57,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [Windows Communication Foundation 정의](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation 샘플](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation 샘플](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [개념적 개요](../../../docs/framework/wcf/conceptual-overview.md)  
  [클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)

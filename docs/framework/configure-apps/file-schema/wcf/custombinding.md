@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1659e6352fa195bae56b764c80a08dee56b4c9e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 사용자에게 메시징 스택에 대한 모든 권한을 제공합니다.  
   
- \<system.serviceModel >  
-\<바인딩 >  
-\<customBinding >  
+ \<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
   
 ## <a name="syntax"></a>구문  
   
@@ -202,13 +202,13 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|사용자 지정 바인딩에 대한 양방향 메시징을 정의합니다. 예를 들어, HTTP와 같이 원래는 이중 통신을 허용하지 않는 전송에 사용됩니다. 그에 반해 TCP는 기본적으로 이중 통신을 허용하므로, 이 바인딩 요소를 사용하지 않더라도 서비스에서 클라이언트로 회신 메시지를 보낼 수 있습니다.<br /><br /> 서비스에서 접속하여 연결을 설정하려면 클라이언트가 주소를 공개해야 합니다. 이 클라이언트 주소는 `ClientBaseAddress` 특성을 사용하여 제공합니다.<br /><br /> 이 요소는 <xref:System.ServiceModel.Configuration.CompositeDuplexElement> 형식입니다.|  
-|[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|PNRP(피어 이름 확인 프로토콜) 피어 이름 확인자를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement> 형식입니다.|  
-|[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS-Reliable Messaging 설정을 지정합니다. 이 요소가 사용자 지정 바인딩에 추가되면 그 결과로 만들어지는 채널에서 EOD(Exactly-Once Delivery) 보증을 지원할 수 있습니다. 이 요소는 <xref:System.ServiceModel.Configuration.ReliableSessionElement> 형식입니다.|  
-|[\<보안 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.SecurityElement> 형식입니다.|  
-|[\<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|SSL 스트림 바인딩에 대한 보안 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement> 형식입니다.|  
-|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|바인딩이 트랜잭션 흐름 및 `transactionProtocol` 특성에 사용될 프로토콜을 지원하도록 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.TransactionFlowElement> 형식입니다.|  
-|[\<windowsStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|사용자 지정 바인딩에 대한 스트리밍 보안 옵션을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement> 형식입니다.|  
+|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|사용자 지정 바인딩에 대한 양방향 메시징을 정의합니다. 예를 들어, HTTP와 같이 원래는 이중 통신을 허용하지 않는 전송에 사용됩니다. 그에 반해 TCP는 기본적으로 이중 통신을 허용하므로, 이 바인딩 요소를 사용하지 않더라도 서비스에서 클라이언트로 회신 메시지를 보낼 수 있습니다.<br /><br /> 서비스에서 접속하여 연결을 설정하려면 클라이언트가 주소를 공개해야 합니다. 이 클라이언트 주소는 `ClientBaseAddress` 특성을 사용하여 제공합니다.<br /><br /> 이 요소는 <xref:System.ServiceModel.Configuration.CompositeDuplexElement> 형식입니다.|  
+|[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|PNRP(피어 이름 확인 프로토콜) 피어 이름 확인자를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement> 형식입니다.|  
+|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS-Reliable Messaging 설정을 지정합니다. 이 요소가 사용자 지정 바인딩에 추가되면 그 결과로 만들어지는 채널에서 EOD(Exactly-Once Delivery) 보증을 지원할 수 있습니다. 이 요소는 <xref:System.ServiceModel.Configuration.ReliableSessionElement> 형식입니다.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.SecurityElement> 형식입니다.|  
+|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|SSL 스트림 바인딩에 대한 보안 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement> 형식입니다.|  
+|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|바인딩이 트랜잭션 흐름 및 `transactionProtocol` 특성에 사용될 프로토콜을 지원하도록 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.TransactionFlowElement> 형식입니다.|  
+|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|사용자 지정 바인딩에 대한 스트리밍 보안 옵션을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -310,11 +310,11 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<바인딩 >](../../../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [customBinding 요소](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [바인딩](../../../../../docs/framework/wcf/bindings.md)  
  [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+ [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)

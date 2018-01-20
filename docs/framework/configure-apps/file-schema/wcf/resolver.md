@@ -1,5 +1,5 @@
 ---
-title: "&lt;해결 프로그램&gt;"
+title: '&lt;resolver&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,20 +14,20 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc6e919600fbea15937a61eaa65299b3a372caaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db95b6f9a988c133a6b4afd55849fc6fb650c24c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltresolvergt"></a>&lt;해결 프로그램&gt;
+# <a name="ltresolvergt"></a>&lt;resolver&gt;
 피어 메시 ID를 확인하는 데 사용되는 피어 확인자를 메시에 참여하는 몇 개의 노드를 나타내는 피어 노드 주소 집합에 지정합니다.  
   
- \<시스템입니다. ServiceModel >  
-\<바인딩 >  
-\<netPeerBinding >  
-\<바인딩 >  
-\<해결 프로그램 >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netPeerBinding>  
+\<binding>  
+\<resolver>  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -51,13 +51,13 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<헤더 >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|사용자 지정 피어 확인자 서비스의 설정을 지정합니다.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|사용자 지정 피어 확인자 서비스의 설정을 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<바인딩 >](../../../../../docs/framework/misc/binding.md)|모든 바인딩 기능을 정의 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)합니다.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|모든 바인딩 기능을 정의 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)합니다.|  
   
 ## <a name="remarks"></a>설명  
  피어 이름 확인자는 피어 메시에 참여하는 피어 노드를 찾기 위해 피어 채널에서 사용하는 검색 서비스입니다. 또한 이 확인자는 피어 노드가 알려지고 피어 메시에서 사용할 수 있게 되는 메커니즘인 피어 메시를 통해 노드를 "등록"하는 데에도 사용됩니다. 피어 확인자에 대 한 자세한 내용은 참조 하십시오. [피어 확인 자의](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)합니다.  
@@ -69,4 +69,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement>  
  [피어 확인자](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Peerchannel은 응용 프로그램에 사용자 지정 해결 프로그램 추가](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Peerchannel은 응용 프로그램에 사용자 지정 해결 프로그램 추가](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

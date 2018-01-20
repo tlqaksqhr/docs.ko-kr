@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer 도구(SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Trace Viewer 도구를 사용하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에서 생성한 진단 추적을 분석할 수 있습니다. Service Trace Viewer는 로그의 추적 메시지를 쉽게 병합하고, 보고, 필터링하는 방법을 제공하므로 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 문제를 진단하고, 복구하며, 확인할 수 있습니다.  
@@ -421,7 +421,7 @@ ms.lasthandoff: 12/22/2017
 |![동작 중지 추적](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|동작 중지 추적: 동작의 종료를 표시하는 추적입니다. 이어야 합니다. 여기에는 동작의 이름이 포함됩니다. 응용 프로그램 디자이너 또는 개발자의 경우 각 추적 소스의 동작 ID당 하나의 동작 중지 추적을 정의해야 합니다. 해당 추적 소스에서 내보낸 동작 중지 후에는 추적 시간의 세분성이 충분히 작지 않은 경우를 제외하고 지정된 추적 소스에서 추적이 표시되지 않습니다. 이 경우 시간이 동일한 두 개의 추적(중지 포함)이 표시될 때 인터리브될 수 있습니다. 동작 ID가 추적 상관 관계를 위해 추적 소스 간에 전파되는 경우 각 추적 소스의 동일한 동작 ID에 대해 여러 중지가 표시됩니다. ActivityTracing이 추적 소스에 사용되면 중지 추적이 내보내집니다.|  
 |![동작 일시 중단 추적](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|동작 일시 중단 추적: 동작이 일시 중단된 시간을 표시하는 추적입니다. 동작이 다시 시작될 때까지 일시 중단된 동작에서 내보낸 추적이 없습니다. 일시 중단된 동작은 추적 소스 범위에 있는 해당 동작에서 발생하는 프로세스가 없음을 의미합니다. 일시 중단/다시 시작 추적은 프로파일링에 유용합니다. ActivityTracing이 추적 소스에 사용되면 일시 중단 추적이 내보내집니다.|  
 |![동작 다시 시작 추적](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|동작 다시 시작 추적: 동작이 일시 중단된 후에 다시 시작된 시간을 표시하는 추적입니다. 해당 동작에서 추적을 다시 내보낼 수 있습니다. 일시 중단/다시 시작 추적은 프로파일링에 유용합니다. ActivityTracing이 추적 소스에 사용되면 다시 시작 추적이 내보내집니다.|  
-|![전송](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|전송: 논리 제어 흐름이 하나의 동작에서 다른 동작으로 전송될 때 내보낸 추적입니다. 전송이 발생한 동작은 전송이 향하는 동작과 평행하게 작업을 계속 수행할 수 있습니다. ActivityTracing이 추적 소스에 사용되면 전송 추적이 내보내집니다.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|전송: 논리 제어 흐름이 하나의 동작에서 다른 동작으로 전송될 때 내보낸 추적입니다. 전송이 발생한 동작은 전송이 향하는 동작과 평행하게 작업을 계속 수행할 수 있습니다. ActivityTracing이 추적 소스에 사용되면 전송 추적이 내보내집니다.|  
 |![전송](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|전송 시작: 다른 동작에서 현재 동작으로의 전송을 정의하는 추적입니다.|  
 |![전송](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|전송 대상: 현재 동작에서 다른 동작으로의 논리 제어 흐름의 전송을 정의하는 추적입니다.|  
   
@@ -437,7 +437,7 @@ ms.lasthandoff: 12/22/2017
   
 |아이콘|설명|  
 |----------|-----------------|  
-|![활동](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|동작: 현재 동작이 제네릭 동작임을 나타냅니다.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|동작: 현재 동작이 제네릭 동작임을 나타냅니다.|  
 |![루트 활동](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|루트 동작: 프로세스의 루트 동작을 나타냅니다.|  
   
 ### <a name="wcf-activities"></a>WCF 동작  
@@ -463,4 +463,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>참고 항목  
  [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [추적 구성](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [동작 추적 및 전파 종단 간 추적 상관 관계에 대 한](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)
+ [동작 추적 및 전파 종단 간 추적 상관 관계에 대 한](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

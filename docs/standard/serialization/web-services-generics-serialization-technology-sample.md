@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9d5ed7a1bb55803cd1df8c6c6c740e8facb306e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0c29e6778cc0749620a7e38d51303356c2e99436
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web Services Generics Serialization 기술 샘플
 [샘플 다운로드](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -73,11 +73,11 @@ ms.lasthandoff: 12/23/2017
 2.  **http://localhost/[가상 디렉터리]/Service.asmx**를 입력합니다. 여기서 [가상 디렉터리]는 샘플을 빌드할 때 만든 가상 디렉터리를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- 이 샘플에서는 웹 서비스의 정의에 대한 링크가 포함된 기본 ASP.NET 페이지를 표시합니다. 웹 서비스의 소스 코드를 수정할 수 있을 뿐 아니라 화면 표시를 사용자 지정할 수도 있습니다. 자세한 내용은 [XML Web Service 클라이언트 빌드](http://msdn.microsoft.com/en-us/c606f3cb-4111-45b4-ae42-9300420fa16c)를 참조하세요.  
+ 이 샘플에서는 웹 서비스의 정의에 대한 링크가 포함된 기본 ASP.NET 페이지를 표시합니다. 웹 서비스의 소스 코드를 수정할 수 있을 뿐 아니라 화면 표시를 사용자 지정할 수도 있습니다. 자세한 내용은 [XML Web Service 클라이언트 빌드](http://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [serialization](../../../docs/standard/serialization/index.md)  
- [ASP.NET 및 XML Web Service 클라이언트를 사용하여 만든 XML Web Services](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)
+ [ASP.NET 및 XML Web Service 클라이언트를 사용하여 만든 XML Web Services](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

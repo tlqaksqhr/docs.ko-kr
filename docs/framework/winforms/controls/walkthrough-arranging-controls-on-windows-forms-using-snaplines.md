@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 028b66fea2b35e7b36760ec7c606f81ca2301620
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd8bc5e227bd68fc3c5c59d80549322ca742bcf9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬
 폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. Windows Forms 디자이너가이를 위해 여러 레이아웃 도구를 제공 합니다. 가장 중요 한 중 하나는 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 기능입니다.  
@@ -59,14 +59,14 @@ ms.lasthandoff: 12/22/2017
  완료 되 면 맞춤선 기능에 의해 수행 하는 레이아웃 역할을 이해를 해야 합니다.  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
   
 ## <a name="creating-the-project"></a>프로젝트 만들기  
  첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.  
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
-1.  "SnaplineExample" 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
+1.  "SnaplineExample" 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)를 참조하세요.  
   
 2.  폼 디자이너에서 폼을 선택 합니다.  
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>디자인 환경에서 맞춤선을 사용 하지 않도록 설정 하려면  
   
-1.  **도구** 메뉴를 열고는 **옵션** 대화 상자. Windows Forms 디자이너 대화 상자를 엽니다. 자세한 내용은 참조 [Windows Forms 디자이너, 옵션 대화 상자, 일반](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)합니다.  
+1.  **도구** 메뉴를 열고는 **옵션** 대화 상자. Windows Forms 디자이너 대화 상자를 엽니다. 자세한 내용은 참조 [Windows Forms 디자이너, 옵션 대화 상자, 일반](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)합니다.  
   
 2.  선택 된 **일반** 노드. 에 **레이아웃 모드** 섹션, 선택을 변경 **맞춤선** 를 **SnapToGrid**합니다.  
   

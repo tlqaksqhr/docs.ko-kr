@@ -22,11 +22,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 36c8ae484120fc835bf341d37cda72b22b401117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf894239db623b34d23757edd1c39d3652a7e0f7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-method-access"></a>메서드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   액세스 가능성 범위를 신뢰할 수 있는 클래스, 어셈블리 또는 파생 클래스로 제한합니다. 이는 메서드 액세스를 제한하는 가장 간단한 방법입니다. 일반적으로 파생 클래스는 자신이 파생된 소스 클래스보다 신뢰도가 더 낮지만 경우에 따라 부모 클래스의 ID를 공유할 수 있습니다. 특히 키워드에서 신뢰를 유추 하지 마세요 **보호**를 반드시 사용할 필요는 없는 보안 컨텍스트에서 합니다.  
   
--   지정된 된 id, 기본적으로, 특정의 호출자에 게 메서드 액세스를 제한 [증거](http://msdn.microsoft.com/en-us/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) 선택 (강력한 이름, 게시자, 영역 및 등).  
+-   지정된 된 id, 기본적으로, 특정의 호출자에 게 메서드 액세스를 제한 [증거](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) 선택 (강력한 이름, 게시자, 영역 및 등).  
   
 -   메서드 액세스를 선택한 권한을 가진 호출자로 제한합니다.  
   

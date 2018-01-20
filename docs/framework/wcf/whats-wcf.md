@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f5301bf3a2fed35dbdd0046e01eb2acb9083a290
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation 정의
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 는 서비스 지향 응용 프로그램을 만드는 데 사용되는 프레임워크입니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]를 사용하면 데이터를 비동기 메시지로 서비스 끝점 간에 전송할 수 있습니다. 서비스 끝점은 IIS에서 호스팅하는 계속 사용 가능한 서비스의 일부분일 수도 있고 응용 프로그램에서 호스팅되는 서비스일 수도 있습니다. 또한 끝점은 서비스 끝점에서 데이터를 요청하는 서비스의 클라이언트일 수 있습니다. 메시지는 XML로 전송되는 한 문자나 단어처럼 간단할 수도 있고 이진 데이터 스트림처럼 복잡할 수도 있습니다. 다음은 몇 가지 샘플 시나리오입니다.  
@@ -111,4 +111,4 @@ ms.lasthandoff: 12/22/2017
  [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [설명서에 대한 안내](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Windows Communication Foundation 샘플](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Windows Communication Foundation 샘플](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

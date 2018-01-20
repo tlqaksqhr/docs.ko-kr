@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70f8b00ca0f57d4d6bf9fc49ab12443f0a8c9b83
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-overview"></a>보안 개요
 응용 프로그램 보안은 지속적인 프로세스입니다. 새로운 기술로 인해 앞으로 어떠한 공격이 가해질지 예측할 수 없기 때문에 개발자가 응용 프로그램이 모든 공격으로부터 안전하다고 장담하는 것은 불가능합니다. 반대로, 아직까지 아무도 시스템의 보안 허점을 발견(또는 발표)하지 않았더라도 허점이 없다고 할 수는 없습니다. 보안 계획은 프로젝트 디자인 단계에서 수립해야 하며 아울러 응용 프로그램의 수명이 다할 때까지 이러한 보안을 어떻게 유지할지도 계획해야 합니다.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/17/2018
 |리소스|설명|  
 |--------------|-----------------|  
 |[코드 액세스 보안 및 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|코드 액세스 보안, 역할 기반 보안, 부분적으로 신뢰할 수 있는 환경 간의 상호 작용을 ADO.NET 응용 프로그램의 측면에서 설명합니다.|  
-|[코드 액세스 보안](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|.NET Framework의 CAS에 대해 설명하는 추가 항목 링크를 제공합니다.|  
+|[코드 액세스 보안](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|.NET Framework의 CAS에 대해 설명하는 추가 항목 링크를 제공합니다.|  
   
 ## <a name="database-security"></a>데이터베이스 보안  
  데이터 소스에도 최소 권한의 원칙이 적용됩니다. 데이터베이스 보안을 위한 일반적인 지침 중 일부가 아래에 나와 있습니다.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/17/2018
 |리소스|설명|  
 |--------------|-----------------|  
 |[SQL Server 보안](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|SQL Server를 대상으로 하는 안전한 ADO.NET 응용 프로그램을 만드는 지침을 제공하는 응용 프로그램 시나리오와 함께 SQL Server 보안에 대해 간략하게 설명합니다.|  
-|[데이터 액세스 전략에 대 한 권장 사항](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.|  
+|[데이터 액세스 전략에 대 한 권장 사항](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.|  
   
 ## <a name="security-policy-and-administration"></a>보안 정책 및 관리  
  CAS(코드 액세스 보안) 정책을 잘못 관리하면 보안 허점이 생길 수 있습니다. 응용 프로그램을 배포한 후에는 새로운 위협이 출현할 때마다 보안 모니터링 기술을 사용하고 위험을 평가해야 합니다.  
@@ -109,11 +109,11 @@ ms.lasthandoff: 01/17/2018
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[NIB: 보안 정책 관리](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|보안 정책을 만들고 관리하는 작업에 대한 정보를 제공합니다.|  
-|[NIB: 보안 정책에 대 한 유용한 정보](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|보안 정책을 관리하는 방법에 대해 설명하는 링크를 제공합니다.|  
+|[NIB: 보안 정책 관리](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|보안 정책을 만들고 관리하는 작업에 대한 정보를 제공합니다.|  
+|[NIB: 보안 정책에 대 한 유용한 정보](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|보안 정책을 관리하는 방법에 대해 설명하는 링크를 제공합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [네이티브 및 .NET Framework 코드의 PAVE 보안](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [네이티브 및 .NET Framework 코드의 PAVE 보안](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [SQL Server 보안](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

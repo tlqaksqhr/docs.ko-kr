@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
 Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 버전 3.0을 사용하여 응용 프로그램을 빌드하는 경우 응용 프로그램이 최종 사용자의 개인 정보 보호에 영향을 줄 수 있습니다. 예를 들어 응용 프로그램에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 응용 프로그램에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 사용자 또는 최종 사용자가 정보 전송을 선택하지 않는 한 아무 정보도 Microsoft로 보내지 않습니다.  
@@ -138,13 +138,13 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  제거되는 키  
   
- \-Xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 및 xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \-Xmlns:wsse "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 및 xmlns:wsse = = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,7 +152,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  제거되는 잠재적 개인 정보  
   
- \-Xmlns:wsse "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 및 xmlns:wsse = = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
@@ -174,15 +174,15 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  >  
   
- \<조건 NotBefore "[dateTime]" NotOnOrAfter = = "[dateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<대상 그룹 > [uri]\</Audience > +  
+ \<Audience>[uri]\</Audience>+  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!-기본 형식이 추상  
   
@@ -190,13 +190,13 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  -->  
   
- \</ 조건 >?  
+ \</Conditions>?  
   
- \<조언 >  
+ \<Advice>  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<어설션 > [어설션]\</Assertion > *  
+ \<Assertion>[assertion]\</Assertion>*  
   
  [any]*  
   
@@ -206,7 +206,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  \<문 / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
  \<제목 >  
   
@@ -222,19 +222,19 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
- \<SubjectConfirmationData > [모두]\</SubjectConfirmationData >?  
+ \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds:KeyInfo >... \</ds:KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation >?  
+ \</SubjectConfirmation>?  
   
- \</ 제목이 >  
+ \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -266,9 +266,9 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<요소의 AttributeStatement >  
+ \<AttributeStatement>  
   
  [Subject]  
   
@@ -282,33 +282,33 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</ 특성 > +  
+ \</Attribute>+  
   
- \</ 요소의 AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
  Resource="[uri]"  
   
- 의사 결정 = "[허용 &#124; 거부 &#124; 비활성화]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  [Subject]  
   
- \<작업 Namespace = "[uri]" > [string]\</Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
  \<증명 정보 >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<어설션 > [어설션]\</Assertion > +  
+ \<Assertion>[assertion]\</Assertion>+  
   
  \</ 증명 정보 >?  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</ 어설션 >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>해독/암호화되지 않은 메시지를 기록할 때 메시지 본문에서 제거되는 정보  
  앞에서 설명했듯이 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 기록된 해독/암호화되지 않은 메시지에 대해 키와 알려진 잠재적 개인 정보를 메시지에서 제거합니다. 또한 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]는 키 교환과 관련된 보안 메시지를 설명하는 다음 목록의 본문 요소와 작업에 대해 키와 알려진 잠재적 개인 정보를 메시지 본문에서 제거합니다.  
@@ -413,5 +413,5 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
  WSDL(웹 서비스 기술 언어)에는 포트 정의가 들어 있습니다. 각 포트에는 끝점 주소와 응용 프로그램에서 사용하는 서비스를 나타내는 바인딩이 있습니다. 구성을 사용하여 WSDL 노출을 해제할 수 있습니다. 컴퓨터에는 정보가 보관되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [보안](../../../docs/framework/wcf/feature-details/security.md)

@@ -15,11 +15,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-clients"></a>클라이언트에 보안 설정
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]에서 서비스가 클라이언트에 대한 보안 요구 사항을 지시합니다. 즉, 서비스는 사용할 보안 모드 및 클라이언트가 자격 증명을 제공해야 하는지 여부를 지정합니다. 따라서 클라이언트 보안 설정 프로세스는 간단합니다. 서비스에서 가져온 메타데이터를 사용하여(게시된 경우) 클라이언트를 빌드하면 됩니다. 메타데이터는 클라이언트를 구성하는 방법을 지정합니다. 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 요구 사항에 맞는 자격 증명을 가져와야 합니다. 이 항목에서는 이 과정을 자세히 설명합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]참조는 보안 서비스를 만드는 [Services에 보안 설정](../../../docs/framework/wcf/securing-services.md)합니다.  
@@ -117,7 +117,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- 구성에서 클라이언트 자격 증명을 설정 하려면 추가 [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 요소를 구성 파일입니다. 또한 추가 된 동작 요소를 서비스의 끝점에 연결 해야 합니다를 사용 하 여는 `behaviorConfiguration` 특성에는 [ \<끝점 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) 다음 예제 에서처럼 요소입니다. `behaviorConfiguration` 특성 값은 동작 `name` 특성 값과 일치해야 합니다.  
+ 구성에서 클라이언트 자격 증명을 설정 하려면 추가 [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 요소를 구성 파일입니다. 또한 추가 된 동작 요소를 서비스의 끝점에 연결 해야 합니다를 사용 하 여는 `behaviorConfiguration` 특성에는 [ \<끝점 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) 다음 예제 에서처럼 요소입니다. `behaviorConfiguration` 특성 값은 동작 `name` 특성 값과 일치해야 합니다.  
   
  `<configuration>`  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<바인딩 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [Configuration Editor 도구(SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [서비스에 보안 설정](../../../docs/framework/wcf/securing-services.md)  
  [WCF 클라이언트를 사용하여 서비스 액세스](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

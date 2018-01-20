@@ -28,11 +28,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c0d8ff3d6f66ad3abf23cd371f86bb74edf78e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM에서 사용할 어셈블리의 패키징
 COM 개발자는 응용 프로그램에 통합하려는 관리 형식에 대한 다음 정보를 활용할 수 있습니다.  
@@ -47,7 +47,7 @@ COM 개발자는 응용 프로그램에 통합하려는 관리 형식에 대한 
   
      클래스 인터페이스(COM interop 생성 인터페이스)를 구현하는 관리 클래스에는 버전 관리 제한 사항이 적용됩니다.  
   
-     클래스 인터페이스를 사용하는 데 대한 지침은 [클래스 인터페이스 소개](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)를 참조하세요.  
+     클래스 인터페이스를 사용하는 데 대한 지침은 [클래스 인터페이스 소개](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)를 참조하세요.  
   
 -   배포 지침  
   
@@ -69,7 +69,7 @@ COM 개발자는 응용 프로그램에 통합하려는 관리 형식에 대한 
   
      선택하는 메커니즘에 관계없이 사용자가 제공하는 어셈블리에 정의된 공용 형식만 생성된 형식 라이브러리에 포함됩니다.  
   
-     형식 라이브러리를 개별 파일로 패키지하거나 .NET 기반 응용 프로그램에서 Win32 리소스 파일로 포함할 수 있습니다. Microsoft Visual Basic 6.0에서는 이 작업을 자동으로 수행합니다. 그러나 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]를 사용하는 경우 형식 라이브러리를 직접 포함시켜야 합니다. 자세한 내용은 [방법: .NET 응용 프로그램에 Win32 리소스로 형식 라이브러리 포함](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)을 참조하세요.  
+     형식 라이브러리를 개별 파일로 패키지하거나 .NET 기반 응용 프로그램에서 Win32 리소스 파일로 포함할 수 있습니다. Microsoft Visual Basic 6.0에서는 이 작업을 자동으로 수행합니다. 그러나 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]를 사용하는 경우 형식 라이브러리를 직접 포함시켜야 합니다. 자세한 내용은 [방법: .NET 응용 프로그램에 Win32 리소스로 형식 라이브러리 포함](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)을 참조하세요.  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>형식 라이브러리 내보내기  
@@ -94,8 +94,8 @@ COM 개발자는 응용 프로그램에 통합하려는 관리 형식에 대한 
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [상호 운용할 .NET 형식의 정규화](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [클래스 인터페이스 소개](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [클래스 인터페이스 소개](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [어셈블리 보안 고려 사항](../../../docs/framework/app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe(형식 라이브러리 내보내기)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [COM에 어셈블리 등록](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [방법: 응용 프로그램에 Win32 리소스로 형식 라이브러리 포함](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
+ [방법: 응용 프로그램에 Win32 리소스로 형식 라이브러리 포함](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
