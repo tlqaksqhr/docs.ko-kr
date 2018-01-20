@@ -16,38 +16,38 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; 요소
+
 응용 프로그램이 지원하는 공용 언어 런타임 버전을 지정합니다. 이 요소는 .NET Framework 1.1 이상 버전으로 작성된 모든 응용 프로그램에서 사용되어야 합니다.  
   
 [\<구성>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-
-[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
-**\<supportedRuntime>**  
-  
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>구문
   
 ```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## <a name="attributes"></a>특성  
+## <a name="attributes"></a>특성
   
 |특성|설명|  
 |---------------|-----------------|  
 |**version**|선택적 특성입니다.<br /><br /> 응용 프로그램이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 유효한 값에 대해서는 `version` 특성을 참조 하십시오.는 ["런타임 버전" 값](#version) 섹션. **참고:** 통해.NET Framework 3.5는 "*런타임 버전*" 형식으로 지정 *주요*. *사소한*. *빌드*합니다. [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]부터는 주 및 부 버전 번호만 필요합니다(즉, "v4.0.30319"가 아니라 "v4.0"만 필요). 짧은 문자열이 권장됩니다.|  
 |**sku**|선택적 특성입니다.<br /><br /> 이 응용 프로그램이 지원하는 .NET Framework 버전을 지정하는 SKU(Stock Keeping Unit)를 지정하는 문자열 값입니다.<br /><br /> .NET Framework 4.0의 사용으로 시작 된 `sku` 특성을 사용 하는 것이 좋습니다.  존재한다면 앱이 대상으로 하는 .NET Framework의 버전을 나타냅니다.<br /><br /> Sku 특성의 유효한 값에 대 한 참조는 ["sku id" 값](#sku) 섹션.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>설명
+
 경우는  **\<supportedRuntime >** 요소가 응용 프로그램 구성 파일에 없다면, 응용 프로그램을 작성 하는 데 런타임 버전이 사용 됩니다.  
 
- **\<supportedRuntime >** 요소는 버전 1.1 이상 런타임에 사용 하 여 빌드된 모든 응용 프로그램에서 사용 되어야 합니다. 런타임 버전 1.0만 지원 하도록 작성 된 응용 프로그램을 사용 해야 합니다는 [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) 요소입니다.  
+**\<supportedRuntime >** 요소는 버전 1.1 이상 런타임에 사용 하 여 빌드된 모든 응용 프로그램에서 사용 되어야 합니다. 런타임 버전 1.0만 지원 하도록 작성 된 응용 프로그램을 사용 해야 합니다는 [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) 요소입니다.  
   
 > [!NOTE]
 >  사용 하는 경우는 [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) 구성 파일을 지정 하려면 함수를 사용 해야 합니다는 `<requiredRuntime>` 모든 버전의 런타임에 대 한 요소입니다. `<supportedRuntime>` 사용할 때 요소는 무시 됩니다 [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)합니다.  
@@ -72,9 +72,9 @@ ms.lasthandoff: 12/22/2017
 |3.5|"v2.0.50727"|  
 |4.0-4.7.1|"v4.0"|  
 
-  
 <a name="sku"></a>   
-## <a name="sku-id-values"></a>"sku id" 값  
+## <a name="sku-id-values"></a>"sku id" 값
+
 `sku` 특성 대상 프레임 워크 모니커 (TFM)를 사용 하 여 앱을 대상으로 하 고 실행 하는 데 필요한.NET Framework의 버전을 나타냅니다. 지원 되는 유효한 값을 나열 하는 다음 표에서 `sku` 특성,.NET Framework 4로 시작 합니다.
   
 |.NET Framework 버전|`sku` 특성|  
@@ -92,9 +92,9 @@ ms.lasthandoff: 12/22/2017
 |4.5.2|".NETFramework,Version=v4.5.2"|  
 |4.6|".NETFramework,Version=v4.6"|  
 |4.6.1|".NETFramework,Version=v4.6.1"|  
-|4.6.2|". NETFramework, Version = v4.6.2 "|  
-|4.7|". NETFramework, Version = v4.7 "|
-|4.7.1|". NETFramework, Version = 4.7.1"|
+|4.6.2|".NETFramework,Version=v4.6.2"|  
+|4.7|".NETFramework,Version=v4.7"|
+|4.7.1|".NETFramework,Version=v4.7.1"|
 
 ## <a name="example"></a>예  
  다음 예제에서는 구성 파일에 지원되는 런타임 버전을 지정하는 방법을 보여줍니다. 구성 파일은 응용 프로그램에.NET Framework 4.7 대상으로 지정 함을 나타냅니다.  
@@ -107,10 +107,12 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="configuration-file"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일에 사용할 수 있습니다.  
-  
-## <a name="see-also"></a>참고 항목  
+## <a name="configuration-file"></a>구성 파일
+
+이 요소는 응용 프로그램 구성 파일에 사용할 수 있습니다.
+
+## <a name="see-also"></a>참고 항목
+
  [시작 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [In-Process Side-by-Side 실행](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+ [In-Process Side-by-Side 실행](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
