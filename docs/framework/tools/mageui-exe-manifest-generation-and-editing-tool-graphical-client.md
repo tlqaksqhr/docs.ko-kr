@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)
 MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다. 이 도구를 사용하면 배포 및 응용 프로그램 매니페스트를 만들고, 편집하고, 서명할 수 있습니다. MageUI.exe로 만든 새 매니페스트는 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]을 대상으로 합니다. 이전 버전의 MageUI.exe는 이전 .NET Framework 버전을 대상으로 사용해야 합니다. 매니페스트에서 어셈블리를 추가하거나 제거 또는 기존 매니페스트를 다시 서명할 때 MageUI.exe는 매니페스트를 대상 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]로 업데이트하지 않습니다. 자세한 내용은 [Mage.exe(매니페스트 생성 및 편집 도구)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)를 참조하세요.  
@@ -138,7 +138,7 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
   
 |UI 요소|설명|  
 |----------------|-----------------|  
-|**권한 집합 형식**|클라이언트에서 실행할 이 응용 프로그램에 필요한 최소 권한 집합입니다. 이들 권한 집합 및 이들 권한 집합이 요청하거나 요청하지 않는 권한에 대한 자세한 내용은 [NIB: 명명된 권한 집합](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)을 참조하세요.|  
+|**권한 집합 형식**|클라이언트에서 실행할 이 응용 프로그램에 필요한 최소 권한 집합입니다. 이들 권한 집합 및 이들 권한 집합이 요청하거나 요청하지 않는 권한에 대한 자세한 내용은 [NIB: 명명된 권한 집합](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)을 참조하세요.|  
 |**설명**|응용 프로그램 매니페스트에서 권한 집합을 나타내려고 만들어진 XML입니다. 응용 프로그램 매니페스트 XML 형식을 잘 알고 있지 않다면 이 XML을 수동으로 편집하면 안 됩니다. 자세한 내용은 [ClickOnce 응용 프로그램 매니페스트](/visualstudio/deployment/clickonce-application-manifest)를 참조하세요.|  
   
 ### <a name="deployment-manifest-tab"></a>배포 매니페스트 탭  

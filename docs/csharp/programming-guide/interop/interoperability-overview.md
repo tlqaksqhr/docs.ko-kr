@@ -14,11 +14,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b24a367eaf78ef520cc2dd54db6ad58b215179ad
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7e4bc1814ed5c86660b4333542a3dc4eb7462e89
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>상호 운용성 개요(C# 프로그래밍 가이드)
 이 항목에서는 C# 관리 코드와 비관리 코드 간의 상호 운용성을 사용하도록 설정하는 방법을 설명합니다.  
@@ -67,5 +67,5 @@ ms.lasthandoff: 12/09/2017
  [COM Interop 소개](http://go.microsoft.com/fwlink/?LinkId=112406)  
  [관리 코드와 비관리 코드 간의 마샬링](http://go.microsoft.com/fwlink/?LinkId=112398)  
  [비관리 코드와의 상호 운용](../../../../docs/framework/interop/index.md)  
- [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [고급 COM 상호 운용성](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)

@@ -13,26 +13,26 @@ ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a6dca6e62dbf69783babf2e16dc4e7c36c6705c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f1d06bf408f13a78df503ab10fe3c57b4ff68a3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="main-c-compiler-options"></a>/main(C# 컴파일러 옵션)
+# <a name="-main-c-compiler-options"></a>-main(C# 컴파일러 옵션)
 이 옵션은 둘 이상의 클래스에 **Main** 메서드가 포함된 경우 프로그램에 대한 진입점을 포함하는 클래스를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/main:class  
+-main:class  
 ```  
   
 ## <a name="arguments"></a>인수  
  `class`  
  **Main** 메서드를 포함하는 형식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  컴파일에 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 메서드가 있는 형식이 둘 이상 포함된 경우 프로그램에 대한 진입점으로 사용할 **Main** 메서드를 포함하는 형식을 지정할 수 있습니다.  
   
  이 옵션은 .exe 파일을 컴파일할 때 사용됩니다.  
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/21/2017
   
      프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **Main** 메서드가 `Test2`에 있다고 지정하여 `t2.cs` 및 `t3.cs`를 컴파일합니다.  
   
 ```console  
-csc t2.cs t3.cs /main:Test2  
+csc t2.cs t3.cs -main:Test2  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

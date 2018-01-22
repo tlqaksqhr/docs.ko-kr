@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>방법: 클라이언트 응용 프로그램 서비스 구성
 이 항목에서는 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **프로젝트 디자이너**를 사용하여 클라이언트 응용 프로그램 서비스를 사용하도록 설정하고 구성하는 방법을 설명합니다. 클라이언트 응용 프로그램 서비스를 사용하면 기존 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스에서 사용자의 유효성을 검사하고 사용자 역할과 설정을 검색할 수 있습니다. 구성 후에는 [클라이언트 응용 프로그램 서비스 개요](../../../docs/framework/common-client-technologies/client-application-services-overview.md)의 설명에 따라 응용 프로그램 코드에서 사용하도록 설정된 서비스에 액세스할 수 있습니다. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스에 대한 자세한 내용은 [ASP.NET 응용 프로그램 서비스 개요](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)를 참조하세요.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **오프라인으로 로그인할 수 있도록 로컬에 암호 해시 저장**을 선택하거나 선택을 취소합니다. 이 옵션을 선택하면 암호화된 형식의 사용자 암호가 로컬로 캐시됩니다. 이 옵션은 응용 프로그램에 대해 오프라인 모드를 구현하는 경우 적합합니다. 이 옵션을 선택하면 <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> 속성을 `true`로 설정했더라도 사용자의 유효성을 검사할 수 있습니다.  
   
-3.  **서버 쿠키가 만료될 때마다 다시 사용자 로그온**을 선택하거나 선택을 취소합니다. 인증 쿠키는 원격 서비스에서 구성되며 사용자 로그인이 활성 상태로 유지되는 시간을 나타냅니다. 쿠키를 구성하는 방법에 대한 자세한 내용은 [authentication 요소에 대한 forms 요소(ASP.NET 설정 스키마)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)의 `timeout` 특성을 참조하세요.  
+3.  **서버 쿠키가 만료될 때마다 다시 사용자 로그온**을 선택하거나 선택을 취소합니다. 인증 쿠키는 원격 서비스에서 구성되며 사용자 로그인이 활성 상태로 유지되는 시간을 나타냅니다. 쿠키를 구성하는 방법에 대한 자세한 내용은 [authentication 요소에 대한 forms 요소(ASP.NET 설정 스키마)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)의 `timeout` 특성을 참조하세요.  
   
      이 옵션을 선택하는 경우 인증 쿠키가 만료된 후 원격 역할 또는 웹 설정 서비스에 액세스하려고 하면 <xref:System.Net.WebException>이 throw됩니다. 이 예외를 처리하고 로그인 대화 상자를 표시하여 사용자의 유효성을 다시 검사할 수 있습니다. 이 동작의 예는 [연습: 클라이언트 응용 프로그램 서비스 사용](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)을 참조하세요. 이 옵션은 공공 장소에 배포된 응용 프로그램에서 응용 프로그램을 사용한 후 실행 중인 상태로 유지하는 사용자가 계속 인증된 상태로 유지되지 않도록 하는 데 유용합니다.  
   

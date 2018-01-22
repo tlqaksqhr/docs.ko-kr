@@ -10,11 +10,11 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 153e7d115b34e6659f6a8ca23014441b86847796
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="versioning-in-c"></a>C#으로 버전 관리 #
 
@@ -57,7 +57,7 @@ SemVer에 대한 가장 기본적인 접근법은 3개 구성 요소 형식 `MAJ
 
 ### <a name="application-configuration-file"></a>응용 프로그램 구성 파일
 
-.NET 개발자는 대부분의 프로젝트 형식에서 [`app.config` 파일](https://msdn.microsoft.com/en-us/library/1fk1t1t0(v=vs.110).aspx)을 발견할 가능성이 매우 높습니다.
+.NET 개발자는 대부분의 프로젝트 형식에서 [`app.config` 파일](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx)을 발견할 가능성이 매우 높습니다.
 이 간단한 구성 파일은 새로운 업데이트 출시를 개선하는 데 큰 도움이 될 수 있습니다. 일반적으로 라이브러리를 설계할 때 정기적으로 변경될 가능성이 있는 정보를 `app.config` 파일에 저장하도록 해야 합니다. 이렇게 하면 해당 정보가 업데이트될 때 라이브러리를 다시 컴파일하지 않고 이전 버전의 구성 파일을 새로운 파일로 바꾸기만 하면 됩니다.
 
 ## <a name="consuming-libraries"></a>라이브러리 사용
@@ -68,7 +68,7 @@ SemVer에 대한 가장 기본적인 접근법은 3개 구성 요소 형식 `MAJ
 
 ### <a name="assembly-binding-redirection"></a>어셈블리 바인딩 리디렉션
 
-앱이 사용하는 라이브러리의 버전을 업데이트하기 위해 `app.config` 파일을 사용할 수 있습니다. [*바인딩 리디렉션*](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx)을 추가하면 앱을 다시 컴파일하지 않고도 새 라이브러리 버전을 사용할 수 있습니다. 다음 예제에서는 원래 컴파일된 `1.0.0` 버전 대신 `ReferencedLibrary`의 `1.0.1` 패치 버전을 사용하도록 앱의 `app.config` 파일을 업데이트하는 방법을 보여 줍니다.
+앱이 사용하는 라이브러리의 버전을 업데이트하기 위해 `app.config` 파일을 사용할 수 있습니다. [*바인딩 리디렉션*](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx)을 추가하면 앱을 다시 컴파일하지 않고도 새 라이브러리 버전을 사용할 수 있습니다. 다음 예제에서는 원래 컴파일된 `1.0.0` 버전 대신 `ReferencedLibrary`의 `1.0.1` 패치 버전을 사용하도록 앱의 `app.config` 파일을 업데이트하는 방법을 보여 줍니다.
 
 ```xml
 <dependentAssembly>

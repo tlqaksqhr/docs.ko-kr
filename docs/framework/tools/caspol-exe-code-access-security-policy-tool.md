@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe(코드 액세스 보안 정책 도구)
 CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.  
@@ -114,7 +114,7 @@ caspol [options]
 ## <a name="remarks"></a>설명  
  보안 정책은 컴퓨터 정책, 사용자 정책 및 엔터프라이즈 정책의 세 가지 정책 수준으로 표현됩니다. 어셈블리에서 받아들이는 권한 집합은 이러한 세 가지 정책 수준에서 허용하는 권한 집합의 교집합 부분에 의해 결정됩니다. 각 정책 수준은 코드 그룹의 계층 구조로 표시됩니다. 모든 코드 그룹에는 해당 그룹의 멤버가 되는 코드를 결정하는 멤버 자격 조건이 있습니다. 또한 명명된 권한 집합이 각 코드 그룹에 연결됩니다. 이 권한 집합에서는 런타임에서 해당 멤버 자격 조건을 충족하는 코드에 허용할 권한을 지정합니다. 코드 그룹 계층 구조에서는 해당 코드 그룹에 연결된 명명된 권한 집합과 함께 보안 정책의 각 수준을 정의하고 유지합니다. **–user**, **-customuser**, **–machine** 및 **-enterprise** 옵션을 사용하여 보안 정책 수준을 설정할 수 있습니다.  
   
- 보안 정책 및 런타임에서 코드에 부여할 권한을 결정하는 방법에 대한 자세한 내용은 [보안 정책 관리](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)를 참조하세요.  
+ 보안 정책 및 런타임에서 코드에 부여할 권한을 결정하는 방법에 대한 자세한 내용은 [보안 정책 관리](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)를 참조하세요.  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>코드 그룹 및 권한 집합 참조  
  계층 구조의 코드 그룹을 쉽게 참조하려면 **-list** 옵션을 사용하여 숫자 레이블(예: 1, 1.1, 1.1.1 등)과 함께 들여쓴 코드 그룹 목록을 표시합니다. 코드 그룹을 대상으로 하는 다른 명령줄 작업에서도 숫자 레이블을 사용하여 특정 코드 그룹을 참조합니다.  

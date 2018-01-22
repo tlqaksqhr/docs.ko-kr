@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9a9774a9811d5c53d44d66fba452098367846bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e6b98d03988c5eb747fb3a4c766c98f477a3b5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe(형식 라이브러리 가져오기)
 형식 라이브러리 가져오기 도구는 COM 형식 라이브러리에 있는 형식 정의를 공용 언어 런타임 어셈블리의 동등한 정의로 변환합니다. Tlbimp.exe의 출력은 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 이진 파일(어셈블리)입니다. [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)와 같은 도구를 사용하여 이 파일을 검토할 수 있습니다.  
@@ -61,7 +61,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Tlbimp.exe에서 클래스에 멤버를 추가하지 못하도록 합니다. 이렇게 하면 <xref:System.TypeLoadException>이 발생하지 않습니다.|  
 |**/nologo**|Microsoft 시작 배너를 표시하지 않습니다.|  
 |**/out:** *filename*|메타데이터 정의를 기록할 출력 파일의 이름, 어셈블리 및 네임스페이스를 지정합니다. 형식 라이브러리에서 어셈블리의 네임스페이스를 명시적으로 제어하는 IDL(Interface Definition Language) 사용자 지정 특성을 지정하면 **/out** 옵션은 어셈블리의 네임스페이스에 영향을 주지 않습니다. 이 옵션을 지정하지 않으면 Tlbimp.exe는 입력 파일 내에 정의한 실제 형식 라이브러리와 이름이 같은 파일에 메타데이터를 기록하고 이 파일의 확장명을 .dll로 지정합니다. 출력 파일과 입력 파일의 이름이 같은 경우 형식 라이브러리를 덮어쓰지 않도록 오류가 생성됩니다.|  
-|**/primary**|지정된 형식 라이브러리에 대한 주 interop 어셈블리를 만듭니다. 어셈블리를 만든 형식 라이브러리의 게시자를 나타내는 정보가 어셈블리에 추가됩니다. 주 interop 어셈블리를 지정하면 게시자의 어셈블리를 Tlbimp.exe를 사용하여 형식 라이브러리에서 만든 다른 어셈블리와 구별할 수 있습니다. Tlbimp.exe를 사용하여 가져오는 형식 라이브러리의 게시자인 경우 **/primary** 옵션만 사용해야 합니다. [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)을 사용하여 주 interop 어셈블리를 서명해야 합니다. 자세한 내용은 [주 Interop 어셈블리](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080)를 참조하세요.|  
+|**/primary**|지정된 형식 라이브러리에 대한 주 interop 어셈블리를 만듭니다. 어셈블리를 만든 형식 라이브러리의 게시자를 나타내는 정보가 어셈블리에 추가됩니다. 주 interop 어셈블리를 지정하면 게시자의 어셈블리를 Tlbimp.exe를 사용하여 형식 라이브러리에서 만든 다른 어셈블리와 구별할 수 있습니다. Tlbimp.exe를 사용하여 가져오는 형식 라이브러리의 게시자인 경우 **/primary** 옵션만 사용해야 합니다. [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)을 사용하여 주 interop 어셈블리를 서명해야 합니다. 자세한 내용은 [주 Interop 어셈블리](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080)를 참조하세요.|  
 |**/product:** `productinformation`|출력 어셈블리에 제품 정보를 추가합니다. 이 정보는 어셈블리에 대한 **파일 속성** 대화 상자에서 볼 수 있습니다.|  
 |**/productversion:** `productversioninformation`|출력 어셈블리에 제품 버전 정보를 추가합니다. 형식 제한은 없습니다. 이 정보는 어셈블리에 대한 **파일 속성** 대화 상자에서 볼 수 있습니다.|  
 |**/publickey:** *filename*|결과 어셈블리에 서명하는 데 사용할 공개 키를 포함하는 파일을 지정합니다. **/publickey:** 대신 **/keyfile:** 또는 **/keycontainer:** 옵션을 지정하면 Tlbimp.exe는 **/keyfile:** 또는 **/keycontainer:**와 함께 제공된 공개/개인 키 쌍에서 공개 키를 생성합니다. **/publickey:** 옵션은 테스트 키 및 서명 연기 시나리오를 지원합니다. 파일은 Sn.exe에 의해 생성된 형식으로 되어 있습니다. 자세한 내용은 [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)에서 Sn.exe의 **-p** 옵션을 참조하세요.|  
@@ -138,9 +138,9 @@ void SomeMethod(out bool x);
  [도구](../../../docs/framework/tools/index.md)  
  [Tlbexp.exe(형식 라이브러리 내보내기)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [형식 라이브러리를 어셈블리로 가져오기](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [형식 라이브러리를 어셈블리로 변환 요약](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [형식 라이브러리를 어셈블리로 변환 요약](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
  [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Interop 어셈블리로 형식 라이브러리를 가져오는 특성](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
+ [Interop 어셈블리로 형식 라이브러리를 가져오는 특성](http://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

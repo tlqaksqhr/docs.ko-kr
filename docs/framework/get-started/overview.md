@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: de9d94c9b4dfbdccb4ea5b3a7281715460d076a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffe4670ef07b0a9b541bf2099958aa943bba2f68
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
 
@@ -96,7 +96,7 @@ Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트�
 
 - WCF(Windows Communication Foundation )를 사용하는 서비스 기반 앱. [WCF를 사용하여 개발한 서비스 기반 응용 프로그램](../../../docs/framework/wcf/index.md)을 참조하세요.
 
-- Windows WF(Workflow Foundation)를 사용하는 워크플로 사용 앱. [.NET Framework에서 워크플로 만들기](http://msdn.microsoft.com/en-us/cbf3880f-dc7b-466d-b808-1109b1223f4a)를 참조하세요.
+- Windows WF(Workflow Foundation)를 사용하는 워크플로 사용 앱. [.NET Framework에서 워크플로 만들기](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a)를 참조하세요.
 
 Windows Forms 클래스는 Windows GUI 개발을 매우 단순하게 하는 다시 사용할 수 있는 형식의 포괄적인 집합입니다. ASP.NET Web Form 앱을 작성하는 경우 Web Forms 클래스를 사용할 수 있습니다.
 
@@ -106,5 +106,5 @@ Windows Forms 클래스는 Windows GUI 개발을 매우 단순하게 하는 다�
 [설치 가이드](../../../docs/framework/install/index.md)   
 [개발 가이드](../../../docs/framework/development-guide.md)   
 [도구](../../../docs/framework/tools/index.md)   
-[.NET Framework 샘플](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[.NET Framework 샘플](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
 [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)

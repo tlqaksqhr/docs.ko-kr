@@ -11,11 +11,11 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload: dotnetcore
-ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ dotnet new [-h|--help]
 
 명령에는 템플릿의 기본 목록이 포함되어 있습니다. `dotnet new -l`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다. 다음 표에는 .NET Core 2.0 SDK와 함께 사전 설치된 템플릿이 나와 있습니다. 템플릿의 기본 언어는 대괄호 안에 표시됩니다.
 
-|템플릿 설명                          | 템플릿 이름  | 언어     |
-|----------------------------------------------|----------------|---------------|
-| 콘솔 응용 프로그램                          | 콘솔        | [C#], F#, VB  |
-| 클래스 라이브러리                                | classlib       | [C#], F#, VB  |
-| 단위 테스트 프로젝트                            | mstest         | [C#], F#, VB  |
-| xUnit 테스트 프로젝트                           | xunit          | [C#], F#, VB  |
-| ASP.NET Core 비어 있음                           | 웹            | [C#], F#      |
-| ASP.NET Core 웹앱(모델-뷰-컨트롤러) | mvc            | [C#], F#      |
-| ASP.NET Core 웹앱                         | razor          | [C#]          |
-| ASP.NET Core(Angular 사용)                    | angular        | [C#]          |
-| ASP.NET Core(React.js 사용)                   | react          | [C#]          |
-| ASP.NET Core(React.js 및 Redux 사용)         | reactredux     | [C#]          |
-| ASP.NET Core 웹 API                         | webapi         | [C#], F#      |
-| global.json 파일                             | globaljson     |               |
-| Nuget 구성                                 | nugetconfig    |               |
-| 웹 구성                                   | webconfig      |               |
-| 솔루션 파일                                | sln            |               |
-| Razor 페이지                                   | 페이지           |               |
-| MVC/ViewImports                              | viewimports    |               |
-| MVC ViewStart                                | viewstart      |               |
+|템플릿 설명                          | 템플릿 이름 | 언어     |
+|----------------------------------------------|---------------|---------------|
+| 콘솔 응용 프로그램                          | `console`     | [C#], F#, VB  |
+| 클래스 라이브러리                                | `classlib`    | [C#], F#, VB  |
+| 단위 테스트 프로젝트                            | `mstest`      | [C#], F#, VB  |
+| xUnit 테스트 프로젝트                           | `xunit`       | [C#], F#, VB  |
+| ASP.NET Core 비어 있음                           | `web`         | [C#], F#      |
+| ASP.NET Core 웹앱(모델-뷰-컨트롤러) | `mvc`         | [C#], F#      |
+| ASP.NET Core 웹앱                         | `razor`       | [C#]          |
+| ASP.NET Core(Angular 사용)                    | `angular`     | [C#]          |
+| ASP.NET Core(React.js 사용)                   | `react`       | [C#]          |
+| ASP.NET Core(React.js 및 Redux 사용)         | `reactredux`  | [C#]          |
+| ASP.NET Core 웹 API                         | `webapi`      | [C#], F#      |
+| global.json 파일                             | `globaljson`  |               |
+| Nuget 구성                                 | `nugetconfig` |               |
+| 웹 구성                                   | `webconfig`   |               |
+| 솔루션 파일                                | `sln`         |               |
+| Razor 페이지                                   | `page`        |               |
+| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 명령에는 템플릿의 기본 목록이 포함되어 있습니다. `dotnet new -all`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다. 다음 표에는 .NET Core 1.x SDK와 함께 사전 설치된 템플릿이 나와 있습니다. 템플릿의 기본 언어는 대괄호 안에 표시됩니다.
 
-|템플릿 설명  | 템플릿 이름  | 언어 |
-|----------------------|----------------|-----------|
-| 콘솔 응용 프로그램  | 콘솔        | [C#], F#  |
-| 클래스 라이브러리        | classlib       | [C#], F#  |
-| 단위 테스트 프로젝트    | mstest         | [C#], F#  |
-| xUnit 테스트 프로젝트   | xunit          | [C#], F#  |
-| ASP.NET Core 비어 있음   | 웹            | [C#]      |
-| ASP.NET Core 웹앱 | mvc            | [C#], F#  |
-| ASP.NET Core 웹 API | webapi         | [C#]      |
-| Nuget 구성         | nugetconfig    |           |
-| 웹 구성           | webconfig      |           |
-| 솔루션 파일        | sln            |           |
+|템플릿 설명  | 템플릿 이름 | 언어 |
+|----------------------|---------------|-----------|
+| 콘솔 응용 프로그램  | `console`     | [C#], F#  |
+| 클래스 라이브러리        | `classlib`    | [C#], F#  |
+| 단위 테스트 프로젝트    | `mstest`      | [C#], F#  |
+| xUnit 테스트 프로젝트   | `xunit`       | [C#], F#  |
+| ASP.NET Core 비어 있음   | `web`         | [C#]      |
+| ASP.NET Core 웹앱 | `mvc`         | [C#], F#  |
+| ASP.NET Core 웹 API | `webapi`      | [C#]      |
+| Nuget 구성         | `nugetconfig` |           |
+| 웹 구성           | `webconfig`   |           |
+| 솔루션 파일        | `sln`         |           |
 
 ---
 

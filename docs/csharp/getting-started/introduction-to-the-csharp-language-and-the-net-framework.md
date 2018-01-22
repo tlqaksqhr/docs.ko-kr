@@ -4,7 +4,7 @@ description: "C# 및 .NET의 기본 사항에 대해 알아봅니다. C# 언어 
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology: devlang-csharp
-ms.topic: article
+ms.topic: get-started-article
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
@@ -12,11 +12,11 @@ ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2bc7dfbca102a5d2e891b48b676347822eae56f7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b2ffb641f436a41c97a94a6ec117f6087851d482
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
 유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 실행되는 안전하고 강력한 여러 응용 프로그램을 구축할 수 있도록 지원합니다. C#을 사용하여 Windows 클라이언트 응용 프로그램, XML Web services, 분산 구성 요소, 클라이언트-서버 응용 프로그램, 데이터베이스 응용 프로그램 등을 만들 수 있습니다. Visual C#에서는 고급 코드 편집기, 편리한 사용자 인터페이스 디자이너, 통합 디버거 및 다른 많은 도구를 제공하여 C# 언어 및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에 따라 보다 쉽게 응용 프로그램을 개발할 수 있습니다.  

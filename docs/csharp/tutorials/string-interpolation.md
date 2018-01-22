@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="string-interpolation-in-c"></a>C#의 문자열 보간 #
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>문자열 보간이 작동하는 방법
 
-내부적으로 이 문자열 보간 구문은 컴파일러에서 String.Format로 변환됩니다. 따라서 [이전에 String.Format으로 수행했던 것과 동일한 형식의 작업](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx)을 수행할 수 있습니다.
+내부적으로 이 문자열 보간 구문은 컴파일러에서 String.Format로 변환됩니다. 따라서 [이전에 String.Format으로 수행했던 것과 동일한 형식의 작업](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx)을 수행할 수 있습니다.
 
 예를 들어 안쪽 여백 및 숫자 서식을 추가할 수 있습니다.
 

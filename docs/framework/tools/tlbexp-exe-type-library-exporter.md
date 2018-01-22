@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a76d85fa19fc7869ff4298867286592583e86a12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47710b81de79a9dfbb6bddd39035be2986350b0e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe(형식 라이브러리 내보내기)
 형식 라이브러리 내보내기를 사용하면 공용 언어 런타임 어셈블리에 정의된 형식을 설명하는 형식 라이브러리를 생성할 수 있습니다.  
@@ -99,7 +99,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Tlbexp.exe에서는 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> 필드를 무시합니다.  
   
- 형식 라이브러리가 어셈블리의 모든 정보를 포함할 수 없으므로 변환 프로세스를 통해 내보내는 동안 일부 데이터가 삭제될 수도 있습니다. 변형 프로세스 설명 및 형식 라이브러리에 내보낸 정보에 대한 소스 식별에 대한 자세한 내용은 [어셈블리와 형식 라이브러리 간 변환 요약](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)을 참조하세요.  
+ 형식 라이브러리가 어셈블리의 모든 정보를 포함할 수 없으므로 변환 프로세스를 통해 내보내는 동안 일부 데이터가 삭제될 수도 있습니다. 변형 프로세스 설명 및 형식 라이브러리에 내보낸 정보에 대한 소스 식별에 대한 자세한 내용은 [어셈블리와 형식 라이브러리 간 변환 요약](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)을 참조하세요.  
   
  형식 라이브러리 내보내기는 <xref:System.TypedReference> 개체가 비관리 코드에서 의미가 없더라도 `VARIANT` 매개 변수가 <xref:System.TypedReference>인 메서드를 내보냅니다. <xref:System.TypedReference> 매개 변수가 있는 메서드를 내보내면 형식 라이브러리 내보내기가 경고나 오류를 생성하지 않으며 결과 형식 라이브러리를 사용하는 비관리 코드가 제대로 실행되지 않습니다.  
   
@@ -142,6 +142,6 @@ tlbexp Sample.dll
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
  [도구](../../../docs/framework/tools/index.md)  
  [Regasm.exe(어셈블리 등록 도구)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- [어셈블리와 형식 라이브러리 간 변환 요약](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [어셈블리와 형식 라이브러리 간 변환 요약](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
  [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
