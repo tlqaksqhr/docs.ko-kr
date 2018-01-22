@@ -32,7 +32,7 @@ F# 관련 방식을 하거나 특정 언어 구문에 대한 자세한 참조는
 
 ## <a name="the-f-software-foundation"></a>F# Software Foundation
 
-Microsoft 기본 개발자의 F# 언어와 해당 도구 이지만, F#은 독립적인 F# 소프트웨어 재단(FSSF)에게 지원을 받고 있습니다.  
+Microsoft 기본 개발자의 F# 언어와 해당 도구이지만, F#은 독립적인 F# 소프트웨어 재단(FSSF)에게 지원을 받고 있습니다.   
 
 F# Software Foundation의 임무는 F# 프로그래밍 언어를 홍보하고 보호하고 발전시키며, F# 프로그래머의 다양한 국제 커뮤니티의 성장을 지원하고 용이하게 만드는 것입니다.
 
