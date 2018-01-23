@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 7847d21e3529de1a84ef17486710d10256003ce9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="c-quick-starts"></a>C# 빠른 시작 #
 
@@ -39,6 +39,12 @@ Hello World 단원 다음에 나오는 모든 빠른 시작은 온라인 브라�
 [분기 및 루프](branches-and-loops.yml) 빠른 시작에서는 변수에 저장된 값에 따라 코드 실행의 여러 경로를 선택하는 기본 사항을 설명합니다. 프로그램에서 결정하고 여러 작업을 선택하는 방법에 대한 기본 사항인 제어 흐름의 기본 사항에 대해 알아봅니다. 이 빠른 시작은 [컴퓨터에서 로컬로 실행](branches-and-loops-local.md)할 수도 있습니다.
 
 이 시작 단원에서는 [Hello World](hello-world.yml) 및 [C#의 숫자](numbers-in-csharp.yml) 단원을 완료했다고 가정합니다.
+
+## <a name="interpolated-stringsinterpolated-stringsyml"></a>[보간된 문자열](interpolated-strings.yml)
+
+[보간된 문자열](interpolated-strings.yml) 빠른 시작은 식을 더 큰 문자열에 삽입하는 방법을 보여 줍니다. 보간된 식을 정의하는 방법, 하나 이상의 보간된 식이 있는 보간된 문자열에서 결과 문자열을 만드는 방법 및 결과 문자열에 포함된 식의 형식화, 열 너비 및 맞춤을 제어하는 방법을 알아봅니다. 
+
+이 시작 단원에서는 [Hello World](hello-world.yml), [C#의 숫자](numbers-in-csharp.yml) 및 [분기 및 루프](branches-and-loops.yml) 단원을 완료했다고 가정합니다.
 
 ## <a name="list-collectionlist-collectionyml"></a>[목록 컬렉션](list-collection.yml)
 

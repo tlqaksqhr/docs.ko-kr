@@ -15,20 +15,20 @@ ms.assetid: d3403556-1816-4546-a782-e8223a772e44
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28878fca5bccf23f906395298c8b2b5b7499fd40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 59000f60acdc8ada11bc5abb9e91b5f53d42b9ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-compiler-options"></a>C# 컴파일러 옵션
 컴파일러는 실행 파일(.exe), 동적 연결 라이브러리(.dll) 또는 코드 모듈(.netmodule)을 생성합니다.  
   
- 모든 컴파일러 옵션은 **-옵션** 및 **/옵션**의 두 가지 형태로 사용할 수 있습니다. 설명서에는 **/옵션** 형식만 나와 있습니다.  
+ 모든 컴파일러 옵션은 **-옵션** 및 **/옵션**의 두 가지 형태로 사용할 수 있습니다. 문서에는 **-옵션** 양식만 나와 있습니다.  
   
  Visual Studio,에서는 web.config 파일에서 컴파일러 옵션을 설정합니다. 자세한 내용은 [\<compiler> 요소](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)를 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
  명령줄에서 Visual C# 응용 프로그램을 빌드하는 방법에 대한 정보를 제공합니다.  
   
