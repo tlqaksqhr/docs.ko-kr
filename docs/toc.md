@@ -258,6 +258,7 @@
 ### [코드 문서화](csharp/codedoc.md)
 ### [버전 관리](csharp/versioning.md)
 ## [방법 C# 항목](csharp/how-to/index.md)
+### [방법: `String.Split`을 사용하여 문자열 구문 분석](csharp/how-to/parse-strings-using-split.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK(Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 프로그래밍 가이드](csharp/programming-guide/)
