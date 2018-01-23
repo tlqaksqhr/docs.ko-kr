@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: cfe7115717fcca834d87b7bcdc64ddd1df8ef843
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d1bef5813df40fb5c6e6b96e0042a682022beb8d
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -58,7 +58,7 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 - [문자열의 내용을 수정합니다](../programming-guide/strings/how-to-modify-string-contents.md).
 - [문자열이 숫자를 나타내는지 여부를 확인합니다](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [`String.Split`를 사용하여 문자열을 구분합니다](parse-strings-using-split.md).
-- [여러 문자열을 하나로 결합합니다](../programming-guide/strings/how-to-concatenate-multiple-strings.md).
+- [여러 문자열을 하나로 결합합니다](concatenate-multiple-strings.md).
 - [문자열 내에서 텍스트를 검색합니다](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
 - [정규식을 사용하여 문자열을 검색합니다](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).
 
