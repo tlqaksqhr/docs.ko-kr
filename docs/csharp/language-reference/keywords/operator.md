@@ -12,17 +12,17 @@ ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8fae5487d5daa5ada52d45919598d1abd217aee9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1d035319318a710ccee62a0c64ce5981767a21ca
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="operator-c-reference"></a>연산자(C# 참조)
 `operator` 키워드를 사용하여 기본 제공 연산자를 오버로드하거나 클래스 또는 구조체 선언에서 사용자 정의 변환을 제공할 수 있습니다.  
   
-## <a name="example"></a>예제  
- 다음은 소수에 대한 매우 간단한 클래스입니다. + 및 * 연산자를 오버로드하여 소수 더하기 및 곱하기를 수행하고 분수 형식을 double 형식으로 변환하는 변환 연산자도 제공합니다.  
+## <a name="example"></a>예  
+ 다음은 소수에 대한 매우 간단한 클래스입니다. `+` 및 `*` 연산자를 오버로드하여 소수 더하기 및 곱하기를 수행하고 `Fraction` 형식을 `double` 형식으로 변환하는 변환 연산자도 제공합니다.  
   
  [!code-csharp[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
   

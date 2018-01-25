@@ -13,19 +13,19 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7a505f955f1faf73198b3670754dbb492ff638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="platform-c-compiler-options"></a>/platform(C# 컴파일러 옵션)
+# <a name="-platform-c-compiler-options"></a>-platform(C# 컴파일러 옵션)
 어셈블리를 실행할 수 있는 CLR(공용 언어 런타임) 버전을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/platform:string  
+-platform:string  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -48,13 +48,13 @@ ms.lasthandoff: 12/23/2017
   
  64비트 Windows 운영 체제:  
   
--   **/platform:x86**으로 컴파일된 어셈블리는 WOW64에서 실행되는 32비트 CLR에서 실행됩니다.  
+-   **-platform:x86**으로 컴파일된 어셈블리는 WOW64에서 실행되는 32비트 CLR에서 실행됩니다.  
   
--   **/platform:anycpu**로 컴파일된 DLL은 이 DLL이 로드된 프로세스와 동일한 CLR에서 실행됩니다.  
+-   **-platform:anycpu**로 컴파일된 DLL은 이 DLL이 로드된 프로세스와 동일한 CLR에서 실행됩니다.  
   
--   **/platform:anycpu**로 컴파일된 실행 파일은 64비트 CLR에서 실행됩니다.  
+-   **-platform:anycpu**로 컴파일된 실행 파일은 64비트 CLR에서 실행됩니다.  
   
--   **/platform:anycpu32bitpreferred**로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.  
+-   **-platform:anycpu32bitpreferred**로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.  
   
  **anycpu32bitpreferred** 설정은 실행 파일(.EXE)에 대해서만 유효하고 .NET Framework 4.5를 필요로 합니다.  
   
@@ -68,15 +68,15 @@ ms.lasthandoff: 12/23/2017
   
 3.  .NET Framework 4.5를 대상으로 하는 프로젝트에 대해 **플랫폼 대상** 속성을 수정하고 **32비트 선호** 확인란을 선택하거나 선택 취소합니다.  
   
- **/platform**은 Visual C# Express의 개발 환경에서 사용할 수 없습니다.  
+ **-platform**은 Visual C# Express의 개발 환경에서 사용할 수 없습니다.  
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>를 참조하세요.  
   
 ## <a name="example"></a>예  
- 다음 예제에서는 **/platform** 옵션을 사용하여 응용 프로그램이 64비트 Windows 운영 체제의 64비트 CLR에서만 실행되도록 지정하는 방법을 보여 줍니다.  
+ 다음 예제에서는 **-platform** 옵션을 사용하여 응용 프로그램이 64비트 Windows 운영 체제의 64비트 CLR에서만 실행되도록 지정하는 방법을 보여 줍니다.  
   
 ```console  
-csc /platform:anycpu filename.cs  
+csc -platform:anycpu filename.cs  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

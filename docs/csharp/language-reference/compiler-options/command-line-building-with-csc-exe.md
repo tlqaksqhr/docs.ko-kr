@@ -11,11 +11,11 @@ ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe를 사용한 명령줄 빌드
 명령 프롬프트에서 실행 파일(*csc.exe*)의 이름을 입력하여 C# 컴파일러를 호출할 수 있습니다.
@@ -70,31 +70,31 @@ csc File.cs
 - *File.cs*를 컴파일하여 *File.dll*을 생성합니다.
 
 ```console
-csc /target:library File.cs
+csc -target:library File.cs
 ```
 
 - *File.cs*를 컴파일하여 *My.exe*를 만듭니다.
 
 ```console
-csc /out:My.exe File.cs
+csc -out:My.exe File.cs
 ```
 
 - 최적화를 사용하여 현재 디렉터리에 있는 모든 C# 파일을 컴파일하고 DEBUG 기호를 정의합니다. 출력은 *File2.exe*입니다.
 
 ```console
-csc /define:DEBUG /optimize /out:File2.exe *.cs
+csc -define:DEBUG -optimize -out:File2.exe *.cs
 ```
 
 - 현재 디렉터리에 있는 모든 C# 파일을 컴파일하여 *File2.dll*의 디버그 버전을 생성합니다. 로고 및 경고가 표시되지 않습니다.
 
 ```console
-csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
+csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
 ```
 
 - 현재 디렉터리에 있는 모든 C# 파일을 *Something.xyz*(DLL)로 컴파일합니다.
 
 ```console
-csc /target:library /out:Something.xyz *.cs
+csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# 컴파일러 및 C++ 컴파일러 출력의 차이점

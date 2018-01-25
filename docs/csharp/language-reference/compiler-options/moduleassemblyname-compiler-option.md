@@ -13,19 +13,19 @@ ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c8ebd6f7498adead4586c9e90ec58ca8efe81aaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef68b6a75d9f5bd65e7d549240dc061097f2d30c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname(C# 컴파일러 옵션)
+# <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname(C# 컴파일러 옵션)
 .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/moduleassemblyname:assembly_name  
+-moduleassemblyname:assembly_name  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- **/moduleassemblyname**은 .netmodule을 빌드할 때와 다음 조건이 충족되는 경우 사용해야 합니다.  
+ **-moduleassemblyname**은 .netmodule을 빌드할 때와 다음 조건이 충족되는 경우 사용해야 합니다.  
   
 -   .netmodule은 기존 어셈블리의 public이 아닌 형식에 액세스해야 합니다.  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
 -   기존 어셈블리는 friend 어셈블리(friend assembly)에 .netmodule을 빌드할 어셈블리에 대한 액세스를 부여합니다.  
   
- .netmodule 빌드 방법에 대한 자세한 내용은 [/target:module(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)을 참조하세요.  
+ .netmodule 빌드 방법에 대한 자세한 내용은 [-target:module(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)을 참조하세요.  
   
  friend 어셈블리에 대한 자세한 내용은 [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)를 참조하세요.  
   
@@ -49,12 +49,12 @@ ms.lasthandoff: 11/21/2017
   
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플에서는 private 형식을 사용하여 어셈블리를 빌드하므로 friend 어셈블리가 csman_an_assembly라는 어셈블리에 액세스할 수 있습니다.  
   
 ```csharp  
 // moduleassemblyname_1.cs  
-// compile with: /target:library  
+// compile with: -target:library  
 using System;  
 using System.Runtime.CompilerServices;  
   
@@ -69,12 +69,12 @@ class An_Internal_Class
 }  
 ```  
   
-## <a name="example"></a>예제  
- 이 샘플은 어셈블리 moduleassemblyname_1.dll에 public이 아닌 형식에 액세스하는 .netmodule을 빌드합니다. 이 .netmodule이 csman_an_assembly라는 어셈블리에 빌드될 것임을 알기 때문에 **/moduleassemblyname**을 지정하여 .netmodule이 friend 어셈블리(friend assembly)에 csman_an_assembly에 대한 액세스를 부여한 어셈블리의 public이 아닌 형식에 액세스하도록 할 수 있습니다.  
+## <a name="example"></a>예  
+ 이 샘플은 어셈블리 moduleassemblyname_1.dll에 public이 아닌 형식에 액세스하는 .netmodule을 빌드합니다. 이 .netmodule이 csman_an_assembly라는 어셈블리에 빌드될 것임을 알기 때문에 **-moduleassemblyname**을 지정하여 .netmodule이 friend 어셈블리(friend assembly)에 csman_an_assembly에 대한 액세스를 부여한 어셈블리의 public이 아닌 형식에 액세스하도록 할 수 있습니다.  
   
 ```csharp  
 // moduleassemblyname_2.cs  
-// compile with: /moduleassemblyname:csman_an_assembly /target:module /reference:moduleassemblyname_1.dll  
+// compile with: -moduleassemblyname:csman_an_assembly -target:module -reference:moduleassemblyname_1.dll  
 class B {  
     public void Test() {  
         An_Internal_Class x = new An_Internal_Class();  
@@ -83,12 +83,12 @@ class B {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 코드 샘플에서는 이전에 빌드한 어셈블리와 .netmodule을 참조하여 csman_an_assembly 어셈블리를 빌드합니다.  
   
 ```csharp  
 // csman_an_assembly.cs  
-// compile with: /addmodule:moduleassemblyname_2.netmodule /reference:moduleassemblyname_1.dll  
+// compile with: -addmodule:moduleassemblyname_2.netmodule -reference:moduleassemblyname_1.dll  
 class A {  
     public static void Main() {  
         B bb = new B();  

@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서는 명명된 인수 및 선택적 인수를 소개합니다. *명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.  
@@ -33,37 +33,37 @@ ms.lasthandoff: 11/21/2017
  명명된 매개 변수와 선택적 매개 변수를 함께 사용하는 경우 선택적 매개 변수 목록에서 몇 개의 매개 변수에 대해서만 인수를 제공할 수 있습니다. 이 기능은 Microsoft Office 자동화 API와 같은 COM 인터페이스에 대한 호출에 큰 도움이 됩니다.  
   
 ## <a name="named-arguments"></a>명명된 인수  
- 명명된 인수를 사용하면 호출된 메서드의 매개 변수 목록에서 매개 변수의 순서를 기억하거나 조회할 필요가 없습니다. 각 인수에 대한 매개 변수를 매개 변수 이름으로 지정할 수 있습니다. 예를 들어 주문 세부 정보를 출력 하는 함수 (등 판매자 이름, 주문 번호 및 제품 이름) 함수에 의해 정의 된 순서에 따라 인수를 전송 하 여 표준 방식으로 호출할 수 있습니다.
+ 명명된 인수를 사용하면 호출된 메서드의 매개 변수 목록에서 매개 변수의 순서를 기억하거나 조회할 필요가 없습니다. 각 인수에 대한 매개 변수를 매개 변수 이름으로 지정할 수 있습니다. 예를 들어 함수에 정의된 순서의 위치로 인수를 보내서 표준 방법으로 주문 세부 정보(예: 판매자 이름, 주문 번호 및 제품 이름)를 호출할 수 있습니다.
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- 매개 변수의 순서를 기억 하지 못하는 해도 이름만 알고 있는 경우 순서에 관계 없이 인수를 보낼 수 있습니다.  
+ 매개 변수의 순서를 기억하지 못하지만 해당 이름을 알고 있는 경우 임의의 순서로 인수를 보낼 수 있습니다.  
   
  `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- 또한 명명된 인수는 각 인수가 무엇을 나타내는지를 식별하여 코드의 가독성을 향상합니다. 아래 예제에서는 메서드에서 `sellerName` null 또는 공백일 수 없습니다. 두 가지 모두 `sellerName` 및 `productName` 문자열 유형이 인수 위치에 따라, 보내는 대신 하면 하는 명명 된 인수를 사용 하 여 두 명확 하 게 코드를 읽는 사람에 대 한 혼동을 줄이기 위해을 합니다.
+ 또한 명명된 인수는 각 인수가 무엇을 나타내는지를 식별하여 코드의 가독성을 향상합니다. 아래 예제 메서드에서 `sellerName`은 null 또는 공백일 수 없습니다. `sellerName` 및 `productName`은 모두 문자열 형식이므로, 위치로 인수를 보내는 대신, 명명된 인수를 사용하여 두 코드를 구분하고 코드를 읽는 사람의 혼동을 줄일 수 있습니다.
   
- 명명 된 인수를 위치 인수와 함께 사용할 경우, 올바른지으로 
+ 위치 인수와 함께 사용된 명명된 인수는 
 
-- 모든 위치 인수에 의해 따르지는 또는
+- 그 다음에 위치 인수가 없거나
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _C# 7.2 부터는_를 올바른 위치에 사용 합니다. 매개 변수 아래 예제에서는 `orderNum` 올바른 위치에 있지만 명시적으로 명명 되지 않습니다.
+- _C# 7.2로 시작하고_ 올바른 위치에 사용되는 한 유효합니다. 아래 예제에서 `orderNum` 매개 변수는 올바른 위치에 있지만 명시적으로 명명되지 않습니다.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- 그러나 순서가의 명명 된 인수가 위치 인수에서 수행 하는 올바르지 않습니다.
+ 그러나 순서 상관없이 명명된 인수는 그 다음에 위치 인수가 나오는 경우 유효하지 않습니다.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
  PrintOrderDetails(productName: "Red Mug", 31, "Gift Shop");
  ```
   
-## <a name="example"></a>예제  
- 다음 코드 예제에서는 몇 가지 추가 것과 함께이 섹션에서 구현합니다.  
+## <a name="example"></a>예  
+ 다음 코드는 몇 가지 추가 코드와 함께 이 섹션의 예제를 구현합니다.  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
@@ -98,7 +98,7 @@ ExampleMethod의 선택적 매개 변수
 > [!NOTE]
 >  .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 클래스를 사용하여 선택적 매개 변수를 선언할 수도 있습니다. `OptionalAttribute` 매개 변수는 기본값이 필요하지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `ExampleClass`에 대한 생성자에 선택 사항인 매개 변수 하나가 있습니다. 인스턴스 메서드 `ExampleMethod`에는 `required`라는 필수 매개 변수 하나와 `optionalstr` 및 `optionalint`라는 선택적 매개 변수 두 개가 있습니다. `Main`의 코드는 생성자와 메서드를 호출할 수 있는 여러 방법을 보여 줍니다.  
   
  [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
@@ -106,7 +106,7 @@ ExampleMethod의 선택적 매개 변수
 ## <a name="com-interfaces"></a>COM 인터페이스  
  동적 개체 및 기타 향상된 기능에 대한 지원과 더불어 명명된 인수와 선택적 인수는 Office 자동화 API와 같은 COM API와의 상호 운용성을 크게 향상합니다.  
   
- 예를 들어 Microsoft Office Excel [범위](http://go.microsoft.com/fwlink/?LinkId=148196) 인터페이스의 [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) 메서드에는 모두 선택 사항인 매개 변수 7개가 있습니다. 해당 매개 변수는 다음 그림에 나와 있습니다.  
+ 예를 들어 Microsoft Office Excel [범위](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) 인터페이스의 [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) 메서드에는 모두 선택 사항인 매개 변수 7개가 있습니다. 해당 매개 변수는 다음 그림에 나와 있습니다.  
   
  ![AutoFormat 메서드에 대한 IntelliSense 요약 정보](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 AutoFormat 매개 변수  

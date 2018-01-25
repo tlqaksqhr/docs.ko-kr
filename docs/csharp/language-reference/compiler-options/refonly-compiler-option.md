@@ -8,22 +8,23 @@ f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
+- refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25b0f6e024e194dff641fd5069755d0ea112a50b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refonly-c-compiler-options"></a>/refonly(C# 컴파일러 옵션)
+# <a name="-refonly-c-compiler-options"></a>-refonly(C# 컴파일러 옵션)
 
-**/refonly** 옵션 참조 어셈블리를 대신 구현 어셈블리를 기본 출력으로 출력 해야 함을 나타냅니다. `/refonly` 매개 변수는 참조 어셈블리가 실행될 수 없을 때 PDB 출력을 자동으로 사용하지 않도록 설정합니다.
+**-refonly** 옵션은 구현 어셈블리 대신 참조 어셈블리가 기본 출력으로 출력되어야 함을 나타냅니다. `-refonly` 매개 변수는 참조 어셈블리가 실행될 수 없을 때 PDB 출력을 자동으로 사용하지 않도록 설정합니다.
 
 ## <a name="syntax"></a>구문
 
 ```console
-/refonly
+-refonly
 ```
 
 ## <a name="remarks"></a>설명
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 - 모든 가상 메서드가 유지됩니다. 명시적 인터페이스 구현이 유지됩니다. 명시적으로 구현된 속성 및 이벤트가 유지됩니다. 해당 접근자가 가상이므로 유지됩니다.
 - 구조체의 모든 필드가 유지됩니다. 이것은 post-C#-7.1 개선의 후보입니다.
 
-`/refonly` 및 [`/refout`](refout-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
+`-refonly` 및 [`-refout`](refout-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
 
 ## <a name="see-also"></a>참고 항목
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  

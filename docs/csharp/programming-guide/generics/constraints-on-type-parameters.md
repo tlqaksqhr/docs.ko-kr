@@ -13,23 +13,23 @@ ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 제네릭 클래스를 정의하는 경우 클라이언트 코드에서 클래스를 인스턴스화할 때 형식 인수에 사용할 수 있는 형식 종류에 제한을 적용할 수 있습니다. 클라이언트 코드에서 제약 조건에 의해 허용되지 않는 형식을 사용하여 클래스를 인스턴스화하려고 하면 컴파일 시간 오류가 발생합니다. 이러한 제한을 제약 조건이라고 합니다. 제약 조건은 `where` 상황별 키워드를 사용하여 지정됩니다. 다음 표에는 6가지 유형의 제약 조건이 나와 있습니다.  
   
 |제약 조건|설명|  
 |----------------|-----------------|  
-|where T : struct|형식 인수는 값 형식이어야 합니다. <xref:System.Nullable>를 제외한 임의의 값 형식을 지정할 수 있습니다. 자세한 내용은 [Nullable 형식 사용](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)을 참조하세요.|  
-|where T : class|형식 인수가 참조 형식이어야 합니다. 이 제약 조건은 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|  
-|where T : new()|형식 인수에 매개 변수가 없는 public 생성자가 있어야 합니다. 다른 제약 조건과 함께 사용할 경우 `new()` 제약 조건을 마지막에 지정해야 합니다.|  
-|where T : \<기본 클래스 이름>|형식 인수가 지정된 기본 클래스이거나 지정된 기본 클래스에서 파생되어야 합니다.|  
-|where T : \<인터페이스 이름>|형식 인수가 지정된 인터페이스이거나 지정된 인터페이스를 구현해야 합니다. 여러 인터페이스 제약 조건을 지정할 수 있습니다. 제약 인터페이스가 제네릭일 수도 있습니다.|  
-|where T : U|T에 대해 제공되는 형식 인수는 U에 대해 제공되는 인수이거나 이 인수에서 파생되어야 합니다.|  
+|`where T: struct`|형식 인수는 값 형식이어야 합니다. <xref:System.Nullable>를 제외한 임의의 값 형식을 지정할 수 있습니다. 자세한 내용은 [Nullable 형식 사용](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)을 참조하세요.|  
+|`where T : class`|형식 인수가 참조 형식이어야 합니다. 이 제약 조건은 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|  
+|`where T : new()`|형식 인수에 매개 변수가 없는 public 생성자가 있어야 합니다. 다른 제약 조건과 함께 사용할 경우 `new()` 제약 조건을 마지막에 지정해야 합니다.|  
+|`where T : `*\<기본 클래스 이름>*|형식 인수가 지정된 기본 클래스이거나 지정된 기본 클래스에서 파생되어야 합니다.|  
+|`where T : `*\<인터페이스 이름>*|형식 인수가 지정된 인터페이스이거나 지정된 인터페이스를 구현해야 합니다. 여러 인터페이스 제약 조건을 지정할 수 있습니다. 제약 인터페이스가 제네릭일 수도 있습니다.|  
+|`where T : U`|T에 대해 제공되는 형식 인수는 U에 대해 제공되는 인수이거나 이 인수에서 파생되어야 합니다.|  
   
 ## <a name="why-use-constraints"></a>제약 조건을 사용하는 이유  
  제네릭 목록의 항목을 검사하여 유효한지 확인하거나 다른 항목과 비교하려는 경우 컴파일러에 호출해야 하는 연산자 또는 메서드가 클라이언트 코드에서 지정될 수 있는 형식 인수에 의해 지원된다는 보장이 있어야 합니다. 제네릭 클래스 정의에 하나 이상의 제약 조건을 적용하면 이러한 보장을 얻을 수 있습니다. 예를 들어 기본 클래스 제약 조건은 이 형식의 개체나 이 형식에서 파생된 개체만 형식 인수로 사용된다고 컴파일러에 알립니다. 컴파일러에 이 보장이 있으면 해당 형식의 메서드가 제네릭 클래스에서 호출되도록 허용할 수 있습니다. 제약 조건은 상황별 키워드 `where`를 사용하여 적용됩니다. 다음 코드 예제에서는 기본 클래스 제약 조건을 적용하여 `GenericList<T>` 클래스([제네릭 소개](../../../csharp/programming-guide/generics/introduction-to-generics.md))에 추가할 수 있는 기능을 보여 줍니다.  

@@ -1,12 +1,8 @@
 ---
 title: "동적 언어 런타임 개요 | Microsoft Docs"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dynamic language runtime
@@ -19,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 78de2016e02c242fcf6ec454a56a4beff41c2d12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54ea1f9f071d749058450487d25bdff13ca04549
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dynamic-language-runtime-overview"></a>동적 언어 런타임 개요
 DLR(*동적 언어 런타임*)은 동적 언어에 대한 서비스 집합을 CLR(공용 언어 런타임)에 추가하는 런타임 환경입니다. DLR을 사용하면 .NET Framework에서 실행할 동적 언어를 개발하고 정적 형식의 언어에 동적 기능을 추가하기가 간편해집니다.  
@@ -52,10 +48,10 @@ DLR(*동적 언어 런타임*)은 동적 언어에 대한 서비스 집합을 CL
   
  `scriptobj.Count += 1;`  
   
- CLR과 비슷하게 DLR은 .NET Framework의 일부이고 .NET Framework 및 Visual Studio 설치 패키지와 함께 제공됩니다. 오픈 소스 버전의 DLR은 또한 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 웹 사이트에서 다운로드할 수 있습니다.  
+ CLR과 비슷하게 DLR은 .NET Framework의 일부이고 .NET Framework 및 Visual Studio 설치 패키지와 함께 제공됩니다. 오픈 소스 버전의 DLR은 또한 GitHub의 [IronLanguages/dlr](https://github.com/IronLanguages/dlr) 리포지토리에서 다운로드할 수 있습니다.  
   
 > [!NOTE]
->  오픈 소스 버전의 DLR에는 Visual Studio 및 .NET Framework에 포함된 DLR의 모든 기능이 들어 있습니다. 언어 구현자를 위한 추가적인 지원도 제공합니다. 자세한 내용은 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 웹 사이트의 설명서를 참조하세요.  
+>  오픈 소스 버전의 DLR에는 Visual Studio 및 .NET Framework에 포함된 DLR의 모든 기능이 들어 있습니다. 언어 구현자를 위한 추가적인 지원도 제공합니다. 자세한 내용은 GitHub의 [IronLanguages/dlr](https://github.com/IronLanguages/dlr) 리포지토리에 있는 설명서를 참조하세요. 
   
  DLR을 사용하여 개발된 언어의 예는 다음과 같습니다.  
   
@@ -98,7 +94,7 @@ DLR 아키텍처
  DLR은 호출 사이트에서 바인더를 사용하여 .NET Framework뿐 아니라 Silverlight 및 COM이 포함된 다른 인프라 및 서비스와 통신합니다. 바인더는 언어의 의미 체계를 캡슐화하고 호출 사이트에서 식 트리를 사용하여 작업을 수행하는 방법을 지정합니다. 이를 통해 동적 언어와 정적 형식의 언어가 DLR을 사용하여 라이브러리를 공유하고 DLR이 지원하는 모든 기술에 액세스할 수 있습니다.  
   
 ## <a name="dlr-documentation"></a>DLR 설명서  
- 오픈 소스 버전의 DLR을 사용하여 언어에 동적 동작을 추가하는 방법이나 .NET Framework에 동적 언어를 사용할 수 있도록 하는 방법에 대한 자세한 내용은 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 웹 사이트에서 제공하는 문서를 참조하세요.  
+ 오픈 소스 버전의 DLR을 사용하여 언어에 동적 동작을 추가하는 방법이나 .NET Framework에 동적 언어를 사용할 수 있도록 하는 방법에 대한 자세한 내용은 GitHub의 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 리포지토리에 있는 설명서를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Dynamic.ExpandoObject>  

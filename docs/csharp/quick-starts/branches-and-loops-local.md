@@ -4,16 +4,16 @@ description: "분기 및 루프에 관한 이 빠른 시작에서는 C# 코드�
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="branches-and-loops"></a>분기 및 루프
 
@@ -254,7 +254,7 @@ for(int index = 0; index < 10; index++)
 
 “분기 및 루프” 빠른 시작을 완료했습니다.
 
-사용자의 개발 환경에서 [배열 및 컬렉션](arrays-and-collections.md) 빠른 시작을 계속할 수 있습니다.
+사용자의 개발 환경에서 [보간된 문자열](interpolated-strings-local.md) 빠른 시작을 계속할 수 있습니다.
 
 다음 항목에서는 해당 개념에 대해 더 자세히 알아볼 수 있습니다.
 

@@ -8,11 +8,11 @@ ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4955b3d7048b4dfee23fbcf6eeaed995ebf4f1be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 271939b869433742f8b5720ba05955169ea5c410
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-c"></a>컬렉션(C#)
 대부분의 응용 프로그램의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다. 개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.  
@@ -546,7 +546,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Iterators  
+##  <a name="iterators"></a>반복기  
  *반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 반복기는 [yield return](../../../csharp/language-reference/keywords/yield.md) 문을 사용하여 한 번에 하나씩 컬렉션의 각 요소를 반환합니다.  
   
  [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문을 사용하여 반복기를 호출합니다. 각각의 `foreach` 루프의 반복이 반복기를 호출합니다. `yield return` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  
@@ -587,7 +587,7 @@ private static IEnumerable<int> EvenSequence(
  [LINQ to Objects(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
  [PLINQ(병렬 LINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [컬렉션 및 데이터 구조](../../../standard/collections/index.md)  
- [컬렉션 만들기 및 조작](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [컬렉션 만들기 및 조작](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md)  
  [컬렉션 내에서 비교 및 정렬](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [제네릭 컬렉션 사용 기준](../../../standard/collections/when-to-use-generic-collections.md)  

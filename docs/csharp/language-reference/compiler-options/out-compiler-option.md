@@ -13,19 +13,19 @@ ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8ca85293086f8747cc4aaff02e7d9b5628b1e88a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="out-c-compiler-options"></a>/out(C# 컴파일러 옵션)
-**/out** 옵션은 출력 파일의 이름을 지정합니다.  
+# <a name="-out-c-compiler-options"></a>-out(C# 컴파일러 옵션)
+**-out** 옵션은 출력 파일의 이름을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/out:filename  
+-out:filename  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  컴파일러에서 생성된 출력 파일의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- 명령줄에서 컴파일에 대해 여러 출력 파일을 지정할 수 있습니다. 컴파일러는 **/out** 옵션 뒤에 하나 이상의 소스 코드 파일이 있을 것으로 예상합니다. 그런 다음 **/out** 옵션으로 지정된 출력 파일에 모든 소스 코드 파일이 컴파일됩니다.  
+ 명령줄에서 컴파일에 대해 여러 출력 파일을 지정할 수 있습니다. 컴파일러는 **-out** 옵션 뒤에 하나 이상의 소스 코드 파일이 있을 것으로 예상합니다. 그런 다음 **-out** 옵션으로 지정된 출력 파일에 모든 소스 코드 파일이 컴파일됩니다.  
   
  만들려는 파일의 전체 이름과 확장명을 지정합니다.  
   
@@ -45,11 +45,11 @@ ms.lasthandoff: 11/21/2017
   
  한 출력 파일을 컴파일하는 데 사용되는 소스 코드 파일을 동일한 컴파일에서 다른 출력 파일의 컴파일에 사용할 수 없습니다.  
   
- 명령줄 컴파일에서 여러 출력 파일을 만들 때는 출력 파일 중 하나만 어셈블리가 될 수 있고, **/out**을 사용하여 명시적으로 또는 암시적으로 지정된 첫 번째 출력 파일만 어셈블리가 될 수 있다는 것에 유의하세요.  
+ 명령줄 컴파일에서 여러 출력 파일을 만들 때는 출력 파일 중 하나만 어셈블리가 될 수 있고, **-out**을 사용하여 명시적으로 또는 암시적으로 지정된 첫 번째 출력 파일만 어셈블리가 될 수 있다는 것에 유의하세요.  
   
  컴파일의 일부로 생성된 모든 모듈은 컴파일할 때 함께 생성된 어셈블리와 연결된 파일이 됩니다. 연결된 파일을 보려면 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 어셈블리 매니페스트를 확인합니다.  
   
- exe가 friend 어셈블리의 대상이 되려면 /out 컴파일러 옵션이 필요합니다. 자세한 내용은 [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)를 참조하세요.  
+ exe가 friend 어셈블리의 대상이 되려면 -out 컴파일러 옵션이 필요합니다. 자세한 내용은 [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)를 참조하세요.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
@@ -61,11 +61,11 @@ ms.lasthandoff: 11/21/2017
   
      이 컴파일러 옵션을 프로그래밍 방식으로 설정하려면: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A>은 프로젝트 형식(exe, 라이브러리 등)과 어셈블리 이름의 조합으로 결정되는 읽기 전용 속성입니다. 출력 파일 이름을 설정하려면 이러한 속성 중 하나 또는 둘 다를 수정해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `t.cs`를 컴파일하고 출력 파일 `t.exe`를 만들 뿐만 아니라 `t2.cs`를 작성하고 모듈 출력 파일 `mymodule.netmodule`을 만듭니다.  
   
 ```console  
-csc t.cs /out:mymodule.netmodule /target:module t2.cs  
+csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

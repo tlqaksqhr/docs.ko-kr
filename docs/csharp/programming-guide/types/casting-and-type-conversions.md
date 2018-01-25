@@ -15,11 +15,11 @@ ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8729677b0c7bee60f0ebeb07439b1c0e71508aa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1361a7f115e2bae4b2d1f6271fa9020706581691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>캐스팅 및 형식 변환(C# 프로그래밍 가이드)
 C#은 컴파일 시간에 정적으로 형식화되므로 변수가 선언된 후에는 다시 선언되거나 다른 형식의 값을 저장하는 데 사용될 수 없습니다. 단, 형식이 변수의 형식으로 변환될 수 있는 경우는 예외입니다. 예를 들어 정수에서 임의 문자열로의 변환은 없습니다. 따라서 `i`를 정수로 선언한 후에는 다음 코드와 같이 문자열 "Hello"를 할당할 수 없습니다.  
@@ -95,6 +95,6 @@ Giraffe g2 = (Giraffe) a;
  [explicit](../../../csharp/language-reference/keywords/explicit.md)  
  [implicit](../../../csharp/language-reference/keywords/implicit.md)  
  [변환 연산자](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
- [일반화 된 형식 변환](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
- [내보낸된 형식 변환](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+ [일반화된 형식 변환](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
+ [내보낸 형식 변환](http://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
  [방법: 문자열을 숫자로 변환](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

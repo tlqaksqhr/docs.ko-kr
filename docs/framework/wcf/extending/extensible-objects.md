@@ -1,25 +1,20 @@
 ---
 title: "확장 가능한 개체"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e7d7b5245130a7581efbf9badb0699f57a6743dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="extensible-objects"></a>확장 가능한 개체
 새 기능과 함께 기존 런타임 클래스를 확장하거나 새 상태를 개체에 추가하기 위해 확장명 가능한 개체 패턴이 사용됩니다. 확장명 가능한 개체 중 하나에 연결된 확장은 이 개체에서 액세스할 수 있는 확장명 가능한 일반 개체에 연결된 공유 상태 및 기능에 액세스하는 처리 시에 매우 다른 단계에서 동작을 활성화합니다.  
@@ -48,15 +43,15 @@ where T : IExtensibleObject<T>
   
  확장 컬렉션에 추가 되 면 <xref:System.ServiceModel.IExtension%601.Attach%2A> 컬렉션에 진입 하기 전에 호출 됩니다. 확장 컬렉션에서 제거 되 면 <xref:System.ServiceModel.IExtension%601.Detach%2A> 제거 된 후 호출 됩니다. 수단 (적절 한 동기화 가정) 확장 신뢰할 수 있는 해당 하는 동안 컬렉션에서 발견 되 고이 범위에 속함 <xref:System.ServiceModel.IExtension%601.Attach%2A> 및 <xref:System.ServiceModel.IExtension%601.Detach%2A>합니다.  
   
- <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> 또는 <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A>에 전달된 개체가 <xref:System.ServiceModel.IExtension%601>일 필요는 없지만(예를 들어 아무 개체나 전달할 수 있음) 반환되는 확장은 <xref:System.ServiceModel.IExtension%601>입니다.  
+ <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 또는 <xref:System.ServiceModel.IExtensionCollection%601.Find%2A>에 전달된 개체가 <xref:System.ServiceModel.IExtension%601>일 필요는 없지만(예를 들어 아무 개체나 전달할 수 있음) 반환되는 확장은 <xref:System.ServiceModel.IExtension%601>입니다.  
   
- 컬렉션에 확장이 없는 경우는 <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> null을 반환 하 고 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> 빈 컬렉션을 반환 합니다. 여러 확장을 구현 하는 경우 <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> 그 중 하나를 반환 합니다. <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A>에서 반환되는 값은 스냅숏입니다.  
+ 컬렉션에 확장이 없는 경우는 <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> null을 반환 하 고 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 빈 컬렉션을 반환 합니다. 여러 확장을 구현 하는 경우 <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> 그 중 하나를 반환 합니다. <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A>에서 반환되는 값은 스냅숏입니다.
   
  두 가지 주요 시나리오가 있습니다. 첫 번째 시나리오에서는 <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> 속성을 개체에 상태를 삽입하는 형식 기반 사전으로 사용하여 다른 구성 요소에서 해당 형식으로 개체를 조회할 수 있게 합니다.  
   
  두 번째 시나리오에서는 <xref:System.ServiceModel.IExtension%601.Attach%2A> 및 <xref:System.ServiceModel.IExtension%601.Detach%2A> 속성을 사용하여 개체가 이벤트 등록, 상태 전환 감시 등의 사용자 지정 동작에 참여할 수 있게 합니다.  
   
- <xref:System.ServiceModel.IExtensionCollection%601> 인터페이스는 <xref:System.ServiceModel.IExtension%601>을 형식별로 검색할 수 있는 <xref:System.ServiceModel.IExtension%601> 개체의 컬렉션입니다. <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A?displayProperty=nameWithType>는 해당 형식의 <xref:System.ServiceModel.IExtension%601> 중에서 최근 추가된 개체만 반환합니다.  
+ <xref:System.ServiceModel.IExtensionCollection%601> 인터페이스는 <xref:System.ServiceModel.IExtension%601>을 형식별로 검색할 수 있는 <xref:System.ServiceModel.IExtension%601> 개체의 컬렉션입니다. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType>는 해당 형식의 <xref:System.ServiceModel.IExtension%601> 중에서 최근 추가된 개체만 반환합니다.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Windows Communication Foundation의 확장 가능한 개체  
  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 다음과 같은 네 개의 확장 가능한 개체가 있습니다.  

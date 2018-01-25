@@ -11,11 +11,11 @@ ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 81a085ff016fb9ee8f8a13167728c37ca799920a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86c9371a6a82c4034b7bdf279e7b205cfcc84bea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="constants-c-programming-guide"></a>상수(C# 프로그래밍 가이드)
 상수는 컴파일 시간에 알려진 변경할 수 없는 값입니다. 프로그램 수명 동안 변경하지 마세요. 상수는 [const](../../../csharp/language-reference/keywords/const.md) 한정자로 선언됩니다. C# 기본 제공 형식(<xref:System.Object?displayProperty=nameWithType> 제외)만 `const`로 선언할 수 있습니다. 기본 제공 형식 목록은 [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)를 참조하세요. 클래스, 구조체 및 배열을 비롯한 사용자 정의 형식은 `const`가 될 수 없습니다. [readonly](../../../csharp/language-reference/keywords/readonly.md) 한정자를 사용하여 런타임에 한 번 초기화되고(예: 생성자에서) 이후 변경할 수 없는 클래스, 구조체 또는 배열을 만듭니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
   
- 로 상수를 표시할 수 있습니다 [공용](../../../csharp/language-reference/keywords/public.md), [개인](../../../csharp/language-reference/keywords/private.md), [보호](../../../csharp/language-reference/keywords/protected.md), [내부](../../../csharp/language-reference/keywords/internal.md), [내부보호](../../../csharp/language-reference/keywords/protected-internal.md)또는 [보호 된 개인](../../../csharp/language-reference/keywords/private-protected.md)합니다. 이러한 액세스 한정자는 클래스의 사용자가 상수에 액세스하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
+ 상수는 [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) 또는 [private protected](../../../csharp/language-reference/keywords/private-protected.md)로 표시될 수 있습니다. 이러한 액세스 한정자는 클래스의 사용자가 상수에 액세스하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
   
  형식의 모든 인스턴스에 대한 상수 값이 같으므로 상수가 [static](../../../csharp/language-reference/keywords/static.md) 필드인 것처럼 상수에 액세스합니다. 상수를 선언하는 데 `static` 키워드를 사용하지 않습니다. 상수를 정의하는 클래스에 포함되지 않은 식은 상수에 액세스할 때 클래스 이름, 마침표 및 상수 이름을 사용해야 합니다. 예:  
   
@@ -56,4 +56,4 @@ ms.lasthandoff: 11/21/2017
  [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [유형](../../../csharp/programming-guide/types/index.md)  
  [readonly](../../../csharp/language-reference/keywords/readonly.md)  
- [Immutability in C# Part One: Kinds of Immutability](http://go.microsoft.com/fwlink/?LinkId=112379)(C#의 불변성 1부: 불변성 종류)
+ [Immutability in C# Part One: Kinds of Immutability](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)(C#의 불변성 1부: 불변성 종류)

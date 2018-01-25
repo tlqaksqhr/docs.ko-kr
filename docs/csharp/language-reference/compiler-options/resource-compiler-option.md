@@ -16,19 +16,19 @@ ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 726956275436e22723bc32b98b2b8b7c7df5fb12
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c20de499ae0fd5f8869c9b6e78a308fde9787ef9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="resource-c-compiler-options"></a>/resource(C# 컴파일러 옵션)
+# <a name="-resource-c-compiler-options"></a>-resource(C# 컴파일러 옵션)
 출력 파일에 지정된 리소스를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/resource:filename[,identifier[,accessibility-modifier]]  
+-resource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -46,9 +46,9 @@ ms.lasthandoff: 11/21/2017
   
  기본적으로 리소스는 C# 컴파일러를 사용하여 생성될 때 어셈블리에서 public입니다. 리소스를 private로 만들려면 접근성 한정자로 `private`를 지정합니다. `public` 또는 `private` 이외의 다른 접근성은 허용되지 않습니다.  
   
- 예를 들어 `filename`이 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>을 참조하십시오. 다른 모든 리소스는 `GetManifestResource` 의 메서드는 <xref:System.Reflection.Assembly> 런타임 시 리소스에 액세스 하는 클래스입니다.  
+ 예를 들어 `filename`이 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>을 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource` 클래스의 <xref:System.Reflection.Assembly> 메서드를 사용하여 리소스에 액세스합니다.  
   
- **/res**는 **/resource**의 약식입니다.  
+ **-res**는 **-resource**의 약식입니다.  
   
  출력 파일에 있는 리소스의 순서는 명령줄에 지정된 순서에 따라 결정됩니다.  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 11/21/2017
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.FileProperties2.BuildAction%2A>을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `in.cs`를 컴파일하고 리소스 파일 `rf.resource`를 첨부합니다.  
   
 ```console  
-csc /resource:rf.resource in.cs  
+csc -resource:rf.resource in.cs  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

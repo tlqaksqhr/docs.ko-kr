@@ -8,22 +8,22 @@ ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bfb398c960d3aa1aa8c9c6638e1bd8fe5dba4a98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3a6fee8f140a0c2e81f9904d5ceea7e290d48275
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="subsystemversion-c-compiler-options"></a>/subsystemversion(C# 컴파일러 옵션)
+# <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion(C# 컴파일러 옵션)
 생성된 실행 파일을 실행할 수 있는 하위 시스템의 최소 버전을 지정하여 실행 파일을 실행할 수 있는 Windows 버전을 결정합니다. 가장 일반적으로, 이 옵션은 실행 파일이 이전 버전의 Windows에서 사용할 수 없는 특정 보안 기능을 활용할 수 있도록 합니다.  
   
 > [!NOTE]
->  하위 시스템 자체를 지정하려면 [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 컴파일러 옵션을 사용합니다.  
+>  하위 시스템 자체를 지정하려면 [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 컴파일러 옵션을 사용합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/subsystemversion:major.minor  
+-subsystemversion:major.minor  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -46,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>기본값  
- **/subsystemversion** 컴파일러 옵션의 기본값은 다음 목록의 조건에 따라 달라집니다.  
+ **-subsystemversion** 컴파일러 옵션의 기본값은 다음 목록의 조건에 따라 달라집니다.  
   
 -   다음 목록의 컴파일러 옵션이 설정된 경우 기본값은 6.02입니다.  
   
@@ -54,14 +54,14 @@ ms.lasthandoff: 10/18/2017
   
     -   [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
   
-    -   [/platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
+    -   [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
 -   MSBuild를 사용하고 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]를 대상으로 하며, 이 목록의 앞에서 지정된 컴파일러 옵션 중 하나를 설정하지 않은 경우 기본값은 6.00입니다.  
   
 -   앞의 조건이 하나도 true가 아닌 경우 기본값은 4.00입니다.  
   
 ## <a name="setting-this-option"></a>이 옵션 설정  
- Visual Studio에서 **/subsystemversion** 컴파일러 옵션을 설정하려면 .csproj 파일을 열고 MSBuild XML에서 `SubsystemVersion` 속성의 값을 지정해야 합니다. Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.  
+ Visual Studio에서 **-subsystemversion** 컴파일러 옵션을 설정하려면 .csproj 파일을 열고 MSBuild XML에서 `SubsystemVersion` 속성의 값을 지정해야 합니다. Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)

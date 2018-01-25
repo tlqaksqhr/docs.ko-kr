@@ -13,19 +13,19 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion (C# 컴파일러 옵션)
+# <a name="-langversion-c-compiler-options"></a>-langversion(C# 컴파일러 옵션)
 컴파일러가 선택한 C# 언어 사양에 포함된 구문만 허용하도록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/langversion:option  
+-langversion:option  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -52,13 +52,13 @@ ms.lasthandoff: 12/06/2017
 
   
 ## <a name="remarks"></a>설명  
- C# 응용 프로그램에서 참조된 메타데이터에는 **/langversion** 컴파일러 옵션이 적용되지 않습니다.  
+ C# 응용 프로그램에서 참조된 메타데이터에는 **-langversion** 컴파일러 옵션이 적용되지 않습니다.  
   
- 각 C# 컴파일러 버전에 언어 사양의 확장이 포함되어 있으므로 **/langversion**은 이전 컴파일러 버전의 동등한 기능을 제공하지 않습니다.  
+ 각 C# 컴파일러 버전에 언어 사양의 확장이 포함되어 있으므로 **-langversion**은 이전 컴파일러 버전의 동등한 기능을 제공하지 않습니다.  
  
  또한 C# 버전 업데이트는 일반적으로 주 .NET Framework 릴리스와 일치하는 반면, 새 구문과 기능이 반드시 특정 프레임워크 버전에 연결되지는 않습니다. 새로운 기능에는 C# 버전과 함께 릴리스된 새 컴파일러 업데이트가 분명히 필요하지만, 각 특정 기능에 고유한 최소 .Net API 또는 공용 언어 런타임 요구 사항이 있으므로 NuGet 패키지 또는 다른 라이브러리를 포함하여 하위 수준 프레임워크에서 실행이 허용될 수도 있습니다.
   
- 사용하는 **/langversion** 설정과 관계없이 현재 버전의 공용 언어 런타임을 사용하여 고유한 .exe 또는 .dll을 만듭니다. 한 가지 예외는 friend 어셈블리와 [/moduleassemblyname(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)으로, **/langversion:ISO-1**에서 작동합니다.  
+ 사용하는 **-langversion** 설정과 관계없이 현재 버전의 공용 언어 런타임을 사용하여 고유한 .exe 또는 .dll을 만듭니다. 한 가지 예외는 friend 어셈블리와 [-moduleassemblyname(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)으로, **-langversion:ISO-1**에서 작동합니다.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   

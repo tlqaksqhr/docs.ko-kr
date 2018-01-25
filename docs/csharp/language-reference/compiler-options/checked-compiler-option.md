@@ -13,27 +13,27 @@ ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e02f82bb0dd2952bd2f192af7ff233194a045619
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c0a8cc66609fe542fc7db166cd208cfcedb204b8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="checked-c-compiler-options"></a>/checked(C# 컴파일러 옵션)
-**/checked** 옵션은 데이터 형식 범위를 벗어나고 [checked](../../../csharp/language-reference/keywords/checked.md) 또는 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 키워드의 범위 내에 없는 값을 생성하는 정수 산술 문이 런타임 예외를 일으킬지 여부를 지정합니다.  
+# <a name="-checked-c-compiler-options"></a>-checked(C# 컴파일러 옵션)
+**-checked** 옵션은 데이터 형식 범위를 벗어나고 [checked](../../../csharp/language-reference/keywords/checked.md) 또는 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 키워드의 범위 내에 없는 값을 생성하는 정수 산술 문이 런타임 예외를 일으킬지 여부를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/checked[+ | -]  
+-checked[+ | -]  
 ```  
   
-## <a name="remarks"></a>주의  
- `checked` 또는 `unchecked` 키워드의 범위 내에 있는 정수 산술 문에는 **/checked** 옵션이 영향을 미치지 않습니다.  
+## <a name="remarks"></a>설명  
+ `checked` 또는 `unchecked` 키워드의 범위 내에 있는 정수 산술 문에는 **-checked** 옵션이 영향을 미치지 않습니다.  
   
- `checked` 또는 `unchecked` 키워드가 데이터 형식 범위를 벗어난 값을 생성하고 **/checked+**(**/checked**)가 컴파일에서 사용될 경우 해당 문은 런타임에 예외를 일으킵니다. **/checked-**가 컴파일에 사용될 경우 해당 문은 런타임에 예외를 일으키지 않습니다.  
+ `checked` 또는 `unchecked` 키워드가 데이터 형식 범위를 벗어난 값을 생성하고 **-checked+**(**-checked**)가 컴파일에서 사용될 경우 해당 문은 런타임에 예외를 일으킵니다. **-checked-**가 컴파일에 사용될 경우 해당 문은 런타임에 예외를 일으키지 않습니다.  
   
- 이 옵션의 기본값은 **/checked-**입니다. **/checked-** 사용에 대한 한 가지 시나리오는 큰 응용 프로그램을 빌드할 경우입니다. 자동화된 도구가 이러한 응용 프로그램을 빌드하는 데 사용되기도 하고 이 도구는 **/checked**를 자동으로 +로 설정할 수 있습니다. **/checked-**를 지정하여 도구의 전역 기본값을 재정의할 수 있습니다.  
+ 이 옵션의 기본값은 **-checked-**입니다. **-checked-** 사용에 대한 한 가지 시나리오는 큰 응용 프로그램을 빌드할 경우입니다. 자동화된 도구가 이러한 응용 프로그램을 빌드하는 데 사용되기도 하고 이 도구는 **-checked**를 자동으로 +로 설정할 수 있습니다. **-checked-**를 지정하여 도구의 전역 기본값을 재정의할 수 있습니다.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/21/2017
   
  프로그래밍 방식으로 이 컴파일러 옵션에 액세스하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>를 참조하세요.  
   
-## <a name="example"></a>예제  
- 다음 명령은 `t2.cs`를 컴파일합니다. 명령에서 `/checked`를 사용하면 `checked` 또는 `unchecked` 키워드의 범위에 없고 데이터 형식 범위를 벗어난 값을 생성하는 파일의 정수 산술 문이 런타임에 예외를 일으키도록 지정합니다.  
+## <a name="example"></a>예  
+ 다음 명령은 `t2.cs`를 컴파일합니다. 명령에서 `-checked`를 사용하면 `checked` 또는 `unchecked` 키워드의 범위에 없고 데이터 형식 범위를 벗어난 값을 생성하는 파일의 정수 산술 문이 런타임에 예외를 일으키도록 지정합니다.  
   
 ```console  
-csc t2.cs /checked  
+csc t2.cs -checked  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

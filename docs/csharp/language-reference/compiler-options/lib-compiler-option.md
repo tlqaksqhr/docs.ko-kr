@@ -13,19 +13,19 @@ ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 476bc43987b5ac8fa222b767b068a9ca14537bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58203570119676e0737b0142b7a7a5fbf23f1ae2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="lib-c-compiler-options"></a>/lib(C# 컴파일러 옵션)
-**/lib** 옵션은 [/reference(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 옵션을 통해 참조되는 어셈블리의 위치를 지정합니다.  
+# <a name="-lib-c-compiler-options"></a>-lib(C# 컴파일러 옵션)
+**-lib** 옵션은 [/reference(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 옵션을 통해 참조되는 어셈블리의 위치를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/lib:dir1[,dir2]  
+-lib:dir1[,dir2]  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -42,15 +42,15 @@ ms.lasthandoff: 11/21/2017
   
 2.  공용 언어 런타임 시스템 디렉터리입니다.  
   
-3.  **/lib**로 지정된 디렉터리입니다.  
+3.  **-lib**로 지정된 디렉터리입니다.  
   
 4.  LIB 환경 변수로 지정된 디렉터리입니다.  
   
- 어셈블리 참조를 지정하려면 **/reference**를 사용합니다.  
+ 어셈블리 참조를 지정하려면 **-reference**를 사용합니다.  
   
- **/lib**는 가감되므로 두 번 이상 지정하면 이전 값에 추가됩니다.  
+ **-lib**는 가감되므로 두 번 이상 지정하면 이전 값에 추가됩니다.  
   
- **/lib**를 사용하는 대신 필요한 모든 어셈블리를 작업 디렉터리에 복사할 수도 있습니다. 이렇게 하면 단순히 어셈블리 이름을 **/reference**에 전달할 수 있습니다. 그런 다음 작업 디렉터리에서 어셈블리를 삭제할 수 있습니다. 종속 어셈블리의 경로는 어셈블리 매니페스트에 지정되지 않으므로 응용 프로그램이 대상 컴퓨터에서 시작될 수 있으며, 전역 어셈블리 캐시에서 어셈블리를 찾아 사용합니다.  
+ **-lib**를 사용하는 대신 필요한 모든 어셈블리를 작업 디렉터리에 복사할 수도 있습니다. 이렇게 하면 단순히 어셈블리 이름을 **-reference**에 전달할 수 있습니다. 그런 다음 작업 디렉터리에서 어셈블리를 삭제할 수 있습니다. 종속 어셈블리의 경로는 어셈블리 매니페스트에 지정되지 않으므로 응용 프로그램이 대상 컴퓨터에서 시작될 수 있으며, 전역 어셈블리 캐시에서 어셈블리를 찾아 사용합니다.  
   
  컴파일러가 어셈블리를 참조할 수 있다고 해서 공용 언어 런타임이 런타임에 어셈블리를 찾아 로드할 수 있다는 의미는 아닙니다. 런타임에서 참조된 어셈블리를 검색하는 방법에 대한 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../../framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 11/21/2017
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  t2.cs를 컴파일하여 .exe 파일을 만듭니다. 컴파일러는 작업 디렉터리 및 C 드라이브의 루트 디렉터리에서 어셈블리 참조를 찾습니다.  
   
 ```console  
-csc /lib:c:\ /reference:t2.dll t2.cs  
+csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

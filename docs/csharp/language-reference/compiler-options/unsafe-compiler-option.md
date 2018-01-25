@@ -13,19 +13,19 @@ ms.assetid: fdb77ed9-da03-45bd-bb7f-250704da1bcc
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 146977522b400418a26f6a83e1a0ccdca8675bf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b253a9ddafead823480f9893e809f17b6c22a179
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="unsafe-c-compiler-options"></a>/unsafe(C# 컴파일러 옵션)
-**/unsafe** 컴파일러 옵션을 사용하면 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있습니다.  
+# <a name="-unsafe-c-compiler-options"></a>-unsafe(C# 컴파일러 옵션)
+**-unsafe** 컴파일러 옵션을 사용하면 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/unsafe  
+-unsafe  
 ```  
   
 ## <a name="remarks"></a>설명  
@@ -41,11 +41,11 @@ ms.lasthandoff: 11/21/2017
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  안전하지 않은 모드에 대해 `in.cs` 컴파일:  
   
 ```console  
-csc /unsafe in.cs  
+csc -unsafe in.cs  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

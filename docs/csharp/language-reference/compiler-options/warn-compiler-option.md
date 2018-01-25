@@ -17,19 +17,19 @@ ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab5748f43777ec545e76100543473785894461cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a1f2c55aa078adb213a93dc5aff7ced40793bfa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="warn-c-compiler-options"></a>/warn(C# 컴파일러 옵션)
-**/warn** 옵션은 컴파일러에서 표시할 경고 수준을 지정합니다.  
+# <a name="-warn-c-compiler-options"></a>-warn(C# 컴파일러 옵션)
+**-warn** 옵션은 컴파일러에서 표시할 경고 수준을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/warn:option  
+-warn:option  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -47,9 +47,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>설명  
  오류 또는 경고에 대한 정보를 가져오려면 도움말 색인에서 오류 코드를 조회할 수 있습니다. 오류 또는 경고에 대한 정보를 가져오는 다른 방법은 [C# 컴파일러 오류](../../../csharp/language-reference/compiler-messages/index.md)를 참조하세요.  
   
- 모든 경고를 오류로 처리하려면 [/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)를 사용합니다. 특정 경고를 사용하지 않으려면 [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)을 사용합니다.  
+ 모든 경고를 오류로 처리하려면 [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)를 사용합니다. 특정 경고를 사용하지 않으려면 [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)을 사용합니다.  
   
- **/w**는 **/warn**의 약식 형태입니다.  
+ **-w**는 **-warn**의 약식 형태입니다.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
@@ -61,11 +61,11 @@ ms.lasthandoff: 11/21/2017
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `in.cs`를 컴파일하고 컴파일러에서 수준 1 경고만 표시하도록 합니다.  
   
 ```console  
-csc /warn:1 in.cs  
+csc -warn:1 in.cs  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

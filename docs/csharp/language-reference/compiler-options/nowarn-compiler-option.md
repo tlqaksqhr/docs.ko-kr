@@ -13,31 +13,31 @@ ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 499203bb4714fa2d07b2c0e42958ffd0e472facc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2784e63b7c1e67b32fc448b4b112ad0252b1abd9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nowarn-c-compiler-options"></a>/nowarn(C# 컴파일러 옵션)
-**/nowarn** 옵션을 사용하면 컴파일러에서 하나 이상의 경고를 표시하지 않을 수 있습니다. 여러 경고 번호를 쉼표로 구분합니다.  
+# <a name="-nowarn-c-compiler-options"></a>-nowarn(C# 컴파일러 옵션)
+**-nowarn** 옵션을 사용하면 컴파일러에서 하나 이상의 경고를 표시하지 않을 수 있습니다. 여러 경고 번호를 쉼표로 구분합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/nowarn:number1[,number2,...]  
+-nowarn:number1[,number2,...]  
 ```  
   
 ## <a name="arguments"></a>인수  
  `number1`, `number2`  
  컴파일러에서 표시하지 않으려는 경고 번호입니다.  
   
-## <a name="remarks"></a>주의  
- 경고 식별자의 숫자 부분만 지정해야 합니다. 예를 들어 CS0028을 표시하지 않으려면 `/nowarn:28`을 지정할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 경고 식별자의 숫자 부분만 지정해야 합니다. 예를 들어 CS0028을 표시하지 않으려면 `-nowarn:28`을 지정할 수 있습니다.  
   
- 컴파일러는 이전 릴리스에서 유효했지만 현재 컴파일러에서 제거된, `/nowarn`에 전달된 경고 번호를 자동으로 무시합니다. 예를 들어 CS0679는 Visual Studio.NET 2002의 컴파일러에서 유효했지만 이후에 제거되었습니다.  
+ 컴파일러는 이전 릴리스에서 유효했지만 현재 컴파일러에서 제거된, `-nowarn`에 전달된 경고 번호를 자동으로 무시합니다. 예를 들어 CS0679는 Visual Studio.NET 2002의 컴파일러에서 유효했지만 이후에 제거되었습니다.  
   
- 다음 경고는 `/nowarn` 옵션으로 표시되지 않도록 설정할 수 없습니다.  
+ 다음 경고는 `-nowarn` 옵션으로 표시되지 않도록 설정할 수 없습니다.  
   
 -   컴파일러 경고(수준 1) CS2002  
   

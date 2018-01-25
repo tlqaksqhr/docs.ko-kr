@@ -13,19 +13,19 @@ ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 356502b8528e22a5b5ff9a28a3f82d5f9c0a72f9
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 2ec19bacb975732f2ae04b8cefbfaeaa518b6f15
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="win32icon-c-compiler-options"></a>/win32icon(C# 컴파일러 옵션)
-**/win32icon** 옵션은 .ico 파일을 출력 파일에 삽입하여 파일 탐색기에서 출력 파일을 원하는 모양으로 표시합니다.  
+# <a name="-win32icon-c-compiler-options"></a>-win32icon(C# 컴파일러 옵션)
+**-win32icon** 옵션은 .ico 파일을 출력 파일에 삽입하여 파일 탐색기에서 출력 파일을 원하는 모양으로 표시합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/win32icon:filename  
+-win32icon:filename  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/06/2017
 ## <a name="remarks"></a>설명  
  .ico 파일은 [리소스 컴파일러](https://msdn.microsoft.com/library/aa381042.aspx)로 만들 수 있습니다. 리소스 컴파일러는 Visual C++ 프로그램을 컴파일할 때 실행되며 .rc 파일에서 .iso 파일이 만들어집니다.  
   
- .NET Framework 리소스 파일을 참조하려면 [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)를, 첨부하려면 [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)를 참조하세요. .res 파일을 가져오려면 [/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)를 참조하세요.  
+ .NET Framework 리소스 파일을 참조하려면 [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)를, 첨부하려면 [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)를 참조하세요. .res 파일을 가져오려면 [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)를 참조하세요.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 12/06/2017
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `in.cs`를 컴파일하고 .ico 파일 `rf.ico`를 첨부하여 `in.exe`를 생성합니다.  
   
 ```console  
-csc /win32icon:rf.ico in.cs  
+csc -win32icon:rf.ico in.cs  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
