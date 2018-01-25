@@ -11,20 +11,20 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refout-c-compiler-options"></a>/refout(C# 컴파일러 옵션)
+# <a name="-refout-c-compiler-options"></a>-refout(C# 컴파일러 옵션)
 
-**/refout** 옵션은 참조 어셈블리가 출력되어야 하는 파일 경로를 지정합니다. 이것은 Emit API에서 `metadataPeStream`으로 전환됩니다.
+**-refout** 옵션은 참조 어셈블리가 출력되어야 하는 파일 경로를 지정합니다. 이것은 Emit API에서 `metadataPeStream`으로 전환됩니다.
 
 ## <a name="syntax"></a>구문
 
 ```console
-/refout:filepath
+-refout:filepath
 ```
 
 ## <a name="arguments"></a>인수
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 - 모든 가상 메서드가 유지됩니다. 명시적 인터페이스 구현이 유지됩니다. 명시적으로 구현된 속성 및 이벤트가 유지됩니다. 해당 접근자가 가상이므로 유지됩니다.
 - 구조체의 모든 필드가 유지됩니다. 이것은 post-C#-7.1 개선의 후보입니다.
 
-`/refout` 및 [`/refonly`](refonly-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
+`-refout` 및 [`-refonly`](refonly-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
 
 ## <a name="see-also"></a>참고 항목
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  

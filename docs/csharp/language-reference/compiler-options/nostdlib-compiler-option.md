@@ -13,25 +13,25 @@ ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ad3ca7775512623de43c7fe6b7fe1cf481ccca87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dd9d2b6a4a9c774aa339e840ad0020ee39cb10d3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nostdlib-c-compiler-options"></a>/nostdlib(C# 컴파일러 옵션)
-**/nostdlib** 를 사용하면 전체 시스템 네임스페이스를 정의하는 mscorlib.dll을 가져올 수 없습니다.  
+# <a name="-nostdlib-c-compiler-options"></a>-nostdlib(C# 컴파일러 옵션)
+**-nostdlib**를 사용하면 전체 시스템 네임스페이스를 정의하는 mscorlib.dll을 가져올 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/nostdlib[+ | -]  
+-nostdlib[+ | -]  
 ```  
   
 ## <a name="remarks"></a>설명  
  고유한 시스템 네임스페이스와 개체를 정의하거나 만들려면 이 옵션을 사용합니다.  
   
- **/nostdlib**를 지정하지 않으면 mscorlib.dll을 프로그램으로 가져옵니다( **/nostdlib-**지정과 동일함). **/nostdlib** 를 지정하는 것은 **/nostdlib+**를 지정하는 것과 같습니다.  
+ **-nostdlib**를 지정하지 않으면 mscorlib.dll을 프로그램으로 가져옵니다( **-nostdlib-**지정과 동일함). **-nostdlib**를 지정하는 것은 **-nostdlib+**를 지정하는 것과 같습니다.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   

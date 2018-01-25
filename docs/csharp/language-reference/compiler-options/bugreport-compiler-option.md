@@ -13,19 +13,19 @@ ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d1341383d48a28966a0873f3124cdc3567ec3f76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2a6c27454cc8f95b9662d6ae688471849c5cee0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="bugreport-c-compiler-options"></a>/bugreport(C# 컴파일러 옵션)
+# <a name="-bugreport-c-compiler-options"></a>-bugreport(C# 컴파일러 옵션)
 나중에 분석하기 위해 파일에 디버그 정보를 포함하도록 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/bugreport:file  
+-bugreport:file  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  버그 보고서를 포함하려는 파일의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- **/bugreport** 옵션은 `file`에 다음 정보를 포함하도록 지정합니다.  
+ **-bugreport** 옵션은 `file`에 다음 정보를 포함하도록 지정합니다:  
   
 -   컴파일에 포함된 모든 소스 코드 파일의 복사본입니다.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 -   메시지가 표시되는 문제 해결 방법에 대한 설명입니다.  
   
- **/errorreport:prompt** 또는 **/errorreport:send**와 함께 이 옵션을 사용할 경우 파일의 정보가 Microsoft Corporation에 전송됩니다.  
+ **-errorreport:prompt** 또는 **-errorreport:send**와 함께 이 옵션을 사용할 경우 파일의 정보가 Microsoft Corporation에 전송됩니다.  
   
  모든 소스 코드 파일의 복사본이 `file`에 저장되기 때문에 최대한 짧은 프로그램으로 의심스러운 코드 결함을 재현하는 것이 좋습니다.  
   
@@ -59,5 +59,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
- [/errorreport (C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+ [-errorreport(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

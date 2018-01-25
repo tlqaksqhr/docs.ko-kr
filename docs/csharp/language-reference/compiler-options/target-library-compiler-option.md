@@ -13,27 +13,27 @@ ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e66e2edd86dc4a1302b23dab07226a5d56cb79b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 242f8ada7cbffc4a6986339d28c4284b50afca25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetlibrary-c-compiler-options"></a>/target:library(C# 컴파일러 옵션)
-**/target:library** 옵션을 사용하면 컴파일러가 실행 파일(EXE) 대신 DLL(동적 연결 라이브러리)을 만듭니다.  
+# <a name="-targetlibrary-c-compiler-options"></a>-target:library(C# 컴파일러 옵션)
+**-target:library** 옵션을 사용하면 컴파일러가 실행 파일(EXE) 대신 DLL(동적 연결 라이브러리)을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/target:library  
+-target:library  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  DLL은 .dll 확장명으로 생성됩니다.  
   
- [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 옵션을 사용하여 달리 지정되지 않은 경우 첫 번째 입력 파일의 이름이 출력 파일의 이름으로 사용됩니다.  
+ [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 옵션을 사용하여 달리 지정되지 않은 경우 첫 번째 입력 파일의 이름이 출력 파일의 이름으로 사용됩니다.  
   
- 명령줄에서 지정된 경우, 다음 **/out** 또는 **/target: module** 옵션까지의 모든 파일이 .dll 파일을 만드는 데 사용됩니다.  
+ 명령줄에서 지정된 경우, 다음 **-out** 또는 **-target: module** 옵션까지의 모든 파일이 .dll 파일을 만드는 데 사용됩니다.  
   
  .dll 파일을 빌드하는 경우에는 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 메서드가 필요하지 않습니다.  
   
@@ -47,13 +47,13 @@ ms.lasthandoff: 11/21/2017
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `in.cs`를 컴파일하고 `in.dll`을 만듭니다.  
   
 ```console  
-csc /target:library in.cs  
+csc -target:library in.cs  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [/target (C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)

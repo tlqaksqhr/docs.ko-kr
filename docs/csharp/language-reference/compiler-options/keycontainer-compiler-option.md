@@ -13,19 +13,19 @@ ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0292ff38b1d03f5960a20858fbb9c42a6aff1f43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 944a9b4dbbed76f388642d67be9518343f750de5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="keycontainer-c-compiler-options"></a>/keycontainer(C# 컴파일러 옵션)
+# <a name="-keycontainer-c-compiler-options"></a>-keycontainer(C# 컴파일러 옵션)
 암호화 키 컨테이너의 이름을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/keycontainer:string  
+-keycontainer:string  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -33,13 +33,13 @@ ms.lasthandoff: 11/21/2017
  강력한 이름 키 컨테이너의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
- **/keycontainer** 옵션을 사용하면 컴파일러는 지정된 컨테이너의 공개 키를 어셈블리 매니페스트에 삽입하고 최종 어셈블리를 개인 키로 서명하여 공유할 수 있는 구성 요소를 만듭니다. 키 파일을 생성하려면 명령줄에 sn -k `file`을 입력합니다. sn -i는 컨테이너에 키 쌍을 설치합니다.  
+ **-keycontainer** 옵션을 사용하면 컴파일러는 지정된 컨테이너의 공개 키를 어셈블리 매니페스트에 삽입하고 최종 어셈블리를 개인 키로 서명하여 공유할 수 있는 구성 요소를 만듭니다. 키 파일을 생성하려면 명령줄에 sn -k `file`을 입력합니다. sn -i는 컨테이너에 키 쌍을 설치합니다.  
   
- [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)로 컴파일하는 경우 키 파일의 이름이 모듈에 저장되고, [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)을 사용하여 이 모듈을 어셈블리로 컴파일할 때 어셈블리에 통합됩니다.  
+ [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)로 컴파일하는 경우 키 파일의 이름이 모듈에 저장되고, [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)을 사용하여 이 모듈을 어셈블리로 컴파일할 때 어셈블리에 통합됩니다.  
   
  MSIL(Microsoft Intermediate Language) 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=nameWithType>)으로 지정할 수도 있습니다.  
   
- [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)을 사용하여 암호화 정보를 컴파일러에 전달할 수도 있습니다. 공개 키를 어셈블리 매니페스트에 추가하지만 테스트가 완료될 때까지 어셈블리 서명을 지연하려는 경우 [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)을 사용합니다.  
+ [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)을 사용하여 암호화 정보를 컴파일러에 전달할 수도 있습니다. 공개 키를 어셈블리 매니페스트에 추가하고자 하지만 테스트가 완료될 때까지 어셈블리 서명을 지연하려면 [-delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)을 사용합니다.  
   
  자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) 및 [어셈블리 서명 지연](../../../framework/app-domains/delay-sign-assembly.md)을 참조하세요.  
   

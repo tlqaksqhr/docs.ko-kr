@@ -7,25 +7,25 @@ ms.topic: article
 f1_keywords: /dllbase
 helpviewer_keywords:
 - baseaddress compiler option [C#]
-- /baseaddress compiler option [C#]
 - -baseaddress compiler option [C#]
+- /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f8cc5e19565a0e5044626c4fb8eb9d684fbe0a73
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 4e4b4964d587bfdf95949ebd6f0028a25988c2ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="baseaddress-c-compiler-options"></a>/baseaddress(C# 컴파일러 옵션)
-**/baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다. 이 옵션을 사용하는 시기와 이유에 대한 자세한 내용은 [Larry Osterman's WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)를 참조하세요.  
+# <a name="-baseaddress-c-compiler-options"></a>-baseaddress(C# 컴파일러 옵션)
+**-baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다. 이 옵션을 사용하는 시기와 이유에 대한 자세한 내용은 [Larry Osterman's WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/baseaddress:address  
+-baseaddress:address  
 ```  
   
 ## <a name="arguments"></a>인수  

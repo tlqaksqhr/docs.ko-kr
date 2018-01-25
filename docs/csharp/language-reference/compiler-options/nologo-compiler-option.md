@@ -14,19 +14,19 @@ ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a473c02dba1b69a34d601b4d49e02cc202eeb158
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2585e494cc87978b47fe2de5a05b6d2e031c8929
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nologo-c-compiler-options"></a>/nologo(C# 컴파일러 옵션)
-**/nologo** 옵션은 컴파일러가 시작될 때 나타나는 시작 배너와 컴파일하는 동안 나타나는 정보 메시지를 표시하지 않습니다.  
+# <a name="-nologo-c-compiler-options"></a>-nologo(C# 컴파일러 옵션)
+**-nologo** 옵션은 컴파일러가 시작될 때 로그온 배너의 표시를 억제하고 컴파일하는 동안 정보 메시지를 표시합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```console  
-/nologo  
+-nologo  
 ```  
   
 ## <a name="remarks"></a>설명  
