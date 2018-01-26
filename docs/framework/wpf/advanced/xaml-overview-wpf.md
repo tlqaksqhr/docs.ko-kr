@@ -31,11 +31,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML 개요(WPF)
 이 항목에서는 XAML 언어의 기능을 설명하고 XAML을 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법을 보여 줍니다. 이 항목에서는 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 구현된 XAML에 대해 자세히 설명합니다. XAML 자체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]보다 큰 언어 개념입니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-syntax-in-brief"></a>XAML 구문 개요  
  다음 섹션에서는 XAML 구문의 기본 형식에 대해 설명하고 간단한 태그 예제를 제공합니다. 각 구문 형식에 대해 자세하게 설명하지는 않습니다. 예를 들어, 지원 형식 시스템에서 이러한 구문을 어떻게 나타내는지에 대해서는 설명하지 않습니다. 이 항목에 소개된 각 구문 형식의 XAML 구문에 대한 자세한 내용은 [XAML 구문 정보](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)를 참조하세요.  
   
- XML 언어에 이미 익숙한 경우 다음 일부 단원에서 설명하는 내용 중 대부분은 초보적인 것일 수 있습니다. 이는 XAML의 기본적 설계 원칙 중 하나에 따른 결과입니다.  XAML 언어는 고유한 개념을 정의하고 있지만 이러한 개념은 XML 언어 및 태그 형식 내에서 적용됩니다.  
+ XML 언어에 이미 익숙한 경우 다음 일부 단원에서 설명하는 내용 중 대부분은 초보적인 것일 수 있습니다. 이는 XAML의 기본적 설계 원칙 중 하나에 따른 결과입니다.  XAML 언어 자체의 개념을 정의 하지만 이러한 개념 XML 언어 및 태그 형식 내에서 작동 합니다.  
   
 ### <a name="xaml-object-elements"></a>XAML 개체 요소  
  일반적으로 개체 요소는 특정 형식의 인스턴스를 선언합니다. 이 형식은 XAML을 언어로 사용하는 기술에 지원 형식을 제공하는 어셈블리에 정의되어 있습니다.  

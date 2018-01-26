@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
 .NET Framework에서 개발자와 관리자는 구성 파일을 통해 응용 프로그램이 실행되는 방식을 유연하게 제어할 수 있습니다. 구성 파일은 필요에 따라 변경할 수 있는 XML 파일입니다. 관리자는 응용 프로그램에서 액세스할 수 있는 보호되는 리소스와 응용 프로그램에서 사용할 어셈블리 버전 그리고 원격 응용 프로그램과 개체의 위치를 제어할 수 있습니다. 개발자는 설정을 구성 파일에 저장할 수 있으므로, 설정이 변경될 때마다 매번 응용 프로그램을 다시 컴파일할 필요가 없습니다. 이 단원에서는 응용 프로그램 구성과 유용성에 대해 설명합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/19/2018
  이 항목에서는 구성 파일의 구문에 대해 설명하고 컴퓨터, 응용 프로그램 및 보안 등 세 가지 유형의 구성 파일에 대한 정보를 제공합니다.  
   
 ## <a name="configuration-file-format"></a>구성 파일 서식  
- 구성 파일에는 구성 정보를 설정하는 논리적 데이터 구조인 요소가 포함되어 있습니다. 구성 파일에서는 태그를 사용하여 요소의 시작과 끝을 표시합니다. 예를 들어 `<runtime>` 요소는 `<runtime>`*자식 요소*`</runtime>`로 구성됩니다. 빈 요소는 `<runtime/>` 또는 `<runtime>``</runtime>`으로 기록됩니다.  
+ 구성 파일에는 구성 정보를 설정하는 논리적 데이터 구조인 요소가 포함되어 있습니다. 구성 파일에서는 태그를 사용하여 요소의 시작과 끝을 표시합니다. 예를 들어 `<runtime>` 요소는 `<runtime>`*자식 요소*`</runtime>`로 구성됩니다. 빈 요소는 `<runtime/>` 또는 `<runtime></runtime>`으로 기록됩니다.  
   
  모든 XML 파일에서와 같이 구성 파일의 구문은 대/소문자를 구분합니다.  
   
