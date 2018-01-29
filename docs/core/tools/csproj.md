@@ -1,5 +1,5 @@
 ---
-title: "csproj 참조"
+title: ".NET Core용 csproj 형식에 대한 추가 사항"
 description: "기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기"
 keywords: "참조, csproj, .NET Core"
 author: blackdwarf
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.workload: dotnetcore
-ms.openlocfilehash: 329a74cf083819896aafd7fc7993fa0e8ac8f8c2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: d2a318f099eaa67912c2cecd1c67ceebaee8629e
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 

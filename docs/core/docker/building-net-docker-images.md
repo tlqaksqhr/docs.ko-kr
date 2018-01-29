@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core 응용 프로그램에 대한 Docker 이미지 작성
 
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/23/2017
 * **더 큰** ASP.NET Core 빌드 Docker 기본 이미지에 따라 컨테이너에서 샘플 빌드 
 * **더 작은** ASP.NET Core Docker 런타임 기본 이미지에 따라 최종 빌드 결과를 Docker 이미지로 복사
 
-> [!Note]
+> [!NOTE]
 > 빌드 이미지는 응용 프로그램을 빌드하는 데 필요한 도구를 포함하는 반면 런타임 이미지는 그렇지 않습니다.
 
 ### <a name="prerequisites"></a>필수 구성 요소
@@ -174,7 +175,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] `docker run` '-p' 인수는 로컬 컴퓨터의 포트 5000을 컨테이너의 포트 80으로 매핑합니다(포트 매핑 형식은 `host:container`). 자세한 내용은 명령줄 매개 변수의 [docker run](https://docs.docker.com/engine/reference/commandline/exec/) 참조를 참조하세요.
+> [!NOTE]
+> `docker run` '-p' 인수는 로컬 컴퓨터의 포트 5000을 컨테이너의 포트 80으로 매핑합니다(포트 매핑 형식은 `host:container`). 자세한 내용은 명령줄 매개 변수의 [docker run](https://docs.docker.com/engine/reference/commandline/exec/) 참조를 참조하세요.
 
 응용 프로그램이 시작된 후 웹 브라우저에서 **http://localhost:5000**을 방문합니다.
 
@@ -196,7 +198,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * `docker exec aspnetcore_sample ipconfig`를 실행합니다.
 * 컨테이너 IP 주소를 복사하고 브라우저로 붙여 넣습니다(예: 172.29.245.43).
 
-> [!Note]
+> [!NOTE]
 > Docker exec는 이름 또는 해시로 컨테이너 식별을 지원합니다. 예제에서는 이름(aspnetcore_sample)이 사용됩니다.
 
 실행 중인 Windows 컨테이너의 IP 주소를 가져오는 방법의 다음 예제를 참조하세요.
@@ -215,7 +217,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > Docker exec는 실행 중인 컨테이너에서 새 명령을 실행합니다. 자세한 내용은 명령줄 매개 변수의 [docker exec 참조](https://docs.docker.com/engine/reference/commandline/exec/)를 참조하세요.
 
 [dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 프로덕션에 로컬로 배포할 준비가 된 응용 프로그램을 만들 수 있습니다.
@@ -224,7 +226,7 @@ Ethernet adapter Ethernet:
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > -c 릴리스 인수는 릴리스 모드에서 응용 프로그램을 빌드합니다(기본값은 디버그 모드). 자세한 내용은 명령줄 매개 변수의 [docker run 참조](../tools/dotnet-run.md)를 참조하세요.
 
 다음 명령을 사용하여 **Windows**에서 응용 프로그램을 실행할 수 있습니다.
@@ -265,5 +267,5 @@ dotnet published/aspnetapp.dll
 * [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)(클라우드에서 Mac용 Visual Studio, 컨테이너 및 서버리스 코드에 익숙해지기)
 * [Getting Started with Docker and Visual Studio for Mac Lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)(Docker 및 Mac용 Visual Studio 랩 시작)
 
-> [!Note]
+> [!NOTE]
 > Azure 구독이 없는 경우 무료 30일 계정에 [오늘 등록](https://azure.microsoft.com/free/?b=16.48)하고 Azure 크레딧 $200를 받아 원하는 조합의 Azure 서비스를 사용해 보세요.
