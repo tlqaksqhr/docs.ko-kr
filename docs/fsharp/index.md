@@ -22,17 +22,17 @@ F#은 NET에서 실행 되는 함수형 프로그래밍 언어입니다.  함수
 
 ## <a name="if-youre-new-to-f"></a>F#을 처음 접하는 경우 #
 
-F#에 익숙하지 않다면, [F# 둘러보기](tour.md)를 통해 언어의 개요 및 그 프로그래밍 개념 일부를 이해해보세요.  Visual Studio를 사용하고 있다면, 내부의 튜토리얼 프로젝트 템플릿이 동일한 콘텐츠를 포함합니다.
+F#에 익숙하지 않다면, [F# 둘러보기](tour.md) 를 통해 언어의 개요 및 그 프로그래밍 개념 일부를 이해해보세요.  Visual Studio를 사용하고 있다면, 내부의 튜토리얼 프로젝트 템플릿이 동일한 콘텐츠를 포함합니다.
 
 ## <a name="if-youre-experienced-with-f"></a>F#을 사용한 경험이 있는 경우 #
 
-F# 관련 방식을 하거나 특정 언어 구문에 대한 자세한 참조는 [언어 참조](language-reference/index.md)합니다.  F# 언어의 모든 기능에 대한 상세한 가이드입니다.
+F# 관련 방식을 하거나 특정 언어 구문에 대한 자세한 참조는 [언어 참조](language-reference/index.md) 합니다. F# 언어의 모든 기능에 대한 상세한 가이드입니다.  F # 언어의 모든 기능에 대 한 철저 한이 가이드가.입니다.
 
-또한 [F# 핵심 라이브러리 레퍼런스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)는 FSharp.Core, F#의 일부인 핵심 라이브러리에 대한 학습을 위한 중요한 리소스입니다.
+또한 [F# 핵심 라이브러리 레퍼런스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) 는 FSharp.Core, F#의 일부인 핵심 라이브러리에 대한 학습을 위한 중요한 리소스입니다.
 
 ## <a name="the-f-software-foundation"></a>F# Software Foundation
 
-Microsoft 기본 개발자의 F# 언어와 해당 도구이지만, F#은 독립적인 F# 소프트웨어 재단(FSSF)에게 지원을 받고 있습니다.   
+Microsoft 기본 개발자의 F # 언어와 해당 도구 이지만, F #는 또한 뒷받침 되며는 독립적인 foundation는 F # 소프트웨어 Foundation (FSSF).
 
 F# Software Foundation의 임무는 F# 프로그래밍 언어를 홍보하고 보호하고 발전시키며, F# 프로그래머의 다양한 국제 커뮤니티의 성장을 지원하고 용이하게 만드는 것입니다.
 

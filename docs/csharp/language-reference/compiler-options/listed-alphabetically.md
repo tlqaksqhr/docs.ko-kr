@@ -2,7 +2,8 @@
 title: "C# 컴파일러 옵션 사전순 목록"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - compiler options [C#], listed alpabetically
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07ca6b9473a4a3401742d05aa7c880da5ac43ad0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f4d7f1b122d3481dc8c3c5256ee361965846a830
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C# 컴파일러 옵션 사전순 목록
 여기에서는 컴파일러 옵션을 사전순으로 정렬합니다. 범주별 목록을 보려면 [C# 컴파일러 옵션 범주별 목록](../../../csharp/language-reference/compiler-options/listed-by-category.md)을 참조하세요.  
@@ -28,10 +29,10 @@ ms.lasthandoff: 01/19/2018
 |[-?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|stdout에 사용법 메시지를 표시합니다.|  
 |-additionalfile|코드 생성에 직접 영향을 주지 않지만 오류 또는 경고를 생성하기 위해 분석기에서 사용할 수 있는 추가 파일에 이름을 지정합니다.|  
 |[-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|지정한 모듈을 이 어셈블리에 링크합니다.|  
-|-analyzer|이 어셈블리에서 분석기를 실행합니다(약식: /a).|  
+|-analyzer|이 어셈블리에서 분석기를 실행합니다(약식: -a).|  
 |[/appconfig](../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)|어셈블리 바인딩 시간에 app.config의 위치를 지정합니다.|  
 |[-baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|빌드할 라이브러리의 기준 주소를 지정합니다.|  
-|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|'버그 보고서' 파일을 만듭니다. /errorreport:prompt 또는 /errorreport:send와 함께 사용하면 이 파일이 충돌 정보와 함께 전송됩니다.|  
+|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|'버그 보고서' 파일을 만듭니다. -errorreport:prompt 또는 -errorreport:send와 함께 사용하면 이 파일이 충돌 정보와 함께 전송됩니다.|  
 |[/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|컴파일러에서 오버플로 검사를 생성하도록 합니다.|  
 |-checksumalgorithm:\<alg>|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 SHA1(기본값) 또는 SHA256입니다.|  
 |[-codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|소스 파일을 열 때 사용할 코드 페이지를 지정합니다.|  
