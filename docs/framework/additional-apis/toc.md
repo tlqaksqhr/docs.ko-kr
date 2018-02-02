@@ -4,8 +4,12 @@
 #### [m_WriteList 필드](m_writelist.md)
 ### [ConnectionGroup 클래스](connectiongroup.md)
 #### [m_ConnectionList 필드](m_connectionlist.md)
+### [CoreResponseData 클래스](coreresponsedata.md)
+#### [m_ResponseHeaders 필드](coreresponsedata_m_responseheaders.md)
+#### [m_StatusCode 필드](coreresponsedata_m_statuscode.md)
 ### HttpWebRequest 클래스
 #### [_AutoRedirects 필드](_autoredirects.md)
+#### [_CoreResponse 필드](httpwebrequest__coreresponse.md)
 #### [_HttpResponse 필드](_httpresponse.md)
 ### ServicePoint 클래스
 #### [m_ConnectionGroupList 필드](m_connectiongrouplist.md)

@@ -25,7 +25,9 @@
 ### [클래스 라이브러리 개요](standard/class-library-overview.md)
 ### [기본 형식](standard/base-types/)
 ## [.NET 클래스 라이브러리](standard/class-libraries.md)
-## [이식성 분석기](standard/portability-analyzer.md)
+## 분석기
+### [API 분석기](standard/analyzers/api-analyzer.md) 
+### [이식성 분석기](standard/analyzers/portability-analyzer.md)
 ## [예외 처리 및 Throw](standard/exceptions/)
 ## [.NET 어셈블리 파일 형식](standard/assembly-format.md)
 ## [가비지 수집](standard/garbage-collection/)
@@ -282,7 +284,6 @@
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## 자습서
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
-#### [F# Interactive 옵션](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [형식 공급자](fsharp/tutorials/type-providers/index.md)
 #### [형식 공급자를 사용하여 SQL Database에 액세스](fsharp/tutorials/type-providers/accessing-a-sql-database.md)
 #### [형식 공급자 및 엔터티를 사용하여 SQL Database에 액세스](fsharp/tutorials/type-providers/accessing-a-sql-database-entities.md)
@@ -408,6 +409,7 @@
 ### [고정키워드](fsharp/language-reference/fixed.md)
 ### [컴파일러 지시문](fsharp/language-reference/compiler-directives.md)
 ### [컴파일러 옵션](fsharp/language-reference/compiler-options.md)
+### [F# Interactive 옵션](fsharp/language-reference/fsharp-interactive-options.md)
 ### [소스 줄, 파일 및 경로 식별자](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [호출자 정보](fsharp/language-reference/caller-information.md)
 ### [자세한 구문](fsharp/language-reference/verbose-syntax.md)
