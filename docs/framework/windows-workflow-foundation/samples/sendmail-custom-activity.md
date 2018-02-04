@@ -8,19 +8,20 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 사용자 지정 활동
-이 샘플에서는 워크플로 응용 프로그램 내에서 사용하기 위해 <xref:System.Activities.AsyncCodeActivity>로부터 파생되는 사용자 지정 활동을 만들어 SMTP를 사용하여 메일을 보내는 방법을 보여 줍니다. 사용자 지정 활동은 <xref:System.Net.Mail.SmtpClient>의 기능을 사용하여 전자 메일을 비동기적으로 보내고 인증된 메일을 보냅니다. 또한 테스트 모드, 토큰 바꾸기, 파일 템플릿 및 테스트 드롭 경로와 같은 몇 가지 최종 사용자 기능도 제공합니다.  
+이 샘플에서는 워크플로 응용 프로그램 내에서 사용하기 위해 <xref:System.Activities.AsyncCodeActivity>로부터 파생되는 사용자 지정 활동을 만들어 SMTP를 사용하여 메일을 보내는 방법을 보여 줍니다. 사용자 지정 활동의 기능을 사용 하 여 <xref:System.Net.Mail.SmtpClient> 전자 메일을 비동기적으로 전송 하 고 인증 된 메일을 보냅니다. 또한 테스트 모드, 토큰 바꾸기, 파일 템플릿 및 테스트 드롭 경로와 같은 몇 가지 최종 사용자 기능도 제공합니다.  
   
  다음 표에서는 `SendMail` 활동의 인수에 대해 자세히 설명합니다.  
   
@@ -31,17 +32,17 @@ ms.lasthandoff: 12/22/2017
 |EnableSsl|bool|<xref:System.Net.Mail.SmtpClient>에서 SSL(Secure Sockets Layer)을 사용하여 연결을 암호화할지 여부를 지정합니다.|  
 |UserName|문자열|보낸 사람의 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 속성을 인증하는 자격 증명을 설정할 사용자 이름입니다.|  
 |암호|문자열|보낸 사람의 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 속성을 인증하는 자격 증명을 설정할 암호입니다.|  
-|Subject|<xref:System.Activities.InArgument%601>\<문자열 >|메시지 제목입니다.|  
-|본문|<xref:System.Activities.InArgument%601>\<문자열 >|메시지 본문입니다.|  
-|첨부 파일|<xref:System.Activities.InArgument%601>\<문자열 >|이 전자 메일 메시지에 첨부된 데이터를 저장하는 데 사용되는 첨부 파일 컬렉션입니다.|  
-|전|<xref:System.Net.Mail.MailAddress>|이 전자 메일 메시지의 보낸 사람 주소입니다.|  
+|Subject|<xref:System.Activities.InArgument%601>\<string>|메시지 제목입니다.|  
+|본문|<xref:System.Activities.InArgument%601>\<string>|메시지 본문입니다.|  
+|첨부 파일|<xref:System.Activities.InArgument%601>\<string>|이 전자 메일 메시지에 첨부 된 데이터를 저장 하는 데 사용 되는 첨부 파일 컬렉션입니다.|  
+|시작|<xref:System.Net.Mail.MailAddress>|이 전자 메일 메시지에 대 한 주소입니다.|  
 |대상|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지의 받는 사람이 들어 있는 주소 컬렉션입니다.|  
-|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지의 CC(참조)를 받는 사람이 들어 있는 주소 컬렉션입니다.|  
-|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지의 BCC(숨은 참조)를 받는 사람이 들어 있는 주소 컬렉션입니다.|  
-|토큰|<xref:System.Activities.InArgument%601>< IDictionary\<문자열, 문자열 >>|본문에서 바꿀 토큰입니다. 사용자는 이 기능을 통해 나중에 이 속성을 사용하여 제공된 토큰으로 바꿀 수 있는 일부 값을 본문에 지정할 수 있습니다.|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지에 대 한 (cc) 받는 사람이 들어 있는 컬렉션에 주소입니다.|  
+|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지의 bcc (숨은 참조) 받는 사람이 들어 있는 주소 컬렉션입니다.|  
+|토큰|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|본문에서 바꿀 토큰입니다. 사용자는 이 기능을 통해 나중에 이 속성을 사용하여 제공된 토큰으로 바꿀 수 있는 일부 값을 본문에 지정할 수 있습니다.|  
 |BodyTemplateFilePath|문자열|본문에 대한 템플릿의 경로입니다. `SendMail` 활동은 이 파일의 내용을 본문 속성에 복사합니다.<br /><br /> 템플릿에는 토큰 속성의 내용으로 바뀌는 토큰이 포함될 수 있습니다.|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|이 속성이 설정되면 모든 전자 메일은 속성에 지정된 주소로 보내집니다.<br /><br /> 이 속성은 워크플로를 테스트할 때 사용할 수 있습니다. 예를 들어 받는 사람에게 실제로 보내지는 않고 모든 전자 메일이 보내지는지 확인하려는 경우 사용할 수 있습니다.|  
-|TestDropPath|문자열|이 속성이 설정되면 모든 전자 메일은 지정된 파일에도 저장됩니다.<br /><br /> 이 속성은 보내는 전자 메일의 형식과 내용이 적합하지 확인하기 위해 워크플로를 테스트할 때나 디버그할 때 사용할 수 있습니다.|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|이 속성을 설정 하는 경우 모든 전자 메일에 지정 된 주소로 전송 됩니다.<br /><br /> 이 속성은 워크플로를 테스트할 때 사용할 수 있습니다. 예를 들어 있는지 확인 하려는 경우 실제 받는 사람에 게 보내지는 않고 모든 전자 메일이 전송 됩니다.|  
+|TestDropPath|문자열|이 속성을 설정 하는 경우 모든 전자 메일이 지정된 된 파일에도 저장 됩니다.<br /><br /> 이 속성 테스트 하거나 보내는 전자 메일의 내용과 형식 적절 한지 되도록 하려면 워크플로 디버깅 하는 경우에 사용 됩니다.|  
   
 ## <a name="solution-contents"></a>솔루션 개념  
  솔루션에는 두 개의 프로젝트가 포함되어 있습니다.  
@@ -115,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>설치 지침  
  이 샘플을 실행하려면 SMTP 서버에 액세스해야 합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]다음 링크를 참조에 SMTP 서버를 설정 합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 다음 링크를 참조에 SMTP 서버를 설정 합니다.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   
@@ -133,9 +134,9 @@ new SendMail
   
 2.  올바른 SMTP 서버에 액세스할 수 있는 권한이 있는지 확인합니다. 설치 지침을 참조하세요.  
   
-3.  서버 주소와 보낸 사람 및 받는 사람 전자 메일 주소를 사용하여 프로그램을 구성합니다.  
+3.  서버 주소를 사용 및 전자 메일 주소로 프로그램을 구성 합니다.  
   
-     이 샘플을 올바르게 실행하려면 Program.cs 및 Sequence.xaml에서 보낸 사람 및 받는 사람 주소와 SMTP 서버 주소를 구성해야 할 수 있습니다. 프로그램은 메일을 두 가지 다른 방식으로 보내므로 두 위치에서 모두 주소를 변경해야 합니다.  
+     이 샘플을 올바르게 실행 하려면 program.cs에서 및 Sequence.xaml에서 전자 메일 주소 및 SMTP 서버의 주소 및에서 값을 구성 하려면 할 수 있습니다. 프로그램은 메일을 두 가지 다른 방식으로 보내므로 두 위치에서 모두 주소를 변경해야 합니다.  
   
 4.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
   

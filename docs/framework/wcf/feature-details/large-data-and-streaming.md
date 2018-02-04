@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 XML 기반 통신 인프라입니다. XML 데이터에 정의 된 표준 텍스트 형식으로 인코딩되어 일반적으로 하기 때문에 [XML 1.0 사양](http://go.microsoft.com/fwlink/?LinkId=94838)관계, 설계자 및 시스템 개발자가 일반적으로 염려 하는 전송 된 메시지의 통신 사용 공간 (또는 크기)에서 네트워크 및 XML의 텍스트 기반 인코딩과 이진 데이터의 효율적인 전송을 위한 특별히 고려해 야 할 제기 됩니다.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] XML 기반 통신 인프라가입니다. XML 데이터에 정의 된 표준 텍스트 형식으로 인코딩되어 일반적으로 하기 때문에 [XML 1.0 사양](http://go.microsoft.com/fwlink/?LinkId=94838)관계, 설계자 및 시스템 개발자가 일반적으로 염려 하는 전송 된 메시지의 통신 사용 공간 (또는 크기)에서 네트워크 및 XML의 텍스트 기반 인코딩과 이진 데이터의 효율적인 전송을 위한 특별히 고려해 야 할 제기 됩니다.  
   
 ## <a name="basic-considerations"></a>기본 고려 사항  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 다음 정보에 대한 배경 정보를 제공하기 위해, 이 단원에서는 연결된 시스템 인프라에 일반적으로 적용되는 인코딩, 이진 데이터 및 스트리밍에 해당되는 일반 고려 사항을 중점적으로 다룹니다.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  Base64 인코딩된 문자열에서 각 문자는 원래 8비트 데이터 중 6비트를 나타내며, 따라서 규칙에 따라 일반적으로 추가되는 추가 형식 문자(캐리지 리턴/줄 바꿈)를 제외하고 Base64에서 인코딩 오버헤드 비율은 4:3이 됩니다. XML과 이진 인코딩 사이의 차이가 갖는 심각도는 일반적으로 시나리오에 따라 결정되지만, 500MB의 페이로드를 전송하면서 크기가 33% 이상 증가한다면 보통은 적절하지 못한 것으로 봅니다.  
   
- 이 인코딩 오버헤드를 방지하기 위해 MTOM(Message Transmission Optimization Mechanism) 표준에서는 메시지에 포함된 큰 데이터 요소를 구체화하여 특별한 인코딩 없이도 메시지와 함께 이진 데이터로서 전달할 수 있습니다. MTOM에서는 첨부 파일이나 포함된 콘텐츠(그림 및 기타 포함된 콘텐츠)가 있는 SMTP(Simple Mail Transfer Protocol) 전자 메일 메시지와 비슷한 방식으로 교환됩니다. MTOM 메시지는 루트 부분이 실제 SOAP 메시지인 multipart/관련 MIME 시퀀스로 패키지됩니다.  
+ 이 인코딩 오버헤드를 방지하기 위해 MTOM(Message Transmission Optimization Mechanism) 표준에서는 메시지에 포함된 큰 데이터 요소를 구체화하여 특별한 인코딩 없이도 메시지와 함께 이진 데이터로서 전달할 수 있습니다. Mtom에서는 메시지는 첨부 파일이 나 포함 된 콘텐츠 (그림 및 기타 포함 된 콘텐츠;)가 있는 SMTP Simple Mail Transfer Protocol () 전자 메일 메시지와 비슷한 방식 MTOM 메시지는 루트 부분이 실제 SOAP 메시지에 다중 파트/관련 MIME 시퀀스로 패키지 됩니다.  
   
  MTOM SOAP 메시지는 해당 MIME 부분을 참조하는 특수 요소 태그가 이진 데이터를 포함하는 메시지에서 원래 요소의 자리를 차지하도록 인코딩되지 않은 버전에서 수정됩니다. 따라서 SOAP 메시지는 함께 전송되는 MIME을 가리키는 방식으로 이진 콘텐츠를 참조하고, 그 외의 경우에는 XML 텍스트 데이터만 전달합니다. 이 모델이 잘 구성된 SMTP 모델과 매우 가깝기 때문에 MTOM 메시지의 인코딩 및 디코딩 도구를 폭 넓게 지원하여 상호 운용성을 극대화하는 플랫폼도 많습니다.  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="encodings"></a>인코딩  
  *인코딩* 통신 중에 메시지를 표시 하는 방법에 대 한 규칙의 집합을 정의 합니다. *인코더* 그러한 인코딩을 구현 하 고는, 보낸 사람 쪽에서는 <xref:System.ServiceModel.Channels.Message> 바이트 스트림 또는 바이트 버퍼 네트워크를 통해 보낼 수 있는 메모리 내 메시지입니다. 받는 쪽에서는 인코더가 바이트 시퀀스를 메모리 내 메시지로 변환합니다.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에는 세 개의 인코더가 있으며, 필요한 경우 사용자가 직접 인코더를 작성하여 연결할 수 있습니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 세 명의 인코더가 하 고 필요한 경우 작성 하 여 사용자가 직접 인코더에 연결할 수 있습니다.  
   
  각각의 표준 바인딩에는 미리 구성된 인코더가 포함되며, Net* 접두사가 있는 바인딩에서는 이진 인코더를 사용하고(<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 클래스를 포함하는 방법으로) <xref:System.ServiceModel.BasicHttpBinding> 및 <xref:System.ServiceModel.WSHttpBinding> 클래스에서는 기본적으로 텍스트 메시지 인코더(<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 클래스 사용)를 사용합니다.  
   

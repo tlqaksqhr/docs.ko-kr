@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="selecting-a-credential-type"></a>자격 증명 형식 선택
 *자격 증명* 데이터는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 요구 된 id 또는 기능을 설정 하기 위해 사용 합니다. 예를 들어 여권은 정부에서 국가나 지역의 시민권을 입증하기 위해 발급하는 자격 증명입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자격 증명은 사용자 이름 토큰 및 X.509 인증서 같은 여러 형식을 사용할 수 있습니다. 이 항목에서는 자격 증명, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 자격 증명이 사용되는 방법 및 응용 프로그램에 맞는 자격 증명을 선택하는 방법에 대해 설명합니다.  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 >  .NET Framework 3.5 이상에서 SSL 보안을 사용하는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트는 인증서 저장소의 중간 인증서와 SSL 협상 중에 받은 중간 인증서를 모두 사용하여 서비스의 인증서에서 인증서 체인 유효성 검사를 수행합니다. .NET Framework 3.0은 로컬 인증서 저장소에 설치된 중간 인증서만 사용합니다.  
   
 #### <a name="out-of-band-negotiation"></a>Out-of-Band 협상  
- 자동 협상을 사용하지 않는 경우 메시지를 서비스로 보내기 전에 클라이언트에서 서비스 자격 증명을 구축해야 합니다. 이 라고도 *밴드의 범위를 벗어난* 프로 비전 합니다. 예를 들어 지정한 자격 증명 형식이 인증서이고 자동 협상을 사용할 수 없는 경우 클라이언트는 서비스 소유자에 연결하여 인증서를 받고 클라이언트 응용 프로그램을 실행하는 컴퓨터에 설치해야 합니다. 이 작업은 예를 들어 B2B 시나리오에서 서비스에 액세스할 수 있는 클라이언트를 엄격하게 제어하려는 경우에 수행할 수 있습니다. 이 out-of-band 협상은 전자 메일로 수행될 수 있으며, X.509 인증서는 MMC(Microsoft Management Console) 인증서 스냅인 같은 도구를 사용하여 Windows 인증서 저장소에 저장됩니다.  
+ 자동 협상을 사용하지 않는 경우 메시지를 서비스로 보내기 전에 클라이언트에서 서비스 자격 증명을 구축해야 합니다. 이 라고도 *밴드의 범위를 벗어난* 프로 비전 합니다. 예를 들어 지정한 자격 증명 형식이 인증서이고 자동 협상을 사용할 수 없는 경우 클라이언트는 서비스 소유자에 연결하여 인증서를 받고 클라이언트 응용 프로그램을 실행하는 컴퓨터에 설치해야 합니다. 이 작업은 예를 들어 B2B 시나리오에서 서비스에 액세스할 수 있는 클라이언트를 엄격하게 제어하려는 경우에 수행할 수 있습니다. 이 확장의-밴드-협상 전자 메일에서 수행할 수 있습니다 및 X.509 인증서 관리 콘솔 MMC (Microsoft) 인증서 스냅인 같은 도구를 사용 하 여 Windows 인증서 저장소에 저장 됩니다.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 속성은 out-of-band 협상을 통해 얻은 인증서를 서비스에 제공하는 데 사용됩니다. 이 속성은 바인딩에서 자동 협상을 허용하지 않으므로 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용할 때 필요합니다. 이 속성은 상관 관계가 없는 이중 시나리오에서도 사용됩니다. 이 시나리오에서는 클라이언트가 먼저 서버로 요청을 보내지 않고도 서버가 클라이언트에게 메시지를 보냅니다. 서버는 클라이언트로부터 받은 요청이 없으므로 클라이언트 인증서를 사용하여 클라이언트에 대한 메시지를 암호화해야 합니다.  
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 > [!IMPORTANT]
 >  ID를 전환할 수 없을 때(보안 컨텍스트 설정이 켜진 경우의 기본 동작) 주의해야 할 경우가 있습니다. 두 번째 서비스와 통신하는 서비스를 만드는 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트를 두 번째 서비스에 여는 데 사용되는 ID를 변경할 수 없습니다. 여러 클라이언트가 첫 번째 서비스를 사용할 수 있고 두 번째 서비스에 액세스할 때 서비스가 클라이언트를 가장하는 경우 이것이 문제가 됩니다. 서비스가 모든 호출자에 대해 동일한 클라이언트를 다시 사용하는 경우 두 번째 서비스에 대한 모든 호출은 클라이언트를 두 번째 서비스에 여는 데 사용된 첫 번째 호출자의 ID로 수행됩니다. 즉, 서비스는 모든 클라이언트에 대해 첫 번째 클라이언트의 ID를 사용하여 두 번째 서비스와 통신합니다. 이 경우 권한 상승이 발생할 수 있습니다. 원하는 서비스 동작이 아닌 경우 각 호출자를 추적하여 각 호출자와 관련해서 두 번째 서비스에 대해 새 클라이언트를 만들고 서비스가 올바른 호출자에 대해 올바른 클라이언트만 사용하여 두 번째 서비스와 통신하도록 해야 합니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]자격 증명 및 보안 세션 참조 [보안 세션에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 자격 증명 및 보안 세션 참조 [보안 세션에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

@@ -1,11 +1,12 @@
 ---
 title: "형식 문자(Visual Basic)"
 ms.custom: 
-ms.date: 07/20/2015
+ms.date: 01/31/2018
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - '&H prefix for hexadecimal values'
@@ -42,14 +43,14 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bd017db40fc28c78e960a889947cc7323e3e156
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.manager: wpickett
+ms.openlocfilehash: bdb675b9605d03829c95897382daa6d03cf1b041
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="type-characters-visual-basic"></a>입력 문자 (Visual Basic)
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 
 집합을 제공 하는 Visual Basic *식별자 형식 문자* 데이터 형식의 변수 또는 상수를 지정 하는 선언에서 사용할 수 있습니다. 다음 표에서 사용 예제를 사용할 수 있는 식별자 형식 문자를 보여 줍니다.
   
-|식별자 형식 문자|데이터 형식|예제|  
+|식별자 형식 문자|데이터 형식|예|  
 |-------------------------------|---------------|-------------|  
 |`%`|`Integer`|`Dim L%`|  
 |`&`|`Long`|`Dim M&`|  
@@ -96,7 +97,7 @@ A *리터럴* 데이터 형식의 특정 값의 텍스트 표현입니다.
 
 집합을 제공 하는 Visual Basic *리터럴 형식 문자*, 리터럴을 이외의 데이터 형식을 형태로 취하도록을 강제 적용 하는 데 사용할 수를 나타냅니다. 리터럴의 끝에 문자를 추가 하 여이 작업을 수행 합니다. 다음 표에서 사용 예제를 사용할 수 있는 리터럴 형식 문자를 보여 줍니다.
   
-|리터럴 형식 문자|데이터 형식|예제|  
+|리터럴 형식 문자|데이터 형식|예|  
 |----------------------------|---------------|-------------|  
 |`S`|`Short`|`I = 347S`|
 |`I`|`Integer`|`J = 347I`|
@@ -119,7 +120,7 @@ A *리터럴* 데이터 형식의 특정 값의 텍스트 표현입니다.
 
 컴파일러는 일반적으로 10 진수 (밑수 10) 번호 시스템에는 정수 리터럴로 해석 합니다. 과 함께 16 진수 (밑수 16) 숫자로 정수 리터럴을 정의할 수도 있습니다는 `&H` 접두사를 포함 하 여 이진 (밑 2) 숫자로 `&B` 접두사는 8 진수 8으로 번호를 `&O` 접두사 합니다. 접두사 뒤의 숫자는 체계에 적합 해야 합니다. 다음 표에서이 보여 줍니다.  
   
-|기 수|접두사|유효한 숫자 값|예제|
+|기 수|접두사|유효한 숫자 값|예|
 |-----------------|------------|------------------------|-------------|
 |16진수|`&H`|0-9 및 A-F|`&HFFFF`|
 |이진 (밑 2)|`0B`|0-1|`&B01111100`|
@@ -139,6 +140,14 @@ Dim flags As UShort = &H8000US
 ```
 
 이전 예에서 `counter` -32768 10 진수 값 및 `flags` 에 10 진수 값 + 32768을 갖습니다.
+
+Visual Basic 15.5 부터는 사용할 수도 있습니다는 밑줄 문자 (`_`)는 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 합니다. 예:
+
+```vb
+Dim number As Integer = &H_C305_F860
+```
+
+[!INCLUDE [supporting-underscores](../../../../../includes/vb-separator-langversion.md)]
 
 ## <a name="see-also"></a>참고 항목
 

@@ -1,13 +1,15 @@
 ---
 title: "Short 데이터 형식(Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-f1_keywords: vb.Short
+f1_keywords:
+- vb.Short
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -21,11 +23,11 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: fef948debed69cf9fb7b0e6bb65eb0ddbe497a92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10c9869d4fb84cd013b22bc791bd31fad745f3d3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="short-data-type-visual-basic"></a>Short 데이터 형식 (Visual Basic)
 부호 있는 16 비트 (2 바이트) 정수 값 범위에 있는-32, 768에서 32, 767 까지의 저장 합니다.  
@@ -50,10 +52,18 @@ Visual Basic 2017 부터는 사용할 수도 있습니다는 밑줄 문자 `_`, 
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
+Visual Basic 15.5 부터는 사용할 수도 있습니다는 밑줄 문자 (`_`)는 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 합니다. 예:
+
+```vb
+Dim number As Short = &H_3264
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 숫자 리터럴을 포함할 수는 `S` [형식 문자](../../programming-guide\language-features\data-types/type-characters.md) 를 표시 하는 `Short` 다음 예제와 같이 데이터 형식입니다.
 
 ```vb
-Dim number = &H0326S
+Dim number = &H_3264S
 ```
 
 ## <a name="programming-tips"></a>프로그래밍 팁

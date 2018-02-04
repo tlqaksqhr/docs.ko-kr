@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6d7059c5209dc95ce68f28e0f32db929e7c97271
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wif-claims-programming-model"></a>WIF 클레임 프로그래밍 모델
 ASP.NET 및 WCF(Windows Communication Foundation) 개발자는 일반적으로 사용자의 ID 정보 작업에 IIdentity 및 IPrincipal 인터페이스를 사용합니다. .NET 4.5에서는 다음 다이어그램과 같이 이제 모든 보안 주체에 대한 클레임이 항상 표시되도록 WIF(Windows Identity Foundation)가 통합되었습니다.  
@@ -29,9 +31,9 @@ ASP.NET 및 WCF(Windows Communication Foundation) 개발자는 일반적으로 �
   
  클레임은 <xref:System.Security.Claims.Claim> 클래스로 표현됩니다. 이 클래스에는 다음과 같은 중요한 속성이 있습니다.  
   
--   <xref:System.Security.Claims.Claim.Type%2A>은 클레임 형식을 나타내며 일반적으로 URI입니다. 예를 들어 전자 메일 주소 클레임은 `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`로 표현됩니다.  
+-   <xref:System.Security.Claims.Claim.Type%2A>은 클레임 형식을 나타내며 일반적으로 URI입니다. 예를 들어, 전자 메일 주소 클레임으로 나타납니다 `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`합니다.  
   
--   <xref:System.Security.Claims.Claim.Value%2A>에는 클레임 값이 포함되며 문자열로 표현됩니다. 예를 들어 전자 메일 주소는 “someone@contoso.com”으로 표현될 수 있습니다.  
+-   <xref:System.Security.Claims.Claim.Value%2A>에는 클레임 값이 포함되며 문자열로 표현됩니다. 전자 메일 주소도 나타낼 수는 예를 들어 "someone@contoso.com"입니다.  
   
 -   <xref:System.Security.Claims.Claim.ValueType%2A>은 클레임 값 형식을 나타내며 일반적으로 URI입니다. 예를 들어 문자열 형식은 `http://www.w3.org/2001/XMLSchema#string`으로 표현됩니다. 값 형식은 XML 스키마에 따라 QName이어야 합니다. WIF에서 유효한 QName 값을 출력할 수 있게 하려면 값이 `namespace#format` 형식이어야 합니다. 네임스페이스가 잘 정의된 네임스페이스가 아닐 경우 해당 네임스페이스에 대해 게시된 XSD 파일이 없으므로 생성된 XML의 스키마 유효성이 검사되지 않을 수 있습니다. 기본값 형식은 `http://www.w3.org/2001/XMLSchema#string`입니다. 안전하게 사용할 수 있는 잘 알려진 값 형식은 [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155)를 참조하세요.  
   
@@ -55,7 +57,7 @@ ASP.NET 및 WCF(Windows Communication Foundation) 개발자는 일반적으로 �
 ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;  
 ```  
   
- 자세한 내용은 <xref:System.Security.Claims>을 참조하십시오.  
+ 자세한 내용은 <xref:System.Security.Claims>을 참조하세요.  
   
 ### <a name="role-claim-type"></a>역할 클레임 형식  
  RP 응용 프로그램을 구성하는 과정에서 역할 클레임 형식이 결정됩니다. 이 클레임 형식은 System.Security.Claims.ClaimsPrincipal.IsInRole(System.String)에서 사용됩니다. 기본 클레임 형식은 `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`입니다.  

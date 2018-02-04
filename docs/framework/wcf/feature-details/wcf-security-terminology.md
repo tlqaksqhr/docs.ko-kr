@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +14,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF 보안 용어
 보안을 설명할 때 사용되는 일부 용어는 생소할 수 있습니다. 이 항목에서는 일부 보안 용어에 대해 간략하게 설명하며, 모든 항목을 포괄적으로 설명하지는 않습니다.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]에 사용 된 용어 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 설명서 참조 [기본적인 Windows Communication Foundation 개념](../../../../docs/framework/wcf/fundamental-concepts.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 에 사용 된 용어 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 설명서 참조 [기본적인 Windows Communication Foundation 개념](../../../../docs/framework/wcf/fundamental-concepts.md)합니다.  
   
  ACL(액세스 제어 목록 - Access Control List)  
  개체에 적용되는 보안 보호 목록입니다. 개체는 파일, 프로세스 또는 이벤트이거나 보안 설명자를 가진 모든 대상을 가리킵니다. ACL의 항목은 ACE(액세스 제어 항목)이며 임의 ACL과 시스템 ACL의 두 가지 종류가 있습니다.  
