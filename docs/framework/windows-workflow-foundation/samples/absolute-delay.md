@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="absolute-delay"></a>절대 지연
 이 샘플의 주요 시나리오는 워크플로 응용 프로그램에서 지속형 타이머를 사용하여 지정된 <xref:System.DateTime>까지 지연하는 것입니다. 지정된 <xref:System.Activities.Statements.Delay>(또는 분/초 수) 동안만 지연할 수 있다는 점에서 이 샘플은 기본 제공 <xref:System.TimeSpan> 작업을 사용하는 것과는 다릅니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  이 샘플에서는 <xref:System.Activities.WorkflowApplication>에 대해 지속성을 설정하는 방법도 보여 줍니다. 이 특정 샘플에서는 타이머가 만료될 때까지 기다리는 유휴 시간 동안 워크플로 데이터가 지속성 데이터베이스에 언로드되는 지속형 타이머를 사용합니다. 다른 지속성 동작에 이 구현을 사용할 수도 있습니다. 이 샘플에서는 SQL Server로 지속성 연결 문자열을 설정하는 방법 및 워크플로 인스턴스에 대한 데이터를 저장하기 위해 인스턴스 저장소를 만드는 방법을 보여 줍니다. 워크플로 인스턴스를 실행 가능하게 만드는 이벤트가 발생한 후 워크플로를 다시 시작하는 방법에 대한 논리가 제공됩니다.  
   
- 이 샘플을 단계별로 진행하면 전자 메일 메시지가 전송되게 하는 기본 제공 지연이 시작되고 완료되는 시간을 확인할 수 있습니다. 여기서 AbsoluteDelay 작업은 지정한 <xref:System.DateTime>(또는 <xref:System.DateTime>이 만료된 경우 0초) 전까지 중지되며, 만료 시 전자 메일이 전송됩니다. 이 샘플에서는 기본 제공 <xref:System.Activities.Statements.Delay> 기능의 두 가지 사용 사례를 AbsoluteDelay 작업 사용과 비교하여 보여 줍니다.  
+ 이 샘플을 실행 하는 대로 기본 제공 지연이 시작 되 고 완료 되 면를 차례로 시간 전자 메일 메시지를 보내도록 하면 표시 됩니다. 여기서 AbsoluteDelay 작업은 지정한 <xref:System.DateTime>(또는 <xref:System.DateTime>이 만료된 경우 0초) 전까지 중지되며, 만료 시 전자 메일이 전송됩니다. 이 샘플에서는 기본 제공 <xref:System.Activities.Statements.Delay> 기능의 두 가지 사용 사례를 AbsoluteDelay 작업 사용과 비교하여 보여 줍니다.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   

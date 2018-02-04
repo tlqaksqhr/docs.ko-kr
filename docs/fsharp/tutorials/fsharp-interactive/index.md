@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-ms.openlocfilehash: bcf3fe052f305f29ae4cf618d93759bd911e0078
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a18f339d898374a59858cd774154b3846594d183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interactive-programming-with-f"></a>F#을 사용한 대화형 프로그래밍 #
 
@@ -26,7 +26,7 @@ API 참조 링크를 통해 MSDN으로 이동됩니다.  docs.microsoft.com API 
 
 F# Interactive(fsi.exe)는 콘솔에서 F# 코드를 대화형으로 실행하거나 F# 스크립트를 실행하는 데 사용됩니다. 즉, F# Interactive는 F# 언어에 대해 REPL(읽기, 평가, 인쇄 루프)을 실행합니다.
 
-콘솔에서 F# Interactive를 실행하려면 fsi.exe를 실행합니다.  Fsi.exe에 "c:\Program 파일 (x86) \Microsoft SDKs\F#\<버전 > \Framework\<버전 >\"합니다. 사용 가능한 명령줄 옵션에 대한 정보는 [F# Interactive Options](fsharp-interactive-options.md)(F# Interactive 옵션)를 참조하세요.
+콘솔에서 F# Interactive를 실행하려면 fsi.exe를 실행합니다.  Fsi.exe에 "c:\Program 파일 (x86) \Microsoft SDKs\F#\<버전 > \Framework\<버전 >\"합니다. 사용 가능한 명령줄 옵션에 대한 정보는 [F# Interactive Options](../../language-reference/fsharp-interactive-options.md)(F# Interactive 옵션)를 참조하세요.
 
 Visual Studio를 통해 F# Interactive를 실행하려면 **F# Interactive**라는 레이블이 있는 적절한 도구 모음 단추를 클릭하거나 **Ctrl+Alt+F** 키를 사용합니다. 이렇게 하면 대화형 창(F# Interactive 세션을 실행하는 도구 창)이 열립니다. 대화형 창에서 실행할 코드를 선택하고 **Alt+Enter** 키 조합을 눌러도 됩니다. 그러면 레이블이 **F# Interactive**인 도구 창에서 F# Interactive가 시작됩니다. 이 키 조합을 사용할 때 편집기 창에 포커스가 있는지 확인합니다.
 
@@ -98,5 +98,5 @@ test
 
 |제목|설명|
 |-----|-----------|
-|[F# Interactive 옵션](fsharp-interactive-options.md)|F# Interactive(fsi.exe)의 명령줄 구문 및 옵션에 대해 설명합니다.|
+|[F# Interactive 옵션](../../language-reference/fsharp-interactive-options.md)|명령줄 구문 및 F # Interactive에 대 한 옵션을 설명 fsi.exe 합니다.|
 |[F# Interactive 라이브러리 참조](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|F# Interactive에서 코드를 실행할 때 사용할 수 있는 라이브러리 기능에 대해 설명합니다.|

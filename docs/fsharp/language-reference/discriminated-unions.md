@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 16e2a011-c785-48c8-859f-79df7f3a0e29
-ms.openlocfilehash: a374f521bcde7506bb3a9eebb627eaffcd8b94a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b7a02512ce4a63885e771be56f106bc66cc2743e
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="discriminated-unions"></a>구별된 공용 구조체
 
@@ -113,9 +113,9 @@ type SingleCase = Case of string
 
 [<Struct>]
 type Multicase =
-    | Case1 of string
-    | Case2 of int
-    | Case3 of double
+    | Case1 of Case1 : string
+    | Case2 of Case2 : int
+    | Case3 of Case3 : double
 ```
 
 없기 때문에 이러한는 값 형식 및 형식을 참조 하지를 추가로 구별 된 공용 구조체 참조와 비교 하는 고려 사항:

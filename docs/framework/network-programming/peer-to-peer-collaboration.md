@@ -8,19 +8,20 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 607fadad19d4fe69800798583a14d7fd9082ff23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5060e12fb6a9fcc1bac1dfe6ccdcbaea9f2e6385
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="peer-to-peer-collaboration"></a>피어 투 피어 공동 작업
-피어 투 피어 네트워킹은 인터넷의 에지에서 클라이언트 기반 컴퓨팅 작업 이상을 수행하는 비교적 강력한 컴퓨터(개인용 컴퓨터)를 활용합니다. 최신 개인용 컴퓨터(PC)에는 매우 빠른 프로세서, 광대한 메모리 및 대형 하드 디스크가 있으며, 이러한 리소스는 전자 메일과 웹 검색 등의 일반적인 컴퓨팅 작업을 수행할 때 완전히 이용되지 않습니다. 최신 PC는 여러 형식의 응용 프로그램을 위한 서버(피어) 및 클라이언트로 사용될 수 있습니다.  
+피어 투 피어 네트워킹은 인터넷의 에지에서 클라이언트 기반 컴퓨팅 작업 이상을 수행하는 비교적 강력한 컴퓨터(개인용 컴퓨터)를 활용합니다. 최신 개인용 컴퓨터 (PC)에 매우 빠른 프로세서, vast 메모리 및 전자 메일 및 웹 검색 등의 일반적인 컴퓨팅 작업 만으로는 그 용량을 완벽 하 게 활용할 큰 하드 디스크에 있습니다. 최신 PC는 여러 형식의 응용 프로그램을 위한 서버(피어) 및 클라이언트로 사용될 수 있습니다.  
   
 -   피어 투 피어 공동 작업 인프라는 Windows Vista 이상 플랫폼에서 주변 사람 찾기 서비스를 활용하는 Microsoft Windows 피어 투 피어 인프라의 간단한 구현입니다. 인터넷 끝점과 연락처의 서비스도 제공할 수 있지만, 주변 사람 찾기 서비스가 작동하는 서브넷에서 피어 지원 응용 프로그램용으로 가장 적합합니다. 연락처 끝점, 가용성 및 현재 상태를 확인하기 위해 Live Messenger 및 기타 Live 인식 응용 프로그램에서 사용하는 일반적인 연락처 관리자를 통합합니다.  
   

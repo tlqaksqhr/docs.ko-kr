@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - .NET Framework, extensibility
 - versioning [.NET Framework], add-ins
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="add-ins-and-extensibility"></a>추가 기능 및 확장성
 <a name="top"></a> 추가 기능은 호스트 응용 프로그램에 대한 확장명 기능이나 서비스를 제공합니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 에서는 개발자가 추가 기능을 개발하고 호스트 응용 프로그램에서 활성화하는 데 사용할 수 있는 프로그래밍 모델을 제공합니다. 모델은 이 작업을 위해 호스트와 추가 기능 간에 통신 파이프라인을 생성합니다. 모델은 <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>및 <xref:System.AddIn.Contract> 네임스페이스의 형식을 사용하여 구현됩니다.  
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>추가 기능 및 호스트 구별  
- 추가 기능과 호스트의 차이점은 단지 호스트가 추가 기능을 활성화한다는 것입니다. 호스트는 워드프로세싱 응용 프로그램과 해당 맞춤법 검사기와 같이 둘 중에서 더 큰 것이거나, 미디어 플레이어를 포함하는 인스턴트 메시징 클라이언트와 같이 둘 중에서 더 작은 것일 수 있습니다. 추가 기능 모델은 클라이언트 및 서버 시나리오 둘 다에서 추가 기능을 지원합니다. 서버 추가 기능의 예로는 메일 서버에 바이러스 검사, 스팸 필터 및 IP 보호를 제공하는 추가 기능이 있습니다. 클라이언트 추가 기능의 예로는 워드프로세서용 참조 추가 기능, 그래픽 프로그램 및 게임용 특수 기능 및 로컬 전자 메일 클라이언트용 바이러스 검색이 있습니다.  
+ 추가 기능과 호스트의 차이점은 단지 호스트가 추가 기능을 활성화한다는 것입니다. 호스트는 워드프로세싱 응용 프로그램과 해당 맞춤법 검사기와 같이 둘 중에서 더 큰 것이거나, 미디어 플레이어를 포함하는 인스턴트 메시징 클라이언트와 같이 둘 중에서 더 작은 것일 수 있습니다. 추가 기능 모델은 클라이언트 및 서버 시나리오 둘 다에서 추가 기능을 지원합니다. 서버 추가 기능의 예로는 메일 서버에 바이러스 검사, 스팸 필터 및 IP 보호를 제공하는 추가 기능이 있습니다. 클라이언트 추가 기능에서 예로 워드 프로세서, 그래픽 프로그램 및 게임 및 로컬 전자 메일 클라이언트용 바이러스 검색이 특수 기능에 대 한 참조 추가 기능입니다.  
   
  [맨 위로 이동](#top)  
   

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a28f8994c8cffdad69272322575df37c437b8b6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 04a46e30256b3b6df3de51346924cbb5fa057837
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="code-access-security"></a>코드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 복잡하게 연결된 오늘날의 컴퓨터 시스템은 다양한 알 수 없는 소스에서 시작되는 코드에 자주 노출됩니다. 코드가 전자 메일에 첨부되거나, 문서에 포함되거나, 인터넷을 통해 다운로드될 수 있습니다. 많은 컴퓨터 사용자는 데이터를 손상시키거나 삭제하여 시간과 비용 손실을 초래할 수 있는 악성 모바일 코드(바이러스와 웜 포함)의 효과를 직접 체험했습니다.  
+ 복잡하게 연결된 오늘날의 컴퓨터 시스템은 다양한 알 수 없는 소스에서 시작되는 코드에 자주 노출됩니다. 코드 전자 메일에 첨부 된 문서에 포함 된 또는 인터넷을 통해 다운로드할 수 있습니다. 많은 컴퓨터 사용자는 데이터를 손상하거나 제거하여 시간과 비용 손실을 초래할 수 있는 악성 모바일 코드(바이러스와 웜 포함)의 효과를 직접 체험했습니다.  
   
  가장 일반적인 보안 메커니즘은 로그온 자격 증명(일반적으로 암호)에 따라 사용자에게 권한을 부여하고 사용자가 액세스할 수 있는 리소스(대개 디렉터리 및 파일)를 제한합니다. 그러나 이 접근 방식은 여러 가지 문제를 해결하지 못합니다. 사용자는 많은 소스에서 코드를 가져오며, 이 중의 일부는 신뢰할 수 없습니다. 코드에 버그 또는 취약성이 포함될 수 있으며, 이로 인해 코드가 악성 코드에 의해 악용될 수 있습니다. 코드에서 사용자가 예상하지 못한 작업을 수행하는 경우가 있습니다. 결과적으로 신중하고 신뢰할 수 있는 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행할 경우 컴퓨터 시스템이 손상되고 개인 데이터가 유출될 수 있습니다. 대부분의 운영 체제 보안 메커니즘에서는 웹 페이지의 스크립트를 제외하고 코드를 실행하려면 코드의 모든 부분을 완전히 신뢰할 수 있어야 합니다. 따라서 시스템 간에 트러스트 관계가 없는 경우에도 한 컴퓨터 시스템에서 시작된 코드가 다른 시스템에서 보호된 상태로 실행될 수 있도록 허용하는 널리 적용 가능한 보안 메커니즘이 여전히 필요합니다.  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 |-----------|-----------------|  
 |[코드 액세스 보안 기본 사항](../../../docs/framework/misc/code-access-security-basics.md)|코드 액세스 보안 및 가장 일반적인 용도를 설명합니다.|  
 |[보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]의 보안 투명성 모델을 설명합니다.|  
-|[부분적으로 신뢰할 수 있는 코드에서 라이브러리를 사용 하 여](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|비관리 코드에 라이브러리를 사용할 수 있도록 하는 방법 및 비관리 코드에서 라이브러리를 사용하는 방법을 설명합니다.|  
+|[부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|비관리 코드에 라이브러리를 사용할 수 있도록 하는 방법 및 비관리 코드에서 라이브러리를 사용하는 방법을 설명합니다.|  
 |[주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)|.NET Framework 보안 시스템에서 사용되는 주요 용어와 개념을 개략적으로 설명합니다.|  
 |[역할 기반 보안](../../../docs/standard/security/role-based-security.md)|역할 기반 보안을 통합하는 방법을 설명합니다.|  
 |[Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)|응용 프로그램에 암호화를 통합하는 방법을 설명합니다.|
