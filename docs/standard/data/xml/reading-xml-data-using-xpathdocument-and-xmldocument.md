@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 607d9d3616db0d0bd431fa2ca0b6aee03a85f896
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9282742669c8e3d8b4a856694c76db834282dbf9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기
 두 가지 방법으로 <xref:System.Xml.XPath?displayProperty=nameWithType> 네임스페이스에서 XML 문서를 읽을 수 있습니다. 하나는 읽기 전용 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 문서를 읽는 것이고 다른 하나는 <xref:System.Xml.XmlDocument> 네임스페이스에서 편집 가능한 <xref:System.Xml?displayProperty=nameWithType> 클래스를 사용하여 XML 문서를 읽는 것입니다.  
@@ -84,6 +87,6 @@ document.Load("books.xml");
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XPathNavigator를 사용 하 여 XML 데이터에 액세스](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [XPathNavigator를 사용 하 여 XML 데이터 편집](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
- [XPathNavigator를 사용 하 여 스키마 유효성 검사](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+ [XPathNavigator를 사용하여 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator를 사용하여 XML 데이터 편집](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator를 사용하여 스키마 유효성 검사](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

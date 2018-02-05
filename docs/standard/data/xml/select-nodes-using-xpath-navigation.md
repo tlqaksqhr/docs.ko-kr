@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 34fe3d74adc94930710cf7ee55013b471a2bd43c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 836702a3200a21c6a9830bdcd1f74a78129b5a6c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath 탐색을 사용하여 노드 선택
 XML DOM(문서 개체 모델)에는 XPath(XML Path Language) 탐색을 사용하여 DOM의 정보를 쿼리할 수 있는 메서드가 있습니다. XPath를 사용하여 단일 노드를 찾거나 특정 기준과 일치하는 모든 노드를 찾을 수 있습니다.  
@@ -170,4 +173,4 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 문서 개체 모델 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

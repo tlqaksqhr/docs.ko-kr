@@ -18,15 +18,18 @@ helpviewer_keywords:
 - exceptions, throwing
 - implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c3fce332263dac3f9906d33fe3bd2590050b86f8
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02576db4b9920a367ac3111f2c2c49989ea45149
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-explicitly-throw-exceptions"></a>명시적으로 예외를 throw하는 방법
 

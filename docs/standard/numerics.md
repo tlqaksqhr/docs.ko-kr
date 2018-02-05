@@ -17,15 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6090f198815f1149e212c7a57b40187ded9264f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework의 숫자
 .NET Framework에서는 표준 숫자 정수 계열 및 부동 소수점 기본 형식과 <xref:System.Numerics.BigInteger>, 이론적 상한 또는 하한이 없는 정수 형식, <xref:System.Numerics.Complex>, 복소수를 나타내는 형식, <xref:System.Numerics> 네임스페이스에서 SIMD 사용 벡터 형식 집합을 지원합니다.  
@@ -40,11 +43,11 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Byte?displayProperty=nameWithType>|부호 없음|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|서명|2|-32,768|32,767|  
 |<xref:System.Int32?displayProperty=nameWithType>|서명|4|-2,147,483,648|2,147,483,647|  
-|<xref:System.Int64?displayProperty=nameWithType>|서명|9|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
+|<xref:System.Int64?displayProperty=nameWithType>|서명|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
 |<xref:System.SByte?displayProperty=nameWithType>|서명|1|-128|127|  
 |<xref:System.UInt16?displayProperty=nameWithType>|부호 없음|2|0|65,535|  
 |<xref:System.UInt32?displayProperty=nameWithType>|부호 없음|4|0|4,294,967,295|  
-|<xref:System.UInt64?displayProperty=nameWithType>|부호 없음|9|0|18,446,744,073,709,551,615|  
+|<xref:System.UInt64?displayProperty=nameWithType>|부호 없음|8|0|18,446,744,073,709,551,615|  
   
  각 정수 계열 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합을 지원합니다. 각 정수에는 같음 비교 및 상대 비교를 수행하고, 숫자의 문자열 표시를 해당 정수로 변환하고, 정수를 해당 문자열 표시로 변환하는 메서드가 포함됩니다. 두 정수의 더 작거나 더 큰 값을 반올림하고 식별하는 연산과 같이 표준 연산자를 통해 처리되는 연산 이외의 몇몇 추가 수치 연산은 <xref:System.Math> 클래스에서 제공됩니다. <xref:System.BitConverter> 클래스를 사용하여 정수 값의 개별 비트를 사용할 수도 있습니다.  
   

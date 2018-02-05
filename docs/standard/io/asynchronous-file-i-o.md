@@ -23,15 +23,18 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d8a461d79ecdcadc3f880f6a813918cf891abd45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ff9ae65e47a35f4acfade1d06c703f9e1f5f6bee
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="asynchronous-file-io"></a>비동기 파일 I/O
 비동기 작업을 사용하면 주 스레드를 차단하지 않고 리소스 집중형 I/O 작업을 수행할 수 있습니다. 이 성능 고려 사항은 특히 시간이 소비되는 스트림 작업이 UI 스레드를 차단하고 응용 프로그램이 작동하지 않는 것처럼 표시할 수 있는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램 또는 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 응용 프로그램에서 중요합니다.  

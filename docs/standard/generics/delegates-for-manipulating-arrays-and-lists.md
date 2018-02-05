@@ -16,15 +16,18 @@ helpviewer_keywords:
 - lists [.NET Framework], generic delegates
 - generics [.NET Framework], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 905f30d8b7e6d7c10a0e2b32109076e2950a99ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b82943a2382fd18a2ddbcee69707a02b97661ef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>배열과 목록을 조작하기 위한 제네릭 대리자
 이 항목에서는 배열 또는 컬렉션의 요소에 대해 수행할 작업, 검색 조건자 및 변환을 위한 제네릭 대리자에 대해 간략하게 설명합니다.  

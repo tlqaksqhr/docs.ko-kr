@@ -28,15 +28,18 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3accb01eb8c5edb8b3e245020b43c5a94a8bb4cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e0628dfefb8da5c11e9927ab5ec98c2feb3fe89f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>방법: 특정 날짜의 요일 추출
 .NET Framework를 사용하면 쉽게 특정 날짜가 일주일 중 몇 번째 날인지 확인하고, 특정 날짜의 지역화된 요일 이름을 표시할 수 있습니다. 특정 날짜에 해당하는 요일을 나타내는 열거형 값은 <xref:System.DateTime.DayOfWeek%2A> 또는 <xref:System.DateTimeOffset.DayOfWeek%2A> 속성에서 제공합니다. 이와 대조적으로 요일 이름을 검색하는 것은 날짜 및 시간 값의 `ToString` 메서드 또는 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드와 같은 서식 지정 메서드를 호출하여 수행할 수 있는 서식 지정 작업입니다. 이 항목에서는 이러한 서식 지정 작업을 수행하는 방법을 보여 줍니다.  
@@ -86,7 +89,7 @@ ms.lasthandoff: 11/21/2017
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 특정 날짜의 요일, 간략화된 요일 이름 및 전체 요일 이름을 나타내는 숫자를 검색하기 위해 <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 및 <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> 속성과 <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> 및 <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> 메서드에 대한 호출을 보여 줍니다.  
   
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]
@@ -109,5 +112,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+ [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

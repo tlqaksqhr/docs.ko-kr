@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f236296d604bc465973d17d63883e7b212b7f02d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d14c4338290856c09ca1d23ec6acc895450f83ea
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>방법: 어셈블리를 사용하여 XSLT 변형 수행
 XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 어셈블리를 생성합니다. 그런 다음 어셈블리를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드로 직접 전달할 수 있습니다.  
@@ -180,7 +183,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
 xslt.Load(typeof(Transform))  
 ```  
   
- 다음으로 바꾸면 됩니다.  
+ 다음 문자열로 바꾸세요.  
   
 ```  
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
@@ -190,6 +193,6 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
- [XSLT 컴파일러 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+ [XSLT 컴파일러(xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
  [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)  
  [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

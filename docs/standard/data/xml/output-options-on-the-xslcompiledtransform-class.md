@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61f59c1be3376fb76c91994996840b915cd662ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 84171c92a56a9970b5ffc16ce8f30c85d61cc678
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 클래스의 출력 옵션
 이 항목에서는 사용할 수 있는 XSLT 출력 옵션에 대해 설명합니다. 스타일시트나 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드에서 출력 옵션을 지정할 수 있습니다.  
@@ -60,7 +63,7 @@ ms.lasthandoff: 10/18/2017
 #### <a name="textwriter"></a>TextWriter  
  <xref:System.IO.TextWriter>는 연속 문자를 씁니다. <xref:System.IO.StringWriter> 및 <xref:System.IO.StreamWriter> 클래스에서 구현되며 이 클래스는 각각 문자열과 스트림에 문자를 씁니다. 문자열로 출력하려면 이 출력 형식을 사용합니다.  
   
-## <a name="notes"></a>참고  
+## <a name="notes"></a>노트  
   
 -   빈 태그를 쓰는 경우 `<myElement />`와 같이 요소 이름의 마지막 문자와 백슬래시 사이에 공백이 쓰여집니다. 그러면 이전 브라우저에 생성된 HTML 페이지가 올바르게 표시됩니다.  
   

@@ -41,15 +41,18 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 607ef0020e15581c6ccca8f232eaea6be547f63b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-class-library-overview"></a>.NET Framework 클래스 라이브러리 개요
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에는 개발 과정을 지원 및 최적화하고 시스템 기능에 대한 액세스를 제공하는 클래스, 인터페이스 및 값 형식이 포함되어 있습니다. 언어 간의 원활한 상호 운용성을 위해 대부분의 .NET Framework 형식은 CLS(공용 언어 사양) 규격을 따르므로 CLS 규격 컴파일러를 사용하는 모든 프로그래밍 언어에서 사용될 수 있습니다.  

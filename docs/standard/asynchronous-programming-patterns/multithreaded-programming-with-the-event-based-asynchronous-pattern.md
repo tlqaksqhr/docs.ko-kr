@@ -19,20 +19,23 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 958d6617-5e70-4b36-b5db-63c16dc35e43
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a26f6750f68609b40e6917fc5b257e43d95c3c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 557d639cc8a4e7ade2cfbd1f5d7264bca226d273
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴을 사용한 다중 스레드 프로그래밍
 비동기 기능을 클라이언트 코드에 노출하는 방법은 여러 가지가 있습니다. 이벤트 기반 비동기 패턴은 클래스에 비동기 동작을 표시하는 권장 방법을 규정합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
  이벤트 기반 비동기 패턴이 다중 스레드 디자인에 본질적으로 존재하는 복잡한 여러 가지 문제를 숨기면서 다중 스레드 응용 프로그램의 장점을 이용할 수 있게 해주는 방법을 설명합니다.  
   

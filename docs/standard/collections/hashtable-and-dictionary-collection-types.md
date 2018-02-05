@@ -16,15 +16,18 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5ab3a6bb2128a3753cb80a60836a781d987ca253
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 및 Dictionary 컬렉션 형식
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> 클래스와 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 제네릭 클래스는 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 인터페이스를 구현합니다. <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스는 <xref:System.Collections.Generic.IDictionary%602> 제네릭 인터페이스도 구현합니다. 따라서 이러한 컬렉션의 각 요소는 한 쌍의 키-값입니다.  

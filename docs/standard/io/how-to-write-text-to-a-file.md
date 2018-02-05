@@ -17,15 +17,18 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9605e514be380415d3c8b66ed28ae7de0a52ca1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ea0ff0d79762ba47214217a261a325aad9f5eaf6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-text-to-a-file"></a>방법: 파일에 텍스트 쓰기
 이 항목에서는 .NET Framework 응용 프로그램 또는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 위해 파일에 텍스트를 쓸 수 있는 여러 가지 방법을 보여 줍니다. 파일에 텍스트를 쓸 때는 일반적으로 다음 클래스 및 메서드가 사용됩니다.  
@@ -38,31 +41,31 @@ ms.lasthandoff: 11/21/2017
   
  수행 중인 작업에 집중할 수 있도록 간단한 샘플이 포함되었습니다. 이러한 이유로 샘플은 최소한의 오류 검사 및 예외 처리(있는 경우)를 수행합니다. 실제 응용 프로그램은 일반적으로 더 강력한 오류 검사 및 예외 처리 기능을 제공합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.IO.StreamWriter> 클래스를 사용하여 새 파일에 동기적으로 한 번에 한 줄씩 텍스트를 쓰는 방법을 보여 줍니다. 새 텍스트 파일은 사용자의 내 문서 폴더에 저장됩니다. <xref:System.IO.StreamWriter> 개체는 `using` 문에서 선언되고 인스턴스화되므로 스트림을 자동으로 플러시하고 닫는 <xref:System.IO.StreamWriter.Dispose%2A> 메서드가 호출됩니다.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.IO.StreamWriter> 클래스를 사용하여 기존 파일에 텍스트를 추가하는 방법을 보여 줍니다. 이전 예제와 동일한 텍스트 파일을 사용합니다.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]     
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.IO.StreamWriter> 클래스를 사용하여 새 파일에 비동기적으로 텍스트를 쓰는 방법을 보여 줍니다. <xref:System.IO.StreamWriter.WriteAsync%2A> 메서드를 호출하려면 `async` 메서드 내에서 이 메서드를 호출해야 합니다. 새 텍스트 파일은 사용자의 내 문서 폴더에 저장됩니다.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeasync)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeasync)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 <xref:System.IO.File> 클래스를 사용하여 새 파일에 텍스트를 쓰고 동일한 파일에 새 텍스트 줄을 추가하는 방법을 보여 줍니다. <xref:System.IO.File.WriteAllText%2A> 및 <xref:System.IO.File.AppendAllLines%2A> 메서드는 자동으로 파일을 열고 닫습니다. <xref:System.IO.File.WriteAllText%2A> 메서드에 제공한 경로가 이미 있는 경우 파일을 덮어씁니다.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writefile)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 사용자 입력을 텍스트 파일에 비동기적으로 쓰는 방법을 보여 줍니다. 보안상의 이유로 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 파일을 열려면 일반적으로 [FileOpenPicker](http://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx) 컨트롤을 사용해야 합니다. 이 예제에서 `FileOpenPicker` 는 텍스트 파일을 표시하도록 필터링되었습니다.  
   
 ```xaml  

@@ -9,22 +9,25 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bb4994608b4f85c8ad4eeb3113b36729156a1a3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cce1a03d555b1d8136718ee4c3106377dabaaeee
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="inferring-an-xml-schema"></a>XML 스키마 유추
 SOM(스키마 개체 모델) <xref:System.Xml.Schema.XmlSchemaInference> 클래스를 사용하여 XML 문서 구조에서 XSD(XML 스키마 정의 언어) 스키마를 유추하는 방법을 설명합니다.  
   
  <xref:System.Xml.Schema.XmlSchemaInference> 네임스페이스의 SOM(스키마 개체 모델) <xref:System.Xml.Schema?displayProperty=nameWithType> 클래스를 사용하면 XML 문서 구조에서 XSD(XML 스키마 정의 언어) 스키마를 유추할 수 있습니다. <xref:System.Xml.Schema.XmlSchemaInference> 클래스에서는 XML 문서의 유효성을 검사할 수 있는 XML 스키마를 출력합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
  <xref:System.Xml.Schema.XmlSchemaInference> 클래스를 사용하여 XML 문서 구조에서 스키마를 유추하는 방법을 설명합니다.  
   
