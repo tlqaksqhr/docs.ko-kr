@@ -1,13 +1,13 @@
 ---
 layout: HubPage
-hide_bc: True
+hide_bc: 
 title: ".NET 설명서"
 description: "C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 응용 프로그램을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요."
-ms.openlocfilehash: 6817628e110d59b3d5b7c8e52fa2d5cc7cac4cd7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 623f281c3f348c6e3c52f28b263ac06e0e864870
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 02/01/2018
 ---
 <div id="main" class="v2">
     <div class="container">
