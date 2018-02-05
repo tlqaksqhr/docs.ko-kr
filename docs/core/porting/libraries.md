@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.workload: dotnetcore
-ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>.NET Core로 이식 - 라이브러리
 
@@ -123,7 +124,7 @@ Visual Studio에서 이식하려는 각 프로젝트에 대해 다음을 수행�
 
 다음 단계에서는 API Portability Analyzer(ApiPort)를 실행하여 분석을 위한 이식성 보고서를 생성합니다.
 
-[API 이식성 도구(ApiPort)](~/docs/standard/portability-analyzer.md)를 이해하고 .NET Core를 대상으로 하는 이식성 보고서를 생성할 수 있어야 합니다. 이 작업을 수행하는 방법은 요구 사항 및 개인적 취향에 따라 달라질 수 있습니다. 다음은 몇 가지 서로 다른 접근 방식입니다. 코드가 어떻게 구성되어 있는가에 따라 이러한 접근 방식의 단계를 혼합하여 사용할 수 있습니다.
+[API 이식성 도구(ApiPort)](../../standard/analyzers/portability-analyzer.md)를 이해하고 .NET Core를 대상으로 하는 이식성 보고서를 생성할 수 있어야 합니다. 이 작업을 수행하는 방법은 요구 사항 및 개인적 취향에 따라 달라질 수 있습니다. 다음은 몇 가지 서로 다른 접근 방식입니다. 코드가 어떻게 구성되어 있는가에 따라 이러한 접근 방식의 단계를 혼합하여 사용할 수 있습니다.
 
 ### <a name="dealing-primarily-with-the-compiler"></a>주로 컴파일러 처리
 

@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fa3b7af871380d4f18ebe7ef4f5bc5963cc247c4
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="work-with-syntax"></a>구문 작업
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="kinds"></a>종류
 
-각 노드, 토큰 또는 기타 정보에는 표시되는 정확한 구문 요소를 식별하는 <xref:System.Int32?displayProperty=fullName> 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 속성이 있습니다. 이 값은 언어별 열거형으로 캐스팅될 수 있습니다. 각 언어, C# 또는 VB에는 문법에서 가능한 모든 노드, 토큰 및 기타 정보 요소를 나열하는 단일 `SyntaxKind` 열거형(각각 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=fullName> 및 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=fullName>)이 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 확장 메서드에 액세스하여 이 변환을 자동으로 수행할 수 있습니다.
+각 노드, 토큰 또는 기타 정보에는 표시되는 정확한 구문 요소를 식별하는 <xref:System.Int32?displayProperty=nameWithType> 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 속성이 있습니다. 이 값은 언어별 열거형으로 캐스팅될 수 있습니다. 각 언어, C# 또는 VB에는 문법에서 가능한 모든 노드, 토큰 및 기타 정보 요소를 나열하는 단일 `SyntaxKind` 열거형(각각 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 및 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)이 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 확장 메서드에 액세스하여 이 변환을 자동으로 수행할 수 있습니다.
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 속성은 동일한 노드 클래스를 공유하는 구문 노드 형식의 쉬운 명확성을 허용합니다. 토큰 및 기타 정보의 경우 이 속성은 요소의 한 형식을 다른 형식에서 구분하는 유일한 방법입니다. 
 

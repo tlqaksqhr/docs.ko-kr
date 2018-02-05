@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: 9dd5b1204986bd9b181c033d254bb41e8cc894da
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 5143fed04148fb17697bd5d040ad23b762505db4
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>방법: String.Split(C# Guide)를 사용하여 문자열 구문 분석
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/29/2018
 
 이 동작은 표 형식 데이터를 나타내는 쉼표로 구분된 값(CSV) 파일과 같은 형식을 더 쉽게 만듭니다. 연속된 쉼표는 빈 열을 나타냅니다.
 
-반환된 배열에 빈 문자열을 제외하기 위해 선택적인 <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=fullName> 매개 변수를 전달할 수 있습니다. 반환된 컬렉션의 더 복잡한 처리를 위해 [LINQ](../programming-guide/concepts/linq/index.md)를 사용하여 결과 시퀀스를 조작할 수 있습니다.    
+반환된 배열에 빈 문자열을 제외하기 위해 선택적인 <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> 매개 변수를 전달할 수 있습니다. 반환된 컬렉션의 더 복잡한 처리를 위해 [LINQ](../programming-guide/concepts/linq/index.md)를 사용하여 결과 시퀀스를 조작할 수 있습니다.    
 
 <xref:System.String.Split%2A?displayProperty=nameWithType>은 다중 구분 문자를 사용할 수 있습니다. 다음 예제에서는 공백, 쉼표, 마침표, 콜론 및 탭을 사용하며, 모두 이러한 구분 문자를 포함하는 배열에서 <xref:System.String.Split%2A>로 전달됩니다.  코드 맨 아래의 루프는 반환된 배열의 각 단어를 표시합니다.  
 
