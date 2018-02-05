@@ -8,22 +8,26 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: .NET Framework development
+helpviewer_keywords:
+- .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f830064c585e1024bdc304c6356327ddc8c059f3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 응용 프로그램 주요 사항
 .NET Framework 설명서의 이 섹션은 .NET Framework의 기본 응용 프로그램 개발 작업에 대한 정보를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [기본 형식](../../docs/standard/base-types/index.md)  
  기본 데이터 형식의 형식 지정 및 구문 분석과 정규식을 사용한 텍스트 처리를 설명합니다.  
   
@@ -60,7 +64,7 @@ ms.lasthandoff: 10/18/2017
  [전역화 및 지역화](../../docs/standard/globalization-localization/index.md)  
  지역화 대비 응응 프로그램을 디자인하고 개발하는 데 도움이 되는 정보를 제공합니다.  
   
- 접근성  
+ 액세스 가능성  
  UI(사용자 인터페이스) 관련 정보에 대한 프로그래밍 액세스를 제공하여 보조 기술 제품 및 자동화된 테스트 프레임워크의 요구 사항을 해결하는 액세스 가능성 프레임워크인 Microsoft UI 자동화에 대한 정보를 제공합니다.  
   
  [특성](../../docs/standard/attributes/index.md)  

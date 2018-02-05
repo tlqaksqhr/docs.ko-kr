@@ -9,28 +9,31 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 560a0866a526caf4c8fe129209d0077374306a9f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7388bbc388dd46a30486a2300150bc9d1566593e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xslt-security-considerations"></a>XSLT 보안 고려 사항
 XSLT 언어에는 강력하며 유연성 있는 풍부한 기능이 있습니다. 이러한 기능은 유용하지만 외부 소스에서 악용할 수도 있습니다. XSLT를 안전하게 사용하려면 XSLT를 사용할 때 발생하는 보안 문제 유형을 이해하고 이러한 위험 요소를 완화하기 위한 기본적인 전략을 알아야 합니다.  
   
-## <a name="xslt-extensions"></a>XSLT 확장  
+## <a name="xslt-extensions"></a>XSLT 확장명  
  가장 많이 사용되는 두 가지 XSLT 확장은 스타일시트 스크립팅과 확장 개체입니다. 이러한 확장을 사용하면 XSLT 프로세서에서 코드를 실행할 수 있습니다.  
   
 -   확장 개체는 프로그래밍 기능을 XSLT(XSL Transformations)에 추가합니다.  
   
 -   `msxsl:script` 확장 요소를 사용하여 스타일시트에 스크립트를 포함할 수 있습니다.  
   
-### <a name="extension-objects"></a>확장 개체  
- <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 사용하여 확장 개체를 추가합니다. 확장 개체를 지원하려면 FullTrust 권한 집합이 필요합니다. 이 권한 집합은 확장 개체 코드를 실행할 때 권한 높이기가 일어나지 않도록 합니다. FullTrust 권한 없이 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 호출하려고 시도하면 보안 예외가 throw됩니다.  
+### <a name="extension-objects"></a>확장명 개체  
+ <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 사용하여 확장 개체를 추가합니다. 확장 개체를 지원하려면 FullTrust 권한 집합이 필요합니다. 이 권한 집합은 확장명 개체 코드를 실행할 때 권한 높이기가 일어나지 않도록 합니다. FullTrust 권한 없이 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 호출하려고 시도하면 보안 예외가 throw됩니다.  
   
 ### <a name="style-sheet-scripts"></a>스타일시트 스크립트  
  `msxsl:script` 확장 요소를 사용하여 스타일시트에 스크립트를 포함할 수 있습니다. 스크립트 지원은 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 선택적 기능으로 기본적으로 비활성화되어 있습니다. 스크립트를 활성화하려면 <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> 속성을 `true`로 설정하고 <xref:System.Xml.Xsl.XsltSettings> 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드에 전달합니다.  
@@ -66,4 +69,4 @@ XSLT 언어에는 강력하며 유연성 있는 풍부한 기능이 있습니다
 ## <a name="see-also"></a>참고 항목  
  [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)  
  [XSLT 처리 중 외부 리소스 확인](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
- [코드 액세스 보안](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)
+ [코드 액세스 보안](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)

@@ -14,20 +14,23 @@ helpviewer_keywords:
 - concurrency [.NET Framework]
 - .NET Framework, concurrency
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 589bb8fc36d95a48930e4b51a096e7db18905397
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ab15fd38a467eec398f8383e40067d2135c042b5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-processing-and-concurrency-in-the-net-framework"></a>.NET Framework의 병렬 처리 및 동시성
 .NET Framework는 다중 스레드 방식의 실행을 사용하여 사용자에 대한 응용 프로그램 응답성을 유지하면서 사용자 컴퓨터의 성능을 극대화할 수 있는 여러 가지 방법을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [스레딩](../../docs/standard/threading/index.md)  
  .NET Framework에서 제공하는 기본 동시성 및 동기화 메커니즘에 대해 설명합니다.  
   

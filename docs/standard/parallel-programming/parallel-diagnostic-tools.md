@@ -8,17 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: parallel programming, debugging and profiling tools
+helpviewer_keywords:
+- parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ad6875d4937ab0ee68dcb9c6d6f51d079851cdc5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4ed0b3991b08eceb950aa1a3aa1704529700feb3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-diagnostic-tools"></a>병렬 진단 도구
 [!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)]는 다중 스레드 응용 프로그램 디버깅 및 프로파일링에 대한 광범위한 지원을 제공합니다.  

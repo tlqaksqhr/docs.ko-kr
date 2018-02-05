@@ -20,15 +20,18 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6ad632130b6f111ff863648b8b1a3b2835c27660
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 <a name="top"></a> 교체 구문은 either/or 또는 조건부 일치를 허용하도록 정규식을 수정합니다. .NET에서는 다음 세 가지 교체 구문을 지원합니다.  
@@ -50,7 +53,7 @@ ms.lasthandoff: 10/18/2017
   
  `|` 문자를 사용하는 정규식인 `\bgr(a|e)y\b`는 다음 표와 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`gr`|문자 "gr"을 찾습니다.|  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/18/2017
   
  정규식 `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|10진수 2개, 하이픈, 10진수 7개 순의 일치 항목이나 10진수 3개, 하이픈, 10진수 2개, 또 다른 하이픈, 10진수 4개 순의 일치 항목을 찾습니다.|  
@@ -76,7 +79,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="conditional-matching-with-an-expression"></a>식을 사용한 조건부 일치  
  이 언어 요소는 초기 패턴을 찾을지 여부에 따라 두 패턴의 하나를 찾으려고 합니다. 사용되는 구문은 다음과 같습니다.  
   
- `(?(` *식* `)` *예* `|` *no* `)`  
+ `(?(` *expression* `)` *yes* `|` *no* `)`  
   
  여기서 *expression* 은 일치 항목을 찾을 초기 패턴이고, *yes* 는 *expression* 과 일치할 경우 일치 항목을 찾을 패턴이고, *no* 는 *expression* 이 일치하지 않을 경우 일치 항목을 찾을 선택적 패턴입니다. 정규식 엔진은 *expression* 을 너비가 0인 어설션으로 처리합니다. 즉, 정규식 엔진은 *expression*을 계산한 후 입력 스트림에서 앞으로 이동하지 않습니다. 따라서 이 구문은 다음 구문과 같습니다.  
   
@@ -92,7 +95,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[RegularExpressions.Language.Alternation#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation3.cs#3)]
  [!code-vb[RegularExpressions.Language.Alternation#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation3.vb#3)]  
   
- 정규식 패턴 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.  
+ 정규식 패턴 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` 는 다음 테이블과 같이 해석됩니다.  
   
 |패턴|설명|  
 |-------------|-----------------|  
@@ -118,12 +121,12 @@ ms.lasthandoff: 10/18/2017
   
  *name* 이 정규식 패턴에서 사용되는 캡처 그룹의 이름에 해당하지 않을 경우에는 교체 구문이 앞 섹션에서 설명한 대로 식 테스트로 해석됩니다. 일반적으로 이는 *expression* 이 `false`로 계산됨을 의미합니다. *number* 가 정규식 패턴에 사용되는 번호 매기기 캡처 그룹에 해당하지 않는 경우 정규식 엔진이 <xref:System.ArgumentException>을 throw합니다.  
   
- 다음 예제는 [&#124;를 사용한 Either/Or 패턴 일치](#Either_Or) 섹션에 나타나는 예제의 변형입니다. 숫자 2개, 하이픈 순으로 구성된 `n2`라는 캡처 그룹을 사용합니다. 교체 구문은 입력 문자열에서 이 캡처 그룹이 일치했는지를 테스트합니다. 일치한다면 교체 구문은 9자리 미국 EIN(고용주 식별 번호)을 찾으려고 합니다. 일치하지 않는다면 9자리 미국 SSN(사회 보장 번호)을 찾으려고 합니다.  
+ 다음 예제는 [&#124;를 사용한 Either/Or 패턴 일치](#Either_Or) 섹션에 나타나는 예제의 변형입니다. 숫자 2개, 하이픈 순으로 구성된 `n2` 라는 캡처 그룹을 사용합니다. 교체 구문은 입력 문자열에서 이 캡처 그룹이 일치했는지를 테스트합니다. 일치한다면 교체 구문은 9자리 미국 EIN(고용주 식별 번호)을 찾으려고 합니다. 일치하지 않는다면 9자리 미국 SSN(사회 보장 번호)을 찾으려고 합니다.  
   
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- 정규식 패턴 `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.  
+ 정규식 패턴 `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` 는 다음 테이블과 같이 해석됩니다.  
   
 |패턴|설명|  
 |-------------|-----------------|  

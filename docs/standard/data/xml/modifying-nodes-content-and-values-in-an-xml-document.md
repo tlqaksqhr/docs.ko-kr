@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 00b923edb95852d9434db1b393df68fd9d0c8a1a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 72039faef3bcde4db830d110938266c63689219e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>XML 문서에서 노드, 내용 및 값 수정
 여러 가지 방법으로 문서에서 노드와 내용을 수정할 수 있습니다. 다음과 같은 작업을 수행할 수 있습니다.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/18/2017
 |CDATASection|CDATASection 내용|  
 |주석|주석의 내용입니다.|  
 |ProcessingInstruction|대상을 제외한 내용|  
-|Text|텍스트 내용|  
+|텍스트|텍스트 내용|  
 |XmlDeclaration|`<?xml` 및 `?>` 태그를 제외한 선언 내용|  
 |Whitespace|공백 값. 인식된 XML 공백 문자인 공백, 탭, CR 또는 LF 중 하나로 값을 설정할 수 있습니다.|  
 |SignificantWhitespace|유효 공백 값. 인식된 XML 공백 문자인 공백, 탭, CR 또는 LF 중 하나로 값을 설정할 수 있습니다.|  
@@ -54,4 +57,4 @@ ms.lasthandoff: 10/18/2017
  편집할 수 있는 노드에서 읽기 전용 자식을 추가하거나 제거할 수 있습니다. 그러나 읽기 전용 노드 자체를 수정하려고 시도하면 <xref:System.InvalidOperationException>이 throw됩니다. 이에 관한 예제는 <xref:System.Xml.XmlEntityReference> 노드의 자식을 수정하는 것입니다. 자식은 읽기 전용이며 수정할 수 없습니다. 자식을 수정하려고 시도하면 <xref:System.InvalidOperationException>이 throw됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 문서 개체 모델 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

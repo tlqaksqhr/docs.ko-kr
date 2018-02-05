@@ -8,17 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: threading [.NET Framework], states
+helpviewer_keywords:
+- threading [.NET Framework], states
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 073fb19ef34ba32ccb5d5664413718a436563770
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 956472ef0e3b0bab85a4eb0b5585f1a4d1e0a991
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-thread-states"></a>관리되는 스레드 상태
 <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 속성은 스레드의 현재 상태를 나타내는 비트 마스크를 제공합니다. 스레드는 항상 <xref:System.Threading.ThreadState> 열거형의 가능한 상태 중 하나 이상이며 동시에 여러 상태일 수 있습니다.  
@@ -33,15 +37,15 @@ ms.lasthandoff: 11/21/2017
 |작업|새 상태|  
 |------------|-------------------------|  
 |<xref:System.Threading.Thread> 클래스의 생성자가 호출됩니다.|<xref:System.Threading.ThreadState.Unstarted>|  
-|다른 스레드가 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>를 호출합니다.|<xref:System.Threading.ThreadState.Unstarted>|  
+|다른 스레드가 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>을 호출합니다.|<xref:System.Threading.ThreadState.Unstarted>|  
 |스레드가 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>에 응답하고 실행을 시작합니다.|<xref:System.Threading.ThreadState.Running>|  
 |스레드가 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>를 호출합니다.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
 |스레드가 다른 개체에서 <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType>를 호출합니다.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
 |스레드가 다른 스레드에서 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>를 호출합니다.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
-|다른 스레드가 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>를 호출합니다.|<xref:System.Threading.ThreadState.SuspendRequested>|  
+|다른 스레드가 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>을 호출합니다.|<xref:System.Threading.ThreadState.SuspendRequested>|  
 |스레드가 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 요청에 응답합니다.|<xref:System.Threading.ThreadState.Suspended>|  
-|다른 스레드가 <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>를 호출합니다.|<xref:System.Threading.ThreadState.Running>|  
-|다른 스레드가 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>를 호출합니다.|<xref:System.Threading.ThreadState.AbortRequested>|  
+|다른 스레드가 <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>을 호출합니다.|<xref:System.Threading.ThreadState.Running>|  
+|다른 스레드가 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>을 호출합니다.|<xref:System.Threading.ThreadState.AbortRequested>|  
 |스레드가 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>에 응답합니다.|<xref:System.Threading.ThreadState.Aborted>, <xref:System.Threading.ThreadState.Stopped>|  
   
  <xref:System.Threading.ThreadState.Running> 상태는 값이 0이므로 비트 테스트를 통해 이 상태를 검색할 수 없습니다. 대신, 의사 코드에서 다음 테스트를 사용할 수 있습니다.  

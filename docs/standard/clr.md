@@ -21,11 +21,14 @@ ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc103d1fc853cd98f899e75d08dbfaf4dd9230d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="common-language-runtime-clr"></a>CLR(공용 언어 런타임)
 .NET Framework에서는 공용 언어 런타임이라고 하는 런타임 환경을 제공하는데, 여기에서는 코드를 실행하며 개발 과정을 더 쉽게 해 주는 서비스를 제공합니다.  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/18/2017
  컴파일러와 도구는 공용 언어 런타임의 기능을 노출하며 관리되는 이 실행 환경을 활용하는 코드를 작성할 수 있게 해줍니다. 런타임을 대상으로 하는 언어 컴파일러를 사용하여 개발한 코드를 관리 코드라고 합니다. 이 코드에서는 언어 간 통합, 언어 간 예외 처리, 향상된 보안, 버전 관리 및 배포 지원, 구성 요소 상호 작용을 위한 간단한 모델, 디버깅 및 프로파일링 서비스 등의 기능을 이용합니다.  
   
 > [!NOTE]
->  형식 시스템, 메타데이터의 형식 및 런타임 환경(가상 실행 시스템)은 모두 공용 표준인 ECMA Common Language Infrastructure 사양으로 정의하기 때문에 컴파일러 및 도구에서 공용 언어 런타임이 사용할 수 있는 출력을 생성할 수 있습니다. 자세한 내용은 [ECMA C# 및 공용 언어 인프라 사양](http://go.microsoft.com/fwlink/?LinkId=99212)을 참조하세요.  
+>  형식 시스템, 메타데이터의 형식 및 런타임 환경(가상 실행 시스템)은 모두 공용 표준인 ECMA Common Language Infrastructure 사양으로 정의하기 때문에 컴파일러 및 도구에서 공용 언어 런타임이 사용할 수 있는 출력을 생성할 수 있습니다. 자세한 내용은 [ECMA C# 및 공용 언어 인프라 사양](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)을 참조하세요.  
   
  런타임에서 관리 코드에 서비스를 제공할 수 있게 하려면 언어 컴파일러에서 사용자 코드의 형식, 멤버 및 참조를 설명하는 메타데이터를 내보내야 합니다. 메타데이터는 코드와 함께 저장되며 로드 가능한 모든 공용 언어 런타임 PE(이식 가능한 실행) 파일에는 메타데이터가 포함되어 있습니다. 런타임에서는 메타데이터를 사용하여 클래스를 찾고 로드하며, 메모리에 인스턴스를 배치하고, 메서드 호출을 확인하고, 네이티브 코드를 생성하고, 보안을 강화하며, 런타임 컨텍스트 경계를 설정합니다.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 10/18/2017
 |4|4|  
 |4.5(4.5.1 및 4.5.2 포함)|4|  
 |4.6(4.6.1 및 4.6.2 포함)|4|
-|4.7 (4.7.1 포함)|4|  
+|4.7(4.7.1 포함)|4|  
   
 ## <a name="related-topics"></a>관련 항목  
   
@@ -84,7 +87,7 @@ ms.lasthandoff: 10/18/2017
 |-----------|-----------------|  
 |[관리되는 실행 프로세스](../../docs/standard/managed-execution-process.md)|공용 언어 런타임을 사용하는 데 필요한 단계에 대해 설명합니다.|  
 |[자동 메모리 관리](../../docs/standard/automatic-memory-management.md)|가비지 수집기에서 메모리를 할당하고 해제하는 방법에 대해 설명합니다.|  
-|[NIB: .NET Framework의 개요](http://msdn.microsoft.com/en-us/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|공용 형식 시스템, 언어 간 상호 운용성, 관리되는 실행, 응용 프로그램 도메인, 어셈블리 등과 같은 .NET Framework의 주요 개념에 대해 설명합니다.|  
+|[NIB: .NET Framework의 개요](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|공용 형식 시스템, 언어 간 상호 운용성, 관리되는 실행, 응용 프로그램 도메인, 어셈블리 등과 같은 .NET Framework의 주요 개념에 대해 설명합니다.|  
 |[공용 형식 시스템](../../docs/standard/base-types/common-type-system.md)|언어 간 통합을 지원하면서 런타임에서 형식을 선언, 사용, 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

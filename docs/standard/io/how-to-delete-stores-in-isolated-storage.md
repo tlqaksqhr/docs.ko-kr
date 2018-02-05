@@ -21,15 +21,18 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting stores
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 138d1688f22cdc3bfa542af5433b6dbf8139e840
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ae04deeb8d23b496a9111b0d4b5b68e12ac1439
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>방법: 격리된 저장소에서 저장소 삭제
 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 클래스는 격리된 저장소 파일을 삭제하기 위해 다음과 같은 두 가지 메서드를 제공합니다.  

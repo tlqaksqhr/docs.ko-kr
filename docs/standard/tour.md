@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9dca33f01c119c185717efa0666146191503f577
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -124,7 +127,7 @@ LINQ는 데이터에 적용할 간단하고 선언적인 코드를 작성할 수
 
 모든 운영 체제에는 시스템 서비스를 제공하는 API(응용 프로그래밍 인터페이스)가 있습니다. .NET은 이러한 API를 호출하는 여러 가지 방법을 제공합니다.
 
-기본 상호 운용성은 대체로 “플랫폼 호출” 또는 줄여서 P/Invoke를 통해 수행되며, Linux 및 Windows 플랫폼에서 지원됩니다. 기본 상호 운용성을 수행하는 Windows 전용 방법은 “COM interop”라고 하며, 관리 코드에서 [COM 구성 요소](https://msdn.microsoft.com/library/bwa2bx93.aspx)로 작업하는 데 사용됩니다. 이 방법은 P/Invoke 인프라를 기반으로 하지만 약간 다른 방식으로 작동합니다.
+기본 상호 운용성은 대체로 “플랫폼 호출” 또는 줄여서 P/Invoke를 통해 수행되며, Linux 및 Windows 플랫폼에서 지원됩니다. 기본 상호 운용성을 수행하는 Windows 전용 방법은 “COM interop”라고 하며, 관리 코드에서 [COM 구성 요소](/cpp/atl/introduction-to-com)로 작업하는 데 사용됩니다. 이 방법은 P/Invoke 인프라를 기반으로 하지만 약간 다른 방식으로 작동합니다.
 
 Java 및 Objective-C에 대한 Mono(및 Xamarin)의 상호 운용성 지원은 대부분 비슷하게 작성되었습니다. 즉, 동일한 원칙을 사용합니다.
 

@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d418733ada67a1cb751bbfa74afee2eeeee04976
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="delegates-and-lambdas"></a>대리자 및 람다 식
 
@@ -152,6 +155,6 @@ public MainWindow()
 
 ## <a name="further-reading-and-resources"></a>추가 정보 및 리소스
 
-*   [대리자](https://msdn.microsoft.com/library/ms173171.aspx)
-*   [익명 함수](https://msdn.microsoft.com/library/bb882516.aspx)
-*   [람다 식](https://msdn.microsoft.com/library/bb397687.aspx)
+*   [대리자](../../docs/csharp/programming-guide/delegates/index.md)
+*   [익명 함수](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+*   [람다 식](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

@@ -1,5 +1,5 @@
 ---
-title: ".NET 표준"
+title: .NET Standard
 description: ".NET Standard, 해당 버전 및 .NET Standard를 지원하는 .NET 구현에 대해 알아봅니다."
 keywords: ".NET 표준, PCL, .NET"
 author: mairaw
@@ -10,13 +10,16 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="net-standard"></a>.NET 표준
+# <a name="net-standard"></a>.NET Standard
 
 [.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현에서 사용할 수 있는 .NET API의 공식 사양입니다. .NET 표준은 .NET 에코시스템의 균일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)에서는 .NET 구현 동작에 대한 균일성을 계속 설정하지만 .NET 라이브러리 구현의 .NET BCL(기본 클래스 라이브러리)에 대한 유사한 사양은 없습니다. 
 
@@ -80,7 +83,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="official-artifacts"></a>공식 아티팩트
 
-공식 사양은 표준의 일부인 API를 정의하는 .cs 파일 집합입니다. [dotnet/standard repository](https://github.com/dotnet/corefx/tree/master/src)(dotnet/표준 리포지토리)의 [ref directory](https://github.com/dotnet/standard/tree/master/netstandard/ref)(ref 디렉터리)는 .NET Standard API를 정의합니다.
+공식 사양은 표준의 일부인 API를 정의하는 .cs 파일 집합입니다. [dotnet/standard repository](https://github.com/dotnet/standard)(dotnet/표준 리포지토리)의 [ref directory](https://github.com/dotnet/standard/tree/master/netstandard/ref)(ref 디렉터리)는 .NET Standard API를 정의합니다.
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 메타패키지([소스](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props))는 하나 이상의 .NET Standard 버전을 부분적으로 정의하는 라이브러리 집합에 대해 설명합니다.
 
@@ -98,7 +101,7 @@ System.Runtime 등의 지정된 구성 요소는 다음에 대해 설명합니�
 
 .NET 표준 참조 어셈블리의 기본 배포 수단은 [NuGet 패키지](../core/packages.md)입니다. 구현은 각 .NET 구현에 적절한 여러 가지 방법으로 전달됩니다.
 
-NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상으로 합니다. .NET 표준 패키지는 “.NET 표준” 프레임워크를 대상으로 합니다. `netstandard` [compact TFM](frameworks.md)(예: `netstandard1.4`)을 사용하여 .NET 표준 프레임워크를 대상으로 지정할 수 있습니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 해야 합니다. 
+NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상으로 합니다. .NET 표준 패키지는 “.NET 표준” 프레임워크를 대상으로 합니다. `netstandard` [compact TFM](frameworks.md)(예: `netstandard1.4`)을 사용하여 .NET 표준 프레임워크를 대상으로 지정할 수 있습니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, 
 
 `NETStandard.Library` 메타패키지는 .NET 표준을 정의하는 NuGet 패키지의 전체 집합을 참조합니다.  `netstandard`를 대상으로 지정하는 가장 일반적인 방법은 이 메타패키지를 참조하는 것입니다. 이 메타패키지는 최대 40개의 .NET 라이브러리 및 .NET 표준을 정의하는 관련 API를 설명하고 액세스할 수 있도록 합니다. 추가 API에 액세스하기 위해 `netstandard`를 대상으로 하는 추가 패키지를 참조할 수 있습니다. 
 
@@ -129,7 +132,7 @@ NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상�
 
 .NET 표준과 호환되는 PCL 프로필 집합을 확인할 수 있습니다. 
 
-| PCL 프로필 | .NET 표준 | PCL 플랫폼
+| PCL 프로필 | .NET Standard | PCL 플랫폼
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET Framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1

@@ -7,17 +7,20 @@ ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
 .NET 앱은 하나 이상의 *.NET 구현*에 대해 개발되고 이 구현에서 실행됩니다.  .NET 구현에는 .NET Framework, .NET Core 및 Mono가 포함됩니다. .NET Standard라는 모든 .NET 구현에 공통된 API 사양이 있습니다. 이 문서에서는 이러한 각 개념에 대해 간략하게 소개합니다.
 
-## <a name="net-standard"></a>.NET 표준
+## <a name="net-standard"></a>.NET Standard
 
 .NET Standard는 .NET 구현의 기본 클래스 라이브러리에서 구현하는 API 집합입니다. 공식적으로 말하자면 코드를 컴파일할 균일한 계약 집합을 구성하는 .NET API 사양입니다. 이러한 계약은 각 .NET 구현에서 구현됩니다. 그러면 코드가 어디서든 실행될 수 있도록 여러 .NET 구현 간에 이식할 수 있습니다.
 

@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ca2ae076229a1726d3a25a84e358f9cfb623a297
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="what-is-managed-code"></a>"관리 코드"란?
 
@@ -43,5 +46,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="more-resources"></a>추가 리소스
 
 *   [.NET Framework 개념 개요](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [안전하지 않은 코드 및 포인터](https://msdn.microsoft.com/library/t2yzs44b.aspx)
+*   [안전하지 않은 코드 및 포인터](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
 *   [상호 운용성(C# 프로그래밍 가이드)](https://msdn.microsoft.com/library/ms173184.aspx)
