@@ -3,11 +3,12 @@ layout: HubPage
 hide_bc: 
 title: ".NET 설명서"
 description: "C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 응용 프로그램을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요."
-ms.openlocfilehash: 623f281c3f348c6e3c52f28b263ac06e0e864870
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.custom: updateeachrelease
+ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -49,7 +50,7 @@ ms.lasthandoff: 02/01/2018
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.7">
+                <a href="/dotnet/api/?view=netframework-4.7.1">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
