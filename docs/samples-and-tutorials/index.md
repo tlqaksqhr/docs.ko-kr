@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d800d861f65779a73f83cf44e8884566eb7adee4
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="samples-and-tutorials"></a>샘플 및 자습서
 
-.NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 항목에서는 .NET Core, ASP.NET Core 및 C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](http://fsharp.org/learn.html)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보려는 경우 이러한 [대화형 자습서](http://go.microsoft.com/fwlink/p/?LinkId=817234)를 사용해 보세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#viewing-and-downloading-samples) 섹션을 참조하세요.
+.NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 항목에서는 .NET Core, ASP.NET Core 및 C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](http://fsharp.org/learn.html)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보는 데 관심이 있는 경우 [이 대화형 자습서](https://www.microsoft.com/net/learn/in-browser-tutorial/1)로 시작하고 [C# 대화형 빠른 시작](../csharp/quick-starts/index.md)을 계속 진행하세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#viewing-and-downloading-samples) 섹션을 참조하세요.
 
 ## <a name="net-core"></a>.NET Core
 
