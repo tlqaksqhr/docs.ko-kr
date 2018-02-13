@@ -2,7 +2,8 @@
 title: "연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab1e245ed806cf0ea6346c76c6ade83273eed7be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
+ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 -   `IronPython` 라이브러리를 사용하는 프로젝트를 만듭니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
-필요한 [IronPython](http://ironpython.net/) 이 연습을 완료 하려면.NET 용입니다. 이동의 [다운로드 페이지](http://ironpython.net/download/) 최신 버전을 가져옵니다.
+이 연습을 완료하려면 .NET용 [IronPython](http://ironpython.net/)이 필요합니다. [다운로드 페이지](http://ironpython.net/download/)로 이동하여 최신 버전을 다운로드하세요.
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -178,4 +179,4 @@ ms.lasthandoff: 11/21/2017
  [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
  [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [동적 인터페이스 구현(외부 블로그)](http://go.microsoft.com/fwlink/?LinkId=230895)
+ [동적 인터페이스 구현(Microsoft TechNet에서 다운로드 가능한 PDF)](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)
