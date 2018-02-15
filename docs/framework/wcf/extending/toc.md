@@ -1,4 +1,4 @@
-# [WCF 확장](extending-wcf.md)
+# [WCF 확장](index.md)
 ## [ServiceHost 및 서비스 모델 계층 확장](extending-servicehost-and-the-service-model-layer.md)
 ### [클라이언트 확장](extending-clients.md)
 #### [방법: 클라이언트에서 메시지 검사 또는 수정](how-to-inspect-or-modify-messages-on-the-client.md)
