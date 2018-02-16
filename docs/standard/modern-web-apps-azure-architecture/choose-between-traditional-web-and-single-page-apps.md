@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>일반적인 웹 앱 및 단일 페이지 응용 프로그램 (SPAs) 중에서 선택
 
 > "Atwood의 법칙: javascript에서 JavaScript에서 작성할 수 있는 응용 프로그램을 작성할 결국 됩니다."  
-> _\-제프 Atwood_
+> _\- 제프 Atwood_
 
 ## <a name="summary"></a>요약
 
@@ -85,10 +88,10 @@ JavaScript 또는 TypeScript 및 클라이언트 쪽 프로그래밍 방법 및 
 
 다음 의사 결정 테이블에는 기존 웹 응용 프로그램과 SPA 간에 선택할 때 고려해 야 할 기본 요소 중 일부를 요약 합니다.
 
-  | **비율** | **기존 웹 응용 프로그램** | **단일 페이지 응용 프로그램** |
+  | **Factor** | **기존 웹 응용 프로그램** | **단일 페이지 응용 프로그램** |
   |---|---|---|
-  | JavaScript/TypeScript 필요한 팀 경험 | **최소** | **필수** |
-  | 스크립팅 없이 브라우저를 지원 합니다. | **지원됨** | **지원 안 함** |
+  | JavaScript/TypeScript 필요한 팀 경험 | **Minimal** | **필수** |
+  | 스크립팅 없이 브라우저를 지원 합니다. | **지원됨** | 지원 안 함 |
   | 클라이언트 쪽 응용 프로그램을 최소한의 동작 | **잘 맞는** | **개념을 세우** |
   | 다양 하 고 복잡 한 사용자 인터페이스 요구 사항 | **제한** | **잘 맞는** |
 

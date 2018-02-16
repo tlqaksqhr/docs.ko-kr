@@ -4,11 +4,14 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
-ms.openlocfilehash: 7394d0fd208e131b4e683298f6ca31a9eddade28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61b22e48afd543ac077ebb4fe1b7be200f9ec859
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>하이브리드 클라우드 시나리오로 마이그레이션
 
@@ -20,7 +23,7 @@ Microsoft는 가장 적합 한 하이브리드 클라우드 솔루션 제공을 
 
 마지막으로 배포 하 고 분석 데이터 원활 하 게, 클라우드 및 온-프레미스 자산에 대 한 동일한 쿼리 언어를 사용 하 고 있습니다 분석 워크 로드와 해당 소스에 관계 없이 데이터를 보강 하기 위해 Azure에서 학습 깊습니다 적용 합니다.
 
-## <a name="azure-stack"></a>Azure 스택
+## <a name="azure-stack"></a>Azure Stack
 
 Azure 스택은 조직의 데이터 센터에서 Azure 서비스를 제공할 수 있는 하이브리드 클라우드 플랫폼입니다. Azure 스택 가장자리와 연결 되지 않은 환경 또는 특정 보안 및 규정 준수 요구 사항을 충족와 같은 주요 시나리오에 최신 응용 프로그램에 대 한 새 옵션을 지원 하도록 설계 되었습니다.
 
@@ -50,7 +53,7 @@ Microsoft Azure 스택 개발 키트는 단일 노드 배포 Azure 스택, 평�
 
     [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
--   **Azure 스택**
+-   **Azure Stack**
 
     [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 

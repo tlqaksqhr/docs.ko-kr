@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: c361a28321ec9dcbfee1db8036757632a5d81f7c
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure 호스팅 ASP.NET Core 웹 앱에 대 한 권장 사항
 
 > "업무의 everywhere는 IT 부서에서 클라우드 (즉, SaaS)에서 응용 프로그램 가져오기 무시 및 잡지 구독과 처럼을 지불 합니다. 및 서비스가 더 이상 필요한 경우 왼쪽 모서리에 사용 하지 않는 없는 장비와 구독을 취소할 수 없습니다. "  
-> _\-Daryl Plummer, Gartner의 분석가_
+> _\- Daryl Plummer, Gartner의 분석가_
 
 ## <a name="summary"></a>요약
 
@@ -29,7 +32,7 @@ ms.lasthandoff: 10/21/2017
 
 -   컨테이너
 
--   Azure 서비스 패브릭
+-   Azure Service Fabric
 
 -   가상 컴퓨터 (Vm)
 
@@ -63,7 +66,7 @@ Azure 컨테이너 서비스의 단일 목표는 현재 Microsoft의 고객 간�
 
 **그림 11-1입니다.** Docker, Kubernetes, 또는 DC/OS 끝점과 함께 azure 컨테이너 서비스 관리.
 
-### <a name="azure-service-fabric"></a>Azure 서비스 패브릭
+### <a name="azure-service-fabric"></a>Azure Service Fabric
 
 서비스 패브릭은 새 응용 프로그램을 만들거나 마이크로 서비스 아키텍처를 사용 하는 기존 응용 프로그램을 다시 작성 하는 경우에 적합 한 선택입니다. 에 컴퓨터의 공유 풀에서 실행 되는 앱 작은 항목부터 시작 하 고 대규모 수백 또는 수천 대 컴퓨터 필요에 따라 증가할 수 있습니다. 상태 저장 서비스 쉽게 일관 되 고 안정적으로 응용 프로그램 상태를 저장 하 고 서비스 패브릭에서 자동으로 관리 서비스를 분할 배율 및 가용성 드립니다. 서비스 패브릭.NET (OWIN) 및 ASP.NET Core WebAPI 열린 웹 인터페이스를 지원합니다. 앱 서비스에 비해, 서비스 패브릭도 제공 더 많은 제어를 기본 인프라에 대 한 직접 액세스 합니다. 서버 시작 작업을 구성 하거나 원격 서버에 수 있습니다.
 

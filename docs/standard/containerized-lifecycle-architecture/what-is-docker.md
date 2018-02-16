@@ -1,15 +1,18 @@
 ---
 title: "Docker는 무엇입니까?"
-description: "Microsoft 플랫폼 및 도구와 Docker 컨테이너 화 된 응용 프로그램 수명 주기"
+description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 7b429f84f7714454d49be1cfa4f450d99fc47f66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-docker"></a>Docker는 무엇입니까?
 
@@ -25,13 +28,13 @@ Linux와 Windows에서 docker 이미지 컨테이너 고유 하 게 실행할 �
 
 Docker 컨테이너 개발 환경에서 호스팅하고 개발자를 위한 추가 도구를 제공, 제공 [Docker Community Edition (CE)](https://www.docker.com/community-edition) macOS 또는 Windows에 대 한 합니다. 이러한 제품에 필요한 VM (Docker 호스트)를 사용 하는 컨테이너 호스트 설치 합니다. Docker도 사용할 수 있도록 [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), 엔터프라이즈 개발을 위해 설계 하 고 작성 하는 IT 팀에서 사용 하는, 배송, 및 프로덕션 환경에서 큰 업무에 중요 한 응용 프로그램을 실행 합니다.
 
-실행 하려면 [Windows 컨테이너](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview), 두 가지 방법으로 런타임:
+실행 하려면 [Windows 컨테이너](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), 두 가지 방법으로 런타임:
 
 -   **Windows Server 컨테이너** 이 런타임 프로세스 및 네임 스페이스 격리 기술을 통해 응용 프로그램 격리를 제공 합니다. Windows Server 컨테이너 호스트에서 실행 되는 모든 컨테이너와 컨테이너 호스트와 커널을 공유 합니다.
 
 -   **Hyper-v 컨테이너** 이 각 컨테이너를 고도로 최적화 된 VM에서 실행 하 여 Windows Server 컨테이너에서 제공 하는 격리를 확장 합니다. 이 구성에서는 컨테이너 호스트의 커널은 더 나은 격리를 제공 하는 Hyper-v 컨테이너와 공유 되지 됩니다.
 
-이러한 컨테이너에 대 한 이미지에 동일한 방식으로 만들어지며 동일 하 게 작동 합니다. 차이점은 컨테이너 이미지에서 만들어지는 방법을-추가 매개 변수가 필요한 Hyper-v 컨테이너를 실행 합니다. 자세한 내용은 참조 [Hyper-v 컨테이너](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview)합니다.
+이러한 컨테이너에 대 한 이미지에 동일한 방식으로 만들어지며 동일 하 게 작동 합니다. 차이점은 컨테이너 이미지에서 만들어지는 방법을-추가 매개 변수가 필요한 Hyper-v 컨테이너를 실행 합니다. 자세한 내용은 참조 [Hyper-v 컨테이너](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)합니다.
 
 ## <a name="comparing-docker-containers-with-vms"></a>Vm 사용 하 여 Docker 컨테이너 비교
 

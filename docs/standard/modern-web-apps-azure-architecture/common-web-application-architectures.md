@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: b6236cfab290211f930d6a1987075abeade4fd6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 #<a name="common-web-application-architectures"></a>일반적인 웹 응용 프로그램 아키텍처
 
@@ -172,7 +175,7 @@ ASP.NET Core MVC 응용 프로그램에서 사용자 인터페이스 계층을 �
 > -   컨트롤러
 > -   필터
 > -   보기
-> -   Viewmodel
+> -   ViewModels
 > -   시작
 
 시작 클래스는 응용 프로그램을 구성 하는 것에 대 한 마우스 구현 형식 연결은 대 한 인터페이스를 런타임 시 제대로 작동 하려면 종속성 주입을 허용 하 합니다.

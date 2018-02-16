@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 20524c8aa0e64fd40a1a4a6811063557f74074d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
-#<a name="architectural-principles"></a>아키텍처 원칙
+# <a name="architectural-principles"></a>아키텍처 원칙
 
 > "빌더 건물 빌드된 경우 방법은 프로그래머가 프로그램을 작성 했습니다. 다음와 함께 제공 된 첫 번째 woodpecker 문명이 손상 됩니다."  
-> _\-Gerald Weinberg_
+> _\- Gerald Weinberg_
 
 ## <a name="summary"></a>요약
 
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
 ![](./media/image4-1.png)
 
-**그림 4-1입니다.** 직접 종속성 그래프입니다.
+**그림 4-1.** 직접 종속성 그래프입니다.
 
 메서드를 호출할 수 있도록 A에 대 한 런타임 시 호출 B B에서 구현 하는 추상화에 A를 허용 하지만 인터페이스에 따라 달라 지도록 B에 의해 제어는 컴파일 타임에 종속성 반전 원칙 적용 (따라서 *반전* 일반적인 컴파일 시간 종속성)입니다. 런타임 시 프로그램 실행의 흐름을 그대로 유지 인터페이스 소개 의미 이러한 인터페이스의 다른 구현을 쉽게 연결할 수 있습니다.
 
@@ -103,16 +106,16 @@ ms.lasthandoff: 11/21/2017
 여기에 최소한 개별 웹 응용 프로그램 데이터베이스를 다른 응용 프로그램과 공유 하지 않고 자신의 비즈니스 모델에 대 한 자신의 지 속성 저장소와 함께 자체 bounded 컨텍스트 위해 노력 해야 합니다. 공유 데이터베이스에 대 한 비즈니스 논리를 메뉴를 사용 하는 대신 프로그래밍 방식 인터페이스를 통해 바인딩된 컨텍스트 간 통신에서 발생 하 고 수행 하는 이벤트를 발생 하는 변경 사항에 따라 배치 키를 누릅니다. 컨텍스트 맵도 자신의 개별 bounded 컨텍스트도 구현 이상적으로 microservices에 밀접 하 게 제한.
 
 > ### <a name="references--modern-web-applications"></a>참조-최신 웹 응용 프로그램
-> - **문제의 분리**  
+> - 문제의 분리  
 > <http://deviq.com/separation-of-concerns/>
-> - **캡슐화** <http://deviq.com/encapsulation/>
+> - **Encapsulation** <http://deviq.com/encapsulation/>
 > - **종속성 반전 원칙**  
 > <http://deviq.com/dependency-inversion-principle/>
-> - **명시적 종속 관계 원칙**  
+> - **명시적 종속성 원칙**  
 > <http://deviq.com/explicit-dependencies-principle/>
 > - **사용자가 직접 반복 안 함**  
 > <http://deviq.com/don-t-repeat-yourself/>
-> - **지 속성 무시**  
+> - 지 속성 무시  
 > <http://deviq.com/persistence-ignorance/>
 > - **Bounded 컨텍스트**  
 > <https://martinfowler.com/bliki/BoundedContext.html>

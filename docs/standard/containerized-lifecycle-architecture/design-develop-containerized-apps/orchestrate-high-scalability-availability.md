@@ -1,15 +1,18 @@
 ---
 title: "Microservices 및 높은 확장성 및 가용성 multicontainer 응용 프로그램 오케스트레이션"
-description: "Microsoft 플랫폼 및 도구와 Docker 컨테이너 화 된 응용 프로그램 수명 주기"
+description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: ea492de1c4709eb7bafe65fcf288482da9855240
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4345fe8f36ecc32a7dd8e72fce5338bff308ffdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Microservices 및 높은 확장성 및 가용성 multicontainer 응용 프로그램 오케스트레이션
 
@@ -42,7 +45,7 @@ Docker 명령줄 인터페이스 (CLI)는 한 호스트에서 한 컨테이너�
 | Docker 웜<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Docker 웜 클러스터 및 Docker 컨테이너를 예약 하는 기능을 제공 합니다. 웜을 사용 하 여 단일, 가상 Docker 호스트에 Docker 호스트의 풀을 설정할 수 있습니다. 클라이언트의 의미는 웜 쉽게 크기를 조정 하는 응용 프로그램에 대 한 여러 호스트를 호스트에는 동일한 방식으로 웜을 API 요청을 수행할 수 있습니다. <br /><br /> Docker 웜은 동시에 회사에서 제품입니다. <br /><br /> Docker v1.12 하거나 네이티브 및 기본 제공 Swarm 모드 나중에 실행할 수 있습니다. |
 | Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image8.png) |  Mesosphere 엔터프라이즈 DC/OS (Apache Mesos에 기반)는 컨테이너 및 분산된 응용 프로그램을 실행 하기 위한 프로덕션에 사용 가능한 플랫폼입니다. <br /><br /> DC/OS 클러스터에서 사용할 수 있는 리소스의 컬렉션을 추상화 하 고 해당 리소스를 기반으로 하는 구성 요소를 사용할 수 있도록 하 여 작동 합니다. 풀 마라톤 DC/운영 체제와 통합 하는 스케줄러로 일반적으로 사용 됩니다. |
 | Google Kubernetes<br />![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes는 클러스터 인프라 및 컨테이너 조정 기능을 예약 하는 기능을 제공 하는 오픈 소스 제품입니다. 호스트 클러스터 간에 배포, 배율 및 응용 프로그램 컨테이너의 작업을 자동화할 수 있습니다. <br /><br /> Kubernetes는 컨테이너 응용 프로그램을 쉽게 관리 및 검색에 대 한 논리 단위로 그룹화 하는 컨테이너 중심 인프라를 제공 합니다. |
-| Azure 서비스 패브릭<br />![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image10.png) | [서비스 패브릭](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 는 응용 프로그램을 빌드하기 위한 Microsoft microservices 플랫폼입니다. 한 [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) 의 서비스를 컴퓨터의 클러스터를 만듭니다. 기본적으로 서비스 패브릭에서 배포 하 고 프로세스에 따라 서비스를 활성화 되지만 서비스 패브릭 서비스를 Docker 컨테이너 이미지에서를 배포할 수 있습니다. 더 중요 한 혼합할 수 있습니다 프로세스의 서비스 서비스에 동일한 응용 프로그램의 컨테이너입니다. <br /><br /> 2017 년 1 월을 기준으로 Docker 컨테이너 배포 서비스를 지 원하는 서비스 패브릭의 기능은 미리 보기 상태입니다. <br /><br /> 사용 하 여 다양 한 방식에서 서비스 패브릭 서비스를 개발할 수 있습니다는 [프로그래밍 모델 서비스 패브릭](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) 배포 [게스트 실행 파일](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) 컨테이너 뿐만 아니라 합니다. 서비스 패브릭 같은 규범적인 응용 프로그램 모델을 지원 [상태 저장 서비스](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) 및 [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)합니다.
+| Azure Service Fabric<br />![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image10.png) | [서비스 패브릭](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 는 응용 프로그램을 빌드하기 위한 Microsoft microservices 플랫폼입니다. 한 [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) 의 서비스를 컴퓨터의 클러스터를 만듭니다. 기본적으로 서비스 패브릭에서 배포 하 고 프로세스에 따라 서비스를 활성화 되지만 서비스 패브릭 서비스를 Docker 컨테이너 이미지에서를 배포할 수 있습니다. 더 중요 한 혼합할 수 있습니다 프로세스의 서비스 서비스에 동일한 응용 프로그램의 컨테이너입니다. <br /><br /> 2017 년 1 월을 기준으로 Docker 컨테이너 배포 서비스를 지 원하는 서비스 패브릭의 기능은 미리 보기 상태입니다. <br /><br /> 사용 하 여 다양 한 방식에서 서비스 패브릭 서비스를 개발할 수 있습니다는 [프로그래밍 모델 서비스 패브릭](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) 배포 [게스트 실행 파일](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) 컨테이너 뿐만 아니라 합니다. 서비스 패브릭 같은 규범적인 응용 프로그램 모델을 지원 [상태 저장 서비스](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) 및 [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)합니다.
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Azure에서 컨테이너 기반 orchestrators를 사용 하 여
 

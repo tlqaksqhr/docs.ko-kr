@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>최신 웹 응용 프로그램의 특징
 
 > "… 적절 한 디자인 기능 가지 저렴 합니다. 이 방법은 단절, 되었지만 계속 성공 합니다. "  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 ## <a name="summary"></a>요약
 
@@ -23,7 +26,7 @@ ms.lasthandoff: 11/17/2017
 
 ASP.NET Core 웹 응용 프로그램 및 클라우드 기반 호스팅 시나리오를 위해 최적화 됩니다. 모듈형 디자인에는 실제로 사용 응용 프로그램 보안 및 호스팅 리소스 요구 사항을 줄이고 성능 향상 기능에 따라 달라 지도록 응용 프로그램이 있습니다.
 
-## <a name="reference-application-eshoponweb"></a>응용 프로그램 참조: eShopOnWeb
+## <a name="reference-application-eshoponweb"></a>Reference Application: eShopOnWeb
 
 이 지침에는 참조 응용 프로그램에 포함 *eShopOnWeb*, 원칙과 권장 사항은 중 일부를 보여 주는 합니다. 응용 프로그램은 shirts, 커피 잔 및 마케팅 다른 항목의 카탈로그를 통해 검색을 지 원하는 간단한 온라인 상점입니다. 참조 응용 프로그램은 쉽게 이해할 수 있도록 하기 위해 매우 간단 합니다.
 
@@ -41,7 +44,7 @@ ASP.NET Core 웹 응용 프로그램 및 클라우드 기반 호스팅 시나리
 
 ## <a name="cross-platform"></a>플랫폼 간
 
-ASP.NET Core는 플랫폼 간 이며 Windows 뿐만 아니라 Linux 및 MacOS에서 실행할 수 있습니다. 이 개발 및 ASP.NET Core를 사용 하 여 빌드한 앱 배포에 대 한 여러 가지 새로운 옵션 열립니다. 일반적으로 오늘 Linux를 실행, docker 컨테이너의 이점을 활용 하도록 허용는 ASP.NET Core 응용 프로그램을 호스트할 [컨테이너 및 microservices](../microservices-architecture)합니다.
+ASP.NET Core는 플랫폼 간 이며 Windows 뿐만 아니라 Linux 및 MacOS에서 실행할 수 있습니다. 이 개발 및 ASP.NET Core를 사용 하 여 빌드한 앱 배포에 대 한 여러 가지 새로운 옵션 열립니다. 일반적으로 오늘 Linux를 실행, docker 컨테이너의 이점을 활용 하도록 허용는 ASP.NET Core 응용 프로그램을 호스트할 [컨테이너 및 microservices](../microservices-architecture/index.md)합니다.
 
 ## <a name="modular-and-loosely-coupled"></a>모듈식 고 느슨하게 결합 된
 

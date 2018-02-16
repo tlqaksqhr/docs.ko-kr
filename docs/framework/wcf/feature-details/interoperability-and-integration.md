@@ -5,27 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58bb7f0b5d6e43f4e157bda2f7dff5ad7c57a6c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fcd6f8454f77cfd2fbd80ed0f77ce1549025a4d6
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="interoperability-and-integration"></a>상호 운용성 및 통합
 이 단원에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]와의 상호 운용성 및 통합에 대해 다룹니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [웹 서비스 프로토콜 상호 운용성 가이드](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 웹 서비스 사양으로 알려진 일련의 사양을 지원하는 웹 서비스와 상호 운용되도록 만들어졌습니다. 이 항목에서는 지원되는 사양과 이 사양을 지원하는 바인딩에 대해 설명합니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 일련의 웹 서비스 사양으로 알려진 사양 지 원하는 웹 서비스와 상호 운용 되도록 만들어졌습니다. 이 항목에서는 지원되는 사양과 이 사양을 지원하는 바인딩에 대해 설명합니다.  
   
  [COM+ 응용 프로그램과 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  COM+ 응용 프로그램을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스로 노출하는 방법에 대해 설명합니다.  
@@ -61,4 +63,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [WCF 확장](../../../../docs/framework/wcf/extending/extending-wcf.md)
+ [WCF 확장](../../../../docs/framework/wcf/extending/index.md)

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3f045fd35ef57be51c10d7948275899c1ae4f01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e16ed674c87bdb1418257a30f7f79b970127b06
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="introduction-to-extensibility"></a>확장성 소개
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램 모델은 분산 응용 프로그램의 대부분의 통신 요구 사항을 해결할 수 있도록 디자인되었습니다. 그러나 기본 응용 프로그램 모델과 시스템 제공 구현이 지원되지 않습니다. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 확장성 모델은 전체 응용 프로그램 모델을 대체하는 지점을 비롯해서 모든 수준에서 시스템 동작을 수정할 수 있도록 허용하여 사용자 지정 시나리오를 지원합니다. 이 항목에서는 다양한 확장 영역에 대해 간략하게 설명하고 각 영역에 대한 자세한 내용을 제공합니다.  
@@ -41,27 +43,27 @@ ms.lasthandoff: 12/22/2017
   
  응용 프로그램 메시지는 사용자 또는 사용자의 고객이 만든 클라이언트 또는 서비스 작업을 대상으로 하는 데이터를 포함합니다. 이러한 메시지는 응용 프로그램 수준 확장 시스템에서 필요에 따라 메시지 또는 개체 형태로 사용할 수 있습니다.  
   
- 모든 메시지는 채널 시스템을 통해 전달되고, 응용 프로그램 메시지만 채널 시스템에서 응용 프로그램으로 전달됩니다. 새 채널 수준 기능을 만들려면 채널 시스템을 확장해야 합니다. 새 응용 프로그램 수준 기능을 만들려면 서비스 또는 클라이언트 런타임(각각 디스패처 및 채널 팩터리)을 확장해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]응용 프로그램 런타임 확장 참조 [확장 ServiceHost 및 서비스 모델 계층](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
+ 모든 메시지는 채널 시스템을 통해 전달되고, 응용 프로그램 메시지만 채널 시스템에서 응용 프로그램으로 전달됩니다. 새 채널 수준 기능을 만들려면 채널 시스템을 확장해야 합니다. 새 응용 프로그램 수준 기능을 만들려면 서비스 또는 클라이언트 런타임(각각 디스패처 및 채널 팩터리)을 확장해야 합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)] 응용 프로그램 런타임 확장 참조 [확장 ServiceHost 및 서비스 모델 계층](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
   
 #### <a name="extending-security"></a>보안 확장  
- 토큰 및 자격 증명과 같은 사용자 지정 보안 메커니즘을 빌드하려면 보안 시스템을 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][보안 확장](../../../docs/framework/wcf/extending/extending-security.md)합니다.  
+ 토큰 및 자격 증명과 같은 사용자 지정 보안 메커니즘을 빌드하려면 보안 시스템을 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [보안 확장](../../../docs/framework/wcf/extending/extending-security.md)합니다.  
   
 #### <a name="extending-metadata"></a>메타데이터 확장  
- 메타데이터를 기본값과 다르게 노출하려면 메타데이터 시스템을 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][메타 데이터 시스템 확장](../../../docs/framework/wcf/extending/extending-the-metadata-system.md)합니다.  
+ 메타데이터를 기본값과 다르게 노출하려면 메타데이터 시스템을 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [메타 데이터 시스템 확장](../../../docs/framework/wcf/extending/extending-the-metadata-system.md)합니다.  
   
 #### <a name="extending-serialization"></a>Serialization 확장  
- 사용자 지정 인코더를 빌드하거나, 데이터 서로게이트를 제공하거나, 전송된 데이터에 대한 사용자 지정과 관련된 다른 작업을 수행하려면 serialization 시스템을 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][인코더 및 Serializer 확장](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)합니다.  
+ 사용자 지정 인코더를 빌드하거나, 데이터 서로게이트를 제공하거나, 전송된 데이터에 대한 사용자 지정과 관련된 다른 작업을 수행하려면 serialization 시스템을 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [인코더 및 Serializer 확장](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)합니다.  
   
 #### <a name="extending-bindings"></a>바인딩 확장명  
- 전송 또는 프로토콜 채널을 응용 프로그램 계층에 연결하려면 바인딩 시스템을 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][바인딩 확장](../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
+ 전송 또는 프로토콜 채널을 응용 프로그램 계층에 연결하려면 바인딩 시스템을 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [바인딩 확장](../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
   
 ### <a name="extending-the-channel-system"></a>채널 시스템 확장  
  프로토콜 기능 또는 사용자 지정 전송 지원 채널을 만들려면 참조 [채널 계층 확장](../../../docs/framework/wcf/extending/extending-the-channel-layer.md)합니다.  
   
 ### <a name="extending-the-service-hosting-system"></a>서비스 호스팅 시스템 확장명  
- 서비스 차원 응용 프로그램 모델을 수정하려면 <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> 클래스를 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][ServiceHost 및 서비스 모델 계층 확장](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
+ 서비스 차원 응용 프로그램 모델을 수정하려면 <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> 클래스를 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [ServiceHost 및 서비스 모델 계층 확장](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
   
- 호스팅 응용 프로그램 도메인과 서비스 호스트 간의 관계를 수정하려면 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 클래스를 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][ServiceHostFactory를 사용 하 여 호스팅](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)합니다.  
+ 호스팅 응용 프로그램 도메인과 서비스 호스트 간의 관계를 수정하려면 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 클래스를 확장해야 합니다. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [ServiceHostFactory를 사용 하 여 호스팅](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [WCF 확장](../../../docs/framework/wcf/extending/extending-wcf.md)
+ [WCF 확장](../../../docs/framework/wcf/extending/index.md)

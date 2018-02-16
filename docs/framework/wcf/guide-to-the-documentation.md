@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f1026320114592c25bb5fd123bf92227b26b015
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 132cbc6c7c9ba7d8e6c29f477554fc7b3bbab469
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="guide-to-the-documentation"></a>설명서에 대한 안내
 여기에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 설명서에 대한 참고 자료를 제공합니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 -   특정 기능 또는의 기능에 대 한 지침에 대 한 원하는 경우 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], 아래의 항목을 참조 [WCF 기능 정보](../../../docs/framework/wcf/feature-details/index.md)합니다.  
   
--   확장 하거나 사용자 지정 하려는 경우 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 요구 사항에 따라, 참조 [WCF 확장](../../../docs/framework/wcf/extending/extending-wcf.md)합니다.  
+-   확장 하거나 사용자 지정 하려는 경우 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 요구 사항에 따라, 참조 [WCF 확장](../../../docs/framework/wcf/extending/index.md)합니다.  
   
 -   만들고 디버그 하는 데 도움이 되는 도구에 대 한 내용은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 응용 프로그램 참조 [Windows Communication Foundation 도구](../../../docs/framework/wcf/tools.md)합니다.  
   

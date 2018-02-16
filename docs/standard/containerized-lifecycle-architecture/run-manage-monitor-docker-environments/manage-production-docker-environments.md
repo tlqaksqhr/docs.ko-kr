@@ -1,15 +1,18 @@
 ---
 title: "프로덕션 Docker 환경 관리"
-description: "Microsoft 플랫폼 및 도구와 Docker 컨테이너 화 된 응용 프로그램 수명 주기"
+description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 5686dcb0932d4a8580fd5ad3daf9e3f5cf52fff8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="manage-production-docker-environments"></a>프로덕션 Docker 환경 관리
 
@@ -34,7 +37,7 @@ Azure 가상 컴퓨터 크기 집합을 사용 하 여 이러한 클러스터를
 | Mesosphere 마라톤\(온-프레미스 또는 클라우드) | [풀 마라톤](https://mesosphere.github.io/marathon/docs/marathon-ui.html) Mesosphere의 DC/OS 및 Apache Mesos는 프로덕션 수준의 컨테이너 오케스트레이션 및 스케줄러 플랫폼입니다. <br /><br /> Mesos와 함께 작동 (DC/OS가 기반 Apache Mesos) 장기 실행 제어에 서비스를 제공 하며 제공는 [프로세스 및 컨테이너 관리에 대 한 웹 UI](https://mesosphere.github.io/marathon/docs/marathon-ui.html)합니다. 웹 UI 관리 도구를 제공 | DC/OS mesosphere\(Apache Mesos 기반; 컨테이너 서비스에서 지원) |
 | Google Kubernetes | [Kubernetes](http://kubernetes.io/docs/user-guide/ui/#dashboard-access) 조정, 일정 및 클러스터 인프라에 걸쳐 있습니다. 사용 되는 오픈 소스 플랫폼 컨테이너 중심 인프라를 제공 하는 호스트의 클러스터를 배포, 배율 및 응용 프로그램 컨테이너의 작업 자동화입니다. | Google Kubernetes\(컨테이너 서비스에서 지원) |
 
-## <a name="azure-service-fabric"></a>Azure 서비스 패브릭
+## <a name="azure-service-fabric"></a>Azure Service Fabric
 
 클러스터 배포 및 관리에 대 한 다른 선택에는 Azure 서비스 패브릭 됩니다. [서비스 패브릭](https://azure.microsoft.com/en-us/services/service-fabric/) 컨테이너 오케스트레이션 개발자를 포함 하는 Microsoft microservices 플랫폼은 확장성이 뛰어난 microservices 응용 프로그램을 빌드하는 모델 프로그래밍 합니다. 서비스 패브릭에서는 Docker 현재 Linux 미리 보기 버전에서와 같이 [linux 미리 보기 서비스 패브릭](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere), 및 Windows 컨테이너에 대 한 [다음 릴리스에서](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)합니다.
 

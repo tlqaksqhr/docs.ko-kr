@@ -1,15 +1,18 @@
 ---
 title: "Docker 응용 프로그램에 대 한 외부 루프 DevOps 워크플로의 단계"
-description: "Microsoft 플랫폼 및 도구와 Docker 컨테이너 화 된 응용 프로그램 수명 주기"
+description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 070d174cde9e80f542865f5617b1c702a07a8018
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 응용 프로그램에 대 한 외부 루프 DevOps 워크플로의 단계
 
@@ -219,7 +222,7 @@ CD의 관점 및 Visual Studio Team Services에서 특히에서 실행할 수 �
 
 Docker 및 Azure 컨테이너 서비스에 대 한 visual Studio Team Services 확장: [https://aka.ms/ \ vstsdockerextension](https://aka.ms/vstsdockerextension)
 
-Azure 컨테이너 서비스: <https://aka.ms/azurecontainerservice>
+Azure Container Service: <https://aka.ms/azurecontainerservice>
 
 Mesosphere DC/OS: <https://mesosphere.com/product/>
 

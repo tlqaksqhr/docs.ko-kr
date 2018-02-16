@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 54e7ed6fff9ac709e411d0ac1e345c63fd753201
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 응용 프로그램 개발
 
@@ -74,7 +77,7 @@ ASP.NET Core MVC 웹 Api에 대 한 지원 [ *콘텐츠 협상*](https://docs.mi
 > - **모델 바인딩** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
 > - **유효성 검사 모델**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **필터** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **Filters** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>종속성 사용
 
@@ -204,11 +207,11 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 또한 ASP.NET Core MVC 보기를 찾는 한 규칙을 사용 합니다. 뷰 (위에 FeatureConvention에서 제공 된 기능 이름 사용) 기능 폴더에 있을 수 있도록 사용자 지정 규칙을 통해 그를 재정의할 수 있습니다. 이 방법을 사용 하는 방법에 대 한 자세한 정보 및 MSDN 문서에서 작업 예제를 다운로드할 수 있습니다 [ASP.NET Core MVC에 대 한 기능 슬라이스](https://msdn.microsoft.com/magazine/mt763233.aspx)합니다.
 
-### <a name="cross-cutting-concerns"></a>일반적인 문제
+### <a name="cross-cutting-concerns"></a>교차 편집 문제
 
 응용 프로그램 성장 함에 따라 중복 제거 및 일관성을 유지 하는 일반적인 문제를 팩터링 하 점점 더 중요 해 집니다. 몇 가지 ASP.NET Core 응용 프로그램의 일반적인 문제는 인증, 모델 유효성 검사 규칙, 출력 캐싱 및 오류 처리, 경우에 많은 키워드가 있습니다. ASP.NET Core MVC [필터](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) 전이나 요청 처리 파이프라인의 특정 단계 후 코드를 실행할 수 있습니다. 예를 들어, 필터는 모델 바인딩 및 동작을 후 또는 하기 전에 전과 후 작업의 결과 전후 실행할 수 있습니다. 또한 파이프라인의 나머지 부분에 대 한 액세스를 제어 하는 권한 부여 필터를 사용할 수 있습니다. 그림 7-2 방법을 요청 실행 흐름 필터를 구성 합니다.
 
-![요청 권한 부여 필터, 리소스 필터, 모델 바인딩, 동작 필터, 액션 실행 및 작업 결과 변환, 예외 필터, 결과 필터 및 결과 실행을 통해 처리 됩니다. 아웃 방식에는 요청은만 결과 필터 및 리소스 필터에 따라 응답 클라이언트에 전송 되기 전에 처리 됩니다.](./media/image7-2.png)
+![요청은 권한 부여 필터, 리소스 필터, 모델 바인딩, 작업 필터, 작업 실행 및 작업 결과 변환, 예외 필터, 결과 필터 및 결과 실행을 통해 처리됩니다. 주의할 점은 요청이 응답이 클라이언트에 전송되기 전에 결과 필터 및 리소스 필터에 따라서만 처리된다는 것입니다.](./media/image7-2.png)
 
 필터 및 요청 파이프라인을 통해 그림 7-2 요청 실행 합니다.
 
@@ -545,7 +548,7 @@ Azure에서 응용 프로그램을 호스팅 중인 경우 몇 가지 서비스�
 > ### <a name="references--deployment"></a>참조 – 배포
 > - **호스팅 및 배포 개요**  
 > <https://docs.microsoft.com/aspnet/core/publishing/>
-> - **Kestrel 역방향 프록시를 사용 하는 경우**  
+> - Kestrel 역방향 프록시를 사용 하는 경우  
 > <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Docker에서 ASP.NET Core 앱 호스트**  
 > <https://docs.microsoft.com/aspnet/core/publishing/docker>

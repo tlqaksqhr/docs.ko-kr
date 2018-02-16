@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 4611ffa8334e124946e849306d3281b695830eb1
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d23d0accc33fb8335dff602d6e1d6c8689972906
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 응용 프로그램 테스트
 
 > _"단위 테스트 제품, 마음에 들지 않으면 가능성이 고객 않습니다 하려고 하거나, 테스트 합니다."_
-> _-익명-
+> _- Anonymous-
 
 ## <a name="summary"></a>요약
 
@@ -112,9 +115,9 @@ public class LocalFileImageService : IImageService
 
 각 테스트 클래스 이름 "은"를 종료 하 고는 시제를 약간 수정 하는이 방법의 변형:
 
--   CatalogControllerGetImage**해야**. **호출**ImageServiceWithId
+-   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**해야**. **로그**WarningGivenImageMissingException
+-   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
 일부 팀 더 명확 하 게, 두 번째 명명 방식의 찾을 하지만 약간 더 자세한 정보. 어떤 경우 든, 어떤 경우 실패 한 이름이 확실는 하나 이상의 테스트가 실패 하는 테스트 동작에 대 한 정보를 제공 하는 명명 규칙을 사용 하도록 시도 합니다. 지정 하지 있습니다 테스트 말에 왠지, ControllerTests.Test1, 등으로 테스트 결과에 표시 되 면 값이 없는 제공.
 

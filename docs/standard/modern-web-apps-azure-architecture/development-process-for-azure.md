@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: e676c1225f7d11381808040cf101e897e0726ad4
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="development-process-for-azure"></a>Azure에 대 한 개발 프로세스
 
@@ -27,7 +30,7 @@ ms.lasthandoff: 10/21/2017
 
 완전 하 고 강력한 IDE 또는 간단 하 고 agile 편집기를 원하는 지 여부를 Microsoft에 ASP.NET Core 응용 프로그램을 개발할 때 거둘 수 있습니다.
 
-**Visual Studio 2017 합니다.** 사용 중인 경우 *Visual Studio 2017* 빌드할 수 ASP.NET Core 응용 프로그램을 있는 그대로 *.NET Core 플랫폼 간 개발* 설치 하는 작업입니다. 그림 10-1은 Visual Studio 2017 설정 대화 상자에서 필요한 작업을 보여 줍니다.
+**Visual Studio 2017.** 사용 중인 경우 *Visual Studio 2017* 빌드할 수 ASP.NET Core 응용 프로그램을 있는 그대로 *.NET Core 플랫폼 간 개발* 설치 하는 작업입니다. 그림 10-1은 Visual Studio 2017 설정 대화 상자에서 필요한 작업을 보여 줍니다.
 
 ![](./media/image10-1.png)
 
@@ -99,7 +102,7 @@ Azure에 배포에 대 한 ASP.NET Core 응용 프로그램을 개발 하는 것
 
 한 번 성공으로 빌드, CD 프로세스가 가져옵니다 생성 빌드 아티팩트. 여기에 웹 패키지를 배포 합니다. 빌드 서버에서 새로 만든 모든 기존 서비스 대체 되는 Azure 앱 서비스에이 패키지를 배포 합니다. 일반적으로이 단계는 스테이징 환경을 대상으로 하지만 일부 응용 프로그램 CD 프로세스를 통해 프로덕션 환경에 직접 배포 합니다.
 
-#### <a name="step-5-azure-app-service-web-app"></a>5단계. Azure 앱 서비스입니다. 웹 앱입니다.
+#### <a name="step-5-azure-app-service-web-app"></a>5단계. Azure App Service. 웹 앱입니다.
 
 배포 된 후 Azure 앱 서비스 웹 앱의 컨텍스트 내에서 ASP.NET Core 응용 프로그램을 실행 합니다. 이 웹 앱을 모니터링할 수 있습니다 및 Azure 포털을 사용 하 여를 추가로 구성 합니다.
 

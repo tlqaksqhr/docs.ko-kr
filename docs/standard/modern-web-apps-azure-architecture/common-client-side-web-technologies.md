@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 1084aee3d81a5df6ac99d6ec0e2ef647b4173c24
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-client-side-web-technologies"></a>일반 클라이언트 쪽 웹 기술
 
 > "웹 사이트 내부에서 제대로 표시를 종료 합니다."  
-> _-Paul Cookson_
+> _- Paul Cookson_
 
 ## <a name="summary"></a>요약
 
@@ -67,7 +70,7 @@ JavaScript 단독으로 이러한 작업 모두를 수행할 수 있지만 이�
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery vs SPA 프레임 워크
 
-| **비율** | **jQuery** | **각도**|
+| **Factor** | **jQuery** | **각도**|
 |--------------------------|------------|-------------|
 | DOM을 추상화합니다. | **예** | **예** |
 | AJAX 지원 | **예** | **예** |
@@ -158,7 +161,7 @@ JavaScript 프레임 워크 지속적으로 breakneck 속도 개선 합니다. �
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
 > - **각도**  
 > <https://angular.io/>
-> - **대응**  
+> - 대응  
 > <https://facebook.github.io/react/>
 > - **Slingshot 대응**  
 > <https://github.com/coryhouse/react-slingshot>

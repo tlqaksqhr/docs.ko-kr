@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 92e26aff605d3bed89e388dd3616a2a9a3a96081
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F #을 사용 하 여 Azure Blob 저장소 시작 #
 
@@ -111,10 +111,10 @@ Azure Blob 저장소는 블록 blob 및 페이지 blob을 지원합니다. 대�
 *photo1.jpg*
 *2015/architecture/description.txt*
 *2015/architecture/photo3.jpg*
-*2015 / 아키텍처/photo4.jpg*
+*2015/architecture/photo4.jpg*
 *2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg* 
- *2016/architecture/description.txt*
+*2016/architecture/photo6.jpg*
+*2016/architecture/description.txt*
 *2016/photo7.jpg*
 
 호출 하는 경우 `ListBlobs` 계층적 목록 (예: 위의 샘플) 컨테이너에 대해 반환 됩니다. 둘 다 포함 되어 있으면 `CloudBlobDirectory` 및 `CloudBlockBlob` 결과 출력은 다음과 유사 하 게 한 다음 디렉터리 및 컨테이너의 blob를 각각 나타내는 개체:
@@ -242,12 +242,13 @@ Blob 저장소의 기본 사항 학습 한, 했으므로 자세한 내용을 보
 
 ### <a name="blob-storage-reference"></a>Blob 저장소 참조
 
-- [.NET 참조 용 저장소 클라이언트 라이브러리](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
-- [REST API 참조](http://msdn.microsoft.com/library/azure/dd179355)
+- [.NET 용 azure 저장소 Api](/dotnet/api/overview/azure/storage)
+- [Azure 저장소 서비스 REST API 참조](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
 
 ### <a name="related-guides"></a>관련된 지침
 
 - [C#에서 Azure Blob 저장소 시작](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
-- [AzCopy 명령줄 유틸리티를 사용 하 여 데이터를 전송 합니다.](/azure/storage/storage-use-azcopy)
-- [연결 문자열 구성](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [Windows에서 AzCopy 명령줄 유틸리티를 사용 하 여 데이터를 전송 합니다.](/azure/storage/common/storage-use-azcopy)
+- [Linux에서 AzCopy 명령줄 유틸리티를 사용 하 여 데이터를 전송 합니다.](/azure/storage/common/storage-use-azcopy-linux)
+- [Azure 저장소 연결 문자열 구성](/azure/storage/common/storage-configure-connection-string)
 - [Azure 저장소 팀 블로그](http://blogs.msdn.com/b/windowsazurestorage/)

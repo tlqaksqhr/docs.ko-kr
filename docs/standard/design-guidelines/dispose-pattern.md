@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dispose-pattern"></a>삭제 패턴
 모든 프로그램 실행을 사용 하는 동안 메모리, 시스템 핸들 또는 데이터베이스 연결과 같은 하나 이상의 시스템 리소스를 획득합니다. 개발자가 직접 획득 고 사용한 후 해제 되어야 합니다 때문에 이러한 시스템 리소스를 사용할 때는 주의 해야 해야 합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/23/2017
   
  그러나 관리 되는 메모리는 많은 시스템 리소스 종류 중 하나일 뿐입니다. 리소스 관리 되는 메모리는 여전히 명시적으로 해제 해야 하 고 관리 되지 않는 리소스로 간주 됩니다. GC 특별히 설계 되지 않았습니다 같은 관리 되지 않는 리소스를 관리 하는 개발자가 직접 관리 되지 않는 리소스를 관리 하기 위한 책임은는 의미입니다.  
   
- CLR에서 관리 되지 않는 리소스를 해제에 대 한 도움을 제공 합니다. <xref:System.Object?displayProperty=nameWithType>가상 메서드를 선언 <xref:System.Object.Finalize%2A> (종료자 라고도 함) GC가 호출 되 해당 개체의 메모리 GC 회수 하 고 관리 되지 않는 리소스를 해제 하기 위해 재정의할 수 있습니다. 종료자를 재정의 하는 형식 종료 가능 형식으로 참조 됩니다.  
+ CLR에서 관리 되지 않는 리소스를 해제에 대 한 도움을 제공 합니다. <xref:System.Object?displayProperty=nameWithType> 가상 메서드를 선언 <xref:System.Object.Finalize%2A> (종료자 라고도 함) GC가 호출 되 해당 개체의 메모리 GC 회수 하 고 관리 되지 않는 리소스를 해제 하기 위해 재정의할 수 있습니다. 종료자를 재정의 하는 형식 종료 가능 형식으로 참조 됩니다.  
   
  종료자 일부 정리 시나리오에서는 유효 하지만, 두 가지 중요 한 단점이 있습니다.  
   
@@ -95,7 +95,7 @@ public class DisposableResourceHolder : IDisposable {
   
  또한이 섹션으로 이미 Dispose 패턴을 구현 하지 않는 기본 클래스에 적용 됩니다. 이미의 패턴을 구현 하는 클래스에서 상속 하는 경우 재정의 하기만 `Dispose(bool)` 메서드를 추가 하는 리소스 정리 논리를 제공 합니다.  
   
- **✓ 않습니다** 보호 된 가상 void 선언 `Dispose(bool disposing)` 관련 된 모든 논리를 중앙 집중화 메서드 관리 되지 않는 리소스를 해제 합니다.  
+ **✓ 않습니다** 선언는 `protected virtual void Dispose(bool disposing)` 관련 된 모든 논리를 중앙 집중화 메서드 관리 되지 않는 리소스를 해제 합니다.  
   
  이 방법에서는 모든 리소스 정리를 수행 합니다. 메서드는 모두 종료자에서 및 `IDisposable.Dispose` 메서드. 매개 변수는 종료 자가 내에서 호출 되는 경우 false 됩니다. 종료 하는 동안 실행 되는 모든 코드에는 다른 종료 가능 개체에 액세스 하는 데 사용할 해야 합니다. 종료자를 구현 세부 정보는 다음 섹션에 설명 되어 있습니다.  
   
@@ -138,7 +138,7 @@ public class DisposableResourceHolder : IDisposable {
   
  **X 하지 마십시오** 모든 오버 로드의 선언 된 `Dispose` 이외의 다른 방법 `Dispose()` 및 `Dispose(bool)`합니다.  
   
- `Dispose`이 패턴을 체계화 하 고 구현자, 사용자 및 컴파일러 간에 혼동을 방지 하려면 예약 된 단어를 고려 되어야 합니다. 일부 언어 특정 형식에 자동으로이 패턴을 구현 하도록 선택할 수 있습니다.  
+ `Dispose` 이 패턴을 체계화 하 고 구현자, 사용자 및 컴파일러 간에 혼동을 방지 하려면 예약 된 단어를 고려 되어야 합니다. 일부 언어 특정 형식에 자동으로이 패턴을 구현 하도록 선택할 수 있습니다.  
   
  **✓ 않습니다** 허용 된 `Dispose(bool)` 메서드를 두 번 이상 호출할 수 있습니다. 메서드는 아무것도 수행 하지 않는 첫 번째 호출 이후의 수도 있습니다.  
   
@@ -285,7 +285,7 @@ public class ComplexResourceHolder : IDisposable {
   
  **✓ 고려** 만들고 중요 한 종료 가능 개체를 사용 하 여 (포함 된 형식 계층 구조와 형식을 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>)는 종료자 절대적으로 실행 해야 경우에 강제 응용 프로그램 도메인 언로드 및 스레드 상황에 대 한 중단합니다.  
   
- *일부 © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
+ *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
  *피어슨 교육, Inc.에서의 사용 권한으로 재인쇄 [Framework 디자인 지침: 규칙, 특징 및 다시 사용할 수 있는.NET 라이브러리를 2nd Edition에 대 한 패턴](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 및 Brad Abrams 게시 하 여 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로: Addison Wesley Professional.*  
   

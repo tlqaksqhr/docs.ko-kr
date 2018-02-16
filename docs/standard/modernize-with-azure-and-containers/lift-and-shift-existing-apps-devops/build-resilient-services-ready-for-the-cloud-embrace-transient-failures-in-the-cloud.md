@@ -4,11 +4,14 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 9c21ae37ad2e4fc318eb4b206069db7662bfc5d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aaf1ef968600a56d91267c6c12efa90d99446dd7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>클라우드에 대 한 준비 복원 력 있는 서비스를 빌드: 클라우드의 일시적 오류를 수용 합니다. 
 
@@ -48,13 +51,13 @@ HTTP 서비스를 사용 하는 앱에서 이와 유사한 시나리오가 발�
 
 -   **Entity Framework 연결 복원 력 및 재시도 논리 (버전 6 이상)**
 
-    [https://msdn.microsoft.com/en-us/library/dn456835 (v=vs.113).aspx](https://msdn.microsoft.com/en-us/library/dn456835(v=vs.113).aspx)
+    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **일시적인 오류 처리 응용 프로그램 블록**
 
 <!-- -->
 
--   [https://msdn.microsoft.com/en-us/library/hh680934 (v=pandp.50).aspx](https://msdn.microsoft.com/en-us/library/hh680934(v=pandp.50).aspx)
+-   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 
 -   **복원 력 있는 HTTP 통신에 대 한 관 라이브러리**
 

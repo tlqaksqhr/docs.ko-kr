@@ -1,15 +1,18 @@
 ---
 title: "Docker 용어"
-description: "Microsoft 플랫폼 및 도구와 Docker 컨테이너 화 된 응용 프로그램 수명 주기"
+description: "Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 응용 프로그램 수명 주기"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: c3b4391a839db02d8bad8380013ea916100e4a57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a622b2949c1d2277bb3e82617a5bc2d8cb432263
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="docker-terminology"></a>Docker 용어
 
@@ -47,4 +50,4 @@ ms.lasthandoff: 11/21/2017
 
 
 >[!div class="step-by-step"]
-[이전] (가상-은-docker.md) [다음] (docker-컨테이너-이미지-및-registries.md)
+[Previous] (what-is-docker.md) [Next] (docker-containers-images-and-registries.md)

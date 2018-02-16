@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>연습: 형식 공급자 및 엔터티를 사용하여 SQL Database에 액세스
 
@@ -66,7 +66,7 @@ F# 3.0에 대한 이 연습에서는 ADO.NET 엔터티 데이터 모델을 기�
 3. 새 연결 노드의 바로 가기 메뉴를 연 다음 선택 **새 쿼리**합니다.
 <br />
 
-4. 열기 [School 샘플 데이터베이스 만들기](http://go.microsoft.com/fwlink/?LinkID=237278) Microsoft 웹 사이트 및 다음 복사 및 붙여넣기에서 데이터베이스 스크립트를 만드는 학생 데이터베이스 편집기 창에 있습니다.
+4. 열기 [School 샘플 데이터베이스 만들기](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx) Microsoft 웹 사이트 및 다음 복사 및 붙여넣기에서 데이터베이스 스크립트를 만드는 School 데이터베이스 편집기 창에 있습니다.
 <br />
 
 
@@ -240,14 +240,9 @@ deleteInstructor("Parker", "Darren")
 
 
 ## <a name="see-also"></a>참고 항목
-[형식 공급자](index.md)
-
-[SqlEntityConnection 형식 공급자](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[연습: EDMX 스키마 파일에서 F # 형식 생성](generating-fsharp-types-from-edmx.md)
-
-[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)
-
-[.edmx 파일 개요](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[EDM 생성기 &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+[형식 공급자](index.md)  
+[SqlEntityConnection Type Provider](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[연습: EDMX 스키마 파일에서 F # 형식 생성](generating-fsharp-types-from-edmx.md)  
+[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)  
+[.edmx 파일 개요](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[EDM 생성기 &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)  

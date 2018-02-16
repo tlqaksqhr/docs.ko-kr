@@ -4,11 +4,14 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 87aa05895857a425f11820a564f2a249c77f98e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows 컨테이너도 기존.NET 응용 프로그램 배포
 
@@ -92,14 +95,14 @@ Linux 용 여러 배포판은 사용할 수 있으며 (예: Debian).NET Docker �
 
 Dockerfile 파일을 이미지 이름을 추가 하면.NET Framework 기반 Windows 컨테이너 이미지에 대 한 다음 예제와 같이 태그를 사용 하 여 운영 체제 및 버전을 선택할 수 있습니다.
 
-> | **태그** | **시스템 및 버전** |
+> | 태그 | **시스템 및 버전** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x windowsservercore** | .NET framework 4.x Windows Server Core에서 |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Server Core에서 |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x를 Windows Server Core에서 추가 ASP.NET 사용자 지정 |
 
 .NET Core (플랫폼 간 Linux 및 Windows 용)에 대 한 태그는 다음과 같이 표시 됩니다.
 
-> | **태그** | **시스템 및 버전**
+> | 태그 | **시스템 및 버전**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 Linux에서 런타임 전용 |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 Windows Nano Server에서 런타임 전용 |

@@ -4,11 +4,14 @@ description: "기존.NET 응용 프로그램을 Azure 클라우드 및 Windows �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 7f7715bb0ec323874271a7e9ce1c666e23e33b22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>기존 응용 프로그램이 Azure IaaS 이동할
 
@@ -84,9 +87,9 @@ Azure 마이그레이션 작업 마이그레이션할 비즈니스에 미치는 
 
 -   **Azure 마이그레이션 데이터 시트**
 
-    [https://aka.ms/azuremigration\_데이터 시트](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   **Azure 마이그레이션**
+-   **Azure Migrate**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 

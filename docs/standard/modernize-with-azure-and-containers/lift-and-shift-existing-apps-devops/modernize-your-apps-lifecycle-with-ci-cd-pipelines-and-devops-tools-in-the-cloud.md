@@ -4,11 +4,14 @@ description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Micros
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 2799f203cec2b01d2c9ff1a60ece801dc5939104
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c0b87d01c1305695dacaf3ba112b387de2ee0cc1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>현대화 CI/CD 파이프라인 및 DevOps 도구로 클라우드에서 앱의 수명 주기
 
