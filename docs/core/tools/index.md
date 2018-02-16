@@ -7,12 +7,13 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 6dbbc2e95c613d468c7d8c7b0dc15c85849f79dc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: d1bb4eb3b18fe08f38c2cf99a642afb516a797ff
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구
 
@@ -103,7 +104,7 @@ CLI에는 프로젝트에 맞게 추가 도구를 지정할 수 있는 확장성
 
 ## <a name="command-structure"></a>명령 구조
 
-CLI 명령 구조는 [드라이버("dotnet")](#driver), [명령(또는 "동사")](#command-verb), 경우에 따라 명령 [arguments](#arguments) 및 [options](#options)로 구성됩니다. *my_app* 디렉터리에서 실행될 때 다음 명령이 표시하는 것처럼 새 콘솔 앱 생성 및 명령줄에서 실행 등의 대부분의 CLI 작업에서 이 패턴을 볼 수 있습니다.
+CLI 명령 구조는 [드라이버("dotnet")](#driver), [명령(또는 "동사")](#command-verb), 경우에 따라 [arguments](#arguments) 및 [options](#options) 명령으로 구성됩니다. *my_app* 디렉터리에서 실행될 때 다음 명령이 표시하는 것처럼 새 콘솔 앱 생성 및 명령줄에서 실행 등의 대부분의 CLI 작업에서 이 패턴을 볼 수 있습니다.
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
