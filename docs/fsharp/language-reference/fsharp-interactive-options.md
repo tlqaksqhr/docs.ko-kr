@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
-ms.openlocfilehash: 0fc369993b3ee4c8a9139e4a365330197fe66946
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: f0a8893abca0435307907aa9c169646bf3dec2d5
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="f-interactive-options"></a>F# Interactive 옵션
 
@@ -42,9 +42,11 @@ F # Interactive 옵션 인수에 목록이, 목록 요소는 세미콜론으로 
 |**--**|F # Interactive는 F # 프로그램 또는 목록을 사용 하 여 코드에서 액세스할 수 있는 스크립트에 명령줄 인수로 나머지 인수를 취급 하도록 지시 하는 데 사용 **fsi.CommandLineArgs**합니다.|
 |**--checked**[**+**&#124;**-**]|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--codepage:&lt;int&gt;**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
+|**--consolecolors**[**+**&#124;**-**]|경고 출력 및 오류 메시지를 색입니다.|
 |**--crossoptimize**[**+**&#124;**-**]|크로스 모듈을 최적화를 사용 하지 않도록 설정 하거나 사용 합니다.|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**]|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--define:&lt;string&gt;**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
+|**--deterministic**[**+**&#124;**-**]|결정적 어셈블리 (모듈 버전 GUID 및 타임 스탬프 포함)를 생성 합니다.|
 |**--exec**|F # interactive는 명령줄에 지정 된 스크립트 파일을 실행 하거나 파일을 로드 한 후 종료를 지시 합니다.|
 |**--fullpaths**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--gui**[**+**&#124;**-**]|Windows Forms 이벤트 루프를 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 사용입니다.|
@@ -61,7 +63,10 @@ F # Interactive 옵션 인수에 목록이, 목록 요소는 세미콜론으로 
 |**--quotations-debug**|F # 따옴표로 묶인 리터럴을에서 파생 된 및 정의 반영 하는 식에 대 한 추가 정보를 디버깅 내보낼 수를 지정 합니다. 디버그 정보는 F # 식 트리 노드에 대 한 사용자 지정 특성으로 추가 됩니다. 참조 [코드 인용](code-quotations.md) 및 [Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)합니다.|
 |**--readline**[**+**&#124;**-**]|대화형 모드에서 탭 완성 기능을 사용 하지 않도록 설정 하거나 사용 합니다.|
 |**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
+|**--shadowcopyreferences**[**+**&#124;**-**]|F # Interactive 프로세스에 의해 잠겨 있는 참조를 방지 합니다.|
+|**--simpleresolution**|MSBuild 확인이 아니라 디렉터리 기반의 규칙을 사용 하 여 어셈블리 참조를 확인 합니다.|
 |**--tailcalls**[**+**&#124;**-**]|스택 프레임을 마무리 재귀 함수에 대 한 다시 사용할 수는 꼬리 IL 명령 사용 하지 않도록 설정 하거나 사용 합니다. 기본적으로 이 옵션은 사용하도록 설정됩니다.|
+|**--targetprofile:&lt;string&gt;**|이 어셈블리의 대상 프레임 워크 프로필을 지정합니다. 유효한 값은 mscorlib, netcore 또는 netstandard입니다.  기본값은 mscorlib입니다.|
 |**--use:&lt;filename&gt;**|인터프리터 초기 입력으로 시작할 때 지정된 된 파일을 사용 하도록 지시 합니다.|
 |**--utf8output**|Fsc.exe 컴파일러 옵션와 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--warn:&lt;warning-level&gt;**|와 동일는 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
