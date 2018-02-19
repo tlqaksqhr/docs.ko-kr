@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.workload: dotnetcore
-ms.openlocfilehash: d3c5dde443f848831f7c0585633339c35213357b
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 913d3869559b10af508e695a06d06021f8f90175
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
@@ -242,7 +243,7 @@ Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of th
 4. .NET Core를 설치합니다.
 
    ```bash
-   sudo apt-get install dotnet-sdk-2.1.3
+   sudo apt-get install dotnet-sdk-2.1.4
    ```
 
 4. `dotnet --version` 명령을 실행하여 설치 성공을 증명합니다.
