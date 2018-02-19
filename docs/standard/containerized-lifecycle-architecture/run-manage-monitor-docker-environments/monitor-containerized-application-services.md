@@ -42,7 +42,7 @@ Docker, 관련 된 수명 주기 이벤트 및 Docker 컨테이너에 Applicatio
 
 Application Insights 리소스를 만들려면 뒤에 오는 목록에 표시 되는 문서에 대 한 지침을 따르십시오. Azure 포털에서 필요한 스크립트를 만듭니다.
 
--   **Application Insights에서 Docker 응용 프로그램 모니터링:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker  ](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **Application Insights에서 Docker 응용 프로그램 모니터링:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Docker 허브 및 Github에서 응용 프로그램 통찰력 Docker 이미지:**  
 [https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) and <https://github.com/Microsoft/ApplicationInsights-Docker>
