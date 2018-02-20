@@ -1,73 +1,99 @@
 ---
-title: "#<a name=\"if-c-reference\"></a>if(C# 참조)"
-ms.date: 07/20/2015
+title: "#if 전처리기 지시문(C# 참조)"
+ms.date: 02/13/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '#if'
-helpviewer_keywords: '#if directive [C#]'
+f1_keywords:
+- '#if'
+helpviewer_keywords:
+- '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e4e3b79f64f5190d48d7248726ecdf031ad685e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 710452d6fddea239cb2e65901fd5ce56d6be699f
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="if-c-reference"></a>#if(C# 참조)
-C# 컴파일러는 `#if` 지시문과 [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다.  C 및 C++와 달리 기호에 숫자 값을 할당할 수는 없습니다. C#의 #if 문은 부울이며 기호가 정의되었는지 여부만을 테스트합니다. 예를 들면 다음과 같습니다.  
-  
+
+C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다. C 및 C++와 달리, 기호에 숫자 값을 할당할 수 없습니다. C#의 #if 문은 부울이고 기호가 정의되었는지 여부만 테스트합니다. 예:
+
 ```csharp
-#define DEBUG  
-// ...  
-#if DEBUG  
-    Console.WriteLine("Debug version");  
-#endif  
-```  
-  
- [==](../../../csharp/language-reference/operators/equality-comparison-operator.md)(같음), [!=](../../../csharp/language-reference/operators/not-equal-operator.md)(같지 않음) 연산자는 [true](../../../csharp/language-reference/keywords/true.md) 또는 [false](../../../csharp/language-reference/keywords/false.md)를 테스트할 때만 사용할 수 있습니다. true가 반환되면 기호가 정의된 것입니다. `#if DEBUG` 문의 의미는 `#if (DEBUG == true)`와 같습니다. [&&](../../../csharp/language-reference/operators/conditional-and-operator.md)(및), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md)(또는), [!](../../../csharp/language-reference/operators/logical-negation-operator.md)(아님) 연산자를 사용하면 여러 기호가 정의되었는지 여부를 평가할 수 있습니다. 기호와 연산자를 괄호로 묶을 수도 있습니다.  
-  
-## <a name="remarks"></a>설명  
- `#if`를 [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 및 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 지시문과 함께 사용하면 하나 이상의 기호 유무에 따라 코드를 포함하거나 제거할 수 있습니다. 따라서 코드를 디버그 빌드용으로 컴파일하거나 특정 구성용으로 컴파일할 때 유용할 수 있습니다.  
-  
- `#if` 지시문으로 시작되는 조건부 지시문은 `#endif` 지시문을 사용하여 명시적으로 종료해야 합니다.  
-  
- `#define`을 사용하면 기호를 정의할 수 있습니다. 그러면 `#if` 지시문으로 전달되는 식으로 해당 기호를 사용하는 경우 식이 `true`로 평가됩니다.  
-  
- [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 컴파일러 옵션으로 기호를 정의할 수도 있습니다. [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)로 기호 정의를 해제할 수 있습니다.  
-  
- `/define` 또는 `#define`으로 정의하는 기호는 동일한 이름의 변수와 충돌하지 않습니다. 즉, 변수 이름이 전처리기 지시문에 전달되지 않아야 하며 전처리기 지시문을 통해서만 기호를 평가할 수 있습니다.  
-  
- `#define`을 사용하여 만든 기호의 범위는 해당 기호가 정의된 파일입니다.  
-  
-## <a name="example"></a>예제  
-  
+#if DEBUG
+    Console.WriteLine("Debug version");
+#endif
+```
+
+[==](../operators/equality-comparison-operator.md)(같음) 및 [!=](../operators/not-equal-operator.md)(같지 않음) 연산자는 [true](../keywords/true.md) 또는 [false](../keywords/false.md)를 테스트할 때만 사용할 수 있습니다. true가 반환되면 기호가 정의된 것입니다. `#if DEBUG` 문의 의미는 `#if (DEBUG == true)`와 같습니다. [&&](../operators/conditional-and-operator.md)(및), [&#124;&#124;](../operators/conditional-or-operator.md)(또는), [!](../operators/logical-negation-operator.md)(아님) 연산자를 사용하면 여러 기호가 정의되었는지 여부를 평가할 수 있습니다. 기호와 연산자를 괄호로 묶을 수도 있습니다.
+
+## <a name="remarks"></a>설명
+
+`#if`를 [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) 및 [#undef](preprocessor-undef.md) 지시문과 함께 사용하면 하나 이상의 기호 유무에 따라 코드를 포함하거나 제거할 수 있습니다. 따라서 코드를 디버그 빌드용으로 컴파일하거나 특정 구성용으로 컴파일할 때 유용할 수 있습니다.
+
+`#if` 지시문으로 시작되는 조건부 지시문은 `#endif` 지시문을 사용하여 명시적으로 종료해야 합니다.
+
+`#define`을 사용하여 기호를 정의할 수 있습니다. 그러면 `#if` 지시문으로 전달되는 식으로 해당 기호를 사용하는 경우 식이 `true`로 평가됩니다.
+
+[/define](../compiler-options/define-compiler-option.md) 컴파일러 옵션으로 기호를 정의할 수도 있습니다. [#undef](preprocessor-undef.md)로 기호 정의를 해제할 수 있습니다.
+
+`/define` 또는 `#define`으로 정의하는 기호는 동일한 이름의 변수와 충돌하지 않습니다. 즉, 변수 이름이 전처리기 지시문에 전달되지 않아야 하며 전처리기 지시문을 통해서만 기호를 평가할 수 있습니다.
+
+`#define`을 사용하여 만든 기호의 범위는 해당 기호가 정의된 파일입니다.
+
+빌드 시스템은 여러 [대상 프레임워크](../../../standard/frameworks.md)를 나타내는 미리 정의된 전처리기 기호도 인식합니다. 둘 이상의 .NET 구현 또는 버전을 대상으로 지정할 수 있는 응용 프로그램을 만들 때 유용합니다.
+
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+
+기타 미리 정의된 기호에는 DEBUG와 TRACE 상수가 있습니다. `#define`을 사용하여 프로젝트에 설정된 값을 재정의할 수 있습니다. 예를 들어 DEBUG 기호는 빌드 구성 특성(“디버그” 또는 “릴리스” 모드)에 따라 자동으로 설정됩니다.
+
+## <a name="examples"></a>예제
+
+다음 예제에서는 파일에 MYTEST 기호를 정의한 다음 MYTEST 및 DEBUG 기호의 값을 테스트하는 방법을 보여 줍니다. 이 예제의 출력은 디버그 구성 모드에서 프로젝트를 빌드했는지, 릴리스 구성 모드에서 프로젝트를 빌드했는지에 따라 다릅니다.
+
 ```csharp
-// preprocessor_if.cs  
-#define DEBUG
-#define MYTEST  
-using System;  
-public class MyClass   
-{  
-    static void Main()   
-    {  
-#if (DEBUG && !MYTEST)  
-        Console.WriteLine("DEBUG is defined");  
-#elif (!DEBUG && MYTEST)  
-        Console.WriteLine("MYTEST is defined");  
-#elif (DEBUG && MYTEST)  
+#define MYTEST
+using System;
+public class MyClass
+{
+    static void Main()
+    {
+#if (DEBUG && !MYTEST)
+        Console.WriteLine("DEBUG is defined");
+#elif (!DEBUG && MYTEST)
+        Console.WriteLine("MYTEST is defined");
+#elif (DEBUG && MYTEST)
         Console.WriteLine("DEBUG and MYTEST are defined");  
-#else  
-        Console.WriteLine("DEBUG and MYTEST are not defined");  
-#endif  
-    }  
-}  
-```  
-  
- **DEBUG and MYTEST are defined**  
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
- [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
+#else
+        Console.WriteLine("DEBUG and MYTEST are not defined");
+#endif
+    }
+}
+```
+
+다음 예제에서는 가능한 경우 새 API를 사용할 수 있도록 여러 대상 프레임워크에 대해 테스트하는 방법을 보여 줍니다.
+
+```csharp
+public class MyClass
+{
+    static void Main()
+    {
+#if NET40
+        WebClient _client = new WebClient();
+#else
+        HttpClient _client = new HttpClient();
+#endif
+    }
+    //...
+}
+```
+
+## <a name="see-also"></a>참고 항목
+
+[C# 참조](../../../csharp/language-reference/index.md)  
+[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+[C# 전처리기 지시문](index.md)  
+[방법: 추적 및 디버그를 사용한 조건부 컴파일](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
