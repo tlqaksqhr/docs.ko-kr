@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: b3797415-3e49-4f8a-a8ee-fa614c5721aa
-ms.openlocfilehash: 88b4590a4323e75949c1915503b51793283792de
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 14c629d6223584113af47636495be61decca02ad
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="statically-resolved-type-parameters"></a>정적으로 확인된 형식 매개 변수
 
@@ -53,8 +53,8 @@ F # 언어에서 두 가지 종류의 형식 매개 변수가 있습니다. 첫 
 
 ```fsharp
 ^a -> ^c -> ^d
-when (^a or ^b) : (static member (+) : ^a * ^b -> ^d) and
-(^a or ^c) : (static member (+) : ^a * ^c -> ^b)
+when (^a or ^b) : (static member ( + ) : ^a * ^b -> ^d) and
+(^a or ^c) : (static member ( * ) : ^a * ^c -> ^b)
 ```
 
 출력은 다음과 같습니다.

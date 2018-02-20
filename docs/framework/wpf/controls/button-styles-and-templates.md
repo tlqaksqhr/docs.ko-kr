@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7bea309cea0ed6d21b747f31794f1ebb440bf102
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d783b3141463ca2c74ddd649848ea49e154415b6
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="button-styles-and-templates"></a>Button 스타일 및 템플릿
 이 항목에서는 스타일 및 서식 파일에 대 한 설명의 <xref:System.Windows.Controls.Button> 제어 합니다. 기본값을 수정할 수 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
@@ -45,8 +47,8 @@ ms.lasthandoff: 12/22/2017
 |포커스 있음|FocusStates|컨트롤에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|컨트롤에 포커스가 없습니다.|  
 |유효|ValidationStates|컨트롤이 사용 하는 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 있습니다.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 없으면 합니다.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 컨트롤에 포커스가 있습니다.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 컨트롤에 포커스가 없으면 및 합니다.|  
   
 ## <a name="button-controltemplate-example"></a>단추 ControlTemplate 예제  
  다음 예제에서는 정의 하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.Button> 제어 합니다.  
