@@ -6,7 +6,7 @@
       tocHref: /dotnet/
       topicHref: /dotnet/index
       items:
-        - name: API 참조
+        - name: .NET API 브라우저
           tocHref: /dotnet/api/
           topicHref: /dotnet/api/index
         - name: .NET 가이드

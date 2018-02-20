@@ -1,5 +1,4 @@
 # [문자열](index.md)
-## [방법: 여러 문자열 연결](how-to-concatenate-multiple-strings.md)
 ## [방법: 문자열 내용 수정](how-to-modify-string-contents.md)
 ## [방법: 문자열 비교](how-to-compare-strings.md)
 ## [방법: 문자열 메서드를 사용하여 문자열 검색](how-to-search-strings-using-string-methods.md)
