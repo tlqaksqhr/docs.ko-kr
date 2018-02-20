@@ -10,7 +10,7 @@
 ### [어셈블리 및 Side-by-Side 실행](assemblies-and-side-by-side-execution.md)
 ## [응용 프로그램 도메인](application-domains.md)
 ## [응용 프로그램 도메인 및 어셈블리 방법 항목](application-domains-and-assemblies-how-to-topics.md)
-## [응용 프로그램 도메인 사용](application-domains.md)
+## [응용 프로그램 도메인 사용](use.md)
 ### [방법: 응용 프로그램 도메인 만들기](how-to-create-an-application-domain.md)
 ### [방법: 응용 프로그램 도메인 언로드](how-to-unload-an-application-domain.md)
 ### [방법: 응용 프로그램 도메인 구성](how-to-configure-an-application-domain.md)
