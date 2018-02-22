@@ -3,17 +3,18 @@ title: ".NET Core 버전 관리"
 description: ".NET Core 버전 관리의 작동 방식을 이해합니다."
 author: bleroy
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 369d280268123a69ae9458a2c47e45396728deb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-core-versioning"></a>.NET Core 버전 관리
 
@@ -23,9 +24,13 @@ ms.lasthandoff: 12/23/2017
 
 .NET Core에는 독립적으로 버전 관리가 이루어지는 작동 부분이 많습니다. 그러나 .NET Core 2.0부터는 최상위 버전 번호를 이해하기 쉬우므로 “.NET Core”의 버전임을 누구나 알 수 있습니다. 이 문서의 나머지 부분에서는 모든 부품의 버전 관리에 대해 구체적으로 설명합니다. 패키지 관리자인 경우에는 이러한 세부 정보가 중요할 수 있습니다.
 
+> [!IMPORTANT]
+> 이 항목에서 설명하는 버전 관리 정보는 현재 버전의 .NET Core SDK 및 런타임에 적용되지 않습니다.
+> 향후 릴리스에서 버전 체계가 변경됩니다. [dotnet/designs](https://github.com/dotnet/designs/pull/29) 리포지토리에서 현재 제안을 확인할 수 있습니다.
+
 ## <a name="versioning-details"></a>버전 관리 정보
 
-.NET Core 2.0부터는 다운로드 파일 이름에 단일 버전 번호가 표시됩니다. 다음 버전 번호가 통합되었습니다.
+.NET Core 2.0에서는 다운로드 파일 이름에 단일 버전 번호가 표시됩니다. 다음 버전 번호가 통합되었습니다.
 
 * 공유 프레임워크 및 관련된 런타임
 * .NET Core SDK 및 관련된 .NET Core CLI
@@ -35,8 +40,8 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="installers"></a>설치 관리자
 
-.NET Core 2.0부터는 [일별 빌드](https://github.com/dotnet/core-setup#daily-builds) 및 [Microsoft 릴리스](https://www.microsoft.com/net/download/core)의 다운로드가 보다 이해하기 쉬운 새 명명 체계를 따릅니다.
-이 다운로드의 설치 관리자 UI는 설치되는 구성 요소의 이름과 버전을 명확히 제공하도록 수정되었습니다. 특히 제목은 다운로드의 파일 이름에 있는 것과 동일한 버전 번호를 표시합니다.
+.NET Core 2.0에서는 [일별 빌드](https://github.com/dotnet/core-setup#daily-builds) 및 [릴리스](https://www.microsoft.com/net/download/core) 다운로드가 이해하기 쉬운 새 명명 체계를 따릅니다.
+이러한 다운로드의 설치 관리자 UI도 설치되는 구성 요소의 이름과 버전을 명확히 제공하도록 수정되었습니다. 특히 제목은 다운로드의 파일 이름에 있는 것과 동일한 버전 번호를 표시합니다.
 
 #### <a name="file-name-format"></a>파일 이름 형식
 
@@ -88,7 +93,7 @@ Microsoft가 아닌 엔터티가 .NET Core를 배포할 수 있습니다. 특히
 #### <a name="minimum-package-set"></a>최소 패키지 집합
 
 * `dotnet-runtime-[major].[minor]`: 지정된 버전의 런타임(패키지 관리자에서는 지정된 주+부 조합의 최신 패치 버전만 사용 가능해야 함). 새 패치 버전은 패키지를 업데이트하지만 새 주 버전 또는 부 버전은 별도의 패키지입니다.
- 
+
   **종속성**: `dotnet-host`
 
 * `dotnet-sdk`: 최신 SDK. `update`는 주 버전, 부 버전 및 패치 버전을 롤포워드합니다.
@@ -118,7 +123,7 @@ Microsoft가 아닌 엔터티가 .NET Core를 배포할 수 있습니다. 특히
 
 런타임 대신 SDK 버전을 나타내기 위해 SDK 태그를 업데이트해야 합니다.
 
-.NET Core 도구를 수정해야 하지만 기존의 런타임을 다시 출시해야 할 수도 있습니다. 이 경우 SDK 버전이 예를 들어 2.1.2로 높아지면 다음에 출시될 때 런타임이 이에 따라 높아집니다(즉, 런타임과 SDK가 2.1.3으로 출시됨).
+.NET Core CLI 도구(SDK에 포함됨)가 수정되었지만 기존 런타임과 함께 다시 출시될 수도 있습니다. 이 경우 SDK 버전이 증가하고(예: 2.1.2로 증가), 다음에 출시될 때 런타임이 해당 버전을 따라갑니다(예: 다음에 런타임과 SDK가 둘 다 2.1.3으로 출시됨).
 
 ## <a name="semantic-versioning"></a>유의적 버전
 
@@ -128,26 +133,29 @@ Microsoft가 아닌 엔터티가 .NET Core를 배포할 수 있습니다. 특히
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-선택적 `PRERELEASE` 및 `BUILDNUMBER` 부분은 지원되는 버전의 일부가 되지 않으며, 소스 대상에서 로컬로 빌드되는 야간 빌드 및 지원되지 않는 미리 보기 릴리스에만 존재합니다.
+선택 사항인 `PRERELEASE` 및 `BUILDNUMBER` 부분은 지원되는 릴리스에 포함되지 않으며, 야간 빌드, 소스 대상에서의 로컬 빌드 및 지원되지 않는 미리 보기 릴리스에만 존재합니다.
 
 ### <a name="how-version-numbers-are-incremented"></a>버전 번호는 어떻게 높아지나요?
 
 다음 경우에는 `MAJOR`가 증가합니다.
-  - 이전 버전이 더 이상 지원되지 않는 경우
-  - 기존 종속성의 최신 `MAJOR` 버전이 채택된 경우
-  - 호환성 쿼크의 기본 설정이 “off”로 변경된 경우
+
+- 이전 버전이 더 이상 지원되지 않는 경우
+- 기존 종속성의 최신 `MAJOR` 버전이 채택된 경우
+- 호환성 쿼크의 기본 설정이 “off”로 변경된 경우
 
 다음 경우에는 `MINOR`가 증가합니다.
-  - 공용 API 노출 영역이 추가된 경우
-  - 새 동작이 추가된 경우
-  - 기존 종속성의 최신 `MINOR` 버전이 채택된 경우
-  - 새 종속성이 도입된 경우
-  
+
+- 공용 API 노출 영역이 추가된 경우
+- 새 동작이 추가된 경우
+- 기존 종속성의 최신 `MINOR` 버전이 채택된 경우
+- 새 종속성이 도입된 경우
+
 다음 경우에는 `PATCH`가 증가합니다.
-  - 버그 수정이 이루어진 경우
-  - 최신 플랫폼에 대한 지원이 추가된 경우
-  - 기존 종속성의 최신 `PATCH` 버전이 채택된 경우
-  - 이전의 경우와 맞지 않는 다른 변경 사항이 있는 경우
+
+- 버그 수정이 이루어진 경우
+- 최신 플랫폼에 대한 지원이 추가된 경우
+- 기존 종속성의 최신 `PATCH` 버전이 채택된 경우
+- 위 경우 중 하나에 해당하지 않는 다른 변경 내용이 있는 경우
 
 여러 가지 변경이 이루어진 경우에는 개별 변경의 영향을 받는 가장 높은 요소가 증가되고 다음은 0으로 다시 설정됩니다. 예를 들어 `MAJOR`가 증가하면 `MINOR` 및 `PATCH`는 0으로 다시 설정됩니다. `MINOR`가 증가하면 `PATCH`는 0으로 다시 설정되지만 `MAJOR`는 변경되지 않습니다.
 
@@ -176,7 +184,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET core는 다음 부분으로 구성됩니다.
 
-- 호스트(muxer라고도 함): `hostfxr` 정책 라이브러리를 포함한 `dotnet.exe`
+- 호스트: *dotnet.exe*(프레임워크 종속 응용 프로그램) 또는 *\<appname>.exe*(자체 포함 응용 프로그램)
 - SDK(개발자의 컴퓨터에 필요하지만 프로덕션에는 필요하지 않은 도구 집합)
 - 런타임
 - 패키지로 배포되는 공유 프레임워크 구현. 특히 패치 버전 관리의 경우 각 패키지 버전을 독립적으로 관리합니다.
@@ -204,7 +212,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 예를 들어 .NET Core 2.1.3의 메타패키지의 `MAJOR` 및 `MINOR` 버전 번호는 모두 2.1이어야 합니다.
 
-메타패키지의 패치 버전은 참조된 패키지가 업데이트될 때마다 증가합니다. 패치 버전에는 업데이트된 프레임워크 버전이 포함되지 않습니다. 결과적으로 메타패키지의 버전 관리 체계에서는 기본 패키지의 변경 수준을 나타내지 않고 주로 API 수준을 나타내기 때문에 메타패키지는 엄격하게 SemVer 규격이 아닙니다. 
+메타패키지의 패치 버전은 참조된 패키지가 업데이트될 때마다 증가합니다. 패치 버전에는 업데이트된 프레임워크 버전이 포함되지 않습니다. 결과적으로 메타패키지의 버전 관리 체계에서는 기본 패키지의 변경 정도를 나타내지 않고 주로 API 수준의 변경 정도를 나타내기 때문에 엄밀히 말해 메타패키지는 SemVer 규격이 아닙니다.
 
 현재 .NET Core에 대한 주 메타패키지는 두 가지가 있습니다.
 
@@ -251,7 +259,8 @@ GitHub의 .NET Core 리포지토리에는 매일 많은 라이브러리의 새�
 다양한 메타패키지가 업데이트된 .NET Core 라이브러리 패키지를 참조하도록 업데이트됩니다. [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) 메타패키지 및 `netcore` 대상 프레임워크는 새 릴리스의 `MAJOR` 버전 번호와 일치하는 주 업데이트로 버전 관리됩니다.
 
 ## <a name="see-also"></a>참고 항목
-[대상 프레임워크](../../standard/frameworks.md)   
-[.NET Core 배포 패키징](../build/distribution-packaging.md)   
-[.NET Core 지원 수명 주기 팩트 시트](https://www.microsoft.com/net/core/support)   
-[.NET Core 2+ 버전 바인딩](https://github.com/dotnet/designs/issues/3)   
+
+[대상 프레임워크](../../standard/frameworks.md)  
+[.NET Core 배포 패키징](../build/distribution-packaging.md)  
+[.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)(.NET Core 지원 수명 주기 팩트 시트)  
+[.NET Core 2+ 버전 바인딩](https://github.com/dotnet/designs/issues/3)  
