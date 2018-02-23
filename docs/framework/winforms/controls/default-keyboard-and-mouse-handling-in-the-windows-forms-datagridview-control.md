@@ -1,12 +1,9 @@
 ---
-title: "Windows Forms DataGridView 컨트롤에서의 기본 키보드 및 마우스 처리"
-ms.custom: 
-ms.date: 03/30/2017
+title: "기본 키보드 및 마우스 Windows Forms DataGridView 컨트롤에서 처리"
+ms.date: 02/13/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
@@ -17,18 +14,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
-# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서의 기본 키보드 및 마우스 처리
+# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>기본 키보드 및 마우스 Windows Forms DataGridView 컨트롤에서 처리
+
 다음 표에서 사용자 수와 상호 작용 하는 방법을 설명는 <xref:System.Windows.Forms.DataGridView> 키보드와 마우스를 통해 제어 합니다.  
   
 > [!NOTE]
@@ -56,7 +54,8 @@ ms.lasthandoff: 12/22/2017
 |CTRL + HOME|컨트롤의 첫 번째 셀으로 포커스를 이동합니다.|  
 |CTRL + END|컨트롤의 마지막 셀으로 포커스를 이동합니다.|  
 |CTRL + PAGE DOWN/위로|PAGE UP 또는 PAGE DOWN와 동일 합니다.|  
-|F2|하는 경우 현재 셀을 셀 편집 모드로 전환 된 <xref:System.Windows.Forms.DataGridView.EditMode%2A> 속성 값은 <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> 또는 <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>합니다.|  
+|F2|하는 경우 현재 셀을 셀 편집 모드로 전환 된 <xref:System.Windows.Forms.DataGridView.EditMode%2A> 속성 값은 <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> 또는 <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>합니다.|
+|F3|현재 열을 정렬 하는 경우는 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> 속성 값은 <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>합니다. 패턴은 현재 열 머리글을 클릭 한 것과 같습니다. .NET Framework 4.7.2 이후 사용할 수 있습니다. 이 기능을 사용 하려면 응용 프로그램이.NET Framework 4.7.2 또는 이상 버전을 대상 하거나 명시적 AppContext 스위치를 사용 하는 내게 필요한 옵션 기능 향상으로 선택 해야 합니다.|  
 |F4|현재 셀이 있으면는 <xref:System.Windows.Forms.DataGridViewComboBoxCell>셀을 편집 모드로 전환 하 고 드롭다운 목록을 표시 합니다.|  
 |ALT + 위쪽/아래쪽 화살표|현재 셀이 있으면는 <xref:System.Windows.Forms.DataGridViewComboBoxCell>셀을 편집 모드로 전환 하 고 드롭다운 목록을 표시 합니다.|  
 |스페이스바|현재 셀이 있으면는 <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>, 또는 <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, 발생는 <xref:System.Windows.Forms.DataGridView.CellClick> 및 <xref:System.Windows.Forms.DataGridView.CellContentClick> 이벤트입니다. 현재 셀이 있으면는 <xref:System.Windows.Forms.DataGridViewButtonCell>, 단추를 누를 수도 있습니다. 현재 셀이 있으면는 <xref:System.Windows.Forms.DataGridViewCheckBoxCell>도 선택 상태를 변경 합니다.|  
@@ -67,7 +66,8 @@ ms.lasthandoff: 12/22/2017
 |Ctrl+Enter|포커스를 이동 하지 않고 현재 셀의 모든 변경 사항을 커밋합니다. 또한 커밋으로 컨트롤이 편집 또는 가상 모드를 지 원하는 데이터 소스에 바인딩된 경우 현재 행에 변경 내용을 구현 된 행 수준의 커밋 범위.|  
 |Ctrl+0|가 입력 한 <xref:System.DBNull.Value?displayProperty=nameWithType> 값이 현재 셀에 셀을 편집할 수 있습니다. 기본적으로 표시에 대 한 값을 <xref:System.DBNull> 셀 값의 값이는 <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 속성은 <xref:System.Windows.Forms.DataGridViewCellStyle> 현재 셀에 적용 합니다.|  
   
-### <a name="selection-keys"></a>선택 키  
+### <a name="selection-keys"></a>선택 키
+
  경우는 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 속성이 `false` 및 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 속성이로 설정 되어 <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, 새로운 셀을 선택 항목을 바꿀 탐색 키를 사용 하 여 현재 셀을 변경 합니다. SHIFT, CTRL 및 ALT 키가이 동작에 영향을 주지 않습니다.  
   
  경우는 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 로 설정 된 <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> 또는 <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, 동일한 동작이 수행 되지만 다음과 같은 추가 합니다.  
@@ -83,9 +83,9 @@ ms.lasthandoff: 12/22/2017
   
  경우 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 로 설정 된 `true` 및 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 로 설정 된 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> 또는 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, 앵커 셀과 현재 셀의 동작은 동일 하지만 전체 행 또는 열만 선택 하거나 선택 합니다.  
   
-## <a name="default-mouse-handling"></a>기본 마우스 처리  
+## <a name="default-mouse-handling"></a>기본 마우스 처리
   
-### <a name="basic-mouse-handling"></a>기본 마우스 처리  
+### <a name="basic-mouse-handling"></a>기본 마우스 처리
   
 > [!NOTE]
 >  현재 셀이 변경 항상 마우스 왼쪽된 단추를 사용 하 여 셀을 클릭 합니다. 마우스 오른쪽 단추를 사용 하 여 셀을 클릭 하면 가능한 경우 바로 가기 메뉴에서 열립니다.  
@@ -97,7 +97,8 @@ ms.lasthandoff: 12/22/2017
 |마우스 왼쪽된 단추 클릭|발생 된 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=nameWithType> 이벤트|  
 |열 머리글 셀에 끌어다 마우스 왼쪽된 단추, 누름|경우는 <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 속성은 `true`, 새로운 위치에 놓을 수 있도록 열을 이동 합니다.|  
   
-### <a name="mouse-selection"></a>마우스 선택  
+### <a name="mouse-selection"></a>마우스 선택
+
  선택 동작이 없습니다 마우스 가운데 단추 또는 마우스 휠을와 관련이 있습니다.  
   
  경우는 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 속성이 `false` 및 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 속성이로 설정 되어 <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, 다음과 같은 동작이 발생 합니다.  
@@ -121,6 +122,7 @@ ms.lasthandoff: 12/22/2017
   
  경우 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 로 설정 된 `true` 및 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 로 설정 된 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> 또는 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, 해당 경우에 전체 행을 제외 하 고 동일한 방식으로 작동 하며 SHIFT 또는 ctrl 키를 누른 채 셀을 클릭 하면 입력 한 열에 영향을 받습니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.DataGridView>  
+## <a name="see-also"></a>참고 항목
+
+<xref:System.Windows.Forms.DataGridView>  
  [DataGridView 컨트롤](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

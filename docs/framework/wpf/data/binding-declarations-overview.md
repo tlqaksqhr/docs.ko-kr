@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="binding-declarations-overview"></a>바인딩 선언 개요
 이 항목에서는 바인딩을 선언할 수 있는 여러 가지 방법을 설명합니다.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
  태그에서 바인딩 선언 문자열을 만들 때는 대상 개체의 특정 종속성 속성에 연결해야 합니다. 다음 예제에서는 바인딩하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 속성 바인딩 확장을 사용 하 여, 지정 하는 <xref:System.Windows.Data.Binding.Source%2A> 및 <xref:System.Windows.Data.Binding.Path%2A> 속성입니다.  
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
  대부분의 속성을 지정할 수는 <xref:System.Windows.Data.Binding> 이러한 방식으로 클래스입니다. 목록이 구문과 바인딩 확장에 대 한 자세한 내용은 <xref:System.Windows.Data.Binding> 바인딩 확장을 사용 하 여 설정할 수 없는 속성 참조는 [바인딩 태그 확장](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) 개요입니다.  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding 및 PriorityBinding  
- <xref:System.Windows.Data.MultiBinding>및 <xref:System.Windows.Data.PriorityBinding> XAML 확장 구문을 지원 하지 않습니다. 따라서 선언 하는 경우 개체 요소 구문을 사용 해야 하는 <xref:System.Windows.Data.MultiBinding> 또는 <xref:System.Windows.Data.PriorityBinding> XAML에서 합니다.  
+ <xref:System.Windows.Data.MultiBinding> 및 <xref:System.Windows.Data.PriorityBinding> XAML 확장 구문을 지원 하지 않습니다. 따라서 선언 하는 경우 개체 요소 구문을 사용 해야 하는 <xref:System.Windows.Data.MultiBinding> 또는 <xref:System.Windows.Data.PriorityBinding> XAML에서 합니다.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>코드에서 바인딩 만들기  
@@ -77,8 +79,6 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
-[!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
-[!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
  바인딩하는 개체가 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement> 호출할 수는 `SetBinding` 메서드를 사용 하는 대신 직접 개체 <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>합니다. 예제는 [코드에서 바인딩 만들기](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)를 참조하세요.  
   

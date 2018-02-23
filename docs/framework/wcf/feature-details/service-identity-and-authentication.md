@@ -5,29 +5,32 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: authentication [WCF], specifying the identity of a service
+helpviewer_keywords:
+- authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b741e421a8773e1a4b2d2ab7da5e119073e861ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="service-identity-and-authentication"></a>서비스 ID 및 인증
 서비스의 *끝점 id*서비스 설명 언어 WSDL (웹 서비스)에서 생성 된 값입니다. 모든 클라이언트에 전파되는 이 값은 서비스를 인증하는 데 사용합니다. 클라이언트가 끝점에 대한 통신을 시작하고 서비스가 클라이언트에 대해 인증되면 클라이언트는 끝점 ID 값과 끝점 인증 프로세스에서 반환된 실제 값을 비교합니다. 두 값이 일치하는 경우 클라이언트는 예상 서비스 끝점에 연결됩니다. 이 역할에 대 한 보호 *피싱* 하면 클라이언트가 악성 서비스에서 호스팅된 끝점에 리디렉션되지 않도록 하 여 합니다.  
   
- 참조 id 설정이 보여 주는 샘플 응용 프로그램, [Service Identity 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]끝점 및 끝점 주소 참조 [주소](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)합니다.  
+ 참조 id 설정이 보여 주는 샘플 응용 프로그램, [Service Identity 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 끝점 및 끝점 주소 참조 [주소](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)합니다.  
   
 > [!NOTE]
 >  인증을 위해 NTLM(NT LanMan)을 사용하는 경우 NTLM에서 클라이언트는 서버를 인증할 수 없기 때문에 서비스 ID가 확인되지 않습니다. NTLM은 컴퓨터가 Windows 작업 그룹의 일부이거나 Kerberos 인증을 지원하지 않는 이전 버전의 Windows를 실해하는 경우 사용됩니다.  
@@ -45,22 +48,22 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.EndpointAddress.Identity%2A> 클래스의 <xref:System.ServiceModel.EndpointAddress> 속성은 클라이언트에서 호출한 서비스의 ID를 나타냅니다. 서비스는 메타데이터에 <xref:System.ServiceModel.EndpointAddress.Identity%2A>를 게시합니다. 클라이언트 개발자가 실행 하는 경우는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스 끝점에 대해 생성 된 구성에는 서비스의 값이 포함 된 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 속성입니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 인프라는 보안이 설정된 상태로 구성된 경우 서비스가 지정된 ID를 소유하는지 확인합니다.  
   
 > [!IMPORTANT]
->  메타데이터에는 서비스의 예상 ID가 포함되어 있기 때문에 서비스에 대한 HTTPS 끝점을 만드는 것과 같이 보안을 설정하여 서비스 메타데이터를 노출하는 것이 좋습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][하는 방법: 메타 데이터 끝점 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)합니다.  
+>  메타데이터에는 서비스의 예상 ID가 포함되어 있기 때문에 서비스에 대한 HTTPS 끝점을 만드는 것과 같이 보안을 설정하여 서비스 메타데이터를 노출하는 것이 좋습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [방법: 메타 데이터 끝점 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)합니다.  
   
 ## <a name="identity-types"></a>ID 형식  
- 서비스에서는 다섯 가지 형식의 ID를 제공합니다. 각 ID 형식은 구성의 `<identity>` 요소 내에 포함될 수 있는 요소에 해당합니다. 사용되는 형식은 시나리오 및 서비스 보안 요구 사항에 따라 다릅니다. 다음 표에서는 각 ID 형식에 대해 설명합니다.  
+ 서비스 id의 6 개의 형식을 제공할 수 있습니다. 각 ID 형식은 구성의 `<identity>` 요소 내에 포함될 수 있는 요소에 해당합니다. 사용되는 형식은 시나리오 및 서비스 보안 요구 사항에 따라 다릅니다. 다음 표에서는 각 ID 형식에 대해 설명합니다.  
   
 |ID 형식|설명|일반적인 시나리오|  
 |-------------------|-----------------|----------------------|  
 |DNS(Domain Name System)|이 요소를 X.509 인증서 또는 Windows 계정과 함께 사용합니다. 자격 증명에 지정된 DNS 이름과 이 요소에 지정된 값을 비교합니다.|DNS 검사를 사용하면 DNS 또는 주체 이름을 가진 인증서를 사용할 수 있습니다. DNS 또는 주체 이름이 같은 인증서를 다시 발급하는 경우 ID 검사가 계속 유효합니다. 인증서를 다시 발급하면 새 RSA 키를 얻게 되지만 같은 DNS 또는 주체 이름을 유지합니다. 따라서 클라이언트는 서비스에 대한 ID 정보를 업데이트할 필요가 없습니다.|  
-|인증서. `ClientCredentialType`을 Certificate로 설정한 경우 기본값입니다.|이 요소는 클라이언트와 비교할 Base64 인코딩된 X.509 인증서 값을 지정합니다.<br /><br /> 또한 서비스를 인증할 자격 증명으로 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]를 사용하는 경우 이 요소를 사용합니다.|이 요소는 지문 값에 따라 하나의 인증서만 사용하도록 인증을 제한합니다. 이렇게 하면 고유한 지문 값을 가지므로 인증을 강화할 수 있습니다. 이 경우 "주체 이름이 같은 인증서를 다시 발급하는 경우에도 새 지문이 제공됩니다."라는 경고가 표시됩니다. 따라서 새 지문을 모르는 경우 클라이언트가 서비스의 유효성을 검사할 수 없습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]인증서의 지문을 찾기, 참조 [하는 방법: 인증서의 지문을 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.|  
+|인증서. `ClientCredentialType`을 Certificate로 설정한 경우 기본값입니다.|이 요소는 클라이언트와 비교할 Base64 인코딩된 X.509 인증서 값을 지정합니다.<br /><br /> 또한 서비스를 인증할 자격 증명으로 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]를 사용하는 경우 이 요소를 사용합니다.|이 요소는 지문 값에 따라 하나의 인증서만 사용하도록 인증을 제한합니다. 이렇게 하면 고유한 지문 값을 가지므로 인증을 강화할 수 있습니다. 이 경우 "주체 이름이 같은 인증서를 다시 발급하는 경우에도 새 지문이 제공됩니다."라는 경고가 표시됩니다. 따라서 새 지문을 모르는 경우 클라이언트가 서비스의 유효성을 검사할 수 없습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 인증서의 지문을 찾기, 참조 [하는 방법: 인증서의 지문을 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.|  
 |Certificate Reference|앞에서 설명한 Certificate 옵션과 동일합니다. 그러나 이 요소를 사용하면 인증서 이름 및 인증서를 검색할 저장소 위치를 지정할 수 있습니다.|앞에서 설명한 Certificate 시나리오와 동일합니다.<br /><br /> 인증서 저장소 위치를 변경할 수 있는 이점이 있습니다.|  
 |RSA|이 요소는 클라이언트와 비교할 RSA 키 값을 지정합니다. Certificate 옵션과 비슷하지만 인증서 지문을 사용하는 대신 인증서의 RSA 키를 사용합니다.|RSA 검사를 사용하면 RSA 키에 따라 하나의 인증서만 사용하도록 인증을 제한할 수 있습니다. 이렇게 하면 RSA 키 값이 변경된 경우 기존 클라이언트와 작동하지 않는 서비스 대신 특정 RSA 키에 대한 인증을 강화할 수 있습니다.|  
 |UPN(User Principal Name). `ClientCredentialType`이 Windows로 설정되고 시스템 계정 중 하나로 서비스 프로세스가 실행되지 않는 경우 기본값입니다.|이 요소는 서비스를 실행하는 UPN을 지정합니다. Kerberos 프로토콜 및 Id 섹션을 참조 [인증을 위해 서비스 Id 재정의](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)합니다.|이렇게 하면 서비스가 특정 Windows 사용자 계정으로 실행됩니다. 사용자 계정은 현재 로그온한 사용자이거나 특정 사용자 계정으로 실행 중인 서비스일 수 있습니다.<br /><br /> 서비스가 Active Directory 환경 내의 도메인 계정으로 실행 중인 경우 이 설정에서는 Windows Kerberos 보안을 활용합니다.|  
 |SPN(서비스 사용자 이름). `ClientCredentialType`을 Windows로 설정하고 서비스 프로세스가 LocalService, LocalSystem 또는 NetworkService의 시스템 계정 중 하나로 실행 중인 경우 기본값입니다.|이 요소는 서비스 계정과 연결된 SPN을 지정합니다. Kerberos 프로토콜 및 Id 섹션을 참조 [인증을 위해 서비스 Id 재정의](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)합니다.|이렇게 하면 SPN 및 SPN과 연결된 특정 Windows 계정이 서비스를 식별합니다.<br /><br /> Setspn.exe 도구를 사용하여 서비스 사용자 계정의 컴퓨터 계정을 연결할 수 있습니다.<br /><br /> 서비스가 시스템 계정 중 하나 또는 연결된 SPN 이름을 가진 도메인 계정으로 실행 중이고 컴퓨터가 Active Directory 환경 내의 도메인 멤버인 경우 이 설정에서는 Windows Kerberos 보안을 활용합니다.|  
   
 ## <a name="specifying-identity-at-the-service"></a>서비스에서 ID 지정  
- 일반적으로 선택한 클라이언트 자격 증명 형식에 따라 서비스 메타데이터에 노출되는 ID 형식이 결정되므로 서비스에 ID를 설정할 필요가 없습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]재정의 또는 서비스 id 지정을 참조 하는 방법 [인증을 위해 서비스 Id 재정의](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)합니다.  
+ 일반적으로 선택한 클라이언트 자격 증명 형식에 따라 서비스 메타데이터에 노출되는 ID 형식이 결정되므로 서비스에 ID를 설정할 필요가 없습니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 재정의 또는 서비스 id 지정을 참조 하는 방법 [인증을 위해 서비스 Id 재정의](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)합니다.  
   
 ## <a name="using-the-identity-element-in-configuration"></a>사용 하 여 \<identity > 구성 요소  
  이전에 `Certificate,`에 표시된 바인딩에서 클라이언트 자격 증명 형식을 변경하면 생성된 WSDL에 다음 코드에 표시된 ID 값에 대한 Base64로 serialize된 X.509 인증서가 포함됩니다. 이는 Windows 이외의 모든 클라이언트 자격 증명 형식에 대한 기본값입니다.  
@@ -120,7 +123,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]바인딩 요소의 사용자 지정 바인딩에 대 한 올바르게 스택를 참조 하는 방법 [Creating User-Defined 바인딩](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]으로 사용자 지정 바인딩을 만들기는 <xref:System.ServiceModel.Channels.SecurityBindingElement>, 참조 [하는 방법: 지정 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)합니다.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 바인딩 요소의 사용자 지정 바인딩에 대 한 올바르게 스택를 참조 하는 방법 [Creating User-Defined 바인딩](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 으로 사용자 지정 바인딩을 만들기는 <xref:System.ServiceModel.Channels.SecurityBindingElement>, 참조 [하는 방법: 지정 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  

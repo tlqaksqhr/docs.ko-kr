@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 73ed25406aa398aa35c275b20da1deee48b119ab
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: a595f255b014e08b4b5b2036a7b1940e46df268f
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-create-a-simple-binding"></a>방법: 단순 바인딩 만들기
 이 예제에서는 간단한을 만드는 방법을 보여 줍니다. <xref:System.Windows.Data.Binding>합니다.  
@@ -32,15 +32,11 @@ ms.lasthandoff: 01/29/2018
 ## <a name="example"></a>예  
  이 예에서 한는 `Person` 라는 문자열 속성이 있는 개체 `PersonName`합니다. `Person` 개체가 라는 네임 스페이스에 정의 된 `SDKSample`합니다.  
   
- 다음 예제는 `Person` 개체는 `PersonName` 속성 값이 `Joe`합니다. 이 작업은 `Resources` 섹션 및 할당 된 `x:Key`합니다.  
+ 포함 하는 강조 표시 된 줄의 `<src>` 다음 예제에서 요소를 인스턴스화하는 `Person` 개체는 `PersonName` 속성 값이 `Joe`합니다. 이 작업은 `Resources` 섹션 및 할당 된 `x:Key`합니다.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- 바인딩할는 `PersonName` 속성 다음을 수행 합니다.  
-  
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
-  
- 결과적으로 <xref:System.Windows.Controls.TextBlock> "Joe" 값으로 나타납니다.  
+ 포함 하는 강조 표시 된 줄의 `<TextBlock>` 요소 다음 바인딩합니다는 <xref:System.Windows.Controls.TextBlock> 컨트롤을 `PersonName` 속성입니다. 결과적으로 <xref:System.Windows.Controls.TextBlock> "Joe" 값으로 나타납니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)  
