@@ -1,6 +1,6 @@
 ---
-title: ".NET 컨테이너와 대상에 어느 운영 체제"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | .NET 컨테이너와 대상에 어느 운영 체제"
+title: ".NET 컨테이너에서 대상으로 지정할 OS"
+description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | .NET 컨테이너에서 대상으로 지정할 OS"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,39 +8,42 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 828ccb5e7a76f9419e80793b6cb3a6ba24f358cf
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ef7a21efa23be3a5181f08066a093abbb915c20f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="what-os-to-target-with-net-containers"></a>.NET 컨테이너와 대상에 어느 운영 체제
+# <a name="what-os-to-target-with-net-containers"></a>.NET 컨테이너에서 대상으로 지정할 OS
 
-Docker 및.NET Core와.NET Framework의 차이점을 지 원하는 운영 체제의 다양성을 고려할 때, 특정 OS 및 사용 하는 프레임 워크에 따라 특정 버전 대상 해야 있습니다. 
+Docker에서 지원하는 운영 체제의 다양함과 .NET Framework 및 .NET Core 간 차이를 고려해 보면 사용하는 프레임워크에 따라 특정 OS와 특정 버전을 목표로 해야 합니다. 
 
-Windows, Windows Server Core 또는 Windows Nano Server를 사용할 수 있습니다. 이러한 Windows 버전 필요할 수 있는.NET Framework 또는.NET Core에서 각각 다른 특성 (Windows Server Core와 Nano Server에서 Kestrel와 같은 자체 호스트 된 웹 서버에서에서 IIS)를 제공 합니다. 
+Windows의 경우 Windows Server Core 또는 Windows Nano Server를 사용할 수 있습니다. 이러한 Windows 버전은 각각 .NET Framework나 .NET Core에서 필요할 수 있는 다양한 특성(Windows Server Core의 IIS와 Nano Server의 Kestrel 같은 자체 호스팅 웹 서버)을 제공합니다. 
 
-Linux 용 여러 배포판은 사용할 수 있으며 (예: Debian).NET Docker 이미지를 공식 지원 합니다.
+Linux의 경우 공식 .NET Docker 이미지(예: Debian)에서 여러 배포판을 제공합니다.
 
-그림 3-1에서 사용 되는.NET framework에 따라 가능한 운영 체제 버전을 볼 수 있습니다.
+그림 3-1에서는 사용하는 .NET 프레임워크에 따라 가능한 OS 버전을 확인할 수 있습니다. 
 
 ![](./media/image1.png)
 
-**그림 3-1입니다.** .NET framework의 버전에 따라 대상으로 운영 체제
+**그림 3-1.** .NET framework의 버전에 따라 대상으로 하는 운영 체제
 
-또한 다른 Linux 배포판을 사용 하려면 또는 Microsoft에서 제공 하지 않는 버전 이미지를 원하는 경우에서 사용자 고유의 Docker 이미지를 만들 수 있습니다. 예를 들어 기존.NET Framework 및 Docke에 대 한 not 하므로 일반적인 시나리오는 Windows Server Core에서 실행 되는 ASP.NET Core와 이미지를 만들 수 있습니다.
+다른 Linux 배포판을 사용하려 하거나 Microsoft에서 제공하지 않는 버전 이미지가 필요한 경우 자체 Docker 이미지를 만들 수도 있습니다. 예를 들어 .NET Framework 및Windows Server Core에서 실행되는 기존 ASP.NET Core를 통해 이미지를 만들 수 있으나 Docker에는 그렇게 일반적인 시나리오가 아닙니다.
 
-Dockerfile 파일을 이미지 이름을 추가 하면 운영 체제 및 버전을 사용 하면 다음 예와 같이 태그에 따라 선택할 수 있습니다.
+Dockerfile 파일에 이미지 이름을 추가할 때는 다음 예제에서처럼 사용하는 태그에 따라 운영 체제와 버전을 선택할 수 있습니다.
 
--   microsoft /**dotnet:2.0.0-런타임-제시**
+-   microsoft/**dotnet:2.0.0-runtime-jessie**
 
         .NET Core 2.0 runtime-only on Linux
 
--   microsoft /**dotnet:2.0.0-런타임-nanoserver-1709** 
+-   microsoft/**dotnet:2.0.0-runtime-nanoserver-1709** 
 
         .NET Core 2.0 runtime-only on Windows Nano Server (Windows Server 2016 Fall Creators Update version 1709)
 
--   microsoft /**aspnetcore:2.0**
+-   microsoft/**aspnetcore:2.0**
     
         .NET Core 2.0 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
         The aspnetcore image has a few optimizations for ASP.NET Core. 
@@ -50,4 +53,4 @@ Dockerfile 파일을 이미지 이름을 추가 하면 운영 체제 및 버전�
 
 
 >[!div class="step-by-step"]
-[이전] (컨테이너-프레임 워크-선택-factors.md) [다음] (공식-net-docker-images.md)
+[이전] (container-framework-choice-factors.md) [다음] (official-net-docker-images.md)

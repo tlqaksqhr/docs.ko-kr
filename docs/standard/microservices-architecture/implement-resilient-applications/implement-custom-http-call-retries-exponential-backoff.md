@@ -1,6 +1,6 @@
 ---
-title: "지 수 백오프 하는 사용자 지정 HTTP 호출 재시도 구현합니다."
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 지 수 백오프 하는 사용자 지정 HTTP 호출 재시도 구현합니다."
+title: "지수 백오프를 사용하여 사용자 지정 HTTP 호출 다시 시도 구현"
+description: "컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 서비스 아키텍처 | 지수 백오프를 사용하여 사용자 지정 HTTP 호출 다시 시도 구현"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,19 +8,22 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4449e5d7e0ca3c81aead26fac653de3ba2187a92
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 477b77f4c4768ed98f730b0f5360761b0b54b10c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a>지 수 백오프 하는 사용자 지정 HTTP 호출 재시도 구현합니다.
+# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a>지수 백오프를 사용하여 사용자 지정 HTTP 호출 다시 시도 구현
 
-복원 력 있는 microservices를 만들기 위해 가능한 HTTP 오류 시나리오를 처리 해야 합니다. 이 위해 다시 시도 횟수의 사용자 지정 구현을 지 수 백오프를 만들 수 있습니다.
+복원력 있는 마이크로 서비스를 만들기 위해 가능한 HTTP 오류 시나리오를 처리해야 합니다. 이를 위해 지수 백오프를 사용하여 재시도의 고유한 구현을 만들 수 있습니다.
 
-사용할 수 없는 임시 리소스를 처리 하는 것 외에도 지 수 백오프도 클라우드 공급자 사용 오버 로드를 방지 하기 위해 리소스의 가용성을 제한할 수 정도 필요 합니다. 예를 들어 너무 많은 연결 요청을 신속 하 게 만드는 노출 될 수로 서비스 거부 ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) 클라우드 공급자가 공격입니다. 결과적으로, 용량 임계값에 발생 한 경우 다시 연결 요청을 확장 하는 메커니즘을 제공 해야 합니다.
+지수 백오프는 임시 리소스 비가용성 처리 외에도 클라우드 공급자가 사용 오버로드를 방지하기 위해 리소스의 가용성을 제한할 수 있다는 점을 고려해야 합니다. 예를 들어 신속하게 과도한 연결을 요청하면 클라우드 공급자에 의한 [DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)(서비스 거부) 공격으로 보일 수 있습니다. 결과적으로 용량 임계값에 도달한 경우 다시 연결 요청의 크기를 조정하는 메커니즘을 제공해야 합니다.
 
-와 같이 지 수 백오프에 대 한 유틸리티 클래스를 사용 하 여 사용자 고유의 코드를 구현할 수는 초기 탐색으로 [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), 다음과 같은 코드 더하기 (도에서 제공 되는 [GitHub 리포지토리 ](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).
+초기 탐색을 사용하여 [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260)와 같이 지수 백오프에 대한 유틸리티 클래스를 포함하는 고유한 코드 외에도 다음과 같은 코드([GitHub 리포지토리](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)에서 제공됨)를 구현할 수 있습니다.
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -93,7 +96,7 @@ public struct ExponentialBackoff
 }
 ```
 
-이 코드를 사용 하 여 C 클라이언트에서\# 응용 프로그램 (다른 웹 API에 대 한 클라이언트 마이크로 서비스, ASP.NET MVC 응용 프로그램 또는 C에도\# Xamarin 응용 프로그램)는 단순 합니다. 다음 예제에서는 어떻게 HttpClient 클래스를 사용 하 여 합니다.
+클라이언트 C\# 응용 프로그램(다른 웹 API 클라이언트 마이크로 서비스, ASP.NET MVC 응용 프로그램 또는 C\# Xamarin 응용 프로그램)에서 쉽게 이 코드를 사용할 수 있습니다. 다음 예제에서는 HttpClient 클래스를 사용하는 방법을 보여줍니다.
 
 ```csharp
 public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? type)
@@ -116,8 +119,8 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-그러나이 코드는 개념 증명으로만 적합 합니다. 다음 항목에는 더 정교 하 고 검증 된 라이브러리를 사용 하는 방법을 설명 합니다.
+그러나 이 코드는 개념 증명으로만 적합합니다. 다음 항목에서는 더 정교하고 검증된 라이브러리를 사용하는 방법을 설명합니다.
 
 
 >[!div class="step-by-step"]
-[이전] [다음] (implement-http-call-retries-exponential-backoff-polly.md) (implement-resilient-entity-framework-core-sql-connections.md)
+[이전](implement-resilient-entity-framework-core-sql-connections.md) [다음](implement-http-call-retries-exponential-backoff-polly.md)

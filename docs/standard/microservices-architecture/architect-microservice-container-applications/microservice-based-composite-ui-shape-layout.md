@@ -1,6 +1,6 @@
 ---
-title: "시각적 UI 셰이프 및 여러 microservices에 의해 생성 된 레이아웃을 포함 하 여 microservices에 따라 복합 UI 만들기"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 시각적 UI 셰이프 및 여러 microservices에 의해 생성 된 레이아웃을 포함 하 여 microservices에 따라 복합 UI 만들기"
+title: "여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기"
+description: "컨테이너화된 .NET 응용 프로그램의 .NET 마이크로 서비스 아키텍처 | 여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,57 +8,60 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4b32fed5eb0de02b01665efa4368eb83e3fda08d
-ms.sourcegitcommit: e99dfadbca1992c187179b6a3b42bef44534ebb6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>시각적 UI 셰이프 및 여러 microservices에 의해 생성 된 레이아웃을 포함 하 여 microservices에 따라 복합 UI 만들기
+# <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기
 
-데이터 및 논리를 처리 하는 서버 쪽 Microservices 아키텍처 자주 시작 합니다. 그러나 UI microservices도에 따라 응용 프로그램을 디자인 하는 고급 방법이입니다. 즉, 서버와는 microservices 소비는 모놀리식 클라이언트 앱에서 microservices 필요 없이 microservices에서 생성 되는 복합 UI 필요 합니다. 이 방법에서는 빌드할 microservices 논리 및 시각적 표현 모두 완료 될 수 있습니다.
+마이크로 서비스 아키텍처는 서버 쪽에서 데이터 및 논리를 처리하기 시작합니다. 그러나 고급 방법은 마이크로 서비스에 따라 응용 프로그램 UI를 디자인하는 것입니다. 즉, 서버에 마이크로 서비스를 배치하고 모놀리식 클라이언트 앱이 마이크로 서비스를 사용하는 대신 마이크로 서비스에서 생성되는 복합 UI가 있습니다. 이 방법으로 마이크로 서비스는 논리 및 시각적 표현 모두를 사용하여 완료될 수 있습니다.
 
-그림 4-20 방금 microservices 모놀리식 클라이언트 응용 프로그램에서을 사용 하는 간단한 방법을 보여 줍니다. 물론, HTML 및 JavaScript를 생성 하는 사이는 ASP.NET MVC 서비스가 있을 수 있습니다. 그림에는 단일 (모놀리식) 클라이언트 UI 사용 (HTML 및 JavaScript) UI 셰이프 아니라 논리와 데이터에만 집중는 microservices 있는지를 강조 하는 단순화 된 버전입니다.
+그림 4-20에서는 모놀리식 클라이언트 응용 프로그램에서 마이크로 서비스를 사용하는 간단한 방법을 보여줍니다. 물론 HTML 및 JavaScript를 생성하면 ASP.NET MVC 서비스가 생성될 수 있습니다. 그림은 마이크로 서비스를 사용하는 단일(모놀리식) 클라이언트 UI가 있음을 간단히 강조 표시합니다. 여기서는 UI 셰이프(HTML 및 JavaScript)가 아니라 논리 및 데이터에만 집중합니다.
 
 ![](./media/image20.png)
 
-**그림 4-20**합니다. 백 엔드 microservices 소비 모놀리식 UI 응용 프로그램
+**그림 4-20**. 백 엔드 마이크로 서비스를 소비하는 모놀리식 UI 응용 프로그램
 
-반면, 복합 UI는 정확 하 게 생성 및 microservices 자체에 의해 구성 되었습니다. 일부는 microservices UI의 특정 영역의 시각적 모양을 구동합니다. 주요 차이가 클라이언트 UI 구성 요소 (예: TS 클래스) 템플릿에 기반 있으며 해당 템플릿에 대 한 데이터 셰이핑 UI ViewModel는 각 마이크로 서비스에서 제공 합니다.
+반면, 복합 UI는 정확하게 마이크로 서비스 자체에서 생성하고 구성했습니다. 일부 마이크로 서비스는 UI 특정 영역의 시각적 셰이프를 제어합니다. 주요 차이는 템플릿에 기반한 클라이언트 UI 구성 요소(예: TS 클래스)가 있으며 해당 템플릿에 대한 data-shaping-UI ViewModel가 각 마이크로 서비스에서 제공된다는 점입니다.
 
-클라이언트 응용 프로그램 시작 시 각 클라이언트 UI 구성 요소 (예: TypeScript 클래스)에 자동으로 등록는 인프라 마이크로 서비스를 지정된 된 시나리오에 대 한 Viewmodel를 제공할 수 있습니다. 마이크로 서비스의 모양을 변경 되 면 UI도 변경 됩니다.
+클라이언트 응용 프로그램 시작 시 클라이언트 UI 구성 요소(예: TypeScript 클래스)는 각각 지정된 시나리오에 ViewModels를 제공하는 인프라 마이크로 서비스를 사용하여 등록됩니다. 마이크로 서비스가 모양을 변경하면 UI도 변경됩니다.
 
-그림 4-21이 복합 UI 접근 방법의 버전을 보여 줍니다. 이 단순 하 여, 다양 한 기술을 기반으로 하는 세분화 된 파트를 집계 하는 다른 microservices 해야할-을 개발 하는 일반적인 웹 접근 방식 (ASP.NET MVC) 또는 SPA (단일 페이지 응용 프로그램)에 따라 다릅니다.
+그림 4-21은 복합 UI 방법의 버전을 보여줍니다. 다양한 기술을 기반으로 세분화된 부분을 집계하는 다른 마이크로 서비스가 있기 때문에 간소화됩니다. 이것은 기존 웹 접근 방식(ASP.NET MVC) 또는 SPA(단일 페이지 응용 프로그램)를 빌드하는지에 따라 다릅니다.
 
 ![](./media/image21.png)
 
-**그림 4-21**합니다. 백 엔드 microservices 모양이 지정 복합 UI 응용 프로그램의 예
+**그림 4-21**. 백 엔드 마이크로 서비스에서 셰이프된 복합 UI 응용 프로그램 예제
 
-각 해당 UI 컴퍼지션 microservices 작은 API 게이트웨이 유사 합니다. 그러나이 경우 각은 작은 UI 영역에 대 한 합니다.
+해당 UI 컴퍼지션 마이크로 서비스는 각각 작은 API 게이트웨이와 유사합니다. 그러나 이 경우에는 각각 작은 UI 영역을 담당합니다.
 
-따라서 덜 UI 기술, 사용 중인 또는 microservices에 의해 발생 하는 복합 UI 접근 방식을 좀 더 어렵습니다 수 있습니다. 예를 들어, 동일한 기술을 SPA를 구축 하기 위한 또는 네이티브 모바일 앱을 사용 하는 기존 웹 응용 프로그램을 구축 하기 위한 사용 하지 것입니다 (마찬가지로이 방법은 좀 더 어렵습니다 될 수 있는 Xamarin 앱을 개발 하는 경우).
+따라서 마이크로 서비스에서 제어하는 복합 UI 방법은 사용 중인 UI 기술에 따라 더 어렵거나 쉬워질 수 있습니다. 예를 들어, SPA 또는 네이티브 모바일 앱을 빌드하기 위해 기존 웹 응용 프로그램을 빌드하는 동일한 기술을 사용하지 않습니다(Xamarin 앱을 개발하는 경우 마찬가지로 이 방법이 좀 더 어려울 수 있음).
 
-[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) 예제 응용 프로그램 여러 가지 이유로 모놀리식 UI 접근 방식을 사용 합니다. 첫째, 것은 microservices 및 컨테이너에 대해 소개 합니다. 복합 UI 더 높은 수준의 있지만 복잡성 디자인 하 고 UI를 개발 하는 경우 더 이상 필요 합니다. 둘째, eShopOnContainers 제공 기본 모바일 앱에 Xamarin을 만들 때와 더 복잡 한 C 클라이언트에 따라\# 쪽입니다.
+[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) 응용 프로그램 예제는 여러 가지 이유로 모놀리식 UI 방법을 사용합니다. 먼저 마이크로 서비스 및 컨테이너에 대한 소개입니다. UI를 디자인하고 개발하는 경우 복합 UI를 사용하는 것이 고급 기능이지만 더 복잡합니다. 다음으로 eShopOnContainers는 Xamarin에 기반한 기본 모바일 앱을 제공합니다. 그러면 클라이언트 C\#에서 더 복잡해 집니다.
 
-그러나 좋습니다 복합 microservices를 기반으로 UI에 대 한 자세한 내용을 보려면 다음 참조를 사용할 수 있습니다.
+그러나 다음 참조를 사용하여 마이크로 서비스를 기반으로 하는 복합 UI에 대해 자세히 알아봅니다.
 
 ## <a name="additional-resources"></a>추가 리소스
 
--   **ASP.NET (특정의 Workshop)를 사용 하 여 복합 UI**
+-   **ASP.NET을 사용하는 복합 UI(특정 워크샵)**
     [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
 
--   **Ruben Oostinga 합니다. Microservices 아키텍처에서 모놀리식 프런트 엔드**
+-   **Ruben Oostinga 마이크로 서비스 아키텍처의 모놀리식 프런트 엔드**
     [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
--   **Mauro Servienti 합니다. 더 나은 UI 배치 비밀**
+-   **Mauro Servienti UI 컴포지션 개선 방법**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
 
--   **Viktor Farcic 합니다. 웹 프런트 엔드 구성 요소를 포함 하 여 Microservices에**
+-   **Viktor Farcic 마이크로 서비스에 대한 프런트 엔드 구성 요소 포함**
     [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
--   **Microservices 아키텍처에 대 한 프런트 엔드를 관리합니다.**\
+-   **마이크로 서비스 아키텍처에서 프런트 엔드 관리**\
     [*http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]
-[이전] (microservices-주소 지정 기능-service-registry.md) [다음] (복원 력 있는-높은-가용성-microservices.md)
+[이전](microservices-addressability-service-registry.md) [다음](resilient-high-availability-microservices.md)

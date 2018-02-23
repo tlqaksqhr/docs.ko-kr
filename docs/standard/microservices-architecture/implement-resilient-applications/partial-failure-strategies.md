@@ -1,6 +1,6 @@
 ---
-title: "일부 오류를 처리 하기 위한 전략"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 일부 오류를 처리 하기 위한 전략"
+title: "부분 실패 처리 전략"
+description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 부분 실패 처리 전략"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,40 +8,43 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ff3bed530b13a9b1822c7cccf5a4d47df6fc6239
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="strategies-for-handling-partial-failure"></a>일부 오류를 처리 하기 위한 전략
+# <a name="strategies-for-handling-partial-failure"></a>부분 실패 처리 전략
 
-부분적인 오류를 처리 하기 위한 전략은 다음과 같습니다.
+부분 실패 처리 전략은 다음을 포함합니다.
 
-**비동기 통신 (예를 들어 메시지 기반 통신)를 사용 하 여 내부 microservices 걸쳐**합니다. 항상을 잘못 된 해당 디자인에는 잘못 되었습니다. 중단의 주요 원인 결국 때문에 내부 microservices에서 긴 체인 HTTP에 대 한 동기 호출을 만들지 않도록는 것이 좋습니다. 반대로, 클라이언트 응용 프로그램과 첫 번째 수준의 microservices 또는 세분화 된 API 게이트웨이 간의 통신의 프런트 엔드를 제외 하 고 것이 좋습니다 비동기 (메시지 기반) 통신만 초기 요청을 지 나 한 번만 사용 하도록 / 내부 microservices 걸쳐 응답 주기가 결과적 일관성 및 이벤트 기반 아키텍처 ripple 영향을 최소화 하는 데 도움이 됩니다. 이러한 방법을 사용 더 높은 수준의 자율성 마이크로 서비스를 강제 적용 되 고 따라서 여기서 설명 하는 문제를 방지 합니다.
+**내부 마이크로 서비스 전체에 걸친 비동기 통신(예를 들어, 메시지 기반 통신) 사용**. 잘못된 디자인은 결국 잘못된 중단의 결정적 원인이 되기 때문에 내부 마이크로 서비스 전역에 걸쳐 동기 HTTP 호출의 긴 체인을 만들지 않는 것이 바람직합니다. 반대로, 클라이언트 응용 프로그램과 첫 번째 수준의 마이크로 서비스 또는 세분화된 API 게이트웨이 간의 프런트 엔드 통신을 제외하고 내부 마이크로 서비스 전역에 걸쳐 초기 요청/응답 주기를 넘어서 비동기(메시지 기반) 통신만 한 번 사용하는 것이 좋습니다. 결과적 일관성 및 이벤트 기반 아키텍처는 파급 효과를 최소화하는 데 도움이 됩니다. 이런 접근법은 높은 수준의 마이크로 서비스 자율성을 시행하고 따라서 여기서 지적된 문제를 예방할 수 있습니다.
 
-**재시도 지 수 백오프를 사용 하 여**합니다. 짧은 하지 않으려면이 방법을 사용 하면 및 호출을 수행 하 여 일시적인 오류가 경우 서비스에서 짧은 시간에만 사용할 수 없습니다. 몇 번의 다시 시도 시간입니다. 마이크로 서비스/컨테이너를 클러스터의 다른 노드로 이동할 때 또는 일시적인 네트워크 문제로 인해 발생할 수 있습니다. 그러나 이러한 재시도 없는 경우 제대로 회로 차단기와, 그 수 aggravate ripple 효과 바꾸지 궁극적으로 [서비스 거부 (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack)합니다.
+**지수 백오프를 사용하여 다시 시도 사용**. 이 기법은 해당 서비스가 단기간만 사용할 수 없을 경우 호출 다시 시도를 여러 번 수행함으로써 단기간의 일시적인 오류를 막는 데 도움이 됩니다. 이런 현상은 마이크로 서비스/컨테이너를 클러스터의 다른 노드로 이동할 경우 또는 일시적인 네트워크 문제로 인해 발생할 수 있습니다. 그러나 이러한 재시도가 회로 차단기를 사용해 적절히 계획되지 않은 경우 그 파급 효과는 악화되고 결국 [서비스 거부(DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack)를 초래할 수 있습니다.
 
-**네트워크 제한 시간 까지의 작업**합니다. 일반적으로 클라이언트를 무기한으로 차단 하지 않도록 하 고 응답을 받기 위해 대기 하는 경우 항상 제한 시간을 사용 하도록 설계 되어야 합니다. 시간 제한을 사용 하는 리소스는 되지 하느라 정체 무기한 확인 합니다.
+**네트워크 시간 제한의 해결 방법**. 일반적으로 클라이언트는 응답을 기다릴 때 항상 시간 제한을 사용하되 무기한 차단하지 않도록 설계되어야 합니다. 시간 제한의 사용은 리소스가 절대 무기한으로 묶여 있지 않게 합니다.
 
-**회로 차단기 패턴을 사용 하 여**합니다. 이 방법에서는 클라이언트 프로세스 실패 한 요청 수를 추적합니다. 오류 비율 즉시 시도가 실패 하는 구성 된 제한 "회로 차단 기가" trips을 초과 하면 합니다. (많은 수의 요청 실패 하는 경우 제시 요청을 보낼 무의미 한 인지 하 고 서비스를 사용할 수 없습니다.) 제한 시간 후 클라이언트 해야 다시 시도 하 고, 새 요청은 성공 하는 경우 회로 차단기를 닫습니다.
+**회로 차단기 패턴 사용**. 이 방법에서 클라이언트 프로세스는 실패한 요청 횟수를 추적합니다. 오류율이 설정된 제한을 초과하는 경우 “회로 차단기”가 작동해 더 이상의 시도는 즉시 실패합니다. (많은 요청이 실패 하는 경우 서비스가 사용할 수 없게 되고 요청 전송이 무의미하다는 것을 의미합니다.) 제한 시간 경과 후 해당 클라이언트는 다시 시도해야 하며 새 요청이 성공하는 경우 회로 차단기를 닫습니다.
 
-**대체 제공**합니다. 이 방법에서는 클라이언트 프로세스에서 캐시 된 데이터 또는 기본값을 반환 하는 등의 요청이 실패할 경우 대체 논리를 수행 합니다. 쿼리에 대 한 적합 한 접근 방식을 이며 업데이트 또는 명령에 대 한 더 복잡 합니다.
+**대체 제공**. 이 방법에서 클라이언트 프로세스는 캐시된 데이터 또는 기본값 반환처럼 요청이 실패한 경우 대체 논리를 수행 합니다. 이 방법은 쿼리에 적합하며 업데이트나 명령에 관해서는 더욱 복잡합니다.
 
-**큐 대기 요청 수가 제한**합니다. 클라이언트는 클라이언트 마이크로 서비스를 특정 서비스에 보낼 수 있는 처리 중인 요청 수에 대 한 상한 값을 입력할 수 해야 합니다. 제한에 도달 하면 추가 요청을 만드는 무의미 한 것 이며 재전송 시도 즉시 중단 해야 합니다. 관 구현 측면에서 [Bulkhead 격리](https://github.com/App-vNext/Polly/wiki/Bulkhead) 정책이 요구이 사항을 충족 데 사용할 수 있습니다. 이 방법은와 병렬화 스로틀 [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) 구현으로 합니다. 또한는 bulkhead 외부 "queue" 수 있습니다. (예를 들어 때문에 용량 완전 하다 고 판단 되) 실행 하기 전에 초과 부하를 늘리는 사전 있습니다. 이렇게 하면 특정 오류 시나리오에 대 한 응답 회로 차단기는 오류에 대 한 대기 하므로 회로 차단기 될 것 보다 더 빠르게 있습니다. 관 BulkheadPolicy 개체 노출 사용률이 bulkhead 및 큐는 고 오버플로가 제공 이벤트 하므로 수 있습니다 사용할 수도 자동화 된 수평 확장이 진행 하는 데 합니다.
+**큐에 대기 중인 요청 수 제한**. 클라이언트는 클라이언트 마이크로 서비스가 특정 서비스에 보낼 수 있는 대기 중인 요청 수에 대한 상한값을 입력해야 합니다. 제한치에 도달한 경우 추가 요청을 하는 것은 무의미하며 이런 시도는 즉각 실패합니다. 구현 관점에서 Polly [Bulkhead 격리](https://github.com/App-vNext/Polly/wiki/Bulkhead) 정책은 요구 사항을 충족하는 데 사용할 수 있습니다. 이 방법은 근본적으로 [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1)과 함께 병렬화 제한을 구현합니다. 또한 Bulkhead 외부에 "큐"를 허용합니다. 실행 전에도 과부하를 미리 줄일 수 있습니다(예를 들어, 용량이 가득찼다고 여겨지기 때문에). 이렇게 하면 특정 오류 시나리오에 대한 응답이 회로 차단기보다 더 빠르게 됩니다. 회로 차단기는 오류를 대기하기 때문입니다. Polly에서 BulkheadPolicy 개체는 Bulkhead와 큐가 얼마나 차있는지 드러내며 오버플로에 대한 이벤트를 제공하므로 자동화된 수평 확장에 사용될 수 있습니다.
 
 ## <a name="additional-resources"></a>추가 리소스
 
--   **복원 력 패턴**
+-   **복원력 패턴**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **추가 복원 력 및 성능 최적화**
-    [*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)
+-   **복원력 추가 및 성능 최적화**
+    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Bulkhead 합니다.** GitHub 리포지토리 합니다. 관 정책 사용 하 여 구현 합니다. \ \
+-   **Bulkhead.** GitHub 리포지토리. Polly 정책 구현.\
     [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Azure에 대 한 복원 력 있는 응용 프로그램 디자인**
+-   **Azure용 복원력 있는 응용 프로그램 설계**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
 -   **일시적인 오류 처리**
@@ -49,4 +52,4 @@ ms.lasthandoff: 10/18/2017
 
 
 >[!div class="step-by-step"]
-[이전] (핸들-부분-failure.md) [다음] (구현-다시 시도-지 수-backoff.md)
+[이전] (handle-partial-failure.md) [다음] (implement-retries-exponential-backoff.md)

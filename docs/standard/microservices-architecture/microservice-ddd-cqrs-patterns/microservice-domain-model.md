@@ -1,123 +1,126 @@
 ---
 title: "마이크로 서비스 도메인 모델 디자인"
-description: "컨테이너 화 된.NET 응용 프로그램에 대 한.NET Microservices 아키텍처 | 마이크로 서비스 도메인 모델 디자인"
+description: "컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 도메인 모델 디자인"
 keywords: "Docker, 마이크로 서비스, ASP.NET, 컨테이너"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/09/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 455a2c5a39fb9b765b557610ab108f8c75882dbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>마이크로 서비스 도메인 모델 디자인
 
-*각 비즈니스 마이크로 서비스 또는 컨텍스트 제한에 대 한 풍부한 도메인 모델을 정의 합니다.*
+*각 비즈니스 마이크로 서비스 또는 바인딩된 컨텍스트에 대해 하나의 풍성한 도메인 모델 정의*
 
-여기서의 목표는 각 비즈니스 마이크로 서비스 또는 경계가 지정 된 컨텍스트 (BC)에 대 한 단일 화합 도메인 모델을 만드는 것입니다. 그러나 염두에서에 둬야, 있는 a BC 단일 도메인 모델을 공유 하는 몇 가지 실제 서비스의 비즈니스 마이크로 서비스를 구성 될 경우에 따라 또는 합니다. 도메인 모델 규칙, 동작, 비즈니스 언어 및 단일 경계가 지정 된 컨텍스트 또는 표시 되는 비즈니스 마이크로 서비스의 제약 조건을 캡처해야 합니다.
+여기서의 목표는 각 비즈니스 마이크로 서비스 또는 바인딩된 컨텍스트(BC)에 대한 단일 결합 도메인 모델을 만드는 것입니다. 하지만 BC 또는 비즈니스 마이크로 서비스가 때로는 단일 도메인 모델을 공유하는 여러 물리적 서비스로 구성될 수도 있다는 것을 주의하세요. 도메인 모델은 단일 바인딩된 컨텍스트(BC) 또는 BC가 대표하는 비즈니스 마이크로 서비스의 제약 조건, 규칙, 동작, 비즈니스 언어를 캡처해야 합니다.
 
 ## <a name="the-domain-entity-pattern"></a>도메인 엔터티 패턴
 
-도메인 개체를 나타내는 엔터티와 주로 의해 정의 id, 연속성 및 시간이 지남에 따라 지 속성을 구성 하는 특성으로 뿐만 아니라 합니다. Eric Evans 라고 표시 하는 대로 "기본적으로 해당 id로 정의 하는 개체를 엔터티 라고 합니다." 이들은 모델에 대 한 기준 엔터티는 도메인 모델에서 매우 중요 합니다. 따라서 식별 하 고 해당 작업을 신중 하 게 디자인 해야 합니다.
+엔터티는 도메인 개체를 대표하며, 주로 ID, 연속성, 시간의 흐름에 따른 지속성 및 이들을 포괄하는 특성에 의해 정의됩니다. Eric Evans의 말처럼 "기본적으로 해당 ID로 정의되는 개체를 엔터티라고 합니다." 엔터티는 모델의 기본이기 때문에 도메인 모델에서 아주 중요합니다. 따라서 엔터티를 신중하게 식별하고 디자인해야 합니다.
 
-*여러 microservices 또는 경계가 지정 된 컨텍스트는 엔터티 id 매개자 수 있습니다.*
+*엔터티 ID는 다중 마이크로 서비스나 바인딩된 컨텍스트를 교차할 수 있습니다.*
 
-동일한 id (경우에 같은 엔터티 하지) 여러 경계가 지정 된 컨텍스트 또는 microservices 모델링할 수 있습니다. 그러나 같은 특성 및 논리를 가진 동일한 엔터티를 제한 하는 여러 상황에서 구현 될 것과이 아닙니다. 대신, 각 경계가 지정 된 컨텍스트에서 엔터티 해당 특성 및 해당 제한 컨텍스트 도메인에 필요한 쿼리에만에 동작을 제한합니다.
+동일한 ID(동일한 엔터티는 아니지만)는 다중 바인딩된 컨텍스트 또는 마이크로 서비스 전체에 걸쳐 모델링될 수 있습니다. 그러나 동일한 특성 및 논리를 가진 동일한 엔터티가 다중 바인딩된 컨텍스트에서 구현된다는 의미는 아닙니다. 대신, 각 바운딩된 컨텍스트의 엔터티는 그 속성과 행동을 해당 바운딩된 컨텍스트의 도메인에서 요구하는 속성과 행동에 맞게 제한합니다.
 
-예를 들어 구매자 엔터티는 대부분의 사용자 엔터티는 프로필 또는 id 마이크로 서비스를 id를 포함 하 여에 정의 되어 있는 사람의 특성의 있을 수 있습니다. 이지만 특정 buyer 데이터만 주문 프로세스는 관련이 있으므로 정렬 마이크로 서비스에서 구매자 엔터티 더 적은 수의 특성을 가질 수 있습니다. 각 마이크로 서비스의 컨텍스트 또는 제한 된 상황에 맞는 해당 도메인 모델에 영향을 줍니다.
+예를 들어, 구매자 엔터티는 ID를 포함해 프로필이나 ID 마이크로 서비스의 사용자 엔터티에서 정의되는 사람의 특성 대부분을 가질 수 있습니다. 그러나 주문형 마이크로 서비스에서 구매자 엔터티는 특성을 거의 가질 수 없는데 특정 구매자 데이터만 주문 프로세스에 관련돼 있기 때문입니다. 각 마이크로 서비스의 컨텍스트 또는 바인딩된 컨텍스트는 해당 도메인 모델에 영향을 줍니다.
 
-*도메인 엔터티 데이터 특성을 구현 하는 것 외에도 동작을 구현 해야 합니다.*
+*도메인 엔터티는 데이터 특성을 구현하는 것 외에도 동작을 구현해야 합니다*
 
-Ddd에서 도메인 엔터티는 도메인 논리 또는 데이터와 관련 된 엔터티 (메모리에 액세스 하는 개체) 동작을 구현 해야 합니다. 예를 들어 order 엔터티 클래스의 일부로 있어야 비즈니스 논리 및 작업은 주문 항목, 데이터 유효성 검사 및 총 계산을 추가 하는 등 작업에 대 한 메서드로 구현 합니다. 고정 및 이러한 규칙은 응용 프로그램 계층에 분산 하는 대신 엔터티의 규칙의 엔터티 메서드 주의 해야 합니다.
+DDD에서 도메인 엔터티는 엔터티 데이터(메모리에 액세스된 개체)와 관련된 도메인 논리나 행동을 구현해야 합니다. 예를 들어, 주문 엔터티 클래스의 일부로서 주문 항목, 데이터 유효성 검사, 총계를 추가하는 것 같은 작업 메서드로서 구현된 비즈니스 작업 및 논리가 포함돼야 합니다. 해당 엔터티의 메서드는 응용 프로그램 계층에 엔터티 규칙을 분산하는 대신 엔터티의 규칙 및 고정화에 신경을 써야 합니다.
 
-그림 9-8 뿐만 아니라 데이터 특성 하지만 작업 또는 관련된 도메인 논리를 사용 하 여 메서드를 구현 하는 도메인 엔터티를 보여 줍니다.
+그림 9-8은 데이터 특성뿐만 아니라 관련 도메인 로직을 통해 작업 또는 메서드까지 구현하는 도메인 엔터티를 보여줍니다.
 
 ![](./media/image9.png)
 
-**그림 9-8**합니다. 데이터와 동작을 구현 하는 도메인 엔터티 디자인의 예
+**그림 9-8**. 데이터와 동작을 구현하는 도메인 엔터티 디자인의 예
 
-물론, 경우에 따라 엔터티 클래스의 일부로 모든 논리를 구현 하지 않는 엔터티를 포함할 수 있습니다. 이 인해 자식 엔터티가 없는 경우 특별 한 논리 집계 루트에 있는 대부분의 논리 정의 되었기 때문에 자식 엔터티 집계 내에서 발생할 수 있습니다. 도메인 엔터티 대신 서비스 클래스에 구현 된 논리가 많이 포함 하는 복잡 한 마이크로 서비스를 사용 하도록 설정한 경우 다음 섹션에 설명 된 anemic 도메인 모델에 속하는 있습니다 수 없습니다.
+물론, 경우에 따라 엔터티 클래스의 일부로 모든 논리를 구현하지는 않는 엔터티를 포함할 수 있습니다. 이런 경우는 대부분의 논리가 집계 루트에서 정의되기 때문에 자식 엔터티가 특별한 논리를 갖지 않은 경우 집계하지 않는 자식 엔터티에서 발생할 수 있습니다. 도메인 엔터티 대신 서비스 클래스에서 구현된 많은 로직을 갖는 복잡한 마이크로 서비스가 포함된 경우 다음 섹션에서 설명될 빈약한 도메인 모델이 될 수 있습니다.
 
-### <a name="rich-domain-model-versus-anemic-domain-model"></a>Anemic 도메인 모델 및 풍부한 도메인 모델
+### <a name="rich-domain-model-versus-anemic-domain-model"></a>풍성한(rich) 도메인 모델 대 빈약한(anemic) 도메인 모델
 
-그의 게시물에 [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html), Martin Fowler이 이렇게 anemic 도메인 모델을 설명 합니다.
+[AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html)이라는 게시물에서, Martin Fowler는 빈약한 도메인 모델을 이렇게 설명합니다.
 
-언뜻 보기에 같다는 실제 처럼는 하는 기본 증상은 Anemic 도메인 모델입니다. 개체가에 있는 명사 도메인 공간에 따라 명명 된 많은 및 이러한 개체의 풍부한 관계 및 true 도메인 모델에는 구조와 연결 합니다. Catch 실현할 경우에 동작을 보면 이러한 개체에서 동작은 거의 모든 봉투 getter 및 setter에 보다 좀 더 쉽게 제공 됩니다.
+빈약한 도메인 모델의 기본 증상은 언뜻 보기에 실제처럼 보인다는 것입니다. 개체는 대부분 도메인 공간의 명사를 따라 이름 짓습니다. 이런 개체는 진정한 도메인 모델이 갖는 풍성한 관계 및 구조와 연결돼 있습니다. 동작을 보면 Catch가 실현되는데, getter 및 setter의 모음보다 조금 더 많이 움직일 뿐 이러한 개체에서는 거의 아무런 동작이 없습니다.
 
-물론, anemic 도메인 모델을 사용 하면 이러한 데이터 모델에서에서 사용할 서비스 개체의 집합 (일반적으로 명명 된는 *비즈니스 계층*)를 캡처할 모든 도메인 또는 비즈니스 논리입니다. 비즈니스 계층 데이터 모델 위에 배치 하 고 데이터와 마찬가지로 데이터 모델을 사용 합니다.
+물론, 빈약한 도메인 모델을 사용하는 경우 이러한 데이터 모델은 모든 도메인 또는 비즈니스 논리를 캡처하는 서비스 개체 집합(보통 *비즈니스 계층*으로 명명)에서 사용되게 됩니다. 비즈니스 계층은 데이터 모델 위에 배치되고 데이터와 마찬가지로 데이터 모델을 사용합니다.
 
-Anemic 도메인 모델에는 절차적 스타일 노드 뿐입니다. Anemic 엔터티 개체는 동작 (메서드)를 없기 때문에 실제 개체가 아닙니다. 데이터 속성 이므로 저장 며 따라서 없습니다 개체 지향 디자인 합니다. 서비스 개체 (비즈니스 계층)에 모든 동작을 축소 입력 하 여 기본적으로 /fd [코드](https://en.wikipedia.org/wiki/Spaghetti_code) 또는 [트랜잭션 스크립트](https://martinfowler.com/eaaCatalog/transactionScript.html), 하는 장점의 손실 따라서 도메인 모델 제공합니다.
+빈약한 도메인 모델은 절차적 스타일 디자인일 뿐입니다. 빈약한 엔터티 개체는 동작(메서드)이 부족하기 때문에 실제 개체가 아닙니다. 이 개체는 데이터 속성을 보유하므로 개체 지향 디자인이 아닙니다. 모든 동작을 서비스 개체(비즈니스 계층)에 입력함으로써 기본적으로 [스파케티 코드](https://en.wikipedia.org/wiki/Spaghetti_code) 또는 [트랜잭션 스크립트](https://martinfowler.com/eaaCatalog/transactionScript.html)로 종료하기에 도메인 모델이 제공하는 이점을 상실합니다.
 
-마이크로 서비스 또는 경계가 지정 된 컨텍스트는 매우 간단 하는 경우 상관 없이 (CRUD 서비스)에 데이터 속성을 사용 하 여 엔터티 개체의 형태로 anemic 도메인 모델이 적당 수 있습니다 및 더 복잡 한 DDD 패턴 구현 가치가 없을 수 있습니다. 이 경우 됩니다 단순히 지 속성 모델 엔터티 CRUD 목적에 대 한 데이터만 의도적으로 만들었기 때문에.
+마이크로 서비스 또는 바인딩된 컨텍스트가 매우 간단한지에 상관 없이(CRUD 서비스) 데이터 속성을 지닌 엔터티 개체의 형태로 된 빈약한 도메인 모델로도 충분할 수 있으며 더 복잡한 DDD 패턴을 구현할 만한 가치가 없을 수 있습니다. 이 경우, 의도적으로 데이터만 지닌 엔터티를 CRUD 목적으로 만들었기 때문에 단순히 지속성 모델이 되게 됩니다.
 
-이 microservices 아키텍처는 각 경계가 지정 된 컨텍스트에 따라 다중 아키텍처 방법에 대 한 완벽 한 때문입니다. 예를 들어, eShopOnContainers에서 정렬 마이크로 서비스 DDD 패턴을 구현 합니다. 하지만 간단한 CRUD 서비스 카탈로그 마이크로 서비스 하지 않습니다.
+그렇기에 마이크로 서비스 아키텍처는 각 바운딩된 컨텍스트에 따라 다중 아키텍처 방법에 완벽합니다. 예를 들어, eShopOnContainers에서 주문형 마이크로 서비스는 DDD 패턴을 구현하지만 단순한 CRUD 서비스인 카탈로그 마이크로 서비스는 그러지 않습니다.
 
-일부 사용자는 안티패턴 anemic 도메인 모델을 말합니다. 실제로 구현 하는 내용에 따라 달라 집니다. 만들려는 마이크로 서비스 이면 단순 충분히 (예를 들어 CRUD 서비스의 경우)는 안티패턴 없으면 anemic 도메인 모델입니다. 그러나 끊임없이 변화 하는 비즈니스 규칙의 많은 마이크로 서비스의 도메인의 복잡성을 해결 해야 하는 경우 anemic 도메인 모델 해당 마이크로 서비스 또는 경계가 지정 된 컨텍스트는 안티패턴 수 있습니다. 이 경우 rich로 디자인 (집계, 개체 등) 추가 DDD 패턴을 구현 뿐만 아니라 데이터 형식과 동작이 포함 된 엔터티를 사용 하 여 모델에는 이러한 마이크로 서비스의 장기적인 성공에 대 한 큰 혜택이 있을 수 있습니다.
+몇몇 사람은 빈약한 도메인 모델을 안티패턴이라고도 합니다. 이 모델은 실제로 구현하는 내용에 따라 달라집니다. 만들려는 마이크로 서비스가 충분히 단순하다면(예를 들어, CRUD 서비스) 빈약한 도메인 모델을 따르는 것은 안티패턴이 아닙니다. 그러나 끊임없이 변화하는 비즈니스 규칙이 많은 마이크로 서비스 도메인의 복잡성을 해결해야 하는 경우 빈약한 도메인 모델은 해당 마이크로 서비스 또는 바운딩된 컨텍스트에게는 안티패턴일 수 있습니다. 이 경우, 빈약한 모델을 데이터와 동작을 포함할 뿐 아니라 추가적인 DDD 패턴(집계, 가치 개체 등)을 구현하는 엔터티를 지닌 풍성한 모델로 디자인하는 것은 이러한 마이크로 서비스의 장기적인 성공으로 인한 큰 혜택이 있을 수 있습니다.
 
 #### <a name="additional-resources"></a>추가 리소스
 
--   **DevIQ 합니다. 도메인 엔터티**
+-   **DevIQ. 도메인 엔터티**
     [*http://deviq.com/entity/*](http://deviq.com/entity/)
 
 -   **Martin Fowler. 도메인 모델**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Martin Fowler. Anemic 도메인 모델**
+-   **Martin Fowler. 빈약한 도메인 모델**
 
     <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
-### <a name="the-value-object-pattern"></a>값 개체 패턴
+### <a name="the-value-object-pattern"></a>가치 개체 패턴
 
-Eric Evans 듯이 "많은 개체가 않아도 개념적 identity 됩니다. 이 개체를 설명는 작업의 일정 한 특성이 있습니다. "
+Eric Evans의 지적처럼 "많은 개체는 개념적 ID를 갖고 있지 않습니다. 이런 개체는 사물의 일정한 특성을 설명합니다."
 
-엔터티 id가 필요 하지만 하지 않는 시스템에 많은 개체가 있는 값 개체 패턴을 선택 합니다. 값 개체는 도메인 측면을 설명 하는 개념 없는 id 가진 개체입니다. 이들은 일시적으로 하면 관련 된 디자인 요소를 나타내기 위해 인스턴스화하는 개체입니다. 중요 한 *어떤* 없는, *가* 됩니다. 예에는 숫자와 문자열을 제외한 특성 그룹의 같은 더 높은 수준의 개념 될 수도 있습니다.
+엔터티는 ID를 요구하지만 가치 개체 패턴처럼 시스템의 많은 개체는 이를 요구하지 않습니다. 가치 개체는 도메인 양상을 설명하는 개념적 ID가 없는 개체입니다. 이 개체는 일시적으로 사용자를 배려하는 디자인 요소를 나타내기 위해 인스턴스화합니다. 중요한 것은 이 개체가 *누구*가 아닌 *무엇*이냐는 것입니다. 예제는 숫자와 문자열을 포함하지만 특성 그룹 같이 고수준의 개념일 수도 있습니다.
 
-마이크로 서비스의 엔터티를 해당 기능의 아닐 수 있습니다 다른 마이크로 서비스의 엔터티를 두 번째 경우에는 경계가 지정 된 컨텍스트는 다른 의미 있을 수 있으므로. 예를 들어 전자 상거래 응용 프로그램에 있는 주소 없을 수 있습니다는 id, 이후만 개인 또는 회사에 대 한 고객의 프로필의 특성 그룹을 나타낼 수도 있습니다. 이 경우 주소를 값 개체 분류 해야 할 합니다. 그러나 electric 전원 유틸리티 회사에 대 한 응용 프로그램에서는 고객 주소 비즈니스 도메인 중요 수 있습니다. 따라서 주소 주소에 청구 시스템을 직접 연결할 수 있도록 id가 있어야 합니다. 이 경우 주소는 도메인 엔터티로 분류 해야 할 합니다.
+마이크로 서비스의 엔터티인 어떤 것이 또 다른 마이크로 서비스의 엔터티가 될 수는 없습니다. 두 번째 경우에 바운딩된 컨텍스트가 다른 의미를 가질 수 있기 때문입니다. 예를 들어, 전자 상거래 응용 프로그램의 주소는 개인 또는 회사에 대해 고객 프로필의 특성 그룹을 나타낼 수 있기에 ID를 전혀 가질 수 없습니다. 이 경우, 해당 주소는 가치 개체로 분류돼야 합니다. 그러나 전원 유틸리티 회사의 응용 프로그램에서 고객 주소는 비즈니스 도메인에 대해 중요할 수 있습니다. 따라서 해당 주소는 청구 시스템이 직접 해당 주소에 연결될 수 있도록 반드시 ID를 가져야 합니다. 이 경우, 주소는 도메인 엔터티로 분류돼야 합니다.
 
-이름 및 성을 있는 사용자 엔터티는 일반적으로 사용자 이름 및 성을 다른 값 집합을와 일치 하는 경우에 id를 가진, 때문에 경우와 같이 해당 이름을 의미 하기도 다른 사용자에 게 있습니다.
+성과 이름이 있는 사람은 이런 이름이 다른 사람을 지칭하는 경우처럼 비록 성과 이름이 또 다른 가치 집합과 일치한다 해도 사람은 ID를 갖기 때문에 대개 엔터티입니다.
 
-값 개체는 문서에서 구현 하 고 사용 하 여 쉽게 데이터베이스를 지향 하지만 EF, 같은 Orm 관계형 데이터베이스에서 관리 하기가입니다.
+가치 개체는 EF 같은 ORM과 관계형 데이터베이스에서는 관리하기가 어렵습니다. 반면에 문서 지향 데이터베이스에서는 구현과 사용이 훨신 쉽습니다.
 
 #### <a name="additional-resources"></a>추가 리소스
 
--   **Martin Fowler. 값 개체 패턴**
+-   **Martin Fowler. 가치 개체 패턴**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **개체를 값**
+-   **가치 개체**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **값 기반 개발에서 개체**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub 자동-값 개체*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **테스트 중심 개발에서의 가치 개체**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성을 다루는 합니다.** (예약; 값 개체에 설명) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (서적, 가치 개체 논의 포함) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-### <a name="the-aggregate-pattern"></a>집계 패턴
+### <a name="the-aggregate-pattern"></a>집계 모듈
 
-도메인 모델에 있는 다른 데이터 엔터티 및 중요 한 영역의 구매나 주문 또는 재고 등의 기능을 제어할 수 있는 프로세스의 클러스터를 포함 합니다. 좀 더 세분화 된 DDD 단위는 클러스터 또는 그룹의 엔터티 및 화합 단위로 처리 될 수 있는 동작을 설명 하는 집계입니다.
+도메인 모델은 주문 완료나 재고 등의 중요한 기능 영역을 제어할 수 있는 다른 데이터 엔터티 및 프로세스의 클러스터를 포함합니다. 더욱 정교한 DDD 단위는 응집력 있는 단위로 취급될 수 있는 동작 및 엔터티의 그룹이나 클러스터를 설명하는 집계입니다.
 
-일반적으로 필요한 트랜잭션을 기반으로 집계를 정의 합니다. 전형적인 예로 주문 항목 목록이 포함 되는 순서입니다. 주문 항목은 엔터티 일반적으로 됩니다. 하지만 해당 루트 엔터티로 일반적으로 집계 루트 호출 또한 order 엔터티를 포함 하는 순서 집계 내에서 자식 엔터티가 됩니다.
+일반적으로 필요한 트랜잭션을 기반으로 집계를 정의 합니다. 전형적인 예는 주문 항목 목록을 포함하는 주문입니다. 주문 항목은 대개 엔터티가 되지만, 일반적으로 집계 루트라고 하는 해당 루트 엔터티로서 주문 엔터티를 포함하는 주문 집계 내에서 자식 엔터티가 됩니다.
 
-집계를 식별 하는 것은 어려울 수 있습니다. 집계는 서로 일치 해야 하는 개체 그룹에 있지만 방금 개체 그룹을 선택 하 고 집계 레이블을 수 없습니다. 도메인 개념으로 시작 해야 하며 해당 개념과 관련 된 가장 일반적인 트랜잭션에서 사용 되는 엔터티를 고려해 야 합니다. 트랜잭션 측면에서 일치 해야 하는 이러한 엔터티는 집계를 형성 하는 기능입니다. 트랜잭션 작업에 대 한 집계를 식별 하는 가장 좋은 방법은 때문일 수 있습니다.
+집계를 식별하기는 어려울 수 있습니다. 집계는 서로 일치 해야 하는 개체 그룹이지만 개체 그룹을 막 선택하고 이를 집계라고 레이블을 붙일 수 없습니다. 도메인 개념부터 시작해서 해당 개념과 관련된 가장 일반적인 트랜잭션에서 사용되는 엔터티를 고려해야 합니다. 트랜잭션 관점에서 일관성이 있는 이런 엔터티가 집계를 형성하는 것입니다. 트랜잭션 작업에 대한 생각이 아마도 집계를 식별하는 가장 좋은 방법입니다.
 
 ### <a name="the-aggregate-root-or-root-entity-pattern"></a>집계 루트 또는 루트 엔터티 패턴
 
-집계는 엔터티를 하나 이상 이루어져: 루트 엔터티 또는 기본 ientity 라고도 집계 루트입니다. 또한 여러 개의 자식 엔터티와 모든 엔터티 및 관리자와 함께 필요한 동작 및 트랜잭션을 구현 하는 개체와 함께 값 개체는 있을 수 있습니다.
+집계는 최소 하나 이상의 엔터티로 구성돼 있습니다. 루트 엔터티 또는 기본 엔터티라고도 하는 집계 루트입니다. 또한 집계는 모든 엔터티 및 개체가 필요한 동작 및 트랜잭션을 구현하기 위해 함께 작업하는 가운데 여러 자식 엔터티와 가치 개체를 가질 수 있습니다.
 
-집계 루트의 목적은; 집계의 일관성을 유지 하는 것 메서드를 통해 집계에 대 한 업데이트에 대 한 유일한 진입점 것 또는 작업 집계 루트 클래스입니다. 집계 루트를 통해서만 집계 내에서 엔터티를 변경 해야 합니다. 것이 집계의 일관성 보호자, 모든 고정 및 사용자 집계에 준수 해야 할 수 있습니다 일관성 규칙을 고려 합니다. 자식 엔터티 또는 값 개체를 독립적으로 변경 하면 집계 루트 집계가 유효한 상태 인지를 보장할 수 없습니다. 느슨한 레그 있는 테이블 처럼 됩니다. 유지 관리 일관성은 집계 루트의 주요 목적은입니다.
+집계 루트의 목적은 집계의 일관성을 확보하는 데 있으며, 집계 루트 클래스에서 메서드나 작업을 통해 집계를 업데이트하기 위한 유일한 진입점이 되어야 합니다. 집계 루트를 통해서만 집계 내에서 엔터티를 변경해야 합니다. 집계의 일관성 보호자는 집계를 위해 준수해야 할 모든 고정불변 및 일관성 규칙을 고려해야 합니다. 독립적으로 자식 엔터티나 가치 개체를 변경하는 경우 집계 루트는 집계가 유효한 상태인지를 보장할 수 없습니다. 이는 마치 느슨한 다리를 가진 테이블과 같습니다. 일관성을 유지하는 것은 집계 루트의 주요 목적입니다.
 
-그림 9-9에서 단일 엔터티 (집계 루트 구매자)를 포함 하는 집계, 구매자와 같은 샘플 집계를 볼 수 있습니다. 순서 집계는 여러 엔터티 및 값 개체를 포함합니다.
+그림 9-9에서, 단일 엔터티(집계 루트 구매자)를 포함하는 구매자 집계 같은 샘플 집계를 확인할 수 있습니다. 해당 구매 집계는 여러 엔터티 및 가치 개체를 포함합니다.
 
 ![](./media/image10.png)
 
-**그림 9-9**합니다. 여러 집계 예제 또는 단일 엔터티
+**그림 9-9**. 다중 또는 단일 엔터티 집계의 예
 
-구매자 집계 분야에 따라 추가 자식 엔터티를 가질 수 있는지와 eShopOnContainers 참조 응용 프로그램에서 주문 마이크로 서비스에서 note 합니다. 그림 9-9는 방금 구매자의 집계는 집계 루트에만 포함 된 예를 들어 하나의 항목에 지정 된 사례를 보여 줍니다.
+구매자 집계는 eShopOnContainers 참조 응용 프로그램의 주문 마이크로 서비스에서 그러는 것처럼 해당 도메인에 따라 추가적인 자식 엔터티를 가질 수 있음에 유의하십시오. 그림 9-9는 구매자가 집계 루트만 포함된 집계의 예로서 단일 엔터티를 갖고 있음을 보여 줍니다.
 
-집계의 분리를 유지 관리 하 고 간에 명확한 경계를 유지 하기 위해는 것이 좋습니다에서 구현 될 때 집계 및 외래 키 (FK) 필드를 것만 간의 직접 탐색을 허용 하지 않도록 DDD 도메인 모델에 [ 마이크로 서비스 도메인 모델 순서](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) eShopOnContainers에 있습니다. Order 엔터티만에 외래 키 필드는 구매자 하지만 하지는 EF 코어 탐색 속성에 대 한 다음 코드에 나와 있는 것 처럼:
+집계 분리를 유지하고 집계 간에 명확한 경계를 유지하기 위해서는 eShopOnContainers에서 [마이크로 서비스 도메인 모델 주문하기](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)에서 구현된 것처럼 외래 키(FK) 필드만 갖고 집계 간 직접 탐색을 허용하지 않는 것이 DDD 도메인 모델의 좋은 관행입니다. 주문 엔터티는 다음 코드에서 보여지는 것처럼 EF Core 탐색 속성이 아닌 구매자를 위한 FK 필드만 갖습니다.
 
 ```csharp
 public class Order : Entity, IAggregateRoot
@@ -126,31 +129,34 @@ public class Order : Entity, IAggregateRoot
     public Address Address { get; private set; }
     private int? _buyerId; //FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
+    private readonly List<OrderItem> _orderItems;
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
+    // ... Additional code
 }
 ```
 
-식별 하 고 집계 작업 연구와 경험 필요 합니다. 자세한 내용은 다음과를 같은 추가 리소스를 참조 하십시오.
+집계를 통한 식별과 작업에는 연구와 경험이 필요합니다. 자세한 내용은 다음의 추가 리소스 목록을 참조하십시오.
 
 #### <a name="additional-resources"></a>추가 리소스
 
--   **Vaughn Vernon. 1 부: 효율적인 집계 디자인-단일 집계를 모델링**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_커뮤니티\_세이\_ 집계\_부분\_1. pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon. 효율적인 집계 디자인 - 1부: 단일 집계 모델링**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. 효율적인 집계 디자인-2 부: 만들기 집계 작업 함께**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf>*
+-   **Vaughn Vernon. 효율적인 집계 디자인 - 2부: 단일 집계 모델링**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Vaughn Vernon. 효율적인 집계 디자인-3 부: 검색을 통해 정보를 얻고**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf>*
+-   **Vaughn Vernon. 효율적인 집계 디자인 - 3부: 발견을 통해 통찰력 얻기**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
--   **Sergey Grybniak 합니다. DDD 전술적 디자인 패턴**
+-   **Sergey Grybniak. DDD 전술적 디자인 패턴**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson 합니다. 집계를 사용 하 여 트랜잭션 Microservices 개발**
+-   **Chris Richardson. 집계를 사용하여 트랜잭션 마이크로 서비스 개발**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ 합니다. 집계 패턴**
+-   **DevIQ. 집계 모듈**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 
 >[!div class="step-by-step"]
-[이전] (ddd-지향-microservice.md) [다음] (net-코어-마이크로 서비스-도메인-model.md)
+[이전] (ddd-oriented-microservice.md) [다음] (net-core-microservice-domain-model.md)
