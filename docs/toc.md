@@ -265,6 +265,7 @@
 ## [방법 C# 항목](csharp/how-to/index.md)
 ### [방법: `String.Split`을 사용하여 문자열 구문 분석](csharp/how-to/parse-strings-using-split.md)
 ### [문자열 연결 방법](csharp/how-to/concatenate-multiple-strings.md)
+### [방법 문자열을 DateTime으로 변환](standard/base-types/parsing-datetime.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK(Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 프로그래밍 가이드](csharp/programming-guide/)
