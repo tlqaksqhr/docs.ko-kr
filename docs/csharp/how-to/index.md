@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: d1bef5813df40fb5c6e6b96e0042a682022beb8d
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -68,7 +68,7 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 
 - [문자열이 숫자를 나타내는지 여부를 확인합니다](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [16진수를 나타내는 문자열과 숫자 사이를 변환합니다](../programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
-- [문자열을 <xref:System.DateTime>로 변환합니다](../programming-guide/strings/how-to-convert-a-string-to-a-datetime.md).
+- [문자열을 `DateTime`로 변환합니다](../../standard/base-types/parsing-datetime.md).
 - [바이트 배열을 정수로 변환합니다](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [문자열을 숫자로 변환합니다](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [`as` 및 `is`를 사용하여 다른 형식으로 안전하게 캐스팅합니다](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
