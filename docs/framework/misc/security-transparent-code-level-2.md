@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba7b6bca4618b8de7c1b5ce2ef45b8455ee71c5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 66d3611117c02b60bcf4b3713cd2b5bd79856add
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="security-transparent-code-level-2"></a>보안 투명 코드, 수준 2
 <a name="top"></a>
@@ -88,14 +90,14 @@ ms.lasthandoff: 12/22/2017
   
 -   `AllowPartiallyTrustedCallers`(수준 2만 해당): 모든 코드가 기본적으로 투명으로 설정됩니다. 그러나 개별 형식 및 멤버는 다른 특성을 포함할 수 있습니다.  
   
- 다음 표에서는 수준 2에 대한 어셈블리 수준 동작을 수준 1과 비교합니다.  
+ 다음 표에서 수준 1 수준 2에 대 한 어셈블리 수준 동작을 비교 합니다.  
   
 |Assembly 특성|수준 2|수준 1|  
 |------------------------|-------------|-------------|  
 |부분적으로 신뢰할 수 있는 어셈블리에 대한 특성 없음|형식 및 멤버는 기본적으로 투명하지만 보안에 중요하거나 보안 안전에 중요할 수 있습니다.|모든 형식 및 멤버가 투명합니다.|  
 |특성 없음|특성을 지정하지 않으면 공용 언어 런타임이 투명도 규칙을 확인합니다. 보안에 중요하게 되어 상속 규칙을 위반하는 경우를 제외하고 모든 형식 및 멤버가 보안에 중요합니다.|완전히 신뢰할 수 있는 어셈블리(전역 어셈블리 캐시에 포함 또는 `AppDomain`에서 완전 신뢰로 식별됨)에서 모든 형식은 투명하고 모든 멤버는 보안 안전에 중요합니다.|  
 |`SecurityTransparent`|모든 형식 및 멤버가 투명합니다.|모든 형식 및 멤버가 투명합니다.|  
-|`SecurityCritical(SecurityCriticalScope.Everything)`|적용할 수 없음|모든 형식 및 멤버가 보안에 중요합니다.|  
+|`SecurityCritical(SecurityCriticalScope.Everything)`|해당 사항 없음.|모든 형식 및 멤버가 보안에 중요합니다.|  
 |`SecurityCritical`|이 어셈블리에서 형식으로 도입되는 모든 코드가 중요합니다. 기타 모든 코드는 투명합니다. 가상 또는 추상 메서드를 재정의하거나 인터페이스 메서드를 구현할 경우 해당 메서드를 `SecurityCritical` 또는 `SecuritySafeCritical`로 명시적으로 주석으로 처리해야 합니다.|모든 코드가 기본적으로 투명으로 설정됩니다. 그러나 개별 형식 및 멤버는 다른 특성을 포함할 수 있습니다.|  
   
 ### <a name="type-and-member-annotation"></a>형식 및 멤버 주석  
