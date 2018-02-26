@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9cb9cc231396f9de5fba0e04d1671865ea645873
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL 데이터베이스를 지속성 인프라로 사용
 
@@ -111,7 +111,7 @@ orderAggregate.AddOrderItem(orderItem2);
 Uri collectionUri = UriFactory.CreateDocumentCollectionUri(databaseName,
     collectionName);
 
-await client.CreateDocumentAsync(collectionUri, order);
+await client.CreateDocumentAsync(collectionUri, orderAggregate);
 
 // As your app evolves, let's say your object has a new schema. You can insert
 // OrderV2 objects without any changes to the database tier.
@@ -156,7 +156,7 @@ MongoDB API를 사용하는 명백한 이점은 솔루션이 두 데이터베이
 클라우드에서 단순히 MongoDB와 Cosmos DB 사용 간의 자세한 비교는 [이 페이지에서 Azure Cosmos DB 사용의 이점](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)을 참조하세요. 
 
 
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>프로덕션 응용 프로그램에 대한 방법 분석: MongoDB API와 Cosmos DB API 비교 
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>프로덕션 응용 프로그램에 대한 접근 방식 분석: MongoDB API와 Cosmos DB API 비교
 
 eShopOnContainers에서 우선 순위는 근본적으로 Azure Cosmos DB를 함께 사용할 수 있는 NoSQL 데이터베이스를 사용하여 일관성 있는 개발/테스트 환경을 갖는 것이었으므로 MongoDB API를 사용합니다.
 
