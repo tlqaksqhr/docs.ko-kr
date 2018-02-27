@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.workload: dotnetcore
-ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/06/2018
 
 * [Windows-based containers: Modern app development with enterprise-grade control](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)(Windows 기반 컨테이너: 엔터프라이즈급 제어 기능을 통한 최신 앱 개발)
 * [Docker overview](https://docs.docker.com/engine/docker-overview/)(Docker 개요)
-* [Windows 컨테이너의 Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile.md)
+* [Windows 컨테이너의 Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)(Dockerfile 작성에 대한 모범 사례)
 * [.NET Core 응용 프로그램에 대한 Docker 이미지 작성](../docker/building-net-docker-images.md)
 
@@ -183,7 +184,7 @@ Docker 컨테이너 개발을 위해 .NET Core와 .NET Framework 중에서 결�
 
 * [DockerHub의 Microsoft Azure Cosmos DB 에뮬레이터 이미지](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator) 
 
-* [로컬 개발 및 테스트에 Azure Cosmos DB 에뮬레이터 사용](/azure/cosmos-db/local-emulator.md#developing-with-the-emulator)
+* [로컬 개발 및 테스트에 Azure Cosmos DB 에뮬레이터 사용](/azure/cosmos-db/local-emulator#developing-with-the-emulator)
 
 ## <a name="exploring-the-rich-docker-development-ecosystem"></a>풍부한 Docker 개발 에코시스템 살펴보기
 
@@ -192,10 +193,10 @@ Docker 플랫폼 및 다양한 Docker 이미지에 대해 알아보았으므로,
 * [Using .NET and Docker together](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/)(.NET 및 Docker 함께 사용)
 * [다중 컨테이너 및 마이크로 서비스 기반 .NET 응용 프로그램 디자인 및 개발](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Visual Studio Code Docker 확장](https://code.visualstudio.com/docs/languages/dockerfile)
-* [Azure Service Fabric 사용 방법 알아보기](/azure/service-fabric/index.md)
+* [Azure Service Fabric 사용 방법 알아보기](/azure/service-fabric/index)
 * [Service Fabric Getting Started Sample](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/)(Service Fabric 시작 샘플)
-* [Windows 컨테이너의 혜택](/virtualization/windowscontainers/about/index.md#video-overview)
-* [Visual Studio Docker 도구로 작업](/aspnet/core/publishing/visual-studio-tools-for-docker/index.md)
+* [Windows 컨테이너의 혜택](/virtualization/windowscontainers/about/index#video-overview)
+* [Visual Studio Docker 도구로 작업](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker)
 * [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)(Azure Container Registry의 Docker 이미지를 Azure Container Instances에 배포)
 * [Debugging with Visual Studio Code](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container)(Visual Studio Code를 사용한 디버깅)
 * [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)(클라우드에서 Mac용 Visual Studio, 컨테이너 및 서버리스 코드에 익숙해지기)

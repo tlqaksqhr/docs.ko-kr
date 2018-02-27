@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11b6fef5356f97c53dc973b13eb5f1e8c31dbe72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 509f9e690a5157c2d80ba9726354ce57a9d7ff26
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>방법: async 및 await를 사용하여 병렬로 여러 웹 요청 만들기(C#)
 비동기 메서드에서 작업은 만들어질 때 시작됩니다. 작업이 완료될 때까지 처리를 계속할 수 없는 메서드 지점의 작업에 [await](../../../../csharp/language-reference/keywords/await.md) 연산자가 적용됩니다. 다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.  
@@ -47,7 +48,7 @@ var result = await myTask;
   
  동시에 여러 작업을 시작하는 다른 예제는 [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조하세요.  
   
- 이 예제의 코드는 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=254906)에서 다운로드할 수 있습니다.  
+ 이 예제의 코드는 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)에서 다운로드할 수 있습니다.  
   
 ### <a name="to-set-up-the-project"></a>프로젝트를 설정하려면  
   
@@ -147,7 +148,7 @@ var result = await myTask;
   
      프로그램을 여러 번 실행하여 세 가지 작업이 항상 동일한 순서로 완료되지는 않으며, 완료되는 순서가 생성 및 대기된 순서와 다를 수도 있음을 확인합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에는 전체 예제가 포함되어 있습니다.  
   
 ```csharp  

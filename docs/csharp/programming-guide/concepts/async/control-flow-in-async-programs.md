@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7a13763b2eeec93e7db7ca770c4d52b4a2ba768c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b975b75f9ff31f43e722d3ceb28d08ed3b6ce11
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="control-flow-in-async-programs-c"></a>비동기 프로그램의 제어 흐름(C#)
 `async` 및 `await` 키워드를 사용하면 비동기 프로그램을 더 쉽게 쓰고 유지 관리할 수 있습니다. 그러나 프로그램 작동 방식을 이해하지 못한다면 결과가 놀라울 수 있습니다. 이 항목에서는 간단한 비동기 프로그램을 통해 제어 흐름을 추적하여 언제 메서드 간에 제어가 이동되고 매번 어떤 정보가 전달되는지 보여 줍니다.  
@@ -105,7 +106,7 @@ Length of the downloaded string: 33946.
 >  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
 ### <a name="download-the-program"></a>프로그램 다운로드  
- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))에서 이 항목에 대한 응용 프로그램을 다운로드할 수 있습니다. 다음 단계에서 프로그램을 열고 실행합니다.  
+ [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))에서 이 항목에 대한 응용 프로그램을 다운로드할 수 있습니다. 다음 단계에서 프로그램을 열고 실행합니다.  
   
 1.  다운로드한 파일의 압축을 풀고 Visual Studio를 시작합니다.  
   
@@ -391,4 +392,4 @@ int contentLength = await getLengthTask;
  [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
  [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))
+ [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))

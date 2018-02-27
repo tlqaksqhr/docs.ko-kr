@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a83ceb8a58104cc7a4c177ce6c7df9aded8af7e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e074874a539d1dd52901ff6a5841b5a501b5b5af
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)
 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 향상할 수 있습니다. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
@@ -25,7 +26,7 @@ ms.lasthandoff: 11/21/2017
  작업 컬렉션에 `Task.WhenAll` 메서드를 적용합니다. `WhenAll` 응용 프로그램은 컬렉션의 모든 작업이 완료될 때까지 완료되지 않는 단일 작업을 반환합니다. 작업이 병렬로 실행되는 것처럼 보이지만 추가 스레드는 생성되지 않습니다. 작업이 임의 순서로 완료될 수 있습니다.  
   
 > [!IMPORTANT]
->  다음 절차에서는 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 비동기 응용 프로그램에 대한 확장을 설명합니다. 연습을 완료하거나 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)에서 코드를 다운로드하여 응용 프로그램을 개발할 수 있습니다.  
+>  다음 절차에서는 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 비동기 응용 프로그램에 대한 확장을 설명합니다. 연습을 완료하거나 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드하여 응용 프로그램을 개발할 수 있습니다.  
 >   
 >  예제를 실행하려면 Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 첫 번째 응용 프로그램에 `ProcessURLAsync` 메서드를 추가합니다.  
   
-    -   [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)에서 코드를 다운로드한 경우 AsyncWalkthrough 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
+    -   [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
   
     -   연습을 완료하여 코드를 개발한 경우 `GetURLContentsAsync` 메서드를 포함하는 응용 프로그램에 `ProcessURLAsync`를 추가합니다. 이 응용 프로그램에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 첫 번째 예제입니다.  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 두 번째 응용 프로그램에 다음 버전의 `ProcessURLAsync`를 추가합니다.  
   
-    -   [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)에서 코드를 다운로드한 경우 AsyncWalkthrough_HttpClient 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
+    -   [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough_HttpClient 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
   
     -   연습을 완료하여 코드를 개발한 경우 `HttpClient.GetByteArrayAsync` 메서드를 사용하는 응용 프로그램에 `ProcessURLAsync`를 추가합니다. 이 응용 프로그램에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 두 번째 예제입니다.  
   
@@ -180,7 +181,7 @@ ms.lasthandoff: 11/21/2017
   
 -   두 솔루션 중 하나에 대해 F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다. 출력은 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)의 비동기 솔루션 출력과 유사해야 합니다. 그러나 웹 사이트가 매번 다른 순서로 나타납니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `GetURLContentsAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.  
   
 ```csharp  
@@ -322,7 +323,7 @@ namespace AsyncExampleWPF_WhenAll
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `HttpClient.GetByteArrayAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.  
   
 ```csharp  

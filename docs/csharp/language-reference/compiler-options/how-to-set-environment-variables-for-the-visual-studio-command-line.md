@@ -1,10 +1,12 @@
 ---
 title: "방법: Visual Studio 명령줄에 필요한 환경 변수 설정"
-ms.date: 09-29-2017
+ms.date: 09/29/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: cs.build.commandline
+f1_keywords:
+- cs.build.commandline
 helpviewer_keywords:
 - csc.exe, command-line builds
 - Visual C#, command-line builds
@@ -17,14 +19,14 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: afab503719f67cf7ad1762370ed3062e12ad88e9
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 298006629bedf33e4d2521a88c010fcce824585c
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>방법: Visual Studio 명령줄에 필요한 환경 변수 설정
 

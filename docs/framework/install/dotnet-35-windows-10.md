@@ -6,12 +6,13 @@ ms.author: mairaw
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: ca56bfb37cee60ab014dada7b5d72b74b375dd7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e81008eca3019860789db548d40998a7a7565d31
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치
 
@@ -39,4 +40,4 @@ Windows 제어판을 통해 .NET Framework 3.5를 사용하도록 설정할 수 
 
 설치 중 0x800f0906, 0x800f0907, 0x800f081f 또는 0x800F0922 오류가 발생할 수 있습니다. 이 경우 [.NET Framework 3.5 설치 오류: 0x800f0906, 0x800f0907 또는 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)를 참조하여 이러한 문제 해결 방법을 확인하세요.
 
-이전 문서에서 설명한 어떤 방법으로도 문제가 해결되지 않거나 인터넷에 연결되지 않은 경우 Windows 설치 미디어를 사용해야 합니다. 자세한 내용은 [Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](https://technet.microsoft.com/library/Dn482069.aspx)(DISM(배포 이미지 서비스 및 관리)을 사용하여 .NET Framework 3.5 배포)를 참조하세요. 설치 미디어가 없는 경우 [Windows용 설치 미디어 만들기](https://support.microsoft.com/help/15088/windows-create-installation-media)를 참조하세요.
+이전 문서에서 설명한 어떤 방법으로도 문제가 해결되지 않거나 인터넷에 연결되지 않은 경우 Windows 설치 미디어를 사용해야 합니다. 자세한 내용은 [Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism)(DISM(배포 이미지 서비스 및 관리)을 사용하여 .NET Framework 3.5 배포)를 참조하세요. 설치 미디어가 없는 경우 [Windows용 설치 미디어 만들기](https://support.microsoft.com/help/15088/windows-create-installation-media)를 참조하세요.

@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 78becece40b4b527869c593f8a1fe1eeba1f1f51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3003c7b4a10890ddf7faa098ed672ef40b591b30
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>비동기 작업 또는 작업 목록 취소(C#)
 작업이 완료될 때까지 기다리지 않으려면 비동기 응용 프로그램을 취소할 때 사용하는 단추를 설정할 수 있습니다. 이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 응용 프로그램에 취소 단추를 추가할 수 있습니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
  첫 번째 예제에서는 **취소** 단추를 단일 다운로드 작업에 연결합니다. 응용 프로그램이 콘텐츠를 다운로드하는 동안 단추를 선택하면 다운로드가 취소됩니다.  
   
 ### <a name="downloading-the-example"></a>예제 다운로드  
- [Async 샘플: 응용 프로그램 세부 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
+ [Async 샘플: 응용 프로그램 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/21/2017
  이전 예제를 확장하여 같은 `CancellationTokenSource` 인스턴스를 각 작업과 연결하는 방식으로 여러 작업을 취소할 수 있습니다. **취소** 단추를 선택하면 아직 완료되지 않은 모든 작업이 취소됩니다.  
   
 ### <a name="downloading-the-example"></a>예제 다운로드  
- [Async 샘플: 응용 프로그램 세부 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
+ [Async 샘플: 응용 프로그램 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/21/2017
 ##  <a name="BKMK_CompleteExamples"></a> 전체 예제  
  다음 섹션에는 각각의 이전 예제에 대한 코드가 있습니다. <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.  
   
- [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 프로젝트를 다운로드할 수 있습니다.  
+ [Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.  
   
 ### <a name="cancel-a-task-example"></a>작업 취소 예제  
  다음 코드는 단일 작업을 취소하는 예제에 대한 전체 MainWindow.xaml.cs 파일입니다.  
@@ -525,4 +526,4 @@ namespace CancelAListOfTasks
  <xref:System.Threading.CancellationToken>  
  [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Async 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

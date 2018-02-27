@@ -4,11 +4,11 @@ hide_bc:
 title: ".NET 설명서"
 description: "C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 응용 프로그램을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요."
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 65d0a7681c8210ee458112a5486f36ceac7f65e4
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/24/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -256,9 +256,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/">
-                                                    <h3>ASP.NET Core 사용</h3>
-                                                    <p>ASP.NET Core를 사용하여 최신 웹앱을 빌드하는 방법을 알아봅니다.</p>
+                                                <a href="/aspnet/core/tutorials/">
+                                                    <h3>ASP.NET Core 자습서</h3>
+                                                    <p>ASP.NET Core 응용 프로그램을 개발하는 방법을 알아보기 위해 사용할 수 있는 다른 단계별 가이드를 검색합니다.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://www.asp.net/learn">
+                                                <a href="/aspnet/overview">
                                                     <h3>ASP.NET이란?</h3>
                                                     <p>ASP.NET 웹 응용 프로그램을 빌드하는 방법을 알아봅니다.</p>
                                                 </a>
@@ -296,7 +296,7 @@ ms.lasthandoff: 02/09/2018
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/first-mvc-app/start-mvc">
                                                     <h3>Visual Studio의 ASP.NET Core</h3>
-                                                    <p>Visual Studio 2015를 사용하여 ASP.NET Core MVC 웹앱을 빌드하는 기본 사항에 대해 알아봅니다.</p>
+                                                    <p>Visual Studio를 사용하여 ASP.NET Core MVC 웹앱을 빌드하는 기본 사항에 대해 알아봅니다.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -313,9 +313,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/framework/docker/aspnetmvc">
-                                                    <h3>컨테이너의 ASP.NET 앱</h3>
-                                                    <p>Docker를 사용하여 ASP.NET 앱을 배포하는 방법을 알아봅니다.</p>
+                                                <a href="/aspnet/mvc/overview/deployment/docker-aspnetmvc">
+                                                    <h3>Windows 컨테이너에 ASP.NET MVC 앱</h3>
+                                                    <p>Docker를 사용하여 ASP.NET MVC 앱을 배포하는 방법을 알아봅니다.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -332,9 +332,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>macOS 및 Visual Studio Code의 ASP.NET</h3>
-                                                    <p>macOS에서 Visual Studio 코드를 사용하여 ASP.NET Core 앱을 설정, 빌드 및 배포하는 방법을 알아봅니다.</p>
+                                                <a href="/aspnet/core/tutorials/xplat">
+                                                    <h3>플랫폼 간 ASP.NET Core 자습서</h3>
+                                                    <p>ASP.NET Core를 사용하여 웹앱 또는 Web API를 빌드하는 방법을 알아봅니다. </p>
                                                 </a>
                                             </div>
                                         </div>
@@ -356,8 +356,8 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/develop/net">
-                                                    <h3>.NET Azure 설명서</h3>
+                                                <a href="/dotnet/azure/">
+                                                    <h3>.NET 설명서에 대한 Azure</h3>
                                                     <p>Web Apps, WebJobs, Cloud Services 및 VM과 같은 Azure 서비스에 알아봅니다.</p>
                                                 </a>
                                             </div>
@@ -413,7 +413,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://docs.microsoft.com/azure/storage/">
+                                                <a href="/azure/storage/">
                                                     <h3>Azure 저장소</h3>
                                                     <p>Azure Storage에 대해 알아보고 Azure Blob, 테이블, 큐 및 파일을 사용하여 응용 프로그램을 만드는 방법을 알아봅니다.</p>
                                                 </a>
@@ -519,7 +519,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/ms754130.aspx">
+                                                <a href="/dotnet/framework/wpf/index">
                                                     <h3>WPF(Windows Presentation Foundation)</h3>
                                                     <p>WPF는 Windows에서 데스크톱 응용 프로그램을 빌드하기 위한 XAML 기반 모델을 개발자에 게 제공합니다.</p>
                                                 </a>
@@ -538,7 +538,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/dd30h2yb.aspx">
+                                                <a href="/dotnet/framework/winforms/index">
                                                     <h3>Windows Forms</h3>
                                                     <p>Windows 데스크톱용 LOB(기간 업무) 앱을 빠르게 개발합니다.</p>
                                                 </a>

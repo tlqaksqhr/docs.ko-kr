@@ -2,17 +2,18 @@
 title: "-target:appcontainerexe(C# 컴파일러 옵션)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e49047ee5a639189331b89f3c5e16f6a1f1d4cd5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 61fc914b0d956bcca8e0d574296fa0723b0e1406
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe(C# 컴파일러 옵션)
 **-target:appcontainerexe** 컴파일러 옵션을 사용하면 컴파일러는 앱 컨테이너에서 실행해야 하는 Windows 실행 파일(.exe)을 만듭니다. 이 옵션은 [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)와 같지만 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 응용 프로그램을 위해 설계되었습니다.  
@@ -24,7 +25,7 @@ ms.lasthandoff: 01/19/2018
 ```  
   
 ## <a name="remarks"></a>설명  
- 이 옵션은 앱이 앱 컨테이너에서 실행되도록 하기 위해 PE([이식 가능 파일](http://go.microsoft.com/fwlink/p/?LinkId=236960))에 비트를 설정합니다. 해당 비트가 설정된 경우 CreateProcess 메서드가 응용 프로그램 밖에서 실행 파일을 실행하려고 시도하면 오류가 발생합니다.  
+ 이 옵션은 앱이 앱 컨테이너에서 실행되도록 하기 위해 PE([이식 가능 파일](https://msdn.microsoft.com/library/windows/desktop/ms680547(v=vs.85).aspx?id=19509))에 비트를 설정합니다. 해당 비트가 설정된 경우 CreateProcess 메서드가 응용 프로그램 밖에서 실행 파일을 실행하려고 시도하면 오류가 발생합니다.  
   
  [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 옵션을 사용하지 않으면 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 메서드가 포함된 입력 파일의 이름이 출력 파일의 이름으로 사용됩니다.  
   

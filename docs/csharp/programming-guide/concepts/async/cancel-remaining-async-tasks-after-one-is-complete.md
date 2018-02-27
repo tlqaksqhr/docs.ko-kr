@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: fe65f81af28509c577e014353c43b72d34375459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5e1a899223d0f6d15e6851c9320275bafe876118
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>비동기 작업 하나가 완료되면 남은 비동기 작업 취소(C#)
 <xref:System.Threading.CancellationToken>과 함께 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 메서드를 사용하면 한 작업이 완료될 때 나머지 작업을 모두 취소할 수 있습니다. `WhenAny` 메서드는 작업의 컬렉션인 인수를 사용합니다. 메서드는 모든 작업을 시작하고 단일 작업을 반환합니다. 컬렉션의 임의 작업이 완료되면 단일 작업이 완료됩니다.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/21/2017
 >  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
 ## <a name="downloading-the-example"></a>예제 다운로드  
- [Async 샘플: 응용 프로그램 세부 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
+ [Async 샘플: 응용 프로그램 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
@@ -110,12 +111,12 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  프로그램을 여러 번 실행하여 다른 다운로드가 먼저 완료되는지 확인합니다.  
   
-## <a name="complete-example"></a>전체 예제  
+## <a name="complete-example"></a>완성된 예제  
  다음 코드는 예제에 대한 전체 MainWindow.xaml.cs 파일입니다. 별표는 이 예제에 대해 추가된 요소를 표시합니다.  
   
  <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.  
   
- [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 프로젝트를 다운로드할 수 있습니다.  
+ [Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.  
   
 ```csharp  
 using System;  
@@ -269,4 +270,4 @@ namespace CancelAfterOneTask
  <xref:System.Threading.Tasks.Task.WhenAny%2A>  
  [Async 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
