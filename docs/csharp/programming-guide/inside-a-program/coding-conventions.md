@@ -2,25 +2,24 @@
 title: "C# 코딩 규칙(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 84ddc2b3cebb6bad95f5076889de11f12624b4de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 코딩 규칙(C# 프로그래밍 가이드)
-[C# Language Specification](http://go.microsoft.com/fwlink/?LinkId=199552)(C# 언어 사양)에서는 코딩 표준을 정의하지 않습니다. 그러나 이 항목의 지침은 Microsoft에서 샘플과 설명서를 개발하는 데 사용됩니다.  
-  
  코딩 규칙은 다음과 같은 용도로 사용됩니다.  
   
 -   코드를 확인하는 사용자들이 레이아웃이 아닌 내용에 집중할 수 있도록 일관성 있게 표시되는 코드를 만듭니다.  
@@ -30,6 +29,8 @@ ms.lasthandoff: 11/21/2017
 -   코드를 보다 쉽게 복사, 변경 및 유지 관리할 수 있도록 합니다.  
   
 -   C# 모범 사례를 제시합니다.  
+
+ 이 항목의 지침은 Microsoft에서 샘플과 설명서를 개발하는 데 사용됩니다.  
   
 ## <a name="naming-conventions"></a>명명 규칙  
   

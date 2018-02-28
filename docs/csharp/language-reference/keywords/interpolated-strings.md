@@ -2,17 +2,18 @@
 title: "보간된 문자열(C#)"
 ms.date: 10/18/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b8a1fe0be82a0e09d61c66ed463199ff626c9faa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>보간된 문자열(C# 참조)
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 11/21/2017
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}");
 ```  
-두 보간된 식 '{name}'을 포함 하 고 ' {시간: hh}'. 동등한 복합 형식 문자열은 다음과 같습니다.
+에는 두 개의 보간된 식 '{name}' 및 '{hours:hh}'가 포함되어 있습니다. 동등한 복합 형식 문자열은 다음과 같습니다.
 
 ```csharp
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours); 
@@ -42,7 +43,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 - *형식 문자열*은 형식을 지정할 개체 형식에 적합한 형식 문자열입니다. 예를 들어 <xref:System.DateTime> 값의 경우 "D" 또는 "d"와 같은 표준 날짜 및 시간 형식 문자열일 수 있습니다.
 
 > [!IMPORTANT]
-> 사이 공백이 없어야 없어야는 `$` 및 `"` 문자열을 시작 하 합니다. 이렇게 하면 컴파일 시간 오류가 발생 합니다.
+> 문자열을 시작하는 `$` 및 `"` 사이에 공백이 없어야 합니다. 이렇게 하면 컴파일 시간 오류가 발생합니다.
 
  문자열 리터럴을 사용할 수 있는 곳이면 어디든지 보간된 문자열을 사용할 수 있습니다.  보간된 문자열을 포함하는 코드가 실행될 때마다 보간된 문자열이 평가됩니다. 이렇게 하면 보간된 문자열의 정의 및 평가를 구분할 수 있습니다.  
   
@@ -52,14 +53,14 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings4.cs#1)]  
 
-정확 하 게 사용 하 여 문자열 보간는 `$` 하 여 다음에 오는 문자는 `@` 문자입니다. 축 자 문자열에 대 한 자세한 내용은 참조는 [문자열](string.md) 항목입니다. 다음 코드는 약어 보간된 문자열을 사용 하 여 이전 코드의 수정된 된 버전:
+약어 보간된 문자열은 `@` 문자가 뒤에 오는 `$` 문자를 사용합니다. 약어 문자열에 대한 자세한 내용은 [문자열](string.md) 항목을 참조하세요. 다음 코드는 약어 보간된 문자열을 사용하는 이전 코드 조각의 수정된 버전입니다.
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings5.cs#1)]  
 
-축 자 문자열을 준수 하지 않는 때문에 서식 지정 변경 내용이 필요한 `\` 이스케이프 시퀀스입니다.
+약어 문자열은 `\` 이스케이프 시퀀스를 준수하지 않기 때문에 서식 지정 변경 내용이 필요합니다.
 
 > [!IMPORTANT]
-> `$` 토큰 앞에 나와야 합니다.는 `@` 약어 보간된 문자열에서 토큰입니다.
+> `$` 토큰은 약어 보간된 문자열에서 `@` 토큰 앞에 나타나야 합니다.
 
 
 ## <a name="implicit-conversions"></a>암시적 변환  
@@ -74,11 +75,11 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 2. 보간된 문자열을 <xref:System.IFormattable> 변수로 변환. 이 변수를 사용하면 단일 <xref:System.IFormattable> 인스턴스의 문화권별 콘텐츠로 여러 결과 문자열을 만들 수 있습니다. 이 옵션은 개별 문화권의 올바른 숫자 및 날짜 형식 등을 포함하는 데 유용합니다.  모든 이중 중괄호("{{" 및 "}}")는 <xref:System.Object.ToString> 메서드를 명시적 또는 암시적으로 호출하여 문자열을 형식을 지정할 때까지 이중 중괄호로 유지됩니다.  포함된 보간 식은 모두 {0}, {1} 등으로 변환됩니다.  
 
-   다음 예제에서는 리플렉션을 사용하여 보간된 문자열에서 생성된 <xref:System.IFormattable> 변수의 필드 및 속성 값뿐 아니라 멤버를 표시합니다. 또한 전달 된 <xref:System.IFormattable> 변수를 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드.
+   다음 예제에서는 리플렉션을 사용하여 보간된 문자열에서 생성된 <xref:System.IFormattable> 변수의 필드 및 속성 값뿐 아니라 멤버를 표시합니다. 또한 <xref:System.IFormattable> 변수를 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드에 전달합니다.
 
    [!code-csharp[interpolated-strings2](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings2.cs#1)]  
 
-   보간된 문자열은 리플렉션을 통해서만 검사할 수 있습니다. 와 같은 서식 지정 메서드에 문자열에 전달 된 경우 <xref:System.Console.WriteLine(System.String)>, 형식 항목을 해결 하 고 결과 문자열을 반환 합니다. 
+   보간된 문자열은 리플렉션을 통해서만 검사할 수 있습니다. <xref:System.Console.WriteLine(System.String)> 등의 문자열 형식 지정 메서드에 전달되는 경우 해당 형식 항목이 확인되고 결과 문자열이 반환됩니다. 
 
 3. 보간된 문자열을 복합 형식 문자열을 나타내는 <xref:System.FormattableString> 변수로 변환. 예를 들어 복합 형식 문자열 및 복합 형식 문자열이 결과 문자열로 렌더링되는 방식을 검사하면 쿼리를 빌드하는 경우 삽입 공격으로부터 보호하는 데 도움이 됩니다. <xref:System.FormattableString>에는 <xref:System.Globalization.CultureInfo.InvariantCulture> 및 <xref:System.Globalization.CultureInfo.CurrentCulture>에 대한 결과 문자열을 생성할 수 있도록 하는 <xref:System.FormattableString.ToString> 오버로드도 포함되어 있습니다.  나타나는 모든 이중 중괄호("{{" 및 "}}")는 형식을 지정할 때까지 이중 중괄호로 유지됩니다.  포함된 보간 식은 모두 {0}, {1} 등으로 변환됩니다.  
 

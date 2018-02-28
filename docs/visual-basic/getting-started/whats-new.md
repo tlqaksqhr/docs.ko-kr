@@ -1,23 +1,25 @@
 ---
 title: "Visual Basic의 새로운 기능"
-ms.date: 04/27/2017
+ms.date: 02/15/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: VB.StartPage.WhatsNew
+f1_keywords:
+- VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -25,10 +27,13 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="current-version"></a>현재 버전
 
-Visual Basic / Visual Studio .NET 2017   
-새로운 기능은 [Visual Basic 2017](#visual-basic-2017)을 참조하세요.
+Visual Basic 15.5   
+새로운 기능은 [Visual Basic 15.5](#visual-basic-155)를 참조하세요.
 
 ## <a name="previous-versions"></a>이전 버전
+
+Visual Basic 15.3   
+새로운 기능은 [Visual Basic 15.3](#visual-basic-153)을 참조하세요.
 
 Visual Basic / Visual Studio .NET 2015   
 새로운 기능은 [Visual Basic 14](#visual-basic-14)를 참조하세요.
@@ -53,6 +58,41 @@ Visual Basic / Visual Studio .NET 2003
 
 Visual Basic / Visual Studio .NET 2002   
 Visual Basic .NET의 첫 번째 릴리스
+
+## <a name="visual-basic-155"></a>Visual Basic 15.5
+
+[뒤에 오지 않는 명명된 인수](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+
+Visual Basic 15.3 및 이전 버전에서 메서드 호출이 위치 및 이름별 인수를 포함하는 경우 위치 인수는 명명된 인수 앞에 와야 했습니다. Visual Basic 15.5부터 위치 및 명명된 인수는 마지막 위치 인수까지 모든 인수가 올바른 위치에 있는 한 순서에 관계 없이 나타날 수 있습니다. 이는 명명된 인수가 코드를 더 쉽게 읽을 수 있도록 사용되는 경우 특히 유용합니다.
+
+예를 들어 다음 메서드 호출은 명명된 인수 사이에 두 개의 위치 인수를 갖습니다. 명명된 인수는 값 19가 나이를 나타낸다는 것을 명백하게 합니다.
+
+```vb
+StudentInfo.Display("Mary", age:=19, #9/21/1998#)
+```
+
+**선행 16진수/이진/8진수 구분 기호**
+
+Visual Basic 2017은 숫자 구분 기호로 밑줄 문자(`_`)에 대한 지원을 추가했습니다. Visual Basic 15.5부터 접두사와 16 진수, 이진 또는 8진수 숫자 사이의 선행 구분 기호로 밑줄 문자를 사용할 수 있습니다. 다음 예제에서는 선행 숫자 구분 기호를 사용하여 16진수 숫자로 3,271,948,384를 정의합니다.
+
+```vb
+Dim number As Integer = &H_C305_F860
+``` 
+선행 구분 기호로 밑줄 문자를 사용하려면 Visual Basic 프로젝트(*.vbproj) 파일에 다음 요소를 추가해야 합니다.
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
+## <a name="visual-basic-153"></a>Visual Basic 15.3
+
+[명명된 튜플 유추](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+
+변수에서 튜플 요소의 값을 할당할 때 Visual Basic는 해당 변수 이름에서 튜플 요소의 이름을 유추합니다. 튜블 요소의 이름을 명시적으로 지정할 필요가 없습니다. 다음 예제에서는 유추를 사용하여 세 개의 명명된 요소, `state`, `stateName` 및 `capital`로 튜플을 만듭니다.
+
+[!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 

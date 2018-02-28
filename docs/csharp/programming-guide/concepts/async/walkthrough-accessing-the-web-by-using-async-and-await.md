@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 85edc87bc8c5183f85618351034c0b043472b530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 533cb4b342e3de3eb3143b001f5a26e36e4d79b9
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
 async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직관적인 방식으로 작성할 수 있습니다. 동기 코드처럼 보이는 비동기 코드를 작성하고 일반적으로 비동기 코드에 수반되는 어려운 콜백 함수 및 연속 작업을 컴파일러에서 처리하도록 할 수 있습니다.  
@@ -24,7 +25,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
  이 연습은 웹 사이트 목록에 있는 바이트 수의 합계를 계산하는 동기 WPF(Windows Presentation Foundation) 응용 프로그램에서 시작합니다. 그런 다음 새로운 기능을 사용하여 응용 프로그램을 비동기 솔루션으로 변환합니다.  
   
- 응용 프로그램을 직접 빌드하지 않으려면 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)에서 "Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)"를 다운로드할 수 있습니다.  
+ 응용 프로그램을 직접 빌드하지 않으려면 [Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)를 다운로드할 수 있습니다.  
   
  이 연습에서는 다음 작업을 완료합니다.  
   
@@ -50,10 +51,10 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
 -   [GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꾸려면](#GetURLContentsAsync)  
   
--   [예](#BKMK_CompleteCodeExamples)  
+-   [예제](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>필수 구성 요소  
- Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=235233)를 참조하세요.  
+> [!NOTE]
+>  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
 ###  <a name="CreateWPFApp"></a> WPF 응용 프로그램을 만들려면  
   
@@ -732,11 +733,11 @@ namespace AsyncExampleWPF
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Async 샘플: 웹 연습 (C# 및 Visual Basic)에 액세스](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
  [async](../../../../csharp/language-reference/keywords/async.md)  
  [await](../../../../csharp/language-reference/keywords/await.md)  
  [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
- [작업 기반 비동기 프로그래밍 (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [TAP(작업 기반 비동기 프로그래밍)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
  [방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

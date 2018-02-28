@@ -5,34 +5,35 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07157057d7ae94d3c6017544ff654ca0ed7b7cf2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0f0b6ba1985ab3cbbcc3490ae9b2ffcceb88f873
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재입력 처리(C#)
 앱에 비동기 코드를 포함하는 경우 완료되기 전에 비동기 작업을 다시 입력하는 것을 나타내는 재입력을 고려하고 방지할 수 있어야 합니다. 재입력 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 발생할 수 있습니다.  
   
  **항목 내용**  
   
--   [재입력 인식](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [재입력 인식](#BKMK_RecognizingReentrancy)  
   
--   [재입력 처리](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [재입력 처리](#BKMK_HandlingReentrancy)  
   
-    -   [시작 단추 사용 안 함](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [시작 단추 사용 안 함](#BKMK_DisableTheStartButton)  
   
-    -   [작업 취소 및 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [작업 취소 및 다시 시작](#BKMK_CancelAndRestart)  
   
-    -   [여러 작업을 실행하고 출력을 큐 대기](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)  
   
--   [예제 앱 검토 및 실행](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
@@ -92,27 +93,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- 이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다. 로컬 컴퓨터에 솔루션을 다운로드한 다음 WebsiteDownload 프로젝트를 실행하거나 이 항목의 끝에 있는 코드를 사용하여 고유한 프로젝트를 만들면 코드를 테스트할 수 있습니다. 자세한 내용 및 지침은 [예제 앱 검토 및 실행](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)을 참조하세요.  
+ 이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다. 로컬 컴퓨터에 솔루션을 다운로드한 다음, WebsiteDownload 프로젝트를 실행하거나 이 항목의 끝에 있는 코드를 사용하여 고유한 프로젝트를 만들면 코드를 테스트할 수 있습니다. 자세한 내용 및 지침은 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)을 참조하세요.  
   
 ##  <a name="BKMK_HandlingReentrancy"></a> 재입력 처리  
  앱에서 수행하려는 작업에 따라 다양한 방법으로 재진입을 처리할 수 있습니다. 이 항목에서는 다음 예제를 제공합니다.  
   
--   [시작 단추 사용 안 함](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [시작 단추 사용 안 함](#BKMK_DisableTheStartButton)  
   
      작업이 실행되는 동안 **시작** 단추를 사용할 수 없도록 설정하여 사용자가 작업을 중단할 수 없도록 합니다.  
   
--   [작업 취소 및 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [작업 취소 및 다시 시작](#BKMK_CancelAndRestart)  
   
      사용자가 **시작** 단추를 다시 선택하는 경우 계속 실행되고 있는 작업을 취소한 다음 가장 최근에 요청한 작업이 계속되도록 합니다.  
   
--   [여러 작업을 실행하고 출력을 큐 대기](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)  
   
      요청한 모든 작업이 비동기적으로 실행되도록 허용하지만 각 작업의 결과가 함께 순서대로 나타나도록 출력의 표시를 조정합니다.  
   
 ###  <a name="BKMK_DisableTheStartButton"></a> 시작 단추 사용 안 함  
  `StartButton_Click` 이벤트 처리기의 위쪽에 있는 단추를 사용하지 않도록 설정하여 작업이 실행되는 동안 **시작** 단추를 차단할 수 있습니다. 그런 다음 작업이 완료되면 `finally` 블록 내에서 단추를 다시 사용하도록 설정하여 사용자가 앱을 다시 실행하도록 할 수 있습니다.  
   
- 다음 코드에서는 이러한 변경 내용을 보여 주며, 별표로 표시되어 있습니다. 변경 내용을 이 항목의 끝에 있는 코드에 추가하거나 완성된 앱을 [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 다운로드할 수 있습니다. 프로젝트 이름은 DisableStartButton입니다.  
+ 이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트 이름은 DisableStartButton입니다.  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -146,7 +147,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  취소에 대한 자세한 내용은 [비동기 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)을 참조하세요.  
   
- 이 시나리오를 설정하려면 [예제 앱 검토 및 실행](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다. 이 프로젝트의 이름은 CancelAndRestart입니다.  
+ 이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 CancelAndRestart입니다.  
   
 1.  모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.  
   
@@ -302,12 +303,12 @@ TOTAL bytes returned:  890591
  부분 목록을 제거하려면 `StartButton_Click`에서 코드 첫 줄의 주석 처리를 제거하여 사용자가 작업을 다시 시작할 때마다 텍스트 상자의 선택을 취소합니다.  
   
 ###  <a name="BKMK_RunMultipleOperations"></a> 여러 작업을 실행하고 출력을 큐 대기  
- 이 세 번째 예제는 사용자가 **시작** 단추를 선택할 때마다 앱이 다른 비동기 작업을 시작하고 모든 작업이 실행되어 완료된다는 점에서 가장 복잡합니다. 요청한 모든 작업은 목록에서 비동기적으로 웹 사이트를 다운로드하지만 작업의 출력은 순차적으로 제공됩니다. 즉, 실제 다운로드 작업은 [재입력 인식](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 출력에 표시된 대로 인터리브되지만 각 그룹에 대한 결과 목록은 별도로 제공됩니다.  
+ 이 세 번째 예제는 사용자가 **시작** 단추를 선택할 때마다 앱이 다른 비동기 작업을 시작하고 모든 작업이 실행되어 완료된다는 점에서 가장 복잡합니다. 요청한 모든 작업은 목록에서 비동기적으로 웹 사이트를 다운로드하지만 작업의 출력은 순차적으로 제공됩니다. 즉, 실제 다운로드 작업은 [재입력 인식](#BKMK_RecognizingReentrancy)의 출력에 표시된 대로 인터리브되지만 각 그룹에 대한 결과 목록은 별도로 제공됩니다.  
   
  작업은 표시 프로세스의 게이트키퍼 역할을 하는 전역 <xref:System.Threading.Tasks.Task>, `pendingWork`를 공유합니다.  
-  
- 변경 내용을 [앱 빌드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 코드에 붙여 넣어 이 예제를 실행하거나, [앱 다운로드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 지침에 따라 샘플을 다운로드한 다음 QueueResults 프로젝트를 실행할 수 있습니다.  
-  
+
+ 이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 QueueResults입니다.  
+   
  다음 출력은 사용자가 **시작** 단추를 한 번만 선택하는 경우의 결과를 보여 줍니다. 문제 레이블 A는 처음으로 **시작** 단추를 선택한 경우의 결과임을 나타냅니다. 숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.  
   
 ```  
@@ -489,8 +490,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 }  
 ```  
   
- 변경 내용을 [앱 빌드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 코드에 붙여 넣어 이 예제를 실행하거나, [앱 다운로드](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 지침에 따라 샘플을 다운로드한 다음 QueueResults 프로젝트를 실행할 수 있습니다.  
-  
+   
 #### <a name="points-of-interest"></a>관심 영역  
  출력에서 파운드 기호(#)로 시작하는 정보 줄은 이 예제의 작동 방식을 명확히 나타냅니다.  
   
@@ -551,7 +551,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ###  <a name="BKMK_DownloadingTheApp"></a> 앱 다운로드  
   
-1.  [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 압축 파일을 다운로드합니다.  
+1.  [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 압축 파일을 다운로드합니다.  
   
 2.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
@@ -717,7 +717,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 11. CTRL+F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 여러 번 선택합니다.  
   
-12. [시작 단추 사용 안 함](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [작업 취소 및 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) 또는 [여러 작업을 실행하고 출력을 큐 대기](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 내용을 변경하여 재입력을 처리합니다.  
+12. [시작 단추 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재입력을 처리합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  

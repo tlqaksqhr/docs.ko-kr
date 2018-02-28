@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3920160697c55a81a131a7d8c40b096b064a6f03
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>마이크로 서비스 아키텍처의 통신
 

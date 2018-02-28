@@ -2,25 +2,26 @@
 title: "제네릭 클래스(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c92efd63f7b24917dc50ca0864f1a132c5c2bf00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: afeca9fc49221551470f90f6f57d1b40e0142521
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="generic-classes-c-programming-guide"></a>제네릭 클래스(C# 프로그래밍 가이드)
 제네릭 클래스는 특정 데이터 형식과 관련이 없는 작업을 캡슐화합니다. 제네릭 클래스는 연결된 목록, 해시 테이블, 스택, 큐, 트리 등의 컬렉션에 가장 일반적으로 사용됩니다. 컬렉션에서 항목을 추가하고 제거하는 등의 작업은 저장되는 데이터의 형식과 관계없이 기본적으로 동일한 방식으로 수행됩니다.  
   
- 컬렉션 클래스를 필요로 하는 대부분의 시나리오에서는 .NET Framework 클래스 라이브러리에서 제공하는 컬렉션 클래스를 사용하는 것이 좋습니다. 이러한 클래스 사용에 대한 자세한 내용은 [.NET Framework 클래스 라이브러리의 제네릭](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)을 참조하세요.  
+ 컬렉션 클래스를 필요로 하는 대부분의 시나리오에서는 .NET 클래스 라이브러리에서 제공하는 컬렉션 클래스를 사용하는 것이 좋습니다. 이러한 클래스 사용에 대한 자세한 내용은 [.NET의 제네릭 컬렉션](../../../standard/generics/collections.md)을 참조하세요.  
   
  일반적으로 기존의 구체적인 클래스로 시작하여 일반성과 편의성의 균형이 맞을 때까지 형식을 하나씩 형식 매개 변수로 변경하여 제네릭 클래스를 만듭니다. 고유한 제네릭 클래스를 만들 때 중요한 고려 사항은 다음과 같습니다.  
   
@@ -74,5 +75,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Collections.Generic>  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [제네릭](../../../csharp/programming-guide/generics/index.md)  
- [열거자의 상태를 저장](http://go.microsoft.com/fwlink/?LinkId=112390)  
- [상속 퍼즐, 1부](http://go.microsoft.com/fwlink/?LinkId=112380)
+ [열거자의 상태 저장](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
+ [상속 퍼즐, 1부](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

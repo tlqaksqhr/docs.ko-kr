@@ -3,17 +3,17 @@ title: "dotnet 명령 - .NET Core CLI"
 description: "dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2eea7d13994bfddc89d8f3513308a6620c53c88c
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: bed0876645428cdff11fa83a091fc63e64cedc8f
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
@@ -200,6 +200,8 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="environment-variables"></a>환경 변수
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 `DOTNET_PACKAGES`
 
 주 패키지 캐시입니다. 설정하지 않으면 기본적으로 Unix에서는 `$HOME/.nuget/packages`, Windows에서는 `%HOME%\NuGet\Packages`로 지정됩니다.
@@ -211,3 +213,23 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 .NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`(값 `true`, `1` 또는 `yes` 허용)로 설정하고, 원격 분석 기능을 옵트인하려면 `false`(값 `false`, `0` 또는 `no` 허용)로 설정합니다. 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+전역 위치에서 .NET Core 런타임, 공유 프레임워크 또는 SDK가 확인되는지 여부를 지정합니다. 설정하지 않은 경우 기본값은 `true`입니다. 전역 위치에서 확인하지 않고 격리된 .NET Core 설치를 가지려면 `false`로 설정합니다(값 `0` 또는 `false`는 허용됨). 다중 수준의 조회에 대한 자세한 내용은 [다중 수준 SharedFX 조회](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)를 참조하세요.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`DOTNET_PACKAGES`
+
+주 패키지 캐시입니다. 설정하지 않으면 기본적으로 Unix에서는 `$HOME/.nuget/packages`, Windows에서는 `%HOME%\NuGet\Packages`로 지정됩니다.
+
+`DOTNET_SERVICING`
+
+런타임을 로드할 때 공유 호스트에서 사용할 서비스 인덱스의 위치를 지정합니다.
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+.NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`(값 `true`, `1` 또는 `yes` 허용)로 설정하고, 원격 분석 기능을 옵트인하려면 `false`(값 `false`, `0` 또는 `no` 허용)로 설정합니다. 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
+
+---

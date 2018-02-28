@@ -1,43 +1,47 @@
 ---
 title: ".NET Core로 이식 - 타사 종속성 분석"
-description: ".NET Core로 이식 - 타사 종속성 분석"
-keywords: .NET, .NET Core
+description: ".NET Framework에서 .NET Core로 프로젝트를 이식하기 위해 타사 종속성을 분석하는 방법을 알아봅니다."
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 02/15/2018
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.workload: dotnetcore
-ms.openlocfilehash: 70b39c9762e4ee7450d0f59455bace0ac728844c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 365aff32de75d0658027c35675ed58a2b23691c5
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>.NET Core로 이식 - 타사 종속성 분석
+# <a name="analyze-your-third-party-dependencies"></a>타사 종속성 분석
 
-이식 프로세스의 첫 번째 단계는 타사 종속성을 이해하는 것입니다.  .NET Core에서 아직 실행되지 않는 것이 무엇인지를 파악하고 이에 대한 대체 계획을 개발해야 합니다.
+.NET Core 또는 .NET Standard에 코드를 이식하려는 경우 이식 프로세스의 첫 번째 단계는 타사 종속성을 이해하는 것입니다. 타사 종속성은 [NuGet 패키지](#analyze-referenced-nuget-packages-on-your-project) 또는 프로젝트에서 참조 중인 [DLL](#analyze-dependencies-that-arent-nuget-packages)입니다. 각 종속성을 평가하고 .NET Core와 호환되지 않는 종속성에 대한 대체 계획을 개발합니다. 이 문서에서는 종속성이 .NET Core와 호환되는지 확인하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="analyze-referenced-nuget-packages-in-your-project"></a>프로젝트에서 참조된 NuGet 패키지 분석
 
-이 문서에서는 사용자가 Windows 및 Visual Studio를 사용하며 .NET Framework에서 실행되는 코드를 가지고 있다고 가정합니다.
+프로젝트에서 NuGet 패키지를 참조하는 경우 .NET Core와 호환되는지 확인해야 합니다.
+여기에는 두 가지 방법이 있습니다.
 
-## <a name="analyzing-nuget-packages"></a>NuGet 패키지 분석
+* [NuGet 패키지 탐색기 앱 사용](#analyze-nuget-packages-using-nuget-package-explorer)(가장 안정적인 방법)
+* [nuget.org 사이트 사용](#analyze-nuget-packages-using-nugetorg)
 
-이식성에 대한 NuGet 패키지 분석은 매우 쉽습니다.  NuGet 패키지는 플랫폼별 어셈블리를 포함하는 폴더의 집합 자체이므로, .NET Core 어셈블리를 포함하는 폴더가 있는지만 확인하면 됩니다.
+패키지를 분석한 후 .NET Core 및 대상 .NET Framework와 호환되지 않는 경우 [.NET Framework 호환 모드](#net-framework-compatibility-mode)가 이식 프로세스에 도움이 될 수 있는지 확인할 수 있습니다.
 
-NuGet 패키지 폴더 검사는 [NuGet 패키지 탐색기](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) 도구로 수행하는 것이 가장 쉽습니다.  방법은 다음과 같습니다.
+### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>NuGet 패키지 탐색기를 사용하여 NuGet 패키지 분석
 
-1. NuGet 패키지 탐색기를 다운로드하여 엽니다.
-2. "온라인 피드에서 패키지 열기"를 클릭합니다.
+NuGet 패키지 자체는 플랫폼 관련 어셈블리를 포함하는 폴더 집합입니다. 따라서 패키지 내에 호환되는 어셈블리를 포함하는 폴더인지 확인해야 합니다.
+
+NuGet 패키지 폴더를 검사하는 가장 쉬운 방법은 [NuGet 패키지 탐색기](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) 도구를 사용하는 것입니다. 설치한 후 다음 단계를 사용하여 폴더 이름을 표시합니다.
+
+1. NuGet 패키지 탐색기를 엽니다.
+2. **온라인 피드에서 패키지 열기**를 클릭합니다.
 3. 패키지의 이름을 검색합니다.
-4. 오른쪽에서 "lib" 폴더를 확장하고 폴더 이름을 찾습니다.
+4. 검색 결과에서 패키지 이름을 선택하고 **열기**를 클릭합니다.
+5. 오른쪽에서 *lib* 폴더를 확장하고 폴더 이름을 찾습니다.
 
-패키지에 대한 페이지의 **종속성** 섹션에 있는 [nuget.org](https://www.nuget.org/)에서 패키지가 지원하는 내용을 확인할 수 있습니다.
-
-어떤 경우든 [nuget.org](https://www.nuget.org/)에서 다음 이름의 폴더 또는 항목을 찾아야 합니다.
+다음 이름 중 하나를 사용하여 폴더를 찾습니다.
 
 ```
 netstandard1.0
@@ -47,14 +51,21 @@ netstandard1.3
 netstandard1.4
 netstandard1.5
 netstandard1.6
+netstandard2.0
 netcoreapp1.0
+netcoreapp1.1
+netcoreapp2.0
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-[.NET 표준](../../standard/net-standard.md)의 버전에 매핑되는 TFM(대상 프레임워크 모니커) 및 .NET Core와 호환되는 기존의 PCL(이식 가능한 클래스 라이브러리) 프로필입니다.  호환되는 `netcoreapp1.0`은 응용 프로그램용이며 라이브러리용이 아닙니다.  `netcoreapp1.0` 기반 라이브러리를 사용하는 것에는 문제가 없지만, 해당 라이브러리는 다른 `netcoreapp1.0` 응용 프로그램이 사용하는 것 *이외의* 용도가 아닐 수 있습니다.
+이러한 값은 [.NET Standard](../../standard/net-standard.md), .NET Core의 버전에 매핑되는 [TFM(대상 프레임워크 모니커)](../../standard/frameworks.md) 및 .NET Core와 호환되는 기존의 PCL(이식 가능한 클래스 라이브러리) 프로필입니다.
+
+> [!IMPORTANT]
+> 패키지에서 지원하는 TFM을 살펴볼 때 호환되는 동안 `netcoreapp*`은 .NET Standard 프로젝트용이 아닌 .NET Core 프로젝트용입니다.
+> `netstandard*`가 아닌 `netcoreapp*`만을 대상으로 하는 라이브러리는 다른 .NET Core 앱에서만 사용할 수 있습니다.
 
 호환 가능한 .NET Core의 시험판에서 사용되는 일부 레거시 TFM도 있습니다.
 
@@ -68,30 +79,59 @@ dotnet5.4
 dotnet5.5
 ```
 
-**이러한 것도 코드와 호환될 수는 있지만 호환성이 보장되지는 않습니다.**  이러한 TFM이 포함된 패키지는 시험판 .NET Core 패키지로 빌드된 것입니다.  이러한 패키지를 `netstandard` 기반으로 업데이트할 경우에는 주의해야 합니다.
+이러한 TFM은 코드와 호환될 수는 있지만 호환성이 보장되지는 않습니다. 이러한 TFM이 포함된 패키지는 시험판 .NET Core 패키지로 빌드된 것입니다. 이러한 TFM을 사용하여 패키지가 .NET Standard 기반으로 업데이트되는 경우를 기록해 둡니다.
 
 > [!NOTE]
-> 기존 PCL 또는 시험판 .NET Core를 대상으로 하는 패키지를 사용하려면 `project.json` 파일에서 `imports` 지시문을 사용해야 합니다.
+> 기존 PCL 또는 시험판 .NET Core를 대상으로 하는 패키지를 사용하려면 프로젝트 파일에서 `PackageTargetFallback` MSBuild 요소를 사용해야 합니다.
+> 이 MSBuild 요소에 대한 자세한 내용은 [`PackageTargetFallback`](../tools/csproj.md#packagetargetfallback)을 참조하세요.
+
+### <a name="analyze-nuget-packages-using-nugetorg"></a>nuget.org를 사용하여 NuGet 패키지 분석
+
+또는 패키지 페이지의 **종속성** 섹션 아래의 [nuget.org](https://www.nuget.org/)에서 패키지가 지원하는 TFM을 확인할 수 있습니다.
+
+사이트를 사용하는 것이 호환성을 확인하는 쉬운 방법이지만 **종속성** 정보를 모든 패키지에 대한 사이트에서 사용할 수 없습니다.
+
+### <a name="net-framework-compatibility-mode"></a>.NET Framework 호환 모드
+
+NuGet 패키지를 분석한 후 대부분의 NuGet 패키지와 마찬가지로 .NET Framework만 대상으로 하는 것을 확인할 수 있습니다.
+
+.NET Standard 2.0부터 .NET Framework 호환성 모드가 도입되었습니다. 이 호환 모드에서는 .NET Standard 및 .NET Core 프로젝트에서 .NET Framework 라이브러리를 참조할 수 있습니다. .NET Framework 라이브러리 참조는 라이브러리가 WPF(Windows Presentation Foundation) API를 사용하는 것처럼 모든 프로젝트에 대해 작동하지 않지만 많은 이식 시나리오를 차단 해제합니다.
+
+프로젝트에서 .NET Framework를 대상으로 하는 NuGet 패키지를 참조하는 경우(예:[Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections)) 다음 예제와 유사한 패키지 대체 경고([NU1701](/nuget/reference/errors-and-warnings#nu1701))를 받습니다.
+
+`NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
+
+해당 경고는 패키지를 추가하고 해당 패키지를 프로젝트와 테스트하도록 빌드할 때마다 표시됩니다. 프로젝트가 예상대로 작동하는 경우 Visual Studio에서 패키지 속성을 편집하거나 즐겨 찾는 코드 편집기에서 프로젝트 파일을 수동으로 편집하여 해당 경고를 제거할 수 있습니다.
+
+프로젝트 파일을 편집하여 경고를 제거하려면 경고를 제거하려는 패키지에 대한 `PackageReference` 항목을 찾고 `NoWarn` 특성을 추가합니다. `NoWarn` 특성은 모든 경고 ID의 쉼표로 구분된 목록을 허용합니다. 다음 예제는 프로젝트 파일을 수동으로 편집하여 `Huitian.PowerCollections` 프로젝트에 대한 `NU1701` 경고를 제거하는 방법을 보여 줍니다.
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Huitian.PowerCollections" Version="1.0.0" NoWarn="NU1701" />
+</ItemGroup>
+```
+
+Visual Studio에서 컴파일러 경고를 제거하는 방법에 대한 자세한 내용은 [NuGet 패키지에 대한 경고 표시 안 함](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages)을 참조하세요.
 
 ### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 패키지 종속성이 .NET Core에서 실행되지 않는 경우 수행할 작업
 
 종속된 NuGet 패키지가 .NET Core에서 실행되지 않을 경우 수행할 수 있는 몇 가지가 있습니다.
 
 1. 프로젝트가 오픈 소스이고 GitHub 같은 곳에 호스트된 경우 개발자가 직접 참여하도록 할 수 있습니다.
-2. 패키지를 검색하고 패키지 페이지의 왼쪽에서 "연락처 소유자"를 클릭하여 [nuget.org](https://www.nuget.org/)에서 작성자에게 직접 연락할 수 있습니다.
-3. 사용하던 패키지와 동일한 작업을 수행하는, .NET Core에서 실행되는 다른 패키지를 찾을 수도 있습니다.
+2. [nuget.org](https://www.nuget.org/)에서 작성자에게 직접 문의할 수 있습니다. 패키지를 검색하고 패키지 페이지의 왼쪽에서 **연락처 소유자**를 클릭합니다.
+3. 사용하던 패키지와 동일한 작업을 수행하는 .NET Core에서 실행되는 다른 패키지를 찾을 수도 있습니다.
 4. 패키지가 수행하고 있는 코드를 직접 작성해볼 수 있습니다.
 5. 적어도 패키지의 호환 버전을 사용할 수 있을 때까지는 앱의 기능을 변경하여 패키지에 대한 종속성을 없앨 수 있습니다.
 
-오픈 소스 프로젝트 유지 관리자 및 NuGet 패키지 게시자는 특정 도메인을 무료로 관리하며 낮에는 다른 업무가 있는 지원자인 경우가 많다는 점에 유의하세요. 연락되는 경우 .NET Core 지원을 요청하기 전에 라이브러리에 대한 긍정적인 문장으로 시작할 수 있습니다.
+오픈 소스 프로젝트 유지 관리자와 NuGet 패키지 게시자는 종종 지원자입니다. 지정된 도메인을 중요하게 여기기 때문에 참여하고, 자유롭게 수행하고, 종종 다른 주간 작업을 갖습니다. 따라서 .NET Core 지원에 대해 문의하는 경우 주의해야 합니다.
 
 위 방법으로 문제를 해결할 수 없는 경우 나중에 .NET Core로 이식해야 할 수 있습니다.
 
-.NET 팀은 다음에 .NET Core를 지원하기 위해 어떤 라이브러리가 가장 중요한지 알고자 합니다. 또한 사용하고 싶은 라이브러리에 대해 dotnet@microsoft.com으로 메일을 보낼 수 있습니다.
+.NET 팀은 .NET Core를 지원하기 위해 어떤 라이브러리가 가장 중요한지 알고자 합니다. 사용하고 싶은 라이브러리에 대해 dotnet@microsoft.com으로 메일을 보낼 수 있습니다.
 
-## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>NuGet 패키지가 아닌 종속성 분석
+## <a name="analyze-dependencies-that-arent-nuget-packages"></a>NuGet 패키지가 아닌 종속성 분석
 
-파일 시스템의 DLL처럼, NuGet 패키지가 아닌 종속성이 있을 수 있습니다.  해당 종속성의 이식 가능성을 확인하는 유일한 방법은 [ApiPort 도구](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)를 실행하는 것입니다.
+파일 시스템의 DLL처럼, NuGet 패키지가 아닌 종속성이 있을 수 있습니다. 해당 종속성의 이식 가능성을 확인하는 유일한 방법은 [.NET 이식성 분석기](https://github.com/Microsoft/dotnet-apiport)를 실행하는 것입니다. 도구는 .NET Framework를 대상으로 하는 어셈블리를 분석하고 .NET Core와 같은 다른 .NET 플랫폼으로 이식할 수 없는 API를 식별할 수 있습니다. 콘솔 응용 프로그램 또는 [Visual Studio 확장](../../standard/analyzers/portability-analyzer.md)으로 도구를 실행할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

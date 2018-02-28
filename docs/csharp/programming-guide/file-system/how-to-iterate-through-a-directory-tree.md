@@ -2,20 +2,21 @@
 title: "방법: 디렉터리 트리 반복(C# 프로그래밍 가이드)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f45bdc4a08922842b079be3ef9d112693ca5d7a
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>방법: 디렉터리 트리 반복(C# 프로그래밍 가이드)
 "디렉터리 트리 반복" 구는 지정된 루트 폴더 아래의 임의 깊이까지 중첩된 각 하위 디렉터리에 있는 각 파일에 대한 액세스를 의미합니다. 반드시 각 파일을 열 필요는 없습니다. 단순히 파일 또는 하위 디렉터리의 이름을 `string`으로 검색하거나, <xref:System.IO.FileInfo?displayProperty=nameWithType> 또는 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 개체의 형태로 추가 정보를 검색할 수 있습니다.  
@@ -40,14 +41,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 > [!NOTE]
 >  NTFS 파일 시스템에는 *재분석 지점*이 *연결 지점*, *기호 링크* 및 *하드 링크* 형태로 포함될 수 있습니다. <xref:System.IO.DirectoryInfo.GetFiles%2A>, <xref:System.IO.DirectoryInfo.GetDirectories%2A> 등의 .NET Framework 메서드는 재분석 지점 아래의 하위 디렉터리를 반환하지 않습니다. 이 동작은 두 재분석 지점이 서로를 가리키는 경우 무한 루프로 전환되는 위험으로부터 보호합니다. 일반적으로 재분석 지점을 다룰 때는 파일이 실수로 수정되거나 삭제되지 않도록 특별히 주의해야 합니다. 재분석 지점을 정밀하게 제어해야 하는 경우 플랫폼 호출 또는 네이티브 코드를 사용하여 적절한 Win32 파일 시스템 메서드를 직접 호출합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 재귀를 사용하여 디렉터리 트리를 탐색하는 방법을 보여 줍니다. 재귀 방식은 세련된 방식이긴 하지만 디렉터리 트리가 크고 깊이 중첩된 경우 스택 오버플로 예외가 발생할 가능성이 있습니다.  
   
  처리되는 특정 예외와 각 파일 또는 폴더에서 수행되는 특정 작업은 예로만 제공됩니다. 특정 요구 사항에 맞게 이 코드를 수정해야 합니다. 자세한 내용은 코드 주석을 참조하세요.  
   
  [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 재귀를 사용하지 않고 디렉터리 트리의 파일 및 폴더를 반복하는 방법을 보여 줍니다. 이 기술은 LIFO(후입선출) 스택인 제네릭 <xref:System.Collections.Generic.Stack%601> 컬렉션 형식을 사용합니다.  
   
  처리되는 특정 예외와 각 파일 또는 폴더에서 수행되는 특정 작업은 예로만 제공됩니다. 특정 요구 사항에 맞게 이 코드를 수정해야 합니다. 자세한 내용은 코드 주석을 참조하세요.  
@@ -59,9 +60,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  디렉터리 트리의 내용을 메모리 내 또는 디스크에 저장해야 하는 경우 최상의 옵션은 각 파일의 <xref:System.IO.FileSystemInfo.FullName%2A> 속성(`string` 형식)만 저장하는 것입니다. 그런 다음 이 문자열을 사용하여 필요에 따라 <xref:System.IO.FileInfo> 또는 <xref:System.IO.DirectoryInfo> 개체를 새로 만들거나, 추가 처리가 필요한 파일을 열 수 있습니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
- 강력한 파일 반복 코드는 파일 시스템의 여러 복잡성을 고려해야 합니다. 자세한 내용은 [NTFS 기술 참조](http://go.microsoft.com/fwlink/?LinkId=79488)를 참조하세요.  
+ 강력한 파일 반복 코드는 파일 시스템의 여러 복잡성을 고려해야 합니다. Windows 파일 시스템에 대한 자세한 내용은 [NTFS 기술 참조](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.IO>  
- [LINQ 및 파일 디렉터리](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [LINQ 및 파일 디렉터리](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](../../../csharp/programming-guide/file-system/index.md)

@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -53,7 +53,7 @@ Microsoft에서 적극적으로 개발하고 유지 관리하는 네 가지 기�
 
 ### <a name="mono"></a>Mono
 
-Mono는 작은 런타임이 필요할 때 주로 사용되는 .NET 구현입니다. 이는 Android, Mac, iOS, tvOS 및 watchOS에서 Xamarin 응용 프로그램의 성능을 향상하는 런타임으로, 주로 작은 사용 공간에 초점을 맞춥니다.
+Mono는 작은 런타임이 필요할 때 주로 사용되는 .NET 구현입니다. 이는 Android, Mac, iOS, tvOS 및 watchOS에서 Xamarin 응용 프로그램의 성능을 향상하는 런타임으로, 주로 작은 사용 공간에 초점을 맞춥니다. 또한 Mono는 Unity 엔진을 사용하여 빌드된 게임을 제공합니다.
 
 Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 

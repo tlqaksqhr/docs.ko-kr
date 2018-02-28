@@ -2,18 +2,20 @@
 title: "new 한정자(C# 참조)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: new modifier keyword [C#]
+helpviewer_keywords:
+- new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28124c2f3ecef01fd4bc43fe7cfc975dd6466506
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4653cdc15415f0601d07cecb78d1c8e492994b11
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="new-modifier-c-reference"></a>new 한정자(C# 참조)
 선언 한정자로 사용되는 `new` 키워드는 기본 클래스에서 상속된 멤버를 명시적으로 숨깁니다. 상속된 멤버를 숨기면 파생 버전의 멤버로 기본 클래스 버전의 멤버를 대신하게 됩니다. `new` 한정자를 사용하지 않고 멤버를 숨길 수도 있지만 컴파일러 경고가 발생합니다. `new`를 사용하여 멤버를 명시적으로 숨기면 이 경고가 발생하지 않습니다.  
@@ -26,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
  상속을 사용한 이름 숨기기는 다음 중 한 가지 형식을 취합니다.   
   
--   일반적으로 클래스 또는 구조체에 파생된 상수, 필드, 속성 또는 형식은 동일한 이름의 모든 기본 클래스 멤버를 숨깁니다.  이 사항이 적용되지 않는 경우가 있습니다.  예를 들어 호출할 수 없는 형식이 포함된 `N`이라는 이름의 새 필드를 선언하고 기본 형식에서 `N`을 메서드로 선언하면 새 필드가 호출 구문에서 기본 선언을 숨기지 않습니다.  참조는 [5.0 C# 언어 사양](http://go.microsoft.com/fwlink/?LinkId=199552) 대 한 자세한 내용은 ("식" 단원의 "멤버 조회" 단원 참조).  
+-   일반적으로 클래스 또는 구조체에 파생된 상수, 필드, 속성 또는 형식은 동일한 이름의 모든 기본 클래스 멤버를 숨깁니다.  이 사항이 적용되지 않는 경우가 있습니다.  예를 들어 호출할 수 없는 형식이 포함된 `N`이라는 이름의 새 필드를 선언하고 기본 형식에서 `N`을 메서드로 선언하면 새 필드가 호출 구문에서 기본 선언을 숨기지 않습니다.  자세한 내용은 [C# 5.0 언어 사양](https://www.microsoft.com/download/details.aspx?id=7029)을 참조하세요("식" 섹션의 "멤버 조회" 섹션 참조).  
   
 -   클래스 또는 구조체에 파생된 메서드는 기본 클래스에서 동일한 이름의 속성, 필드 및 형식을 숨깁니다. 또한 시그니처가 동일한 기본 클래스 메서드도 모두 숨깁니다.  
   
@@ -36,12 +38,12 @@ ms.lasthandoff: 11/21/2017
   
  상속된 멤버를 숨기지 않는 선언에 `new` 한정자를 사용하면 경고가 발생합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서 기본 클래스 `BaseC` 및 파생 클래스 `DerivedC`는 동일한 필드 이름 `x`를 사용하므로 상속된 필드의 값이 숨겨집니다. 이 예제에서는 `new` 한정자의 사용법을 보여 줍니다. 또한 정규화된 이름을 사용하여 기본 클래스의 숨겨진 멤버에 액세스하는 방법을 보여 줍니다.  
   
  [!code-csharp[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_2.cs)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서 중첩 클래스는 기본 클래스에서 이름이 동일한 클래스를 숨깁니다. 이 예제에서는 `new` 한정자를 사용하여 경고 메시지를 제거하는 방법과 정규화된 이름을 사용하여 숨겨진 클래스 멤버에 액세스하는 방법을 보여 줍니다.  
   
  [!code-csharp[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_3.cs)]  
